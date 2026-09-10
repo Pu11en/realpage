@@ -15,6 +15,9 @@ signal (portal | hop-portal | asset | none), proof_url, checked_at (ISO date), u
 ## master.csv
 all columns of 1 + website, website_confidence, software, signal, proof_url, checked_at, unknown_reason
 
+## contacts.csv
+apt_id, phone, email, source_url, checked_at (ISO date), notes (no-website | no-contact-found | "")
+
 ## 5-sales.csv
 apt_id, name, sale_date, deed_type, new_owner, previous_owner, units, source (e.g. "Collin CAD 2026 vs 2025"), source_url
 

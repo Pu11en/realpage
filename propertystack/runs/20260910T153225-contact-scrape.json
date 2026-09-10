@@ -1,0 +1,29 @@
+{
+  "skill": "contact-scrape",
+  "area": "plano-richardson",
+  "started": "2026-09-10T15:32:25",
+  "inputs": [
+    "data/plano-richardson/master.csv"
+  ],
+  "outputs": [
+    "data/plano-richardson/contacts.csv"
+  ],
+  "counts": {
+    "total": 204,
+    "phone": 164,
+    "email": 40,
+    "notes": {
+      "no-website": 21,
+      "no-contact-found": 17
+    }
+  },
+  "api_calls": {
+    "read": 183,
+    "search": 0
+  },
+  "errors": [],
+  "notes": [],
+  "finished": "2026-09-10T15:32:59",
+  "duration_s": 33.8,
+  "status": "ok"
+}
