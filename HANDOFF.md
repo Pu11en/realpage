@@ -17,6 +17,9 @@ Repo (public): https://github.com/Pu11en/realpage
   `curl -fsSL https://github.com/Pu11en/realpage/archive/refs/heads/main.tar.gz | tar xz`
 - Read-only, one file at a time (raw URL pattern):
   `https://raw.githubusercontent.com/Pu11en/realpage/main/<path>`
+- Zero-disk, zero-network, one paste/attach: `RESUME-PACK.md` (repo root) —
+  HANDOFF + README + planning trio + the Reddit pack, verbatim in one file,
+  for sessions where both the local disk and GitHub are unreachable.
 
 ## What this is
 

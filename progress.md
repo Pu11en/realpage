@@ -2,6 +2,19 @@
 
 Companion to `task_plan.md`. Newest session first.
 
+## Session: 2026-09-10 (resume pack for no-access runtime)
+
+- A context-free session on a sandboxed runtime reported it could not reach the
+  repo (no disk mount, no GitHub/raw, clone rejected by credit limit) and asked
+  for HANDOFF, task_plan, findings, and the Reddit pack.
+- Built `RESUME-PACK.md` — the six "read first" files verbatim in one
+  paste-ready bundle, with a receiver header that includes how to trigger the
+  brainstorm session.
+- Copied the pack + `raw/reddit/*.json` to Windows-reachable drops
+  (`C:\Users\Public\realpage-*`) so Windows-side sandboxes can pick them up.
+- Files created: `RESUME-PACK.md`
+- Files modified: `HANDOFF.md` (pack pointer), `progress.md` (this entry)
+
 ## Session: 2026-09-10 (reddit full sweep — Phase 2 complete)
 
 - Ran 25 queries across PM / landlord / renter / legal / news-reaction subs;
