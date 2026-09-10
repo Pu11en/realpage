@@ -4,6 +4,18 @@
   <meta charset="utf-8" />
   <title>PropertyStack -- Property Detail</title>
   <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    .card h3 { font-size: 12px; color: var(--text-muted); margin: 0 0 12px; text-transform: uppercase; letter-spacing: 0.03em; font-weight: 600; }
+    .kv { display: grid; grid-template-columns: auto 1fr; gap: 6px 12px; font-size: 13px; }
+    .kv dt { color: var(--text-dim); }
+    .kv dd { margin: 0; word-break: break-word; }
+    .card a, .sources a { color: var(--accent); }
+    .dim { color: var(--text-dim); font-size: 13px; }
+    .breakdown { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin: 12px 0; text-align: center; }
+    .breakdown .n { font-family: var(--mono); font-weight: 700; font-size: 16px; }
+    .breakdown .label { font-size: 11px; color: var(--text-muted); }
+    .sources li { margin-bottom: 6px; word-break: break-all; }
+  </style>
 </head>
 <body>
   <div class="shell" id="app-shell"></div>
@@ -11,48 +23,158 @@
   <script>
     renderShell(null); // detail page isn't one of the 4 tabs
 
-    const params = new URLSearchParams(location.search);
-    const id = params.get("id");
+    const id = new URLSearchParams(location.search).get("id");
+
+    const STAGES = ["zoning-filed", "zoning-approved", "site-plan-approved", "permit", "under-construction", "leasing"];
+    const STAGE_LABELS = {
+      "zoning-filed": "Zoning filed", "zoning-approved": "Zoning approved", "site-plan-approved": "Site plan approved",
+      "permit": "Permit", "under-construction": "Under construction", "leasing": "Leasing",
+    };
+    const STAGE_SHORT = ["Filed", "Zoned", "Plan", "Permit", "Build", "Lease"];
+
+    function esc(s) {
+      return String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+    }
+    function link(url, text) {
+      return `<a href="${esc(url)}" target="_blank" rel="noopener">${esc(text || url)}</a>`;
+    }
+    function fmtDate(iso) {
+      if (!iso) return "--";
+      const d = new Date(iso + "T00:00:00");
+      return isNaN(d) ? esc(iso) : d.toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric" });
+    }
+    function sourceLabel(url) {
+      if (url.includes("data.texas.gov")) return "County record";
+      if (url.includes("legistar") || url.includes("zabalist.com") || url.includes("civicplus")) return "City filing";
+      if (/communityimpact|dallasnews|candysdirt/.test(url)) return "News";
+      return "Website";
+    }
+
+    function header(p, isUpcoming) {
+      const bits = [
+        p.address ? esc(p.address) : null,
+        esc(p.city),
+        p.units != null ? `${p.units} units` : "units not stated",
+        isUpcoming ? "upcoming project" : `built ${p.yearBuilt ?? "?"}`,
+      ].filter(Boolean);
+      const who = isUpcoming ? `Developer: ${esc(p.developer || "not listed")}` : `Owner: ${esc(p.owner || "--")}`;
+      return `
+        <div style="margin-bottom:8px;"><a href="javascript:history.back()" style="color:var(--text-muted);font-size:13px;">&larr; Back</a></div>
+        <h1>${esc(p.community)}</h1>
+        <div class="meta">${bits.join(" &middot; ")}<br/>${who}</div>`;
+    }
+
+    function softwareCard(p, colors, isUpcoming) {
+      if (isUpcoming) {
+        return `<div class="card"><h3>Software</h3>
+          <div style="margin-bottom:10px;">${vendorPill(null)}</div>
+          <div class="dim">Not built yet -- no leasing website to check.</div></div>`;
+      }
+      const sw = p.software && p.software !== "unknown" ? p.software : null;
+      const reason = { "no-website": "No website found", "no-portal-link": "Website has no portal link", "in-house-portal": "In-house / unrecognized portal" }[p.unknownReason];
+      return `<div class="card"><h3>Software</h3>
+        <div style="margin-bottom:10px;">${sw ? vendorPill(sw, colors) : `<span class="pill" style="background:#27272a;color:#a1a1aa;">Unknown</span>`}</div>
+        <dl class="kv">
+          <dt>Proof</dt><dd>${p.proof ? link(p.proof, "portal link") : "--"}</dd>
+          <dt>Checked</dt><dd>${fmtDate(p.checkedAt)}</dd>
+          <dt>Website</dt><dd>${p.website ? link(p.website, "open site") : "--"}</dd>
+          <dt>Site confidence</dt><dd>${esc(p.websiteConfidence || "--")}</dd>
+          ${!sw && reason ? `<dt>Why unknown</dt><dd>${reason}</dd>` : ""}
+        </dl></div>`;
+    }
+
+    function signalsCard(p, isUpcoming) {
+      if (isUpcoming) {
+        const idx = STAGES.indexOf(p.stage);
+        const dots = STAGES.map((s, i) => `<div class="dot ${i <= idx ? "done" : ""}"></div>`).join(`<div class="seg"></div>`);
+        const labels = STAGE_SHORT.map((s) => `<div class="step-label" style="font-size:10px;">${s}</div>`).join("");
+        return `<div class="card"><h3>Signals -- Upcoming</h3>
+          <div class="timeline">${dots}</div>
+          <div style="display:flex;gap:4px;margin:6px 0 12px;">${labels}</div>
+          <dl class="kv">
+            <dt>Stage</dt><dd>${esc(STAGE_LABELS[p.stage] || p.stage)}</dd>
+            <dt>Stage date</dt><dd>${fmtDate(p.stageDate)}</dd>
+            <dt>Expected open</dt><dd>${p.expectedOpen ? fmtDate(p.expectedOpen) : "not stated"}</dd>
+            <dt>Developer</dt><dd>${esc(p.developer || "not listed")}</dd>
+          </dl></div>`;
+      }
+      if (!p.sale) {
+        return `<div class="card"><h3>Signals</h3><div class="dim">No recent sale and no upcoming-project signal for this building.</div></div>`;
+      }
+      return `<div class="card"><h3>Signals -- Sold</h3>
+        <dl class="kv">
+          <dt>Sale date</dt><dd>${fmtDate(p.sale.date)}</dd>
+          <dt>New owner</dt><dd>${esc(p.sale.newOwner)}</dd>
+          <dt>Previous owner</dt><dd>${esc(p.sale.previousOwner || "--")}</dd>
+        </dl></div>`;
+    }
+
+    function leadCard(p) {
+      const l = p.lead;
+      if (!l) {
+        return `<div class="card"><h3>Lead score</h3><div class="dim">Not a ranked lead (no sale or upcoming signal).</div></div>`;
+      }
+      const parts = [["Size", l.size], ["Timing", l.timing], ["Signal", l.signal], ["Open", l.open]]
+        .map(([k, v]) => `<div><div class="n">${v}</div><div class="label">${k}</div></div>`).join("");
+      return `<div class="card"><h3>Lead score</h3>
+        <div style="display:flex;align-items:center;gap:10px;">
+          <span class="score-badge" style="background:${scoreBadgeColor(l.total)};width:40px;height:40px;font-size:16px;">${l.total}</span>
+          <span class="dim">Rank #${l.rank} of the lead list</span>
+        </div>
+        <div class="breakdown">${parts}</div>
+        <div style="font-size:13px;color:var(--text-muted);">${esc(l.why)}</div></div>`;
+    }
+
+    function contactCard(p, isUpcoming) {
+      const c = p.contact;
+      let body;
+      if (c && (c.phone || c.email)) {
+        body = `<dl class="kv">
+          <dt>Phone</dt><dd>${c.phone ? `<a href="tel:${esc(c.phone)}">${esc(c.phone)}</a>` : "not found"}</dd>
+          <dt>Email</dt><dd>${c.email ? `<a href="mailto:${esc(c.email)}">${esc(c.email)}</a>` : "not found"}</dd>
+        </dl>`;
+      } else {
+        const site = !isUpcoming && p.website ? `<br/>Try the website: ${link(p.website, "open site")}` : "";
+        body = `<div class="dim">Phone/email not found.${site}</div>`;
+      }
+      return `<div class="card"><h3>Contact</h3>${body}</div>`;
+    }
+
+    function sourcesCard(p, isUpcoming) {
+      const urls = [];
+      const add = (u) => { if (u && !urls.includes(u)) urls.push(u); };
+      (p.sources || []).forEach(add);
+      if (!isUpcoming) { if (p.sale) add(p.sale.source); add(p.proof); add(p.website); }
+      const items = urls.map((u) => `<li><span class="dim">${sourceLabel(u)}:</span> ${link(u)}</li>`);
+      if (!isUpcoming) items.unshift(`<li><span class="dim">County record:</span> Collin County appraisal district (building, units, owner)</li>`);
+      return `<div class="card sources"><h3>Sources</h3>
+        <ul style="margin:0;padding-left:18px;font-size:13px;">${items.join("")}</ul></div>`;
+    }
 
     loadData("data/properties.json").then((data) => {
       const content = document.getElementById("page-content");
-      const p = data.properties.find((row) => row.id === id) || data.properties[0];
-
+      let p = data.properties.find((row) => row.id === id);
+      let isUpcoming = false;
+      if (!p) {
+        p = (data.upcoming || []).find((row) => row.id === id);
+        isUpcoming = !!p;
+      }
+      if (!p) {
+        content.innerHTML = `<h1>Property not found</h1>
+          <div class="meta">No building or upcoming project with id "${esc(id)}".
+          <a href="master-table.html" style="color:var(--accent);">Back to Master Table</a></div>`;
+        return;
+      }
+      document.title = `PropertyStack -- ${p.community}`;
       content.innerHTML = `
-        <h1>${p.community}</h1>
-        <div class="meta">${p.address}, ${p.city} &middot; ${p.units ?? "?"} units &middot; built ${p.yearBuilt ?? "?"}</div>
+        ${header(p, isUpcoming)}
         <div class="cards-row">
-          <div class="card">
-            <div style="margin-bottom:10px;">${vendorPill(p.software, data.vendorColors)}</div>
-            ${p.proof ? `<a href="${p.proof}" style="color:var(--accent);font-size:13px;">Proof link</a><br/>` : `<span style="color:var(--text-dim);font-size:13px;">No proof link yet</span><br/>`}
-            <span class="pill" style="background:#22c55e22;color:#22c55e;margin-top:8px;display:inline-block;">Confidence: ${p.software ? "High" : "Unknown"}</span>
-          </div>
-          <div class="card">
-            <div style="font-size:12px;color:var(--text-muted);margin-bottom:12px;">Signals -- placeholder until lead/signal data is built</div>
-            <div class="timeline">
-              <div class="dot"></div><div class="seg"></div>
-              <div class="dot"></div><div class="seg"></div>
-              <div class="dot"></div><div class="seg"></div>
-              <div class="dot"></div><div class="seg"></div>
-              <div class="dot"></div>
-            </div>
-            <div style="display:flex;gap:8px;margin-top:6px;">
-              <div class="step-label">Zoning</div><div class="step-label">Permit</div><div class="step-label">Construction</div><div class="step-label">Leasing</div><div class="step-label">Open</div>
-            </div>
-          </div>
-          <div class="card">
-            <div style="font-size:12px;color:var(--text-muted);">Lead score -- placeholder</div>
-            <div style="font-size:28px;font-weight:700;font-family:var(--mono);">--</div>
-          </div>
+          ${softwareCard(p, data.vendorColors, isUpcoming)}
+          ${signalsCard(p, isUpcoming)}
+          ${leadCard(p)}
+          ${contactCard(p, isUpcoming)}
         </div>
-        <div class="card" style="max-width:400px;">
-          <div style="font-size:12px;color:var(--text-muted);margin-bottom:8px;">Sources</div>
-          <ul style="margin:0;padding-left:18px;color:var(--text-muted);font-size:13px;">
-            <li>Collin County appraisal district (public record)</li>
-            ${p.proof ? `<li><a href="${p.proof}" style="color:var(--accent);">${p.proof}</a></li>` : ""}
-          </ul>
-        </div>
-      `;
+        ${sourcesCard(p, isUpcoming)}`;
     });
   </script>
 </body>

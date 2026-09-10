@@ -36,7 +36,15 @@
       "yearBuilt": 2007,
       "owner": "5765 BOZEMAN (TX) OWNER LP",
       "software": "unknown",
-      "proof": null
+      "proof": null,
+      "website": "https://sharetrip.net/hotel-deals/northside-at-legacy-apartments-plano-tx/HV2676d3b382b9dc364647efacc?nationality=BD&checkInDate=2026-07-17&checkOutDate=2026-07-18&numberOfGuestsInRooms=%5B%7B%22adults%22%3A2%2C%22children%22%3A%5B%5D%7D%5D",
+      "websiteConfidence": "medium",
+      "checkedAt": "2026-09-10",
+      "unknownReason": "no-portal-link",
+      "contact": null,
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2096027",
@@ -47,7 +55,18 @@
       "yearBuilt": 1998,
       "owner": "TX APT 8205 TOWNE MAIN DRIVE LP",
       "software": "unknown",
-      "proof": "https://apply.funnelleasing.com/877/login"
+      "proof": "https://apply.funnelleasing.com/877/login",
+      "website": "https://cortland.com/apartments/cortland-west-plano/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": "in-house-portal",
+      "contact": {
+        "phone": "(972) 848-6820",
+        "email": null
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2047952",
@@ -58,7 +77,15 @@
       "yearBuilt": 1995,
       "owner": "SREIT GIO APARTMENTS LLC",
       "software": "unknown",
-      "proof": null
+      "proof": null,
+      "website": null,
+      "websiteConfidence": "none",
+      "checkedAt": null,
+      "unknownReason": "no-website",
+      "contact": null,
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2544026",
@@ -69,7 +96,18 @@
       "yearBuilt": 2004,
       "owner": "UDR LEGACY VILLAGE LLC",
       "software": "in-house:UDR",
-      "proof": "https://residents.udr.com/"
+      "proof": "https://residents.udr.com/",
+      "website": "https://www.udr.com/dallas-apartments/plano/legacy-village-apartment-homes/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(430) 243-4542",
+        "email": null
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2750390",
@@ -80,7 +118,34 @@
       "yearBuilt": 2015,
       "owner": "LW OWNER 1 LLC",
       "software": "Yardi",
-      "proof": "https://thegrandatlegacywest.securecafe.com/residentservices/the-grand-at-legacy-west0/userlogin.aspx"
+      "proof": "https://thegrandatlegacywest.securecafe.com/residentservices/the-grand-at-legacy-west0/userlogin.aspx",
+      "website": "https://www.thegrandatlegacywest.com/the-grand-at-legacy-west-plano",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(469) 564-5726",
+        "email": null
+      },
+      "sale": {
+        "date": "2025-04-28",
+        "newOwner": "LW OWNER 1 LLC",
+        "previousOwner": "unknown (same owner name in 2025 roll)",
+        "source": "https://data.texas.gov/resource/5tkr-3759.json?$select=propid,dbaname,ownername,deedtypecd,deedeffdate&$where=propid%20in%20(2750390)"
+      },
+      "lead": {
+        "rank": 22,
+        "total": 65,
+        "size": 40,
+        "timing": 5,
+        "signal": 15,
+        "open": 5,
+        "why": "Sold Apr 2025 to LW OWNER 1 LLC \u00b7 621 units \u00b7 on Yardi \u2192 new owner may re-pick software."
+      },
+      "sources": [
+        "https://data.texas.gov/resource/5tkr-3759.json?$select=propid,dbaname,ownername,deedtypecd,deedeffdate&$where=propid%20in%20(2750390)",
+        "https://thegrandatlegacywest.securecafe.com/residentservices/the-grand-at-legacy-west0/userlogin.aspx"
+      ]
     },
     {
       "id": "2143049",
@@ -91,7 +156,18 @@
       "yearBuilt": 1998,
       "owner": "CUSTER TX PARTNERS LLC",
       "software": "unknown",
-      "proof": "https://apply.funnelleasing.com/869/login"
+      "proof": "https://apply.funnelleasing.com/869/login",
+      "website": "https://cortland.com/apartments/cortland-north-plano/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": "in-house-portal",
+      "contact": {
+        "phone": "(469) 747-1748",
+        "email": null
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2929400",
@@ -102,7 +178,15 @@
       "yearBuilt": 2022,
       "owner": "BEACON SQUARE ASSOCIATION INC &",
       "software": "unknown",
-      "proof": null
+      "proof": null,
+      "website": "https://interchange.puc.texas.gov/Documents/56021_24_1358750.PDF",
+      "websiteConfidence": "low",
+      "checkedAt": null,
+      "unknownReason": "no-website",
+      "contact": null,
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2652395",
@@ -113,7 +197,18 @@
       "yearBuilt": 2006,
       "owner": "ESTANCIA APARTMENT PARTNERS",
       "software": "RealPage",
-      "proof": "https://property.onesite.realpage.com/welcomehome?siteId=2815615#url=%23login"
+      "proof": "https://property.onesite.realpage.com/welcomehome?siteId=2815615#url=%23login",
+      "website": "https://www.rentanapt.com/apartments/tx/plano/estancia-at-ridgeview-ranch/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(972) 702-7995",
+        "email": null
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2111968",
@@ -124,7 +219,18 @@
       "yearBuilt": 1999,
       "owner": "MID-AMERICA APARTMENTS LP",
       "software": "Yardi",
-      "proof": "https://maac.securecafe.com/residentservices/apartmentsforrent/userlogin.aspx"
+      "proof": "https://maac.securecafe.com/residentservices/apartmentsforrent/userlogin.aspx",
+      "website": "https://www.maac.com/texas/dallas/maa-los-rios/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(940) 464-5528",
+        "email": null
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "1503260",
@@ -135,7 +241,18 @@
       "yearBuilt": 1983,
       "owner": "NSCC CREEKSIDE 12B LLC",
       "software": "ResMan",
-      "proof": "https://jpns.myresman.com/Portal/Access/SignIn/CKV"
+      "proof": "https://jpns.myresman.com/Portal/Access/SignIn/CKV",
+      "website": "https://livecreeksidevillage.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(972) 596-2732",
+        "email": null
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2095999",
@@ -146,7 +263,30 @@
       "yearBuilt": 1998,
       "owner": "CH REALTY X MF PLANO 23 HUNDRED LP",
       "software": "unknown",
-      "proof": null
+      "proof": null,
+      "website": "https://american-landmark-23hundred-old.multiscreensite.com/neighborhood",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": "no-portal-link",
+      "contact": null,
+      "sale": {
+        "date": "2025-06-26",
+        "newOwner": "CH REALTY X MF PLANO 23 HUNDRED LP",
+        "previousOwner": "23HUNDRED AT RIDGEVIEW LP",
+        "source": "https://data.texas.gov/resource/5tkr-3759.json?$select=propid,dbaname,ownername,deedtypecd,deedeffdate&$where=propid%20in%20(2095999)"
+      },
+      "lead": {
+        "rank": 11,
+        "total": 75,
+        "size": 40,
+        "timing": 5,
+        "signal": 15,
+        "open": 15,
+        "why": "Sold Jun 2025 \u00b7 480 units \u00b7 software not yet identified \u2192 new owner may re-pick software."
+      },
+      "sources": [
+        "https://data.texas.gov/resource/5tkr-3759.json?$select=propid,dbaname,ownername,deedtypecd,deedeffdate&$where=propid%20in%20(2095999)"
+      ]
     },
     {
       "id": "357054",
@@ -157,7 +297,18 @@
       "yearBuilt": 1965,
       "owner": "PLANO PUBLIC FACILITY CORPORATION",
       "software": "Yardi",
-      "proof": "https://belairoaks.securecafenet.com/residentservices/bel-air-oaks/userlogin?dropdownlangid=999"
+      "proof": "https://belairoaks.securecafenet.com/residentservices/bel-air-oaks/userlogin?dropdownlangid=999",
+      "website": "https://www.belairoaks.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(833) 280-5481",
+        "email": null
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2557400",
@@ -168,7 +319,18 @@
       "yearBuilt": 1990,
       "owner": "AG-HILLTOP WINDHAVEN PROPERTY OWNER LP",
       "software": "RealPage",
-      "proof": "https://8763937.onlineleasing.realpage.com/"
+      "proof": "https://8763937.onlineleasing.realpage.com/",
+      "website": "https://windhavenparkapthome.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(972) 378-6500",
+        "email": null
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2544628",
@@ -179,7 +341,18 @@
       "yearBuilt": 1994,
       "owner": "SAXONY AT CHASE OAKS PARTNERSHIP",
       "software": "Yardi",
-      "proof": "https://saxonyatchaseoaks.securecafe.com/residentservices/saxony-at-chase-oaks/userlogin.aspx?PropLeadSource_159688=portal&_yTrackUser=NDQ3MzQ2MzU0MiMxNjQxNzI5Njcx-06sKh5KJthg%253d&_yTrackVisit=NzIxNDM0MTEyMyMxMDY4MTE1MzU0-Ah6%252fK02tMgI%253d&_yTrackReqDT=17341720261009"
+      "proof": "https://saxonyatchaseoaks.securecafe.com/residentservices/saxony-at-chase-oaks/userlogin.aspx?PropLeadSource_159688=portal&_yTrackUser=NDQ3MzQ2MzU0MiMxNjQxNzI5Njcx-06sKh5KJthg%253d&_yTrackVisit=NzIxNDM0MTEyMyMxMDY4MTE1MzU0-Ah6%252fK02tMgI%253d&_yTrackReqDT=17341720261009",
+      "website": "https://www.saxonyatchaseoaks.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(877) 764-2216",
+        "email": "rentcafe@saxonyatchaseoaks.com"
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "1986344",
@@ -190,7 +363,15 @@
       "yearBuilt": 1991,
       "owner": "WESTDALE LA COSTA TX LP",
       "software": "unknown",
-      "proof": null
+      "proof": null,
+      "website": null,
+      "websiteConfidence": "none",
+      "checkedAt": null,
+      "unknownReason": "no-website",
+      "contact": null,
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "1988024",
@@ -201,7 +382,18 @@
       "yearBuilt": 2016,
       "owner": "BEAUMEADE EVOKE LLC &",
       "software": "Entrata",
-      "proof": "https://evokeapartmentsplano.residentportal.com/auth"
+      "proof": "https://evokeapartmentsplano.residentportal.com/auth",
+      "website": "https://www.evokeapartmentsplano.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(469) 727-8910",
+        "email": null
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2571959",
@@ -212,7 +404,18 @@
       "yearBuilt": 2012,
       "owner": "MAALP MARKET CENTER LLC",
       "software": "Yardi",
-      "proof": "https://maac.securecafe.com/residentservices/apartmentsforrent/userlogin.aspx"
+      "proof": "https://maac.securecafe.com/residentservices/apartmentsforrent/userlogin.aspx",
+      "website": "https://www.maac.com/texas/dallas/maa-market-center/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(940) 464-5476",
+        "email": null
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2107994",
@@ -223,7 +426,18 @@
       "yearBuilt": 1998,
       "owner": "WRPV XIV MG PLANO LP &",
       "software": "Yardi",
-      "proof": "https://missiongateapts.securecafenet.com/residentservices/mission-gate0/userlogin"
+      "proof": "https://missiongateapts.securecafenet.com/residentservices/mission-gate0/userlogin",
+      "website": "https://www.missiongateapts.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(855) 644-2010",
+        "email": null
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "1708003",
@@ -234,7 +448,15 @@
       "yearBuilt": 1984,
       "owner": "RRE BRENTDALE HOLDINGS LLC",
       "software": "Entrata",
-      "proof": "https://thewestsidepac.residentportal.com/"
+      "proof": "https://thewestsidepac.residentportal.com/",
+      "website": "https://liveatthewestside.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": null,
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2006652",
@@ -245,7 +467,18 @@
       "yearBuilt": 1992,
       "owner": "FRANKEL FAMILY TRUST THE",
       "software": "RealPage",
-      "proof": "https://property.onesite.realpage.com/welcomehome?siteId=2354106#url=%23login"
+      "proof": "https://property.onesite.realpage.com/welcomehome?siteId=2354106#url=%23login",
+      "website": "https://www.rentanapt.com/apartments/tx/plano/villas-of-preston-creek/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(469) 240-5617",
+        "email": null
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2646098",
@@ -256,7 +489,30 @@
       "yearBuilt": 2007,
       "owner": "MFREVF V - PLANO LP",
       "software": "unknown",
-      "proof": null
+      "proof": null,
+      "website": "https://www.sunny.com/tx/plano",
+      "websiteConfidence": "low",
+      "checkedAt": null,
+      "unknownReason": "no-website",
+      "contact": null,
+      "sale": {
+        "date": "",
+        "newOwner": "MFREVF V - PLANO LP",
+        "previousOwner": "RIACHI RIDGEVIEW APARTMENTS LLC",
+        "source": "https://data.texas.gov/resource/5tkr-3759.json?$select=propid,dbaname,ownername,deedtypecd,deedeffdate&$where=propid%20in%20(2646098)"
+      },
+      "lead": {
+        "rank": 16,
+        "total": 70,
+        "size": 40,
+        "timing": 0,
+        "signal": 15,
+        "open": 15,
+        "why": "Owner changed to MFREVF V - PLANO LP \u00b7 402 units \u00b7 software not yet identified \u2192 new owner may re-pick software."
+      },
+      "sources": [
+        "https://data.texas.gov/resource/5tkr-3759.json?$select=propid,dbaname,ownername,deedtypecd,deedeffdate&$where=propid%20in%20(2646098)"
+      ]
     },
     {
       "id": "2785825",
@@ -267,7 +523,18 @@
       "yearBuilt": 2017,
       "owner": "IMP METRO WEST LLC",
       "software": "Yardi",
-      "proof": "https://windsormetrowest.securecafe.com/residentservices/metro-west-by-windsor/userlogin.aspx"
+      "proof": "https://windsormetrowest.securecafe.com/residentservices/metro-west-by-windsor/userlogin.aspx",
+      "website": "https://www.windsorcommunities.com/properties/windsor-metro-west/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(469) 784-9727",
+        "email": null
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2614633",
@@ -278,7 +545,18 @@
       "yearBuilt": 2007,
       "owner": "KV TRIBECA APARTMENTS LLC",
       "software": "RealPage",
-      "proof": "https://dorianandencore.loftliving.com/login"
+      "proof": "https://dorianandencore.loftliving.com/login",
+      "website": "https://www.dorianandencoreluxuryliving.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(945) 351-0963",
+        "email": null
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2581386",
@@ -289,7 +567,18 @@
       "yearBuilt": 1999,
       "owner": "CREEKWOOD SPRINGCREEK DEVELOPMENT LP",
       "software": "Yardi",
-      "proof": "https://villas-of-spring-creek.securecafe.com/residentservices/villas-of-spring-creek/userlogin.aspx"
+      "proof": "https://villas-of-spring-creek.securecafe.com/residentservices/villas-of-spring-creek/userlogin.aspx",
+      "website": "https://villasofspringcreek.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(844) 230-8394",
+        "email": null
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "1627494",
@@ -300,7 +589,34 @@
       "yearBuilt": 1985,
       "owner": "PECOS HOUSING FINANCE CORPORATION",
       "software": "ResMan",
-      "proof": "https://s2capital.myresman.com/Portal/Applicants/Availability?a=1080&p=3683ab21-b83b-4d31-b29f-584e422c6d46&_gl=1*1i1vner*_gcl_au*MTA3MjUyMDkwMy4xNjk4MjA3MTM1*_ga*MTM2OTY2OTE4Mi4xNjk4MjA3MTM1*_ga_8SMWMMGMWV*MTY5ODIxMTk0My4yLjEuMTY5ODIxMzk5Ny41Ni4wLjA."
+      "proof": "https://s2capital.myresman.com/Portal/Applicants/Availability?a=1080&p=3683ab21-b83b-4d31-b29f-584e422c6d46&_gl=1*1i1vner*_gcl_au*MTA3MjUyMDkwMy4xNjk4MjA3MTM1*_ga*MTM2OTY2OTE4Mi4xNjk4MjA3MTM1*_ga_8SMWMMGMWV*MTY5ODIxMTk0My4yLjEuMTY5ODIxMzk5Ny41Ni4wLjA.",
+      "website": "https://www.livethedayton.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(972) 895-8149",
+        "email": null
+      },
+      "sale": {
+        "date": "2025-04-01",
+        "newOwner": "PECOS HOUSING FINANCE CORPORATION",
+        "previousOwner": "unknown (same owner name in 2025 roll)",
+        "source": "https://data.texas.gov/resource/5tkr-3759.json?$select=propid,dbaname,ownername,deedtypecd,deedeffdate&$where=propid%20in%20(1627494)"
+      },
+      "lead": {
+        "rank": 24,
+        "total": 64,
+        "size": 39,
+        "timing": 5,
+        "signal": 15,
+        "open": 5,
+        "why": "Sold Apr 2025 to PECOS HOUSING FINANCE CORPORATION \u00b7 389 units \u00b7 on ResMan \u2192 new owner may re-pick software."
+      },
+      "sources": [
+        "https://data.texas.gov/resource/5tkr-3759.json?$select=propid,dbaname,ownername,deedtypecd,deedeffdate&$where=propid%20in%20(1627494)",
+        "https://s2capital.myresman.com/Portal/Applicants/Availability?a=1080&p=3683ab21-b83b-4d31-b29f-584e422c6d46&_gl=1*1i1vner*_gcl_au*MTA3MjUyMDkwMy4xNjk4MjA3MTM1*_ga*MTM2OTY2OTE4Mi4xNjk4MjA3MTM1*_ga_8SMWMMGMWV*MTY5ODIxMTk0My4yLjEuMTY5ODIxMzk5Ny41Ni4wLjA."
+      ]
     },
     {
       "id": "2739046",
@@ -311,7 +627,18 @@
       "yearBuilt": 2014,
       "owner": "TRG BUSH TURNPIKE LP",
       "software": "Yardi",
-      "proof": "https://centricone90.securecafenet.com/residentservices/aura-one900/userlogin"
+      "proof": "https://centricone90.securecafenet.com/residentservices/aura-one900/userlogin",
+      "website": "https://www.centricone90.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(844) 579-9710",
+        "email": null
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2763841",
@@ -322,7 +649,15 @@
       "yearBuilt": 2018,
       "owner": "PLANO PUBLIC FACILITY CORPORATION",
       "software": "unknown",
-      "proof": null
+      "proof": null,
+      "website": null,
+      "websiteConfidence": "none",
+      "checkedAt": null,
+      "unknownReason": "no-website",
+      "contact": null,
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2058512",
@@ -333,7 +668,34 @@
       "yearBuilt": 1996,
       "owner": "KEY CREEKSIDE LLC",
       "software": "RealPage",
-      "proof": "https://creeksideatlegacy.loftliving.com/login"
+      "proof": "https://creeksideatlegacy.loftliving.com/login",
+      "website": "https://www.creeksideatlegacy.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(877) 541-1205",
+        "email": null
+      },
+      "sale": {
+        "date": "2024-09-26",
+        "newOwner": "KEY CREEKSIDE LLC",
+        "previousOwner": "unknown (same owner name in 2025 roll)",
+        "source": "https://data.texas.gov/resource/5tkr-3759.json?$select=propid,dbaname,ownername,deedtypecd,deedeffdate&$where=propid%20in%20(2058512)"
+      },
+      "lead": {
+        "rank": 26,
+        "total": 63,
+        "size": 38,
+        "timing": 5,
+        "signal": 15,
+        "open": 5,
+        "why": "Sold Sep 2024 to KEY CREEKSIDE LLC \u00b7 380 units \u00b7 on RealPage \u2192 new owner may re-pick software."
+      },
+      "sources": [
+        "https://data.texas.gov/resource/5tkr-3759.json?$select=propid,dbaname,ownername,deedtypecd,deedeffdate&$where=propid%20in%20(2058512)",
+        "https://creeksideatlegacy.loftliving.com/login"
+      ]
     },
     {
       "id": "2861988",
@@ -344,7 +706,18 @@
       "yearBuilt": 2021,
       "owner": "TB PLANO 1 LLC",
       "software": "Yardi",
-      "proof": "https://liveferro.securecafe.com/onlineleasing/ferro/guestlogin.aspx"
+      "proof": "https://liveferro.securecafe.com/onlineleasing/ferro/guestlogin.aspx",
+      "website": "https://www.liveferro.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(469) 617-6012",
+        "email": null
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2023604",
@@ -355,7 +728,18 @@
       "yearBuilt": 1994,
       "owner": "PLANO PUBLIC FACILITY CORPORATION",
       "software": "Entrata",
-      "proof": "https://thornburyatchaseoaksapts.residentportal.com/auth"
+      "proof": "https://thornburyatchaseoaksapts.residentportal.com/auth",
+      "website": "https://www.thornburyatchaseoaksapts.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(469) 746-3987",
+        "email": null
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "1771372",
@@ -366,7 +750,18 @@
       "yearBuilt": 1984,
       "owner": "PLANO PUBLIC FACILITY CORPORATION",
       "software": "Yardi",
-      "proof": "https://steeplechasedallas.securecafenet.com/residentservices/steeplechase-apartments/userlogin"
+      "proof": "https://steeplechasedallas.securecafenet.com/residentservices/steeplechase-apartments/userlogin",
+      "website": "https://www.steeplechasedallas.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(972) 914-1880",
+        "email": null
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2028165",
@@ -377,7 +772,18 @@
       "yearBuilt": 1995,
       "owner": "DALLAS BENTLEY I LP &",
       "software": "Yardi",
-      "proof": "https://bentleyplaceapts.securecafe.com/residentservices/bentley-place/userlogin.aspx?PropLeadSource_159686=portal&_yTrackUser=NDQ3MzU3NjM1MyMxMzA0NTM5NjQ2-wfkN6zeYcEA%253d&_yTrackVisit=NzIxNDUxNzQ2MyMxNzI5NjczMjIw-57u%252f%252f6CZm4E%253d&_yTrackReqDT=08301820261009"
+      "proof": "https://bentleyplaceapts.securecafe.com/residentservices/bentley-place/userlogin.aspx?PropLeadSource_159686=portal&_yTrackUser=NDQ3MzU3NjM1MyMxMzA0NTM5NjQ2-wfkN6zeYcEA%253d&_yTrackVisit=NzIxNDUxNzQ2MyMxNzI5NjczMjIw-57u%252f%252f6CZm4E%253d&_yTrackReqDT=08301820261009",
+      "website": "https://www.bentleyplaceapts.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(866) 720-3723",
+        "email": null
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2058800",
@@ -388,7 +794,18 @@
       "yearBuilt": 1996,
       "owner": "1201 PARK PLANO ASSOCIATES LLC",
       "software": "Entrata",
-      "proof": "https://1201parkapts.residentportal.com/"
+      "proof": "https://1201parkapts.residentportal.com/",
+      "website": "https://www.1201park.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(972) 468-1167",
+        "email": "webaccessibility@entrata.com"
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2039201",
@@ -399,7 +816,18 @@
       "yearBuilt": 1994,
       "owner": "TREA CARRINGTON PARK LLC",
       "software": "Yardi",
-      "proof": "https://livecarringtonpark.securecafe.com/residentservices/carrington-park-4/userlogin.aspx?PropLeadSource_649995=portal&_yTrackUser=NDQ3MzQ2NDQ2NiMxMjEzNTgzODgz-Vy3m9RaLdZo%253d&_yTrackVisit=NzIxNDM0MjU2MyMxODg0NzQzMzIy-uhOUfrqxSp8%253d&_yTrackReqDT=44341720261009"
+      "proof": "https://livecarringtonpark.securecafe.com/residentservices/carrington-park-4/userlogin.aspx?PropLeadSource_649995=portal&_yTrackUser=NDQ3MzQ2NDQ2NiMxMjEzNTgzODgz-Vy3m9RaLdZo%253d&_yTrackVisit=NzIxNDM0MjU2MyMxODg0NzQzMzIy-uhOUfrqxSp8%253d&_yTrackReqDT=44341720261009",
+      "website": "https://www.livecarringtonpark.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(888) 857-2678",
+        "email": null
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2895746",
@@ -410,7 +838,18 @@
       "yearBuilt": 2022,
       "owner": "COLUMBIA LEGACY SQUARE LP",
       "software": "Yardi",
-      "proof": "https://windsorwestplano.securecafe.com/residentservices/windsor-west-plano/userlogin.aspx"
+      "proof": "https://windsorwestplano.securecafe.com/residentservices/windsor-west-plano/userlogin.aspx",
+      "website": "https://www.windsorcommunities.com/properties/windsor-west-plano/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(945) 292-5539",
+        "email": null
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "1708628",
@@ -421,7 +860,18 @@
       "yearBuilt": 1984,
       "owner": "H20 WATERFORD 12C LLC",
       "software": "ResMan",
-      "proof": "https://jpns.myresman.com/Portal/Access/SignIn/WOM"
+      "proof": "https://jpns.myresman.com/Portal/Access/SignIn/WOM",
+      "website": "https://waterfordonthemeadow.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(972) 423-0699",
+        "email": null
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2924684",
@@ -432,7 +882,18 @@
       "yearBuilt": 2021,
       "owner": "PLANO HOUSING AUTHORITY",
       "software": "RealPage",
-      "proof": "https://one90gateway.loftliving.com/login"
+      "proof": "https://one90gateway.loftliving.com/login",
+      "website": "https://www.one90gateway.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(945) 206-6774",
+        "email": null
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2058069",
@@ -443,7 +904,34 @@
       "yearBuilt": 1996,
       "owner": "701 LEGACY DRIVE SPE LLC &",
       "software": "Yardi",
-      "proof": "https://sitemanager.rentcafe.com/residentservices/legends-at-chase-oaks-2/userlogin.aspx"
+      "proof": "https://sitemanager.rentcafe.com/residentservices/legends-at-chase-oaks-2/userlogin.aspx",
+      "website": "https://www.legendsatchaseoaks.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(972) 440-1482",
+        "email": null
+      },
+      "sale": {
+        "date": "2025-09-29",
+        "newOwner": "701 LEGACY DRIVE SPE LLC",
+        "previousOwner": "unknown (same owner name in 2025 roll)",
+        "source": "https://data.texas.gov/resource/5tkr-3759.json?$select=propid,dbaname,ownername,deedtypecd,deedeffdate&$where=propid%20in%20(2058069)"
+      },
+      "lead": {
+        "rank": 19,
+        "total": 67,
+        "size": 35,
+        "timing": 12,
+        "signal": 15,
+        "open": 5,
+        "why": "Sold Sep 2025 to 701 LEGACY DRIVE SPE LLC \u00b7 346 units \u00b7 on Yardi \u2192 new owner may re-pick software."
+      },
+      "sources": [
+        "https://data.texas.gov/resource/5tkr-3759.json?$select=propid,dbaname,ownername,deedtypecd,deedeffdate&$where=propid%20in%20(2058069)",
+        "https://sitemanager.rentcafe.com/residentservices/legends-at-chase-oaks-2/userlogin.aspx"
+      ]
     },
     {
       "id": "2053077",
@@ -454,7 +942,18 @@
       "yearBuilt": 1995,
       "owner": "JANRIC ENTERPRISES LTD",
       "software": "Yardi",
-      "proof": "https://brooksonpreston.securecafe.com/residentservices/brooks-on-preston/userlogin.aspx"
+      "proof": "https://brooksonpreston.securecafe.com/residentservices/brooks-on-preston/userlogin.aspx",
+      "website": "https://www.brooksonpreston.net/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(877) 478-3874",
+        "email": null
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2006888",
@@ -465,7 +964,18 @@
       "yearBuilt": 1993,
       "owner": "1100 MEREDITH LANE INC",
       "software": "Yardi",
-      "proof": "https://colonnadeatwillowbend.securecafe.com/onlineleasing/colonnade-at-willow-bend/guestlogin.aspx"
+      "proof": "https://colonnadeatwillowbend.securecafe.com/onlineleasing/colonnade-at-willow-bend/guestlogin.aspx",
+      "website": "https://www.colonnadeatwillowbend.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(972) 447-2800",
+        "email": "colonnade@willowbridgepc.com"
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2929495",
@@ -476,7 +986,18 @@
       "yearBuilt": 2024,
       "owner": "HERITAGE CREEKSIDE BLOCK A1 OWNER LLC",
       "software": "RealPage",
-      "proof": "https://thebuckleytx.loftliving.com/login"
+      "proof": "https://thebuckleytx.loftliving.com/login",
+      "website": "https://thebuckleyplano.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(469) 813-8699",
+        "email": "thebuckley@greystar.com"
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2097508",
@@ -487,7 +1008,18 @@
       "yearBuilt": 1999,
       "owner": "JLLX VILLAS AT LEGACY DST",
       "software": "RealPage",
-      "proof": "https://villasatlegacyapts.activebuilding.com/login"
+      "proof": "https://villasatlegacyapts.activebuilding.com/login",
+      "website": "https://villasatlegacy-plano.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(469) 312-6686",
+        "email": null
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2805254",
@@ -498,7 +1030,18 @@
       "yearBuilt": 2017,
       "owner": "NE WEST LEGACY LP",
       "software": "RealPage",
-      "proof": "https://lvl29.activebuilding.com/login"
+      "proof": "https://lvl29.activebuilding.com/login",
+      "website": "https://www.lvl29life.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(469) 290-3598",
+        "email": null
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2002288",
@@ -509,7 +1052,18 @@
       "yearBuilt": 1991,
       "owner": "PLANO PUBLIC FACILITY CORPORATION",
       "software": "Entrata",
-      "proof": "https://avalonatchaseoaksapts.residentportal.com/auth"
+      "proof": "https://avalonatchaseoaksapts.residentportal.com/auth",
+      "website": "https://www.avalonatchaseoaksapts.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(469) 599-4073",
+        "email": null
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2779499",
@@ -520,7 +1074,18 @@
       "yearBuilt": 2015,
       "owner": "BRIDGE AT HERITAGE CREEKSIDE I LLC THE",
       "software": "RealPage",
-      "proof": "https://7613495.onlineleasing.realpage.com/"
+      "proof": "https://7613495.onlineleasing.realpage.com/",
+      "website": "https://www.thebridgeplano.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(214) 501-3035",
+        "email": "info@thebridgeplano.com"
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2908642",
@@ -531,7 +1096,34 @@
       "yearBuilt": 2022,
       "owner": "HERITAGE CREEKSIDE BLOCK B OWNER LLC",
       "software": "RealPage",
-      "proof": "https://9033774.onlineleasing.realpage.com/"
+      "proof": "https://9033774.onlineleasing.realpage.com/",
+      "website": "https://theludlowplano.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(469) 797-0770",
+        "email": null
+      },
+      "sale": {
+        "date": "",
+        "newOwner": "HERITAGE CREEKSIDE BLOCK B OWNER LLC",
+        "previousOwner": "RPC WALNUT LLC",
+        "source": "https://data.texas.gov/resource/5tkr-3759.json?$select=propid,dbaname,ownername,deedtypecd,deedeffdate&$where=propid%20in%20(2908642)"
+      },
+      "lead": {
+        "rank": 31,
+        "total": 53,
+        "size": 33,
+        "timing": 0,
+        "signal": 15,
+        "open": 5,
+        "why": "Owner changed to HERITAGE CREEKSIDE BLOCK B OWNER LLC \u00b7 326 units \u00b7 on RealPage \u2192 new owner may re-pick software."
+      },
+      "sources": [
+        "https://data.texas.gov/resource/5tkr-3759.json?$select=propid,dbaname,ownername,deedtypecd,deedeffdate&$where=propid%20in%20(2908642)",
+        "https://9033774.onlineleasing.realpage.com/"
+      ]
     },
     {
       "id": "356947",
@@ -542,7 +1134,18 @@
       "yearBuilt": 2024,
       "owner": "TRG NORTHLINE LP",
       "software": "Yardi",
-      "proof": "https://auranorthline.securecafenet.com/residentservices/aura-northline/userlogin"
+      "proof": "https://auranorthline.securecafenet.com/residentservices/aura-northline/userlogin",
+      "website": "https://www.auranorthline.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(469) 202-4974",
+        "email": null
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2069317",
@@ -553,7 +1156,15 @@
       "yearBuilt": 1998,
       "owner": "LA VENTURA PLANO LLC",
       "software": "unknown",
-      "proof": null
+      "proof": null,
+      "website": "http://www.laventuraapartments.c",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": "no-portal-link",
+      "contact": null,
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2504520",
@@ -564,7 +1175,34 @@
       "yearBuilt": 2000,
       "owner": "HEITMAN CREDIT ACQUISITION XL LP",
       "software": "Yardi",
-      "proof": "https://www.rentcafe.com/residentservices/mcdermott-place1/userlogin.aspx"
+      "proof": "https://www.rentcafe.com/residentservices/mcdermott-place1/userlogin.aspx",
+      "website": "https://www.mcdermottplace.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(866) 610-7106",
+        "email": "mcdermottplace@willowbridgepc.com"
+      },
+      "sale": {
+        "date": "",
+        "newOwner": "HEITMAN CREDIT ACQUISITION XL LP",
+        "previousOwner": "SRGMF IV INDEPENDENCE PLANO LLC",
+        "source": "https://data.texas.gov/resource/5tkr-3759.json?$select=propid,dbaname,ownername,deedtypecd,deedeffdate&$where=propid%20in%20(2504520)"
+      },
+      "lead": {
+        "rank": 32,
+        "total": 52,
+        "size": 32,
+        "timing": 0,
+        "signal": 15,
+        "open": 5,
+        "why": "Owner changed to HEITMAN CREDIT ACQUISITION XL LP \u00b7 324 units \u00b7 on Yardi \u2192 new owner may re-pick software."
+      },
+      "sources": [
+        "https://data.texas.gov/resource/5tkr-3759.json?$select=propid,dbaname,ownername,deedtypecd,deedeffdate&$where=propid%20in%20(2504520)",
+        "https://www.rentcafe.com/residentservices/mcdermott-place1/userlogin.aspx"
+      ]
     },
     {
       "id": "2543479",
@@ -575,7 +1213,18 @@
       "yearBuilt": 2004,
       "owner": "COTTONWOOD COURTNEY MANOR H LLC &",
       "software": "Entrata",
-      "proof": "https://courtneymanor.residentportal.com/resident_portal/?module=authentication&action=view_login"
+      "proof": "https://courtneymanor.residentportal.com/resident_portal/?module=authentication&action=view_login",
+      "website": "https://www.cottonwoodridgeview.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(469) 277-9987",
+        "email": "lead-cot-100558-media-40@cottonwood.vida.leadmanaging.com"
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2672947",
@@ -586,7 +1235,18 @@
       "yearBuilt": 2014,
       "owner": "BELL VALUE-ADD FUND VIII GATEWAY LP",
       "software": "Yardi",
-      "proof": "https://bellgatewayvillage.securecafe.com/onlineleasing/bell-gateway-village/guestlogin.aspx?ssid=c8258fe116883379615dfa8480b78d04"
+      "proof": "https://bellgatewayvillage.securecafe.com/onlineleasing/bell-gateway-village/guestlogin.aspx?ssid=c8258fe116883379615dfa8480b78d04",
+      "website": "https://www.bellgatewayvillage.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(833) 596-0220",
+        "email": null
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2628294",
@@ -597,7 +1257,15 @@
       "yearBuilt": 2016,
       "owner": "FAIRFIELD HUNTINGTON LP",
       "software": "unknown",
-      "proof": null
+      "proof": null,
+      "website": null,
+      "websiteConfidence": "none",
+      "checkedAt": null,
+      "unknownReason": "no-website",
+      "contact": null,
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2571968",
@@ -608,7 +1276,15 @@
       "yearBuilt": 2014,
       "owner": "MID-AMERICA APARTMENTS LP",
       "software": "unknown",
-      "proof": null
+      "proof": null,
+      "website": null,
+      "websiteConfidence": "none",
+      "checkedAt": null,
+      "unknownReason": "no-website",
+      "contact": null,
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2945424",
@@ -619,7 +1295,34 @@
       "yearBuilt": 2019,
       "owner": "PARK RESIDENCES PLANO WEST LLC",
       "software": "Yardi",
-      "proof": "https://parkresidences-plano.securecafenet.com/residentservices/park-residences-plano-properties/userlogin"
+      "proof": "https://parkresidences-plano.securecafenet.com/residentservices/park-residences-plano-properties/userlogin",
+      "website": "https://www.parkresidences-plano.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(877) 729-5587",
+        "email": null
+      },
+      "sale": {
+        "date": "2026-03-12",
+        "newOwner": "PARK RESIDENCES PLANO WEST LLC",
+        "previousOwner": "BSPV-PLANO LLC",
+        "source": "https://data.texas.gov/resource/5tkr-3759.json?$select=propid,dbaname,ownername,deedtypecd,deedeffdate&$where=propid%20in%20(2945424)"
+      },
+      "lead": {
+        "rank": 23,
+        "total": 64,
+        "size": 32,
+        "timing": 12,
+        "signal": 15,
+        "open": 5,
+        "why": "Sold Mar 2026 to PARK RESIDENCES PLANO WEST LLC \u00b7 318 units \u00b7 on Yardi \u2192 new owner may re-pick software."
+      },
+      "sources": [
+        "https://data.texas.gov/resource/5tkr-3759.json?$select=propid,dbaname,ownername,deedtypecd,deedeffdate&$where=propid%20in%20(2945424)",
+        "https://parkresidences-plano.securecafenet.com/residentservices/park-residences-plano-properties/userlogin"
+      ]
     },
     {
       "id": "1963481",
@@ -630,7 +1333,18 @@
       "yearBuilt": 1988,
       "owner": "PLANO PUBLIC FACILITY CORPORATION",
       "software": "unknown",
-      "proof": null
+      "proof": null,
+      "website": "https://www.affordablehousing.com/plano-tx/collin-creek-851899/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": "no-portal-link",
+      "contact": {
+        "phone": "(866) 466-7328",
+        "email": null
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2666205",
@@ -641,7 +1355,15 @@
       "yearBuilt": 2011,
       "owner": "5765 BOZEMAN (TX) OWNER LP",
       "software": "unknown",
-      "proof": null
+      "proof": null,
+      "website": "https://www.dallasapartmentsuptown.com/estate/parkside-at-legacy-apartments/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": "no-portal-link",
+      "contact": null,
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2763842",
@@ -652,7 +1374,15 @@
       "yearBuilt": 2019,
       "owner": "PLANO PUBLIC FACILITY CORPORATION",
       "software": "unknown",
-      "proof": null
+      "proof": null,
+      "website": null,
+      "websiteConfidence": "none",
+      "checkedAt": null,
+      "unknownReason": "no-website",
+      "contact": null,
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2787666",
@@ -663,7 +1393,18 @@
       "yearBuilt": 2019,
       "owner": "PLANO PUBLIC FACILITY CORPORATION",
       "software": "Entrata",
-      "proof": "https://latitudeplano.residentportal.com/"
+      "proof": "https://latitudeplano.residentportal.com/",
+      "website": "https://www.latitudeplano.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(972) 450-1409",
+        "email": "webaccessibility@entrata.com"
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "1976049",
@@ -674,7 +1415,34 @@
       "yearBuilt": 1991,
       "owner": "SIMFA LAKESHORE FEE SIMPLE LLC",
       "software": "Yardi",
-      "proof": "https://lakeshoreatpreston.securecafe.com/onlineleasing/lakeshore-at-preston0/guestlogin.aspx"
+      "proof": "https://lakeshoreatpreston.securecafe.com/onlineleasing/lakeshore-at-preston0/guestlogin.aspx",
+      "website": "https://www.lakeshoreatpreston.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(833) 590-1453",
+        "email": "accessibility@apartments247.com"
+      },
+      "sale": {
+        "date": "2024-09-26",
+        "newOwner": "SIMFA LAKESHORE FEE SIMPLE LLC",
+        "previousOwner": "unknown (same owner name in 2025 roll)",
+        "source": "https://data.texas.gov/resource/5tkr-3759.json?$select=propid,dbaname,ownername,deedtypecd,deedeffdate&$where=propid%20in%20(1976049)"
+      },
+      "lead": {
+        "rank": 30,
+        "total": 55,
+        "size": 30,
+        "timing": 5,
+        "signal": 15,
+        "open": 5,
+        "why": "Sold Sep 2024 to SIMFA LAKESHORE FEE SIMPLE LLC \u00b7 302 units \u00b7 on Yardi \u2192 new owner may re-pick software."
+      },
+      "sources": [
+        "https://data.texas.gov/resource/5tkr-3759.json?$select=propid,dbaname,ownername,deedtypecd,deedeffdate&$where=propid%20in%20(1976049)",
+        "https://lakeshoreatpreston.securecafe.com/onlineleasing/lakeshore-at-preston0/guestlogin.aspx"
+      ]
     },
     {
       "id": "2070489",
@@ -685,7 +1453,18 @@
       "yearBuilt": 1997,
       "owner": "SPRING CREEK FEE OWNER LLC",
       "software": "unknown",
-      "proof": null
+      "proof": null,
+      "website": "https://www.furnishedhousing.com/property/50180/tx/plano/sheridan-park-at-spring-creek",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": "no-portal-link",
+      "contact": {
+        "phone": "(888) 994-8416",
+        "email": null
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2073802",
@@ -696,7 +1475,18 @@
       "yearBuilt": 1997,
       "owner": "SAGAR EDGE MASTER LLC",
       "software": "Yotta",
-      "proof": "https://adaraportal.yottareal.com/dba/dba-amenities?dbaid=94"
+      "proof": "https://adaraportal.yottareal.com/dba/dba-amenities?dbaid=94",
+      "website": "https://watersedgeplano.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(972) 637-6789",
+        "email": null
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2560139",
@@ -707,7 +1497,33 @@
       "yearBuilt": 2014,
       "owner": "APARTMENTS AXIS SPE LLC &",
       "software": "unknown",
-      "proof": null
+      "proof": null,
+      "website": "https://www.student.com/us/tx/richardson/p/axis-3700",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": "no-portal-link",
+      "contact": {
+        "phone": "(972) 362-4050",
+        "email": null
+      },
+      "sale": {
+        "date": "",
+        "newOwner": "APARTMENTS AXIS SPE LLC",
+        "previousOwner": "BES AXIS PLANO FUND XI LLC & BES AXIS PLANO FUND XII LLC",
+        "source": "https://data.texas.gov/resource/5tkr-3759.json?$select=propid,dbaname,ownername,deedtypecd,deedeffdate&$where=propid%20in%20(2560139)"
+      },
+      "lead": {
+        "rank": 28,
+        "total": 60,
+        "size": 30,
+        "timing": 0,
+        "signal": 15,
+        "open": 15,
+        "why": "Owner changed to APARTMENTS AXIS SPE LLC \u00b7 300 units \u00b7 software not yet identified \u2192 new owner may re-pick software."
+      },
+      "sources": [
+        "https://data.texas.gov/resource/5tkr-3759.json?$select=propid,dbaname,ownername,deedtypecd,deedeffdate&$where=propid%20in%20(2560139)"
+      ]
     },
     {
       "id": "2786868",
@@ -718,7 +1534,18 @@
       "yearBuilt": 2017,
       "owner": "KINCAID AT LEGACY TEXAS LLC",
       "software": "Yardi",
-      "proof": "https://thekincaidlegacyplano.securecafe.com/residentservices/the-kincaid-at-legacy/userlogin.aspx"
+      "proof": "https://thekincaidlegacyplano.securecafe.com/residentservices/the-kincaid-at-legacy/userlogin.aspx",
+      "website": "https://thekincaidlegacyplano.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(833) 705-1786",
+        "email": "kincaid.propertywebsite.gsintercontinental@aptleasing.info"
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "1824574",
@@ -729,7 +1556,15 @@
       "yearBuilt": 1985,
       "owner": "PLANO PUBLIC FACILITY CORPORATION",
       "software": "unknown",
-      "proof": null
+      "proof": null,
+      "website": null,
+      "websiteConfidence": "none",
+      "checkedAt": null,
+      "unknownReason": "no-website",
+      "contact": null,
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2843992",
@@ -740,7 +1575,15 @@
       "yearBuilt": 2009,
       "owner": "5765 BOZEMAN (TX) OWNER LP",
       "software": "unknown",
-      "proof": null
+      "proof": null,
+      "website": "https://www.legacynorthapts.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": "no-portal-link",
+      "contact": null,
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "1571757",
@@ -751,7 +1594,18 @@
       "yearBuilt": 1983,
       "owner": "ANNE MAYA - PLANO LLC &",
       "software": "Yotta",
-      "proof": "https://adaraportal.yottareal.com/dba/dba-amenities?dbaid=42&dbaid=42"
+      "proof": "https://adaraportal.yottareal.com/dba/dba-amenities?dbaid=42&dbaid=42",
+      "website": "https://thecrosscreek.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(972) 637-6775",
+        "email": null
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2084407",
@@ -762,7 +1616,18 @@
       "yearBuilt": 1998,
       "owner": "RAR PLANO LLC",
       "software": "RealPage",
-      "proof": "https://property.onesite.realpage.com/welcomehome?siteId=4395751"
+      "proof": "https://property.onesite.realpage.com/welcomehome?siteId=4395751",
+      "website": "https://www.theranchatridgeview.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(972) 362-9688",
+        "email": "accessibility@apartments247.com"
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2818383",
@@ -773,7 +1638,18 @@
       "yearBuilt": 2018,
       "owner": "ALTA 289 LLC",
       "software": "Yardi",
-      "proof": "https://windsorpreston.securecafe.com/residentservices/windsor-preston/userlogin.aspx"
+      "proof": "https://windsorpreston.securecafe.com/residentservices/windsor-preston/userlogin.aspx",
+      "website": "https://www.windsorcommunities.com/properties/windsor-preston/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(469) 966-7447",
+        "email": null
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "1268247",
@@ -784,7 +1660,18 @@
       "yearBuilt": 1981,
       "owner": "FOX PARTNERS LLC",
       "software": "Entrata",
-      "proof": "https://foxtrailsapts.residentportal.com/auth"
+      "proof": "https://foxtrailsapts.residentportal.com/auth",
+      "website": "https://www.irtliving.com/Apartments/Texas/Plano/Fox-Trails",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(855) 432-6790",
+        "email": "foxtrails_2023_livingroom_01@3x.jpg"
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2712754",
@@ -795,7 +1682,15 @@
       "yearBuilt": 2013,
       "owner": "TR JUNCTION 15 LLC",
       "software": "unknown",
-      "proof": null
+      "proof": null,
+      "website": "http://www.junction15apartments.",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": "no-portal-link",
+      "contact": null,
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "1503117",
@@ -806,7 +1701,30 @@
       "yearBuilt": 1982,
       "owner": "SPRING CREEK 278 LLC",
       "software": "unknown",
-      "proof": null
+      "proof": null,
+      "website": "https://rejournals.com/grea-brokers-sale-of-278-unit-apartment-community-in-plano-submarket/",
+      "websiteConfidence": "low",
+      "checkedAt": null,
+      "unknownReason": "no-website",
+      "contact": null,
+      "sale": {
+        "date": "2025-06-24",
+        "newOwner": "SPRING CREEK 278 LLC",
+        "previousOwner": "unknown (same owner name in 2025 roll)",
+        "source": "https://data.texas.gov/resource/5tkr-3759.json?$select=propid,dbaname,ownername,deedtypecd,deedeffdate&$where=propid%20in%20(1503117)"
+      },
+      "lead": {
+        "rank": 25,
+        "total": 63,
+        "size": 28,
+        "timing": 5,
+        "signal": 15,
+        "open": 15,
+        "why": "Sold Jun 2025 to SPRING CREEK 278 LLC \u00b7 278 units \u00b7 software not yet identified \u2192 new owner may re-pick software."
+      },
+      "sources": [
+        "https://data.texas.gov/resource/5tkr-3759.json?$select=propid,dbaname,ownername,deedtypecd,deedeffdate&$where=propid%20in%20(1503117)"
+      ]
     },
     {
       "id": "113282",
@@ -817,7 +1735,15 @@
       "yearBuilt": 1980,
       "owner": "6400 INDEPENDENCE PLANO LLC",
       "software": "Yardi",
-      "proof": "https://thehuntersglen.securecafe.com/residentservices/hunters-glen2/userlogin.aspx"
+      "proof": "https://thehuntersglen.securecafe.com/residentservices/hunters-glen2/userlogin.aspx",
+      "website": "https://thehuntersglen.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": null,
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2039198",
@@ -828,7 +1754,18 @@
       "yearBuilt": 1995,
       "owner": "2009 COLP COMMUNITY OWNER LLC",
       "software": "in-house:Camden",
-      "proof": "https://www.mycamden.com/"
+      "proof": "https://www.mycamden.com/",
+      "website": "https://www.camdenliving.com/apartments/plano-tx/camden-legacy-park",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(469) 649-7776",
+        "email": null
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2047307",
@@ -839,7 +1776,18 @@
       "yearBuilt": 1996,
       "owner": "RJW PRESTONWOOD HILLS LP",
       "software": "Yardi",
-      "proof": "https://prestonwoodhillsapts.securecafe.com/residentservices/prestonwood-hills/userlogin.aspx"
+      "proof": "https://prestonwoodhillsapts.securecafe.com/residentservices/prestonwood-hills/userlogin.aspx",
+      "website": "https://www.prestonwoodhillsapts.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(972) 306-5836",
+        "email": null
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2091841",
@@ -850,7 +1798,18 @@
       "yearBuilt": 1998,
       "owner": "MAINSTAY LEGACY PLANO LP",
       "software": "Yardi",
-      "proof": "https://windsoratlegacy.securecafe.com/residentservices/windsor-at-legacy/userlogin.aspx"
+      "proof": "https://windsoratlegacy.securecafe.com/residentservices/windsor-at-legacy/userlogin.aspx",
+      "website": "https://www.windsorcommunities.com/properties/legacy-at-windsor/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(972) 914-7505",
+        "email": null
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2932770",
@@ -861,7 +1820,18 @@
       "yearBuilt": 2023,
       "owner": "GRAYCO PLANO INVESTMENT 2022 LP",
       "software": "Entrata",
-      "proof": "https://theemoryplano.residentportal.com/"
+      "proof": "https://theemoryplano.residentportal.com/",
+      "website": "https://www.theemoryplano.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(469) 814-0070",
+        "email": "webaccessibility@entrata.com"
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "1971215",
@@ -872,7 +1842,18 @@
       "yearBuilt": 1990,
       "owner": "CWS BELL LP & CWS WWL LEGACY LP",
       "software": "Yardi",
-      "proof": "https://mqlegacy.securecafe.com/residentservices/marquis-at-legacy/userlogin.aspx"
+      "proof": "https://mqlegacy.securecafe.com/residentservices/marquis-at-legacy/userlogin.aspx",
+      "website": "https://www.mqlegacy.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(888) 365-9846",
+        "email": null
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "1971235",
@@ -883,7 +1864,18 @@
       "yearBuilt": 1990,
       "owner": "BRISTLECONE TEXAS LTD",
       "software": "RealPage",
-      "proof": "https://46544.onlineleasing.realpage.com/"
+      "proof": "https://46544.onlineleasing.realpage.com/",
+      "website": "https://www.cottagesattulane.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(940) 290-6948",
+        "email": null
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "179611",
@@ -894,7 +1886,15 @@
       "yearBuilt": 1970,
       "owner": "LURIN REAL ESTATE HOLDINGS LXIII LLC",
       "software": "unknown",
-      "proof": null
+      "proof": null,
+      "website": "http://evanagrove.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": "no-portal-link",
+      "contact": null,
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2041713",
@@ -905,7 +1905,34 @@
       "yearBuilt": 1995,
       "owner": "S2 PRESTON PARK LP",
       "software": "Yardi",
-      "proof": "https://liveellington.securecafe.com/onlineleasing/the-ellington5/guestlogin.aspx"
+      "proof": "https://liveellington.securecafe.com/onlineleasing/the-ellington5/guestlogin.aspx",
+      "website": "https://www.liveellington.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(866) 416-4210",
+        "email": "theellingtontx.webpropertywebsite.avenue5@assist.rent"
+      },
+      "sale": {
+        "date": "2026-07-08",
+        "newOwner": "S2 PRESTON PARK LP",
+        "previousOwner": "unknown (same owner name in 2025 roll)",
+        "source": "https://data.texas.gov/resource/5tkr-3759.json?$select=propid,dbaname,ownername,deedtypecd,deedeffdate&$where=propid%20in%20(2041713)"
+      },
+      "lead": {
+        "rank": 9,
+        "total": 77,
+        "size": 27,
+        "timing": 30,
+        "signal": 15,
+        "open": 5,
+        "why": "Sold Jul 2026 to S2 PRESTON PARK LP \u00b7 266 units \u00b7 on Yardi \u2192 new owner may re-pick software."
+      },
+      "sources": [
+        "https://data.texas.gov/resource/5tkr-3759.json?$select=propid,dbaname,ownername,deedtypecd,deedeffdate&$where=propid%20in%20(2041713)",
+        "https://liveellington.securecafe.com/onlineleasing/the-ellington5/guestlogin.aspx"
+      ]
     },
     {
       "id": "2071041",
@@ -916,7 +1943,18 @@
       "yearBuilt": 1997,
       "owner": "PLANO GFPG LLC",
       "software": "unknown",
-      "proof": null
+      "proof": null,
+      "website": "https://parkerplano.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": "no-portal-link",
+      "contact": {
+        "phone": "(844) 396-8866",
+        "email": null
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2686924",
@@ -927,7 +1965,18 @@
       "yearBuilt": 2014,
       "owner": "PPF AMLI WEST PLANO VILLAGE LP",
       "software": "Entrata",
-      "proof": "https://amliwestplano-prospectportal.amli.com/Apartments/module/application_authentication"
+      "proof": "https://amliwestplano-prospectportal.amli.com/Apartments/module/application_authentication",
+      "website": "https://www.amli.com/apartments/dallas/north-dallas-apartments/amli-west-plano",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(844) 583-4227",
+        "email": null
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2858142",
@@ -938,7 +1987,18 @@
       "yearBuilt": 2023,
       "owner": "PROMONTORY RESIDENTIAL LP",
       "software": "Yardi",
-      "proof": "https://theresidencesatpromontory.securecafe.com/onlineleasing/the-residences-at-promontory/register.aspx"
+      "proof": "https://theresidencesatpromontory.securecafe.com/onlineleasing/the-residences-at-promontory/register.aspx",
+      "website": "https://www.theresidencesatpromontory.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(469) 564-5904",
+        "email": null
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "94855",
@@ -949,7 +2009,18 @@
       "yearBuilt": 1979,
       "owner": "FAIRWAY GARDENS LP",
       "software": "MRI/RentManager",
-      "proof": "https://www.mrisoftware.com/portalprivacypolicy/"
+      "proof": "https://www.mrisoftware.com/portalprivacypolicy/",
+      "website": "https://www.harborgroupmanagement.com/apartments/tx/plano/fairway",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(972) 945-9081",
+        "email": null
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2116704",
@@ -960,7 +2031,18 @@
       "yearBuilt": 2003,
       "owner": "UDR LEGACY VILLAGE LLC",
       "software": "in-house:UDR",
-      "proof": "https://residents.udr.com/"
+      "proof": "https://residents.udr.com/",
+      "website": "https://www.udr.com/dallas-apartments/plano/legacy-village-apartment-homes/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(430) 243-4542",
+        "email": null
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2672946",
@@ -971,7 +2053,18 @@
       "yearBuilt": 2016,
       "owner": "BELL VALUE-ADD FUND VIII GATEWAY LP",
       "software": "unknown",
-      "proof": null
+      "proof": null,
+      "website": "https://reviews.birdeye.com/park-at-gateway-156779284284034",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": "no-portal-link",
+      "contact": {
+        "phone": null,
+        "email": "profiles@birdeye.com"
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2672945",
@@ -982,7 +2075,18 @@
       "yearBuilt": 2012,
       "owner": "BELL VALUE-ADD FUND VIII GATEWAY LP",
       "software": "Yardi",
-      "proof": "https://bellgatewayvillage.securecafe.com/onlineleasing/bell-gateway-village/guestlogin.aspx?ssid=c8258fe116883379615dfa8480b78d04"
+      "proof": "https://bellgatewayvillage.securecafe.com/onlineleasing/bell-gateway-village/guestlogin.aspx?ssid=c8258fe116883379615dfa8480b78d04",
+      "website": "https://www.bellgatewayvillage.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(833) 596-0220",
+        "email": null
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2544000",
@@ -993,7 +2097,18 @@
       "yearBuilt": 2001,
       "owner": "BEL AIR MULTI 50 LLC &",
       "software": "Yardi",
-      "proof": "https://belairdowntown.securecafenet.com/residentservices/bel-air-downtown/userlogin?dropdownlangid=999"
+      "proof": "https://belairdowntown.securecafenet.com/residentservices/bel-air-downtown/userlogin?dropdownlangid=999",
+      "website": "https://www.belairdowntown.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(855) 388-7904",
+        "email": null
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "1935918",
@@ -1004,7 +2119,18 @@
       "yearBuilt": 1986,
       "owner": "WWC CHASE OAKS LP",
       "software": "Entrata",
-      "proof": "https://villasatchaseoakscaf.residentportal.com/auth"
+      "proof": "https://villasatchaseoakscaf.residentportal.com/auth",
+      "website": "https://www.villasatchaseoaks.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(972) 449-4836",
+        "email": null
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2556799",
@@ -1015,7 +2141,18 @@
       "yearBuilt": 2004,
       "owner": "PWA-PLANO INDEPENDENCE SENIOR COMMUNITY LP",
       "software": "Yardi",
-      "proof": "https://www.rentcafe.com/residentservices/evergreen-at-plano/userlogin.aspx"
+      "proof": "https://www.rentcafe.com/residentservices/evergreen-at-plano/userlogin.aspx",
+      "website": "https://evergreenplano.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(469) 715-3905",
+        "email": null
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2595347",
@@ -1026,7 +2163,15 @@
       "yearBuilt": 2006,
       "owner": "EQR-KIA ORA PARK LP",
       "software": "unknown",
-      "proof": null
+      "proof": null,
+      "website": null,
+      "websiteConfidence": "none",
+      "checkedAt": null,
+      "unknownReason": "no-website",
+      "contact": null,
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2122987",
@@ -1037,7 +2182,18 @@
       "yearBuilt": 2000,
       "owner": "COVEY PLANO LP",
       "software": "RealPage",
-      "proof": "https://9251208.onlineleasing.realpage.com/?OLL-source-attribution=Property%20Website"
+      "proof": "https://9251208.onlineleasing.realpage.com/?OLL-source-attribution=Property%20Website",
+      "website": "https://linkatplano.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(469) 409-4861",
+        "email": null
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "1623283",
@@ -1048,7 +2204,18 @@
       "yearBuilt": 1984,
       "owner": "CORNERSTONE LEGACY LP",
       "software": "Yardi",
-      "proof": "https://legacy-anterra.securecafenet.com/residentservices/legacy-0/userlogin"
+      "proof": "https://legacy-anterra.securecafenet.com/residentservices/legacy-0/userlogin",
+      "website": "https://legacy.anterra.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(844) 512-1742",
+        "email": null
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "1972919",
@@ -1059,7 +2226,15 @@
       "yearBuilt": 1990,
       "owner": "PROPERTY RESERVE INC",
       "software": "unknown",
-      "proof": null
+      "proof": null,
+      "website": null,
+      "websiteConfidence": "none",
+      "checkedAt": null,
+      "unknownReason": "no-website",
+      "contact": null,
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2031654",
@@ -1070,7 +2245,18 @@
       "yearBuilt": 1994,
       "owner": "GARDEN GATE PL ACQUISITION LP",
       "software": "RealPage",
-      "proof": "https://gardengateplano.activebuilding.com/login"
+      "proof": "https://gardengateplano.activebuilding.com/login",
+      "website": "https://www.gardengateapartmentsplano.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(972) 431-0520",
+        "email": "accessibility@apartments247.com"
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2031655",
@@ -1081,7 +2267,18 @@
       "yearBuilt": 1994,
       "owner": "CAMDEN OPERATING LP",
       "software": "in-house:Camden",
-      "proof": "https://www.mycamden.com/"
+      "proof": "https://www.mycamden.com/",
+      "website": "https://www.camdenliving.com/apartments/plano-tx/camden-legacy-creek",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(469) 717-4407",
+        "email": null
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2084397",
@@ -1092,7 +2289,18 @@
       "yearBuilt": 1998,
       "owner": "PASKIN PROPERTIES - 4640 HEDGECOXE LLC &",
       "software": "Yardi",
-      "proof": "https://thepointatdeerfield.securecafe.com/onlineleasing/the-point-at-deerfield-apartments/guestlogin.aspx"
+      "proof": "https://thepointatdeerfield.securecafe.com/onlineleasing/the-point-at-deerfield-apartments/guestlogin.aspx",
+      "website": "https://www.thepointatdeerfield.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(844) 491-3591",
+        "email": "thepointatdeerfield.934447@leads.eliseai.com"
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2582787",
@@ -1103,7 +2311,18 @@
       "yearBuilt": 2005,
       "owner": "UNIFIED HOUSING OF CHASE OAKS LLC",
       "software": "RealPage",
-      "proof": "https://1206646.onlineleasing.realpage.com/"
+      "proof": "https://1206646.onlineleasing.realpage.com/",
+      "website": "https://www.plazaatchaseoaks.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(469) 721-6752",
+        "email": null
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2614632",
@@ -1114,7 +2333,18 @@
       "yearBuilt": 2011,
       "owner": "KV ENCORE APARTMENTS LLC",
       "software": "RealPage",
-      "proof": "https://dorianandencore.loftliving.com/login"
+      "proof": "https://dorianandencore.loftliving.com/login",
+      "website": "https://www.dorianandencoreluxuryliving.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(945) 351-0963",
+        "email": null
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "92688",
@@ -1125,7 +2355,18 @@
       "yearBuilt": 1978,
       "owner": "PRICEBLU CUSTER LLC",
       "software": "RealPage",
-      "proof": "https://17756ollv3.onlineleasing.realpage.com/"
+      "proof": "https://17756ollv3.onlineleasing.realpage.com/",
+      "website": "https://www.custerparkapts.com/custer-park-plano-tx",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(972) 449-4065",
+        "email": null
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "365483",
@@ -1136,7 +2377,34 @@
       "yearBuilt": 1968,
       "owner": "CLOVER WOODLANDS PLANO OWNER LLC",
       "software": "RealPage",
-      "proof": "https://9313892.onlineleasing.realpage.com/"
+      "proof": "https://9313892.onlineleasing.realpage.com/",
+      "website": "https://www.thewoodlandsofplano.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(940) 251-0936",
+        "email": "accessibility@apartments247.com"
+      },
+      "sale": {
+        "date": "",
+        "newOwner": "CLOVER WOODLANDS PLANO OWNER LLC",
+        "previousOwner": "THURMAN WOODLANDS LP",
+        "source": "https://data.texas.gov/resource/5tkr-3759.json?$select=propid,dbaname,ownername,deedtypecd,deedeffdate&$where=propid%20in%20(365483)"
+      },
+      "lead": {
+        "rank": 38,
+        "total": 43,
+        "size": 23,
+        "timing": 0,
+        "signal": 15,
+        "open": 5,
+        "why": "Owner changed to CLOVER WOODLANDS PLANO OWNER LLC \u00b7 232 units \u00b7 on RealPage \u2192 new owner may re-pick software."
+      },
+      "sources": [
+        "https://data.texas.gov/resource/5tkr-3759.json?$select=propid,dbaname,ownername,deedtypecd,deedeffdate&$where=propid%20in%20(365483)",
+        "https://9313892.onlineleasing.realpage.com/"
+      ]
     },
     {
       "id": "2120057",
@@ -1147,7 +2415,18 @@
       "yearBuilt": 1997,
       "owner": "TOWNS OF CHAPEL HILL APTS LP",
       "software": "Yardi",
-      "proof": "https://townsofchapelhill.securecafenet.com/residentservices/towns-of-chapel-hill/userlogin?ssid=06c8f869c80fc626c6bcac33d1375ff1"
+      "proof": "https://townsofchapelhill.securecafenet.com/residentservices/towns-of-chapel-hill/userlogin?ssid=06c8f869c80fc626c6bcac33d1375ff1",
+      "website": "https://townsofchapelhill.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(833) 402-5986",
+        "email": null
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "1716655",
@@ -1158,7 +2437,33 @@
       "yearBuilt": 1984,
       "owner": "WINSTON GT HOLDINGS LP &",
       "software": "unknown",
-      "proof": null
+      "proof": null,
+      "website": "https://multifamilyaffordablehousing.com/granite-towers-equity-group-acquires-hathaway-at-willow-bend-in-plano-texas/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": "no-portal-link",
+      "contact": {
+        "phone": null,
+        "email": "chamilton@francemediainc.com"
+      },
+      "sale": {
+        "date": "2026-06-24",
+        "newOwner": "WINSTON GT HOLDINGS LP",
+        "previousOwner": "PECOS HOUSING FINANCE CORPORATION",
+        "source": "https://data.texas.gov/resource/5tkr-3759.json?$select=propid,dbaname,ownername,deedtypecd,deedeffdate&$where=propid%20in%20(1716655)"
+      },
+      "lead": {
+        "rank": 7,
+        "total": 83,
+        "size": 23,
+        "timing": 30,
+        "signal": 15,
+        "open": 15,
+        "why": "Sold Jun 2026 to WINSTON GT HOLDINGS LP \u00b7 229 units \u00b7 software not yet identified \u2192 new owner may re-pick software."
+      },
+      "sources": [
+        "https://data.texas.gov/resource/5tkr-3759.json?$select=propid,dbaname,ownername,deedtypecd,deedeffdate&$where=propid%20in%20(1716655)"
+      ]
     },
     {
       "id": "2900849",
@@ -1169,7 +2474,18 @@
       "yearBuilt": 2022,
       "owner": "PLANO HOUSING AUTHORITY",
       "software": "Yardi",
-      "proof": "https://pivotal-communities.securecafe.com/residentservices/apartmentsforrent/userlogin.aspx"
+      "proof": "https://pivotal-communities.securecafe.com/residentservices/apartmentsforrent/userlogin.aspx",
+      "website": "https://www.pivotal-communities.com/properties/k-avenue-lofts",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(903) 282-3286",
+        "email": "k.avenue@pivotal-hp.com"
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "1989159",
@@ -1180,7 +2496,18 @@
       "yearBuilt": 1991,
       "owner": "PRESTON OLD SHEPARD TITLEHOLDER LLC",
       "software": "Yardi",
-      "proof": "https://the-oaks-at-plano-rentcafewebsite.securecafe.com/residentservices/the-oaks-at-plano/userlogin.aspx"
+      "proof": "https://the-oaks-at-plano-rentcafewebsite.securecafe.com/residentservices/the-oaks-at-plano/userlogin.aspx",
+      "website": "https://www.trueconnectioncommunities.com/texas-senior-living/the-oaks-at-plano/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(972) 634-7092",
+        "email": null
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2632167",
@@ -1191,7 +2518,18 @@
       "yearBuilt": 2006,
       "owner": "CONSERVATORY SENIOR HOUSING AT CHAMPION FOREST LP & ETAL",
       "software": "unknown",
-      "proof": null
+      "proof": null,
+      "website": "https://conservatoryatplano.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": "no-portal-link",
+      "contact": {
+        "phone": "(972) 491-3100",
+        "email": null
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "1747603",
@@ -1202,7 +2540,18 @@
       "yearBuilt": 1984,
       "owner": "HOP BORROWER LLC",
       "software": "Entrata",
-      "proof": "https://birchstonewestplano.residentportal.com/auth"
+      "proof": "https://birchstonewestplano.residentportal.com/auth",
+      "website": "https://www.birchstonewestplano.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(855) 409-0445",
+        "email": "webaccessibility@entrata.com"
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2116749",
@@ -1213,7 +2562,18 @@
       "yearBuilt": 1999,
       "owner": "MAA WWARRS LLC",
       "software": "Yardi",
-      "proof": "https://maac.securecafe.com/residentservices/apartmentsforrent/userlogin.aspx"
+      "proof": "https://maac.securecafe.com/residentservices/apartmentsforrent/userlogin.aspx",
+      "website": "https://www.maac.com/texas/dallas/maa-legacy/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(940) 464-5466",
+        "email": null
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2631255",
@@ -1224,7 +2584,18 @@
       "yearBuilt": 2007,
       "owner": "VTR PLANO LLC",
       "software": "unknown",
-      "proof": null
+      "proof": null,
+      "website": "https://www.atriaseniorliving.com/retirement-communities/atria-canyon-creek-plano-tx",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": "no-portal-link",
+      "contact": {
+        "phone": "(469) 827-9156",
+        "email": "accessibility@atriaseniorliving.com"
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2846017",
@@ -1235,7 +2606,18 @@
       "yearBuilt": 2020,
       "owner": "LUXIA PRESTON LLC",
       "software": "Yardi",
-      "proof": "https://luxiapreston.securecafenet.com/residentservices/luxia-preston0/userlogin"
+      "proof": "https://luxiapreston.securecafenet.com/residentservices/luxia-preston0/userlogin",
+      "website": "https://www.luxiapreston.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(469) 225-8445",
+        "email": null
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2843990",
@@ -1246,7 +2628,15 @@
       "yearBuilt": 2010,
       "owner": "5765 BOZEMAN (TX) OWNER LP",
       "software": "unknown",
-      "proof": null
+      "proof": null,
+      "website": "https://www.legacynorthapts.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": "no-portal-link",
+      "contact": null,
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "287594",
@@ -1257,7 +2647,15 @@
       "yearBuilt": 1978,
       "owner": "INDEPENDENCE RES LLC",
       "software": "unknown",
-      "proof": null
+      "proof": null,
+      "website": "https://www.willowbridgepc.com/properties/the-leighton-apartments-plano-texas",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": "no-portal-link",
+      "contact": null,
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2097518",
@@ -1268,7 +2666,18 @@
       "yearBuilt": 1998,
       "owner": "PEBBLE CREEK GARDENS LP",
       "software": "MRI/RentManager",
-      "proof": "https://www.mrisoftware.com/portalprivacypolicy/"
+      "proof": "https://www.mrisoftware.com/portalprivacypolicy/",
+      "website": "https://www.harborgroupmanagement.com/apartments/tx/plano/reserve-at-pebble-creek",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(469) 551-4226",
+        "email": null
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2109636",
@@ -1279,7 +2688,18 @@
       "yearBuilt": 1999,
       "owner": "SPRING CREEK GARDENS LP",
       "software": "MRI/RentManager",
-      "proof": "https://www.mrisoftware.com/portalprivacypolicy/"
+      "proof": "https://www.mrisoftware.com/portalprivacypolicy/",
+      "website": "https://www.harborgroupmanagement.com/apartments/tx/plano/somerset-at-spring-creek",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(469) 551-4308",
+        "email": null
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "1511233",
@@ -1290,7 +2710,34 @@
       "yearBuilt": 1983,
       "owner": "HARVESTREE OWNER LLC",
       "software": "Yardi",
-      "proof": "https://thewexleyplano.securecafenet.com/residentservices/harvestree-apartments-llc/userlogin"
+      "proof": "https://thewexleyplano.securecafenet.com/residentservices/harvestree-apartments-llc/userlogin",
+      "website": "https://www.thewexleyplano.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(972) 784-8600",
+        "email": "thewexley@founderspropertymanagement.com"
+      },
+      "sale": {
+        "date": "2025-08-01",
+        "newOwner": "HARVESTREE OWNER LLC",
+        "previousOwner": "HARVESTREE APARTMENTS LLC",
+        "source": "https://data.texas.gov/resource/5tkr-3759.json?$select=propid,dbaname,ownername,deedtypecd,deedeffdate&$where=propid%20in%20(1511233)"
+      },
+      "lead": {
+        "rank": 36,
+        "total": 45,
+        "size": 20,
+        "timing": 5,
+        "signal": 15,
+        "open": 5,
+        "why": "Sold Aug 2025 to HARVESTREE OWNER LLC \u00b7 204 units \u00b7 on Yardi \u2192 new owner may re-pick software."
+      },
+      "sources": [
+        "https://data.texas.gov/resource/5tkr-3759.json?$select=propid,dbaname,ownername,deedtypecd,deedeffdate&$where=propid%20in%20(1511233)",
+        "https://thewexleyplano.securecafenet.com/residentservices/harvestree-apartments-llc/userlogin"
+      ]
     },
     {
       "id": "1515006",
@@ -1301,7 +2748,18 @@
       "yearBuilt": 1983,
       "owner": "MID-AMERICA APARTMENTS LP",
       "software": "Yardi",
-      "proof": "https://maac.securecafe.com/residentservices/apartmentsforrent/userlogin.aspx"
+      "proof": "https://maac.securecafe.com/residentservices/apartmentsforrent/userlogin.aspx",
+      "website": "https://www.maac.com/texas/dallas/maa-highwood/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(940) 464-5507",
+        "email": null
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "1974850",
@@ -1312,7 +2770,18 @@
       "yearBuilt": 1991,
       "owner": "WELLINGTON APARTMENTS UI LLC & DEMING CENTRAL WELLINGTON LLC &",
       "software": "Yardi",
-      "proof": "https://wellingtonplano.securecafe.com/residentservices/wellington-at-willow-bend/userlogin.aspx?PropLeadSource_290974=portal&_yTrackUser=NDQ3MzQ2ODM5MCMxMTQ5NDI5MjYw-BpXYp37yLd4%253d&_yTrackVisit=NzIxNDM0ODY4NCM1MjYzNDYxNzY%253d-mKdqsxPqZEY%253d&_yTrackReqDT=39361720261009"
+      "proof": "https://wellingtonplano.securecafe.com/residentservices/wellington-at-willow-bend/userlogin.aspx?PropLeadSource_290974=portal&_yTrackUser=NDQ3MzQ2ODM5MCMxMTQ5NDI5MjYw-BpXYp37yLd4%253d&_yTrackVisit=NzIxNDM0ODY4NCM1MjYzNDYxNzY%253d-mKdqsxPqZEY%253d&_yTrackReqDT=39361720261009",
+      "website": "https://www.wellingtonplano.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(866) 204-5304",
+        "email": null
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "134633",
@@ -1323,7 +2792,18 @@
       "yearBuilt": 1975,
       "owner": "BUMPUS DONALD R GRANTOR TRUST THE",
       "software": "AppFolio",
-      "proof": "https://bumpus.appfolio.com/connect/users/sign_in"
+      "proof": "https://bumpus.appfolio.com/connect/users/sign_in",
+      "website": "https://groveparkplano.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(972) 424-6561",
+        "email": null
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2802245",
@@ -1334,7 +2814,18 @@
       "yearBuilt": 2017,
       "owner": "TIMBERS PLANO PARTNERS LLC - ETAL",
       "software": "Yardi",
-      "proof": "https://moradaplano.securecafenet.com/residentservices/morada-plano1/userlogin"
+      "proof": "https://moradaplano.securecafenet.com/residentservices/morada-plano1/userlogin",
+      "website": "https://www.moradaplano.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(972) 945-8607",
+        "email": null
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "1580300",
@@ -1345,7 +2836,18 @@
       "yearBuilt": 1983,
       "owner": "PRICE GREENBRIAR PLANO LLC",
       "software": "RealPage",
-      "proof": "https://1737725.onlineleasing.realpage.com/"
+      "proof": "https://1737725.onlineleasing.realpage.com/",
+      "website": "https://www.greenbriar-plano.com/greenbriar-plano-tx",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(945) 207-3160",
+        "email": null
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2132903",
@@ -1356,7 +2858,18 @@
       "yearBuilt": 1999,
       "owner": "HERITAGE AT LAKESIDE PROPERTY OWNER LLC",
       "software": "Entrata",
-      "proof": "https://heritageatlakeside.residentportal.com/auth"
+      "proof": "https://heritageatlakeside.residentportal.com/auth",
+      "website": "https://www.heritageatlakeside.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(972) 943-3577",
+        "email": "webaccessibility@entrata.com"
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2092539",
@@ -1367,7 +2880,18 @@
       "yearBuilt": 1998,
       "owner": "GP-RPC LIVINGSTON LLC",
       "software": "Entrata",
-      "proof": "https://medialibrarycfo.entrata.com/16362/MLv3/4/22/2025/11/12/083646/71226_100120043_68360540afa5b2.08208209790.jpg"
+      "proof": "https://medialibrarycfo.entrata.com/16362/MLv3/4/22/2025/11/12/083646/71226_100120043_68360540afa5b2.08208209790.jpg",
+      "website": "https://www.liveatthelivingston.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(469) 721-1817",
+        "email": "webaccessibility@entrata.com"
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2953639",
@@ -1378,7 +2902,18 @@
       "yearBuilt": 2022,
       "owner": "MARIPOSA COMMUNICATIONS PARKWAY LP",
       "software": "RealPage",
-      "proof": "https://mariposacommunicationsparkway.loftliving.com/login"
+      "proof": "https://mariposacommunicationsparkway.loftliving.com/login",
+      "website": "https://www.mariposacommparkway.com/apartments/tx/plano/floor-plans",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(469) 613-4642",
+        "email": null
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2820374",
@@ -1389,7 +2924,34 @@
       "yearBuilt": 2019,
       "owner": "CSH PLANO ACT LLC",
       "software": "Entrata",
-      "proof": "https://myorchardatmarketplazatx.prospectportal.com/Apartments/module/application_authentication/"
+      "proof": "https://myorchardatmarketplazatx.prospectportal.com/Apartments/module/application_authentication/",
+      "website": "https://orchardsmarketplaza.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(682) 418-2225",
+        "email": null
+      },
+      "sale": {
+        "date": "2026-07-17",
+        "newOwner": "CSH PLANO ACT LLC",
+        "previousOwner": "unknown (same owner name in 2025 roll)",
+        "source": "https://data.texas.gov/resource/5tkr-3759.json?$select=propid,dbaname,ownername,deedtypecd,deedeffdate&$where=propid%20in%20(2820374)"
+      },
+      "lead": {
+        "rank": 17,
+        "total": 68,
+        "size": 18,
+        "timing": 30,
+        "signal": 15,
+        "open": 5,
+        "why": "Sold Jul 2026 to CSH PLANO ACT LLC \u00b7 178 units \u00b7 on Entrata \u2192 new owner may re-pick software."
+      },
+      "sources": [
+        "https://data.texas.gov/resource/5tkr-3759.json?$select=propid,dbaname,ownername,deedtypecd,deedeffdate&$where=propid%20in%20(2820374)",
+        "https://myorchardatmarketplazatx.prospectportal.com/Apartments/module/application_authentication/"
+      ]
     },
     {
       "id": "2734943",
@@ -1400,7 +2962,34 @@
       "yearBuilt": 2025,
       "owner": "LW RESIDENTIAL PARTNERS LP",
       "software": "Yardi",
-      "proof": "https://thehollandlegacywest.securecafe.com/residentservices/the-holland/userlogin.aspx"
+      "proof": "https://thehollandlegacywest.securecafe.com/residentservices/the-holland/userlogin.aspx",
+      "website": "https://thehollandlegacywest.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(214) 617-2310",
+        "email": null
+      },
+      "sale": {
+        "date": "2025-04-22",
+        "newOwner": "LW RESIDENTIAL PARTNERS LP",
+        "previousOwner": "unknown (same owner name in 2025 roll)",
+        "source": "https://data.texas.gov/resource/5tkr-3759.json?$select=propid,dbaname,ownername,deedtypecd,deedeffdate&$where=propid%20in%20(2734943)"
+      },
+      "lead": {
+        "rank": 37,
+        "total": 43,
+        "size": 18,
+        "timing": 5,
+        "signal": 15,
+        "open": 5,
+        "why": "Sold Apr 2025 to LW RESIDENTIAL PARTNERS LP \u00b7 175 units \u00b7 on Yardi \u2192 new owner may re-pick software."
+      },
+      "sources": [
+        "https://data.texas.gov/resource/5tkr-3759.json?$select=propid,dbaname,ownername,deedtypecd,deedeffdate&$where=propid%20in%20(2734943)",
+        "https://thehollandlegacywest.securecafe.com/residentservices/the-holland/userlogin.aspx"
+      ]
     },
     {
       "id": "2116750",
@@ -1411,7 +3000,15 @@
       "yearBuilt": 1999,
       "owner": "MAA WWARRS LLC",
       "software": "unknown",
-      "proof": null
+      "proof": null,
+      "website": "https://www.calameo.com/books/003186963fa0d71126181",
+      "websiteConfidence": "low",
+      "checkedAt": null,
+      "unknownReason": "no-website",
+      "contact": null,
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2710065",
@@ -1422,7 +3019,34 @@
       "yearBuilt": 2015,
       "owner": "DHC HYB SLC PROPERTIES LLC",
       "software": "Entrata",
-      "proof": "https://overtureplanonew.residentportal.com/"
+      "proof": "https://overtureplanonew.residentportal.com/",
+      "website": "https://liveoverture.com/communities/overture-plano/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(469) 240-6328",
+        "email": null
+      },
+      "sale": {
+        "date": "2025-09-26",
+        "newOwner": "DHC HYB SLC PROPERTIES LLC",
+        "previousOwner": "SNH SE PROPERTIES TRUST",
+        "source": "https://data.texas.gov/resource/5tkr-3759.json?$select=propid,dbaname,ownername,deedtypecd,deedeffdate&$where=propid%20in%20(2710065)"
+      },
+      "lead": {
+        "rank": 33,
+        "total": 49,
+        "size": 17,
+        "timing": 12,
+        "signal": 15,
+        "open": 5,
+        "why": "Sold Sep 2025 to DHC HYB SLC PROPERTIES LLC \u00b7 168 units \u00b7 on Entrata \u2192 new owner may re-pick software."
+      },
+      "sources": [
+        "https://data.texas.gov/resource/5tkr-3759.json?$select=propid,dbaname,ownername,deedtypecd,deedeffdate&$where=propid%20in%20(2710065)",
+        "https://overtureplanonew.residentportal.com/"
+      ]
     },
     {
       "id": "2027278",
@@ -1433,7 +3057,34 @@
       "yearBuilt": 1995,
       "owner": "RC CALVIN LLC",
       "software": "AppFolio",
-      "proof": "https://reapmgt.appfolio.com/connect/users/sign_in?portfolio_uuid=8ead78e2-b996-11ef-a8d3-0af44ebe6ded"
+      "proof": "https://reapmgt.appfolio.com/connect/users/sign_in?portfolio_uuid=8ead78e2-b996-11ef-a8d3-0af44ebe6ded",
+      "website": "https://www.livecalvin.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(469) 430-2926",
+        "email": "calvin@reapmgt.com"
+      },
+      "sale": {
+        "date": "2024-12-13",
+        "newOwner": "RC CALVIN LLC",
+        "previousOwner": "unknown (same owner name in 2025 roll)",
+        "source": "https://data.texas.gov/resource/5tkr-3759.json?$select=propid,dbaname,ownername,deedtypecd,deedeffdate&$where=propid%20in%20(2027278)"
+      },
+      "lead": {
+        "rank": 39,
+        "total": 42,
+        "size": 17,
+        "timing": 5,
+        "signal": 15,
+        "open": 5,
+        "why": "Sold Dec 2024 to RC CALVIN LLC \u00b7 167 units \u00b7 on AppFolio \u2192 new owner may re-pick software."
+      },
+      "sources": [
+        "https://data.texas.gov/resource/5tkr-3759.json?$select=propid,dbaname,ownername,deedtypecd,deedeffdate&$where=propid%20in%20(2027278)",
+        "https://reapmgt.appfolio.com/connect/users/sign_in?portfolio_uuid=8ead78e2-b996-11ef-a8d3-0af44ebe6ded"
+      ]
     },
     {
       "id": "2808931",
@@ -1444,7 +3095,34 @@
       "yearBuilt": 2019,
       "owner": "LW OWNER 2 LLC",
       "software": "Yardi",
-      "proof": "https://instratalegacywest.securecafe.com/onlineleasing/instrata-at-legacy-west/guestlogin.aspx"
+      "proof": "https://instratalegacywest.securecafe.com/onlineleasing/instrata-at-legacy-west/guestlogin.aspx",
+      "website": "https://www.instratalegacywest.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(469) 804-6577",
+        "email": null
+      },
+      "sale": {
+        "date": "2025-04-28",
+        "newOwner": "LW OWNER 2 LLC",
+        "previousOwner": "unknown (same owner name in 2025 roll)",
+        "source": "https://data.texas.gov/resource/5tkr-3759.json?$select=propid,dbaname,ownername,deedtypecd,deedeffdate&$where=propid%20in%20(2808931)"
+      },
+      "lead": {
+        "rank": 40,
+        "total": 41,
+        "size": 16,
+        "timing": 5,
+        "signal": 15,
+        "open": 5,
+        "why": "Sold Apr 2025 to LW OWNER 2 LLC \u00b7 161 units \u00b7 on Yardi \u2192 new owner may re-pick software."
+      },
+      "sources": [
+        "https://data.texas.gov/resource/5tkr-3759.json?$select=propid,dbaname,ownername,deedtypecd,deedeffdate&$where=propid%20in%20(2808931)",
+        "https://instratalegacywest.securecafe.com/onlineleasing/instrata-at-legacy-west/guestlogin.aspx"
+      ]
     },
     {
       "id": "26251",
@@ -1455,7 +3133,18 @@
       "yearBuilt": 1976,
       "owner": "TOWNBLUFF RES LLC",
       "software": "unknown",
-      "proof": null
+      "proof": null,
+      "website": "https://www.willowbridgepc.com/properties/the-lydian-apartments-plano-texas",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": "no-portal-link",
+      "contact": {
+        "phone": "(972) 639-5321",
+        "email": null
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "1747612",
@@ -1466,7 +3155,15 @@
       "yearBuilt": 1985,
       "owner": "HOP BORROWER LLC",
       "software": "unknown",
-      "proof": null
+      "proof": null,
+      "website": "https://www.birchstonewestplano.com/",
+      "websiteConfidence": "low",
+      "checkedAt": null,
+      "unknownReason": "no-website",
+      "contact": null,
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "269792",
@@ -1477,7 +3174,18 @@
       "yearBuilt": 1965,
       "owner": "PLANO PUBLIC FACILITY CORPORATION",
       "software": "Yardi",
-      "proof": "https://belairon16th.securecafenet.com/residentservices/bel-air-on-16th/userlogin?dropdownlangid=999"
+      "proof": "https://belairon16th.securecafenet.com/residentservices/bel-air-on-16th/userlogin?dropdownlangid=999",
+      "website": "https://www.belairon16th.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(833) 486-1256",
+        "email": null
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "1708744",
@@ -1488,7 +3196,18 @@
       "yearBuilt": 1985,
       "owner": "PARK SPRINGS TEXAS LLC",
       "software": "ResMan",
-      "proof": "https://uswc.myresman.com/Portal/Access/SignIn/PSP"
+      "proof": "https://uswc.myresman.com/Portal/Access/SignIn/PSP",
+      "website": "https://www.psplano.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(972) 517-6897",
+        "email": null
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2936294",
@@ -1499,7 +3218,18 @@
       "yearBuilt": 2024,
       "owner": "PLANO OWNER LLC",
       "software": "unknown",
-      "proof": null
+      "proof": null,
+      "website": "https://www.after55.com/tx/plano/novum-plano/6q93pst",
+      "websiteConfidence": "medium",
+      "checkedAt": "2026-09-10",
+      "unknownReason": "no-portal-link",
+      "contact": {
+        "phone": "(832) 251-7956",
+        "email": null
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2545145",
@@ -1510,7 +3240,18 @@
       "yearBuilt": 2017,
       "owner": "PECAN PUBLIC FACILITY CORPORATION",
       "software": "Entrata",
-      "proof": "https://mcdermottpark.residentportal.com/"
+      "proof": "https://mcdermottpark.residentportal.com/",
+      "website": "https://www.mcdermott55.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(972) 640-8306",
+        "email": "webaccessibility@entrata.com"
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "21924",
@@ -1521,7 +3262,18 @@
       "yearBuilt": 1981,
       "owner": "1001 CHISHOLM LLC",
       "software": "Yardi",
-      "proof": "https://chisholmplace.securecafenet.com/residentservices/chisholm-place-1/userlogin"
+      "proof": "https://chisholmplace.securecafenet.com/residentservices/chisholm-place-1/userlogin",
+      "website": "https://www.chisholmplace.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(469) 297-9925",
+        "email": null
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "21157",
@@ -1532,7 +3284,18 @@
       "yearBuilt": 1985,
       "owner": "URBAN HIGH POINT LP",
       "software": "ResMan",
-      "proof": "https://uswc.myresman.com/Portal/Access/SignIn/HP"
+      "proof": "https://uswc.myresman.com/Portal/Access/SignIn/HP",
+      "website": "https://www.highpointplano.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(972) 517-2774",
+        "email": null
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "1640889",
@@ -1543,7 +3306,18 @@
       "yearBuilt": 1983,
       "owner": "WINDSOR PLACE EQUITY ENTERPRISES LLC",
       "software": "MRI/RentManager",
-      "proof": "https://www.mrisoftware.com/portalprivacypolicy/"
+      "proof": "https://www.mrisoftware.com/portalprivacypolicy/",
+      "website": "https://npmainc.com/property/windsor-place-townhomes/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(214) 307-8693",
+        "email": null
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2654207",
@@ -1554,7 +3328,18 @@
       "yearBuilt": 1985,
       "owner": "ASHLEY PARK TOWNHOMES LLC",
       "software": "Yardi",
-      "proof": "https://livecarringtonpark.securecafe.com/residentservices/carrington-park-4/userlogin.aspx?PropLeadSource_649995=portal&_yTrackUser=NDQ3MzQ2NDQ2NiMxMjEzNTgzODgz-Vy3m9RaLdZo%253d&_yTrackVisit=NzIxNDM0MjU2MyMxODg0NzQzMzIy-uhOUfrqxSp8%253d&_yTrackReqDT=44341720261009"
+      "proof": "https://livecarringtonpark.securecafe.com/residentservices/carrington-park-4/userlogin.aspx?PropLeadSource_649995=portal&_yTrackUser=NDQ3MzQ2NDQ2NiMxMjEzNTgzODgz-Vy3m9RaLdZo%253d&_yTrackVisit=NzIxNDM0MjU2MyMxODg0NzQzMzIy-uhOUfrqxSp8%253d&_yTrackReqDT=44341720261009",
+      "website": "https://www.livecarringtonpark.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(888) 857-2678",
+        "email": null
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2843129",
@@ -1565,7 +3350,18 @@
       "yearBuilt": 2019,
       "owner": "PLANO FAMILY 001 LP",
       "software": "unknown",
-      "proof": null
+      "proof": null,
+      "website": "https://patriotparkplano.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": "no-portal-link",
+      "contact": {
+        "phone": "(972) 424-2296",
+        "email": null
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2115198",
@@ -1576,7 +3372,15 @@
       "yearBuilt": 1999,
       "owner": "TRIAD SENIOR LIVING II LP",
       "software": "unknown",
-      "proof": null
+      "proof": null,
+      "website": "https://www.seniorlivingguide.com/communities/the-waterford-at-plano-3401-premier-drive-plano-tx-75023/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": "no-portal-link",
+      "contact": null,
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2873065",
@@ -1587,7 +3391,18 @@
       "yearBuilt": 2021,
       "owner": "TWIN RIVERS AT COLLIN CREEK LTD",
       "software": "unknown",
-      "proof": null
+      "proof": null,
+      "website": "https://twinriversatcollincreek.com/plano-neighborhoods/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": "no-portal-link",
+      "contact": {
+        "phone": "(945) 299-1401",
+        "email": null
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2107914",
@@ -1598,7 +3413,18 @@
       "yearBuilt": 1999,
       "owner": "M N PLANO LTD",
       "software": "ResMan",
-      "proof": "https://aog.myresman.com/Portal/Access/SignIn/792"
+      "proof": "https://aog.myresman.com/Portal/Access/SignIn/792",
+      "website": "https://www.villasofmissionbend.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(972) 867-2700",
+        "email": null
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "148646",
@@ -1609,7 +3435,34 @@
       "yearBuilt": 1962,
       "owner": "ALTA VISTA APARTMENTS & TJFL LEGACY LP",
       "software": "RealPage",
-      "proof": "https://altavistaapartments.activebuilding.com/"
+      "proof": "https://altavistaapartments.activebuilding.com/",
+      "website": "https://thealtavistaapts.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(972) 424-0820",
+        "email": null
+      },
+      "sale": {
+        "date": "2025-02-07",
+        "newOwner": "ALTA VISTA APARTMENTS & TJFL LEGACY LP",
+        "previousOwner": "unknown (same owner name in 2025 roll)",
+        "source": "https://data.texas.gov/resource/5tkr-3759.json?$select=propid,dbaname,ownername,deedtypecd,deedeffdate&$where=propid%20in%20(148646)"
+      },
+      "lead": {
+        "rank": 41,
+        "total": 38,
+        "size": 13,
+        "timing": 5,
+        "signal": 15,
+        "open": 5,
+        "why": "Sold Feb 2025 to ALTA VISTA APARTMENTS & TJFL LEGACY LP \u00b7 133 units \u00b7 on RealPage \u2192 new owner may re-pick software."
+      },
+      "sources": [
+        "https://data.texas.gov/resource/5tkr-3759.json?$select=propid,dbaname,ownername,deedtypecd,deedeffdate&$where=propid%20in%20(148646)",
+        "https://altavistaapartments.activebuilding.com/"
+      ]
     },
     {
       "id": "2107892",
@@ -1620,7 +3473,18 @@
       "yearBuilt": 1999,
       "owner": "NEVADA VI GD LLC",
       "software": "Yardi",
-      "proof": "https://langdonatspringcreek.securecafenet.com/residentservices/langdon-at-spring-creek/userlogin"
+      "proof": "https://langdonatspringcreek.securecafenet.com/residentservices/langdon-at-spring-creek/userlogin",
+      "website": "https://www.langdonatspringcreek.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(972) 945-6745",
+        "email": null
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2572901",
@@ -1631,7 +3495,18 @@
       "yearBuilt": 2011,
       "owner": "PECAN PUBLIC FACILITY CORPORATION",
       "software": "Entrata",
-      "proof": "https://mcdermottpark.residentportal.com/"
+      "proof": "https://mcdermottpark.residentportal.com/",
+      "website": "https://www.mcdermott55.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(972) 640-8306",
+        "email": "webaccessibility@entrata.com"
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2721330",
@@ -1642,7 +3517,18 @@
       "yearBuilt": 2016,
       "owner": "STARBOARD PREMIER DST",
       "software": "Yardi",
-      "proof": "https://tours-horizonatpremier.securecafe.com/residentservices/avilla-premier0/userlogin.aspx"
+      "proof": "https://tours-horizonatpremier.securecafe.com/residentservices/avilla-premier0/userlogin.aspx",
+      "website": "https://www.horizonatpremier.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(833) 409-6386",
+        "email": null
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2069471",
@@ -1653,7 +3539,18 @@
       "yearBuilt": 1999,
       "owner": "WINTERFELL COTTONWOOD (TX) OWNER LLC",
       "software": "unknown",
-      "proof": null
+      "proof": null,
+      "website": "https://solsticeseniorlivingplano.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": "no-portal-link",
+      "contact": {
+        "phone": "(469) 829-7246",
+        "email": null
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2873533",
@@ -1664,7 +3561,18 @@
       "yearBuilt": 2021,
       "owner": "GALA AT PREMIER LP",
       "software": "RealPage",
-      "proof": "https://9110723aff.onlineleasing.realpage.com/#k=54874"
+      "proof": "https://9110723aff.onlineleasing.realpage.com/#k=54874",
+      "website": "https://www.galapremier.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(469) 240-6422",
+        "email": "galaatpremier-w@m.knck.io"
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "148655",
@@ -1675,7 +3583,18 @@
       "yearBuilt": 1971,
       "owner": "VDS EAT LLC",
       "software": "RealPage",
-      "proof": "https://villasdelsol.loftliving.com/portal/"
+      "proof": "https://villasdelsol.loftliving.com/portal/",
+      "website": "https://livevillasdelsol.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(214) 501-3219",
+        "email": null
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2683019",
@@ -1686,7 +3605,18 @@
       "yearBuilt": 2011,
       "owner": "UHF TUSCANY VILLAS HOUSING LP",
       "software": "RealPage",
-      "proof": "https://property.onesite.realpage.com/welcomehome/?siteId=2444141"
+      "proof": "https://property.onesite.realpage.com/welcomehome/?siteId=2444141",
+      "website": "https://www.tuscanyvillasplano.net/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(972) 916-9441",
+        "email": null
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2803398",
@@ -1697,7 +3627,18 @@
       "yearBuilt": 1970,
       "owner": "TTEP AMBER VISTA LLC",
       "software": "ResMan",
-      "proof": "https://fairmont.myresman.com/Portal/Access/SignIn/AV"
+      "proof": "https://fairmont.myresman.com/Portal/Access/SignIn/AV",
+      "website": "https://www.ambervistaplano.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(972) 423-1544",
+        "email": null
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "13310",
@@ -1708,7 +3649,18 @@
       "yearBuilt": 1999,
       "owner": "SHILOH PARK TOWNHOMES LLC",
       "software": "unknown",
-      "proof": null
+      "proof": null,
+      "website": "https://www.shilohparkapts.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": "no-portal-link",
+      "contact": {
+        "phone": "(972) 424-0216",
+        "email": null
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "1524318",
@@ -1719,7 +3671,18 @@
       "yearBuilt": 1984,
       "owner": "COBBLESTONE CONDOS 71 LP",
       "software": "unknown",
-      "proof": null
+      "proof": null,
+      "website": "https://thebauergrouprealty.com/home-search/listings/v2/tx/plano/cobblestone/condos",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": "no-portal-link",
+      "contact": {
+        "phone": "(972) 292-8811",
+        "email": null
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "1808832",
@@ -1730,7 +3693,34 @@
       "yearBuilt": 1985,
       "owner": "AMELIA 77 LLC",
       "software": "ResMan",
-      "proof": "https://valcap.myresman.com/Portal/Access/SignIn/ASPN"
+      "proof": "https://valcap.myresman.com/Portal/Access/SignIn/ASPN",
+      "website": "https://www.aspencourt.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(469) 517-3651",
+        "email": null
+      },
+      "sale": {
+        "date": "2025-05-03",
+        "newOwner": "AMELIA 77 LLC",
+        "previousOwner": "unknown (same owner name in 2025 roll)",
+        "source": "https://data.texas.gov/resource/5tkr-3759.json?$select=propid,dbaname,ownername,deedtypecd,deedeffdate&$where=propid%20in%20(1808832)"
+      },
+      "lead": {
+        "rank": 42,
+        "total": 32,
+        "size": 7,
+        "timing": 5,
+        "signal": 15,
+        "open": 5,
+        "why": "Sold May 2025 to AMELIA 77 LLC \u00b7 70 units \u00b7 on ResMan \u2192 new owner may re-pick software."
+      },
+      "sources": [
+        "https://data.texas.gov/resource/5tkr-3759.json?$select=propid,dbaname,ownername,deedtypecd,deedeffdate&$where=propid%20in%20(1808832)",
+        "https://valcap.myresman.com/Portal/Access/SignIn/ASPN"
+      ]
     },
     {
       "id": "2567179",
@@ -1741,7 +3731,18 @@
       "yearBuilt": 2006,
       "owner": "UDR LEGACY VILLAGE LLC",
       "software": "in-house:UDR",
-      "proof": "https://residents.udr.com/"
+      "proof": "https://residents.udr.com/",
+      "website": "https://www.udr.com/dallas-apartments/plano/legacy-village-apartment-homes/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(430) 243-4542",
+        "email": null
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "769",
@@ -1752,7 +3753,15 @@
       "yearBuilt": 1950,
       "owner": "VDS EAT LLC",
       "software": "unknown",
-      "proof": null
+      "proof": null,
+      "website": "https://data.texas.gov/views/hkzz-rrn8/rows.rdf?accessType=DOWNLOAD",
+      "websiteConfidence": "low",
+      "checkedAt": null,
+      "unknownReason": "no-website",
+      "contact": null,
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2856761",
@@ -1763,7 +3772,15 @@
       "yearBuilt": 2020,
       "owner": "2016 OLD TOWN PLANO EAST LTD",
       "software": "unknown",
-      "proof": null
+      "proof": null,
+      "website": "https://members.planochamber.org/members/member/junction-15-apartments-10856",
+      "websiteConfidence": "low",
+      "checkedAt": null,
+      "unknownReason": "no-website",
+      "contact": null,
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2986934",
@@ -1774,7 +3791,18 @@
       "yearBuilt": 2006,
       "owner": "MFREVF V - PLANO LP",
       "software": "RealPage",
-      "proof": "https://property.onesite.realpage.com/welcomehome?siteId=4395751"
+      "proof": "https://property.onesite.realpage.com/welcomehome?siteId=4395751",
+      "website": "https://www.theranchatridgeview.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(972) 362-9688",
+        "email": "accessibility@apartments247.com"
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "354556",
@@ -1785,7 +3813,15 @@
       "yearBuilt": 1962,
       "owner": "PLEASANT PARK APTS LLC",
       "software": "unknown",
-      "proof": null
+      "proof": null,
+      "website": "https://magicpin.com/usa/Plano/Downtown-Plano/Other/Pleasant-Park-Apartments/store/246a066",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": "no-portal-link",
+      "contact": null,
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "180271",
@@ -1796,7 +3832,18 @@
       "yearBuilt": 1960,
       "owner": "HIH COURTYARD LLC",
       "software": "unknown",
-      "proof": null
+      "proof": null,
+      "website": "https://www.travelweekly.com/Hotels/Plano-TX/Courtyard-Dallas-Plano-Parkway-p53239725",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": "no-portal-link",
+      "contact": {
+        "phone": "(972) 867-8000",
+        "email": null
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "1764969",
@@ -1807,7 +3854,15 @@
       "yearBuilt": 1986,
       "owner": "SILVERWOOD TOWNHOUSES INC",
       "software": "unknown",
-      "proof": null
+      "proof": null,
+      "website": "https://www.udr.com/dallas-apartments/plano/legacy-village-apartment-homes/",
+      "websiteConfidence": "low",
+      "checkedAt": null,
+      "unknownReason": "no-website",
+      "contact": null,
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "163325",
@@ -1818,7 +3873,15 @@
       "yearBuilt": 1967,
       "owner": "BELLEVIEW PLACE LLC",
       "software": "unknown",
-      "proof": null
+      "proof": null,
+      "website": "https://englewoodgov.civicweb.net/document/461819/City%20Council%20Study%20Session%20-%2023%20Mar%202026.pdf?handle=86B95EC9C1424617BA8642B6C0F95811",
+      "websiteConfidence": "low",
+      "checkedAt": null,
+      "unknownReason": "no-website",
+      "contact": null,
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2820598",
@@ -1829,7 +3892,15 @@
       "yearBuilt": 2019,
       "owner": "BLESSINGS HOME LLC",
       "software": "Buildium",
-      "proof": "https://touraineplano.managebuilding.com/Resident/rental-application/new"
+      "proof": "https://touraineplano.managebuilding.com/Resident/rental-application/new",
+      "website": "https://www.touraine-plano.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": null,
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "84143",
@@ -1840,7 +3911,15 @@
       "yearBuilt": 1968,
       "owner": "OHIO PLAZA LLC",
       "software": "unknown",
-      "proof": null
+      "proof": null,
+      "website": "https://www.city-data.com/collin-county/L/L-Avenue-2.html",
+      "websiteConfidence": "low",
+      "checkedAt": null,
+      "unknownReason": "no-website",
+      "contact": null,
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "163334",
@@ -1851,7 +3930,18 @@
       "yearBuilt": 1972,
       "owner": "BELLEVIEW PLACE LLC",
       "software": "ResMan",
-      "proof": "https://savoy.myresman.com/Portal/Applicants/Availability?a=1471&p=6c234bdc-e250-4c76-8422-5d5344309533"
+      "proof": "https://savoy.myresman.com/Portal/Applicants/Availability?a=1471&p=6c234bdc-e250-4c76-8422-5d5344309533",
+      "website": "https://www.livesavoy.com/belleview/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(844) 329-5798",
+        "email": "livesavoy@savoytx.com"
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "84125",
@@ -1862,7 +3952,15 @@
       "yearBuilt": 1965,
       "owner": "OHIO PLAZA LLC",
       "software": "RealPage",
-      "proof": "https://login.activebuilding.com/auth/login"
+      "proof": "https://login.activebuilding.com/auth/login",
+      "website": "https://www.liveatmagnolia.com/homes/tx/dallas/magnolia-on-moser/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": null,
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "1571819",
@@ -1873,7 +3971,15 @@
       "yearBuilt": 1983,
       "owner": "CY TOWNHOMES LLC",
       "software": "RealPage",
-      "proof": "https://www.realpage.com/"
+      "proof": "https://www.realpage.com/",
+      "website": "https://www.taa.org/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": null,
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2039505",
@@ -1884,7 +3990,18 @@
       "yearBuilt": 1996,
       "owner": "WATERVIEW MARQUIS LP &",
       "software": "Yardi",
-      "proof": "https://marquiswaterview.securecafe.com/residentservices/marquis-at-waterview/userlogin.aspx"
+      "proof": "https://marquiswaterview.securecafe.com/residentservices/marquis-at-waterview/userlogin.aspx",
+      "website": "https://www.marquiswaterview.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(844) 743-3955",
+        "email": null
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2039698",
@@ -1895,7 +4012,18 @@
       "yearBuilt": 1996,
       "owner": "PRAIRIE CREEK APTS LLC",
       "software": "unknown",
-      "proof": "https://apply.funnelleasing.com/873/login"
+      "proof": "https://apply.funnelleasing.com/873/login",
+      "website": "https://cortland.com/apartments/cortland-prairie-creek/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": "in-house-portal",
+      "contact": {
+        "phone": "(972) 945-0312",
+        "email": null
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2751130",
@@ -1906,7 +4034,18 @@
       "yearBuilt": 2017,
       "owner": "JDFW (RESERVE) LLC",
       "software": "Yardi",
-      "proof": "https://liveatreserve.securecafenet.com/residentservices/reserve-at-spring-creek-apartments/userlogin"
+      "proof": "https://liveatreserve.securecafenet.com/residentservices/reserve-at-spring-creek-apartments/userlogin",
+      "website": "https://www.liveatreserve.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(844) 542-4236",
+        "email": null
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2117157",
@@ -1917,7 +4056,15 @@
       "yearBuilt": 2000,
       "owner": "SOUTHWEST CLEARWATER CREEK PARTNERS LP",
       "software": "unknown",
-      "proof": null
+      "proof": null,
+      "website": null,
+      "websiteConfidence": "none",
+      "checkedAt": null,
+      "unknownReason": "no-website",
+      "contact": null,
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2748103",
@@ -1928,7 +4075,34 @@
       "yearBuilt": 2017,
       "owner": "TREA ROUTH CREEK TX OWNER LP",
       "software": "Yardi",
-      "proof": "https://vantagespringcreek.securecafenet.com/residentservices/vantage-at-spring-creek0/userlogin"
+      "proof": "https://vantagespringcreek.securecafenet.com/residentservices/vantage-at-spring-creek0/userlogin",
+      "website": "https://www.vantagespringcreek.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(844) 493-7356",
+        "email": null
+      },
+      "sale": {
+        "date": "2026-06-11",
+        "newOwner": "TREA ROUTH CREEK TX OWNER LP",
+        "previousOwner": "JDFW (VANTAGE) LLC",
+        "source": "https://data.texas.gov/resource/5tkr-3759.json?$select=propid,dbaname,ownername,deedtypecd,deedeffdate&$where=propid%20in%20(2748103)"
+      },
+      "lead": {
+        "rank": 8,
+        "total": 80,
+        "size": 40,
+        "timing": 20,
+        "signal": 15,
+        "open": 5,
+        "why": "Sold Jun 2026 to TREA ROUTH CREEK TX OWNER LP \u00b7 420 units \u00b7 on Yardi \u2192 new owner may re-pick software."
+      },
+      "sources": [
+        "https://data.texas.gov/resource/5tkr-3759.json?$select=propid,dbaname,ownername,deedtypecd,deedeffdate&$where=propid%20in%20(2748103)",
+        "https://vantagespringcreek.securecafenet.com/residentservices/vantage-at-spring-creek0/userlogin"
+      ]
     },
     {
       "id": "2770320",
@@ -1939,7 +4113,18 @@
       "yearBuilt": 2018,
       "owner": "CF JAMES MULTIFAMILY DST",
       "software": "Yardi",
-      "proof": "https://thejamesatcanyoncreek.securecafenet.com/residentservices/cortland-canyon-creek/userlogin"
+      "proof": "https://thejamesatcanyoncreek.securecafenet.com/residentservices/cortland-canyon-creek/userlogin",
+      "website": "https://www.thejamesatcanyoncreek.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(469) 746-3960",
+        "email": null
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2018601",
@@ -1950,7 +4135,18 @@
       "yearBuilt": 1995,
       "owner": "OTR",
       "software": "MRI/RentManager",
-      "proof": "https://www.mrisoftware.com/portalprivacypolicy/"
+      "proof": "https://www.mrisoftware.com/portalprivacypolicy/",
+      "website": "https://www.thehomesofprairiesprings.com/homes-of-prairie-springs-richardson-tx/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(972) 430-5578",
+        "email": null
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2832628",
@@ -1961,7 +4157,18 @@
       "yearBuilt": 2020,
       "owner": "NORTHSIDE CAMPUS PARTNERS 4",
       "software": "Entrata",
-      "proof": "https://northside.prospectportal.com/Apartments/module/application_authentication/property[id]/181581/show_in_popup/false/kill_session/1/"
+      "proof": "https://northside.prospectportal.com/Apartments/module/application_authentication/property[id]/181581/show_in_popup/false/kill_session/1/",
+      "website": "https://www.liveatnorthside.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(972) 428-3024",
+        "email": "northsideleasing@bbcgrp.com"
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2645564",
@@ -1972,7 +4179,18 @@
       "yearBuilt": 2008,
       "owner": "PBONE PRADERA LLC",
       "software": "Yardi",
-      "proof": "https://thepradera.securecafe.com/onlineleasing/the-pradera-0/guestlogin.aspx"
+      "proof": "https://thepradera.securecafe.com/onlineleasing/the-pradera-0/guestlogin.aspx",
+      "website": "https://thepradera.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(972) 640-8891",
+        "email": null
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2696110",
@@ -1983,7 +4201,18 @@
       "yearBuilt": 2013,
       "owner": "FRANKEL FAMILY TRUST",
       "software": "RealPage",
-      "proof": "https://property.onesite.realpage.com/welcomehome?siteId=3835684#url=%23login"
+      "proof": "https://property.onesite.realpage.com/welcomehome?siteId=3835684#url=%23login",
+      "website": "https://www.rentanapt.com/apartments/tx/richardson/estates-of-richardson/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(972) 866-7834",
+        "email": null
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2726690",
@@ -1994,7 +4223,18 @@
       "yearBuilt": 2016,
       "owner": "SYNC CITYLINE LP",
       "software": "ResMan",
-      "proof": "https://sync.myresman.com/Portal/Access/SignIn/CL"
+      "proof": "https://sync.myresman.com/Portal/Access/SignIn/CL",
+      "website": "https://www.synccityline.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(877) 658-5613",
+        "email": "cityline@syncre.com"
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2721394",
@@ -2005,7 +4245,31 @@
       "yearBuilt": 2015,
       "owner": "AREIT DALLAS CITYLINE LLC",
       "software": "Yardi",
-      "proof": "https://axis110.securecafe.com/residentservices/axis-1100/userlogin.aspx?ssid=5062d8f741e4125cd17edc19d23a0dac"
+      "proof": "https://axis110.securecafe.com/residentservices/axis-1100/userlogin.aspx?ssid=5062d8f741e4125cd17edc19d23a0dac",
+      "website": "https://axis110.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": null,
+      "sale": {
+        "date": "2025-12-01",
+        "newOwner": "AREIT DALLAS CITYLINE LLC",
+        "previousOwner": "unknown (same owner name in 2025 roll)",
+        "source": "https://data.texas.gov/resource/5tkr-3759.json?$select=propid,dbaname,ownername,deedtypecd,deedeffdate&$where=propid%20in%20(2721394)"
+      },
+      "lead": {
+        "rank": 18,
+        "total": 67,
+        "size": 35,
+        "timing": 12,
+        "signal": 15,
+        "open": 5,
+        "why": "Sold Dec 2025 to AREIT DALLAS CITYLINE LLC \u00b7 351 units \u00b7 on Yardi \u2192 new owner may re-pick software."
+      },
+      "sources": [
+        "https://data.texas.gov/resource/5tkr-3759.json?$select=propid,dbaname,ownername,deedtypecd,deedeffdate&$where=propid%20in%20(2721394)",
+        "https://axis110.securecafe.com/residentservices/axis-1100/userlogin.aspx?ssid=5062d8f741e4125cd17edc19d23a0dac"
+      ]
     },
     {
       "id": "2725292",
@@ -2016,7 +4280,18 @@
       "yearBuilt": 2016,
       "owner": "LOFTS AT PALISADES LLC",
       "software": "Yardi",
-      "proof": "https://steadfastmanagement.securecafe.com/residentservices/apartmentsforrent/userlogin.aspx?_yTrackUser=NDQ3MzQ3MTEwMiMxNzIxOTY0OTc4-lP7tWSBwPWY%253d&_yTrackVisit=NzIxNDM1Mjk3MyMyMjk5NDE5NjM%253d-F%252bGk6LeXs7s%253d&_yTrackReqDT=01381720261009"
+      "proof": "https://steadfastmanagement.securecafe.com/residentservices/apartmentsforrent/userlogin.aspx?_yTrackUser=NDQ3MzQ3MTEwMiMxNzIxOTY0OTc4-lP7tWSBwPWY%253d&_yTrackVisit=NzIxNDM1Mjk3MyMyMjk5NDE5NjM%253d-F%252bGk6LeXs7s%253d&_yTrackReqDT=01381720261009",
+      "website": "https://www.steadfastmanagement.com/apartments/tx/richardson/the-lofts-at-palisades-apartments/default",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(833) 350-2604",
+        "email": null
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2758568",
@@ -2027,7 +4302,18 @@
       "yearBuilt": 2016,
       "owner": "NORTHSIDE CAMPUS PARTNERS LP",
       "software": "Entrata",
-      "proof": "https://northside.prospectportal.com/Apartments/module/application_authentication/property[id]/181581/show_in_popup/false/kill_session/1/"
+      "proof": "https://northside.prospectportal.com/Apartments/module/application_authentication/property[id]/181581/show_in_popup/false/kill_session/1/",
+      "website": "https://www.liveatnorthside.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(972) 428-3024",
+        "email": "northsideleasing@bbcgrp.com"
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2786866",
@@ -2038,7 +4324,18 @@
       "yearBuilt": 2019,
       "owner": "REGISTER RICHARDSON LLC THE",
       "software": "Yardi",
-      "proof": "https://theregisterapts.securecafenet.com/residentservices/the-register1/userlogin"
+      "proof": "https://theregisterapts.securecafenet.com/residentservices/the-register1/userlogin",
+      "website": "https://www.theregisterapts.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(469) 737-9293",
+        "email": null
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2725278",
@@ -2049,7 +4346,18 @@
       "yearBuilt": 2015,
       "owner": "IMP CITYLINE LLC",
       "software": "Yardi",
-      "proof": "https://windsorcityline.securecafe.com/residentservices/windsor-cityline/userlogin.aspx"
+      "proof": "https://windsorcityline.securecafe.com/residentservices/windsor-cityline/userlogin.aspx",
+      "website": "https://www.windsorcommunities.com/properties/windsor-cityline/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(972) 945-8971",
+        "email": null
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2693848",
@@ -2060,7 +4368,18 @@
       "yearBuilt": 2014,
       "owner": "PRICE STANDARD AT CITYLINE LP",
       "software": "RealPage",
-      "proof": "https://4339250.onlineleasing.realpage.com/"
+      "proof": "https://4339250.onlineleasing.realpage.com/",
+      "website": "https://www.thestandardatcitylineapts.com/the-standard-at-cityline",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(945) 245-3080",
+        "email": null
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2776050",
@@ -2071,7 +4390,18 @@
       "yearBuilt": 2017,
       "owner": "NORTHSIDE CAMPUS PARTNERS 2 LP",
       "software": "Entrata",
-      "proof": "https://northside.prospectportal.com/Apartments/module/application_authentication/property[id]/181581/show_in_popup/false/kill_session/1/"
+      "proof": "https://northside.prospectportal.com/Apartments/module/application_authentication/property[id]/181581/show_in_popup/false/kill_session/1/",
+      "website": "https://www.liveatnorthside.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(972) 428-3024",
+        "email": "northsideleasing@bbcgrp.com"
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2924643",
@@ -2082,7 +4412,18 @@
       "yearBuilt": 2016,
       "owner": "GARLAND HOUSING FINANCE CORPORATION",
       "software": "Yardi",
-      "proof": "https://citylineriley.rentcafe.com/resident/the-riley3/login?_yTrackUser=NDQ3MzQ3MTM3MCMyMDg3Njg2ODQ4-YM78St2NyTo%253d&_yTrackVisit=NzIxNDM1MzQyMyMxOTA4MjQxMTAz-laWuOOb54qw%253d&_yTrackReqDT=09381720261009"
+      "proof": "https://citylineriley.rentcafe.com/resident/the-riley3/login?_yTrackUser=NDQ3MzQ3MTM3MCMyMDg3Njg2ODQ4-YM78St2NyTo%253d&_yTrackVisit=NzIxNDM1MzQyMyMxOTA4MjQxMTAz-laWuOOb54qw%253d&_yTrackReqDT=09381720261009",
+      "website": "https://www.citylineriley.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(469) 838-5709",
+        "email": null
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2811014",
@@ -2093,7 +4434,18 @@
       "yearBuilt": 2019,
       "owner": "NORTHSIDE CAMPUS PARTNERS 3 LP",
       "software": "Entrata",
-      "proof": "https://northside.prospectportal.com/Apartments/module/application_authentication/property[id]/181581/show_in_popup/false/kill_session/1/"
+      "proof": "https://northside.prospectportal.com/Apartments/module/application_authentication/property[id]/181581/show_in_popup/false/kill_session/1/",
+      "website": "https://www.liveatnorthside.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(972) 428-3024",
+        "email": "northsideleasing@bbcgrp.com"
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "1865440",
@@ -2104,7 +4456,18 @@
       "yearBuilt": 1992,
       "owner": "D CANTERBURY LLC",
       "software": "unknown",
-      "proof": null
+      "proof": null,
+      "website": "https://www.canterburycourts.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": "no-portal-link",
+      "contact": {
+        "phone": "(469) 723-9047",
+        "email": "webaccessibility@entrata.com"
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2739599",
@@ -2115,7 +4478,18 @@
       "yearBuilt": 2016,
       "owner": "LYLA OWNER LLC",
       "software": "RealPage",
-      "proof": "https://8309130.onlineleasing.realpage.com/"
+      "proof": "https://8309130.onlineleasing.realpage.com/",
+      "website": "https://citylinelyla.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(469) 715-4424",
+        "email": null
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2784362",
@@ -2126,7 +4500,18 @@
       "yearBuilt": 2017,
       "owner": "BCF I CITYLINE LLC",
       "software": "Yardi",
-      "proof": "https://bellcityline.securecafe.com/onlineleasing/bell-cityline/guestlogin.aspx?ssid=2971219b8847e36cbcc2f3af57b2c416"
+      "proof": "https://bellcityline.securecafe.com/onlineleasing/bell-cityline/guestlogin.aspx?ssid=2971219b8847e36cbcc2f3af57b2c416",
+      "website": "https://www.bellcityline.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(833) 204-9997",
+        "email": null
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2707424",
@@ -2137,7 +4522,18 @@
       "yearBuilt": 2014,
       "owner": "ANTHEM AT CITYLINE/PT-SPE LLC",
       "software": "RealPage",
-      "proof": "https://anthematcityline.activebuilding.com/login"
+      "proof": "https://anthematcityline.activebuilding.com/login",
+      "website": "https://www.anthemcityline.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(945) 302-1036",
+        "email": null
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2725294",
@@ -2148,7 +4544,18 @@
       "yearBuilt": 2016,
       "owner": "FLATS AT PALISADES LLC",
       "software": "in-house:UDR",
-      "proof": "https://residents.udr.com/"
+      "proof": "https://residents.udr.com/",
+      "website": "https://www.udr.com/dallas-apartments/richardson/the-flats-at-palisades/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(469) 988-6505",
+        "email": null
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2058066",
@@ -2159,7 +4566,34 @@
       "yearBuilt": 1998,
       "owner": "BRECKINRIDGE POINT TX LLC",
       "software": "Yardi",
-      "proof": "https://breckinridgepoint.securecafenet.com/residentservices/breckinridge-point0/userlogin"
+      "proof": "https://breckinridgepoint.securecafenet.com/residentservices/breckinridge-point0/userlogin",
+      "website": "https://www.breckinridgepoint.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(972) 885-3328",
+        "email": null
+      },
+      "sale": {
+        "date": "2025-06-13",
+        "newOwner": "BRECKINRIDGE POINT TX LLC",
+        "previousOwner": "unknown (same owner name in 2025 roll)",
+        "source": "https://data.texas.gov/resource/5tkr-3759.json?$select=propid,dbaname,ownername,deedtypecd,deedeffdate&$where=propid%20in%20(2058066)"
+      },
+      "lead": {
+        "rank": 34,
+        "total": 48,
+        "size": 23,
+        "timing": 5,
+        "signal": 15,
+        "open": 5,
+        "why": "Sold Jun 2025 to BRECKINRIDGE POINT TX LLC \u00b7 226 units \u00b7 on Yardi \u2192 new owner may re-pick software."
+      },
+      "sources": [
+        "https://data.texas.gov/resource/5tkr-3759.json?$select=propid,dbaname,ownername,deedtypecd,deedeffdate&$where=propid%20in%20(2058066)",
+        "https://breckinridgepoint.securecafenet.com/residentservices/breckinridge-point0/userlogin"
+      ]
     },
     {
       "id": "2058065",
@@ -2170,7 +4604,34 @@
       "yearBuilt": 1998,
       "owner": "BRECKINRIDGE POINT TX LLC",
       "software": "Yardi",
-      "proof": "https://breckinridgepoint.securecafenet.com/residentservices/breckinridge-point0/userlogin"
+      "proof": "https://breckinridgepoint.securecafenet.com/residentservices/breckinridge-point0/userlogin",
+      "website": "https://www.breckinridgepoint.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(972) 885-3328",
+        "email": null
+      },
+      "sale": {
+        "date": "2025-06-13",
+        "newOwner": "BRECKINRIDGE POINT TX LLC",
+        "previousOwner": "unknown (same owner name in 2025 roll)",
+        "source": "https://data.texas.gov/resource/5tkr-3759.json?$select=propid,dbaname,ownername,deedtypecd,deedeffdate&$where=propid%20in%20(2058065)"
+      },
+      "lead": {
+        "rank": 35,
+        "total": 46,
+        "size": 21,
+        "timing": 5,
+        "signal": 15,
+        "open": 5,
+        "why": "Sold Jun 2025 to BRECKINRIDGE POINT TX LLC \u00b7 214 units \u00b7 on Yardi \u2192 new owner may re-pick software."
+      },
+      "sources": [
+        "https://data.texas.gov/resource/5tkr-3759.json?$select=propid,dbaname,ownername,deedtypecd,deedeffdate&$where=propid%20in%20(2058065)",
+        "https://breckinridgepoint.securecafenet.com/residentservices/breckinridge-point0/userlogin"
+      ]
     },
     {
       "id": "1615274",
@@ -2181,7 +4642,30 @@
       "yearBuilt": 1985,
       "owner": "THE CAMERON COUNTY HOUSING FINANCE CORPORATION",
       "software": "unknown",
-      "proof": null
+      "proof": null,
+      "website": null,
+      "websiteConfidence": "none",
+      "checkedAt": null,
+      "unknownReason": "no-website",
+      "contact": null,
+      "sale": {
+        "date": "2025-04-14",
+        "newOwner": "THE CAMERON COUNTY HOUSING FINANCE CORPORATION",
+        "previousOwner": "unknown (same owner name in 2025 roll)",
+        "source": "https://data.texas.gov/resource/5tkr-3759.json?$select=propid,dbaname,ownername,deedtypecd,deedeffdate&$where=propid%20in%20(1615274)"
+      },
+      "lead": {
+        "rank": 29,
+        "total": 56,
+        "size": 21,
+        "timing": 5,
+        "signal": 15,
+        "open": 15,
+        "why": "Sold Apr 2025 to THE CAMERON COUNTY HOUSING FINANCE CORPORATION \u00b7 208 units \u00b7 software not yet identified \u2192 new owner may re-pick software."
+      },
+      "sources": [
+        "https://data.texas.gov/resource/5tkr-3759.json?$select=propid,dbaname,ownername,deedtypecd,deedeffdate&$where=propid%20in%20(1615274)"
+      ]
     },
     {
       "id": "2784361",
@@ -2192,7 +4676,18 @@
       "yearBuilt": 2017,
       "owner": "BCF I CITYLINE LLC",
       "software": "Yardi",
-      "proof": "https://bellcityline.securecafe.com/onlineleasing/bell-cityline/guestlogin.aspx?ssid=2971219b8847e36cbcc2f3af57b2c416"
+      "proof": "https://bellcityline.securecafe.com/onlineleasing/bell-cityline/guestlogin.aspx?ssid=2971219b8847e36cbcc2f3af57b2c416",
+      "website": "https://www.bellcityline.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(833) 204-9997",
+        "email": null
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2667180",
@@ -2203,7 +4698,18 @@
       "yearBuilt": 2011,
       "owner": "EVERGREEN RICHARDSON SENIOR COMMUNITY LP",
       "software": "Yardi",
-      "proof": "https://www.rentcafe.com/residentservices/evergreen-at-richardson/userlogin.aspx"
+      "proof": "https://www.rentcafe.com/residentservices/evergreen-at-richardson/userlogin.aspx",
+      "website": "https://evergreenrichardson.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(972) 235-7800",
+        "email": null
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2692418",
@@ -2214,7 +4720,18 @@
       "yearBuilt": 2012,
       "owner": "CUSTER CREEKSIDE LLC",
       "software": "RealPage",
-      "proof": "https://lifeatcreekside.activebuilding.com/"
+      "proof": "https://lifeatcreekside.activebuilding.com/",
+      "website": "https://www.lifeatcreekside.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(945) 295-9958",
+        "email": null
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2054151",
@@ -2225,7 +4742,18 @@
       "yearBuilt": 1997,
       "owner": "VILLAGES RESIDENCES LP",
       "software": "RealPage",
-      "proof": "https://1368520v3.onlineleasing.realpage.com/#k=61706"
+      "proof": "https://1368520v3.onlineleasing.realpage.com/#k=61706",
+      "website": "https://www.villagesatclearsprings.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(972) 945-3484",
+        "email": "accessibility@apartments247.com"
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "155691",
@@ -2236,7 +4764,18 @@
       "yearBuilt": 1970,
       "owner": "ROLLING CASH ROYAL ARMS LP",
       "software": "RealPage",
-      "proof": "https://smgroyalarms.loftliving.com/login"
+      "proof": "https://smgroyalarms.loftliving.com/login",
+      "website": "https://www.theroyalarmsapts.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(469) 498-1337",
+        "email": null
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2693849",
@@ -2247,7 +4786,18 @@
       "yearBuilt": 2013,
       "owner": "PRICE STANDARD AT CITYLINE LP",
       "software": "RealPage",
-      "proof": "https://4339250.onlineleasing.realpage.com/"
+      "proof": "https://4339250.onlineleasing.realpage.com/",
+      "website": "https://www.thestandardatcitylineapts.com/the-standard-at-cityline",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(945) 245-3080",
+        "email": null
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "220291",
@@ -2258,7 +4808,18 @@
       "yearBuilt": 1979,
       "owner": "FOUNDATION APARTMENTS WAGERMAN LLC &",
       "software": "ResMan",
-      "proof": "https://richmark.myresman.com/Portal/Applicants/New/FACL?a=1054"
+      "proof": "https://richmark.myresman.com/Portal/Applicants/New/FACL?a=1054",
+      "website": "https://www.foundationatcityline.com/",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(833) 561-1610",
+        "email": "accessibility@apartments247.com"
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
     },
     {
       "id": "2686978",
@@ -2269,7 +4830,356 @@
       "yearBuilt": 2013,
       "owner": "MIYAMA USA DUCK CREEK INC",
       "software": "AppFolio",
-      "proof": "https://miyamausaduckcreek.appfolio.com/connect/users/sign_in?a=cw&utm_source=apmsites_v3&utm_campaign=pay_rent_button"
+      "proof": "https://miyamausaduckcreek.appfolio.com/connect/users/sign_in?a=cw&utm_source=apmsites_v3&utm_campaign=pay_rent_button",
+      "website": "https://www.theyorkshireliving.com/the-yorkshire-apartment-homes",
+      "websiteConfidence": "high",
+      "checkedAt": "2026-09-10",
+      "unknownReason": null,
+      "contact": {
+        "phone": "(972) 479-9510",
+        "email": "info@theyorkshireliving.com"
+      },
+      "sale": null,
+      "lead": null,
+      "sources": []
+    }
+  ],
+  "upcoming": [
+    {
+      "id": "plano-haggard-farm-townhomes",
+      "community": "Haggard Farm Townhomes",
+      "city": "Plano",
+      "address": "",
+      "units": null,
+      "developer": null,
+      "stage": "zoning-filed",
+      "stageDate": "2026-06-08",
+      "expectedOpen": null,
+      "sourceType": "legistar",
+      "lead": {
+        "rank": 12,
+        "total": 75,
+        "size": 15,
+        "timing": 30,
+        "signal": 15,
+        "open": 15,
+        "why": "Zoning filed Jun 2026 \u2192 software not chosen yet."
+      },
+      "sources": [
+        "https://plano.legistar.com/LegislationDetail.aspx?ID=1540"
+      ]
+    },
+    {
+      "id": "plano-haggard-farm",
+      "community": "Haggard Farm",
+      "city": "Plano",
+      "address": "Spring Creek Parkway and Parkwood Boulevard, Plano, TX 75024",
+      "units": null,
+      "developer": "Stillwater Capital",
+      "stage": "under-construction",
+      "stageDate": "2025-12-11",
+      "expectedOpen": "2027-10-01",
+      "sourceType": "news",
+      "lead": {
+        "rank": 27,
+        "total": 63,
+        "size": 15,
+        "timing": 18,
+        "signal": 15,
+        "open": 15,
+        "why": "Under construction Dec 2025 \u00b7 opens ~2027 \u2192 software not chosen yet."
+      },
+      "sources": [
+        "https://communityimpact.com/plano/development/haggard-farm-development-going-vertical-in-coming-months/"
+      ]
+    },
+    {
+      "id": "plano-collin-creek-multifamily",
+      "community": "Collin Creek Multifamily",
+      "city": "Plano",
+      "address": "811 N Central Expressway, Plano, TX 75075",
+      "units": null,
+      "developer": "Centurion American",
+      "stage": "permit",
+      "stageDate": "2026-06-19",
+      "expectedOpen": "2027-07-30",
+      "sourceType": "tabs",
+      "lead": {
+        "rank": 20,
+        "total": 67,
+        "size": 15,
+        "timing": 22,
+        "signal": 15,
+        "open": 15,
+        "why": "Permit issued Jun 2026 \u00b7 opens ~2027 \u2192 software not chosen yet."
+      },
+      "sources": [
+        "https://www.zabalist.com/projects/TABS2026023342"
+      ]
+    },
+    {
+      "id": "plano-the-parks-at-legacy-west",
+      "community": "The Parks at Legacy West",
+      "city": "Plano",
+      "address": "6501 Legacy Drive, Plano, TX",
+      "units": 261,
+      "developer": "StreetLights Residential",
+      "stage": "under-construction",
+      "stageDate": "2026-07-10",
+      "expectedOpen": "2029-02-01",
+      "sourceType": "news",
+      "lead": {
+        "rank": 13,
+        "total": 74,
+        "size": 26,
+        "timing": 18,
+        "signal": 15,
+        "open": 15,
+        "why": "Under construction Jul 2026 \u00b7 261 units \u00b7 opens ~2029 \u2192 software not chosen yet."
+      },
+      "sources": [
+        "https://candysdirt.com/2026/07/10/streetlights-residential-bets-on-older-affluent-renters-with-new-plano-luxury-tower/"
+      ]
+    },
+    {
+      "id": "plano-the-buckley",
+      "community": "The Buckley",
+      "city": "Plano",
+      "address": "600 Kissimmee Drive, Plano, TX",
+      "units": 338,
+      "developer": "Rosewood Property Company",
+      "stage": "leasing",
+      "stageDate": "2026-04-01",
+      "expectedOpen": null,
+      "sourceType": "news",
+      "lead": {
+        "rank": 14,
+        "total": 74,
+        "size": 34,
+        "timing": 10,
+        "signal": 15,
+        "open": 15,
+        "why": "Leasing Apr 2026 \u00b7 338 units \u2192 software not chosen yet."
+      },
+      "sources": [
+        "https://candysdirt.com/2026/08/07/the-buckley-adds-338-apartments-to-planos-reworked-heritage-creekside/"
+      ]
+    },
+    {
+      "id": "plano-360-unit-project-in-downtown-plano",
+      "community": "360-unit project in downtown Plano",
+      "city": "Plano",
+      "address": "",
+      "units": 360,
+      "developer": null,
+      "stage": "site-plan-approved",
+      "stageDate": null,
+      "expectedOpen": null,
+      "sourceType": "news",
+      "lead": {
+        "rank": 3,
+        "total": 92,
+        "size": 36,
+        "timing": 26,
+        "signal": 15,
+        "open": 15,
+        "why": "Site plan approved \u00b7 360 units \u2192 software not chosen yet."
+      },
+      "sources": [
+        "https://communityimpact.com/plano/government/plano-commission-approves-new-site-plan-for-360-apartment-project-in-downtown-plano/"
+      ]
+    },
+    {
+      "id": "richardson-polk-st-multifamily",
+      "community": "Polk St Multifamily",
+      "city": "Richardson",
+      "address": "110 E. Polk Street, Richardson, TX 75081",
+      "units": 281,
+      "developer": "High Street Residential",
+      "stage": "under-construction",
+      "stageDate": "2026-04-06",
+      "expectedOpen": "2027-10-01",
+      "sourceType": "news",
+      "lead": {
+        "rank": 10,
+        "total": 76,
+        "size": 28,
+        "timing": 18,
+        "signal": 15,
+        "open": 15,
+        "why": "Under construction Apr 2026 \u00b7 281 units \u00b7 opens ~2027 \u2192 software not chosen yet."
+      },
+      "sources": [
+        "https://communityimpact.com/richardson/development/developers-break-ground-on-281-unit-multifamily-community-in-richardson/"
+      ]
+    },
+    {
+      "id": "richardson-legacy-arapaho",
+      "community": "Legacy Arapaho",
+      "city": "Richardson",
+      "address": "250 E Arapaho Road, Richardson, TX 75081",
+      "units": 443,
+      "developer": "Legacy Partners",
+      "stage": "permit",
+      "stageDate": "2026-06-15",
+      "expectedOpen": "2028-11-01",
+      "sourceType": "news",
+      "lead": {
+        "rank": 4,
+        "total": 92,
+        "size": 40,
+        "timing": 22,
+        "signal": 15,
+        "open": 15,
+        "why": "Permit issued Jun 2026 \u00b7 443 units \u00b7 opens ~2028 \u2192 software not chosen yet."
+      },
+      "sources": [
+        "https://communityimpact.com/richardson/government/443-unit-apartment-complex-approved-by-richardson-city-council/"
+      ]
+    },
+    {
+      "id": "richardson-jlb-west-cityline",
+      "community": "JLB West Cityline",
+      "city": "Richardson",
+      "address": "3500 Routh Creek Pkwy, Richardson, TX 75082",
+      "units": null,
+      "developer": "JLB Partners",
+      "stage": "permit",
+      "stageDate": null,
+      "expectedOpen": "2027-06-30",
+      "sourceType": "tabs",
+      "lead": {
+        "rank": 21,
+        "total": 67,
+        "size": 15,
+        "timing": 22,
+        "signal": 15,
+        "open": 15,
+        "why": "Permit issued \u00b7 opens ~2027 \u2192 software not chosen yet."
+      },
+      "sources": [
+        "https://www.zabalist.com/projects/TABS2025022864"
+      ]
+    },
+    {
+      "id": "richardson-the-caroline-eastside",
+      "community": "The Caroline Eastside",
+      "city": "Richardson",
+      "address": "1735 N. Greenville Ave, Richardson, TX",
+      "units": 384,
+      "developer": "Hunt",
+      "stage": "under-construction",
+      "stageDate": null,
+      "expectedOpen": null,
+      "sourceType": "news",
+      "lead": {
+        "rank": 6,
+        "total": 86,
+        "size": 38,
+        "timing": 18,
+        "signal": 15,
+        "open": 15,
+        "why": "Under construction \u00b7 384 units \u2192 software not chosen yet."
+      },
+      "sources": [
+        "https://communityimpact.com/richardson/development/eastside-apartment-expansion-underway-in-richardson/"
+      ]
+    },
+    {
+      "id": "richardson-apartment-complex-on-sherman-street",
+      "community": "Apartment complex on Sherman Street",
+      "city": "Richardson",
+      "address": "Sherman Street, Richardson, TX",
+      "units": null,
+      "developer": null,
+      "stage": "zoning-approved",
+      "stageDate": null,
+      "expectedOpen": null,
+      "sourceType": "news",
+      "lead": {
+        "rank": 15,
+        "total": 73,
+        "size": 15,
+        "timing": 28,
+        "signal": 15,
+        "open": 15,
+        "why": "Zoning approved \u2192 software not chosen yet."
+      },
+      "sources": [
+        "https://communityimpact.com/richardson/housing-real-estate/richardson-city-council-approves-apartment-complex-on-sherman-street/"
+      ]
+    },
+    {
+      "id": "plano-351-unit-project-at-4701-w-park-blvd",
+      "community": "351-unit project at 4701 W Park Blvd",
+      "city": "Plano",
+      "address": "4701 W Park Blvd, Plano, TX",
+      "units": 351,
+      "developer": "Berkeley Square (Edens), LLC",
+      "stage": "zoning-filed",
+      "stageDate": "2026-08-13",
+      "expectedOpen": null,
+      "sourceType": "city",
+      "lead": {
+        "rank": 2,
+        "total": 95,
+        "size": 35,
+        "timing": 30,
+        "signal": 15,
+        "open": 15,
+        "why": "Zoning filed Aug 2026 \u00b7 351 units \u2192 software not chosen yet."
+      },
+      "sources": [
+        "https://content.civicplus.com/api/assets/ac54ba65-bc6a-4347-92d9-239d91767bd3"
+      ]
+    },
+    {
+      "id": "plano-304-unit-project-at-spring-creek-pkwy-k-ave",
+      "community": "304-unit project at Spring Creek Pkwy & K Ave",
+      "city": "Plano",
+      "address": "North side of Spring Creek Pkwy, 375 ft east of K Ave, Plano, TX",
+      "units": 304,
+      "developer": "Plano Mall Owner LP",
+      "stage": "zoning-filed",
+      "stageDate": "2026-07-02",
+      "expectedOpen": null,
+      "sourceType": "city",
+      "lead": {
+        "rank": 5,
+        "total": 90,
+        "size": 30,
+        "timing": 30,
+        "signal": 15,
+        "open": 15,
+        "why": "Zoning filed Jul 2026 \u00b7 304 units \u2192 software not chosen yet."
+      },
+      "sources": [
+        "https://content.civicplus.com/api/assets/ac54ba65-bc6a-4347-92d9-239d91767bd3"
+      ]
+    },
+    {
+      "id": "richardson-390-unit-project-at-2520-n-central-expressway",
+      "community": "390-unit project at 2520 N Central Expressway",
+      "city": "Richardson",
+      "address": "2520 N Central Expressway, Richardson, TX",
+      "units": 390,
+      "developer": "JLB Partners",
+      "stage": "zoning-approved",
+      "stageDate": "2024-01-08",
+      "expectedOpen": "2027",
+      "sourceType": "news",
+      "lead": {
+        "rank": 1,
+        "total": 97,
+        "size": 39,
+        "timing": 28,
+        "signal": 15,
+        "open": 15,
+        "why": "Zoning approved Jan 2024 \u00b7 390 units \u00b7 opens ~2027 \u2192 software not chosen yet."
+      },
+      "sources": [
+        "https://communityimpact.com/richardson/development/rezoning-for-richardson-apartment-building-along-us-75-glenville-drive-approved/"
+      ]
     }
   ]
 }

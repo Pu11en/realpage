@@ -8,7 +8,7 @@
   "leads": [
     {
       "id": "l1",
-      "propertyId": null,
+      "propertyId": "richardson-390-unit-project-at-2520-n-central-expressway",
       "score": 97,
       "property": "390-unit project at 2520 N Central Expressway",
       "city": "Richardson",
@@ -25,7 +25,7 @@
     },
     {
       "id": "l2",
-      "propertyId": null,
+      "propertyId": "plano-351-unit-project-at-4701-w-park-blvd",
       "score": 95,
       "property": "351-unit project at 4701 W Park Blvd",
       "city": "Plano",
@@ -42,7 +42,7 @@
     },
     {
       "id": "l3",
-      "propertyId": null,
+      "propertyId": "plano-360-unit-project-in-downtown-plano",
       "score": 92,
       "property": "360-unit project in downtown Plano",
       "city": "Plano",
@@ -59,7 +59,7 @@
     },
     {
       "id": "l4",
-      "propertyId": null,
+      "propertyId": "richardson-legacy-arapaho",
       "score": 92,
       "property": "Legacy Arapaho",
       "city": "Richardson",
@@ -76,7 +76,7 @@
     },
     {
       "id": "l5",
-      "propertyId": null,
+      "propertyId": "plano-304-unit-project-at-spring-creek-pkwy-k-ave",
       "score": 90,
       "property": "304-unit project at Spring Creek Pkwy & K Ave",
       "city": "Plano",
@@ -93,7 +93,7 @@
     },
     {
       "id": "l6",
-      "propertyId": null,
+      "propertyId": "richardson-the-caroline-eastside",
       "score": 86,
       "property": "The Caroline Eastside",
       "city": "Richardson",
@@ -172,7 +172,7 @@
     },
     {
       "id": "l10",
-      "propertyId": null,
+      "propertyId": "richardson-polk-st-multifamily",
       "score": 76,
       "property": "Polk St Multifamily",
       "city": "Richardson",
@@ -206,7 +206,7 @@
     },
     {
       "id": "l12",
-      "propertyId": null,
+      "propertyId": "plano-haggard-farm-townhomes",
       "score": 75,
       "property": "Haggard Farm Townhomes",
       "city": "Plano",
@@ -223,7 +223,7 @@
     },
     {
       "id": "l13",
-      "propertyId": null,
+      "propertyId": "plano-the-parks-at-legacy-west",
       "score": 74,
       "property": "The Parks at Legacy West",
       "city": "Plano",
@@ -240,7 +240,7 @@
     },
     {
       "id": "l14",
-      "propertyId": null,
+      "propertyId": "plano-the-buckley",
       "score": 74,
       "property": "The Buckley",
       "city": "Plano",
@@ -257,7 +257,7 @@
     },
     {
       "id": "l15",
-      "propertyId": null,
+      "propertyId": "richardson-apartment-complex-on-sherman-street",
       "score": 73,
       "property": "Apartment complex on Sherman Street",
       "city": "Richardson",
@@ -351,7 +351,7 @@
     },
     {
       "id": "l20",
-      "propertyId": null,
+      "propertyId": "plano-collin-creek-multifamily",
       "score": 67,
       "property": "Collin Creek Multifamily",
       "city": "Plano",
@@ -368,7 +368,7 @@
     },
     {
       "id": "l21",
-      "propertyId": null,
+      "propertyId": "richardson-jlb-west-cityline",
       "score": 67,
       "property": "JLB West Cityline",
       "city": "Richardson",
@@ -486,7 +486,7 @@
     },
     {
       "id": "l27",
-      "propertyId": null,
+      "propertyId": "plano-haggard-farm",
       "score": 63,
       "property": "Haggard Farm",
       "city": "Plano",

@@ -29,6 +29,7 @@ LEADS_CSV = DATA_DIR / "leads.csv"
 UPCOMING_CSV = DATA_DIR / "6-upcoming.csv"
 CONTACTS_CSV = DATA_DIR / "contacts.csv"
 LEADS_FACTS_JSONL = DATA_DIR / "leads-facts.jsonl"
+SALES_CSV = DATA_DIR / "5-sales.csv"
 
 TODAY = date.fromisoformat("2026-09-10")  # matches score-leads' fixed TODAY, see run.py
 
@@ -51,11 +52,32 @@ def read_csv(path: Path) -> list[dict]:
         return list(csv.DictReader(f))
 
 
+def lead_score(r: dict) -> dict:
+    return {
+        "rank": int(r["rank"]),
+        "total": int(r["score"]),
+        "size": int(r["score_size"]),
+        "timing": int(r["score_timing"]),
+        "signal": int(r["score_signal"]),
+        "open": int(r["score_open"]),
+        "why": r["why"],
+    }
+
+
+def split_urls(s: str) -> list[str]:
+    return [u.strip() for u in s.split(";") if u.strip()]
+
+
 def build_properties_and_share() -> tuple[list[dict], dict]:
     rows = read_csv(MASTER_CSV)
+    leads_by_ref = {r["ref_id"]: r for r in read_csv(LEADS_CSV)}
+    sales = {r["apt_id"]: r for r in read_csv(SALES_CSV)}
+    contacts = load_contacts()
 
     properties = []
     for r in rows:
+        sale = sales.get(r["apt_id"])
+        lead = leads_by_ref.get(r["apt_id"])
         properties.append({
             "id": r["apt_id"],
             "community": r["name"],
@@ -66,6 +88,38 @@ def build_properties_and_share() -> tuple[list[dict], dict]:
             "owner": r["owner"],
             "software": r["software"] or None,
             "proof": r["proof_url"] or None,
+            # Page 4 (Property Detail) fields
+            "website": r["website"] or None,
+            "websiteConfidence": r["website_confidence"] or None,
+            "checkedAt": r["checked_at"] or None,
+            "unknownReason": r["unknown_reason"] or None,
+            "contact": contacts.get(r["apt_id"]),
+            "sale": {
+                "date": sale["sale_date"],
+                "newOwner": sale["new_owner"],
+                "previousOwner": sale["previous_owner"],
+                "source": sale["source_url"] or None,
+            } if sale else None,
+            "lead": lead_score(lead) if lead else None,
+            "sources": split_urls(lead["sources"]) if lead else [],
+        })
+
+    upcoming = []
+    for r in read_csv(UPCOMING_CSV):
+        lead = leads_by_ref.get(r["project_id"])
+        upcoming.append({
+            "id": r["project_id"],
+            "community": r["project"],
+            "city": r["city"],
+            "address": r["address"],
+            "units": int(r["units"]) if r["units"] else None,
+            "developer": r["developer"] or None,
+            "stage": r["stage"],
+            "stageDate": r["stage_date"] or None,
+            "expectedOpen": r["expected_open"] or None,
+            "sourceType": r["source_type"],
+            "lead": lead_score(lead) if lead else None,
+            "sources": split_urls(lead["sources"]) if lead else split_urls(r["source_url"]),
         })
 
     total_units = sum(p["units"] or 0 for p in properties)
@@ -93,6 +147,7 @@ def build_properties_and_share() -> tuple[list[dict], dict]:
         },
         "vendorColors": VENDOR_COLORS,
         "properties": properties,
+        "upcoming": upcoming,
     }
 
     share = []
@@ -186,8 +241,8 @@ def build_leads() -> dict:
             except ValueError:
                 is_new = False
 
-        # Only sold leads map to an existing building (apt_id) with a Page 4 detail.
-        property_id = ref_id if is_sold else None
+        # Sold leads -> apt_id; upcoming leads -> project_id (properties.json "upcoming").
+        property_id = ref_id
         contact = contacts.get(ref_id) if is_sold else None
 
         leads.append({
