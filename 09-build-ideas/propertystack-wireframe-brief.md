@@ -3,7 +3,7 @@
 Source: Drew + planning session 2026-09-10 (thread 1547545532241809478)
 Fetched: 2026-09-10
 Method: Q&A planning with Drew; decisions below are his
-Confidence: high for decisions; sample lead data is placeholder until the sold/upcoming steps run
+Confidence: high for decisions; lead scores use a first-draft formula
 
 **What it is:** a dashboard showing the software stack behind every apartment
 property in an area. Main story: "who's about to choose" (early leads), with a
@@ -81,7 +81,7 @@ No backend, no live agent, no login. Nothing on the site writes data.
 - Identified so far: Yardi 14 · RealPage 8 · Entrata 3 · Yotta 1
 - Example rows: Legends at Chase Oaks · Plano · 346 units · 1996 · Yardi;
   Dorian · Plano · 398 units · 2007 · RealPage; The Emory · Plano · 270 · 2023 · Entrata
-- Early Leads rows: placeholder until the recently-sold and upcoming-building steps run
+- Early Leads rows: real sample in `raw/research-01/early-leads-sample.csv` (19 leads: 11 upcoming projects + 8 recent sales, scored, with why lines)
 
 ## Not in v1
 Ask box · map page · landlords page · alerts/digests · job-post and vendor-news signals · switch history
