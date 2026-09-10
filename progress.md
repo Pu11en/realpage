@@ -14,6 +14,10 @@ Companion to `task_plan.md`. Newest session first.
   (`C:\Users\Public\realpage-*`) so Windows-side sandboxes can pick them up.
 - Files created: `RESUME-PACK.md`
 - Files modified: `HANDOFF.md` (pack pointer), `progress.md` (this entry)
+- Follow-up: the chat-based agent (isolated workspace; no disk or GitHub
+  access, clone blocked) asked for a repo ZIP for its edit path → exported
+  `realpage.zip` (full repo incl. git history, credential-free) to Windows
+  Desktop/Downloads for upload; brainstorm prompt for it delivered in-session.
 
 ## Session: 2026-09-10 (reddit full sweep — Phase 2 complete)
 
