@@ -2,6 +2,52 @@
 
 91 candidates gathered (12 legistar, 27 tabs, 52 news) -> 12 real projects extracted.
 
+## Update 2026-09-10 — fixes from evals/review-weak-spots.md
+Re-ran GATHER with 5 added queries (civicplus, Preston Road/Spring Creek unit counts, two
+Glenville-specific queries) -> 102 candidates (12 legistar, 27 tabs, 63 news). Then:
+
+- **Excluded `plano-aura-northline`.** Freshness re-check (new SKILL.md rule) confirmed via
+  live search that Aura Northline is now an actively-leasing property (grand-opening-special
+  listings on RentCafe/Apartments.com/Zillow/its own site). Its only source was a Feb 2024
+  article projecting "completion early 2026" — stale by the time of this review (today is
+  2026-09-10, past that projection). Was a false positive; removed.
+- **Added `plano-351-unit-project-at-4701-w-park-blvd`** (research-01's "Preston Road
+  Project"). Found by fetching the full (untrimmed) `content.civicplus.com` Development
+  Review List asset live — the GATHER script's own civicplus query still only surfaced the
+  first ~4000 chars (TRIM_CHARS) of this ~85,000-char document, so the entry itself wasn't
+  in this run's candidates jsonl either; found by reading the source directly instead.
+  Description: "351 multifamily residences" at 4701 W Park Blvd (Berkeley Square Addn, north
+  side of Park Blvd, 275 ft west of Ohio Dr, Preston Road Overlay District), owner Berkeley
+  Square (Edens) LLC, Project #PR2026-024 (Preliminary Replat applied 8/13/2026). No project
+  brand name stated for the residential component — used the `<units>-unit project at
+  <address>` fallback per SKILL.md. stage=zoning-filed (only a replat application on file, no
+  P&Z hearing/approval yet).
+- **Added `plano-304-unit-project-at-spring-creek-pkwy-k-ave`** (research-01's "Spring Creek
+  Project"). Same civicplus document, same TRIM_CHARS limitation — this entry had already
+  rolled off the live Aug-2026 snapshot of the review list by the time of this re-run
+  (projects move through/off this rolling report), so it was confirmed via a live web search
+  quoting the July 2, 2026 snapshot instead: "304 multifamily residence units" on 26.4 acres,
+  north side of Spring Creek Pkwy, 375 ft east of K Ave, owner Plano Mall Owner LP, Project
+  #RLP2026-010. No brand name stated; used the fallback naming rule. stage_date is the
+  document date (2026-07-02), not a confirmed application date — flagged as lower-confidence
+  than the other rows' dates.
+- **Added `richardson-390-unit-project-at-2520-n-central-expressway`** (research-01's "The
+  Glenville / Central Expressway"). This is a **different project** from `Glenville
+  Independent Living` (TDLR, N Glenville Dr, opened 2024 — correctly excluded, see below):
+  a five-story, 390-unit apartment building at 2520 N Central Expressway, developer JLB
+  Partners, replacing an existing office building. Richardson City Council approved the
+  rezoning at its Jan 8, 2024 meeting (communityimpact article published 2024-01-09,
+  confirmed via live fetch); expected completion 2027. No project brand name stated in the
+  source — used the fallback naming rule rather than research-01's "The Glenville" label, to
+  avoid re-creating the name collision with the TDLR "Glenville Independent Living" project
+  that caused this to be missed in the first place. stage=zoning-approved.
+
+**TRIM_CHARS=4000 is a real limitation worth fixing in `run.py`** for long rolling documents
+like the Plano Development Review List (~85,000 chars) — it truncates before reaching
+alphabetically/positionally later project entries. Not fixed this session (found via manual
+untrimmed fetch instead); flagging for a future GATHER change: either raise TRIM_CHARS for
+`city`-type sources specifically, or chunk long civicplus documents into multiple candidates.
+
 ## Merges
 - **Collin Creek Multifamily** (811 N Central Expressway, Plano): merged `Collin Creek
   Multifamily S1` (TABS2026023342, registered Jun 2026, completion Jul 2027) with

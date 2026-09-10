@@ -1,0 +1,68 @@
+{
+  "skill": "find-upcoming",
+  "area": "plano-richardson",
+  "started": "2026-09-10T12:19:58",
+  "inputs": [
+    "https://webapi.legistar.com/v1/plano/matters $filter=MatterIntroDate ge datetime'2024-09-10'",
+    "jina.search: site:zabalist.com Plano multifamily (10 results)",
+    "jina.search: site:zabalist.com Richardson multifamily (10 results)",
+    "jina.search: site:zabalist.com Collin Creek Multifamily Plano (10 results)",
+    "jina.search: site:zabalist.com JLB West Cityline Richardson (10 results)",
+    "jina.search: site:zabalist.com Haggard Farm Plano (10 results)",
+    "jina.search: site:zabalist.com Polk Street Richardson (8 results)",
+    "jina.search: site:communityimpact.com Plano apartments multifamily units 2025 2026 (10 results)",
+    "jina.search: site:communityimpact.com Richardson apartments multifamily units 2025 2026 (10 results)",
+    "jina.search: site:dallasnews.com Plano apartment development 2026 (10 results)",
+    "jina.search: site:bizjournals.com/dallas Richardson multifamily units 2026 (10 results)",
+    "jina.search: site:bizjournals.com/dallas Plano multifamily units 2026 (10 results)",
+    "jina.search: site:candysdirt.com Plano apartments multifamily (10 results)",
+    "jina.search: site:candysdirt.com Richardson apartments multifamily (10 results)",
+    "jina.search: Plano Planning and Zoning apartments (9 results)",
+    "jina.search: Richardson City Council zoning apartments units (9 results)",
+    "jina.search: Heritage Creekside Plano apartments (8 results)",
+    "jina.search: CityLine Richardson apartments construction (9 results)",
+    "jina.search: Spring Creek Parkway apartments Plano zoning (9 results)",
+    "jina.search: communityimpact.com Plano apartment groundbreaking site plan 2026 (10 results)",
+    "jina.search: communityimpact.com Richardson apartment groundbreaking 2026 (9 results)",
+    "jina.search: Haggard Farm Plano apartments townhomes (9 results)",
+    "jina.search: Collin Creek Multifamily Plano apartments (8 results)",
+    "jina.search: JLB West CityLine Richardson apartments (9 results)",
+    "jina.search: 110 E Polk Street Richardson apartments (9 results)",
+    "jina.search: StreetLights Residential Plano Legacy Drive apartments (9 results)",
+    "jina.search: Preston Road Plano apartments zoning 2026 (9 results)",
+    "jina.search: site:content.civicplus.com Plano apartments staff report (10 results)",
+    "jina.search: Plano Spring Creek Parkway apartments 304 units site plan (9 results)",
+    "jina.search: Preston Road Plano apartments 351 units site plan (9 results)",
+    "jina.search: The Glenville Richardson apartments 390 units Central Expressway (9 results)",
+    "jina.search: Richardson City Council Glenville apartments approved (9 results)"
+  ],
+  "outputs": [
+    "data/plano-richardson/6-upcoming-candidates.jsonl"
+  ],
+  "counts": {
+    "legistar_pz_matters_scanned": 12,
+    "legistar_candidates": 12,
+    "tdlr_urls_read": 27,
+    "tdlr_candidates": 27,
+    "news_urls_read": 61,
+    "news_candidates": 61,
+    "total_candidates": 100,
+    "by_source_type": {
+      "legistar": 12,
+      "tabs": 27,
+      "news": 61
+    }
+  },
+  "api_calls": {
+    "legistar": 1,
+    "jina_search": 31,
+    "jina_read": 88,
+    "read": 88,
+    "search": 31
+  },
+  "errors": [],
+  "notes": [],
+  "finished": "2026-09-10T12:21:28",
+  "duration_s": 89.7,
+  "status": "ok"
+}

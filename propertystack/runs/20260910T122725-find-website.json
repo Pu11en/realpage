@@ -1,0 +1,27 @@
+{
+  "skill": "find-website",
+  "area": "plano-richardson",
+  "started": "2026-09-10T12:27:25",
+  "inputs": [
+    "data/plano-richardson/1-apartments.csv"
+  ],
+  "outputs": [
+    "data/plano-richardson/2-websites.csv"
+  ],
+  "counts": {
+    "total": 207,
+    "high": 188,
+    "medium": 1,
+    "low": 12,
+    "none": 6
+  },
+  "api_calls": {
+    "read": 0,
+    "search": 271
+  },
+  "errors": [],
+  "notes": [],
+  "finished": "2026-09-10T12:30:21",
+  "duration_s": 175.9,
+  "status": "ok"
+}

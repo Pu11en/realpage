@@ -17,7 +17,7 @@ Sources:
 
 Usage: python3 skills/find-upcoming/run.py --area plano-richardson
 """
-import argparse, datetime as dt, json, re, sys, pathlib
+import argparse, collections, datetime as dt, json, re, sys, pathlib
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[2]))
 from lib.paths import area_dir
 from lib.runlog import RunLog
@@ -49,6 +49,17 @@ NEWS_QUERIES = [
     "110 E Polk Street Richardson apartments",
     "StreetLights Residential Plano Legacy Drive apartments",
     "Preston Road Plano apartments zoning 2026",
+    # added after review-weak-spots.md: Preston Road / Spring Creek projects were sourced
+    # in research-01 from a content.civicplus.com city staff-report PDF this run's queries
+    # never surfaced (a GATHER recall gap, not an extraction miss)
+    "site:content.civicplus.com Plano apartments staff report",
+    "Plano Spring Creek Parkway apartments 304 units site plan",
+    "Preston Road Plano apartments 351 units site plan",
+    # "The Glenville" (390 units, Central Expressway, approved Jan 2024) kept getting
+    # crowded out by a same-word TDLR filing for a different, already-opened project
+    # ("Glenville Independent Living", N Glenville Dr) — broaden past the exact TABS hit
+    "The Glenville Richardson apartments 390 units Central Expressway",
+    "Richardson City Council Glenville apartments approved",
 ]
 
 TDLR_QUERIES = [
@@ -123,12 +134,12 @@ def fetch_tdlr(log, jina):
     return out
 
 
-def trim_relevant(text, title):
-    """Trim page markdown to ~TRIM_CHARS most relevant chars: prefer the body right after the
+def trim_relevant(text, title, limit=TRIM_CHARS):
+    """Trim page markdown to ~limit most relevant chars: prefer the body right after the
     'Markdown Content:' marker Jina prepends, else the head of the page."""
     body_start = text.find("Markdown Content:")
     body = text[body_start:] if body_start >= 0 else text
-    return body[:TRIM_CHARS]
+    return body[:limit]
 
 
 def fetch_news(log, jina):
@@ -144,19 +155,25 @@ def fetch_news(log, jina):
             # broad net: news/blog domains relevant to local real-estate coverage, plus the
             # city's own site for P&Z / council items
             if not re.search(r"communityimpact\.com|dallasnews\.com|bizjournals\.com/dallas|"
-                              r"candysdirt\.com|plano\.gov|cor\.gov|richardsontexas\.gov", url):
+                              r"candysdirt\.com|plano\.gov|cor\.gov|richardsontexas\.gov|"
+                              r"civicplus\.com", url):
                 continue
             seen_urls.add(url)
             text = jina.read(url)
             log.rec["api_calls"]["jina_read"] = log.rec["api_calls"].get("jina_read", 0) + 1
             title_line = text.splitlines()[0] if text else ""
             title = re.sub(r"^Title:\s*", "", title_line).strip() or res.get("title", "") or url
+            # city P&Z/dev-review-list PDFs (civicplus) run to tens of thousands of chars and
+            # list dozens of unrelated projects before the relevant ones — the default
+            # TRIM_CHARS cut them off before reaching later entries (see extract-notes.md,
+            # 2026-09-10 update). Use a much larger limit for these.
+            is_city_doc = "civicplus.com" in url
             out.append({
-                "source_type": "news",
+                "source_type": "city" if is_city_doc else "news",
                 "source_url": url,
                 "title": title,
                 "fetched_at": TODAY,
-                "text": trim_relevant(text, title),
+                "text": trim_relevant(text, title, limit=90000 if is_city_doc else TRIM_CHARS),
             })
     log.rec["counts"]["news_urls_read"] = len(seen_urls)
     log.rec["counts"]["news_candidates"] = len(out)
@@ -181,9 +198,8 @@ def main():
                 fh.write(json.dumps(c) + "\n")
         log.rec["outputs"] = [str(f.relative_to(f.parents[2]))]
         log.rec["counts"]["total_candidates"] = len(candidates)
-        log.rec["counts"]["by_source_type"] = {
-            "legistar": len(legistar), "tabs": len(tdlr), "news": len(news),
-        }
+        by_type = collections.Counter(c["source_type"] for c in candidates)
+        log.rec["counts"]["by_source_type"] = dict(by_type)
         print(log.rec["counts"])
 
 

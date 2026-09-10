@@ -1,11 +1,15 @@
 """Skill 2 — find-website: the official website for each apartment community.
 
-Source: Jina Search. Query is the community name + address + city, falling back to
-name + city if the first query finds nothing acceptable. Rejects listing/aggregator
-domains (apartments.com, zillow, rent.com, ...) — those are not the community's own
-site. Manager-company pages (camdenliving.com/..., udr.com/...) are OK at medium
-confidence; a domain/title that actually contains the community's distinctive name
-is high confidence.
+Source: Jina Search. The CAD name is cleaned (trailing phase/unit-type boilerplate
+like "Ph 2", "Ii", "Tc", "Senior" stripped — see clean_name) before querying, since
+an exact-phrase query built from the raw CAD name often matches no real page at all.
+Tries up to 3 queries per community, widening each time: name+address+city, then
+name+city, then an unquoted "official site" query, stopping at the first that finds
+an acceptable result. Rejects listing/aggregator domains (apartments.com, zillow,
+rent.com, ...) and local news/media domains (an article about a community is not its
+own site) — see REJECT_DOMAINS. Manager-company pages (camdenliving.com/...,
+udr.com/...) are OK at medium confidence; a domain/title that actually contains the
+community's distinctive name is high confidence.
 Usage: python3 skills/find-website/run.py --area plano-richardson
 """
 import argparse, collections, csv, datetime as dt, re, sys, pathlib
@@ -36,6 +40,19 @@ REJECT_DOMAINS = [
     "opencorporates.com", "usnews.com", "caring.com", "seniorliving.org", "aplaceformom.com",
     # generic apartment-locator keyword: catches averagejoeslocating.com and similar
     "locating", "locator",
+    # local news/media domains — an article *about* a community is never its own site
+    # (found leaking through at "low" confidence, e.g. a foreclosure-news article
+    # outranking the community's real domain — see evals/review-weak-spots.md)
+    "dallasnews.com", "communityimpact.com", "candysdirt.com", "bizjournals.com",
+    "star-telegram.com", "nbcdfw.com", "cbsnews.com", "fox4news.com", "wfaa.com",
+    "keranews.org", "dallasnews.com", "dallasexpress.com", "dallasobserver.com",
+    "dmagazine.com", "prnewswire.com", "businesswire.com",
+    # CRE deal-marketplace and senior-living locator sites found leaking through at
+    # "high"/"low" confidence during the 2026-09-10 re-run (see evals/review-weak-spots.md)
+    "traded.co", "livingpath.com",
+    # multifamily trade press (an article about a community is not its own site) and
+    # another apartment-locator/aggregator, same round
+    "yieldpro.com", "rentseeker.com",
 ]
 # rentcafe.com itself is a listing/search domain; individual *.rentcafe.com community
 # subdomains (e.g. legacynorth.rentcafe.com) are the community's own leasing page — allow those.
@@ -46,6 +63,24 @@ STOPWORDS = {
     "flats", "lofts", "villas", "village", "at", "of", "on", "in", "by", "condos",
     "condominiums", "place", "community",
 }
+
+# CAD records append phase/unit-type boilerplate no real webpage ever quotes verbatim
+# ("Ph 2", "Ii", "Tc", a doubled "Apartments"/"Senior") — an exact-phrase query built
+# from the raw name returns zero Jina results for these. Strip trailing boilerplate
+# tokens before building the query. See evals/review-weak-spots.md.
+STRIP_TRAILING = {
+    "apartments", "apartment", "apts", "homes", "home", "residences", "residence",
+    "senior", "community", "tc", "ph", "phase",
+    "i", "ii", "iii", "iv", "v",
+}
+
+
+def clean_name(name):
+    """Strip trailing phase/unit-type boilerplate from a raw CAD community name."""
+    words = (name or "").split()
+    while words and (words[-1].strip(".,").lower() in STRIP_TRAILING or words[-1].strip(".,").isdigit()):
+        words.pop()
+    return " ".join(words) if words else (name or "")
 
 
 def distinctive_words(name):
@@ -108,15 +143,19 @@ def pick_best(name, results):
 
 def process(row, jina):
     name, address, city = row["name"], row["address"], row["city"]
-    q1 = f'"{name}" {address} {city} TX apartments'
-    results = jina.search(q1)
-    tier, best = pick_best(name, results)
-    query_used = q1
-    if tier == "none":
-        q2 = f'"{name}" {city} TX apartments'
-        results2 = jina.search(q2)
-        tier, best = pick_best(name, results2)
-        query_used = q2
+    cname = clean_name(name)
+    queries = [
+        f'"{cname}" {address} {city} TX apartments',
+        f'"{cname}" {city} TX apartments',
+        f'{cname} {city} TX apartments official site',
+    ]
+    tier, best, query_used = "none", None, queries[0]
+    for q in queries:
+        results = jina.search(q)
+        tier, best = pick_best(cname, results)
+        query_used = q
+        if tier != "none":
+            break
     if tier == "none" or best is None:
         return {"apt_id": row["apt_id"], "website": "", "website_source": "search",
                 "confidence": "none", "query": query_used, "notes": "no acceptable result"}

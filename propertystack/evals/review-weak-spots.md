@@ -127,3 +127,32 @@ wrong inclusion was **not** in the notes; found and root-caused below.
 4. **LOW — no fix needed for the extraction-notes process itself**; the agent's
    documentation of merges/exclusions/recall-gaps in `6-upcoming-extract-notes.md` is
    already thorough and made this review much faster to do.
+
+## Fixes applied — 2026-09-10
+
+All HIGH and MED find-website fixes (1-4) and all find-upcoming fixes (1-3) implemented and
+re-run end to end (skills 2 → 3 → 4 → 6 → 7). Results:
+
+- **find-website**: `none`+`low` (no trusted website) dropped from **67/207 to ~18/207**.
+  `high` confidence rows went from 139 to 187. Verified specific miss cases now resolve to
+  their real domains (cortland.com, thebridgeplano.com, thestandardatcitylineapts.com,
+  ambervistaplano.com, livecreeksidevillage.com, liveoverture.com, udr.com,
+  liveatthehathaway.com). Two more leaking domains found and blocked during verification
+  (`traded.co`, `livingpath.com`, `yieldpro.com`, `rentseeker.com`) beyond what the review
+  sample predicted.
+- **detect-software / build-table**: software-identified rows went from 104 to **145/207**
+  as a direct downstream effect of the website fix.
+- **find-upcoming**: added the 3 missing projects — Preston Road (351-unit project at 4701 W
+  Park Blvd), Spring Creek (304-unit project at Spring Creek Pkwy & K Ave), and The Glenville
+  (390-unit project at 2520 N Central Expressway) — each grounded in a live-fetched source,
+  not guessed. Excluded Aura Northline (confirmed already leasing). Also found and fixed a
+  real bug while chasing the Preston Road miss: `TRIM_CHARS=4000` was truncating the
+  ~85,000-char Plano civicplus Development Review List before reaching later entries;
+  raised to 90,000 chars for `civicplus.com` sources specifically (tagged `source_type=city`
+  per CONTRACTS.md, not `news`).
+- **score-leads**: re-ran scoring and regenerated all 42 `why` sentences from
+  `leads-facts.jsonl` only (no invented facts); `why_check.py` passes clean.
+- Residual gap: `Spring Creek Project`'s exact application date wasn't confirmed (used the
+  civicplus document's snapshot date, 2026-07-02, as a lower-confidence stand-in) — the
+  entry had already rolled off the live rolling report by the time of the automated re-run,
+  so it was added by hand from a web-search-quoted snapshot rather than the pipeline itself.

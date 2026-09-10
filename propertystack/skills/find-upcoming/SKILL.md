@@ -60,6 +60,15 @@ Rules:
 - **Exclude**: projects opened/fully leased before 2025; single-family; hotels/motels;
   assisted-living / memory-care / skilled-nursing (55+ **independent-living apartments** are
   OK — those are still multifamily rentals); anything outside Plano or Richardson.
+- **Freshness check for `under-construction`/`leasing` candidates**: if a candidate's only
+  source is more than ~6-9 months old, or its own text gives an `expected_open`/completion
+  date that has already passed as of today, don't take its stage at face value — do one more
+  Jina search/read (e.g. `"<project>" apartments now leasing`) to confirm the project hasn't
+  already opened and fully leased before including it. Found via review: a Feb-2024 article
+  projecting "completion early 2026" for Aura Northline got carried into the CSV unverified;
+  by the time of a later run the property was already open and actively leasing (grand-opening
+  listings on RentCafe/Apartments.com/Zillow) — it should have been excluded, not included as
+  upcoming supply. Note the re-check result in the extract-notes bullet for that row either way.
 - **stage** values are exactly: `zoning-filed | zoning-approved | site-plan-approved | permit |
   under-construction | leasing`. Infer from what the candidate's own text says (a Legistar
   "passed" status, a zabalist milestone heading, or a news article's own stage language) — do
