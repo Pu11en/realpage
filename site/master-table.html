@@ -15,6 +15,10 @@
       const content = document.getElementById("page-content");
       const s = data.stats;
       const f = data.funnel;
+      const cities = [...new Set(data.properties.map((p) => p.city))].sort();
+      const softwareOptions = [...new Set(data.properties.map((p) => p.software).filter((v) => v && v !== "unknown"))].sort();
+      const years = [...new Set(data.properties.map((p) => p.yearBuilt).filter(Boolean))].sort((a, b) => b - a);
+
       content.innerHTML = `
         <h1>Master Table</h1>
         <div class="meta">Every apartment in the area. Generated from ${data.generatedFrom}.</div>
@@ -25,41 +29,127 @@
           <div class="stat-card"><div class="value">${s.topSoftware || "--"}</div><div class="label">Top software</div></div>
         </div>
         <div class="filters" style="justify-content:space-between;">
-          <div style="display:flex;gap:8px;">
-            <input placeholder="Search communities..." />
-            <select><option>All cities</option></select>
-            <select><option>All software</option></select>
-            <select><option>Any year built</option></select>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;">
+            <input id="f-search" placeholder="Search communities..." />
+            <select id="f-city">
+              <option value="">All cities</option>
+              ${cities.map((c) => `<option value="${c}">${c}</option>`).join("")}
+            </select>
+            <select id="f-software">
+              <option value="">All software</option>
+              <option value="__none__">Unknown</option>
+              ${softwareOptions.map((v) => `<option value="${v}">${v}</option>`).join("")}
+            </select>
+            <select id="f-year">
+              <option value="">Any year built</option>
+              ${years.map((y) => `<option value="${y}">${y}</option>`).join("")}
+            </select>
+            <select id="f-size">
+              <option value="">Any size</option>
+              <option value="0-199">Under 200 units</option>
+              <option value="200-399">200-399 units</option>
+              <option value="400-599">400-599 units</option>
+              <option value="600-99999">600+ units</option>
+            </select>
           </div>
-          <button class="btn">Export CSV</button>
+          <button class="btn" id="export-csv">Export CSV</button>
         </div>
         <table>
           <thead>
             <tr><th>Community</th><th>City</th><th>Units</th><th>Year built</th><th>Owner</th><th>Software</th><th>Proof</th></tr>
           </thead>
-          <tbody>
-            ${data.properties.slice(0, 60).map((p) => `
-              <tr class="${isDimmedRow(p.software) ? "dimmed" : ""}">
-                <td><a href="property.html?id=${p.id}" style="color:var(--text);text-decoration:none;">${p.community}</a></td>
-                <td>${p.city}</td>
-                <td>${p.units ?? "--"}</td>
-                <td>${p.yearBuilt ?? "--"}</td>
-                <td>${p.owner}</td>
-                <td>${vendorPill(p.software, data.vendorColors)}</td>
-                <td>${p.proof ? `<a href="${p.proof}" style="color:var(--accent);">link</a>` : "--"}</td>
-              </tr>
-            `).join("")}
-          </tbody>
+          <tbody id="table-tbody"></tbody>
         </table>
-        <div class="funnel">
-          <div class="step"><div class="n">${f.inArea}</div><div class="label">In area</div></div>
-          <div class="step"><div class="n">${f.websiteFound ?? "--"}</div><div class="label">Website found</div></div>
-          <div class="step"><div class="n">${f.checked}</div><div class="label">Checked</div></div>
-          <div class="step"><div class="n">${f.identified}</div><div class="label">Identified</div></div>
-          <div class="step"><div class="n">${f.unknown}</div><div class="label">Unknown</div></div>
+        <div style="color:var(--text-dim);font-size:13px;margin-top:8px;">
+          ${f.inArea} apartments &rarr; ${f.websiteFound ?? "--"} with a website &rarr; ${f.identified} identified &rarr; ${f.unknown} unknown
         </div>
-        <div style="color:var(--text-dim);font-size:12px;margin-top:8px;">Showing first 60 of ${data.properties.length} rows.</div>
+        <div style="color:var(--text-dim);font-size:12px;margin-top:4px;" id="row-count"></div>
       `;
+
+      function currentRows() {
+        const search = document.getElementById("f-search").value.trim().toLowerCase();
+        const city = document.getElementById("f-city").value;
+        const software = document.getElementById("f-software").value;
+        const year = document.getElementById("f-year").value;
+        const size = document.getElementById("f-size").value;
+
+        return data.properties.filter((p) => {
+          if (search && !p.community.toLowerCase().includes(search)) return false;
+          if (city && p.city !== city) return false;
+          if (software === "__none__" && p.software && p.software !== "unknown") return false;
+          if (software && software !== "__none__" && p.software !== software) return false;
+          if (year && String(p.yearBuilt) !== year) return false;
+          if (size) {
+            const [lo, hi] = size.split("-").map(Number);
+            const units = p.units || 0;
+            if (units < lo || units > hi) return false;
+          }
+          return true;
+        });
+      }
+
+      function renderRows() {
+        const rows = currentRows();
+
+        document.getElementById("table-tbody").innerHTML = rows.map((p) => `
+          <tr class="clickable ${isDimmedRow(p.software) ? "dimmed" : ""}" data-id="${p.id}" style="cursor:pointer;">
+            <td>${p.community}</td>
+            <td>${p.city}</td>
+            <td>${p.units ?? "--"}</td>
+            <td>${p.yearBuilt ?? "--"}</td>
+            <td>${p.owner}</td>
+            <td>${vendorPill(p.software === "unknown" ? null : p.software, data.vendorColors)}</td>
+            <td>${p.proof ? `<a href="${p.proof}" style="color:var(--accent);" onclick="event.stopPropagation();" target="_blank" rel="noopener">link</a>` : "--"}</td>
+          </tr>
+        `).join("");
+
+        document.querySelectorAll("#table-tbody tr.clickable").forEach((tr) => {
+          tr.addEventListener("click", () => {
+            location.href = `property.html?id=${encodeURIComponent(tr.dataset.id)}`;
+          });
+        });
+
+        document.getElementById("row-count").textContent = `Showing ${rows.length} of ${data.properties.length} rows.`;
+      }
+
+      function csvEscape(value) {
+        const str = String(value ?? "");
+        return /[",\n]/.test(str) ? `"${str.replace(/"/g, '""')}"` : str;
+      }
+
+      function exportCsv() {
+        const rows = currentRows();
+        const header = ["Community", "City", "Units", "Year built", "Owner", "Software", "Proof"];
+        const lines = [header.join(",")];
+        rows.forEach((p) => {
+          lines.push([
+            p.community,
+            p.city,
+            p.units ?? "",
+            p.yearBuilt ?? "",
+            p.owner,
+            p.software === "unknown" ? "" : (p.software || ""),
+            p.proof || "",
+          ].map(csvEscape).join(","));
+        });
+        const blob = new Blob([lines.join("\n")], { type: "text/csv;charset=utf-8;" });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = "propertystack-master-table.csv";
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+      }
+
+      ["f-search", "f-city", "f-software", "f-year", "f-size"].forEach((id) => {
+        const el = document.getElementById(id);
+        el.addEventListener(el.tagName === "INPUT" ? "input" : "change", renderRows);
+      });
+      document.getElementById("export-csv").addEventListener("click", exportCsv);
+
+      renderRows();
     });
   </script>
 </body>
