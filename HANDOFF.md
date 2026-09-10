@@ -76,7 +76,27 @@ and never edited; exact quotes are preserved; distilled analysis lives in
   (fenced, labeled with the filename), so Drew can read files without opening them.
 - Update `task_plan.md`, `progress.md`, and `findings.md` as you work.
 
-## Copy-paste resume prompt
+## Copy-paste prompts
+
+### Brainstorm / planning session
+
+```text
+Planning session: RealPage knowledge base → what we build from it.
+
+Repo (public): https://github.com/Pu11en/realpage
+Start with HANDOFF.md, then task_plan.md, findings.md, 04-reddit/index.md.
+
+The evidence is collected; the direction isn't chosen. Five candidates are
+sketched: public evidence library, investigation/content series, a tool for
+50–500-unit property managers, migration/switch tooling, renter-side watch.
+
+Brainstorm with me — bring observations from the repo's evidence and go back
+and forth on them — pressure-test those five, help me pick one, then turn the
+winner into a concrete plan: what it is, who it's for, what "working" looks
+like, and ordered first steps. Planning only this session; no building yet.
+```
+
+### Collection continuation
 
 ```text
 You are resuming work on a RealPage knowledge base.
