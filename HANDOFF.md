@@ -43,34 +43,30 @@ and never edited; exact quotes are preserved; distilled analysis lives in
 4. `progress.md` — session log, newest first
 5. `04-reddit/index.md` — completed Reddit evidence pack
 
-## Where things stand (2026-09-10)
+## Where things stand (2026-09-10, end of planning/build session)
 
-- **Phase 2 (Reddit) COMPLETE:** 25 queries, 142 unique posts, 25 subreddits,
-  2020–2026. Raw JSON in `raw/reddit/`; distilled pack in `04-reddit/index.md`.
-- **Phase 1 (reviews) PARTIAL:** Software Advice captured in full
-  (`raw/reviews/software-advice-realpage-2026-09-10.md`); Capterra indirect only
-  (`raw/reviews/capterra-search-summary-2026-09-10.md`); **G2, Capterra,
-  TrustRadius block headless crawling** (DataDome / Cloudflare) — need a real
-  browser session, read-only.
-- **Phases 3–7 PENDING:** DOJ primary docs (justice.gov is open — no blocker),
-  realpage.com crawl (products/pricing/case studies), competitor stubs,
-  social, synthesis.
-- **Direction (planning session 2026-09-10):** the old five directions were
-  re-scored against "pitchable to RealPage"; four are hostile or competing and
-  were killed. Recommended: **C1 PMS Switch Radar** (which software each
-  apartment community runs, read from its public website, plus dated switches
-  via the Wayback Machine), one metro. Fallback: C3 affordable-housing
-  compliance copilot. See `09-build-ideas/brainstorm-2026-09-10-pitch-to-realpage.md`.
-- Open-ended collection (G2 pass, app stores, X, LinkedIn, DOJ docs, site
-  crawl) is **paused** — collect only what a plan needs.
+**Product: PropertyStack.** For each apartment in an area: which software it
+runs, with proof, plus early leads (recent sales + upcoming buildings).
+Outside-in only: public data, no RealPage access.
+
+- **Back end: DONE for Plano + Richardson (Collin County).** 7 skills in
+  `propertystack/skills/`, outputs in `propertystack/data/plano-richardson/`:
+  207 apartments · 104 with software identified · 28 sales · 12 upcoming ·
+  40 scored leads. Start with `propertystack/README.md` + `CONTRACTS.md`.
+- **Front end: built by another session** in `site/` (static, reads
+  `site/data/*.json`, see `site/DATA-CONTRACT.md`), but it still reads OLD
+  sample data from `raw/research-01/`.
+- **Dashboard plan:** `09-build-ideas/propertystack-wireframe-brief.md`.
 
 ## Next actions, in order
 
-1. Drew confirms C1 (or picks otherwise) and answers the open decisions in
-   `09-build-ideas/mvp-plan-switch-radar.md` §8.
-2. Run `09-build-ideas/research-run-01-verify.md` (≈3.5 h, cheap model OK).
-   R1 is a kill gate.
-3. Apply results to the MVP plan, re-run `/mvp-plan-review`, then build.
+1. **Connect the site to the real data:** point `site/data/build_data.py` at
+   `propertystack/data/plano-richardson/master.csv`, `leads.csv`, and
+   `propertystack/runs/*.json`; regenerate the JSON; check pages locally.
+2. **One review of the weak spots:** 67 apartments with no trusted website
+   (find-website); upcoming projects missed (Preston Road, Spring Creek,
+   The Glenville) and Aura Northline wrongly included (find-upcoming).
+3. Push → Vercel (when Drew says).
 
 ## Constraints
 
