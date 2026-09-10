@@ -30,10 +30,14 @@ def fetch(row):
                 "evidence": next(iter(hits.values()), ""), "secs": round(time.time()-t,1)}
     except Exception as e:
         return {**row, "status": "err", "vendor": "unknown", "signal": "", "evidence": str(e)[:80], "secs": round(time.time()-t,1)}
-rows = list(csv.DictReader(open(ROOT/"raw/research-01/R2-communities.csv")))
-with cf.ThreadPoolExecutor(5) as ex: out = list(ex.map(fetch, rows))
-f = ROOT/"raw/research-01/R2-jina-results.csv"
-w = csv.DictWriter(open(f,"w",newline=""), fieldnames=list(out[0].keys())); w.writeheader(); w.writerows(out)
-from collections import Counter
-print(Counter(o["vendor"] for o in out)); print(Counter(o["signal"] for o in out)); print("status", Counter(str(o["status"]) for o in out))
-print("identified", sum(o["vendor"]!="unknown" for o in out), "/", len(out))
+def main():
+    rows = list(csv.DictReader(open(ROOT/"raw/research-01/R2-communities.csv")))
+    with cf.ThreadPoolExecutor(5) as ex: out = list(ex.map(fetch, rows))
+    f = ROOT/"raw/research-01/R2-jina-results.csv"
+    w = csv.DictWriter(open(f,"w",newline=""), fieldnames=list(out[0].keys())); w.writeheader(); w.writerows(out)
+    from collections import Counter
+    print(Counter(o["vendor"] for o in out)); print(Counter(o["signal"] for o in out)); print("status", Counter(str(o["status"]) for o in out))
+    print("identified", sum(o["vendor"]!="unknown" for o in out), "/", len(out))
+
+if __name__ == "__main__":
+    main()

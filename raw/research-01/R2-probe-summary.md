@@ -181,3 +181,12 @@ The bake-off's Jina and crawl4ai rows (0/10) were a bug in the probe script, not
 - **The remaining unknowns are big operators with white-labeled portals**: Camden (mycamden.com), UDR, Cortland (Funnel leasing), Greystar (greystar.com portal). Also seen: leaselabs.com (a RealPage-owned website builder), yotta, repli360.
 - Fix ideas: (1) one extra hop into the operator's resident-login page; (2) map operator → PMS at the company level from public sources for the big white-label operators; (3) build a clean community list with no duplicates or non-community pages.
 - Tool verdict: **Jina Reader is the primary tool** (handles JavaScript and bot walls, ~5 parallel requests). Plain httpx works as a free first pass on static sites.
+
+## Fix pass — one hop + operator lookup (main session, 2026-09-10)
+
+- `tooling/probe/jina_hop.py` follows up to 3 resident/login links one hop for the unknowns. Output: `R2-hop-results.csv`.
+- Dropping 9 bad list rows leaves **41 valid communities: 34 identified (83%) → PASS**. Yardi 20 · RealPage 11 · Entrata 3 · unknown 7.
+- The one hop picked up 12 more. The login links sit on vendor hosts: `securecafe.com` (Yardi), `activebuilding.com` and `loftliving.com` (RealPage), `residentportal.com` (Entrata). Camden's site loads assets from `property.onesite.realpage.com`.
+- Still unknown: UDR (in-house `residents.udr.com`), Cortland (Funnel leasing login, and Funnel is a CRM, not a PMS), Kairoi's Annabel (a RealPage company per operator research, medium), Crosscreek (Yotta's own platform — count Yotta as its own vendor).
+- Operator-level lookup is in `R2b-operator-pms.md`. Use it with care: several rows cite pricing-tool use (YieldStar via DOJ settlements), which is **not** proof of which PMS they run, and Camden's source dates from 2002.
+- Takeaway: the resident-login link is the signal, and it's worth one extra hop. The white-label giants (UDR, Cortland) are the remaining gap.
