@@ -149,6 +149,13 @@
       });
       document.getElementById("export-csv").addEventListener("click", exportCsv);
 
+      // Deep link from Software Share: master-table.html?software=Yardi
+      const softwareParam = new URLSearchParams(location.search).get("software");
+      const softwareSelect = document.getElementById("f-software");
+      if (softwareParam && [...softwareSelect.options].some((o) => o.value === softwareParam)) {
+        softwareSelect.value = softwareParam;
+      }
+
       renderRows();
     });
   </script>
