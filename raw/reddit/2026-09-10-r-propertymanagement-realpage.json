@@ -1,0 +1,264 @@
+{
+  "query": "realpage",
+  "subreddit": "PropertyManagement",
+  "sort": "relevance",
+  "time": "all",
+  "fetchedAt": "2026-09-10T07:29:54.232676+00:00",
+  "posts": [
+    {
+      "id": "1vjqmny",
+      "title": "RealPage Report Scheduler Issues",
+      "subreddit": "PropertyManagement",
+      "author": "prodigyac",
+      "body": "I’ve been using RealPage’s report scheduler to send reports to a Google Cloud server for the past year, however over the past 9 days the reports have generated in RealPage but have not get sent to the cloud. \n\nI can manually resend a report to my Google cloud server but on initial generation when scheduled it does not get sent to the cloud. \n\nI’ve tried everything and it seems like it’s truly a RealPage issue, has anyone had this experience over the past week?",
+      "score": 2,
+      "commentCount": 3,
+      "createdUtc": 1786284018.0,
+      "url": "https://www.reddit.com/r/PropertyManagement/comments/1vjqmny/realpage_report_scheduler_issues/",
+      "topComments": [
+        {
+          "id": "p2p4c4w",
+          "author": "Own-Appointment5140",
+          "body": "Our property had the exact same thing start happening last Tuesday, thought it was our IT guy messing with firewall settings again but nope. Support gave us the runaround for three days before admitting it's on their end\n\n  \nThe manual resend works for us too, it's the auto-forward that just dies somewhere between their scheduler and the cloud bucket. We've been having someone hit resend every mo…",
+          "score": 2,
+          "url": "https://www.reddit.com/r/PropertyManagement/comments/1vjqmny/realpage_report_scheduler_issues/p2p4c4w/"
+        },
+        {
+          "id": "p31hzai",
+          "author": "yyyogev",
+          "body": "Worth checking the scheduled destination still has the right creds and url, and adding something on your cloud side that pings you when a report doesn't land on time so you're not finding out 9 days later. For longer term, a script that pulls the report itself instead of waiting for their push takes them out of the loop",
+          "score": 1,
+          "url": "https://www.reddit.com/r/PropertyManagement/comments/1vjqmny/realpage_report_scheduler_issues/p31hzai/"
+        }
+      ]
+    },
+    {
+      "id": "1v8exgx",
+      "title": "Realpage Dispute",
+      "subreddit": "PropertyManagement",
+      "author": "versuax",
+      "body": "Have anyone done a Realpage dispute what was your turnaround time?",
+      "score": 2,
+      "commentCount": 1,
+      "createdUtc": 1785190132.0,
+      "url": "https://www.reddit.com/r/PropertyManagement/comments/1v8exgx/realpage_dispute/",
+      "topComments": [
+        {
+          "id": "p3y8u2x",
+          "author": "Sad-Release9446",
+          "body": "Took about 3 weeks for mine, came back partially adjusted and then they just ghosted",
+          "score": 1,
+          "url": "https://www.reddit.com/r/PropertyManagement/comments/1v8exgx/realpage_dispute/p3y8u2x/"
+        }
+      ]
+    },
+    {
+      "id": "1oug4jo",
+      "title": "Have you switched to Entrata or Realpage in the lst 6 months and if so what are the pros and cons of your decision?",
+      "subreddit": "PropertyManagement",
+      "author": "cygradcydad",
+      "body": "We are in the process of looking to switch to a new PMS.  Would love your honest feedback on after the switch, what are your thoughts? Regrets? Anything you would ask for different now knowing what you know now.",
+      "score": 3,
+      "commentCount": 16,
+      "createdUtc": 1762883246.0,
+      "url": "https://www.reddit.com/r/PropertyManagement/comments/1oug4jo/have_you_switched_to_entrata_or_realpage_in_the/",
+      "topComments": [
+        {
+          "id": "nodcshy",
+          "author": "allthecrazything",
+          "body": "I really like Entrata, real page is okay",
+          "score": 1,
+          "url": "https://www.reddit.com/r/PropertyManagement/comments/1oug4jo/have_you_switched_to_entrata_or_realpage_in_the/nodcshy/"
+        },
+        {
+          "id": "noe2htj",
+          "author": "Much-Pie-855",
+          "body": "Entrata! Reporting and financials are a breeze. Customer support is top notch and you’ll always get someone on the phone quickly to talk through any issues. Leasing interface is very user friendly. Realpage feels archaic in comparison, but standalone it is a decent platform.",
+          "score": 1,
+          "url": "https://www.reddit.com/r/PropertyManagement/comments/1oug4jo/have_you_switched_to_entrata_or_realpage_in_the/noe2htj/"
+        },
+        {
+          "id": "noi11bw",
+          "author": "Chopstarrr",
+          "body": "I love Entrata.",
+          "score": 1,
+          "url": "https://www.reddit.com/r/PropertyManagement/comments/1oug4jo/have_you_switched_to_entrata_or_realpage_in_the/noi11bw/"
+        }
+      ]
+    },
+    {
+      "id": "1r93w2e",
+      "title": "Realpage / Knock users:  Any issues and/or solutions to communications going straight to spam?",
+      "subreddit": "PropertyManagement",
+      "author": "IFERROR_lol",
+      "body": "We have 22 properties with Knock and all of the responses through Knock and their [knock.io](http://knock.io) email addresses and phone numbers seem to go to spam.  There don't seem to be any settings to use our own emails or phone numbers.  I am admin for all of our realpage products so it's not due to permissions.\n\nDo any of you have the same issues and has anyone found a way to resolve this?  Our Knock rep with Realpage has not been very helpful.",
+      "score": 1,
+      "commentCount": 3,
+      "createdUtc": 1771518766.0,
+      "url": "https://www.reddit.com/r/PropertyManagement/comments/1r93w2e/realpage_knock_users_any_issues_andor_solutions/",
+      "topComments": [
+        {
+          "id": "o6aoizj",
+          "author": "Extra-Pomegranate-50",
+          "body": "this is almost certainly because knock sends emails from their own [knock.io](http://knock.io) domain rather than your property's domain. when a prospect gets an email from [something@knock.io](mailto:something@knock.io) instead of [leasing@yourproperty.com](mailto:leasing@yourproperty.com), their email provider has no relationship with [knock.io](http://knock.io) and treats it as suspicious. mul…",
+          "score": 5,
+          "url": "https://www.reddit.com/r/PropertyManagement/comments/1r93w2e/realpage_knock_users_any_issues_andor_solutions/o6aoizj/"
+        }
+      ]
+    },
+    {
+      "id": "1q9luhr",
+      "title": "Application mistake using Realpage, how to fix?",
+      "subreddit": "PropertyManagement",
+      "author": "Bubbly-Staff-9452",
+      "body": "My wife and I toured an apartment today at 3:45. We liked it, came back home and talked it over, and decided to apply. I started filling out the application and when I got to the end I was confused because I had listed my wife as an applicant but it was asking me to pay. I went back and made sure my wife was listed and she was, so I was really confused.(I later realized that it invited applicants after the initial applicant submits and pays the admin fee.) my wife makes more than I do with steadier income so I absolutely wanted to make sure she was on the lease if I wasn’t. I went back and sw…",
+      "score": 1,
+      "commentCount": 5,
+      "createdUtc": 1768094537.0,
+      "url": "https://www.reddit.com/r/PropertyManagement/comments/1q9luhr/application_mistake_using_realpage_how_to_fix/",
+      "topComments": [
+        {
+          "id": "nywjjyf",
+          "author": "jrock3386",
+          "body": "Real page wont release the apartment, the office does that. Email them, most of the time it does not matter who is primary. You may be able to go back into her application and put your name back in, then so the secondary application under her name. If not just reach out to the office and the can assist.",
+          "score": 2,
+          "url": "https://www.reddit.com/r/PropertyManagement/comments/1q9luhr/application_mistake_using_realpage_how_to_fix/nywjjyf/"
+        },
+        {
+          "id": "nyw5y9t",
+          "author": "Penny1974",
+          "body": "The office staff will be able to correct on the back end.  I would send an email to the office stating the mistakes and what you need corrected.",
+          "score": 1,
+          "url": "https://www.reddit.com/r/PropertyManagement/comments/1q9luhr/application_mistake_using_realpage_how_to_fix/nyw5y9t/"
+        }
+      ]
+    },
+    {
+      "id": "1gwj9tf",
+      "title": "Realpage vs Appfolio",
+      "subreddit": "PropertyManagement",
+      "author": "tattedlady13",
+      "body": "My company has used RealPage for years and we are exploring other options. Appfolio is one that has been trying to get us to change so we setup a demo. My question is for those who have used both systems. What do you like and dislike about each. Is the savings from Appfolio worth it? We are pretty deep in RealPage, using OneSite, vendor payments, utility expense, vacant recovery, renters insurance, spend management, budgeting, and more. We have used RealPage OneSite since 2010 and used their MSDos Rent Roll prior. \n\nThanks for any insights! As the one that will be responsible for converting o…",
+      "score": 6,
+      "commentCount": 33,
+      "createdUtc": 1732206380.0,
+      "url": "https://www.reddit.com/r/PropertyManagement/comments/1gwj9tf/realpage_vs_appfolio/",
+      "topComments": [
+        {
+          "id": "ly9xyjc",
+          "author": "[deleted]",
+          "body": "[removed]",
+          "score": 5,
+          "url": "https://www.reddit.com/r/PropertyManagement/comments/1gwj9tf/realpage_vs_appfolio/ly9xyjc/"
+        },
+        {
+          "id": "lya69ux",
+          "author": "devadmin2020",
+          "body": "RealPage is good, No doubt here. But Appfolio is much user friendly and top on the hill. It will be hard for your team to migrate at first but it will be much easier when they get there.",
+          "score": 5,
+          "url": "https://www.reddit.com/r/PropertyManagement/comments/1gwj9tf/realpage_vs_appfolio/lya69ux/"
+        },
+        {
+          "id": "lybnkso",
+          "author": "elprez07",
+          "body": "AppFolio is garbage for section 8 compliance so beware if that’s a part of your portfolio.",
+          "score": 3,
+          "url": "https://www.reddit.com/r/PropertyManagement/comments/1gwj9tf/realpage_vs_appfolio/lybnkso/"
+        }
+      ]
+    },
+    {
+      "id": "1p6h1h8",
+      "title": "DoJ agrees to settle with RealPage in rent collusion software case",
+      "subreddit": "PropertyManagement",
+      "author": "mec287",
+      "body": "",
+      "score": 3,
+      "commentCount": 1,
+      "createdUtc": 1764088277.0,
+      "url": "https://www.reddit.com/r/PropertyManagement/comments/1p6h1h8/doj_agrees_to_settle_with_realpage_in_rent/",
+      "topComments": [
+        {
+          "id": "nqqww8h",
+          "author": "Ok-Entertainer-1414",
+          "body": "Disappointing to see them face no consequences for price fixing",
+          "score": 2,
+          "url": "https://www.reddit.com/r/PropertyManagement/comments/1p6h1h8/doj_agrees_to_settle_with_realpage_in_rent/nqqww8h/"
+        }
+      ]
+    },
+    {
+      "id": "1knbdg3",
+      "title": "RealPage and 20 year old misdemeanor",
+      "subreddit": "PropertyManagement",
+      "author": "Fookledoodledoo",
+      "body": "If anyone knows this the info would be greatly appreciated: Would a 20 year old misdemeanor public indecency charge be a disqualification on Realpage? My customer also has credit around 550 so I am wondering about that as well.",
+      "score": 1,
+      "commentCount": 7,
+      "createdUtc": 1747323622.0,
+      "url": "https://www.reddit.com/r/PropertyManagement/comments/1knbdg3/realpage_and_20_year_old_misdemeanor/",
+      "topComments": [
+        {
+          "id": "msgsxat",
+          "author": "liamongmail",
+          "body": "Depends on how your PMC has their screening configured. RealPage doesn’t set those parameters up, the PMC does.",
+          "score": 6,
+          "url": "https://www.reddit.com/r/PropertyManagement/comments/1knbdg3/realpage_and_20_year_old_misdemeanor/msgsxat/"
+        },
+        {
+          "id": "msgyzj1",
+          "author": "allthecrazything",
+          "body": "Depending on the state, it may not matter. DC for example can only look back over the last 7 years. A conviction from 20 years ago should not be considered",
+          "score": 2,
+          "url": "https://www.reddit.com/r/PropertyManagement/comments/1knbdg3/realpage_and_20_year_old_misdemeanor/msgyzj1/"
+        },
+        {
+          "id": "mshkjcx",
+          "author": "[deleted]",
+          "body": "The system doesn’t accept or deny you, it just gives the property manager the information and they make the decision. So it depends on their policy. At my company a misdemeanor would not disqualify you unless it was a violent or sexual offense",
+          "score": 2,
+          "url": "https://www.reddit.com/r/PropertyManagement/comments/1knbdg3/realpage_and_20_year_old_misdemeanor/mshkjcx/"
+        }
+      ]
+    },
+    {
+      "id": "1mojzt1",
+      "title": "America’s Largest Landlord to Stop Using RealPage Rent-Setting Software, Makes Deal With DOJ",
+      "subreddit": "PropertyManagement",
+      "author": "ironicmirror",
+      "body": "",
+      "score": 1,
+      "commentCount": 0,
+      "createdUtc": 1755030495.0,
+      "url": "https://www.reddit.com/r/PropertyManagement/comments/1mojzt1/americas_largest_landlord_to_stop_using_realpage/",
+      "topComments": []
+    },
+    {
+      "id": "1k108n6",
+      "title": "Potentially moving from RealPage to Entrata",
+      "subreddit": "PropertyManagement",
+      "author": "Medium_Routine_9398",
+      "body": "Our PMC is thinking about moving from RealPage to Entrata. I have used OneSite (Conventional/Affordable/TC/50058) for about a decade and am curious if anyone has done a similar switch.\n\nIt seems much nicer on reporting but less involved with operations in some areas, and the Affordable world is not a big component to them, it seems.\n\nWe have roughly 4k units, not a huge portfolio but not tiny either. Have a mix of 59/TC properties for more than half our units. I know there are a lot of factors with the different RP products and just looking for some general feedback.\n\nAny thing you guys like/…",
+      "score": 0,
+      "commentCount": 2,
+      "createdUtc": 1744850814.0,
+      "url": "https://www.reddit.com/r/PropertyManagement/comments/1k108n6/potentially_moving_from_realpage_to_entrata/",
+      "topComments": [
+        {
+          "id": "mo161gn",
+          "author": "BlondeBreveHC",
+          "body": "Entrata is just so much more effective at everything instead if using 5000 different apps it's all in 1 for most everything- for keasing it is a dream",
+          "score": 2,
+          "url": "https://www.reddit.com/r/PropertyManagement/comments/1k108n6/potentially_moving_from_realpage_to_entrata/mo161gn/"
+        },
+        {
+          "id": "mnkdhqp",
+          "author": "mcdray2",
+          "body": "You really should take a look at AppFolio before making a decision.   I can put you in touch with someone if you send me a DM.",
+          "score": 1,
+          "url": "https://www.reddit.com/r/PropertyManagement/comments/1k108n6/potentially_moving_from_realpage_to_entrata/mnkdhqp/"
+        }
+      ]
+    }
+  ]
+}

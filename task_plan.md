@@ -8,8 +8,9 @@ so future sessions can build things without asking questions.
 1. **Awaiting Drew:** pick a direction from the five shapes in the brainstorm
    (see `progress.md` session 2026-09-10 + `findings.md` landscape check).
    Nothing is committed; the KB feeds all five.
-2. Collection continues either way: one Browser Use pass (real Chromium) at
-   G2, Capterra, TrustRadius → `raw/reviews/`; then app stores + Glassdoor.
+2. Collection continues either way: Browser Use pass (real Chromium) at G2,
+   Capterra, TrustRadius → `raw/reviews/`; Reddit sweeps continue via
+   `tooling/reddit_search.py` (Phase 2); then app stores + Glassdoor.
 
 ## Current Phase
 Phase 1 — Third-party reviews (in_progress)
@@ -26,7 +27,7 @@ Phase 1 — Third-party reviews (in_progress)
 | Google Play — resident apps | Crawl4AI | `raw/reviews/gplay-*.md` | pending |
 | Glassdoor / Indeed | WebSearch → manual capture fallback | `raw/reviews/glassdoor-*.md` | pending |
 | BBB | Crawl4AI | `raw/reviews/bbb-*.md` | pending |
-| Reddit | DSH reddit session cookie; fallback browser-UA JSON | `raw/reddit/` → `04-reddit/` | pending |
+| Reddit | ✅ `tooling/reddit_search.py` (DSH cookie) | `raw/reddit/` → `04-reddit/` | **working + first pull** |
 | X | twitter-news session | `raw/x/` → `05-social/x/` | pending |
 | realpage.com | Crawl4AI (proven working on open sites) | `raw/site/` → `02-products/` | pending |
 | DOJ / legal | WebFetch (justice.gov is open) | `raw/legal/` | pending |
@@ -60,9 +61,11 @@ Phase 1 — Third-party reviews (in_progress)
 - **Status:** in_progress
 
 ### Phase 2: Reddit evidence packs
-- [ ] Queries: r/PropertyManagement, r/Landlord, r/renters, r/LeasingConsultants
-- [ ] Switching stories, support complaints, pricing chatter → `04-reddit/`
-- **Status:** pending
+- [x] Tool unblocked: `tooling/reddit_search.py` + DSH session cookie (verified)
+- [x] First pull: r/PropertyManagement, r/Landlord, r/renters, global top → `raw/reddit/`
+- [ ] Remaining sweeps: r/LeasingConsultants, r/RealEstate, r/HOA, r/Apartmentliving + switching-story queries
+- [ ] Distill into `04-reddit/index.md`
+- **Status:** in_progress
 
 ### Phase 3: DOJ antitrust primary docs
 - [ ] Complaint + proposed final judgment → `raw/legal/`
@@ -103,7 +106,7 @@ Phase 1 — Third-party reviews (in_progress)
 ## Errors Encountered
 | Error | Attempt | Resolution |
 |-------|---------|------------|
-| Reddit JSON blocked for unauthenticated curl | 1 | Use DSH reddit session (Phase 2) |
+| Reddit JSON blocked for unauthenticated curl | 1 | **Solved 2026-09-10:** `tooling/reddit_search.py` + DSH session cookie (curl/UA alone stays 403) |
 | WebFetch G2 → HTTP 403 | 1 | Browser Use pass queued |
 | WebFetch TrustRadius → 404 (wrong slug) | 1 | Correct slug: realpage-leaselabs |
 | Crawl4AI G2 → DataDome captcha, HTTP 403 | 2 | Browser Use pass queued |

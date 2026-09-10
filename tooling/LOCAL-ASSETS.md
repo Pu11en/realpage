@@ -5,18 +5,21 @@ Fetched: 2026-09-10
 Method: `ls`, `find`, file reads on /home/drewp
 Confidence: high
 
-## Reddit — DSH Reddit On Demand
+## Reddit — WORKING standalone CLI (verified 2026-09-10)
 
-- Location: `/home/drewp/main-projects/reddit/`
-- Read-only `reddit_search` tool (DeepSeek Harness plugin). Hits Reddit's
-  public HTTPS JSON endpoints with a saved session cookie (stored in DSH
-  credential UI, not in files). Hard caps: 10 posts / 5 comments per query.
-- Read `/home/drewp/main-projects/reddit/USAGE.md` — it is an excellent
-  playbook for pain-mining, competitor research, and voice-of-customer work.
-- In a non-DSH session (like ZCode), the same endpoints are callable directly
-  (`https://www.reddit.com/r/<sub>/search.json?q=...`) — unauthenticated JSON
-  works for public content until rate-limited; the DSH session cookie raises
-  the ceiling. Fallback: pull JSON via curl with a browser UA, cache to `raw/`.
+- **Tool: `tooling/reddit_search.py`** — standalone replica of the DSH
+  `reddit_search` plugin (same endpoints, same bounds: max 10 posts, 5
+  comments per post; GET-only; cookie never forwarded through redirects).
+- **Cookie source:** `~/.dsh/.credentials.yaml` → `refs.REDDIT_SESSION_COOKIE`
+  (saved via DSH Settings → Plugins → Reddit), or env var `DSH_REDDIT_COOKIE`.
+  The script reads it at runtime; the secret is never printed or stored.
+- **Usage:**
+  `python3 tooling/reddit_search.py "realpage" --subreddit PropertyManagement --limit 10 --comments 3 --out raw/reddit/<name>.json`
+- **Unauthenticated access is dead:** plain curl (even with a browser UA) gets
+  HTTP 403 block pages from this IP; old.reddit.com 302s. The saved session
+  cookie is required — do not retry the no-cookie path.
+- Upstream plugin + playbook: `/home/drewp/main-projects/reddit/` (README,
+  USAGE.md — pain-mining, competitor, and voice-of-customer playbook).
 
 ## X / Twitter — Twitter News skill + session
 
