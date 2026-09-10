@@ -1,0 +1,31 @@
+name,url,tool,success,seconds,links_count,portal_found
+"Apartments in Richardson, TX | Falls on Clearwood | Home",https://www.fallsonclearwoodapts.com/,httpx,True,0.26616573333740234,0,False
+"Apartments in Richardson, TX | Falls on Clearwood | Home",https://www.fallsonclearwoodapts.com/,jina,False,0,0,False
+"Apartments in Richardson, TX | Falls on Clearwood | Home",https://www.fallsonclearwoodapts.com/,crawl4ai,False,0,0,False
+"Marquis at Waterview: Apartments In Richardson, TX",https://www.marquiswaterview.com/,httpx,True,0.21776604652404785,0,False
+"Marquis at Waterview: Apartments In Richardson, TX",https://www.marquiswaterview.com/,jina,False,0,0,False
+"Marquis at Waterview: Apartments In Richardson, TX",https://www.marquiswaterview.com/,crawl4ai,False,0,0,False
+"Luxury Apartments in Richardson, TX | Belt & Main",https://beltandmain.com/,httpx,True,0.11879897117614746,0,False
+"Luxury Apartments in Richardson, TX | Belt & Main",https://beltandmain.com/,jina,False,0,0,False
+"Luxury Apartments in Richardson, TX | Belt & Main",https://beltandmain.com/,crawl4ai,False,0,0,False
+"Welcome Home to Estates of Richardson",https://www.rentanapt.com/apartments/tx/richardson/estates-of-richardson/,httpx,True,0.20382952690124512,46,True
+"Welcome Home to Estates of Richardson",https://www.rentanapt.com/apartments/tx/richardson/estates-of-richardson/,jina,False,0,0,False
+"Welcome Home to Estates of Richardson",https://www.rentanapt.com/apartments/tx/richardson/estates-of-richardson/,crawl4ai,False,0,0,False
+"GreenVue | Apartments in Richardson, TX",https://www.liveatgreenvue.com/,httpx,True,0.23214435577392578,0,False
+"GreenVue | Apartments in Richardson, TX",https://www.liveatgreenvue.com/,jina,False,0,0,False
+"GreenVue | Apartments in Richardson, TX",https://www.liveatgreenvue.com/,crawl4ai,False,0,0,False
+"The James at Canyon Creek: Luxury Apartments in Richardson",https://www.thejamesatcanyoncreek.com/,httpx,True,0.17404437065124512,0,False
+"The James at Canyon Creek: Luxury Apartments in Richardson",https://www.thejamesatcanyoncreek.com/,jina,False,0,0,False
+"The James at Canyon Creek: Luxury Apartments in Richardson",https://www.thejamesatcanyoncreek.com/,crawl4ai,False,0,0,False
+"MAA Eastside Luxury Apartments in Richardson, TX",https://www.maac.com/texas/dallas/maa-eastside/,httpx,True,0.274153470993042,46,True
+"MAA Eastside Luxury Apartments in Richardson, TX",https://www.maac.com/texas/dallas/maa-eastside/,jina,False,0,0,False
+"MAA Eastside Luxury Apartments in Richardson, TX",https://www.maac.com/texas/dallas/maa-eastside/,crawl4ai,False,0,0,False
+"Anthem Cityline: Richardson, TX Luxury Apartments in ...",https://www.anthemcityline.com/,httpx,True,0.4760704040527344,33,True
+"Anthem Cityline: Richardson, TX Luxury Apartments in ...",https://www.anthemcityline.com/,jina,False,0,0,False
+"Anthem Cityline: Richardson, TX Luxury Apartments in ...",https://www.anthemcityline.com/,crawl4ai,False,0,0,False
+"Axis 110 Modern Luxury Apartments in Richardson, TX",https://axis110.com/,httpx,True,0.3693654537200928,54,True
+"Axis 110 Modern Luxury Apartments in Richardson, TX",https://axis110.com/,jina,False,0,0,False
+"Axis 110 Modern Luxury Apartments in Richardson, TX",https://axis110.com/,crawl4ai,False,0,0,False
+"Modern Luxury Apartments in Richardson, TX | The Register",https://www.theregisterapts.com/,httpx,True,0.1509239673614502,0,False
+"Modern Luxury Apartments in Richardson, TX | The Register",https://www.theregisterapts.com/,jina,False,0,0,False
+"Modern Luxury Apartments in Richardson, TX | The Register",https://www.theregisterapts.com/,crawl4ai,False,0,0,False
