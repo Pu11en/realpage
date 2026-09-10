@@ -66,6 +66,38 @@ Companion to `task_plan.md`. Raw evidence lives in `raw/`; this file distills it
 - Sources: saasopportunities.com (builder market math), kelpic.com (RealPage
   vs Yardi), splitpay.com (market overview), ProPublica-origin coverage.
 
+### Reddit sweep — themes (2026-09-10, 142 posts / 25 subreddits)
+- **Public/antitrust sentiment: hostile with mass engagement.** 15.5k-pt DOJ
+  thread ("RealPage needs to go"), 12.3k-pt DC AG thread, 9.9k DOJ-investigation,
+  8.5k ProPublica/YieldStar ("It's a feedback loop"), 6.8k White House $3.8B.
+  Private-equity anger is the dominant frame. Viral framing persists into 2026
+  (r/antiwork 2,785 pts "the real reason our rent is so high…an AI algorithm").
+  Local politics produce heroes (NC AG threads 1.7k/1.5k pts).
+- **Renter pain is concrete:** online payment fees ($30/mo in one thread, $36/yr
+  another → check/mail workarounds), billing overcharges vs physical submeters,
+  renewal anxiety, login/auth friction, and recourse-seeking (lawsuit sign-ups,
+  deposits). Organizing impulses exist but low engagement ("publish the
+  YieldStar client list", "Reverse Realpage app").
+- **PM pain is operational and specific:** OneSite is the most-hated surface
+  ("I hate Onesite with every fiber of my being"; "sucks donkey balls");
+  screening errors need manual overrides routinely; report-scheduler failures;
+  disputes ghosted after ~3 weeks; support tickets the only path.
+- **Migration intent is live:** "we are making the switch to Entrata once our
+  contract with Real Page ends." Leavers go to **Yardi, Entrata, AppFolio**
+  (counter-signals: Entrata has its own support complaints; AppFolio "garbage
+  for section 8 compliance"; MRI "still haven't fixed the renewal rate
+  adjustment button").
+- **Exit friction (structural):** "When you build a business, along with the
+  processes/systems for running it, around a platform, it's difficult to leave
+  that platform." — the strongest argument for migration-tooling/point solutions.
+- **CRE professionals:** override friction — "so difficult to over ride their
+  algorithm's suggestions (on a daily basis) they might have had more of a
+  legitimate argument"; "no way they could tweak it to satisfy DOJ's concerns."
+- **Unverified insider anecdote** (1,077 pts): "They literally preached to
+  employees how our software figured out that it's more profitable to run higher
+  rents while having vacan[cy]" — treat as anecdote, not fact.
+- Details, links, and full quotes: `04-reddit/index.md` + `raw/reddit/*.json`.
+
 ## Technical Decisions
 | Decision | Rationale |
 |----------|-----------|

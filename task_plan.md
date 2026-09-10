@@ -8,9 +8,10 @@ so future sessions can build things without asking questions.
 1. **Awaiting Drew:** pick a direction from the five shapes in the brainstorm
    (see `progress.md` session 2026-09-10 + `findings.md` landscape check).
    Nothing is committed; the KB feeds all five.
-2. Collection continues either way: Browser Use pass (real Chromium) at G2,
-   Capterra, TrustRadius → `raw/reviews/`; Reddit sweeps continue via
-   `tooling/reddit_search.py` (Phase 2); then app stores + Glassdoor.
+2. Collection: Phase 2 (Reddit) is **done**. Unblocked next: Phase 3 DOJ
+   primary docs (`raw/legal/`, justice.gov is open) and Phase 4 site crawl
+   (`raw/site/`). Phase 1 remainder — G2/Capterra/TrustRadius — still needs the
+   Browser Use pass; app stores + Glassdoor after that.
 
 ## Current Phase
 Phase 1 — Third-party reviews (in_progress)
@@ -27,7 +28,7 @@ Phase 1 — Third-party reviews (in_progress)
 | Google Play — resident apps | Crawl4AI | `raw/reviews/gplay-*.md` | pending |
 | Glassdoor / Indeed | WebSearch → manual capture fallback | `raw/reviews/glassdoor-*.md` | pending |
 | BBB | Crawl4AI | `raw/reviews/bbb-*.md` | pending |
-| Reddit | ✅ `tooling/reddit_search.py` (DSH cookie) | `raw/reddit/` → `04-reddit/` | **working + first pull** |
+| Reddit | ✅ `tooling/reddit_search.py` (DSH cookie) | `raw/reddit/` (25 JSON) + `04-reddit/index.md` | **complete** |
 | X | twitter-news session | `raw/x/` → `05-social/x/` | pending |
 | realpage.com | Crawl4AI (proven working on open sites) | `raw/site/` → `02-products/` | pending |
 | DOJ / legal | WebFetch (justice.gov is open) | `raw/legal/` | pending |
@@ -60,12 +61,12 @@ Phase 1 — Third-party reviews (in_progress)
 - [ ] Distill into `03-reviews/index.md`
 - **Status:** in_progress
 
-### Phase 2: Reddit evidence packs
-- [x] Tool unblocked: `tooling/reddit_search.py` + DSH session cookie (verified)
-- [x] First pull: r/PropertyManagement, r/Landlord, r/renters, global top → `raw/reddit/`
-- [ ] Remaining sweeps: r/LeasingConsultants, r/RealEstate, r/HOA, r/Apartmentliving + switching-story queries
-- [ ] Distill into `04-reddit/index.md`
-- **Status:** in_progress
+### Phase 2: Reddit evidence packs — COMPLETE
+- [x] Tool unblocked + verified (`tooling/reddit_search.py` + DSH cookie)
+- [x] Full sweep: 25 queries, 142 unique posts, 25 subreddits → `raw/reddit/` (25 JSON)
+- [x] Distilled pack: `04-reddit/index.md` (themes, verbatim quotes, links, sweep notes)
+- **Status:** complete (2026-09-10). Deeper sweeps possible later — add queries
+  as new angles appear; respect the 100-request/3-min rate limit (pack §4).
 
 ### Phase 3: DOJ antitrust primary docs
 - [ ] Complaint + proposed final judgment → `raw/legal/`
@@ -101,6 +102,7 @@ Phase 1 — Third-party reviews (in_progress)
 | Collect all evidence before ranking build ideas | One evidence base serves all five directions |
 | Verbatim quotes only in raw/; paraphrase in analysis | Preserves voice-of-customer value |
 | Crawl4AI primary, Browser Use reserved for protected sites | Cheap→expensive ladder; headless proven on open sites |
+| Reddit sweeps: ≤8 posts / 2 comments, ~20s gaps | Observed 100-request/3-min limit; bursts return HTTP 429 |
 | Search summaries labeled medium, never quoted externally | Accuracy discipline |
 
 ## Errors Encountered

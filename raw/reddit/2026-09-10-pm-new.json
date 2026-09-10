@@ -1,0 +1,243 @@
+{
+  "query": "realpage",
+  "subreddit": "PropertyManagement",
+  "sort": "new",
+  "time": "year",
+  "fetchedAt": "2026-09-10T07:32:13.289236+00:00",
+  "posts": [
+    {
+      "id": "1vjqmny",
+      "title": "RealPage Report Scheduler Issues",
+      "subreddit": "PropertyManagement",
+      "author": "prodigyac",
+      "body": "I’ve been using RealPage’s report scheduler to send reports to a Google Cloud server for the past year, however over the past 9 days the reports have generated in RealPage but have not get sent to the cloud. \n\nI can manually resend a report to my Google cloud server but on initial generation when scheduled it does not get sent to the cloud. \n\nI’ve tried everything and it seems like it’s truly a RealPage issue, has anyone had this experience over the past week?",
+      "score": 2,
+      "commentCount": 3,
+      "createdUtc": 1786284018.0,
+      "url": "https://www.reddit.com/r/PropertyManagement/comments/1vjqmny/realpage_report_scheduler_issues/",
+      "topComments": [
+        {
+          "id": "p2p4c4w",
+          "author": "Own-Appointment5140",
+          "body": "Our property had the exact same thing start happening last Tuesday, thought it was our IT guy messing with firewall settings again but nope. Support gave us the runaround for three days before admitting it's on their end\n\n  \nThe manual resend works for us too, it's the auto-forward that just dies somewhere between their scheduler and the cloud bucket. We've been having someone hit resend every mo…",
+          "score": 2,
+          "url": "https://www.reddit.com/r/PropertyManagement/comments/1vjqmny/realpage_report_scheduler_issues/p2p4c4w/"
+        },
+        {
+          "id": "p31hzai",
+          "author": "yyyogev",
+          "body": "Worth checking the scheduled destination still has the right creds and url, and adding something on your cloud side that pings you when a report doesn't land on time so you're not finding out 9 days later. For longer term, a script that pulls the report itself instead of waiting for their push takes them out of the loop",
+          "score": 1,
+          "url": "https://www.reddit.com/r/PropertyManagement/comments/1vjqmny/realpage_report_scheduler_issues/p31hzai/"
+        }
+      ]
+    },
+    {
+      "id": "1v8exgx",
+      "title": "Realpage Dispute",
+      "subreddit": "PropertyManagement",
+      "author": "versuax",
+      "body": "Have anyone done a Realpage dispute what was your turnaround time?",
+      "score": 2,
+      "commentCount": 1,
+      "createdUtc": 1785190132.0,
+      "url": "https://www.reddit.com/r/PropertyManagement/comments/1v8exgx/realpage_dispute/",
+      "topComments": [
+        {
+          "id": "p3y8u2x",
+          "author": "Sad-Release9446",
+          "body": "Took about 3 weeks for mine, came back partially adjusted and then they just ghosted",
+          "score": 1,
+          "url": "https://www.reddit.com/r/PropertyManagement/comments/1v8exgx/realpage_dispute/p3y8u2x/"
+        }
+      ]
+    },
+    {
+      "id": "1u347n1",
+      "title": "[NY] Dispute with RealPages/OnSite",
+      "subreddit": "PropertyManagement",
+      "author": "Independent-Wolf-992",
+      "body": "(NYC specifically) Hi all! recently applied for an apartment and had my parent as a guarantor. when they ran the screening to check if we qualified, the screening said my parent's credit card bill had not been paid even though it had (we have proof/receipt). they told me i had to call OSM/Realpages to dispute it. everything else was good - credit, income, etc. we called to dispute it so now waiting to hear back. really confusing tbh but has anyone had this happen to them before? and did the dispute take long? just a tad anxious!",
+      "score": 0,
+      "commentCount": 2,
+      "createdUtc": 1781195970.0,
+      "url": "https://www.reddit.com/r/PropertyManagement/comments/1u347n1/ny_dispute_with_realpagesonsite/",
+      "topComments": [
+        {
+          "id": "or5urz8",
+          "author": "Anon_ee_Mouse1",
+          "body": "It happens all the time. Most likely you’ll just have to upload the proof of payment document. But make sure they also call the credit card company to dispute it showing as being late.",
+          "score": 1,
+          "url": "https://www.reddit.com/r/PropertyManagement/comments/1u347n1/ny_dispute_with_realpagesonsite/or5urz8/"
+        }
+      ]
+    },
+    {
+      "id": "1u0ipa3",
+      "title": "Is this a soft denial or what?",
+      "subreddit": "PropertyManagement",
+      "author": "LegalBaddie91",
+      "body": "So I applied for an apartment and they use RealPage as the screener. This is the application status I saw after I finished the application. I also got an error message saying my application fee wasn't received. The next day, the leasing agent reached out and asked for my ID and paystubs. I sent them, but I called to see if they had gotten the application fee. She said they had to have because all she could see is what fees I still owed. I should've asked what fees, but didn't. She said management was processing my paperwork. What do we think that means??",
+      "score": 2,
+      "commentCount": 9,
+      "createdUtc": 1780948162.0,
+      "url": "https://www.reddit.com/r/PropertyManagement/comments/1u0ipa3/is_this_a_soft_denial_or_what/",
+      "topComments": [
+        {
+          "id": "oqijw0f",
+          "author": "CartoonistVirtual138",
+          "body": "I work with real page and sometimes it has a lot of errors that require overrides which is most likely what happened and they’re just double checking the information is correct. Sometimes an applicant will submit the application but real page wasn’t able to verify their income/identity or verified it incorrectly so we ask for paystubs and id to manually verify everything which sounds like whats h…",
+          "score": 6,
+          "url": "https://www.reddit.com/r/PropertyManagement/comments/1u0ipa3/is_this_a_soft_denial_or_what/oqijw0f/"
+        },
+        {
+          "id": "oqjykry",
+          "author": "eyeleesha",
+          "body": "Yeah this is pretty normal. I work with real page as well and things like this happen frequently. I wouldn’t worry.",
+          "score": 1,
+          "url": "https://www.reddit.com/r/PropertyManagement/comments/1u0ipa3/is_this_a_soft_denial_or_what/oqjykry/"
+        }
+      ]
+    },
+    {
+      "id": "1rz5yyj",
+      "title": "What’s the deal with RentPlus/credit reporting tools?",
+      "subreddit": "PropertyManagement",
+      "author": "Lilael",
+      "body": "I understand the RentPlus addendum states “Enrollment in Rent Reporting is entirely optional and is not a condition of your rental agreement.”  and “By signing below, Resident is enrolling in rentplus…”\n\nThe management office required a tenant to sign the lease renewal agreement digitally using realpage. \n\n\\- The staff indicated they cannot process the renewal without the RentPlus addendum being signed. \n\n\\- The staff declined to provide a printed lease for the tenant to sign.\n\n\\- The staff declined to accept the tenant print the lease and sign. \n\n\\- The staff also told the tenant they were a…",
+      "score": 2,
+      "commentCount": 6,
+      "createdUtc": 1774035373.0,
+      "url": "https://www.reddit.com/r/PropertyManagement/comments/1rz5yyj/whats_the_deal_with_rentpluscredit_reporting_tools/",
+      "topComments": []
+    },
+    {
+      "id": "1rjtx4f",
+      "title": "Looking for a new multifamily PMS",
+      "subreddit": "PropertyManagement",
+      "author": "AffectionateKey7126",
+      "body": "We have around 4,000 units and have been using Resman for the past couple of years. They've recently made some changes to both the software and overall business strategy that have led me to look at other systems. I'm on the corporate side and basically the decision maker on switching. We're not desperate to leave, so what I'm looking for is a clear upgrade.\n\nRealpage isn't in consideration, and I might look into Yardi (Breeze maybe? Not sure what the difference is) although I'm a little hesitant since I worked on a bad implementation a while ago and there's a huge side industry just getting t…",
+      "score": 1,
+      "commentCount": 20,
+      "createdUtc": 1772555441.0,
+      "url": "https://www.reddit.com/r/PropertyManagement/comments/1rjtx4f/looking_for_a_new_multifamily_pms/",
+      "topComments": [
+        {
+          "id": "o8g0xb4",
+          "author": "[deleted]",
+          "body": "[deleted]",
+          "score": 4,
+          "url": "https://www.reddit.com/r/PropertyManagement/comments/1rjtx4f/looking_for_a_new_multifamily_pms/o8g0xb4/"
+        },
+        {
+          "id": "o8j41eu",
+          "author": "buffrants",
+          "body": "Saw you mentioned appfolio so figured I’d chime in. Full disclosure we are much smaller PMC. We “upgraded” to AppFolio core a few months ago from buildium. We have around 120 units total +\\- 10 for garages. I forget the exact rundown per unit but our cost comes out to roughly $800. We pay up to allow tenants to do ACH’s for free and have about 15 or so units that we placed renters insurnace for w…",
+          "score": 2,
+          "url": "https://www.reddit.com/r/PropertyManagement/comments/1rjtx4f/looking_for_a_new_multifamily_pms/o8j41eu/"
+        }
+      ]
+    },
+    {
+      "id": "1r93w2e",
+      "title": "Realpage / Knock users:  Any issues and/or solutions to communications going straight to spam?",
+      "subreddit": "PropertyManagement",
+      "author": "IFERROR_lol",
+      "body": "We have 22 properties with Knock and all of the responses through Knock and their [knock.io](http://knock.io) email addresses and phone numbers seem to go to spam.  There don't seem to be any settings to use our own emails or phone numbers.  I am admin for all of our realpage products so it's not due to permissions.\n\nDo any of you have the same issues and has anyone found a way to resolve this?  Our Knock rep with Realpage has not been very helpful.",
+      "score": 1,
+      "commentCount": 3,
+      "createdUtc": 1771518766.0,
+      "url": "https://www.reddit.com/r/PropertyManagement/comments/1r93w2e/realpage_knock_users_any_issues_andor_solutions/",
+      "topComments": [
+        {
+          "id": "o6aoizj",
+          "author": "Extra-Pomegranate-50",
+          "body": "this is almost certainly because knock sends emails from their own [knock.io](http://knock.io) domain rather than your property's domain. when a prospect gets an email from [something@knock.io](mailto:something@knock.io) instead of [leasing@yourproperty.com](mailto:leasing@yourproperty.com), their email provider has no relationship with [knock.io](http://knock.io) and treats it as suspicious. mul…",
+          "score": 4,
+          "url": "https://www.reddit.com/r/PropertyManagement/comments/1r93w2e/realpage_knock_users_any_issues_andor_solutions/o6aoizj/"
+        }
+      ]
+    },
+    {
+      "id": "1q9luhr",
+      "title": "Application mistake using Realpage, how to fix?",
+      "subreddit": "PropertyManagement",
+      "author": "Bubbly-Staff-9452",
+      "body": "My wife and I toured an apartment today at 3:45. We liked it, came back home and talked it over, and decided to apply. I started filling out the application and when I got to the end I was confused because I had listed my wife as an applicant but it was asking me to pay. I went back and made sure my wife was listed and she was, so I was really confused.(I later realized that it invited applicants after the initial applicant submits and pays the admin fee.) my wife makes more than I do with steadier income so I absolutely wanted to make sure she was on the lease if I wasn’t. I went back and sw…",
+      "score": 1,
+      "commentCount": 5,
+      "createdUtc": 1768094537.0,
+      "url": "https://www.reddit.com/r/PropertyManagement/comments/1q9luhr/application_mistake_using_realpage_how_to_fix/",
+      "topComments": [
+        {
+          "id": "nywjjyf",
+          "author": "jrock3386",
+          "body": "Real page wont release the apartment, the office does that. Email them, most of the time it does not matter who is primary. You may be able to go back into her application and put your name back in, then so the secondary application under her name. If not just reach out to the office and the can assist.",
+          "score": 2,
+          "url": "https://www.reddit.com/r/PropertyManagement/comments/1q9luhr/application_mistake_using_realpage_how_to_fix/nywjjyf/"
+        },
+        {
+          "id": "nyw5y9t",
+          "author": "Penny1974",
+          "body": "The office staff will be able to correct on the back end.  I would send an email to the office stating the mistakes and what you need corrected.",
+          "score": 1,
+          "url": "https://www.reddit.com/r/PropertyManagement/comments/1q9luhr/application_mistake_using_realpage_how_to_fix/nyw5y9t/"
+        }
+      ]
+    },
+    {
+      "id": "1pjev0n",
+      "title": "ResMan, what would you say you do here",
+      "subreddit": "PropertyManagement",
+      "author": "Competitive_Milk1605",
+      "body": "The low income property management company I work for converted to ResMan from RealPage a little over a month ago. One of our first questions to ResMan before we signed on with them was “can you upload contact information for verifications (of assets, income, etc) and generate verification letters for residents using that contact info” and we were told yes, emphatically.\n\nWe have access to RealPage till the end of the year, so since we didn’t pay ResMan to convert our documents’ merge fields, we’ve been converting our letters to have ResMan’s merge fields piecemeal. We finally got to our veri…",
+      "score": 3,
+      "commentCount": 7,
+      "createdUtc": 1765401488.0,
+      "url": "https://www.reddit.com/r/PropertyManagement/comments/1pjev0n/resman_what_would_you_say_you_do_here/",
+      "topComments": [
+        {
+          "id": "ntdlg9m",
+          "author": "AndyMcQuade",
+          "body": "Never heard of them, usually when someone leaves realpage, they move to yardi, onesite or appfolio.\n\nThat said, sounds like you have a way to break the contract because your sales guy (who probably got a nice commission check) lied.",
+          "score": 2,
+          "url": "https://www.reddit.com/r/PropertyManagement/comments/1pjev0n/resman_what_would_you_say_you_do_here/ntdlg9m/"
+        },
+        {
+          "id": "ntf7fww",
+          "author": "IllPurpose3524",
+          "body": "I don't do low income, but wouldn't this be covered under the form letters section by just setting the verified contact to one of the main contacts?\n\nI've used it for a while and think it's one of the best software out there but we're strictly conventional.",
+          "score": 2,
+          "url": "https://www.reddit.com/r/PropertyManagement/comments/1pjev0n/resman_what_would_you_say_you_do_here/ntf7fww/"
+        }
+      ]
+    },
+    {
+      "id": "1p9s7ko",
+      "title": "Conflicting information at a application status",
+      "subreddit": "PropertyManagement",
+      "author": "Odd-Duck-3821",
+      "body": "I got the following email from RealPage regarding a rent application. I'm concerned that although it says that the application was approved, the rest of the message reads as an adverse action notice. Do they always send messages like this? Could it be that the part of the email saying my application was accepted was wrong?\n\nMessage: \"Thank you for your recent application. Your request was carefully considered and is **approved**.\n\nOur decision was based in whole or in part on information obtained in a report from the consumer reporting agencies listed below. Neither consumer reporting agency …",
+      "score": 1,
+      "commentCount": 6,
+      "createdUtc": 1764431509.0,
+      "url": "https://www.reddit.com/r/PropertyManagement/comments/1p9s7ko/conflicting_information_at_a_application_status/",
+      "topComments": [
+        {
+          "id": "nre7xeb",
+          "author": "AnonumusSoldier",
+          "body": "Your app was approved. That's a boiler plate message that goes out regardless of app decision.",
+          "score": 5,
+          "url": "https://www.reddit.com/r/PropertyManagement/comments/1p9s7ko/conflicting_information_at_a_application_status/nre7xeb/"
+        },
+        {
+          "id": "nrezx7h",
+          "author": "Organic-Climate-5285",
+          "body": "There is always an adverse action letter with anything you apply for these days regardless of outcome of decision. Enjoy your new place!!",
+          "score": 1,
+          "url": "https://www.reddit.com/r/PropertyManagement/comments/1p9s7ko/conflicting_information_at_a_application_status/nrezx7h/"
+        }
+      ]
+    }
+  ]
+}

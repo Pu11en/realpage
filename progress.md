@@ -2,6 +2,19 @@
 
 Companion to `task_plan.md`. Newest session first.
 
+## Session: 2026-09-10 (reddit full sweep — Phase 2 complete)
+
+- Ran 25 queries across PM / landlord / renter / legal / news-reaction subs;
+  **142 unique posts**, 25 subreddits, 2020–2026 → 25 raw JSON in `raw/reddit/`
+- Hit Reddit's rate limit mid-sweep (100 requests / ~3 min, HTTP 429) →
+  waited for reset and resumed with pacing; safe cadence logged in the pack
+- Wrote consolidated pack `04-reddit/index.md`; deleted the superseded
+  first-pull digest (folded in, recoverable via git history)
+- `r/LeasingConsultants` doesn't exist (302) → used `r/LeasingAgents`
+- Files created: `04-reddit/index.md` + 21 new `raw/reddit/*.json`
+- Files modified: `task_plan.md` (Phase 2 complete), `findings.md` (Reddit themes)
+- **Phase 2: COMPLETE.** Ready to push.
+
 ## Session: 2026-09-10 (reddit unblocked)
 
 - Located the DSH credential store: `~/.dsh/.credentials.yaml` →
