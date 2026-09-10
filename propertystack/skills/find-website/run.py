@@ -53,6 +53,16 @@ REJECT_DOMAINS = [
     # multifamily trade press (an article about a community is not its own site) and
     # another apartment-locator/aggregator, same round
     "yieldpro.com", "rentseeker.com",
+    # found by the detect-software skill review 2026-09-10: these were accepted as
+    # "official" sites by find-website but are a hotel-booking aggregator, a
+    # corporate-housing broker, an unfamiliar third-party listing site, and a
+    # management-company rollup page (linked to the real site but isn't it) —
+    # see evals/review-weak-spots.md
+    "travly.com", "corporatehousing.com", "wheree.com", "billingsleycollection.com",
+    # hotel-booking aggregator that also leaks in on "apartments" queries, found on a
+    # re-run after the travly.com fix (same whack-a-mole class, see manual-spotcheck
+    # "Biggest problem left" note)
+    "ostrovok.ru",
 ]
 # rentcafe.com itself is a listing/search domain; individual *.rentcafe.com community
 # subdomains (e.g. legacynorth.rentcafe.com) are the community's own leasing page — allow those.
@@ -106,6 +116,11 @@ def domain_of(url):
 def is_rejected(url):
     dom = domain_of(url)
     if not dom:
+        return True
+    # a domain with no "." (no TLD) is malformed/truncated — seen from Jina search
+    # results returning a cut-off URL (e.g. "jadalegacycentralapa" with no ".com").
+    # See evals/review-weak-spots.md, found via the detect-software skill review.
+    if "." not in dom:
         return True
     if dom in REJECT_EXACT:
         return True

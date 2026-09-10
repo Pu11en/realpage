@@ -19,6 +19,9 @@ def norm(s):
     s = re.sub(r"[^a-z0-9 ]", " ", (s or "").lower())
     return re.sub(r"\s+", " ", re.sub(STOP, " ", s)).strip()
 
+def norm_addr(s):
+    return re.sub(r"[^a-z0-9]", "", (s or "").lower())
+
 def fetch(cities, min_units):
     where = (f"upper(situscity) in ({','.join(repr(c) for c in cities)}) and imprvunits >= {min_units} "
              "and (propcategorycode = 'B' or propusecode in ('MFU','MFUSE'))")
@@ -40,6 +43,33 @@ def main():
             key = (norm(r.get("dbaname")) or r["situsconcatshort"].lower(), r["situscity"].upper())
             g = groups.setdefault(key, [])
             g.append(r)
+        # Fallback merge: different normalized names (e.g. "...Creek" vs "...Creekside",
+        # "...Prairie Creek" vs "...Prairie Creek Villas Ii") sometimes name the same
+        # physical site. If two name-groups share the exact same normalized street
+        # address + city, treat them as one community rather than double-counting the
+        # denominator. Found via review 2026-09-10 (evals/review-weak-spots.md-style
+        # check) — confirmed live for the two merges below; NOT applied on name/owner
+        # similarity alone, since a shared owner + deed date can also mean two distinct
+        # sites sold together in one portfolio transaction (seen with a same-owner,
+        # different-address, similarly-named pair that was deliberately left unmerged).
+        by_addr = collections.OrderedDict()
+        for key, g in groups.items():
+            addr_key = (norm_addr(g[0]["situsconcatshort"]), key[1])
+            by_addr.setdefault(addr_key, []).append(key)
+        merged = collections.OrderedDict()
+        seen_keys = set()
+        for addr_key, keys in by_addr.items():
+            if len(keys) == 1:
+                k = keys[0]
+                merged[k] = groups[k]
+                continue
+            combined_key = min(keys, key=lambda k: min(int(x["propid"]) for x in groups[k]))
+            combined = []
+            for k in keys:
+                combined.extend(groups[k])
+            combined.sort(key=lambda x: int(x["propid"]))
+            merged[combined_key] = combined
+        groups = merged
         out = []
         for (_, _), g in groups.items():
             first = g[0]

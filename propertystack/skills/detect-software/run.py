@@ -86,7 +86,7 @@ def detect(row, jina, today):
 
     hits, kind = classify(page)
     if kind == "portal":
-        return {"apt_id": row["apt_id"], "software": "+".join(hits), "signal": "portal",
+        return {"apt_id": row["apt_id"], "software": next(iter(hits)), "signal": "portal",
                 "proof_url": next(iter(hits.values())), "checked_at": today, "unknown_reason": ""}
 
     hop_links = [u for u in dict.fromkeys(URL.findall(page)) if HOP.search(u) and not SKIP.search(u)][:3]
@@ -97,11 +97,11 @@ def detect(row, jina, today):
             continue
         h2, _ = classify(page2)
         if h2:
-            return {"apt_id": row["apt_id"], "software": "+".join(h2), "signal": "hop-portal",
+            return {"apt_id": row["apt_id"], "software": next(iter(h2)), "signal": "hop-portal",
                     "proof_url": next(iter(h2.values())), "checked_at": today, "unknown_reason": ""}
 
     if kind == "asset" and hits:
-        return {"apt_id": row["apt_id"], "software": "+".join(hits), "signal": "asset",
+        return {"apt_id": row["apt_id"], "software": next(iter(hits)), "signal": "asset",
                 "proof_url": next(iter(hits.values())), "checked_at": today, "unknown_reason": ""}
 
     name, link = in_house(page)

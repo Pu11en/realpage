@@ -1,0 +1,28 @@
+{
+  "skill": "find-apartments",
+  "area": "plano-richardson",
+  "started": "2026-09-10T13:21:15",
+  "inputs": [
+    "https://data.texas.gov/resource/5tkr-3759.json where upper(situscity) in ('PLANO','RICHARDSON') and imprvunits >= 20 and (propcategorycode = 'B' or propusecode in ('MFU','MFUSE'))"
+  ],
+  "outputs": [
+    "data/plano-richardson/1-apartments.csv"
+  ],
+  "counts": {
+    "parcels": 232,
+    "communities": 204,
+    "units": 54784,
+    "by_city": {
+      "Plano": 168,
+      "Richardson": 36
+    }
+  },
+  "api_calls": {
+    "socrata": 1
+  },
+  "errors": [],
+  "notes": [],
+  "finished": "2026-09-10T13:21:18",
+  "duration_s": 2.7,
+  "status": "ok"
+}

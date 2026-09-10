@@ -23,11 +23,23 @@ data (free public API, no key):
      `deedeffdate` is within the last 24 months (>= 2024-09-10), or
    - the owner name differs (normalized: uppercase, punctuation stripped, `LLC`/`LP`/`INC`/
      `CORP`/`LTD`/`CO` removed) between the 2025 and 2026 rolls.
-3. A community is SOLD if any of its parcels triggers. One row per community, using the
-   trigger with the most recent `deedeffdate`. `previous_owner` = the 2025 owner name if it
-   differs, else `"unknown (same owner name in 2025 roll)"`.
+3. A community is SOLD if any of its parcels triggers. One row per community. **Fixed
+   2026-09-10** (see evals/review-weak-spots.md): prefer a trigger backed by a real,
+   in-window sale deed if one exists on any parcel; only fall back to an owner-name-change
+   trigger with no qualifying deed if none do. Previously the row always used whichever
+   trigger had the single latest `deedeffdate` across both kinds, which could surface an
+   old, unrelated non-sale deed's date/type as if it were sale evidence for a
+   same-owner-name-change community. When there's no qualifying deed, `sale_date` is left
+   blank and `deed_type` reads `"owner-change (no qualifying sale deed on file)"` rather than
+   showing an unrelated deed record. `previous_owner` = the 2025 owner name if it differs,
+   else `"unknown (same owner name in 2025 roll)"`.
 4. Non-sale deed types (quitclaim `QCD`, correction `CORRD`, affidavit-family, plats, etc.)
    never trigger a sale on their own.
+5. `norm_owner` strips `LLC/LP/LLP/LTD/INC/CORP/CO` and `SPE` (special-purpose-entity
+   wrapper) so a same-beneficial-owner restructuring like "X LLC" → "X SPE LLC" isn't
+   miscounted as a sale. This is not exhaustive — fund/series/holdco renames beyond "SPE"
+   can still false-positive; a `deed_sale=True` trigger (a real warranty-deed-family record)
+   remains stronger evidence than an owner-name-change trigger alone.
 
 ## Check after running
 - Counts are printed and logged: communities checked, parcels checked, sold, sold-by-deed,

@@ -30,7 +30,7 @@ WD_FAMILY = {"WD", "SWD", "WDNL", "SWDNL"}
 TODAY = dt.date(2026, 9, 10)
 WINDOW_START = TODAY - dt.timedelta(days=730)  # 24 months
 
-STOP_OWNER_WORDS = r"\b(LLC|LP|LLP|LTD|INC|CORP|CO|L P|L L C)\b"
+STOP_OWNER_WORDS = r"\b(LLC|LP|LLP|LTD|INC|CORP|CO|L P|L L C|SPE)\b"
 
 
 def norm_owner(s):
@@ -126,24 +126,37 @@ def main():
             if not triggers:
                 continue
 
-            # most recent sale: prefer the trigger with the latest deedeffdate; fall back to
-            # first trigger if none have parseable dates.
+            # Prefer a trigger backed by a real, in-window sale deed (deed_sale=True) —
+            # concrete dated evidence. Only fall back to an owner-name-change-only
+            # trigger if no such deed exists on any parcel. Previously this picked
+            # whichever trigger had the LATEST deedeffdate across BOTH kinds, which
+            # could surface an old, unrelated non-sale deed (e.g. a 2024 PLAT filing)
+            # as if its date/type were sale evidence for a same-owner-name-change
+            # community — misleading even though the underlying signal (owner changed
+            # between the 2025 and 2026 rolls) was real and recent. See
+            # evals/review-weak-spots.md.
             def sort_key(t):
                 return t["deedeffdate"] or "0000-00-00"
-            best = sorted(triggers, key=sort_key, reverse=True)[0]
-
-            if best["deed_sale"]:
+            deed_triggers = [t for t in triggers if t["deed_sale"]]
+            if deed_triggers:
+                best = sorted(deed_triggers, key=sort_key, reverse=True)[0]
+                sale_date, deed_type = best["deedeffdate"], best["deed_type"]
                 sold_by_deed += 1
-            if any(t["owner_changed"] and not t["deed_sale"] for t in triggers):
+            else:
+                best = sorted(triggers, key=sort_key, reverse=True)[0]
+                sale_date, deed_type = "", "owner-change (no qualifying sale deed on file)"
                 owner_changed_without_deed += 1
+
+            def clean_owner(s):
+                return re.sub(r"[\s&]+$", "", s or "").strip()
 
             out_rows.append({
                 "apt_id": c["apt_id"],
                 "name": c["name"],
-                "sale_date": best["deedeffdate"],
-                "deed_type": best["deed_type"],
-                "new_owner": best["new_owner"],
-                "previous_owner": best["previous_owner"],
+                "sale_date": sale_date,
+                "deed_type": deed_type,
+                "new_owner": clean_owner(best["new_owner"]),
+                "previous_owner": clean_owner(best["previous_owner"]),
                 "units": c["units"],
                 "source": "Collin CAD 2026 vs 2025",
                 "source_url": parcel_source_url(best["propid"]),

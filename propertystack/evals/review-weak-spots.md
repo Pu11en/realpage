@@ -156,3 +156,53 @@ re-run end to end (skills 2 → 3 → 4 → 6 → 7). Results:
   civicplus document's snapshot date, 2026-07-02, as a lower-confidence stand-in) — the
   entry had already rolled off the live rolling report by the time of the automated re-run,
   so it was added by hand from a web-search-quoted snapshot rather than the pipeline itself.
+
+## Round 2 — parallel review of skills #1, #3, #4, #5, #7 (2026-09-10)
+
+5 subagents reviewed the remaining skills in parallel (read-only, no fixes). #4 (build-table)
+came back clean — independently re-did the join by hand, zero mismatches, no fix needed. The
+other 4 found real issues, applied here:
+
+- **find-apartments (#1) — FIX applied.** 3 pairs of duplicate communities were being counted
+  as 6 separate rows: "Bridge At Heritage Creek"/"...Creekside" and "Cortland Prairie
+  Creek"/"...Villas Ii" (same address each pair), plus "Link At Plano"/"Bel Air K Station"
+  (confirmed live: a rebrand, same site) — found independently by both the #1 and #5
+  reviewers. Added an address-based fallback merge in `run.py`: two name-groups in the same
+  city with an identical normalized street address get merged, even if their names differ.
+  Denominator dropped 207→204. **Not merged:** "Breckinridge Point" (4250 E Renner Rd) vs
+  "Breckenridge Point" (3500 North Star Rd) — same owner/deed date but different streets
+  entirely; live search found no evidence of a shared site. Likely a portfolio sale of two
+  distinct properties, not a duplicate parcel — left as 2 rows on purpose despite the
+  near-identical name (SKILL.md previously cited this exact pair as an example of a missed
+  duplicate; corrected).
+- **find-website (#2, via the #3 reviewer) — FIX applied.** 5 more leaking domains added to
+  `REJECT_DOMAINS`: `travly.com`/`corporatehousing.com`/`wheree.com` (hotel/corporate-housing
+  aggregators), `billingsleycollection.com` (a management-company rollup page, not the
+  community's own site), and `ostrovok.ru` (a Russian hotel-booking aggregator that surfaced
+  on a re-run after `travly.com` was blocked — same whack-a-mole pattern noted in
+  `manual-spotcheck-2026-09-10.md`). Also fixed a real bug: a malformed/truncated URL from a
+  Jina search result (no "." in the domain, e.g. `jadalegacycentralapa` with no TLD) was being
+  accepted at `high` confidence; now rejected.
+- **detect-software (#3) — FIX applied.** Core vendor-matching logic re-confirmed solid (10/10
+  spot-checked again, no false positives). Fixed a latent contract violation: `"+".join(hits)`
+  could write a `software` value like `"RealPage+Yardi"` if a page matched two vendors at
+  once, breaking `CONTRACTS.md`'s fixed enum. Changed to take the single highest-priority
+  match. No case in the current 204 rows had actually triggered this yet, but it was one
+  multi-vendor page away from breaking `build-table`/`score-leads` string matching.
+- **find-sales (#5) — FIX applied.** Real bug: when a community's only sale evidence was an
+  owner-name change (not a real sale deed), the row displayed whichever deed record on file
+  had the latest date — even a totally unrelated non-sale deed (e.g. a 2024 `PLAT` filing) —
+  making it look like dated sale evidence when it wasn't. Fixed: rows backed only by an
+  owner-name change now show a blank `sale_date` and `deed_type="owner-change (no qualifying
+  sale deed on file)"` instead of a misleading unrelated date. Also added `SPE` (special-
+  purpose-entity wrapper) to the owner-name normalizer, so "X LLC" → "X SPE LLC" isn't
+  miscounted as a sale, and stripped trailing `&` truncation artifacts from owner names.
+- **score-leads (#7) — no code fix.** Hand-recomputed 8 scores, all correct; TODAY constants
+  fresh across all 3 skills that use one; ranking and `why_check.py` both clean. One
+  unresolved design note (not fixed): a project whose `stage_date` is 2.7 years old with no
+  progression since still ranks #1 with no staleness penalty — flagged for a future session,
+  not acted on this round.
+- Re-ran the full chain end to end after the #1/#2/#5 fixes: find-website → detect-software →
+  build-table → find-sales → score-leads (why-sentences regenerated, `why_check.py` passes
+  clean). Final counts: 204 communities, 183 with a real website, 152 software-identified,
+  28 sales, 14 upcoming, 42 ranked leads.
