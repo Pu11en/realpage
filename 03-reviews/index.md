@@ -5,6 +5,12 @@ Fetched: 2026-09-10
 Method: WebSearch summary — individual platform captures pending (raw/reviews/)
 Confidence: medium
 
+## Captured so far
+
+- [`raw/reviews/software-advice-realpage-2026-09-10.md`](../raw/reviews/software-advice-realpage-2026-09-10.md) — Software Advice, 130 reviews, 4.0/5, verbatim quotes with attribution (2026-09-10)
+- [`raw/reviews/capterra-search-summary-2026-09-10.md`](../raw/reviews/capterra-search-summary-2026-09-10.md) — Capterra, indirect (medium confidence), direct capture queued
+- G2 · TrustRadius — blocked headless (DataDome / Cloudflare); Browser Use pass queued
+
 ## Early pattern (hypothesis to pressure-test with raw data)
 
 - **Functionality respected:** accounting, integrations, breadth of suite.

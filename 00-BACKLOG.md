@@ -2,6 +2,10 @@
 
 Last updated: 2026-09-10
 
+> **Live tracker: [`task_plan.md`](task_plan.md)** (planning-with-files phases
+> 1–7). This file is the original backlog and historical record; check
+> task_plan.md for current status.
+
 ## Collected
 
 - [x] KB scaffold + conventions (`README.md`)
