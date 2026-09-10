@@ -3,6 +3,10 @@
 Companion to `task_plan.md`. Raw evidence lives in `raw/`; this file distills it.
 
 ## Requirements
+- **Outside-in only:** no RealPage insiders, product access, or data; public sources only (Drew, 2026-09-10)
+- **Goal:** a finished, viable MVP that RealPage (or a business like theirs) would use; prove from outside they lack it; pitch it
+- Planning is done with the expensive model; plans must be executable by a cheaper model
+- Work locally; push to GitHub only when Drew says
 - Data-rich, organized KB so future sessions build without asking questions (Drew, 2026-09-10)
 - Raw evidence verbatim; exact quotes preserved, never paraphrased in raw captures
 - Public repo connected (`github.com/Pu11en/realpage`); push only when Drew says
@@ -97,6 +101,23 @@ Companion to `task_plan.md`. Raw evidence lives in `raw/`; this file distills it
   employees how our software figured out that it's more profitable to run higher
   rents while having vacan[cy]" — treat as anecdote, not fact.
 - Details, links, and full quotes: `04-reddit/index.md` + `raw/reddit/*.json`.
+
+### Direction re-score (planning session 2026-09-10)
+- Of the five old directions, only the evidence library survives (folded into
+  the pitch as a door-opener); the other four are hostile to or compete with
+  the buyer.
+- Recommended **C1 PMS Switch Radar**: apartment websites link to their
+  resident portal / pay-rent / apply flow, which (hypothesis) reveals the PMS
+  vendor; the Wayback Machine dates switches. RealPage already knows its own
+  churn, so its value is the view of non-customers, where leavers went, and
+  share shifts after bans/settlements.
+- Biggest unknown: RealPage (market analytics) or Yardi Matrix may already own
+  property-level PMS data → research run R1 is a kill gate.
+- Fallback **C3** affordable-housing compliance copilot, grounded in public HUD
+  4350.3 / Section 42 rules; need rests on ~2 quotes.
+- Parked for failing outside-in: OneSite support copilot (docs gated), resident
+  bill explainer, screening/month-end helpers (need their data).
+- Full scoring: `09-build-ideas/brainstorm-2026-09-10-pitch-to-realpage.md`.
 
 ## Technical Decisions
 | Decision | Rationale |

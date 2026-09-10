@@ -24,8 +24,11 @@ Repo (public): https://github.com/Pu11en/realpage
 ## What this is
 
 A cited-evidence knowledge base about **RealPage** (property management software,
-realpage.com), built so future sessions can answer questions or build products
-about the company without asking Drew for background.
+realpage.com). **Constraint: outside-in only** — no insiders, no product access,
+nobody at RealPage to ask; everything is public-source. **Goal:** build a
+finished MVP from this evidence that RealPage (or a business like theirs) would
+actually use, prove from outside they don't have it, and pitch it. Drew decides;
+RealPage is who we can't ask.
 
 Conventions (full version in `README.md`): every file opens with
 `Source / Fetched / Method / Confidence` headers; `raw/` captures are verbatim
@@ -52,19 +55,22 @@ and never edited; exact quotes are preserved; distilled analysis lives in
 - **Phases 3–7 PENDING:** DOJ primary docs (justice.gov is open — no blocker),
   realpage.com crawl (products/pricing/case studies), competitor stubs,
   social, synthesis.
-- **ONE OPEN DECISION FOR DREW:** which of five candidate build directions to
-  pursue — (1) public evidence library, (2) investigation/content series,
-  (3) tool for 50–500-unit property managers, (4) migration/switch tooling,
-  (5) renter-side watch. Details in `findings.md` + `progress.md`.
+- **Direction (planning session 2026-09-10):** the old five directions were
+  re-scored against "pitchable to RealPage"; four are hostile or competing and
+  were killed. Recommended: **C1 PMS Switch Radar** (which software each
+  apartment community runs, read from its public website, plus dated switches
+  via the Wayback Machine), one metro. Fallback: C3 affordable-housing
+  compliance copilot. See `09-build-ideas/brainstorm-2026-09-10-pitch-to-realpage.md`.
+- Open-ended collection (G2 pass, app stores, X, LinkedIn, DOJ docs, site
+  crawl) is **paused** — collect only what a plan needs.
 
 ## Next actions, in order
 
-1. Ask Drew which build direction he leans toward (or rejects); record the
-   answer in `task_plan.md` → Decisions Made.
-2. Continue collection regardless of his answer: Phase 3 (DOJ complaint +
-   proposed final judgment → `raw/legal/`) and Phase 4 (realpage.com pages →
-   `raw/site/`).
-3. G2 / Capterra / TrustRadius only via real-browser automation.
+1. Drew confirms C1 (or picks otherwise) and answers the open decisions in
+   `09-build-ideas/mvp-plan-switch-radar.md` §8.
+2. Run `09-build-ideas/research-run-01-verify.md` (≈3.5 h, cheap model OK).
+   R1 is a kill gate.
+3. Apply results to the MVP plan, re-run `/mvp-plan-review`, then build.
 
 ## Constraints
 
@@ -81,7 +87,18 @@ and never edited; exact quotes are preserved; distilled analysis lives in
 
 ## Copy-paste prompts
 
-### Brainstorm / planning session
+### Research run 01 (next session)
+
+```text
+Run the research spec in 09-build-ideas/research-run-01-verify.md in the
+realpage repo (/home/drewp/main-projects/realpage). Read HANDOFF.md and the
+brainstorm-2026-09-10-pitch-to-realpage.md first. Follow the spec exactly:
+order, time budgets, pass/kill rules, output paths. Read-only toward third
+parties. Fill in the results table, update task_plan.md / findings.md /
+progress.md, commit locally, don't push.
+```
+
+### Brainstorm / planning session (original — superseded by the session above)
 
 ```text
 Planning session: RealPage knowledge base → what we build from it.

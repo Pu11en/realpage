@@ -1,9 +1,18 @@
 # RealPage Knowledge Base
 
 Single source of truth for everything we know about RealPage (realpage.com) —
-property management software company. Purpose: any future agent session can
-open this repo, read this file, and answer questions or build things about
-RealPage **without asking Drew anything**.
+property management software company.
+
+**The constraint: outside-in only.** We have no access to RealPage — no
+insiders, no product login, no customer data, nobody there to ask. Everything
+here comes from public sources. **The goal:** build a finished, working MVP
+from this evidence that RealPage (or a business like theirs) would actually
+use, show from outside that they don't already have it, and pitch it. Drew
+makes the calls; ask him when a decision is his.
+
+Current direction and plans: `09-build-ideas/brainstorm-2026-09-10-pitch-to-realpage.md`.
+Every plan passes `/mvp-plan-review` (`.claude/skills/mvp-plan-review/`) before
+a build session starts.
 
 ## How to use this KB (for any future session)
 

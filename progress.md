@@ -2,6 +2,28 @@
 
 Companion to `task_plan.md`. Newest session first.
 
+## Session: 2026-09-10 (planning — pitch-to-RealPage MVP)
+
+- Drew corrected the mission: the constraint is outside-in only (no access to
+  RealPage), and the goal is a finished MVP pitched to RealPage or a business
+  like theirs. Planning only; work locally, push when told.
+- Re-scored the five old directions against eight criteria; killed four as
+  hostile/competing. New candidates C1–C3; recommended C1 PMS Switch Radar
+  (one metro), C3 compliance copilot as fallback.
+- Wrote the research-run spec (R1–R6, ≈3.5 h, R1 kill gate) and the C1 MVP
+  plan (DoD, cut list, 10 build steps with acceptance checks).
+- Built the `/mvp-plan-review` skill (7 gates) and ran it on the C1 plan:
+  GO WITH FIXES — fixed buyer framing (RealPage knows its own churn), Wayback
+  backfill volume (~44k fetches → digest-based quarterly backfill), and the
+  exclusivity question. Fixes applied.
+- Paused open-ended collection; flagged that the public repo would expose
+  pitch material.
+- Files created: `09-build-ideas/brainstorm-2026-09-10-pitch-to-realpage.md`,
+  `09-build-ideas/research-run-01-verify.md`, `09-build-ideas/mvp-plan-switch-radar.md`,
+  `09-build-ideas/review-mvp-plan-switch-radar.md`, `.claude/skills/mvp-plan-review/SKILL.md`
+- Files modified: `README.md`, `HANDOFF.md`, `task_plan.md`, `findings.md`, `progress.md`
+- Next: Drew confirms direction + §8 decisions → research run 01.
+
 ## Session: 2026-09-10 (resume pack for no-access runtime)
 
 - A context-free session on a sandboxed runtime reported it could not reach the
