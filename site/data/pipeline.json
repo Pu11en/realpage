@@ -2,46 +2,857 @@
   "steps": [
     {
       "name": "find-apartments",
+      "label": "buildings",
       "count": 204
     },
     {
       "name": "find-website",
+      "label": "with websites",
       "count": 183
     },
     {
       "name": "detect-software",
+      "label": "software identified",
       "count": 152
     },
     {
-      "name": "build-table",
-      "count": 204
+      "name": "find-sales",
+      "label": "recent sales",
+      "count": 28
     },
     {
-      "name": "leads",
+      "name": "find-upcoming",
+      "label": "upcoming projects",
+      "count": 14
+    },
+    {
+      "name": "score-leads",
+      "label": "ranked leads",
       "count": 42
     }
   ],
   "runs": [
     {
-      "runId": "20260910T133111-build-table",
+      "runId": "20260910T153225-contact-scrape",
+      "started": "2026-09-10T15:32:25",
+      "skill": "contact-scrape",
       "area": "plano-richardson",
-      "propertiesProcessed": 204,
-      "pctIdentified": 74.5,
-      "costUsd": null,
-      "durationSec": null,
-      "models": "not logged per run yet -- see propertystack/runs/*.json"
+      "status": "ok",
+      "counts": "total=204, phone=164, email=40",
+      "errors": 0,
+      "durationSec": 33.8
+    },
+    {
+      "runId": "20260910T133132-score-leads",
+      "started": "2026-09-10T13:31:32",
+      "skill": "score-leads",
+      "area": "plano-richardson",
+      "status": "ok",
+      "counts": "sold_leads=28, upcoming_leads=14, total_leads=42",
+      "errors": 0,
+      "durationSec": 0.0
+    },
+    {
+      "runId": "20260910T133113-find-sales",
+      "started": "2026-09-10T13:31:13",
+      "skill": "find-sales",
+      "area": "plano-richardson",
+      "status": "ok",
+      "counts": "communities_checked=204, parcels_checked=232, sold=28, sold_by_deed=23, owner_changed_without_deed=5",
+      "errors": 0,
+      "durationSec": 12.6
+    },
+    {
+      "runId": "20260910T133111-build-table",
+      "started": "2026-09-10T13:31:11",
+      "skill": "build-table",
+      "area": "plano-richardson",
+      "status": "ok",
+      "counts": "in_area=204, website_found=183, checked=183, identified=152, unknown=52",
+      "errors": 0,
+      "durationSec": 0.0
+    },
+    {
+      "runId": "20260910T132958-detect-software",
+      "started": "2026-09-10T13:29:58",
+      "skill": "detect-software",
+      "area": "plano-richardson",
+      "status": "ok",
+      "counts": "total=204, identified=152, unknown=52",
+      "errors": 0,
+      "durationSec": 69.9
+    },
+    {
+      "runId": "20260910T132700-find-website",
+      "started": "2026-09-10T13:27:00",
+      "skill": "find-website",
+      "area": "plano-richardson",
+      "status": "ok",
+      "counts": "total=204, high=181, medium=2, low=10, none=11",
+      "errors": 0,
+      "durationSec": 175.3
+    },
+    {
+      "runId": "20260910T132345-find-website",
+      "started": "2026-09-10T13:23:45",
+      "skill": "find-website",
+      "area": "plano-richardson",
+      "status": "ok",
+      "counts": "total=204, high=178, medium=2, low=12, none=12",
+      "errors": 0,
+      "durationSec": 178.2
+    },
+    {
+      "runId": "20260910T132115-find-apartments",
+      "started": "2026-09-10T13:21:15",
+      "skill": "find-apartments",
+      "area": "plano-richardson",
+      "status": "ok",
+      "counts": "parcels=232, communities=204, units=54784",
+      "errors": 0,
+      "durationSec": 2.7
+    },
+    {
+      "runId": "20260910T123904-score-leads",
+      "started": "2026-09-10T12:39:04",
+      "skill": "score-leads",
+      "area": "plano-richardson",
+      "status": "ok",
+      "counts": "sold_leads=28, upcoming_leads=14, total_leads=42",
+      "errors": 0,
+      "durationSec": 0.0
+    },
+    {
+      "runId": "20260910T123855-build-table",
+      "started": "2026-09-10T12:38:55",
+      "skill": "build-table",
+      "area": "plano-richardson",
+      "status": "ok",
+      "counts": "in_area=207, website_found=189, checked=189, identified=145, unknown=62",
+      "errors": 0,
+      "durationSec": 0.0
+    },
+    {
+      "runId": "20260910T123351-detect-software",
+      "started": "2026-09-10T12:33:51",
+      "skill": "detect-software",
+      "area": "plano-richardson",
+      "status": "ok",
+      "counts": "total=207, identified=145, unknown=62",
+      "errors": 0,
+      "durationSec": 299.2
+    },
+    {
+      "runId": "20260910T123044-find-website",
+      "started": "2026-09-10T12:30:44",
+      "skill": "find-website",
+      "area": "plano-richardson",
+      "status": "ok",
+      "counts": "total=207, high=187, medium=2, low=11, none=7",
+      "errors": 0,
+      "durationSec": 177.8
+    },
+    {
+      "runId": "20260910T122725-find-website",
+      "started": "2026-09-10T12:27:25",
+      "skill": "find-website",
+      "area": "plano-richardson",
+      "status": "ok",
+      "counts": "total=207, high=188, medium=1, low=12, none=6",
+      "errors": 0,
+      "durationSec": 175.9
+    },
+    {
+      "runId": "20260910T122153-find-website",
+      "started": "2026-09-10T12:21:53",
+      "skill": "find-website",
+      "area": "plano-richardson",
+      "status": "ok",
+      "counts": "total=207, high=185, medium=0, low=15, none=7",
+      "errors": 0,
+      "durationSec": 175.5
+    },
+    {
+      "runId": "20260910T121958-find-upcoming",
+      "started": "2026-09-10T12:19:58",
+      "skill": "find-upcoming",
+      "area": "plano-richardson",
+      "status": "ok",
+      "counts": "legistar_pz_matters_scanned=12, legistar_candidates=12, tdlr_urls_read=27, tdlr_candidates=27, news_urls_read=61, news_candidates=61, total_candidates=100",
+      "errors": 0,
+      "durationSec": 89.7
+    },
+    {
+      "runId": "20260910T121453-find-upcoming",
+      "started": "2026-09-10T12:14:53",
+      "skill": "find-upcoming",
+      "area": "plano-richardson",
+      "status": "ok",
+      "counts": "legistar_pz_matters_scanned=12, legistar_candidates=12, tdlr_urls_read=27, tdlr_candidates=27, news_urls_read=63, news_candidates=63, total_candidates=102",
+      "errors": 0,
+      "durationSec": 126.1
+    },
+    {
+      "runId": "20260910T112101-score-leads",
+      "started": "2026-09-10T11:21:01",
+      "skill": "score-leads",
+      "area": "plano-richardson",
+      "status": "ok",
+      "counts": "sold_leads=28, upcoming_leads=12, total_leads=40",
+      "errors": 0,
+      "durationSec": 0.0
+    },
+    {
+      "runId": "20260910T110852-find-upcoming",
+      "started": "2026-09-10T11:08:52",
+      "skill": "find-upcoming",
+      "area": "plano-richardson",
+      "status": "ok",
+      "counts": "legistar_pz_matters_scanned=12, legistar_candidates=12, tdlr_urls_read=27, tdlr_candidates=27, news_urls_read=52, news_candidates=52, total_candidates=91",
+      "errors": 0,
+      "durationSec": 228.4
+    },
+    {
+      "runId": "20260910T110348-build-table",
+      "started": "2026-09-10T11:03:48",
+      "skill": "build-table",
+      "area": "plano-richardson",
+      "status": "ok",
+      "counts": "in_area=207, website_found=140, checked=140, identified=104, unknown=103",
+      "errors": 0,
+      "durationSec": 0.0
+    },
+    {
+      "runId": "20260910T110150-detect-software",
+      "started": "2026-09-10T11:01:50",
+      "skill": "detect-software",
+      "area": "plano-richardson",
+      "status": "ok",
+      "counts": "total=207, identified=104, unknown=103",
+      "errors": 0,
+      "durationSec": 76.3
+    },
+    {
+      "runId": "20260910T105600-find-website",
+      "started": "2026-09-10T10:56:00",
+      "skill": "find-website",
+      "area": "plano-richardson",
+      "status": "ok",
+      "counts": "total=207, high=139, medium=1, low=11, none=56",
+      "errors": 0,
+      "durationSec": 252.2
+    },
+    {
+      "runId": "20260910T105422-build-table",
+      "started": "2026-09-10T10:54:22",
+      "skill": "build-table",
+      "area": "plano-richardson",
+      "status": "ok",
+      "counts": "in_area=207, website_found=145, checked=145, identified=106, unknown=101",
+      "errors": 0,
+      "durationSec": 0.0
+    },
+    {
+      "runId": "20260910T105224-detect-software",
+      "started": "2026-09-10T10:52:24",
+      "skill": "detect-software",
+      "area": "plano-richardson",
+      "status": "ok",
+      "counts": "total=207, identified=106, unknown=101",
+      "errors": 0,
+      "durationSec": 79.8
+    },
+    {
+      "runId": "20260910T104634-find-website",
+      "started": "2026-09-10T10:46:34",
+      "skill": "find-website",
+      "area": "plano-richardson",
+      "status": "ok",
+      "counts": "total=207, high=143, medium=2, low=9, none=53",
+      "errors": 0,
+      "durationSec": 244.9
+    },
+    {
+      "runId": "20260910T104451-build-table",
+      "started": "2026-09-10T10:44:51",
+      "skill": "build-table",
+      "area": "plano-richardson",
+      "status": "ok",
+      "counts": "in_area=207, website_found=141, checked=141, identified=104, unknown=103",
+      "errors": 0,
+      "durationSec": 0.0
+    },
+    {
+      "runId": "20260910T103858-detect-software",
+      "started": "2026-09-10T10:38:58",
+      "skill": "detect-software",
+      "area": "plano-richardson",
+      "status": "ok",
+      "counts": "total=207, identified=104, unknown=103",
+      "errors": 0,
+      "durationSec": 245.9
+    },
+    {
+      "runId": "20260910T103317-find-upcoming",
+      "started": "2026-09-10T10:33:17",
+      "skill": "find-upcoming",
+      "area": "plano-richardson",
+      "status": "ok",
+      "counts": "legistar_pz_matters_scanned=12, legistar_residential_matches=1, tdlr_urls_read=17, tdlr_projects_found=5, news_urls_read=30, news_projects_found=7, duplicates_merged=1, total_projects=12",
+      "errors": 0,
+      "durationSec": 42.5
+    },
+    {
+      "runId": "20260910T103257-find-website",
+      "started": "2026-09-10T10:32:57",
+      "skill": "find-website",
+      "area": "plano-richardson",
+      "status": "ok",
+      "counts": "total=207, high=139, medium=2, low=10, none=56",
+      "errors": 0,
+      "durationSec": 255.8
+    },
+    {
+      "runId": "20260910T103153-find-upcoming",
+      "started": "2026-09-10T10:31:53",
+      "skill": "find-upcoming",
+      "area": "plano-richardson",
+      "status": "ok",
+      "counts": "legistar_pz_matters_scanned=12, legistar_residential_matches=1, tdlr_urls_read=17, tdlr_projects_found=5, news_urls_read=30, news_projects_found=7, duplicates_merged=6, total_projects=7",
+      "errors": 0,
+      "durationSec": 44.2
+    },
+    {
+      "runId": "20260910T102941-find-upcoming",
+      "started": "2026-09-10T10:29:41",
+      "skill": "find-upcoming",
+      "area": "plano-richardson",
+      "status": "ok",
+      "counts": "legistar_pz_matters_scanned=12, legistar_residential_matches=1, tdlr_urls_read=18, tdlr_projects_found=5, news_urls_read=30, news_projects_found=7, duplicates_merged=5, total_projects=8",
+      "errors": 0,
+      "durationSec": 58.3
+    },
+    {
+      "runId": "20260910T102700-find-website",
+      "started": "2026-09-10T10:27:00",
+      "skill": "find-website",
+      "area": "plano-richardson",
+      "status": "ok",
+      "counts": "total=207, high=146, medium=2, low=9, none=50",
+      "errors": 0,
+      "durationSec": 238.3
+    },
+    {
+      "runId": "20260910T102622-find-upcoming",
+      "started": "2026-09-10T10:26:22",
+      "skill": "find-upcoming",
+      "area": "plano-richardson",
+      "status": "ok",
+      "counts": "legistar_pz_matters_scanned=12, legistar_residential_matches=1, tdlr_urls_read=17, tdlr_projects_found=5, news_urls_read=31, news_projects_found=7, duplicates_merged=1, total_projects=12",
+      "errors": 0,
+      "durationSec": 136.4
+    },
+    {
+      "runId": "20260910T102455-find-upcoming",
+      "started": "2026-09-10T10:24:55",
+      "skill": "find-upcoming",
+      "area": "plano-richardson",
+      "status": "ok",
+      "counts": "legistar_pz_matters_scanned=12, legistar_residential_matches=1, tdlr_urls_read=4, tdlr_projects_found=2, news_urls_read=16, news_projects_found=4, duplicates_merged=0, total_projects=7",
+      "errors": 0,
+      "durationSec": 18.7
+    },
+    {
+      "runId": "20260910T102223-find-upcoming",
+      "started": "2026-09-10T10:22:23",
+      "skill": "find-upcoming",
+      "area": "plano-richardson",
+      "status": "ok",
+      "counts": "legistar_pz_matters_scanned=12, legistar_residential_matches=1, tdlr_urls_read=4, tdlr_projects_found=4, news_urls_read=16, news_projects_found=11, duplicates_merged=0, total_projects=16",
+      "errors": 0,
+      "durationSec": 59.7
+    },
+    {
+      "runId": "20260910T102057-find-website",
+      "started": "2026-09-10T10:20:57",
+      "skill": "find-website",
+      "area": "plano-richardson",
+      "status": "ok",
+      "counts": "total=207, high=151, medium=1, low=10, none=45",
+      "errors": 0,
+      "durationSec": 239.1
+    },
+    {
+      "runId": "20260910T101443-find-website",
+      "started": "2026-09-10T10:14:43",
+      "skill": "find-website",
+      "area": "plano-richardson",
+      "status": "ok",
+      "counts": "total=207, high=172, medium=3, low=7, none=25",
+      "errors": 0,
+      "durationSec": 247.6
+    },
+    {
+      "runId": "20260910T101336-find-upcoming",
+      "started": "2026-09-10T10:13:36",
+      "skill": "find-upcoming",
+      "area": "plano-richardson",
+      "status": "ok",
+      "counts": "legistar_pz_matters_scanned=12, legistar_residential_matches=1, tdlr_urls_read=16, tdlr_projects_found=3, news_urls_read=7, news_projects_found=3, duplicates_merged=0, total_projects=7",
+      "errors": 0,
+      "durationSec": 114.0
+    },
+    {
+      "runId": "20260910T101151-find-sales",
+      "started": "2026-09-10T10:11:51",
+      "skill": "find-sales",
+      "area": "plano-richardson",
+      "status": "ok",
+      "counts": "communities_checked=207, parcels_checked=232, sold=28, sold_by_deed=23, owner_changed_without_deed=5",
+      "errors": 0,
+      "durationSec": 14.2
+    },
+    {
+      "runId": "20260910T100930-find-apartments",
+      "started": "2026-09-10T10:09:30",
+      "skill": "find-apartments",
+      "area": "plano-richardson",
+      "status": "ok",
+      "counts": "parcels=232, communities=207, units=54784",
+      "errors": 0,
+      "durationSec": 7.1
     }
   ],
   "accuracy": {
-    "correct": 0,
-    "total": 0,
-    "note": "PLACEHOLDER -- no hand-check log exists yet."
+    "reviewDoc": "https://github.com/Pu11en/realpage/blob/main/propertystack/evals/review-weak-spots.md",
+    "spotcheckDoc": "https://github.com/Pu11en/realpage/blob/main/propertystack/evals/manual-spotcheck-2026-09-10.md"
   },
   "costPerArea": {
-    "note": "PLACEHOLDER -- no real run-cost tracking yet."
+    "note": "PLACEHOLDER -- run logs record API call counts, not dollars."
   },
   "reviewQueue": {
-    "status": "PLACEHOLDER",
-    "rows": []
+    "byReason": {
+      "no-portal-link": 28,
+      "no-website": 21,
+      "in-house-portal": 3
+    },
+    "rows": [
+      {
+        "id": "2047952",
+        "community": "The Gio Apartments",
+        "city": "Plano",
+        "units": 730,
+        "reason": "no-website",
+        "website": null
+      },
+      {
+        "id": "2929400",
+        "community": "The Beacon",
+        "city": "Plano",
+        "units": 539,
+        "reason": "no-website",
+        "website": "https://interchange.puc.texas.gov/Documents/56021_24_1358750.PDF"
+      },
+      {
+        "id": "1986344",
+        "community": "La Costa Apartments",
+        "city": "Plano",
+        "units": 462,
+        "reason": "no-website",
+        "website": null
+      },
+      {
+        "id": "2117157",
+        "community": "Clearwater Creek Apartments",
+        "city": "Richardson",
+        "units": 442,
+        "reason": "no-website",
+        "website": null
+      },
+      {
+        "id": "2646098",
+        "community": "Riachi At One 21 Apartments",
+        "city": "Plano",
+        "units": 402,
+        "reason": "no-website",
+        "website": "https://www.sunny.com/tx/plano"
+      },
+      {
+        "id": "2763841",
+        "community": "Jada Legacy Central Tc",
+        "city": "Plano",
+        "units": 385,
+        "reason": "no-website",
+        "website": null
+      },
+      {
+        "id": "2628294",
+        "community": "Huntington Apartments",
+        "city": "Plano",
+        "units": 320,
+        "reason": "no-website",
+        "website": null
+      },
+      {
+        "id": "2571968",
+        "community": "Maa At Market Center Ii Apartments",
+        "city": "Plano",
+        "units": 318,
+        "reason": "no-website",
+        "website": null
+      },
+      {
+        "id": "2763842",
+        "community": "Opal Legacy Central Apartments",
+        "city": "Plano",
+        "units": 310,
+        "reason": "no-website",
+        "website": null
+      },
+      {
+        "id": "1824574",
+        "community": "Summers Crossing Apartments",
+        "city": "Plano",
+        "units": 294,
+        "reason": "no-website",
+        "website": null
+      },
+      {
+        "id": "1503117",
+        "community": "Bellevue At Spring Creek Apartments",
+        "city": "Plano",
+        "units": 278,
+        "reason": "no-website",
+        "website": "https://rejournals.com/grea-brokers-sale-of-278-unit-apartment-community-in-plano-submarket/"
+      },
+      {
+        "id": "2595347",
+        "community": "Kia Ora Park Apartments",
+        "city": "Plano",
+        "units": 250,
+        "reason": "no-website",
+        "website": null
+      },
+      {
+        "id": "1972919",
+        "community": "Old Shepard Place Apartments",
+        "city": "Plano",
+        "units": 244,
+        "reason": "no-website",
+        "website": null
+      },
+      {
+        "id": "1615274",
+        "community": "Spring Pointe Apartments",
+        "city": "Richardson",
+        "units": 208,
+        "reason": "no-website",
+        "website": null
+      },
+      {
+        "id": "2116750",
+        "community": "Post Legacy Apartments",
+        "city": "Plano",
+        "units": 171,
+        "reason": "no-website",
+        "website": "https://www.calameo.com/books/003186963fa0d71126181"
+      },
+      {
+        "id": "1747612",
+        "community": "Preserve At Preston",
+        "city": "Plano",
+        "units": 160,
+        "reason": "no-website",
+        "website": "https://www.birchstonewestplano.com/"
+      },
+      {
+        "id": "769",
+        "community": "Villas Del Sol I & Ii Apartments",
+        "city": "Plano",
+        "units": 60,
+        "reason": "no-website",
+        "website": "https://data.texas.gov/views/hkzz-rrn8/rows.rdf?accessType=DOWNLOAD"
+      },
+      {
+        "id": "2856761",
+        "community": "@ 15Th St Apartments",
+        "city": "Plano",
+        "units": 52,
+        "reason": "no-website",
+        "website": "https://members.planochamber.org/members/member/junction-15-apartments-10856"
+      },
+      {
+        "id": "1764969",
+        "community": "Silverwood Village Townhomes",
+        "city": "Plano",
+        "units": 28,
+        "reason": "no-website",
+        "website": "https://www.udr.com/dallas-apartments/plano/legacy-village-apartment-homes/"
+      },
+      {
+        "id": "163325",
+        "community": "Belleview West Apartments",
+        "city": "Plano",
+        "units": 24,
+        "reason": "no-website",
+        "website": "https://englewoodgov.civicweb.net/document/461819/City%20Council%20Study%20Session%20-%2023%20Mar%202026.pdf?handle=86B95EC9C1424617BA8642B6C0F95811"
+      },
+      {
+        "id": "84143",
+        "community": "Grindstone Ii Apartments",
+        "city": "Plano",
+        "units": 22,
+        "reason": "no-website",
+        "website": "https://www.city-data.com/collin-county/L/L-Avenue-2.html"
+      },
+      {
+        "id": "2615335",
+        "community": "Northside At Legacy I Apartments",
+        "city": "Plano",
+        "units": 793,
+        "reason": "no-portal-link",
+        "website": "https://sharetrip.net/hotel-deals/northside-at-legacy-apartments-plano-tx/HV2676d3b382b9dc364647efacc?nationality=BD&checkInDate=2026-07-17&checkOutDate=2026-07-18&numberOfGuestsInRooms=%5B%7B%22adults%22%3A2%2C%22children%22%3A%5B%5D%7D%5D"
+      },
+      {
+        "id": "2096027",
+        "community": "Cortland West Plano",
+        "city": "Plano",
+        "units": 769,
+        "reason": "in-house-portal",
+        "website": "https://cortland.com/apartments/cortland-west-plano/"
+      },
+      {
+        "id": "2143049",
+        "community": "Cortland North Plano Apartments",
+        "city": "Plano",
+        "units": 548,
+        "reason": "in-house-portal",
+        "website": "https://cortland.com/apartments/cortland-north-plano/"
+      },
+      {
+        "id": "2095999",
+        "community": "23Hundred @ Ridgeview",
+        "city": "Plano",
+        "units": 480,
+        "reason": "no-portal-link",
+        "website": "https://american-landmark-23hundred-old.multiscreensite.com/neighborhood"
+      },
+      {
+        "id": "2039698",
+        "community": "Cortland Prairie Creek Apartments",
+        "city": "Richardson",
+        "units": 464,
+        "reason": "in-house-portal",
+        "website": "https://cortland.com/apartments/cortland-prairie-creek/"
+      },
+      {
+        "id": "2069317",
+        "community": "La Ventura Apartments",
+        "city": "Plano",
+        "units": 324,
+        "reason": "no-portal-link",
+        "website": "http://www.laventuraapartments.c"
+      },
+      {
+        "id": "1963481",
+        "community": "Collin Creek Apartments",
+        "city": "Plano",
+        "units": 314,
+        "reason": "no-portal-link",
+        "website": "https://www.affordablehousing.com/plano-tx/collin-creek-851899/"
+      },
+      {
+        "id": "2666205",
+        "community": "Parkside At Legacy V Apts",
+        "city": "Plano",
+        "units": 310,
+        "reason": "no-portal-link",
+        "website": "https://www.dallasapartmentsuptown.com/estate/parkside-at-legacy-apartments/"
+      },
+      {
+        "id": "2070489",
+        "community": "Sheridan Park At Spring Creek Apartments",
+        "city": "Plano",
+        "units": 300,
+        "reason": "no-portal-link",
+        "website": "https://www.furnishedhousing.com/property/50180/tx/plano/sheridan-park-at-spring-creek"
+      },
+      {
+        "id": "2560139",
+        "community": "Axis 3700",
+        "city": "Plano",
+        "units": 300,
+        "reason": "no-portal-link",
+        "website": "https://www.student.com/us/tx/richardson/p/axis-3700"
+      },
+      {
+        "id": "2843992",
+        "community": "Legacy North",
+        "city": "Plano",
+        "units": 293,
+        "reason": "no-portal-link",
+        "website": "https://www.legacynorthapts.com/"
+      },
+      {
+        "id": "2712754",
+        "community": "Junction 15 Apartments",
+        "city": "Plano",
+        "units": 279,
+        "reason": "no-portal-link",
+        "website": "http://www.junction15apartments."
+      },
+      {
+        "id": "179611",
+        "community": "Evana Grove",
+        "city": "Plano",
+        "units": 266,
+        "reason": "no-portal-link",
+        "website": "http://evanagrove.com/"
+      },
+      {
+        "id": "2071041",
+        "community": "Parker Apartments",
+        "city": "Plano",
+        "units": 264,
+        "reason": "no-portal-link",
+        "website": "https://parkerplano.com/"
+      },
+      {
+        "id": "2672946",
+        "community": "Park At Gateway Apartments",
+        "city": "Plano",
+        "units": 255,
+        "reason": "no-portal-link",
+        "website": "https://reviews.birdeye.com/park-at-gateway-156779284284034"
+      },
+      {
+        "id": "1865440",
+        "community": "Canterbury Courts Apartments",
+        "city": "Richardson",
+        "units": 240,
+        "reason": "no-portal-link",
+        "website": "https://www.canterburycourts.com/"
+      },
+      {
+        "id": "1716655",
+        "community": "Hathaway At Willow Bend",
+        "city": "Plano",
+        "units": 229,
+        "reason": "no-portal-link",
+        "website": "https://multifamilyaffordablehousing.com/granite-towers-equity-group-acquires-hathaway-at-willow-bend-in-plano-texas/"
+      },
+      {
+        "id": "2632167",
+        "community": "Conservatory At Plano Senior Apartments",
+        "city": "Plano",
+        "units": 222,
+        "reason": "no-portal-link",
+        "website": "https://conservatoryatplano.com/"
+      },
+      {
+        "id": "2631255",
+        "community": "Atria Canyon Creek Senior Apts",
+        "city": "Plano",
+        "units": 213,
+        "reason": "no-portal-link",
+        "website": "https://www.atriaseniorliving.com/retirement-communities/atria-canyon-creek-plano-tx"
+      },
+      {
+        "id": "2843990",
+        "community": "Legacy Town North Phase Iv Apts",
+        "city": "Plano",
+        "units": 210,
+        "reason": "no-portal-link",
+        "website": "https://www.legacynorthapts.com/"
+      },
+      {
+        "id": "287594",
+        "community": "Leighton Apartments",
+        "city": "Plano",
+        "units": 208,
+        "reason": "no-portal-link",
+        "website": "https://www.willowbridgepc.com/properties/the-leighton-apartments-plano-texas"
+      },
+      {
+        "id": "26251",
+        "community": "Lydian Apartments",
+        "city": "Plano",
+        "units": 160,
+        "reason": "no-portal-link",
+        "website": "https://www.willowbridgepc.com/properties/the-lydian-apartments-plano-texas"
+      },
+      {
+        "id": "2936294",
+        "community": "Novum Independent Living",
+        "city": "Plano",
+        "units": 147,
+        "reason": "no-portal-link",
+        "website": "https://www.after55.com/tx/plano/novum-plano/6q93pst"
+      },
+      {
+        "id": "2843129",
+        "community": "Patriot Park Apartments Chodo",
+        "city": "Plano",
+        "units": 139,
+        "reason": "no-portal-link",
+        "website": "https://patriotparkplano.com/"
+      },
+      {
+        "id": "2115198",
+        "community": "Waterford At Plano A Senior Apartments",
+        "city": "Plano",
+        "units": 136,
+        "reason": "no-portal-link",
+        "website": "https://www.seniorlivingguide.com/communities/the-waterford-at-plano-3401-premier-drive-plano-tx-75023/"
+      },
+      {
+        "id": "2873065",
+        "community": "Twin Rivers At Collin Creek Senior Living",
+        "city": "Plano",
+        "units": 136,
+        "reason": "no-portal-link",
+        "website": "https://twinriversatcollincreek.com/plano-neighborhoods/"
+      },
+      {
+        "id": "2069471",
+        "community": "Solstice Senior Living",
+        "city": "Plano",
+        "units": 115,
+        "reason": "no-portal-link",
+        "website": "https://solsticeseniorlivingplano.com/"
+      },
+      {
+        "id": "13310",
+        "community": "Shiloh Park",
+        "city": "Plano",
+        "units": 73,
+        "reason": "no-portal-link",
+        "website": "https://www.shilohparkapts.com/"
+      },
+      {
+        "id": "1524318",
+        "community": "Cobblestone Condos",
+        "city": "Plano",
+        "units": 71,
+        "reason": "no-portal-link",
+        "website": "https://thebauergrouprealty.com/home-search/listings/v2/tx/plano/cobblestone/condos"
+      },
+      {
+        "id": "354556",
+        "community": "Pleasant Park Apartments",
+        "city": "Plano",
+        "units": 32,
+        "reason": "no-portal-link",
+        "website": "https://magicpin.com/usa/Plano/Downtown-Plano/Other/Pleasant-Park-Apartments/store/246a066"
+      },
+      {
+        "id": "180271",
+        "community": "Courtyard Apartments",
+        "city": "Plano",
+        "units": 28,
+        "reason": "no-portal-link",
+        "website": "https://www.travelweekly.com/Hotels/Plano-TX/Courtyard-Dallas-Plano-Parkway-p53239725"
+      }
+    ]
   }
 }

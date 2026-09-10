@@ -70,22 +70,19 @@ against a saved prior one.
 Regenerate with `python3 site/data/build_data.py` any time `leads.csv`,
 `leads-facts.jsonl`, or `contacts.csv` change.
 
-## site/data/pipeline.json (Under the Hood page) -- partially PLACEHOLDER
+## site/data/pipeline.json (Under the Hood page) -- real data, cost is PLACEHOLDER
 ```
 {
-  "status": string|null,
-  "steps": [ { "name": string, "count": int|null } ] (5 items, in pipeline order),
-  "runs": [ { "runId": string, "area": string, "propertiesProcessed": int,
-              "pctIdentified": float, "costUsd": float|null,
-              "durationSec": int|null, "models": string } ],
-  "accuracy": { "correct": int, "total": int, "note": string },
-  "costPerArea": { "note": string },
-  "reviewQueue": { "status": string, "rows": [] }
+  "steps": [ { "name": skill, "label": string, "count": int|null } ] (6 items, pipeline order),
+  "runs": [ { "runId": string, "started": iso, "skill": string, "area": string,
+              "status": string, "counts": string, "errors": int,
+              "durationSec": float|null } ] (every propertystack/runs/*.json, newest first),
+  "accuracy": { "reviewDoc": url, "spotcheckDoc": url },
+  "costPerArea": { "note": string },   // PLACEHOLDER until runs log dollars
+  "reviewQueue": { "byReason": { reason: int }, "rows": [ { "id", "community", "city",
+                   "units", "reason", "website" } ] }  // master.csv rows with software unknown
 }
 ```
-`steps[].count` for find-apartments and detect-software can already be
-filled from `properties.json`'s stats; the rest needs real run logging,
-which doesn't exist yet.
 
 ## Design tokens
 All colors/fonts/spacing live in `site/css/styles.css` as CSS custom

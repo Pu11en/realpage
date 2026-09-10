@@ -291,59 +291,79 @@ def build_leads() -> dict:
     }
 
 
-def build_pipeline(properties_stats: dict) -> dict:
+REPO_BLOB = "https://github.com/Pu11en/realpage/blob/main/"
+
+
+def summarize_counts(counts: dict) -> str:
+    """Flatten a run's top-level scalar counts into a short 'k=v' string."""
+    parts = [f"{k}={v}" for k, v in counts.items() if isinstance(v, (int, float, str))]
+    sw = counts.get("software")
+    if isinstance(sw, dict) and "identified" not in counts:
+        parts.append(f"identified={sum(v for k, v in sw.items() if k != 'unknown')}")
+        parts.append(f"unknown={sw.get('unknown', 0)}")
+    return ", ".join(parts)
+
+
+def build_pipeline(properties: list[dict]) -> dict:
     run_files = sorted(glob.glob(str(RUNS_DIR / "*.json")))
     runs_by_skill: dict[str, list[dict]] = {}
+    runs = []
     for path in run_files:
         with open(path) as f:
             run = json.load(f)
-        run["_runId"] = Path(path).stem
         runs_by_skill.setdefault(run["skill"], []).append(run)
+        runs.append({
+            "runId": Path(path).stem,
+            "started": run.get("started"),
+            "skill": run["skill"],
+            "area": run.get("area"),
+            "status": run.get("status"),
+            "counts": summarize_counts(run.get("counts", {})),
+            "errors": len(run.get("errors", [])),
+            "durationSec": run.get("duration_s"),
+        })
+    runs.reverse()  # newest first
 
-    def latest(skill: str) -> dict | None:
-        return runs_by_skill[skill][-1] if runs_by_skill.get(skill) else None
+    def latest_counts(skill: str) -> dict:
+        return runs_by_skill[skill][-1]["counts"] if runs_by_skill.get(skill) else {}
 
-    n_apartments = properties_stats["apartments"]
-    n_identified = properties_stats["softwareIdentified"]
-    website_checked = None
-    bt = latest("build-table")
-    if bt:
-        website_checked = bt["counts"].get("checked")
-
+    bt = latest_counts("build-table")
+    sales = latest_counts("find-sales")
+    leads = latest_counts("score-leads")
     steps = [
-        {"name": "find-apartments", "count": n_apartments},
-        {"name": "find-website", "count": website_checked},
-        {"name": "detect-software", "count": n_identified},
-        {"name": "build-table", "count": n_apartments},
-        {"name": "leads", "count": latest("score-leads")["counts"]["total_leads"] if latest("score-leads") else None},
+        {"name": "find-apartments", "label": "buildings", "count": bt.get("in_area")},
+        {"name": "find-website", "label": "with websites", "count": bt.get("website_found")},
+        {"name": "detect-software", "label": "software identified", "count": bt.get("identified")},
+        {"name": "find-sales", "label": "recent sales", "count": sales.get("sold")},
+        {"name": "find-upcoming", "label": "upcoming projects", "count": leads.get("upcoming_leads")},
+        {"name": "score-leads", "label": "ranked leads", "count": leads.get("total_leads")},
     ]
 
-    final_run = bt or latest("find-apartments")
-    runs = []
-    if final_run:
-        pct = round(100 * n_identified / n_apartments, 1) if n_apartments else 0
-        runs.append({
-            "runId": final_run["_runId"],
-            "area": final_run["area"],
-            "propertiesProcessed": n_apartments,
-            "pctIdentified": pct,
-            "costUsd": None,
-            "durationSec": final_run["duration_s"] or None,
-            "models": "not logged per run yet -- see propertystack/runs/*.json",
-        })
+    queue = [
+        {
+            "id": p["id"],
+            "community": p["community"],
+            "city": p["city"],
+            "units": p["units"],
+            "reason": p["unknownReason"] or "unknown",
+            "website": p["website"],
+        }
+        for p in properties
+        if not p["software"] or p["software"] == "unknown"
+    ]
+    queue.sort(key=lambda r: (r["reason"] != "no-website", -(r["units"] or 0)))
 
     return {
         "steps": steps,
         "runs": runs,
         "accuracy": {
-            "correct": 0,
-            "total": 0,
-            "note": "PLACEHOLDER -- no hand-check log exists yet.",
+            "reviewDoc": REPO_BLOB + "propertystack/evals/review-weak-spots.md",
+            "spotcheckDoc": REPO_BLOB + "propertystack/evals/manual-spotcheck-2026-09-10.md",
         },
-        "costPerArea": {"note": "PLACEHOLDER -- no real run-cost tracking yet."},
+        "costPerArea": {"note": "PLACEHOLDER -- run logs record API call counts, not dollars."},
         "reviewQueue": {
-            "status": "PLACEHOLDER",
-            "rows": [],
+            "byReason": dict(Counter(r["reason"] for r in queue).most_common()),
+            "rows": queue,
         },
     }
 
@@ -356,7 +376,7 @@ def main() -> None:
     leads_json = build_leads()
     (OUT_DIR / "leads.json").write_text(json.dumps(leads_json, indent=2))
 
-    pipeline_json = build_pipeline(properties_json["stats"])
+    pipeline_json = build_pipeline(properties)
     (OUT_DIR / "pipeline.json").write_text(json.dumps(pipeline_json, indent=2))
 
     print(f"wrote properties.json ({len(properties)} rows)")

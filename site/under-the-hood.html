@@ -4,6 +4,25 @@
   <meta charset="utf-8" />
   <title>PropertyStack -- Under the Hood</title>
   <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    .section-title { font-size: 12px; color: var(--text-muted); margin: 24px 0 10px; text-transform: uppercase; letter-spacing: 0.03em; font-weight: 600; }
+    .flow { display: flex; align-items: stretch; gap: 6px; flex-wrap: wrap; }
+    .flow .step { flex: 1 1 120px; border: 1px solid var(--border); border-radius: 6px; padding: 12px; text-align: center; }
+    .flow .n { font-family: var(--mono); font-weight: 700; font-size: 24px; }
+    .flow .label { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
+    .flow .skill { font-family: var(--mono); font-size: 11px; color: var(--text-dim); margin-top: 6px; }
+    .flow .arrow { align-self: center; color: var(--text-dim); font-size: 18px; }
+    .scroll { max-height: 420px; overflow: auto; border: 1px solid var(--border); border-radius: 6px; }
+    .scroll table { margin: 0; }
+    td.mono { font-family: var(--mono); font-size: 12px; }
+    td.counts { font-family: var(--mono); font-size: 11px; color: var(--text-muted); max-width: 520px; }
+    .ok { color: var(--accent); }
+    .bad { color: var(--score-low); }
+    .card a, .dim a, td a { color: var(--accent); }
+    .dim { color: var(--text-dim); font-size: 13px; line-height: 1.5; }
+    .card ul { margin: 8px 0 0; padding-left: 18px; font-size: 13px; line-height: 1.6; }
+    .tag { font-family: var(--mono); font-size: 11px; padding: 2px 6px; border-radius: 4px; background: #27272a; color: #a1a1aa; }
+  </style>
 </head>
 <body>
   <div class="shell" id="app-shell"></div>
@@ -11,43 +30,98 @@
   <script>
     renderShell("hood");
 
+    function esc(s) {
+      return String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+    }
+    function fmtDuration(s) {
+      if (s == null) return "--";
+      if (s < 60) return `${s.toFixed(1)}s`;
+      return `${Math.floor(s / 60)}m ${Math.round(s % 60)}s`;
+    }
+    const REASONS = {
+      "no-website": "No website found",
+      "no-portal-link": "Site has no resident-portal link",
+      "in-house-portal": "In-house portal, vendor not named",
+    };
+
     loadData("data/pipeline.json").then((data) => {
+      const q = data.reviewQueue;
       const content = document.getElementById("page-content");
       content.innerHTML = `
         <h1>Under the Hood</h1>
-        <div class="meta">How the agent works.</div>
-        ${placeholderBanner(data.status)}
-        <div class="funnel" style="margin-top:0;margin-bottom:20px;">
-          ${data.steps.map((s) => `
-            <div class="step"><div class="n">${s.count ?? "--"}</div><div class="label">${s.name}</div></div>
+        <div class="meta">How the pipeline got to these numbers -- area: plano-richardson. Built from <span class="tag">propertystack/runs/*.json</span>.</div>
+
+        <div class="section-title">Pipeline (latest run of each skill)</div>
+        <div class="flow">
+          ${data.steps.map((s, i) => `
+            ${i ? '<div class="arrow">&rarr;</div>' : ""}
+            <div class="step">
+              <div class="n">${s.count ?? "--"}</div>
+              <div class="label">${esc(s.label)}</div>
+              <div class="skill">${esc(s.name)}</div>
+            </div>
           `).join("")}
         </div>
-        <table style="margin-bottom:20px;">
-          <thead><tr><th>Run ID</th><th>Area</th><th>Properties</th><th>% Identified</th><th>Cost</th><th>Duration</th><th>Models</th></tr></thead>
-          <tbody>
-            ${data.runs.map((r) => `
-              <tr>
-                <td>${r.runId}</td><td>${r.area}</td><td>${r.propertiesProcessed}</td>
-                <td>${r.pctIdentified}%</td><td>${r.costUsd ?? "--"}</td><td>${r.durationSec ?? "--"}</td><td>${r.models}</td>
-              </tr>
-            `).join("")}
-          </tbody>
-        </table>
+
+        <div class="section-title">Run history (${data.runs.length} runs, newest first)</div>
+        <div class="scroll">
+          <table>
+            <thead><tr><th>Date</th><th>Skill</th><th>Status</th><th>Counts</th><th>Duration</th></tr></thead>
+            <tbody>
+              ${data.runs.map((r) => `
+                <tr>
+                  <td class="mono">${esc((r.started || "").replace("T", " "))}</td>
+                  <td class="mono">${esc(r.skill)}</td>
+                  <td class="${r.status === "ok" ? "ok" : "bad"}">${esc(r.status)}${r.errors ? ` (${r.errors} errors)` : ""}</td>
+                  <td class="counts">${esc(r.counts)}</td>
+                  <td class="mono">${fmtDuration(r.durationSec)}</td>
+                </tr>
+              `).join("")}
+            </tbody>
+          </table>
+        </div>
+
+        <div class="section-title">Accuracy &amp; review</div>
         <div class="cards-row">
           <div class="card">
-            <div style="font-size:12px;color:var(--text-muted);margin-bottom:6px;">Accuracy (latest hand-check)</div>
-            <div style="font-size:24px;font-weight:700;font-family:var(--mono);">${data.accuracy.correct} of ${data.accuracy.total}</div>
-            <div style="font-size:11px;color:var(--text-dim);margin-top:4px;">${data.accuracy.note}</div>
+            <div class="dim">
+              Every skill was hand-reviewed on 2026-09-10 and the weak spots were fixed and re-run.
+              <ul>
+                <li>find-website: 11 of 15 sampled "no website" rows were real misses; after fixes, rows without a trusted site dropped from 67 to ~18.</li>
+                <li>detect-software: vendor matches held 10/10 in the hand spot-check -- every proof URL opened to the named vendor's portal.</li>
+                <li>find-upcoming: 3 missed projects added, 1 false positive removed.</li>
+              </ul>
+              <div style="margin-top:10px;">
+                Full write-up: <a href="${esc(data.accuracy.reviewDoc)}" target="_blank" rel="noopener">review-weak-spots.md</a>
+                &middot; <a href="${esc(data.accuracy.spotcheckDoc)}" target="_blank" rel="noopener">manual-spotcheck-2026-09-10.md</a>
+              </div>
+              <div style="margin-top:6px;font-size:11px;">Spot-check samples were taken before the final 207&rarr;204 dedupe run; no re-check on the final numbers yet.</div>
+            </div>
           </div>
           <div class="card">
             <div style="font-size:12px;color:var(--text-muted);margin-bottom:6px;">Cost per area</div>
             <div style="font-size:24px;font-weight:700;font-family:var(--mono);">--</div>
-            <div style="font-size:11px;color:var(--text-dim);margin-top:4px;">${data.costPerArea.note}</div>
+            ${placeholderBanner(data.costPerArea.note)}
           </div>
         </div>
-        <div class="card" style="opacity:0.6;">
-          <div style="font-size:12px;color:var(--text-muted);margin-bottom:6px;">Review queue (read-only) -- ${data.reviewQueue.status}</div>
-          <div style="font-size:12px;color:var(--text-dim);">Fixed in a local session, not on the site.</div>
+
+        <div class="section-title">Review queue -- ${q.rows.length} buildings with no software identified</div>
+        <div class="meta">${Object.entries(q.byReason).map(([k, v]) => `${esc(REASONS[k] || k)}: <b>${v}</b>`).join(" &middot; ")}. Read-only -- fixes happen in a local pipeline session, not on the site.</div>
+        <div class="scroll">
+          <table>
+            <thead><tr><th>Building</th><th>City</th><th>Units</th><th>Reason</th><th>Website</th></tr></thead>
+            <tbody>
+              ${q.rows.map((r) => `
+                <tr class="clickable" onclick="location.href='property.html?id=${encodeURIComponent(r.id)}'" style="cursor:pointer;">
+                  <td><a href="property.html?id=${encodeURIComponent(r.id)}">${esc(r.community)}</a></td>
+                  <td>${esc(r.city)}</td>
+                  <td class="mono">${r.units ?? "--"}</td>
+                  <td><span class="tag">${esc(r.reason)}</span></td>
+                  <td>${r.website ? `<a href="${esc(r.website)}" target="_blank" rel="noopener" onclick="event.stopPropagation()">${esc(new URL(r.website).hostname)}</a>` : '<span class="dim">none</span>'}</td>
+                </tr>
+              `).join("")}
+            </tbody>
+          </table>
         </div>
       `;
     });
