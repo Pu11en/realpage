@@ -5,65 +5,72 @@
     {
       "vendor": "Yardi",
       "color": "#60a5fa",
-      "properties": 56,
-      "units": 16450,
-      "pctOfIdentifiedProperties": 53.8
+      "properties": 66,
+      "units": 19732,
+      "pctOfIdentifiedProperties": 43.4
     },
     {
       "vendor": "RealPage",
       "color": "#f472b6",
-      "properties": 17,
-      "units": 4526,
-      "pctOfIdentifiedProperties": 16.3
+      "properties": 36,
+      "units": 8688,
+      "pctOfIdentifiedProperties": 23.7
     },
     {
       "vendor": "Entrata",
       "color": "#fb923c",
-      "properties": 13,
-      "units": 3831,
-      "pctOfIdentifiedProperties": 12.5
+      "properties": 22,
+      "units": 6052,
+      "pctOfIdentifiedProperties": 14.5
     },
     {
       "vendor": "ResMan",
       "color": "#22d3ee",
-      "properties": 6,
-      "units": 1391,
-      "pctOfIdentifiedProperties": 5.8
+      "properties": 11,
+      "units": 2263,
+      "pctOfIdentifiedProperties": 7.2
     },
     {
       "vendor": "MRI/RentManager",
       "color": "#34d399",
+      "properties": 5,
+      "units": 1220,
+      "pctOfIdentifiedProperties": 3.3
+    },
+    {
+      "vendor": "in-house:UDR",
+      "color": "#fca5a5",
       "properties": 4,
-      "units": 1080,
-      "pctOfIdentifiedProperties": 3.8
+      "units": 1271,
+      "pctOfIdentifiedProperties": 2.6
     },
     {
       "vendor": "AppFolio",
       "color": "#facc15",
       "properties": 3,
       "units": 411,
-      "pctOfIdentifiedProperties": 2.9
+      "pctOfIdentifiedProperties": 2.0
     },
     {
       "vendor": "Yotta",
       "color": "#c084fc",
       "properties": 2,
       "units": 590,
-      "pctOfIdentifiedProperties": 1.9
+      "pctOfIdentifiedProperties": 1.3
     },
     {
       "vendor": "in-house:Camden",
       "color": "#94a3b8",
       "properties": 2,
       "units": 516,
-      "pctOfIdentifiedProperties": 1.9
+      "pctOfIdentifiedProperties": 1.3
     },
     {
-      "vendor": "in-house:UDR",
-      "color": "#fca5a5",
+      "vendor": "Buildium",
+      "color": "#52525b",
       "properties": 1,
-      "units": 232,
-      "pctOfIdentifiedProperties": 1.0
+      "units": 24,
+      "pctOfIdentifiedProperties": 0.7
     }
   ]
 }

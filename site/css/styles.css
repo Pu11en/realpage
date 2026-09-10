@@ -146,6 +146,7 @@ td {
 }
 tr:last-child td { border-bottom: none; }
 tr.dimmed { opacity: 0.45; }
+tr.clickable:hover td { background: var(--accent-dim); }
 
 .pill {
   display: inline-block;

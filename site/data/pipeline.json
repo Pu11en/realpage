@@ -2,31 +2,31 @@
   "steps": [
     {
       "name": "find-apartments",
-      "count": 207
+      "count": 204
     },
     {
       "name": "find-website",
-      "count": 140
+      "count": 183
     },
     {
       "name": "detect-software",
-      "count": 104
+      "count": 152
     },
     {
       "name": "build-table",
-      "count": 207
+      "count": 204
     },
     {
       "name": "leads",
-      "count": 40
+      "count": 42
     }
   ],
   "runs": [
     {
-      "runId": "20260910T110348-build-table",
+      "runId": "20260910T133111-build-table",
       "area": "plano-richardson",
-      "propertiesProcessed": 207,
-      "pctIdentified": 50.2,
+      "propertiesProcessed": 204,
+      "pctIdentified": 74.5,
       "costUsd": null,
       "durationSec": null,
       "models": "not logged per run yet -- see propertystack/runs/*.json"

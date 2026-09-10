@@ -14,45 +14,114 @@
     loadData("data/leads.json").then((data) => {
       const content = document.getElementById("page-content");
       const s = data.stats;
+      const cities = [...new Set(data.leads.map((l) => l.city))].sort();
+      const softwareOptions = [...new Set(data.leads.map((l) => l.software).filter(Boolean))].sort();
+
       content.innerHTML = `
         <h1>Early Leads</h1>
         <div class="meta">Who's about to choose -- upcoming buildings + recently sold.</div>
         ${placeholderBanner(data.status)}
         <div class="stats-row">
           <div class="stat-card"><div class="value">${s.leads}</div><div class="label">Leads</div></div>
-          <div class="stat-card"><div class="value">${s.newThisWeek}</div><div class="label">New this week</div></div>
+          <div class="stat-card"><div class="value">${s.newThisWeek}</div><div class="label">New</div></div>
           <div class="stat-card"><div class="value">${s.unitsInPlay.toLocaleString()}</div><div class="label">Units in play</div></div>
-          <div class="stat-card"><div class="value">${s.openingNext12mo.toLocaleString()}</div><div class="label">Opening next 12mo</div></div>
+          <div class="stat-card"><div class="value">${s.openingNext12mo.toLocaleString()}</div><div class="label">Opening soon</div></div>
         </div>
         <div class="filters">
-          <input placeholder="Search" />
-          <select><option>All signals</option><option>Upcoming</option><option>Recently sold</option></select>
-          <select><option>All cities</option></select>
-          <select><option>All software</option></select>
+          <input id="f-search" placeholder="Search property" />
+          <select id="f-signal">
+            <option value="">All signals</option>
+            <option value="Upcoming">Upcoming</option>
+            <option value="Sold">Recently sold</option>
+          </select>
+          <select id="f-city">
+            <option value="">All cities</option>
+            ${cities.map((c) => `<option value="${c}">${c}</option>`).join("")}
+          </select>
+          <select id="f-software">
+            <option value="">All software</option>
+            <option value="__none__">Not chosen yet</option>
+            ${softwareOptions.map((v) => `<option value="${v}">${v}</option>`).join("")}
+          </select>
+          <select id="f-sort">
+            <option value="score">Sort: score</option>
+            <option value="size">Sort: size (units)</option>
+            <option value="newest">Sort: newest</option>
+          </select>
           <label style="display:flex;align-items:center;gap:6px;color:var(--text-muted);font-size:13px;">
-            <input type="checkbox" /> hide properties already on my software
+            <input type="checkbox" id="f-hide-mine" /> hide properties already on my software
           </label>
         </div>
         <table>
           <thead>
-            <tr><th>Rank</th><th>Score</th><th>Property</th><th>City</th><th>Units</th><th>Signal</th><th>Software</th><th>Why</th></tr>
+            <tr><th>Rank</th><th>Score</th><th>Property</th><th>City</th><th>Units</th><th>Signal</th><th>Software</th><th>Contact</th><th>Why</th></tr>
           </thead>
-          <tbody>
-            ${data.leads.map((l, i) => `
-              <tr>
-                <td>${i + 1}</td>
-                <td><span class="score-badge" style="background:${scoreBadgeColor(l.score)}">${l.score}</span></td>
-                <td><strong>${l.property}</strong> ${l.isNew ? '<span class="pill" style="background:#22c55e22;color:#22c55e;">NEW</span>' : ""}</td>
-                <td>${l.city}</td>
-                <td>${l.units}</td>
-                <td><span class="pill" style="background:#3f3f4622;color:#a1a1aa;">${l.signalType}: ${l.signal}</span></td>
-                <td>${vendorPill(l.software)}</td>
-                <td style="color:var(--text-muted);">${l.why} <span style="color:var(--text-dim);">${l.sources.map(s => `[${s}]`).join(" ")}</span></td>
-              </tr>
-            `).join("")}
-          </tbody>
+          <tbody id="leads-tbody"></tbody>
         </table>
       `;
+
+      function contactHtml(contact) {
+        if (!contact) return `<span style="color:var(--text-dim);">--</span>`;
+        const parts = [];
+        if (contact.phone) parts.push(contact.phone);
+        if (contact.email) parts.push(contact.email);
+        return `<span style="color:var(--text-muted);font-size:12px;">${parts.join("<br/>")}</span>`;
+      }
+
+      function renderRows() {
+        const search = document.getElementById("f-search").value.trim().toLowerCase();
+        const signal = document.getElementById("f-signal").value;
+        const city = document.getElementById("f-city").value;
+        const software = document.getElementById("f-software").value;
+        const sort = document.getElementById("f-sort").value;
+        const hideMine = document.getElementById("f-hide-mine").checked;
+        const viewAs = getViewAs();
+
+        let rows = data.leads.filter((l) => {
+          if (search && !l.property.toLowerCase().includes(search)) return false;
+          if (signal && l.signalType !== signal) return false;
+          if (city && l.city !== city) return false;
+          if (software === "__none__" && l.software) return false;
+          if (software && software !== "__none__" && l.software !== software) return false;
+          if (hideMine && viewAs !== "Neutral" && l.software === viewAs) return false;
+          return true;
+        });
+
+        if (sort === "size") {
+          rows = rows.slice().sort((a, b) => (b.units || 0) - (a.units || 0));
+        } else if (sort === "newest") {
+          rows = rows.slice().sort((a, b) => (b.isNew === a.isNew ? b.score - a.score : b.isNew ? 1 : -1));
+        } else {
+          rows = rows.slice().sort((a, b) => b.score - a.score);
+        }
+
+        document.getElementById("leads-tbody").innerHTML = rows.map((l, i) => `
+          <tr class="${l.propertyId ? "clickable" : ""}" ${l.propertyId ? `data-id="${l.propertyId}"` : ""} style="${l.propertyId ? "cursor:pointer;" : ""}">
+            <td>${i + 1}</td>
+            <td><span class="score-badge" style="background:${scoreBadgeColor(l.score)}">${l.score}</span></td>
+            <td><strong>${l.property}</strong> ${l.isNew ? '<span class="pill" style="background:#22c55e22;color:#22c55e;">NEW</span>' : ""}</td>
+            <td>${l.city}</td>
+            <td>${l.units ?? "?"}</td>
+            <td><span class="pill" style="background:#3f3f4622;color:#a1a1aa;">${l.signalType}: ${l.signal}</span></td>
+            <td>${vendorPill(l.software)}</td>
+            <td>${contactHtml(l.contact)}</td>
+            <td style="color:var(--text-muted);">${l.why} <span style="color:var(--text-dim);">${l.sources.map(s => `[${s}]`).join(" ")}</span></td>
+          </tr>
+        `).join("");
+
+        document.querySelectorAll("#leads-tbody tr.clickable").forEach((tr) => {
+          tr.addEventListener("click", () => {
+            location.href = `property.html?id=${encodeURIComponent(tr.dataset.id)}`;
+          });
+        });
+      }
+
+      ["f-search", "f-signal", "f-city", "f-software", "f-sort", "f-hide-mine"].forEach((id) => {
+        const el = document.getElementById(id);
+        el.addEventListener(el.tagName === "INPUT" && el.type !== "checkbox" ? "input" : "change", renderRows);
+      });
+
+      renderRows();
     });
   </script>
 </body>

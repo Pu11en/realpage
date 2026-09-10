@@ -44,23 +44,31 @@ Also produced by `build_data.py` from the same CSV. `changeSinceLastRun` per
 vendor isn't tracked yet -- needs a second run's `share` array diffed
 against a saved prior one.
 
-## site/data/leads.json (Early Leads / home page) -- currently PLACEHOLDER
+## site/data/leads.json (Early Leads / home page) -- REAL, built from leads.csv
 ```
 {
-  "status": string|null (shown as a banner if present; drop this key once real),
-  "stats": { "leads": int, "newThisWeek": int, "unitsInPlay": int, "openingNext12mo": int },
+  "stats": { "leads": int, "newThisWeek": int (count of leads flagged isNew),
+             "unitsInPlay": int, "openingNext12mo": int (units in leasing/
+             under-construction upcoming projects) },
   "leads": [
-    { "id": string, "score": int (0-100), "property": string, "city": string,
-      "units": int, "signalType": "Upcoming"|"Sold", "signal": string
-      (short phrase, e.g. "Permit issued" or "Sold Mar 2026"),
-      "software": string|null, "why": string (ONE short sentence, not a
-      paragraph), "sources": [string, ...] (short tags, e.g. "permit",
-      "website", "county record"), "isNew": bool }
+    { "id": string (lN, N = leads.csv rank), "propertyId": string|null
+      (apt_id, set only for "sold" leads that exist in master.csv -- used
+      for the property.html?id= click-through; null for "upcoming" leads,
+      which have no building yet), "score": int (0-100), "property": string,
+      "city": string, "units": int|null, "signalType": "Upcoming"|"Sold",
+      "signal": string (short phrase, e.g. "Permit issued" or "Sold Mar
+      2026"), "software": string|null, "why": string (ONE short sentence,
+      not a paragraph), "sources": [string, ...] (short tags, e.g. "permit",
+      "website", "county record"),
+      "contact": { "phone": string|null, "email": string|null } | null
+      (from contacts.csv, sold leads only, null if nothing was scraped),
+      "isNew": bool (sale_date/stage_date within 30 days of TODAY in
+      build_data.py) }
   ]
 }
 ```
-Needs the recently-sold + upcoming-building signal-collection steps
-(not built yet -- see `task_plan.md` Phase P2) before this can be real.
+Regenerate with `python3 site/data/build_data.py` any time `leads.csv`,
+`leads-facts.jsonl`, or `contacts.csv` change.
 
 ## site/data/pipeline.json (Under the Hood page) -- partially PLACEHOLDER
 ```

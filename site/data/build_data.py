@@ -27,6 +27,10 @@ OUT_DIR = Path(__file__).resolve().parent
 MASTER_CSV = DATA_DIR / "master.csv"
 LEADS_CSV = DATA_DIR / "leads.csv"
 UPCOMING_CSV = DATA_DIR / "6-upcoming.csv"
+CONTACTS_CSV = DATA_DIR / "contacts.csv"
+LEADS_FACTS_JSONL = DATA_DIR / "leads-facts.jsonl"
+
+TODAY = date.fromisoformat("2026-09-10")  # matches score-leads' fixed TODAY, see run.py
 
 VENDOR_COLORS = {
     "RealPage": "#f472b6",
@@ -131,9 +135,33 @@ def source_tag(url: str) -> str:
     return "website"
 
 
+def load_leads_facts() -> dict:
+    facts = {}
+    with open(LEADS_FACTS_JSONL) as f:
+        for line in f:
+            line = line.strip()
+            if not line:
+                continue
+            d = json.loads(line)
+            facts[d["ref_id"]] = d
+    return facts
+
+
+def load_contacts() -> dict:
+    contacts = {}
+    for r in read_csv(CONTACTS_CSV):
+        if r["phone"] or r["email"]:
+            contacts[r["apt_id"]] = {
+                "phone": r["phone"] or None,
+                "email": r["email"] or None,
+            }
+    return contacts
+
+
 def build_leads() -> dict:
     rows = read_csv(LEADS_CSV)
-    upcoming_rows = read_csv(UPCOMING_CSV)
+    facts = load_leads_facts()
+    contacts = load_contacts()
 
     leads = []
     for r in rows:
@@ -144,8 +172,27 @@ def build_leads() -> dict:
         for tag in (source_tag(u.strip()) for u in r["sources"].split(";") if u.strip()):
             if tag not in sources:
                 sources.append(tag)
+
+        ref_id = r["ref_id"]
+        is_sold = r["signal"] == "sold"
+        fact = facts.get(ref_id, {})
+
+        # isNew: sale/stage happened within the last 30 days of TODAY.
+        date_str = fact.get("sale_date") if is_sold else fact.get("stage_date")
+        is_new = False
+        if date_str:
+            try:
+                is_new = (TODAY - date.fromisoformat(date_str)).days <= 30
+            except ValueError:
+                is_new = False
+
+        # Only sold leads map to an existing building (apt_id) with a Page 4 detail.
+        property_id = ref_id if is_sold else None
+        contact = contacts.get(ref_id) if is_sold else None
+
         leads.append({
             "id": f"l{r['rank']}",
+            "propertyId": property_id,
             "score": int(r["score"]),
             "property": r["name"],
             "city": r["city"],
@@ -155,30 +202,35 @@ def build_leads() -> dict:
             "software": software,
             "why": r["why"],
             "sources": sources,
-            "isNew": False,
+            "contact": contact,
+            "isNew": is_new,
         })
 
     units_in_play = sum(l["units"] or 0 for l in leads)
+    new_count = sum(1 for l in leads if l["isNew"])
 
-    today = date.today()
-    horizon = today + timedelta(days=365)
-    opening_next_12mo = 0
-    for r in upcoming_rows:
-        if not r["expected_open"]:
+    horizon = TODAY + timedelta(days=365)
+    opening_soon_units = 0
+    for r in read_csv(UPCOMING_CSV):
+        if r["stage"] not in ("leasing", "under-construction"):
             continue
-        try:
-            opens = date.fromisoformat(r["expected_open"])
-        except ValueError:
+        if not r["units"]:
             continue
-        if today <= opens <= horizon:
-            opening_next_12mo += 1
+        opens_ok = True
+        if r["expected_open"]:
+            try:
+                opens_ok = TODAY <= date.fromisoformat(r["expected_open"]) <= horizon
+            except ValueError:
+                opens_ok = True
+        if opens_ok:
+            opening_soon_units += int(r["units"])
 
     return {
         "stats": {
             "leads": len(leads),
-            "newThisWeek": 0,
+            "newThisWeek": new_count,
             "unitsInPlay": units_in_play,
-            "openingNext12mo": opening_next_12mo,
+            "openingNext12mo": opening_soon_units,
         },
         "leads": leads,
     }

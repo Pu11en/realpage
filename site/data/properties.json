@@ -1,18 +1,18 @@
 {
   "generatedFrom": "propertystack/data/plano-richardson/master.csv",
   "stats": {
-    "apartments": 207,
+    "apartments": 204,
     "totalUnits": 54784,
-    "softwareIdentified": 104,
-    "softwareIdentifiedPct": 50.2,
+    "softwareIdentified": 152,
+    "softwareIdentifiedPct": 74.5,
     "topSoftware": "Yardi"
   },
   "funnel": {
-    "inArea": 207,
-    "websiteFound": 140,
-    "checked": 140,
-    "identified": 104,
-    "unknown": 103
+    "inArea": 204,
+    "websiteFound": 183,
+    "checked": 183,
+    "identified": 152,
+    "unknown": 52
   },
   "vendorColors": {
     "RealPage": "#f472b6",
@@ -68,8 +68,8 @@
       "units": 720,
       "yearBuilt": 2004,
       "owner": "UDR LEGACY VILLAGE LLC",
-      "software": "unknown",
-      "proof": null
+      "software": "in-house:UDR",
+      "proof": "https://residents.udr.com/"
     },
     {
       "id": "2750390",
@@ -91,7 +91,7 @@
       "yearBuilt": 1998,
       "owner": "CUSTER TX PARTNERS LLC",
       "software": "unknown",
-      "proof": null
+      "proof": "https://apply.funnelleasing.com/869/login"
     },
     {
       "id": "2929400",
@@ -112,8 +112,8 @@
       "units": 500,
       "yearBuilt": 2006,
       "owner": "ESTANCIA APARTMENT PARTNERS",
-      "software": "unknown",
-      "proof": null
+      "software": "RealPage",
+      "proof": "https://property.onesite.realpage.com/welcomehome?siteId=2815615#url=%23login"
     },
     {
       "id": "2111968",
@@ -134,8 +134,8 @@
       "units": 480,
       "yearBuilt": 1983,
       "owner": "NSCC CREEKSIDE 12B LLC",
-      "software": "unknown",
-      "proof": null
+      "software": "ResMan",
+      "proof": "https://jpns.myresman.com/Portal/Access/SignIn/CKV"
     },
     {
       "id": "2095999",
@@ -179,7 +179,7 @@
       "yearBuilt": 1994,
       "owner": "SAXONY AT CHASE OAKS PARTNERSHIP",
       "software": "Yardi",
-      "proof": "https://saxonyatchaseoaks.securecafe.com/residentservices/saxony-at-chase-oaks/userlogin.aspx?PropLeadSource_159688=portal&_yTrackUser=NDQ3MzIzNjAxNCMxMTMxNjE3ODcx-fR1vofbGPik%253d&_yTrackVisit=NzIxMzk4Mjg4MSMxMDE3MDc2MTA2-6Ijis2Rzuk8%253d&_yTrackReqDT=09391520261009"
+      "proof": "https://saxonyatchaseoaks.securecafe.com/residentservices/saxony-at-chase-oaks/userlogin.aspx?PropLeadSource_159688=portal&_yTrackUser=NDQ3MzQ2MzU0MiMxNjQxNzI5Njcx-06sKh5KJthg%253d&_yTrackVisit=NzIxNDM0MTEyMyMxMDY4MTE1MzU0-Ah6%252fK02tMgI%253d&_yTrackReqDT=17341720261009"
     },
     {
       "id": "1986344",
@@ -233,8 +233,8 @@
       "units": 412,
       "yearBuilt": 1984,
       "owner": "RRE BRENTDALE HOLDINGS LLC",
-      "software": "unknown",
-      "proof": null
+      "software": "Entrata",
+      "proof": "https://thewestsidepac.residentportal.com/"
     },
     {
       "id": "2006652",
@@ -244,8 +244,8 @@
       "units": 408,
       "yearBuilt": 1992,
       "owner": "FRANKEL FAMILY TRUST THE",
-      "software": "unknown",
-      "proof": null
+      "software": "RealPage",
+      "proof": "https://property.onesite.realpage.com/welcomehome?siteId=2354106#url=%23login"
     },
     {
       "id": "2646098",
@@ -266,8 +266,8 @@
       "units": 401,
       "yearBuilt": 2017,
       "owner": "IMP METRO WEST LLC",
-      "software": "unknown",
-      "proof": null
+      "software": "Yardi",
+      "proof": "https://windsormetrowest.securecafe.com/residentservices/metro-west-by-windsor/userlogin.aspx"
     },
     {
       "id": "2614633",
@@ -288,8 +288,8 @@
       "units": 396,
       "yearBuilt": 1999,
       "owner": "CREEKWOOD SPRINGCREEK DEVELOPMENT LP",
-      "software": "unknown",
-      "proof": null
+      "software": "Yardi",
+      "proof": "https://villas-of-spring-creek.securecafe.com/residentservices/villas-of-spring-creek/userlogin.aspx"
     },
     {
       "id": "1627494",
@@ -376,8 +376,8 @@
       "units": 368,
       "yearBuilt": 1995,
       "owner": "DALLAS BENTLEY I LP &",
-      "software": "unknown",
-      "proof": null
+      "software": "Yardi",
+      "proof": "https://bentleyplaceapts.securecafe.com/residentservices/bentley-place/userlogin.aspx?PropLeadSource_159686=portal&_yTrackUser=NDQ3MzU3NjM1MyMxMzA0NTM5NjQ2-wfkN6zeYcEA%253d&_yTrackVisit=NzIxNDUxNzQ2MyMxNzI5NjczMjIw-57u%252f%252f6CZm4E%253d&_yTrackReqDT=08301820261009"
     },
     {
       "id": "2058800",
@@ -399,7 +399,7 @@
       "yearBuilt": 1994,
       "owner": "TREA CARRINGTON PARK LLC",
       "software": "Yardi",
-      "proof": "https://livecarringtonpark.securecafe.com/residentservices/carrington-park-4/userlogin.aspx?PropLeadSource_649995=portal&_yTrackUser=NDQ3MzIzNjg4NSMxMTQyMzM4MzI3-Y1rWf5sRhGU%253d&_yTrackVisit=NzIxMzk4NDI0NiMxNzAwMTc5Mzk1-j%252ftBtPAUc%252fM%253d&_yTrackReqDT=35391520261009"
+      "proof": "https://livecarringtonpark.securecafe.com/residentservices/carrington-park-4/userlogin.aspx?PropLeadSource_649995=portal&_yTrackUser=NDQ3MzQ2NDQ2NiMxMjEzNTgzODgz-Vy3m9RaLdZo%253d&_yTrackVisit=NzIxNDM0MjU2MyMxODg0NzQzMzIy-uhOUfrqxSp8%253d&_yTrackReqDT=44341720261009"
     },
     {
       "id": "2895746",
@@ -453,8 +453,8 @@
       "units": 342,
       "yearBuilt": 1995,
       "owner": "JANRIC ENTERPRISES LTD",
-      "software": "unknown",
-      "proof": null
+      "software": "Yardi",
+      "proof": "https://brooksonpreston.securecafe.com/residentservices/brooks-on-preston/userlogin.aspx"
     },
     {
       "id": "2006888",
@@ -464,8 +464,8 @@
       "units": 338,
       "yearBuilt": 1993,
       "owner": "1100 MEREDITH LANE INC",
-      "software": "unknown",
-      "proof": null
+      "software": "Yardi",
+      "proof": "https://colonnadeatwillowbend.securecafe.com/onlineleasing/colonnade-at-willow-bend/guestlogin.aspx"
     },
     {
       "id": "2929495",
@@ -497,8 +497,8 @@
       "units": 328,
       "yearBuilt": 2017,
       "owner": "NE WEST LEGACY LP",
-      "software": "unknown",
-      "proof": null
+      "software": "RealPage",
+      "proof": "https://lvl29.activebuilding.com/login"
     },
     {
       "id": "2002288",
@@ -510,6 +510,17 @@
       "owner": "PLANO PUBLIC FACILITY CORPORATION",
       "software": "Entrata",
       "proof": "https://avalonatchaseoaksapts.residentportal.com/auth"
+    },
+    {
+      "id": "2779499",
+      "community": "Bridge At Heritage Creek Apartments",
+      "city": "Plano",
+      "address": "1550 W Plano Pkwy",
+      "units": 326,
+      "yearBuilt": 2015,
+      "owner": "BRIDGE AT HERITAGE CREEKSIDE I LLC THE",
+      "software": "RealPage",
+      "proof": "https://7613495.onlineleasing.realpage.com/"
     },
     {
       "id": "2908642",
@@ -553,7 +564,7 @@
       "yearBuilt": 2000,
       "owner": "HEITMAN CREDIT ACQUISITION XL LP",
       "software": "Yardi",
-      "proof": "https://www.rentcafe.com/onlineleasing/mcdermott-place1/guestlogin.aspx"
+      "proof": "https://www.rentcafe.com/residentservices/mcdermott-place1/userlogin.aspx"
     },
     {
       "id": "2543479",
@@ -574,8 +585,8 @@
       "units": 322,
       "yearBuilt": 2014,
       "owner": "BELL VALUE-ADD FUND VIII GATEWAY LP",
-      "software": "unknown",
-      "proof": null
+      "software": "Yardi",
+      "proof": "https://bellgatewayvillage.securecafe.com/onlineleasing/bell-gateway-village/guestlogin.aspx?ssid=c8258fe116883379615dfa8480b78d04"
     },
     {
       "id": "2628294",
@@ -695,8 +706,8 @@
       "units": 300,
       "yearBuilt": 2014,
       "owner": "APARTMENTS AXIS SPE LLC &",
-      "software": "Yardi",
-      "proof": "https://markethaus3700.securecafe.com/residentservices/markethaus-3700/userlogin.aspx?PropLeadSource_2154047=portal&_yTrackUser=NDQ3MzIzODAzNSM5NTUwNjY1NzM%253d-bwa4pWtdXCo%253d&_yTrackVisit=NzIxMzk4NTk5OCM1OTUwMjYxMzE%253d-VEIDU5SWhdE%253d&_yTrackReqDT=10401520261009&ssid=d26ecb10372957e96d466b3cb42636c4"
+      "software": "unknown",
+      "proof": null
     },
     {
       "id": "2786868",
@@ -828,7 +839,7 @@
       "yearBuilt": 1996,
       "owner": "RJW PRESTONWOOD HILLS LP",
       "software": "Yardi",
-      "proof": "https://prestonwoodhillsapts.securecafe.com/residentservices/prestonwood-hills/userlogin.aspx?PropLeadSource_511793=portal&_yTrackUser=NDQ3MzIzODYxNSMxNDIwNTY1ODQ0-zrQb%252bz47jDw%253d&_yTrackVisit=NzIxMzk4NjkwOSM1MDI3Nzg5MTA%253d-uBupDjVa6YA%253d&_yTrackReqDT=29401520261009"
+      "proof": "https://prestonwoodhillsapts.securecafe.com/residentservices/prestonwood-hills/userlogin.aspx"
     },
     {
       "id": "2091841",
@@ -871,8 +882,8 @@
       "units": 268,
       "yearBuilt": 1990,
       "owner": "BRISTLECONE TEXAS LTD",
-      "software": "unknown",
-      "proof": null
+      "software": "RealPage",
+      "proof": "https://46544.onlineleasing.realpage.com/"
     },
     {
       "id": "179611",
@@ -948,8 +959,8 @@
       "units": 255,
       "yearBuilt": 2003,
       "owner": "UDR LEGACY VILLAGE LLC",
-      "software": "unknown",
-      "proof": null
+      "software": "in-house:UDR",
+      "proof": "https://residents.udr.com/"
     },
     {
       "id": "2672946",
@@ -971,7 +982,7 @@
       "yearBuilt": 2012,
       "owner": "BELL VALUE-ADD FUND VIII GATEWAY LP",
       "software": "Yardi",
-      "proof": "https://bellgatewayvillage.securecafe.com/onlineleasing/bell-gateway-village/guestlogin.aspx?ssid=8eebf7115d04c789d1c82cd0138d6b64"
+      "proof": "https://bellgatewayvillage.securecafe.com/onlineleasing/bell-gateway-village/guestlogin.aspx?ssid=c8258fe116883379615dfa8480b78d04"
     },
     {
       "id": "2544000",
@@ -981,8 +992,8 @@
       "units": 253,
       "yearBuilt": 2001,
       "owner": "BEL AIR MULTI 50 LLC &",
-      "software": "unknown",
-      "proof": null
+      "software": "Yardi",
+      "proof": "https://belairdowntown.securecafenet.com/residentservices/bel-air-downtown/userlogin?dropdownlangid=999"
     },
     {
       "id": "1935918",
@@ -992,8 +1003,8 @@
       "units": 250,
       "yearBuilt": 1986,
       "owner": "WWC CHASE OAKS LP",
-      "software": "unknown",
-      "proof": null
+      "software": "Entrata",
+      "proof": "https://villasatchaseoakscaf.residentportal.com/auth"
     },
     {
       "id": "2556799",
@@ -1003,8 +1014,8 @@
       "units": 250,
       "yearBuilt": 2004,
       "owner": "PWA-PLANO INDEPENDENCE SENIOR COMMUNITY LP",
-      "software": "unknown",
-      "proof": null
+      "software": "Yardi",
+      "proof": "https://www.rentcafe.com/residentservices/evergreen-at-plano/userlogin.aspx"
     },
     {
       "id": "2595347",
@@ -1016,6 +1027,17 @@
       "owner": "EQR-KIA ORA PARK LP",
       "software": "unknown",
       "proof": null
+    },
+    {
+      "id": "2122987",
+      "community": "Link At Plano",
+      "city": "Plano",
+      "address": "1013 15Th Pl",
+      "units": 245,
+      "yearBuilt": 2000,
+      "owner": "COVEY PLANO LP",
+      "software": "RealPage",
+      "proof": "https://9251208.onlineleasing.realpage.com/?OLL-source-attribution=Property%20Website"
     },
     {
       "id": "1623283",
@@ -1047,8 +1069,8 @@
       "units": 240,
       "yearBuilt": 1994,
       "owner": "GARDEN GATE PL ACQUISITION LP",
-      "software": "unknown",
-      "proof": null
+      "software": "RealPage",
+      "proof": "https://gardengateplano.activebuilding.com/login"
     },
     {
       "id": "2031655",
@@ -1080,8 +1102,8 @@
       "units": 240,
       "yearBuilt": 2005,
       "owner": "UNIFIED HOUSING OF CHASE OAKS LLC",
-      "software": "unknown",
-      "proof": null
+      "software": "RealPage",
+      "proof": "https://1206646.onlineleasing.realpage.com/"
     },
     {
       "id": "2614632",
@@ -1091,8 +1113,8 @@
       "units": 240,
       "yearBuilt": 2011,
       "owner": "KV ENCORE APARTMENTS LLC",
-      "software": "Yardi",
-      "proof": "https://encore-rcreachpm.securecafe.com/residentservices/the-encore-apartments1/userlogin.aspx?PropLeadSource_1353294=portal&_yTrackUser=NDQ3MzIzOTM5MCMyNjQ3NzM5NTI%253d-XFSdRRRKyNM%253d&_yTrackVisit=NzIxMzk4ODE1MSM0MTI0ODQwNDc%253d-eCWmpMVHpvs%253d&_yTrackReqDT=54401520261009"
+      "software": "RealPage",
+      "proof": "https://dorianandencore.loftliving.com/login"
     },
     {
       "id": "92688",
@@ -1102,8 +1124,8 @@
       "units": 232,
       "yearBuilt": 1978,
       "owner": "PRICEBLU CUSTER LLC",
-      "software": "unknown",
-      "proof": null
+      "software": "RealPage",
+      "proof": "https://17756ollv3.onlineleasing.realpage.com/"
     },
     {
       "id": "365483",
@@ -1113,8 +1135,8 @@
       "units": 232,
       "yearBuilt": 1968,
       "owner": "CLOVER WOODLANDS PLANO OWNER LLC",
-      "software": "unknown",
-      "proof": null
+      "software": "RealPage",
+      "proof": "https://9313892.onlineleasing.realpage.com/"
     },
     {
       "id": "2120057",
@@ -1125,7 +1147,7 @@
       "yearBuilt": 1997,
       "owner": "TOWNS OF CHAPEL HILL APTS LP",
       "software": "Yardi",
-      "proof": "https://townsofchapelhill.securecafenet.com/residentservices/towns-of-chapel-hill/userlogin?ssid=1d39b883428a4408449d2c9708ebab16"
+      "proof": "https://townsofchapelhill.securecafenet.com/residentservices/towns-of-chapel-hill/userlogin?ssid=06c8f869c80fc626c6bcac33d1375ff1"
     },
     {
       "id": "1716655",
@@ -1278,8 +1300,8 @@
       "units": 196,
       "yearBuilt": 1983,
       "owner": "MID-AMERICA APARTMENTS LP",
-      "software": "unknown",
-      "proof": null
+      "software": "Yardi",
+      "proof": "https://maac.securecafe.com/residentservices/apartmentsforrent/userlogin.aspx"
     },
     {
       "id": "1974850",
@@ -1290,7 +1312,7 @@
       "yearBuilt": 1991,
       "owner": "WELLINGTON APARTMENTS UI LLC & DEMING CENTRAL WELLINGTON LLC &",
       "software": "Yardi",
-      "proof": "https://wellingtonplano.securecafe.com/residentservices/wellington-at-willow-bend/userlogin.aspx?PropLeadSource_290974=portal&_yTrackUser=NDQ3MzI0MDEwMSMxMjIwODQyOTI5-6QrtaQncghs%253d&_yTrackVisit=NzIxMzk4OTI1MiMxMzAzNjQ5MDQ0-vDkKNFvAbrU%253d&_yTrackReqDT=16411520261009"
+      "proof": "https://wellingtonplano.securecafe.com/residentservices/wellington-at-willow-bend/userlogin.aspx?PropLeadSource_290974=portal&_yTrackUser=NDQ3MzQ2ODM5MCMxMTQ5NDI5MjYw-BpXYp37yLd4%253d&_yTrackVisit=NzIxNDM0ODY4NCM1MjYzNDYxNzY%253d-mKdqsxPqZEY%253d&_yTrackReqDT=39361720261009"
     },
     {
       "id": "134633",
@@ -1348,17 +1370,6 @@
       "proof": "https://medialibrarycfo.entrata.com/16362/MLv3/4/22/2025/11/12/083646/71226_100120043_68360540afa5b2.08208209790.jpg"
     },
     {
-      "id": "2779499",
-      "community": "Bridge At Heritage Creek Apartments",
-      "city": "Plano",
-      "address": "1550 W Plano Pkwy",
-      "units": 180,
-      "yearBuilt": 2015,
-      "owner": "BRIDGE AT HERITAGE CREEKSIDE I LLC THE",
-      "software": "unknown",
-      "proof": null
-    },
-    {
       "id": "2953639",
       "community": "Mariposa At Communications Parkway Senior - Tc",
       "city": "Plano",
@@ -1366,8 +1377,8 @@
       "units": 180,
       "yearBuilt": 2022,
       "owner": "MARIPOSA COMMUNICATIONS PARKWAY LP",
-      "software": "unknown",
-      "proof": null
+      "software": "RealPage",
+      "proof": "https://mariposacommunicationsparkway.loftliving.com/login"
     },
     {
       "id": "2820374",
@@ -1377,8 +1388,8 @@
       "units": 178,
       "yearBuilt": 2019,
       "owner": "CSH PLANO ACT LLC",
-      "software": "unknown",
-      "proof": null
+      "software": "Entrata",
+      "proof": "https://myorchardatmarketplazatx.prospectportal.com/Apartments/module/application_authentication/"
     },
     {
       "id": "2734943",
@@ -1410,8 +1421,8 @@
       "units": 168,
       "yearBuilt": 2015,
       "owner": "DHC HYB SLC PROPERTIES LLC",
-      "software": "unknown",
-      "proof": null
+      "software": "Entrata",
+      "proof": "https://overtureplanonew.residentportal.com/"
     },
     {
       "id": "2027278",
@@ -1476,8 +1487,8 @@
       "units": 148,
       "yearBuilt": 1985,
       "owner": "PARK SPRINGS TEXAS LLC",
-      "software": "unknown",
-      "proof": null
+      "software": "ResMan",
+      "proof": "https://uswc.myresman.com/Portal/Access/SignIn/PSP"
     },
     {
       "id": "2936294",
@@ -1491,17 +1502,6 @@
       "proof": null
     },
     {
-      "id": "2779500",
-      "community": "Bridge At Heritage Creekside",
-      "city": "Plano",
-      "address": "1550 W Plano Pkwy",
-      "units": 146,
-      "yearBuilt": 2015,
-      "owner": "BRIDGE AT HERITAGE CREEKSIDE I LLC THE",
-      "software": "RealPage",
-      "proof": "https://7613495.onlineleasing.realpage.com/"
-    },
-    {
       "id": "2545145",
       "community": "Mcdermott Park/55",
       "city": "Plano",
@@ -1509,8 +1509,8 @@
       "units": 144,
       "yearBuilt": 2017,
       "owner": "PECAN PUBLIC FACILITY CORPORATION",
-      "software": "unknown",
-      "proof": null
+      "software": "Entrata",
+      "proof": "https://mcdermottpark.residentportal.com/"
     },
     {
       "id": "21924",
@@ -1522,17 +1522,6 @@
       "owner": "1001 CHISHOLM LLC",
       "software": "Yardi",
       "proof": "https://chisholmplace.securecafenet.com/residentservices/chisholm-place-1/userlogin"
-    },
-    {
-      "id": "2122987",
-      "community": "Link At Plano",
-      "city": "Plano",
-      "address": "1013 15Th Pl",
-      "units": 142,
-      "yearBuilt": 2000,
-      "owner": "COVEY PLANO LP",
-      "software": "RealPage",
-      "proof": "https://9251208.onlineleasing.realpage.com/?OLL-source-attribution=Property%20Website"
     },
     {
       "id": "21157",
@@ -1553,8 +1542,8 @@
       "units": 140,
       "yearBuilt": 1983,
       "owner": "WINDSOR PLACE EQUITY ENTERPRISES LLC",
-      "software": "unknown",
-      "proof": null
+      "software": "MRI/RentManager",
+      "proof": "https://www.mrisoftware.com/portalprivacypolicy/"
     },
     {
       "id": "2654207",
@@ -1564,8 +1553,8 @@
       "units": 140,
       "yearBuilt": 1985,
       "owner": "ASHLEY PARK TOWNHOMES LLC",
-      "software": "unknown",
-      "proof": null
+      "software": "Yardi",
+      "proof": "https://livecarringtonpark.securecafe.com/residentservices/carrington-park-4/userlogin.aspx?PropLeadSource_649995=portal&_yTrackUser=NDQ3MzQ2NDQ2NiMxMjEzNTgzODgz-Vy3m9RaLdZo%253d&_yTrackVisit=NzIxNDM0MjU2MyMxODg0NzQzMzIy-uhOUfrqxSp8%253d&_yTrackReqDT=44341720261009"
     },
     {
       "id": "2843129",
@@ -1608,8 +1597,8 @@
       "units": 135,
       "yearBuilt": 1999,
       "owner": "M N PLANO LTD",
-      "software": "unknown",
-      "proof": null
+      "software": "ResMan",
+      "proof": "https://aog.myresman.com/Portal/Access/SignIn/792"
     },
     {
       "id": "148646",
@@ -1641,8 +1630,8 @@
       "units": 123,
       "yearBuilt": 2011,
       "owner": "PECAN PUBLIC FACILITY CORPORATION",
-      "software": "unknown",
-      "proof": null
+      "software": "Entrata",
+      "proof": "https://mcdermottpark.residentportal.com/"
     },
     {
       "id": "2721330",
@@ -1667,17 +1656,6 @@
       "proof": null
     },
     {
-      "id": "2122988",
-      "community": "Bel Air K Station",
-      "city": "Plano",
-      "address": "1013 15Th Pl",
-      "units": 103,
-      "yearBuilt": 2000,
-      "owner": "COVEY PLANO LP",
-      "software": "unknown",
-      "proof": null
-    },
-    {
       "id": "2873533",
       "community": "Gala At Premier Senior Tc",
       "city": "Plano",
@@ -1685,8 +1663,8 @@
       "units": 97,
       "yearBuilt": 2021,
       "owner": "GALA AT PREMIER LP",
-      "software": "unknown",
-      "proof": null
+      "software": "RealPage",
+      "proof": "https://9110723aff.onlineleasing.realpage.com/#k=54874"
     },
     {
       "id": "148655",
@@ -1696,8 +1674,8 @@
       "units": 96,
       "yearBuilt": 1971,
       "owner": "VDS EAT LLC",
-      "software": "Yardi",
-      "proof": "https://valiantresidential-reslisting.securecafe.com/onlineleasing/apartmentsforrent/oleapplication.aspx?utm_nooverride=1&propleadsource_0=portal&stepname=Floorplan&myOlePropertyId=1832122"
+      "software": "RealPage",
+      "proof": "https://villasdelsol.loftliving.com/portal/"
     },
     {
       "id": "2683019",
@@ -1707,8 +1685,8 @@
       "units": 90,
       "yearBuilt": 2011,
       "owner": "UHF TUSCANY VILLAS HOUSING LP",
-      "software": "unknown",
-      "proof": null
+      "software": "RealPage",
+      "proof": "https://property.onesite.realpage.com/welcomehome/?siteId=2444141"
     },
     {
       "id": "2803398",
@@ -1718,8 +1696,8 @@
       "units": 88,
       "yearBuilt": 1970,
       "owner": "TTEP AMBER VISTA LLC",
-      "software": "unknown",
-      "proof": null
+      "software": "ResMan",
+      "proof": "https://fairmont.myresman.com/Portal/Access/SignIn/AV"
     },
     {
       "id": "13310",
@@ -1762,8 +1740,8 @@
       "units": 64,
       "yearBuilt": 2006,
       "owner": "UDR LEGACY VILLAGE LLC",
-      "software": "unknown",
-      "proof": null
+      "software": "in-house:UDR",
+      "proof": "https://residents.udr.com/"
     },
     {
       "id": "769",
@@ -1795,8 +1773,8 @@
       "units": 48,
       "yearBuilt": 2006,
       "owner": "MFREVF V - PLANO LP",
-      "software": "unknown",
-      "proof": null
+      "software": "RealPage",
+      "proof": "https://property.onesite.realpage.com/welcomehome?siteId=4395751"
     },
     {
       "id": "354556",
@@ -1850,8 +1828,8 @@
       "units": 24,
       "yearBuilt": 2019,
       "owner": "BLESSINGS HOME LLC",
-      "software": "unknown",
-      "proof": null
+      "software": "Buildium",
+      "proof": "https://touraineplano.managebuilding.com/Resident/rental-application/new"
     },
     {
       "id": "84143",
@@ -1872,8 +1850,8 @@
       "units": 21,
       "yearBuilt": 1972,
       "owner": "BELLEVIEW PLACE LLC",
-      "software": "unknown",
-      "proof": null
+      "software": "ResMan",
+      "proof": "https://savoy.myresman.com/Portal/Applicants/Availability?a=1471&p=6c234bdc-e250-4c76-8422-5d5344309533"
     },
     {
       "id": "84125",
@@ -1883,8 +1861,8 @@
       "units": 20,
       "yearBuilt": 1965,
       "owner": "OHIO PLAZA LLC",
-      "software": "unknown",
-      "proof": null
+      "software": "RealPage",
+      "proof": "https://login.activebuilding.com/auth/login"
     },
     {
       "id": "1571819",
@@ -1894,8 +1872,8 @@
       "units": 20,
       "yearBuilt": 1983,
       "owner": "CY TOWNHOMES LLC",
-      "software": "unknown",
-      "proof": null
+      "software": "RealPage",
+      "proof": "https://www.realpage.com/"
     },
     {
       "id": "2039505",
@@ -1905,8 +1883,19 @@
       "units": 528,
       "yearBuilt": 1996,
       "owner": "WATERVIEW MARQUIS LP &",
+      "software": "Yardi",
+      "proof": "https://marquiswaterview.securecafe.com/residentservices/marquis-at-waterview/userlogin.aspx"
+    },
+    {
+      "id": "2039698",
+      "community": "Cortland Prairie Creek Apartments",
+      "city": "Richardson",
+      "address": "3560 Alma Rd",
+      "units": 464,
+      "yearBuilt": 1996,
+      "owner": "PRAIRIE CREEK APTS LLC",
       "software": "unknown",
-      "proof": null
+      "proof": "https://apply.funnelleasing.com/873/login"
     },
     {
       "id": "2751130",
@@ -1971,8 +1960,8 @@
       "units": 387,
       "yearBuilt": 2020,
       "owner": "NORTHSIDE CAMPUS PARTNERS 4",
-      "software": "unknown",
-      "proof": null
+      "software": "Entrata",
+      "proof": "https://northside.prospectportal.com/Apartments/module/application_authentication/property[id]/181581/show_in_popup/false/kill_session/1/"
     },
     {
       "id": "2645564",
@@ -2016,7 +2005,7 @@
       "yearBuilt": 2015,
       "owner": "AREIT DALLAS CITYLINE LLC",
       "software": "Yardi",
-      "proof": "https://axis110.securecafe.com/residentservices/axis-1100/userlogin.aspx?ssid=80e7ef0e09932df2f7a1ed3fa3a3d2c3"
+      "proof": "https://axis110.securecafe.com/residentservices/axis-1100/userlogin.aspx?ssid=5062d8f741e4125cd17edc19d23a0dac"
     },
     {
       "id": "2725292",
@@ -2027,7 +2016,7 @@
       "yearBuilt": 2016,
       "owner": "LOFTS AT PALISADES LLC",
       "software": "Yardi",
-      "proof": "https://steadfastmanagement.securecafe.com/residentservices/apartmentsforrent/userlogin.aspx?_yTrackUser=NDQ3MzI0MjM0NiM2NTAwMzc5MTY%253d-HTbhhq4tP2M%253d&_yTrackVisit=NzIxMzk5Mjc0MiMxMTU4NDEwMjE3-4WrbsfX5G6E%253d&_yTrackReqDT=23421520261009"
+      "proof": "https://steadfastmanagement.securecafe.com/residentservices/apartmentsforrent/userlogin.aspx?_yTrackUser=NDQ3MzQ3MTEwMiMxNzIxOTY0OTc4-lP7tWSBwPWY%253d&_yTrackVisit=NzIxNDM1Mjk3MyMyMjk5NDE5NjM%253d-F%252bGk6LeXs7s%253d&_yTrackReqDT=01381720261009"
     },
     {
       "id": "2758568",
@@ -2037,8 +2026,8 @@
       "units": 313,
       "yearBuilt": 2016,
       "owner": "NORTHSIDE CAMPUS PARTNERS LP",
-      "software": "unknown",
-      "proof": null
+      "software": "Entrata",
+      "proof": "https://northside.prospectportal.com/Apartments/module/application_authentication/property[id]/181581/show_in_popup/false/kill_session/1/"
     },
     {
       "id": "2786866",
@@ -2070,8 +2059,8 @@
       "units": 276,
       "yearBuilt": 2014,
       "owner": "PRICE STANDARD AT CITYLINE LP",
-      "software": "unknown",
-      "proof": null
+      "software": "RealPage",
+      "proof": "https://4339250.onlineleasing.realpage.com/"
     },
     {
       "id": "2776050",
@@ -2093,7 +2082,7 @@
       "yearBuilt": 2016,
       "owner": "GARLAND HOUSING FINANCE CORPORATION",
       "software": "Yardi",
-      "proof": "https://citylineriley.rentcafe.com/resident/the-riley3/login?_yTrackUser=NDQ3MzI0Mjc3MiM4NDQ0MDA2MDM%253d-gj6S%252b58D0o0%253d&_yTrackVisit=NzIxMzk5MzM5MiMxMDg5NzMwMjYy-z81JhmvVX%252bs%253d&_yTrackReqDT=36421520261009"
+      "proof": "https://citylineriley.rentcafe.com/resident/the-riley3/login?_yTrackUser=NDQ3MzQ3MTM3MCMyMDg3Njg2ODQ4-YM78St2NyTo%253d&_yTrackVisit=NzIxNDM1MzQyMyMxOTA4MjQxMTAz-laWuOOb54qw%253d&_yTrackReqDT=09381720261009"
     },
     {
       "id": "2811014",
@@ -2103,8 +2092,8 @@
       "units": 246,
       "yearBuilt": 2019,
       "owner": "NORTHSIDE CAMPUS PARTNERS 3 LP",
-      "software": "unknown",
-      "proof": null
+      "software": "Entrata",
+      "proof": "https://northside.prospectportal.com/Apartments/module/application_authentication/property[id]/181581/show_in_popup/false/kill_session/1/"
     },
     {
       "id": "1865440",
@@ -2125,19 +2114,8 @@
       "units": 237,
       "yearBuilt": 2016,
       "owner": "LYLA OWNER LLC",
-      "software": "unknown",
-      "proof": null
-    },
-    {
-      "id": "2039698",
-      "community": "Cortland Prairie Creek Apartments",
-      "city": "Richardson",
-      "address": "3560 Alma Rd",
-      "units": 236,
-      "yearBuilt": 1996,
-      "owner": "PRAIRIE CREEK APTS LLC",
-      "software": "unknown",
-      "proof": null
+      "software": "RealPage",
+      "proof": "https://8309130.onlineleasing.realpage.com/"
     },
     {
       "id": "2784362",
@@ -2148,7 +2126,7 @@
       "yearBuilt": 2017,
       "owner": "BCF I CITYLINE LLC",
       "software": "Yardi",
-      "proof": "https://bellcityline.securecafe.com/onlineleasing/bell-cityline/guestlogin.aspx?ssid=20ee3bdc778aa4d2e8e9593559c58118"
+      "proof": "https://bellcityline.securecafe.com/onlineleasing/bell-cityline/guestlogin.aspx?ssid=2971219b8847e36cbcc2f3af57b2c416"
     },
     {
       "id": "2707424",
@@ -2173,17 +2151,6 @@
       "proof": "https://residents.udr.com/"
     },
     {
-      "id": "2039699",
-      "community": "Cortland Prairie Creek Villas Ii Apartments",
-      "city": "Richardson",
-      "address": "3560 Alma Rd",
-      "units": 228,
-      "yearBuilt": 1998,
-      "owner": "PRAIRIE CREEK APTS LLC",
-      "software": "unknown",
-      "proof": null
-    },
-    {
       "id": "2058066",
       "community": "Breckinridge Point Apartments",
       "city": "Richardson",
@@ -2202,8 +2169,8 @@
       "units": 214,
       "yearBuilt": 1998,
       "owner": "BRECKINRIDGE POINT TX LLC",
-      "software": "unknown",
-      "proof": null
+      "software": "Yardi",
+      "proof": "https://breckinridgepoint.securecafenet.com/residentservices/breckinridge-point0/userlogin"
     },
     {
       "id": "1615274",
@@ -2225,7 +2192,7 @@
       "yearBuilt": 2017,
       "owner": "BCF I CITYLINE LLC",
       "software": "Yardi",
-      "proof": "https://bellcityline.securecafe.com/onlineleasing/bell-cityline/guestlogin.aspx?ssid=20ee3bdc778aa4d2e8e9593559c58118"
+      "proof": "https://bellcityline.securecafe.com/onlineleasing/bell-cityline/guestlogin.aspx?ssid=2971219b8847e36cbcc2f3af57b2c416"
     },
     {
       "id": "2667180",
@@ -2235,8 +2202,8 @@
       "units": 170,
       "yearBuilt": 2011,
       "owner": "EVERGREEN RICHARDSON SENIOR COMMUNITY LP",
-      "software": "unknown",
-      "proof": null
+      "software": "Yardi",
+      "proof": "https://www.rentcafe.com/residentservices/evergreen-at-richardson/userlogin.aspx"
     },
     {
       "id": "2692418",
@@ -2279,8 +2246,8 @@
       "units": 127,
       "yearBuilt": 2013,
       "owner": "PRICE STANDARD AT CITYLINE LP",
-      "software": "unknown",
-      "proof": null
+      "software": "RealPage",
+      "proof": "https://4339250.onlineleasing.realpage.com/"
     },
     {
       "id": "220291",

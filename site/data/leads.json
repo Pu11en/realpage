@@ -1,13 +1,48 @@
 {
   "stats": {
-    "leads": 40,
-    "newThisWeek": 0,
-    "unitsInPlay": 10260,
-    "openingNext12mo": 2
+    "leads": 42,
+    "newThisWeek": 1,
+    "unitsInPlay": 10980,
+    "openingNext12mo": 722
   },
   "leads": [
     {
       "id": "l1",
+      "propertyId": null,
+      "score": 97,
+      "property": "390-unit project at 2520 N Central Expressway",
+      "city": "Richardson",
+      "units": 390,
+      "signalType": "Upcoming",
+      "signal": "Zoning approved Jan 2024",
+      "software": null,
+      "why": "Zoning approved Jan 2024 \u00b7 390 units \u00b7 opens ~2027 \u2192 software not chosen yet.",
+      "sources": [
+        "news"
+      ],
+      "contact": null,
+      "isNew": false
+    },
+    {
+      "id": "l2",
+      "propertyId": null,
+      "score": 95,
+      "property": "351-unit project at 4701 W Park Blvd",
+      "city": "Plano",
+      "units": 351,
+      "signalType": "Upcoming",
+      "signal": "Zoning filed Aug 2026",
+      "software": null,
+      "why": "Zoning filed Aug 2026 \u00b7 351 units \u2192 software not chosen yet.",
+      "sources": [
+        "website"
+      ],
+      "contact": null,
+      "isNew": true
+    },
+    {
+      "id": "l3",
+      "propertyId": null,
       "score": 92,
       "property": "360-unit project in downtown Plano",
       "city": "Plano",
@@ -19,25 +54,46 @@
       "sources": [
         "news"
       ],
+      "contact": null,
       "isNew": false
     },
     {
-      "id": "l2",
+      "id": "l4",
+      "propertyId": null,
       "score": 92,
       "property": "Legacy Arapaho",
       "city": "Richardson",
       "units": 443,
       "signalType": "Upcoming",
-      "signal": "Permit filed Jun 2026",
+      "signal": "Permit issued Jun 2026",
       "software": null,
-      "why": "Permit filed Jun 2026 \u00b7 443 units \u00b7 opens ~2028 \u2192 software not chosen yet.",
+      "why": "Permit issued Jun 2026 \u00b7 443 units \u00b7 opens ~2028 \u2192 software not chosen yet.",
       "sources": [
         "news"
       ],
+      "contact": null,
       "isNew": false
     },
     {
-      "id": "l3",
+      "id": "l5",
+      "propertyId": null,
+      "score": 90,
+      "property": "304-unit project at Spring Creek Pkwy & K Ave",
+      "city": "Plano",
+      "units": 304,
+      "signalType": "Upcoming",
+      "signal": "Zoning filed Jul 2026",
+      "software": null,
+      "why": "Zoning filed Jul 2026 \u00b7 304 units \u2192 software not chosen yet.",
+      "sources": [
+        "website"
+      ],
+      "contact": null,
+      "isNew": false
+    },
+    {
+      "id": "l6",
+      "propertyId": null,
       "score": 86,
       "property": "The Caroline Eastside",
       "city": "Richardson",
@@ -49,10 +105,12 @@
       "sources": [
         "news"
       ],
+      "contact": null,
       "isNew": false
     },
     {
-      "id": "l4",
+      "id": "l7",
+      "propertyId": "1716655",
       "score": 83,
       "property": "Hathaway At Willow Bend",
       "city": "Plano",
@@ -60,29 +118,19 @@
       "signalType": "Sold",
       "signal": "Sold Jun 2026",
       "software": null,
-      "why": "Sold Jun 2026 to Winston Gt Holdings Lp \u00b7 229 units \u00b7 software unknown \u2192 new owner may re-pick software.",
+      "why": "Sold Jun 2026 to WINSTON GT HOLDINGS LP \u00b7 229 units \u00b7 software not yet identified \u2192 new owner may re-pick software.",
       "sources": [
         "county record"
       ],
+      "contact": {
+        "phone": null,
+        "email": "chamilton@francemediainc.com"
+      },
       "isNew": false
     },
     {
-      "id": "l5",
-      "score": 82,
-      "property": "Riachi At One 21 Apartments",
-      "city": "Plano",
-      "units": 402,
-      "signalType": "Sold",
-      "signal": "Sold Dec 2025",
-      "software": null,
-      "why": "Sold Dec 2025 to Mfrevf V - Plano \u00b7 402 units \u00b7 software unknown \u2192 new owner may re-pick software.",
-      "sources": [
-        "county record"
-      ],
-      "isNew": false
-    },
-    {
-      "id": "l6",
+      "id": "l8",
+      "propertyId": "2748103",
       "score": 80,
       "property": "Vantage At Spring Creek",
       "city": "Richardson",
@@ -90,45 +138,20 @@
       "signalType": "Sold",
       "signal": "Sold Jun 2026",
       "software": "Yardi",
-      "why": "Sold Jun 2026 to Trea Routh Creek Tx \u00b7 420 units \u00b7 on Yardi \u2192 new owner may re-pick software.",
+      "why": "Sold Jun 2026 to TREA ROUTH CREEK TX OWNER LP \u00b7 420 units \u00b7 on Yardi \u2192 new owner may re-pick software.",
       "sources": [
         "county record",
         "website"
       ],
-      "isNew": false
-    },
-    {
-      "id": "l7",
-      "score": 80,
-      "property": "Aura Northline",
-      "city": "Plano",
-      "units": 325,
-      "signalType": "Upcoming",
-      "signal": "Under construction Feb 2024",
-      "software": null,
-      "why": "Under construction Feb 2024 \u00b7 325 units \u2192 software not chosen yet.",
-      "sources": [
-        "news"
-      ],
-      "isNew": false
-    },
-    {
-      "id": "l8",
-      "score": 78,
-      "property": "Orchards Market Plaza Senior Apts",
-      "city": "Plano",
-      "units": 178,
-      "signalType": "Sold",
-      "signal": "Sold Jul 2026",
-      "software": null,
-      "why": "Sold Jul 2026 to Csh Plano Act Llc \u00b7 178 units \u00b7 software unknown \u2192 new owner may re-pick software.",
-      "sources": [
-        "county record"
-      ],
+      "contact": {
+        "phone": "(844) 493-7356",
+        "email": null
+      },
       "isNew": false
     },
     {
       "id": "l9",
+      "propertyId": "2041713",
       "score": 77,
       "property": "Ellington",
       "city": "Plano",
@@ -136,15 +159,20 @@
       "signalType": "Sold",
       "signal": "Sold Jul 2026",
       "software": "Yardi",
-      "why": "Sold Jul 2026 to S2 Preston Park Lp \u00b7 266 units \u00b7 on Yardi \u2192 new owner may re-pick software.",
+      "why": "Sold Jul 2026 to S2 PRESTON PARK LP \u00b7 266 units \u00b7 on Yardi \u2192 new owner may re-pick software.",
       "sources": [
         "county record",
         "website"
       ],
+      "contact": {
+        "phone": "(866) 416-4210",
+        "email": "theellingtontx.webpropertywebsite.avenue5@assist.rent"
+      },
       "isNew": false
     },
     {
       "id": "l10",
+      "propertyId": null,
       "score": 76,
       "property": "Polk St Multifamily",
       "city": "Richardson",
@@ -156,10 +184,12 @@
       "sources": [
         "news"
       ],
+      "contact": null,
       "isNew": false
     },
     {
       "id": "l11",
+      "propertyId": "2095999",
       "score": 75,
       "property": "23Hundred @ Ridgeview",
       "city": "Plano",
@@ -167,14 +197,16 @@
       "signalType": "Sold",
       "signal": "Sold Jun 2025",
       "software": null,
-      "why": "Sold Jun 2025 to Ch Realty X Mf \u00b7 480 units \u00b7 software unknown \u2192 new owner may re-pick software.",
+      "why": "Sold Jun 2025 \u00b7 480 units \u00b7 software not yet identified \u2192 new owner may re-pick software.",
       "sources": [
         "county record"
       ],
+      "contact": null,
       "isNew": false
     },
     {
       "id": "l12",
+      "propertyId": null,
       "score": 75,
       "property": "Haggard Farm Townhomes",
       "city": "Plano",
@@ -186,10 +218,12 @@
       "sources": [
         "permit"
       ],
+      "contact": null,
       "isNew": false
     },
     {
       "id": "l13",
+      "propertyId": null,
       "score": 74,
       "property": "The Parks at Legacy West",
       "city": "Plano",
@@ -201,25 +235,29 @@
       "sources": [
         "news"
       ],
+      "contact": null,
       "isNew": false
     },
     {
       "id": "l14",
+      "propertyId": null,
       "score": 74,
       "property": "The Buckley",
       "city": "Plano",
       "units": 338,
       "signalType": "Upcoming",
-      "signal": "Now leasing Apr 2026",
+      "signal": "Leasing Apr 2026",
       "software": null,
-      "why": "Now leasing Apr 2026 \u00b7 338 units \u2192 software not chosen yet.",
+      "why": "Leasing Apr 2026 \u00b7 338 units \u2192 software not chosen yet.",
       "sources": [
         "news"
       ],
+      "contact": null,
       "isNew": false
     },
     {
       "id": "l15",
+      "propertyId": null,
       "score": 73,
       "property": "Apartment complex on Sherman Street",
       "city": "Richardson",
@@ -231,10 +269,50 @@
       "sources": [
         "news"
       ],
+      "contact": null,
       "isNew": false
     },
     {
       "id": "l16",
+      "propertyId": "2646098",
+      "score": 70,
+      "property": "Riachi At One 21 Apartments",
+      "city": "Plano",
+      "units": 402,
+      "signalType": "Sold",
+      "signal": "Owner changed to MFREVF V - PLANO LP",
+      "software": null,
+      "why": "Owner changed to MFREVF V - PLANO LP \u00b7 402 units \u00b7 software not yet identified \u2192 new owner may re-pick software.",
+      "sources": [
+        "county record"
+      ],
+      "contact": null,
+      "isNew": false
+    },
+    {
+      "id": "l17",
+      "propertyId": "2820374",
+      "score": 68,
+      "property": "Orchards Market Plaza Senior Apts",
+      "city": "Plano",
+      "units": 178,
+      "signalType": "Sold",
+      "signal": "Sold Jul 2026",
+      "software": "Entrata",
+      "why": "Sold Jul 2026 to CSH PLANO ACT LLC \u00b7 178 units \u00b7 on Entrata \u2192 new owner may re-pick software.",
+      "sources": [
+        "county record",
+        "website"
+      ],
+      "contact": {
+        "phone": "(682) 418-2225",
+        "email": null
+      },
+      "isNew": false
+    },
+    {
+      "id": "l18",
+      "propertyId": "2721394",
       "score": 67,
       "property": "Axis 110",
       "city": "Richardson",
@@ -242,15 +320,17 @@
       "signalType": "Sold",
       "signal": "Sold Dec 2025",
       "software": "Yardi",
-      "why": "Sold Dec 2025 to Areit Dallas Cityline Llc \u00b7 351 units \u00b7 on Yardi \u2192 new owner may re-pick software.",
+      "why": "Sold Dec 2025 to AREIT DALLAS CITYLINE LLC \u00b7 351 units \u00b7 on Yardi \u2192 new owner may re-pick software.",
       "sources": [
         "county record",
         "website"
       ],
+      "contact": null,
       "isNew": false
     },
     {
-      "id": "l17",
+      "id": "l19",
+      "propertyId": "2058069",
       "score": 67,
       "property": "Legends At Chase Oaks Apartments",
       "city": "Plano",
@@ -258,60 +338,54 @@
       "signalType": "Sold",
       "signal": "Sold Sep 2025",
       "software": "Yardi",
-      "why": "Sold Sep 2025 to 701 Legacy Drive Spe \u00b7 346 units \u00b7 on Yardi \u2192 new owner may re-pick software.",
+      "why": "Sold Sep 2025 to 701 LEGACY DRIVE SPE LLC \u00b7 346 units \u00b7 on Yardi \u2192 new owner may re-pick software.",
       "sources": [
         "county record",
         "website"
       ],
+      "contact": {
+        "phone": "(972) 440-1482",
+        "email": null
+      },
       "isNew": false
     },
     {
-      "id": "l18",
+      "id": "l20",
+      "propertyId": null,
       "score": 67,
       "property": "Collin Creek Multifamily",
       "city": "Plano",
       "units": null,
       "signalType": "Upcoming",
-      "signal": "Permit filed Jun 2026",
+      "signal": "Permit issued Jun 2026",
       "software": null,
-      "why": "Permit filed Jun 2026 \u00b7 opens ~2027 \u2192 software not chosen yet.",
+      "why": "Permit issued Jun 2026 \u00b7 opens ~2027 \u2192 software not chosen yet.",
       "sources": [
         "permit"
       ],
+      "contact": null,
       "isNew": false
     },
     {
-      "id": "l19",
+      "id": "l21",
+      "propertyId": null,
       "score": 67,
       "property": "JLB West Cityline",
       "city": "Richardson",
       "units": null,
       "signalType": "Upcoming",
-      "signal": "Permit filed",
+      "signal": "Permit issued",
       "software": null,
-      "why": "Permit filed \u00b7 opens ~2027 \u2192 software not chosen yet.",
+      "why": "Permit issued \u00b7 opens ~2027 \u2192 software not chosen yet.",
       "sources": [
         "permit"
       ],
+      "contact": null,
       "isNew": false
     },
     {
-      "id": "l20",
-      "score": 65,
-      "property": "Woodlands Of Plano Apartments Tc",
-      "city": "Plano",
-      "units": 232,
-      "signalType": "Sold",
-      "signal": "Sold Nov 2025",
-      "software": null,
-      "why": "Sold Nov 2025 to Clover Woodlands Plano Owner \u00b7 232 units \u00b7 software unknown \u2192 new owner may re-pick software.",
-      "sources": [
-        "county record"
-      ],
-      "isNew": false
-    },
-    {
-      "id": "l21",
+      "id": "l22",
+      "propertyId": "2750390",
       "score": 65,
       "property": "Grand At Legacy West Apartments",
       "city": "Plano",
@@ -319,15 +393,20 @@
       "signalType": "Sold",
       "signal": "Sold Apr 2025",
       "software": "Yardi",
-      "why": "Sold Apr 2025 to Lw Owner 1 Llc \u00b7 621 units \u00b7 on Yardi \u2192 new owner may re-pick software.",
+      "why": "Sold Apr 2025 to LW OWNER 1 LLC \u00b7 621 units \u00b7 on Yardi \u2192 new owner may re-pick software.",
       "sources": [
         "county record",
         "website"
       ],
+      "contact": {
+        "phone": "(469) 564-5726",
+        "email": null
+      },
       "isNew": false
     },
     {
-      "id": "l22",
+      "id": "l23",
+      "propertyId": "2945424",
       "score": 64,
       "property": "Park Residences Plano",
       "city": "Plano",
@@ -335,15 +414,20 @@
       "signalType": "Sold",
       "signal": "Sold Mar 2026",
       "software": "Yardi",
-      "why": "Sold Mar 2026 to Park Residences Plano West \u00b7 318 units \u00b7 on Yardi \u2192 new owner may re-pick software.",
+      "why": "Sold Mar 2026 to PARK RESIDENCES PLANO WEST LLC \u00b7 318 units \u00b7 on Yardi \u2192 new owner may re-pick software.",
       "sources": [
         "county record",
         "website"
       ],
+      "contact": {
+        "phone": "(877) 729-5587",
+        "email": null
+      },
       "isNew": false
     },
     {
-      "id": "l23",
+      "id": "l24",
+      "propertyId": "1627494",
       "score": 64,
       "property": "The Dayton",
       "city": "Plano",
@@ -351,15 +435,20 @@
       "signalType": "Sold",
       "signal": "Sold Apr 2025",
       "software": "ResMan",
-      "why": "Sold Apr 2025 to Pecos Housing Finance Corporation \u00b7 389 units \u00b7 on ResMan \u2192 new owner may re-pick software.",
+      "why": "Sold Apr 2025 to PECOS HOUSING FINANCE CORPORATION \u00b7 389 units \u00b7 on ResMan \u2192 new owner may re-pick software.",
       "sources": [
         "county record",
         "website"
       ],
+      "contact": {
+        "phone": "(972) 895-8149",
+        "email": null
+      },
       "isNew": false
     },
     {
-      "id": "l24",
+      "id": "l25",
+      "propertyId": "1503117",
       "score": 63,
       "property": "Bellevue At Spring Creek Apartments",
       "city": "Plano",
@@ -367,14 +456,16 @@
       "signalType": "Sold",
       "signal": "Sold Jun 2025",
       "software": null,
-      "why": "Sold Jun 2025 to Spring Creek 278 Llc \u00b7 278 units \u00b7 software unknown \u2192 new owner may re-pick software.",
+      "why": "Sold Jun 2025 to SPRING CREEK 278 LLC \u00b7 278 units \u00b7 software not yet identified \u2192 new owner may re-pick software.",
       "sources": [
         "county record"
       ],
+      "contact": null,
       "isNew": false
     },
     {
-      "id": "l25",
+      "id": "l26",
+      "propertyId": "2058512",
       "score": 63,
       "property": "Creekside At Legacy Apartments",
       "city": "Plano",
@@ -382,15 +473,20 @@
       "signalType": "Sold",
       "signal": "Sold Sep 2024",
       "software": "RealPage",
-      "why": "Sold Sep 2024 to Key Creekside Llc \u00b7 380 units \u00b7 on RealPage \u2192 new owner may re-pick software.",
+      "why": "Sold Sep 2024 to KEY CREEKSIDE LLC \u00b7 380 units \u00b7 on RealPage \u2192 new owner may re-pick software.",
       "sources": [
         "county record",
         "website"
       ],
+      "contact": {
+        "phone": "(877) 541-1205",
+        "email": null
+      },
       "isNew": false
     },
     {
-      "id": "l26",
+      "id": "l27",
+      "propertyId": null,
       "score": 63,
       "property": "Haggard Farm",
       "city": "Plano",
@@ -402,56 +498,32 @@
       "sources": [
         "news"
       ],
-      "isNew": false
-    },
-    {
-      "id": "l27",
-      "score": 59,
-      "property": "Overture Plano Senior Apartments",
-      "city": "Plano",
-      "units": 168,
-      "signalType": "Sold",
-      "signal": "Sold Sep 2025",
-      "software": null,
-      "why": "Sold Sep 2025 to Dhc Hyb Slc Properties \u00b7 168 units \u00b7 software unknown \u2192 new owner may re-pick software.",
-      "sources": [
-        "county record"
-      ],
+      "contact": null,
       "isNew": false
     },
     {
       "id": "l28",
-      "score": 57,
-      "property": "Mcdermott Place Apartments",
+      "propertyId": "2560139",
+      "score": 60,
+      "property": "Axis 3700",
       "city": "Plano",
-      "units": 324,
+      "units": 300,
       "signalType": "Sold",
-      "signal": "Sold Jul 2025",
-      "software": "Yardi",
-      "why": "Sold Jul 2025 to Heitman Credit Acquisition Xl \u00b7 324 units \u00b7 on Yardi \u2192 new owner may re-pick software.",
+      "signal": "Owner changed to APARTMENTS AXIS SPE LLC",
+      "software": null,
+      "why": "Owner changed to APARTMENTS AXIS SPE LLC \u00b7 300 units \u00b7 software not yet identified \u2192 new owner may re-pick software.",
       "sources": [
-        "county record",
-        "website"
+        "county record"
       ],
+      "contact": {
+        "phone": "(972) 362-4050",
+        "email": null
+      },
       "isNew": false
     },
     {
       "id": "l29",
-      "score": 56,
-      "property": "Breckenridge Point Apartments",
-      "city": "Richardson",
-      "units": 214,
-      "signalType": "Sold",
-      "signal": "Sold Jun 2025",
-      "software": null,
-      "why": "Sold Jun 2025 to Breckinridge Point Tx Llc \u00b7 214 units \u00b7 software unknown \u2192 new owner may re-pick software.",
-      "sources": [
-        "county record"
-      ],
-      "isNew": false
-    },
-    {
-      "id": "l30",
+      "propertyId": "1615274",
       "score": 56,
       "property": "Spring Pointe Apartments",
       "city": "Richardson",
@@ -459,30 +531,16 @@
       "signalType": "Sold",
       "signal": "Sold Apr 2025",
       "software": null,
-      "why": "Sold Apr 2025 to The Cameron County Housing \u00b7 208 units \u00b7 software unknown \u2192 new owner may re-pick software.",
+      "why": "Sold Apr 2025 to THE CAMERON COUNTY HOUSING FINANCE CORPORATION \u00b7 208 units \u00b7 software not yet identified \u2192 new owner may re-pick software.",
       "sources": [
         "county record"
       ],
+      "contact": null,
       "isNew": false
     },
     {
-      "id": "l31",
-      "score": 55,
-      "property": "Axis 3700",
-      "city": "Plano",
-      "units": 300,
-      "signalType": "Sold",
-      "signal": "Sold Sep 2025",
-      "software": "Yardi",
-      "why": "Sold Sep 2025 to Apartments Axis Spe Llc \u00b7 300 units \u00b7 on Yardi \u2192 new owner may re-pick software.",
-      "sources": [
-        "county record",
-        "website"
-      ],
-      "isNew": false
-    },
-    {
-      "id": "l32",
+      "id": "l30",
+      "propertyId": "1976049",
       "score": 55,
       "property": "Lakeshore At Preston Apartments",
       "city": "Plano",
@@ -490,31 +548,83 @@
       "signalType": "Sold",
       "signal": "Sold Sep 2024",
       "software": "Yardi",
-      "why": "Sold Sep 2024 to Simfa Lakeshore Fee Simple \u00b7 302 units \u00b7 on Yardi \u2192 new owner may re-pick software.",
+      "why": "Sold Sep 2024 to SIMFA LAKESHORE FEE SIMPLE LLC \u00b7 302 units \u00b7 on Yardi \u2192 new owner may re-pick software.",
       "sources": [
         "county record",
         "website"
       ],
+      "contact": {
+        "phone": "(833) 590-1453",
+        "email": "accessibility@apartments247.com"
+      },
       "isNew": false
     },
     {
-      "id": "l33",
+      "id": "l31",
+      "propertyId": "2908642",
       "score": 53,
       "property": "The Ludlow",
       "city": "Plano",
       "units": 326,
       "signalType": "Sold",
-      "signal": "Sold Feb 2024",
+      "signal": "Owner changed to HERITAGE CREEKSIDE BLOCK B OWNER LLC",
       "software": "RealPage",
-      "why": "Sold Feb 2024 to Heritage Creekside Block B \u00b7 326 units \u00b7 on RealPage \u2192 new owner may re-pick software.",
+      "why": "Owner changed to HERITAGE CREEKSIDE BLOCK B OWNER LLC \u00b7 326 units \u00b7 on RealPage \u2192 new owner may re-pick software.",
       "sources": [
         "county record",
         "website"
       ],
+      "contact": {
+        "phone": "(469) 797-0770",
+        "email": null
+      },
+      "isNew": false
+    },
+    {
+      "id": "l32",
+      "propertyId": "2504520",
+      "score": 52,
+      "property": "Mcdermott Place Apartments",
+      "city": "Plano",
+      "units": 324,
+      "signalType": "Sold",
+      "signal": "Owner changed to HEITMAN CREDIT ACQUISITION XL LP",
+      "software": "Yardi",
+      "why": "Owner changed to HEITMAN CREDIT ACQUISITION XL LP \u00b7 324 units \u00b7 on Yardi \u2192 new owner may re-pick software.",
+      "sources": [
+        "county record",
+        "website"
+      ],
+      "contact": {
+        "phone": "(866) 610-7106",
+        "email": "mcdermottplace@willowbridgepc.com"
+      },
+      "isNew": false
+    },
+    {
+      "id": "l33",
+      "propertyId": "2710065",
+      "score": 49,
+      "property": "Overture Plano Senior Apartments",
+      "city": "Plano",
+      "units": 168,
+      "signalType": "Sold",
+      "signal": "Sold Sep 2025",
+      "software": "Entrata",
+      "why": "Sold Sep 2025 to DHC HYB SLC PROPERTIES LLC \u00b7 168 units \u00b7 on Entrata \u2192 new owner may re-pick software.",
+      "sources": [
+        "county record",
+        "website"
+      ],
+      "contact": {
+        "phone": "(469) 240-6328",
+        "email": null
+      },
       "isNew": false
     },
     {
       "id": "l34",
+      "propertyId": "2058066",
       "score": 48,
       "property": "Breckinridge Point Apartments",
       "city": "Richardson",
@@ -522,15 +632,41 @@
       "signalType": "Sold",
       "signal": "Sold Jun 2025",
       "software": "Yardi",
-      "why": "Sold Jun 2025 to Breckinridge Point Tx Llc \u00b7 226 units \u00b7 on Yardi \u2192 new owner may re-pick software.",
+      "why": "Sold Jun 2025 to BRECKINRIDGE POINT TX LLC \u00b7 226 units \u00b7 on Yardi \u2192 new owner may re-pick software.",
       "sources": [
         "county record",
         "website"
       ],
+      "contact": {
+        "phone": "(972) 885-3328",
+        "email": null
+      },
       "isNew": false
     },
     {
       "id": "l35",
+      "propertyId": "2058065",
+      "score": 46,
+      "property": "Breckenridge Point Apartments",
+      "city": "Richardson",
+      "units": 214,
+      "signalType": "Sold",
+      "signal": "Sold Jun 2025",
+      "software": "Yardi",
+      "why": "Sold Jun 2025 to BRECKINRIDGE POINT TX LLC \u00b7 214 units \u00b7 on Yardi \u2192 new owner may re-pick software.",
+      "sources": [
+        "county record",
+        "website"
+      ],
+      "contact": {
+        "phone": "(972) 885-3328",
+        "email": null
+      },
+      "isNew": false
+    },
+    {
+      "id": "l36",
+      "propertyId": "1511233",
       "score": 45,
       "property": "The Wexley",
       "city": "Plano",
@@ -538,15 +674,20 @@
       "signalType": "Sold",
       "signal": "Sold Aug 2025",
       "software": "Yardi",
-      "why": "Sold Aug 2025 to Harvestree Owner Llc \u00b7 204 units \u00b7 on Yardi \u2192 new owner may re-pick software.",
+      "why": "Sold Aug 2025 to HARVESTREE OWNER LLC \u00b7 204 units \u00b7 on Yardi \u2192 new owner may re-pick software.",
       "sources": [
         "county record",
         "website"
       ],
+      "contact": {
+        "phone": "(972) 784-8600",
+        "email": "thewexley@founderspropertymanagement.com"
+      },
       "isNew": false
     },
     {
-      "id": "l36",
+      "id": "l37",
+      "propertyId": "2734943",
       "score": 43,
       "property": "The Holland",
       "city": "Plano",
@@ -554,15 +695,41 @@
       "signalType": "Sold",
       "signal": "Sold Apr 2025",
       "software": "Yardi",
-      "why": "Sold Apr 2025 to Lw Residential Partners Lp \u00b7 175 units \u00b7 on Yardi \u2192 new owner may re-pick software.",
+      "why": "Sold Apr 2025 to LW RESIDENTIAL PARTNERS LP \u00b7 175 units \u00b7 on Yardi \u2192 new owner may re-pick software.",
       "sources": [
         "county record",
         "website"
       ],
+      "contact": {
+        "phone": "(214) 617-2310",
+        "email": null
+      },
       "isNew": false
     },
     {
-      "id": "l37",
+      "id": "l38",
+      "propertyId": "365483",
+      "score": 43,
+      "property": "Woodlands Of Plano Apartments Tc",
+      "city": "Plano",
+      "units": 232,
+      "signalType": "Sold",
+      "signal": "Owner changed to CLOVER WOODLANDS PLANO OWNER LLC",
+      "software": "RealPage",
+      "why": "Owner changed to CLOVER WOODLANDS PLANO OWNER LLC \u00b7 232 units \u00b7 on RealPage \u2192 new owner may re-pick software.",
+      "sources": [
+        "county record",
+        "website"
+      ],
+      "contact": {
+        "phone": "(940) 251-0936",
+        "email": "accessibility@apartments247.com"
+      },
+      "isNew": false
+    },
+    {
+      "id": "l39",
+      "propertyId": "2027278",
       "score": 42,
       "property": "The Calvin",
       "city": "Plano",
@@ -570,15 +737,20 @@
       "signalType": "Sold",
       "signal": "Sold Dec 2024",
       "software": "AppFolio",
-      "why": "Sold Dec 2024 to Rc Calvin Llc \u00b7 167 units \u00b7 on AppFolio \u2192 new owner may re-pick software.",
+      "why": "Sold Dec 2024 to RC CALVIN LLC \u00b7 167 units \u00b7 on AppFolio \u2192 new owner may re-pick software.",
       "sources": [
         "county record",
         "website"
       ],
+      "contact": {
+        "phone": "(469) 430-2926",
+        "email": "calvin@reapmgt.com"
+      },
       "isNew": false
     },
     {
-      "id": "l38",
+      "id": "l40",
+      "propertyId": "2808931",
       "score": 41,
       "property": "Instrata At Legacy West",
       "city": "Plano",
@@ -586,15 +758,20 @@
       "signalType": "Sold",
       "signal": "Sold Apr 2025",
       "software": "Yardi",
-      "why": "Sold Apr 2025 to Lw Owner 2 Llc \u00b7 161 units \u00b7 on Yardi \u2192 new owner may re-pick software.",
+      "why": "Sold Apr 2025 to LW OWNER 2 LLC \u00b7 161 units \u00b7 on Yardi \u2192 new owner may re-pick software.",
       "sources": [
         "county record",
         "website"
       ],
+      "contact": {
+        "phone": "(469) 804-6577",
+        "email": null
+      },
       "isNew": false
     },
     {
-      "id": "l39",
+      "id": "l41",
+      "propertyId": "148646",
       "score": 38,
       "property": "Alta Vista Apartments",
       "city": "Plano",
@@ -602,15 +779,20 @@
       "signalType": "Sold",
       "signal": "Sold Feb 2025",
       "software": "RealPage",
-      "why": "Sold Feb 2025 to Alta Vista Apartments & \u00b7 133 units \u00b7 on RealPage \u2192 new owner may re-pick software.",
+      "why": "Sold Feb 2025 to ALTA VISTA APARTMENTS & TJFL LEGACY LP \u00b7 133 units \u00b7 on RealPage \u2192 new owner may re-pick software.",
       "sources": [
         "county record",
         "website"
       ],
+      "contact": {
+        "phone": "(972) 424-0820",
+        "email": null
+      },
       "isNew": false
     },
     {
-      "id": "l40",
+      "id": "l42",
+      "propertyId": "1808832",
       "score": 32,
       "property": "Aspen Court Apartments",
       "city": "Plano",
@@ -618,11 +800,15 @@
       "signalType": "Sold",
       "signal": "Sold May 2025",
       "software": "ResMan",
-      "why": "Sold May 2025 to Amelia 77 Llc \u00b7 70 units \u00b7 on ResMan \u2192 new owner may re-pick software.",
+      "why": "Sold May 2025 to AMELIA 77 LLC \u00b7 70 units \u00b7 on ResMan \u2192 new owner may re-pick software.",
       "sources": [
         "county record",
         "website"
       ],
+      "contact": {
+        "phone": "(469) 517-3651",
+        "email": null
+      },
       "isNew": false
     }
   ]
