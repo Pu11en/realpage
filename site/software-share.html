@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>PropertyStack -- Software Share</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="shell" id="app-shell"></div>
+  <script src="js/app.js"></script>
+  <script>
+    renderShell("share");
+
+    loadData("data/software-share.json").then((data) => {
+      const content = document.getElementById("page-content");
+      const total = data.share.reduce((sum, v) => sum + v.properties, 0);
+      let angle = 0;
+      const gradientStops = data.share.map((v) => {
+        const start = angle;
+        angle += (v.properties / total) * 360;
+        return `${v.color} ${start}deg ${angle}deg`;
+      }).join(", ");
+      const maxUnits = Math.max(...data.share.map((v) => v.units));
+
+      content.innerHTML = `
+        <h1>Software Share</h1>
+        <div class="meta">${data.note}</div>
+        <div class="cards-row">
+          <div class="card">
+            <div style="font-size:13px;color:var(--text-muted);margin-bottom:12px;">Share by properties</div>
+            <div style="width:140px;height:140px;border-radius:999px;background:conic-gradient(${gradientStops});margin:0 auto;"></div>
+          </div>
+          <div class="card">
+            <div style="font-size:13px;color:var(--text-muted);margin-bottom:12px;">Share by units</div>
+            <div style="display:flex;align-items:flex-end;gap:10px;height:140px;">
+              ${data.share.map((v) => `
+                <div style="flex:1;text-align:center;">
+                  <div style="height:${Math.round(120 * v.units / maxUnits)}px;background:${v.color};border-radius:4px 4px 0 0;"></div>
+                  <div style="font-size:10px;color:var(--text-muted);margin-top:4px;">${v.vendor}</div>
+                </div>
+              `).join("")}
+            </div>
+          </div>
+        </div>
+        <table>
+          <thead><tr><th>Software</th><th>Properties</th><th>Units</th><th>%</th><th>Change since last run</th></tr></thead>
+          <tbody>
+            ${data.share.map((v) => `
+              <tr>
+                <td><span style="display:inline-block;width:8px;height:8px;border-radius:999px;background:${v.color};margin-right:8px;"></span>${v.vendor}</td>
+                <td>${v.properties}</td>
+                <td>${v.units.toLocaleString()}</td>
+                <td>${v.pctOfIdentifiedProperties}%</td>
+                <td style="color:var(--text-dim);">--</td>
+              </tr>
+            `).join("")}
+          </tbody>
+        </table>
+      `;
+    });
+  </script>
+</body>
+</html>

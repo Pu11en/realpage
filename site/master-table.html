@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>PropertyStack -- Master Table</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="shell" id="app-shell"></div>
+  <script src="js/app.js"></script>
+  <script>
+    renderShell("table");
+
+    loadData("data/properties.json").then((data) => {
+      const content = document.getElementById("page-content");
+      const s = data.stats;
+      const f = data.funnel;
+      content.innerHTML = `
+        <h1>Master Table</h1>
+        <div class="meta">Every apartment in the area. Generated from ${data.generatedFrom}.</div>
+        <div class="stats-row">
+          <div class="stat-card"><div class="value">${s.apartments}</div><div class="label">Apartments</div></div>
+          <div class="stat-card"><div class="value">${s.totalUnits.toLocaleString()}</div><div class="label">Total units</div></div>
+          <div class="stat-card"><div class="value">${s.softwareIdentified} (${s.softwareIdentifiedPct}%)</div><div class="label">Software identified</div></div>
+          <div class="stat-card"><div class="value">${s.topSoftware || "--"}</div><div class="label">Top software</div></div>
+        </div>
+        <div class="filters" style="justify-content:space-between;">
+          <div style="display:flex;gap:8px;">
+            <input placeholder="Search communities..." />
+            <select><option>All cities</option></select>
+            <select><option>All software</option></select>
+            <select><option>Any year built</option></select>
+          </div>
+          <button class="btn">Export CSV</button>
+        </div>
+        <table>
+          <thead>
+            <tr><th>Community</th><th>City</th><th>Units</th><th>Year built</th><th>Owner</th><th>Software</th><th>Proof</th></tr>
+          </thead>
+          <tbody>
+            ${data.properties.slice(0, 60).map((p) => `
+              <tr class="${isDimmedRow(p.software) ? "dimmed" : ""}">
+                <td><a href="property.html?id=${p.id}" style="color:var(--text);text-decoration:none;">${p.community}</a></td>
+                <td>${p.city}</td>
+                <td>${p.units ?? "--"}</td>
+                <td>${p.yearBuilt ?? "--"}</td>
+                <td>${p.owner}</td>
+                <td>${vendorPill(p.software, data.vendorColors)}</td>
+                <td>${p.proof ? `<a href="${p.proof}" style="color:var(--accent);">link</a>` : "--"}</td>
+              </tr>
+            `).join("")}
+          </tbody>
+        </table>
+        <div class="funnel">
+          <div class="step"><div class="n">${f.inArea}</div><div class="label">In area</div></div>
+          <div class="step"><div class="n">${f.websiteFound ?? "--"}</div><div class="label">Website found</div></div>
+          <div class="step"><div class="n">${f.checked}</div><div class="label">Checked</div></div>
+          <div class="step"><div class="n">${f.identified}</div><div class="label">Identified</div></div>
+          <div class="step"><div class="n">${f.unknown}</div><div class="label">Unknown</div></div>
+        </div>
+        <div style="color:var(--text-dim);font-size:12px;margin-top:8px;">Showing first 60 of ${data.properties.length} rows.</div>
+      `;
+    });
+  </script>
+</body>
+</html>

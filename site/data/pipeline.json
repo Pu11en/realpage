@@ -1,0 +1,47 @@
+{
+  "steps": [
+    {
+      "name": "find-apartments",
+      "count": 207
+    },
+    {
+      "name": "find-website",
+      "count": 140
+    },
+    {
+      "name": "detect-software",
+      "count": 104
+    },
+    {
+      "name": "build-table",
+      "count": 207
+    },
+    {
+      "name": "leads",
+      "count": 40
+    }
+  ],
+  "runs": [
+    {
+      "runId": "20260910T110348-build-table",
+      "area": "plano-richardson",
+      "propertiesProcessed": 207,
+      "pctIdentified": 50.2,
+      "costUsd": null,
+      "durationSec": null,
+      "models": "not logged per run yet -- see propertystack/runs/*.json"
+    }
+  ],
+  "accuracy": {
+    "correct": 0,
+    "total": 0,
+    "note": "PLACEHOLDER -- no hand-check log exists yet."
+  },
+  "costPerArea": {
+    "note": "PLACEHOLDER -- no real run-cost tracking yet."
+  },
+  "reviewQueue": {
+    "status": "PLACEHOLDER",
+    "rows": []
+  }
+}

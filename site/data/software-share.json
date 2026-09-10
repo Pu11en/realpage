@@ -1,0 +1,69 @@
+{
+  "generatedFrom": "propertystack/data/plano-richardson/master.csv",
+  "note": "changeSinceLastRun is not tracked yet -- needs a second run to diff against.",
+  "share": [
+    {
+      "vendor": "Yardi",
+      "color": "#60a5fa",
+      "properties": 56,
+      "units": 16450,
+      "pctOfIdentifiedProperties": 53.8
+    },
+    {
+      "vendor": "RealPage",
+      "color": "#f472b6",
+      "properties": 17,
+      "units": 4526,
+      "pctOfIdentifiedProperties": 16.3
+    },
+    {
+      "vendor": "Entrata",
+      "color": "#fb923c",
+      "properties": 13,
+      "units": 3831,
+      "pctOfIdentifiedProperties": 12.5
+    },
+    {
+      "vendor": "ResMan",
+      "color": "#22d3ee",
+      "properties": 6,
+      "units": 1391,
+      "pctOfIdentifiedProperties": 5.8
+    },
+    {
+      "vendor": "MRI/RentManager",
+      "color": "#34d399",
+      "properties": 4,
+      "units": 1080,
+      "pctOfIdentifiedProperties": 3.8
+    },
+    {
+      "vendor": "AppFolio",
+      "color": "#facc15",
+      "properties": 3,
+      "units": 411,
+      "pctOfIdentifiedProperties": 2.9
+    },
+    {
+      "vendor": "Yotta",
+      "color": "#c084fc",
+      "properties": 2,
+      "units": 590,
+      "pctOfIdentifiedProperties": 1.9
+    },
+    {
+      "vendor": "in-house:Camden",
+      "color": "#94a3b8",
+      "properties": 2,
+      "units": 516,
+      "pctOfIdentifiedProperties": 1.9
+    },
+    {
+      "vendor": "in-house:UDR",
+      "color": "#fca5a5",
+      "properties": 1,
+      "units": 232,
+      "pctOfIdentifiedProperties": 1.0
+    }
+  ]
+}
