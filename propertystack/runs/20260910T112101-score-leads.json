@@ -1,0 +1,25 @@
+{
+  "skill": "score-leads",
+  "area": "plano-richardson",
+  "started": "2026-09-10T11:21:01",
+  "inputs": [
+    "data/plano-richardson/master.csv",
+    "data/plano-richardson/5-sales.csv",
+    "data/plano-richardson/6-upcoming.csv"
+  ],
+  "outputs": [
+    "data/plano-richardson/leads.csv",
+    "data/plano-richardson/leads-facts.jsonl"
+  ],
+  "counts": {
+    "sold_leads": 28,
+    "upcoming_leads": 12,
+    "total_leads": 40
+  },
+  "api_calls": {},
+  "errors": [],
+  "notes": [],
+  "finished": "2026-09-10T11:21:01",
+  "duration_s": 0.0,
+  "status": "ok"
+}

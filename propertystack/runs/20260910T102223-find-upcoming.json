@@ -1,0 +1,53 @@
+{
+  "skill": "find-upcoming",
+  "area": "plano-richardson",
+  "started": "2026-09-10T10:22:23",
+  "inputs": [
+    "https://webapi.legistar.com/v1/plano/matters $filter=MatterIntroDate ge datetime'2024-09-10'",
+    "jina.search: site:zabalist.com Plano multifamily (10 results)",
+    "jina.search: site:zabalist.com Richardson multifamily (10 results)",
+    "jina.search: site:communityimpact.com Plano apartments units 2025 2026 (10 results)",
+    "jina.search: site:communityimpact.com Richardson apartments units 2025 2026 (10 results)",
+    "jina.search: site:dallasnews.com Plano apartment development 2026 (10 results)",
+    "jina.search: site:bizjournals.com/dallas Richardson multifamily units 2026 (10 results)",
+    "jina.search: communityimpact.com Plano apartment groundbreaking site plan 2026 (10 results)",
+    "jina.search: communityimpact.com Richardson apartment groundbreaking 2026 (10 results)"
+  ],
+  "outputs": [
+    "data/plano-richardson/6-upcoming.csv"
+  ],
+  "counts": {
+    "legistar_pz_matters_scanned": 12,
+    "legistar_residential_matches": 1,
+    "tdlr_urls_read": 4,
+    "tdlr_projects_found": 4,
+    "news_urls_read": 16,
+    "news_projects_found": 11,
+    "duplicates_merged": 0,
+    "by_source_type": {
+      "news": 11,
+      "tabs": 4,
+      "legistar": 1
+    },
+    "by_stage": {
+      "under-construction": 3,
+      "zoning-approved": 5,
+      "zoning-filed": 4,
+      "leasing": 2,
+      "site-plan-approved": 2
+    },
+    "total_projects": 16
+  },
+  "api_calls": {
+    "legistar": 1,
+    "jina_search": 8,
+    "jina_read": 20,
+    "read": 20,
+    "search": 8
+  },
+  "errors": [],
+  "notes": [],
+  "finished": "2026-09-10T10:23:23",
+  "duration_s": 59.7,
+  "status": "ok"
+}

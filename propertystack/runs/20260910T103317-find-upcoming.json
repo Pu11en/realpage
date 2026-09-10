@@ -1,0 +1,60 @@
+{
+  "skill": "find-upcoming",
+  "area": "plano-richardson",
+  "started": "2026-09-10T10:33:17",
+  "inputs": [
+    "https://webapi.legistar.com/v1/plano/matters $filter=MatterIntroDate ge datetime'2024-09-10'",
+    "jina.search: site:zabalist.com Plano multifamily (10 results)",
+    "jina.search: site:zabalist.com Richardson multifamily (10 results)",
+    "jina.search: site:zabalist.com Collin Creek Multifamily Plano (10 results)",
+    "jina.search: site:zabalist.com JLB West Cityline Richardson (10 results)",
+    "jina.search: site:communityimpact.com Plano apartments units 2025 2026 (10 results)",
+    "jina.search: site:communityimpact.com Richardson apartments units 2025 2026 (10 results)",
+    "jina.search: site:dallasnews.com Plano apartment development 2026 (10 results)",
+    "jina.search: site:bizjournals.com/dallas Richardson multifamily units 2026 (10 results)",
+    "jina.search: communityimpact.com Plano apartment groundbreaking site plan 2026 (10 results)",
+    "jina.search: communityimpact.com Richardson apartment groundbreaking 2026 (10 results)",
+    "jina.search: communityimpact.com Heritage Creekside apartments townhomes Plano commission (9 results)",
+    "jina.search: communityimpact.com StreetLights 22-story high-rise townhomes Plano JCPenney (10 results)",
+    "jina.search: communityimpact.com Richardson 281-unit multifamily community break ground (9 results)"
+  ],
+  "outputs": [
+    "data/plano-richardson/6-upcoming.csv"
+  ],
+  "counts": {
+    "legistar_pz_matters_scanned": 12,
+    "legistar_residential_matches": 1,
+    "tdlr_urls_read": 17,
+    "tdlr_projects_found": 5,
+    "news_urls_read": 30,
+    "news_projects_found": 7,
+    "duplicates_merged": 1,
+    "by_source_type": {
+      "news": 7,
+      "tabs": 4,
+      "legistar": 1
+    },
+    "by_stage": {
+      "zoning-filed": 3,
+      "under-construction": 3,
+      "site-plan-approved": 2,
+      "zoning-approved": 2,
+      "permit": 2
+    },
+    "total_projects": 12
+  },
+  "api_calls": {
+    "legistar": 1,
+    "jina_search": 13,
+    "jina_read": 47,
+    "read": 47,
+    "search": 13
+  },
+  "errors": [],
+  "notes": [
+    "Collin Creek Multifamily S1: also seen at https://www.zabalist.com/projects/TABS2022024873"
+  ],
+  "finished": "2026-09-10T10:33:59",
+  "duration_s": 42.5,
+  "status": "ok"
+}

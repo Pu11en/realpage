@@ -1,0 +1,49 @@
+{
+  "skill": "find-sales",
+  "area": "plano-richardson",
+  "started": "2026-09-10T10:11:51",
+  "inputs": [
+    "data/plano-richardson/1-apartments.csv"
+  ],
+  "outputs": [
+    "data/plano-richardson/5-sales.csv"
+  ],
+  "counts": {
+    "communities_checked": 207,
+    "parcels_checked": 232,
+    "sold": 28,
+    "sold_by_deed": 23,
+    "owner_changed_without_deed": 5,
+    "deed_types_seen": {
+      "SWDNL": 110,
+      "SWD": 66,
+      "PLAT": 17,
+      "CORRD": 4,
+      "WD": 5,
+      "DEED": 4,
+      "QCD": 3,
+      "WDNL": 9,
+      "DNL": 2,
+      "OT": 6,
+      "CDEC": 1
+    },
+    "excluded_deed_types_seen": {
+      "PLAT": 17,
+      "CORRD": 4,
+      "DEED": 4,
+      "QCD": 3,
+      "DNL": 2,
+      "OT": 6,
+      "CDEC": 1
+    }
+  },
+  "api_calls": {
+    "socrata_2026": 3,
+    "socrata_2025": 3
+  },
+  "errors": [],
+  "notes": [],
+  "finished": "2026-09-10T10:12:05",
+  "duration_s": 14.2,
+  "status": "ok"
+}

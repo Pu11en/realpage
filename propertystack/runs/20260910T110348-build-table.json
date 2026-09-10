@@ -1,0 +1,42 @@
+{
+  "skill": "build-table",
+  "area": "plano-richardson",
+  "started": "2026-09-10T11:03:48",
+  "inputs": [
+    "data/plano-richardson/1-apartments.csv",
+    "data/plano-richardson/2-websites.csv",
+    "data/plano-richardson/3-software.csv"
+  ],
+  "outputs": [
+    "data/plano-richardson/master.csv"
+  ],
+  "counts": {
+    "in_area": 207,
+    "website_found": 140,
+    "checked": 140,
+    "identified": 104,
+    "unknown": 103,
+    "unknown_by_reason": {
+      "no-website": 67,
+      "no-portal-link": 35,
+      "in-house-portal": 1
+    },
+    "software": {
+      "Yardi": 56,
+      "RealPage": 17,
+      "Entrata": 13,
+      "ResMan": 6,
+      "MRI/RentManager": 4,
+      "AppFolio": 3,
+      "Yotta": 2,
+      "in-house:Camden": 2,
+      "in-house:UDR": 1
+    }
+  },
+  "api_calls": {},
+  "errors": [],
+  "notes": [],
+  "finished": "2026-09-10T11:03:48",
+  "duration_s": 0.0,
+  "status": "ok"
+}

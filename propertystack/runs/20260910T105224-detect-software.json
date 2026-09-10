@@ -1,0 +1,40 @@
+{
+  "skill": "detect-software",
+  "area": "plano-richardson",
+  "started": "2026-09-10T10:52:24",
+  "inputs": [
+    "data/plano-richardson/2-websites.csv"
+  ],
+  "outputs": [
+    "data/plano-richardson/3-software.csv"
+  ],
+  "counts": {
+    "total": 207,
+    "software": {
+      "unknown": 101,
+      "Yardi": 55,
+      "RealPage": 19,
+      "Entrata": 14,
+      "ResMan": 6,
+      "MRI/RentManager": 4,
+      "AppFolio": 3,
+      "Yotta": 2,
+      "in-house:Camden": 2,
+      "in-house:UDR": 1
+    },
+    "unknown_reasons": {
+      "no-website": 62,
+      "no-portal-link": 38,
+      "in-house-portal": 1
+    }
+  },
+  "api_calls": {
+    "read": 190,
+    "search": 0
+  },
+  "errors": [],
+  "notes": [],
+  "finished": "2026-09-10T10:53:44",
+  "duration_s": 79.8,
+  "status": "ok"
+}
