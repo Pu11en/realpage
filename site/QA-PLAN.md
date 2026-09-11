@@ -19,7 +19,7 @@ Trimmed to 3 tasks (Drew, 2026-09-10): the first sweep found no errors, so we on
 - [x] **Task 1 — Ship the fixes that are already made.**
   Prompt: `In /home/drewp/main-projects/realpage, read site/QA-PLAN.md and do Task 1 only. Uncommitted changes are: phone/tablet sidebar collapse in site/css/styles.css, removal of the duplicate rules in site/master-table.html, the property.html Back-link fix, and the La Ventura URL fix (3 CSVs + rebuilt site/data/*.json), plus tooling/qa/sweep.py and site/QA-PLAN.md. Check the diff, serve site/ locally, and screenshot all 5 pages at 390 and 820 wide. Look at the screenshots for broken layout. Commit, push, confirm live, and tick Task 1.`
 
-- [ ] **Task 2 — Fix cut-off website URLs in the data.**
+- [x] **Task 2 — Fix cut-off website URLs in the data.** Done 2026-09-10: scanned every URL in all CSVs, none are cut off after Task 1.
   Prompt: `In /home/drewp/main-projects/realpage, read site/QA-PLAN.md and do Task 2 only. Scan propertystack/data/plano-richardson/*.csv for website URLs whose domain is cut off (e.g. "http://www.junction15apartments."). Fix each one only if the full domain is verified to exist (curl). Run python3 site/data/build_data.py, commit, push (the chatbot service redeploys too), confirm live, and tick Task 2.`
 
 - [ ] **Task 3 — Final live check and report.**
