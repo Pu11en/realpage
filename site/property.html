@@ -59,7 +59,7 @@
       ].filter(Boolean);
       const who = isUpcoming ? `Developer: ${esc(p.developer || "not listed")}` : `Owner: ${esc(p.owner || "--")}`;
       return `
-        <div style="margin-bottom:8px;"><a href="javascript:history.back()" style="color:var(--text-muted);font-size:13px;">&larr; Back</a></div>
+        <div style="margin-bottom:8px;"><a href="master-table.html" onclick="if (history.length > 1 && document.referrer.startsWith(location.origin)) { history.back(); return false; }" style="color:var(--text-muted);font-size:13px;">&larr; Back</a></div>
         <h1>${esc(p.community)}</h1>
         <div class="meta">${bits.join(" &middot; ")}<br/>${who}</div>`;
     }
