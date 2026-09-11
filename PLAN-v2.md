@@ -36,3 +36,9 @@ Dallas County only. Drew ruled out outreach, a new metro and scheduled refresh.
 - [x] **2.5 Merge + rebuild.** Run `build-table` and `score-leads` over the combined set,
   run `site/data/build_data.py`, and check all 5 pages on localhost with a county label.
 - [x] **2.6 Fix the dead 23Hundred @ Ridgeview website** while the data is open.
+
+## Drew's call (2026-09-10, late): Dallas comes back off
+
+Drew confirmed v2 scope is "make current stuff good" only. Dallas County data moved to
+`propertystack/data/dallas-parked/` (kept, not deleted); site rebuilt at 204 Collin
+buildings / 42 leads. Chatbot fixes (1.1-1.3) and the 23Hundred website fix stay.

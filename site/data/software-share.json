@@ -5,72 +5,72 @@
     {
       "vendor": "Yardi",
       "color": "#60a5fa",
-      "properties": 78,
-      "units": 22668,
-      "pctOfIdentifiedProperties": 44.1
+      "properties": 66,
+      "units": 19732,
+      "pctOfIdentifiedProperties": 43.4
     },
     {
       "vendor": "RealPage",
       "color": "#f472b6",
-      "properties": 41,
-      "units": 9569,
-      "pctOfIdentifiedProperties": 23.2
+      "properties": 36,
+      "units": 8688,
+      "pctOfIdentifiedProperties": 23.7
     },
     {
       "vendor": "Entrata",
       "color": "#fb923c",
-      "properties": 24,
-      "units": 6454,
-      "pctOfIdentifiedProperties": 13.6
+      "properties": 22,
+      "units": 6052,
+      "pctOfIdentifiedProperties": 14.5
     },
     {
       "vendor": "ResMan",
       "color": "#22d3ee",
-      "properties": 13,
-      "units": 2615,
-      "pctOfIdentifiedProperties": 7.3
+      "properties": 11,
+      "units": 2263,
+      "pctOfIdentifiedProperties": 7.2
     },
     {
       "vendor": "MRI/RentManager",
       "color": "#34d399",
-      "properties": 6,
-      "units": 1558,
-      "pctOfIdentifiedProperties": 3.4
-    },
-    {
-      "vendor": "AppFolio",
-      "color": "#facc15",
       "properties": 5,
-      "units": 768,
-      "pctOfIdentifiedProperties": 2.8
+      "units": 1220,
+      "pctOfIdentifiedProperties": 3.3
     },
     {
       "vendor": "in-house:UDR",
       "color": "#fca5a5",
       "properties": 4,
       "units": 1271,
-      "pctOfIdentifiedProperties": 2.3
+      "pctOfIdentifiedProperties": 2.6
     },
     {
-      "vendor": "in-house:Camden",
-      "color": "#94a3b8",
+      "vendor": "AppFolio",
+      "color": "#facc15",
       "properties": 3,
-      "units": 980,
-      "pctOfIdentifiedProperties": 1.7
+      "units": 411,
+      "pctOfIdentifiedProperties": 2.0
     },
     {
       "vendor": "Yotta",
       "color": "#c084fc",
       "properties": 2,
       "units": 590,
-      "pctOfIdentifiedProperties": 1.1
+      "pctOfIdentifiedProperties": 1.3
+    },
+    {
+      "vendor": "in-house:Camden",
+      "color": "#94a3b8",
+      "properties": 2,
+      "units": 516,
+      "pctOfIdentifiedProperties": 1.3
     },
     {
       "vendor": "Buildium",
       "color": "#52525b",
       "properties": 1,
       "units": 24,
-      "pctOfIdentifiedProperties": 0.6
+      "pctOfIdentifiedProperties": 0.7
     }
   ]
 }
