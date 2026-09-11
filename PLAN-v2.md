@@ -16,17 +16,17 @@ outreach → new metro.
 
 ## Part 1 — Chatbot polish
 
-- [ ] **1.1 Table format at the source.** Tell the model in
+- [x] **1.1 Table format at the source.** Tell the model in
   `chatbot/hermes-profile/SOUL.md` to always write the `|---|` row. Keep `repairTables`
   as a fallback.
-- [ ] **1.2 "New chat" button.** Add it to the Page 2 chat panel and the phone full-screen
+- [x] **1.2 "New chat" button.** Add it to the Page 2 chat panel and the phone full-screen
   chat. It clears the message list and the `history` the page sends.
 - [ ] **1.3 Answer spot check.** 💲 Ask 10 real questions and check each citation against
   the data. Log the results in `chatbot/SPOT-CHECK.md`, and fix up to 2 prompt issues.
 
 ## Part 2 — Dallas County part of Richardson
 
-- [ ] **2.1 Find the source.** Find where Dallas County apartment records and deeds come
+- [x] **2.1 Find the source.** Find where Dallas County apartment records and deeds come
   from (DCAD), and write what's needed in `propertystack/DALLAS-SOURCES.md`. No scraping yet.
 - [ ] **2.2 find-apartments for Dallas.** Extend the skill to read Dallas County records
   for Richardson, and write the new buildings next to the current data.
