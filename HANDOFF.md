@@ -1,5 +1,7 @@
 # HANDOFF — start here
 
+> **v1 shipped 2026-09-10 — read `HANDOFF-V1-SHIPPED.md` first for current status and next steps.**
+
 One-file bootstrap for any agent or session picking up this repo with **no prior
 context**. If you read only one file, read this one; it points at everything else.
 `task_plan.md` is the live plan and wins over this file on any conflict.
