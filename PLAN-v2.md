@@ -1,8 +1,7 @@
 # PropertyStack v2 — Task Plan
 
-Written 2026-09-10. v1 is shipped (see `HANDOFF-V1-SHIPPED.md`). Drew chose all four
-directions except scheduled refresh, in this order: chatbot polish → Dallas County →
-outreach → new metro.
+Written 2026-09-10. v1 is shipped (see `HANDOFF-V1-SHIPPED.md`). Scope: chatbot polish and
+Dallas County only. Drew ruled out outreach, a new metro and scheduled refresh.
 
 ## How to run this plan
 
@@ -37,18 +36,3 @@ outreach → new metro.
 - [ ] **2.5 Merge + rebuild.** Run `build-table` and `score-leads` over the combined set,
   run `site/data/build_data.py`, and check all 5 pages on localhost with a county label.
 - [ ] **2.6 Fix the dead 23Hundred @ Ridgeview website** while the data is open.
-
-## Part 3 — Outreach / lead workflow
-
-- [ ] **3.1 ❓ Scope decision.** Who uses it, what it does (for example lead status
-  tracking, call notes, or drafted intro emails), and what it must never do (for
-  example sending anything by itself). Write the answers here as tasks 3.2+.
-
-## Part 4 — New metro
-
-- [ ] **4.1 ❓ Pick the metro.** Ask Drew which area, and why it helps the interview
-  story. Write the choice here.
-- [ ] **4.2 Make the pipeline area-aware.** Run the skills with an area name instead
-  of the hard-coded `plano-richardson`, and let the site switch between areas.
-- [ ] **4.3+ Per-skill runs for the new metro.** 💲 Split them the same way as 2.2–2.5
-  once 4.1 is decided.
