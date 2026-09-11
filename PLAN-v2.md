@@ -31,7 +31,7 @@ Dallas County only. Drew ruled out outreach, a new metro and scheduled refresh.
   for Richardson, and write the new buildings next to the current data.
 - [x] **2.3 Website + software for the new buildings.** 💲 Run `find-website` and
   `detect-software` on the new buildings only.
-- [ ] **2.4 Sales + contacts for the new buildings.** 💲 Run `find-sales` (Dallas deeds)
+- [x] **2.4 Sales + contacts for the new buildings.** 💲 Run `find-sales` (Dallas deeds)
   and `contact-scrape` on the new buildings.
 - [ ] **2.5 Merge + rebuild.** Run `build-table` and `score-leads` over the combined set,
   run `site/data/build_data.py`, and check all 5 pages on localhost with a county label.
