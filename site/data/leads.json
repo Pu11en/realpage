@@ -1,8 +1,8 @@
 {
   "stats": {
-    "leads": 42,
+    "leads": 49,
     "newThisWeek": 1,
-    "unitsInPlay": 10980,
+    "unitsInPlay": 12414,
     "openingNext12mo": 722
   },
   "leads": [
@@ -503,6 +503,23 @@
     },
     {
       "id": "l28",
+      "propertyId": "420175100B0010000",
+      "score": 61,
+      "property": "Sweetwater At Buckingham",
+      "city": "Richardson",
+      "units": 312,
+      "signalType": "Sold",
+      "signal": "DCAD owner change to SWEETWATER OWNER LLC",
+      "software": null,
+      "why": "DCAD owner change to SWEETWATER OWNER LLC \u00b7 312 units \u00b7 software not checked \u2192 new owner may re-pick software.",
+      "sources": [
+        "website"
+      ],
+      "contact": null,
+      "isNew": false
+    },
+    {
+      "id": "l29",
       "propertyId": "2560139",
       "score": 60,
       "property": "Axis 3700",
@@ -522,7 +539,27 @@
       "isNew": false
     },
     {
-      "id": "l29",
+      "id": "l30",
+      "propertyId": "422319200B01A0000",
+      "score": 58,
+      "property": "Green Valley Apmt (N/C 7%)",
+      "city": "Richardson",
+      "units": 375,
+      "signalType": "Sold",
+      "signal": "DCAD owner change to LANG SHERMAN VENTURE LLC",
+      "software": "Yardi",
+      "why": "DCAD owner change to LANG SHERMAN VENTURE LLC \u00b7 375 units \u00b7 on Yardi \u2192 new owner may re-pick software.",
+      "sources": [
+        "website"
+      ],
+      "contact": {
+        "phone": "(469) 224-5142",
+        "email": null
+      },
+      "isNew": false
+    },
+    {
+      "id": "l31",
       "propertyId": "1615274",
       "score": 56,
       "property": "Spring Pointe Apartments",
@@ -539,7 +576,7 @@
       "isNew": false
     },
     {
-      "id": "l30",
+      "id": "l32",
       "propertyId": "1976049",
       "score": 55,
       "property": "Lakeshore At Preston Apartments",
@@ -560,7 +597,27 @@
       "isNew": false
     },
     {
-      "id": "l31",
+      "id": "l33",
+      "propertyId": "42075080000000000",
+      "score": 54,
+      "property": "Encore At Buckingham (Senior Living)",
+      "city": "Richardson",
+      "units": 242,
+      "signalType": "Sold",
+      "signal": "DCAD owner change to 535 ENCORE OWNER LLC",
+      "software": null,
+      "why": "DCAD owner change to 535 ENCORE OWNER LLC \u00b7 242 units \u00b7 software not checked \u2192 new owner may re-pick software.",
+      "sources": [
+        "website"
+      ],
+      "contact": {
+        "phone": "(855) 490-0180",
+        "email": "support@agingchoices.com"
+      },
+      "isNew": false
+    },
+    {
+      "id": "l34",
       "propertyId": "2908642",
       "score": 53,
       "property": "The Ludlow",
@@ -581,7 +638,7 @@
       "isNew": false
     },
     {
-      "id": "l32",
+      "id": "l35",
       "propertyId": "2504520",
       "score": 52,
       "property": "Mcdermott Place Apartments",
@@ -602,7 +659,27 @@
       "isNew": false
     },
     {
-      "id": "l33",
+      "id": "l36",
+      "propertyId": "422209300B0020000",
+      "score": 51,
+      "property": "Sonterra At Buckingham",
+      "city": "Richardson",
+      "units": 312,
+      "signalType": "Sold",
+      "signal": "DCAD owner change to 530 BUCKINGHAM OWNER LLC",
+      "software": "Yardi",
+      "why": "DCAD owner change to 530 BUCKINGHAM OWNER LLC \u00b7 312 units \u00b7 on Yardi \u2192 new owner may re-pick software.",
+      "sources": [
+        "website"
+      ],
+      "contact": {
+        "phone": "(855) 815-2084",
+        "email": null
+      },
+      "isNew": false
+    },
+    {
+      "id": "l37",
       "propertyId": "2710065",
       "score": 49,
       "property": "Overture Plano Senior Apartments",
@@ -623,7 +700,7 @@
       "isNew": false
     },
     {
-      "id": "l34",
+      "id": "l38",
       "propertyId": "2058066",
       "score": 48,
       "property": "Breckinridge Point Apartments",
@@ -644,7 +721,7 @@
       "isNew": false
     },
     {
-      "id": "l35",
+      "id": "l39",
       "propertyId": "2058065",
       "score": 46,
       "property": "Breckenridge Point Apartments",
@@ -665,7 +742,7 @@
       "isNew": false
     },
     {
-      "id": "l36",
+      "id": "l40",
       "propertyId": "1511233",
       "score": 45,
       "property": "The Wexley",
@@ -686,7 +763,7 @@
       "isNew": false
     },
     {
-      "id": "l37",
+      "id": "l41",
       "propertyId": "2734943",
       "score": 43,
       "property": "The Holland",
@@ -707,7 +784,7 @@
       "isNew": false
     },
     {
-      "id": "l38",
+      "id": "l42",
       "propertyId": "365483",
       "score": 43,
       "property": "Woodlands Of Plano Apartments Tc",
@@ -728,7 +805,7 @@
       "isNew": false
     },
     {
-      "id": "l39",
+      "id": "l43",
       "propertyId": "2027278",
       "score": 42,
       "property": "The Calvin",
@@ -749,7 +826,7 @@
       "isNew": false
     },
     {
-      "id": "l40",
+      "id": "l44",
       "propertyId": "2808931",
       "score": 41,
       "property": "Instrata At Legacy West",
@@ -770,7 +847,7 @@
       "isNew": false
     },
     {
-      "id": "l41",
+      "id": "l45",
       "propertyId": "148646",
       "score": 38,
       "property": "Alta Vista Apartments",
@@ -791,7 +868,44 @@
       "isNew": false
     },
     {
-      "id": "l42",
+      "id": "l46",
+      "propertyId": "42149500020040000",
+      "score": 36,
+      "property": "Villa D Este Apts",
+      "city": "Richardson",
+      "units": 60,
+      "signalType": "Sold",
+      "signal": "DCAD owner change to BC HIGH OAKS LLC",
+      "software": null,
+      "why": "DCAD owner change to BC HIGH OAKS LLC \u00b7 60 units \u00b7 software not checked \u2192 new owner may re-pick software.",
+      "sources": [
+        "website"
+      ],
+      "contact": null,
+      "isNew": false
+    },
+    {
+      "id": "l47",
+      "propertyId": "42149500010040000",
+      "score": 33,
+      "property": "Sandpiper Apts",
+      "city": "Richardson",
+      "units": 28,
+      "signalType": "Sold",
+      "signal": "DCAD owner change to BC HIGH OAKS LLC",
+      "software": null,
+      "why": "DCAD owner change to BC HIGH OAKS LLC \u00b7 28 units \u00b7 software not checked \u2192 new owner may re-pick software.",
+      "sources": [
+        "website"
+      ],
+      "contact": {
+        "phone": "(314) 314-9634",
+        "email": "info@sandpiperhomes.ai"
+      },
+      "isNew": false
+    },
+    {
+      "id": "l48",
       "propertyId": "1808832",
       "score": 32,
       "property": "Aspen Court Apartments",
@@ -807,6 +921,26 @@
       ],
       "contact": {
         "phone": "(469) 517-3651",
+        "email": null
+      },
+      "isNew": false
+    },
+    {
+      "id": "l49",
+      "propertyId": "42241300000010000",
+      "score": 30,
+      "property": "Lakefront Villas",
+      "city": "Richardson",
+      "units": 105,
+      "signalType": "Sold",
+      "signal": "DCAD owner change to ORCHIDS 900 LLC",
+      "software": "Yardi",
+      "why": "DCAD owner change to ORCHIDS 900 LLC \u00b7 105 units \u00b7 on Yardi \u2192 new owner may re-pick software.",
+      "sources": [
+        "website"
+      ],
+      "contact": {
+        "phone": "(855) 900-9653",
         "email": null
       },
       "isNew": false

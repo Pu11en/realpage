@@ -122,6 +122,7 @@
       const s = data.stats;
       const f = data.funnel;
       const cities = [...new Set(data.properties.map((p) => p.city))].sort();
+      const counties = [...new Set(data.properties.map((p) => p.county).filter(Boolean))].sort();
       const softwareOptions = [...new Set(data.properties.map((p) => p.software).filter((v) => v && v !== "unknown"))].sort();
       const years = [...new Set(data.properties.map((p) => p.yearBuilt).filter(Boolean))].sort((a, b) => b - a);
 
@@ -140,6 +141,10 @@
             <select id="f-city">
               <option value="">All cities</option>
               ${cities.map((c) => `<option value="${c}">${c}</option>`).join("")}
+            </select>
+            <select id="f-county">
+              <option value="">All counties</option>
+              ${counties.map((c) => `<option value="${c}">${c}</option>`).join("")}
             </select>
             <select id="f-software">
               <option value="">All software</option>
@@ -162,7 +167,7 @@
         </div>
         <div class="table-scroll"><table>
           <thead>
-            <tr><th>Community</th><th>City</th><th>Units</th><th>Year built</th><th>Owner</th><th>Software</th><th>Proof</th></tr>
+            <tr><th>Community</th><th>City</th><th>County</th><th>Units</th><th>Year built</th><th>Owner</th><th>Software</th><th>Proof</th></tr>
           </thead>
           <tbody id="table-tbody"></tbody>
         </table></div>
@@ -175,6 +180,7 @@
       function currentRows() {
         const search = document.getElementById("f-search").value.trim().toLowerCase();
         const city = document.getElementById("f-city").value;
+        const county = document.getElementById("f-county").value;
         const software = document.getElementById("f-software").value;
         const year = document.getElementById("f-year").value;
         const size = document.getElementById("f-size").value;
@@ -182,6 +188,7 @@
         return data.properties.filter((p) => {
           if (search && !p.community.toLowerCase().includes(search)) return false;
           if (city && p.city !== city) return false;
+          if (county && p.county !== county) return false;
           if (software === "__none__" && p.software && p.software !== "unknown") return false;
           if (software && software !== "__none__" && p.software !== software) return false;
           if (year && String(p.yearBuilt) !== year) return false;
@@ -201,6 +208,7 @@
           <tr class="clickable ${isDimmedRow(p.software) ? "dimmed" : ""}" data-id="${p.id}" style="cursor:pointer;">
             <td>${p.community}</td>
             <td>${p.city}</td>
+            <td>${p.county ?? "--"}</td>
             <td>${p.units ?? "--"}</td>
             <td>${p.yearBuilt ?? "--"}</td>
             <td>${p.owner}</td>
@@ -225,12 +233,13 @@
 
       function exportCsv() {
         const rows = currentRows();
-        const header = ["Community", "City", "Units", "Year built", "Owner", "Software", "Proof"];
+        const header = ["Community", "City", "County", "Units", "Year built", "Owner", "Software", "Proof"];
         const lines = [header.join(",")];
         rows.forEach((p) => {
           lines.push([
             p.community,
             p.city,
+            p.county ?? "",
             p.units ?? "",
             p.yearBuilt ?? "",
             p.owner,
@@ -249,7 +258,7 @@
         URL.revokeObjectURL(url);
       }
 
-      ["f-search", "f-city", "f-software", "f-year", "f-size"].forEach((id) => {
+      ["f-search", "f-city", "f-county", "f-software", "f-year", "f-size"].forEach((id) => {
         const el = document.getElementById(id);
         el.addEventListener(el.tagName === "INPUT" ? "input" : "change", renderRows);
       });

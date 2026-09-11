@@ -3,7 +3,7 @@ apt_id,website,website_source,confidence,query,notes
 42146400000010000,https://trellis.law/doc/119883023/original-petition,search,high,"""La Mirada"" 1400 Cavalier Dr Richardson TX apartments","La Mirada Property Owner, Llc"
 422610000B0030000,https://www.camdenliving.com/apartments/richardson-tx/camden-buckingham,search,high,"""Camden Buckingham"" 430 Buckingham Rd Richardson TX apartments",Camden Buckingham - Richardson
 422130100304C0000,https://www.liveatgreenvue.com/,search,high,"""Greenvue"" 1350 N Greenville Ave Richardson TX apartments","GreenVue | Apartments in Richardson, TX"
-420147400001A0000,https://block24retail.com/,search,high,"""Block"" 901 Jupiter Rd Richardson TX apartments",Block 24 Retail
+420147400001A0000,,search,none,"""Block"" 901 Jupiter Rd Richardson TX apartments","blanked: block24retail.com is the retail-only leasing page, not the apartment community's own site"
 420687500A02A0000,https://www.entrytech.net/current-projects/,search,high,"""Eastside Ii North"" Richardson TX apartments",Current Projects - Entry Tecnologies of North Texas
 420746700C0010000,https://junctionatgalatynpark.com/,search,high,"""Junction At Galatyn Park"" 1050 Galatyn Pkwy Richardson TX apartments",Junction at Galatyn Park: Richardson apartments for rent
 422319200B01A0000,https://www.liveatgreenvue.com/,search,high,Green Valley Apmt (N/C 7%) Richardson TX apartments official site,"GreenVue | Apartments in Richardson, TX"
@@ -27,7 +27,7 @@ apt_id,website,website_source,confidence,query,notes
 42232500000010000,https://www.shenandoahatspringvalley.com/,search,high,"""Shenandoah"" 939 Allegheny Ct Richardson TX apartments","Shenandoah Apartments | Apartments in Richardson, TX"
 42269700000010000,https://www.ourcommunityrealty.com/listings/detail/24df28bc-ab99-4a46-ba2b-5ee6e69db654,search,high,"""Lakeside On Spring Valley"" 1000 W Spring Valley Rd Richardson TX apartments","1000 W Spring Valley Rd - 156, Richardson, TX 75080"
 422446000A01A0000,https://twinriversseniorliving.com/,search,high,"""Twin Rivers Senior Living"" 201 S Glenville Dr Richardson TX apartments","55+ Senior Retirement Living in Richardson, TX | Twin Rivers"
-42043700000010000,https://www.apartmentsearch.com/apartments/texas/richardson/valley-estates,search,high,"""Valley Estates"" 929 St Paul Dr Richardson TX apartments",Apartments at Valley Estates - Richardson
+42043700000010000,,search,none,"""Valley Estates"" 929 St Paul Dr Richardson TX apartments","blanked: apartmentsearch.com is an aggregator, not the property's own site"
 420716000101B0000,https://www.trelliscanyoncreek.com/,search,high,"""Trellis Canyon Creek"" 2301 N Central Expy Richardson TX apartments","TRELLIS CANYON CREEK Apartments in Richardson, Texas"
 42256600020060000,https://www.student.com/us/tx/richardson/p/university-village-apartments-ljav6s,search,medium,University Village Apts (Ecu) Richardson TX apartments official site,"University Village Apartments, Richardson"
 42118500010220000,https://www.mycamelotapts.com/,search,high,"""Camelot"" Richardson TX apartments","Camelot Apartments - Apartment Living in Richardson, TX"

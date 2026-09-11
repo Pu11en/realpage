@@ -28,8 +28,10 @@ MASTER_CSV = DATA_DIR / "master.csv"
 LEADS_CSV = DATA_DIR / "leads.csv"
 UPCOMING_CSV = DATA_DIR / "6-upcoming.csv"
 CONTACTS_CSV = DATA_DIR / "contacts.csv"
+CONTACTS_DALLAS_CSV = DATA_DIR / "contacts-dallas.csv"
 LEADS_FACTS_JSONL = DATA_DIR / "leads-facts.jsonl"
 SALES_CSV = DATA_DIR / "5-sales.csv"
+SALES_DALLAS_CSV = DATA_DIR / "5-sales-dallas.csv"
 
 TODAY = date.fromisoformat("2026-09-10")  # matches score-leads' fixed TODAY, see run.py
 
@@ -71,7 +73,8 @@ def split_urls(s: str) -> list[str]:
 def build_properties_and_share() -> tuple[list[dict], dict]:
     rows = read_csv(MASTER_CSV)
     leads_by_ref = {r["ref_id"]: r for r in read_csv(LEADS_CSV)}
-    sales = {r["apt_id"]: r for r in read_csv(SALES_CSV)}
+    sale_files = [SALES_CSV] + ([SALES_DALLAS_CSV] if SALES_DALLAS_CSV.exists() else [])
+    sales = {r["apt_id"]: r for f in sale_files for r in read_csv(f)}
     contacts = load_contacts()
 
     properties = []
@@ -82,6 +85,7 @@ def build_properties_and_share() -> tuple[list[dict], dict]:
             "id": r["apt_id"],
             "community": r["name"],
             "city": r["city"],
+            "county": r.get("county") or "Collin",
             "address": r["address"],
             "units": int(r["units"]) if r["units"] else None,
             "yearBuilt": int(r["year_built"]) if r["year_built"] else None,
@@ -204,12 +208,14 @@ def load_leads_facts() -> dict:
 
 def load_contacts() -> dict:
     contacts = {}
-    for r in read_csv(CONTACTS_CSV):
-        if r["phone"] or r["email"]:
-            contacts[r["apt_id"]] = {
-                "phone": r["phone"] or None,
-                "email": r["email"] or None,
-            }
+    contact_files = [CONTACTS_CSV] + ([CONTACTS_DALLAS_CSV] if CONTACTS_DALLAS_CSV.exists() else [])
+    for f in contact_files:
+        for r in read_csv(f):
+            if r["phone"] or r["email"]:
+                contacts[r["apt_id"]] = {
+                    "phone": r["phone"] or None,
+                    "email": r["email"] or None,
+                }
     return contacts
 
 

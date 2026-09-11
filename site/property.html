@@ -54,6 +54,7 @@
       const bits = [
         p.address ? esc(p.address) : null,
         esc(p.city),
+        p.county ? `${esc(p.county)} County` : null,
         p.units != null ? `${p.units} units` : "units not stated",
         isUpcoming ? "upcoming project" : `built ${p.yearBuilt ?? "?"}`,
       ].filter(Boolean);

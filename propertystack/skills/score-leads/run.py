@@ -125,10 +125,15 @@ def main():
     with RunLog("score-leads", a.area) as log:
         d = area_dir(a.area)
         master_rows = read_csv(d / "master.csv")
-        sales_rows = read_csv(d / "5-sales.csv")
+        # Combine Collin sales with the optional second-county (Dallas) sales file,
+        # rather than duplicating this script per county.
+        sale_files = ["5-sales.csv"]
+        if (d / "5-sales-dallas.csv").exists():
+            sale_files.append("5-sales-dallas.csv")
+        sales_rows = [r for f in sale_files for r in read_csv(d / f)]
         upcoming_rows = read_csv(d / "6-upcoming.csv")
         log.rec["inputs"] = [str((d / f).relative_to(d.parents[1]))
-                              for f in ("master.csv", "5-sales.csv", "6-upcoming.csv")]
+                              for f in (["master.csv"] + sale_files + ["6-upcoming.csv"])]
         master_by_id = {r["apt_id"]: r for r in master_rows}
 
         sold_leads, sold_facts = build_sold_leads(sales_rows, master_by_id, log)

@@ -33,6 +33,6 @@ Dallas County only. Drew ruled out outreach, a new metro and scheduled refresh.
   `detect-software` on the new buildings only.
 - [x] **2.4 Sales + contacts for the new buildings.** 💲 Run `find-sales` (Dallas deeds)
   and `contact-scrape` on the new buildings.
-- [ ] **2.5 Merge + rebuild.** Run `build-table` and `score-leads` over the combined set,
+- [x] **2.5 Merge + rebuild.** Run `build-table` and `score-leads` over the combined set,
   run `site/data/build_data.py`, and check all 5 pages on localhost with a county label.
-- [ ] **2.6 Fix the dead 23Hundred @ Ridgeview website** while the data is open.
+- [x] **2.6 Fix the dead 23Hundred @ Ridgeview website** while the data is open.

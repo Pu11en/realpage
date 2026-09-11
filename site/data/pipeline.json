@@ -3,17 +3,17 @@
     {
       "name": "find-apartments",
       "label": "buildings",
-      "count": 204
+      "count": 256
     },
     {
       "name": "find-website",
       "label": "with websites",
-      "count": 183
+      "count": 227
     },
     {
       "name": "detect-software",
       "label": "software identified",
-      "count": 152
+      "count": 177
     },
     {
       "name": "find-sales",
@@ -28,10 +28,100 @@
     {
       "name": "score-leads",
       "label": "ranked leads",
-      "count": 42
+      "count": 49
     }
   ],
   "runs": [
+    {
+      "runId": "20260910T222750-score-leads",
+      "started": "2026-09-10T22:27:50",
+      "skill": "score-leads",
+      "area": "plano-richardson",
+      "status": "ok",
+      "counts": "sold_leads=35, upcoming_leads=14, total_leads=49",
+      "errors": 0,
+      "durationSec": 0.0
+    },
+    {
+      "runId": "20260910T222750-build-table",
+      "started": "2026-09-10T22:27:50",
+      "skill": "build-table",
+      "area": "plano-richardson",
+      "status": "ok",
+      "counts": "in_area=256, website_found=227, checked=227, identified=177, unknown=79",
+      "errors": 0,
+      "durationSec": 0.0
+    },
+    {
+      "runId": "20260910T222741-score-leads",
+      "started": "2026-09-10T22:27:41",
+      "skill": "score-leads",
+      "area": "plano-richardson",
+      "status": "ok",
+      "counts": "sold_leads=35, upcoming_leads=14, total_leads=49",
+      "errors": 0,
+      "durationSec": 0.0
+    },
+    {
+      "runId": "20260910T222741-build-table",
+      "started": "2026-09-10T22:27:41",
+      "skill": "build-table",
+      "area": "plano-richardson",
+      "status": "ok",
+      "counts": "in_area=52, website_found=227, checked=227, identified=177, unknown=79",
+      "errors": 0,
+      "durationSec": 0.0
+    },
+    {
+      "runId": "20260910T222546-find-sales-dallas",
+      "started": "2026-09-10T22:25:46",
+      "skill": "find-sales-dallas",
+      "area": "plano-richardson",
+      "status": "ok",
+      "counts": "communities_checked=52, parcels_checked=57, parcels_missing_from_prior_roll=1, owner_changed=8",
+      "errors": 0,
+      "durationSec": 2.5
+    },
+    {
+      "runId": "20260910T222355-contact-scrape",
+      "started": "2026-09-10T22:23:55",
+      "skill": "contact-scrape",
+      "area": "plano-richardson",
+      "status": "ok",
+      "counts": "total=52, phone=35, email=8",
+      "errors": 0,
+      "durationSec": 8.7
+    },
+    {
+      "runId": "20260910T222059-detect-software",
+      "started": "2026-09-10T22:20:59",
+      "skill": "detect-software",
+      "area": "plano-richardson",
+      "status": "ok",
+      "counts": "total=52, identified=26, unknown=26",
+      "errors": 0,
+      "durationSec": 83.7
+    },
+    {
+      "runId": "20260910T221957-find-website",
+      "started": "2026-09-10T22:19:57",
+      "skill": "find-website",
+      "area": "plano-richardson",
+      "status": "ok",
+      "counts": "total=52, high=38, medium=8, low=5, none=1",
+      "errors": 0,
+      "durationSec": 60.2
+    },
+    {
+      "runId": "20260910T220612-find-apartments-dallas",
+      "started": "2026-09-10T22:06:12",
+      "skill": "find-apartments-dallas",
+      "area": "plano-richardson",
+      "status": "ok",
+      "counts": "b11_accounts_total_county=4634, accounts_in_city=68, communities=52, units=10648",
+      "errors": 0,
+      "durationSec": 8.9
+    },
     {
       "runId": "20260910T153225-contact-scrape",
       "started": "2026-09-10T15:32:25",
@@ -432,9 +522,9 @@
   },
   "reviewQueue": {
     "byReason": {
-      "no-portal-link": 28,
-      "no-website": 21,
-      "in-house-portal": 3
+      "no-portal-link": 46,
+      "no-website": 29,
+      "in-house-portal": 4
     },
     "rows": [
       {
@@ -476,6 +566,14 @@
         "units": 402,
         "reason": "no-website",
         "website": "https://www.sunny.com/tx/plano"
+      },
+      {
+        "id": "420147400001A0000",
+        "community": "Block 24",
+        "city": "Richardson",
+        "units": 396,
+        "reason": "no-website",
+        "website": null
       },
       {
         "id": "2763841",
@@ -566,12 +664,68 @@
         "website": "https://www.birchstonewestplano.com/"
       },
       {
+        "id": "42043700000010000",
+        "community": "Valley Estates",
+        "city": "Richardson",
+        "units": 136,
+        "reason": "no-website",
+        "website": null
+      },
+      {
+        "id": "420687500A0040000",
+        "community": "Post Eastside Apt",
+        "city": "Richardson",
+        "units": 84,
+        "reason": "no-website",
+        "website": "https://www.liveherehousing.com/utdallas/review"
+      },
+      {
+        "id": "42432150000010000",
+        "community": "Lafayette Square",
+        "city": "Richardson",
+        "units": 83,
+        "reason": "no-website",
+        "website": "https://flbo-prod.azurewebsites.net/property/flbo6001902"
+      },
+      {
+        "id": "42149500020010000",
+        "community": "Heather Glen",
+        "city": "Richardson",
+        "units": 75,
+        "reason": "no-website",
+        "website": null
+      },
+      {
+        "id": "42149500010020000",
+        "community": "Tradewinds Apts",
+        "city": "Richardson",
+        "units": 74,
+        "reason": "no-website",
+        "website": "https://www.uspto.gov/news/og/2002/week53/patprac.htm"
+      },
+      {
+        "id": "42234500000090000",
+        "community": "Huntington Town Homes",
+        "city": "Richardson",
+        "units": 73,
+        "reason": "no-website",
+        "website": "https://texas.realest-us.org/post-75080.htm"
+      },
+      {
         "id": "769",
         "community": "Villas Del Sol I & Ii Apartments",
         "city": "Plano",
         "units": 60,
         "reason": "no-website",
         "website": "https://data.texas.gov/views/hkzz-rrn8/rows.rdf?accessType=DOWNLOAD"
+      },
+      {
+        "id": "42149500020040000",
+        "community": "Villa D Este Apts",
+        "city": "Richardson",
+        "units": 60,
+        "reason": "no-website",
+        "website": "https://legacyhomesandproperties.net/properties-for-sale/properties-for-sale-dallas/"
       },
       {
         "id": "2856761",
@@ -606,6 +760,14 @@
         "website": "https://www.city-data.com/collin-county/L/L-Avenue-2.html"
       },
       {
+        "id": "65031341010039900",
+        "community": "University Village - Fka Waterview Park Apts",
+        "city": "Richardson",
+        "units": 888,
+        "reason": "no-portal-link",
+        "website": "https://cccres.com/apartments/detail/university-village-fka-waterview-park-apts-richardson"
+      },
+      {
         "id": "2615335",
         "community": "Northside At Legacy I Apartments",
         "city": "Plano",
@@ -622,6 +784,14 @@
         "website": "https://cortland.com/apartments/cortland-west-plano/"
       },
       {
+        "id": "42146400000010000",
+        "community": "La Mirada",
+        "city": "Richardson",
+        "units": 622,
+        "reason": "no-portal-link",
+        "website": "https://trellis.law/doc/119883023/original-petition"
+      },
+      {
         "id": "2143049",
         "community": "Cortland North Plano Apartments",
         "city": "Plano",
@@ -635,7 +805,7 @@
         "city": "Plano",
         "units": 480,
         "reason": "no-portal-link",
-        "website": "https://american-landmark-23hundred-old.multiscreensite.com/neighborhood"
+        "website": "https://www.2300ridgeview.com/"
       },
       {
         "id": "2039698",
@@ -644,6 +814,14 @@
         "units": 464,
         "reason": "in-house-portal",
         "website": "https://cortland.com/apartments/cortland-prairie-creek/"
+      },
+      {
+        "id": "420687500A02A0000",
+        "community": "Eastside Ii North",
+        "city": "Richardson",
+        "units": 384,
+        "reason": "no-portal-link",
+        "website": "https://www.entrytech.net/current-projects/"
       },
       {
         "id": "2069317",
@@ -660,6 +838,14 @@
         "units": 314,
         "reason": "no-portal-link",
         "website": "https://www.affordablehousing.com/plano-tx/collin-creek-851899/"
+      },
+      {
+        "id": "420175100B0010000",
+        "community": "Sweetwater At Buckingham",
+        "city": "Richardson",
+        "units": 312,
+        "reason": "no-portal-link",
+        "website": "https://www.apartmentadvisor.com/details/540-buckingham-rd-richardson-tx-75081"
       },
       {
         "id": "2666205",
@@ -726,12 +912,36 @@
         "website": "https://reviews.birdeye.com/park-at-gateway-156779284284034"
       },
       {
+        "id": "421046500M01B0000",
+        "community": "Brick Row Apts Bldg B The Station",
+        "city": "Richardson",
+        "units": 247,
+        "reason": "no-portal-link",
+        "website": "https://cccres.com/apartments/detail/brick-row-apts-bldg-b-the-station-richardson"
+      },
+      {
+        "id": "42075080000000000",
+        "community": "Encore At Buckingham (Senior Living)",
+        "city": "Richardson",
+        "units": 242,
+        "reason": "no-portal-link",
+        "website": "https://www.agingchoices.com/provider/encore-at-buckingham-richardson-tx/a1d5a7ba-efe1-4c51-b45a-9a23facdc159"
+      },
+      {
         "id": "1865440",
         "community": "Canterbury Courts Apartments",
         "city": "Richardson",
         "units": 240,
         "reason": "no-portal-link",
         "website": "https://www.canterburycourts.com/"
+      },
+      {
+        "id": "65034559010010000",
+        "community": "Utd Phase 6 Housing (Apartment Style)",
+        "city": "Richardson",
+        "units": 240,
+        "reason": "no-portal-link",
+        "website": "https://housing.utdallas.edu/housing-options/university-village/"
       },
       {
         "id": "1716655",
@@ -774,12 +984,28 @@
         "website": "https://www.willowbridgepc.com/properties/the-leighton-apartments-plano-texas"
       },
       {
+        "id": "42002600010010000",
+        "community": "Cutters Point Apartments",
+        "city": "Richardson",
+        "units": 196,
+        "reason": "in-house-portal",
+        "website": "https://livebh.com/apartments/cutters-point-apartment-homes/"
+      },
+      {
         "id": "26251",
         "community": "Lydian Apartments",
         "city": "Plano",
         "units": 160,
         "reason": "no-portal-link",
         "website": "https://www.willowbridgepc.com/properties/the-lydian-apartments-plano-texas"
+      },
+      {
+        "id": "422446000A01A0000",
+        "community": "Twin Rivers Senior Living",
+        "city": "Richardson",
+        "units": 156,
+        "reason": "no-portal-link",
+        "website": "https://twinriversseniorliving.com/"
       },
       {
         "id": "2936294",
@@ -814,12 +1040,52 @@
         "website": "https://twinriversatcollincreek.com/plano-neighborhoods/"
       },
       {
+        "id": "42256600020060000",
+        "community": "University Village Apts (Ecu)",
+        "city": "Richardson",
+        "units": 120,
+        "reason": "no-portal-link",
+        "website": "https://www.student.com/us/tx/richardson/p/university-village-apartments-ljav6s"
+      },
+      {
         "id": "2069471",
         "community": "Solstice Senior Living",
         "city": "Plano",
         "units": 115,
         "reason": "no-portal-link",
         "website": "https://solsticeseniorlivingplano.com/"
+      },
+      {
+        "id": "65034559010020000",
+        "community": "Utd Phase 7 Housing (Apartment Style)",
+        "city": "Richardson",
+        "units": 108,
+        "reason": "no-portal-link",
+        "website": "https://cccres.com/apartments/detail/utd-phase-7-housing-apartment-style-richardson"
+      },
+      {
+        "id": "42213500010010000",
+        "community": "Belle Grove At Custer",
+        "city": "Richardson",
+        "units": 101,
+        "reason": "no-portal-link",
+        "website": "https://www.movoto.com/richardson-tx/800-custer-rd-apt-256-richardson-tx-75080-4002_776x6d3gdkab/for-rent/"
+      },
+      {
+        "id": "42213500020010000",
+        "community": "Bell Grove At Custer",
+        "city": "Richardson",
+        "units": 101,
+        "reason": "no-portal-link",
+        "website": "https://cccres.com/apartments/detail/bell-grove-at-custer-richardson"
+      },
+      {
+        "id": "421046500O01C0000",
+        "community": "Brick Row- The Point",
+        "city": "Richardson",
+        "units": 77,
+        "reason": "no-portal-link",
+        "website": "https://cccres.com/apartments/detail/brick-row-the-point-richardson"
       },
       {
         "id": "13310",
@@ -838,6 +1104,14 @@
         "website": "https://thebauergrouprealty.com/home-search/listings/v2/tx/plano/cobblestone/condos"
       },
       {
+        "id": "421046500N01B0000",
+        "community": "Brick Row Apts Bldg C The Springs",
+        "city": "Richardson",
+        "units": 40,
+        "reason": "no-portal-link",
+        "website": "https://cccres.com/apartments/detail/brick-row-apts-bldg-c-the-springs-richardson"
+      },
+      {
         "id": "354556",
         "community": "Pleasant Park Apartments",
         "city": "Plano",
@@ -846,12 +1120,44 @@
         "website": "https://magicpin.com/usa/Plano/Downtown-Plano/Other/Pleasant-Park-Apartments/store/246a066"
       },
       {
+        "id": "42430900000050000",
+        "community": "Briarwood Apts",
+        "city": "Richardson",
+        "units": 30,
+        "reason": "no-portal-link",
+        "website": "https://reviews.birdeye.com/briarwood-apartments-166264080127384"
+      },
+      {
         "id": "180271",
         "community": "Courtyard Apartments",
         "city": "Plano",
         "units": 28,
         "reason": "no-portal-link",
         "website": "https://www.travelweekly.com/Hotels/Plano-TX/Courtyard-Dallas-Plano-Parkway-p53239725"
+      },
+      {
+        "id": "42149500010040000",
+        "community": "Sandpiper Apts",
+        "city": "Richardson",
+        "units": 28,
+        "reason": "no-portal-link",
+        "website": "https://sandpiperhomes.ai/listing/95f6df8e-9917-4172-b7c6-21d38524d848"
+      },
+      {
+        "id": "42148500010310000",
+        "community": "Eastgate Apts",
+        "city": "Richardson",
+        "units": 25,
+        "reason": "no-portal-link",
+        "website": "https://local.yahoo.com/info-28647083-eastgate-apartments-of-richardson-richardson/"
+      },
+      {
+        "id": "42202500020010000",
+        "community": "Lasalle Terrace Apts",
+        "city": "Richardson",
+        "units": 20,
+        "reason": "no-portal-link",
+        "website": "https://cccres.com/apartments/detail/lasalle-terrace-apts-richardson"
       }
     ]
   }
