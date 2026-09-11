@@ -18,7 +18,7 @@ copied into `$HERMES_HOME` on every boot. Model: `deepseek/deepseek-v4-flash`.
 
 ## Railway
 
-Second service `propertystack-chatbot` in the `propertystack` project, deploying
+Second service `propertystack-chatbot` (https://propertystack-chatbot-production.up.railway.app) in the `propertystack` project, deploying
 from `main` of this repo. Variables: `RAILWAY_DOCKERFILE_PATH=chatbot/Dockerfile`,
 `DEEPSEEK_API_KEY` (same key eve-agent uses; set in Railway, never committed).
 Optional: `CHAT_ALLOWED_ORIGINS`, `CHAT_RATE_PER_HOUR`, `CHAT_MAX_CONCURRENT`.

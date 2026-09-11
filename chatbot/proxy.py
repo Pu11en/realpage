@@ -60,7 +60,7 @@ def _rate_ok(ip: str) -> bool:
 def _citations(text: str) -> list[str]:
     found = []
     for m in BRACKET_RE.finditer(text):
-        found += [p.strip() for p in m.group(1).split(",") if FILE_RE.match(p.strip())]
+        found += [p.strip() for p in re.split(r"[,;]", m.group(1)) if FILE_RE.match(p.strip())]
     found += URL_RE.findall(text)
     return list(dict.fromkeys(found))
 
