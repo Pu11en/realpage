@@ -1,0 +1,35 @@
+model:
+  default: deepseek/deepseek-v4-flash
+  provider: deepseek
+agent:
+  # Hard budget per question (one-shot, see PLAN-v1.md "Turn shape").
+  max_turns: 8
+  tool_use_enforcement: true
+checkpoints:
+  enabled: false
+compression:
+  enabled: false
+display:
+  show_reasoning: false
+  show_cost: false
+  tool_progress: false
+memory:
+  memory_enabled: false
+  user_profile_enabled: false
+delegation:
+  max_concurrent_children: 0
+onboarding:
+  seen:
+    profile_build_offered: true
+    busy_input_prompt: true
+plugins:
+  enabled:
+    - propertystack
+# The HTTP API only gets the read-only propertystack tools: no terminal,
+# file writes, web, browser, memory or skill editing.
+platform_toolsets:
+  api_server:
+    - propertystack
+approvals:
+  mode: 'off'
+_config_version: 34
