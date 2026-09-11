@@ -29,7 +29,7 @@ Dallas County only. Drew ruled out outreach, a new metro and scheduled refresh.
   from (DCAD), and write what's needed in `propertystack/DALLAS-SOURCES.md`. No scraping yet.
 - [x] **2.2 find-apartments for Dallas.** Extend the skill to read Dallas County records
   for Richardson, and write the new buildings next to the current data.
-- [ ] **2.3 Website + software for the new buildings.** 💲 Run `find-website` and
+- [x] **2.3 Website + software for the new buildings.** 💲 Run `find-website` and
   `detect-software` on the new buildings only.
 - [ ] **2.4 Sales + contacts for the new buildings.** 💲 Run `find-sales` (Dallas deeds)
   and `contact-scrape` on the new buildings.

@@ -122,16 +122,20 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--area", required=True)
     ap.add_argument("--workers", type=int, default=5)
+    ap.add_argument("--in-file", default="2-websites.csv",
+                     help="input filename within the area dir (default: 2-websites.csv)")
+    ap.add_argument("--out-file", default="3-software.csv",
+                     help="output filename within the area dir (default: 3-software.csv)")
     a = ap.parse_args()
     with RunLog("detect-software", a.area) as log:
-        in_f = area_dir(a.area) / "2-websites.csv"
+        in_f = area_dir(a.area) / a.in_file
         rows = list(csv.DictReader(open(in_f, encoding="utf-8-sig")))
         log.rec["inputs"] = [str(in_f.relative_to(in_f.parents[2]))]
         jina = Jina()
         today = dt.date.today().isoformat()
         with cf.ThreadPoolExecutor(a.workers) as ex:
             out = list(ex.map(lambda r: detect(r, jina, today), rows))
-        out_f = area_dir(a.area) / "3-software.csv"
+        out_f = area_dir(a.area) / a.out_file
         with open(out_f, "w", newline="") as fh:
             w = csv.DictWriter(fh, fieldnames=COLS)
             w.writeheader()

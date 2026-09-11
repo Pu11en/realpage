@@ -1,0 +1,27 @@
+{
+  "skill": "find-website",
+  "area": "plano-richardson",
+  "started": "2026-09-10T22:19:57",
+  "inputs": [
+    "data/plano-richardson/1-buildings-dallas.csv"
+  ],
+  "outputs": [
+    "data/plano-richardson/2-websites-dallas.csv"
+  ],
+  "counts": {
+    "total": 52,
+    "high": 38,
+    "medium": 8,
+    "low": 5,
+    "none": 1
+  },
+  "api_calls": {
+    "read": 0,
+    "search": 72
+  },
+  "errors": [],
+  "notes": [],
+  "finished": "2026-09-10T22:20:57",
+  "duration_s": 60.2,
+  "status": "ok"
+}

@@ -1,0 +1,38 @@
+{
+  "skill": "detect-software",
+  "area": "plano-richardson",
+  "started": "2026-09-10T22:20:59",
+  "inputs": [
+    "data/plano-richardson/2-websites-dallas.csv"
+  ],
+  "outputs": [
+    "data/plano-richardson/3-software-dallas.csv"
+  ],
+  "counts": {
+    "total": 52,
+    "software": {
+      "unknown": 26,
+      "Yardi": 13,
+      "RealPage": 5,
+      "Entrata": 2,
+      "ResMan": 2,
+      "AppFolio": 2,
+      "in-house:Camden": 1,
+      "MRI/RentManager": 1
+    },
+    "unknown_reasons": {
+      "no-portal-link": 19,
+      "no-website": 6,
+      "in-house-portal": 1
+    }
+  },
+  "api_calls": {
+    "read": 64,
+    "search": 0
+  },
+  "errors": [],
+  "notes": [],
+  "finished": "2026-09-10T22:22:23",
+  "duration_s": 83.7,
+  "status": "ok"
+}
