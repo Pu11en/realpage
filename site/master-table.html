@@ -3,16 +3,111 @@
 <head>
   <meta charset="utf-8" />
   <title>PropertyStack -- Master Table</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="css/styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dompurify@3.1.6/dist/purify.min.js"></script>
+  <style>
+    /* Page 2 only: table left ~2/3, chat right ~1/3. */
+    .mt-layout { display: grid; grid-template-columns: minmax(0, 2fr) minmax(300px, 1fr); gap: 20px; align-items: start; }
+    .mt-layout.chat-collapsed { grid-template-columns: minmax(0, 1fr) auto; }
+    .table-scroll { overflow-x: auto; }
+    .chat-panel {
+      position: sticky; top: 24px; height: calc(100vh - 48px);
+      display: flex; flex-direction: column;
+      background: var(--card-bg); border: 1px solid var(--border); border-radius: 8px; min-height: 0;
+    }
+    .chat-head { display: flex; justify-content: space-between; align-items: center; gap: 8px; padding: 12px 14px; border-bottom: 1px solid var(--border); }
+    .chat-title { font-weight: 700; }
+    .chat-sub { color: var(--text-dim); font-size: 12px; margin-top: 2px; }
+    .chat-toggle { padding: 2px 10px; font-size: 16px; line-height: 1.4; }
+    .chat-body { flex: 1; display: flex; flex-direction: column; min-height: 0; }
+    .chat-collapsed .chat-panel { height: auto; }
+    .chat-collapsed .chat-body, .chat-collapsed .chat-sub { display: none; }
+    .chat-collapsed .chat-title { writing-mode: vertical-rl; }
+    .chat-collapsed .chat-head { flex-direction: column-reverse; border-bottom: none; }
+    .chat-log { flex: 1; overflow-y: auto; padding: 14px; display: flex; flex-direction: column; gap: 12px; min-height: 0; }
+    .chat-empty { display: flex; flex-direction: column; gap: 8px; color: var(--text-muted); font-size: 13px; }
+    .chat-example { text-align: left; color: var(--text); }
+    .msg { max-width: 100%; font-size: 13px; line-height: 1.5; overflow-wrap: anywhere; }
+    .msg.user { align-self: flex-end; background: var(--accent-dim); border: 1px solid var(--accent); border-radius: 8px; padding: 8px 10px; max-width: 90%; white-space: pre-wrap; }
+    .msg.bot { border-left: 2px solid var(--border); padding-left: 10px; }
+    .msg.bot p { margin: 0 0 8px; }
+    .msg.bot p:last-child { margin-bottom: 0; }
+    .msg.bot ul, .msg.bot ol { margin: 0 0 8px; padding-left: 18px; }
+    .msg.bot a { color: var(--accent); }
+    .msg.bot code { font-family: var(--mono); font-size: 12px; background: var(--bg); padding: 1px 4px; border-radius: 4px; }
+    .msg.bot pre { background: var(--bg); padding: 8px; border-radius: 6px; overflow-x: auto; }
+    .msg.bot .md-table { overflow-x: auto; margin: 0 0 8px; }
+    .msg.bot table { font-size: 12px; }
+    .msg.bot th, .msg.bot td { padding: 5px 6px; font-size: 12px; overflow-wrap: normal; }
+    .msg.bot th { white-space: nowrap; }
+    .msg.bot td a { word-break: break-all; }
+    .msg.bot tr:last-child td { border-bottom: 1px solid var(--border); }
+    .cite { display: inline-block; font-family: var(--mono); font-size: 11px; color: var(--text-muted); background: var(--bg); border: 1px solid var(--border); border-radius: 4px; padding: 0 4px; margin: 0 1px; white-space: nowrap; }
+    .msg-meta { color: var(--text-dim); font-size: 11px; margin-top: 4px; }
+    .msg.error { color: var(--score-low); border-left: 2px solid var(--score-low); padding-left: 10px; }
+    .msg.error .btn { margin-top: 6px; }
+    .typing { color: var(--text-muted); font-size: 13px; }
+    .typing span { display: inline-block; animation: blink 1.2s infinite; }
+    .typing span:nth-child(2) { animation-delay: 0.2s; }
+    .typing span:nth-child(3) { animation-delay: 0.4s; }
+    @keyframes blink { 0%, 80%, 100% { opacity: 0.2; } 40% { opacity: 1; } }
+    .chat-form { display: flex; gap: 8px; padding: 12px; border-top: 1px solid var(--border); }
+    .chat-form textarea {
+      flex: 1; resize: none; background: var(--bg); border: 1px solid var(--border); color: var(--text);
+      border-radius: 6px; padding: 8px 10px; font-family: var(--font); font-size: 13px;
+    }
+    .chat-form textarea:focus { outline: none; border-color: var(--accent); }
+    .chat-form .btn:disabled { opacity: 0.5; cursor: default; }
+    @media (max-width: 900px) {
+      .shell { grid-template-columns: 1fr; }
+      .sidebar { border-right: none; border-bottom: 1px solid var(--border); }
+      .sidebar .top-controls { margin-top: 8px; }
+      .main { padding: 16px; }
+      .mt-layout, .mt-layout.chat-collapsed { grid-template-columns: minmax(0, 1fr); }
+      .chat-panel { position: static; height: 70vh; }
+      .chat-collapsed .chat-title { writing-mode: horizontal-tb; }
+      .chat-collapsed .chat-head { flex-direction: row; }
+    }
+  </style>
 </head>
 <body>
   <div class="shell" id="app-shell"></div>
   <script src="js/app.js"></script>
   <script>
     renderShell("table");
+    document.getElementById("page-content").innerHTML = `
+      <div class="mt-layout" id="mt-layout">
+        <div class="mt-main" id="mt-main"></div>
+        <aside class="chat-panel" id="chat-panel" aria-label="Ask the data">
+          <div class="chat-head">
+            <div>
+              <div class="chat-title">Ask PropertyStack</div>
+              <div class="chat-sub">Answers cite the data they come from.</div>
+            </div>
+            <button class="btn chat-toggle" id="chat-toggle" aria-expanded="true" title="Collapse chat">&minus;</button>
+          </div>
+          <div class="chat-body" id="chat-body">
+            <div class="chat-log" id="chat-log" aria-live="polite">
+              <div class="chat-empty" id="chat-empty">
+                <div>Try one of these:</div>
+                <button class="btn chat-example">Which software vendor runs the most buildings?</button>
+                <button class="btn chat-example">List the 5 largest apartments in Plano with their software.</button>
+                <button class="btn chat-example">What do renters complain about most on Reddit?</button>
+              </div>
+            </div>
+            <form class="chat-form" id="chat-form">
+              <textarea id="chat-input" rows="2" maxlength="1000" placeholder="Ask about the buildings, software or research... (Enter to send)"></textarea>
+              <button class="btn" type="submit" id="chat-send">Send</button>
+            </form>
+          </div>
+        </aside>
+      </div>
+    `;
 
     loadData("data/properties.json").then((data) => {
-      const content = document.getElementById("page-content");
+      const content = document.getElementById("mt-main");
       const s = data.stats;
       const f = data.funnel;
       const cities = [...new Set(data.properties.map((p) => p.city))].sort();
@@ -54,12 +149,12 @@
           </div>
           <button class="btn" id="export-csv">Export CSV</button>
         </div>
-        <table>
+        <div class="table-scroll"><table>
           <thead>
             <tr><th>Community</th><th>City</th><th>Units</th><th>Year built</th><th>Owner</th><th>Software</th><th>Proof</th></tr>
           </thead>
           <tbody id="table-tbody"></tbody>
-        </table>
+        </table></div>
         <div style="color:var(--text-dim);font-size:13px;margin-top:8px;">
           ${f.inArea} apartments &rarr; ${f.websiteFound ?? "--"} with a website &rarr; ${f.identified} identified &rarr; ${f.unknown} unknown
         </div>
@@ -158,6 +253,148 @@
 
       renderRows();
     });
+  </script>
+  <script>
+    // Chat panel -- talks to the Hermes chatbot service (Task 8).
+    (function () {
+      const CHAT_URL = "https://propertystack-chatbot-production.up.railway.app/chat";
+      const layout = document.getElementById("mt-layout");
+      const log = document.getElementById("chat-log");
+      const form = document.getElementById("chat-form");
+      const input = document.getElementById("chat-input");
+      const send = document.getElementById("chat-send");
+      const toggle = document.getElementById("chat-toggle");
+      let busy = false;
+
+      DOMPurify.addHook("afterSanitizeAttributes", (node) => {
+        if (node.tagName === "A") {
+          node.setAttribute("target", "_blank");
+          node.setAttribute("rel", "noopener noreferrer");
+        }
+      });
+
+      function escapeHtml(str) {
+        return str.replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+      }
+
+      // The model sometimes sends pipe tables without the |---| row; add it so
+      // marked renders a real table.
+      function repairTables(text) {
+        const lines = text.split("\n");
+        const cols = (l) => (/\S\s*\|\s*\S/.test(l) ? l.replace(/^\s*\||\|\s*$/g, "").split("|").length : 0);
+        const isSep = (l) => /^\s*\|?\s*:?-{2,}:?\s*(\|\s*:?-{2,}:?\s*)*\|?\s*$/.test(l);
+        const out = [];
+        for (let i = 0; i < lines.length; i++) {
+          out.push(lines[i]);
+          const n = cols(lines[i]);
+          const startsBlock = i === 0 || !cols(lines[i - 1]);
+          if (n >= 2 && startsBlock && i + 1 < lines.length && cols(lines[i + 1]) === n && !isSep(lines[i + 1])) {
+            out.push(Array(n).fill("---").join(" | "));
+          }
+        }
+        return out.join("\n");
+      }
+
+      function renderMarkdown(text) {
+        // [5-sales.csv] / [04-reddit/index.md; 1-buildings.csv] -> citation chips.
+        // Skips real markdown links [text](url).
+        const withCites = repairTables(text).replace(/\[([^\[\]\n]+)\](?!\()/g, (m, inner) => {
+          const parts = inner.split(/[,;]/).map((p) => p.trim()).filter(Boolean);
+          if (!parts.length || !parts.every((p) => /[./]/.test(p) && !/\s/.test(p))) return m;
+          return parts.map((p) => `<span class="cite">${escapeHtml(p)}</span>`).join("");
+        });
+        const html = DOMPurify.sanitize(marked.parse(withCites, { gfm: true, breaks: true }));
+        const wrap = document.createElement("div");
+        wrap.innerHTML = html;
+        wrap.querySelectorAll("table").forEach((t) => {
+          const box = document.createElement("div");
+          box.className = "md-table";
+          t.replaceWith(box);
+          box.appendChild(t);
+        });
+        return wrap.innerHTML;
+      }
+
+      function scrollToBottom() {
+        log.scrollTop = log.scrollHeight;
+      }
+
+      function addMessage(cls, html) {
+        const empty = document.getElementById("chat-empty");
+        if (empty) empty.remove();
+        const el = document.createElement("div");
+        el.className = `msg ${cls}`;
+        el.innerHTML = html;
+        log.appendChild(el);
+        scrollToBottom();
+        return el;
+      }
+
+      function setBusy(value) {
+        busy = value;
+        send.disabled = value;
+      }
+
+      async function ask(question) {
+        if (busy) return;
+        setBusy(true);
+        const typing = addMessage("typing", "Thinking<span>.</span><span>.</span><span>.</span> <span style=\"animation:none;opacity:1;color:var(--text-dim);font-size:11px;\">(can take up to a minute)</span>");
+        try {
+          const res = await fetch(CHAT_URL, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ message: question }),
+          });
+          let body = {};
+          try { body = await res.json(); } catch (_) { /* non-JSON error page */ }
+          if (!res.ok || typeof body.answer !== "string") {
+            throw new Error(body.error || `server returned ${res.status}`);
+          }
+          typing.remove();
+          const meta = body.seconds != null ? `<div class="msg-meta">${body.seconds}s</div>` : "";
+          addMessage("bot", renderMarkdown(body.answer || "I don't have that.") + meta);
+        } catch (err) {
+          typing.remove();
+          const msg = err instanceof TypeError ? "Couldn't reach the chatbot." : `Something went wrong: ${err.message}.`;
+          const el = addMessage("error", `<div>${escapeHtml(msg)}</div><button class="btn">Retry</button>`);
+          el.querySelector("button").addEventListener("click", () => {
+            el.remove();
+            ask(question);
+          });
+        } finally {
+          setBusy(false);
+        }
+      }
+
+      function submit(text) {
+        const question = (text ?? input.value).trim();
+        if (!question || busy) return;
+        input.value = "";
+        addMessage("user", escapeHtml(question));
+        ask(question);
+      }
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        submit();
+      });
+      input.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" && !e.shiftKey && !e.isComposing) {
+          e.preventDefault();
+          submit();
+        }
+      });
+      document.querySelectorAll(".chat-example").forEach((b) => {
+        b.addEventListener("click", () => submit(b.textContent));
+      });
+      toggle.addEventListener("click", () => {
+        const collapsed = layout.classList.toggle("chat-collapsed");
+        toggle.setAttribute("aria-expanded", String(!collapsed));
+        toggle.innerHTML = collapsed ? "+" : "&minus;";
+        toggle.title = collapsed ? "Open chat" : "Collapse chat";
+        if (!collapsed) scrollToBottom();
+      });
+    })();
   </script>
 </body>
 </html>
