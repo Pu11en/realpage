@@ -122,7 +122,7 @@ Each task = its own branch. Build → manually verify → merge → next.
 - **Task 7: Build Page 5 (Under the Hood).** Simple admin view.
 - **Task 8: Hermes chatbot service on Railway.** Copy eve-agent pattern, add
   `query-propertystack` skill.
-- **Task 9: Wire chatbot into Page 2.** Chat panel connects to Hermes.
+- **Task 9: Wire chatbot into Page 2.** Chat panel connects to Hermes. ✅ DONE (7551181)
 - **Task 10: Ship + smoke-test end to end.**
 
 ## Acceptance test — how we know v1 is done
