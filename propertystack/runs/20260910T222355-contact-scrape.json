@@ -1,0 +1,30 @@
+{
+  "skill": "contact-scrape",
+  "area": "plano-richardson",
+  "started": "2026-09-10T22:23:55",
+  "inputs": [
+    "data/plano-richardson/1-buildings-dallas.csv",
+    "data/plano-richardson/2-websites-dallas.csv"
+  ],
+  "outputs": [
+    "data/plano-richardson/contacts-dallas.csv"
+  ],
+  "counts": {
+    "total": 52,
+    "phone": 35,
+    "email": 8,
+    "notes": {
+      "no-contact-found": 10,
+      "no-website": 6
+    }
+  },
+  "api_calls": {
+    "read": 46,
+    "search": 0
+  },
+  "errors": [],
+  "notes": [],
+  "finished": "2026-09-10T22:24:04",
+  "duration_s": 8.7,
+  "status": "ok"
+}

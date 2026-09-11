@@ -80,16 +80,34 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--area", required=True)
     ap.add_argument("--workers", type=int, default=5)
+    ap.add_argument("--suffix", default="",
+                     help="Read <N>-buildings<suffix>.csv + <N>-websites<suffix>.csv "
+                          "instead of master.csv (no master<suffix>.csv required), and "
+                          "write contacts<suffix>.csv instead of contacts.csv.")
     a = ap.parse_args()
     with RunLog("contact-scrape", a.area) as log:
-        in_f = area_dir(a.area) / "master.csv"
-        rows = list(csv.DictReader(open(in_f, encoding="utf-8-sig")))
-        log.rec["inputs"] = [str(in_f.relative_to(in_f.parents[2]))]
+        d = area_dir(a.area)
+        if a.suffix:
+            b_f = d / f"1-buildings{a.suffix}.csv"
+            w_f = d / f"2-websites{a.suffix}.csv"
+            bldgs = list(csv.DictReader(open(b_f, encoding="utf-8-sig")))
+            sites_by_id = {r["apt_id"]: r for r in csv.DictReader(open(w_f, encoding="utf-8-sig"))}
+            rows = []
+            for b in bldgs:
+                site = sites_by_id.get(b["apt_id"], {})
+                rows.append({"apt_id": b["apt_id"],
+                             "website": site.get("website", ""),
+                             "website_confidence": site.get("confidence", "")})
+            log.rec["inputs"] = [str(p.relative_to(p.parents[2])) for p in (b_f, w_f)]
+        else:
+            in_f = d / "master.csv"
+            rows = list(csv.DictReader(open(in_f, encoding="utf-8-sig")))
+            log.rec["inputs"] = [str(in_f.relative_to(in_f.parents[2]))]
         jina = Jina()
         today = dt.date.today().isoformat()
         with cf.ThreadPoolExecutor(a.workers) as ex:
             out = list(ex.map(lambda r: scrape(r, jina, today), rows))
-        out_f = area_dir(a.area) / "contacts.csv"
+        out_f = d / f"contacts{a.suffix}.csv"
         with open(out_f, "w", newline="") as fh:
             w = csv.DictWriter(fh, fieldnames=COLS)
             w.writeheader()
