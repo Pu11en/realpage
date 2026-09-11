@@ -28,7 +28,7 @@ outreach → new metro.
 
 - [x] **2.1 Find the source.** Find where Dallas County apartment records and deeds come
   from (DCAD), and write what's needed in `propertystack/DALLAS-SOURCES.md`. No scraping yet.
-- [ ] **2.2 find-apartments for Dallas.** Extend the skill to read Dallas County records
+- [x] **2.2 find-apartments for Dallas.** Extend the skill to read Dallas County records
   for Richardson, and write the new buildings next to the current data.
 - [ ] **2.3 Website + software for the new buildings.** 💲 Run `find-website` and
   `detect-software` on the new buildings only.

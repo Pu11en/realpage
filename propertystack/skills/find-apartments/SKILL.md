@@ -40,8 +40,50 @@ description: Skill 1 of PropertyStack. List every apartment community (20+ units
   name and same owner/deed date (portfolio sale, not a duplicate parcel).
 
 ## Limits
-- Collin County only. Richardson's Dallas County side needs Dallas CAD (not built).
 - Category `B`/`MFU`/`MFUSE` filtering relies on Collin CAD's own categorization to
   exclude hotels/motels/assisted-living/mobile-home parks — there's no explicit
   exclude clause in `run.py` for those, so a CAD miscategorization would pass through
   uncaught.
+
+## Dallas County mode (Richardson's Dallas County side)
+
+Dallas CAD (DCAD) has no Socrata/REST API (unlike Collin CAD) — only free bulk ZIP
+downloads at https://www.dallascad.org/dataproducts.aspx. `run_dallas.py` downloads
+and parses that ZIP directly instead of querying an API. See
+`skills/find-apartments/run_dallas.py`'s docstring for the DCAD schema details
+(SPTD code `B11` = MFR-Apartments, joined across `ACCOUNT_APPRL_YEAR.CSV` /
+`ACCOUNT_INFO.CSV` / `COM_DETAIL.CSV`).
+
+### Run
+```
+# 1. Download the current-year DCAD bulk ZIP (~186MB; not committed to git):
+mkdir -p propertystack/data/raw/dcad
+curl -sL -o propertystack/data/raw/dcad/DCAD2026_CURRENT.ZIP \
+  "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=%5C%5CDCAD.ORG%5CWEB%5CWEBDATA%5CWEBFORMS%5CDATA%20PRODUCTS%5CDCAD2026_CURRENT.ZIP"
+
+# 2. Run it:
+python3 skills/find-apartments/run_dallas.py --area plano-richardson --city RICHARDSON \
+  --zip-path data/raw/dcad/DCAD2026_CURRENT.ZIP
+```
+
+**Writes:** `data/<area>/1-buildings-dallas.csv` — same columns as `1-apartments.csv`
+plus a `county` column (Collin's file has none, since it's Collin-only; this file is
+always `county=Dallas`). Kept as a separate file, not merged into `1-apartments.csv`.
+
+**Result for plano-richardson (2026-09-10):** 52 communities, 10,648 units. Spot-checked
+5 names/addresses/unit-counts live (Camden Buckingham, La Mirada, Junction at Galatyn
+Park, Cutter's Point, Prestonwood Apartment Homes) — all confirmed real Richardson
+communities at the listed address; Prestonwood's unit count (194) matched exactly.
+Checked for overlap with `1-apartments.csv` by name+address and by name alone — none.
+
+### Limits (Dallas mode)
+- Only covers `--city RICHARDSON` (DCAD's `PROPERTY_CITY` field) — not a full-county run.
+- No fallback for hotel/senior-living miscategorization under SPTD `B11`, same caveat
+  as Collin mode (one row in the output, "Twin Rivers Senior Living", is senior housing
+  that DCAD itself categorizes as B11 apartments — left in since the CAD source codes
+  it as multifamily, same policy as the Collin skill leaving CAD miscategorizations
+  uncaught).
+- DCAD's own `NUM_UNITS` field lives on `COM_DETAIL.CSV` per building/component within
+  an account; parking garages/retail components have `NUM_UNITS=0` and are excluded
+  from the sum but not from the merge (they don't create phantom communities since
+  they're dropped before merging).

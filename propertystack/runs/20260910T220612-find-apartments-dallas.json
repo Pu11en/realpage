@@ -1,0 +1,23 @@
+{
+  "skill": "find-apartments-dallas",
+  "area": "plano-richardson",
+  "started": "2026-09-10T22:06:12",
+  "inputs": [
+    "data/raw/dcad/DCAD2026_CURRENT.ZIP"
+  ],
+  "outputs": [
+    "data/plano-richardson/1-buildings-dallas.csv"
+  ],
+  "counts": {
+    "b11_accounts_total_county": 4634,
+    "accounts_in_city": 68,
+    "communities": 52,
+    "units": 10648
+  },
+  "api_calls": {},
+  "errors": [],
+  "notes": [],
+  "finished": "2026-09-10T22:06:21",
+  "duration_s": 8.9,
+  "status": "ok"
+}
