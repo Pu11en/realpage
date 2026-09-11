@@ -1,0 +1,24 @@
+{
+  "skill": "find-sales-dallas",
+  "area": "plano-richardson",
+  "started": "2026-09-10T22:25:46",
+  "inputs": [
+    "data/plano-richardson/1-buildings-dallas.csv",
+    "data/raw/dcad/extracted2024/REAL_APRL_ROLL_DALLAS_COUNTY_2024.DAT"
+  ],
+  "outputs": [
+    "data/plano-richardson/5-sales-dallas.csv"
+  ],
+  "counts": {
+    "communities_checked": 52,
+    "parcels_checked": 57,
+    "parcels_missing_from_prior_roll": 1,
+    "owner_changed": 8
+  },
+  "api_calls": {},
+  "errors": [],
+  "notes": [],
+  "finished": "2026-09-10T22:25:49",
+  "duration_s": 2.5,
+  "status": "ok"
+}
