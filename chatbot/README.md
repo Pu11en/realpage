@@ -10,7 +10,7 @@ copied into `$HERMES_HOME` on every boot. Model: `deepseek/deepseek-v4-flash`.
 |---|---|
 | `Dockerfile` | Build context = repo root. Bakes `propertystack/data/plano-richardson/*.csv` and research folders `01-company` .. `08-voice-of-customer` in read-only. |
 | `docker/start-hermes.sh` | Starts the Hermes API server on `127.0.0.1:8642` (internal key, never public) and `proxy.py` on `$PORT`. |
-| `proxy.py` | The one public endpoint: `POST /chat {"message": "..."}` -> `{"answer", "citations", "seconds"}`. `GET /health`. CORS for the site, 1000-char cap, 30 req/hour per IP, 3 concurrent, 120s timeout. |
+| `proxy.py` | The one public endpoint: `POST /chat {"message": "...", "history": [{"role","content"}, ...last 10]}` -> `{"answer", "citations", "seconds"}`. `GET /health`. CORS for the site, 1000-char cap, 30 req/hour per IP, 3 concurrent, 120s timeout. |
 | `hermes-profile/SOUL.md` | Good-answer rules + hard guardrails from PLAN-v1.md "Chatbot spec". |
 | `hermes-profile/config.yaml` | API server gets only the `propertystack` toolset (no terminal, files, web, memory). `max_turns: 8` budget. Memory off. |
 | `hermes-profile/plugins/propertystack/` | Tools: `ps_schema`, `ps_sql` (single SELECT, read-only SQLite + authorizer), `ps_research_search`, `ps_research_read`. CSVs load into SQLite at startup. |

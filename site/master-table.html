@@ -278,6 +278,8 @@
       const send = document.getElementById("chat-send");
       const toggle = document.getElementById("chat-toggle");
       let busy = false;
+      // Conversation memory for this page view only (gone on reload).
+      const history = [];
 
       DOMPurify.addHook("afterSanitizeAttributes", (node) => {
         if (node.tagName === "A") {
@@ -356,7 +358,7 @@
           const res = await fetch(CHAT_URL, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ message: question }),
+            body: JSON.stringify({ message: question, history: history.slice(-10) }),
           });
           let body = {};
           try { body = await res.json(); } catch (_) { /* non-JSON error page */ }
@@ -364,6 +366,7 @@
             throw new Error(body.error || `server returned ${res.status}`);
           }
           typing.remove();
+          history.push({ role: "user", content: question }, { role: "assistant", content: body.answer });
           const meta = body.seconds != null ? `<div class="msg-meta">${body.seconds}s</div>` : "";
           addMessage("bot", renderMarkdown(body.answer || "I don't have that.") + meta);
         } catch (err) {

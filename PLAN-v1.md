@@ -90,7 +90,9 @@ pack (`04-reddit/`).
 6. Never give legal / financial / compliance advice.
 
 ### Memory
-- Chat memory: within a single conversation only.
+- Chat memory: within one conversation only — the page sends its last 10
+  messages (user + assistant) as `history`; the proxy forwards them. No memory
+  across page reloads, nothing stored server-side.
 - No per-user memory in v1.
 - Global knowledge: yes, the whole KB (via a `query-propertystack` skill using
   SQLite over the CSVs).

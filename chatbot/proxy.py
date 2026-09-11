@@ -26,6 +26,8 @@ ALLOWED_ORIGINS = {o.strip() for o in os.environ.get(
     "CHAT_ALLOWED_ORIGINS", "https://propertystack-production.up.railway.app"
 ).split(",") if o.strip()}
 MAX_CHARS = 1000
+HISTORY_MAX = 10          # prior user/assistant turns forwarded per request
+HISTORY_ITEM_CHARS = 6000
 RATE_PER_HOUR = int(os.environ.get("CHAT_RATE_PER_HOUR", "30"))
 TIMEOUT_S = 120
 
@@ -75,6 +77,18 @@ async def chat(request: web.Request) -> web.StreamResponse:
         return _cors(request, web.json_response({"error": "message is required"}, status=400))
     if len(message) > MAX_CHARS:
         return _cors(request, web.json_response({"error": f"message is over {MAX_CHARS} characters"}, status=400))
+    # Conversation memory lives in the page only: the client sends its last
+    # turns as history; nothing is stored server-side.
+    raw = body.get("history") or []
+    if not isinstance(raw, list):
+        return _cors(request, web.json_response({"error": "history must be a list"}, status=400))
+    history = []
+    for h in raw[-HISTORY_MAX:]:
+        if not isinstance(h, dict) or h.get("role") not in ("user", "assistant"):
+            continue
+        content = str(h.get("content") or "").strip()[:HISTORY_ITEM_CHARS]
+        if content:
+            history.append({"role": h["role"], "content": content})
     ip = request.headers.get("X-Forwarded-For", request.remote or "").split(",")[0].strip()
     if not _rate_ok(ip):
         return _cors(request, web.json_response({"error": "rate limit reached, try again later"}, status=429))
@@ -87,7 +101,7 @@ async def chat(request: web.Request) -> web.StreamResponse:
                     HERMES_URL,
                     headers={"Authorization": f"Bearer {HERMES_KEY}"},
                     json={"model": "hermes-agent", "stream": False,
-                          "messages": [{"role": "user", "content": message}]},
+                          "messages": history + [{"role": "user", "content": message}]},
                 ) as r:
                     data = await r.json(content_type=None)
                     if r.status != 200:
@@ -116,7 +130,7 @@ async def health(request: web.Request) -> web.StreamResponse:
     return _cors(request, web.json_response({"ok": ok}, status=200 if ok else 503))
 
 
-app = web.Application(client_max_size=64 * 1024)
+app = web.Application(client_max_size=128 * 1024)
 app.add_routes([web.post("/chat", chat), web.options("/chat", options), web.get("/health", health)])
 
 if __name__ == "__main__":
