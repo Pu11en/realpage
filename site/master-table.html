@@ -167,7 +167,7 @@
         </div>
         <div class="table-scroll"><table>
           <thead>
-            <tr><th>Community</th><th>City</th><th>County</th><th>Units</th><th>Year built</th><th>Owner</th><th>Software</th><th>Proof</th></tr>
+            <tr id="table-head-row"><th data-sort="0">Community</th><th data-sort="1">City</th><th data-sort="2">County</th><th data-sort="3">Units</th><th data-sort="4">Year built</th><th data-sort="5">Owner</th><th data-sort="6">Software</th><th>Proof</th></tr>
           </thead>
           <tbody id="table-tbody"></tbody>
         </table></div>
@@ -177,6 +177,17 @@
         <div style="color:var(--text-dim);font-size:12px;margin-top:4px;" id="row-count"></div>
       `;
 
+      let sortKey = null; let sortDir = 1;
+      const SORT_GETTERS = {
+        0: (p) => (p.community || "").toLowerCase(),
+        1: (p) => (p.city || "").toLowerCase(),
+        2: (p) => (p.county || "").toLowerCase(),
+        3: (p) => p.units ?? -1,
+        4: (p) => p.yearBuilt ?? -1,
+        5: (p) => (p.owner || "").toLowerCase(),
+        6: (p) => (p.software || "").toLowerCase(),
+      };
+
       function currentRows() {
         const search = document.getElementById("f-search").value.trim().toLowerCase();
         const city = document.getElementById("f-city").value;
@@ -185,7 +196,7 @@
         const year = document.getElementById("f-year").value;
         const size = document.getElementById("f-size").value;
 
-        return data.properties.filter((p) => {
+        const rows = data.properties.filter((p) => {
           if (search && !p.community.toLowerCase().includes(search)) return false;
           if (city && p.city !== city) return false;
           if (county && p.county !== county) return false;
@@ -199,6 +210,16 @@
           }
           return true;
         });
+        if (sortKey !== null) {
+          const get = SORT_GETTERS[sortKey];
+          rows.sort((a, b) => {
+            const va = get(a), vb = get(b);
+            if (va < vb) return -sortDir;
+            if (va > vb) return sortDir;
+            return 0;
+          });
+        }
+        return rows;
       }
 
       function renderRows() {
@@ -225,6 +246,25 @@
 
         document.getElementById("row-count").textContent = `Showing ${rows.length} of ${data.properties.length} rows.`;
       }
+
+      function updateHeadArrows() {
+        document.querySelectorAll("#table-head-row th[data-sort]").forEach((th) => {
+          const idx = Number(th.dataset.sort);
+          const arrow = sortKey === idx ? (sortDir === 1 ? " ▲" : " ▼") : "";
+          th.textContent = th.textContent.replace(/ [▲▼]$/, "") + arrow;
+          th.style.cursor = "pointer";
+        });
+      }
+
+      document.querySelectorAll("#table-head-row th[data-sort]").forEach((th) => {
+        th.addEventListener("click", () => {
+          const idx = Number(th.dataset.sort);
+          if (sortKey === idx) { sortDir = -sortDir; } else { sortKey = idx; sortDir = 1; }
+          updateHeadArrows();
+          renderRows();
+        });
+      });
+      updateHeadArrows();
 
       function csvEscape(value) {
         const str = String(value ?? "");
