@@ -53,6 +53,12 @@
     .typing span:nth-child(2) { animation-delay: 0.2s; }
     .typing span:nth-child(3) { animation-delay: 0.4s; }
     @keyframes blink { 0%, 80%, 100% { opacity: 0.2; } 40% { opacity: 1; } }
+    .chat-close { display: none; padding: 2px 10px; font-size: 16px; line-height: 1.4; }
+    .chat-fab {
+      display: none; position: fixed; right: 16px; bottom: 16px; z-index: 40;
+      background: var(--accent); color: #0a0a0b; border: none; border-radius: 999px;
+      padding: 12px 20px; font-family: var(--font); font-size: 14px; font-weight: 700; cursor: pointer;
+    }
     .chat-form { display: flex; gap: 8px; padding: 12px; border-top: 1px solid var(--border); }
     .chat-form textarea {
       flex: 1; resize: none; background: var(--bg); border: 1px solid var(--border); color: var(--text);
@@ -66,9 +72,14 @@
       .sidebar .top-controls { margin-top: 8px; }
       .main { padding: 16px; }
       .mt-layout, .mt-layout.chat-collapsed { grid-template-columns: minmax(0, 1fr); }
-      .chat-panel { position: static; height: 70vh; }
-      .chat-collapsed .chat-title { writing-mode: horizontal-tb; }
-      .chat-collapsed .chat-head { flex-direction: row; }
+      /* Phones: chat hidden behind a floating Ask button, opens full-screen. */
+      .chat-panel { display: none; }
+      body.chat-open .chat-panel { display: flex; position: fixed; inset: 0; height: auto; border-radius: 0; border: none; z-index: 50; }
+      body.chat-open { overflow: hidden; }
+      .chat-toggle { display: none; }
+      .chat-close { display: inline-block; }
+      .chat-fab { display: block; }
+      body.chat-open .chat-fab { display: none; }
     }
   </style>
 </head>
@@ -87,6 +98,7 @@
               <div class="chat-sub">Answers cite the data they come from.</div>
             </div>
             <button class="btn chat-toggle" id="chat-toggle" aria-expanded="true" title="Collapse chat">&minus;</button>
+            <button class="btn chat-close" id="chat-close" aria-label="Close chat">&times;</button>
           </div>
           <div class="chat-body" id="chat-body">
             <div class="chat-log" id="chat-log" aria-live="polite">
@@ -104,6 +116,7 @@
           </div>
         </aside>
       </div>
+      <button class="chat-fab" id="chat-fab" aria-label="Open chat">Ask</button>
     `;
 
     loadData("data/properties.json").then((data) => {
@@ -386,6 +399,14 @@
       });
       document.querySelectorAll(".chat-example").forEach((b) => {
         b.addEventListener("click", () => submit(b.textContent));
+      });
+      document.getElementById("chat-fab").addEventListener("click", () => {
+        document.body.classList.add("chat-open");
+        scrollToBottom();
+        input.focus();
+      });
+      document.getElementById("chat-close").addEventListener("click", () => {
+        document.body.classList.remove("chat-open");
       });
       toggle.addEventListener("click", () => {
         const collapsed = layout.classList.toggle("chat-collapsed");
