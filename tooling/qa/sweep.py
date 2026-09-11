@@ -178,11 +178,17 @@ async def main():
             if not href or href.startswith(("#", "mailto:", "tel:", "javascript")) or href in seen: continue
             seen.add(href)
             url = href if href.startswith("http") else f"{B}/{href.lstrip('/')}"
-            try:
-                req = u.Request(url, method="GET", headers={"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) Chrome/126"})
-                code = u.urlopen(req, timeout=15).status
-            except Exception as e:
-                code = getattr(e, "code", str(e)[:60])
+            code = None
+            for attempt in range(2):  # external sites flap; retry once before calling it dead
+                try:
+                    req = u.Request(url, method="GET", headers={"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) Chrome/126"})
+                    code = u.urlopen(req, timeout=15).status
+                except Exception as e:
+                    code = getattr(e, "code", str(e)[:60])
+                if isinstance(code, int) and 200 <= code < 400:
+                    break
+                if attempt == 0:
+                    import time; time.sleep(2)
             if not (isinstance(code, int) and 200 <= code < 400) and "CERTIFICATE_VERIFY_FAILED" not in str(code) and not (isinstance(code, int) and code in (401, 403, 405, 429) and href.startswith("http")):
                 bug(page, "all", f"link {href}", f"link returns {code}")
 

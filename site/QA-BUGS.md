@@ -19,3 +19,8 @@ Final live check (QA Task 3, 2026-09-10) against https://propertystack-productio
 
 - "under-the-hood.html link returns 404: http://evanagrove.com/" — the site answers 200 to a normal browser; the checker's request was refused.
 - "Under the Hood" nav item shows bright white on the property page screenshots — that is just the mouse hover left over from the sweep, not an active-state bug.
+
+## 2026-09-10 deep pass (post-Dallas-removal, 204 buildings)
+- Full sweep + all 204 property pages + 3-turn live chat: 0 real bugs.
+- `http://evanagrove.com/` 404 was a checker false positive (curl gets 200); sweep.py now retries external links once.
+- Chat spot answers: 8 RealPage buildings, sizes and year_built all matched data with citations.
