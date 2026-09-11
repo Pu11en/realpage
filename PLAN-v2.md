@@ -20,7 +20,7 @@ Dallas County only. Drew ruled out outreach, a new metro and scheduled refresh.
   as a fallback.
 - [x] **1.2 "New chat" button.** Add it to the Page 2 chat panel and the phone full-screen
   chat. It clears the message list and the `history` the page sends.
-- [ ] **1.3 Answer spot check.** 💲 Ask 10 real questions and check each citation against
+- [x] **1.3 Answer spot check.** 💲 Ask 10 real questions and check each citation against
   the data. Log the results in `chatbot/SPOT-CHECK.md`, and fix up to 2 prompt issues.
 
 ## Part 2 — Dallas County part of Richardson
