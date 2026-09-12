@@ -62,7 +62,7 @@ and task Z1 turns each one into an automatic test so it can't come back.
 
 ## Part A — Backend (chatbot/, local Docker)
 
-- [ ] **A1 Server-side chats.** 💲 The browser sends a `session_id` it made up
+- [x] **A1 Server-side chats.** _(Done 2026-09-11, local Docker: same chat remembered across reload and bot restart, new chat/other ID doesn't know it, bad ID → 400. Railway volume still pending, A8.)_ 💲 The browser sends a `session_id` it made up
   (a random ID); `proxy.py` checks it's a valid ID and forwards it as `X-Hermes-Session-Id`.
   The browser stops re-sending history. `HERMES_HOME` goes on a Railway volume so chats
   survive redeploys (volume set up in A8).

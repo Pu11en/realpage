@@ -6,8 +6,9 @@ small front sits on Railway's $PORT and forwards to Hermes on localhost:
   POST /chat   {"message": "..."}  ->  {"answer": "...", "citations": [...]}
   GET  /health
 
-One-shot: every request is a fresh, stateless Hermes call (no session id, no
-memory). Guardrails on cost: message length cap, per-IP rate limit, a small
+Chats live on the server: the page sends a random session_id and Hermes keeps
+the transcript in its state.db (X-Hermes-Session-Id). Without a session_id the
+old stateless mode is used (page sends its own history). Guardrails on cost: message length cap, per-IP rate limit, a small
 concurrency cap and a timeout.
 """
 import asyncio
@@ -35,6 +36,7 @@ _hits: dict[str, deque] = defaultdict(deque)
 _slots = asyncio.Semaphore(int(os.environ.get("CHAT_MAX_CONCURRENT", "3")))
 BRACKET_RE = re.compile(r"\[([^\[\]]+)\]")
 FILE_RE = re.compile(r"^[\w./-]+\.(?:csv|md|jsonl)$")
+SESSION_RE = re.compile(r"^[A-Za-z0-9-]{16,64}$")
 URL_RE = re.compile(r"https?://[^\s)\]>`]+")
 
 
@@ -77,9 +79,12 @@ async def chat(request: web.Request) -> web.StreamResponse:
         return _cors(request, web.json_response({"error": "message is required"}, status=400))
     if len(message) > MAX_CHARS:
         return _cors(request, web.json_response({"error": f"message is over {MAX_CHARS} characters"}, status=400))
-    # Conversation memory lives in the page only: the client sends its last
-    # turns as history; nothing is stored server-side.
-    raw = body.get("history") or []
+    session_id = str(body.get("session_id") or "").strip()
+    if session_id and not SESSION_RE.match(session_id):
+        return _cors(request, web.json_response({"error": "bad session_id"}, status=400))
+    # With a session_id Hermes loads the chat from its own store; the page's
+    # history is only used by old pages that don't send one.
+    raw = [] if session_id else (body.get("history") or [])
     if not isinstance(raw, list):
         return _cors(request, web.json_response({"error": "history must be a list"}, status=400))
     history = []
@@ -99,7 +104,8 @@ async def chat(request: web.Request) -> web.StreamResponse:
             async with aiohttp.ClientSession(timeout=aiohttp.ClientTimeout(total=TIMEOUT_S)) as s:
                 async with s.post(
                     HERMES_URL,
-                    headers={"Authorization": f"Bearer {HERMES_KEY}"},
+                    headers={"Authorization": f"Bearer {HERMES_KEY}",
+                             **({"X-Hermes-Session-Id": f"web-{session_id}"} if session_id else {})},
                     json={"model": "hermes-agent", "stream": False,
                           "messages": history + [{"role": "user", "content": message}]},
                 ) as r:

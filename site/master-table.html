@@ -317,7 +317,9 @@
   <script>
     // Chat panel -- talks to the Hermes chatbot service (Task 8).
     (function () {
-      const CHAT_URL = "https://propertystack-chatbot-production.up.railway.app/chat";
+      // On localhost, talk to the local Docker bot (chatbot/README.md) unless ?bot=live.
+      const LOCAL = location.hostname === "localhost" && !/[?&]bot=live\b/.test(location.search);
+      const CHAT_URL = LOCAL ? "http://localhost:18080/chat" : "https://propertystack-chatbot-production.up.railway.app/chat";
       const layout = document.getElementById("mt-layout");
       const log = document.getElementById("chat-log");
       const form = document.getElementById("chat-form");
@@ -332,6 +334,17 @@
       // navigating away and back (same browser only).
       const history = [];
       const CHAT_STORE = "ps-chat-v1";
+      // The server keeps the conversation under this random id; "New chat" makes a new one.
+      const SESSION_STORE = "ps-chat-session";
+      function newSessionId() {
+        return crypto.randomUUID ? crypto.randomUUID() : [...crypto.getRandomValues(new Uint8Array(16))].map((b) => b.toString(16).padStart(2, "0")).join("");
+      }
+      let sessionId = null;
+      try { sessionId = localStorage.getItem(SESSION_STORE); } catch (_) {}
+      if (!sessionId) {
+        sessionId = newSessionId();
+        try { localStorage.setItem(SESSION_STORE, sessionId); } catch (_) {}
+      }
       function saveChat() {
         try {
           // Skip "Thinking..." and error bubbles: restored, they'd be stuck or have a dead Retry.
@@ -434,7 +447,8 @@
           const res = await fetch(CHAT_URL, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ message: question, history: history.slice(-10) }),
+            // history is ignored by servers that know session_id; kept for the live bot until it's redeployed.
+            body: JSON.stringify({ message: question, session_id: sessionId, history: history.slice(-10) }),
           });
           let body = {};
           try { body = await res.json(); } catch (_) { /* non-JSON error page */ }
@@ -488,7 +502,8 @@
       document.getElementById("chat-new").addEventListener("click", () => {
         generation++;
         history.length = 0;
-        try { localStorage.removeItem(CHAT_STORE); } catch (_) {}
+        sessionId = newSessionId();
+        try { localStorage.removeItem(CHAT_STORE); localStorage.setItem(SESSION_STORE, sessionId); } catch (_) {}
         log.innerHTML = emptyHtml;
         bindExamples();
         setBusy(false);

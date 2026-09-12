@@ -27,8 +27,18 @@ Optional: `CHAT_ALLOWED_ORIGINS`, `CHAT_RATE_PER_HOUR`, `CHAT_MAX_CONCURRENT`.
 
 ```bash
 docker build -f chatbot/Dockerfile -t ps-chatbot .
-docker run --rm -e DEEPSEEK_API_KEY -e PORT=8080 -p 18080:8080 ps-chatbot
-curl -s localhost:18080/chat -H 'Content-Type: application/json' -d '{"message":"Top 5 leads?"}'
+docker run --rm -e DEEPSEEK_API_KEY -e PORT=8080 -e CHAT_ALLOWED_ORIGINS=http://localhost:8765 -p 18080:8080 ps-chatbot
+curl -s localhost:18080/chat -H 'Content-Type: application/json' -d '{"message":"Top 5 leads?","session_id":"test-session-0001"}'
 ```
 
 The data is baked into the image, so a data refresh needs a redeploy (push to main).
+
+## Saved chats
+
+The page sends a random `session_id` (16-64 letters/digits/dashes); the proxy forwards it
+to Hermes as `X-Hermes-Session-Id` (prefixed `web-`) and Hermes keeps the whole chat in
+`$HERMES_HOME/state.db`. Requests without a `session_id` use the old mode (page sends
+`history`). On Railway, `HERMES_HOME` needs a volume or chats reset on every deploy.
+
+`site/master-table.html` on localhost talks to this local bot (port 18080); add `?bot=live`
+to use the Railway bot instead.

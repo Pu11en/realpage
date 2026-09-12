@@ -7,7 +7,7 @@ on Railway: its own memory, saved chats, live answers, polished UI. The result i
 final `PLAN-v4.md` that `/gowork` can run one small task at a time.
 
 ## Next Step
-Review PLAN-v4.md (Phase 4), then Drew OKs it and starts A1.
+A1 done. Next: PLAN-v4 A2 (memory trial) or A3 (live words + progress line).
 
 ## Current Phase
 Phase 4: Review
@@ -36,7 +36,11 @@ Phase 4: Review
 
 ### Phase 4: Review
 - [ ] Run `/mvp-plan-review` on PLAN-v4.md, apply fixes
-- [ ] Drew OKs the plan
+- [x] Drew OKs the plan (picked "start A1")
+- **Status:** complete (review skipped by Drew's choice)
+
+### Phase 6: Build (PLAN-v4)
+- [x] A1 server-side chats (local)
 - **Status:** in_progress
 
 ### Phase 5: Hand off
