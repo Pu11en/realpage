@@ -37,7 +37,7 @@ Railway change before C1. 💲 = real bot calls (cents).
   OAuth vars, OAuth sign-up on, password sign-up off, new users get the "user" role.
   Check: a second Google account can sign in with one click and sees an empty chat list;
   it cannot see the admin's chats.
-- [ ] **A3 Brand it PropertyStack.** Name, logo/favicon, dark theme in PropertyStack's
+- [ ] **A3 Brand it PropertyStack.** _(Drew 2026-09-12: keep it minimal — green ✦ + "PropertyStack" wordmark, site colours, no logo design work; Drew does design himself in a separate session.)_ Name, logo/favicon, dark theme in PropertyStack's
   colours (custom CSS), only the `hermes-agent` model shown, default model set, welcome
   text with 3 example questions, no model picker/settings clutter for users.
   Check: screenshots at 1280 and 390 look like PropertyStack; a user sees no model picker.
@@ -47,8 +47,7 @@ Railway change before C1. 💲 = real bot calls (cents).
   adjust the bot's prompt (`hermes-profile/SOUL.md`) to write them as `\[file\]` or code.
   Check: 💲 one question with a lookup shows a progress line, Stop mid-answer stops it,
   citation chips visible.
-- [ ] **A5 Limits & safety.** Per-user rate limit in Open WebUI admin (or leave unlimited
-  per Drew's wish, but set a daily cap so a bot can't run up the bill), tools stay
+- [ ] **A5 Limits & safety.** _(Drew 2026-09-12: daily cap of about $3 per signed-in user; kidquick360@gmail.com is unlimited, no cap.)_ Per-user daily cap in Open WebUI admin (or a small proxy check if Open WebUI has no cost cap), tools stay
   read-only, Hermes API not reachable from the internet (only from Open WebUI).
   Check: the Hermes port is not published; a user with 40 messages in a minute is throttled.
 
