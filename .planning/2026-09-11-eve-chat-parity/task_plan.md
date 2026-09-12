@@ -7,7 +7,7 @@ on Railway: its own memory, saved chats, live answers, polished UI. The result i
 final `PLAN-v4.md` that `/gowork` can run one small task at a time.
 
 ## Next Step
-Direction changed to Open WebUI: PLAN-v5.md written. Next: Drew OKs PLAN-v5, then A1 (run Open WebUI locally).
+PLAN-v5 A1 done (Open WebUI running locally). Next: A2 Google sign-in (Drew does the Google console steps).
 
 ## Current Phase
 Phase 4: Review

@@ -1,0 +1,40 @@
+# Local trial of the full chat: PropertyStack bot (Hermes + proxy) + Open WebUI.
+# Run from the repo root:
+#   docker compose -f chatbot/docker-compose.local.yml up --build
+# Then open http://localhost:3000 (Open WebUI) — first account created is admin.
+# DEEPSEEK_API_KEY must be in your shell environment.
+services:
+  chatbot:
+    build:
+      context: ..
+      dockerfile: chatbot/Dockerfile
+    environment:
+      DEEPSEEK_API_KEY: ${DEEPSEEK_API_KEY}
+      PORT: "8080"
+      API_SERVER_HOST: "0.0.0.0"          # reachable by open-webui on the compose network
+      API_SERVER_KEY: ${HERMES_API_KEY:-local-trial-key-change-me}
+      CHAT_ALLOWED_ORIGINS: http://localhost:8765
+    ports:
+      - "18080:8080"                      # the old /chat proxy for the site's quick panel
+      # Hermes' 8642 is NOT published: only open-webui can reach it.
+    volumes:
+      - hermes-home:/opt/data
+  open-webui:
+    image: ghcr.io/open-webui/open-webui:main
+    depends_on: [chatbot]
+    environment:
+      WEBUI_NAME: PropertyStack
+      OPENAI_API_BASE_URL: http://chatbot:8642/v1
+      OPENAI_API_KEY: ${HERMES_API_KEY:-local-trial-key-change-me}
+      ENABLE_OLLAMA_API: "false"
+      ENABLE_SIGNUP: "true"               # A2 turns this off and enables Google sign-in
+      DEFAULT_USER_ROLE: user
+      DEFAULT_MODELS: hermes-agent
+      WEBUI_SECRET_KEY: ${WEBUI_SECRET_KEY:-local-trial-secret}
+    ports:
+      - "3000:8080"
+    volumes:
+      - open-webui:/app/backend/data
+volumes:
+  hermes-home:
+  open-webui:

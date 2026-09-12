@@ -23,7 +23,8 @@ write_env_kv() {
 # Internal-only key between the proxy and Hermes; regenerated per boot unless set.
 export API_SERVER_KEY="${API_SERVER_KEY:-$($PY -c 'import secrets; print(secrets.token_hex(32))')}"
 export API_SERVER_PORT=8642
-export API_SERVER_HOST=127.0.0.1
+# Railway private network / Docker compose can set API_SERVER_HOST=0.0.0.0 (key still required).
+export API_SERVER_HOST="${API_SERVER_HOST:-127.0.0.1}"
 write_env_kv API_SERVER_ENABLED true
 write_env_kv API_SERVER_KEY "$API_SERVER_KEY"
 write_env_kv API_SERVER_PORT "$API_SERVER_PORT"

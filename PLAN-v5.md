@@ -17,7 +17,7 @@ Railway change before C1. 💲 = real bot calls (cents).
 
 ## Part A — Run it locally
 
-- [ ] **A1 Open WebUI talks to the local bot.** `chatbot/docker-compose.local.yml`: the
+- [x] **A1 Open WebUI talks to the local bot.** _(Done 2026-09-11: `docker compose -f chatbot/docker-compose.local.yml -p ps-chat up -d --build`; http://localhost:3000, admin = kidquick360@gmail.com / local-trial-pass. Headless: cited streamed answer, same-chat memory, auto chat title, follow-up suggestions, copy/regenerate present. Noted for A4: warm-up lines "I'll check the schema first." show in the answer; no progress line seen.)_ `chatbot/docker-compose.local.yml`: the
   existing `ps-chatbot` image + `ghcr.io/open-webui/open-webui` pointed at Hermes'
   OpenAI-style API (`/v1`, bearer = `API_SERVER_KEY`). Hermes must listen on the Docker
   network, not only 127.0.0.1 (env `API_SERVER_HOST`). Sign-up off except the first admin.
