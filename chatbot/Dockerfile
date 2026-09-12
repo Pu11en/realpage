@@ -12,8 +12,8 @@ RUN mkdir -p /kb/data /kb/research && \
     done && \
     find /kb/research -type f ! -name '*.md' ! -name '*.txt' ! -name '*.csv' -delete
 
-# Pinned: newer :latest images (s6 main-hermes) start their own gateway and skip our CMD.
-FROM nousresearch/hermes-agent:v2026.7.20
+# Pinned to a tested release (older ones leak DeepSeek tool calls as text).
+FROM nousresearch/hermes-agent:v2026.9.11
 
 USER root
 WORKDIR /app
