@@ -21,7 +21,8 @@ from collections import defaultdict, deque
 import aiohttp
 from aiohttp import web
 
-HERMES_URL = f"http://127.0.0.1:{os.environ.get('API_SERVER_PORT', '8642')}/v1/chat/completions"
+HERMES_BASE = f"http://127.0.0.1:{os.environ.get('API_SERVER_PORT', '8642')}/v1"
+HERMES_URL = f"{HERMES_BASE}/chat/completions"
 HERMES_KEY = os.environ["API_SERVER_KEY"]
 PORT = int(os.environ.get("PORT", "8080"))
 ALLOWED_ORIGINS = {o.strip() for o in os.environ.get(
@@ -33,7 +34,20 @@ HISTORY_ITEM_CHARS = 6000
 RATE_PER_HOUR = int(os.environ.get("CHAT_RATE_PER_HOUR", "30"))
 TIMEOUT_S = 120
 
+# Open WebUI gateway (/v1/*): per-signed-in-user rate limit + daily $ cap.
+GATEWAY_ADMIN_EMAIL = os.environ.get("CHAT_ADMIN_EMAIL", "kidquick360@gmail.com").strip().lower()
+GATEWAY_DAILY_CAP_USD = float(os.environ.get("CHAT_DAILY_CAP_USD", "3.0"))
+GATEWAY_RATE_PER_MINUTE = int(os.environ.get("CHAT_RATE_PER_MINUTE", "40"))
+GATEWAY_USAGE_FILE = os.path.join(os.environ.get("HERMES_HOME", "/opt/data"), "usage.json")
+# DeepSeek cache-miss pricing (USD per token); ~4 chars/token estimate since we
+# don't run Hermes' tokenizer here.
+GATEWAY_PRICE_IN_PER_TOKEN = 0.14 / 1_000_000
+GATEWAY_PRICE_OUT_PER_TOKEN = 0.28 / 1_000_000
+GATEWAY_CHARS_PER_TOKEN = 4
+
 _hits: dict[str, deque] = defaultdict(deque)
+_gateway_hits: dict[str, deque] = defaultdict(deque)
+_gateway_usage_lock = asyncio.Lock()
 _slots = asyncio.Semaphore(int(os.environ.get("CHAT_MAX_CONCURRENT", "3")))
 BRACKET_RE = re.compile(r"\[([^\[\]]+)\]")
 FILE_RE = re.compile(r"^[\w./-]+\.(?:csv|md|jsonl)$")
@@ -222,6 +236,122 @@ async def chat_stream(request: web.Request) -> web.StreamResponse:
     return resp
 
 
+def _gateway_load_usage() -> dict:
+    try:
+        with open(GATEWAY_USAGE_FILE) as f:
+            return json.load(f)
+    except Exception:
+        return {}
+
+
+def _gateway_save_usage(usage: dict) -> None:
+    try:
+        os.makedirs(os.path.dirname(GATEWAY_USAGE_FILE), exist_ok=True)
+        with open(GATEWAY_USAGE_FILE, "w") as f:
+            json.dump(usage, f)
+    except OSError:
+        pass
+
+
+def _gateway_usage_key(email: str) -> str:
+    return f"{email}|{time.strftime('%Y-%m-%d', time.gmtime())}"
+
+
+def _gateway_est_cost(chars: int, *, is_output: bool) -> float:
+    tokens = chars / GATEWAY_CHARS_PER_TOKEN
+    return tokens * (GATEWAY_PRICE_OUT_PER_TOKEN if is_output else GATEWAY_PRICE_IN_PER_TOKEN)
+
+
+def _gateway_rate_ok(email: str) -> bool:
+    now = time.time()
+    q = _gateway_hits[email]
+    while q and now - q[0] > 60:
+        q.popleft()
+    if len(q) >= GATEWAY_RATE_PER_MINUTE:
+        return False
+    q.append(now)
+    return True
+
+
+async def _gateway_check(email: str) -> str:
+    """Empty string if allowed, else the reason it's blocked."""
+    if not _gateway_rate_ok(email):
+        return f"too many messages, wait a minute (limit {GATEWAY_RATE_PER_MINUTE}/min)"
+    if email == GATEWAY_ADMIN_EMAIL or not email:
+        return ""
+    async with _gateway_usage_lock:
+        spent = _gateway_load_usage().get(_gateway_usage_key(email), 0.0)
+    if spent >= GATEWAY_DAILY_CAP_USD:
+        return f"daily chat limit reached (${GATEWAY_DAILY_CAP_USD:.2f}), resets tomorrow"
+    return ""
+
+
+async def _gateway_add_cost(email: str, cost: float) -> None:
+    if not email or email == GATEWAY_ADMIN_EMAIL:
+        return
+    async with _gateway_usage_lock:
+        usage = _gateway_load_usage()
+        key = _gateway_usage_key(email)
+        usage[key] = usage.get(key, 0.0) + cost
+        _gateway_save_usage(usage)
+
+
+def _gateway_auth_ok(request: web.Request) -> bool:
+    return request.headers.get("Authorization", "") == f"Bearer {HERMES_KEY}"
+
+
+async def gateway_models(request: web.Request) -> web.StreamResponse:
+    """Open WebUI's /v1/models probe. Not user-scoped, no cap needed."""
+    if not _gateway_auth_ok(request):
+        return web.json_response({"error": "unauthorized"}, status=401)
+    async with aiohttp.ClientSession(timeout=aiohttp.ClientTimeout(total=10)) as s:
+        async with s.get(f"{HERMES_BASE}/models", headers=dict(request.headers)) as r:
+            data = await r.json(content_type=None)
+            return web.json_response(data, status=r.status)
+
+
+async def gateway_chat(request: web.Request) -> web.StreamResponse:
+    """Open WebUI's OpenAI-compatible endpoint, gated per signed-in user.
+
+    Open WebUI is told to forward X-OpenWebUI-User-Email (see
+    ENABLE_FORWARD_USER_INFO_HEADERS in docker-compose); Hermes itself has no
+    concept of separate users, so the cap lives here in front of it.
+    """
+    if not _gateway_auth_ok(request):
+        return web.json_response({"error": "unauthorized"}, status=401)
+    try:
+        body = await request.json()
+    except Exception:
+        return web.json_response({"error": "bad json"}, status=400)
+    email = request.headers.get("X-Openwebui-User-Email", "").strip().lower()
+    blocked = await _gateway_check(email)
+    if blocked:
+        return web.json_response({"error": {"message": blocked, "type": "rate_limit_exceeded"}}, status=429)
+    req_chars = sum(len(str(m.get("content", ""))) for m in body.get("messages", []) if isinstance(m, dict))
+
+    async with _slots:
+        try:
+            async with aiohttp.ClientSession(timeout=aiohttp.ClientTimeout(total=TIMEOUT_S)) as s:
+                async with s.post(HERMES_URL, headers={"Authorization": f"Bearer {HERMES_KEY}"}, json=body) as r:
+                    if not body.get("stream"):
+                        data = await r.json(content_type=None)
+                        await _gateway_add_cost(email, _gateway_est_cost(req_chars, is_output=False)
+                                                 + _gateway_est_cost(len(json.dumps(data)), is_output=True))
+                        return web.json_response(data, status=r.status)
+                    resp = web.StreamResponse(headers={
+                        "Content-Type": "text/event-stream", "Cache-Control": "no-cache", "X-Accel-Buffering": "no"})
+                    await resp.prepare(request)
+                    out_chars = 0
+                    async for chunk in r.content.iter_any():
+                        out_chars += len(chunk)
+                        await resp.write(chunk)
+                    await _gateway_add_cost(email, _gateway_est_cost(req_chars, is_output=False)
+                                             + _gateway_est_cost(out_chars, is_output=True))
+                    return resp
+        except asyncio.TimeoutError:
+            return web.json_response({"error": "agent timed out"}, status=504)
+
+
 async def options(request: web.Request) -> web.StreamResponse:
     return _cors(request, web.Response(status=204))
 
@@ -238,7 +368,9 @@ async def health(request: web.Request) -> web.StreamResponse:
 
 app = web.Application(client_max_size=128 * 1024)
 app.add_routes([web.post("/chat", chat), web.options("/chat", options),
-                web.post("/chat/stream", chat_stream), web.options("/chat/stream", options), web.get("/health", health)])
+                web.post("/chat/stream", chat_stream), web.options("/chat/stream", options), web.get("/health", health),
+                web.post("/v1/chat/completions", gateway_chat), web.options("/v1/chat/completions", options),
+                web.get("/v1/models", gateway_models)])
 
 if __name__ == "__main__":
     web.run_app(app, host="0.0.0.0", port=PORT, print=None)

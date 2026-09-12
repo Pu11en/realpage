@@ -55,7 +55,17 @@ Railway change before C1. 💲 = real bot calls (cents).
   adjust the bot's prompt (`hermes-profile/SOUL.md`) to write them as `\[file\]` or code.
   Check: 💲 one question with a lookup shows a progress line, Stop mid-answer stops it,
   citation chips visible.
-- [ ] **A5 Limits & safety.** _(Drew 2026-09-12: daily cap of about $3 per signed-in user; kidquick360@gmail.com is unlimited, no cap.)_ Per-user daily cap in Open WebUI admin (or a small proxy check if Open WebUI has no cost cap), tools stay
+- [x] **A5 Limits & safety.** _(Done 2026-09-12: Open WebUI has no built-in per-user cost cap,
+  so `chatbot/proxy.py` (already running as a sidecar) now also gates the `/v1/*` endpoint
+  Open WebUI calls. It reads the signed-in user's email (Open WebUI forwards it via
+  `ENABLE_FORWARD_USER_INFO_HEADERS`) and tracks estimated daily spend in
+  `/opt/data/usage.json`: $3.00/day per user, kidquick360@gmail.com unlimited, plus a
+  40-messages-per-minute throttle for everyone. Open WebUI's `OPENAI_API_BASE_URL` now
+  points at this proxy instead of Hermes directly, so Hermes (port 8642) is unreachable
+  from Open WebUI too, not just from the internet — verified with a docker exec probe.
+  Tested live: 42 rapid requests → the 41st/42nd got 429; a user set to $3.50 spent got
+  blocked with a clear message; kidquick360@gmail.com with $99 "spent" still got answered.)_
+  Per-user daily cap in Open WebUI admin (or a small proxy check if Open WebUI has no cost cap), tools stay
   read-only, Hermes API not reachable from the internet (only from Open WebUI).
   Check: the Hermes port is not published; a user with 40 messages in a minute is throttled.
 

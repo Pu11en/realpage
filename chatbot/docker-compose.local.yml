@@ -13,12 +13,16 @@ services:
     environment:
       DEEPSEEK_API_KEY: ${DEEPSEEK_API_KEY}
       PORT: "8080"
-      API_SERVER_HOST: "0.0.0.0"          # reachable by open-webui on the compose network
+      API_SERVER_HOST: "127.0.0.1"        # Hermes only reachable via this proxy now, not directly
       API_SERVER_KEY: ${HERMES_API_KEY:-local-trial-key-change-me}
       CHAT_ALLOWED_ORIGINS: http://localhost:8765
+      CHAT_ADMIN_EMAIL: ${CHAT_ADMIN_EMAIL:-kidquick360@gmail.com}   # unlimited, no daily cap
+      CHAT_DAILY_CAP_USD: ${CHAT_DAILY_CAP_USD:-3.0}                 # per signed-in user
+      CHAT_RATE_PER_MINUTE: ${CHAT_RATE_PER_MINUTE:-40}
     ports:
-      - "18080:8080"                      # the old /chat proxy for the site's quick panel
-      # Hermes' 8642 is NOT published: only open-webui can reach it.
+      - "18080:8080"                      # old /chat panel + the new /v1/* gateway for Open WebUI
+      # Hermes' 8642 is NOT published and not even reachable from open-webui directly:
+      # only this proxy (127.0.0.1 inside the container) can reach it.
     volumes:
       - hermes-home:/opt/data
   open-webui:
@@ -26,9 +30,10 @@ services:
     depends_on: [chatbot]
     environment:
       WEBUI_NAME: PropertyStack
-      OPENAI_API_BASE_URL: http://chatbot:8642/v1
+      OPENAI_API_BASE_URL: http://chatbot:8080/v1   # this repo's proxy, not Hermes directly (per-user cap)
       OPENAI_API_KEY: ${HERMES_API_KEY:-local-trial-key-change-me}
       ENABLE_OLLAMA_API: "false"
+      ENABLE_FORWARD_USER_INFO_HEADERS: "true"       # so the proxy knows which signed-in user is asking
       # Sign-in: Google only (keys from chatbot/.env.local, see GOOGLE-SIGNIN.md).
       # Until the keys exist, password login stays on so the local trial still works.
       ENABLE_SIGNUP: ${ENABLE_SIGNUP:-true}

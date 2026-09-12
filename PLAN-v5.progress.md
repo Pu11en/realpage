@@ -67,3 +67,38 @@ Drew's decision on the open question: accept the missing progress-line as-is (op
 Stop and citations were already verified working in the previous session. No new code
 changes — just recorded Drew's decision and ticked the box in PLAN-v5.md.
 Commit: (see git log for this task's commit)
+
+## A5 Limits & safety — 2026-09-12 (done, ticked)
+Open WebUI has no native per-user cost cap or message-rate limit (checked docs/community
+issue tracker: it's an open feature request). Since Open WebUI already goes through this
+repo's own sidecar proxy (`chatbot/proxy.py`, used for the old panel), extended it with a
+`/v1/chat/completions` + `/v1/models` gateway that Open WebUI now points at instead of
+talking to Hermes directly:
+- Reads `X-OpenWebUI-User-Email` (Open WebUI forwards it once `ENABLE_FORWARD_USER_INFO_HEADERS=true`).
+- 40 messages/minute per user (sliding window), else 429.
+- $3.00/day per user (rough token-count-based cost estimate, DeepSeek pricing), tracked in
+  `/opt/data/usage.json` (persists in the existing hermes-home volume); kidquick360@gmail.com
+  is exempt (unlimited).
+- Hermes' own port (8642) is now bound to 127.0.0.1 only inside the container and Open WebUI
+  talks to the proxy on 8080 instead — so Hermes isn't reachable from Open WebUI either, not
+  just from the internet.
+
+Checked live against the running `ps-chat` containers (rebuilt with `docker compose ... up -d
+--build chatbot open-webui`):
+- Plain question through the gateway: 200, cited real answer.
+- Wrong bearer token: 401.
+- 42 rapid requests for one test user: first 40ish succeeded, 41st/42nd got 429 with a
+  rate_limit_exceeded error.
+- Manually set a test user's spend to $3.50: next request blocked with
+  "daily chat limit reached ($3.00), resets tomorrow".
+- Manually set kidquick360@gmail.com's spend to $99: still answered normally (unlimited).
+- `docker exec ps-chat-open-webui-1` can no longer reach `chatbot:8642` at all (was `wget`
+  failed/unreachable) — confirms Hermes is now only reachable from the proxy, not published
+  and not even on the internal network for Open WebUI.
+- Ran the plan's Check: `bash tooling/qa/check-local.sh` → "0 problems on 4 pages".
+- Reset the synthetic usage.json test data back to `{}` before finishing.
+
+Left open: the daily cost is an estimate (chars/4 ≈ tokens, DeepSeek per-token pricing),
+not Hermes' exact token count — close enough for a safety cap, not an exact billing figure.
+
+Commit: (see git log for this task's commit)
