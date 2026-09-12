@@ -210,3 +210,46 @@
   real Open WebUI iframe's own internal layout at 400px (tablet) wasn't separately
   eyeballed, since W2 already confirmed its compact CSS fits a 480px column and 400px is
   narrower still — worth a quick look if it looks cramped once W7/W8 wire up the real app.
+
+## W7 One model, no picker — done
+- Brought up `chatbot/docker-compose.local.yml` (already running from earlier work) and
+  found two real problems on top of Drew's original complaint:
+  1. Open WebUI's OpenAI connection had been persisted (in its SQLite `config` table)
+     pointing at the old port `chatbot:8642` with the connection disabled — a leftover
+     from before this repo's proxy moved to port 8080. That's why `/api/models` was
+     returning nothing. Open WebUI stores these as "PersistentConfig": once written to
+     the DB, env vars in the compose file no longer take effect on restart. Fixed via
+     the admin `/openai/config/update` API to point at `http://chatbot:8080/v1` with
+     `enable: true` — matches what the compose file already intends.
+  2. The custom.css rule meant to hide the model picker (`[data-testid='model-selector-
+     model-button']`) never matched: this Open WebUI build (v0.11.3) renders that button
+     with `id="model-selector-model-button"`, not a `data-testid` attribute, so the
+     dropdown was fully visible and clickable the whole time. Added the `#id` selector
+     alongside the old one in `chatbot/branding/custom.css` (kept both so it survives
+     either attribute style across versions).
+  3. Also found the built-in "Arena Model" pseudo-model showing up in the model list
+     (the plan's "clutter" to hide) — turned it off via the admin
+     `/api/v1/evaluations/config` endpoint (`ENABLE_EVALUATION_ARENA_MODELS: false`),
+     and set the default new-user permission `chat.controls: false` via
+     `/api/v1/users/default/permissions` so future signed-up users don't get per-chat
+     controls exposed either.
+- All three fixes are server-side admin settings persisted in Open WebUI's own database
+  (the volume the compose file already mounts), not code changes to this repo, except
+  the custom.css selector fix.
+- Checked with a new Playwright script, `tooling/qa/w7_real_webui_check.py`: signs in as
+  a throwaway admin and a throwaway normal user (created via Open WebUI's own signup API
+  with `ENABLE_SIGNUP` temporarily flipped on for setup only, then flipped back off and
+  both throwaway accounts deleted — Drew's real `kidquick360@gmail.com` admin account
+  was never touched), loads the real app at 480px, and asserts the model-selector button
+  and "Arena Model" text are not visible for either account. Passed for both, before and
+  after restoring the real Google-only sign-in settings. Screenshots saved under
+  `tooling/qa/shots/` (gitignored, not committed).
+- Also reran `bash tooling/qa/check-panel.sh` (the plan's existing check) — still clean,
+  0 problems, panel_test.py clean.
+- Commit: (see git log after this entry).
+- Left open: the real compose stack's OpenAI connection and Arena/permission settings
+  live in the Open WebUI database volume, not in a config file this repo tracks — if
+  that volume is ever recreated from scratch (fresh `docker volume rm` or a new
+  environment), these three admin settings will need to be reapplied once by hand or
+  scripted, since Open WebUI ignores the compose file's env vars once its own DB has a
+  value. Worth a short one-time setup script if this comes up again for Railway (C2).

@@ -15,6 +15,7 @@
 }
 
 [data-testid='model-selector-model-button'],
+#model-selector-model-button,
 [data-testid='settings-modal'] {
 	display: none !important;
 }

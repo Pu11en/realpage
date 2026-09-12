@@ -88,7 +88,7 @@ Known facts that shape the tasks (checked 2026-09-12):
   it stays full-screen. Keep the panel width 480px, allow 400px on tablet.
   Check: panel_test.py at 1440 and 1024 with the panel open — no page element's box
   intersects the panel's box, no horizontal scroll; sweep clean on all 5 pages.
-- [ ] **W7 One model, no picker.** Drew saw a model picker inside the chat. Verify against
+- [x] **W7 One model, no picker.** Drew saw a model picker inside the chat. Verify against
   the **real** Open WebUI (compose up, no bot calls): the model dropdown must not appear for
   a normal user or the admin; the single model is preselected. Do it with Open WebUI's own
   settings first (`DEFAULT_MODELS`, admin → Settings → Models: only one model, model
