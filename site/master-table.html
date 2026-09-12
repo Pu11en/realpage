@@ -328,8 +328,31 @@
       // Bumped by "New chat" so an answer still in flight is dropped.
       let generation = 0;
       const emptyHtml = document.getElementById("chat-empty").outerHTML;
-      // Conversation memory for this page view only (gone on reload).
+      // Conversation memory: kept in localStorage so it survives reloads and
+      // navigating away and back (same browser only).
       const history = [];
+      const CHAT_STORE = "ps-chat-v1";
+      function saveChat() {
+        try {
+          const items = [...log.querySelectorAll(".msg")].map((el) => ({ cls: el.className, html: el.innerHTML }));
+          localStorage.setItem(CHAT_STORE, JSON.stringify({ history: history.slice(-20), items: items.slice(-40) }));
+        } catch (_) { /* private mode / quota: chat just won't persist */ }
+      }
+      function restoreChat() {
+        let saved = null;
+        try { saved = JSON.parse(localStorage.getItem(CHAT_STORE) || "null"); } catch (_) { return; }
+        if (!saved || !Array.isArray(saved.items) || !saved.items.length) return;
+        const empty = document.getElementById("chat-empty");
+        if (empty) empty.remove();
+        for (const it of saved.items) {
+          const el = document.createElement("div");
+          el.className = it.cls;
+          el.innerHTML = it.html;
+          log.appendChild(el);
+        }
+        history.push(...(saved.history || []));
+        log.scrollTop = log.scrollHeight;
+      }
 
       DOMPurify.addHook("afterSanitizeAttributes", (node) => {
         if (node.tagName === "A") {
@@ -392,6 +415,7 @@
         el.innerHTML = html;
         log.appendChild(el);
         scrollToBottom();
+        saveChat();
         return el;
       }
 
@@ -458,10 +482,12 @@
           b.addEventListener("click", () => submit(b.textContent));
         });
       }
+      restoreChat();
       bindExamples();
       document.getElementById("chat-new").addEventListener("click", () => {
         generation++;
         history.length = 0;
+        try { localStorage.removeItem(CHAT_STORE); } catch (_) {}
         log.innerHTML = emptyHtml;
         bindExamples();
         setBusy(false);
