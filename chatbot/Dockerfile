@@ -13,7 +13,7 @@ RUN mkdir -p /kb/data /kb/research && \
     find /kb/research -type f ! -name '*.md' ! -name '*.txt' ! -name '*.csv' -delete
 
 # Pinned: newer :latest images (s6 main-hermes) start their own gateway and skip our CMD.
-FROM nousresearch/hermes-agent@sha256:e6c9b296b98e1ca4b770552978f7940f689e75fcbaf453469cb8bf39d1ffe5d5
+FROM nousresearch/hermes-agent:v2026.7.20
 
 USER root
 WORKDIR /app
