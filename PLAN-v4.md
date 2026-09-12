@@ -37,19 +37,20 @@ and task Z1 turns each one into an automatic test so it can't come back.
 
 | # | What goes wrong for the user | Fixed by |
 |---|---|---|
-| H1 | Reload or leave the page while it's thinking → the answer is lost, your question sits there unanswered with no note | A1 (server keeps the chat) + B2 |
+| H1 | Reload or leave the page while it's thinking → the answer is lost, your question sits there unanswered with no note | ✅ note added (B2); answer itself still lost until B3 |
 | H2 | Two tabs open → each overwrites the other's saved chat | A1 + B3 |
 | H3 | After ~10 questions the bot silently forgets the start of the chat, but you can still see it | A1 + A4 |
 | H4 | Screen shows the last 40 messages but saves 20 turns; long chats lose older messages without saying so | A1 + B3 |
 | H5 | Errors show robot words: "Something went wrong: agent error." / "agent timed out" | H-fix task B7 |
 | H6 | Hit the hourly limit (30 questions) → vague error, no "try again in X minutes" | A6 + B7 |
-| H7 | First question after the bot has slept is very slow, nothing explains why | B5 |
+| H7 | First question after the bot has slept is very slow, nothing explains why | ✅ B2 (hint after 15s) |
 | H8 | While reading a long answer, a new answer yanks you to the bottom; long answers open at their end, not their start | B7 |
-| H9 | No way to stop a slow or wrong answer | A3 + B2 |
+| H9 | No way to stop a slow or wrong answer | ✅ A3 + B2 |
 | H10 | Press Enter while it's still answering → nothing happens, no hint why | B7 |
 | H11 | Collapsed chat panel pops open again after reload | B7 |
 | H12 | Chat exists only on the Master Table | B1 |
 | H13 | Phone: keyboard may cover the input box (unverified) | B5 |
+| H14 | The bot's warm-up words ("I'll check the schema first.") flash in the answer for a moment before a lookup | B7: show them in the grey status line instead |
 
 ## Rules for every task
 
@@ -78,7 +79,7 @@ and task Z1 turns each one into an automatic test so it can't come back.
   Check: `chatbot/MEMORY-OPTIONS.md` has a filled row per option, each with the isolation
   test (visitor A: "my company is Acme"; visitor B: "what's my company?" → doesn't know).
 - [ ] **A2b Drew picks a memory option (or none).** If one is picked, add a build task here.
-- [ ] **A3 Live words + "what it's doing".** New `POST /chat/stream` in `proxy.py` that
+- [x] **A3 Live words + "what it's doing".** _(Done 2026-09-11: `/chat/stream` in proxy.py; tested with curl + disconnect → Hermes logs "interrupted".)_ New `POST /chat/stream` in `proxy.py` that
   passes Hermes' streamed text and `hermes.tool.progress` events through as
   Server-Sent Events. Tool names become plain labels ("Looking up buildings…"). Old
   `/chat` keeps working. If the visitor disconnects, stop the Hermes call.
@@ -106,7 +107,7 @@ renders citations and tables).
   `site/js/chat.js` + `site/css/chat.css`, mount it on all 5 pages, same visitor and same
   open chat everywhere. Delete the Deep Chat trial page `site/chat-trial.html`.
   Check: sweep sends a faked question on each page; the chat carries over between pages.
-- [ ] **B2 Live answers.** Words appear as they stream; a small grey line shows what the
+- [x] **B2 Live answers.** _(Done 2026-09-11 on Master Table, tested headless vs local bot: progress lines, partial text, Stop, reload note, fallback to old bot, errors. Also added the 15s "may be waking up" hint from B5.)_ Words appear as they stream; a small grey line shows what the
   bot is doing ("Looking up sales…"); a Stop button ends it.
   Check: headless with a faked stream — partial text shows before the end, progress line
   shows then clears, Stop halts it.

@@ -47,6 +47,12 @@
     .msg.bot tr:last-child td { border-bottom: 1px solid var(--border); }
     .cite { display: inline-block; font-family: var(--mono); font-size: 11px; color: var(--text-muted); background: var(--bg); border: 1px solid var(--border); border-radius: 4px; padding: 0 4px; margin: 0 1px; white-space: nowrap; }
     .msg-meta { color: var(--text-dim); font-size: 11px; margin-top: 4px; }
+    .msg.note { color: var(--text-dim); font-size: 12px; font-style: italic; }
+    .msg-status { color: var(--text-dim); font-size: 12px; }
+    .msg-status:empty { display: none; }
+    .msg-hint { color: var(--text-dim); font-size: 11px; }
+    .msg-status span:not(.msg-hint) { animation: blink 1.2s infinite; }
+    .chat-form .btn.stop { border-color: var(--score-low); color: var(--score-low); }
     .msg.error { color: var(--score-low); border-left: 2px solid var(--score-low); padding-left: 10px; }
     .msg.error .btn { margin-top: 6px; }
     .typing { color: var(--text-muted); font-size: 13px; }
@@ -348,7 +354,7 @@
       function saveChat() {
         try {
           // Skip "Thinking..." and error bubbles: restored, they'd be stuck or have a dead Retry.
-          const items = [...log.querySelectorAll(".msg:not(.typing):not(.error)")].map((el) => ({ cls: el.className, html: el.innerHTML }));
+          const items = [...log.querySelectorAll(".msg:not(.typing):not(.error):not(.streaming)")].map((el) => ({ cls: el.className, html: el.innerHTML }));
           localStorage.setItem(CHAT_STORE, JSON.stringify({ history: history.slice(-20), items: items.slice(-40) }));
         } catch (_) { /* private mode / quota: chat just won't persist */ }
       }
@@ -365,6 +371,13 @@
           log.appendChild(el);
         }
         history.push(...(saved.history || []));
+        // Last thing saved is a question with no answer: the page was closed mid-answer.
+        if (/\buser\b/.test(saved.items[saved.items.length - 1].cls)) {
+          const note = document.createElement("div");
+          note.className = "msg note";
+          note.textContent = "That question didn't get an answer (the page was closed). Ask it again below.";
+          log.appendChild(note);
+        }
         log.scrollTop = log.scrollHeight;
       }
 
@@ -433,45 +446,137 @@
         return el;
       }
 
+      // Set while an answer is coming in; Stop / New chat abort it.
+      let controller = null;
+
       function setBusy(value) {
         busy = value;
-        send.disabled = value;
+        // While answering, the Send button becomes Stop.
+        send.textContent = value ? "Stop" : "Send";
+        send.classList.toggle("stop", value);
+        send.title = value ? "Stop this answer" : "";
+      }
+
+      function stopAnswer() {
+        if (controller) controller.abort();
+      }
+
+      function showError(question, msg) {
+        const el = addMessage("error", `<div>${escapeHtml(msg)}</div><button class="btn">Retry</button>`);
+        el.querySelector("button").addEventListener("click", () => {
+          el.remove();
+          ask(question);
+        });
+      }
+
+      // Read Server-Sent Events from a fetch response: calls onEvent(name, data).
+      async function readEvents(res, onEvent) {
+        const reader = res.body.getReader();
+        const decoder = new TextDecoder();
+        let buf = "";
+        for (;;) {
+          const { value, done } = await reader.read();
+          if (done) break;
+          buf += decoder.decode(value, { stream: true });
+          let cut;
+          while ((cut = buf.indexOf("\n\n")) >= 0) {
+            const block = buf.slice(0, cut);
+            buf = buf.slice(cut + 2);
+            let name = "message", data = "";
+            for (const line of block.split("\n")) {
+              if (line.startsWith("event:")) name = line.slice(6).trim();
+              else if (line.startsWith("data:")) data += line.slice(5).trim();
+            }
+            if (data) onEvent(name, JSON.parse(data));
+          }
+        }
       }
 
       async function ask(question) {
         if (busy) return;
         setBusy(true);
         const gen = generation;
-        const typing = addMessage("typing", "Thinking<span>.</span><span>.</span><span>.</span> <span style=\"animation:none;opacity:1;color:var(--text-dim);font-size:11px;\">(can take up to a minute)</span>");
+        controller = new AbortController();
+        // One bubble that goes: status line -> words arriving -> finished answer.
+        const bubble = addMessage("bot streaming", `<div class="msg-status">Thinking<span>.</span><span>.</span><span>.</span></div><div class="msg-text"></div>`);
+        const statusEl = bubble.querySelector(".msg-status");
+        const textEl = bubble.querySelector(".msg-text");
+        let text = "", meta = null, failed = null, drawQueued = false;
+        const draw = () => {
+          drawQueued = false;
+          textEl.innerHTML = renderMarkdown(text);
+          scrollToBottom();
+        };
+        const slowTimer = setTimeout(() => {
+          if (!text) statusEl.innerHTML += ` <span class="msg-hint">(the chatbot may be waking up, first answers can take a minute)</span>`;
+        }, 15000);
+        const payload = JSON.stringify({ message: question, session_id: sessionId, history: history.slice(-10) });
         try {
-          const res = await fetch(CHAT_URL, {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            // history is ignored by servers that know session_id; kept for the live bot until it's redeployed.
-            body: JSON.stringify({ message: question, session_id: sessionId, history: history.slice(-10) }),
+          let res = await fetch(`${CHAT_URL}/stream`, {
+            method: "POST", headers: { "Content-Type": "application/json" }, body: payload, signal: controller.signal,
           });
-          let body = {};
-          try { body = await res.json(); } catch (_) { /* non-JSON error page */ }
-          if (gen !== generation) return;
-          if (!res.ok || typeof body.answer !== "string") {
-            throw new Error(body.error || `server returned ${res.status}`);
+          if (res.status === 404) {
+            // Older bot without streaming: ask the plain endpoint instead.
+            res = await fetch(CHAT_URL, { method: "POST", headers: { "Content-Type": "application/json" }, body: payload, signal: controller.signal });
+            let body = {};
+            try { body = await res.json(); } catch (_) {}
+            if (!res.ok || typeof body.answer !== "string") failed = body.error || `server returned ${res.status}`;
+            else { text = body.answer; meta = body; }
+          } else if (!res.ok) {
+            let body = {};
+            try { body = await res.json(); } catch (_) {}
+            failed = body.error || `server returned ${res.status}`;
+          } else {
+            await readEvents(res, (name, data) => {
+              if (gen !== generation) return;
+              if (name === "progress") {
+                // Anything said before a lookup is the bot thinking aloud; the real answer follows.
+                text = "";
+                textEl.innerHTML = "";
+                statusEl.textContent = data.label;
+              } else if (name === "delta") {
+                text += data.text;
+                statusEl.textContent = "";
+                if (!drawQueued) { drawQueued = true; requestAnimationFrame(draw); }
+              } else if (name === "done") {
+                meta = data;
+              } else if (name === "error") {
+                failed = data.error;
+              }
+            });
+            if (!meta && !failed) failed = "the answer was cut off";
           }
-          typing.remove();
-          history.push({ role: "user", content: question }, { role: "assistant", content: body.answer });
-          const meta = body.seconds != null ? `<div class="msg-meta">${body.seconds}s</div>` : "";
-          addMessage("bot", renderMarkdown(body.answer || "I don't have that.") + meta);
         } catch (err) {
           if (gen !== generation) return;
-          typing.remove();
-          const msg = err instanceof TypeError ? "Couldn't reach the chatbot." : `Something went wrong: ${err.message}.`;
-          const el = addMessage("error", `<div>${escapeHtml(msg)}</div><button class="btn">Retry</button>`);
-          el.querySelector("button").addEventListener("click", () => {
-            el.remove();
-            ask(question);
-          });
+          if (err.name === "AbortError") failed = "stopped";
+          else failed = err instanceof TypeError ? "unreachable" : err.message;
         } finally {
-          if (gen === generation) setBusy(false);
+          clearTimeout(slowTimer);
+          if (gen === generation) { controller = null; setBusy(false); }
         }
+        if (gen !== generation) return;
+        bubble.classList.remove("streaming");
+        statusEl.remove();
+        if (failed === "stopped") {
+          if (text) {
+            textEl.innerHTML = renderMarkdown(text) + `<div class="msg-meta">Stopped</div>`;
+            history.push({ role: "user", content: question }, { role: "assistant", content: text });
+          } else {
+            bubble.className = "msg note";
+            bubble.textContent = "Stopped.";
+          }
+          saveChat();
+          return;
+        }
+        if (failed) {
+          bubble.remove();
+          showError(question, failed === "unreachable" ? "Couldn't reach the chatbot." : `Something went wrong: ${failed}.`);
+          return;
+        }
+        history.push({ role: "user", content: question }, { role: "assistant", content: text });
+        textEl.innerHTML = renderMarkdown(text || "I don't have that.") + (meta.seconds != null ? `<div class="msg-meta">${meta.seconds}s</div>` : "");
+        scrollToBottom();
+        saveChat();
       }
 
       function submit(text) {
@@ -484,7 +589,8 @@
 
       form.addEventListener("submit", (e) => {
         e.preventDefault();
-        submit();
+        if (busy) stopAnswer();
+        else submit();
       });
       input.addEventListener("keydown", (e) => {
         if (e.key === "Enter" && !e.shiftKey && !e.isComposing) {
@@ -501,6 +607,8 @@
       bindExamples();
       document.getElementById("chat-new").addEventListener("click", () => {
         generation++;
+        stopAnswer();
+        controller = null;
         history.length = 0;
         sessionId = newSessionId();
         try { localStorage.removeItem(CHAT_STORE); localStorage.setItem(SESSION_STORE, sessionId); } catch (_) {}
