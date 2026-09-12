@@ -74,11 +74,40 @@ Known facts that shape the tasks (checked 2026-09-12):
   errors on any page; Chat tab is marked active while the panel is open; ESC closes on
   desktop; the "open in full page" link goes to the same conversation.
   Check: `bash tooling/qa/check-panel.sh` green; zero console errors in the sweep.
-- [ ] **W5 Local Google keys + real run.** Drew re-enters `GOOGLE_CLIENT_ID` /
+- [x] **W5 Local Google keys + real run.** _(Keys saved 2026-09-12; stack starts; the real sign-in click is part of C1. Drew's first try found the three problems fixed in W6–W8.)_ Drew re-enters `GOOGLE_CLIENT_ID` /
   `GOOGLE_CLIENT_SECRET` in `chatbot/.env.local` (guide in `chatbot/GOOGLE-SIGNIN.md`,
   updated: authorised origin also = `http://localhost:8765`); add `chatbot/.env.local.example`.
   Check: 💲 compose up, open http://localhost:8765, Ask → sign in with Google in the popup →
   a cited answer streams inside the panel; reload → conversation still there.
+
+- [ ] **W6 Docked, never covering.** Drew's feedback: the panel floats over the top of
+  the dashboard and hides content. On desktop/tablet (>= 900px) the panel must be **docked**:
+  the page layout shrinks to make room (body gets a right margin / grid column equal to the
+  panel width, header and tables reflow, sidebar untouched), nothing sits underneath it,
+  no horizontal scroll. Slide animation is fine but the end state is side by side. On phone
+  it stays full-screen. Keep the panel width 480px, allow 400px on tablet.
+  Check: panel_test.py at 1440 and 1024 with the panel open — no page element's box
+  intersects the panel's box, no horizontal scroll; sweep clean on all 5 pages.
+- [ ] **W7 One model, no picker.** Drew saw a model picker inside the chat. Verify against
+  the **real** Open WebUI (compose up, no bot calls): the model dropdown must not appear for
+  a normal user or the admin; the single model is preselected. Do it with Open WebUI's own
+  settings first (`DEFAULT_MODELS`, admin → Settings → Models: only one model, model
+  selector off / user permissions `chat.controls` off), then custom.css only as a fallback.
+  Also hide the "Arena"/temporary-chat/settings clutter if visible.
+  Check: Playwright loads the real Open WebUI in the panel at 480px wide, signed in as the
+  local admin via the API: no element matching the model selector is visible; screenshot saved.
+- [ ] **W8 Sign-in button that actually shows.** Drew clicked and nothing happened: the
+  panel's own "Sign in with Google" button only appears after an `auth-state` message that
+  the real Open WebUI never sends (only the stand-in does), so the user is left with the
+  framed Google button, which Google refuses. Fix: the panel decides sign-in state itself
+  by calling the chat app's `GET /api/v1/auths/` with `credentials: "include"` (enable
+  `CORS_ALLOW_ORIGIN` for the site address in compose); if not signed in, show a clear
+  "Sign in with Google" card **over the frame** with one button that opens the popup;
+  when the popup closes, re-check and reload the frame. If the fetch itself fails, show
+  the button anyway. Stand-in page gets the same endpoint so tests still run free.
+  Check: panel_test.py — not signed in → card with button visible; click → popup;
+  popup closes → card gone, frame reloaded. Free real check: compose up, open the site,
+  the card shows on first open.
 
 ## Part C — Ship
 
