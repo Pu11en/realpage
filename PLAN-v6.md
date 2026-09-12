@@ -1,86 +1,97 @@
-# PropertyStack v6 — Chat panel inside the site
+# PropertyStack v6 — Open WebUI inside a chat panel on every page
 
 Written 2026-09-12. Drew's call: the chat lives **inside PropertyStack on every page** as a
-slide-out panel, not a separate app. It knows all the data (same bot as before), helps with
-sales tasks, and must not be buggy. Google sign-in and the $3/day cap are handled by **our
-own proxy** (`chatbot/proxy.py`), not Open WebUI. Open WebUI stays parked (not deleted) until
-the panel is proven, then goes in C3.
+slide-out panel beside the data, so you can switch dashboard tabs while the chat stays open.
+Chosen for fewest bugs: the panel's insides are **Open WebUI** (the proven chat app from
+PLAN-v5, already branded, Google-only login, $3/day cap via our proxy) shown in a frame,
+not a hand-built chat. Everything from PLAN-v5 A1–A5 stays as is.
 
 Run with: `Do the next unticked task in PLAN-v6.md, then tick it and stop.`
 Check: `bash tooling/qa/check-panel.sh`
-Try: `python3 chatbot/proxy.py` (with `FAKE_HERMES=1` for free fake answers) and `python3 -m http.server 8765 -d site`
+Try: `docker compose -f chatbot/docker-compose.local.yml --env-file chatbot/.env.local -p ps-chat up -d --build && python3 -m http.server 8765 -d site`
 Open: http://localhost:8765/master-table.html → Ask button (bottom-right)
 
 ## How to try it (30 seconds)
-1. Open any dashboard page, click Ask: a panel slides out over the right side, the data stays visible.
-2. Click "Sign in with Google", then ask "Which vendor runs the most buildings?": words stream in with source tags.
-3. Reload the page: the panel remembers you and the conversation. Close it and open it on another page: same chat.
+1. Open any dashboard page, click Ask: a panel slides out on the right, the data stays visible.
+2. Sign in with Google (opens a small Google window, then the panel shows the chat). Ask
+   "Which vendor runs the most buildings?": a cited answer streams in.
+3. Click another tab (Software share, Under the Hood): the panel and the conversation stay.
+   Reload: still there.
 
-Rules: everything runs locally until Drew says it's good; no push before C1. 💲 = real bot calls.
-Keep visuals minimal and on-theme (green ✦, site colours); Drew does the design pass himself later.
-Every new button inside chat messages uses one delegated listener on the log, never per-button listeners.
+Rules: everything runs locally until Drew says it's good; no push before C1. 💲 = real bot
+calls (cents); everything else is free. Keep visuals minimal (green ✦, site colours); Drew
+does the design pass himself later. Tests never need Google or the real bot: the check
+script runs a **stand-in chat page** (`tooling/qa/fake-webui/`) in place of Open WebUI.
 
-Kept from PLAN-v5 (already on main): proxy per-user daily cap + rate limit (A5), Hermes internal
-only, `/chat/stream` (streaming), branding assets in `chatbot/branding/`.
+Known facts that shape the tasks (checked 2026-09-12):
+- Google's sign-in pages refuse to load inside a frame, so login must open in a popup or
+  a new tab, and the frame reloads once signed in (W3).
+- A framed app's login cookie only works when the frame and the page are the same "site".
+  Locally both are `localhost`, fine. Live, two `*.up.railway.app` addresses do **not**
+  count as the same site (Safari/iOS block it), so C2 needs one address (custom domain
+  with `chat.` subdomain, or one reverse proxy). Decide in C2, not before.
+- The Google keys file `chatbot/.env.local` is gone from this computer; Drew re-enters the
+  keys in W5. Old chats are still in the `ps-chat_open-webui` Docker volume.
 
-## Part P — Panel
+## Part W — Panel
 
-- [ ] **P0 Self-contained check script.** `tooling/qa/check-panel.sh`: starts the proxy with
-  `FAKE_HERMES=1` (a built-in fake Hermes that streams a canned cited answer with a table, no
-  key needed) on port 8791 and the site on 8766, runs `tooling/qa/sweep.py http://localhost:8766`
-  plus `tooling/qa/panel_test.py` (Playwright, created here as a stub that just loads a page),
-  kills both servers, exits non-zero on any bug. Must finish in under 2 minutes.
-  Check: `bash tooling/qa/check-panel.sh` passes on a clean checkout with no env vars set.
-- [ ] **P1 Google sign-in in the proxy.** `GET /auth/config` (client id), `POST /auth/google`
-  takes a Google ID token (Google Identity Services button), verifies it against Google's
-  tokeninfo endpoint, sets a signed httpOnly cookie (email + expiry, HMAC with `CHAT_COOKIE_SECRET`),
-  `GET /auth/me`, `POST /auth/logout`. `/chat` and `/chat/stream` require the cookie; usage cap
-  keyed by email (reuse the A5 gateway code; admin email unlimited). `FAKE_GOOGLE=1` accepts
-  the token `test:<email>` so tests never touch Google. CORS with credentials for localhost:8766/8765.
-  Check: panel_test.py — unsigned `/chat` → 401; sign in with `test:a@b.com` → `/auth/me`
-  returns the email; 41st message in a minute → 429.
-- [ ] **P2 Panel shell on every page.** `site/js/chat-panel.js` + `site/css/chat-panel.css`,
-  loaded by all 5 pages via app.js: the existing Ask button opens a right-side slide-out
-  (420px desktop, full-screen on phone) with header (✦ Ask PropertyStack, close), message log,
-  input form, and a "Sign in with Google" state when not signed in (real button when
-  `/auth/config` has a client id, a test button when `FAKE_GOOGLE`). Remove the Open WebUI
-  link and the B2 locked card from master-table.html; the Chat tab opens the panel too.
+- [ ] **W0 Self-contained check script.** `tooling/qa/check-panel.sh`: serves the site on
+  8766 and the stand-in chat page (`tooling/qa/fake-webui/index.html`: fake login button,
+  fake message list, posts `postMessage` events like the real one will) on 3001, runs
+  `tooling/qa/sweep.py http://localhost:8766` and `tooling/qa/panel_test.py` (Playwright,
+  starts as a stub that loads each page), kills both, exits non-zero on any bug. Under 2 min.
+  `site/js/app.js` reads the chat address from `window.PS_CHAT_URL` if set (tests set it
+  to :3001), else the existing local/live constant.
+  Check: `bash tooling/qa/check-panel.sh` passes on a clean checkout with no env vars.
+- [ ] **W1 Panel shell on every page.** `site/js/chat-panel.js` + `site/css/chat-panel.css`
+  loaded by all 5 pages via app.js: Ask button and the Chat tab open a right-side slide-out
+  (480px desktop, full-screen on phone, page content still scrollable) with a slim header
+  (✦ Ask PropertyStack, "open in full page" link, close) and an `<iframe>` of the chat
+  address. Open/closed state and the frame's URL survive tab switches and reloads
+  (sessionStorage). Loading shimmer until the frame loads; friendly note if it fails.
+  Remove the B2 locked card from master-table.html.
   Check: sweep clean at desktop/tablet/phone; panel_test.py opens the panel on all 5 pages,
-  screenshots at 1440 and 390 in `/tmp/qa/`.
-- [ ] **P3 Ask and stream.** Send via `/chat/stream` with a per-person server session id;
-  words stream into the bubble; progress line ("Checking what data there is…") shows while
-  the bot works; Stop button aborts; `[file.csv]` citations become chips; markdown tables
-  render; errors show a Retry that re-asks the same question.
-  Check: panel_test.py with FAKE_HERMES — streamed answer has chips and a table; Stop
-  mid-stream leaves a "Stopped" note; a faked 500 shows Retry, Retry succeeds.
-- [ ] **P4 Saved conversation per person.** Proxy keeps a small SQLite (`chats.db`, path from
-  `CHAT_DB`) of messages per email + session; `GET /chats` (list), `GET /chats/<id>`,
-  `POST /chats/new`. Panel restores the last chat on load and on every page, has "New chat"
-  and a small "Past chats" list. Nothing in localStorage except the current chat id.
-  Check: panel_test.py — ask, reload, message still there; open another page, same chat;
-  New chat → empty; Past chats lists both; a second signed-in email sees none of them.
-- [ ] **P5 Not buggy.** Hardening pass with an explicit list: double-submit while streaming,
-  very long answers, 1000+ char question rejected with a message, cookie expired mid-chat
-  (re-shows sign-in, keeps the draft), phone keyboard doesn't hide the input, panel state
-  survives tab switch, no console errors on any page. Fix everything found and extend
-  panel_test.py with a case per item.
+  switches page with it open → still open; screenshots at 1440 and 390 in `/tmp/qa/`.
+- [ ] **W2 Open WebUI fits the frame.** Verify Open WebUI's response headers allow framing
+  from the site (if not, set them in compose or front it with the proxy); custom CSS
+  (compact mode): sidebar collapsed by default but reachable (past chats, new chat), no
+  model picker, no settings clutter, message column fills the 480px width, input pinned at
+  the bottom on phone. No design polish beyond that.
+  Check: free — compose up (no bot calls), Playwright loads the site with the real Open
+  WebUI in the frame at 1440 and 390: no X-Frame/CSP errors, login page visible inside the
+  panel, screenshots saved.
+- [ ] **W3 Sign-in from inside the panel.** In the frame, the "Continue with Google" click
+  must open Google in a popup (or new tab on phone); after it finishes, the frame reloads
+  signed in. Implement in Open WebUI custom JS/CSS if it allows, else the panel intercepts:
+  shows its own "Sign in with Google" button when the frame is on the login page, opens
+  the chat app's Google route in a popup, and reloads the frame when the popup closes.
+  Stand-in page mimics the same flow for tests.
+  Check: panel_test.py with the stand-in — click sign in → popup opens → close it → frame
+  shows the chat; real check in W5.
+- [ ] **W4 Not buggy.** Hardening checklist, fix all, one test each in panel_test.py:
+  panel open on reload keeps the same chat; phone keyboard doesn't hide the input; panel
+  close/open doesn't reload the chat; two rapid Ask clicks don't double the frame; no console
+  errors on any page; Chat tab is marked active while the panel is open; ESC closes on
+  desktop; the "open in full page" link goes to the same conversation.
   Check: `bash tooling/qa/check-panel.sh` green; zero console errors in the sweep.
-- [ ] **P6 Local Google keys + docker.** `chatbot/docker-compose.local.yml` runs only
-  Hermes + proxy (Open WebUI service removed from compose, volumes left alone);
-  `chatbot/GOOGLE-SIGNIN.md` updated for the panel (JavaScript origin = site URL, no redirect
-  URI needed); `.env.local.example` lists `GOOGLE_CLIENT_ID`, `CHAT_COOKIE_SECRET`.
-  Check: 💲 with real keys in `chatbot/.env.local`, compose up, real Google sign-in works
-  on http://localhost:8765 and a real cited answer streams.
+- [ ] **W5 Local Google keys + real run.** Drew re-enters `GOOGLE_CLIENT_ID` /
+  `GOOGLE_CLIENT_SECRET` in `chatbot/.env.local` (guide in `chatbot/GOOGLE-SIGNIN.md`,
+  updated: authorised origin also = `http://localhost:8765`); add `chatbot/.env.local.example`.
+  Check: 💲 compose up, open http://localhost:8765, Ask → sign in with Google in the popup →
+  a cited answer streams inside the panel; reload → conversation still there.
 
 ## Part C — Ship
 
-- [ ] **C1 Drew tries it on localhost.** Panel on every page, Google sign-in, ask, reload,
-  phone size. After "good" and "Put it on GitHub?": deploy.
-- [ ] **C2 Railway.** Proxy env (`GOOGLE_CLIENT_ID`, `CHAT_COOKIE_SECRET`, `CHAT_DB` on a
-  volume); Google console origin = live site URL; drop the `propertystack-chat` service if
-  it was created.
-  Check: live site → Ask → Google sign-in → answer streams; redeploy → chats still there.
-- [ ] **C3 Clean up.** Remove Open WebUI from PLAN-v5 leftovers (compose, branding no longer
-  used, `CHAT_APP_URL` in app.js, gateway `/v1/*` routes in proxy if unused); update
-  `chatbot/README.md`; archive PLAN-v5.
-  Check: sweep clean; README describes the panel setup.
+- [ ] **C1 Drew tries it on localhost.** Panel on every page, Google sign-in, ask, switch
+  tabs, reload, phone size. After "good" and "Put it on GitHub?": deploy.
+- [ ] **C2 Railway, one address.** Pick with Drew: (a) custom domain, site at the root and
+  chat at `chat.` (same site, cookies work), or (b) one reverse proxy service serving the
+  site and forwarding `/chat/` to Open WebUI. New `propertystack-chat` service (Open WebUI)
+  with a volume; Hermes private; Google console origins/redirect = live addresses; app.js
+  live chat address updated.
+  Check: live site → Ask → Google sign-in → answer streams inside the panel on desktop and
+  iPhone Safari; redeploy → chats still there.
+- [ ] **C3 Clean up.** Remove the old `/chat` + `/chat/stream` JSON routes from the proxy
+  if nothing uses them; `chatbot/README.md` describes the panel + Open WebUI setup; archive
+  PLAN-v5.
+  Check: sweep clean; README current.
