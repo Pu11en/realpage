@@ -66,3 +66,12 @@ Phase 4: Review
 |---|---|---|
 | Worktree kept disappearing between messages | 1–3 | Re-add it each message; plan files moved into it |
 | init-session ran in main checkout | 1 | Moved `.planning/` into the worktree |
+
+## Drew's direction (2026-09-11, late)
+- Site pages stay open to everyone, no sign-in to look.
+- The chat is locked: Google sign-in (one click, no passwords, no made-up accounts);
+  signed-in people get unlimited chat with their own saved history.
+- Chat must feel part of PropertyStack and be reachable from everywhere in it.
+- Under the Hood needs its own plan in a separate session (not this one).
+- Proposed: Open WebUI with Google login as the chat app; PropertyStack gets a "Chat" tab
+  + the Ask button opening it; branded to match. Awaiting Drew's pick on how it appears.
