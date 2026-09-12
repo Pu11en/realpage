@@ -12,6 +12,7 @@ services:
       dockerfile: chatbot/Dockerfile
     environment:
       DEEPSEEK_API_KEY: ${DEEPSEEK_API_KEY}
+      JINA_API_KEY: ${JINA_API_KEY:-}      # optional: enables the agent's web search/read tools
       PORT: "8080"
       API_SERVER_HOST: "127.0.0.1"        # Hermes only reachable via this proxy now, not directly
       API_SERVER_KEY: ${HERMES_API_KEY:-local-trial-key-change-me}

@@ -3,7 +3,7 @@ model:
   provider: deepseek
 agent:
   # Hard budget per question (one-shot, see PLAN-v1.md "Turn shape").
-  max_turns: 8
+  max_turns: 14
   tool_use_enforcement: true
 checkpoints:
   enabled: false
@@ -25,8 +25,9 @@ onboarding:
 plugins:
   enabled:
     - propertystack
-# The HTTP API only gets the read-only propertystack tools: no terminal,
-# file writes, web, browser, memory or skill editing.
+# The HTTP API only gets the read-only propertystack tools (incl. Jina web
+# search/read when JINA_API_KEY is set): no terminal, file writes, browser,
+# memory or skill editing.
 platform_toolsets:
   api_server:
     - propertystack

@@ -9,6 +9,11 @@ Tools (toolset "propertystack"):
   ps_sql             one read-only SELECT, max 200 rows
   ps_research_search keyword search over the research folders
   ps_research_read   read one research file
+  ps_web_search      live web search (Jina Search), top results only
+  ps_web_read        read one public web page as text (Jina Reader)
+
+The two web tools only exist when JINA_API_KEY is set; they fetch through
+Jina, so this container never connects to the target site itself.
 """
 from __future__ import annotations
 
@@ -18,6 +23,8 @@ import os
 import re
 import sqlite3
 import time
+import urllib.parse
+import urllib.request
 from pathlib import Path
 
 DATA_DIR = Path(os.getenv("PS_DATA_DIR", "/opt/propertystack/data"))
@@ -138,6 +145,44 @@ def ps_research_read(args: dict, **_) -> str:
     return json.dumps({"cite_as": f"[{rel}]", "text": text[:20000], "truncated": len(text) > 20000})
 
 
+JINA_KEY = os.getenv("JINA_API_KEY", "").strip()
+WEB_CHARS = 12000
+WEB_SECONDS = 40
+
+
+def _jina_get(url: str, headers: dict) -> str:
+    req = urllib.request.Request(url, headers={"Authorization": f"Bearer {JINA_KEY}", **headers})
+    with urllib.request.urlopen(req, timeout=WEB_SECONDS) as r:
+        return r.read().decode("utf-8", "replace")
+
+
+def ps_web_search(args: dict, **_) -> str:
+    query = (args.get("query") or "").strip()[:200]
+    if not query:
+        return json.dumps({"error": "Give a search query."})
+    try:
+        body = _jina_get("https://s.jina.ai/?" + urllib.parse.urlencode({"q": query}),
+                         {"Accept": "application/json", "X-Respond-With": "no-content"})
+        data = json.loads(body).get("data") or []
+    except Exception as e:
+        return json.dumps({"error": f"Web search failed: {type(e).__name__}"})
+    return json.dumps({"results": [
+        {"title": x.get("title", ""), "url": x.get("url", ""), "description": (x.get("description") or "")[:300]}
+        for x in data[:8]
+    ]})
+
+
+def ps_web_read(args: dict, **_) -> str:
+    url = (args.get("url") or "").strip()
+    if not re.match(r"(?i)^https?://[^/\s]+\.[a-z]{2,}", url):
+        return json.dumps({"error": "Give one full public http(s) URL."})
+    try:
+        text = _jina_get("https://r.jina.ai/" + url, {"X-Retain-Images": "none"})
+    except Exception as e:
+        return json.dumps({"error": f"Could not read that page: {type(e).__name__}"})
+    return json.dumps({"cite_as": url, "text": text[:WEB_CHARS], "truncated": len(text) > WEB_CHARS})
+
+
 def _schema(name: str, description: str, props: dict, required: list[str]) -> dict:
     return {
         "name": name,
@@ -183,3 +228,24 @@ def register(ctx) -> None:
         ),
         handler=ps_research_read, description="Research read",
     )
+    if JINA_KEY:
+        ctx.register_tool(
+            name="ps_web_search", toolset="propertystack",
+            schema=_schema(
+                "ps_web_search",
+                "Live web search. Use to research ONE lead the user asked about (owner, management company, resident reviews, news). Returns titles, URLs, snippets.",
+                {"query": {"type": "string", "description": "Search words, e.g. the building name + city + 'reviews'."}},
+                ["query"],
+            ),
+            handler=ps_web_search, description="Web search (Jina)",
+        )
+        ctx.register_tool(
+            name="ps_web_read", toolset="propertystack",
+            schema=_schema(
+                "ps_web_read",
+                "Read one public web page (from ps_web_search or a source URL in the data) as text. Cite the URL.",
+                {"url": {"type": "string", "description": "Full http(s) URL."}},
+                ["url"],
+            ),
+            handler=ps_web_read, description="Web page read (Jina)",
+        )

@@ -32,7 +32,7 @@ MAX_CHARS = 1000
 HISTORY_MAX = 10          # prior user/assistant turns forwarded per request
 HISTORY_ITEM_CHARS = 6000
 RATE_PER_HOUR = int(os.environ.get("CHAT_RATE_PER_HOUR", "30"))
-TIMEOUT_S = 120
+TIMEOUT_S = 180  # call prep with web lookups can take ~1-2 min
 
 # Open WebUI gateway (/v1/*): per-signed-in-user rate limit + daily $ cap.
 GATEWAY_ADMIN_EMAIL = os.environ.get("CHAT_ADMIN_EMAIL", "kidquick360@gmail.com").strip().lower()
