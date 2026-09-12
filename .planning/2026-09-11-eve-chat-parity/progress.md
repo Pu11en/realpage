@@ -1,0 +1,11 @@
+# Progress: Eve chat parity
+
+## 2026-09-11
+- Reviewed PLAN-v3 against the code; added 2.0 (stuck "Thinking"/dead Retry after reload).
+- Built 2.0 fix + Deep Chat trial page (commit aef8a7f), tested headless with faked
+  replies: citations, tables, history, reload, errors OK. Serving at
+  http://localhost:8765/chat-trial.html.
+- Compared Eve vs site bot; wrote PLAN-v4.md (commit e82341e).
+- Found: Hermes built-in memory is shared per profile → per-visitor memory needs
+  Honcho or similar. PLAN-v4 A2 needs rewriting after Drew's decision D-1.
+- Started this plan (planning-with-files), Phase 2 = Drew's decisions.

@@ -1,0 +1,36 @@
+# Findings: Eve chat parity
+
+## Eve vs site bot (config files, 2026-09-11)
+| Setting | Eve | Site bot |
+|---|---|---|
+| memory_enabled / user_profile_enabled | true / true | false / false |
+| compression | on, 0.5 → 0.2 | off |
+| tool_progress / show_cost | true / true | false / false |
+| max_turns | 90 | 8 |
+| tools | full (terminal, web, files, sub-agents) | read-only `propertystack` plugin |
+| where it talks | Telegram (+ BlueBubbles) | website via `chatbot/proxy.py` |
+| saved state | persistent Hermes home | wiped each deploy |
+
+## Hermes web API (docs: API server page)
+- Chats kept on the server: `X-Hermes-Session-Id` header, or the Responses API
+  (`previous_response_id` / `conversation`), or `POST /api/sessions/{id}/chat[/stream]`.
+- History: `GET /api/sessions/{id}/messages`.
+- Streaming with `hermes.tool.progress` events (the "what it's doing" line).
+- Stop a run: Runs API `POST /v1/runs/{id}/stop`.
+- `X-Hermes-Session-Key` gives per-user memory scope, **for Honcho memory**.
+
+## Memory catch (docs: memory page)
+- Built-in memory (MEMORY.md / USER.md) is **one per profile**: every visitor would
+  share it. Not safe on a public site.
+- Per-visitor memory needs an external memory provider (Honcho, Mem0, Supermemory, …)
+  alongside it. Unverified: which ones need a paid account or API key. Check before A2.
+
+## Deep Chat (deepchat.dev docs)
+- Has: `browserStorage` (saved chats), streaming, suggestion buttons, `connect` handler,
+  `htmlClassUtilities` for styling our citation chips.
+- Missing: copy button, Retry button, "New chat" button, ageing-out.
+- Trial page works: `site/chat-trial.html` (tested headless with faked replies).
+
+## Current chat code (site/master-table.html)
+- Hand-built, inline in one page. Browser re-sends last 10 messages as history.
+- Live proxy CORS already allows `http://localhost:8765`.
