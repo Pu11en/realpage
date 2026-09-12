@@ -291,3 +291,34 @@
   signed in) was verified only against the stand-in — creating a throwaway
   account needs signup temporarily re-enabled; the logic is identical
   (200 → hide) and C1's real Google run will cover it.
+
+## W8 follow-up: live answers were broken by the W8 CORS value — fixed
+- Drew's local try showed the panel chat signed in and accepted a question but
+  never showed an answer. Root cause found by driving the real stack in a
+  browser (Playwright) and reading Open WebUI's own source:
+  - W8 set `CORS_ALLOW_ORIGIN=http://localhost:8765` (only the site) so the
+    panel's credentialed `GET /api/v1/auths/` would work. But Open WebUI also
+    derives `SOCKETIO_CORS_ORIGINS` from that same value
+    (`socket/main.py:62`), so the chat app's **own** origin `http://localhost:3000`
+    was no longer allowed. Every socket.io handshake from inside the frame (and
+    even top-level :3000) was refused with HTTP 403, and Open WebUI delivers
+    streaming answers and error events over that socket. Result: the model ran,
+    the answer was saved, but the UI showed an empty assistant bubble forever.
+  - Verified the mechanism: exact browser request body replayed with curl
+    returned `null` (the endpoint's error path, `main.py:1691`), while the
+    saved chat already contained the correct assistant answer; direct curl to
+    `/api/chat/completions` streamed fine.
+- Fix: `CORS_ALLOW_ORIGIN` default is now the semicolon-separated list
+  `http://localhost:8765;http://localhost:3000` (Open WebUI splits on `;`), with
+  a comment explaining that the chat app's own origin must stay in the list.
+- Checked (real stack, no Google needed — sign-in state simulated by seeding the
+  chat origin's `token` exactly as the popup does after OAuth):
+  - top-level :3000 chat: completion response now `{"status":true,...}`, not
+    `null`; live text renders.
+  - panel on the site: sign-in card → popup → close → chat loads → ask
+    "which vendor runs the most buildings?" → **live cited answer visible in the
+    panel in ~6s** ("Yardi runs the most buildings — 66 of 204, ahead of
+    RealPage (36) and Entrata (22) [3-software.csv]"), zero socket/console
+    errors, and the same answer saved server-side.
+- The real Google popup click-through (needs Drew's account) is still C1's job;
+  everything up to and after the popup is now verified.

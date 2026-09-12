@@ -53,7 +53,11 @@ services:
       # W8: the site panel calls GET /api/v1/auths/ (credentials: include)
       # from the page to learn sign-in state; with the default "*" wildcard
       # that credentialed cross-origin fetch is refused, so name the site.
-      CORS_ALLOW_ORIGIN: ${CORS_ALLOW_ORIGIN:-http://localhost:8765}
+      # Semicolon-separated list (Open WebUI splits on ";"). The chat app's own
+      # origin MUST stay in the list: socket.io reuses this value, so naming only
+      # the site makes the framed app's realtime socket fail with 403 and answers
+      # never render live (they still save server-side).
+      CORS_ALLOW_ORIGIN: "${CORS_ALLOW_ORIGIN:-http://localhost:8765;http://localhost:3000}"
     ports:
       - "3000:8080"
     volumes:
