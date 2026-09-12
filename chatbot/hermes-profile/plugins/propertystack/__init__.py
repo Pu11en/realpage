@@ -29,7 +29,10 @@ from pathlib import Path
 
 DATA_DIR = Path(os.getenv("PS_DATA_DIR", "/opt/propertystack/data"))
 RESEARCH_DIR = Path(os.getenv("PS_RESEARCH_DIR", "/opt/propertystack/research"))
-DB_PATH = Path(os.getenv("PS_DB_PATH", "/tmp/propertystack.db"))
+# One SQLite file per process: the gateway and other hermes processes load this
+# plugin at the same moment, and a shared file made them collide ("disk I/O
+# error", "table already exists", root-owned read-only file).
+DB_PATH = Path(os.getenv("PS_DB_PATH", f"/tmp/propertystack-{os.getpid()}.db"))
 MAX_ROWS = 200
 QUERY_SECONDS = 5
 
@@ -43,6 +46,7 @@ def _table_name(csv_name: str) -> str:
 
 
 def _build_db() -> None:
+    SCHEMA.clear()
     tmp = DB_PATH.with_suffix(".building")
     tmp.unlink(missing_ok=True)
     con = sqlite3.connect(tmp)
