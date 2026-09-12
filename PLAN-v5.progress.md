@@ -102,3 +102,25 @@ Left open: the daily cost is an estimate (chars/4 ≈ tokens, DeepSeek per-token
 not Hermes' exact token count — close enough for a safety cap, not an exact billing figure.
 
 Commit: (see git log for this task's commit)
+
+## B2 Locked-chat message — 2026-09-12 (done, ticked)
+Replaced `site/master-table.html`'s old side-panel chat (its own log/textarea/SSE
+streaming JS talking to `/chat/stream`, ~375 lines, plus the `marked`/`dompurify`
+script tags it needed for markdown rendering) with a static "Ask PropertyStack" card:
+sign-in line, 3 example questions, and a "Sign in with Google to chat" button — all
+linking to `CHAT_APP_URL` (the same constant B1 added to `js/app.js` for the sidebar
+Chat tab). Open WebUI has no documented `?q=` prefill param, so per the plan's stated
+fallback the example buttons just navigate to the chat app instead of prefilling text.
+
+Checked:
+- `CHECK_PORT=8811 bash tooling/qa/check-local.sh` → "0 problems on 4 pages".
+- Real Playwright screenshots at 1280px and 390px: desktop shows the card in the right
+  column with all 3 examples and the sign-in button; phone stacks it below the table
+  (scroll needed, as expected on narrow layouts).
+- Verified the sign-in button's `href` resolves to `CHAT_APP_URL` (localhost:3000 here).
+
+Left open: this already does part of C3's cleanup for this one file (old side-panel JS
+and the unused markdown script tags are gone), so C3 just needs to check
+`master-table.html` off its list when it gets there.
+
+Commit: (see git log for this task's commit)

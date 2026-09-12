@@ -17,7 +17,7 @@ Open: http://localhost:8765 (dashboards) → Chat tab → http://localhost:3000 
 2. Click "Continue with Google", sign in, ask: "Which vendor runs the most buildings?" — a cited answer should stream in.
 3. Reload the chat page: the conversation is still there in the left list.
 
-Status 2026-09-12: A1, A2, A3, B1 done locally. Next unticked task: A4.
+Status 2026-09-12: A1, A2, A3, A4, A5, B1, B2 done locally. Next unticked task: C1.
 
 Supersedes PLAN-v4 Parts A5–A6, B1, B3–B6, Z1–Z2. Keeps: A1 (server chats), A3 (streaming
 proxy) — still used by the site's quick "Ask" panel until step C3 removes it.
@@ -76,10 +76,19 @@ Railway change before C1. 💲 = real bot calls (cents).
   URL (env-style constant: `http://localhost:3000` locally, Railway URL live). The
   chat's own top bar gets a "← PropertyStack" link back.
   Check: sweep shows the tab and button on all 5 pages; clicking opens the chat.
-- [ ] **B2 Locked-chat message.** On the Master Table, the old side panel is replaced by a
-  small card: "Ask PropertyStack — sign in with Google to chat" + 3 example questions;
-  clicking any goes to the chat with the question prefilled (`?q=`), if Open WebUI
-  supports it, else just to the chat.
+- [x] **B2 Locked-chat message.** _(Done 2026-09-12: `site/master-table.html`'s old
+  side-panel chat UI (its own log/textarea/streaming JS, ~375 lines) is replaced by a
+  static "Ask PropertyStack" card: sign-in line + 3 example questions + a
+  "Sign in with Google to chat" button, all linking to `CHAT_APP_URL` (same constant
+  B1 added to `app.js`). Open WebUI doesn't support a `?q=` prefill param, so examples
+  just go to the chat as the plan's fallback allowed. Verified with real screenshots at
+  1280 and 390 — card renders correctly on desktop (right column) and phone (stacks
+  below the table); clicking the sign-in button carries the right `href`. This also
+  removes the old `/chat/stream` proxy JS and the `marked`/`dompurify` script tags from
+  this page ahead of schedule — C3 can skip this file.)_ On the Master Table, the old
+  side panel is replaced by a small card: "Ask PropertyStack — sign in with Google to
+  chat" + 3 example questions; clicking any goes to the chat with the question
+  prefilled (`?q=`), if Open WebUI supports it, else just to the chat.
   Check: screenshots at 1280 and 390; click → chat page.
 
 ## Part C — Ship
