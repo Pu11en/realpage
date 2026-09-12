@@ -36,6 +36,7 @@
         <div class="chat-panel-error" id="chat-panel-error" style="display:none;">
           Couldn't load the chat. <a href="${CHAT_APP_URL}" target="_blank" rel="noopener">Open it in a new tab</a> instead.
         </div>
+        <button class="chat-panel-signin" id="chat-panel-signin" style="display:none;">Sign in with Google</button>
       </div>
     `;
     document.body.appendChild(panel);
@@ -43,6 +44,7 @@
     const frame = panel.querySelector("#chat-panel-frame");
     const loading = panel.querySelector("#chat-panel-loading");
     const errorEl = panel.querySelector("#chat-panel-error");
+    const signinBtn = panel.querySelector("#chat-panel-signin");
     let loaded = false;
 
     frame.addEventListener("load", () => {
@@ -61,8 +63,31 @@
 
     panel.querySelector("#chat-panel-close").addEventListener("click", closePanel);
 
+    // Google refuses to load inside a frame, so the chat app's own Google
+    // button (inside the iframe) can't be used directly. Open the chat app
+    // as a top-level popup instead -- Google is happy to load there -- and
+    // reload the framed copy once the popup closes, so it picks up the new
+    // signed-in session.
+    signinBtn.addEventListener("click", () => {
+      const popup = window.open(CHAT_APP_URL, "ps-chat-signin", "width=480,height=700");
+      if (!popup) return;
+      const timer = setInterval(() => {
+        if (popup.closed) {
+          clearInterval(timer);
+          frame.setAttribute("src", CHAT_APP_URL);
+        }
+      }, 300);
+    });
+
     return panel;
   }
+
+  window.addEventListener("message", (e) => {
+    if (!e.data || e.data.type !== "auth-state") return;
+    const panel = document.getElementById("chat-panel");
+    if (!panel) return;
+    panel.querySelector("#chat-panel-signin").style.display = e.data.signedIn ? "none" : "block";
+  });
 
   function ensureFrameLoaded(panel) {
     const frame = panel.querySelector("#chat-panel-frame");

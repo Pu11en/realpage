@@ -2,7 +2,13 @@
 <!--
   Stand-in for Open WebUI, used only by tests (tooling/qa/check-panel.sh).
   Mimics the two states the real app has: a login screen, and a signed-in
-  chat screen, plus the postMessage events the panel will listen for.
+  chat screen. Real Open WebUI has no custom-JS hook (checked in W3), so the
+  actual Google sign-in click can't be intercepted from inside the frame --
+  the panel (site/js/chat-panel.js) handles it instead, by opening this same
+  URL as a top-level popup (where Google is willing to load) and reloading
+  the framed copy once the popup closes. This page mimics both roles: the
+  framed "login screen" that posts its auth state to the panel, and the
+  popup's "Continue with Google" screen that flips the shared signed-in flag.
 -->
 <html>
 <head>
@@ -25,42 +31,33 @@
   </div>
 
 <script>
-  const signedIn = sessionStorage.getItem("fake-webui.signedIn") === "1";
+  // localStorage (not sessionStorage) so the flag is visible both to this
+  // page when framed and to this same page reopened as a top-level popup --
+  // standing in for the real cookie that Open WebUI's backend would set.
+  const signedIn = localStorage.getItem("fake-webui.signedIn") === "1";
+
+  function postAuthState(v) {
+    parent.postMessage({ source: "fake-webui", type: "auth-state", signedIn: v }, "*");
+  }
 
   function showChat() {
     document.getElementById("login").style.display = "none";
     document.getElementById("chat").style.display = "block";
-    parent.postMessage({ source: "fake-webui", type: "signed-in" }, "*");
+    postAuthState(true);
   }
 
   function showLogin() {
     document.getElementById("login").style.display = "block";
     document.getElementById("chat").style.display = "none";
+    postAuthState(false);
   }
 
   if (signedIn) showChat(); else showLogin();
 
   document.getElementById("signin").addEventListener("click", () => {
-    const popup = window.open(
-      "about:blank?fake-google-signin",
-      "fake-google-signin",
-      "width=400,height=500"
-    );
-    if (popup) {
-      popup.document.write("<button id='ok'>Sign in as test@example.com</button>");
-      popup.document.getElementById("ok").addEventListener("click", () => {
-        sessionStorage.setItem("fake-webui.signedIn", "1");
-        popup.close();
-      });
-    }
-    const timer = setInterval(() => {
-      if (popup && popup.closed) {
-        clearInterval(timer);
-        if (sessionStorage.getItem("fake-webui.signedIn") === "1") {
-          location.reload();
-        }
-      }
-    }, 100);
+    localStorage.setItem("fake-webui.signedIn", "1");
+    if (window.opener) window.close();
+    else location.reload();
   });
 
   document.getElementById("send").addEventListener("click", () => {

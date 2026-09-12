@@ -60,7 +60,7 @@ Known facts that shape the tasks (checked 2026-09-12):
   Check: free — compose up (no bot calls), Playwright loads the site with the real Open
   WebUI in the frame at 1440 and 390: no X-Frame/CSP errors, login page visible inside the
   panel, screenshots saved.
-- [ ] **W3 Sign-in from inside the panel.** In the frame, the "Continue with Google" click
+- [x] **W3 Sign-in from inside the panel.** In the frame, the "Continue with Google" click
   must open Google in a popup (or new tab on phone); after it finishes, the frame reloads
   signed in. Implement in Open WebUI custom JS/CSS if it allows, else the panel intercepts:
   shows its own "Sign in with Google" button when the frame is on the login page, opens

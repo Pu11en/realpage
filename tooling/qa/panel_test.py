@@ -69,6 +69,50 @@ async def main():
 
             await context.close()
 
+        # W3: sign-in from inside the panel. The stand-in's login screen posts
+        # its auth state to the panel, which shows its own "Sign in with
+        # Google" button (Google refuses to load inside a frame), opens the
+        # chat app as a popup, and reloads the framed copy once it closes.
+        context = await browser.new_context(viewport={"width": 1440, "height": 900})
+        await context.add_init_script(f"window.PS_CHAT_URL = {chat!r};")
+        page = await context.new_page()
+        await check_console_errors(page, f"{site}/index.html", bugs)
+        await page.locator("[data-chat-toggle]").first.click()
+
+        signin_btn = page.locator("#chat-panel-signin")
+        try:
+            await signin_btn.wait_for(state="visible", timeout=5000)
+        except Exception:
+            bugs.append("sign-in: panel didn't show the Sign in with Google button for a signed-out frame")
+
+        if await signin_btn.is_visible():
+            async with context.expect_page() as popup_info:
+                await signin_btn.click()
+            popup = await popup_info.value
+            await popup.wait_for_load_state()
+            async with popup.expect_event("close"):
+                await popup.locator("#signin").click()
+
+            frame_shows_chat = False
+            for _ in range(20):
+                frame_el = page.frame_locator("#chat-panel-frame")
+                try:
+                    if await frame_el.locator("#chat").is_visible(timeout=500):
+                        frame_shows_chat = True
+                        break
+                except Exception:
+                    pass
+                await page.wait_for_timeout(300)
+            if not frame_shows_chat:
+                bugs.append("sign-in: frame didn't show the chat after the popup closed")
+
+            signin_hidden = not await signin_btn.is_visible()
+            if not signin_hidden:
+                bugs.append("sign-in: panel kept showing the Sign in button after signing in")
+
+        await page.close()
+        await context.close()
+
         await browser.close()
 
     if bugs:

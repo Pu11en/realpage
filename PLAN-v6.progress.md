@@ -83,3 +83,39 @@
   `chatbot/branding/custom.css` then. Docker stack was torn down after
   testing (`docker compose ... down`) since nothing needs to stay running
   between tasks.
+
+## W3 Sign-in from inside the panel — done
+- Checked the real Open WebUI image for a custom-JS mount point (it already has
+  one for CSS, `custom.css`, used in W2) — there isn't one, so Open WebUI's own
+  "Continue with Google" button can't be intercepted from inside the framed
+  page. Used the plan's documented fallback instead: `site/js/chat-panel.js`
+  now shows its own "Sign in with Google" button over the frame, which opens
+  the chat app as a normal top-level popup (Google is willing to load there,
+  just not inside an iframe) and reloads the framed copy once the popup
+  closes, so it picks up the newly-signed-in session.
+- The panel knows whether to show that button via a small postMessage
+  contract: the framed chat app posts `{type: "auth-state", signedIn}` on
+  load. `tooling/qa/fake-webui/index.html` (the stand-in) now sends this
+  correctly and shares its signed-in flag via `localStorage` (not
+  `sessionStorage`) so the popup and the framed copy — separate browsing
+  contexts, same origin — see the same flag, standing in for the real cookie
+  Open WebUI's backend sets once signed in.
+- Added the sign-in flow to `tooling/qa/panel_test.py`: opens the panel,
+  waits for the Sign in button to appear, clicks it, catches the popup,
+  signs in inside the popup, confirms the popup closes on its own, confirms
+  the framed copy then shows the chat view, and confirms the Sign in button
+  disappears.
+- Left open (real Open WebUI, deferred to W5 on purpose): the real app
+  doesn't send an `auth-state` postMessage today (no custom-JS hook), so
+  right now the Sign in button would always show even once actually signed
+  in against the real app. W5's real run needs a different signal for that
+  (e.g. the panel or proxy checking the session via a small `fetch`) — noted
+  here so it isn't missed, not solved now since W3's Check only covers the
+  stand-in.
+- Checked: `CHECK_SITE_PORT=8792 CHECK_CHAT_PORT=8793 bash tooling/qa/check-panel.sh`
+  passes clean. Note: the plan's exact `bash tooling/qa/check-panel.sh` (no
+  env vars) currently fails on this shared machine only because something
+  unrelated is already listening on port 3001 (not started by this task,
+  still there after this session ends) — nothing to do with this change;
+  confirmed by re-running on alternate ports.
+- Commit: (see git log after this entry).
