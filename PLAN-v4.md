@@ -29,6 +29,28 @@ Hermes (the engine under both bots) supports all of this through its web API:
 memory, `GET /api/sessions/{id}/messages` for history, and streaming with
 `hermes.tool.progress` events. Docs: hermes-agent.nousresearch.com → API server.
 
+## Holes in today's chat (found by reading the code, 2026-09-11)
+
+Drew's real goal: **no holes** — the chat never breaks, loses things, confuses or
+surprises you, the way Eve feels solid on Telegram. Every hole below gets fixed by a task,
+and task Z1 turns each one into an automatic test so it can't come back.
+
+| # | What goes wrong for the user | Fixed by |
+|---|---|---|
+| H1 | Reload or leave the page while it's thinking → the answer is lost, your question sits there unanswered with no note | A1 (server keeps the chat) + B2 |
+| H2 | Two tabs open → each overwrites the other's saved chat | A1 + B3 |
+| H3 | After ~10 questions the bot silently forgets the start of the chat, but you can still see it | A1 + A4 |
+| H4 | Screen shows the last 40 messages but saves 20 turns; long chats lose older messages without saying so | A1 + B3 |
+| H5 | Errors show robot words: "Something went wrong: agent error." / "agent timed out" | H-fix task B7 |
+| H6 | Hit the hourly limit (30 questions) → vague error, no "try again in X minutes" | A6 + B7 |
+| H7 | First question after the bot has slept is very slow, nothing explains why | B5 |
+| H8 | While reading a long answer, a new answer yanks you to the bottom; long answers open at their end, not their start | B7 |
+| H9 | No way to stop a slow or wrong answer | A3 + B2 |
+| H10 | Press Enter while it's still answering → nothing happens, no hint why | B7 |
+| H11 | Collapsed chat panel pops open again after reload | B7 |
+| H12 | Chat exists only on the Master Table | B1 |
+| H13 | Phone: keyboard may cover the input box (unverified) | B5 |
+
 ## Rules for every task
 
 - Backend tasks run the chatbot in **local Docker first** (`chatbot/README.md` → Local
@@ -100,11 +122,27 @@ renders citations and tables).
   note after 15s.
   Check: screenshots at 390, 820 and 1280 of empty, mid-answer, error and long-chat states,
   each looked at.
+- [ ] **B7 Plain-English errors and small annoyances (H5, H6, H8, H10, H11).** Errors say what
+  happened and what to do ("The chatbot took too long. Try again." / "You've asked a lot
+  this hour, try again in 12 minutes."). New answers scroll to their start, and don't yank
+  you if you've scrolled up. Enter while busy shows "Still answering…". The panel remembers
+  being collapsed.
+  Check: headless with faked 502/504/429 replies shows the plain messages; scroll and
+  collapse behave as written.
 - [ ] **B6 Cost under each answer, like Eve.** Proxy returns the answer's cost (from
   Hermes' usage numbers); the chat shows it small and grey next to the seconds
   ("12s · $0.002").
   Check: headless with a faked reply shows "12s · $0.002"; `curl` against local Docker
   returns a cost field.
+
+- [ ] **Z1 Hole test suite.** `tooling/qa/chat_holes.py`: one headless test per hole H1–H13
+  (faked bot replies, no cost), each printing PASS/FAIL. Run it after every Part B task
+  from now on.
+  Check: `python3 tooling/qa/chat_holes.py http://localhost:8765` → all PASS.
+- [ ] **Z2 Hands-on hole hunt.** Use the chat like a real person on desktop and phone
+  size for 15 minutes (odd questions, fast clicking, reloads, bad network). Every new hole
+  goes in the table above with a fix task.
+  Check: the Holes table has a line dated today saying "hunt done: N new holes".
 
 ## Part C — Ship
 

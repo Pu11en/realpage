@@ -11,3 +11,4 @@
 - Started this plan (planning-with-files), Phase 2 = Drew's decisions.
 - D-1 answered: option 1 (saved chats now, memory add-on trial first). PLAN-v4 A2 → A2 trial + A2b pick.
 - Drew: doesn't care about widget/tech choices, wants Eve-like behavior. Decided D-2 (hand-built), D-3 (show cost), D-4 (20 steps/120s) myself; PLAN-v4 Part B + B6 updated.
+- Drew clarified the goal: hole-free chat experience. Added 13 holes (H1–H13) to PLAN-v4 mapped to fix tasks, new B7 (plain errors + annoyances), Z1 (test per hole), Z2 (hands-on hunt).

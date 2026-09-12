@@ -47,3 +47,6 @@
 - Enable with `memory.provider: <name>` in config.yaml.
 - Unknown: does the visitor ID header reach Mem0/Hindsight/Supermemory (only Honcho is
   documented)? Can built-in memory stay off while an add-on is on?
+
+## Holes (code read, 2026-09-11)
+H1–H13 listed in PLAN-v4.md "Holes in today's chat". Proxy errors are raw ("agent error", "agent timed out", "rate limit reached"); browser has no own time limit; history sent = last 10 turns, saved = 20 turns / 40 bubbles.

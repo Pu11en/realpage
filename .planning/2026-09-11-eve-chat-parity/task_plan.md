@@ -1,6 +1,7 @@
 # Task Plan: Website chat that works like Eve
 
 ## Goal
+No holes: the chat never breaks, loses things or confuses you (Drew, 2026-09-11).
 Plan (not build) the PropertyStack website chat so it works like Eve, the Hermes agent
 on Railway: its own memory, saved chats, live answers, polished UI. The result is a
 final `PLAN-v4.md` that `/gowork` can run one small task at a time.
@@ -52,6 +53,7 @@ Phase 4: Review
 | D-2: keep hand-built chat, drop Deep Chat | Eve-like parts are custom anyway; ours already renders citations/tables |
 | D-3: show cost under answers | Matches Eve's `show_cost` |
 | D-4: 20 steps, 120s cap | Longer chats like Eve, bounded cost |
+| Goal is a hole-free experience, not features | Drew clarified; holes table + Z1 test suite + Z2 hunt added |
 
 ## Errors Encountered
 | Error | Attempt | Resolution |
