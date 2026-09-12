@@ -164,6 +164,38 @@ async def main():
         await page.close()
         await context.close()
 
+        # W6: docked on desktop/tablet -- the panel must not float over the
+        # page content. Check that the shell's bounding box doesn't overlap
+        # the panel's, and there's no horizontal scrollbar, at 1440 and 1024.
+        for width, height in [(1440, 900), (1024, 900)]:
+            context = await browser.new_context(viewport={"width": width, "height": height})
+            await context.add_init_script(f"window.PS_CHAT_URL = {chat!r};")
+            for page_path in PAGES:
+                page = await context.new_page()
+                await check_console_errors(page, f"{site}/{page_path}", bugs)
+                await page.locator("[data-chat-toggle]").first.click()
+                await page.wait_for_timeout(400)
+
+                shell_box = await page.locator(".shell").bounding_box()
+                panel_box = await page.locator("#chat-panel").bounding_box()
+                if shell_box and panel_box:
+                    shell_right = shell_box["x"] + shell_box["width"]
+                    panel_left = panel_box["x"]
+                    if shell_right > panel_left + 0.5:
+                        bugs.append(
+                            f"{page_path} ({width}px): page content (right edge {shell_right:.0f}) "
+                            f"overlaps the docked panel (left edge {panel_left:.0f})"
+                        )
+
+                has_hscroll = await page.evaluate(
+                    "() => document.documentElement.scrollWidth > document.documentElement.clientWidth + 1"
+                )
+                if has_hscroll:
+                    bugs.append(f"{page_path} ({width}px): horizontal scroll appeared with the panel docked")
+
+                await page.close()
+            await context.close()
+
         await browser.close()
 
     if bugs:

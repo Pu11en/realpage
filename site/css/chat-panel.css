@@ -26,6 +26,33 @@
   }
 }
 
+/* Docked on desktop/tablet (>= 900px): shrink the page layout so nothing
+   sits underneath the panel, instead of floating over the content. */
+@media (min-width: 900px) {
+  body.chat-panel-open .shell {
+    margin-right: 480px;
+    transition: margin-right 0.2s ease;
+  }
+
+  body.chat-panel-open .shell .main {
+    min-width: 0;
+  }
+
+  body.chat-panel-open .shell .main table {
+    display: block;
+    overflow-x: auto;
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1199px) {
+  .chat-panel {
+    width: 400px;
+  }
+  body.chat-panel-open .shell {
+    margin-right: 400px;
+  }
+}
+
 .chat-panel-header {
   display: flex;
   align-items: center;

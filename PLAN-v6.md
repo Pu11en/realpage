@@ -80,7 +80,7 @@ Known facts that shape the tasks (checked 2026-09-12):
   Check: 💲 compose up, open http://localhost:8765, Ask → sign in with Google in the popup →
   a cited answer streams inside the panel; reload → conversation still there.
 
-- [ ] **W6 Docked, never covering.** Drew's feedback: the panel floats over the top of
+- [x] **W6 Docked, never covering.** Drew's feedback: the panel floats over the top of
   the dashboard and hides content. On desktop/tablet (>= 900px) the panel must be **docked**:
   the page layout shrinks to make room (body gets a right margin / grid column equal to the
   panel width, header and tables reflow, sidebar untouched), nothing sits underneath it,

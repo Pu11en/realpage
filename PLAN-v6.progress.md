@@ -186,3 +186,27 @@
 - Left open: same as before — full W5 check (sign in as kidquick360@gmail.com, ask a
   question, see a cited streamed answer, reload and confirm the conversation persists)
   still needs Drew to do it by hand, then this box can be ticked.
+- Drew's answer to the last ask ("yes-leave-it"): leave W5 unticked for now, move on to
+  the next task instead of waiting for him to test sign-in.
+
+## W6 Docked, never covering — done
+- `site/css/chat-panel.css`: on desktop/tablet (>= 900px) opening the panel now adds
+  `margin-right` to `.shell` (480px, or 400px between 900–1199px, matching the panel's own
+  width at that size) instead of just floating the panel on top. `.shell`'s grid keeps the
+  220px sidebar fixed and the main column shrinks to fill what's left.
+- Found the shrink alone caused a real horizontal scrollbar at 1024px: `.main` had no
+  `min-width: 0`, so its grid track wouldn't actually shrink below its content's natural
+  width (a CSS grid default). Added `min-width: 0` and `table { overflow-x: auto }` for
+  `.main` while the panel is docked, matching the pattern already used for the phone
+  layout further down the same file.
+- `tooling/qa/panel_test.py`: added a W6 check pass at 1440px and 1024px across all 5
+  pages — opens the panel, waits for the slide/margin transition to settle, then asserts
+  the page content's right edge never crosses the panel's left edge (no overlap) and that
+  `document.documentElement.scrollWidth` never exceeds the viewport (no horizontal scroll).
+- Checked: `bash tooling/qa/check-panel.sh` passes clean (0 sweep problems, panel_test.py
+  clean, including the new W6 checks).
+- Commit: (see git log after this entry).
+- Left open: only verified against the stand-in chat page per the plan's Check line; the
+  real Open WebUI iframe's own internal layout at 400px (tablet) wasn't separately
+  eyeballed, since W2 already confirmed its compact CSS fits a 480px column and 400px is
+  narrower still — worth a quick look if it looks cramped once W7/W8 wire up the real app.
