@@ -6,7 +6,7 @@ on Railway: its own memory, saved chats, live answers, polished UI. The result i
 final `PLAN-v4.md` that `/gowork` can run one small task at a time.
 
 ## Next Step
-Drew answers decision D-1 (what "memory" means on a public site).
+Drew answers decision D-2 (Deep Chat vs today's chat box).
 
 ## Current Phase
 Phase 2: Drew's decisions
@@ -21,14 +21,14 @@ Phase 2: Drew's decisions
 - **Status:** complete (see findings.md)
 
 ### Phase 2: Drew's decisions (one question at a time)
-- [ ] D-1 Memory: per-visitor (needs Honcho or similar), Drew-only, or chats-only
+- [x] D-1 Memory: saved chats now; memory add-ons get a trial first (PLAN-v4 A2/A2b)
 - [ ] D-2 Chat box: Deep Chat vs today's hand-built chat (try /chat-trial.html)
 - [ ] D-3 Show cost per answer like Eve?
 - [ ] D-4 Cost cap per question (steps / time)
 - **Status:** in_progress
 
 ### Phase 3: Finish PLAN-v4.md
-- [ ] Rewrite A2 to match D-1 (Honcho setup task if picked)
+- [x] Rewrite A2 to match D-1 (now A2 trial + A2b Drew picks)
 - [ ] Rewrite Part B to match D-2
 - [ ] Every task: one outcome, 15–30 min, its own Check line
 - **Status:** pending
@@ -48,6 +48,7 @@ Phase 2: Drew's decisions
 | Public site stays read-only (no terminal/files/web tools) | Anyone on the internet can type into it |
 | Test on localhost + local Docker before any Railway deploy | Drew's GitHub-last rule |
 | Website tests fake the bot's replies | No cost, repeatable |
+| D-1: saved chats first, memory add-on trial later | Built-in memory is shared by all visitors; add-on costs unknown |
 
 ## Errors Encountered
 | Error | Attempt | Resolution |

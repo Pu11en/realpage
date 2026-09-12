@@ -9,3 +9,4 @@
 - Found: Hermes built-in memory is shared per profile → per-visitor memory needs
   Honcho or similar. PLAN-v4 A2 needs rewriting after Drew's decision D-1.
 - Started this plan (planning-with-files), Phase 2 = Drew's decisions.
+- D-1 answered: option 1 (saved chats now, memory add-on trial first). PLAN-v4 A2 → A2 trial + A2b pick.

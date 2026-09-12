@@ -34,3 +34,16 @@
 ## Current chat code (site/master-table.html)
 - Hand-built, inline in one page. Browser re-sends last 10 messages as history.
 - Live proxy CORS already allows `http://localhost:8765`.
+
+## Memory add-ons (Hermes memory-providers docs, summarised by a small model — verify in A2)
+| Add-on | Runs where | Needs | Keeps users apart |
+|---|---|---|---|
+| Honcho | cloud or self-hosted | `HONCHO_API_KEY`, paid | yes (peers) |
+| Mem0 | cloud or open-source | `MEM0_API_KEY` or none (OSS) | yes (`user_id`) |
+| Hindsight | cloud or local | `HINDSIGHT_API_KEY` or none (local) | yes (`bank_id`) |
+| Supermemory | cloud or self-hosted | `SUPERMEMORY_API_KEY` or none (self-hosted) | yes (`{identity}` tag) |
+| RetainDB | cloud | $20/month | not stated |
+| OpenViking, Holographic, ByteRover | local | none | not stated |
+- Enable with `memory.provider: <name>` in config.yaml.
+- Unknown: does the visitor ID header reach Mem0/Hindsight/Supermemory (only Honcho is
+  documented)? Can built-in memory stay off while an add-on is on?

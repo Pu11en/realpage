@@ -15,7 +15,7 @@ done. The trial page is `site/chat-trial.html`.
 | What | Eve (Telegram) | Site bot now | Plan |
 |---|---|---|---|
 | Remembers the conversation | Yes, server keeps each chat | Browser re-sends last 10 messages | **A1** server sessions |
-| Remembers the person | `memory_enabled` + `user_profile_enabled` | Off | **A2**, one memory per visitor |
+| Remembers the person | `memory_enabled` + `user_profile_enabled` | Off | **A2** trial first (built-in memory is shared by everyone) |
 | Saved on Railway across redeploys | Persistent Hermes home | Wiped every deploy | **A1** Railway volume |
 | Long chats squeezed, not cut off | `compression` 0.5 → 0.2 | Off | **A4** |
 | Shows what it's doing | `tool_progress: true` | Off, just "Thinking..." | **A3 + B2** |
@@ -46,12 +46,16 @@ memory, `GET /api/sessions/{id}/messages` for history, and streaming with
   survive redeploys (volume set up in A8).
   Check: local Docker — two `curl` turns with the same session_id, the 2nd answer uses
   the 1st; a different session_id doesn't know it.
-- [ ] **A2 Memory for each visitor.** 💲 Turn on `memory_enabled` + `user_profile_enabled`
-  and forward a visitor ID as `X-Hermes-Session-Key`. **Isolation test before anything
-  else:** if Hermes' built-in memory turns out to be one shared file for everyone, stop
-  and ask Drew. Don't ship shared memory on a public site.
-  Check: visitor A says "my company is Acme"; new chat for A still knows it; visitor B
-  asked "what's my company?" does not know.
+- [ ] **A2 Memory trial (no build).** 💲 Drew's call 2026-09-11: saved chats ship first;
+  "remembers who you are" waits for this trial. Hermes' built-in memory is **one shared
+  memory for everyone**, so keep it OFF. In local Docker, try the free/self-hosted memory
+  add-ons that list per-user separation (Hindsight local, Mem0 open-source, Supermemory
+  self-hosted) with the visitor ID. For each, write down in
+  `chatbot/MEMORY-OPTIONS.md`: works yes/no, keeps visitors apart yes/no, extra
+  keys/accounts needed, monthly cost, storage needed on Railway.
+  Check: `chatbot/MEMORY-OPTIONS.md` has a filled row per option, each with the isolation
+  test (visitor A: "my company is Acme"; visitor B: "what's my company?" → doesn't know).
+- [ ] **A2b Drew picks a memory option (or none).** If one is picked, add a build task here.
 - [ ] **A3 Live words + "what it's doing".** New `POST /chat/stream` in `proxy.py` that
   passes Hermes' streamed text and `hermes.tool.progress` events through as
   Server-Sent Events. Tool names become plain labels ("Looking up buildings…"). Old
