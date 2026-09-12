@@ -155,12 +155,12 @@ async def main():
                     if "property.html" in pg.url: bug("property.html", wname, "click Back", "Back link did not leave page")
             if wname == "phone" and CHAT or wname == "phone":
                 await go(pg, f"{B}/master-table.html", "networkidle")
-                if not await pg.locator("#chat-fab").is_visible(): bug("master-table.html", wname, "load", "Ask button missing on phone")
+                if not await pg.locator(".ask-fab").is_visible(): bug("master-table.html", wname, "load", "Ask button missing on phone")
                 else:
-                    await pg.click("#chat-fab"); await pg.screenshot(path=f"{OUT}/phone-chat-open.png")
+                    await pg.click(".ask-fab"); await pg.screenshot(path=f"{OUT}/phone-chat-open.png")
                     await check(pg, "master-table.html", wname, "tap Ask button", "phone-chat-open")
-                    await pg.click("#chat-close")
-                    if await pg.locator("#chat-panel").is_visible(): bug("master-table.html", wname, "tap close", "chat did not close")
+                    await pg.click("#chat-panel-close")
+                    if await pg.locator("#chat-panel.open").count(): bug("master-table.html", wname, "tap close", "chat did not close")
             await pg.context.close()
 
         # all property ids resolve, desktop
