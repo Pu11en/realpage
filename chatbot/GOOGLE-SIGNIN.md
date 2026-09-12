@@ -10,7 +10,9 @@ The chat (Open WebUI) uses "Sign in with Google". Google needs to know about our
    If it offers "Publish app", click it (otherwise only test users can sign in).
 3. Left menu → **Credentials → Create credentials → OAuth client ID**.
    Application type **Web application**, name `PropertyStack chat`.
-4. Under **Authorized redirect URIs** add both lines (the second is for the live site;
+4. Under **Authorized JavaScript origins** add:
+   - `http://localhost:8765`
+   Under **Authorized redirect URIs** add both lines (the second is for the live site;
    we'll change it in C2 if the Railway URL differs):
    - `http://localhost:3000/oauth/google/callback`
    - `https://propertystack-chat-production.up.railway.app/oauth/google/callback`

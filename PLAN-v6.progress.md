@@ -165,3 +165,24 @@
   hardening pass. Also noted in W3: the sign-in postMessage flow only works
   with the stand-in today — the real Open WebUI signed-in detection is
   W5's job.
+
+## W5 — Local Google keys + real run (partial, needs Drew)
+- Found `chatbot/.env.local` already has real `GOOGLE_CLIENT_ID` / `GOOGLE_CLIENT_SECRET`
+  filled in (Drew must have done this earlier), so that part of the task is done.
+- Added `chatbot/.env.local.example` (blank template, safe to commit) listing the four
+  keys the real file needs: GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET, ENABLE_SIGNUP,
+  ENABLE_LOGIN_FORM.
+- Added the missing "Authorized JavaScript origins: http://localhost:8765" step to
+  `chatbot/GOOGLE-SIGNIN.md` step 4 (the plan's known-facts note said this was needed but
+  the doc didn't have it yet).
+- Started the real stack (`docker compose ... up -d --build`): both containers came up
+  healthy, Open WebUI answered 200 on http://localhost:3000/ with Google OAuth configured
+  (log confirms "OAuth providers configured (Google)"). Then stopped the stack again.
+- Did NOT do the last part of the check (actually signing in with a real Google account in
+  a browser and sending a message that triggers a real paid bot call) — that needs a human
+  to click through the Google popup, and it costs real money, so it needs Drew. Leaving the
+  W5 box unchecked for that reason.
+- Commit: (see git log after this entry).
+- Left open: same as before — full W5 check (sign in as kidquick360@gmail.com, ask a
+  question, see a cited streamed answer, reload and confirm the conversation persists)
+  still needs Drew to do it by hand, then this box can be ticked.
