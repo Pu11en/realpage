@@ -38,6 +38,7 @@
         </div>
         <div class="chat-panel-signin-card" id="chat-panel-signin-card" style="display:none;">
           <p>Sign in to ask a question.</p>
+          <p class="chat-panel-signin-note">Google opens a small window. It closes by itself and the chat appears here.</p>
           <button class="chat-panel-signin" id="chat-panel-signin">Sign in with Google</button>
         </div>
       </div>
@@ -77,12 +78,21 @@
       // /auth, not "/": live, "/" in a normal tab is the site home (site/Caddyfile).
       const popup = window.open(`${CHAT_APP_URL.replace(/\/$/, "")}/auth`, "ps-chat-signin", "width=480,height=700");
       if (!popup) return;
+      // As soon as the sign-in counts, close the popup ourselves and show the
+      // chat in the panel, so nobody is left chatting in the separate window.
+      const authUrl = `${CHAT_APP_URL.replace(/\/$/, "")}/api/v1/auths/`;
+      const finish = () => {
+        clearInterval(timer);
+        if (!popup.closed) popup.close();
+        panel.querySelector("#chat-panel-signin-card").style.display = "none";
+        frame.setAttribute("src", CHAT_APP_URL);
+      };
       const timer = setInterval(() => {
-        if (popup.closed) {
-          clearInterval(timer);
-          frame.setAttribute("src", CHAT_APP_URL);
-        }
-      }, 300);
+        if (popup.closed) return finish();
+        fetch(authUrl, { credentials: "include" })
+          .then((res) => { if (res.ok) finish(); })
+          .catch(() => {});
+      }, 1000);
     });
 
     return panel;
