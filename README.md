@@ -20,7 +20,7 @@ a build session starts.
 2. For the live work plan read `PLAN-v5.md` (Open WebUI chat + Google sign-in).
 3. Older plans, handoffs and QA logs live in `archive/` (see `archive/README.md`).
    These are the resume-cold files — trust them over any chat memory.
-3. Every folder holds markdown files. Synthesized files cite raw files; raw
+4. Every folder holds markdown files. Synthesized files cite raw files; raw
    files carry source URL + fetch date. Trust raw over summary on conflict.
 4. Add new evidence as files, register them in the folder's index section
    below, never delete raw evidence.
