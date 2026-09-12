@@ -2,6 +2,7 @@
 
 Written 2026-09-11. Goal: make the chat feel solid instead of fragile.
 Run with: `Do the next unticked task in PLAN-v3.md, then tick it and stop.`
+Check: `python3 tooling/qa/sweep.py http://localhost:8765` (plus the task's own Check line below)
 
 ## Done already (2026-09-11)
 
@@ -9,39 +10,76 @@ Run with: `Do the next unticked task in PLAN-v3.md, then tick it and stop.`
   browser (localStorage): reload, navigate away and back — messages and
   memory stay. "New chat" wipes it. Shipped and verified live.
 
-## Part 1 — Reliability
+## How to check (applies to every task)
 
-- [ ] **2.1 Tell the user the chat is "remembering".** Small line under the
-  chat ("Conversation saved in this browser · New chat to clear") so saved
-  state is never a surprise.
-  Check: line visible desktop + phone in headless screenshot.
-- [ ] **2.2 Better error recovery.** If the chatbot is unreachable, show a
-  clear message with a Retry button that keeps the typed question (already
-  partly there — verify the retry keeps conversation order and add a
-  "chatbot is waking up" note for slow first answers).
-  Check: kill network in headless test, error + retry works.
-- [ ] **2.3 Old conversations age out.** If a saved conversation is older
-  than 7 days, start fresh instead of restoring something stale.
-  Check: unit-testable in headless with a faked old timestamp.
+- Serve locally: `python3 -m http.server 8765 -d site` → `http://localhost:8765/master-table.html`.
+- All chat code lives inline in `site/master-table.html` (the second `<script>` block, ~line 318).
+- Headless checks use Playwright with `page.route("**/chat", ...)` to **fake the bot's
+  reply** — no real chatbot calls, no cost. Only 4.2 needs the real bot.
+- Rule for every new button in chat messages (Retry, Copy, chips): messages are saved as
+  raw HTML and re-created on reload, so click handlers must use **one listener on
+  `#chat-log`** (event delegation), not per-button listeners — otherwise buttons go dead
+  after a reload.
+
+## Part 1 — Reliability (do in this order)
+
+- [ ] **2.0 Don't save half-finished messages.** (New — found in code review.) The
+  "Thinking..." bubble and error bubbles get saved to localStorage. Reload mid-answer →
+  "Thinking..." sits there forever; reload after an error → a dead Retry button. Fix:
+  `saveChat()` skips `.typing` and `.error` messages.
+  Check: headless — fake a slow reply, reload during "Thinking", confirm no stuck bubble;
+  fake a 500, reload, confirm no dead Retry.
+- [ ] **2.1 Tell the user the chat is "remembering".** Small line under the chat form
+  ("Conversation saved in this browser · New chat to clear") so saved state is never a
+  surprise. Must show on the phone full-screen chat too.
+  Check: line visible in headless screenshots at 1280 and 390 wide (phone: after tapping Ask).
+- [ ] **2.2 Better error recovery.** Verified today: Retry already keeps the question and
+  conversation order (removes the error, re-asks). Missing: (a) no time limit in the
+  browser — add a ~90s abort with a clear "took too long" message + Retry; (b) the
+  "Thinking" note should switch to "Chatbot is waking up, first answer can be slow" after
+  ~15s.
+  Check: headless — fake a network failure → error + Retry → Retry succeeds with correct
+  order; fake a 20s delay → waking-up note appears.
+- [ ] **2.3 Old conversations age out.** Nothing is timestamped yet. Save a `savedAt` time
+  with the chat; on load, if older than 7 days, clear it and show the empty state.
+  Check: headless — write a saved chat with an 8-day-old `savedAt`, load page, empty
+  state shows; a 1-day-old one restores.
 
 ## Part 2 — Feel
 
-- [ ] **3.1 Copy button on answers.** One click copies the bot's answer text.
-  Check: headless click, clipboard content matches.
-- [ ] **3.2 Suggested follow-ups.** After each answer, show 2-3 clickable
-  follow-up chips based on the answer (e.g. after a software list: "which of
-  these is biggest?"). Static heuristics first, no model calls.
-  Check: chips render and clicking sends the question.
+- [ ] **3.1 Copy button on answers.** One click copies the bot's answer as plain text
+  (keep the raw answer in a `data-` attribute so the copy is the text, not HTML). Button
+  shows "Copied" briefly. Must still work after reload (see delegation rule).
+  Check: headless with clipboard permission — click Copy, clipboard matches the faked
+  answer; reload, click again, still works.
+- [ ] **3.2 Suggested follow-ups.** After each answer, show 2-3 clickable chips picked by
+  simple keyword rules (software list → "Which of these is biggest?"; building list →
+  "Show their recent sales"; etc.). No model calls. Only the newest answer shows chips.
+  Check: headless — faked software answer shows chips; clicking one sends it as a new
+  question; reload keeps chips clickable.
 
 ## Part 3 — Bigger (ask Drew before starting, may cost)
 
-- [ ] **4.1 Chat on every page.** The Ask button currently exists only on the
-  Master Table. Make it a shared widget on all pages, same saved conversation.
-  Check: sweep visits property/software/under-the-hood pages and chats once.
-- [ ] **4.2 Streaming answers.** Show words as they arrive instead of waiting
-  up to a minute. Needs a change in `chatbot/proxy.py` (streaming) + Railway
-  redeploy. Makes the bot feel 10x faster.
-  Check: headless chat shows partial text before completion.
-- [ ] **4.3 Freshness.** Today the data is baked in at deploy; the bot can't
-  know a scrape ran yesterday. Decide later whether worth rebuilding the
-  data pipeline to auto-refresh.
+- [ ] **4.1a Move chat into its own files (no visible change).** (New — 4.1 was too big
+  for one task.) Move the chat JS/CSS/HTML out of `master-table.html` into
+  `site/js/chat.js` + `site/css/chat.css`; the script builds the panel itself. Master
+  Table must look and behave exactly as before.
+  Check: headless before/after screenshots of Master Table at 1280 and 390 match; a faked
+  chat round-trip works.
+- [ ] **4.1b Chat on every page.** Add the shared chat (plus the marked/DOMPurify
+  scripts) to index, property, software-share and under-the-hood. On pages without the
+  side panel, use the floating Ask button everywhere. Same saved conversation across
+  pages.
+  Check: sweep visits every page, sends a faked question on each, and the conversation
+  from one page shows up on the next.
+- [ ] **4.2a Streaming in the chatbot proxy.** 💲 `chatbot/proxy.py` currently asks
+  Hermes with `"stream": False`. Add a streaming reply (Server-Sent Events), keep the old
+  non-streaming reply working so the live site doesn't break. Needs Railway redeploy —
+  ask Drew first (GitHub-last rule).
+  Check: `curl -N` against the proxy (local Docker) shows text arriving in pieces.
+- [ ] **4.2b Streaming in the chat panel.** Show words as they arrive; fall back to the
+  old wait-for-everything reply if streaming fails.
+  Check: headless with a faked streamed reply shows partial text before completion.
+- [ ] **4.3 Freshness.** Today the data is baked in at deploy; the bot can't know a
+  scrape ran yesterday. Decision only, no build: ask Drew whether it's worth
+  auto-refreshing the data.
