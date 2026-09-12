@@ -10,7 +10,7 @@
 	encode gzip
 
 	# The site's own pages and files.
-	@site path /index.html /master-table.html /property.html /software-share.html /under-the-hood.html /css/* /js/* /data/*
+	@site path /index.html /privacy.html /master-table.html /property.html /software-share.html /under-the-hood.html /css/* /js/* /data/*
 	handle @site {
 		root * /srv
 		file_server
