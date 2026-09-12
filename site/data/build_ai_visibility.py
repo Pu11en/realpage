@@ -102,6 +102,11 @@ def build(report: dict, demo: bool) -> dict:
     for q in unbranded:
         if q["winner"]:
             wins[q["winner"]] = wins.get(q["winner"], 0) + 1
+    for m in models:
+        mine = [q for q in branded if q["model"] == m["model"]]
+        m["lawsuitPct"] = _share(sum(q["bringsUpLawsuit"] for q in mine), len(mine))
+        m["topPickPct"] = _share(sum(q["winner"] == target for q in unbranded if q["model"] == m["model"]),
+                                 sum(q["model"] == m["model"] for q in unbranded))
     for q in questions:
         del q["fullAnswer"]
 
