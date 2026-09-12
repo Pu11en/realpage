@@ -31,7 +31,7 @@ rebuilding our citation chips and table repair (via `responseInterceptor` return
 and restyling. So it mainly pays off for 4.1 (every page) and 4.2 (streaming), not for the
 small fixes.
 
-- [ ] **D1 Deep Chat trial page (no change to the real site).** Build
+- [x] **D1 Deep Chat trial page (no change to the real site).** Build
   `site/chat-trial.html` with `<deep-chat>` wired to our chatbot's `/chat` via a `connect`
   handler, `browserStorage` on, citation chips + table repair ported, site colours.
   Check: headless with a faked reply — answer renders with citation chips and a table,
@@ -45,7 +45,7 @@ Task 2.0 is done first either way: it fixes a live bug in 5 minutes.
 
 ## Part 1 — Reliability (do in this order)
 
-- [ ] **2.0 Don't save half-finished messages.** (New — found in code review.) The
+- [x] **2.0 Don't save half-finished messages.** (New — found in code review.) The
   "Thinking..." bubble and error bubbles get saved to localStorage. Reload mid-answer →
   "Thinking..." sits there forever; reload after an error → a dead Retry button. Fix:
   `saveChat()` skips `.typing` and `.error` messages.

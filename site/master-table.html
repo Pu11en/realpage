@@ -334,7 +334,8 @@
       const CHAT_STORE = "ps-chat-v1";
       function saveChat() {
         try {
-          const items = [...log.querySelectorAll(".msg")].map((el) => ({ cls: el.className, html: el.innerHTML }));
+          // Skip "Thinking..." and error bubbles: restored, they'd be stuck or have a dead Retry.
+          const items = [...log.querySelectorAll(".msg:not(.typing):not(.error)")].map((el) => ({ cls: el.className, html: el.innerHTML }));
           localStorage.setItem(CHAT_STORE, JSON.stringify({ history: history.slice(-20), items: items.slice(-40) }));
         } catch (_) { /* private mode / quota: chat just won't persist */ }
       }

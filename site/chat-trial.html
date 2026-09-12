@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>PropertyStack -- Chat trial (Deep Chat)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dompurify@3.1.6/dist/purify.min.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/deep-chat@2.5.1/dist/deepChat.bundle.js"></script>
+  <style>
+    /* Localhost-only trial (PLAN-v3 D1): Deep Chat next to the current chat. */
+    .trial-intro { color: var(--text-muted); font-size: 13px; margin: 4px 0 16px; max-width: 900px; }
+    .trial-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 440px)); gap: 20px; }
+    .trial-col h2 { font-size: 14px; margin: 0 0 8px; }
+    .trial-frame { width: 100%; height: 680px; border: 1px solid var(--border); border-radius: 8px; background: var(--card-bg); display: block; }
+    deep-chat { display: block; }
+    @media (max-width: 960px) {
+      .trial-grid { grid-template-columns: minmax(0, 1fr); }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell" id="app-shell"></div>
+  <script src="js/app.js"></script>
+  <script>
+    renderShell("");
+    document.getElementById("page-content").innerHTML = `
+      <h1>Chat trial</h1>
+      <p class="trial-intro">Same chatbot, two chat boxes. Left: today's hand-built chat (from the Master Table).
+        Right: the open-source Deep Chat component. Ask both the same question and compare.
+        Each keeps its own saved conversation.</p>
+      <div class="trial-grid">
+        <div class="trial-col">
+          <h2>Current chat</h2>
+          <iframe class="trial-frame" id="current-frame" src="master-table.html" title="Current chat"></iframe>
+        </div>
+        <div class="trial-col">
+          <h2>Deep Chat (trial)</h2>
+          <div class="trial-frame" id="deep-wrap"></div>
+        </div>
+      </div>`;
+
+    // Show the current chat full-size inside its frame (its phone layout).
+    document.getElementById("current-frame").addEventListener("load", (e) => {
+      e.target.contentDocument.body.classList.add("chat-open");
+    });
+  </script>
+  <script type="module">
+    const CHAT_URL = "https://propertystack-chatbot-production.up.railway.app/chat";
+    const EXAMPLES = [
+      "Which software vendor runs the most buildings?",
+      "List the 5 largest apartments in Plano with their software.",
+      "What do renters complain about most on Reddit?",
+    ];
+
+    function escapeHtml(str) {
+      return str.replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+    }
+
+    // Same as master-table.html: add a missing |---| row so marked renders a table.
+    function repairTables(text) {
+      const lines = text.split("\n");
+      const cols = (l) => (/\S\s*\|\s*\S/.test(l) ? l.replace(/^\s*\||\|\s*$/g, "").split("|").length : 0);
+      const isSep = (l) => /^\s*\|?\s*:?-{2,}:?\s*(\|\s*:?-{2,}:?\s*)*\|?\s*$/.test(l);
+      const out = [];
+      for (let i = 0; i < lines.length; i++) {
+        out.push(lines[i]);
+        const n = cols(lines[i]);
+        const startsBlock = i === 0 || !cols(lines[i - 1]);
+        if (n >= 2 && startsBlock && i + 1 < lines.length && cols(lines[i + 1]) === n && !isSep(lines[i + 1])) {
+          out.push(Array(n).fill("---").join(" | "));
+        }
+      }
+      return out.join("\n");
+    }
+
+    // Same as master-table.html: [5-sales.csv] -> citation chip.
+    function renderMarkdown(text) {
+      const withCites = repairTables(text).replace(/\[([^\[\]\n]+)\](?!\()/g, (m, inner) => {
+        const parts = inner.split(/[,;]/).map((p) => p.trim()).filter(Boolean);
+        if (!parts.length || !parts.every((p) => /[./]/.test(p) && !/\s/.test(p))) return m;
+        return parts.map((p) => `<span class="cite">${escapeHtml(p)}</span>`).join("");
+      });
+      const html = DOMPurify.sanitize(marked.parse(withCites, { gfm: true, breaks: true }), { ADD_ATTR: ["target"] });
+      const wrap = document.createElement("div");
+      wrap.innerHTML = html;
+      wrap.querySelectorAll("a").forEach((a) => { a.target = "_blank"; a.rel = "noopener noreferrer"; });
+      wrap.querySelectorAll("table").forEach((t) => {
+        const box = document.createElement("div");
+        box.className = "md-table";
+        t.replaceWith(box);
+        box.appendChild(t);
+      });
+      return `<div class="bot-answer">${wrap.innerHTML}</div>`;
+    }
+
+    // Plain text of a saved message, for the history we send to the bot.
+    function messageText(m) {
+      if (m.text) return m.text;
+      const div = document.createElement("div");
+      div.innerHTML = m.html || "";
+      return div.textContent.trim();
+    }
+
+    const chat = document.createElement("deep-chat");
+    chat.style.cssText = "width:100%;height:100%;border:none;border-radius:8px;background:#111113;font-family:Inter, system-ui, sans-serif;font-size:14px;";
+    chat.browserStorage = { key: "ps-deepchat-trial", maxMessages: 40 };
+    chat.introMessage = {
+      html: `<div style="color:#a1a1aa;font-size:13px;margin-bottom:8px">Ask about the buildings, software or research. Try:</div>`
+        + EXAMPLES.map((q) => `<button class="deep-chat-button deep-chat-suggestion-button">${escapeHtml(q)}</button>`).join(""),
+    };
+    chat.textInput = {
+      placeholder: { text: "Ask about the buildings, software or research...", style: { color: "#6b7280" } },
+      styles: { container: { backgroundColor: "#0a0a0b", border: "1px solid #27272a", color: "#f4f4f5", borderRadius: "6px" } },
+      characterLimit: 1000,
+    };
+    chat.messageStyles = {
+      default: {
+        shared: { bubble: { maxWidth: "92%", fontSize: "14px", lineHeight: "1.5" } },
+        user: { bubble: { backgroundColor: "rgba(34, 197, 94, 0.15)", color: "#f4f4f5" } },
+        ai: { bubble: { backgroundColor: "#18181b", color: "#f4f4f5", border: "1px solid #27272a" } },
+      },
+      loading: { message: { styles: { bubble: { backgroundColor: "#18181b" } } } },
+      error: { bubble: { backgroundColor: "transparent", color: "#ef4444", border: "1px solid #ef4444" } },
+    };
+    chat.submitButtonStyles = {
+      submit: { container: { default: { backgroundColor: "#22c55e", borderRadius: "6px" } } },
+    };
+    chat.htmlClassUtilities = {
+      cite: { styles: { default: {
+        display: "inline-block", fontFamily: "Consolas, monospace", fontSize: "11px", color: "#22c55e",
+        background: "rgba(34, 197, 94, 0.15)", borderRadius: "4px", padding: "0 5px", margin: "0 2px",
+      } } },
+      "md-table": { styles: { default: { overflowX: "auto", maxWidth: "100%" } } },
+      "deep-chat-suggestion-button": { styles: {
+        default: { display: "block", width: "100%", textAlign: "left", margin: "4px 0", padding: "6px 10px",
+          background: "#0a0a0b", color: "#f4f4f5", border: "1px solid #27272a", borderRadius: "6px", cursor: "pointer" },
+        hover: { borderColor: "#22c55e" },
+      } },
+    };
+    chat.errorMessages = { displayServiceErrorMessages: true };
+    chat.connect = {
+      handler: async (body, signals) => {
+        const question = body.messages[body.messages.length - 1].text;
+        // Everything before this question, as user/assistant turns (last 10).
+        const prior = chat.getMessages().slice(0, -1)
+          .map((m) => ({ role: m.role === "user" ? "user" : "assistant", content: messageText(m) }))
+          .filter((m) => m.content)
+          .slice(-10);
+        try {
+          const res = await fetch(CHAT_URL, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ message: question, history: prior }),
+          });
+          let data = {};
+          try { data = await res.json(); } catch (_) { /* non-JSON error page */ }
+          if (!res.ok || typeof data.answer !== "string") {
+            signals.onResponse({ error: data.error || `Something went wrong (server returned ${res.status}).` });
+            return;
+          }
+          const meta = data.seconds != null ? `<div style="color:#6b7280;font-size:11px;margin-top:6px">${data.seconds}s</div>` : "";
+          signals.onResponse({ html: renderMarkdown(data.answer || "I don't have that.") + meta });
+        } catch (_) {
+          signals.onResponse({ error: "Couldn't reach the chatbot." });
+        }
+      },
+    };
+    document.getElementById("deep-wrap").appendChild(chat);
+  </script>
+</body>
+</html>
