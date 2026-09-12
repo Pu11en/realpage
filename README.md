@@ -17,9 +17,8 @@ a build session starts.
 ## How to use this KB (for any future session)
 
 1. Read this README first.
-2. Check `00-BACKLOG.md` for what's collected, what's stale, what's next.
-3. For the live work plan read `task_plan.md` (phases + next step) together
-   with `findings.md` (distilled evidence) and `progress.md` (session log).
+2. For the live work plan read `PLAN-v5.md` (Open WebUI chat + Google sign-in).
+3. Older plans, handoffs and QA logs live in `archive/` (see `archive/README.md`).
    These are the resume-cold files — trust them over any chat memory.
 3. Every folder holds markdown files. Synthesized files cite raw files; raw
    files carry source URL + fetch date. Trust raw over summary on conflict.

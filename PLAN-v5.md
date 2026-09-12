@@ -73,7 +73,7 @@ Railway change before C1. 💲 = real bot calls (cents).
   service exposes Hermes only on Railway's private network; Google OAuth redirect URL
   updated to the live domain; site's chat URL switched to live.
   Check: live site → Chat tab → Google sign-in → answer streams; redeploy → chats still there.
-- [ ] **C3 Clean up.** Delete `site/chat-trial.html`, the old side-panel JS in
+- [ ] **C3 Clean up.** _(2026-09-12: `site/chat-trial.html` already deleted, old plans moved to `archive/`.)_ Delete the old side-panel JS in
   `master-table.html`, and `/chat/stream` if nothing uses it; update `chatbot/README.md`.
   Check: sweep clean; README describes the Open WebUI setup.
 
