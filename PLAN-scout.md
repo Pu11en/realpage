@@ -46,7 +46,7 @@ Open: http://localhost:8765/map.html (scout markers) · cards in `propertystack/
   `propertystack/data/scout/<date>/areas.json` (numbers + evidence links only, no prose). Then
   **this local session (Claude) reads areas.json + the evidence files and writes `cards.md`**
   (top 5 first: city, scores, a 3-line "why this city" argument citing the evidence links). No
-  extra API model for the reasoning. Also and add/refresh `kind: "scout"` markers in `site/data/reach.json`. Log the run
+  extra API model for the reasoning. Also add/refresh `kind: "scout"` markers in `site/data/reach.json`. Log the run
   to `propertystack/runs/`.
 - [ ] **S6 Full run (💲 up to 1,500 searches).** Run all ~25 metros. Report to Drew in plain
   words: the top 5 cards and what each costs to build next. Drew picks the area for
