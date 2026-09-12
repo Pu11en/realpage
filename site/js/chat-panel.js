@@ -106,12 +106,24 @@
   // login button with no way forward.
   function checkAuth(panel) {
     const card = panel.querySelector("#chat-panel-signin-card");
-    fetch(`${CHAT_APP_URL.replace(/\/$/, "")}/api/v1/auths/`, { credentials: "include" })
-      .then((res) => {
-        card.style.display = res.ok ? "none" : "flex";
-      })
-      .catch(() => {
-        card.style.display = "flex";
+    const base = CHAT_APP_URL.replace(/\/$/, "");
+    // Local dev runs the chat app with login turned off (tooling/dev.sh):
+    // its public config says auth:false, so there's nothing to sign in to.
+    fetch(`${base}/api/config`)
+      .then((res) => (res.ok ? res.json() : {}))
+      .catch(() => ({}))
+      .then((cfg) => {
+        if (cfg && cfg.features && cfg.features.auth === false) {
+          card.style.display = "none";
+          return;
+        }
+        return fetch(`${base}/api/v1/auths/`, { credentials: "include" })
+          .then((res) => {
+            card.style.display = res.ok ? "none" : "flex";
+          })
+          .catch(() => {
+            card.style.display = "flex";
+          });
       });
   }
 

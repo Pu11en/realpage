@@ -1,0 +1,16 @@
+# Local development without any sign-in. Layered on top of docker-compose.local.yml
+# by tooling/dev.sh. Open WebUI runs with WEBUI_AUTH=False (one built-in admin,
+# no login screen) on its OWN volume, so the Google-login trial data in the
+# "open-webui" volume is left untouched. Never use this file on Railway.
+services:
+  chatbot:
+    environment:
+      CHAT_ADMIN_EMAIL: admin@localhost     # the no-login user; no daily cap locally
+      CHAT_ALLOWED_ORIGINS: http://localhost:8765
+  open-webui:
+    environment:
+      WEBUI_AUTH: "False"
+    volumes:
+      - open-webui-dev:/app/backend/data
+volumes:
+  open-webui-dev:
