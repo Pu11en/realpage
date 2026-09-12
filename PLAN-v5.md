@@ -17,7 +17,7 @@ Open: http://localhost:8765 (dashboards) → Chat tab → http://localhost:3000 
 2. Click "Continue with Google", sign in, ask: "Which vendor runs the most buildings?" — a cited answer should stream in.
 3. Reload the chat page: the conversation is still there in the left list.
 
-Status 2026-09-12: A1, A2, B1 done locally. Next unticked task: A3.
+Status 2026-09-12: A1, A2, A3, B1 done locally. Next unticked task: A4.
 
 Supersedes PLAN-v4 Parts A5–A6, B1, B3–B6, Z1–Z2. Keeps: A1 (server chats), A3 (streaming
 proxy) — still used by the site's quick "Ask" panel until step C3 removes it.
@@ -37,7 +37,7 @@ Railway change before C1. 💲 = real bot calls (cents).
   OAuth vars, OAuth sign-up on, password sign-up off, new users get the "user" role.
   Check: a second Google account can sign in with one click and sees an empty chat list;
   it cannot see the admin's chats.
-- [ ] **A3 Brand it PropertyStack.** _(Drew 2026-09-12: keep it minimal — green ✦ + "PropertyStack" wordmark, site colours, no logo design work; Drew does design himself in a separate session.)_ Name, logo/favicon, dark theme in PropertyStack's
+- [x] **A3 Brand it PropertyStack.** _(Done 2026-09-12: green ✦ favicon/logo on a dark background (site's own colours: bg #0a0a0b, accent #22c55e) mounted over Open WebUI's default icons; `DEFAULT_PROMPT_SUGGESTIONS` env var gives 3 PropertyStack example questions ("Which vendor runs the most buildings?", "What software has the highest satisfaction score?", "Summarize the top complaints in reviews"); `DEFAULT_MODELS=hermes-agent` was already set so only that model is offered — no other models to pick from. Verified with real screenshots at 1280 and 390 using a JWT minted for the existing admin account (no password login is enabled, so this is the only way to see the logged-in screen without a live Google click). Not done: a full "PropertyStack" wordmark/custom CSS theme beyond colours+icon — Drew said minimal, no separate logo design.)_ Name, logo/favicon, dark theme in PropertyStack's
   colours (custom CSS), only the `hermes-agent` model shown, default model set, welcome
   text with 3 example questions, no model picker/settings clutter for users.
   Check: screenshots at 1280 and 390 look like PropertyStack; a user sees no model picker.

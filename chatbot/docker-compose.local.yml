@@ -40,11 +40,22 @@ services:
       GOOGLE_REDIRECT_URI: ${GOOGLE_REDIRECT_URI:-http://localhost:3000/oauth/google/callback}
       DEFAULT_USER_ROLE: user
       DEFAULT_MODELS: hermes-agent
+      DEFAULT_PROMPT_SUGGESTIONS: >-
+        [{"title": ["Which vendor", "runs the most buildings?"], "content": "Which vendor runs the most buildings?"},
+         {"title": ["What software", "has the highest satisfaction score?"], "content": "What software has the highest satisfaction score?"},
+         {"title": ["Summarize", "the top complaints in reviews"], "content": "Summarize the top complaints in the reviews data"}]
       WEBUI_SECRET_KEY: ${WEBUI_SECRET_KEY:-local-trial-secret}
     ports:
       - "3000:8080"
     volumes:
       - open-webui:/app/backend/data
+      # PropertyStack branding (green sparkle, dark bg) over Open WebUI's default logo/favicon.
+      - ./branding/favicon.png:/app/build/favicon.png:ro
+      - ./branding/favicon.png:/app/build/static/favicon.png:ro
+      - ./branding/favicon-96x96.png:/app/build/static/favicon-96x96.png:ro
+      - ./branding/favicon.svg:/app/build/static/favicon.svg:ro
+      - ./branding/logo.png:/app/build/static/logo.png:ro
+      - ./branding/logo-transparent.png:/app/build/static/splash.png:ro
 volumes:
   hermes-home:
   open-webui:
