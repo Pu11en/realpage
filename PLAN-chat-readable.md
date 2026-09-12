@@ -2,7 +2,8 @@
 
 Written 2026-09-12 (sell-plan Q7). Drew finds the chat hard to read: too much text, packed
 together, too small. Long answers are fine, but every answer must **end with a short summary
-of what matters**, and the panel text must be bigger and airier. Localhost only until Drew
+of what matters**, and the panel text must be bigger and airier. Uses the shared local stack (`tooling/dev.sh`, ports 8765/3000/18080), so run it **after** the
+other chat plan, never at the same time (both edit `SOUL.md`). Localhost only until Drew
 says it's good; no push.
 
 Run with: `Do the next unticked task in PLAN-chat-readable.md, then tick it and stop.`

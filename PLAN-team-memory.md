@@ -4,7 +4,8 @@ Written 2026-09-12 (sell-plan Q2e). Drew's pick: **one memory shared by everyone
 What any chat learns ("Vantage is managed by Bell Partners"), every new chat knows. Hermes'
 built-in memory is already one bucket for the whole agent; it's switched off in
 `chatbot/hermes-profile/config.yaml` (`memory_enabled: false`) and the `memory` toolset isn't
-given to the API server. Localhost only until Drew says it's good; no push.
+given to the API server. Uses the shared local stack (`tooling/dev.sh`, ports 8765/3000/18080), so run it **after** the
+other chat plan, never at the same time (both edit `SOUL.md`). Localhost only until Drew says it's good; no push.
 
 Run with: `Do the next unticked task in PLAN-team-memory.md, then tick it and stop.`
 Check: `bash tooling/qa/check-panel.sh && bash tooling/qa/check-memory.sh`

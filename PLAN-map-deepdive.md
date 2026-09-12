@@ -46,7 +46,12 @@ Open: http://localhost:8765/map.html
   me ready to call." Try Open WebUI's parent→iframe `postMessage` `{type: "input:prompt", text}`
   first; if the running version ignores it, reload the frame at `/?q=<text>` only if that does
   **not** auto-send; otherwise copy the text to the clipboard and show "Paste into the chat".
-  Record which one works in `chatbot/README.md`. Check passes.
-- [ ] **P5 Real click-through.** With `bash tooling/dev.sh` running, Playwright: Early Leads →
+  Record which one works in `chatbot/README.md`. The row button must not also trigger the row's
+  "open building page" click (stop the click from bubbling). **Upcoming projects** (14 of 42 leads,
+  no building page, no website/software yet) still get the row button, with this prompt: "Deep
+  dive on <name>, <city> (<units> units, planned, software not chosen yet): who is developing
+  it, when does it open, and get me ready to call." Check passes.
+- [ ] **P5 Real click-through.** Uses the shared local stack (ports 8765/3000/18080): if another
+  plan's loop is using it (`docker ps` shows a rebuild in progress), wait. With `bash tooling/dev.sh` running, Playwright: Early Leads →
   Deep dive on Vantage At Spring Creek → prompt appears in the chat input; map dot card links
   return 200. Screenshot both to `/tmp/`. Then tell Drew in plain words it's ready to try.
