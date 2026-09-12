@@ -1,0 +1,145 @@
+{
+ "demo": true,
+ "status": "Practice data made with a fake AI -- not real answers yet.",
+ "target": "RealPage",
+ "domain": "realpage.com",
+ "generatedAt": "2026-09-12T15:31:39.324Z",
+ "overall": {
+  "answers": 4,
+  "failed": 0,
+  "mentionPct": 100,
+  "recommendPct": 0,
+  "firstPct": 0,
+  "unpromptedPct": 100,
+  "shareOfVoicePct": 25.0,
+  "avgRank": 2.5
+ },
+ "models": [
+  {
+   "model": "fake-chatgpt",
+   "name": "fake-chatgpt",
+   "answers": 2,
+   "failed": 0,
+   "mentionPct": 100,
+   "recommendPct": 0,
+   "firstPct": 0,
+   "citePct": 50.0,
+   "avgRank": 3
+  },
+  {
+   "model": "fake-claude",
+   "name": "fake-claude",
+   "answers": 2,
+   "failed": 0,
+   "mentionPct": 100,
+   "recommendPct": 0,
+   "firstPct": 0,
+   "citePct": 100,
+   "avgRank": 2
+  }
+ ],
+ "competitors": [
+  {
+   "name": "Yardi",
+   "domain": "yardi.com",
+   "mentionPct": 100,
+   "recommendations": 0,
+   "wins": 3,
+   "avgRank": 1.5
+  },
+  {
+   "name": "Entrata",
+   "domain": "entrata.com",
+   "mentionPct": 100,
+   "recommendations": 0,
+   "wins": 1,
+   "avgRank": 2.5
+  },
+  {
+   "name": "Appfolio",
+   "domain": "appfolio.com",
+   "mentionPct": 100,
+   "recommendations": 0,
+   "wins": 0,
+   "avgRank": 3.5
+  },
+  {
+   "name": "Buildium",
+   "domain": "buildium.com",
+   "mentionPct": 0,
+   "recommendations": 0,
+   "wins": 0,
+   "avgRank": null
+  },
+  {
+   "name": "Resman",
+   "domain": "resman.com",
+   "mentionPct": 0,
+   "recommendations": 0,
+   "wins": 0,
+   "avgRank": null
+  }
+ ],
+ "sources": [
+  {
+   "domain": "realpage.com",
+   "type": "target_official",
+   "count": 3
+  },
+  {
+   "domain": "yardi.com",
+   "type": "competitor_official",
+   "count": 3
+  }
+ ],
+ "questions": [
+  {
+   "question": "What is the best property management software for apartment owners?",
+   "namesBrand": false,
+   "model": "fake-chatgpt",
+   "name": "fake-chatgpt",
+   "status": "completed",
+   "mentioned": true,
+   "rank": 2,
+   "sentiment": "neutral",
+   "winner": "Yardi",
+   "answer": "For apartment property management, top options are Yardi Voyager, RealPage OneSite, Entrata and AppFolio. RealPage is strong for large portfolios. See https://www.realpage.com and https://www.yardi.com."
+  },
+  {
+   "question": "What is the best property management software for apartment owners?",
+   "namesBrand": false,
+   "model": "fake-claude",
+   "name": "fake-claude",
+   "status": "completed",
+   "mentioned": true,
+   "rank": 2,
+   "sentiment": "neutral",
+   "winner": "Yardi",
+   "answer": "For apartment property management, top options are Yardi Voyager, RealPage OneSite, Entrata and AppFolio. RealPage is strong for large portfolios. See https://www.realpage.com and https://www.yardi.com."
+  },
+  {
+   "question": "What does RealPage do?",
+   "namesBrand": true,
+   "model": "fake-chatgpt",
+   "name": "fake-chatgpt",
+   "status": "completed",
+   "mentioned": true,
+   "rank": 4,
+   "sentiment": "neutral",
+   "winner": "Entrata",
+   "answer": "I'd recommend Entrata or AppFolio for mid-size owners; Yardi Breeze for small ones. RealPage (realpage.com) is a property management software company known for revenue management."
+  },
+  {
+   "question": "What does RealPage do?",
+   "namesBrand": true,
+   "model": "fake-claude",
+   "name": "fake-claude",
+   "status": "completed",
+   "mentioned": true,
+   "rank": 2,
+   "sentiment": "neutral",
+   "winner": "Yardi",
+   "answer": "For apartment property management, top options are Yardi Voyager, RealPage OneSite, Entrata and AppFolio. RealPage is strong for large portfolios. See https://www.realpage.com and https://www.yardi.com."
+  }
+ ]
+}

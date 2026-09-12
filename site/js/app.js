@@ -5,6 +5,7 @@ const NAV_TABS = [
   { key: "leads", label: "Early Leads", href: "index.html" },
   { key: "table", label: "Master Table", href: "master-table.html" },
   { key: "share", label: "Software Share", href: "software-share.html" },
+  { key: "ai", label: "AI Visibility", href: "ai-visibility.html" },
   { key: "hood", label: "Under the Hood", href: "under-the-hood.html" },
 ];
 

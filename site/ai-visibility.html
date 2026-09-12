@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>PropertyStack -- AI Visibility</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/chat-panel.css" />
+  <style>
+    .ai-answer { color: var(--text-muted); font-size: 12px; max-width: 520px; }
+    .ai-answer summary { cursor: pointer; color: var(--text); }
+    h2 { font-size: 16px; margin: 24px 0 10px; }
+  </style>
+</head>
+<body>
+  <div class="shell" id="app-shell"></div>
+  <script src="js/app.js"></script>
+  <script src="js/chat-panel.js"></script>
+  <script>
+    renderShell("ai");
+
+    const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+    const pct = (v) => (v === null || v === undefined ? "--" : `${v}%`);
+    const rank = (v) => (v === null || v === undefined ? "--" : `#${Math.round(v * 10) / 10}`);
+
+    loadData("data/ai-visibility.json").then((d) => {
+      const content = document.getElementById("page-content");
+      const o = d.overall;
+      content.innerHTML = `
+        <h1>AI Visibility</h1>
+        <div class="meta">When people ask AI chatbots for apartment software, does ${esc(d.target)} come up? Checked ${esc((d.generatedAt || "").slice(0, 10))}.</div>
+        ${placeholderBanner(d.status)}
+        <div class="stats-row">
+          <div class="stat-card"><div class="value">${pct(o.mentionPct)}</div><div class="label">Answers naming ${esc(d.target)}</div></div>
+          <div class="stat-card"><div class="value">${pct(o.recommendPct)}</div><div class="label">Recommended it</div></div>
+          <div class="stat-card"><div class="value">${pct(o.firstPct)}</div><div class="label">Named it first</div></div>
+          <div class="stat-card"><div class="value">${pct(o.shareOfVoicePct)}</div><div class="label">Share of all brand mentions</div></div>
+        </div>
+
+        <h2>By AI</h2>
+        <table>
+          <thead><tr><th>AI</th><th>Answers</th><th>Named it</th><th>Recommended</th><th>Named first</th><th>Linked its site</th><th>Avg place</th></tr></thead>
+          <tbody>${d.models.map((m) => `<tr><td>${esc(m.name)}</td><td>${m.answers}${m.failed ? ` (${m.failed} failed)` : ""}</td><td>${pct(m.mentionPct)}</td><td>${pct(m.recommendPct)}</td><td>${pct(m.firstPct)}</td><td>${pct(m.citePct)}</td><td>${rank(m.avgRank)}</td></tr>`).join("")}</tbody>
+        </table>
+
+        <h2>Who shows up instead</h2>
+        <table>
+          <thead><tr><th>Competitor</th><th>Named in</th><th>Recommended</th><th>Placed above ${esc(d.target)}</th><th>Avg place</th></tr></thead>
+          <tbody>${d.competitors.map((c) => `<tr><td>${esc(c.name)} <span style="color:var(--text-muted)">${esc(c.domain)}</span></td><td>${pct(c.mentionPct)}</td><td>${c.recommendations}</td><td>${c.wins}</td><td>${rank(c.avgRank)}</td></tr>`).join("")}</tbody>
+        </table>
+
+        <h2>Sites the AIs linked to</h2>
+        <table>
+          <thead><tr><th>Site</th><th>Kind</th><th>Links</th></tr></thead>
+          <tbody>${d.sources.map((s) => `<tr><td>${esc(s.domain)}</td><td>${esc(s.type.replace(/_/g, " "))}</td><td>${s.count}</td></tr>`).join("") || `<tr><td colspan="3">No links in the answers.</td></tr>`}</tbody>
+        </table>
+
+        <h2>Every question and answer</h2>
+        <table>
+          <thead><tr><th>Question</th><th>AI</th><th>Named ${esc(d.target)}?</th><th>Place</th><th>Top pick</th><th>Answer</th></tr></thead>
+          <tbody>${d.questions.map((q) => `<tr><td>${esc(q.question)}${q.namesBrand ? ' <span style="color:var(--text-muted)">(asks about it by name)</span>' : ""}</td><td>${esc(q.name)}</td><td>${q.status !== "completed" ? "failed" : q.mentioned ? "Yes" : "No"}</td><td>${q.rank ? "#" + q.rank : "--"}</td><td>${esc(q.winner || "--")}</td><td class="ai-answer"><details><summary>Read</summary>${esc(q.answer)}</details></td></tr>`).join("")}</tbody>
+        </table>`;
+    });
+  </script>
+</body>
+</html>
