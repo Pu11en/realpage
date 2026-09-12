@@ -26,3 +26,38 @@ next to the model name even with just one model; there's nothing to actually pic
 harmless.
 
 Commit: (see git log for this task's commit)
+
+## A4 Agent bits show properly — 2026-09-12 (blocked, not ticked)
+Tested against the already-running local containers with a real 💲 lookup question
+("Which vendor runs the most buildings?"), watched in a live Open WebUI session
+(Playwright, admin JWT for a logged-in view) and also inspected the raw stream
+straight from Hermes (`docker exec` curl to `chatbot:8642/v1/chat/completions`).
+
+Found:
+- Stop works: clicking Stop mid-answer cuts the stream immediately (checked).
+- Citations render: `[3-software.csv]` shows as plain visible text in the answer,
+  not swallowed by markdown (checked; no SOUL.md change needed).
+- Tool progress does NOT show. Hermes sends progress as its own custom SSE event
+  (`event: hermes.tool.progress`, e.g. `{"tool": "ps_schema", "status": "running"}`)
+  mixed into the OpenAI-style stream. That custom event only means something to our
+  old proxy (`chatbot/proxy.py`), which was written to parse it. Open WebUI is a
+  generic OpenAI client — it only understands standard `delta.content` /
+  `delta.tool_calls` chunks, so it silently ignores the `hermes.tool.progress`
+  lines. Instead, the model's own warm-up sentence ("I'll look up the software
+  data.") streams in as if it were part of the answer, then the real answer
+  follows after a pause with no indicator that a lookup is happening.
+
+Why I didn't tick this: the plan's own Check line ("shows a progress line") fails
+as written, and this isn't something I can fix in our repo — the piece that would
+need to change is how Hermes' agent loop (baked into the vendored
+`nousresearch/hermes-agent:latest` image) reports tool calls, not any file we own.
+No code changed this session.
+
+Left open for Drew: pick one of —
+(a) accept it as-is (the warm-up sentence reads fine as a natural "let me check
+    that" line; no visible loading indicator, but no error either),
+(b) ask Hermes to emit real OpenAI `tool_calls` deltas instead of the custom
+    event, which Open WebUI renders natively as a "using tool" block (needs
+    changing the hermes-agent image or its config, may not be within our control),
+(c) drop A4's progress-line requirement from the plan and keep just Stop +
+    citations (already both working).
