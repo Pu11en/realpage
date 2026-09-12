@@ -27,14 +27,14 @@
     panel.innerHTML = `
       <div class="chat-panel-header">
         <span class="chat-panel-title">✦ Ask PropertyStack</span>
-        <a class="chat-panel-fullpage" href="${CHAT_APP_URL}" target="_blank" rel="noopener">Open in full page</a>
+        <a class="chat-panel-fullpage" href="${CHAT_APP_URL.replace(/\/$/, "")}/auth" target="_blank" rel="noopener">Open in full page</a>
         <button class="chat-panel-close" id="chat-panel-close" aria-label="Close chat panel">&times;</button>
       </div>
       <div class="chat-panel-body">
         <div class="chat-panel-loading" id="chat-panel-loading">Loading chat…</div>
         <iframe id="chat-panel-frame" class="chat-panel-frame" title="Ask PropertyStack chat"></iframe>
         <div class="chat-panel-error" id="chat-panel-error" style="display:none;">
-          Couldn't load the chat. <a href="${CHAT_APP_URL}" target="_blank" rel="noopener">Open it in a new tab</a> instead.
+          Couldn't load the chat. <a href="${CHAT_APP_URL.replace(/\/$/, "")}/auth" target="_blank" rel="noopener">Open it in a new tab</a> instead.
         </div>
         <div class="chat-panel-signin-card" id="chat-panel-signin-card" style="display:none;">
           <p>Sign in to ask a question.</p>
@@ -74,7 +74,8 @@
     // reload the framed copy once the popup closes, so it picks up the new
     // signed-in session.
     signinBtn.addEventListener("click", () => {
-      const popup = window.open(CHAT_APP_URL, "ps-chat-signin", "width=480,height=700");
+      // /auth, not "/": live, "/" in a normal tab is the site home (site/Caddyfile).
+      const popup = window.open(`${CHAT_APP_URL.replace(/\/$/, "")}/auth`, "ps-chat-signin", "width=480,height=700");
       if (!popup) return;
       const timer = setInterval(() => {
         if (popup.closed) {

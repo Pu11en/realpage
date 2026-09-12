@@ -1,0 +1,35 @@
+# One address for the site and the chat (PLAN-v6 C2). The chat app (Open WebUI)
+# sits behind this door on Railway's private network, so the framed chat and the
+# page are the same site and its sign-in cookie works everywhere (incl. Safari).
+{
+	admin off
+	auto_https off
+}
+
+:{$PORT:8080} {
+	encode gzip
+
+	# The site's own pages and files.
+	@site path /index.html /master-table.html /property.html /software-share.html /under-the-hood.html /css/* /js/* /data/*
+	handle @site {
+		root * /srv
+		file_server
+	}
+
+	# "/" is the site's home page, except inside the chat panel's frame, where it
+	# is the chat app's home.
+	@home {
+		path /
+		not header Sec-Fetch-Dest iframe
+	}
+	handle @home {
+		root * /srv
+		rewrite * /index.html
+		file_server
+	}
+
+	# Everything else is the chat app: /auth, /oauth, /api, /ws, /_app, /static, /c/...
+	handle {
+		reverse_proxy {$CHAT_UPSTREAM:http://propertystack-chat.railway.internal:8080}
+	}
+}

@@ -1,4 +1,6 @@
-FROM python:3.12-alpine
-WORKDIR /app
-COPY . .
-CMD ["sh", "-c", "python3 -m http.server ${PORT:-8080}"]
+# Front door: serves the site and forwards everything else to the chat app (see Caddyfile).
+FROM caddy:2-alpine
+COPY Caddyfile /etc/caddy/Caddyfile
+COPY . /srv
+RUN rm -f /srv/Caddyfile /srv/Dockerfile
+CMD ["caddy", "run", "--config", "/etc/caddy/Caddyfile", "--adapter", "caddyfile"]

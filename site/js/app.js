@@ -15,7 +15,7 @@ const VENDORS = ["RealPage", "Yardi", "Entrata", "Yotta", "AppFolio"];
 // Tests override this via window.PS_CHAT_URL (see tooling/qa/check-panel.sh).
 const CHAT_APP_URL = window.PS_CHAT_URL || (location.hostname === "localhost"
   ? "http://localhost:3000"
-  : "https://propertystack-chat-production.up.railway.app");
+  : location.origin);  // live: same address as the site (site/Caddyfile)
 
 function getViewAs() {
   return localStorage.getItem("propertystack.viewAs") || "Neutral";

@@ -47,6 +47,8 @@ class Handler(http.server.SimpleHTTPRequestHandler):
             else:
                 self._json(401, b"{}")
             return
+        if self.path.split("?")[0].rstrip("/") == "/auth":
+            self.path = "/index.html"  # like the real app: /auth is its sign-in page
         super().do_GET()
 
     def do_POST(self):
