@@ -1,6 +1,6 @@
 # PropertyStack v3 — Chat improvements
 
-> **Superseded by PLAN-v4.md (Eve parity), except D2 (Drew picks Deep Chat vs today's chat), which still gates PLAN-v4 Part B.**
+> **Superseded by PLAN-v4.md (Eve parity), D2 settled: today's chat stays, Deep Chat trial page gets deleted in PLAN-v4 B1.**
 
 Written 2026-09-11. Goal: make the chat feel solid instead of fragile.
 Run with: `Do the next unticked task in PLAN-v3.md, then tick it and stop.`

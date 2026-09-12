@@ -63,7 +63,7 @@ memory, `GET /api/sessions/{id}/messages` for history, and streaming with
   Check: `curl -N` shows progress lines then text arriving in pieces; killing curl
   mid-answer stops the Hermes request (logs).
 - [ ] **A4 Long chats like Eve.** Turn on Eve's `compression` settings. Raise `max_turns`
-  8 → 20 and cap answer time, so the cost per question stays bounded.
+  8 → 20 and keep the 120s answer-time cap, so the cost per question stays bounded.
   Check: 💲 a 15-turn scripted chat in local Docker never errors and remembers turn 1.
 - [ ] **A5 Chat history endpoint.** `GET /sessions?visitor=…` lists a visitor's past
   chats (title = first question, date), and `GET /sessions/{id}/messages` returns one chat.
@@ -74,10 +74,15 @@ memory, `GET /api/sessions/{id}/messages` for history, and streaming with
   Check: `curl` with a bad ID → 400; 31st request in an hour → 429; the tool list shows
   only propertystack tools.
 
-## Part B — Chat UI (after Drew picks Deep Chat vs today's chat: PLAN-v3 D2)
+## Part B — Chat UI
 
-- [ ] **B1 One chat on every page.** Shared chat files, mounted on all 5 pages, same visitor
-  and same open chat everywhere.
+Built on today's hand-built chat, not Deep Chat (decided 2026-09-11: the Eve-like parts,
+like the progress line, chat list and Stop, are custom either way, and ours already
+renders citations and tables).
+
+- [ ] **B1 One chat on every page.** Move the chat out of `master-table.html` into
+  `site/js/chat.js` + `site/css/chat.css`, mount it on all 5 pages, same visitor and same
+  open chat everywhere. Delete the Deep Chat trial page `site/chat-trial.html`.
   Check: sweep sends a faked question on each page; the chat carries over between pages.
 - [ ] **B2 Live answers.** Words appear as they stream; a small grey line shows what the
   bot is doing ("Looking up sales…"); a Stop button ends it.
@@ -95,8 +100,11 @@ memory, `GET /api/sessions/{id}/messages` for history, and streaming with
   note after 15s.
   Check: screenshots at 390, 820 and 1280 of empty, mid-answer, error and long-chat states,
   each looked at.
-- [ ] **B6 Drew's call: show cost per answer like Eve?** (Eve shows cost; the site shows
-  seconds.) Ask, then apply.
+- [ ] **B6 Cost under each answer, like Eve.** Proxy returns the answer's cost (from
+  Hermes' usage numbers); the chat shows it small and grey next to the seconds
+  ("12s · $0.002").
+  Check: headless with a faked reply shows "12s · $0.002"; `curl` against local Docker
+  returns a cost field.
 
 ## Part C — Ship
 

@@ -6,10 +6,10 @@ on Railway: its own memory, saved chats, live answers, polished UI. The result i
 final `PLAN-v4.md` that `/gowork` can run one small task at a time.
 
 ## Next Step
-Drew answers decision D-2 (Deep Chat vs today's chat box).
+Review PLAN-v4.md (Phase 4), then Drew OKs it and starts A1.
 
 ## Current Phase
-Phase 2: Drew's decisions
+Phase 4: Review
 
 ## Phases
 
@@ -22,21 +22,21 @@ Phase 2: Drew's decisions
 
 ### Phase 2: Drew's decisions (one question at a time)
 - [x] D-1 Memory: saved chats now; memory add-ons get a trial first (PLAN-v4 A2/A2b)
-- [ ] D-2 Chat box: Deep Chat vs today's hand-built chat (try /chat-trial.html)
-- [ ] D-3 Show cost per answer like Eve?
-- [ ] D-4 Cost cap per question (steps / time)
-- **Status:** in_progress
+- [x] D-2 Chat box: today's hand-built chat (my call; Drew doesn't want tech questions)
+- [x] D-3 Show cost per answer like Eve: yes (B6)
+- [x] D-4 Cost cap: 20 steps, 120s per answer (A4)
+- **Status:** complete
 
 ### Phase 3: Finish PLAN-v4.md
 - [x] Rewrite A2 to match D-1 (now A2 trial + A2b Drew picks)
-- [ ] Rewrite Part B to match D-2
-- [ ] Every task: one outcome, 15–30 min, its own Check line
-- **Status:** pending
+- [x] Rewrite Part B to match D-2
+- [x] Every task: one outcome, 15–30 min, its own Check line
+- **Status:** complete
 
 ### Phase 4: Review
 - [ ] Run `/mvp-plan-review` on PLAN-v4.md, apply fixes
 - [ ] Drew OKs the plan
-- **Status:** pending
+- **Status:** in_progress
 
 ### Phase 5: Hand off
 - [ ] Merge plan to main (local only), give Drew the `/gowork` start prompt
@@ -49,6 +49,9 @@ Phase 2: Drew's decisions
 | Test on localhost + local Docker before any Railway deploy | Drew's GitHub-last rule |
 | Website tests fake the bot's replies | No cost, repeatable |
 | D-1: saved chats first, memory add-on trial later | Built-in memory is shared by all visitors; add-on costs unknown |
+| D-2: keep hand-built chat, drop Deep Chat | Eve-like parts are custom anyway; ours already renders citations/tables |
+| D-3: show cost under answers | Matches Eve's `show_cost` |
+| D-4: 20 steps, 120s cap | Longer chats like Eve, bounded cost |
 
 ## Errors Encountered
 | Error | Attempt | Resolution |
