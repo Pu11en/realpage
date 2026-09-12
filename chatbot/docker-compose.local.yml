@@ -50,6 +50,10 @@ services:
          {"title": ["What software", "has the highest satisfaction score?"], "content": "What software has the highest satisfaction score?"},
          {"title": ["Summarize", "the top complaints in reviews"], "content": "Summarize the top complaints in the reviews data"}]
       WEBUI_SECRET_KEY: ${WEBUI_SECRET_KEY:-local-trial-secret}
+      # W8: the site panel calls GET /api/v1/auths/ (credentials: include)
+      # from the page to learn sign-in state; with the default "*" wildcard
+      # that credentialed cross-origin fetch is refused, so name the site.
+      CORS_ALLOW_ORIGIN: ${CORS_ALLOW_ORIGIN:-http://localhost:8765}
     ports:
       - "3000:8080"
     volumes:

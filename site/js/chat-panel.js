@@ -36,7 +36,10 @@
         <div class="chat-panel-error" id="chat-panel-error" style="display:none;">
           Couldn't load the chat. <a href="${CHAT_APP_URL}" target="_blank" rel="noopener">Open it in a new tab</a> instead.
         </div>
-        <button class="chat-panel-signin" id="chat-panel-signin" style="display:none;">Sign in with Google</button>
+        <div class="chat-panel-signin-card" id="chat-panel-signin-card" style="display:none;">
+          <p>Sign in to ask a question.</p>
+          <button class="chat-panel-signin" id="chat-panel-signin">Sign in with Google</button>
+        </div>
       </div>
     `;
     document.body.appendChild(panel);
@@ -44,6 +47,7 @@
     const frame = panel.querySelector("#chat-panel-frame");
     const loading = panel.querySelector("#chat-panel-loading");
     const errorEl = panel.querySelector("#chat-panel-error");
+    const signinCard = panel.querySelector("#chat-panel-signin-card");
     const signinBtn = panel.querySelector("#chat-panel-signin");
     let loaded = false;
 
@@ -52,6 +56,7 @@
       loading.style.display = "none";
       errorEl.style.display = "none";
       frame.style.display = "block";
+      checkAuth(panel);
     });
 
     setTimeout(() => {
@@ -82,12 +87,22 @@
     return panel;
   }
 
-  window.addEventListener("message", (e) => {
-    if (!e.data || e.data.type !== "auth-state") return;
-    const panel = document.getElementById("chat-panel");
-    if (!panel) return;
-    panel.querySelector("#chat-panel-signin").style.display = e.data.signedIn ? "none" : "block";
-  });
+  // Real Open WebUI never tells the parent page its sign-in state (no
+  // postMessage hook), so the panel checks for itself: a signed-in session
+  // cookie lets this call succeed. If the request fails outright (network
+  // error, CORS misconfigured), assume signed out and show the button
+  // rather than leaving the user stuck on Google's framed (and refused)
+  // login button with no way forward.
+  function checkAuth(panel) {
+    const card = panel.querySelector("#chat-panel-signin-card");
+    fetch(`${CHAT_APP_URL.replace(/\/$/, "")}/api/v1/auths/`, { credentials: "include" })
+      .then((res) => {
+        card.style.display = res.ok ? "none" : "flex";
+      })
+      .catch(() => {
+        card.style.display = "flex";
+      });
+  }
 
   function ensureFrameLoaded(panel) {
     const frame = panel.querySelector("#chat-panel-frame");
@@ -96,7 +111,9 @@
 
   function openPanel() {
     const panel = buildPanel();
+    const alreadyLoaded = !!panel.querySelector("#chat-panel-frame").getAttribute("src");
     ensureFrameLoaded(panel);
+    if (alreadyLoaded) checkAuth(panel);
     panel.classList.add("open");
     document.body.classList.add("chat-panel-open");
     setOpen(true);

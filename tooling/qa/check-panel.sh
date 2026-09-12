@@ -27,8 +27,17 @@ pick_port_and_serve() {
   echo "$! $port"
 }
 
+pick_port_and_serve_fake_webui() {
+  local port="$1"
+  if [ "$port" = "0" ]; then
+    port=$(free_port)
+  fi
+  python3 tooling/qa/fake-webui/server.py "$port" >/dev/null 2>&1 &
+  echo "$! $port"
+}
+
 read -r SITE_PID SITE_PORT < <(pick_port_and_serve "$SITE_PORT" site)
-read -r CHAT_PID CHAT_PORT < <(pick_port_and_serve "$CHAT_PORT" tooling/qa/fake-webui)
+read -r CHAT_PID CHAT_PORT < <(pick_port_and_serve_fake_webui "$CHAT_PORT")
 trap 'kill "$SITE_PID" "$CHAT_PID" 2>/dev/null' EXIT
 
 if [ -z "$SITE_PORT" ] || [ -z "$CHAT_PORT" ]; then

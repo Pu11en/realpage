@@ -96,7 +96,7 @@ Known facts that shape the tasks (checked 2026-09-12):
   Also hide the "Arena"/temporary-chat/settings clutter if visible.
   Check: Playwright loads the real Open WebUI in the panel at 480px wide, signed in as the
   local admin via the API: no element matching the model selector is visible; screenshot saved.
-- [ ] **W8 Sign-in button that actually shows.** Drew clicked and nothing happened: the
+- [x] **W8 Sign-in button that actually shows.** Drew clicked and nothing happened: the
   panel's own "Sign in with Google" button only appears after an `auth-state` message that
   the real Open WebUI never sends (only the stand-in does), so the user is left with the
   framed Google button, which Google refuses. Fix: the panel decides sign-in state itself

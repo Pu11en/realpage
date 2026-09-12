@@ -1,14 +1,16 @@
 <!doctype html>
 <!--
-  Stand-in for Open WebUI, used only by tests (tooling/qa/check-panel.sh).
-  Mimics the two states the real app has: a login screen, and a signed-in
-  chat screen. Real Open WebUI has no custom-JS hook (checked in W3), so the
-  actual Google sign-in click can't be intercepted from inside the frame --
-  the panel (site/js/chat-panel.js) handles it instead, by opening this same
-  URL as a top-level popup (where Google is willing to load) and reloading
-  the framed copy once the popup closes. This page mimics both roles: the
-  framed "login screen" that posts its auth state to the panel, and the
-  popup's "Continue with Google" screen that flips the shared signed-in flag.
+  Stand-in for Open WebUI, used only by tests (tooling/qa/check-panel.sh),
+  served by server.py (not plain http.server) so it can answer
+  GET /api/v1/auths/ like the real app does. Mimics the two states the real
+  app has: a login screen, and a signed-in chat screen. Real Open WebUI has
+  no custom-JS hook (checked in W3), so the actual Google sign-in click
+  can't be intercepted from inside the frame -- the panel
+  (site/js/chat-panel.js) handles it instead, by opening this same URL as a
+  top-level popup (where Google is willing to load) and reloading the framed
+  copy once the popup closes. The panel decides sign-in state itself by
+  calling GET /api/v1/auths/ with credentials: "include" (W8) -- this page's
+  sign-in button sets the same session cookie server.py checks there.
 -->
 <html>
 <head>
@@ -56,8 +58,10 @@
 
   document.getElementById("signin").addEventListener("click", () => {
     localStorage.setItem("fake-webui.signedIn", "1");
-    if (window.opener) window.close();
-    else location.reload();
+    fetch("/api/v1/auths/signin", { method: "POST", credentials: "include" }).finally(() => {
+      if (window.opener) window.close();
+      else location.reload();
+    });
   });
 
   document.getElementById("send").addEventListener("click", () => {

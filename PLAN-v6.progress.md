@@ -253,3 +253,41 @@
   environment), these three admin settings will need to be reapplied once by hand or
   scripted, since Open WebUI ignores the compose file's env vars once its own DB has a
   value. Worth a short one-time setup script if this comes up again for Railway (C2).
+
+## W8 Sign-in button that actually shows — done (commit pending, see note)
+- `site/js/chat-panel.js`: the panel no longer waits for an `auth-state`
+  postMessage the real Open WebUI never sends. It now decides sign-in state
+  itself: on every frame load (and on reopen of an already-loaded frame) it
+  calls `GET <chat>/api/v1/auths/` with `credentials: "include"`; 401 or a
+  failed fetch shows a clear "Sign in to ask a question" card **over the
+  frame** with one Sign in with Google button (opens the popup as before;
+  popup close reloads the frame, which re-runs the check and hides the card).
+- `chatbot/docker-compose.local.yml`: added `CORS_ALLOW_ORIGIN` (default
+  `http://localhost:8765`) to the open-webui service — with the default
+  wildcard, a credentialed cross-origin fetch is refused by the browser, so
+  the panel could never learn the real sign-in state. Verified live: the
+  endpoint answers 401 with `access-control-allow-origin: http://localhost:8765`
+  and `access-control-allow-credentials: true`.
+- Stand-in upgraded to match the real contract: `tooling/qa/fake-webui/server.py`
+  (new) serves the stand-in page plus `GET /api/v1/auths/` (401 without the
+  cookie, 200 with it) and `POST /api/v1/auths/signin` (sets the cookie);
+  `check-panel.sh` now serves the stand-in with it; the fake page's sign-in
+  button hits the POST so the popup and the panel agree on state via the
+  cookie, exactly like the real app.
+- `tooling/qa/panel_test.py`: W3/W8 section updated — signed out → card with
+  button visible; click → popup; popup closes → frame reloads to the chat;
+  card disappears (now waited-for properly instead of an immediate racy check).
+- New `tooling/qa/w8_real_check.py` (free, no bot calls): loads the real Open
+  WebUI in the panel — the sign-in card shows on first open, as the plan's
+  Check requires. Ran it against the live local stack: PASS.
+- Checked: `bash tooling/qa/check-panel.sh` green (0 problems, panel_test.py
+  clean); real check above PASS.
+- Commit: BLOCKED this round — the sandbox denied writes to the worktree's
+  shared .git (outside the session workspace) and no approval channel was
+  available. All changes are saved in the worktree; the commit must be made
+  with wider file access (`git add -A && git commit -m "PLAN-v6 W8: panel
+  decides sign-in state itself via /api/v1/auths/"`).
+- Left open: the signed-in half of the real check (card hides when actually
+  signed in) was verified only against the stand-in — creating a throwaway
+  account needs signup temporarily re-enabled; the logic is identical
+  (200 → hide) and C1's real Google run will cover it.

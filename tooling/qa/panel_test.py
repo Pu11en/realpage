@@ -120,21 +120,23 @@ async def main():
         await page.close()
         await context.close()
 
-        # W3: sign-in from inside the panel. The stand-in's login screen posts
-        # its auth state to the panel, which shows its own "Sign in with
-        # Google" button (Google refuses to load inside a frame), opens the
-        # chat app as a popup, and reloads the framed copy once it closes.
+        # W3/W8: sign-in from inside the panel. The panel decides sign-in
+        # state itself via GET /api/v1/auths/ (the stand-in's server.py
+        # answers like the real app): signed out -> a card with one
+        # "Sign in with Google" button over the frame; click -> popup;
+        # popup closes -> frame reloads, card gone.
         context = await browser.new_context(viewport={"width": 1440, "height": 900})
         await context.add_init_script(f"window.PS_CHAT_URL = {chat!r};")
         page = await context.new_page()
         await check_console_errors(page, f"{site}/index.html", bugs)
         await page.locator("[data-chat-toggle]").first.click()
 
+        signin_card = page.locator("#chat-panel-signin-card")
         signin_btn = page.locator("#chat-panel-signin")
         try:
             await signin_btn.wait_for(state="visible", timeout=5000)
         except Exception:
-            bugs.append("sign-in: panel didn't show the Sign in with Google button for a signed-out frame")
+            bugs.append("sign-in: panel didn't show the Sign in with Google card for a signed-out frame (W8 auth check)")
 
         if await signin_btn.is_visible():
             async with context.expect_page() as popup_info:
@@ -155,11 +157,18 @@ async def main():
                     pass
                 await page.wait_for_timeout(300)
             if not frame_shows_chat:
-                bugs.append("sign-in: frame didn't show the chat after the popup closed")
+                bugs.append("sign-in: frame didn't reload to the chat after the popup closed")
 
-            signin_hidden = not await signin_btn.is_visible()
-            if not signin_hidden:
-                bugs.append("sign-in: panel kept showing the Sign in button after signing in")
+            # Card must disappear once the reloaded frame's auth check
+            # succeeds (give the fetch a moment to resolve).
+            card_hidden = False
+            for _ in range(20):
+                if not await signin_card.is_visible():
+                    card_hidden = True
+                    break
+                await page.wait_for_timeout(300)
+            if not card_hidden:
+                bugs.append("sign-in: sign-in card still visible after signing in (W8 auth check)")
 
         await page.close()
         await context.close()
