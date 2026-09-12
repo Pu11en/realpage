@@ -1,3 +1,5 @@
+> **Superseded by PLAN-v6.md (chat panel inside the site), 2026-09-12.** A3, A4, A5, B2 done and kept on main; C1–C3 replaced.
+
 # PropertyStack v5 — Chat via Open WebUI, locked behind Google sign-in
 
 Written 2026-09-11. Drew's call: use a proven open-source chat app instead of closing
