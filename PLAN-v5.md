@@ -8,7 +8,7 @@ people get unlimited chat with their own saved history. The chat is reached from
 branded to match). Under the Hood gets its own plan in another session.
 
 Run with: `Do the next unticked task in PLAN-v5.md, then tick it and stop.`
-Check: `python3 tooling/qa/sweep.py http://localhost:8765` (plus the task's own Check line)
+Check: `bash tooling/qa/check-local.sh` (switches the site on, checks every page at computer and phone size, switches it off; plus the task's own Check line)
 Try: `docker compose -f chatbot/docker-compose.local.yml --env-file chatbot/.env.local -p ps-chat up -d --build && python3 -m http.server 8765 -d site`
 Open: http://localhost:8765 (dashboards) → Chat tab → http://localhost:3000 (chat, Google sign-in)
 
