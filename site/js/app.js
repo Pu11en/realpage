@@ -10,6 +10,12 @@ const NAV_TABS = [
 
 const VENDORS = ["RealPage", "Yardi", "Entrata", "Yotta", "AppFolio"];
 
+// The chat is its own app (Open WebUI, Google sign-in). Local trial on :3000,
+// live URL on Railway. See PLAN-v5.md.
+const CHAT_APP_URL = location.hostname === "localhost"
+  ? "http://localhost:3000"
+  : "https://propertystack-chat-production.up.railway.app";
+
 function getViewAs() {
   return localStorage.getItem("propertystack.viewAs") || "Neutral";
 }
@@ -26,7 +32,7 @@ function renderShell(activeKey) {
 
   const navHtml = NAV_TABS.map(
     (t) => `<a href="${t.href}" class="${t.key === activeKey ? "active" : ""}">${t.label}</a>`
-  ).join("");
+  ).join("") + `<a href="${CHAT_APP_URL}" class="nav-chat" title="Ask PropertyStack (Google sign-in)">Chat</a>`;
 
   const vendorOptions = ["Neutral", ...VENDORS]
     .map((v) => `<option value="${v}" ${v === viewAs ? "selected" : ""}>${v}</option>`)
@@ -46,6 +52,7 @@ function renderShell(activeKey) {
       </div>
     </aside>
     <main class="main" id="page-content"></main>
+    <a class="ask-fab" href="${CHAT_APP_URL}" aria-label="Ask PropertyStack">Ask</a>
   `;
 
   document.getElementById("view-as-select").addEventListener("change", (e) => {

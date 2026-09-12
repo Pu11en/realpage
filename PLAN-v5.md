@@ -9,6 +9,15 @@ branded to match). Under the Hood gets its own plan in another session.
 
 Run with: `Do the next unticked task in PLAN-v5.md, then tick it and stop.`
 Check: `python3 tooling/qa/sweep.py http://localhost:8765` (plus the task's own Check line)
+Try: `docker compose -f chatbot/docker-compose.local.yml --env-file chatbot/.env.local -p ps-chat up -d --build && python3 -m http.server 8765 -d site`
+Open: http://localhost:8765 (dashboards) → Chat tab → http://localhost:3000 (chat, Google sign-in)
+
+## How to try it (30 seconds)
+1. Open http://localhost:8765, click the green ✦ Chat tab (or the Ask button bottom-right).
+2. Click "Continue with Google", sign in, ask: "Which vendor runs the most buildings?" — a cited answer should stream in.
+3. Reload the chat page: the conversation is still there in the left list.
+
+Status 2026-09-12: A1, A2, B1 done locally. Next unticked task: A3.
 
 Supersedes PLAN-v4 Parts A5–A6, B1, B3–B6, Z1–Z2. Keeps: A1 (server chats), A3 (streaming
 proxy) — still used by the site's quick "Ask" panel until step C3 removes it.
@@ -45,7 +54,7 @@ Railway change before C1. 💲 = real bot calls (cents).
 
 ## Part B — Link it into PropertyStack
 
-- [ ] **B1 "Chat" tab + Ask button everywhere.** Add a `Chat` tab to the sidebar
+- [x] **B1 "Chat" tab + Ask button everywhere.** _(Done 2026-09-12: green ✦ Chat tab in the sidebar + floating Ask button on all 5 pages (Master Table keeps its own quick panel), opening localhost:3000 locally / Railway live. The "← PropertyStack" link inside the chat is part of A3.)_ Add a `Chat` tab to the sidebar
   (`site/js/app.js` NAV_TABS) and a floating Ask button on every page; both open the chat
   URL (env-style constant: `http://localhost:3000` locally, Railway URL live). The
   chat's own top bar gets a "← PropertyStack" link back.

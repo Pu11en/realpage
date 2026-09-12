@@ -71,6 +71,16 @@ body {
   background: var(--accent-dim);
 }
 
+.sidebar nav a.nav-chat { color: var(--accent); }
+.sidebar nav a.nav-chat::before { content: "✦ "; }
+/* Floating Ask button: opens the chat app from any page. */
+.ask-fab {
+  position: fixed; right: 20px; bottom: 20px; z-index: 40;
+  background: var(--accent); color: #0a0a0b; font-weight: 700; font-size: 14px;
+  padding: 10px 18px; border-radius: 999px; text-decoration: none;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+}
+.ask-fab:hover { filter: brightness(1.1); }
 .sidebar .top-controls {
   margin-top: auto;
   padding-top: 16px;
