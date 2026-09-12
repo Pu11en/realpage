@@ -1,6 +1,8 @@
 # Local trial of the full chat: PropertyStack bot (Hermes + proxy) + Open WebUI.
 # Run from the repo root:
-#   docker compose -f chatbot/docker-compose.local.yml up --build
+#   docker compose -f chatbot/docker-compose.local.yml --env-file chatbot/.env.local -p ps-chat up -d --build
+# (create chatbot/.env.local from GOOGLE-SIGNIN.md; once the Google keys are in, also put
+#  ENABLE_SIGNUP=false and ENABLE_LOGIN_FORM=false in it so only the Google button shows)
 # Then open http://localhost:3000 (Open WebUI) — first account created is admin.
 # DEEPSEEK_API_KEY must be in your shell environment.
 services:
@@ -27,7 +29,15 @@ services:
       OPENAI_API_BASE_URL: http://chatbot:8642/v1
       OPENAI_API_KEY: ${HERMES_API_KEY:-local-trial-key-change-me}
       ENABLE_OLLAMA_API: "false"
-      ENABLE_SIGNUP: "true"               # A2 turns this off and enables Google sign-in
+      # Sign-in: Google only (keys from chatbot/.env.local, see GOOGLE-SIGNIN.md).
+      # Until the keys exist, password login stays on so the local trial still works.
+      ENABLE_SIGNUP: ${ENABLE_SIGNUP:-true}
+      ENABLE_LOGIN_FORM: ${ENABLE_LOGIN_FORM:-true}
+      ENABLE_OAUTH_SIGNUP: "true"
+      OAUTH_MERGE_ACCOUNTS_BY_EMAIL: "true"
+      GOOGLE_CLIENT_ID: ${GOOGLE_CLIENT_ID:-}
+      GOOGLE_CLIENT_SECRET: ${GOOGLE_CLIENT_SECRET:-}
+      GOOGLE_REDIRECT_URI: ${GOOGLE_REDIRECT_URI:-http://localhost:3000/oauth/google/callback}
       DEFAULT_USER_ROLE: user
       DEFAULT_MODELS: hermes-agent
       WEBUI_SECRET_KEY: ${WEBUI_SECRET_KEY:-local-trial-secret}
