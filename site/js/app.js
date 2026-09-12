@@ -11,10 +11,11 @@ const NAV_TABS = [
 const VENDORS = ["RealPage", "Yardi", "Entrata", "Yotta", "AppFolio"];
 
 // The chat is its own app (Open WebUI, Google sign-in). Local trial on :3000,
-// live URL on Railway. See PLAN-v5.md.
-const CHAT_APP_URL = location.hostname === "localhost"
+// live URL on Railway. See PLAN-v5.md and PLAN-v6.md.
+// Tests override this via window.PS_CHAT_URL (see tooling/qa/check-panel.sh).
+const CHAT_APP_URL = window.PS_CHAT_URL || (location.hostname === "localhost"
   ? "http://localhost:3000"
-  : "https://propertystack-chat-production.up.railway.app";
+  : "https://propertystack-chat-production.up.railway.app");
 
 function getViewAs() {
   return localStorage.getItem("propertystack.viewAs") || "Neutral";

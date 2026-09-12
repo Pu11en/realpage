@@ -35,7 +35,7 @@ Known facts that shape the tasks (checked 2026-09-12):
 
 ## Part W — Panel
 
-- [ ] **W0 Self-contained check script.** `tooling/qa/check-panel.sh`: serves the site on
+- [x] **W0 Self-contained check script.** `tooling/qa/check-panel.sh`: serves the site on
   8766 and the stand-in chat page (`tooling/qa/fake-webui/index.html`: fake login button,
   fake message list, posts `postMessage` events like the real one will) on 3001, runs
   `tooling/qa/sweep.py http://localhost:8766` and `tooling/qa/panel_test.py` (Playwright,

@@ -1,0 +1,76 @@
+<!doctype html>
+<!--
+  Stand-in for Open WebUI, used only by tests (tooling/qa/check-panel.sh).
+  Mimics the two states the real app has: a login screen, and a signed-in
+  chat screen, plus the postMessage events the panel will listen for.
+-->
+<html>
+<head>
+<meta charset="utf-8">
+<title>fake-webui</title>
+<style>
+  body { font-family: sans-serif; margin: 0; padding: 16px; }
+  #login, #chat { display: none; }
+  button { padding: 8px 16px; }
+</style>
+</head>
+<body>
+  <div id="login">
+    <button id="signin">Continue with Google</button>
+  </div>
+  <div id="chat">
+    <div id="messages"></div>
+    <input id="msg-input" placeholder="Ask a question">
+    <button id="send">Send</button>
+  </div>
+
+<script>
+  const signedIn = sessionStorage.getItem("fake-webui.signedIn") === "1";
+
+  function showChat() {
+    document.getElementById("login").style.display = "none";
+    document.getElementById("chat").style.display = "block";
+    parent.postMessage({ source: "fake-webui", type: "signed-in" }, "*");
+  }
+
+  function showLogin() {
+    document.getElementById("login").style.display = "block";
+    document.getElementById("chat").style.display = "none";
+  }
+
+  if (signedIn) showChat(); else showLogin();
+
+  document.getElementById("signin").addEventListener("click", () => {
+    const popup = window.open(
+      "about:blank?fake-google-signin",
+      "fake-google-signin",
+      "width=400,height=500"
+    );
+    if (popup) {
+      popup.document.write("<button id='ok'>Sign in as test@example.com</button>");
+      popup.document.getElementById("ok").addEventListener("click", () => {
+        sessionStorage.setItem("fake-webui.signedIn", "1");
+        popup.close();
+      });
+    }
+    const timer = setInterval(() => {
+      if (popup && popup.closed) {
+        clearInterval(timer);
+        if (sessionStorage.getItem("fake-webui.signedIn") === "1") {
+          location.reload();
+        }
+      }
+    }, 100);
+  });
+
+  document.getElementById("send").addEventListener("click", () => {
+    const input = document.getElementById("msg-input");
+    const text = input.value.trim();
+    if (!text) return;
+    const messages = document.getElementById("messages");
+    messages.innerHTML += `<div class="msg">You: ${text}</div><div class="msg">Bot: (fake) ${text}</div>`;
+    input.value = "";
+  });
+</script>
+</body>
+</html>
