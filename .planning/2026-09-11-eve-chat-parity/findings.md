@@ -50,3 +50,18 @@
 
 ## Holes (code read, 2026-09-11)
 H1–H13 listed in PLAN-v4.md "Holes in today's chat". Proxy errors are raw ("agent error", "agent timed out", "rate limit reached"); browser has no own time limit; history sent = last 10 turns, saved = 20 turns / 40 bubbles.
+
+## Ready-made chat frontends for Hermes (2026-09-11)
+Hermes ships no chat UI of its own, but its API server is built for OpenAI-style
+frontends; the code special-cases **Open WebUI** (session mapping, tool progress) and the
+docs have a full Open WebUI guide. Also listed: LobeChat, LibreChat, AnythingLLM, NextChat,
+ChatBox, Jan, HF Chat-UI, big-AGI.
+- **Open WebUI** (MIT-ish, Python+Svelte, one Docker image): accounts + per-user chats,
+  chat list/search/delete, streaming, stop, regenerate, copy, edit, mobile PWA, admin
+  panel, rate limits. Needs a login (sign-up can be open or invite-only). Runs as its
+  own Railway service next to the bot; not embedded inside PropertyStack pages.
+- **LibreChat** (MIT): same class, heavier setup (Mongo), more multi-model features.
+- Embeddable widget kits (assistant-ui, Vercel AI SDK): build-it-yourself, no chat
+  list/auth out of the box — closer to what we're doing by hand.
+Tradeoff: Open WebUI = solid, everything an agent chat needs, but it's a separate
+"app" with login, styled like ChatGPT, not the PropertyStack sidebar.
