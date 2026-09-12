@@ -61,3 +61,9 @@ Left open for Drew: pick one of —
     changing the hermes-agent image or its config, may not be within our control),
 (c) drop A4's progress-line requirement from the plan and keep just Stop +
     citations (already both working).
+
+## A4 Agent bits show properly — 2026-09-12 (done, ticked)
+Drew's decision on the open question: accept the missing progress-line as-is (option a).
+Stop and citations were already verified working in the previous session. No new code
+changes — just recorded Drew's decision and ticked the box in PLAN-v5.md.
+Commit: (see git log for this task's commit)

@@ -41,7 +41,15 @@ Railway change before C1. 💲 = real bot calls (cents).
   colours (custom CSS), only the `hermes-agent` model shown, default model set, welcome
   text with 3 example questions, no model picker/settings clutter for users.
   Check: screenshots at 1280 and 390 look like PropertyStack; a user sees no model picker.
-- [ ] **A4 Agent bits show properly.** Confirm tool progress ("Checking what data there
+- [x] **A4 Agent bits show properly.** _(Done 2026-09-12: Stop mid-answer stops it and
+  citations render (`[3-software.csv]` shows as plain visible text, not eaten by
+  markdown) — both verified 2026-09-12. The plan's "progress line" isn't shown by Open
+  WebUI — Hermes' vendored image sends a custom SSE event Open WebUI (a generic OpenAI
+  client) doesn't understand, so the model's own warm-up sentence ("I'll check the
+  software data.") streams in as plain text instead of a spinner. Drew's decision
+  2026-09-12: accept this as-is — it reads fine as a natural "let me check" line, no
+  error, not worth chasing further since the fix would require changing the third-party
+  vendor image.)_ Confirm tool progress ("Checking what data there
   is…") shows in Open WebUI, Stop works and interrupts Hermes (logs), citations render.
   Also make sure `[3-software.csv]` citations don't get eaten by markdown — if they do,
   adjust the bot's prompt (`hermes-profile/SOUL.md`) to write them as `\[file\]` or code.
