@@ -50,3 +50,36 @@
 - Commit: (see git log after this entry).
 - Left open: real Open WebUI framing/CSS fit (W2), Google sign-in flow (W3),
   and the hardening checklist (W4) are separate later tasks.
+
+## W2 Open WebUI fits the frame — done
+- Brought up the real stack (`docker compose -f chatbot/docker-compose.local.yml
+  --env-file chatbot/.env.local -p ps-chat up -d --build`) and checked Open
+  WebUI's response headers: no `X-Frame-Options` or `Content-Security-Policy`
+  header at all, so it frames from the site with no changes needed.
+- Added `chatbot/branding/custom.css`: compact-mode CSS mounted over Open
+  WebUI's existing (empty) `/app/build/static/custom.css` override point
+  (already linked from its `index.html`, same trick as the branding icons).
+  Collapses the sidebar by default (toggle button stays visible to reopen
+  it), hides the model picker and settings-modal trigger (not needed with
+  one model and no per-user settings from inside the panel), and makes the
+  message column fill the panel width. Selectors (`#sidebar`,
+  `data-testid="model-selector-model-button"`, etc.) came from grepping the
+  real built JS bundle inside the running container, not guessed.
+- Wired the mount into `chatbot/docker-compose.local.yml` next to the other
+  branding volume mounts.
+- Checked (free, no bot calls): a one-off Playwright script loaded the site
+  with `window.PS_CHAT_URL` pointed at the real `http://localhost:3000` Open
+  WebUI, opened the panel at 1440 and 390 widths — no frame-related console
+  or request errors, the real (already Google-only) login page rendered
+  correctly inside the 480px panel at both sizes, screenshots saved and
+  reviewed by eye (`/tmp/qa/desktop-webui-frame.png`,
+  `/tmp/qa/phone-webui-frame.png`). Also reran `bash tooling/qa/check-panel.sh`
+  (stand-in chat page) — still green.
+- Commit: (see git log after this entry).
+- Left open: the compact CSS above only touches elements reachable from the
+  login page and the real JS bundle's known selectors — it hasn't been
+  visually confirmed against the *signed-in* chat interface yet, since that
+  needs a real Google sign-in (W3/W5). If it looks off once signed in, adjust
+  `chatbot/branding/custom.css` then. Docker stack was torn down after
+  testing (`docker compose ... down`) since nothing needs to stay running
+  between tasks.

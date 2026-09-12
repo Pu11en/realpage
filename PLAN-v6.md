@@ -52,7 +52,7 @@ Known facts that shape the tasks (checked 2026-09-12):
   Remove the B2 locked card from master-table.html.
   Check: sweep clean at desktop/tablet/phone; panel_test.py opens the panel on all 5 pages,
   switches page with it open → still open; screenshots at 1440 and 390 in `/tmp/qa/`.
-- [ ] **W2 Open WebUI fits the frame.** Verify Open WebUI's response headers allow framing
+- [x] **W2 Open WebUI fits the frame.** Verify Open WebUI's response headers allow framing
   from the site (if not, set them in compose or front it with the proxy); custom CSS
   (compact mode): sidebar collapsed by default but reachable (past chats, new chat), no
   model picker, no settings clutter, message column fills the 480px width, input pinned at

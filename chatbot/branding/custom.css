@@ -1,0 +1,34 @@
+/* PropertyStack compact mode: Open WebUI framed inside the 480px slide-out
+   panel (site/js/chat-panel.js). Collapse the sidebar by default (still
+   reachable via the toggle) and hide the model picker / settings clutter
+   that don't apply when there's only one model and no per-user settings to
+   change from inside the panel. No other visual changes. */
+
+#sidebar {
+	width: 0 !important;
+	min-width: 0 !important;
+	overflow: hidden;
+}
+
+[data-testid='sidebar-toggle-button'] {
+	display: revert !important;
+}
+
+[data-testid='model-selector-model-button'],
+[data-testid='settings-modal'] {
+	display: none !important;
+}
+
+#chat-container,
+#messages-container {
+	max-width: 100% !important;
+	width: 100% !important;
+}
+
+@media (max-width: 600px) {
+	textarea,
+	form:has(textarea) {
+		position: sticky;
+		bottom: 0;
+	}
+}

@@ -61,6 +61,10 @@ services:
       - ./branding/favicon.svg:/app/build/static/favicon.svg:ro
       - ./branding/logo.png:/app/build/static/logo.png:ro
       - ./branding/logo-transparent.png:/app/build/static/splash.png:ro
+      # Compact CSS for the 480px slide-out panel: collapsed sidebar, no model
+      # picker/settings clutter (W2). /app/build/static/custom.css is already
+      # linked from Open WebUI's index.html and ships empty by default.
+      - ./branding/custom.css:/app/build/static/custom.css:ro
 volumes:
   hermes-home:
   open-webui:
