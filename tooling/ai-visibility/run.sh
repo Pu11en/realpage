@@ -12,6 +12,7 @@ REPO="$(cd "$HERE/../.." && pwd)"
 NIUBIGEO="${NIUBIGEO_DIR:-/home/drewp/main-projects/tools-src/niubigeo}"
 RUNS="${AI_VIS_RUNS:-$HOME/.local/state/realpage-ai-visibility/runs}"
 PORT="${AI_VIS_PORT:-18912}"
+KEYWORDS="${AI_VIS_KEYWORDS:-apartment property management software,multifamily revenue management software,resident screening software,property management accounting software}"
 COMPETITORS="yardi.com,entrata.com,appfolio.com,buildium.com,resman.com"
 mkdir -p "$RUNS"
 
@@ -37,7 +38,8 @@ TARGETS=(--provider openai-compatible --models "$MODELS_LIST")
 cd "$NIUBIGEO"
 RUNS_DIR="$RUNS" npx tsx src/cli.ts audit --domain realpage.com --name RealPage \
   --aliases "RealPage OneSite,OneSite" --competitors "$COMPETITORS" \
-  "${TARGETS[@]}" --prompt-count "${AI_VIS_PROMPTS:-8}" | tee "$RUNS/last-run.log"
+  "${TARGETS[@]}" --prompt-count "${AI_VIS_PROMPTS:-10}" \
+  --keywords "$KEYWORDS" --keyword-mode user_only --keyword-limit 4 --prompts-per-keyword 2 | tee "$RUNS/last-run.log"
 
 RUN_DIR="$(ls -td "$RUNS"/*-realpage | head -1)"
 python3 "$REPO/site/data/build_ai_visibility.py" "$RUN_DIR" $DEMO
