@@ -322,3 +322,20 @@
     errors, and the same answer saved server-side.
 - The real Google popup click-through (needs Drew's account) is still C1's job;
   everything up to and after the popup is now verified.
+
+## Drew's local test — one command (done)
+- Added `tooling/qa/check-chat-live.sh` + `tooling/qa/check-chat-live.py`: the
+  real panel, on the real local stack, against the facts Drew approved on
+  2026-09-10 (Yardi/66 buildings, Park Residences Plano in the 2026 sales, the
+  390-unit top lead). It seeds the chat origin's `token` exactly as the Google
+  popup leaves it, so it needs no Google sign-in, and it fails loudly on any
+  missing fact or any socket error (the W8 CORS bug).
+- Run it with: `bash tooling/qa/check-chat-live.sh` — needs the stack up:
+  `docker compose -f chatbot/docker-compose.local.yml --env-file chatbot/.env.local -p ps-chat up -d`
+- Verified live: **3/3 questions PASS, 0 live-render socket errors.** The running
+  compose stack already points at this worktree's compose file, so the CORS fix
+  is what is actually running.
+- Note: the `gowork/plan-v6-...` worktree is read-only for this session, so the
+  fix + test could not be fast-forwarded onto that branch; they live on
+  `session/1548150951490097254` (one commit ahead of plan-v6). Its site files are
+  identical, so the site being served is unaffected.
