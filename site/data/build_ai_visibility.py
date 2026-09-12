@@ -8,6 +8,7 @@
 from __future__ import annotations
 
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -20,7 +21,19 @@ MODEL_NAMES = {
     "google": "Gemini (Google)",
     "perplexity": "Perplexity",
     "deepseek": "DeepSeek",
+    # local sessions (tooling/ai-visibility/local_ai.py)
+    "claude": "Claude (from memory)",
+    "claude-web": "Claude + web search",
+    "chatgpt": "ChatGPT (from memory)",
 }
+
+
+LAWSUIT_RE = re.compile(r"antitrust|\bDOJ\b|Department of Justice|lawsuit|collusion|price[- ]fixing|"
+                        r"investigation|settle(?:d|ment)|sued|legal (?:scrutiny|challenges?)", re.I)
+
+
+def _share(part: int, whole: int) -> float | None:
+    return round(part * 100 / whole, 1) if whole else None
 
 
 def pct(fraction: dict | None) -> float | None:
@@ -30,8 +43,7 @@ def pct(fraction: dict | None) -> float | None:
 
 
 def model_label(model: str) -> str:
-    vendor = model.split("/", 1)[0]
-    return MODEL_NAMES.get(vendor, model)
+    return MODEL_NAMES.get(model) or MODEL_NAMES.get(model.split("/", 1)[0], model)
 
 
 def excerpt(text: str, limit: int = 600) -> str:
@@ -76,10 +88,36 @@ def build(report: dict, demo: bool) -> dict:
             "sentiment": o.get("sentiment"),
             "winner": o.get("winner"),
             "answer": excerpt(run["result"]["text"]) if run and run.get("result") else "",
+            "fullAnswer": run["result"]["text"] if run and run.get("result") else "",
         })
+
+    for q in questions:
+        q["bringsUpLawsuit"] = bool(LAWSUIT_RE.search(q["fullAnswer"]))
+    ok = [q for q in questions if q["status"] == "completed"]
+    unbranded = [q for q in ok if not q["namesBrand"]]
+    branded = [q for q in ok if q["namesBrand"]]
+    lawsuit = [q for q in branded if q["bringsUpLawsuit"]]
+    missed = sorted({q["question"] for q in unbranded if not q["mentioned"]})
+    wins: dict[str, int] = {}
+    for q in unbranded:
+        if q["winner"]:
+            wins[q["winner"]] = wins.get(q["winner"], 0) + 1
+    for q in questions:
+        del q["fullAnswer"]
 
     return {
         "demo": demo,
+        "founder": {
+            "unbrandedAnswers": len(unbranded),
+            "unbrandedNamedPct": _share(sum(q["mentioned"] for q in unbranded), len(unbranded)),
+            "unbrandedTopPickPct": _share(sum(q["winner"] == target for q in unbranded), len(unbranded)),
+            "brandedAnswers": len(branded),
+            "lawsuitPct": _share(len(lawsuit), len(branded)),
+            "negativePct": _share(sum(q["sentiment"] == "negative" for q in ok if q["mentioned"]),
+                                  sum(q["mentioned"] for q in ok)),
+            "topPicks": sorted(({"name": k, "count": v} for k, v in wins.items()), key=lambda w: -w["count"]),
+            "missedQuestions": missed,
+        },
         "status": ("Practice data made with a fake AI -- not real answers yet." if demo else ""),
         "target": target,
         "domain": audit["target"]["domain"],
