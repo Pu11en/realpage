@@ -1,3 +1,5 @@
+> **Superseded by PLAN-v5.md (Open WebUI + Google sign-in), 2026-09-11.** A1/A3/B2/B7 done and kept; the rest is replaced.
+
 # PropertyStack v4 — Chat that works like Eve
 
 Written 2026-09-11. Drew's goal: the website chat should work like **Eve** (the Hermes

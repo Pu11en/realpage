@@ -7,7 +7,7 @@ on Railway: its own memory, saved chats, live answers, polished UI. The result i
 final `PLAN-v4.md` that `/gowork` can run one small task at a time.
 
 ## Next Step
-A1, A3, B2, B7 done. Next: B3 (past chats) or A4 (long chats).
+Direction changed to Open WebUI: PLAN-v5.md written. Next: Drew OKs PLAN-v5, then A1 (run Open WebUI locally).
 
 ## Current Phase
 Phase 4: Review
@@ -75,3 +75,4 @@ Phase 4: Review
 - Under the Hood needs its own plan in a separate session (not this one).
 - Proposed: Open WebUI with Google login as the chat app; PropertyStack gets a "Chat" tab
   + the Ask button opening it; branded to match. Awaiting Drew's pick on how it appears.
+- Drew picked: Chat tab + Ask button open full-screen branded Open WebUI (option 1). PLAN-v5.md written.
