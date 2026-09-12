@@ -23,7 +23,7 @@ Railway change before C1. 💲 = real bot calls (cents).
   network, not only 127.0.0.1 (env `API_SERVER_HOST`). Sign-up off except the first admin.
   Check: 💲 open http://localhost:3000, log in as admin, ask "Which vendor runs the most
   buildings?" → cited answer streams; "what did I ask?" in the same chat → remembers.
-- [ ] **A2 Google sign-in.** _(My side done 2026-09-11: compose wired for Google OAuth, guide in `chatbot/GOOGLE-SIGNIN.md`, keys go in `chatbot/.env.local` (git-ignored). Waiting on Drew's Google console steps; then set ENABLE_SIGNUP/ENABLE_LOGIN_FORM=false and run the Check.)_ Create the Google OAuth client (Drew does the Google console
+- [x] **A2 Google sign-in.** _(Done 2026-09-12 locally: keys in git-ignored `chatbot/.env.local`; login page shows only "Continue with Google" (verified headless, redirects to accounts.google.com); password login/sign-up off in Open WebUI's DB (see GOOGLE-SIGNIN.md note). Still to confirm by Drew: real Google login with his account and a second account seeing an empty chat list.)_ Create the Google OAuth client (Drew does the Google console
   part with a written 6-step guide in `chatbot/GOOGLE-SIGNIN.md`); set Open WebUI's Google
   OAuth vars, OAuth sign-up on, password sign-up off, new users get the "user" role.
   Check: a second Google account can sign in with one click and sees an empty chat list;

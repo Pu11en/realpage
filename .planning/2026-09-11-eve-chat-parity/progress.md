@@ -18,3 +18,4 @@
 - Direction change: Open WebUI + Google sign-in, linked from a Chat tab/Ask button. PLAN-v5.md written (A1–A5 local, B1–B2 site links, C1–C3 ship). PLAN-v4 marked superseded.
 - PLAN-v5 A1 done: compose file chatbot/docker-compose.local.yml (bot + Open WebUI, Hermes on compose network via API_SERVER_HOST=0.0.0.0, 8642 not published). Admin account created; headless chat OK (screenshots /tmp/owui-*.png). Containers ps-chat-* left running (3000, 18080).
 - A2 my side: GOOGLE-SIGNIN.md guide, compose env for Google OAuth, .env.local ignored. Blocked on Drew's Google console keys.
+- A2 done locally: Google OAuth wired, login form/signup off via config table (env alone doesn't stick). Drew to test real Google login at localhost:3000.

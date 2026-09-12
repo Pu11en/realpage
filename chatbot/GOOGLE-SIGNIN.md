@@ -25,3 +25,13 @@ The chat (Open WebUI) uses "Sign in with Google". Google needs to know about our
 
 After that: the login page shows only a Google button; anyone with a Google account can
 sign in and gets their own private chats. Password login is turned off.
+
+## Note for the session (done 2026-09-12 locally)
+Open WebUI keeps `ui.enable_login_form` / `ui.enable_signup` in its database after first
+boot, so the env vars alone don't hide the password box. One-time fix (also needed once on
+Railway after the first boot):
+```
+docker exec <open-webui> python3 -c "import sqlite3,time;c=sqlite3.connect('/app/backend/data/webui.db');[c.execute('insert into config(key,value,updated_at) values(?,?,?) on conflict(key) do update set value=excluded.value, updated_at=excluded.updated_at',(k,'false',int(time.time()))) for k in ('ui.enable_login_form','ui.enable_signup')];c.commit()"
+```
+then restart the container. Local login page now shows only "Continue with Google".
+The admin account (kidquick360@gmail.com) merges with the Google login by email.
