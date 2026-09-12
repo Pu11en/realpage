@@ -33,7 +33,7 @@ function renderShell(activeKey) {
 
   const navHtml = NAV_TABS.map(
     (t) => `<a href="${t.href}" class="${t.key === activeKey ? "active" : ""}">${t.label}</a>`
-  ).join("") + `<a href="${CHAT_APP_URL}" class="nav-chat" title="Ask PropertyStack (Google sign-in)">Chat</a>`;
+  ).join("") + `<a href="#" class="nav-chat" data-chat-toggle title="Ask PropertyStack (Google sign-in)">Chat</a>`;
 
   const vendorOptions = ["Neutral", ...VENDORS]
     .map((v) => `<option value="${v}" ${v === viewAs ? "selected" : ""}>${v}</option>`)
@@ -53,12 +53,14 @@ function renderShell(activeKey) {
       </div>
     </aside>
     <main class="main" id="page-content"></main>
-    <a class="ask-fab" href="${CHAT_APP_URL}" aria-label="Ask PropertyStack">Ask</a>
+    <a class="ask-fab" href="#" data-chat-toggle aria-label="Ask PropertyStack">Ask</a>
   `;
 
   document.getElementById("view-as-select").addEventListener("change", (e) => {
     setViewAs(e.target.value);
   });
+
+  if (window.initChatPanel) window.initChatPanel();
 }
 
 async function loadData(path) {

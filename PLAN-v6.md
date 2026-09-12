@@ -43,7 +43,7 @@ Known facts that shape the tasks (checked 2026-09-12):
   `site/js/app.js` reads the chat address from `window.PS_CHAT_URL` if set (tests set it
   to :3001), else the existing local/live constant.
   Check: `bash tooling/qa/check-panel.sh` passes on a clean checkout with no env vars.
-- [ ] **W1 Panel shell on every page.** `site/js/chat-panel.js` + `site/css/chat-panel.css`
+- [x] **W1 Panel shell on every page.** `site/js/chat-panel.js` + `site/css/chat-panel.css`
   loaded by all 5 pages via app.js: Ask button and the Chat tab open a right-side slide-out
   (480px desktop, full-screen on phone, page content still scrollable) with a slim header
   (✦ Ask PropertyStack, "open in full page" link, close) and an `<iframe>` of the chat
