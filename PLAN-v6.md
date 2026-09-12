@@ -68,7 +68,7 @@ Known facts that shape the tasks (checked 2026-09-12):
   Stand-in page mimics the same flow for tests.
   Check: panel_test.py with the stand-in — click sign in → popup opens → close it → frame
   shows the chat; real check in W5.
-- [ ] **W4 Not buggy.** Hardening checklist, fix all, one test each in panel_test.py:
+- [x] **W4 Not buggy.** Hardening checklist, fix all, one test each in panel_test.py:
   panel open on reload keeps the same chat; phone keyboard doesn't hide the input; panel
   close/open doesn't reload the chat; two rapid Ask clicks don't double the frame; no console
   errors on any page; Chat tab is marked active while the panel is open; ESC closes on

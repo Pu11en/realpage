@@ -69,6 +69,57 @@ async def main():
 
             await context.close()
 
+        # W4: hardening checks (rapid double-click, close/reopen doesn't
+        # reload, ESC closes on desktop, Chat tab active while open).
+        context = await browser.new_context(viewport={"width": 1440, "height": 900})
+        await context.add_init_script(f"window.PS_CHAT_URL = {chat!r};")
+        page = await context.new_page()
+        await check_console_errors(page, f"{site}/index.html", bugs)
+
+        ask = page.locator("[data-chat-toggle]").first
+        await ask.click()
+        await ask.click()
+        frame_count = await page.locator("#chat-panel-frame").count()
+        if frame_count != 1:
+            bugs.append(f"rapid double-click created {frame_count} chat frames, expected 1")
+        still_open = await page.locator("#chat-panel").evaluate("(el) => el.classList.contains('open')")
+        if still_open:
+            bugs.append("rapid double-click (open, close) left the panel open")
+
+        # Reopen and sign in (fake-webui starts signed out) so the chat view
+        # is visible, then type a message, close, reopen: the frame must not
+        # reload (message stays), proving close/open doesn't reset it.
+        await ask.click()
+        signin_btn = page.locator("#chat-panel-signin")
+        await signin_btn.wait_for(state="visible", timeout=5000)
+        async with context.expect_page() as popup_info:
+            await signin_btn.click()
+        popup = await popup_info.value
+        await popup.wait_for_load_state()
+        async with popup.expect_event("close"):
+            await popup.locator("#signin").click()
+        chat_frame = page.frame_locator("#chat-panel-frame")
+        await chat_frame.locator("#msg-input").wait_for(state="visible", timeout=5000)
+        await chat_frame.locator("#msg-input").fill("hello from panel_test")
+        await chat_frame.locator("#send").click()
+        await page.locator("#chat-panel-close").click()
+        await ask.click()
+        messages_text = await chat_frame.locator("#messages").inner_text()
+        if "hello from panel_test" not in messages_text:
+            bugs.append("closing and reopening the panel reloaded the chat frame (message was lost)")
+
+        # ESC closes the panel on desktop.
+        await page.keyboard.press("Escape")
+        closed_after_esc = not await page.locator("#chat-panel").evaluate("(el) => el.classList.contains('open')")
+        if not closed_after_esc:
+            bugs.append("ESC did not close the panel on desktop")
+        nav_chat_active = await page.locator(".nav-chat").evaluate("(el) => el.classList.contains('active')")
+        if nav_chat_active:
+            bugs.append("Chat nav link stayed active after ESC closed the panel")
+
+        await page.close()
+        await context.close()
+
         # W3: sign-in from inside the panel. The stand-in's login screen posts
         # its auth state to the panel, which shows its own "Sign in with
         # Google" button (Google refuses to load inside a frame), opens the

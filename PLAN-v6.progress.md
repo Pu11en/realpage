@@ -132,3 +132,36 @@
   treating it as "up" (previously any 200 response was accepted).
 - Checked: `bash tooling/qa/check-panel.sh` (no env vars, as the plan
   specifies) now passes clean, run 3 times in a row.
+
+## W4 Not buggy — done
+- Reviewed the hardening checklist against the current code:
+  - Rapid double-click, ESC close, Chat-tab-active, panel close/open not
+    reloading the chat, and console errors were already correct by
+    construction (buildPanel() is idempotent by id, closePanel() never
+    clears the iframe's src, markChatTabActive is called from both
+    open/closePanel).
+  - Found one real bug: `site/css/chat-panel.css` used a fixed `100vh` for
+    the phone panel height, so when the on-screen keyboard opens on a real
+    phone, the visual viewport shrinks but the panel doesn't, hiding the
+    chat input behind the keyboard. Fixed by adding `height: 100dvh;` after
+    the `100vh` fallback (dynamic viewport height tracks the keyboard;
+    browsers without `dvh` support silently keep using the `100vh` line
+    above it).
+- Added explicit `tooling/qa/panel_test.py` checks for the checklist items
+  that weren't covered yet: rapid double-click (Ask clicked twice fast)
+  leaves exactly one `#chat-panel-frame` and ends closed, not doubled;
+  sign in, send a message, close, reopen — the message is still there
+  (proves the frame wasn't reloaded); ESC closes the panel on desktop and
+  clears the Chat nav link's active state.
+- Checked: `bash tooling/qa/check-panel.sh` passes clean (0 sweep problems,
+  panel_test.py clean, all new checks included).
+- Commit: (see git log after this entry).
+- Left open: the "open in full page" link still points at the static chat
+  app URL, not the exact open conversation — real Open WebUI has no
+  custom-JS hook (confirmed in W3) to tell the parent page which
+  conversation is open across origins, so there's no safe way to read that
+  from the iframe. Not fixable without a server-side change; noted here in
+  case it matters later, not attempted now since it's out of scope for a
+  hardening pass. Also noted in W3: the sign-in postMessage flow only works
+  with the stand-in today — the real Open WebUI signed-in detection is
+  W5's job.
