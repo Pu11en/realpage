@@ -26,7 +26,8 @@ Open: http://localhost:8765 → Ask (no sign-in locally)
   sentences ends with a line `**Bottom line**` followed by 2–4 bullets (max ~15 words each):
   the answer itself, the one number or name that matters, and the next useful step. Short
   paragraphs (max 3 sentences), a blank line between blocks, headings only for call sheets.
-  One-paragraph answers need no Bottom line. Keep every existing rule. `check-readable.sh`
+  One-paragraph answers need no Bottom line. **Exception: deep dives / call sheets put the Bottom
+  line first** (sell-plan H9/H10), since they're long. Keep every existing rule. `check-readable.sh`
   part 1 passes.
 - [ ] **R3 Bigger, airier text.** In `chatbot/branding/custom.css` (panel mode): message text
   17px, line-height 1.65, 12px gap between paragraphs/list items, table cells padded 8px,
