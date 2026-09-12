@@ -21,6 +21,28 @@ Check: `python3 tooling/qa/sweep.py http://localhost:8765` (plus the task's own 
   `#chat-log`** (event delegation), not per-button listeners — otherwise buttons go dead
   after a reload.
 
+## Deep Chat decision (added 2026-09-11, see `CHAT-OPEN-SOURCE-OPTIONS.md` on main)
+
+Checked against deepchat.dev docs: Deep Chat (MIT web component) **does** ship saved
+conversations (`browserStorage`), streaming, suggestion buttons (HTML with
+`deep-chat-suggestion-button`), and it would drop onto every page easily. It does **not**
+ship a copy button, a Retry button, or ageing-out of old chats. Adopting it also means
+rebuilding our citation chips and table repair (via `responseInterceptor` returning HTML)
+and restyling. So it mainly pays off for 4.1 (every page) and 4.2 (streaming), not for the
+small fixes.
+
+- [ ] **D1 Deep Chat trial page (no change to the real site).** Build
+  `site/chat-trial.html` with `<deep-chat>` wired to our chatbot's `/chat` via a `connect`
+  handler, `browserStorage` on, citation chips + table repair ported, site colours.
+  Check: headless with a faked reply — answer renders with citation chips and a table,
+  survives reload, screenshots at 1280 and 390 look on-theme.
+- [ ] **D2 Drew decides.** Drew tries `chat-trial.html` next to the Master Table chat on
+  localhost. Yes → replace 4.1a/4.1b/4.2b with "swap Master Table to Deep Chat" + "add to
+  every page", and redo 2.1–3.2 as Deep Chat settings/add-ons. No → delete the trial page
+  and carry on below.
+
+Task 2.0 is done first either way: it fixes a live bug in 5 minutes.
+
 ## Part 1 — Reliability (do in this order)
 
 - [ ] **2.0 Don't save half-finished messages.** (New — found in code review.) The
