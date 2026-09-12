@@ -51,15 +51,16 @@ def _cors(request: web.Request, resp: web.StreamResponse) -> web.StreamResponse:
     return resp
 
 
-def _rate_ok(ip: str) -> bool:
+def _rate_ok(ip: str) -> int:
+    """0 if allowed, else minutes until the next request is allowed."""
     now = time.time()
     q = _hits[ip]
     while q and now - q[0] > 3600:
         q.popleft()
     if len(q) >= RATE_PER_HOUR:
-        return False
+        return max(1, int((q[0] + 3600 - now) // 60) + 1)
     q.append(now)
-    return True
+    return 0
 
 
 def _citations(text: str) -> list[str]:
@@ -102,8 +103,9 @@ async def _parse(request: web.Request) -> tuple[str, str, list]:
         if content:
             history.append({"role": h["role"], "content": content})
     ip = request.headers.get("X-Forwarded-For", request.remote or "").split(",")[0].strip()
-    if not _rate_ok(ip):
-        raise _BadRequest("rate limit reached, try again later", 429)
+    wait = _rate_ok(ip)
+    if wait:
+        raise _BadRequest(f"rate limit reached, try again in {wait} minutes", 429)
     return message, session_id, history
 
 

@@ -48,6 +48,7 @@
     .cite { display: inline-block; font-family: var(--mono); font-size: 11px; color: var(--text-muted); background: var(--bg); border: 1px solid var(--border); border-radius: 4px; padding: 0 4px; margin: 0 1px; white-space: nowrap; }
     .msg-meta { color: var(--text-dim); font-size: 11px; margin-top: 4px; }
     .msg.note { color: var(--text-dim); font-size: 12px; font-style: italic; }
+    .chat-hint { color: var(--text-dim); font-size: 12px; padding: 4px 12px 0; }
     .msg-status { color: var(--text-dim); font-size: 12px; }
     .msg-status:empty { display: none; }
     .msg-hint { color: var(--text-dim); font-size: 11px; }
@@ -430,8 +431,17 @@
         return wrap.innerHTML;
       }
 
-      function scrollToBottom() {
-        log.scrollTop = log.scrollHeight;
+      function nearBottom() {
+        return log.scrollHeight - log.scrollTop - log.clientHeight < 80;
+      }
+      // Follow the chat only if the reader is already at the bottom (H8).
+      function scrollToBottom(force) {
+        if (force || nearBottom()) log.scrollTop = log.scrollHeight;
+      }
+      // Bring a message's top into view (long answers start at their start).
+      function scrollToTopOf(el) {
+        if (!nearBottom()) return; // reader scrolled up on purpose: leave them be
+        if (el.offsetTop < log.scrollTop) log.scrollTop = el.offsetTop - 8;
       }
 
       function addMessage(cls, html) {
@@ -441,7 +451,7 @@
         el.className = `msg ${cls}`;
         el.innerHTML = html;
         log.appendChild(el);
-        scrollToBottom();
+        scrollToBottom(cls === "user" || cls.startsWith("bot"));
         saveChat();
         return el;
       }
@@ -459,6 +469,31 @@
 
       function stopAnswer() {
         if (controller) controller.abort();
+      }
+
+      // Robot words from the server -> plain English (H5, H6).
+      function plainError(code) {
+        code = String(code || "");
+        if (code === "unreachable") return "Couldn't reach the chatbot. Check your connection and try again.";
+        if (/timed out|cut off/.test(code)) return "The chatbot took too long to answer. Try again, or ask a simpler question.";
+        if (/rate limit/.test(code)) return "You've asked a lot this hour. " + (code.match(/in \d+ minutes?/) ? "Try again " + code.match(/in \d+ minutes?/)[0] + "." : "Try again in a little while.");
+        if (/agent error|server returned 5/.test(code)) return "The chatbot hit a problem answering that. Try again in a moment.";
+        if (/over \d+ characters/.test(code)) return "That question is too long. Keep it under 1000 characters.";
+        return "Something went wrong. Try again.";
+      }
+
+      let hintTimer = null;
+      function showHint(msg) {
+        let el = document.getElementById("chat-hint");
+        if (!el) {
+          el = document.createElement("div");
+          el.id = "chat-hint";
+          el.className = "chat-hint";
+          form.insertAdjacentElement("beforebegin", el);
+        }
+        el.textContent = msg;
+        clearTimeout(hintTimer);
+        hintTimer = setTimeout(() => el.remove(), 2500);
       }
 
       function showError(question, msg) {
@@ -502,6 +537,15 @@
         const statusEl = bubble.querySelector(".msg-status");
         const textEl = bubble.querySelector(".msg-text");
         let text = "", meta = null, failed = null, drawQueued = false;
+        let pending = "", promoted = false, promoteTimer = null;
+        const promote = () => {
+          clearTimeout(promoteTimer); promoteTimer = null;
+          if (promoted) return;
+          promoted = true;
+          text += pending; pending = "";
+          statusEl.textContent = "";
+          if (!drawQueued) { drawQueued = true; requestAnimationFrame(draw); }
+        };
         const draw = () => {
           drawQueued = false;
           textEl.innerHTML = renderMarkdown(text);
@@ -531,10 +575,20 @@
               if (gen !== generation) return;
               if (name === "progress") {
                 // Anything said before a lookup is the bot thinking aloud; the real answer follows.
-                text = "";
+                pending = ""; text = ""; promoted = false;
+                clearTimeout(promoteTimer); promoteTimer = null;
                 textEl.innerHTML = "";
                 statusEl.textContent = data.label;
               } else if (name === "delta") {
+                if (!promoted) {
+                  // Short lead-ins ("I'll check the data first.") show as the grey
+                  // status line; a lookup then replaces them. Real answers promote.
+                  pending += data.text;
+                  statusEl.textContent = pending;
+                  if (pending.length > 120 || pending.includes("\n")) promote();
+                  else if (!promoteTimer) promoteTimer = setTimeout(promote, 1500);
+                  return;
+                }
                 text += data.text;
                 statusEl.textContent = "";
                 if (!drawQueued) { drawQueued = true; requestAnimationFrame(draw); }
@@ -544,6 +598,7 @@
                 failed = data.error;
               }
             });
+            if (pending) promote();
             if (!meta && !failed) failed = "the answer was cut off";
           }
         } catch (err) {
@@ -552,6 +607,7 @@
           else failed = err instanceof TypeError ? "unreachable" : err.message;
         } finally {
           clearTimeout(slowTimer);
+          clearTimeout(promoteTimer);
           if (gen === generation) { controller = null; setBusy(false); }
         }
         if (gen !== generation) return;
@@ -570,18 +626,19 @@
         }
         if (failed) {
           bubble.remove();
-          showError(question, failed === "unreachable" ? "Couldn't reach the chatbot." : `Something went wrong: ${failed}.`);
+          showError(question, plainError(failed));
           return;
         }
         history.push({ role: "user", content: question }, { role: "assistant", content: text });
         textEl.innerHTML = renderMarkdown(text || "I don't have that.") + (meta.seconds != null ? `<div class="msg-meta">${meta.seconds}s</div>` : "");
-        scrollToBottom();
+        scrollToTopOf(bubble);
         saveChat();
       }
 
       function submit(text) {
         const question = (text ?? input.value).trim();
-        if (!question || busy) return;
+        if (!question) return;
+        if (busy) { showHint("Still answering — press Stop to ask something else."); return; }
         input.value = "";
         addMessage("user", escapeHtml(question));
         ask(question);
@@ -626,13 +683,16 @@
       document.getElementById("chat-close").addEventListener("click", () => {
         document.body.classList.remove("chat-open");
       });
-      toggle.addEventListener("click", () => {
-        const collapsed = layout.classList.toggle("chat-collapsed");
+      function setCollapsed(collapsed) {
+        layout.classList.toggle("chat-collapsed", collapsed);
         toggle.setAttribute("aria-expanded", String(!collapsed));
         toggle.innerHTML = collapsed ? "+" : "&minus;";
         toggle.title = collapsed ? "Open chat" : "Collapse chat";
-        if (!collapsed) scrollToBottom();
-      });
+        try { localStorage.setItem("ps-chat-collapsed", collapsed ? "1" : ""); } catch (_) {}
+        if (!collapsed) scrollToBottom(true);
+      }
+      try { if (localStorage.getItem("ps-chat-collapsed")) setCollapsed(true); } catch (_) {}
+      toggle.addEventListener("click", () => setCollapsed(!layout.classList.contains("chat-collapsed")));
     })();
   </script>
 </body>

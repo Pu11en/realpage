@@ -41,16 +41,16 @@ and task Z1 turns each one into an automatic test so it can't come back.
 | H2 | Two tabs open → each overwrites the other's saved chat | A1 + B3 |
 | H3 | After ~10 questions the bot silently forgets the start of the chat, but you can still see it | A1 + A4 |
 | H4 | Screen shows the last 40 messages but saves 20 turns; long chats lose older messages without saying so | A1 + B3 |
-| H5 | Errors show robot words: "Something went wrong: agent error." / "agent timed out" | H-fix task B7 |
-| H6 | Hit the hourly limit (30 questions) → vague error, no "try again in X minutes" | A6 + B7 |
+| H5 | Errors show robot words: "Something went wrong: agent error." / "agent timed out" | ✅ H-fix task B7 |
+| H6 | Hit the hourly limit (30 questions) → vague error, no "try again in X minutes" | ✅ A6 + B7 |
 | H7 | First question after the bot has slept is very slow, nothing explains why | ✅ B2 (hint after 15s) |
-| H8 | While reading a long answer, a new answer yanks you to the bottom; long answers open at their end, not their start | B7 |
+| H8 | While reading a long answer, a new answer yanks you to the bottom; long answers open at their end, not their start | ✅ B7 |
 | H9 | No way to stop a slow or wrong answer | ✅ A3 + B2 |
-| H10 | Press Enter while it's still answering → nothing happens, no hint why | B7 |
-| H11 | Collapsed chat panel pops open again after reload | B7 |
+| H10 | Press Enter while it's still answering → nothing happens, no hint why | ✅ B7 |
+| H11 | Collapsed chat panel pops open again after reload | ✅ B7 |
 | H12 | Chat exists only on the Master Table | B1 |
 | H13 | Phone: keyboard may cover the input box (unverified) | B5 |
-| H14 | The bot's warm-up words ("I'll check the schema first.") flash in the answer for a moment before a lookup | B7: show them in the grey status line instead |
+| H14 | The bot's warm-up words ("I'll check the schema first.") flash in the answer for a moment before a lookup | ✅ B7: show them in the grey status line instead |
 
 ## Rules for every task
 
@@ -123,7 +123,7 @@ renders citations and tables).
   note after 15s.
   Check: screenshots at 390, 820 and 1280 of empty, mid-answer, error and long-chat states,
   each looked at.
-- [ ] **B7 Plain-English errors and small annoyances (H5, H6, H8, H10, H11).** Errors say what
+- [x] **B7 Plain-English errors and small annoyances (H5, H6, H8, H10, H11, H14).** _(Done 2026-09-11, tested headless: faked 504/429/502/400 show plain messages; collapse remembered; Enter while busy shows a hint and keeps the text; long answers open at their start; a reader who scrolled up isn't yanked; warm-up words stay in the grey line.)_ Errors say what
   happened and what to do ("The chatbot took too long. Try again." / "You've asked a lot
   this hour, try again in 12 minutes."). New answers scroll to their start, and don't yank
   you if you've scrolled up. Enter while busy shows "Still answering…". The panel remembers

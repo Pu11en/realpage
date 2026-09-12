@@ -7,7 +7,7 @@ on Railway: its own memory, saved chats, live answers, polished UI. The result i
 final `PLAN-v4.md` that `/gowork` can run one small task at a time.
 
 ## Next Step
-A1, A3, B2 done. Next: B7 (plain errors + annoyances) or A4 (long chats).
+A1, A3, B2, B7 done. Next: B3 (past chats) or A4 (long chats).
 
 ## Current Phase
 Phase 4: Review
@@ -42,6 +42,7 @@ Phase 4: Review
 ### Phase 6: Build (PLAN-v4)
 - [x] A1 server-side chats (local)
 - [x] A3 + B2 live words, progress line, Stop (local)
+- [x] B7 plain errors, scroll, collapse, busy hint, warm-up line
 - **Status:** in_progress
 
 ### Phase 5: Hand off
