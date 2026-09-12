@@ -373,4 +373,5 @@ app.add_routes([web.post("/chat", chat), web.options("/chat", options),
                 web.get("/v1/models", gateway_models)])
 
 if __name__ == "__main__":
-    web.run_app(app, host="::", port=PORT, print=None)  # "::" = IPv4 + IPv6 (Railway private network)
+    # Both: IPv4 for Railway's health check, IPv6 for its private network (asyncio makes "::" v6-only).
+    web.run_app(app, host=["0.0.0.0", "::"], port=PORT, print=None)
