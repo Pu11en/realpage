@@ -46,8 +46,8 @@ for kind in plugins skills; do
   done
 done
 
+# Newer hermes images hand the gateway to s6 supervision and return at once
+# (s6 restarts it if it crashes), so don't treat that return as a crash.
 /opt/hermes/.venv/bin/hermes gateway run &
-"$PY" /opt/chatbot/proxy.py &
-# If either process dies, exit so Railway restarts the container.
-wait -n
-exit 1
+# The proxy is the container's main process: if it dies, Railway restarts us.
+exec "$PY" /opt/chatbot/proxy.py
