@@ -6,22 +6,45 @@
 set -u
 cd "$(dirname "$0")/../.."
 
-SITE_PORT="${CHECK_SITE_PORT:-8766}"
-CHAT_PORT="${CHECK_CHAT_PORT:-3001}"
+# Picking a free port with a short-lived probe still leaves a race window,
+# and this machine runs other sessions' servers concurrently, so a fixed
+# default port can silently hit someone else's app instead of ours (seen:
+# 8766/3001 collided with an unrelated Excalidraw server). Default to 0
+# (kernel-assigned free port) unless the caller pins one explicitly.
+SITE_PORT="${CHECK_SITE_PORT:-0}"
+CHAT_PORT="${CHECK_CHAT_PORT:-0}"
 
-python3 -m http.server "$SITE_PORT" -d site >/dev/null 2>&1 &
-SITE_PID=$!
-python3 -m http.server "$CHAT_PORT" -d tooling/qa/fake-webui >/dev/null 2>&1 &
-CHAT_PID=$!
+free_port() {
+  python3 -c 'import socket; s=socket.socket(); s.bind(("localhost",0)); print(s.getsockname()[1]); s.close()'
+}
+
+pick_port_and_serve() {
+  local port="$1" dir="$2"
+  if [ "$port" = "0" ]; then
+    port=$(free_port)
+  fi
+  python3 -m http.server "$port" -d "$dir" >/dev/null 2>&1 &
+  echo "$! $port"
+}
+
+read -r SITE_PID SITE_PORT < <(pick_port_and_serve "$SITE_PORT" site)
+read -r CHAT_PID CHAT_PORT < <(pick_port_and_serve "$CHAT_PORT" tooling/qa/fake-webui)
 trap 'kill "$SITE_PID" "$CHAT_PID" 2>/dev/null' EXIT
+
+if [ -z "$SITE_PORT" ] || [ -z "$CHAT_PORT" ]; then
+  echo "check-panel.sh: couldn't determine the port the server picked"
+  exit 1
+fi
 
 ok=1
 for _ in $(seq 1 30); do
-  curl -sf "http://localhost:$SITE_PORT/index.html" >/dev/null && curl -sf "http://localhost:$CHAT_PORT/index.html" >/dev/null && { ok=0; break; }
+  curl -sf "http://localhost:$SITE_PORT/index.html" 2>/dev/null | grep -q "PropertyStack\|chat-panel\|data-chat-toggle" \
+    && curl -sf "http://localhost:$CHAT_PORT/index.html" 2>/dev/null | grep -q "fake-webui" \
+    && { ok=0; break; }
   sleep 0.5
 done
 if [ "$ok" -ne 0 ]; then
-  echo "check-panel.sh: site or fake-webui never came up"
+  echo "check-panel.sh: site or fake-webui never came up (or another process is squatting on the port)"
   exit 1
 fi
 

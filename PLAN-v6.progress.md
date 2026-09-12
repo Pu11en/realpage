@@ -119,3 +119,16 @@
   still there after this session ends) — nothing to do with this change;
   confirmed by re-running on alternate ports.
 - Commit: (see git log after this entry).
+
+## W3 follow-up: fixed the port collision (2026-09-12)
+- The reported "sign-in button didn't show" failure wasn't a panel bug: an
+  unrelated server on this shared machine was already listening on the
+  plan's default port 3001 (and 8766), so check-panel.sh's fixed ports
+  sometimes served someone else's app instead of ours. Confirmed the real
+  sign-in flow works correctly when run on non-colliding ports.
+- Fixed `tooling/qa/check-panel.sh` to ask the OS for a free port by default
+  (CHECK_SITE_PORT/CHECK_CHAT_PORT still override if set), and to verify the
+  server's response body actually looks like our site/fake-webui before
+  treating it as "up" (previously any 200 response was accepted).
+- Checked: `bash tooling/qa/check-panel.sh` (no env vars, as the plan
+  specifies) now passes clean, run 3 times in a row.
