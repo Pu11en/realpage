@@ -9,3 +9,11 @@
 - Auto-discovered via propertystack/.claude/skills symlink.
 - Checked: validate.py --self-test rc 0.
 - Open: crawl4ai /md endpoint shape not live-tested (D3 will exercise it; Jina read is the fallback).
+
+## D3 Run it on 3 real leads — done (2026-09-13)
+- Wrote propertystack/data/plano-richardson/briefs/2748103.md (Vantage At Spring Creek), richardson-legacy-arapaho.md (Legacy Arapaho), 2058512.md (Creekside At Legacy).
+- 17 Jina searches total (budget 36), reads via crawl4ai + a few Jina reads.
+- Checked: validate.py passes on all 3; --self-test rc 0.
+- Findings: Vantage manager after the June 2026 sale is unconfirmed (listings say Bell Partners, Bell Yelp listing closed); Legacy Arapaho contact Brian McNally (VP Development, public article); Creekside contact Caitlin Roniger (Key's systems director, team page). Opening date conflict for Legacy Arapaho: CSV 2028-11 vs city "Oct 2029".
+- SKILL.md: added note that Yelp/ApartmentRatings/ForRent block readers.
+- Open: Drew must review the 3 briefs and OK them (or ask for changes to SKILL.md) before D4.
