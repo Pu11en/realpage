@@ -16,3 +16,10 @@
 - `reach.json` now 19 dots: Plano 28 + Richardson 8 (our data, untouched) + 17 web dots (Dallas 6, Seattle/NY 3, Austin/San Antonio/Miami/SF/San Diego/DC 2, Houston/Atlanta/Nashville 1, offices in Irvine, Lombard, Boston, Reno, Woodway 1). Run logs in `propertystack/runs/*-build-reach.json`.
 - Checked: check-panel.sh clean (one earlier run hit a one-off page-load timeout, rerun clean); check_map.py map parts pass, only the 2 P4 deep-dive failures remain.
 - Open: 19 dots is just under the 20–60 aim. Many web "signs" are lawsuit/settlement news naming local landlords, not case studies — honest but mixed as proof of reach. Case-study search found almost no named-city customers.
+
+## P4 Deep-dive button — done (2026-09-13)
+- "✦ Deep dive" button (`[data-deep-dive]`) on all 42 Early Leads rows and on property.html. Click opens the chat panel with the prompt typed in, not sent. Row click is stopped from bubbling (stays on Early Leads). Upcoming leads (signalType "Upcoming", 14) get the "planned, software not chosen yet" prompt; others get "why would they switch now"; missing software shows "software unknown".
+- How it gets in (checked in the running Open WebUI 0.11.3's JS): `postMessage input:prompt` only works same-origin, so it's used live; locally the panel loads `/?q=<text>&submit=false` (submit defaults to true, so the flag matters). Clipboard fallback not needed. Written up in chatbot/README.md. Code: `deepDive()` in site/js/chat-panel.js.
+- Also fixed the flaky check-panel timeout: the fake chat server was single-threaded; now ThreadingHTTPServer (baseline flaked 1 in 5, now 5/5 clean).
+- Commit be39285. Checked: check-panel.sh 5/5 clean, check_map.py 0 problems, Playwright click test showed the right prompt in the frame URL and no page change.
+- Open: not yet tried against the real chat app on :3000 (that's P5).

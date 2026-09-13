@@ -40,7 +40,7 @@ Open: http://localhost:8765/map.html
   cities), keep only items with a source URL, geocode cities from a small built-in table of
   US metro lat/lon (no paid geocoder), merge into `reach.json`. Aim 20–60 dots across the US.
   Log to `propertystack/runs/`. Check passes.
-- [ ] **P4 Deep-dive button.** `data-deep-dive` button on each Early Leads row and on
+- [x] **P4 Deep-dive button.** `data-deep-dive` button on each Early Leads row and on
   property.html. Click opens the chat panel and puts this in the input, not sent:
   "Deep dive on <name>, <city> (<units> units, <software>): why would they switch now, and get
   me ready to call." Try Open WebUI's parent→iframe `postMessage` `{type: "input:prompt", text}`
