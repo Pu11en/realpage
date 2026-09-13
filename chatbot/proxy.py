@@ -45,6 +45,12 @@ GATEWAY_PRICE_IN_PER_TOKEN = 0.14 / 1_000_000
 GATEWAY_PRICE_OUT_PER_TOKEN = 0.28 / 1_000_000
 GATEWAY_CHARS_PER_TOKEN = 4
 
+# Saved deep dives: the first "Deep dive on <building>, <city> (...)" answer is
+# kept on the volume and replayed next time, so a building is only researched
+# once. "Fresh deep dive on ..." redoes it and replaces the saved one.
+DEEP_DIVE_DIR = os.path.join(os.environ.get("HERMES_HOME", "/opt/data"), "deep-dives")
+DEEP_DIVE_RE = re.compile(r"^\s*(fresh\s+)?deep dive on\s+([^(:]+?)\s*(?:\(|:|$)", re.I)
+
 _hits: dict[str, deque] = defaultdict(deque)
 _gateway_hits: dict[str, deque] = defaultdict(deque)
 _gateway_usage_lock = asyncio.Lock()
@@ -296,6 +302,84 @@ async def _gateway_add_cost(email: str, cost: float) -> None:
         _gateway_save_usage(usage)
 
 
+def _last_user_text(body: dict) -> str:
+    for m in reversed(body.get("messages") or []):
+        if isinstance(m, dict) and m.get("role") == "user":
+            c = m.get("content", "")
+            if isinstance(c, list):  # OpenAI content parts
+                c = " ".join(p.get("text", "") for p in c if isinstance(p, dict))
+            return str(c)
+    return ""
+
+
+def _deep_dive_key(text: str) -> tuple[str, bool]:
+    """('<building-slug>', fresh?) for a deep-dive question, else ('', False)."""
+    m = DEEP_DIVE_RE.match(text)
+    if not m:
+        return "", False
+    slug = re.sub(r"[^a-z0-9]+", "-", m.group(2).lower()).strip("-")[:120]
+    return slug, bool(m.group(1))
+
+
+def _deep_dive_load(key: str) -> dict | None:
+    try:
+        with open(os.path.join(DEEP_DIVE_DIR, f"{key}.json")) as f:
+            return json.load(f)
+    except Exception:
+        return None
+
+
+def _deep_dive_save(key: str, question: str, answer: str) -> None:
+    if not answer.strip():
+        return
+    try:
+        os.makedirs(DEEP_DIVE_DIR, exist_ok=True)
+        tmp = os.path.join(DEEP_DIVE_DIR, f".{key}.tmp")
+        with open(tmp, "w") as f:
+            json.dump({"question": question, "answer": answer, "saved_at": time.time()}, f)
+        os.replace(tmp, os.path.join(DEEP_DIVE_DIR, f"{key}.json"))
+    except OSError:
+        pass
+
+
+def _deep_dive_note(saved: dict, question: str) -> str:
+    day = time.strftime("%b %d, %Y", time.localtime(saved.get("saved_at", 0)))
+    m = DEEP_DIVE_RE.match(question)
+    name = m.group(2).strip() if m else "this building"
+    return (f"*Saved deep dive from {day} (no new research). "
+            f"To redo it, ask: \"Fresh deep dive on {name}\".*\n\n{saved['answer']}")
+
+
+def _sse_text(raw: bytes) -> str:
+    """Join the assistant text from OpenAI-style SSE chunks."""
+    out = []
+    for line in raw.decode("utf-8", "replace").splitlines():
+        if not line.startswith("data:") or line.strip() == "data: [DONE]":
+            continue
+        try:
+            delta = json.loads(line[5:])["choices"][0].get("delta") or {}
+        except Exception:
+            continue
+        out.append(delta.get("content") or "")
+    return "".join(out)
+
+
+async def _gateway_replay(request: web.Request, body: dict, text: str) -> web.StreamResponse:
+    """Answer from a saved deep dive, in the same shape Hermes would."""
+    base = {"id": f"chatcmpl-saved-{int(time.time())}", "created": int(time.time()), "model": body.get("model", "hermes-agent")}
+    if not body.get("stream"):
+        return web.json_response({**base, "object": "chat.completion", "choices": [
+            {"index": 0, "message": {"role": "assistant", "content": text}, "finish_reason": "stop"}]})
+    resp = web.StreamResponse(headers={
+        "Content-Type": "text/event-stream", "Cache-Control": "no-cache", "X-Accel-Buffering": "no"})
+    await resp.prepare(request)
+    for delta, finish in (({"role": "assistant", "content": text}, None), ({}, "stop")):
+        chunk = {**base, "object": "chat.completion.chunk", "choices": [{"index": 0, "delta": delta, "finish_reason": finish}]}
+        await resp.write(f"data: {json.dumps(chunk)}\n\n".encode())
+    await resp.write(b"data: [DONE]\n\n")
+    return resp
+
+
 def _gateway_auth_ok(request: web.Request) -> bool:
     return request.headers.get("Authorization", "") == f"Bearer {HERMES_KEY}"
 
@@ -328,6 +412,12 @@ async def gateway_chat(request: web.Request) -> web.StreamResponse:
     if blocked:
         return web.json_response({"error": {"message": blocked, "type": "rate_limit_exceeded"}}, status=429)
     req_chars = sum(len(str(m.get("content", ""))) for m in body.get("messages", []) if isinstance(m, dict))
+    question = _last_user_text(body)
+    dive_key, fresh = _deep_dive_key(question)
+    if dive_key and not fresh:
+        saved = _deep_dive_load(dive_key)
+        if saved:
+            return await _gateway_replay(request, body, _deep_dive_note(saved, question))
 
     async with _slots:
         try:
@@ -335,6 +425,11 @@ async def gateway_chat(request: web.Request) -> web.StreamResponse:
                 async with s.post(HERMES_URL, headers={"Authorization": f"Bearer {HERMES_KEY}"}, json=body) as r:
                     if not body.get("stream"):
                         data = await r.json(content_type=None)
+                        if dive_key and r.status == 200:
+                            try:
+                                _deep_dive_save(dive_key, question, data["choices"][0]["message"]["content"])
+                            except (KeyError, IndexError, TypeError):
+                                pass
                         await _gateway_add_cost(email, _gateway_est_cost(req_chars, is_output=False)
                                                  + _gateway_est_cost(len(json.dumps(data)), is_output=True))
                         return web.json_response(data, status=r.status)
@@ -342,9 +437,14 @@ async def gateway_chat(request: web.Request) -> web.StreamResponse:
                         "Content-Type": "text/event-stream", "Cache-Control": "no-cache", "X-Accel-Buffering": "no"})
                     await resp.prepare(request)
                     out_chars = 0
+                    raw = bytearray()
                     async for chunk in r.content.iter_any():
                         out_chars += len(chunk)
+                        if dive_key:
+                            raw += chunk
                         await resp.write(chunk)
+                    if dive_key and r.status == 200 and b"[DONE]" in raw:
+                        _deep_dive_save(dive_key, question, _sse_text(bytes(raw)))
                     await _gateway_add_cost(email, _gateway_est_cost(req_chars, is_output=False)
                                              + _gateway_est_cost(out_chars, is_output=True))
                     return resp
