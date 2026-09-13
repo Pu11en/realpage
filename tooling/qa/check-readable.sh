@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Readable-chat check (PLAN-chat-readable, R1). Free, no bot calls, well under 10 s.
-# Part 1: SOUL.md must have a "Bottom line" answer rule.
+# Part 1: SOUL.md must have the fixed answer layout (**Next:** / **Sources:** lines).
 # Part 2: custom.css must give chat message text font-size >= 17px and
 #         line-height >= 1.6 (in one rule whose selector targets messages).
 set -u
@@ -12,8 +12,9 @@ import re, sys
 fails = []
 
 soul = open("chatbot/hermes-profile/SOUL.md", encoding="utf-8").read()
-if "bottom line" not in soul.lower():
-    fails.append('SOUL.md has no "Bottom line" rule')
+for tag in ("**Next:**", "**Sources:**"):
+    if tag not in soul:
+        fails.append(f"SOUL.md has no {tag} layout line")
 
 css = open("chatbot/branding/custom.css", encoding="utf-8").read()
 css = re.sub(r"/\*.*?\*/", "", css, flags=re.S)
@@ -33,5 +34,5 @@ for f in fails:
     print("FAIL:", f)
 if fails:
     sys.exit(1)
-print("check-readable: OK (Bottom line rule + readable message text)")
+print("check-readable: OK (Next/Sources layout + readable message text)")
 PY

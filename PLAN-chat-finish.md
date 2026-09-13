@@ -31,7 +31,7 @@ local-trial-key-change-me` and `X-OpenWebUI-User-Email: admin@localhost`, model 
 
 ## Tasks
 
-- [ ] **T1 Tidy the rulebook.** Rewrite `chatbot/hermes-profile/SOUL.md` into one clean,
+- [x] **T1 Tidy the rulebook.** Rewrite `chatbot/hermes-profile/SOUL.md` into one clean,
   non-contradicting version of today's rules (keep every rule's meaning, delete the leftovers):
   the old "Bottom line" block rule, the "tables for 3+ items" rule, the "`###` headings on long
   answers" rule and "say how many more exist" all fight the ~40-word fixed layouts -- the two
