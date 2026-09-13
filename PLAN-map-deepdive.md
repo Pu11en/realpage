@@ -35,7 +35,7 @@ Open: http://localhost:8765/map.html
   Seed `reach.json` with Plano/Richardson from our data (36 RealPage buildings, proof = the
   `proof_url`s). Nav: replace Master Table with Map; `master-table.html` becomes a redirect.
   Fix any test that used master-table.html (check-panel, sweep) to use map.html or index.
-- [ ] **P3 Reach data (💲 ~100 Jina searches).** `tooling/reach/build_reach.py`: web search for
+- [x] **P3 Reach data (💲 ~100 Jina searches).** `tooling/reach/build_reach.py`: web search for
   RealPage offices, case studies and press-release customers (named apartment companies +
   cities), keep only items with a source URL, geocode cities from a small built-in table of
   US metro lat/lon (no paid geocoder), merge into `reach.json`. Aim 20–60 dots across the US.

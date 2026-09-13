@@ -1,0 +1,24 @@
+{
+  "skill": "build-reach",
+  "area": "us",
+  "started": "2026-09-13T14:44:05",
+  "inputs": [],
+  "outputs": [
+    "site/data/reach.json"
+  ],
+  "counts": {
+    "queries_cached": 64,
+    "web_dots": 25,
+    "kept_dots": 2
+  },
+  "api_calls": {
+    "jina_search": 64
+  },
+  "errors": [],
+  "notes": [
+    "built 2026-09-13"
+  ],
+  "finished": "2026-09-13T14:45:50",
+  "duration_s": 105.3,
+  "status": "ok"
+}

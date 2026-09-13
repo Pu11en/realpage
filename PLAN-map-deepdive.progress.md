@@ -9,3 +9,10 @@
 - Nav: Master Table → Map; `master-table.html` is now a redirect. Software Share bars now go to `index.html?software=X` (Early Leads picks up the filter). Property page "Back" goes to Early Leads. Caddyfile serves `/map.html` and `/vendor/*`. QA scripts (sweep, quick-check, panel_test) use map.html.
 - Checked: check-panel.sh clean; check_map.py map/nav/redirect parts pass, the only 2 failures left are the P4 deep-dive buttons. Screenshot looked right.
 - Open: Plano and Richardson dots overlap at national scale (Richardson's small dot sits on top of Plano's).
+
+## P3 Reach data — done (2026-09-13)
+- Added `tooling/reach/build_reach.py`: Jina search over 32 US metros (2 queries each) + 4 general queries, plus RealPage's office-locations page (1 read). Keeps only results with a URL that mention RealPage and name the metro; skips social sites, Wikipedia, and RealPage's own market-report pages (`/analytics/`), which name cities but not customers. Geocodes from a built-in metro table. Search results cached in `tooling/reach/cache.json`, so reruns are free (`--fresh` to re-search).
+- Spent 68 searches + 1 page read (under the ~100 budget). Needs `JINA_API_KEY` in env (the worktree has no .env; it's in the main repo's .env).
+- `reach.json` now 19 dots: Plano 28 + Richardson 8 (our data, untouched) + 17 web dots (Dallas 6, Seattle/NY 3, Austin/San Antonio/Miami/SF/San Diego/DC 2, Houston/Atlanta/Nashville 1, offices in Irvine, Lombard, Boston, Reno, Woodway 1). Run logs in `propertystack/runs/*-build-reach.json`.
+- Checked: check-panel.sh clean (one earlier run hit a one-off page-load timeout, rerun clean); check_map.py map parts pass, only the 2 P4 deep-dive failures remain.
+- Open: 19 dots is just under the 20–60 aim. Many web "signs" are lawsuit/settlement news naming local landlords, not case studies — honest but mixed as proof of reach. Case-study search found almost no named-city customers.
