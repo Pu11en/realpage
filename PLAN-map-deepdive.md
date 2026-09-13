@@ -22,7 +22,7 @@ Open: http://localhost:8765/map.html
 
 ## Tasks
 
-- [ ] **P1 Check script.** `tooling/qa/check_map.py` (Playwright, free, serves `site/` itself on
+- [x] **P1 Check script.** `tooling/qa/check_map.py` (Playwright, free, serves `site/` itself on
   port 8791, under 60 s): map.html loads with 0 console errors and ≥1 dot; clicking the first dot
   shows a card with ≥1 link; nav has "Map" and no "Master Table"; `master-table.html` redirects
   to `map.html`; every Early Leads row has a `[data-deep-dive]` button; `property.html?id=<first
