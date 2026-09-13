@@ -21,8 +21,9 @@ Runs on Drew's computer only, never in the chat agent.
 - `data/raw/census/` cached Census downloads (S2, git-ignored): 12 monthly BPS CBSA files (5+ units, imputed) + ACS 1-year B25003 summary file (renters = E003). No API key: api.census.gov now requires one, the flat files do not.
 - `data/scout/<date>/<metro>/sample.csv` + evidence JSON (S3, S4).
 - `data/scout/<date>/areas.json`: numbers + evidence links only (S5).
-- `data/scout/<date>/cards.md`: top 5, written by the local Claude session from areas.json (S5).
-- `kind: "scout"` markers in `site/data/reach.json`; a run log in `runs/`.
+- `data/scout/<date>/why.json`: `{slug: "3-line why this city"}`, written by the local Claude session after reading areas.json + evidence (no extra API model).
+- `data/scout/<date>/cards.md`: top 5 rendered by run.py from areas.json + why.json (rerun `--from-saved <date>` after editing why.json; zero searches).
+- `kind: "scout"` markers (top 5) in `site/data/reach.json`, older scout markers replaced, reach dots kept; a run log `runs/<ts>-scout-areas.json`.
 
 ## Tools
 - crawl4ai at `http://localhost:11235` for reading pages (free, local).
