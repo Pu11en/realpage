@@ -196,10 +196,10 @@
   function deepDivePrompt(p) {
     const units = p.units != null ? `${p.units} units` : "units not stated";
     if (p.upcoming) {
-      return `Deep dive on ${p.name}, ${p.city} (${units}, planned, software not chosen yet): who is developing it, when does it open, and get me ready to call.`;
+      return `Deep dive on ${p.name}, ${p.city} (${units}, planned, software not chosen yet): who is developing it, when does it open, and why call now?`;
     }
     const sw = p.software && p.software !== "unknown" ? p.software : "software unknown";
-    return `Deep dive on ${p.name}, ${p.city} (${units}, ${sw}): why would they switch now, and get me ready to call.`;
+    return `Deep dive on ${p.name}, ${p.city} (${units}, ${sw}): who runs it, and why would they switch now?`;
   }
 
   window.PSChatPanel = { open: openPanel, close: closePanel, toggle: togglePanel, isOpen, deepDive, deepDivePrompt };
