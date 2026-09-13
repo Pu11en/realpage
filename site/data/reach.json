@@ -1,501 +1,613 @@
 [
  {
+  "kind": "building",
+  "name": "Estancia At Ridgeview Ranch Apartments",
   "city": "Plano",
   "state": "TX",
-  "lat": 33.0198,
-  "lon": -96.6989,
-  "signs": 28,
-  "kind": "reach",
-  "source": "our-data",
-  "note": "28 apartment buildings we proved run RealPage",
+  "lat": 33.116351990968,
+  "lon": -96.750652464617,
+  "units": 500,
+  "area": "plano-richardson",
+  "address": "10200 Independence Pkwy",
   "links": [
    {
-    "title": "Alta Vista Apartments",
-    "url": "https://altavistaapartments.activebuilding.com/"
-   },
-   {
-    "title": "Bridge At Heritage Creek Apartments",
-    "url": "https://7613495.onlineleasing.realpage.com/"
-   },
-   {
-    "title": "Cottages At Tulane Apartments",
-    "url": "https://46544.onlineleasing.realpage.com/"
-   },
-   {
-    "title": "Creekside At Legacy Apartments",
-    "url": "https://creeksideatlegacy.loftliving.com/login"
-   },
-   {
-    "title": "Custer Park Apartments",
-    "url": "https://17756ollv3.onlineleasing.realpage.com/"
-   },
-   {
-    "title": "Dorian",
-    "url": "https://dorianandencore.loftliving.com/login"
-   },
-   {
-    "title": "Encore Apartments",
-    "url": "https://dorianandencore.loftliving.com/login"
-   },
-   {
-    "title": "Estancia At Ridgeview Ranch Apartments",
+    "title": "Proof it runs RealPage",
     "url": "https://property.onesite.realpage.com/welcomehome?siteId=2815615#url=%23login"
-   },
+   }
+  ]
+ },
+ {
+  "kind": "building",
+  "name": "Windhaven Park  Apartments",
+  "city": "Plano",
+  "state": "TX",
+  "lat": 33.056514264828,
+  "lon": -96.834654408462,
+  "units": 474,
+  "area": "plano-richardson",
+  "address": "6201 Windhaven Pkwy",
+  "links": [
    {
-    "title": "Gala At Premier Senior Tc",
-    "url": "https://9110723aff.onlineleasing.realpage.com/#k=54874"
-   },
-   {
-    "title": "Garden Gate Apartments Chodo",
-    "url": "https://gardengateplano.activebuilding.com/login"
-   },
-   {
-    "title": "Greenbriar Apartments",
-    "url": "https://1737725.onlineleasing.realpage.com/"
-   },
-   {
-    "title": "Link At Plano",
-    "url": "https://9251208.onlineleasing.realpage.com/?OLL-source-attribution=Property%20Website"
-   },
-   {
-    "title": "Lvl 29 Apartments",
-    "url": "https://lvl29.activebuilding.com/login"
-   },
-   {
-    "title": "Magnolia On 16Th",
-    "url": "https://login.activebuilding.com/auth/login"
-   },
-   {
-    "title": "Mariposa At Communications Parkway Senior - Tc",
-    "url": "https://mariposacommunicationsparkway.loftliving.com/login"
-   },
-   {
-    "title": "One 90 Gateway",
-    "url": "https://one90gateway.loftliving.com/login"
-   },
-   {
-    "title": "Plaza At Chase Oaks Senior Chodo",
-    "url": "https://1206646.onlineleasing.realpage.com/"
-   },
-   {
-    "title": "Ranch At Ridgeview Apartments",
-    "url": "https://property.onesite.realpage.com/welcomehome?siteId=4395751"
-   },
-   {
-    "title": "Ridgeview Park Townhomes",
-    "url": "https://property.onesite.realpage.com/welcomehome?siteId=4395751"
-   },
-   {
-    "title": "Texas Star Apartments",
-    "url": "https://www.realpage.com/"
-   },
-   {
-    "title": "The Buckley",
-    "url": "https://thebuckleytx.loftliving.com/login"
-   },
-   {
-    "title": "The Ludlow",
-    "url": "https://9033774.onlineleasing.realpage.com/"
-   },
-   {
-    "title": "Tuscany Villas At Chase Oaks Senior Chodo",
-    "url": "https://property.onesite.realpage.com/welcomehome/?siteId=2444141"
-   },
-   {
-    "title": "Villas Apartments",
-    "url": "https://villasdelsol.loftliving.com/portal/"
-   },
-   {
-    "title": "Villas At Legacy Apartments",
-    "url": "https://villasatlegacyapts.activebuilding.com/login"
-   },
-   {
-    "title": "Villas Of Preston Creek Apartments",
-    "url": "https://property.onesite.realpage.com/welcomehome?siteId=2354106#url=%23login"
-   },
-   {
-    "title": "Windhaven Park  Apartments",
+    "title": "Proof it runs RealPage",
     "url": "https://8763937.onlineleasing.realpage.com/"
-   },
+   }
+  ]
+ },
+ {
+  "kind": "building",
+  "name": "Villas Of Preston Creek Apartments",
+  "city": "Plano",
+  "state": "TX",
+  "lat": 33.070422877302,
+  "lon": -96.778491023803,
+  "units": 408,
+  "area": "plano-richardson",
+  "address": "6900 Preston Rd",
+  "links": [
    {
-    "title": "Woodlands Of Plano Apartments Tc",
+    "title": "Proof it runs RealPage",
+    "url": "https://property.onesite.realpage.com/welcomehome?siteId=2354106#url=%23login"
+   }
+  ]
+ },
+ {
+  "kind": "building",
+  "name": "Dorian",
+  "city": "Plano",
+  "state": "TX",
+  "lat": null,
+  "lon": null,
+  "units": 398,
+  "area": "plano-richardson",
+  "address": "8401 Memorial Ln",
+  "links": [
+   {
+    "title": "Proof it runs RealPage",
+    "url": "https://dorianandencore.loftliving.com/login"
+   }
+  ]
+ },
+ {
+  "kind": "building",
+  "name": "Creekside At Legacy Apartments",
+  "city": "Plano",
+  "state": "TX",
+  "lat": 33.060877097265,
+  "lon": -96.804889588901,
+  "units": 380,
+  "area": "plano-richardson",
+  "address": "6300 Windcrest Dr",
+  "links": [
+   {
+    "title": "Proof it runs RealPage",
+    "url": "https://creeksideatlegacy.loftliving.com/login"
+   }
+  ]
+ },
+ {
+  "kind": "building",
+  "name": "One 90 Gateway",
+  "city": "Plano",
+  "state": "TX",
+  "lat": 33.002627727203,
+  "lon": -96.672023752493,
+  "units": 347,
+  "area": "plano-richardson",
+  "address": "3201 Wynwood Dr",
+  "links": [
+   {
+    "title": "Proof it runs RealPage",
+    "url": "https://one90gateway.loftliving.com/login"
+   }
+  ]
+ },
+ {
+  "kind": "building",
+  "name": "The Buckley",
+  "city": "Plano",
+  "state": "TX",
+  "lat": null,
+  "lon": null,
+  "units": 338,
+  "area": "plano-richardson",
+  "address": "600 Kissimmee Dr",
+  "links": [
+   {
+    "title": "Proof it runs RealPage",
+    "url": "https://thebuckleytx.loftliving.com/login"
+   }
+  ]
+ },
+ {
+  "kind": "building",
+  "name": "Villas At Legacy Apartments",
+  "city": "Plano",
+  "state": "TX",
+  "lat": 33.057803450712,
+  "lon": -96.807758910279,
+  "units": 328,
+  "area": "plano-richardson",
+  "address": "5301 W Spring Creek Pkwy",
+  "links": [
+   {
+    "title": "Proof it runs RealPage",
+    "url": "https://villasatlegacyapts.activebuilding.com/login"
+   }
+  ]
+ },
+ {
+  "kind": "building",
+  "name": "Lvl 29 Apartments",
+  "city": "Plano",
+  "state": "TX",
+  "lat": null,
+  "lon": null,
+  "units": 328,
+  "area": "plano-richardson",
+  "address": "6000 Columbus Ave",
+  "links": [
+   {
+    "title": "Proof it runs RealPage",
+    "url": "https://lvl29.activebuilding.com/login"
+   }
+  ]
+ },
+ {
+  "kind": "building",
+  "name": "Bridge At Heritage Creek Apartments",
+  "city": "Plano",
+  "state": "TX",
+  "lat": 33.007969254495,
+  "lon": -96.719094911493,
+  "units": 326,
+  "area": "plano-richardson",
+  "address": "1550 W Plano Pkwy",
+  "links": [
+   {
+    "title": "Proof it runs RealPage",
+    "url": "https://7613495.onlineleasing.realpage.com/"
+   }
+  ]
+ },
+ {
+  "kind": "building",
+  "name": "The Ludlow",
+  "city": "Plano",
+  "state": "TX",
+  "lat": 33.006158921387,
+  "lon": -96.728429300972,
+  "units": 326,
+  "area": "plano-richardson",
+  "address": "601 Belpree Dr",
+  "links": [
+   {
+    "title": "Proof it runs RealPage",
+    "url": "https://9033774.onlineleasing.realpage.com/"
+   }
+  ]
+ },
+ {
+  "kind": "building",
+  "name": "Ranch At Ridgeview Apartments",
+  "city": "Plano",
+  "state": "TX",
+  "lat": 33.112123372232,
+  "lon": -96.745879565729,
+  "units": 288,
+  "area": "plano-richardson",
+  "address": "2901 Ridgeview Dr",
+  "links": [
+   {
+    "title": "Proof it runs RealPage",
+    "url": "https://property.onesite.realpage.com/welcomehome?siteId=4395751"
+   }
+  ]
+ },
+ {
+  "kind": "building",
+  "name": "Cottages At Tulane Apartments",
+  "city": "Plano",
+  "state": "TX",
+  "lat": 33.036825235166,
+  "lon": -96.851456939854,
+  "units": 268,
+  "area": "plano-richardson",
+  "address": "2600 Preston Rd",
+  "links": [
+   {
+    "title": "Proof it runs RealPage",
+    "url": "https://46544.onlineleasing.realpage.com/"
+   }
+  ]
+ },
+ {
+  "kind": "building",
+  "name": "Link At Plano",
+  "city": "Plano",
+  "state": "TX",
+  "lat": 33.020322508899,
+  "lon": -96.700556414124,
+  "units": 245,
+  "area": "plano-richardson",
+  "address": "1013 15Th Pl",
+  "links": [
+   {
+    "title": "Proof it runs RealPage",
+    "url": "https://9251208.onlineleasing.realpage.com/?OLL-source-attribution=Property%20Website"
+   }
+  ]
+ },
+ {
+  "kind": "building",
+  "name": "Garden Gate Apartments Chodo",
+  "city": "Plano",
+  "state": "TX",
+  "lat": 33.071003876769,
+  "lon": -96.712861543918,
+  "units": 240,
+  "area": "plano-richardson",
+  "address": "1201 Legacy Dr",
+  "links": [
+   {
+    "title": "Proof it runs RealPage",
+    "url": "https://gardengateplano.activebuilding.com/login"
+   }
+  ]
+ },
+ {
+  "kind": "building",
+  "name": "Plaza At Chase Oaks Senior Chodo",
+  "city": "Plano",
+  "state": "TX",
+  "lat": 33.071067629902,
+  "lon": -96.696380458649,
+  "units": 240,
+  "area": "plano-richardson",
+  "address": "7100 Chase Oaks Blvd",
+  "links": [
+   {
+    "title": "Proof it runs RealPage",
+    "url": "https://1206646.onlineleasing.realpage.com/"
+   }
+  ]
+ },
+ {
+  "kind": "building",
+  "name": "Encore Apartments",
+  "city": "Plano",
+  "state": "TX",
+  "lat": 33.093343529426,
+  "lon": -96.797020228342,
+  "units": 240,
+  "area": "plano-richardson",
+  "address": "4700 Tribeca Ln",
+  "links": [
+   {
+    "title": "Proof it runs RealPage",
+    "url": "https://dorianandencore.loftliving.com/login"
+   }
+  ]
+ },
+ {
+  "kind": "building",
+  "name": "Custer Park Apartments",
+  "city": "Plano",
+  "state": "TX",
+  "lat": 33.043074039373,
+  "lon": -96.733233072866,
+  "units": 232,
+  "area": "plano-richardson",
+  "address": "3400 Custer Rd",
+  "links": [
+   {
+    "title": "Proof it runs RealPage",
+    "url": "https://17756ollv3.onlineleasing.realpage.com/"
+   }
+  ]
+ },
+ {
+  "kind": "building",
+  "name": "Woodlands Of Plano Apartments Tc",
+  "city": "Plano",
+  "state": "TX",
+  "lat": 33.017501785322,
+  "lon": -96.677881664324,
+  "units": 232,
+  "area": "plano-richardson",
+  "address": "1300 Rigsbee Dr",
+  "links": [
+   {
+    "title": "Proof it runs RealPage",
     "url": "https://9313892.onlineleasing.realpage.com/"
    }
   ]
  },
  {
-  "city": "Richardson",
+  "kind": "building",
+  "name": "Greenbriar Apartments",
+  "city": "Plano",
   "state": "TX",
-  "lat": 32.9483,
-  "lon": -96.7299,
-  "signs": 8,
-  "kind": "reach",
-  "source": "our-data",
-  "note": "8 apartment buildings we proved run RealPage",
+  "lat": 33.058404834476,
+  "lon": -96.729589733201,
+  "units": 182,
+  "area": "plano-richardson",
+  "address": "1901 W Spring Creek Pkwy",
   "links": [
    {
-    "title": "Anthem Cityline",
-    "url": "https://anthematcityline.activebuilding.com/login"
-   },
+    "title": "Proof it runs RealPage",
+    "url": "https://1737725.onlineleasing.realpage.com/"
+   }
+  ]
+ },
+ {
+  "kind": "building",
+  "name": "Mariposa At Communications Parkway Senior - Tc",
+  "city": "Plano",
+  "state": "TX",
+  "lat": 33.068341881671,
+  "lon": -96.831052014343,
+  "units": 180,
+  "area": "plano-richardson",
+  "address": "6820 Communications Pkwy",
+  "links": [
    {
-    "title": "Creekside Townhomes",
-    "url": "https://lifeatcreekside.activebuilding.com/"
-   },
+    "title": "Proof it runs RealPage",
+    "url": "https://mariposacommunicationsparkway.loftliving.com/login"
+   }
+  ]
+ },
+ {
+  "kind": "building",
+  "name": "Alta Vista Apartments",
+  "city": "Plano",
+  "state": "TX",
+  "lat": 33.023951917063,
+  "lon": -96.706179496434,
+  "units": 133,
+  "area": "plano-richardson",
+  "address": "700 18Th St",
+  "links": [
    {
-    "title": "Estates Of Richardson",
+    "title": "Proof it runs RealPage",
+    "url": "https://altavistaapartments.activebuilding.com/"
+   }
+  ]
+ },
+ {
+  "kind": "building",
+  "name": "Gala At Premier Senior Tc",
+  "city": "Plano",
+  "state": "TX",
+  "lat": 33.031484244808,
+  "lon": -96.709725844554,
+  "units": 97,
+  "area": "plano-richardson",
+  "address": "2425 Premier Dr",
+  "links": [
+   {
+    "title": "Proof it runs RealPage",
+    "url": "https://9110723aff.onlineleasing.realpage.com/#k=54874"
+   }
+  ]
+ },
+ {
+  "kind": "building",
+  "name": "Villas Apartments",
+  "city": "Plano",
+  "state": "TX",
+  "lat": 33.021442241434,
+  "lon": -96.70740773734,
+  "units": 96,
+  "area": "plano-richardson",
+  "address": "659 E 16Th St",
+  "links": [
+   {
+    "title": "Proof it runs RealPage",
+    "url": "https://villasdelsol.loftliving.com/portal/"
+   }
+  ]
+ },
+ {
+  "kind": "building",
+  "name": "Tuscany Villas At Chase Oaks Senior Chodo",
+  "city": "Plano",
+  "state": "TX",
+  "lat": 33.071317136497,
+  "lon": -96.695870752292,
+  "units": 90,
+  "area": "plano-richardson",
+  "address": "7112 Chase Oaks Blvd",
+  "links": [
+   {
+    "title": "Proof it runs RealPage",
+    "url": "https://property.onesite.realpage.com/welcomehome/?siteId=2444141"
+   }
+  ]
+ },
+ {
+  "kind": "building",
+  "name": "Ridgeview Park Townhomes",
+  "city": "Plano",
+  "state": "TX",
+  "lat": 33.107677200108,
+  "lon": -96.762377633915,
+  "units": 48,
+  "area": "plano-richardson",
+  "address": "3520 Maxwell Dr",
+  "links": [
+   {
+    "title": "Proof it runs RealPage",
+    "url": "https://property.onesite.realpage.com/welcomehome?siteId=4395751"
+   }
+  ]
+ },
+ {
+  "kind": "building",
+  "name": "Magnolia On 16Th",
+  "city": "Plano",
+  "state": "TX",
+  "lat": 33.021270426707,
+  "lon": -96.697419816643,
+  "units": 20,
+  "area": "plano-richardson",
+  "address": "1201 E 16Th St",
+  "links": [
+   {
+    "title": "Proof it runs RealPage",
+    "url": "https://login.activebuilding.com/auth/login"
+   }
+  ]
+ },
+ {
+  "kind": "building",
+  "name": "Texas Star Apartments",
+  "city": "Plano",
+  "state": "TX",
+  "lat": 33.01963153003,
+  "lon": -96.693371762881,
+  "units": 20,
+  "area": "plano-richardson",
+  "address": "1504 E 15Th St",
+  "links": [
+   {
+    "title": "Proof it runs RealPage",
+    "url": "https://www.realpage.com/"
+   }
+  ]
+ },
+ {
+  "kind": "building",
+  "name": "Estates Of Richardson",
+  "city": "Richardson",
+  "state": "TX",
+  "lat": 33.002162922654,
+  "lon": -96.740204283447,
+  "units": 360,
+  "area": "plano-richardson",
+  "address": "905 W President George Bush Hwy",
+  "links": [
+   {
+    "title": "Proof it runs RealPage",
     "url": "https://property.onesite.realpage.com/welcomehome?siteId=3835684#url=%23login"
-   },
+   }
+  ]
+ },
+ {
+  "kind": "building",
+  "name": "Standard At Cityline Apartments Ph 1",
+  "city": "Richardson",
+  "state": "TX",
+  "lat": 32.997373040903,
+  "lon": -96.704625740726,
+  "units": 276,
+  "area": "plano-richardson",
+  "address": "1125 E Renner Rd",
+  "links": [
    {
-    "title": "Lyla Apartments",
+    "title": "Proof it runs RealPage",
+    "url": "https://4339250.onlineleasing.realpage.com/"
+   }
+  ]
+ },
+ {
+  "kind": "building",
+  "name": "Lyla Apartments",
+  "city": "Richardson",
+  "state": "TX",
+  "lat": 32.99981523923,
+  "lon": -96.697605509232,
+  "units": 237,
+  "area": "plano-richardson",
+  "address": "3521 Wilshire Way",
+  "links": [
+   {
+    "title": "Proof it runs RealPage",
     "url": "https://8309130.onlineleasing.realpage.com/"
-   },
+   }
+  ]
+ },
+ {
+  "kind": "building",
+  "name": "Anthem Cityline",
+  "city": "Richardson",
+  "state": "TX",
+  "lat": 33.001202714802,
+  "lon": -96.70028135143,
+  "units": 233,
+  "area": "plano-richardson",
+  "address": "1250 State St",
+  "links": [
    {
-    "title": "Royal Arms Apartments",
-    "url": "https://smgroyalarms.loftliving.com/login"
-   },
+    "title": "Proof it runs RealPage",
+    "url": "https://anthematcityline.activebuilding.com/login"
+   }
+  ]
+ },
+ {
+  "kind": "building",
+  "name": "Creekside Townhomes",
+  "city": "Richardson",
+  "state": "TX",
+  "lat": 33.002025189744,
+  "lon": -96.730255155783,
+  "units": 162,
+  "area": "plano-richardson",
+  "address": "3650 Custer Pkwy",
+  "links": [
    {
-    "title": "Standard At Cityline  Apartments Ph 2",
-    "url": "https://4339250.onlineleasing.realpage.com/"
-   },
+    "title": "Proof it runs RealPage",
+    "url": "https://lifeatcreekside.activebuilding.com/"
+   }
+  ]
+ },
+ {
+  "kind": "building",
+  "name": "Villages At Clear Springs Apartments",
+  "city": "Richardson",
+  "state": "TX",
+  "lat": 32.986180369741,
+  "lon": -96.669266618101,
+  "units": 160,
+  "area": "plano-richardson",
+  "address": "2600 Clear Springs Dr",
+  "links": [
    {
-    "title": "Standard At Cityline Apartments Ph 1",
-    "url": "https://4339250.onlineleasing.realpage.com/"
-   },
-   {
-    "title": "Villages At Clear Springs Apartments",
+    "title": "Proof it runs RealPage",
     "url": "https://1368520v3.onlineleasing.realpage.com/#k=61706"
    }
   ]
  },
  {
-  "city": "Dallas",
+  "kind": "building",
+  "name": "Royal Arms Apartments",
+  "city": "Richardson",
   "state": "TX",
-  "lat": 32.7767,
-  "lon": -96.797,
-  "signs": 6,
-  "kind": "reach",
-  "source": "web-search",
-  "note": "6 public pages tie RealPage to Dallas",
+  "lat": 32.995705290482,
+  "lon": -96.729030346637,
+  "units": 129,
+  "area": "plano-richardson",
+  "address": "2811 Custer Pkwy",
   "links": [
    {
-    "title": "About Us | Property Management Software Leader",
-    "url": "https://www.realpage.com/company/"
-   },
-   {
-    "title": "RealPage Travel Information and Directions",
-    "url": "https://www.realpage.com/user-group/travel/"
-   },
-   {
-    "title": "RealPage Offices - Dallas | Office ...",
-    "url": "https://officesnapshots.com/2017/11/16/realpage-offices-dallas/"
-   },
-   {
-    "title": "Case Study: RealPage Navigates a New Headquarters",
-    "url": "https://hga.com/realpage-eyes-on-the-prize/"
-   },
-   {
-    "title": "RealPage Inc - Apartment Association of Greater Dallas",
-    "url": "https://www.aagdallas.com/supplier-guide/realpage-inc"
-   },
-   {
-    "title": "Is a Texas software company allowing landlords to work ...",
-    "url": "https://abc13.com/post/realpage-yieldstar-rent-setting-software-landlords/12460024/"
+    "title": "Proof it runs RealPage",
+    "url": "https://smgroyalarms.loftliving.com/login"
    }
   ]
  },
  {
-  "city": "Seattle",
-  "state": "WA",
-  "lat": 47.6062,
-  "lon": -122.3321,
-  "signs": 3,
-  "kind": "reach",
-  "source": "web-search",
-  "note": "3 public pages tie RealPage to Seattle",
-  "links": [
-   {
-    "title": "RealPage office in Seattle, WA",
-    "url": "https://www.realpage.com/company/office-locations/"
-   },
-   {
-    "title": "Real estate tech company faces scrutiny over alleged ...",
-    "url": "https://arkansasadvocate.com/2022/11/15/real-estate-tech-company-faces-scrutiny-over-alleged-collusion-with-landlords-on-rent/"
-   },
-   {
-    "title": "Washington AG says RealPage and landlords conspired to ...",
-    "url": "https://www.atg.wa.gov/news/news-releases/washington-ag-says-realpage-and-landlords-conspired-harm-tenants-violate"
-   }
-  ]
- },
- {
-  "city": "New York",
-  "state": "NY",
-  "lat": 40.7128,
-  "lon": -74.006,
-  "signs": 3,
-  "kind": "reach",
-  "source": "web-search",
-  "note": "3 public pages tie RealPage to New York",
-  "links": [
-   {
-    "title": "New York AG wants RealPage lawsuit tossed",
-    "url": "https://www.multifamilydive.com/news/new-york-ag-realpage-lawsuit-response/809489/"
-   },
-   {
-    "title": "RealPage Sues to Stop New York Law Banning ...",
-    "url": "https://www.realpage.com/news/realpage-sues-to-stop-unconstitutional-new-york-law-banning-lawful-speech/"
-   },
-   {
-    "title": "Press Releases - RealPage",
-    "url": "https://www.realpagepublicpolicy.com/news-1"
-   }
-  ]
- },
- {
-  "city": "Austin",
+  "kind": "building",
+  "name": "Standard At Cityline  Apartments Ph 2",
+  "city": "Richardson",
   "state": "TX",
-  "lat": 30.2672,
-  "lon": -97.7431,
-  "signs": 2,
-  "kind": "reach",
-  "source": "web-search",
-  "note": "2 public pages tie RealPage to Austin",
+  "lat": 32.997381513256,
+  "lon": -96.701249723771,
+  "units": 127,
+  "area": "plano-richardson",
+  "address": "1225 E Renner Rd",
   "links": [
    {
-    "title": "Will RealPage legal fallout have impact on Austin rent ...",
-    "url": "https://www.statesman.com/business/real-estate/article/realpage-doj-rent-housing-affordability-ai-austin-21141324.php"
-   },
-   {
-    "title": "RealPage, big player in Austin, settles rent-collusion case",
-    "url": "https://www.statesman.com/business/real-estate/article/realpage-rent-collusion-settlement-austin-texas-21207846.php"
-   }
-  ]
- },
- {
-  "city": "San Antonio",
-  "state": "TX",
-  "lat": 29.4241,
-  "lon": -98.4936,
-  "signs": 2,
-  "kind": "reach",
-  "source": "web-search",
-  "note": "2 public pages tie RealPage to San Antonio",
-  "links": [
-   {
-    "title": "San Antonio renters may be eligible for settlement check as ...",
-    "url": "https://www.ksat.com/news/local/2026/08/26/san-antonio-renters-may-be-eligible-for-a-settlement-check-as-a-result-of-a-class-action-settlement-suit/"
-   },
-   {
-    "title": "DOJ RealPage rent-fixing case adds San Antonio landlords",
-    "url": "https://www.expressnews.com/business/real-estate/article/realpage-san-antonio-landlords-doj-lawsuit-20023049.php"
-   }
-  ]
- },
- {
-  "city": "Washington",
-  "state": "DC",
-  "lat": 38.9072,
-  "lon": -77.0369,
-  "signs": 2,
-  "kind": "reach",
-  "source": "web-search",
-  "note": "2 public pages tie RealPage to Washington",
-  "links": [
-   {
-    "title": "Landlords are accused of colluding to raise rents. See where.",
-    "url": "https://www.washingtonpost.com/business/interactive/2025/realpage-lawsuit-rent-map/"
-   },
-   {
-    "title": "RealPage, landlords sued for alleged illegal rent hikes in DC",
-    "url": "https://www.cnbc.com/2023/11/01/realpage-landlords-sued-alleged-illegal-rent-hikes.html"
-   }
-  ]
- },
- {
-  "city": "Miami",
-  "state": "FL",
-  "lat": 25.7617,
-  "lon": -80.1918,
-  "signs": 2,
-  "kind": "reach",
-  "source": "web-search",
-  "note": "2 public pages tie RealPage to Miami",
-  "links": [
-   {
-    "title": "Florida's attorney general is latest to investigate RealPage",
-    "url": "https://www.miamiherald.com/news/politics-government/state-politics/article290528684.html"
-   },
-   {
-    "title": "Realpage",
-    "url": "https://www.bisnow.com/tags/realpage"
-   }
-  ]
- },
- {
-  "city": "San Francisco",
-  "state": "CA",
-  "lat": 37.7749,
-  "lon": -122.4194,
-  "signs": 2,
-  "kind": "reach",
-  "source": "web-search",
-  "note": "2 public pages tie RealPage to San Francisco",
-  "links": [
-   {
-    "title": "RealPage Offers its Revenue Management Software ...",
-    "url": "https://www.realpage.com/news/realpage-updates-revenue-management-nonpublic-data-use/"
-   },
-   {
-    "title": "San Francisco passes ban on revenue management ...",
-    "url": "https://www.multifamilydive.com/news/san-francisco-passes-ban-on-revenue-management-software-yardi-realpage/724124/"
-   }
-  ]
- },
- {
-  "city": "San Diego",
-  "state": "CA",
-  "lat": 32.7157,
-  "lon": -117.1611,
-  "signs": 2,
-  "kind": "reach",
-  "source": "web-search",
-  "note": "2 public pages tie RealPage to San Diego",
-  "links": [
-   {
-    "title": "UDR named in rent-pricing class-action lawsuit in San Diego",
-    "url": "https://www.multifamilydive.com/news/udr-rent-pricing-class-action-lawsuit-san-diego/827109/"
-   },
-   {
-    "title": "Another California city bans 'price-fixing' software from ...",
-    "url": "https://www.mercurynews.com/2025/04/16/san-diego-bans-price-fixing-software-from-realpage-to-set-rents/"
-   }
-  ]
- },
- {
-  "city": "Houston",
-  "state": "TX",
-  "lat": 29.7604,
-  "lon": -95.3698,
-  "signs": 1,
-  "kind": "reach",
-  "source": "web-search",
-  "note": "1 public pages tie RealPage to Houston",
-  "links": [
-   {
-    "title": "RealPage settlement: What renters should know about ...",
-    "url": "https://www.houstonchronicle.com/business/real-estate/article/realpage-settlement-houston-landlords-22385503.php"
-   }
-  ]
- },
- {
-  "city": "Atlanta",
-  "state": "GA",
-  "lat": 33.749,
-  "lon": -84.388,
-  "signs": 1,
-  "kind": "reach",
-  "source": "web-search",
-  "note": "1 public pages tie RealPage to Atlanta",
-  "links": [
-   {
-    "title": "Atlanta Multifamily Rental Market Impacted by DOJ Antitrust ...",
-    "url": "https://www.thompsonhine.com/insights/atlanta-multifamily-rental-market-impacted-by-doj-antitrust-price-fixing-lawsuit-against-realpage/"
-   }
-  ]
- },
- {
-  "city": "Nashville",
-  "state": "TN",
-  "lat": 36.1627,
-  "lon": -86.7816,
-  "signs": 1,
-  "kind": "reach",
-  "source": "web-search",
-  "note": "1 public pages tie RealPage to Nashville",
-  "links": [
-   {
-    "title": "Nashville apartment complexes use rent-setting software ...",
-    "url": "https://www.wsmv.com/2024/08/23/nashville-apartment-complexes-use-rent-setting-software-company/"
-   }
-  ]
- },
- {
-  "city": "Los Angeles",
-  "state": "CA",
-  "lat": 34.0522,
-  "lon": -118.2437,
-  "signs": 1,
-  "kind": "reach",
-  "source": "web-search",
-  "note": "1 public pages tie RealPage to Los Angeles",
-  "links": [
-   {
-    "title": "RealPage office in Irvine, CA",
-    "url": "https://www.realpage.com/company/office-locations/"
-   }
-  ]
- },
- {
-  "city": "Chicago",
-  "state": "IL",
-  "lat": 41.8781,
-  "lon": -87.6298,
-  "signs": 1,
-  "kind": "reach",
-  "source": "web-search",
-  "note": "1 public pages tie RealPage to Chicago",
-  "links": [
-   {
-    "title": "RealPage office in Lombard, IL",
-    "url": "https://www.realpage.com/company/office-locations/"
-   }
-  ]
- },
- {
-  "city": "Boston",
-  "state": "MA",
-  "lat": 42.3601,
-  "lon": -71.0589,
-  "signs": 1,
-  "kind": "reach",
-  "source": "web-search",
-  "note": "1 public pages tie RealPage to Boston",
-  "links": [
-   {
-    "title": "RealPage office in Boston, MA",
-    "url": "https://www.realpage.com/company/office-locations/"
-   }
-  ]
- },
- {
-  "city": "Reno",
-  "state": "NV",
-  "lat": 39.5296,
-  "lon": -119.8138,
-  "signs": 1,
-  "kind": "reach",
-  "source": "web-search",
-  "note": "1 public pages tie RealPage to Reno",
-  "links": [
-   {
-    "title": "RealPage office in Reno, NV",
-    "url": "https://www.realpage.com/company/office-locations/"
-   }
-  ]
- },
- {
-  "city": "Waco",
-  "state": "TX",
-  "lat": 31.5493,
-  "lon": -97.1467,
-  "signs": 1,
-  "kind": "reach",
-  "source": "web-search",
-  "note": "1 public pages tie RealPage to Waco",
-  "links": [
-   {
-    "title": "RealPage office in Woodway, TX",
-    "url": "https://www.realpage.com/company/office-locations/"
+    "title": "Proof it runs RealPage",
+    "url": "https://4339250.onlineleasing.realpage.com/"
    }
   ]
  },

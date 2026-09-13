@@ -23,26 +23,35 @@
 
   // Same projection us-atlas used for the *-albers-10m files.
   const project = d3.geoAlbersUsa().scale(1300).translate([487.5, 305]);
-  const maxSigns = Math.max(1, ...reach.map((d) => d.signs || 0));
+  // Building dots stack up at country scale, so draw one dot per area (at the middle of its
+  // buildings, sized by count); the card lists every proven RealPage building there.
+  const areas = {};
+  for (const b of reach.filter((d) => d.kind === "building")) {
+    const a = (areas[b.area] ||= { kind: "area", area: b.area, buildings: [], lat: 0, lon: 0, n: 0 });
+    a.buildings.push(b);
+    if (b.lat != null) { a.lat += b.lat; a.lon += b.lon; a.n += 1; }
+  }
+  const points = Object.values(areas).filter((a) => a.n).map((a) => ({ ...a, lat: a.lat / a.n, lon: a.lon / a.n }));
+  points.push(...reach.filter((d) => d.kind === "scout"));
+  const maxCount = Math.max(1, ...points.map((d) => (d.buildings || []).length));
   const dots = el("g", {});
-  // Big dots first so small ones stay clickable on top.
-  const sorted = [...reach].sort((a, b) => (b.signs || 0) - (a.signs || 0));
-  for (const d of sorted) {
+  for (const d of points) {
     const xy = project([d.lon, d.lat]);
     if (!xy) continue;
     const [x, y] = xy;
-    const g = el("g", { "data-dot": "", tabindex: "0", role: "button", "aria-label": `${d.city}, ${d.state}` });
+    const label = d.kind === "scout" ? `${d.city}, ${d.state}` : areaName(d);
+    const g = el("g", { "data-dot": "", tabindex: "0", role: "button", "aria-label": label });
     if (d.kind === "scout") {
       g.appendChild(el("rect", { class: "dot-scout", x: x - 6, y: y - 6, width: 12, height: 12, transform: `rotate(45 ${x} ${y})` }));
       const t = el("text", { class: "dot-label", x: x + 10, y: y + 3 });
       t.textContent = "researching";
       g.appendChild(t);
     } else {
-      const r = 4 + 14 * Math.sqrt((d.signs || 0) / maxSigns);
+      const r = 5 + 13 * Math.sqrt(d.buildings.length / maxCount);
       g.appendChild(el("circle", { class: "dot-reach", cx: x, cy: y, r }));
     }
     const title = el("title", {});
-    title.textContent = `${d.city}, ${d.state}`;
+    title.textContent = label;
     g.appendChild(title);
     const open = () => showCard(d, g);
     g.addEventListener("click", open);
@@ -51,19 +60,26 @@
   }
   svg.appendChild(dots);
 
+  function areaName(a) {
+    const cities = [...new Set(a.buildings.map((b) => b.city))];
+    return `${cities.join(" & ")}, ${a.buildings[0].state}`;
+  }
+
   function showCard(d, g) {
     svg.querySelectorAll("[data-dot].active").forEach((n) => n.classList.remove("active"));
     g.classList.add("active");
-    const count = d.kind === "scout"
-      ? "Researching this area"
-      : `${d.signs} RealPage sign${d.signs === 1 ? "" : "s"}`;
-    card.innerHTML = `
-      <button class="close" aria-label="Close">&times;</button>
-      <h3>${esc(d.city)}, ${esc(d.state)}</h3>
-      <div class="count">${count}</div>
-      ${d.note ? `<div class="meta">${esc(d.note)}</div>` : ""}
-      <ul>${(d.links || []).map((l) => `<li><a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.title)}</a></li>`).join("")}</ul>
-    `;
+    let body;
+    if (d.kind === "scout") {
+      body = `<h3>${esc(d.city)}, ${esc(d.state)}</h3><div class="count">The scout is researching this area</div>
+        <ul>${(d.links || []).map((l) => `<li><a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.title)}</a></li>`).join("")}</ul>`;
+    } else {
+      const list = [...d.buildings].sort((a, b) => b.units - a.units);
+      body = `<h3>${esc(areaName(d))}</h3>
+        <div class="count">${list.length} apartment building${list.length === 1 ? "" : "s"} proven to run RealPage</div>
+        <ul>${list.map((b) => `<li><strong>${esc(b.name)}</strong> · ${esc(b.city)} · ${b.units} units ·
+          <a href="${esc(b.links[0].url)}" target="_blank" rel="noopener">proof</a></li>`).join("")}</ul>`;
+    }
+    card.innerHTML = `<button class="close" aria-label="Close">&times;</button>${body}`;
     card.hidden = false;
     card.querySelector(".close").addEventListener("click", () => { card.hidden = true; g.classList.remove("active"); });
   }
