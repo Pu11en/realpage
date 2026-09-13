@@ -33,7 +33,7 @@ Open: http://localhost:8765/map.html (scout markers) · cards in `propertystack/
   inputs, outputs, cap, tools) and `run.py` stub; `metros.csv` (~25 rows: slug, name, state,
   CBSA code, lat, lon; no DFW). Tests with **saved fixtures only** (no network): scoring math,
   cap stops the run cleanly, cards render. Tests fail first, commit.
-- [ ] **S2 Census data (free).** Per metro: new multifamily (5+ units) permitted last 12 months
+- [x] **S2 Census data (free).** Per metro: new multifamily (5+ units) permitted last 12 months
   from the Census BPS metro files, renter households from ACS (api.census.gov, no key needed at
   this volume). Cache raw downloads under `propertystack/data/raw/census/`. Tests pass.
 - [ ] **S3 RealPage share sample (💲 search).** Per metro: search for apartment community sites
