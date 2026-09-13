@@ -1,0 +1,26 @@
+{
+  "skill": "scout-areas",
+  "area": "tucson-az",
+  "started": "2026-09-13T14:52:49",
+  "inputs": [
+    "/home/drewp/.local/state/ccdb/gowork/realpage-plan-scout-20260913-143725/propertystack/data/scout/2026-09-13/tucson-az/evidence.json",
+    "/home/drewp/.local/state/ccdb/gowork/realpage-plan-scout-20260913-143725/propertystack/data/scout/2026-09-13/tucson-az/sample.csv"
+  ],
+  "outputs": [
+    "/home/drewp/.local/state/ccdb/gowork/realpage-plan-scout-20260913-143725/propertystack/data/scout/2026-09-13/areas.json",
+    "/home/drewp/.local/state/ccdb/gowork/realpage-plan-scout-20260913-143725/propertystack/data/scout/2026-09-13/cards.md",
+    "/home/drewp/.local/state/ccdb/gowork/realpage-plan-scout-20260913-143725/site/data/reach.json"
+  ],
+  "counts": {
+    "metros": 1,
+    "unfinished": 0
+  },
+  "api_calls": {
+    "jina_search": 0
+  },
+  "errors": [],
+  "notes": [],
+  "finished": "2026-09-13T14:52:50",
+  "duration_s": 0.6,
+  "status": "ok"
+}

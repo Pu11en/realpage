@@ -1,0 +1,49 @@
+{
+ "date": "2026-09-13",
+ "searches": 0,
+ "stopped_by_cap": false,
+ "unfinished": [],
+ "areas": [
+  {
+   "slug": "tucson-az",
+   "name": "Tucson",
+   "state": "AZ",
+   "cbsa": "46060",
+   "lat": "32.2226",
+   "lon": "-110.9747",
+   "growth": 65,
+   "churn": 15,
+   "pain": 34,
+   "total": 38,
+   "inputs": {
+    "permits_5plus_12mo": 1106,
+    "renter_households": 152892,
+    "census_window": {
+     "permits": "2025-08..2026-07",
+     "acs_year": 2024
+    },
+    "sample": {
+     "total": 25,
+     "Entrata": 2,
+     "unknown": 10,
+     "Yardi": 12,
+     "AppFolio": 1
+    },
+    "churn_items": 3,
+    "complaints": 0
+   },
+   "evidence": [
+    "https://www2.census.gov/econ/bps/CBSA%20(beginning%20Jan%202024)/",
+    "https://www2.census.gov/programs-surveys/acs/summary_file/2024/table-based-SF/data/1YRData/acsdt1y2024-b25003.dat",
+    "https://liveari.residentportal.com/auth",
+    "https://moderneatrockingk.securecafe.com/onlineleasing/in-progress-moderne-at-rocking-k/guestlogin.aspx",
+    "https://lifeattheriverwalk.securecafenet.com/residentservices/riverwalk-luxury-apartments-0/userlogin",
+    "https://myfinisterraapartments.securecafe.com/residentservices/finisterra-luxury-rentals/userlogin.aspx?PropLeadSource_45642=portal&_yTrackReqDT=20441920261309&_yTrackUser=NDQ4MDM0NDE1OCMxMDc3NjQ3NDg%253d-u3MifjV72yY%253d&_yTrackVisit=NzIyMzQ4ODI0OSMxMjA1NTQ0NzQ5-8mLHIUL%252fXEA%253d",
+    "https://tucsonlanding.securecafe.com/residentservices/tucson-landing-apartments-llc/userlogin.aspx?PropLeadSource_1982272=portal",
+    "https://www.costar.com/article/874468469/bascom-group-acquires-289-unit-apartment-complex-in-tucson-arizona",
+    "https://www.institutionalpropertyadvisors.com/news-events/2026/03/institutional-property-advisors-closes-tucson-multifamily-asset-sale",
+    "https://www.multihousingnews.com/bascom-arizona-ventures-buys-tucson-community-for-53m/"
+   ]
+  }
+ ]
+}

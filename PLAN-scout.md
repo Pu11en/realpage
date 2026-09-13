@@ -29,20 +29,20 @@ Open: http://localhost:8765/map.html (scout markers) · cards in `propertystack/
 
 ## Tasks
 
-- [ ] **S1 Skeleton + tests.** `propertystack/skills/scout-areas/` with `SKILL.md` (contract:
+- [x] **S1 Skeleton + tests.** `propertystack/skills/scout-areas/` with `SKILL.md` (contract:
   inputs, outputs, cap, tools) and `run.py` stub; `metros.csv` (~25 rows: slug, name, state,
   CBSA code, lat, lon; no DFW). Tests with **saved fixtures only** (no network): scoring math,
   cap stops the run cleanly, cards render. Tests fail first, commit.
-- [ ] **S2 Census data (free).** Per metro: new multifamily (5+ units) permitted last 12 months
+- [x] **S2 Census data (free).** Per metro: new multifamily (5+ units) permitted last 12 months
   from the Census BPS metro files, renter households from ACS (api.census.gov, no key needed at
   this volume). Cache raw downloads under `propertystack/data/raw/census/`. Tests pass.
-- [ ] **S3 RealPage share sample (💲 search).** Per metro: search for apartment community sites
+- [x] **S3 RealPage share sample (💲 search).** Per metro: search for apartment community sites
   (~25 per metro, skip big listing portals), fetch with crawl4ai, classify vendor with the
   `pms_detect.py` rules. Output `sample.csv` per metro with proof URLs. Counts searches; obeys cap.
-- [ ] **S4 Churn + pain (💲 search).** News search for apartment sales / new management in the
+- [x] **S4 Churn + pain (💲 search).** News search for apartment sales / new management in the
   metro (last 24 months), keep items with URL + date; Reddit tool + search for portal/payment
   complaints naming Yardi/Entrata/RealPage and the city. Save evidence JSON per metro.
-- [ ] **S5 Score + cards + map markers.** `run.py` combines the three part-scores + total into
+- [x] **S5 Score + cards + map markers.** `run.py` combines the three part-scores + total into
   `propertystack/data/scout/<date>/areas.json` (numbers + evidence links only, no prose). Then
   **this local session (Claude) reads areas.json + the evidence files and writes `cards.md`**
   (top 5 first: city, scores, a 3-line "why this city" argument citing the evidence links). No

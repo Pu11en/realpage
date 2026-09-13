@@ -498,5 +498,37 @@
     "url": "https://www.realpage.com/company/office-locations/"
    }
   ]
+ },
+ {
+  "city": "Tucson",
+  "state": "AZ",
+  "lat": 32.2226,
+  "lon": -110.9747,
+  "signs": 0,
+  "kind": "scout",
+  "source": "scout",
+  "note": "Scout score: total 38 (growth 65, churn 15, pain 34)",
+  "links": [
+   {
+    "title": "liveari.residentportal.com",
+    "url": "https://liveari.residentportal.com/auth"
+   },
+   {
+    "title": "moderneatrockingk.securecafe.com",
+    "url": "https://moderneatrockingk.securecafe.com/onlineleasing/in-progress-moderne-at-rocking-k/guestlogin.aspx"
+   },
+   {
+    "title": "lifeattheriverwalk.securecafenet.com",
+    "url": "https://lifeattheriverwalk.securecafenet.com/residentservices/riverwalk-luxury-apartments-0/userlogin"
+   },
+   {
+    "title": "myfinisterraapartments.securecafe.com",
+    "url": "https://myfinisterraapartments.securecafe.com/residentservices/finisterra-luxury-rentals/userlogin.aspx?PropLeadSource_45642=portal&_yTrackReqDT=20441920261309&_yTrackUser=NDQ4MDM0NDE1OCMxMDc3NjQ3NDg%253d-u3MifjV72yY%253d&_yTrackVisit=NzIyMzQ4ODI0OSMxMjA1NTQ0NzQ5-8mLHIUL%252fXEA%253d"
+   },
+   {
+    "title": "tucsonlanding.securecafe.com",
+    "url": "https://tucsonlanding.securecafe.com/residentservices/tucson-landing-apartments-llc/userlogin.aspx?PropLeadSource_1982272=portal"
+   }
+  ]
  }
 ]
