@@ -44,7 +44,9 @@ Open: `propertystack/data/plano-richardson/briefs/` (local) · http://localhost:
   Legacy Arapaho (upcoming, 443 units), Creekside At Legacy (runs RealPage, just sold: the "at
   risk" case). All three pass `validate.py`. **Stop and show Drew the three briefs in plain words;
   apply his changes to SKILL.md before D4.**
-- [ ] **D4 Give it to the site agent.** Runs **after** PLAN-chat-readable and PLAN-team-memory
+- [ ] **D4 Give it to the site agent.** **Blocked** until Drew has OK'd the D3 briefs (noted under
+  this task) **and** every task in PLAN-chat-readable.md and PLAN-team-memory.md is ticked; if
+  not, change nothing and stop with a one-line note. Runs **after** PLAN-chat-readable and PLAN-team-memory
   (all three edit `SOUL.md`). Copy the layout + rules into `chatbot/hermes-profile/SOUL.md` (deep
   dives lead with Bottom line) and the query-propertystack skill; rebuild with `bash
   tooling/dev.sh`; ask the local bot "Deep dive on Vantage At Spring Creek" through
