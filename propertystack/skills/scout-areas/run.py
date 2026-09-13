@@ -1,6 +1,6 @@
 """Scout: score ~25 Sun Belt metros (no DFW) for untapped apartment-software demand.
 
-S1 skeleton (scoring, cap, cards) + S2 Census numbers (census.py, cached, no key).
+S1 skeleton (scoring, cap, cards) + S2 Census numbers (census.py) + S3 vendor sample (sample.py).
 Data gathering (Census S2, vendor sample S3, churn + pain S4) plugs in as `gather()`.
 
 Usage: python3 propertystack/skills/scout-areas/run.py --metros tucson-az,boise-id --limit-searches 120
@@ -83,14 +83,22 @@ def render_cards(areas, top=5):
 
 
 _CENSUS = {}
+_TOOLS = {}
 
 
 def gather(metro, budget):
-    """Census numbers (S2, cached, no searches). Vendor sample (S3), churn + pain (S4) to come."""
+    """Census numbers (S2, no searches) + vendor sample (S3, searches counted). Churn + pain in S4."""
     if not _CENSUS:
         import census
         _CENSUS.update(census.census_numbers(load_metros()))
-    return dict(_CENSUS[metro["slug"]])
+    d = dict(_CENSUS[metro["slug"]])
+    import sample
+    if not _TOOLS:
+        _TOOLS.update(search=sample.jina_search(), reader=sample.Crawl4aiReader())
+    d["sample"], proof, path = sample.sample_metro(metro, budget, _TOOLS["search"], _TOOLS["reader"])
+    d["sample_csv"] = str(path)
+    d["evidence"] = d.get("evidence", []) + proof[:5]
+    return d
 
 
 def main(argv=None):
@@ -110,7 +118,7 @@ def main(argv=None):
     for x in res["areas"]:
         d = x["inputs"]
         print(f"  {x['slug']}: permits5+ {d.get('permits_5plus_12mo')}, renters {d.get('renter_households')}"
-              f" -> growth {x['growth']} churn {x['churn']} pain {x['pain']} total {x['total']}")
+              f", sample {d.get('sample')} -> growth {x['growth']} churn {x['churn']} pain {x['pain']} total {x['total']}")
     print(f"searches used: {res['searches']}" + (" (stopped at cap)" if res["stopped_by_cap"] else ""))
 
 

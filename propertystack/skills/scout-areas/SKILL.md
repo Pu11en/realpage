@@ -29,6 +29,9 @@ Runs on Drew's computer only, never in the chat agent.
 - Jina **only for search**, counted by `SearchBudget`; at the cap the run stops cleanly and
   reports finished vs unfinished metros.
 - `tooling/reddit_search.py` (read-only), `tooling/pms_detect.py` vendor rules.
+- Vendor sample (`sample.py`): up to 8 searches per metro until 25 community sites are found
+  (listing portals, operator brand sites, .gov/.edu/.org skipped), each classified via crawl4ai +
+  `pms_detect.detect`. Key: `JINA_API_KEY` env var or the repo `.env`.
 
 ## Tests
 `python3 -m pytest -q propertystack/skills/scout-areas/` (saved fixtures, no network).
