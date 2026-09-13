@@ -36,7 +36,7 @@ Open: http://localhost:8765/map.html (scout markers) · cards in `propertystack/
 - [x] **S2 Census data (free).** Per metro: new multifamily (5+ units) permitted last 12 months
   from the Census BPS metro files, renter households from ACS (api.census.gov, no key needed at
   this volume). Cache raw downloads under `propertystack/data/raw/census/`. Tests pass.
-- [ ] **S3 RealPage share sample (💲 search).** Per metro: search for apartment community sites
+- [x] **S3 RealPage share sample (💲 search).** Per metro: search for apartment community sites
   (~25 per metro, skip big listing portals), fetch with crawl4ai, classify vendor with the
   `pms_detect.py` rules. Output `sample.csv` per metro with proof URLs. Counts searches; obeys cap.
 - [ ] **S4 Churn + pain (💲 search).** News search for apartment sales / new management in the
