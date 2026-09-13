@@ -66,4 +66,4 @@ class Handler(http.server.SimpleHTTPRequestHandler):
 if __name__ == "__main__":
     port = int(sys.argv[1]) if len(sys.argv) > 1 else 3001
     os.chdir(os.path.dirname(os.path.abspath(__file__)))
-    http.server.HTTPServer(("localhost", port), Handler).serve_forever()
+    http.server.ThreadingHTTPServer(("localhost", port), Handler).serve_forever()

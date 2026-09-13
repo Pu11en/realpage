@@ -101,7 +101,8 @@
           <tr class="${l.propertyId ? "clickable" : ""}" ${l.propertyId ? `data-id="${l.propertyId}"` : ""} style="${l.propertyId ? "cursor:pointer;" : ""}">
             <td>${i + 1}</td>
             <td><span class="score-badge" style="background:${scoreBadgeColor(l.score)}">${l.score}</span></td>
-            <td><strong>${l.property}</strong> ${l.isNew ? '<span class="pill" style="background:#22c55e22;color:#22c55e;">NEW</span>' : ""}</td>
+            <td><strong>${l.property}</strong> ${l.isNew ? '<span class="pill" style="background:#22c55e22;color:#22c55e;">NEW</span>' : ""}
+              <button class="btn deep-dive-btn" data-deep-dive="${l.id}" title="Open the chat with a deep-dive question about this building">✦ Deep dive</button></td>
             <td>${l.city}</td>
             <td>${l.units ?? "?"}</td>
             <td><span class="pill" style="background:#3f3f4622;color:#a1a1aa;">${l.signalType}: ${l.signal}</span></td>
@@ -114,6 +115,18 @@
         document.querySelectorAll("#leads-tbody tr.clickable").forEach((tr) => {
           tr.addEventListener("click", () => {
             location.href = `property.html?id=${encodeURIComponent(tr.dataset.id)}`;
+          });
+        });
+
+        // The button sits inside a clickable row: stop the click reaching it.
+        document.querySelectorAll("#leads-tbody [data-deep-dive]").forEach((btn) => {
+          btn.addEventListener("click", (e) => {
+            e.stopPropagation();
+            const l = data.leads.find((x) => x.id === btn.dataset.deepDive);
+            window.PSChatPanel.deepDive(window.PSChatPanel.deepDivePrompt({
+              name: l.property, city: l.city, units: l.units, software: l.software,
+              upcoming: l.signalType === "Upcoming",
+            }));
           });
         });
       }

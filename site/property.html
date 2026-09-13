@@ -64,7 +64,8 @@
       return `
         <div style="margin-bottom:8px;"><a href="index.html" onclick="if (history.length > 1 && document.referrer.startsWith(location.origin)) { history.back(); return false; }" style="color:var(--text-muted);font-size:13px;">&larr; Back</a></div>
         <h1>${esc(p.community)}</h1>
-        <div class="meta">${bits.join(" &middot; ")}<br/>${who}</div>`;
+        <div class="meta">${bits.join(" &middot; ")}<br/>${who}</div>
+        <button class="btn deep-dive-btn" data-deep-dive="${esc(p.id)}" style="margin-top:8px;">✦ Deep dive in chat</button>`;
     }
 
     function softwareCard(p, colors, isUpcoming) {
@@ -178,6 +179,11 @@
           ${contactCard(p, isUpcoming)}
         </div>
         ${sourcesCard(p, isUpcoming)}`;
+      content.querySelector("[data-deep-dive]").addEventListener("click", () => {
+        window.PSChatPanel.deepDive(window.PSChatPanel.deepDivePrompt({
+          name: p.community, city: p.city, units: p.units, software: p.software, upcoming: isUpcoming,
+        }));
+      });
     });
   </script>
 </body>

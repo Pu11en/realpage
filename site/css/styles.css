@@ -230,3 +230,6 @@ h1 { font-size: 22px; margin: 0 0 4px; }
   font-size: 12px;
   margin-bottom: 16px;
 }
+
+/* "Deep dive in chat" button (Early Leads rows + building page). */
+.deep-dive-btn { padding: 2px 8px; font-size: 12px; margin-left: 6px; white-space: nowrap; }

@@ -42,3 +42,14 @@ to Hermes as `X-Hermes-Session-Id` (prefixed `web-`) and Hermes keeps the whole 
 
 `site/master-table.html` on localhost talks to this local bot (port 18080); add `?bot=live`
 to use the Railway bot instead.
+
+## "Deep dive in chat" button: how the prompt gets into the chat
+
+Checked against the running Open WebUI **0.11.3** (2026-09-13, read from its built JS):
+- `postMessage({type: "input:prompt", text})` from the parent page fills the input **only if
+  the parent is the same origin** (or the admin turns on "iframe sandbox allow same origin").
+  Live, site and chat share one address (`site/Caddyfile`), so this works there.
+- Locally the site (:8765) and chat (:3000) differ, so the message is ignored. There the panel
+  loads `/?q=<text>&submit=false`: Open WebUI fills the input and does **not** send
+  (`submit` defaults to `true`, which would send, so the flag is required).
+- The clipboard fallback was not needed. Code: `deepDive()` in `site/js/chat-panel.js`.

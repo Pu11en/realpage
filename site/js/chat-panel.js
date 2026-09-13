@@ -174,6 +174,34 @@
     if (isOpen()) openPanel();
   }
 
-  window.PSChatPanel = { open: openPanel, close: closePanel, toggle: togglePanel, isOpen };
+  // "Deep dive in chat": open the panel with a prompt typed in, not sent.
+  // Open WebUI 0.11 takes postMessage {type:"input:prompt"} only from its own
+  // origin (true live, where site and chat share an address), so use that
+  // when possible; otherwise (local :8765 -> :3000) load /?q=...&submit=false,
+  // which fills the input without sending. See chatbot/README.md.
+  function deepDive(text) {
+    const panel = buildPanel();
+    const frame = panel.querySelector("#chat-panel-frame");
+    const base = CHAT_APP_URL.replace(/\/$/, "");
+    const sameOrigin = new URL(base, location.href).origin === location.origin;
+    const loaded = !!frame.getAttribute("src");
+    openPanel();
+    if (sameOrigin && loaded && frame.contentWindow) {
+      frame.contentWindow.postMessage({ type: "input:prompt", text }, location.origin);
+    } else {
+      frame.setAttribute("src", `${base}/?q=${encodeURIComponent(text)}&submit=false`);
+    }
+  }
+
+  function deepDivePrompt(p) {
+    const units = p.units != null ? `${p.units} units` : "units not stated";
+    if (p.upcoming) {
+      return `Deep dive on ${p.name}, ${p.city} (${units}, planned, software not chosen yet): who is developing it, when does it open, and get me ready to call.`;
+    }
+    const sw = p.software && p.software !== "unknown" ? p.software : "software unknown";
+    return `Deep dive on ${p.name}, ${p.city} (${units}, ${sw}): why would they switch now, and get me ready to call.`;
+  }
+
+  window.PSChatPanel = { open: openPanel, close: closePanel, toggle: togglePanel, isOpen, deepDive, deepDivePrompt };
   window.initChatPanel = initChatPanel;
 })();
