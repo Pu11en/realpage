@@ -36,7 +36,7 @@
       const pct = (n, d) => (d ? (100 * n / d).toFixed(1) : "0.0");
       const top = share[0];
       const second = share[1];
-      const tableLink = (vendor) => `master-table.html?software=${encodeURIComponent(vendor)}`;
+      const tableLink = (vendor) => `index.html?software=${encodeURIComponent(vendor)}`;
 
       function barChart(title, key, total, fmt) {
         const max = Math.max(...share.map((v) => v[key]));
@@ -45,7 +45,7 @@
           <div class="card">
             <div class="chart-title">${title}</div>
             ${rows.map((v) => `
-              <div class="bar-row" data-vendor="${v.vendor}" title="${v.vendor}: ${fmt(v[key])} (${pct(v[key], total)}%) -- click to see these buildings">
+              <div class="bar-row" data-vendor="${v.vendor}" title="${v.vendor}: ${fmt(v[key])} (${pct(v[key], total)}%) -- click to see these leads">
                 <div class="name">${v.vendor}</div>
                 <div class="track"><div class="fill" style="width:${(100 * v[key] / max).toFixed(1)}%;background:${v.color};"></div></div>
                 <div class="val">${fmt(v[key])} &middot; ${pct(v[key], total)}%</div>

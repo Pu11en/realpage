@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>PropertyStack -- Map</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/chat-panel.css" />
+  <style>
+    .map-wrap { position: relative; max-width: 1000px; }
+    #us-map { width: 100%; height: auto; display: block; }
+    #us-map .state { fill: #18181b; stroke: #3f3f46; stroke-width: 0.6; }
+    #us-map [data-dot] { cursor: pointer; }
+    #us-map .dot-reach { fill: var(--accent); fill-opacity: 0.55; stroke: var(--accent); stroke-width: 1.2; }
+    #us-map .dot-scout { fill: #eab308; fill-opacity: 0.35; stroke: #eab308; stroke-width: 1.2; }
+    #us-map .dot-label { fill: var(--text-muted); font-size: 10px; pointer-events: none; }
+    #us-map [data-dot]:hover .dot-reach, #us-map [data-dot].active .dot-reach { fill-opacity: 0.9; }
+    #map-card {
+      position: absolute; top: 12px; right: 12px; width: 280px; max-height: 70%; overflow-y: auto;
+      background: var(--card-bg); border: 1px solid var(--border); border-radius: 8px; padding: 12px 14px;
+      font-size: 13px;
+    }
+    #map-card[hidden] { display: none; }
+    #map-card h3 { margin: 0 0 4px; font-size: 15px; }
+    #map-card .count { color: var(--accent); margin-bottom: 8px; }
+    #map-card ul { margin: 0; padding-left: 16px; }
+    #map-card li { margin: 3px 0; }
+    #map-card a { color: var(--accent); }
+    #map-card .close { position: absolute; top: 6px; right: 8px; background: none; border: 0;
+      color: var(--text-muted); font-size: 16px; cursor: pointer; }
+    .map-legend { display: flex; gap: 16px; color: var(--text-muted); font-size: 12px; margin: 8px 0 16px; }
+    .map-legend span::before { content: ""; display: inline-block; width: 10px; height: 10px;
+      margin-right: 6px; vertical-align: -1px; }
+    .map-legend .l-reach::before { background: var(--accent); border-radius: 50%; }
+    .map-legend .l-scout::before { background: #eab308; transform: rotate(45deg); }
+  </style>
+</head>
+<body>
+  <div class="shell" id="app-shell"></div>
+  <script src="js/app.js"></script>
+  <script src="js/chat-panel.js"></script>
+  <script src="vendor/d3-array.min.js"></script>
+  <script src="vendor/d3-geo.min.js"></script>
+  <script src="vendor/topojson-client.min.js"></script>
+  <script>
+    renderShell("map");
+    document.getElementById("page-content").innerHTML = `
+      <h1>RealPage reach</h1>
+      <div class="meta">Where RealPage is publicly known to be: offices, case studies, customers and buildings we proved. Click a dot for the proof.</div>
+      <div class="map-legend"><span class="l-reach">RealPage signs</span><span class="l-scout">Area we're researching</span></div>
+      <div class="map-wrap">
+        <svg id="us-map" viewBox="0 0 975 610" role="img" aria-label="US map of RealPage reach"></svg>
+        <div id="map-card" hidden></div>
+      </div>
+    `;
+  </script>
+  <script src="js/map.js"></script>
+</body>
+</html>

@@ -27,7 +27,7 @@ Open: http://localhost:8765/map.html
   shows a card with ≥1 link; nav has "Map" and no "Master Table"; `master-table.html` redirects
   to `map.html`; every Early Leads row has a `[data-deep-dive]` button; `property.html?id=<first
   lead>` has one too. Run it once to see it fail, commit.
-- [ ] **P2 Map page.** `site/map.html` + `site/js/map.js`: US states outline from vendored
+- [x] **P2 Map page.** `site/map.html` + `site/js/map.js`: US states outline from vendored
   files under `site/vendor/` (`us-atlas` states-albers-10m.json + `d3-geo`/`topojson-client`,
   no CDN), Albers USA projection. Reads `site/data/reach.json`
   (`[{city, state, lat, lon, signs, kind: "reach"|"scout", links: [{title, url}]}]`). Reach dots:

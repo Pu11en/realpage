@@ -62,7 +62,7 @@
       ].filter(Boolean);
       const who = isUpcoming ? `Developer: ${esc(p.developer || "not listed")}` : `Owner: ${esc(p.owner || "--")}`;
       return `
-        <div style="margin-bottom:8px;"><a href="master-table.html" onclick="if (history.length > 1 && document.referrer.startsWith(location.origin)) { history.back(); return false; }" style="color:var(--text-muted);font-size:13px;">&larr; Back</a></div>
+        <div style="margin-bottom:8px;"><a href="index.html" onclick="if (history.length > 1 && document.referrer.startsWith(location.origin)) { history.back(); return false; }" style="color:var(--text-muted);font-size:13px;">&larr; Back</a></div>
         <h1>${esc(p.community)}</h1>
         <div class="meta">${bits.join(" &middot; ")}<br/>${who}</div>`;
     }
@@ -165,7 +165,7 @@
       if (!p) {
         content.innerHTML = `<h1>Property not found</h1>
           <div class="meta">No building or upcoming project with id "${esc(id)}".
-          <a href="master-table.html" style="color:var(--accent);">Back to Master Table</a></div>`;
+          <a href="index.html" style="color:var(--accent);">Back to Early Leads</a></div>`;
         return;
       }
       document.title = `PropertyStack -- ${p.community}`;

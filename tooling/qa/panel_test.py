@@ -13,7 +13,7 @@ import sys
 
 from playwright.async_api import async_playwright
 
-PAGES = ["index.html", "master-table.html", "software-share.html", "under-the-hood.html", "property.html?id=1"]
+PAGES = ["index.html", "map.html", "software-share.html", "under-the-hood.html", "property.html?id=1"]
 SCREENSHOT_DIR = "/tmp/qa"
 
 
@@ -61,7 +61,7 @@ async def main():
                 page = await context.new_page()
                 await check_console_errors(page, f"{site}/index.html", bugs)
                 await page.locator("[data-chat-toggle]").first.click()
-                await page.goto(f"{site}/master-table.html", wait_until="networkidle")
+                await page.goto(f"{site}/map.html", wait_until="networkidle")
                 still_open = await page.locator("#chat-panel").evaluate("(el) => el.classList.contains('open')")
                 if not still_open:
                     bugs.append("panel did not stay open across a page switch")
