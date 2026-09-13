@@ -63,6 +63,24 @@ def _usable_email(email):
     return email.strip()
 
 
+# Plain names the agent lists under **Sources** (never the file name).
+SOURCE_NAMES = {
+    "apartments": "County property records",
+    "websites": "Building websites",
+    "software": "Software check (with proof link)",
+    "sales": "County sales records",
+    "upcoming": "City permits and news",
+    "master": "County property records + software check",
+    "leads": "PropertyStack lead ranking",
+    "contacts": "Contact info from building websites",
+}
+
+
+def _research_source(rel: str) -> str:
+    topic = re.sub(r"^\d+-", "", rel.split("/")[0]).replace("-", " ")
+    return f"RealPage research notes ({topic})"
+
+
 def _build_db() -> None:
     SCHEMA.clear()
     tmp = DB_PATH.with_suffix(".building")
@@ -78,7 +96,7 @@ def _build_db() -> None:
         if table == "contacts" and "email" in header:  # same junk filter as the site
             i = header.index("email")
             body = [r[:i] + [_usable_email(r[i]) or ""] + r[i + 1:] if len(r) > i else r for r in body]
-        SCHEMA.append({"table": table, "cite_as": f"[{path.name}]", "rows": len(body), "columns": header})
+        SCHEMA.append({"table": table, "source_name": SOURCE_NAMES.get(table, table), "rows": len(body), "columns": header})
         cols = ", ".join(f'"{c}"' for c in header)
         con.execute(f'CREATE TABLE "{table}" ({cols})')
         con.executemany(
@@ -109,7 +127,7 @@ def ps_schema(args: dict, **_) -> str:
     return json.dumps({
         "tables": SCHEMA,
         "notes": [
-            "Query the table name (e.g. FROM software), cite the cite_as file name.",
+            "Query the table name (e.g. FROM software). List source_name once under **Sources** at the end; never show file, table or column names.",
             "All columns are TEXT; CAST(units AS INTEGER) for numbers.",
             "master = apartments + websites + software joined; one row per building (apt_id).",
             "software='unknown' means not identified; the reason is in unknown_reason.",
@@ -157,7 +175,7 @@ def ps_research_search(args: dict, **_) -> str:
     hits.sort(key=lambda h: (-h[0], h[1], h[2]))
     return json.dumps({
         "files": [str(p.relative_to(RESEARCH_DIR)) for p in _research_files()],
-        "hits": [{"cite_as": f"[{rel}]", "line": i, "text": t} for _, rel, i, t in hits[:40]],
+        "hits": [{"file": rel, "source_name": _research_source(rel), "line": i, "text": t} for _, rel, i, t in hits[:40]],
     })
 
 
@@ -167,7 +185,7 @@ def ps_research_read(args: dict, **_) -> str:
     if RESEARCH_DIR.resolve() not in target.parents or not target.is_file():
         return json.dumps({"error": "Unknown file.", "files": [str(p.relative_to(RESEARCH_DIR)) for p in _research_files()]})
     text = target.read_text(errors="replace")
-    return json.dumps({"cite_as": f"[{rel}]", "text": text[:20000], "truncated": len(text) > 20000})
+    return json.dumps({"source_name": _research_source(rel), "text": text[:20000], "truncated": len(text) > 20000})
 
 
 JINA_KEY = os.getenv("JINA_API_KEY", "").strip()
@@ -205,7 +223,7 @@ def ps_web_read(args: dict, **_) -> str:
         text = _jina_get("https://r.jina.ai/" + url, {"X-Retain-Images": "none"})
     except Exception as e:
         return json.dumps({"error": f"Could not read that page: {type(e).__name__}"})
-    return json.dumps({"cite_as": url, "text": text[:WEB_CHARS], "truncated": len(text) > WEB_CHARS})
+    return json.dumps({"source_url": url, "text": text[:WEB_CHARS], "truncated": len(text) > WEB_CHARS})
 
 
 def _schema(name: str, description: str, props: dict, required: list[str]) -> dict:
@@ -220,7 +238,7 @@ def register(ctx) -> None:
     _build_db()
     ctx.register_tool(
         name="ps_schema", toolset="propertystack",
-        schema=_schema("ps_schema", "List PropertyStack tables, columns, row counts and the [file.csv] citation for each. Call this first.", {}, []),
+        schema=_schema("ps_schema", "List PropertyStack tables, columns, row counts and the plain source_name for each. Call this first.", {}, []),
         handler=ps_schema, description="PropertyStack schema",
     )
     ctx.register_tool(
