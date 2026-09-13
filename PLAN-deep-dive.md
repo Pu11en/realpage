@@ -30,17 +30,19 @@ Open: `propertystack/data/plano-richardson/briefs/` (local) · http://localhost:
 
 ## Tasks
 
-- [ ] **D1 Validator.** `propertystack/skills/deep-dive/validate.py`: given a brief (markdown
+> D3 briefs written 2026-09-13; **waiting for Drew's OK** (not given yet). D4 stays blocked until it's noted here.
+
+- [x] **D1 Validator.** `propertystack/skills/deep-dive/validate.py`: given a brief (markdown
   file or text), checks the 8 headings exist **in order**, every "Why now" and "Who to ask for"
   line has a URL, no email/phone appears unless it's in `contacts.csv`, and the opener doesn't
   say "with RealPage". `--self-test` runs it on 1 good + 3 bad fixture briefs. Fails first, commit.
-- [ ] **D2 The skill.** `propertystack/skills/deep-dive/SKILL.md`: inputs (area + lead `ref_id`
+- [x] **D2 The skill.** `propertystack/skills/deep-dive/SKILL.md`: inputs (area + lead `ref_id`
   or name), steps (pull the lead's rows from `leads.csv`/`master.csv`/`5-sales.csv`/`contacts.csv`;
   web: owner/manager, resident reviews, news; public page for the decision-maker; crawl4ai at
   `http://localhost:11235` for reading, Jina for search, max ~12 searches per brief), the layout
   above, and the write-out: `propertystack/data/<area>/briefs/<ref_id>.md`. Upcoming projects:
   same layout, "Who they are" = developer + opening date, software = "not chosen yet".
-- [ ] **D3 Run it on 3 real leads (💲 ~36 searches).** Vantage At Spring Creek (sold, on Yardi),
+- [x] **D3 Run it on 3 real leads (💲 ~36 searches).** Vantage At Spring Creek (sold, on Yardi),
   Legacy Arapaho (upcoming, 443 units), Creekside At Legacy (runs RealPage, just sold: the "at
   risk" case). All three pass `validate.py`. **Stop and show Drew the three briefs in plain words;
   apply his changes to SKILL.md before D4.**
