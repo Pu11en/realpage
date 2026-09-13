@@ -22,7 +22,7 @@ Open: http://localhost:8765 → Ask (no sign-in locally)
   fails unless `chatbot/hermes-profile/SOUL.md` contains a "Bottom line" rule and
   `chatbot/branding/custom.css` sets the chat message font size to at least 17px and
   line-height to at least 1.6. Run it once to see it fail (both parts missing), commit.
-- [ ] **R2 Answer shape rule.** In `SOUL.md` "How to answer": every answer longer than 3
+- [x] **R2 Answer shape rule.** In `SOUL.md` "How to answer": every answer longer than 3
   sentences ends with a line `**Bottom line**` followed by 2–4 bullets (max ~15 words each):
   the answer itself, the one number or name that matters, and the next useful step. Short
   paragraphs (max 3 sentences), a blank line between blocks, headings only for call sheets.
