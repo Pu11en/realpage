@@ -42,7 +42,7 @@ Open: http://localhost:8765/map.html (scout markers) · cards in `propertystack/
 - [x] **S4 Churn + pain (💲 search).** News search for apartment sales / new management in the
   metro (last 24 months), keep items with URL + date; Reddit tool + search for portal/payment
   complaints naming Yardi/Entrata/RealPage and the city. Save evidence JSON per metro.
-- [ ] **S5 Score + cards + map markers.** `run.py` combines the three part-scores + total into
+- [x] **S5 Score + cards + map markers.** `run.py` combines the three part-scores + total into
   `propertystack/data/scout/<date>/areas.json` (numbers + evidence links only, no prose). Then
   **this local session (Claude) reads areas.json + the evidence files and writes `cards.md`**
   (top 5 first: city, scores, a 3-line "why this city" argument citing the evidence links). No
