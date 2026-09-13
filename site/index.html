@@ -54,20 +54,33 @@
             <input type="checkbox" id="f-hide-mine" /> hide properties already on my software
           </label>
         </div>
-        <table>
+        <table class="leads-table">
           <thead>
-            <tr><th>Rank</th><th>Score</th><th>Property</th><th>City</th><th>Units</th><th>Signal</th><th>Software</th><th>Contact</th><th>Why</th></tr>
+            <tr><th>Rank</th><th>Score</th><th>Property</th><th>City</th><th>Units</th><th>Signal</th><th>Software</th><th>Why</th></tr>
           </thead>
           <tbody id="leads-tbody"></tbody>
         </table>
       `;
 
       function contactHtml(contact) {
-        if (!contact) return `<span style="color:var(--text-dim);">--</span>`;
+        if (!contact) return "";
         const parts = [];
         if (contact.phone) parts.push(contact.phone);
         if (contact.email) parts.push(contact.email);
-        return `<span style="color:var(--text-muted);font-size:12px;">${parts.join("<br/>")}</span>`;
+        return parts.length ? `<div class="lead-contact">${parts.join(" · ")}</div>` : "";
+      }
+
+      // "Sold Jun 2026" + type "Sold" shouldn't read "Sold: Sold Jun 2026".
+      function signalHtml(l) {
+        const sold = l.signalType === "Sold";
+        const text = sold ? l.signal.replace(/^Sold\s*/i, "") : l.signal;
+        return `<span class="sig-tag ${sold ? "sig-sold" : "sig-up"}">${l.signalType}</span> <span class="sig-text">${text}</span>`;
+      }
+
+      // Upcoming = nothing picked yet; a sold building with no software found = unknown.
+      function leadSoftwareHtml(l) {
+        if (!l.software && l.signalType === "Sold") return `<span class="pill" style="background:#27272a;color:#a1a1aa;">Unknown</span>`;
+        return vendorPill(l.software);
       }
 
       function renderRows() {
@@ -99,16 +112,16 @@
 
         document.getElementById("leads-tbody").innerHTML = rows.map((l, i) => `
           <tr class="${l.propertyId ? "clickable" : ""}" ${l.propertyId ? `data-id="${l.propertyId}"` : ""} style="${l.propertyId ? "cursor:pointer;" : ""}">
-            <td>${i + 1}</td>
-            <td><span class="score-badge" style="background:${scoreBadgeColor(l.score)}">${l.score}</span></td>
-            <td><strong>${l.property}</strong> ${l.isNew ? '<span class="pill" style="background:#22c55e22;color:#22c55e;">NEW</span>' : ""}
+            <td data-label="Rank">${i + 1}</td>
+            <td data-label="Score"><span class="score-badge" style="background:${scoreBadgeColor(l.score)}">${l.score}</span></td>
+            <td class="lead-prop"><strong>${l.property}</strong> ${l.isNew ? '<span class="pill" style="background:#22c55e22;color:#22c55e;">NEW</span>' : ""}
+              ${contactHtml(l.contact)}
               <button class="btn deep-dive-btn" data-deep-dive="${l.id}" title="Open the chat with a deep-dive question about this building">✦ Deep dive</button></td>
-            <td>${l.city}</td>
-            <td>${l.units ?? "?"}</td>
-            <td><span class="pill" style="background:#3f3f4622;color:#a1a1aa;">${l.signalType}: ${l.signal}</span></td>
-            <td>${vendorPill(l.software)}</td>
-            <td>${contactHtml(l.contact)}</td>
-            <td style="color:var(--text-muted);">${l.why} <span style="color:var(--text-dim);">${l.sources.map(s => `[${s}]`).join(" ")}</span></td>
+            <td data-label="City">${l.city}</td>
+            <td data-label="Units">${l.units ?? "?"}</td>
+            <td data-label="Signal" class="lead-signal">${signalHtml(l)}</td>
+            <td data-label="Software">${leadSoftwareHtml(l)}</td>
+            <td class="lead-why">${l.why} <span class="lead-src">${l.sources.map(s => `[${s}]`).join(" ")}</span></td>
           </tr>
         `).join("");
 

@@ -2,8 +2,8 @@
 // Every page calls renderShell(activeTab) then fetches its own data/*.json.
 
 const NAV_TABS = [
-  { key: "leads", label: "Early Leads", href: "index.html" },
   { key: "map", label: "Map", href: "map.html" },
+  { key: "leads", label: "Early Leads", href: "index.html" },
   { key: "share", label: "Software Share", href: "software-share.html" },
   { key: "hood", label: "Under the Hood", href: "under-the-hood.html" },
 ];
@@ -79,7 +79,7 @@ function vendorPill(vendor, colorMap) {
   if (!vendor) {
     return `<span class="pill" style="background:#27272a;color:#a1a1aa;">Not chosen yet</span>`;
   }
-  const color = (colorMap && colorMap[vendor]) || "#52525b";
+  const color = (colorMap && colorMap[vendor]) || "#a1a1aa";  // readable default (was near-invisible grey)
   return `<span class="pill" style="background:${color}22;color:${color};">${vendor}</span>`;
 }
 

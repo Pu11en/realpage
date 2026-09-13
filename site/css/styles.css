@@ -233,3 +233,25 @@ h1 { font-size: 22px; margin: 0 0 4px; }
 
 /* "Deep dive in chat" button (Early Leads rows + building page). */
 .deep-dive-btn { padding: 2px 8px; font-size: 12px; margin-left: 6px; white-space: nowrap; }
+
+/* Early Leads table: tidy cells, no wrapping pills, roomy "Why"; cards on phones. */
+.leads-table .pill { white-space: nowrap; }
+.leads-table td { vertical-align: top; padding-top: 12px; padding-bottom: 12px; }
+.lead-prop { min-width: 190px; }
+.lead-prop .deep-dive-btn { margin-top: 6px; display: table; }
+.lead-contact { color: var(--text-muted); font-size: 12px; margin-top: 4px; word-break: break-word; }
+.lead-signal { min-width: 150px; }
+.sig-tag { display: inline-block; font-size: 11px; font-weight: 600; padding: 2px 7px; border-radius: 999px; white-space: nowrap; }
+.sig-up { background: #22c55e22; color: #22c55e; }
+.sig-sold { background: #f59e0b22; color: #f59e0b; }
+.sig-text { display: block; color: var(--text-muted); font-size: 13px; margin-top: 4px; }
+.lead-why { color: var(--text-muted); min-width: 280px; line-height: 1.5; }
+.lead-src { color: var(--text-dim); font-size: 12px; }
+@media (max-width: 760px) {
+  .leads-table thead { display: none; }
+  .leads-table, .leads-table tbody, .leads-table tr, .leads-table td { display: block; width: 100%; }
+  .leads-table tr { border: 1px solid var(--border); border-radius: 8px; padding: 10px 12px; margin-bottom: 12px; }
+  .leads-table td { border: none; padding: 4px 0; min-width: 0; }
+  .leads-table td[data-label]::before { content: attr(data-label) ": "; color: var(--text-dim); font-size: 12px; }
+  .leads-table td[data-label="Rank"], .leads-table td[data-label="Score"] { display: inline-block; width: auto; margin-right: 12px; }
+}
