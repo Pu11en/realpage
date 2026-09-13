@@ -17,12 +17,19 @@ a build session starts.
 ## How to use this KB (for any future session)
 
 1. Read this README first.
-2. For the live work plan read `PLAN-v5.md` (Open WebUI chat + Google sign-in).
-3. Older plans, handoffs and QA logs live in `archive/` (see `archive/README.md`).
-   These are the resume-cold files — trust them over any chat memory.
-4. Every folder holds markdown files. Synthesized files cite raw files; raw
+2. The product direction and every decision so far: `09-build-ideas/sell-plan-2026-09-12.md`.
+3. The build plans (gowork-ready, localhost first): `PLAN-map-deepdive.md`, `PLAN-scout.md`,
+   `PLAN-deep-dive.md`, `PLAN-chat-readable.md`, `PLAN-team-memory.md`, `PLAN-new-area.md`.
+   Each `PLAN-*.progress.md` is that plan's build log.
+4. Run it locally, no sign-in: `bash tooling/dev.sh` → http://localhost:8765
+   (`bash tooling/dev.sh stop` to stop). Live check: `bash tooling/qa/check-live.sh`.
+5. Branches: `main` is what GitHub/Railway deploy. New work is tested on the `local-test`
+   branch first and only goes to `main` after Drew's OK.
+6. Older plans, handoffs and QA logs live in `archive/` (old plans in `archive/plans/`,
+   Discord summaries in `archive/discord-cards/`).
+7. Every folder holds markdown files. Synthesized files cite raw files; raw
    files carry source URL + fetch date. Trust raw over summary on conflict.
-4. Add new evidence as files, register them in the folder's index section
+8. Add new evidence as files, register them in the folder's index section
    below, never delete raw evidence.
 
 ## Conventions
