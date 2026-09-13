@@ -18,7 +18,7 @@ Runs on Drew's computer only, never in the chat agent.
 3. **Competitor pain** = 60 x (Yardi + Entrata share of sample) + 40 x min(complaints / 10, 1).
 
 ## Outputs
-- `data/raw/census/` cached Census downloads (S2).
+- `data/raw/census/` cached Census downloads (S2, git-ignored): 12 monthly BPS CBSA files (5+ units, imputed) + ACS 1-year B25003 summary file (renters = E003). No API key: api.census.gov now requires one, the flat files do not.
 - `data/scout/<date>/<metro>/sample.csv` + evidence JSON (S3, S4).
 - `data/scout/<date>/areas.json`: numbers + evidence links only (S5).
 - `data/scout/<date>/cards.md`: top 5, written by the local Claude session from areas.json (S5).

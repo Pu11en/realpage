@@ -1,6 +1,6 @@
 """Scout: score ~25 Sun Belt metros (no DFW) for untapped apartment-software demand.
 
-Skeleton (S1): metro list, scoring math, search cap, run loop and card rendering.
+S1 skeleton (scoring, cap, cards) + S2 Census numbers (census.py, cached, no key).
 Data gathering (Census S2, vendor sample S3, churn + pain S4) plugs in as `gather()`.
 
 Usage: python3 propertystack/skills/scout-areas/run.py --metros tucson-az,boise-id --limit-searches 120
@@ -82,8 +82,15 @@ def render_cards(areas, top=5):
     return "\n".join(out)
 
 
+_CENSUS = {}
+
+
 def gather(metro, budget):
-    raise NotImplementedError("data gathering arrives in S2-S4")
+    """Census numbers (S2, cached, no searches). Vendor sample (S3), churn + pain (S4) to come."""
+    if not _CENSUS:
+        import census
+        _CENSUS.update(census.census_numbers(load_metros()))
+    return dict(_CENSUS[metro["slug"]])
 
 
 def main(argv=None):
@@ -99,10 +106,12 @@ def main(argv=None):
             sys.exit(f"unknown metros: {', '.join(sorted(unknown))}")
         metros = [m for m in metros if m["slug"] in want]
     print(f"scout: {len(metros)} metros, cap {min(a.limit_searches, MAX_SEARCHES)} searches")
-    try:
-        run_metros(metros, SearchBudget(a.limit_searches), gather)
-    except NotImplementedError as e:
-        sys.exit(f"scout skeleton only: {e}")
+    res = run_metros(metros, SearchBudget(a.limit_searches), gather)
+    for x in res["areas"]:
+        d = x["inputs"]
+        print(f"  {x['slug']}: permits5+ {d.get('permits_5plus_12mo')}, renters {d.get('renter_households')}"
+              f" -> growth {x['growth']} churn {x['churn']} pain {x['pain']} total {x['total']}")
+    print(f"searches used: {res['searches']}" + (" (stopped at cap)" if res["stopped_by_cap"] else ""))
 
 
 if __name__ == "__main__":
