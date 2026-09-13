@@ -29,7 +29,7 @@ Open: http://localhost:8765/map.html (scout markers) · cards in `propertystack/
 
 ## Tasks
 
-- [ ] **S1 Skeleton + tests.** `propertystack/skills/scout-areas/` with `SKILL.md` (contract:
+- [x] **S1 Skeleton + tests.** `propertystack/skills/scout-areas/` with `SKILL.md` (contract:
   inputs, outputs, cap, tools) and `run.py` stub; `metros.csv` (~25 rows: slug, name, state,
   CBSA code, lat, lon; no DFW). Tests with **saved fixtures only** (no network): scoring math,
   cap stops the run cleanly, cards render. Tests fail first, commit.
