@@ -39,7 +39,7 @@ Open: http://localhost:8765/map.html (scout markers) · cards in `propertystack/
 - [x] **S3 RealPage share sample (💲 search).** Per metro: search for apartment community sites
   (~25 per metro, skip big listing portals), fetch with crawl4ai, classify vendor with the
   `pms_detect.py` rules. Output `sample.csv` per metro with proof URLs. Counts searches; obeys cap.
-- [ ] **S4 Churn + pain (💲 search).** News search for apartment sales / new management in the
+- [x] **S4 Churn + pain (💲 search).** News search for apartment sales / new management in the
   metro (last 24 months), keep items with URL + date; Reddit tool + search for portal/payment
   complaints naming Yardi/Entrata/RealPage and the city. Save evidence JSON per metro.
 - [ ] **S5 Score + cards + map markers.** `run.py` combines the three part-scores + total into
