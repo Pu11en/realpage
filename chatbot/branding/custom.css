@@ -33,3 +33,38 @@
 		bottom: 0;
 	}
 }
+
+/* Readable answers (PLAN-chat-readable R3): bigger, airier message text,
+   spaced paragraphs/list items, padded table cells, heavier bold. Colors
+   untouched. */
+#messages-container .markdown-prose,
+#messages-container .prose,
+#messages-container #response-content-container {
+	font-size: 17px !important;
+	line-height: 1.65 !important;
+}
+
+#messages-container .markdown-prose p,
+#messages-container .markdown-prose li,
+#messages-container .prose p,
+#messages-container .prose li {
+	margin-top: 0 !important;
+	margin-bottom: 12px !important;
+	line-height: 1.65 !important;
+}
+
+#messages-container .markdown-prose th,
+#messages-container .markdown-prose td,
+#messages-container .prose th,
+#messages-container .prose td {
+	padding: 8px !important;
+	font-size: 15px !important;
+	line-height: 1.5 !important;
+}
+
+#messages-container .markdown-prose strong,
+#messages-container .markdown-prose b,
+#messages-container .prose strong,
+#messages-container .prose b {
+	font-weight: 700 !important;
+}
