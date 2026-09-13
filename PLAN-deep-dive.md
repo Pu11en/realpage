@@ -30,7 +30,7 @@ Open: `propertystack/data/plano-richardson/briefs/` (local) · http://localhost:
 
 ## Tasks
 
-- [ ] **D1 Validator.** `propertystack/skills/deep-dive/validate.py`: given a brief (markdown
+- [x] **D1 Validator.** `propertystack/skills/deep-dive/validate.py`: given a brief (markdown
   file or text), checks the 8 headings exist **in order**, every "Why now" and "Who to ask for"
   line has a URL, no email/phone appears unless it's in `contacts.csv`, and the opener doesn't
   say "with RealPage". `--self-test` runs it on 1 good + 3 bad fixture briefs. Fails first, commit.
