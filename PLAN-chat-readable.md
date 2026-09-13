@@ -18,7 +18,7 @@ Open: http://localhost:8765 → Ask (no sign-in locally)
 
 ## Tasks
 
-- [ ] **R1 Check script.** `tooling/qa/check-readable.sh` (free, no bot calls, under 10 s):
+- [x] **R1 Check script.** `tooling/qa/check-readable.sh` (free, no bot calls, under 10 s):
   fails unless `chatbot/hermes-profile/SOUL.md` contains a "Bottom line" rule and
   `chatbot/branding/custom.css` sets the chat message font size to at least 17px and
   line-height to at least 1.6. Run it once to see it fail (both parts missing), commit.
