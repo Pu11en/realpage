@@ -12,3 +12,6 @@
 - Checked: loaded a real long call-sheet chat in Open WebUI (port 3000) at panel width 480px with the new CSS injected; computed styles confirmed 17px/28px lines, 12px paragraph gaps, 15px table text. Screenshot at /tmp/readable.png looks clearly bigger and airier.
 - Did NOT restart `tooling/dev.sh`: the running shared stack mounts custom.css from the `.worktrees/local-test` checkout, not this branch; restarting from here would swap it under other sessions. Drew sees the new look once this branch is merged into local-test (or dev.sh is run from here).
 - check-panel.sh: 0 problems; check-readable.sh: OK (full Check passes).
+
+## Paused (2026-09-13)
+- Drew asked to save and close while he plans the "finished bot" picture (memory / data editing / self-building) in another session. R4 (real answer check, costs a few cents) not started. Nothing uncommitted.
