@@ -102,4 +102,8 @@ lease-up/operations, same public-page rule.
 
 - ~12 searches is the cap; if the budget runs out, write what you have and mark missing
   pieces "not found".
+- Yelp, ApartmentRatings and ForRent block both crawl4ai and Jina read (CAPTCHA/403). Use
+  their search snippets marked "(search snippet only; unconfirmed)", or HAR.com reviews,
+  which do load. Company team pages (e.g. keyrealestateco.com/team/) are the best source
+  for the decision-maker.
 - Reviews and team pages go stale; the brief is a snapshot of the day it was written.
