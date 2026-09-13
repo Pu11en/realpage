@@ -17,8 +17,14 @@ if [ "${1:-}" = stop ]; then
 fi
 
 : "${DEEPSEEK_API_KEY:?DEEPSEEK_API_KEY is not set in this shell}"
-[ -f .env ] && export JINA_API_KEY="${JINA_API_KEY:-$(grep '^JINA_API_KEY=' .env | cut -d= -f2-)}"
-ENVFILE=(); [ -f chatbot/.env.local ] && ENVFILE=(--env-file chatbot/.env.local)
+# The key file is gitignored, so worktrees (local-test, build copies) don't have it: fall back to
+# the main checkout's .env. Without it the chat silently loses web search/read.
+MAIN_ROOT="$(cd "$(git -C "$ROOT" rev-parse --path-format=absolute --git-common-dir)/.." && pwd)"
+for envf in "$ROOT/.env" "$MAIN_ROOT/.env"; do
+  [ -z "${JINA_API_KEY:-}" ] && [ -f "$envf" ] && export JINA_API_KEY="$(grep '^JINA_API_KEY=' "$envf" | cut -d= -f2-)"
+done
+[ -n "${JINA_API_KEY:-}" ] || echo "WARNING: no JINA_API_KEY found; the chat will have no web search/read"
+ENVFILE=(); for ef in chatbot/.env.local "$MAIN_ROOT/chatbot/.env.local"; do [ -f "$ef" ] && { ENVFILE=(--env-file "$ef"); break; }; done
 "${COMPOSE[@]}" "${ENVFILE[@]}" up -d --build
 
 # Always serve THIS checkout's site: stop any old copy (e.g. from a finished
