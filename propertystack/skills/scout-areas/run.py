@@ -1,6 +1,7 @@
 """Scout: score ~25 Sun Belt metros (no DFW) for untapped apartment-software demand.
 
-S1 skeleton (scoring, cap, cards) + S2 Census numbers (census.py) + S3 vendor sample (sample.py).
+S1 skeleton (scoring, cap, cards) + S2 Census numbers (census.py) + S3 vendor sample (sample.py)
++ S4 churn news and portal complaints (churn_pain.py).
 Data gathering (Census S2, vendor sample S3, churn + pain S4) plugs in as `gather()`.
 
 Usage: python3 propertystack/skills/scout-areas/run.py --metros tucson-az,boise-id --limit-searches 120
@@ -87,17 +88,21 @@ _TOOLS = {}
 
 
 def gather(metro, budget):
-    """Census numbers (S2, no searches) + vendor sample (S3, searches counted). Churn + pain in S4."""
+    """Census numbers (S2, no searches) + vendor sample (S3) + churn/complaints (S4); searches counted."""
     if not _CENSUS:
         import census
         _CENSUS.update(census.census_numbers(load_metros()))
     d = dict(_CENSUS[metro["slug"]])
-    import sample
+    import sample, churn_pain
     if not _TOOLS:
-        _TOOLS.update(search=sample.jina_search(), reader=sample.Crawl4aiReader())
+        _TOOLS.update(search=sample.jina_search(), reader=sample.Crawl4aiReader(),
+                      reddit=churn_pain.reddit_search())
     d["sample"], proof, path = sample.sample_metro(metro, budget, _TOOLS["search"], _TOOLS["reader"])
     d["sample_csv"] = str(path)
-    d["evidence"] = d.get("evidence", []) + proof[:5]
+    d["churn_items"], d["complaints"], links, ev_path = churn_pain.churn_pain_metro(
+        metro, budget, _TOOLS["search"], _TOOLS["reddit"], sample.out_dir(), _TOOLS["reader"])
+    d["evidence_json"] = str(ev_path)
+    d["evidence"] = d.get("evidence", []) + proof[:5] + links
     return d
 
 
@@ -118,7 +123,7 @@ def main(argv=None):
     for x in res["areas"]:
         d = x["inputs"]
         print(f"  {x['slug']}: permits5+ {d.get('permits_5plus_12mo')}, renters {d.get('renter_households')}"
-              f", sample {d.get('sample')} -> growth {x['growth']} churn {x['churn']} pain {x['pain']} total {x['total']}")
+              f", sample {d.get('sample')}, churn {d.get('churn_items')}, complaints {d.get('complaints')} -> growth {x['growth']} churn {x['churn']} pain {x['pain']} total {x['total']}")
     print(f"searches used: {res['searches']}" + (" (stopped at cap)" if res["stopped_by_cap"] else ""))
 
 

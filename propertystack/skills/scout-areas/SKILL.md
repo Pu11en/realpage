@@ -32,6 +32,11 @@ Runs on Drew's computer only, never in the chat agent.
 - Vendor sample (`sample.py`): up to 8 searches per metro until 25 community sites are found
   (listing portals, operator brand sites, .gov/.edu/.org skipped), each classified via crawl4ai +
   `pms_detect.detect`. Key: `JINA_API_KEY` env var or the repo `.env`.
+- Churn + pain (`churn_pain.py`): 4 news searches + 4 complaint searches per metro (counted).
+  Keeps only items with a URL and a date in the last 24 months (date from URL/snippet, else the
+  page's publish date via crawl4ai); listing portals and vendor-owned sites skipped. Reddit:
+  5 free searches inside the city's subreddit (r/Tucson ...), kept only if a vendor + a
+  portal/payment word appear. Writes `<metro>/evidence.json` (`churn`, `complaints` lists).
 
 ## Tests
 `python3 -m pytest -q propertystack/skills/scout-areas/` (saved fixtures, no network).
