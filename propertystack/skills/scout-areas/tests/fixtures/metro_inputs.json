@@ -1,0 +1,14 @@
+{
+  "tucson-az": {
+    "permits_5plus_12mo": 2400, "renter_households": 160000,
+    "sample": {"total": 20, "RealPage": 4, "Yardi": 8, "Entrata": 3},
+    "churn_items": 12, "complaints": 6,
+    "evidence": ["https://example.com/tucson-sale-1", "https://example.com/tucson-reddit-1"]
+  },
+  "boise-id": {
+    "permits_5plus_12mo": 3000, "renter_households": 100000,
+    "sample": {"total": 10, "RealPage": 8, "Yardi": 1, "Entrata": 0},
+    "churn_items": 2, "complaints": 0,
+    "evidence": []
+  }
+}
