@@ -45,6 +45,24 @@ def _table_name(csv_name: str) -> str:
     return re.sub(r"[^a-z0-9]+", "_", stem.lower()).strip("_")
 
 
+# Scraped "emails" that aren't the building's: software vendors' accessibility inboxes, lead-routing
+# robots, review sites, a web agency, and image filenames the scraper mistook for emails.
+JUNK_EMAIL_DOMAINS = ("entrata.com", "apartments247.com", "birdeye.com", "leadmanaging.com",
+                      "aptleasing.info", "assist.rent", "eliseai.com", "knck.io", "francemediainc.com")
+
+
+def _usable_email(email):
+    e = (email or "").strip().lower()
+    if "@" not in e or e.endswith((".jpg", ".jpeg", ".png", ".gif", ".webp", ".svg")):
+        return None
+    local, domain = e.split("@", 1)
+    if local.startswith(("accessibility", "webaccessibility", "profiles")):
+        return None
+    if any(domain == d or domain.endswith("." + d) for d in JUNK_EMAIL_DOMAINS):
+        return None
+    return email.strip()
+
+
 def _build_db() -> None:
     SCHEMA.clear()
     tmp = DB_PATH.with_suffix(".building")
@@ -57,6 +75,9 @@ def _build_db() -> None:
             continue
         header, body = rows[0], rows[1:]
         table = _table_name(path.name)
+        if table == "contacts" and "email" in header:  # same junk filter as the site
+            i = header.index("email")
+            body = [r[:i] + [_usable_email(r[i]) or ""] + r[i + 1:] if len(r) > i else r for r in body]
         SCHEMA.append({"table": table, "cite_as": f"[{path.name}]", "rows": len(body), "columns": header})
         cols = ", ".join(f'"{c}"' for c in header)
         con.execute(f'CREATE TABLE "{table}" ({cols})')

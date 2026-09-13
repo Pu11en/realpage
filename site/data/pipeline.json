@@ -33,6 +33,56 @@
   ],
   "runs": [
     {
+      "runId": "20260913T145249-scout-areas",
+      "started": "2026-09-13T14:52:49",
+      "skill": "scout-areas",
+      "area": "tucson-az",
+      "status": "ok",
+      "counts": "metros=1, unfinished=0",
+      "errors": 0,
+      "durationSec": 0.6
+    },
+    {
+      "runId": "20260913T144648-build-reach",
+      "started": "2026-09-13T14:46:48",
+      "skill": "build-reach",
+      "area": "us",
+      "status": "ok",
+      "counts": "queries_cached=68, web_dots=17, kept_dots=2",
+      "errors": 0,
+      "durationSec": 0.0
+    },
+    {
+      "runId": "20260913T144625-build-reach",
+      "started": "2026-09-13T14:46:25",
+      "skill": "build-reach",
+      "area": "us",
+      "status": "ok",
+      "counts": "queries_cached=68, web_dots=17, kept_dots=2",
+      "errors": 0,
+      "durationSec": 7.9
+    },
+    {
+      "runId": "20260913T144621-build-reach",
+      "started": "2026-09-13T14:46:21",
+      "skill": "build-reach",
+      "area": "us",
+      "status": "error",
+      "counts": "",
+      "errors": 1,
+      "durationSec": 0.0
+    },
+    {
+      "runId": "20260913T144405-build-reach",
+      "started": "2026-09-13T14:44:05",
+      "skill": "build-reach",
+      "area": "us",
+      "status": "ok",
+      "counts": "queries_cached=64, web_dots=25, kept_dots=2",
+      "errors": 0,
+      "durationSec": 105.3
+    },
+    {
       "runId": "20260910T222750-score-leads",
       "started": "2026-09-10T22:27:50",
       "skill": "score-leads",

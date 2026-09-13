@@ -206,15 +206,34 @@ def load_leads_facts() -> dict:
     return facts
 
 
+# Scraped "emails" that aren't the building's: software vendors' accessibility inboxes, lead-routing
+# robots, review sites, a web agency, and image filenames the scraper mistook for emails.
+JUNK_EMAIL_DOMAINS = ("entrata.com", "apartments247.com", "birdeye.com", "leadmanaging.com",
+                      "aptleasing.info", "assist.rent", "eliseai.com", "knck.io", "francemediainc.com")
+
+
+def usable_email(email):
+    e = (email or "").strip().lower()
+    if "@" not in e or e.endswith((".jpg", ".jpeg", ".png", ".gif", ".webp", ".svg")):
+        return None
+    local, domain = e.split("@", 1)
+    if local.startswith(("accessibility", "webaccessibility", "profiles")):
+        return None
+    if any(domain == d or domain.endswith("." + d) for d in JUNK_EMAIL_DOMAINS):
+        return None
+    return email.strip()
+
+
 def load_contacts() -> dict:
     contacts = {}
     contact_files = [CONTACTS_CSV] + ([CONTACTS_DALLAS_CSV] if CONTACTS_DALLAS_CSV.exists() else [])
     for f in contact_files:
         for r in read_csv(f):
-            if r["phone"] or r["email"]:
+            email = usable_email(r["email"])
+            if r["phone"] or email:
                 contacts[r["apt_id"]] = {
                     "phone": r["phone"] or None,
-                    "email": r["email"] or None,
+                    "email": email,
                 }
     return contacts
 
