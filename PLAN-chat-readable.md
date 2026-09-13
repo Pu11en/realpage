@@ -29,7 +29,7 @@ Open: http://localhost:8765 → Ask (no sign-in locally)
   One-paragraph answers need no Bottom line. **Exception: deep dives / call sheets put the Bottom
   line first** (sell-plan H9/H10), since they're long. Keep every existing rule. `check-readable.sh`
   part 1 passes.
-- [ ] **R3 Bigger, airier text.** In `chatbot/branding/custom.css` (panel mode): message text
+- [x] **R3 Bigger, airier text.** In `chatbot/branding/custom.css` (panel mode): message text
   17px, line-height 1.65, 12px gap between paragraphs/list items, table cells padded 8px,
   bold text clearly heavier. Don't touch colors. Restart with `bash tooling/dev.sh`; screenshot
   a long answer in the panel to `/tmp/readable.png` and look at it. Check passes.
