@@ -51,7 +51,7 @@ Open: http://localhost:8765/map.html
   no building page, no website/software yet) still get the row button, with this prompt: "Deep
   dive on <name>, <city> (<units> units, planned, software not chosen yet): who is developing
   it, when does it open, and get me ready to call." Check passes.
-- [ ] **P5 Real click-through.** Uses the shared local stack (ports 8765/3000/18080): if another
+- [x] **P5 Real click-through.** Uses the shared local stack (ports 8765/3000/18080): if another
   plan's loop is using it (`docker ps` shows a rebuild in progress), wait. With `bash tooling/dev.sh` running, Playwright: Early Leads →
   Deep dive on Vantage At Spring Creek → prompt appears in the chat input; map dot card links
   return 200. Screenshot both to `/tmp/`. Then tell Drew in plain words it's ready to try.
