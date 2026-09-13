@@ -13,7 +13,8 @@ for p in / /master-table.html /software-share.html /api/config; do
   printf '  %-22s %s\n' "$p" "$(curl -s -o /dev/null -w '%{http_code}' "$SITE$p")"
 done
 printf '  %-22s %s\n' "chat frame (/)" "$(curl -s -H 'Sec-Fetch-Dest: iframe' "$SITE/" | grep -o '<title>[^<]*' | head -1)"
-printf '  %-22s %s\n' "chatbot /health" "$(curl -s https://propertystack-chatbot-production.up.railway.app/health)"
+# The AI engine has no public address (or shouldn't): check it from inside the chat app.
+printf '  %-22s %s\n' "chatbot /health" "$(timeout 90 railway ssh --service propertystack-chat "python3 -c \"import urllib.request as u;print(u.urlopen('http://propertystack-chatbot.railway.internal:8080/health',timeout=10).read().decode())\"" 2>&1 | tail -1)"
 
 echo "== Google sign-in"
 LOC=$(curl -s -o /dev/null -w '%{redirect_url}' "$SITE/oauth/google/login")
