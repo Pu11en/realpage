@@ -26,7 +26,7 @@ Open: http://localhost:8765 → Early Leads → the new state's button
 
 ### Part 1: Shared base
 
-- [ ] **1.1 Skeleton + check + no-place-names test.** `propertystack/skills/lead-finder/`
+- [x] **1.1 Skeleton + check + no-place-names test.** `propertystack/skills/lead-finder/`
   (`SKILL.md` describing the whole chain and its 6 parts; `run.py` stub). `tooling/qa/check-lead-finder.sh`
   runs every `tests/` under `propertystack/skills/lead-finder*/` and the other lead-finder skills,
   plus `check-panel.sh`, in under 2 minutes, no network. Test that **fails if any lead-finder step's
