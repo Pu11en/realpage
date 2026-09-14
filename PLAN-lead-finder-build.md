@@ -173,7 +173,7 @@ Open: http://localhost:8765 → Early Leads → the new state's button
   texas." Stop resuming the NY background run; do not start it again. Treat whatever NY collected
   so far (per 6.3/6.4's progress notes) as the final NY result for this build. No further NY
   searching happens under this plan.
-- [ ] **6.6 Pick and run the next state -- closer to Texas.** Override 1.4's plain
+- [x] **6.6 Pick and run the next state -- closer to Texas.** Override 1.4's plain
   lowest-`counts.json`-total state pick for this one choice: among the 15 states in
   `client-map/targets.json`, pick the next state to run by **geographic closeness to Texas**, not
   by lowest count. Order (nearest first, skipping TX and NY which are done): AZ, TN, GA, CO, then

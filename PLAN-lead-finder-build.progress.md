@@ -1043,3 +1043,40 @@ Nothing left open for this task.
 - No code changed this task -- this was a plan-file redirect per Drew's instruction, not a build
   step. Check: `bash tooling/qa/check-lead-finder.sh` still passes (no code touched).
 - Next task (6.6) starts the AZ run in the background the same way 6.3 started NY's.
+
+## 6.6 Pick and run the next state -- closer to Texas -- done
+
+- Per 6.5's override order (nearest-to-Texas first, excluding TX/NY): **AZ** picked, the first
+  candidate in the list (AZ, TN, GA, CO, ...).
+- Confirmed SearXNG container (`ps-searxng`) was already up; no NY run process was running (6.5
+  had already stopped it). Started the AZ run the same way 6.3 started NY:
+  `nohup python3 propertystack/skills/lead-finder/run.py --state AZ --run-id 20260914-full >
+  propertystack/runs/AZ/20260914-full/log.txt 2>&1 & disown`.
+- Watched it for about 50 minutes. It worked through AZ cities in permit-count order (Phoenix,
+  Scottsdale, Tempe, Goodyear, Mesa, Tucson, Gilbert, Peoria, and smaller unincorporated/county
+  areas -- 17 cities' `sources`/`permits`/`merged` files written by the checkpoint).
+- Real finding, checked rather than assumed a bug: every AZ city except Mesa came back
+  `sources.<city>.json` = `{"skipped": true, "reason": "no permits online"}`, and even Mesa's
+  `permits.Mesa.json` ended up empty -- 0 projects merged across all 17 cities so far. Tested the
+  two catalog APIs (2.2) by hand outside the run for Phoenix specifically:
+  `api.us.socrata.com/api/catalog/v1?q=Phoenix+building+permits` and
+  `hub.arcgis.com/api/search/v1/collections/dataset/items?q=Phoenix+building+permits` both return
+  no usable matching dataset for Phoenix's actual domain -- so the catalog miss is real, not a
+  query bug, and the run correctly fell through to 2.3's search-fallback path. The fallback's
+  SearXNG searches for the city's permit portal name are the ones landing on junk (Wikipedia
+  "Phoenix (mythology)", Britannica, USNews travel, a Play Store app listing) -- this is the same
+  residual gap 6.4's progress note already flagged as expected-not-a-bug: the junk filter added in
+  6.4 catches results that ignore the query entirely, but doesn't catch a technically
+  on-topic-but-wrong page (a Britannica city-overview article that legitimately contains "Phoenix"
+  and "Arizona"). Left as-is rather than widening this task into another search-quality fix.
+- Stopped the process cleanly for this commit checkpoint (kill, confirmed no longer running):
+  0 projects, 53 SearXNG searches, 5 Jina searches -- comfortably inside the 150-project/
+  450-search caps, so this did not hit a cap; leaving it for 6.7 to resume and finish the
+  remaining ~9 AZ cities.
+- Checked: `bash tooling/qa/check-lead-finder.sh` -- all suites still green (46 lead-finder tests,
+  no code changed this task, only the plan/progress files and the run folder's saved files).
+- Left open for 6.7: resume with the same `--state AZ --run-id 20260914-full` command
+  (`nohup ... >> propertystack/runs/AZ/20260914-full/log.txt 2>&1 & disown`), finish the queue,
+  and -- since 0 real leads exist yet -- decide there whether AZ's near-zero free-permit-portal
+  coverage means it should roll to the next state per 1.4's "<30 projects -> roll into the next
+  state" rule once the full city list has been tried.

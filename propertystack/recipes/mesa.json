@@ -1,0 +1,14 @@
+{
+  "city": "Mesa",
+  "state": "AZ",
+  "system": "socrata",
+  "endpoint": "https://citydata.mesaaz.gov/resource/2gkz-7z4f.json",
+  "fields": {
+    "issue_date": "issued_date",
+    "permit_type": "street_type",
+    "units": "unit_number",
+    "address": "property_address"
+  },
+  "date_tested": "2026-09-14",
+  "completeness": "has contractor_address, finaled_date, issued_date, number_of_dwelling_units, permit_number, permit_year, property_address, residential_permit, street_type, type_of_work, unit_number; 0 of 20 sample rows look multifamily"
+}
