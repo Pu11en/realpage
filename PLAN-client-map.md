@@ -11,7 +11,7 @@ RealPage resident logins live at **loftliving.com**, **activebuilding.com** and
 A building whose own site links to one of these is a proven client.
 
 Run with: `Do the next unticked task in PLAN-client-map.md, then tick it and stop.`
-Check: `python3 -m pytest -q propertystack/skills/client-map/ && bash tooling/qa/check-panel.sh`
+Check: `bash tooling/qa/check-client-map.sh`
 Try: `bash tooling/dev.sh`
 Open: http://localhost:8765/map.html
 
