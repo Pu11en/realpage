@@ -61,7 +61,7 @@ local-trial-key-change-me` and `X-OpenWebUI-User-Email: admin@localhost`, model 
   pattern needs (a phone number split across chunks must still be bolded). Unit tests in
   `chatbot/tests/test_autobold.py` (plain → bolded, already-bold untouched, URL untouched,
   pattern split across two chunks). Rebuild, run `check-answers.sh`. Commit.
-- [ ] **T4 Panel only, never pop out.** In `site/js/chat-panel.js` (and its CSS), remove the
+- [x] **T4 Panel only, never pop out.** In `site/js/chat-panel.js` (and its CSS), remove the
   header's "Open in full page" link and the load-error "Open it in a new tab" link; the error
   state instead shows "Couldn't load the chat." with a **Try again** button that reloads the
   iframe. Keep the Google sign-in pop-up (Google blocks sign-in inside a frame; it closes by

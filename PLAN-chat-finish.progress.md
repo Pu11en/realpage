@@ -20,3 +20,10 @@
 - `chatbot/proxy.py` uses it on all paths: site `/chat` and `/chat/stream`, Open WebUI gateway non-streamed and streamed (SSE lines rewritten; held text sent before finish/[DONE]), and saved deep-dive replays. Dockerfile copies `autobold.py`.
 - Checked: `chatbot/tests/test_autobold.py` 13 passed (plain→bold, already-bold untouched, URLs untouched, split chunks, 600 random splits equal whole-text result, gateway SSE rewrite). Rebuilt with `tooling/dev.sh`; `check-answers.sh` 5/5 passed; Check line passes.
 - Open: month-year only dates ("July 2026") are not bolded (plan asked for month-day-year).
+
+## T4 Panel only, never pop out — done 2026-09-13
+- `site/js/chat-panel.js`: removed the header "Open in full page" link and the error "Open it in a new tab" link. The error now says "Couldn't load the chat." with a **Try again** button that reloads the frame in place (and restarts the load timer). Google sign-in pop-up unchanged. Load timeout can be shortened for tests via `window.PS_CHAT_LOAD_TIMEOUT_MS` (default 8 s).
+- `site/css/chat-panel.css`: dropped the full-page link style, added the Try again button style.
+- `panel_test.py`: new check — no `target=_blank`/full-page link or text in the panel; a hung chat (Playwright route never answers) shows the error, and Try again loads the chat. `sweep.py` phone check also flags any new-tab link.
+- Checked: Check line passes; with the old chat-panel.js the new test fails with 3 bugs (so it really catches it). Commit 5c32d32.
+- Open: nothing.
