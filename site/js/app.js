@@ -44,10 +44,6 @@ function renderShell(activeKey) {
       <div class="wordmark">PropertyStack</div>
       <nav>${navHtml}</nav>
       <div class="top-controls">
-        <select id="area-select">
-          <option>Plano</option>
-          <option>Richardson</option>
-        </select>
         <select id="view-as-select">${vendorOptions}</select>
         <div style="color: var(--text-dim); font-size: 11px;">Last updated: Sep 10, 2026</div>
       </div>
@@ -92,4 +88,19 @@ function isDimmedRow(vendor) {
 function placeholderBanner(statusText) {
   if (!statusText) return "";
   return `<div class="placeholder-banner">${statusText}</div>`;
+}
+
+// Early Leads: one button per area (5.2). `areas` is site/data/areas/index.json's
+// `areas` list; `activeSlug` is the one currently shown; `onSelect(slug)` swaps data.
+function renderAreaButtons(areas, activeSlug) {
+  if (!areas || areas.length < 2) return "";
+  return `<div class="area-buttons">${areas.map((a) => `
+    <button type="button" class="area-btn ${a.slug === activeSlug ? "active" : ""}" data-area="${a.slug}">${a.label}</button>
+  `).join("")}</div>`;
+}
+
+function wireAreaButtons(container, onSelect) {
+  container.querySelectorAll(".area-btn").forEach((btn) => {
+    btn.addEventListener("click", () => onSelect(btn.dataset.area));
+  });
 }

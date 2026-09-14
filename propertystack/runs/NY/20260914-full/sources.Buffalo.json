@@ -1,0 +1,14 @@
+{
+ "city": "Buffalo",
+ "state": "NY",
+ "system": "socrata",
+ "endpoint": "https://data.buffalony.gov/resource/9p2d-f3yt.json",
+ "fields": {
+  "issue_date": "issued",
+  "permit_type": "aptype",
+  "units": "units_added",
+  "address": "stname"
+ },
+ "date_tested": "2026-09-14",
+ "completeness": "has aptype, expdate, lictype, units_added, units_lost; 3 of 20 sample rows look multifamily"
+}

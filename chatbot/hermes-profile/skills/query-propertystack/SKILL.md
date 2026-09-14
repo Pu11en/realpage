@@ -13,7 +13,8 @@ metadata:
 
 The tools come from the `propertystack` plugin
 (`hermes-profile/plugins/propertystack/`). At startup it loads every CSV in
-`propertystack/data/plano-richardson/` into SQLite, one table per file.
+`propertystack/data/plano-richardson/` into SQLite (one table per file), plus
+every other area's `chat-leads.csv` (5.4) merged into one `state_leads` table.
 
 | Table | Say it as (in Sources) | What it is |
 |---|---|---|
@@ -23,8 +24,9 @@ The tools come from the `propertystack` plugin
 | `sales` | County sales records | 28 recent sales from county deeds |
 | `upcoming` | City permits and news | 14 pipeline projects (permits/news) |
 | `master` | County property records + software check | 1+2+3 joined, one row per building |
-| `leads` | PropertyStack lead ranking | 42 ranked leads, score parts + one-sentence `why` |
+| `leads` | PropertyStack lead ranking | 42 ranked Plano/Richardson leads, score parts + one-sentence `why` |
 | `contacts` | Contact info from building websites | Phone/email scraped from websites, where found |
+| `state_leads` | PropertyStack lead ranking | Every other tracked area's leads, one flat row each -- filter with `WHERE area='<slug>'` |
 
 Research files (01-company .. 09-ai-visibility) are searched with
 `ps_research_search` and read with `ps_research_read`; in Sources, say

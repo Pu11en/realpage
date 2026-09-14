@@ -1,0 +1,14 @@
+{
+  "city": "Bronx",
+  "state": "NY",
+  "system": "socrata",
+  "endpoint": "https://bronx.lehman.cuny.edu/resource/eeyd-a5c6.json",
+  "fields": {
+    "issue_date": "filing_date",
+    "permit_type": "job_type",
+    "units": "community_board",
+    "address": "owner_s_house_street"
+  },
+  "date_tested": "2026-09-14",
+  "completeness": "has bldg_type, community_board, expiration_date, filing_date, issuance_date, job_start_date, job_type, owner_s_business_type, permit_sequence, permit_status, permit_subtype, permit_type, permittee_s_business_name, permittee_s_first_last_name, permittee_s_license, permittee_s_license_type, permittee_s_phone, work_type; 0 of 20 sample rows look multifamily"
+}

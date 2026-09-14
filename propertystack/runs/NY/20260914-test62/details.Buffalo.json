@@ -1,0 +1,31 @@
+[
+ {
+  "area": "ny",
+  "city": "Buffalo",
+  "name": "",
+  "address": "2227 SOUTH PARK",
+  "lat": 42.837628662823,
+  "lon": -78.823901999398,
+  "units": 0,
+  "stage": "permitted",
+  "permit_date": "2026-08-18",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "https://www.education.com/?msockid=3cba9ffe2cd26c680fc2882a2dbd6d04",
+  "software": "unknown",
+  "links": {
+   "permit": "https://data.buffalony.gov/resource/9p2d-f3yt.json",
+   "website": "https://www.education.com/?msockid=3cba9ffe2cd26c680fc2882a2dbd6d04"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://data.buffalony.gov/resource/9p2d-f3yt.json"
+   }
+  ],
+  "why": "new multifamily permit"
+ }
+]

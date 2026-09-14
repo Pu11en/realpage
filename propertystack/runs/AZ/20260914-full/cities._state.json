@@ -1,0 +1,145 @@
+{
+ "state": "AZ",
+ "window": "2025-08..2026-07",
+ "source": "https://www2.census.gov/econ/bps/",
+ "cities": [
+  {
+   "city": "Phoenix",
+   "is_county_area": false,
+   "permits_5plus": 6262,
+   "realpage_count": 5
+  },
+  {
+   "city": "Tempe",
+   "is_county_area": false,
+   "permits_5plus": 1149,
+   "realpage_count": 4
+  },
+  {
+   "city": "Scottsdale",
+   "is_county_area": false,
+   "permits_5plus": 718,
+   "realpage_count": 5
+  },
+  {
+   "city": "Goodyear",
+   "is_county_area": false,
+   "permits_5plus": 700,
+   "realpage_count": 3
+  },
+  {
+   "city": "Mesa",
+   "is_county_area": false,
+   "permits_5plus": 661,
+   "realpage_count": 3
+  },
+  {
+   "city": "Tucson",
+   "is_county_area": false,
+   "permits_5plus": 644,
+   "realpage_count": 3
+  },
+  {
+   "city": "Peoria",
+   "is_county_area": false,
+   "permits_5plus": 512,
+   "realpage_count": 1
+  },
+  {
+   "city": "Oro Valley",
+   "is_county_area": false,
+   "permits_5plus": 457,
+   "realpage_count": 0
+  },
+  {
+   "city": "Apache Junction",
+   "is_county_area": false,
+   "permits_5plus": 381,
+   "realpage_count": 0
+  },
+  {
+   "city": "Gilbert",
+   "is_county_area": false,
+   "permits_5plus": 283,
+   "realpage_count": 2
+  },
+  {
+   "city": "Yuma",
+   "is_county_area": false,
+   "permits_5plus": 246,
+   "realpage_count": 0
+  },
+  {
+   "city": "Youngtown",
+   "is_county_area": false,
+   "permits_5plus": 233,
+   "realpage_count": 0
+  },
+  {
+   "city": "Pinal County Unincorporated Area",
+   "is_county_area": true,
+   "permits_5plus": 203,
+   "realpage_count": 0
+  },
+  {
+   "city": "Surprise",
+   "is_county_area": false,
+   "permits_5plus": 136,
+   "realpage_count": 0
+  },
+  {
+   "city": "Chandler",
+   "is_county_area": false,
+   "permits_5plus": 109,
+   "realpage_count": 0
+  },
+  {
+   "city": "Casa Grande",
+   "is_county_area": false,
+   "permits_5plus": 104,
+   "realpage_count": 0
+  },
+  {
+   "city": "Queen Creek",
+   "is_county_area": false,
+   "permits_5plus": 60,
+   "realpage_count": 0
+  },
+  {
+   "city": "Cottonwood",
+   "is_county_area": false,
+   "permits_5plus": 55,
+   "realpage_count": 0
+  },
+  {
+   "city": "Buckeye",
+   "is_county_area": false,
+   "permits_5plus": 26,
+   "realpage_count": 0
+  },
+  {
+   "city": "Fountain Hills",
+   "is_county_area": false,
+   "permits_5plus": 22,
+   "realpage_count": 0
+  },
+  {
+   "city": "Snowflake",
+   "is_county_area": false,
+   "permits_5plus": 10,
+   "realpage_count": 0
+  },
+  {
+   "city": "Camp Verde",
+   "is_county_area": false,
+   "permits_5plus": 6,
+   "realpage_count": 0
+  },
+  {
+   "city": "Pima County Unincorporated Area",
+   "is_county_area": true,
+   "permits_5plus": 5,
+   "realpage_count": 0
+  }
+ ]
+}

@@ -1,0 +1,574 @@
+{
+  "area": "az",
+  "generatedFrom": "propertystack/data/az/leads.json",
+  "stats": {
+    "leads": 19,
+    "cities": 8,
+    "unitsInPlay": 2640,
+    "newThisWeek": 0,
+    "openingNext12mo": 0
+  },
+  "cities": [
+    "Casa Grande",
+    "Cottonwood",
+    "Flagstaff",
+    "Glendale",
+    "Mesa",
+    "Phoenix",
+    "Scottsdale",
+    "Tucson"
+  ],
+  "leads": [
+    {
+      "id": "az-1",
+      "property": "Canyon Del Rio Village",
+      "community": "Canyon Del Rio Village",
+      "city": "Flagstaff",
+      "address": null,
+      "units": 170,
+      "stage": "permitted",
+      "permitDate": "2024-04-09",
+      "openingDate": null,
+      "saleDate": null,
+      "buyer": null,
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "hud": "HUD FHA #12335598"
+      },
+      "sources": [
+        "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx",
+        "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx"
+      ],
+      "signalType": "Upcoming",
+      "signal": "Opens: not public yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 170 units \u00b7 software not picked yet",
+      "score": 100,
+      "isNew": false
+    },
+    {
+      "id": "az-2",
+      "property": "The Lofts at G Diamond Ranch",
+      "community": "The Lofts at G Diamond Ranch",
+      "city": "Casa Grande",
+      "address": null,
+      "units": 120,
+      "stage": "permitted",
+      "permitDate": "2024-05-10",
+      "openingDate": null,
+      "saleDate": null,
+      "buyer": null,
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "hud": "HUD FHA #12335599"
+      },
+      "sources": [
+        "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx",
+        "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx"
+      ],
+      "signalType": "Upcoming",
+      "signal": "Opens: not public yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 120 units \u00b7 software not picked yet",
+      "score": 97,
+      "isNew": false
+    },
+    {
+      "id": "az-3",
+      "property": "San Cipriano Townhomes",
+      "community": "San Cipriano Townhomes",
+      "city": "Cottonwood",
+      "address": null,
+      "units": 52,
+      "stage": "permitted",
+      "permitDate": "2024-11-18",
+      "openingDate": null,
+      "saleDate": null,
+      "buyer": null,
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "hud": "HUD FHA #12335608"
+      },
+      "sources": [
+        "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx",
+        "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx"
+      ],
+      "signalType": "Upcoming",
+      "signal": "Opens: not public yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 52 units \u00b7 software not picked yet",
+      "score": 94,
+      "isNew": false
+    },
+    {
+      "id": "az-4",
+      "property": "The Place at Rita Ranch",
+      "community": "The Place at Rita Ranch",
+      "city": "Tucson",
+      "address": null,
+      "units": 189,
+      "stage": "permitted",
+      "permitDate": "2025-03-14",
+      "openingDate": null,
+      "saleDate": null,
+      "buyer": null,
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "hud": "HUD FHA #12335610"
+      },
+      "sources": [
+        "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx",
+        "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx"
+      ],
+      "signalType": "Upcoming",
+      "signal": "Opens: not public yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 189 units \u00b7 software not picked yet",
+      "score": 91,
+      "isNew": false
+    },
+    {
+      "id": "az-5",
+      "property": "Parkside Reserve",
+      "community": "Parkside Reserve",
+      "city": "Tucson",
+      "address": null,
+      "units": 210,
+      "stage": "permitted",
+      "permitDate": "2025-09-09",
+      "openingDate": null,
+      "saleDate": null,
+      "buyer": null,
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "hud": "HUD FHA #12335607"
+      },
+      "sources": [
+        "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx",
+        "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx"
+      ],
+      "signalType": "Upcoming",
+      "signal": "Opens: not public yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 210 units \u00b7 software not picked yet",
+      "score": 88,
+      "isNew": false
+    },
+    {
+      "id": "az-6",
+      "property": "Laveen Commons",
+      "community": "Laveen Commons",
+      "city": "Phoenix",
+      "address": null,
+      "units": 150,
+      "stage": "permitted",
+      "permitDate": "2025-12-16",
+      "openingDate": null,
+      "saleDate": null,
+      "buyer": null,
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "hud": "HUD FHA #12335606"
+      },
+      "sources": [
+        "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx",
+        "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx"
+      ],
+      "signalType": "Upcoming",
+      "signal": "Opens: not public yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 150 units \u00b7 software not picked yet",
+      "score": 85,
+      "isNew": false
+    },
+    {
+      "id": "az-7",
+      "property": "San Cipriano Townhomes",
+      "community": "San Cipriano Townhomes",
+      "city": "Cottonwood",
+      "address": null,
+      "units": 52,
+      "stage": "permitted",
+      "permitDate": "2025-12-16",
+      "openingDate": null,
+      "saleDate": null,
+      "buyer": null,
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "hud": "HUD FHA #12335608"
+      },
+      "sources": [
+        "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx",
+        "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx"
+      ],
+      "signalType": "Upcoming",
+      "signal": "Opens: not public yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 52 units \u00b7 software not picked yet",
+      "score": 82,
+      "isNew": false
+    },
+    {
+      "id": "az-8",
+      "property": "The Radley Scottsdale",
+      "community": "The Radley Scottsdale",
+      "city": "Scottsdale",
+      "address": null,
+      "units": 23,
+      "stage": "permitted",
+      "permitDate": "2026-05-21",
+      "openingDate": null,
+      "saleDate": null,
+      "buyer": null,
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "hud": "HUD FHA #12335621"
+      },
+      "sources": [
+        "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx",
+        "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx"
+      ],
+      "signalType": "Upcoming",
+      "signal": "Opens: not public yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 23 units \u00b7 software not picked yet",
+      "score": 79,
+      "isNew": false
+    },
+    {
+      "id": "az-9",
+      "property": "The Radley Glendale",
+      "community": "The Radley Glendale",
+      "city": "Glendale",
+      "address": null,
+      "units": 37,
+      "stage": "permitted",
+      "permitDate": "2026-05-28",
+      "openingDate": null,
+      "saleDate": null,
+      "buyer": null,
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "hud": "HUD FHA #12335619"
+      },
+      "sources": [
+        "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx",
+        "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx"
+      ],
+      "signalType": "Upcoming",
+      "signal": "Opens: not public yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 37 units \u00b7 software not picked yet",
+      "score": 76,
+      "isNew": false
+    },
+    {
+      "id": "az-10",
+      "property": "Bella Victoria",
+      "community": "Bella Victoria",
+      "city": "Mesa",
+      "address": null,
+      "units": 236,
+      "stage": "sold",
+      "permitDate": "2026-04-29",
+      "openingDate": null,
+      "saleDate": null,
+      "buyer": null,
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "hud": "HUD FHA #12311364"
+      },
+      "sources": [
+        "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx",
+        "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx"
+      ],
+      "signalType": "Sold",
+      "signal": "Sold",
+      "why": "Sold \u00b7 236 units \u00b7 new owner may re-pick software",
+      "score": 73,
+      "isNew": false
+    },
+    {
+      "id": "az-11",
+      "property": "The M at Shadow Mountain",
+      "community": "The M at Shadow Mountain",
+      "city": "Phoenix",
+      "address": null,
+      "units": 404,
+      "stage": "sold",
+      "permitDate": "2026-04-01",
+      "openingDate": null,
+      "saleDate": null,
+      "buyer": null,
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "hud": "HUD FHA #12311360"
+      },
+      "sources": [
+        "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx",
+        "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx"
+      ],
+      "signalType": "Sold",
+      "signal": "Sold",
+      "why": "Sold \u00b7 404 units \u00b7 new owner may re-pick software",
+      "score": 70,
+      "isNew": false
+    },
+    {
+      "id": "az-12",
+      "property": "Portola Biltmore",
+      "community": "Portola Biltmore",
+      "city": "Phoenix",
+      "address": null,
+      "units": 114,
+      "stage": "sold",
+      "permitDate": "2026-02-23",
+      "openingDate": null,
+      "saleDate": null,
+      "buyer": null,
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "hud": "HUD FHA #12311363"
+      },
+      "sources": [
+        "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx",
+        "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx"
+      ],
+      "signalType": "Sold",
+      "signal": "Sold",
+      "why": "Sold \u00b7 114 units \u00b7 new owner may re-pick software",
+      "score": 67,
+      "isNew": false
+    },
+    {
+      "id": "az-13",
+      "property": "Elevate on Vineyard",
+      "community": "Elevate on Vineyard",
+      "city": "Phoenix",
+      "address": null,
+      "units": 54,
+      "stage": "sold",
+      "permitDate": "2026-02-06",
+      "openingDate": null,
+      "saleDate": null,
+      "buyer": null,
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "hud": "HUD FHA #12311362"
+      },
+      "sources": [
+        "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx",
+        "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx"
+      ],
+      "signalType": "Sold",
+      "signal": "Sold",
+      "why": "Sold \u00b7 54 units \u00b7 new owner may re-pick software",
+      "score": 64,
+      "isNew": false
+    },
+    {
+      "id": "az-14",
+      "property": "Kivel Manor",
+      "community": "Kivel Manor",
+      "city": "Phoenix",
+      "address": null,
+      "units": 255,
+      "stage": "sold",
+      "permitDate": "2025-09-10",
+      "openingDate": null,
+      "saleDate": null,
+      "buyer": null,
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "hud": "HUD FHA #12311359"
+      },
+      "sources": [
+        "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx",
+        "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx"
+      ],
+      "signalType": "Sold",
+      "signal": "Sold",
+      "why": "Sold \u00b7 255 units \u00b7 new owner may re-pick software",
+      "score": 61,
+      "isNew": false
+    },
+    {
+      "id": "az-15",
+      "property": "Council House Apartments",
+      "community": "Council House Apartments",
+      "city": "Tucson",
+      "address": null,
+      "units": 149,
+      "stage": "sold",
+      "permitDate": "2025-08-20",
+      "openingDate": null,
+      "saleDate": null,
+      "buyer": null,
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "hud": "HUD FHA #12311356"
+      },
+      "sources": [
+        "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx",
+        "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx"
+      ],
+      "signalType": "Sold",
+      "signal": "Sold",
+      "why": "Sold \u00b7 149 units \u00b7 new owner may re-pick software",
+      "score": 58,
+      "isNew": false
+    },
+    {
+      "id": "az-16",
+      "property": "The Reserve at Thunderbird II",
+      "community": "The Reserve at Thunderbird II",
+      "city": "Phoenix",
+      "address": null,
+      "units": 134,
+      "stage": "sold",
+      "permitDate": "2025-04-18",
+      "openingDate": null,
+      "saleDate": null,
+      "buyer": null,
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "hud": "HUD FHA #12311358"
+      },
+      "sources": [
+        "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx",
+        "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx"
+      ],
+      "signalType": "Sold",
+      "signal": "Sold",
+      "why": "Sold \u00b7 134 units \u00b7 new owner may re-pick software",
+      "score": 55,
+      "isNew": false
+    },
+    {
+      "id": "az-17",
+      "property": "The Reserve at Thunderbird I",
+      "community": "The Reserve at Thunderbird I",
+      "city": "Phoenix",
+      "address": null,
+      "units": 108,
+      "stage": "sold",
+      "permitDate": "2025-04-15",
+      "openingDate": null,
+      "saleDate": null,
+      "buyer": null,
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "hud": "HUD FHA #12311357"
+      },
+      "sources": [
+        "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx",
+        "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx"
+      ],
+      "signalType": "Sold",
+      "signal": "Sold",
+      "why": "Sold \u00b7 108 units \u00b7 new owner may re-pick software",
+      "score": 52,
+      "isNew": false
+    },
+    {
+      "id": "az-18",
+      "property": "Marquee on 5th",
+      "community": "Marquee on 5th",
+      "city": "Tucson",
+      "address": null,
+      "units": 96,
+      "stage": "sold",
+      "permitDate": "2024-11-05",
+      "openingDate": null,
+      "saleDate": null,
+      "buyer": null,
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "hud": "HUD FHA #12311355"
+      },
+      "sources": [
+        "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx",
+        "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx"
+      ],
+      "signalType": "Sold",
+      "signal": "Sold",
+      "why": "Sold \u00b7 96 units \u00b7 new owner may re-pick software",
+      "score": 49,
+      "isNew": false
+    },
+    {
+      "id": "az-19",
+      "property": "Escarlata 31",
+      "community": "Escarlata 31",
+      "city": "Phoenix",
+      "address": null,
+      "units": 87,
+      "stage": "sold",
+      "permitDate": "2024-03-15",
+      "openingDate": null,
+      "saleDate": null,
+      "buyer": null,
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "hud": "HUD FHA #12311353"
+      },
+      "sources": [
+        "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx",
+        "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx"
+      ],
+      "signalType": "Sold",
+      "signal": "Sold",
+      "why": "Sold \u00b7 87 units \u00b7 new owner may re-pick software",
+      "score": 46,
+      "isNew": false
+    }
+  ]
+}
