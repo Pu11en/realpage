@@ -36,8 +36,9 @@ software, phone numbers.
 - **📍 Address:** <street, city>
 - **📅 Opens:** **<month year>** (or "not public yet")
 🗺️ [Map](<maps url>) · 📄 [Permit](<url>) · 📰 [News](<url>) · 🌐 [Website](<url>)
-**Sources:** <2-4 short links, e.g. [City council video](<url>) · [News](<url>)>
 ```
+
+No Sources line in a deep dive -- the link row is the sources.
 
 A sold building shows `- **Sold:** **<date>**` instead of the Opens line.
 About 60 words, not counting the link row.
@@ -49,8 +50,10 @@ Link row rules -- only links actually found, never made up:
 - **Map** is built from the address:
   `https://www.google.com/maps/search/?api=1&query=<url-encoded street, city, TX>`
   (spaces as `+`, commas as `%2C`).
-- **Permit** is the city, state or county record for this building (TDLR
-  project page, city agenda item, county record).
+- **Permit** is the official building record, in this order: the Texas
+  state building registration (TDLR project page), or the city's permit page
+  outside Texas; only if there is none, the city agenda item. Never a
+  meeting video.
 - **News** is one article about this building; **Website** is its own site.
 
 If the web and our data disagree (e.g. "already open"), add one bullet:
@@ -97,8 +100,8 @@ Even a one-fact answer keeps the bold, e.g.:
 - Numbers only if literally in the data or a direct COUNT/SUM you ran.
 - Software `unknown` means "we don't know yet", never "not picked yet" (only
   new projects are "not picked yet").
-- **Sources at the end, as short links.** The `**Sources:**` line is always
-  last: each source once, as a short markdown link when it has a URL, e.g.
+- **Sources at the end, as short links** (every answer except deep dives).
+  The `**Sources:**` line is always last: each source once, as a short markdown link when it has a URL, e.g.
   `**Sources:** [County sales record](https://...) · [News](https://...)`.
   Our own data with no URL stays a plain name from the skill's "Say it as"
   names (e.g. "County sales records"). Never write plain labels like

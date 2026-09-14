@@ -27,3 +27,11 @@
 - check-answers.sh: runs 1-2 failed only on sold-list length; after the rule fix, runs 4 and 5 both 5/5.
   Plan Check passes (17 tests, panel clean, readable OK).
 - Open: the bot sometimes gives "County sales records" plain, sometimes a data.texas.gov link -- both allowed.
+
+## K3 + fixes with Drew — done (2026-09-13, live session)
+- Link guard: `chatbot/linkfix.py`; the plugin records every URL its tools return in
+  `/opt/data/seen-urls.txt`; a link never seen is removed with its label (Maps links always OK).
+- Labels come from the web address (Community Impact, Texas building record, "<City> city video").
+- 📄 Permit = official building record (TDLR / city permit page; agenda only if none); never a video.
+- Deep dives have no Sources line (link row covers it); normal answers keep Sources.
+- 27 chatbot tests pass; real Sherman/Orchards deep dives + sold list checked.

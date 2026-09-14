@@ -20,7 +20,7 @@ WORKDIR /app
 
 COPY chatbot/hermes-profile /opt/hermes-profile
 COPY chatbot/docker/start-hermes.sh /opt/hermes-start/start-hermes.sh
-COPY chatbot/proxy.py chatbot/autobold.py /opt/chatbot/
+COPY chatbot/proxy.py chatbot/autobold.py chatbot/linkfix.py /opt/chatbot/
 
 # Knowledge base, baked in read-only.
 COPY --from=kb /kb /opt/propertystack

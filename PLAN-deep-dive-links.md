@@ -48,7 +48,7 @@ Open: http://localhost:8765 → Early Leads → ✦ Deep dive
   Sources line names "record"/"news"/"website" without a link, deep-dive word limit ~70
   excluding the link row and Sources. Run `bash tooling/qa/check-answers.sh` (💲 a few cents)
   until it passes twice. Commit.
-- [ ] **K3 Link guard (no made-up links).** The propertystack plugin
+- [x] **K3 Link guard (no made-up links).** The propertystack plugin
   (`chatbot/hermes-profile/plugins/propertystack/__init__.py`) appends every URL its tools
   return (data rows, research, web search results, pages read) to a seen-URLs file on the
   volume (`/opt/data/seen-urls.txt`, deduped, capped size). In `chatbot/proxy.py`, before an

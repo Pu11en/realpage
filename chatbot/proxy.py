@@ -22,6 +22,7 @@ import aiohttp
 from aiohttp import web
 
 from autobold import StreamBolder, bold
+from linkfix import LineFixer, fix_links
 
 HERMES_BASE = f"http://127.0.0.1:{os.environ.get('API_SERVER_PORT', '8642')}/v1"
 HERMES_URL = f"{HERMES_BASE}/chat/completions"
@@ -402,31 +403,33 @@ async def _gateway_replay(request: web.Request, body: dict, text: str) -> web.St
     return resp
 
 
-def _bold_completion(data: dict) -> None:
-    """Auto-bold a non-streamed chat completion in place."""
+def _bold_completion(data: dict, deep_dive: bool = False) -> None:
+    """Clean links in, then auto-bold, a non-streamed chat completion in place."""
     try:
         msg = data["choices"][0]["message"]
         if isinstance(msg.get("content"), str):
-            msg["content"] = bold(msg["content"])
+            msg["content"] = bold(fix_links(msg["content"], deep_dive=deep_dive))
     except (KeyError, IndexError, TypeError, AttributeError):
         pass
 
 
 class _SseBolder:
-    """Rewrite an OpenAI-style SSE byte stream so answer text is auto-bolded.
+    """Rewrite an OpenAI-style SSE byte stream: links cleaned (linkfix), then auto-bolded.
 
     Content deltas go through a StreamBolder (which may hold back a short
     tail); any held text is sent as its own chunk before the next non-text
     event (tool progress, finish, [DONE]). Everything else passes unchanged.
     """
 
-    def __init__(self) -> None:
+    def __init__(self, deep_dive: bool = False) -> None:
         self.pending = b""
+        self.fixer = LineFixer(deep_dive=deep_dive)
         self.bolder = StreamBolder()
         self.template: dict | None = None
 
     def _flush_text(self) -> bytes:
-        text = self.bolder.flush()
+        rest = self.fixer.flush()  # a non-text event ends the current line
+        text = (self.bolder.feed(rest) if rest else "") + self.bolder.flush()
         if not text or self.template is None:
             return b""
         chunk = {**self.template, "choices": [{"index": 0, "delta": {"content": text}, "finish_reason": None}]}
@@ -447,7 +450,7 @@ class _SseBolder:
         except Exception:
             return self._flush_text() + line
         self.template = {k: v for k, v in data.items() if k != "choices"}
-        delta["content"] = self.bolder.feed(content)
+        delta["content"] = self.bolder.feed(self.fixer.feed(content))
         return b"data: " + json.dumps(data).encode() + (b"\r" if text.endswith("\r") else b"")
 
     def feed(self, chunk: bytes) -> bytes:
@@ -499,7 +502,7 @@ async def gateway_chat(request: web.Request) -> web.StreamResponse:
     if dive_key and not _deep_dive_redo(chat_id, dive_key, fresh):
         saved = _deep_dive_load(dive_key)
         if saved:
-            return await _gateway_replay(request, body, bold(_deep_dive_note(saved)))
+            return await _gateway_replay(request, body, bold(fix_links(_deep_dive_note(saved), deep_dive=True)))
 
     async with _slots:
         try:
@@ -507,7 +510,7 @@ async def gateway_chat(request: web.Request) -> web.StreamResponse:
                 async with s.post(HERMES_URL, headers={"Authorization": f"Bearer {HERMES_KEY}"}, json=body) as r:
                     if not body.get("stream"):
                         data = await r.json(content_type=None)
-                        _bold_completion(data)
+                        _bold_completion(data, deep_dive=bool(dive_key))
                         if dive_key and r.status == 200:
                             try:
                                 _deep_dive_save(dive_key, question, data["choices"][0]["message"]["content"])
@@ -521,7 +524,7 @@ async def gateway_chat(request: web.Request) -> web.StreamResponse:
                     await resp.prepare(request)
                     out_chars = 0
                     raw = bytearray()
-                    rewriter = _SseBolder()
+                    rewriter = _SseBolder(deep_dive=bool(dive_key))
                     async for chunk in r.content.iter_any():
                         out_chars += len(chunk)
                         chunk = rewriter.feed(chunk)

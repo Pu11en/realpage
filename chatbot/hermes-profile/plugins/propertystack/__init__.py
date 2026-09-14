@@ -81,6 +81,28 @@ def _research_source(rel: str) -> str:
     return f"RealPage research notes ({topic})"
 
 
+# Every URL a tool hands the agent is remembered, so the chat proxy's link
+# guard (chatbot/linkfix.py) can drop any link the agent made up.
+SEEN_URLS = Path(os.environ.get("HERMES_HOME", "/opt/data")) / "seen-urls.txt"
+SEEN_MAX_BYTES = 4_000_000
+_URL_RE = re.compile(r"https?://[^\s)\]>\"'`,]+")
+
+
+def _remember_urls(*texts: str) -> None:
+    urls = {u.rstrip(".;:!?") for t in texts if t for u in _URL_RE.findall(t)}
+    if not urls:
+        return
+    try:
+        SEEN_URLS.parent.mkdir(parents=True, exist_ok=True)
+        if SEEN_URLS.exists() and SEEN_URLS.stat().st_size > SEEN_MAX_BYTES:
+            keep = SEEN_URLS.read_text(errors="replace").splitlines()[-20000:]
+            SEEN_URLS.write_text("\n".join(keep) + "\n")
+        with open(SEEN_URLS, "a", encoding="utf-8") as f:
+            f.write("".join(u + "\n" for u in sorted(urls)))
+    except OSError:
+        pass
+
+
 def _build_db() -> None:
     SCHEMA.clear()
     tmp = DB_PATH.with_suffix(".building")
@@ -92,6 +114,7 @@ def _build_db() -> None:
         if not rows:
             continue
         header, body = rows[0], rows[1:]
+        _remember_urls(*(c for r in body for c in r if "http" in c))
         table = _table_name(path.name)
         if table == "contacts" and "email" in header:  # same junk filter as the site
             i = header.index("email")
@@ -149,6 +172,7 @@ def ps_sql(args: dict, **_) -> str:
         con.close()
     except sqlite3.Error as e:
         return json.dumps({"error": f"SQL error: {e}"})
+    _remember_urls(*(str(c) for r in rows for c in r if c and "http" in str(c)))
     return json.dumps({
         "columns": cols,
         "rows": rows[:MAX_ROWS],
@@ -185,6 +209,7 @@ def ps_research_read(args: dict, **_) -> str:
     if RESEARCH_DIR.resolve() not in target.parents or not target.is_file():
         return json.dumps({"error": "Unknown file.", "files": [str(p.relative_to(RESEARCH_DIR)) for p in _research_files()]})
     text = target.read_text(errors="replace")
+    _remember_urls(text[:20000])
     return json.dumps({"source_name": _research_source(rel), "text": text[:20000], "truncated": len(text) > 20000})
 
 
@@ -209,6 +234,7 @@ def ps_web_search(args: dict, **_) -> str:
         data = json.loads(body).get("data") or []
     except Exception as e:
         return json.dumps({"error": f"Web search failed: {type(e).__name__}"})
+    _remember_urls(*(x.get("url", "") for x in data[:8]))
     return json.dumps({"results": [
         {"title": x.get("title", ""), "url": x.get("url", ""), "description": (x.get("description") or "")[:300]}
         for x in data[:8]
@@ -223,6 +249,7 @@ def ps_web_read(args: dict, **_) -> str:
         text = _jina_get("https://r.jina.ai/" + url, {"X-Retain-Images": "none"})
     except Exception as e:
         return json.dumps({"error": f"Could not read that page: {type(e).__name__}"})
+    _remember_urls(url, text[:WEB_CHARS])
     return json.dumps({"source_url": url, "text": text[:WEB_CHARS], "truncated": len(text) > WEB_CHARS})
 
 
