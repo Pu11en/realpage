@@ -110,7 +110,7 @@ Open: http://localhost:8765 → Early Leads → Az
   is marked "failed quality" and is **not** built into the site. Tests. Commit.
 
 ### Part 4: Real runs
-- [ ] **F10a Answer key matches the job.** Rebuild `propertystack/answer-keys/az.json` so every entry is
+- [x] **F10a Answer key matches the job.** Rebuild `propertystack/answer-keys/az.json` so every entry is
   something the tool is meant to find: **not yet open** (permitted / under construction / opening in the
   next ~18 months, or opened in the last 6 months) or **sold in the last 24 months**, 20+ units -- drop
   buildings that opened longer ago (e.g. Tempe's Northbend and Dwell at 5th and Farmer, opened March

@@ -506,3 +506,20 @@ Commit: (see git log for this file's commit)
   `ProjectName` field (e.g. news mentioning "REVELRY Tempe developer"), and/or
   reconsider whether a 2-building city-level answer-key check is a fair pass/fail bar
   versus running against the full state key in F11.
+
+## F10a Answer key matches the job -- done
+- Rebuilt `propertystack/answer-keys/az.json` from scratch with 20 entries, each researched live via
+  web search (news, press releases, developer sites, building's own site) -- never from a city permit
+  layer or the county sales file.
+- Dropped Northbend and Dwell at 5th and Farmer (both opened March 2025 -- too long ago per the plan).
+- Every entry is now either not-yet-open (permitted / under construction / pre-leasing / opened in the
+  last 6 months) or sold in the last 24 months, 20+ units.
+- Spread across the 6 target cities: Phoenix 4, Mesa 4, Scottsdale 4, Tucson 4, Tempe 2, Gilbert 2.
+- 6 entries carry a hand-verified `software` field (4 Yardi, 2 Entrata -- includes a non-Yardi vendor
+  as required), read off each building's own resident-portal/apply-now link.
+- Kept Marquee on 5th and Bella Victoria as F2/F7 fixture buildings (still leasing, still valid).
+- Checked: `bash tooling/qa/check-lead-finder.sh` passes (all skill test suites, panel_test, 0 QA
+  problems). Confirmed the new JSON parses and the city/stage/software spread matches the plan's aim.
+- Left open: `quality.py`'s recall-bar logic doesn't yet have the "single-city test reports recall but
+  doesn't fail on it" exemption the plan calls for -- that's part of F10 (the Tempe test run task
+  itself), not this answer-key rebuild, so it's untouched here.
