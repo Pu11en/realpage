@@ -1,0 +1,696 @@
+{
+ "window": "2025-08..2026-07",
+ "source": "https://www2.census.gov/econ/bps/",
+ "states": [
+  {
+   "state": "TX",
+   "permits_5plus_12mo": 50592,
+   "cities": [
+    {
+     "city": "Fort Worth",
+     "permits_5plus_12mo": 5170
+    },
+    {
+     "city": "Houston",
+     "permits_5plus_12mo": 4418
+    },
+    {
+     "city": "Austin",
+     "permits_5plus_12mo": 3694
+    },
+    {
+     "city": "Dallas",
+     "permits_5plus_12mo": 3377
+    },
+    {
+     "city": "Frisco",
+     "permits_5plus_12mo": 2188
+    },
+    {
+     "city": "McKinney",
+     "permits_5plus_12mo": 1308
+    },
+    {
+     "city": "Denton",
+     "permits_5plus_12mo": 1064
+    },
+    {
+     "city": "College Station",
+     "permits_5plus_12mo": 1013
+    },
+    {
+     "city": "Grand Prairie",
+     "permits_5plus_12mo": 884
+    },
+    {
+     "city": "Allen",
+     "permits_5plus_12mo": 828
+    }
+   ]
+  },
+  {
+   "state": "CA",
+   "permits_5plus_12mo": 49513,
+   "cities": [
+    {
+     "city": "Los Angeles",
+     "permits_5plus_12mo": 12724
+    },
+    {
+     "city": "San Jose",
+     "permits_5plus_12mo": 4162
+    },
+    {
+     "city": "San Diego",
+     "permits_5plus_12mo": 4071
+    },
+    {
+     "city": "San Francisco",
+     "permits_5plus_12mo": 1555
+    },
+    {
+     "city": "Irvine",
+     "permits_5plus_12mo": 1024
+    },
+    {
+     "city": "Sacramento",
+     "permits_5plus_12mo": 999
+    },
+    {
+     "city": "Tustin",
+     "permits_5plus_12mo": 798
+    },
+    {
+     "city": "Oakland",
+     "permits_5plus_12mo": 797
+    },
+    {
+     "city": "Chula Vista",
+     "permits_5plus_12mo": 745
+    },
+    {
+     "city": "Montclair",
+     "permits_5plus_12mo": 699
+    }
+   ]
+  },
+  {
+   "state": "FL",
+   "permits_5plus_12mo": 46891,
+   "cities": [
+    {
+     "city": "Miami",
+     "permits_5plus_12mo": 3851
+    },
+    {
+     "city": "St. Petersburg",
+     "permits_5plus_12mo": 1908
+    },
+    {
+     "city": "Tampa",
+     "permits_5plus_12mo": 1893
+    },
+    {
+     "city": "Orlando",
+     "permits_5plus_12mo": 1178
+    },
+    {
+     "city": "Gainesville",
+     "permits_5plus_12mo": 1172
+    },
+    {
+     "city": "Fort Myers",
+     "permits_5plus_12mo": 1154
+    },
+    {
+     "city": "Tallahassee",
+     "permits_5plus_12mo": 1139
+    },
+    {
+     "city": "Boynton Beach",
+     "permits_5plus_12mo": 757
+    },
+    {
+     "city": "Palm Coast",
+     "permits_5plus_12mo": 710
+    },
+    {
+     "city": "Hialeah",
+     "permits_5plus_12mo": 686
+    }
+   ]
+  },
+  {
+   "state": "NY",
+   "permits_5plus_12mo": 35557,
+   "cities": [
+    {
+     "city": "Brooklyn",
+     "permits_5plus_12mo": 8611
+    },
+    {
+     "city": "Bronx",
+     "permits_5plus_12mo": 8594
+    },
+    {
+     "city": "Queens",
+     "permits_5plus_12mo": 6801
+    },
+    {
+     "city": "Manhattan",
+     "permits_5plus_12mo": 3039
+    },
+    {
+     "city": "Syracuse",
+     "permits_5plus_12mo": 1713
+    },
+    {
+     "city": "Palm Tree",
+     "permits_5plus_12mo": 574
+    },
+    {
+     "city": "Kiryas Joel",
+     "permits_5plus_12mo": 362
+    },
+    {
+     "city": "Port Chester",
+     "permits_5plus_12mo": 343
+    },
+    {
+     "city": "White Plains",
+     "permits_5plus_12mo": 203
+    },
+    {
+     "city": "Wawayanda",
+     "permits_5plus_12mo": 197
+    }
+   ]
+  },
+  {
+   "state": "NC",
+   "permits_5plus_12mo": 23922,
+   "cities": [
+    {
+     "city": "Raleigh",
+     "permits_5plus_12mo": 3658
+    },
+    {
+     "city": "Durham",
+     "permits_5plus_12mo": 1738
+    },
+    {
+     "city": "Morrisville",
+     "permits_5plus_12mo": 928
+    },
+    {
+     "city": "Greensboro",
+     "permits_5plus_12mo": 856
+    },
+    {
+     "city": "Apex",
+     "permits_5plus_12mo": 821
+    },
+    {
+     "city": "Greenville",
+     "permits_5plus_12mo": 780
+    },
+    {
+     "city": "Asheville",
+     "permits_5plus_12mo": 469
+    },
+    {
+     "city": "Jacksonville",
+     "permits_5plus_12mo": 432
+    },
+    {
+     "city": "Cary",
+     "permits_5plus_12mo": 341
+    },
+    {
+     "city": "High Point",
+     "permits_5plus_12mo": 332
+    }
+   ]
+  },
+  {
+   "state": "WA",
+   "permits_5plus_12mo": 20506,
+   "cities": [
+    {
+     "city": "Seattle",
+     "permits_5plus_12mo": 3364
+    },
+    {
+     "city": "Redmond",
+     "permits_5plus_12mo": 1497
+    },
+    {
+     "city": "Bellevue",
+     "permits_5plus_12mo": 1468
+    },
+    {
+     "city": "Tacoma",
+     "permits_5plus_12mo": 1013
+    },
+    {
+     "city": "Vancouver",
+     "permits_5plus_12mo": 867
+    },
+    {
+     "city": "Lacey",
+     "permits_5plus_12mo": 701
+    },
+    {
+     "city": "Spokane",
+     "permits_5plus_12mo": 653
+    },
+    {
+     "city": "Shoreline",
+     "permits_5plus_12mo": 570
+    },
+    {
+     "city": "Pasco",
+     "permits_5plus_12mo": 548
+    },
+    {
+     "city": "Everett",
+     "permits_5plus_12mo": 420
+    }
+   ]
+  },
+  {
+   "state": "GA",
+   "permits_5plus_12mo": 16362,
+   "cities": [
+    {
+     "city": "Atlanta",
+     "permits_5plus_12mo": 4853
+    },
+    {
+     "city": "Port Wentworth",
+     "permits_5plus_12mo": 1505
+    },
+    {
+     "city": "Union City",
+     "permits_5plus_12mo": 535
+    },
+    {
+     "city": "Richmond Hill",
+     "permits_5plus_12mo": 417
+    },
+    {
+     "city": "Sandy Springs",
+     "permits_5plus_12mo": 362
+    },
+    {
+     "city": "Cumming",
+     "permits_5plus_12mo": 357
+    },
+    {
+     "city": "Pooler",
+     "permits_5plus_12mo": 332
+    },
+    {
+     "city": "LaGrange",
+     "permits_5plus_12mo": 325
+    },
+    {
+     "city": "Dallas",
+     "permits_5plus_12mo": 322
+    },
+    {
+     "city": "Alpharetta",
+     "permits_5plus_12mo": 304
+    }
+   ]
+  },
+  {
+   "state": "NJ",
+   "permits_5plus_12mo": 16235,
+   "cities": [
+    {
+     "city": "Jersey City",
+     "permits_5plus_12mo": 2342
+    },
+    {
+     "city": "Newark",
+     "permits_5plus_12mo": 1980
+    },
+    {
+     "city": "Weehawken",
+     "permits_5plus_12mo": 858
+    },
+    {
+     "city": "City of Orange",
+     "permits_5plus_12mo": 459
+    },
+    {
+     "city": "Roseland",
+     "permits_5plus_12mo": 427
+    },
+    {
+     "city": "Elizabeth",
+     "permits_5plus_12mo": 395
+    },
+    {
+     "city": "Edgewater",
+     "permits_5plus_12mo": 381
+    },
+    {
+     "city": "Union",
+     "permits_5plus_12mo": 296
+    },
+    {
+     "city": "South Orange Village",
+     "permits_5plus_12mo": 273
+    },
+    {
+     "city": "Teaneck",
+     "permits_5plus_12mo": 267
+    }
+   ]
+  },
+  {
+   "state": "CO",
+   "permits_5plus_12mo": 15878,
+   "cities": [
+    {
+     "city": "Denver",
+     "permits_5plus_12mo": 5674
+    },
+    {
+     "city": "Longmont",
+     "permits_5plus_12mo": 1169
+    },
+    {
+     "city": "Fort Collins",
+     "permits_5plus_12mo": 1152
+    },
+    {
+     "city": "Greeley",
+     "permits_5plus_12mo": 853
+    },
+    {
+     "city": "Littleton",
+     "permits_5plus_12mo": 754
+    },
+    {
+     "city": "Aurora",
+     "permits_5plus_12mo": 691
+    },
+    {
+     "city": "Superior",
+     "permits_5plus_12mo": 513
+    },
+    {
+     "city": "Commerce City",
+     "permits_5plus_12mo": 422
+    },
+    {
+     "city": "Castle Pines",
+     "permits_5plus_12mo": 192
+    },
+    {
+     "city": "Parker",
+     "permits_5plus_12mo": 152
+    }
+   ]
+  },
+  {
+   "state": "VA",
+   "permits_5plus_12mo": 14857,
+   "cities": [
+    {
+     "city": "Richmond",
+     "permits_5plus_12mo": 2180
+    },
+    {
+     "city": "Chesapeake",
+     "permits_5plus_12mo": 707
+    },
+    {
+     "city": "Alexandria",
+     "permits_5plus_12mo": 581
+    },
+    {
+     "city": "Virginia Beach",
+     "permits_5plus_12mo": 403
+    },
+    {
+     "city": "Norfolk",
+     "permits_5plus_12mo": 329
+    },
+    {
+     "city": "Christiansburg",
+     "permits_5plus_12mo": 180
+    },
+    {
+     "city": "Roanoke",
+     "permits_5plus_12mo": 168
+    },
+    {
+     "city": "Waynesboro",
+     "permits_5plus_12mo": 149
+    },
+    {
+     "city": "Harrisonburg",
+     "permits_5plus_12mo": 100
+    },
+    {
+     "city": "Charlottesville",
+     "permits_5plus_12mo": 97
+    }
+   ]
+  },
+  {
+   "state": "OH",
+   "permits_5plus_12mo": 13010,
+   "cities": [
+    {
+     "city": "Columbus",
+     "permits_5plus_12mo": 5647
+    },
+    {
+     "city": "Cleveland",
+     "permits_5plus_12mo": 881
+    },
+    {
+     "city": "Cincinnati",
+     "permits_5plus_12mo": 820
+    },
+    {
+     "city": "Gahanna",
+     "permits_5plus_12mo": 348
+    },
+    {
+     "city": "Middletown",
+     "permits_5plus_12mo": 313
+    },
+    {
+     "city": "Centerville",
+     "permits_5plus_12mo": 267
+    },
+    {
+     "city": "Obetz",
+     "permits_5plus_12mo": 264
+    },
+    {
+     "city": "Dayton",
+     "permits_5plus_12mo": 260
+    },
+    {
+     "city": "Findlay",
+     "permits_5plus_12mo": 230
+    },
+    {
+     "city": "Reynoldsburg",
+     "permits_5plus_12mo": 228
+    }
+   ]
+  },
+  {
+   "state": "AZ",
+   "permits_5plus_12mo": 12982,
+   "cities": [
+    {
+     "city": "Phoenix",
+     "permits_5plus_12mo": 6262
+    },
+    {
+     "city": "Tempe",
+     "permits_5plus_12mo": 1149
+    },
+    {
+     "city": "Scottsdale",
+     "permits_5plus_12mo": 718
+    },
+    {
+     "city": "Goodyear",
+     "permits_5plus_12mo": 700
+    },
+    {
+     "city": "Mesa",
+     "permits_5plus_12mo": 661
+    },
+    {
+     "city": "Tucson",
+     "permits_5plus_12mo": 644
+    },
+    {
+     "city": "Peoria",
+     "permits_5plus_12mo": 512
+    },
+    {
+     "city": "Oro Valley",
+     "permits_5plus_12mo": 457
+    },
+    {
+     "city": "Apache Junction",
+     "permits_5plus_12mo": 381
+    },
+    {
+     "city": "Gilbert",
+     "permits_5plus_12mo": 283
+    }
+   ]
+  },
+  {
+   "state": "WI",
+   "permits_5plus_12mo": 10879,
+   "cities": [
+    {
+     "city": "Madison",
+     "permits_5plus_12mo": 2830
+    },
+    {
+     "city": "DeForest",
+     "permits_5plus_12mo": 545
+    },
+    {
+     "city": "Grand Chute",
+     "permits_5plus_12mo": 453
+    },
+    {
+     "city": "Sheboygan",
+     "permits_5plus_12mo": 368
+    },
+    {
+     "city": "Eau Claire",
+     "permits_5plus_12mo": 363
+    },
+    {
+     "city": "Pleasant Prairie",
+     "permits_5plus_12mo": 340
+    },
+    {
+     "city": "Middleton",
+     "permits_5plus_12mo": 338
+    },
+    {
+     "city": "Fitchburg",
+     "permits_5plus_12mo": 298
+    },
+    {
+     "city": "Little Chute",
+     "permits_5plus_12mo": 280
+    },
+    {
+     "city": "Hobart",
+     "permits_5plus_12mo": 266
+    }
+   ]
+  },
+  {
+   "state": "TN",
+   "permits_5plus_12mo": 9784,
+   "cities": [
+    {
+     "city": "Nashville-Davidson",
+     "permits_5plus_12mo": 2356
+    },
+    {
+     "city": "Knoxville",
+     "permits_5plus_12mo": 1112
+    },
+    {
+     "city": "Clarksville",
+     "permits_5plus_12mo": 724
+    },
+    {
+     "city": "Smyrna",
+     "permits_5plus_12mo": 451
+    },
+    {
+     "city": "Sevierville",
+     "permits_5plus_12mo": 362
+    },
+    {
+     "city": "Franklin",
+     "permits_5plus_12mo": 342
+    },
+    {
+     "city": "Alcoa",
+     "permits_5plus_12mo": 273
+    },
+    {
+     "city": "Murfreesboro",
+     "permits_5plus_12mo": 256
+    },
+    {
+     "city": "Cookeville",
+     "permits_5plus_12mo": 226
+    },
+    {
+     "city": "Chattanooga",
+     "permits_5plus_12mo": 213
+    }
+   ]
+  },
+  {
+   "state": "UT",
+   "permits_5plus_12mo": 9462,
+   "cities": [
+    {
+     "city": "Salt Lake City",
+     "permits_5plus_12mo": 2657
+    },
+    {
+     "city": "Farmington",
+     "permits_5plus_12mo": 679
+    },
+    {
+     "city": "Layton",
+     "permits_5plus_12mo": 470
+    },
+    {
+     "city": "Logan",
+     "permits_5plus_12mo": 469
+    },
+    {
+     "city": "South Jordan",
+     "permits_5plus_12mo": 407
+    },
+    {
+     "city": "Vineyard",
+     "permits_5plus_12mo": 380
+    },
+    {
+     "city": "West Jordan",
+     "permits_5plus_12mo": 336
+    },
+    {
+     "city": "Ogden",
+     "permits_5plus_12mo": 334
+    },
+    {
+     "city": "Washington",
+     "permits_5plus_12mo": 293
+    },
+    {
+     "city": "Heber",
+     "permits_5plus_12mo": 270
+    }
+   ]
+  }
+ ]
+}

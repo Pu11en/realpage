@@ -20,7 +20,8 @@ Entrata and is rejected; realpage.com marketing pages are not proof.
 
 ## Steps
 1. C2: `data/client-map/targets.json` = top 15 states by new 5+ unit permits (12 months), ~10
-   biggest apartment cities each. Raw Census files cached in `data/raw/census/`.
+   biggest apartment cities each (most new 5+ unit permits). `python3 skills/client-map/targets.py`;
+   raw Census permit files cached (not committed) in `data/raw/census/`.
 2. C3: one search per city in state order -> confirm each hit's portal link -> name + address
    -> lat/lon -> remove duplicates (same portal subdomain or same address).
 
