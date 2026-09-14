@@ -14,7 +14,13 @@ impact, cost/speed, guardrails, honest limits.
 - **Layout:** one page. Top = 90-second read: the story, 4-5 big numbers, one diagram. Below =
   clickable sections that open for detail. Minimal styling (Drew does design himself).
 - **Only measured numbers.** Every number comes from a data file; nothing typed by hand.
-- **Privacy:** never log or show sign-in emails or names.
+- **Privacy:** never log or show sign-in emails or names; emails/phones/names typed into questions
+  are masked before logging; logs kept 30 days.
+- **Expert presentation rules (research 2026-09-14: Stripe Minions, GitHub Copilot evals, Honeycomb,
+  Hamel, DORA 2025, METR):** lead with a quality pair (steps shipped + % passed first try + % needed
+  rework), never "hours saved" or lines of code; state METR's finding (developers felt faster but
+  were 19% slower) and why these numbers are measured instead; every number shows n, source and
+  date; the human OK is drawn as a deliberate gate in the diagram; honest "what didn't work".
 - Localhost only; never push. Links to GitHub code (build bot = `github.com/Pu11en/ebi-agent-chat-relay`,
   shipcheck = `github.com/Pu11en/shipcheck`) are written now and go live when Drew pushes.
 
@@ -33,7 +39,8 @@ Open: http://localhost:8765/under-the-hood.html
 - [ ] **U1 Check + chat log.** `tooling/qa/check-under-the-hood.sh` (page loads, every section opens,
   every number on the page exists in `site/data/`, `check-panel.sh`; under 2 minutes, no network).
   In `chatbot/proxy.py`, log one JSON line per answer to `/opt/data/chat-log.jsonl`: time, question,
-  tools used, seconds, tokens, cost, links removed by the link guard -- **no emails or names**.
+  tools used, seconds, tokens, cost, links removed by the link guard, a trace ID -- **no emails or
+  names**; mask emails/phones/names in the question text.
   Tests. Commit.
 - [ ] **U2 👍/👎 on chat answers.** Small buttons under each chat answer; the vote (+ optional reason)
   is added to that answer's log line. `tooling/export-chat-log.sh` copies the log out of the container
@@ -43,7 +50,8 @@ Open: http://localhost:8765/under-the-hood.html
   `PLAN-*.progress.md` and git history (+ gowork records in `/home/drewp/.local/state/ccdb/gowork*`
   if readable) → `site/data/buildbot.json`: plans, steps built by the bot, % passed checks first
   try, retries, time per step, total hours, and 3 real example steps (plan text, check result, the
-  bot's plain recap). Tests. Commit.
+  bot's plain recap), plus **% of steps whose code was reverted or re-fixed within 5 commits**
+  (rework rate, from git). Tests. Commit.
 - [ ] **U4 Pull in shipcheck + chat numbers.** `site/data/build_evals.py` copies shipcheck's
   `results/latest/scorecard.json` (+ failure types, judge agreement, contest) into
   `site/data/evals.json`, and totals from the chat log (answers, 👍/👎, p50/p95 seconds, $ per
@@ -63,11 +71,14 @@ Open: http://localhost:8765/under-the-hood.html
   Commit.
 - [ ] **U8 Sections: Evals.** Collapsible: shipcheck scorecard (every check, pass/fail, date), grader
   vs human (agreement %, TPR/TNR, kappa), failure types with counts and one example each, the
-  contest result (plain AI vs AI + shipcheck), and a link to shipcheck. Commit.
+  contest result (plain AI vs AI + shipcheck), one answer traced end to end (question → tool
+  calls → reply, by trace ID), and a link to shipcheck. Commit.
 - [ ] **U9 Sections: cost, safety, choices, limits, data.** Collapsible: cost and speed (per chat
   answer and per build step; free search first, which AI does which job and why); guardrails (link
   guard, a source for every fact, never guess, search caps, secrets scan, no emails logged, human
-  OK); build vs buy (one line per tool); honest limits and what's next; lead finder numbers per
+  OK); build vs buy (one line per tool); "what didn't work" (3-5 honest bullets: flaky checks, steps the bot
+  couldn't finish, where the grader disagreed with Drew) and what's next (code-review, docs and
+  migration agents); "decisions and why" (own tools vs off-the-shelf, fresh sessions, small steps); lead finder numbers per
   area (new state, sources, skipped cities); the existing run history at the bottom. Commit.
 - [ ] **U10 Playbook: adopt the build bot in an hour.** First research 3-5 real playbooks/onboarding
   guides from respected open-source projects (note what makes them good); then write
