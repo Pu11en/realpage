@@ -129,7 +129,7 @@ Open: http://localhost:8765 → Early Leads → the new state's button
   covers the **last 3 months**, so it's a freshness add-on. Apartment sales in the state's cities,
   last 24 months, 20+ units → building, buyer, date, units, link (stage sold). Fixture
   tests. Commit.
-- [ ] **4.4 Who to call, any area.** `find-website` + `contact-scrape` take any area: developer (or
+- [x] **4.4 Who to call, any area.** `find-website` + `contact-scrape` take any area: developer (or
   new owner) office phone + website; `phonenumbers` pulls and de-duplicates numbers, office lines
   above fax/cell; a named person only if a permit, agenda or news page names one. Fixture tests.
   Commit.

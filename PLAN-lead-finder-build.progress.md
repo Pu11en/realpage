@@ -573,3 +573,52 @@ Nothing left open for this task.
 - Nothing left open. Next task (4.4) is "who to call" -- find-website + contact-scrape
   for any area, pulling office phone numbers with `phonenumbers` and a named contact
   only when a permit/agenda/news page names one.
+
+## 4.4 Who to call, any area -- done
+
+- Added `propertystack/skills/lead-finder-contact/contact.py`:
+  - `find_website(developer, search_fn)`: one search for the developer/owner's own site
+    (`"<developer> apartments website"`), takes the first result URL, never guesses one.
+  - `find_office_phone(html)`: uses the `phonenumbers` package (installed with
+    `pip install --user --break-system-packages phonenumbers`, same pattern as 3.1's
+    `openpyxl`) to find every phone-shaped number in a page, skips any number whose nearby
+    text says "fax", and prefers a non-cell/mobile number over a cell one (a cell number is
+    kept only as a last-resort fallback if nothing else is found). Context window is 15
+    characters back from each match -- a wider window was pulling an earlier "Fax:" label
+    across into a later, unrelated "Office:" number's context; caught by a two-number test
+    fixture and fixed by shrinking the window.
+  - `find_named_contact(text)`: only matches a name that directly follows "contact:"/
+    "property manager:"/"leasing manager:"/"project manager:"/"developer contact:" --
+    used only against permit/agenda/news page text, never a generic developer website, per
+    the plan's "a named person only if a permit, agenda or news page names one." (Bug caught
+    while writing the test: the label alternation was under the same `re.I` flag as the
+    `[A-Z]` name-capture group, so `re.I` made `[A-Z]` match lowercase too and the name
+    capture ran on past "Jane Doe" into the rest of the sentence; fixed with an inline
+    `(?i:...)` scoped only to the label.)
+  - `fill_contacts(records, search_fn, fetch_fn)`: the batch entry point. Fills
+    `office_phone` from the record's own website (or the developer's website found via
+    search, which also fills `website` if it was blank) -- never overwrites an
+    already-known phone. Separately, if the developer name doesn't already carry a
+    `(contact: ...)` tag, checks the record's `permit`/`agenda`/`news` links (in that order,
+    stopping at the first hit) for a named contact and folds it onto `developer` as
+    `"<developer> (contact: <name>)"` -- there's no dedicated contact-name field in
+    `docs/LEAD-FORMAT.md`, and adding one wasn't asked for by the plan, so this reuses the
+    existing `developer` field the same way HUD/permit records already carry extra context
+    inline. Every phone/name fact filled gets a `sources` entry with its URL.
+- Tests: `tests/test_contact.py` (15 tests, no network) -- office-vs-fax preference, fax-only
+  returns nothing, cell-as-fallback-only, no-numbers-found, website search first-result and
+  blank-developer/no-results cases, named-contact match and no-match, filling phone from an
+  already-known website, searching for a website when blank, not overwriting a known phone,
+  naming a contact only from a permit/agenda/news link, no name added when none of those pages
+  name one, and a blocked (`ok: False`) fetch result being skipped rather than misread.
+- Checked: `bash tooling/qa/check-lead-finder.sh` -- lead-finder-contact's own 15 tests pass,
+  every other lead-finder* dir unaffected (121 before this task, 136 total now, all passing),
+  panel check clean. Also reran `python3 site/data/build_data.py` to confirm the site still
+  builds unaffected (204 properties, 42 leads, 20 states).
+- Nothing left open for this task. Note for whoever wires 6.1: `fill_contacts` needs the
+  `phonenumbers` package installed (not previously a repo dependency) -- if a fresh
+  environment is missing it, install with
+  `pip install --user --break-system-packages phonenumbers` before running the real chain.
+- Next task (4.5) is `score-leads` rebuilt for any area: soonest opening first, then more
+  units, then not-picked-above-competitor; sold and planned groups ordered separately; a
+  one-line "why" per lead.
