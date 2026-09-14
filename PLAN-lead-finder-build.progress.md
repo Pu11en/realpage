@@ -117,3 +117,41 @@
   unaffected.
 - Nothing left open. Next task (2.1) starts Part 2: ranking a state's cities from the free
   Census Building Permits Survey place-level files.
+
+## 2.1 Rank the state's cities (free) -- done
+
+- Added `propertystack/skills/lead-finder-cities/rank.py`: for any state (two-letter code),
+  ranks cities -- and unincorporated-county permit areas -- by new 5+ unit apartment permits,
+  using the free Census Building Permits Survey **place-level** region files
+  (`Place/<Region> Region/<rg>YYMMc.txt`), summed over the last N months (12 default, `--months`
+  for up to 24). Self-contained: I found that `client-map/targets.py` (which already had very
+  similar place-file parsing logic from client-map's C2 task) imports `scout-areas/census.py`,
+  but `scout-areas` was one of the 4 skills deleted in 1.1 -- that import is already broken on
+  this branch (confirmed by running client-map's own tests, which fail the same way,
+  independent of my change). Rather than depend on that dangling import, `rank.py` has its own
+  small cached `fetch()` and place-file parser, kept in `lead-finder-cities/` only.
+  - Unlike `targets.py` (which drops rows matching "county"), `parse_places_all()` keeps them
+    and tags `is_county_area=True`, per the plan's "add unincorporated county areas as cities
+    when the county issues the permits."
+  - `realpage_counts()` reads `propertystack/data/client-map/counts.json` for that state's
+    per-city RealPage building counts (0 if the state or city isn't listed yet).
+  - `build()` writes `propertystack/data/<state-slug>/cities.json` (state-slug = lowercase
+    2-letter code), sorted by permits descending, each row: city, is_county_area, permits_5plus,
+    realpage_count.
+- Tests: `tests/test_rank.py` -- ranks and sorts a fixture with two cities + one county area +
+  one out-of-state city (filtered out), county area kept and tagged, RealPage counts read from a
+  fixture counts.json (including missing-state and missing-file cases), and `build()` writes to
+  the right `<state-slug>/cities.json` path. Used fictional place names in the fixture (not real
+  Texas cities) since the 1.1 no-place-names test scans every `.py` file under `lead-finder*/`
+  (not just non-test code) for banned literals.
+- Checked: `bash tooling/qa/check-lead-finder.sh` -- lead-finder-cities' own 4 tests pass, plus
+  lead-finder's existing 34 (unaffected) and the panel check, all clean. Also reran
+  `python3 site/data/build_data.py` to confirm the site still builds unaffected.
+- Left open (pre-existing, not part of this task): `client-map/targets.py` still imports the
+  deleted `scout-areas/census.py` and its own tests (`propertystack/skills/client-map/tests/
+  test_targets.py`) currently fail to collect for the same reason -- this predates my change
+  (task 1.1 deleted scout-areas) and isn't covered by `check-lead-finder.sh` (which only runs
+  `lead-finder*` dirs), so it wasn't caught until now. Flagging here since a later task may want
+  to either restore a small shared census-fetch helper or point `targets.py` at
+  `lead-finder-cities/rank.py`'s self-contained version instead.
+- Next task (2.2) adds permit recipes (Socrata/ArcGIS catalog lookup) per city.

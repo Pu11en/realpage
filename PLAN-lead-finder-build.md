@@ -60,7 +60,7 @@ Open: http://localhost:8765 → Early Leads → the new state's button
   one with the lowest `total` in `client-map/counts.json` (a state missing there = 0); ties → more
   permits wins. Save the pick and the ordered backup list in the run folder. Caps: stop at **150 projects or ~450 searches**;
   **<30 projects → roll into the next state**, which becomes its own area. Fixture tests. Commit.
-- [ ] **2.1 Rank the state's cities (free).** `lead-finder-cities/`: Census Building Permits Survey
+- [x] **2.1 Rank the state's cities (free).** `lead-finder-cities/`: Census Building Permits Survey
   **place-level** files (https://www2.census.gov/econ/bps/Place/ -- the regional monthly/annual
   place files; old download code is in git history at `propertystack/skills/scout-areas/census.py`,
   deleted in 1.1) -- 5+ unit permits, last 12-24 months, for any state; also add unincorporated
