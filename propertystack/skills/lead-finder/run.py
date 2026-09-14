@@ -482,7 +482,8 @@ def main(argv: list[str] | None = None) -> int:
     city_list = run_folder.load_step(STEP_CITIES, STATE_CITY_KEY)["cities"]
     city_names = [c["city"] if isinstance(c, dict) else c for c in city_list]
     real_sources = cities_with_real_source(run_folder, city_names)
-    report = check_quality(state, records, real_sources, len(city_names))
+    report = check_quality(state, records, real_sources, len(city_names),
+                            single_city=bool(args.city))
     write_quality_json(run_folder.path, report)
 
     if not report["passed"]:
