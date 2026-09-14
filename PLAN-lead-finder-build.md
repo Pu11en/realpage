@@ -147,7 +147,7 @@ Open: http://localhost:8765 → Early Leads → the new state's button
 - [x] **5.4 Chat knows every area.** The chatbot loads every area's leads; `SOUL.md` stops naming one
   county; deep dives work for a new area (links incl. 📋 Agenda when present). Rebuild with
   `bash tooling/dev.sh`; run `tooling/qa/check-answers.sh`. Commit.
-- [ ] **6.1 Wire the chain.** `lead-finder/run.py` runs every step in order (cities → sources →
+- [x] **6.1 Wire the chain.** `lead-finder/run.py` runs every step in order (cities → sources →
   permits → details → early signals → sales → **merge (1.2)** → software → who to call → score),
   resumable, on the sample area end to end. Page reading that needs judgment (news, agenda
   pages, project pages) is done by **this session**: the script writes a `to-read.jsonl` queue in the

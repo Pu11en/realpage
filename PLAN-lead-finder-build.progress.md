@@ -774,3 +774,81 @@ Nothing left open for this task.
   real area exists (6.x), a natural follow-up check is: rebuild the chatbot
   image and ask it "what leads do you have in <area>?" to confirm
   `state_leads` actually has rows and the bot cites them correctly.
+
+## 6.1 Wire the chain -- done
+
+- `propertystack/skills/lead-finder/run.py` (was the Part 1.1 stub) now runs
+  every step of the chain for one state, in order: cities (2.1 `rank.py`) →
+  sources (2.2/2.3) → permits (2.4) → details (2.5) → early signals (HUD 3.1,
+  awards 3.2, agendas 3.3, Legistar 3.4, civic/PDF agendas 3.5, agenda hits ->
+  projects 3.6) → sales news (4.3) → **merge** (1.2 `merge.py`, once per city
+  and again across the whole state) → software (4.1/4.2) → who to call (4.4)
+  → score (4.5). Loops city by city for the per-city steps, then does the
+  state-level steps (HUD, awards, software, contact, score) once over the
+  merged pile.
+- Resumability: every step writes through `RunFolder.save_step`/`step_done`
+  (from 1.4), keyed by step name + city (`_state` for state-level steps), so
+  rerunning `run.py --run-id <same id>` skips any step whose output file
+  already exists and only does the missing work. A step that errors gets a
+  `{"skipped": true, "reason": ...}` note saved instead of crashing the whole
+  run, matching the "never raises" pattern already used throughout
+  lead-finder-* (e.g. Legistar/civic-agenda skip notes).
+- **The to-read.jsonl queue the plan describes for judgment calls (news,
+  agenda pages, project pages) turned out not to be needed.** I read every
+  step module (2.2 through 4.5) end to end before writing run.py, specifically
+  looking for a stubbed/TODO judgment function a human session would need to
+  fill in. There wasn't one: every module that reads a news/agenda/project
+  page already turns it into facts with plain code -- regexes for units,
+  case numbers, addresses, developer/buyer names, keyword-window extraction
+  for PDF agenda packets (`lead-finder-civic`), vendor-marker matching for
+  software (`lead-finder-software/detect.py`). What each module does take is
+  an *injected* search/fetch/http_get callable, so it never does its own
+  network I/O -- that's a testability seam, not a human-judgment seam. So
+  run.py supplies real ones (`fetch.WebHelper` for search + cached page
+  reads, plain `urllib`-based JSON/bytes GETs for the handful of steps that
+  talk to an API directly: Socrata/ArcGIS catalog lookups, permit rows,
+  Legistar, HUD's workbook, state award lists, the Census geocoder) and
+  calls each already-tested function directly. If a future step review finds
+  a page type that's actually guessing rather than extracting, that's the
+  moment to add the queue -- not before, since an unused human-in-the-loop
+  mechanism would just be dead weight this task's own place-name/no-guessing
+  conventions would flag as suspicious.
+- Steps that need configuration this run doesn't have (the state's housing
+  finance agency name for awards 3.2, a per-city Legistar client slug, a HUD
+  workbook fetcher) skip with a reason instead of guessing or crashing --
+  same "never guess" rule the rest of the codebase already follows. Task 6.2
+  is where those get filled in for the one real state/city being test-run.
+- `ChainDeps` (a small dataclass in run.py) bundles every injectable
+  callable in one place: `web` (a `fetch.WebHelper`), `http_get_json`,
+  `http_get_bytes`, `geocode_fn`, `gdelt_fetch_fn`, `cities_fetcher`,
+  `hud_fetcher`, `agency_name`, `legistar_clients`, `ocr_fn`, `today`, and
+  `recipes_dir` (so tests never write real recipe files into
+  `propertystack/recipes/`). `main()` builds a real one from a live
+  `WebHelper()` and plain `urllib` calls for the real CLI entry point.
+- One naming wrinkle: `lead-finder-software/run.py` is also called `run.py`,
+  which would collide with this file's own module name if both skill
+  directories were ever on `sys.path` at once and both imported as `import
+  run`. Loaded it by file path under a distinct module name
+  (`lead_finder_software_run`) instead of adding it to the top-of-file
+  import block with everything else.
+- Tests: new `propertystack/skills/lead-finder/tests/test_run.py`, all
+  offline (a `FakeWeb` standing in for `WebHelper`, plain fakes for the
+  JSON/bytes API calls). Runs the whole chain end to end on the `_sample`
+  fixture's one city, checks every step wrote its run-folder file, checks a
+  second run against the same run folder makes zero fake-web calls (proves
+  resume actually skips finished work, not just that it doesn't crash), and
+  checks the awards/HUD skip-without-config path.
+- Caught and fixed during testing: my first pass called `find_sources`/
+  `find_sources_fallback`/`agendas.find_meeting_system` without a
+  `recipes_dir` override, so the first test run wrote a real
+  `propertystack/recipes/sampleton.json` into the actual repo. Added the
+  `recipes_dir` field to `ChainDeps` so tests (and any run.py caller) can
+  redirect recipe writes, deleted the stray file, and reran the check clean.
+- Checked: `bash tooling/qa/check-lead-finder.sh` passes (every lead-finder*
+  test dir including the 4 new tests, plus `check-panel.sh`) in about 31
+  seconds, well under the 2-minute budget, and confirmed no test run leaves
+  stray files under `propertystack/recipes/` or anywhere else in the repo
+  (`git status` clean of untracked files after the run).
+- Left open, on purpose, per this task's scope: no real network run, no
+  `--state`/`--city` CLI invocation against live data, and 6.2 (the actual
+  small test run) wasn't started -- both are explicitly a separate task.
