@@ -424,3 +424,56 @@ Nothing left open for this task.
   (including the new one) plus the no-place-names scan and `check-panel.sh` are clean.
 - Nothing left open. Next task (3.5) covers non-Legistar systems (CivicPlus/Granicus/PrimeGov/
   CivicClerk) plus raw PDF agendas via civic-scraper.
+
+## 3.5 Other systems + PDFs -- done
+
+- Added `propertystack/skills/lead-finder-civic/civic_agendas.py`, covering the four
+  systems 3.3 can identify that 3.4's Legistar reader doesn't handle: AgendaCenter
+  (CivicPlus), Granicus, PrimeGov, CivicClerk. `civic-scraper` (named in the plan) isn't
+  installed in this environment (`pip show civic-scraper` -> not found) and there's no
+  requirements file in the repo to add it to (same situation 1.2 hit with `usaddress`);
+  since these four systems' listing pages all reduce to "find agenda/packet document
+  links on an HTML page, then read the PDF", a small self-contained reader does the same
+  job without a new dependency.
+  - `find_civic_agenda_items(city, state, recipe, fetch_fn, ocr_fn=None)`: takes a 3.3
+    recipe (`system` + `agenda_url`); unsupported system (legistar -- 3.4 already covers
+    it) or a recipe missing `agenda_url` returns a skip note immediately. Fetches the
+    listing page, pulls agenda/packet links with `find_agenda_links()` (href ending
+    .pdf/.html whose href or link text mentions "agenda" or "packet", resolved to an
+    absolute URL). No links found -> skip note ("no agenda documents found").
+  - For each linked packet: **packets over 25 MB are skipped** by checking
+    `len(content)` before ever calling PyMuPDF on it (per the plan, "packets over 25 MB
+    skipped"); a non-PDF link (bare `.html` agenda page, no page structure to window
+    around) is skipped too, since this task's job is packet PDFs specifically -- an HTML
+    agenda page's structure is too system-specific to generalize safely without guessing.
+  - `extract_pdf_pages(pdf_bytes, ocr_fn=None)`: one text string per page via PyMuPDF
+    (`fitz`, already installed -- confirmed with `import fitz` before writing this).
+    A page with no extractable text at all runs through the caller's `ocr_fn` (rendered
+    to a PNG via `page.get_pixmap()`) if one was given; no OCR engine ships with this
+    repo, so real runs will need to supply `ocr_fn`, but nothing here guesses or fakes
+    OCR when it's absent -- the page just stays blank and won't match a keyword.
+  - `keyword_hit_windows(pages_text, window=5)`: same keyword regex as 3.4's Legistar
+    reader (multifamily/apartment/unit count/rezoning/site plan); only pages within 5
+    pages of a hit are kept (**"at most the 10 pages around a keyword hit"**), not the
+    whole packet -- matches the plan's page-budget instruction directly rather than
+    reading every page of a 200-page packet.
+  - This part only returns raw `AgendaHit(url, page, text)` objects (the packet URL +
+    page number + nearby text) -- per the plan's own split, turning a hit into a
+    planned-project LeadRecord (address/case number required) is task 3.6, not this one.
+- Tests: `tests/test_civic_agendas.py` (14 tests, no network) -- link extraction filters
+  to agenda/packet links and resolves relative URLs; `is_pdf` magic-bytes check;
+  keyword-window keeps only nearby pages and returns empty with no hit; real PDF text
+  extraction against tiny in-memory PDFs built with PyMuPDF itself (`fitz.open()` +
+  `new_page()` + `insert_text()`, no fixture files needed); OCR fallback used only when a
+  page truly has no text; unsupported system / missing agenda_url / unreachable listing /
+  no links found all return the right skip note; an end-to-end fetch_fn fake finds a
+  keyword hit inside a fake packet and returns its URL+text; an oversized packet and a
+  non-PDF link both return no hits without crashing.
+- Checked: `bash tooling/qa/check-lead-finder.sh` -- lead-finder-civic's own 14 tests
+  pass, every other lead-finder* dir unaffected (85 before this task, 99 total now, all
+  passing), panel check clean. Also reran `python3 site/data/build_data.py` to confirm
+  the site still builds unaffected (204 properties, 42 leads, 20 states).
+- Nothing left open for this task. Next task (3.6) turns agenda hits (from 3.4's
+  Legistar matters and this task's civic hits) into planned-project LeadRecords: keep an
+  item only if it has an address or case number, pull name/address/developer/units/case
+  number, merge P&Z + council into one project per case.

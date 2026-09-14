@@ -109,7 +109,7 @@ Open: http://localhost:8765 → Early Leads → the new state's button
   datetime'YYYY-MM-DD'`, `events/<id>/eventitems`, `matters?$filter=substringof('multifamily',MatterTitle)`): last 12 months of Planning / Zoning /
   Council meetings, find items mentioning multifamily / apartments / "NNN units" / rezoning / site
   plan; token-required cities marked skipped. Fixture tests. Commit.
-- [ ] **3.5 Other systems + PDFs.** civic-scraper for CivicPlus, Granicus, PrimeGov, CivicClerk; read
+- [x] **3.5 Other systems + PDFs.** civic-scraper for CivicPlus, Granicus, PrimeGov, CivicClerk; read
   only the agenda (packets over 25 MB skipped; at most the 10 pages around a keyword hit) with PyMuPDF, OCR only for pages with no
   text. Fixture tests. Commit.
 - [ ] **3.6 Agenda hits → Planned projects.** Keep an item only if it has an address or case number;
