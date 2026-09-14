@@ -27,7 +27,7 @@ Open: http://localhost:8765 → Early Leads → the new state's button
 ### Part 1: Shared base
 
 - [ ] **1.1 Skeleton + check + no-place-names test.** `propertystack/skills/lead-finder/`
-  (`SKILL.md` describing the whole chain and the 6 plans; `run.py` stub). `tooling/qa/check-lead-finder.sh`
+  (`SKILL.md` describing the whole chain and its 6 parts; `run.py` stub). `tooling/qa/check-lead-finder.sh`
   runs every `tests/` under `propertystack/skills/lead-finder*/` and the other lead-finder skills,
   plus `check-panel.sh`, in under 2 minutes, no network. Test that **fails if any lead-finder step's
   code has a place name** (Plano, Richardson, Collin, Dallas, any US state or big-city literal).
@@ -39,7 +39,7 @@ Open: http://localhost:8765 → Early Leads → the new state's button
   sale date + buyer, developer/owner, office phone, website, software (RealPage / competitor name /
   not picked / unknown), links (map, permit, agenda, news, website), sources (URL per fact), why.
   Save/load as JSON per step; a sample state area under `propertystack/data/_sample/` (fake, clearly
-  marked, never shown as a real area) for other parts' tests. Tests. Commit.
+  marked, never shown as a real area) for later parts' tests. Tests. Commit.
 - [ ] **1.3 Web helper.** `lead-finder/fetch.py` used by every part: search = SearXNG
   (`tooling/searx_search.py`) first, Jina only if SearXNG returns nothing or is down; page reads via
   crawl4ai, Scrapling if blocked, Playwright last; every page cached on disk (never read twice); 2 s
