@@ -1642,3 +1642,61 @@ Call log:
 Call log:
   - navigating to "https://www.britannica.com/place/Ithaca-island-Greece", waiting until "load"
 . Retrying in 1s...
+[2026-09-14 02:49:25] INFO: Fetched (200) <GET https://www.britannica.com/place/Ithaca-island-Greece> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.visitithaca.com/                                       
+| ✓ | ⏱: 1.80s 
+[SCRAPE].. ◆ https://www.visitithaca.com/                                       
+| ✓ | ⏱: 0.10s 
+[COMPLETE] ● https://www.visitithaca.com/                                       
+| ✓ | ⏱: 1.92s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.greekmythology.com/Myths/Places/Ithaca/ithaca.html     
+| ✓ | ⏱: 0.86s 
+[SCRAPE].. ◆ https://www.greekmythology.com/Myths/Places/Ithaca/ithaca.html     
+| ✓ | ⏱: 0.03s 
+[COMPLETE] ● https://www.greekmythology.com/Myths/Places/Ithaca/ithaca.html     
+| ✓ | ⏱: 0.91s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.cornell.edu/                                           
+| ✓ | ⏱: 1.70s 
+[SCRAPE].. ◆ https://www.cornell.edu/                                           
+| ✓ | ⏱: 0.02s 
+[COMPLETE] ● https://www.cornell.edu/                                           
+| ✓ | ⏱: 1.73s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ 
+https://greekreporter.com/2026/07/28/10-things-to-do-and-see-on-greeces-ithaca-t
+he-home-of-odysseus/ | ✓ | ⏱: 1.01s 
+[SCRAPE].. ◆ 
+https://greekreporter.com/2026/07/28/10-things-to-do-and-see-on-greeces-ithaca-t
+he-home-of-odysseus/ | ✓ | ⏱: 0.05s 
+[COMPLETE] ● 
+https://greekreporter.com/2026/07/28/10-things-to-do-and-see-on-greeces-ithaca-t
+he-home-of-odysseus/ | ✓ | ⏱: 1.09s 
+[2026-09-14 02:49:37] INFO: Fetched (200) <GET https://greekreporter.com/2026/07/28/10-things-to-do-and-see-on-greeces-ithaca-the-home-of-odysseus/> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://cityofithacany.gov/                                        
+| ✓ | ⏱: 1.90s 
+[SCRAPE].. ◆ https://cityofithacany.gov/                                        
+| ✓ | ⏱: 0.03s 
+[COMPLETE] ● https://cityofithacany.gov/                                        
+| ✓ | ⏱: 1.93s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ http://patchoguevillage.gov/                                       
+| ✓ | ⏱: 1.99s 
+[SCRAPE].. ◆ http://patchoguevillage.gov/                                       
+| ✓ | ⏱: 0.03s 
+[COMPLETE] ● http://patchoguevillage.gov/                                       
+| ✓ | ⏱: 2.03s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ 
+https://www.discoverlongisland.com/plan-your-trip/trip-ideas/a-day-in-downtown-p
+atchogue/            | ✓ | ⏱: 1.37s 
+[SCRAPE].. ◆ 
+https://www.discoverlongisland.com/plan-your-trip/trip-ideas/a-day-in-downtown-p
+atchogue/            | ✓ | ⏱: 0.04s 
+[COMPLETE] ● 
+https://www.discoverlongisland.com/plan-your-trip/trip-ideas/a-day-in-downtown-p
+atchogue/            | ✓ | ⏱: 1.43s 
+[INIT].... → Crawl4AI 0.8.6 
