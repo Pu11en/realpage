@@ -17,7 +17,12 @@ never guess facts; Plano never rerun; localhost only, never push).
 - **Quality alarms instead of blind non-stop:** a run must meet the quality bar on real data; if it
   can't after two fix attempts, stop with STUCK and a plain report rather than fill the site with junk.
 - **Pre-approved, don't ask:** Jina + Brave searches up to 450 per state run (Jina ~$0.0005/search;
-  Brave has $5 free credit a month), free public data downloads.
+  Brave has $5 free credit a month -- hard cap 800 Brave calls/month, then Jina-only; never pay
+  beyond the free credit), free public data downloads.
+- **Out of scope (cut list):** New York; Chandler, Goodyear, Buckeye (Accela/SmartGov only, no free
+  data); Shovels.ai; Google Places; email addresses; named contacts beyond what a permit/news names.
+- **Timebox:** 15 steps × 20-30 min ≈ 6-8 hours of bot time.
+- Plan review: `09-build-ideas/review-lead-finder-fix.md`.
 
 Run with: `Do the next unticked task in PLAN-lead-finder-fix.md, then tick it and stop.`
 Check: `bash tooling/qa/check-lead-finder.sh`
@@ -35,7 +40,8 @@ Open: http://localhost:8765 → Early Leads → Az
 - [ ] **F1 Remove SearXNG; Jina + Brave search.** Delete SearXNG from `fetch.py`, `tooling/searx_search.py`,
   `tooling/searxng/`, `tooling/LOCAL-ASSETS.md` and every SKILL.md/doc that mentions it. `WebHelper.search()`
   = Jina, then Brave only if Jina errors or returns nothing relevant; count Jina and Brave searches
-  separately toward the 450 cap. Tests with fakes (Jina down → Brave; both down → clear error). Commit.
+  separately toward the 450 cap (and Brave toward its 800/month cap, tracked in
+  `propertystack/runs/brave-usage.json`). Tests with fakes (Jina down → Brave; both down → clear error). Commit.
 - [ ] **F2 "Is this really about this building?" check.** A search result or page counts for a building
   only if its name (distinctive words) or street address appears in the title, URL or page text;
   listing sites (zillow, apartments.com, apartmentguide, apartmentratings, yelp, facebook, trulia,
@@ -45,7 +51,8 @@ Open: http://localhost:8765 → Early Leads → Az
   themarqueestl.com; Bella Victoria must pick bellavictoria.com. Commit.
 - [ ] **F3 Find permit data everywhere.** `find_sources` asks, in order: ArcGIS Online search by place
   name (`https://www.arcgis.com/sharing/rest/search?q=title:permits "<place>"`), the city's ArcGIS hub
-  search, the Socrata catalog, CKAN `package_search`. **Accept a dataset only after one real query
+  search, the Socrata catalog, CKAN `package_search`. Find a city's ArcGIS hub from the ArcGIS Online result's owner org
+  (`orgId` → its hub/maps site), never by guessing; none → skip that source. **Accept a dataset only after one real query
   returns permit-level rows (≥100 rows, an address field, dates in the last 24 months)** -- Phoenix's
   CKAN set was 22 rows of yearly totals. Accela/Tyler/SmartGov-only cities are marked "no free data"
   (no retries). Tests with saved real responses. Commit.
@@ -55,15 +62,23 @@ Open: http://localhost:8765 → Early Leads → Az
   Scottsdale, Gilbert, Tucson, Maricopa County unincorporated and Peoria from the research file:
   endpoint, date field, multifamily filter, unit-count source (a field like Tempe's `HousingUnits`, or
   parsed from the description like Mesa's "(11) unit apartment", or looked up later), name keywords
-  (Phoenix's APART/APT/MULTI/MF), leasing-date field if any (Tempe `COIssuedDate`). Each recipe gets a
+  (Phoenix's APART/APT/MULTI/MF), leasing-date field if any (Tempe `COIssuedDate`). **Unit lookup order**
+  when the layer has no unit field (Phoenix, Scottsdale, Gilbert, Maricopa County, Peoria, often
+  Tucson): permit field → number in the permit text ("300-unit", "(11) unit") → the project's own
+  site or news via Jina (F2 check) → county parcel record. Each recipe gets a
   live self-test that returns ≥1 multifamily row. Commit.
-- [ ] **F5 Recently sold, from the county's sales file.** County sales recipe (data): Maricopa County
+- [ ] **F5 Recently sold, from the county's sales file.** First open the zip's file-spec document and
+  confirm which field marks apartment property (type or use code) and whether unit counts exist
+  (if not, take units from the parcel file or the building site). County sales recipe (data): Maricopa County
   Assessor "Sales Affidavits" CSV joined to the parcel file (item ids in the research file) → apartment
   properties (multifamily use codes) with 20+ units sold in the last 24 months: address, buyer, seller,
-  date, price. Code stays generic (any county with a sales file + parcel file). Commit.
+  date, price. Acceptance: ≥10 real 20+ unit apartment sales in the last 24 months with buyer and
+  date. Code stays generic (any county with a sales file + parcel file). Commit.
 - [ ] **F6 Answer key for Arizona.** Build `propertystack/answer-keys/az.json` by hand, independent of
-  the tool: 15 real new or recently sold AZ apartment buildings (20+ units) from news articles and city
-  permit pages (e.g. Tempe's 1020 Apache, 289 units), each with its source link; 5 of them with the
+  the tool: 15 real new or recently sold AZ apartment buildings (20+ units) **only from sources the
+  tool doesn't read** -- news articles, developer press releases, apartment association new-community
+  lists, building websites (never the city permit layers or the county sales file) -- each with its
+  source link and source type; 5 of them with the
   software verified by hand from the building's own site (Marquee on 5th = Yardi, Bella Victoria =
   Yardi, plus 3 more, at least 1 non-Yardi if one can be found). Commit.
 
@@ -82,7 +97,10 @@ Open: http://localhost:8765 → Early Leads → Az
 - [ ] **F9 Quality alarms.** In `run.py`: after the run, write `quality.json` -- % cities with a real
   source, % leads with units, website, software verdict, phone, and answer-key recall (share of key
   buildings found) and software accuracy. **Bar for a state:** answer-key recall ≥60%, software
-  correct on ≥80% of key buildings, website on ≥70% of leads, phone on ≥50%. Below the bar → the run
+  correct on ≥80% of key buildings; for **existing buildings (leasing or sold)**: website on ≥70%,
+  a software verdict on ≥70%, phone on ≥50%; for **not-yet-built projects (permitted / under
+  construction)**: software = "not picked yet" is correct, and a developer/owner name + office phone
+  on ≥50%. Below the bar → the run
   is marked "failed quality" and is **not** built into the site. Tests. Commit.
 
 ### Part 4: Real runs
@@ -90,7 +108,8 @@ Open: http://localhost:8765 → Early Leads → Az
   limited to Tempe buildings). If below: find the step at fault, fix it, rerun -- up to 2 fix rounds;
   still below → STUCK with a plain report of what's missing and why. Write the leads in plain words in
   the progress log. Commit.
-- [ ] **F11 Full Arizona run.** New run id (old AZ run replaced, not merged). Whole state in permit
+- [ ] **F11 Full Arizona run.** First move `propertystack/data/az/` and `propertystack/runs/AZ/20260914-full/`
+  to `propertystack/archive/az-run1/` so nothing from the junk run leaks in. New run id. Whole state in permit
   order until 150 projects or the 450-search cap, plus the county sales file. Must pass the bar
   (same 2-fix-rounds rule, then STUCK). Save recipes. Commit.
 - [ ] **F12 Arizona on the site + chat.** Build the site and rebuild the chat (`bash tooling/dev.sh`)
