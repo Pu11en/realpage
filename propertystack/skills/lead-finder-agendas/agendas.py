@@ -102,8 +102,8 @@ if __name__ == "__main__":
     p.add_argument("--state", required=True)
     args = p.parse_args()
 
-    sys.path.insert(0, str(ROOT / "tooling"))
-    import searx_search  # tooling/searx_search.py
+    sys.path.insert(0, str(ROOT / "propertystack" / "skills" / "lead-finder"))
+    from fetch import WebHelper  # propertystack/skills/lead-finder/fetch.py
 
     def _fetch(url: str) -> "str | None":
         import urllib.request
@@ -114,5 +114,6 @@ if __name__ == "__main__":
         except Exception:
             return None
 
-    recipe = find_meeting_system(args.city, args.state.upper(), searx_search.search, _fetch)
+    web = WebHelper()
+    recipe = find_meeting_system(args.city, args.state.upper(), web.search, _fetch)
     print(json.dumps(recipe, indent=1))

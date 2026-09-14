@@ -1,4 +1,4 @@
-"""Fixture tests for fetch.py -- no network, no real SearXNG/Jina/crawl4ai calls."""
+"""Fixture tests for fetch.py -- no network, no real Jina/Brave/crawl4ai calls."""
 from __future__ import annotations
 
 import sys
@@ -9,95 +9,138 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 import fetch as fetch_mod  # noqa: E402
 
 
-def _helper(tmp_path, searx_search=None, page_fetchers=None, jina_api_key=fetch_mod._UNSET):
+class _FakeBraveUsage:
+    def __init__(self, under_cap: bool = True) -> None:
+        self.calls = 0
+        self._under_cap = under_cap
+
+    def under_cap(self, cap: int | None = None) -> bool:
+        return self._under_cap
+
+    def record_call(self) -> None:
+        self.calls += 1
+
+
+def _helper(
+    tmp_path,
+    page_fetchers=None,
+    jina_api_key=fetch_mod._UNSET,
+    brave_api_key=fetch_mod._UNSET,
+    brave_usage=None,
+):
     return fetch_mod.WebHelper(
         cache_dir=tmp_path,
         jina_api_key=jina_api_key,
-        searx_search=searx_search,
+        brave_api_key=brave_api_key,
+        brave_usage=brave_usage if brave_usage is not None else _FakeBraveUsage(),
         page_fetchers=page_fetchers,
         site_gap_s=0.0,
     )
 
 
-def test_search_uses_searxng_when_it_has_results(tmp_path):
-    calls = []
-
-    def fake_searx(query, n):
-        calls.append(query)
+def test_search_uses_jina_when_it_has_results(tmp_path, monkeypatch):
+    def fake_jina(self, query, n):
         return [{"title": "t", "url": "https://example.com", "snippet": "s"}]
 
-    helper = _helper(tmp_path, searx_search=fake_searx, jina_api_key="fake-key")
+    monkeypatch.setattr(fetch_mod.WebHelper, "_search_jina", fake_jina)
+    helper = _helper(tmp_path, jina_api_key="fake-key", brave_api_key="fake-brave")
     results = helper.search("apartment permits")
     assert results[0]["url"] == "https://example.com"
-    assert helper.counts.searxng == 1
-    assert helper.counts.jina == 0
+    assert helper.counts.jina == 1
+    assert helper.counts.brave == 0
 
 
-def test_search_falls_back_to_jina_when_searxng_is_down(tmp_path, monkeypatch):
-    def fake_searx(query, n):
+def test_search_falls_back_to_brave_when_jina_is_down(tmp_path, monkeypatch):
+    def fake_jina(self, query, n):
         raise OSError("connection refused")
 
-    def fake_jina(self, query, n):
-        return [{"title": "j", "url": "https://jina-result.example", "snippet": ""}]
+    def fake_brave(self, query, n):
+        return [{"title": "b", "url": "https://brave-result.example", "snippet": ""}]
 
     monkeypatch.setattr(fetch_mod.WebHelper, "_search_jina", fake_jina)
-    helper = _helper(tmp_path, searx_search=fake_searx, jina_api_key="fake-key")
+    monkeypatch.setattr(fetch_mod.WebHelper, "_search_brave", fake_brave)
+    helper = _helper(tmp_path, jina_api_key="fake-key", brave_api_key="fake-brave")
     results = helper.search("apartment permits")
-    assert results[0]["url"] == "https://jina-result.example"
-    assert helper.counts.searxng == 0
+    assert results[0]["url"] == "https://brave-result.example"
     assert helper.counts.jina == 1
+    assert helper.counts.brave == 1
 
 
-def test_search_falls_back_to_jina_when_searxng_returns_nothing(tmp_path, monkeypatch):
-    def fake_searx(query, n):
+def test_search_falls_back_to_brave_when_jina_returns_nothing(tmp_path, monkeypatch):
+    def fake_jina(self, query, n):
         return []
 
-    def fake_jina(self, query, n):
-        return [{"title": "j", "url": "https://jina-result.example", "snippet": ""}]
+    def fake_brave(self, query, n):
+        return [{"title": "b", "url": "https://brave-result.example", "snippet": ""}]
 
     monkeypatch.setattr(fetch_mod.WebHelper, "_search_jina", fake_jina)
-    helper = _helper(tmp_path, searx_search=fake_searx, jina_api_key="fake-key")
+    monkeypatch.setattr(fetch_mod.WebHelper, "_search_brave", fake_brave)
+    helper = _helper(tmp_path, jina_api_key="fake-key", brave_api_key="fake-brave")
     results = helper.search("apartment permits")
-    assert results and helper.counts.jina == 1
+    assert results and helper.counts.brave == 1
 
 
-def test_search_returns_nothing_without_jina_key(tmp_path):
-    def fake_searx(query, n):
-        return []
-
-    helper = _helper(tmp_path, searx_search=fake_searx, jina_api_key=None)
+def test_search_returns_nothing_without_any_keys(tmp_path):
+    helper = _helper(tmp_path, jina_api_key=None, brave_api_key=None)
     assert helper.search("apartment permits") == []
     assert helper.counts.jina == 0
+    assert helper.counts.brave == 0
 
 
-def test_search_falls_back_to_jina_when_searxng_results_are_junk(tmp_path, monkeypatch):
-    def fake_searx(query, n):
-        # Suspended-engine style junk: unrelated Wikipedia hits that ignore the query.
+def test_search_falls_back_to_brave_when_jina_results_are_junk(tmp_path, monkeypatch):
+    def fake_jina(self, query, n):
+        # Junk-style results: unrelated Wikipedia hits that ignore the query.
         return [
             {"title": "Rivertown (mythology)", "url": "https://en.wikipedia.org/wiki/Rivertown", "snippet": "A bird."},
             {"title": "Skybird", "url": "https://en.wikipedia.org/wiki/Skybird", "snippet": "Also a bird."},
         ]
 
-    def fake_jina(self, query, n):
+    def fake_brave(self, query, n):
         return [{"title": "Building Permits Portal", "url": "https://city.example/permits", "snippet": ""}]
 
     monkeypatch.setattr(fetch_mod.WebHelper, "_search_jina", fake_jina)
-    helper = _helper(tmp_path, searx_search=fake_searx, jina_api_key="fake-key")
+    monkeypatch.setattr(fetch_mod.WebHelper, "_search_brave", fake_brave)
+    helper = _helper(tmp_path, jina_api_key="fake-key", brave_api_key="fake-brave")
     results = helper.search('"Rivertown" building permits open data')
     assert results[0]["url"] == "https://city.example/permits"
-    assert helper.counts.jina == 1
-    assert helper.junk_searxng == 1
+    assert helper.counts.brave == 1
+    assert helper.junk_jina == 1
 
 
-def test_search_keeps_searxng_results_that_match_the_query(tmp_path):
-    def fake_searx(query, n):
+def test_search_keeps_jina_results_that_match_the_query(tmp_path, monkeypatch):
+    def fake_jina(self, query, n):
         return [{"title": "City of Rivertown Building Permits", "url": "https://rivertown.gov/permits", "snippet": "apartment permit data"}]
 
-    helper = _helper(tmp_path, searx_search=fake_searx, jina_api_key="fake-key")
+    monkeypatch.setattr(fetch_mod.WebHelper, "_search_jina", fake_jina)
+    helper = _helper(tmp_path, jina_api_key="fake-key", brave_api_key="fake-brave")
     results = helper.search("Rivertown building permits open data")
     assert results[0]["url"] == "https://rivertown.gov/permits"
-    assert helper.counts.jina == 0
-    assert helper.junk_searxng == 0
+    assert helper.counts.brave == 0
+    assert helper.junk_jina == 0
+
+
+def test_search_skips_brave_over_monthly_cap(tmp_path, monkeypatch):
+    def fake_jina(self, query, n):
+        return []
+
+    calls = []
+
+    def fake_brave(self, query, n):
+        calls.append(query)
+        return [{"title": "b", "url": "https://brave-result.example", "snippet": ""}]
+
+    monkeypatch.setattr(fetch_mod.WebHelper, "_search_jina", fake_jina)
+    monkeypatch.setattr(fetch_mod.WebHelper, "_search_brave", fake_brave)
+    helper = _helper(
+        tmp_path,
+        jina_api_key="fake-key",
+        brave_api_key="fake-brave",
+        brave_usage=_FakeBraveUsage(under_cap=False),
+    )
+    results = helper.search("apartment permits")
+    assert results == []
+    assert calls == []
+    assert helper.counts.brave == 0
 
 
 def test_fetch_caches_page_and_never_refetches(tmp_path):
@@ -107,7 +150,7 @@ def test_fetch_caches_page_and_never_refetches(tmp_path):
         calls.append(url)
         return "<html>ok</html>"
 
-    helper = _helper(tmp_path, searx_search=lambda q, n: [], page_fetchers=[fetcher])
+    helper = _helper(tmp_path, jina_api_key=None, brave_api_key=None, page_fetchers=[fetcher])
     r1 = helper.fetch("https://example.com/page")
     r2 = helper.fetch("https://example.com/page")
     assert r1.ok and not r1.from_cache
@@ -119,7 +162,7 @@ def test_fetch_skips_site_after_three_blocks(tmp_path):
     def blocked_fetcher(url):
         return "<html>Access Denied - captcha required</html>"
 
-    helper = _helper(tmp_path, searx_search=lambda q, n: [], page_fetchers=[blocked_fetcher])
+    helper = _helper(tmp_path, jina_api_key=None, brave_api_key=None, page_fetchers=[blocked_fetcher])
     for _ in range(fetch_mod.BLOCK_LIMIT - 1):
         r = helper.fetch("https://blocked.example/a")
         assert not r.ok
@@ -154,9 +197,31 @@ def test_fetch_falls_through_fetcher_chain(tmp_path):
 
     helper = _helper(
         tmp_path,
-        searx_search=lambda q, n: [],
+        jina_api_key=None,
+        brave_api_key=None,
         page_fetchers=[crawl4ai_fails, scrapling_blocked, playwright_succeeds],
     )
     r = helper.fetch("https://example.com/chain")
     assert r.ok
     assert r.html == "<html>real content</html>"
+
+
+def test_brave_usage_tracks_calls_by_month(tmp_path):
+    usage_path = tmp_path / "brave-usage.json"
+    usage = fetch_mod.BraveUsage(path=usage_path)
+    assert usage.count_this_month() == 0
+    assert usage.under_cap()
+    usage.record_call()
+    usage.record_call()
+    assert usage.count_this_month() == 2
+
+    usage2 = fetch_mod.BraveUsage(path=usage_path)
+    assert usage2.count_this_month() == 2
+
+
+def test_brave_usage_hits_cap(tmp_path):
+    usage_path = tmp_path / "brave-usage.json"
+    usage = fetch_mod.BraveUsage(path=usage_path)
+    for _ in range(fetch_mod.BRAVE_MONTHLY_CAP):
+        usage.record_call()
+    assert not usage.under_cap()

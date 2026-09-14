@@ -51,11 +51,15 @@ Confidence: high
 - Glassdoor/Indeed scrapers (use WebSearch + webReader; app is guest-readable
   until challenged, then manual capture).
 
-## Free web search — SearXNG (added 2026-09-13)
+## Web search — Jina + Brave (updated 2026-09-14)
 
 - Local research sessions in this repo only (lead finder, client map, scout) — never the site/chatbot.
-- Container `ps-searxng` (`tooling/searxng/docker-compose.yml`), JSON API on `http://127.0.0.1:8888`,
-  restarts with Docker. Start: `docker compose -f tooling/searxng/docker-compose.yml up -d`.
-- Use `python3 tooling/searx_search.py "query" [--json]` (cached, 2 s spacing). Use it first; Jina
-  (paid) only when SearXNG returns nothing. DuckDuckGo/Startpage may CAPTCHA; Google/Bing/Brave work.
+- SearXNG is banned — removed from this machine 2026-09-14 after failing a real run; never use it,
+  not even as a backup.
+- `WebHelper.search()` (`propertystack/skills/lead-finder/fetch.py`) tries Jina Search first
+  (`JINA_API_KEY`), then Brave Search API (`BRAVE_API_KEY`) only when Jina errors or returns nothing
+  relevant. Both keys live in `/home/drewp/main-projects/realpage/.env`; never commit them.
+- Brave has a $5/month free credit — hard cap 800 calls/month, tracked in
+  `propertystack/runs/brave-usage.json`; once hit, search falls back to Jina-only for the rest of
+  the month.
 - Ollama is installed but not running and too slow on this machine — don't plan on local models.

@@ -46,12 +46,12 @@ def pick_state(targets_path: Path | None = None, counts_path: Path | None = None
 @dataclass
 class RunCaps:
     project_count: int = 0
-    searxng_searches: int = 0
     jina_searches: int = 0
+    brave_searches: int = 0
 
     @property
     def total_searches(self) -> int:
-        return self.searxng_searches + self.jina_searches
+        return self.jina_searches + self.brave_searches
 
     def project_cap_hit(self) -> bool:
         return self.project_count >= MAX_PROJECTS

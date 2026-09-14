@@ -1,8 +1,11 @@
 """Shared web helper for every lead-finder part: search + cached page reads.
 
-Search: SearXNG (tooling/searx_search.py) first, free and local. Jina only when
-SearXNG returns nothing or is unreachable; Jina calls are counted separately so a
-run's search budget can tell paid from free calls apart.
+Search: Jina first. Brave Search API only when Jina errors or returns nothing
+relevant, and only while under Brave's monthly free-credit cap (tracked in
+propertystack/runs/brave-usage.json); once that cap is hit, Brave is skipped and
+search falls back to whatever Jina returned. Jina and Brave calls are counted
+separately on the WebHelper (and rolled into a run's search cap) so a run's
+search budget can tell the two apart.
 
 Page reads go through a fallback chain -- crawl4ai first, then Scrapling if the
 page looks blocked, then Playwright as the last resort -- and every fetched page
@@ -32,9 +35,11 @@ if str(TOOLING) not in sys.path:
     sys.path.insert(0, str(TOOLING))
 
 DEFAULT_CACHE_DIR = HERE.parents[2] / "propertystack" / "runs" / "cache"
+DEFAULT_BRAVE_USAGE_PATH = HERE.parents[2] / "propertystack" / "runs" / "brave-usage.json"
 _UNSET = object()
 SITE_GAP_S = 2.0
 BLOCK_LIMIT = 3
+BRAVE_MONTHLY_CAP = 800
 
 _BLOCK_MARKERS = (
     "access denied",
@@ -47,15 +52,47 @@ _BLOCK_MARKERS = (
 
 
 class SearchCounts:
-    """Tracks how many free (SearXNG) vs paid (Jina) searches a run has made."""
+    """Tracks how many Jina vs Brave searches a run has made."""
 
     def __init__(self) -> None:
-        self.searxng = 0
         self.jina = 0
+        self.brave = 0
 
     @property
     def total(self) -> int:
-        return self.searxng + self.jina
+        return self.jina + self.brave
+
+
+class BraveUsage:
+    """Persists Brave Search API call counts by month so the 800/month free-credit
+    cap is tracked across runs, not just within one process."""
+
+    def __init__(self, path: Path = DEFAULT_BRAVE_USAGE_PATH) -> None:
+        self.path = Path(path)
+
+    def _month_key(self) -> str:
+        return time.strftime("%Y-%m")
+
+    def _load(self) -> dict:
+        if self.path.exists():
+            try:
+                return json.loads(self.path.read_text(encoding="utf-8"))
+            except json.JSONDecodeError:
+                return {}
+        return {}
+
+    def count_this_month(self) -> int:
+        return self._load().get(self._month_key(), 0)
+
+    def under_cap(self, cap: int = BRAVE_MONTHLY_CAP) -> bool:
+        return self.count_this_month() < cap
+
+    def record_call(self) -> None:
+        data = self._load()
+        key = self._month_key()
+        data[key] = data.get(key, 0) + 1
+        self.path.parent.mkdir(parents=True, exist_ok=True)
+        self.path.write_text(json.dumps(data, indent=2) + "\n", encoding="utf-8")
 
 
 @dataclass
@@ -72,26 +109,22 @@ class WebHelper:
         self,
         cache_dir: Path | str = DEFAULT_CACHE_DIR,
         jina_api_key: str | None = _UNSET,
-        searx_search=None,
+        brave_api_key: str | None = _UNSET,
+        brave_usage: "BraveUsage | None" = None,
         page_fetchers: list | None = None,
         site_gap_s: float = SITE_GAP_S,
     ) -> None:
         self.cache_dir = Path(cache_dir)
         self.cache_dir.mkdir(parents=True, exist_ok=True)
         self.jina_api_key = _load_jina_key() if jina_api_key is _UNSET else jina_api_key
+        self.brave_api_key = _load_brave_key() if brave_api_key is _UNSET else brave_api_key
+        self.brave_usage = brave_usage if brave_usage is not None else BraveUsage()
         self.counts = SearchCounts()
-        self.junk_searxng = 0
+        self.junk_jina = 0
         self._last_visit: dict[str, float] = {}
         self._block_counts: dict[str, int] = {}
         self._skipped: dict[str, str] = {}
         self.site_gap_s = site_gap_s
-
-        if searx_search is not None:
-            self._searx_search = searx_search
-        else:
-            import searx_search as searx_mod  # tooling/searx_search.py
-
-            self._searx_search = searx_mod.search
 
         self._page_fetchers = page_fetchers if page_fetchers is not None else [
             _fetch_crawl4ai,
@@ -102,21 +135,23 @@ class WebHelper:
     # -- search --------------------------------------------------------
 
     def search(self, query: str, n: int = 10) -> list[dict]:
-        try:
-            results = self._searx_search(query, n)
-        except OSError:
-            results = []
-        else:
-            self.counts.searxng += 1
+        results: list[dict] = []
+        if self.jina_api_key:
+            try:
+                results = self._search_jina(query, n)
+            except OSError:
+                results = []
+            self.counts.jina += 1
         if results and not _looks_junk(query, results):
             return results
         if results:
-            self.junk_searxng = getattr(self, "junk_searxng", 0) + 1
-        if not self.jina_api_key:
+            self.junk_jina += 1
+        if not self.brave_api_key or not self.brave_usage.under_cap():
             return results
-        results = self._search_jina(query, n)
-        self.counts.jina += 1
-        return results
+        brave_results = self._search_brave(query, n)
+        self.counts.brave += 1
+        self.brave_usage.record_call()
+        return brave_results or results
 
     def _search_jina(self, query: str, n: int) -> list[dict]:
         req = urllib.request.Request(
@@ -130,6 +165,22 @@ class WebHelper:
             return []
         out = []
         for x in data.get("data", [])[:n]:
+            out.append({"title": x.get("title", ""), "url": x.get("url", ""), "snippet": (x.get("description") or "")[:300]})
+        return out
+
+    def _search_brave(self, query: str, n: int) -> list[dict]:
+        req = urllib.request.Request(
+            "https://api.search.brave.com/res/v1/web/search?"
+            + urllib.parse.urlencode({"q": query, "count": n}),
+            headers={"X-Subscription-Token": self.brave_api_key, "Accept": "application/json"},
+        )
+        try:
+            with urllib.request.urlopen(req, timeout=20) as r:
+                data = json.load(r)
+        except (urllib.error.URLError, OSError):
+            return []
+        out = []
+        for x in data.get("web", {}).get("results", [])[:n]:
             out.append({"title": x.get("title", ""), "url": x.get("url", ""), "snippet": (x.get("description") or "")[:300]})
         return out
 
@@ -197,12 +248,12 @@ def _query_words(query: str) -> list[str]:
 
 
 def _looks_junk(query: str, results: list[dict]) -> bool:
-    """True when SearXNG's top results don't actually match the query.
+    """True when Jina's top results don't actually match the query.
 
     A result "matches" when at least one distinctive query word (city/agency
     name, "permit", "apartment", etc; short stopwords excluded) appears in its
-    title, URL or snippet. Fewer than 2 of the top 5 matching means the engine
-    ignored the query (e.g. suspended engines returning generic junk).
+    title, URL or snippet. Fewer than 2 of the top 5 matching means the search
+    ignored the query and returned generic junk.
     """
     words = _query_words(query)
     if not words:
@@ -231,14 +282,23 @@ def _looks_blocked(html: str) -> bool:
     return any(marker in lowered for marker in _BLOCK_MARKERS)
 
 
-def _load_jina_key() -> str | None:
+def _load_env_key(name: str) -> str | None:
     env_path = Path("/home/drewp/main-projects/realpage/.env")
     if not env_path.exists():
         return None
+    prefix = f"{name}="
     for line in env_path.read_text(encoding="utf-8").splitlines():
-        if line.startswith("JINA_API_KEY="):
+        if line.startswith(prefix):
             return line.split("=", 1)[1].strip()
     return None
+
+
+def _load_jina_key() -> str | None:
+    return _load_env_key("JINA_API_KEY")
+
+
+def _load_brave_key() -> str | None:
+    return _load_env_key("BRAVE_API_KEY")
 
 
 def _fetch_crawl4ai(url: str) -> str | None:

@@ -106,7 +106,7 @@ def test_extract_buyer_none_found():
     assert extract_buyer("Example Towers sold in a private deal") == ""
 
 
-def test_find_sales_news_searxng_only():
+def test_find_sales_news_web_search_only():
     def fake_search(query):
         assert "Example City" in query
         return [
@@ -138,7 +138,7 @@ def test_find_sales_news_searxng_only():
     assert records[0].sale_date == "2026-05-01"
 
 
-def test_find_sales_news_dedupes_across_searxng_and_gdelt():
+def test_find_sales_news_dedupes_across_web_search_and_gdelt():
     def fake_search(query):
         return [
             {

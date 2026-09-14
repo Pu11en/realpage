@@ -15,7 +15,7 @@ names are data, read from `propertystack/data/<state-slug>/` or passed as argume
 ## The 6 parts
 
 1. **Shared base** (this skill) -- one lead record format (`record.py`), a web helper that
-   prefers free SearXNG search over paid Jina and caches every page (`fetch.py`), and a run
+   searches Jina first and Brave second (`fetch.py`) and caches every page, and a run
    folder per state per run with resume support and search/project caps (`runs.py`).
 2. **Permits** -- rank a state's cities by new-apartment permit volume (free Census data), find
    each city's permit system (Socrata / ArcGIS / Accela / EnerGov / Tyler catalog lookup, else
@@ -52,9 +52,9 @@ names are data, read from `propertystack/data/<state-slug>/` or passed as argume
 
 ## Tools
 
-- Search: `tooling/searx_search.py` (SearXNG, free, local) first; Jina only as a fallback when
-  SearXNG is down or returns nothing, and every Jina call is logged separately from the free
-  SearXNG count.
+- Search: `WebHelper.search()` (`fetch.py`) tries Jina first, then Brave Search API only when
+  Jina errors or returns nothing relevant (SearXNG is banned, never used); Jina and Brave calls
+  are counted separately, and Brave stops once its 800-call/month free-credit cap is hit.
 - Page reads: crawl4ai first, Scrapling if blocked, Playwright as the last resort; every fetched
   page is cached on disk under the run folder and never re-read.
 

@@ -92,7 +92,7 @@ def test_run_folder_state_pick_and_caps_round_trip(tmp_path):
     saved = json.loads((rf.path / "state-pick.json").read_text())
     assert saved == pick
 
-    caps = RunCaps(project_count=10, searxng_searches=20, jina_searches=5)
+    caps = RunCaps(project_count=10, jina_searches=20, brave_searches=5)
     rf.save_caps(caps)
     loaded = rf.load_caps()
     assert loaded.project_count == 10
@@ -106,7 +106,7 @@ def test_caps_project_cap_hit():
 
 
 def test_caps_search_cap_hit():
-    caps = RunCaps(searxng_searches=MAX_SEARCHES)
+    caps = RunCaps(jina_searches=MAX_SEARCHES)
     assert caps.search_cap_hit()
     assert caps.any_cap_hit()
 
@@ -120,5 +120,5 @@ def test_caps_below_minimum_rolls_into_next_state():
 
 
 def test_caps_under_limits_not_hit():
-    caps = RunCaps(project_count=5, searxng_searches=5, jina_searches=0)
+    caps = RunCaps(project_count=5, jina_searches=5, brave_searches=0)
     assert not caps.any_cap_hit()

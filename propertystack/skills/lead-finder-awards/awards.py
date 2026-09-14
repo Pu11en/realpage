@@ -235,9 +235,8 @@ if __name__ == "__main__":
     p.add_argument("--agency", required=True, help="the state's housing finance agency name")
     args = p.parse_args()
 
-    import searx_search  # tooling/searx_search.py
-
-    sys.path.insert(0, str(ROOT / "tooling"))
+    sys.path.insert(0, str(ROOT / "propertystack" / "skills" / "lead-finder"))
+    from fetch import WebHelper  # propertystack/skills/lead-finder/fetch.py
 
     def _fetch_bytes(url: str) -> bytes:
         import urllib.request
@@ -245,6 +244,7 @@ if __name__ == "__main__":
         with urllib.request.urlopen(url, timeout=60) as r:
             return r.read()
 
-    records = find_awards(args.state.upper(), args.agency, searx_search.search, _fetch_bytes)
+    web = WebHelper()
+    records = find_awards(args.state.upper(), args.agency, web.search, _fetch_bytes)
     print(json.dumps([r.to_dict() for r in records], indent=1))
     print(f"{len(records)} state housing award leads for {args.state.upper()}")

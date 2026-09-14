@@ -1,7 +1,8 @@
 """lead-finder 4.3: find-sales-news -- apartment building sales, any area.
 
-SearXNG news search covers the full 24-month window (the plan's normal free-first
-search). GDELT's DOC API (https://api.gdeltproject.org/api/v2/doc/doc) is queried in
+The Jina/Brave web search (WebHelper.search, tooling/lead-finder/fetch.py) covers
+the full 24-month window (the plan's normal search order). GDELT's DOC API
+(https://api.gdeltproject.org/api/v2/doc/doc) is queried in
 addition, not instead -- it only indexes roughly the last 3 months, so it's a
 freshness add-on that can surface a sale before it shows up in a general web search.
 Both feed the same filter: only sales of 20+ unit apartment buildings in the last 24
@@ -135,7 +136,7 @@ def find_sales_news(
     months: int = MONTHS,
     min_units: int = MIN_UNITS,
 ) -> list[LeadRecord]:
-    """SearXNG news search (full window) + GDELT DOC API (last ~3 months add-on) ->
+    """Web news search (full window) + GDELT DOC API (last ~3 months add-on) ->
     sold-stage LeadRecords for one city, deduped by article URL."""
     today = today or datetime.date.today()
     records: list[LeadRecord] = []
@@ -183,13 +184,14 @@ if __name__ == "__main__":
     p.add_argument("--area", required=True)
     args = p.parse_args()
 
-    sys.path.insert(0, str(ROOT / "tooling"))
-    import searx_search  # tooling/searx_search.py
+    sys.path.insert(0, str(ROOT / "propertystack" / "skills" / "lead-finder"))
+    from fetch import WebHelper  # propertystack/skills/lead-finder/fetch.py
 
     def _gdelt_fetch(url: str) -> bytes:
         with urllib.request.urlopen(url, timeout=20) as r:
             return r.read()
 
-    records = find_sales_news(args.city, args.area, searx_search.search, _gdelt_fetch)
+    web = WebHelper()
+    records = find_sales_news(args.city, args.area, web.search, _gdelt_fetch)
     print(json.dumps([r.to_dict() for r in records], indent=1))
     print(f"{len(records)} sale leads for {args.city}, {args.area}")

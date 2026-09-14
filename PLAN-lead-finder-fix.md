@@ -41,7 +41,7 @@ Open: http://localhost:8765 → Early Leads → Az
 ## Tasks
 
 ### Part 1: Better tools
-- [ ] **F1 Remove SearXNG; Jina + Brave search.** Delete SearXNG from `fetch.py`, `tooling/searx_search.py`,
+- [x] **F1 Remove SearXNG; Jina + Brave search.** Delete SearXNG from `fetch.py`, `tooling/searx_search.py`,
   `tooling/searxng/`, `tooling/LOCAL-ASSETS.md` and every SKILL.md/doc that mentions it. `WebHelper.search()`
   = Jina, then Brave only if Jina errors or returns nothing relevant; count Jina and Brave searches
   separately toward the 450 cap (and Brave toward its 800/month cap, tracked in

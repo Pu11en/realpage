@@ -351,8 +351,8 @@ def run_chain(
         caps.project_count = len(merge_records(all_records))
         counts = getattr(deps.web, "counts", None)
         if counts is not None:
-            caps.searxng_searches = counts.searxng
             caps.jina_searches = counts.jina
+            caps.brave_searches = counts.brave
         run_folder.save_caps(caps)
 
     hud_dicts = step_hud(run_folder, state, deps)
