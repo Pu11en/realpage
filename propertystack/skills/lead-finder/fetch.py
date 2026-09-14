@@ -43,11 +43,16 @@ BRAVE_MONTHLY_CAP = 800
 
 _BLOCK_MARKERS = (
     "access denied",
-    "captcha",
+    "complete the captcha",
+    "solve the captcha",
     "are you a human",
     "unusual traffic",
     "403 forbidden",
     "blocked",
+    "just a moment",
+    "checking your browser",
+    "cf-turnstile",
+    "challenges.cloudflare.com",
 )
 
 

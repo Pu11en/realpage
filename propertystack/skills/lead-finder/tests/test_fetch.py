@@ -190,7 +190,7 @@ def test_fetch_falls_through_fetcher_chain(tmp_path):
         return None
 
     def scrapling_blocked(url):
-        return "<html>captcha</html>"
+        return "<html>please solve the captcha to continue</html>"
 
     def playwright_succeeds(url):
         return "<html>real content</html>"

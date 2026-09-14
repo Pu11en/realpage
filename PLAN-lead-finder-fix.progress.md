@@ -324,3 +324,51 @@ Commit: (see git log for this file's commit)
 - Nothing left open for F6. This key is the ground truth F9's quality bar
   (answer-key recall, software accuracy) will be measured against starting
   at F10/F11.
+
+## F7 Software detection v2 -- done
+- Found the software-detection chain was already built (`propertystack/skills/lead-finder-software/detect.py` +
+  `rules.json`), using the exact portal/hop/asset/text approach the plan describes, with rules for RealPage,
+  Yardi, Entrata, AppFolio, ResMan and more (already matching the vendor host patterns F7 names). What was
+  missing was the required live test on the 5 answer-key buildings -- ran it and found 2 real bugs, both fixed:
+  1. **Cloudflare challenge pages were accepted as real content.** `fetch.py`'s `_BLOCK_MARKERS` didn't catch
+     a "Just a moment..." Cloudflare Turnstile page, so `WebHelper.fetch()` returned it as `ok=True` with no
+     real links on it -- 3 of 5 buildings (Marquee on 5th, Bella Victoria, The Stately Avondale) looked
+     "no-portal-link"/"blocked" even though Scrapling's stealthy fetcher gets past Cloudflare fine when the
+     block is actually detected and it's given the chance to run. Added `"just a moment"`,
+     `"checking your browser"`, `"cf-turnstile"`, `"challenges.cloudflare.com"` to `_BLOCK_MARKERS` so the
+     fallback chain (crawl4ai -> Scrapling -> Playwright) actually kicks in.
+  2. **A too-broad "captcha" marker was a false positive.** Bella Victoria's real homepage JSON config has a
+     harmless `"recaptchaV3Key":""` field -- the old bare `"captcha"` substring check treated that as a block.
+     Tightened to `"complete the captcha"` / `"solve the captcha"` (still catches a real captcha wall, stops
+     matching ordinary reCAPTCHA config mentions). Updated the one test fixture
+     (`tests/test_fetch.py::test_fetch_falls_through_fetcher_chain`) that relied on the bare word.
+  3. **Second-page "confirm" was rejecting real portal matches.** Part 4.2's second-page re-fetch
+     (`_confirm_on_second_page`) was being applied even to `portal`-signal matches, but a resident-login link's
+     own domain (e.g. `lumaraphoenix.securecafe.com`) is frequently *itself* behind the same kind of bot wall
+     -- re-fetching it to "confirm" just returned a challenge page with no vendor evidence, turning a correct
+     match into a false "unconfirmed" (this hit 2 of 5 buildings even after the Cloudflare-marker fix). Added
+     `_vendor_owns_host()`: when the vendor pattern matches the link's actual *host* (not just some
+     coincidental path/query substring), that's already unambiguous evidence and skips the extra fetch;
+     a match only in the path (the existing fixture test's contrived case) still requires second-page
+     confirmation, so that protection against a coincidental match stays in place. Updated `detect.py`'s
+     docstring to describe the new rule.
+  - Also found the cause behind an earlier confusing debug run: `WebHelper.fetch()`'s on-disk cache
+    (`propertystack/runs/cache/`) stores whatever the first fetch returned, blocked page included, and serves
+    it forever after with no re-check -- so a stale blocked-page cache entry from before these fixes kept
+    failing even once the code was fixed. No code change needed (F9's quality alarms / a future run naturally
+    gets a fresh cache dir per run), but cleared the 5 stale cache entries left over from local debugging.
+- New `propertystack/skills/lead-finder-software/live_self_test.py` (hand-run only, matches the F4/F5 pattern
+  and is excluded from pytest collection by `propertystack/conftest.py`'s existing `collect_ignore_glob`):
+  fetches each of the 5 F6 answer-key buildings' real website (Lumara, Navona, The Stately Avondale, Marquee
+  on 5th, Bella Victoria) and asserts `detect_software()` returns the same vendor a human verified by hand.
+  Ran it live just now: **5/5 correct** (Lumara=Yardi, Navona=Entrata, Stately Avondale=Yardi,
+  Marquee on 5th=Yardi, Bella Victoria=Yardi, all `signal=portal`).
+- Updated 2 existing offline tests in `lead-finder-software/tests/test_detect.py` that assumed every portal
+  match needed second-page confirmation -- now split into "host match, no confirm needed" (already covered by
+  other passing tests) vs. the contrived path-only-match case, which still requires confirmation and still
+  passes.
+- Checked: `bash tooling/qa/check-lead-finder.sh` passes (still 51 lead-finder* tests + the site panel check,
+  no count change since this was fixes/tests to existing files, not a new skill). Full suite
+  `python3 -m pytest -q propertystack --ignore=propertystack/skills/client-map`: 234 passed (unchanged from F6,
+  same reason). Also reran the new live self-test after each fix to confirm against real websites, not fixtures.
+- Nothing left open for F7.

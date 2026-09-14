@@ -89,7 +89,7 @@ Open: http://localhost:8765 → Early Leads → Az
   Yardi, plus 3 more, at least 1 non-Yardi if one can be found). Commit.
 
 ### Part 3: Software and phones that work
-- [ ] **F7 Software detection v2.** Official site (from F2) → plain fetch → crawl4ai render if no portal
+- [x] **F7 Software detection v2.** Official site (from F2) → plain fetch → crawl4ai render if no portal
   link found → match resident-login / pay-rent / apply links: Yardi `*.securecafe.com`, `*.rentcafe.com`;
   RealPage `*.onlinesite.realpage.com`, `loftliving.com`, `activebuilding.com`, `*.realpage.com`;
   Entrata `*.residentportal.com`; AppFolio `*.appfolio.com`; ResMan `*.myresman.com` (merge into

@@ -10,13 +10,15 @@ page, e.g. an asset CDN (signal=asset); if still none, try a plain-text match
 against the rules' html patterns (signal=text, the cheapest and weakest signal);
 if still none, check known in-house portals (UDR, Camden) as a last resort.
 
-Part 4.2: a `portal`, `asset` or `text` verdict is only fetched from one page, so
-before it's final we fetch a *second* page (the resident-portal link itself, or
-another link on the homepage if the proof link isn't a separate page) and check
+Part 4.2: an `asset` or `text` verdict is only fetched from one page, so before
+it's final we fetch a *second* page (another link on the homepage) and check
 it still shows the same vendor. If the second page disagrees, can't be fetched,
 or there is no second page to check, the verdict drops to `unknown` with
-`unconfirmed`. `hop-portal` already required two pages to agree (the homepage
-link plus the page it points to), so it's confirmed by construction.
+`unconfirmed`. `portal` and `hop-portal` are already confirmed by construction:
+a resident/login/pay/apply-type link whose own host is a known vendor's domain
+*is* that vendor's site -- no second fetch is needed, which matters because
+those portal domains (SecureCafe, ResidentPortal, ...) are routinely behind a
+bot wall that would otherwise turn a correct match into a false "unconfirmed".
 
 "Cheap page check first, full browser only if unclear" is inherited from
 WebHelper.fetch() (propertystack/skills/lead-finder/fetch.py), which already
@@ -101,6 +103,19 @@ def _second_page_url(html: str, primary_url: str, proof_url: str) -> str | None:
     return None
 
 
+def _vendor_owns_host(vendor: str, link_url: str, rules: dict) -> bool:
+    """True when the vendor's url pattern matches the link's *host*, not just
+    some coincidental substring of its path or query (e.g. a tracking param
+    that happens to contain "entrata.com")."""
+    from urllib.parse import urlparse
+
+    host = urlparse(link_url).netloc
+    for name, pat in _vendor_url_patterns(rules):
+        if name == vendor and pat.search(host):
+            return True
+    return False
+
+
 def _confirm_on_second_page(vendor: str, html: str, primary_url: str, proof_url: str, web, rules: dict) -> bool:
     """Part 4.2: a portal/asset/text verdict is only good once a second page agrees."""
     second_url = _second_page_url(html, primary_url, proof_url)
@@ -134,6 +149,16 @@ def detect_software(url: str, web, rules: dict | None = None) -> dict:
     if kind == "portal":
         vendor = next(iter(hits))
         proof_url = hits[vendor]
+        if _vendor_owns_host(vendor, proof_url, rules):
+            # A resident/login/pay/apply link whose own *host* is a known
+            # vendor's domain is already the strongest evidence (the link
+            # is the vendor's site) -- no extra fetch needed, and vendor
+            # portal pages are commonly behind a bot wall (Cloudflare
+            # Turnstile etc.) that would otherwise turn a real, correct
+            # match into a false "unconfirmed". A match only in the URL's
+            # path/query (not the host) is still just a coincidence until
+            # a second page confirms it.
+            return {"software": vendor, "signal": "portal", "proof_url": proof_url, "unknown_reason": ""}
         if not _confirm_on_second_page(vendor, html, url, proof_url, web, rules):
             return {"software": "unknown", "signal": "none", "proof_url": "", "unknown_reason": "unconfirmed"}
         return {"software": vendor, "signal": "portal", "proof_url": proof_url, "unknown_reason": ""}
