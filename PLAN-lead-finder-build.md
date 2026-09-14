@@ -133,7 +133,7 @@ Open: http://localhost:8765 → Early Leads → the new state's button
   new owner) office phone + website; `phonenumbers` pulls and de-duplicates numbers, office lines
   above fax/cell; a named person only if a permit, agenda or news page names one. Fixture tests.
   Commit.
-- [ ] **4.5 `score-leads`, any area.** Remove Plano bits. Order: soonest opening → more units → not
+- [x] **4.5 `score-leads`, any area.** Remove Plano bits. Order: soonest opening → more units → not
   picked above competitor; unknown opening ranked by permit date and shown "Opens: not public yet";
   order of groups: permitted / under construction / leasing first, then **sold** (newest sale first),
   then **planned** (soonest expected, then units); one-line "why" per lead. Fixture tests. Commit.

@@ -622,3 +622,32 @@ Nothing left open for this task.
 - Next task (4.5) is `score-leads` rebuilt for any area: soonest opening first, then more
   units, then not-picked-above-competitor; sold and planned groups ordered separately; a
   one-line "why" per lead.
+
+## 4.5 score-leads, any area -- done
+
+- Replaced the old Plano-only `score-leads` skill (CSV-based `run.py` reading
+  `master.csv`/`5-sales.csv`/`6-upcoming.csv`, plus a separate agent WHY step and
+  `why_check.py` guard) with `propertystack/skills/score-leads/score_leads.py`:
+  one pure function `score_and_rank(records: list[LeadRecord]) -> list[LeadRecord]`
+  operating on the part-1.2 `LeadRecord` format, area-agnostic.
+- Order implemented exactly per the plan: active stages (permitted/under
+  construction/leasing) first -- soonest `opening_date`, then more units, then
+  undecided-software over named-competitor on ties; unknown opening ranks after
+  known ones, ordered by oldest `permit_date`, shown "opens: not public yet".
+  Then sold (newest `sale_date` first). Then planned (soonest `opening_date`,
+  then more units), shown "expected: not public yet" when blank.
+- `why` is now built deterministically from each record's own fields (no agent
+  step, nothing invented) since LeadRecords already carry only sourced facts --
+  this replaces the old `leads-facts.jsonl` + `why_check.py` guard, which existed
+  because the old design let an agent write free prose; that risk doesn't exist
+  here.
+- Deleted `run.py` and `why_check.py` (git rm); rewrote `SKILL.md` for the new
+  entry point and rules; added `tests/test_score_leads.py` (8 fixture tests: group
+  ordering, active soonest-opening/units/software tiebreak, unknown-opening
+  fallback to permit date, sold newest-first, planned soonest-then-units, why
+  content, empty input).
+- Checked: `python3 -m pytest propertystack/skills/score-leads/tests -q` (8
+  passed) and `bash tooling/qa/check-lead-finder.sh` (all lead-finder suites +
+  panel check clean).
+- Nothing left open. Next task (5.1) builds each area folder from part-1 lead
+  records for the site.
