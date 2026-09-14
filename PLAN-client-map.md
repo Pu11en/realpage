@@ -33,7 +33,7 @@ Open: http://localhost:8765/map.html
   `scout-areas/census.py` if it fits). Per state, list its ~10 cities with the most apartments
   (Census place-level permit or ACS renter data). Save `propertystack/data/client-map/targets.json`.
   Cache raw downloads under `propertystack/data/raw/census/`. Commit.
-- [ ] **C3 Search run (💲 max 150 searches).** One Jina search per target city (e.g.
+- [x] **C3 Search run (💲 max 150 searches).** One Jina search per target city (e.g.
   `"loftliving.com" OR "activebuilding.com" OR "onesite.realpage.com" apartments <city> <state>`),
   in state order, stop at 150. For each hit, open the building's site with crawl4ai
   (`http://localhost:11235`, free; Playwright only if it needs a real browser), confirm the

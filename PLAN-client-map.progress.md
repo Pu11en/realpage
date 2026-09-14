@@ -14,3 +14,11 @@
 - Saved `propertystack/data/client-map/targets.json`: 15 states × 10 cities = 150 targets (exactly the 150-search cap). Order: TX, CA, FL, NY, NC, WA, GA, NJ, CO, VA, OH, AZ, WI, TN, UT.
 - Checked: 3 new fixture tests (15 total pass); `bash tooling/qa/check-client-map.sh` clean.
 - Open: some small-town picks (e.g. Kiryas Joel NY, Palm Tree NY) rank high on permits but may yield few hits; "most apartments" uses new permits, not ACS renter counts.
+
+## C3 Search run — done (commit 803f931)
+- `run.py` now runs the search: one Jina search per target city (150 targets), exactly **150 paid searches total** (1 trial + 149), cached in `data/raw/client-map/searches.json` (gitignored) so reruns are free. 1,090 hits.
+- Most hits are RealPage portal pages themselves (`x.loftliving.com`, `x.activebuilding.com`, `oll-leasing.loftliving.com/?siteId=`) with name + address in the snippet; 67 other hits (Yellow Pages, Instagram…) were followed to the portal link they mention and read with local crawl4ai (3 s render wait). Every proof URL passes `pms_detect` RealPage rules; Entrata rejected.
+- Duplicates removed by portal subdomain, or shared host + siteId, or same address. City names normalized (TACOMA → Tacoma). Geocoded with Census batch (OSM backup), cached in `data/raw/client-map/geocode.json`.
+- Result: **260 buildings in 20 states** (TX 40, NC 32, AZ 27, FL 26, WA 24, VA 20, CA 19, TN 16, CO 14, OH 10, …); 9 without lat/lon (still counted). Files: `data/client-map/buildings.csv`, `counts.json`, log `runs/20260913T213834-client-map.json`.
+- Checked: 7 new fixture tests (22 pass); `bash tooling/qa/check-client-map.sh` clean; spot-checked sample rows.
+- Open: some names are just the street address (leasing pages with no building name); a few buildings sit outside the 15 target states (nearby hits) — counted under their real state. Counts show where RealPage is *found*, not full market share.
