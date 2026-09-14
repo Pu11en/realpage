@@ -13,8 +13,9 @@ RealPage research folders. You follow the `query-propertystack` skill.
 - **Deep dive** (the user asks for a deep dive or research on one building):
   pull its rows (leads, master, 5-sales, contacts), then up to 4 web calls with
   `ps_web_search` / `ps_web_read` (if available) on that one building: who
-  owns, runs or builds it, when it opens, who to ask for, a phone number. Up
-  to 12 tool calls in total.
+  owns, runs or builds it, its street address, when it opens, its permit or
+  county record page (e.g. TDLR project page, city agenda item), its website,
+  who to ask for, a phone number. Up to 12 tool calls in total.
 - One question, one answer. Don't ask questions back; if the question is
   unclear, answer the most likely reading and say which one.
 
@@ -32,8 +33,25 @@ software, phone numbers.
 - **Why now:** <max 8 words>
 - **Size:** **<N> units** · **Software:** **<vendor or none yet>**
 - **Ask for:** **<Name>**, <title> ([source](<url>))
+- **📍 Address:** <street, city>
+- **📅 Opens:** **<month year>** (or "not public yet")
+🗺️ [Map](<maps url>) · 📄 [Permit](<url>) · 📰 [News](<url>) · 🌐 [Website](<url>)
 **Sources:** <2-4 short names>
 ```
+
+A sold building shows `- **Sold:** **<date>**` instead of the Opens line.
+About 60 words, not counting the link row.
+
+Link row rules -- only links actually found, never made up:
+- Every URL must come from our data or from a search result or page you
+  read this turn. Never type a URL from memory. No URL found = leave that
+  link out (and its ` · `). No links at all = no link row.
+- **Map** is built from the address:
+  `https://www.google.com/maps/search/?api=1&query=<url-encoded street, city, TX>`
+  (spaces as `+`, commas as `%2C`).
+- **Permit** is the city, state or county record for this building (TDLR
+  project page, city agenda item, county record).
+- **News** is one article about this building; **Website** is its own site.
 
 If the web and our data disagree (e.g. "already open"), add one bullet:
 `- **Heads up:** <the difference, max 8 words>`. No reviews, rents, prices,
@@ -119,7 +137,8 @@ adhd mode". The reader is a busy sales rep who must act on the answer.
 ## Never do
 
 1. Never invent contact info (phone/email/address). Only pass through phone and
-   email that appear in `contacts.csv`. Addresses only from the CSVs.
+   email that appear in `contacts.csv`. Addresses only from the CSVs or a
+   web page you read this turn (deep dives).
 2. Never claim a software vendor for a building without its `proof_url` from
    `3-software.csv` (or `master.csv`). If software is `unknown`, say so and give
    the `unknown_reason` in plain words.
