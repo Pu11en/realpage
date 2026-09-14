@@ -48,6 +48,7 @@ from runfolder import RunFolder, RunCaps, pick_state  # noqa: E402
 from record import LeadRecord  # noqa: E402
 from merge import merge_records  # noqa: E402
 from fetch import WebHelper  # noqa: E402
+from quality import check_quality, write_quality_json  # noqa: E402
 
 import rank as cities_rank  # noqa: E402
 import find_sources  # noqa: E402
@@ -389,6 +390,19 @@ def run_chain(
     return merged
 
 
+def cities_with_real_source(run_folder: RunFolder, city_list: list[str]) -> int:
+    """Count cities whose `sources` step found a real (non-skipped) permit
+    recipe, for F9's quality report."""
+    count = 0
+    for city in city_list:
+        if not run_folder.step_done(STEP_SOURCES, city):
+            continue
+        recipe = run_folder.load_step(STEP_SOURCES, city)
+        if isinstance(recipe, dict) and not recipe.get("skipped"):
+            count += 1
+    return count
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--state", help="two-letter state code or slug to run")
@@ -419,6 +433,17 @@ def main(argv: list[str] | None = None) -> int:
     )
     records = run_chain(state, run_folder, deps, cities=args.city)
     print(f"lead-finder: {len(records)} leads for {state} -> {run_folder.path}")
+
+    city_list = run_folder.load_step(STEP_CITIES, STATE_CITY_KEY)["cities"]
+    city_names = [c["city"] if isinstance(c, dict) else c for c in city_list]
+    real_sources = cities_with_real_source(run_folder, city_names)
+    report = check_quality(state, records, real_sources, len(city_names))
+    write_quality_json(run_folder.path, report)
+
+    if not report["passed"]:
+        print(f"lead-finder: FAILED quality bar for {state}: {report['fail_reasons']}")
+        print("lead-finder: not built into the site")
+        return 1
 
     leads_path = write_area_leads(state, records)
     print(f"lead-finder: wrote {len(records)} records to {leads_path}")

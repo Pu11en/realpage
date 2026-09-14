@@ -100,7 +100,7 @@ Open: http://localhost:8765 → Early Leads → Az
   (found with Jina/Brave + the F2 check), read with Jina Reader or crawl4ai; `phonenumbers` pulls and
   de-duplicates, office lines above fax/cell. Never guess. Fixture tests + a live test on 3 answer-key
   buildings. Commit.
-- [ ] **F9 Quality alarms.** In `run.py`: after the run, write `quality.json` -- % cities with a real
+- [x] **F9 Quality alarms.** In `run.py`: after the run, write `quality.json` -- % cities with a real
   source, % leads with units, website, software verdict, phone, and answer-key recall (share of key
   buildings found) and software accuracy. **Bar for a state:** answer-key recall ≥60%, software
   correct on ≥80% of key buildings; for **existing buildings (leasing or sold)**: website on ≥70%,

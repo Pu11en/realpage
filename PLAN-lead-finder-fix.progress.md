@@ -415,3 +415,43 @@ Commit: (see git log for this file's commit)
   test's real search call -- left untracked, same as before (it's runtime usage-counter state,
   never committed).
 - Nothing left open for F8.
+
+## F9 Quality alarms -- done
+- New `propertystack/skills/lead-finder/quality.py`: `check_quality(state, records,
+  cities_with_source, total_cities, answer_keys_dir=None)` reads
+  `propertystack/answer-keys/<state>.json` (F6), matches each answer-key building to
+  a run's LeadRecords by normalized address (`record.normalize_address`, same rule
+  `merge.py` uses) or name if neither side has an address, and computes: answer-key
+  recall, software accuracy (only over key entries that carry a hand-verified
+  `software` field), overall %-with-units/website/software/phone, and separate bars
+  for existing buildings (`stage` leasing/sold: website/software/phone %) vs
+  not-yet-built projects (`stage` permitted/under construction: % correctly showing
+  "not picked yet" software, % with both a developer name and an office phone).
+  Every bar from the plan is checked; `passed=False` with a `fail_reasons` list of
+  plain-English reasons (including "no answer key found for this state") when any
+  bar is missed. `write_quality_json(run_folder_path, report)` writes it to
+  `<run folder>/quality.json`.
+- Wired into `run.py`'s `main()`: after `run_chain` finishes, loads the saved
+  `cities` step file to get the real city list (works whether it came from an
+  explicit `--city` list or the ranked Census fetch), counts cities whose
+  `sources` step found a real (non-skipped) recipe via new `cities_with_real_source()`,
+  calls `check_quality`, writes `quality.json`, and **only calls `write_area_leads`
+  (which is what makes a run show up on the site) if `report["passed"]` is true** --
+  a failing run prints its fail reasons and `main()` returns exit code 1 instead of
+  writing `propertystack/data/<state>/leads.json`. `run_chain()`'s own signature and
+  return value are unchanged (still just the scored `LeadRecord` list) so the
+  existing `test_run.py` resume tests didn't need touching.
+- Tests: new `propertystack/skills/lead-finder/tests/test_quality.py` (5 tests, all
+  offline with fake `LeadRecord`s and a temp answer-key file) -- a fully-passing run
+  meets every bar; low answer-key recall fails with the right reason string; a
+  missing answer-key file fails with "no answer key found for this state"; an
+  existing (leasing-stage) building missing its website fails that specific bar;
+  `write_quality_json` writes the file. Did not add a live test against the real AZ
+  answer key here -- F10/F11 (the next tasks) are exactly that real run, and will be
+  the first live exercise of this gate on real data.
+- Checked: `bash tooling/qa/check-lead-finder.sh` passes, lead-finder-tagged suites
+  now 56 (up from 51, +5 new quality tests). Full suite
+  `python3 -m pytest -q propertystack --ignore=propertystack/skills/client-map`:
+  246 passed (up from 241 at F8, +5, matching the new test file exactly -- no
+  existing test broke).
+- Nothing left open for F9.
