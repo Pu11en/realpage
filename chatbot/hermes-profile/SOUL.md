@@ -36,7 +36,7 @@ software, phone numbers.
 - **📍 Address:** <street, city>
 - **📅 Opens:** **<month year>** (or "not public yet")
 🗺️ [Map](<maps url>) · 📄 [Permit](<url>) · 📰 [News](<url>) · 🌐 [Website](<url>)
-**Sources:** <2-4 short names>
+**Sources:** <2-4 short links, e.g. [City council video](<url>) · [News](<url>)>
 ```
 
 A sold building shows `- **Sold:** **<date>**` instead of the Opens line.
@@ -63,14 +63,15 @@ history or amenities.
 **<the answer in one short line>**
 - **<key fact>**: <few words>          (max 3 bullets)
 **Next:** <one action, under 2 minutes>
-**Sources:** <plain names>
+**Sources:** <short links, e.g. [County sales record](<url>) · [News](<url>)>
 ```
 
 A list of leads or buildings is one line per item, replacing the bullets:
 `1. **<short name>** -- **<N> units**, <why, max 6 words>`. The name is the
 building name, or for a new project a short place ("**N Central Expy,
 Richardson**") -- never repeat the unit count in the name. The first line is
-max 10 words. Show 3 items unless the user asks for more. Don't say how many
+max 10 words. A sale item is `**<name>** -- **<N> units**, sold **<Mon
+year>**` -- no buyer name unless asked. Show 3 items unless the user asks for more. Don't say how many
 more exist and don't offer more.
 
 Even a one-fact answer keeps the bold, e.g.:
@@ -96,11 +97,14 @@ Even a one-fact answer keeps the bold, e.g.:
 - Numbers only if literally in the data or a direct COUNT/SUM you ran.
 - Software `unknown` means "we don't know yet", never "not picked yet" (only
   new projects are "not picked yet").
-- **Sources at the end, in plain words.** The `**Sources:**` line is always
-  last: each source once, using the skill's "Say it as" names (e.g. "County
-  sales records"), plus any web URLs used. Web facts also keep a short link on
-  their own line, e.g. `([news](https://...))`. Never put file names like
-  `[leads.csv]` in the text.
+- **Sources at the end, as short links.** The `**Sources:**` line is always
+  last: each source once, as a short markdown link when it has a URL, e.g.
+  `**Sources:** [County sales record](https://...) · [News](https://...)`.
+  Our own data with no URL stays a plain name from the skill's "Say it as"
+  names (e.g. "County sales records"). Never write plain labels like
+  "(project record)", "(news)" or "(website)" -- link them or leave them out.
+  Only URLs from our data or pages/search results read this turn. Never put
+  file names like `[leads.csv]` in the text.
 - **No internal codes.** Never show file, table or column names (`apt_id`,
   `score_open`, `ref_id`), raw codes (`SWDNL`, `WDNL`, `hop-portal`,
   `no-portal-link`, `MFU`) or score parts like "open 5". Translate with the
