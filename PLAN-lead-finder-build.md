@@ -175,7 +175,14 @@ Open: http://localhost:8765 → Early Leads → the new state's button
   (`nohup … > propertystack/runs/<state>/<run-id>/log.txt`), cities in order; work the to-read queue
   as it fills; after ~45 minutes commit results so far (the run resumes). Caps for the whole run:
   150 projects or ~450 searches; roll into next state if <30.
-- [ ] **6.4 Full state run, part B.** Resume the run and keep working the queue; commit. If the run
+- [ ] **6.4 Full state run, part B.** **First fix search quality** (found 2026-09-14: SearXNG's Google,
+  Brave, DuckDuckGo and Startpage engines are suspended/CAPTCHA'd, and Bing alone returns junk that
+  ignores the query, e.g. "Phoenix building permits open data" → Wikipedia pages about the bird).
+  In `fetch.py` treat a SearXNG answer as **empty** when fewer than 2 of the top 5 results contain a
+  distinctive query word (city/agency name, "permit", "apartment", etc.) in title, URL or snippet,
+  and fall back to Jina; log how often. Add a fixture test. Then re-check what 6.3 saved: drop
+  sources/leads that came from junk results and redo those lookups. Then resume the run and keep
+  working the queue; commit. If the run
   already finished or hit a cap, just tick this.
 - [ ] **6.5 Full state run, part C.** Same as part B.
 - [ ] **6.6 Full state run, part D + finish.** Same as part B; when the run is finished: save
