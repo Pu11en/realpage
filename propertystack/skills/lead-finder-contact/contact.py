@@ -23,7 +23,7 @@ from pathlib import Path
 import phonenumbers
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "lib"))
-from building_match import is_about_building  # noqa: E402
+from building_match import is_about_building, clean_project_name  # noqa: E402
 
 PHONE_CONTEXT_WINDOW = 15
 FAX_KEYWORDS = ("fax",)
@@ -218,11 +218,12 @@ def find_developer_for_new_permit(
     if owner and not _is_generic_owner_name(owner):
         return owner, {"fact": "developer", "url": "county parcel file"}
 
-    developer = find_developer_by_news(record.name, record.city, search_fn)
+    clean_name = clean_project_name(record.name)
+    developer = find_developer_by_news(clean_name, record.city, search_fn)
     if developer:
         return developer, {"fact": "developer", "url": "news search"}
 
-    if owner and _owner_confirmed_by_news(owner, record.name, record.city, search_fn):
+    if owner and _owner_confirmed_by_news(owner, clean_name, record.city, search_fn):
         return owner, {"fact": "developer", "url": "county parcel file + news"}
 
     return "", None

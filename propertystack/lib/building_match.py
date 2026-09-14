@@ -43,6 +43,26 @@ LISTING_DOMAINS = [
 LISTING_EXACT = {"rentcafe.com"}
 
 
+_BRACKET_RE = re.compile(r"\[[^\]]*\]")
+_PAREN_RE = re.compile(r"\([^)]*\)")
+_STAR_RE = re.compile(r"\*[^*]*\*")
+
+
+def clean_project_name(name: str) -> str:
+    """Strip permit-system annotations from a raw permit/sales record name
+    before using it in a search query -- e.g. "REVELRY [NEW MIXED-USE] -
+    *LP* / Phased Construction - Type D" -> "REVELRY", "1020 APACHE [NEW
+    MIXED-USE / MULTI-FAMILY]" -> "1020 APACHE". Quoting the raw, annotated
+    name in a search finds nothing because no real page uses that exact
+    string. Falls back to the original name if stripping empties it."""
+    cleaned = _BRACKET_RE.sub("", name or "")
+    cleaned = _PAREN_RE.sub("", cleaned)
+    cleaned = _STAR_RE.sub("", cleaned)
+    cleaned = cleaned.split(" - ")[0]
+    cleaned = re.sub(r"\s+", " ", cleaned).strip(" -")
+    return cleaned or (name or "").strip()
+
+
 def distinctive_words(name: str) -> list[str]:
     words = re.findall(r"[a-z0-9]+", (name or "").lower())
     out = [w for w in words if w not in STOPWORDS and len(w) >= 3]

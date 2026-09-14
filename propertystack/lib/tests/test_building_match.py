@@ -3,7 +3,27 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
 
-from lib.building_match import is_about_building, is_listing_domain, matches_building
+from lib.building_match import (
+    clean_project_name, is_about_building, is_listing_domain, matches_building,
+)
+
+
+def test_clean_project_name_strips_permit_annotations():
+    assert clean_project_name(
+        "REVELRY [NEW MIXED-USE] - *LP* / Phased Construction - Type D"
+    ) == "REVELRY"
+    assert clean_project_name(
+        "1020 APACHE [NEW MIXED-USE / MULTI-FAMILY]"
+    ) == "1020 APACHE"
+    assert clean_project_name("LA VICTORIA COMMONS ON APACHE [EXPEDITED]") == (
+        "LA VICTORIA COMMONS ON APACHE"
+    )
+    assert clean_project_name("VERVE TEMPE [NEW MIXED-USE] (WD)") == "VERVE TEMPE"
+
+
+def test_clean_project_name_falls_back_to_original_when_emptied():
+    assert clean_project_name("[EXPEDITED]") == "[EXPEDITED]"
+    assert clean_project_name("") == ""
 
 
 def test_marquee_on_5th_does_not_match_sports_network():
