@@ -140,7 +140,7 @@ Open: http://localhost:8765 → Early Leads → the new state's button
 - [x] **5.1 Build every area.** `site/data/build_data.py` builds each area folder under
   `propertystack/data/` from the part-1 lead format (sample area only when a test flag is set, never
   in the real build). Plano–Richardson unchanged. Tests. Commit.
-- [ ] **5.2 Area buttons.** Early Leads: one button per area, each its own table; remove the
+- [x] **5.2 Area buttons.** Early Leads: one button per area, each its own table; remove the
   sidebar area dropdown. Check passes. Commit.
 - [ ] **5.3 City filter + labels.** State areas get a city filter above the table; rows show
   "Planned (not permitted yet)", "Opens: not public yet", "Sold <date>" and the why line. Commit.

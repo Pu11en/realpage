@@ -13,15 +13,38 @@
   <script>
     renderShell("leads");
 
-    loadData("data/leads.json").then((data) => {
-      const content = document.getElementById("page-content");
-      const s = data.stats;
+    const content = document.getElementById("page-content");
+
+    async function loadAreas() {
+      try {
+        return (await loadData("data/areas/index.json")).areas;
+      } catch (e) {
+        return [{ slug: "plano-richardson", label: "Plano–Richardson", dataPath: "data/leads.json" }];
+      }
+    }
+
+    function pickInitialSlug(areas) {
+      const wanted = new URLSearchParams(location.search).get("area");
+      if (wanted && areas.some((a) => a.slug === wanted)) return wanted;
+      return areas[0].slug;
+    }
+
+    loadAreas().then((areas) => {
+      const slug = pickInitialSlug(areas);
+      const area = areas.find((a) => a.slug === slug) || areas[0];
+      renderPage(areas, area);
+    });
+
+    function renderPage(areas, area) {
+    loadData(area.dataPath).then((data) => {
+      const s = Object.assign({ leads: 0, newThisWeek: 0, unitsInPlay: 0, openingNext12mo: 0 }, data.stats);
       const cities = [...new Set(data.leads.map((l) => l.city))].sort();
       const softwareOptions = [...new Set(data.leads.map((l) => l.software).filter(Boolean))].sort();
 
       content.innerHTML = `
         <h1>Early Leads</h1>
         <div class="meta">Who's about to choose -- upcoming buildings + recently sold.</div>
+        ${renderAreaButtons(areas, area.slug)}
         ${placeholderBanner(data.status)}
         <div class="stats-row">
           <div class="stat-card"><div class="value">${s.leads}</div><div class="label">Leads</div></div>
@@ -154,8 +177,15 @@
       const swSel = document.getElementById("f-software");
       if (wanted && [...swSel.options].some((o) => o.value === wanted)) swSel.value = wanted;
 
+      wireAreaButtons(content, (newSlug) => {
+        const newArea = areas.find((a) => a.slug === newSlug);
+        history.replaceState(null, "", `?area=${encodeURIComponent(newSlug)}`);
+        renderPage(areas, newArea);
+      });
+
       renderRows();
     });
+    }
   </script>
 </body>
 </html>

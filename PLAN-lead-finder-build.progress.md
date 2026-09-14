@@ -681,3 +681,43 @@ Nothing left open for this task.
   confirm the real plano-richardson build still writes the same 5 files with the same content.
 - Nothing left open. 5.2 (area buttons in Early Leads) and 5.3 (city filter) will read
   `site/data/areas/<slug>.json` once a real state run exists to populate it.
+
+## 5.2 Area buttons -- done
+
+- `site/data/build_data.py`: `_area_lead_dict` now also emits `property` (alias of
+  `community`, falling back to address) plus a display-only `score` (rank order from
+  4.5's `score_and_rank`, 100 down by 3 per rank) and `isNew: false`, so a state
+  area's leads.json shape works with the existing table renderer. `build_area`'s
+  `stats` now also includes `newThisWeek`/`openingNext12mo` (0 for now -- real
+  values are 5.3's job once opening-date labels are handled). Added
+  `build_areas_manifest()`, called from `main()`, writing
+  `site/data/areas/index.json`: always lists Plano-Richardson (`data/leads.json`,
+  legacy CSV pipeline) plus every discovered state area (`data/areas/<slug>.json`),
+  each with a slug and a human label.
+- `site/js/app.js`: removed the static sidebar `#area-select` dropdown (it never
+  did anything -- nothing read its value). Added `renderAreaButtons(areas,
+  activeSlug)` (renders nothing when there's only one area) and
+  `wireAreaButtons(container, onSelect)`.
+- `site/index.html`: Early Leads now fetches `data/areas/index.json` first,
+  picks the initial area from `?area=<slug>` or the first entry, and renders a
+  row of area buttons above the stats row. Clicking a button re-fetches that
+  area's data and re-renders the whole page (stats/filters/table) without a
+  full reload, and updates the URL via `history.replaceState` so the choice is
+  linkable/bookmarkable. Table rendering itself is unchanged.
+- Added `.area-buttons`/`.area-btn` styles to `site/css/styles.css` (pill
+  buttons, active state highlighted).
+- Checked: `bash tooling/qa/check-lead-finder.sh` passes (all lead-finder skill
+  tests + check-panel.sh clean). Ran `python3 site/data/build_data.py` for the
+  real (non-sample) build -- only `site/data/areas/index.json` is new, with one
+  entry (Plano-Richardson, since no real state-area run has happened yet).
+  Also ran a one-off `LEAD_FINDER_BUILD_SAMPLE=1` build to confirm a second area
+  (`_sample`) produces a working, non-empty leads list and a two-entry manifest
+  (buttons only render once there's 2+ areas), then re-ran the normal build to
+  put the site back to its real (non-sample) state. Served `site/` locally and
+  confirmed no `area-select` references remain anywhere in `site/`.
+- Left open: `check-panel.sh`'s `quick-check.py`/`panel_test.py` don't assert
+  anything about area buttons or area-switching -- they'd pass even if this
+  broke, per the earlier research note. Real area-switching UI verification
+  (multiple real areas, city filter, labels) is 5.3's job once a real state run
+  exists. `newThisWeek`/`openingNext12mo` are placeholder 0s for state areas
+  until 5.3 adds real date-based labels.

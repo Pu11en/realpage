@@ -126,6 +126,29 @@ body {
   flex-wrap: wrap;
 }
 
+.area-buttons {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.area-buttons .area-btn {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  border-radius: 999px;
+  padding: 6px 14px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.area-buttons .area-btn.active {
+  background: var(--accent, #6366f1);
+  border-color: var(--accent, #6366f1);
+  color: #fff;
+}
+
 .filters input, .filters select, .btn {
   background: var(--card-bg);
   border: 1px solid var(--border);

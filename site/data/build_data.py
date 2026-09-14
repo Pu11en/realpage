@@ -459,8 +459,10 @@ def discover_state_areas(include_sample: bool = False) -> list[str]:
 
 def _area_lead_dict(record, idx: int) -> dict:
     is_sold = record.stage == "sold"
+    name = record.name or record.address or "Unnamed project"
     return {
         "id": f"{record.area}-{idx}",
+        "property": name,
         "community": record.name or None,
         "city": record.city,
         "address": record.address or None,
@@ -478,6 +480,10 @@ def _area_lead_dict(record, idx: int) -> dict:
         "sources": [s["url"] if isinstance(s, dict) else s.url for s in record.sources],
         "signalType": "Sold" if is_sold else ("Planned" if record.stage == "planned" else "Upcoming"),
         "why": record.why,
+        # Records already come out of score_and_rank in rank order (4.5); this
+        # is a display-only stand-in for a numeric score until the site needs one.
+        "score": max(0, 100 - (idx - 1) * 3),
+        "isNew": False,
     }
 
 
@@ -504,6 +510,8 @@ def build_area(slug: str) -> dict:
             "leads": len(leads),
             "cities": len(cities),
             "unitsInPlay": units_in_play,
+            "newThisWeek": 0,
+            "openingNext12mo": 0,
         },
         "cities": cities,
         "leads": leads,
@@ -521,6 +529,23 @@ def build_state_areas(include_sample: bool = False) -> list[str]:
         area_json = build_area(slug)
         (AREAS_OUT_DIR / f"{slug}.json").write_text(json.dumps(area_json, indent=2))
     return slugs
+
+
+def build_areas_manifest(area_slugs: list[str]) -> dict:
+    """Write site/data/areas/index.json: one entry per area button on the Early
+    Leads page (5.2). Plano-Richardson keeps its own legacy leads.json; every
+    discovered state area (5.1) points at its file under data/areas/."""
+    areas = [{"slug": AREA, "label": "Plano–Richardson", "dataPath": "data/leads.json"}]
+    for slug in area_slugs:
+        areas.append({
+            "slug": slug,
+            "label": slug.replace("-", " ").title(),
+            "dataPath": f"data/areas/{slug}.json",
+        })
+    manifest = {"areas": areas}
+    AREAS_OUT_DIR.mkdir(parents=True, exist_ok=True)
+    (AREAS_OUT_DIR / "index.json").write_text(json.dumps(manifest, indent=2))
+    return manifest
 
 
 def main() -> None:
@@ -547,6 +572,9 @@ def main() -> None:
     area_slugs = build_state_areas(include_sample=include_sample)
     if area_slugs:
         print(f"wrote {len(area_slugs)} state area(s) under site/data/areas/: {', '.join(area_slugs)}")
+
+    manifest = build_areas_manifest(area_slugs)
+    print(f"wrote areas/index.json ({len(manifest['areas'])} area button(s))")
 
 
 if __name__ == "__main__":
