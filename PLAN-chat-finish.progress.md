@@ -33,3 +33,10 @@
 - Gotcha: Open WebUI copies `/app/build/static/custom.css` into its backend static folder at start-up, so a CSS change needs `docker restart ps-chat-open-webui-1` (or `tooling/dev.sh`); editing the mounted file alone serves the old CSS.
 - Checked: Playwright at 480×800 on localhost:3000 — open = full width, Back to chat closes it, picking a chat closes it and opens that chat. Screenshots /tmp/past-chats-closed.png, /tmp/past-chats-open.png, /tmp/past-chats-picked.png looked right. Check line passes. Commit 82c446c.
 - Open: the automated panel check uses a stand-in chat page, so it doesn't test the Past chats button itself.
+
+## T6 Redo a saved deep dive — done 2026-09-13
+- `chatbot/proxy.py`: remembers which Open WebUI chat (`X-OpenWebUI-Chat-Id`) was given which building's deep dive (in memory, last 2000 chats). The same chat asking the same deep dive again (that's what ↻ → Try Again sends) researches it fresh and replaces the saved copy. "Fresh deep dive on …" still redoes; a new chat still gets the saved copy instantly. No expiry.
+- Saved note now reads: "Saved deep dive from <date>. Press ↻ to redo it."
+- Checked: `chatbot/tests/test_deep_dive_cache.py` (first ask saves, new chat replays, same chat again redoes + replaces, fresh prefix redoes, no chat id still replays) against a fake Hermes — 17 tests pass in all. Rebuilt with `tooling/dev.sh`; in the real Open WebUI (Playwright, 480 wide) asked the Orchards deep dive → saved note shown; ↻ → Try Again → fresh answer and the saved file was replaced. Check line passes.
+- Gotcha: in this Open WebUI version ↻ opens a small menu (Try Again / Add Details / More Concise); Try Again is the redo.
+- Open: the saved note's date uses the container clock (UTC), so an evening save in Texas shows tomorrow's date. The chat's own follow-up suggestions can offer a "call opener", which the plan says not to do (not part of this task). Remembered chats reset when the bot restarts (a ↻ after a restart replays instead of redoing).

@@ -76,7 +76,7 @@ local-trial-key-change-me` and `X-OpenWebUI-User-Email: admin@localhost`, model 
   if at all possible (the site and chat are different origins locally, so the site page can't
   reach into the frame). Rebuild the chat app image if branding is baked in; screenshot the
   panel closed and open to `/tmp/past-chats-*.png` and look at them. Check passes. Commit.
-- [ ] **T6 Redo a saved deep dive.** In `chatbot/proxy.py`: when Open WebUI's regenerate (↻)
+- [x] **T6 Redo a saved deep dive.** In `chatbot/proxy.py`: when Open WebUI's regenerate (↻)
   button is pressed on a saved deep dive, run it fresh and replace the saved copy. Detect it
   with the chat id Open WebUI forwards (`X-OpenWebUI-Chat-Id`, sent because
   `ENABLE_FORWARD_USER_INFO_HEADERS` is on): remember which chat ids were just served a saved
