@@ -35,6 +35,7 @@ LISTING_DOMAINS = [
     "maps.google.com", "cortera.com", "chamberofcommerce.com", "manta.com",
     "buzzfile.com", "dnb.com", "opencorporates.com", "usnews.com", "caring.com",
     "seniorliving.org", "aplaceformom.com", "locating", "locator",
+    "movoto.com", "cityfeet.com", "gridics.com", "erasmusplay.com", "amberstudent.com",
 ]
 # rentcafe.com the search/listing hub is a reject; a *.rentcafe.com community
 # subdomain (e.g. legacynorth.rentcafe.com) is the community's own leasing

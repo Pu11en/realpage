@@ -13,6 +13,8 @@ import sys
 from pathlib import Path
 from typing import Callable
 
+import phonenumbers
+
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "lead-finder"))
 from merge import merge_records  # noqa: E402
 from record import LeadRecord  # noqa: E402
@@ -148,13 +150,20 @@ def _build_record(
 ) -> LeadRecord:
     address_key = fields.get("address")
     address = str(row.get(address_key, "")) if address_key else ""
+    name_key = fields.get("name")
+    name = str(row.get(name_key) or "").strip() if name_key else ""
     units = _parse_units(row, fields, units_pattern)
     permit_link = str(row.get("link") or row.get("url") or endpoint)
     developer, developer_source = _find_owner(row, recipe or {}, permit_link)
+    office_phone, phone_source = _find_builder_phone(row, recipe or {}, permit_link)
     sources = [{"fact": "permit_date", "url": permit_link}]
     if developer_source:
         sources.append(developer_source)
+    if phone_source:
+        sources.append(phone_source)
     return LeadRecord(
+        name=name,
+        office_phone=office_phone,
         area=area,
         city=city,
         address=address,
@@ -179,6 +188,26 @@ def _find_owner(row: dict, recipe: dict, permit_link: str) -> tuple[str, dict | 
         value = str(row.get(field_name) or "").strip()
         if value:
             return value, {"fact": "developer", "url": permit_link}
+    return "", None
+
+
+def _find_builder_phone(row: dict, recipe: dict, permit_link: str) -> tuple[str, dict | None]:
+    """A phone number given directly on the permit row (e.g. the contractor's
+    office line) -- real, never guessed, and a fallback for not-yet-built
+    projects that have no website yet to crawl for a phone."""
+    field_name = recipe.get("builder_phone_field")
+    if not field_name:
+        return "", None
+    value = str(row.get(field_name) or "").strip()
+    if not value:
+        return "", None
+    try:
+        parsed = phonenumbers.parse(value, "US")
+        if phonenumbers.is_valid_number(parsed):
+            formatted = phonenumbers.format_number(parsed, phonenumbers.PhoneNumberFormat.NATIONAL)
+            return formatted, {"fact": "office_phone", "url": permit_link}
+    except phonenumbers.NumberParseException:
+        pass
     return "", None
 
 

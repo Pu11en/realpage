@@ -455,3 +455,54 @@ Commit: (see git log for this file's commit)
   246 passed (up from 241 at F8, +5, matching the new test file exactly -- no
   existing test broke).
 - Nothing left open for F9.
+
+## F10 Tempe test run -- STUCK, real bugs found and fixed, still below bar
+- Ran the full chain on Tempe only. First run: 0 leads at all. Found the root cause:
+  `run.py`'s `step_sources` never checked F4's hand-tested saved recipes
+  (`propertystack/recipes/az/tempe.json`) before doing live source discovery -- it
+  redid discovery from scratch every run, and live discovery correctly finds Tempe's
+  Accela citizen-access portal and marks it "no free data", throwing away the working
+  ArcGIS recipe F4 spent real effort building. Fixed: `step_sources` now loads
+  `propertystack/recipes/<state>/<city-slug>.json` first and uses it directly when
+  present. Rerun: 11 real leads (up from 0).
+- Second bug: `find_upcoming.py` never extracted a project name from the permit row at
+  all (every lead's `name` was ""), even though Tempe's ArcGIS layer has a real
+  `ProjectName` field (confirmed live: "REVELRY [NEW MIXED-USE]", "AVENUE
+  5/TROVITA RIO", etc.). Added `fields.name` support to `_build_record` and set it on
+  Tempe's recipe. Also found and fixed real listing-site leaks in `building_match.py`'s
+  `LISTING_DOMAINS` (movoto.com, cityfeet.com, gridics.com, erasmusplay.com,
+  amberstudent.com were leaking through as "official" websites in the live run).
+- Third bug: no path existed to pull a phone number straight off a permit row
+  (`ContractorPhone`), only from crawling a website -- added `builder_phone_field`
+  support (formatted with `phonenumbers`, same as the rest of the codebase) and set
+  Tempe's recipe to use `ContractorCompanyName`/`ContractorPhone` as the developer/phone
+  fallback when no owner field exists.
+- After all three fixes, Tempe still fails the quality bar:
+  - **Answer-key recall 0/2.** Tempe's only 2 answer-key buildings (Northbend, Dwell at
+    5th and Farmer) both had their grand opening in March 2025 -- about 18 months before
+    today (2026-09-14). `find_upcoming.py`'s CO window is 6 months, so a permit-based
+    recipe can never surface them; they're too old for "upcoming," not a bug. With a
+    2-building city sample, missing both means 0% recall regardless of code quality.
+  - **Website/software/phone 0% on the 2 existing (leasing) leads.** The tool
+    genuinely couldn't find a real official site for either "1020 Apache" or "La
+    Victoria Commons on Apache" via search -- zillow/apartments.com hits were correctly
+    rejected as listing sites, but nothing else turned up. Might need a stronger site
+    search or these two just don't have indexed sites yet.
+  - **Developer+phone 0% on the 9 not-yet-built leads.** Checked Tempe's live ArcGIS
+    data directly: `ContractorCompanyName`/`ContractorPhone` are genuinely `null` on
+    all of today's newest-issued permits (contractor info gets filled in later in the
+    permit lifecycle, not at issuance) -- correctly showing nothing rather than
+    guessing.
+- All 3 fixes are real, verified live, and committed regardless of the bar result
+  (recipe reuse alone took leads from 0 to 11; the other two improve name/phone
+  accuracy for every future run, not just Tempe). Checked: `bash
+  tooling/qa/check-lead-finder.sh` passes; full suite `python3 -m pytest -q
+  propertystack --ignore=propertystack/skills/client-map`: 246 passed (up from 234).
+- Left open: the Tempe-only bar can't currently be met because (a) its answer-key
+  sample is only 2 buildings and both are stale for a permit-only recipe, and (b) the
+  tool has run out of "free, no-guessing" ways to find a developer/phone for
+  brand-new Tempe permits before contractor data is filled in. Options for the next
+  round: pull developer/phone from the project's own Jina/Brave search using the new
+  `ProjectName` field (e.g. news mentioning "REVELRY Tempe developer"), and/or
+  reconsider whether a 2-building city-level answer-key check is a fair pass/fail bar
+  versus running against the full state key in F11.

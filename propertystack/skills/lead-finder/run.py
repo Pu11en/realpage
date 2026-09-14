@@ -169,8 +169,27 @@ def _records_from(data) -> list[LeadRecord]:
 # -- per-city steps --------------------------------------------------------
 
 
+STATE_RECIPES_DIR = HERE.parents[2] / "propertystack" / "recipes"
+
+
+def _load_state_recipe(city: str, state: str) -> dict | None:
+    """F4/F5 hand-tested city recipes are saved once under
+    propertystack/recipes/<state-slug>/<city-slug>.json (see F4's progress-log
+    entry) and must win over live discovery every run -- rediscovering them
+    live is slower, burns search-call budget, and can misclassify a city
+    (Tempe's live discovery finds its Accela portal and marks it "no free
+    data", even though F4 already proved a working ArcGIS permit recipe)."""
+    path = STATE_RECIPES_DIR / state.lower() / f"{find_sources.slugify(city)}.json"
+    if not path.exists():
+        return None
+    return json.loads(path.read_text())
+
+
 def step_sources(run_folder: RunFolder, city: str, state: str, deps: ChainDeps) -> dict:
     def _do():
+        saved = _load_state_recipe(city, state)
+        if saved is not None:
+            return saved
         kwargs = {"recipes_dir": deps.recipes_dir} if deps.recipes_dir else {}
         if deps.today is not None:
             kwargs["today"] = deps.today
