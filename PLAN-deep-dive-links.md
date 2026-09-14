@@ -15,7 +15,7 @@ Tasks touch `SOUL.md` / `proxy.py`: run in order, never in parallel with another
 Rebuild with `bash tooling/dev.sh` after each bot change (plain `docker restart` keeps old rules).
 
 Run with: `Do the next unticked task in PLAN-deep-dive-links.md, then tick it and stop.`
-Check: `python3 -m pytest -q chatbot/tests && bash tooling/qa/check-panel.sh && bash tooling/qa/check-readable.sh`
+Check: `bash tooling/qa/check-deep-dive.sh`
 Try: `bash tooling/dev.sh`
 Open: http://localhost:8765 → Early Leads → ✦ Deep dive
 

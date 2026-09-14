@@ -11,3 +11,8 @@
   4 non-map URLs returned HTTP 200. Check command passes (17 tests, panel, readable).
 - Open: Sherman's "Call" line still links TDLR there instead of in the row's Permit slot; bot
   once leaked "(7 words)" into Why now. Sources line still plain names (K2 fixes that).
+
+## K1 fix — check command (2026-09-13)
+- The bot runs `Check:` without a shell, so `&&` was passed to pytest as a filename and nothing ran.
+- Wrapped the three checks in `tooling/qa/check-deep-dive.sh`; plan's Check line now calls that one script.
+- Ran it: 17 tests pass, panel check clean, readable check OK (exit 0).
