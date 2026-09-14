@@ -1,7 +1,8 @@
 # PropertyStack: lead finder (any area, new buildings first)
 
 Rewritten 2026-09-13 with Drew (all answers: `/home/drewp/main-projects/handoffs/2026-09-13-area-finder-plan-answers.md`).
-**NOT approved to run yet** -- all holes answered 2026-09-13; waiting for Drew's "go work". Runs after `PLAN-client-map.md` (done).
+**NOT approved to run yet** -- planning with Drew. This file is now the **rules + map**; the work is
+split into 6 plans (below) so several `/gowork` runs can build at the same time. Runs after `PLAN-client-map.md` (done).
 Replaces `PLAN-scout.md` S6 and `PLAN-new-area.md`.
 
 ## What it is
@@ -37,67 +38,37 @@ on localhost, Drew checks, Drew pushes.
 - **Site:** Early Leads gets a **row of area buttons** (one per area, incl. Plano–Richardson), each
   its own table; a state area has a **city filter** above its table. Sidebar area dropdown goes.
   (Software Share page already removed.)
+- **Early signals (added 2026-09-13):** city council / planning agendas (Legistar first, then
+  civic-scraper platforms) → projects shown as **"Planned (not permitted yet)"**, ranked **below**
+  permitted ones, upgraded when a permit appears. **HUD FHA loan list** (221(d)(4) = new building,
+  223(f) = likely sale/refi). **State housing agency award lists** (found via NCSHA / Novogradac;
+  saved as per-state recipes). Skip: HUD LIHTC list (years stale), NHPD (non-commercial),
+  Google Maps scraping, email guessing. Later: job posts as timing signal, HUD owner/manager list.
+- **Software check:** our own fingerprint rules file (Wappalyzer-style format, our own rules for
+  RealPage / Yardi / Entrata / AppFolio / ResMan / MRI …); cheap HTML check first, browser only if
+  unclear; a **double check** before any "RealPage" or "competitor" verdict.
+- **Phones:** `phonenumbers` finds and de-duplicates numbers; office lines above fax/cell.
+- **Resume:** every step writes to a run folder; a stopped run picks up where it left off.
 - **Tools (all local, run only in harness sessions in this folder, never the deployed chatbot):**
   this Claude session, **SearXNG first** (`tooling/searx_search.py`, `127.0.0.1:8888`), **Jina only
-  as fallback** (paid, capped), crawl4ai (`localhost:11235`), Playwright + stealth, Claude web
+  as fallback** (paid, capped), crawl4ai (`localhost:11235`), Scrapling (stubborn sites, before Playwright), Playwright + stealth, Claude web
   search/fetch, Socrata/ArcGIS catalog APIs (find city permit data), GDELT (sale news), usaddress +
   Census batch geocoder (matching). No Ollama. `tooling/pms_detect.py`, Census data, optional
   Reddit/X (read-only). No LinkedIn.
 
-Run with: `Do the next unticked task in PLAN-lead-finder.md, then tick it and stop.`
-Check: `bash tooling/qa/check-lead-finder.sh`
-Try: `bash tooling/dev.sh`
-Open: http://localhost:8765 → Early Leads → the new state's button
+## The 6 plans (build order)
+1. **`PLAN-lf-1-core.md`** -- shared base: skeleton, one lead format, web helper, run folder +
+   resume, caps. **Must finish first.**
+2. Then these four can run **at the same time** (each only touches its own folders):
+   - **`PLAN-lf-2-permits.md`** -- cities → permit sources → new apartment projects → details.
+   - **`PLAN-lf-3-early-signals.md`** -- meeting agendas, HUD loan list, state award lists.
+   - **`PLAN-lf-4-software-contacts.md`** -- software check, sale news, who to call, ranking.
+   - **`PLAN-lf-5-site-chat.md`** -- Early Leads area buttons + city filter, chat knows every area
+     (built on sample data).
+3. **`PLAN-lf-6-run.md`** -- after 1-5 are merged: wire the chain, small test run (**stops for
+   Drew's go**), full state run, fill the site.
 
-## How to try it (30 seconds)
-1. Early Leads: a row of area buttons; click the new state -- its own table, soonest openings on top.
-2. Pick a city in the filter: only that city's leads; each row says why it's a lead.
-3. Click ✦ Deep dive on the top lead: address, opening date and real links.
+Every plan runs on its own safe copy and is merged into `local-test`. Nothing is pushed until
+Drew has tried it on localhost and said OK.
 
-## Tasks
-
-- [ ] **L1 Skeleton, caps, no-place-names test.** Delete the 4 old Plano-only skills
-  (`find-apartments`, `find-sales`, `build-table`, `scout-areas`); Plano data files stay. `propertystack/skills/lead-finder/` (`SKILL.md`
-  describing the chain + `run.py` that calls each step) and `tooling/qa/check-lead-finder.sh`
-  (runs this skill's tests + `check-panel.sh`). Shared **`fetch.py`** every step uses for the web:
-  search = SearXNG (`tooling/searx_search.py`) first, Jina only if SearXNG gives nothing or is down;
-  page reads cached on disk (never read twice), 2 s between visits to the same site, 3 blocks →
-  city skipped with a reason; every search counted toward the 450 cap (Jina calls logged separately). Fixture-only tests: state pick from `counts.json`,
-  SearXNG-first/Jina-fallback, cache hit, 3-blocks skip, 150-project and 450-search caps stop cleanly, <30 projects rolls into the next state, lead ranking order (unknown opening → by permit date), and a test that **fails if any
-  lead-finder step's code contains a place name** (Plano, Richardson, Collin, Dallas, any state or
-  city literal). Tests fail first; commit.
-- [ ] **L2 Rank the state's cities (free).** Census place-level building permits (5+ units, last
-  12-24 months) for the picked state; write `propertystack/data/<state-slug>/cities.json`
-  (city, permits, RealPage count from client map). Commit.
-- [ ] **L3 `find-sources` (new).** Recipe format in `propertystack/recipes/*.json` (by permit
-  system, e.g. Socrata / ArcGIS / Accela / EnerGov / Tyler, or by city): how to query new
-  multifamily permits, fields, date tested, how complete. For a city with no recipe: first ask the free
-  Socrata and ArcGIS catalog APIs for the city's permit dataset, then search for its permit data, identify the system, test on 5 permits, save the recipe; none found = mark the city
-  "skipped: no permits online". Fixture tests. Commit.
-- [ ] **L4 `find-upcoming` rebuilt for any city.** Replace the old Plano-only version: given a city
-  and its recipe, pull new apartment permits (permit issued → leasing, apartments only, 20+ units),
-  merging several permits into one row per project with its permit link. No hard-coded searches or places. Fixture tests. Commit.
-- [ ] **L5 `project-details` (new).** Clean addresses with usaddress + the free Census batch
-  geocoder so permits for one project merge reliably. One web lookup per project: street address, units,
-  developer, expected opening, news link, website. Never guess; blank if not found. Fixture tests.
-  Commit.
-- [ ] **L6 `find-sales-news` (new).** GDELT (free news index) plus SearXNG news search for apartment sales in the state's cities, last
-  24 months: building, buyer, date, units, link. Fixture tests. Commit.
-- [ ] **L7 Software + who to call, any area.** Make `find-website`, `detect-software` and
-  `contact-scrape` take any area (remove Plano paths); drop RealPage leads; contact = developer or
-  new owner office phone + website, named person only from a permit/news page. Commit.
-- [ ] **L8 `score-leads`, any area.** Remove Plano bits; rank soonest opening → units → not picked
-  yet above competitor; one-line "why" per lead. Fixture tests. Commit.
-- [ ] **L9 Small test run (💲 ~20 searches).** Run the whole chain on **one city** of the picked
-  state, capped at 5 projects. Show Drew the 5 leads in plain words. **Stop -- Drew says go before
-  L10.**
-- [ ] **L10 Full state run (💲 ~450 searches) -- only after Drew's go.** Whole state until 150
-  projects or the search cap; save recipes; spot-check 10 software calls; log to
-  `propertystack/runs/`. Commit.
-- [ ] **L11 Site: area buttons.** `site/data/build_data.py` builds every area under
-  `propertystack/data/`; Early Leads shows one button per area with its own table, a city filter
-  for state areas; remove the sidebar area dropdown. Plano–Richardson unchanged. Check passes.
-  Commit.
-- [ ] **L12 Chat knows every area.** The chatbot loads each area's leads; `SOUL.md` stops naming
-  one county; deep dives work for the new state. Rebuild; run `tooling/qa/check-answers.sh`.
-  Commit. Tell Drew in plain words it's ready to try.
+Check (all lead-finder plans): `bash tooling/qa/check-lead-finder.sh`
