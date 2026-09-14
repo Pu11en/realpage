@@ -15,7 +15,7 @@ Tasks touch `SOUL.md` / `proxy.py`: run in order, never in parallel with another
 Rebuild with `bash tooling/dev.sh` after each bot change (plain `docker restart` keeps old rules).
 
 Run with: `Do the next unticked task in PLAN-deep-dive-links.md, then tick it and stop.`
-Check: `python3 -m pytest -q chatbot/tests && bash tooling/qa/check-panel.sh && bash tooling/qa/check-readable.sh`
+Check: `bash tooling/qa/check-deep-dive.sh`
 Try: `bash tooling/dev.sh`
 Open: http://localhost:8765 → Early Leads → ✦ Deep dive
 
@@ -27,7 +27,7 @@ Open: http://localhost:8765 → Early Leads → ✦ Deep dive
 
 ## Tasks
 
-- [ ] **K1 Deep dive layout + link rules.** In `chatbot/hermes-profile/SOUL.md` change the
+- [x] **K1 Deep dive layout + link rules.** In `chatbot/hermes-profile/SOUL.md` change the
   deep-dive layout to: the existing Call / Why now / Size+Software / Ask for lines, then
   `- **📍 Address:** <street, city>` and `- **📅 Opens:** <month year or "not public yet">`
   (sold buildings: `**Sold:** <date>` instead), then one line
@@ -41,7 +41,7 @@ Open: http://localhost:8765 → Early Leads → ✦ Deep dive
   website. Clear saved deep dives (`/opt/data/deep-dives/*.json` in the chatbot container) so
   old ones don't replay. Rebuild; run the Sherman Street and Orchards deep dives by curl and
   read them. Commit.
-- [ ] **K2 Clickable sources everywhere.** In `SOUL.md`: the `**Sources:**` line in every answer
+- [x] **K2 Clickable sources everywhere.** In `SOUL.md`: the `**Sources:**` line in every answer
   is short markdown links (`[County sales record](url) · [News](url)`), never plain labels like
   "(project record)" or "(news)"; our own data with no URL stays a plain name. Update
   `tooling/qa/check_answers.py`: fail a deep dive with no `](http` link, fail any answer whose
