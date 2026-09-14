@@ -28,7 +28,7 @@ Open: http://localhost:8765/map.html
   (loftliving/activebuilding/onesite = RealPage; residentportal = Entrata, rejected), duplicate
   removal (same portal subdomain or same address = one building), per-state/per-city counts.
   Tests fail first; commit.
-- [ ] **C2 States + cities (free).** Pick the 15 states with the most new 5+ unit apartment
+- [x] **C2 States + cities (free).** Pick the 15 states with the most new 5+ unit apartment
   permits in the last 12 months (Census Building Permits Survey, state files, free; reuse
   `scout-areas/census.py` if it fits). Per state, list its ~10 cities with the most apartments
   (Census place-level permit or ACS renter data). Save `propertystack/data/client-map/targets.json`.
