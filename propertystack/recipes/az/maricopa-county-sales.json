@@ -27,12 +27,14 @@
   },
   "parcel_fields": {
     "parcel": "FolioKey",
-    "units": "NumUnits"
+    "units": "NumUnits",
+    "owner": "OwnerName",
+    "address": "SitusAddress"
   },
   "apartment_type_codes": ["E"],
   "min_units": 20,
   "recent_months": 24,
   "date_tested": "2026-09-14",
   "live_test": "153 apartment sales (20+ units) in the last 24 months found by joining the two files live, e.g. 6901 E CHAUNCEY LN, Phoenix, 497 units, sold 2024-09, grantee AZ DESERT CLUB APARTMENTS LLC, $187,500,000",
-  "notes": "Sales Affidavits file spec column 8 is PROPERTYTYPECODE with column 9 PROPERTYTYPEDESCRIPTION printed right on every row -- code 'E' is literally labeled 'Apartment Building' on every matching row, confirmed by grepping the live file (15,564 rows nationwide-in-county are code E), so no separate use-code lookup table is needed. The sales file itself has NO unit-count field (44 columns, checked against the file-spec PDF) -- units come only from the parcel file's 'Secured Master' NumUnits column (field 38), joined on parcel number (sales PARCELNUMBER == parcel FolioKey, both e.g. '15940087A'). The parcel file's own Property_Use_Code (PUC) field was also inspected as a possible second signal but isn't needed or used: it's a finer-grained code (0300-0399 covers apartments but also some other multi-residential categories) and the sales file's own type code is already the authoritative, human-labeled signal for 'apartment building'."
+  "notes": "Sales Affidavits file spec column 8 is PROPERTYTYPECODE with column 9 PROPERTYTYPEDESCRIPTION printed right on every row -- code 'E' is literally labeled 'Apartment Building' on every matching row, confirmed by grepping the live file (15,564 rows nationwide-in-county are code E), so no separate use-code lookup table is needed. The sales file itself has NO unit-count field (44 columns, checked against the file-spec PDF) -- units come only from the parcel file's 'Secured Master' NumUnits column (field 38), joined on parcel number (sales PARCELNUMBER == parcel FolioKey, both e.g. '15940087A'). The parcel file's own Property_Use_Code (PUC) field was also inspected as a possible second signal but isn't needed or used: it's a finer-grained code (0300-0399 covers apartments but also some other multi-residential categories) and the sales file's own type code is already the authoritative, human-labeled signal for 'apartment building'. F10b (2026-09-14): the parcel file's own header row (fetched live via an HTTP range request on the 5 book-series files, no full 108MB download needed) is 'FolioKey|OwnerName|MailingAddress1|MailingAddress2|MailingCity|MailingState|MailingPostalCode|MailingCountry|SitusAddress|SitusUnitNumber|SitusCity|SitusPostalCode|PropertyType|...|NumUnits|...' -- OwnerName + SitusAddress let a brand-new permit (no parcel number, only a street address) be matched to its current owner without needing the sales file at all."
 }

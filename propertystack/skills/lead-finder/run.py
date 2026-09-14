@@ -36,7 +36,7 @@ for _extra in (
     "lead-finder-details", "lead-finder-hud", "lead-finder-awards",
     "lead-finder-agendas", "lead-finder-legistar", "lead-finder-civic",
     "lead-finder-agenda-projects", "lead-finder-sales-news",
-    "lead-finder-contact", "score-leads",
+    "lead-finder-contact", "score-leads", "lead-finder-sales",
 ):
     p = SKILLS / _extra
     if str(p) not in sys.path:
@@ -62,6 +62,7 @@ import legistar as legistar_mod  # noqa: E402
 import civic_agendas  # noqa: E402
 import agenda_projects  # noqa: E402
 import sales_news  # noqa: E402
+import find_sold  # noqa: E402
 
 
 def _load_software_run():
@@ -132,6 +133,8 @@ class ChainDeps:
     ocr_fn: Callable[[bytes], str] | None = None
     today: object = None  # injectable "today" for deterministic tests
     recipes_dir: Path | None = None  # override for find_sources/find_sources_fallback/agendas
+    owner_parcel_recipe: dict | None = None  # F10b: county sales recipe (has parcel_source/parcel_fields)
+    owner_parcel_fetch_rows: Callable[[dict], list] | None = None
 
     def search_fn(self, query: str, n: int = 10) -> list[dict]:
         return self.web.search(query, n)
@@ -183,6 +186,19 @@ def _load_state_recipe(city: str, state: str) -> dict | None:
     if not path.exists():
         return None
     return json.loads(path.read_text())
+
+
+def _load_county_sales_recipe(state: str) -> dict | None:
+    """F10b: the state's county sales/parcel recipe (F5's `*-sales.json`,
+    e.g. `az/maricopa-county-sales.json`), reused for its `parcel_source`/
+    `parcel_fields` (owner name by address) when a brand-new permit has no
+    contractor field filled in yet. None if the state has no such recipe."""
+    state_dir = STATE_RECIPES_DIR / state.lower()
+    if not state_dir.is_dir():
+        return None
+    for path in sorted(state_dir.glob("*-sales.json")):
+        return json.loads(path.read_text())
+    return None
 
 
 def step_sources(run_folder: RunFolder, city: str, state: str, deps: ChainDeps) -> dict:
@@ -393,7 +409,13 @@ def run_chain(
     if not run_folder.step_done(STEP_CONTACT, STATE_CITY_KEY):
         from contact import fill_contacts
 
-        merged = fill_contacts(merged, deps.search_fn, lambda u: deps.web.fetch(u))
+        merged = fill_contacts(
+            merged,
+            deps.search_fn,
+            lambda u: deps.web.fetch(u),
+            parcel_recipe=deps.owner_parcel_recipe,
+            parcel_fetch_rows=deps.owner_parcel_fetch_rows,
+        )
         run_folder.save_step(STEP_CONTACT, STATE_CITY_KEY, [r.to_dict() for r in merged])
     else:
         merged = _records_from(run_folder.load_step(STEP_CONTACT, STATE_CITY_KEY))
@@ -444,11 +466,15 @@ def main(argv: list[str] | None = None) -> int:
     agencies_path = HERE.parents[2] / "propertystack" / "data" / "state-agencies.json"
     agencies = json.loads(agencies_path.read_text()) if agencies_path.exists() else {}
 
+    owner_parcel_recipe = _load_county_sales_recipe(state)
+
     deps = ChainDeps(
         web=WebHelper(),
         cities_fetcher=cities_rank.fetch,
         hud_fetcher=hud_loans.fetch_workbook_bytes,
         agency_name=agencies.get(state.upper()),
+        owner_parcel_recipe=owner_parcel_recipe,
+        owner_parcel_fetch_rows=find_sold.default_fetch_rows if owner_parcel_recipe else None,
     )
     records = run_chain(state, run_folder, deps, cities=args.city)
     print(f"lead-finder: {len(records)} leads for {state} -> {run_folder.path}")

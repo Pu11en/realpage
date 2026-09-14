@@ -118,7 +118,7 @@ Open: http://localhost:8765 → Early Leads → Az
   20 entries spread across Phoenix, Mesa, Tempe, Scottsdale, Gilbert, Tucson. In `quality.json`,
   answer-key recall is judged **for the whole state only** (a single-city test reports it but doesn't
   fail on it). Commit.
-- [ ] **F10b Developer + phone for brand-new permits.** Contractor fields are empty at permit issue
+- [x] **F10b Developer + phone for brand-new permits.** Contractor fields are empty at permit issue
   (checked live in Tempe). Add, in order: (1) **owner from Maricopa County's free parcel file** (owner
   name + mailing address by parcel/address); (2) search the **project name** from the permit (e.g.
   "REVELRY Tempe apartments developer") in news / press releases with Jina/Brave + the F2 check to get

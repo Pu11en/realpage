@@ -523,3 +523,37 @@ Commit: (see git log for this file's commit)
 - Left open: `quality.py`'s recall-bar logic doesn't yet have the "single-city test reports recall but
   doesn't fail on it" exemption the plan calls for -- that's part of F10 (the Tempe test run task
   itself), not this answer-key rebuild, so it's untouched here.
+
+## F10b Developer + phone for brand-new permits -- done
+- Confirmed live (via an HTTP range request on Maricopa County's 108MB parcel zip, no
+  full download needed) that the county's free parcel file has real `OwnerName` and
+  `SitusAddress` columns -- added them to `propertystack/recipes/az/maricopa-county-sales.json`'s
+  `parcel_fields` (`owner`/`address`) alongside the existing `parcel`/`units` fields F5 uses.
+- `propertystack/skills/lead-finder-contact/contact.py`: added `find_owner_by_parcel`
+  (matches a permit's street address to the parcel file's current owner, offline-testable
+  via an injected `fetch_rows`), `find_developer_by_news` (F2-checked news/press-release
+  search for the project's own name, pulls a real company name from "developed by X" /
+  "X Communities/Development/Partners/..." phrasing -- never guesses), and
+  `find_developer_for_new_permit` (wires them in the plan's order: real-looking parcel
+  owner first; a generic ownership-entity name like "REVELRY TEMPE OWNER LLC" only counts
+  if news corroborates it or a real developer name turns up in news instead). `fill_contacts`
+  now calls this for any record with no developer yet and stage in
+  planned/permitted/under construction, before the existing website/phone lookup (so the
+  new developer name feeds straight into `find_website`/`find_office_phone`).
+- Wired into `propertystack/skills/lead-finder/run.py`: `ChainDeps` gained
+  `owner_parcel_recipe`/`owner_parcel_fetch_rows`; `main()` loads a state's `*-sales.json`
+  recipe (if one exists, e.g. AZ's Maricopa County one) and passes it + `find_sold.default_fetch_rows`
+  into `fill_contacts` -- generic, not AZ-specific in the chain code itself.
+- 14 new offline fixture tests in `tests/test_contact.py` (owner-by-address match/no-match/
+  no-recipe/fetch-error, news extraction, generic-owner fallback and news-confirmation,
+  "never guesses", and `fill_contacts` wiring for permitted vs. leasing records) -- all pass.
+- Live test (`live_self_test_f10b.py`, new file so F8's existing phone/website live test
+  stays intact) on 3 of Tempe's real new permits with empty contractor fields: REVELRY
+  (965 E University Dr) -> owner "RURAL & UNIVERSITY LLC" from the real parcel file; AVENUE
+  5/TROVITA RIO (701 W Rio Salado Pkwy) -> owner "GWL DIRECT 701 RIO SALADO LLC" from the
+  real parcel file; THE SAMUEL (712 S College Ave) -> not found in the parcel file and no
+  news match either, so correctly left blank rather than guessed. 2 of 3 got a real name --
+  matches the plan's "never guess" rule (an unmatched address stays unknown, it doesn't get
+  a fabricated developer).
+- Checked: `bash tooling/qa/check-lead-finder.sh` passes (all lead-finder* skill tests, 56
+  in the lead-finder skill itself, plus the site/panel checks). Committed.
