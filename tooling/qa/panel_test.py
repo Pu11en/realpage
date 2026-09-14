@@ -13,7 +13,7 @@ import sys
 
 from playwright.async_api import async_playwright
 
-PAGES = ["index.html", "map.html", "software-share.html", "under-the-hood.html", "property.html?id=1"]
+PAGES = ["index.html", "map.html", "under-the-hood.html", "property.html?id=1"]
 SCREENSHOT_DIR = "/tmp/qa"
 
 

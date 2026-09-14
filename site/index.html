@@ -149,7 +149,7 @@
         el.addEventListener(el.tagName === "INPUT" && el.type !== "checkbox" ? "input" : "change", renderRows);
       });
 
-      // Deep link from Software Share: index.html?software=Yardi
+      // Deep link: index.html?software=Yardi
       const wanted = new URLSearchParams(location.search).get("software");
       const swSel = document.getElementById("f-software");
       if (wanted && [...swSel.options].some((o) => o.value === wanted)) swSel.value = wanted;

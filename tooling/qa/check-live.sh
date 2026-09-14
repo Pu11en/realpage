@@ -9,7 +9,7 @@ LINK=$(mktemp -d); trap 'rm -rf "$LINK"' EXIT
 cd "$LINK" && railway link -p propertystack >/dev/null 2>&1 || { echo "railway link failed"; exit 1; }
 
 echo "== Pages"
-for p in / /master-table.html /software-share.html /api/config; do
+for p in / /master-table.html /api/config; do
   printf '  %-22s %s\n' "$p" "$(curl -s -o /dev/null -w '%{http_code}' "$SITE$p")"
 done
 printf '  %-22s %s\n' "chat frame (/)" "$(curl -s -H 'Sec-Fetch-Dest: iframe' "$SITE/" | grep -o '<title>[^<]*' | head -1)"

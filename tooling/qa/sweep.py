@@ -3,7 +3,7 @@ from playwright.async_api import async_playwright
 B = sys.argv[1] if len(sys.argv) > 1 else "https://propertystack-production.up.railway.app"
 CHAT = "--chat" in sys.argv
 OUT = "/tmp/qa"
-PAGES = ["index.html", "map.html", "software-share.html", "under-the-hood.html"]
+PAGES = ["index.html", "map.html", "under-the-hood.html"]
 WIDTHS = {"desktop": (1440, 900), "tablet": (820, 1180), "phone": (390, 844)}
 bugs = []
 def bug(page, width, steps, what, shot=""):
@@ -135,7 +135,7 @@ async def main():
                     await check(pg, page, wname, f"click row {idx} -> {pg.url.split('/')[-1]}")
                     await go(pg, f"{B}/{page}", "networkidle")
             # nav links on each width
-            for key in ["index.html", "map.html", "software-share.html", "under-the-hood.html"]:
+            for key in ["index.html", "map.html", "under-the-hood.html"]:
                 await go(pg, f"{B}/index.html", "networkidle")
                 await pg.locator(f".sidebar nav a[href='{key}']").click(); await pg.wait_for_load_state("networkidle")
                 if not pg.url.endswith(key): bug("nav", wname, f"click nav {key}", f"went to {pg.url}")

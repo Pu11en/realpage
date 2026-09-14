@@ -5,7 +5,7 @@ import asyncio, sys
 from playwright.async_api import async_playwright
 
 BASE = sys.argv[1]
-PAGES = ["index.html", "map.html", "software-share.html", "under-the-hood.html"]
+PAGES = ["index.html", "map.html", "under-the-hood.html"]
 SIZES = {"desktop": (1440, 900), "phone": (390, 844)}
 
 async def main() -> int:
