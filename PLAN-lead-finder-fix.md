@@ -110,8 +110,26 @@ Open: http://localhost:8765 → Early Leads → Az
   is marked "failed quality" and is **not** built into the site. Tests. Commit.
 
 ### Part 4: Real runs
-- [ ] **F10 Tempe test run.** Full chain on Tempe only (best data). Compare to the bar (answer-key part
-  limited to Tempe buildings). If below: find the step at fault, fix it, rerun -- up to 2 fix rounds;
+- [ ] **F10a Answer key matches the job.** Rebuild `propertystack/answer-keys/az.json` so every entry is
+  something the tool is meant to find: **not yet open** (permitted / under construction / opening in the
+  next ~18 months, or opened in the last 6 months) or **sold in the last 24 months**, 20+ units -- drop
+  buildings that opened longer ago (e.g. Tempe's Northbend and Dwell at 5th and Farmer, opened March
+  2025). Still only from sources the tool doesn't read (news, press releases, developer sites). Aim for
+  20 entries spread across Phoenix, Mesa, Tempe, Scottsdale, Gilbert, Tucson. In `quality.json`,
+  answer-key recall is judged **for the whole state only** (a single-city test reports it but doesn't
+  fail on it). Commit.
+- [ ] **F10b Developer + phone for brand-new permits.** Contractor fields are empty at permit issue
+  (checked live in Tempe). Add, in order: (1) **owner from Maricopa County's free parcel file** (owner
+  name + mailing address by parcel/address); (2) search the **project name** from the permit (e.g.
+  "REVELRY Tempe apartments developer") in news / press releases with Jina/Brave + the F2 check to get
+  the developer company; (3) the developer's own site contact page → office phone (`phonenumbers`). Owner
+  LLCs with a generic name ("XYZ Owner LLC") only count if news or the developer site ties them to a real
+  developer. Never guess. Fixture tests + live test on 3 of Tempe's 9 new permits. Commit.
+- [ ] **F10c Find websites by project name.** For existing (leasing) buildings, search the project/brand
+  name from the permit or sales record first, then the street address; keep the F2 check and listing-site
+  filter. Live test on Tempe's "1020 Apache" and "La Victoria Commons on Apache". Commit.
+- [ ] **F10 Tempe test run (again, after F10a-c).** Full chain on Tempe only (best data). Compare to the
+  bar (answer-key recall reported, not failed, for a single city). If below: find the step at fault, fix it, rerun -- up to 2 fix rounds;
   still below → STUCK with a plain report of what's missing and why. Write the leads in plain words in
   the progress log. Commit.
 - [ ] **F11 Full Arizona run.** First move `propertystack/data/az/` and `propertystack/runs/AZ/20260914-full/`
