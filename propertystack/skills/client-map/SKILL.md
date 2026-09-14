@@ -24,6 +24,10 @@ Entrata and is rejected; realpage.com marketing pages are not proof.
    raw Census permit files cached (not committed) in `data/raw/census/`.
 2. C3: one search per city in state order -> confirm each hit's portal link -> name + address
    -> lat/lon -> remove duplicates (same portal subdomain or same address).
+   `python3 skills/client-map/run.py`. Most hits ARE RealPage portal pages (`x.loftliving.com`,
+   `oll-leasing.loftliving.com/?siteId=`), whose snippet already has name + address; other hits
+   (Yellow Pages, Instagram) are followed to the portal link they mention and read with crawl4ai.
+   Searches and geocodes are cached in `data/raw/client-map/` so a rerun costs nothing.
 
 ## Outputs
 - `data/client-map/buildings.csv`: name, city, state, lat, lon, proof_url.

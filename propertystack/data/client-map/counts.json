@@ -1,0 +1,205 @@
+{
+ "TX": {
+  "total": 40,
+  "cities": {
+   "Houston": 7,
+   "Fort Worth": 5,
+   "Frisco": 4,
+   "Mckinney": 4,
+   "Grand Prairie": 4,
+   "Allen": 4,
+   "Austin": 3,
+   "Dallas": 3,
+   "Denton": 3,
+   "McKinney": 1,
+   "Texarkana": 1,
+   "Seguin": 1
+  }
+ },
+ "NC": {
+  "total": 32,
+  "cities": {
+   "Durham": 6,
+   "Raleigh": 5,
+   "Greensboro": 5,
+   "Cary": 5,
+   "Morrisville": 3,
+   "High Point": 3,
+   "Asheville": 2,
+   "East Durham": 1,
+   "Arden": 1,
+   "Jacksonville": 1
+  }
+ },
+ "AZ": {
+  "total": 27,
+  "cities": {
+   "Phoenix": 5,
+   "Scottsdale": 5,
+   "Tempe": 4,
+   "Goodyear": 3,
+   "Mesa": 3,
+   "Tucson": 3,
+   "Gilbert": 2,
+   "Peoria": 1,
+   "Glendale": 1
+  }
+ },
+ "FL": {
+  "total": 26,
+  "cities": {
+   "Fort Myers": 5,
+   "Miami": 4,
+   "Orlando": 4,
+   "Saint Petersburg": 3,
+   "Gainesville": 2,
+   "West Palm Beach": 2,
+   "Sanford": 1,
+   "Tallahassee": 1,
+   "Royal Palm Beach": 1,
+   "Palm Harbor": 1,
+   "Hialeah": 1,
+   "Homestead": 1
+  }
+ },
+ "WA": {
+  "total": 24,
+  "cities": {
+   "Tacoma": 5,
+   "Vancouver": 5,
+   "Everett": 5,
+   "Seattle": 4,
+   "Redmond": 2,
+   "Lacey": 1,
+   "Spokane Valley": 1,
+   "Spokane": 1
+  }
+ },
+ "VA": {
+  "total": 20,
+  "cities": {
+   "Virginia Beach": 6,
+   "Richmond": 4,
+   "Alexandria": 4,
+   "Chesapeake": 2,
+   "Norfolk": 2,
+   "Fredericksburg": 1,
+   "Manassas": 1
+  }
+ },
+ "CA": {
+  "total": 19,
+  "cities": {
+   "Sacramento": 8,
+   "Chula Vista": 4,
+   "San Francisco": 3,
+   "San Jose": 2,
+   "Oakland": 2
+  }
+ },
+ "TN": {
+  "total": 16,
+  "cities": {
+   "Murfreesboro": 4,
+   "Chattanooga": 4,
+   "Clarksville": 2,
+   "Knoxville": 2,
+   "Oak Ridge": 1,
+   "Franklin": 1,
+   "Nashville": 1,
+   "Cookeville": 1
+  }
+ },
+ "CO": {
+  "total": 14,
+  "cities": {
+   "Denver": 4,
+   "Fort Collins": 4,
+   "Aurora": 3,
+   "Greeley": 1,
+   "Littleton": 1,
+   "Castle Pines": 1
+  }
+ },
+ "OH": {
+  "total": 10,
+  "cities": {
+   "Columbus": 4,
+   "Cleveland": 2,
+   "Dayton": 2,
+   "Gahanna": 1,
+   "Reynoldsburg": 1
+  }
+ },
+ "GA": {
+  "total": 8,
+  "cities": {
+   "Sandy Springs": 3,
+   "Port Wentworth": 1,
+   "Union City": 1,
+   "Savannah": 1,
+   "Placepooler": 1,
+   "Acworth": 1
+  }
+ },
+ "NJ": {
+  "total": 6,
+  "cities": {
+   "Weehawken": 2,
+   "Jersey City": 1,
+   "Newark": 1,
+   "Elizabeth": 1,
+   "Union": 1
+  }
+ },
+ "WI": {
+  "total": 5,
+  "cities": {
+   "Madison": 5
+  }
+ },
+ "UT": {
+  "total": 4,
+  "cities": {
+   "Salt Lake City": 3,
+   "West Jordan": 1
+  }
+ },
+ "NY": {
+  "total": 3,
+  "cities": {
+   "Syracuse": 2,
+   "Port Chester": 1
+  }
+ },
+ "KY": {
+  "total": 2,
+  "cities": {
+   "Louisville": 2
+  }
+ },
+ "KS": {
+  "total": 1,
+  "cities": {
+   "Wichita": 1
+  }
+ },
+ "MA": {
+  "total": 1,
+  "cities": {
+   "Arlington": 1
+  }
+ },
+ "IL": {
+  "total": 1,
+  "cities": {
+   "Wheeling": 1
+  }
+ },
+ "MI": {
+  "total": 1,
+  "cities": {
+   "Marquette": 1
+  }
+ }
+}

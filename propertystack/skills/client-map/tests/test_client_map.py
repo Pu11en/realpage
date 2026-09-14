@@ -66,3 +66,54 @@ def test_counts_per_state_and_city():
     assert c["TX"]["total"] == 3 and c["TX"]["cities"] == {"Austin": 2, "Dallas": 1}
     assert c["AZ"] == {"total": 1, "cities": {"Phoenix": 1}}
     assert list(c) == ["TX", "AZ"]  # most buildings first
+
+
+# ---------- C3: hits -> buildings (saved search snippets, fake crawl) ----------
+def test_portal_key_shared_host_uses_site_id():
+    assert run.portal_key("https://Siena.loftliving.com/support") == "siena.loftliving.com"
+    assert run.portal_key("https://oll-leasing.loftliving.com/oll/?siteId=5304205&x=1") == "oll-leasing.loftliving.com?siteId=5304205"
+    assert run.portal_key("https://loftliving.com/") == ""
+
+
+def test_dedupe_shared_host_by_site_id():
+    rows = [{"name": "G", "proof_url": "https://oll-leasing.loftliving.com/oll/?siteId=1"},
+            {"name": "H", "proof_url": "https://oll-leasing.loftliving.com/oll/?siteId=2"},
+            {"name": "G2", "proof_url": "https://oll-leasing.loftliving.com/oll/?siteId=1&u=3"}]
+    assert [r["name"] for r in run.dedupe(rows)] == ["G", "H"]
+
+
+def test_building_from_portal_hit():
+    hit = {"url": "https://sienaapartments.loftliving.com/support/pincode", "title": "Siena Apartments",
+           "description": "Siena Apartments. 5230 Bryant Irvin Road, Fort Worth, TX 76132|(817) 361-9998. Need an Account?"}
+    b = run.building_from_hit(hit)
+    assert (b["name"], b["street"], b["city"], b["state"], b["zip"]) == \
+        ("Siena Apartments", "5230 Bryant Irvin Road", "Fort Worth", "TX", "76132")
+
+
+def test_building_from_leasing_hit_with_generic_title():
+    hit = {"url": "https://oll-leasing.loftliving.com/oll/?siteId=5304205&UnitId=346", "title": "Apartment not found - Online Leasing",
+           "description": "The Griffin Apartments 7040 John T White Rd, Fort Worth, TX 76120. Find Apartment"}
+    b = run.building_from_hit(hit)
+    assert b["name"] == "The Griffin Apartments" and b["city"] == "Fort Worth"
+
+
+def test_third_party_hit_crawls_portal_link():
+    hit = {"url": "https://www.yellowpages.com/fort-worth-tx/bpp/the-savoy", "title": "The Savoy - Yellow Pages",
+           "description": "https://thesavoyapartments.loftliving.com/login. Categories. Apartments"}
+    seen = []
+    fetch = lambda u: seen.append(u) or ("The Savoy Apartments", "## The Savoy Apartments\n7501 Kingswood Drive, Fort Worth, TX 76133|(817)")
+    b = run.building_from_hit(hit, fetch)
+    assert seen == ["https://thesavoyapartments.loftliving.com/login"]
+    assert b["name"] == "The Savoy Apartments" and b["proof_url"] == seen[0]
+
+
+def test_no_proof_or_entrata_gives_nothing():
+    assert run.building_from_hit({"url": "https://loftliving.com/", "title": "LOFT", "description": "app"}) is None
+    assert run.building_from_hit({"url": "https://x.residentportal.com/", "title": "X",
+                                  "description": "1 Main St, Austin, TX 78701"}) is None
+
+
+def test_city_case_normalized():
+    hit = {"url": "https://baysidegarden.loftliving.com/support/pincode", "title": "Bayside Garden Apartments",
+           "description": "Bayside Garden Apartments. 100 Main St, TACOMA, WA 98402|(253)"}
+    assert run.building_from_hit(hit)["city"] == "Tacoma"
