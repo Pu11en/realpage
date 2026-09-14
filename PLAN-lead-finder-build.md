@@ -156,7 +156,7 @@ Open: http://localhost:8765 → Early Leads → the new state's button
 - [x] **6.2 Small test run (~20 searches).** Whole chain on **one city** of the picked state,
   capped at 5 projects. Write the 5 leads in plain words in the progress log. If they look wrong
   (not apartments, made-up facts, RealPage buildings), fix the step at fault and rerun; then go on.
-- [ ] **6.3 Full state run, part A (pre-approved).** Start the run in the background
+- [x] **6.3 Full state run, part A (pre-approved).** Start the run in the background
   (`nohup … > propertystack/runs/<state>/<run-id>/log.txt`), cities in order; work the to-read queue
   as it fills; after ~45 minutes commit results so far (the run resumes). Caps for the whole run:
   150 projects or ~450 searches; roll into next state if <30.

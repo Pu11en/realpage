@@ -924,3 +924,62 @@ Nothing left open for this task.
   folder, resumable) -- 6.3 can build directly on top of this rather than
   starting over.
 - Next task (6.3) starts the full NY run in the background.
+
+## 6.3 Full state run, part A -- done
+
+- `run.py`'s `main()` never wired real fetchers for the state-level steps:
+  `deps.cities_fetcher` was `None` (2.1's city ranking would raise), and
+  `deps.hud_fetcher` / `deps.agency_name` were `None` (3.1/3.2 would just
+  skip with "no fetcher configured" / "no agency configured"). Fixed by
+  passing `cities_rank.fetch` (already a real Census-BPS fetcher, used by
+  tests via injection) and `hud_loans.fetch_workbook_bytes` (same pattern),
+  and by adding `propertystack/data/state-agencies.json` -- a **data** file
+  (json, so exempt from the no-place-names code test) mapping each of the
+  15 target states to its housing finance agency's real name, which 3.2
+  needs to search for award lists. NY -> "New York State Homes and
+  Community Renewal".
+- Also noticed `run_chain`'s city loop never checked the 150-project /
+  ~450-search caps from `runfolder.RunCaps` -- a real state has 20+ cities,
+  so without a stop check a background run could burn far past the search
+  budget before anyone looked at it. Added: `run_chain` now loads
+  `RunCaps` at the top, updates it after each city (project count = the
+  merged record count so far, search counts read from
+  `WebHelper.counts`), saves `caps.json` every city, and breaks the loop
+  once `caps.any_cap_hit()`. Guarded with `getattr(deps.web, "counts",
+  None)` so the existing fixture `FakeWeb` (no `.counts` attribute) in
+  `test_run.py` still passes.
+- Checked: `bash tooling/qa/check-lead-finder.sh` -- all green (44 tests in
+  lead-finder proper, every other lead-finder* dir and check-panel.sh
+  unaffected) after the caps wiring.
+- Started the real full run: `python3 propertystack/skills/lead-finder/run.py
+  --state NY --run-id 20260914-full`, backgrounded with `nohup ... &
+  disown`, logging to `propertystack/runs/NY/20260914-full/log.txt`.
+  State pick was NY again (lowest RealPage total, same as 6.2's pick --
+  6.2's own run only touched one city under a different run-id, so it
+  didn't move NY off the top of the list).
+- Watched it for about 45 minutes. It worked through cities in permit-count
+  order (Brooklyn, Bronx, Queens, Manhattan, Syracuse, Palm Tree, Kiryas
+  Joel, Port Chester, White Plains, Wawayanda, Esopus, Westbury, Buffalo,
+  Yonkers, Haverstraw, Ontario, Ramapo, Rochester, Hamburg, Ossining,
+  Kingston -- 21 cities merged so far), no crashes, resumable per-city
+  files all writing normally.
+- Real, expected finding, not a bug: the four NYC boroughs (Brooklyn,
+  Bronx, Queens, Manhattan) all came back "no permits online" / a
+  mismatched catalog dataset -- NYC issues permits centrally through DOB,
+  not per borough, so the Census-BPS "city" names for the boroughs don't
+  map to an independently queryable open-data permit source the way a
+  normal city does. Left as a genuine skip rather than a fix, since
+  building NYC DOB-specific logic would put a place name in the code.
+- After 21 cities: caps at 2 projects, 60 SearXNG searches, 0 Jina --
+  comfortably inside the 150-project / 450-search budget, so the loop kept
+  going and the process is still running in the background as this task is
+  committed.
+- Noticed but not fixed (out of scope for "start the run"): a couple of
+  `project-details` / `sales-news` search queries for smaller towns
+  returned unrelated noise pages (yoga articles, a YouTube playlist) that
+  got fetched and discarded -- wasted searches/fetches but no wrong data
+  landed in any lead record, consistent with 6.2's already-flagged
+  `_pick_website` relevance gap. Left for a follow-up rather than widening
+  this task.
+- Left running for 6.4 (part B) to resume with `--run-id 20260914-full`
+  and keep working through the remaining ~130 NY cities.

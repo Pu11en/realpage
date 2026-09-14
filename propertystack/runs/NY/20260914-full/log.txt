@@ -1,0 +1,1644 @@
+lead-finder: run folder ready at /home/drewp/.local/state/ccdb/gowork/local-test-plan-lead-finder-build-20260914-000102/propertystack/runs/NY/20260914-full
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://en.wikipedia.org/wiki/Brooklyn                             
+| ✓ | ⏱: 1.10s 
+[SCRAPE].. ◆ https://en.wikipedia.org/wiki/Brooklyn                             
+| ✓ | ⏱: 0.69s 
+[COMPLETE] ● https://en.wikipedia.org/wiki/Brooklyn                             
+| ✓ | ⏱: 1.82s 
+[2026-09-14 02:06:26] INFO: Fetched (200) <GET https://en.wikipedia.org/wiki/Brooklyn> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.britannica.com/place/Brooklyn-borough-New-York-City    
+| ✓ | ⏱: 3.27s 
+[SCRAPE].. ◆ https://www.britannica.com/place/Brooklyn-borough-New-York-City    
+| ✓ | ⏱: 0.03s 
+[COMPLETE] ● https://www.britannica.com/place/Brooklyn-borough-New-York-City    
+| ✓ | ⏱: 3.33s 
+[2026-09-14 02:07:02] WARNING: Attempt 1 failed: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://www.britannica.com/place/Brooklyn-borough-New-York-City", waiting until "load"
+. Retrying in 1s...
+[2026-09-14 02:07:36] WARNING: Attempt 2 failed: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://www.britannica.com/place/Brooklyn-borough-New-York-City", waiting until "load"
+. Retrying in 1s...
+[2026-09-14 02:08:08] ERROR: Failed after 3 attempts: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://www.britannica.com/place/Brooklyn-borough-New-York-City", waiting until "load"
+
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://visitbrooklyn.nyc/                                         
+| ✓ | ⏱: 1.82s 
+[SCRAPE].. ◆ https://visitbrooklyn.nyc/                                         
+| ✓ | ⏱: 0.03s 
+[COMPLETE] ● https://visitbrooklyn.nyc/                                         
+| ✓ | ⏱: 1.86s 
+[2026-09-14 02:08:14] INFO: Fetched (200) <GET https://visitbrooklyn.nyc/> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ 
+https://www.timeout.com/newyork/things-to-do/best-things-to-do-in-brooklyn      
+| ✓ | ⏱: 1.41s 
+[SCRAPE].. ◆ 
+https://www.timeout.com/newyork/things-to-do/best-things-to-do-in-brooklyn      
+| ✓ | ⏱: 0.05s 
+[COMPLETE] ● 
+https://www.timeout.com/newyork/things-to-do/best-things-to-do-in-brooklyn      
+| ✓ | ⏱: 1.47s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://en.wikipedia.org/wiki/List_of_Brooklyn_neighborhoods       
+| ✓ | ⏱: 0.65s 
+[SCRAPE].. ◆ https://en.wikipedia.org/wiki/List_of_Brooklyn_neighborhoods       
+| ✓ | ⏱: 0.05s 
+[COMPLETE] ● https://en.wikipedia.org/wiki/List_of_Brooklyn_neighborhoods       
+| ✓ | ⏱: 0.71s 
+[2026-09-14 02:08:20] INFO: Fetched (200) <GET https://en.wikipedia.org/wiki/List_of_Brooklyn_neighborhoods> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ 
+https://www.tripadvisor.com/Tourism-g60827-Brooklyn_New_York-Vacations.html     
+| ✓ | ⏱: 0.78s 
+[SCRAPE].. ◆ 
+https://www.tripadvisor.com/Tourism-g60827-Brooklyn_New_York-Vacations.html     
+| ✓ | ⏱: 0.00s 
+[COMPLETE] ● 
+https://www.tripadvisor.com/Tourism-g60827-Brooklyn_New_York-Vacations.html     
+| ✗ | ⏱: 0.78s 
+[2026-09-14 02:08:24] INFO: Fetched (403) <GET https://www.tripadvisor.com/Tourism-g60827-Brooklyn_New_York-Vacations.html> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://simple.wikipedia.org/wiki/Brooklyn                         
+| ✓ | ⏱: 0.71s 
+[SCRAPE].. ◆ https://simple.wikipedia.org/wiki/Brooklyn                         
+| ✓ | ⏱: 0.07s 
+[COMPLETE] ● https://simple.wikipedia.org/wiki/Brooklyn                         
+| ✓ | ⏱: 0.79s 
+[2026-09-14 02:08:28] INFO: Fetched (200) <GET https://simple.wikipedia.org/wiki/Brooklyn> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://visitbrooklyn.nyc/neighborhoods-map                        
+| ✓ | ⏱: 1.48s 
+[SCRAPE].. ◆ https://visitbrooklyn.nyc/neighborhoods-map                        
+| ✓ | ⏱: 0.03s 
+[COMPLETE] ● https://visitbrooklyn.nyc/neighborhoods-map                        
+| ✓ | ⏱: 1.52s 
+[2026-09-14 02:08:33] INFO: Fetched (200) <GET https://visitbrooklyn.nyc/neighborhoods-map> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.britannica.com/place/New-York-City/Brooklyn            
+| ✓ | ⏱: 3.52s 
+[SCRAPE].. ◆ https://www.britannica.com/place/New-York-City/Brooklyn            
+| ✓ | ⏱: 0.04s 
+[COMPLETE] ● https://www.britannica.com/place/New-York-City/Brooklyn            
+| ✓ | ⏱: 3.59s 
+[2026-09-14 02:09:09] WARNING: Attempt 1 failed: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://www.britannica.com/place/New-York-City/Brooklyn", waiting until "load"
+. Retrying in 1s...
+[2026-09-14 02:09:44] WARNING: Attempt 2 failed: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://www.britannica.com/place/New-York-City/Brooklyn", waiting until "load"
+. Retrying in 1s...
+[2026-09-14 02:10:16] ERROR: Failed after 3 attempts: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://www.britannica.com/place/New-York-City/Brooklyn", waiting until "load"
+
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ 
+https://www.tripadvisor.com/Attractions-g60827-Activities-Brooklyn_New_York.html
+| ✓ | ⏱: 0.81s 
+[SCRAPE].. ◆ 
+https://www.tripadvisor.com/Attractions-g60827-Activities-Brooklyn_New_York.html
+| ✓ | ⏱: 0.00s 
+[COMPLETE] ● 
+https://www.tripadvisor.com/Attractions-g60827-Activities-Brooklyn_New_York.html
+| ✗ | ⏱: 0.81s 
+[2026-09-14 02:10:20] INFO: Fetched (403) <GET https://www.tripadvisor.com/Attractions-g60827-Activities-Brooklyn_New_York.html> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://en.wikipedia.org/wiki/Brooklyn                             
+| ✓ | ⏱: 1.16s 
+[SCRAPE].. ◆ https://en.wikipedia.org/wiki/Brooklyn                             
+| ✓ | ⏱: 0.77s 
+[COMPLETE] ● https://en.wikipedia.org/wiki/Brooklyn                             
+| ✓ | ⏱: 1.95s 
+[2026-09-14 02:10:26] INFO: Fetched (200) <GET https://en.wikipedia.org/wiki/Brooklyn> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://visitbrooklyn.nyc/                                         
+| ✓ | ⏱: 2.21s 
+[SCRAPE].. ◆ https://visitbrooklyn.nyc/                                         
+| ✓ | ⏱: 0.03s 
+[COMPLETE] ● https://visitbrooklyn.nyc/                                         
+| ✓ | ⏱: 2.25s 
+[2026-09-14 02:10:33] INFO: Fetched (200) <GET https://visitbrooklyn.nyc/> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ 
+https://www.tripadvisor.com/Tourism-g60827-Brooklyn_New_York-Vacations.html     
+| ✓ | ⏱: 0.75s 
+[SCRAPE].. ◆ 
+https://www.tripadvisor.com/Tourism-g60827-Brooklyn_New_York-Vacations.html     
+| ✓ | ⏱: 0.00s 
+[COMPLETE] ● 
+https://www.tripadvisor.com/Tourism-g60827-Brooklyn_New_York-Vacations.html     
+| ✗ | ⏱: 0.76s 
+[2026-09-14 02:10:37] INFO: Fetched (403) <GET https://www.tripadvisor.com/Tourism-g60827-Brooklyn_New_York-Vacations.html> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://simple.wikipedia.org/wiki/Brooklyn                         
+| ✓ | ⏱: 0.73s 
+[SCRAPE].. ◆ https://simple.wikipedia.org/wiki/Brooklyn                         
+| ✓ | ⏱: 0.09s 
+[COMPLETE] ● https://simple.wikipedia.org/wiki/Brooklyn                         
+| ✓ | ⏱: 0.83s 
+[2026-09-14 02:10:41] INFO: Fetched (200) <GET https://simple.wikipedia.org/wiki/Brooklyn> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://en.m.wikipedia.org/wiki/The_Bronx                          
+| ✓ | ⏱: 1.13s 
+[SCRAPE].. ◆ https://en.m.wikipedia.org/wiki/The_Bronx                          
+| ✓ | ⏱: 0.60s 
+[COMPLETE] ● https://en.m.wikipedia.org/wiki/The_Bronx                          
+| ✓ | ⏱: 1.75s 
+[2026-09-14 02:10:52] INFO: Fetched (301) <GET https://en.m.wikipedia.org/wiki/The_Bronx> (referer: https://www.google.com/)
+[2026-09-14 02:10:52] INFO: Fetched (200) <GET https://en.wikipedia.org/wiki/The_Bronx> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.britannica.com/place/Bronx-borough-New-York-City       
+| ✓ | ⏱: 1.90s 
+[SCRAPE].. ◆ https://www.britannica.com/place/Bronx-borough-New-York-City       
+| ✓ | ⏱: 0.02s 
+[COMPLETE] ● https://www.britannica.com/place/Bronx-borough-New-York-City       
+| ✓ | ⏱: 1.94s 
+[2026-09-14 02:11:26] WARNING: Attempt 1 failed: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://www.britannica.com/place/Bronx-borough-New-York-City", waiting until "load"
+. Retrying in 1s...
+[2026-09-14 02:12:02] WARNING: Attempt 2 failed: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://www.britannica.com/place/Bronx-borough-New-York-City", waiting until "load"
+. Retrying in 1s...
+[2026-09-14 02:12:34] ERROR: Failed after 3 attempts: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://www.britannica.com/place/Bronx-borough-New-York-City", waiting until "load"
+
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://bronxshoes.com/                                            
+| ✓ | ⏱: 2.77s 
+[SCRAPE].. ◆ https://bronxshoes.com/                                            
+| ✓ | ⏱: 0.06s 
+[COMPLETE] ● https://bronxshoes.com/                                            
+| ✓ | ⏱: 2.84s 
+[2026-09-14 02:12:43] INFO: Fetched (200) <GET https://bronxshoes.com/> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://en.m.wikipedia.org/wiki/List_of_Bronx_neighborhoods        
+| ✓ | ⏱: 0.94s 
+[SCRAPE].. ◆ https://en.m.wikipedia.org/wiki/List_of_Bronx_neighborhoods        
+| ✓ | ⏱: 0.04s 
+[COMPLETE] ● https://en.m.wikipedia.org/wiki/List_of_Bronx_neighborhoods        
+| ✓ | ⏱: 0.99s 
+[2026-09-14 02:12:48] INFO: Fetched (301) <GET https://en.m.wikipedia.org/wiki/List_of_Bronx_neighborhoods> (referer: https://www.google.com/)
+[2026-09-14 02:12:48] INFO: Fetched (200) <GET https://en.wikipedia.org/wiki/List_of_Bronx_neighborhoods> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://newyorkspaces.com/what-is-the-bronx-famous-for/            
+| ✓ | ⏱: 1.02s 
+[SCRAPE].. ◆ https://newyorkspaces.com/what-is-the-bronx-famous-for/            
+| ✓ | ⏱: 0.02s 
+[COMPLETE] ● https://newyorkspaces.com/what-is-the-bronx-famous-for/            
+| ✓ | ⏱: 1.04s 
+[2026-09-14 02:12:52] INFO: Fetched (200) <GET https://newyorkspaces.com/what-is-the-bronx-famous-for/> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.introducingnewyork.com/bronx                           
+| ✓ | ⏱: 1.33s 
+[SCRAPE].. ◆ https://www.introducingnewyork.com/bronx                           
+| ✓ | ⏱: 0.06s 
+[COMPLETE] ● https://www.introducingnewyork.com/bronx                           
+| ✓ | ⏱: 1.40s 
+[2026-09-14 02:12:57] INFO: Fetched (200) <GET https://www.introducingnewyork.com/bronx> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.ny.gov/counties/bronx                                  
+| ✓ | ⏱: 0.68s 
+[SCRAPE].. ◆ https://www.ny.gov/counties/bronx                                  
+| ✓ | ⏱: 0.00s 
+[COMPLETE] ● https://www.ny.gov/counties/bronx                                  
+| ✗ | ⏱: 0.68s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://campnewyork.org/interesting-facts/bronx-new-york/          
+| ✓ | ⏱: 1.44s 
+[SCRAPE].. ◆ https://campnewyork.org/interesting-facts/bronx-new-york/          
+| ✓ | ⏱: 0.01s 
+[COMPLETE] ● https://campnewyork.org/interesting-facts/bronx-new-york/          
+| ✓ | ⏱: 1.46s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://en.m.wikipedia.org/wiki/Queens                             
+| ✓ | ⏱: 1.29s 
+[SCRAPE].. ◆ https://en.m.wikipedia.org/wiki/Queens                             
+| ✓ | ⏱: 0.87s 
+[COMPLETE] ● https://en.m.wikipedia.org/wiki/Queens                             
+| ✓ | ⏱: 2.18s 
+[2026-09-14 02:13:10] INFO: Fetched (301) <GET https://en.m.wikipedia.org/wiki/Queens> (referer: https://www.google.com/)
+[2026-09-14 02:13:10] INFO: Fetched (200) <GET https://en.wikipedia.org/wiki/Queens> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.playqueensgame.com/                                    
+| ✓ | ⏱: 1.04s 
+[SCRAPE].. ◆ https://www.playqueensgame.com/                                    
+| ✓ | ⏱: 0.01s 
+[COMPLETE] ● https://www.playqueensgame.com/                                    
+| ✓ | ⏱: 1.06s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.playqueensgame.com/daily                               
+| ✓ | ⏱: 0.89s 
+[SCRAPE].. ◆ https://www.playqueensgame.com/daily                               
+| ✓ | ⏱: 0.01s 
+[COMPLETE] ● https://www.playqueensgame.com/daily                               
+| ✓ | ⏱: 0.90s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.linkedin.com/games/queens/                             
+| ✓ | ⏱: 1.51s 
+[SCRAPE].. ◆ https://www.linkedin.com/games/queens/                             
+| ✓ | ⏱: 0.00s 
+[COMPLETE] ● https://www.linkedin.com/games/queens/                             
+| ✓ | ⏱: 1.52s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://queensgame.online/                                         
+| ✓ | ⏱: 1.12s 
+[SCRAPE].. ◆ https://queensgame.online/                                         
+| ✓ | ⏱: 0.01s 
+[COMPLETE] ● https://queensgame.online/                                         
+| ✓ | ⏱: 1.14s 
+[2026-09-14 02:13:20] INFO: Fetched (200) <GET https://queensgame.online/> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.ny.gov/counties/queens                                 
+| ✓ | ⏱: 0.64s 
+[SCRAPE].. ◆ https://www.ny.gov/counties/queens                                 
+| ✓ | ⏱: 0.00s 
+[COMPLETE] ● https://www.ny.gov/counties/queens                                 
+| ✗ | ⏱: 0.64s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://queensgame.vercel.app/                                     
+| ✓ | ⏱: 0.90s 
+[SCRAPE].. ◆ https://queensgame.vercel.app/                                     
+| ✓ | ⏱: 0.05s 
+[COMPLETE] ● https://queensgame.vercel.app/                                     
+| ✓ | ⏱: 0.96s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://queens.game/                                               
+| ✓ | ⏱: 1.09s 
+[SCRAPE].. ◆ https://queens.game/                                               
+| ✓ | ⏱: 0.00s 
+[COMPLETE] ● https://queens.game/                                               
+| ✓ | ⏱: 1.10s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.britannica.com/place/Queens-New-York                   
+| ✓ | ⏱: 2.60s 
+[SCRAPE].. ◆ https://www.britannica.com/place/Queens-New-York                   
+| ✓ | ⏱: 0.02s 
+[COMPLETE] ● https://www.britannica.com/place/Queens-New-York                   
+| ✓ | ⏱: 2.64s 
+[2026-09-14 02:14:00] WARNING: Attempt 1 failed: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://www.britannica.com/place/Queens-New-York", waiting until "load"
+. Retrying in 1s...
+[2026-09-14 02:14:38] WARNING: Attempt 2 failed: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://www.britannica.com/place/Queens-New-York", waiting until "load"
+. Retrying in 1s...
+[2026-09-14 02:14:42] INFO: Fetched (200) <GET https://www.britannica.com/place/Queens-New-York> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ 
+https://www.timeout.com/newyork/attractions/top-attractions-in-manhattan        
+| ✓ | ⏱: 1.46s 
+[SCRAPE].. ◆ 
+https://www.timeout.com/newyork/attractions/top-attractions-in-manhattan        
+| ✓ | ⏱: 0.29s 
+[COMPLETE] ● 
+https://www.timeout.com/newyork/attractions/top-attractions-in-manhattan        
+| ✓ | ⏱: 1.77s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.britannica.com/place/Manhattan-New-York-City           
+| ✓ | ⏱: 3.82s 
+[SCRAPE].. ◆ https://www.britannica.com/place/Manhattan-New-York-City           
+| ✓ | ⏱: 0.03s 
+[COMPLETE] ● https://www.britannica.com/place/Manhattan-New-York-City           
+| ✓ | ⏱: 3.87s 
+[2026-09-14 02:15:24] WARNING: Attempt 1 failed: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://www.britannica.com/place/Manhattan-New-York-City", waiting until "load"
+. Retrying in 1s...
+[2026-09-14 02:15:32] INFO: Fetched (200) <GET https://www.britannica.com/place/Manhattan-New-York-City> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://newyorkdearest.com/things-to-do-manhattan/                 
+| ✓ | ⏱: 2.64s 
+[SCRAPE].. ◆ https://newyorkdearest.com/things-to-do-manhattan/                 
+| ✓ | ⏱: 0.05s 
+[COMPLETE] ● https://newyorkdearest.com/things-to-do-manhattan/                 
+| ✓ | ⏱: 2.70s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://simple.wikipedia.org/wiki/Manhattan                        
+| ✓ | ⏱: 1.30s 
+[SCRAPE].. ◆ https://simple.wikipedia.org/wiki/Manhattan                        
+| ✓ | ⏱: 0.11s 
+[COMPLETE] ● https://simple.wikipedia.org/wiki/Manhattan                        
+| ✓ | ⏱: 1.44s 
+[2026-09-14 02:15:40] INFO: Fetched (200) <GET https://simple.wikipedia.org/wiki/Manhattan> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://jessieonajourney.com/manhattan-travel-guide/               
+| ✓ | ⏱: 2.43s 
+[SCRAPE].. ◆ https://jessieonajourney.com/manhattan-travel-guide/               
+| ✓ | ⏱: 0.04s 
+[COMPLETE] ● https://jessieonajourney.com/manhattan-travel-guide/               
+| ✓ | ⏱: 2.48s 
+[2026-09-14 02:15:49] INFO: Fetched (200) <GET https://jessieonajourney.com/manhattan-travel-guide/> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.longislandguide.com/visit/manhattan/                   
+| ✓ | ⏱: 2.52s 
+[SCRAPE].. ◆ https://www.longislandguide.com/visit/manhattan/                   
+| ✓ | ⏱: 0.03s 
+[COMPLETE] ● https://www.longislandguide.com/visit/manhattan/                   
+| ✓ | ⏱: 2.56s 
+[2026-09-14 02:15:59] INFO: Fetched (200) <GET https://www.longislandguide.com/visit/manhattan/> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.nyctourism.com/new-york/manhattan/                     
+| ✓ | ⏱: 2.97s 
+[SCRAPE].. ◆ https://www.nyctourism.com/new-york/manhattan/                     
+| ✓ | ⏱: 0.01s 
+[COMPLETE] ● https://www.nyctourism.com/new-york/manhattan/                     
+| ✓ | ⏱: 3.00s 
+[2026-09-14 02:16:18] INFO: Fetched (200) <GET https://www.nyctourism.com/new-york/manhattan/> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ 
+https://www.syr.gov/Departments/Central-Permit-Office/Permits/Residential-Constr
+uction-Permits       | ✓ | ⏱: 2.44s 
+[SCRAPE].. ◆ 
+https://www.syr.gov/Departments/Central-Permit-Office/Permits/Residential-Constr
+uction-Permits       | ✓ | ⏱: 0.03s 
+[COMPLETE] ● 
+https://www.syr.gov/Departments/Central-Permit-Office/Permits/Residential-Constr
+uction-Permits       | ✓ | ⏱: 2.48s 
+[2026-09-14 02:16:40] INFO: Fetched (200) <GET https://www.syr.gov/Departments/Central-Permit-Office/Permits/Residential-Construction-Permits> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://aca-prod.accela.com/COLA                                   
+| ✓ | ⏱: 21.82s 
+[SCRAPE].. ◆ https://aca-prod.accela.com/COLA                                   
+| ✓ | ⏱: 0.00s 
+[COMPLETE] ● https://aca-prod.accela.com/COLA                                   
+| ✓ | ⏱: 21.82s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ 
+https://www.syr.gov/Departments/Central-Permit-Office/Self-Services/Certificate-
+of-Use-License       | ✓ | ⏱: 2.41s 
+[SCRAPE].. ◆ 
+https://www.syr.gov/Departments/Central-Permit-Office/Self-Services/Certificate-
+of-Use-License       | ✓ | ⏱: 0.03s 
+[COMPLETE] ● 
+https://www.syr.gov/Departments/Central-Permit-Office/Self-Services/Certificate-
+of-Use-License       | ✓ | ⏱: 2.45s 
+[2026-09-14 02:17:11] INFO: Fetched (200) <GET https://www.syr.gov/Departments/Central-Permit-Office/Self-Services/Certificate-of-Use-License> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.syracuse.com/                                          
+| ✓ | ⏱: 0.95s 
+[SCRAPE].. ◆ https://www.syracuse.com/                                          
+| ✓ | ⏱: 0.00s 
+[COMPLETE] ● https://www.syracuse.com/                                          
+| ✗ | ⏱: 0.95s 
+[2026-09-14 02:17:17] INFO: Fetched (403) <GET https://www.syracuse.com/> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.syracuse.com/                                          
+| ✓ | ⏱: 0.81s 
+[SCRAPE].. ◆ https://www.syracuse.com/                                          
+| ✓ | ⏱: 0.00s 
+[COMPLETE] ● https://www.syracuse.com/                                          
+| ✗ | ⏱: 0.81s 
+[2026-09-14 02:17:22] INFO: Fetched (403) <GET https://www.syracuse.com/> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.vocabineer.com/types-of-palm-trees/                    
+| ✓ | ⏱: 0.91s 
+[SCRAPE].. ◆ https://www.vocabineer.com/types-of-palm-trees/                    
+| ✓ | ⏱: 0.03s 
+[COMPLETE] ● https://www.vocabineer.com/types-of-palm-trees/                    
+| ✓ | ⏱: 0.95s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.merriam-webster.com/dictionary/palm                    
+| ✓ | ⏱: 1.60s 
+[SCRAPE].. ◆ https://www.merriam-webster.com/dictionary/palm                    
+| ✓ | ⏱: 0.06s 
+[COMPLETE] ● https://www.merriam-webster.com/dictionary/palm                    
+| ✓ | ⏱: 1.69s 
+[2026-09-14 02:18:03] WARNING: Attempt 1 failed: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://www.merriam-webster.com/dictionary/palm", waiting until "load"
+. Retrying in 1s...
+[2026-09-14 02:18:17] INFO: Fetched (200) <GET https://www.merriam-webster.com/dictionary/palm> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.britannica.com/plant/palm-tree                         
+| ✓ | ⏱: 0.66s 
+[SCRAPE].. ◆ https://www.britannica.com/plant/palm-tree                         
+| ✓ | ⏱: 0.00s 
+[COMPLETE] ● https://www.britannica.com/plant/palm-tree                         
+| ✗ | ⏱: 0.66s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://leafyplace.com/types-of-palm-trees/                        
+| ✓ | ⏱: 1.03s 
+[SCRAPE].. ◆ https://leafyplace.com/types-of-palm-trees/                        
+| ✓ | ⏱: 0.10s 
+[COMPLETE] ● https://leafyplace.com/types-of-palm-trees/                        
+| ✓ | ⏱: 1.14s 
+[2026-09-14 02:18:27] INFO: Fetched (200) <GET https://leafyplace.com/types-of-palm-trees/> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ 
+https://ownyardlife.com/99-types-of-palm-trees-with-pictures-and-identification/
+| ✓ | ⏱: 1.64s 
+[SCRAPE].. ◆ 
+https://ownyardlife.com/99-types-of-palm-trees-with-pictures-and-identification/
+| ✓ | ⏱: 0.11s 
+[COMPLETE] ● 
+https://ownyardlife.com/99-types-of-palm-trees-with-pictures-and-identification/
+| ✓ | ⏱: 1.76s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.britannica.com/plant/palm-tree/Ecology                 
+| ✓ | ⏱: 1.73s 
+[SCRAPE].. ◆ https://www.britannica.com/plant/palm-tree/Ecology                 
+| ✓ | ⏱: 0.05s 
+[COMPLETE] ● https://www.britannica.com/plant/palm-tree/Ecology                 
+| ✓ | ⏱: 1.80s 
+[2026-09-14 02:19:04] WARNING: Attempt 1 failed: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://www.britannica.com/plant/palm-tree/Ecology", waiting until "load"
+. Retrying in 1s...
+[2026-09-14 02:19:40] WARNING: Attempt 2 failed: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://www.britannica.com/plant/palm-tree/Ecology", waiting until "load"
+. Retrying in 1s...
+[2026-09-14 02:19:46] INFO: Fetched (200) <GET https://www.britannica.com/plant/palm-tree/Ecology> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://palm.com/                                                  
+| ✓ | ⏱: 0.96s 
+[SCRAPE].. ◆ https://palm.com/                                                  
+| ✓ | ⏱: 0.01s 
+[COMPLETE] ● https://palm.com/                                                  
+| ✓ | ⏱: 0.97s 
+[2026-09-14 02:19:50] INFO: Fetched (200) <GET https://palm.com/> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ 
+https://www.profi-werkstatt.net/de/news/continen...reundlichere-reifenentwicklun
+g-voran-232552.html  | ✓ | ⏱: 1.03s 
+[SCRAPE].. ◆ 
+https://www.profi-werkstatt.net/de/news/continen...reundlichere-reifenentwicklun
+g-voran-232552.html  | ✓ | ⏱: 0.00s 
+[COMPLETE] ● 
+https://www.profi-werkstatt.net/de/news/continen...reundlichere-reifenentwicklun
+g-voran-232552.html  | ✗ | ⏱: 1.03s 
+[2026-09-14 02:20:06] INFO: Fetched (200) <GET https://www.profi-werkstatt.net/de/news/continental-reduziert-reifenabrieb-forschung-und-projekte-treiben-umweltfreundlichere-reifenentwicklung-voran-232552.html> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ 
+https://www.continental.com/de/presse/pressemitteilungen/20251117-staubsauger-re
+ifenabrieb/          | ✓ | ⏱: 1.75s 
+[SCRAPE].. ◆ 
+https://www.continental.com/de/presse/pressemitteilungen/20251117-staubsauger-re
+ifenabrieb/          | ✓ | ⏱: 0.09s 
+[COMPLETE] ● 
+https://www.continental.com/de/presse/pressemitteilungen/20251117-staubsauger-re
+ifenabrieb/          | ✓ | ⏱: 1.85s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ 
+https://www.continental-tires.com/de/about/susta...se-phase-emissions/tire-and-r
+oad-wear-particles/  | ✓ | ⏱: 4.98s 
+[SCRAPE].. ◆ 
+https://www.continental-tires.com/de/about/susta...se-phase-emissions/tire-and-r
+oad-wear-particles/  | ✓ | ⏱: 0.09s 
+[COMPLETE] ● 
+https://www.continental-tires.com/de/about/susta...se-phase-emissions/tire-and-r
+oad-wear-particles/  | ✓ | ⏱: 5.08s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ 
+https://www.continental-tires.com/de/stories/wie-continental-das-thema-reifenabr
+ieb-erforscht/       | ✓ | ⏱: 4.00s 
+[SCRAPE].. ◆ 
+https://www.continental-tires.com/de/stories/wie-continental-das-thema-reifenabr
+ieb-erforscht/       | ✓ | ⏱: 0.08s 
+[COMPLETE] ● 
+https://www.continental-tires.com/de/stories/wie-continental-das-thema-reifenabr
+ieb-erforscht/       | ✓ | ⏱: 4.09s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ 
+https://www.continental.com/de/presse/mediathek/...res-garage/the-continental-ti
+res-garage-folge-3/  | ✓ | ⏱: 1.66s 
+[SCRAPE].. ◆ 
+https://www.continental.com/de/presse/mediathek/...res-garage/the-continental-ti
+res-garage-folge-3/  | ✓ | ⏱: 0.06s 
+[COMPLETE] ● 
+https://www.continental.com/de/presse/mediathek/...res-garage/the-continental-ti
+res-garage-folge-3/  | ✓ | ⏱: 1.73s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ 
+https://www.explortal-logistics.net/news/pressem...-zur-erforschung-von-reifenab
+riebpartikeln-31782  | ✓ | ⏱: 1.82s 
+[SCRAPE].. ◆ 
+https://www.explortal-logistics.net/news/pressem...-zur-erforschung-von-reifenab
+riebpartikeln-31782  | ✓ | ⏱: 0.06s 
+[COMPLETE] ● 
+https://www.explortal-logistics.net/news/pressem...-zur-erforschung-von-reifenab
+riebpartikeln-31782  | ✓ | ⏱: 1.89s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ 
+https://www.publicnow.com/view/226417B8F435071CD1A59204D0E3D26A4A3D3C17         
+| ✓ | ⏱: 0.58s 
+[SCRAPE].. ◆ 
+https://www.publicnow.com/view/226417B8F435071CD1A59204D0E3D26A4A3D3C17         
+| ✓ | ⏱: 0.00s 
+[COMPLETE] ● 
+https://www.publicnow.com/view/226417B8F435071CD1A59204D0E3D26A4A3D3C17         
+| ✗ | ⏱: 0.59s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ 
+https://flotte.de/artikel/114/27307/continental-...sauger-zur-erforschung-von-re
+ifenabriebpartikeln  | ✓ | ⏱: 2.23s 
+[SCRAPE].. ◆ 
+https://flotte.de/artikel/114/27307/continental-...sauger-zur-erforschung-von-re
+ifenabriebpartikeln  | ✓ | ⏱: 0.00s 
+[COMPLETE] ● 
+https://flotte.de/artikel/114/27307/continental-...sauger-zur-erforschung-von-re
+ifenabriebpartikeln  | ✓ | ⏱: 2.24s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ 
+https://vision-mobility.de/news/continental-stau...er-misst-reifenabrieb-im-fahr
+betrieb-388386.html  | ✓ | ⏱: 1.09s 
+[SCRAPE].. ◆ 
+https://vision-mobility.de/news/continental-stau...er-misst-reifenabrieb-im-fahr
+betrieb-388386.html  | ✓ | ⏱: 0.00s 
+[COMPLETE] ● 
+https://vision-mobility.de/news/continental-stau...er-misst-reifenabrieb-im-fahr
+betrieb-388386.html  | ✗ | ⏱: 1.09s 
+[2026-09-14 02:20:36] INFO: Fetched (200) <GET https://vision-mobility.de/news/continental-staubsauger-misst-reifenabrieb-im-fahrbetrieb-388386.html> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ 
+https://reifenpresse.de/2025/11/17/mit-einem-staubsauger-dem-reifenabrieb-auf-de
+r-spur/              | ✓ | ⏱: 6.08s 
+[SCRAPE].. ◆ 
+https://reifenpresse.de/2025/11/17/mit-einem-staubsauger-dem-reifenabrieb-auf-de
+r-spur/              | ✓ | ⏱: 0.02s 
+[COMPLETE] ● 
+https://reifenpresse.de/2025/11/17/mit-einem-staubsauger-dem-reifenabrieb-auf-de
+r-spur/              | ✓ | ⏱: 6.12s 
+[2026-09-14 02:20:50] INFO: Fetched (200) <GET https://reifenpresse.de/2025/11/17/mit-einem-staubsauger-dem-reifenabrieb-auf-der-spur/> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ 
+https://www.att.com/portstatus/?msockid=0d04e12008c66ae43ef4f6f409c86ba8        
+| ✓ | ⏱: 2.83s 
+[SCRAPE].. ◆ 
+https://www.att.com/portstatus/?msockid=0d04e12008c66ae43ef4f6f409c86ba8        
+| ✓ | ⏱: 0.04s 
+[COMPLETE] ● 
+https://www.att.com/portstatus/?msockid=0d04e12008c66ae43ef4f6f409c86ba8        
+| ✓ | ⏱: 2.89s 
+[2026-09-14 02:21:05] INFO: Fetched (200) <GET https://www.att.com/portstatus/?msockid=0d04e12008c66ae43ef4f6f409c86ba8> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.merriam-webster.com/dictionary/port                    
+| ✓ | ⏱: 1.70s 
+[SCRAPE].. ◆ https://www.merriam-webster.com/dictionary/port                    
+| ✓ | ⏱: 0.08s 
+[COMPLETE] ● https://www.merriam-webster.com/dictionary/port                    
+| ✓ | ⏱: 1.82s 
+[2026-09-14 02:21:40] WARNING: Attempt 1 failed: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://www.merriam-webster.com/dictionary/port", waiting until "load"
+. Retrying in 1s...
+[2026-09-14 02:21:53] INFO: Fetched (200) <GET https://www.merriam-webster.com/dictionary/port> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://hackerdna.com/blog/what-is-a-port                          
+| ✓ | ⏱: 1.35s 
+[SCRAPE].. ◆ https://hackerdna.com/blog/what-is-a-port                          
+| ✓ | ⏱: 0.02s 
+[COMPLETE] ● https://hackerdna.com/blog/what-is-a-port                          
+| ✓ | ⏱: 1.38s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://dictionary.cambridge.org/dictionary/english/port           
+| ✓ | ⏱: 1.82s 
+[SCRAPE].. ◆ https://dictionary.cambridge.org/dictionary/english/port           
+| ✓ | ⏱: 0.22s 
+[COMPLETE] ● https://dictionary.cambridge.org/dictionary/english/port           
+| ✓ | ⏱: 2.05s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.thefreedictionary.com/port                             
+| ✓ | ⏱: 0.91s 
+[SCRAPE].. ◆ https://www.thefreedictionary.com/port                             
+| ✓ | ⏱: 0.15s 
+[COMPLETE] ● https://www.thefreedictionary.com/port                             
+| ✓ | ⏱: 1.07s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://franciscan.edu/accessfus-is-now-the-port/                  
+| ✓ | ⏱: 2.42s 
+[SCRAPE].. ◆ https://franciscan.edu/accessfus-is-now-the-port/                  
+| ✓ | ⏱: 0.04s 
+[COMPLETE] ● https://franciscan.edu/accessfus-is-now-the-port/                  
+| ✓ | ⏱: 2.49s 
+[2026-09-14 02:22:08] INFO: Fetched (200) <GET https://franciscan.edu/accessfus-is-now-the-port/> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://education.nationalgeographic.org/resource/port/            
+| ✓ | ⏱: 1.10s 
+[SCRAPE].. ◆ https://education.nationalgeographic.org/resource/port/            
+| ✓ | ⏱: 0.04s 
+[COMPLETE] ● https://education.nationalgeographic.org/resource/port/            
+| ✓ | ⏱: 1.15s 
+[2026-09-14 02:22:14] INFO: Fetched (200) <GET https://education.nationalgeographic.org/resource/port/> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://dictionary.cambridge.org/us/dictionary/english/port        
+| ✓ | ⏱: 2.10s 
+[SCRAPE].. ◆ https://dictionary.cambridge.org/us/dictionary/english/port        
+| ✓ | ⏱: 0.19s 
+[COMPLETE] ● https://dictionary.cambridge.org/us/dictionary/english/port        
+| ✓ | ⏱: 2.31s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ 
+https://www.att.com/portstatus/?msockid=2a02bd2fb91b6db20991aafbb8a76cd8        
+| ✓ | ⏱: 3.25s 
+[SCRAPE].. ◆ 
+https://www.att.com/portstatus/?msockid=2a02bd2fb91b6db20991aafbb8a76cd8        
+| ✓ | ⏱: 0.02s 
+[COMPLETE] ● 
+https://www.att.com/portstatus/?msockid=2a02bd2fb91b6db20991aafbb8a76cd8        
+| ✓ | ⏱: 3.30s 
+[2026-09-14 02:22:27] INFO: Fetched (200) <GET https://www.att.com/portstatus/?msockid=2a02bd2fb91b6db20991aafbb8a76cd8> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.britannica.com/science/white-color                     
+| ✓ | ⏱: 2.89s 
+[SCRAPE].. ◆ https://www.britannica.com/science/white-color                     
+| ✓ | ⏱: 0.02s 
+[COMPLETE] ● https://www.britannica.com/science/white-color                     
+| ✓ | ⏱: 2.93s 
+[2026-09-14 02:23:08] WARNING: Attempt 1 failed: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://www.britannica.com/science/white-color", waiting until "load"
+. Retrying in 1s...
+[2026-09-14 02:23:44] WARNING: Attempt 2 failed: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://www.britannica.com/science/white-color", waiting until "load"
+. Retrying in 1s...
+[2026-09-14 02:23:47] INFO: Fetched (200) <GET https://www.britannica.com/science/white-color> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.merriam-webster.com/dictionary/white                   
+| ✓ | ⏱: 1.60s 
+[SCRAPE].. ◆ https://www.merriam-webster.com/dictionary/white                   
+| ✓ | ⏱: 0.34s 
+[COMPLETE] ● https://www.merriam-webster.com/dictionary/white                   
+| ✓ | ⏱: 1.97s 
+[2026-09-14 02:24:21] WARNING: Attempt 1 failed: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://www.merriam-webster.com/dictionary/white", waiting until "load"
+. Retrying in 1s...
+[2026-09-14 02:24:41] INFO: Fetched (200) <GET https://www.merriam-webster.com/dictionary/white> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.whitescreen.online/                                    
+| ✓ | ⏱: 0.83s 
+[SCRAPE].. ◆ https://www.whitescreen.online/                                    
+| ✓ | ⏱: 0.01s 
+[COMPLETE] ● https://www.whitescreen.online/                                    
+| ✓ | ⏱: 0.85s 
+[2026-09-14 02:25:14] WARNING: Attempt 1 failed: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://www.whitescreen.online/", waiting until "load"
+. Retrying in 1s...
+[2026-09-14 02:25:22] INFO: Fetched (200) <GET https://www.whitescreen.online/> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.youtube.com/watch?v=QggJzZdIYPI                        
+| ✓ | ⏱: 2.41s 
+[SCRAPE].. ◆ https://www.youtube.com/watch?v=QggJzZdIYPI                        
+| ✓ | ⏱: 0.03s 
+[COMPLETE] ● https://www.youtube.com/watch?v=QggJzZdIYPI                        
+| ✓ | ⏱: 2.48s 
+[2026-09-14 02:25:33] INFO: Fetched (200) <GET https://www.youtube.com/watch?v=QggJzZdIYPI&themeRefresh=1> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://dictionary.cambridge.org/us/dictionary/english/white       
+| ✓ | ⏱: 1.71s 
+[SCRAPE].. ◆ https://dictionary.cambridge.org/us/dictionary/english/white       
+| ✓ | ⏱: 0.12s 
+[COMPLETE] ● https://dictionary.cambridge.org/us/dictionary/english/white       
+| ✓ | ⏱: 1.83s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://en.wiktionary.org/wiki/white                               
+| ✓ | ⏱: 1.43s 
+[SCRAPE].. ◆ https://en.wiktionary.org/wiki/white                               
+| ✓ | ⏱: 0.76s 
+[COMPLETE] ● https://en.wiktionary.org/wiki/white                               
+| ✓ | ⏱: 2.21s 
+[2026-09-14 02:25:42] INFO: Fetched (200) <GET https://en.wiktionary.org/wiki/white> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://dictionary.cambridge.org/dictionary/english/white          
+| ✓ | ⏱: 1.52s 
+[SCRAPE].. ◆ https://dictionary.cambridge.org/dictionary/english/white          
+| ✓ | ⏱: 0.12s 
+[COMPLETE] ● https://dictionary.cambridge.org/dictionary/english/white          
+| ✓ | ⏱: 1.66s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.whitescreen.online/                                    
+| ✓ | ⏱: 0.83s 
+[SCRAPE].. ◆ https://www.whitescreen.online/                                    
+| ✓ | ⏱: 0.01s 
+[COMPLETE] ● https://www.whitescreen.online/                                    
+| ✓ | ⏱: 0.85s 
+[2026-09-14 02:26:18] WARNING: Attempt 1 failed: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://www.whitescreen.online/", waiting until "load"
+. Retrying in 1s...
+[2026-09-14 02:26:27] INFO: Fetched (200) <GET https://www.whitescreen.online/> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.youtube.com/watch?v=QggJzZdIYPI                        
+| ✓ | ⏱: 2.29s 
+[SCRAPE].. ◆ https://www.youtube.com/watch?v=QggJzZdIYPI                        
+| ✓ | ⏱: 0.03s 
+[COMPLETE] ● https://www.youtube.com/watch?v=QggJzZdIYPI                        
+| ✓ | ⏱: 2.36s 
+[2026-09-14 02:26:38] INFO: Fetched (200) <GET https://www.youtube.com/watch?v=QggJzZdIYPI&themeRefresh=1> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.offers.com/stores/temu/                                
+| ✓ | ⏱: 0.72s 
+[SCRAPE].. ◆ https://www.offers.com/stores/temu/                                
+| ✓ | ⏱: 0.00s 
+[COMPLETE] ● https://www.offers.com/stores/temu/                                
+| ✓ | ⏱: 0.72s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.retailcoupons.com/temu-coupon-codes/                   
+| ✓ | ⏱: 1.24s 
+[SCRAPE].. ◆ https://www.retailcoupons.com/temu-coupon-codes/                   
+| ✓ | ⏱: 0.04s 
+[COMPLETE] ● https://www.retailcoupons.com/temu-coupon-codes/                   
+| ✓ | ⏱: 1.29s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://simplycodes.com/store/temu.com                             
+| ✓ | ⏱: 1.13s 
+[SCRAPE].. ◆ https://simplycodes.com/store/temu.com                             
+| ✓ | ⏱: 0.16s 
+[COMPLETE] ● https://simplycodes.com/store/temu.com                             
+| ✓ | ⏱: 1.31s 
+[2026-09-14 02:26:51] INFO: Fetched (200) <GET https://simplycodes.com/store/temu.com> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.dealnews.com/features/temu/promo-codes/                
+| ✓ | ⏱: 1.87s 
+[SCRAPE].. ◆ https://www.dealnews.com/features/temu/promo-codes/                
+| ✓ | ⏱: 0.10s 
+[COMPLETE] ● https://www.dealnews.com/features/temu/promo-codes/                
+| ✓ | ⏱: 1.99s 
+[2026-09-14 02:27:25] WARNING: Attempt 1 failed: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://www.dealnews.com/features/temu/promo-codes/", waiting until "load"
+. Retrying in 1s...
+[2026-09-14 02:27:38] INFO: Fetched (200) <GET https://www.dealnews.com/features/temu/promo-codes/> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.vouchercodes.co.uk/temu.com                            
+| ✓ | ⏱: 2.22s 
+[SCRAPE].. ◆ https://www.vouchercodes.co.uk/temu.com                            
+| ✓ | ⏱: 0.04s 
+[COMPLETE] ● https://www.vouchercodes.co.uk/temu.com                            
+| ✓ | ⏱: 2.28s 
+[2026-09-14 02:28:05] INFO: Fetched (200) <GET https://www.vouchercodes.co.uk/temu.com> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.coupons.com/coupon-codes/temu                          
+| ✓ | ⏱: 1.15s 
+[SCRAPE].. ◆ https://www.coupons.com/coupon-codes/temu                          
+| ✓ | ⏱: 0.03s 
+[COMPLETE] ● https://www.coupons.com/coupon-codes/temu                          
+| ✓ | ⏱: 1.21s 
+[2026-09-14 02:28:11] INFO: Fetched (200) <GET https://www.coupons.com/coupon-codes/temu> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ 
+https://www.msn.com/en-us/money/general/are-onli...e-6-security-tips-for-banking
+-online/ar-AA1X8WDA  | ✓ | ⏱: 0.57s 
+[SCRAPE].. ◆ 
+https://www.msn.com/en-us/money/general/are-onli...e-6-security-tips-for-banking
+-online/ar-AA1X8WDA  | ✓ | ⏱: 0.00s 
+[COMPLETE] ● 
+https://www.msn.com/en-us/money/general/are-onli...e-6-security-tips-for-banking
+-online/ar-AA1X8WDA  | ✗ | ⏱: 0.58s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ 
+https://www.msn.com/en-us/money/general/5-online...tips-that-can-protect-you-fro
+m-fraud/ar-AA24glFI  | ✓ | ⏱: 0.61s 
+[SCRAPE].. ◆ 
+https://www.msn.com/en-us/money/general/5-online...tips-that-can-protect-you-fro
+m-fraud/ar-AA24glFI  | ✓ | ⏱: 0.00s 
+[COMPLETE] ● 
+https://www.msn.com/en-us/money/general/5-online...tips-that-can-protect-you-fro
+m-fraud/ar-AA24glFI  | ✗ | ⏱: 0.62s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ 
+https://www.msn.com/en-us/news/other/online-banking-security-best-practices/ss-A
+A2bl5wF              | ✓ | ⏱: 0.63s 
+[SCRAPE].. ◆ 
+https://www.msn.com/en-us/news/other/online-banking-security-best-practices/ss-A
+A2bl5wF              | ✓ | ⏱: 0.00s 
+[COMPLETE] ● 
+https://www.msn.com/en-us/news/other/online-banking-security-best-practices/ss-A
+A2bl5wF              | ✗ | ⏱: 0.63s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ 
+https://www.msn.com/en-us/money/other/5-internet...-need-to-know-to-keep-your-in
+fo-safe/ss-AA28E19y  | ✓ | ⏱: 0.68s 
+[SCRAPE].. ◆ 
+https://www.msn.com/en-us/money/other/5-internet...-need-to-know-to-keep-your-in
+fo-safe/ss-AA28E19y  | ✓ | ⏱: 0.00s 
+[COMPLETE] ● 
+https://www.msn.com/en-us/money/other/5-internet...-need-to-know-to-keep-your-in
+fo-safe/ss-AA28E19y  | ✗ | ⏱: 0.69s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ 
+https://www.msn.com/en-us/money/other/the-best-c...otect-your-money-identity-and
+-sanity/ar-AA1Sg9oC  | ✓ | ⏱: 0.59s 
+[SCRAPE].. ◆ 
+https://www.msn.com/en-us/money/other/the-best-c...otect-your-money-identity-and
+-sanity/ar-AA1Sg9oC  | ✓ | ⏱: 0.00s 
+[COMPLETE] ● 
+https://www.msn.com/en-us/money/other/the-best-c...otect-your-money-identity-and
+-sanity/ar-AA1Sg9oC  | ✗ | ⏱: 0.60s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ 
+https://www.msn.com/en-in/technology/cybersecuri...r-your-bank-account-could-be-
+at-risk/ar-AA1WnaLE  | ✓ | ⏱: 0.58s 
+[SCRAPE].. ◆ 
+https://www.msn.com/en-in/technology/cybersecuri...r-your-bank-account-could-be-
+at-risk/ar-AA1WnaLE  | ✓ | ⏱: 0.00s 
+[COMPLETE] ● 
+https://www.msn.com/en-in/technology/cybersecuri...r-your-bank-account-could-be-
+at-risk/ar-AA1WnaLE  | ✗ | ⏱: 0.59s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ 
+https://www.msn.com/en-in/money/news/cyber-crime...-from-the-most-dangerous-cybe
+rcrimes/ar-AA26Es5h  | ✓ | ⏱: 0.63s 
+[SCRAPE].. ◆ 
+https://www.msn.com/en-in/money/news/cyber-crime...-from-the-most-dangerous-cybe
+rcrimes/ar-AA26Es5h  | ✓ | ⏱: 0.00s 
+[COMPLETE] ● 
+https://www.msn.com/en-in/money/news/cyber-crime...-from-the-most-dangerous-cybe
+rcrimes/ar-AA26Es5h  | ✗ | ⏱: 0.63s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ 
+https://www.msn.com/en-in/technology/cybersecuri...ect-your-digital-payments-fro
+m-fraud/ar-AA2bLSNI  | ✓ | ⏱: 0.62s 
+[SCRAPE].. ◆ 
+https://www.msn.com/en-in/technology/cybersecuri...ect-your-digital-payments-fro
+m-fraud/ar-AA2bLSNI  | ✓ | ⏱: 0.00s 
+[COMPLETE] ● 
+https://www.msn.com/en-in/technology/cybersecuri...ect-your-digital-payments-fro
+m-fraud/ar-AA2bLSNI  | ✗ | ⏱: 0.62s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ 
+https://www.msn.com/en-in/technology/cybersecuri...uld-know-in-2026-to-stay-safe
+-online/ar-AA2509ef  | ✓ | ⏱: 0.61s 
+[SCRAPE].. ◆ 
+https://www.msn.com/en-in/technology/cybersecuri...uld-know-in-2026-to-stay-safe
+-online/ar-AA2509ef  | ✓ | ⏱: 0.00s 
+[COMPLETE] ● 
+https://www.msn.com/en-in/technology/cybersecuri...uld-know-in-2026-to-stay-safe
+-online/ar-AA2509ef  | ✗ | ⏱: 0.62s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ 
+https://www.msn.com/en-in/technology/cybersecuri...cost-you-your-money-and-your-
+privacy/ar-AA1TgrnB  | ✓ | ⏱: 0.60s 
+[SCRAPE].. ◆ 
+https://www.msn.com/en-in/technology/cybersecuri...cost-you-your-money-and-your-
+privacy/ar-AA1TgrnB  | ✓ | ⏱: 0.00s 
+[COMPLETE] ● 
+https://www.msn.com/en-in/technology/cybersecuri...cost-you-your-money-and-your-
+privacy/ar-AA1TgrnB  | ✗ | ⏱: 0.61s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ 
+https://apps.apple.com/sg/app/linkedin-领英/id288429040?l=zh-Hans-CN            
+| ✓ | ⏱: 1.40s 
+[SCRAPE].. ◆ 
+https://apps.apple.com/sg/app/linkedin-领英/id288429040?l=zh-Hans-CN            
+| ✓ | ⏱: 0.29s 
+[COMPLETE] ● 
+https://apps.apple.com/sg/app/linkedin-领英/id288429040?l=zh-Hans-CN            
+| ✓ | ⏱: 1.70s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://members.linkedin.com/en-gb/download-the-linkedin-app       
+| ✓ | ⏱: 1.18s 
+[SCRAPE].. ◆ https://members.linkedin.com/en-gb/download-the-linkedin-app       
+| ✓ | ⏱: 0.02s 
+[COMPLETE] ● https://members.linkedin.com/en-gb/download-the-linkedin-app       
+| ✓ | ⏱: 1.21s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ 
+https://apps.apple.com/us/app/linkedin-community-network/id288429040            
+| ✓ | ⏱: 1.40s 
+[SCRAPE].. ◆ 
+https://apps.apple.com/us/app/linkedin-community-network/id288429040            
+| ✓ | ⏱: 0.08s 
+[COMPLETE] ● 
+https://apps.apple.com/us/app/linkedin-community-network/id288429040            
+| ✓ | ⏱: 1.49s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://members.linkedin.com/apps                                  
+| ✓ | ⏱: 1.09s 
+[SCRAPE].. ◆ https://members.linkedin.com/apps                                  
+| ✓ | ⏱: 0.01s 
+[COMPLETE] ● https://members.linkedin.com/apps                                  
+| ✓ | ⏱: 1.11s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://mobile.linkedin.com/zh-cn                                  
+| ✓ | ⏱: 1.04s 
+[SCRAPE].. ◆ https://mobile.linkedin.com/zh-cn                                  
+| ✓ | ⏱: 0.01s 
+[COMPLETE] ● https://mobile.linkedin.com/zh-cn                                  
+| ✓ | ⏱: 1.06s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ 
+https://www.linkedin.com/help/linkedin/answer/a515752/-app?lang=zh-CN           
+| ✓ | ⏱: 1.17s 
+[SCRAPE].. ◆ 
+https://www.linkedin.com/help/linkedin/answer/a515752/-app?lang=zh-CN           
+| ✓ | ⏱: 0.01s 
+[COMPLETE] ● 
+https://www.linkedin.com/help/linkedin/answer/a515752/-app?lang=zh-CN           
+| ✓ | ⏱: 1.20s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://apps.apple.com/mo/app/linkedin/id288429040                 
+| ✓ | ⏱: 1.45s 
+[SCRAPE].. ◆ https://apps.apple.com/mo/app/linkedin/id288429040                 
+| ✓ | ⏱: 0.07s 
+[COMPLETE] ● https://apps.apple.com/mo/app/linkedin/id288429040                 
+| ✓ | ⏱: 1.53s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ 
+https://download.cnet.com/linkedin-for-ipad/3000-12941_4-75708469.html          
+| ✓ | ⏱: 1.17s 
+[SCRAPE].. ◆ 
+https://download.cnet.com/linkedin-for-ipad/3000-12941_4-75708469.html          
+| ✓ | ⏱: 0.03s 
+[COMPLETE] ● 
+https://download.cnet.com/linkedin-for-ipad/3000-12941_4-75708469.html          
+| ✓ | ⏱: 1.21s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://apps.apple.com/mr/iphone/story/id1448951528                
+| ✓ | ⏱: 1.00s 
+[SCRAPE].. ◆ https://apps.apple.com/mr/iphone/story/id1448951528                
+| ✓ | ⏱: 0.03s 
+[COMPLETE] ● https://apps.apple.com/mr/iphone/story/id1448951528                
+| ✓ | ⏱: 1.04s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://gizmodo.com/download/linkedin                              
+| ✓ | ⏱: 1.21s 
+[SCRAPE].. ◆ https://gizmodo.com/download/linkedin                              
+| ✓ | ⏱: 0.05s 
+[COMPLETE] ● https://gizmodo.com/download/linkedin                              
+| ✓ | ⏱: 1.26s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://yogaia.com/blog/yoga-for-strength                          
+| ✓ | ⏱: 1.68s 
+[SCRAPE].. ◆ https://yogaia.com/blog/yoga-for-strength                          
+| ✓ | ⏱: 0.01s 
+[COMPLETE] ● https://yogaia.com/blog/yoga-for-strength                          
+| ✓ | ⏱: 1.71s 
+[2026-09-14 02:29:03] INFO: Fetched (200) <GET https://yogaia.com/blog/yoga-for-strength> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://welltech.com/content/yoga-positions-for-strength           
+| ✓ | ⏱: 1.07s 
+[SCRAPE].. ◆ https://welltech.com/content/yoga-positions-for-strength           
+| ✓ | ⏱: 0.02s 
+[COMPLETE] ● https://welltech.com/content/yoga-positions-for-strength           
+| ✓ | ⏱: 1.10s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ 
+https://www.youtube.com/playlist?list=PLfrsr2Ff16pSialN0XJSXdYcS5Qy7E42P        
+| ✓ | ⏱: 2.34s 
+[SCRAPE].. ◆ 
+https://www.youtube.com/playlist?list=PLfrsr2Ff16pSialN0XJSXdYcS5Qy7E42P        
+| ✓ | ⏱: 0.09s 
+[COMPLETE] ● 
+https://www.youtube.com/playlist?list=PLfrsr2Ff16pSialN0XJSXdYcS5Qy7E42P        
+| ✓ | ⏱: 2.45s 
+[2026-09-14 02:29:13] INFO: Fetched (200) <GET https://www.youtube.com/playlist?list=PLfrsr2Ff16pSialN0XJSXdYcS5Qy7E42P> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.pinch-of-health.com/yoga-for-strength.html             
+| ✓ | ⏱: 1.25s 
+[SCRAPE].. ◆ https://www.pinch-of-health.com/yoga-for-strength.html             
+| ✓ | ⏱: 0.04s 
+[COMPLETE] ● https://www.pinch-of-health.com/yoga-for-strength.html             
+| ✓ | ⏱: 1.30s 
+[2026-09-14 02:29:49] WARNING: Attempt 1 failed: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://www.pinch-of-health.com/yoga-for-strength.html", waiting until "load"
+. Retrying in 1s...
+[2026-09-14 02:30:20] WARNING: Attempt 2 failed: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://www.pinch-of-health.com/yoga-for-strength.html", waiting until "load"
+. Retrying in 1s...
+[2026-09-14 02:30:51] ERROR: Failed after 3 attempts: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://www.pinch-of-health.com/yoga-for-strength.html", waiting until "load"
+
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://yogawithadriene.com/yoga-for-strength/                     
+| ✓ | ⏱: 1.60s 
+[SCRAPE].. ◆ https://yogawithadriene.com/yoga-for-strength/                     
+| ✓ | ⏱: 0.02s 
+[COMPLETE] ● https://yogawithadriene.com/yoga-for-strength/                     
+| ✓ | ⏱: 1.63s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://westburybankwi.com/                                        
+| ✓ | ⏱: 31.17s 
+[SCRAPE].. ◆ https://westburybankwi.com/                                        
+| ✓ | ⏱: 0.02s 
+[COMPLETE] ● https://westburybankwi.com/                                        
+| ✓ | ⏱: 31.20s 
+[2026-09-14 02:32:21] WARNING: Attempt 1 failed: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://westburybankwi.com/", waiting until "load"
+. Retrying in 1s...
+[2026-09-14 02:32:52] WARNING: Attempt 2 failed: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://westburybankwi.com/", waiting until "load"
+. Retrying in 1s...
+[2026-09-14 02:33:23] ERROR: Failed after 3 attempts: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://westburybankwi.com/", waiting until "load"
+
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.flagstaratwestburymusicfair.com/                       
+| ✓ | ⏱: 1.37s 
+[SCRAPE].. ◆ https://www.flagstaratwestburymusicfair.com/                       
+| ✓ | ⏱: 0.04s 
+[COMPLETE] ● https://www.flagstaratwestburymusicfair.com/                       
+| ✓ | ⏱: 1.42s 
+[2026-09-14 02:33:47] INFO: Fetched (200) <GET https://www.flagstaratwestburymusicfair.com/> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://villageofwestbury.gov/                                     
+| ✓ | ⏱: 1.65s 
+[SCRAPE].. ◆ https://villageofwestbury.gov/                                     
+| ✓ | ⏱: 0.04s 
+[COMPLETE] ● https://villageofwestbury.gov/                                     
+| ✓ | ⏱: 1.72s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://diggerspecialties.com/products/columns/westbury-wraps/     
+| ✓ | ⏱: 1.76s 
+[SCRAPE].. ◆ https://diggerspecialties.com/products/columns/westbury-wraps/     
+| ✓ | ⏱: 0.03s 
+[COMPLETE] ● https://diggerspecialties.com/products/columns/westbury-wraps/     
+| ✓ | ⏱: 1.80s 
+[INIT].... → Crawl4AI 0.8.6 
+[ANTIBOT]. ℹ https://westburybankwi.com/online-banking.html     | Error: Proxy 
+direct failed: Failed on navigating ACS-GOTO:
+Page.goto: Timeout 60000ms exceeded.
+Call log:
+  - navigating to "https://westburybankwi.com/online-banking.html", waiting 
+until "domcontentloaded"
+ 
+[ERROR]... × https://westburybankwi.com/online-banking.html     | Error: 
+Unexpected error in _crawl_web at line 778 in _crawl_web 
+(../../../../lib/python3.12/site-packages/crawl4ai/async_crawler_strategy.py):
+Error: Failed on navigating ACS-GOTO:
+Page.goto: Timeout 60000ms exceeded.
+Call log:
+  - navigating to "https://westburybankwi.com/online-banking.html", waiting 
+until "domcontentloaded"
+
+
+Code context:
+ 773                                   tag="GOTO",
+ 774                                   params={"url": url},
+ 775                               )
+ 776                               response = None
+ 777                           else:
+ 778 →                             raise RuntimeError(f"Failed on navigating 
+ACS-GOTO:\n{str(e)}")
+ 779   
+ 780                       # 
+──────────────────────────────────────────────────────────────
+ 781                       # Walk the redirect chain.  Playwright returns only 
+the last
+ 782                       # hop, so we trace the `request.redirected_from` 
+links until the
+ 783                       # first response that differs from the final one and 
+surface its 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://diggerspecialties.com/products/railing/aluminum-railing/   
+| ✓ | ⏱: 1.56s 
+[SCRAPE].. ◆ https://diggerspecialties.com/products/railing/aluminum-railing/   
+| ✓ | ⏱: 0.02s 
+[COMPLETE] ● https://diggerspecialties.com/products/railing/aluminum-railing/   
+| ✓ | ⏱: 1.60s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.longislandguide.com/visit/westbury/                    
+| ✓ | ⏱: 2.46s 
+[SCRAPE].. ◆ https://www.longislandguide.com/visit/westbury/                    
+| ✓ | ⏱: 0.03s 
+[COMPLETE] ● https://www.longislandguide.com/visit/westbury/                    
+| ✓ | ⏱: 2.50s 
+[2026-09-14 02:35:04] INFO: Fetched (200) <GET https://www.longislandguide.com/visit/westbury/> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://westbury-railing.org/                                      
+| ✓ | ⏱: 1.15s 
+[SCRAPE].. ◆ https://westbury-railing.org/                                      
+| ✓ | ⏱: 0.02s 
+[COMPLETE] ● https://westbury-railing.org/                                      
+| ✓ | ⏱: 1.17s 
+[2026-09-14 02:35:11] INFO: Fetched (200) <GET https://westbury-railing.org/> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://westburybankwi.com/                                        
+| ✓ | ⏱: 31.14s 
+[SCRAPE].. ◆ https://westburybankwi.com/                                        
+| ✓ | ⏱: 0.02s 
+[COMPLETE] ● https://westburybankwi.com/                                        
+| ✓ | ⏱: 31.17s 
+[2026-09-14 02:36:17] WARNING: Attempt 1 failed: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://westburybankwi.com/", waiting until "load"
+. Retrying in 1s...
+[2026-09-14 02:36:48] WARNING: Attempt 2 failed: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://westburybankwi.com/", waiting until "load"
+. Retrying in 1s...
+[2026-09-14 02:37:18] ERROR: Failed after 3 attempts: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://westburybankwi.com/", waiting until "load"
+
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.flagstaratwestburymusicfair.com/                       
+| ✓ | ⏱: 1.43s 
+[SCRAPE].. ◆ https://www.flagstaratwestburymusicfair.com/                       
+| ✓ | ⏱: 0.04s 
+[COMPLETE] ● https://www.flagstaratwestburymusicfair.com/                       
+| ✓ | ⏱: 1.48s 
+[2026-09-14 02:37:44] INFO: Fetched (200) <GET https://www.flagstaratwestburymusicfair.com/> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.longislandguide.com/visit/westbury/                    
+| ✓ | ⏱: 2.25s 
+[SCRAPE].. ◆ https://www.longislandguide.com/visit/westbury/                    
+| ✓ | ⏱: 0.03s 
+[COMPLETE] ● https://www.longislandguide.com/visit/westbury/                    
+| ✓ | ⏱: 2.30s 
+[2026-09-14 02:37:53] INFO: Fetched (200) <GET https://www.longislandguide.com/visit/westbury/> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://westbury-railing.org/                                      
+| ✓ | ⏱: 2.04s 
+[SCRAPE].. ◆ https://westbury-railing.org/                                      
+| ✓ | ⏱: 0.02s 
+[COMPLETE] ● https://westbury-railing.org/                                      
+| ✓ | ⏱: 2.07s 
+[2026-09-14 02:38:00] INFO: Fetched (200) <GET https://westbury-railing.org/> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.education.com/?msockid=3cba9ffe2cd26c680fc2882a2dbd6d04
+| ✓ | ⏱: 1.43s 
+[SCRAPE].. ◆ https://www.education.com/?msockid=3cba9ffe2cd26c680fc2882a2dbd6d04
+| ✓ | ⏱: 0.02s 
+[COMPLETE] ● https://www.education.com/?msockid=3cba9ffe2cd26c680fc2882a2dbd6d04
+| ✓ | ⏱: 1.46s 
+[2026-09-14 02:38:10] INFO: Fetched (200) <GET https://www.education.com/?msockid=3cba9ffe2cd26c680fc2882a2dbd6d04> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://mypikpak.com/s/VNjMcpMATbEGxr43M-cm9ZW5o1                  
+| ✓ | ⏱: 4.50s 
+[SCRAPE].. ◆ https://mypikpak.com/s/VNjMcpMATbEGxr43M-cm9ZW5o1                  
+| ✓ | ⏱: 0.03s 
+[COMPLETE] ● https://mypikpak.com/s/VNjMcpMATbEGxr43M-cm9ZW5o1                  
+| ✓ | ⏱: 4.54s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.yonkersny.gov/                                         
+| ✓ | ⏱: 2.56s 
+[SCRAPE].. ◆ https://www.yonkersny.gov/                                         
+| ✓ | ⏱: 0.06s 
+[COMPLETE] ● https://www.yonkersny.gov/                                         
+| ✓ | ⏱: 2.63s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.yonkersny.gov/739/About-Yonkers                        
+| ✓ | ⏱: 1.97s 
+[SCRAPE].. ◆ https://www.yonkersny.gov/739/About-Yonkers                        
+| ✓ | ⏱: 0.02s 
+[COMPLETE] ● https://www.yonkersny.gov/739/About-Yonkers                        
+| ✓ | ⏱: 2.00s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://yonkerstimes.com/                                          
+| ✓ | ⏱: 2.25s 
+[SCRAPE].. ◆ https://yonkerstimes.com/                                          
+| ✓ | ⏱: 0.04s 
+[COMPLETE] ● https://yonkerstimes.com/                                          
+| ✓ | ⏱: 2.31s 
+[2026-09-14 02:38:31] INFO: Fetched (200) <GET https://yonkerstimes.com/> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ 
+https://www.visitwestchesterny.com/discover/communities/southern-westchester/yon
+kers/                | ✓ | ⏱: 1.24s 
+[SCRAPE].. ◆ 
+https://www.visitwestchesterny.com/discover/communities/southern-westchester/yon
+kers/                | ✓ | ⏱: 0.03s 
+[COMPLETE] ● 
+https://www.visitwestchesterny.com/discover/communities/southern-westchester/yon
+kers/                | ✓ | ⏱: 1.28s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.britannica.com/place/Yonkers                           
+| ✓ | ⏱: 1.38s 
+[SCRAPE].. ◆ https://www.britannica.com/place/Yonkers                           
+| ✓ | ⏱: 0.02s 
+[COMPLETE] ● https://www.britannica.com/place/Yonkers                           
+| ✓ | ⏱: 1.41s 
+[2026-09-14 02:39:07] WARNING: Attempt 1 failed: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://www.britannica.com/place/Yonkers", waiting until "load"
+. Retrying in 1s...
+[2026-09-14 02:39:42] WARNING: Attempt 2 failed: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://www.britannica.com/place/Yonkers", waiting until "load"
+. Retrying in 1s...
+[2026-09-14 02:39:46] INFO: Fetched (200) <GET https://www.britannica.com/place/Yonkers> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ 
+https://www.hudsonriver.com/hhrt/river-towns/westchester-county/yonkers-ny/     
+| ✓ | ⏱: 0.78s 
+[SCRAPE].. ◆ 
+https://www.hudsonriver.com/hhrt/river-towns/westchester-county/yonkers-ny/     
+| ✓ | ⏱: 0.00s 
+[COMPLETE] ● 
+https://www.hudsonriver.com/hhrt/river-towns/westchester-county/yonkers-ny/     
+| ✗ | ⏱: 0.78s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://support.plastiq.com/login?locale=us                        
+| ✓ | ⏱: 1.25s 
+[SCRAPE].. ◆ https://support.plastiq.com/login?locale=us                        
+| ✓ | ⏱: 0.00s 
+[COMPLETE] ● https://support.plastiq.com/login?locale=us                        
+| ✓ | ⏱: 1.26s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://support.plastiq.com/s/                                     
+| ✓ | ⏱: 2.83s 
+[SCRAPE].. ◆ https://support.plastiq.com/s/                                     
+| ✓ | ⏱: 0.00s 
+[COMPLETE] ● https://support.plastiq.com/s/                                     
+| ✓ | ⏱: 2.85s 
+[2026-09-14 02:40:06] INFO: Fetched (200) <GET https://support.plastiq.com/s/> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://support.plastiq.com/s/article/account-settings             
+| ✓ | ⏱: 4.06s 
+[SCRAPE].. ◆ https://support.plastiq.com/s/article/account-settings             
+| ✓ | ⏱: 0.00s 
+[COMPLETE] ● https://support.plastiq.com/s/article/account-settings             
+| ✓ | ⏱: 4.08s 
+[2026-09-14 02:40:18] INFO: Fetched (200) <GET https://support.plastiq.com/s/article/account-settings> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://support.plastiq.com/s/article/getting-started              
+| ✓ | ⏱: 2.35s 
+[SCRAPE].. ◆ https://support.plastiq.com/s/article/getting-started              
+| ✓ | ⏱: 0.00s 
+[COMPLETE] ● https://support.plastiq.com/s/article/getting-started              
+| ✓ | ⏱: 2.37s 
+[2026-09-14 02:40:27] INFO: Fetched (200) <GET https://support.plastiq.com/s/article/getting-started> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://support.google.com/youtubetv/?hl=en                        
+| ✓ | ⏱: 1.29s 
+[SCRAPE].. ◆ https://support.google.com/youtubetv/?hl=en                        
+| ✓ | ⏱: 0.02s 
+[COMPLETE] ● https://support.google.com/youtubetv/?hl=en                        
+| ✓ | ⏱: 1.34s 
+[2026-09-14 02:40:34] INFO: Fetched (200) <GET https://support.google.com/youtubetv/?hl=en#topic=16265842> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://support.google.com/youtube/answer/9288567?hl=ru            
+| ✓ | ⏱: 1.32s 
+[SCRAPE].. ◆ https://support.google.com/youtube/answer/9288567?hl=ru            
+| ✓ | ⏱: 0.03s 
+[COMPLETE] ● https://support.google.com/youtube/answer/9288567?hl=ru            
+| ✓ | ⏱: 1.37s 
+[2026-09-14 02:40:41] INFO: Fetched (200) <GET https://support.google.com/youtube/answer/9288567?hl=ru> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.zhihu.com/question/1903231775980913051                 
+| ✓ | ⏱: 2.86s 
+[SCRAPE].. ◆ https://www.zhihu.com/question/1903231775980913051                 
+| ✓ | ⏱: 0.02s 
+[COMPLETE] ● https://www.zhihu.com/question/1903231775980913051                 
+| ✗ | ⏱: 2.90s 
+[2026-09-14 02:40:49] ERROR: Error getting page content: Page.content: Unable to retrieve content because the page is navigating and changing the content.
+[2026-09-14 02:40:49] INFO: Fetched (403) <GET https://www.zhihu.com/question/1903231775980913051> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.zhihu.com/question/1945629068243481180                 
+| ✓ | ⏱: 2.90s 
+[SCRAPE].. ◆ https://www.zhihu.com/question/1945629068243481180                 
+| ✓ | ⏱: 0.02s 
+[COMPLETE] ● https://www.zhihu.com/question/1945629068243481180                 
+| ✗ | ⏱: 2.95s 
+[2026-09-14 02:40:55] ERROR: Error getting page content: Page.content: Unable to retrieve content because the page is navigating and changing the content.
+[2026-09-14 02:40:55] INFO: Fetched (403) <GET https://www.zhihu.com/question/1945629068243481180> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://support.google.com/youtube/?hl=nl                          
+| ✓ | ⏱: 1.69s 
+[SCRAPE].. ◆ https://support.google.com/youtube/?hl=nl                          
+| ✓ | ⏱: 0.02s 
+[COMPLETE] ● https://support.google.com/youtube/?hl=nl                          
+| ✓ | ⏱: 1.75s 
+[2026-09-14 02:41:01] INFO: Fetched (200) <GET https://support.google.com/youtube/?hl=nl#topic=9257498> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.worldatlas.com/maps/canada/ontario                     
+| ✓ | ⏱: 0.91s 
+[SCRAPE].. ◆ https://www.worldatlas.com/maps/canada/ontario                     
+| ✓ | ⏱: 0.02s 
+[COMPLETE] ● https://www.worldatlas.com/maps/canada/ontario                     
+| ✓ | ⏱: 0.94s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.ontario.ca/                                            
+| ✓ | ⏱: 1.51s 
+[SCRAPE].. ◆ https://www.ontario.ca/                                            
+| ✓ | ⏱: 0.01s 
+[COMPLETE] ● https://www.ontario.ca/                                            
+| ✓ | ⏱: 1.53s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.ontario.ca/page/about-ontario                          
+| ✓ | ⏱: 1.42s 
+[SCRAPE].. ◆ https://www.ontario.ca/page/about-ontario                          
+| ✓ | ⏱: 0.02s 
+[COMPLETE] ● https://www.ontario.ca/page/about-ontario                          
+| ✓ | ⏱: 1.44s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.showtv.com.tr/dizi/tanitim/baba/2829                   
+| ✓ | ⏱: 0.99s 
+[SCRAPE].. ◆ https://www.showtv.com.tr/dizi/tanitim/baba/2829                   
+| ✓ | ⏱: 0.17s 
+[COMPLETE] ● https://www.showtv.com.tr/dizi/tanitim/baba/2829                   
+| ✓ | ⏱: 1.18s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://tr.wikipedia.org/wiki/Baba_(dizi,_2022)                    
+| ✓ | ⏱: 0.76s 
+[SCRAPE].. ◆ https://tr.wikipedia.org/wiki/Baba_(dizi,_2022)                    
+| ✓ | ⏱: 0.03s 
+[COMPLETE] ● https://tr.wikipedia.org/wiki/Baba_(dizi,_2022)                    
+| ✓ | ⏱: 0.80s 
+[2026-09-14 02:41:22] INFO: Fetched (200) <GET https://tr.wikipedia.org/wiki/Baba_(dizi,_2022)> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://finance.yahoo.com/quote/BABA/                              
+| ✓ | ⏱: 4.21s 
+[SCRAPE].. ◆ https://finance.yahoo.com/quote/BABA/                              
+| ✓ | ⏱: 0.10s 
+[COMPLETE] ● https://finance.yahoo.com/quote/BABA/                              
+| ✓ | ⏱: 4.33s 
+[2026-09-14 02:41:58] WARNING: Attempt 1 failed: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://finance.yahoo.com/quote/BABA/", waiting until "load"
+. Retrying in 1s...
+[2026-09-14 02:42:31] WARNING: Attempt 2 failed: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://finance.yahoo.com/quote/BABA/", waiting until "load"
+. Retrying in 1s...
+[2026-09-14 02:43:03] ERROR: Failed after 3 attempts: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://finance.yahoo.com/quote/BABA/", waiting until "load"
+
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.showturk.com.tr/dizi/tanitim/baba/2829                 
+| ✓ | ⏱: 2.94s 
+[SCRAPE].. ◆ https://www.showturk.com.tr/dizi/tanitim/baba/2829                 
+| ✓ | ⏱: 0.03s 
+[COMPLETE] ● https://www.showturk.com.tr/dizi/tanitim/baba/2829                 
+| ✓ | ⏱: 2.98s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ 
+https://www.showtv.com.tr/dizi/tum_bolumler/baba-sezon-1-bolum-1-izle/102847    
+| ✓ | ⏱: 1.07s 
+[SCRAPE].. ◆ 
+https://www.showtv.com.tr/dizi/tum_bolumler/baba-sezon-1-bolum-1-izle/102847    
+| ✓ | ⏱: 0.06s 
+[COMPLETE] ● 
+https://www.showtv.com.tr/dizi/tum_bolumler/baba-sezon-1-bolum-1-izle/102847    
+| ✓ | ⏱: 1.14s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.ayyapim.com/tr-tr/baba                                 
+| ✓ | ⏱: 2.26s 
+[SCRAPE].. ◆ https://www.ayyapim.com/tr-tr/baba                                 
+| ✓ | ⏱: 0.02s 
+[COMPLETE] ● https://www.ayyapim.com/tr-tr/baba                                 
+| ✓ | ⏱: 2.29s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.showturk.com.tr/dizi/tum_bolumler/baba/2829            
+| ✓ | ⏱: 2.47s 
+[SCRAPE].. ◆ https://www.showturk.com.tr/dizi/tum_bolumler/baba/2829            
+| ✓ | ⏱: 0.02s 
+[COMPLETE] ● https://www.showturk.com.tr/dizi/tum_bolumler/baba/2829            
+| ✓ | ⏱: 2.50s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.justwatch.com/tr/tv-sovu/baba                          
+| ✓ | ⏱: 1.59s 
+[SCRAPE].. ◆ https://www.justwatch.com/tr/tv-sovu/baba                          
+| ✓ | ⏱: 0.06s 
+[COMPLETE] ● https://www.justwatch.com/tr/tv-sovu/baba                          
+| ✓ | ⏱: 1.67s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.ramapo.edu/                                            
+| ✓ | ⏱: 1.24s 
+[SCRAPE].. ◆ https://www.ramapo.edu/                                            
+| ✓ | ⏱: 0.03s 
+[COMPLETE] ● https://www.ramapo.edu/                                            
+| ✓ | ⏱: 1.28s 
+[2026-09-14 02:43:29] INFO: Fetched (200) <GET https://www.ramapo.edu/> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://web.ramapo.edu/                                            
+| ✓ | ⏱: 1.52s 
+[SCRAPE].. ◆ https://web.ramapo.edu/                                            
+| ✓ | ⏱: 0.00s 
+[COMPLETE] ● https://web.ramapo.edu/                                            
+| ✓ | ⏱: 1.53s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.ramapo.gov/                                            
+| ✓ | ⏱: 1.36s 
+[SCRAPE].. ◆ https://www.ramapo.gov/                                            
+| ✓ | ⏱: 0.03s 
+[COMPLETE] ● https://www.ramapo.gov/                                            
+| ✓ | ⏱: 1.40s 
+[2026-09-14 02:43:39] INFO: Fetched (200) <GET https://www.ramapo.gov/> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://web.ramapo.edu/?hide=false                                 
+| ✓ | ⏱: 1.60s 
+[SCRAPE].. ◆ https://web.ramapo.edu/?hide=false                                 
+| ✓ | ⏱: 0.00s 
+[COMPLETE] ● https://web.ramapo.edu/?hide=false                                 
+| ✓ | ⏱: 1.60s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.ramapo.gov/?lang=en                                    
+| ✓ | ⏱: 1.47s 
+[SCRAPE].. ◆ https://www.ramapo.gov/?lang=en                                    
+| ✓ | ⏱: 0.03s 
+[COMPLETE] ● https://www.ramapo.gov/?lang=en                                    
+| ✓ | ⏱: 1.50s 
+[2026-09-14 02:43:47] INFO: Fetched (200) <GET https://www.ramapo.gov/?lang=en> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.cityofrochester.gov/                                   
+| ✓ | ⏱: 1.35s 
+[SCRAPE].. ◆ https://www.cityofrochester.gov/                                   
+| ✓ | ⏱: 0.06s 
+[COMPLETE] ● https://www.cityofrochester.gov/                                   
+| ✓ | ⏱: 1.42s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.rochester.edu/                                         
+| ✓ | ⏱: 1.32s 
+[SCRAPE].. ◆ https://www.rochester.edu/                                         
+| ✓ | ⏱: 0.02s 
+[COMPLETE] ● https://www.rochester.edu/                                         
+| ✓ | ⏱: 1.35s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.visitrochester.com/                                    
+| ✓ | ⏱: 2.06s 
+[SCRAPE].. ◆ https://www.visitrochester.com/                                    
+| ✓ | ⏱: 0.04s 
+[COMPLETE] ● https://www.visitrochester.com/                                    
+| ✓ | ⏱: 2.12s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.cityofrochester.gov/welcome-new-city-rochester-website 
+| ✓ | ⏱: 1.21s 
+[SCRAPE].. ◆ https://www.cityofrochester.gov/welcome-new-city-rochester-website 
+| ✓ | ⏱: 0.03s 
+[COMPLETE] ● https://www.cityofrochester.gov/welcome-new-city-rochester-website 
+| ✓ | ⏱: 1.24s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://13wham.com/                                                
+| ✓ | ⏱: 0.74s 
+[SCRAPE].. ◆ https://13wham.com/                                                
+| ✓ | ⏱: 0.05s 
+[COMPLETE] ● https://13wham.com/                                                
+| ✓ | ⏱: 0.81s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.hamburg-travel.com/                                    
+| ✓ | ⏱: 11.42s 
+[SCRAPE].. ◆ https://www.hamburg-travel.com/                                    
+| ✓ | ⏱: 0.04s 
+[COMPLETE] ● https://www.hamburg-travel.com/                                    
+| ✓ | ⏱: 11.48s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.hamburg.com/                                           
+| ✓ | ⏱: 3.24s 
+[SCRAPE].. ◆ https://www.hamburg.com/                                           
+| ✓ | ⏱: 0.05s 
+[COMPLETE] ● https://www.hamburg.com/                                           
+| ✓ | ⏱: 3.30s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.britannica.com/place/Hamburg-Germany                   
+| ✓ | ⏱: 0.66s 
+[SCRAPE].. ◆ https://www.britannica.com/place/Hamburg-Germany                   
+| ✓ | ⏱: 0.00s 
+[COMPLETE] ● https://www.britannica.com/place/Hamburg-Germany                   
+| ✗ | ⏱: 0.66s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://destinationabroad.co.uk/is-hamburg-worth-visiting/         
+| ✓ | ⏱: 2.16s 
+[SCRAPE].. ◆ https://destinationabroad.co.uk/is-hamburg-worth-visiting/         
+| ✓ | ⏱: 0.01s 
+[COMPLETE] ● https://destinationabroad.co.uk/is-hamburg-worth-visiting/         
+| ✓ | ⏱: 2.19s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.hamburg.com/visitors/                                  
+| ✓ | ⏱: 3.82s 
+[SCRAPE].. ◆ https://www.hamburg.com/visitors/                                  
+| ✓ | ⏱: 0.03s 
+[COMPLETE] ● https://www.hamburg.com/visitors/                                  
+| ✓ | ⏱: 3.86s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.villageofossiningny.gov/                               
+| ✓ | ⏱: 2.24s 
+[SCRAPE].. ◆ https://www.villageofossiningny.gov/                               
+| ✓ | ⏱: 0.02s 
+[COMPLETE] ● https://www.villageofossiningny.gov/                               
+| ✓ | ⏱: 2.26s 
+[2026-09-14 02:44:46] INFO: Fetched (200) <GET https://www.villageofossiningny.gov/> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.townofossiningny.gov/cms/                              
+| ✓ | ⏱: 2.69s 
+[SCRAPE].. ◆ https://www.townofossiningny.gov/cms/                              
+| ✓ | ⏱: 0.16s 
+[COMPLETE] ● https://www.townofossiningny.gov/cms/                              
+| ✓ | ⏱: 2.88s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.townofossiningny.gov/cms/index.php                     
+| ✓ | ⏱: 2.07s 
+[SCRAPE].. ◆ https://www.townofossiningny.gov/cms/index.php                     
+| ✓ | ⏱: 0.05s 
+[COMPLETE] ● https://www.townofossiningny.gov/cms/index.php                     
+| ✓ | ⏱: 2.13s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ 
+https://www.visitwestchesterny.com/discover/communities/hudson-river/ossining/  
+| ✓ | ⏱: 1.63s 
+[SCRAPE].. ◆ 
+https://www.visitwestchesterny.com/discover/communities/hudson-river/ossining/  
+| ✓ | ⏱: 0.04s 
+[COMPLETE] ● 
+https://www.visitwestchesterny.com/discover/communities/hudson-river/ossining/  
+| ✓ | ⏱: 1.68s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.villageofossiningny.gov/about                          
+| ✓ | ⏱: 2.14s 
+[SCRAPE].. ◆ https://www.villageofossiningny.gov/about                          
+| ✓ | ⏱: 0.01s 
+[COMPLETE] ● https://www.villageofossiningny.gov/about                          
+| ✓ | ⏱: 2.17s 
+[2026-09-14 02:45:02] INFO: Fetched (200) <GET https://www.villageofossiningny.gov/about> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.kingston.com/en                                        
+| ✓ | ⏱: 1.56s 
+[SCRAPE].. ◆ https://www.kingston.com/en                                        
+| ✓ | ⏱: 0.06s 
+[COMPLETE] ● https://www.kingston.com/en                                        
+| ✓ | ⏱: 1.63s 
+[2026-09-14 02:45:15] INFO: Fetched (200) <GET https://www.kingston.com/en> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.kingston.com/en/ssd                                    
+| ✓ | ⏱: 1.47s 
+[SCRAPE].. ◆ https://www.kingston.com/en/ssd                                    
+| ✓ | ⏱: 0.04s 
+[COMPLETE] ● https://www.kingston.com/en/ssd                                    
+| ✓ | ⏱: 1.52s 
+[2026-09-14 02:45:21] INFO: Fetched (200) <GET https://www.kingston.com/en/ssd> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ 
+https://www.amazon.com/stores/Kingston/page/83C433AA-FAD2-41ED-AD30-9F30A5B0D794
+| ✓ | ⏱: 1.38s 
+[SCRAPE].. ◆ 
+https://www.amazon.com/stores/Kingston/page/83C433AA-FAD2-41ED-AD30-9F30A5B0D794
+| ✓ | ⏱: 0.04s 
+[COMPLETE] ● 
+https://www.amazon.com/stores/Kingston/page/83C433AA-FAD2-41ED-AD30-9F30A5B0D794
+| ✓ | ⏱: 1.44s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.kingstonbrass.com/                                     
+| ✓ | ⏱: 6.37s 
+[SCRAPE].. ◆ https://www.kingstonbrass.com/                                     
+| ✓ | ⏱: 0.22s 
+[COMPLETE] ● https://www.kingstonbrass.com/                                     
+| ✓ | ⏱: 6.64s 
+[2026-09-14 02:45:41] INFO: Fetched (200) <GET https://www.kingstonbrass.com/> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.amazon.com/kingston/s?k=kingston                       
+| ✓ | ⏱: 2.31s 
+[SCRAPE].. ◆ https://www.amazon.com/kingston/s?k=kingston                       
+| ✓ | ⏱: 0.22s 
+[COMPLETE] ● https://www.amazon.com/kingston/s?k=kingston                       
+| ✓ | ⏱: 2.54s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.britannica.com/place/Kingston-Jamaica                  
+| ✓ | ⏱: 3.09s 
+[SCRAPE].. ◆ https://www.britannica.com/place/Kingston-Jamaica                  
+| ✓ | ⏱: 0.05s 
+[COMPLETE] ● https://www.britannica.com/place/Kingston-Jamaica                  
+| ✓ | ⏱: 3.17s 
+[2026-09-14 02:46:25] WARNING: Attempt 1 failed: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://www.britannica.com/place/Kingston-Jamaica", waiting until "load"
+. Retrying in 1s...
+[2026-09-14 02:47:00] WARNING: Attempt 2 failed: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://www.britannica.com/place/Kingston-Jamaica", waiting until "load"
+. Retrying in 1s...
+[2026-09-14 02:47:04] INFO: Fetched (200) <GET https://www.britannica.com/place/Kingston-Jamaica> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ 
+https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=kingston            
+| ✓ | ⏱: 6.18s 
+[SCRAPE].. ◆ 
+https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=kingston            
+| ✓ | ⏱: 0.03s 
+[COMPLETE] ● 
+https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=kingston            
+| ✓ | ⏱: 6.24s 
+[2026-09-14 02:47:23] INFO: Fetched (200) <GET https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=kingston> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.ithaca.edu/                                            
+| ✓ | ⏱: 1.40s 
+[SCRAPE].. ◆ https://www.ithaca.edu/                                            
+| ✓ | ⏱: 0.04s 
+[COMPLETE] ● https://www.ithaca.edu/                                            
+| ✓ | ⏱: 1.45s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.britannica.com/place/Ithaca-island-Greece              
+| ✓ | ⏱: 2.59s 
+[SCRAPE].. ◆ https://www.britannica.com/place/Ithaca-island-Greece              
+| ✓ | ⏱: 0.02s 
+[COMPLETE] ● https://www.britannica.com/place/Ithaca-island-Greece              
+| ✓ | ⏱: 2.63s 
+[2026-09-14 02:48:33] WARNING: Attempt 1 failed: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://www.britannica.com/place/Ithaca-island-Greece", waiting until "load"
+. Retrying in 1s...
+[2026-09-14 02:49:06] WARNING: Attempt 2 failed: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://www.britannica.com/place/Ithaca-island-Greece", waiting until "load"
+. Retrying in 1s...

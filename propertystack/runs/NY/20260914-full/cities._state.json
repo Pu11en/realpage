@@ -1,0 +1,625 @@
+{
+ "state": "NY",
+ "window": "2025-08..2026-07",
+ "source": "https://www2.census.gov/econ/bps/",
+ "cities": [
+  {
+   "city": "Brooklyn",
+   "is_county_area": false,
+   "permits_5plus": 8611,
+   "realpage_count": 0
+  },
+  {
+   "city": "Bronx",
+   "is_county_area": false,
+   "permits_5plus": 8594,
+   "realpage_count": 0
+  },
+  {
+   "city": "Queens",
+   "is_county_area": false,
+   "permits_5plus": 6801,
+   "realpage_count": 0
+  },
+  {
+   "city": "Manhattan",
+   "is_county_area": false,
+   "permits_5plus": 3039,
+   "realpage_count": 0
+  },
+  {
+   "city": "Syracuse",
+   "is_county_area": false,
+   "permits_5plus": 1713,
+   "realpage_count": 2
+  },
+  {
+   "city": "Palm Tree",
+   "is_county_area": false,
+   "permits_5plus": 574,
+   "realpage_count": 0
+  },
+  {
+   "city": "Kiryas Joel",
+   "is_county_area": false,
+   "permits_5plus": 362,
+   "realpage_count": 0
+  },
+  {
+   "city": "Port Chester",
+   "is_county_area": false,
+   "permits_5plus": 343,
+   "realpage_count": 1
+  },
+  {
+   "city": "White Plains",
+   "is_county_area": false,
+   "permits_5plus": 203,
+   "realpage_count": 0
+  },
+  {
+   "city": "Wawayanda",
+   "is_county_area": false,
+   "permits_5plus": 197,
+   "realpage_count": 0
+  },
+  {
+   "city": "Esopus",
+   "is_county_area": false,
+   "permits_5plus": 195,
+   "realpage_count": 0
+  },
+  {
+   "city": "Westbury",
+   "is_county_area": false,
+   "permits_5plus": 192,
+   "realpage_count": 0
+  },
+  {
+   "city": "Buffalo",
+   "is_county_area": false,
+   "permits_5plus": 176,
+   "realpage_count": 0
+  },
+  {
+   "city": "Yonkers",
+   "is_county_area": false,
+   "permits_5plus": 174,
+   "realpage_count": 0
+  },
+  {
+   "city": "Haverstraw",
+   "is_county_area": false,
+   "permits_5plus": 169,
+   "realpage_count": 0
+  },
+  {
+   "city": "Ontario",
+   "is_county_area": false,
+   "permits_5plus": 168,
+   "realpage_count": 0
+  },
+  {
+   "city": "Ramapo",
+   "is_county_area": false,
+   "permits_5plus": 146,
+   "realpage_count": 0
+  },
+  {
+   "city": "Rochester",
+   "is_county_area": false,
+   "permits_5plus": 144,
+   "realpage_count": 0
+  },
+  {
+   "city": "Hamburg",
+   "is_county_area": false,
+   "permits_5plus": 141,
+   "realpage_count": 0
+  },
+  {
+   "city": "Ossining",
+   "is_county_area": false,
+   "permits_5plus": 127,
+   "realpage_count": 0
+  },
+  {
+   "city": "Kingston",
+   "is_county_area": false,
+   "permits_5plus": 123,
+   "realpage_count": 0
+  },
+  {
+   "city": "Ithaca",
+   "is_county_area": false,
+   "permits_5plus": 118,
+   "realpage_count": 0
+  },
+  {
+   "city": "Patchogue",
+   "is_county_area": false,
+   "permits_5plus": 112,
+   "realpage_count": 0
+  },
+  {
+   "city": "Vestal",
+   "is_county_area": false,
+   "permits_5plus": 107,
+   "realpage_count": 0
+  },
+  {
+   "city": "Poughkeepsie",
+   "is_county_area": false,
+   "permits_5plus": 104,
+   "realpage_count": 0
+  },
+  {
+   "city": "Buchanan",
+   "is_county_area": false,
+   "permits_5plus": 101,
+   "realpage_count": 0
+  },
+  {
+   "city": "Albany",
+   "is_county_area": false,
+   "permits_5plus": 88,
+   "realpage_count": 0
+  },
+  {
+   "city": "Stillwater",
+   "is_county_area": false,
+   "permits_5plus": 85,
+   "realpage_count": 0
+  },
+  {
+   "city": "Milton",
+   "is_county_area": false,
+   "permits_5plus": 82,
+   "realpage_count": 0
+  },
+  {
+   "city": "Elmira",
+   "is_county_area": false,
+   "permits_5plus": 81,
+   "realpage_count": 0
+  },
+  {
+   "city": "Binghamton",
+   "is_county_area": false,
+   "permits_5plus": 79,
+   "realpage_count": 0
+  },
+  {
+   "city": "Cheektowaga",
+   "is_county_area": false,
+   "permits_5plus": 79,
+   "realpage_count": 0
+  },
+  {
+   "city": "Dryden",
+   "is_county_area": false,
+   "permits_5plus": 78,
+   "realpage_count": 0
+  },
+  {
+   "city": "Owego",
+   "is_county_area": false,
+   "permits_5plus": 78,
+   "realpage_count": 0
+  },
+  {
+   "city": "Rome",
+   "is_county_area": false,
+   "permits_5plus": 78,
+   "realpage_count": 0
+  },
+  {
+   "city": "Pawling",
+   "is_county_area": false,
+   "permits_5plus": 77,
+   "realpage_count": 0
+  },
+  {
+   "city": "Great Neck Plaza",
+   "is_county_area": false,
+   "permits_5plus": 76,
+   "realpage_count": 0
+  },
+  {
+   "city": "Lewis County Part Unincorporated Area",
+   "is_county_area": true,
+   "permits_5plus": 75,
+   "realpage_count": 0
+  },
+  {
+   "city": "Staten Island",
+   "is_county_area": false,
+   "permits_5plus": 75,
+   "realpage_count": 0
+  },
+  {
+   "city": "Canandaigua",
+   "is_county_area": false,
+   "permits_5plus": 74,
+   "realpage_count": 0
+  },
+  {
+   "city": "Plattsburgh",
+   "is_county_area": false,
+   "permits_5plus": 74,
+   "realpage_count": 0
+  },
+  {
+   "city": "Saratoga Springs",
+   "is_county_area": false,
+   "permits_5plus": 74,
+   "realpage_count": 0
+  },
+  {
+   "city": "Beacon",
+   "is_county_area": false,
+   "permits_5plus": 71,
+   "realpage_count": 0
+  },
+  {
+   "city": "Menands",
+   "is_county_area": false,
+   "permits_5plus": 70,
+   "realpage_count": 0
+  },
+  {
+   "city": "Van Buren",
+   "is_county_area": false,
+   "permits_5plus": 70,
+   "realpage_count": 0
+  },
+  {
+   "city": "Clay",
+   "is_county_area": false,
+   "permits_5plus": 67,
+   "realpage_count": 0
+  },
+  {
+   "city": "Chenango County Part Unincorporated Area",
+   "is_county_area": true,
+   "permits_5plus": 65,
+   "realpage_count": 0
+  },
+  {
+   "city": "Troy",
+   "is_county_area": false,
+   "permits_5plus": 63,
+   "realpage_count": 0
+  },
+  {
+   "city": "Glens Falls",
+   "is_county_area": false,
+   "permits_5plus": 58,
+   "realpage_count": 0
+  },
+  {
+   "city": "Hyde Park",
+   "is_county_area": false,
+   "permits_5plus": 56,
+   "realpage_count": 0
+  },
+  {
+   "city": "Pittsford",
+   "is_county_area": false,
+   "permits_5plus": 48,
+   "realpage_count": 0
+  },
+  {
+   "city": "Webster",
+   "is_county_area": false,
+   "permits_5plus": 45,
+   "realpage_count": 0
+  },
+  {
+   "city": "Lansing",
+   "is_county_area": false,
+   "permits_5plus": 43,
+   "realpage_count": 0
+  },
+  {
+   "city": "Crawford",
+   "is_county_area": false,
+   "permits_5plus": 42,
+   "realpage_count": 0
+  },
+  {
+   "city": "Larchmont",
+   "is_county_area": false,
+   "permits_5plus": 40,
+   "realpage_count": 0
+  },
+  {
+   "city": "North Syracuse",
+   "is_county_area": false,
+   "permits_5plus": 38,
+   "realpage_count": 0
+  },
+  {
+   "city": "Tuxedo",
+   "is_county_area": false,
+   "permits_5plus": 38,
+   "realpage_count": 0
+  },
+  {
+   "city": "Ogden",
+   "is_county_area": false,
+   "permits_5plus": 35,
+   "realpage_count": 0
+  },
+  {
+   "city": "Rhinebeck",
+   "is_county_area": false,
+   "permits_5plus": 35,
+   "realpage_count": 0
+  },
+  {
+   "city": "Bethlehem",
+   "is_county_area": false,
+   "permits_5plus": 32,
+   "realpage_count": 0
+  },
+  {
+   "city": "Alden",
+   "is_county_area": false,
+   "permits_5plus": 31,
+   "realpage_count": 0
+  },
+  {
+   "city": "Brookhaven",
+   "is_county_area": false,
+   "permits_5plus": 31,
+   "realpage_count": 0
+  },
+  {
+   "city": "Floral Park",
+   "is_county_area": false,
+   "permits_5plus": 31,
+   "realpage_count": 0
+  },
+  {
+   "city": "Maybrook",
+   "is_county_area": false,
+   "permits_5plus": 31,
+   "realpage_count": 0
+  },
+  {
+   "city": "Valley Stream",
+   "is_county_area": false,
+   "permits_5plus": 31,
+   "realpage_count": 0
+  },
+  {
+   "city": "Farmington",
+   "is_county_area": false,
+   "permits_5plus": 30,
+   "realpage_count": 0
+  },
+  {
+   "city": "Johnson City",
+   "is_county_area": false,
+   "permits_5plus": 29,
+   "realpage_count": 0
+  },
+  {
+   "city": "Tonawanda",
+   "is_county_area": false,
+   "permits_5plus": 26,
+   "realpage_count": 0
+  },
+  {
+   "city": "Watertown",
+   "is_county_area": false,
+   "permits_5plus": 26,
+   "realpage_count": 0
+  },
+  {
+   "city": "Bloomingburg",
+   "is_county_area": false,
+   "permits_5plus": 24,
+   "realpage_count": 0
+  },
+  {
+   "city": "Macedon",
+   "is_county_area": false,
+   "permits_5plus": 22,
+   "realpage_count": 0
+  },
+  {
+   "city": "Rensselaer",
+   "is_county_area": false,
+   "permits_5plus": 20,
+   "realpage_count": 0
+  },
+  {
+   "city": "Springville",
+   "is_county_area": false,
+   "permits_5plus": 20,
+   "realpage_count": 0
+  },
+  {
+   "city": "Victory",
+   "is_county_area": false,
+   "permits_5plus": 20,
+   "realpage_count": 0
+  },
+  {
+   "city": "Wallkill",
+   "is_county_area": false,
+   "permits_5plus": 20,
+   "realpage_count": 0
+  },
+  {
+   "city": "Yorktown",
+   "is_county_area": false,
+   "permits_5plus": 20,
+   "realpage_count": 0
+  },
+  {
+   "city": "Port Jefferson",
+   "is_county_area": false,
+   "permits_5plus": 16,
+   "realpage_count": 0
+  },
+  {
+   "city": "Babylon",
+   "is_county_area": false,
+   "permits_5plus": 15,
+   "realpage_count": 0
+  },
+  {
+   "city": "Bridgewater",
+   "is_county_area": false,
+   "permits_5plus": 15,
+   "realpage_count": 0
+  },
+  {
+   "city": "Cazenovia",
+   "is_county_area": false,
+   "permits_5plus": 15,
+   "realpage_count": 0
+  },
+  {
+   "city": "Shawangunk",
+   "is_county_area": false,
+   "permits_5plus": 15,
+   "realpage_count": 0
+  },
+  {
+   "city": "Ballston",
+   "is_county_area": false,
+   "permits_5plus": 12,
+   "realpage_count": 0
+  },
+  {
+   "city": "Amityville",
+   "is_county_area": false,
+   "permits_5plus": 10,
+   "realpage_count": 0
+  },
+  {
+   "city": "Angola",
+   "is_county_area": false,
+   "permits_5plus": 10,
+   "realpage_count": 0
+  },
+  {
+   "city": "Lynbrook",
+   "is_county_area": false,
+   "permits_5plus": 10,
+   "realpage_count": 0
+  },
+  {
+   "city": "Niskayuna",
+   "is_county_area": false,
+   "permits_5plus": 10,
+   "realpage_count": 0
+  },
+  {
+   "city": "North Greenbush",
+   "is_county_area": false,
+   "permits_5plus": 10,
+   "realpage_count": 0
+  },
+  {
+   "city": "Pembroke",
+   "is_county_area": false,
+   "permits_5plus": 10,
+   "realpage_count": 0
+  },
+  {
+   "city": "Sylvan Beach",
+   "is_county_area": false,
+   "permits_5plus": 10,
+   "realpage_count": 0
+  },
+  {
+   "city": "Kaser",
+   "is_county_area": false,
+   "permits_5plus": 8,
+   "realpage_count": 0
+  },
+  {
+   "city": "Oswego",
+   "is_county_area": false,
+   "permits_5plus": 8,
+   "realpage_count": 0
+  },
+  {
+   "city": "Pelham",
+   "is_county_area": false,
+   "permits_5plus": 8,
+   "realpage_count": 0
+  },
+  {
+   "city": "West Seneca",
+   "is_county_area": false,
+   "permits_5plus": 7,
+   "realpage_count": 0
+  },
+  {
+   "city": "Cortlandville",
+   "is_county_area": false,
+   "permits_5plus": 6,
+   "realpage_count": 0
+  },
+  {
+   "city": "Hempstead",
+   "is_county_area": false,
+   "permits_5plus": 6,
+   "realpage_count": 0
+  },
+  {
+   "city": "Schroon",
+   "is_county_area": false,
+   "permits_5plus": 6,
+   "realpage_count": 0
+  },
+  {
+   "city": "Bedford",
+   "is_county_area": false,
+   "permits_5plus": 5,
+   "realpage_count": 0
+  },
+  {
+   "city": "Briarcliff Manor",
+   "is_county_area": false,
+   "permits_5plus": 5,
+   "realpage_count": 0
+  },
+  {
+   "city": "Clyde",
+   "is_county_area": false,
+   "permits_5plus": 5,
+   "realpage_count": 0
+  },
+  {
+   "city": "Copake",
+   "is_county_area": false,
+   "permits_5plus": 5,
+   "realpage_count": 0
+  },
+  {
+   "city": "Ogdensburg",
+   "is_county_area": false,
+   "permits_5plus": 5,
+   "realpage_count": 0
+  },
+  {
+   "city": "Orangetown",
+   "is_county_area": false,
+   "permits_5plus": 5,
+   "realpage_count": 0
+  },
+  {
+   "city": "Warren County Part Unincorporated Area",
+   "is_county_area": true,
+   "permits_5plus": 5,
+   "realpage_count": 0
+  }
+ ]
+}
