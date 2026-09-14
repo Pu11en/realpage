@@ -21,6 +21,9 @@ never guess facts; Plano never rerun; localhost only, never push).
   beyond the free credit), free public data downloads.
 - **Out of scope (cut list):** New York; Chandler, Goodyear, Buckeye (Accela/SmartGov only, no free
   data); Shovels.ai; Google Places; email addresses; named contacts beyond what a permit/news names.
+- **No website yet = the best lead, not a gap (Drew 2026-09-14):** a not-yet-built project with no
+  website or leasing site hasn't picked its software. Show it as "Earliest: no website yet -- software
+  not picked", and rank it above same-stage projects that already have a leasing site.
 - **Timebox:** 15 steps × 20-30 min ≈ 6-8 hours of bot time.
 - Plan review: `09-build-ideas/review-lead-finder-fix.md`.
 
@@ -65,7 +68,9 @@ Open: http://localhost:8765 → Early Leads → Az
   (Phoenix's APART/APT/MULTI/MF), leasing-date field if any (Tempe `COIssuedDate`). **Unit lookup order**
   when the layer has no unit field (Phoenix, Scottsdale, Gilbert, Maricopa County, Peoria, often
   Tucson): permit field → number in the permit text ("300-unit", "(11) unit") → the project's own
-  site or news via Jina (F2 check) → county parcel record. Each recipe gets a
+  site or news via Jina (F2 check) → county parcel record. **Still unknown (Drew 2026-09-14):** keep a
+  clearly new multifamily project, show "Units: not public yet", rank it below projects with known
+  units -- never drop it and never estimate. Each recipe gets a
   live self-test that returns ≥1 multifamily row. Commit.
 - [ ] **F5 Recently sold, from the county's sales file.** First open the zip's file-spec document and
   confirm which field marks apartment property (type or use code) and whether unit counts exist
