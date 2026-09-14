@@ -50,3 +50,12 @@ Confidence: high
 
 - Glassdoor/Indeed scrapers (use WebSearch + webReader; app is guest-readable
   until challenged, then manual capture).
+
+## Free web search — SearXNG (added 2026-09-13)
+
+- Local research sessions in this repo only (lead finder, client map, scout) — never the site/chatbot.
+- Container `ps-searxng` (`tooling/searxng/docker-compose.yml`), JSON API on `http://127.0.0.1:8888`,
+  restarts with Docker. Start: `docker compose -f tooling/searxng/docker-compose.yml up -d`.
+- Use `python3 tooling/searx_search.py "query" [--json]` (cached, 2 s spacing). Use it first; Jina
+  (paid) only when SearXNG returns nothing. DuckDuckGo/Startpage may CAPTCHA; Google/Bing/Brave work.
+- Ollama is installed but not running and too slow on this machine — don't plan on local models.
