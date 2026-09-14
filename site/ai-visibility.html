@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>PropertyStack -- AI Visibility</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/chat-panel.css" />
+  <style>
+    h2 { font-size: 16px; margin: 28px 0 10px; }
+    .verdict { font-size: 22px; font-weight: 700; margin: 6px 0 14px; line-height: 1.3; }
+    .stat-card .sub { font-size: 12px; color: var(--text-muted); margin-top: 6px; }
+    .when { font-size: 12px; text-transform: uppercase; letter-spacing: .06em; color: var(--accent); margin: 18px 0 8px; }
+    .action { margin-bottom: 10px; }
+    .action h3 { font-size: 15px; margin: 0 0 8px; }
+    .action .row { font-size: 13px; margin: 4px 0; color: var(--text); display: grid; grid-template-columns: 64px 1fr; gap: 8px; }
+    .action .row b { color: var(--text-muted); font-weight: 600; }
+    .facts li { margin: 4px 0; font-size: 13px; list-style: none; }
+    .facts { padding-left: 0; }
+    .bar-row { display: grid; grid-template-columns: 120px 1fr 60px; align-items: center; gap: 10px; margin: 4px 0; font-size: 13px; }
+    .bar-row .track { height: 12px; background: #18181b; border-radius: 3px; overflow: hidden; }
+    .bar-row .fill { height: 100%; background: var(--text-muted); }
+    .bar-row.us .fill { background: var(--accent); }
+    .missed li { font-size: 13px; margin: 4px 0; }
+    .ai-answer summary { cursor: pointer; }
+    .ai-answer { color: var(--text-muted); font-size: 12px; max-width: 520px; }
+    .muted { color: var(--text-muted); }
+    details.evidence > summary { cursor: pointer; font-size: 16px; font-weight: 600; margin: 28px 0 10px; }
+  </style>
+</head>
+<body>
+  <div class="shell" id="app-shell"></div>
+  <script src="js/app.js"></script>
+  <script src="js/chat-panel.js"></script>
+  <script>
+    renderShell("ai");
+
+    const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+    const pct = (v) => (v === null || v === undefined ? "--" : `${Math.round(v)}%`);
+    const rank = (v) => (v === null || v === undefined ? "--" : `#${Math.round(v * 10) / 10}`);
+
+    Promise.all([loadData("data/ai-visibility.json"), loadData("data/ai-visibility-actions.json")]).then(([d, plan]) => {
+      const content = document.getElementById("page-content");
+      const f = d.founder, t = esc(d.target);
+      const leader = f.topPicks[0] || { name: "--", count: 0 };
+      const maxPick = Math.max(1, ...f.topPicks.map((p) => p.count));
+
+      const actionCard = (a) => `
+        <div class="card action">
+          <h3>${esc(a.title)}</h3>
+          <div class="row"><b>Why</b><span>${esc(a.why)}</span></div>
+          <div class="row"><b>Do</b><span>${esc(a.do)}</span></div>
+          <div class="row"><b>Fixes</b><span>${esc(a.fixes)}</span></div>
+          <div class="row"><b>Effort</b><span>${esc(a.effort)}</span></div>
+        </div>`;
+
+      content.innerHTML = `
+        <h1>AI Visibility</h1>
+        <div class="meta">What AI chatbots tell apartment owners who ask which software to buy -- and what ${t} should do about it. For the founder / CMO. Tested ${esc((d.generatedAt || "").slice(0, 10))}.</div>
+        ${placeholderBanner(d.status)}
+        <div class="verdict">${esc(plan.headline)}</div>
+
+        <div class="stats-row">
+          <div class="stat-card"><div class="value">${pct(f.unbrandedNamedPct)}</div><div class="label">Named when buyers don't ask for ${t}</div><div class="sub">${f.unbrandedAnswers} answers with no brand in the question</div></div>
+          <div class="stat-card"><div class="value">${pct(f.unbrandedTopPickPct)}</div><div class="label">Made ${t} the top pick</div><div class="sub">${esc(leader.name)} was top pick in ${leader.count} of ${f.unbrandedAnswers}</div></div>
+          <div class="stat-card"><div class="value">${pct(f.lawsuitPct)}</div><div class="label">Brought up the lawsuit</div><div class="sub">of ${f.brandedAnswers} answers about ${t} by name</div></div>
+          <div class="stat-card"><div class="value">${f.missedQuestions.length}</div><div class="label">Buyer questions where ${t} was left out</div><div class="sub">listed below</div></div>
+        </div>
+
+        <h2>What to do next</h2>
+        ${plan.groups.map((g) => `<div class="when">${esc(g.when)}</div>${g.actions.map(actionCard).join("")}`).join("")}
+
+        <h2>Who the AIs pick instead</h2>
+        <div class="card">
+          <div class="chart-title muted" style="font-size:13px;margin-bottom:10px;">Top pick in the ${f.unbrandedAnswers} answers where the buyer didn't name a brand</div>
+          ${f.topPicks.map((p) => `<div class="bar-row ${p.name === d.target ? "us" : ""}"><div>${esc(p.name)}</div><div class="track"><div class="fill" style="width:${(p.count / maxPick) * 100}%"></div></div><div class="muted">${p.count}</div></div>`).join("")}
+        </div>
+
+        <h2>Questions where ${t} was left out</h2>
+        <div class="card"><ul class="missed">${f.missedQuestions.map((q) => `<li>${esc(q)}</li>`).join("") || "<li>None -- named in every answer.</li>"}</ul></div>
+
+        <h2>Each AI</h2>
+        <table>
+          <thead><tr><th>AI</th><th>Named ${t}</th><th>Top pick (no brand asked)</th><th>Recommended</th><th>Brought up lawsuit</th><th>Linked realpage.com</th></tr></thead>
+          <tbody>${d.models.map((m) => `<tr><td>${esc(m.name)}</td><td>${pct(m.mentionPct)}</td><td>${pct(m.topPickPct)}</td><td>${pct(m.recommendPct)}</td><td>${pct(m.lawsuitPct)}</td><td>${pct(m.citePct)}</td></tr>`).join("")}</tbody>
+        </table>
+
+        <h2>realpage.com checkup</h2>
+        <div class="card"><ul class="facts">${plan.siteFacts.map((s) => `<li>${s.ok ? "✅" : "⚠️"} ${esc(s.text)}</li>`).join("")}</ul></div>
+
+        <h2>Competitors in the answers</h2>
+        <table>
+          <thead><tr><th>Competitor</th><th>Named in</th><th>Recommended</th><th>Placed above ${t}</th><th>Avg place</th></tr></thead>
+          <tbody>${d.competitors.map((c) => `<tr><td>${esc(c.name)} <span class="muted">${esc(c.domain)}</span></td><td>${pct(c.mentionPct)}</td><td>${c.recommendations}</td><td>${c.wins}</td><td>${rank(c.avgRank)}</td></tr>`).join("")}</tbody>
+        </table>
+
+        <h2>Sites the AIs linked to</h2>
+        <table>
+          <thead><tr><th>Site</th><th>Kind</th><th>Links</th></tr></thead>
+          <tbody>${d.sources.map((s) => `<tr><td>${esc(s.domain)}</td><td>${esc(s.type.replace(/_/g, " "))}</td><td>${s.count}</td></tr>`).join("") || `<tr><td colspan="3">No links in the answers.</td></tr>`}</tbody>
+        </table>
+
+        <details class="evidence"><summary>Every question and answer (${d.questions.length})</summary>
+        <table>
+          <thead><tr><th>Question</th><th>AI</th><th>Named ${t}?</th><th>Place</th><th>Top pick</th><th>Answer</th></tr></thead>
+          <tbody>${d.questions.map((q) => `<tr><td>${esc(q.question)}${q.namesBrand ? ' <span class="muted">(asks about it by name)</span>' : ""}</td><td>${esc(q.name)}</td><td>${q.status !== "completed" ? "failed" : q.mentioned ? "Yes" : "No"}</td><td>${q.rank ? "#" + q.rank : "--"}</td><td>${esc(q.winner || "--")}</td><td class="ai-answer"><details><summary>Read</summary>${esc(q.answer)}</details></td></tr>`).join("")}</tbody>
+        </table>
+        </details>
+
+        <h2>How this was measured</h2>
+        <div class="card"><ul class="facts">
+          <li class="muted">${esc(plan.basedOn)}</li>
+          ${plan.caveats.map((c) => `<li class="muted">${esc(c)}</li>`).join("")}
+          <li class="muted">Engine: NiubiGEO (open source). Re-run: <code>bash tooling/ai-visibility/run.sh</code></li>
+        </ul></div>`;
+    });
+  </script>
+</body>
+</html>

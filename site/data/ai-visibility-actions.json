@@ -1,0 +1,106 @@
+{
+ "writtenFor": "RealPage founder / CMO",
+ "basedOn": "AI test of 2026-09-12 (51 answers: Claude from memory, Claude + web search, ChatGPT from memory) plus the RealPage research folder and a check of realpage.com the same day.",
+ "headline": "AIs know RealPage -- but they recommend Yardi, and they bring up the lawsuit.",
+ "siteFacts": [
+  {"ok": false, "text": "No llms.txt file (realpage.com/llms.txt returns 'page not found')."},
+  {"ok": false, "text": "No standard sitemap at /sitemap.xml -- the real one hides at /cms-sitemap.xml (linked only from robots.txt)."},
+  {"ok": false, "text": "Zero product comparison pages (RealPage vs Yardi / Entrata / AppFolio) among ~3,000 pages on the site."},
+  {"ok": false, "text": "No published pricing -- Capterra shows 'Contact vendor', so AIs quote third-party guesses."},
+  {"ok": false, "text": "No current page on the DOJ settlement (entered Mar 26, 2026). The newest legal page found is an older FTC settlement statement."},
+  {"ok": true, "text": "AI crawlers are allowed (robots.txt blocks nobody), and the homepage has Organization + FAQ structured data."},
+  {"ok": true, "text": "AIs already link realpage.com more than any other site (30 links) -- anything published there reaches the answers."}
+ ],
+ "groups": [
+  {
+   "when": "This week",
+   "actions": [
+    {
+     "title": "Publish one plain, dated page on the DOJ settlement and what changed",
+     "why": "When someone asks an AI about RealPage by name, 43% of answers bring up the antitrust case -- 71% with Claude + web search, which quotes 2026 news and California's AB 325. There is no current RealPage page for the AI to quote instead.",
+     "do": "A short facts page: settlement entered Mar 26, 2026; the product no longer uses real-time non-public competitor data; what customers should know. Link it from the homepage footer, the revenue-management product page and llms.txt.",
+     "fixes": "Head-to-head and 'alternatives to RealPage' questions, where the lawsuit is used as a reason to pick someone else.",
+     "effort": "Small (legal review is the slow part)"
+    },
+    {
+     "title": "Add llms.txt and a normal /sitemap.xml",
+     "why": "Both are missing today. They are the cheapest way to point AI crawlers at the product pages instead of 692 old news posts.",
+     "do": "llms.txt listing the core products (Property Management Platform / OneSite, AI Revenue Management, Lumina AI, accounting, screening, resident payments) with one-line descriptions and links; redirect /sitemap.xml to the real sitemap.",
+     "fixes": "How AIs describe what RealPage sells.",
+     "effort": "Tiny"
+    },
+    {
+     "title": "Publish 'starting at' pricing",
+     "why": "AppFolio wins small and mid-size questions partly on transparent per-unit pricing (about $2 per unit, per Reddit). RealPage has none, so AIs repeat third-party guesses or say 'contact sales'.",
+     "do": "A pricing page with per-unit ranges by portfolio size and what is included.",
+     "fixes": "Small/mid-size questions -- asked 'RealPage or AppFolio for a small company?', Claude + web search said AppFolio is 'better for small/growing companies' on pricing.",
+     "effort": "Small (needs a pricing decision)"
+    }
+   ]
+  },
+  {
+   "when": "This month",
+   "actions": [
+    {
+     "title": "Win the 'large multifamily portfolio' question -- your home turf",
+     "why": "When asked with no brand named, AIs name RealPage 80% of the time but make it the top pick only 20% of the time. Yardi is the top pick in 14 of 30 answers. RealPage was left out completely on 'best software for large multifamily portfolios', its core market.",
+     "do": "A portfolio-scale page with hard numbers (24M+ units), named customers (Camden, on OneSite since 2002), and 3 case studies with before/after results. Ask 2-3 big customers to say it publicly too.",
+     "fixes": "'Best apartment property management software for large multifamily portfolios' and 'best software for a multifamily apartment portfolio' (both missed).",
+     "effort": "Medium"
+    },
+    {
+     "title": "Build RealPage vs Yardi, vs Entrata, vs AppFolio pages",
+     "why": "None exist. Head-to-head questions are where AIs add the lawsuit as a caution, and ChatGPT put Yardi first when asked 'RealPage vs Yardi'. A fair comparison page from RealPage gives the AI a source to quote.",
+     "do": "One honest page per rival: who each is best for, a feature table, migration help. Admit where the rival wins (AIs trust balanced pages more).",
+     "fixes": "'How does RealPage compare to Yardi...' and 'Alternatives to RealPage'.",
+     "effort": "Medium"
+    },
+    {
+     "title": "Make answer pages for accounting and resident screening",
+     "why": "AIs left RealPage out of 'what accounting software do most multifamily operators use?' and a 500-unit 'screening + accounting in one platform' question. In both topics, some answers named only competitors.",
+     "do": "One page per topic that answers the buyer's exact question in the first paragraph, with FAQ structured data and customer proof.",
+     "fixes": "The accounting and screening keywords (17% of answers named only competitors).",
+     "effort": "Medium"
+    },
+    {
+     "title": "Reclaim rent pricing with a compliance-first story",
+     "why": "RealPage created the category, yet AIs left it out of 'what tools do owners use to set optimal rent pricing?'. The safest reading is that AIs avoid recommending it because of the lawsuit.",
+     "do": "Reposition AI Revenue Management around what the settlement allows: public and own-portfolio data, human approval, audit trail. Publish the method in plain words.",
+     "fixes": "The rent-pricing question, plus the lawsuit framing.",
+     "effort": "Medium (product + legal)"
+    }
+   ]
+  },
+  {
+   "when": "This quarter",
+   "actions": [
+    {
+     "title": "Fix the review-site story AIs read",
+     "why": "Capterra and Software Advice show 4.0 stars with support at 3.7, below Yardi Voyager. Complaints like '45+ minute hold times' are what AIs summarize. Low-quality blogs (nextautomation.us, bcsolut.com) are already being cited.",
+     "do": "A support fix people can see (published response times), a steady review-request program, and replies to reviews on Capterra, G2 and Software Advice.",
+     "fixes": "The 'support' downside AIs list, and which third-party pages they cite.",
+     "effort": "Large"
+    },
+    {
+     "title": "Show up where operators talk",
+     "why": "Reddit threads like 'RealPage needs to go' (15.5k upvotes) and 'Customer support is top notch' (about Entrata) are the kind of text AIs learn from.",
+     "do": "An official, helpful presence in r/PropertyManagement and r/multifamily: answer product questions and publish migration guides. Don't argue the lawsuit there.",
+     "fixes": "Tone and 'why switch away' reasons in AI answers.",
+     "effort": "Ongoing"
+    },
+    {
+     "title": "Re-run this test every month",
+     "why": "AI answers move. One run is a snapshot, not a trend.",
+     "do": "Run the same test monthly and watch four numbers: named with no brand in the question (80% now), top pick (20%), lawsuit raised (43%) and answers left out (5 questions).",
+     "fixes": "Tells you which of the moves above worked.",
+     "effort": "Tiny"
+    }
+   ]
+  }
+ ],
+ "caveats": [
+  "Three AIs tested, run as local sessions: Claude (from memory), Claude with web search, ChatGPT (from memory, via Codex). Gemini and Perplexity were not tested.",
+  "One run of 17 questions per AI -- answers vary from run to run, so treat single questions as signals, not facts.",
+  "Local sessions are close to, but not the same as, the consumer ChatGPT and Claude apps."
+ ]
+}
