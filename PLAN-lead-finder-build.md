@@ -104,7 +104,7 @@ Open: http://localhost:8765 → Early Leads → the new state's button
 - [x] **3.3 Which meeting system does a city use?** `lead-finder-agendas/`: search the city's planning
   commission agenda page, match the address pattern (legistar.com, /AgendaCenter, granicus,
   primegov, civicclerk, boarddocs, escribemeetings, iqm2); cache per city. Fixture tests. Commit.
-- [ ] **3.4 Legistar reader.** Free Legistar data service (`https://webapi.legistar.com/v1/<client>/`
+- [x] **3.4 Legistar reader.** Free Legistar data service (`https://webapi.legistar.com/v1/<client>/`
   where `<client>` is the city's `<client>.legistar.com` name; `bodies`, `events?$filter=EventDate ge
   datetime'YYYY-MM-DD'`, `events/<id>/eventitems`, `matters?$filter=substringof('multifamily',MatterTitle)`): last 12 months of Planning / Zoning /
   Council meetings, find items mentioning multifamily / apartments / "NNN units" / rezoning / site

@@ -400,3 +400,27 @@ Followed the same shape as lead-finder-sources (2.3) fallback code for consisten
 Checked: `python -m pytest propertystack/skills/lead-finder-agendas/tests -q` (5 passed) and
 `bash tooling/qa/check-lead-finder.sh` (all green, no place-name test still clean).
 Nothing left open for this task.
+
+## 3.4 Legistar reader -- done
+
+- Added `propertystack/skills/lead-finder-legistar/legistar.py`: `find_legistar_matters(city,
+  state, area, client, http_get, today=None)` -- calls the free Legistar Web API
+  (`https://webapi.legistar.com/v1/<client>/`): `bodies` to find Planning/Zoning/Council body
+  IDs by name match, `events?$filter=EventDate ge datetime'<12mo ago>'` for those bodies'
+  meetings, then `events/<id>/eventitems` per meeting for agenda items. Keeps only items whose
+  matter title matches multifamily/apartment/unit-count/rezoning/site-plan; dedupes matters seen
+  across multiple meetings; pulls an address and unit count out of the title with regex when
+  present, folds a case number into the `why` line, and builds the agenda link as
+  `https://<client>.legistar.com/LegislationDetail.aspx?ID=<matterId>`. Returns merged
+  `planned`-stage `LeadRecord`s via `merge.py` (1.2).
+- Any city whose Legistar API call raises (token-required instances, or unreachable) or that has
+  no Planning/Zoning/Council body returns a skip-note dict (`{"skipped": True, "reason": ...}`),
+  never guessed at, matching the 3.3 agendas skill's pattern.
+- `tests/test_legistar.py`: 5 fixture tests (fake `http_get`, no network) -- multifamily matter
+  becomes a planned record with address/units/case parsed out; non-matching body and non-keyword
+  items dropped; token-required/unreachable API returns the skip note; no planning/zoning/council
+  body returns the skip note; the same matter appearing at two meetings is deduped to one record.
+- Checked: `bash tooling/qa/check-lead-finder.sh` passes -- all lead-finder* skill test dirs
+  (including the new one) plus the no-place-names scan and `check-panel.sh` are clean.
+- Nothing left open. Next task (3.5) covers non-Legistar systems (CivicPlus/Granicus/PrimeGov/
+  CivicClerk) plus raw PDF agendas via civic-scraper.
