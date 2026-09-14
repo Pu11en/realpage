@@ -282,7 +282,7 @@ def register(ctx) -> None:
         name="ps_research_search", toolset="propertystack",
         schema=_schema(
             "ps_research_search",
-            "Keyword search over the RealPage research folders (company, products, reviews, reddit, social, news, competitors, voice of customer). Returns file + line hits.",
+            "Keyword search over the RealPage research folders (company, products, reviews, reddit, social, news, competitors, voice of customer, AI visibility = how AIs rank RealPage). Returns file + line hits.",
             {"query": {"type": "string", "description": "Search words."}},
             ["query"],
         ),

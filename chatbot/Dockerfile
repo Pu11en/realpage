@@ -7,7 +7,7 @@ FROM alpine:3.20 AS kb
 COPY . /ctx
 RUN mkdir -p /kb/data /kb/research && \
     cp /ctx/propertystack/data/plano-richardson/*.csv /kb/data/ && \
-    for d in 01-company 02-products 03-reviews 04-reddit 05-social 06-news 07-competitors 08-voice-of-customer; do \
+    for d in 01-company 02-products 03-reviews 04-reddit 05-social 06-news 07-competitors 08-voice-of-customer 09-ai-visibility; do \
       mkdir -p /kb/research/$d; if [ -d /ctx/$d ]; then cp -R /ctx/$d/. /kb/research/$d/; fi; \
     done && \
     find /kb/research -type f ! -name '*.md' ! -name '*.txt' ! -name '*.csv' -delete

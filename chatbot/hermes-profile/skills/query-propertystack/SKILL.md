@@ -26,7 +26,7 @@ The tools come from the `propertystack` plugin
 | `leads` | PropertyStack lead ranking | 42 ranked leads, score parts + one-sentence `why` |
 | `contacts` | Contact info from building websites | Phone/email scraped from websites, where found |
 
-Research files (01-company .. 08-voice-of-customer) are searched with
+Research files (01-company .. 09-ai-visibility) are searched with
 `ps_research_search` and read with `ps_research_read`; in Sources, say
 "RealPage research notes" plus the topic (e.g. "Reddit comments").
 
