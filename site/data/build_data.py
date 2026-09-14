@@ -6,6 +6,7 @@ Sources (see propertystack/CONTRACTS.md):
   propertystack/data/plano-richardson/leads.csv   -> leads.json
   propertystack/data/plano-richardson/6-upcoming.csv -> leads.json (openingNext12mo)
   propertystack/runs/*.json                       -> pipeline.json (Under the Hood)
+  propertystack/data/client-map/counts.json       -> client-map.json (map.html state shading)
 
 Run this any time master.csv / leads.csv / runs/*.json change.
 No dependencies beyond stdlib. Usage: python3 site/data/build_data.py
@@ -32,6 +33,22 @@ CONTACTS_DALLAS_CSV = DATA_DIR / "contacts-dallas.csv"
 LEADS_FACTS_JSONL = DATA_DIR / "leads-facts.jsonl"
 SALES_CSV = DATA_DIR / "5-sales.csv"
 SALES_DALLAS_CSV = DATA_DIR / "5-sales-dallas.csv"
+
+CLIENT_MAP_COUNTS = ROOT / "propertystack" / "data" / "client-map" / "counts.json"
+
+STATE_NAMES = {
+    "AL": "Alabama", "AK": "Alaska", "AZ": "Arizona", "AR": "Arkansas", "CA": "California",
+    "CO": "Colorado", "CT": "Connecticut", "DE": "Delaware", "DC": "District of Columbia",
+    "FL": "Florida", "GA": "Georgia", "HI": "Hawaii", "ID": "Idaho", "IL": "Illinois",
+    "IN": "Indiana", "IA": "Iowa", "KS": "Kansas", "KY": "Kentucky", "LA": "Louisiana",
+    "ME": "Maine", "MD": "Maryland", "MA": "Massachusetts", "MI": "Michigan", "MN": "Minnesota",
+    "MS": "Mississippi", "MO": "Missouri", "MT": "Montana", "NE": "Nebraska", "NV": "Nevada",
+    "NH": "New Hampshire", "NJ": "New Jersey", "NM": "New Mexico", "NY": "New York",
+    "NC": "North Carolina", "ND": "North Dakota", "OH": "Ohio", "OK": "Oklahoma", "OR": "Oregon",
+    "PA": "Pennsylvania", "RI": "Rhode Island", "SC": "South Carolina", "SD": "South Dakota",
+    "TN": "Tennessee", "TX": "Texas", "UT": "Utah", "VT": "Vermont", "VA": "Virginia",
+    "WA": "Washington", "WV": "West Virginia", "WI": "Wisconsin", "WY": "Wyoming",
+}
 
 TODAY = date.fromisoformat("2026-09-10")  # matches score-leads' fixed TODAY, see run.py
 
@@ -393,6 +410,23 @@ def build_pipeline(properties: list[dict]) -> dict:
     }
 
 
+def build_client_map() -> dict:
+    """Per-state RealPage building counts + top 3 cities, keyed by full state name
+    (the map's topojson names states, not abbreviations)."""
+    counts = json.loads(CLIENT_MAP_COUNTS.read_text())
+    states = {}
+    for abbr, d in counts.items():
+        cities: dict[str, dict] = {}
+        for city, n in d["cities"].items():  # merge spelling variants (Mckinney / McKinney)
+            c = cities.setdefault(city.lower(), {"city": city, "count": 0})
+            c["count"] += n
+            if city != city.title() and c["city"] == c["city"].title():
+                c["city"] = city
+        top = sorted(cities.values(), key=lambda c: -c["count"])[:3]
+        states[STATE_NAMES.get(abbr, abbr)] = {"abbr": abbr, "total": d["total"], "topCities": top}
+    return {"source": "propertystack/data/client-map/counts.json", "states": states}
+
+
 def main() -> None:
     properties, properties_json, share_json = build_properties_and_share()
     (OUT_DIR / "properties.json").write_text(json.dumps(properties_json, indent=2))
@@ -408,6 +442,10 @@ def main() -> None:
     print(f"wrote software-share.json ({len(share_json['share'])} vendors)")
     print(f"wrote leads.json ({len(leads_json['leads'])} leads)")
     print(f"wrote pipeline.json")
+
+    client_map = build_client_map()
+    (OUT_DIR / "client-map.json").write_text(json.dumps(client_map, indent=2))
+    print(f"wrote client-map.json ({len(client_map['states'])} states)")
 
 
 if __name__ == "__main__":

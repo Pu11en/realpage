@@ -1,0 +1,309 @@
+{
+  "source": "propertystack/data/client-map/counts.json",
+  "states": {
+    "Texas": {
+      "abbr": "TX",
+      "total": 40,
+      "topCities": [
+        {
+          "city": "Houston",
+          "count": 7
+        },
+        {
+          "city": "Fort Worth",
+          "count": 5
+        },
+        {
+          "city": "McKinney",
+          "count": 5
+        }
+      ]
+    },
+    "North Carolina": {
+      "abbr": "NC",
+      "total": 32,
+      "topCities": [
+        {
+          "city": "Durham",
+          "count": 6
+        },
+        {
+          "city": "Raleigh",
+          "count": 5
+        },
+        {
+          "city": "Greensboro",
+          "count": 5
+        }
+      ]
+    },
+    "Arizona": {
+      "abbr": "AZ",
+      "total": 27,
+      "topCities": [
+        {
+          "city": "Phoenix",
+          "count": 5
+        },
+        {
+          "city": "Scottsdale",
+          "count": 5
+        },
+        {
+          "city": "Tempe",
+          "count": 4
+        }
+      ]
+    },
+    "Florida": {
+      "abbr": "FL",
+      "total": 26,
+      "topCities": [
+        {
+          "city": "Fort Myers",
+          "count": 5
+        },
+        {
+          "city": "Miami",
+          "count": 4
+        },
+        {
+          "city": "Orlando",
+          "count": 4
+        }
+      ]
+    },
+    "Washington": {
+      "abbr": "WA",
+      "total": 24,
+      "topCities": [
+        {
+          "city": "Tacoma",
+          "count": 5
+        },
+        {
+          "city": "Vancouver",
+          "count": 5
+        },
+        {
+          "city": "Everett",
+          "count": 5
+        }
+      ]
+    },
+    "Virginia": {
+      "abbr": "VA",
+      "total": 20,
+      "topCities": [
+        {
+          "city": "Virginia Beach",
+          "count": 6
+        },
+        {
+          "city": "Richmond",
+          "count": 4
+        },
+        {
+          "city": "Alexandria",
+          "count": 4
+        }
+      ]
+    },
+    "California": {
+      "abbr": "CA",
+      "total": 19,
+      "topCities": [
+        {
+          "city": "Sacramento",
+          "count": 8
+        },
+        {
+          "city": "Chula Vista",
+          "count": 4
+        },
+        {
+          "city": "San Francisco",
+          "count": 3
+        }
+      ]
+    },
+    "Tennessee": {
+      "abbr": "TN",
+      "total": 16,
+      "topCities": [
+        {
+          "city": "Murfreesboro",
+          "count": 4
+        },
+        {
+          "city": "Chattanooga",
+          "count": 4
+        },
+        {
+          "city": "Clarksville",
+          "count": 2
+        }
+      ]
+    },
+    "Colorado": {
+      "abbr": "CO",
+      "total": 14,
+      "topCities": [
+        {
+          "city": "Denver",
+          "count": 4
+        },
+        {
+          "city": "Fort Collins",
+          "count": 4
+        },
+        {
+          "city": "Aurora",
+          "count": 3
+        }
+      ]
+    },
+    "Ohio": {
+      "abbr": "OH",
+      "total": 10,
+      "topCities": [
+        {
+          "city": "Columbus",
+          "count": 4
+        },
+        {
+          "city": "Cleveland",
+          "count": 2
+        },
+        {
+          "city": "Dayton",
+          "count": 2
+        }
+      ]
+    },
+    "Georgia": {
+      "abbr": "GA",
+      "total": 8,
+      "topCities": [
+        {
+          "city": "Sandy Springs",
+          "count": 3
+        },
+        {
+          "city": "Port Wentworth",
+          "count": 1
+        },
+        {
+          "city": "Union City",
+          "count": 1
+        }
+      ]
+    },
+    "New Jersey": {
+      "abbr": "NJ",
+      "total": 6,
+      "topCities": [
+        {
+          "city": "Weehawken",
+          "count": 2
+        },
+        {
+          "city": "Jersey City",
+          "count": 1
+        },
+        {
+          "city": "Newark",
+          "count": 1
+        }
+      ]
+    },
+    "Wisconsin": {
+      "abbr": "WI",
+      "total": 5,
+      "topCities": [
+        {
+          "city": "Madison",
+          "count": 5
+        }
+      ]
+    },
+    "Utah": {
+      "abbr": "UT",
+      "total": 4,
+      "topCities": [
+        {
+          "city": "Salt Lake City",
+          "count": 3
+        },
+        {
+          "city": "West Jordan",
+          "count": 1
+        }
+      ]
+    },
+    "New York": {
+      "abbr": "NY",
+      "total": 3,
+      "topCities": [
+        {
+          "city": "Syracuse",
+          "count": 2
+        },
+        {
+          "city": "Port Chester",
+          "count": 1
+        }
+      ]
+    },
+    "Kentucky": {
+      "abbr": "KY",
+      "total": 2,
+      "topCities": [
+        {
+          "city": "Louisville",
+          "count": 2
+        }
+      ]
+    },
+    "Kansas": {
+      "abbr": "KS",
+      "total": 1,
+      "topCities": [
+        {
+          "city": "Wichita",
+          "count": 1
+        }
+      ]
+    },
+    "Massachusetts": {
+      "abbr": "MA",
+      "total": 1,
+      "topCities": [
+        {
+          "city": "Arlington",
+          "count": 1
+        }
+      ]
+    },
+    "Illinois": {
+      "abbr": "IL",
+      "total": 1,
+      "topCities": [
+        {
+          "city": "Wheeling",
+          "count": 1
+        }
+      ]
+    },
+    "Michigan": {
+      "abbr": "MI",
+      "total": 1,
+      "topCities": [
+        {
+          "city": "Marquette",
+          "count": 1
+        }
+      ]
+    }
+  }
+}

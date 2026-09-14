@@ -1,12 +1,13 @@
-"""Check for the US reach map + "Deep dive in chat" button (PLAN-map-deepdive).
+"""Check for the US client map (PLAN-client-map C4) + "Deep dive in chat" button.
 
 Serves site/ itself on port 8791 (override with CHECK_MAP_PORT), runs Playwright
 against it, then stops the server. Free, offline, under 60 s. Exits non-zero on
 any problem.
 
 Contract the site must meet:
-- map.html: 0 console/script errors, at least one `[data-dot]` element;
-  clicking the first dot shows `#map-card` containing at least one link.
+- map.html: 0 console/script errors, states shaded from data/client-map.json
+  (`[data-count]` on every state in that file); pointing at the top state shows
+  `#map-tip` with its count and top cities; no `[data-dot]` dots, no `#map-card`.
 - nav has a "Map" tab and no "Master Table" tab.
 - master-table.html redirects to map.html.
 - every Early Leads row (#leads-tbody tr) has a `[data-deep-dive]` button.
@@ -45,24 +46,32 @@ async def run() -> list[str]:
         page.on("pageerror", lambda e: errs.append(f"script error: {str(e)[:150]}"))
         page.on("console", lambda m: m.type == "error" and errs.append(f"console: {m.text[:150]}"))
 
-        # 1. Map page loads, has dots, clicking a dot shows a card with a link.
+        # 1. Map page loads, states shaded by count, hover shows count + top cities, no dots/cards.
+        cmap = json.loads((ROOT / "site/data/client-map.json").read_text())["states"]
         resp = await page.goto(f"{BASE}/map.html", wait_until="networkidle", timeout=20000)
         if resp is None or resp.status >= 400:
             problems.append(f"map.html did not load ({resp.status if resp else 'no answer'})")
         else:
             try:
-                await page.wait_for_selector("[data-dot]", timeout=8000)
+                await page.wait_for_selector(".state[data-count]", timeout=8000)
             except Exception:
                 pass
-            dots = await page.locator("[data-dot]").count()
-            if dots < 1:
-                problems.append("map.html: no [data-dot] dots drawn")
+            shaded = await page.locator(".state[data-count]").count()
+            if shaded != len(cmap):
+                problems.append(f"map.html: {shaded} shaded states, client-map.json has {len(cmap)}")
+            if await page.locator("[data-dot]").count():
+                problems.append("map.html: building dots still drawn")
+            if await page.locator("#map-card").count():
+                problems.append("map.html: proof card still present")
+            top_name, top = max(cmap.items(), key=lambda kv: kv[1]["total"])
+            st = page.locator(f'.state[data-state="{top_name}"]')
+            if await st.count():
+                await st.hover()
+                tip = await page.locator("#map-tip").inner_text() if await page.locator("#map-tip:visible").count() else ""
+                if str(top["total"]) not in tip or top["topCities"][0]["city"] not in tip:
+                    problems.append(f"map.html: pointing at {top_name} does not show its count and top cities")
             else:
-                await page.locator("[data-dot]").first.dispatch_event("click")
-                try:
-                    await page.wait_for_selector("#map-card a", state="visible", timeout=3000)
-                except Exception:
-                    problems.append("map.html: clicking the first dot shows no card with a link")
+                problems.append(f"map.html: no state path for {top_name}")
             problems += [f"map.html: {e}" for e in errs]
 
             # 2. Nav: Map yes, Master Table no.

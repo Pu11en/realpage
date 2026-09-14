@@ -10,29 +10,19 @@
     .map-wrap { position: relative; max-width: 1000px; }
     #us-map { width: 100%; height: auto; display: block; }
     #us-map .state { fill: #18181b; stroke: #3f3f46; stroke-width: 0.6; }
-    #us-map [data-dot] { cursor: pointer; }
-    #us-map .dot-reach { fill: var(--accent); fill-opacity: 0.55; stroke: var(--accent); stroke-width: 1.2; }
-    #us-map .dot-scout { fill: #eab308; fill-opacity: 0.35; stroke: #eab308; stroke-width: 1.2; }
-    #us-map .dot-label { fill: var(--text-muted); font-size: 10px; pointer-events: none; }
-    #us-map [data-dot]:hover .dot-reach, #us-map [data-dot].active .dot-reach { fill-opacity: 0.9; }
-    #map-card {
-      position: absolute; top: 12px; right: 12px; width: 280px; max-height: 70%; overflow-y: auto;
-      background: var(--card-bg); border: 1px solid var(--border); border-radius: 8px; padding: 12px 14px;
-      font-size: 13px;
+    #us-map .state[data-count] { cursor: default; }
+    #us-map .state:hover { stroke: var(--text-muted); stroke-width: 1.2; }
+    #map-tip {
+      position: absolute; pointer-events: none; background: var(--card-bg); border: 1px solid var(--border);
+      border-radius: 6px; padding: 8px 10px; font-size: 13px; min-width: 150px;
     }
-    #map-card[hidden] { display: none; }
-    #map-card h3 { margin: 0 0 4px; font-size: 15px; }
-    #map-card .count { color: var(--accent); margin-bottom: 8px; }
-    #map-card ul { margin: 0; padding-left: 16px; }
-    #map-card li { margin: 3px 0; }
-    #map-card a { color: var(--accent); }
-    #map-card .close { position: absolute; top: 6px; right: 8px; background: none; border: 0;
-      color: var(--text-muted); font-size: 16px; cursor: pointer; }
-    .map-legend { display: flex; gap: 16px; color: var(--text-muted); font-size: 12px; margin: 8px 0 16px; }
-    .map-legend span::before { content: ""; display: inline-block; width: 10px; height: 10px;
-      margin-right: 6px; vertical-align: -1px; }
-    .map-legend .l-reach::before { background: var(--accent); border-radius: 50%; }
-    .map-legend .l-scout::before { background: #eab308; transform: rotate(45deg); }
+    #map-tip[hidden] { display: none; }
+    #map-tip strong { display: block; }
+    #map-tip .count { color: var(--accent); margin: 2px 0 4px; }
+    #map-tip ul { margin: 0; padding-left: 16px; color: var(--text-muted); }
+    .map-legend { display: flex; align-items: center; gap: 8px; color: var(--text-muted); font-size: 12px; margin: 8px 0 16px; }
+    .map-legend .ramp { width: 120px; height: 10px; border-radius: 2px;
+      background: linear-gradient(to right, rgba(34, 197, 94, 0.15), rgba(34, 197, 94, 1)); }
   </style>
 </head>
 <body>
@@ -45,12 +35,12 @@
   <script>
     renderShell("map");
     document.getElementById("page-content").innerHTML = `
-      <h1>RealPage buildings</h1>
-      <div class="meta">Apartment buildings we have proven run RealPage (from their own resident portals). Click a dot to see every building and its proof. Areas with no dot have not been checked yet.</div>
-      <div class="map-legend"><span class="l-reach">RealPage buildings (bigger = more)</span><span class="l-scout">Area we're researching</span></div>
+      <h1>Where RealPage already has clients</h1>
+      <div class="meta">Apartment buildings whose own website links to a RealPage resident login, found in the 15 states building the most apartments. Brighter green = more buildings found. Point at a state for its count and top cities.</div>
+      <div class="map-legend"><span>fewer</span><span class="ramp"></span><span>more RealPage buildings</span></div>
       <div class="map-wrap">
-        <svg id="us-map" viewBox="0 0 975 610" role="img" aria-label="US map of RealPage reach"></svg>
-        <div id="map-card" hidden></div>
+        <svg id="us-map" viewBox="0 0 975 610" role="img" aria-label="US map shaded by RealPage buildings found per state"></svg>
+        <div id="map-tip" hidden></div>
       </div>
     `;
   </script>
