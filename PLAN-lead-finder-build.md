@@ -85,7 +85,7 @@ Open: http://localhost:8765 → Early Leads → the new state's button
   CO issued in the last 6 months → "leasing"; CO older → drop. Keep only type/description apartment or
   multifamily, or 20+ units; unknown units kept for 2.5 to fill. Several permits for one project
   **merged into one record** with its permit link. Fixture tests. Commit.
-- [ ] **2.5 `project-details` (new).** Clean addresses (usaddress + free Census batch geocoder) so
+- [x] **2.5 `project-details` (new).** Clean addresses (usaddress + free Census batch geocoder) so
   merging is reliable. One web lookup per project: address, units, developer, opening date, news
   link, website. Never guess; still-unknown units → drop. Fixture tests. Commit.
 - [ ] **3.1 HUD FHA loan list.** `lead-finder-hud/`: download HUD's free "FHA Multifamily Firm

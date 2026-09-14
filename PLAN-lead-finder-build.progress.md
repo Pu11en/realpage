@@ -270,3 +270,45 @@
 - Nothing left open for this task. Next task (2.5) adds `project-details`: clean addresses
   (Census batch geocoder) and one web lookup per project for units/developer/opening
   date/news/website, dropping any project whose units are still unknown after that lookup.
+
+## 2.5 `project-details` (new) -- done
+
+- Added `propertystack/skills/lead-finder-details/project_details.py`:
+  - `geocode_address(address, city, state, geocode_fn)`: looks up lat/lon via the free Census
+    one-line/batch geocoder (`geocoding.geo.census.gov/geocoder/locations/onelineaddress`),
+    taking an injectable `geocode_fn(query) -> parsed JSON` so tests never hit the network.
+    Blank address, no match, or a raised exception (site down) all return `None` rather than
+    guessing -- callers keep whatever lat/lon they already had.
+  - `fill_project_details(record, search_fn, fetch_fn, geocode_fn=None)`: the one web lookup per
+    project the plan asks for. Geocodes the address first (if `geocode_fn` given) to make later
+    75m merge matching (1.2) reliable, then does one `search_fn` call for the address + city +
+    "apartments" and walks the results: picks a non-news result as `website`, a news-domain
+    result (matched by hostname keywords: news/journal/times/tribune/herald/business/press) as
+    `links["news"]`, then fetches results in order with `fetch_fn` and pulls units (regex like
+    "220-unit"/"220 units"), developer ("developed by X" / "developer: X"), and opening date
+    ("now leasing March 2026" style) from the first page that has them -- never guessing, only
+    ever using what's actually on the page, and each fact filled gets a `sources` entry with the
+    URL it came from. Stops fetching once units are found. A project whose units are still
+    `None` after the lookup returns `None` (dropped), per the plan ("still-unknown units ->
+    drop"). Units already known (e.g. from 2.4's permit data) are never overwritten by a lower-
+    confidence web guess.
+  - Handles both a dataclass-like `FetchResult` (from 1.3's `fetch.py`, `.ok`/`.html`) and a
+    plain dict shape for `fetch_fn`'s return, so tests can use either.
+- Tests: `tests/test_project_details.py` -- geocode success/no-match/blank-address/exception
+  cases; a full fill (units + developer + opening date + website) from one page; picking a news
+  link separately from the website when both are in the search results; dropping when units stay
+  unknown after search+fetch; not overwriting units that were already known; no search results
+  at all still drops when units are unknown; geocode results applied to lat/lon when a
+  `geocode_fn` is passed; a blocked/not-ok fetch result is skipped and the next search result is
+  tried instead. Found and fixed two regex bugs while writing these tests: the developer regex
+  wasn't matching text right after "developed by" (needed an explicit optional-space + lazy stop
+  at the next `.`/newline), and the opening-date regex's greedy gap quantifier was letting a
+  bare year ("2026") win over "March 2026" during backtracking -- made it lazy (`{0,20}?`) so it
+  prefers the shortest gap and the full month+year match wins.
+- Checked: `bash tooling/qa/check-lead-finder.sh` -- lead-finder-details' own 11 tests pass, all
+  other lead-finder* dirs unaffected (4 + 11 + 12 + 34 = 61 before this task, all still passing;
+  72 total now), panel check clean. Also reran `python3 site/data/build_data.py` to confirm the
+  site still builds unaffected (204 properties, 42 leads, 20 states).
+- Nothing left open for this task. Next task (3.1) starts Part 3: the HUD FHA multifamily loan
+  list (firm commitments/endorsements spreadsheet, filtered by state/units/age, 221(d)(4) vs
+  223(f)).
