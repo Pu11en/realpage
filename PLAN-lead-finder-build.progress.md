@@ -312,3 +312,62 @@
 - Nothing left open for this task. Next task (3.1) starts Part 3: the HUD FHA multifamily loan
   list (firm commitments/endorsements spreadsheet, filtered by state/units/age, 221(d)(4) vs
   223(f)).
+
+## 3.1 HUD FHA loan list -- done
+
+- Added `propertystack/skills/lead-finder-hud/hud_loans.py`. Downloaded the real workbook
+  from `https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx`
+  (linked from https://www.hud.gov/hud-partners/multifamily-data) and printed its real
+  header row first, per the plan: `FHA Number, Project Name, Project City, Project State,
+  Program Type, Program Category, Activity Description, Activity Group, Facility Type,
+  Program Subcategory, Firm Activity, Lender Name for Firm Activity, Mortgage Amount,
+  Total Units, Firm Activity Date, Fiscal Year at Firm Activity, MAP or TAP, LIHTC, Tax
+  Exempt Bonds, Home, CDBG, Refi 202, IRP Decoupling, Hope VI, Current Status`. The header
+  sits at row 9 (there's a 8-row title block above it), and the program code lives in
+  "Program Subcategory" (e.g. "221(d)(4) NC/SR", "223(f) Refi/ Purchase Apts") -- matched
+  with a loose regex since HUD's own docs show it written a few ways ("221(d)(4)", "221D4").
+  - `fetch_workbook_bytes()`: downloads once into `propertystack/data/raw/hud/` (already
+    covered by that directory's own `.gitignore`, so the ~8MB file never gets committed),
+    reads from cache after that -- same pattern as 2.1's Census fetcher.
+  - `load_sheet_rows(bytes)`: opens the "Firm Commitments" sheet with `openpyxl` (added as
+    a dependency -- the repo had no xlsx reader yet; installed with
+    `pip install --user --break-system-packages openpyxl` since the system Python is
+    externally managed), skips the title block, returns one dict per row keyed by the real
+    column names.
+  - `parse_hud_rows(rows, state, min_units=20, months=36, today=None)`: the pure filtering
+    logic (state match, units >= 20, Firm Activity Date within the window, program code ->
+    stage). 221(d)(4) -> `permitted` ("HUD FHA 221(d)(4) firm commitment for new
+    construction"); 223(f) -> `sold` ("HUD refi or sale (FHA 223(f))"); any other program
+    code dropped. Missing units or missing/future date -> dropped, never guessed. Takes
+    plain dicts so tests never need openpyxl or the network.
+  - `find_hud_loans(state, ...)`: the end-to-end entry point (download -> load -> filter).
+  - HUD gives city/state but no street address, so `address` stays blank on these records --
+    1.2's merge only works off name/geocode for these until an address shows up from
+    another source (permits, agenda, news).
+- Bug caught by a real-data smoke test, not by the unit tests: my first header-row constant
+  (9) was off by one -- running `find_hud_loans("TX")` against the real cached workbook
+  returned 0 rows for a state that clearly has hundreds. Traced it to reading one row too
+  far as the header (columns came out as a jumble of two data rows' values). Fixed to 8 and
+  reran against the real file -- 211 Texas leads came back correctly (211 total; a mix of
+  permitted/new-construction and sold/refi rows). Left the real xlsx cached at
+  `propertystack/data/raw/hud/` for reuse by 6.x's real run (that directory is gitignored).
+- Tests: `tests/test_hud_loans.py` (13 tests, all against a fictional state code "ZZ" and
+  city "Rivertown") -- 221(d)(4) -> permitted with the right why/units/city
+  (title-cased)/permit_date/HUD link; 223(f) -> sold with "HUD refi or sale" in the why;
+  wrong state dropped; missing/too-low units dropped; missing/older-than-36-months/future
+  date dropped; an unrelated program code (542(c) HFA Risk Sharing) dropped; the "221D4"
+  no-punctuation spelling still matches; the `_program_stage` helper returns `None` for
+  unrelated or blank text; `find_hud_loans` with an injected fetcher/loader and
+  case-insensitive state matching.
+- Checked: `bash tooling/qa/check-lead-finder.sh` -- lead-finder-hud's own 13 tests pass,
+  every other lead-finder* dir unaffected (72 before this task, 85 total now, all passing),
+  panel check clean. Also reran `python3 site/data/build_data.py` to confirm the site still
+  builds unaffected (204 properties, 42 leads, 20 states in the client map) and
+  `git status --short` shows only the new `lead-finder-hud/` directory as untracked (the
+  cached xlsx is excluded by `propertystack/data/raw/.gitignore`).
+- Nothing left open for this task. Note for whoever wires 6.1: `find_hud_loans` needs the
+  `openpyxl` package installed (not previously a repo dependency) -- if a fresh environment
+  is missing it, install with `pip install --user --break-system-packages openpyxl` before
+  running the real chain.
+- Next task (3.2) is the state housing agency awards list (NCSHA/Novogradac tax-credit and
+  bond award PDFs/spreadsheets, per-state recipe, new-construction only).

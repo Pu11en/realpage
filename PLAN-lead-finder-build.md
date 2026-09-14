@@ -88,7 +88,7 @@ Open: http://localhost:8765 → Early Leads → the new state's button
 - [x] **2.5 `project-details` (new).** Clean addresses (usaddress + free Census batch geocoder) so
   merging is reliable. One web lookup per project: address, units, developer, opening date, news
   link, website. Never guess; still-unknown units → drop. Fixture tests. Commit.
-- [ ] **3.1 HUD FHA loan list.** `lead-finder-hud/`: download HUD's free "FHA Multifamily Firm
+- [x] **3.1 HUD FHA loan list.** `lead-finder-hud/`: download HUD's free "FHA Multifamily Firm
   Commitments and Endorsements" spreadsheet from https://www.hud.gov/hud-partners/multifamily-data
   (cache it; **print the real column names first** -- program codes may read "221(d)(4)", "221D4"
   or similar; match all forms); filter by state, 20+ units, last 36 months:
