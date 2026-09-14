@@ -44,7 +44,7 @@ for _extra in (
 if str(HERE) not in sys.path:
     sys.path.insert(0, str(HERE))
 
-from runfolder import RunFolder, pick_state  # noqa: E402
+from runfolder import RunFolder, RunCaps, pick_state  # noqa: E402
 from record import LeadRecord  # noqa: E402
 from merge import merge_records  # noqa: E402
 from fetch import WebHelper  # noqa: E402
@@ -318,8 +318,14 @@ def run_chain(
     city_list = load_or_build_cities(run_folder, state, deps, cities)
 
     all_records: list[LeadRecord] = []
+    caps = run_folder.load_caps()
 
     for city in city_list:
+        if caps.any_cap_hit():
+            print(f"lead-finder: cap hit ({caps.project_count} projects, "
+                  f"{caps.total_searches} searches) -- stopping before {city}")
+            break
+
         recipe = step_sources(run_folder, city, state, deps)
         permit_dicts = step_permits(run_folder, city, state, area, recipe, deps)
         permit_records = _records_from(permit_dicts)
@@ -341,6 +347,13 @@ def run_chain(
         merged_city = merge_records(city_records)
         run_folder.save_step(STEP_MERGED, city, [r.to_dict() for r in merged_city])
         all_records.extend(merged_city)
+
+        caps.project_count = len(merge_records(all_records))
+        counts = getattr(deps.web, "counts", None)
+        if counts is not None:
+            caps.searxng_searches = counts.searxng
+            caps.jina_searches = counts.jina
+        run_folder.save_caps(caps)
 
     hud_dicts = step_hud(run_folder, state, deps)
     award_dicts = step_awards(run_folder, state, deps)
@@ -393,7 +406,15 @@ def main(argv: list[str] | None = None) -> int:
     run_folder.ensure()
     print(f"lead-finder: run folder ready at {run_folder.path}")
 
-    deps = ChainDeps(web=WebHelper())
+    agencies_path = HERE.parents[2] / "propertystack" / "data" / "state-agencies.json"
+    agencies = json.loads(agencies_path.read_text()) if agencies_path.exists() else {}
+
+    deps = ChainDeps(
+        web=WebHelper(),
+        cities_fetcher=cities_rank.fetch,
+        hud_fetcher=hud_loans.fetch_workbook_bytes,
+        agency_name=agencies.get(state.upper()),
+    )
     records = run_chain(state, run_folder, deps, cities=args.city)
     print(f"lead-finder: {len(records)} leads for {state} -> {run_folder.path}")
     return 0
