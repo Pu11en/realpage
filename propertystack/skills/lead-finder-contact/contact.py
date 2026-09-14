@@ -11,8 +11,13 @@ actually names one (never guessed from a developer's generic "About Us" page).
 from __future__ import annotations
 
 import re
+import sys
+from pathlib import Path
 
 import phonenumbers
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "lib"))
+from building_match import is_about_building  # noqa: E402
 
 PHONE_CONTEXT_WINDOW = 15
 FAX_KEYWORDS = ("fax",)
@@ -44,23 +49,35 @@ def _result_url(item) -> str:
     return getattr(item, "url", "")
 
 
+def _result_title(item) -> str:
+    if isinstance(item, dict):
+        return item.get("title", "")
+    return getattr(item, "title", "")
+
+
 def find_website(developer: str, search_fn) -> str:
-    """One search for a developer/owner's own website. Never guesses a URL."""
+    """One search for a developer/owner's own website. A result only counts
+    if it's really about this developer (F2 check: not a listing/directory
+    site, and the developer's name actually appears in its url/title) --
+    never guesses a URL from the first hit alone."""
     if not developer:
         return ""
     results = search_fn(f"{developer} apartments website") or []
     for item in results:
         url = _result_url(item)
-        if url:
+        if url and is_about_building(developer, "", url, _result_title(item)):
             return url
     return ""
 
 
 def find_office_phone(html: str) -> str:
-    """First phone number that isn't next to "fax"; a cell/mobile number is
-    kept only as a fallback if nothing better is found."""
+    """The best phone number on the page: an office/unlabeled number is
+    always preferred over a fax or cell/mobile line; a cell number is
+    returned only if nothing else is found. Duplicate numbers (the same
+    number printed more than once) count once."""
     if not html:
         return ""
+    seen = set()
     fallback = ""
     for match in phonenumbers.PhoneNumberMatcher(html, "US"):
         context = html[max(0, match.start - PHONE_CONTEXT_WINDOW) : match.start].lower()
@@ -69,6 +86,9 @@ def find_office_phone(html: str) -> str:
         formatted = phonenumbers.format_number(
             match.number, phonenumbers.PhoneNumberFormat.NATIONAL
         )
+        if formatted in seen:
+            continue
+        seen.add(formatted)
         if any(k in context for k in CELL_KEYWORDS):
             if not fallback:
                 fallback = formatted

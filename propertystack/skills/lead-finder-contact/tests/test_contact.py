@@ -36,9 +36,35 @@ def test_find_office_phone_no_numbers():
     assert find_office_phone("no numbers here") == ""
 
 
+def test_find_office_phone_dedupes_repeated_number():
+    html = "Call us: (212) 555-0144. Same office: (212) 555-0144."
+    assert find_office_phone(html) == "(212) 555-0144"
+
+
+def test_find_office_phone_prefers_office_over_repeated_cell():
+    html = "Cell: (212) 555-0188. Cell: (212) 555-0188. Office: (212) 555-0144."
+    assert find_office_phone(html) == "(212) 555-0144"
+
+
 def test_find_website_returns_first_result_url():
-    results = [{"url": "https://acmedev.example.com"}, {"url": "https://other.example.com"}]
+    results = [
+        {"url": "https://acmedev.example.com", "title": "Acme Development -- apartment communities"},
+        {"url": "https://other.example.com", "title": "Other Co"},
+    ]
     assert find_website("Acme Development", lambda q: results) == "https://acmedev.example.com"
+
+
+def test_find_website_skips_result_not_about_the_developer():
+    results = [
+        {"url": "https://unrelated.example.com", "title": "Unrelated apartments for rent"},
+        {"url": "https://acmedev.example.com", "title": "Acme Development -- apartment communities"},
+    ]
+    assert find_website("Acme Development", lambda q: results) == "https://acmedev.example.com"
+
+
+def test_find_website_skips_listing_domain():
+    results = [{"url": "https://www.apartments.com/acme-development", "title": "Acme Development"}]
+    assert find_website("Acme Development", lambda q: results) == ""
 
 
 def test_find_website_blank_developer():
@@ -69,7 +95,9 @@ def test_fill_contacts_fills_phone_from_developer_website():
 
 def test_fill_contacts_searches_for_website_when_blank():
     rec = make_record()
-    search_fn = lambda q: [{"url": "https://acmedev.example.com"}]
+    search_fn = lambda q: [
+        {"url": "https://acmedev.example.com", "title": "Acme Development -- apartment communities"}
+    ]
     fetch_fn = lambda url: {"html": "Office: (212) 555-0144.", "ok": True}
     fill_contacts([rec], search_fn, fetch_fn)
     assert rec.website == "https://acmedev.example.com"

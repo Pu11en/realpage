@@ -61,7 +61,7 @@ def find_upcoming(
         stage = _infer_stage(issue_date, co_date, today)
         if stage is None:
             continue
-        records.append(_build_record(row, fields, city, area, endpoint, stage, issue_date, units_pattern))
+        records.append(_build_record(row, fields, city, area, endpoint, stage, issue_date, units_pattern, recipe))
 
     return merge_records(records)
 
@@ -144,11 +144,16 @@ def _build_record(
     stage: str,
     issue_date: datetime.date | None,
     units_pattern: str | None = None,
+    recipe: dict | None = None,
 ) -> LeadRecord:
     address_key = fields.get("address")
     address = str(row.get(address_key, "")) if address_key else ""
     units = _parse_units(row, fields, units_pattern)
     permit_link = str(row.get("link") or row.get("url") or endpoint)
+    developer, developer_source = _find_owner(row, recipe or {}, permit_link)
+    sources = [{"fact": "permit_date", "url": permit_link}]
+    if developer_source:
+        sources.append(developer_source)
     return LeadRecord(
         area=area,
         city=city,
@@ -156,10 +161,25 @@ def _build_record(
         units=units,
         stage=stage,
         permit_date=issue_date.isoformat() if issue_date else "",
+        developer=developer,
         links={"permit": permit_link},
-        sources=[{"fact": "permit_date", "url": permit_link}],
+        sources=sources,
         why="new multifamily permit" if stage != "leasing" else "certificate of occupancy issued recently",
     )
+
+
+def _find_owner(row: dict, recipe: dict, permit_link: str) -> tuple[str, dict | None]:
+    """The permit row's real owner/builder field (Scottsdale/Tempe-style
+    recipes), never guessed. Owner is preferred over builder (the property's
+    owner, not its contractor, is who to call about software)."""
+    for key in ("owner_field", "builder_field"):
+        field_name = recipe.get(key)
+        if not field_name:
+            continue
+        value = str(row.get(field_name) or "").strip()
+        if value:
+            return value, {"fact": "developer", "url": permit_link}
+    return "", None
 
 
 def _fetch_rows(endpoint: str, http_get: HttpGet) -> list[dict]:

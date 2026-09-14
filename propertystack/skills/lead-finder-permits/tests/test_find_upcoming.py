@@ -157,6 +157,51 @@ def test_multiple_permits_same_address_merged_into_one_record():
     assert len(records) == 1
 
 
+def test_owner_field_used_as_developer():
+    recipe = dict(RECIPE, owner_field="Owner", builder_field="Builder")
+    rows = [
+        {
+            "PermitType": "Multifamily new construction",
+            "IssueDate": "2026-08-01",
+            "Units": "40",
+            "Address": "9 River Rd",
+            "Owner": "Acme Multifamily Owner LLC",
+            "Builder": "Bolt Construction Co",
+        }
+    ]
+    records = find_upcoming("Rivertown", "ZZ", "zz", recipe, _http_get(rows), today=TODAY)
+    assert records[0].developer == "Acme Multifamily Owner LLC"
+    assert {"fact": "developer", "url": RECIPE["endpoint"]} in records[0].sources
+
+
+def test_builder_field_used_when_no_owner():
+    recipe = dict(RECIPE, builder_field="Builder")
+    rows = [
+        {
+            "PermitType": "Multifamily new construction",
+            "IssueDate": "2026-08-01",
+            "Units": "40",
+            "Address": "10 River Rd",
+            "Builder": "Bolt Construction Co",
+        }
+    ]
+    records = find_upcoming("Rivertown", "ZZ", "zz", recipe, _http_get(rows), today=TODAY)
+    assert records[0].developer == "Bolt Construction Co"
+
+
+def test_no_owner_or_builder_field_leaves_developer_blank():
+    rows = [
+        {
+            "PermitType": "Multifamily new construction",
+            "IssueDate": "2026-08-01",
+            "Units": "40",
+            "Address": "11 River Rd",
+        }
+    ]
+    records = find_upcoming("Rivertown", "ZZ", "zz", RECIPE, _http_get(rows), today=TODAY)
+    assert records[0].developer == ""
+
+
 def test_no_endpoint_returns_empty():
     assert find_upcoming("Rivertown", "ZZ", "zz", {"fields": {}}, _http_get([]), today=TODAY) == []
 

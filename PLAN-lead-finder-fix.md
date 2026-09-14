@@ -95,7 +95,7 @@ Open: http://localhost:8765 → Early Leads → Az
   Entrata `*.residentportal.com`; AppFolio `*.appfolio.com`; ResMan `*.myresman.com` (merge into
   `tooling/pms_detect.py`). Keep the double check. Test live on the 5 answer-key buildings: all 5
   correct. Commit.
-- [ ] **F8 Phones and owners.** Owner/developer from permit owner/builder fields (Scottsdale, Tempe) or
+- [x] **F8 Phones and owners.** Owner/developer from permit owner/builder fields (Scottsdale, Tempe) or
   the sales file's buyer; phone from the building's own contact page, then the owner/developer's site
   (found with Jina/Brave + the F2 check), read with Jina Reader or crawl4ai; `phonenumbers` pulls and
   de-duplicates, office lines above fax/cell. Never guess. Fixture tests + a live test on 3 answer-key

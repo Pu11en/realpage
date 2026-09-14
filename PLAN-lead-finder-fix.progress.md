@@ -372,3 +372,46 @@ Commit: (see git log for this file's commit)
   `python3 -m pytest -q propertystack --ignore=propertystack/skills/client-map`: 234 passed (unchanged from F6,
   same reason). Also reran the new live self-test after each fix to confirm against real websites, not fixtures.
 - Nothing left open for F7.
+
+## F8 Phones and owners -- done
+- **Permit-row owner/builder (Scottsdale, Tempe-style recipes):** `find_upcoming.py`'s
+  `_build_record` now reads a new `_find_owner()` helper, which checks the recipe's top-level
+  `owner_field`/`builder_field` (already present in Scottsdale's saved recipe from F4, e.g. its
+  live-tested `Owner: MREG 101 Bell LLC`) against the row and fills `LeadRecord.developer` --
+  owner preferred over builder (the property owner, not the general contractor, is who to call
+  about picking software), and a `{"fact": "developer", "url": permit_link}` source recorded.
+  Never guesses: a recipe/row with neither field leaves `developer` blank, same as before.
+- **Sold-stage owners:** already covered by F5 (`find_sold.py` sets `developer` = grantor,
+  `buyer` = grantee straight from the county sales file) -- nothing new needed there, confirmed
+  by re-reading that code.
+- **F2 check now used in the developer-website lookup**, as the plan asks (`contact.py`'s
+  `find_website`): imports `is_about_building` from `propertystack/lib/building_match.py` (the
+  same module F2 built) and only accepts a search result whose url+title is really about that
+  developer, rejecting listing/directory domains and unrelated hits with no name match --
+  before this it returned whatever the first search result was, developer name entirely
+  unchecked. Updated the existing fixture tests to add a `title` to their fake search results
+  (a bare "acmedev.example.com" url alone doesn't literally contain the word "development"),
+  and added `test_find_website_skips_result_not_about_the_developer` and
+  `test_find_website_skips_listing_domain`.
+- **Phone de-duplication:** `find_office_phone` now tracks every formatted number already seen
+  and skips repeats, so the same office number printed twice on a page (header + footer, a
+  common real pattern) doesn't change the result, and a duplicated cell/fallback number doesn't
+  block a later real office number from replacing it. Office/unlabeled numbers still always win
+  over fax (skipped outright) and cell/mobile (fallback only). New tests
+  `test_find_office_phone_dedupes_repeated_number` and
+  `test_find_office_phone_prefers_office_over_repeated_cell`.
+- **Live test** (`python3 propertystack/skills/lead-finder-contact/live_self_test.py`, run just
+  now against real live sites, not fixtures) on 3 of the F6 answer-key buildings: Lumara ->
+  (520) 636-0838, Navona -> (833) 816-2135, The Stately Avondale -> (785) 451-3548, all real
+  office numbers pulled straight off each building's own website. Also ran `find_website` live
+  for "Toll Brothers Apartment Living" (Lumara's real developer, per its own press release) and
+  it correctly found `https://www.tollbrothersapartmentliving.com/` through the new F2 check.
+- Checked: `bash tooling/qa/check-lead-finder.sh` passes (51 lead-finder* tests + the site panel
+  check -- unchanged count since these are edits to existing skills, not new ones; the new tests
+  land inside those same suites). Full suite
+  `python3 -m pytest -q propertystack --ignore=propertystack/skills/client-map`: 241 passed (up
+  from 234 recorded at F7 -- F7 itself added no new tests, so this is +7 net: 3 permit-owner
+  tests, 4 contact tests). `propertystack/runs/brave-usage.json` was created/updated by the live
+  test's real search call -- left untracked, same as before (it's runtime usage-counter state,
+  never committed).
+- Nothing left open for F8.
