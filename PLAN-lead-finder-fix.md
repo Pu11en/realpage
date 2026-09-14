@@ -24,7 +24,8 @@ never guess facts; Plano never rerun; localhost only, never push).
 - **No website yet = the best lead, not a gap (Drew 2026-09-14):** a not-yet-built project with no
   website or leasing site hasn't picked its software. Show it as "Earliest: no website yet -- software
   not picked", and rank it above same-stage projects that already have a leasing site.
-- **Timebox:** 15 steps × 20-30 min ≈ 6-8 hours of bot time.
+- **This build = Arizona only (Drew 2026-09-14).** States near Texas are planned after Drew sees Arizona.
+- **Timebox:** 12 steps × 20-30 min ≈ 5-6 hours of bot time.
 - Plan review: `09-build-ideas/review-lead-finder-fix.md`.
 
 Run with: `Do the next unticked task in PLAN-lead-finder-fix.md, then tick it and stop.`
@@ -121,12 +122,12 @@ Open: http://localhost:8765 → Early Leads → Az
   with the new AZ leads; run the Check and `tooling/qa/check-answers.sh`. Commit. Recap in plain words
   how many AZ leads, how many with software and phone, and the quality numbers.
 
-### Part 5: States near Texas
-- [ ] **F13 New Mexico.** Discovery (F3) for its top permit cities (Albuquerque's ArcGIS layer has
+## Later (not in this build -- Drew 2026-09-14: Arizona only, plan the rest after seeing it)
+- **F13 New Mexico.** Discovery (F3) for its top permit cities (Albuquerque's ArcGIS layer has
   `NumberofUnits`; research file), county sales file if one exists (else news-based sales), a 10-building
   NM answer key, then a full run held to the same bar. Build into site + chat if it passes. Commit.
-- [ ] **F14 Louisiana.** Same as F13 (New Orleans Socrata `rcm3-fn58`, Baton Rouge `7fq7-8j7r` --
+- **F14 Louisiana.** Same as F13 (New Orleans Socrata `rcm3-fn58`, Baton Rouge `7fq7-8j7r` --
   find the right multifamily filter). Commit.
-- [ ] **F15 Next state near Texas.** Run discovery for Oklahoma, Colorado and Arkansas; pick the one with
+- **F15 Next state near Texas.** Run discovery for Oklahoma, Colorado and Arkansas; pick the one with
   the most real permit sources; answer key + full run + same bar; build it in if it passes. Commit.
   Recap in plain words for Drew: leads per state, quality numbers, what's still missing.
