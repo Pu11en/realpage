@@ -52,7 +52,7 @@ local-trial-key-change-me` and `X-OpenWebUI-User-Email: admin@localhost`, model 
   ("opener", "objection") or has no `**` bold at all. Prints each answer with PASS/FAIL. Under
   ~2 minutes. Run it; fix `SOUL.md` until it passes twice in a row. Commit. (Not in the Check
   line because it costs money; run it in any later task that changes answers.)
-- [ ] **T3 Auto-bold safety net.** In `chatbot/proxy.py`, before an answer leaves the proxy
+- [x] **T3 Auto-bold safety net.** In `chatbot/proxy.py`, before an answer leaves the proxy
   (both the streamed and non-streamed paths, and saved deep-dive replays), bold anything the
   bot left plain: phone numbers like `(682) 418-2225` / `469-829-7591`, unit counts
   (`178 units`), month-day-year dates, and the labels `Next:`, `Sources:`, `Call`, `Why now:`,

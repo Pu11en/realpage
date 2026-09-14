@@ -21,6 +21,8 @@ from collections import defaultdict, deque
 import aiohttp
 from aiohttp import web
 
+from autobold import StreamBolder, bold
+
 HERMES_BASE = f"http://127.0.0.1:{os.environ.get('API_SERVER_PORT', '8642')}/v1"
 HERMES_URL = f"{HERMES_BASE}/chat/completions"
 HERMES_KEY = os.environ["API_SERVER_KEY"]
@@ -155,7 +157,7 @@ async def chat(request: web.Request) -> web.StreamResponse:
                         return _cors(request, web.json_response({"error": "agent error", "status": r.status}, status=502))
         except asyncio.TimeoutError:
             return _cors(request, web.json_response({"error": "agent timed out"}, status=504))
-    answer = (data.get("choices") or [{}])[0].get("message", {}).get("content") or ""
+    answer = bold((data.get("choices") or [{}])[0].get("message", {}).get("content") or "")
     return _cors(request, web.json_response({
         "answer": answer,
         "citations": _citations(answer),
@@ -191,6 +193,7 @@ async def chat_stream(request: web.Request) -> web.StreamResponse:
 
     started = time.monotonic()
     answer = ""
+    bolder = StreamBolder()
     async with _slots:
         try:
             async with aiohttp.ClientSession(timeout=aiohttp.ClientTimeout(total=TIMEOUT_S)) as s:
@@ -225,19 +228,24 @@ async def chat_stream(request: web.Request) -> web.StreamResponse:
                                 # Text before a tool call is the bot thinking aloud; the page
                                 # drops it when a progress line arrives, so drop it here too.
                                 answer = ""
+                                bolder.reset()
                                 await send("progress", {"label": TOOL_LABELS.get(data.get("tool"), "Working…")})
                             continue
                         if data.get("error"):
                             await send("error", {"error": "agent error"})
                             return resp
                         choice = (data.get("choices") or [{}])[0]
-                        text = (choice.get("delta") or {}).get("content") or ""
+                        text = bolder.feed((choice.get("delta") or {}).get("content") or "")
                         if text:
                             answer += text
                             await send("delta", {"text": text})
         except asyncio.TimeoutError:
             await send("error", {"error": "agent timed out"})
             return resp
+    text = bolder.flush()
+    if text:
+        answer += text
+        await send("delta", {"text": text})
     await send("done", {"citations": _citations(answer), "seconds": round(time.monotonic() - started, 1)})
     return resp
 
@@ -380,6 +388,65 @@ async def _gateway_replay(request: web.Request, body: dict, text: str) -> web.St
     return resp
 
 
+def _bold_completion(data: dict) -> None:
+    """Auto-bold a non-streamed chat completion in place."""
+    try:
+        msg = data["choices"][0]["message"]
+        if isinstance(msg.get("content"), str):
+            msg["content"] = bold(msg["content"])
+    except (KeyError, IndexError, TypeError, AttributeError):
+        pass
+
+
+class _SseBolder:
+    """Rewrite an OpenAI-style SSE byte stream so answer text is auto-bolded.
+
+    Content deltas go through a StreamBolder (which may hold back a short
+    tail); any held text is sent as its own chunk before the next non-text
+    event (tool progress, finish, [DONE]). Everything else passes unchanged.
+    """
+
+    def __init__(self) -> None:
+        self.pending = b""
+        self.bolder = StreamBolder()
+        self.template: dict | None = None
+
+    def _flush_text(self) -> bytes:
+        text = self.bolder.flush()
+        if not text or self.template is None:
+            return b""
+        chunk = {**self.template, "choices": [{"index": 0, "delta": {"content": text}, "finish_reason": None}]}
+        return f"data: {json.dumps(chunk)}\n\n".encode()
+
+    def _line(self, line: bytes) -> bytes:
+        text = line.decode("utf-8", "replace")
+        if text.startswith("event:"):
+            return self._flush_text() + line
+        if not text.startswith("data:"):
+            return line
+        try:
+            data = json.loads(text[5:])
+            delta = data["choices"][0]["delta"]
+            content = delta["content"]
+            if not isinstance(content, str) or data["choices"][0].get("finish_reason"):
+                raise KeyError
+        except Exception:
+            return self._flush_text() + line
+        self.template = {k: v for k, v in data.items() if k != "choices"}
+        delta["content"] = self.bolder.feed(content)
+        return b"data: " + json.dumps(data).encode() + (b"\r" if text.endswith("\r") else b"")
+
+    def feed(self, chunk: bytes) -> bytes:
+        self.pending += chunk
+        *lines, self.pending = self.pending.split(b"\n")
+        return b"".join(self._line(ln) + b"\n" for ln in lines)
+
+    def close(self) -> bytes:
+        out = self._line(self.pending) if self.pending else b""
+        self.pending = b""
+        return out + self._flush_text()
+
+
 def _gateway_auth_ok(request: web.Request) -> bool:
     return request.headers.get("Authorization", "") == f"Bearer {HERMES_KEY}"
 
@@ -417,7 +484,7 @@ async def gateway_chat(request: web.Request) -> web.StreamResponse:
     if dive_key and not fresh:
         saved = _deep_dive_load(dive_key)
         if saved:
-            return await _gateway_replay(request, body, _deep_dive_note(saved, question))
+            return await _gateway_replay(request, body, bold(_deep_dive_note(saved, question)))
 
     async with _slots:
         try:
@@ -425,6 +492,7 @@ async def gateway_chat(request: web.Request) -> web.StreamResponse:
                 async with s.post(HERMES_URL, headers={"Authorization": f"Bearer {HERMES_KEY}"}, json=body) as r:
                     if not body.get("stream"):
                         data = await r.json(content_type=None)
+                        _bold_completion(data)
                         if dive_key and r.status == 200:
                             try:
                                 _deep_dive_save(dive_key, question, data["choices"][0]["message"]["content"])
@@ -438,10 +506,18 @@ async def gateway_chat(request: web.Request) -> web.StreamResponse:
                     await resp.prepare(request)
                     out_chars = 0
                     raw = bytearray()
+                    rewriter = _SseBolder()
                     async for chunk in r.content.iter_any():
                         out_chars += len(chunk)
+                        chunk = rewriter.feed(chunk)
                         if dive_key:
                             raw += chunk
+                        if chunk:
+                            await resp.write(chunk)
+                    chunk = rewriter.close()
+                    if dive_key:
+                        raw += chunk
+                    if chunk:
                         await resp.write(chunk)
                     if dive_key and r.status == 200 and b"[DONE]" in raw:
                         _deep_dive_save(dive_key, question, _sse_text(bytes(raw)))

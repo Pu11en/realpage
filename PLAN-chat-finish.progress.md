@@ -13,3 +13,10 @@
 - `SOUL.md` fix: list items use a short name (never repeat the unit count), first line max 10 words, plus a tiny bolded one-fact example. Rebuilt with `tooling/dev.sh`.
 - Then 5/5 twice in a row. Check line passes.
 - Open: "Which buildings sold recently?" hit 59 words on the second pass — close to the limit; the bot also sometimes skips bold on unit counts/dates (T3's auto-bold will cover that).
+
+## T3 Auto-bold safety net — done 2026-09-13
+- New `chatbot/autobold.py`: `bold()` wraps plain phone numbers, "N units", month-day-year dates (Sep 13, 2026 / 9/13/2026) and the labels Next:/Sources:/Why now:/Size:/Software:/Ask for: (plus "Call" at the start of a line or bullet) in `**`. Existing bold, links, bare URLs and `code` are never touched; only `**` is ever added, and running it twice changes nothing.
+- `StreamBolder` holds back at most ~40 characters (never splits a pattern, an open `**`, or a link), so a phone split across two chunks is still bolded.
+- `chatbot/proxy.py` uses it on all paths: site `/chat` and `/chat/stream`, Open WebUI gateway non-streamed and streamed (SSE lines rewritten; held text sent before finish/[DONE]), and saved deep-dive replays. Dockerfile copies `autobold.py`.
+- Checked: `chatbot/tests/test_autobold.py` 13 passed (plain→bold, already-bold untouched, URLs untouched, split chunks, 600 random splits equal whole-text result, gateway SSE rewrite). Rebuilt with `tooling/dev.sh`; `check-answers.sh` 5/5 passed; Check line passes.
+- Open: month-year only dates ("July 2026") are not bolded (plan asked for month-day-year).
