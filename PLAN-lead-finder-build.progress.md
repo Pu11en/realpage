@@ -721,3 +721,56 @@ Nothing left open for this task.
   (multiple real areas, city filter, labels) is 5.3's job once a real state run
   exists. `newThisWeek`/`openingNext12mo` are placeholder 0s for state areas
   until 5.3 adds real date-based labels.
+
+## 5.4 Chat knows every area -- done
+
+- `site/data/build_data.py`: added `write_chat_leads_csv(slug, area_json)` and
+  `CHAT_LEADS_COLUMNS` -- flattens a state area's already-ranked lead list (from
+  `build_area`, 5.1) into `propertystack/data/<slug>/chat-leads.csv`, one flat
+  row per lead with everything a deep dive needs (name/city/address/units/stage/
+  signal/why/dates/buyer/developer/phone/website/software/permit_link/news_link/
+  website_link/agenda_link/map_link). Called from `build_state_areas()` right
+  after each area's JSON is written, so it only exists for real (or, in tests,
+  sample) areas -- never for `dallas-parked`/`client-map`/etc. (same exclusion
+  list as 5.1). Added to `.gitignore` (`propertystack/data/*/chat-leads.csv`)
+  since it's a generated file next to each area's real `leads.json`.
+- `chatbot/Dockerfile`'s `kb` build stage: after copying plano-richardson's
+  CSVs (unchanged), it now concatenates every `propertystack/data/*/chat-leads.csv`
+  it finds (one header, then all bodies) into a single `/kb/data/state-leads.csv`.
+  The existing plugin loader (`chatbot/hermes-profile/plugins/propertystack/__init__.py`)
+  already turns every CSV in its data dir into one SQLite table per file, so
+  this gives it a `state_leads` table for free, no plugin code changes needed
+  beyond documentation -- one row per lead, an `area` column to filter by, no
+  master/contacts join needed (state-area leads are already flat).
+- `plugin/__init__.py`: added `state_leads` to `SOURCE_NAMES` (cited as
+  "PropertyStack lead ranking", same as `leads`) and a `ps_schema` note
+  explaining the table, its `area` filter, stage values and the ready-made
+  link columns.
+- `SOUL.md`: intro no longer says "Collin County" is the only coverage --
+  names Plano+Richardson plus "every other area we track (`state_leads`)".
+  Deep-dive link row gained 📋 Agenda (between Permit and News) with a rule
+  for when to show it (`agenda_link` from `state_leads`, a planned project
+  found on a city agenda, never a meeting video); Permit rule updated to
+  cover both the Plano/Richardson TDLR path and `state_leads.permit_link`.
+- `query-propertystack/SKILL.md`: table doc gained the `state_leads` row and
+  a note that the plugin also loads every other area's `chat-leads.csv`.
+- Test: `propertystack/skills/lead-finder/tests/test_build_areas.py` gained
+  `test_write_chat_leads_csv_flattens_for_the_chatbot` -- builds the `_sample`
+  area, writes its chat-leads.csv to a tmp dir (monkeypatches `STATE_DATA_DIR`
+  so nothing real gets touched), and checks one row per lead, the right
+  columns, every row tagged with its area, and every row has a `why`.
+- Checked: `bash tooling/qa/check-lead-finder.sh` passes (all lead-finder*
+  test dirs incl. the new test, check-panel.sh clean). Also ran
+  `python3 site/data/build_data.py` directly -- real (non-sample) build is
+  unaffected, since no real state-area run has happened yet (Part 6).
+- Left open, on purpose: `tooling/qa/check-answers.sh` (the plan's other check
+  for this task) makes real paid calls to the local bot -- per standing money
+  rules I didn't run it. It also needs a real second area loaded to say
+  anything new about area-awareness, which won't exist until Part 6 runs.
+  The actual Docker build (`bash tooling/dev.sh`) wasn't run either -- no
+  state area exists yet to prove `state_leads` gets rows, so the only thing
+  it could confirm right now is "the Dockerfile still builds", which the
+  Dockerfile syntax/shell logic here doesn't need Docker to verify. Once a
+  real area exists (6.x), a natural follow-up check is: rebuild the chatbot
+  image and ask it "what leads do you have in <area>?" to confirm
+  `state_leads` actually has rows and the bot cites them correctly.

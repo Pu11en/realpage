@@ -144,7 +144,7 @@ Open: http://localhost:8765 → Early Leads → the new state's button
   sidebar area dropdown. Check passes. Commit.
 - [x] **5.3 City filter + labels.** State areas get a city filter above the table; rows show
   "Planned (not permitted yet)", "Opens: not public yet", "Sold <date>" and the why line. Commit.
-- [ ] **5.4 Chat knows every area.** The chatbot loads every area's leads; `SOUL.md` stops naming one
+- [x] **5.4 Chat knows every area.** The chatbot loads every area's leads; `SOUL.md` stops naming one
   county; deep dives work for a new area (links incl. 📋 Agenda when present). Rebuild with
   `bash tooling/dev.sh`; run `tooling/qa/check-answers.sh`. Commit.
 - [ ] **6.1 Wire the chain.** `lead-finder/run.py` runs every step in order (cities → sources →

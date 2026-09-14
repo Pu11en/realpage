@@ -530,9 +530,43 @@ def build_area(slug: str) -> dict:
     }
 
 
+CHAT_LEADS_COLUMNS = [
+    "area", "name", "city", "address", "units", "stage", "signal", "why",
+    "permit_date", "opening_date", "sale_date", "buyer", "developer",
+    "office_phone", "website", "software", "permit_link", "news_link",
+    "website_link", "agenda_link", "map_link",
+]
+
+
+def write_chat_leads_csv(slug: str, area_json: dict) -> None:
+    """Flatten one state area's JSON (5.1's `build_area`) into a chat-ready CSV
+    at propertystack/data/<slug>/chat-leads.csv -- the chatbot's plugin (5.4)
+    copies every area's chat-leads.csv into one `state_leads` table, since a
+    state area has no master/contacts CSVs to join against (its lead rows are
+    already flat)."""
+    out_path = STATE_DATA_DIR / slug / "chat-leads.csv"
+    with out_path.open("w", newline="") as f:
+        writer = csv.writer(f)
+        writer.writerow(CHAT_LEADS_COLUMNS)
+        for lead in area_json["leads"]:
+            links = lead.get("links") or {}
+            writer.writerow([
+                slug, lead.get("property") or "", lead.get("city") or "",
+                lead.get("address") or "", lead.get("units") or "",
+                lead.get("stage") or "", lead.get("signal") or "", lead.get("why") or "",
+                lead.get("permitDate") or "", lead.get("openingDate") or "",
+                lead.get("saleDate") or "", lead.get("buyer") or "",
+                lead.get("developer") or "", lead.get("officePhone") or "",
+                lead.get("website") or "", lead.get("software") or "",
+                links.get("permit") or "", links.get("news") or "",
+                links.get("website") or "", links.get("agenda") or "",
+                links.get("map") or "",
+            ])
+
+
 def build_state_areas(include_sample: bool = False) -> list[str]:
-    """Build every discovered state area's JSON under site/data/areas/. Returns
-    the slugs actually built."""
+    """Build every discovered state area's JSON under site/data/areas/, plus
+    its chat-leads.csv (for the chatbot). Returns the slugs actually built."""
     slugs = discover_state_areas(include_sample=include_sample)
     if not slugs:
         return []
@@ -540,6 +574,7 @@ def build_state_areas(include_sample: bool = False) -> list[str]:
     for slug in slugs:
         area_json = build_area(slug)
         (AREAS_OUT_DIR / f"{slug}.json").write_text(json.dumps(area_json, indent=2))
+        write_chat_leads_csv(slug, area_json)
     return slugs
 
 

@@ -61,3 +61,26 @@ def test_build_state_areas_writes_json_only_when_asked(tmp_path, monkeypatch):
 
     slugs_default = build_data.build_state_areas(include_sample=False)
     assert "_sample" not in slugs_default
+
+
+def test_write_chat_leads_csv_flattens_for_the_chatbot(tmp_path):
+    """5.4: the chatbot's `state_leads` table comes from every area's
+    chat-leads.csv -- one flat row per lead, no master/contacts join needed."""
+    import csv as csv_mod
+
+    area_json = build_data.build_area("_sample")
+    out_dir = tmp_path / "_sample"
+    out_dir.mkdir()
+    try:
+        real_dir = build_data.STATE_DATA_DIR
+        build_data.STATE_DATA_DIR = tmp_path
+        build_data.write_chat_leads_csv("_sample", area_json)
+    finally:
+        build_data.STATE_DATA_DIR = real_dir
+
+    with (out_dir / "chat-leads.csv").open(newline="") as f:
+        rows = list(csv_mod.DictReader(f))
+    assert len(rows) == area_json["stats"]["leads"]
+    assert {r["area"] for r in rows} == {"_sample"}
+    assert set(build_data.CHAT_LEADS_COLUMNS) == set(rows[0].keys())
+    assert all(r["why"] for r in rows)

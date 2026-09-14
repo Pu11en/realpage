@@ -2,3 +2,4 @@ chatbot/.env.local
 __pycache__/
 tooling/qa/shots/
 propertystack/runs/cache/
+propertystack/data/*/chat-leads.csv
