@@ -66,7 +66,7 @@ Open: http://localhost:8765 → Early Leads → the new state's button
   deleted in 1.1) -- 5+ unit permits, last 12-24 months, for any state; also add unincorporated
   county areas as "cities" when the county issues the permits; write `propertystack/data/<state-slug>/cities.json`
   (city, permits, RealPage count from client map). Fixture tests. Commit.
-- [ ] **2.2 Permit recipes + catalog lookup.** `propertystack/recipes/*.json` format (by permit
+- [x] **2.2 Permit recipes + catalog lookup.** `propertystack/recipes/*.json` format (by permit
   system -- Socrata / ArcGIS / Accela / EnerGov / Tyler -- or by city): how to query new
   multifamily permits, fields, date tested, how complete. `find-sources` first asks the free
   **Socrata Discovery API** (`https://api.us.socrata.com/api/catalog/v1?q=building%20permits&search_context=<domain>`

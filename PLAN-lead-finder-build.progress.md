@@ -155,3 +155,39 @@
   to either restore a small shared census-fetch helper or point `targets.py` at
   `lead-finder-cities/rank.py`'s self-contained version instead.
 - Next task (2.2) adds permit recipes (Socrata/ArcGIS catalog lookup) per city.
+
+## 2.2 Permit recipes + catalog lookup -- done
+
+- New skill `propertystack/skills/lead-finder-sources/find_sources.py`:
+  - `find_sources(city, state, http_get, recipes_dir=...)`: tries the free **Socrata
+    Discovery API** first (`https://api.us.socrata.com/api/catalog/v1?q=<city>+building+permits`),
+    then the **ArcGIS Hub search** API (`https://hub.arcgis.com/api/search/v1/collections/dataset/items?q=<city>%20building%20permits`)
+    if Socrata has nothing. For each catalog candidate whose name mentions "permit", it pulls
+    a small sample of rows (`$limit=20` for Socrata, `features` for an ArcGIS FeatureServer
+    query) and runs `test_dataset(rows)`, which only accepts the dataset if the sample has a
+    units-like or date-like field and reports how many of the sampled rows look multifamily
+    (matching "multifamily"/"apartment"/"dwelling" across the row's values) -- an empty or
+    clearly irrelevant dataset is rejected, never saved as a recipe.
+  - A working recipe is written to `propertystack/recipes/<city-slug>.json`: city, state,
+    system (`socrata`/`arcgis`), endpoint, guessed field-name mapping (permit_type, issue_date,
+    units, address -- guessed by matching column names, since real catalogs don't standardize
+    field names), `date_tested` (today), and a `completeness` note describing what the test
+    found. No catalog hit -> returns `None` and writes nothing, so 2.3's portal-search fallback
+    has something to do.
+  - Both catalog calls and the sample-row fetch go through one injectable `http_get(url) ->
+    dict|list` so tests never touch the network (per the plan's fixture-test rule); `run.py`
+    (2.2's real caller, wired in later at 6.1) will pass a real HTTP GET.
+  - Used fictional city names (Rivertown, Cedarville, Oakford) in the fixtures/tests, matching
+    2.1's convention, since the 1.1 no-place-names test scans every `.py` file under
+    `lead-finder*/`.
+- Tests: `tests/test_find_sources.py` -- Socrata catalog hit saved as a recipe with guessed
+  fields and the right completeness count; ArcGIS Hub used when Socrata returns nothing; no
+  catalog hit anywhere returns `None` and saves no file; a dataset with no units/date-like
+  field is rejected even though its catalog entry matched; `test_dataset()` and `slugify()`
+  exercised directly.
+- Checked: `bash tooling/qa/check-lead-finder.sh` -- lead-finder-sources' own 6 tests pass,
+  plus all other lead-finder* tests (34 lead-finder + 4 lead-finder-cities, unaffected) and the
+  panel check, all clean.
+- Nothing left open. Next task (2.3) adds the `find-sources` fallback for cities with no
+  catalog hit: search for the city's permit portal, identify the system by URL/markup pattern,
+  test on 5 permits, save the recipe the same way.
