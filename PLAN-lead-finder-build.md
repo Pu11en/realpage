@@ -187,7 +187,7 @@ Open: http://localhost:8765 → Early Leads → the new state's button
   6.4/6.5 resumed NY; keep working the to-read queue until the run finishes or hits a cap. When
   done: save recipes, spot-check 10 software calls by hand, and write in the progress log how many
   projects, searches (Jina vs free), cities skipped and why. Commit.
-- [ ] **6.8 Fill the site + chat.** Build the site and rebuild the chat with the new area(s); run
+- [x] **6.8 Fill the site + chat.** Build the site and rebuild the chat with the new area(s); run
   the Check and `check-answers.sh`. Commit. Recap in plain words what is on the site now.
 
 ### Part 2: Permits (new apartment projects)

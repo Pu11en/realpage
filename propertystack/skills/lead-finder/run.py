@@ -417,7 +417,21 @@ def main(argv: list[str] | None = None) -> int:
     )
     records = run_chain(state, run_folder, deps, cities=args.city)
     print(f"lead-finder: {len(records)} leads for {state} -> {run_folder.path}")
+
+    leads_path = write_area_leads(state, records)
+    print(f"lead-finder: wrote {len(records)} records to {leads_path}")
     return 0
+
+
+def write_area_leads(state: str, records: list[LeadRecord], data_dir: Path | None = None) -> Path:
+    """Write a state's final scored records to `propertystack/data/<slug>/leads.json`
+    (part-1 format, 1.2) so `site/data/build_data.py` (5.1) picks the area up."""
+    data_dir = data_dir or (HERE.parents[2] / "propertystack" / "data")
+    area_dir = data_dir / state.lower()
+    area_dir.mkdir(parents=True, exist_ok=True)
+    leads_path = area_dir / "leads.json"
+    leads_path.write_text(json.dumps([r.to_dict() for r in records], indent=1))
+    return leads_path
 
 
 if __name__ == "__main__":

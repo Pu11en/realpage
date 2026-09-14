@@ -1124,3 +1124,53 @@ Nothing left open for this task.
   the same known, expected-not-a-bug limitation flagged in 6.4 and 6.6 -- not
   reopened here. Next task (6.8) builds the site and chat with AZ's 19 leads (plus NY's
   2) and reruns the Check + `check-answers.sh`.
+
+## 6.8 Fill the site + chat -- done
+
+- Found a real gap while starting this task: `run.py`'s chain (6.1) scored and ranked
+  every state's leads in memory but never wrote them anywhere `build_data.py` could
+  find -- `build_area()`/`discover_state_areas()` (5.1) read from
+  `propertystack/data/<state-slug>/leads.json`, which no run had ever produced. Fixed
+  by adding a few lines to `run.py`'s `main()`: after `run_chain` returns, write the
+  final records to `propertystack/data/<state>.lower()/leads.json` in record.py's
+  `to_dict()` format. This makes every future full run (6.3/6.6 style) automatically
+  feed the site -- no separate manual step needed going forward.
+  Added a regression test (`propertystack/skills/lead-finder/tests/test_run_writes_area_leads.py`)
+  that runs a small fake chain end-to-end and asserts the `leads.json` file appears
+  with the right records, so this can't silently break again.
+- For the two runs that already finished under the old code (AZ and NY, both from
+  6.3-6.7), backfilled the same file by hand from their existing run-folder output
+  rather than re-running the network chain: AZ already had a completed
+  `score._state.json` step (19 scored, ranked records) -- loaded and wrote it
+  straight to `propertystack/data/az/leads.json`. NY's run never reached the
+  HUD/awards/software/contact/score steps (it was stopped early per 6.4/6.5's "close
+  out NY" decision, at 2 merged Buffalo leads) -- assembled its 2 records from the
+  `merged.<city>.json` files across all 25 NY cities (only Buffalo had any: 2) and
+  ran them through 4.5's `score_and_rank` directly (skipping the software/contact
+  fill steps that never ran, so those leads correctly stay "software unknown" / no
+  contact -- honest, not guessed) to write `propertystack/data/ny/leads.json`.
+- Ran `python3 site/data/build_data.py`: wrote `site/data/areas/az.json` (19 leads,
+  8 cities, 2640 units) and `site/data/areas/ny.json` (2 leads), plus the updated
+  `site/data/areas/index.json` (now 3 area buttons: Plano-Richardson, Az, Ny --
+  labels come from the existing generic `slug.title()` code in 5.2, not new here).
+- Rebuilt the chat stack with `bash tooling/dev.sh` (rebuilds the chatbot Docker
+  image, which bakes in every area's `chat-leads.csv` into the knowledge base) --
+  built and started cleanly, "Ready: open http://localhost:8765".
+- Checked: `bash tooling/qa/check-lead-finder.sh` -- all green (47 lead-finder tests,
+  up one for the new regression test; check-panel.sh clean, 0 problems on 3 pages).
+  `bash tooling/qa/check-answers.sh` -- 5/5 passed (sales, top-3-to-call, software
+  lookup, owner lookup, deep dive -- all still answer correctly against the combined
+  Plano-Richardson + AZ + NY knowledge base).
+- What's on the site now: Early Leads has 3 area buttons -- Plano-Richardson
+  (unchanged), Az (19 leads across 8 AZ cities, mostly HUD-loan and sales-news
+  sourced since AZ's cities have no free permit-portal data online, per 6.6/6.7's
+  finding), and Ny (2 leads, both Buffalo building sales, since the NY run was
+  intentionally stopped early per Drew's 6.5 instruction). Each state button has its
+  own table with a city filter and the plan's exact status wording ("Planned (not
+  permitted yet)", "Opens: not public yet", "Sold <date>"). The chatbot can now
+  answer questions about AZ and NY leads the same way it already does for
+  Plano-Richardson.
+- Left open: state-area labels read "Az" / "Ny" (title-cased slug, not "Arizona" /
+  "New York") -- this is existing, pre-committed 5.2 behavior (deliberately
+  area-agnostic, no state-name lookup table in code), not something this task
+  introduced or was asked to change.

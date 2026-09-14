@@ -4,6 +4,16 @@
       "slug": "plano-richardson",
       "label": "Plano\u2013Richardson",
       "dataPath": "data/leads.json"
+    },
+    {
+      "slug": "az",
+      "label": "Az",
+      "dataPath": "data/areas/az.json"
+    },
+    {
+      "slug": "ny",
+      "label": "Ny",
+      "dataPath": "data/areas/ny.json"
     }
   ]
 }

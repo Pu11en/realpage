@@ -1,0 +1,76 @@
+{
+  "area": "ny",
+  "generatedFrom": "propertystack/data/ny/leads.json",
+  "stats": {
+    "leads": 2,
+    "cities": 1,
+    "unitsInPlay": 0,
+    "newThisWeek": 0,
+    "openingNext12mo": 0
+  },
+  "cities": [
+    "Buffalo"
+  ],
+  "leads": [
+    {
+      "id": "ny-1",
+      "property": "2227 SOUTH PARK",
+      "community": null,
+      "city": "Buffalo",
+      "address": "2227 SOUTH PARK",
+      "units": 0,
+      "stage": "permitted",
+      "permitDate": "2026-08-18",
+      "openingDate": null,
+      "saleDate": null,
+      "buyer": null,
+      "developer": null,
+      "officePhone": null,
+      "website": "https://www.pyramidbrokerage.com/listings/2227-south-park-avenue-buffalo-ny-b13819/",
+      "software": null,
+      "links": {
+        "permit": "https://data.buffalony.gov/resource/9p2d-f3yt.json",
+        "website": "https://www.pyramidbrokerage.com/listings/2227-south-park-avenue-buffalo-ny-b13819/",
+        "news": "https://www.bizjournals.com/buffalo/news/2025/07/21/dofi-development-plans-apartments-in-south-buffalo.html"
+      },
+      "sources": [
+        "https://data.buffalony.gov/resource/9p2d-f3yt.json"
+      ],
+      "signalType": "Upcoming",
+      "signal": "Opens: not public yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet",
+      "score": 100,
+      "isNew": false
+    },
+    {
+      "id": "ny-2",
+      "property": "110 PEARL ST",
+      "community": null,
+      "city": "Buffalo",
+      "address": "110 PEARL ST",
+      "units": 0,
+      "stage": "permitted",
+      "permitDate": "2026-08-18",
+      "openingDate": null,
+      "saleDate": null,
+      "buyer": null,
+      "developer": null,
+      "officePhone": null,
+      "website": "https://www.apartmenthomeliving.com/buffalo-ny/zip-code/14202-apartments",
+      "software": null,
+      "links": {
+        "permit": "https://data.buffalony.gov/resource/9p2d-f3yt.json",
+        "website": "https://www.apartmenthomeliving.com/buffalo-ny/zip-code/14202-apartments",
+        "news": "https://www.facebook.com/TheBuffaloNews/posts/two-months-after-purchasing-the-historic-dun-building-on-pearl-street-mcguire-de/1241030941391361/"
+      },
+      "sources": [
+        "https://data.buffalony.gov/resource/9p2d-f3yt.json"
+      ],
+      "signalType": "Upcoming",
+      "signal": "Opens: not public yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet",
+      "score": 97,
+      "isNew": false
+    }
+  ]
+}
