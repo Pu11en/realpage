@@ -22,7 +22,7 @@ Open: http://localhost:8765/map.html
 
 ## Tasks
 
-- [ ] **C1 Skeleton + tests.** `propertystack/skills/client-map/` with `SKILL.md` (purpose,
+- [x] **C1 Skeleton + tests.** `propertystack/skills/client-map/` with `SKILL.md` (purpose,
   150-search cap, outputs) and `run.py`. Tests with saved fixtures only (no network): a
   search-budget object that stops cleanly at the cap, URL → vendor using `pms_detect.py` rules
   (loftliving/activebuilding/onesite = RealPage; residentportal = Entrata, rejected), duplicate
