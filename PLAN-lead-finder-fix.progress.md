@@ -71,3 +71,54 @@ Commit: (see git log for this file's commit)
   `python3 -m pytest -q propertystack --ignore=propertystack/skills/client-map`: 217 passed
   (up from 200 at F1, all new).
 - Nothing left open for F2.
+
+## F3 Find permit data everywhere -- done
+- `propertystack/skills/lead-finder-sources/find_sources.py` now tries, in order: an
+  ArcGIS Online search by place name (`www.arcgis.com/sharing/rest/search?q=title:permits
+  "<place>"`) whose first hit's owner org is resolved to that org's own ArcGIS Hub search
+  endpoint (`community/organizations/<orgId>` -> `urlKey` -> `<urlKey>-hub.arcgis.com`) --
+  falling back to the generic `hub.arcgis.com` hub search only if no org-specific hub was
+  found; then the Socrata Discovery catalog (unchanged); then a new `_try_ckan`, which
+  queries data.gov's CKAN `package_search` (the closest thing to a universal CKAN catalog --
+  individual city CKAN portals have no common discovery API) and pulls the first CSV/JSON
+  resource URL from a hit whose owning organization's name says it belongs to this
+  city/state.
+- Tightened acceptance (`test_dataset`): a dataset is only accepted once a real sample-row
+  query returns **at least 100 rows** (bumped the Socrata `$limit` and equivalent sample
+  size from 20 to 200), **has an address field** (address/stname/street), and **at least
+  one row dated within the last 24 months** (new `_has_recent_date`/`_parse_date` helpers,
+  `today` is now an injectable/optional argument on `find_sources()` and `test_dataset()`
+  for deterministic tests). A small table of yearly totals -- the kind of thing a real CKAN
+  city portal can return instead of permit-level rows -- now fails the row-count check
+  instead of being accepted.
+- `find_sources_fallback.py`: added a `smartgov` URL/HTML pattern next to the existing
+  `accela`/`tyler-energov` ones, and a `NO_FREE_DATA_SYSTEMS` set. If any search result's
+  portal is identified as one of those three, it's noted and skipped without ever being
+  scraped for "sample permits" (previously an Accela/Tyler portal with a few visible rows
+  on its search page was accepted as a working recipe, which isn't real bulk free data --
+  it's a permit-by-permit lookup form). If nothing else in the search results works, the
+  city comes back as `{"skipped": True, "reason": "no free data (<system> only)", "no_retry":
+  True}` instead of the old generic "no permits online" -- so the run loop (and Drew) can
+  tell "we truly found nothing" apart from "this city's portal has no free bulk data, don't
+  bother retrying it."
+- `propertystack/skills/lead-finder/run.py`'s `step_sources` now forwards `deps.today` into
+  `find_sources.find_sources(..., today=...)` so the 24-months-recent check is deterministic
+  under the chain's injectable "today" the same way every other date-aware step already is.
+- Tests: rewrote `tests/test_find_sources.py` for the new try-order (ArcGIS Online org hub
+  -> generic ArcGIS hub -> Socrata -> CKAN), with 100+-row fixtures, a new
+  `test_arcgis_online_org_hub_used_before_generic_hub`, `test_ckan_catalog_hit_used_when_...`,
+  `test_small_yearly_totals_table_is_rejected` (the Phoenix-CKAN-shaped case from the plan),
+  `test_dataset_with_no_address_field_is_rejected`, and `test_dataset_with_only_old_dates_is_
+  rejected`. Rewrote the two Accela/Tyler tests in `tests/test_find_sources_fallback.py` to
+  expect the new no-free-data skip instead of a saved recipe, and added a `smartgov`
+  `identify_system` case. Updated `lead-finder/tests/test_run.py`'s fixture rows from 1 to
+  121 (100+ needed to pass the new bar) and routed its fake `http_get_json` to return empty
+  ArcGIS results so the Socrata path is still what the test exercises.
+- Checked: `bash tooling/qa/check-lead-finder.sh` passes (all lead-finder* suites + the site
+  panel check). Full suite `python3 -m pytest -q propertystack --ignore=propertystack/skills/client-map`:
+  221 passed (up from 217 at F2).
+- Nothing left open for F3. The ArcGIS-Online-org-hub-resolution shape (exact JSON fields
+  from `sharing/rest/community/organizations/<orgId>`) is my best-faith reading of the
+  plan's instruction and is only exercised against fakes here -- it should get its first
+  real-network exercise in F4 (Arizona permit recipes), which is the first task that will
+  actually call `find_sources` against live endpoints.

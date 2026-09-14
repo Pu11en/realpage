@@ -171,6 +171,8 @@ def _records_from(data) -> list[LeadRecord]:
 def step_sources(run_folder: RunFolder, city: str, state: str, deps: ChainDeps) -> dict:
     def _do():
         kwargs = {"recipes_dir": deps.recipes_dir} if deps.recipes_dir else {}
+        if deps.today is not None:
+            kwargs["today"] = deps.today
         recipe = find_sources.find_sources(city, state, deps.http_get_json, **kwargs)
         if recipe is not None:
             return recipe

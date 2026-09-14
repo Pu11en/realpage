@@ -25,10 +25,15 @@ MIN_SAMPLE_PERMITS = 5
 SYSTEM_PATTERNS = [
     ("accela", re.compile(r"aca-prod\.accela\.com|citizenaccess", re.I)),
     ("tyler-energov", re.compile(r"energov|citizenselfservice", re.I)),
+    ("smartgov", re.compile(r"smartgovcommunity\.com|smartgov", re.I)),
     ("opengov", re.compile(r"opengov\.com|permitting\.opengov", re.I)),
     ("centralsquare", re.compile(r"centralsquare", re.I)),
     ("mygovernmentonline", re.compile(r"mygovernmentonline", re.I)),
 ]
+
+# These systems have no free bulk-data access (portal only, permit-by-permit lookup) --
+# mark the city "no free data" the first time one is seen, never keep retrying it.
+NO_FREE_DATA_SYSTEMS = {"accela", "tyler-energov", "smartgov"}
 
 REPORT_FILE_RE = re.compile(r"\.(pdf|xlsx?|csv)(\?|$)", re.I)
 PERMIT_ROW_RE = re.compile(r"permit[^a-z]{0,20}(no\.?|number|#)?\s*[:#]?\s*\d{2,}", re.I)
@@ -55,6 +60,7 @@ def find_sources_fallback(
     (has "skipped": True and "reason") -- never raises for "nothing found online".
     """
     results = search_fn(f"{city} {state} building permit portal citizen access permits online")
+    no_free_data_system = None
     for result in results:
         url = result.get("url", "")
         if not url:
@@ -63,6 +69,11 @@ def find_sources_fallback(
         html = fetch_fn(url)
         if system is None and html:
             system = identify_system(html)
+        if system in NO_FREE_DATA_SYSTEMS:
+            # No bulk free data behind this portal -- note it and move on, never
+            # keep scraping pages looking for one.
+            no_free_data_system = system
+            continue
         if system is None:
             continue
         if not html:
@@ -81,6 +92,15 @@ def find_sources_fallback(
         recipe = _recipe(city, state, "report-file", url, sample_count, mf_hits)
         _save(recipe, city, recipes_dir)
         return recipe
+
+    if no_free_data_system:
+        return {
+            "city": city,
+            "state": state,
+            "skipped": True,
+            "reason": f"no free data ({no_free_data_system} only)",
+            "no_retry": True,
+        }
 
     return {"city": city, "state": state, "skipped": True, "reason": "no permits online"}
 

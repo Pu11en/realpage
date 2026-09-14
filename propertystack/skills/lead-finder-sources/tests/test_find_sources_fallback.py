@@ -19,7 +19,9 @@ NO_PERMIT_HTML = "<html><body>Welcome to our city</body></html>"
 REPORT_PDF_TEXT = "".join(f"Permit # {2000 + i} multifamily\n" for i in range(6))
 
 
-def test_accela_portal_identified_and_saved(tmp_path):
+def test_accela_portal_marked_no_free_data(tmp_path):
+    """Accela is a portal-only, permit-by-permit lookup with no bulk free data --
+    it must be marked "no free data" and never treated as a usable recipe."""
     results = [{"url": "https://aca-prod.accela.com/RIVERTOWN/Default.aspx", "title": "Citizen Access"}]
 
     def search_fn(query):
@@ -28,12 +30,11 @@ def test_accela_portal_identified_and_saved(tmp_path):
     def fetch_fn(url):
         return ACCELA_HTML
 
-    recipe = fsf.find_sources_fallback("Rivertown", "TX", search_fn, fetch_fn, recipes_dir=tmp_path)
-    assert recipe["system"] == "accela"
-    assert recipe["city"] == "Rivertown"
-    assert "6 sample permits" in recipe["completeness"]
-    saved = json.loads((tmp_path / "rivertown.json").read_text())
-    assert saved == recipe
+    result = fsf.find_sources_fallback("Rivertown", "TX", search_fn, fetch_fn, recipes_dir=tmp_path)
+    assert result["skipped"] is True
+    assert result["no_retry"] is True
+    assert "accela" in result["reason"]
+    assert not list(tmp_path.glob("*.json"))
 
 
 def test_system_identified_from_page_html_not_just_url(tmp_path):
@@ -45,8 +46,9 @@ def test_system_identified_from_page_html_not_just_url(tmp_path):
     def fetch_fn(url):
         return "<html>Powered by Tyler EnerGov CSS</html>" + ACCELA_HTML
 
-    recipe = fsf.find_sources_fallback("Cedarville", "TX", search_fn, fetch_fn, recipes_dir=tmp_path)
-    assert recipe["system"] == "tyler-energov"
+    result = fsf.find_sources_fallback("Cedarville", "TX", search_fn, fetch_fn, recipes_dir=tmp_path)
+    assert result["skipped"] is True
+    assert "tyler-energov" in result["reason"]
 
 
 def test_too_few_sample_permits_rejected_then_report_file_used(tmp_path):
@@ -82,6 +84,7 @@ def test_nothing_found_online_returns_skip_note_and_saves_nothing(tmp_path):
 
 def test_identify_system_and_counters_directly():
     assert fsf.identify_system("https://aca-prod.accela.com/x") == "accela"
+    assert fsf.identify_system("https://cityname.smartgovcommunity.com/x") == "smartgov"
     assert fsf.identify_system("nothing here") is None
     assert fsf.count_sample_permits(ACCELA_HTML) == 6
     assert fsf.count_multifamily_hits(ACCELA_HTML) == 12  # "multifamily" and "apartment" both match per row

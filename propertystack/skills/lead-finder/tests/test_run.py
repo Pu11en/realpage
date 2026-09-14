@@ -38,6 +38,14 @@ SOCRATA_ROWS = [
         "units_authorized": "40",
         "address": "1 Sample St",
     },
+] + [
+    {
+        "permit_type": "single family",
+        "issue_date": "2026-08-01",
+        "units_authorized": "1",
+        "address": f"{i} Sample St",
+    }
+    for i in range(120)
 ]
 
 
@@ -64,6 +72,10 @@ class FakeWeb:
 
 
 def _http_get_json(url):
+    if url.startswith(chain.find_sources.ARCGIS_ONLINE_SEARCH):
+        return {"results": []}
+    if url.startswith(chain.find_sources.ARCGIS_HUB_SEARCH):
+        return {"data": []}
     if url.startswith(chain.find_sources.SOCRATA_CATALOG):
         return SOCRATA_CATALOG_HIT
     return SOCRATA_ROWS

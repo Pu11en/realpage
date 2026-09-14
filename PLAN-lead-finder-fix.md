@@ -53,7 +53,7 @@ Open: http://localhost:8765 → Early Leads → Az
   link is Yardi evidence). Use it in `project_details`, `find_website`, `contact_scrape`. Fixture
   tests from real cases: "Marquee on 5th Tucson" must not match marqueesportsnetwork.com or
   themarqueestl.com; Bella Victoria must pick bellavictoria.com. Commit.
-- [ ] **F3 Find permit data everywhere.** `find_sources` asks, in order: ArcGIS Online search by place
+- [x] **F3 Find permit data everywhere.** `find_sources` asks, in order: ArcGIS Online search by place
   name (`https://www.arcgis.com/sharing/rest/search?q=title:permits "<place>"`), the city's ArcGIS hub
   search, the Socrata catalog, CKAN `package_search`. Find a city's ArcGIS hub from the ArcGIS Online result's owner org
   (`orgId` → its hub/maps site), never by guessing; none → skip that source. **Accept a dataset only after one real query
