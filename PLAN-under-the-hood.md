@@ -83,7 +83,12 @@ Open: http://localhost:8765/under-the-hood.html
 - [ ] **U10 Playbook: adopt the build bot in an hour.** First research 3-5 real playbooks/onboarding
   guides from respected open-source projects (note what makes them good); then write
   `docs/PLAYBOOK-build-bot.md` in our own words: what it is, 5-minute setup, a first tiny plan,
-  how checks and human OK work, when not to use it. Linked from U7. Commit.
+  how checks and human OK work, when not to use it. Then a **timed new-user test**: a fresh AI
+  session that has seen only the playbook, in a clean Docker container with a fresh clone of the
+  build bot repo, follows it word for word to a first finished step; record minutes and stuck
+  points, fix the playbook, repeat until clean; save `site/data/playbook-test.json` (shown in U7 as
+  "a new user got it running in X minutes"). Add `docs/WORKSHOP-build-bot.md`, a 45-minute workshop
+  outline. Linked from U7. Commit.
 - [ ] **U11 Final pass.** Run the Check, `check-answers.sh` and shipcheck's `scripts/shipcheck.sh`
   against this repo; open the page at phone and desktop size with Playwright (screenshots in
   `tooling/qa/`); every number matches its data file; fix anything off. Commit. Recap in plain words
