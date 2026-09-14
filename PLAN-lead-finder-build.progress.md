@@ -548,3 +548,28 @@ Nothing left open for this task.
 - Checked: `python3 -m pytest propertystack/skills/lead-finder-software/tests -q` (16
   passed) and `bash tooling/qa/check-lead-finder.sh` (all suites + panel check clean).
 - Nothing left open. Next task (4.3) is `find-sales-news`.
+
+## 4.3 find-sales-news -- done
+
+- Added `propertystack/skills/lead-finder-sales-news/sales_news.py`: `news_query()`
+  builds the SearXNG news query (`"<city>" apartments sold OR acquires OR acquisition
+  units`) covering the full 24-month window; `gdelt_url()` builds the GDELT DOC API
+  URL (`mode=artlist&format=json`) as a freshness add-on queried in addition to, not
+  instead of, SearXNG (GDELT DOC only indexes roughly the last 3 months). `hit_to_record()`
+  turns one title/snippet/date into a sold-stage LeadRecord only if it has a sale
+  keyword, a parseable 20+ unit count, and a real date -- any missing and it's dropped,
+  never guessed. `extract_buyer()` pulls a buyer name from "acquired by X" / "sold to X"
+  / "X acquires" patterns, blank otherwise. `find_sales_news()` runs both sources for
+  one city and dedupes by article URL.
+- No place names in the module -- city/area are always caller-supplied.
+- Tests: `tests/test_sales_news.py` (13 tests, no network) -- query building, GDELT URL
+  encoding, full match, dropped for no sale keyword / no units / under-20-units / no
+  date, buyer extraction (acquires pattern and no-match case), SearXNG-only end to end
+  (with an out-of-window hit and a no-units hit both dropped), SearXNG+GDELT dedup by
+  URL, bad GDELT JSON ignored gracefully, and no gdelt_fetch_fn supplied at all.
+- Checked: `bash tooling/qa/check-lead-finder.sh` -- new skill's 13 tests pass, every
+  other lead-finder* dir unaffected (108 before, 121 total now, all passing), panel
+  check clean.
+- Nothing left open. Next task (4.4) is "who to call" -- find-website + contact-scrape
+  for any area, pulling office phone numbers with `phonenumbers` and a named contact
+  only when a permit/agenda/news page names one.

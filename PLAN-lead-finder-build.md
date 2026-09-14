@@ -123,7 +123,7 @@ Open: http://localhost:8765 → Early Leads → the new state's button
 - [x] **4.2 Double check + drop RealPage.** Before a RealPage or competitor verdict, a second check
   (another page on the site or the resident portal link) must agree, else "unknown". RealPage
   buildings dropped; others "on <competitor> today" / "not picked yet". Fixture tests. Commit.
-- [ ] **4.3 `find-sales-news` (new).** SearXNG news search (`"<city>" apartments sold OR acquires OR
+- [x] **4.3 `find-sales-news` (new).** SearXNG news search (`"<city>" apartments sold OR acquires OR
   acquisition units`) for the full 24 months, plus GDELT DOC API
   (`https://api.gdeltproject.org/api/v2/doc/doc?mode=artlist&format=json`) -- note GDELT DOC only
   covers the **last 3 months**, so it's a freshness add-on. Apartment sales in the state's cities,
