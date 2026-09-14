@@ -74,7 +74,8 @@ Open: http://localhost:8765/under-the-hood.html
   contest result (plain AI vs AI + shipcheck), one answer traced end to end (question → tool
   calls → reply, by trace ID), and a link to shipcheck. Commit.
 - [ ] **U9 Sections: cost, safety, choices, limits, data.** Collapsible: cost and speed (per chat
-  answer and per build step; free search first, which AI does which job and why); guardrails (link
+  answer and per build step; free search first, which AI does which job and why, backed by
+  shipcheck's `model-choice.json`: quality vs $ per answer for DeepSeek fast/pro and GLM 5.3); guardrails (link
   guard, a source for every fact, never guess, search caps, secrets scan, no emails logged, human
   OK); build vs buy (one line per tool); "what didn't work" (3-5 honest bullets: flaky checks, steps the bot
   couldn't finish, where the grader disagreed with Drew) and what's next (code-review, docs and
