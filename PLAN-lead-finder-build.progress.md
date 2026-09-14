@@ -388,3 +388,15 @@ no-place-names test passes, check-panel.sh clean). Fixture-only tests, no networ
 Nothing left open for this task; a real state/agency's exact award-list column names will only
 be confirmed at the 6.x full-run steps.
 Commit: (see git log)
+
+## 3.3 Which meeting system does a city use? (done)
+Built `propertystack/skills/lead-finder-agendas/agendas.py`: `find_meeting_system(city, state, search_fn, fetch_fn)`
+searches `"<city>" "<state>" planning commission agenda`, matches the first result's URL
+(or fetched HTML if the URL doesn't give it away) against known system fingerprints
+(legistar, agendacenter, granicus, primegov, civicclerk, boarddocs, escribemeetings, iqm2),
+and caches the identified system + agenda URL as `propertystack/recipes/agendas-<city>.json`.
+No online hit -> `{"skipped": True, "reason": "no agenda system identified"}`, never guessed.
+Followed the same shape as lead-finder-sources (2.3) fallback code for consistency.
+Checked: `python -m pytest propertystack/skills/lead-finder-agendas/tests -q` (5 passed) and
+`bash tooling/qa/check-lead-finder.sh` (all green, no place-name test still clean).
+Nothing left open for this task.

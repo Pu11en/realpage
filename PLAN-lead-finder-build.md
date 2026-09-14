@@ -101,7 +101,7 @@ Open: http://localhost:8765 → Early Leads → the new state's button
   units, city, award date (stage planned). Keep awards from the last 36 months, 20+ units, **new
   construction only** (drop "rehab"/"preservation" rows). No list found → state noted "no award
   list online" and move on. Fixture tests. Commit.
-- [ ] **3.3 Which meeting system does a city use?** `lead-finder-agendas/`: search the city's planning
+- [x] **3.3 Which meeting system does a city use?** `lead-finder-agendas/`: search the city's planning
   commission agenda page, match the address pattern (legistar.com, /AgendaCenter, granicus,
   primegov, civicclerk, boarddocs, escribemeetings, iqm2); cache per city. Fixture tests. Commit.
 - [ ] **3.4 Legistar reader.** Free Legistar data service (`https://webapi.legistar.com/v1/<client>/`
