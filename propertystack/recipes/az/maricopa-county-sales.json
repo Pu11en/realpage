@@ -1,0 +1,38 @@
+{
+  "county": "Maricopa County",
+  "state": "AZ",
+  "system": "county-assessor-flat-file",
+  "sales_source": {
+    "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963/data",
+    "item_page": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json",
+    "file_glob": "Data/*.txt",
+    "title": "Sales Affidavits (updated weekly)"
+  },
+  "parcel_source": {
+    "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668/data",
+    "item_page": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json",
+    "file_glob": "Data/*.txt",
+    "title": "Secured Master by Book series (updated twice a month; 5 files, one per book series 100-599)"
+  },
+  "sales_fields": {
+    "parcel": "PARCELNUMBER",
+    "sale_date": "SALEDATE_MMYYYY",
+    "date_format": "MMYYYY",
+    "price": "SALEPRICE",
+    "type_code": "PROPERTYTYPECODE",
+    "address": "SITUSADDRESS",
+    "city": "SITUSCITY",
+    "grantor": "GRANTOROWNERNAME",
+    "grantee": "GRANTEEOWNERNAME"
+  },
+  "parcel_fields": {
+    "parcel": "FolioKey",
+    "units": "NumUnits"
+  },
+  "apartment_type_codes": ["E"],
+  "min_units": 20,
+  "recent_months": 24,
+  "date_tested": "2026-09-14",
+  "live_test": "153 apartment sales (20+ units) in the last 24 months found by joining the two files live, e.g. 6901 E CHAUNCEY LN, Phoenix, 497 units, sold 2024-09, grantee AZ DESERT CLUB APARTMENTS LLC, $187,500,000",
+  "notes": "Sales Affidavits file spec column 8 is PROPERTYTYPECODE with column 9 PROPERTYTYPEDESCRIPTION printed right on every row -- code 'E' is literally labeled 'Apartment Building' on every matching row, confirmed by grepping the live file (15,564 rows nationwide-in-county are code E), so no separate use-code lookup table is needed. The sales file itself has NO unit-count field (44 columns, checked against the file-spec PDF) -- units come only from the parcel file's 'Secured Master' NumUnits column (field 38), joined on parcel number (sales PARCELNUMBER == parcel FolioKey, both e.g. '15940087A'). The parcel file's own Property_Use_Code (PUC) field was also inspected as a possible second signal but isn't needed or used: it's a finer-grained code (0300-0399 covers apartments but also some other multi-residential categories) and the sales file's own type code is already the authoritative, human-labeled signal for 'apartment building'."
+}

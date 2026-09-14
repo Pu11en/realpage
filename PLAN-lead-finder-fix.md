@@ -73,7 +73,7 @@ Open: http://localhost:8765 → Early Leads → Az
   clearly new multifamily project, show "Units: not public yet", rank it below projects with known
   units -- never drop it and never estimate. Each recipe gets a
   live self-test that returns ≥1 multifamily row. Commit.
-- [ ] **F5 Recently sold, from the county's sales file.** First open the zip's file-spec document and
+- [x] **F5 Recently sold, from the county's sales file.** First open the zip's file-spec document and
   confirm which field marks apartment property (type or use code) and whether unit counts exist
   (if not, take units from the parcel file or the building site). County sales recipe (data): Maricopa County
   Assessor "Sales Affidavits" CSV joined to the parcel file (item ids in the research file) → apartment

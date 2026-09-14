@@ -191,3 +191,103 @@ Commit: (see git log for this file's commit)
 - Nothing left open for F4 except the Peoria gap noted above (no free data, by
   design, same as F3's Accela/Tyler/SmartGov skip rule) -- F5 (county sales
   file) is next and is unrelated to Peoria specifically.
+
+## F5 Recently sold, from the county's sales file -- done
+- Fetched and read both Maricopa County Assessor items live (item pages +
+  actual `.../data` zip downloads, ~61MB Sales Affidavits, ~109MB Secured
+  Master parcel file across 5 book-series `.txt` files) and read both file
+  spec PDFs end to end before writing any code:
+  - **Property type/use code**: the Sales Affidavits file's column 8
+    (`PROPERTYTYPECODE`) is the field, and it's self-labeling -- column 9
+    right next to it (`PROPERTYTYPEDESCRIPTION`) prints the human name on
+    every row. Code `E` = `"Apartment Building"`, confirmed by grepping the
+    live 1M+-row file (15,564 rows are code E, next to `B`=Single Family
+    Reside, `C`=Condo/Townhouse, `F`=Commercial/Industrial, `D`=2-4 Plex,
+    etc.). No separate code-lookup table was needed or invented.
+  - **Unit counts**: the sales file has **no unit-count field at all** (44
+    columns total, checked every one against the file-spec PDF). Units come
+    only from the second file, the parcel/"Secured Master" file, whose
+    column 38 is `NumUnits` (called `Number_Of_Units` in the PDF spec, but
+    the actual `.txt` header uses `NumUnits`). Joined the two files live on
+    parcel number (Sales `PARCELNUMBER` == Parcel `FolioKey`, e.g.
+    `"15940087A"` in both) -- confirmed real matches, e.g. parcel
+    `13303005C` (a sales-file code-E row) has `NumUnits=289` in the parcel
+    file.
+  - Also checked the parcel file's own `Property_Use_Code` (PUC, 4-digit)
+    field as a possible second/independent apartment signal -- real PUC
+    values on 20+-unit properties cluster in 0300-0399 (0376, 0377, 0366...)
+    but that range isn't apartment-exclusive (also covers other
+    multi-residential/commercial-adjacent categories per Maricopa's own use
+    code list) and would need a use-code table this build has no verified
+    source for. Not used -- the sales file's own labeled type code (`E`) is
+    the authoritative, already-verified signal, so PUC was left as a noted
+    "also inspected, not needed" fact in the recipe rather than guessed into
+    the filter.
+- New skill `propertystack/skills/lead-finder-sales/find_sold.py` --
+  generic, area/county-agnostic: takes an area slug, a recipe (sales source +
+  parcel source + field-name maps + apartment type codes + min units +
+  recent-months window), and an injected `fetch_rows(source) -> rows`
+  callable (same dependency-injection shape as `find_upcoming`'s `http_get`).
+  Filters sales rows to the recipe's apartment type code(s), parses the
+  `MMYYYY`-format sale date (Maricopa's format; also handles `YYYY-MM-DD` /
+  `MM/DD/YYYY` / `MMDDYYYY` for other counties' likely formats), keeps only
+  sales within `recent_months` (24) of "today", looks up units via the
+  parcel-number join, and drops (never estimates) any sale with no unit
+  record or fewer than `min_units` (20). Returns one `LeadRecord` per
+  qualifying sale: `stage="sold"`, `address`, `city`, `units`, `sale_date`,
+  `buyer` (grantee), `developer` (grantor, doubling as seller), and a
+  `why` note that includes the sale price when known.
+  `default_fetch_rows` (real zip download + pipe-delimited parse, used only
+  by `live_self_test.py`) is a separate, equally generic function -- any
+  county whose sales/parcel data ships as a zipped pipe-delimited flat file
+  with a header row works with it unchanged.
+- Confirmed **not** confusing this with `lead-finder-sales-news` (already
+  existed, part 4.3, news/GDELT-based sale mentions for any city) -- this is
+  a new, separate skill reading the county's own recorded-sale flat file, not
+  news text.
+- New recipe `propertystack/recipes/az/maricopa-county-sales.json`: both
+  ArcGIS item URLs (`.../data` for the real zip, `?f=json` item page for
+  provenance), `file_glob: "Data/*.txt"` for both zips, the field-name maps
+  above, `apartment_type_codes: ["E"]`, `min_units: 20`, `recent_months: 24`,
+  and a `notes` field spelling out the PUC-not-used decision so nobody
+  re-guesses it later.
+- **Live test** (`python3 propertystack/skills/lead-finder-sales/live_self_test.py az`,
+  actually run just now against the real live Maricopa County zips, not
+  fixtures): **153 real apartment sales (20+ units) in the last 24 months**,
+  well over the plan's 10-sale bar -- e.g. 6901 E Chauncey Ln, Phoenix, 497
+  units, sold 2024-09, buyer AZ DESERT CLUB APARTMENTS LLC, $187,500,000;
+  1350 E Thomas Rd, Phoenix, 130 units, sold 2024-09, buyer SRP TERRACE LLC,
+  $16,500,000.
+- Offline tests: new `lead-finder-sales/tests/test_find_sold.py` (10 tests,
+  all fixture-based, no network) -- apartment+enough-units kept; wrong type
+  code dropped; too-few-units dropped; no unit record at all dropped (not
+  guessed); sale older than 24 months dropped; a bad/blank date dropped; a
+  missing sales source returns empty; a `fetch_rows` exception returns empty
+  instead of raising; only the qualifying row survives out of a mixed batch.
+- Found one incidental collection issue while running the full suite: two
+  `live_self_test.py` files (this one and F4's, in different skill
+  directories with no `__init__.py`) collide under whole-tree pytest
+  collection ("import file mismatch") because they share a basename and
+  pytest's default `python_files` pattern (`*_test.py`) picks them up even
+  though they're meant to be hand-run only. Fixed generically, not by
+  renaming either script: added `propertystack/conftest.py` with
+  `collect_ignore_glob = ["*/live_self_test.py"]`, so any current or future
+  skill's hand-run live self-test is excluded from pytest collection
+  wherever it's run from, while `check-lead-finder.sh` (which never globbed
+  these files anyway -- it only runs each skill's `tests/` directory) is
+  unaffected.
+- Checked: `bash tooling/qa/check-lead-finder.sh` passes (61 lead-finder*
+  tests now, up from 51 at F4, plus the site panel check); full suite
+  `python3 -m pytest -q propertystack --ignore=propertystack/skills/client-map`:
+  234 passed (up from 224 at F4).
+- Still open: none for F5 itself. Two honest limitations carried into the
+  recipe's `notes` rather than papered over: (1) the sales file's "last
+  recorded sale" note in its own file spec means a parcel that sold twice in
+  the window only shows its most recent sale -- acceptable per the plan's
+  literal ask ("recently sold... in the last 24 months") but worth knowing if
+  Drew later wants a full sale history; (2) the parcel file's PUC field could
+  give a second, more granular apartment signal for other counties whose
+  sales files lack a labeled type code the way Maricopa's does, but no
+  verified PUC-to-description table was found in this build, so it's left
+  unused rather than guessed -- a future county recipe with only a numeric
+  use code and no separate lookup table would need that table sourced first.
