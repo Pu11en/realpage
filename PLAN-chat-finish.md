@@ -67,7 +67,7 @@ local-trial-key-change-me` and `X-OpenWebUI-User-Email: admin@localhost`, model 
   iframe. Keep the Google sign-in pop-up (Google blocks sign-in inside a frame; it closes by
   itself). Update `tooling/qa/panel_test.py` / `sweep.py` so they assert no full-page/new-tab
   link exists and Try again reloads. Check passes. Commit.
-- [ ] **T5 Past chats button.** Every chat is already saved per user by Open WebUI; the list
+- [x] **T5 Past chats button.** Every chat is already saved per user by Open WebUI; the list
   is hidden because `chatbot/branding/custom.css` squeezes `#sidebar` to width 0, leaving only
   a tiny toggle icon. Make the chat list reachable inside the panel: label the sidebar toggle
   clearly as **Past chats** (big enough to see at 480px wide), and when opened show the saved
