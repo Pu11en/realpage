@@ -1,0 +1,108 @@
+# PropertyStack lead finder: fix it so it finds real leads (Arizona, then states near Texas)
+
+Written 2026-09-14 with Drew after the first real run came back thin (AZ 19 leads, NY 2, every lead
+"software unknown", no phones). Why it failed: `/home/drewp/main-projects/handoffs/2026-09-14-lead-finder-why-thin.md`.
+Tested sources and tools: `/home/drewp/main-projects/handoffs/2026-09-14-lead-finder-tools-v2-research.md`
+(read it first -- it has the exact, live-tested Arizona endpoints and filters).
+Rules from `PLAN-lead-finder.md` still apply (area-agnostic code: place specifics only in data recipes;
+never guess facts; Plano never rerun; localhost only, never push).
+
+**Drew's decisions (2026-09-14):**
+- **SearXNG is banned** -- removed from the computer; never use it, not even as a backup. Same for any
+  tool that fails a real run.
+- **Search = Jina first, Brave Search API second** (`JINA_API_KEY`, `BRAVE_API_KEY` in
+  `/home/drewp/main-projects/realpage/.env`; never commit keys). No Google Places.
+- **Arizona first, then states near Texas** (New Mexico, Louisiana, then Oklahoma, Colorado, Arkansas).
+  New York is finished (keep its 2 leads as they are).
+- **Quality alarms instead of blind non-stop:** a run must meet the quality bar on real data; if it
+  can't after two fix attempts, stop with STUCK and a plain report rather than fill the site with junk.
+- **Pre-approved, don't ask:** Jina + Brave searches up to 450 per state run (Jina ~$0.0005/search;
+  Brave has $5 free credit a month), free public data downloads.
+
+Run with: `Do the next unticked task in PLAN-lead-finder-fix.md, then tick it and stop.`
+Check: `bash tooling/qa/check-lead-finder.sh`
+Try: `bash tooling/dev.sh`
+Open: http://localhost:8765 → Early Leads → Az
+
+## How to try it (30 seconds)
+1. Early Leads → Az: dozens of real new and recently sold apartment buildings, soonest openings on top.
+2. Most rows show a software name (Yardi, Entrata...) or "not picked yet", and a phone number.
+3. Click ✦ Deep dive on a Tempe lead: its real permit link, unit count and website.
+
+## Tasks
+
+### Part 1: Better tools
+- [ ] **F1 Remove SearXNG; Jina + Brave search.** Delete SearXNG from `fetch.py`, `tooling/searx_search.py`,
+  `tooling/searxng/`, `tooling/LOCAL-ASSETS.md` and every SKILL.md/doc that mentions it. `WebHelper.search()`
+  = Jina, then Brave only if Jina errors or returns nothing relevant; count Jina and Brave searches
+  separately toward the 450 cap. Tests with fakes (Jina down → Brave; both down → clear error). Commit.
+- [ ] **F2 "Is this really about this building?" check.** A search result or page counts for a building
+  only if its name (distinctive words) or street address appears in the title, URL or page text;
+  listing sites (zillow, apartments.com, apartmentguide, apartmentratings, yelp, facebook, trulia,
+  rent.com, rentcafe.com listing pages) are never the official website (but a rentcafe/securecafe
+  link is Yardi evidence). Use it in `project_details`, `find_website`, `contact_scrape`. Fixture
+  tests from real cases: "Marquee on 5th Tucson" must not match marqueesportsnetwork.com or
+  themarqueestl.com; Bella Victoria must pick bellavictoria.com. Commit.
+- [ ] **F3 Find permit data everywhere.** `find_sources` asks, in order: ArcGIS Online search by place
+  name (`https://www.arcgis.com/sharing/rest/search?q=title:permits "<place>"`), the city's ArcGIS hub
+  search, the Socrata catalog, CKAN `package_search`. **Accept a dataset only after one real query
+  returns permit-level rows (≥100 rows, an address field, dates in the last 24 months)** -- Phoenix's
+  CKAN set was 22 rows of yearly totals. Accela/Tyler/SmartGov-only cities are marked "no free data"
+  (no retries). Tests with saved real responses. Commit.
+
+### Part 2: Arizona sources
+- [ ] **F4 Arizona permit recipes.** Save tested recipes (data files) for Phoenix, Mesa, Tempe,
+  Scottsdale, Gilbert, Tucson, Maricopa County unincorporated and Peoria from the research file:
+  endpoint, date field, multifamily filter, unit-count source (a field like Tempe's `HousingUnits`, or
+  parsed from the description like Mesa's "(11) unit apartment", or looked up later), name keywords
+  (Phoenix's APART/APT/MULTI/MF), leasing-date field if any (Tempe `COIssuedDate`). Each recipe gets a
+  live self-test that returns ≥1 multifamily row. Commit.
+- [ ] **F5 Recently sold, from the county's sales file.** County sales recipe (data): Maricopa County
+  Assessor "Sales Affidavits" CSV joined to the parcel file (item ids in the research file) → apartment
+  properties (multifamily use codes) with 20+ units sold in the last 24 months: address, buyer, seller,
+  date, price. Code stays generic (any county with a sales file + parcel file). Commit.
+- [ ] **F6 Answer key for Arizona.** Build `propertystack/answer-keys/az.json` by hand, independent of
+  the tool: 15 real new or recently sold AZ apartment buildings (20+ units) from news articles and city
+  permit pages (e.g. Tempe's 1020 Apache, 289 units), each with its source link; 5 of them with the
+  software verified by hand from the building's own site (Marquee on 5th = Yardi, Bella Victoria =
+  Yardi, plus 3 more, at least 1 non-Yardi if one can be found). Commit.
+
+### Part 3: Software and phones that work
+- [ ] **F7 Software detection v2.** Official site (from F2) → plain fetch → crawl4ai render if no portal
+  link found → match resident-login / pay-rent / apply links: Yardi `*.securecafe.com`, `*.rentcafe.com`;
+  RealPage `*.onlinesite.realpage.com`, `loftliving.com`, `activebuilding.com`, `*.realpage.com`;
+  Entrata `*.residentportal.com`; AppFolio `*.appfolio.com`; ResMan `*.myresman.com` (merge into
+  `tooling/pms_detect.py`). Keep the double check. Test live on the 5 answer-key buildings: all 5
+  correct. Commit.
+- [ ] **F8 Phones and owners.** Owner/developer from permit owner/builder fields (Scottsdale, Tempe) or
+  the sales file's buyer; phone from the building's own contact page, then the owner/developer's site
+  (found with Jina/Brave + the F2 check), read with Jina Reader or crawl4ai; `phonenumbers` pulls and
+  de-duplicates, office lines above fax/cell. Never guess. Fixture tests + a live test on 3 answer-key
+  buildings. Commit.
+- [ ] **F9 Quality alarms.** In `run.py`: after the run, write `quality.json` -- % cities with a real
+  source, % leads with units, website, software verdict, phone, and answer-key recall (share of key
+  buildings found) and software accuracy. **Bar for a state:** answer-key recall ≥60%, software
+  correct on ≥80% of key buildings, website on ≥70% of leads, phone on ≥50%. Below the bar → the run
+  is marked "failed quality" and is **not** built into the site. Tests. Commit.
+
+### Part 4: Real runs
+- [ ] **F10 Tempe test run.** Full chain on Tempe only (best data). Compare to the bar (answer-key part
+  limited to Tempe buildings). If below: find the step at fault, fix it, rerun -- up to 2 fix rounds;
+  still below → STUCK with a plain report of what's missing and why. Write the leads in plain words in
+  the progress log. Commit.
+- [ ] **F11 Full Arizona run.** New run id (old AZ run replaced, not merged). Whole state in permit
+  order until 150 projects or the 450-search cap, plus the county sales file. Must pass the bar
+  (same 2-fix-rounds rule, then STUCK). Save recipes. Commit.
+- [ ] **F12 Arizona on the site + chat.** Build the site and rebuild the chat (`bash tooling/dev.sh`)
+  with the new AZ leads; run the Check and `tooling/qa/check-answers.sh`. Commit. Recap in plain words
+  how many AZ leads, how many with software and phone, and the quality numbers.
+
+### Part 5: States near Texas
+- [ ] **F13 New Mexico.** Discovery (F3) for its top permit cities (Albuquerque's ArcGIS layer has
+  `NumberofUnits`; research file), county sales file if one exists (else news-based sales), a 10-building
+  NM answer key, then a full run held to the same bar. Build into site + chat if it passes. Commit.
+- [ ] **F14 Louisiana.** Same as F13 (New Orleans Socrata `rcm3-fn58`, Baton Rouge `7fq7-8j7r` --
+  find the right multifamily filter). Commit.
+- [ ] **F15 Next state near Texas.** Run discovery for Oklahoma, Colorado and Arkansas; pick the one with
+  the most real permit sources; answer key + full run + same bar; build it in if it passes. Commit.
+  Recap in plain words for Drew: leads per state, quality numbers, what's still missing.
