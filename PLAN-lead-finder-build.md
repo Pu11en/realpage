@@ -45,7 +45,7 @@ Open: http://localhost:8765 → Early Leads → the new state's button
   construction < leasing), keep every source and link; a planned project that gets a permit is
   upgraded, not duplicated. Tests with tricky pairs ("123 Main St" vs "123 Main Street Bldg B").
   Commit.
-- [ ] **1.3 Web helper.** `lead-finder/fetch.py` used by every part: search = SearXNG
+- [x] **1.3 Web helper.** `lead-finder/fetch.py` used by every part: search = SearXNG
   (`tooling/searx_search.py`) first, Jina only if SearXNG returns nothing or is down; page reads via
   crawl4ai, Scrapling if blocked, Playwright last; every page cached on disk (never read twice); 2 s
   between visits to one site; 3 blocks → site marked skipped with the reason; every search counted

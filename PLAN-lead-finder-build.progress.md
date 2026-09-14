@@ -49,3 +49,35 @@
   Also reran `python3 site/data/build_data.py` to confirm the site still builds unaffected.
 - Nothing left open. Next task (1.3) adds the web helper (SearXNG/Jina search + cached page
   reads).
+
+## 1.3 Web helper -- done
+
+- Added `propertystack/skills/lead-finder/fetch.py`: `WebHelper` class wrapping search and
+  page reads for every later part.
+  - `search()`: calls `tooling/searx_search.py` (free, local) first; falls back to Jina
+    (`https://s.jina.ai/<query>`, key read from `/home/drewp/main-projects/realpage/.env`
+    `JINA_API_KEY`, never hardcoded/committed) only when SearXNG raises (down) or returns no
+    results. `SearchCounts` tracks `searxng` vs `jina` call counts separately so a run's search
+    budget can tell free from paid calls apart, matching the plan's "every search counted
+    (Jina logged separately)".
+  - `fetch()`: page reads go through a fallback chain -- crawl4ai first, Scrapling if the
+    result looks blocked, Playwright last (all three are installed in this environment, so no
+    stub was needed). Every fetched page is cached on disk under
+    `propertystack/runs/cache/<sha256(url)>.html` and never re-read (cache hit returns
+    `from_cache=True`, fetcher never called again). Visits to the same site (by netloc) are
+    spaced >= 2 s apart. A page whose HTML matches common block markers ("access denied",
+    "captcha", "403 forbidden", etc.) counts as a block for that site; after 3 blocks the site
+    is marked skipped with a reason and every later `fetch()` for that site returns immediately
+    without calling any fetcher again.
+  - `propertystack/runs/cache/` added to `.gitignore` (only result JSON from later steps gets
+    committed, per the plan).
+- Tests: `tests/test_fetch.py`, all with fake `searx_search`/fetcher callables injected via
+  `WebHelper(..., searx_search=..., page_fetchers=...)` -- no real network, SearXNG, Jina, or
+  browser calls. Covers: SearXNG-has-results (no Jina call), SearXNG down (OSError) falls back
+  to Jina, SearXNG returns empty falls back to Jina, no Jina key configured returns nothing
+  instead of guessing, cache hit skips the fetcher entirely, 3 blocks in a row skip the site and
+  a 4th URL on that site never reaches any fetcher, and the crawl4ai-fails -> scrapling-blocked
+  -> playwright-succeeds fallthrough chain.
+- Checked: `bash tooling/qa/check-lead-finder.sh` -- 24 tests pass (was 17), panel check clean.
+  Also reran `python3 site/data/build_data.py` to confirm the site still builds unaffected.
+- Nothing left open. Next task (1.4) adds the run folder, resume, caps, and state pick.
