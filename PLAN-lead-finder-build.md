@@ -137,7 +137,7 @@ Open: http://localhost:8765 → Early Leads → the new state's button
   picked above competitor; unknown opening ranked by permit date and shown "Opens: not public yet";
   order of groups: permitted / under construction / leasing first, then **sold** (newest sale first),
   then **planned** (soonest expected, then units); one-line "why" per lead. Fixture tests. Commit.
-- [ ] **5.1 Build every area.** `site/data/build_data.py` builds each area folder under
+- [x] **5.1 Build every area.** `site/data/build_data.py` builds each area folder under
   `propertystack/data/` from the part-1 lead format (sample area only when a test flag is set, never
   in the real build). Plano–Richardson unchanged. Tests. Commit.
 - [ ] **5.2 Area buttons.** Early Leads: one button per area, each its own table; remove the

@@ -7,14 +7,20 @@ Sources (see propertystack/CONTRACTS.md):
   propertystack/data/plano-richardson/6-upcoming.csv -> leads.json (openingNext12mo)
   propertystack/runs/*.json                       -> pipeline.json (Under the Hood)
   propertystack/data/client-map/counts.json       -> client-map.json (map.html state shading)
+  propertystack/data/<state-slug>/leads.json      -> site/data/areas/<state-slug>.json
+    (part-1 LeadRecord format, see propertystack/skills/lead-finder/record.py;
+     plano-richardson keeps using the CSV pipeline above, unchanged; the fixture
+     area `_sample` is only built when LEAD_FINDER_BUILD_SAMPLE=1 is set)
 
-Run this any time master.csv / leads.csv / runs/*.json change.
+Run this any time master.csv / leads.csv / runs/*.json / a state's leads.json change.
 No dependencies beyond stdlib. Usage: python3 site/data/build_data.py
 """
 import csv
 import glob
 import json
+import os
 import re
+import sys
 from collections import Counter
 from datetime import date, timedelta
 from pathlib import Path
@@ -35,6 +41,15 @@ SALES_CSV = DATA_DIR / "5-sales.csv"
 SALES_DALLAS_CSV = DATA_DIR / "5-sales-dallas.csv"
 
 CLIENT_MAP_COUNTS = ROOT / "propertystack" / "data" / "client-map" / "counts.json"
+
+# Part-1 lead format (any state area) -- see propertystack/skills/lead-finder/record.py.
+STATE_DATA_DIR = ROOT / "propertystack" / "data"
+AREAS_OUT_DIR = OUT_DIR / "areas"
+NON_STATE_AREA_DIRS = {"plano-richardson", "client-map", "dallas-parked", "raw", "scout"}
+SAMPLE_AREA = "_sample"
+
+sys.path.insert(0, str(ROOT / "propertystack" / "skills" / "lead-finder"))
+sys.path.insert(0, str(ROOT / "propertystack" / "skills" / "score-leads"))
 
 STATE_NAMES = {
     "AL": "Alabama", "AK": "Alaska", "AZ": "Arizona", "AR": "Arkansas", "CA": "California",
@@ -427,6 +442,87 @@ def build_client_map() -> dict:
     return {"source": "propertystack/data/client-map/counts.json", "states": states}
 
 
+def discover_state_areas(include_sample: bool = False) -> list[str]:
+    """State-area slugs with a part-1 `leads.json` (record.py format), excluding
+    plano-richardson (still built from CSV, above) and non-area data dirs. The
+    `_sample` fixture area is only included when explicitly asked for."""
+    slugs = []
+    for path in sorted(STATE_DATA_DIR.glob("*/leads.json")):
+        slug = path.parent.name
+        if slug in NON_STATE_AREA_DIRS:
+            continue
+        if slug == SAMPLE_AREA and not include_sample:
+            continue
+        slugs.append(slug)
+    return slugs
+
+
+def _area_lead_dict(record, idx: int) -> dict:
+    is_sold = record.stage == "sold"
+    return {
+        "id": f"{record.area}-{idx}",
+        "community": record.name or None,
+        "city": record.city,
+        "address": record.address or None,
+        "units": record.units,
+        "stage": record.stage,
+        "permitDate": record.permit_date or None,
+        "openingDate": record.opening_date or None,
+        "saleDate": record.sale_date or None,
+        "buyer": record.buyer or None,
+        "developer": record.developer or None,
+        "officePhone": record.office_phone or None,
+        "website": record.website or None,
+        "software": record.software if record.software not in ("", "unknown") else None,
+        "links": {k: v for k, v in record.links.items() if v},
+        "sources": [s["url"] if isinstance(s, dict) else s.url for s in record.sources],
+        "signalType": "Sold" if is_sold else ("Planned" if record.stage == "planned" else "Upcoming"),
+        "why": record.why,
+    }
+
+
+def build_area(slug: str) -> dict:
+    """Build one state area's site JSON from its part-1 `leads.json` (LeadRecord
+    list): score/rank the records (4.5) and shape them for the site."""
+    from record import LeadRecord  # noqa: E402  (path added at import time, above)
+    from score_leads import score_and_rank  # noqa: E402
+
+    path = STATE_DATA_DIR / slug / "leads.json"
+    with path.open() as f:
+        raw = json.load(f)
+    records = [LeadRecord.from_dict(d) for d in raw]
+    ranked = score_and_rank(records)
+
+    leads = [_area_lead_dict(r, i) for i, r in enumerate(ranked, start=1)]
+    cities = sorted({r.city for r in ranked if r.city})
+    units_in_play = sum(r.units or 0 for r in ranked if r.units)
+
+    return {
+        "area": slug,
+        "generatedFrom": f"propertystack/data/{slug}/leads.json",
+        "stats": {
+            "leads": len(leads),
+            "cities": len(cities),
+            "unitsInPlay": units_in_play,
+        },
+        "cities": cities,
+        "leads": leads,
+    }
+
+
+def build_state_areas(include_sample: bool = False) -> list[str]:
+    """Build every discovered state area's JSON under site/data/areas/. Returns
+    the slugs actually built."""
+    slugs = discover_state_areas(include_sample=include_sample)
+    if not slugs:
+        return []
+    AREAS_OUT_DIR.mkdir(parents=True, exist_ok=True)
+    for slug in slugs:
+        area_json = build_area(slug)
+        (AREAS_OUT_DIR / f"{slug}.json").write_text(json.dumps(area_json, indent=2))
+    return slugs
+
+
 def main() -> None:
     properties, properties_json, share_json = build_properties_and_share()
     (OUT_DIR / "properties.json").write_text(json.dumps(properties_json, indent=2))
@@ -446,6 +542,11 @@ def main() -> None:
     client_map = build_client_map()
     (OUT_DIR / "client-map.json").write_text(json.dumps(client_map, indent=2))
     print(f"wrote client-map.json ({len(client_map['states'])} states)")
+
+    include_sample = os.environ.get("LEAD_FINDER_BUILD_SAMPLE") == "1"
+    area_slugs = build_state_areas(include_sample=include_sample)
+    if area_slugs:
+        print(f"wrote {len(area_slugs)} state area(s) under site/data/areas/: {', '.join(area_slugs)}")
 
 
 if __name__ == "__main__":

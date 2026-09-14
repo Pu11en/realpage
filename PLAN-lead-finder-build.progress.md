@@ -651,3 +651,33 @@ Nothing left open for this task.
   panel check clean).
 - Nothing left open. Next task (5.1) builds each area folder from part-1 lead
   records for the site.
+
+## 5.1 Build every area -- done
+
+- `site/data/build_data.py`: added `discover_state_areas()` (scans
+  `propertystack/data/*/leads.json`, skipping `plano-richardson`/`client-map`/`dallas-parked`/
+  `raw`/`scout`, and skipping the `_sample` fixture area unless asked), `build_area(slug)`
+  (loads that area's part-1 `leads.json` as `LeadRecord`s, runs `score_and_rank` from
+  `score-leads` (4.5) to order them and fill `why`, then shapes each into a site-friendly dict:
+  id, community, city, address, units, stage, permit/opening/sale dates, buyer, developer,
+  office phone, website, software, links, sources, signalType, why), and
+  `build_state_areas(include_sample=False)` which writes one JSON file per discovered area to
+  `site/data/areas/<slug>.json`.
+- `main()` now calls `build_state_areas()` after the existing plano-richardson/client-map
+  build steps; it only builds `_sample` when the env var `LEAD_FINDER_BUILD_SAMPLE=1` is set,
+  so it's never built into the real site. The plano-richardson CSV pipeline (properties.json,
+  software-share.json, leads.json, pipeline.json, client-map.json) is untouched -- same
+  functions, same output.
+- No real state area exists yet (Part 6's actual run hasn't happened), so a plain build today
+  correctly writes nothing under `site/data/areas/` -- confirmed by running
+  `python3 site/data/build_data.py` and checking `site/data/areas/` doesn't get created.
+- Added `propertystack/skills/lead-finder/tests/test_build_areas.py` (4 tests): `_sample`
+  excluded by default but included when asked, `build_area("_sample")` produces the right
+  stats/city list/stage order (score-leads' group order: permitted before sold) with a `why`
+  on every lead, and `build_state_areas` only writes `_sample.json` when `include_sample=True`
+  (via `tmp_path` + monkeypatching `AREAS_OUT_DIR` so it doesn't touch the real `site/data/`).
+- Checked: `bash tooling/qa/check-lead-finder.sh` passes (all lead-finder* test dirs + the
+  4 new tests + check-panel.sh clean); also ran `python3 site/data/build_data.py` directly to
+  confirm the real plano-richardson build still writes the same 5 files with the same content.
+- Nothing left open. 5.2 (area buttons in Early Leads) and 5.3 (city filter) will read
+  `site/data/areas/<slug>.json` once a real state run exists to populate it.
