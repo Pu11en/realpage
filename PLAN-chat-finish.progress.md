@@ -45,3 +45,8 @@
 - Wrote `TODO-for-drew-chat-finish.md`: Drew's to-do list — try the 3 checks on localhost, say if it's good (then "Put it on GitHub?"), optional leftovers (UTC date on saved note, "call opener" follow-up suggestions, ↻ after restart replays, sold-recently near 60 words, month-year dates not bolded), and what he doesn't need to do.
 - Checked: Check line passes (panel 0 problems, check-readable OK). No code changed.
 - Open: waiting on Drew's local try-out.
+
+## Fix: "can i ask you questions here?" / "no like how i test?" — done 2026-09-13
+- Yes, Drew can ask questions in the thread. He wanted step-by-step testing, so wrote `HOW-TO-TEST-chat-finish.md`: open localhost:8765 → Ask, check the panel + Past chats, ask "Which buildings sold recently?", try Deep dive twice + ↻ Try Again, and how to restart the site if it won't open.
+- Confirmed the local stack is up now (8765, 3000, 18080 answering; served chat-panel.js has no "full page" link). Check line passes. No code changed.
+- Open: waiting on Drew's try-out.
