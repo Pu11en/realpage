@@ -41,7 +41,7 @@ Open: http://localhost:8765/map.html
   free Census batch geocoder (OpenStreetMap as backup). Save
   `propertystack/data/client-map/buildings.csv` (name, city, state, lat, lon, proof_url) and
   `counts.json` (per state and per city). Log searches used to `propertystack/runs/`. Commit.
-- [ ] **C4 Map redo (simple).** Redo `site/map.html`: shade each state by its RealPage
+- [x] **C4 Map redo (simple).** Redo `site/map.html`: shade each state by its RealPage
   building count from `counts.json` (built into site data by `site/data/build_data.py`);
   pointing at a state shows the count and its top 3 cities. Remove the building dots and proof
   cards (proof links stay in the data only). Keep visuals minimal -- Drew does design himself.

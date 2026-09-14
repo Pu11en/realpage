@@ -22,3 +22,10 @@
 - Result: **260 buildings in 20 states** (TX 40, NC 32, AZ 27, FL 26, WA 24, VA 20, CA 19, TN 16, CO 14, OH 10, …); 9 without lat/lon (still counted). Files: `data/client-map/buildings.csv`, `counts.json`, log `runs/20260913T213834-client-map.json`.
 - Checked: 7 new fixture tests (22 pass); `bash tooling/qa/check-client-map.sh` clean; spot-checked sample rows.
 - Open: some names are just the street address (leasing pages with no building name); a few buildings sit outside the 15 target states (nearby hits) — counted under their real state. Counts show where RealPage is *found*, not full market share.
+
+## C4 Map redo — done (commit 5ab5413)
+- `site/data/build_data.py` now also writes `site/data/client-map.json` from `counts.json`: per state (full name) total + top 3 cities (city spelling variants like Mckinney/McKinney merged).
+- `site/map.html` + `site/js/map.js`: states shaded green by count (brighter = more, sqrt scale), pointing at a state shows a small box with count and top 3 cities; unsearched states say "None found". Building dots, proof cards and the reach.json read are gone (reach.json file kept; scout-areas still writes it).
+- `tooling/qa/check_map.py` updated: every state in client-map.json is shaded, no dots, no card, hovering the top state (Texas) shows 40 + Houston. `check-client-map.sh` now runs check_map too.
+- Checked: `bash tooling/qa/check-client-map.sh` → 22 passed, panel clean, check_map 0 problems. Screenshot /tmp/client-map.png looked right (Texas brightest, tooltip Houston 7 / Fort Worth 5 / McKinney 5).
+- Open: plan wording said "darker = more"; on the dark theme brighter green = more, so the page says that.
