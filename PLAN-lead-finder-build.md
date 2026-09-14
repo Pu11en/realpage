@@ -94,7 +94,7 @@ Open: http://localhost:8765 → Early Leads → the new state's button
   or similar; match all forms); filter by state, 20+ units, last 36 months:
   221(d)(4) → new project (stage permitted), 223(f) → sold/refinanced building (stage sold, marked
   "HUD refi or sale"). Fixture tests. Commit.
-- [ ] **3.2 State housing agency awards.** `lead-finder-awards/`: for any state, find its housing
+- [x] **3.2 State housing agency awards.** `lead-finder-awards/`: for any state, find its housing
   agency's tax-credit / bond award lists (NCSHA directory, Novogradac state pages), save a per-state
   recipe; search `"<agency name> housing tax credit awards 2025"` / `2026` and `"bond" "awards"`; read PDF
   lists with pdfplumber (tables) or PyMuPDF, spreadsheets with openpyxl → projects with developer,

@@ -371,3 +371,20 @@
   running the real chain.
 - Next task (3.2) is the state housing agency awards list (NCSHA/Novogradac tax-credit and
   bond award PDFs/spreadsheets, per-state recipe, new-construction only).
+
+## 3.2 State housing agency awards (2026-09-14)
+Added `propertystack/skills/lead-finder-awards/` (`awards.py` + `SKILL.md` + tests).
+- `find_award_recipe()`: searches `"<agency>" housing tax credit awards 2025/2026` and
+  `"<agency>" "bond" "awards"`, saves the first PDF/xlsx hit as `propertystack/recipes/awards-<state>.json`.
+  No hit -> `{"skipped": True, "reason": "no award list online"}`.
+- `load_pdf_table_rows()` (pdfplumber) / `load_xlsx_rows()` (openpyxl) are dumb table readers.
+- `parse_award_rows()`: rows -> LeadRecords (stage "planned"), keyed off loose column-name
+  matching (any header containing "unit"/"date"/"project"/"city"/"developer"). Drops rows with
+  no units or date, under 20 units, older than 36 months, or whose type/activity column matches
+  rehab/preservation.
+- `find_awards()` wires it end to end; CLI entry point mirrors lead-finder-hud's.
+Checked: `bash tooling/qa/check-lead-finder.sh` (34 lead-finder-awards+existing tests pass,
+no-place-names test passes, check-panel.sh clean). Fixture-only tests, no network used.
+Nothing left open for this task; a real state/agency's exact award-list column names will only
+be confirmed at the 6.x full-run steps.
+Commit: (see git log)
