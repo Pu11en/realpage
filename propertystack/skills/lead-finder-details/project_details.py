@@ -14,7 +14,9 @@ from pathlib import Path
 from typing import Callable
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "lead-finder"))
+sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
 from record import LeadRecord  # noqa: E402
+from lib.building_match import is_about_building  # noqa: E402
 
 GeocodeFn = Callable[[str], object]
 SearchFn = Callable[[str, int], list]
@@ -69,7 +71,7 @@ def fill_project_details(
     query = f'"{record.address}" {record.city} apartments'
     results = search_fn(query, 5) or []
 
-    website = _pick_website(results)
+    website = _pick_website(results, record.name, record.address)
     if website:
         record.website = website
         record.links["website"] = website
@@ -96,12 +98,19 @@ def fill_project_details(
     return record
 
 
-def _pick_website(results: list) -> str:
+def _pick_website(results: list, name: str, address: str) -> str:
+    """Only accept a result as the project's own website if it's really
+    about this project -- its name or street address actually shows up in
+    the url/title (see lib.building_match); a listing site is never the
+    official website even if it mentions the project by name."""
     for result in results:
         if not isinstance(result, dict):
             continue
         url = result.get("url", "")
-        if url and not NEWS_HOST_RE.search(url):
+        if not url or NEWS_HOST_RE.search(url):
+            continue
+        title = result.get("title", "") or result.get("description", "")
+        if is_about_building(name, address, url, title):
             return url
     return ""
 

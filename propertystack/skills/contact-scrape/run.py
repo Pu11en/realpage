@@ -18,6 +18,7 @@ sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[2]))
 from lib.paths import area_dir
 from lib.runlog import RunLog
 from lib.jina import Jina
+from lib.building_match import matches_building
 
 COLS = ["apt_id", "phone", "email", "source_url", "checked_at", "notes"]
 
@@ -70,6 +71,10 @@ def scrape(row, jina, today):
     except Exception as e:
         return {"apt_id": row["apt_id"], "phone": "", "email": "", "source_url": url,
                 "checked_at": today, "notes": f"error: {e}"[:100]}
+    name, address = row.get("name", ""), row.get("address", "")
+    if (name or address) and not matches_building(name, address, page):
+        return {"apt_id": row["apt_id"], "phone": "", "email": "", "source_url": url,
+                "checked_at": today, "notes": "page-not-about-this-building"}
     phone, email = pick_phone(page), pick_email(page)
     notes = "" if (phone or email) else "no-contact-found"
     return {"apt_id": row["apt_id"], "phone": phone, "email": email, "source_url": url,

@@ -46,7 +46,7 @@ Open: http://localhost:8765 → Early Leads → Az
   = Jina, then Brave only if Jina errors or returns nothing relevant; count Jina and Brave searches
   separately toward the 450 cap (and Brave toward its 800/month cap, tracked in
   `propertystack/runs/brave-usage.json`). Tests with fakes (Jina down → Brave; both down → clear error). Commit.
-- [ ] **F2 "Is this really about this building?" check.** A search result or page counts for a building
+- [x] **F2 "Is this really about this building?" check.** A search result or page counts for a building
   only if its name (distinctive words) or street address appears in the title, URL or page text;
   listing sites (zillow, apartments.com, apartmentguide, apartmentratings, yelp, facebook, trulia,
   rent.com, rentcafe.com listing pages) are never the official website (but a rentcafe/securecafe

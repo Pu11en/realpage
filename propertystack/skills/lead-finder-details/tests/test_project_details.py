@@ -20,6 +20,10 @@ def make_record(**kw):
     return LeadRecord(**defaults)
 
 
+def make_named_record(**kw):
+    return make_record(name="Riverside Flats", **kw)
+
+
 def test_geocode_address_returns_lat_lon():
     def geocode_fn(query):
         assert "123 Main St" in query
@@ -48,7 +52,7 @@ def test_geocode_address_fn_raises_returns_none():
 
 
 def test_fill_project_details_fills_units_developer_opening_website():
-    record = make_record()
+    record = make_named_record()
     results = [{"title": "Riverside Flats", "url": "https://riversideflats.example.com"}]
     html = (
         "<html>Riverside Flats is a new 220-unit community developed by "
@@ -71,7 +75,7 @@ def test_fill_project_details_fills_units_developer_opening_website():
 
 
 def test_fill_project_details_picks_news_link_separately():
-    record = make_record()
+    record = make_named_record()
     results = [
         {"title": "Local Business Journal", "url": "https://example-businessjournal.example.com/story"},
         {"title": "Riverside Flats", "url": "https://riversideflats.example.com"},
@@ -160,3 +164,37 @@ def test_fill_project_details_fetch_not_ok_skipped():
 
     out = fill_project_details(record, search_fn, fetch_fn)
     assert out.units == 180
+
+
+def test_fill_project_details_rejects_same_word_unrelated_site():
+    """F2: 'Marquee on 5th' sharing one word with a sports-network site or an
+    unrelated St. Louis building is not enough to call it the official site."""
+    record = make_record(name="Marquee on 5th", city="Tucson", address="500 5th Ave")
+    results = [
+        {"title": "Marquee Sports Network", "url": "https://marqueesportsnetwork.com"},
+        {"title": "The Marquee St. Louis", "url": "https://themarqueestl.com"},
+    ]
+
+    def search_fn(query, n):
+        return results
+
+    def fetch_fn(url):
+        return FakePage(ok=True, html="220-unit community")
+
+    out = fill_project_details(record, search_fn, fetch_fn)
+    assert out is not None
+    assert out.website == ""
+
+
+def test_fill_project_details_picks_real_building_site():
+    record = make_record(name="Bella Victoria", city="Tucson", address="1 Bella Victoria Way")
+    results = [{"title": "Bella Victoria Apartments", "url": "https://bellavictoria.com"}]
+
+    def search_fn(query, n):
+        return results
+
+    def fetch_fn(url):
+        return FakePage(ok=True, html="220-unit community")
+
+    out = fill_project_details(record, search_fn, fetch_fn)
+    assert out.website == "https://bellavictoria.com"

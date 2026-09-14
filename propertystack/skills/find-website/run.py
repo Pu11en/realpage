@@ -19,6 +19,7 @@ sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[2]))
 from lib.paths import area_dir
 from lib.runlog import RunLog
 from lib.jina import Jina
+from lib.building_match import is_listing_domain, street_hit
 
 COLS = ["apt_id", "website", "website_source", "confidence", "query", "notes"]
 
@@ -124,30 +125,45 @@ def is_rejected(url):
         return True
     if dom in REJECT_EXACT:
         return True
-    return any(rd in dom for rd in REJECT_DOMAINS)
+    if any(rd in dom for rd in REJECT_DOMAINS):
+        return True
+    return is_listing_domain(url)
 
 
-def classify(name, result):
-    """Return confidence tier ('high'|'medium'|'low') for one accepted search result, or None to reject."""
+def classify(name, result, address=""):
+    """Return confidence tier ('high'|'medium'|'low') for one accepted search result, or None to reject.
+
+    A single shared word is never enough for "high" -- "Marquee on 5th" must
+    not match marqueesportsnetwork.com or themarqueestl.com just because they
+    both contain "marquee". "high" needs every distinctive word of the name
+    (or the street address) to show up; a partial word match only earns
+    "medium".
+    """
     url, title, desc = result.get("url", ""), result.get("title", ""), result.get("description", "")
     if not url.startswith("http") or is_rejected(url):
         return None
     words = distinctive_words(name)
-    need = max(1, len(words) - 1)  # allow one miss on longer names
-    dom_hit = name_hits(words, domain_of(url)) >= 1
-    title_hit = name_hits(words, title) >= need
-    url_hit = name_hits(words, url) >= 1
-    if dom_hit or title_hit:
+    need_all = max(1, len(words))
+    combined = f"{domain_of(url)} {title}"
+    full_hit = name_hits(words, combined) >= need_all
+    addr_hit = street_hit(address, f"{url} {title} {desc}")
+    if full_hit or addr_hit:
         return "high"
-    if url_hit:
+    # A single shared word (e.g. "Marquee" also naming a sports network, or a
+    # same-named building in another city) is never enough on its own -- only
+    # a partial-but-multi-word match earns "medium".
+    if len(words) >= 3 and name_hits(words, combined) >= len(words) - 1:
         return "medium"
-    return "low"
+    # Anything weaker (e.g. a single shared word out of two, like "Marquee"
+    # also being a sports network's name) is not a real match -- reject
+    # rather than accept it at "low" confidence.
+    return None
 
 
-def pick_best(name, results):
+def pick_best(name, results, address=""):
     tiers = {"high": None, "medium": None, "low": None}
     for r in results:
-        tier = classify(name, r)
+        tier = classify(name, r, address)
         if tier and tiers[tier] is None:
             tiers[tier] = r
     for tier in ("high", "medium", "low"):
@@ -167,7 +183,7 @@ def process(row, jina):
     tier, best, query_used = "none", None, queries[0]
     for q in queries:
         results = jina.search(q)
-        tier, best = pick_best(cname, results)
+        tier, best = pick_best(cname, results, address)
         query_used = q
         if tier != "none":
             break
