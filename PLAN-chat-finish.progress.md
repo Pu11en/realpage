@@ -40,3 +40,8 @@
 - Checked: `chatbot/tests/test_deep_dive_cache.py` (first ask saves, new chat replays, same chat again redoes + replaces, fresh prefix redoes, no chat id still replays) against a fake Hermes — 17 tests pass in all. Rebuilt with `tooling/dev.sh`; in the real Open WebUI (Playwright, 480 wide) asked the Orchards deep dive → saved note shown; ↻ → Try Again → fresh answer and the saved file was replaced. Check line passes.
 - Gotcha: in this Open WebUI version ↻ opens a small menu (Try Again / Add Details / More Concise); Try Again is the redo.
 - Open: the saved note's date uses the container clock (UTC), so an evening save in Texas shows tomorrow's date. The chat's own follow-up suggestions can offer a "call opener", which the plan says not to do (not part of this task). Remembered chats reset when the bot restarts (a ↻ after a restart replays instead of redoing).
+
+## Fix: "ok what are things i need to do" — done 2026-09-13
+- Wrote `TODO-for-drew-chat-finish.md`: Drew's to-do list — try the 3 checks on localhost, say if it's good (then "Put it on GitHub?"), optional leftovers (UTC date on saved note, "call opener" follow-up suggestions, ↻ after restart replays, sold-recently near 60 words, month-year dates not bolded), and what he doesn't need to do.
+- Checked: Check line passes (panel 0 problems, check-readable OK). No code changed.
+- Open: waiting on Drew's local try-out.

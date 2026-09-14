@@ -85,4 +85,4 @@ local-trial-key-change-me` and `X-OpenWebUI-User-Email: admin@localhost`, model 
   dive on …" working. No automatic expiry. Unit tests in `chatbot/tests/test_deep_dive_cache.py`
   (first ask saves, second ask in a new chat replays, same chat again redoes, fresh prefix
   redoes). Rebuild; try it once in the real panel. Commit.
-- [ ] Fix: ok what are things i need to do
+- [x] Fix: ok what are things i need to do
