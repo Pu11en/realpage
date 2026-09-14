@@ -52,6 +52,33 @@ def test_socrata_catalog_hit_saved_as_recipe(tmp_path):
     assert saved == recipe
 
 
+FILTER_VIEW_CATALOG_HIT = {
+    "results": [
+        {
+            "resource": {
+                "id": "view-9999", "name": "All Building Permits Filtered View",
+                "type": "filter", "parent_fxf": ["base-1111"],
+            },
+            "metadata": {"domain": "data.rivertown-example.gov"},
+        }
+    ]
+}
+
+
+def test_filter_view_queried_via_parent_dataset_id(tmp_path):
+    """A Socrata 'filter' resource is a saved view of another dataset -- querying
+    /resource/<view id>.json 403s in practice, so the real dataset (parent_fxf)
+    must be used instead. Found against real data.buffalony.gov catalog results."""
+    def http_get(url):
+        if url.startswith(find_sources.SOCRATA_CATALOG):
+            return FILTER_VIEW_CATALOG_HIT
+        assert "rivertown-example.gov/resource/base-1111.json" in url
+        return SOCRATA_ROWS
+
+    recipe = find_sources.find_sources("Rivertown", "TX", http_get, recipes_dir=tmp_path)
+    assert recipe["endpoint"] == "https://data.rivertown-example.gov/resource/base-1111.json"
+
+
 def test_arcgis_hub_hit_used_when_socrata_has_nothing(tmp_path):
     def http_get(url):
         if url.startswith(find_sources.SOCRATA_CATALOG):
@@ -64,6 +91,28 @@ def test_arcgis_hub_hit_used_when_socrata_has_nothing(tmp_path):
     assert recipe["system"] == "arcgis"
     assert recipe["fields"]["units"] == "Units"
     assert (tmp_path / "cedarville.json").exists()
+
+
+WRONG_JURISDICTION_CATALOG_HIT = {
+    "results": [
+        {
+            "resource": {"id": "wxyz-9999", "name": "White Plains Building Permits"},
+            "metadata": {"domain": "opendata.otherplace-example.gov"},
+        }
+    ]
+}
+
+
+def test_catalog_hit_from_unrelated_domain_is_rejected(tmp_path):
+    """Real-world case: searching Socrata for "White Plains building permits"
+    returned a Howard County, MD dataset whose name happened to say the city --
+    reject any hit whose portal domain doesn't say it belongs to this city/state."""
+    def http_get(url):
+        if url.startswith(find_sources.SOCRATA_CATALOG):
+            return WRONG_JURISDICTION_CATALOG_HIT
+        return {"data": []}
+
+    assert find_sources.find_sources("White Plains", "NY", http_get, recipes_dir=tmp_path) is None
 
 
 def test_no_catalog_hit_returns_none_and_saves_nothing(tmp_path):

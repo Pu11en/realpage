@@ -21,6 +21,14 @@ HttpGet = Callable[[str], object]
 
 APARTMENT_RE = re.compile(r"multi[- ]?family|apartment", re.I)
 CO_KEY_RE = re.compile(r"cert.*occup|certificate_of_occupancy|\bco_date\b|final.*inspect", re.I)
+# permit-type categories that mean work on an *existing* building (repairs, a
+# trade permit, a fence) -- these show up constantly on real permit feeds with
+# "apartment(s)" somewhere in the free-text description (e.g. "renovate 2
+# apartments"), which is not a new apartment project and must not match.
+RENOVATION_TYPE_RE = re.compile(
+    r"^(repair|electrical|plumbing|mechanical|hvac|re?-?roof|sign|fence|demolition|alteration|garshed)\b",
+    re.I,
+)
 
 # permits issued this long ago or more recently are still "in the pipeline"
 PERMIT_WINDOW_DAYS = 24 * 30
@@ -62,10 +70,12 @@ def _is_apartment(row: dict, fields: dict) -> bool:
     type_value = str(row.get(type_key, "")) if type_key else ""
     if APARTMENT_RE.search(type_value):
         return True
-    if APARTMENT_RE.search(" ".join(str(v) for v in row.values())):
-        return True
     units = _parse_units(row, fields)
-    return units is not None and units >= 20
+    if units is not None and units >= 20:
+        return True
+    if RENOVATION_TYPE_RE.match(type_value.strip()):
+        return False
+    return APARTMENT_RE.search(" ".join(str(v) for v in row.values())) is not None
 
 
 def _parse_units(row: dict, fields: dict) -> int | None:

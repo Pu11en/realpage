@@ -94,6 +94,23 @@ def test_non_apartment_low_units_is_dropped():
     assert find_upcoming("Rivertown", "ZZ", "zz", RECIPE, _http_get(rows), today=TODAY) == []
 
 
+def test_repair_permit_mentioning_apartments_in_description_is_dropped():
+    """Real-world case (found running the chain on Buffalo, NY): a trade/repair
+    permit type like "REPAIR" or "ELECTRICAL" whose free-text description
+    happens to mention "apartments" (renovating an existing building) is not a
+    new apartment project and must not be picked up by the whole-row text scan."""
+    rows = [
+        {
+            "PermitType": "Repair",
+            "IssueDate": "2026-08-01",
+            "Units": "",
+            "Address": "5 River Rd",
+            "Description": "Renovate kitchens and bathrooms in (2) rear apartments",
+        }
+    ]
+    assert find_upcoming("Rivertown", "ZZ", "zz", RECIPE, _http_get(rows), today=TODAY) == []
+
+
 def test_large_unit_count_counts_as_apartment_even_if_type_unclear():
     rows = [
         {

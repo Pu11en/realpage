@@ -852,3 +852,75 @@ Nothing left open for this task.
 - Left open, on purpose, per this task's scope: no real network run, no
   `--state`/`--city` CLI invocation against live data, and 6.2 (the actual
   small test run) wasn't started -- both are explicitly a separate task.
+
+## 6.2 Small test run (~20 searches) -- done
+
+- State pick (`pick_state()`) gave NY (lowest RealPage `total` in the client map
+  among the 15 target states, tie order NY, UT, WI, ...).
+- Picked one city inside NY by hand rather than running the full Census-BPS city
+  ranker first (that's really part of 6.3's job): tried Syracuse and Buffalo.
+  Buffalo had a real, working city permit dataset (`data.buffalony.gov`), so
+  that's the city the small test ran against.
+- Running the real chain (sources -> permits -> details -> agendas -> sales,
+  HUD/awards skipped on purpose for this small test since those are state-level
+  and not part of "one city") surfaced three real bugs, each fixed with a
+  regression test and reverified against `bash tooling/qa/check-lead-finder.sh`
+  (still 100% green, no place-name literals):
+  1. **`find_sources.py` `_socrata_endpoint`** was preferring the catalog's
+     `link` field, which is the human browse-page URL, not the API -- every
+     dataset URL it built was wrong. Also, a Socrata "filter" resource (a saved
+     view of another dataset) 403s when queried by its own id; fixed to use the
+     view's `parent_fxf` (base dataset id) instead. Found because Buffalo's top
+     catalog hit ("All permits since 1/1/2018") always came back with 0 rows
+     until this was fixed.
+  2. **`find_sources.py` `_guess_fields`** picked the first column whose name
+     merely contained "date" -- for Buffalo that was `expdate` (permit
+     expiration), not `issued` (the actual issue date), so every permit_date
+     came out as a nonsense future date. Also never recognized `stname`
+     ("street name") as an address column, so every lead had a blank address.
+     Fixed to prefer an "issue"-named key over a bare "date" one (and exclude
+     "exp"), and to accept "stname"/"street" as address synonyms. Also changed
+     it to merge field names across every sampled row instead of just
+     `rows[0]` -- Socrata omits null fields from a row's JSON entirely, so one
+     row alone can under-report the dataset's real columns.
+  3. **`find_sources.py`** had no check that a catalog hit's own domain
+     belongs to the searched city/state -- searching "White Plains building
+     permits" returned a real, well-formed, but *completely unrelated* Howard
+     County, MD dataset (matched purely because its name mentioned building
+     permits). Added `_domain_matches_place()`: reject a hit unless the domain
+     contains the city's name or the state's two-letter code.
+  4. **`find_upcoming.py` `_is_apartment`** had a whole-row text fallback that
+     matched "apartment(s)" appearing *anywhere* in a permit row, including
+     free-text repair/electrical/plumbing descriptions for existing buildings
+     ("Renovate kitchens... in (2) rear apartments"). That pulled in a stack of
+     unrelated renovation permits as if they were new apartment projects.
+     Added `RENOVATION_TYPE_RE` to reject rows whose own permit-type field says
+     REPAIR/ELECTRICAL/PLUMBING/etc. before falling back to the text scan.
+- After all four fixes, Buffalo's real permit feed for the current window
+  yielded **one genuine lead** (not five -- Buffalo just doesn't have five
+  big new-construction multifamily permits open right now, which is a true
+  result, not a bug):
+  - **2227 South Park Ave, Buffalo, NY** -- a heating-permit filing whose
+    description says "Renovate Existing building into 6 apartments" (permit
+    issued 2026-08-18, stage "permitted"). Geocoded correctly to real Buffalo
+    coordinates via the Census geocoder. Units stayed 0 (the permit's
+    "units_added" field, which is legitimately 0 for a renovation of an
+    existing building -- the dataset just doesn't report a total-unit count
+    for this permit type) and the "website" project-details found
+    (`education.com`) is clearly wrong -- a known, not-yet-fixed weak spot:
+    `project_details.py`'s `_pick_website()` takes the first non-news search
+    result with no check that it's actually about this address. Tried
+    tightening that (require the street number in the result's title/snippet)
+    but it broke two passing fixture tests whose snippets don't carry a street
+    number either, so reverted rather than ship a half-right fix under this
+    task's scope -- flagging it here for whoever does 6.3+ or a follow-up: the
+    filled `website` field cannot be trusted without a relevance check.
+  - No other permits, agenda hits, or sales turned up for Buffalo in this
+    small run (agenda system identified as CiviClerk; sales-news search: 0
+    hits, not a bug -- just nothing recent).
+- Search budget: 3 SearXNG searches, 0 Jina, well under the ~20 cap.
+- Left in the repo from this task: `propertystack/recipes/buffalo.json` (the
+  proven-working recipe) and `propertystack/runs/NY/20260914-test62/` (the run
+  folder, resumable) -- 6.3 can build directly on top of this rather than
+  starting over.
+- Next task (6.3) starts the full NY run in the background.

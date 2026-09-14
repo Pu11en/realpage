@@ -153,7 +153,7 @@ Open: http://localhost:8765 → Early Leads → the new state's button
   pages, project pages) is done by **this session**: the script writes a `to-read.jsonl` queue in the
   run folder, the session reads each item and writes the facts back (with the source URL), and the
   script continues. Everything else is plain code. Tests. Commit.
-- [ ] **6.2 Small test run (~20 searches).** Whole chain on **one city** of the picked state,
+- [x] **6.2 Small test run (~20 searches).** Whole chain on **one city** of the picked state,
   capped at 5 projects. Write the 5 leads in plain words in the progress log. If they look wrong
   (not apartments, made-up facts, RealPage buildings), fix the step at fault and rerun; then go on.
 - [ ] **6.3 Full state run, part A (pre-approved).** Start the run in the background

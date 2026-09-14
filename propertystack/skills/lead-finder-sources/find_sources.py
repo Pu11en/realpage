@@ -10,6 +10,7 @@ from __future__ import annotations
 import datetime
 import json
 import re
+import urllib.parse
 from pathlib import Path
 from typing import Callable
 
@@ -41,6 +42,19 @@ def find_sources(city: str, state: str, http_get: HttpGet, recipes_dir: Path = R
     return recipe
 
 
+def _domain_matches_place(domain: str, city: str, state: str) -> bool:
+    """A Socrata/ArcGIS catalog text search can return another jurisdiction's
+    dataset that merely mentions the city name (e.g. searching "White Plains
+    building permits" hit a Howard County, MD portal). Require the portal's
+    own domain to say it belongs to this city or state before trusting it."""
+    domain = domain.lower()
+    city_slug = re.sub(r"[^a-z0-9]", "", city.lower())
+    if city_slug and city_slug in re.sub(r"[^a-z0-9]", "", domain):
+        return True
+    state_slug = state.lower()
+    return bool(re.search(rf"[.-]{state_slug}[.-]|[.-]{state_slug}\.gov", domain))
+
+
 def _try_socrata(city: str, state: str, http_get: HttpGet) -> dict | None:
     query = f"{SOCRATA_CATALOG}?q={_q(city)}+building+permits"
     try:
@@ -51,6 +65,9 @@ def _try_socrata(city: str, state: str, http_get: HttpGet) -> dict | None:
         resource = result.get("resource", {})
         if not PERMIT_KEYWORDS_RE.search(resource.get("name", "")):
             continue
+        domain = (result.get("metadata") or {}).get("domain", "")
+        if not _domain_matches_place(domain, city, state):
+            continue
         endpoint = _socrata_endpoint(result)
         if not endpoint:
             continue
@@ -58,7 +75,7 @@ def _try_socrata(city: str, state: str, http_get: HttpGet) -> dict | None:
         completeness = test_dataset(rows)
         if completeness is None:
             continue
-        fields = _guess_fields(rows[0]) if rows else {}
+        fields = _guess_fields(rows) if rows else {}
         return _recipe(city, state, "socrata", endpoint, fields, completeness)
     return None
 
@@ -76,11 +93,14 @@ def _try_arcgis(city: str, state: str, http_get: HttpGet) -> dict | None:
         endpoint = attrs.get("url")
         if not endpoint:
             continue
+        domain = urllib.parse.urlparse(endpoint).netloc
+        if not _domain_matches_place(domain, city, state):
+            continue
         rows = _sample_rows(endpoint, http_get)
         completeness = test_dataset(rows)
         if completeness is None:
             continue
-        fields = _guess_fields(rows[0]) if rows else {}
+        fields = _guess_fields(rows) if rows else {}
         return _recipe(city, state, "arcgis", endpoint, fields, completeness)
     return None
 
@@ -102,19 +122,42 @@ def _looks_useful_field(key: str) -> bool:
     return bool(re.search(r"unit|date|address|type|permit", key, re.I))
 
 
-def _first_matching_key(row: dict, needle: str) -> str | None:
+def _first_matching_key(row: dict, needle: str, exclude: str = "") -> str | None:
     for key in row:
-        if needle in key.lower():
+        low = key.lower()
+        if needle in low and not (exclude and exclude in low):
             return key
     return None
 
 
-def _guess_fields(row: dict) -> dict:
+def _guess_fields(rows: list[dict]) -> dict:
+    """Field-name synonyms across permit systems (Socrata/ArcGIS column names vary
+    city to city): prefer a plain "issued" date over an expiration/final-inspection
+    date, and accept "street"/"stname" as well as "address" for the address column
+    -- both seen in real city permit datasets. Merge keys across every sampled row,
+    not just the first -- Socrata omits null fields from a row's JSON entirely, so
+    one row alone can be missing columns other rows have."""
+    row: dict = {}
+    for r in rows:
+        row.update(r)
     fields = {}
-    for label, needle in (("permit_type", "type"), ("issue_date", "date"), ("units", "unit"), ("address", "address")):
-        key = _first_matching_key(row, needle)
-        if key:
-            fields[label] = key
+    issue_key = (
+        _first_matching_key(row, "issue")
+        or _first_matching_key(row, "date", exclude="exp")
+        or _first_matching_key(row, "date")
+    )
+    if issue_key:
+        fields["issue_date"] = issue_key
+    for label, needles in (
+        ("permit_type", ("type",)),
+        ("units", ("unit",)),
+        ("address", ("address", "stname", "street")),
+    ):
+        for needle in needles:
+            key = _first_matching_key(row, needle)
+            if key:
+                fields[label] = key
+                break
     return fields
 
 
@@ -131,12 +174,18 @@ def _sample_rows(endpoint: str, http_get: HttpGet) -> list[dict]:
 
 
 def _socrata_endpoint(result: dict) -> str | None:
-    link = result.get("link")
-    if link:
-        return link
+    # `link` is the human-browsable catalog page, not the API -- always build
+    # the real /resource/<id>.json endpoint from domain + resource id instead.
     resource = result.get("resource", {})
     resource_id = resource.get("id")
     domain = (result.get("metadata") or {}).get("domain")
+    if resource.get("type") == "filter":
+        # A "filter" resource is a saved view of another dataset; Socrata's
+        # /resource/<id>.json endpoint 403s for the view id itself, so query
+        # the parent dataset instead (parent_fxf: the base dataset's id).
+        parent_fxf = resource.get("parent_fxf") or []
+        if parent_fxf:
+            resource_id = parent_fxf[0]
     if resource_id and domain:
         return f"https://{domain}/resource/{resource_id}.json"
     return None
