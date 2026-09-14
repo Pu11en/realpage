@@ -457,6 +457,17 @@ def discover_state_areas(include_sample: bool = False) -> list[str]:
     return slugs
 
 
+def _area_signal_text(record) -> str:
+    """The plan's exact labels: 'Planned (not permitted yet)', 'Opens: not
+    public yet', 'Sold <date>' -- for whatever stage/date data a state-area
+    record actually has (never guessed)."""
+    if record.stage == "sold":
+        return f"Sold {record.sale_date}" if record.sale_date else "Sold"
+    if record.stage == "planned":
+        return "Planned (not permitted yet)"
+    return f"Opens: {record.opening_date}" if record.opening_date else "Opens: not public yet"
+
+
 def _area_lead_dict(record, idx: int) -> dict:
     is_sold = record.stage == "sold"
     name = record.name or record.address or "Unnamed project"
@@ -479,6 +490,7 @@ def _area_lead_dict(record, idx: int) -> dict:
         "links": {k: v for k, v in record.links.items() if v},
         "sources": [s["url"] if isinstance(s, dict) else s.url for s in record.sources],
         "signalType": "Sold" if is_sold else ("Planned" if record.stage == "planned" else "Upcoming"),
+        "signal": _area_signal_text(record),
         "why": record.why,
         # Records already come out of score_and_rank in rank order (4.5); this
         # is a display-only stand-in for a numeric score until the site needs one.

@@ -31,6 +31,25 @@ def test_build_area_shapes_lead_records():
     # permitted/upcoming one, per the group order in score_leads.py.
     assert [lead["stage"] for lead in area["leads"]] == ["permitted", "sold"]
     assert all(lead["why"] for lead in area["leads"])
+    # 5.3: city filter + labels -- exact plan wording per stage/date state.
+    by_stage = {lead["stage"]: lead for lead in area["leads"]}
+    assert by_stage["sold"]["signal"].startswith("Sold ")
+
+
+def test_area_signal_labels_planned_and_unknown_opening():
+    from record import LeadRecord
+
+    planned = LeadRecord(area="_sample", city="Sampleton", stage="planned")
+    permitted_no_date = LeadRecord(area="_sample", city="Sampleton", stage="permitted")
+    permitted_with_date = LeadRecord(
+        area="_sample", city="Sampleton", stage="leasing", opening_date="2026-03-01"
+    )
+    sold_no_date = LeadRecord(area="_sample", city="Sampleton", stage="sold")
+
+    assert build_data._area_signal_text(planned) == "Planned (not permitted yet)"
+    assert build_data._area_signal_text(permitted_no_date) == "Opens: not public yet"
+    assert build_data._area_signal_text(permitted_with_date) == "Opens: 2026-03-01"
+    assert build_data._area_signal_text(sold_no_date) == "Sold"
 
 
 def test_build_state_areas_writes_json_only_when_asked(tmp_path, monkeypatch):

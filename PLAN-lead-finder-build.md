@@ -142,7 +142,7 @@ Open: http://localhost:8765 → Early Leads → the new state's button
   in the real build). Plano–Richardson unchanged. Tests. Commit.
 - [x] **5.2 Area buttons.** Early Leads: one button per area, each its own table; remove the
   sidebar area dropdown. Check passes. Commit.
-- [ ] **5.3 City filter + labels.** State areas get a city filter above the table; rows show
+- [x] **5.3 City filter + labels.** State areas get a city filter above the table; rows show
   "Planned (not permitted yet)", "Opens: not public yet", "Sold <date>" and the why line. Commit.
 - [ ] **5.4 Chat knows every area.** The chatbot loads every area's leads; `SOUL.md` stops naming one
   county; deep dives work for a new area (links incl. 📋 Agenda when present). Rebuild with
@@ -183,3 +183,37 @@ Open: http://localhost:8765 → Early Leads → the new state's button
 
 ### Part 6: The real run
 
+
+## 5.3 City filter + labels -- done
+
+- The city filter above the table (`#f-city`) already existed generically in
+  `site/index.html` since it's populated from whatever `data.leads` cities are
+  present for any area, including state areas -- nothing to add there.
+- What was actually missing: `site/data/build_data.py`'s `_area_lead_dict`
+  (added in 5.1) never set a `signal` field for state-area leads, only
+  `signalType` -- so `app.js`'s `signalHtml()` (which reads `l.signal`) would
+  have rendered `undefined` for every state-area row the moment a real area
+  existed. Added `_area_signal_text(record)`: "Planned (not permitted yet)"
+  for planned-stage records; "Sold <date>" (or bare "Sold" if no sale date)
+  for sold-stage; "Opens: <date>" for permitted/under-construction/leasing
+  when `opening_date` is known, "Opens: not public yet" when it isn't --
+  matching the plan's exact wording. Wired into `_area_lead_dict["signal"]`.
+- The existing "why" line (`l.why`, from 4.5's `score_and_rank`) was already
+  rendered per row; no change needed there.
+- Tests: extended `propertystack/skills/lead-finder/tests/test_build_areas.py`
+  with `test_area_signal_labels_planned_and_unknown_opening` (planned / no
+  opening date / known opening date / sold-with-no-date cases) and a
+  sold-signal assertion in the existing sample-area shape test.
+- Checked: `bash tooling/qa/check-lead-finder.sh` -- lead-finder's tests now
+  39 (was 34), every other lead-finder* dir and check-panel.sh unaffected and
+  clean. Reran `python3 site/data/build_data.py` (real build, unaffected) and
+  a one-off `LEAD_FINDER_BUILD_SAMPLE=1` build to confirm `_sample.json`'s
+  leads now carry a real `signal` string per the new labels ("Opens: not
+  public yet" / "Sold 2025-11-02"), then reran the real build and deleted the
+  leftover `_sample.json` so the working tree stays on the real (non-sample)
+  site state.
+- Left open: no real state-area run exists yet (Part 6), so this can't be
+  eyeballed in a live browser with real data -- verified via the `_sample`
+  fixture area instead, same approach 5.1/5.2 used.
+- Next task (5.4) makes the chatbot load every area's leads and stop naming
+  one county in `SOUL.md`.
