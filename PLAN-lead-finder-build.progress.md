@@ -81,3 +81,39 @@
 - Checked: `bash tooling/qa/check-lead-finder.sh` -- 24 tests pass (was 17), panel check clean.
   Also reran `python3 site/data/build_data.py` to confirm the site still builds unaffected.
 - Nothing left open. Next task (1.4) adds the run folder, resume, caps, and state pick.
+
+## 1.4 Run folder, resume, caps, state pick -- done
+
+- Added `propertystack/skills/lead-finder/runfolder.py`:
+  - `pick_state()`: reads `propertystack/data/client-map/targets.json` (the 15 states) and
+    `counts.json` (RealPage counts per state), picks the state with the lowest `total` in
+    counts.json (a state missing from counts.json counts as 0), ties broken by more permits
+    (`permits_5plus_12mo`) winning. Returns the pick plus the full ordered backup list, so a
+    caller can roll to the next state on the list if the first one nets too few projects.
+  - `RunCaps`: tracks `project_count`, `searxng_searches`, `jina_searches` separately (so Jina
+    usage stays visible per the fetch.py counting from 1.3); `project_cap_hit()` (150),
+    `search_cap_hit()` (~450 total searches), `any_cap_hit()`, and `below_minimum()` (<30
+    projects -> roll into next state).
+  - `RunFolder`: `propertystack/runs/<state>/<run-id>/` with `step_file(step, city)` giving one
+    JSON file per step per city (spaces in city names replaced so paths stay simple);
+    `step_done()`/`load_step()` let a later run skip any step whose output file already exists
+    (resume); `save_state_pick()` writes the pick + backup order into the run folder;
+    `save_caps()`/`load_caps()` persist the running totals so a resumed run continues counting
+    instead of resetting to zero.
+  - Wired into `run.py`: with no `--state` given it calls `pick_state()` and prints the pick and
+    backup order; `--run-id` resumes an existing folder, otherwise a UTC timestamp names a new
+    one; the folder is created and its path printed. The actual chain steps (2.1 onward) still
+    need to be plugged in -- this task only builds the folder/resume/caps/pick scaffolding the
+    plan asked for.
+- Tests: `tests/test_runfolder.py` -- `pick_state` (lowest total wins, missing-from-counts
+  treated as 0, tie broken by more permits), `RunFolder` resume (step file doesn't exist until
+  saved, then loads back the same data), one file per step per city (two cities' files don't
+  collide), state-pick and caps round-trip through disk, and all four `RunCaps` cases (project
+  cap hit, search cap hit, below-minimum roll-into-next-state, under all limits).
+- Checked: `bash tooling/qa/check-lead-finder.sh` -- 34 tests pass (was 24), panel check clean.
+  Also ran `python3 propertystack/skills/lead-finder/run.py --state ZZ_TEST --run-id testrun1`
+  by hand to confirm the folder gets created and printed correctly (then deleted the test
+  folder), and reran `python3 site/data/build_data.py` to confirm the site still builds
+  unaffected.
+- Nothing left open. Next task (2.1) starts Part 2: ranking a state's cities from the free
+  Census Building Permits Survey place-level files.

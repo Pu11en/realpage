@@ -54,7 +54,7 @@ Open: http://localhost:8765 → Early Leads → the new state's button
   tooling/searxng/docker-compose.yml up -d`. Page cache lives under `propertystack/runs/cache/`,
   which is **gitignored** (only result JSON is committed). Fixture tests (fake SearXNG down, cache
   hit, 3 blocks). Commit.
-- [ ] **1.4 Run folder, resume, caps, state pick.** `propertystack/runs/<state>/<run-id>/` with one
+- [x] **1.4 Run folder, resume, caps, state pick.** `propertystack/runs/<state>/<run-id>/` with one
   file per step per city; rerunning skips finished steps. State = among the 15 states in
   `propertystack/data/client-map/targets.json` (already the 15 with most new apartment permits), the
   one with the lowest `total` in `client-map/counts.json` (a state missing there = 0); ties → more
