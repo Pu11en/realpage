@@ -2,7 +2,7 @@
 
 Rewritten 2026-09-13 with Drew (all answers: `/home/drewp/main-projects/handoffs/2026-09-13-area-finder-plan-answers.md`).
 **NOT approved to run yet** -- planning with Drew. This file is now the **rules + map**; the work is
-split into 6 plans (below) so several `/gowork` runs can build at the same time. Runs after `PLAN-client-map.md` (done).
+in `PLAN-lead-finder-build.md` (one non-stop build). Runs after `PLAN-client-map.md` (done).
 Replaces `PLAN-scout.md` S6 and `PLAN-new-area.md`.
 
 ## What it is
@@ -56,19 +56,10 @@ on localhost, Drew checks, Drew pushes.
   Census batch geocoder (matching). No Ollama. `tooling/pms_detect.py`, Census data, optional
   Reddit/X (read-only). No LinkedIn.
 
-## The 6 plans (build order)
-1. **`PLAN-lf-1-core.md`** -- shared base: skeleton, one lead format, web helper, run folder +
-   resume, caps. **Must finish first.**
-2. Then these four can run **at the same time** (each only touches its own folders):
-   - **`PLAN-lf-2-permits.md`** -- cities → permit sources → new apartment projects → details.
-   - **`PLAN-lf-3-early-signals.md`** -- meeting agendas, HUD loan list, state award lists.
-   - **`PLAN-lf-4-software-contacts.md`** -- software check, sale news, who to call, ranking.
-   - **`PLAN-lf-5-site-chat.md`** -- Early Leads area buttons + city filter, chat knows every area
-     (built on sample data).
-3. **`PLAN-lf-6-run.md`** -- after 1-5 are merged: wire the chain, small test run (**stops for
-   Drew's go**), full state run, fill the site.
+## The build
+All work is in **`PLAN-lead-finder-build.md`**: 28 tasks in 6 parts (shared base → permits → early
+signals → software/contacts/ranking → site + chat → the real run), run as **one non-stop `/gowork`
+build** with no stops for Drew (his choice, 2026-09-13). Localhost only; nothing is pushed until
+Drew has tried it and said OK.
 
-Every plan runs on its own safe copy and is merged into `local-test`. Nothing is pushed until
-Drew has tried it on localhost and said OK.
-
-Check (all lead-finder plans): `bash tooling/qa/check-lead-finder.sh`
+Check: `bash tooling/qa/check-lead-finder.sh`
