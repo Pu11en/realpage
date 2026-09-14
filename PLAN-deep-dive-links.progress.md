@@ -16,3 +16,14 @@
 - The bot runs `Check:` without a shell, so `&&` was passed to pytest as a filename and nothing ran.
 - Wrapped the three checks in `tooling/qa/check-deep-dive.sh`; plan's Check line now calls that one script.
 - Ran it: 17 tests pass, panel check clean, readable check OK (exit 0).
+
+## K2 Clickable sources everywhere — done (commit a67aacd)
+- SOUL.md: Sources line is short markdown links ([County sales record](url) · [News](url));
+  our own data with no URL stays a plain name; never plain "(project record)"/"(news)" labels.
+  Sale list items shortened to "sold <Mon year>", no buyer name (sold-list answer ran 62-65 words).
+- check_answers.py: deep dive fails with no `](http` link; any Sources line naming
+  record/news/website outside a link fails (our own "Say it as" names allowed); deep-dive limit 70
+  words excluding link row and Sources.
+- check-answers.sh: runs 1-2 failed only on sold-list length; after the rule fix, runs 4 and 5 both 5/5.
+  Plan Check passes (17 tests, panel clean, readable OK).
+- Open: the bot sometimes gives "County sales records" plain, sometimes a data.texas.gov link -- both allowed.
