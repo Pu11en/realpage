@@ -557,3 +557,24 @@ Commit: (see git log for this file's commit)
   a fabricated developer).
 - Checked: `bash tooling/qa/check-lead-finder.sh` passes (all lead-finder* skill tests, 56
   in the lead-finder skill itself, plus the site/panel checks). Committed.
+
+## F10c Find websites by project name -- done
+- `fill_project_details` (`propertystack/skills/lead-finder-details/project_details.py`) now builds a
+  query list: the project/brand name first (`"<name>" <city> apartments`), then the street address
+  (`"<address>" <city> apartments`) as fallback -- stops at the first query whose results pass the F2
+  `is_about_building` check via `_pick_website`. Unnamed records (no `record.name`) skip straight to the
+  address query, same as before.
+- Added 2 fixture tests: name query wins when it matches; falls back to the address query (and only
+  issues that second search) when the name query returns no real match. Full suite:
+  `python3 -m pytest propertystack/skills/lead-finder-details/tests/test_project_details.py -q` -- 15 passed.
+- Live test (not in the offline suite): `propertystack/skills/lead-finder-details/live_self_test_f10c.py`,
+  run by hand against real Jina/Brave + crawl4ai on Tempe's "1020 Apache" (1020 W Apache Blvd) and
+  "La Victoria Commons on Apache" (1140 E Apache Blvd). Result: "1020 Apache" got a website, but the
+  wrong one (lvcollective.com/work/rambler-tempe -- a different LV Collective project on the same
+  street) because the address-query fallback's street-number/street-name match (F2's `street_hit`) is
+  loose enough to accept a nearby unrelated building; "La Victoria Commons on Apache" got no website at
+  all (name query found only a news article, address query found nothing that passed F2). Flagging this
+  as an open weak spot for F10 (the Tempe test run) to catch and, if it fails the bar, fix -- not
+  patching `street_hit` here since F10c's scope was the query-ordering change, not the match-strength
+  threshold.
+- Checked: `bash tooling/qa/check-lead-finder.sh` -- all suites pass (unchanged pass counts elsewhere).

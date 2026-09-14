@@ -68,10 +68,23 @@ def fill_project_details(
         if coords is not None:
             record.lat, record.lon = coords
 
-    query = f'"{record.address}" {record.city} apartments'
-    results = search_fn(query, 5) or []
+    # Search the project/brand name first (an apartment community's own site
+    # almost always uses its marketing name, not its street address), then
+    # fall back to the address if the name didn't turn up a real match --
+    # F2's is_about_building check still gates both.
+    queries = []
+    if record.name:
+        queries.append(f'"{record.name}" {record.city} apartments')
+    queries.append(f'"{record.address}" {record.city} apartments')
 
-    website = _pick_website(results, record.name, record.address)
+    results: list = []
+    website = ""
+    for query in queries:
+        results = search_fn(query, 5) or []
+        website = _pick_website(results, record.name, record.address)
+        if website:
+            break
+
     if website:
         record.website = website
         record.links["website"] = website

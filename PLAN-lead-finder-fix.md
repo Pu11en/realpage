@@ -125,7 +125,7 @@ Open: http://localhost:8765 → Early Leads → Az
   the developer company; (3) the developer's own site contact page → office phone (`phonenumbers`). Owner
   LLCs with a generic name ("XYZ Owner LLC") only count if news or the developer site ties them to a real
   developer. Never guess. Fixture tests + live test on 3 of Tempe's 9 new permits. Commit.
-- [ ] **F10c Find websites by project name.** For existing (leasing) buildings, search the project/brand
+- [x] **F10c Find websites by project name.** For existing (leasing) buildings, search the project/brand
   name from the permit or sales record first, then the street address; keep the F2 check and listing-site
   filter. Live test on Tempe's "1020 Apache" and "La Victoria Commons on Apache". Commit.
 - [ ] **F10 Tempe test run (again, after F10a-c).** Full chain on Tempe only (best data). Compare to the
