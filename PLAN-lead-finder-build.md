@@ -74,7 +74,7 @@ Open: http://localhost:8765 → Early Leads → the new state's button
   (`https://hub.arcgis.com/api/search/v1/collections/dataset/items?q=<city>%20building%20permits`)
   for a city's permit dataset; test the dataset really has recent multifamily permits before
   saving the recipe. Fixture tests. Commit.
-- [ ] **2.3 `find-sources` fallback.** No catalog hit: search for the city's permit portal, identify
+- [x] **2.3 `find-sources` fallback.** No catalog hit: search for the city's permit portal, identify
   the system (Accela Citizen Access, Tyler EnerGov / CSS, OpenGov, CentralSquare, MyGovernmentOnline,
   or a city-published monthly permit report PDF/Excel -- reports count), test on 5 permits, save
   the recipe; use Scrapling/Playwright for search forms; nothing online → city "skipped: no permits

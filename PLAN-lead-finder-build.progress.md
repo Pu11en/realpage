@@ -191,3 +191,39 @@
 - Nothing left open. Next task (2.3) adds the `find-sources` fallback for cities with no
   catalog hit: search for the city's permit portal, identify the system by URL/markup pattern,
   test on 5 permits, save the recipe the same way.
+
+## 2.3 `find-sources` fallback -- done
+
+- Added `propertystack/skills/lead-finder-sources/find_sources_fallback.py`, used only after
+  2.2's catalog lookup (`find_sources.find_sources`) returns `None`. Takes injectable
+  `search_fn`/`fetch_fn` (real callers will pass `WebHelper.search`/`WebHelper.fetch` from
+  1.3's `fetch.py`, matching its search/cache/block-limit behavior for free).
+  - `find_sources_fallback(city, state, search_fn, fetch_fn, recipes_dir)`: searches for the
+    city's permit portal, and for each result tries to identify the system from the URL, then
+    from the fetched page's HTML if the URL alone doesn't match -- patterns cover Accela
+    Citizen Access, Tyler EnerGov/CSS, OpenGov, CentralSquare, and MyGovernmentOnline (regexes
+    in `SYSTEM_PATTERNS`). A recognized system's page is "tested on 5 permits" by counting
+    permit-number-like rows (`count_sample_permits`); fewer than 5 and that result is skipped,
+    not saved.
+  - If no portal result passes, it falls back to a city-published report file (PDF/XLSX/CSV
+    matched by extension in the search results) and applies the same 5-permit test to its text.
+  - Nothing usable anywhere -> returns `{"skipped": True, "reason": "no permits online"}` and
+    saves no recipe file, per the plan ("nothing online -> city skipped: no permits online").
+  - A working hit is saved as a recipe the same way as 2.2:
+    `propertystack/recipes/<city-slug>.json` with system, endpoint, date_tested, and a
+    completeness note (permits sampled, how many look multifamily).
+- Tests: `tests/test_find_sources_fallback.py` -- Accela portal identified from the URL and
+  saved; a system identified from page HTML when the URL itself doesn't match (Tyler EnerGov);
+  a portal that matches a known system but has too few sample permit rows is rejected, and the
+  search falls through to a monthly PDF report which passes instead; nothing online at all
+  returns the skip note and writes no file; `identify_system`/`count_sample_permits`/
+  `count_multifamily_hits` exercised directly; `slugify`.
+- Checked: `bash tooling/qa/check-lead-finder.sh` -- lead-finder-sources now has 12 tests (was
+  6, +6 for this task), all lead-finder* dirs total 50 passing, panel check clean. Also reran
+  `python3 site/data/build_data.py` to confirm the site still builds unaffected (204 properties,
+  42 leads, 20 states in the client map).
+- Nothing left open. Note: this task only covers the fallback *lookup*; wiring 2.2's
+  `find_sources()` and this fallback together into one "try catalog, then fallback" entry point
+  for a city happens at 6.1 when the whole chain is assembled, per the plan's own ordering.
+- Next task (2.4) rebuilds `find-upcoming` for any city: city + recipe -> new apartment permits
+  with stage inferred from issue date / certificate of occupancy.
