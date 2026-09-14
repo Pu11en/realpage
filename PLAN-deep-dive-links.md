@@ -27,7 +27,7 @@ Open: http://localhost:8765 → Early Leads → ✦ Deep dive
 
 ## Tasks
 
-- [ ] **K1 Deep dive layout + link rules.** In `chatbot/hermes-profile/SOUL.md` change the
+- [x] **K1 Deep dive layout + link rules.** In `chatbot/hermes-profile/SOUL.md` change the
   deep-dive layout to: the existing Call / Why now / Size+Software / Ask for lines, then
   `- **📍 Address:** <street, city>` and `- **📅 Opens:** <month year or "not public yet">`
   (sold buildings: `**Sold:** <date>` instead), then one line
