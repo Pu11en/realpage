@@ -33,7 +33,7 @@ Open: http://localhost:8765 → Early Leads → the new state's button
   code has a place name** (Plano, Richardson, Collin, Dallas, any US state or big-city literal).
   Delete the 4 old Plano-only skills (`find-apartments`, `find-sales`, `build-table`, `scout-areas`);
   Plano data files stay; check the site still builds. Commit.
-- [ ] **1.2 One lead format.** `lead-finder/record.py` + `docs/LEAD-FORMAT.md`: one record per
+- [x] **1.2 One lead format.** `lead-finder/record.py` + `docs/LEAD-FORMAT.md`: one record per
   project/building used by every part: area, city, name, address, lat/lon, units, **stage**
   (planned / permitted / under construction / leasing / sold), permit date, opening date (or blank),
   sale date + buyer, developer/owner, office phone, website, software (RealPage / competitor name /
