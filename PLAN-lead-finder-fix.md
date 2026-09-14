@@ -80,7 +80,7 @@ Open: http://localhost:8765 → Early Leads → Az
   properties (multifamily use codes) with 20+ units sold in the last 24 months: address, buyer, seller,
   date, price. Acceptance: ≥10 real 20+ unit apartment sales in the last 24 months with buyer and
   date. Code stays generic (any county with a sales file + parcel file). Commit.
-- [ ] **F6 Answer key for Arizona.** Build `propertystack/answer-keys/az.json` by hand, independent of
+- [x] **F6 Answer key for Arizona.** Build `propertystack/answer-keys/az.json` by hand, independent of
   the tool: 15 real new or recently sold AZ apartment buildings (20+ units) **only from sources the
   tool doesn't read** -- news articles, developer press releases, apartment association new-community
   lists, building websites (never the city permit layers or the county sales file) -- each with its

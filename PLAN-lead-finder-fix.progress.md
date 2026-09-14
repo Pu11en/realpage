@@ -291,3 +291,36 @@ Commit: (see git log for this file's commit)
   verified PUC-to-description table was found in this build, so it's left
   unused rather than guessed -- a future county recipe with only a numeric
   use code and no separate lookup table would need that table sourced first.
+
+## F6 Answer key for Arizona -- done
+- Built `propertystack/answer-keys/az.json` by hand using live web search/fetch
+  (WebSearch + WebFetch), never the lead-finder tool itself and never the city
+  permit layers or the Maricopa County sales file -- sources are news
+  articles, developer/trade press releases, and buildings' own websites.
+- 15 real 20+ unit-scale Arizona apartment properties (8 new/leasing/under
+  construction, 7 recently sold), each with address, city, unit count (where
+  publicly known -- The Crescent's isn't yet, left `null` rather than
+  guessed), a `why`, and a `source_url` + `source_type` for hand re-verification:
+  Lumara (Phoenix, Toll Brothers/Willton, 456u), Avilla Foothills (Surprise,
+  NexMetro, 108u), Album Surprise (Surprise, Greystar 55+, 161u), The Crescent
+  (Phoenix hotel-to-apartment conversion, Foundation 8), Northbend (Tempe,
+  Milhaus/Banyan, 310u), Dwell at 5th and Farmer (Tempe, Mark Taylor, 129u),
+  Navona (Mesa, Toll Brothers/Canyon Partners, 400u), The Stately Avondale
+  (Avondale, Ascent/Merit, 286u), Marquee on 5th and Bella Victoria (Tucson/Mesa,
+  the plan's own named fixtures), Azul (Phoenix, sold 2025-05, 227u, $37.1M),
+  Broadstone Seventh Street (Phoenix, sold 2026-06, 258u, $81.4M), and Lazo /
+  Zone / Zone Lux (Chandler/Glendale, the 3-asset Sunroad->Fairfield portfolio
+  sale, sold 2025-07, $244.8M/907 units total).
+- **5 with software hand-verified from the building's own site** (its real
+  resident-portal/applicant-login link, fetched live, not a listing site):
+  Lumara = Yardi (securecafenet.com/securecafe.com), Navona = **Entrata**
+  (residentportal.com/prospectportal.com -- the required non-Yardi example),
+  The Stately Avondale = Yardi (securecafenet.com), Marquee on 5th = Yardi and
+  Bella Victoria = Yardi (both per the plan's own stated ground truth, cross-
+  checked against their sites' portal links).
+- Checked: `python3 -c "import json; d=json.load(open('propertystack/answer-keys/az.json')); assert len(d['leads'])==15; assert sum('software' in l for l in d['leads'])==5"` passes.
+  Also reran `bash tooling/qa/check-lead-finder.sh` (unaffected by this task,
+  still all green) since the plan's Check command runs after every task.
+- Nothing left open for F6. This key is the ground truth F9's quality bar
+  (answer-key recall, software accuracy) will be measured against starting
+  at F10/F11.
