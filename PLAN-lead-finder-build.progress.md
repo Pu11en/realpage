@@ -523,3 +523,28 @@ Nothing left open for this task.
   all green).
 - Nothing left open. Next task (4.2) adds the second-check-before-verdict rule and drops
   RealPage buildings from the leads list.
+
+## 4.2 Double check + drop RealPage -- done
+
+- `lead-finder-software/detect.py`: added `_second_page_url` and `_confirm_on_second_page`.
+  A `portal`, `asset` or `text` verdict now fetches a second page (the resident-portal link
+  itself, or another link found on the homepage) and requires it to still show the same
+  vendor before the verdict is final; no agreement, no second page to check, or a failed
+  fetch all drop the verdict to `unknown` with `unknown_reason=unconfirmed`. `hop-portal`
+  already involves two pages agreeing (the homepage link + the page it points to), so it's
+  left as-is.
+- `lead-finder-software/run.py` `fill_software`: a confirmed `"RealPage"` verdict now drops
+  the record from the output entirely (not a lead). A confirmed competitor keeps its name;
+  a record whose website was actually fetched but never confirmed a vendor becomes
+  `"not picked"` (matches the `docs/LEAD-FORMAT.md` enum); a record with no website stays
+  `"unknown"`.
+- Updated `SKILL.md` to describe the second-page check and the RealPage-drop/not-picked
+  rule.
+- Tests added/updated in `tests/test_detect.py`: portal verdict needs the second page to
+  confirm (added a confirming second page to the existing portal/hop-portal/fill_software
+  fixtures so they still pass); new tests for an unconfirmed second page, a missing second
+  page, `fill_software` dropping a confirmed RealPage record while keeping a Yardi one, and
+  the unknown-after-fetch -> "not picked" / no-website -> "unknown" split.
+- Checked: `python3 -m pytest propertystack/skills/lead-finder-software/tests -q` (16
+  passed) and `bash tooling/qa/check-lead-finder.sh` (all suites + panel check clean).
+- Nothing left open. Next task (4.3) is `find-sales-news`.

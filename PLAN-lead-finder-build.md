@@ -120,7 +120,7 @@ Open: http://localhost:8765 → Early Leads → the new state's button
   securecafe, Entrata, AppFolio, ResMan, MRI, Knock, SightMap …), merged with `tooling/pms_detect.py`.
   Cheap page check first; full browser only if unclear. Any area (remove Plano paths). Fixture tests.
   Commit.
-- [ ] **4.2 Double check + drop RealPage.** Before a RealPage or competitor verdict, a second check
+- [x] **4.2 Double check + drop RealPage.** Before a RealPage or competitor verdict, a second check
   (another page on the site or the resident portal link) must agree, else "unknown". RealPage
   buildings dropped; others "on <competitor> today" / "not picked yet". Fixture tests. Commit.
 - [ ] **4.3 `find-sales-news` (new).** SearXNG news search (`"<city>" apartments sold OR acquires OR

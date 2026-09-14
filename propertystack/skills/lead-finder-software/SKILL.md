@@ -41,12 +41,24 @@ hard-coded to one place -- `rules.json` and the code both work for any project's
 which already tries crawl4ai before Scrapling/Playwright and only when a page looks blocked --
 this skill never opens a browser directly.
 
+**Part 4.2 -- double check before a verdict.** A `portal`, `asset` or `text` hit came
+from a single page, so before it's final `detect_software` fetches a second page (the
+resident-portal link itself, or another link on the homepage) and checks it still shows
+the same vendor. No agreement, no second page, or a failed fetch → the verdict drops to
+`unknown` (`unknown_reason=unconfirmed`). `hop-portal` already required two pages to
+agree (the homepage link and the page it points to), so it's confirmed by construction
+and isn't re-checked.
+
+`fill_software` (`run.py`) then applies the plan's rule: a confirmed **RealPage**
+building is dropped from the output entirely (it's not a lead); everything else keeps
+the confirmed competitor name, or becomes `"not picked"` once the site has actually been
+checked and no vendor was confirmed. A record with no website to fetch stays `"unknown"`.
+
 ## Check after running
 
 - `unknown_reason` counts show how much of the run needs a second look.
-- `asset` and `text` signals are weaker evidence than `portal`/`hop-portal` -- worth a manual
-  spot-check before trusting them (see 4.2, which requires a second page to agree before a
-  final RealPage/competitor verdict).
+- `asset` and `text` signals are weaker evidence than `portal`/`hop-portal` -- that's why
+  4.2 requires a second page to agree before either becomes a final verdict.
 
 ## Limits
 

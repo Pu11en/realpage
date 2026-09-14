@@ -1,4 +1,4 @@
-"""Part 4.1 -- which leasing software a project's website runs.
+"""Part 4.1/4.2 -- which leasing software a project's website runs.
 
 Loads our own Wappalyzer-format rules from rules.json (not the GPL webappanalyzer
 technologies file -- written from scratch for this project) and merges the same
@@ -9,6 +9,14 @@ the strongest evidence); if none, follow up to 3 such links one hop and re-check
 page, e.g. an asset CDN (signal=asset); if still none, try a plain-text match
 against the rules' html patterns (signal=text, the cheapest and weakest signal);
 if still none, check known in-house portals (UDR, Camden) as a last resort.
+
+Part 4.2: a `portal`, `asset` or `text` verdict is only fetched from one page, so
+before it's final we fetch a *second* page (the resident-portal link itself, or
+another link on the homepage if the proof link isn't a separate page) and check
+it still shows the same vendor. If the second page disagrees, can't be fetched,
+or there is no second page to check, the verdict drops to `unknown` with
+`unconfirmed`. `hop-portal` already required two pages to agree (the homepage
+link plus the page it points to), so it's confirmed by construction.
 
 "Cheap page check first, full browser only if unclear" is inherited from
 WebHelper.fetch() (propertystack/skills/lead-finder/fetch.py), which already
@@ -83,6 +91,30 @@ def classify_in_house(html: str, rules: dict) -> tuple[str, str] | tuple[None, N
     return None, None
 
 
+def _second_page_url(html: str, primary_url: str, proof_url: str) -> str | None:
+    """Pick another page on the site to double-check a one-page verdict."""
+    if proof_url and proof_url != primary_url and not SKIP.search(proof_url):
+        return proof_url
+    for u in dict.fromkeys(URL_RE.findall(html)):
+        if u != primary_url and not SKIP.search(u):
+            return u
+    return None
+
+
+def _confirm_on_second_page(vendor: str, html: str, primary_url: str, proof_url: str, web, rules: dict) -> bool:
+    """Part 4.2: a portal/asset/text verdict is only good once a second page agrees."""
+    second_url = _second_page_url(html, primary_url, proof_url)
+    if not second_url:
+        return False
+    result = web.fetch(second_url)
+    if not result.ok:
+        return False
+    hits, _ = classify_links(result.html, rules)
+    if vendor in hits:
+        return True
+    return classify_text(result.html, rules) == vendor
+
+
 def detect_software(url: str, web, rules: dict | None = None) -> dict:
     """Fetch a project's website (via the shared WebHelper) and classify its software.
 
@@ -101,7 +133,10 @@ def detect_software(url: str, web, rules: dict | None = None) -> dict:
     hits, kind = classify_links(html, rules)
     if kind == "portal":
         vendor = next(iter(hits))
-        return {"software": vendor, "signal": "portal", "proof_url": hits[vendor], "unknown_reason": ""}
+        proof_url = hits[vendor]
+        if not _confirm_on_second_page(vendor, html, url, proof_url, web, rules):
+            return {"software": "unknown", "signal": "none", "proof_url": "", "unknown_reason": "unconfirmed"}
+        return {"software": vendor, "signal": "portal", "proof_url": proof_url, "unknown_reason": ""}
 
     hop_links = [u for u in dict.fromkeys(URL_RE.findall(html)) if HOP.search(u) and not SKIP.search(u)][:3]
     for link in hop_links:
@@ -111,14 +146,20 @@ def detect_software(url: str, web, rules: dict | None = None) -> dict:
         h2, _ = classify_links(hop_result.html, rules)
         if h2:
             vendor = next(iter(h2))
+            # Two pages (the homepage link and the page it points to) already agree.
             return {"software": vendor, "signal": "hop-portal", "proof_url": h2[vendor], "unknown_reason": ""}
 
     if kind == "asset" and hits:
         vendor = next(iter(hits))
-        return {"software": vendor, "signal": "asset", "proof_url": hits[vendor], "unknown_reason": ""}
+        proof_url = hits[vendor]
+        if not _confirm_on_second_page(vendor, html, url, proof_url, web, rules):
+            return {"software": "unknown", "signal": "none", "proof_url": "", "unknown_reason": "unconfirmed"}
+        return {"software": vendor, "signal": "asset", "proof_url": proof_url, "unknown_reason": ""}
 
     text_vendor = classify_text(html, rules)
     if text_vendor:
+        if not _confirm_on_second_page(text_vendor, html, url, url, web, rules):
+            return {"software": "unknown", "signal": "none", "proof_url": "", "unknown_reason": "unconfirmed"}
         return {"software": text_vendor, "signal": "text", "proof_url": url, "unknown_reason": ""}
 
     name, proof = classify_in_house(html, rules)

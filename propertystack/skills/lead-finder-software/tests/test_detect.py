@@ -72,6 +72,7 @@ class FakeWeb:
 def test_detect_software_portal_signal():
     web = FakeWeb({
         "https://example.com": '<a href="https://portal.example.com/entrata.com/login">Resident Login</a>',
+        "https://portal.example.com/entrata.com/login": '<a href="https://portal.example.com/entrata.com/sign-in">Sign in</a>',
     })
     result = detect_software("https://example.com", web)
     assert result == {
@@ -80,6 +81,26 @@ def test_detect_software_portal_signal():
         "proof_url": "https://portal.example.com/entrata.com/login",
         "unknown_reason": "",
     }
+
+
+def test_detect_software_portal_signal_unconfirmed_is_unknown():
+    # 4.2: the resident-portal link is the only page, and it doesn't confirm the vendor.
+    web = FakeWeb({
+        "https://example.com": '<a href="https://portal.example.com/entrata.com/login">Resident Login</a>',
+        "https://portal.example.com/entrata.com/login": "<p>Sign in with your email.</p>",
+    })
+    result = detect_software("https://example.com", web)
+    assert result == {"software": "unknown", "signal": "none", "proof_url": "", "unknown_reason": "unconfirmed"}
+
+
+def test_detect_software_portal_signal_no_second_page_is_unknown():
+    # Only the homepage exists -- nothing to double-check against, so no verdict.
+    web = FakeWeb({
+        "https://example.com": '<a href="https://portal.example.com/entrata.com/login">Resident Login</a>',
+    })
+    result = detect_software("https://example.com", web)
+    assert result["software"] == "unknown"
+    assert result["unknown_reason"] == "unconfirmed"
 
 
 def test_detect_software_hop_portal_signal():
@@ -110,6 +131,7 @@ def test_fill_software_writes_proof_and_source():
     records = [LeadRecord(area="xx", city="Somewhere", website="https://example.com")]
     web = FakeWeb({
         "https://example.com": '<a href="https://portal.example.com/rentcafe.com/login">Resident Login</a>',
+        "https://portal.example.com/rentcafe.com/login": '<a href="https://portal.example.com/rentcafe.com/sign-in">Sign in</a>',
     })
     out = fill_software(records, web)
     assert out[0].software == "Yardi"
@@ -123,3 +145,34 @@ def test_fill_software_skips_records_with_no_website():
     out = fill_software(records, web)
     assert out[0].software == "unknown"
     assert web.fetched == []
+
+
+def test_fill_software_drops_confirmed_realpage():
+    # 4.2: a confirmed RealPage building is dropped, it's not a lead.
+    records = [
+        LeadRecord(area="xx", city="Somewhere", name="RP Building", website="https://rp.example.com"),
+        LeadRecord(area="xx", city="Somewhere", name="Yardi Building", website="https://yardi.example.com"),
+    ]
+    web = FakeWeb({
+        "https://rp.example.com": '<a href="https://portal.rp.example.com/onesite/login">Resident Login</a>',
+        "https://portal.rp.example.com/onesite/login": '<a href="https://portal.rp.example.com/onesite/sign-in">Sign in</a>',
+        "https://yardi.example.com": '<a href="https://portal.yardi.example.com/rentcafe.com/login">Resident Login</a>',
+        "https://portal.yardi.example.com/rentcafe.com/login": '<a href="https://portal.yardi.example.com/rentcafe.com/sign-in">Sign in</a>',
+    })
+    out = fill_software(records, web)
+    assert [r.name for r in out] == ["Yardi Building"]
+    assert out[0].software == "Yardi"
+
+
+def test_fill_software_unknown_after_fetch_becomes_not_picked():
+    records = [LeadRecord(area="xx", city="Somewhere", website="https://plain.example.com")]
+    web = FakeWeb({"https://plain.example.com": "<p>Welcome home.</p>"})
+    out = fill_software(records, web)
+    assert out[0].software == "not picked"
+
+
+def test_fill_software_no_website_stays_unknown():
+    records = [LeadRecord(area="xx", city="Somewhere")]
+    web = FakeWeb({})
+    out = fill_software(records, web)
+    assert out[0].software == "unknown"
