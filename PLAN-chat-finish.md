@@ -41,7 +41,7 @@ local-trial-key-change-me` and `X-OpenWebUI-User-Email: admin@localhost`, model 
   `**Next:**` / `**Sources:**` layout instead of "Bottom line". In `PLAN-deep-dive.md`, mark D4
   dropped (replaced by the 4-line deep dive). Rebuild with `bash tooling/dev.sh`, ask the 3
   "How to try it" questions once by curl and read the answers. Commit.
-- [ ] **T2 Answer checker (💲 a few cents per run).** `tooling/qa/check-answers.sh` (+ a small
+- [x] **T2 Answer checker (💲 a few cents per run).** `tooling/qa/check-answers.sh` (+ a small
   Python helper): with the local stack up (exit with a clear message if it isn't), asks 5 set
   questions in parallel -- "Which buildings sold recently?", "Which 3 leads should I call first
   this week?", "What software does Grand At Legacy West Apartments run?", "Who owns Ellington

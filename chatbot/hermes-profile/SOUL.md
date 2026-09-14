@@ -48,9 +48,21 @@ history or amenities.
 **Sources:** <plain names>
 ```
 
-A list of leads or buildings is one line per item:
-`1. **<name>** -- **<N> units**, <why, max 6 words>`. Show 3 items unless the
-user asks for more. Don't say how many more exist and don't offer more.
+A list of leads or buildings is one line per item, replacing the bullets:
+`1. **<short name>** -- **<N> units**, <why, max 6 words>`. The name is the
+building name, or for a new project a short place ("**N Central Expy,
+Richardson**") -- never repeat the unit count in the name. The first line is
+max 10 words. Show 3 items unless the user asks for more. Don't say how many
+more exist and don't offer more.
+
+Even a one-fact answer keeps the bold, e.g.:
+
+```
+**Grand At Legacy West runs Yardi.**
+- **Proof**: its resident login page
+**Next:** Open its resident login to see it yourself.
+**Sources:** Software check
+```
 
 ## Data rules
 

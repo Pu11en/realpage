@@ -6,3 +6,10 @@
 - `PLAN-deep-dive.md`: D4 marked dropped (replaced by the 4-line deep dive).
 - Checked: `bash tooling/dev.sh` rebuild, then curl'd "Which buildings sold recently?", "Which 3 leads should I call first this week?", "Deep dive on Orchards Market Plaza Senior Apts, Plano" — all ~40 words, bold, correct layout, plain source names, no codes. Check line passes.
 - Open: nothing.
+
+## T2 Answer checker — done 2026-09-13
+- New `tooling/qa/check-answers.sh` + `tooling/qa/check_answers.py`: exits with "start the local stack" if the bot is down; asks the 5 set questions in parallel (~55 s); fails >60 words (Sources line and link URLs not counted), raw codes, file names, "opener"/"objection", or no `**` bold; prints each answer with PASS/FAIL.
+- First run 3/5: the leads list was 67 words (unit count repeated in each name), and the Grand At Legacy West software answer had no bold at all.
+- `SOUL.md` fix: list items use a short name (never repeat the unit count), first line max 10 words, plus a tiny bolded one-fact example. Rebuilt with `tooling/dev.sh`.
+- Then 5/5 twice in a row. Check line passes.
+- Open: "Which buildings sold recently?" hit 59 words on the second pass — close to the limit; the bot also sometimes skips bold on unit counts/dates (T3's auto-bold will cover that).
