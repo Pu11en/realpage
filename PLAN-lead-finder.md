@@ -59,8 +59,11 @@ Open: http://localhost:8765 → Early Leads → the new state's button
 - [ ] **L1 Skeleton, caps, no-place-names test.** Delete the 4 old Plano-only skills
   (`find-apartments`, `find-sales`, `build-table`, `scout-areas`); Plano data files stay. `propertystack/skills/lead-finder/` (`SKILL.md`
   describing the chain + `run.py` that calls each step) and `tooling/qa/check-lead-finder.sh`
-  (runs this skill's tests + `check-panel.sh`). Fixture-only tests: state pick from `counts.json`,
-  150-project and 450-search caps stop cleanly, <30 projects rolls into the next state, lead ranking order (unknown opening → by permit date), and a test that **fails if any
+  (runs this skill's tests + `check-panel.sh`). Shared **`fetch.py`** every step uses for the web:
+  search = SearXNG (`tooling/searx_search.py`) first, Jina only if SearXNG gives nothing or is down;
+  page reads cached on disk (never read twice), 2 s between visits to the same site, 3 blocks →
+  city skipped with a reason; every search counted toward the 450 cap (Jina calls logged separately). Fixture-only tests: state pick from `counts.json`,
+  SearXNG-first/Jina-fallback, cache hit, 3-blocks skip, 150-project and 450-search caps stop cleanly, <30 projects rolls into the next state, lead ranking order (unknown opening → by permit date), and a test that **fails if any
   lead-finder step's code contains a place name** (Plano, Richardson, Collin, Dallas, any state or
   city literal). Tests fail first; commit.
 - [ ] **L2 Rank the state's cities (free).** Census place-level building permits (5+ units, last
@@ -68,16 +71,17 @@ Open: http://localhost:8765 → Early Leads → the new state's button
   (city, permits, RealPage count from client map). Commit.
 - [ ] **L3 `find-sources` (new).** Recipe format in `propertystack/recipes/*.json` (by permit
   system, e.g. Socrata / ArcGIS / Accela / EnerGov / Tyler, or by city): how to query new
-  multifamily permits, fields, date tested, how complete. For a city with no recipe: search for its
-  permit data, identify the system, test on 5 permits, save the recipe; none found = mark the city
+  multifamily permits, fields, date tested, how complete. For a city with no recipe: first ask the free
+  Socrata and ArcGIS catalog APIs for the city's permit dataset, then search for its permit data, identify the system, test on 5 permits, save the recipe; none found = mark the city
   "skipped: no permits online". Fixture tests. Commit.
 - [ ] **L4 `find-upcoming` rebuilt for any city.** Replace the old Plano-only version: given a city
   and its recipe, pull new apartment permits (permit issued → leasing, apartments only, 20+ units),
   merging several permits into one row per project with its permit link. No hard-coded searches or places. Fixture tests. Commit.
-- [ ] **L5 `project-details` (new).** One web lookup per project: street address, units,
+- [ ] **L5 `project-details` (new).** Clean addresses with usaddress + the free Census batch
+  geocoder so permits for one project merge reliably. One web lookup per project: street address, units,
   developer, expected opening, news link, website. Never guess; blank if not found. Fixture tests.
   Commit.
-- [ ] **L6 `find-sales-news` (new).** News search for apartment sales in the state's cities, last
+- [ ] **L6 `find-sales-news` (new).** GDELT (free news index) plus SearXNG news search for apartment sales in the state's cities, last
   24 months: building, buyer, date, units, link. Fixture tests. Commit.
 - [ ] **L7 Software + who to call, any area.** Make `find-website`, `detect-software` and
   `contact-scrape` take any area (remove Plano paths); drop RealPage leads; contact = developer or
