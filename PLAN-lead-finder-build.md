@@ -115,7 +115,7 @@ Open: http://localhost:8765 → Early Leads → the new state's button
 - [x] **3.6 Agenda hits → Planned projects.** Keep an item only if it has an address or case number;
   pull name, address, developer, units, case number; one project per case (P&Z + council merged);
   stage "planned", agenda link. Fixture tests. Commit.
-- [ ] **4.1 Software fingerprints.** `detect-software` gets a rules file in the Wappalyzer JSON
+- [x] **4.1 Software fingerprints.** `detect-software` gets a rules file in the Wappalyzer JSON
   format with **our own** rules (don't copy the GPL webappanalyzer files) (RealPage / OneSite / loftliving / activebuilding, Yardi RentCafe /
   securecafe, Entrata, AppFolio, ResMan, MRI, Knock, SightMap …), merged with `tooling/pms_detect.py`.
   Cheap page check first; full browser only if unclear. Any area (remove Plano paths). Fixture tests.

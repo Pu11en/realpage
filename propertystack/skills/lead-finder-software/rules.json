@@ -1,0 +1,66 @@
+{
+  "$schema": "wappalyzer-technologies (our own rules, not the webappanalyzer GPL file)",
+  "technologies": {
+    "RealPage": {
+      "cats": ["property-management"],
+      "url": "loftliving\\.com|activebuilding\\.com|realpage\\.com|onesite\\.realpage\\.com|\\bonesite\\b",
+      "html": "powered by realpage|onesite login|activebuilding"
+    },
+    "Yardi": {
+      "cats": ["property-management"],
+      "url": "securecafe\\.com|rentcafe\\.com|\\byardi\\b",
+      "html": "rentcafe|yardi systems"
+    },
+    "Entrata": {
+      "cats": ["property-management"],
+      "url": "entrata\\.com|residentportal\\.com|prospectportal\\.com",
+      "html": "powered by entrata"
+    },
+    "AppFolio": {
+      "cats": ["property-management"],
+      "url": "appfolio\\.com",
+      "html": "powered by appfolio"
+    },
+    "Buildium": {
+      "cats": ["property-management"],
+      "url": "managebuilding\\.com|buildium\\.com",
+      "html": "powered by buildium"
+    },
+    "ResMan": {
+      "cats": ["property-management"],
+      "url": "myresman\\.com|\\bresman\\b",
+      "html": "powered by resman"
+    },
+    "MRI": {
+      "cats": ["property-management"],
+      "url": "mrisoftware\\.com|rentmanager\\.com|residentcafe\\.mrisoftware\\.com",
+      "html": "mri software|rent manager"
+    },
+    "Knock": {
+      "cats": ["property-management"],
+      "url": "knockrentals\\.com|knock-crm\\.com",
+      "html": "powered by knock"
+    },
+    "SightMap": {
+      "cats": ["property-management"],
+      "url": "sightmap\\.com",
+      "html": "powered by sightmap"
+    },
+    "Yotta": {
+      "cats": ["property-management"],
+      "url": "yottareal\\.com",
+      "html": "powered by yotta"
+    }
+  },
+  "in_house": {
+    "UDR": "residents\\.udr\\.com",
+    "Camden": "mycamden\\.com"
+  },
+  "notes": [
+    "URL patterns are checked first against resident/login/pay/apply-type links (signal=portal),",
+    "then against any link on the page (signal=asset).",
+    "html patterns are a cheap fallback when no matching link is present (signal=text).",
+    "Written from scratch for this project -- not copied from the webappanalyzer/Wappalyzer",
+    "technologies JSON, which is GPL-licensed."
+  ]
+}

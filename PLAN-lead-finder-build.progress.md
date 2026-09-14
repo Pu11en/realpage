@@ -497,3 +497,29 @@ Nothing left open for this task.
   scan and panel check clean.
 - Nothing left open. Next task (4.1) starts software fingerprinting (RealPage/OneSite/etc)
   with our own Wappalyzer-format rules file.
+
+## 4.1 Software fingerprints -- done
+
+- Added `propertystack/skills/lead-finder-software/`: `rules.json` (our own Wappalyzer-format
+  vendor rules -- url + html regex per vendor: RealPage, Yardi, Entrata, AppFolio, Buildium,
+  ResMan, MRI, Knock, SightMap, Yotta, plus in-house UDR/Camden -- written from scratch, not
+  copied from the GPL webappanalyzer technologies file), `detect.py` (portal -> hop-portal ->
+  asset -> text -> in-house -> unknown, merging the proven approach from `tooling/pms_detect.py`),
+  and `run.py` (`fill_software(records, web)` batch entry point over `LeadRecord`s, plus a
+  standalone `in.json out.json` CLI).
+- "Cheap page check first, full browser only if unclear" comes from reusing the shared
+  `WebHelper.fetch()` (part 1.3), which already tries crawl4ai before Scrapling/Playwright and
+  only falls back when a page looks blocked -- this skill never opens a browser directly, so no
+  new code was needed for that rule.
+- Area-agnostic: no place names in `detect.py`/`run.py`; rules.json has no place names either
+  (checked by hand -- it's data, and the no-place-names test only scans code files anyway).
+- Tests: `tests/test_detect.py`, 11 cases with a `FakeWeb` fixture (no network) -- link
+  classification (portal wins over asset), text fallback, in-house fallback, hop-portal,
+  no-website short-circuit (never fetches), blocked-site unknown_reason, and
+  `fill_software` writing `links["software_proof"]` + a `sources` entry and skipping records
+  with no website.
+- Checked: `bash tooling/qa/check-lead-finder.sh` passes (glob already picks up the new
+  `tests/` dir; 11/11 new tests plus every other lead-finder* skill's tests and check-panel.sh
+  all green).
+- Nothing left open. Next task (4.2) adds the second-check-before-verdict rule and drops
+  RealPage buildings from the leads list.
