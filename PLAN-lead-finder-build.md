@@ -79,7 +79,7 @@ Open: http://localhost:8765 → Early Leads → the new state's button
   or a city-published monthly permit report PDF/Excel -- reports count), test on 5 permits, save
   the recipe; use Scrapling/Playwright for search forms; nothing online → city "skipped: no permits
   online". Fixture tests. Commit.
-- [ ] **2.4 `find-upcoming` rebuilt for any city.** Replace the old Plano-only version: city + recipe
+- [x] **2.4 `find-upcoming` rebuilt for any city.** Replace the old Plano-only version: city + recipe
   → new apartment permits (permit issued → leasing). Stage from the permit: issued in the last 24
   months and no certificate of occupancy → "permitted"/"under construction" (inspections started);
   CO issued in the last 6 months → "leasing"; CO older → drop. Keep only type/description apartment or

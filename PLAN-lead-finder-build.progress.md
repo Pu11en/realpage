@@ -227,3 +227,46 @@
   for a city happens at 6.1 when the whole chain is assembled, per the plan's own ordering.
 - Next task (2.4) rebuilds `find-upcoming` for any city: city + recipe -> new apartment permits
   with stage inferred from issue date / certificate of occupancy.
+
+## 2.4 `find-upcoming` rebuilt for any city -- done
+
+- Added `propertystack/skills/lead-finder-permits/find_upcoming.py`:
+  `find_upcoming(city, state, area, recipe, http_get, today=None)` takes a 2.2/2.3 recipe
+  (endpoint + guessed field mapping) and returns one `LeadRecord` per apartment project.
+  - Keeps a row if its permit-type/description field matches multifamily/apartment, or (if
+    that's unclear) any field on the row does, or units >= 20.
+  - Stage comes only from dates found on the row, never guessed: looks for a
+    certificate-of-occupancy-like field by regex (since 2.2's recipe fields don't include one)
+    -- CO within the last 6 months -> `leasing`; CO older -> dropped (past the "upcoming"
+    window). No CO: permit issued within the last 24 months -> `permitted`; older, or no
+    usable date at all -> dropped. `today` is injectable so tests are deterministic.
+  - Units stay `None` when the row's units field is blank/unparseable, per the plan ("unknown
+    units kept for 2.5 to fill" -- 2.5 isn't built yet, so this task doesn't drop them).
+  - Several permit rows for the same address are merged into one record by reusing 1.2's
+    `merge.merge_records` (imported from `lead-finder/`), keeping the permit link.
+  - Handles both response shapes from 2.2 (`http_get` returning a raw list for Socrata, or a
+    dict with `features`/`attributes` for ArcGIS); a missing endpoint or a raised exception from
+    `http_get` (site down) returns an empty list rather than guessing.
+- Tests: `tests/test_find_upcoming.py` -- recent permit with no CO -> permitted; recent CO ->
+  leasing; old CO -> dropped; old permit with no CO -> dropped; a low-unit non-apartment permit
+  -> dropped; a large unit count counts as apartment even when the type field is ambiguous;
+  blank units field kept as `None` (not dropped, not guessed); two permits at the same address
+  merge into one record; no endpoint / an `http_get` exception both return `[]`; the ArcGIS
+  `features`/`attributes` response shape works the same as Socrata's flat list. Used a fictional
+  city ("Rivertown") and state code ("ZZ"), matching 2.1-2.3's convention.
+  - First draft of the module docstring/SKILL.md said "Plano-only" describing the *old* skill
+    being replaced -- the no-place-names test in 1.1 scans every `.py` file under `lead-finder*/`
+    regardless of context, so that failed the check; reworded to "single-city" instead (same
+    meaning, no banned literal) and reran clean.
+- Checked: `bash tooling/qa/check-lead-finder.sh` -- lead-finder-permits' own 11 tests pass, all
+  other lead-finder* dirs unaffected (4 + 12 + 34 = 50 total before this task, still passing),
+  panel check clean. Also reran `python3 site/data/build_data.py` to confirm the site still
+  builds unaffected (204 properties, 42 leads, 20 states).
+- Left alone (out of scope for this task): the old single-city `find-upcoming` skill still lives
+  at `propertystack/.claude/skills/find-upcoming/` (Legistar-only) -- 1.1 only deleted
+  `find-apartments`/`find-sales`/`build-table`/`scout-areas`, and the plan doesn't ask to delete
+  this one yet. The new chain (wired at 6.1) will use `lead-finder-permits/find_upcoming.py`
+  instead; the old skill can be removed once nothing depends on it, but that's not this task.
+- Nothing left open for this task. Next task (2.5) adds `project-details`: clean addresses
+  (Census batch geocoder) and one web lookup per project for units/developer/opening
+  date/news/website, dropping any project whose units are still unknown after that lookup.
