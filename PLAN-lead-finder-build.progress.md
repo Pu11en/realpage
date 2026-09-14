@@ -477,3 +477,23 @@ Nothing left open for this task.
   Legistar matters and this task's civic hits) into planned-project LeadRecords: keep an
   item only if it has an address or case number, pull name/address/developer/units/case
   number, merge P&Z + council into one project per case.
+
+## 3.6 Agenda hits -> Planned projects -- done
+
+- Added `propertystack/skills/lead-finder-agenda-projects/agenda_projects.py`: the shared
+  step that turns 3.4's Legistar matters and 3.5's civic `AgendaHit`s into planned-stage
+  LeadRecords. `hit_to_project()` takes anything with `.url`/`.text`, requires an address
+  or case number (bare keyword mentions with neither are dropped), and pulls out
+  name/address/developer/units/case number with regex. `agenda_hits_to_projects()` merges
+  hits for the same case number (or same address when there's no case number) into one
+  project, so a rezoning discussed at both Planning & Zoning and Council becomes one
+  record, not two.
+- Tests: `tests/test_agenda_projects.py` (9 tests, no network) -- kept when address
+  present, kept when case number present, dropped when neither, project name extraction,
+  merge across two meetings by case number, merge by address with no case number, two
+  distinct cases stay separate, empty input, all-weak-hits-dropped.
+- Checked: `bash tooling/qa/check-lead-finder.sh` -- new skill's 9 tests pass, all other
+  lead-finder* dirs unaffected (99 before, 108 total now, all passing), no-place-names
+  scan and panel check clean.
+- Nothing left open. Next task (4.1) starts software fingerprinting (RealPage/OneSite/etc)
+  with our own Wappalyzer-format rules file.

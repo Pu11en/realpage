@@ -112,7 +112,7 @@ Open: http://localhost:8765 → Early Leads → the new state's button
 - [x] **3.5 Other systems + PDFs.** civic-scraper for CivicPlus, Granicus, PrimeGov, CivicClerk; read
   only the agenda (packets over 25 MB skipped; at most the 10 pages around a keyword hit) with PyMuPDF, OCR only for pages with no
   text. Fixture tests. Commit.
-- [ ] **3.6 Agenda hits → Planned projects.** Keep an item only if it has an address or case number;
+- [x] **3.6 Agenda hits → Planned projects.** Keep an item only if it has an address or case number;
   pull name, address, developer, units, case number; one project per case (P&Z + council merged);
   stage "planned", agenda link. Fixture tests. Commit.
 - [ ] **4.1 Software fingerprints.** `detect-software` gets a rules file in the Wappalyzer JSON
