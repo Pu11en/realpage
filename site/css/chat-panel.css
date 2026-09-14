@@ -68,17 +68,6 @@
   flex: 1;
 }
 
-.chat-panel-fullpage {
-  color: var(--text-dim);
-  font-size: 12px;
-  text-decoration: none;
-  white-space: nowrap;
-}
-
-.chat-panel-fullpage:hover {
-  color: var(--text);
-}
-
 .chat-panel-close {
   background: none;
   border: none;
@@ -121,8 +110,23 @@
   padding: 16px;
 }
 
-.chat-panel-error a {
-  color: var(--accent);
+.chat-panel-error p {
+  margin: 0;
+}
+
+.chat-panel-retry {
+  background: var(--accent);
+  color: #06210f;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.chat-panel-retry:hover {
+  opacity: 0.9;
 }
 
 .chat-panel-signin-card {

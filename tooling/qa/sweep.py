@@ -159,6 +159,7 @@ async def main():
                 else:
                     await pg.click(".ask-fab"); await pg.screenshot(path=f"{OUT}/phone-chat-open.png")
                     await check(pg, "map.html", wname, "tap Ask button", "phone-chat-open")
+                    if await pg.locator("#chat-panel a[target='_blank']").count(): bug("map.html", wname, "tap Ask button", "chat panel has a full-page/new-tab link (chat must stay in the panel)")
                     await pg.click("#chat-panel-close")
                     if await pg.locator("#chat-panel.open").count(): bug("map.html", wname, "tap close", "chat did not close")
             await pg.context.close()

@@ -173,6 +173,53 @@ async def main():
         await page.close()
         await context.close()
 
+        # T4: the chat never pops out. No full-page / new-tab link in the
+        # panel, and a chat that doesn't load shows "Try again", which
+        # reloads the frame in place.
+        context = await browser.new_context(viewport={"width": 1440, "height": 900})
+        await context.add_init_script(f"window.PS_CHAT_URL = {chat!r}; window.PS_CHAT_LOAD_TIMEOUT_MS = 800;")
+        page = await context.new_page()
+        hang = {"on": True}
+
+        async def chat_route(route):
+            if hang["on"] and route.request.resource_type == "document":
+                return  # never answer: the frame keeps loading
+            await route.continue_()
+
+        await page.route(f"{chat.rstrip('/')}/**", chat_route)
+        await page.route(chat.rstrip("/"), chat_route)
+        await check_console_errors(page, f"{site}/index.html", bugs)
+        await page.locator("[data-chat-toggle]").first.click()
+        popout = await page.locator("#chat-panel a[target='_blank'], #chat-panel .chat-panel-fullpage").count()
+        if popout:
+            bugs.append(f"panel has {popout} full-page/new-tab link(s); the chat must stay in the panel")
+        panel_text = await page.locator("#chat-panel").inner_text()
+        for phrase in ("Open in full page", "new tab"):
+            if phrase.lower() in panel_text.lower():
+                bugs.append(f"panel still says '{phrase}'")
+        error_el = page.locator("#chat-panel-error")
+        try:
+            await error_el.wait_for(state="visible", timeout=5000)
+        except Exception:
+            bugs.append("load error: 'Couldn't load the chat.' never appeared when the chat hung")
+        else:
+            if "Couldn't load the chat." not in await error_el.inner_text():
+                bugs.append("load error: message isn't \"Couldn't load the chat.\"")
+            if await error_el.locator("a").count():
+                bugs.append("load error: still shows a link instead of only Try again")
+            hang["on"] = False
+            await page.locator("#chat-panel-retry").click()
+            frame_ok = False
+            for _ in range(20):
+                if (not await error_el.is_visible()) and await page.locator("#chat-panel-frame").is_visible():
+                    frame_ok = True
+                    break
+                await page.wait_for_timeout(250)
+            if not frame_ok:
+                bugs.append("load error: Try again didn't reload the chat into the panel")
+        await page.close()
+        await context.close()
+
         # W6: docked on desktop/tablet -- the panel must not float over the
         # page content. Check that the shell's bounding box doesn't overlap
         # the panel's, and there's no horizontal scrollbar, at 1440 and 1024.

@@ -27,14 +27,14 @@
     panel.innerHTML = `
       <div class="chat-panel-header">
         <span class="chat-panel-title">✦ Ask PropertyStack</span>
-        <a class="chat-panel-fullpage" href="${CHAT_APP_URL.replace(/\/$/, "")}/auth" target="_blank" rel="noopener">Open in full page</a>
         <button class="chat-panel-close" id="chat-panel-close" aria-label="Close chat panel">&times;</button>
       </div>
       <div class="chat-panel-body">
         <div class="chat-panel-loading" id="chat-panel-loading">Loading chat…</div>
         <iframe id="chat-panel-frame" class="chat-panel-frame" title="Ask PropertyStack chat"></iframe>
         <div class="chat-panel-error" id="chat-panel-error" style="display:none;">
-          Couldn't load the chat. <a href="${CHAT_APP_URL.replace(/\/$/, "")}/auth" target="_blank" rel="noopener">Open it in a new tab</a> instead.
+          <p>Couldn't load the chat.</p>
+          <button class="chat-panel-retry" id="chat-panel-retry">Try again</button>
         </div>
         <div class="chat-panel-signin-card" id="chat-panel-signin-card" style="display:none;">
           <p>Sign in to ask a question.</p>
@@ -60,12 +60,29 @@
       checkAuth(panel);
     });
 
-    setTimeout(() => {
-      if (!loaded) {
-        loading.style.display = "none";
-        errorEl.style.display = "flex";
-      }
-    }, 8000);
+    // The chat only ever lives in this panel: if it doesn't load, offer a
+    // reload of the frame rather than sending people to a separate tab.
+    const loadTimeoutMs = window.PS_CHAT_LOAD_TIMEOUT_MS || 8000;
+    let loadTimer = null;
+    const startLoadTimer = () => {
+      clearTimeout(loadTimer);
+      loadTimer = setTimeout(() => {
+        if (!loaded) {
+          loading.style.display = "none";
+          errorEl.style.display = "flex";
+        }
+      }, loadTimeoutMs);
+    };
+    startLoadTimer();
+
+    panel.querySelector("#chat-panel-retry").addEventListener("click", () => {
+      loaded = false;
+      errorEl.style.display = "none";
+      frame.style.display = "none";
+      loading.style.display = "flex";
+      frame.setAttribute("src", CHAT_APP_URL);
+      startLoadTimer();
+    });
 
     panel.querySelector("#chat-panel-close").addEventListener("click", closePanel);
 
