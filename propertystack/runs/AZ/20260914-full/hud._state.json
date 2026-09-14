@@ -1,0 +1,610 @@
+[
+ {
+  "area": "az",
+  "city": "Glendale",
+  "name": "The Radley Glendale",
+  "address": "",
+  "lat": null,
+  "lon": null,
+  "units": 37,
+  "stage": "permitted",
+  "permit_date": "2026-05-28",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "hud": "HUD FHA #12335619"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx"
+   },
+   {
+    "fact": "permit_date",
+    "url": "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx"
+   }
+  ],
+  "why": "HUD FHA 221(d)(4) firm commitment for new construction"
+ },
+ {
+  "area": "az",
+  "city": "Scottsdale",
+  "name": "The Radley Scottsdale",
+  "address": "",
+  "lat": null,
+  "lon": null,
+  "units": 23,
+  "stage": "permitted",
+  "permit_date": "2026-05-21",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "hud": "HUD FHA #12335621"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx"
+   },
+   {
+    "fact": "permit_date",
+    "url": "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx"
+   }
+  ],
+  "why": "HUD FHA 221(d)(4) firm commitment for new construction"
+ },
+ {
+  "area": "az",
+  "city": "Mesa",
+  "name": "Bella Victoria",
+  "address": "",
+  "lat": null,
+  "lon": null,
+  "units": 236,
+  "stage": "sold",
+  "permit_date": "2026-04-29",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "hud": "HUD FHA #12311364"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx"
+   },
+   {
+    "fact": "permit_date",
+    "url": "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx"
+   }
+  ],
+  "why": "HUD refi or sale (FHA 223(f))"
+ },
+ {
+  "area": "az",
+  "city": "Phoenix",
+  "name": "The M at Shadow Mountain",
+  "address": "",
+  "lat": null,
+  "lon": null,
+  "units": 404,
+  "stage": "sold",
+  "permit_date": "2026-04-01",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "hud": "HUD FHA #12311360"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx"
+   },
+   {
+    "fact": "permit_date",
+    "url": "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx"
+   }
+  ],
+  "why": "HUD refi or sale (FHA 223(f))"
+ },
+ {
+  "area": "az",
+  "city": "Phoenix",
+  "name": "Portola Biltmore",
+  "address": "",
+  "lat": null,
+  "lon": null,
+  "units": 114,
+  "stage": "sold",
+  "permit_date": "2026-02-23",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "hud": "HUD FHA #12311363"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx"
+   },
+   {
+    "fact": "permit_date",
+    "url": "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx"
+   }
+  ],
+  "why": "HUD refi or sale (FHA 223(f))"
+ },
+ {
+  "area": "az",
+  "city": "Phoenix",
+  "name": "Elevate on Vineyard",
+  "address": "",
+  "lat": null,
+  "lon": null,
+  "units": 54,
+  "stage": "sold",
+  "permit_date": "2026-02-06",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "hud": "HUD FHA #12311362"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx"
+   },
+   {
+    "fact": "permit_date",
+    "url": "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx"
+   }
+  ],
+  "why": "HUD refi or sale (FHA 223(f))"
+ },
+ {
+  "area": "az",
+  "city": "Phoenix",
+  "name": "Laveen Commons",
+  "address": "",
+  "lat": null,
+  "lon": null,
+  "units": 150,
+  "stage": "permitted",
+  "permit_date": "2025-12-16",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "hud": "HUD FHA #12335606"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx"
+   },
+   {
+    "fact": "permit_date",
+    "url": "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx"
+   }
+  ],
+  "why": "HUD FHA 221(d)(4) firm commitment for new construction"
+ },
+ {
+  "area": "az",
+  "city": "Cottonwood",
+  "name": "San Cipriano Townhomes",
+  "address": "",
+  "lat": null,
+  "lon": null,
+  "units": 52,
+  "stage": "permitted",
+  "permit_date": "2025-12-16",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "hud": "HUD FHA #12335608"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx"
+   },
+   {
+    "fact": "permit_date",
+    "url": "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx"
+   }
+  ],
+  "why": "HUD FHA 221(d)(4) firm commitment for new construction"
+ },
+ {
+  "area": "az",
+  "city": "Phoenix",
+  "name": "Kivel Manor",
+  "address": "",
+  "lat": null,
+  "lon": null,
+  "units": 255,
+  "stage": "sold",
+  "permit_date": "2025-09-10",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "hud": "HUD FHA #12311359"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx"
+   },
+   {
+    "fact": "permit_date",
+    "url": "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx"
+   }
+  ],
+  "why": "HUD refi or sale (FHA 223(f))"
+ },
+ {
+  "area": "az",
+  "city": "Tucson",
+  "name": "Parkside Reserve",
+  "address": "",
+  "lat": null,
+  "lon": null,
+  "units": 210,
+  "stage": "permitted",
+  "permit_date": "2025-09-09",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "hud": "HUD FHA #12335607"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx"
+   },
+   {
+    "fact": "permit_date",
+    "url": "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx"
+   }
+  ],
+  "why": "HUD FHA 221(d)(4) firm commitment for new construction"
+ },
+ {
+  "area": "az",
+  "city": "Tucson",
+  "name": "Council House Apartments",
+  "address": "",
+  "lat": null,
+  "lon": null,
+  "units": 149,
+  "stage": "sold",
+  "permit_date": "2025-08-20",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "hud": "HUD FHA #12311356"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx"
+   },
+   {
+    "fact": "permit_date",
+    "url": "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx"
+   }
+  ],
+  "why": "HUD refi or sale (FHA 223(f))"
+ },
+ {
+  "area": "az",
+  "city": "Phoenix",
+  "name": "The Reserve at Thunderbird II",
+  "address": "",
+  "lat": null,
+  "lon": null,
+  "units": 134,
+  "stage": "sold",
+  "permit_date": "2025-04-18",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "hud": "HUD FHA #12311358"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx"
+   },
+   {
+    "fact": "permit_date",
+    "url": "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx"
+   }
+  ],
+  "why": "HUD refi or sale (FHA 223(f))"
+ },
+ {
+  "area": "az",
+  "city": "Phoenix",
+  "name": "The Reserve at Thunderbird I",
+  "address": "",
+  "lat": null,
+  "lon": null,
+  "units": 108,
+  "stage": "sold",
+  "permit_date": "2025-04-15",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "hud": "HUD FHA #12311357"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx"
+   },
+   {
+    "fact": "permit_date",
+    "url": "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx"
+   }
+  ],
+  "why": "HUD refi or sale (FHA 223(f))"
+ },
+ {
+  "area": "az",
+  "city": "Tucson",
+  "name": "The Place at Rita Ranch",
+  "address": "",
+  "lat": null,
+  "lon": null,
+  "units": 189,
+  "stage": "permitted",
+  "permit_date": "2025-03-14",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "hud": "HUD FHA #12335610"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx"
+   },
+   {
+    "fact": "permit_date",
+    "url": "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx"
+   }
+  ],
+  "why": "HUD FHA 221(d)(4) firm commitment for new construction"
+ },
+ {
+  "area": "az",
+  "city": "Cottonwood",
+  "name": "San Cipriano Townhomes",
+  "address": "",
+  "lat": null,
+  "lon": null,
+  "units": 52,
+  "stage": "permitted",
+  "permit_date": "2024-11-18",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "hud": "HUD FHA #12335608"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx"
+   },
+   {
+    "fact": "permit_date",
+    "url": "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx"
+   }
+  ],
+  "why": "HUD FHA 221(d)(4) firm commitment for new construction"
+ },
+ {
+  "area": "az",
+  "city": "Tucson",
+  "name": "Marquee on 5th",
+  "address": "",
+  "lat": null,
+  "lon": null,
+  "units": 96,
+  "stage": "sold",
+  "permit_date": "2024-11-05",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "hud": "HUD FHA #12311355"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx"
+   },
+   {
+    "fact": "permit_date",
+    "url": "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx"
+   }
+  ],
+  "why": "HUD refi or sale (FHA 223(f))"
+ },
+ {
+  "area": "az",
+  "city": "Casa Grande",
+  "name": "The Lofts at G Diamond Ranch",
+  "address": "",
+  "lat": null,
+  "lon": null,
+  "units": 120,
+  "stage": "permitted",
+  "permit_date": "2024-05-10",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "hud": "HUD FHA #12335599"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx"
+   },
+   {
+    "fact": "permit_date",
+    "url": "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx"
+   }
+  ],
+  "why": "HUD FHA 221(d)(4) firm commitment for new construction"
+ },
+ {
+  "area": "az",
+  "city": "Flagstaff",
+  "name": "Canyon Del Rio Village",
+  "address": "",
+  "lat": null,
+  "lon": null,
+  "units": 170,
+  "stage": "permitted",
+  "permit_date": "2024-04-09",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "hud": "HUD FHA #12335598"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx"
+   },
+   {
+    "fact": "permit_date",
+    "url": "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx"
+   }
+  ],
+  "why": "HUD FHA 221(d)(4) firm commitment for new construction"
+ },
+ {
+  "area": "az",
+  "city": "Phoenix",
+  "name": "Escarlata 31",
+  "address": "",
+  "lat": null,
+  "lon": null,
+  "units": 87,
+  "stage": "sold",
+  "permit_date": "2024-03-15",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "hud": "HUD FHA #12311353"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx"
+   },
+   {
+    "fact": "permit_date",
+    "url": "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx"
+   }
+  ],
+  "why": "HUD refi or sale (FHA 223(f))"
+ }
+]

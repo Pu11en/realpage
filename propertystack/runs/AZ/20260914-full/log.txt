@@ -1555,3 +1555,529 @@ Emitted 'error' event on Socket instance at:
 }
 
 Node.js v24.14.1
+lead-finder: run folder ready at /home/drewp/.local/state/ccdb/gowork/local-test-plan-lead-finder-build-20260914-000102/propertystack/runs/AZ/20260914-full
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://en.wikipedia.org/wiki/Aesculus_glabra                      
+| ✓ | ⏱: 0.81s 
+[SCRAPE].. ◆ https://en.wikipedia.org/wiki/Aesculus_glabra                      
+| ✓ | ⏱: 0.05s 
+[COMPLETE] ● https://en.wikipedia.org/wiki/Aesculus_glabra                      
+| ✓ | ⏱: 0.88s 
+[2026-09-14 03:41:33] INFO: Fetched (200) <GET https://en.wikipedia.org/wiki/Aesculus_glabra> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.britannica.com/plant/buckeye                           
+| ✓ | ⏱: 2.46s 
+[SCRAPE].. ◆ https://www.britannica.com/plant/buckeye                           
+| ✓ | ⏱: 0.03s 
+[COMPLETE] ● https://www.britannica.com/plant/buckeye                           
+| ✓ | ⏱: 2.51s 
+[2026-09-14 03:42:08] WARNING: Attempt 1 failed: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://www.britannica.com/plant/buckeye", waiting until "load"
+. Retrying in 1s...
+[2026-09-14 03:42:41] INFO: Fetched (200) <GET https://www.britannica.com/plant/buckeye> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.planetnatural.com/buckeye-tree/                        
+| ✓ | ⏱: 1.03s 
+[SCRAPE].. ◆ https://www.planetnatural.com/buckeye-tree/                        
+| ✓ | ⏱: 0.07s 
+[COMPLETE] ● https://www.planetnatural.com/buckeye-tree/                        
+| ✓ | ⏱: 1.12s 
+[2026-09-14 03:42:45] INFO: Fetched (200) <GET https://www.planetnatural.com/buckeye-tree/> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://en.wikipedia.org/wiki/Buckeye                              
+| ✓ | ⏱: 0.74s 
+[SCRAPE].. ◆ https://en.wikipedia.org/wiki/Buckeye                              
+| ✓ | ⏱: 0.03s 
+[COMPLETE] ● https://en.wikipedia.org/wiki/Buckeye                              
+| ✓ | ⏱: 0.78s 
+[2026-09-14 03:42:50] INFO: Fetched (200) <GET https://en.wikipedia.org/wiki/Buckeye> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.buckeye.com/                                           
+| ✓ | ⏱: 1.23s 
+[SCRAPE].. ◆ https://www.buckeye.com/                                           
+| ✓ | ⏱: 0.02s 
+[COMPLETE] ● https://www.buckeye.com/                                           
+| ✓ | ⏱: 1.27s 
+[2026-09-14 03:42:55] INFO: Fetched (200) <GET https://www.buckeye.com/> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://leafyplace.com/buckeye/                                    
+| ✓ | ⏱: 0.96s 
+[SCRAPE].. ◆ https://leafyplace.com/buckeye/                                    
+| ✓ | ⏱: 0.02s 
+[COMPLETE] ● https://leafyplace.com/buckeye/                                    
+| ✓ | ⏱: 0.99s 
+[2026-09-14 03:43:00] INFO: Fetched (200) <GET https://leafyplace.com/buckeye/> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://americangardener.net/buckeye-trees/                        
+| ✓ | ⏱: 1.14s 
+[SCRAPE].. ◆ https://americangardener.net/buckeye-trees/                        
+| ✓ | ⏱: 0.01s 
+[COMPLETE] ● https://americangardener.net/buckeye-trees/                        
+| ✓ | ⏱: 1.16s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://forestry.com/trees/buckeye-tree/                           
+| ✓ | ⏱: 0.65s 
+[SCRAPE].. ◆ https://forestry.com/trees/buckeye-tree/                           
+| ✓ | ⏱: 0.00s 
+[COMPLETE] ● https://forestry.com/trees/buckeye-tree/                           
+| ✗ | ⏱: 0.66s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://buc-ees.com/                                               
+| ✓ | ⏱: 1.52s 
+[SCRAPE].. ◆ https://buc-ees.com/                                               
+| ✓ | ⏱: 0.02s 
+[COMPLETE] ● https://buc-ees.com/                                               
+| ✓ | ⏱: 1.54s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.merriam-webster.com/dictionary/buckeye                 
+| ✓ | ⏱: 1.49s 
+[SCRAPE].. ◆ https://www.merriam-webster.com/dictionary/buckeye                 
+| ✓ | ⏱: 0.03s 
+[COMPLETE] ● https://www.merriam-webster.com/dictionary/buckeye                 
+| ✓ | ⏱: 1.56s 
+[2026-09-14 03:43:40] WARNING: Attempt 1 failed: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://www.merriam-webster.com/dictionary/buckeye", waiting until "load"
+. Retrying in 1s...
+[2026-09-14 03:44:10] INFO: Fetched (200) <GET https://www.merriam-webster.com/dictionary/buckeye> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://en.wikipedia.org/wiki/Aesculus_glabra                      
+| ✓ | ⏱: 0.72s 
+[SCRAPE].. ◆ https://en.wikipedia.org/wiki/Aesculus_glabra                      
+| ✓ | ⏱: 0.05s 
+[COMPLETE] ● https://en.wikipedia.org/wiki/Aesculus_glabra                      
+| ✓ | ⏱: 0.79s 
+[2026-09-14 03:44:21] INFO: Fetched (200) <GET https://en.wikipedia.org/wiki/Aesculus_glabra> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.planetnatural.com/buckeye-tree/                        
+| ✓ | ⏱: 1.05s 
+[SCRAPE].. ◆ https://www.planetnatural.com/buckeye-tree/                        
+| ✓ | ⏱: 0.07s 
+[COMPLETE] ● https://www.planetnatural.com/buckeye-tree/                        
+| ✓ | ⏱: 1.14s 
+[2026-09-14 03:44:25] INFO: Fetched (200) <GET https://www.planetnatural.com/buckeye-tree/> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.buckeye.com/                                           
+| ✓ | ⏱: 1.61s 
+[SCRAPE].. ◆ https://www.buckeye.com/                                           
+| ✓ | ⏱: 0.04s 
+[COMPLETE] ● https://www.buckeye.com/                                           
+| ✓ | ⏱: 1.66s 
+[2026-09-14 03:44:31] INFO: Fetched (200) <GET https://www.buckeye.com/> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://leafyplace.com/buckeye/                                    
+| ✓ | ⏱: 1.08s 
+[SCRAPE].. ◆ https://leafyplace.com/buckeye/                                    
+| ✓ | ⏱: 0.02s 
+[COMPLETE] ● https://leafyplace.com/buckeye/                                    
+| ✓ | ⏱: 1.12s 
+[2026-09-14 03:44:38] INFO: Fetched (200) <GET https://leafyplace.com/buckeye/> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ 
+https://www.legacy.com/funeral-homes/michigan/muskegon/fountain-funeral-home/fh-
+31630                | ✓ | ⏱: 2.48s 
+[SCRAPE].. ◆ 
+https://www.legacy.com/funeral-homes/michigan/muskegon/fountain-funeral-home/fh-
+31630                | ✓ | ⏱: 0.02s 
+[COMPLETE] ● 
+https://www.legacy.com/funeral-homes/michigan/muskegon/fountain-funeral-home/fh-
+31630                | ✓ | ⏱: 2.50s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.fountainfh.com/                                        
+| ✓ | ⏱: 1.64s 
+[SCRAPE].. ◆ https://www.fountainfh.com/                                        
+| ✓ | ⏱: 0.00s 
+[COMPLETE] ● https://www.fountainfh.com/                                        
+| ✓ | ⏱: 1.66s 
+[2026-09-14 03:44:58] INFO: Fetched (200) <GET https://www.fountainfh.com/> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.fountainfh.com/obituaries/obituary-listings            
+| ✓ | ⏱: 1.45s 
+[SCRAPE].. ◆ https://www.fountainfh.com/obituaries/obituary-listings            
+| ✓ | ⏱: 0.00s 
+[COMPLETE] ● https://www.fountainfh.com/obituaries/obituary-listings            
+| ✓ | ⏱: 1.47s 
+[2026-09-14 03:45:03] INFO: Fetched (200) <GET https://www.fountainfh.com/obituaries/obituary-listings?page=1> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ 
+https://whopassedon.com/funeralhome/fountain-funeral-home/525681631/            
+| ✓ | ⏱: 1.44s 
+[SCRAPE].. ◆ 
+https://whopassedon.com/funeralhome/fountain-funeral-home/525681631/            
+| ✓ | ⏱: 0.02s 
+[COMPLETE] ● 
+https://whopassedon.com/funeralhome/fountain-funeral-home/525681631/            
+| ✓ | ⏱: 1.47s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ 
+https://www.homedepot.com/b/Outdoors-Garden-Center-Outdoor-Decor-Fountains/N-5yc
+1vZc6nl              | ✓ | ⏱: 0.94s 
+[SCRAPE].. ◆ 
+https://www.homedepot.com/b/Outdoors-Garden-Center-Outdoor-Decor-Fountains/N-5yc
+1vZc6nl              | ✓ | ⏱: 0.00s 
+[COMPLETE] ● 
+https://www.homedepot.com/b/Outdoors-Garden-Center-Outdoor-Decor-Fountains/N-5yc
+1vZc6nl              | ✗ | ⏱: 0.95s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ 
+https://www.tributearchive.com/funeral-homes/us/michigan/muskegon/fountain-funer
+al-home/fh-849488    | ✓ | ⏱: 1.35s 
+[SCRAPE].. ◆ 
+https://www.tributearchive.com/funeral-homes/us/michigan/muskegon/fountain-funer
+al-home/fh-849488    | ✓ | ⏱: 0.01s 
+[COMPLETE] ● 
+https://www.tributearchive.com/funeral-homes/us/michigan/muskegon/fountain-funer
+al-home/fh-849488    | ✓ | ⏱: 1.37s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://fountain-funeral-home.muskegondirect.us/                   
+| ✓ | ⏱: 1.39s 
+[SCRAPE].. ◆ https://fountain-funeral-home.muskegondirect.us/                   
+| ✓ | ⏱: 0.02s 
+[COMPLETE] ● https://fountain-funeral-home.muskegondirect.us/                   
+| ✓ | ⏱: 1.42s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.merriam-webster.com/dictionary/fountain                
+| ✓ | ⏱: 1.67s 
+[SCRAPE].. ◆ https://www.merriam-webster.com/dictionary/fountain                
+| ✓ | ⏱: 0.05s 
+[COMPLETE] ● https://www.merriam-webster.com/dictionary/fountain                
+| ✓ | ⏱: 1.77s 
+[2026-09-14 03:45:44] WARNING: Attempt 1 failed: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://www.merriam-webster.com/dictionary/fountain", waiting until "load"
+. Retrying in 1s...
+[2026-09-14 03:46:02] INFO: Fetched (200) <GET https://www.merriam-webster.com/dictionary/fountain> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.amazon.com/Outdoor-Fountains/b?node=14083101           
+| ✓ | ⏱: 2.28s 
+[SCRAPE].. ◆ https://www.amazon.com/Outdoor-Fountains/b?node=14083101           
+| ✓ | ⏱: 0.56s 
+[COMPLETE] ● https://www.amazon.com/Outdoor-Fountains/b?node=14083101           
+| ✓ | ⏱: 2.87s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ 
+https://www.echovita.com/us/funeral-homes/mi/muskegon/fountain-funeral-home-2020
+| ✓ | ⏱: 1.07s 
+[SCRAPE].. ◆ 
+https://www.echovita.com/us/funeral-homes/mi/muskegon/fountain-funeral-home-2020
+| ✓ | ⏱: 0.02s 
+[COMPLETE] ● 
+https://www.echovita.com/us/funeral-homes/mi/muskegon/fountain-funeral-home-2020
+| ✓ | ⏱: 1.10s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.fountainfh.com/                                        
+| ✓ | ⏱: 1.35s 
+[SCRAPE].. ◆ https://www.fountainfh.com/                                        
+| ✓ | ⏱: 0.00s 
+[COMPLETE] ● https://www.fountainfh.com/                                        
+| ✓ | ⏱: 1.36s 
+[2026-09-14 03:46:20] INFO: Fetched (200) <GET https://www.fountainfh.com/> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.snowflake.com/en/                                      
+| ✓ | ⏱: 1.85s 
+[SCRAPE].. ◆ https://www.snowflake.com/en/                                      
+| ✓ | ⏱: 0.10s 
+[COMPLETE] ● https://www.snowflake.com/en/                                      
+| ✓ | ⏱: 1.98s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.snowflake.com/en/product/platform/                     
+| ✓ | ⏱: 1.87s 
+[SCRAPE].. ◆ https://www.snowflake.com/en/product/platform/                     
+| ✓ | ⏱: 0.09s 
+[COMPLETE] ● https://www.snowflake.com/en/product/platform/                     
+| ✓ | ⏱: 1.98s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://app.snowflake.com/                                         
+| ✓ | ⏱: 0.57s 
+[SCRAPE].. ◆ https://app.snowflake.com/                                         
+| ✓ | ⏱: 0.00s 
+[COMPLETE] ● https://app.snowflake.com/                                         
+| ✓ | ⏱: 0.57s 
+[2026-09-14 03:46:36] INFO: Fetched (200) <GET https://app.snowflake.com/> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://docs.snowflake.com/en/                                     
+| ✓ | ⏱: 1.43s 
+[SCRAPE].. ◆ https://docs.snowflake.com/en/                                     
+| ✓ | ⏱: 0.01s 
+[COMPLETE] ● https://docs.snowflake.com/en/                                     
+| ✓ | ⏱: 1.45s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.datacamp.com/blog/what-is-snowflake                    
+| ✓ | ⏱: 1.22s 
+[SCRAPE].. ◆ https://www.datacamp.com/blog/what-is-snowflake                    
+| ✓ | ⏱: 0.04s 
+[COMPLETE] ● https://www.datacamp.com/blog/what-is-snowflake                    
+| ✓ | ⏱: 1.28s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://careers.snowflake.com/us/en                                
+| ✓ | ⏱: 2.28s 
+[SCRAPE].. ◆ https://careers.snowflake.com/us/en                                
+| ✓ | ⏱: 0.02s 
+[COMPLETE] ● https://careers.snowflake.com/us/en                                
+| ✓ | ⏱: 2.32s 
+[2026-09-14 03:46:49] INFO: Fetched (200) <GET https://careers.snowflake.com/us/en> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.geeksforgeeks.org/cloud-computing/what-is-snowflake/   
+| ✓ | ⏱: 1.90s 
+[SCRAPE].. ◆ https://www.geeksforgeeks.org/cloud-computing/what-is-snowflake/   
+| ✓ | ⏱: 0.03s 
+[COMPLETE] ● https://www.geeksforgeeks.org/cloud-computing/what-is-snowflake/   
+| ✓ | ⏱: 1.93s 
+[2026-09-14 03:47:00] INFO: Fetched (200) <GET https://www.geeksforgeeks.org/cloud-computing/what-is-snowflake/> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://signup.snowflake.com/                                      
+| ✓ | ⏱: 2.14s 
+[SCRAPE].. ◆ https://signup.snowflake.com/                                      
+| ✓ | ⏱: 0.01s 
+[COMPLETE] ● https://signup.snowflake.com/                                      
+| ✓ | ⏱: 2.15s 
+[2026-09-14 03:47:09] INFO: Fetched (200) <GET https://signup.snowflake.com/> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://finance.yahoo.com/quote/SNOW/                              
+| ✓ | ⏱: 2.04s 
+[SCRAPE].. ◆ https://finance.yahoo.com/quote/SNOW/                              
+| ✓ | ⏱: 0.09s 
+[COMPLETE] ● https://finance.yahoo.com/quote/SNOW/                              
+| ✓ | ⏱: 2.16s 
+[2026-09-14 03:47:45] WARNING: Attempt 1 failed: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://finance.yahoo.com/quote/SNOW/", waiting until "load"
+. Retrying in 1s...
+[2026-09-14 03:48:19] WARNING: Attempt 2 failed: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://finance.yahoo.com/quote/SNOW/", waiting until "load"
+. Retrying in 1s...
+[2026-09-14 03:48:23] INFO: Fetched (200) <GET https://finance.yahoo.com/quote/SNOW/> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://app.snowflake.com/                                         
+| ✓ | ⏱: 0.56s 
+[SCRAPE].. ◆ https://app.snowflake.com/                                         
+| ✓ | ⏱: 0.00s 
+[COMPLETE] ● https://app.snowflake.com/                                         
+| ✓ | ⏱: 0.56s 
+[2026-09-14 03:48:34] INFO: Fetched (200) <GET https://app.snowflake.com/> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://careers.snowflake.com/us/en                                
+| ✓ | ⏱: 1.81s 
+[SCRAPE].. ◆ https://careers.snowflake.com/us/en                                
+| ✓ | ⏱: 0.01s 
+[COMPLETE] ● https://careers.snowflake.com/us/en                                
+| ✓ | ⏱: 1.84s 
+[2026-09-14 03:48:42] INFO: Fetched (200) <GET https://careers.snowflake.com/us/en> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.geeksforgeeks.org/cloud-computing/what-is-snowflake/   
+| ✓ | ⏱: 1.65s 
+[SCRAPE].. ◆ https://www.geeksforgeeks.org/cloud-computing/what-is-snowflake/   
+| ✓ | ⏱: 0.02s 
+[COMPLETE] ● https://www.geeksforgeeks.org/cloud-computing/what-is-snowflake/   
+| ✓ | ⏱: 1.69s 
+[2026-09-14 03:48:54] INFO: Fetched (200) <GET https://www.geeksforgeeks.org/cloud-computing/what-is-snowflake/> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://signup.snowflake.com/                                      
+| ✓ | ⏱: 2.20s 
+[SCRAPE].. ◆ https://signup.snowflake.com/                                      
+| ✓ | ⏱: 0.01s 
+[COMPLETE] ● https://signup.snowflake.com/                                      
+| ✓ | ⏱: 2.21s 
+[2026-09-14 03:49:03] INFO: Fetched (200) <GET https://signup.snowflake.com/> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://finance.yahoo.com/quote/SNOW/                              
+| ✓ | ⏱: 2.41s 
+[SCRAPE].. ◆ https://finance.yahoo.com/quote/SNOW/                              
+| ✓ | ⏱: 0.11s 
+[COMPLETE] ● https://finance.yahoo.com/quote/SNOW/                              
+| ✓ | ⏱: 2.54s 
+[2026-09-14 03:49:40] WARNING: Attempt 1 failed: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://finance.yahoo.com/quote/SNOW/", waiting until "load"
+. Retrying in 1s...
+[2026-09-14 03:50:04] INFO: Fetched (200) <GET https://finance.yahoo.com/quote/SNOW/> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ 
+https://www.hipcamp.com/en-US/d/united-states/illinois/lombard/camping/all      
+| ✓ | ⏱: 2.41s 
+[SCRAPE].. ◆ 
+https://www.hipcamp.com/en-US/d/united-states/illinois/lombard/camping/all      
+| ✓ | ⏱: 0.16s 
+[COMPLETE] ● 
+https://www.hipcamp.com/en-US/d/united-states/illinois/lombard/camping/all      
+| ✓ | ⏱: 2.60s 
+[2026-09-14 03:50:27] INFO: Fetched (200) <GET https://www.hipcamp.com/en-US/d/united-states/illinois/lombard/camping/all> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://camp.com/                                                  
+| ✓ | ⏱: 0.92s 
+[SCRAPE].. ◆ https://camp.com/                                                  
+| ✓ | ⏱: 0.01s 
+[COMPLETE] ● https://camp.com/                                                  
+| ✓ | ⏱: 0.95s 
+[2026-09-14 03:50:31] INFO: Fetched (200) <GET https://camp.com/> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.lombardjrs.com/tlc-camp-inc                            
+| ✓ | ⏱: 2.62s 
+[SCRAPE].. ◆ https://www.lombardjrs.com/tlc-camp-inc                            
+| ✓ | ⏱: 0.02s 
+[COMPLETE] ● https://www.lombardjrs.com/tlc-camp-inc                            
+| ✓ | ⏱: 2.66s 
+[2026-09-14 03:50:39] INFO: Fetched (200) <GET https://www.lombardjrs.com/tlc-camp-inc> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://thedyrt.com/camping/illinois/near/lombard                  
+| ✓ | ⏱: 1.34s 
+[SCRAPE].. ◆ https://thedyrt.com/camping/illinois/near/lombard                  
+| ✓ | ⏱: 0.00s 
+[COMPLETE] ● https://thedyrt.com/camping/illinois/near/lombard                  
+| ✓ | ⏱: 1.35s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://lombardparks.com/day-camp/                                 
+| ✓ | ⏱: 1.12s 
+[SCRAPE].. ◆ https://lombardparks.com/day-camp/                                 
+| ✓ | ⏱: 0.04s 
+[COMPLETE] ● https://lombardparks.com/day-camp/                                 
+| ✓ | ⏱: 1.17s 
+[2026-09-14 03:50:47] INFO: Fetched (200) <GET https://lombardparks.com/day-camp/> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ 
+https://koa.com/find-a-koa/us/midwest/il/lombard/?msockid=063a30223ba16e92029b27
+f63a3f6f0c           | ✓ | ⏱: 1.48s 
+[SCRAPE].. ◆ 
+https://koa.com/find-a-koa/us/midwest/il/lombard/?msockid=063a30223ba16e92029b27
+f63a3f6f0c           | ✓ | ⏱: 0.10s 
+[COMPLETE] ● 
+https://koa.com/find-a-koa/us/midwest/il/lombard/?msockid=063a30223ba16e92029b27
+f63a3f6f0c           | ✓ | ⏱: 1.60s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://thedyrt.com/camping/illinois/near/lombard/with/rv          
+| ✓ | ⏱: 1.48s 
+[SCRAPE].. ◆ https://thedyrt.com/camping/illinois/near/lombard/with/rv          
+| ✓ | ⏱: 0.01s 
+[COMPLETE] ● https://thedyrt.com/camping/illinois/near/lombard/with/rv          
+| ✓ | ⏱: 1.51s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.facebook.com/fanaricamp/                               
+| ✓ | ⏱: 1.45s 
+[SCRAPE].. ◆ https://www.facebook.com/fanaricamp/                               
+| ✓ | ⏱: 0.02s 
+[COMPLETE] ● https://www.facebook.com/fanaricamp/                               
+| ✓ | ⏱: 1.50s 
+[2026-09-14 03:50:57] INFO: Fetched (200) <GET https://www.facebook.com/fanaricamp/> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.hipcamp.com/en-US                                      
+| ✓ | ⏱: 1.63s 
+[SCRAPE].. ◆ https://www.hipcamp.com/en-US                                      
+| ✓ | ⏱: 0.07s 
+[COMPLETE] ● https://www.hipcamp.com/en-US                                      
+| ✓ | ⏱: 1.72s 
+[2026-09-14 03:51:06] INFO: Fetched (200) <GET https://www.hipcamp.com/en-US> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ 
+https://www.hipcamp.com/en-US/d/united-states/illinois/lombard/camping/all      
+| ✓ | ⏱: 2.08s 
+[SCRAPE].. ◆ 
+https://www.hipcamp.com/en-US/d/united-states/illinois/lombard/camping/all      
+| ✓ | ⏱: 0.12s 
+[COMPLETE] ● 
+https://www.hipcamp.com/en-US/d/united-states/illinois/lombard/camping/all      
+| ✓ | ⏱: 2.21s 
+[2026-09-14 03:51:19] INFO: Fetched (200) <GET https://www.hipcamp.com/en-US/d/united-states/illinois/lombard/camping/all> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://camp.com/                                                  
+| ✓ | ⏱: 0.89s 
+[SCRAPE].. ◆ https://camp.com/                                                  
+| ✓ | ⏱: 0.01s 
+[COMPLETE] ● https://camp.com/                                                  
+| ✓ | ⏱: 0.91s 
+[2026-09-14 03:51:26] INFO: Fetched (200) <GET https://camp.com/> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.lombardjrs.com/tlc-camp-inc                            
+| ✓ | ⏱: 0.98s 
+[SCRAPE].. ◆ https://www.lombardjrs.com/tlc-camp-inc                            
+| ✓ | ⏱: 0.02s 
+[COMPLETE] ● https://www.lombardjrs.com/tlc-camp-inc                            
+| ✓ | ⏱: 1.02s 
+[2026-09-14 03:51:30] INFO: Fetched (200) <GET https://www.lombardjrs.com/tlc-camp-inc> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://lombardparks.com/day-camp/                                 
+| ✓ | ⏱: 1.07s 
+[SCRAPE].. ◆ https://lombardparks.com/day-camp/                                 
+| ✓ | ⏱: 0.04s 
+[COMPLETE] ● https://lombardparks.com/day-camp/                                 
+| ✓ | ⏱: 1.12s 
+[2026-09-14 03:51:35] INFO: Fetched (200) <GET https://lombardparks.com/day-camp/> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ 
+https://koa.com/find-a-koa/us/midwest/il/lombard/?msockid=2005f53474e86a860d69e2
+e075db6bd5           | ✓ | ⏱: 1.64s 
+[SCRAPE].. ◆ 
+https://koa.com/find-a-koa/us/midwest/il/lombard/?msockid=2005f53474e86a860d69e2
+e075db6bd5           | ✓ | ⏱: 0.10s 
+[COMPLETE] ● 
+https://koa.com/find-a-koa/us/midwest/il/lombard/?msockid=2005f53474e86a860d69e2
+e075db6bd5           | ✓ | ⏱: 1.74s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.pima.edu/                                              
+| ✓ | ⏱: 1.76s 
+[SCRAPE].. ◆ https://www.pima.edu/                                              
+| ✓ | ⏱: 0.02s 
+[COMPLETE] ● https://www.pima.edu/                                              
+| ✓ | ⏱: 1.79s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://pmi.edu/                                                   
+| ✓ | ⏱: 0.87s 
+[SCRAPE].. ◆ https://pmi.edu/                                                   
+| ✓ | ⏱: 0.08s 
+[COMPLETE] ● https://pmi.edu/                                                   
+| ✓ | ⏱: 0.96s 
+[2026-09-14 03:51:54] INFO: Fetched (200) <GET https://pmi.edu/> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://pmi.edu/all-programs/                                      
+| ✓ | ⏱: 0.72s 
+[SCRAPE].. ◆ https://pmi.edu/all-programs/                                      
+| ✓ | ⏱: 0.06s 
+[COMPLETE] ● https://pmi.edu/all-programs/                                      
+| ✓ | ⏱: 0.80s 
+[2026-09-14 03:51:58] INFO: Fetched (200) <GET https://pmi.edu/all-programs/> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://my.pima.edu/                                               
+| ✓ | ⏱: 1.35s 
+[SCRAPE].. ◆ https://my.pima.edu/                                               
+| ✓ | ⏱: 0.00s 
+[COMPLETE] ● https://my.pima.edu/                                               
+| ✓ | ⏱: 1.35s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.pima.gov/                                              
+| ✓ | ⏱: 1.83s 
+[SCRAPE].. ◆ https://www.pima.gov/                                              
+| ✓ | ⏱: 0.02s 
+[COMPLETE] ● https://www.pima.gov/                                              
+| ✓ | ⏱: 1.94s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.pimafederal.org/                                       
+| ✓ | ⏱: 1.62s 
+[SCRAPE].. ◆ https://www.pimafederal.org/                                       
+| ✓ | ⏱: 0.02s 
+[COMPLETE] ● https://www.pimafederal.org/                                       
+| ✓ | ⏱: 1.65s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.britannica.com/topic/Pima-people                       
+| ✓ | ⏱: 1.90s 
+[SCRAPE].. ◆ https://www.britannica.com/topic/Pima-people                       
+| ✓ | ⏱: 0.02s 
+[COMPLETE] ● https://www.britannica.com/topic/Pima-people                       
+| ✓ | ⏱: 1.94s 
+[2026-09-14 03:52:38] WARNING: Attempt 1 failed: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://www.britannica.com/topic/Pima-people", waiting until "load"
+. Retrying in 1s...
+[2026-09-14 03:53:12] WARNING: Attempt 2 failed: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://www.britannica.com/topic/Pima-people", waiting until "load"
+. Retrying in 1s...
+[2026-09-14 03:53:15] INFO: Fetched (200) <GET https://www.britannica.com/topic/Pima-people> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.pima.gov/2824/Planning-Zoning-Commission-Agendas-Minut 
+| ✓ | ⏱: 3.45s 
+[SCRAPE].. ◆ https://www.pima.gov/2824/Planning-Zoning-Commission-Agendas-Minut 
+| ✓ | ⏱: 0.07s 
+[COMPLETE] ● https://www.pima.gov/2824/Planning-Zoning-Commission-Agendas-Minut 
+| ✓ | ⏱: 3.55s 
+lead-finder: 19 leads for AZ -> /home/drewp/.local/state/ccdb/gowork/local-test-plan-lead-finder-build-20260914-000102/propertystack/runs/AZ/20260914-full

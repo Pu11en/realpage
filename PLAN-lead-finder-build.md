@@ -183,7 +183,7 @@ Open: http://localhost:8765 → Early Leads → the new state's button
   work the to-read queue, respect the 150-project/450-search caps, commit progress. If it hits a
   cap or finishes within this task's time, tick it; otherwise leave it running for the next task to
   resume (like 6.3/6.4 did for NY).
-- [ ] **6.7 Finish the closer-to-Texas state's run.** Resume the run started in 6.6 the same way
+- [x] **6.7 Finish the closer-to-Texas state's run.** Resume the run started in 6.6 the same way
   6.4/6.5 resumed NY; keep working the to-read queue until the run finishes or hits a cap. When
   done: save recipes, spot-check 10 software calls by hand, and write in the progress log how many
   projects, searches (Jina vs free), cities skipped and why. Commit.

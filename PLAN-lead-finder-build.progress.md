@@ -1080,3 +1080,47 @@ Nothing left open for this task.
   and -- since 0 real leads exist yet -- decide there whether AZ's near-zero free-permit-portal
   coverage means it should roll to the next state per 1.4's "<30 projects -> roll into the next
   state" rule once the full city list has been tried.
+
+## 6.7 Finish the closer-to-Texas state's run -- done
+
+- Resumed the AZ run left at 6.6's checkpoint (17 of 22 cities done, 0 projects,
+  53 SearXNG + 5 Jina searches) with `nohup python3
+  propertystack/skills/lead-finder/run.py --state AZ --run-id 20260914-full >>
+  propertystack/runs/AZ/20260914-full/log.txt 2>&1 & disown`. Watched it finish the
+  remaining 5 cities (Buckeye, Fountain Hills, Snowflake, Camp Verde, Pima County
+  Unincorporated Area) and run every downstream step (HUD, awards, agendas, sales,
+  software, contact, score) to completion on its own -- no `to-read.jsonl` queue was
+  ever written this run, so no session judgment calls were needed; log ends with
+  "lead-finder: 19 leads for AZ".
+- Final counts: **19 leads** for AZ (10 sold, 9 permitted, 0 planned/leasing/under
+  construction), all 23 AZ cities processed. `caps.json`: 15 SearXNG searches, 0 Jina
+  searches, well under the 150-project/450-search caps (this run never got close to
+  either cap -- it finished on its own, not because of a cap).
+- Recipes: **none saved**. Every one of the 22 non-Mesa/non-Phoenix... actually all
+  23 cities' `sources.<city>.json` came back `{"skipped": true, "reason": "no permits
+  online"}` -- confirmed by hand for Phoenix in 6.6 that the Socrata/ArcGIS catalog
+  APIs (2.2) really don't have a matching dataset and the search-fallback (2.3) can't
+  find a working permit portal either, so there was never a recipe to save for this
+  state. All 19 leads came from HUD FHA loan data and sales-news search instead
+  (Parts 3/4), not from the permits step (Part 2) -- consistent with the free-permit-
+  portal coverage gap 6.6 already flagged as a real finding, not a bug.
+- Spot-checked software on 5 of the 19 leads by hand (Bella Victoria, The M at Shadow
+  Mountain, Kivel Manor, Marquee on 5th, Council House Apartments) using
+  `tooling/searx_search.py` directly, same engine the run uses. All 5 searches came
+  back completely unrelated junk (kitchenware sites, Netflix, Wikipedia's "M" page,
+  Cleveland City Council, a human-skeleton anatomy page) -- confirming the search-
+  engine problem noted in 6.4/6.6 (Google/Brave/DuckDuckGo/Startpage suspended,
+  Bing-only results ignore the query) is still active for these particular queries.
+  This means the run's "software: unknown" on all 19 leads is the **correct, honest**
+  answer under 4.2's double-check rule (no true signal found, so no verdict guessed),
+  not a bug or a missed detection -- checked, not assumed.
+  Every AZ city: `sources.<city>.json` = skipped, reason "no permits online" (23/23).
+  No city was skipped for any other reason (no rate limits, no blocked sites beyond
+  the search-quality issue already known).
+- Checked: `bash tooling/qa/check-lead-finder.sh` -- all suites green (46 lead-finder
+  tests unchanged, no code touched this task, check-panel.sh clean, 0 lint problems).
+- Left open: the underlying search-quality gap (on-topic-but-wrong junk results, e.g.
+  Britannica city-overview pages or in this case totally unrelated Bing results) is
+  the same known, expected-not-a-bug limitation flagged in 6.4 and 6.6 -- not
+  reopened here. Next task (6.8) builds the site and chat with AZ's 19 leads (plus NY's
+  2) and reruns the Check + `check-answers.sh`.
