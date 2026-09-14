@@ -49,9 +49,14 @@ GATEWAY_CHARS_PER_TOKEN = 4
 
 # Saved deep dives: the first "Deep dive on <building>, <city> (...)" answer is
 # kept on the volume and replayed next time, so a building is only researched
-# once. "Fresh deep dive on ..." redoes it and replaces the saved one.
+# once. "Fresh deep dive on ..." redoes it and replaces the saved one, and so
+# does Open WebUI's regenerate (↻): the same chat (X-OpenWebUI-Chat-Id) asking
+# the same deep dive again means "redo it".
 DEEP_DIVE_DIR = os.path.join(os.environ.get("HERMES_HOME", "/opt/data"), "deep-dives")
 DEEP_DIVE_RE = re.compile(r"^\s*(fresh\s+)?deep dive on\s+([^(:]+?)\s*(?:\(|:|$)", re.I)
+
+DEEP_DIVE_CHATS_MAX = 2000  # chat ids remembered for the ↻ redo check
+_dive_chats: dict[str, set[str]] = {}  # chat id -> building keys it was served
 
 _hits: dict[str, deque] = defaultdict(deque)
 _gateway_hits: dict[str, deque] = defaultdict(deque)
@@ -350,12 +355,21 @@ def _deep_dive_save(key: str, question: str, answer: str) -> None:
         pass
 
 
-def _deep_dive_note(saved: dict, question: str) -> str:
+def _deep_dive_redo(chat_id: str, key: str, fresh: bool) -> bool:
+    """True if this deep dive must be researched again instead of replayed:
+    "Fresh deep dive on ...", or ↻ (this chat was already given this building).
+    Remembers the chat either way so its next ask of the same building redoes."""
+    redo = fresh or (bool(chat_id) and key in _dive_chats.get(chat_id, ()))
+    if chat_id:
+        if chat_id not in _dive_chats and len(_dive_chats) >= DEEP_DIVE_CHATS_MAX:
+            _dive_chats.pop(next(iter(_dive_chats)))
+        _dive_chats.setdefault(chat_id, set()).add(key)
+    return redo
+
+
+def _deep_dive_note(saved: dict) -> str:
     day = time.strftime("%b %d, %Y", time.localtime(saved.get("saved_at", 0)))
-    m = DEEP_DIVE_RE.match(question)
-    name = m.group(2).strip() if m else "this building"
-    return (f"*Saved deep dive from {day} (no new research). "
-            f"To redo it, ask: \"Fresh deep dive on {name}\".*\n\n{saved['answer']}")
+    return f"*Saved deep dive from {day}. Press ↻ to redo it.*\n\n{saved['answer']}"
 
 
 def _sse_text(raw: bytes) -> str:
@@ -481,10 +495,11 @@ async def gateway_chat(request: web.Request) -> web.StreamResponse:
     req_chars = sum(len(str(m.get("content", ""))) for m in body.get("messages", []) if isinstance(m, dict))
     question = _last_user_text(body)
     dive_key, fresh = _deep_dive_key(question)
-    if dive_key and not fresh:
+    chat_id = request.headers.get("X-OpenWebUI-Chat-Id", "").strip()
+    if dive_key and not _deep_dive_redo(chat_id, dive_key, fresh):
         saved = _deep_dive_load(dive_key)
         if saved:
-            return await _gateway_replay(request, body, bold(_deep_dive_note(saved, question)))
+            return await _gateway_replay(request, body, bold(_deep_dive_note(saved)))
 
     async with _slots:
         try:
