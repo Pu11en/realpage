@@ -62,8 +62,8 @@ Open: http://localhost:8765/under-the-hood.html
   yet → tick and move on.
 - [ ] **U6 The 90-second top.** New top of `site/under-the-hood.html`: one-line story ("A reusable way
   for any team to build with AI agents, proven on this product"), 4-5 big numbers from the data
-  files (steps built by the bot, % passed first try, shipcheck checks passing, grader-agrees-with-human
-  %, $ per chat answer), and one simple SVG diagram: plan → build bot → checks → human OK → live,
+  files, each with n and date (steps built by the bot, % passed first try, % needed rework,
+  grader vs human TPR/TNR, $ per chat answer), and one simple SVG diagram: plan → build bot → checks → human OK → live,
   with the product (lead finder → data → site + chatbot) under it. Commit.
 - [ ] **U7 Section: How I build with AI.** Collapsible: how the build bot works (diagram), the 3 real
   example steps from U3, the safety rules (own copy, checks after every step, human OK before
