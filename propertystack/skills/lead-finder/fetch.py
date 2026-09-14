@@ -80,6 +80,7 @@ class WebHelper:
         self.cache_dir.mkdir(parents=True, exist_ok=True)
         self.jina_api_key = _load_jina_key() if jina_api_key is _UNSET else jina_api_key
         self.counts = SearchCounts()
+        self.junk_searxng = 0
         self._last_visit: dict[str, float] = {}
         self._block_counts: dict[str, int] = {}
         self._skipped: dict[str, str] = {}
@@ -107,10 +108,12 @@ class WebHelper:
             results = []
         else:
             self.counts.searxng += 1
-        if results:
+        if results and not _looks_junk(query, results):
             return results
+        if results:
+            self.junk_searxng = getattr(self, "junk_searxng", 0) + 1
         if not self.jina_api_key:
-            return []
+            return results
         results = self._search_jina(query, n)
         self.counts.jina += 1
         return results
@@ -180,6 +183,41 @@ class WebHelper:
         if last is not None and now - last < self.site_gap_s:
             time.sleep(self.site_gap_s - (now - last))
         self._last_visit[site] = time.time()
+
+
+_STOPWORDS = {
+    "the", "and", "for", "with", "from", "open", "data", "new", "near", "of",
+    "in", "on", "a", "an", "to", "is", "are",
+}
+
+
+def _query_words(query: str) -> list[str]:
+    words = [w.strip('"').lower() for w in query.split()]
+    return [w for w in words if len(w) > 2 and w not in _STOPWORDS]
+
+
+def _looks_junk(query: str, results: list[dict]) -> bool:
+    """True when SearXNG's top results don't actually match the query.
+
+    A result "matches" when at least one distinctive query word (city/agency
+    name, "permit", "apartment", etc; short stopwords excluded) appears in its
+    title, URL or snippet. Fewer than 2 of the top 5 matching means the engine
+    ignored the query (e.g. suspended engines returning generic junk).
+    """
+    words = _query_words(query)
+    if not words:
+        return False
+    top = results[:5]
+    if len(top) < 2:
+        return False
+    matches = 0
+    for r in top:
+        haystack = " ".join(
+            str(r.get(k, "")) for k in ("title", "url", "snippet")
+        ).lower()
+        if any(w in haystack for w in words):
+            matches += 1
+    return matches < 2
 
 
 def _site_key(url: str) -> str:

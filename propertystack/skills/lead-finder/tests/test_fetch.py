@@ -70,6 +70,36 @@ def test_search_returns_nothing_without_jina_key(tmp_path):
     assert helper.counts.jina == 0
 
 
+def test_search_falls_back_to_jina_when_searxng_results_are_junk(tmp_path, monkeypatch):
+    def fake_searx(query, n):
+        # Suspended-engine style junk: unrelated Wikipedia hits that ignore the query.
+        return [
+            {"title": "Rivertown (mythology)", "url": "https://en.wikipedia.org/wiki/Rivertown", "snippet": "A bird."},
+            {"title": "Skybird", "url": "https://en.wikipedia.org/wiki/Skybird", "snippet": "Also a bird."},
+        ]
+
+    def fake_jina(self, query, n):
+        return [{"title": "Building Permits Portal", "url": "https://city.example/permits", "snippet": ""}]
+
+    monkeypatch.setattr(fetch_mod.WebHelper, "_search_jina", fake_jina)
+    helper = _helper(tmp_path, searx_search=fake_searx, jina_api_key="fake-key")
+    results = helper.search('"Rivertown" building permits open data')
+    assert results[0]["url"] == "https://city.example/permits"
+    assert helper.counts.jina == 1
+    assert helper.junk_searxng == 1
+
+
+def test_search_keeps_searxng_results_that_match_the_query(tmp_path):
+    def fake_searx(query, n):
+        return [{"title": "City of Rivertown Building Permits", "url": "https://rivertown.gov/permits", "snippet": "apartment permit data"}]
+
+    helper = _helper(tmp_path, searx_search=fake_searx, jina_api_key="fake-key")
+    results = helper.search("Rivertown building permits open data")
+    assert results[0]["url"] == "https://rivertown.gov/permits"
+    assert helper.counts.jina == 0
+    assert helper.junk_searxng == 0
+
+
 def test_fetch_caches_page_and_never_refetches(tmp_path):
     calls = []
 

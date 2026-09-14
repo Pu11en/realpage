@@ -1700,3 +1700,299 @@ atchogue/            | ✓ | ⏱: 0.04s
 https://www.discoverlongisland.com/plan-your-trip/trip-ideas/a-day-in-downtown-p
 atchogue/            | ✓ | ⏱: 1.43s 
 [INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://patchogue.com/                                             
+| ✓ | ⏱: 1.24s 
+[SCRAPE].. ◆ https://patchogue.com/                                             
+| ✓ | ⏱: 0.03s 
+[COMPLETE] ● https://patchogue.com/                                             
+| ✓ | ⏱: 1.28s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://thetouristchecklist.com/things-to-do-in-patchogue/         
+| ✓ | ⏱: 1.00s 
+[SCRAPE].. ◆ https://thetouristchecklist.com/things-to-do-in-patchogue/         
+| ✓ | ⏱: 0.02s 
+[COMPLETE] ● https://thetouristchecklist.com/things-to-do-in-patchogue/         
+| ✓ | ⏱: 1.03s 
+[2026-09-14 02:50:03] INFO: Fetched (200) <GET https://thetouristchecklist.com/things-to-do-in-patchogue/> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.facebook.com/visitpatchogue/                           
+| ✓ | ⏱: 1.74s 
+[SCRAPE].. ◆ https://www.facebook.com/visitpatchogue/                           
+| ✓ | ⏱: 0.04s 
+[COMPLETE] ● https://www.facebook.com/visitpatchogue/                           
+| ✓ | ⏱: 1.80s 
+[2026-09-14 02:50:10] INFO: Fetched (200) <GET https://www.facebook.com/visitpatchogue/> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.longislandexchange.com/towns/patchogue/                
+| ✓ | ⏱: 1.82s 
+[SCRAPE].. ◆ https://www.longislandexchange.com/towns/patchogue/                
+| ✓ | ⏱: 0.01s 
+[COMPLETE] ● https://www.longislandexchange.com/towns/patchogue/                
+| ✓ | ⏱: 1.84s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://patchogue.com/discover-patchogue/                          
+| ✓ | ⏱: 1.90s 
+[SCRAPE].. ◆ https://patchogue.com/discover-patchogue/                          
+| ✓ | ⏱: 0.01s 
+[COMPLETE] ● https://patchogue.com/discover-patchogue/                          
+| ✓ | ⏱: 1.93s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.merriam-webster.com/dictionary/vestal                  
+| ✓ | ⏱: 1.64s 
+[SCRAPE].. ◆ https://www.merriam-webster.com/dictionary/vestal                  
+| ✓ | ⏱: 0.04s 
+[COMPLETE] ● https://www.merriam-webster.com/dictionary/vestal                  
+| ✓ | ⏱: 1.72s 
+[2026-09-14 02:51:11] WARNING: Attempt 1 failed: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://www.merriam-webster.com/dictionary/vestal", waiting until "load"
+. Retrying in 1s...
+[2026-09-14 02:51:17] INFO: Fetched (200) <GET https://www.merriam-webster.com/dictionary/vestal> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.vestalmfg.com/                                         
+| ✓ | ⏱: 2.30s 
+[SCRAPE].. ◆ https://www.vestalmfg.com/                                         
+| ✓ | ⏱: 0.01s 
+[COMPLETE] ● https://www.vestalmfg.com/                                         
+| ✓ | ⏱: 2.32s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.britannica.com/topic/Vestal-Virgins                    
+| ✓ | ⏱: 1.15s 
+[SCRAPE].. ◆ https://www.britannica.com/topic/Vestal-Virgins                    
+| ✓ | ⏱: 0.02s 
+[COMPLETE] ● https://www.britannica.com/topic/Vestal-Virgins                    
+| ✓ | ⏱: 1.19s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://vestalrestaurant.com/                                      
+| ✓ | ⏱: 1.30s 
+[SCRAPE].. ◆ https://vestalrestaurant.com/                                      
+| ✓ | ⏱: 0.02s 
+[COMPLETE] ● https://vestalrestaurant.com/                                      
+| ✓ | ⏱: 1.34s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.worldhistory.org/Vestal_Virgin/                        
+| ✓ | ⏱: 1.43s 
+[SCRAPE].. ◆ https://www.worldhistory.org/Vestal_Virgin/                        
+| ✓ | ⏱: 0.03s 
+[COMPLETE] ● https://www.worldhistory.org/Vestal_Virgin/                        
+| ✓ | ⏱: 1.47s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.thefreedictionary.com/vestal                           
+| ✓ | ⏱: 0.98s 
+[SCRAPE].. ◆ https://www.thefreedictionary.com/vestal                           
+| ✓ | ⏱: 0.03s 
+[COMPLETE] ● https://www.thefreedictionary.com/vestal                           
+| ✓ | ⏱: 1.02s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://en.m.wiktionary.org/wiki/vestal                            
+| ✓ | ⏱: 1.61s 
+[SCRAPE].. ◆ https://en.m.wiktionary.org/wiki/vestal                            
+| ✓ | ⏱: 0.05s 
+[COMPLETE] ● https://en.m.wiktionary.org/wiki/vestal                            
+| ✓ | ⏱: 1.68s 
+[2026-09-14 02:51:33] INFO: Fetched (301) <GET https://en.m.wiktionary.org/wiki/vestal> (referer: https://www.google.com/)
+[2026-09-14 02:51:33] INFO: Fetched (200) <GET https://en.wiktionary.org/wiki/vestal> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.thecollector.com/vestal-virgin-facts/                  
+| ✓ | ⏱: 1.98s 
+[SCRAPE].. ◆ https://www.thecollector.com/vestal-virgin-facts/                  
+| ✓ | ⏱: 0.02s 
+[COMPLETE] ● https://www.thecollector.com/vestal-virgin-facts/                  
+| ✓ | ⏱: 2.01s 
+[2026-09-14 02:51:38] INFO: Fetched (200) <GET https://www.thecollector.com/vestal-virgin-facts/> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://en.m.wiktionary.org/wiki/vestal                            
+| ✓ | ⏱: 0.78s 
+[SCRAPE].. ◆ https://en.m.wiktionary.org/wiki/vestal                            
+| ✓ | ⏱: 0.05s 
+[COMPLETE] ● https://en.m.wiktionary.org/wiki/vestal                            
+| ✓ | ⏱: 0.84s 
+[2026-09-14 02:51:49] INFO: Fetched (301) <GET https://en.m.wiktionary.org/wiki/vestal> (referer: https://www.google.com/)
+[2026-09-14 02:51:49] INFO: Fetched (200) <GET https://en.wiktionary.org/wiki/vestal> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ http://www.cityofpoughkeepsie.gov/                                 
+| ✓ | ⏱: 4.13s 
+[SCRAPE].. ◆ http://www.cityofpoughkeepsie.gov/                                 
+| ✓ | ⏱: 0.03s 
+[COMPLETE] ● http://www.cityofpoughkeepsie.gov/                                 
+| ✓ | ⏱: 4.17s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.cityofpoughkeepsie.gov/1/Home                          
+| ✓ | ⏱: 2.68s 
+[SCRAPE].. ◆ https://www.cityofpoughkeepsie.gov/1/Home                          
+| ✓ | ⏱: 0.03s 
+[COMPLETE] ● https://www.cityofpoughkeepsie.gov/1/Home                          
+| ✓ | ⏱: 2.72s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.travelnewyorknow.com/things-to-do-in-poughkeepsie/     
+| ✓ | ⏱: 1.09s 
+[SCRAPE].. ◆ https://www.travelnewyorknow.com/things-to-do-in-poughkeepsie/     
+| ✓ | ⏱: 0.04s 
+[COMPLETE] ● https://www.travelnewyorknow.com/things-to-do-in-poughkeepsie/     
+| ✓ | ⏱: 1.15s 
+[2026-09-14 02:52:11] INFO: Fetched (200) <GET https://www.travelnewyorknow.com/things-to-do-in-poughkeepsie/> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.poughkeepsiejournal.com/                               
+| ✓ | ⏱: 0.96s 
+[SCRAPE].. ◆ https://www.poughkeepsiejournal.com/                               
+| ✓ | ⏱: 0.01s 
+[COMPLETE] ● https://www.poughkeepsiejournal.com/                               
+| ✓ | ⏱: 0.99s 
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.britannica.com/place/Poughkeepsie                      
+| ✓ | ⏱: 2.49s 
+[SCRAPE].. ◆ https://www.britannica.com/place/Poughkeepsie                      
+| ✓ | ⏱: 0.02s 
+[COMPLETE] ● https://www.britannica.com/place/Poughkeepsie                      
+| ✓ | ⏱: 2.54s 
+node:events:486
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: write EPIPE
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:19)
+Emitted 'error' event on Socket instance at:
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  errno: -32,
+  code: 'EPIPE',
+  syscall: 'write'
+}
+
+Node.js v24.14.1
+lead-finder: run folder ready at /home/drewp/.local/state/ccdb/gowork/local-test-plan-lead-finder-build-20260914-000102/propertystack/runs/NY/20260914-full
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ 
+https://www.pyramidbrokerage.com/listings/2227-south-park-avenue-buffalo-ny-b138
+19/                  | ✓ | ⏱: 2.70s 
+[SCRAPE].. ◆ 
+https://www.pyramidbrokerage.com/listings/2227-south-park-avenue-buffalo-ny-b138
+19/                  | ✓ | ⏱: 0.03s 
+[COMPLETE] ● 
+https://www.pyramidbrokerage.com/listings/2227-south-park-avenue-buffalo-ny-b138
+19/                  | ✓ | ⏱: 2.75s 
+[2026-09-14 02:53:10] INFO: Fetched (200) <GET https://www.pyramidbrokerage.com/listings/2227-south-park-avenue-buffalo-ny-b13819/> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ 
+https://www.bizjournals.com/buffalo/news/2025/07...velopment-plans-apartments-in
+-south-buffalo.html  | ✓ | ⏱: 1.37s 
+[SCRAPE].. ◆ 
+https://www.bizjournals.com/buffalo/news/2025/07...velopment-plans-apartments-in
+-south-buffalo.html  | ✓ | ⏱: 0.02s 
+[COMPLETE] ● 
+https://www.bizjournals.com/buffalo/news/2025/07...velopment-plans-apartments-in
+-south-buffalo.html  | ✓ | ⏱: 1.40s 
+[2026-09-14 02:53:16] INFO: Fetched (307) <GET https://www.bizjournals.com/buffalo/news/2025/07/21/dofi-development-plans-apartments-in-south-buffalo.html> (referer: https://www.google.com/)
+[2026-09-14 02:53:16] INFO: Fetched (403) <GET https://www.bizjournals.com/buffalo/news/2025/07/21/dofi-development-plans-apartments-in-south-buffalo.html> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ 
+https://www.apartmenthomeliving.com/buffalo-ny/zip-code/14202-apartments        
+| ✓ | ⏱: 1.17s 
+[SCRAPE].. ◆ 
+https://www.apartmenthomeliving.com/buffalo-ny/zip-code/14202-apartments        
+| ✓ | ⏱: 0.08s 
+[COMPLETE] ● 
+https://www.apartmenthomeliving.com/buffalo-ny/zip-code/14202-apartments        
+| ✓ | ⏱: 1.27s 
+[2026-09-14 02:53:38] INFO: Fetched (200) <GET https://www.apartmenthomeliving.com/buffalo-ny/zip-code/14202-apartments> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ 
+https://www.facebook.com/TheBuffaloNews/posts/tw...ing-on-pearl-street-mcguire-d
+e/1241030941391361/  | ✓ | ⏱: 1.08s 
+[SCRAPE].. ◆ 
+https://www.facebook.com/TheBuffaloNews/posts/tw...ing-on-pearl-street-mcguire-d
+e/1241030941391361/  | ✓ | ⏱: 0.01s 
+[COMPLETE] ● 
+https://www.facebook.com/TheBuffaloNews/posts/tw...ing-on-pearl-street-mcguire-d
+e/1241030941391361/  | ✓ | ⏱: 1.12s 
+[2026-09-14 02:53:42] INFO: Fetched (200) <GET https://www.facebook.com/TheBuffaloNews/posts/two-months-after-purchasing-the-historic-dun-building-on-pearl-street-mcguire-de/1241030941391361/> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ 
+https://www.bizjournals.com/buffalo/news/2025/10...-priam-dun-building-sale-buff
+alo-apartments.html  | ✓ | ⏱: 1.62s 
+[SCRAPE].. ◆ 
+https://www.bizjournals.com/buffalo/news/2025/10...-priam-dun-building-sale-buff
+alo-apartments.html  | ✓ | ⏱: 0.02s 
+[COMPLETE] ● 
+https://www.bizjournals.com/buffalo/news/2025/10...-priam-dun-building-sale-buff
+alo-apartments.html  | ✓ | ⏱: 1.66s 
+[2026-09-14 02:53:49] INFO: Fetched (200) <GET https://www.bizjournals.com/buffalo/news/2025/10/02/mcguire-priam-dun-building-sale-buffalo-apartments.html> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://en.wikipedia.org/wiki/Poughkeepsie,_New_York               
+| ✓ | ⏱: 1.06s 
+[SCRAPE].. ◆ https://en.wikipedia.org/wiki/Poughkeepsie,_New_York               
+| ✓ | ⏱: 0.22s 
+[COMPLETE] ● https://en.wikipedia.org/wiki/Poughkeepsie,_New_York               
+| ✓ | ⏱: 1.30s 
+[2026-09-14 02:53:54] INFO: Fetched (200) <GET https://en.wikipedia.org/wiki/Poughkeepsie,_New_York> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://en.wikipedia.org/wiki/Poughkeepsie_(town),_New_York        
+| ✓ | ⏱: 0.75s 
+[SCRAPE].. ◆ https://en.wikipedia.org/wiki/Poughkeepsie_(town),_New_York        
+| ✓ | ⏱: 0.07s 
+[COMPLETE] ● https://en.wikipedia.org/wiki/Poughkeepsie_(town),_New_York        
+| ✓ | ⏱: 0.83s 
+[2026-09-14 02:53:58] INFO: Fetched (200) <GET https://en.wikipedia.org/wiki/Poughkeepsie_(town),_New_York> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ 
+https://www.tripadvisor.com/Attractions-g48443-Activities-Poughkeepsie_New_York.
+html                 | ✓ | ⏱: 0.77s 
+[SCRAPE].. ◆ 
+https://www.tripadvisor.com/Attractions-g48443-Activities-Poughkeepsie_New_York.
+html                 | ✓ | ⏱: 0.00s 
+[COMPLETE] ● 
+https://www.tripadvisor.com/Attractions-g48443-Activities-Poughkeepsie_New_York.
+html                 | ✗ | ⏱: 0.77s 
+[2026-09-14 02:54:02] INFO: Fetched (403) <GET https://www.tripadvisor.com/Attractions-g48443-Activities-Poughkeepsie_New_York.html> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ 
+https://www.tripadvisor.com/Tourism-g48443-Poughkeepsie_New_York-Vacations.html 
+| ✓ | ⏱: 0.75s 
+[SCRAPE].. ◆ 
+https://www.tripadvisor.com/Tourism-g48443-Poughkeepsie_New_York-Vacations.html 
+| ✓ | ⏱: 0.00s 
+[COMPLETE] ● 
+https://www.tripadvisor.com/Tourism-g48443-Poughkeepsie_New_York-Vacations.html 
+| ✗ | ⏱: 0.75s 
+[2026-09-14 02:54:06] INFO: Fetched (403) <GET https://www.tripadvisor.com/Tourism-g48443-Poughkeepsie_New_York-Vacations.html> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.travelnewyorknow.com/things-to-do-in-poughkeepsie/     
+| ✓ | ⏱: 1.15s 
+[SCRAPE].. ◆ https://www.travelnewyorknow.com/things-to-do-in-poughkeepsie/     
+| ✓ | ⏱: 0.04s 
+[COMPLETE] ● https://www.travelnewyorknow.com/things-to-do-in-poughkeepsie/     
+| ✓ | ⏱: 1.20s 
+[2026-09-14 02:54:12] INFO: Fetched (200) <GET https://www.travelnewyorknow.com/things-to-do-in-poughkeepsie/> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://www.britannica.com/place/Poughkeepsie                      
+| ✓ | ⏱: 2.70s 
+[SCRAPE].. ◆ https://www.britannica.com/place/Poughkeepsie                      
+| ✓ | ⏱: 0.02s 
+[COMPLETE] ● https://www.britannica.com/place/Poughkeepsie                      
+| ✓ | ⏱: 2.75s 
+[2026-09-14 02:54:48] WARNING: Attempt 1 failed: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://www.britannica.com/place/Poughkeepsie", waiting until "load"
+. Retrying in 1s...
+[2026-09-14 02:55:24] WARNING: Attempt 2 failed: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://www.britannica.com/place/Poughkeepsie", waiting until "load"
+. Retrying in 1s...
+[2026-09-14 02:55:29] INFO: Fetched (200) <GET https://www.britannica.com/place/Poughkeepsie> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://discoverupstateny.com/poughkeepsie/                        
+| ✓ | ⏱: 2.29s 
+[SCRAPE].. ◆ https://discoverupstateny.com/poughkeepsie/                        
+| ✓ | ⏱: 0.02s 
+[COMPLETE] ● https://discoverupstateny.com/poughkeepsie/                        
+| ✓ | ⏱: 2.33s 
+[2026-09-14 02:55:36] INFO: Fetched (200) <GET https://discoverupstateny.com/poughkeepsie/> (referer: https://www.google.com/)
+[INIT].... → Crawl4AI 0.8.6 
+[FETCH]... ↓ https://en.wikipedia.org/wiki/Poughkeepsie,_New_York               
+| ✓ | ⏱: 0.94s 
+[SCRAPE].. ◆ https://en.wikipedia.org/wiki/Poughkeepsie,_New_York               
+| ✓ | ⏱: 0.23s 
+[COMPLETE] ● https://en.wikipedia.org/wiki/Poughkeepsie,_New_York               
+| ✓ | ⏱: 1.19s 
+[2026-09-14 02:55:48] INFO: Fetched (200) <GET https://en.wikipedia.org/wiki/Poughkeepsie,_New_York> (referer: https://www.google.com/)

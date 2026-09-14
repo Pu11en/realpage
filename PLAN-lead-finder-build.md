@@ -160,7 +160,7 @@ Open: http://localhost:8765 → Early Leads → the new state's button
   (`nohup … > propertystack/runs/<state>/<run-id>/log.txt`), cities in order; work the to-read queue
   as it fills; after ~45 minutes commit results so far (the run resumes). Caps for the whole run:
   150 projects or ~450 searches; roll into next state if <30.
-- [ ] **6.4 Full state run, part B.** **First fix search quality** (found 2026-09-14: SearXNG's Google,
+- [x] **6.4 Full state run, part B.** **First fix search quality** (found 2026-09-14: SearXNG's Google,
   Brave, DuckDuckGo and Startpage engines are suspended/CAPTCHA'd, and Bing alone returns junk that
   ignores the query, e.g. "Phoenix building permits open data" → Wikipedia pages about the bird).
   In `fetch.py` treat a SearXNG answer as **empty** when fewer than 2 of the top 5 results contain a

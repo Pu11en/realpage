@@ -983,3 +983,45 @@ Nothing left open for this task.
   this task.
 - Left running for 6.4 (part B) to resume with `--run-id 20260914-full`
   and keep working through the remaining ~130 NY cities.
+
+## 6.4 Full state run, part B -- done
+
+- Found the cause 2026-09-14 noted in the plan: SearXNG's Google/Brave/DuckDuckGo/Startpage
+  engines are suspended, so Bing-only results ignore the query -- e.g. searching "Vestal"
+  (a NY city) returned pages about Vestal Virgins (the ancient Roman priestesses), and a
+  Buffalo permit's "find website" lookup filled in `https://www.education.com/...` and
+  `https://mypikpak.com/...` as the project's website, both nonsense.
+- Fixed in `propertystack/skills/lead-finder/fetch.py`: `WebHelper.search()` now runs
+  `_looks_junk(query, results)` on the SearXNG results before trusting them. A result
+  "matches" the query when at least one distinctive word from the query (short stopwords
+  like "the"/"and"/"of" excluded) appears in its title, URL or snippet; if fewer than 2 of
+  the top 5 results match (and there are at least 2 results to judge), the batch is treated
+  as empty and the code falls through to the existing Jina fallback path, same as a down or
+  empty SearXNG. Added `WebHelper.junk_searxng` counter so a run's log can show how often
+  this fired. Two fixture tests added in `tests/test_fetch.py`: one confirms junk
+  Wikipedia-style results trigger the Jina fallback and bump the counter, one confirms a
+  real on-topic SearXNG result is kept and the counter stays at 0.
+- Re-checked what 6.3's `propertystack/runs/NY/20260914-full/` run had already saved:
+  every city's `merged.<city>.json` was empty except Buffalo, which had exactly the
+  contaminated 2 projects described above (units 0, junk websites from the bad search
+  results). Deleted `details.Buffalo.json` and `merged.Buffalo.json` so run.py's resume
+  logic (skip-if-file-exists, per step) redoes those two steps for Buffalo with the fixed
+  fetch.py; every other city's per-step files were untouched since they had no bad facts
+  saved (searches came back empty, not wrong).
+- Killed the still-running background 6.3 process (pid from the prior session, doing
+  nothing wrong but using the old fetch.py) and restarted `run.py --state NY --run-id
+  20260914-full` the same way (nohup, appending to the same log.txt) so it resumes from
+  the run folder. Watched it for a few minutes: `caps.json` showed `jina_searches`
+  climbing (2, matching real junk-triggered fallbacks caught live) confirming the fix
+  fires in practice, then stopped it cleanly for this commit checkpoint (still well under
+  both caps: 2 projects, ~7 searches total).
+- Checked: `bash tooling/qa/check-lead-finder.sh` -- all lead-finder* suites + check-panel.sh
+  pass (46 lead-finder tests, up from 45 -- includes the 2 new fetch.py tests plus other
+  fixture growth from earlier tasks; no failures).
+- Left open: the run is not finished or capped, so 6.5/6.6 still need to resume it further
+  (`nohup python3 propertystack/skills/lead-finder/run.py --state NY --run-id
+  20260914-full >> propertystack/runs/NY/20260914-full/log.txt 2>&1 &`). The junk filter is
+  intentionally literal to the plan's spec (word-overlap on top 5, not a smarter relevance
+  model) -- it catches "ignored the query entirely" junk but won't catch a technically
+  on-topic-but-wrong page (e.g. a Britannica city-overview article that happens to repeat
+  the city's name); that's expected given the plan's exact wording, not a bug.
