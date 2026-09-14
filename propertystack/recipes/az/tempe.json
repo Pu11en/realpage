@@ -1,0 +1,15 @@
+{
+  "city": "Tempe",
+  "state": "AZ",
+  "system": "arcgis",
+  "endpoint": "https://services.arcgis.com/lQySeXwbBg53XWDi/arcgis/rest/services/building_permits/FeatureServer/0/query?where=HousingUnits%3E%3D20&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssuedDate+DESC",
+  "fields": {
+    "units": "HousingUnits",
+    "issue_date": "IssuedDate",
+    "address": "OriginalAddress1",
+    "co_date": "COIssuedDate"
+  },
+  "date_tested": "2026-09-14",
+  "live_test": "REVELRY [NEW MIXED-USE] (533 units) / 965 E UNIVERSITY DR and AVENUE 5/TROVITA RIO (206 units) / 701 W RIO SALADO PKWY returned live",
+  "notes": "HousingUnits field gives real unit counts directly (no text parsing needed); COIssuedDate is the leasing-start signal but doesn't match the generic CO-field regex, so it's given explicitly as fields.co_date."
+}

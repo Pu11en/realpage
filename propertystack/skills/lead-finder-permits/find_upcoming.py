@@ -49,28 +49,29 @@ def find_upcoming(
     today = today or datetime.date.today()
     endpoint = recipe.get("endpoint", "")
     fields = recipe.get("fields", {})
+    units_pattern = recipe.get("units_text_pattern")
     rows = _fetch_rows(endpoint, http_get)
 
     records = []
     for row in rows:
-        if not _is_apartment(row, fields):
+        if not _is_apartment(row, fields, units_pattern):
             continue
-        issue_date = _parse_date(row.get(fields.get("issue_date", ""), ""))
-        co_date = _parse_date(_find_co_value(row))
+        issue_date = _parse_date(row.get(fields.get("issue_date", "")))
+        co_date = _parse_date(_find_co_value(row, fields))
         stage = _infer_stage(issue_date, co_date, today)
         if stage is None:
             continue
-        records.append(_build_record(row, fields, city, area, endpoint, stage, issue_date))
+        records.append(_build_record(row, fields, city, area, endpoint, stage, issue_date, units_pattern))
 
     return merge_records(records)
 
 
-def _is_apartment(row: dict, fields: dict) -> bool:
+def _is_apartment(row: dict, fields: dict, units_pattern: str | None) -> bool:
     type_key = fields.get("permit_type")
     type_value = str(row.get(type_key, "")) if type_key else ""
     if APARTMENT_RE.search(type_value):
         return True
-    units = _parse_units(row, fields)
+    units = _parse_units(row, fields, units_pattern)
     if units is not None and units >= 20:
         return True
     if RENOVATION_TYPE_RE.match(type_value.strip()):
@@ -78,27 +79,42 @@ def _is_apartment(row: dict, fields: dict) -> bool:
     return APARTMENT_RE.search(" ".join(str(v) for v in row.values())) is not None
 
 
-def _parse_units(row: dict, fields: dict) -> int | None:
+def _parse_units(row: dict, fields: dict, units_pattern: str | None) -> int | None:
     units_key = fields.get("units")
-    if not units_key:
-        return None
-    raw = row.get(units_key)
-    try:
-        return int(str(raw).strip())
-    except (TypeError, ValueError):
-        return None
+    if units_key:
+        raw = row.get(units_key)
+        try:
+            return int(str(raw).strip())
+        except (TypeError, ValueError):
+            pass
+    text_key = fields.get("units_text_field")
+    if text_key and units_pattern:
+        text = str(row.get(text_key, ""))
+        match = re.search(units_pattern, text, re.I)
+        if match:
+            try:
+                return int(match.group(1))
+            except (TypeError, ValueError, IndexError):
+                return None
+    return None
 
 
-def _find_co_value(row: dict) -> str:
+def _find_co_value(row: dict, fields: dict) -> str:
+    co_key = fields.get("co_date")
+    if co_key:
+        return str(row.get(co_key) or "")
     for key, value in row.items():
         if CO_KEY_RE.search(key):
             return str(value)
     return ""
 
 
-def _parse_date(value: str) -> datetime.date | None:
+def _parse_date(value) -> datetime.date | None:
     if not value:
         return None
+    if isinstance(value, (int, float)):
+        # ArcGIS FeatureServer fields return dates as epoch milliseconds.
+        return datetime.datetime.fromtimestamp(value / 1000, tz=datetime.timezone.utc).date()
     for fmt in ("%Y-%m-%d", "%m/%d/%Y", "%Y-%m-%dT%H:%M:%S", "%Y-%m-%dT%H:%M:%S.%f"):
         try:
             return datetime.datetime.strptime(value, fmt).date()
@@ -127,10 +143,11 @@ def _build_record(
     endpoint: str,
     stage: str,
     issue_date: datetime.date | None,
+    units_pattern: str | None = None,
 ) -> LeadRecord:
     address_key = fields.get("address")
     address = str(row.get(address_key, "")) if address_key else ""
-    units = _parse_units(row, fields)
+    units = _parse_units(row, fields, units_pattern)
     permit_link = str(row.get("link") or row.get("url") or endpoint)
     return LeadRecord(
         area=area,

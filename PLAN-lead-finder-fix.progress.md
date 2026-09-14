@@ -122,3 +122,72 @@ Commit: (see git log for this file's commit)
   plan's instruction and is only exercised against fakes here -- it should get its first
   real-network exercise in F4 (Arizona permit recipes), which is the first task that will
   actually call `find_sources` against live endpoints.
+
+## F4 Arizona permit recipes -- done
+- Hand-tested every endpoint from the research file live (real `curl` queries against
+  each city's actual ArcGIS/Socrata service, not the F3 auto-discovery chain -- these
+  layers need per-city filter tuning that generic discovery can't infer) and saved a
+  recipe per city under `propertystack/recipes/az/`: `phoenix.json`, `mesa.json`,
+  `tempe.json`, `scottsdale.json`, `gilbert.json`, `tucson.json`,
+  `maricopa-county-unincorporated.json` -- 7 of the 8 named sources.
+- **Peoria dropped, not written as a recipe.** Its ArcGIS layer is one row per
+  property (not per permit): filtering to apartment-use properties returns almost
+  entirely trade/repair permits on existing buildings (gas line repairs, backflow
+  device swaps) -- there's no field that isolates true new-construction permits (no
+  "New" `B1_PER_SUB_TYPE` values exist at all in the layer). Rather than write a
+  recipe that would flood the run with false "new apartment project" leads, it's
+  skipped the same way F3 skips an Accela/Tyler-only city -- no free usable data.
+  Flagging this for Drew: Peoria new-construction leads would need a paid/manual
+  source if he wants that city covered later.
+- Each recipe's `endpoint` is a complete, pre-built query URL (where clause +
+  outFields + order already baked in server-side) rather than a bare table URL --
+  necessary because plain unfiltered hits would return whichever few hundred rows
+  the server defaults to, mostly unrelated permits, and because Mesa's real
+  `type_of_work` values (`Multi-Family Residential`, discovered live) don't match
+  what the research file guessed (`permit_type='Multi-Family Residential'` --
+  `permit_type` is actually only ever COM/RES/SVC/N-A on that dataset).
+- Found and fixed two real gaps in `find_upcoming.py` while getting these to
+  return real rows, not just data-shape mismatches:
+  - ArcGIS FeatureServer date fields (Phoenix, Scottsdale, Gilbert, Tucson,
+    Maricopa County -- all except Mesa/Tempe) come back as epoch-millisecond
+    integers, not date strings; `_parse_date` silently returned `None` for every
+    row until given an `isinstance(value, (int, float))` branch, which would have
+    made every permit "un-dated" and dropped.
+  - Tempe's leasing-start field is `COIssuedDate`, which doesn't match the
+    generic certificate-of-occupancy field-name regex (`cert.*occup|...`); added
+    an explicit `fields["co_date"]` override, used by Tempe's recipe, that takes
+    priority over the regex scan.
+  - Added text-parsed units: `fields["units_text_field"]` + a recipe-level
+    `units_text_pattern` regex, for cities whose layer has no numeric units field
+    (Mesa's `description_of_work` has "(11) unit"/"17-unit"/"305-units"-style
+    text; Maricopa County's `PermitDescription` has "144 UNIT..."-style text).
+  - Gilbert, Phoenix, Scottsdale have no unit field and no parseable unit text on
+    the permit row at all -- their recipes note `unit_lookup_order` (permit text
+    -> project site/news via Jina -> county parcel) for F7/F8 to use later, per
+    the plan's fallback order; units stay `None` here, never guessed.
+  - Tucson's `DwellingUnits` field is often 0 or 1 even for large projects (one
+    permit row = one building of a multi-building complex) -- noted in its
+    recipe as suspect, to double check against `PROJECTNAME` text or site/news.
+- Scottsdale's recipe carries `Owner`/`Builder` field names too (real developer
+  names come back on live rows, e.g. "MREG 101 Bell LLC / Mack Real Estate
+  Group") -- useful for F8 (owners/phones) without a second lookup.
+- New tests in `lead-finder-permits/tests/test_find_upcoming.py`: epoch-ms date
+  parsing, `fields["co_date"]` override beats the regex scan, and
+  `units_text_field` + `units_text_pattern` parses "36 unit" out of a
+  description. All offline/fixture-based, no network -- matches how the rest of
+  this skill's tests work and keeps `check-lead-finder.sh` network-free.
+- New `lead-finder-permits/live_self_test.py` -- not part of the pytest suite,
+  run by hand (`python3 propertystack/skills/lead-finder-permits/live_self_test.py
+  az`): hits every saved recipe's real endpoint and asserts `find_upcoming()`
+  returns at least one real multifamily row. Ran it just now: all 7 recipes
+  passed, e.g. Tempe returned 11 rows including a real 533-unit project, Mesa
+  returned 47 rows including a real 305-unit project -- these are today's live
+  permit data, not fixtures.
+- Checked: `bash tooling/qa/check-lead-finder.sh` passes (51 lead-finder* tests
+  now, up from 50, plus the site panel check); full suite
+  `python3 -m pytest -q propertystack --ignore=propertystack/skills/client-map`:
+  224 passed (up from 221 at F3). Also re-ran `live_self_test.py` after the fix
+  to confirm it still passes live.
+- Nothing left open for F4 except the Peoria gap noted above (no free data, by
+  design, same as F3's Accela/Tyler/SmartGov skip rule) -- F5 (county sales
+  file) is next and is unrelated to Peoria specifically.

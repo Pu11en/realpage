@@ -1,0 +1,16 @@
+{
+  "city": "Maricopa County unincorporated",
+  "state": "AZ",
+  "system": "arcgis",
+  "endpoint": "https://services.arcgis.com/ykpntM6e3tHvzKRJ/arcgis/rest/services/Building_Permits_(view)/FeatureServer/0/query?where=WorkClass%3D%27New+Construction%27+AND+%28PermitDescription+LIKE+%27%25MULTI-FAMILY%25%27+OR+PermitDescription+LIKE+%27%25MULTI+FAMILY%25%27+OR+PermitDescription+LIKE+%27%25APARTMENT%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssuedDate+DESC",
+  "fields": {
+    "issue_date": "IssuedDate",
+    "address": "FullStreetAddress",
+    "units_text_field": "PermitDescription"
+  },
+  "units_text_pattern": "(\\d+)[\\s-]*unit",
+  "date_format": "epoch_ms",
+  "date_tested": "2026-09-14",
+  "live_test": "MARBELLA RANCH EAST - 144 UNIT MULTI-FAMILY APARTMENT COMPLEX / 12180 W FRIER RD and SAN TAN AND POWER MULTI-FAMILY DEVELOPMENT (24-unit buildings) / 25840 S POWER RD returned live, 17 rows sampled",
+  "notes": "PermitType never says Multi-Family on this layer (checked live -- zero hits); WorkClass='New Construction' + description keyword search is the only filter that works. Sales file (F5) uses a different item id from the same county."
+}

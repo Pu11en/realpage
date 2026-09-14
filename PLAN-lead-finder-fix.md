@@ -62,7 +62,7 @@ Open: http://localhost:8765 → Early Leads → Az
   (no retries). Tests with saved real responses. Commit.
 
 ### Part 2: Arizona sources
-- [ ] **F4 Arizona permit recipes.** Save tested recipes (data files) for Phoenix, Mesa, Tempe,
+- [x] **F4 Arizona permit recipes.** Save tested recipes (data files) for Phoenix, Mesa, Tempe,
   Scottsdale, Gilbert, Tucson, Maricopa County unincorporated and Peoria from the research file:
   endpoint, date field, multifamily filter, unit-count source (a field like Tempe's `HousingUnits`, or
   parsed from the description like Mesa's "(11) unit apartment", or looked up later), name keywords

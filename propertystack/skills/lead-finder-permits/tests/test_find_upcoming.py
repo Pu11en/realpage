@@ -168,6 +168,63 @@ def test_http_get_error_returns_empty():
     assert find_upcoming("Rivertown", "ZZ", "zz", RECIPE, boom, today=TODAY) == []
 
 
+def test_epoch_ms_issue_date_is_parsed():
+    # Some real ArcGIS FeatureServer date fields come back as epoch-millisecond
+    # integers, not strings.
+    epoch_ms = int(datetime.datetime(2026, 8, 1, tzinfo=datetime.timezone.utc).timestamp() * 1000)
+    rows = [
+        {
+            "PermitType": "Apartment",
+            "IssueDate": epoch_ms,
+            "Units": "40",
+            "Address": "10 River Rd",
+        }
+    ]
+    records = find_upcoming("Rivertown", "ZZ", "zz", RECIPE, _http_get(rows), today=TODAY)
+    assert len(records) == 1
+    assert records[0].permit_date == "2026-08-01"
+
+
+def test_explicit_co_date_field_overrides_generic_regex():
+    # Tempe's leasing-start field is COIssuedDate, which the generic
+    # cert-of-occupancy regex doesn't match -- fields["co_date"] must win.
+    recipe = {**RECIPE, "fields": {**RECIPE["fields"], "co_date": "COIssuedDate"}}
+    rows = [
+        {
+            "PermitType": "Apartment",
+            "IssueDate": "2024-01-01",
+            "Units": "50",
+            "Address": "11 River Rd",
+            "COIssuedDate": "2026-06-01",
+        }
+    ]
+    records = find_upcoming("Rivertown", "ZZ", "zz", recipe, _http_get(rows), today=TODAY)
+    assert len(records) == 1
+    assert records[0].stage == "leasing"
+
+
+def test_units_parsed_from_description_text_when_no_units_field():
+    recipe = {
+        **RECIPE,
+        "fields": {
+            "issue_date": "IssueDate",
+            "address": "Address",
+            "units_text_field": "Description",
+        },
+        "units_text_pattern": r"\(?(\d+)\)?\s*-?\s*units?\b",
+    }
+    rows = [
+        {
+            "IssueDate": "2026-08-01",
+            "Address": "12 River Rd",
+            "Description": "New development of 3-story apartment (36 unit), type VA construction",
+        }
+    ]
+    records = find_upcoming("Rivertown", "ZZ", "zz", recipe, _http_get(rows), today=TODAY)
+    assert len(records) == 1
+    assert records[0].units == 36
+
+
 def test_arcgis_features_shape_supported():
     recipe = {**RECIPE, "system": "arcgis"}
 

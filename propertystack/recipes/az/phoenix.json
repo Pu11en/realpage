@@ -1,0 +1,21 @@
+{
+  "city": "Phoenix",
+  "state": "AZ",
+  "system": "arcgis",
+  "endpoint": "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC",
+  "fields": {
+    "permit_type": "PERMIT_NAME",
+    "issue_date": "PER_ISSUE_DATE",
+    "address": "STREET_FULL_NAME"
+  },
+  "date_format": "epoch_ms",
+  "unit_lookup_order": [
+    "field:none -- Phoenix layer has no unit field",
+    "permit text (PERMIT_NAME/PER_TYPE_DESC)",
+    "project site or news via Jina",
+    "county parcel record"
+  ],
+  "date_tested": "2026-09-14",
+  "live_test": "MADISON AT LOUISE APTS. / 2825 W LOUISE DR and CAMELBACK APARTMENTS BUILDING 1-2 / 4037 W CAMELBACK RD returned live",
+  "notes": "~67k rows since 2015 with no unit field; SCOPE_DESC + PERMIT_NAME keyword filter (APART/APT/MULTI/MF) narrows to new multifamily construction permits. CKAN 'Building Permit Data' (22 yearly-total rows) rejected by F3."
+}
