@@ -169,12 +169,26 @@ Open: http://localhost:8765 → Early Leads → the new state's button
   sources/leads that came from junk results and redo those lookups. Then resume the run and keep
   working the queue; commit. If the run
   already finished or hit a cap, just tick this.
-- [ ] **6.5 Full state run, part C.** Same as part B.
-- [ ] **6.6 Full state run, part D + finish.** Same as part B; when the run is finished: save
-  recipes, spot-check 10 software calls by hand, and write in the progress log how many projects,
-  searches (Jina vs free), cities skipped and why. Commit.
-- [ ] **6.7 Fill the site + chat.** Build the site and rebuild the chat with the new area; run the
-  Check and `check-answers.sh`. Commit. Recap in plain words what is on the site now.
+- [x] **6.5 Close out New York.** Drew (2026-09-14): "ok be done with new york do states closer to
+  texas." Stop resuming the NY background run; do not start it again. Treat whatever NY collected
+  so far (per 6.3/6.4's progress notes) as the final NY result for this build. No further NY
+  searching happens under this plan.
+- [ ] **6.6 Pick and run the next state -- closer to Texas.** Override 1.4's plain
+  lowest-`counts.json`-total state pick for this one choice: among the 15 states in
+  `client-map/targets.json`, pick the next state to run by **geographic closeness to Texas**, not
+  by lowest count. Order (nearest first, skipping TX and NY which are done): AZ, TN, GA, CO, then
+  whichever of the remaining (NC, WA, NJ, VA, OH, WI, UT, CA, FL) is lowest in `counts.json` once
+  those four are used up. Start that state's run in the background the same way as 6.3 (`nohup
+  python3 propertystack/skills/lead-finder/run.py --state <ST> --run-id <date>-full > .../log.txt`),
+  work the to-read queue, respect the 150-project/450-search caps, commit progress. If it hits a
+  cap or finishes within this task's time, tick it; otherwise leave it running for the next task to
+  resume (like 6.3/6.4 did for NY).
+- [ ] **6.7 Finish the closer-to-Texas state's run.** Resume the run started in 6.6 the same way
+  6.4/6.5 resumed NY; keep working the to-read queue until the run finishes or hits a cap. When
+  done: save recipes, spot-check 10 software calls by hand, and write in the progress log how many
+  projects, searches (Jina vs free), cities skipped and why. Commit.
+- [ ] **6.8 Fill the site + chat.** Build the site and rebuild the chat with the new area(s); run
+  the Check and `check-answers.sh`. Commit. Recap in plain words what is on the site now.
 
 ### Part 2: Permits (new apartment projects)
 

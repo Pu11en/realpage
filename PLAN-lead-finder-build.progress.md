@@ -1025,3 +1025,21 @@ Nothing left open for this task.
   model) -- it catches "ignored the query entirely" junk but won't catch a technically
   on-topic-but-wrong page (e.g. a Britannica city-overview article that happens to repeat
   the city's name); that's expected given the plan's exact wording, not a bug.
+
+## 6.5 Close out New York -- done (plan redirect)
+
+- Drew's reply to the standing question ("keep resuming NY in the background, or check in once
+  further along?") was: "ok be done with new york do states closer to texas." Read as: stop the NY
+  run for good (don't resume it further under this plan) and switch the remaining Part 6 work to a
+  state near Texas instead.
+- Confirmed no NY background run process is currently running (6.4 had already stopped it cleanly
+  at a commit checkpoint: 2 projects, ~7 searches, well under both caps). Nothing to kill.
+- Edited `PLAN-lead-finder-build.md`: ticked 6.5 as "close out New York" (no further NY work),
+  rewrote 6.6/6.7 to run the next state instead of continuing NY, and added a geographic-closeness
+  override for the state pick since Drew asked for "states closer to Texas" specifically, not
+  1.4's normal lowest-permit-count rule. Order chosen (nearest first, from the 15 target states,
+  excluding TX and NY which are done): AZ, TN, GA, CO, then whichever of the rest is lowest in
+  `counts.json`. Renumbered old 6.6/6.7 (fill the site) to 6.8.
+- No code changed this task -- this was a plan-file redirect per Drew's instruction, not a build
+  step. Check: `bash tooling/qa/check-lead-finder.sh` still passes (no code touched).
+- Next task (6.6) starts the AZ run in the background the same way 6.3 started NY's.
