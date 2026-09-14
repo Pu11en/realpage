@@ -86,3 +86,4 @@ local-trial-key-change-me` and `X-OpenWebUI-User-Email: admin@localhost`, model 
   (first ask saves, second ask in a new chat replays, same chat again redoes, fresh prefix
   redoes). Rebuild; try it once in the real panel. Commit.
 - [x] Fix: ok what are things i need to do
+- [ ] Fix: can i ask you questions here?
