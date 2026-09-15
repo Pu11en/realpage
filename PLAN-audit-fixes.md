@@ -13,7 +13,7 @@ Ground rules for every task:
   AI calls) that fails without the fix. Never weaken an existing test to make the Check pass.
 - Data fixes happen upstream (lead finder / build scripts), then rebuild with
   `python3 site/data/build_data.py` and the chat's `chat-leads.csv`, and commit the rebuilt files.
-- Don't touch `ai-visibility.html` beyond T1's one-line viewport tag, or `tooling/street-talk/`.
+- **Never touch anything AI Visibility** (`site/ai-visibility.html`, `site/data/*ai*`, `09-ai-visibility/`, its build scripts or plans; Drew 2026-09-15: another session owns it), nor `tooling/street-talk/`. At merge, local-test's AI Visibility files win.
 - `check_answers.py` questions may be added but never run (they cost money); Drew runs them.
 - Tech choices are yours. Anything only Drew can do goes in the final report, not a question.
 
@@ -36,7 +36,7 @@ Open: http://localhost:8765/index.html
   `index.html`, `under-the-hood.html`, `property.html`, `ai-visibility.html` (that one line only).
   In `tooling/qa/sweep.py` and `quick-check.py` phone runs use `is_mobile=True, has_touch=True`; fix
   any page that now overflows. Test: every `site/*.html` has the viewport tag.
-- [ ] **A2 Early Leads: stat boxes follow the Region pick, and "Nothing found".** In `index.html`
+- [x] **A2 Early Leads: stat boxes follow the Region pick, and "Nothing found".** In `index.html`
   `renderPage`, the number boxes use the rows currently shown (state + region + city + search). An
   empty result shows one row "Nothing found. Clear the search or pick another region." with a
   clear-search button.
