@@ -7,3 +7,6 @@
 - New tooling/qa/fixes_tests/test_find_contact.py (5 offline tests: SOUL rule, #1-only lookup, linkfix keeps #ask:, still strips fake https next to it, streaming LineFixer).
 - Check: 47 passed.
 - Open: the link isn't clickable in chat yet (F2, loader.js); real run is F3.
+
+## F1 check fix
+- The bot runs Check without a shell, so `$(ls ...)` broke it. Check now names test_find_contact.py directly (it exists since F1). 47 passed.
