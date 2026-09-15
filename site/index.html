@@ -17,16 +17,22 @@
 
     const content = document.getElementById("page-content");
 
+    let aliases = {};
     async function loadAreas() {
       try {
-        return (await loadData("data/areas/index.json")).areas;
+        const m = await loadData("data/areas/index.json");
+        aliases = m.aliases || {};
+        return m.areas;
       } catch (e) {
         return [{ slug: "plano-richardson", label: "Plano–Richardson", dataPath: "data/leads.json" }];
       }
     }
 
+    // ?area=<state> opens that state; an older area now shown inside a state
+    // (e.g. plano-richardson) opens that state instead.
     function pickInitialSlug(areas) {
-      const wanted = new URLSearchParams(location.search).get("area");
+      let wanted = new URLSearchParams(location.search).get("area");
+      if (wanted && aliases[wanted]) wanted = aliases[wanted];
       if (wanted && areas.some((a) => a.slug === wanted)) return wanted;
       return areas[0].slug;
     }
@@ -46,7 +52,11 @@
       content.innerHTML = `
         <h1>Early Leads</h1>
         <div class="meta">Who's about to choose -- upcoming buildings + recently sold.</div>
-        ${renderAreaButtons(areas, area.slug)}
+        <div class="pick-row"><span class="pick-label">State</span>${renderAreaButtons(areas, area.slug)}</div>
+        ${(data.metros || []).length ? `<div class="pick-row"><span class="pick-label">Region</span><div class="metro-buttons">
+          <button class="metro-btn active" data-metro="">All ${area.label} (${data.leads.length})</button>
+          ${data.metros.map((m) => `<button class="metro-btn" data-metro="${m.name}">${m.name} (${m.leads})</button>`).join("")}
+        </div></div>` : ""}
         ${placeholderBanner(data.status)}
         <div class="stats-row">
           <div class="stat-card"><div class="value">${s.leads}</div><div class="label">Leads</div></div>
@@ -54,10 +64,7 @@
           <div class="stat-card"><div class="value">${s.unitsInPlay.toLocaleString()}</div><div class="label">Units in play</div></div>
           <div class="stat-card"><div class="value">${s.openingNext12mo.toLocaleString()}</div><div class="label">Opening soon</div></div>
         </div>
-        ${(data.metros || []).length ? `<div class="metro-buttons" style="display:flex;flex-wrap:wrap;gap:8px;margin:0 0 12px;">
-          <button class="metro-btn active" data-metro="">All (${data.leads.length})</button>
-          ${data.metros.map((m) => `<button class="metro-btn" data-metro="${m.name}">${m.name} (${m.leads})</button>`).join("")}
-        </div>` : ""}
+
         <div class="filters">
           <input id="f-search" placeholder="Search property" />
           <select id="f-signal">
@@ -67,10 +74,7 @@
             <option value="Planned">Planned</option>
             <option value="Sold">Recently sold</option>
           </select>
-          <select id="f-city">
-            <option value="">All cities</option>
-            ${cities.map((c) => `<option value="${c}">${c}</option>`).join("")}
-          </select>
+          <select id="f-city"></select>
           <select id="f-software">
             <option value="">All software</option>
             <option value="__none__">Not chosen yet</option>
@@ -148,7 +152,7 @@
           <tr class="${l.propertyId ? "clickable" : ""}" ${l.propertyId ? `data-id="${l.propertyId}"` : ""} style="${l.propertyId ? "cursor:pointer;" : ""}">
             <td data-label="Rank">${i + 1}</td>
             <td data-label="Score"><span class="score-badge" style="background:${scoreBadgeColor(l.score)}">${l.score}</span></td>
-            <td class="lead-prop"><strong>${l.property}</strong> ${l.isNew ? '<span class="pill" style="background:#22c55e22;color:#22c55e;">NEW</span>' : ""}
+            <td class="lead-prop"><strong>${l.property}</strong> ${l.isNew ? '<span class="pill" style="background:#22c55e22;color:#22c55e;">NEW</span>' : ""}${l.subArea ? `<div class="lead-subarea">${l.subArea}</div>` : ""}
               ${contactHtml(l.contact)}
               <button class="btn deep-dive-btn" data-deep-dive="${l.id}" title="Open the chat with a deep-dive question about this building">✦ Deep dive</button></td>
             <td data-label="City">${l.city}</td>
@@ -178,12 +182,33 @@
         });
       }
 
+      // The city list only shows cities in the picked region.
+      function fillCities() {
+        const metro = (document.querySelector(".metro-btn.active") || {}).dataset?.metro || "";
+        const sel = document.getElementById("f-city");
+        const keep = sel.value;
+        const list = [...new Set(data.leads.filter((l) => !metro || l.metro === metro).map((l) => l.city))].sort();
+        sel.innerHTML = `<option value="">All cities</option>` + list.map((c) => `<option value="${c}">${c}</option>`).join("");
+        if (list.includes(keep)) sel.value = keep;
+      }
+
+      function pickMetro(name) {
+        document.querySelectorAll(".metro-btn").forEach((b) => b.classList.toggle("active", b.dataset.metro === name));
+        fillCities();
+        const url = new URL(location.href);
+        if (name) url.searchParams.set("region", name); else url.searchParams.delete("region");
+        history.replaceState(null, "", url);
+        renderRows();
+      }
+
       document.querySelectorAll(".metro-btn").forEach((btn) => {
-        btn.addEventListener("click", () => {
-          document.querySelectorAll(".metro-btn").forEach((b) => b.classList.toggle("active", b === btn));
-          renderRows();
-        });
+        btn.addEventListener("click", () => pickMetro(btn.dataset.metro));
       });
+      const wantedRegion = new URLSearchParams(location.search).get("region");
+      if (wantedRegion && [...document.querySelectorAll(".metro-btn")].some((b) => b.dataset.metro === wantedRegion)) {
+        document.querySelectorAll(".metro-btn").forEach((b) => b.classList.toggle("active", b.dataset.metro === wantedRegion));
+      }
+      fillCities();
 
       ["f-search", "f-signal", "f-city", "f-software", "f-sort", "f-hide-mine"].forEach((id) => {
         const el = document.getElementById(id);
@@ -197,7 +222,7 @@
 
       wireAreaButtons(content, (newSlug) => {
         const newArea = areas.find((a) => a.slug === newSlug);
-        history.replaceState(null, "", `?area=${encodeURIComponent(newSlug)}`);
+        history.replaceState(null, "", `?area=${encodeURIComponent(newSlug)}`);  // new state: region resets
         renderPage(areas, newArea);
       });
 

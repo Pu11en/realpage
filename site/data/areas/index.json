@@ -1,24 +1,25 @@
 {
   "areas": [
     {
-      "slug": "plano-richardson",
-      "label": "Plano\u2013Richardson",
-      "dataPath": "data/leads.json"
+      "slug": "tx",
+      "label": "Texas",
+      "dataPath": "data/areas/tx.json",
+      "leads": 628
     },
     {
       "slug": "az",
-      "label": "Az",
-      "dataPath": "data/areas/az.json"
+      "label": "Arizona",
+      "dataPath": "data/areas/az.json",
+      "leads": 279
     },
     {
       "slug": "ny",
-      "label": "Ny",
-      "dataPath": "data/areas/ny.json"
-    },
-    {
-      "slug": "tx",
-      "label": "Tx",
-      "dataPath": "data/areas/tx.json"
+      "label": "New York",
+      "dataPath": "data/areas/ny.json",
+      "leads": 2
     }
-  ]
+  ],
+  "aliases": {
+    "plano-richardson": "tx"
+  }
 }

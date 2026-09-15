@@ -648,23 +648,66 @@ def build_state_areas(include_sample: bool = False) -> list[str]:
     AREAS_OUT_DIR.mkdir(parents=True, exist_ok=True)
     for slug in slugs:
         area_json = build_area(slug)
+        write_chat_leads_csv(slug, area_json)  # the chat loads included areas on its own
+        area_json = _merge_included_areas(slug, area_json)
         (AREAS_OUT_DIR / f"{slug}.json").write_text(json.dumps(area_json, indent=2))
-        write_chat_leads_csv(slug, area_json)
     return slugs
+
+
+def _merge_included_areas(slug: str, area_json: dict) -> dict:
+    """Show older areas (e.g. a city pair inside this state) inside the state's
+    table, under their metro, instead of as a separate button."""
+    metros = _load_metros(slug)
+    for inc in (metros or {}).get("include_areas", []):
+        path = OUT_DIR / inc["dataPath"]
+        if not path.exists():
+            continue
+        extra = json.loads(path.read_text())
+        rows = extra.get("leads", []) if isinstance(extra, dict) else extra
+        for i, lead in enumerate(rows, start=1):
+            lead = dict(lead)
+            lead["id"] = f"{inc['slug']}-{lead.get('id', i)}"
+            lead["metro"] = inc["metro"]
+            lead["subArea"] = inc["label"]
+            lead.setdefault("sources", [])
+            area_json["leads"].append(lead)
+    if (metros or {}).get("include_areas"):
+        area_json["leads"].sort(key=lambda lead: -lead.get("score", 0))
+        counts = Counter(lead.get("metro") for lead in area_json["leads"])
+        area_json["metros"] = [{"name": m["name"], "leads": counts[m["name"]]} for m in area_json["metros"]]
+        area_json["cities"] = sorted({lead["city"] for lead in area_json["leads"] if lead.get("city")})
+        st = area_json["stats"]
+        st["leads"] = len(area_json["leads"])
+        st["cities"] = len(area_json["cities"])
+        st["unitsInPlay"] = sum(lead.get("units") or 0 for lead in area_json["leads"])
+        st["newThisWeek"] = sum(1 for lead in area_json["leads"] if lead.get("isNew"))
+    return area_json
+
+
+def _included_slugs(area_slugs: list[str]) -> set[str]:
+    """Areas shown inside a state's table rather than as their own button."""
+    return {inc["slug"] for s in area_slugs for inc in ((_load_metros(s) or {}).get("include_areas", []))}
 
 
 def build_areas_manifest(area_slugs: list[str]) -> dict:
     """Write site/data/areas/index.json: one entry per area button on the Early
     Leads page (5.2). Plano-Richardson keeps its own legacy leads.json; every
     discovered state area (5.1) points at its file under data/areas/."""
-    areas = [{"slug": AREA, "label": "Plano–Richardson", "dataPath": "data/leads.json"}]
+    included = _included_slugs(area_slugs)
+    areas = [] if AREA in included else [{"slug": AREA, "label": "Plano–Richardson", "dataPath": "data/leads.json", "leads": None}]
     for slug in area_slugs:
+        area = json.loads((AREAS_OUT_DIR / f"{slug}.json").read_text())
         areas.append({
             "slug": slug,
-            "label": slug.replace("-", " ").title(),
+            "label": _STATE_NAMES.get(slug, slug.replace("-", " ").title()),
             "dataPath": f"data/areas/{slug}.json",
+            "leads": len(area["leads"]),
         })
-    manifest = {"areas": areas}
+    # Biggest first: the state with the most leads opens by default.
+    areas.sort(key=lambda a: -(a["leads"] or 0))
+    # Old links (?area=plano-richardson) open the state that now holds that area.
+    aliases = {inc: s for s in area_slugs for inc in [i["slug"] for i in (_load_metros(s) or {}).get("include_areas", [])]}
+    manifest = {"areas": areas, "aliases": aliases}
     AREAS_OUT_DIR.mkdir(parents=True, exist_ok=True)
     (AREAS_OUT_DIR / "index.json").write_text(json.dumps(manifest, indent=2))
     return manifest
