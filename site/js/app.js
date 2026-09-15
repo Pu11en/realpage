@@ -42,7 +42,7 @@ function renderShell(activeKey) {
 
   shell.innerHTML = `
     <aside class="sidebar">
-      <div class="wordmark">CraneSignal</div>
+      <a class="wordmark" href="index.html">CraneSignal</a>
       <nav>${navHtml}</nav>
       <div class="top-controls">
         <label for="view-as-select" style="color: var(--text-dim); font-size: 11px;"

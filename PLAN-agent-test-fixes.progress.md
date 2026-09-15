@@ -46,3 +46,12 @@ with the cached Caddy binary before writing the test (curl showed `HTTP/1.1 404 
 with the CraneSignal page body, `/auth` still 200, `/api/v1/auths/` still 401, signed-in
 `/index.html` still 200). Checked with `bash tooling/qa/check-fixes.sh` (72 tests pass,
 design check 0 problems). Commit: see git log.
+
+## T5 Logo goes home — done
+Made the CraneSignal wordmark in the shared shell (`site/js/app.js`'s `renderShell()`) an
+`<a href="index.html">` instead of a plain `<div>`, and added `text-decoration: none` to
+`.sidebar .wordmark` in `site/css/styles.css` so it still looks like a wordmark, not a
+typical link. Added `tooling/qa/fixes_tests/test_t5_logo_links_home.py` (2 tests: the
+wordmark markup is an anchor to index.html, and every app page still calls renderShell()).
+Checked with `bash tooling/qa/check-fixes.sh` (74 tests pass, design check 0 problems).
+Commit: see git log.

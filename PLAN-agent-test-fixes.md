@@ -44,7 +44,7 @@ Open: http://localhost:8765/index.html
 - [x] **T4 Real "page not found".** `site/Caddyfile` sends unknown addresses like /nope.html to the leads
   page with status 200. Serve a simple CraneSignal 404 page (with a link home) and status 404, without
   breaking the sign-in gate. Test against the Caddyfile offline like the E1 sign-in test. Commit.
-- [ ] **T5 Logo goes home.** The CraneSignal logo in the header is a plain box. Make it a link to
+- [x] **T5 Logo goes home.** The CraneSignal logo in the header is a plain box. Make it a link to
   index.html on every page. Test. Commit.
 
 ### Confusing
