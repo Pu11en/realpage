@@ -22,6 +22,12 @@ GeocodeFn = Callable[[str], object]
 SearchFn = Callable[[str, int], list]
 FetchFn = Callable[[str], object]
 
+# Data-first (Drew 2026-09-14, after the AZ run): a not-yet-built project
+# (still planned/permitted/under construction) never gets a website -- it
+# has no leasing site yet, so a "match" is always a builder's generic page
+# or someone else's listing. Only leasing/sold buildings get a website.
+BUILT_STAGES = {"leasing", "sold"}
+
 UNITS_RE = re.compile(r"(\d{2,4})[\s-]*(?:unit|units|apartment homes|apartments)", re.I)
 DEVELOPER_RE = re.compile(r"(?:developed by|developer[:\s])\s*([A-Z][\w&.,' -]{2,60}?)(?=[.\n]|$)", re.I)
 OPENING_RE = re.compile(
@@ -78,12 +84,17 @@ def fill_project_details(
         queries.append(f'"{clean_name}" {record.city} apartments')
     queries.append(f'"{record.address}" {record.city} apartments')
 
+    search_for_website = record.stage in BUILT_STAGES
+
     results: list = []
     website = ""
     for query in queries:
         results = search_fn(query, 5) or []
-        website = _pick_website(results, clean_name, record.address)
-        if website:
+        if search_for_website:
+            website = _pick_website(results, clean_name, record.address)
+            if website:
+                break
+        elif results:
             break
 
     if website:

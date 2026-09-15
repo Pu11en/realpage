@@ -168,6 +168,65 @@ def test_run_folder_has_one_file_per_step_per_city(tmp_path):
         assert any(f.startswith(f"{step}.") for f in step_files), f"missing {step} output for {CITY}"
 
 
+def test_run_chain_calls_on_city_done_once_per_city(tmp_path):
+    """S0: save-as-you-go hook fires after each city, and leads.json for the
+    area is written before it fires (so a commit right after has something
+    real to save)."""
+    run_folder = RunFolder(state=STATE, run_id="run1", runs_dir=tmp_path)
+    web = FakeWeb()
+    deps = _make_deps(web, tmp_path / "recipes")
+    seen = []
+    data_dir = tmp_path / "data"
+
+    def on_city_done(city):
+        seen.append(city)
+        assert (data_dir / STATE.lower() / "leads.json").exists()
+
+    orig_write = chain.write_area_leads
+
+    def _write(state, records, data_dir_arg=None):
+        return orig_write(state, records, data_dir=data_dir)
+
+    chain.write_area_leads = _write
+    try:
+        chain.run_chain(STATE, run_folder, deps, cities=[CITY], on_city_done=on_city_done)
+    finally:
+        chain.write_area_leads = orig_write
+
+    assert seen == [CITY]
+
+
+def test_commit_city_progress_commits_new_files(tmp_path):
+    import subprocess
+
+    subprocess.run(["git", "init", "-q"], cwd=tmp_path, check=True)
+    subprocess.run(["git", "config", "user.email", "test@example.com"], cwd=tmp_path, check=True)
+    subprocess.run(["git", "config", "user.name", "Test"], cwd=tmp_path, check=True)
+
+    run_folder = RunFolder(state=STATE, run_id="run1", runs_dir=tmp_path / "propertystack" / "runs")
+    run_folder.ensure()
+    (run_folder.path / "merged.Sampleton.json").write_text("[]")
+    data_dir = tmp_path / "propertystack" / "data" / STATE.lower()
+    data_dir.mkdir(parents=True)
+    (data_dir / "leads.json").write_text("[]")
+
+    chain.commit_city_progress(tmp_path, run_folder, STATE, CITY)
+
+    log = subprocess.run(
+        ["git", "log", "--oneline"], cwd=tmp_path, check=True, capture_output=True, text=True
+    ).stdout
+    assert f"{STATE}: {CITY} done" in log
+
+    # a second call with nothing new to add must not fail (no-op, not an
+    # empty commit)
+    before = log
+    chain.commit_city_progress(tmp_path, run_folder, STATE, CITY)
+    after = subprocess.run(
+        ["git", "log", "--oneline"], cwd=tmp_path, check=True, capture_output=True, text=True
+    ).stdout
+    assert before == after
+
+
 def test_awards_and_hud_skip_gracefully_without_config(tmp_path):
     """No agency name / HUD fetcher configured -> skip note, not a crash or
     a real network call (mirrors every other 'never guess' step here)."""

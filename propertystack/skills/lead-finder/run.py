@@ -21,6 +21,7 @@ from __future__ import annotations
 import argparse
 import importlib.util
 import json
+import subprocess
 import sys
 import urllib.parse
 import urllib.request
@@ -353,9 +354,16 @@ def run_chain(
     run_folder: RunFolder,
     deps: ChainDeps,
     cities: list[str] | None = None,
+    on_city_done: Callable[[str], None] | None = None,
 ) -> list[LeadRecord]:
     """Run every step of the lead-finder chain for `state`, resumably, and
-    return the final scored/ranked list of LeadRecords."""
+    return the final scored/ranked list of LeadRecords.
+
+    `on_city_done`, if given, is called after each city finishes (before
+    software/contact/score, which are state-level) so a gowork build copy
+    never loses a finished city's work to an end-of-build cleanup (S0,
+    2026-09-14): it's the caller's chance to write the area's leads.json
+    so far and commit the run folder + data dir."""
     area = state.lower()
     city_list = load_or_build_cities(run_folder, state, deps, cities)
 
@@ -396,6 +404,10 @@ def run_chain(
             caps.jina_searches = counts.jina
             caps.brave_searches = counts.brave
         run_folder.save_caps(caps)
+
+        if on_city_done is not None:
+            write_area_leads(state, merge_records(all_records))
+            on_city_done(city)
 
     hud_dicts = step_hud(run_folder, state, deps)
     award_dicts = step_awards(run_folder, state, deps)
@@ -448,11 +460,37 @@ def cities_with_real_source(run_folder: RunFolder, city_list: list[str]) -> int:
     return count
 
 
+REPO_ROOT = HERE.parents[2]
+
+
+def commit_city_progress(repo_root: Path, run_folder: RunFolder, state: str, city: str) -> None:
+    """Save as you go (S0, 2026-09-14): `git add` the run folder + this
+    area's data dir and commit, so a gowork build copy that deletes
+    uncommitted files at the end of a task never loses a finished city's
+    leads. A no-op (not an error) if there's nothing new to commit."""
+    data_dir = repo_root / "propertystack" / "data" / state.lower()
+    paths = [str(run_folder.path), str(data_dir)]
+    subprocess.run(["git", "add", *paths], cwd=repo_root, check=True)
+    staged = subprocess.run(
+        ["git", "diff", "--cached", "--quiet", "--", *paths], cwd=repo_root
+    )
+    if staged.returncode == 0:
+        return  # nothing new for this city
+    subprocess.run(
+        ["git", "commit", "-m", f"lead-finder {state}: {city} done"],
+        cwd=repo_root, check=True,
+    )
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--state", help="two-letter state code or slug to run")
     parser.add_argument("--run-id", help="resume an existing run folder")
     parser.add_argument("--city", action="append", help="run only these cities (repeatable)")
+    parser.add_argument(
+        "--commit-each", action="store_true",
+        help="git commit the run folder + area leads.json after each city (save as you go)",
+    )
     args = parser.parse_args(argv)
 
     if args.state:
@@ -480,7 +518,12 @@ def main(argv: list[str] | None = None) -> int:
         owner_parcel_recipe=owner_parcel_recipe,
         owner_parcel_fetch_rows=find_sold.default_fetch_rows if owner_parcel_recipe else None,
     )
-    records = run_chain(state, run_folder, deps, cities=args.city)
+    on_city_done = None
+    if args.commit_each:
+        def on_city_done(city: str) -> None:  # noqa: E306
+            commit_city_progress(REPO_ROOT, run_folder, state, city)
+
+    records = run_chain(state, run_folder, deps, cities=args.city, on_city_done=on_city_done)
     for record in records:
         record.name = clean_project_name(record.name)
     print(f"lead-finder: {len(records)} leads for {state} -> {run_folder.path}")
