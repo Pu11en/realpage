@@ -44,7 +44,8 @@
       "Welcome to your AI home.": "Your early-lead workspace is ready.",
       "Run AI on your own terms. Connect any model, extend with code, and protect what matters without compromise. Your models, your data, your machine, wherever you open it.":
         "Create your local account to explore sourced apartment leads, market signals, and the research assistant.",
-      "Get started": "Create your account"
+      "Get started": "Create your account",
+      "Create Account": "Create account"
     };
     var w = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
     for (var n = w.nextNode(); n; n = w.nextNode()) {
@@ -72,11 +73,52 @@
       document.body.appendChild(a);
     }
   };
+  // Sign-up only: an optional "What best describes you?" picker. Nothing is
+  // required; if they pick one, it is sent with their email to the landing
+  // page's signup list (business/marketing/landing/server.py) when they submit.
+  var ROLES = ["Vendor", "Property manager", "Investor", "Lender", "Broker", "Apartment locator", "Something else"];
+  var picked = "";
+  var LANDING = location.port === "8876" ? "http://localhost:8765" : "https://cranesignal.com";
+  var brandRolePicker = function () {
+    if (!/^\/auth(\/|$)/.test(location.pathname)) return;
+    var form = document.querySelector("#auth-login-card form");
+    var old = document.querySelector(".cs-role");
+    if (!form || !form.querySelector("input#name")) { if (old) old.remove(); return; }
+    if (old) return;
+    var submit = form.querySelector("button[type='submit']");
+    if (!submit) return;
+    var box = document.createElement("fieldset");
+    box.className = "cs-role";
+    box.innerHTML = '<legend>What best describes you? <span>Optional</span></legend>';
+    ROLES.forEach(function (r) {
+      var b = document.createElement("button");
+      b.type = "button"; b.textContent = r;
+      b.setAttribute("aria-pressed", r === picked ? "true" : "false");
+      b.addEventListener("click", function () {
+        picked = picked === r ? "" : r;
+        box.querySelectorAll("button").forEach(function (x) {
+          x.setAttribute("aria-pressed", x.textContent === picked ? "true" : "false");
+        });
+      });
+      box.appendChild(b);
+    });
+    submit.parentElement.parentElement.insertBefore(box, submit.parentElement);
+    form.addEventListener("submit", function () {
+      var email = (form.querySelector("input#email") || {}).value || "";
+      if (!picked || !email) return;
+      try {
+        fetch(LANDING + "/api/signup", { method: "POST", mode: "no-cors", keepalive: true,
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: "source=app&role=" + encodeURIComponent(picked) + "&email=" + encodeURIComponent(email) });
+      } catch (e) {}
+    });
+  };
   var clean = function () {
     if (document.title.indexOf(TAG) >= 0) document.title = document.title.split(TAG).join("");
     if (!document.body) return;
     brandFirstAccount();
     brandAuth();
+    brandRolePicker();
     var w = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
     for (var n = w.nextNode(); n; n = w.nextNode()) {
       if (n.nodeValue.indexOf(TAG) >= 0) n.nodeValue = n.nodeValue.split(TAG).join("");

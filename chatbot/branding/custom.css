@@ -313,6 +313,27 @@ html:not(.dark) #auth-login-card .space-y-2 > button:hover { background: var(--c
 .cs-auth-home:hover { text-decoration: underline; text-underline-offset: 3px; }
 
 @media (max-width: 640px) {
-	html:not(.dark) #auth-login-card { padding: 32px 24px 24px !important; border-radius: 12px; }
+	html:not(.dark) #auth-login-card { padding: 32px 24px 24px !important; border-radius: 12px; margin-top: 96px; }
 	.cs-auth-home { top: 24px; right: 24px; }
 }
+
+/* Bigger crane logo in the sign-in page corner (Open WebUI draws it at 24px). */
+#auth-page img#logo { width: 44px !important; height: 44px; border-radius: 10px !important; object-fit: contain; }
+
+/* Optional "What best describes you?" picker on sign-up (loader.js). */
+.cs-role { border: 0; margin: 16px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.cs-role legend { width: 100%; margin-bottom: 8px; font-size: 14px; font-weight: 600; color: var(--cs-ink); text-align: left; }
+.cs-role legend span { margin-left: 4px; font-weight: 400; color: var(--cs-muted); }
+.cs-role button {
+	padding: 8px 12px;
+	border: 1px solid var(--cs-rule);
+	border-radius: 9999px;
+	background: var(--cs-paper);
+	color: var(--cs-ink);
+	font-size: 14px;
+	font-weight: 500;
+	transition: background 200ms cubic-bezier(0.32, 0.72, 0, 1), border-color 200ms cubic-bezier(0.32, 0.72, 0, 1);
+}
+.cs-role button:hover { border-color: var(--cs-blue); }
+.cs-role button[aria-pressed='true'] { background: var(--cs-blue-soft); border-color: var(--cs-blue); color: var(--cs-blue); font-weight: 600; }
+.dark .cs-role legend, .dark .cs-role button { color: #e5e7eb; background: transparent; }
