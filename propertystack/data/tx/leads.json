@@ -35171,7 +35171,7 @@
   "units": 42,
   "stage": "sold",
   "permit_date": "",
-  "opening_date": "",
+  "opening_date": "3531",
   "sale_date": "2025-04-09",
   "buyer": "1000 RIVER BEND DR",
   "developer": "",
@@ -35185,6 +35185,10 @@
    {
     "fact": "sale_date",
     "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   },
+   {
+    "fact": "opening_date",
+    "url": "https://lancasterapts.com/"
    }
   ],
   "why": "Sold 2025-04-09 \u00b7 to 1000 RIVER BEND DR \u00b7 42 units \u00b7 new owner may re-pick software"
@@ -35199,7 +35203,7 @@
   "units": 43,
   "stage": "sold",
   "permit_date": "",
-  "opening_date": "",
+  "opening_date": "3531",
   "sale_date": "2025-04-09",
   "buyer": "1000 RIVER BEND DR",
   "developer": "",
@@ -35213,6 +35217,10 @@
    {
     "fact": "sale_date",
     "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   },
+   {
+    "fact": "opening_date",
+    "url": "https://lancasterapts.com/"
    }
   ],
   "why": "Sold 2025-04-09 \u00b7 to 1000 RIVER BEND DR \u00b7 43 units \u00b7 new owner may re-pick software"
@@ -35227,20 +35235,25 @@
   "units": 136,
   "stage": "sold",
   "permit_date": "",
-  "opening_date": "",
+  "opening_date": "2026",
   "sale_date": "2025-04-09",
   "buyer": "LA VILLA HOUSING FINANCE CORP",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.apartmentadvisor.com/details/3305-linda-dr-dallas-tx-75220",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.apartmentadvisor.com/details/3305-linda-dr-dallas-tx-75220"
   },
   "sources": [
    {
     "fact": "sale_date",
     "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   },
+   {
+    "fact": "opening_date",
+    "url": "https://www.apartmentadvisor.com/details/3305-linda-dr-dallas-tx-75220"
    }
   ],
   "why": "Sold 2025-04-09 \u00b7 to LA VILLA HOUSING FINANCE CORP \u00b7 136 units \u00b7 new owner may re-pick software"
@@ -35316,11 +35329,12 @@
   "buyer": "",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.landmarkatcrowley.com/neighborhood/",
   "software": "unknown",
   "links": {
    "sales_file": "https://www.tad.org/content/data-download/2026CommImprovedSales.zip",
-   "deed_doc": "D225064276"
+   "deed_doc": "D225064276",
+   "website": "https://www.landmarkatcrowley.com/neighborhood/"
   },
   "sources": [
    {
@@ -35393,26 +35407,35 @@
   "address": "3045 GOLFCREST BLVD 29",
   "lat": null,
   "lon": null,
-  "units": null,
+  "units": 29,
   "stage": "sold",
   "permit_date": "",
-  "opening_date": "",
+  "opening_date": "1716",
   "sale_date": "2025-04-04",
   "buyer": "TEAM CHUDECKE ARMADILLO LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://cccres.com/apartments/detail/team-chudecke-armadillo-llc-houston",
   "software": "unknown",
   "links": {
-   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip",
+   "website": "https://cccres.com/apartments/detail/team-chudecke-armadillo-llc-houston"
   },
   "sources": [
    {
     "fact": "sale_date",
     "url": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   },
+   {
+    "fact": "opening_date",
+    "url": "https://github.com/Apoorve73/Real-Estate-Companies-Database/blob/master/Houston1.csv"
+   },
+   {
+    "fact": "units",
+    "url": "https://cccres.com/apartments/detail/team-chudecke-armadillo-llc-houston"
    }
   ],
-  "why": "Sold 2025-04-04 \u00b7 to TEAM CHUDECKE ARMADILLO LLC \u00b7 new owner may re-pick software"
+  "why": "Sold 2025-04-04 \u00b7 to TEAM CHUDECKE ARMADILLO LLC \u00b7 29 units \u00b7 new owner may re-pick software"
  },
  {
   "area": "tx",
@@ -35457,10 +35480,11 @@
   "buyer": "PECOS HOUSING FINANCE CORPORATION",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://liveat6500.com/",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://liveat6500.com/"
   },
   "sources": [
    {
@@ -35541,10 +35565,11 @@
   "buyer": "MO SALAH 11 LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://therepublicapartmentsdallas.com/",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://therepublicapartmentsdallas.com/"
   },
   "sources": [
    {
@@ -35625,10 +35650,11 @@
   "buyer": "PECOS HOUSING FINANCE CORP",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.ebby.com/realestate/details/103540804/2727-elmside-drive-171-houston-tx-77042",
   "software": "unknown",
   "links": {
-   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip",
+   "website": "https://www.ebby.com/realestate/details/103540804/2727-elmside-drive-171-houston-tx-77042"
   },
   "sources": [
    {
@@ -35765,10 +35791,11 @@
   "buyer": "PECOS HOUSING FINANCE CORP",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.liveatthekendrick.com/",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.liveatthekendrick.com/"
   },
   "sources": [
    {
@@ -35821,10 +35848,12 @@
   "buyer": "MONTGOMERY ACQUISITIONS I LLC &",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://yieldpro.com/2021/06/fcp-and-s2-acquire-oxford-park-apartments-in-irving-texas/",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://yieldpro.com/2021/06/fcp-and-s2-acquire-oxford-park-apartments-in-irving-texas/",
+   "news": "https://www.prnewswire.com/news-releases/fcp-and-s2-acquire-oxford-park-apartments-in-irving-tx-301304030.html"
   },
   "sources": [
    {
@@ -35849,10 +35878,12 @@
   "buyer": "MONTGOMERY ACQUISITIONS I LLC &",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://yieldpro.com/2021/06/fcp-and-s2-acquire-oxford-park-apartments-in-irving-texas/",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://yieldpro.com/2021/06/fcp-and-s2-acquire-oxford-park-apartments-in-irving-texas/",
+   "news": "https://rebusinessonline.com/fcp-s2-capital-acquire-308-unit-oxford-park-apartments-in-irving/"
   },
   "sources": [
    {
