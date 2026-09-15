@@ -11,7 +11,7 @@ clickable **🔍 Find contact** link *inside the chat answer* that sends "Deep d
 none. Localhost only; **never push** (Drew pushes after trying it). Do not touch AI Visibility.
 
 Run with: `Do the next unticked task in PLAN-find-contact-link.md, then tick it and stop.`
-Check: `python3 -m pytest -q chatbot/tests tooling/qa/fixes_tests/test_h4_grounded_answers.py $(ls tooling/qa/fixes_tests/test_find_contact.py 2>/dev/null)`
+Check: `python3 -m pytest -q chatbot/tests tooling/qa/fixes_tests/test_h4_grounded_answers.py tooling/qa/fixes_tests/test_find_contact.py`
 Try: `bash tooling/dev.sh`
 Open: http://localhost:8765 → Ask (no sign-in locally)
 
