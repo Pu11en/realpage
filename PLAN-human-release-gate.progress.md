@@ -83,3 +83,25 @@
   The broad `python3 -m pytest -q` still stops at the pre-existing unrelated client-map collection
   error because its local `census` helper is missing. It is recorded as a failure, not treated as a
   passing release result.
+
+## 2026-09-15 — H6: safe first-time-user preview
+
+- Added `bash tooling/human-test.sh`, the separate local command for the human gate. It starts the
+  combined Caddy site and chat stack at `http://localhost:8765` with sign-in and account creation
+  explicitly enabled. `bash tooling/human-test.sh stop` shuts it down and removes only this
+  preview's disposable accounts and chats.
+- The preview has its own Compose project and two clearly named volumes. Each fresh start removes
+  only those volumes before creating new ones, so it cannot reuse an old human-test account or
+  overwrite the everyday `ps-chat` local history. It refuses to take over port 8765 and says so
+  plainly instead of stopping another preview.
+- Added the matching Compose overlay: the site and Open WebUI share the Caddy front door, while the
+  chat gateway and Open WebUI no longer expose their own host ports. This is the same sign-in-gated
+  candidate configuration a new person will use.
+- Added three offline H6 regression checks, including `bash tooling/human-test.sh check`, to prove
+  the command is isolated, sign-in is enabled, and the protected front door is present. No preview
+  was started and no account storage was changed during these checks.
+- Checked: H6's offline checks passed (3 tests); `bash tooling/qa/check-fixes.sh` passed (139
+  focused tests, three page checks, and seven design page checks); and `chatbot/tests` passed (35
+  tests). The broad `python3 -m pytest -q` still stops at the pre-existing unrelated client-map
+  collection error because its local `census` helper is missing; it remains a recorded failure, not
+  a passing result.

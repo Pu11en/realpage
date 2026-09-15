@@ -1,0 +1,36 @@
+# A private, sign-in-enabled preview for the human release gate.  This is an
+# overlay on docker-compose.local.yml; tooling/human-test.sh always runs it
+# under its own project name and destroys only these named volumes before a new
+# trial.  It never shares the everyday ps-chat account or chat-history volume.
+services:
+  chatbot:
+    # The human preview reaches the chat through the same Caddy front door as
+    # the site, so the internal gateway must not occupy a host port.
+    ports: !reset []
+
+  open-webui:
+    environment:
+      # Be explicit: this preview is for creating a brand-new local account.
+      WEBUI_AUTH: "True"
+      ENABLE_SIGNUP: "true"
+      ENABLE_LOGIN_FORM: "true"
+    ports: !reset []
+
+  site:
+    build:
+      context: ..
+      dockerfile: site/Dockerfile
+    depends_on: [open-webui]
+    environment:
+      PORT: "8080"
+      CHAT_UPSTREAM: http://open-webui:8080
+    ports:
+      - "8765:8080"
+
+volumes:
+  # Fixed, deliberately distinctive names make the isolation auditable and
+  # let `down --volumes` remove only this preview's disposable state.
+  hermes-home:
+    name: cranesignal-human-test-hermes-home
+  open-webui:
+    name: cranesignal-human-test-open-webui

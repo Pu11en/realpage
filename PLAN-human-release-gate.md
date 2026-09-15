@@ -68,7 +68,7 @@ Run with: `Do the next unticked task in PLAN-human-release-gate.md, then tick it
   record the new result. If either finding cannot be safely closed, keep it visible and keep the
   push gate closed. Commit.
 
-- [ ] **H6 Build a safe first time user preview.** Add one command that starts the exact combined
+- [x] **H6 Build a safe first time user preview.** Add one command that starts the exact combined
   candidate with sign in enabled, fresh isolated local account storage, clear startup status, and a
   matching stop command. It must not overwrite Drew's existing local chat history or reuse a stale
   account. Add an offline check for the command and its isolation. Commit.
