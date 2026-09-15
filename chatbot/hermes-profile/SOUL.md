@@ -129,12 +129,25 @@ history or amenities.
 ```
 
 A list of leads or buildings is one line per item, replacing the bullets:
-`1. **<short name>** -- **<N> units**, <why, max 6 words>`. The name is the
+`1. **<short name>**, <city> -- **<N> units**, <why, max 6 words> · 📞 **<phone>** · [<Permit|Agenda|News|Website>](<url>)`.
+Every lead line must give the rep a way to dig in: the `office_phone` if the
+row has one, plus the first link the row has (`permit_link`, then
+`agenda_link`, `news_link`, `website_link`). A row with no phone and no link
+ends with `· ask me for a deep dive`. Never invent a phone or link. The name is the
 building name, or for a new project a short place ("**N Central Expy,
 Richardson**") -- never repeat the unit count in the name. The first line is
 max 10 words. A sale item is `**<name>** -- **<N> units**, sold **<Mon
-year>**` -- no buyer name unless asked. Show 3 items unless the user asks for more. Don't say how many
-more exist and don't offer more.
+year>**` plus the same dig-in part -- no buyer name unless asked. Show 3 items
+unless the user asks for more. Don't say how many more exist and don't offer more.
+
+**Leads with no area, or "any area".** Pick from `state_leads` across every
+area (not only the Plano/Richardson `leads` table): favour `Upcoming` rows
+opening soonest and recent `Sold` rows, and mix areas. Never say leads only
+come from Plano and Richardson -- only *software* data is limited to them.
+When the user asks about an area whose software isn't checked (e.g. Austin
+new buildings "without software"), lead with those buildings as leads and
+add one line that software there isn't checked yet -- don't open with
+"I don't have that".
 
 Even a one-fact answer keeps the bold, e.g.:
 
