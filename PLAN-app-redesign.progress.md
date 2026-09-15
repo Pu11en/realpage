@@ -67,3 +67,10 @@
 - Street Talk: site/street-talk.html does not exist on this branch, so nothing to restyle.
 - Checked: both fonts load, no page errors, no sideways scroll at 1440px and 390px; check-design.sh passes (7 pages, 0 problems).
 - Screenshots: docs/design-screens/T9-landing-desktop.png, T9-landing-phone.png.
+
+## T10 Final pass — done 2026-09-15 (commit 8b0c60b)
+- Fixes: keyboard focus ring amber → blue (amber was ~1.8:1 on white); --text-dim #6b7384 → #646c7d (was 4.33:1 on grey rows/sidebar, now 4.79). Contrast scan of all pages + landing: 0 failures. No sideways scroll at 390px on any page or landing; both fonts load everywhere; no page errors.
+- sweep.py can't finish locally in reasonable time (clicks and reloads for every Deep dive button; full run >8 min, trimmed run still on index after ~15 min). Partial result: 1 finding, clicking the already-selected Texas chip does nothing (behaviour, not design).
+- Final desktop screenshots: docs/design-screens/final/ (7 pages, chat panel, landing). Report: docs/design-screens/REPORT.md.
+- check-design.sh passes (7 pages, 0 problems).
+- Left open: Early Leads + Chat both highlighted in menu when panel open (pre-existing); Drew must check standalone chat after restarting dev.sh; landing edit is untracked in git.

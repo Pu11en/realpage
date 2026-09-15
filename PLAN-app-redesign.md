@@ -76,7 +76,7 @@ Open: http://localhost:8765/index.html
   drop the `font-stretch` tricks that only worked with Archivo, keep the headline just as big and
   bold), and check its phone layout still fits. If `site/street-talk.html` exists, restyle it and add
   it to the list. Screenshots of landing desktop + phone.
-- [ ] **T10 Final pass.** Run `python3 tooling/qa/sweep.py` if it runs locally, fix anything it finds
+- [x] **T10 Final pass.** Run `python3 tooling/qa/sweep.py` if it runs locally, fix anything it finds
   in the new look (contrast, focus rings, hover states, phone overflow). Take one desktop screenshot
   of every page plus the landing page into `docs/design-screens/final/`. Write
   `docs/design-screens/REPORT.md` in plain words: what changed per page, anything that still looks
