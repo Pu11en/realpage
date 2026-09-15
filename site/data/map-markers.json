@@ -1,0 +1,38 @@
+{
+  "markers": [
+    {
+      "state": "Arizona",
+      "code": "AZ",
+      "leads": 279,
+      "label": "AZ \u00b7 279 leads",
+      "topCities": [
+        "Phoenix",
+        "Mesa",
+        "Scottsdale"
+      ],
+      "link": "index.html?area=az"
+    },
+    {
+      "state": "New York",
+      "code": "NY",
+      "leads": 2,
+      "label": "NY \u00b7 2 leads",
+      "topCities": [
+        "Buffalo"
+      ],
+      "link": "index.html?area=ny"
+    },
+    {
+      "state": "Texas",
+      "code": "TX",
+      "leads": 586,
+      "label": "TX \u00b7 586 leads",
+      "topCities": [
+        "Houston",
+        "Austin",
+        "Fort Worth"
+      ],
+      "link": "index.html?area=tx"
+    }
+  ]
+}

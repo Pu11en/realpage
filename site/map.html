@@ -25,6 +25,13 @@
     .map-legend { display: flex; align-items: center; gap: 8px; color: var(--text-muted); font-size: 12px; margin: 8px 0 16px; }
     .map-legend .ramp { width: 120px; height: 10px; border-radius: 2px;
       background: linear-gradient(to right, rgba(34, 197, 94, 0.15), rgba(34, 197, 94, 1)); }
+    #us-map .lead-marker { cursor: pointer; }
+    #us-map .lead-marker circle { fill: #f97316; stroke: #fff; stroke-width: 1.5; }
+    #us-map .lead-marker text { fill: #fdba74; font-size: 13px; font-weight: 600; paint-order: stroke; stroke: #09090b; stroke-width: 3px; }
+    #us-map .lead-marker:hover circle, #us-map .lead-marker:focus circle { r: 11; }
+    #map-tip .lead-count { color: #f97316; }
+    #map-tip .hint { color: var(--text-muted); font-size: 12px; margin-top: 4px; }
+    .map-legend .dot { width: 12px; height: 12px; border-radius: 50%; background: #f97316; border: 1.5px solid #fff; margin-left: 16px; }
   </style>
 </head>
 <body>
@@ -38,8 +45,8 @@
     renderShell("map");
     document.getElementById("page-content").innerHTML = `
       <h1>Where RealPage already has clients</h1>
-      <div class="meta">Apartment buildings whose own website links to a RealPage resident login, found in the 15 states building the most apartments. Brighter green = more buildings found. Point at a state for its count and top cities.</div>
-      <div class="map-legend"><span>fewer</span><span class="ramp"></span><span>more RealPage buildings</span></div>
+      <div class="meta">Apartment buildings whose own website links to a RealPage resident login, found in the 15 states building the most apartments. Brighter green = more buildings found. Orange markers are the states we have leads in: click one to open its table.</div>
+      <div class="map-legend"><span>fewer</span><span class="ramp"></span><span>more RealPage buildings</span><span class="dot"></span><span>our leads here (click to open the table)</span></div>
       <div class="map-wrap">
         <svg id="us-map" viewBox="0 0 975 610" role="img" aria-label="US map shaded by RealPage buildings found per state"></svg>
         <div id="map-tip" hidden></div>

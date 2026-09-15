@@ -670,6 +670,50 @@ def build_areas_manifest(area_slugs: list[str]) -> dict:
     return manifest
 
 
+_STATE_NAMES = {
+    "al": "Alabama", "ak": "Alaska", "az": "Arizona", "ar": "Arkansas", "ca": "California", "co": "Colorado",
+    "ct": "Connecticut", "de": "Delaware", "fl": "Florida", "ga": "Georgia", "hi": "Hawaii", "id": "Idaho",
+    "il": "Illinois", "in": "Indiana", "ia": "Iowa", "ks": "Kansas", "ky": "Kentucky", "la": "Louisiana",
+    "me": "Maine", "md": "Maryland", "ma": "Massachusetts", "mi": "Michigan", "mn": "Minnesota",
+    "ms": "Mississippi", "mo": "Missouri", "mt": "Montana", "ne": "Nebraska", "nv": "Nevada",
+    "nh": "New Hampshire", "nj": "New Jersey", "nm": "New Mexico", "ny": "New York", "nc": "North Carolina",
+    "nd": "North Dakota", "oh": "Ohio", "ok": "Oklahoma", "or": "Oregon", "pa": "Pennsylvania",
+    "ri": "Rhode Island", "sc": "South Carolina", "sd": "South Dakota", "tn": "Tennessee", "tx": "Texas",
+    "ut": "Utah", "vt": "Vermont", "va": "Virginia", "wa": "Washington", "wv": "West Virginia",
+    "wi": "Wisconsin", "wy": "Wyoming", "dc": "District of Columbia",
+}
+
+
+def build_map_markers(area_slugs: list[str]) -> dict:
+    """site/data/map-markers.json: one orange marker per state we have leads in.
+    Statewide areas are named by state code; the legacy Plano-Richardson area rolls
+    up into Texas when there is no statewide Texas area."""
+    markers = {}
+    for slug in area_slugs:
+        name = _STATE_NAMES.get(slug)
+        if not name:
+            continue
+        area = json.loads((AREAS_OUT_DIR / f"{slug}.json").read_text())
+        counts = Counter(lead["city"] for lead in area["leads"] if lead.get("city"))
+        markers[name] = {
+            "state": name,
+            "code": slug.upper(),
+            "leads": len(area["leads"]),
+            "label": f"{slug.upper()} · {len(area['leads'])} leads",
+            "topCities": [c for c, _ in counts.most_common(3)],
+            "link": f"index.html?area={slug}",
+        }
+    if "Texas" not in markers:
+        legacy = json.loads((OUT_DIR / "leads.json").read_text())
+        rows = legacy.get("leads", legacy) if isinstance(legacy, dict) else legacy
+        markers["Texas"] = {
+            "state": "Texas", "code": "TX", "leads": len(rows), "label": f"TX · {len(rows)} leads",
+            "topCities": [c for c, _ in Counter(r.get("city") for r in rows if r.get("city")).most_common(3)],
+            "link": f"index.html?area={AREA}",
+        }
+    return {"markers": list(markers.values())}
+
+
 def main() -> None:
     properties, properties_json, share_json = build_properties_and_share()
     (OUT_DIR / "properties.json").write_text(json.dumps(properties_json, indent=2))
@@ -697,6 +741,10 @@ def main() -> None:
 
     manifest = build_areas_manifest(area_slugs)
     print(f"wrote areas/index.json ({len(manifest['areas'])} area button(s))")
+
+    markers = build_map_markers(area_slugs)
+    (OUT_DIR / "map-markers.json").write_text(json.dumps(markers, indent=2))
+    print(f"wrote map-markers.json ({len(markers['markers'])} state marker(s))")
 
 
 if __name__ == "__main__":
