@@ -35908,10 +35908,11 @@
   "buyer": "PECOS HOUSING FINANCE CORP",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://cccres.com/apartments/detail/casa-valley-apts-irving",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://cccres.com/apartments/detail/casa-valley-apts-irving"
   },
   "sources": [
    {
@@ -35936,10 +35937,11 @@
   "buyer": "PECOS HOUSING FINANCE CORP",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.liveevaline.com/",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.liveevaline.com/"
   },
   "sources": [
    {
@@ -35984,7 +35986,7 @@
   "address": "1710 W T C JESTER BLVD 48",
   "lat": null,
   "lon": null,
-  "units": null,
+  "units": 48,
   "stage": "sold",
   "permit_date": "",
   "opening_date": "",
@@ -36001,9 +36003,13 @@
    {
     "fact": "sale_date",
     "url": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   },
+   {
+    "fact": "units",
+    "url": "https://cccres.com/apartments/detail/grove-at-white-oak-the-houston"
    }
   ],
-  "why": "Sold 2025-04-02 \u00b7 to GWO LLC \u00b7 new owner may re-pick software"
+  "why": "Sold 2025-04-02 \u00b7 to GWO LLC \u00b7 48 units \u00b7 new owner may re-pick software"
  },
  {
   "area": "tx",
@@ -36020,10 +36026,11 @@
   "buyer": "CAMERON COUNTY HOUSING FINANCE CORP THE",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.infinityontheoaks.com/",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.infinityontheoaks.com/"
   },
   "sources": [
    {
@@ -36048,10 +36055,11 @@
   "buyer": "NEWPOINT JV SUB III LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.tidesonleisure.com/Amenities.aspx",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.tidesonleisure.com/Amenities.aspx"
   },
   "sources": [
    {
@@ -36076,10 +36084,11 @@
   "buyer": "NEWPOINT JV SUB III LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.apartmentadvisor.com/details/11515-leisure-dr-dallas-tx-75243",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.apartmentadvisor.com/details/11515-leisure-dr-dallas-tx-75243"
   },
   "sources": [
    {
@@ -36096,7 +36105,7 @@
   "address": "1325 GREENS PKY 96",
   "lat": null,
   "lon": null,
-  "units": null,
+  "units": 96,
   "stage": "sold",
   "permit_date": "",
   "opening_date": "",
@@ -36113,9 +36122,13 @@
    {
     "fact": "sale_date",
     "url": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   },
+   {
+    "fact": "units",
+    "url": "https://cccres.com/apartments/detail/pine-lake-village-houston"
    }
   ],
-  "why": "Sold 2025-04-01 \u00b7 to LSF PLV HOUSTON LLC \u00b7 new owner may re-pick software"
+  "why": "Sold 2025-04-01 \u00b7 to LSF PLV HOUSTON LLC \u00b7 96 units \u00b7 new owner may re-pick software"
  },
  {
   "area": "tx",
@@ -36124,7 +36137,7 @@
   "address": "1335 SILVERADO DR 344",
   "lat": null,
   "lon": null,
-  "units": null,
+  "units": 344,
   "stage": "sold",
   "permit_date": "",
   "opening_date": "",
@@ -36132,18 +36145,23 @@
   "buyer": "PECOS HOUSING FINANCE CORP",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.searchpeoplefree.com/address/tx/houston/silverado-dr/1335",
   "software": "unknown",
   "links": {
-   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip",
+   "website": "https://www.searchpeoplefree.com/address/tx/houston/silverado-dr/1335"
   },
   "sources": [
    {
     "fact": "sale_date",
     "url": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   },
+   {
+    "fact": "units",
+    "url": "https://cccres.com/apartments/detail/argyle-the-houston"
    }
   ],
-  "why": "Sold 2025-04-01 \u00b7 to PECOS HOUSING FINANCE CORP \u00b7 new owner may re-pick software"
+  "why": "Sold 2025-04-01 \u00b7 to PECOS HOUSING FINANCE CORP \u00b7 344 units \u00b7 new owner may re-pick software"
  },
  {
   "area": "tx",
@@ -36180,7 +36198,7 @@
   "address": "22022 CIMARRON PKY 272",
   "lat": null,
   "lon": null,
-  "units": null,
+  "units": 272,
   "stage": "sold",
   "permit_date": "",
   "opening_date": "",
@@ -36188,18 +36206,23 @@
   "buyer": "PECOS HOUSING FINANCE COPRORATION",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://ploteasy.com/property-details/212361/22022-cimarron-pky-katy-tx-77450",
   "software": "unknown",
   "links": {
-   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip",
+   "website": "https://ploteasy.com/property-details/212361/22022-cimarron-pky-katy-tx-77450"
   },
   "sources": [
    {
     "fact": "sale_date",
     "url": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   },
+   {
+    "fact": "units",
+    "url": "https://cccres.com/apartments/detail/sutton-the-katy"
    }
   ],
-  "why": "Sold 2025-03-29 \u00b7 to PECOS HOUSING FINANCE COPRORATION \u00b7 new owner may re-pick software"
+  "why": "Sold 2025-03-29 \u00b7 to PECOS HOUSING FINANCE COPRORATION \u00b7 272 units \u00b7 new owner may re-pick software"
  },
  {
   "area": "tx",
@@ -36208,7 +36231,7 @@
   "address": "900 HENDERSON AVE 440",
   "lat": null,
   "lon": null,
-  "units": null,
+  "units": 440,
   "stage": "sold",
   "permit_date": "",
   "opening_date": "",
@@ -36225,9 +36248,13 @@
    {
     "fact": "sale_date",
     "url": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   },
+   {
+    "fact": "units",
+    "url": "https://cccres.com/apartments/detail/pearce-on-the-lake-webster"
    }
   ],
-  "why": "Sold 2025-03-29 \u00b7 to PECOS HOUSING FINANCE CORP \u00b7 new owner may re-pick software"
+  "why": "Sold 2025-03-29 \u00b7 to PECOS HOUSING FINANCE CORP \u00b7 440 units \u00b7 new owner may re-pick software"
  },
  {
   "area": "tx",
@@ -36236,18 +36263,19 @@
   "address": "435 JANISCH RD",
   "lat": null,
   "lon": null,
-  "units": null,
+  "units": 21,
   "stage": "sold",
   "permit_date": "",
-  "opening_date": "",
+  "opening_date": "1222",
   "sale_date": "2025-03-28",
   "buyer": "JANISCH ROAD APARTMENTS LL",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://houstonarchitecture.com/topic/49677-multifamily-development-435-janisch-rd/",
   "software": "unknown",
   "links": {
-   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip",
+   "website": "https://houstonarchitecture.com/topic/49677-multifamily-development-435-janisch-rd/"
   },
   "sources": [
    {
@@ -36257,9 +36285,17 @@
    {
     "fact": "sale_date",
     "url": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   },
+   {
+    "fact": "units",
+    "url": "https://www.apartmentfinder.com/Texas/Houston-Apartments/Winston-Heights-Apartments-zrj04fy"
+   },
+   {
+    "fact": "opening_date",
+    "url": "https://www.apartmentfinder.com/Texas/Houston-Apartments/Winston-Heights-Apartments-zrj04fy"
    }
   ],
-  "why": "Sold 2025-03-28 \u00b7 to JANISCH ROAD APARTMENTS LL \u00b7 new owner may re-pick software"
+  "why": "Sold 2025-03-28 \u00b7 to JANISCH ROAD APARTMENTS LL \u00b7 21 units \u00b7 new owner may re-pick software"
  },
  {
   "area": "tx",
@@ -36276,10 +36312,11 @@
   "buyer": "PLEASANTON HOUSING FINANCE",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.anthemmesquite.com/",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.anthemmesquite.com/"
   },
   "sources": [
    {
@@ -36304,10 +36341,11 @@
   "buyer": "PLEASTANTON HOUSING FINANCE",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.anthemmesquite.com/",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.anthemmesquite.com/"
   },
   "sources": [
    {
@@ -36324,7 +36362,7 @@
   "address": "8011 BENDELL DR 18",
   "lat": null,
   "lon": null,
-  "units": null,
+  "units": 18,
   "stage": "sold",
   "permit_date": "",
   "opening_date": "",
@@ -36332,18 +36370,23 @@
   "buyer": "ROBINSON ST LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://cccres.com/apartments/detail/robinson-st-llc-houston",
   "software": "unknown",
   "links": {
-   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip",
+   "website": "https://cccres.com/apartments/detail/robinson-st-llc-houston"
   },
   "sources": [
    {
     "fact": "sale_date",
     "url": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   },
+   {
+    "fact": "units",
+    "url": "https://cccres.com/apartments/detail/robinson-st-llc-houston"
    }
   ],
-  "why": "Sold 2025-03-27 \u00b7 to ROBINSON ST LLC \u00b7 new owner may re-pick software"
+  "why": "Sold 2025-03-27 \u00b7 to ROBINSON ST LLC \u00b7 18 units \u00b7 new owner may re-pick software"
  },
  {
   "area": "tx",
@@ -36388,10 +36431,11 @@
   "buyer": "PECOS HOUSING FINANCE",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://avalon8801.com/",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://avalon8801.com/"
   },
   "sources": [
    {
@@ -36467,7 +36511,7 @@
   "units": null,
   "stage": "sold",
   "permit_date": "",
-  "opening_date": "",
+  "opening_date": "1716",
   "sale_date": "2025-03-25",
   "buyer": "AD PECAN LLC",
   "developer": "",
@@ -36485,6 +36529,10 @@
    {
     "fact": "sale_date",
     "url": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   },
+   {
+    "fact": "opening_date",
+    "url": "https://github.com/Apoorve73/Real-Estate-Companies-Database/blob/master/Houston1.csv"
    }
   ],
   "why": "Sold 2025-03-25 \u00b7 to AD PECAN LLC \u00b7 new owner may re-pick software"
@@ -36532,10 +36580,11 @@
   "buyer": "PECOS HOUSING FINANCE CORP",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://ploteasy.com/property-details/181871/2801-broadmead-dr-235-houston-tx-77025",
   "software": "unknown",
   "links": {
-   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip",
+   "website": "https://ploteasy.com/property-details/181871/2801-broadmead-dr-235-houston-tx-77025"
   },
   "sources": [
    {
@@ -36555,21 +36604,26 @@
   "units": 45,
   "stage": "sold",
   "permit_date": "",
-  "opening_date": "",
+  "opening_date": "2025",
   "sale_date": "2025-03-25",
   "buyer": "",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.affordablehousing.com/richland-hills-tx/richland-court-apartments-843215/",
   "software": "unknown",
   "links": {
    "sales_file": "https://www.tad.org/content/data-download/2026CommImprovedSales.zip",
-   "deed_doc": "D225051134"
+   "deed_doc": "D225051134",
+   "website": "https://www.affordablehousing.com/richland-hills-tx/richland-court-apartments-843215/"
   },
   "sources": [
    {
     "fact": "sale_date",
     "url": "https://www.tad.org/content/data-download/2026CommImprovedSales.zip"
+   },
+   {
+    "fact": "opening_date",
+    "url": "https://www.affordablehousing.com/richland-hills-tx/richland-court-apartments-843215/"
    }
   ],
   "why": "Sold 2025-03-25 \u00b7 45 units \u00b7 new owner may re-pick software"
