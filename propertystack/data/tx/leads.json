@@ -32234,10 +32234,11 @@
   "buyer": "SIGMA 431 LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.compass.com/homes-for-sale/the-cedars-dallas-tx/townhomes/",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.compass.com/homes-for-sale/the-cedars-dallas-tx/townhomes/"
   },
   "sources": [
    {
@@ -32285,7 +32286,7 @@
   "units": null,
   "stage": "sold",
   "permit_date": "",
-  "opening_date": "",
+  "opening_date": "1716",
   "sale_date": "2025-05-28",
   "buyer": "AMERITAS LIFE INSURANCE CORP",
   "developer": "",
@@ -32299,6 +32300,10 @@
    {
     "fact": "sale_date",
     "url": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   },
+   {
+    "fact": "opening_date",
+    "url": "https://github.com/Apoorve73/Real-Estate-Companies-Database/blob/master/Houston1.csv"
    }
   ],
   "why": "Sold 2025-05-28 \u00b7 to AMERITAS LIFE INSURANCE CORP \u00b7 new owner may re-pick software"
@@ -32313,20 +32318,25 @@
   "units": 372,
   "stage": "sold",
   "permit_date": "",
-  "opening_date": "",
+  "opening_date": "1907",
   "sale_date": "2025-05-27",
   "buyer": "QMV III CANYON PHASE I HOLDINGS LP",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://emblemravine.com/",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://emblemravine.com/"
   },
   "sources": [
    {
     "fact": "sale_date",
     "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   },
+   {
+    "fact": "opening_date",
+    "url": "https://emblemravine.com/"
    }
   ],
   "why": "Sold 2025-05-27 \u00b7 to QMV III CANYON PHASE I HOLDINGS LP \u00b7 372 units \u00b7 new owner may re-pick software"
@@ -32458,10 +32468,11 @@
   "buyer": "WILLOWBEND APARTMENTS PHASE I LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://ploteasy.com/property-details/64992226/9393-fm-1960-bypass-rd-w-humble-tx-77338",
   "software": "unknown",
   "links": {
-   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip",
+   "website": "https://ploteasy.com/property-details/64992226/9393-fm-1960-bypass-rd-w-humble-tx-77338"
   },
   "sources": [
    {
@@ -32542,10 +32553,11 @@
   "buyer": "CAMERON COUNTY HOUSING FINANCE CORP",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://leasepointguard.com/property/estrella-at-kiest/",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://leasepointguard.com/property/estrella-at-kiest/"
   },
   "sources": [
    {
@@ -32570,10 +32582,12 @@
   "buyer": "PECOS HOUSING FINANCE CO",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://cccres.com/apartments/detail/wythe-apts-2018-reno-irving",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://cccres.com/apartments/detail/wythe-apts-2018-reno-irving",
+   "news": "https://stclaircountylibrary.org/content/download/3411/41521/version/1/file/PortHuronCityDirectory1950-1951_Part3Compressed.pdf"
   },
   "sources": [
    {
@@ -32654,10 +32668,11 @@
   "buyer": "LA VILLA HOUSING FINANCE CORP",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.liveatliveoaks.com/",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.liveatliveoaks.com/"
   },
   "sources": [
    {
@@ -32682,10 +32697,11 @@
   "buyer": "PECOS HOUSING FINANCE",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.theemersondallas.com/",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.theemersondallas.com/"
   },
   "sources": [
    {
@@ -32710,10 +32726,11 @@
   "buyer": "PECOS HOUSING FINANCE CORP",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.holbrookliving.com/",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.holbrookliving.com/"
   },
   "sources": [
    {
@@ -32738,10 +32755,11 @@
   "buyer": "PECOS HOUSING FINANCE CORP",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.holbrookliving.com/",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.holbrookliving.com/"
   },
   "sources": [
    {
@@ -32766,10 +32784,11 @@
   "buyer": "PECOS HOUSING FINANCE",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.theeverlydallas.com/",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.theeverlydallas.com/"
   },
   "sources": [
    {
@@ -32794,10 +32813,11 @@
   "buyer": "PECOS HOUSING FINANCE CORP",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.theeverlydallas.com/",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.theeverlydallas.com/"
   },
   "sources": [
    {
@@ -32878,10 +32898,11 @@
   "buyer": "LA VILLA HOUSING FINANCE CORP",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.liveatthelana.com/",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.liveatthelana.com/"
   },
   "sources": [
    {
@@ -32906,10 +32927,11 @@
   "buyer": "LA VILLA HOUSING FINANCE CORP",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.liveatthelana.com/",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.liveatthelana.com/"
   },
   "sources": [
    {
