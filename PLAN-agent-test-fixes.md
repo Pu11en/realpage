@@ -38,7 +38,7 @@ Open: http://localhost:8765/index.html
 - [x] **T2 One chat header bar.** The panel sometimes shows two stacked "Ask CraneSignal" bars (desktop and
   phone). Find why the panel/header is built twice (double init, re-open, retry) and make it idempotent.
   Test: opening the panel twice leaves exactly one header. Commit.
-- [ ] **T3 Sign-out button.** Add "Sign out" to the site header on every app page (calls the chat app's
+- [x] **T3 Sign-out button.** Add "Sign out" to the site header on every app page (calls the chat app's
   sign-out, clears the session, lands on the sign-in page). Hidden locally where there's no sign-in.
   Test: the link exists on every app page. Commit.
 - [ ] **T4 Real "page not found".** `site/Caddyfile` sends unknown addresses like /nope.html to the leads

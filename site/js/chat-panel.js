@@ -164,16 +164,48 @@
       .then((cfg) => {
         if (cfg && cfg.features && cfg.features.auth === false) {
           card.style.display = "none";
+          setSignOutVisible(false);
           return;
         }
         return fetch(`${base}/api/v1/auths/`, { credentials: "include" })
           .then((res) => {
             card.style.display = res.ok ? "none" : "flex";
+            setSignOutVisible(res.ok);
           })
           .catch(() => {
             card.style.display = "flex";
+            setSignOutVisible(false);
           });
       });
+  }
+
+  // T3: the sign-out link in the site header only makes sense once someone
+  // could actually be signed in (live, with auth on, and currently signed
+  // in). Local dev runs the chat app with auth off, so it stays hidden there.
+  function setSignOutVisible(visible) {
+    const link = document.getElementById("sign-out-link");
+    if (link) link.style.display = visible ? "" : "none";
+  }
+
+  function signOut() {
+    const base = CHAT_APP_URL.replace(/\/$/, "");
+    fetch(`${base}/api/v1/auths/signout`, { method: "POST", credentials: "include" })
+      .catch(() => {})
+      .then(() => {
+        sessionStorage.removeItem(STORAGE_OPEN);
+        setSignOutVisible(false);
+        location.href = `${base}/auth`;
+      });
+  }
+
+  function wireSignOut() {
+    const link = document.getElementById("sign-out-link");
+    if (!link || link.dataset.signOutWired) return;
+    link.dataset.signOutWired = "1";
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      signOut();
+    });
   }
 
   function ensureFrameLoaded(panel) {
@@ -280,4 +312,5 @@
 
   window.PSChatPanel = { open: openPanel, close: closePanel, toggle: togglePanel, isOpen, deepDive, deepDivePrompt };
   window.initChatPanel = initChatPanel;
+  window.wireSignOut = wireSignOut;
 })();

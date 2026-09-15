@@ -18,3 +18,15 @@ drops any stray extra `#chat-panel` nodes instead of building yet another one. A
 `tooling/qa/fixes_tests/test_t2_chat_panel_single_header.py` (3 tests, checks all three guards are
 present in the source). Checked with `bash tooling/qa/check-fixes.sh` (63 tests pass, design check
 0 problems). Commit: see git log.
+
+## T3 Sign-out button — done
+Added a "Sign out" link to the shared sidebar shell (`site/js/app.js`'s `renderShell()`), next
+to Privacy, hidden by default. `site/js/chat-panel.js` now shows/hides it using the same
+sign-in check it already does for the chat panel's sign-in card (`checkAuth()`): hidden locally
+(chat app auth off) and hidden until someone is actually signed in live. Clicking it posts to
+the chat app's `/api/v1/auths/signout`, clears the panel's local session flag, and sends the
+browser to the chat app's `/auth` sign-in page. Added
+`tooling/qa/fixes_tests/test_t3_sign_out.py` (5 tests: link present on all 5 app pages, hidden
+by default, calls the right sign-out endpoint and lands on `/auth`, only shown once signed in,
+wiring doesn't double-bind). Checked with `bash tooling/qa/check-fixes.sh` (68 tests pass,
+design check 0 problems). Commit: see git log.
