@@ -65,7 +65,7 @@ Open: http://localhost:8765/index.html
   blue states: put them in a small white pill with navy text, or offset them; keep them readable on phone.
 
 ### Part B: the chat
-- [ ] **B1 No more "PropertyStack" in chat sources.** Rename the label to "CraneSignal lead ranking"
+- [x] **B1 No more "PropertyStack" in chat sources.** Rename the label to "CraneSignal lead ranking"
   in `chatbot/hermes-profile/plugins/propertystack/__init__.py`, the `query-propertystack` SKILL.md
   table and anywhere else in `chatbot/` a user could see it (SOUL.md, proxy.py messages, the
   sign-in popup title "CraneSignal (Open WebUI)" → "CraneSignal"). Test: grep of user-facing

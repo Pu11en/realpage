@@ -59,3 +59,10 @@
 - site/js/map.js layoutLabels() sizes label text (~12px on screen) and the dot to the drawn map width and refits the pill on resize, so on a phone the labels stay readable (before they shrank to ~5px) and dots are easier to tap.
 - Test: tooling/qa/fixes_tests/test_a9_map_labels.py.
 - Checked: check-fixes.sh passes (23 tests, design 0 problems); browser at 1280 wide and phone 390 wide (mobile/touch): pills readable, no sideways scroll, no page errors.
+
+## B1 No more "PropertyStack" in chat sources — done (dff4f4c)
+- Chat Sources now say "CraneSignal lead ranking" (plugin SOURCE_NAMES and the query-propertystack SKILL.md table); tool descriptions and the skill description say CraneSignal. Internal names (plugin/skill/toolset ids, hermes-agent) unchanged.
+- proxy.py: no user-facing message had the old names; only its top docstring changed. SOUL.md only mentions the names in its "never say" rule, left as is.
+- Sign-in popup: Open WebUI adds " (Open WebUI)" to WEBUI_NAME itself. webui.Dockerfile (Railway) patches that line out (checked against the real image: env.py line becomes pass); branding/loader.js also strips it from the page title and text, covering the local compose.
+- ⚠️ For D1 report: the Open WebUI license only allows removing its name while we have 50 or fewer users in any 30 days; beyond that, restore it or buy their enterprise license. Takes effect live only after the chat app is redeployed (Drew).
+- Test: tooling/qa/fixes_tests/test_b1_chat_names.py. Checked: check-fixes.sh passes (28 tests, design 0 problems); chatbot/tests 35 passed.
