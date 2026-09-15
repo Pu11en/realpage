@@ -506,6 +506,25 @@ class _SseBolder:
         return out + self._flush_text()
 
 
+# What people see in the chat's model picker, and the engine's real model name behind it.
+PUBLIC_MODEL_ID = "propertystack-agent"
+PUBLIC_MODEL_NAME = "PropertyStack Agent"
+ENGINE_MODEL_ID = "hermes-agent"
+
+
+def _public_models(data: dict) -> dict:
+    """Show the engine's model as "PropertyStack Agent" (never "hermes-agent")."""
+    for m in data.get("data", []) if isinstance(data, dict) else []:
+        if m.get("id") == ENGINE_MODEL_ID:
+            m["id"] = PUBLIC_MODEL_ID
+            m["name"] = PUBLIC_MODEL_NAME
+            if m.get("root") == ENGINE_MODEL_ID:
+                m["root"] = PUBLIC_MODEL_ID
+            if "owned_by" in m:
+                m["owned_by"] = "propertystack"
+    return data
+
+
 def _gateway_auth_ok(request: web.Request) -> bool:
     return request.headers.get("Authorization", "") == f"Bearer {HERMES_KEY}"
 
@@ -517,7 +536,7 @@ async def gateway_models(request: web.Request) -> web.StreamResponse:
     async with aiohttp.ClientSession(timeout=aiohttp.ClientTimeout(total=10)) as s:
         async with s.get(f"{HERMES_BASE}/models", headers=dict(request.headers)) as r:
             data = await r.json(content_type=None)
-            return web.json_response(data, status=r.status)
+            return web.json_response(_public_models(data), status=r.status)
 
 
 async def gateway_chat(request: web.Request) -> web.StreamResponse:
@@ -533,6 +552,8 @@ async def gateway_chat(request: web.Request) -> web.StreamResponse:
         body = await request.json()
     except Exception:
         return web.json_response({"error": "bad json"}, status=400)
+    if body.get("model") == PUBLIC_MODEL_ID:
+        body["model"] = ENGINE_MODEL_ID
     email = request.headers.get("X-Openwebui-User-Email", "").strip().lower()
     blocked = await _gateway_check(email)
     if blocked:

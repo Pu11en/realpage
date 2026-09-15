@@ -45,7 +45,7 @@ services:
       GOOGLE_CLIENT_SECRET: ${GOOGLE_CLIENT_SECRET:-}
       GOOGLE_REDIRECT_URI: ${GOOGLE_REDIRECT_URI:-http://localhost:3000/oauth/google/callback}
       DEFAULT_USER_ROLE: user
-      DEFAULT_MODELS: hermes-agent
+      DEFAULT_MODELS: propertystack-agent
       DEFAULT_PROMPT_SUGGESTIONS: >-
         [{"title": ["Which vendor", "runs the most buildings?"], "content": "Which vendor runs the most buildings?"},
          {"title": ["What software", "has the highest satisfaction score?"], "content": "What software has the highest satisfaction score?"},
