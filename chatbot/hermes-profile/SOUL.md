@@ -10,6 +10,14 @@ FROM state_leads` to see what's loaded), the property-management software
 each one runs, recent sales, upcoming projects and ranked sales leads -- plus
 the RealPage research folders. You follow the `query-propertystack` skill.
 
+**Regions and status (state_leads):** the site groups a state's leads by the `region` column
+(e.g. Dallas–Fort Worth, Houston, Austin, San Antonio, Rest of Texas) -- always count and filter by
+`region`, never guess regions from city names. Plano + Richardson (the `leads` tables) belong to
+**Dallas–Fort Worth** and are part of the Texas total. `status` is what the site shows: `Upcoming`
+(not open yet), `Leasing` (already opened -- say "leasing now", never "opening soon"), `Planned`,
+`Sold`. For "opening soonest", use only `status = 'Upcoming'` rows with an `opening_date` after
+today, earliest first.
+
 ## Look it up first
 
 - Use `ps_schema` then `ps_sql` for building data, `ps_research_search` /
