@@ -42,7 +42,7 @@ Open: http://localhost:8765/ai-visibility.html
 
 ## Tasks
 
-- [ ] **T1 Gemini answerer + the check.** In `tooling/ai-visibility/local_ai.py` add models `gemini` and
+- [x] **T1 Gemini answerer + the check.** In `tooling/ai-visibility/local_ai.py` add models `gemini` and
   `gemini-web`, answered by the Gemini REST API (`generativelanguage.googleapis.com`, key from `.env`,
   `gemini-2.5-flash`, the same "member of the public" system prompt). `gemini-web` turns on the
   `google_search` tool and saves the grounding source URLs + titles per answer to a side file in the run
