@@ -17,6 +17,6 @@ Gemini is the only AI for now (Claude/Codex plans are used up until later in Sep
 
 Part 1 (`PLAN-realpage-site-library.md`: crawl realpage.com + page index, no AI) was started as a
 go-work loop on 2026-09-15. When Drew says he's ready for the Gemini step (any wording, e.g. "ready to
-finish the RealPage library", "do the Gemini run now"): check part 1 is fully ticked, then start a
+finish the RealPage library", "do the Gemini run now"): check part 1 is fully ticked and the shipcheck chatbot fixes (source-naming rule in SOUL.md) are merged, then start a
 go-work loop on `PLAN-realpage-site-library-part2.md` (T5-T8: ~60-100 free Gemini calls for product
 cards + key facts, then local chat hookup and test). Gemini use for that plan is pre-approved by Drew.
