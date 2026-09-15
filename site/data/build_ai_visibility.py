@@ -8,6 +8,9 @@ are not added to the run history.
 Every real run is also saved as site/data/ai-visibility-history/<date>.json (one small summary per
 AI) and listed in index.json, so the tab can draw trend lines. --baseline only adds the run to the
 history, with that label, and leaves ai-visibility.json alone.
+Each history file also holds the run's lawsuit data (ai_visibility_lawsuit.py): quotes, tone and the
+websites Gemini + Google Search quoted. Real runs label tone with one Gemini call per mention; --baseline,
+--demo and --word-tone use the free word list instead.
 """
 
 from __future__ import annotations
@@ -16,6 +19,9 @@ import json
 import re
 import sys
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import ai_visibility_lawsuit as lawsuit  # noqa: E402
 
 OUT = Path(__file__).with_name("ai-visibility.json")
 HISTORY = Path(__file__).with_name("ai-visibility-history")
@@ -104,7 +110,7 @@ def build(report: dict, demo: bool) -> dict:
     ok = [q for q in questions if q["status"] == "completed"]
     unbranded = [q for q in ok if not q["namesBrand"]]
     branded = [q for q in ok if q["namesBrand"]]
-    lawsuit = [q for q in branded if q["bringsUpLawsuit"]]
+    lawsuit_qs = [q for q in branded if q["bringsUpLawsuit"]]
     missed = sorted({q["question"] for q in unbranded if not q["mentioned"]})
     wins: dict[str, int] = {}
     for q in unbranded:
@@ -133,7 +139,7 @@ def build(report: dict, demo: bool) -> dict:
             "unbrandedNamedPct": _share(sum(q["mentioned"] for q in unbranded), len(unbranded)),
             "unbrandedTopPickPct": _share(sum(q["winner"] == target for q in unbranded), len(unbranded)),
             "brandedAnswers": len(branded),
-            "lawsuitPct": _share(len(lawsuit), len(branded)),
+            "lawsuitPct": _share(len(lawsuit_qs), len(branded)),
             "negativePct": _share(sum(q["sentiment"] == "negative" for q in ok if q["mentioned"]),
                                   sum(q["mentioned"] for q in ok)),
             "topPicks": sorted(({"name": k, "count": v} for k, v in wins.items()), key=lambda w: -w["count"]),
@@ -169,7 +175,7 @@ HISTORY_FIELDS = ("model", "name", "answers", "failed", "mentionPct", "unbranded
                   "firstPct", "lawsuitPct", "missedQuestions", "topPicks")
 
 
-def history_entry(data: dict, label: str = "", baseline: bool = False) -> dict:
+def history_entry(data: dict, label: str = "", baseline: bool = False, lawsuit_data: dict | None = None) -> dict:
     """One run's small summary for the trend lines: per AI numbers, never full answers."""
     date = (data.get("generatedAt") or "")[:10]
     return {
@@ -179,7 +185,19 @@ def history_entry(data: dict, label: str = "", baseline: bool = False) -> dict:
         "baseline": baseline,
         "target": data["target"],
         "models": [{k: m.get(k) for k in HISTORY_FIELDS} for m in data["models"]],
+        "lawsuit": lawsuit_data,
     }
+
+
+def previous_entry(date: str, folder: Path | None = None) -> dict | None:
+    """The newest earlier non-baseline run that has lawsuit data (for the leaderboard's up/down)."""
+    folder = folder or HISTORY
+    for f in sorted(folder.glob("????-??-??.json"), reverse=True):
+        if f.stem < date:
+            e = json.loads(f.read_text())
+            if not e.get("baseline") and e.get("lawsuit"):
+                return e
+    return None
 
 
 def save_history(entry: dict, folder: Path | None = None) -> Path:
@@ -211,14 +229,21 @@ def main(argv: list[str]) -> None:
     if src.is_dir():
         src = src / "report.json"
     demo = "--demo" in argv
-    data = build(json.loads(src.read_text()), demo=demo)
+    report = json.loads(src.read_text())
+    data = build(report, demo=demo)
+    names = {m["model"]: m["name"] for m in data["models"]}
     if baseline:
-        print(f"Saved baseline {save_history(history_entry(data, label, baseline=True))}")
+        found = lawsuit.lawsuit_data(report, src.parent, None, None, names)
+        print(f"Saved baseline {save_history(history_entry(data, label, baseline=True, lawsuit_data=found))}")
         return
     OUT.write_text(json.dumps(data, indent=1))
     print(f"Wrote {OUT} ({len(data['models'])} AIs, {len(data['questions'])} answers)")
     if not demo:
-        print(f"Saved history {save_history(history_entry(data))}")
+        ask = None if "--word-tone" in argv else lawsuit.gemini_tone
+        prev = previous_entry((data.get("generatedAt") or "")[:10])
+        found = lawsuit.lawsuit_data(report, src.parent, ask, prev, names)
+        print(f"Lawsuit: {len(found['mentions'])} mentions, {len(found['sources'])} websites")
+        print(f"Saved history {save_history(history_entry(data, lawsuit_data=found))}")
 
 
 if __name__ == "__main__":

@@ -1,0 +1,69 @@
+{
+ "generatedAt": "2026-09-21T12:00:00.000Z",
+ "audit": {
+  "target": {
+   "name": "RealPage",
+   "domain": "realpage.com"
+  },
+  "runs": [
+   {
+    "id": "gemini-q01",
+    "model": "gemini",
+    "prompt": {
+     "id": "q01",
+     "text": "Is RealPage a good company to work with?",
+     "targetIncluded": true
+    },
+    "result": {
+     "text": "RealPage is a large vendor. It faced a **DOJ antitrust lawsuit** accusing it of price-fixing rents! Many landlords still use it."
+    }
+   },
+   {
+    "id": "gemini-q02",
+    "model": "gemini",
+    "prompt": {
+     "id": "q02",
+     "text": "What is the best revenue management software for apartments?",
+     "targetIncluded": false
+    },
+    "result": {
+     "text": "Yardi and RealPage both offer revenue management."
+    }
+   },
+   {
+    "id": "gemini-web-q01",
+    "model": "gemini-web",
+    "prompt": {
+     "id": "q01",
+     "text": "Is RealPage a good company to work with?",
+     "targetIncluded": true
+    },
+    "result": {
+     "text": "RealPage is widely used.\nIn 2025 it settled the DOJ case and agreed to change its software."
+    }
+   },
+   {
+    "id": "gemini-web-q03",
+    "model": "gemini-web",
+    "prompt": {
+     "id": "q03",
+     "text": "Is RealPage legit?",
+     "targetIncluded": true
+    },
+    "result": {
+     "text": "Yes. RealPage has been named in an antitrust lawsuit by the Department of Justice."
+    }
+   },
+   {
+    "id": "gemini-web-q02",
+    "model": "gemini-web",
+    "prompt": {
+     "id": "q02",
+     "text": "What is the best revenue management software for apartments?",
+     "targetIncluded": false
+    },
+    "result": null
+   }
+  ]
+ }
+}

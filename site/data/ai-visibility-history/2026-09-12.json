@@ -100,5 +100,159 @@
     }
    ]
   }
- ]
+ ],
+ "lawsuit": {
+  "mentions": [
+   {
+    "model": "claude",
+    "name": "Claude (from memory)",
+    "question": "How does RealPage compare to Yardi for multifamily property management?",
+    "namesBrand": true,
+    "sentences": [
+     "| Pricing/antitrust scrutiny | RealPage has faced significant legal/regulatory scrutiny over algorithmic rent-pricing practices (DOJ lawsuit, state AG actions) | Yardi has not faced comparable scrutiny |",
+     "- Legal/regulatory exposure: Some owners/operators have shifted away from RealPage's revenue management specifically due to the ongoing antitrust litigation regarding alleged rent-price coordination via algorithmic pricing \u2014 worth checking current status if this is a factor in your decision."
+    ],
+    "tone": "harsh",
+    "toneBy": "words",
+    "sources": []
+   },
+   {
+    "model": "claude-web",
+    "name": "Claude + web search",
+    "question": "How does RealPage compare to Yardi for multifamily property management?",
+    "namesBrand": true,
+    "sentences": [
+     "- The DOJ settled its antitrust case against RealPage in late 2025, requiring RealPage to stop sharing non-public market/pricing data in meetings, accept a court-appointed compliance monitor, and submit an antitrust compliance policy.",
+     "This means if you're evaluating RealPage specifically for its pricing-algorithm capabilities, you should factor in jurisdiction-specific legal restrictions and the compliance overhead from the DOJ settlement \u2014 something Yardi's revenue management tools face less scrutiny around, though Yardi also offers its own algorithmic pricing product (RENTmaximizer) that could face similar restrictions depending on locale.",
+     "- [DOJ Settles Its Algorithmic Price-Fixing Case Against RealPage \u2014 Wilson Sonsini](https://www.wsgr.com/en/insights/doj-settles-its-algorithmic-price-fixing-case-against-realpage.html)",
+     "- [RealPage, Greystar, Other Landlords Agree to Settlement in DOJ Antitrust Lawsuit](https://masslandlords.net/realpage-greystar-other-landlords-agree-to-settlement-in-doj-antitrust-lawsuit/)",
+     "- [The Uncertain Fate of Algorithmic Pricing \u2014 Patterson Belknap](https://www.pbwt.com/publications/the-uncertain-fate-of-algorithmic-pricing-realpages-legal-battles-continue-with-antitrust-settlements-and-a-preliminary-injunction)",
+     "\u2014 DOJ](https://www.justice.gov/atr/case/us-and-plaintiff-states-v-realpage-inc)"
+    ],
+    "tone": "settled",
+    "toneBy": "words",
+    "sources": []
+   },
+   {
+    "model": "claude-web",
+    "name": "Claude + web search",
+    "question": "Which is better for a small property management company: RealPage or AppFolio?",
+    "namesBrand": true,
+    "sentences": [
+     "- Has faced antitrust scrutiny (DOJ lawsuit over its revenue management/pricing algorithm allegedly enabling rent-fixing among landlords), which is a reputational consideration"
+    ],
+    "tone": "harsh",
+    "toneBy": "words",
+    "sources": []
+   },
+   {
+    "model": "claude",
+    "name": "Claude (from memory)",
+    "question": "What products and services does RealPage offer for real estate operators?",
+    "namesBrand": true,
+    "sentences": [
+     "- AI/algorithmic pricing tools (e.g., YieldStar/AI Revenue Management) that recommend rents based on market data \u2014 this segment has drawn significant regulatory and legal scrutiny (DOJ and state AG lawsuits allege it facilitates rent-fixing/collusion among landlords)"
+    ],
+    "tone": "harsh",
+    "toneBy": "words",
+    "sources": []
+   },
+   {
+    "model": "claude",
+    "name": "Claude (from memory)",
+    "question": "What tools do property owners use to set optimal rent pricing using market data and analytics?",
+    "namesBrand": false,
+    "sentences": [
+     "- RealPage AI Revenue Management (formerly YieldStar) \u2013 widely used by institutional multifamily owners (note: this has faced antitrust scrutiny over algorithmic price coordination allegations)"
+    ],
+    "tone": "harsh",
+    "toneBy": "words",
+    "sources": []
+   },
+   {
+    "model": "claude",
+    "name": "Claude (from memory)",
+    "question": "What is the best apartment property management software for large multifamily portfolios?",
+    "namesBrand": false,
+    "sentences": [
+     "Note: RealPage has faced antitrust litigation/scrutiny over its pricing algorithm (AI Revenue Management), so some owners are re-evaluating vendor concentration.",
+     "- RealPage if you're already leveraging their revenue management tools and want the deepest feature set (weigh the antitrust exposure)."
+    ],
+    "tone": "neutral",
+    "toneBy": "words",
+    "sources": []
+   },
+   {
+    "model": "claude",
+    "name": "Claude (from memory)",
+    "question": "How does RealPage compare to Yardi for enterprise property management?",
+    "namesBrand": true,
+    "sentences": [
+     "- Revenue management (AI Revenue Management / YieldStar) is widely considered the strongest in the industry for dynamic pricing\u2014though it's also been at the center of antitrust litigation over alleged rent-setting collusion",
+     "- Ongoing DOJ antitrust lawsuit and multiple state AG suits (as of 2025) over algorithmic pricing practices could affect long-term product decisions or usage in certain markets",
+     "- Choose RealPage if aggressive, data-driven revenue/pricing optimization is your top priority and you're primarily multifamily-focused (factor in the legal/reputational risk from antitrust scrutiny)"
+    ],
+    "tone": "harsh",
+    "toneBy": "words",
+    "sources": []
+   },
+   {
+    "model": "claude-web",
+    "name": "Claude + web search",
+    "question": "How does RealPage compare to Yardi for enterprise property management?",
+    "namesBrand": true,
+    "sentences": [
+     "- California's AB 325, effective January 2026, bans AI-driven rent-pricing algorithms that facilitate collusion \u2014 with similar laws now in New York, New Jersey, and eight cities.",
+     "- RealPage and several major landlord clients (Equity Residential, Camden, MAA, Greystar, etc.) have agreed to ~$360 million in class-action settlements (as of 2026) over allegations that YieldStar facilitated rent price-fixing between 2018\u20132025.",
+     "- [Apartment owners to pay $218M in second batch of RealPage settlements](https://www.multifamilydive.com/news/realpage-settlement-algorithmic-pricing/820745/)",
+     "- [$359.9M RealPage antitrust class action settlement](https://topclassactions.com/lawsuit-settlements/open-lawsuit-settlements/359-9m-realpage-antitrust-class-action-settlement/)",
+     "- [RealPage Lawsuit 2026: Rent Fixing Case Updates](https://lawhighlights.com/realpage-lawsuit/)"
+    ],
+    "tone": "settled",
+    "toneBy": "words",
+    "sources": []
+   },
+   {
+    "model": "claude-web",
+    "name": "Claude + web search",
+    "question": "What are some alternatives to RealPage for property management software?",
+    "namesBrand": true,
+    "sentences": [
+     "- Antitrust concerns \u2013 note that RealPage has faced DOJ litigation over its pricing algorithm's alleged role in rent-fixing, which has pushed some property managers toward alternatives like Yardi or AppFolio."
+    ],
+    "tone": "harsh",
+    "toneBy": "words",
+    "sources": []
+   },
+   {
+    "model": "claude-web",
+    "name": "Claude + web search",
+    "question": "Which is better for resident screening: RealPage, Entrata, or Appfolio?",
+    "namesBrand": true,
+    "sentences": [
+     "- Caution: RealPage has a track record of regulatory trouble tied to screening accuracy \u2014 it paid a $3M FTC settlement over faulty criminal-background matching (false-positive matches based on loose name/DOB matching) that wrongly flagged applicants as having criminal records.",
+     "It's also currently facing separate DOJ/state antitrust scrutiny over its rent-pricing algorithm (a different product line, but it's worth knowing when evaluating the company overall).",
+     "- [$3 million FCRA settlement puts tenant background screening at the forefront - FTC](https://www.ftc.gov/business-guidance/blog/2018/10/3-million-fcra-settlement-puts-tenant-background-screening-forefront)",
+     "- [RealPage FTC Settlement Statement](https://www.realpage.com/news/realpage-ftc-settlement-statement/)"
+    ],
+    "tone": "settled",
+    "toneBy": "words",
+    "sources": []
+   }
+  ],
+  "toneMix": {
+   "claude": {
+    "harsh": 4,
+    "neutral": 1,
+    "settled": 0
+   },
+   "claude-web": {
+    "harsh": 2,
+    "neutral": 0,
+    "settled": 3
+   }
+  },
+  "sources": [],
+  "comparedWith": null
+ }
 }

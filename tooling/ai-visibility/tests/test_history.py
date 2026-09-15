@@ -7,6 +7,11 @@ from pathlib import Path
 REPO = Path(__file__).resolve().parents[3]
 sys.path.insert(0, str(REPO / "site" / "data"))
 import build_ai_visibility as bav  # noqa: E402
+import pytest  # noqa: E402
+
+@pytest.fixture(autouse=True)
+def no_gemini(monkeypatch):
+    monkeypatch.setattr(bav.lawsuit, "gemini_tone", lambda text: "neutral")
 
 REPORT = json.loads((REPO / "tooling/ai-visibility/fixtures/report-gemini.json").read_text())
 
