@@ -76,7 +76,7 @@ Open: http://localhost:8765/index.html
   Dallas–Fort Worth?" = 320 (don't run it). Offline test: the chat's SQL for DFW returns 320.
 - [x] **B3 Vendor answers say their scope.** "Which vendor runs the most buildings?" must say which
   area the software data covers (today only Plano and Richardson). Fix in SOUL.md or the skill.
-- [ ] **B4 Saved deep dives are free.** In `chatbot/proxy.py` `gateway_chat`, serve a saved
+- [x] **B4 Saved deep dives are free.** In `chatbot/proxy.py` `gateway_chat`, serve a saved
   deep-dive replay before `_free_take`, so replays don't use one of the 3 weekly deep dives.
 
 ### Part C: lead data (merge with Texas cleanup; rebuild after each)

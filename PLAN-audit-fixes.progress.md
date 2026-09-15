@@ -83,3 +83,9 @@
 - Test: tooling/qa/fixes_tests/test_b3_vendor_scope.py (also checks the rule stays true in the data).
 - Checked: check-fixes.sh passes (34 tests, design 0 problems); chatbot/tests 35 passed.
 - Left: live chat picks this up only after redeploy (Drew).
+
+## B4 Saved deep dives are free — done (8618b26)
+- proxy.py gateway_chat: a saved deep-dive replay is served before _free_take, so it uses neither a daily question nor a weekly deep dive. "Fresh deep dive" / ↻ redos still count.
+- chatbot/tests/test_usage_limits.py: test_replayed_deep_dive_counts replaced by test_replayed_deep_dive_is_free (5 replays free, 2 more fresh dives allowed, then the limit).
+- Checked: chatbot/tests 35 passed; check-fixes.sh passes (34 tests, design 0 problems).
+- Left: live chat picks this up only after redeploy (Drew).
