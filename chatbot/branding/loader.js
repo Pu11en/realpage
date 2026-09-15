@@ -133,3 +133,23 @@
   clean();
   new MutationObserver(clean).observe(document.documentElement, { childList: true, subtree: true, characterData: true });
 })();
+
+// One-tap "🔍 Find contact" links in answers: the agent writes
+// [🔍 Find contact](#ask:Deep dive on <name>, <city>). A click sends that text as the
+// next message. Open WebUI 0.11 accepts {type:"input:prompt:submit"} from its own window
+// (same origin) and submits it at once; no page jump, no new tab.
+(function () {
+  var send = function (text) {
+    window.postMessage({ type: "input:prompt:submit", text: text }, location.origin);
+  };
+  document.addEventListener("click", function (ev) {
+    var a = ev.target && ev.target.closest ? ev.target.closest('a[href^="#ask:"]') : null;
+    if (!a) return;
+    ev.preventDefault(); ev.stopPropagation();
+    var text = "";
+    try { text = decodeURIComponent(a.getAttribute("href").slice(5)); }
+    catch (e) { text = a.getAttribute("href").slice(5); }
+    text = text.trim();
+    if (text) send(text);
+  }, true);
+})();
