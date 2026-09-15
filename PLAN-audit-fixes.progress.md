@@ -53,3 +53,9 @@
 - Landing footer (business/marketing/landing/index.html, its own repo) links to https://app.cranesignal.com/privacy.html; committed there (9b5b29f).
 - ⚠️ No contact email exists on the landing page, so the page says CONTACT_EMAIL_TBD: Drew must pick one (for D1 report).
 - Test: tooling/qa/fixes_tests/test_a8_privacy.py. Checked: check-fixes.sh passes (21 tests, design 0 problems).
+
+## A9 Map labels easier to read — done (e6277c2)
+- Each state label ("TX · 628 leads") now sits in a small white pill with navy text and a soft shadow, above its amber dot, so it no longer sits on dark blue.
+- site/js/map.js layoutLabels() sizes label text (~12px on screen) and the dot to the drawn map width and refits the pill on resize, so on a phone the labels stay readable (before they shrank to ~5px) and dots are easier to tap.
+- Test: tooling/qa/fixes_tests/test_a9_map_labels.py.
+- Checked: check-fixes.sh passes (23 tests, design 0 problems); browser at 1280 wide and phone 390 wide (mobile/touch): pills readable, no sideways scroll, no page errors.

@@ -61,7 +61,7 @@ Open: http://localhost:8765/index.html
   sign-up next to Google sign-in, what we store (email, chat history, sign-ups) and a contact line
   using the address already on the landing page (if none, write `CONTACT_EMAIL_TBD` and flag it).
 
-- [ ] **A9 Map labels easier to read.** State labels ("TX · 628 leads") no longer sit right on dark
+- [x] **A9 Map labels easier to read.** State labels ("TX · 628 leads") no longer sit right on dark
   blue states: put them in a small white pill with navy text, or offset them; keep them readable on phone.
 
 ### Part B: the chat
