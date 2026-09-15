@@ -26,7 +26,7 @@ QUESTIONS = [
     "Which vendor runs the most buildings?",
 ]
 # Questions whose answer must contain this number (same as the site shows).
-EXPECT_NUMBER = {"How many leads in Dallas–Fort Worth?": "320"}
+EXPECT_NUMBER = {"How many leads in Dallas–Fort Worth?": "311"}
 # Questions whose answer must name the area the data covers.
 EXPECT_SCOPE = {"Which vendor runs the most buildings?": ["plano", "richardson"]}
 MAX_WORDS = 60

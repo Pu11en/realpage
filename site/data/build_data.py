@@ -478,7 +478,10 @@ def _clean_why(why: str) -> str:
     return re.sub(r"\s{2,}", " ", _URL_BITS_RE.sub("", why or "")).strip(" ·")
 
 
-_GENERIC_NAMES = {"building permit", "apartments (3+ dwelling units)", "new construction", "apartments"}
+_GENERIC_NAMES = {
+    "building permit", "apartments (3+ dwelling units)", "new construction", "apartments",
+    "multi-family dwelling", "commercial multi-family", "multifamily", "unnamed project",
+}
 _DICT_URL_RE = re.compile(r"""^\{'url': '([^']+)'\}$""")
 
 
@@ -489,10 +492,25 @@ def _plain_url(s: str) -> str:
 
 
 def _nice_name(name: str, address: str = "") -> str:
-    """ALL-CAPS names read as shouting; a generic permit label isn't a name."""
-    if name and name.strip().lower() in _GENERIC_NAMES:
-        name = address or name
+    """ALL-CAPS names read as shouting; a generic permit label isn't a name --
+    call it "Apartments at <address>" when there is one."""
+    if (name or "").strip().lower() in _GENERIC_NAMES:
+        return f"Apartments at {address.title()}" if address else "Unnamed project"
     return name.title() if name and name.isupper() else name
+
+
+_UNITS_TEXT_RE = re.compile(r"(\d{1,4})\s*[- ]\s*units?\b", re.I)
+
+
+def _area_units(record) -> int | None:
+    """The site shows "?" for unknown units. A source's 0 means "not recorded"
+    (e.g. a permit feed's units_added column), never an empty building, so treat
+    0 like a blank; a few records still carry their count in saved text ("8 UNIT
+    ..."), so use that when present."""
+    if record.units and record.units > 0:
+        return record.units
+    m = _UNITS_TEXT_RE.search(f"{record.name} {record.why}")
+    return int(m.group(1)) if m else None
 
 
 def _is_leasing(record) -> bool:
@@ -526,7 +544,7 @@ def _area_lead_dict(record, idx: int, total: int = 34) -> dict:
         "community": record.name or None,
         "city": record.city,
         "address": record.address or None,
-        "units": record.units,
+        "units": _area_units(record),
         "stage": record.stage,
         "permitDate": record.permit_date or None,
         "openingDate": record.opening_date or None,
@@ -563,6 +581,9 @@ def build_area(slug: str) -> dict:
     records = [LeadRecord.from_dict(d) for d in raw]
     # permits already saved before the lead finder learned to skip them
     records = [r for r in records if not is_junk_permit(r.name)]
+    # one row per building: same-name duplicates merged, phases labeled (C2)
+    from dedupe_leads import dedupe_leads  # noqa: E402
+    records = dedupe_leads(records)
     ranked = sorted(score_and_rank(records), key=_area_sort_key)
 
     leads = [_area_lead_dict(r, i, len(ranked)) for i, r in enumerate(ranked, start=1)]

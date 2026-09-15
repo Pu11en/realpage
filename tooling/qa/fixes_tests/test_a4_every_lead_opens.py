@@ -32,7 +32,7 @@ def test_every_built_lead_id_is_found():
         data = json.loads((ROOT / "site" / a["dataPath"]).read_text(encoding="utf-8"))
         files.append({"slug": a["slug"], "label": a["label"], "leads": data["leads"]})
     wanted = [l.get("propertyId") or l["id"] for f in files for l in f["leads"]]
-    assert len(wanted) > 900
+    assert len(wanted) > 850
     app = (ROOT / "site/js/app.js").read_text(encoding="utf-8")
     fn = "function pickLead" + app.split("function pickLead", 1)[1].split("async function findLead", 1)[0]
     script = fn + "\nconst {files, ids} = JSON.parse(require('fs').readFileSync(0, 'utf8'));\n" \

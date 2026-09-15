@@ -27,7 +27,7 @@ Open: http://localhost:8765/index.html
 ## How to try it (30 seconds)
 1. Open Early Leads on your phone: it fits the screen, pick a Region and the number boxes change.
 2. Click any Texas or Arizona building: it opens a detail page; search "zzzz" shows "Nothing found".
-3. Ask the chat "How many leads in Dallas–Fort Worth?": it says 320 and names CraneSignal as the source.
+3. Ask the chat "How many leads in Dallas–Fort Worth?": it says 311 and names CraneSignal as the source.
 
 ## Tasks
 
@@ -83,11 +83,11 @@ Open: http://localhost:8765/index.html
 - [x] **C1 Junk permits out.** Lead finder filter drops pool, carport, stair/remodel, repair, roof and
   garage-apartment permits (tx-301, 305, 325, 327, 328, 335, 343). Look at tx-7 and tx-365 and keep
   them only if they are real apartment buildings. Test with those ids.
-- [ ] **C2 Duplicates.** Westdale Hills Apts (Hurst + Euless, 2,141 units, an old complex) is one
+- [x] **C2 Duplicates.** Westdale Hills Apts (Hurst + Euless, 2,141 units, an old complex) is one
   existing building: drop it. For the 17 same-city name pairs, merge true duplicates (same
   address or same permit), keep real phases and label them "Phase 1 / Phase 2". Test: no two rows
   with same name + city unless labeled as phases.
-- [ ] **C3 Units and names.** New York's 0 units become "?". Arizona "Multi-Family Dwelling",
+- [x] **C3 Units and names.** New York's 0 units become "?". Arizona "Multi-Family Dwelling",
   "Commercial Multi-Family" and "Unnamed project" rows get a readable name from their address
   ("Apartments at 1234 E Main St"). Try to fill missing units (124 TX, 80 AZ) from data already
   saved in the source records; leave "?" when there's nothing.

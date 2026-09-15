@@ -96,3 +96,20 @@
 - Rebuilt: Texas 628 -> 621 leads (DFW still 320; none of the 7 were in DFW). Lead ids are by rank, so Texas ids after the old positions shifted.
 - Test: tooling/qa/fixes_tests/test_c1_junk_permits.py (fails on the old data).
 - Checked: check-fixes.sh passes (36 tests, design 0 problems); lead-finder + permits tests 121 passed; chatbot/tests 35 passed.
+
+## C2 Duplicates — done
+- New shared pass `propertystack/skills/lead-finder/dedupe_leads.py`, applied in `build_data.py` on every rebuild: drops known existing complexes (Westdale Hills in Hurst and Euless), merges same-name same-city records when their base address/street/units match or one is only planned (a funding list) and the other further along, collapses separate building permits at one complex address (7900 Easthaven Blvd, 1415 Enclave Pky, 210 E 7th St), and labels the leftover same-name rows "Phase 1"/"Phase 2" in permit order.
+- All 17 audit pairs resolved: 16 merged into one (keeping the further-along stage and the planned/funding units), Buena Vida Multifamily kept as two real phases (Ringgold St / E Tyler St). Westdale Hills dropped.
+- Rebuilt: Texas 621 -> 597 leads; DFW 320 -> 311 (6 DFW duplicate pairs + Westdale's 2 rows + the Fort Worth Binyon-O'Keefe/Georgian Oaks same-address merge). Arizona 279 and New York 2 unchanged (their "Multi-Family Dwelling"/"Unnamed project" rows are told apart by address; C3 renames them).
+- Updated the numbers C2 moved: check_answers.py DFW expectation 320 -> 311; test_b2_chat_counts.py now asserts DFW matches the site's built metro count instead of a hardcoded 320; test_a4's `> 900` sanity floor lowered to `> 850` (site total is now 878). Plan "How to try it" DFW 320 -> 311.
+- Test: tooling/qa/fixes_tests/test_c2_duplicates.py (no same name+city pair unless phased; Westdale gone; audit pairs right; offline merge/phase rules).
+- Checked: check-fixes.sh passes (40 tests, design 0 problems); check-lead-finder.sh + check-panel.sh clean; lead-finder + chatbot + score-leads tests 341 passed. Re-ran build_data.py and it reproduced the same files (no drift).
+
+## C3 Units and names — done
+- NY's 2 rows had units=0 (Buffalo's `units_added`=0, meaning "not recorded"); `build_data.py`'s new `_area_units` treats 0 like a blank, so both now show "?" instead of "0". No state shows a 0-unit building anywhere.
+- AZ generic permit labels become "Apartments at <address>": 29 "Multi-Family Dwelling" (Scottsdale), 6 "Commercial Multi-Family" (Gilbert), 1 "Multifamily" (Phoenix) and 9 "APARTMENTS" (Scottsdale) — 45 rows now read "Apartments at 4251 N Marshall Wy" etc. ("multifamily" also added to dedupe_leads.GENERIC_NAMES).
+- Units: recovered the one record whose count was already saved in its name ("8 UNIT MULTI-FAMILY APT." → 8 units); the other 79 AZ + 102 TX missing rows still have no unit data in any saved source (their permit layers have no unit field), so they stay "?" — never guessed.
+- ⚠️ 9 "Unnamed project" rows (4 Mesa permits, 5 Maricopa County sales) have no name AND no address in any saved source, so "Apartments at <address>" cannot apply; they stay "Unnamed project". The 5 sold ones carry only LLC buyer/developer names (e.g. "WATERMARK AT PEORIA AZ LLC"), which I did not strip into a project name (no guessing).
+- Rebuilt with build_data.py; deterministic (no drift). Lead counts unchanged: TX 597, AZ 279, NY 2.
+- Test: tooling/qa/fixes_tests/test_c3_units_names.py (no units==0 anywhere; AZ generic labels gone; "Apartments at <address>" prefix matches the address; the "8 UNIT" recovery in both site JSON and chat CSV).
+- Checked: check-fixes.sh passes (44 tests, design 0 problems); check-lead-finder.sh clean; chatbot/tests 35 passed; score-leads/tests 8 passed.

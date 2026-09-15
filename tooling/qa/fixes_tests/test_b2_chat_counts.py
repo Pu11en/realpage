@@ -1,4 +1,4 @@
-"""B2: the chat counts leads like the site -- Texas = site total, Dallas-Fort Worth = 320."""
+"""B2: the chat counts leads like the site -- Texas = site total, Dallas-Fort Worth matches the site."""
 import importlib.util
 import json
 import sys
@@ -39,9 +39,12 @@ def _count(mod, sql):
     return int(out["rows"][0][0])
 
 
-def test_dfw_is_320(tmp_path, monkeypatch):
+def test_dfw_matches_site(tmp_path, monkeypatch):
     mod = _plugin(tmp_path, monkeypatch)
-    assert _count(mod, "SELECT COUNT(*) FROM state_leads WHERE region='Dallas–Fort Worth'") == 320
+    site = json.loads((ROOT / "site/data/areas/tx.json").read_text())
+    dfw = sum(1 for l in site["leads"] if (l.get("metro") or "") == "Dallas–Fort Worth")
+    assert dfw > 300  # Plano-Richardson's 42 are folded into the site's DFW count
+    assert _count(mod, "SELECT COUNT(*) FROM state_leads WHERE region='Dallas–Fort Worth'") == dfw
 
 
 def test_texas_matches_site(tmp_path, monkeypatch):
