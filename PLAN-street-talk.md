@@ -23,6 +23,14 @@ should be merged first -- part 2 needs the Texas leads. Texas buildings = every 
 `propertystack/data/` whose leads are in TX (area-agnostic, no hard-coded area list). No paid AI calls
 anywhere in this plan (the paid `check-answers.sh` is left for Drew to run himself).
 
+AI for the build: same as the planning session (`"harness": "same"`, Drew picked 2026-09-15).
+
+Every live Reddit pull (T2-T4) ends with **ASK Drew**: per-part counts (requests used, posts kept, posts
+dropped and why) and 5 sample posts in plain words. Do not start the next pull until he says OK. A fix Drew
+asks for becomes a new checkbox, never an edit to a running task. The Check tests the saved data too: once
+`site/data/street-talk.json` exists, every post has a reddit.com or youtube.com link, a date, a part, no
+duplicate links, and part 1/3 posts name at least one of the four companies.
+
 Run with: `Do the next unticked task in PLAN-street-talk.md, then tick it and stop.`
 Check: `bash tooling/qa/check-street-talk.sh`
 Try: `bash tooling/dev.sh`
@@ -50,15 +58,15 @@ Open: http://localhost:8765/street-talk.html
   Houston, Austin, San Antonio, Fort Worth, Plano) and in r/PropertyManagement, r/multifamily, r/Dallas,
   r/houston, r/Austin, r/sanantonio, r/texas. Last 12 months. Saves raw results to
   `propertystack/data/street-talk/raw/<date>/rivals.json` (URL, subreddit, title, short excerpt, top 2
-  comment excerpts, score, date). De-duplicate by URL. Test with a fixture. Run it live once. Commit.
+  comment excerpts, score, date). De-duplicate by URL. Test with a fixture. Run it live once (request cap from the safety rules), commit the raw file, then ASK Drew with the counts.
 - [ ] **T3 Part 2 collector: Texas buildings.** `--part buildings` takes the biggest Texas lead buildings
   (every TX area, top 40 by units) and searches Reddit for "<building name> <city>";
   also a YouTube search per building via Agent Reach (title + link, transcript excerpt only if it names the
   building). Keeps a post only if it names the building. Saves `raw/<date>/buildings.json` with the building
-  id attached. Test with a fixture. Run live once. Commit.
+  id attached. Test with a fixture. Run it live once (request cap from the safety rules), commit the raw file, then ASK Drew with the counts.
 - [ ] **T4 Part 3 collector: unhappy rival customers.** `--part unhappy` searches property-manager subreddits
   for Yardi / Entrata / AppFolio with complaint words (switching, leaving, support, hate, migrate, alternative)
-  plus Texas words. Saves `raw/<date>/unhappy.json`. Test with a fixture. Run live once. Commit.
+  plus Texas words. Saves `raw/<date>/unhappy.json`. Test with a fixture. Run it live once (request cap from the safety rules), commit the raw file, then ASK Drew with the counts.
 - [ ] **T5 Labels + the saved tab data.** `tooling/street-talk/build.py` turns the raw files into
   `site/data/street-talk.json` and `propertystack/data/street-talk/street_talk.csv`: each post gets which
   companies it names, happy / angry / mixed (a simple word list, no paid AI), the Texas city if any, the
