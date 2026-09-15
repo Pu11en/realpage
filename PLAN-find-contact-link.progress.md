@@ -10,3 +10,9 @@
 
 ## F1 check fix
 - The bot runs Check without a shell, so `$(ls ...)` broke it. Check now names test_find_contact.py directly (it exists since F1). 47 passed.
+
+## F2 Clickable in the chat — done (commit 985a83a)
+- loader.js (inside Open WebUI): a capture-phase click handler on `a[href^="#ask:"]` decodes the text after `#ask:` and posts `{type:"input:prompt:submit", text}` to its own window. Open WebUI 0.11 (checked in the built JS of ghcr.io/open-webui/open-webui:main) accepts that same-origin and submits it at once. preventDefault + stopPropagation: no page jump, no new tab (Open WebUI renders links with target=_blank). Existing loader behaviour untouched.
+- test_find_contact.py: new test that loader.js has the `a[href^="#ask:"]` handler, uses input:prompt:submit, preventDefault and decodeURIComponent.
+- Check: 48 passed. Also a stand-alone Playwright check (fake page + loader.js): clicking the link posted exactly {type:"input:prompt:submit", text:"Deep dive on The Sherman, Richardson"}, URL unchanged, no new tab.
+- Open: real end-to-end run against the dev stack is F3.
