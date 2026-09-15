@@ -30,7 +30,7 @@ services:
     image: ghcr.io/open-webui/open-webui:main
     depends_on: [chatbot]
     environment:
-      WEBUI_NAME: PropertyStack
+      WEBUI_NAME: CraneSignal
       OPENAI_API_BASE_URL: http://chatbot:8080/v1   # this repo's proxy, not Hermes directly (per-user cap)
       OPENAI_API_KEY: ${HERMES_API_KEY:-local-trial-key-change-me}
       ENABLE_OLLAMA_API: "false"
@@ -45,7 +45,7 @@ services:
       GOOGLE_CLIENT_SECRET: ${GOOGLE_CLIENT_SECRET:-}
       GOOGLE_REDIRECT_URI: ${GOOGLE_REDIRECT_URI:-http://localhost:3000/oauth/google/callback}
       DEFAULT_USER_ROLE: user
-      DEFAULT_MODELS: propertystack-agent
+      DEFAULT_MODELS: hermes-agent
       DEFAULT_PROMPT_SUGGESTIONS: >-
         [{"title": ["Which vendor", "runs the most buildings?"], "content": "Which vendor runs the most buildings?"},
          {"title": ["What software", "has the highest satisfaction score?"], "content": "What software has the highest satisfaction score?"},
