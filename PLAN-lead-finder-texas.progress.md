@@ -464,3 +464,13 @@
 - Left open: none of these 7 recipes are wired into `run.py`'s chain yet
   (that's T6, same as T2's TABS recipe); T4 (Dallas + Houston from
   appraisal-district files) is next.
+
+## Re-check fix after T3 (2026-09-14)
+The plan's check failed after T3 was ticked: a flaky test in test_fetch.py expected
+"blocked 3 times" but sometimes got "blocked 5 times". Root cause: fetch.py's block
+counter increment and skip-message write happened outside a "already skipped" guard,
+so concurrent threads could each overwrite the skip reason with their own higher count
+after the site was already marked skipped. Fixed by only setting the skip reason once
+and always returning the already-stored reason afterward. Ran the flaky test 5x in a
+row plus the full check-lead-finder.sh (all lead-finder* test suites + check-panel.sh) —
+all green. Commit: fix race in fetch block-count skip.
