@@ -1,7 +1,7 @@
 # PropertyStack lead finder: faster, fewer dropped leads, then as much of Texas as possible
 
-Written 2026-09-14 with Drew. **Starts only after `PLAN-lead-finder-fix.md` (the Arizona build) is finished
-and merged, and Drew says "go work".** All rules from `PLAN-lead-finder.md` and `PLAN-lead-finder-fix.md`
+Written 2026-09-14 with Drew. **Starts only when Drew says "go work"** (the Arizona fix build is merged; AZ is on the
+site from the free permit pull, 94 leads). All rules from `PLAN-lead-finder.md` and `PLAN-lead-finder-fix.md`
 still apply: area-agnostic code (place specifics only in data recipes), never guess facts, Jina first +
 Brave second (keys in `/home/drewp/main-projects/realpage/.env`, or the build copy's own `.env`; never
 commit), SearXNG banned, **no quality gates** (quality.json is a report only), localhost only, never push.
