@@ -17,6 +17,9 @@ NEWS = "https://communityimpact.com/richardson/housing-real-estate/sherman-stree
 FAKE = "https://example.com/made-up"
 SEEN = {_norm(NEWS)}
 ASK = "[🔍 Find contact](#ask:Deep dive on The Sherman, Richardson)"
+# What leaves the proxy: the address URL-encoded so Markdown renders it as a link
+# (an address with spaces is shown as raw text by Open WebUI). loader.js decodes it.
+ASK_OUT = "[🔍 Find contact](#ask:Deep%20dive%20on%20The%20Sherman%2C%20Richardson)"
 
 
 def test_soul_uses_find_contact_link():
@@ -34,22 +37,25 @@ def test_soul_one_web_search_for_top_lead_only():
 
 def test_linkfix_keeps_ask_link():
     line = f"1. **The Sherman**, Richardson -- **300 units**, opening 2027 · {ASK}"
-    assert fix_links(line, SEEN) == line
-    assert finalize_answer(line, SEEN) == line
+    want = line.replace(ASK, ASK_OUT)
+    assert fix_links(line, SEEN) == want
+    assert finalize_answer(line, SEEN) == want
+    # already encoded stays as is (no double encoding)
+    assert fix_links(want, SEEN) == want
 
 
 def test_linkfix_still_strips_fake_link_next_to_ask():
     line = f"2. **Oak Row**, Plano -- **200 units**, sold 2026 · [Website]({FAKE}) · {ASK}"
     out = fix_links(line, SEEN)
     assert FAKE not in out
-    assert ASK in out
+    assert ASK_OUT in out
 
 
 def test_linefixer_stream_keeps_ask_link():
     lf = LineFixer(seen=SEEN)
     line = f"3. **Elm Park**, Frisco -- **150 units** · [News]({NEWS}) · {ASK}"
     out = lf.feed(line[:40]) + lf.feed(line[40:] + "\n") + lf.flush()
-    assert ASK in out and NEWS in out
+    assert ASK_OUT in out and NEWS in out
 
 
 def test_loader_makes_ask_links_clickable():
