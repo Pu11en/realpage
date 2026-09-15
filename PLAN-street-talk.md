@@ -1,4 +1,4 @@
-# PropertyStack: "Street Talk" tab (what Texas people say on Reddit, powered by Agent Reach)
+# CraneSignal: "Street Talk" tab (what Texas people say on Reddit, powered by Agent Reach)
 
 Written 2026-09-14 with Drew. **Starts only when Drew says "go work".** Localhost only, never push.
 Minimal styling (Drew does design himself). **Texas only.** Research notes: `docs/agent-reach-research.md`.
@@ -10,7 +10,7 @@ Drew's answers:
   chmod 600, outside git -- never print, copy or commit them) plus the free no-login Agent Reach parts
   (YouTube transcripts via yt-dlp, web pages via Jina). No X, no LinkedIn.
 - A small "what people are saying" box on the AI Visibility tab links to the new tab.
-- The chat (PropertyStack Agent) can answer from this data.
+- The chat (CraneSignal Agent) can answer from this data.
 - Runs with the weekly Texas refresh. The website only shows saved files; nothing scrapes live on page load.
 
 Reddit safety rules (every task): read-only GET requests, at most 1 request every 3 seconds, at most 80
@@ -18,8 +18,9 @@ Reddit requests per full run, stop on the first 403/429 and keep what was saved.
 account actions. Tests never call Reddit -- they use saved sample files in `tooling/street-talk/fixtures/`.
 Commit after every chunk so a crash never loses collected posts.
 
-Before starting: the Texas lead build (PLAN-lead-finder-texas.md) and the map build (PLAN-map-markers.md)
-should be merged first -- part 2 needs the Texas leads. Texas buildings = every area under
+Prerequisites met (2026-09-15): Texas leads are merged (`propertystack/data/tx/`, 586 chat leads) and the
+map build is done. User-facing name is **CraneSignal** (tab, box, chat answers): never show "PropertyStack"
+or "Hermes" to users; code and folders keep their internal names. Texas buildings = every area under
 `propertystack/data/` whose leads are in TX (area-agnostic, no hard-coded area list). No paid AI calls
 anywhere in this plan (the paid `check-answers.sh` is left for Drew to run himself).
 
