@@ -87,7 +87,11 @@ software, phone numbers.
 🗺️ [Map](<maps url>) · 📄 [Permit](<url>) · 📋 [Agenda](<url>) · 📰 [News](<url>) · 🌐 [Website](<url>)
 ```
 
-No Sources line in a deep dive -- the link row is the sources.
+No Sources line in a deep dive -- the link row is the sources. The link row
+always ends with where our own facts came from, as plain text:
+`· 📂 From: <County property records / Software check / Contact info from building websites>`
+(only the ones you used). This line is required even when the Map is the only
+link, so every deep dive names a source.
 
 A sold building shows `- **Sold:** **<date>**` instead of the Opens line.
 About 60 words, not counting the link row.
