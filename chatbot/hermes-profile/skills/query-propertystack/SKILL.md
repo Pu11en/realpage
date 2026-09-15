@@ -1,6 +1,6 @@
 ---
 name: query-propertystack
-description: "Answer questions about PropertyStack buildings, software, sales, upcoming projects, leads and the RealPage research folders -- read-only, with citations."
+description: "Answer questions about CraneSignal buildings, software, sales, upcoming projects, leads and the RealPage research folders -- read-only, with citations."
 version: 1.0.0
 author: realpage
 platforms: [linux]
@@ -25,9 +25,9 @@ plus the Street Talk posts (`propertystack/data/street-talk/street_talk.csv`) as
 | `sales` | County sales records | 28 recent sales from county deeds |
 | `upcoming` | City permits and news | 14 pipeline projects (permits/news) |
 | `master` | County property records + software check | 1+2+3 joined, one row per building |
-| `leads` | PropertyStack lead ranking | 42 ranked Plano/Richardson leads, score parts + one-sentence `why` |
+| `leads` | CraneSignal lead ranking | 42 ranked Plano/Richardson leads, score parts + one-sentence `why` |
 | `contacts` | Contact info from building websites | Phone/email scraped from websites, where found |
-| `state_leads` | PropertyStack lead ranking | Every other tracked area's leads, one flat row each -- filter with `WHERE area='<slug>'` |
+| `state_leads` | CraneSignal lead ranking | Every other tracked area's leads, one flat row each -- filter with `WHERE area='<slug>'` |
 | `street_talk` | Reddit posts | What Texas people say on Reddit/YouTube: `part` = rivals / buildings / unhappy, `companies` (`LIKE '%Yardi%'`), `sentiment`, `city`, `building_id`, `warm_lead`. Quote briefly and **always link each post's `url`** (the real thread) |
 
 Research files (01-company .. 09-ai-visibility) are searched with

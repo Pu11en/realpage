@@ -71,9 +71,9 @@ SOURCE_NAMES = {
     "sales": "County sales records",
     "upcoming": "City permits and news",
     "master": "County property records + software check",
-    "leads": "PropertyStack lead ranking",
+    "leads": "CraneSignal lead ranking",
     "contacts": "Contact info from building websites",
-    "state_leads": "PropertyStack lead ranking",
+    "state_leads": "CraneSignal lead ranking",
     "street_talk": "Reddit posts",
 }
 
@@ -275,18 +275,18 @@ def register(ctx) -> None:
     _build_db()
     ctx.register_tool(
         name="ps_schema", toolset="propertystack",
-        schema=_schema("ps_schema", "List PropertyStack tables, columns, row counts and the plain source_name for each. Call this first.", {}, []),
-        handler=ps_schema, description="PropertyStack schema",
+        schema=_schema("ps_schema", "List CraneSignal tables, columns, row counts and the plain source_name for each. Call this first.", {}, []),
+        handler=ps_schema, description="CraneSignal schema",
     )
     ctx.register_tool(
         name="ps_sql", toolset="propertystack",
         schema=_schema(
             "ps_sql",
-            "Run ONE read-only SQLite SELECT over the PropertyStack CSV tables (max 200 rows). Writes are rejected.",
+            "Run ONE read-only SQLite SELECT over the CraneSignal CSV tables (max 200 rows). Writes are rejected.",
             {"query": {"type": "string", "description": "A single SELECT statement."}},
             ["query"],
         ),
-        handler=ps_sql, description="PropertyStack read-only SQL",
+        handler=ps_sql, description="CraneSignal read-only SQL",
     )
     ctx.register_tool(
         name="ps_research_search", toolset="propertystack",

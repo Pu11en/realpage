@@ -12,3 +12,7 @@ COPY chatbot/branding/logo-transparent.png /app/build/static/splash.png
 COPY chatbot/branding/custom.css /app/build/static/custom.css
 COPY chatbot/branding/fonts/ /app/build/static/fonts/
 COPY chatbot/branding/loader.js /app/build/static/loader.js
+# Users see just "CraneSignal", not "CraneSignal (Open WebUI)". Allowed by the Open WebUI
+# license while we stay at 50 or fewer users in any 30 days; past that, restore it or buy
+# their enterprise license. loader.js does the same in the browser for the local compose.
+RUN sed -i "s/^    WEBUI_NAME += ' (Open WebUI)'$/    pass/" /app/backend/open_webui/env.py

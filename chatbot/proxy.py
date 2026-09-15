@@ -1,4 +1,4 @@
-"""Public chat endpoint for the PropertyStack site.
+"""Public chat endpoint for the CraneSignal site.
 
 Hermes' API server needs a bearer key, which a static site can't hide, so this
 small front sits on Railway's $PORT and forwards to Hermes on localhost:
