@@ -12,9 +12,15 @@
     sessionStorage.setItem(STORAGE_OPEN, v ? "1" : "0");
   }
 
-  function markChatTabActive(active) {
+  // The Chat link opens and closes the panel; it is not a page, so it never
+  // takes the "selected" look (only the current page's tab does). While the
+  // panel is open it reads "Close chat" instead.
+  function markChatTabActive(open) {
     const navChat = document.querySelector(".sidebar nav a.nav-chat");
-    if (navChat) navChat.classList.toggle("active", active);
+    if (!navChat) return;
+    navChat.classList.remove("active");
+    navChat.setAttribute("aria-expanded", open ? "true" : "false");
+    navChat.textContent = open ? "Close chat" : "Chat";
   }
 
   function buildPanel() {
@@ -210,13 +216,33 @@
     }
   }
 
+  // Plain words for a lead's stage. Covers the state files (permitted, planned,
+  // under construction, leasing, sold) and the Plano property stages (zoning-filed, ...).
+  const STAGE_WORDS = {
+    planned: "planned", "zoning-filed": "planned", "zoning-approved": "planned",
+    "site-plan-approved": "planned", permitted: "permit filed", permit: "permit filed",
+    "under construction": "under construction", "under-construction": "under construction",
+    leasing: "leasing now", sold: "recently sold",
+  };
+
+  function stageWords(p) {
+    if (p.signalType === "Leasing" || p.stage === "leasing") return "leasing now";
+    return STAGE_WORDS[p.stage] || (p.signalType === "Planned" ? "planned" : "");
+  }
+
   function deepDivePrompt(p) {
     const units = p.units != null ? `${p.units} units` : "units not stated";
-    if (p.upcoming) {
-      return `Deep dive on ${p.name}, ${p.city} (${units}, planned, software not chosen yet): who is developing it, when does it open, and why call now?`;
+    const stage = stageWords(p);
+    const upcoming = p.upcoming != null ? p.upcoming
+      : (p.stage ? p.stage !== "sold" : ["Upcoming", "Planned", "Leasing"].includes(p.signalType));
+    if (upcoming) {
+      const bits = [units, stage || "not open yet", "software not chosen yet"].join(", ");
+      const ask = stage === "leasing now" ? "who is leasing it, how full is it" : "who is developing it, when does it open";
+      return `Deep dive on ${p.name}, ${p.city} (${bits}): ${ask}, and why call now?`;
     }
     const sw = p.software && p.software !== "unknown" ? p.software : "software unknown";
-    return `Deep dive on ${p.name}, ${p.city} (${units}, ${sw}): who runs it, and why would they switch now?`;
+    const sold = stage === "recently sold" ? ", recently sold" : "";
+    return `Deep dive on ${p.name}, ${p.city} (${units}, ${sw}${sold}): who runs it, and why would they switch now?`;
   }
 
   window.PSChatPanel = { open: openPanel, close: closePanel, toggle: togglePanel, isOpen, deepDive, deepDivePrompt };

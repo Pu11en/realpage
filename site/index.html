@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="icon" type="image/svg+xml" href="/static/favicon.svg">
   <link rel="apple-touch-icon" href="/static/apple-touch-icon.png">
   <title>CraneSignal -- Early Leads</title>
@@ -45,7 +46,6 @@
 
     function renderPage(areas, area) {
     loadData(area.dataPath).then((data) => {
-      const s = Object.assign({ leads: 0, newThisWeek: 0, unitsInPlay: 0, openingNext12mo: 0 }, data.stats);
       const cities = [...new Set(data.leads.map((l) => l.city))].sort();
       const softwareOptions = [...new Set(data.leads.map((l) => l.software).filter(Boolean))].sort();
 
@@ -58,12 +58,7 @@
           ${data.metros.map((m) => `<button class="metro-btn" data-metro="${m.name}">${m.name} (${m.leads})</button>`).join("")}
         </div></div>` : ""}
         ${placeholderBanner(data.status)}
-        <div class="stats-row">
-          <div class="stat-card"><div class="value">${s.leads}</div><div class="label">Leads</div></div>
-          <div class="stat-card"><div class="value">${s.newThisWeek}</div><div class="label">New</div></div>
-          <div class="stat-card"><div class="value">${s.unitsInPlay.toLocaleString()}</div><div class="label">Units in play</div></div>
-          <div class="stat-card"><div class="value">${s.openingNext12mo.toLocaleString()}</div><div class="label">Opening soon</div></div>
-        </div>
+        <div class="stats-row" id="lead-stats"></div>
 
         <div class="filters">
           <input id="f-search" placeholder="Search property" />
@@ -119,6 +114,25 @@
         return vendorPill(l.software);
       }
 
+      function esc(s) {
+        return String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+      }
+
+      // C4: sources are {label, url}; show the plain name, never a raw query URL
+      // or an internal "[tag]". Old plain strings still render.
+      function sourceLinks(sources) {
+        return (sources || []).map((s) => {
+          if (typeof s === "string") {
+            return /^https?:/.test(s)
+              ? `<a href="${esc(s)}" target="_blank" rel="noopener">source</a>`
+              : esc(s.replace(/^\[|\]$/g, ""));
+          }
+          return s.url
+            ? `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.label || "source")}</a>`
+            : esc(s.label || "");
+        }).join(" · ");
+      }
+
       function renderRows() {
         const search = document.getElementById("f-search").value.trim().toLowerCase();
         const signal = document.getElementById("f-signal").value;
@@ -136,7 +150,7 @@
           if (metro && l.metro !== metro) return false;
           if (software === "__none__" && l.software) return false;
           if (software && software !== "__none__" && l.software !== software) return false;
-          if (hideMine && viewAs !== "Neutral" && l.software === viewAs) return false;
+          if (hideMine && viewAs !== "Everyone" && l.software === viewAs) return false;
           return true;
         });
 
@@ -148,8 +162,26 @@
           rows = rows.slice().sort((a, b) => b.score - a.score);
         }
 
+        const s = leadStats(rows);
+        document.getElementById("lead-stats").innerHTML = `
+          <div class="stat-card"><div class="value">${s.leads.toLocaleString()}</div><div class="label">Leads</div></div>
+          <div class="stat-card"><div class="value">${s.newThisWeek}</div><div class="label">New</div></div>
+          <div class="stat-card"><div class="value">${s.unitsInPlay.toLocaleString()}</div><div class="label">Units in play</div></div>
+          <div class="stat-card"><div class="value">${s.openingNext12mo.toLocaleString()}</div><div class="label">Opening soon</div></div>`;
+
+        if (!rows.length) {
+          document.getElementById("leads-tbody").innerHTML = `
+            <tr class="empty-row"><td colspan="8">Nothing found. Clear the search or pick another region.
+              <button type="button" class="btn" id="clear-search">Clear search</button></td></tr>`;
+          document.getElementById("clear-search").addEventListener("click", () => {
+            document.getElementById("f-search").value = "";
+            renderRows();
+          });
+          return;
+        }
+
         document.getElementById("leads-tbody").innerHTML = rows.map((l, i) => `
-          <tr class="${l.propertyId ? "clickable" : ""}" ${l.propertyId ? `data-id="${l.propertyId}"` : ""}>
+          <tr class="clickable" data-id="${l.propertyId || l.id}">
             <td data-label="Rank">${i + 1}</td>
             <td data-label="Score"><span class="score-badge" style="background:${scoreBadgeColor(l.score)}">${l.score}</span></td>
             <td class="lead-prop"><strong>${l.property}</strong> ${l.isNew ? '<span class="pill pill-new">NEW</span>' : ""}${l.subArea ? `<div class="lead-subarea">${l.subArea}</div>` : ""}
@@ -159,13 +191,13 @@
             <td data-label="Units">${l.units ?? "?"}</td>
             <td data-label="Signal" class="lead-signal">${signalHtml(l)}</td>
             <td data-label="Software">${leadSoftwareHtml(l)}</td>
-            <td class="lead-why">${l.why} <span class="lead-src">${l.sources.map((s, n) => /^https?:/.test(s) ? `<a href="${s}" target="_blank" rel="noopener">source${l.sources.length > 1 ? " " + (n + 1) : ""}</a>` : `[${s}]`).join(" · ")}</span></td>
+            <td class="lead-why">${l.why} <span class="lead-src">${sourceLinks(l.sources)}</span></td>
           </tr>
         `).join("");
 
         document.querySelectorAll("#leads-tbody tr.clickable").forEach((tr) => {
           tr.addEventListener("click", () => {
-            location.href = `property.html?id=${encodeURIComponent(tr.dataset.id)}`;
+            location.href = `property.html?id=${encodeURIComponent(tr.dataset.id)}&area=${encodeURIComponent(area.slug)}`;
           });
         });
 
@@ -176,7 +208,7 @@
             const l = data.leads.find((x) => x.id === btn.dataset.deepDive);
             window.PSChatPanel.deepDive(window.PSChatPanel.deepDivePrompt({
               name: l.property, city: l.city, units: l.units, software: l.software,
-              upcoming: l.signalType === "Upcoming",
+              stage: l.stage, signalType: l.signalType,
             }));
           });
         });

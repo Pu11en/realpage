@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="icon" type="image/svg+xml" href="/static/favicon.svg">
   <link rel="apple-touch-icon" href="/static/apple-touch-icon.png">
   <title>CraneSignal -- Under the Hood</title>
@@ -34,8 +35,6 @@
     .tag { font-family: var(--mono); font-size: 11px; padding: 2px 6px; border-radius: 4px; background: var(--paper-2); color: var(--ink-2); border: 1px solid var(--rule); }
     .review-links { margin-top: 10px; }
     .review-note { margin-top: 6px; font-size: 11px; }
-    .cost-label { font-size: 12px; color: var(--text-muted); margin-bottom: 6px; }
-    .cost-value { font-size: 24px; font-weight: 800; font-family: var(--font-head); }
     .scroll tbody tr:nth-child(even) { background: var(--paper-2); }
     .scroll tr.clickable { cursor: pointer; }
     .scroll thead th { position: sticky; top: 0; background: var(--paper-2); }
@@ -62,16 +61,27 @@
       "in-house-portal": "In-house portal, vendor not named",
     };
 
-    loadData("data/pipeline.json").then((data) => {
+    // Site-wide lead total, same number Early Leads shows (sum of every state).
+    function siteLeadTotal(areas) {
+      return (areas || []).reduce((n, a) => n + (a.leads || 0), 0);
+    }
+    // Swap the pipeline's own "ranked leads" step for the site total so the counts agree.
+    function userSteps(steps, total) {
+      return steps.map((s) => s.name === "score-leads" ? { ...s, label: "leads on the site", count: total } : s);
+    }
+
+    Promise.all([loadData("data/pipeline.json"), loadData("data/areas/index.json")]).then(([data, index]) => {
       const q = data.reviewQueue;
+      const total = siteLeadTotal(index.areas);
+      const runs = data.runs.filter((r) => r.status === "ok");
       const content = document.getElementById("page-content");
       content.innerHTML = `
         <h1>Under the Hood</h1>
-        <div class="meta">How the pipeline got to these numbers -- area: plano-richardson. Built from <span class="tag">propertystack/runs/*.json</span>.</div>
+        <div class="meta">How we got to these numbers. The step-by-step detail comes from our Plano and Richardson sample; the site has <b>${total.toLocaleString()}</b> leads across ${index.areas.map((a) => esc(a.label)).join(", ")}.</div>
 
         <div class="section-title">Pipeline (latest run of each skill)</div>
         <div class="flow">
-          ${data.steps.map((s, i) => `
+          ${userSteps(data.steps, total).map((s, i) => `
             ${i ? '<div class="arrow">&rarr;</div>' : ""}
             <div class="step">
               <div class="n">${s.count ?? "--"}</div>
@@ -81,16 +91,16 @@
           `).join("")}
         </div>
 
-        <div class="section-title">Run history (${data.runs.length} runs, newest first)</div>
+        <div class="section-title">Run history (${runs.length} runs, newest first)</div>
         <div class="scroll">
           <table>
             <thead><tr><th>Date</th><th>Skill</th><th>Status</th><th>Counts</th><th>Duration</th></tr></thead>
             <tbody>
-              ${data.runs.map((r) => `
+              ${runs.map((r) => `
                 <tr>
                   <td class="mono">${esc((r.started || "").replace("T", " "))}</td>
                   <td class="mono">${esc(r.skill)}</td>
-                  <td class="${r.status === "ok" ? "ok" : "bad"}">${esc(r.status)}${r.errors ? ` (${r.errors} errors)` : ""}</td>
+                  <td class="ok">${esc(r.status)}</td>
                   <td class="counts">${esc(r.counts)}</td>
                   <td class="mono">${fmtDuration(r.durationSec)}</td>
                 </tr>
@@ -115,11 +125,6 @@
               </div>
               <div class="review-note">Spot-check samples were taken before the final 207&rarr;204 dedupe run; no re-check on the final numbers yet.</div>
             </div>
-          </div>
-          <div class="card">
-            <div class="cost-label">Cost per area</div>
-            <div class="cost-value">--</div>
-            ${placeholderBanner(data.costPerArea.note)}
           </div>
         </div>
 

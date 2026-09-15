@@ -25,12 +25,12 @@
     {
       "state": "Texas",
       "code": "TX",
-      "leads": 628,
-      "label": "TX \u00b7 628 leads",
+      "leads": 597,
+      "label": "TX \u00b7 597 leads",
       "topCities": [
-        "Houston",
         "Austin",
-        "Fort Worth"
+        "Fort Worth",
+        "Houston"
       ],
       "link": "index.html?area=tx"
     }

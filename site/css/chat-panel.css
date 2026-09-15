@@ -170,3 +170,22 @@
 }
 .chat-panel-signin-card p:first-child { font-family: var(--font-head); font-weight: 700; font-size: 16px; color: var(--ink); }
 .chat-panel-signin-card .chat-panel-signin-note { font-size: 13px; color: var(--muted); margin-top: -4px; }
+
+/* Early Leads with the chat docked: the page is too narrow for 8 columns, so
+   each lead becomes a card (same as phones) and Software and Why stay in view
+   instead of scrolling off behind the panel. */
+@media (min-width: 900px) {
+  body.chat-panel-open .leads-table { border: none; border-radius: 0; overflow: visible; }
+  body.chat-panel-open .leads-table thead { display: none; }
+  body.chat-panel-open .leads-table,
+  body.chat-panel-open .leads-table tbody,
+  body.chat-panel-open .leads-table tr,
+  body.chat-panel-open .leads-table td { display: block; width: 100%; }
+  body.chat-panel-open .leads-table tr { background: var(--paper); border: 1px solid var(--border); border-radius: 8px; padding: 10px 12px; margin-bottom: 12px; }
+  body.chat-panel-open .leads-table tbody tr:nth-child(even) { background: var(--paper-2); }
+  body.chat-panel-open .leads-table tbody tr:nth-child(even) td { background: transparent; }
+  body.chat-panel-open .leads-table td { border: none; padding: 4px 0; min-width: 0; }
+  body.chat-panel-open .leads-table td[data-label]::before { content: attr(data-label) ": "; color: var(--text-dim); font-size: 12px; }
+  body.chat-panel-open .leads-table td[data-label="Rank"],
+  body.chat-panel-open .leads-table td[data-label="Score"] { display: inline-block; width: auto; margin-right: 12px; }
+}

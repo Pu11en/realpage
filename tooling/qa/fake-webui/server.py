@@ -41,7 +41,7 @@ class Handler(http.server.SimpleHTTPRequestHandler):
         self.end_headers()
 
     def do_GET(self):
-        if self.path.rstrip("/") == "/api/v1/auths":
+        if self.path.split("?")[0].rstrip("/") == "/api/v1/auths":
             if self._signed_in():
                 self._json(200, b'{"id":"fake-user"}')
             else:
@@ -52,7 +52,7 @@ class Handler(http.server.SimpleHTTPRequestHandler):
         super().do_GET()
 
     def do_POST(self):
-        if self.path.rstrip("/") == "/api/v1/auths/signin":
+        if self.path.split("?")[0].rstrip("/") == "/api/v1/auths/signin":
             self.send_response(200)
             self.send_header("Set-Cookie", f"{COOKIE_NAME}=1; Path=/")
             self.send_header("Content-Type", "application/json")

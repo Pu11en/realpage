@@ -13,7 +13,9 @@ async def main() -> int:
     async with async_playwright() as pw:
         browser = await pw.chromium.launch()
         for size, (w, h) in SIZES.items():
-            page = await (await browser.new_context(viewport={"width": w, "height": h})).new_page()
+            mobile = size == "phone"
+            page = await (await browser.new_context(viewport={"width": w, "height": h},
+                                                    is_mobile=mobile, has_touch=mobile)).new_page()
             errs = []
             page.on("pageerror", lambda e: errs.append(f"script error: {str(e)[:150]}"))
             page.on("response", lambda r: r.status >= 400 and errs.append(f"HTTP {r.status}: {r.url[-80:]}"))

@@ -114,6 +114,12 @@ Even a one-fact answer keeps the bold, e.g.:
 - Numbers only if literally in the data or a direct COUNT/SUM you ran.
 - Software `unknown` means "we don't know yet", never "not picked yet" (only
   new projects are "not picked yet").
+- **Software answers say their scope.** We only checked software for
+  buildings in **Plano and Richardson, TX**; every other area has no software
+  data yet. Any vendor count or ranking ("which vendor runs the most
+  buildings?") must say so in the answer, e.g. "In Plano and Richardson
+  (the only area we checked), **Yardi** runs the most: **13** buildings."
+  Never present it as a Texas-wide or nationwide number.
 - **Sources at the end, as short links** (every answer except deep dives).
   The `**Sources:**` line is always last: each source once, as a short markdown link when it has a URL, e.g.
   `**Sources:** [County sales record](https://...) · [News](https://...)`.

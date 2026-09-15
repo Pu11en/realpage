@@ -18,6 +18,7 @@ import phonenumbers
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "lead-finder"))
 from merge import merge_records  # noqa: E402
 from record import LeadRecord  # noqa: E402
+from junk_permits import is_junk_permit  # noqa: E402
 
 HttpGet = Callable[[str], object]
 
@@ -63,7 +64,12 @@ def find_upcoming(
         stage = _infer_stage(issue_date, co_date, today)
         if stage is None:
             continue
-        records.append(_build_record(row, fields, city, area, endpoint, stage, issue_date, units_pattern, recipe))
+        record = _build_record(row, fields, city, area, endpoint, stage, issue_date, units_pattern, recipe)
+        # a pool, carport, stair remodel, repair, roof or garage apartment is
+        # work on an existing place, not a new apartment building
+        if is_junk_permit(record.name):
+            continue
+        records.append(record)
 
     return merge_records(records)
 

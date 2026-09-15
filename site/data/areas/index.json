@@ -4,7 +4,7 @@
       "slug": "tx",
       "label": "Texas",
       "dataPath": "data/areas/tx.json",
-      "leads": 628
+      "leads": 597
     },
     {
       "slug": "az",
@@ -21,5 +21,6 @@
   ],
   "aliases": {
     "plano-richardson": "tx"
-  }
+  },
+  "updated": "2026-09-15"
 }

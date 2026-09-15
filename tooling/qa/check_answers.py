@@ -22,7 +22,13 @@ QUESTIONS = [
     "Entrata): who runs it, and why would they switch now?",
     "What are people on Reddit saying about Yardi in Texas?",
     "Are any Texas property managers on Reddit unhappy with AppFolio or Entrata?",
+    "How many leads in Dallas–Fort Worth?",
+    "Which vendor runs the most buildings?",
 ]
+# Questions whose answer must contain this number (same as the site shows).
+EXPECT_NUMBER = {"How many leads in Dallas–Fort Worth?": "311"}
+# Questions whose answer must name the area the data covers.
+EXPECT_SCOPE = {"Which vendor runs the most buildings?": ["plano", "richardson"]}
 MAX_WORDS = 60
 MAX_DEEP_WORDS = 70  # deep dives, not counting the link row and Sources
 LINK_WORDS = ["record", "news", "website"]  # must be links on the Sources line
@@ -93,6 +99,11 @@ def problems(answer, question=""):
     out += [f"call script word {s!r}" for s in SCRIPT if s in low]
     if "**" not in answer:
         out.append("no bold")
+    want = EXPECT_NUMBER.get(question)
+    if want and not re.search(rf"\b{want}\b", answer):
+        out.append(f"expected {want} (the site's count)")
+    out += [f"doesn't say the data covers {w.title()}" for w in EXPECT_SCOPE.get(question, [])
+            if w not in low]
     return out
 
 

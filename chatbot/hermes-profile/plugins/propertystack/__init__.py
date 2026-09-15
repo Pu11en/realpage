@@ -71,9 +71,9 @@ SOURCE_NAMES = {
     "sales": "County sales records",
     "upcoming": "City permits and news",
     "master": "County property records + software check",
-    "leads": "PropertyStack lead ranking",
+    "leads": "CraneSignal lead ranking",
     "contacts": "Contact info from building websites",
-    "state_leads": "PropertyStack lead ranking",
+    "state_leads": "CraneSignal lead ranking",
     "street_talk": "Reddit posts",
 }
 
@@ -156,9 +156,13 @@ def ps_schema(args: dict, **_) -> str:
             "All columns are TEXT; CAST(units AS INTEGER) for numbers.",
             "master = apartments + websites + software joined; one row per building (apt_id).",
             "software='unknown' means not identified; the reason is in unknown_reason.",
+            "Software data covers Plano and Richardson only (software/master tables); other areas' "
+            "software is blank. Vendor counts must say they cover Plano and Richardson only.",
             "contacts: phone/email only where the website scrape actually found them.",
             "leads.ref_id is an apt_id (signal=sold) or an upcoming project_id (signal=upcoming).",
-            "state_leads: every other area's leads, one flat row per lead (no separate master/contacts). "
+            "state_leads: every tracked state's leads, one flat row per lead (no separate master/contacts). "
+            "Texas (area='tx') already includes the 42 Plano/Richardson leads, so count states and regions "
+            "(region='Dallas–Fort Worth') from state_leads alone -- never add the leads table on top. "
             "Filter with WHERE area='<slug>' from the area list below; stage is permitted/leasing/"
             "under_construction/sold/planned. permit_link/news_link/website_link/agenda_link/map_link "
             "are ready-made URLs for the deep-dive link row (map_link may be blank -- build it from address).",
@@ -275,18 +279,18 @@ def register(ctx) -> None:
     _build_db()
     ctx.register_tool(
         name="ps_schema", toolset="propertystack",
-        schema=_schema("ps_schema", "List PropertyStack tables, columns, row counts and the plain source_name for each. Call this first.", {}, []),
-        handler=ps_schema, description="PropertyStack schema",
+        schema=_schema("ps_schema", "List CraneSignal tables, columns, row counts and the plain source_name for each. Call this first.", {}, []),
+        handler=ps_schema, description="CraneSignal schema",
     )
     ctx.register_tool(
         name="ps_sql", toolset="propertystack",
         schema=_schema(
             "ps_sql",
-            "Run ONE read-only SQLite SELECT over the PropertyStack CSV tables (max 200 rows). Writes are rejected.",
+            "Run ONE read-only SQLite SELECT over the CraneSignal CSV tables (max 200 rows). Writes are rejected.",
             {"query": {"type": "string", "description": "A single SELECT statement."}},
             ["query"],
         ),
-        handler=ps_sql, description="PropertyStack read-only SQL",
+        handler=ps_sql, description="CraneSignal read-only SQL",
     )
     ctx.register_tool(
         name="ps_research_search", toolset="propertystack",

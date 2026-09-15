@@ -30,3 +30,19 @@
     if (p !== last) { last = p; if (!allowed(p)) toDashboard(); }
   }, 250);
 })();
+
+// Name shown to users is just "CraneSignal" (the sign-in popup title and heading
+// otherwise read "CraneSignal (Open WebUI)"). See webui.Dockerfile for the license note.
+(function () {
+  var TAG = " (Open WebUI)";
+  var clean = function () {
+    if (document.title.indexOf(TAG) >= 0) document.title = document.title.split(TAG).join("");
+    if (!document.body) return;
+    var w = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+    for (var n = w.nextNode(); n; n = w.nextNode()) {
+      if (n.nodeValue.indexOf(TAG) >= 0) n.nodeValue = n.nodeValue.split(TAG).join("");
+    }
+  };
+  clean();
+  new MutationObserver(clean).observe(document.documentElement, { childList: true, subtree: true, characterData: true });
+})();

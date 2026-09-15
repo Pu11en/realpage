@@ -45,13 +45,38 @@
     g.setAttribute("tabindex", "0");
     g.setAttribute("role", "link");
     g.setAttribute("aria-label", `${m.label}: open the table`);
-    g.innerHTML = `<circle r="9"></circle><text y="-14" text-anchor="middle">${esc(m.label)}</text>`;
+    // Label sits in a small white pill so it stays readable on the dark blue states.
+    g.innerHTML = `<circle r="9"></circle><g class="lead-label"><rect class="label-pill"></rect><text text-anchor="middle" dominant-baseline="central">${esc(m.label)}</text></g>`;
     g.addEventListener("mousemove", (e) => showMarkerTip(e, m));
     g.addEventListener("mouseleave", () => { tip.hidden = true; });
     g.addEventListener("click", () => { location.href = m.link; });
     g.addEventListener("keydown", (e) => { if (e.key === "Enter") location.href = m.link; });
     svg.appendChild(g);
   }
+
+  // Size the labels for the drawn map width: ~12px on screen even on a phone, then fit each pill.
+  function layoutLabels() {
+    const scale = 975 / Math.max(1, svg.clientWidth || 975);
+    const font = Math.min(30, Math.max(13, 12 * scale));
+    const dot = Math.min(20, Math.max(9, 8 * scale));
+    for (const c of svg.querySelectorAll(".lead-marker > circle")) c.setAttribute("r", dot);
+    for (const lab of svg.querySelectorAll(".lead-label")) {
+      const text = lab.querySelector("text");
+      const rect = lab.querySelector(".label-pill");
+      text.style.fontSize = `${font}px`;
+      const w = text.getComputedTextLength();
+      const h = font * 1.5;
+      const y = -(dot + 3 + h / 2);
+      text.setAttribute("y", y);
+      rect.setAttribute("x", -w / 2 - font * 0.5);
+      rect.setAttribute("y", y - h / 2);
+      rect.setAttribute("width", w + font);
+      rect.setAttribute("height", h);
+      rect.setAttribute("rx", h / 2);
+    }
+  }
+  layoutLabels();
+  window.addEventListener("resize", layoutLabels);
 
   function showMarkerTip(e, m) {
     tip.innerHTML = `<strong>${esc(m.state)}</strong><div class="count lead-count">${m.leads} lead${m.leads === 1 ? "" : "s"}</div>

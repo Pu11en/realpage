@@ -28,8 +28,9 @@
       background: linear-gradient(to right, rgba(26, 61, 143, 0.12), rgba(26, 61, 143, 1)); border: 1px solid var(--rule); }
     #us-map .lead-marker { cursor: pointer; }
     #us-map .lead-marker circle { fill: var(--amber); stroke: var(--ink); stroke-width: 1.5; }
-    #us-map .lead-marker text { fill: var(--ink); font-family: var(--font-head); font-size: 13px; font-weight: 700; paint-order: stroke; stroke: var(--paper); stroke-width: 4px; stroke-linejoin: round; letter-spacing: 0.01em; }
-    #us-map .lead-marker:hover circle, #us-map .lead-marker:focus circle { r: 11; fill: var(--amber-2); }
+    #us-map .lead-marker text { fill: var(--ink); font-family: var(--font-head); font-size: 13px; font-weight: 700; letter-spacing: 0.01em; }
+    #us-map .lead-marker .label-pill { fill: var(--paper); stroke: var(--rule); stroke-width: 1; filter: drop-shadow(0 1px 2px rgba(14, 19, 32, 0.25)); }
+    #us-map .lead-marker:hover circle, #us-map .lead-marker:focus circle { fill: var(--amber-2); }
     #us-map .lead-marker:focus { outline: none; }
     #us-map .lead-marker:focus-visible circle { stroke: var(--blue); stroke-width: 3; }
     #map-tip .lead-count { color: var(--warn); font-weight: 600; }

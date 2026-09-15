@@ -112,13 +112,15 @@ def test_fourth_deep_dive_in_a_week_blocked_but_questions_still_work():
     run(case)
 
 
-def test_replayed_deep_dive_counts():
+def test_replayed_deep_dive_is_free():
     async def case(ask, calls):
         await ask(DIVE, chat_id="a")
-        await ask(DIVE, chat_id="b")  # replayed from saved
-        await ask(DIVE, chat_id="c")  # replayed from saved
+        for c in "bcdef":  # replayed from saved, never counted
+            assert "Saved deep dive from" in (await ask(DIVE, chat_id=c))[1]
         assert len(calls) == 1
-        assert "3 free deep dives" in (await ask(DIVE, chat_id="d"))[1]
+        for i in range(2):  # the first dive used 1 of 3; two fresh ones still allowed
+            assert (await ask(f"Deep dive on Building {i}, Plano (100 units, Yardi)"))[1].startswith("answer #")
+        assert "3 free deep dives" in (await ask("Deep dive on Building 9, Plano (100 units, Yardi)"))[1]
     run(case)
 
 

@@ -38,7 +38,9 @@ async def main():
     async with async_playwright() as pw:
         br = await pw.chromium.launch()
         async def newpage(w, h, label):
-            ctx = await br.new_context(viewport={"width": w, "height": h}, accept_downloads=True)
+            mobile = w < 800
+            ctx = await br.new_context(viewport={"width": w, "height": h}, accept_downloads=True,
+                                       is_mobile=mobile, has_touch=mobile)
             pg = await ctx.new_page()
             pg._qa = {"errs": []}
             pg.on("pageerror", lambda e: pg._qa["errs"].append("pageerror: " + str(e)[:200]))
