@@ -79,7 +79,7 @@ Open: http://localhost:8765/ai-visibility.html
   repo's `AGENTS.md`: when Drew says "run AI visibility", run this script, post the summary, and push only
   after he replies "push it". Also refresh the chatbot's AI Visibility summary (`to_research.py`) from the
   newest run. Commit.
-- [ ] **T7 First real Gemini run.** Run `run-and-report.sh` for real (about 100-150 Gemini calls on Drew's
+- [x] **T7 First real Gemini run.** Run `run-and-report.sh` for real (about 100-150 Gemini calls on Drew's
   key, throttled). If Gemini rate-limits, keep what was saved and report how far it got. Open the page on
   localhost and confirm real numbers show. Recap in plain words for Drew: the new Gemini numbers, how they
   compare with the Sept 12 Claude / ChatGPT baseline, and the top lawsuit sources. Do not push. Commit.

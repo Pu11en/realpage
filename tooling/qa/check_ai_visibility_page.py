@@ -23,6 +23,9 @@ def add_practice_runs(hist: Path, dates: list[str]) -> None:
     report = json.loads((FIX / "report-gemini.json").read_text())
     run = FIX / "lawsuit-run"
     lawsuit_report = json.loads((run / "report.json").read_text())
+    for f in hist.glob("????-??-??.json"):  # keep only the baseline; real runs would skew the counts
+        if not json.loads(f.read_text()).get("baseline"):
+            f.unlink()
     for i, date in enumerate(dates):
         r = copy.deepcopy(report)
         r["generatedAt"] = f"{date}T12:00:00.000Z"
