@@ -1,8 +1,8 @@
 """Permits that mention an apartment but are not a new apartment building.
 
 Permit feeds often say "apartment" for work on an existing complex: a pool, a
-carport, a stair remodel, a repair or re-roof, or a single garage apartment
-behind a house. None of those is a lead. Used by the permit sources
+carport, a stair remodel, a repair, re-roof, a fence, or a single garage
+apartment behind a house. None of those is a lead. Used by the permit sources
 (lead-finder-permits) and again by site/data/build_data.py so leads already
 saved in a state's leads.json are dropped on rebuild.
 
@@ -21,6 +21,7 @@ JUNK_PERMIT_RE = re.compile(
     r"|repairs?"
     r"|re-?roof\w*|roof(?:ing)?"
     r"|garage[- ]apartments?"
+    r"|fences?"
     r")\b"
     # ...but not a street named that way ("4500 Brentwood Stair Rd")
     r"(?!\s+(?:rd|road|st|street|dr|drive|ave|avenue|blvd|ln|lane|way|pkwy|trl|ct|cir)\b)",

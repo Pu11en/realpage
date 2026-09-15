@@ -46,7 +46,10 @@
     g.setAttribute("role", "link");
     g.setAttribute("aria-label", `${m.label}: open the table`);
     // Label sits in a small white pill so it stays readable on the dark blue states.
-    g.innerHTML = `<circle r="9"></circle><g class="lead-label"><rect class="label-pill"></rect><text text-anchor="middle" dominant-baseline="central">${esc(m.label)}</text></g>`;
+    // hit-area is an invisible rect covering the dot + label + the gap between them, so a
+    // click anywhere on the visible marker (not just exactly on the dot or the pill) opens
+    // the table instead of falling through to the state shape underneath.
+    g.innerHTML = `<rect class="hit-area" fill="transparent"></rect><circle r="9"></circle><g class="lead-label"><rect class="label-pill"></rect><text text-anchor="middle" dominant-baseline="central">${esc(m.label)}</text></g>`;
     g.addEventListener("mousemove", (e) => showMarkerTip(e, m));
     g.addEventListener("mouseleave", () => { tip.hidden = true; });
     g.addEventListener("click", () => { location.href = m.link; });
@@ -60,19 +63,31 @@
     const font = Math.min(30, Math.max(13, 12 * scale));
     const dot = Math.min(20, Math.max(9, 8 * scale));
     for (const c of svg.querySelectorAll(".lead-marker > circle")) c.setAttribute("r", dot);
-    for (const lab of svg.querySelectorAll(".lead-label")) {
+    for (const g of svg.querySelectorAll(".lead-marker")) {
+      const lab = g.querySelector(".lead-label");
       const text = lab.querySelector("text");
       const rect = lab.querySelector(".label-pill");
+      const hit = g.querySelector(".hit-area");
       text.style.fontSize = `${font}px`;
       const w = text.getComputedTextLength();
       const h = font * 1.5;
       const y = -(dot + 3 + h / 2);
       text.setAttribute("y", y);
-      rect.setAttribute("x", -w / 2 - font * 0.5);
-      rect.setAttribute("y", y - h / 2);
-      rect.setAttribute("width", w + font);
+      const pillX = -w / 2 - font * 0.5;
+      const pillY = y - h / 2;
+      const pillW = w + font;
+      rect.setAttribute("x", pillX);
+      rect.setAttribute("y", pillY);
+      rect.setAttribute("width", pillW);
       rect.setAttribute("height", h);
       rect.setAttribute("rx", h / 2);
+      // covers from the top of the label pill down to the bottom of the dot
+      const hitLeft = Math.min(pillX, -dot);
+      const hitRight = Math.max(pillX + pillW, dot);
+      hit.setAttribute("x", hitLeft);
+      hit.setAttribute("y", pillY);
+      hit.setAttribute("width", hitRight - hitLeft);
+      hit.setAttribute("height", dot - pillY);
     }
   }
   layoutLabels();

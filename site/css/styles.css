@@ -71,6 +71,7 @@ a { color: var(--blue); text-underline-offset: 3px; }
   display: flex;
   align-items: center;
   gap: 8px;
+  text-decoration: none;
 }
 
 .sidebar nav a {
@@ -188,6 +189,8 @@ a { color: var(--blue); text-underline-offset: 3px; }
 
 .btn { cursor: pointer; color: var(--accent); }
 .btn:hover { border-color: var(--accent); }
+
+.show-more-row { text-align: center; margin-top: 14px; }
 
 table { width: 100%; border-collapse: collapse; }
 th {
@@ -323,6 +326,11 @@ h1 { font-size: 26px; font-weight: 800; letter-spacing: -0.015em; margin: 0 0 4p
 .area-buttons .area-btn:hover:not(.active), .metro-buttons .metro-btn:hover:not(.active) { border-color: var(--blue); color: var(--blue); }
 .leads-table { border: 1px solid var(--rule); border-radius: 8px; border-collapse: separate; border-spacing: 0; overflow: hidden; }
 .leads-table th { background: var(--paper-2); color: var(--ink-2); font-weight: 600; }
+.leads-table th.sortable { cursor: pointer; user-select: none; }
+.leads-table th.sortable:hover { color: var(--ink); }
+.leads-table th.sortable::after { content: ""; display: inline-block; width: 0.6em; margin-left: 4px; opacity: 0.4; }
+.leads-table th.sort-asc::after { content: "\2191"; opacity: 1; }
+.leads-table th.sort-desc::after { content: "\2193"; opacity: 1; }
 .leads-table tbody tr:nth-child(even) td { background: var(--paper-2); }
 .leads-table tr.clickable { cursor: pointer; }
 .leads-table tr.clickable:hover td { background: var(--blue-soft); }

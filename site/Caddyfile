@@ -56,8 +56,24 @@
 		file_server
 	}
 
-	# Everything else is the chat app: /auth, /oauth, /api, /ws, /_app, /static, /c/...
-	handle {
+	# The chat app: /auth, /oauth, /api, /ws, /_app, /static, /c/..., and "/" when
+	# it's the chat panel's own iframe (the @home block above only claims "/"
+	# outside the iframe).
+	@chat path / /auth* /oauth* /api/* /ws* /_app/* /static/* /c/*
+	handle @chat {
 		reverse_proxy {$CHAT_UPSTREAM:http://propertystack-chat.railway.internal:8080}
+	}
+
+	# Anything else is a real CraneSignal 404, not the chat app's leads page.
+	handle {
+		error * 404
+	}
+	handle_errors {
+		@notfound expression {http.error.status_code} == 404
+		handle @notfound {
+			root * {$SITE_ROOT:/srv}
+			rewrite * /404.html
+			file_server
+		}
 	}
 }

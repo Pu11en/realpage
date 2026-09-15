@@ -123,7 +123,7 @@ def _fix_line(line: str, seen: set[str], deep_dive: bool) -> str | None:
         if not changed:
             break
     # A Sources line left with nothing to cite goes; a bare link row too.
-    if _SOURCES_RE.match(line) and not re.sub(r"[\s*·:,;]|Sources", "", line, flags=re.I):
+    if _SOURCES_RE.match(line) and not re.sub(r"[\s*·:,;()]|Sources", "", line, flags=re.I):
         return None
     if line.strip() and not re.sub(r"[\s·🗺️🗺📄📰🌐️]", "", line):
         return None

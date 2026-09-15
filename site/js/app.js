@@ -42,7 +42,7 @@ function renderShell(activeKey) {
 
   shell.innerHTML = `
     <aside class="sidebar">
-      <div class="wordmark">CraneSignal</div>
+      <a class="wordmark" href="index.html">CraneSignal</a>
       <nav>${navHtml}</nav>
       <div class="top-controls">
         <label for="view-as-select" style="color: var(--text-dim); font-size: 11px;"
@@ -50,6 +50,7 @@ function renderShell(activeKey) {
         <select id="view-as-select" title="${VIEW_AS_TIP}">${vendorOptions}</select>
         <div id="last-updated" style="color: var(--text-dim); font-size: 11px;"></div>
         <a href="privacy.html" style="color: var(--text-dim); font-size: 11px;">Privacy</a>
+        <a href="#" id="sign-out-link" style="color: var(--text-dim); font-size: 11px; display: none;">Sign out</a>
       </div>
     </aside>
     <main class="main" id="page-content"></main>
@@ -62,6 +63,7 @@ function renderShell(activeKey) {
 
   showLastUpdated();
   if (window.initChatPanel) window.initChatPanel();
+  if (window.wireSignOut) window.wireSignOut();
 }
 
 const VIEW_AS_TIP = "Highlight the buildings a Yardi / Entrata / AppFolio seller would win";

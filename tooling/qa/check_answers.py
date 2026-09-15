@@ -93,6 +93,9 @@ def problems(answer, question=""):
     if is_street_talk(question) and not re.search(r"\]\(https://www\.(reddit|youtube)\.com/", answer):
         out.append("Reddit answer has no thread link")
     out += [f"Sources names {w!r} without a link" for w in unlinked_sources(answer)]
+    for ln in answer.splitlines():
+        if SOURCES_RE.match(ln) and not re.sub(r"[\s*·:,;()]|Sources", "", ln, flags=re.I):
+            out.append(f"broken Sources line {ln!r}")
     out += [f"raw code {c!r}" for c in CODES if c in answer]
     out += [f"file name {f!r}" for f in FILES if f in answer]
     low = answer.lower()

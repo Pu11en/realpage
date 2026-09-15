@@ -86,10 +86,13 @@
         </div>
         <table class="leads-table">
           <thead>
-            <tr><th>Rank</th><th>Score</th><th>Property</th><th>City</th><th>Units</th><th>Signal</th><th>Software</th><th>Why</th></tr>
+            <tr><th>Rank</th><th data-sort-key="score">Score</th><th data-sort-key="property">Property</th><th data-sort-key="city">City</th><th data-sort-key="units">Units</th><th data-sort-key="signalType">Signal</th><th data-sort-key="software">Software</th><th>Why</th></tr>
           </thead>
           <tbody id="leads-tbody"></tbody>
         </table>
+        <div class="show-more-row" id="show-more-row" style="display:none">
+          <button type="button" class="btn" id="show-more-btn"></button>
+        </div>
       `;
 
       function contactHtml(contact) {
@@ -133,7 +136,48 @@
         }).join(" · ");
       }
 
+      // Clicking a table header sorts by that column (again to reverse) and
+      // keeps the Sort dropdown showing the matching option when there is one.
+      let headerSort = null; // {key, dir} or null to defer to the dropdown
+      const PAGE_SIZE = 50;
+      let visibleCount = PAGE_SIZE; // "Show more" reveals PAGE_SIZE more each click; filters/sort reset it
+      function compareRows(a, b, key, dir) {
+        let av, bv;
+        if (key === "units") { av = a.units || 0; bv = b.units || 0; }
+        else if (key === "score") { av = a.score; bv = b.score; }
+        else if (key === "signalType") { av = (a.signalType || "").toLowerCase(); bv = (b.signalType || "").toLowerCase(); }
+        else if (key === "software") { av = (a.software || "￿").toLowerCase(); bv = (b.software || "￿").toLowerCase(); }
+        else { av = (a[key] || "").toString().toLowerCase(); bv = (b[key] || "").toString().toLowerCase(); }
+        const cmp = av < bv ? -1 : av > bv ? 1 : 0;
+        return dir === "asc" ? cmp : -cmp;
+      }
+      function updateSortIndicators() {
+        const active = headerSort || { key: sortKeyForDropdown(document.getElementById("f-sort").value), dir: "desc" };
+        document.querySelectorAll(".leads-table th[data-sort-key]").forEach((th) => {
+          th.classList.remove("sort-asc", "sort-desc");
+          if (active.key && th.dataset.sortKey === active.key) th.classList.add(active.dir === "asc" ? "sort-asc" : "sort-desc");
+        });
+      }
+      function sortKeyForDropdown(v) {
+        return v === "size" ? "units" : v === "score" ? "score" : null;
+      }
+      document.querySelectorAll(".leads-table th[data-sort-key]").forEach((th) => {
+        th.classList.add("sortable");
+        th.addEventListener("click", () => {
+          const key = th.dataset.sortKey;
+          const defaultDir = key === "units" || key === "score" ? "desc" : "asc";
+          headerSort = headerSort && headerSort.key === key
+            ? { key, dir: headerSort.dir === "asc" ? "desc" : "asc" }
+            : { key, dir: defaultDir };
+          if (key === "score") document.getElementById("f-sort").value = "score";
+          else if (key === "units") document.getElementById("f-sort").value = "size";
+          visibleCount = PAGE_SIZE;
+          renderRows();
+        });
+      });
+
       function renderRows() {
+        updateSortIndicators();
         const search = document.getElementById("f-search").value.trim().toLowerCase();
         const signal = document.getElementById("f-signal").value;
         const city = document.getElementById("f-city").value;
@@ -154,7 +198,9 @@
           return true;
         });
 
-        if (sort === "size") {
+        if (headerSort) {
+          rows = rows.slice().sort((a, b) => compareRows(a, b, headerSort.key, headerSort.dir));
+        } else if (sort === "size") {
           rows = rows.slice().sort((a, b) => (b.units || 0) - (a.units || 0));
         } else if (sort === "newest") {
           rows = rows.slice().sort((a, b) => (b.isNew === a.isNew ? b.score - a.score : b.isNew ? 1 : -1));
@@ -177,10 +223,21 @@
             document.getElementById("f-search").value = "";
             renderRows();
           });
+          document.getElementById("show-more-row").style.display = "none";
           return;
         }
 
-        document.getElementById("leads-tbody").innerHTML = rows.map((l, i) => `
+        const pageRows = rows.slice(0, visibleCount);
+        const showMoreRow = document.getElementById("show-more-row");
+        if (rows.length > pageRows.length) {
+          showMoreRow.style.display = "";
+          document.getElementById("show-more-btn").textContent =
+            `Show more (${pageRows.length} of ${rows.length})`;
+        } else {
+          showMoreRow.style.display = "none";
+        }
+
+        document.getElementById("leads-tbody").innerHTML = pageRows.map((l, i) => `
           <tr class="clickable" data-id="${l.propertyId || l.id}">
             <td data-label="Rank">${i + 1}</td>
             <td data-label="Score"><span class="score-badge" style="background:${scoreBadgeColor(l.score)}">${l.score}</span></td>
@@ -202,11 +259,16 @@
         });
 
         // The button sits inside a clickable row: stop the click reaching it.
+        document.getElementById("show-more-btn").addEventListener("click", () => {
+          visibleCount += PAGE_SIZE;
+          renderRows();
+        });
+
         document.querySelectorAll("#leads-tbody [data-deep-dive]").forEach((btn) => {
           btn.addEventListener("click", (e) => {
             e.stopPropagation();
             const l = data.leads.find((x) => x.id === btn.dataset.deepDive);
-            window.PSChatPanel.deepDive(window.PSChatPanel.deepDivePrompt({
+            window.PSChatPanel.deepDive(l.id, window.PSChatPanel.deepDivePrompt({
               name: l.property, city: l.city, units: l.units, software: l.software,
               stage: l.stage, signalType: l.signalType,
             }));
@@ -230,6 +292,7 @@
         const url = new URL(location.href);
         if (name) url.searchParams.set("region", name); else url.searchParams.delete("region");
         history.replaceState(null, "", url);
+        visibleCount = PAGE_SIZE;
         renderRows();
       }
 
@@ -244,7 +307,11 @@
 
       ["f-search", "f-signal", "f-city", "f-software", "f-sort", "f-hide-mine"].forEach((id) => {
         const el = document.getElementById(id);
-        el.addEventListener(el.tagName === "INPUT" && el.type !== "checkbox" ? "input" : "change", renderRows);
+        el.addEventListener(el.tagName === "INPUT" && el.type !== "checkbox" ? "input" : "change", () => {
+          if (id === "f-sort") headerSort = null; // dropdown wins until a header is clicked again
+          visibleCount = PAGE_SIZE;
+          renderRows();
+        });
       });
 
       // Deep link: index.html?software=Yardi
