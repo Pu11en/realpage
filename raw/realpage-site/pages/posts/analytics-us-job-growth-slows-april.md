@@ -1,0 +1,30 @@
+---
+url: "https://www.realpage.com/analytics/us-job-growth-slows-april/"
+title: "Annual Employment Gains Slowed Sharply in April"
+type: "posts"
+lastmod: "2023-05-24T08:00:00-05:00"
+crawled: "2026-09-15"
+source: "crawl4ai"
+---
+
+# Top Markets See Employment Gains Slow Sharply
+![Photo of Chuck Ehmann, Senior Real Estate Economist](https://s.realpage.com/storage/files/blog/authors/images/2022/09/chuck-ehmann.jpg)
+_by_ [ Chuck Ehmann](https://www.realpage.com/analytics/authors/cehmann/)
+Annual employment gains in most of the nation’s top markets have cooled significantly compared to last month’s annual gains, according to the latest data release from the Bureau of Labor Statistics (BLS).
+The total number of jobs gained in the top 10 markets RealPage tracks for the year-ending April was about 128,000 jobs fewer than last month (a decline of 11.5% from March). Additionally, five of the top markets saw a decrease in new jobs averaging -19,300, and Washington, DC fell out of the top 10 from last month with a slowing of 18,000 jobs from March’s annual gain.
+Despite weaker annual gains compared to last month, actual month-over-month employment levels increased in all top 10 markets as seasonal hiring continued. However, these month-over-month comparisons of not seasonally adjusted labor data from the BLS should be analyzed with caution.
+[ ](https://www.realpage.com/insights-analytics/market-analytics/)
+Nine of last month’s top 10 markets returned to this month’s list with the first four remaining in place and a few other markets changing rankings.
+New York continues to lead the nation in annual gains with 209,600 new jobs for the year-ending April, down about 20,000 jobs from last month and 262,600 less than last year (although, the economy was still in recovery mode last year). Dallas returned at the #2 spot with an annual gain of 126,700 jobs, 75,500 jobs fewer than last year and 17,100 less than March’s annual total.
+Houston remained in the #3 spot, gaining 112,600 jobs for the year, down 77,000 from last April and almost 30,000 less than last month. The fourth spot was once again held by Los Angeles, which added 106,200 jobs but slowed by more than 183,000 jobs from last year, despite only a minor decrease from last month. Atlanta fell two spots to #7 in April with an annual employment gain of 76,800 jobs. That was 105,000 fewer than last year and 14,100 less than last month.
+Boston slipped one spot to #8 with 71,200 jobs gained for the year, 46,200 less than last April and 6,600 fewer new jobs than in March. Seattle joined April’s top 10 list at #9 with 64,200 additional jobs for the year, down 28,000 jobs from a year ago and 3,300 less than a month ago. Tampa retained its #10 spot on the list, gaining 57,100 jobs but that was 35,700 fewer than last year and 15,700 less than in March.
+Compared to March’s employment levels, eight of the next 10 markets ranked by annual job gains had fewer new jobs for the year than the month before. Additionally, the sum of jobs gained for the top 10 markets (983,400) fell below one million new jobs for the first time since the post-pandemic job recovery began in April 2021.
+Only four markets had annual job gains of 100,000 or more, the same as in March as job gains are leveling off. Another 10 markets gained between 50,000 and 99,999 jobs, five fewer than last month. Only Denver, Providence, RI and Augusta, GA reported an annual job loss from last April, one more market than in March.
+Like annual job gains, the annual percentage change in employment is slowing as well. The employment percentage gain for the top 10 markets averaged 5% in April compared to 5.4% last month. Additionally, only three of April’s top 10 markets had higher percentage employment gains than in March.
+Eight markets returned to April’s top employment change list from March. The energy-dependent market of Midland/Odessa continued to lead the nation for percentage growth at 7.1%, down 100 basis points (bps) from last month. Charleston, SC returned at #2, increasing their job growth by 30 bps to 6.4%.
+College town Fayetteville, AR moved into the #3 spot with 5.3% growth, up 20 bps from last month. Myrtle Beach-Conway-North Myrtle Beach, SC-NC slipped to the #4 spot with 5% growth, down 40 bps from March. Fort Worth moved up to the #5 spot with 4.6% job growth but slipped 30 bps for the month.
+[ ](https://www.realpage.com/insights-analytics/market-analytics/)
+Dallas remained in the #6 position with 4.4% employment change but also experienced a decline in growth of 70 bps. Las Vegas fell to the #7 spot with 4.3% growth, down 100 bps from March and far below its once lofty level of almost 25%. San Antonio joined this month’s top 10 list at 4.2% growth, up 10 bps from March but 210 bps lower than last year. Returning Jacksonville and newcomer Deltona-Daytona Beach-Ormand Beach, FL tied for the last spot on the list with 4.1% growth in employment, displacing Austin and Tampa from the list.
+Compared to one year ago, all but Charleston had lower job growth than April 2022. The largest decreases among the top 10 were in Las Vegas (-840 bps), Dallas (-310 bps), and Midland/Odessa (-290 bps).
+In addition to four Texas markets, Florida and South Carolina were represented with two of the top 10 positions each. Florida had four of the next 10 markets ranked by job growth with no other state having more than one of the remaining six 11-20 spots.
+The weakest major markets for percentage growth are still primarily in the industrial Midwest and Mountain West. Five of the bottom 30 markets are in the Mountain West and eight are in the Midwest. Major markets with sub-1% growth include Denver, Milwaukee, Akron, Provo, Detroit, Riverside, Memphis, Cleveland and Columbus, OH. Sub-1.5% growth major markets include Colorado Springs, Tucson, Baltimore, Minneapolis-St. Paul, St. Louis, Albuquerque and Omaha. Fifty-seven markets had annual job growth rates above the not seasonally adjusted national average of 2.6%, which was 3 less than in March.

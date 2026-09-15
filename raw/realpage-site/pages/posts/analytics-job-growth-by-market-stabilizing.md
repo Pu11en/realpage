@@ -1,0 +1,31 @@
+---
+url: "https://www.realpage.com/analytics/job-growth-by-market-stabilizing/"
+title: "Top Apartment Markets See Job Growth Stabilize"
+type: "posts"
+lastmod: "2023-04-24T15:00:00-05:00"
+crawled: "2026-09-15"
+source: "crawl4ai"
+---
+
+# Employment Gains Leveling Off in Major Markets
+![Photo of Chuck Ehmann, Senior Real Estate Economist](https://s.realpage.com/storage/files/blog/authors/images/2022/09/chuck-ehmann.jpg)
+_by_ [ Chuck Ehmann](https://www.realpage.com/analytics/authors/cehmann/)
+Employment gains in the nation’s top markets have remained surprisingly steady in the face of economic headwinds pointing to a potential recession in the latter half of the year, according to data from the Bureau of Labor Statistics (BLS).
+The total number of jobs gained for the year-ending March in the top 10 markets RealPage tracks was about 936,000 jobs less than the total for the same 10 markets in March of last year. However, the total for the top 10 markets in March is virtually unchanged from last month’s total, with only about 3,000 fewer new jobs. Additionally, the same top four markets exceeded 100,000 jobs gained, with no change from February.
+[ ](https://www.realpage.com/insights-analytics/market-analytics/)
+Nine of last month’s top 10 markets returned to this month’s list with the first five remaining in place and a few other markets changing rankings.
+New York continues to lead the nation in annual gains but the addition of 231,800 jobs for the year-ending March is only about 10,000 jobs fewer than last month (although, almost 260,000 fewer than last year). Dallas returned at the #2 spot with an annual gain of 147,100 jobs, 44,600 jobs fewer than last year but just 3,700 less than February’s annual total.
+Houston remained in the #3 spot, gaining 142,000 jobs for the year, down only 33,000 from last March and up almost 7,000 from last month. The fourth spot was again held by Los Angeles, which added 110,300 jobs to the local economy but slowed by more than half the pace of last March, despite adding a few more jobs to the annual total than last month. Atlanta rounded out the returning top five with 96,600 new jobs, about even with last month but down 67,400 from last year.
+Philadelphia moved up a spot to #6 with 82,000 jobs gained, down 83,500 from a year ago and down only slightly from last month. Boston jumped from #10 last month to #7 in March, adding 79,300 jobs for the year, up 10,000 jobs from last month but down 47,300 jobs from last March’s annual gain.
+Washington, DC rejoined the top 10 list at #8 after missing out last month with an annual gain of 74,700 jobs, 47,300 fewer than last March but almost 12,000 more than in February. Chicago slipped three spots to #9 with 74,100 new jobs, about 20,000 less than last month and 141,800 less than last year. Tampa slipped on spot to #10 with an annual gain of 73,300 jobs, only 3,300 less than last March and about the same amount greater than last month.
+Compared to February’s employment levels, six of the top 10 markets saw a seasonal uptick in March with double-digit increases in Boston and Washington, DC and a double-digit decline in Chicago, and an average decrease of 200 jobs across all top 10. However, these month-over-month comparisons of not seasonally adjusted labor data from the BLS can sometimes be misleading.
+Despite slowing or leveling job gains, 114 of our top 150 markets had returned to or bettered their February 2020 employment level, 6 more than last month but 11 less than in December. Additionally, of the top 10 job gain markets, four remain or returned below their pre-pandemic employment levels. However, all the next 10 top 150 markets ranked by March job gains have regained their pre-pandemic employment levels.
+As mentioned, only four markets had annual job gains of 100,000 or more, the same as in February as job gains are leveling off. Another 15 markets gained between 50,000 and 99,999 jobs, one more than last month. Only Fayetteville, NC and Augusta, GA reported an annual job loss from last March.
+Like annual job gains, the annual percentage change in employment is leveling as well. The average employment percentage gain for the top 10 markets averaged 5.5% in March compared to 5.4% last month. Additionally, only four of March’s top 10 markets had lower percentage employment gains than in February.
+Eight markets returned to March’s top employment change list from February. The energy-dependent market of Midland/Odessa continued to lead the nation for percentage growth at 8.1%, down 60 basis points (bps) from last month. Charleston, SC moved up two spots, increasing their job growth by 60 bps to 6.1%.
+Myrtle Beach-Conway-North Myrtle Beach, SC-NC remained at #3 with 5.4% growth, down just 20 bps from February. Las Vegas came in at #4 with 5.3% employment change, almost the same as last month, while Austin rejoined the top 10 at #5 with 5.2% growth.
+[ ](https://www.realpage.com/insights-analytics/market-analytics/)
+Dallas, Jacksonville, and Fayetteville, AR tied at #6 with 5.1% job growth but Dallas dropped 30 bps while Fayetteville gained the same amount, and Jacksonville finally made the top 10 list. Tampa also gained 30 bps from last month to reach 5% employment growth at #9 on this month’s list. Fort Worth slipped two spots to #10 with 4.9% growth, almost even with February’s rate.
+Compared to one year ago, all but Jacksonville and Charleston had lower job growth than March 2022. The deepest decreases were in Las Vegas (-800 bps), Austin (-490 bps), Dallas (-200 bps), and Midland/Odessa (-190 bps).
+In addition to four Texas markets, Florida was represented with two of the top 10 positions and South Carolina had two as well. Texas had three of the next 10 positions (#11 through #20), while Florida had four.
+The weakest major markets for percentage growth are still primarily in the industrial Midwest. Major markets with sub-1% growth include Milwaukee, Riverside, Denver, Columbus, OH and Tucson. Sub-1.5% growth major markets include Oakland, Detroit, Baltimore, Newark, Cleveland and Toledo. Sixty markets had annual job growth rates above the not seasonally adjusted national average of 2.9%, which was three less than in February.

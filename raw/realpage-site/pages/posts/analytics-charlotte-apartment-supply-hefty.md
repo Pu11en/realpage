@@ -1,0 +1,30 @@
+---
+url: "https://www.realpage.com/analytics/charlotte-apartment-supply-hefty/"
+title: "Charlotte is a National Leader for Apartment Inventory Growth"
+type: "posts"
+lastmod: "2023-09-25T08:00:00-05:00"
+crawled: "2026-09-15"
+source: "crawl4ai"
+---
+
+# Charlotte Neighborhood Doubles Apartment Supply Volumes
+![Photo of Charlotte Wheeler, Real Estate Writer](https://s.realpage.com/storage/files/blog/authors/images/2022/09/charlotte-wheeler.jpg)
+_by_ [ Charlotte Wheeler](https://www.realpage.com/analytics/authors/cwheeler/)
+The Charlotte apartment market is no stranger to big supply volumes, but one submarket in particular has more than doubled its inventory base in the past decade.
+New apartment supply across the U.S. has been booming recently. But some of the nation’s most significant apartment development activity over the past decade has taken place in Charlotte, with inventory growth far exceeding national norms. In fact, among the nation’s 50 largest markets, Charlotte has witnessed the fastest expansion rate over the past 10 years.
+[ ](https://www.realpage.com/insights-analytics/market-analytics/)
+Across the Charlotte market, existing inventory increased by 75,062 apartments in the last decade, equaling an expansion rate of 51.6%, according to data from RealPage [Market Analytics](https://www.realpage.com/insights-analytics/market-analytics/). That growth rate ranked #1 among the nation’s largest 50 markets and took Charlotte’s existing inventory to 220,656 units as of mid-2023. For perspective, the national average growth pace over the past 10 years was 18.6%.
+Most recently, Charlotte had a net increase of 11,028 units during the year-ending 2nd quarter 2023, for an annual growth rate of 5.3%. That pace of expansion was more than double the U.S. average of 2% and placed Charlotte #3 among the nation’s top 50 markets, only bested by Nashville (6.2%) and Jacksonville (5.4%).
+At the end of 2nd quarter 2023, Charlotte had 33,759 units under construction, a volume set to increase the existing stock by another 15.3%. Among the nation’s 50 largest apartment markets, only Nashville (16.3%), Raleigh (15.7%) and Austin (15.6%) had a higher proportion of construction activity. In the coming year, Charlotte’s apartment stock is set to grow by 9.9% with the addition of about 22,000 units. That would be the market’s fastest expansion rate over the past decade and the third-fastest growth pace among the nation’s largest markets, behind Austin (11%) and Raleigh (10%).
+[ ](https://www.realpage.com/insights-analytics/market-analytics/)
+One of the nation’s fastest growing submarkets over the past 10 years was in Charlotte. Of the 706 submarkets comprising the nation’s 50 largest markets, Charlotte’s Uptown/South End submarket was the eighth fastest-growing submarket.
+[Uptown/South End](https://ctycms.com/nc-charlotte-south-end/docs/socc22-compressed-final.pdf) is Charlotte’s city center and the largest business district in Charlotte. The area is a vibrant urban district that has been transformed into a live/work/play community. Several Fortune 500 companies have headquarters in the district, including Bank of America, Duke Energy and Honeywell. The area is home to Bank of America Stadium, Truist Field, Spectrum Center, Charlotte Convention Center, plus several colleges and hospitals. Around 185,000 people work in the center city, while roughly 65,000 people reside in the area, according to Charlotte Center City Partners. The city center has a young population, with a median age of around 30, well below the national average of roughly 38.
+Uptown/South End recorded a net increase in supply of 12,524 units over the past decade, more than doubling its existing apartment inventory with a growth rate of roughly 138%. Uptown/South End accounted for nearly 17% of local apartment deliveries over the past decade, but the submarket currently represents less than 10% of Charlotte’s existing apartment stock.
+[ ](https://www.realpage.com/insights-analytics/market-analytics/)
+Over the past decade, most of Uptown/South End’s apartment growth occurred in 2016 and 2017. Since then, new supply in the area has been trending down. During the year-ending 2nd quarter 2023, Uptown/South End added just 474 units to existing stock for an annual growth rate of 2.2%. However, deliveries are expected to ramp up in the coming year. At the end of 2nd quarter 2023, Uptown/South End had 5,305 units under construction, a volume set to increase the existing stock by 24.5%. Of those units under construction, 3,029 are scheduled for completion in the coming year, growing existing stock 14%. That would be the submarket’s fastest expansion rate in six years.
+Sustained elevated levels of completions in Charlotte have finally taken a toll on the market. Since reaching decade highs in occupancy and annual rent growth in early 2022, both metrics have fallen to decade lows.
+[ ](https://www.realpage.com/insights-analytics/market-analytics/)
+In August 2023, occupancy in Charlotte registered at 93.7% for the third consecutive month. That reading was a decade low for the market and down 350 basis points from the decade high of 97.2% recorded in January 2022. Likewise, annual effective asking rent change fell from a decade high growth rate of 19.8% in January 2022 to a decade low rent cut of 1.4% in August 2023.
+Similar to market trends, Uptown/South End has seen occupancy and rent change levels cool dramatically over the past year. As of August 2023, occupancy in Uptown/South End registered at 93.6%, while rents were cut 3.5% year-over-year. Both those metrics fell below the decade averages of 94.5% occupancy and 3.4% annual rent growth.
+[ ](https://www.realpage.com/insights-analytics/market-analytics/)
+There is a large concentration of mid- and high-rise apartment buildings in Uptown/South End, and as such, it’s no surprise that it is the priciest neighborhood in Charlotte, with average effective asking rents at $2,096 per month as of August. That’s $491 above or nearly 31% above the market average.

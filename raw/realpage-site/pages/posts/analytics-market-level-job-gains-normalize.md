@@ -1,0 +1,30 @@
+---
+url: "https://www.realpage.com/analytics/market-level-job-gains-normalize/"
+title: "Most Markets Saw Job Growth Normalize in August"
+type: "posts"
+lastmod: "2023-09-22T08:00:00-05:00"
+crawled: "2026-09-15"
+source: "crawl4ai"
+---
+
+# Metro Job Gains Moderate to Pre-Pandemic Levels
+![Photo of Chuck Ehmann, Senior Real Estate Economist](https://s.realpage.com/storage/files/blog/authors/images/2022/09/chuck-ehmann.jpg)
+_by_ [ Chuck Ehmann](https://www.realpage.com/analytics/authors/cehmann/)
+Like monthly employment gains at the [national level](https://www.realpage.com/analytics/august-job-growth-exceeds-expectations/), annual job gains at the metro level have normalized closer to pre-pandemic averages but remain slightly elevated, according to the latest data release from the Bureau of Labor Statistics.
+Comparing the average annual employment gain for August of 2018 and 2019 (accounting for seasonality) to the August 2023 employment gain for each of RealPage’s top 150 markets, roughly 4,000 more jobs were added to each local economy (on average) than in the two years before the COVID-19 pandemic. However, most of that is in the top 10 markets, which average close to 30,000 more jobs per market compared to pre-pandemic norms.
+Although still elevated from pre-pandemic levels, the trend is slowing toward normalcy. Altogether, the top 10 markets created 73,500 fewer jobs in the 12 months-ending August than the same period through July, a decrease of 8%. Additionally, the sum of jobs gained in the top 10 markets in August is less than half the total for the same 10 markets one year ago.
+[ ](https://www.realpage.com/insights-analytics/market-analytics/)
+Eight of last month’s top 10 markets returned to this month’s list with just the first three remaining in place and several other markets changing rankings.
+New York continues to lead the nation in annual gains with 174,400 new jobs for the year-ending August, down about 15,000 jobs from last month but more than one-third higher than the market’s recent pre-pandemic average. Dallas remained in the #2 spot with an annual gain of 112,700 jobs, about 17,000 jobs fewer than last month and 82,900 less than last August’s annual total.
+Los Angeles’ annual job gain total slipped about 11,000 jobs from July’s at 99,700 jobs but LA is up more than 47,000 jobs from their 2018-2019 average despite the ongoing writers and actors strike locally. Philadelphia switched places with Houston at the #4 spot with 90,600 jobs gained, down 6,000 jobs from last month and almost 54,000 fewer than last August.
+Houston moved to the #5 spot with 87,600 jobs gained in the 12-months ending August, 96,500 fewer than last year and about 6,900 less than in July. Boston remained at #6, increasing their annual gain slightly from July to 79,600 jobs but that was more than double their pre-pandemic average.
+Atlanta jumped into the top 10 at #7 with 54,000 jobs gained, almost the same as last month but the only top 10 market below their pre-pandemic average. Chicago slipped one spot to #8, gaining 50,200 jobs for the year but declining by about 12,000 jobs from July’s total.
+Seattle also moved onto this month’s top 10 list with 49,400 new jobs, almost tying Charlotte’s 49,300 gain for the year at #10. While Seattle was close to its 2018-2019 average job gain, Charlotte outperformed its pre-pandemic average by almost 19,000 jobs.
+Compared to July’s annual job gain totals, the next 10 markets ranked by annual job gains (#11-#20) had 14,500 fewer new jobs for the year than the month before, a decrease of only 3.3%. Additionally, only New York and Dallas had annual job gains of 100,000 or more, one less than in July. Another six markets gained between 50,000 and 99,999 jobs, four fewer than last month. Two of RealPage’s top 150 markets recorded annual job losses in August.
+Like annual job gains, the annual percentage change in employment saw some significant slowing as well. The average employment percentage gain for the top 10 markets averaged 4.4% in August compared to 4.6% last month. Additionally, six of August’s top 10 markets had lower or unchanged percentage employment gains than in July.
+Six markets returned to August’s top employment change list from July with the few remaining in the same order. Huntsville, AL led the nation for employment growth at 4.6%, but that was 60 basis points (bps) below last month’s #1 market. Trenton, NJ, Charleston, SC, Midland/Odessa, TX, Las Vegas, NV and Ann Arbor, MI tied at #2 with 4.5% but Trenton was the only market among them to increase their percentage growth for both the month and year.
+[ ](https://www.realpage.com/insights-analytics/market-analytics/)
+Manchester/Nashua/Concord, NH ranked #7 on the list with 4.4% job growth, unchanged from July but more than double the growth of last August. Salinas, CA and the college town of Fayetteville, AR tied for #8 with 4.3% employment growth, while Cape Coral-Fort Myers, FL rounded out the list at #10 with 4% growth.
+As metro level job gains continue to flatten, the level of employment growth does as well. The difference between the #1 and #10 markets on this month’s list fell to just 60 bps compared to 90 bps in July and 290 bps in June.
+Compared to one year ago, Midland/Odessa slowed the most for job growth among the top 10, falling 550 bps for the year. Las Vegas fell 320 bps, while Fayetteville, AR slowed by 280 bps from last August. Outside of the top growth markets, Flint, MI fell 760 bps from last year’s job growth to 0.9%, followed by Austin, TX with a 650-bps drop to 2.4% growth.
+The weakest major markets for percentage growth are still in the industrial Midwest, Mid-South and Mountain West. Major markets with sub-1% growth include Memphis, Denver, Detroit, Milwaukee and Columbus, OH, while sub-1.5% growth major markets include Cleveland, Chicago, West Palm Beach, Riverside, Baltimore and Washington, DC. Seventy-five markets had annual job growth rates above the not seasonally adjusted national average of 2%, nine fewer than in July.
