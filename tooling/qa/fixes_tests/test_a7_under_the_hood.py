@@ -16,8 +16,8 @@ def test_raw_bits_hidden():
 
 
 def test_only_ok_runs_listed():
-    assert 'data.runs.filter((r) => r.status === "ok")' in PAGE
-    assert "${data.runs.map(" not in PAGE
+    assert '.runs.filter((r) => r.status === "ok")' in PAGE
+    assert "${data.runs.map(" not in PAGE and "${pipeline.runs.map(" not in PAGE
 
 
 def _fn(name):
