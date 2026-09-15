@@ -1,11 +1,17 @@
 {
-  "plans": 22,
-  "steps_done": 142,
-  "steps_open": 47,
-  "progress_entries": 134,
-  "first_try_pct": 94.0,
-  "commits": 530,
+  "plans": 25,
+  "steps_done": 166,
+  "steps_open": 54,
+  "progress_entries": 158,
+  "first_try_pct": 94.3,
+  "commits": 568,
   "examples": [
+    {
+      "plan": "agent-test-fixes",
+      "task": "T1 Chat loads every time \u2014 done",
+      "check": "`tooling/qa/fixes_tests/test_t1_chat_load_timeout.py` (checks the 30s default, the wording, and that",
+      "recap": "T1 Chat loads every time \u2014 done"
+    },
     {
       "plan": "ai-visibility-v2",
       "task": "T1 Gemini answerer + the check \u2014 done (0f5dc1e)",
@@ -17,12 +23,6 @@
       "task": "T1 Fonts + shared colors + app frame \u2014 done 2026-09-15",
       "check": "- Check: `bash tooling/qa/check-design.sh` passes (quick check 0 problems; design list still empty). Both fonts confirmed loaded in the browser.",
       "recap": "Self-hosted Inter + Plus Jakarta Sans (fontsource variable latin woff2) in `site/fonts/`"
-    },
-    {
-      "plan": "audit-fixes",
-      "task": "A1 Phones \u2014 done (7f8a73b)",
-      "check": "- sweep.py and quick-check.py phone runs now use is_mobile=True, has_touch=True.",
-      "recap": "Added the viewport tag to index, under-the-hood, property, ai-visibility (one line only) and the master-table redirect page, so every site/*"
     }
   ],
   "measured_at": "2026-09-15",

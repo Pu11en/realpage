@@ -31,6 +31,7 @@
     .tile .label { font-size: 12px; color: var(--text-muted); margin-top: 2px; text-transform: uppercase; letter-spacing: 0.02em; }
     .tile .meta-line { font-size: 11px; color: var(--text-dim); margin-top: 6px; font-family: var(--mono); }
     .tile.notrun .n { color: var(--text-dim); font-size: 15px; font-weight: 600; font-family: var(--font); }
+    .evidence-notice { border-left: 3px solid var(--accent); background: var(--paper-2); color: var(--ink-2); font-size: 13px; line-height: 1.5; margin: 0 0 18px; padding: 10px 12px; }
     .flow-svg { width: 100%; max-width: 760px; height: auto; display: block; margin: 0 auto; }
     .flow-caption { text-align: center; color: var(--text-muted); font-size: 13px; margin-top: 8px; }
     details.zone4 { border: 1px solid var(--rule); border-radius: 8px; margin-bottom: 10px; background: var(--paper); }
@@ -150,24 +151,25 @@
       loadData("data/buildbot.json").catch(() => null),
       loadData("data/evals.json").catch(() => null),
       loadData("data/chat-stats.json").catch(() => null),
-    ]).then(([pipeline, index, buildbot, evals, chatStats]) => {
+      loadData("data/recruiter-scorecard.json").catch(() => null),
+    ]).then(([pipeline, index, buildbot, evals, chatStats, scorecard]) => {
       const q = pipeline.reviewQueue;
       const total = siteLeadTotal(index.areas);
       const runs = pipeline.runs.filter((r) => r.status === "ok");
       const content = document.getElementById("page-content");
 
       // ---- Zone 2 tile values ----
-      const stepsDone = buildbot ? buildbot.steps_done : null;
-      const firstTryPct = buildbot ? buildbot.first_try_pct : null;
       const checksPassed = evals ? evals.checks_passed : null;
       const checksTotal = evals ? evals.checks_total : null;
       const chatN = chatStats ? chatStats.n_answers : null;
       const chatMedian = chatStats ? chatStats.median_seconds : null;
       const reviewN = evals && evals.human_review !== NOT_RUN ? evals.human_review.n_reviewed : null;
       const reviewAgreement = evals && evals.human_review !== NOT_RUN ? evals.human_review.agreement_pct : null;
-      const measuredBuild = buildbot ? buildbot.measured_at : null;
       const measuredEvals = evals ? evals.measured_at : null;
       const measuredChat = chatStats ? chatStats.measured_at : null;
+      const evidenceStatus = scorecard?.evidence_status || evals?.evidence_status || NOT_RUN;
+      const evalMethod = evals?.method || "No evaluation method is available.";
+      const evalLimitations = Array.isArray(evals?.limitations) ? evals.limitations : [];
 
       // ---- Zone 4: How I build with AI examples ----
       const examples = (buildbot && Array.isArray(buildbot.examples)) ? buildbot.examples : [];
@@ -179,10 +181,10 @@
 
       content.innerHTML = `
         <section class="hero">
-          <h1>I built a repeatable way for teams to ship with AI agents, and used it to build this.</h1>
-          <div class="sub">CraneSignal is a sales research assistant for property-software teams: it finds apartment
-            buildings about to need new software, shows what they run today, who owns them, and what people are
-            saying about them.</div>
+          <h1>How CraneSignal was built and evaluated.</h1>
+          <div class="sub">CraneSignal is a sales research assistant for property-software teams. The live agent is
+            the main proof; the details below are a transparent record of one dated evaluation, including what did
+            not pass.</div>
           <button class="ask-it-btn" data-chat-toggle>Ask it</button>
           <div class="chips">
             <span class="chip" data-q="What are people on Reddit saying about RealPage?">What are people on Reddit saying about RealPage?</span>
@@ -192,12 +194,13 @@
         </section>
 
         <div class="section-title">By the numbers</div>
+        <div class="evidence-notice"><b>${esc(evidenceStatus)}</b>. These measurements describe a saved run, not
+          approval to release the current product.</div>
         <div class="tiles">
-          ${tile(stepsDone, "build steps done by AI", measuredBuild ? `n=${stepsDone} / measured ${measuredBuild}` : "")}
-          ${tile(firstTryPct != null ? firstTryPct + "%" : null, "passed check first try", measuredBuild ? `measured ${measuredBuild}` : "")}
-          ${tile(isSet(checksPassed) && isSet(checksTotal) ? `${checksPassed} / ${checksTotal}` : null, "eval checks passing", measuredEvals ? `measured ${measuredEvals}` : "")}
-          ${tile(chatN, "chatbot answers measured", isSet(chatMedian) ? `median ${chatMedian}s / measured ${measuredChat}` : (measuredChat ? `measured ${measuredChat}` : ""))}
-          ${tile(reviewN, "human-reviewed hard cases", isSet(reviewAgreement) ? `agreement ${reviewAgreement}% / measured ${measuredEvals}` : (measuredEvals ? `measured ${measuredEvals}` : ""))}
+          ${tile(isSet(checksPassed) && isSet(checksTotal) ? `${checksPassed} / ${checksTotal}` : null, "scorecard checks passing", measuredEvals ? `n=${checksTotal} / measured ${measuredEvals}` : "")}
+          ${tile(failureTypes ? `${failureTypes.ok_count} / ${failureTypes.n}` : null, "saved answers met rubric", measuredEvals ? `n=${failureTypes.n} / measured ${measuredEvals}` : "")}
+          ${tile(reviewN, "answers reviewed by a person", isSet(reviewAgreement) ? `n=${reviewN}; AI agreed ${reviewAgreement}% / ${measuredEvals}` : (measuredEvals ? `n=${reviewN} / measured ${measuredEvals}` : ""))}
+          ${tile(chatN, "saved response times measured", isSet(chatMedian) ? `n=${chatN}; median ${chatMedian}s / ${measuredChat}` : (measuredChat ? `n=${chatN} / measured ${measuredChat}` : ""))}
         </div>
 
         <div class="section-title">How it gets built</div>
@@ -229,6 +232,8 @@
         <details class="zone4">
           <summary>How I know it's good</summary>
           <div class="body">
+            <p><b>Historical status:</b> ${esc(evidenceStatus)}</p>
+            <p class="dim"><b>Method:</b> ${esc(evalMethod)}</p>
             ${evalChecks ? `
               <table>
                 <thead><tr><th>Check</th><th>Result</th><th>Seconds</th><th>$</th></tr></thead>
@@ -254,6 +259,8 @@
               Human review: ${isSet(reviewN) ? `${reviewN} hard cases reviewed by hand` : NOT_RUN}${isSet(reviewAgreement) ? `, ${reviewAgreement}% agreement with the AI grade` : ""}.
               ${falseAlarm ? `False-alarm rate on a clean copy: ${falseAlarm.false_alarm_pct}% (${falseAlarm.false_alarm_count} of ${falseAlarm.n_reviewed} reviewed findings).` : `False-alarm rate: ${NOT_RUN}.`}
             </p>
+            <p><b>Open limitations</b></p>
+            <ul>${evalLimitations.length ? evalLimitations.map((item) => `<li>${esc(item)}</li>`).join("") : `<li>${NOT_RUN}</li>`}</ul>
           </div>
         </details>
 

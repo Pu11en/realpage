@@ -1,6 +1,11 @@
 #!/usr/bin/env python3
-"""Build site/data/evals.json and site/data/chat-stats.json from the
-shipcheck eval tool's real output. Every missing source -> "not run yet"."""
+"""Build page measurements from a current scorecard or the saved historical one.
+
+The saved scorecard is deliberately committed with the site.  That keeps the
+recruiter evidence reproducible after the disposable evaluation worktree is
+gone, while its ``historical`` status prevents it from being mistaken for a
+passing release check.
+"""
 import json
 import os
 import re
@@ -9,10 +14,8 @@ from datetime import date
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
-SHIPCHECK_DIR = Path(os.environ.get(
-    "SHIPCHECK_DIR",
-    "/home/drewp/.local/state/ccdb/gowork/drew's eval-plan-shipcheck-20260915-072728",
-))
+SHIPCHECK_DIR = Path(os.environ["SHIPCHECK_DIR"]) if os.environ.get("SHIPCHECK_DIR") else None
+SAVED_SCORECARD = HERE / "recruiter-scorecard.json"
 NOT_RUN = "not run yet"
 
 
@@ -21,6 +24,14 @@ def safe_json(path):
         return json.loads(path.read_text())
     except Exception:
         return None
+
+
+def saved_measurements():
+    """Return the checked-in recruiter evidence, without machine-specific paths."""
+    saved = safe_json(SAVED_SCORECARD)
+    if not isinstance(saved, dict):
+        return None
+    return saved
 
 
 def parse_scorecard_statuses(md_text):
@@ -39,6 +50,22 @@ def parse_scorecard_statuses(md_text):
 
 
 def build_evals():
+    saved = saved_measurements()
+    if SHIPCHECK_DIR is None or not SHIPCHECK_DIR.exists():
+        if saved:
+            return saved["evals"]
+        return {
+            "checks": NOT_RUN,
+            "checks_passed": NOT_RUN,
+            "checks_total": NOT_RUN,
+            "failure_types": NOT_RUN,
+            "human_review": NOT_RUN,
+            "false_alarm_rate": NOT_RUN,
+            "measured_at": date.today().isoformat(),
+            "evidence_status": "not run yet",
+            "method": "No current scorecard or saved historical scorecard is available.",
+            "limitations": ["No evaluation result is available."],
+        }
     run_json = safe_json(SHIPCHECK_DIR / "results/latest/run.json")
     scorecard_path = SHIPCHECK_DIR / "results/latest/scorecard.md"
     scorecard_text = scorecard_path.read_text() if scorecard_path.exists() else None
@@ -133,7 +160,9 @@ def build_evals():
         "human_review": review,
         "false_alarm_rate": false_alarm,
         "measured_at": date.today().isoformat(),
-        "source_dir": str(SHIPCHECK_DIR),
+        "evidence_status": "current local scorecard",
+        "method": "Results from the scorecard directory supplied through SHIPCHECK_DIR.",
+        "limitations": ["This is automated evaluation evidence, not a human release approval."],
     }
 
 
@@ -141,6 +170,20 @@ EMAIL_RE = re.compile(r"[\w.+-]+@[\w-]+\.[\w.-]+")
 
 
 def build_chat_stats():
+    saved = saved_measurements()
+    if SHIPCHECK_DIR is None or not SHIPCHECK_DIR.exists():
+        if saved:
+            return saved["chat_stats"]
+        return {
+            "n_answers": NOT_RUN,
+            "p50_seconds": NOT_RUN,
+            "p95_seconds": NOT_RUN,
+            "median_seconds": NOT_RUN,
+            "measured_at": date.today().isoformat(),
+            "evidence_status": "not run yet",
+            "method": "No timing sample is available.",
+            "limitations": ["No response-time result is available."],
+        }
     cache_dir = SHIPCHECK_DIR / "work/chatbot-cache"
     if not cache_dir.exists():
         return {
@@ -149,6 +192,9 @@ def build_chat_stats():
             "p95_seconds": NOT_RUN,
             "median_seconds": NOT_RUN,
             "measured_at": date.today().isoformat(),
+            "evidence_status": "not run yet",
+            "method": "The supplied scorecard has no chat timing sample.",
+            "limitations": ["No response-time result is available."],
         }
     seconds = []
     for f in cache_dir.glob("*.json"):
@@ -171,6 +217,9 @@ def build_chat_stats():
             "p95_seconds": NOT_RUN,
             "median_seconds": NOT_RUN,
             "measured_at": date.today().isoformat(),
+            "evidence_status": "not run yet",
+            "method": "The supplied scorecard has no usable chat timing sample.",
+            "limitations": ["No response-time result is available."],
         }
     seconds.sort()
     n = len(seconds)
@@ -185,7 +234,9 @@ def build_chat_stats():
         "p50_seconds": pct(0.50),
         "p95_seconds": pct(0.95),
         "measured_at": date.today().isoformat(),
-        "source_dir": str(cache_dir),
+        "evidence_status": "current local scorecard",
+        "method": "Response times from saved scorecard chat responses; answers containing emails are not copied.",
+        "limitations": ["This timing sample is not a production-service guarantee."],
     }
 
 

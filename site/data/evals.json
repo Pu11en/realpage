@@ -67,5 +67,13 @@
     "false_alarm_pct": 84.8
   },
   "measured_at": "2026-09-15",
-  "source_dir": "/home/drewp/.local/state/ccdb/gowork/drew's eval-plan-shipcheck-20260915-072728"
+  "evidence_status": "Historical recruiter scorecard \u2014 not a current release approval",
+  "method": "Six offline checks; 100 saved answers were graded against the rubric; 17 human labels were compared with the AI grade; 79 saved findings were reviewed for false alarms.",
+  "limitations": [
+    "This is one saved run from 2026-09-15, not a result from the combined release candidate.",
+    "Only 1 of 6 scorecard checks passed, so it is evidence of known work, not proof that the product is ready to ship.",
+    "Seven off-topic answers and one ambiguous-data answer missed the rubric.",
+    "The 84.8% false-alarm rate means this finding review was noisy and should not be treated as a quality claim.",
+    "A human test and fresh checks are still required before any GitHub push."
+  ]
 }
