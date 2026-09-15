@@ -125,7 +125,7 @@ def _build_db() -> None:
         con.execute(f'CREATE TABLE "{table}" ({cols})')
         con.executemany(
             f'INSERT INTO "{table}" VALUES ({", ".join("?" * len(header))})',
-            [r + [""] * (len(header) - len(r)) for r in body],
+            [(r + [""] * (len(header) - len(r)))[: len(header)] for r in body],
         )
     con.commit()
     con.close()

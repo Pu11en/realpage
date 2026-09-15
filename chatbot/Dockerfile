@@ -8,7 +8,7 @@ COPY . /ctx
 RUN mkdir -p /kb/data /kb/research && \
     cp /ctx/propertystack/data/plano-richardson/*.csv /kb/data/ && \
     ( first=1; for f in /ctx/propertystack/data/*/chat-leads.csv; do \
-      [ -e "$f" ] || continue; \
+      [ -e "$f" ] || continue; case "$f" in */_*/*) continue;; esac; \
       if [ "$first" = 1 ]; then head -1 "$f" > /kb/data/state-leads.csv; first=0; fi; \
       tail -n +2 "$f" >> /kb/data/state-leads.csv; \
     done ) && \

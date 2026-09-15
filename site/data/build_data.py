@@ -609,7 +609,7 @@ CHAT_LEADS_COLUMNS = [
     "area", "name", "city", "address", "units", "stage", "signal", "why",
     "permit_date", "opening_date", "sale_date", "buyer", "developer",
     "office_phone", "website", "software", "permit_link", "news_link",
-    "website_link", "agenda_link", "map_link",
+    "website_link", "agenda_link", "map_link", "region", "status",
 ]
 
 
@@ -636,6 +636,7 @@ def write_chat_leads_csv(slug: str, area_json: dict) -> None:
                 links.get("permit") or "", links.get("news") or "",
                 links.get("website") or "", links.get("agenda") or "",
                 links.get("map") or "",
+                lead.get("metro") or "", lead.get("signalType") or "",
             ])
 
 
