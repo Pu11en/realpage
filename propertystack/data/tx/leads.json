@@ -1,0 +1,4986 @@
+[
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "3717 DR. MLK JR. DRIVE Unit CARPORT 1",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2024-10-02",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "3715 DR. MLK JR. DRIVE Unit CARPORT 1",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2024-10-02",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "3709 DR. MLK JR. DRIVE Unit CARPORT 1",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2024-10-02",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "509 DEBBIE LANE GARAGE 9",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2024-10-08",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "756 W TURNER WARNELL ROAD BLDG 3",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2024-10-14",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "754 W TURNER WARNELL ROAD BLDG 4",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2024-10-14",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "758 W TURNER WARNELL ROAD BLDG 2",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2024-10-14",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "752 W TURNER WARNELL ROAD BLDG 5",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2024-10-16",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "505 MARY STREET",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2024-11-27",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "714 BENGE DRIVE BLDG 1",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2025-01-29",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "710 BENGE DRIVE BLDG 2",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2025-01-29",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "712 BENGE DRIVE BLDG 3",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2025-01-29",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "509 DEBBIE LANE Unit 100",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2025-03-17",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "3703 DR. MLK JR. DRIVE BLDG 7",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2025-04-01",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "3705 DR. MLK JR. DRIVE BLDG 6",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2025-04-01",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "3707 DR. MLK JR. DRIVE BLDG 5",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2025-04-01",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "3711 DR. MLK JR. DRIVE BLDG 3",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2025-04-01",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "1821  MANSFIELD WEBB RD   ",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2025-04-07",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "1819  MANSFIELD WEBB RD   ",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2025-04-07",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "1817  MANSFIELD WEBB RD   ",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2025-04-07",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "1815  MANSFIELD WEBB RD   ",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2025-04-07",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "1811  MANSFIELD WEBB RD   ",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2025-04-07",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "1809  MANSFIELD WEBB RD   ",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2025-04-07",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "1835  MANSFIELD WEBB RD   ",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2025-04-07",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "1833  MANSFIELD WEBB RD   ",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2025-04-07",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "1797  MANSFIELD WEBB RD   ",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2025-04-07",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "1827  MANSFIELD WEBB RD   ",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2025-04-07",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "1825  MANSFIELD WEBB RD   ",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2025-04-07",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "1823  MANSFIELD WEBB RD   ",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2025-04-07",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "1851  MANSFIELD WEBB RD   ",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2025-04-07",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "1853  MANSFIELD WEBB RD   ",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2025-04-07",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "1855  MANSFIELD WEBB RD   ",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2025-04-07",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "1837  MANSFIELD WEBB RD   ",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2025-04-07",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "1857  MANSFIELD WEBB RD   ",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2025-04-07",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "1769  MANSFIELD WEBB RD   ",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2025-04-07",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "1841 MANSFIELD WEBB ROAD",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2025-04-07",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "1843 MANSFIELD WEBB ROAD",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2025-04-07",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "1839  MANSFIELD WEBB RD   ",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2025-04-07",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "1701  MANSFIELD WEBB RD   GARAGE 1",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2025-04-07",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "1701  MANSFIELD WEBB RD   GARAGE 4",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2025-04-07",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "800 W BARDIN ROAD",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2025-05-08",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "1727  WESTVIEW TER  Bldg OFFICE",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2025-06-16",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "100 W ARBROOK BOULEVARD",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2025-08-14",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "206A SLAUGHTER STREET",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2025-10-02",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "3925 VIRIDIAN VILLAGE DRIVE Unit E1",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2025-10-07",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "1799  MANSFIELD WEBB RD   ",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2025-10-08",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "1803  MANSFIELD WEBB RD   ",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2025-10-08",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "1805  MANSFIELD WEBB RD   ",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2025-10-08",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "1807  MANSFIELD WEBB RD   ",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2025-10-08",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "1703  MANSFIELD WEBB RD   ",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2025-10-15",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "1705  MANSFIELD WEBB RD   ",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2025-10-15",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "1707  MANSFIELD WEBB RD   ",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2025-10-15",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "1709  MANSFIELD WEBB RD   ",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2025-10-15",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "1711  MANSFIELD WEBB RD   ",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2025-10-15",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "1715  MANSFIELD WEBB RD   ",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2025-10-15",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "1701  MANSFIELD WEBB RD   GARAGE 5",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2025-11-10",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "1701  MANSFIELD WEBB RD   GARAGE 6",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2025-11-10",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "1701  MANSFIELD WEBB RD   GARAGE 7",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2025-11-10",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "1701  MANSFIELD WEBB RD   GARAGE 9",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2025-11-10",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "1701  MANSFIELD WEBB RD   GARAGE 8",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2025-11-10",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "1701  MANSFIELD WEBB RD   GARAGE 10",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2025-11-10",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "1701  MANSFIELD WEBB RD   GARAGE 12",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2025-11-10",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "1701  MANSFIELD WEBB RD   GARAGE 11",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2025-11-10",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "1701  MANSFIELD WEBB RD   GARAGE 3",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2025-11-10",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "1701  MANSFIELD WEBB RD   GARAGE 2",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2025-11-10",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "1795  MANSFIELD WEBB RD   ",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2025-11-25",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "1717  MANSFIELD WEBB RD   ",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2025-11-25",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "1719  MANSFIELD WEBB RD   ",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2025-11-25",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "1801  MANSFIELD WEBB RD   ",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2025-11-25",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "1723  MANSFIELD WEBB RD   ",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2025-11-25",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "1725  MANSFIELD WEBB RD   ",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2025-11-25",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "1721  MANSFIELD WEBB RD   ",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2025-11-25",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "8100 S COLLINS STREET",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2025-12-05",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "1831  MANSFIELD WEBB RD   ",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2025-12-09",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "1829  MANSFIELD WEBB RD   ",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2025-12-09",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "1793  MANSFIELD WEBB RD   ",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2025-12-09",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "1791  MANSFIELD WEBB RD   ",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2025-12-09",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "1789  MANSFIELD WEBB RD   ",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2025-12-09",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "1787  MANSFIELD WEBB RD   ",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2025-12-09",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "1785  MANSFIELD WEBB RD   ",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2025-12-09",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "1779  MANSFIELD WEBB RD   ",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2025-12-09",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "1777  MANSFIELD WEBB RD   ",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2025-12-09",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "1745  MANSFIELD WEBB RD   ",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2025-12-09",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "1741  MANSFIELD WEBB RD   ",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2025-12-09",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "1739  MANSFIELD WEBB RD   ",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2025-12-09",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "1737  MANSFIELD WEBB RD   ",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2025-12-09",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "1735  MANSFIELD WEBB RD   ",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2025-12-09",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "1733  MANSFIELD WEBB RD   ",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2025-12-09",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "1731  MANSFIELD WEBB RD   ",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2025-12-09",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "1729  MANSFIELD WEBB RD   ",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2025-12-09",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "1727  MANSFIELD WEBB RD   ",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2025-12-09",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "320 E STEPHENS STREET Bldg",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-02-02",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "2533 W RANDOL MILL ROAD",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-02-19",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "2551 W RANDOL MILL RD   ",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-02-20",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "2549 W RANDOL MILL ROAD",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-02-20",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "2545 W RANDOL MILL RD   ",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-02-20",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "2541 W RANDOL MILL RD   ",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-02-20",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "2537 W RANDOL MILL RD   ",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-02-20",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "2559 W RANDOL MILL RD   ",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-02-20",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "2555 W RANDOL MILL RD   ",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-02-20",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "2567 W RANDOL MILL RD   ",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-02-20",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "2563 W RANDOL MILL RD   ",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-02-20",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "2571 W RANDOL MILL ROAD",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-02-20",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "2575 W RANDOL MILL RD   ",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-02-20",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "2579 W RANDOL MILL RD   ",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-02-20",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "2583 W RANDOL MILL RD   ",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-02-20",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "2587 W RANDOL MILL RD   ",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-02-24",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "206F SLAUGHTER STREET",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-03-10",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "206E SLAUGHTER STREET",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-03-10",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "206D SLAUGHTER STREET",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-03-10",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "206C SLAUGHTER STREET",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-03-10",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "206B SLAUGHTER STREET",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-03-10",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "1771  MANSFIELD WEBB RD   ",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-03-27",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "1783  MANSFIELD WEBB RD   ",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-03-27",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "1781  MANSFIELD WEBB RD   ",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-03-27",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "1751  MANSFIELD WEBB RD   ",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-03-30",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "1747  MANSFIELD WEBB RD   ",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-03-30",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "1749  MANSFIELD WEBB RD   ",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-03-30",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "1743  MANSFIELD WEBB RD   ",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-03-30",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "1775  MANSFIELD WEBB RD   ",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-03-30",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "1773  MANSFIELD WEBB RD   ",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-03-30",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "1701  MANSFIELD WEBB RD   CARPORT 16",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-04-29",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "1701  MANSFIELD WEBB RD   CARPORT 15",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-04-29",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "1701  MANSFIELD WEBB RD   CARPORT 11",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-04-29",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "1701  MANSFIELD WEBB RD   CARPORT 10",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-04-29",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "1701  MANSFIELD WEBB RD   CARPORT 12",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-04-29",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "1701  MANSFIELD WEBB RD   CARPORT 1",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-04-30",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "1701  MANSFIELD WEBB RD   CARPORT 2",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-04-30",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "1701  MANSFIELD WEBB RD   CARPORT 3",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-04-30",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "1701  MANSFIELD WEBB RD   CARPORT 4",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-04-30",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "1701  MANSFIELD WEBB RD   CARPORT 5",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-04-30",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "1701  MANSFIELD WEBB RD   CARPORT 6",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-04-30",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "1701  MANSFIELD WEBB RD   CARPORT 7",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-04-30",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "1701  MANSFIELD WEBB RD   CARPORT 14",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-04-30",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "300 E STEPHENS ST   GARAGE 9",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-05-28",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "300 E STEPHENS ST   GARAGE 8",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-05-28",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "300 E STEPHENS ST   GARAGE 7",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-05-28",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "300 E STEPHENS ST   GARAGE 6",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-05-28",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "300 E STEPHENS ST   GARAGE 5",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-05-28",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "300 E STEPHENS ST   GARAGE 4",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-05-28",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "300 E STEPHENS ST   GARAGE 3",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-05-28",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "300 E STEPHENS ST   GARAGE 2",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-05-28",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "300 E STEPHENS ST   GARAGE 1",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-05-28",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "1753  MANSFIELD WEBB RD   ",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-06-01",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "1761  MANSFIELD WEBB RD   ",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-06-01",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "1757  MANSFIELD WEBB RD   ",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-06-01",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "1755  MANSFIELD WEBB RD   ",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-06-01",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "1759  MANSFIELD WEBB RD   ",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-06-01",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "1767  MANSFIELD WEBB RD   ",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-06-10",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "1765  MANSFIELD WEBB RD   ",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-06-10",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "1763  MANSFIELD WEBB RD   ",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-06-10",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "1701 MANSFIELD WEBB ROAD Unit CARPORT 22",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-06-10",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "1701  MANSFIELD WEBB RD   CARPORT 8",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-06-11",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "1701  MANSFIELD WEBB RD   CARPORT 9",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-06-11",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "1701  MANSFIELD WEBB RD   CARPORT 17",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-06-11",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "1701  MANSFIELD WEBB RD   CARPORT 18",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-06-11",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "1701  MANSFIELD WEBB RD   CARPORT 19",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-06-11",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "2403  BROWN BLV  Bldg OFFICE",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-06-24",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "130 W ARBROOK BOULEVARD",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-07-06",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "110 W ARBROOK BOULEVARD",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-07-06",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "2345 ASCENSION BOULEVARD",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-07-27",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "2341 ASCENSION BOULEVARD",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-07-27",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "2337 ASCENSION BOULEVARD",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-07-27",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "2333 ASCENSION BOULEVARD",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-07-27",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "2329  ASCENSION BLV   ",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-07-27",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "2323  ASCENSION BLV   ",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-07-27",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "2319  ASCENSION BLV   ",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-07-27",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "2315  ASCENSION BLV   ",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-07-27",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "2309  ASCENSION BLV   ",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-07-27",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "2305 ASCENSION BOULEVARD",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-07-27",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "2301 ASCENSION BOULEVARD ",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-07-27",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "9580 EDEN ROAD BLDG 2",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-08-17",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "9588 EDEN ROAD BLDG 5",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-08-20",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "9586 EDEN ROAD BLDG 4",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-08-20",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "9582 EDEN ROAD BLDG 3",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-08-20",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "9584 EDEN ROAD BLDG 1",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-08-20",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "340 E STEPHENS STREET Bldg",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-09-02",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Apartments (3+ dwelling units)",
+  "address": "300 E STEPHENS STREET",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-09-02",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ }
+]
