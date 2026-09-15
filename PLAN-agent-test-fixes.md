@@ -57,7 +57,7 @@ Open: http://localhost:8765/index.html
 - [x] **T8 Duplicate building.** "Torrington Wilmer" (300 units, Planned) appears twice, once as Dallas and
   once as Wilmer. Fix the dedupe upstream so the same project in two city labels becomes one row;
   rebuild data. Test. Commit.
-- [ ] **T9 Arizona names cleaned.** Some Arizona rows still show raw lot labels (e.g. "South Pier Lot 6",
+- [x] **T9 Arizona names cleaned.** Some Arizona rows still show raw lot labels (e.g. "South Pier Lot 6",
   developer City of Tempe) instead of "Apartments at <address>". Widen the generic-name rule; rebuild.
   Test. Commit.
 - [ ] **T10 Table headers sort.** On `master-table.html` the column headers look clickable but do nothing.

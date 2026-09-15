@@ -108,3 +108,20 @@ site data with `python3 site/data/build_data.py` (TX leads count dropped
 597 -> 593, matching the duplicates that merged). Checked with
 `bash tooling/qa/check-fixes.sh` (83 tests pass, design check 0 problems).
 Commit: see git log.
+
+## T9 Arizona names cleaned — done
+`site/data/build_data.py`'s `_nice_name()` only recognized a fixed set of
+generic permit-feed labels ("apartments", "building permit", ...), so a raw
+plat/lot label like "South Pier Lot 6" (developer City of Tempe, Tempe AZ)
+kept showing as the project name instead of becoming "Apartments at <address>".
+Added `_LOT_LABEL_RE` (matches a plat name ending in "Lot/Parcel/Tract <number>",
+case-insensitive) and widened `_nice_name()` to also clean names matching it.
+Added `tooling/qa/fixes_tests/test_t9_arizona_names.py` (4 tests: the Tempe
+example becomes "Apartments at 1314 E Vista Del Lago Dr", Parcel/Tract labels
+are also cleaned, a real project name is left alone, and a lot label with no
+address falls back to "Unnamed project" like the existing generic-name rule).
+Rebuilt site data with `python3 site/data/build_data.py`; besides fixing the
+Tempe row, it also caught a same-shaped Texas row ("ASTORIA ADDITION Block 2
+Lot 34R" -> "Apartments at 3741 Stalcup Rd, Fort Worth"). Checked with
+`bash tooling/qa/check-fixes.sh` (87 tests pass, design check 0 problems).
+Commit: b403a97.
