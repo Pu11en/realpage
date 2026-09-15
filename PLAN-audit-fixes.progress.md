@@ -74,3 +74,12 @@
 - Test: tooling/qa/fixes_tests/test_b2_chat_counts.py builds the chat database like the Dockerfile and runs the chat's SQL (fails on the old CSV).
 - Checked: check-fixes.sh passes (30 tests, design 0 problems); chatbot + lead-finder tests 105 passed.
 - Left: live chat picks this up only after redeploy (Drew).
+
+## B3 Vendor answers say their scope — done (33d035c)
+- Checked the data: only the Plano/Richardson rows have software (TX: Yardi 13, RealPage 4, Entrata 2, ResMan 2, AppFolio 1); every other TX/AZ/NY row is blank.
+- SOUL.md: new rule "Software answers say their scope": vendor counts/rankings must say they cover Plano and Richardson only (with an example), never Texas-wide or nationwide.
+- query-propertystack SKILL.md: "Software scope" note; ps_schema notes in the plugin say the same.
+- check_answers.py: new question "Which vendor runs the most buildings?" that flags answers not naming Plano and Richardson. Not run (costs money; Drew runs it).
+- Test: tooling/qa/fixes_tests/test_b3_vendor_scope.py (also checks the rule stays true in the data).
+- Checked: check-fixes.sh passes (34 tests, design 0 problems); chatbot/tests 35 passed.
+- Left: live chat picks this up only after redeploy (Drew).
