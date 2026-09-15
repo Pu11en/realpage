@@ -5869,6 +5869,258 @@
  },
  {
   "area": "tx",
+  "city": "Houston",
+  "name": "APARTMENT AMENITY NEW IN-GROUND UNHEATED SWIMMG POOL 2021 IBC",
+  "address": "717 LEHMAN ST BLD 1",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-01-12",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "houston-weekly-xlsx"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "houston-weekly-xlsx"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Houston",
+  "name": "119,873 SF NEW APT BLD (104UNITS)(2/8) 1-5-3-R2/A3-A-SPK/FA '21IBC",
+  "address": "3028 CENTER ST BLDG1A",
+  "lat": null,
+  "lon": null,
+  "units": 104,
+  "stage": "permitted",
+  "permit_date": "2026-01-13",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "houston-weekly-xlsx"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "houston-weekly-xlsx"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 104 units \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Houston",
+  "name": "112,805SF NEW APT BLD(102UNIT)(7/8)1-5-3-R2/A3-A-SPK/FA '21IBC",
+  "address": "3028 WASHINGTON AVE 2A",
+  "lat": null,
+  "lon": null,
+  "units": 102,
+  "stage": "permitted",
+  "permit_date": "2026-01-13",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "houston-weekly-xlsx"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "houston-weekly-xlsx"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 102 units \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Houston",
+  "name": "69,056SF NEW APT BLD(70UNITS)(8/8)1-5-3-R2-A-SPK/FA '21IBC",
+  "address": "3028 WASHINGTON AVE BLDG2B",
+  "lat": null,
+  "lon": null,
+  "units": 70,
+  "stage": "permitted",
+  "permit_date": "2026-01-13",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "houston-weekly-xlsx"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "houston-weekly-xlsx"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 70 units \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Houston",
+  "name": "78,855 SF NEW APT BLD (65 UNITS) (M/8) 1-5-3-R2-A-SPK/FA '21 IBC",
+  "address": "3028 CENTER ST BLDG1B",
+  "lat": null,
+  "lon": null,
+  "units": 65,
+  "stage": "permitted",
+  "permit_date": "2026-01-13",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "houston-weekly-xlsx"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "houston-weekly-xlsx"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 65 units \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Houston",
+  "name": "(2/5) 20,376 NEW APARTMENT BLDG 1-3-5-R2-B '21 IBC 13R SPK/FA",
+  "address": "7900 EASTHAVEN BLVD BLD B",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-01-23",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "houston-weekly-xlsx"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "houston-weekly-xlsx"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Houston",
+  "name": "(3/5) 20,376 NEW APARTMENT BLDG 1-3-5-R2-B '21 IBC 13R SPK/FA",
+  "address": "7900 EASTHAVEN BLVD BLD D",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-01-23",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "houston-weekly-xlsx"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "houston-weekly-xlsx"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Houston",
+  "name": "(4/5) 20,094 NEW APARTMENT BLDG 1-3-5-R2-B '21 IBC 13R SPK/FA",
+  "address": "7900 EASTHAVEN BLVD BLD C",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-01-23",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "houston-weekly-xlsx"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "houston-weekly-xlsx"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Houston",
+  "name": "(5/5) 20,094 NEW APARTMENT BLDG 1-3-5-R2-B '21 IBC 13R SPK/FA",
+  "address": "7900 EASTHAVEN BLVD BLD E",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-01-23",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "houston-weekly-xlsx"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "houston-weekly-xlsx"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
   "city": "Arlington",
   "name": "Apartments (3+ dwelling units)",
   "address": "320 E STEPHENS STREET Bldg",
@@ -6345,6 +6597,34 @@
  },
  {
   "area": "tx",
+  "city": "Houston",
+  "name": "NEW 125 KW NAT. GAS EXTERIOR GENERATOR APARTMENT 2021 IBC",
+  "address": "2125 YALE ST",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-02-20",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "houston-weekly-xlsx"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "houston-weekly-xlsx"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
   "city": "Arlington",
   "name": "Apartments (3+ dwelling units)",
   "address": "2587 W RANDOL MILL RD   ",
@@ -6367,6 +6647,34 @@
    {
     "fact": "permit_date",
     "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Houston",
+  "name": "NEW 99137 SF APARTMENT BUILDING/SITE 1-4-5-R2-A 21IBC SP/FA (M/3)",
+  "address": "1117 BLAND ST",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-03-09",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "houston-weekly-xlsx"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "houston-weekly-xlsx"
    }
   ],
   "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
@@ -6513,6 +6821,34 @@
  },
  {
   "area": "tx",
+  "city": "Houston",
+  "name": "NEW EXTERIOR 48 KW NATURAL GAS GENERATOR, APARTMENT 2021 IBC",
+  "address": "6007 MEMORIAL DR",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-03-16",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "houston-weekly-xlsx"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "houston-weekly-xlsx"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
   "city": "Austin",
   "name": "Building Permit",
   "address": "11901 DIONDA LN BLDG 1",
@@ -6538,6 +6874,34 @@
    }
   ],
   "why": "Permitted \u00b7 opens: not public yet \u00b7 24 units \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Houston",
+  "name": "MULTI-FAMILY NEW PERIMETER FENCE, FENCE",
+  "address": "720 1/2 THORNTON RD",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-03-20",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "houston-weekly-xlsx"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "houston-weekly-xlsx"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
  },
  {
   "area": "tx",
@@ -7241,6 +7605,34 @@
  },
  {
   "area": "tx",
+  "city": "Houston",
+  "name": "77,578 SF/ NEW APARTMENT W/SITEWRK (M/3)1-4-5-R2/A3-A/21 IBC/SPK13",
+  "address": "2611 SAINT CHARLES ST",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-05-08",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "houston-weekly-xlsx"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "houston-weekly-xlsx"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
   "city": "Austin",
   "name": "Building Permit",
   "address": "1326 LAMAR SQUARE DR",
@@ -7266,6 +7658,34 @@
    }
   ],
   "why": "Permitted \u00b7 opens: not public yet \u00b7 101 units \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Houston",
+  "name": "APARTMENT NEW OUTDOOR INGROUND UNHEATED SWIMMG POOL 2021 IBC",
+  "address": "13959 HILLCROFT AVE",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-05-18",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "houston-weekly-xlsx"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "houston-weekly-xlsx"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
  },
  {
   "area": "tx",
@@ -7945,6 +8365,34 @@
  },
  {
   "area": "tx",
+  "city": "Houston",
+  "name": "APARTMENT NEW OUTDOOR IN-GROUND UNHEATED SWIMMG POOL 2021 IBC.",
+  "address": "13350 PARK ROW DR",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-06-23",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "houston-weekly-xlsx"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "houston-weekly-xlsx"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
   "city": "Arlington",
   "name": "Apartments (3+ dwelling units)",
   "address": "2403  BROWN BLV  Bldg OFFICE",
@@ -8541,6 +8989,202 @@
  },
  {
   "area": "tx",
+  "city": "Houston",
+  "name": "NEW APARTMENT ELECTRICAL SERVICE 2021 IBC",
+  "address": "1919 W MAIN ST",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-07-27",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "houston-weekly-xlsx"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "houston-weekly-xlsx"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Houston",
+  "name": "NEW, UNIDENTIFIED-GARAGE APARTMENT ADDITION",
+  "address": "2906 EAGLE ST A",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-07-30",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "houston-weekly-xlsx"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "houston-weekly-xlsx"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Houston",
+  "name": "(M/15) 101,916 SF NEW APARTMENT 1-4-5-R2-A 15'IBC SPK13",
+  "address": "1415 ENCLAVE PKY BLD 3",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-07-30",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "houston-weekly-xlsx"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "houston-weekly-xlsx"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Houston",
+  "name": "(2/15) 65,630 SF NEW APARTMENT 1-4-5-R2-A 21'IBC SPK13",
+  "address": "1415 ENCLAVE PKY BLD 4",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-07-30",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "houston-weekly-xlsx"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "houston-weekly-xlsx"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Houston",
+  "name": "(3/15) 88,023 SF NEW APARTMENT 1-4-5-R2-A 21'IBC SPK13",
+  "address": "1415 ENCLAVE PKY BLD 5",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-07-30",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "houston-weekly-xlsx"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "houston-weekly-xlsx"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Houston",
+  "name": "(4/15) 55,551 SF NEW APARTMENT 1-4-5-R2-A 21'IBC SPK13",
+  "address": "1415 ENCLAVE PKY BLD 1",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-07-30",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "houston-weekly-xlsx"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "houston-weekly-xlsx"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Houston",
+  "name": "(5/15) 120,638 SF NEW APARTMENT 1-4-5-R2-A 21'IBC SPK13",
+  "address": "1415 ENCLAVE PKY BLD 2",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-07-30",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "houston-weekly-xlsx"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "houston-weekly-xlsx"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
   "city": "Austin",
   "name": "Building Permit",
   "address": "7333 BLUFF SPRINGS RD BLDG 3",
@@ -8795,6 +9439,34 @@
    {
     "fact": "permit_date",
     "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "Houston",
+  "name": "APARTMENT NEW EXTERIOR IN-GROUND UNHEATED SWIMMING POOL 2021 IBC",
+  "address": "12781 MARTIN LUTHER KING BLVD",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-08-20",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "houston-weekly-xlsx"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "houston-weekly-xlsx"
    }
   ],
   "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
