@@ -64,3 +64,22 @@
   problems). The broad `python3 -m pytest -q` still cannot collect the unrelated client-map test
   because its local `census` helper is missing; this existing H1 issue remains visible and is not
   treated as a pass.
+
+## 2026-09-15 — H5: container least privilege
+
+- The chatbot image now declares the existing dedicated `hermes` account as its runtime user. Its
+  baked knowledge base remains read-only, while its only application-writable location is the
+  existing `/opt/data` runtime volume.
+- The site image now creates and uses a dedicated `caddy` account. The baked site and Caddyfile stay
+  read-only; Caddy may write only to its `/config` and `/data` runtime-state directories. Its
+  existing port defaults to 8080, so it needs no root-only port.
+- Added `bash tooling/qa/check-container-security.sh`, which builds both local images, verifies their
+  configured users, starts the chatbot's inherited supervisor through an unprivileged command, and
+  validates the real site configuration as `caddy` with temporary state only. Added two offline
+  regression checks so a later Dockerfile change cannot silently return either image to root.
+- Saved the implementation in local commit `5706b7f` (`H5: run release containers without root`).
+- Checked: the focused H5 test passed (2 tests); `check-container-security.sh` passed; the plan
+  Check passed (136 focused tests and 0 design problems); and `chatbot/tests` passed (35 tests).
+  The broad `python3 -m pytest -q` still stops at the pre-existing unrelated client-map collection
+  error because its local `census` helper is missing. It is recorded as a failure, not treated as a
+  passing release result.

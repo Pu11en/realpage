@@ -63,7 +63,7 @@ Run with: `Do the next unticked task in PLAN-human-release-gate.md, then tick it
   or the answer must plainly say it could not verify the claim. Preserve valid unknown answers and
   add offline regression fixtures. Do not invent citations or call a model. Commit.
 
-- [ ] **H5 Close the two container findings.** Run the chatbot and site containers as an unprivileged
+- [x] **H5 Close the two container findings.** Run the chatbot and site containers as an unprivileged
   user while preserving only the file access they need. Re-run the same local security check and
   record the new result. If either finding cannot be safely closed, keep it visible and keep the
   push gate closed. Commit.
