@@ -1,0 +1,11 @@
+{
+  "endpoint": "https://www.tdlr.texas.gov/TABS/Search/SearchProjects",
+  "detail_url_template": "https://www.tdlr.texas.gov/TABS/Search/Project/{project_number}",
+  "keywords": ["apartment", "apartments", "multifamily", "multi-family", "lofts", "residences", "flats", "senior living"],
+  "registration_date_begin": "09/01/2024",
+  "data_version_id": 900001,
+  "page_size": 100,
+  "new_construction_type_of_work": 9001,
+  "min_estimated_cost": 3000000,
+  "units_text_pattern": "(\\d+)[\\s-]*(?:unit|units)\\b"
+}

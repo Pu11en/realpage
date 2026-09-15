@@ -292,3 +292,62 @@
 - Left open: `data/tx/cities.json` will need a fresh rank right before T6's
   full run (Census BPS data updates monthly and T2-T5's new sources aren't
   wired in yet); T2 (TDLR TABS) is next.
+
+## T2 TDLR TABS -- the statewide backbone
+- New skill `skills/lead-finder-tabs/tabs.py`: `find_tabs_projects(area,
+  recipe, fetch_search, fetch_detail, today)` searches TDLR's TABS registry
+  (`Search/SearchProjects` POST, 100 rows/page) once per keyword in
+  `recipes/tx/tabs.json` (apartment, apartments, multifamily,
+  multi-family, lofts, residences, flats, senior living), paginates to
+  `recordsTotal`, keeps only rows whose `TypeOfWork` is the New
+  Construction code (9001) and whose `EstimatedCost` >= $3,000,000, dedupes
+  by `ProjectNumber` across keywords, then fetches each survivor's detail
+  page (`Search/Project/<ProjectNumber>`) for full address, scope, square
+  feet, owner name/address/phone, design firm, and estimated start/finish.
+- Live-verified the real search endpoint and detail page directly with curl
+  before writing any code: the detail page is plain server-rendered HTML
+  with `<dt>Label:</dt><dd>value</dd>` pairs (parsed with a small regex, no
+  bs4 needed, matching this codebase's existing HTML-parsing style in
+  legistar.py/agendas.py) -- and it already gives city and county as real
+  text ("Brownsville, TX 78521" / "Cameron"), not a code. **Deviation from
+  the plan's "map city/county codes to names" instruction:** TDLR never
+  publishes a lookup table anywhere public for the search row's numeric
+  City/County fields, but the detail page's own text is ground truth (not a
+  guess) and is used directly instead -- documented in the skill's
+  SKILL.md so this isn't a silent gap.
+- Units only ever come from a regex match against the detail page's "Scope
+  of Work" text (e.g. "New construction apartment complex, 300 units");
+  no match -> `units=None`, which the site already renders as "Units: not
+  public yet" (confirmed via `skills/score-leads/score_leads.py`'s existing
+  handling) -- never estimated from square footage or cost, per the plan.
+- Owner name/phone come straight off the detail page's OWNER section
+  (developer field falls back to the design firm's name only if there's no
+  owner on file, matching `find_upcoming`'s owner-over-builder rule); a
+  broken/failed detail-page fetch never drops the project, it still returns
+  a record from the search row alone.
+- Live self-test: ran the real search+detail flow for the "senior living"
+  keyword alone (8 real projects, e.g. "Pine Creek Senior Living" |
+  Bastrop | 52 units | "Pine Creek Bastrop, LP" | (214) 336-7495 |
+  under construction) -- confirmed real names, cities, owners, phones and
+  stages all come through correctly against the live site, not a mock.
+  Wrote `skills/lead-finder-tabs/live_self_test.py` (same DI/offline-vs-live
+  split as every other lead-finder* skill) for Drew/future runs to re-check
+  the full 8-keyword set by hand; did not run the full 8-keyword set in
+  this worker session (would be ~300+ detail-page fetches, too slow for a
+  15-30 min task) -- T6 (the real Texas run) will exercise it in full.
+- Tests: `skills/lead-finder-tabs/tests/test_tabs.py` (new, 7 tests, all
+  offline via injected `fetch_search`/`fetch_detail`) covers: new
+  construction + cost floor kept and detail fields filled in; wrong
+  type-of-work dropped; below-cost-floor dropped; a project matching two
+  keywords counted once; pagination follows `recordsTotal`; no unit match
+  in scope text leaves `units=None`; a broken detail fetch still returns a
+  record instead of dropping it.
+- Checked: `bash tooling/qa/check-lead-finder.sh` passes (293 total
+  propertystack tests via the full suite, up from 286; the report also hit
+  the known pre-existing `test_fetch_block_counts_are_race_free_across_threads`
+  timing flake once, reran clean). Full suite from `propertystack/`
+  (`python3 -m pytest -q --ignore=skills/client-map/tests`): 293 passed, 0
+  failures.
+- Left open: `recipes/tx/tabs.json` is not yet wired into `run.py`'s chain
+  (that's T6, which merges TABS + city recipes + appraisal files + TDHCA);
+  T3 (Texas city permit recipes) is next.
