@@ -62,7 +62,7 @@ Open: http://localhost:8765/index.html
   Test. Commit.
 - [x] **T10 Table headers sort.** On `master-table.html` the column headers look clickable but do nothing.
   Make them sort (click again to reverse) and keep the Sort dropdown in step. Test. Commit.
-- [ ] **T11 Map markers do what they say.** The Texas/Arizona/New York markers say "click to open its table"
+- [x] **T11 Map markers do what they say.** The Texas/Arizona/New York markers say "click to open its table"
   but only show a popup. Either open that state's table or change the wording to match. Test. Commit.
 
 ### Polish

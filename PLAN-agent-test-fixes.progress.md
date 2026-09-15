@@ -145,3 +145,24 @@ clicks sync the dropdown, and picking the dropdown clears the header sort).
 Checked with `bash tooling/qa/check-fixes.sh` (92 tests pass, design check
 0 problems on 7 pages) and a Node syntax check of the page's inline script.
 Commit: see git log.
+
+## T11 Map markers do what they say — done
+Reproduced it first with a real Playwright click on the Arizona marker: the
+click missed and landed on the Arizona state shape instead (it "intercepts
+pointer events"), which only shows the blue-state hover tooltip -- exactly
+the "only show a popup" the live testers saw. Cause: each marker's `<g>` in
+`site/js/map.js` had no geometry of its own; its amber dot and its white
+label pill are separate children with a visible gap between them, and a
+click landing in that gap (which still looks like part of the marker) falls
+through to the map state underneath instead of the marker's own click
+handler. Fixed by adding an invisible `hit-area` rect as the first child of
+each marker `<g>`, sized in `layoutLabels()` to cover both the dot and the
+label pill (and the gap between them) so any click on the visible marker
+navigates to that state's leads table. Re-ran the same live click and it now
+lands on `index.html?area=az` as intended, so the existing "click opens the
+table" wording stays accurate -- no copy change needed. Added
+`tooling/qa/fixes_tests/test_t11_map_marker_click.py` (2 source checks for
+the hit-area element and its sizing, plus a real headless-browser test that
+clicks a marker and asserts the page navigates). Checked with
+`bash tooling/qa/check-fixes.sh` (95 tests pass, design check 0 problems on
+7 pages). Commit: see git log.
