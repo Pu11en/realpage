@@ -41,3 +41,10 @@
 - `tooling/qa/check_answers.py`: 2 new questions ("What are people on Reddit saying about Yardi in Texas?", "Are any Texas property managers on Reddit unhappy with AppFolio or Entrata?") plus a rule that Reddit answers must link a reddit.com/youtube.com thread. NOT run (paid; Drew runs it).
 - Check: `bash tooling/qa/check-street-talk.sh` -> 31 passed (4 new in `test_chat_plugin.py`: table loads with its source name, a Yardi query returns rows with links, the real saved CSV loads, Dockerfile bakes it in). `chatbot/tests` still pass.
 - Open: the running chat only picks this up after its image is rebuilt (`bash tooling/dev.sh` rebuild); not done here.
+
+## T9 — Weekly refresh (2026-09-15)
+- New `tooling/street-talk/weekly.sh`: runs rivals (20 Reddit requests), buildings (40) and unhappy (20) = 80 max per run, then `build.py`, then a local commit of only the Street Talk data (never pushes; `--no-commit` to skip). First Reddit block stops the remaining parts; the blocked part's partial file is renamed `<part>.blocked.json` so the build keeps last week's posts for it.
+- `build.py` adds `failedRuns` (part -> date of a blocked run newer than the data shown); the tab shows a ⚠️ line per failed part ("refresh on <date> failed, still showing posts from <date>") under "Last updated".
+- No weekly Texas refresh script exists yet (`PLAN-texas-weekly.md` W9 `tooling/texas-weekly.sh` is unbuilt), so weekly.sh stands alone; no timer set up. When W9 is built it should call `bash tooling/street-talk/weekly.sh`.
+- Check: `bash tooling/qa/check-street-talk.sh` -> 35 passed (4 new in `test_weekly.py`); tab script parses (node --check); `chatbot/tests` pass. weekly.sh not run live (would spend up to 80 Reddit requests; data from today's T2-T4 pulls is current).
+- Current counts (from T2-T5 reports): RealPage vs rivals 10 posts (RealPage 7, 71% angry); Texas buildings 37 posts across 12 of 40 buildings (27 Reddit, 10 YouTube); unhappy rival customers 1 post, 1 warm lead.

@@ -67,6 +67,12 @@
       }).join("");
     }
 
+    const PART_NAMES = { rivals: "RealPage vs rivals", buildings: "Texas buildings", unhappy: "Unhappy rival customers" };
+    function failed(d) {
+      const runs = d.failedRuns || {};
+      return Object.keys(runs).map((p) => `<p class="muted">⚠️ ${esc(PART_NAMES[p] || p)}: the Reddit refresh on ${niceDate(runs[p])} failed, so this part still shows the posts from ${d.sourceDates && d.sourceDates[p] ? `last updated ${niceDate(d.sourceDates[p])}` : "no earlier run"}.</p>`).join("");
+    }
+
     function totals(t) {
       const names = Object.keys(t || {});
       if (!names.length) return EMPTY;
@@ -85,6 +91,7 @@
       page.innerHTML = `
         <h1>Street Talk</h1>
         <p class="muted">What people in Texas say on Reddit (and YouTube) about property management software and our lead buildings. Last updated ${niceDate(d.updated)}.</p>
+        ${failed(d)}
         <h2>Posts per company</h2>
         ${totals(d.totals)}
         <h2>RealPage vs Yardi, Entrata and AppFolio (${rivals.length})</h2>

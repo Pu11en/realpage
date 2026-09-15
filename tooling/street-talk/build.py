@@ -110,6 +110,17 @@ def latest_raw(raw_dir: pathlib.Path, part: str) -> tuple[str, dict] | None:
     return None
 
 
+def failed_runs(raw_dir: pathlib.Path, dates: dict) -> dict:
+    """Parts whose newest run was blocked by Reddit: {part: date of that failed run}."""
+    out = {}
+    for part in PARTS:
+        tries = sorted(d.name for d in raw_dir.glob("*") if (d / f"{part}.blocked.json").exists()) \
+            if raw_dir.exists() else []
+        if tries and tries[-1] > dates.get(part, ""):
+            out[part] = tries[-1]
+    return out
+
+
 def totals(posts: list[dict]) -> dict:
     out = {}
     for company in COMPANIES:
@@ -143,6 +154,7 @@ def build(raw_dir: pathlib.Path = RAW_DIR, today: str | None = None) -> dict:
         "updated": max(dates.values()) if dates else "",
         "builtAt": today or dt.date.today().isoformat(),
         "sourceDates": dates,
+        "failedRuns": failed_runs(raw_dir, dates),
         "totals": totals(everything),
         "counts": {part: len(rows) for part, rows in parts.items()},
         "warmLeads": sum(p["warmLead"] for p in parts["unhappy"]),
@@ -177,6 +189,8 @@ def main() -> None:
     data = build(args.raw)
     write(data)
     print(f"Street Talk built from {data['sourceDates']}: {data['counts']}, warm leads {data['warmLeads']}")
+    for part, day in data["failedRuns"].items():
+        print(f"  {part}: Reddit refresh on {day} failed, showing posts from {data['sourceDates'].get(part, 'nowhere')}")
     for company, t in data["totals"].items():
         print(f"  {company}: {t['posts']} posts, {t['angryPct']}% angry, {t['happyPct']}% happy")
 

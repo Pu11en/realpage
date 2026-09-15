@@ -84,7 +84,7 @@ Open: http://localhost:8765/street-talk.html
   link). Add an offline plugin test (table loads, a sample query returns rows with links) to
   `check-street-talk.sh`. Add 2 Street Talk questions to `tooling/qa/check_answers.py` but do NOT run it
   (it costs money; Drew runs it). Commit.
-- [ ] **T9 Weekly refresh.** Write `tooling/street-talk/weekly.sh` (runs the three collectors + build, then
+- [x] **T9 Weekly refresh.** Write `tooling/street-talk/weekly.sh` (runs the three collectors + build, then
   commits the new data). If a weekly Texas refresh script exists by then, call it from there; otherwise leave
   weekly.sh ready and tell Drew -- do not set up any timer yourself. Same safety limits; a failed Reddit run keeps last week's data and says so on the tab
   ("last updated <date>"). Recap in plain words for Drew what changed, including each part's counts from the reports. Commit.
