@@ -18,6 +18,11 @@ Reddit requests per full run, stop on the first 403/429 and keep what was saved.
 account actions. Tests never call Reddit -- they use saved sample files in `tooling/street-talk/fixtures/`.
 Commit after every chunk so a crash never loses collected posts.
 
+Before starting: the Texas lead build (PLAN-lead-finder-texas.md) and the map build (PLAN-map-markers.md)
+should be merged first -- part 2 needs the Texas leads. Texas buildings = every area under
+`propertystack/data/` whose leads are in TX (area-agnostic, no hard-coded area list). No paid AI calls
+anywhere in this plan (the paid `check-answers.sh` is left for Drew to run himself).
+
 Run with: `Do the next unticked task in PLAN-street-talk.md, then tick it and stop.`
 Check: `bash tooling/qa/check-street-talk.sh`
 Try: `bash tooling/dev.sh`
@@ -37,7 +42,8 @@ Open: http://localhost:8765/street-talk.html
   existing env/DSH sources working. Install Agent Reach in default (non-system) mode and confirm
   `agent-reach doctor` shows YouTube and web working (skip anything needing a login). Create
   `tooling/street-talk/` and `tooling/qa/check-street-talk.sh` (runs the street-talk tests offline with
-  pytest; passes with zero tests at first). One live search `"realpage texas" --limit 3` to prove the cookie
+  pytest; treat pytest's "no tests found" exit code 5 as a pass; no network). The existing tool already works with this cookie when it is passed in `DSH_REDDIT_COOKIE` (checked
+  2026-09-14). One live search `"realpage texas" --limit 3` to prove the cookie
   works. Commit.
 - [ ] **T2 Part 1 collector: RealPage vs rivals in Texas.** `tooling/street-talk/collect.py --part rivals`
   searches Reddit for RealPage, Yardi, Entrata and AppFolio together with Texas words (Texas, Dallas,
@@ -60,14 +66,17 @@ Open: http://localhost:8765/street-talk.html
   per company (posts, % angry, % happy). Tests on fixtures. Commit.
 - [ ] **T6 The Street Talk tab.** `site/street-talk.html` shows the totals at top, then the three parts,
   newest first, each post: quote, subreddit, date, label, link. Part 2 groups by building and links to that
-  building's page; part 3 marks warm leads. Add "Street Talk" to the tab bar on every page. Works on phone
+  building's page (`property.html?id=<id>`); part 3 marks warm leads. Add "Street Talk" to the tab bar on every page. Works on phone
   size. Plain "no posts yet" if a part is empty. Commit.
 - [ ] **T7 Box on AI Visibility.** `site/ai-visibility.html` gets a "What people are saying on Reddit" box
   near the "Show up where operators talk" to-do: per-company post counts and % angry from
   `street-talk.json`, 2 top quotes, link to Street Talk. Commit.
 - [ ] **T8 The chat can use it.** The `propertystack` chat plugin also loads `street_talk.csv` as table
   `street_talk`; the query-propertystack skill lists it ("Reddit posts" in Sources, always with the thread
-  link). Add 2 questions to the answer checks and run `tooling/qa/check-answers.sh`. Commit.
-- [ ] **T9 Weekly refresh.** Add the three collectors + build to the weekly Texas refresh so the tab updates
-  each week (same safety limits); a failed Reddit run keeps last week's data and says so on the tab
+  link). Add an offline plugin test (table loads, a sample query returns rows with links) to
+  `check-street-talk.sh`. Add 2 Street Talk questions to `tooling/qa/check_answers.py` but do NOT run it
+  (it costs money; Drew runs it). Commit.
+- [ ] **T9 Weekly refresh.** Write `tooling/street-talk/weekly.sh` (runs the three collectors + build, then
+  commits the new data). If a weekly Texas refresh script exists by then, call it from there; otherwise leave
+  weekly.sh ready and tell Drew -- do not set up any timer yourself. Same safety limits (same safety limits); a failed Reddit run keeps last week's data and says so on the tab
   ("last updated <date>"). Recap in plain words for Drew what changed. Commit.
