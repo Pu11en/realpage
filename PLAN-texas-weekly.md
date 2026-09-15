@@ -44,7 +44,7 @@ Open: http://localhost:8765 → Early Leads → Tx
 
 - [ ] **W1 Remember the last run.** `propertystack/runs/tx/state.json` keeps, per source, the date (or last
   record id) of the last successful pull. Every Texas puller built in `PLAN-lead-finder-texas.md` (T2-T5: TABS, city recipes, Houston sheets,
-  DCAD/HCAD, TAD) takes a `since` date and pulls only newer records. Seed `state.json` from the newest
+  DCAD/HCAD, TAD) and `PLAN-texas-round2.md` (Williamson, Bexar, College Station, Fort Bend) takes a `since` date and pulls only newer records. Seed `state.json` from the newest
   record date per source in the Texas build's run folder. Appraisal-district zips (~200 MB, updated about
   monthly) are re-downloaded only when the file changed (Last-Modified/size), else the cached copy is reused. Tests
   with saved responses. Commit.
