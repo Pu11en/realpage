@@ -57,3 +57,31 @@ def test_identify_system_directly():
 
 def test_slugify():
     assert agendas.slugify("Oakford County") == "oakford-county"
+
+
+def test_saved_recipe_is_reused_across_calls_without_searching_again(tmp_path):
+    """S2: agenda-system detection is cached across runs (a new run-id
+    starts a fresh run folder, but this cache lives under recipes_dir,
+    outside any run folder), so a later call for the same city never
+    re-searches or re-fetches."""
+    results = [{"url": "https://rivertown.legistar.com/Calendar.aspx", "title": "Meeting Calendar"}]
+    calls = []
+
+    def search_fn(query):
+        calls.append(query)
+        return results
+
+    def fetch_fn(url):
+        raise AssertionError("should not need to fetch when URL matches")
+
+    first = agendas.find_meeting_system("Rivertown", "TX", search_fn, fetch_fn, recipes_dir=tmp_path)
+    assert len(calls) == 1
+
+    def search_fn_should_not_be_called(query):
+        raise AssertionError("cached recipe should have been used instead of searching again")
+
+    second = agendas.find_meeting_system(
+        "Rivertown", "TX", search_fn_should_not_be_called, fetch_fn, recipes_dir=tmp_path
+    )
+    assert second == first
+    assert len(calls) == 1

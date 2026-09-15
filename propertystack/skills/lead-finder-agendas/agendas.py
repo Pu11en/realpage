@@ -60,7 +60,17 @@ def find_meeting_system(
 
     Always returns a dict: either a saved recipe (has "system") or a skip note
     (has "skipped": True and "reason") -- never raises for "nothing found online".
+
+    A found system is cached to disk (`_save`) and, on any later call for the
+    same city/recipes_dir -- including a brand-new run-id, since this cache
+    lives outside any one run folder -- that saved recipe is returned without
+    ever calling `search_fn`/`fetch_fn` again (S2, 2026-09-14: agenda-system
+    detection used to re-search every city on every run).
     """
+    cached = _load(city, recipes_dir)
+    if cached is not None:
+        return cached
+
     results = search_fn(f"{city} {state} planning commission agenda")
     for result in results:
         url = result.get("url", "")
@@ -91,6 +101,13 @@ def _save(recipe: dict, city: str, recipes_dir: Path) -> None:
     recipes_dir.mkdir(parents=True, exist_ok=True)
     path = recipes_dir / f"agendas-{slugify(city)}.json"
     path.write_text(json.dumps(recipe, indent=2) + "\n", encoding="utf-8")
+
+
+def _load(city: str, recipes_dir: Path) -> "dict | None":
+    path = recipes_dir / f"agendas-{slugify(city)}.json"
+    if not path.exists():
+        return None
+    return json.loads(path.read_text(encoding="utf-8"))
 
 
 if __name__ == "__main__":

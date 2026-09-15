@@ -266,3 +266,71 @@ def test_step_details_runs_in_parallel_but_keeps_order(tmp_path, monkeypatch):
 
     out = chain.step_details(run_folder, CITY, records, deps)
     assert [d["name"] for d in out] == [f"Project {i}" for i in range(8)]
+
+
+def test_dead_end_gate_runs_with_a_working_permit_source_even_at_zero_permits():
+    ok, reason = chain._dead_end_gate({"system": "socrata"}, CITY, 0)
+    assert ok is True
+    assert reason == ""
+
+
+def test_dead_end_gate_runs_with_enough_census_permits_even_without_a_source():
+    ok, reason = chain._dead_end_gate({"skipped": True}, CITY, 10)
+    assert ok is True
+    assert reason == ""
+
+
+def test_dead_end_gate_skips_with_no_source_and_too_few_permits():
+    ok, reason = chain._dead_end_gate({"skipped": True, "reason": "no source"}, CITY, 9)
+    assert ok is False
+    assert "9 Census 5+ unit permits" in reason
+    assert "need >= 10" in reason
+
+
+def test_run_chain_skips_agenda_legistar_civic_sales_for_a_dead_end_city(tmp_path, monkeypatch):
+    """S2: a city with no working permit recipe and too few Census 5+ unit
+    permits gets skip notes for the agenda/legistar/civic/sales-news steps,
+    and never calls those modules' network-touching finders at all."""
+
+    def _must_not_be_called(*a, **k):
+        raise AssertionError("dead-end step should have been skipped by the S2 gate")
+
+    monkeypatch.setattr(chain.agendas_mod, "find_meeting_system", _must_not_be_called)
+    monkeypatch.setattr(chain.legistar_mod, "find_legistar_matters", _must_not_be_called)
+    monkeypatch.setattr(chain.civic_agendas, "find_civic_agenda_items", _must_not_be_called)
+    monkeypatch.setattr(chain.sales_news, "find_sales_news", _must_not_be_called)
+
+    run_folder = RunFolder(state=STATE, run_id="run-dead-end", runs_dir=tmp_path)
+    web = FakeWeb()
+    deps = _make_deps(web, tmp_path / "recipes")
+
+    def _no_recipe_http_get_json(url):
+        if url.startswith(chain.find_sources.ARCGIS_ONLINE_SEARCH):
+            return {"results": []}
+        if url.startswith(chain.find_sources.ARCGIS_HUB_SEARCH):
+            return {"data": []}
+        if url.startswith(chain.find_sources.SOCRATA_CATALOG):
+            return {"results": []}
+        return []
+
+    deps.http_get_json = _no_recipe_http_get_json
+
+    # "cities" step data shaped like rank_cities/build's output, with a low
+    # Census permit count, so the gate has a real count to read -- saved
+    # directly (not via the `cities=` kwarg, which always overwrites this
+    # step with a plain city-name list carrying no permit counts).
+    run_folder.save_step(
+        chain.STEP_CITIES, chain.STATE_CITY_KEY,
+        {"cities": [{"city": CITY, "permits_5plus": 3, "realpage_count": 0}], "source": "rank"},
+    )
+    monkeypatch.setattr(chain, "load_or_build_cities", lambda *a, **k: [CITY])
+
+    chain.run_chain(STATE, run_folder, deps, cities=None)
+
+    agendas = run_folder.load_step(chain.STEP_AGENDAS, CITY)
+    legistar = run_folder.load_step(chain.STEP_LEGISTAR, CITY)
+    civic = run_folder.load_step(chain.STEP_CIVIC, CITY)
+    sales = run_folder.load_step(chain.STEP_SALES, CITY)
+    for result in (agendas, legistar, civic, sales):
+        assert result["skipped"] is True
+        assert "3 Census 5+ unit permits" in result["reason"]

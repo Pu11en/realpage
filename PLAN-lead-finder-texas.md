@@ -53,7 +53,7 @@ Open: http://localhost:8765 → Early Leads → Tx
   pool) instead of one by one; keep 2 s between visits to the same site, stay under Jina ~100/min, cache
   every page. Time Tempe's details step before and after and write both in the progress log. Tests.
   Commit.
-- [ ] **S2 Skip dead ends.** Meeting-agenda, Legistar, civic and per-city sales-news steps run only for
+- [x] **S2 Skip dead ends.** Meeting-agenda, Legistar, civic and per-city sales-news steps run only for
   cities with a working permit source or ≥10 new 5+ unit permits in the Census data; cache a city's
   agenda-system detection across runs. Log what was skipped and why. Tests. Commit.
 - [ ] **S3 Fix dropped and leaked leads.** Find out, with the saved real rows, why Scottsdale's recipe

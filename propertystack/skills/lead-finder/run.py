@@ -258,16 +258,28 @@ def step_details(run_folder: RunFolder, city: str, records: list[LeadRecord], de
     return _run_step(run_folder, STEP_DETAILS, city, _do)
 
 
-def step_agendas(run_folder: RunFolder, city: str, state: str, deps: ChainDeps) -> dict:
+def step_agendas(
+    run_folder: RunFolder, city: str, state: str, deps: ChainDeps,
+    should_run: bool = True, skip_reason: str = "",
+) -> dict:
     def _do():
+        if not should_run:
+            print(f"lead-finder: skipping agendas for {city}, {state}: {skip_reason}")
+            return _skip(city, state, skip_reason)
         kwargs = {"recipes_dir": deps.recipes_dir} if deps.recipes_dir else {}
         return agendas_mod.find_meeting_system(city, state, deps.search_fn, deps.fetch_html, **kwargs)
 
     return _run_step(run_folder, STEP_AGENDAS, city, _do)
 
 
-def step_legistar(run_folder: RunFolder, city: str, state: str, area: str, recipe: dict, deps: ChainDeps) -> list:
+def step_legistar(
+    run_folder: RunFolder, city: str, state: str, area: str, recipe: dict, deps: ChainDeps,
+    should_run: bool = True, skip_reason: str = "",
+) -> list:
     def _do():
+        if not should_run:
+            print(f"lead-finder: skipping legistar for {city}, {state}: {skip_reason}")
+            return _skip(city, state, skip_reason)
         if recipe.get("system") != "legistar":
             return []
         client = deps.legistar_clients.get(city)
@@ -283,8 +295,14 @@ def step_legistar(run_folder: RunFolder, city: str, state: str, area: str, recip
     return _run_step(run_folder, STEP_LEGISTAR, city, _do)
 
 
-def step_civic(run_folder: RunFolder, city: str, state: str, area: str, recipe: dict, deps: ChainDeps) -> list:
+def step_civic(
+    run_folder: RunFolder, city: str, state: str, area: str, recipe: dict, deps: ChainDeps,
+    should_run: bool = True, skip_reason: str = "",
+) -> list:
     def _do():
+        if not should_run:
+            print(f"lead-finder: skipping civic for {city}, {state}: {skip_reason}")
+            return _skip(city, state, skip_reason)
         if recipe.get("system") not in civic_agendas.SUPPORTED_SYSTEMS:
             return []
         hits = civic_agendas.find_civic_agenda_items(
@@ -298,14 +316,54 @@ def step_civic(run_folder: RunFolder, city: str, state: str, area: str, recipe: 
     return _run_step(run_folder, STEP_CIVIC, city, _do)
 
 
-def step_sales(run_folder: RunFolder, city: str, area: str, deps: ChainDeps) -> list:
+def step_sales(
+    run_folder: RunFolder, city: str, area: str, deps: ChainDeps,
+    should_run: bool = True, skip_reason: str = "",
+) -> list:
     def _do():
+        if not should_run:
+            print(f"lead-finder: skipping sales-news for {city}: {skip_reason}")
+            return _skip(city, area.upper(), skip_reason)
         records = sales_news.find_sales_news(
             city, area, deps.search_fn, gdelt_fetch_fn=deps.gdelt_fetch_fn, today=deps.today
         )
         return [r.to_dict() for r in records]
 
     return _run_step(run_folder, STEP_SALES, city, _do)
+
+
+# S2: minimum Census 5+ unit permits (last 12 months) a city needs, absent a
+# working permit source, before its agenda/legistar/civic/sales-news dead-end
+# steps are worth running at all.
+DEAD_END_MIN_PERMITS = 10
+
+
+def _permit_counts_from_cities_step(run_folder: RunFolder) -> dict[str, int]:
+    """{city: permits_5plus} from the already-saved "cities" step, if it was
+    built from ranked Census data (explicit `--city` runs and fixtures have
+    no such data, so this is empty for them and every city falls back to
+    the "has a working permit source" half of the S2 gate)."""
+    if not run_folder.step_done(STEP_CITIES, STATE_CITY_KEY):
+        return {}
+    data = run_folder.load_step(STEP_CITIES, STATE_CITY_KEY)
+    counts: dict[str, int] = {}
+    for c in data.get("cities", []):
+        if isinstance(c, dict) and "permits_5plus" in c:
+            counts[c["city"]] = max(counts.get(c["city"], 0), c["permits_5plus"])
+    return counts
+
+
+def _dead_end_gate(recipe: dict, city: str, permits_5plus: int) -> tuple[bool, str]:
+    """S2: the agenda/legistar/civic/sales-news steps are dead ends for a
+    city with neither a real permit source nor much building activity --
+    skip them and say why, instead of burning searches on nothing."""
+    has_permit_source = isinstance(recipe, dict) and not recipe.get("skipped")
+    if has_permit_source or permits_5plus >= DEAD_END_MIN_PERMITS:
+        return True, ""
+    return False, (
+        f"no working permit source and only {permits_5plus} Census 5+ unit "
+        f"permits in the last 12 months (need >= {DEAD_END_MIN_PERMITS})"
+    )
 
 
 # -- state-level steps ------------------------------------------------------
@@ -376,6 +434,7 @@ def run_chain(
 
     all_records: list[LeadRecord] = []
     caps = run_folder.load_caps()
+    permit_counts = _permit_counts_from_cities_step(run_folder)
 
     for city in city_list:
         if caps.any_cap_hit():
@@ -390,10 +449,14 @@ def run_chain(
         detailed_dicts = step_details(run_folder, city, permit_records, deps)
         detailed_records = _records_from(detailed_dicts)
 
-        agenda_recipe = step_agendas(run_folder, city, state, deps)
-        legistar_data = step_legistar(run_folder, city, state, area, agenda_recipe, deps)
-        civic_data = step_civic(run_folder, city, state, area, agenda_recipe, deps)
-        sales_dicts = step_sales(run_folder, city, area, deps)
+        should_run_dead_ends, skip_reason = _dead_end_gate(recipe, city, permit_counts.get(city, 0))
+
+        agenda_recipe = step_agendas(run_folder, city, state, deps, should_run_dead_ends, skip_reason)
+        legistar_data = step_legistar(run_folder, city, state, area, agenda_recipe, deps,
+                                       should_run_dead_ends, skip_reason)
+        civic_data = step_civic(run_folder, city, state, area, agenda_recipe, deps,
+                                 should_run_dead_ends, skip_reason)
+        sales_dicts = step_sales(run_folder, city, area, deps, should_run_dead_ends, skip_reason)
 
         city_records = (
             detailed_records

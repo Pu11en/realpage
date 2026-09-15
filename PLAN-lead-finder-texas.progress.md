@@ -74,3 +74,48 @@
   parallelized (the plan's explicit list); the agenda/legistar/civic/sales
   per-city steps still run one city at a time as before -- S2 covers
   skipping those, not speeding them up.
+
+## S2 Skip dead ends
+- `run.py`'s `step_agendas`/`step_legistar`/`step_civic`/`step_sales` each
+  gained a `should_run`/`skip_reason` pair. `run_chain` computes a per-city
+  gate (`_dead_end_gate`): run them if the city's `sources` step found a
+  real (non-skipped) permit recipe, **or** the city has >= 10 Census 5+
+  unit permits in the last 12 months (`DEAD_END_MIN_PERMITS`); otherwise
+  every one of those four steps is saved as a skip dict with a reason like
+  "no working permit source and only 3 Census 5+ unit permits in the last
+  12 months (need >= 10)" and none of their search/fetch calls happen at
+  all. The permit count comes from the already-saved `cities` step
+  (`_permit_counts_from_cities_step`) when it was built from ranked Census
+  data (`rank_cities`'s `permits_5plus` field) -- an explicit `--city` run
+  or test fixture has no such data and falls back to the permit-source half
+  of the gate alone.
+- Agenda-system detection cache: `agendas.find_meeting_system` used to
+  search/fetch every time even though it already saved a per-city recipe
+  file -- a brand-new run-id started fresh every time and re-spent search
+  budget on cities whose agenda system was already known. It now checks
+  that saved recipe file first and returns it without ever calling
+  `search_fn`/`fetch_fn` again if it's there. (A "nothing found" result is
+  still not cached, same as before, so those cities do get re-tried on a
+  later run in case a page appears.)
+- Logged what's skipped and why: each skipped step prints a one-line
+  `lead-finder: skipping <step> for <city>...: <reason>` when it runs (not
+  on resume, since a resumed skip is loaded straight from the run folder).
+- Tests: `_dead_end_gate` unit tests (source-but-no-permits,
+  permits-but-no-source, neither) in `test_run.py`;
+  `test_run_chain_skips_agenda_legistar_civic_sales_for_a_dead_end_city`
+  monkeypatches all four underlying finders to raise if called, proving the
+  gate stops the network calls, not just the run-folder bookkeeping.
+  `test_agendas.py` gained
+  `test_saved_recipe_is_reused_across_calls_without_searching_again`.
+- Checked: `bash tooling/qa/check-lead-finder.sh` passes (all lead-finder*
+  suites + check-panel.sh, 72 lead-finder/lead-finder-agendas tests total
+  now). Full suite (`python3 -m pytest -q --ignore=skills/client-map/tests`
+  from `propertystack/`): 276 passed, 1 failed --
+  `test_fetch_block_counts_are_race_free_across_threads` (S1's own
+  concurrent-block-count test, untouched by this task; reran it alone 3x
+  and it flaked once and passed twice, so it's a pre-existing timing-race
+  flake in S1's test, not something S2 broke).
+- Left open: S3 (fix dropped/leaked leads) and later steps still run every
+  city one at a time except for the parallelized sub-steps from S1; the
+  dead-end skip here only removes wasted work, it doesn't change caps or
+  ranking.
