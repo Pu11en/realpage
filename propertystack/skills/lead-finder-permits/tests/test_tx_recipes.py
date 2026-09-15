@@ -86,8 +86,10 @@ def test_arcgis_recipe_new_type():
         {
             "attributes": {
                 "TYPE": "New",
+                "LANDUSE": "Multi-Family",
                 "DESCRIPTION": "New apartment complex - 60 units",
-                "ISSUEDATE": 1735689600000,
+                "ProjectName": "New apartment complex - 60 units",
+                "ISSUED": 1735689600000,
                 "ADDRESS": "200 Hopkins St",
             }
         }
@@ -96,4 +98,5 @@ def test_arcgis_recipe_new_type():
         "City D", "ZZ", "zz", recipe, _http_get({"features": rows}), today=TODAY
     )
     assert len(records) == 1
-    assert records[0].units == 60
+    # no aggregate unit-count field on this layer -- units stay unknown, never estimated
+    assert records[0].units is None
