@@ -61,7 +61,7 @@ Open: http://localhost:8765/ai-visibility.html
   lawsuit %, missed questions, top picks by company) and a small `index.json` listing runs. Import the
   2026-09-12 run once as the baseline, labelled "Claude / ChatGPT, Sept 12". The existing tab data keeps
   working. Tests on fixtures; extend the check. Commit.
-- [ ] **T4 Lawsuit data.** From each run, pull every answer that raises the antitrust case / DOJ /
+- [x] **T4 Lawsuit data.** From each run, pull every answer that raises the antitrust case / DOJ /
   settlement / price-fixing: the exact sentence(s), the AI, the question, and (for `gemini-web`) the source
   URLs. Label the tone harsh / neutral / settled with one extra `gemini` call per mention during real runs
   (fixture in tests; fall back to a simple word list if the call fails). Build the source leaderboard by

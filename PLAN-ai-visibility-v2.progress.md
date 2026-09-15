@@ -19,3 +19,12 @@
 - Added gemini / gemini-web friendly names ("Gemini (memory)", "Gemini + Google Search"). Per-model entries in ai-visibility.json gained unbrandedMentionPct, missedQuestions, topPicks.
 - Tests: tests/test_history.py (4) on fixtures/report-gemini.json (small hand-made Gemini report). Check passes, 15 tests.
 - Open: T4 should add lawsuit data into the same history entry (history_entry/save_history).
+
+## T4 Lawsuit data — done (6d0e43c)
+- New site/data/ai_visibility_lawsuit.py: every answer (any question) with a sentence about the antitrust case / DOJ / lawsuit / settlement / price- or rent-fixing / collusion / state AGs becomes a mention: exact sentence(s), model + friendly name, question, namesBrand, tone, toneBy (gemini | words), and for *-web models the websites from gemini-sources.jsonl (matched by answer text, else by question in the prompt; website = title when it looks like a domain, deduped).
+- Tone: harsh / neutral / settled. Real builds make one `gemini` JSON call per mention (local_ai.ask_gemini, so same 7s throttle; after a 429 it falls back). Fallback + --demo + --baseline + `--word-tone` use a word list (settle/resolved/agreed to → settled; price-fixing/collusion/alleg… → harsh; else neutral).
+- Leaderboard: websites by number of mentions citing them, previous count + change vs the newest earlier non-baseline run with lawsuit data (null on the first run), dropped sites kept with count 0, isTarget for realpage.com.
+- Saved as `lawsuit` {mentions, toneMix per model, sources, comparedWith} in each history file. ai-visibility.json unchanged (checked byte-identical).
+- Sept 12 baseline re-imported with word-list tone: 10 mentions (claude 4 harsh/1 neutral, claude-web 2 harsh/3 settled), no sources (that run had no source file).
+- Tests: tests/test_lawsuit.py (8) with fixtures/lawsuit-run + gemini-tone.json; test_history patches the tone call. Check passes, 23 tests.
+- Open for T5: page reads history files' `lawsuit` (quote wall newest first = iterate history files by date desc). Word list is crude (e.g. an FTC screening settlement counts as "settled"); Gemini labels real runs.
