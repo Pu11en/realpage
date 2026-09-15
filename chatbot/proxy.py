@@ -24,7 +24,7 @@ import aiohttp
 from aiohttp import web
 
 from autobold import StreamBolder, bold
-from linkfix import LineFixer, fix_links
+from linkfix import LineFixer, finalize_answer
 
 HERMES_BASE = f"http://127.0.0.1:{os.environ.get('API_SERVER_PORT', '8642')}/v1"
 HERMES_URL = f"{HERMES_BASE}/chat/completions"
@@ -171,7 +171,8 @@ async def chat(request: web.Request) -> web.StreamResponse:
                         return _cors(request, web.json_response({"error": "agent error", "status": r.status}, status=502))
         except asyncio.TimeoutError:
             return _cors(request, web.json_response({"error": "agent timed out"}, status=504))
-    answer = bold((data.get("choices") or [{}])[0].get("message", {}).get("content") or "")
+    answer = bold(finalize_answer(
+        (data.get("choices") or [{}])[0].get("message", {}).get("content") or ""))
     return _cors(request, web.json_response({
         "answer": answer,
         "citations": _citations(answer),
@@ -252,14 +253,15 @@ async def chat_stream(request: web.Request) -> web.StreamResponse:
                         text = bolder.feed((choice.get("delta") or {}).get("content") or "")
                         if text:
                             answer += text
-                            await send("delta", {"text": text})
         except asyncio.TimeoutError:
             await send("error", {"error": "agent timed out"})
             return resp
     text = bolder.flush()
     if text:
         answer += text
-        await send("delta", {"text": text})
+    answer = finalize_answer(answer)
+    if answer:
+        await send("delta", {"text": answer})
     await send("done", {"citations": _citations(answer), "seconds": round(time.monotonic() - started, 1)})
     return resp
 
@@ -450,7 +452,7 @@ def _bold_completion(data: dict, deep_dive: bool = False) -> None:
     try:
         msg = data["choices"][0]["message"]
         if isinstance(msg.get("content"), str):
-            msg["content"] = bold(fix_links(msg["content"], deep_dive=deep_dive))
+            msg["content"] = bold(finalize_answer(msg["content"], deep_dive=deep_dive))
     except (KeyError, IndexError, TypeError, AttributeError):
         pass
 
@@ -562,7 +564,8 @@ async def gateway_chat(request: web.Request) -> web.StreamResponse:
     if dive_key and not _deep_dive_redo(chat_id, dive_key, fresh):
         saved = _deep_dive_load(dive_key)
         if saved:
-            return await _gateway_replay(request, body, bold(fix_links(_deep_dive_note(saved), deep_dive=True)))
+            return await _gateway_replay(
+                request, body, bold(finalize_answer(_deep_dive_note(saved), deep_dive=True)))
     if not question.lstrip().startswith("### Task:"):
         used_up = await _free_take(email, deep_dive=bool(dive_key))
         if used_up:
@@ -591,18 +594,22 @@ async def gateway_chat(request: web.Request) -> web.StreamResponse:
                     rewriter = _SseBolder(deep_dive=bool(dive_key))
                     async for chunk in r.content.iter_any():
                         out_chars += len(chunk)
-                        chunk = rewriter.feed(chunk)
-                        if dive_key:
-                            raw += chunk
-                        if chunk:
-                            await resp.write(chunk)
-                    chunk = rewriter.close()
-                    if dive_key:
                         raw += chunk
-                    if chunk:
-                        await resp.write(chunk)
+                    # Do not expose content word-by-word before the final
+                    # source check: an unsupported fact would already be on
+                    # screen. Tool progress still happens upstream; the
+                    # completed answer arrives as one checked message.
+                    rewritten = rewriter.feed(bytes(raw)) + rewriter.close()
+                    answer = finalize_answer(_sse_text(rewritten), deep_dive=bool(dive_key))
                     if dive_key and r.status == 200 and b"[DONE]" in raw:
-                        _deep_dive_save(dive_key, question, _sse_text(bytes(raw)))
+                        _deep_dive_save(dive_key, question, answer)
+                    base = {"id": f"chatcmpl-checked-{int(time.time())}", "created": int(time.time()),
+                            "model": body.get("model", "hermes-agent")}
+                    for delta, finish in (({"role": "assistant", "content": answer}, None), ({}, "stop")):
+                        event = {**base, "object": "chat.completion.chunk", "choices": [
+                            {"index": 0, "delta": delta, "finish_reason": finish}]}
+                        await resp.write(f"data: {json.dumps(event)}\n\n".encode())
+                    await resp.write(b"data: [DONE]\n\n")
                     await _gateway_add_cost(email, _gateway_est_cost(req_chars, is_output=False)
                                              + _gateway_est_cost(out_chars, is_output=True))
                     return resp

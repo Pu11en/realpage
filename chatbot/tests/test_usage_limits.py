@@ -12,9 +12,11 @@ from aiohttp import web  # noqa: E402
 from aiohttp.test_utils import TestClient, TestServer  # noqa: E402
 
 import proxy  # noqa: E402
+import linkfix  # noqa: E402
 
 USER = "rep@example.com"
 DIVE = "Deep dive on Orchards Market Plaza Senior Apts, Plano (178 units, Entrata)"
+SOURCE = "https://communityimpact.com/richardson/housing-real-estate/sherman-street/"
 
 
 def run(case):
@@ -24,7 +26,7 @@ def run(case):
         async def hermes(request):
             calls.append(await request.json())
             return web.json_response({"choices": [{"index": 0, "finish_reason": "stop", "message": {
-                "role": "assistant", "content": f"answer #{len(calls)}"}}]})
+                "role": "assistant", "content": f"answer #{len(calls)}\n📰 [News]({SOURCE})"}}]})
 
         fake = TestServer(web.Application())
         fake.app.router.add_post("/v1/chat/completions", hermes)
@@ -38,6 +40,8 @@ def run(case):
         proxy.GATEWAY_USAGE_FILE = os.path.join(tempfile.mkdtemp(), "usage.json")
         proxy._dive_chats.clear()
         proxy._gateway_hits.clear()
+        old_load_seen = linkfix.load_seen
+        linkfix.load_seen = lambda: {linkfix._norm(SOURCE)}
 
         async def ask(text, email=USER, chat_id="c1", stream=False):
             r = await client.post("/v1/chat/completions", json={
@@ -51,6 +55,7 @@ def run(case):
         try:
             await case(ask, calls)
         finally:
+            linkfix.load_seen = old_load_seen
             await client.close()
             await fake.close()
 

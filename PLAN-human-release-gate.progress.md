@@ -44,3 +44,23 @@
   `bash tooling/qa/check-fixes.sh` passed (131 tests and 0 design problems). The broad
   `python3 -m pytest -q` still cannot collect the unrelated client-map test because its local `census`
   helper is missing; this existing H1 issue remains visible and is not treated as a pass.
+
+## 2026-09-15 — H4: grounded factual answers
+
+- Added a deterministic final answer guard to every public chat response path, including the
+  streamed Open WebUI path. A factual answer now keeps only a readable URL that came from an
+  approved tool result; otherwise people see a plain statement that CraneSignal could not verify
+  the claim. The streamed path holds the completed text until that check finishes, so an unsupported
+  claim cannot flash on screen first.
+- Kept honest unknowns and the fixed off-topic / read-only boundaries unchanged. Added the exact
+  final-verification instruction to the agent profile; it tells the agent never to invent a
+  citation to avoid the check.
+- Added two saved offline regression fixtures: an unapproved source link and a plain source name
+  with no link. Both become the unverified reply; an approved readable source remains visible and
+  an honest "I don't have that" stays unchanged. Updated the gateway cache and free-limit test
+  doubles so their intentionally factual sample answers include an approved readable source.
+- Checked: the focused H4 + chat test suite passed (38 tests); an explicit offline streamed-answer
+  check passed; and `bash tooling/qa/check-fixes.sh` passed (134 focused tests and 0 design
+  problems). The broad `python3 -m pytest -q` still cannot collect the unrelated client-map test
+  because its local `census` helper is missing; this existing H1 issue remains visible and is not
+  treated as a pass.

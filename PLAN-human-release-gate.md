@@ -58,7 +58,7 @@ Run with: `Do the next unticked task in PLAN-human-release-gate.md, then tick it
   useful sales research question. Add offline regression fixtures covering normal small talk,
   unrelated factual questions, and attempts to redirect the agent. Do not call a model. Commit.
 
-- [ ] **H4 Never present an unsupported factual answer as proven.** Use the two saved grounding
+- [x] **H4 Never present an unsupported factual answer as proven.** Use the two saved grounding
   failures to add a deterministic final check: a factual result needs a readable approved source,
   or the answer must plainly say it could not verify the claim. Preserve valid unknown answers and
   add offline regression fixtures. Do not invent citations or call a model. Commit.
