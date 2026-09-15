@@ -212,7 +212,7 @@
       content.querySelector("[data-deep-dive]").addEventListener("click", () => {
         window.PSChatPanel.deepDive(window.PSChatPanel.deepDivePrompt({
           name: l.property || l.address, city: l.city, units: l.units, software: l.software,
-          upcoming: l.signalType !== "Sold",
+          stage: l.stage, signalType: l.signalType,
         }));
       });
     }
@@ -247,7 +247,8 @@
         ${sourcesCard(p, isUpcoming)}`;
       content.querySelector("[data-deep-dive]").addEventListener("click", () => {
         window.PSChatPanel.deepDive(window.PSChatPanel.deepDivePrompt({
-          name: p.community, city: p.city, units: p.units, software: p.software, upcoming: isUpcoming,
+          name: p.community, city: p.city, units: p.units, software: p.software,
+          upcoming: isUpcoming, stage: isUpcoming ? p.stage : null,
         }));
       });
     });
