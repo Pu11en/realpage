@@ -18,7 +18,8 @@ const CHAT_APP_URL = window.PS_CHAT_URL || (location.hostname === "localhost"
   : location.origin);  // live: same address as the site (site/Caddyfile)
 
 function getViewAs() {
-  return localStorage.getItem("propertystack.viewAs") || "Neutral";
+  const v = localStorage.getItem("propertystack.viewAs");
+  return !v || v === "Neutral" ? "Everyone" : v;  // "Neutral" = old saved name for Everyone
 }
 
 function setViewAs(vendor) {
@@ -35,7 +36,7 @@ function renderShell(activeKey) {
     (t) => `<a href="${t.href}" class="${t.key === activeKey ? "active" : ""}">${t.label}</a>`
   ).join("") + `<a href="#" class="nav-chat" data-chat-toggle title="Ask CraneSignal (sign in)">Chat</a>`;
 
-  const vendorOptions = ["Neutral", ...VENDORS]
+  const vendorOptions = ["Everyone", ...VENDORS]
     .map((v) => `<option value="${v}" ${v === viewAs ? "selected" : ""}>${v}</option>`)
     .join("");
 
@@ -44,8 +45,10 @@ function renderShell(activeKey) {
       <div class="wordmark">CraneSignal</div>
       <nav>${navHtml}</nav>
       <div class="top-controls">
-        <select id="view-as-select">${vendorOptions}</select>
-        <div style="color: var(--text-dim); font-size: 11px;">Last updated: Sep 10, 2026</div>
+        <label for="view-as-select" style="color: var(--text-dim); font-size: 11px;"
+          title="${VIEW_AS_TIP}">View as</label>
+        <select id="view-as-select" title="${VIEW_AS_TIP}">${vendorOptions}</select>
+        <div id="last-updated" style="color: var(--text-dim); font-size: 11px;"></div>
       </div>
     </aside>
     <main class="main" id="page-content"></main>
@@ -56,7 +59,28 @@ function renderShell(activeKey) {
     setViewAs(e.target.value);
   });
 
+  showLastUpdated();
   if (window.initChatPanel) window.initChatPanel();
+}
+
+const VIEW_AS_TIP = "Highlight the buildings a Yardi / Entrata / AppFolio seller would win";
+
+// "Last updated" = the day the lead data was built (areas/index.json "updated").
+function formatUpdated(iso) {
+  if (!iso) return "";
+  const d = new Date(`${iso}T12:00:00`);
+  if (isNaN(d)) return "";
+  return `Last updated: ${d.toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })}`;
+}
+
+async function showLastUpdated() {
+  const el = document.getElementById("last-updated");
+  try {
+    const manifest = await loadData("data/areas/index.json");
+    el.textContent = formatUpdated(manifest.updated);
+  } catch (e) {
+    el.textContent = "";
+  }
 }
 
 async function loadData(path) {
@@ -81,7 +105,7 @@ function vendorPill(vendor, colorMap) {
 
 function isDimmedRow(vendor) {
   const viewAs = getViewAs();
-  if (viewAs === "Neutral") return false;
+  if (viewAs === "Everyone") return false;
   return vendor === viewAs;
 }
 

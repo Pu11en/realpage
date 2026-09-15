@@ -708,7 +708,8 @@ def build_areas_manifest(area_slugs: list[str]) -> dict:
     areas.sort(key=lambda a: -(a["leads"] or 0))
     # Old links (?area=plano-richardson) open the state that now holds that area.
     aliases = {inc: s for s in area_slugs for inc in [i["slug"] for i in (_load_metros(s) or {}).get("include_areas", [])]}
-    manifest = {"areas": areas, "aliases": aliases}
+    # "updated" = the day this data was built; the menu footer shows it as "Last updated".
+    manifest = {"areas": areas, "aliases": aliases, "updated": date.today().isoformat()}
     AREAS_OUT_DIR.mkdir(parents=True, exist_ok=True)
     (AREAS_OUT_DIR / "index.json").write_text(json.dumps(manifest, indent=2))
     return manifest

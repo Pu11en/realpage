@@ -131,7 +131,7 @@
           if (metro && l.metro !== metro) return false;
           if (software === "__none__" && l.software) return false;
           if (software && software !== "__none__" && l.software !== software) return false;
-          if (hideMine && viewAs !== "Neutral" && l.software === viewAs) return false;
+          if (hideMine && viewAs !== "Everyone" && l.software === viewAs) return false;
           return true;
         });
 
