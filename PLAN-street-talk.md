@@ -1,4 +1,7 @@
-# CraneSignal: "Street Talk" tab (what Texas people say on Reddit, powered by Agent Reach)
+# CraneSignal: "Street Talk" (now chat-only data, no tab) (what Texas people say on Reddit, powered by Agent Reach)
+
+**Update 2026-09-15: Drew dropped the Street Talk tab** (it repeated Early Leads and the posts were thin). The
+Reddit posts stay as data for the chat agent only; the build now filters junk, old and repeated posts.
 
 Written 2026-09-14 with Drew. **Starts only when Drew says "go work".** Localhost only, never push.
 Minimal styling (Drew does design himself). **Texas only.** Research notes: `docs/agent-reach-research.md`.
