@@ -23298,10 +23298,11 @@
   "buyer": "WILMINGTON TRUST NATIONAL ASSOC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.villasdelreyapts.com/",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.villasdelreyapts.com/"
   },
   "sources": [
    {
@@ -23349,20 +23350,25 @@
   "units": 26,
   "stage": "sold",
   "permit_date": "",
-  "opening_date": "",
+  "opening_date": "2026",
   "sale_date": "2026-01-12",
   "buyer": "LEVERAGE CADDO MILLS LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.affordablehousing.com/dallas-tx/1628-s-fitzhugh-ave-1010872/",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.affordablehousing.com/dallas-tx/1628-s-fitzhugh-ave-1010872/"
   },
   "sources": [
    {
     "fact": "sale_date",
     "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   },
+   {
+    "fact": "opening_date",
+    "url": "https://www.affordablehousing.com/dallas-tx/1628-s-fitzhugh-ave-1010872/"
    }
   ],
   "why": "Sold 2026-01-12 \u00b7 to LEVERAGE CADDO MILLS LLC \u00b7 26 units \u00b7 new owner may re-pick software"
@@ -23377,20 +23383,25 @@
   "units": 304,
   "stage": "sold",
   "permit_date": "",
-  "opening_date": "",
+  "opening_date": "2050",
   "sale_date": "2026-01-08",
   "buyer": "CLARIUS HIGHLAND MEADOWS",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.tidesathighlandmeadows.com/apartments/tx/dallas/floor-plans",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.tidesathighlandmeadows.com/apartments/tx/dallas/floor-plans"
   },
   "sources": [
    {
     "fact": "sale_date",
     "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   },
+   {
+    "fact": "opening_date",
+    "url": "https://www.apartmentlist.com/tx/dallas/tides-at-highland-meadows"
    }
   ],
   "why": "Sold 2026-01-08 \u00b7 to CLARIUS HIGHLAND MEADOWS \u00b7 304 units \u00b7 new owner may re-pick software"
@@ -23405,20 +23416,25 @@
   "units": 286,
   "stage": "sold",
   "permit_date": "",
-  "opening_date": "",
+  "opening_date": "2050",
   "sale_date": "2026-01-08",
   "buyer": "CLARIUS HIGHLAND MEADOWS",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.tidesathighlandmeadows.com/apartments/tx/dallas/floor-plans",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.tidesathighlandmeadows.com/apartments/tx/dallas/floor-plans"
   },
   "sources": [
    {
     "fact": "sale_date",
     "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   },
+   {
+    "fact": "opening_date",
+    "url": "https://www.apartmentlist.com/tx/dallas/tides-at-highland-meadows"
    }
   ],
   "why": "Sold 2026-01-08 \u00b7 to CLARIUS HIGHLAND MEADOWS \u00b7 286 units \u00b7 new owner may re-pick software"
@@ -23466,10 +23482,11 @@
   "buyer": "BEVERLY INVESTORS LLC &",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.oaklineapts.com/",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.oaklineapts.com/"
   },
   "sources": [
    {
@@ -23494,10 +23511,11 @@
   "buyer": "CW ROYAL OWNER LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.thealistadallas.com/",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.thealistadallas.com/"
   },
   "sources": [
    {
@@ -23522,10 +23540,11 @@
   "buyer": "CW ROYAL OWNER LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.thealistadallas.com/",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.thealistadallas.com/"
   },
   "sources": [
    {
@@ -23550,10 +23569,11 @@
   "buyer": "900 TITLE JEFFERSON LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.eastdallasapts.com/verandah-flats/",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.eastdallasapts.com/verandah-flats/"
   },
   "sources": [
    {
@@ -23573,20 +23593,25 @@
   "units": 48,
   "stage": "sold",
   "permit_date": "",
-  "opening_date": "",
+  "opening_date": "9005",
   "sale_date": "2026-01-07",
   "buyer": "900 TITLE JEFFERSON LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.rentdeals.com/apartments/tx/dallas/verandah-bungalows",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.rentdeals.com/apartments/tx/dallas/verandah-bungalows"
   },
   "sources": [
    {
     "fact": "sale_date",
     "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   },
+   {
+    "fact": "opening_date",
+    "url": "https://www.apartmentlist.com/tx/dallas/verandah-bungalows"
    }
   ],
   "why": "Sold 2026-01-07 \u00b7 to 900 TITLE JEFFERSON LLC \u00b7 48 units \u00b7 new owner may re-pick software"
@@ -23606,10 +23631,11 @@
   "buyer": "900 TITLE JEFFERSON LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.eastdallasapts.com/garden-villa/",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.eastdallasapts.com/garden-villa/"
   },
   "sources": [
    {
@@ -23662,10 +23688,11 @@
   "buyer": "900 TITLE JEFFERSON LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.londonpark-dallas.com/london-park-dallas-tx",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.londonpark-dallas.com/london-park-dallas-tx"
   },
   "sources": [
    {
@@ -23718,10 +23745,11 @@
   "buyer": "900 TITLE JEFFERSON LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.eastdallasapts.com/stardust-apartments/",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.eastdallasapts.com/stardust-apartments/"
   },
   "sources": [
    {
@@ -23746,10 +23774,11 @@
   "buyer": "BRSP FOREST TEX LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.rentdeals.com/apartments/tx/dallas/forest-cove-apartments--1",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.rentdeals.com/apartments/tx/dallas/forest-cove-apartments--1"
   },
   "sources": [
    {
@@ -23769,20 +23798,25 @@
   "units": 200,
   "stage": "sold",
   "permit_date": "",
-  "opening_date": "",
+  "opening_date": "2026",
   "sale_date": "2026-01-06",
   "buyer": "BRSP FOREST TEX LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.thenorthstarapts.com/",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.thenorthstarapts.com/"
   },
   "sources": [
    {
     "fact": "sale_date",
     "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   },
+   {
+    "fact": "opening_date",
+    "url": "https://www.thenorthstarapts.com/"
    }
   ],
   "why": "Sold 2026-01-06 \u00b7 to BRSP FOREST TEX LLC \u00b7 200 units \u00b7 new owner may re-pick software"
@@ -23802,10 +23836,11 @@
   "buyer": "TESORO MULTI TX PO LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.tesoroat12.com/",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.tesoroat12.com/"
   },
   "sources": [
    {
@@ -23830,10 +23865,11 @@
   "buyer": "TESORO MULTI TX PO LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.tesoroat12.com/",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.tesoroat12.com/"
   },
   "sources": [
    {
@@ -23858,10 +23894,11 @@
   "buyer": "TESORO MULTI TX PO LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.tesoroat12.com/",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.tesoroat12.com/"
   },
   "sources": [
    {
@@ -23881,20 +23918,25 @@
   "units": 325,
   "stage": "sold",
   "permit_date": "",
-  "opening_date": "",
+  "opening_date": "1129",
   "sale_date": "2026-01-02",
   "buyer": "ASPIRE PARK LN LP",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://theheightsdallas.com/",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://theheightsdallas.com/"
   },
   "sources": [
    {
     "fact": "sale_date",
     "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   },
+   {
+    "fact": "opening_date",
+    "url": "https://theheightsdallas.com/"
    }
   ],
   "why": "Sold 2026-01-02 \u00b7 to ASPIRE PARK LN LP \u00b7 325 units \u00b7 new owner may re-pick software"
@@ -23942,10 +23984,11 @@
   "buyer": "POTAWATOMI LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.apartmentadvisor.com/details/4927-san-jacinto-st-dallas-tx-75206",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.apartmentadvisor.com/details/4927-san-jacinto-st-dallas-tx-75206"
   },
   "sources": [
    {
