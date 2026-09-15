@@ -338,3 +338,21 @@ h1 { font-size: 26px; font-weight: 800; letter-spacing: -0.015em; margin: 0 0 4p
   .leads-table tr { background: var(--paper); }
   .leads-table tbody tr:nth-child(even) { background: var(--paper-2); }
 }
+
+/* Property detail page (T3): inline colors moved here. */
+.back-row { margin-bottom: 8px; }
+.back-link { color: var(--text-muted); font-size: 13px; text-decoration: none; }
+.back-link:hover { color: var(--blue); }
+.detail-dive { margin: -8px 0 16px; }
+.pill-row { margin-bottom: 10px; }
+.step-labels { display: flex; gap: 4px; margin: 6px 0 12px; }
+.step-labels .step-label { font-size: 10px; }
+.score-row { display: flex; align-items: center; gap: 10px; }
+.score-badge.score-high { background: var(--score-high); }
+.score-badge.score-mid { background: var(--score-mid); }
+.score-badge.score-low { background: var(--score-low); }
+.score-badge-lg { width: 40px; height: 40px; font-size: 16px; }
+.card .why { font-size: 13px; color: var(--text-muted); }
+.card .breakdown > div { background: var(--paper-2); border: 1px solid var(--rule); border-radius: 6px; padding: 6px 4px; }
+.card a:hover, .sources a:hover { text-decoration: underline; }
+a.link { color: var(--blue); }
