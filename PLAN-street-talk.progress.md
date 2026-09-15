@@ -35,3 +35,9 @@
 - "Street Talk" added to the shared tab bar in `site/js/app.js` (after AI Visibility; no AI Visibility files touched).
 - Check: `bash tooling/qa/check-street-talk.sh` -> 27 passed (2 new tests in `test_tab.py`). Headless Chromium at 1280px and 390px: 48 posts, 12 building groups, 1 warm lead, no sideways scrolling, no page errors.
 - Open: `plano-richardson-*` building links go to `property.html`, which does not know those ids yet (2 of 12 buildings). During the browser check a cleanup step stopped an unknown process that was already listening on port 8793 — if something local stopped working, restart it.
+
+## T8 — The chat can use it (2026-09-15)
+- The chat image now copies `propertystack/data/street-talk/street_talk.csv` into its data folder (skipped if missing), so the `propertystack` plugin loads it as table `street_talk`, cited as "Reddit posts". `ps_schema` gets a note on the columns (part, companies LIKE, sentiment, warm_lead) and "always give each post's url as its link"; the query-propertystack skill lists the table the same way. Thread links are fed to the link guard like every other table.
+- `tooling/qa/check_answers.py`: 2 new questions ("What are people on Reddit saying about Yardi in Texas?", "Are any Texas property managers on Reddit unhappy with AppFolio or Entrata?") plus a rule that Reddit answers must link a reddit.com/youtube.com thread. NOT run (paid; Drew runs it).
+- Check: `bash tooling/qa/check-street-talk.sh` -> 31 passed (4 new in `test_chat_plugin.py`: table loads with its source name, a Yardi query returns rows with links, the real saved CSV loads, Dockerfile bakes it in). `chatbot/tests` still pass.
+- Open: the running chat only picks this up after its image is rebuilt (`bash tooling/dev.sh` rebuild); not done here.

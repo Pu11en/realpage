@@ -79,7 +79,7 @@ Open: http://localhost:8765/street-talk.html
   building's page (`property.html?id=<id>`); part 3 marks warm leads. Add "Street Talk" to the tab bar on every page. Works on phone
   size. Plain "no posts yet" if a part is empty. Commit.
 - [x] **T7 (dropped by Drew 2026-09-15: Street Talk stays separate from AI Visibility -- skip, change nothing.)**
-- [ ] **T8 The chat can use it.** The `propertystack` chat plugin also loads `street_talk.csv` as table
+- [x] **T8 The chat can use it.** The `propertystack` chat plugin also loads `street_talk.csv` as table
   `street_talk`; the query-propertystack skill lists it ("Reddit posts" in Sources, always with the thread
   link). Add an offline plugin test (table loads, a sample query returns rows with links) to
   `check-street-talk.sh`. Add 2 Street Talk questions to `tooling/qa/check_answers.py` but do NOT run it
