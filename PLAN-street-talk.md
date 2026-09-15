@@ -61,7 +61,7 @@ Open: http://localhost:8765/street-talk.html
   r/houston, r/Austin, r/sanantonio, r/texas. Last 12 months. Saves raw results to
   `propertystack/data/street-talk/raw/<date>/rivals.json` (URL, subreddit, title, short excerpt, top 2
   comment excerpts, score, date). De-duplicate by URL. Test with a fixture. Run it live once (request cap from the safety rules), commit the raw file + its report, continue.
-- [ ] **T3 Part 2 collector: Texas buildings.** `--part buildings` takes the biggest Texas lead buildings
+- [x] **T3 Part 2 collector: Texas buildings.** `--part buildings` takes the biggest Texas lead buildings
   (every TX area, top 40 by units) and searches Reddit for "<building name> <city>";
   also a YouTube search per building via Agent Reach (title + link, transcript excerpt only if it names the
   building). Keeps a post only if it names the building. Saves `raw/<date>/buildings.json` with the building
