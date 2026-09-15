@@ -74,6 +74,9 @@ Open: http://localhost:8765/index.html
   "Show more" button (filters and counts still use every row). Test. Commit.
 
 ### Finish
+- [ ] **T16 Privacy contact email.** Drew picked **drewpullen2003@gmail.com** (2026-09-15). Replace
+  `CONTACT_EMAIL_TBD` in `site/privacy.html` (link text and mailto) and anywhere else it appears in
+  `site/` or the landing page. Test: no `CONTACT_EMAIL_TBD` left in `site/`. Commit.
 - [ ] **T15 Final checks and report.** Run the Check, the design check and the panel check; write
   `handoffs/<date>-agent-test-fixes-report.md` in plain English: what changed, how to try each, anything
-  only Drew can do (the privacy contact email), and what's not done. Commit.
+  only Drew can do, and what's not done. Commit.
