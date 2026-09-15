@@ -613,6 +613,13 @@ CHAT_LEADS_COLUMNS = [
 ]
 
 
+def _included_stage(lead: dict) -> str:
+    """Included older areas (Plano-Richardson) have no stage, only Sold/Upcoming."""
+    if not lead.get("subArea"):
+        return ""
+    return "sold" if lead.get("signalType") == "Sold" else "planned"
+
+
 def write_chat_leads_csv(slug: str, area_json: dict) -> None:
     """Flatten one state area's JSON (5.1's `build_area`) into a chat-ready CSV
     at propertystack/data/<slug>/chat-leads.csv -- the chatbot's plugin (5.4)
@@ -628,7 +635,7 @@ def write_chat_leads_csv(slug: str, area_json: dict) -> None:
             writer.writerow([
                 slug, lead.get("property") or "", lead.get("city") or "",
                 lead.get("address") or "", lead.get("units") or "",
-                lead.get("stage") or "", lead.get("signal") or "", lead.get("why") or "",
+                lead.get("stage") or _included_stage(lead), lead.get("signal") or "", lead.get("why") or "",
                 lead.get("permitDate") or "", lead.get("openingDate") or "",
                 lead.get("saleDate") or "", lead.get("buyer") or "",
                 lead.get("developer") or "", lead.get("officePhone") or "",
@@ -648,9 +655,10 @@ def build_state_areas(include_sample: bool = False) -> list[str]:
         return []
     AREAS_OUT_DIR.mkdir(parents=True, exist_ok=True)
     for slug in slugs:
-        area_json = build_area(slug)
-        write_chat_leads_csv(slug, area_json)  # the chat loads included areas on its own
-        area_json = _merge_included_areas(slug, area_json)
+        area_json = _merge_included_areas(slug, build_area(slug))
+        # after the merge, so the chat counts included areas (Plano-Richardson
+        # in Texas / Dallas-Fort Worth) exactly like the site does
+        write_chat_leads_csv(slug, area_json)
         (AREAS_OUT_DIR / f"{slug}.json").write_text(json.dumps(area_json, indent=2))
     return slugs
 

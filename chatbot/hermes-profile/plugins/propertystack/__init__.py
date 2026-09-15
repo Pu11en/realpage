@@ -158,7 +158,9 @@ def ps_schema(args: dict, **_) -> str:
             "software='unknown' means not identified; the reason is in unknown_reason.",
             "contacts: phone/email only where the website scrape actually found them.",
             "leads.ref_id is an apt_id (signal=sold) or an upcoming project_id (signal=upcoming).",
-            "state_leads: every other area's leads, one flat row per lead (no separate master/contacts). "
+            "state_leads: every tracked state's leads, one flat row per lead (no separate master/contacts). "
+            "Texas (area='tx') already includes the 42 Plano/Richardson leads, so count states and regions "
+            "(region='Dallas–Fort Worth') from state_leads alone -- never add the leads table on top. "
             "Filter with WHERE area='<slug>' from the area list below; stage is permitted/leasing/"
             "under_construction/sold/planned. permit_link/news_link/website_link/agenda_link/map_link "
             "are ready-made URLs for the deep-dive link row (map_link may be blank -- build it from address).",

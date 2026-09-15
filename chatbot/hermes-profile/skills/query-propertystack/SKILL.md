@@ -27,7 +27,7 @@ plus the Street Talk posts (`propertystack/data/street-talk/street_talk.csv`) as
 | `master` | County property records + software check | 1+2+3 joined, one row per building |
 | `leads` | CraneSignal lead ranking | 42 ranked Plano/Richardson leads, score parts + one-sentence `why` |
 | `contacts` | Contact info from building websites | Phone/email scraped from websites, where found |
-| `state_leads` | CraneSignal lead ranking | Every other tracked area's leads, one flat row each -- filter with `WHERE area='<slug>'` |
+| `state_leads` | CraneSignal lead ranking | Every tracked state's leads, one flat row each -- filter with `WHERE area='<slug>'`. Texas (`tx`) also holds the 42 Plano/Richardson leads (region Dallas–Fort Worth), so counts match the site: count a state or region here only, never add `leads` on top |
 | `street_talk` | Reddit posts | What Texas people say on Reddit/YouTube: `part` = rivals / buildings / unhappy, `companies` (`LIKE '%Yardi%'`), `sentiment`, `city`, `building_id`, `warm_lead`. Quote briefly and **always link each post's `url`** (the real thread) |
 
 Research files (01-company .. 09-ai-visibility) are searched with

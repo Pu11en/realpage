@@ -22,7 +22,10 @@ QUESTIONS = [
     "Entrata): who runs it, and why would they switch now?",
     "What are people on Reddit saying about Yardi in Texas?",
     "Are any Texas property managers on Reddit unhappy with AppFolio or Entrata?",
+    "How many leads in Dallas–Fort Worth?",
 ]
+# Questions whose answer must contain this number (same as the site shows).
+EXPECT_NUMBER = {"How many leads in Dallas–Fort Worth?": "320"}
 MAX_WORDS = 60
 MAX_DEEP_WORDS = 70  # deep dives, not counting the link row and Sources
 LINK_WORDS = ["record", "news", "website"]  # must be links on the Sources line
@@ -93,6 +96,9 @@ def problems(answer, question=""):
     out += [f"call script word {s!r}" for s in SCRIPT if s in low]
     if "**" not in answer:
         out.append("no bold")
+    want = EXPECT_NUMBER.get(question)
+    if want and not re.search(rf"\b{want}\b", answer):
+        out.append(f"expected {want} (the site's count)")
     return out
 
 
