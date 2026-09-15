@@ -48,7 +48,7 @@ Open: http://localhost:8765/index.html
   amber marker, page header). Score colors: high = `--ok`, mid = `--warn`, low = a muted red that
   reads on white. Add `index.html` to `tooling/qa/design-pages.txt` only if it now passes; otherwise
   leave it for T2. Save a desktop screenshot of index.html to `docs/design-screens/T1-index.png`.
-- [ ] **T2 Early Leads page (`index.html`).** Table, State/Region/city filter rows, chips, search,
+- [x] **T2 Early Leads page (`index.html`).** Table, State/Region/city filter rows, chips, search,
   counts, empty/loading states, inline `style=` colors in the page. Rows readable on white (zebra
   `--paper-2`, `--rule` borders), links in blue, primary action amber. Add `index.html` to the list.
   Screenshot desktop + phone to `docs/design-screens/T2-*.png`.
