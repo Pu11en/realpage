@@ -17,17 +17,17 @@ Open: http://localhost:8765/map.html
 
 ## Tasks
 
-- [ ] **M1 Marker data.** `site/data/build_data.py` also writes `site/data/map-markers.json`: one entry per
+- [x] **M1 Marker data.** `site/data/build_data.py` also writes `site/data/map-markers.json`: one entry per
   state that has an area (state code from the area's leads; an area inside a state, like Plano-Richardson
   in Texas, rolls up to that state): state, label ("AZ · 94 leads"), lead count, top 3 cities, and the link
   to open (`index.html?area=<slug>` -- the statewide area if one exists, else the only area). Tests. Commit.
-- [ ] **M2 Orange markers on the map.** `site/map.html`: keep the blue RealPage shading and its hover; add an
+- [x] **M2 Orange markers on the map.** `site/map.html`: keep the blue RealPage shading and its hover; add an
   orange marker at each state's center from `map-markers.json` with its label; hover shows lead count, top
   cities and "click to open the table"; one click goes to the link. Legend: blue shading = RealPage already
   has clients here; orange marker = our leads here. Works on phone size. Commit.
-- [ ] **M3 Texas: link to Plano-Richardson.** When a state has more than one area (Texas: `tx` +
+- [x] **M3 Texas: link to Plano-Richardson.** When a state has more than one area (Texas: `tx` + _(covered: the area buttons already show Plano–Richardson next to Tx)_
   Plano-Richardson), the state's table shows a small link at the top to the other area(s). Commit.
-- [ ] **M4 "PropertyStack Agent" name.** The chat shows "PropertyStack Agent" instead of "hermes-agent":
+- [x] **M4 "PropertyStack Agent" name.** The chat shows "PropertyStack Agent" instead of "hermes-agent":
   `chatbot/proxy.py` lists the model as id `propertystack-agent`, name "PropertyStack Agent" and maps it to
   the engine's real model name when forwarding; `DEFAULT_MODELS` in `chatbot/docker-compose.local.yml` (and
   any Railway/compose copy) uses the new id; `SOUL.md` says the assistant is the PropertyStack Agent. Rebuild
