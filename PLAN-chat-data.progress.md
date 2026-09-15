@@ -175,3 +175,41 @@ and 35 chatbot tests).
 
 Anything left open: none for this task. The chat container itself wasn't rebuilt/tried live (D7
 does that rebuild + report).
+
+## D6 AI Visibility scores, read-only — done
+
+What I did:
+- Added `tooling/chat-data/build_ai_visibility.py`, which reads the existing
+  `site/data/ai-visibility.json` and `site/data/ai-visibility-actions.json` files and flattens
+  them into chat-ready CSVs without modifying the source files.
+- Produced 8 tables under `propertystack/data/ai-visibility/kb/`: `ai_visibility_summary`,
+  `ai_visibility_models`, `ai_visibility_competitors`, `ai_visibility_questions`,
+  `ai_visibility_top_picks`, `ai_visibility_actions`, `ai_visibility_site_facts`, and
+  `ai_visibility_caveats`.
+- Updated `chatbot/Dockerfile` so the new `ai-visibility/kb/*.csv` files copy into `/kb/data`
+  during the chat image's knowledge-base build stage.
+- Updated `chatbot/hermes-profile/plugins/propertystack/__init__.py` with friendly source names
+  and a schema note saying the `ai_visibility_*` tables are only for RealPage AI Visibility
+  questions, and that answers should state `generated_at`/`based_on` dates because the scores are
+  point-in-time.
+- Updated `chatbot/hermes-profile/skills/query-propertystack/SKILL.md` with the same scope rule and
+  table descriptions.
+- Added a check_answers question: "What is RealPage's AI visibility score, and what should they fix
+  first?" (not run -- costs money, Drew runs it).
+- Added `tooling/qa/fixes_tests/test_d6_ai_visibility.py`: rebuilds the D6 kb files in a temp dir,
+  checks the Dockerfile copy rule, loads the real propertystack plugin's `_build_db()`, asserts all
+  `ai_visibility_*` tables load with friendly source names, and verifies key score/action values
+  match the site JSON exactly.
+
+Commit: `e6f7166` (message "D6: ship AI Visibility scores into the chat").
+
+How I checked it: `python3 -m pytest -q tooling/qa/fixes_tests/test_d6_ai_visibility.py` passes
+(3 tests), and the required plan check
+`bash tooling/qa/check-fixes.sh && python3 -m pytest -q chatbot/tests` passes (125 fix/design tests
+and 35 chatbot tests). I also tried the broader `python3 -m pytest -q`; it stops during collection
+because `propertystack/skills/client-map/targets.py` imports a missing local `census` helper from a
+`propertystack/skills/scout-areas` folder that is not present in this worktree. That is outside D6,
+and the D6-specific plus required plan checks passed.
+
+Anything left open: none for this task. The chat container itself wasn't rebuilt/tried live (D7
+does that rebuild + report).

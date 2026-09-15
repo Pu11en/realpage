@@ -54,7 +54,7 @@ Open: http://localhost:8765/map.html
   `buildbot.json` (whichever exist) as small tables so "how was this built / how accurate is it?" gets real
   numbers with dates. SKILL.md: only use them for questions about CraneSignal itself; eval numbers may be
   old, so state their date. Test. Commit.
-- [ ] **D6 AI Visibility scores, read-only.** Ship `site/data/ai-visibility.json` (and actions) as tables
+- [x] **D6 AI Visibility scores, read-only.** Ship `site/data/ai-visibility.json` (and actions) as tables
   the chat can query, copying at build time without modifying the source files. Test. Commit.
 - [ ] **D7 Final checks and report.** Run the Check and the panel check; rebuild the local chat container;
   write `handoffs/<date>-chat-data-report.md` in plain English: what the chat can now answer, three sample
