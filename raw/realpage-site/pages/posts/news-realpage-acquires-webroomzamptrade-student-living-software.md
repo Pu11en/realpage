@@ -1,0 +1,24 @@
+---
+url: "https://www.realpage.com/news/realpage-acquires-webroomzamptrade-student-living-software/"
+title: "RealPage Acquires WebRoomz™ Student Living Software"
+type: "posts"
+lastmod: "2008-02-04T00:00:00-06:00"
+crawled: "2026-09-15"
+source: "crawl4ai"
+---
+
+# RealPage Acquires WebRoomz™ Student Living Software
+February 4, 2008
+### _Software provider acquires on-demand student living offerings for multifamily owners_
+**(February 6, 2008)** – RealPage, Inc., a leading provider of on-demand software and services to the multifamily industry, today announced its acquisition of WebRoomz™, an on-demand leasing system for students and military personnel.
+WebRoomz has been widely covered by the press, including _The New York Times, Good Morning America_ and other media, for its novel approach to matching students with compatible roommates and other capabilities tailored to student housing. WebRoomz improves the efficiency of the “turn” that occurs each year as students and their parents descend on student housing communities across the country over a compressed one week period just before school begins.
+According to Tom Ratchford, president of WebRoomz, “we’ve invested five years and more than $10 million to build a system that helps attract students to our clients’ properties, match them with compatible roommates and automate the entire leasing and move-in process. We help make the turn a snap because most of the heavy lifting has been completed long before move-in day arrives. We’re delighted to become affiliated with [RealPage](https://www.realpage.com/), who has established an office in Atlanta and hired the development and support team responsible for WebRoomz.”
+“WebRoomz is a fantastic product that has proved itself in the marketplace,” said Steve Winn, CEO of RealPage. “We’re adding its powerful functionality to our comprehensive suite of [on-demand student living systems](https://www.realpage.com/student/) that include online marketing and leasing, roommate matching, property management, revenue management, convergent billing and payment services.”
+Cecil Phillips, CEO of Place Properties, added “Place Properties is one of the largest owners of student living properties in the U.S. and has recently raised another $300 million to expand our portfolio of student living properties. We rely on WebRoomz in our entire student living portfolio to attract more students and dramatically improve efficiency. We carefully assessed all [property management software providers](https://www.realpage.com/property-management-software/) in the multifamily industry and quickly determined that RealPage was way ahead of the pack in delivery of systems designed for student living properties. WebRoomz is now in good hands because RealPage will integrate and extend its capabilities with additional investment. Place Properties is adopting the entire suite of RealPage on-demand products.”
+RealPage’s OneSite Leasing & Rents Student Living handles the unique requirements of managing student living properties, including leasing and renting beds in bulk, roommate matching, and waitlist management; as well as online leasing and renewals.
+To schedule an interview with a RealPage or WebRoomz executive, please contact Michael Cunningham at michael.cunningham@realpage.com or (972) 820-3409.
+* * *
+**About RealPage**
+Located in Carrollton, Texas, a suburb of Dallas, RealPage provides products and services to more than 20,000 apartment communities across the United States. Its six on-demand product lines include OneSite© property management systems that automate the leasing, renting, management, and accounting of conventional, affordable, and student housing properties; CrossFire© sales and marketing systems that boost occupancy and build retention; [YieldStar© asset optimization systems](https://www.realpage.com/insights-analytics/) that maximize asset valuation and investment return; VelocityTM [utility and billing services](https://www.realpage.com/utility-management/billing/) that accelerate payments for resident charges; LeasingDeskTM point of lease systems that streamline the leasing process; and StarFireTM entertainment and communication services that create IP-connected communities. For more information, please call 1-87-REALPAGE or visit www.realpage.com.
+**About WebRoomz**
+Since 1999, WebRoomz has provided patent-pending housing management solutions to the higher education industry, military housing communities and property management companies. The WebRoomz Accommodation Management System (AMS) helps property management professionals run housing operations in a paper-free environment; IT specialists integrate a new, secure housing management system with existing campus databases; and customers/tenants reserve rooms and choose roommates online. For more information, visit www.webroomz.com.

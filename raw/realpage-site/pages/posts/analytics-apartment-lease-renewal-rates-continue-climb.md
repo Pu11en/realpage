@@ -1,0 +1,22 @@
+---
+url: "https://www.realpage.com/analytics/apartment-lease-renewal-rates-continue-climb/"
+title: "2020 Apartment Lease Renewal Rates Continue to Climb | RP Analytics"
+type: "posts"
+lastmod: "2020-09-01T20:24:17-05:00"
+crawled: "2026-09-15"
+source: "crawl4ai"
+---
+
+# Apartment Lease Renewal Rates Continue to Climb
+![Photo of Chuck Ehmann, Senior Real Estate Economist](https://s.realpage.com/storage/files/blog/authors/images/2022/09/chuck-ehmann.jpg)
+_by_ [ Chuck Ehmann](https://www.realpage.com/analytics/authors/cehmann/)
+U.S. apartment retention keeps climbing after reaching record highs this year. Renewal rates – which had been climbing steadily since 2010 – were boosted in 2020 as many renters were unwilling or unable to relocate due to the COVID-19 pandemic. Data sourced from millions of units running on the RealPage platform indicate that 53.3% of renters with leases expiring in July chose to renew their lease and stay put rather than move out. That is the highest rate on record for July ever recorded by RealPage.
+Renewal rates are highly seasonal, with renters tending to move around the most in December to begin the calendar year or in the summer months of June through August, before the start of the school year. Throughout the year, renter retention is highest in the spring months of February through May. During the initial pandemic lockdown period in April, the apartment retention rate peaked at 58.5%, the first time the rate has been above 56%.
+Renters choosing to renew their leases have been getting a break on renewal rates due to the pandemic. From 2011 to 2019, renewal rent trade-out – the change in rent for renters renewing leases in the same unit – has typically averaged between 4% and 5%, varying little over that time. However, this year has been different. While 2020 started out with rates averaging about 3.5%, renewals plunged into slightly negative territory by April, as landlords essentially halted any planned increases for renters forced to stay in place during mandated lockdowns.
+As the lockdowns eased somewhat in May, renewal rates rebounded to average about 2.1%, still less than half the long-term average of 4.5%. But increasing infection rates caused many state and local governments to reinstitute restrictions, and that has caused renewal rates to once again turn negative in recent months. Apartment owners and managers have had to resort to lowering renewal rates to keep units occupied and rents coming in. The average renewal rate decline since June is about 1.6%.
+While the overall trend since the beginning of the pandemic has been flat-to-negative, lease renewal rates have varied quite a bit geographically. Among the nation’s largest 50 apartment markets, the hardest hit markets – experiencing renewal rate cuts of 5% or more in July – were mostly along the coasts – New York, Boston, San Francisco, San Jose and Seattle. Cincinnati was the only inland market with deep renewal rate declines.
+New York and San Francisco were particularly effected, with cuts of 11.1% and 7.2%, respectively. This set of markets also had a decline in their retention rates compared to last July, averaging a 5.5% decline in the number of renters renewing leases.
+On the other end of the spectrum, positive renewal rates of at least 3% were seen in many mid-America markets such as St. Louis, Kansas City, Cleveland and Phoenix. Each of the markets in the 3%-plus group also had an average increase in retention rates of about 2%. The Bay Area’s Oakland made the list for solid renewal rates, likely due to the market’s affordability compared to neighboring San Francisco and San Jose.
+The largest share of top 50 markets reported essentially flat renewal rates, including most the major Texas markets (save Houston). Other markets with little change to their renewal rates as of July included Anaheim, Tampa, San Diego, and Baltimore.
+The list of markets with moderate renewal rate decline varies geographically and by size, with much of South Florida, Portland, Nashville, Detroit, and Chicago joining Houston. The modest renewal rate gain markets are concentrated in the Southeast, with Atlanta, Charlotte, and Memphis, joined by Las Vegas, Minneapolis, and Pittsburgh.
+The pandemic has caused a wide fluctuation in renewal rates around the country as landlords have tried to adjust to the changing needs of their residents. As the pandemic begins to subside and economic restrictions diminish, the apartment market should return to a more normal pattern of retention and renewals in the coming months.

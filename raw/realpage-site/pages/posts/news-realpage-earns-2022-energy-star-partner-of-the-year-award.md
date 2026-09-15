@@ -1,0 +1,28 @@
+---
+url: "https://www.realpage.com/news/realpage-earns-2022-energy-star-partner-of-the-year-award/"
+title: "REALPAGE® EARNS 2022 ENERGY STAR® PARTNER OF THE YEAR AWARD"
+type: "posts"
+lastmod: "2022-05-05T07:55:00-05:00"
+crawled: "2026-09-15"
+source: "crawl4ai"
+---
+
+# REALPAGE® EARNS 2022 ENERGY STAR® PARTNER OF THE YEAR AWARD
+EPA, Department of Energy recognize real estate innovator’s outstanding sustainability achievements for the second consecutive year
+May 5, 2022
+**Richardson, TX** – **(May 5, 2022)** – RealPage, a leading global provider of software and data analytics to the real estate industry, is proud to announce that it has received a **_2022 ENERGY STAR_**** _Partner of the Year Award_** from the U.S. Environmental Protection Agency (EPA) and the U.S. Department of Energy. The award, the EPA’s highest level of recognition, celebrates businesses that demonstrate their dedication to environmental protection through energy efficient innovations.
+RealPage earned the award for a second consecutive year in recognition of its [Sustainability Suite](https://www.realpage.com/sustainability-services/), a comprehensive set of integrated energy management and conservation-related tools. The tools include RealPage’s AI-based [Smart Waste](https://www.realpage.com/waste-management-solution/) technology, which is built to optimize dumpster pick-up efficiency, reducing trash contamination fees by up to 80% and saving properties up to $1,800 per dumpster per year.
+RealPage will further accelerate its energy efficient innovations through its new partnership with real estate environmental, social and governance (ESG) technology provider Measurabl**®**. Through the agreement, [announced in February](https://www.realpage.com/news/realpage-and-measurabl-partner-to-streamline-esg-for-multifamily-real-estate/), the two companies will offer integration and analytics tools that will better help property owners meet their sustainability goals.
+“Tools such as Smart Waste, and our broader suite of Sustainability Solutions, are having a real impact on how property managers think about energy efficiency throughout their communities. Streamlining even the smallest management tasks can have major impacts on sustainability efforts,” said Dana Jones, CEO of RealPage. “We’re honored the EPA once again recognized our efforts, and we’ll continue to help the properties we serve get smart and go green.”
+“Focusing on sustainability not only offers environmental benefits but also benefits an asset’s bottom line. That’s because new technologies empower socially responsible property owners to drive incremental yield and NOI,” said Zachary Goldman, Managing Principal & COO at TGM Group.
+Each year, the ENERGY STAR program honors a group of businesses and organizations that have made outstanding contributions to protecting the environment through superior energy achievements. ENERGY STAR award winners lead their industries in the production, sale, and adoption of energy-efficient products, homes, buildings, services, and strategies. These efforts are essential to fighting the climate crisis and protecting public health.
+“We know it’s going to take all of us working together to tackle the climate crisis, and the 2022 ENERGY STAR award-winning partners are demonstrating what it takes to build a more sustainable future,” said EPA Administrator Michael S. Regan. “These companies are showing once again that taking action in support of a clean energy economy can be good not only for the environment, but also for business and customers.”
+Winners are selected from a network of thousands of ENERGY STAR partners. For a complete list of 2022 winners and more information about the ENERGY STAR awards program, visit [energystar.gov/awardwinners](http://www.energystar.gov/awardwinners).
+**About RealPage**
+RealPage provides a technology platform that enables real estate owners and managers to change how people experience and use rental space. Clients use the platform to gain transparency into asset performance, leverage data insights and monetize space to create incremental yields. Founded in 1998 and headquartered in Richardson, Texas, RealPage currently serves over 19 million units worldwide from offices in North America, Europe and Asia. For more information, visit [https://www.RealPage.com](https://www.realpage.com/).
+**About ENERGY STAR**
+ENERGY STAR® is the government-backed symbol for energy efficiency, providing simple, credible, and unbiased information that consumers and businesses rely on to make well-informed decisions. Thousands of industrial, commercial, utility, state, and local organizations—including more than 40 percent of the Fortune 500®—rely on their partnership with the U.S. Environmental Protection Agency (EPA) to deliver cost-saving energy efficiency solutions. Since 1992, ENERGY STAR and its partners helped American families and businesses avoid more than $500 billion in energy costs and achieve more than 4 billion metric tons of greenhouse gas reductions. More background information about ENERGY STAR’s impacts can be found at [www.energystar.gov/impacts](https://usepa-my.sharepoint.com/personal/moss_jacob_epa_gov/Documents/Jmoss%20\(W1818TDCEC029.aa.ad.epa.govOAP-USER$\)/Energy%20Star/POY/2022/www.energystar.gov/impacts) and state-level information can be found at [www.energystar.gov/statefacts](https://usepa-my.sharepoint.com/personal/moss_jacob_epa_gov/Documents/Jmoss%20\(W1818TDCEC029.aa.ad.epa.govOAP-USER$\)/Energy%20Star/POY/2022/www.energystar.gov/statefacts).
+**Media Contact**
+Natalie Dent / PR & Communications
+RealPage
+natalie.dent@realpage.com
