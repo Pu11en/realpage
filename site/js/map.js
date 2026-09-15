@@ -27,7 +27,7 @@
     if (s) {
       p.setAttribute("data-count", s.total);
       // sqrt keeps small counts visible next to the big states
-      p.style.fill = `rgba(34, 197, 94, ${(0.15 + 0.85 * Math.sqrt(s.total / max)).toFixed(3)})`;
+      p.style.fill = `rgba(26, 61, 143, ${(0.12 + 0.88 * Math.sqrt(s.total / max)).toFixed(3)})`;
     }
     p.addEventListener("mousemove", (e) => showTip(e, name, s));
     p.addEventListener("mouseleave", () => { tip.hidden = true; });
@@ -35,7 +35,7 @@
     centers[name] = path.centroid(f);
   }
 
-  // Orange markers: states we have leads in. One click opens that state's table.
+  // Amber markers: states we have leads in. One click opens that state's table.
   for (const m of Object.values(markers)) {
     const c = centers[m.state];
     if (!c || Number.isNaN(c[0])) continue;
