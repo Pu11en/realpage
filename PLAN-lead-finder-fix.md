@@ -128,17 +128,25 @@ Open: http://localhost:8765 → Early Leads → Az
 - [x] **F10c Find websites by project name.** For existing (leasing) buildings, search the project/brand
   name from the permit or sales record first, then the street address; keep the F2 check and listing-site
   filter. Live test on Tempe's "1020 Apache" and "La Victoria Commons on Apache". Commit.
-- [ ] **F10 Tempe test run (again, after F10a-c).** Full chain on Tempe only (best data). Compare to the
-  bar (answer-key recall reported, not failed, for a single city). If below: find the step at fault, fix it, rerun -- up to 2 fix rounds;
-  still below → STUCK with a plain report of what's missing and why. Write the leads in plain words in
-  the progress log. Commit.
-- [ ] **F11 Full Arizona run.** First move `propertystack/data/az/` and `propertystack/runs/AZ/20260914-full/`
-  to `propertystack/archive/az-run1/` so nothing from the junk run leaks in. New run id. Whole state in permit
-  order until 150 projects or the 450-search cap, plus the county sales file. Must pass the bar
-  (same 2-fix-rounds rule, then STUCK). Save recipes. Commit.
+- [x] **F10 Tempe test run (again, after F10a-c).** Full chain on Tempe only (best data). Found and
+  fixed 2 real bugs across 2 fix rounds (single-city recall wrongly failing the run; raw
+  bracketed/starred permit names breaking every quoted search) -- website coverage 0% → 55%,
+  developer+phone for new permits 11% → 22%. Still below the bar after that (2 existing buildings'
+  permit labels don't match their real marketing names; some brand-new permits have no public
+  developer yet). Drew's call (2026-09-14): **drop every quality gate** -- `quality.json` stays as
+  a report only, `run.py` never blocks or STUCKs on it, always builds what the tool found. Commit.
+- [ ] **F11 Full Arizona run.** First clean up display names: strip permit-system annotations
+  (`[NEW MIXED-USE]`, `- *LP*`, `(WD)`, etc, via `building_match.clean_project_name`) from `name`
+  before it's shown or scored, so leads read "Revelry" not "REVELRY [NEW MIXED-USE] - *LP* /
+  Phased Construction - Type D" (keep the raw name only for search queries/matching, already using
+  `clean_project_name` there per F10). Then move `propertystack/data/az/` and
+  `propertystack/runs/AZ/20260914-full/` to `propertystack/archive/az-run1/` so nothing from the
+  junk run leaks in. New run id. Whole state in permit order until 150 projects or the 450-search
+  cap, plus the county sales file. No quality gate -- keep whatever the tool finds; `quality.json`
+  is written and reported, never blocks. Save recipes. Commit.
 - [ ] **F12 Arizona on the site + chat.** Build the site and rebuild the chat (`bash tooling/dev.sh`)
   with the new AZ leads; run the Check and `tooling/qa/check-answers.sh`. Commit. Recap in plain words
-  how many AZ leads, how many with software and phone, and the quality numbers.
+  how many AZ leads, how many with software and phone, and the quality numbers (reported, not a gate).
 
 ## Later (not in this build -- Drew 2026-09-14: Arizona only, plan the rest after seeing it)
 - **F13 New Mexico.** Discovery (F3) for its top permit cities (Albuquerque's ArcGIS layer has
