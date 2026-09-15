@@ -1,0 +1,53 @@
+run_id,started,skill,area,status,counts,errors,duration_sec
+20260913T213834-client-map,,client-map,,,,0,
+20260913T145249-scout-areas,2026-09-13T14:52:49,scout-areas,tucson-az,ok,"metros=1, unfinished=0",0,0.6
+20260913T144648-build-reach,2026-09-13T14:46:48,build-reach,us,ok,"queries_cached=68, web_dots=17, kept_dots=2",0,0.0
+20260913T144625-build-reach,2026-09-13T14:46:25,build-reach,us,ok,"queries_cached=68, web_dots=17, kept_dots=2",0,7.9
+20260913T144621-build-reach,2026-09-13T14:46:21,build-reach,us,error,,1,0.0
+20260913T144405-build-reach,2026-09-13T14:44:05,build-reach,us,ok,"queries_cached=64, web_dots=25, kept_dots=2",0,105.3
+20260910T222750-score-leads,2026-09-10T22:27:50,score-leads,plano-richardson,ok,"sold_leads=35, upcoming_leads=14, total_leads=49",0,0.0
+20260910T222750-build-table,2026-09-10T22:27:50,build-table,plano-richardson,ok,"in_area=256, website_found=227, checked=227, identified=177, unknown=79",0,0.0
+20260910T222741-score-leads,2026-09-10T22:27:41,score-leads,plano-richardson,ok,"sold_leads=35, upcoming_leads=14, total_leads=49",0,0.0
+20260910T222741-build-table,2026-09-10T22:27:41,build-table,plano-richardson,ok,"in_area=52, website_found=227, checked=227, identified=177, unknown=79",0,0.0
+20260910T222355-contact-scrape,2026-09-10T22:23:55,contact-scrape,plano-richardson,ok,"total=52, phone=35, email=8",0,8.7
+20260910T222059-detect-software,2026-09-10T22:20:59,detect-software,plano-richardson,ok,"total=52, identified=26, unknown=26",0,83.7
+20260910T221957-find-website,2026-09-10T22:19:57,find-website,plano-richardson,ok,"total=52, high=38, medium=8, low=5, none=1",0,60.2
+20260910T153225-contact-scrape,2026-09-10T15:32:25,contact-scrape,plano-richardson,ok,"total=204, phone=164, email=40",0,33.8
+20260910T133132-score-leads,2026-09-10T13:31:32,score-leads,plano-richardson,ok,"sold_leads=28, upcoming_leads=14, total_leads=42",0,0.0
+20260910T133113-find-sales,2026-09-10T13:31:13,find-sales,plano-richardson,ok,"communities_checked=204, parcels_checked=232, sold=28, sold_by_deed=23, owner_changed_without_deed=5",0,12.6
+20260910T133111-build-table,2026-09-10T13:31:11,build-table,plano-richardson,ok,"in_area=204, website_found=183, checked=183, identified=152, unknown=52",0,0.0
+20260910T132958-detect-software,2026-09-10T13:29:58,detect-software,plano-richardson,ok,"total=204, identified=152, unknown=52",0,69.9
+20260910T132700-find-website,2026-09-10T13:27:00,find-website,plano-richardson,ok,"total=204, high=181, medium=2, low=10, none=11",0,175.3
+20260910T132345-find-website,2026-09-10T13:23:45,find-website,plano-richardson,ok,"total=204, high=178, medium=2, low=12, none=12",0,178.2
+20260910T132115-find-apartments,2026-09-10T13:21:15,find-apartments,plano-richardson,ok,"parcels=232, communities=204, units=54784",0,2.7
+20260910T123904-score-leads,2026-09-10T12:39:04,score-leads,plano-richardson,ok,"sold_leads=28, upcoming_leads=14, total_leads=42",0,0.0
+20260910T123855-build-table,2026-09-10T12:38:55,build-table,plano-richardson,ok,"in_area=207, website_found=189, checked=189, identified=145, unknown=62",0,0.0
+20260910T123351-detect-software,2026-09-10T12:33:51,detect-software,plano-richardson,ok,"total=207, identified=145, unknown=62",0,299.2
+20260910T123044-find-website,2026-09-10T12:30:44,find-website,plano-richardson,ok,"total=207, high=187, medium=2, low=11, none=7",0,177.8
+20260910T122725-find-website,2026-09-10T12:27:25,find-website,plano-richardson,ok,"total=207, high=188, medium=1, low=12, none=6",0,175.9
+20260910T122153-find-website,2026-09-10T12:21:53,find-website,plano-richardson,ok,"total=207, high=185, medium=0, low=15, none=7",0,175.5
+20260910T121958-find-upcoming,2026-09-10T12:19:58,find-upcoming,plano-richardson,ok,"legistar_pz_matters_scanned=12, legistar_candidates=12, tdlr_urls_read=27, tdlr_candidates=27, news_urls_read=61, news_candidates=61, total_candidates=100",0,89.7
+20260910T121453-find-upcoming,2026-09-10T12:14:53,find-upcoming,plano-richardson,ok,"legistar_pz_matters_scanned=12, legistar_candidates=12, tdlr_urls_read=27, tdlr_candidates=27, news_urls_read=63, news_candidates=63, total_candidates=102",0,126.1
+20260910T112101-score-leads,2026-09-10T11:21:01,score-leads,plano-richardson,ok,"sold_leads=28, upcoming_leads=12, total_leads=40",0,0.0
+20260910T110852-find-upcoming,2026-09-10T11:08:52,find-upcoming,plano-richardson,ok,"legistar_pz_matters_scanned=12, legistar_candidates=12, tdlr_urls_read=27, tdlr_candidates=27, news_urls_read=52, news_candidates=52, total_candidates=91",0,228.4
+20260910T110348-build-table,2026-09-10T11:03:48,build-table,plano-richardson,ok,"in_area=207, website_found=140, checked=140, identified=104, unknown=103",0,0.0
+20260910T110150-detect-software,2026-09-10T11:01:50,detect-software,plano-richardson,ok,"total=207, identified=104, unknown=103",0,76.3
+20260910T105600-find-website,2026-09-10T10:56:00,find-website,plano-richardson,ok,"total=207, high=139, medium=1, low=11, none=56",0,252.2
+20260910T105422-build-table,2026-09-10T10:54:22,build-table,plano-richardson,ok,"in_area=207, website_found=145, checked=145, identified=106, unknown=101",0,0.0
+20260910T105224-detect-software,2026-09-10T10:52:24,detect-software,plano-richardson,ok,"total=207, identified=106, unknown=101",0,79.8
+20260910T104634-find-website,2026-09-10T10:46:34,find-website,plano-richardson,ok,"total=207, high=143, medium=2, low=9, none=53",0,244.9
+20260910T104451-build-table,2026-09-10T10:44:51,build-table,plano-richardson,ok,"in_area=207, website_found=141, checked=141, identified=104, unknown=103",0,0.0
+20260910T103858-detect-software,2026-09-10T10:38:58,detect-software,plano-richardson,ok,"total=207, identified=104, unknown=103",0,245.9
+20260910T103317-find-upcoming,2026-09-10T10:33:17,find-upcoming,plano-richardson,ok,"legistar_pz_matters_scanned=12, legistar_residential_matches=1, tdlr_urls_read=17, tdlr_projects_found=5, news_urls_read=30, news_projects_found=7, duplicates_merged=1, total_projects=12",0,42.5
+20260910T103257-find-website,2026-09-10T10:32:57,find-website,plano-richardson,ok,"total=207, high=139, medium=2, low=10, none=56",0,255.8
+20260910T103153-find-upcoming,2026-09-10T10:31:53,find-upcoming,plano-richardson,ok,"legistar_pz_matters_scanned=12, legistar_residential_matches=1, tdlr_urls_read=17, tdlr_projects_found=5, news_urls_read=30, news_projects_found=7, duplicates_merged=6, total_projects=7",0,44.2
+20260910T102941-find-upcoming,2026-09-10T10:29:41,find-upcoming,plano-richardson,ok,"legistar_pz_matters_scanned=12, legistar_residential_matches=1, tdlr_urls_read=18, tdlr_projects_found=5, news_urls_read=30, news_projects_found=7, duplicates_merged=5, total_projects=8",0,58.3
+20260910T102700-find-website,2026-09-10T10:27:00,find-website,plano-richardson,ok,"total=207, high=146, medium=2, low=9, none=50",0,238.3
+20260910T102622-find-upcoming,2026-09-10T10:26:22,find-upcoming,plano-richardson,ok,"legistar_pz_matters_scanned=12, legistar_residential_matches=1, tdlr_urls_read=17, tdlr_projects_found=5, news_urls_read=31, news_projects_found=7, duplicates_merged=1, total_projects=12",0,136.4
+20260910T102455-find-upcoming,2026-09-10T10:24:55,find-upcoming,plano-richardson,ok,"legistar_pz_matters_scanned=12, legistar_residential_matches=1, tdlr_urls_read=4, tdlr_projects_found=2, news_urls_read=16, news_projects_found=4, duplicates_merged=0, total_projects=7",0,18.7
+20260910T102223-find-upcoming,2026-09-10T10:22:23,find-upcoming,plano-richardson,ok,"legistar_pz_matters_scanned=12, legistar_residential_matches=1, tdlr_urls_read=4, tdlr_projects_found=4, news_urls_read=16, news_projects_found=11, duplicates_merged=0, total_projects=16",0,59.7
+20260910T102057-find-website,2026-09-10T10:20:57,find-website,plano-richardson,ok,"total=207, high=151, medium=1, low=10, none=45",0,239.1
+20260910T101443-find-website,2026-09-10T10:14:43,find-website,plano-richardson,ok,"total=207, high=172, medium=3, low=7, none=25",0,247.6
+20260910T101336-find-upcoming,2026-09-10T10:13:36,find-upcoming,plano-richardson,ok,"legistar_pz_matters_scanned=12, legistar_residential_matches=1, tdlr_urls_read=16, tdlr_projects_found=3, news_urls_read=7, news_projects_found=3, duplicates_merged=0, total_projects=7",0,114.0
+20260910T101151-find-sales,2026-09-10T10:11:51,find-sales,plano-richardson,ok,"communities_checked=207, parcels_checked=232, sold=28, sold_by_deed=23, owner_changed_without_deed=5",0,14.2
+20260910T100930-find-apartments,2026-09-10T10:09:30,find-apartments,plano-richardson,ok,"parcels=232, communities=207, units=54784",0,7.1

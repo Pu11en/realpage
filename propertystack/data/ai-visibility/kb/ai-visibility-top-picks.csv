@@ -1,0 +1,12 @@
+scope,model,model_name,generated_at,name,count
+overall,,All tested AI answers,2026-09-15T08:01:07.603Z,Yardi,8
+overall,,All tested AI answers,2026-09-15T08:01:07.603Z,RealPage,5
+overall,,All tested AI answers,2026-09-15T08:01:07.603Z,Appfolio,3
+overall,,All tested AI answers,2026-09-15T08:01:07.603Z,Entrata,1
+model,gemini,Gemini (memory),2026-09-15T08:01:07.603Z,Yardi,4
+model,gemini,Gemini (memory),2026-09-15T08:01:07.603Z,RealPage,3
+model,gemini,Gemini (memory),2026-09-15T08:01:07.603Z,Appfolio,1
+model,gemini-web,Gemini + Google Search,2026-09-15T08:01:07.603Z,Yardi,4
+model,gemini-web,Gemini + Google Search,2026-09-15T08:01:07.603Z,RealPage,2
+model,gemini-web,Gemini + Google Search,2026-09-15T08:01:07.603Z,Appfolio,2
+model,gemini-web,Gemini + Google Search,2026-09-15T08:01:07.603Z,Entrata,1

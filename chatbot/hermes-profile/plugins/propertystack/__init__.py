@@ -75,6 +75,33 @@ SOURCE_NAMES = {
     "contacts": "Contact info from building websites",
     "state_leads": "CraneSignal lead ranking",
     "street_talk": "Reddit posts",
+    "dallas_buildings": "Dallas-area building survey (county records)",
+    "dallas_websites": "Dallas-area building survey (websites)",
+    "dallas_software": "Dallas-area building survey (software check)",
+    "dallas_sales": "Dallas-area building survey (county sales records)",
+    "dallas_contacts": "Dallas-area building survey (contacts from websites)",
+    "map_summary": "CraneSignal lead map (state and top-city totals)",
+    "software_share": "Property software market share (Plano/Richardson only)",
+    "building_extras": "Building owner, sale and lead detail (Plano/Richardson only)",
+    "cranesignal_pipeline_steps": "CraneSignal build pipeline steps",
+    "cranesignal_pipeline_runs": "CraneSignal build run history",
+    "cranesignal_review_reasons": "CraneSignal review queue summary",
+    "cranesignal_review_queue": "CraneSignal review queue",
+    "cranesignal_accuracy_docs": "CraneSignal accuracy notes",
+    "cranesignal_chat_stats": "CraneSignal chat speed measurements",
+    "cranesignal_eval_checks": "CraneSignal eval checks",
+    "cranesignal_eval_summary": "CraneSignal eval summary",
+    "cranesignal_eval_failure_types": "CraneSignal eval failure types",
+    "cranesignal_buildbot_summary": "CraneSignal AI build summary",
+    "cranesignal_buildbot_examples": "CraneSignal AI build examples",
+    "ai_visibility_summary": "AI Visibility score summary",
+    "ai_visibility_models": "AI Visibility model scores",
+    "ai_visibility_competitors": "AI Visibility competitor scores",
+    "ai_visibility_questions": "AI Visibility question results",
+    "ai_visibility_top_picks": "AI Visibility top picks",
+    "ai_visibility_actions": "AI Visibility recommended actions",
+    "ai_visibility_site_facts": "AI Visibility site facts",
+    "ai_visibility_caveats": "AI Visibility caveats",
 }
 
 
@@ -170,6 +197,32 @@ def ps_schema(args: dict, **_) -> str:
             "buildings (talk about a lead building; building_id/building), unhappy (rival customers; warm_lead=1 "
             "sounds like a manager/owner). companies is ';'-joined -- filter with companies LIKE '%Yardi%'. "
             "sentiment is happy/angry/mixed/neutral. Quote briefly and always give each post's url as its link.",
+            "dallas_buildings/dallas_websites/dallas_software/dallas_sales/dallas_contacts: a separate "
+            "Dallas-area building survey (not leads) -- never add these buildings or units to any Texas or "
+            "Dallas-Fort Worth lead count. dallas_software is almost entirely 'unknown' (not checked yet); "
+            "don't count it toward vendor market share.",
+            "map_summary: one row per state/top-city pair, matching the site's lead map exactly -- "
+            "state_total is that state's total leads, city_count is that city's leads. Use this (not "
+            "state_leads) to answer 'which state/city has the most leads' so the numbers match the map; "
+            "group by state and sum/compare state_total (it repeats per city row, so don't sum it across "
+            "a state's own rows).",
+            "software_share: the site's vendor market-share chart, Plano and Richardson only (same scope "
+            "as the software/master tables) -- pct_of_identified_properties is already computed, so use it "
+            "directly rather than recomputing from properties/units; never present it as covering any other "
+            "area.",
+            "building_extras: one row per Plano/Richardson building (join to master on apt_id) with owner, "
+            "website_confidence, unknown_reason (same values as master, handy without a join), plus "
+            "sale_date/sale_new_owner/sale_previous_owner and lead_rank/lead_total_leads/lead_why -- all "
+            "blank when that building has no sale or isn't a ranked lead, which is most of them.",
+            "cranesignal_* tables: CraneSignal's own build, eval, speed, and AI-agent progress numbers "
+            "from the Under the Hood page. Use them only for questions about CraneSignal itself (how it "
+            "was built, checked, measured, or how accurate/fast it is), never as property/lead/software "
+            "facts. eval/chat/buildbot rows have measured_at dates; state that date because those numbers "
+            "may be old. cost_note says per-area dollars are a placeholder until run logs record dollars.",
+            "ai_visibility_* tables: the read-only AI Visibility page snapshot for RealPage -- scores, "
+            "model-by-model results, competitors, question answers, and recommended actions. Use these "
+            "only for questions about RealPage's visibility in AI answers and how to improve it. Always "
+            "state generated_at/based_on dates because the scores are point-in-time measurements.",
         ],
     })
 

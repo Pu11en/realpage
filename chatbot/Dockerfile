@@ -7,6 +7,12 @@ FROM alpine:3.20 AS kb
 COPY . /ctx
 RUN mkdir -p /kb/data /kb/research && \
     cp /ctx/propertystack/data/plano-richardson/*.csv /kb/data/ && \
+    ( [ -d /ctx/propertystack/data/dallas-parked/kb ] && cp /ctx/propertystack/data/dallas-parked/kb/*.csv /kb/data/ || true ) && \
+    ( [ -d /ctx/propertystack/data/map-summary/kb ] && cp /ctx/propertystack/data/map-summary/kb/*.csv /kb/data/ || true ) && \
+    ( [ -d /ctx/propertystack/data/software-share/kb ] && cp /ctx/propertystack/data/software-share/kb/*.csv /kb/data/ || true ) && \
+    ( [ -d /ctx/propertystack/data/building-extras/kb ] && cp /ctx/propertystack/data/building-extras/kb/*.csv /kb/data/ || true ) && \
+    ( [ -d /ctx/propertystack/data/cranesignal-build/kb ] && cp /ctx/propertystack/data/cranesignal-build/kb/*.csv /kb/data/ || true ) && \
+    ( [ -d /ctx/propertystack/data/ai-visibility/kb ] && cp /ctx/propertystack/data/ai-visibility/kb/*.csv /kb/data/ || true ) && \
     ( first=1; for f in /ctx/propertystack/data/*/chat-leads.csv; do \
       [ -e "$f" ] || continue; case "$f" in */_*/*) continue;; esac; \
       if [ "$first" = 1 ]; then head -1 "$f" > /kb/data/state-leads.csv; first=0; fi; \
