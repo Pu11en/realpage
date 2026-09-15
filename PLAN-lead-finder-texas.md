@@ -87,7 +87,7 @@ Open: http://localhost:8765 → Early Leads → Tx
   Arlington (ArcGIS), Houston (weekly "Sold Permits" spreadsheets -- read all posted weeks), San Marcos,
   and Tarrant County's TAD commercial permits zip (all Tarrant cities, `Total Units`). Live self-test
   each. Commit.
-- [x] **T4 Dallas + Houston from appraisal-district files.** DCAD bulk zip: apartment accounts that are _(skipped)_
+- [x] **T4 Dallas + Houston from appraisal-district files.** DCAD bulk zip: apartment accounts that are
   new / under construction (PCT_COMPLETE < 100, NUM_UNITS ≥ 20, with PROPERTY_NAME) → new projects;
   deed transfers since 2024-09 on apartment accounts (NUM_UNITS ≥ 20) → sold, with new owner + mailing
   address. HCAD bulk zip: state class B1 accounts with a deed since 2024-09 (drop small buildings by

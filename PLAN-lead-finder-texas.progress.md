@@ -544,3 +544,83 @@ all green. Commit: fix race in fetch block-count skip.
   `run.py`'s chain yet (that's T6, same as every other T2-T5 recipe); T6
   (the real Texas run merging TABS + city recipes + appraisal files +
   TDHCA) is next.
+
+## T4 Dallas + Houston from appraisal-district files (real re-do, 2026-09-14)
+The plan's T4 box had already been ticked `[x]` by an earlier session, but the
+checkbox line itself was garbled mid-sentence with a stray "_(skipped)_" marker
+and no matching progress-log entry existed and no code existed (no DCAD/HCAD
+module or recipe anywhere in the repo) -- so this was really still undone.
+Drew confirmed he wants it actually built, so this entry replaces that stub.
+
+- **New generic module** `skills/lead-finder-permits/appraisal_zip.py`,
+  following T3/T5's "county specifics in the recipe JSON, generic code" shape,
+  but for the much bigger yearly county-wide bulk data zips (not the smaller
+  single-year commercial-permits zip T3's `tad_zip.py` already handles) --
+  these hold several large delimited CSV/TSV files (tens to hundreds of MB
+  each), so this module streams each file row-by-row via `zipfile.open()` +
+  `csv.DictReader` rather than loading a member fully into memory.
+- **Dallas/DCAD** (`recipes/tx/dallas-dcad.json`): live-downloaded
+  DCAD2026_CURRENT.ZIP (195,234,711 bytes, matches the plan's ~195MB estimate;
+  the site's ViewPDFs.aspx "redirect" link is itself a direct download).
+  COM_DETAIL.CSV really has BLDG_CLASS_DESC values "APARTMENT (BRICK
+  EXTERIOR)"/"APARTMENT (FRAME EXTERIOR)" and a PCT_COMPLETE column that
+  turned out to be a 0.00-1.00 **fraction**, not 0-100 percent (confirmed
+  live: 4,072 of 4,173 real apartment rows sit at exactly 1.00 = fully
+  built) -- an early version of this filter used `pct < 100` and wrongly
+  kept every finished building, since 1.0 < 100. Filtering units>=20 and
+  pct<1.00 with a real name gave 57 real under-construction rows live
+  (10,525 total units), e.g. "PALLADIUM CARVER LIVING (TDHCA #6031)" 288
+  units at 60% complete. COM_DETAIL.CSV has no street address at all --
+  only the separate ACCOUNT_INFO.CSV does (STREET_NUM/FULL_STREET_NAME),
+  so the module now does a second pass restricted to the already-matched
+  accounts to fill in a real address instead of leaving new-construction
+  leads addressless (loading all of ACCOUNT_INFO.CSV, one row per every
+  account in the county, would have been wasteful). Joining ACCOUNT_INFO's
+  DEED_TXFR_DATE/OWNER_NAME1/PHONE_NUM/PROPERTY_CITY to the 2,723 real
+  apartment accounts with units>=20 and filtering DEED_TXFR_DATE>=2024-09-01
+  gave 455 real deed transfers live, e.g. "ALENA" 216 units sold 2025-06-23
+  to ASD ALENA PROPERTY OWNER LLC (Dallas, TX). PHONE_NUM is blank on most
+  real rows, so office_phone is often empty here -- left blank, never
+  guessed.
+- **Houston/HCAD** (`recipes/tx/houston-hcad.json`): live-downloaded
+  Real_acct_owner.zip (211,881,907 bytes, close to the plan's ~212MB
+  estimate). real_acct.txt (889MB uncompressed) really has no unit-count
+  column at all (confirmed by reading its real header row), so unlike
+  Dallas this recipe filters `state_class == "B1"` (exact) plus a building-
+  area floor instead of a unit count, per the plan's "drop small buildings
+  by building area" instruction -- state_class=B1 and new_construction_val>0
+  and bld_ar>=15,000 sqft gave 89 real under-construction rows live, e.g.
+  "23615 KINGSLAND BLVD" 396,484 sqft / $15,632,471 new-construction value.
+  deeds.txt is a separate file with only acct/dos and several dated rows
+  per account (no owner, no price) -- joining its **latest** dos per
+  account to the 2,955 real B1 accounts with bld_ar>=15,000, filtered to
+  dos>=2024-09-01, gave 337 real sold rows live, e.g. "702 HADLEY ST"
+  (556,114 sqft) sold 2025-06-10 to "RE III RESHI HOUSTON III DE LLC".
+  Neither file has a building name field, so every Houston lead's name
+  falls back to its address, same fallback pattern as Phoenix (S3) and
+  Dallas's own blank-name rows in this same module.
+- Tests: `test_appraisal_zip.py` (6 new, all offline via injected
+  `fetch_bytes` returning small in-memory zips built with `zipfile.writestr`)
+  cover: class/units/completion filtering and the pct-is-a-fraction rule,
+  blank-name-and-no-address rows being dropped (never guessed), the
+  second-file address join, the deed-join-and-since-date filter, and taking
+  the *latest* of several dated rows for one account. Fixtures use
+  placeholder "County A"/"County B" names per the repo's
+  no-place-names-in-lead-finder-code check (module docstrings and comments
+  were also reworded to "County A"/"County B" instead of naming Dallas/
+  Harris directly, after the check first caught real county names in
+  prose comments).
+- Checked: `bash tooling/qa/check-lead-finder.sh` passes clean, including the
+  no-place-names check once module/test prose was reworded to "County A"/
+  "County B". Full suite from `propertystack/` (`python3 -m pytest -q
+  --ignore=skills/client-map/tests`): 322 passed, up from 316, 0 failures.
+- Live self-test wiring: added the `appraisal-district-bulk-file` branch to
+  `skills/lead-finder-permits/live_self_test.py` so `python3
+  live_self_test.py tx` will exercise both new recipes the same way as
+  every other T2-T5 source (not run automatically here to avoid a second
+  ~400MB download in this session; the numbers above come from running the
+  real functions directly against the already-downloaded live zips instead).
+- Left open: `dallas-dcad.json` and `houston-hcad.json` are not wired into
+  `run.py`'s chain yet (that's T6, same as every other T2-T5 recipe). T6
+  (the real Texas run merging TABS + city recipes + appraisal files +
+  TDHCA) is next.

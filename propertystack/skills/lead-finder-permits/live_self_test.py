@@ -14,6 +14,7 @@ import urllib.request
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+from appraisal_zip import find_new_apartment_projects, find_sold_apartments  # noqa: E402
 from ckan_sql import ckan_sql_http_get  # noqa: E402
 from find_upcoming import find_upcoming  # noqa: E402
 from houston_sold_permits import fetch_rows as houston_fetch_rows  # noqa: E402
@@ -48,6 +49,10 @@ def main() -> int:
                 records = find_apartment_sales(state_dir, recipe, today=today)
             elif recipe.get("system") == "tdhca-affordable":
                 records = find_new_affordable_projects(state_dir, recipe, today=today)
+            elif recipe.get("system") == "appraisal-district-bulk-file":
+                records = find_new_apartment_projects(state_dir, recipe) + find_sold_apartments(
+                    state_dir, recipe, today=today
+                )
             else:
                 if recipe.get("system") == "ckan-sql":
                     fetch = ckan_sql_http_get(recipe["endpoint"], recipe.get("sql", ""))
