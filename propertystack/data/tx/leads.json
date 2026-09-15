@@ -29211,10 +29211,11 @@
   "buyer": "7440 LA VISTA DALLAS LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://tenisonatwhiterock.com/",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://tenisonatwhiterock.com/"
   },
   "sources": [
    {
@@ -29262,7 +29263,7 @@
   "units": null,
   "stage": "sold",
   "permit_date": "",
-  "opening_date": "",
+  "opening_date": "1716",
   "sale_date": "2025-08-05",
   "buyer": "TL-I LLC",
   "developer": "",
@@ -29276,6 +29277,10 @@
    {
     "fact": "sale_date",
     "url": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   },
+   {
+    "fact": "opening_date",
+    "url": "https://github.com/Apoorve73/Real-Estate-Companies-Database/blob/master/Houston1.csv"
    }
   ],
   "why": "Sold 2025-08-05 \u00b7 to TL-I LLC \u00b7 new owner may re-pick software"
@@ -29287,10 +29292,10 @@
   "address": "300 N VISTA DR 296",
   "lat": null,
   "lon": null,
-  "units": null,
+  "units": 12,
   "stage": "sold",
   "permit_date": "",
-  "opening_date": "",
+  "opening_date": "0027",
   "sale_date": "2025-08-05",
   "buyer": "TL-I LLC",
   "developer": "",
@@ -29304,9 +29309,17 @@
    {
     "fact": "sale_date",
     "url": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   },
+   {
+    "fact": "units",
+    "url": "https://www.redfin.com/TX/Houston/300-N-Vista-Dr-77073/unit-296/home/30508947"
+   },
+   {
+    "fact": "opening_date",
+    "url": "https://www.redfin.com/TX/Houston/300-N-Vista-Dr-77073/unit-296/home/30508947"
    }
   ],
-  "why": "Sold 2025-08-05 \u00b7 to TL-I LLC \u00b7 new owner may re-pick software"
+  "why": "Sold 2025-08-05 \u00b7 to TL-I LLC \u00b7 12 units \u00b7 new owner may re-pick software"
  },
  {
   "area": "tx",
@@ -29399,7 +29412,7 @@
   "address": "9303 WOODFAIR DR 248",
   "lat": null,
   "lon": null,
-  "units": null,
+  "units": 20,
   "stage": "sold",
   "permit_date": "",
   "opening_date": "",
@@ -29416,9 +29429,13 @@
    {
     "fact": "sale_date",
     "url": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   },
+   {
+    "fact": "units",
+    "url": "https://www.poconnor.com/blog/harris-county-appraisal-district-over-values-many-apartments-by-over-50-/"
    }
   ],
-  "why": "Sold 2025-08-03 \u00b7 to MAR DEL SOL OWNER 2 LLC \u00b7 new owner may re-pick software"
+  "why": "Sold 2025-08-03 \u00b7 to MAR DEL SOL OWNER 2 LLC \u00b7 20 units \u00b7 new owner may re-pick software"
  },
  {
   "area": "tx",
@@ -29483,7 +29500,7 @@
   "address": "10010 GREENFORK DR 180",
   "lat": null,
   "lon": null,
-  "units": null,
+  "units": 180,
   "stage": "sold",
   "permit_date": "",
   "opening_date": "",
@@ -29491,18 +29508,23 @@
   "buyer": "APT WHISPERING OAKS LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://ploteasy.com/property-details/92512/10010-greenfork-dr-houston-tx-77036",
   "software": "unknown",
   "links": {
-   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip",
+   "website": "https://ploteasy.com/property-details/92512/10010-greenfork-dr-houston-tx-77036"
   },
   "sources": [
    {
     "fact": "sale_date",
     "url": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   },
+   {
+    "fact": "units",
+    "url": "https://cccres.com/apartments/detail/whispering-oaks-houston-2"
    }
   ],
-  "why": "Sold 2025-08-01 \u00b7 to APT WHISPERING OAKS LLC \u00b7 new owner may re-pick software"
+  "why": "Sold 2025-08-01 \u00b7 to APT WHISPERING OAKS LLC \u00b7 180 units \u00b7 new owner may re-pick software"
  },
  {
   "area": "tx",
@@ -29519,10 +29541,11 @@
   "buyer": "RPAPT LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.richlandpark-apts.com/",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.richlandpark-apts.com/"
   },
   "sources": [
    {
@@ -29547,10 +29570,11 @@
   "buyer": "TX SKYLINE FARMERS MARKET LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.skylinefarmersmarketapts.com/",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.skylinefarmersmarketapts.com/"
   },
   "sources": [
    {
@@ -29575,10 +29599,11 @@
   "buyer": "AEH CAROLYN COURT LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.whitepages.com/address/1200-Carolyn-Ct-24/Humble-TX/Aqwag3lB0Qo",
   "software": "unknown",
   "links": {
-   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip",
+   "website": "https://www.whitepages.com/address/1200-Carolyn-Ct-24/Humble-TX/Aqwag3lB0Qo"
   },
   "sources": [
    {
@@ -29623,7 +29648,7 @@
   "address": "6909 RENWICK DR 94",
   "lat": null,
   "lon": null,
-  "units": null,
+  "units": 94,
   "stage": "sold",
   "permit_date": "",
   "opening_date": "",
@@ -29640,9 +29665,13 @@
    {
     "fact": "sale_date",
     "url": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   },
+   {
+    "fact": "units",
+    "url": "https://cccres.com/apartments/detail/grove-of-renwick-the-houston"
    }
   ],
-  "why": "Sold 2025-07-30 \u00b7 to GROVE AT EDGEMOOR LLC \u00b7 new owner may re-pick software"
+  "why": "Sold 2025-07-30 \u00b7 to GROVE AT EDGEMOOR LLC \u00b7 94 units \u00b7 new owner may re-pick software"
  },
  {
   "area": "tx",
@@ -29715,10 +29744,11 @@
   "buyer": "GOSLING MF II PROP CO 1 LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://ploteasy.com/property-details/241171021/21901-gosling-rd-189-spring-tx-77389",
   "software": "unknown",
   "links": {
-   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip",
+   "website": "https://ploteasy.com/property-details/241171021/21901-gosling-rd-189-spring-tx-77389"
   },
   "sources": [
    {
@@ -29743,10 +29773,11 @@
   "buyer": "MCREF IV TRAILHEAD",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.moderatrailhead.com/",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.moderatrailhead.com/"
   },
   "sources": [
    {
@@ -29803,10 +29834,11 @@
   "buyer": "1100 PEARL STREET INC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.pearllofts.com/",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.pearllofts.com/"
   },
   "sources": [
    {
@@ -29887,10 +29919,11 @@
   "buyer": "VOS OWNER LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://cccres.com/apartments/detail/villas-of-sorrento-txa19970195-dallas",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://cccres.com/apartments/detail/villas-of-sorrento-txa19970195-dallas"
   },
   "sources": [
    {
