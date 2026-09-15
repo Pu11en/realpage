@@ -27,6 +27,8 @@ NOT_PRODUCT = {
     "", "about", "company", "careers", "contact", "contact-us", "legal", "support", "user-group",
     "training", "trademarks", "events", "news", "blog", "resources", "privacy", "accessibility",
     "sitemap", "login", "partners", "investors", "leadership", "customer-stories", "webinars",
+    "accessibility-statement", "client-login", "podcasts", "resident-resource-center", "standard-sow-services",
+    "vendor-support", "markets",
 }
 
 

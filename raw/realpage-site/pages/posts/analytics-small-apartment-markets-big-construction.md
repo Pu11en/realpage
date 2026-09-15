@@ -1,0 +1,13 @@
+---
+url: "https://www.realpage.com/analytics/small-apartment-markets-big-construction/"
+title: "Small Apartment Markets with Sizable Construction Activity"
+type: "posts"
+lastmod: "2023-07-19T08:00:00-05:00"
+crawled: "2026-09-15"
+source: "crawl4ai"
+---
+
+# Small Markets with Big Apartment Construction
+![Photo of Meggan Taylor, Market Analyst](https://s.realpage.com/storage/files/blog/authors/images/2022/09/meggan-taylor-2022.jpg)
+_by_ [ Meggan Taylor](https://www.realpage.com/analytics/authors/mtaylor/)
+While prolific apartment construction is underway nationwide, some of the smaller markets have garnered increased investor interest and that’s playing out in spectacular inventory growth. Apartment construction has skyrocketed in many smaller communities as more flexible work situations and changing demography enables renters to select communities that are more aligned with their lifestyle choices. [Colorado Springs](https://www.realpage.com/analytics/co-springs-apartment-inventory-jumps/) tops the list with about 8,800 units currently underway – a huge volume for a market that received about 9,100 units total over the past 10 years. Nearly 6,700 of those units are expected to complete over the next 12 months which will grow inventory 12.3% – the highest inventory growth rate over the next year among all 150 markets tracked by RealPage [Market Analytics](https://www.realpage.com/insights-analytics/market-analytics/). Meanwhile, Huntsville has nearly 8,100 units being built which translates to an astounding 20.9% inventory growth rate – by far the highest total construction growth rate among RealPage markets. Charleston and Myrtle Beach also make the list with about 7,300 units and 5,100 units underway, respectively. That is an especially large volume for Myrtle Beach which only received about 7,300 deliveries over the past 10 years. Sunny Florida claims three smaller markets on our list: North Port-Sarasota, Cape Coral-Fort Myers and Lakeland. Each of these markets are seeing elevated construction volumes that will grow existing inventory by more than 11%. Looking at the Mountain Region, Boise City has become a popular “Zoomtown” hotspot and has nearly 5,400 units under construction which will grow existing inventory by 17.1% – the second highest nationally after Huntsville. Provo has also seen construction skyrocket with about 4,400 units, growing inventory 16.3%, ranking Provo third place nationally. Slow-and-steady Omaha wraps up our list with nearly 4,200 units under construction equating to a 4.8% inventory increase, a more moderate pace of growth relative to its peers.

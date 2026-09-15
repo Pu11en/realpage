@@ -1,0 +1,25 @@
+---
+url: "https://www.realpage.com/analytics/half-texas-submarkets-log-rent-cuts/"
+title: "One in Two Texas Submarkets Log Rent Cuts"
+type: "posts"
+lastmod: "2023-08-16T08:00:00-05:00"
+crawled: "2026-09-15"
+source: "crawl4ai"
+---
+
+# Half of Texas Submarkets Logging Apartment Rent Cuts
+![Photo of Kim O'Brien, Real Estate Writer](https://s.realpage.com/storage/files/blog/authors/images/2022/09/kim-obrien.jpg)
+_by_ [ Kim O'Brien](https://www.realpage.com/analytics/authors/kimobrien/)
+An increasingly large volume of Texas apartment operators resorted to rent cuts over the past few months, a trend that resulted in price declines across half the Lone Star State’s submarkets as of July.
+Out of the 113 submarkets across the largest Texas markets of Austin, Dallas, Fort Worth, San Antonio and Houston, 53 submarkets cut rent in the year-ending July. This trend has gotten worse throughout the past few months and took a significant leap in July. Just 24 of those 113 Texas submarkets were logging rent cuts in the year-ending June.
+[ ](https://www.realpage.com/insights-analytics/market-analytics/)
+The deepest submarket-level rent cuts statewide were in Austin, which is currently in correction mode, after operators raised prices significantly in the past few years. Those rent hikes – some of which hovered between 20% and 30% in 2021 and 2022 – were clearly unsustainable and now the market is seeing deep adjustments. In fact, all but one Austin submarket saw rent cuts in the year-ending July. Only San Marcos saw rent growth in the past year, with an mild increase of 1.1%. San Marcos is an area supported significantly by a constant flow of traffic due to the large student population of Texas State University.
+In the year-ending July, the deepest rent cuts were in Northwest Austin at 7.2%, while Cedar Park wasn’t far behind with a decline of 6.6%. Annual price cuts around the 6% mark were seen in Far West Austin, Southwest Austin and the Arboretum.
+While apartment demand remains solid in Austin, ranking #4 nationwide in the past year, the popular Texas market has been one of the fastest growing areas nationwide. With record new supply, the market is now delivering more units than it can realistically absorb in the near term. As of July, annual completions were at nearly 13,300 units, increasing the existing base by 4.6%. A stunning 32,000 or so units are slated to complete in the coming year, setting Austin up for more rent cuts in the coming months.
+[ ](https://www.realpage.com/insights-analytics/market-analytics/)
+In the Dallas/Fort Worth area, 20 submarkets logged rent cuts in the year-ending July. That accounts for about 42% of total submarkets across the Metroplex. Like Austin, Dallas/Fort Worth has seen notable demand, especially on the [Fort Worth side](https://www.realpage.com/analytics/fort-worth-apartment-demand-rebound/), driven by a solid job base and in-migration. And the Metroplex has also been a new supply heavyweight in recent years. An incredible 25,000 or so units completed across these two markets in the past year. But rent cuts here aren’t quite as deep as what was seen in the state’s capital city. Price declines were deepest at 2.5% in Northeast Fort Worth/North Richland Hills and Central/East Plano, while the northern suburbs of Rockwall/Rowlett/Wylie, Allen/McKinney and North Fort Worth/Keller logged annual rent cuts of 2.3%.
+On the other hand, Dallas submarkets accounted for four of the five best rent growth showings in the state in the past year. Southeast Dallas was the best statewide with an rent increase of 9.9% in the year-ending July, while growth was also solid around 6% to 8% in Northwest Dallas, Hunt County and Southwest Dallas.
+Among San Antonio’s 14 submarkets, 10 logged rent cuts in the past year. Only two, however, had Austin-level rent cuts. Apartment operators cut prices by 4.8% in the past year in Far West San Antonio and by 2.8% in Far Northwest San Antonio. The remaining submarkets logged annual price cuts under 1%.
+In a somewhat surprising outcome, Houston had the smallest share of submarkets seeing rent cuts in the year-ending July. Out of 35 neighborhoods, only eight of Houston’s submarkets suffered price declines in the past year, which accounted for 23% of the market. The cuts here were also mild, hitting at a low point of around 2% in The Woodlands, Cypress/Waller and Braeswood Place/Astrodome/South Union.
+One Houston submarket – the Sharpstown/Fondren Southwest area – logged one of the best rent growth showings in the state at 9.2% in the year-ending July.
+These recent rent cuts could be relieved in the near term. The Texas employment base remains a strong demand driver, accounting for [20% of all nationwide job growth](https://www.realpage.com/analytics/texas-job-growth-significant-may-2023/) in the year-ending May. Additionally, the domestic population growth in Texas continues at historic levels. Thus, while rent cuts are increasingly becoming the norm in these heavy supply pockets, don’t look for that trend to last too long.

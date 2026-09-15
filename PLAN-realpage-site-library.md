@@ -55,11 +55,11 @@ Open: (no page -- part 1 is files only)
   fallback when Crawl4AI returns an error or under 200 characters. 1 request/sec, resumes by skipping
   saved pages, logs failures to `raw/realpage-site/failed.csv`. `--limit N` for a practice run. Tests
   with saved HTML fixtures and a fake fetcher. Commit.
-- [ ] **T3 Real crawl.** Run `crawl.py --limit 20`, spot-check 5 pages by eye against the live site
+- [x] **T3 Real crawl.** Run `crawl.py --limit 20`, spot-check 5 pages by eye against the live site
   (text complete, no menu junk), fix the cleaner if needed, then run the full crawl (~3,000 pages,
   ~1 hour; restart resumes). Retry `failed.csv` once. Record counts per type and failures in
   `raw/realpage-site/CRAWL-REPORT.md`. Commit the pages (plain text only).
-- [ ] **T4 Page index.** `tooling/realpage-library/index.py` writes `01-company/realpage-site-index.md`:
+- [x] **T4 Page index.** `tooling/realpage-library/index.py` writes `01-company/realpage-site-index.md`:
   one line per non-blog page (pages, case studies, ebooks, management team, testimonials, hub terms)
   with title, type and link, grouped by type; blog posts, videos, webcasts and episodes as a
   count plus the 50 newest titles. Also finds the product pages (from `/products/`-style URLs and

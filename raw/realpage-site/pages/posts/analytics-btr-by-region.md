@@ -1,0 +1,30 @@
+---
+url: "https://www.realpage.com/analytics/btr-by-region/"
+title: "Build-to-Rent Construction Ranked by Region"
+type: "posts"
+lastmod: "2023-09-15T08:00:00-05:00"
+crawled: "2026-09-15"
+source: "crawl4ai"
+---
+
+# South Leads Nation for Construction of Build-to-Rent Homes
+![Photo of Carissa Brown, Real Estate Writer](https://s.realpage.com/storage/files/blog/authors/images/2022/09/carissa-brown.jpg)
+_by_ [ Carissa Brown](https://www.realpage.com/analytics/authors/cbrown/)
+Build-to-rent construction is on the rise – literally – throughout the U.S., but nowhere more prolifically than in the South region.
+As of early September, the South easily leads the nation for build-to-rent, or BTR, construction with more than 61,200 units underway, according to RealPage [Market Analytics](https://www.realpage.com/insights-analytics/market-analytics/). That total tallies more than the other three regions combined and outpaces the next closest region (West) by more than two-to-one.
+Across the U.S., there are roughly 104,160 BTR units under construction (includes properties in lease-up where construction is ongoing), primarily concentrated in the South and West. BTR, as RealPage defines it, includes single-family housing that is fully detached, semi-detached (semi-attached, side-by-side), row houses, duplexes, quadruplexes and townhouses built for rental.
+In the South, some 61,234 BTR units are expected to complete through 1st quarter 2026. A total of 28,488 units are projected to complete by the end of 2025 across the West. The Midwest has 12,571 units under construction completing through mid-2025. Meanwhile, a total of 1,687 units are expected to complete over the next 17 months in the Northeast, the nation’s laggard for BTR construction.
+High interest rates, limited inventory of existing single-family homes and other market headwinds foster continued interest in BTR with many would be homeowners choosing rental properties instead of homeownership. Thus, developer and [investor appetite remains high](https://www.realpage.com/analytics/markets-with-most-btr-being-built/) for this rental product. More than 60 developers are responsible for the over 100,000 BTR units under construction with a handful of that group building massive volumes of BTR.
+Among those developers, Scottsdale, AZ-based Cavan Cos. (3,408 units) leads for the number of units under construction and primarily develops in the South. Ohio-based Redwood Living Inc., which builds neighborhoods in the Midwest and South, has some 2,792 units under construction. Other leading developers include Scottsdale-based Taylor Morrison (2,578 units across the South), Las Vegas-based American Homes 4 Rent (1,853 units in the Midwest, South and West) and Phoenix-based NexMetro Communities (1,831 units across the South and West).
+BTR project size varies greatly on factors such as land availability, site amenities and unit size, making it hard to accurately pinpoint a precise average unit count per development. Still, several projects are noteworthy based on their sheer volume of units. And, no surprise, these projects are primarily located in the South.
+#### **Pradera Oaks**
+Houston-based Wan Bridge Group, a builder and operator of BTR communities in Texas, plans to complete 812 units at Pradera Oaks on 250 acres in Brazoria County. Construction on the community rising in Rosharon, TX within the Houston market started in May 2020. Projected rents for Pradera Oaks’ floorplans ranging from 1,400 to 1,800 square feet are projected to run $2,395 per month, above current monthly rents in conventional apartments for the Brazoria County submarket ($1,092 per month as of August). Construction on Pradera Oaks is expected to complete by mid-2025.
+#### **Brandon Town Center**
+Headed by Atlanta-based Brandon Development Partners, this townhome style BTR project is expected to welcome its first residents in early 2024. Construction on the 660-unit project started in late 2021 and is expected to fully complete by May 2025 on 55 acres at the northeast corner of south Lakewood Drive and Brandon Parkway in Brandon, FL. Monthly rents for conventional units in Brandon/Southeast Hillsborough County were $1,782 per month as of August, below the Tampa market average.
+#### **Orchard Farms**
+Florida-based DLP Capital in partnership with Dallas-based JMJ Development broke ground on Orchard Farms in October 2022. Located at Shelby Road and Rendon Road in the South Fort Worth submarket, Orchard Farms will offer 643 single-family rental units with three- and four-bedroom units to residents beginning spring 2024 with construction expected to wrap by March 2025. Projected monthly rents are between $1,850 and $2,100 per month, significantly above the average effective rents for conventional apartments in the South Fort Worth submarket ($1,199 per month as of August).
+#### **Yardly Town Center**
+Scottsdale, AZ-based Taylor Morrison broke ground on the 511-unit Yardly Town Center in early 2023. Rising at West White Street and North Throckmorton Boulevard in Anna, a northern suburb of Dallas, Yardly Town Center will offer units ranging from 717 square feet to 1,030 square feet. It is unclear where monthly rents may fall for this BTR project in the Allen/McKinney submarket, however, conventional rents in the submarket average $1,678 per month.
+#### **Filmore Place**
+Construction on Filmore Place started in January 2022. Michigan-based Schafer Development plans to complete this 504-unit project located off Michigan Avenue in Canton, less than 30 minutes from downtown Detroit, by June 2024. Unit floorplans hover around 1,200 square feet, but expected rents are not yet available. As of August, conventional rents in the Westland/Canton/Livonia submarket average $1,237 per month.
+In addition to BTR units under construction, RealPage is currently tracking some 15,000 planned BTR units across the nation, though the timelines for those planned projects are subject to the current economic environment and therefore may shift.
