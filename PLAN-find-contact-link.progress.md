@@ -23,3 +23,13 @@
 - New tooling/qa/live_find_contact_click.py (real Playwright against the running stack; SITE env picks the site port): asked "give me top leads any area" -> 3 lead lines, 2 with 📞 + Texas building record, 1 (4030 N 44Th Ave, Phoenix) with 🔍 Find contact; clicked it -> "Deep dive on 4030 N 44Th Ave, Phoenix" appeared as the sent message, site URL unchanged, no new tab; deep-dive answer came back with a phone. PASS. Screenshot: tooling/qa/shots/find-contact.png (folder is gitignored, so not committed).
 - Note for F3: the run used this worktree's site on port 8766 (another stack holds 8765), with CORS_ALLOW_ORIGIN extended to include 8766 when starting the compose stack. On 8765 via tooling/dev.sh no extra setting is needed.
 - Check: 48 passed.
+
+## F3 Try it for real, locally — done (PASS)
+- Rebuilt the dev chat stack from this worktree (`docker compose -f chatbot/docker-compose.local.yml -f chatbot/docker-compose.dev.yml -p ps-chat up -d --build`) and confirmed the running container really has the linkfix `#ask:` percent-encoding.
+- Port 8765 is held by another stack (cranesignal-human-test), so this worktree's site was served on 8766 with `CORS_ALLOW_ORIGIN` extended to include it; on a free 8765 plain `bash tooling/dev.sh` needs nothing extra.
+- Real Playwright run (`SITE=http://localhost:8766 python3 tooling/qa/live_find_contact_click.py`), asked "give me top leads any area": 3 lead lines, 0 without a contact/link —
+  Groves Apartments, Humble 📞 (210) 326-1119 + Texas building record; 4030 N 44th Ave, Phoenix 🔍 Find contact; Stargaze Apartments, Brownsville 📞 (956) 343-6375 + Texas building record.
+- Clicked the 🔍 Find contact link: "Deep dive on 4030 N 44th Ave, Phoenix" was sent as a chat message on its own, site URL unchanged (http://localhost:8766/index.html), no new tab, no console errors. The deep dive answered with a leasing-office phone ((928) 543-0626), size, software and source lines. RESULT: PASS.
+- Screenshot: tooling/qa/shots/find-contact.png (+ -before.png). That folder is gitignored, so the images are on disk only, not committed.
+- Check: 48 passed. Stopped the site server I started (8766); left the shared ps-chat containers up because another session was already using them.
+- Nothing left open: the plan's goal is met end to end. Not pushed.

@@ -35,7 +35,7 @@ Open: http://localhost:8765 → Ask (no sign-in locally)
   and send it (same way the site's deep-dive buttons send a prompt); no page jump or navigation.
   Keep existing loader behaviour. Add a test to `test_find_contact.py` that loader.js has the
   `a[href^="#ask:"]` handler. Run Check. Commit.
-- [ ] **F3 Try it for real, locally.** Start `bash tooling/dev.sh`, then with Playwright on
+- [x] **F3 Try it for real, locally.** Start `bash tooling/dev.sh`, then with Playwright on
   http://localhost:8765: ask "give me top leads any area", confirm every lead line has a phone,
   a link or a 🔍 Find contact link, click one Find contact link and confirm a "Deep dive on …"
   message is sent and a deep-dive answer comes back. Save a screenshot to
