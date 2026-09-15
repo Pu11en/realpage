@@ -43,12 +43,16 @@ for _extra in (
         sys.path.insert(0, str(p))
 if str(HERE) not in sys.path:
     sys.path.insert(0, str(HERE))
+_REPO_ROOT = HERE.parents[2]
+if str(_REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(_REPO_ROOT))
 
 from runfolder import RunFolder, RunCaps, pick_state  # noqa: E402
 from record import LeadRecord  # noqa: E402
 from merge import merge_records  # noqa: E402
 from fetch import WebHelper  # noqa: E402
 from quality import check_quality, write_quality_json  # noqa: E402
+from lib.building_match import clean_project_name  # noqa: E402
 
 import rank as cities_rank  # noqa: E402
 import find_sources  # noqa: E402
@@ -477,6 +481,8 @@ def main(argv: list[str] | None = None) -> int:
         owner_parcel_fetch_rows=find_sold.default_fetch_rows if owner_parcel_recipe else None,
     )
     records = run_chain(state, run_folder, deps, cities=args.city)
+    for record in records:
+        record.name = clean_project_name(record.name)
     print(f"lead-finder: {len(records)} leads for {state} -> {run_folder.path}")
 
     city_list = run_folder.load_step(STEP_CITIES, STATE_CITY_KEY)["cities"]
