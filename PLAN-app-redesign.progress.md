@@ -36,3 +36,11 @@
 - Font-size/margin inline styles moved to small note classes. Only data-driven bar widths stay inline.
 - Added ai-visibility.html to design-pages.txt. check-design.sh passes (4 pages, 0 problems); no sideways scroll at 390px, no page errors.
 - Screenshots: docs/design-screens/T5-desktop.png, T5-phone.png.
+
+## T6 Under the Hood, Privacy, Master Table — done 2026-09-15 (commit c609f91)
+- under-the-hood.html: all 5 inline style= moved to classes (review-links, review-note, cost-label/value, clickable row cursor). Dark #27272a tag now grey paper-2 badge with rule border; pipeline step boxes paper-2, numbers in Plus Jakarta Sans; run-history/review tables framed, zebra rows, sticky grey headers; status "ok" = green --ok, "error" = muted red --bad.
+- privacy.html: already light via styles.css; headings set to navy ink, h1 bolder. No text changes.
+- master-table.html is only a redirect to map.html (no styling of its own); listed so the check covers the redirect landing.
+- Added all three to design-pages.txt. check-design.sh passes (7 pages, 0 problems); no sideways scroll at 390px, no page errors.
+- Left open: Under the Hood shows the text "propertystack/runs/*.json" (existing copy; plan forbids copy rewrites) — Drew may want it renamed later.
+- Screenshots: docs/design-screens/T6-under-the-hood-{desktop,phone}.png, T6-privacy-{desktop,phone}.png.
