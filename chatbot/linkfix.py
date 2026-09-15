@@ -26,27 +26,9 @@ _ROW_LABELS = {"map", "permit", "news", "website"}
 _VIDEO_RE = re.compile(r"swagit\.com|youtube\.com|youtu\.be|vimeo\.com|granicus\.com/player|/videos?/", re.I)
 _SOURCES_RE = re.compile(r"^\s*\**\s*Sources\s*:?", re.I)
 
-# A deterministic last line of defence: model text cannot be shown as a
-# verified fact unless it retains a link returned by a tool this turn. A plain
-# source name may explain the data, but it is not a readable source someone can
-# open and check.
-UNVERIFIED_REPLY = """**I couldn't verify that claim with a readable source.**
-**Next:** Ask about a Texas building with a source you can open."""
-_SAFE_NO_FACT_STARTS = (
-    "that's outside cranesignal",
-    "that’s outside cranesignal",
-    "i don't have that",
-    "i don’t have that",
-    "i couldn't verify",
-    "i couldn’t verify",
-    "i could not verify",
-    "i can't change",
-    "i cannot change",
-    "i can't add",
-    "i cannot add",
-    "i can't delete",
-    "i cannot delete",
-)
+# Only used when link cleaning leaves nothing to show.
+EMPTY_REPLY = """**I don't have that.**
+**Next:** Ask about a Texas building or RealPage."""
 
 _SITE_LABELS = [
     (r"(^|\.)tdlr\.texas\.gov$", "Texas building record"),
@@ -173,63 +155,17 @@ def fix_links(text: str, seen: set[str] | None = None, deep_dive: bool = False) 
     return "\n".join(out)
 
 
-def _first_answer_text(text: str) -> str:
-    """First visible answer line, normalized for safe-reply detection."""
-    for line in text.splitlines():
-        line = re.sub(r"[*_`>#-]", "", line).strip().lower()
-        if line:
-            return line
-    return ""
-
-
-def _has_approved_readable_source(text: str, seen: set[str]) -> bool:
-    """Whether a retained non-map link came from an approved tool result."""
-    for match in _LINK_RE.finditer(text):
-        url = match.group(2)
-        if not _is_maps(url) and (_is_hood(url) or _norm(url) in seen):
-            return True
-    return False
-
-
-# Our own data has no URL, so a named source from the skill's "Say it as"
-# column counts too -- but only a specific one on the Sources / 📂 From line.
-# A vague "CraneSignal data" still does not.
-_OWN_SOURCES = (
-    "county property records", "county sales record", "building websites",
-    "software check", "city permits", "cranesignal lead ranking",
-    "contact info from building websites", "reddit posts",
-    "dallas-area building survey", "cranesignal lead map",
-    "property software market share", "building owner, sale and lead detail",
-    "cranesignal build pipeline", "cranesignal measurements",
-    "ai visibility score snapshot", "realpage research",
-)
-_SOURCE_LINE_RE = re.compile(r"^\s*(?:\**\s*Sources\s*:|.*📂\s*\**\s*From\s*:)", re.I)
-
-
-def _has_named_own_source(text: str) -> bool:
-    """Whether a Sources / 📂 From line names one of our own data sources."""
-    for line in text.splitlines():
-        if _SOURCE_LINE_RE.match(line):
-            low = line.lower()
-            if any(name in low for name in _OWN_SOURCES):
-                return True
-    return False
-
-
 def finalize_answer(text: str, seen: set[str] | None = None, deep_dive: bool = False) -> str:
-    """Permit factual text only with a readable, approved source.
+    """Last step before an answer leaves the proxy.
 
-    ``seen`` is injectable so the guard is regression-tested offline. Honest
-    unknowns and fixed safety boundaries are non-factual answers, so they stay
-    exactly as written.
+    Fake links (never returned by a tool) are removed; the answer itself is
+    kept. A link is not required -- facts from our own data or general
+    knowledge name their source in words (see SOUL.md). ``seen`` is
+    injectable so this is tested offline.
     """
     seen = load_seen() if seen is None else seen
     cleaned = fix_links(text, seen, deep_dive=deep_dive).strip()
-    if _first_answer_text(cleaned).startswith(_SAFE_NO_FACT_STARTS):
-        return cleaned
-    if _has_approved_readable_source(cleaned, seen) or _has_named_own_source(cleaned):
-        return cleaned
-    return UNVERIFIED_REPLY
+    return cleaned or EMPTY_REPLY
 
 
 class LineFixer:
