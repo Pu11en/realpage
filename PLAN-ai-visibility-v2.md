@@ -51,7 +51,7 @@ Open: http://localhost:8765/ai-visibility.html
   `do_GET`. Create `tooling/ai-visibility/tests/` with offline tests using fixtures, and
   `tooling/qa/check-ai-visibility.sh` (runs those tests with pytest; must work with no network and no key).
   Commit.
-- [ ] **T2 Frozen questions.** Save the question list from the 2026-09-12 real run
+- [x] **T2 Frozen questions.** Save the question list from the 2026-09-12 real run
   (`~/.local/state/realpage-ai-visibility/runs/2026-09-12T15-39-48-714Z-realpage/prompts.csv`) into the repo
   as `tooling/ai-visibility/questions.csv`. Make `run.sh` reuse exactly those questions (use a NiubiGEO
   option if one exists; otherwise feed them in with the smallest wrapper) and default the models to
