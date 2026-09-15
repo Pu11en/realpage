@@ -3,3 +3,4 @@ __pycache__/
 tooling/qa/shots/
 propertystack/runs/cache/
 propertystack/data/_sample/chat-leads.csv
+.caddy-bin/

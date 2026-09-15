@@ -126,3 +126,11 @@
 - `_merge_included_areas` fills each Plano-Richardson row's street address from `site/data/properties.json` (the saved property data): 40 of the 42 rows now carry it in both `tx.json` and the chat's `tx/chat-leads.csv`. Two upcoming rows (Haggard Farm Townhomes, 360-unit project in downtown Plano) have no street address saved anywhere, so they stay blank rather than guess.
 - Test: tooling/qa/fixes_tests/test_c5_stage_address.py.
 - Checked: check-fixes.sh passes (52 tests, design 0 problems).
+
+## E1 Sign-in for the whole app — done
+- `site/Caddyfile` now sends every app page and its data through `forward_auth` to the chat app's `GET /api/v1/auths/` (the same check the panel already uses; Open WebUI reads the `token` cookie). Not signed in: the chat app's 401 is turned into a 302 to `/auth?redirect=<the page>` (Open WebUI sends them back there after sign-in — confirmed in its `src/routes/auth/+page.svelte`).
+- Gated: `/`, `/index.html`, `/map.html`, `/master-table.html`, `/property.html`, `/ai-visibility.html`, `/under-the-hood.html`, plus `/js/*`, `/data/*`, `/vendor/*`. Public: `/privacy.html`, `/css/*`, `/fonts/*`, favicons, and every chat-app route (`/auth`, `/api`, `/static`, `/_app`, `/oauth`…), including the framed `/` the chat panel opens (`Sec-Fetch-Dest: iframe`) and `/api/v1/auths/`.
+- The site root is now `{$SITE_ROOT:/srv}` so the offline test can point at the checkout; production still uses `/srv`. `tooling/qa/fake-webui/server.py` now ignores a query string on `/api/v1/auths` (forward_auth keeps the original `?` on its check) — Open WebUI ignores it too.
+- Test: tooling/qa/fixes_tests/test_e1_signin.py runs the real Caddyfile with the fake chat upstream (unpacks the Caddy binary from caddy:2-alpine into `.caddy-bin/` on first run): signed-out `/index.html` and `/data/leads.json` redirect, `/privacy.html` and `/css/*` do not, a valid cookie gets the 200 page, and the panel's iframe `/` stays public.
+- ⚠️ For D1 report: this is only live after the push; Drew must test the real sign-in on the live site. `/css/*` stays public (the public privacy page needs `css/styles.css`); it holds no data. Verified with Caddy v2.11.4.
+- Local `tooling/dev.sh` is unchanged (plain `python3 -m http.server`, no Caddy), so the Check and local testing keep working.

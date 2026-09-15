@@ -100,7 +100,7 @@ Open: http://localhost:8765/index.html
   get their street address from the saved property data so the chat can give addresses.
 
 ### Part D: wrap up
-- [ ] **E1 Sign-in for the whole app (Drew 2026-09-15).** Online, every app page (Early Leads, Map, property
+- [x] **E1 Sign-in for the whole app (Drew 2026-09-15).** Online, every app page (Early Leads, Map, property
   pages, AI Visibility, Under the Hood, data files) needs the same sign-in the chat uses (Google or email);
   only `privacy.html`, fonts, favicons and the sign-in pages themselves stay public. In `site/Caddyfile` use
   `forward_auth` to the chat app's current-user endpoint (Open WebUI reads the `token` cookie); not signed
