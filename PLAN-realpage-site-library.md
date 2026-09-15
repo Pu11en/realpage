@@ -35,16 +35,13 @@ Nothing pushes; the live chat is not redeployed by this plan.
 
 Run with: `Do the next unticked task in PLAN-realpage-site-library.md, then tick it and stop.`
 Check: `bash tooling/qa/check-realpage-library.sh`
-Try: `docker compose -f chatbot/docker-compose.local.yml up --build`
-Open: http://localhost:3000
+Try: `cat raw/realpage-site/CRAWL-REPORT.md`
+Open: (no page -- part 1 is files only)
 
 ## How to try it (30 seconds)
-1. Ask the local chat "What does RealPage Lumina do?" -- it answers from RealPage's own product card
-   and links the realpage.com page.
-2. Ask "What is the status of RealPage's DOJ lawsuit, according to RealPage?" -- it answers from the
-   key-facts sheet with the date and source link.
-3. Ask "Which RealPage products handle resident screening?" -- it names the right products, each with
-   a realpage.com link.
+1. The crawl report shows about 3,000 pages saved, counts per type, and few failures.
+2. Open any saved product page: clean readable text, with its realpage.com link at the top.
+3. The page index lists RealPage's main pages and products, each with a link.
 
 ## Tasks
 
