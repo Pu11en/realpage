@@ -1,0 +1,21 @@
+{
+  "city": "San Antonio",
+  "state": "TX",
+  "system": "ckan-sql",
+  "endpoint": "https://data.sanantonio.gov/api/3/action/datastore_search_sql",
+  "sql": "SELECT \"PROJECT NAME\", \"ADDRESS\", \"DATE ISSUED\"::text AS \"DATE ISSUED\" FROM \"c21106f9-3ef5-4f3a-8604-f992b4db7512\" WHERE \"PERMIT TYPE\"='Comm New Building Permit' AND (\"PROJECT NAME\" ILIKE '%apart%' OR \"PROJECT NAME\" ILIKE '%multifamily%' OR \"PROJECT NAME\" ILIKE '%multi-family%') UNION ALL SELECT \"PROJECT NAME\", \"ADDRESS\", \"DATE ISSUED\"::text AS \"DATE ISSUED\" FROM \"c22b1ef2-dcf8-4d77-be1a-ee3638092aab\" WHERE \"PERMIT TYPE\"='Comm New Building Permit' AND (\"PROJECT NAME\" ILIKE '%apart%' OR \"PROJECT NAME\" ILIKE '%multifamily%' OR \"PROJECT NAME\" ILIKE '%multi-family%') LIMIT 1000",
+  "resources": {
+    "permits_2025_plus": "c21106f9-3ef5-4f3a-8604-f992b4db7512",
+    "permits_2020_2024": "c22b1ef2-dcf8-4d77-be1a-ee3638092aab"
+  },
+  "fields": {
+    "permit_type": "PROJECT NAME",
+    "name": "PROJECT NAME",
+    "issue_date": "DATE ISSUED",
+    "address": "ADDRESS"
+  },
+  "date_format": "iso",
+  "date_tested": "2026-09-14",
+  "live_test": "Found the exact live resource ids via package_search (data.sanantonio.gov's CKAN catalog, dataset 'building-permits'): c21106f9-3ef5-4f3a-8604-f992b4db7512 ('PERMITS ISSUED', 2025+) and c22b1ef2-dcf8-4d77-be1a-ee3638092aab ('PERMITS ISSUED 2020-2024'); confirmed 'PERMIT TYPE'='Comm New Building Permit' is a real value (listed among ~50 distinct real permit-type strings pulled live). A UNION ALL of both resources filtered on that type + a PROJECT NAME apartment-keyword match returned 156 real rows live, e.g. 'AFF - 13039 SW 410 Building 5 - The Orion Apartments' (13039 SW 410, San Antonio, issued 2025-09-17) and 7 more buildings on the same Orion Apartments project.",
+  "notes": "No units field anywhere in this dataset -- units stay None ('Units: not public yet'), per the plan. Each apartment 'project' shows up as one row per building on the site (e.g. 8 rows for the Orion Apartments' 8 buildings + clubhouse) -- find_upcoming's existing address-based merge_records collapses same-address rows into one project, same as San Marcos. UNION ALL required an explicit ::text cast on DATE ISSUED because the two resources' column types don't match (2020-2024 resource stores it differently) -- a plain UNION without the cast fails with a Postgres DatatypeMismatch error, confirmed live. A new adapter, skills/lead-finder-permits/ckan_sql.py, wraps CKAN's datastore_search_sql {result:{records:[...]}} envelope into the plain-list shape find_upcoming's _fetch_rows already understands from Socrata, rather than teaching _fetch_rows CKAN's shape directly (CKAN's query text isn't itself a GET-able endpoint the way Socrata/ArcGIS URLs are, so a thin adapter is a cleaner fit than a generic _fetch_rows branch)."
+}

@@ -14,6 +14,7 @@ import urllib.request
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+from ckan_sql import ckan_sql_http_get  # noqa: E402
 from find_upcoming import find_upcoming  # noqa: E402
 
 RECIPES_ROOT = Path(__file__).resolve().parents[2] / "recipes"
@@ -32,8 +33,11 @@ def main() -> int:
     failures = []
     for path in sorted(recipes_dir.glob("*.json")):
         recipe = json.loads(path.read_text())
+        fetch = http_get
+        if recipe.get("system") == "ckan-sql":
+            fetch = ckan_sql_http_get(recipe["endpoint"], recipe.get("sql", ""))
         try:
-            records = find_upcoming(recipe["city"], recipe["state"], state_dir, recipe, http_get, today=today)
+            records = find_upcoming(recipe["city"], recipe["state"], state_dir, recipe, fetch, today=today)
         except Exception as exc:  # noqa: BLE001
             failures.append(f"{path.name}: error {exc!r}")
             continue
