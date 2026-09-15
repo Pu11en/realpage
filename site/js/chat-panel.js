@@ -37,9 +37,9 @@
           <button class="chat-panel-retry" id="chat-panel-retry">Try again</button>
         </div>
         <div class="chat-panel-signin-card" id="chat-panel-signin-card" style="display:none;">
-          <p>Sign in to ask a question.</p>
-          <p class="chat-panel-signin-note">Google opens a small window. It closes by itself and the chat appears here.</p>
-          <button class="chat-panel-signin" id="chat-panel-signin">Sign in with Google</button>
+          <p>Sign in free to ask a question.</p>
+          <p class="chat-panel-signin-note">A small window opens. Use Google or your email. It closes by itself and the chat appears here.</p>
+          <button class="chat-panel-signin" id="chat-panel-signin">Sign in free</button>
         </div>
       </div>
     `;
