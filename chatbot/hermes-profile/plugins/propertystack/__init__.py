@@ -82,6 +82,7 @@ SOURCE_NAMES = {
     "dallas_contacts": "Dallas-area building survey (contacts from websites)",
     "map_summary": "CraneSignal lead map (state and top-city totals)",
     "software_share": "Property software market share (Plano/Richardson only)",
+    "building_extras": "Building owner, sale and lead detail (Plano/Richardson only)",
 }
 
 
@@ -190,6 +191,10 @@ def ps_schema(args: dict, **_) -> str:
             "as the software/master tables) -- pct_of_identified_properties is already computed, so use it "
             "directly rather than recomputing from properties/units; never present it as covering any other "
             "area.",
+            "building_extras: one row per Plano/Richardson building (join to master on apt_id) with owner, "
+            "website_confidence, unknown_reason (same values as master, handy without a join), plus "
+            "sale_date/sale_new_owner/sale_previous_owner and lead_rank/lead_total_leads/lead_why -- all "
+            "blank when that building has no sale or isn't a ranked lead, which is most of them.",
         ],
     })
 

@@ -47,7 +47,7 @@ Open: http://localhost:8765/map.html
 - [x] **D3 Software market share.** Ship the site's `site/data/software-share.json` (and the `reach.json`
   proof list if it's lead-relevant) as a table, labeled "Plano and Richardson only" in SKILL.md. Test.
   Commit.
-- [ ] **D4 Building-page extras.** From `site/data/properties.json`, ship the fields the chat lacks (owner,
+- [x] **D4 Building-page extras.** From `site/data/properties.json`, ship the fields the chat lacks (owner,
   website confidence, reason something is unknown, sale/lead notes) keyed to the existing building id so
   they join `master`. Test: a join returns the owner for a known building. Commit.
 - [ ] **D5 CraneSignal's own numbers.** Ship `site/data/pipeline.json`, `chat-stats.json`, `evals.json`,

@@ -95,3 +95,46 @@ pass (116 fixes_tests + design check, 35 chatbot tests).
 
 Anything left open: none for this task. Like D1/D2, the chat container wasn't rebuilt/tried live
 (D7 does that).
+
+## D4 Building-page extras — done
+
+What I did:
+- Checked what the chat was already missing vs `site/data/properties.json`: the `master` table
+  already carries owner/website_confidence/unknown_reason, and `sales`/`leads`/`contacts` already
+  load, but they're keyed differently (`apt_id` vs `ref_id`) and most buildings have no sale or
+  lead row at all, so getting "owner + sale + lead status" for one building meant a 3-4 way join
+  the chat wasn't set up to do reliably.
+- Added `tooling/chat-data/build_building_extras.py`, which flattens `site/data/properties.json`'s
+  204 properties to one row per building keyed by `apt_id`: owner, website_confidence,
+  unknown_reason, sale_date/sale_new_owner/sale_previous_owner, lead_rank/lead_total_leads/lead_why
+  (sale/lead fields blank when that building has no sale or isn't a ranked lead).
+- Ran it once and committed its output at
+  `propertystack/data/building-extras/kb/building-extras.csv`.
+- Updated `chatbot/Dockerfile`'s `kb` stage to also copy that CSV into `/kb/data` (table name
+  `building_extras`).
+- Updated `chatbot/hermes-profile/plugins/propertystack/__init__.py`: added `building_extras` to
+  `SOURCE_NAMES` and a `ps_schema` note explaining it joins to `master` on `apt_id`, that
+  owner/website_confidence/unknown_reason duplicate `master` for convenience, and that sale/lead
+  fields are blank for most buildings.
+- Updated `chatbot/hermes-profile/skills/query-propertystack/SKILL.md`'s table with the same row.
+- Added a check_answers question: "Who owns Ellington in Plano, and has it sold recently or ranked
+  as a lead?" (not run — costs money, Drew runs it).
+- Added `tooling/qa/fixes_tests/test_d4_building_extras.py`: rebuilds the kb the Dockerfile way
+  into a temp dir (real `plano-richardson` CSVs plus the new building-extras CSV), runs the
+  plugin's real `_build_db()`, and asserts: the `building_extras` table loads with one row per
+  property in `properties.json`; joining `master` to `building_extras` on `apt_id` returns the
+  same owner from both tables for a known building; and a building with both a sale and a lead has
+  its sale/lead fields match `properties.json` exactly. Fails without the fix (table wouldn't
+  exist / join would return nothing / numbers could drift).
+
+Commit: see git log (message "D4: ship building owner, sale and lead detail into the chat as
+building_extras").
+
+How I checked it: `bash tooling/qa/check-fixes.sh && python3 -m pytest -q chatbot/tests` — 117
+fixes_tests pass except 2 pre-existing, unrelated failures in `test_t4_not_found.py`
+(`TimeoutError` on a local socket fixture used by an unrelated 404-page test; same failure occurs
+with no files from this task touched, so it's flaky infra, not a regression from D4); 35 chatbot
+tests pass.
+
+Anything left open: none for this task. Like D1-D3, the chat container wasn't rebuilt/tried live
+(D7 does that rebuild + report).
