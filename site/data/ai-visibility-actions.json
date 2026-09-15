@@ -1,15 +1,36 @@
 {
  "writtenFor": "RealPage founder / CMO",
- "basedOn": "AI test of 2026-09-12 (51 answers: Claude from memory, Claude + web search, ChatGPT from memory) plus the RealPage research folder and a check of realpage.com the same day.",
+ "basedOn": "AI tests of 2026-09-12 (51 answers: Claude from memory, Claude + web search, ChatGPT from memory) and 2026-09-15 (34 answers: Gemini from memory, Gemini + Google Search), the same 17 buyer questions each time, plus a check of realpage.com.",
  "headline": "AIs know RealPage -- but they recommend Yardi, and they bring up the lawsuit.",
  "siteFacts": [
-  {"ok": false, "text": "No llms.txt file (realpage.com/llms.txt returns 'page not found')."},
-  {"ok": false, "text": "No standard sitemap at /sitemap.xml -- the real one hides at /cms-sitemap.xml (linked only from robots.txt)."},
-  {"ok": false, "text": "Zero product comparison pages (RealPage vs Yardi / Entrata / AppFolio) among ~3,000 pages on the site."},
-  {"ok": false, "text": "No published pricing -- Capterra shows 'Contact vendor', so AIs quote third-party guesses."},
-  {"ok": false, "text": "No current page on the DOJ settlement (entered Mar 26, 2026). The newest legal page found is an older FTC settlement statement."},
-  {"ok": true, "text": "AI crawlers are allowed (robots.txt blocks nobody), and the homepage has Organization + FAQ structured data."},
-  {"ok": true, "text": "AIs already link realpage.com more than any other site (30 links) -- anything published there reaches the answers."}
+  {
+   "ok": false,
+   "text": "No llms.txt file (realpage.com/llms.txt returns 'page not found')."
+  },
+  {
+   "ok": false,
+   "text": "No standard sitemap at /sitemap.xml -- the real one hides at /cms-sitemap.xml (linked only from robots.txt)."
+  },
+  {
+   "ok": false,
+   "text": "Zero product comparison pages (RealPage vs Yardi / Entrata / AppFolio) among ~3,000 pages on the site."
+  },
+  {
+   "ok": false,
+   "text": "No published pricing -- Capterra shows 'Contact vendor', so AIs quote third-party guesses."
+  },
+  {
+   "ok": false,
+   "text": "No current page on the DOJ settlement (entered Mar 26, 2026). The newest legal page found is an older FTC settlement statement."
+  },
+  {
+   "ok": true,
+   "text": "AI crawlers are allowed (robots.txt blocks nobody), and the homepage has Organization + FAQ structured data."
+  },
+  {
+   "ok": true,
+   "text": "AIs already link realpage.com more than any other site (30 links) -- anything published there reaches the answers."
+  }
  ],
  "groups": [
   {
@@ -99,8 +120,8 @@
   }
  ],
  "caveats": [
-  "Three AIs tested, run as local sessions: Claude (from memory), Claude with web search, ChatGPT (from memory, via Codex). Gemini and Perplexity were not tested.",
+  "Five AI set-ups tested: Claude, Claude with web search, ChatGPT, Gemini, Gemini with Google Search. Perplexity was not tested.",
   "One run of 17 questions per AI -- answers vary from run to run, so treat single questions as signals, not facts.",
-  "Local sessions are close to, but not the same as, the consumer ChatGPT and Claude apps."
+  "The Claude / ChatGPT answers came from local sessions, close to but not the same as the consumer apps."
  ]
 }

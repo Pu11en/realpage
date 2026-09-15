@@ -55,7 +55,10 @@
     .quote blockquote { margin: 0 0 4px; color: var(--text); }
     .quote .muted { font-size: 12px; }
     .quote a { color: var(--accent); margin-right: 8px; }
-    .lawsuit-part { margin-bottom: 12px; }
+    .bar-row.zero .fill { background: transparent; }
+    .lawsuit-quotes { margin-top: 14px; }
+    .lawsuit-quotes details { margin-top: 8px; }
+    .lawsuit-quotes summary { cursor: pointer; }
   </style>
 </head>
 <body>
@@ -109,53 +112,42 @@
         <div class="legend">${legend}</div></div>`;
     }
 
-    function historySection(runs, t) {
+    // Latest run of every AI (Sept 12 Claude/ChatGPT baseline + each Gemini run): the page sums across all of them.
+    function latestPerAI(runs) {
+      const seen = {};
+      runs.slice().reverse().forEach((r) => r.models.forEach((m) => { if (!seen[m.model]) seen[m.model] = { ...m, date: r.date, baseline: r.baseline }; }));
+      return Object.values(seen);
+    }
+    const wavg = (ms, key) => { const xs = ms.filter((m) => m[key] !== null && m[key] !== undefined); const n = xs.reduce((a, m) => a + (m.answers || 1), 0); return n ? xs.reduce((a, m) => a + m[key] * (m.answers || 1), 0) / n : null; };
+
+    function aiTable(ais, t) {
+      return `<table id="each-ai"><thead><tr><th>AI</th><th>Tested</th><th>Named ${t}</th><th>Top pick (no brand asked)</th><th>Brought up lawsuit</th></tr></thead>
+        <tbody>${ais.map((m) => `<tr><td>${esc(m.name)}</td><td class="muted">${esc(niceDate(m.date))}</td><td>${pct(m.mentionPct)}</td><td>${pct(m.topPickPct)}</td><td>${pct(m.lawsuitPct)}</td></tr>`).join("")}</tbody></table>`;
+    }
+
+    function trendSection(runs, t) {
       const own = runs.filter((r) => !r.baseline);
-      const latest = own[own.length - 1];
-      const aiNames = latest ? [...new Set(latest.models.map((m) => m.name.split(" ")[0]))].join(", ") : "";
-      const top = latest
-        ? `<div class="last-run" id="last-run">Last run: ${esc(niceDate(latest.date))}, ${esc(aiNames)}</div>`
-        : `<div class="last-run" id="last-run">No Gemini run yet -- only the Sept 12 Claude / ChatGPT baseline.</div>`;
-      const oneRun = own.length === 1 ? `<div class="muted note-gap-md" id="one-run">One run so far -- the lines start on the next run. Each AI is only compared with itself.</div>` : "";
-      const charts = `<h2>Trend over time</h2>${oneRun}<div class="trends">
+      const counts = {};
+      own.forEach((r) => r.models.forEach((m) => { counts[m.model] = (counts[m.model] || 0) + 1; }));
+      if (!Object.values(counts).some((n) => n > 1)) return "";  // one run per AI: nothing to trend yet
+      return `<h2>Trend over time</h2><div class="trends">
         ${trendChart(`Named ${t} (all questions)`, "mentionPct", runs)}
         ${trendChart(`Made ${t} the top pick (no brand asked)`, "topPickPct", runs)}
         ${trendChart(`Brought up the lawsuit (asked about ${t})`, "lawsuitPct", runs)}</div>`;
-      return top + charts + lawsuitSection(runs, latest);
     }
 
-    function lawsuitSection(runs, latest) {
-      const law = latest && latest.lawsuit;
-      const withLaw = runs.filter((r) => r.lawsuit && r.lawsuit.mentions.length);
-      if (!law && !withLaw.length) return "";
-      // 1. Source leaderboard (latest own run).
-      const srcs = (law && law.sources) || [];
-      const maxSrc = Math.max(1, ...srcs.map((s) => s.count));
-      const change = (s) => s.change === null || s.change === undefined ? `<span class="muted">new</span>`
-        : s.change > 0 ? `<span class="up">▲ ${s.change}</span>` : s.change < 0 ? `<span class="down">▼ ${-s.change}</span>` : `<span class="muted">same</span>`;
-      const board = `<div class="card lawsuit-part" id="lawsuit-sources">
-        <div class="muted note-gap-lg">Websites Gemini + Google Search quotes when it brings up the lawsuit${law && law.comparedWith ? ` (change vs ${esc(niceDate(law.comparedWith))})` : ""}</div>
-        ${srcs.map((s) => `<div class="bar-row src-row ${s.isTarget ? "us" : ""}"><div>${esc(s.site)}${s.isTarget ? " ★" : ""}</div><div class="track"><div class="fill" style="width:${(s.count / maxSrc) * 100}%"></div></div><div>${s.count} ${change(s)}</div></div>`).join("")
-          || `<div class="muted note">No websites quoted on the lawsuit this run.</div>`}</div>`;
-      // 2. Tone meter: mix per AI per run, newest first.
-      const toneRows = runs.slice().reverse().filter((r) => r.lawsuit).flatMap((r) => Object.entries(r.lawsuit.toneMix || {}).map(([model, mix]) => {
-        const n = (mix.harsh || 0) + (mix.neutral || 0) + (mix.settled || 0);
-        if (!n) return "";
-        const name = (r.models.find((m) => m.model === model) || { name: model }).name;
-        const seg = (k) => mix[k] ? `<span class="tone-${k}" style="width:${(mix[k] / n) * 100}%" title="${k}: ${mix[k]}"></span>` : "";
-        return `<div class="tone-row"><div>${esc(name)} <span class="muted">· ${esc(niceDate(r.date))}${r.baseline ? " (baseline)" : ""}</span></div>
-          <div class="tone-bar">${seg("harsh")}${seg("neutral")}${seg("settled")}</div>
-          <div class="muted note-sm">${mix.harsh || 0} harsh · ${mix.neutral || 0} neutral · ${mix.settled || 0} "it's settled now"</div></div>`;
-      })).join("");
-      const tone = `<div class="card lawsuit-part" id="lawsuit-tone"><div class="muted note">How each AI talks about the lawsuit:
-        <span class="tone-word-harsh">harsh</span> · neutral · <span class="tone-word-settled">"it's settled now"</span></div>${toneRows || `<div class="muted note">No lawsuit mentions yet.</div>`}</div>`;
-      // 3. Quote wall: every mention, newest run first, with links.
-      const quotes = runs.slice().reverse().filter((r) => r.lawsuit).flatMap((r) => r.lawsuit.mentions.map((m) => `<div class="quote">
-        <blockquote>${m.sentences.map(esc).join(" ")}</blockquote>
-        <div class="muted">${esc(m.name)} · ${esc(niceDate(r.date))} · ${esc(m.tone)} · asked: “${esc(m.question)}”</div>
-        ${(m.sources || []).length ? `<div>${m.sources.map((s) => `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.site)}</a>`).join("")}</div>` : ""}</div>`)).join("");
-      const wall = `<div class="card lawsuit-part" id="lawsuit-quotes"><div class="muted note">What they actually said (newest first)</div>${quotes}</div>`;
-      return `<h2>The lawsuit in AI answers</h2>${board}${tone}${wall}`;
+    function lawsuitSection(runs, ais) {
+      const mentions = runs.slice().reverse().filter((r) => r.lawsuit).flatMap((r) => r.lawsuit.mentions.map((m) => ({ ...m, date: r.date })));
+      if (!mentions.length) return "";
+      const who = ais.map((m) => `<div class="bar-row ${m.lawsuitPct ? "" : "zero"}"><div>${esc(m.name)}</div><div class="track"><div class="fill" style="width:${m.lawsuitPct || 0}%"></div></div><div>${pct(m.lawsuitPct)}</div></div>`).join("");
+      const quote = (m) => `<div class="quote"><blockquote>${m.sentences.map(esc).join(" ")}</blockquote>
+        <div class="muted">${esc(m.name)} · ${esc(niceDate(m.date))} · asked: “${esc(m.question)}”</div>
+        ${(m.sources || []).length ? `<div>${m.sources.map((s) => `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.site)}</a>`).join("")}</div>` : ""}</div>`;
+      const shown = mentions.slice(0, 3), rest = mentions.slice(3);
+      return `<h2>The lawsuit in AI answers</h2>
+        <div class="card" id="lawsuit"><div class="muted note-gap-lg">Share of answers about RealPage by name that bring up the antitrust case</div>${who}
+        <div class="lawsuit-quotes" id="lawsuit-quotes">${shown.map(quote).join("")}
+        ${rest.length ? `<details><summary class="muted note">${rest.length} more quotes</summary>${rest.map(quote).join("")}</details>` : ""}</div></div>`;
     }
 
     Promise.all([loadData("data/ai-visibility.json"), loadData("data/ai-visibility-actions.json"), loadHistory()]).then(([d, plan, runs]) => {
@@ -173,54 +165,63 @@
           <div class="row"><b>Effort</b><span>${esc(a.effort)}</span></div>
         </div>`;
 
+      const ais = latestPerAI(runs);
+      const stat = ais.length ? { named: wavg(ais, "unbrandedMentionPct"), top: wavg(ais, "topPickPct"), law: wavg(ais, "lawsuitPct") } : { named: f.unbrandedNamedPct, top: f.unbrandedTopPickPct, law: f.lawsuitPct };
+      const answers = ais.reduce((a, m) => a + (m.answers || 0), 0) || d.overall.answers;
+      const dates = [...new Set(ais.map((m) => niceDate(m.date)))];
+      const picks = {}; ais.forEach((m) => (m.topPicks || []).forEach((p) => { picks[p.name] = (picks[p.name] || 0) + p.count; }));
+      const topPicks = Object.entries(picks).map(([name, count]) => ({ name, count })).sort((a, b) => b.count - a.count);
+      const maxPick2 = Math.max(1, ...topPicks.map((p) => p.count));
+      const missed = {}; ais.forEach((m) => (m.missedQuestions || []).forEach((q) => { (missed[q] ||= []).push(m.name.split(" ")[0]); }));
+      const lawAIs = ais.filter((m) => m.lawsuitPct > 0).map((m) => m.name.split(" ")[0]);
+      const verdict = ais.length ? `AIs know ${t} -- but they recommend ${esc(topPicks[0] ? topPicks[0].name : "a rival")}${lawAIs.length ? `, and ${esc([...new Set(lawAIs)].join(" and "))} brings up the lawsuit` : ""}.` : esc(plan.headline);
+
       content.innerHTML = `
         <h1>AI Visibility</h1>
-        <div class="meta">What AI chatbots tell apartment owners who ask which software to buy -- and what ${t} should do about it. For the founder / CMO. Tested ${esc((d.generatedAt || "").slice(0, 10))}.</div>
+        <div class="meta">What AI chatbots tell apartment owners who ask which software to buy -- and what ${t} should do about it. ${ais.length} AIs, ${answers} answers, tested ${esc(dates.join(" and "))}.</div>
         ${placeholderBanner(d.status)}
-        <div class="verdict">${esc(plan.headline)}</div>
-        ${runs.length ? historySection(runs, t) : ""}
+        <div class="verdict" id="last-run">${verdict}</div>
 
         <div class="stats-row">
-          <div class="stat-card"><div class="value">${pct(f.unbrandedNamedPct)}</div><div class="label">Named when buyers don't ask for ${t}</div><div class="sub">${f.unbrandedAnswers} answers with no brand in the question</div></div>
-          <div class="stat-card"><div class="value">${pct(f.unbrandedTopPickPct)}</div><div class="label">Made ${t} the top pick</div><div class="sub">${esc(leader.name)} was top pick in ${leader.count} of ${f.unbrandedAnswers}</div></div>
-          <div class="stat-card"><div class="value">${pct(f.lawsuitPct)}</div><div class="label">Brought up the lawsuit</div><div class="sub">of ${f.brandedAnswers} answers about ${t} by name</div></div>
-          <div class="stat-card"><div class="value">${f.missedQuestions.length}</div><div class="label">Buyer questions where ${t} was left out</div><div class="sub">listed below</div></div>
+          <div class="stat-card"><div class="value">${pct(stat.named)}</div><div class="label">Named when buyers don't ask for ${t}</div><div class="sub">across all ${ais.length} AIs</div></div>
+          <div class="stat-card"><div class="value">${pct(stat.top)}</div><div class="label">Made ${t} the top pick</div><div class="sub">${esc(topPicks[0] ? topPicks[0].name : "--")} was top pick ${topPicks[0] ? topPicks[0].count : 0} times, ${t} ${(topPicks.find((p) => p.name === d.target) || { count: 0 }).count}</div></div>
+          <div class="stat-card"><div class="value">${pct(stat.law)}</div><div class="label">Brought up the lawsuit</div><div class="sub">${lawAIs.length ? esc([...new Set(lawAIs)].join(", ")) + " only" : "no AI did"}</div></div>
+          <div class="stat-card"><div class="value">${Object.keys(missed).length}</div><div class="label">Buyer questions where ${t} was left out</div><div class="sub">by at least one AI</div></div>
         </div>
+
+        <h2>Each AI</h2>
+        ${ais.length ? aiTable(ais, t) : ""}
 
         <h2>What to do next</h2>
         ${plan.groups.map((g) => `<div class="when">${esc(g.when)}</div>${g.actions.map(actionCard).join("")}`).join("")}
 
         <h2>Who the AIs pick instead</h2>
         <div class="card">
-          <div class="chart-title muted note-gap-lg">Top pick in the ${f.unbrandedAnswers} answers where the buyer didn't name a brand</div>
-          ${f.topPicks.map((p) => `<div class="bar-row ${p.name === d.target ? "us" : ""}"><div>${esc(p.name)}</div><div class="track"><div class="fill" style="width:${(p.count / maxPick) * 100}%"></div></div><div class="muted">${p.count}</div></div>`).join("")}
+          <div class="chart-title muted note-gap-lg">Top pick when the buyer didn't name a brand, all AIs combined</div>
+          ${topPicks.map((p) => `<div class="bar-row ${p.name === d.target ? "us" : ""}"><div>${esc(p.name)}</div><div class="track"><div class="fill" style="width:${(p.count / maxPick2) * 100}%"></div></div><div class="muted">${p.count}</div></div>`).join("")}
         </div>
 
         <h2>Questions where ${t} was left out</h2>
-        <div class="card"><ul class="missed">${f.missedQuestions.map((q) => `<li>${esc(q)}</li>`).join("") || "<li>None -- named in every answer.</li>"}</ul></div>
+        <div class="card"><ul class="missed">${Object.entries(missed).map(([q, who]) => `<li>${esc(q)} <span class="muted">-- ${esc([...new Set(who)].join(", "))}</span></li>`).join("") || "<li>None -- named in every answer.</li>"}</ul></div>
 
-        <h2>Each AI</h2>
-        <table>
-          <thead><tr><th>AI</th><th>Named ${t}</th><th>Top pick (no brand asked)</th><th>Recommended</th><th>Brought up lawsuit</th><th>Linked realpage.com</th></tr></thead>
-          <tbody>${d.models.map((m) => `<tr><td>${esc(m.name)}</td><td>${pct(m.mentionPct)}</td><td>${pct(m.topPickPct)}</td><td>${pct(m.recommendPct)}</td><td>${pct(m.lawsuitPct)}</td><td>${pct(m.citePct)}</td></tr>`).join("")}</tbody>
-        </table>
+        ${lawsuitSection(runs, ais)}
+        ${trendSection(runs, t)}
 
         <h2>realpage.com checkup</h2>
         <div class="card"><ul class="facts">${plan.siteFacts.map((s) => `<li>${s.ok ? "✅" : "⚠️"} ${esc(s.text)}</li>`).join("")}</ul></div>
 
-        <h2>Competitors in the answers</h2>
+        <details class="evidence"><summary>Competitors and sources in the newest run</summary>
         <table>
           <thead><tr><th>Competitor</th><th>Named in</th><th>Recommended</th><th>Placed above ${t}</th><th>Avg place</th></tr></thead>
           <tbody>${d.competitors.map((c) => `<tr><td>${esc(c.name)} <span class="muted">${esc(c.domain)}</span></td><td>${pct(c.mentionPct)}</td><td>${c.recommendations}</td><td>${c.wins}</td><td>${rank(c.avgRank)}</td></tr>`).join("")}</tbody>
         </table>
-
-        <h2>Sites the AIs linked to</h2>
         <table>
-          <thead><tr><th>Site</th><th>Kind</th><th>Links</th></tr></thead>
+          <thead><tr><th>Site the AIs linked to</th><th>Kind</th><th>Links</th></tr></thead>
           <tbody>${d.sources.map((s) => `<tr><td>${esc(s.domain)}</td><td>${esc(s.type.replace(/_/g, " "))}</td><td>${s.count}</td></tr>`).join("") || `<tr><td colspan="3">No links in the answers.</td></tr>`}</tbody>
         </table>
+        </details>
 
-        <details class="evidence"><summary>Every question and answer (${d.questions.length})</summary>
+        <details class="evidence"><summary>Every question and answer in the newest run (${d.questions.length})</summary>
         <table>
           <thead><tr><th>Question</th><th>AI</th><th>Named ${t}?</th><th>Place</th><th>Top pick</th><th>Answer</th></tr></thead>
           <tbody>${d.questions.map((q) => `<tr><td>${esc(q.question)}${q.namesBrand ? ' <span class="muted">(asks about it by name)</span>' : ""}</td><td>${esc(q.name)}</td><td>${q.status !== "completed" ? "failed" : q.mentioned ? "Yes" : "No"}</td><td>${q.rank ? "#" + q.rank : "--"}</td><td>${esc(q.winner || "--")}</td><td class="ai-answer"><details><summary>Read</summary>${esc(q.answer)}</details></td></tr>`).join("")}</tbody>
@@ -231,7 +232,6 @@
         <div class="card"><ul class="facts">
           <li class="muted">${esc(plan.basedOn)}</li>
           ${plan.caveats.map((c) => `<li class="muted">${esc(c)}</li>`).join("")}
-          <li class="muted">Engine: NiubiGEO (open source). Re-run: <code>bash tooling/ai-visibility/run.sh</code></li>
         </ul></div>`;
     });
   </script>

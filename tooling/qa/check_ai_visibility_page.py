@@ -50,28 +50,19 @@ async def check_page(pw, problems: list[str], tag: str, runs: int) -> None:
             await page.wait_for_selector("#last-run", timeout=8000)
         except Exception:
             problems.append(f"{where} no 'last run' line"); await page.close(); continue
-        last = await page.inner_text("#last-run")
-        if "Last run" not in last or "Gemini" not in last:
-            problems.append(f"{where} last-run line reads: {last!r}")
-        for key in ("mentionPct", "topPickPct", "lawsuitPct"):
-            if await page.locator(f'[data-trend="{key}"] circle').count() < 2:
-                problems.append(f"{where} trend chart {key} has too few points")
-        if await page.locator('[data-trend="mentionPct"] polyline').count() != (2 if runs > 1 else 0):
-            problems.append(f"{where} wrong number of Gemini lines in the mentioned chart")
-        legend = await page.inner_text('[data-trend="mentionPct"] .legend')
-        if "Sept 12 baseline" not in legend or "Gemini + Google Search" not in legend:
-            problems.append(f"{where} legend missing baseline or Gemini: {legend!r}")
-        if (await page.locator("#one-run").count() == 1) != (runs == 1):
-            problems.append(f"{where} 'one run so far' shown wrongly")
-        if await page.locator("#lawsuit-sources .src-row.us").count() != 1:
-            problems.append(f"{where} realpage.com not highlighted in the source list")
-        if await page.locator("#lawsuit-tone .tone-bar span").count() < 1:
-            problems.append(f"{where} tone bar empty")
+        if await page.locator("#each-ai tbody tr").count() < 4:
+            problems.append(f"{where} 'Each AI' table missing rows")
+        if (await page.locator("h2", has_text="Trend over time").count() == 1) != (runs > 1):
+            problems.append(f"{where} trend section shown wrongly")
+        if runs > 1:
+            if await page.locator('[data-trend="mentionPct"] polyline').count() != 2:
+                problems.append(f"{where} wrong number of Gemini lines in the mentioned chart")
+            legend = await page.inner_text('[data-trend="mentionPct"] .legend')
+            if "Sept 12 baseline" not in legend or "Gemini + Google Search" not in legend:
+                problems.append(f"{where} legend missing baseline or Gemini: {legend!r}")
         quotes = page.locator("#lawsuit-quotes .quote")
         if await quotes.count() < 3 or await page.locator("#lawsuit-quotes a[href]").count() < 1:
-            problems.append(f"{where} quote wall missing quotes or links")
-        if runs > 1 and "▲" not in await page.inner_text("#lawsuit-sources") and "same" not in await page.inner_text("#lawsuit-sources"):
-            problems.append(f"{where} no change vs last run in the source list")
+            problems.append(f"{where} lawsuit quotes or links missing")
         if await page.locator("text=What to do next").count() < 1:
             problems.append(f"{where} to-do list is gone")
         wide = await page.evaluate("document.documentElement.scrollWidth - window.innerWidth")
