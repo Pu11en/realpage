@@ -122,7 +122,7 @@ def _parse_date(value) -> datetime.date | None:
     if isinstance(value, (int, float)):
         # ArcGIS FeatureServer fields return dates as epoch milliseconds.
         return datetime.datetime.fromtimestamp(value / 1000, tz=datetime.timezone.utc).date()
-    for fmt in ("%Y-%m-%d", "%m/%d/%Y", "%Y-%m-%dT%H:%M:%S", "%Y-%m-%dT%H:%M:%S.%f"):
+    for fmt in ("%Y-%m-%d", "%m/%d/%Y", "%Y/%m/%d", "%Y-%m-%dT%H:%M:%S", "%Y-%m-%dT%H:%M:%S.%f"):
         try:
             return datetime.datetime.strptime(value, fmt).date()
         except ValueError:

@@ -16,6 +16,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from ckan_sql import ckan_sql_http_get  # noqa: E402
 from find_upcoming import find_upcoming  # noqa: E402
+from houston_sold_permits import fetch_rows as houston_fetch_rows  # noqa: E402
 
 RECIPES_ROOT = Path(__file__).resolve().parents[2] / "recipes"
 
@@ -36,6 +37,9 @@ def main() -> int:
         fetch = http_get
         if recipe.get("system") == "ckan-sql":
             fetch = ckan_sql_http_get(recipe["endpoint"], recipe.get("sql", ""))
+        elif recipe.get("system") == "houston-sold-permits-xlsx":
+            rows = houston_fetch_rows(recipe)
+            fetch = lambda _endpoint, _rows=rows: _rows  # noqa: E731
         try:
             records = find_upcoming(recipe["city"], recipe["state"], state_dir, recipe, fetch, today=today)
         except Exception as exc:  # noqa: BLE001
