@@ -109,13 +109,22 @@ STEP_SCORE = "score"
 STATE_CITY_KEY = "_state"
 
 
+# Some city ArcGIS/Socrata endpoints (e.g. Scottsdale's) 403 the default
+# `Python-urllib/x.y` user agent even though the same query works fine from a
+# browser -- a real-world example of this dropping a whole city's permits
+# (Scottsdale returned 0 of ~68 apartment permits until this was added).
+_HTTP_HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; PropertyStackLeadFinder/1.0)"}
+
+
 def _http_get_json(url: str):
-    with urllib.request.urlopen(url, timeout=30) as r:
+    req = urllib.request.Request(url, headers=_HTTP_HEADERS)
+    with urllib.request.urlopen(req, timeout=30) as r:
         return json.loads(r.read().decode("utf-8", errors="replace"))
 
 
 def _http_get_bytes(url: str) -> bytes:
-    with urllib.request.urlopen(url, timeout=60) as r:
+    req = urllib.request.Request(url, headers=_HTTP_HEADERS)
+    with urllib.request.urlopen(req, timeout=60) as r:
         return r.read()
 
 

@@ -5,6 +5,7 @@
   "endpoint": "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC",
   "fields": {
     "permit_type": "PERMIT_NAME",
+    "name": "PERMIT_NAME",
     "issue_date": "PER_ISSUE_DATE",
     "address": "STREET_FULL_NAME"
   },

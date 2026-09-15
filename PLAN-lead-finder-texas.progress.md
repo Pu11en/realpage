@@ -119,3 +119,57 @@
   city one at a time except for the parallelized sub-steps from S1; the
   dead-end skip here only removes wasted work, it doesn't change caps or
   ranking.
+
+## S3 Fix dropped and leaked leads
+- Found the real cause of Scottsdale's 0-of-~68 permits by hitting its live
+  ArcGIS endpoint directly: it returns 403 Forbidden to the default
+  `Python-urllib/x.y` user agent that `urllib.request.urlopen` sends with no
+  headers, but works fine (500 features) with a normal browser-style
+  User-Agent header. `_http_get_json`/`_http_get_bytes` in
+  `skills/lead-finder/run.py` now send one on every request. `_fetch_rows`
+  in `find_upcoming.py` swallows any fetch exception into `[]`, which is why
+  this failed silently as "no permits" instead of a visible error.
+- Found why the real Phoenix permit feed (360 raw commercial-new rows, live
+  test) kept far fewer than expected and came back with a blank name on
+  every kept row: the recipe (`recipes/az/phoenix.json`) maps `PERMIT_NAME`
+  (which actually holds the real project name, e.g. "MADISON AT LOUISE
+  APTS.") only as `permit_type`, never as `fields.name` -- `find_upcoming`
+  had no fallback, so `name` was always `""`. Added the missing
+  `"name": "PERMIT_NAME"` mapping in the recipe, and (for the general case
+  the plan asked for -- any recipe missing a name field) `_build_record` in
+  `skills/lead-finder-permits/find_upcoming.py` now falls back to the
+  permit-type field's text, then to the street address, whenever the mapped
+  name is blank.
+- Found why sub-20-unit permits (mostly Mesa-shaped recipes, per the plan)
+  slipped through: `_is_apartment` checked the permit-type text match
+  *before* a known unit count, so a recipe whose source query is already
+  server-side filtered to "Multi-Family Residential" (Mesa has no
+  `permit_type` field mapped, so every row's own text contains that phrase
+  and matched the whole-row fallback regex) let e.g. a 3-unit triplex
+  through regardless of its actual unit count. Reordered `_is_apartment` so
+  a known unit count is checked first and is authoritative (`>= 20` keeps
+  it, `< 20` drops it no matter what the type text says); type-text matching
+  is now only used when the units field/pattern gave no number.
+- Verified all three live against the real endpoints/recipes (not mocks):
+  Scottsdale's endpoint returns 500 features with the new header vs. a 403
+  before; Phoenix's raw feed is 360 rows, 245 pass the old `_is_apartment`,
+  all 245 had blank names before the recipe fix.
+- Fixture tests added: `skills/lead-finder-permits/tests/test_find_upcoming.py`
+  gained `test_known_low_unit_count_is_dropped_even_if_type_text_matches`,
+  `test_blank_name_falls_back_to_permit_type_text`, and
+  `test_blank_name_and_type_falls_back_to_address` (all built from the real
+  row shapes above, generic city name per the no-place-names rule).
+  `skills/lead-finder/tests/test_run.py` gained
+  `test_http_get_json_sends_a_browser_user_agent`.
+- Checked: `bash tooling/qa/check-lead-finder.sh` passes (67 lead-finder*
+  tests + check-panel.sh). Full suite from `propertystack/`
+  (`python3 -m pytest -q --ignore=skills/client-map/tests`): 281 passed.
+  `test_fetch_block_counts_are_race_free_across_threads` (S1's pre-existing
+  timing-race flake, noted in the S2 log) failed once in an earlier run of
+  the full check script and passed 3/3 when rerun alone and in the full
+  suite's final run -- confirmed unrelated to this task's changes.
+- Left open: this fixes the three specific real-row failure modes named in
+  the plan (blocked endpoint, missing name mapping, unit-count override);
+  it does not re-run Arizona end to end (that's S5) or add unit-tests for
+  every other AZ recipe file, so a similar header/mapping problem on a
+  not-yet-tried city's endpoint could still exist until S5's re-run surfaces it.

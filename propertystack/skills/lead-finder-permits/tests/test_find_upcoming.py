@@ -270,6 +270,75 @@ def test_units_parsed_from_description_text_when_no_units_field():
     assert records[0].units == 36
 
 
+def test_known_low_unit_count_is_dropped_even_if_type_text_matches():
+    """S3 fixture from a real city recipe whose Socrata query already filters
+    to type_of_work='Multi-Family Residential' server-side, so every row's
+    own text contains that phrase and used to pass the whole-row regex
+    fallback regardless of unit count -- several sub-20-unit permits
+    (duplexes/triplexes) slipped through this way. A known unit count must
+    win."""
+    recipe = {
+        "endpoint": "https://example.test/query",
+        "fields": {
+            "issue_date": "issued_date",
+            "address": "property_address",
+            "units_text_field": "description_of_work",
+        },
+        "units_text_pattern": r"\(?(\d+)\)?\s*-?\s*units?\b",
+    }
+    rows = [
+        {
+            "issued_date": "2026-08-01",
+            "property_address": "123 Multi-Family Residential Way",
+            "description_of_work": "Multi-Family Residential new triplex (3) units",
+        }
+    ]
+    assert find_upcoming("Mesa", "AZ", "az", recipe, _http_get(rows), today=TODAY) == []
+
+
+def test_blank_name_falls_back_to_permit_type_text():
+    """S3 fixture from a real city recipe: its PERMIT_NAME field (used as
+    `permit_type`) holds the real project name ("MADISON AT LOUISE APTS.")
+    but the recipe had no `fields.name`, so every lead from it came back
+    with a blank name. Falling back to the type text fixes it without
+    needing a project-name field the source doesn't reliably expose."""
+    recipe = {
+        "endpoint": "https://example.test/query",
+        "fields": {
+            "permit_type": "PERMIT_NAME",
+            "units": "Units",
+            "issue_date": "PER_ISSUE_DATE",
+            "address": "STREET_FULL_NAME",
+        },
+    }
+    rows = [
+        {
+            "PERMIT_NAME": "MADISON AT LOUISE APTS.",
+            "Units": "40",
+            "PER_ISSUE_DATE": "2026-08-01",
+            "STREET_FULL_NAME": "2825 W LOUISE DR",
+        }
+    ]
+    records = find_upcoming("Rivertown", "ZZ", "zz", recipe, _http_get(rows), today=TODAY)
+    assert len(records) == 1
+    assert records[0].name == "MADISON AT LOUISE APTS."
+
+
+def test_blank_name_and_type_falls_back_to_address():
+    recipe = {
+        "endpoint": "https://example.test/query",
+        "fields": {
+            "issue_date": "IssueDate",
+            "address": "Address",
+            "units": "Units",
+        },
+    }
+    rows = [{"IssueDate": "2026-08-01", "Address": "5 River Rd", "Units": "40"}]
+    records = find_upcoming("Rivertown", "ZZ", "zz", recipe, _http_get(rows), today=TODAY)
+    assert len(records) == 1
+    assert records[0].name == "5 River Rd"
+
+
 def test_arcgis_features_shape_supported():
     recipe = {**RECIPE, "system": "arcgis"}
 

@@ -69,12 +69,17 @@ def find_upcoming(
 
 
 def _is_apartment(row: dict, fields: dict, units_pattern: str | None) -> bool:
+    # A known unit count is authoritative: a record that reports fewer than
+    # 20 units is never a qualifying apartment project, even when the permit
+    # type text matches (a duplex permitted as "MULTI-FAMILY DWELLING" is a
+    # real example that slipped through when type matching won regardless of
+    # the row's own unit count).
+    units = _parse_units(row, fields, units_pattern)
+    if units is not None:
+        return units >= 20
     type_key = fields.get("permit_type")
     type_value = str(row.get(type_key, "")) if type_key else ""
     if APARTMENT_RE.search(type_value):
-        return True
-    units = _parse_units(row, fields, units_pattern)
-    if units is not None and units >= 20:
         return True
     if RENOVATION_TYPE_RE.match(type_value.strip()):
         return False
@@ -152,6 +157,15 @@ def _build_record(
     address = str(row.get(address_key, "")) if address_key else ""
     name_key = fields.get("name")
     name = str(row.get(name_key) or "").strip() if name_key else ""
+    if not name:
+        # No mapped name field (or it was blank on this row): a city's
+        # permit-type field often doubles as the real project name (e.g. a
+        # "PERMIT_NAME" column holding "MADISON AT LOUISE APTS." with no
+        # separate `fields.name` mapped); fall back to it, then to the
+        # street address, rather than leaving the lead nameless.
+        type_key = fields.get("permit_type")
+        type_value = str(row.get(type_key) or "").strip() if type_key else ""
+        name = type_value or address
     units = _parse_units(row, fields, units_pattern)
     permit_link = str(row.get("link") or row.get("url") or endpoint)
     developer, developer_source = _find_owner(row, recipe or {}, permit_link)

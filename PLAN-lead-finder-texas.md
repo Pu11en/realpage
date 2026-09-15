@@ -56,7 +56,7 @@ Open: http://localhost:8765 → Early Leads → Tx
 - [x] **S2 Skip dead ends.** Meeting-agenda, Legistar, civic and per-city sales-news steps run only for
   cities with a working permit source or ≥10 new 5+ unit permits in the Census data; cache a city's
   agenda-system detection across runs. Log what was skipped and why. Tests. Commit.
-- [ ] **S3 Fix dropped and leaked leads.** Find out, with the saved real rows, why Scottsdale's recipe
+- [x] **S3 Fix dropped and leaked leads.** Find out, with the saved real rows, why Scottsdale's recipe
   gives 0 projects and why Phoenix keeps only 13 of ~360 (date parsing? keyword filter? unknown units
   being dropped instead of kept as "Units: not public yet"?) and fix it in code or the recipe; fill blank project names from the permit's other name/description
   field or, failing that, the street address (Phoenix returned many blank names); make

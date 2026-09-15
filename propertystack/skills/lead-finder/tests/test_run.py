@@ -334,3 +334,28 @@ def test_run_chain_skips_agenda_legistar_civic_sales_for_a_dead_end_city(tmp_pat
     for result in (agendas, legistar, civic, sales):
         assert result["skipped"] is True
         assert "3 Census 5+ unit permits" in result["reason"]
+
+
+def test_http_get_json_sends_a_browser_user_agent(monkeypatch):
+    """S3: Scottsdale's ArcGIS endpoint 403s the default `Python-urllib/x.y`
+    user agent and returned 0 of ~68 real apartment permits as a result --
+    the plain HTTP GETs used by permit/source steps must send a real one."""
+    seen = {}
+
+    class _FakeResponse:
+        def read(self):
+            return b"{}"
+
+        def __enter__(self):
+            return self
+
+        def __exit__(self, *a):
+            return False
+
+    def _fake_urlopen(req, timeout=None):
+        seen["headers"] = dict(req.header_items())
+        return _FakeResponse()
+
+    monkeypatch.setattr(chain.urllib.request, "urlopen", _fake_urlopen)
+    chain._http_get_json("https://example.test/query")
+    assert any(v for k, v in seen["headers"].items() if k.lower() == "user-agent" and "python-urllib" not in v.lower())
