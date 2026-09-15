@@ -1,0 +1,30 @@
+{
+  "plans": 22,
+  "steps_done": 142,
+  "steps_open": 47,
+  "progress_entries": 134,
+  "first_try_pct": 94.0,
+  "commits": 530,
+  "examples": [
+    {
+      "plan": "ai-visibility-v2",
+      "task": "T1 Gemini answerer + the check \u2014 done (0f5dc1e)",
+      "check": "- Tests: tooling/ai-visibility/tests (8, offline, fixtures in tooling/ai-visibility/fixtures). Check `bash tooling/qa/check-ai-visibility.sh` passes.",
+      "recap": "local_ai"
+    },
+    {
+      "plan": "app-redesign",
+      "task": "T1 Fonts + shared colors + app frame \u2014 done 2026-09-15",
+      "check": "- Check: `bash tooling/qa/check-design.sh` passes (quick check 0 problems; design list still empty). Both fonts confirmed loaded in the browser.",
+      "recap": "Self-hosted Inter + Plus Jakarta Sans (fontsource variable latin woff2) in `site/fonts/`"
+    },
+    {
+      "plan": "audit-fixes",
+      "task": "A1 Phones \u2014 done (7f8a73b)",
+      "check": "- sweep.py and quick-check.py phone runs now use is_mobile=True, has_touch=True.",
+      "recap": "Added the viewport tag to index, under-the-hood, property, ai-visibility (one line only) and the master-table redirect page, so every site/*"
+    }
+  ],
+  "measured_at": "2026-09-15",
+  "method": "Counted every '- [x]' / '- [ ]' line in PLAN-*.md as a done/open step. Counted every '## ' heading in PLAN-*.progress.md as one step's log entry. An entry counts as 'passed first try' only if its text has no case-insensitive match for STUCK, retry, re-run, second attempt, or redone. Commits = `git log --oneline | wc -l` in this worktree."
+}

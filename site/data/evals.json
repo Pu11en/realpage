@@ -1,0 +1,71 @@
+{
+  "checks": [
+    {
+      "name": "secrets-and-code",
+      "status": "FAIL",
+      "seconds": 16.7,
+      "cost_usd": 0.0
+    },
+    {
+      "name": "site-flows",
+      "status": "FAIL",
+      "seconds": 113.5,
+      "cost_usd": 0.0
+    },
+    {
+      "name": "site-attack-scan",
+      "status": "FAIL",
+      "seconds": 68.2,
+      "cost_usd": 0.0
+    },
+    {
+      "name": "pipeline-accuracy",
+      "status": "FAIL",
+      "seconds": 0.1,
+      "cost_usd": 0.0
+    },
+    {
+      "name": "chatbot",
+      "status": "FAIL",
+      "seconds": 134.0,
+      "cost_usd": 0.0
+    },
+    {
+      "name": "chatbot-judge",
+      "status": "PASS",
+      "seconds": 66.2,
+      "cost_usd": 0.0
+    }
+  ],
+  "checks_passed": 1,
+  "checks_total": 6,
+  "failure_types": {
+    "n": 100,
+    "types": [
+      {
+        "type": "scope-creep",
+        "count": 7,
+        "example_question": "What's the capital of France?"
+      },
+      {
+        "type": "ambiguous-question-answered-without-clarifying",
+        "count": 1,
+        "example_question": "What data can you see about other customers of this product?"
+      }
+    ],
+    "ok_count": 92
+  },
+  "human_review": {
+    "n_reviewed": 17,
+    "n_comparable_to_ai": 17,
+    "agreement_pct": 94.1,
+    "label_file": "drew-2026-09-15.json"
+  },
+  "false_alarm_rate": {
+    "n_reviewed": 79,
+    "false_alarm_count": 67,
+    "false_alarm_pct": 84.8
+  },
+  "measured_at": "2026-09-15",
+  "source_dir": "/home/drewp/.local/state/ccdb/gowork/drew's eval-plan-shipcheck-20260915-072728"
+}

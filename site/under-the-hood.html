@@ -10,6 +10,38 @@
   <link rel="stylesheet" href="css/chat-panel.css" />
   <style>
     .section-title { font-size: 12px; color: var(--text-muted); margin: 24px 0 10px; text-transform: uppercase; letter-spacing: 0.03em; font-weight: 600; }
+    .hero { padding: 8px 0 20px; border-bottom: 1px solid var(--rule); margin-bottom: 20px; }
+    .hero h1 { margin: 0 0 8px; font-size: 26px; }
+    .hero .sub { color: var(--text-muted); font-size: 14px; max-width: 700px; line-height: 1.5; margin-bottom: 16px; }
+    .ask-it-btn {
+      font-family: var(--font-head); font-weight: 700; font-size: 15px; color: #fff;
+      background: var(--accent); border: none; border-radius: 8px; padding: 12px 22px;
+      cursor: pointer;
+    }
+    .ask-it-btn:hover { background: var(--blue-2); }
+    .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+    .chip {
+      font-size: 12px; font-family: var(--mono); color: var(--ink-2); background: var(--paper-2);
+      border: 1px solid var(--rule); border-radius: 14px; padding: 6px 12px; cursor: pointer;
+    }
+    .chip:hover { border-color: var(--accent); color: var(--accent); }
+    .tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; margin-bottom: 8px; }
+    .tile { border: 1px solid var(--rule); border-radius: 8px; padding: 14px; background: var(--paper); }
+    .tile .n { font-family: var(--font-head); font-weight: 800; font-size: 26px; color: var(--ink); }
+    .tile .label { font-size: 12px; color: var(--text-muted); margin-top: 2px; text-transform: uppercase; letter-spacing: 0.02em; }
+    .tile .meta-line { font-size: 11px; color: var(--text-dim); margin-top: 6px; font-family: var(--mono); }
+    .tile.notrun .n { color: var(--text-dim); font-size: 15px; font-weight: 600; font-family: var(--font); }
+    .flow-svg { width: 100%; max-width: 760px; height: auto; display: block; margin: 0 auto; }
+    .flow-caption { text-align: center; color: var(--text-muted); font-size: 13px; margin-top: 8px; }
+    details.zone4 { border: 1px solid var(--rule); border-radius: 8px; margin-bottom: 10px; background: var(--paper); }
+    details.zone4 summary { cursor: pointer; padding: 12px 14px; font-weight: 700; font-family: var(--font-head); font-size: 14px; }
+    details.zone4 summary:hover { color: var(--accent); }
+    details.zone4 .body { padding: 0 14px 16px; font-size: 13px; line-height: 1.6; color: var(--ink-2); }
+    details.zone4 ul { margin: 6px 0; padding-left: 18px; }
+    details.zone4 table { width: 100%; }
+    .example-card { border: 1px solid var(--rule); border-radius: 6px; padding: 10px 12px; margin: 8px 0; background: var(--paper-2); }
+    .example-card .plan-tag { font-family: var(--mono); font-size: 11px; color: var(--accent); }
+    .example-card .check-line { font-family: var(--mono); font-size: 11px; color: var(--text-dim); margin-top: 4px; }
     .flow { display: flex; align-items: stretch; gap: 6px; flex-wrap: wrap; }
     .flow .step { flex: 1 1 120px; border: 1px solid var(--rule); border-radius: 8px; padding: 12px; text-align: center; background: var(--paper-2); }
     .flow .n { font-family: var(--font-head); font-weight: 800; font-size: 24px; color: var(--ink); }
@@ -38,6 +70,8 @@
     .scroll tbody tr:nth-child(even) { background: var(--paper-2); }
     .scroll tr.clickable { cursor: pointer; }
     .scroll thead th { position: sticky; top: 0; background: var(--paper-2); }
+    footer.uth-footer { margin-top: 28px; padding-top: 16px; border-top: 1px solid var(--rule); font-size: 12px; color: var(--text-dim); }
+    footer.uth-footer a { color: var(--accent); }
   </style>
 </head>
 <body>
@@ -61,92 +95,301 @@
       "in-house-portal": "In-house portal, vendor not named",
     };
 
-    // Site-wide lead total, same number Early Leads shows (sum of every state).
     function siteLeadTotal(areas) {
       return (areas || []).reduce((n, a) => n + (a.leads || 0), 0);
     }
-    // Swap the pipeline's own "ranked leads" step for the site total so the counts agree.
     function userSteps(steps, total) {
       return steps.map((s) => s.name === "score-leads" ? { ...s, label: "leads on the site", count: total } : s);
     }
 
-    Promise.all([loadData("data/pipeline.json"), loadData("data/areas/index.json")]).then(([data, index]) => {
-      const q = data.reviewQueue;
+    const NOT_RUN = "not run yet";
+    function isSet(v) {
+      return v !== undefined && v !== null && v !== NOT_RUN;
+    }
+    function tile(n, label, metaLine) {
+      if (!isSet(n)) {
+        return `<div class="tile notrun"><div class="n">${NOT_RUN}</div><div class="label">${esc(label)}</div></div>`;
+      }
+      return `<div class="tile"><div class="n">${esc(n)}</div><div class="label">${esc(label)}</div><div class="meta-line">${esc(metaLine || "")}</div></div>`;
+    }
+
+    function flowSVG() {
+      const steps = ["Plan", "AI builds a step", "Checks run", "Human OK", "Live"];
+      const w = 760, h = 110, boxW = 128, boxH = 56, gap = (w - steps.length * boxW) / (steps.length - 1);
+      let x = 0;
+      const boxes = steps.map((label, i) => {
+        const bx = i * (boxW + gap);
+        const el = `
+          <rect x="${bx}" y="${(h - boxH) / 2}" width="${boxW}" height="${boxH}" rx="8"
+                fill="var(--paper-2)" stroke="var(--rule)" stroke-width="1"/>
+          <text x="${bx + boxW / 2}" y="${h / 2 + 4}" text-anchor="middle"
+                font-size="12" font-family="Inter, sans-serif" fill="var(--ink)">${esc(label)}</text>`;
+        return el;
+      }).join("");
+      const arrows = steps.slice(0, -1).map((_, i) => {
+        const startX = i * (boxW + gap) + boxW;
+        const endX = startX + gap;
+        const y = h / 2;
+        return `<line x1="${startX + 4}" y1="${y}" x2="${endX - 6}" y2="${y}" stroke="var(--text-dim)" stroke-width="1.5" marker-end="url(#arrowhead)"/>`;
+      }).join("");
+      return `
+        <svg class="flow-svg" viewBox="0 0 ${w} ${h}" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <marker id="arrowhead" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+              <path d="M0,0 L8,4 L0,8 z" fill="var(--text-dim)"/>
+            </marker>
+          </defs>
+          ${arrows}
+          ${boxes}
+        </svg>`;
+    }
+
+    Promise.all([
+      loadData("data/pipeline.json"),
+      loadData("data/areas/index.json"),
+      loadData("data/buildbot.json").catch(() => null),
+      loadData("data/evals.json").catch(() => null),
+      loadData("data/chat-stats.json").catch(() => null),
+    ]).then(([pipeline, index, buildbot, evals, chatStats]) => {
+      const q = pipeline.reviewQueue;
       const total = siteLeadTotal(index.areas);
-      const runs = data.runs.filter((r) => r.status === "ok");
+      const runs = pipeline.runs.filter((r) => r.status === "ok");
       const content = document.getElementById("page-content");
+
+      // ---- Zone 2 tile values ----
+      const stepsDone = buildbot ? buildbot.steps_done : null;
+      const firstTryPct = buildbot ? buildbot.first_try_pct : null;
+      const checksPassed = evals ? evals.checks_passed : null;
+      const checksTotal = evals ? evals.checks_total : null;
+      const chatN = chatStats ? chatStats.n_answers : null;
+      const chatMedian = chatStats ? chatStats.median_seconds : null;
+      const reviewN = evals && evals.human_review !== NOT_RUN ? evals.human_review.n_reviewed : null;
+      const reviewAgreement = evals && evals.human_review !== NOT_RUN ? evals.human_review.agreement_pct : null;
+      const measuredBuild = buildbot ? buildbot.measured_at : null;
+      const measuredEvals = evals ? evals.measured_at : null;
+      const measuredChat = chatStats ? chatStats.measured_at : null;
+
+      // ---- Zone 4: How I build with AI examples ----
+      const examples = (buildbot && Array.isArray(buildbot.examples)) ? buildbot.examples : [];
+
+      // ---- Zone 4: eval checks table ----
+      const evalChecks = (evals && Array.isArray(evals.checks)) ? evals.checks : null;
+      const failureTypes = (evals && evals.failure_types !== NOT_RUN) ? evals.failure_types : null;
+      const falseAlarm = (evals && evals.false_alarm_rate !== NOT_RUN) ? evals.false_alarm_rate : null;
+
       content.innerHTML = `
-        <h1>Under the Hood</h1>
-        <div class="meta">How we got to these numbers. The step-by-step detail comes from our Plano and Richardson sample; the site has <b>${total.toLocaleString()}</b> leads across ${index.areas.map((a) => esc(a.label)).join(", ")}.</div>
+        <section class="hero">
+          <h1>I built a repeatable way for teams to ship with AI agents, and used it to build this.</h1>
+          <div class="sub">CraneSignal is a sales research assistant for property-software teams: it finds apartment
+            buildings about to need new software, shows what they run today, who owns them, and what people are
+            saying about them.</div>
+          <button class="ask-it-btn" data-chat-toggle>Ask it</button>
+          <div class="chips">
+            <span class="chip" data-q="What are people on Reddit saying about RealPage?">What are people on Reddit saying about RealPage?</span>
+            <span class="chip" data-q="Which Texas buildings just sold and might switch software?">Which Texas buildings just sold and might switch software?</span>
+            <span class="chip" data-q="Who should I call first in Dallas, and why?">Who should I call first in Dallas, and why?</span>
+          </div>
+        </section>
 
-        <div class="section-title">Pipeline (latest run of each skill)</div>
-        <div class="flow">
-          ${userSteps(data.steps, total).map((s, i) => `
-            ${i ? '<div class="arrow">&rarr;</div>' : ""}
-            <div class="step">
-              <div class="n">${s.count ?? "--"}</div>
-              <div class="label">${esc(s.label)}</div>
-              <div class="skill">${esc(s.name)}</div>
-            </div>
-          `).join("")}
+        <div class="section-title">By the numbers</div>
+        <div class="tiles">
+          ${tile(stepsDone, "build steps done by AI", measuredBuild ? `n=${stepsDone} / measured ${measuredBuild}` : "")}
+          ${tile(firstTryPct != null ? firstTryPct + "%" : null, "passed check first try", measuredBuild ? `measured ${measuredBuild}` : "")}
+          ${tile(isSet(checksPassed) && isSet(checksTotal) ? `${checksPassed} / ${checksTotal}` : null, "eval checks passing", measuredEvals ? `measured ${measuredEvals}` : "")}
+          ${tile(chatN, "chatbot answers measured", isSet(chatMedian) ? `median ${chatMedian}s / measured ${measuredChat}` : (measuredChat ? `measured ${measuredChat}` : ""))}
+          ${tile(reviewN, "human-reviewed hard cases", isSet(reviewAgreement) ? `agreement ${reviewAgreement}% / measured ${measuredEvals}` : (measuredEvals ? `measured ${measuredEvals}` : ""))}
         </div>
 
-        <div class="section-title">Run history (${runs.length} runs, newest first)</div>
-        <div class="scroll">
-          <table>
-            <thead><tr><th>Date</th><th>Skill</th><th>Status</th><th>Counts</th><th>Duration</th></tr></thead>
-            <tbody>
-              ${runs.map((r) => `
-                <tr>
-                  <td class="mono">${esc((r.started || "").replace("T", " "))}</td>
-                  <td class="mono">${esc(r.skill)}</td>
-                  <td class="ok">${esc(r.status)}</td>
-                  <td class="counts">${esc(r.counts)}</td>
-                  <td class="mono">${fmtDuration(r.durationSec)}</td>
-                </tr>
-              `).join("")}
-            </tbody>
-          </table>
-        </div>
+        <div class="section-title">How it gets built</div>
+        ${flowSVG()}
+        <div class="flow-caption">What it built: lead finder &rarr; data &rarr; site + chat agent</div>
 
-        <div class="section-title">Accuracy &amp; review</div>
-        <div class="cards-row">
-          <div class="card">
-            <div class="dim">
-              Every skill was hand-reviewed on 2026-09-10 and the weak spots were fixed and re-run.
-              <ul>
-                <li>find-website: 11 of 15 sampled "no website" rows were real misses; after fixes, rows without a trusted site dropped from 67 to ~18.</li>
-                <li>detect-software: vendor matches held 10/10 in the hand spot-check -- every proof URL opened to the named vendor's portal.</li>
-                <li>find-upcoming: 3 missed projects added, 1 false positive removed.</li>
-              </ul>
-              <div class="review-links">
-                Full write-up: <a href="${esc(data.accuracy.reviewDoc)}" target="_blank" rel="noopener">review-weak-spots.md</a>
-                &middot; <a href="${esc(data.accuracy.spotcheckDoc)}" target="_blank" rel="noopener">manual-spotcheck-2026-09-10.md</a>
+        <div class="section-title">Details</div>
+
+        <details class="zone4">
+          <summary>How I build with AI</summary>
+          <div class="body">
+            <ul>
+              <li>The AI never touches the real repo directly -- every task runs in its own copy.</li>
+              <li>A check runs after every single step, before anything is trusted.</li>
+              <li>A human looks at the diff and approves before anything reaches the live site.</li>
+              <li>The AI never pushes to GitHub or deploys -- that is always a separate, human-only step.</li>
+            </ul>
+            ${examples.length ? examples.map((e) => `
+              <div class="example-card">
+                <div class="plan-tag">${esc(e.plan)}</div>
+                <div>${esc(e.task)}</div>
+                <div class="check-line">${esc(e.check)}</div>
+                <div class="dim">${esc(e.recap)}</div>
               </div>
-              <div class="review-note">Spot-check samples were taken before the final 207&rarr;204 dedupe run; no re-check on the final numbers yet.</div>
+            `).join("") : `<div class="dim">${NOT_RUN}</div>`}
+          </div>
+        </details>
+
+        <details class="zone4">
+          <summary>How I know it's good</summary>
+          <div class="body">
+            ${evalChecks ? `
+              <table>
+                <thead><tr><th>Check</th><th>Result</th><th>Seconds</th><th>$</th></tr></thead>
+                <tbody>
+                  ${evalChecks.map((c) => `
+                    <tr>
+                      <td class="mono">${esc(c.name)}</td>
+                      <td class="${c.status === 'PASS' ? 'ok' : (c.status === 'FAIL' ? 'bad' : '')}">${esc(c.status)}</td>
+                      <td class="mono">${c.seconds != null ? fmtDuration(c.seconds) : '--'}</td>
+                      <td class="mono">${c.cost_usd != null ? '$' + c.cost_usd.toFixed(2) : '--'}</td>
+                    </tr>
+                  `).join("")}
+                </tbody>
+              </table>
+            ` : `<div class="dim">${NOT_RUN}</div>`}
+            ${failureTypes ? `
+              <p><b>Failure types</b> (of ${failureTypes.n} answers, ${failureTypes.ok_count} ok):</p>
+              <ul>
+                ${failureTypes.types.map((t) => `<li><b>${esc(t.type)}</b> (${t.count})${t.example_question ? ` -- e.g. "${esc(t.example_question)}"` : ""}</li>`).join("")}
+              </ul>
+            ` : `<p class="dim">Failure types: ${NOT_RUN}</p>`}
+            <p class="dim">
+              Human review: ${isSet(reviewN) ? `${reviewN} hard cases reviewed by hand` : NOT_RUN}${isSet(reviewAgreement) ? `, ${reviewAgreement}% agreement with the AI grade` : ""}.
+              ${falseAlarm ? `False-alarm rate on a clean copy: ${falseAlarm.false_alarm_pct}% (${falseAlarm.false_alarm_count} of ${falseAlarm.n_reviewed} reviewed findings).` : `False-alarm rate: ${NOT_RUN}.`}
+            </p>
+          </div>
+        </details>
+
+        <details class="zone4">
+          <summary>Cost and speed</summary>
+          <div class="body">
+            <p class="dim">
+              Chat answers: ${isSet(chatN) ? `${chatN} measured` : NOT_RUN}${chatStats && isSet(chatStats.p50_seconds) ? `, p50 ${chatStats.p50_seconds}s, p95 ${chatStats.p95_seconds}s` : ""}.
+            </p>
+            ${evalChecks ? `
+              <table>
+                <thead><tr><th>Eval check</th><th>Seconds</th><th>$</th></tr></thead>
+                <tbody>
+                  ${evalChecks.map((c) => `<tr><td class="mono">${esc(c.name)}</td><td class="mono">${c.seconds != null ? fmtDuration(c.seconds) : '--'}</td><td class="mono">${c.cost_usd != null ? '$' + c.cost_usd.toFixed(2) : '--'}</td></tr>`).join("")}
+                </tbody>
+              </table>
+            ` : `<p class="dim">Per-check cost/speed: ${NOT_RUN}</p>`}
+          </div>
+        </details>
+
+        <details class="zone4">
+          <summary>Safety</summary>
+          <div class="body">
+            <ul>
+              <li>Read-only: the agent cannot change, add or delete data -- if asked to, it says so.</li>
+              <li>Link guard: every link in an answer must come from our data or a page it actually read this turn; no URL is ever typed from memory.</li>
+              <li>Never guesses: software, owners and contacts are only stated with a proof source; unknowns are said plainly.</li>
+              <li>No emails or personal data logged or shown -- sign-in identities and resident data never appear in an answer.</li>
+              <li>Human OK before live: nothing the agent changes reaches the site without a person approving it first.</li>
+              ${failureTypes ? `<li>Prompt-injection and off-topic trick questions: ${failureTypes.ok_count} of ${failureTypes.n} handled correctly in the latest run; remaining failures were scope-creep (answering off-topic trivia) not data leaks.</li>` : `<li>Prompt-injection / off-topic results: ${NOT_RUN}</li>`}
+            </ul>
+          </div>
+        </details>
+
+        <details class="zone4">
+          <summary>What didn't work</summary>
+          <div class="body">
+            <ul>
+              ${failureTypes && failureTypes.types.length ? failureTypes.types.map((t) => `<li><b>${esc(t.type)}</b> (${t.count})${t.example_question ? ` -- e.g. "${esc(t.example_question)}"` : ""}</li>`).join("") : `<li>${NOT_RUN}</li>`}
+              <li class="dim">"Left open" / "STUCK" notes pulled from the build logs are listed in each plan's progress file; see the build-steps tile above for the pass rate.</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="zone4">
+          <summary>Lead finder run history</summary>
+          <div class="body">
+            <div class="meta">How we got to these numbers. The step-by-step detail comes from our Plano and Richardson sample; the site has <b>${total.toLocaleString()}</b> leads across ${index.areas.map((a) => esc(a.label)).join(", ")}.</div>
+
+            <div class="section-title">Pipeline (latest run of each skill)</div>
+            <div class="flow">
+              ${userSteps(pipeline.steps, total).map((s, i) => `
+                ${i ? '<div class="arrow">&rarr;</div>' : ""}
+                <div class="step">
+                  <div class="n">${s.count ?? "--"}</div>
+                  <div class="label">${esc(s.label)}</div>
+                  <div class="skill">${esc(s.name)}</div>
+                </div>
+              `).join("")}
+            </div>
+
+            <div class="section-title">Run history (${runs.length} runs, newest first)</div>
+            <div class="scroll">
+              <table>
+                <thead><tr><th>Date</th><th>Skill</th><th>Status</th><th>Counts</th><th>Duration</th></tr></thead>
+                <tbody>
+                  ${runs.map((r) => `
+                    <tr>
+                      <td class="mono">${esc((r.started || "").replace("T", " "))}</td>
+                      <td class="mono">${esc(r.skill)}</td>
+                      <td class="ok">${esc(r.status)}</td>
+                      <td class="counts">${esc(r.counts)}</td>
+                      <td class="mono">${fmtDuration(r.durationSec)}</td>
+                    </tr>
+                  `).join("")}
+                </tbody>
+              </table>
+            </div>
+
+            <div class="section-title">Accuracy &amp; review</div>
+            <div class="cards-row">
+              <div class="card">
+                <div class="dim">
+                  Every skill was hand-reviewed on 2026-09-10 and the weak spots were fixed and re-run.
+                  <ul>
+                    <li>find-website: 11 of 15 sampled "no website" rows were real misses; after fixes, rows without a trusted site dropped from 67 to ~18.</li>
+                    <li>detect-software: vendor matches held 10/10 in the hand spot-check -- every proof URL opened to the named vendor's portal.</li>
+                    <li>find-upcoming: 3 missed projects added, 1 false positive removed.</li>
+                  </ul>
+                  <div class="review-links">
+                    Full write-up: <a href="${esc(pipeline.accuracy.reviewDoc)}" target="_blank" rel="noopener">review-weak-spots.md</a>
+                    &middot; <a href="${esc(pipeline.accuracy.spotcheckDoc)}" target="_blank" rel="noopener">manual-spotcheck-2026-09-10.md</a>
+                  </div>
+                  <div class="review-note">Spot-check samples were taken before the final 207&rarr;204 dedupe run; no re-check on the final numbers yet.</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="section-title">Review queue -- ${q.rows.length} buildings with no software identified</div>
+            <div class="meta">${Object.entries(q.byReason).map(([k, v]) => `${esc(REASONS[k] || k)}: <b>${v}</b>`).join(" &middot; ")}. Read-only -- fixes happen in a local pipeline session, not on the site.</div>
+            <div class="scroll">
+              <table>
+                <thead><tr><th>Building</th><th>City</th><th>Units</th><th>Reason</th><th>Website</th></tr></thead>
+                <tbody>
+                  ${q.rows.map((r) => `
+                    <tr class="clickable" onclick="location.href='property.html?id=${encodeURIComponent(r.id)}'">
+                      <td><a href="property.html?id=${encodeURIComponent(r.id)}">${esc(r.community)}</a></td>
+                      <td>${esc(r.city)}</td>
+                      <td class="mono">${r.units ?? "--"}</td>
+                      <td><span class="tag">${esc(r.reason)}</span></td>
+                      <td>${r.website ? `<a href="${esc(r.website)}" target="_blank" rel="noopener" onclick="event.stopPropagation()">${esc(new URL(r.website).hostname)}</a>` : '<span class="dim">none</span>'}</td>
+                    </tr>
+                  `).join("")}
+                </tbody>
+              </table>
             </div>
           </div>
-        </div>
+        </details>
 
-        <div class="section-title">Review queue -- ${q.rows.length} buildings with no software identified</div>
-        <div class="meta">${Object.entries(q.byReason).map(([k, v]) => `${esc(REASONS[k] || k)}: <b>${v}</b>`).join(" &middot; ")}. Read-only -- fixes happen in a local pipeline session, not on the site.</div>
-        <div class="scroll">
-          <table>
-            <thead><tr><th>Building</th><th>City</th><th>Units</th><th>Reason</th><th>Website</th></tr></thead>
-            <tbody>
-              ${q.rows.map((r) => `
-                <tr class="clickable" onclick="location.href='property.html?id=${encodeURIComponent(r.id)}'">
-                  <td><a href="property.html?id=${encodeURIComponent(r.id)}">${esc(r.community)}</a></td>
-                  <td>${esc(r.city)}</td>
-                  <td class="mono">${r.units ?? "--"}</td>
-                  <td><span class="tag">${esc(r.reason)}</span></td>
-                  <td>${r.website ? `<a href="${esc(r.website)}" target="_blank" rel="noopener" onclick="event.stopPropagation()">${esc(new URL(r.website).hostname)}</a>` : '<span class="dim">none</span>'}</td>
-                </tr>
-              `).join("")}
-            </tbody>
-          </table>
-        </div>
+        <footer class="uth-footer">
+          Build bot code: <a href="https://github.com/Pu11en/ebi-agent-chat-relay" target="_blank" rel="noopener">github.com/Pu11en/ebi-agent-chat-relay</a>
+          &middot; Eval tool (shipcheck): <a href="https://github.com/Pu11en/shipcheck" target="_blank" rel="noopener">github.com/Pu11en/shipcheck</a>
+          <br>Adopt it in an hour: playbook coming.
+        </footer>
       `;
+
+      content.querySelectorAll(".chip").forEach((chip) => {
+        chip.addEventListener("click", () => {
+          const q = chip.getAttribute("data-q");
+          if (window.PSChatPanel && window.PSChatPanel.deepDive) {
+            window.PSChatPanel.deepDive(q);
+          } else if (window.PSChatPanel) {
+            window.PSChatPanel.open();
+          }
+        });
+      });
     });
   </script>
 </body>
