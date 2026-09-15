@@ -311,3 +311,30 @@ h1 { font-size: 26px; font-weight: 800; letter-spacing: -0.015em; margin: 0 0 4p
 .pick-row .pick-label { width: 56px; color: var(--text-muted); font-size: 12px; text-transform: uppercase; letter-spacing: .04em; }
 .pick-row .area-buttons, .pick-row .metro-buttons { display: flex; gap: 8px; flex-wrap: wrap; margin: 0; }
 .lead-subarea { color: var(--text-muted); font-size: 12px; margin-top: 2px; }
+
+/* Early Leads page (index.html): light table, zebra rows, blue links, soft pills. */
+.stat-card .value { font-family: var(--font-head); font-weight: 800; letter-spacing: -0.01em; color: var(--ink); }
+.filters input, .filters select { min-height: 36px; transition: border-color .15s var(--ease), box-shadow .15s var(--ease); }
+.filters input:focus, .filters select:focus { outline: none; border-color: var(--blue); box-shadow: 0 0 0 3px var(--blue-soft); }
+.filters input::placeholder { color: var(--text-dim); }
+.hide-mine { display: flex; align-items: center; gap: 6px; color: var(--text-muted); font-size: 13px; cursor: pointer; }
+.hide-mine input { accent-color: var(--blue); }
+.area-buttons .area-btn, .metro-buttons .metro-btn { transition: border-color .15s var(--ease), color .15s var(--ease), background .15s var(--ease); }
+.area-buttons .area-btn:hover:not(.active), .metro-buttons .metro-btn:hover:not(.active) { border-color: var(--blue); color: var(--blue); }
+.leads-table { border: 1px solid var(--rule); border-radius: 8px; border-collapse: separate; border-spacing: 0; overflow: hidden; }
+.leads-table th { background: var(--paper-2); color: var(--ink-2); font-weight: 600; }
+.leads-table tbody tr:nth-child(even) td { background: var(--paper-2); }
+.leads-table tr.clickable { cursor: pointer; }
+.leads-table tr.clickable:hover td { background: var(--blue-soft); }
+.leads-table strong { color: var(--ink); }
+.lead-src a { color: var(--blue); }
+.pill-new { background: var(--ok-soft); color: var(--ok); }
+.pill-unknown { background: var(--paper-2); color: var(--muted); border: 1px solid var(--rule); }
+.deep-dive-btn { color: var(--blue); border-color: var(--rule); background: var(--paper); }
+.deep-dive-btn:hover { border-color: var(--blue); background: var(--blue-soft); }
+@media (max-width: 760px) {
+  .leads-table { border: none; border-radius: 0; overflow: visible; }
+  .leads-table tbody tr:nth-child(even) td { background: transparent; }
+  .leads-table tr { background: var(--paper); }
+  .leads-table tbody tr:nth-child(even) { background: var(--paper-2); }
+}
