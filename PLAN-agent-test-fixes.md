@@ -51,7 +51,7 @@ Open: http://localhost:8765/index.html
 - [x] **T6 Saved deep dive comes back.** Clicking Deep dive a second time on the same building reopened
   the unsent question instead of the instant saved copy ("Saved deep dive from <date>. Press ↻ to redo
   it."). Find why the live flow misses the saved copy and fix it. Test. Commit.
-- [ ] **T7 No broken "Sources: )" line.** The answer to "Which buildings sold recently?" ended with
+- [x] **T7 No broken "Sources: )" line.** The answer to "Which buildings sold recently?" ended with
   "Sources: )". Find where citations are formatted (chat skill/SOUL or the proxy) and never emit an empty
   or broken Sources line. Test on a fixture answer. Add a check_answers question (don't run it). Commit.
 - [ ] **T8 Duplicate building.** "Torrington Wilmer" (300 units, Planned) appears twice, once as Dallas and

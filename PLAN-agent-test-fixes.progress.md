@@ -72,3 +72,21 @@ functions exist, the saved-notice path in `deepDive()` doesn't fall through to
 re-sending the question, the redo button is wired, and all three call sites pass an id).
 Checked with `bash tooling/qa/check-fixes.sh` (78 tests pass, design check 0 problems).
 Commit: see git log.
+
+## T7 No broken "Sources: )" line — done
+Found it: `chatbot/linkfix.py`'s `_fix_line()` strips out a citation link whose URL was never
+returned by a tool (unseen/bad), and when that leaves a "Sources:" line with nothing real on
+it, a separate check is supposed to drop the whole line. That check only recognized whitespace,
+`*`, `·`, `:`, `,`, `;` and the word "Sources" as "nothing" — it didn't know about stray
+parentheses. So a line like `Sources: [Bad record](http://fake)` lost its link but kept the
+`()` wrapper around where the link used to sit, leaving exactly the broken `Sources: )` (or
+`Sources: ()`) the live test saw. Fixed by adding `()` to that check's "nothing to cite"
+character class, so the line is dropped entirely once every citation on it is gone. Added
+`tooling/qa/fixes_tests/test_t7_sources_line.py` (3 tests: a dropped citation no longer
+leaves dangling parens, an already-empty `Sources: ()` line is dropped, and a Sources line
+with a real seen citation still survives with its link). Also added a "broken Sources line"
+check to `tooling/qa/check_answers.py`'s `problems()` (not run — it needs the live bot) so a
+future live answer with a dangling `Sources: )`/`()` fails that check too; "Which buildings
+sold recently?" (the question that showed the bug) is already in its question list. Checked
+with `bash tooling/qa/check-fixes.sh` (81 tests pass, design check 0 problems). Commit: see
+git log.
