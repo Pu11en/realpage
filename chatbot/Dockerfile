@@ -42,5 +42,11 @@ RUN chmod +x /opt/hermes-start/start-hermes.sh && \
     chmod -R a-w /opt/propertystack && \
     chown -R hermes:hermes /app /opt/hermes-profile /opt/hermes-start /opt/chatbot
 
-# Keep the base image ENTRYPOINT (s6 init, drops root to the hermes user).
+# The base entrypoint keeps its tiny, setuid bootstrap for s6, but all of this
+# image's application processes now start as the dedicated unprivileged user.
+# /opt/data is already owned by hermes in the base image and is the only
+# mutable application location; the baked knowledge base stays read-only.
+USER hermes
+
+# Keep the base image ENTRYPOINT (s6 init preserves the unprivileged user).
 CMD ["bash", "/opt/hermes-start/start-hermes.sh"]
