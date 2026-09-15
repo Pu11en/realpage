@@ -66,7 +66,7 @@ Open: http://localhost:8765/index.html
   open button (amber), header (navy/blue), message bubbles, input, close button, phone full-screen
   view. The panel must match the pages; the check's quick-check (panel opens, no errors) must pass.
   Screenshot the panel open on desktop and phone.
-- [ ] **T8 The chat app itself (`chatbot/branding/custom.css`, `chatbot/branding/loader.js`).** Same
+- [x] **T8 The chat app itself (`chatbot/branding/custom.css`, `chatbot/branding/loader.js`).** Same
   fonts (self-hosted copies served next to custom.css) and colors for the standalone chat, light
   mode as the default. CSS/branding only: do not touch the model, prompts or proxy. If
   `bash tooling/dev.sh` can run, screenshot http://localhost:3000; if it can't (no key), note that

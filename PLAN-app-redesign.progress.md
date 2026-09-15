@@ -52,3 +52,11 @@
 - Message bubbles and the input live inside the chat app (iframe) — those are T8's job, not changed here. No JS changes.
 - check-design.sh passes (quick check 0 problems, 7 design pages 0 problems); panel opens with no page errors on desktop and phone.
 - Screenshots: docs/design-screens/T7-chat-desktop.png, T7-chat-phone.png (sign-in card shown, since the chat app isn't running locally).
+
+## T8 The chat app itself — done 2026-09-15 (commit bcf74c3)
+- custom.css: self-hosted Inter (body) + Plus Jakarta Sans (headings) from /static/fonts/; white paper, navy ink, blue links, grey table rules; message box white with thin rule and blue focus ring; send button amber with navy arrow; sign-in submit button blue; "Past chats"/"Back to chat" pills blue instead of green (dark mode uses light blue). Blue focus ring everywhere.
+- loader.js: sets light theme once per browser (remembered via cs-light-default), so later theme choices in Open WebUI settings are kept. Redirect guard unchanged.
+- Fonts copied to chatbot/branding/fonts/; added to webui.Dockerfile (COPY) and docker-compose.local.yml (mount). No model/prompt/proxy changes.
+- Checked: the chat app was already running on :3000 (another session's), so I didn't restart it; screenshots load it framed with this branch's custom.css/loader.js/fonts swapped in. Browser set to prefer dark still shows light, Inter loaded, no page errors. check-design.sh passes (7 pages, 0 problems); chatbot tests 35 passed.
+- Left open: locally loader.js isn't mounted in compose (standalone pages would redirect-loop to "/"), so the light default applies on Railway builds; locally the running chat needs a restart of dev.sh to pick up the new CSS/font mounts.
+- Screenshots: docs/design-screens/T8-chat-desktop.png, T8-chat-phone.png.
