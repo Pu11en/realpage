@@ -37394,11 +37394,12 @@
   "buyer": "",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.momentummultifamily.com/portfolio/oaks-at-jane-lane",
   "software": "unknown",
   "links": {
    "sales_file": "https://www.tad.org/content/data-download/2026CommImprovedSales.zip",
-   "deed_doc": "D225044278"
+   "deed_doc": "D225044278",
+   "website": "https://www.momentummultifamily.com/portfolio/oaks-at-jane-lane"
   },
   "sources": [
    {
@@ -37446,20 +37447,25 @@
   "units": 196,
   "stage": "sold",
   "permit_date": "",
-  "opening_date": "",
+  "opening_date": "2026",
   "sale_date": "2025-03-13",
   "buyer": "PLEASANTON HOUSING FINANCE CORP",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.thenorthstarapts.com/",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.thenorthstarapts.com/"
   },
   "sources": [
    {
     "fact": "sale_date",
     "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   },
+   {
+    "fact": "opening_date",
+    "url": "https://www.thenorthstarapts.com/"
    }
   ],
   "why": "Sold 2025-03-13 \u00b7 to PLEASANTON HOUSING FINANCE CORP \u00b7 196 units \u00b7 new owner may re-pick software"
@@ -37479,10 +37485,11 @@
   "buyer": "MIDAMERICA APARTMENTS LP",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://cccres.com/apartments/detail/alexan-cathedral-arts-apts-dallas",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://cccres.com/apartments/detail/alexan-cathedral-arts-apts-dallas"
   },
   "sources": [
    {
@@ -37535,10 +37542,11 @@
   "buyer": "LA VILLA HOUSING FINANCE",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://cccres.com/apartments/detail/fawn-ridge-village-east-ecu-dallas",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://cccres.com/apartments/detail/fawn-ridge-village-east-ecu-dallas"
   },
   "sources": [
    {
@@ -37563,10 +37571,11 @@
   "buyer": "LA VILLA HOUSING FINANCE",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://cccres.com/apartments/detail/mesa-ridge-village-east-ecu-dallas",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://cccres.com/apartments/detail/mesa-ridge-village-east-ecu-dallas"
   },
   "sources": [
    {
@@ -37591,10 +37600,11 @@
   "buyer": "LA VILLA HOUSING FINANCE",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://cccres.com/apartments/detail/fawn-ridge-village-east-ecu-dallas",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://cccres.com/apartments/detail/fawn-ridge-village-east-ecu-dallas"
   },
   "sources": [
    {
@@ -37611,7 +37621,7 @@
   "address": "670 MAXEY RD 211",
   "lat": null,
   "lon": null,
-  "units": null,
+  "units": 20,
   "stage": "sold",
   "permit_date": "",
   "opening_date": "",
@@ -37628,9 +37638,13 @@
    {
     "fact": "sale_date",
     "url": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   },
+   {
+    "fact": "units",
+    "url": "https://www.poconnor.com/blog/harris-county-appraisal-district-over-values-many-apartments-by-over-50-/"
    }
   ],
-  "why": "Sold 2025-03-13 \u00b7 to PECOS HOUSING FINANCE CORP \u00b7 new owner may re-pick software"
+  "why": "Sold 2025-03-13 \u00b7 to PECOS HOUSING FINANCE CORP \u00b7 20 units \u00b7 new owner may re-pick software"
  },
  {
   "area": "tx",
@@ -37639,7 +37653,7 @@
   "address": "2002 SPRING STUEBNER RD 326",
   "lat": null,
   "lon": null,
-  "units": null,
+  "units": 326,
   "stage": "sold",
   "permit_date": "",
   "opening_date": "",
@@ -37647,10 +37661,11 @@
   "buyer": "ECHO SPRINGWOODS RESIDENTIAL LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://ploteasy.com/property-details/210137242/2002-spring-stuebner-rd-spring-tx-77389",
   "software": "unknown",
   "links": {
-   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip",
+   "website": "https://ploteasy.com/property-details/210137242/2002-spring-stuebner-rd-spring-tx-77389"
   },
   "sources": [
    {
@@ -37660,9 +37675,13 @@
    {
     "fact": "sale_date",
     "url": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   },
+   {
+    "fact": "units",
+    "url": "https://cccres.com/apartments/detail/echo-springwoods-residential-llc-spring"
    }
   ],
-  "why": "Sold 2025-03-12 \u00b7 to ECHO SPRINGWOODS RESIDENTIAL LLC \u00b7 new owner may re-pick software"
+  "why": "Sold 2025-03-12 \u00b7 to ECHO SPRINGWOODS RESIDENTIAL LLC \u00b7 326 units \u00b7 new owner may re-pick software"
  },
  {
   "area": "tx",
@@ -37674,20 +37693,25 @@
   "units": null,
   "stage": "sold",
   "permit_date": "",
-  "opening_date": "",
+  "opening_date": "1716",
   "sale_date": "2025-03-12",
   "buyer": "PECOS HOUSING FINANCE CORP",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://ploteasy.com/property-details/179149/712-pinemont-dr-88-houston-tx-77018",
   "software": "unknown",
   "links": {
-   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip",
+   "website": "https://ploteasy.com/property-details/179149/712-pinemont-dr-88-houston-tx-77018"
   },
   "sources": [
    {
     "fact": "sale_date",
     "url": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   },
+   {
+    "fact": "opening_date",
+    "url": "https://github.com/Apoorve73/Real-Estate-Companies-Database/blob/master/Houston1.csv"
    }
   ],
   "why": "Sold 2025-03-12 \u00b7 to PECOS HOUSING FINANCE CORP \u00b7 new owner may re-pick software"
@@ -37702,7 +37726,7 @@
   "units": null,
   "stage": "sold",
   "permit_date": "",
-  "opening_date": "",
+  "opening_date": "1716",
   "sale_date": "2025-03-12",
   "buyer": "PECOS HOUSING FINANCE CORP",
   "developer": "",
@@ -37716,6 +37740,10 @@
    {
     "fact": "sale_date",
     "url": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   },
+   {
+    "fact": "opening_date",
+    "url": "https://github.com/Apoorve73/Real-Estate-Companies-Database/blob/master/Houston1.csv"
    }
   ],
   "why": "Sold 2025-03-12 \u00b7 to PECOS HOUSING FINANCE CORP \u00b7 new owner may re-pick software"
@@ -37766,7 +37794,8 @@
   "website": "",
   "software": "unknown",
   "links": {
-   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip",
+   "news": "https://www.redfin.com/TX/Cypress/11111-Grant-Rd-77429/unit-422/apartment/30707266"
   },
   "sources": [
    {
@@ -37819,10 +37848,11 @@
   "buyer": "IRON LANDINGS APARTMENTS LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://orocap.com/property/hampton-greens-apartments/",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://orocap.com/property/hampton-greens-apartments/"
   },
   "sources": [
    {
@@ -37847,10 +37877,12 @@
   "buyer": "EDCOUCH COMMUNITY HOUSING",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://cccres.com/apartments/detail/landmark-at-lake-village-east-28-units-garland-dallas-co",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://cccres.com/apartments/detail/landmark-at-lake-village-east-28-units-garland-dallas-co",
+   "news": "https://www.walkerdunlop.com/news/walker-dunlop-secures-82-million-in-bridge-financing-for-lakeside-apartments-in-texas-57e07"
   },
   "sources": [
    {
@@ -37903,10 +37935,12 @@
   "buyer": "EDCOUCH COMMUNITY HOUSING",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://cccres.com/apartments/detail/landmark-at-lake-village-east-28-units-garland-dallas-co",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://cccres.com/apartments/detail/landmark-at-lake-village-east-28-units-garland-dallas-co",
+   "news": "https://www.walkerdunlop.com/news/walker-dunlop-secures-82-million-in-bridge-financing-for-lakeside-apartments-in-texas-57e07"
   },
   "sources": [
    {
@@ -37931,10 +37965,12 @@
   "buyer": "EDCOUCH COMMUNITY HOUSING",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://cccres.com/apartments/detail/landmark-at-lake-village-east-28-units-garland-dallas-co",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://cccres.com/apartments/detail/landmark-at-lake-village-east-28-units-garland-dallas-co",
+   "news": "https://www.walkerdunlop.com/news/walker-dunlop-secures-82-million-in-bridge-financing-for-lakeside-apartments-in-texas-57e07"
   },
   "sources": [
    {
@@ -37959,10 +37995,11 @@
   "buyer": "EDCOUCH COMMUNITY HOUSING",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.apartmentadvisor.com/details/4358-pt-blvd-garland-tx-75043",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.apartmentadvisor.com/details/4358-pt-blvd-garland-tx-75043"
   },
   "sources": [
    {
@@ -38071,10 +38108,11 @@
   "buyer": "CAMERON COUNTY HOUSING",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.tidesonparklane.com/",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.tidesonparklane.com/"
   },
   "sources": [
    {
