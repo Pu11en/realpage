@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Crane Marketing Board</title>
+<style>
+  :root { --bg:#f6f5f2; --card:#fff; --ink:#1c1c1c; --muted:#6b6b6b; --line:#e4e2dd; --accent:#d9731a; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  header { max-width:880px; margin:0 auto; padding:40px 24px 8px; }
+  h1 { margin:0; font-size:28px; }
+  header p { margin:4px 0 0; color:var(--muted); }
+  main { max-width:880px; margin:0 auto; padding:16px 24px 64px; display:grid; gap:20px; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:24px; }
+  .meta { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:8px; }
+  .tag { font-size:12px; font-weight:600; text-transform:uppercase; letter-spacing:.04em; padding:2px 8px; border-radius:6px; background:#f1ece4; color:#7a4a14; }
+  .tag.date { background:#eee; color:var(--muted); }
+  h2 { margin:0 0 12px; font-size:20px; }
+  h3 { margin:20px 0 8px; font-size:14px; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .block { position:relative; }
+  pre { margin:0; white-space:pre-wrap; background:#faf9f7; border:1px solid var(--line); border-radius:8px; padding:16px; font:14px/1.6 ui-monospace, SFMono-Regular, Menlo, monospace; }
+  button { position:absolute; top:8px; right:8px; border:1px solid var(--line); background:#fff; border-radius:6px; padding:4px 10px; font:13px system-ui, sans-serif; cursor:pointer; }
+  button:hover { border-color:var(--accent); }
+  ul { margin:0; padding-left:20px; }
+  a { color:var(--accent); }
+  .empty { color:var(--muted); }
+</style>
+</head>
+<body>
+<header>
+  <h1>Crane Marketing Board</h1>
+  <p>Only the marketing work you do by hand. Tell a session "remove this card" once you've posted it.</p>
+</header>
+<main id="board"></main>
+
+<script>
+/*
+  THE CARDS. Sessions edit only this list (newest first). Fields:
+  type, title, added (YYYY-MM-DD), basedOn (data the card uses),
+  sections: [{ label, text }]  -> each shows with a Copy button
+  whereToPost: [text or URL], files: [{ name, path }] (paths relative to this folder, put in ./assets/)
+*/
+const CARDS = [
+  {
+    type: "Video · product demo",
+    title: "CraneSignal product demo (2–3 min, your voice over a screen recording)",
+    added: "2026-09-15",
+    basedOn: "Current CraneSignal data: 307 Dallas–Fort Worth projects, ~61,000 apartments, 198 permitted or under construction",
+    sections: [
+      { label: "Rough outline (a content session will turn this into a full script)", text:
+`0:00 Hook — "There are 198 apartment buildings being built in Dallas–Fort Worth right now. Most people who sell to them find out after they open."
+0:15 The problem — by opening day, the building has already picked its management company, software and vendors.
+0:30 Open CraneSignal — show the Early Leads list for Dallas–Fort Worth.
+0:50 Pick one big project — name, city, number of apartments, opening date, developer, office phone.
+1:15 Show the map — where the new buildings are clustering.
+1:35 Show the permit or news link — every lead comes from a public record you can check.
+1:55 Ask the chat a question — e.g. "Which DFW projects open in the next 6 months?"
+2:20 Close — "It's free early access right now. Link below — tell me what you'd want it to do."` },
+      { label: "Video title", text: "198 apartment buildings are going up in Dallas–Fort Worth. Here's how to find them before they open." },
+      { label: "Video description", text:
+`CraneSignal finds new apartment buildings while they're still permits and construction sites, so you can reach them before opening day.
+
+This demo covers Dallas–Fort Worth: 307 projects, about 61,000 apartments.
+
+Free early access — I'd love your feedback.` }
+    ],
+    whereToPost: ["YouTube (full video)", "Later: cut into Shorts under 60 seconds"],
+    files: []
+  }
+];
+
+const board = document.getElementById("board");
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;" }[c]));
+const link = s => /^https?:\/\//.test(s) ? `<a href="${esc(s)}" target="_blank">${esc(s)}</a>` : esc(s);
+
+board.innerHTML = CARDS.length ? CARDS.map((c, i) => `
+  <article class="card">
+    <div class="meta"><span class="tag">${esc(c.type)}</span><span class="tag date">Added ${esc(c.added)}</span></div>
+    <h2>${esc(c.title)}</h2>
+    ${c.basedOn ? `<p class="empty">Based on: ${esc(c.basedOn)}</p>` : ""}
+    ${c.sections.map((s, j) => `
+      <h3>${esc(s.label)}</h3>
+      <div class="block"><pre id="t${i}-${j}">${esc(s.text)}</pre><button data-t="t${i}-${j}">Copy</button></div>`).join("")}
+    <h3>Where to post</h3>
+    <ul>${c.whereToPost.map(w => `<li>${link(w)}</li>`).join("")}</ul>
+    <h3>Files</h3>
+    ${c.files.length ? `<ul>${c.files.map(f => `<li><a href="${esc(f.path)}" download>${esc(f.name)}</a></li>`).join("")}</ul>`
+                     : `<p class="empty">None yet.</p>`}
+  </article>`).join("") : `<p class="empty">No cards yet.</p>`;
+
+board.addEventListener("click", e => {
+  const id = e.target.dataset.t;
+  if (!id) return;
+  navigator.clipboard.writeText(document.getElementById(id).textContent);
+  e.target.textContent = "Copied";
+  setTimeout(() => e.target.textContent = "Copy", 1200);
+});
+</script>
+</body>
+</html>
