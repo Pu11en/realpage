@@ -56,7 +56,7 @@ Open: http://localhost:8765/ai-visibility.html
   as `tooling/ai-visibility/questions.csv`. Make `run.sh` reuse exactly those questions (use a NiubiGEO
   option if one exists; otherwise feed them in with the smallest wrapper) and default the models to
   `gemini,gemini-web`. `--practice` still works with the fake AI and the frozen questions. Test it. Commit.
-- [ ] **T3 Run history.** `site/data/build_ai_visibility.py` saves each run as
+- [x] **T3 Run history.** `site/data/build_ai_visibility.py` saves each run as
   `site/data/ai-visibility-history/<date>.json` (per AI: answers, mentioned %, top pick %, named first %,
   lawsuit %, missed questions, top picks by company) and a small `index.json` listing runs. Import the
   2026-09-12 run once as the baseline, labelled "Claude / ChatGPT, Sept 12". The existing tab data keeps

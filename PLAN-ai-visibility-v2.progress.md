@@ -12,3 +12,10 @@
 - run.sh uses it; models default to gemini,gemini-web (AI_VIS_MODELS overrides). --practice checked with a temp runs dir: 17 questions x 2 fake AIs = 34 answers, build ran. Restored site/data/ai-visibility.json after (practice had overwritten it).
 - Tests: tests/test_questions.py (3). Check passes, 11 tests.
 - Open: the keyword metrics (keywords.csv) are now empty since frozen plans carry no keywords; question ids differ from Sept 12, join by baseline_id or text in T3.
+
+## T3 Run history — done (dbbecd1)
+- build_ai_visibility.py now also saves each real run to site/data/ai-visibility-history/<date>.json (per AI: answers, failed, mentioned %, mentioned % on questions that don't name RealPage, top pick %, named first %, lawsuit %, missed questions, top picks by company; no full answers) and rewrites index.json (date, file, label, baseline flag, models). A second run on the same day replaces that day's file.
+- Practice (--demo) runs skip history. `--baseline "<label>"` adds a run to history only and leaves ai-visibility.json alone; used once to import Sept 12 as "Claude / ChatGPT, Sept 12" (chatgpt, claude, claude-web). Existing tab data unchanged.
+- Added gemini / gemini-web friendly names ("Gemini (memory)", "Gemini + Google Search"). Per-model entries in ai-visibility.json gained unbrandedMentionPct, missedQuestions, topPicks.
+- Tests: tests/test_history.py (4) on fixtures/report-gemini.json (small hand-made Gemini report). Check passes, 15 tests.
+- Open: T4 should add lawsuit data into the same history entry (history_entry/save_history).
