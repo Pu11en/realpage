@@ -1,0 +1,9 @@
+topic,fact
+build process,"Work is planned as small steps. The AI builds each step in its own isolated copy, an automatic check (tests, a build, or loading the page) runs after every step, and a person tries and approves the change before it goes live. The AI never pushes code or deploys on its own."
+test set,"A fixed set of 100 questions a sales rep would really ask, plus trick questions: off-topic trivia, requests to change data, and attempts to talk the agent out of its rules."
+grading,"An AI grader scores every answer against a rubric: correct, sourced from CraneSignal's data, and in scope. 92 of 100 passed."
+grader check,Drew graded the 17 hardest cases by hand; the AI grader agreed with him on 94% of them.
+data spot-check,"Software matches were checked by hand: 10 of 10 held up, each proof link opening to the named vendor's portal. A review of buildings with no website found real misses; after fixes, buildings without a trusted website dropped from 67 to about 18."
+speed,A typical answer takes about 14 seconds; 95% arrive within 28 seconds.
+safety,"Read-only (cannot change data), every link must come from CraneSignal's data or a page read that turn, never guesses software/owners/contacts without a proof source, no personal data in answers, standard browser security headers, and every page and data file requires sign-in."
+known limits,About 3 in 10 buildings in the Plano/Richardson sample have no public sign of their software; those are marked unknown rather than guessed. Leads today are strongest in Texas and Arizona; any other US area can be added with the same lead finder.

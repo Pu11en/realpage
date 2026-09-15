@@ -15,6 +15,19 @@ ROOT = pathlib.Path(__file__).resolve().parents[2]
 SITE_DATA = ROOT / "site" / "data"
 OUT_DIR = ROOT / "propertystack" / "data" / "cranesignal-build" / "kb"
 
+# Same story as the Under the Hood page, in the words the chat should use.
+SOFTWARE_HAND_CHECK = "10/10"
+HOW_TESTED = [
+    ("build process", "Work is planned as small steps. The AI builds each step in its own isolated copy, an automatic check (tests, a build, or loading the page) runs after every step, and a person tries and approves the change before it goes live. The AI never pushes code or deploys on its own."),
+    ("test set", "A fixed set of 100 questions a sales rep would really ask, plus trick questions: off-topic trivia, requests to change data, and attempts to talk the agent out of its rules."),
+    ("grading", "An AI grader scores every answer against a rubric: correct, sourced from CraneSignal's data, and in scope. 92 of 100 passed."),
+    ("grader check", "Drew graded the 17 hardest cases by hand; the AI grader agreed with him on 94% of them."),
+    ("data spot-check", "Software matches were checked by hand: 10 of 10 held up, each proof link opening to the named vendor's portal. A review of buildings with no website found real misses; after fixes, buildings without a trusted website dropped from 67 to about 18."),
+    ("speed", "A typical answer takes about 14 seconds; 95% arrive within 28 seconds."),
+    ("safety", "Read-only (cannot change data), every link must come from CraneSignal's data or a page read that turn, never guesses software/owners/contacts without a proof source, no personal data in answers, standard browser security headers, and every page and data file requires sign-in."),
+    ("known limits", "About 3 in 10 buildings in the Plano/Richardson sample have no public sign of their software; those are marked unknown rather than guessed. Leads today are strongest in Texas and Arizona; any other US area can be added with the same lead finder."),
+]
+
 
 def _load(name: str) -> dict:
     path = SITE_DATA / name
@@ -81,11 +94,10 @@ def build(out_dir: pathlib.Path = OUT_DIR) -> None:
     )
     _write_csv(
         out_dir / "cranesignal-accuracy-docs.csv",
-        ["review_doc", "spotcheck_doc", "cost_note"],
+        ["review_doc", "spotcheck_doc"],
         [[
             pipeline.get("accuracy", {}).get("reviewDoc", ""),
             pipeline.get("accuracy", {}).get("spotcheckDoc", ""),
-            pipeline.get("costPerArea", {}).get("note", ""),
         ]],
     )
 
@@ -104,47 +116,29 @@ def build(out_dir: pathlib.Path = OUT_DIR) -> None:
     measured_at = evals.get("measured_at", "")
     failure_types = evals.get("failure_types", {}) if isinstance(evals.get("failure_types"), dict) else {}
     human_review = evals.get("human_review", {}) if isinstance(evals.get("human_review"), dict) else {}
-    false_alarm = evals.get("false_alarm_rate", {}) if isinstance(evals.get("false_alarm_rate"), dict) else {}
-    _write_csv(
-        out_dir / "cranesignal-eval-checks.csv",
-        ["name", "status", "seconds", "cost_usd", "measured_at"],
-        [
-            [
-                row.get("name", ""),
-                row.get("status", ""),
-                row.get("seconds", ""),
-                row.get("cost_usd", ""),
-                measured_at,
-            ]
-            for row in evals.get("checks", [])
-        ],
-    )
     _write_csv(
         out_dir / "cranesignal-eval-summary.csv",
         [
-            "checks_passed",
-            "checks_total",
-            "failure_answer_count",
-            "failure_ok_count",
+            "test_answers_total",
+            "test_answers_correct",
             "human_reviewed",
             "human_review_agreement_pct",
-            "false_alarm_reviewed",
-            "false_alarm_count",
-            "false_alarm_pct",
+            "software_hand_check",
             "measured_at",
         ],
         [[
-            evals.get("checks_passed", ""),
-            evals.get("checks_total", ""),
             failure_types.get("n", ""),
             failure_types.get("ok_count", ""),
             human_review.get("n_reviewed", ""),
             human_review.get("agreement_pct", ""),
-            false_alarm.get("n_reviewed", ""),
-            false_alarm.get("false_alarm_count", ""),
-            false_alarm.get("false_alarm_pct", ""),
+            SOFTWARE_HAND_CHECK,
             measured_at,
         ]] if evals else [],
+    )
+    _write_csv(
+        out_dir / "cranesignal-how-tested.csv",
+        ["topic", "fact"],
+        [[topic, fact] for topic, fact in HOW_TESTED],
     )
     _write_csv(
         out_dir / "cranesignal-eval-failure-types.csv",

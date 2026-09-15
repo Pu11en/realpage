@@ -24,7 +24,7 @@ EXPECTED_TABLES = {
     "cranesignal_review_queue",
     "cranesignal_accuracy_docs",
     "cranesignal_chat_stats",
-    "cranesignal_eval_checks",
+    "cranesignal_how_tested",
     "cranesignal_eval_summary",
     "cranesignal_eval_failure_types",
     "cranesignal_buildbot_summary",
@@ -89,7 +89,7 @@ def test_cranesignal_tables_match_site_json():
         assert con.execute("SELECT COUNT(*) FROM cranesignal_pipeline_steps").fetchone()[0] == len(pipeline["steps"])
         assert con.execute("SELECT COUNT(*) FROM cranesignal_pipeline_runs").fetchone()[0] == len(pipeline["runs"])
         assert con.execute("SELECT COUNT(*) FROM cranesignal_review_queue").fetchone()[0] == len(pipeline["reviewQueue"]["rows"])
-        assert con.execute("SELECT COUNT(*) FROM cranesignal_eval_checks").fetchone()[0] == len(evals["checks"])
+        assert con.execute("SELECT COUNT(*) FROM cranesignal_how_tested").fetchone()[0] >= 6
 
         row = con.execute(
             "SELECT p50_seconds, p95_seconds, measured_at FROM cranesignal_chat_stats"
@@ -97,15 +97,14 @@ def test_cranesignal_tables_match_site_json():
         assert row == (str(chat_stats["p50_seconds"]), str(chat_stats["p95_seconds"]), chat_stats["measured_at"])
 
         row = con.execute(
-            "SELECT checks_passed, checks_total, human_reviewed, human_review_agreement_pct, "
-            "false_alarm_pct, measured_at FROM cranesignal_eval_summary"
+            "SELECT test_answers_total, test_answers_correct, human_reviewed, human_review_agreement_pct, "
+            "measured_at FROM cranesignal_eval_summary"
         ).fetchone()
         assert row == (
-            str(evals["checks_passed"]),
-            str(evals["checks_total"]),
+            str(evals["failure_types"]["n"]),
+            str(evals["failure_types"]["ok_count"]),
             str(evals["human_review"]["n_reviewed"]),
             str(evals["human_review"]["agreement_pct"]),
-            str(evals["false_alarm_rate"]["false_alarm_pct"]),
             evals["measured_at"],
         )
 
@@ -120,3 +119,13 @@ def test_cranesignal_tables_match_site_json():
             str(buildbot["commits"]),
             buildbot["measured_at"],
         )
+
+
+def test_chat_numbers_drop_internal_scorecard():
+    with tempfile.TemporaryDirectory() as tmp:
+        out = pathlib.Path(tmp)
+        build_cranesignal_numbers.build(out_dir=out)
+        assert not (out / "cranesignal-eval-checks.csv").exists()
+        text = "".join(p.read_text() for p in out.glob("*.csv"))
+        for internal in ["false_alarm", "checks_passed", "PLACEHOLDER"]:
+            assert internal not in text, internal

@@ -1,2 +1,2 @@
-checks_passed,checks_total,failure_answer_count,failure_ok_count,human_reviewed,human_review_agreement_pct,false_alarm_reviewed,false_alarm_count,false_alarm_pct,measured_at
-1,6,100,92,17,94.1,79,67,84.8,2026-09-15
+test_answers_total,test_answers_correct,human_reviewed,human_review_agreement_pct,software_hand_check,measured_at
+100,92,17,94.1,10/10,2026-09-15
