@@ -33732,7 +33732,7 @@
   "units": null,
   "stage": "sold",
   "permit_date": "",
-  "opening_date": "",
+  "opening_date": "1716",
   "sale_date": "2025-05-07",
   "buyer": "EDCOUCH COMMUNITY HOUSING",
   "developer": "",
@@ -33746,6 +33746,10 @@
    {
     "fact": "sale_date",
     "url": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   },
+   {
+    "fact": "opening_date",
+    "url": "https://github.com/Apoorve73/Real-Estate-Companies-Database/blob/master/Houston1.csv"
    }
   ],
   "why": "Sold 2025-05-07 \u00b7 to EDCOUCH COMMUNITY HOUSING \u00b7 new owner may re-pick software"
@@ -33850,11 +33854,12 @@
   "buyer": "",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.thelifeatwestlandestates.com/",
   "software": "unknown",
   "links": {
    "sales_file": "https://www.tad.org/content/data-download/2026CommImprovedSales.zip",
-   "deed_doc": "D225081907"
+   "deed_doc": "D225081907",
+   "website": "https://www.thelifeatwestlandestates.com/"
   },
   "sources": [
    {
@@ -33871,7 +33876,7 @@
   "address": "333 UVALDE RD 291",
   "lat": null,
   "lon": null,
-  "units": null,
+  "units": 291,
   "stage": "sold",
   "permit_date": "",
   "opening_date": "",
@@ -33888,9 +33893,13 @@
    {
     "fact": "sale_date",
     "url": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   },
+   {
+    "fact": "units",
+    "url": "https://cccres.com/apartments/detail/havenwood-houston"
    }
   ],
-  "why": "Sold 2025-05-06 \u00b7 to 900 TITLE JEFFERSON LLC % CWCAPITAL ASSET MANAGEMENT LLC \u00b7 new owner may re-pick software"
+  "why": "Sold 2025-05-06 \u00b7 to 900 TITLE JEFFERSON LLC % CWCAPITAL ASSET MANAGEMENT LLC \u00b7 291 units \u00b7 new owner may re-pick software"
  },
  {
   "area": "tx",
@@ -33899,10 +33908,10 @@
   "address": "11800 GRANT RD 530",
   "lat": null,
   "lon": null,
-  "units": null,
+  "units": 530,
   "stage": "sold",
   "permit_date": "",
-  "opening_date": "",
+  "opening_date": "2021",
   "sale_date": "2025-05-05",
   "buyer": "PECOS HOUSING FINANCE CORPORATION",
   "developer": "",
@@ -33910,15 +33919,24 @@
   "website": "",
   "software": "unknown",
   "links": {
-   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip",
+   "news": "https://ploteasy.com/property-details/89995/11800-grant-rd-530-530-cypress-tx-77429"
   },
   "sources": [
    {
     "fact": "sale_date",
     "url": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   },
+   {
+    "fact": "opening_date",
+    "url": "https://ploteasy.com/property-details/89995/11800-grant-rd-530-530-cypress-tx-77429"
+   },
+   {
+    "fact": "units",
+    "url": "https://cccres.com/apartments/detail/estates-at-cypresswood-cypress"
    }
   ],
-  "why": "Sold 2025-05-05 \u00b7 to PECOS HOUSING FINANCE CORPORATION \u00b7 new owner may re-pick software"
+  "why": "Sold 2025-05-05 \u00b7 to PECOS HOUSING FINANCE CORPORATION \u00b7 530 units \u00b7 new owner may re-pick software"
  },
  {
   "area": "tx",
@@ -33983,7 +34001,7 @@
   "address": "411 HIGHLAND CROSS DR 236",
   "lat": null,
   "lon": null,
-  "units": null,
+  "units": 12,
   "stage": "sold",
   "permit_date": "",
   "opening_date": "",
@@ -34000,9 +34018,13 @@
    {
     "fact": "sale_date",
     "url": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   },
+   {
+    "fact": "units",
+    "url": "https://www.redfin.com/TX/Houston/411-Highland-Cross-Dr-77073/unit-236/home/30460166"
    }
   ],
-  "why": "Sold 2025-05-05 \u00b7 to LA VILLA HOUSING FINANCE CORP \u00b7 new owner may re-pick software"
+  "why": "Sold 2025-05-05 \u00b7 to LA VILLA HOUSING FINANCE CORP \u00b7 12 units \u00b7 new owner may re-pick software"
  },
  {
   "area": "tx",
@@ -34019,10 +34041,11 @@
   "buyer": "NINETY9 CAPITAL MFFI FLATS LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.thenationalresidences.com/",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.thenationalresidences.com/"
   },
   "sources": [
    {
@@ -34047,10 +34070,11 @@
   "buyer": "BECKLEY PROPERTY OWNER LP",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://thebeckleyapts.com/",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://thebeckleyapts.com/"
   },
   "sources": [
    {
@@ -34075,10 +34099,11 @@
   "buyer": "PECOS HOUSING FINANCE",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.wyndhamonthecreek.com/",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.wyndhamonthecreek.com/"
   },
   "sources": [
    {
@@ -34103,10 +34128,11 @@
   "buyer": "THE BLUEPRINT APARTMENTS LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://ploteasy.com/property-details/252800901/15405-katy-fwy-houston-tx-77094",
   "software": "unknown",
   "links": {
-   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip",
+   "website": "https://ploteasy.com/property-details/252800901/15405-katy-fwy-houston-tx-77094"
   },
   "sources": [
    {
@@ -34135,10 +34161,11 @@
   "buyer": "PLEASANTON HOUSING FINANCE CORPORATION",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://ploteasy.com/property-details/240269592/7655-washington-ave-houston-tx-77007",
   "software": "unknown",
   "links": {
-   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip",
+   "website": "https://ploteasy.com/property-details/240269592/7655-washington-ave-houston-tx-77007"
   },
   "sources": [
    {
@@ -34191,10 +34218,11 @@
   "buyer": "HSR MIDTOWN LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://cxre.co/houston/multifamily/3101-smith-st-154",
   "software": "unknown",
   "links": {
-   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip",
+   "website": "https://cxre.co/houston/multifamily/3101-smith-st-154"
   },
   "sources": [
    {
@@ -34211,7 +34239,7 @@
   "address": "12211 SUMMER CREEK TRACE DR 278",
   "lat": null,
   "lon": null,
-  "units": null,
+  "units": 278,
   "stage": "sold",
   "permit_date": "",
   "opening_date": "",
@@ -34219,18 +34247,23 @@
   "buyer": "HPI WESTLAKE LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://ploteasy.com/property-details/210135718/12211-summer-creek-trace-dr-houston-tx-77044",
   "software": "unknown",
   "links": {
-   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip",
+   "website": "https://ploteasy.com/property-details/210135718/12211-summer-creek-trace-dr-houston-tx-77044"
   },
   "sources": [
    {
     "fact": "sale_date",
     "url": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   },
+   {
+    "fact": "units",
+    "url": "https://cccres.com/apartments/detail/standard-at-westlake-the-houston"
    }
   ],
-  "why": "Sold 2025-04-30 \u00b7 to HPI WESTLAKE LLC \u00b7 new owner may re-pick software"
+  "why": "Sold 2025-04-30 \u00b7 to HPI WESTLAKE LLC \u00b7 278 units \u00b7 new owner may re-pick software"
  },
  {
   "area": "tx",
@@ -34303,10 +34336,11 @@
   "buyer": "LA VILLA HOUSING FINANCE CORP",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://cccres.com/apartments/detail/spanish-creek-apts-txa19950410-dallas",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://cccres.com/apartments/detail/spanish-creek-apts-txa19950410-dallas"
   },
   "sources": [
    {
@@ -34331,10 +34365,11 @@
   "buyer": "LA VILLA HOUSING FINANCE",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.apartmentadvisor.com/details/3232-chapel-crk-dr-dallas-tx-75220",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.apartmentadvisor.com/details/3232-chapel-crk-dr-dallas-tx-75220"
   },
   "sources": [
    {
@@ -34359,10 +34394,11 @@
   "buyer": "LA VILLA HOUSING FINANCE",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.apartmentadvisor.com/details/3232-chapel-crk-dr-dallas-tx-75220",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.apartmentadvisor.com/details/3232-chapel-crk-dr-dallas-tx-75220"
   },
   "sources": [
    {
@@ -34382,20 +34418,25 @@
   "units": 128,
   "stage": "sold",
   "permit_date": "",
-  "opening_date": "",
+  "opening_date": "2021",
   "sale_date": "2025-04-22",
   "buyer": "LA VILLA HOUSING FINANCE",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://conticapital.com/performance/fund-ii/spanish-pueblo/",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://conticapital.com/performance/fund-ii/spanish-pueblo/"
   },
   "sources": [
    {
     "fact": "sale_date",
     "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   },
+   {
+    "fact": "opening_date",
+    "url": "https://www.zumper.com/apartment-buildings/p512934/spanish-pueblo-dallas-tx"
    }
   ],
   "why": "Sold 2025-04-22 \u00b7 to LA VILLA HOUSING FINANCE \u00b7 128 units \u00b7 new owner may re-pick software"
