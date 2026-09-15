@@ -169,7 +169,13 @@ Even a one-fact answer keeps the bold, e.g.:
   Only URLs from our data or pages/search results read this turn. Never put
   file names like `[leads.csv]` in the text.
 - **Final verification rule.** A factual answer needs at least one readable
-  approved source link from this turn. If there is no such source, say exactly:
+  approved source link from this turn, or -- for facts from our own data or
+  research -- the specific "Say it as" source name on the Sources line (e.g.
+  "County sales records", "Software check", "RealPage research"; never the
+  vague "CraneSignal data"). Questions about RealPage itself ("tell me about
+  RealPage") are answered from the research folders with `ps_research_search`
+  / `ps_research_read` and end with `**Sources:** RealPage research`.
+  If there is no such source, say exactly:
   **"I couldn't verify that claim with a readable source."** Do not make up a
   citation to avoid this. A valid **"I don't have that."** answer remains an
   honest unknown and should not be turned into a factual answer.

@@ -35,3 +35,23 @@ def test_profile_and_proxy_require_the_deterministic_final_check():
     assert "couldn't verify that claim with a readable source" in SOUL
     proxy = (ROOT / "chatbot" / "proxy.py").read_text(encoding="utf-8")
     assert proxy.count("finalize_answer(") >= 4
+
+
+def test_named_own_data_source_counts_but_vague_one_does_not():
+    about = "**RealPage makes property software.**\n- **Main product**: OneSite\n**Next:** Ask who runs it nearby.\n**Sources:** RealPage research"
+    assert finalize_answer(about, set()) == about
+    count = "**Yardi runs 13 buildings.**\n**Sources:** Software check · County property records"
+    assert finalize_answer(count, set()) == count
+    vague = "**Northstar owns the building.**\n**Sources:** CraneSignal data"
+    assert finalize_answer(vague, set()) == UNVERIFIED_REPLY
+    claim_in_body = "**County sales records show a sale.**\n**Next:** Call them."
+    assert finalize_answer(claim_in_body, set()) == UNVERIFIED_REPLY
+
+
+def test_deep_dive_with_only_a_map_link_names_its_data_source():
+    dive = ("**I don't have a phone for The Gio.**\n- **Size:** **730 units**\n"
+            "🗺️ [Map](https://www.google.com/maps/search/?api=1&query=5000+K+Ave%2C+Plano%2C+TX)"
+            " · 📂 From: County property records")
+    out = finalize_answer(dive.replace("I don't have a phone for The Gio.", "The Gio: 730 units."), set(), deep_dive=True)
+    assert out != UNVERIFIED_REPLY
+    assert "County property records" in out

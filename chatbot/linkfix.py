@@ -191,6 +191,31 @@ def _has_approved_readable_source(text: str, seen: set[str]) -> bool:
     return False
 
 
+# Our own data has no URL, so a named source from the skill's "Say it as"
+# column counts too -- but only a specific one on the Sources / 📂 From line.
+# A vague "CraneSignal data" still does not.
+_OWN_SOURCES = (
+    "county property records", "county sales record", "building websites",
+    "software check", "city permits", "cranesignal lead ranking",
+    "contact info from building websites", "reddit posts",
+    "dallas-area building survey", "cranesignal lead map",
+    "property software market share", "building owner, sale and lead detail",
+    "cranesignal build pipeline", "cranesignal measurements",
+    "ai visibility score snapshot", "realpage research",
+)
+_SOURCE_LINE_RE = re.compile(r"^\s*(?:\**\s*Sources\s*:|.*📂\s*\**\s*From\s*:)", re.I)
+
+
+def _has_named_own_source(text: str) -> bool:
+    """Whether a Sources / 📂 From line names one of our own data sources."""
+    for line in text.splitlines():
+        if _SOURCE_LINE_RE.match(line):
+            low = line.lower()
+            if any(name in low for name in _OWN_SOURCES):
+                return True
+    return False
+
+
 def finalize_answer(text: str, seen: set[str] | None = None, deep_dive: bool = False) -> str:
     """Permit factual text only with a readable, approved source.
 
@@ -202,7 +227,7 @@ def finalize_answer(text: str, seen: set[str] | None = None, deep_dive: bool = F
     cleaned = fix_links(text, seen, deep_dive=deep_dive).strip()
     if _first_answer_text(cleaned).startswith(_SAFE_NO_FACT_STARTS):
         return cleaned
-    if _has_approved_readable_source(cleaned, seen):
+    if _has_approved_readable_source(cleaned, seen) or _has_named_own_source(cleaned):
         return cleaned
     return UNVERIFIED_REPLY
 
