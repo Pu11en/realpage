@@ -1,0 +1,16 @@
+{
+ "city": "San Marcos",
+ "state": "TX",
+ "system": "arcgis",
+ "endpoint": "https://smgis.sanmarcostx.gov/arcgis/rest/services/Planning/CoSM_BuildingPermits/FeatureServer/0/query?where=TYPE%3D%27New%27+AND+LANDUSE%3D%27Multi-Family%27+AND+ISSUED%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUED+DESC",
+ "fields": {
+  "permit_type": "LANDUSE",
+  "name": "ProjectName",
+  "issue_date": "ISSUED",
+  "address": "ADDRESS"
+ },
+ "date_format": "epoch_ms",
+ "date_tested": "2026-09-14",
+ "live_test": "Discovered the real service live (the research doc only sketched a URL): enumerated smgis.sanmarcostx.gov's ArcGIS REST catalog (needs a User-Agent header, same as Arlington) to find Planning/CoSM_BuildingPermits/FeatureServer/0, inspected its real field list (ADDRESS/STATUS/DESCRIPTION/LANDUSE/TYPE/APPLIED/ISSUED/SQUAREFEET/PERMITID/PROJECTNUMBER/ProjectName -- no units field), then ran the exact where clause above and got 168 real rows since 2024-09-01 with exceededTransferLimit=false (no paging needed here), e.g. '3810 TRANSPORTATION WAY APT 329' / 'The 1856 Apartments Stair Remodel' at 1805 N IH 35.",
+ "notes": "This layer's granularity is per building-unit/per-permit, not per-project -- e.g. '3810 TRANSPORTATION WAY APT 301/303/304/329' are 4 separate rows for one building, so this recipe's output leans on find_upcoming's existing merge_records address-based merge to collapse them, and will still under-count true unit totals since there is no aggregate unit-count field on this layer (units stay None, 'Units: not public yet', never estimated from row count). LANDUSE='Multi-Family' is the closest verified real apartment-relevant filter found live; there is no separate apartment-only sub-code on this layer."
+}

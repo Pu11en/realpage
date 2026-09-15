@@ -2441,6 +2441,34 @@
  },
  {
   "area": "tx",
+  "city": "San Marcos",
+  "name": "HELU Blanco Trace Multifamily / The Entrada at San Marcos Bldg 1",
+  "address": "428 Ivory St BLDG 1",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2024-11-25",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://smgis.sanmarcostx.gov/arcgis/rest/services/Planning/CoSM_BuildingPermits/FeatureServer/0/query?where=TYPE%3D%27New%27+AND+LANDUSE%3D%27Multi-Family%27+AND+ISSUED%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUED+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://smgis.sanmarcostx.gov/arcgis/rest/services/Planning/CoSM_BuildingPermits/FeatureServer/0/query?where=TYPE%3D%27New%27+AND+LANDUSE%3D%27Multi-Family%27+AND+ISSUED%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUED+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
   "city": "Arlington",
   "name": "Apartments (3+ dwelling units)",
   "address": "505 MARY STREET",
@@ -2546,6 +2574,34 @@
    }
   ],
   "why": "Permitted \u00b7 opens: not public yet \u00b7 106 units \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "San Marcos",
+  "name": "The Springs Apartments Club / Bldg1",
+  "address": "316 NORTHGATE RD BLDG 1",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2024-12-20",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://smgis.sanmarcostx.gov/arcgis/rest/services/Planning/CoSM_BuildingPermits/FeatureServer/0/query?where=TYPE%3D%27New%27+AND+LANDUSE%3D%27Multi-Family%27+AND+ISSUED%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUED+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://smgis.sanmarcostx.gov/arcgis/rest/services/Planning/CoSM_BuildingPermits/FeatureServer/0/query?where=TYPE%3D%27New%27+AND+LANDUSE%3D%27Multi-Family%27+AND+ISSUED%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUED+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
  },
  {
   "area": "tx",
@@ -2862,6 +2918,34 @@
    }
   ],
   "why": "Permitted \u00b7 opens: not public yet \u00b7 187 units \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "San Marcos",
+  "name": "San Antonio Courtyard Duplexes/Rental New Bldg 1 Apt 101 and Apt 102",
+  "address": "411 W SAN ANTONIO ST APT 101",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2025-03-13",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://smgis.sanmarcostx.gov/arcgis/rest/services/Planning/CoSM_BuildingPermits/FeatureServer/0/query?where=TYPE%3D%27New%27+AND+LANDUSE%3D%27Multi-Family%27+AND+ISSUED%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUED+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://smgis.sanmarcostx.gov/arcgis/rest/services/Planning/CoSM_BuildingPermits/FeatureServer/0/query?where=TYPE%3D%27New%27+AND+LANDUSE%3D%27Multi-Family%27+AND+ISSUED%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUED+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
  },
  {
   "area": "tx",
@@ -5109,6 +5193,34 @@
  },
  {
   "area": "tx",
+  "city": "San Marcos",
+  "name": "Riverview Apartments Carport",
+  "address": "601 RIVER RD",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2025-11-10",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://smgis.sanmarcostx.gov/arcgis/rest/services/Planning/CoSM_BuildingPermits/FeatureServer/0/query?where=TYPE%3D%27New%27+AND+LANDUSE%3D%27Multi-Family%27+AND+ISSUED%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUED+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://smgis.sanmarcostx.gov/arcgis/rest/services/Planning/CoSM_BuildingPermits/FeatureServer/0/query?where=TYPE%3D%27New%27+AND+LANDUSE%3D%27Multi-Family%27+AND+ISSUED%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUED+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
   "city": "San Antonio",
   "name": "Nacogdoches Apartments - Bld#  1-Apt.",
   "address": "7010 COMANCHE LAND, CITY OF SAN ANTONIO, TX 78233",
@@ -5947,6 +6059,34 @@
    {
     "fact": "permit_date",
     "url": "houston-weekly-xlsx"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "San Marcos",
+  "name": "3810 Transportation Way Unit 329 - PLAN 3B",
+  "address": "3810 TRANSPORTATION WAY APT 329",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-01-12",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://smgis.sanmarcostx.gov/arcgis/rest/services/Planning/CoSM_BuildingPermits/FeatureServer/0/query?where=TYPE%3D%27New%27+AND+LANDUSE%3D%27Multi-Family%27+AND+ISSUED%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUED+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://smgis.sanmarcostx.gov/arcgis/rest/services/Planning/CoSM_BuildingPermits/FeatureServer/0/query?where=TYPE%3D%27New%27+AND+LANDUSE%3D%27Multi-Family%27+AND+ISSUED%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUED+DESC"
    }
   ],
   "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
@@ -8415,6 +8555,34 @@
    {
     "fact": "permit_date",
     "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
+  "city": "San Marcos",
+  "name": "The 1856 Apartments Stair Remodel",
+  "address": "1805 N IH 35",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-06-12",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://smgis.sanmarcostx.gov/arcgis/rest/services/Planning/CoSM_BuildingPermits/FeatureServer/0/query?where=TYPE%3D%27New%27+AND+LANDUSE%3D%27Multi-Family%27+AND+ISSUED%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUED+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://smgis.sanmarcostx.gov/arcgis/rest/services/Planning/CoSM_BuildingPermits/FeatureServer/0/query?where=TYPE%3D%27New%27+AND+LANDUSE%3D%27Multi-Family%27+AND+ISSUED%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUED+DESC"
    }
   ],
   "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
