@@ -105,3 +105,26 @@
   tests). The broad `python3 -m pytest -q` still stops at the pre-existing unrelated client-map
   collection error because its local `census` helper is missing; it remains a recorded failure, not
   a passing result.
+
+## 2026-09-15 — H7: novice browser dry run
+
+- Ran an automated dry run in a fresh browser profile against the isolated, sign-in-enabled local
+  preview. It created a new account, reached CraneSignal, navigated Map, AI Visibility, Under the
+  Hood, and Early Leads, opened a lead with a readable source link, recovered from a deliberately
+  wrong address, opened the signed-in chat panel, signed out and back in, and checked the Map at a
+  narrow phone-sized viewport. No chat question was sent, so the test did not call a model. This is
+  an automated dry run, not a human test or a release approval.
+- Fixed three release blockers found during that walkthrough: the site image used the wrong build
+  context and could not start; the preview omitted the existing post-sign-in CraneSignal redirect;
+  and its chat panel pointed to a closed local port. Sign-out now also clears the same-origin
+  browser token, so it returns to the account screen instead of reopening the product.
+- Added four offline H7 regression checks that lock the site build context, the post-sign-in
+  redirect, the same-front-door chat route, and the complete sign-out cleanup.
+- Checked: the focused H6/H7 tests passed (7 tests); the browser walkthrough passed its account,
+  navigation, source-link, wrong-turn, chat-panel, sign-out/sign-in, and phone-layout checks;
+  `bash tooling/qa/check-fixes.sh` passed (143 focused tests, three page checks, and seven design
+  page checks); and `chatbot/tests` passed (35 tests). The broad `python3 -m pytest -q` still stops
+  at the pre-existing unrelated client-map collection error because its local `census` helper is
+  missing; it remains recorded as a failure, not a passing release result.
+- Stopped the isolated preview after the dry run and removed only its disposable accounts and chats.
+  H8 will start a new, clean preview for Drew's actual human test.

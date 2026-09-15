@@ -73,7 +73,7 @@ Run with: `Do the next unticked task in PLAN-human-release-gate.md, then tick it
   matching stop command. It must not overwrite Drew's existing local chat history or reuse a stale
   account. Add an offline check for the command and its isolation. Commit.
 
-- [ ] **H7 Do a novice browser dry run and fix blockers.** In a fresh browser profile, walk through
+- [x] **H7 Do a novice browser dry run and fix blockers.** In a fresh browser profile, walk through
   account creation, first use, navigation, chat loading, sources, errors, sign out, and return. Use
   ordinary wording and deliberately take one wrong turn. Record every confusing or broken moment,
   fix release blocking problems, and rerun the Check. Clearly label this as an automated dry run,

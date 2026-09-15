@@ -206,6 +206,11 @@
     fetch(`${base}/api/v1/auths/signout`, { method: "POST", credentials: "include" })
       .catch(() => {})
       .then(() => {
+        // In the same-origin human preview Open WebUI also remembers its
+        // session token in this browser.  Clearing the server session alone
+        // leaves that stale token to route a person straight back into the
+        // app instead of showing the account screen.
+        localStorage.removeItem("token");
         sessionStorage.removeItem(STORAGE_OPEN);
         setSignOutVisible(false);
         location.href = `${base}/auth`;
