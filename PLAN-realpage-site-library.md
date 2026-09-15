@@ -45,7 +45,7 @@ Open: (no page -- part 1 is files only)
 
 ## Tasks
 
-- [ ] **T1 Page list.** `tooling/realpage-library/sitemap.py` reads the cms sitemap index and all
+- [x] **T1 Page list.** `tooling/realpage-library/sitemap.py` reads the cms sitemap index and all
   sub-sitemaps into `raw/realpage-site/urls.csv` (url, type from the sitemap name, lastmod).
   Drops duplicates and `/search`. Create `tooling/qa/check-realpage-library.sh` (runs
   `pytest tooling/realpage-library/tests` offline, no keys) and test on saved sitemap fixtures. Commit.
