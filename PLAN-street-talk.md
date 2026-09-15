@@ -9,7 +9,7 @@ Drew's answers:
 - Sources: **Reddit** (Drew's cookies, already saved privately at `~/.config/propertystack/reddit-cookies.json`,
   chmod 600, outside git -- never print, copy or commit them) plus the free no-login Agent Reach parts
   (YouTube transcripts via yt-dlp, web pages via Jina). No X, no LinkedIn.
-- A small "what people are saying" box on the AI Visibility tab links to the new tab.
+- **Separate section** (Drew, 2026-09-15): do NOT touch the AI Visibility tab or its files at all.
 - The chat (CraneSignal Agent) can answer from this data.
 - Runs with the weekly Texas refresh. The website only shows saved files; nothing scrapes live on page load.
 
@@ -19,7 +19,7 @@ account actions. Tests never call Reddit -- they use saved sample files in `tool
 Commit after every chunk so a crash never loses collected posts.
 
 Prerequisites met (2026-09-15): Texas leads are merged (`propertystack/data/tx/`, 586 chat leads) and the
-map build is done. User-facing name is **CraneSignal** (tab, box, chat answers): never show "PropertyStack"
+map build is done. User-facing name is **CraneSignal** (tab, chat answers): never show "PropertyStack"
 or "Hermes" to users; code and folders keep their internal names. Texas buildings = every area under
 `propertystack/data/` whose leads are in TX (area-agnostic, no hard-coded area list). No paid AI calls
 anywhere in this plan (the paid `check-answers.sh` is left for Drew to run himself).
@@ -40,8 +40,7 @@ Open: http://localhost:8765/street-talk.html
 ## How to try it (30 seconds)
 1. Open the Street Talk tab: three parts (RealPage vs rivals, Texas buildings, unhappy rival customers), each
    post showing a short quote, subreddit, date, happy/angry label and a link to the real Reddit thread.
-2. Open AI Visibility: a "What people are saying" box shows the counts (e.g. "RealPage: 40 posts, 70% angry")
-   and a link to Street Talk.
+2. At the top of Street Talk, the totals per company read sensibly (e.g. "RealPage: 40 posts, 70% angry").
 3. Ask the chat "What are people on Reddit saying about Yardi in Texas?" -- it answers with quotes and links.
 
 ## Tasks
@@ -77,9 +76,7 @@ Open: http://localhost:8765/street-talk.html
   newest first, each post: quote, subreddit, date, label, link. Part 2 groups by building and links to that
   building's page (`property.html?id=<id>`); part 3 marks warm leads. Add "Street Talk" to the tab bar on every page. Works on phone
   size. Plain "no posts yet" if a part is empty. Commit.
-- [ ] **T7 Box on AI Visibility.** `site/ai-visibility.html` gets a "What people are saying on Reddit" box
-  near the "Show up where operators talk" to-do: per-company post counts and % angry from
-  `street-talk.json`, 2 top quotes, link to Street Talk. Commit.
+- [x] **T7 (dropped by Drew 2026-09-15: Street Talk stays separate from AI Visibility -- skip, change nothing.)**
 - [ ] **T8 The chat can use it.** The `propertystack` chat plugin also loads `street_talk.csv` as table
   `street_talk`; the query-propertystack skill lists it ("Reddit posts" in Sources, always with the thread
   link). Add an offline plugin test (table loads, a sample query returns rows with links) to
