@@ -621,7 +621,7 @@ def write_chat_leads_csv(slug: str, area_json: dict) -> None:
     already flat)."""
     out_path = STATE_DATA_DIR / slug / "chat-leads.csv"
     with out_path.open("w", newline="") as f:
-        writer = csv.writer(f)
+        writer = csv.writer(f, lineterminator="\n")  # LF, same as git stores it
         writer.writerow(CHAT_LEADS_COLUMNS)
         for lead in area_json["leads"]:
             links = lead.get("links") or {}
