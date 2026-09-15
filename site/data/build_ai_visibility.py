@@ -1,8 +1,13 @@
 """Turn a NiubiGEO report.json into site/data/ai-visibility.json for the AI Visibility tab.
 
     python3 site/data/build_ai_visibility.py <niubigeo run dir or report.json> [--demo]
+    python3 site/data/build_ai_visibility.py <run dir> --baseline "Claude / ChatGPT, Sept 12"
 
---demo marks the output as practice data (made with a fake AI, not real answers).
+--demo marks the output as practice data (made with a fake AI, not real answers); practice runs
+are not added to the run history.
+Every real run is also saved as site/data/ai-visibility-history/<date>.json (one small summary per
+AI) and listed in index.json, so the tab can draw trend lines. --baseline only adds the run to the
+history, with that label, and leaves ai-visibility.json alone.
 """
 
 from __future__ import annotations
@@ -13,6 +18,7 @@ import sys
 from pathlib import Path
 
 OUT = Path(__file__).with_name("ai-visibility.json")
+HISTORY = Path(__file__).with_name("ai-visibility-history")
 
 # Friendly names for the OpenRouter models we ask.
 MODEL_NAMES = {
@@ -25,6 +31,8 @@ MODEL_NAMES = {
     "claude": "Claude (from memory)",
     "claude-web": "Claude + web search",
     "chatgpt": "ChatGPT (from memory)",
+    "gemini": "Gemini (memory)",
+    "gemini-web": "Gemini + Google Search",
 }
 
 
@@ -107,6 +115,14 @@ def build(report: dict, demo: bool) -> dict:
         m["lawsuitPct"] = _share(sum(q["bringsUpLawsuit"] for q in mine), len(mine))
         m["topPickPct"] = _share(sum(q["winner"] == target for q in unbranded if q["model"] == m["model"]),
                                  sum(q["model"] == m["model"] for q in unbranded))
+        mine_unbranded = [q for q in unbranded if q["model"] == m["model"]]
+        m["unbrandedMentionPct"] = _share(sum(q["mentioned"] for q in mine_unbranded), len(mine_unbranded))
+        m["missedQuestions"] = sorted({q["question"] for q in mine_unbranded if not q["mentioned"]})
+        my_wins: dict[str, int] = {}
+        for q in mine_unbranded:
+            if q["winner"]:
+                my_wins[q["winner"]] = my_wins.get(q["winner"], 0) + 1
+        m["topPicks"] = sorted(({"name": k, "count": v} for k, v in my_wins.items()), key=lambda w: -w["count"])
     for q in questions:
         del q["fullAnswer"]
 
@@ -149,16 +165,60 @@ def build(report: dict, demo: bool) -> dict:
     }
 
 
+HISTORY_FIELDS = ("model", "name", "answers", "failed", "mentionPct", "unbrandedMentionPct", "topPickPct",
+                  "firstPct", "lawsuitPct", "missedQuestions", "topPicks")
+
+
+def history_entry(data: dict, label: str = "", baseline: bool = False) -> dict:
+    """One run's small summary for the trend lines: per AI numbers, never full answers."""
+    date = (data.get("generatedAt") or "")[:10]
+    return {
+        "date": date,
+        "generatedAt": data.get("generatedAt"),
+        "label": label or f"{', '.join(m['name'] for m in data['models'])}, {date}",
+        "baseline": baseline,
+        "target": data["target"],
+        "models": [{k: m.get(k) for k in HISTORY_FIELDS} for m in data["models"]],
+    }
+
+
+def save_history(entry: dict, folder: Path | None = None) -> Path:
+    """Write <date>.json (a second run on the same day replaces the first) and refresh index.json."""
+    folder = folder or HISTORY
+    folder.mkdir(parents=True, exist_ok=True)
+    path = folder / f"{entry['date']}.json"
+    path.write_text(json.dumps(entry, indent=1))
+    runs = []
+    for f in sorted(folder.glob("????-??-??.json")):
+        e = json.loads(f.read_text())
+        runs.append({"date": e["date"], "file": f.name, "label": e["label"], "baseline": e["baseline"],
+                     "models": [m["model"] for m in e["models"]]})
+    (folder / "index.json").write_text(json.dumps({"runs": runs}, indent=1))
+    return path
+
+
 def main(argv: list[str]) -> None:
-    args = [a for a in argv if not a.startswith("--")]
+    label, args, it = None, [], iter(argv)
+    for a in it:
+        if a == "--baseline":
+            label = next(it, "")
+        elif not a.startswith("--"):
+            args.append(a)
     if not args:
         sys.exit(__doc__)
+    baseline = label is not None
     src = Path(args[0])
     if src.is_dir():
         src = src / "report.json"
-    data = build(json.loads(src.read_text()), demo="--demo" in argv)
+    demo = "--demo" in argv
+    data = build(json.loads(src.read_text()), demo=demo)
+    if baseline:
+        print(f"Saved baseline {save_history(history_entry(data, label, baseline=True))}")
+        return
     OUT.write_text(json.dumps(data, indent=1))
     print(f"Wrote {OUT} ({len(data['models'])} AIs, {len(data['questions'])} answers)")
+    if not demo:
+        print(f"Saved history {save_history(history_entry(data))}")
 
 
 if __name__ == "__main__":

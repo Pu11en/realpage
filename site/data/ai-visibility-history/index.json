@@ -1,0 +1,15 @@
+{
+ "runs": [
+  {
+   "date": "2026-09-12",
+   "file": "2026-09-12.json",
+   "label": "Claude / ChatGPT, Sept 12",
+   "baseline": true,
+   "models": [
+    "chatgpt",
+    "claude",
+    "claude-web"
+   ]
+  }
+ ]
+}

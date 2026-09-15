@@ -1,0 +1,104 @@
+{
+ "date": "2026-09-12",
+ "generatedAt": "2026-09-12T15:51:39.180Z",
+ "label": "Claude / ChatGPT, Sept 12",
+ "baseline": true,
+ "target": "RealPage",
+ "models": [
+  {
+   "model": "chatgpt",
+   "name": "ChatGPT (from memory)",
+   "answers": 17,
+   "failed": 0,
+   "mentionPct": 82.4,
+   "unbrandedMentionPct": 70.0,
+   "topPickPct": 30.0,
+   "firstPct": 41.2,
+   "lawsuitPct": 0.0,
+   "missedQuestions": [
+    "What is the best apartment property management software for large multifamily portfolios?",
+    "What is the best property management software for a multifamily apartment portfolio?",
+    "What tools do property owners use to set optimal rent pricing using market data and analytics?"
+   ],
+   "topPicks": [
+    {
+     "name": "Yardi",
+     "count": 4
+    },
+    {
+     "name": "RealPage",
+     "count": 3
+    },
+    {
+     "name": "Appfolio",
+     "count": 2
+    }
+   ]
+  },
+  {
+   "model": "claude",
+   "name": "Claude (from memory)",
+   "answers": 17,
+   "failed": 0,
+   "mentionPct": 94.1,
+   "unbrandedMentionPct": 90.0,
+   "topPickPct": 10.0,
+   "firstPct": 41.2,
+   "lawsuitPct": 57.1,
+   "missedQuestions": [
+    "What property management accounting software do most multifamily operators use?"
+   ],
+   "topPicks": [
+    {
+     "name": "Yardi",
+     "count": 5
+    },
+    {
+     "name": "Appfolio",
+     "count": 2
+    },
+    {
+     "name": "Entrata",
+     "count": 1
+    },
+    {
+     "name": "Buildium",
+     "count": 1
+    },
+    {
+     "name": "RealPage",
+     "count": 1
+    }
+   ]
+  },
+  {
+   "model": "claude-web",
+   "name": "Claude + web search",
+   "answers": 17,
+   "failed": 0,
+   "mentionPct": 88.2,
+   "unbrandedMentionPct": 80.0,
+   "topPickPct": 20.0,
+   "firstPct": 47.1,
+   "lawsuitPct": 71.4,
+   "missedQuestions": [
+    "I manage a 500-unit apartment community and need software that handles resident screening and accounting in one platform. What should I use?",
+    "What property management accounting software do most multifamily operators use?"
+   ],
+   "topPicks": [
+    {
+     "name": "Yardi",
+     "count": 5
+    },
+    {
+     "name": "Appfolio",
+     "count": 2
+    },
+    {
+     "name": "RealPage",
+     "count": 2
+    }
+   ]
+  }
+ ]
+}
