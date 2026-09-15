@@ -29,3 +29,10 @@
 - Added map.html to design-pages.txt. check-design.sh passes (3 pages, 0 problems); no sideways scroll at 390px, no page errors, tooltip shows on hover.
 - Left open: tooling/qa/check_map.py can't start — it waits for the text "PropertyStack" on index.html, which the site no longer shows (stale test, not caused by this task).
 - Screenshots: docs/design-screens/T4-desktop.png, T4-phone.png.
+
+## T5 AI Visibility page (ai-visibility.html) — done 2026-09-15 (commit 0ba2fe0)
+- All inline colours moved to classes: trend lines/points/legend dots use series classes (Gemini dark blue, Gemini+web light blue, Claude dark amber, Claude+web light amber, ChatGPT grey; spare blue/brown/grey for unknown AIs). Old #22c55e gone.
+- Chart grid lines --rule; bar tracks and tone bar = paper-2 with rule border; plain bars grey, RealPage bar blue; tone bar harsh = muted red, neutral = grey, settled = amber; tone key words as classes; quote rule blue-soft.
+- Font-size/margin inline styles moved to small note classes. Only data-driven bar widths stay inline.
+- Added ai-visibility.html to design-pages.txt. check-design.sh passes (4 pages, 0 problems); no sideways scroll at 390px, no page errors.
+- Screenshots: docs/design-screens/T5-desktop.png, T5-phone.png.

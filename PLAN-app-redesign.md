@@ -57,7 +57,7 @@ Open: http://localhost:8765/index.html
 - [x] **T4 Map page (`map.html`, `site/js/map.js`).** Light map: land `--paper-2`, borders `--rule`,
   markers blue with amber for the selected/hot one, tooltip = white card with navy text. Add
   `map.html`. Screenshots.
-- [ ] **T5 AI Visibility page (`ai-visibility.html`).** Cards, bars/charts and the 13 inline colors
+- [x] **T5 AI Visibility page (`ai-visibility.html`).** Cards, bars/charts and the 13 inline colors
   (follow the `dataviz` skill: blue/amber/grey series that read on white). Add `ai-visibility.html`.
   Screenshots.
 - [ ] **T6 The rest: `under-the-hood.html`, `privacy.html`, `master-table.html`.** Add all three.
