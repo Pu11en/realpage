@@ -71,7 +71,7 @@ Open: http://localhost:8765/index.html
   mode as the default. CSS/branding only: do not touch the model, prompts or proxy. If
   `bash tooling/dev.sh` can run, screenshot http://localhost:3000; if it can't (no key), note that
   Drew must look at it himself and move on.
-- [ ] **T9 Landing page fonts + Street Talk.** Landing (`business/marketing/landing/index.html`):
+- [x] **T9 Landing page fonts + Street Talk.** Landing (`business/marketing/landing/index.html`):
   swap Archivo for Plus Jakarta Sans headings / Inter body (copy the woff2 files into its `fonts/`,
   drop the `font-stretch` tricks that only worked with Archivo, keep the headline just as big and
   bold), and check its phone layout still fits. If `site/street-talk.html` exists, restyle it and add

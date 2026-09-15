@@ -60,3 +60,10 @@
 - Checked: the chat app was already running on :3000 (another session's), so I didn't restart it; screenshots load it framed with this branch's custom.css/loader.js/fonts swapped in. Browser set to prefer dark still shows light, Inter loaded, no page errors. check-design.sh passes (7 pages, 0 problems); chatbot tests 35 passed.
 - Left open: locally loader.js isn't mounted in compose (standalone pages would redirect-loop to "/"), so the light default applies on Railway builds; locally the running chat needs a restart of dev.sh to pick up the new CSS/font mounts.
 - Screenshots: docs/design-screens/T8-chat-desktop.png, T8-chat-phone.png.
+
+## T9 Landing page fonts + Street Talk — done 2026-09-15 (commit f9414fa)
+- Landing page (business/marketing/landing/index.html in the main realpage folder): Archivo replaced by self-hosted Plus Jakarta Sans (headings, buttons, labels, logo) and Inter (body). Both woff2 files copied into its fonts/ folder and preloaded. Every font-stretch trick removed (0 left); heading sizes and weights unchanged; heading letter-spacing loosened a little (-.035em/-.03em → -.022em/-.018em) because the new face is narrower and words were crowding.
+- Note: that landing folder is not tracked by git (business/ is in .git/info/exclude), so the landing edit itself can't be committed — it is saved in place; a copy of the old file is at /tmp/landing-index-before-T9.html. Old archivo/manrope font files left in place (not deleted).
+- Street Talk: site/street-talk.html does not exist on this branch, so nothing to restyle.
+- Checked: both fonts load, no page errors, no sideways scroll at 1440px and 390px; check-design.sh passes (7 pages, 0 problems).
+- Screenshots: docs/design-screens/T9-landing-desktop.png, T9-landing-phone.png.
