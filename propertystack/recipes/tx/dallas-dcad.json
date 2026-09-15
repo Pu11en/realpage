@@ -1,0 +1,42 @@
+{
+  "county": "Dallas County",
+  "state": "TX",
+  "system": "appraisal-district-bulk-file",
+  "zip_url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+  "since": "2024-09-01",
+  "bldg_table": {
+    "file": "COM_DETAIL.CSV",
+    "key_field": "ACCOUNT_NUM",
+    "class_field": "BLDG_CLASS_DESC",
+    "class_filter": "APARTMENT",
+    "units_field": "NUM_UNITS",
+    "min_units": 20,
+    "name_field": "PROPERTY_NAME",
+    "address_info_table": {
+      "file": "ACCOUNT_INFO.CSV",
+      "key_field": "ACCOUNT_NUM",
+      "street_num_field": "STREET_NUM",
+      "street_name_field": "FULL_STREET_NAME",
+      "city_field": "PROPERTY_CITY"
+    },
+    "new_construction": {
+      "mode": "pct_complete",
+      "pct_complete_field": "PCT_COMPLETE",
+      "max_pct_complete": 1.0
+    }
+  },
+  "sold": {
+    "info_table": {
+      "file": "ACCOUNT_INFO.CSV",
+      "key_field": "ACCOUNT_NUM"
+    },
+    "date_field": "DEED_TXFR_DATE",
+    "date_format": "%m/%d/%Y",
+    "owner_field": "OWNER_NAME1",
+    "phone_field": "PHONE_NUM",
+    "city_field": "PROPERTY_CITY"
+  },
+  "date_tested": "2026-09-14",
+  "live_test": "Downloaded DCAD2026_CURRENT.ZIP live (195,234,711 bytes, matches the plan's ~195MB estimate; the ViewPDFs.aspx redirect URL is itself a direct download with no further redirect). COM_DETAIL.CSV really has BLDG_CLASS_DESC values 'APARTMENT (BRICK EXTERIOR)'/'APARTMENT (FRAME EXTERIOR)' (4,173 real apartment rows) and a real PCT_COMPLETE column that is a 0.00-1.00 fraction, not a 0-100 percent (1.00 = fully built, confirmed live: 4,072 of 4,173 real apartment rows sit at exactly 1.00, the rest spread from .00 to .95) -- filtering units>=20 and pct<1.00 with a real PROPERTY_NAME gave 57 real under-construction rows live totalling 10,525 units, e.g. 'PALLADIUM CARVER LIVING (TDHCA #6031)' 288 units at 0.60 complete, 'THE ARMSTRONG AT KNOX' 165 units at 0.0 complete. ACCOUNT_INFO.CSV really has DEED_TXFR_DATE (MM/DD/YYYY text), OWNER_NAME1, PHONE_NUM and PROPERTY_CITY, joined by the same ACCOUNT_NUM -- joining it to the 2,723 real apartment accounts with units>=20 and filtering DEED_TXFR_DATE>=2024-09-01 gave 455 real deed transfers live, e.g. 'ALENA' 216 units sold 2025-06-23 to ASD ALENA PROPERTY OWNER LLC (Dallas, TX); 'CORTLAND LAS COLINAS' 371 units sold 2026-01-21 to CRP/RPM LAS COLINAS OWNERS LP (Austin, TX).",
+  "notes": "The plan's original guess of ~107 new-construction rows was in the right ballpark but not exact -- 57 is the real count once PCT_COMPLETE is read as a fraction (an earlier draft treated it as 0-100 and wrongly kept every fully-built row, since 1.0 < 100 is true). PHONE_NUM is blank on most rows live, so office_phone is often empty here -- never guessed, left blank per the plan's data-first rule; a later run can still web-search a phone only for the (Data first) allowed cases."
+}

@@ -1,0 +1,16 @@
+{
+ "city": "Arlington",
+ "state": "TX",
+ "system": "arcgis",
+ "endpoint": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC",
+ "fields": {
+  "permit_type": "MainUse",
+  "issue_date": "ISSUEDATE",
+  "co_date": "FINALDATE",
+  "address": "FOLDERNAME"
+ },
+ "date_format": "epoch_ms",
+ "date_tested": "2026-09-14",
+ "live_test": "Real query against gis2.arlingtontx.gov (needs a User-Agent header -- a bare urllib request with no UA gets HTTP 403, already handled by live_self_test.py's shared http_get) returned live rows, e.g. '340 E STEPHENS STREET Bldg', MainUse='Apartments (3+ dwelling units)', WORKDESC='New Construction', issued 2026-09-01 (epoch ms 1788363343000), $65,000,000 declared value; '300 E STEPHENS STREET' and four '9582/9586/9588 EDEN ROAD BLDG' rows also returned live.",
+ "notes": "No unit-count field and no owner/name field on this layer (fields are ImportDate/OBJECTID/FOLDERYEAR/FOLDERSEQUENCE/FOLDERTYPE/STATUSDESC/ISSUEDATE/FINALDATE/SUBDESC/WORKDESC/FOLDERNAME/ConstructionValuationDeclared/MainUse/LandUseDescription/Structure/Census/NameofBusiness/SignConstructionValue/ServiceGrid/FOLDERCONDITION/PROPX/PROPY/PROPGISID1/PlanningSector/ZoningUse/InDate/CouncilDistrict -- checked live via the layer's own ?f=json metadata) -- units stay None ('Units: not public yet'), find_upcoming's type-match fallback (MainUse LIKE 'Apartments%') is what keeps these rows since there's no unit count to gate on. FOLDERNAME doubles as both name and address (it's a street address string like '340 E STEPHENS STREET Bldg'), same fallback pattern as Gilbert/Phoenix."
+}

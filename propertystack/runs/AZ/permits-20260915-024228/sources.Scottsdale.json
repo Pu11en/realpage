@@ -1,0 +1,17 @@
+{
+ "city": "Scottsdale",
+ "state": "AZ",
+ "system": "arcgis",
+ "endpoint": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC",
+ "fields": {
+  "permit_type": "PermitType",
+  "issue_date": "IssueDate",
+  "address": "Address"
+ },
+ "date_format": "epoch_ms",
+ "owner_field": "Owner",
+ "builder_field": "Builder",
+ "date_tested": "2026-09-14",
+ "live_test": "MULTI-FAMILY DWELLING / 4251 N MARSHALL WY (Owner: MREG 101 Bell LLC) and 7117 N SCOTTSDALE RD (Owner: Artesia Multifamily Owner, LLC) returned live",
+ "notes": "Owner + Builder fields are real developer/owner names for F8 phone lookup -- no separate contact source needed for Scottsdale permits."
+}

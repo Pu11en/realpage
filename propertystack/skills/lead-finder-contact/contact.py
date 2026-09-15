@@ -18,6 +18,7 @@ from __future__ import annotations
 
 import re
 import sys
+from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
 import phonenumbers
@@ -232,45 +233,58 @@ def find_developer_for_new_permit(
 NOT_YET_BUILT_STAGES = ("planned", "permitted", "under construction")
 
 
+def _fill_one_contact(rec, search_fn, fetch_fn, parcel_recipe, parcel_fetch_rows) -> None:
+    if not rec.developer and rec.stage in NOT_YET_BUILT_STAGES:
+        developer, source = find_developer_for_new_permit(
+            rec, parcel_recipe, parcel_fetch_rows or (lambda source: []), search_fn
+        )
+        if developer:
+            rec.developer = developer
+            rec.sources.append(source)
+
+    if not rec.office_phone:
+        website = rec.website or find_website(rec.developer, search_fn)
+        if website:
+            if not rec.website:
+                rec.website = website
+            html = _page_html(fetch_fn(website))
+            phone = find_office_phone(html)
+            if phone:
+                rec.office_phone = phone
+                rec.sources.append({"fact": "office_phone", "url": website})
+
+    if rec.developer and "(contact:" not in rec.developer:
+        for fact_key in ("permit", "agenda", "news"):
+            url = rec.links.get(fact_key)
+            if not url:
+                continue
+            html = _page_html(fetch_fn(url))
+            name = find_named_contact(html)
+            if name:
+                rec.developer = f"{rec.developer} (contact: {name})"
+                rec.sources.append({"fact": "contact_name", "url": url})
+                break
+
+
 def fill_contacts(
     records: list,
     search_fn,
     fetch_fn,
     parcel_recipe: dict | None = None,
     parcel_fetch_rows=None,
+    max_workers: int = 6,
 ) -> list:
     """Batch entry point: fills office_phone / website and, only when a
     permit/agenda/news page names someone, folds "(contact: Name)" onto the
-    developer field. Never overwrites a phone/website already known."""
-    for rec in records:
-        if not rec.developer and rec.stage in NOT_YET_BUILT_STAGES:
-            developer, source = find_developer_for_new_permit(
-                rec, parcel_recipe, parcel_fetch_rows or (lambda source: []), search_fn
-            )
-            if developer:
-                rec.developer = developer
-                rec.sources.append(source)
+    developer field. Never overwrites a phone/website already known.
 
-        if not rec.office_phone:
-            website = rec.website or find_website(rec.developer, search_fn)
-            if website:
-                if not rec.website:
-                    rec.website = website
-                html = _page_html(fetch_fn(website))
-                phone = find_office_phone(html)
-                if phone:
-                    rec.office_phone = phone
-                    rec.sources.append({"fact": "office_phone", "url": website})
-
-        if rec.developer and "(contact:" not in rec.developer:
-            for fact_key in ("permit", "agenda", "news"):
-                url = rec.links.get(fact_key)
-                if not url:
-                    continue
-                html = _page_html(fetch_fn(url))
-                name = find_named_contact(html)
-                if name:
-                    rec.developer = f"{rec.developer} (contact: {name})"
-                    rec.sources.append({"fact": "contact_name", "url": url})
-                    break
+    S1: each record's lookups are independent (they only mutate that one
+    `rec`), so they run several at a time in a thread pool -- WebHelper
+    itself enforces the >=2s same-site gap and caches every page."""
+    with ThreadPoolExecutor(max_workers=max_workers) as pool:
+        list(pool.map(
+            lambda rec: _fill_one_contact(rec, search_fn, fetch_fn, parcel_recipe, parcel_fetch_rows),
+            records,
+        ))
+    return records
     return records

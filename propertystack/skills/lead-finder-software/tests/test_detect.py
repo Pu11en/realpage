@@ -176,3 +176,21 @@ def test_fill_software_no_website_stays_unknown():
     web = FakeWeb({})
     out = fill_software(records, web)
     assert out[0].software == "unknown"
+
+
+def test_fill_software_keeps_order_when_run_in_parallel():
+    """S1: fill_software runs detect_software for several records at once
+    (thread pool) -- results must still come back in the original order."""
+    pages = {}
+    records = []
+    for i in range(8):
+        site = f"https://site{i}.example.com"
+        pages[site] = f'<a href="https://portal{i}.example.com/rentcafe.com/login">Resident Login</a>'
+        pages[f"https://portal{i}.example.com/rentcafe.com/login"] = (
+            f'<a href="https://portal{i}.example.com/rentcafe.com/sign-in">Sign in</a>'
+        )
+        records.append(LeadRecord(area="xx", city="Somewhere", name=f"Building {i}", website=site))
+    web = FakeWeb(pages)
+    out = fill_software(records, web, max_workers=4)
+    assert [r.name for r in out] == [f"Building {i}" for i in range(8)]
+    assert all(r.software == "Yardi" for r in out)

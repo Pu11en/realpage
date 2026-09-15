@@ -81,7 +81,14 @@ def realpage_counts(state, counts_path=COUNTS_FILE):
     return counts.get(state, {}).get("cities", {})
 
 
-def rank_cities(state, fetcher=fetch, months_back=12):
+REALPAGE_HEAVY_MIN = 3  # plan: "3+ RealPage buildings in the client map ... go last"
+
+
+def rank_cities(state, fetcher=fetch, months_back=12, exclude_cities=None):
+    """`exclude_cities`, if given, drops matching city names (case-insensitive) --
+    e.g. a state's data recipe passing in one county's cities to skip a
+    finished area without hard-coding that area's names here."""
+    exclude = {c.lower() for c in (exclude_cities or ())}
     stamp = f"{datetime.date.today():%Y%m%d}"
     months = last_months(
         fetcher(STATE_DIR, f"bps-state-index-{stamp}.html"), "st", n=months_back)
@@ -92,6 +99,8 @@ def rank_cities(state, fetcher=fetch, months_back=12):
         d = BPS + f"Place/{region}%20Region/"
         for m in months:
             for city, units, is_county in parse_places_all(fetcher(d + f"{rg}{m}c.txt", f"{rg}{m}c.txt"), state):
+                if city.lower() in exclude:
+                    continue
                 key = (city, is_county)
                 totals[key] = totals.get(key, 0) + units
     rp_counts = realpage_counts(state)
@@ -100,13 +109,16 @@ def rank_cities(state, fetcher=fetch, months_back=12):
          "realpage_count": rp_counts.get(city, 0)}
         for (city, is_county), units in totals.items() if units > 0
     ]
-    cities.sort(key=lambda c: -c["permits_5plus"])
+    # RealPage-gap rule (Drew 2026-09-14): rank, don't ban -- cities with few/no
+    # RealPage buildings first, 3+-RealPage cities last, only if the caps allow;
+    # permit volume still orders within each group.
+    cities.sort(key=lambda c: (c["realpage_count"] >= REALPAGE_HEAVY_MIN, -c["permits_5plus"]))
     window = f"20{months[0][:2]}-{months[0][2:]}..20{months[-1][:2]}-{months[-1][2:]}"
     return {"state": state, "window": window, "source": BPS, "cities": cities}
 
 
-def build(state, fetcher=fetch, months_back=12):
-    out = rank_cities(state, fetcher, months_back)
+def build(state, fetcher=fetch, months_back=12, exclude_cities=None):
+    out = rank_cities(state, fetcher, months_back, exclude_cities=exclude_cities)
     path = DATA / state.lower() / "cities.json"
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(out, indent=1) + "\n")
@@ -117,8 +129,10 @@ if __name__ == "__main__":
     p = argparse.ArgumentParser()
     p.add_argument("--state", required=True)
     p.add_argument("--months", type=int, default=12)
+    p.add_argument("--exclude-file", help="JSON list of city names to skip (e.g. a finished county's cities)")
     args = p.parse_args()
-    out, path = build(args.state.upper(), months_back=args.months)
+    exclude = json.loads(pathlib.Path(args.exclude_file).read_text()) if args.exclude_file else None
+    out, path = build(args.state.upper(), months_back=args.months, exclude_cities=exclude)
     for c in out["cities"][:20]:
         tag = " (county area)" if c["is_county_area"] else ""
         print(f"{c['city']}{tag}: permits={c['permits_5plus']} realpage={c['realpage_count']}")

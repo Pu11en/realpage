@@ -22,6 +22,7 @@ import hashlib
 import json
 import os
 import sys
+import threading
 import time
 import urllib.error
 import urllib.parse
@@ -130,6 +131,13 @@ class WebHelper:
         self._block_counts: dict[str, int] = {}
         self._skipped: dict[str, str] = {}
         self.site_gap_s = site_gap_s
+        # S1: details/software/contact lookups now run several records at once
+        # (a thread pool in run.py/fill_software/fill_contacts), so every bit
+        # of shared state a WebHelper mutates needs its own lock -- otherwise
+        # two threads hitting the same site could both pass `_respect_gap`
+        # before either records `_last_visit`, or `_block_counts` could lose
+        # an increment to a race and never trip `BLOCK_LIMIT`.
+        self._lock = threading.Lock()
 
         self._page_fetchers = page_fetchers if page_fetchers is not None else [
             _fetch_crawl4ai,
@@ -146,16 +154,21 @@ class WebHelper:
                 results = self._search_jina(query, n)
             except OSError:
                 results = []
-            self.counts.jina += 1
+            with self._lock:
+                self.counts.jina += 1
         if results and not _looks_junk(query, results):
             return results
         if results:
-            self.junk_jina += 1
-        if not self.brave_api_key or not self.brave_usage.under_cap():
+            with self._lock:
+                self.junk_jina += 1
+        with self._lock:
+            brave_ok = bool(self.brave_api_key) and self.brave_usage.under_cap()
+        if not brave_ok:
             return results
         brave_results = self._search_brave(query, n)
-        self.counts.brave += 1
-        self.brave_usage.record_call()
+        with self._lock:
+            self.counts.brave += 1
+            self.brave_usage.record_call()
         return brave_results or results
 
     def _search_jina(self, query: str, n: int) -> list[dict]:
@@ -193,8 +206,9 @@ class WebHelper:
 
     def fetch(self, url: str) -> FetchResult:
         site = _site_key(url)
-        if site in self._skipped:
-            return FetchResult(url=url, ok=False, skipped_reason=self._skipped[site])
+        with self._lock:
+            if site in self._skipped:
+                return FetchResult(url=url, ok=False, skipped_reason=self._skipped[site])
 
         cached = self._read_cache(url)
         if cached is not None:
@@ -208,11 +222,14 @@ class WebHelper:
                 break
 
         if html is None or _looks_blocked(html):
-            self._block_counts[site] = self._block_counts.get(site, 0) + 1
-            if self._block_counts[site] >= BLOCK_LIMIT:
-                reason = f"blocked {self._block_counts[site]} times"
-                self._skipped[site] = reason
-                return FetchResult(url=url, ok=False, skipped_reason=reason)
+            with self._lock:
+                self._block_counts[site] = self._block_counts.get(site, 0) + 1
+                count = self._block_counts[site]
+                if site not in self._skipped and count >= BLOCK_LIMIT:
+                    reason = f"blocked {BLOCK_LIMIT} times"
+                    self._skipped[site] = reason
+                if site in self._skipped:
+                    return FetchResult(url=url, ok=False, skipped_reason=self._skipped[site])
             return FetchResult(url=url, ok=False, skipped_reason="blocked")
 
         self._write_cache(url, html)
@@ -234,11 +251,18 @@ class WebHelper:
         self._cache_path(url).write_text(html, encoding="utf-8")
 
     def _respect_gap(self, site: str) -> None:
-        last = self._last_visit.get(site)
-        now = time.time()
-        if last is not None and now - last < self.site_gap_s:
-            time.sleep(self.site_gap_s - (now - last))
-        self._last_visit[site] = time.time()
+        """Reserve this site's next visit slot under the lock (so two
+        threads fetching the same site can't both see no-recent-visit and
+        both proceed at once), then sleep outside the lock so a slow visit
+        to one site never blocks fetches to other sites."""
+        with self._lock:
+            last = self._last_visit.get(site)
+            now = time.time()
+            wait = self.site_gap_s - (now - last) if last is not None else 0.0
+            reserved_at = now + max(wait, 0.0)
+            self._last_visit[site] = reserved_at
+        if wait > 0:
+            time.sleep(wait)
 
 
 _STOPWORDS = {

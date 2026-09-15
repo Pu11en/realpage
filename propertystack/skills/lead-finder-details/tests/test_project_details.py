@@ -52,7 +52,7 @@ def test_geocode_address_fn_raises_returns_none():
 
 
 def test_fill_project_details_fills_units_developer_opening_website():
-    record = make_named_record()
+    record = make_named_record(stage="leasing")
     results = [{"title": "Riverside Flats", "url": "https://riversideflats.example.com"}]
     html = (
         "<html>Riverside Flats is a new 220-unit community developed by "
@@ -75,7 +75,7 @@ def test_fill_project_details_fills_units_developer_opening_website():
 
 
 def test_fill_project_details_picks_news_link_separately():
-    record = make_named_record()
+    record = make_named_record(stage="leasing")
     results = [
         {"title": "Local Business Journal", "url": "https://example-businessjournal.example.com/story"},
         {"title": "Riverside Flats", "url": "https://riversideflats.example.com"},
@@ -91,6 +91,27 @@ def test_fill_project_details_picks_news_link_separately():
     out = fill_project_details(record, search_fn, fetch_fn)
     assert out.links["news"] == "https://example-businessjournal.example.com/story"
     assert out.website == "https://riversideflats.example.com"
+
+
+def test_fill_project_details_never_searches_website_for_not_yet_built():
+    """Data-first (2026-09-14): a planned/permitted/under-construction
+    project has no leasing site yet, so it never gets a website even when
+    the search would otherwise return one."""
+    record = make_named_record(stage="permitted")
+    results = [{"title": "Riverside Flats", "url": "https://riversideflats.example.com"}]
+    html = "Riverside Flats is a new 220-unit community. Now leasing March 2026."
+
+    def search_fn(query, n):
+        return results
+
+    def fetch_fn(url):
+        return FakePage(ok=True, html=html)
+
+    out = fill_project_details(record, search_fn, fetch_fn)
+    assert out is not None
+    assert out.units == 220
+    assert out.website == ""
+    assert "website" not in out.links
 
 
 def test_fill_project_details_drops_when_units_still_unknown():
@@ -189,7 +210,7 @@ def test_fill_project_details_rejects_same_word_unrelated_site():
 def test_fill_project_details_searches_name_before_address():
     """F10c: the project/brand name is searched first; the street address is
     only searched if the name query found no real match."""
-    record = make_record(name="La Victoria Commons", city="Tempe", address="1020 W Apache Blvd")
+    record = make_record(name="La Victoria Commons", city="Tempe", address="1020 W Apache Blvd", stage="leasing")
     queries_seen = []
 
     def search_fn(query, n):
@@ -208,7 +229,7 @@ def test_fill_project_details_searches_name_before_address():
 
 def test_fill_project_details_falls_back_to_address_when_name_query_fails():
     """No acceptable match on the name query -- fall back to the address query."""
-    record = make_record(name="1020 Apache", city="Tempe", address="1020 W Apache Blvd")
+    record = make_record(name="1020 Apache", city="Tempe", address="1020 W Apache Blvd", stage="leasing")
     queries_seen = []
 
     def search_fn(query, n):
@@ -226,7 +247,7 @@ def test_fill_project_details_falls_back_to_address_when_name_query_fails():
 
 
 def test_fill_project_details_picks_real_building_site():
-    record = make_record(name="Bella Victoria", city="Tucson", address="1 Bella Victoria Way")
+    record = make_record(name="Bella Victoria", city="Tucson", address="1 Bella Victoria Way", stage="leasing")
     results = [{"title": "Bella Victoria Apartments", "url": "https://bellavictoria.com"}]
 
     def search_fn(query, n):

@@ -1,0 +1,37 @@
+{
+  "county": "Harris County",
+  "state": "TX",
+  "system": "appraisal-district-bulk-file",
+  "zip_url": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip",
+  "since": "2024-09-01",
+  "encoding": "latin-1",
+  "bldg_table": {
+    "file": "real_acct.txt",
+    "key_field": "acct",
+    "class_field": "state_class",
+    "class_filter": "B1",
+    "class_exact": true,
+    "address_field": "site_addr_1",
+    "city_field": "site_addr_2",
+    "sold_min_area": 15000,
+    "area_field": "bld_ar",
+    "new_construction": {
+      "mode": "value_and_area",
+      "value_field": "new_construction_val",
+      "area_field": "bld_ar",
+      "min_area": 15000
+    }
+  },
+  "sold": {
+    "deed_table": {
+      "file": "deeds.txt",
+      "key_field": "acct",
+      "date_field": "dos",
+      "date_format": "%m/%d/%Y"
+    },
+    "owner_field": "mailto"
+  },
+  "date_tested": "2026-09-14",
+  "live_test": "Downloaded Real_acct_owner.zip live (211,881,907 bytes, close to the plan's ~212MB estimate); real_acct.txt (889MB uncompressed) is a real tab-delimited file with columns acct/state_class/bld_ar/new_construction_val/site_addr_1/site_addr_2/mailto exactly as named here. There is no NUM_UNITS-equivalent column in this file at all (confirmed by reading the real header row), so unlike Dallas this recipe filters class=B1 (multifamily) plus a building-area floor instead of a unit count, per the plan's 'drop small buildings by building area' instruction -- filtering state_class=='B1' (exact) and new_construction_val>0 and bld_ar>=15,000 sqft gave 89 real under-construction rows live, e.g. '23615 KINGSLAND BLVD' 396,484 sqft, $15,632,471 new-construction value. deeds.txt is a real separate file with only acct/dos/clerk_yr/clerk_id/deed_id (no owner, no price) and several dated rows per account -- joining its latest dos per account to the 2,955 real B1 accounts with bld_ar>=15,000 and filtering dos>=2024-09-01 gave 337 real sold rows live, e.g. '702 HADLEY ST' (556,114 sqft building) sold 2025-06-10 to 'RE III RESHI HOUSTON III DE LLC' -- units left as unknown since this file has no unit-count column at all.",
+  "notes": "No PROPERTY_NAME-equivalent field exists in real_acct.txt either (confirmed live), so every Houston lead's name falls back to its site address, same as Phoenix's blank-name fallback from S3 and Dallas's own address fallback in this same recipe pair. `mailto` sometimes reads '% <management company> & <partner>' for multi-party LLC owners (seen live, e.g. 'ASD ALENA PROPERTY OWNER LLC &') -- kept as-is, never trimmed or guessed at, since it is the real recorded mailing name."
+}

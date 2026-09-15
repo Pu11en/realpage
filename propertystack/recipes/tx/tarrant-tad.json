@@ -1,0 +1,20 @@
+{
+  "county": "Tarrant County",
+  "state": "TX",
+  "system": "county-appraisal-zip",
+  "zip_urls": [
+    "https://www.tad.org/content/data-download/2025CommPermits.zip",
+    "https://www.tad.org/content/data-download/2026CommPermits.zip"
+  ],
+  "use_field": "Intended Property Use",
+  "use_filter": "Apartments",
+  "city_field": "Issuing Agency",
+  "address_field": "Situs Address",
+  "name_field": "Site Name",
+  "units_field": "Total Units",
+  "date_field": "Issue Date",
+  "min_units": 20,
+  "date_tested": "2026-09-14",
+  "live_test": "Downloaded both zip years live (www.tad.org redirects http->https and requires a User-Agent, confirmed via curl -I); each zip contains exactly one xlsx (e.g. '2026Comm Permits.xlsx', sheet '2025 Permits', 3,320 rows, real header row: Account/Class Code/Site Number/Site Name/Permit Number/Situs Address/Site Class/Total NLA/Total GBA/Total Units/Land-to-Building Ratio/Market Subarea/Neighborhood/Issuing Agency/Permit Type/Intended Property Use/Description/Permit Issued Value/Issue Date -- matches the plan's expected 'Total Units' field exactly). Filtering Intended Property Use contains 'Apartments' and Total Units>=20 gave 150 real rows live, spanning multiple real Tarrant County cities via the Issuing Agency column (e.g. SERENA VISTA APARTMENTS, 120 units, Arlington, issued 2025-01-02; GARDEN PARK APTS, 251 units, Arlington, issued 2024-12-17; WHISPERWIND APARTMENTS, 49 units, Fort Worth, issued 2024-12-12; RIDGLEA COURT APARTMENTS, 26 units, Fort Worth, issued 2025-02-04) -- confirms this one recipe genuinely covers every city in the county, not just Fort Worth/Arlington.",
+  "notes": "Not a delimited flat file like Maricopa's sales recipe -- each zip holds a single xlsx, so a new module (skills/lead-finder-permits/tad_zip.py) unzips + reads it with openpyxl, following the same 'county specifics in data, generic code' pattern as Maricopa's sales/parcel join. Total Units is sometimes 0 for still-in-development projects with an unknown final count (e.g. 'THE CALHOUN APTS (IN DEVELOPMENT)') -- treated as unknown/None (never as literally zero units, and never estimated), matching the plan's units rule. Output is produced via tad_zip.find_new_apartment_permits (not find_upcoming), since find_upcoming's signature takes one caller-supplied city per call and this source's whole point is multi-city coverage from one file."
+}

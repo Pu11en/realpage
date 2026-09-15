@@ -57,3 +57,19 @@ def test_build_writes_state_slug_file(tmp_path, monkeypatch):
     assert path == tmp_path / "tx" / "cities.json"
     assert json.loads(path.read_text())["state"] == "TX"
     assert out["cities"][0]["city"] == "Cedarville"
+
+
+def test_exclude_cities_drops_matching_names_case_insensitive():
+    out = rank.rank_cities("TX", fixture_fetcher(), exclude_cities=["rivertown"])
+    assert [c["city"] for c in out["cities"]] == \
+        ["Cedarville", "Oakford County (unincorporated area)"]
+
+
+def test_realpage_gap_rule_pushes_heavy_cities_last(monkeypatch):
+    monkeypatch.setattr(rank, "realpage_counts", lambda state: {"Cedarville": 3})
+    out = rank.rank_cities("TX", fixture_fetcher())
+    cities = [c["city"] for c in out["cities"]]
+    # Cedarville has the most permits (480) but 3+ RealPage buildings, so it
+    # ranks after the smaller-permit, RealPage-gap Rivertown and the county area.
+    assert cities == ["Rivertown", "Oakford County (unincorporated area)", "Cedarville"]
+    assert cities[-1] == "Cedarville"

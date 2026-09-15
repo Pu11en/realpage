@@ -69,12 +69,17 @@ def find_upcoming(
 
 
 def _is_apartment(row: dict, fields: dict, units_pattern: str | None) -> bool:
+    # A known unit count is authoritative: a record that reports fewer than
+    # 20 units is never a qualifying apartment project, even when the permit
+    # type text matches (a duplex permitted as "MULTI-FAMILY DWELLING" is a
+    # real example that slipped through when type matching won regardless of
+    # the row's own unit count).
+    units = _parse_units(row, fields, units_pattern)
+    if units is not None:
+        return units >= 20
     type_key = fields.get("permit_type")
     type_value = str(row.get(type_key, "")) if type_key else ""
     if APARTMENT_RE.search(type_value):
-        return True
-    units = _parse_units(row, fields, units_pattern)
-    if units is not None and units >= 20:
         return True
     if RENOVATION_TYPE_RE.match(type_value.strip()):
         return False
@@ -117,7 +122,7 @@ def _parse_date(value) -> datetime.date | None:
     if isinstance(value, (int, float)):
         # ArcGIS FeatureServer fields return dates as epoch milliseconds.
         return datetime.datetime.fromtimestamp(value / 1000, tz=datetime.timezone.utc).date()
-    for fmt in ("%Y-%m-%d", "%m/%d/%Y", "%Y-%m-%dT%H:%M:%S", "%Y-%m-%dT%H:%M:%S.%f"):
+    for fmt in ("%Y-%m-%d", "%m/%d/%Y", "%Y/%m/%d", "%Y-%m-%dT%H:%M:%S", "%Y-%m-%dT%H:%M:%S.%f"):
         try:
             return datetime.datetime.strptime(value, fmt).date()
         except ValueError:
@@ -152,6 +157,15 @@ def _build_record(
     address = str(row.get(address_key, "")) if address_key else ""
     name_key = fields.get("name")
     name = str(row.get(name_key) or "").strip() if name_key else ""
+    if not name:
+        # No mapped name field (or it was blank on this row): a city's
+        # permit-type field often doubles as the real project name (e.g. a
+        # "PERMIT_NAME" column holding "MADISON AT LOUISE APTS." with no
+        # separate `fields.name` mapped); fall back to it, then to the
+        # street address, rather than leaving the lead nameless.
+        type_key = fields.get("permit_type")
+        type_value = str(row.get(type_key) or "").strip() if type_key else ""
+        name = type_value or address
     units = _parse_units(row, fields, units_pattern)
     permit_link = str(row.get("link") or row.get("url") or endpoint)
     developer, developer_source = _find_owner(row, recipe or {}, permit_link)
@@ -211,6 +225,16 @@ def _find_builder_phone(row: dict, recipe: dict, permit_link: str) -> tuple[str,
     return "", None
 
 
+# ArcGIS FeatureServer caps a single query response at 1,000 rows regardless
+# of resultRecordCount, and signals it with exceededTransferLimit=true rather
+# than erroring -- a source with 2,000+ matching permits silently loses
+# everything past row 1,000 unless the caller pages with resultOffset.
+# Capped at this many extra pages so a runaway feed can't loop forever;
+# large enough for every real permit layer seen so far (one real source
+# needed 3 pages for ~2,200 rows).
+MAX_ARCGIS_PAGES = 20
+
+
 def _fetch_rows(endpoint: str, http_get: HttpGet) -> list[dict]:
     if not endpoint:
         return []
@@ -221,5 +245,27 @@ def _fetch_rows(endpoint: str, http_get: HttpGet) -> list[dict]:
     if isinstance(data, list):
         return data
     if isinstance(data, dict) and "features" in data:
-        return [f.get("attributes", {}) for f in data.get("features", [])]
+        rows = [f.get("attributes", {}) for f in data.get("features", [])]
+        page = 1
+        offset = len(rows)
+        while data.get("exceededTransferLimit") and page < MAX_ARCGIS_PAGES:
+            page_url = _with_result_offset(endpoint, offset)
+            try:
+                data = http_get(page_url)
+            except Exception:
+                break
+            if not isinstance(data, dict):
+                break
+            page_rows = [f.get("attributes", {}) for f in data.get("features", [])]
+            if not page_rows:
+                break
+            rows.extend(page_rows)
+            offset += len(page_rows)
+            page += 1
+        return rows
     return []
+
+
+def _with_result_offset(endpoint: str, offset: int) -> str:
+    separator = "&" if "?" in endpoint else "?"
+    return f"{endpoint}{separator}resultOffset={offset}"

@@ -1,0 +1,1838 @@
+[
+ {
+  "area": "tx",
+  "city": "Austin",
+  "name": "Building Permit",
+  "address": "2631 KRAMER LN UNIT FW1",
+  "lat": null,
+  "lon": null,
+  "units": 111,
+  "stage": "permitted",
+  "permit_date": "2026-08-27",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13762348'}"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13762348'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13762352'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13762350'}"
+   }
+  ],
+  "why": "new multifamily permit"
+ },
+ {
+  "area": "tx",
+  "city": "Austin",
+  "name": "Building Permit",
+  "address": "13300 CENTER LAKE DR BLDG 4",
+  "lat": null,
+  "lon": null,
+  "units": 39,
+  "stage": "permitted",
+  "permit_date": "2026-08-10",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13742905'}"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13742905'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13742902'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13742904'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13742907'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13742908'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13742909'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13742906'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13742903'}"
+   }
+  ],
+  "why": "new multifamily permit"
+ },
+ {
+  "area": "tx",
+  "city": "Austin",
+  "name": "Building Permit",
+  "address": "1600 WHELESS LN",
+  "lat": null,
+  "lon": null,
+  "units": 50,
+  "stage": "permitted",
+  "permit_date": "2026-08-10",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13664787'}"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13664787'}"
+   }
+  ],
+  "why": "new multifamily permit"
+ },
+ {
+  "area": "tx",
+  "city": "Austin",
+  "name": "Building Permit",
+  "address": "7333 BLUFF SPRINGS RD BLDG 3",
+  "lat": null,
+  "lon": null,
+  "units": 20,
+  "stage": "permitted",
+  "permit_date": "2026-08-03",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13748405'}"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13748405'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13748403'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13748404'}"
+   }
+  ],
+  "why": "new multifamily permit"
+ },
+ {
+  "area": "tx",
+  "city": "Austin",
+  "name": "Building Permit",
+  "address": "1820 ESTANCIA PKWY BLDG 1",
+  "lat": null,
+  "lon": null,
+  "units": 148,
+  "stage": "permitted",
+  "permit_date": "2026-07-22",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13739653'}"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13739653'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13739654'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13739658'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13739656'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13739657'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13739655'}"
+   }
+  ],
+  "why": "new multifamily permit"
+ },
+ {
+  "area": "tx",
+  "city": "Austin",
+  "name": "Building Permit",
+  "address": "800 E ST JOHNS AVE BLDG 2",
+  "lat": null,
+  "lon": null,
+  "units": 70,
+  "stage": "permitted",
+  "permit_date": "2026-07-15",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13735907'}"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13735907'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13735906'}"
+   }
+  ],
+  "why": "new multifamily permit"
+ },
+ {
+  "area": "tx",
+  "city": "Austin",
+  "name": "Building Permit",
+  "address": "845 BLACKSON AVE",
+  "lat": null,
+  "lon": null,
+  "units": 85,
+  "stage": "permitted",
+  "permit_date": "2026-07-15",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13735915'}"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13735915'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13735917'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13735916'}"
+   }
+  ],
+  "why": "new multifamily permit"
+ },
+ {
+  "area": "tx",
+  "city": "Austin",
+  "name": "Building Permit",
+  "address": "7504 COTA VISTA DR BLDG 7",
+  "lat": null,
+  "lon": null,
+  "units": 44,
+  "stage": "permitted",
+  "permit_date": "2026-07-06",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13416147'}"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13416147'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13416142'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13416144'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13416141'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13416145'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13416146'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13416143'}"
+   }
+  ],
+  "why": "new multifamily permit"
+ },
+ {
+  "area": "tx",
+  "city": "Austin",
+  "name": "Building Permit",
+  "address": "512 SABINE ST",
+  "lat": null,
+  "lon": null,
+  "units": 232,
+  "stage": "permitted",
+  "permit_date": "2026-07-01",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13641646'}"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13641646'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13641644'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13641645'}"
+   }
+  ],
+  "why": "new multifamily permit"
+ },
+ {
+  "area": "tx",
+  "city": "Austin",
+  "name": "Building Permit",
+  "address": "6915 BRIDGE POINT PKWY BLDG 8",
+  "lat": null,
+  "lon": null,
+  "units": 30,
+  "stage": "permitted",
+  "permit_date": "2026-06-08",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13623495'}"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13623495'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13623496'}"
+   }
+  ],
+  "why": "new multifamily permit"
+ },
+ {
+  "area": "tx",
+  "city": "Austin",
+  "name": "Building Permit",
+  "address": "1326 LAMAR SQUARE DR",
+  "lat": null,
+  "lon": null,
+  "units": 101,
+  "stage": "permitted",
+  "permit_date": "2026-05-13",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13689848'}"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13689848'}"
+   }
+  ],
+  "why": "new multifamily permit"
+ },
+ {
+  "area": "tx",
+  "city": "Austin",
+  "name": "Building Permit",
+  "address": "1420 E HOWARD LN BLDG 1",
+  "lat": null,
+  "lon": null,
+  "units": 108,
+  "stage": "permitted",
+  "permit_date": "2026-05-08",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13609126'}"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13609126'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13609136'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13609131'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13609130'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13609137'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13609133'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13609141'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13609135'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13609140'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13609138'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13609127'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13609132'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13609128'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13609134'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13609139'}"
+   }
+  ],
+  "why": "new multifamily permit"
+ },
+ {
+  "area": "tx",
+  "city": "Austin",
+  "name": "Building Permit",
+  "address": "11901 DIONDA LN BLDG 1",
+  "lat": null,
+  "lon": null,
+  "units": 24,
+  "stage": "permitted",
+  "permit_date": "2026-03-19",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13197738'}"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13197738'}"
+   }
+  ],
+  "why": "new multifamily permit"
+ },
+ {
+  "area": "tx",
+  "city": "Austin",
+  "name": "Building Permit",
+  "address": "5516 HUMMING BIRD LN",
+  "lat": null,
+  "lon": null,
+  "units": 104,
+  "stage": "permitted",
+  "permit_date": "2026-02-17",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13654987'}"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13654987'}"
+   }
+  ],
+  "why": "new multifamily permit"
+ },
+ {
+  "area": "tx",
+  "city": "Austin",
+  "name": "Building Permit",
+  "address": "6405 BERKMAN DR",
+  "lat": null,
+  "lon": null,
+  "units": 104,
+  "stage": "permitted",
+  "permit_date": "2026-02-09",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13651286'}"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13651286'}"
+   }
+  ],
+  "why": "new multifamily permit"
+ },
+ {
+  "area": "tx",
+  "city": "Austin",
+  "name": "Building Permit",
+  "address": "7817 W SH 71 BLDG 3",
+  "lat": null,
+  "lon": null,
+  "units": 43,
+  "stage": "permitted",
+  "permit_date": "2025-12-11",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13626083'}"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13626083'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13626079'}"
+   }
+  ],
+  "why": "new multifamily permit"
+ },
+ {
+  "area": "tx",
+  "city": "Austin",
+  "name": "Building Permit",
+  "address": "6410 FM 969 RD",
+  "lat": null,
+  "lon": null,
+  "units": 80,
+  "stage": "permitted",
+  "permit_date": "2025-12-01",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13610038'}"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13610038'}"
+   }
+  ],
+  "why": "new multifamily permit"
+ },
+ {
+  "area": "tx",
+  "city": "Austin",
+  "name": "Building Permit",
+  "address": "823 TILLERY ST",
+  "lat": null,
+  "lon": null,
+  "units": 120,
+  "stage": "permitted",
+  "permit_date": "2025-10-14",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13597483'}"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13597483'}"
+   }
+  ],
+  "why": "new multifamily permit"
+ },
+ {
+  "area": "tx",
+  "city": "Austin",
+  "name": "Building Permit",
+  "address": "2915 E CESAR CHAVEZ ST",
+  "lat": null,
+  "lon": null,
+  "units": 39,
+  "stage": "permitted",
+  "permit_date": "2025-10-09",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13597249'}"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13597249'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13597245'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13597248'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13597250'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13597247'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13597246'}"
+   }
+  ],
+  "why": "new multifamily permit"
+ },
+ {
+  "area": "tx",
+  "city": "Austin",
+  "name": "Building Permit",
+  "address": "2730 E 7TH ST",
+  "lat": null,
+  "lon": null,
+  "units": 90,
+  "stage": "permitted",
+  "permit_date": "2025-10-08",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13596728'}"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13596728'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13596727'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13596730'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13596729'}"
+   }
+  ],
+  "why": "new multifamily permit"
+ },
+ {
+  "area": "tx",
+  "city": "Austin",
+  "name": "Building Permit",
+  "address": "5901 S PLEASANT VALLEY RD",
+  "lat": null,
+  "lon": null,
+  "units": 75,
+  "stage": "permitted",
+  "permit_date": "2025-10-07",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13590354'}"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13590354'}"
+   }
+  ],
+  "why": "new multifamily permit"
+ },
+ {
+  "area": "tx",
+  "city": "Austin",
+  "name": "Building Permit",
+  "address": "1101 REINLI ST BLDG 5C",
+  "lat": null,
+  "lon": null,
+  "units": 32,
+  "stage": "permitted",
+  "permit_date": "2025-10-06",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=12855372'}"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=12855372'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=12855365'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=12855366'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=12855371'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=12855368'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=12855370'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=12855367'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=12855369'}"
+   }
+  ],
+  "why": "new multifamily permit"
+ },
+ {
+  "area": "tx",
+  "city": "Austin",
+  "name": "Building Permit",
+  "address": "2545 BROCKTON DR",
+  "lat": null,
+  "lon": null,
+  "units": 265,
+  "stage": "permitted",
+  "permit_date": "2025-09-25",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13587840'}"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13587840'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13587841'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13587836'}"
+   }
+  ],
+  "why": "new multifamily permit"
+ },
+ {
+  "area": "tx",
+  "city": "Austin",
+  "name": "Building Permit",
+  "address": "8413 SOUTHWEST PKWY BLDG 8",
+  "lat": null,
+  "lon": null,
+  "units": 44,
+  "stage": "permitted",
+  "permit_date": "2025-09-22",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13584198'}"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13584198'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13584196'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13584195'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13584194'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13584197'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13584191'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13584193'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13584192'}"
+   }
+  ],
+  "why": "new multifamily permit"
+ },
+ {
+  "area": "tx",
+  "city": "Austin",
+  "name": "Building Permit",
+  "address": "1124 CLAYTON LN",
+  "lat": null,
+  "lon": null,
+  "units": 227,
+  "stage": "permitted",
+  "permit_date": "2025-09-17",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13583283'}"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13583283'}"
+   }
+  ],
+  "why": "new multifamily permit"
+ },
+ {
+  "area": "tx",
+  "city": "Austin",
+  "name": "Building Permit",
+  "address": "1720 LAWRENCE ST",
+  "lat": null,
+  "lon": null,
+  "units": 64,
+  "stage": "permitted",
+  "permit_date": "2025-09-10",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13580092'}"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13580092'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13580091'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13580089'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13580093'}"
+   }
+  ],
+  "why": "new multifamily permit"
+ },
+ {
+  "area": "tx",
+  "city": "Austin",
+  "name": "Building Permit",
+  "address": "2213 POQUITO ST",
+  "lat": null,
+  "lon": null,
+  "units": 67,
+  "stage": "permitted",
+  "permit_date": "2025-09-02",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13574446'}"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13574446'}"
+   }
+  ],
+  "why": "new multifamily permit"
+ },
+ {
+  "area": "tx",
+  "city": "Austin",
+  "name": "Building Permit",
+  "address": "4208 MEDICAL PKWY",
+  "lat": null,
+  "lon": null,
+  "units": 70,
+  "stage": "permitted",
+  "permit_date": "2025-07-16",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13549269'}"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13549269'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13549270'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13549268'}"
+   }
+  ],
+  "why": "new multifamily permit"
+ },
+ {
+  "area": "tx",
+  "city": "Austin",
+  "name": "Building Permit",
+  "address": "1013 MONTOPOLIS DR",
+  "lat": null,
+  "lon": null,
+  "units": 150,
+  "stage": "permitted",
+  "permit_date": "2025-07-07",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13537932'}"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13537932'}"
+   }
+  ],
+  "why": "new multifamily permit"
+ },
+ {
+  "area": "tx",
+  "city": "Austin",
+  "name": "Building Permit",
+  "address": "4512 DENALI SUMMIT DR",
+  "lat": null,
+  "lon": null,
+  "units": 108,
+  "stage": "permitted",
+  "permit_date": "2025-06-05",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13522988'}"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13522988'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13522989'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13522986'}"
+   }
+  ],
+  "why": "new multifamily permit"
+ },
+ {
+  "area": "tx",
+  "city": "Austin",
+  "name": "Building Permit",
+  "address": "10728 BURNET RD",
+  "lat": null,
+  "lon": null,
+  "units": 154,
+  "stage": "permitted",
+  "permit_date": "2025-06-04",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=12133529'}"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=12133529'}"
+   }
+  ],
+  "why": "new multifamily permit"
+ },
+ {
+  "area": "tx",
+  "city": "Austin",
+  "name": "Building Permit",
+  "address": "1010 SPRINGDALE RD",
+  "lat": null,
+  "lon": null,
+  "units": 585,
+  "stage": "permitted",
+  "permit_date": "2025-05-27",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13278370'}"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13278370'}"
+   }
+  ],
+  "why": "new multifamily permit"
+ },
+ {
+  "area": "tx",
+  "city": "Austin",
+  "name": "Building Permit",
+  "address": "7501 COTA VISTA DR BLDG 4",
+  "lat": null,
+  "lon": null,
+  "units": 30,
+  "stage": "permitted",
+  "permit_date": "2025-05-09",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13515371'}"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13515371'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13515365'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13515369'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13515364'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13515366'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13515370'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13515368'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13515373'}"
+   }
+  ],
+  "why": "new multifamily permit"
+ },
+ {
+  "area": "tx",
+  "city": "Austin",
+  "name": "Building Permit",
+  "address": "6125 JOHNNY MORRIS RD BLDG 2",
+  "lat": null,
+  "lon": null,
+  "units": 24,
+  "stage": "permitted",
+  "permit_date": "2025-05-05",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13512284'}"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13512284'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13512285'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13512292'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13512288'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13512291'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13512287'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13512290'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13512286'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13512289'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13512293'}"
+   }
+  ],
+  "why": "new multifamily permit"
+ },
+ {
+  "area": "tx",
+  "city": "Austin",
+  "name": "Building Permit",
+  "address": "2300 KRAMER LN BLDG 2",
+  "lat": null,
+  "lon": null,
+  "units": 180,
+  "stage": "permitted",
+  "permit_date": "2025-04-18",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13503547'}"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13503547'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13503545'}"
+   }
+  ],
+  "why": "new multifamily permit"
+ },
+ {
+  "area": "tx",
+  "city": "Austin",
+  "name": "Building Permit",
+  "address": "4215 S LAMAR BLVD SVRD NB",
+  "lat": null,
+  "lon": null,
+  "units": 58,
+  "stage": "permitted",
+  "permit_date": "2025-03-21",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13405992'}"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13405992'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13405993'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13405994'}"
+   }
+  ],
+  "why": "new multifamily permit"
+ },
+ {
+  "area": "tx",
+  "city": "Austin",
+  "name": "Building Permit",
+  "address": "8440 BURNET RD BLDG 1",
+  "lat": null,
+  "lon": null,
+  "units": 187,
+  "stage": "permitted",
+  "permit_date": "2025-03-10",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13481442'}"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13481442'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13481444'}"
+   }
+  ],
+  "why": "new multifamily permit"
+ },
+ {
+  "area": "tx",
+  "city": "Austin",
+  "name": "Building Permit",
+  "address": "10304 OLD SAN ANTONIO RD BLDG 4",
+  "lat": null,
+  "lon": null,
+  "units": 24,
+  "stage": "permitted",
+  "permit_date": "2025-03-03",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13472259'}"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13472259'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13472263'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13472258'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13472255'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13472260'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13472265'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13472261'}"
+   }
+  ],
+  "why": "new multifamily permit"
+ },
+ {
+  "area": "tx",
+  "city": "Austin",
+  "name": "Building Permit",
+  "address": "5925 E HOWARD LN BLDG 4",
+  "lat": null,
+  "lon": null,
+  "units": 24,
+  "stage": "permitted",
+  "permit_date": "2025-02-20",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13400759'}"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13400759'}"
+   }
+  ],
+  "why": "new multifamily permit"
+ },
+ {
+  "area": "tx",
+  "city": "Austin",
+  "name": "Building Permit",
+  "address": "98 RED RIVER ST",
+  "lat": null,
+  "lon": null,
+  "units": 603,
+  "stage": "permitted",
+  "permit_date": "2025-02-14",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13443543'}"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13443543'}"
+   }
+  ],
+  "why": "new multifamily permit"
+ },
+ {
+  "area": "tx",
+  "city": "Austin",
+  "name": "Building Permit",
+  "address": "2500 ROSEWOOD AVE",
+  "lat": null,
+  "lon": null,
+  "units": 23,
+  "stage": "permitted",
+  "permit_date": "2025-01-22",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13301965'}"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13301965'}"
+   }
+  ],
+  "why": "new multifamily permit"
+ },
+ {
+  "area": "tx",
+  "city": "Austin",
+  "name": "Building Permit",
+  "address": "4605 S PLEASANT VALLEY RD BLDG 10",
+  "lat": null,
+  "lon": null,
+  "units": 36,
+  "stage": "permitted",
+  "permit_date": "2025-01-02",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13441088'}"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13441088'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13441085'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13441082'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13441084'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13441080'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13441079'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13441078'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13441081'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13441087'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13441083'}"
+   }
+  ],
+  "why": "new multifamily permit"
+ },
+ {
+  "area": "tx",
+  "city": "Austin",
+  "name": "Building Permit",
+  "address": "1310 LBJ WAY UNIT FW2",
+  "lat": null,
+  "lon": null,
+  "units": 106,
+  "stage": "permitted",
+  "permit_date": "2024-12-10",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13356353'}"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13356353'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13356352'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13356354'}"
+   }
+  ],
+  "why": "new multifamily permit"
+ },
+ {
+  "area": "tx",
+  "city": "Austin",
+  "name": "Building Permit",
+  "address": "1501 AIRPORT COMMERCE DR BLDG 1",
+  "lat": null,
+  "lon": null,
+  "units": 52,
+  "stage": "permitted",
+  "permit_date": "2024-12-04",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13435384'}"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13435384'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13435386'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13435383'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13435385'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13435382'}"
+   }
+  ],
+  "why": "new multifamily permit"
+ },
+ {
+  "area": "tx",
+  "city": "Austin",
+  "name": "Building Permit",
+  "address": "7009 ED BLUESTEIN BLVD SVRD NB BLDG 1",
+  "lat": null,
+  "lon": null,
+  "units": 67,
+  "stage": "permitted",
+  "permit_date": "2024-11-08",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13428553'}"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13428553'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13428558'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13428556'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13428560'}"
+   }
+  ],
+  "why": "new multifamily permit"
+ },
+ {
+  "area": "tx",
+  "city": "Austin",
+  "name": "Building Permit",
+  "address": "8700 SHOAL CREEK BLVD BLDG TNFM3",
+  "lat": null,
+  "lon": null,
+  "units": 99,
+  "stage": "permitted",
+  "permit_date": "2024-10-15",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13416079'}"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13416079'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13416076'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13416074'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13416077'}"
+   }
+  ],
+  "why": "new multifamily permit"
+ },
+ {
+  "area": "tx",
+  "city": "Austin",
+  "name": "Building Permit",
+  "address": "2610 HUME PL",
+  "lat": null,
+  "lon": null,
+  "units": 142,
+  "stage": "permitted",
+  "permit_date": "2024-10-08",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13412408'}"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13412408'}"
+   }
+  ],
+  "why": "new multifamily permit"
+ },
+ {
+  "area": "tx",
+  "city": "Austin",
+  "name": "Building Permit",
+  "address": "3525 FAR WEST BLVD UNIT FW1",
+  "lat": null,
+  "lon": null,
+  "units": 115,
+  "stage": "permitted",
+  "permit_date": "2024-09-25",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13350054'}"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13350054'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13350056'}"
+   },
+   {
+    "fact": "permit_date",
+    "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13350058'}"
+   }
+  ],
+  "why": "new multifamily permit"
+ }
+]

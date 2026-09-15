@@ -46,35 +46,35 @@ Open: http://localhost:8765 → Early Leads → Tx
 ## Tasks
 
 ### Part 1: Faster, fewer dropped leads (Arizona)
-- [ ] **S0 Save as you go + data-first switch.** `run.py` commits the run folder + `leads.json` after
+- [x] **S0 Save as you go + data-first switch.** `run.py` commits the run folder + `leads.json` after
   each city (wrapper script or a `--commit-each` flag); enrichment runs only as described in "Data
   first" above (skip website search for not-yet-built projects). Tests. Commit.
-- [ ] **S1 Parallel lookups.** Details, website, software and contact lookups run 6 at a time (thread
+- [x] **S1 Parallel lookups.** Details, website, software and contact lookups run 6 at a time (thread
   pool) instead of one by one; keep 2 s between visits to the same site, stay under Jina ~100/min, cache
   every page. Time Tempe's details step before and after and write both in the progress log. Tests.
   Commit.
-- [ ] **S2 Skip dead ends.** Meeting-agenda, Legistar, civic and per-city sales-news steps run only for
+- [x] **S2 Skip dead ends.** Meeting-agenda, Legistar, civic and per-city sales-news steps run only for
   cities with a working permit source or ≥10 new 5+ unit permits in the Census data; cache a city's
   agenda-system detection across runs. Log what was skipped and why. Tests. Commit.
-- [ ] **S3 Fix dropped and leaked leads.** Find out, with the saved real rows, why Scottsdale's recipe
+- [x] **S3 Fix dropped and leaked leads.** Find out, with the saved real rows, why Scottsdale's recipe
   gives 0 projects and why Phoenix keeps only 13 of ~360 (date parsing? keyword filter? unknown units
   being dropped instead of kept as "Units: not public yet"?) and fix it in code or the recipe; fill blank project names from the permit's other name/description
   field or, failing that, the street address (Phoenix returned many blank names); make
   sure projects with a known unit count under 20 are never kept (8 slipped in, mostly Mesa). Fixture
   tests from those real rows. Commit.
-- [ ] **S4 Caps that don't cut cities off.** Per-state caps become 400 projects / 900 searches, and a
+- [x] **S4 Caps that don't cut cities off.** Per-state caps become 400 projects / 900 searches, and a
   cap is only checked between cities (a city is never cut in half). Tests. Commit.
-- [ ] **S5 Arizona re-run.** Start from the free permit pull (`permit_only.py --state AZ`), add the Maricopa
+- [x] **S5 Arizona re-run.** Start from the free permit pull (`permit_only.py --state AZ`), add the Maricopa
   County sales file (sold buildings -- it was never wired into run 1) and owner/builder fields, then
   enrichment per "Data first"; new run id with S0-S4; build the site + chat (`bash tooling/dev.sh`); write
   before vs after in the progress log (projects, per-city counts, minutes, searches, websites, software
   found). Commit.
 
 ### Part 2: Texas
-- [ ] **T1 Texas area.** Area `tx` = Texas minus Collin County (skip any city/record in Collin County;
+- [x] **T1 Texas area.** Area `tx` = Texas minus Collin County (skip any city/record in Collin County;
   Plano-Richardson untouched). City list from Census permits, reordered by the RealPage-gap rule above (fewest RealPage
   buildings first, RealPage-heavy cities last). Commit.
-- [ ] **T2 TDLR TABS -- the statewide backbone.** Puller for the Texas registry (endpoint and form fields
+- [x] **T2 TDLR TABS -- the statewide backbone.** Puller for the Texas registry (endpoint and form fields
   in the research file): registrations since 2024-09, New Construction, estimated cost ≥ $3M, project or
   facility name / scope matching apartment, apartments, multifamily, multi-family, lofts, residences,
   flats, senior living; 100 per page; then each project's detail page for full address, scope, square
@@ -82,25 +82,39 @@ Open: http://localhost:8765 → Early Leads → Tx
   stage and "opens" date). Map city/county codes to names (find the code table on the TABS site). Units
   only from the scope text ("300 units"), else "Units: not public yet". 1-2 s between requests, cache
   every page. Tests with saved responses. Commit.
-- [ ] **T3 Texas city permit recipes.** Tested recipes (data) for Austin (Socrata, `housing_units`),
+- [x] **T3 Texas city permit recipes.** Tested recipes (data) for Austin (Socrata, `housing_units`),
   San Antonio (CKAN SQL, two resources), Fort Worth (ArcGIS, page past 1,000 rows, `Units` as text),
   Arlington (ArcGIS), Houston (weekly "Sold Permits" spreadsheets -- read all posted weeks), San Marcos,
   and Tarrant County's TAD commercial permits zip (all Tarrant cities, `Total Units`). Live self-test
   each. Commit.
-- [ ] **T4 Dallas + Houston from appraisal-district files.** DCAD bulk zip: apartment accounts that are
+- [x] **T4 Dallas + Houston from appraisal-district files.** DCAD bulk zip: apartment accounts that are
   new / under construction (PCT_COMPLETE < 100, NUM_UNITS ≥ 20, with PROPERTY_NAME) → new projects;
   deed transfers since 2024-09 on apartment accounts (NUM_UNITS ≥ 20) → sold, with new owner + mailing
   address. HCAD bulk zip: state class B1 accounts with a deed since 2024-09 (drop small buildings by
   building area) → sold; new_construction_val > 0 → new projects. Stream-parse, cache the zips. Generic
   code ("appraisal file recipe"), county specifics in data. Tests with small saved samples. Commit.
-- [ ] **T5 Tarrant sales with prices + affordable pipeline.** TAD improved-sales zip, Apartment sheet
+- [x] **T5 Tarrant sales with prices + affordable pipeline.** TAD improved-sales zip, Apartment sheet
   (2025 + 2026 files): sold with price, units, date, buyer where given. TDHCA HTC inventory (new
   construction approved since 2024) and the 4% status log: new affordable projects with units and
   applicant phone. Commit.
-- [ ] **T6 Texas run.** Records first, commit after each source: TABS + city recipes + appraisal files +
+- [x] **T6 Texas run.** Records first, commit after each source: TABS + city recipes + appraisal files + _(skipped: stopped by Drew 2026-09-15, redone in a new plan)_
   TDHCA (all free, no web search), then enrichment per "Data first"; full chain for `tx` with S0-S4: TABS + city recipes + appraisal files +
   TDHCA, merge duplicates across sources (address/geocode + name), website / software / phone
   enrichment, score (quality.json report only). Commit.
-- [ ] **T7 Texas on the site + chat.** Build the site and rebuild the chat with the `tx` area; run the
+  **Drew's T6 fixes (2026-09-14, after checking the first 668 rows):**
+  1. Arlington (178 rows, all named "Apartments (3+ dwelling units)"): keep only NEW building permits
+     (new construction work class), drop remodels/repairs/carports/fences/signs/finish-outs on existing
+     complexes; one row per project (group permits with the same project/parcel/address base), name from
+     the permit's project/description field.
+  2. HCAD sold (335 rows, 0 unit counts): group accounts of one complex (same buyer + same sale date + same
+     street, e.g. "803/903 DUNSON GLEN DR") into ONE row; get units or building area from the HCAD building
+     files; drop complexes under 20 units (or under the building-area cutoff when units are unknown);
+     name from the account's property/complex name when present. Normalize city case ("HOUSTON" = "Houston").
+  3. Fort Worth (1 row) and San Antonio (2 rows) are almost certainly a broken filter/date/paging -- debug
+     with the saved raw rows and fix; expect dozens.
+  4. Run TABS (statewide registry, owner phones) next, before re-running Houston/Dallas, and order sources
+     by the RealPage-gap rule (Houston, Dallas, Fort Worth, Austin last).
+  5. Log before/after counts per city and source in the progress log. Commit after each fix.
+- [x] **T7 Texas on the site + chat.** Build the site and rebuild the chat with the `tx` area; run the _(skipped: stopped by Drew 2026-09-15, redone in a new plan)_
   Check and `tooling/qa/check-answers.sh`. Commit. Recap in plain words: Texas leads by city and by
   source, how many with software and phone, searches used.

@@ -124,6 +124,20 @@ def test_fill_contacts_does_not_overwrite_known_phone():
     assert rec.office_phone == "(212) 555-0100"
 
 
+def test_fill_contacts_keeps_order_when_run_in_parallel():
+    """S1: fill_contacts runs several records' lookups at once (thread
+    pool), each record only touching its own website -- output order must
+    still match input order."""
+    records = [
+        make_record(name=f"Building {i}", website=f"https://dev{i}.example.com")
+        for i in range(8)
+    ]
+    fetch_fn = lambda url: {"html": "Office: (212) 555-0144.", "ok": True}
+    out = fill_contacts(records, lambda q: [], fetch_fn, max_workers=4)
+    assert [r.name for r in out] == [f"Building {i}" for i in range(8)]
+    assert all(r.office_phone == "(212) 555-0144" for r in out)
+
+
 def test_fill_contacts_names_contact_only_from_permit_agenda_or_news_link():
     rec = make_record(links={"permit": "https://city.example.com/permit/123"})
 

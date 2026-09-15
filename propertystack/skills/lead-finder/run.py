@@ -21,13 +21,21 @@ from __future__ import annotations
 import argparse
 import importlib.util
 import json
+import subprocess
 import sys
 import urllib.parse
 import urllib.request
+from concurrent.futures import ThreadPoolExecutor
 from dataclasses import dataclass, field
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Callable
+
+# S1: details/software/contact lookups run this many records at a time
+# (thread pool) instead of one by one -- WebHelper still enforces >=2s
+# between visits to the same site and Jina's own rate limit, so more
+# workers speeds up *different* sites in parallel without hammering one.
+LOOKUP_WORKERS = 6
 
 HERE = Path(__file__).resolve().parent
 SKILLS = HERE.parent
@@ -101,13 +109,22 @@ STEP_SCORE = "score"
 STATE_CITY_KEY = "_state"
 
 
+# Some city ArcGIS/Socrata endpoints (e.g. Scottsdale's) 403 the default
+# `Python-urllib/x.y` user agent even though the same query works fine from a
+# browser -- a real-world example of this dropping a whole city's permits
+# (Scottsdale returned 0 of ~68 apartment permits until this was added).
+_HTTP_HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; PropertyStackLeadFinder/1.0)"}
+
+
 def _http_get_json(url: str):
-    with urllib.request.urlopen(url, timeout=30) as r:
+    req = urllib.request.Request(url, headers=_HTTP_HEADERS)
+    with urllib.request.urlopen(req, timeout=30) as r:
         return json.loads(r.read().decode("utf-8", errors="replace"))
 
 
 def _http_get_bytes(url: str) -> bytes:
-    with urllib.request.urlopen(url, timeout=60) as r:
+    req = urllib.request.Request(url, headers=_HTTP_HEADERS)
+    with urllib.request.urlopen(req, timeout=60) as r:
         return r.read()
 
 
@@ -131,6 +148,7 @@ class ChainDeps:
     geocode_fn: Callable[[str], object] = _census_geocode
     gdelt_fetch_fn: Callable[[str], bytes] | None = None
     cities_fetcher: Callable | None = None  # rank.py's `fetcher`, Census BPS files
+    exclude_cities: list | None = None  # rank.py's `exclude_cities`, e.g. a finished county's cities
     hud_fetcher: Callable[[], bytes] | None = None  # zero-arg, returns the HUD workbook bytes
     agency_name: str | None = None  # state housing finance agency, for awards (3.2)
     legistar_clients: dict = field(default_factory=dict)  # city -> legistar client slug
@@ -238,28 +256,40 @@ def step_permits(run_folder: RunFolder, city: str, state: str, area: str, recipe
 
 def step_details(run_folder: RunFolder, city: str, records: list[LeadRecord], deps: ChainDeps) -> list:
     def _do():
-        filled = []
-        for record in records:
-            result = project_details.fill_project_details(
+        def _fill(record):
+            return project_details.fill_project_details(
                 record, deps.search_fn, lambda u: deps.web.fetch(u), deps.geocode_fn
             )
-            if result is not None:
-                filled.append(result.to_dict())
-        return filled
+
+        with ThreadPoolExecutor(max_workers=LOOKUP_WORKERS) as pool:
+            results = list(pool.map(_fill, records))
+        return [r.to_dict() for r in results if r is not None]
 
     return _run_step(run_folder, STEP_DETAILS, city, _do)
 
 
-def step_agendas(run_folder: RunFolder, city: str, state: str, deps: ChainDeps) -> dict:
+def step_agendas(
+    run_folder: RunFolder, city: str, state: str, deps: ChainDeps,
+    should_run: bool = True, skip_reason: str = "",
+) -> dict:
     def _do():
+        if not should_run:
+            print(f"lead-finder: skipping agendas for {city}, {state}: {skip_reason}")
+            return _skip(city, state, skip_reason)
         kwargs = {"recipes_dir": deps.recipes_dir} if deps.recipes_dir else {}
         return agendas_mod.find_meeting_system(city, state, deps.search_fn, deps.fetch_html, **kwargs)
 
     return _run_step(run_folder, STEP_AGENDAS, city, _do)
 
 
-def step_legistar(run_folder: RunFolder, city: str, state: str, area: str, recipe: dict, deps: ChainDeps) -> list:
+def step_legistar(
+    run_folder: RunFolder, city: str, state: str, area: str, recipe: dict, deps: ChainDeps,
+    should_run: bool = True, skip_reason: str = "",
+) -> list:
     def _do():
+        if not should_run:
+            print(f"lead-finder: skipping legistar for {city}, {state}: {skip_reason}")
+            return _skip(city, state, skip_reason)
         if recipe.get("system") != "legistar":
             return []
         client = deps.legistar_clients.get(city)
@@ -275,8 +305,14 @@ def step_legistar(run_folder: RunFolder, city: str, state: str, area: str, recip
     return _run_step(run_folder, STEP_LEGISTAR, city, _do)
 
 
-def step_civic(run_folder: RunFolder, city: str, state: str, area: str, recipe: dict, deps: ChainDeps) -> list:
+def step_civic(
+    run_folder: RunFolder, city: str, state: str, area: str, recipe: dict, deps: ChainDeps,
+    should_run: bool = True, skip_reason: str = "",
+) -> list:
     def _do():
+        if not should_run:
+            print(f"lead-finder: skipping civic for {city}, {state}: {skip_reason}")
+            return _skip(city, state, skip_reason)
         if recipe.get("system") not in civic_agendas.SUPPORTED_SYSTEMS:
             return []
         hits = civic_agendas.find_civic_agenda_items(
@@ -290,14 +326,54 @@ def step_civic(run_folder: RunFolder, city: str, state: str, area: str, recipe: 
     return _run_step(run_folder, STEP_CIVIC, city, _do)
 
 
-def step_sales(run_folder: RunFolder, city: str, area: str, deps: ChainDeps) -> list:
+def step_sales(
+    run_folder: RunFolder, city: str, area: str, deps: ChainDeps,
+    should_run: bool = True, skip_reason: str = "",
+) -> list:
     def _do():
+        if not should_run:
+            print(f"lead-finder: skipping sales-news for {city}: {skip_reason}")
+            return _skip(city, area.upper(), skip_reason)
         records = sales_news.find_sales_news(
             city, area, deps.search_fn, gdelt_fetch_fn=deps.gdelt_fetch_fn, today=deps.today
         )
         return [r.to_dict() for r in records]
 
     return _run_step(run_folder, STEP_SALES, city, _do)
+
+
+# S2: minimum Census 5+ unit permits (last 12 months) a city needs, absent a
+# working permit source, before its agenda/legistar/civic/sales-news dead-end
+# steps are worth running at all.
+DEAD_END_MIN_PERMITS = 10
+
+
+def _permit_counts_from_cities_step(run_folder: RunFolder) -> dict[str, int]:
+    """{city: permits_5plus} from the already-saved "cities" step, if it was
+    built from ranked Census data (explicit `--city` runs and fixtures have
+    no such data, so this is empty for them and every city falls back to
+    the "has a working permit source" half of the S2 gate)."""
+    if not run_folder.step_done(STEP_CITIES, STATE_CITY_KEY):
+        return {}
+    data = run_folder.load_step(STEP_CITIES, STATE_CITY_KEY)
+    counts: dict[str, int] = {}
+    for c in data.get("cities", []):
+        if isinstance(c, dict) and "permits_5plus" in c:
+            counts[c["city"]] = max(counts.get(c["city"], 0), c["permits_5plus"])
+    return counts
+
+
+def _dead_end_gate(recipe: dict, city: str, permits_5plus: int) -> tuple[bool, str]:
+    """S2: the agenda/legistar/civic/sales-news steps are dead ends for a
+    city with neither a real permit source nor much building activity --
+    skip them and say why, instead of burning searches on nothing."""
+    has_permit_source = isinstance(recipe, dict) and not recipe.get("skipped")
+    if has_permit_source or permits_5plus >= DEAD_END_MIN_PERMITS:
+        return True, ""
+    return False, (
+        f"no working permit source and only {permits_5plus} Census 5+ unit "
+        f"permits in the last 12 months (need >= {DEAD_END_MIN_PERMITS})"
+    )
 
 
 # -- state-level steps ------------------------------------------------------
@@ -343,7 +419,7 @@ def load_or_build_cities(run_folder: RunFolder, state: str, deps: ChainDeps, cit
 
     if deps.cities_fetcher is None:
         raise ValueError("no city list given and no cities_fetcher configured")
-    out = cities_rank.rank_cities(state, fetcher=deps.cities_fetcher)
+    out = cities_rank.rank_cities(state, fetcher=deps.cities_fetcher, exclude_cities=deps.exclude_cities)
     run_folder.save_step(STEP_CITIES, STATE_CITY_KEY, out)
     return [c["city"] for c in out["cities"]]
 
@@ -353,14 +429,22 @@ def run_chain(
     run_folder: RunFolder,
     deps: ChainDeps,
     cities: list[str] | None = None,
+    on_city_done: Callable[[str], None] | None = None,
 ) -> list[LeadRecord]:
     """Run every step of the lead-finder chain for `state`, resumably, and
-    return the final scored/ranked list of LeadRecords."""
+    return the final scored/ranked list of LeadRecords.
+
+    `on_city_done`, if given, is called after each city finishes (before
+    software/contact/score, which are state-level) so a gowork build copy
+    never loses a finished city's work to an end-of-build cleanup (S0,
+    2026-09-14): it's the caller's chance to write the area's leads.json
+    so far and commit the run folder + data dir."""
     area = state.lower()
     city_list = load_or_build_cities(run_folder, state, deps, cities)
 
     all_records: list[LeadRecord] = []
     caps = run_folder.load_caps()
+    permit_counts = _permit_counts_from_cities_step(run_folder)
 
     for city in city_list:
         if caps.any_cap_hit():
@@ -375,10 +459,14 @@ def run_chain(
         detailed_dicts = step_details(run_folder, city, permit_records, deps)
         detailed_records = _records_from(detailed_dicts)
 
-        agenda_recipe = step_agendas(run_folder, city, state, deps)
-        legistar_data = step_legistar(run_folder, city, state, area, agenda_recipe, deps)
-        civic_data = step_civic(run_folder, city, state, area, agenda_recipe, deps)
-        sales_dicts = step_sales(run_folder, city, area, deps)
+        should_run_dead_ends, skip_reason = _dead_end_gate(recipe, city, permit_counts.get(city, 0))
+
+        agenda_recipe = step_agendas(run_folder, city, state, deps, should_run_dead_ends, skip_reason)
+        legistar_data = step_legistar(run_folder, city, state, area, agenda_recipe, deps,
+                                       should_run_dead_ends, skip_reason)
+        civic_data = step_civic(run_folder, city, state, area, agenda_recipe, deps,
+                                 should_run_dead_ends, skip_reason)
+        sales_dicts = step_sales(run_folder, city, area, deps, should_run_dead_ends, skip_reason)
 
         city_records = (
             detailed_records
@@ -396,6 +484,10 @@ def run_chain(
             caps.jina_searches = counts.jina
             caps.brave_searches = counts.brave
         run_folder.save_caps(caps)
+
+        if on_city_done is not None:
+            write_area_leads(state, merge_records(all_records))
+            on_city_done(city)
 
     hud_dicts = step_hud(run_folder, state, deps)
     award_dicts = step_awards(run_folder, state, deps)
@@ -448,11 +540,41 @@ def cities_with_real_source(run_folder: RunFolder, city_list: list[str]) -> int:
     return count
 
 
+REPO_ROOT = HERE.parents[2]
+
+
+def commit_city_progress(repo_root: Path, run_folder: RunFolder, state: str, city: str) -> None:
+    """Save as you go (S0, 2026-09-14): `git add` the run folder + this
+    area's data dir and commit, so a gowork build copy that deletes
+    uncommitted files at the end of a task never loses a finished city's
+    leads. A no-op (not an error) if there's nothing new to commit."""
+    data_dir = repo_root / "propertystack" / "data" / state.lower()
+    paths = [str(run_folder.path), str(data_dir)]
+    subprocess.run(["git", "add", *paths], cwd=repo_root, check=True)
+    staged = subprocess.run(
+        ["git", "diff", "--cached", "--quiet", "--", *paths], cwd=repo_root
+    )
+    if staged.returncode == 0:
+        return  # nothing new for this city
+    subprocess.run(
+        ["git", "commit", "-m", f"lead-finder {state}: {city} done"],
+        cwd=repo_root, check=True,
+    )
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--state", help="two-letter state code or slug to run")
     parser.add_argument("--run-id", help="resume an existing run folder")
     parser.add_argument("--city", action="append", help="run only these cities (repeatable)")
+    parser.add_argument(
+        "--exclude-cities-file",
+        help="JSON list of city names to skip when ranking cities (e.g. a finished county's cities)",
+    )
+    parser.add_argument(
+        "--commit-each", action="store_true",
+        help="git commit the run folder + area leads.json after each city (save as you go)",
+    )
     args = parser.parse_args(argv)
 
     if args.state:
@@ -471,16 +593,25 @@ def main(argv: list[str] | None = None) -> int:
     agencies = json.loads(agencies_path.read_text()) if agencies_path.exists() else {}
 
     owner_parcel_recipe = _load_county_sales_recipe(state)
+    exclude_cities = (
+        json.loads(Path(args.exclude_cities_file).read_text()) if args.exclude_cities_file else None
+    )
 
     deps = ChainDeps(
         web=WebHelper(),
         cities_fetcher=cities_rank.fetch,
+        exclude_cities=exclude_cities,
         hud_fetcher=hud_loans.fetch_workbook_bytes,
         agency_name=agencies.get(state.upper()),
         owner_parcel_recipe=owner_parcel_recipe,
         owner_parcel_fetch_rows=find_sold.default_fetch_rows if owner_parcel_recipe else None,
     )
-    records = run_chain(state, run_folder, deps, cities=args.city)
+    on_city_done = None
+    if args.commit_each:
+        def on_city_done(city: str) -> None:  # noqa: E306
+            commit_city_progress(REPO_ROOT, run_folder, state, city)
+
+    records = run_chain(state, run_folder, deps, cities=args.city, on_city_done=on_city_done)
     for record in records:
         record.name = clean_project_name(record.name)
     print(f"lead-finder: {len(records)} leads for {state} -> {run_folder.path}")

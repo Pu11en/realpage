@@ -225,3 +225,66 @@ def test_brave_usage_hits_cap(tmp_path):
     for _ in range(fetch_mod.BRAVE_MONTHLY_CAP):
         usage.record_call()
     assert not usage.under_cap()
+
+
+def test_fetch_from_several_threads_respects_same_site_gap(tmp_path):
+    """S1: run.py now fetches several records' pages at once (thread pool).
+    Two threads hitting the same site must still be >= site_gap_s apart --
+    proves `_respect_gap`'s lock/reserve pattern actually serializes visits
+    instead of both threads reading "no recent visit" and firing together."""
+    import threading
+    import time
+
+    visit_times = []
+    lock = threading.Lock()
+
+    def fetcher(url):
+        with lock:
+            visit_times.append(time.monotonic())
+        return "<html>ok</html>"
+
+    helper = fetch_mod.WebHelper(
+        cache_dir=tmp_path, jina_api_key=None, brave_api_key=None,
+        page_fetchers=[fetcher], site_gap_s=0.2,
+    )
+    urls = [f"https://same-site.example/page{i}" for i in range(4)]
+    threads = [threading.Thread(target=helper.fetch, args=(u,)) for u in urls]
+    for t in threads:
+        t.start()
+    for t in threads:
+        t.join()
+
+    visit_times.sort()
+    assert len(visit_times) == 4
+    gaps = [b - a for a, b in zip(visit_times, visit_times[1:])]
+    assert all(gap >= 0.19 for gap in gaps)  # small slack for scheduling jitter
+
+
+def test_fetch_block_counts_are_race_free_across_threads(tmp_path):
+    """Many concurrent blocked fetches to the same site must still trip
+    BLOCK_LIMIT exactly -- a lost increment under a race would let the site
+    keep being retried past the limit."""
+    import threading
+
+    def blocked_fetcher(url):
+        return "<html>Access Denied</html>"
+
+    helper = fetch_mod.WebHelper(
+        cache_dir=tmp_path, jina_api_key=None, brave_api_key=None,
+        page_fetchers=[blocked_fetcher], site_gap_s=0.0,
+    )
+    urls = [f"https://blocked-concurrent.example/{i}" for i in range(10)]
+    results = [None] * len(urls)
+
+    def _run(i, u):
+        results[i] = helper.fetch(u)
+
+    threads = [threading.Thread(target=_run, args=(i, u)) for i, u in enumerate(urls)]
+    for t in threads:
+        t.start()
+    for t in threads:
+        t.join()
+
+    site = fetch_mod._site_key(urls[0])
+    assert helper._skipped[site] == f"blocked {fetch_mod.BLOCK_LIMIT} times"
+    assert sum(1 for r in results if not r.ok) == len(urls)

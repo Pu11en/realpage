@@ -1,0 +1,601 @@
+{
+ "state": "TX",
+ "window": "2025-08..2026-07",
+ "source": "https://www2.census.gov/econ/bps/",
+ "cities": [
+  {
+   "city": "Harris County Unincorporated Area",
+   "is_county_area": true,
+   "permits_5plus": 4077,
+   "realpage_count": 0
+  },
+  {
+   "city": "Fort Bend County Unincorporated Area",
+   "is_county_area": true,
+   "permits_5plus": 1035,
+   "realpage_count": 0
+  },
+  {
+   "city": "College Station",
+   "is_county_area": false,
+   "permits_5plus": 1013,
+   "realpage_count": 0
+  },
+  {
+   "city": "Travis County Unincorporated Area",
+   "is_county_area": true,
+   "permits_5plus": 769,
+   "realpage_count": 0
+  },
+  {
+   "city": "Arlington",
+   "is_county_area": false,
+   "permits_5plus": 690,
+   "realpage_count": 0
+  },
+  {
+   "city": "Montgomery County Unincorporated Area",
+   "is_county_area": true,
+   "permits_5plus": 675,
+   "realpage_count": 0
+  },
+  {
+   "city": "San Antonio",
+   "is_county_area": false,
+   "permits_5plus": 610,
+   "realpage_count": 0
+  },
+  {
+   "city": "Lubbock",
+   "is_county_area": false,
+   "permits_5plus": 567,
+   "realpage_count": 0
+  },
+  {
+   "city": "Elgin",
+   "is_county_area": false,
+   "permits_5plus": 537,
+   "realpage_count": 0
+  },
+  {
+   "city": "Abilene",
+   "is_county_area": false,
+   "permits_5plus": 529,
+   "realpage_count": 0
+  },
+  {
+   "city": "Flower Mound",
+   "is_county_area": false,
+   "permits_5plus": 500,
+   "realpage_count": 0
+  },
+  {
+   "city": "Amarillo",
+   "is_county_area": false,
+   "permits_5plus": 489,
+   "realpage_count": 0
+  },
+  {
+   "city": "Waco",
+   "is_county_area": false,
+   "permits_5plus": 480,
+   "realpage_count": 0
+  },
+  {
+   "city": "Bryan",
+   "is_county_area": false,
+   "permits_5plus": 447,
+   "realpage_count": 0
+  },
+  {
+   "city": "Kyle",
+   "is_county_area": false,
+   "permits_5plus": 386,
+   "realpage_count": 0
+  },
+  {
+   "city": "Benbrook",
+   "is_county_area": false,
+   "permits_5plus": 369,
+   "realpage_count": 0
+  },
+  {
+   "city": "Garland",
+   "is_county_area": false,
+   "permits_5plus": 358,
+   "realpage_count": 0
+  },
+  {
+   "city": "San Marcos",
+   "is_county_area": false,
+   "permits_5plus": 355,
+   "realpage_count": 0
+  },
+  {
+   "city": "Corinth",
+   "is_county_area": false,
+   "permits_5plus": 352,
+   "realpage_count": 0
+  },
+  {
+   "city": "Brownsville",
+   "is_county_area": false,
+   "permits_5plus": 325,
+   "realpage_count": 0
+  },
+  {
+   "city": "Red Oak",
+   "is_county_area": false,
+   "permits_5plus": 324,
+   "realpage_count": 0
+  },
+  {
+   "city": "Stafford",
+   "is_county_area": false,
+   "permits_5plus": 324,
+   "realpage_count": 0
+  },
+  {
+   "city": "Georgetown",
+   "is_county_area": false,
+   "permits_5plus": 308,
+   "realpage_count": 0
+  },
+  {
+   "city": "New Braunfels",
+   "is_county_area": false,
+   "permits_5plus": 303,
+   "realpage_count": 0
+  },
+  {
+   "city": "Bexar County Unincorporated Area",
+   "is_county_area": true,
+   "permits_5plus": 248,
+   "realpage_count": 0
+  },
+  {
+   "city": "McAllen",
+   "is_county_area": false,
+   "permits_5plus": 216,
+   "realpage_count": 0
+  },
+  {
+   "city": "Manor",
+   "is_county_area": false,
+   "permits_5plus": 193,
+   "realpage_count": 0
+  },
+  {
+   "city": "Lewisville",
+   "is_county_area": false,
+   "permits_5plus": 180,
+   "realpage_count": 0
+  },
+  {
+   "city": "Laredo",
+   "is_county_area": false,
+   "permits_5plus": 158,
+   "realpage_count": 0
+  },
+  {
+   "city": "Kerrville",
+   "is_county_area": false,
+   "permits_5plus": 138,
+   "realpage_count": 0
+  },
+  {
+   "city": "Mount Pleasant",
+   "is_county_area": false,
+   "permits_5plus": 125,
+   "realpage_count": 0
+  },
+  {
+   "city": "Comal County Unincorporated Area",
+   "is_county_area": true,
+   "permits_5plus": 110,
+   "realpage_count": 0
+  },
+  {
+   "city": "El Paso",
+   "is_county_area": false,
+   "permits_5plus": 105,
+   "realpage_count": 0
+  },
+  {
+   "city": "Cibolo",
+   "is_county_area": false,
+   "permits_5plus": 97,
+   "realpage_count": 0
+  },
+  {
+   "city": "Edinburg",
+   "is_county_area": false,
+   "permits_5plus": 96,
+   "realpage_count": 0
+  },
+  {
+   "city": "Liberty Hill",
+   "is_county_area": false,
+   "permits_5plus": 84,
+   "realpage_count": 0
+  },
+  {
+   "city": "Farmers Branch",
+   "is_county_area": false,
+   "permits_5plus": 77,
+   "realpage_count": 0
+  },
+  {
+   "city": "Cleburne",
+   "is_county_area": false,
+   "permits_5plus": 73,
+   "realpage_count": 0
+  },
+  {
+   "city": "Sanger",
+   "is_county_area": false,
+   "permits_5plus": 73,
+   "realpage_count": 0
+  },
+  {
+   "city": "Mission",
+   "is_county_area": false,
+   "permits_5plus": 72,
+   "realpage_count": 0
+  },
+  {
+   "city": "Gatesville",
+   "is_county_area": false,
+   "permits_5plus": 70,
+   "realpage_count": 0
+  },
+  {
+   "city": "Corpus Christi",
+   "is_county_area": false,
+   "permits_5plus": 67,
+   "realpage_count": 0
+  },
+  {
+   "city": "Seabrook",
+   "is_county_area": false,
+   "permits_5plus": 60,
+   "realpage_count": 0
+  },
+  {
+   "city": "McGregor",
+   "is_county_area": false,
+   "permits_5plus": 59,
+   "realpage_count": 0
+  },
+  {
+   "city": "Starbase",
+   "is_county_area": false,
+   "permits_5plus": 57,
+   "realpage_count": 0
+  },
+  {
+   "city": "Crowley",
+   "is_county_area": false,
+   "permits_5plus": 52,
+   "realpage_count": 0
+  },
+  {
+   "city": "Huntsville",
+   "is_county_area": false,
+   "permits_5plus": 52,
+   "realpage_count": 0
+  },
+  {
+   "city": "Sugar Land",
+   "is_county_area": false,
+   "permits_5plus": 52,
+   "realpage_count": 0
+  },
+  {
+   "city": "Orange",
+   "is_county_area": false,
+   "permits_5plus": 50,
+   "realpage_count": 0
+  },
+  {
+   "city": "Big Spring",
+   "is_county_area": false,
+   "permits_5plus": 49,
+   "realpage_count": 0
+  },
+  {
+   "city": "Harlingen",
+   "is_county_area": false,
+   "permits_5plus": 46,
+   "realpage_count": 0
+  },
+  {
+   "city": "Weslaco",
+   "is_county_area": false,
+   "permits_5plus": 41,
+   "realpage_count": 0
+  },
+  {
+   "city": "Burnet",
+   "is_county_area": false,
+   "permits_5plus": 36,
+   "realpage_count": 0
+  },
+  {
+   "city": "Port Aransas",
+   "is_county_area": false,
+   "permits_5plus": 35,
+   "realpage_count": 0
+  },
+  {
+   "city": "Killeen",
+   "is_county_area": false,
+   "permits_5plus": 33,
+   "realpage_count": 0
+  },
+  {
+   "city": "Mansfield",
+   "is_county_area": false,
+   "permits_5plus": 32,
+   "realpage_count": 0
+  },
+  {
+   "city": "Kaufman County Unincorporated Area",
+   "is_county_area": true,
+   "permits_5plus": 30,
+   "realpage_count": 0
+  },
+  {
+   "city": "Lockhart",
+   "is_county_area": false,
+   "permits_5plus": 30,
+   "realpage_count": 0
+  },
+  {
+   "city": "Temple",
+   "is_county_area": false,
+   "permits_5plus": 24,
+   "realpage_count": 0
+  },
+  {
+   "city": "Texarkana TX",
+   "is_county_area": false,
+   "permits_5plus": 24,
+   "realpage_count": 0
+  },
+  {
+   "city": "Willis",
+   "is_county_area": false,
+   "permits_5plus": 24,
+   "realpage_count": 0
+  },
+  {
+   "city": "Andrews",
+   "is_county_area": false,
+   "permits_5plus": 20,
+   "realpage_count": 0
+  },
+  {
+   "city": "Eastland",
+   "is_county_area": false,
+   "permits_5plus": 20,
+   "realpage_count": 0
+  },
+  {
+   "city": "Port Isabel",
+   "is_county_area": false,
+   "permits_5plus": 20,
+   "realpage_count": 0
+  },
+  {
+   "city": "South Padre Island",
+   "is_county_area": false,
+   "permits_5plus": 20,
+   "realpage_count": 0
+  },
+  {
+   "city": "Stephenville",
+   "is_county_area": false,
+   "permits_5plus": 18,
+   "realpage_count": 0
+  },
+  {
+   "city": "Brenham",
+   "is_county_area": false,
+   "permits_5plus": 17,
+   "realpage_count": 0
+  },
+  {
+   "city": "Cameron County Unincorporated Area",
+   "is_county_area": true,
+   "permits_5plus": 15,
+   "realpage_count": 0
+  },
+  {
+   "city": "El Campo",
+   "is_county_area": false,
+   "permits_5plus": 15,
+   "realpage_count": 0
+  },
+  {
+   "city": "Midlothian",
+   "is_county_area": false,
+   "permits_5plus": 15,
+   "realpage_count": 0
+  },
+  {
+   "city": "Pharr",
+   "is_county_area": false,
+   "permits_5plus": 15,
+   "realpage_count": 0
+  },
+  {
+   "city": "Alton",
+   "is_county_area": false,
+   "permits_5plus": 12,
+   "realpage_count": 0
+  },
+  {
+   "city": "Briarcliff",
+   "is_county_area": false,
+   "permits_5plus": 12,
+   "realpage_count": 0
+  },
+  {
+   "city": "Paris",
+   "is_county_area": false,
+   "permits_5plus": 11,
+   "realpage_count": 0
+  },
+  {
+   "city": "Denton County Unincorporated Area",
+   "is_county_area": true,
+   "permits_5plus": 10,
+   "realpage_count": 0
+  },
+  {
+   "city": "Groves",
+   "is_county_area": false,
+   "permits_5plus": 9,
+   "realpage_count": 0
+  },
+  {
+   "city": "Irving",
+   "is_county_area": false,
+   "permits_5plus": 8,
+   "realpage_count": 0
+  },
+  {
+   "city": "Jasper",
+   "is_county_area": false,
+   "permits_5plus": 8,
+   "realpage_count": 0
+  },
+  {
+   "city": "New Boston",
+   "is_county_area": false,
+   "permits_5plus": 8,
+   "realpage_count": 0
+  },
+  {
+   "city": "Wharton County Unincorporated Area",
+   "is_county_area": true,
+   "permits_5plus": 7,
+   "realpage_count": 0
+  },
+  {
+   "city": "Rowlett",
+   "is_county_area": false,
+   "permits_5plus": 6,
+   "realpage_count": 0
+  },
+  {
+   "city": "Donna",
+   "is_county_area": false,
+   "permits_5plus": 5,
+   "realpage_count": 0
+  },
+  {
+   "city": "Euless",
+   "is_county_area": false,
+   "permits_5plus": 5,
+   "realpage_count": 0
+  },
+  {
+   "city": "Hamilton",
+   "is_county_area": false,
+   "permits_5plus": 5,
+   "realpage_count": 0
+  },
+  {
+   "city": "Matagorda County Unincorporated Area",
+   "is_county_area": true,
+   "permits_5plus": 5,
+   "realpage_count": 0
+  },
+  {
+   "city": "Monahans",
+   "is_county_area": false,
+   "permits_5plus": 5,
+   "realpage_count": 0
+  },
+  {
+   "city": "Oak Point",
+   "is_county_area": false,
+   "permits_5plus": 5,
+   "realpage_count": 0
+  },
+  {
+   "city": "Port Neches",
+   "is_county_area": false,
+   "permits_5plus": 5,
+   "realpage_count": 0
+  },
+  {
+   "city": "Rio Hondo",
+   "is_county_area": false,
+   "permits_5plus": 5,
+   "realpage_count": 0
+  },
+  {
+   "city": "San Juan",
+   "is_county_area": false,
+   "permits_5plus": 5,
+   "realpage_count": 0
+  },
+  {
+   "city": "Tyler",
+   "is_county_area": false,
+   "permits_5plus": 5,
+   "realpage_count": 0
+  },
+  {
+   "city": "Watauga",
+   "is_county_area": false,
+   "permits_5plus": 5,
+   "realpage_count": 0
+  },
+  {
+   "city": "Weatherford",
+   "is_county_area": false,
+   "permits_5plus": 5,
+   "realpage_count": 0
+  },
+  {
+   "city": "Fort Worth",
+   "is_county_area": false,
+   "permits_5plus": 5170,
+   "realpage_count": 5
+  },
+  {
+   "city": "Houston",
+   "is_county_area": false,
+   "permits_5plus": 4418,
+   "realpage_count": 7
+  },
+  {
+   "city": "Austin",
+   "is_county_area": false,
+   "permits_5plus": 3694,
+   "realpage_count": 3
+  },
+  {
+   "city": "Dallas",
+   "is_county_area": false,
+   "permits_5plus": 3377,
+   "realpage_count": 3
+  },
+  {
+   "city": "Denton",
+   "is_county_area": false,
+   "permits_5plus": 1064,
+   "realpage_count": 3
+  },
+  {
+   "city": "Grand Prairie",
+   "is_county_area": false,
+   "permits_5plus": 884,
+   "realpage_count": 4
+  }
+ ]
+}

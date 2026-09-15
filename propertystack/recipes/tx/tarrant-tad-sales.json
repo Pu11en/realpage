@@ -1,0 +1,22 @@
+{
+  "county": "Tarrant County",
+  "state": "TX",
+  "system": "tad-improved-sales-zip",
+  "zip_urls": [
+    "https://www.tad.org/content/data-download/2025CommImprovedSales.zip",
+    "https://www.tad.org/content/data-download/2026CommImprovedSales.zip"
+  ],
+  "sheet_name_prefix": "apartment",
+  "units_field": "Number of Units",
+  "date_field": "Document Date",
+  "name_field": "Site Name",
+  "address_field": "Address",
+  "price_field": "Adjusted Sale Price",
+  "fallback_price_field": "Contract Sale Price",
+  "doc_field": "Document Number",
+  "min_units": 20,
+  "since": "2024-09-01",
+  "date_tested": "2026-09-14",
+  "live_test": "Downloaded both zip years live (same tad.org host as tarrant-tad.json's permits recipe). Confirmed the apartment sheet's own name changes between years -- '2025CommImprovedSales.zip' holds a sheet literally named 'Apartments' (129 rows) while '2026CommImprovedSales.zip' holds one named 'Apartment' (49 rows), so the module matches by case-insensitive prefix, not an exact name. Real header row (both years): PIN/Site Number/Document Date/Site Class/Neighborhood/Site Name/Mapsco/EYOC/Condition/Overall Rank/NLA/GBA/Number of Units/Overall Physical Vacancy/Contract Sale Price/Adjusted Sale Price/Sale Price per Unit/.../Address/.../Document Number/... . Live rows include e.g. 'LANDMARK AT CROWLEY', 305 W FM 1187, 267 units, sold 2025-05-18 (Document Date serial 45755), Adjusted Sale Price $47,300,000.",
+  "notes": "No buyer/grantee column and no per-row city column exist anywhere in this sheet (checked live against the full real header row for both years) -- 'buyer' is always left blank (never guessed) and 'city' falls back to the recipe's own county name, the same fallback find_sold.py uses for a county file with no per-row city. Document Date is stored as a raw Excel day-serial number (e.g. 45552), not an Excel date cell -- converted via the standard 1899-12-30 epoch. 'Sale Price per Unit'/'SaleNOI'/etc. are sometimes the literal text 'NULL' on real rows (e.g. vacant/land-value-only sales) -- price falls back from Adjusted Sale Price to Contract Sale Price and is omitted from `why` entirely (never treated as $0) when neither parses."
+}

@@ -16,6 +16,7 @@ from __future__ import annotations
 import argparse
 import json
 import sys
+from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
@@ -29,14 +30,25 @@ from fetch import WebHelper  # noqa: E402
 from detect import detect_software, load_rules  # noqa: E402
 
 
-def fill_software(records: list[LeadRecord], web: WebHelper) -> list[LeadRecord]:
+def fill_software(records: list[LeadRecord], web: WebHelper, max_workers: int = 6) -> list[LeadRecord]:
     rules = load_rules()
-    kept: list[LeadRecord] = []
-    for rec in records:
+
+    def _detect(rec: LeadRecord):
         if not rec.website or rec.software not in ("", "unknown"):
+            return rec, None
+        return rec, detect_software(rec.website, web, rules)
+
+    # S1: detect_software's own network calls run several records at a time;
+    # applying each result (dropping RealPage buildings, setting fields) stays
+    # single-threaded and in the original order so output is deterministic.
+    with ThreadPoolExecutor(max_workers=max_workers) as pool:
+        pairs = list(pool.map(_detect, records))
+
+    kept: list[LeadRecord] = []
+    for rec, result in pairs:
+        if result is None:
             kept.append(rec)
             continue
-        result = detect_software(rec.website, web, rules)
         software = result["software"]
         if software == "RealPage":
             continue  # 4.2: a confirmed RealPage building is not a lead
