@@ -25,3 +25,4 @@
 | Error | Resolution |
 |-------|------------|
 | Prior readiness estimate was too optimistic | Push status reset to not ready until the human release gate passes. |
+| The loop launch environment did not expose `CCDB_API_SECRET` | Retried the local loop API without the unavailable header. |
