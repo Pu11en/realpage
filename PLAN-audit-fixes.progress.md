@@ -37,3 +37,12 @@
 - Test: tooling/qa/fixes_tests/test_a6_menu_footer.py.
 - Checked: check-fixes.sh passes (16 tests, design 0 problems); browser on index/map/property/under-the-hood shows the date and label, no page errors.
 - Note: the date changes whenever build_data.py is rerun (that is the point).
+
+## A7 Under the Hood cleaned for users — done (92ed756)
+- Removed "area: plano-richardson" and the "propertystack/runs/*.json" tag; the intro now says the step detail comes from the Plano and Richardson sample and the site has 909 leads across Texas, Arizona, New York (read live from areas/index.json).
+- Run history only lists successful runs (the one build-reach error row and the status-less client-map row are hidden); no "(N errors)" text.
+- The "Cost per area" card with the PLACEHOLDER box is gone.
+- The last pipeline step now shows "909 leads on the site" (site total) instead of the Plano-only "49 ranked leads".
+- Test: tooling/qa/fixes_tests/test_a7_under_the_hood.py.
+- Checked: check-fixes.sh passes (19 tests, design 0 problems); browser shows 909, no PLACEHOLDER/error/plano-richardson, no page errors.
+- Left: pipeline.json still carries costPerArea and error runs (page just hides them); skill names like find-apartments still show under each step.

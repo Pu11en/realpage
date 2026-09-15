@@ -53,7 +53,7 @@ Open: http://localhost:8765/index.html
 - [x] **A6 Menu footer honest.** "Last updated" comes from the built data's date, not the hard-coded
   "Sep 10, 2026" in `site/js/app.js`. The "View as" dropdown gets a short plain label and a tooltip
   ("Highlight the buildings a Yardi / Entrata / AppFolio seller would win"); "Neutral" becomes "Everyone".
-- [ ] **A7 Under the Hood cleaned for users.** Hide the raw bits: "area: plano-richardson",
+- [x] **A7 Under the Hood cleaned for users.** Hide the raw bits: "area: plano-richardson",
   "propertystack/runs/*.json", the error row, the PLACEHOLDER box; make its lead count match the
   site. No other redesign (a rebuild is planned separately).
 - [ ] **A8 Privacy page.** Link it from the app menu footer and the landing footer
