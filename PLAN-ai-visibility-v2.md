@@ -73,7 +73,7 @@ Open: http://localhost:8765/ai-visibility.html
   Keep the existing to-do list. Plain "one run so far" state when there is only one Gemini run. Works on
   phone size. Use the practice data to check it; extend the check to start the site on its own spare port,
   load the page and confirm the new sections render, then stop it. Commit.
-- [ ] **T6 "Run AI visibility" in Discord.** `tooling/ai-visibility/run-and-report.sh`: runs `run.sh`,
+- [x] **T6 "Run AI visibility" in Discord.** `tooling/ai-visibility/run-and-report.sh`: runs `run.sh`,
   builds, commits the new data on the current branch (never pushes), and prints a short plain summary: each
   number vs the last run, the top 3 lawsuit sources, and the localhost link. Add a short section to the
   repo's `AGENTS.md`: when Drew says "run AI visibility", run this script, post the summary, and push only
