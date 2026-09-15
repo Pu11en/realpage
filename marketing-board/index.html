@@ -25,6 +25,9 @@
   ul { margin:0; padding-left:20px; }
   a { color:var(--accent); }
   .empty { color:var(--muted); }
+  nav { max-width:880px; margin:16px auto 0; padding:0 24px; display:flex; gap:8px; }
+  nav a { text-decoration:none; color:var(--muted); padding:6px 14px; border-radius:8px; border:1px solid transparent; }
+  nav a.on { color:var(--ink); background:#fff; border-color:var(--line); font-weight:600; }
 </style>
 </head>
 <body>
@@ -32,6 +35,7 @@
   <h1>Crane Marketing Board</h1>
   <p>Only the marketing work you do by hand. Tell a session "remove this card" once you've posted it.</p>
 </header>
+<nav><a href="#marketing" data-tab="marketing">Marketing</a><a href="#interview" data-tab="interview">Interview practice</a></nav>
 <main id="board"></main>
 
 <script>
@@ -70,11 +74,21 @@ Free early access — I'd love your feedback.` }
   }
 ];
 
+/*
+  INTERVIEW PRACTICE TAB. Filled only by interview-practice sessions, built from Drew's own
+  spoken run-throughs. Same card fields as above (type, title, added, sections, whereToPost, files).
+*/
+const INTERVIEW = [];
+
 const board = document.getElementById("board");
 const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;" }[c]));
 const link = s => /^https?:\/\//.test(s) ? `<a href="${esc(s)}" target="_blank">${esc(s)}</a>` : esc(s);
 
-board.innerHTML = CARDS.length ? CARDS.map((c, i) => `
+function render() {
+const tab = location.hash === "#interview" ? "interview" : "marketing";
+document.querySelectorAll("nav a").forEach(a => a.classList.toggle("on", a.dataset.tab === tab));
+const list = tab === "interview" ? INTERVIEW : CARDS;
+board.innerHTML = list.length ? list.map((c, i) => `
   <article class="card">
     <div class="meta"><span class="tag">${esc(c.type)}</span><span class="tag date">Added ${esc(c.added)}</span></div>
     <h2>${esc(c.title)}</h2>
@@ -82,12 +96,17 @@ board.innerHTML = CARDS.length ? CARDS.map((c, i) => `
     ${c.sections.map((s, j) => `
       <h3>${esc(s.label)}</h3>
       <div class="block"><pre id="t${i}-${j}">${esc(s.text)}</pre><button data-t="t${i}-${j}">Copy</button></div>`).join("")}
-    <h3>Where to post</h3>
-    <ul>${c.whereToPost.map(w => `<li>${link(w)}</li>`).join("")}</ul>
-    <h3>Files</h3>
-    ${c.files.length ? `<ul>${c.files.map(f => `<li><a href="${esc(f.path)}" download>${esc(f.name)}</a></li>`).join("")}</ul>`
+    ${c.whereToPost?.length ? `<h3>Where to post</h3>
+    <ul>${c.whereToPost.map(w => `<li>${link(w)}</li>`).join("")}</ul>` : ""}
+    ${!c.files ? "" : `<h3>Files</h3>`}
+    ${!c.files ? "" : c.files.length ? `<ul>${c.files.map(f => `<li><a href="${esc(f.path)}" download>${esc(f.name)}</a></li>`).join("")}</ul>`
                      : `<p class="empty">None yet.</p>`}
-  </article>`).join("") : `<p class="empty">No cards yet.</p>`;
+  </article>`).join("") : `<p class="empty">${tab === "interview"
+    ? "Nothing yet. Your first interview-practice session fills this in from how you talk through CraneSignal."
+    : "No cards yet."}</p>`;
+}
+render();
+addEventListener("hashchange", render);
 
 board.addEventListener("click", e => {
   const id = e.target.dataset.t;
