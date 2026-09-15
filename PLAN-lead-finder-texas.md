@@ -9,6 +9,16 @@ commit), SearXNG banned, **no quality gates** (quality.json is a report only), l
   Mesa 12 min), dead-end steps on towns with no data, Scottsdale returned 0 of ~68 apartment permits,
   Phoenix kept 13 of 360 new commercial permits, 8 projects under 20 units slipped in, 150-project cap
   could cut cities off.
+- **Data first, search last (Drew 2026-09-14, after the AZ run):** the free permit pull (`permit_only.py`)
+  gave 94 AZ leads in 2 minutes for $0; the 40-minute web-lookup run mostly found nothing. So: every fact
+  that a public record already holds (project name, units, address, dates, owner, builder, owner phone,
+  sale date, buyer) comes from the record. Web search is used **only** for (a) software on buildings that
+  already exist (leasing or sold) and (b) a developer's office phone when no record has one. Not-yet-built
+  projects are never web-searched for a website (they're "Earliest: software not picked").
+- **Save as you go:** every run commits its run folder and the area's `leads.json` **after each city /
+  source** (`git add propertystack/runs/<state>/<run-id> propertystack/data/<state>; git commit`), because
+  a gowork build copy deletes uncommitted files when the build ends (the first AZ full run lost 79
+  projects this way).
 - Texas sources (live-tested): `docs/2026-09-14-texas-sources-research.md` -- read it first.
 - **Texas scope:** the whole state except Collin County (Plano-Richardson is its own finished area and is
   never rerun). Texas has many RealPage clients (40 in the client map) -- RealPage buildings are dropped
@@ -30,6 +40,9 @@ Open: http://localhost:8765 → Early Leads → Tx
 ## Tasks
 
 ### Part 1: Faster, fewer dropped leads (Arizona)
+- [ ] **S0 Save as you go + data-first switch.** `run.py` commits the run folder + `leads.json` after
+  each city (wrapper script or a `--commit-each` flag); enrichment runs only as described in "Data
+  first" above (skip website search for not-yet-built projects). Tests. Commit.
 - [ ] **S1 Parallel lookups.** Details, website, software and contact lookups run 6 at a time (thread
   pool) instead of one by one; keep 2 s between visits to the same site, stay under Jina ~100/min, cache
   every page. Time Tempe's details step before and after and write both in the progress log. Tests.
@@ -39,12 +52,15 @@ Open: http://localhost:8765 → Early Leads → Tx
   agenda-system detection across runs. Log what was skipped and why. Tests. Commit.
 - [ ] **S3 Fix dropped and leaked leads.** Find out, with the saved real rows, why Scottsdale's recipe
   gives 0 projects and why Phoenix keeps only 13 of ~360 (date parsing? keyword filter? unknown units
-  being dropped instead of kept as "Units: not public yet"?) and fix it in code or the recipe; make
+  being dropped instead of kept as "Units: not public yet"?) and fix it in code or the recipe; fill blank project names from the permit's other name/description
+  field or, failing that, the street address (Phoenix returned many blank names); make
   sure projects with a known unit count under 20 are never kept (8 slipped in, mostly Mesa). Fixture
   tests from those real rows. Commit.
 - [ ] **S4 Caps that don't cut cities off.** Per-state caps become 400 projects / 900 searches, and a
   cap is only checked between cities (a city is never cut in half). Tests. Commit.
-- [ ] **S5 Arizona re-run.** New run id with S1-S4; build the site + chat (`bash tooling/dev.sh`); write
+- [ ] **S5 Arizona re-run.** Start from the free permit pull (`permit_only.py --state AZ`), add the Maricopa
+  County sales file (sold buildings -- it was never wired into run 1) and owner/builder fields, then
+  enrichment per "Data first"; new run id with S0-S4; build the site + chat (`bash tooling/dev.sh`); write
   before vs after in the progress log (projects, per-city counts, minutes, searches, websites, software
   found). Commit.
 
@@ -74,7 +90,8 @@ Open: http://localhost:8765 → Early Leads → Tx
   (2025 + 2026 files): sold with price, units, date, buyer where given. TDHCA HTC inventory (new
   construction approved since 2024) and the 4% status log: new affordable projects with units and
   applicant phone. Commit.
-- [ ] **T6 Texas run.** Full chain for `tx` with S1-S4 speed: TABS + city recipes + appraisal files +
+- [ ] **T6 Texas run.** Records first, commit after each source: TABS + city recipes + appraisal files +
+  TDHCA (all free, no web search), then enrichment per "Data first"; full chain for `tx` with S0-S4: TABS + city recipes + appraisal files +
   TDHCA, merge duplicates across sources (address/geocode + name), website / software / phone
   enrichment, score (quality.json report only). Commit.
 - [ ] **T7 Texas on the site + chat.** Build the site and rebuild the chat with the `tx` area; run the
