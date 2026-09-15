@@ -75,6 +75,11 @@ SOURCE_NAMES = {
     "contacts": "Contact info from building websites",
     "state_leads": "CraneSignal lead ranking",
     "street_talk": "Reddit posts",
+    "dallas_buildings": "Dallas-area building survey (county records)",
+    "dallas_websites": "Dallas-area building survey (websites)",
+    "dallas_software": "Dallas-area building survey (software check)",
+    "dallas_sales": "Dallas-area building survey (county sales records)",
+    "dallas_contacts": "Dallas-area building survey (contacts from websites)",
 }
 
 
@@ -170,6 +175,10 @@ def ps_schema(args: dict, **_) -> str:
             "buildings (talk about a lead building; building_id/building), unhappy (rival customers; warm_lead=1 "
             "sounds like a manager/owner). companies is ';'-joined -- filter with companies LIKE '%Yardi%'. "
             "sentiment is happy/angry/mixed/neutral. Quote briefly and always give each post's url as its link.",
+            "dallas_buildings/dallas_websites/dallas_software/dallas_sales/dallas_contacts: a separate "
+            "Dallas-area building survey (not leads) -- never add these buildings or units to any Texas or "
+            "Dallas-Fort Worth lead count. dallas_software is almost entirely 'unknown' (not checked yet); "
+            "don't count it toward vendor market share.",
         ],
     })
 

@@ -36,7 +36,7 @@ Open: http://localhost:8765/map.html
 3. Ask "How was CraneSignal built?": it gives real numbers (steps, checks), not a guess.
 
 ## Tasks
-- [ ] **D1 Parked Dallas data in the chat.** `propertystack/data/dallas-parked/` (buildings, websites,
+- [x] **D1 Parked Dallas data in the chat.** `propertystack/data/dallas-parked/` (buildings, websites,
   software, sales, contacts; files named `1-buildings-dallas.csv` etc.) never loads. Ship it as clearly
   named tables (e.g. `dallas_buildings`, `dallas_software`, …) with an `area` column; describe in SKILL.md
   that it's a separate Dallas building survey, not extra leads, so Texas/DFW lead counts don't change.
