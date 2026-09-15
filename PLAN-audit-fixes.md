@@ -50,7 +50,7 @@ Open: http://localhost:8765/index.html
 - [x] **A5 Deep dive says the real stage.** `deepDivePrompt` in `site/js/chat-panel.js` passes the
   lead's real stage (planned / under construction / leasing) instead of calling every "Upcoming" row
   planned.
-- [ ] **A6 Menu footer honest.** "Last updated" comes from the built data's date, not the hard-coded
+- [x] **A6 Menu footer honest.** "Last updated" comes from the built data's date, not the hard-coded
   "Sep 10, 2026" in `site/js/app.js`. The "View as" dropdown gets a short plain label and a tooltip
   ("Highlight the buildings a Yardi / Entrata / AppFolio seller would win"); "Neutral" becomes "Everyone".
 - [ ] **A7 Under the Hood cleaned for users.** Hide the raw bits: "area: plano-richardson",

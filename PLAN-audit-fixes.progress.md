@@ -30,3 +30,10 @@
 - Early Leads and the detail page pass stage + signalType instead of a guessed "upcoming" flag (before, TX "Planned"/"Leasing" rows got the existing-building prompt and every other upcoming row was called "planned").
 - Test: tooling/qa/fixes_tests/test_a5_deep_dive_stage.py (fails on the old code).
 - Checked: check-fixes.sh passes (12 tests, design 0 problems).
+
+## A6 Menu footer honest — done (4118523)
+- build_data.py now writes "updated" (the build day) into site/data/areas/index.json; the menu footer reads it and shows "Last updated: Sep 15, 2026" (rebuilt data committed; only index.json changed).
+- "View as" dropdown has a plain "View as" label and tooltip "Highlight the buildings a Yardi / Entrata / AppFolio seller would win"; "Neutral" is now "Everyone" (an old saved "Neutral" choice reads as Everyone; index.html hide-mine filter updated).
+- Test: tooling/qa/fixes_tests/test_a6_menu_footer.py.
+- Checked: check-fixes.sh passes (16 tests, design 0 problems); browser on index/map/property/under-the-hood shows the date and label, no page errors.
+- Note: the date changes whenever build_data.py is rerun (that is the point).
