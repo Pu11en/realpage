@@ -1,0 +1,30 @@
+[
+ {
+  "area": "tx",
+  "city": "Fort Worth",
+  "name": "Apartment",
+  "address": "None",
+  "lat": null,
+  "lon": null,
+  "units": 302,
+  "stage": "permitted",
+  "permit_date": "2026-08-25",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+   }
+  ],
+  "why": "new multifamily permit"
+ }
+]
