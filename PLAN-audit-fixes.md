@@ -43,7 +43,7 @@ Open: http://localhost:8765/index.html
 - [x] **A3 Chat panel no longer hides Software and Why.** With the panel open on desktop the table
   gets narrower (hide low-value columns first, or let it scroll sideways inside its own box), never
   covering Software/Why. Also fix both "Early Leads" and "Chat" showing as selected in the menu.
-- [ ] **A4 Every building opens a detail page.** `property.html` also works from a lead row with no
+- [x] **A4 Every building opens a detail page.** `property.html` also works from a lead row with no
   `propertyId` (use the lead's own id): name, city, stage, units, software, why, sources, Deep dive
   button. All Texas/Arizona/New York rows become clickable. Test: every lead id in the built data
   opens without "not found".

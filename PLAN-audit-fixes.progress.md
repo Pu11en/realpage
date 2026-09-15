@@ -17,3 +17,10 @@
 - The Chat menu link no longer gets the selected look; while the panel is open it reads "Close chat". Only the current page's tab is selected.
 - Test: tooling/qa/fixes_tests/test_a3_chat_panel_layout.py.
 - Checked: check-fixes.sh passes (7 tests, design 0 problems); check-panel.sh clean; browser at 1000/1280/1440 wide with panel open: no sideways scroll, only "Early Leads" selected.
+
+## A4 Every building opens a detail page — done (a5d938d)
+- Every Early Leads row is now clickable: rows with no propertyId link to property.html?id=<lead id>&area=<state>.
+- property.html: if the id isn't in properties.json, new findLead/pickLead (site/js/app.js) looks it up in the state files (asked state first) and shows name, address, city, state, units, developer/buyer, stage, signal, dates, software, score + why, phone, sources (plain labels for non-link sources) and the Deep dive button.
+- Test: tooling/qa/fixes_tests/test_a4_every_lead_opens.py (all built lead ids resolve, via node).
+- Checked: check-fixes.sh passes (10 tests, design 0 problems); browser: tx-1, az-1, ny-1, a Plano property and a click from the Arizona list all open, "zzz" still says not found, Deep dive opens chat, no page errors.
+- Left for later tasks: Deep dive still calls non-sold rows "planned" (A5); raw ArcGIS source URLs shown as-is (C4); NY units 0 shows "units not stated" here.
