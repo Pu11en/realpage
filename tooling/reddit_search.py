@@ -7,7 +7,9 @@ excerpts, no account actions of any kind.
 
 Cookie source (never printed, never written by this script):
   1. env var (default DSH_REDDIT_COOKIE), or
-  2. ~/.dsh/.credentials.yaml -> refs.REDDIT_SESSION_COOKIE
+  2. ~/.dsh/.credentials.yaml -> refs.REDDIT_SESSION_COOKIE, or
+  3. ~/.config/propertystack/reddit-cookies.json ({name: value} or a browser
+     export list of {name, value}), joined as "name=value; ..."
 
 Usage:
   python3 reddit_search.py "realpage" --subreddit PropertyManagement --limit 5 --comments 2
@@ -30,6 +32,7 @@ UA = ("Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 "
 MAX_POST_CHARS = 600
 MAX_COMMENT_CHARS = 400
 CRED_FILE = pathlib.Path.home() / ".dsh" / ".credentials.yaml"
+COOKIE_JSON = pathlib.Path.home() / ".config" / "propertystack" / "reddit-cookies.json"
 
 
 class NoRedirect(urllib.request.HTTPRedirectHandler):
@@ -40,6 +43,21 @@ class NoRedirect(urllib.request.HTTPRedirectHandler):
 
 
 OPENER = urllib.request.build_opener(NoRedirect)
+
+
+def cookie_from_json(path: pathlib.Path) -> str:
+    """Join a saved cookie file into a Cookie header value (never printed)."""
+    try:
+        data = json.loads(path.read_text())
+    except (OSError, ValueError):
+        return ""
+    if isinstance(data, dict):
+        pairs = list(data.items())
+    elif isinstance(data, list):
+        pairs = [(c.get("name"), c.get("value")) for c in data if isinstance(c, dict)]
+    else:
+        return ""
+    return "; ".join(f"{k}={v}" for k, v in pairs if k and isinstance(v, str) and v)
 
 
 def load_cookie(env_var: str) -> str:
@@ -53,9 +71,13 @@ def load_cookie(env_var: str) -> str:
         value = refs.get("REDDIT_SESSION_COOKIE")
         if isinstance(value, str) and value.strip():
             return value.strip()
+    if COOKIE_JSON.exists():
+        cookie = cookie_from_json(COOKIE_JSON)
+        if cookie:
+            return cookie
     sys.exit(
-        f"No Reddit session cookie. Set env {env_var} or save it in DSH "
-        "(Settings -> Plugins -> Reddit)."
+        f"No Reddit session cookie. Set env {env_var}, save it in DSH "
+        f"(Settings -> Plugins -> Reddit) or in {COOKIE_JSON}."
     )
 
 

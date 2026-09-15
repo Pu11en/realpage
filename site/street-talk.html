@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/static/favicon.svg">
+  <link rel="apple-touch-icon" href="/static/apple-touch-icon.png">
+  <title>CraneSignal -- Street Talk</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/chat-panel.css" />
+  <style>
+    h2 { font-size: 16px; margin: 28px 0 10px; }
+    h3 { font-size: 14px; margin: 18px 0 6px; }
+    .muted { color: var(--text-muted); }
+    .totals { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; }
+    .post { border-left: 3px solid var(--border); padding: 4px 0 4px 10px; margin: 12px 0; font-size: 13px; max-width: 760px; }
+    .post .title { font-weight: 600; margin-bottom: 4px; }
+    .post blockquote { margin: 0 0 4px; color: var(--text); overflow-wrap: anywhere; }
+    .post .meta { font-size: 12px; color: var(--text-muted); }
+    .post a { color: var(--accent); }
+    .label { display: inline-block; font-size: 11px; padding: 1px 6px; border-radius: 3px; border: 1px solid var(--border); margin-right: 4px; }
+    .label.angry { color: var(--score-low); } .label.happy { color: var(--score-high); } .label.mixed { color: var(--score-mid); }
+    .label.warm { color: var(--accent); border-color: var(--accent); font-weight: 600; }
+    .post blockquote { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+    .parts { display: flex; flex-wrap: wrap; gap: 6px; margin: 24px 0 8px; }
+    .parts button { font: inherit; font-size: 13px; padding: 6px 12px; border: 1px solid var(--border); background: none; color: var(--text); border-radius: 4px; cursor: pointer; }
+    .parts button[aria-pressed="true"] { border-color: var(--accent); color: var(--accent); font-weight: 600; }
+    details.bldg { margin: 6px 0; } details.bldg summary { cursor: pointer; font-size: 14px; font-weight: 600; padding: 4px 0; }
+    .more { font: inherit; font-size: 13px; margin: 8px 0; background: none; border: 1px solid var(--border); color: var(--accent); padding: 4px 10px; border-radius: 4px; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <div class="shell" id="app-shell"></div>
+  <script src="js/app.js"></script>
+  <script src="js/chat-panel.js"></script>
+  <script>
+    renderShell("street");
+
+    const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+    const niceDate = (d) => d ? new Date(d + "T12:00:00Z").toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric", timeZone: "UTC" }) : "--";
+    const newestFirst = (a, b) => (b.date || "").localeCompare(a.date || "");
+    const EMPTY = `<p class="muted">No posts yet.</p>`;
+
+    function post(p) {
+      const where = p.source === "youtube" ? `YouTube${p.channel ? " · " + esc(p.channel) : ""}` : `r/${esc(p.subreddit)}`;
+      const labels = [
+        `<span class="label ${esc(p.sentiment)}">${esc(p.sentiment)}</span>`,
+        p.warmLead ? `<span class="label warm">warm lead</span>` : "",
+      ].join("");
+      const bits = [where, niceDate(p.date), p.city ? esc(p.city) : "", (p.companies || []).map(esc).join(", ")].filter(Boolean);
+      return `<div class="post">
+        <div class="title">${esc(p.title)}</div>
+        ${p.quote ? `<blockquote>${esc(p.quote)}</blockquote>` : ""}
+        <div class="meta">${labels} ${bits.join(" · ")} · <a href="${esc(p.url)}" target="_blank" rel="noopener">Open thread</a></div>
+      </div>`;
+    }
+
+    // Show 5 posts, the rest behind one "show more" button (keeps the page short).
+    function list(posts, keep = 5) {
+      if (!posts.length) return EMPTY;
+      const sorted = posts.slice().sort(newestFirst);
+      const rest = sorted.slice(keep);
+      return sorted.slice(0, keep).map(post).join("") + (rest.length
+        ? `<div hidden>${rest.map(post).join("")}</div><button class="more" onclick="this.previousElementSibling.hidden=false;this.remove()">Show ${rest.length} more</button>`
+        : "");
+    }
+
+    function byBuilding(posts) {
+      if (!posts.length) return EMPTY;
+      const groups = {};
+      posts.forEach((p) => (groups[p.buildingId] = groups[p.buildingId] || []).push(p));
+      // Busiest buildings first; posts inside each newest first.
+      return Object.values(groups).sort((a, b) => b.length - a.length).map((g) => {
+        const b = g[0];
+        const name = b.buildingId
+          ? `<a href="property.html?id=${encodeURIComponent(b.buildingId)}">${esc(b.building || b.buildingId)}</a>`
+          : esc(b.building || "Unknown building");
+        return `<details class="bldg"><summary>${name}${b.city ? ` <span class="muted">· ${esc(b.city)}</span>` : ""} <span class="muted">(${g.length})</span></summary>${list(g)}</details>`;
+      }).join("");
+    }
+
+    const PART_NAMES = { rivals: "RealPage vs rivals", buildings: "Texas buildings", unhappy: "Unhappy rival customers" };
+    function failed(d) {
+      const runs = d.failedRuns || {};
+      return Object.keys(runs).map((p) => `<p class="muted">⚠️ ${esc(PART_NAMES[p] || p)}: the Reddit refresh on ${niceDate(runs[p])} failed, so this part still shows the posts from ${d.sourceDates && d.sourceDates[p] ? `last updated ${niceDate(d.sourceDates[p])}` : "no earlier run"}.</p>`).join("");
+    }
+
+    function totals(t) {
+      const names = Object.keys(t || {});
+      if (!names.length) return EMPTY;
+      return `<div class="totals">${names.map((n) => `
+        <div class="stat-card">
+          <div class="value">${t[n].posts}</div>
+          <div class="label">${esc(n)} posts</div>
+          <div class="muted" style="font-size:12px;margin-top:6px;">${t[n].angryPct}% angry · ${t[n].happyPct}% happy</div>
+        </div>`).join("")}</div>`;
+    }
+
+    const page = document.getElementById("page-content");
+    loadData("data/street-talk.json").then((d) => {
+      const parts = d.parts || {};
+      const rivals = parts.rivals || [], buildings = parts.buildings || [], unhappy = parts.unhappy || [];
+      const warm = d.warmLeads ? `, ${d.warmLeads} warm lead${d.warmLeads === 1 ? "" : "s"}` : "";
+      const sections = [
+        { key: "rivals", name: "RealPage vs rivals", count: rivals.length, heading: "RealPage vs Yardi, Entrata and AppFolio", html: list(rivals) },
+        { key: "buildings", name: "Texas buildings", count: buildings.length, heading: "Texas buildings on our lead list (tap a building)", html: byBuilding(buildings) },
+        { key: "unhappy", name: "Unhappy rival customers", count: unhappy.length, heading: `Unhappy Yardi, Entrata and AppFolio customers${warm}`, html: list(unhappy) },
+      ];
+      page.innerHTML = `
+        <h1>Street Talk</h1>
+        <p class="muted">What people in Texas say on Reddit (and YouTube) about property management software and our lead buildings. Last updated ${niceDate(d.updated)}.</p>
+        ${failed(d)}
+        <h2>Posts per company</h2>
+        ${totals(d.totals)}
+        <div class="parts" role="group" aria-label="Choose a part">${sections.map((x, i) => `<button type="button" data-part="${x.key}" aria-pressed="${i === 0}">${esc(x.name)} (${x.count})</button>`).join("")}</div>
+        ${sections.map((x, i) => `<section data-part="${x.key}"${i ? " hidden" : ""}><h2>${esc(x.heading)}</h2>${x.html}</section>`).join("")}`;
+      // One part at a time instead of one long scroll.
+      page.querySelectorAll(".parts button").forEach((btn) => btn.addEventListener("click", () => {
+        page.querySelectorAll(".parts button").forEach((b) => b.setAttribute("aria-pressed", b === btn));
+        page.querySelectorAll("section[data-part]").forEach((sec) => (sec.hidden = sec.dataset.part !== btn.dataset.part));
+      }));
+    }).catch(() => {
+      page.innerHTML = `<h1>Street Talk</h1><p class="muted">No posts yet.</p>`;
+    });
+  </script>
+</body>
+</html>

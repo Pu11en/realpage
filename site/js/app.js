@@ -5,6 +5,7 @@ const NAV_TABS = [
   { key: "map", label: "Map", href: "map.html" },
   { key: "leads", label: "Early Leads", href: "index.html" },
   { key: "ai", label: "AI Visibility", href: "ai-visibility.html" },
+  { key: "street", label: "Street Talk", href: "street-talk.html" },
   { key: "hood", label: "Under the Hood", href: "under-the-hood.html" },
 ];
 

@@ -74,6 +74,7 @@ SOURCE_NAMES = {
     "leads": "PropertyStack lead ranking",
     "contacts": "Contact info from building websites",
     "state_leads": "PropertyStack lead ranking",
+    "street_talk": "Reddit posts",
 }
 
 
@@ -161,6 +162,10 @@ def ps_schema(args: dict, **_) -> str:
             "Filter with WHERE area='<slug>' from the area list below; stage is permitted/leasing/"
             "under_construction/sold/planned. permit_link/news_link/website_link/agenda_link/map_link "
             "are ready-made URLs for the deep-dive link row (map_link may be blank -- build it from address).",
+            "street_talk: saved Texas Reddit/YouTube posts. part=rivals (RealPage vs Yardi/Entrata/AppFolio), "
+            "buildings (talk about a lead building; building_id/building), unhappy (rival customers; warm_lead=1 "
+            "sounds like a manager/owner). companies is ';'-joined -- filter with companies LIKE '%Yardi%'. "
+            "sentiment is happy/angry/mixed/neutral. Quote briefly and always give each post's url as its link.",
         ],
     })
 

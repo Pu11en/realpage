@@ -20,6 +20,8 @@ QUESTIONS = [
     "Who owns Ellington in Plano?",
     "Fresh deep dive on Orchards Market Plaza Senior Apts, Plano (178 units, "
     "Entrata): who runs it, and why would they switch now?",
+    "What are people on Reddit saying about Yardi in Texas?",
+    "Are any Texas property managers on Reddit unhappy with AppFolio or Entrata?",
 ]
 MAX_WORDS = 60
 MAX_DEEP_WORDS = 70  # deep dives, not counting the link row and Sources
@@ -51,6 +53,10 @@ def is_deep_dive(question):
     return "deep dive" in question.lower()
 
 
+def is_street_talk(question):
+    return "reddit" in question.lower()
+
+
 def word_count(answer):
     kept = [ln for ln in answer.splitlines()
             if not SOURCES_RE.match(ln) and not LINK_ROW_RE.match(ln)]
@@ -78,6 +84,8 @@ def problems(answer, question=""):
         out.append(f"{n} words (max {limit})")
     if is_deep_dive(question) and "](http" not in answer:
         out.append("deep dive has no link")
+    if is_street_talk(question) and not re.search(r"\]\(https://www\.(reddit|youtube)\.com/", answer):
+        out.append("Reddit answer has no thread link")
     out += [f"Sources names {w!r} without a link" for w in unlinked_sources(answer)]
     out += [f"raw code {c!r}" for c in CODES if c in answer]
     out += [f"file name {f!r}" for f in FILES if f in answer]

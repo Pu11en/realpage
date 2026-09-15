@@ -14,7 +14,8 @@ metadata:
 The tools come from the `propertystack` plugin
 (`hermes-profile/plugins/propertystack/`). At startup it loads every CSV in
 `propertystack/data/plano-richardson/` into SQLite (one table per file), plus
-every other area's `chat-leads.csv` (5.4) merged into one `state_leads` table.
+every other area's `chat-leads.csv` (5.4) merged into one `state_leads` table,
+plus the Street Talk posts (`propertystack/data/street-talk/street_talk.csv`) as `street_talk`.
 
 | Table | Say it as (in Sources) | What it is |
 |---|---|---|
@@ -27,6 +28,7 @@ every other area's `chat-leads.csv` (5.4) merged into one `state_leads` table.
 | `leads` | PropertyStack lead ranking | 42 ranked Plano/Richardson leads, score parts + one-sentence `why` |
 | `contacts` | Contact info from building websites | Phone/email scraped from websites, where found |
 | `state_leads` | PropertyStack lead ranking | Every other tracked area's leads, one flat row each -- filter with `WHERE area='<slug>'` |
+| `street_talk` | Reddit posts | What Texas people say on Reddit/YouTube: `part` = rivals / buildings / unhappy, `companies` (`LIKE '%Yardi%'`), `sentiment`, `city`, `building_id`, `warm_lead`. Quote briefly and **always link each post's `url`** (the real thread) |
 
 Research files (01-company .. 09-ai-visibility) are searched with
 `ps_research_search` and read with `ps_research_read`; in Sources, say
