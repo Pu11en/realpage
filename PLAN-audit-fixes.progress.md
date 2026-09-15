@@ -113,3 +113,16 @@
 - Rebuilt with build_data.py; deterministic (no drift). Lead counts unchanged: TX 597, AZ 279, NY 2.
 - Test: tooling/qa/fixes_tests/test_c3_units_names.py (no units==0 anywhere; AZ generic labels gone; "Apartments at <address>" prefix matches the address; the "8 UNIT" recovery in both site JSON and chat CSV).
 - Checked: check-fixes.sh passes (44 tests, design 0 problems); check-lead-finder.sh clean; chatbot/tests 35 passed; score-leads/tests 8 passed.
+
+## C4 Source links a person can open — done
+- `build_data.py` normalizes every source to `{label, url}`: the raw ArcGIS/Socrata query URLs (279 AZ, 7 TX, 2 NY) now open the dataset's public page (city permit search, open-data portal or ArcGIS item page) with a plain name like "City of Mesa building permits", "City of San Marcos building permits", "Maricopa County Assessor sales records". Plano CSV tags become plain names ("County property records", "Houston weekly permit list", "News coverage", "City permit record", "Building website"); links that are already human pages keep their URL with a label ("State project record", "City filing", "News").
+- `site/index.html` and `site/property.html` render the label (no more `[tag]` brackets, no "source 1" for a named dataset). Every one of the new public pages was checked to return 200; no raw-API URL is left in any built lead.
+- Rebuilt; only the `sources` fields changed (lead counts unchanged: TX 597, AZ 279, NY 2).
+- Test: tooling/qa/fixes_tests/test_c4_sources.py.
+- Checked: check-fixes.sh passes (52 tests, design 0 problems).
+
+## C5 Arizona stage + Plano addresses — done
+- A record whose own stage is "leasing" now counts as leasing even with no opening date: az-133 / az-134 (La Victoria Commons, 1020 Apache) read signalType "Leasing" and signal "Leasing now" instead of "Upcoming · opens not public yet", and their why no longer repeats "opens: not public yet".
+- `_merge_included_areas` fills each Plano-Richardson row's street address from `site/data/properties.json` (the saved property data): 40 of the 42 rows now carry it in both `tx.json` and the chat's `tx/chat-leads.csv`. Two upcoming rows (Haggard Farm Townhomes, 360-unit project in downtown Plano) have no street address saved anywhere, so they stay blank rather than guess.
+- Test: tooling/qa/fixes_tests/test_c5_stage_address.py.
+- Checked: check-fixes.sh passes (52 tests, design 0 problems).

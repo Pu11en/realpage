@@ -91,11 +91,11 @@ Open: http://localhost:8765/index.html
   "Commercial Multi-Family" and "Unnamed project" rows get a readable name from their address
   ("Apartments at 1234 E Main St"). Try to fill missing units (124 TX, 80 AZ) from data already
   saved in the source records; leave "?" when there's nothing.
-- [ ] **C4 Source links a person can open.** Raw ArcGIS/Socrata API query URLs (279 AZ, 2 NY, 7 TX)
+- [x] **C4 Source links a person can open.** Raw ArcGIS/Socrata API query URLs (279 AZ, 2 NY, 7 TX)
   become the dataset's public page (or the city's permit lookup page) with a plain label like
   "City of Mesa building permits". Bracket labels like "[houston-weekly-xlsx]" and "[county record]"
   become plain names ("Houston weekly permit list", "County property records").
-- [ ] **C5 Arizona stage contradiction + Plano addresses.** Rows whose stage is leasing never show
+- [x] **C5 Arizona stage contradiction + Plano addresses.** Rows whose stage is leasing never show
   "Upcoming · opens not public yet" (e.g. az-1 La Victoria Commons). The 42 Plano-Richardson rows
   get their street address from the saved property data so the chat can give addresses.
 

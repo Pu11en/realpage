@@ -151,15 +151,35 @@
       return `<div class="card"><h3>Contact</h3>${body}</div>`;
     }
 
+    // C4: a saved source is either {label, url} (built data), or an older plain
+    // string/URL. Never show a raw query URL or an internal "[tag]".
+    function sourceItem(s) {
+      if (s && typeof s === "object") return { label: s.label || "Source", url: s.url || null };
+      if (!s) return null;
+      return /^https?:/.test(s) ? { label: sourceLabel(s), url: s } : { label: String(s).replace(/^\[|\]$/g, ""), url: null };
+    }
+
+    function sourceItems(list) {
+      const out = [];
+      const seen = new Set();
+      (list || []).forEach((s) => {
+        const e = sourceItem(s);
+        const key = e ? `${e.label}|${e.url || ""}` : "";
+        if (e && !seen.has(key)) { seen.add(key); out.push(e); }
+      });
+      return out;
+    }
+
     function sourcesCard(p, isUpcoming) {
-      const urls = [];
-      const add = (u) => { if (u && !urls.includes(u)) urls.push(u); };
-      (p.sources || []).forEach(add);
-      if (!isUpcoming) { if (p.sale) add(p.sale.source); add(p.proof); add(p.website); }
-      const items = urls.map((u) => `<li><span class="dim">${sourceLabel(u)}:</span> ${link(u)}</li>`);
-      if (!isUpcoming) items.unshift(`<li><span class="dim">County record:</span> Collin County appraisal district (building, units, owner)</li>`);
+      const extra = [];
+      if (!isUpcoming) { if (p.sale) extra.push(p.sale.source); extra.push(p.proof, p.website); }
+      const items = sourceItems([...(p.sources || []), ...extra]);
+      const list = items.map((e) => e.url
+        ? `<li><span class="dim">${esc(e.label)}:</span> ${link(e.url)}</li>`
+        : `<li>${esc(e.label)}</li>`);
+      if (!isUpcoming) list.unshift(`<li><span class="dim">County record:</span> Collin County appraisal district (building, units, owner)</li>`);
       return `<div class="card sources"><h3>Sources</h3>
-        <ul>${items.join("")}</ul></div>`;
+        <ul>${list.join("")}</ul></div>`;
     }
 
     // A lead row with no saved property record (Texas, Arizona, New York permits and sales).
@@ -169,13 +189,10 @@
       const sold = l.signalType === "Sold";
       const stage = LEAD_STAGE[l.stage] || l.signalType || "--";
       const sw = l.software ? vendorPill(l.software) : sold ? `<span class="pill pill-unknown">Unknown</span>` : vendorPill(null);
-      const urls = [];
-      const add = (u) => { if (u && !urls.includes(u)) urls.push(u); };
-      (l.sources || []).forEach(add);
-      Object.values(l.links || {}).forEach(add);
-      const items = urls.map((u) => /^https?:/.test(u)
-        ? `<li><span class="dim">${sourceLabel(u)}:</span> ${link(u)}</li>`
-        : `<li>${esc(u.replace(/^\[|\]$/g, ""))}</li>`);
+      const items = sourceItems([...(l.sources || []), ...Object.values(l.links || {})]);
+      const sourceHtml = items.map((e) => e.url
+        ? `<li><span class="dim">${esc(e.label)}:</span> ${link(e.url)}</li>`
+        : `<li>${esc(e.label)}</li>`);
       const bits = [l.address ? esc(l.address) : null, esc(l.city), area ? esc(area.label) : null,
         l.units ? `${l.units} units` : "units not stated"].filter(Boolean);
       const who = sold ? `Buyer: ${esc(l.buyer || "not listed")}` : `Developer: ${esc(l.developer || "not listed")}`;
@@ -201,7 +218,7 @@
             ? `<dl class="kv"><dt>Phone</dt><dd><a href="tel:${esc(l.officePhone)}">${esc(l.officePhone)}</a></dd></dl>`
             : `<div class="dim">Phone/email not found.${l.website ? `<br/>Try the website: ${link(l.website, "open site")}` : ""}</div>`}</div>
         </div>
-        <div class="card sources"><h3>Sources</h3><ul>${items.join("") || `<li class="dim">No source saved.</li>`}</ul></div>`;
+        <div class="card sources"><h3>Sources</h3><ul>${sourceHtml.join("") || `<li class="dim">No source saved.</li>`}</ul></div>`;
     }
 
     function showLead(hit) {

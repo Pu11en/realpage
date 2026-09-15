@@ -114,6 +114,25 @@
         return vendorPill(l.software);
       }
 
+      function esc(s) {
+        return String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+      }
+
+      // C4: sources are {label, url}; show the plain name, never a raw query URL
+      // or an internal "[tag]". Old plain strings still render.
+      function sourceLinks(sources) {
+        return (sources || []).map((s) => {
+          if (typeof s === "string") {
+            return /^https?:/.test(s)
+              ? `<a href="${esc(s)}" target="_blank" rel="noopener">source</a>`
+              : esc(s.replace(/^\[|\]$/g, ""));
+          }
+          return s.url
+            ? `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.label || "source")}</a>`
+            : esc(s.label || "");
+        }).join(" · ");
+      }
+
       function renderRows() {
         const search = document.getElementById("f-search").value.trim().toLowerCase();
         const signal = document.getElementById("f-signal").value;
@@ -172,7 +191,7 @@
             <td data-label="Units">${l.units ?? "?"}</td>
             <td data-label="Signal" class="lead-signal">${signalHtml(l)}</td>
             <td data-label="Software">${leadSoftwareHtml(l)}</td>
-            <td class="lead-why">${l.why} <span class="lead-src">${l.sources.map((s, n) => /^https?:/.test(s) ? `<a href="${s}" target="_blank" rel="noopener">source${l.sources.length > 1 ? " " + (n + 1) : ""}</a>` : `[${s}]`).join(" · ")}</span></td>
+            <td class="lead-why">${l.why} <span class="lead-src">${sourceLinks(l.sources)}</span></td>
           </tr>
         `).join("");
 

@@ -148,8 +148,14 @@
         "why": "Sold Apr 2025 to LW OWNER 1 LLC \u00b7 621 units \u00b7 on Yardi \u2192 new owner may re-pick software."
       },
       "sources": [
-        "https://data.texas.gov/resource/5tkr-3759.json?$select=propid,dbaname,ownername,deedtypecd,deedeffdate&$where=propid%20in%20(2750390)",
-        "https://thegrandatlegacywest.securecafe.com/residentservices/the-grand-at-legacy-west0/userlogin.aspx"
+        {
+          "label": "Texas county property records",
+          "url": "https://data.texas.gov/d/5tkr-3759"
+        },
+        {
+          "label": "Website",
+          "url": "https://thegrandatlegacywest.securecafe.com/residentservices/the-grand-at-legacy-west0/userlogin.aspx"
+        }
       ]
     },
     {
@@ -296,7 +302,10 @@
         "why": "Sold Jun 2025 \u00b7 480 units \u00b7 software not yet identified \u2192 new owner may re-pick software."
       },
       "sources": [
-        "https://data.texas.gov/resource/5tkr-3759.json?$select=propid,dbaname,ownername,deedtypecd,deedeffdate&$where=propid%20in%20(2095999)"
+        {
+          "label": "Texas county property records",
+          "url": "https://data.texas.gov/d/5tkr-3759"
+        }
       ]
     },
     {
@@ -532,7 +541,10 @@
         "why": "Owner changed to MFREVF V - PLANO LP \u00b7 402 units \u00b7 software not yet identified \u2192 new owner may re-pick software."
       },
       "sources": [
-        "https://data.texas.gov/resource/5tkr-3759.json?$select=propid,dbaname,ownername,deedtypecd,deedeffdate&$where=propid%20in%20(2646098)"
+        {
+          "label": "Texas county property records",
+          "url": "https://data.texas.gov/d/5tkr-3759"
+        }
       ]
     },
     {
@@ -639,8 +651,14 @@
         "why": "Sold Apr 2025 to PECOS HOUSING FINANCE CORPORATION \u00b7 389 units \u00b7 on ResMan \u2192 new owner may re-pick software."
       },
       "sources": [
-        "https://data.texas.gov/resource/5tkr-3759.json?$select=propid,dbaname,ownername,deedtypecd,deedeffdate&$where=propid%20in%20(1627494)",
-        "https://s2capital.myresman.com/Portal/Applicants/Availability?a=1080&p=3683ab21-b83b-4d31-b29f-584e422c6d46&_gl=1*1i1vner*_gcl_au*MTA3MjUyMDkwMy4xNjk4MjA3MTM1*_ga*MTM2OTY2OTE4Mi4xNjk4MjA3MTM1*_ga_8SMWMMGMWV*MTY5ODIxMTk0My4yLjEuMTY5ODIxMzk5Ny41Ni4wLjA."
+        {
+          "label": "Texas county property records",
+          "url": "https://data.texas.gov/d/5tkr-3759"
+        },
+        {
+          "label": "Website",
+          "url": "https://s2capital.myresman.com/Portal/Applicants/Availability?a=1080&p=3683ab21-b83b-4d31-b29f-584e422c6d46&_gl=1*1i1vner*_gcl_au*MTA3MjUyMDkwMy4xNjk4MjA3MTM1*_ga*MTM2OTY2OTE4Mi4xNjk4MjA3MTM1*_ga_8SMWMMGMWV*MTY5ODIxMTk0My4yLjEuMTY5ODIxMzk5Ny41Ni4wLjA."
+        }
       ]
     },
     {
@@ -721,8 +739,14 @@
         "why": "Sold Sep 2024 to KEY CREEKSIDE LLC \u00b7 380 units \u00b7 on RealPage \u2192 new owner may re-pick software."
       },
       "sources": [
-        "https://data.texas.gov/resource/5tkr-3759.json?$select=propid,dbaname,ownername,deedtypecd,deedeffdate&$where=propid%20in%20(2058512)",
-        "https://creeksideatlegacy.loftliving.com/login"
+        {
+          "label": "Texas county property records",
+          "url": "https://data.texas.gov/d/5tkr-3759"
+        },
+        {
+          "label": "Website",
+          "url": "https://creeksideatlegacy.loftliving.com/login"
+        }
       ]
     },
     {
@@ -967,8 +991,14 @@
         "why": "Sold Sep 2025 to 701 LEGACY DRIVE SPE LLC \u00b7 346 units \u00b7 on Yardi \u2192 new owner may re-pick software."
       },
       "sources": [
-        "https://data.texas.gov/resource/5tkr-3759.json?$select=propid,dbaname,ownername,deedtypecd,deedeffdate&$where=propid%20in%20(2058069)",
-        "https://sitemanager.rentcafe.com/residentservices/legends-at-chase-oaks-2/userlogin.aspx"
+        {
+          "label": "Texas county property records",
+          "url": "https://data.texas.gov/d/5tkr-3759"
+        },
+        {
+          "label": "Website",
+          "url": "https://sitemanager.rentcafe.com/residentservices/legends-at-chase-oaks-2/userlogin.aspx"
+        }
       ]
     },
     {
@@ -1167,8 +1197,14 @@
         "why": "Owner changed to HERITAGE CREEKSIDE BLOCK B OWNER LLC \u00b7 326 units \u00b7 on RealPage \u2192 new owner may re-pick software."
       },
       "sources": [
-        "https://data.texas.gov/resource/5tkr-3759.json?$select=propid,dbaname,ownername,deedtypecd,deedeffdate&$where=propid%20in%20(2908642)",
-        "https://9033774.onlineleasing.realpage.com/"
+        {
+          "label": "Texas county property records",
+          "url": "https://data.texas.gov/d/5tkr-3759"
+        },
+        {
+          "label": "Website",
+          "url": "https://9033774.onlineleasing.realpage.com/"
+        }
       ]
     },
     {
@@ -1249,8 +1285,14 @@
         "why": "Owner changed to HEITMAN CREDIT ACQUISITION XL LP \u00b7 324 units \u00b7 on Yardi \u2192 new owner may re-pick software."
       },
       "sources": [
-        "https://data.texas.gov/resource/5tkr-3759.json?$select=propid,dbaname,ownername,deedtypecd,deedeffdate&$where=propid%20in%20(2504520)",
-        "https://www.rentcafe.com/residentservices/mcdermott-place1/userlogin.aspx"
+        {
+          "label": "Texas county property records",
+          "url": "https://data.texas.gov/d/5tkr-3759"
+        },
+        {
+          "label": "Website",
+          "url": "https://www.rentcafe.com/residentservices/mcdermott-place1/userlogin.aspx"
+        }
       ]
     },
     {
@@ -1374,8 +1416,14 @@
         "why": "Sold Mar 2026 to PARK RESIDENCES PLANO WEST LLC \u00b7 318 units \u00b7 on Yardi \u2192 new owner may re-pick software."
       },
       "sources": [
-        "https://data.texas.gov/resource/5tkr-3759.json?$select=propid,dbaname,ownername,deedtypecd,deedeffdate&$where=propid%20in%20(2945424)",
-        "https://parkresidences-plano.securecafenet.com/residentservices/park-residences-plano-properties/userlogin"
+        {
+          "label": "Texas county property records",
+          "url": "https://data.texas.gov/d/5tkr-3759"
+        },
+        {
+          "label": "Website",
+          "url": "https://parkresidences-plano.securecafenet.com/residentservices/park-residences-plano-properties/userlogin"
+        }
       ]
     },
     {
@@ -1499,8 +1547,14 @@
         "why": "Sold Sep 2024 to SIMFA LAKESHORE FEE SIMPLE LLC \u00b7 302 units \u00b7 on Yardi \u2192 new owner may re-pick software."
       },
       "sources": [
-        "https://data.texas.gov/resource/5tkr-3759.json?$select=propid,dbaname,ownername,deedtypecd,deedeffdate&$where=propid%20in%20(1976049)",
-        "https://lakeshoreatpreston.securecafe.com/onlineleasing/lakeshore-at-preston0/guestlogin.aspx"
+        {
+          "label": "Texas county property records",
+          "url": "https://data.texas.gov/d/5tkr-3759"
+        },
+        {
+          "label": "Website",
+          "url": "https://lakeshoreatpreston.securecafe.com/onlineleasing/lakeshore-at-preston0/guestlogin.aspx"
+        }
       ]
     },
     {
@@ -1584,7 +1638,10 @@
         "why": "Owner changed to APARTMENTS AXIS SPE LLC \u00b7 300 units \u00b7 software not yet identified \u2192 new owner may re-pick software."
       },
       "sources": [
-        "https://data.texas.gov/resource/5tkr-3759.json?$select=propid,dbaname,ownername,deedtypecd,deedeffdate&$where=propid%20in%20(2560139)"
+        {
+          "label": "Texas county property records",
+          "url": "https://data.texas.gov/d/5tkr-3759"
+        }
       ]
     },
     {
@@ -1794,7 +1851,10 @@
         "why": "Sold Jun 2025 to SPRING CREEK 278 LLC \u00b7 278 units \u00b7 software not yet identified \u2192 new owner may re-pick software."
       },
       "sources": [
-        "https://data.texas.gov/resource/5tkr-3759.json?$select=propid,dbaname,ownername,deedtypecd,deedeffdate&$where=propid%20in%20(1503117)"
+        {
+          "label": "Texas county property records",
+          "url": "https://data.texas.gov/d/5tkr-3759"
+        }
       ]
     },
     {
@@ -2010,8 +2070,14 @@
         "why": "Sold Jul 2026 to S2 PRESTON PARK LP \u00b7 266 units \u00b7 on Yardi \u2192 new owner may re-pick software."
       },
       "sources": [
-        "https://data.texas.gov/resource/5tkr-3759.json?$select=propid,dbaname,ownername,deedtypecd,deedeffdate&$where=propid%20in%20(2041713)",
-        "https://liveellington.securecafe.com/onlineleasing/the-ellington5/guestlogin.aspx"
+        {
+          "label": "Texas county property records",
+          "url": "https://data.texas.gov/d/5tkr-3759"
+        },
+        {
+          "label": "Website",
+          "url": "https://liveellington.securecafe.com/onlineleasing/the-ellington5/guestlogin.aspx"
+        }
       ]
     },
     {
@@ -2500,8 +2566,14 @@
         "why": "Owner changed to CLOVER WOODLANDS PLANO OWNER LLC \u00b7 232 units \u00b7 on RealPage \u2192 new owner may re-pick software."
       },
       "sources": [
-        "https://data.texas.gov/resource/5tkr-3759.json?$select=propid,dbaname,ownername,deedtypecd,deedeffdate&$where=propid%20in%20(365483)",
-        "https://9313892.onlineleasing.realpage.com/"
+        {
+          "label": "Texas county property records",
+          "url": "https://data.texas.gov/d/5tkr-3759"
+        },
+        {
+          "label": "Website",
+          "url": "https://9313892.onlineleasing.realpage.com/"
+        }
       ]
     },
     {
@@ -2559,7 +2631,10 @@
         "why": "Sold Jun 2026 to WINSTON GT HOLDINGS LP \u00b7 229 units \u00b7 software not yet identified \u2192 new owner may re-pick software."
       },
       "sources": [
-        "https://data.texas.gov/resource/5tkr-3759.json?$select=propid,dbaname,ownername,deedtypecd,deedeffdate&$where=propid%20in%20(1716655)"
+        {
+          "label": "Texas county property records",
+          "url": "https://data.texas.gov/d/5tkr-3759"
+        }
       ]
     },
     {
@@ -2844,8 +2919,14 @@
         "why": "Sold Aug 2025 to HARVESTREE OWNER LLC \u00b7 204 units \u00b7 on Yardi \u2192 new owner may re-pick software."
       },
       "sources": [
-        "https://data.texas.gov/resource/5tkr-3759.json?$select=propid,dbaname,ownername,deedtypecd,deedeffdate&$where=propid%20in%20(1511233)",
-        "https://thewexleyplano.securecafenet.com/residentservices/harvestree-apartments-llc/userlogin"
+        {
+          "label": "Texas county property records",
+          "url": "https://data.texas.gov/d/5tkr-3759"
+        },
+        {
+          "label": "Website",
+          "url": "https://thewexleyplano.securecafenet.com/residentservices/harvestree-apartments-llc/userlogin"
+        }
       ]
     },
     {
@@ -3067,8 +3148,14 @@
         "why": "Sold Jul 2026 to CSH PLANO ACT LLC \u00b7 178 units \u00b7 on Entrata \u2192 new owner may re-pick software."
       },
       "sources": [
-        "https://data.texas.gov/resource/5tkr-3759.json?$select=propid,dbaname,ownername,deedtypecd,deedeffdate&$where=propid%20in%20(2820374)",
-        "https://myorchardatmarketplazatx.prospectportal.com/Apartments/module/application_authentication/"
+        {
+          "label": "Texas county property records",
+          "url": "https://data.texas.gov/d/5tkr-3759"
+        },
+        {
+          "label": "Website",
+          "url": "https://myorchardatmarketplazatx.prospectportal.com/Apartments/module/application_authentication/"
+        }
       ]
     },
     {
@@ -3106,8 +3193,14 @@
         "why": "Sold Apr 2025 to LW RESIDENTIAL PARTNERS LP \u00b7 175 units \u00b7 on Yardi \u2192 new owner may re-pick software."
       },
       "sources": [
-        "https://data.texas.gov/resource/5tkr-3759.json?$select=propid,dbaname,ownername,deedtypecd,deedeffdate&$where=propid%20in%20(2734943)",
-        "https://thehollandlegacywest.securecafe.com/residentservices/the-holland/userlogin.aspx"
+        {
+          "label": "Texas county property records",
+          "url": "https://data.texas.gov/d/5tkr-3759"
+        },
+        {
+          "label": "Website",
+          "url": "https://thehollandlegacywest.securecafe.com/residentservices/the-holland/userlogin.aspx"
+        }
       ]
     },
     {
@@ -3165,8 +3258,14 @@
         "why": "Sold Sep 2025 to DHC HYB SLC PROPERTIES LLC \u00b7 168 units \u00b7 on Entrata \u2192 new owner may re-pick software."
       },
       "sources": [
-        "https://data.texas.gov/resource/5tkr-3759.json?$select=propid,dbaname,ownername,deedtypecd,deedeffdate&$where=propid%20in%20(2710065)",
-        "https://overtureplanonew.residentportal.com/"
+        {
+          "label": "Texas county property records",
+          "url": "https://data.texas.gov/d/5tkr-3759"
+        },
+        {
+          "label": "Website",
+          "url": "https://overtureplanonew.residentportal.com/"
+        }
       ]
     },
     {
@@ -3204,8 +3303,14 @@
         "why": "Sold Dec 2024 to RC CALVIN LLC \u00b7 167 units \u00b7 on AppFolio \u2192 new owner may re-pick software."
       },
       "sources": [
-        "https://data.texas.gov/resource/5tkr-3759.json?$select=propid,dbaname,ownername,deedtypecd,deedeffdate&$where=propid%20in%20(2027278)",
-        "https://reapmgt.appfolio.com/connect/users/sign_in?portfolio_uuid=8ead78e2-b996-11ef-a8d3-0af44ebe6ded"
+        {
+          "label": "Texas county property records",
+          "url": "https://data.texas.gov/d/5tkr-3759"
+        },
+        {
+          "label": "Website",
+          "url": "https://reapmgt.appfolio.com/connect/users/sign_in?portfolio_uuid=8ead78e2-b996-11ef-a8d3-0af44ebe6ded"
+        }
       ]
     },
     {
@@ -3243,8 +3348,14 @@
         "why": "Sold Apr 2025 to LW OWNER 2 LLC \u00b7 161 units \u00b7 on Yardi \u2192 new owner may re-pick software."
       },
       "sources": [
-        "https://data.texas.gov/resource/5tkr-3759.json?$select=propid,dbaname,ownername,deedtypecd,deedeffdate&$where=propid%20in%20(2808931)",
-        "https://instratalegacywest.securecafe.com/onlineleasing/instrata-at-legacy-west/guestlogin.aspx"
+        {
+          "label": "Texas county property records",
+          "url": "https://data.texas.gov/d/5tkr-3759"
+        },
+        {
+          "label": "Website",
+          "url": "https://instratalegacywest.securecafe.com/onlineleasing/instrata-at-legacy-west/guestlogin.aspx"
+        }
       ]
     },
     {
@@ -3598,8 +3709,14 @@
         "why": "Sold Feb 2025 to ALTA VISTA APARTMENTS & TJFL LEGACY LP \u00b7 133 units \u00b7 on RealPage \u2192 new owner may re-pick software."
       },
       "sources": [
-        "https://data.texas.gov/resource/5tkr-3759.json?$select=propid,dbaname,ownername,deedtypecd,deedeffdate&$where=propid%20in%20(148646)",
-        "https://altavistaapartments.activebuilding.com/"
+        {
+          "label": "Texas county property records",
+          "url": "https://data.texas.gov/d/5tkr-3759"
+        },
+        {
+          "label": "Website",
+          "url": "https://altavistaapartments.activebuilding.com/"
+        }
       ]
     },
     {
@@ -3867,8 +3984,14 @@
         "why": "Sold May 2025 to AMELIA 77 LLC \u00b7 70 units \u00b7 on ResMan \u2192 new owner may re-pick software."
       },
       "sources": [
-        "https://data.texas.gov/resource/5tkr-3759.json?$select=propid,dbaname,ownername,deedtypecd,deedeffdate&$where=propid%20in%20(1808832)",
-        "https://valcap.myresman.com/Portal/Access/SignIn/ASPN"
+        {
+          "label": "Texas county property records",
+          "url": "https://data.texas.gov/d/5tkr-3759"
+        },
+        {
+          "label": "Website",
+          "url": "https://valcap.myresman.com/Portal/Access/SignIn/ASPN"
+        }
       ]
     },
     {
@@ -4267,8 +4390,14 @@
         "why": "Sold Jun 2026 to TREA ROUTH CREEK TX OWNER LP \u00b7 420 units \u00b7 on Yardi \u2192 new owner may re-pick software."
       },
       "sources": [
-        "https://data.texas.gov/resource/5tkr-3759.json?$select=propid,dbaname,ownername,deedtypecd,deedeffdate&$where=propid%20in%20(2748103)",
-        "https://vantagespringcreek.securecafenet.com/residentservices/vantage-at-spring-creek0/userlogin"
+        {
+          "label": "Texas county property records",
+          "url": "https://data.texas.gov/d/5tkr-3759"
+        },
+        {
+          "label": "Website",
+          "url": "https://vantagespringcreek.securecafenet.com/residentservices/vantage-at-spring-creek0/userlogin"
+        }
       ]
     },
     {
@@ -4441,8 +4570,14 @@
         "why": "Sold Dec 2025 to AREIT DALLAS CITYLINE LLC \u00b7 351 units \u00b7 on Yardi \u2192 new owner may re-pick software."
       },
       "sources": [
-        "https://data.texas.gov/resource/5tkr-3759.json?$select=propid,dbaname,ownername,deedtypecd,deedeffdate&$where=propid%20in%20(2721394)",
-        "https://axis110.securecafe.com/residentservices/axis-1100/userlogin.aspx?ssid=5062d8f741e4125cd17edc19d23a0dac"
+        {
+          "label": "Texas county property records",
+          "url": "https://data.texas.gov/d/5tkr-3759"
+        },
+        {
+          "label": "Website",
+          "url": "https://axis110.securecafe.com/residentservices/axis-1100/userlogin.aspx?ssid=5062d8f741e4125cd17edc19d23a0dac"
+        }
       ]
     },
     {
@@ -4779,8 +4914,14 @@
         "why": "Sold Jun 2025 to BRECKINRIDGE POINT TX LLC \u00b7 226 units \u00b7 on Yardi \u2192 new owner may re-pick software."
       },
       "sources": [
-        "https://data.texas.gov/resource/5tkr-3759.json?$select=propid,dbaname,ownername,deedtypecd,deedeffdate&$where=propid%20in%20(2058066)",
-        "https://breckinridgepoint.securecafenet.com/residentservices/breckinridge-point0/userlogin"
+        {
+          "label": "Texas county property records",
+          "url": "https://data.texas.gov/d/5tkr-3759"
+        },
+        {
+          "label": "Website",
+          "url": "https://breckinridgepoint.securecafenet.com/residentservices/breckinridge-point0/userlogin"
+        }
       ]
     },
     {
@@ -4818,8 +4959,14 @@
         "why": "Sold Jun 2025 to BRECKINRIDGE POINT TX LLC \u00b7 214 units \u00b7 on Yardi \u2192 new owner may re-pick software."
       },
       "sources": [
-        "https://data.texas.gov/resource/5tkr-3759.json?$select=propid,dbaname,ownername,deedtypecd,deedeffdate&$where=propid%20in%20(2058065)",
-        "https://breckinridgepoint.securecafenet.com/residentservices/breckinridge-point0/userlogin"
+        {
+          "label": "Texas county property records",
+          "url": "https://data.texas.gov/d/5tkr-3759"
+        },
+        {
+          "label": "Website",
+          "url": "https://breckinridgepoint.securecafenet.com/residentservices/breckinridge-point0/userlogin"
+        }
       ]
     },
     {
@@ -4854,7 +5001,10 @@
         "why": "Sold Apr 2025 to THE CAMERON COUNTY HOUSING FINANCE CORPORATION \u00b7 208 units \u00b7 software not yet identified \u2192 new owner may re-pick software."
       },
       "sources": [
-        "https://data.texas.gov/resource/5tkr-3759.json?$select=propid,dbaname,ownername,deedtypecd,deedeffdate&$where=propid%20in%20(1615274)"
+        {
+          "label": "Texas county property records",
+          "url": "https://data.texas.gov/d/5tkr-3759"
+        }
       ]
     },
     {
@@ -5064,7 +5214,10 @@
         "why": "Zoning filed Jun 2026 \u2192 software not chosen yet."
       },
       "sources": [
-        "https://plano.legistar.com/LegislationDetail.aspx?ID=1540"
+        {
+          "label": "City filing",
+          "url": "https://plano.legistar.com/LegislationDetail.aspx?ID=1540"
+        }
       ]
     },
     {
@@ -5088,7 +5241,10 @@
         "why": "Under construction Dec 2025 \u00b7 opens ~2027 \u2192 software not chosen yet."
       },
       "sources": [
-        "https://communityimpact.com/plano/development/haggard-farm-development-going-vertical-in-coming-months/"
+        {
+          "label": "News",
+          "url": "https://communityimpact.com/plano/development/haggard-farm-development-going-vertical-in-coming-months/"
+        }
       ]
     },
     {
@@ -5112,7 +5268,10 @@
         "why": "Permit issued Jun 2026 \u00b7 opens ~2027 \u2192 software not chosen yet."
       },
       "sources": [
-        "https://www.zabalist.com/projects/TABS2026023342"
+        {
+          "label": "City filing",
+          "url": "https://www.zabalist.com/projects/TABS2026023342"
+        }
       ]
     },
     {
@@ -5136,7 +5295,10 @@
         "why": "Under construction Jul 2026 \u00b7 261 units \u00b7 opens ~2029 \u2192 software not chosen yet."
       },
       "sources": [
-        "https://candysdirt.com/2026/07/10/streetlights-residential-bets-on-older-affluent-renters-with-new-plano-luxury-tower/"
+        {
+          "label": "News",
+          "url": "https://candysdirt.com/2026/07/10/streetlights-residential-bets-on-older-affluent-renters-with-new-plano-luxury-tower/"
+        }
       ]
     },
     {
@@ -5160,7 +5322,10 @@
         "why": "Leasing Apr 2026 \u00b7 338 units \u2192 software not chosen yet."
       },
       "sources": [
-        "https://candysdirt.com/2026/08/07/the-buckley-adds-338-apartments-to-planos-reworked-heritage-creekside/"
+        {
+          "label": "News",
+          "url": "https://candysdirt.com/2026/08/07/the-buckley-adds-338-apartments-to-planos-reworked-heritage-creekside/"
+        }
       ]
     },
     {
@@ -5184,7 +5349,10 @@
         "why": "Site plan approved \u00b7 360 units \u2192 software not chosen yet."
       },
       "sources": [
-        "https://communityimpact.com/plano/government/plano-commission-approves-new-site-plan-for-360-apartment-project-in-downtown-plano/"
+        {
+          "label": "News",
+          "url": "https://communityimpact.com/plano/government/plano-commission-approves-new-site-plan-for-360-apartment-project-in-downtown-plano/"
+        }
       ]
     },
     {
@@ -5208,7 +5376,10 @@
         "why": "Under construction Apr 2026 \u00b7 281 units \u00b7 opens ~2027 \u2192 software not chosen yet."
       },
       "sources": [
-        "https://communityimpact.com/richardson/development/developers-break-ground-on-281-unit-multifamily-community-in-richardson/"
+        {
+          "label": "News",
+          "url": "https://communityimpact.com/richardson/development/developers-break-ground-on-281-unit-multifamily-community-in-richardson/"
+        }
       ]
     },
     {
@@ -5232,7 +5403,10 @@
         "why": "Permit issued Jun 2026 \u00b7 443 units \u00b7 opens ~2028 \u2192 software not chosen yet."
       },
       "sources": [
-        "https://communityimpact.com/richardson/government/443-unit-apartment-complex-approved-by-richardson-city-council/"
+        {
+          "label": "News",
+          "url": "https://communityimpact.com/richardson/government/443-unit-apartment-complex-approved-by-richardson-city-council/"
+        }
       ]
     },
     {
@@ -5256,7 +5430,10 @@
         "why": "Permit issued \u00b7 opens ~2027 \u2192 software not chosen yet."
       },
       "sources": [
-        "https://www.zabalist.com/projects/TABS2025022864"
+        {
+          "label": "City filing",
+          "url": "https://www.zabalist.com/projects/TABS2025022864"
+        }
       ]
     },
     {
@@ -5280,7 +5457,10 @@
         "why": "Under construction \u00b7 384 units \u2192 software not chosen yet."
       },
       "sources": [
-        "https://communityimpact.com/richardson/development/eastside-apartment-expansion-underway-in-richardson/"
+        {
+          "label": "News",
+          "url": "https://communityimpact.com/richardson/development/eastside-apartment-expansion-underway-in-richardson/"
+        }
       ]
     },
     {
@@ -5304,7 +5484,10 @@
         "why": "Zoning approved \u2192 software not chosen yet."
       },
       "sources": [
-        "https://communityimpact.com/richardson/housing-real-estate/richardson-city-council-approves-apartment-complex-on-sherman-street/"
+        {
+          "label": "News",
+          "url": "https://communityimpact.com/richardson/housing-real-estate/richardson-city-council-approves-apartment-complex-on-sherman-street/"
+        }
       ]
     },
     {
@@ -5328,7 +5511,10 @@
         "why": "Zoning filed Aug 2026 \u00b7 351 units \u2192 software not chosen yet."
       },
       "sources": [
-        "https://content.civicplus.com/api/assets/ac54ba65-bc6a-4347-92d9-239d91767bd3"
+        {
+          "label": "City filing",
+          "url": "https://content.civicplus.com/api/assets/ac54ba65-bc6a-4347-92d9-239d91767bd3"
+        }
       ]
     },
     {
@@ -5352,7 +5538,10 @@
         "why": "Zoning filed Jul 2026 \u00b7 304 units \u2192 software not chosen yet."
       },
       "sources": [
-        "https://content.civicplus.com/api/assets/ac54ba65-bc6a-4347-92d9-239d91767bd3"
+        {
+          "label": "City filing",
+          "url": "https://content.civicplus.com/api/assets/ac54ba65-bc6a-4347-92d9-239d91767bd3"
+        }
       ]
     },
     {
@@ -5376,7 +5565,10 @@
         "why": "Zoning approved Jan 2024 \u00b7 390 units \u00b7 opens ~2027 \u2192 software not chosen yet."
       },
       "sources": [
-        "https://communityimpact.com/richardson/development/rezoning-for-richardson-apartment-building-along-us-75-glenville-drive-approved/"
+        {
+          "label": "News",
+          "url": "https://communityimpact.com/richardson/development/rezoning-for-richardson-apartment-building-along-us-75-glenville-drive-approved/"
+        }
       ]
     }
   ]

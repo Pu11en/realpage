@@ -137,7 +137,7 @@ def build_properties_and_share() -> tuple[list[dict], dict]:
                 "source": sale["source_url"] or None,
             } if sale else None,
             "lead": lead_score(lead) if lead else None,
-            "sources": split_urls(lead["sources"]) if lead else [],
+            "sources": sources_entries(split_urls(lead["sources"])) if lead else [],
         })
 
     upcoming = []
@@ -155,7 +155,7 @@ def build_properties_and_share() -> tuple[list[dict], dict]:
             "expectedOpen": r["expected_open"] or None,
             "sourceType": r["source_type"],
             "lead": lead_score(lead) if lead else None,
-            "sources": split_urls(lead["sources"]) if lead else split_urls(r["source_url"]),
+            "sources": sources_entries(split_urls(lead["sources"]) if lead else split_urls(r["source_url"])),
         })
 
     total_units = sum(p["units"] or 0 for p in properties)
@@ -280,10 +280,7 @@ def build_leads() -> dict:
         software = r["software"]
         if software in ("not chosen yet", "unknown", ""):
             software = None
-        sources = []
-        for tag in (source_tag(u.strip()) for u in r["sources"].split(";") if u.strip()):
-            if tag not in sources:
-                sources.append(tag)
+        sources = sources_entries(r["sources"].split(";"))
 
         ref_id = r["ref_id"]
         is_sold = r["signal"] == "sold"
@@ -491,6 +488,100 @@ def _plain_url(s: str) -> str:
     return m.group(1) if m else s
 
 
+# Raw data-API endpoints (ArcGIS/Socrata query URLs) that a person can't read in a
+# browser. Each one becomes the public page that shows the same records, with a
+# plain name (C4). Order matters: first matching fragment wins.
+_SOURCE_PAGES = [
+    ("arcgis.com/sharing/rest/content/items/f3484c72", "Maricopa County Assessor sales records",
+     "https://www.arcgis.com/home/item.html?id=f3484c72a938497286adc4e5de7e9963"),
+    ("arcgis.com/sharing/rest/content/items/936bbba5", "Maricopa County Assessor property records",
+     "https://www.arcgis.com/home/item.html?id=936bbba512bf4c368618cc6e79e64668"),
+    ("maps.scottsdaleaz.gov", "City of Scottsdale building permits",
+     "https://eservices.scottsdaleaz.gov/bldgresources/buildingpermit"),
+    ("data.mesaaz.gov", "City of Mesa building permits",
+     "https://data.mesaaz.gov/Building-Development/Building-Permits/dzpk-hxfb"),
+    ("maps.phoenix.gov", "City of Phoenix planning permits", "https://www.phoenixopendata.com/"),
+    ("services.arcgis.com/lQySeXwbBg53XWDi", "City of Tempe building permits",
+     "https://www.arcgis.com/home/item.html?id=55b38626464d48cb94e81cb8227d6fde"),
+    ("maps.gilbertaz.gov", "Town of Gilbert building permits", "https://data-gilbert.opendata.arcgis.com/"),
+    ("services.arcgis.com/ykpntM6e3tHvzKRJ", "Maricopa County building permits",
+     "https://www.arcgis.com/home/item.html?id=86909eb1ea9149308abaadba377f388f"),
+    ("gis.tucsonaz.gov", "City of Tucson building permits", "https://gis.tucsonaz.gov/"),
+    ("smgis.sanmarcostx.gov", "City of San Marcos building permits",
+     "https://www.sanmarcostx.gov/254/Building-Permits"),
+    ("services5.arcgis.com/3ddLCBXe1bRt7mzj", "City of Fort Worth development permits",
+     "https://www.arcgis.com/home/item.html?id=d2740f4d746b4bfaa03e25de0376238b"),
+    ("data.texas.gov/resource/5tkr-3759", "Texas county property records", "https://data.texas.gov/d/5tkr-3759"),
+    ("data.buffalony.gov/resource/9p2d-f3yt", "City of Buffalo building permits",
+     "https://data.buffalony.gov/Government/Building-Permits/9p2d-f3yt"),
+]
+
+# Internal labels from the Plano-Richardson CSV ("[county record]", "[houston-weekly-xlsx]"):
+# a plain name a person reads, plus the public page when one exists (C4).
+_SOURCE_TAGS = {
+    "county record": ("County property records", "https://data.texas.gov/d/5tkr-3759"),
+    "permit": ("City permit record", None),
+    "news": ("News coverage", None),
+    "website": ("Building website", None),
+    "houston-weekly-xlsx": ("Houston weekly permit list",
+                            "https://www.houstontx.gov/planning/DevelopRegs/"),
+}
+
+
+def _url_source_label(url: str) -> str:
+    """A plain name for a source URL that is already a page a person can open."""
+    if "tdlr.texas.gov" in url:
+        return "State project record"
+    if "austintexas.gov" in url:
+        return "City permit record"
+    if "tdhca.texas.gov" in url or "tad.org" in url:
+        return "State permit data"
+    if "data.texas.gov" in url:
+        return "County record"
+    if "legistar" in url or "zabalist.com" in url or "civicplus" in url:
+        return "City filing"
+    if any(d in url for d in ("communityimpact.com", "dallasnews.com", "candysdirt.com")):
+        return "News"
+    return "Website"
+
+
+def _source_url(s) -> str:
+    if isinstance(s, dict):
+        return _plain_url(str(s.get("url") or "")).strip()
+    if hasattr(s, "url"):  # record.Source
+        return _plain_url(str(s.url or "")).strip()
+    return _plain_url(str(s or "")).strip()
+
+
+def source_entry(s) -> dict | None:
+    """One source as {"label": ..., "url": ...}: raw data-API links open the
+    dataset's public page, internal tags get a plain name, and links that are
+    already human pages keep their URL with a plain label (C4)."""
+    raw = _source_url(s)
+    if not raw:
+        return None
+    for frag, label, url in _SOURCE_PAGES:
+        if frag in raw:
+            return {"label": label, "url": url}
+    tag = _SOURCE_TAGS.get(raw.lower())
+    if tag:
+        return {"label": tag[0], "url": tag[1]}
+    if raw.startswith("http"):
+        return {"label": _url_source_label(raw), "url": raw}
+    return {"label": raw.strip("[]"), "url": None}
+
+
+def sources_entries(items) -> list[dict]:
+    """Normalize a list of saved sources to {label, url}, dropping duplicates."""
+    out, seen = [], set()
+    for s in items or []:
+        e = source_entry(s)
+        if e and (e["label"], e["url"]) not in seen:
+            seen.add((e["label"], e["url"]))
+            out.append(e)
+    return out
+
+
 def _nice_name(name: str, address: str = "") -> str:
     """ALL-CAPS names read as shouting; a generic permit label isn't a name --
     call it "Apartments at <address>" when there is one."""
@@ -514,12 +605,22 @@ def _area_units(record) -> int | None:
 
 
 def _is_leasing(record) -> bool:
-    """Not sold, not planned, and its opening date already passed."""
+    """A record's own "leasing" stage wins even with no opening date; otherwise
+    not sold/planned and its opening date already passed."""
+    if record.stage == "leasing":
+        return True
     return (
         record.stage not in ("sold", "planned")
         and bool(record.opening_date)
         and record.opening_date <= date.today().isoformat()
     )
+
+
+def _leasing_why(record) -> str:
+    """A leasing row must not also read "opens: not public yet" (C5)."""
+    parts = [p for p in _clean_why(record.why).split(" · ")
+             if not re.match(r"opens?:?\s*not public yet", p, re.I)]
+    return " · ".join(parts)
 
 
 def _area_sort_key(record):
@@ -530,7 +631,7 @@ def _area_sort_key(record):
     if record.stage == "planned":
         return (2, record.opening_date or "9999", 0)
     if _is_leasing(record):
-        return (1, "", -int(record.opening_date.replace("-", "")))
+        return (1, "", -int(record.opening_date.replace("-", "")) if record.opening_date else 0)
     return (0, record.opening_date if (record.opening_date or "") > today else "9999", 0)
 
 
@@ -555,12 +656,13 @@ def _area_lead_dict(record, idx: int, total: int = 34) -> dict:
         "website": record.website or None,
         "software": record.software if record.software not in ("", "unknown") else None,
         "links": {k: _plain_url(str(v)) for k, v in record.links.items() if v},
-        "sources": list(dict.fromkeys(_plain_url(s["url"] if isinstance(s, dict) else s.url) for s in record.sources)),
+        "sources": sources_entries(record.sources),
         "signalType": "Sold" if is_sold else (
             "Planned" if record.stage == "planned" else ("Leasing" if leasing else "Upcoming")
         ),
-        "signal": f"Opened {record.opening_date}" if leasing else _area_signal_text(record),
-        "why": _clean_why(record.why),
+        "signal": (f"Opened {record.opening_date}" if record.opening_date else "Leasing now") if leasing
+                  else _area_signal_text(record),
+        "why": _leasing_why(record) if leasing else _clean_why(record.why),
         # Records already come out of score_and_rank in rank order (4.5); this
         # is a display-only stand-in for a numeric score until the site needs one.
         "score": max(1, round(100 * (1 - (idx - 1) / total))),
@@ -687,10 +789,25 @@ def build_state_areas(include_sample: bool = False) -> list[str]:
     return slugs
 
 
+def _address_by_lead_id() -> dict:
+    """ref_id / project_id -> street address from the saved Plano-Richardson
+    property data, so included rows (and the chat) can give addresses (C5)."""
+    path = OUT_DIR / "properties.json"
+    if not path.exists():
+        return {}
+    data = json.loads(path.read_text())
+    out = {}
+    for p in (data.get("properties") or []) + (data.get("upcoming") or []):
+        if p.get("id") and p.get("address"):
+            out[p["id"]] = p["address"]
+    return out
+
+
 def _merge_included_areas(slug: str, area_json: dict) -> dict:
     """Show older areas (e.g. a city pair inside this state) inside the state's
     table, under their metro, instead of as a separate button."""
     metros = _load_metros(slug)
+    addrs = _address_by_lead_id() if (metros or {}).get("include_areas") else {}
     for inc in (metros or {}).get("include_areas", []):
         path = OUT_DIR / inc["dataPath"]
         if not path.exists():
@@ -702,6 +819,8 @@ def _merge_included_areas(slug: str, area_json: dict) -> dict:
             lead["id"] = f"{inc['slug']}-{lead.get('id', i)}"
             lead["metro"] = inc["metro"]
             lead["subArea"] = inc["label"]
+            if not lead.get("address"):
+                lead["address"] = addrs.get(lead.get("propertyId")) or None
             lead.setdefault("sources", [])
             area_json["leads"].append(lead)
     if (metros or {}).get("include_areas"):

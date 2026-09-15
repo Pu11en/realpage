@@ -35,7 +35,10 @@
         "news": "https://www.bizjournals.com/buffalo/news/2025/07/21/dofi-development-plans-apartments-in-south-buffalo.html"
       },
       "sources": [
-        "https://data.buffalony.gov/resource/9p2d-f3yt.json"
+        {
+          "label": "City of Buffalo building permits",
+          "url": "https://data.buffalony.gov/Government/Building-Permits/9p2d-f3yt"
+        }
       ],
       "signalType": "Upcoming",
       "signal": "Opens: not public yet",
@@ -65,7 +68,10 @@
         "news": "https://www.facebook.com/TheBuffaloNews/posts/two-months-after-purchasing-the-historic-dun-building-on-pearl-street-mcguire-de/1241030941391361/"
       },
       "sources": [
-        "https://data.buffalony.gov/resource/9p2d-f3yt.json"
+        {
+          "label": "City of Buffalo building permits",
+          "url": "https://data.buffalony.gov/Government/Building-Permits/9p2d-f3yt"
+        }
       ],
       "signalType": "Upcoming",
       "signal": "Opens: not public yet",
