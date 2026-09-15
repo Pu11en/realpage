@@ -9,22 +9,10 @@ set -euo pipefail
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$ROOT"
 PROJECT="cranesignal-human-test"
-COMPOSE=(docker compose -p "$PROJECT" -f chatbot/docker-compose.local.yml -f chatbot/docker-compose.human-test.yml)
 MAIN_ROOT="$(cd "$(git -C "$ROOT" rev-parse --path-format=absolute --git-common-dir)/.." && pwd)"
 LANDING_DIR="$MAIN_ROOT/business/marketing/landing"
-LANDING_PIDFILE="/tmp/cranesignal-human-test-landing.pid"
-LANDING_LOG="/tmp/cranesignal-human-test-landing.log"
-
-stop_landing() {
-  if [ -f "$LANDING_PIDFILE" ]; then
-    local pid
-    pid="$(cat "$LANDING_PIDFILE")"
-    if [[ "$pid" =~ ^[0-9]+$ ]]; then
-      kill "$pid" 2>/dev/null || true
-    fi
-    rm -f "$LANDING_PIDFILE"
-  fi
-}
+export CRANESIGNAL_LANDING_DIR="$LANDING_DIR"
+COMPOSE=(docker compose -p "$PROJECT" -f chatbot/docker-compose.local.yml -f chatbot/docker-compose.human-test.yml)
 
 offline_check() {
   local overlay="chatbot/docker-compose.human-test.yml"
@@ -37,8 +25,10 @@ offline_check() {
   grep -Fq 'ENABLE_LOGIN_FORM: "true"' "$overlay"
   grep -Fq '"8876:8080"' "$overlay"
   grep -Fq 'ports: !reset []' "$overlay"
-  grep -Fq 'APP_URL=http://localhost:8876' "$0"
+  grep -Fq 'APP_URL: http://localhost:8876' "$overlay"
   grep -Fq 'LANDING_DIR="$MAIN_ROOT/business/marketing/landing"' "$0"
+  grep -Fq 'context: ${CRANESIGNAL_LANDING_DIR}' "$overlay"
+  grep -Fq 'name: cranesignal-human-test-landing-data' "$overlay"
   printf 'Human preview starts on the real landing page, then opens an isolated signed-in app.\n'
 }
 
@@ -48,7 +38,6 @@ case "${1:-start}" in
     exit 0
     ;;
   stop)
-    stop_landing
     "${COMPOSE[@]}" down --volumes --remove-orphans
     echo "Stopped the landing page and private app preview, and removed only its fresh test accounts and chats."
     exit 0
@@ -75,7 +64,6 @@ fi
 echo "Preparing the CraneSignal landing page and a fresh private app preview..."
 # This project and these two named volumes are used nowhere else.  Clearing
 # them makes every start a first-time-account test without touching ps-chat.
-stop_landing
 "${COMPOSE[@]}" down --volumes --remove-orphans
 
 for port in 8765 8876; do
@@ -86,8 +74,6 @@ for port in 8765 8876; do
 done
 
 "${COMPOSE[@]}" up -d --build
-APP_URL=http://localhost:8876 nohup python3 "$LANDING_DIR/server.py" --port 8765 >"$LANDING_LOG" 2>&1 &
-echo $! > "$LANDING_PIDFILE"
 
 printf 'Waiting for CraneSignal'
 for _ in $(seq 1 60); do
@@ -107,6 +93,5 @@ done
 
 echo
 echo "The preview did not become ready in two minutes. It is still isolated."
-echo "Landing log: $LANDING_LOG"
 echo "Inspect with: docker compose -p $PROJECT -f chatbot/docker-compose.local.yml -f chatbot/docker-compose.human-test.yml ps"
 exit 1

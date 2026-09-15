@@ -12,6 +12,7 @@ OVERLAY = ROOT / "chatbot" / "docker-compose.human-test.yml"
 LOCAL_COMPOSE = ROOT / "chatbot" / "docker-compose.local.yml"
 APP_JS = ROOT / "site" / "js" / "app.js"
 CHAT_PANEL_JS = ROOT / "site" / "js" / "chat-panel.js"
+BRANDING_LOADER = ROOT / "chatbot" / "branding" / "loader.js"
 
 
 def test_human_preview_site_uses_the_dockerfile_expected_context():
@@ -48,3 +49,16 @@ def test_sign_out_clears_the_same_origin_chat_token_before_redirecting():
     assert "/api/v1/auths/signout" in sign_out
     assert 'localStorage.removeItem("token")' in sign_out
     assert 'location.href = `${base}/auth`' in sign_out
+
+
+def test_auth_rebrands_first_account_screen_without_removing_its_action():
+    loader = BRANDING_LOADER.read_text(encoding="utf-8")
+
+    assert 'Welcome to your AI home.' in loader
+    assert 'Your early-lead workspace is ready.' in loader
+    assert '"Get started": "Create your account"' in loader
+    assert '"Open WebUI": "CraneSignal"' in loader
+    assert 'https://docs.openwebui.com' in loader
+    assert 'docs.style.display = "none"' in loader
+    assert 'start.setAttribute("aria-label", "Create your account")' in loader
+    assert "panel.remove()" not in loader

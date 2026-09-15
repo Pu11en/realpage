@@ -27,8 +27,11 @@ def test_human_preview_does_not_share_everyday_local_state():
     assert 'PROJECT="cranesignal-human-test"' in script
     assert 'down --volumes --remove-orphans' in script
     assert 'for port in 8765 8876' in script
-    assert 'APP_URL=http://localhost:8876' in script
+    assert 'APP_URL: http://localhost:8876' in overlay
     assert 'LANDING_DIR="$MAIN_ROOT/business/marketing/landing"' in script
+    assert 'export CRANESIGNAL_LANDING_DIR="$LANDING_DIR"' in script
+    assert 'context: ${CRANESIGNAL_LANDING_DIR}' in overlay
+    assert "cranesignal-human-test-landing-data" in overlay
     assert "cranesignal-human-test-open-webui" in overlay
     assert "cranesignal-human-test-hermes-home" in overlay
     assert "-p ps-chat" not in script
