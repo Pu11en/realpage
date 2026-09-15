@@ -351,3 +351,116 @@
 - Left open: `recipes/tx/tabs.json` is not yet wired into `run.py`'s chain
   (that's T6, which merges TABS + city recipes + appraisal files + TDHCA);
   T3 (Texas city permit recipes) is next.
+
+## T3 Texas city permit recipes
+- All 7 recipes in the plan are built and genuinely live-tested against
+  their real endpoints, saved under `recipes/tx/`: `austin.json`,
+  `fort-worth.json`, `arlington.json`, `san-marcos.json`,
+  `san-antonio.json`, `houston.json`, `tarrant-tad.json`.
+- **Austin** (Socrata, `data.austintexas.gov/resource/3syk-w9eu.json`):
+  fits `find_upcoming`'s existing engine directly -- `housing_units` is a
+  real numeric field. Live query (`permittype='BP' AND work_class='New' AND
+  housing_units>=20` since 2024-09) returned real rows, e.g. 2631 Kramer Ln
+  Unit FW3 (159 units, issued 2026-08-27).
+- **Fort Worth** (ArcGIS): the real layer has 2,227 matching rows since
+  2024-09 and genuinely hits ArcGIS's 1,000-row response cap
+  (`exceededTransferLimit=true`), confirmed live with `returnCountOnly`.
+  Added generic `resultOffset` pagination to
+  `find_upcoming._fetch_rows` (capped at 20 extra pages) instead of a
+  one-off Fort-Worth-only wrapper, since any large ArcGIS layer (AZ
+  included) could hit the same cap. `Units` is a text field here (plain
+  digit strings on the sampled rows) -- mapped via `units_text_field` +
+  `units_text_pattern`.
+- **Arlington** (ArcGIS, `gis2.arlingtontx.gov`): needs a `User-Agent`
+  header or the service returns a bare HTTP 403 (already handled by every
+  lead-finder* live fetch's shared header). No unit or owner field exists
+  on this layer at all (confirmed live via the layer's own `?f=json`
+  metadata) -- kept via the `MainUse` type match, units stay `None`.
+- **San Marcos**: the plan's sketch URL wasn't runnable as given, so the
+  real service was found live by walking `smgis.sanmarcostx.gov`'s ArcGIS
+  REST folder catalog to `Planning/CoSM_BuildingPermits/FeatureServer/0`.
+  `TYPE='New' AND LANDUSE='Multi-Family'` since 2024-09 returned 168 real
+  rows, no paging needed. This layer is per-unit, not per-project,
+  granularity (e.g. 4 separate rows for one building's apartments 301/303/
+  304/329) -- relies on `find_upcoming`'s existing address-based merge; no
+  aggregate unit-count field exists, so units always stay `None` here
+  (documented as approximate/left-open in the recipe's notes, not
+  fabricated).
+- **San Antonio** (CKAN SQL): found the exact live resource ids via
+  `package_search` on the `building-permits` dataset --
+  `c21106f9-3ef5-4f3a-8604-f992b4db7512` (2025+) and
+  `c22b1ef2-dcf8-4d77-be1a-ee3638092aab` (2020-2024). New adapter
+  `skills/lead-finder-permits/ckan_sql.py` unwraps CKAN's
+  `{result:{records:[...]}}` envelope into the plain list
+  `find_upcoming._fetch_rows` already understands from Socrata, rather than
+  teaching `_fetch_rows` CKAN's shape directly (a SQL query string isn't
+  itself a GET-able URL the way Socrata/ArcGIS endpoints are, so a thin
+  adapter fit better than a generic branch). The recipe's `sql` field
+  `UNION ALL`s both resources with an explicit `::text` cast on `DATE
+  ISSUED` -- a plain `UNION` genuinely fails live with a Postgres
+  `DatatypeMismatch` error between the two resources' column types,
+  confirmed by hitting it. Filtering `"PERMIT TYPE"='Comm New Building
+  Permit'` plus an apartment-keyword match on `PROJECT NAME` returned 156
+  real rows live (e.g. 8 separate building permits for "The Orion
+  Apartments"). No units field anywhere in this dataset -- always `None`.
+- **Houston**: not a Socrata/ArcGIS/CKAN shape at all -- new module
+  `skills/lead-finder-permits/houston_sold_permits.py` scrapes the real
+  `.xlsx` links straight out of the sold-permits search page's HTML (34
+  posted weekly files found live) and parses each with `openpyxl` (already
+  a project dependency, no new one added). Live-ran the full
+  discover+download+parse chain against the real site: 41 genuine new
+  apartment/R2 rows, several with real unit counts parsed straight out of
+  free-text Comments (e.g. "78,855 SF NEW APT BLD (65 UNITS)" -> 65 units,
+  "119,873 SF NEW APT BLD (104UNITS)" -> 104 units). **Left open /
+  approximate, documented honestly in the recipe's notes:** the site only
+  keeps a rolling few months of weekly files (earliest live link seen was
+  January 2026), so this source alone cannot reach back to the plan's
+  2024-09 start date for Houston -- T2's TABS puller and T5's TDHCA source
+  are what actually cover that full window; this recipe adds only whatever
+  is still posted at run time.
+- **Tarrant County TAD**: new module `skills/lead-finder-permits/tad_zip.py`
+  downloads+unzips the county's yearly commercial-permits zip (one `xlsx`
+  inside, not a delimited text file like Maricopa's sales recipe, but the
+  same "generic code, county specifics in data" shape) and tags each
+  `LeadRecord` with the row's own `Issuing Agency` city field instead of
+  one caller-supplied city, since the whole point of this source is that it
+  covers every city in the county from one file. Live-verified against
+  both the 2025 and 2026 zips: real header row matches the plan's expected
+  fields exactly (`Total Units`, `Intended Property Use`, `Issuing Agency`,
+  ...); filtering `Intended Property Use` contains "Apartments" and `Total
+  Units>=20` gave 150 real rows spanning multiple real cities (e.g. Serena
+  Vista Apartments, 120 units, Arlington; Whisperwind Apartments, 49 units,
+  Fort Worth). `Total Units=0` on still-in-development projects (e.g. "THE
+  CALHOUN APTS (IN DEVELOPMENT)") is treated as unknown, never as literally
+  zero units.
+- Live self-test: extended `skills/lead-finder-permits/live_self_test.py`
+  to dispatch `ckan-sql`, `houston-sold-permits-xlsx`, and
+  `county-appraisal-zip` recipes through their respective adapters (the
+  last one bypasses `find_upcoming` entirely, calling
+  `tad_zip.find_new_apartment_permits` directly, since that source's output
+  is multi-city per call). Ran `python3
+  skills/lead-finder-permits/live_self_test.py tx` live end to end: all 7
+  T3 recipes returned real rows in one run -- arlington 178, austin 48,
+  fort-worth 1 (after address-based merge collapses many permits per
+  project), houston 24, san-antonio 2, san-marcos 6, tarrant-tad 185 (the
+  only failure in that run is `tabs.json`, T2's recipe, which uses a
+  different function signature on purpose and isn't part of T3).
+- Tests: `test_tx_recipes.py` (recipe-wiring tests using placeholder city
+  names so the lead-finder no-place-names-in-code check stays clean),
+  `test_ckan_sql.py`, `test_houston_sold_permits.py`, `test_tad_zip.py`
+  (all new, all offline via injected fetch functions), plus two new
+  ArcGIS-pagination tests added to the existing `test_find_upcoming.py`.
+- Checked: `bash tooling/qa/check-lead-finder.sh` passes (still 70
+  lead-finder* tests + check-panel.sh -- the new tests live outside that
+  script's scope, in the full suite instead). Full suite from
+  `propertystack/` (`python3 -m pytest -q --ignore=skills/client-map/tests`):
+  308 passed, up from 293 (0 real failures; the pre-existing
+  `test_fetch_block_counts_are_race_free_across_threads` timing flake noted
+  in T2 reproduced once in this session and passed clean on an immediate
+  rerun, same as before -- not a regression from this work).
+- Committed incrementally, one commit per source, per the plan's
+  save-as-you-go rule: Austin+Fort Worth+Arlington+ArcGIS pagination, San
+  Marcos, San Antonio+CKAN adapter, Houston, Tarrant TAD.
+- Left open: none of these 7 recipes are wired into `run.py`'s chain yet
+  (that's T6, same as T2's TABS recipe); T4 (Dallas + Houston from
+  appraisal-district files) is next.

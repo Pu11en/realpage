@@ -82,7 +82,7 @@ Open: http://localhost:8765 → Early Leads → Tx
   stage and "opens" date). Map city/county codes to names (find the code table on the TABS site). Units
   only from the scope text ("300 units"), else "Units: not public yet". 1-2 s between requests, cache
   every page. Tests with saved responses. Commit.
-- [ ] **T3 Texas city permit recipes.** Tested recipes (data) for Austin (Socrata, `housing_units`),
+- [x] **T3 Texas city permit recipes.** Tested recipes (data) for Austin (Socrata, `housing_units`),
   San Antonio (CKAN SQL, two resources), Fort Worth (ArcGIS, page past 1,000 rows, `Units` as text),
   Arlington (ArcGIS), Houston (weekly "Sold Permits" spreadsheets -- read all posted weeks), San Marcos,
   and Tarrant County's TAD commercial permits zip (all Tarrant cities, `Total Units`). Live self-test
