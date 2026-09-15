@@ -30,7 +30,7 @@ Open: http://localhost:8765 → Ask (no sign-in locally)
   links untouched while still stripping fake `https://` links. Add
   `tooling/qa/fixes_tests/test_find_contact.py` (offline) checking the SOUL rule and the linkfix
   behaviour. Run Check. Commit.
-- [x] **F2 Clickable in the chat.** In `chatbot/branding/loader.js` (runs inside Open WebUI),
+- [ ] **F2 Clickable in the chat.** In `chatbot/branding/loader.js` (runs inside Open WebUI),
   catch clicks on links whose href starts with `#ask:`, put the decoded text in the chat input
   and send it (same way the site's deep-dive buttons send a prompt); no page jump or navigation.
   Keep existing loader behaviour. Add a test to `test_find_contact.py` that loader.js has the
