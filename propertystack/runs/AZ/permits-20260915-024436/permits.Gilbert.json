@@ -1,0 +1,170 @@
+[
+ {
+  "area": "az",
+  "city": "Gilbert",
+  "name": "Commercial Multi-Family",
+  "address": "245 N NEELY ST",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-06-30",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://maps.gilbertaz.gov/arcgis/rest/services/OD/Growth_Development_Tables_1/MapServer/3/query?where=PermitType%3D%27Commercial+Multi-Family%27+AND+WorkClass%3D%27New%27&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssuedDate+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://maps.gilbertaz.gov/arcgis/rest/services/OD/Growth_Development_Tables_1/MapServer/3/query?where=PermitType%3D%27Commercial+Multi-Family%27+AND+WorkClass%3D%27New%27&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssuedDate+DESC"
+   }
+  ],
+  "why": "new multifamily permit"
+ },
+ {
+  "area": "az",
+  "city": "Gilbert",
+  "name": "Commercial Multi-Family",
+  "address": "3844 S VAL VISTA DR",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2025-07-15",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://maps.gilbertaz.gov/arcgis/rest/services/OD/Growth_Development_Tables_1/MapServer/3/query?where=PermitType%3D%27Commercial+Multi-Family%27+AND+WorkClass%3D%27New%27&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssuedDate+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://maps.gilbertaz.gov/arcgis/rest/services/OD/Growth_Development_Tables_1/MapServer/3/query?where=PermitType%3D%27Commercial+Multi-Family%27+AND+WorkClass%3D%27New%27&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssuedDate+DESC"
+   }
+  ],
+  "why": "new multifamily permit"
+ },
+ {
+  "area": "az",
+  "city": "Gilbert",
+  "name": "Commercial Multi-Family",
+  "address": "460 N GILBERT RD",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2025-06-05",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://maps.gilbertaz.gov/arcgis/rest/services/OD/Growth_Development_Tables_1/MapServer/3/query?where=PermitType%3D%27Commercial+Multi-Family%27+AND+WorkClass%3D%27New%27&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssuedDate+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://maps.gilbertaz.gov/arcgis/rest/services/OD/Growth_Development_Tables_1/MapServer/3/query?where=PermitType%3D%27Commercial+Multi-Family%27+AND+WorkClass%3D%27New%27&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssuedDate+DESC"
+   }
+  ],
+  "why": "new multifamily permit"
+ },
+ {
+  "area": "az",
+  "city": "Gilbert",
+  "name": "Commercial Multi-Family",
+  "address": "4343 E WARNER RD",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2025-01-30",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://maps.gilbertaz.gov/arcgis/rest/services/OD/Growth_Development_Tables_1/MapServer/3/query?where=PermitType%3D%27Commercial+Multi-Family%27+AND+WorkClass%3D%27New%27&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssuedDate+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://maps.gilbertaz.gov/arcgis/rest/services/OD/Growth_Development_Tables_1/MapServer/3/query?where=PermitType%3D%27Commercial+Multi-Family%27+AND+WorkClass%3D%27New%27&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssuedDate+DESC"
+   }
+  ],
+  "why": "new multifamily permit"
+ },
+ {
+  "area": "az",
+  "city": "Gilbert",
+  "name": "Commercial Multi-Family",
+  "address": "3340 E WARNER RD",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2024-11-25",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://maps.gilbertaz.gov/arcgis/rest/services/OD/Growth_Development_Tables_1/MapServer/3/query?where=PermitType%3D%27Commercial+Multi-Family%27+AND+WorkClass%3D%27New%27&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssuedDate+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://maps.gilbertaz.gov/arcgis/rest/services/OD/Growth_Development_Tables_1/MapServer/3/query?where=PermitType%3D%27Commercial+Multi-Family%27+AND+WorkClass%3D%27New%27&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssuedDate+DESC"
+   }
+  ],
+  "why": "new multifamily permit"
+ },
+ {
+  "area": "az",
+  "city": "Gilbert",
+  "name": "Commercial Multi-Family",
+  "address": "1225 N ARIZONA AVE",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2024-11-06",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://maps.gilbertaz.gov/arcgis/rest/services/OD/Growth_Development_Tables_1/MapServer/3/query?where=PermitType%3D%27Commercial+Multi-Family%27+AND+WorkClass%3D%27New%27&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssuedDate+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://maps.gilbertaz.gov/arcgis/rest/services/OD/Growth_Development_Tables_1/MapServer/3/query?where=PermitType%3D%27Commercial+Multi-Family%27+AND+WorkClass%3D%27New%27&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssuedDate+DESC"
+   }
+  ],
+  "why": "new multifamily permit"
+ }
+]

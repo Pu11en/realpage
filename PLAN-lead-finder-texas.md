@@ -64,7 +64,7 @@ Open: http://localhost:8765 → Early Leads → Tx
   tests from those real rows. Commit.
 - [x] **S4 Caps that don't cut cities off.** Per-state caps become 400 projects / 900 searches, and a
   cap is only checked between cities (a city is never cut in half). Tests. Commit.
-- [ ] **S5 Arizona re-run.** Start from the free permit pull (`permit_only.py --state AZ`), add the Maricopa
+- [x] **S5 Arizona re-run.** Start from the free permit pull (`permit_only.py --state AZ`), add the Maricopa
   County sales file (sold buildings -- it was never wired into run 1) and owner/builder fields, then
   enrichment per "Data first"; new run id with S0-S4; build the site + chat (`bash tooling/dev.sh`); write
   before vs after in the progress log (projects, per-city counts, minutes, searches, websites, software

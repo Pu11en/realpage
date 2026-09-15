@@ -1,0 +1,22 @@
+{
+ "city": "Tucson",
+ "state": "AZ",
+ "system": "arcgis",
+ "endpoint": "https://gis.tucsonaz.gov/public/rest/services/PublicMaps/PermitsCode/MapServer/84/query?where=StructureType%3D%27Apartment+Building%27+AND+WORKCLASS+LIKE+%27%25New%25%27&outFields=%2A&f=json&resultRecordCount=500&orderByFields=ISSUEDATE+DESC",
+ "fields": {
+  "units": "DwellingUnits",
+  "issue_date": "ISSUEDATE",
+  "address": "ADDRESS",
+  "co_date": "COMPLETEDATE"
+ },
+ "date_format": "epoch_ms",
+ "date_tested": "2026-09-14",
+ "live_test": "Capstone Speedway/Euclid Mixed Use (165 units) / 812 E SPEEDWAY BL returned live",
+ "notes": "DwellingUnits is often 0/1 on per-building-permit rows even for large projects (the individual permit is for one building of a larger complex) -- treat 0/1 as suspect and prefer PROJECTNAME text or the project site/news for the real unit count.",
+ "unit_lookup_order": [
+  "DwellingUnits field (often wrong -- verify against PROJECTNAME text)",
+  "permit text (PROJECTNAME/DESCRIPTION)",
+  "project site or news via Jina",
+  "county parcel record"
+ ]
+}

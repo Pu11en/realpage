@@ -199,3 +199,52 @@
   reproduce in this run).
 - Left open: S5 (Arizona re-run) will be the first real end-to-end exercise
   of the new 400/900 caps against live data.
+
+## S5 Arizona re-run
+- Wired the Maricopa County sales file into the free data-first pull
+  (`skills/lead-finder/permit_only.py`), which never called it before (the
+  plan's "never wired into run 1" gap): `find_sold` (from
+  `skills/lead-finder-sales/find_sold.py`) now runs once at the end against
+  the state's `*-sales.json` recipe and adds one "sold" LeadRecord per
+  qualifying apartment sale (20+ units, joined sales+parcel file, buyer +
+  seller filled from the county record, no web search).
+- Also filled `developer` (owner/builder) on not-yet-built permits from the
+  same free parcel file, by address (`find_owner_by_parcel`, already existed
+  in `lead-finder-contact/contact.py` but was previously only reachable
+  through the full web-search chain's contact step) -- purely a public-record
+  lookup, no search used.
+- Both lookups reuse one in-memory cache (`_cached_fetch_rows`) keyed by
+  source URL so the ~100MB+ sales and parcel zip files are each downloaded
+  once per run no matter how many records need an owner match, not once per
+  record.
+- Live-ran `python3 skills/lead-finder/permit_only.py --state AZ` end to
+  end (background, ~3 minutes wall clock including the two county zip
+  downloads): before (run 1, 2026-09-14) was 94 leads, all new-permit only,
+  no owner names, in 2 minutes; after is 279 leads (134 new/upcoming + 145
+  sold) in ~3 minutes -- 86 of the 134 new-permit records got a real owner
+  name from the parcel file, all 145 sold records have buyer + seller +
+  sale price/date straight from the county file, still $0 (no Jina/Brave
+  calls -- `permit_only.py` never imports a search function).
+  Per-city new-permit counts this run: Gilbert 6, Maricopa County
+  unincorporated 4, Mesa 44, Phoenix 29, Scottsdale 38, Tempe 11, Tucson 2.
+- Ran `python3 site/data/build_data.py` to rebuild the site's `az` area from
+  the new `data/az/leads.json` (204 properties total across areas incl. the
+  larger AZ set; wrote `areas/az.json`) -- confirms the new sold + owner
+  fields reach the site layer. Did not start the docker-compose chat stack
+  (`tooling/dev.sh`) in this sandboxed worker session since it needs
+  DEEPSEEK_API_KEY and Docker; Drew can run `bash tooling/dev.sh` locally to
+  see it live at http://localhost:8765.
+- Tests: `skills/lead-finder/tests/test_permit_only.py` (new) covers the
+  fetch-cache -- one real download per distinct URL, cache hit reused
+  across repeated calls for the same URL, offline via a fake
+  `default_fetch_rows`.
+- Checked: `bash tooling/qa/check-lead-finder.sh` passes (70 lead-finder*
+  tests + check-panel.sh, up from 67). Full suite from `propertystack/`
+  (`python3 -m pytest -q --ignore=skills/client-map/tests`): 284 passed, 0
+  failures (the earlier S1 concurrent-block-count flake did not reproduce
+  this run).
+- Left open: `tooling/dev.sh` (the docker chat stack) itself was not
+  started/verified in this session -- Drew should open
+  http://localhost:8765 → Early Leads → Az locally to see the 279 leads and
+  confirm sold properties show buyer/seller. Part 2 (Texas, T1 onward) is
+  still all unchecked.
