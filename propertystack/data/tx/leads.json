@@ -629,6 +629,7 @@
   "website": "",
   "software": "unknown",
   "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx",
    "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025002194"
   },
   "sources": [
@@ -643,6 +644,10 @@
    {
     "fact": "office_phone",
     "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025002194"
+   },
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
    }
   ],
   "why": "Under construction \u00b7 opens 2026-07-01 \u00b7 133 units \u00b7 software not picked yet"
@@ -2593,6 +2598,47 @@
  },
  {
   "area": "tx",
+  "city": "Denton",
+  "name": "NRP Village Apartments",
+  "address": "2800 Roselawn Drive",
+  "lat": null,
+  "lon": null,
+  "units": 297,
+  "stage": "under construction",
+  "permit_date": "2025-06-23",
+  "opening_date": "2027-09-30",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "RAYZOR INV LTD",
+  "office_phone": "(210) 507-0743",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx",
+   "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025021863"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025021863"
+   },
+   {
+    "fact": "developer",
+    "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025021863"
+   },
+   {
+    "fact": "office_phone",
+    "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025021863"
+   },
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Under construction \u00b7 opens 2027-09-30 \u00b7 297 units \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
   "city": "Celina",
   "name": "Celina Multifamily",
   "address": "Knox ST and Collin County Outer Loop",
@@ -2659,42 +2705,6 @@
    {
     "fact": "office_phone",
     "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026020039"
-   }
-  ],
-  "why": "Under construction \u00b7 opens 2027-09-30 \u00b7 software not picked yet"
- },
- {
-  "area": "tx",
-  "city": "Denton",
-  "name": "NRP Village Apartments",
-  "address": "2800 Roselawn Drive",
-  "lat": null,
-  "lon": null,
-  "units": null,
-  "stage": "under construction",
-  "permit_date": "2025-06-23",
-  "opening_date": "2027-09-30",
-  "sale_date": "",
-  "buyer": "",
-  "developer": "RAYZOR INV LTD",
-  "office_phone": "(210) 507-0743",
-  "website": "",
-  "software": "unknown",
-  "links": {
-   "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025021863"
-  },
-  "sources": [
-   {
-    "fact": "permit_date",
-    "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025021863"
-   },
-   {
-    "fact": "developer",
-    "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025021863"
-   },
-   {
-    "fact": "office_phone",
-    "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025021863"
    }
   ],
   "why": "Under construction \u00b7 opens 2027-09-30 \u00b7 software not picked yet"
@@ -3246,7 +3256,7 @@
   "address": "4915 E. Yager Lane",
   "lat": null,
   "lon": null,
-  "units": null,
+  "units": 336,
   "stage": "under construction",
   "permit_date": "2025-07-22",
   "opening_date": "2028-01-16",
@@ -3257,6 +3267,8 @@
   "website": "",
   "software": "unknown",
   "links": {
+   "status_log": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/htc-4pct/2026260803-4HTC-StatusLog.xlsx",
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx",
    "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025024076"
   },
   "sources": [
@@ -3271,9 +3283,17 @@
    {
     "fact": "office_phone",
     "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025024076"
+   },
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   },
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/htc-4pct/2026260803-4HTC-StatusLog.xlsx"
    }
   ],
-  "why": "Under construction \u00b7 opens 2028-01-16 \u00b7 software not picked yet"
+  "why": "Under construction \u00b7 opens 2028-01-16 \u00b7 336 units \u00b7 software not picked yet"
  },
  {
   "area": "tx",
@@ -3642,7 +3662,7 @@
   "address": "1010 Rose Hill Rd",
   "lat": null,
   "lon": null,
-  "units": null,
+  "units": 350,
   "stage": "under construction",
   "permit_date": "2026-01-13",
   "opening_date": "2028-05-01",
@@ -3653,6 +3673,8 @@
   "website": "",
   "software": "unknown",
   "links": {
+   "status_log": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/htc-4pct/2026260803-4HTC-StatusLog.xlsx",
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx",
    "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026009904"
   },
   "sources": [
@@ -3667,9 +3689,17 @@
    {
     "fact": "office_phone",
     "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026009904"
+   },
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   },
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/htc-4pct/2026260803-4HTC-StatusLog.xlsx"
    }
   ],
-  "why": "Under construction \u00b7 opens 2028-05-01 \u00b7 software not picked yet"
+  "why": "Under construction \u00b7 opens 2028-05-01 \u00b7 350 units \u00b7 software not picked yet"
  },
  {
   "area": "tx",
@@ -3745,6 +3775,52 @@
  },
  {
   "area": "tx",
+  "city": "San Antonio",
+  "name": "Brickstone Flats",
+  "address": "9003 Somerset Road",
+  "lat": null,
+  "lon": null,
+  "units": 290,
+  "stage": "under construction",
+  "permit_date": "2026-02-12",
+  "opening_date": "2028-06-30",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "Brickstone Flats LP",
+  "office_phone": "(317) 846-3111",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "status_log": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/htc-4pct/2026260803-4HTC-StatusLog.xlsx",
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx",
+   "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026012493"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026012493"
+   },
+   {
+    "fact": "developer",
+    "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026012493"
+   },
+   {
+    "fact": "office_phone",
+    "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026012493"
+   },
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   },
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/htc-4pct/2026260803-4HTC-StatusLog.xlsx"
+   }
+  ],
+  "why": "Under construction \u00b7 opens 2028-06-30 \u00b7 290 units \u00b7 software not picked yet"
+ },
+ {
+  "area": "tx",
   "city": "Denton",
   "name": "N. Elm Multi-Family",
   "address": "3301 N. Elm",
@@ -3811,42 +3887,6 @@
    {
     "fact": "office_phone",
     "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026015360"
-   }
-  ],
-  "why": "Under construction \u00b7 opens 2028-06-30 \u00b7 software not picked yet"
- },
- {
-  "area": "tx",
-  "city": "San Antonio",
-  "name": "Brickstone Flats",
-  "address": "9003 Somerset Road",
-  "lat": null,
-  "lon": null,
-  "units": null,
-  "stage": "under construction",
-  "permit_date": "2026-02-12",
-  "opening_date": "2028-06-30",
-  "sale_date": "",
-  "buyer": "",
-  "developer": "Brickstone Flats LP",
-  "office_phone": "(317) 846-3111",
-  "website": "",
-  "software": "unknown",
-  "links": {
-   "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026012493"
-  },
-  "sources": [
-   {
-    "fact": "permit_date",
-    "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026012493"
-   },
-   {
-    "fact": "developer",
-    "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026012493"
-   },
-   {
-    "fact": "office_phone",
-    "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026012493"
    }
   ],
   "why": "Under construction \u00b7 opens 2028-06-30 \u00b7 software not picked yet"
@@ -3930,7 +3970,7 @@
   "address": "5000 Bowie Road",
   "lat": null,
   "lon": null,
-  "units": null,
+  "units": 324,
   "stage": "permitted",
   "permit_date": "2026-09-14",
   "opening_date": "2028-07-17",
@@ -3941,6 +3981,7 @@
   "website": "",
   "software": "unknown",
   "links": {
+   "status_log": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/htc-4pct/2026260803-4HTC-StatusLog.xlsx",
    "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2027000986"
   },
   "sources": [
@@ -3955,9 +3996,13 @@
    {
     "fact": "office_phone",
     "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2027000986"
+   },
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/htc-4pct/2026260803-4HTC-StatusLog.xlsx"
    }
   ],
-  "why": "Permitted \u00b7 opens 2028-07-17 \u00b7 software not picked yet"
+  "why": "Permitted \u00b7 opens 2028-07-17 \u00b7 324 units \u00b7 software not picked yet"
  },
  {
   "area": "tx",
@@ -10025,6 +10070,7 @@
   "website": "",
   "software": "unknown",
   "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx",
    "permit": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13441088'}"
   },
   "sources": [
@@ -10067,6 +10113,10 @@
    {
     "fact": "permit_date",
     "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13441083'}"
+   },
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
    }
   ],
   "why": "Permitted \u00b7 opens: not public yet \u00b7 36 units \u00b7 software not picked yet"
@@ -13785,12 +13835,17 @@
   "website": "",
   "software": "unknown",
   "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx",
    "permit": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13537932'}"
   },
   "sources": [
    {
     "fact": "permit_date",
     "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13537932'}"
+   },
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
    }
   ],
   "why": "Permitted \u00b7 opens: not public yet \u00b7 150 units \u00b7 software not picked yet"
@@ -14001,12 +14056,17 @@
   "website": "",
   "software": "unknown",
   "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx",
    "permit": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13583283'}"
   },
   "sources": [
    {
     "fact": "permit_date",
     "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13583283'}"
+   },
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
    }
   ],
   "why": "Permitted \u00b7 opens: not public yet \u00b7 227 units \u00b7 software not picked yet"
@@ -16121,12 +16181,17 @@
   "website": "",
   "software": "unknown",
   "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx",
    "permit": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13651286'}"
   },
   "sources": [
    {
     "fact": "permit_date",
     "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13651286'}"
+   },
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
    }
   ],
   "why": "Permitted \u00b7 opens: not public yet \u00b7 104 units \u00b7 software not picked yet"
@@ -16614,7 +16679,7 @@
   "address": "1117 BLAND ST",
   "lat": null,
   "lon": null,
-  "units": null,
+  "units": 103,
   "stage": "permitted",
   "permit_date": "2026-03-09",
   "opening_date": "",
@@ -16625,15 +16690,20 @@
   "website": "",
   "software": "unknown",
   "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx",
    "permit": "houston-weekly-xlsx"
   },
   "sources": [
    {
     "fact": "permit_date",
     "url": "houston-weekly-xlsx"
+   },
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
    }
   ],
-  "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+  "why": "Permitted \u00b7 opens: not public yet \u00b7 103 units \u00b7 software not picked yet"
  },
  {
   "area": "tx",
@@ -18453,10 +18523,12 @@
   "sale_date": "",
   "buyer": "",
   "developer": "",
-  "office_phone": "",
+  "office_phone": "(210) 771-4127",
   "website": "",
   "software": "unknown",
   "links": {
+   "status_log": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/htc-4pct/2026260803-4HTC-StatusLog.xlsx",
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx",
    "permit": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13416147'}"
   },
   "sources": [
@@ -18487,6 +18559,14 @@
    {
     "fact": "permit_date",
     "url": "{'url': 'https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13416143'}"
+   },
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   },
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/htc-4pct/2026260803-4HTC-StatusLog.xlsx"
    }
   ],
   "why": "Permitted \u00b7 opens: not public yet \u00b7 44 units \u00b7 software not picked yet"
@@ -29686,5 +29766,5635 @@
    }
   ],
   "why": "Sold 2024-09-06 \u00b7 354 units \u00b7 new owner may re-pick software"
+ },
+ {
+  "area": "tx",
+  "city": "San Antonio",
+  "name": "Quantum Drive",
+  "address": "Quantum Drive and SW Loop 410",
+  "lat": null,
+  "lon": null,
+  "units": 404,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "(214) 960-1309",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "status_log": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/htc-4pct/2026260803-4HTC-StatusLog.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/htc-4pct/2026260803-4HTC-StatusLog.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 404 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Pflugerville",
+  "name": "Crystal Bend Apartments",
+  "address": "2313 & 2405 Crystal Bend Drive",
+  "lat": null,
+  "lon": null,
+  "units": 390,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 390 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Houston",
+  "name": "The Arboretum at Woodland Hills",
+  "address": "SE corner of FM1960 and Woodland Hills Dr",
+  "lat": null,
+  "lon": null,
+  "units": 366,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 366 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Dallas",
+  "name": "The Culbreath",
+  "address": "2770 Bethurum Ave.",
+  "lat": null,
+  "lon": null,
+  "units": 364,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 364 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "San Marcos",
+  "name": "Centerpoint Commons",
+  "address": "SWQ Centerpoint Road and Commercial Loop",
+  "lat": null,
+  "lon": null,
+  "units": 363,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 363 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Katy",
+  "name": "Tapestry at Katy (fka Enclave at Katy)",
+  "address": "5138 & 5202 Katy Hockley Road",
+  "lat": null,
+  "lon": null,
+  "units": 360,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 360 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Spring",
+  "name": "Enclave on Louetta",
+  "address": "2324 Louetta Road",
+  "lat": null,
+  "lon": null,
+  "units": 358,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 358 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Austin",
+  "name": "Belmont Apartments",
+  "address": "4401 East Slaughter Lane",
+  "lat": null,
+  "lon": null,
+  "units": 348,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 348 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Houston",
+  "name": "Reserve at Ella",
+  "address": "867 Rushcreek Drive",
+  "lat": null,
+  "lon": null,
+  "units": 344,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "(210) 771-4127",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "status_log": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/htc-4pct/2026260803-4HTC-StatusLog.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/htc-4pct/2026260803-4HTC-StatusLog.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 344 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "San Antonio",
+  "name": "Sageland Flats fka Brooks Family Apartments",
+  "address": "Northwest Corner of Research Plaza and Challenger Drive",
+  "lat": null,
+  "lon": null,
+  "units": 338,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 338 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Converse",
+  "name": "Oso Apartments",
+  "address": "2075 Shuwirth Road",
+  "lat": null,
+  "lon": null,
+  "units": 336,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 336 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "San Antonio",
+  "name": "The Orion Apartment Homes",
+  "address": "13039 SW Loop 410",
+  "lat": null,
+  "lon": null,
+  "units": 336,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 336 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "San Antonio",
+  "name": "Stones Crossing Apartment Homes",
+  "address": "23219 U.S. HWY 281 N",
+  "lat": null,
+  "lon": null,
+  "units": 336,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 336 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "San Antonio",
+  "name": "Lakeside Lofts",
+  "address": "5606\u00a0US Highway 87 E",
+  "lat": null,
+  "lon": null,
+  "units": 336,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 336 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "San Antonio",
+  "name": "301 Lofts",
+  "address": "13388 W Hwy 90",
+  "lat": null,
+  "lon": null,
+  "units": 336,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "(216) 584-0613",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "status_log": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/htc-4pct/2026260803-4HTC-StatusLog.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/htc-4pct/2026260803-4HTC-StatusLog.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 336 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Dallas",
+  "name": "The Gateway at Trinity Forest",
+  "address": "2050 Dowdy Ferry Rd",
+  "lat": null,
+  "lon": null,
+  "units": 330,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 330 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Manor",
+  "name": "Tower Road Apartments",
+  "address": "12200 Tower Road",
+  "lat": null,
+  "lon": null,
+  "units": 324,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 324 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "San Antonio",
+  "name": "Palladium Old FM 471 W",
+  "address": "Old FM 471 W and Talley Rd",
+  "lat": null,
+  "lon": null,
+  "units": 321,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 321 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Mesquite",
+  "name": "Torrington Briarwood",
+  "address": "23701 Lyndon B Johnson Fwy",
+  "lat": null,
+  "lon": null,
+  "units": 313,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 313 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "San Antonio",
+  "name": "Creek Bend Apartment Homes",
+  "address": "2335 E Borgfeld Dr",
+  "lat": null,
+  "lon": null,
+  "units": 312,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 312 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Maxwell",
+  "name": "Maxwell Hwy 21 Apartments",
+  "address": "3966 FM 1966",
+  "lat": null,
+  "lon": null,
+  "units": 312,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 312 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "San Marcos",
+  "name": "The Springs Apartments",
+  "address": "approx. SEC of IH\u201035 & Aquarena Springs Dr.",
+  "lat": null,
+  "lon": null,
+  "units": 304,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 304 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Dallas",
+  "name": "Palladium Buckner Station",
+  "address": "8008 Elam Road",
+  "lat": null,
+  "lon": null,
+  "units": 304,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 304 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Fort Worth",
+  "name": "Hughes House II",
+  "address": "1401 Etta Street",
+  "lat": null,
+  "lon": null,
+  "units": 302,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 302 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "San Antonio",
+  "name": "Lofts at Creekview",
+  "address": "3623 and 3841 East Commerce",
+  "lat": null,
+  "lon": null,
+  "units": 301,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 301 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Houston",
+  "name": "EMLI at Mesa Gardens",
+  "address": "10199 Mesa Drive",
+  "lat": null,
+  "lon": null,
+  "units": 300,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 300 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Dallas",
+  "name": "The Ridge at Loop 12",
+  "address": "1200 N Walton Walker Blvd",
+  "lat": null,
+  "lon": null,
+  "units": 300,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 300 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Dallas",
+  "name": "Torrington Wilmer",
+  "address": "1501 E. Beltline",
+  "lat": null,
+  "lon": null,
+  "units": 300,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 300 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "San Antonio",
+  "name": "West Dell Apartment Homes",
+  "address": "11437 Alamo Ranch Parkway",
+  "lat": null,
+  "lon": null,
+  "units": 300,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 300 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Wilmer",
+  "name": "Torrington Wilmer",
+  "address": "1501 East Beltline Road",
+  "lat": null,
+  "lon": null,
+  "units": 300,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "(210) 493-8633",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "status_log": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/htc-4pct/2026260803-4HTC-StatusLog.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/htc-4pct/2026260803-4HTC-StatusLog.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 300 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "San Antonio",
+  "name": "West Dell Apartments",
+  "address": "Approx. 11400 Alamo Ranch Parkway",
+  "lat": null,
+  "lon": null,
+  "units": 300,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "(317) 208-3767",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "status_log": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/htc-4pct/2026260803-4HTC-StatusLog.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/htc-4pct/2026260803-4HTC-StatusLog.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 300 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Mesquite",
+  "name": "Torrington Creekside",
+  "address": "825 Windbell Circle",
+  "lat": null,
+  "lon": null,
+  "units": 290,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "(210) 493-8633",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "status_log": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/htc-4pct/2026260803-4HTC-StatusLog.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/htc-4pct/2026260803-4HTC-StatusLog.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 290 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "San Antonio",
+  "name": "Palladium San Antonio",
+  "address": "4770 Military Drive W",
+  "lat": null,
+  "lon": null,
+  "units": 288,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 288 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Mesquite",
+  "name": "Palladium Carver Living",
+  "address": "2200 W Bruton Road",
+  "lat": null,
+  "lon": null,
+  "units": 288,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 288 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Mesquite",
+  "name": "Wooded Lake Apartments",
+  "address": "1300 Wooded Lake Drive",
+  "lat": null,
+  "lon": null,
+  "units": 288,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 288 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Houston",
+  "name": "Cordova Apartments",
+  "address": "6160 Madden Lane",
+  "lat": null,
+  "lon": null,
+  "units": 283,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 283 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "San Antonio",
+  "name": "Central at Commerce",
+  "address": "1231 East Commerce Street",
+  "lat": null,
+  "lon": null,
+  "units": 279,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 279 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Houston",
+  "name": "Willow Creek Manor",
+  "address": "10621 Cossey Road",
+  "lat": null,
+  "lon": null,
+  "units": 264,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 264 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "San Antonio",
+  "name": "Riverbreeze Apartments",
+  "address": "SWQ 410 SW Loop & Palo Alto Road",
+  "lat": null,
+  "lon": null,
+  "units": 264,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 264 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Austin",
+  "name": "Ed Bluestein Multifamily Apartments",
+  "address": "7009 Ed Bluestein Bouelvard",
+  "lat": null,
+  "lon": null,
+  "units": 263,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 263 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "San Antonio",
+  "name": "Hill View Heights",
+  "address": "Approx 15024 Culebra Road",
+  "lat": null,
+  "lon": null,
+  "units": 260,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 260 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Mesquite",
+  "name": "Avanti Hills",
+  "address": "NWQ E Glen Blvd & Clay Mathis Rd",
+  "lat": null,
+  "lon": null,
+  "units": 260,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 260 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Seguin",
+  "name": "Timber Trails Apartments",
+  "address": "SEQ Hwy 46 and Jefferson Avenue",
+  "lat": null,
+  "lon": null,
+  "units": 255,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "(641) 832-9088",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "status_log": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/htc-4pct/2026260803-4HTC-StatusLog.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/htc-4pct/2026260803-4HTC-StatusLog.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 255 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Keene",
+  "name": "Covington Acres",
+  "address": "2632 US Highway 67",
+  "lat": null,
+  "lon": null,
+  "units": 252,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 252 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Georgetown",
+  "name": "Northside Village",
+  "address": "350 Hwy 195",
+  "lat": null,
+  "lon": null,
+  "units": 250,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "(214) 960-1158",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "status_log": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/htc-4pct/2026260803-4HTC-StatusLog.xlsx",
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   },
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/htc-4pct/2026260803-4HTC-StatusLog.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 250 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Dallas",
+  "name": "Torrington Forest",
+  "address": "7100 Great Trinity Forest Way",
+  "lat": null,
+  "lon": null,
+  "units": 248,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 248 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "San Antonio",
+  "name": "Cactus Trails Apartments",
+  "address": "10585 Shaenfield Road",
+  "lat": null,
+  "lon": null,
+  "units": 248,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "(641) 830-9088",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "status_log": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/htc-4pct/2026260803-4HTC-StatusLog.xlsx",
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   },
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/htc-4pct/2026260803-4HTC-StatusLog.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 248 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "San Antonio",
+  "name": "Emberstone Apartments",
+  "address": "14970 Watson Road",
+  "lat": null,
+  "lon": null,
+  "units": 247,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 247 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Fort Worth",
+  "name": "Palladium E Lancaster Avenue",
+  "address": "4909 & 5003 E Lancaster Avenue and 4808 & 4900 Norma Street",
+  "lat": null,
+  "lon": null,
+  "units": 243,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 243 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "San Antonio",
+  "name": "Cedar Ridge Terrace fka Brooks Senior Apartments",
+  "address": "Northeast Corner of Research Plaza and Challenger Drive",
+  "lat": null,
+  "lon": null,
+  "units": 239,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 239 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "San Antonio",
+  "name": "Residences at Pearsall Park",
+  "address": "Corner of Ray Ellison Blvd and Old Pearsall Road",
+  "lat": null,
+  "lon": null,
+  "units": 238,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 238 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Dallas",
+  "name": "Tabor Village (fka Baraboo Hills)",
+  "address": "6200 Baraboo Drive",
+  "lat": null,
+  "lon": null,
+  "units": 229,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 229 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Fort Worth",
+  "name": "Richardson Ridge",
+  "address": "4000 Campus Drive",
+  "lat": null,
+  "lon": null,
+  "units": 228,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "319-217-8136",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "status_log": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/htc-4pct/2026260803-4HTC-StatusLog.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/htc-4pct/2026260803-4HTC-StatusLog.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 228 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Houston",
+  "name": "Independence Heights II Apartments",
+  "address": "222 Crosstimbers St",
+  "lat": null,
+  "lon": null,
+  "units": 221,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 221 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Dallas",
+  "name": "Westmoreland Townhomes",
+  "address": "6600 South Westmoreland Drive",
+  "lat": null,
+  "lon": null,
+  "units": 216,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 216 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Dallas",
+  "name": "Huntington Place Senior Living Dallas",
+  "address": "NEQ Clark Road and W. Camp Wisdom Rd",
+  "lat": null,
+  "lon": null,
+  "units": 210,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "(512) 983-0422",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "status_log": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/htc-4pct/2026260803-4HTC-StatusLog.xlsx",
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   },
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/htc-4pct/2026260803-4HTC-StatusLog.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 210 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Dallas",
+  "name": "Heights at UNT Station",
+  "address": "1021 E. Wheatland Road",
+  "lat": null,
+  "lon": null,
+  "units": 210,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "(817) 845-8026",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "status_log": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/htc-4pct/2026260803-4HTC-StatusLog.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/htc-4pct/2026260803-4HTC-StatusLog.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 210 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Garland",
+  "name": "Huntington Place Senior Living Garland",
+  "address": "SWQ Edgefield Drive and Cedar Drive",
+  "lat": null,
+  "lon": null,
+  "units": 204,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 204 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Seguin",
+  "name": "Cedar Bluff Apartments",
+  "address": "920 San Antonio Avenue",
+  "lat": null,
+  "lon": null,
+  "units": 203,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 203 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "San Antonio",
+  "name": "The Commons at Acequia Trails",
+  "address": "NE Corner of South Presa Street and Old Corpus Christi Road",
+  "lat": null,
+  "lon": null,
+  "units": 201,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 201 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Dallas",
+  "name": "HiLine Illinois",
+  "address": "4710 W Illinois Ave",
+  "lat": null,
+  "lon": null,
+  "units": 200,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 200 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Little Elm",
+  "name": "THF Huntington Place Senior Living Little Elm",
+  "address": "NEQ Navo Road and Union Park Blvd.",
+  "lat": null,
+  "lon": null,
+  "units": 198,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 198 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "San Antonio",
+  "name": "Legacy Senior Residences",
+  "address": "6219 S. New Braunfels Avenue",
+  "lat": null,
+  "lon": null,
+  "units": 180,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 180 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Dallas",
+  "name": "The Legacy on Kiest",
+  "address": "2621 Southerland Ave",
+  "lat": null,
+  "lon": null,
+  "units": 180,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 180 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Fort Worth",
+  "name": "Evans & Rosedale Urban Village",
+  "address": "900 Evans Avenue",
+  "lat": null,
+  "lon": null,
+  "units": 180,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "(414) 800-5289",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "status_log": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/htc-4pct/2026260803-4HTC-StatusLog.xlsx",
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   },
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/htc-4pct/2026260803-4HTC-StatusLog.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 180 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Seguin",
+  "name": "Walnut Springs",
+  "address": "2551 N. Guadalupe St.",
+  "lat": null,
+  "lon": null,
+  "units": 177,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 177 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Austin",
+  "name": "Paytom Gin Apartments",
+  "address": "1800 Payton Gin Road",
+  "lat": null,
+  "lon": null,
+  "units": 176,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 176 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Dallas",
+  "name": "Tenison Lofts",
+  "address": "3504 and 3602 Samuell Blvd and 3503 Merrifield Ave",
+  "lat": null,
+  "lon": null,
+  "units": 164,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 164 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Elgin",
+  "name": "The Katy",
+  "address": "601 West 2nd Street",
+  "lat": null,
+  "lon": null,
+  "units": 150,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 150 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Houston ETJ",
+  "name": "Preserve at Dominion Park",
+  "address": "13100 Kuykendahl Road",
+  "lat": null,
+  "lon": null,
+  "units": 134,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "(713) 232-0354",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "status_log": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/htc-4pct/2026260803-4HTC-StatusLog.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/htc-4pct/2026260803-4HTC-StatusLog.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 134 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Houston",
+  "name": "New Faith Senior Village Apartments",
+  "address": "4315 W. Fuqua Street",
+  "lat": null,
+  "lon": null,
+  "units": 128,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 128 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Houston",
+  "name": "Hartwood at Windstone",
+  "address": "19735 Clay Rd.",
+  "lat": null,
+  "lon": null,
+  "units": 123,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 123 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Houston",
+  "name": "New Hope Housing Avenue C",
+  "address": "7501 Harrisburg Blvd.",
+  "lat": null,
+  "lon": null,
+  "units": 120,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 120 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Dallas",
+  "name": "3606 S Cockrell Hill Road Senior Living",
+  "address": "3606 and 3626 S Cockrell Hill Road",
+  "lat": null,
+  "lon": null,
+  "units": 120,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 120 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Houston",
+  "name": "Andover Village Apartments (f/k/a Nunn Village Apartments)",
+  "address": "6901 Bellfort Avenue",
+  "lat": null,
+  "lon": null,
+  "units": 120,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 120 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Pharr",
+  "name": "Citrus Village Apartments",
+  "address": "695 N I Road",
+  "lat": null,
+  "lon": null,
+  "units": 120,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 120 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Houston",
+  "name": "Bernicia Place",
+  "address": "SEC of Old Spanish Trail and Scottcrest Drive",
+  "lat": null,
+  "lon": null,
+  "units": 120,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "(713) 669-4521",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "status_log": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/htc-4pct/2026260803-4HTC-StatusLog.xlsx",
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   },
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/htc-4pct/2026260803-4HTC-StatusLog.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 120 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Mesquite",
+  "name": "930 Military Parkway Living",
+  "address": "940 Military Parkway",
+  "lat": null,
+  "lon": null,
+  "units": 111,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 111 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "McKinney",
+  "name": "McKinney Ranch Senior Living",
+  "address": "5353 McKinney Ranch Parkway",
+  "lat": null,
+  "lon": null,
+  "units": 109,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 109 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Houston",
+  "name": "The Grove at Deerbrook",
+  "address": "SEQ Deerbrook Park Blvd and Orchard Ridge Ln",
+  "lat": null,
+  "lon": null,
+  "units": 108,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 108 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Mission",
+  "name": "Las Fuentes",
+  "address": "2801 Leonor Street",
+  "lat": null,
+  "lon": null,
+  "units": 105,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 105 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Austin",
+  "name": "Burleson Studios",
+  "address": "7905 Burleson Road",
+  "lat": null,
+  "lon": null,
+  "units": 104,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 104 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Austin",
+  "name": "Bailey at Stassney",
+  "address": "400 W Stassney Lane",
+  "lat": null,
+  "lon": null,
+  "units": 104,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 104 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Palmview",
+  "name": "Mandalay",
+  "address": "south side of the 600 Block of West Veterans Blvd.",
+  "lat": null,
+  "lon": null,
+  "units": 104,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 104 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "McAllen",
+  "name": "Villas at Primrose",
+  "address": "SEQ of Buddy Owens Blvd. & N. Ware Rd.",
+  "lat": null,
+  "lon": null,
+  "units": 104,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 104 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Houston",
+  "name": "Retreat at Esther",
+  "address": "Southwest Quadrant of Wheatley St and Esther Dr",
+  "lat": null,
+  "lon": null,
+  "units": 103,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 103 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Houston",
+  "name": "WALIPP Senior Residence Expansion",
+  "address": "5120 Scott St., 5134 Grantwood St., 5141 Grantwood St.",
+  "lat": null,
+  "lon": null,
+  "units": 102,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 102 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Temple",
+  "name": "Bird Creek Senior Living",
+  "address": "3000 S. General Bruce Dr",
+  "lat": null,
+  "lon": null,
+  "units": 102,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 102 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Killeen",
+  "name": "Westwood Apartments",
+  "address": "3001 Illinois Ave.",
+  "lat": null,
+  "lon": null,
+  "units": 102,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 102 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Fort Worth",
+  "name": "Georgian Oaks",
+  "address": "210 E 7th St",
+  "lat": null,
+  "lon": null,
+  "units": 100,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 100 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Fort Worth",
+  "name": "Columbia Renaissance Square III",
+  "address": "2757 Moresby St",
+  "lat": null,
+  "lon": null,
+  "units": 100,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 100 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Houston",
+  "name": "The Tidwell",
+  "address": "304 Tidwell Road",
+  "lat": null,
+  "lon": null,
+  "units": 99,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 99 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Houston",
+  "name": "Dashwood Trails",
+  "address": "NEC Dashwood Dr and Jetty Ln",
+  "lat": null,
+  "lon": null,
+  "units": 98,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 98 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Houston",
+  "name": "Northpark Garden Villas",
+  "address": "East Side Imperial Valley Dr at Northpark Central Dr",
+  "lat": null,
+  "lon": null,
+  "units": 98,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 98 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Sherry Pointe Apartments",
+  "address": "NEQ of E Arkansas Ln and Sherry St",
+  "lat": null,
+  "lon": null,
+  "units": 96,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 96 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Houston",
+  "name": "Cedar Brook Village",
+  "address": "7401 Little York Rd",
+  "lat": null,
+  "lon": null,
+  "units": 96,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 96 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Dallas",
+  "name": "Reserve at Augustine",
+  "address": "115 S St Augustine Rd",
+  "lat": null,
+  "lon": null,
+  "units": 96,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 96 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Robinson",
+  "name": "Meadowbrook Apartments",
+  "address": "510 N Old. Robinson Rd",
+  "lat": null,
+  "lon": null,
+  "units": 93,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 93 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Lewisville",
+  "name": "Heritage Estates at Valley Ridge",
+  "address": "SEQ W Valley Ridge Blvd and N Garden Ridge Blvd",
+  "lat": null,
+  "lon": null,
+  "units": 92,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 92 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Dallas",
+  "name": "The James at Wheatland",
+  "address": "7100 W Wheatland Rd.",
+  "lat": null,
+  "lon": null,
+  "units": 90,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 90 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Houston",
+  "name": "Riverside Garden Villas",
+  "address": "SWC of Riverside Grove and Addicks Clodine Road",
+  "lat": null,
+  "lon": null,
+  "units": 90,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 90 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Houston",
+  "name": "Kingfield Trails",
+  "address": "15606 Kingfield",
+  "lat": null,
+  "lon": null,
+  "units": 90,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 90 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Houston",
+  "name": "Connect Hillcroft",
+  "address": "6420 Hillcroft Avenue",
+  "lat": null,
+  "lon": null,
+  "units": 90,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 90 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Houston",
+  "name": "CSH Silverleaf Senior Living, Ltd.",
+  "address": "SEC of Blackhawk Blvd and Texas Sage Drive",
+  "lat": null,
+  "lon": null,
+  "units": 90,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 90 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Houston",
+  "name": "Trinity East Senior",
+  "address": "2620 Live Oak Street",
+  "lat": null,
+  "lon": null,
+  "units": 90,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 90 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Amarillo",
+  "name": "Amarillo Lofts",
+  "address": "6601 Lowes Lane",
+  "lat": null,
+  "lon": null,
+  "units": 90,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 90 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Houston",
+  "name": "Greens at Retton",
+  "address": "NWC of Retton Dr. & Northwest Frwy.",
+  "lat": null,
+  "lon": null,
+  "units": 90,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 90 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Denton",
+  "name": "Stella Haven",
+  "address": "3300 Sundown Blvd",
+  "lat": null,
+  "lon": null,
+  "units": 88,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 88 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Houston",
+  "name": "Oasis Gardens",
+  "address": "12709 Beechnut St.",
+  "lat": null,
+  "lon": null,
+  "units": 88,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 88 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Dallas",
+  "name": "Bella Limon",
+  "address": "4311 - 4329 Belmont Ave",
+  "lat": null,
+  "lon": null,
+  "units": 87,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 87 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "San Antonio",
+  "name": "Heritage Estates at Medina",
+  "address": "SWC I-410 and Medina Base Rd",
+  "lat": null,
+  "lon": null,
+  "units": 86,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 86 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "New Braunfels",
+  "name": "Park at Dogwood",
+  "address": "NEC McQueeny Road at County Line Memorial Trail",
+  "lat": null,
+  "lon": null,
+  "units": 85,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 85 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Denton",
+  "name": "McAdams Haven",
+  "address": "NWC Lindsey St and Bernard St",
+  "lat": null,
+  "lon": null,
+  "units": 84,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 84 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Austin",
+  "name": "The Maven",
+  "address": "618 E. Highland Mall Boulevard",
+  "lat": null,
+  "lon": null,
+  "units": 83,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 83 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Brownsville",
+  "name": "Buena Vida Senior Living",
+  "address": "E Ringgold St and E 14th St",
+  "lat": null,
+  "lon": null,
+  "units": 82,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 82 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "The Watson (fka Watson Apartments)",
+  "address": "1401 S Watson Rd",
+  "lat": null,
+  "lon": null,
+  "units": 82,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 82 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Fort Worth",
+  "name": "Avenue at Lancaster",
+  "address": "5733 Craig Street",
+  "lat": null,
+  "lon": null,
+  "units": 81,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 81 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Brownsville",
+  "name": "Buena Vida Apartments",
+  "address": "E Tyler St and E 16th",
+  "lat": null,
+  "lon": null,
+  "units": 80,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 80 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Lubbock",
+  "name": "Avenue U Villas",
+  "address": "8401 Avenue U",
+  "lat": null,
+  "lon": null,
+  "units": 80,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 80 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Amarillo",
+  "name": "Tecovas Terrace",
+  "address": "1601 SE 28th Avenue",
+  "lat": null,
+  "lon": null,
+  "units": 80,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 80 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Houston",
+  "name": "NHH Little York",
+  "address": "5716 Little York Road",
+  "lat": null,
+  "lon": null,
+  "units": 80,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 80 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Houston",
+  "name": "Emancipation West",
+  "address": "2718 Emancipation Ave.",
+  "lat": null,
+  "lon": null,
+  "units": 80,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 80 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Houston",
+  "name": "West Fork Place",
+  "address": "West side of Kingwood Place, Dr., south of Kingwood Medical Drive",
+  "lat": null,
+  "lon": null,
+  "units": 79,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 79 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Fort Worth",
+  "name": "Hughes House III",
+  "address": "4912 East Rosedale Street and 5021 Avenue G",
+  "lat": null,
+  "lon": null,
+  "units": 78,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 78 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "San Antonio",
+  "name": "6802 Marbach Lofts",
+  "address": "6832 Marbach Rd",
+  "lat": null,
+  "lon": null,
+  "units": 78,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 78 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "San Antonio",
+  "name": "Tezel Road Apartments",
+  "address": "6054 Tezel Rd",
+  "lat": null,
+  "lon": null,
+  "units": 78,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 78 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Arlington",
+  "name": "Campbell Place",
+  "address": "6608, 6700, 6704 and 6710 U.S. 287 Frontage Road",
+  "lat": null,
+  "lon": null,
+  "units": 78,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 78 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Houston",
+  "name": "Aldine Station",
+  "address": "SEC of Aldine Mail Rte Rd and Fall Meadow Ln",
+  "lat": null,
+  "lon": null,
+  "units": 78,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 78 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Brownsville",
+  "name": "Paredes Apartments",
+  "address": "5101 Paredes Line Rd",
+  "lat": null,
+  "lon": null,
+  "units": 78,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 78 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Dallas",
+  "name": "The Eleanor",
+  "address": "7030 W. Wheatland Rd.",
+  "lat": null,
+  "lon": null,
+  "units": 76,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 76 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Houston",
+  "name": "Victory Lofts",
+  "address": "SWQ of S Victory St and Bradmar St",
+  "lat": null,
+  "lon": null,
+  "units": 76,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 76 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Corpus Christi",
+  "name": "Palo Verde Senior Apartments",
+  "address": "5501 Huntwick Ave",
+  "lat": null,
+  "lon": null,
+  "units": 75,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 75 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Austin",
+  "name": "Sycamores at Pleasant Valley",
+  "address": "5900 South Pleassant Valley",
+  "lat": null,
+  "lon": null,
+  "units": 75,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 75 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Kilgore",
+  "name": "Crown Heritage Senior Village",
+  "address": "300-302 Fritz Swanson Rd (fka W Lantrip St)",
+  "lat": null,
+  "lon": null,
+  "units": 75,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 75 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "McAllen",
+  "name": "Ironwood Apartments",
+  "address": "NEQ of E. Dicker Rd. & S. McColl Rd.",
+  "lat": null,
+  "lon": null,
+  "units": 75,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 75 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Houston",
+  "name": "Residences at Sakowitz",
+  "address": "1702 Sakowitz Street",
+  "lat": null,
+  "lon": null,
+  "units": 73,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 73 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Corpus Christi",
+  "name": "Palms at Morris",
+  "address": "2212 Morris St",
+  "lat": null,
+  "lon": null,
+  "units": 72,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 72 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Mission",
+  "name": "Conway Village",
+  "address": "2699 Conway Ave",
+  "lat": null,
+  "lon": null,
+  "units": 72,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 72 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Houston",
+  "name": "The Ashbourne",
+  "address": "9677 S Kirkwood Rd",
+  "lat": null,
+  "lon": null,
+  "units": 72,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 72 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Laredo",
+  "name": "The Enclave at Riverbank",
+  "address": "NWQ of Riverbank Dr. and Elk Dr.",
+  "lat": null,
+  "lon": null,
+  "units": 72,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 72 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Brownsville",
+  "name": "Hudson Hallmark",
+  "address": "NEC Ruben M Torres & Hudson Blvd",
+  "lat": null,
+  "lon": null,
+  "units": 72,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 72 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "El Paso",
+  "name": "Cielo Towers II /FKA Cielo Seniors",
+  "address": "201 Cortez Drive",
+  "lat": null,
+  "lon": null,
+  "units": 72,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 72 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Austin",
+  "name": "Ovetta Rosedale",
+  "address": "4202-4210 Medical Pkwy",
+  "lat": null,
+  "lon": null,
+  "units": 70,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 70 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "El Paso",
+  "name": "Pebble Hills Place",
+  "address": "SWC of N Zaragoza Rd and Pebble Hills Blvd",
+  "lat": null,
+  "lon": null,
+  "units": 70,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 70 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Fort Worth",
+  "name": "McCart Meadows Senior Living",
+  "address": "7100 McCart Ave.",
+  "lat": null,
+  "lon": null,
+  "units": 68,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 68 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "San Antonio",
+  "name": "The Judy at VIDA",
+  "address": "10345 S Zarzamora Street",
+  "lat": null,
+  "lon": null,
+  "units": 68,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 68 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Nacogdoches",
+  "name": "Pine Creek Senior Village",
+  "address": "SEC SE Stallings Drive and East Main Street",
+  "lat": null,
+  "lon": null,
+  "units": 66,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 66 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Eagle Pass",
+  "name": "Bibb Senior Living",
+  "address": "574 S. Bibb Ave",
+  "lat": null,
+  "lon": null,
+  "units": 66,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 66 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Livingston",
+  "name": "Livingston Estates",
+  "address": "1071 W. Church St (Polk CAD ID 11545, 11755)",
+  "lat": null,
+  "lon": null,
+  "units": 66,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 66 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Austin",
+  "name": "Jordan II Apartments",
+  "address": "2701 1/2 Philomena St.",
+  "lat": null,
+  "lon": null,
+  "units": 66,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 66 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Grand Prairie",
+  "name": "Maple Lofts",
+  "address": "NEQ Graham St & N Bagdad Rd",
+  "lat": null,
+  "lon": null,
+  "units": 65,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 65 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Houston",
+  "name": "Lofts at Wayfarer",
+  "address": "SWC of Blackhawk Blvd and Texas Sage Dr",
+  "lat": null,
+  "lon": null,
+  "units": 65,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 65 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Waco",
+  "name": "Asteri Waco",
+  "address": "1704 South 18th Street",
+  "lat": null,
+  "lon": null,
+  "units": 65,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 65 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "San Antonio",
+  "name": "Nuestra Tierra",
+  "address": "9000 block of Guilbeau Road",
+  "lat": null,
+  "lon": null,
+  "units": 65,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 65 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "El Paso",
+  "name": "Mesa Hills I",
+  "address": "Bluff Canyon Cir and S Mesa Hills Dr",
+  "lat": null,
+  "lon": null,
+  "units": 64,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 64 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Austin",
+  "name": "Rowen Vale",
+  "address": "206 E Annie Street",
+  "lat": null,
+  "lon": null,
+  "units": 64,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 64 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "San Antonio",
+  "name": "Vista at Culebra",
+  "address": "East of Culebra Road and Arcadia Creek",
+  "lat": null,
+  "lon": null,
+  "units": 64,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 64 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "El Paso",
+  "name": "Eastside Crossings II / fka Eastside Crossing Senior",
+  "address": "Laila H Lane & Joe Battle Blvd",
+  "lat": null,
+  "lon": null,
+  "units": 64,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 64 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Beaumont",
+  "name": "Riva Ridge",
+  "address": "SEQ Concord Rd & Gober Rd",
+  "lat": null,
+  "lon": null,
+  "units": 63,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 63 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "El Paso",
+  "name": "Pebble Hills Seniors",
+  "address": "NWC Charles Foster Avenue and John Hayes Street",
+  "lat": null,
+  "lon": null,
+  "units": 60,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 60 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Mount Pleasant",
+  "name": "Pleasant Pointe Apartments",
+  "address": "1708 West 16th Street",
+  "lat": null,
+  "lon": null,
+  "units": 60,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 60 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Lufkin",
+  "name": "Union Grove",
+  "address": "2911 Old Union Rd",
+  "lat": null,
+  "lon": null,
+  "units": 60,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 60 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "El Paso",
+  "name": "Villas at Augusta",
+  "address": "SWC of Augusta Dr and Zaragoza Road",
+  "lat": null,
+  "lon": null,
+  "units": 60,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 60 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Dallas",
+  "name": "Shiloh Lofts",
+  "address": "10810 Shiloh Road",
+  "lat": null,
+  "lon": null,
+  "units": 60,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 60 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Hidalgo",
+  "name": "Texano Apartments",
+  "address": "SEC Texano Drive and S 15th St",
+  "lat": null,
+  "lon": null,
+  "units": 60,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 60 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Kilgore",
+  "name": "Reserve at Kilgore",
+  "address": "SWC Utzman St and Parkview St",
+  "lat": null,
+  "lon": null,
+  "units": 59,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 59 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Kennedale",
+  "name": "Corry Edwards Townhomes",
+  "address": "509 Corry A Edwards Dr",
+  "lat": null,
+  "lon": null,
+  "units": 59,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 59 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Austin",
+  "name": "The Bloom at Lamar Square",
+  "address": "1326 + 1328 Lamar Square Drive",
+  "lat": null,
+  "lon": null,
+  "units": 58,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "512-610-4016",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "status_log": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/htc-4pct/2026260803-4HTC-StatusLog.xlsx",
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   },
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/htc-4pct/2026260803-4HTC-StatusLog.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 58 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Athens",
+  "name": "Athens Trails",
+  "address": "414 W College St",
+  "lat": null,
+  "lon": null,
+  "units": 57,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 57 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Beaumont",
+  "name": "Prado Place",
+  "address": "415 S 11th St, Beaumont, TX 77701",
+  "lat": null,
+  "lon": null,
+  "units": 56,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 56 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Sealy",
+  "name": "Heritage Park",
+  "address": "581 Acres Lane",
+  "lat": null,
+  "lon": null,
+  "units": 56,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 56 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Kerrville",
+  "name": "Freedom's Path Kerrville II",
+  "address": "Approx 3602 Memorial Blvd",
+  "lat": null,
+  "lon": null,
+  "units": 52,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 52 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Early",
+  "name": "Early Pioneer Crossing",
+  "address": "401 Old Comanche Rd.",
+  "lat": null,
+  "lon": null,
+  "units": 52,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 52 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Bastrop",
+  "name": "Pine Creek Apartments",
+  "address": "Hwy 71 & Lovers Lane (~108 Lovers Lane)",
+  "lat": null,
+  "lon": null,
+  "units": 52,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 52 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Hidalgo",
+  "name": "Lantana Villas",
+  "address": "600 Block of East Coma Avenue",
+  "lat": null,
+  "lon": null,
+  "units": 52,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 52 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Mount Pleasant",
+  "name": "Mount Pleasant Trails",
+  "address": "N side of Tennison Rd, Approx 2150 ft East of S Jefferson Ave",
+  "lat": null,
+  "lon": null,
+  "units": 52,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 52 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Brownsville",
+  "name": "Buena Vida Supportive Housing",
+  "address": "E 14th St and E Tyler St",
+  "lat": null,
+  "lon": null,
+  "units": 50,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 50 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Port Lavaca",
+  "name": "Cottages on Independence",
+  "address": "Independence Dr and Sandcrab Blvd",
+  "lat": null,
+  "lon": null,
+  "units": 50,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "440-263-0406",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "status_log": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/htc-4pct/2026260803-4HTC-StatusLog.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/htc-4pct/2026260803-4HTC-StatusLog.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 50 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Cleveland",
+  "name": "Easy Street Lofts",
+  "address": "600 Easy St.",
+  "lat": null,
+  "lon": null,
+  "units": 49,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 49 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Pleasanton",
+  "name": "Abbington Station",
+  "address": "SEC of 7th Street and Austin Street",
+  "lat": null,
+  "lon": null,
+  "units": 48,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 48 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Lewisville",
+  "name": "Patriot Pointe at Fox Ave",
+  "address": "SWC Fox Ave and Edmonds Ln",
+  "lat": null,
+  "lon": null,
+  "units": 48,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 48 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Gatesville",
+  "name": "Gatesville Terrace",
+  "address": "300 Block of S Hwy 36 Bypass",
+  "lat": null,
+  "lon": null,
+  "units": 48,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 48 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Robstown",
+  "name": "Ortiz Lofts",
+  "address": "NWC of County Road 69 & 44",
+  "lat": null,
+  "lon": null,
+  "units": 48,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 48 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Levelland",
+  "name": "Avalon at Levelland",
+  "address": "508 Clubview Drive",
+  "lat": null,
+  "lon": null,
+  "units": 44,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 44 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Big Spring",
+  "name": "Lantern at Big Spring",
+  "address": "NWC of Sunset Ave. and Birdwell Ln.",
+  "lat": null,
+  "lon": null,
+  "units": 44,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 44 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Gainesville",
+  "name": "Gainesville Trails",
+  "address": "420 W Garnett",
+  "lat": null,
+  "lon": null,
+  "units": 42,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 42 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Burkburnett",
+  "name": "Burkburnett Royal Gardens",
+  "address": "350 D W Taylor Road",
+  "lat": null,
+  "lon": null,
+  "units": 41,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 41 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "El Paso",
+  "name": "Mesa Hills II",
+  "address": "NWQ Bluff Canyon Cir and S Mesa Hills Dr",
+  "lat": null,
+  "lon": null,
+  "units": 40,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 40 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Vinton",
+  "name": "The Rosie",
+  "address": "SEQ of Cap Carter Rd and Doniphan Dr",
+  "lat": null,
+  "lon": null,
+  "units": 40,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 40 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Robstown",
+  "name": "The Lantern at Robstown",
+  "address": "NWC of CR 44 and CR 69",
+  "lat": null,
+  "lon": null,
+  "units": 39,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 39 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Big Springs",
+  "name": "Lofts at Birdwell",
+  "address": "130 ft. N. of NWC of Sunset Ave. & Birdwell Ln.",
+  "lat": null,
+  "lon": null,
+  "units": 39,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 39 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Austin",
+  "name": "The Lenora",
+  "address": "4507 Menchaca Rd",
+  "lat": null,
+  "lon": null,
+  "units": 39,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 39 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Burnet",
+  "name": "Green Manor Apartments",
+  "address": "310 E. 3rd",
+  "lat": null,
+  "lon": null,
+  "units": 36,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 36 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Corsicana",
+  "name": "Reserve at Corsicana",
+  "address": "300 N 45th St",
+  "lat": null,
+  "lon": null,
+  "units": 36,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 36 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Hillsboro",
+  "name": "Hillsboro Trails",
+  "address": "NEQ Old Brandon Rd and Dynasty Dr",
+  "lat": null,
+  "lon": null,
+  "units": 36,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 36 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Corsicana",
+  "name": "The Residence at Red Cedar",
+  "address": "E side of S 45th St, S of W Park Row Blvd",
+  "lat": null,
+  "lon": null,
+  "units": 32,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 32 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Gatesville",
+  "name": "Gatesville Crossing",
+  "address": "Approx 2909 S Hwy 36",
+  "lat": null,
+  "lon": null,
+  "units": 32,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 32 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "San Angelo",
+  "name": "The Residence at Green Meadow",
+  "address": "NWQ Green Meadow Dr and Southwest Blvd",
+  "lat": null,
+  "lon": null,
+  "units": 30,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 30 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Homestead Meadows South",
+  "name": "Meadow View Estates",
+  "address": "NWQ of Santiesteban Lane and Buntline Drive",
+  "lat": null,
+  "lon": null,
+  "units": 30,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 30 units \u00b7 software not chosen yet"
+ },
+ {
+  "area": "tx",
+  "city": "Anthony",
+  "name": "Wildcat Villas",
+  "address": "SEQ of Wildcat Dr and 4th St",
+  "lat": null,
+  "lon": null,
+  "units": 27,
+  "stage": "planned",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+  },
+  "sources": [
+   {
+    "fact": "units",
+    "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+   }
+  ],
+  "why": "Planned \u00b7 expected: not public yet \u00b7 27 units \u00b7 software not chosen yet"
  }
 ]
