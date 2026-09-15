@@ -69,7 +69,7 @@ Open: http://localhost:8765/street-talk.html
 - [x] **T4 Part 3 collector: unhappy rival customers.** `--part unhappy` searches property-manager subreddits
   for Yardi / Entrata / AppFolio with complaint words (switching, leaving, support, hate, migrate, alternative)
   plus Texas words. Saves `raw/<date>/unhappy.json`. Test with a fixture. Run it live once (request cap from the safety rules), commit the raw file + its report, continue.
-- [ ] **T5 Labels + the saved tab data.** `tooling/street-talk/build.py` turns the raw files into
+- [x] **T5 Labels + the saved tab data.** `tooling/street-talk/build.py` turns the raw files into
   `site/data/street-talk.json` and `propertystack/data/street-talk/street_talk.csv`: each post gets which
   companies it names, happy / angry / mixed (a simple word list, no paid AI), the Texas city if any, the
   building id (part 2), and "warm lead" for part 3 when the poster sounds like a manager/owner. Also totals
