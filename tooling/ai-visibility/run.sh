@@ -24,6 +24,7 @@ if [ "${1:-}" = "--practice" ]; then
   DEMO=--demo
 else
   # Real run: answers come from local Claude / Codex sessions (no API credit).
+  export AI_VIS_SOURCES="$RUNS/gemini-sources.pending.jsonl"; rm -f "$AI_VIS_SOURCES"
   python3 "$HERE/local_ai.py" "$PORT" 2>>"$RUNS/local-ai.log" & SERVER=$!
   MODELS_LIST="${AI_VIS_MODELS:-claude,claude-web,chatgpt}"
   DEMO=
@@ -42,4 +43,6 @@ RUNS_DIR="$RUNS" npx tsx src/cli.ts audit --domain realpage.com --name RealPage 
   --keywords "$KEYWORDS" --keyword-mode user_only --keyword-limit 4 --prompts-per-keyword 2 | tee "$RUNS/last-run.log"
 
 RUN_DIR="$(ls -td "$RUNS"/*-realpage | head -1)"
+# gemini-web's source links for each answer belong with this run
+[ -f "${AI_VIS_SOURCES:-/nonexistent}" ] && mv "$AI_VIS_SOURCES" "$RUN_DIR/gemini-sources.jsonl"
 python3 "$REPO/site/data/build_ai_visibility.py" "$RUN_DIR" $DEMO

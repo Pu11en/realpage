@@ -6,6 +6,12 @@ Model names NiubiGEO can ask for:
   claude      Claude (Sonnet) from its own memory, no web
   claude-web  Claude (Sonnet) allowed to search the web first
   chatgpt     OpenAI's model via the Codex CLI, from its own memory
+  gemini      Google Gemini (gemini-2.5-flash) from its own memory, via its API
+  gemini-web  Gemini with Google Search grounding; the source links for each
+              answer go to $AI_VIS_SOURCES (default gemini-sources.jsonl here)
+Gemini calls are throttled to one every 7 seconds; after a 429 (rate limit)
+every later Gemini call fails fast so the run stops cleanly with what it has.
+The key is GEMINI_API_KEY from the repo's .env (or the main checkout's .env).
 Each call runs a fresh `claude -p` / `codex exec` with none of Drew's own
 instructions loaded, so the answer is what a member of the public would get.
 """
@@ -19,6 +25,10 @@ import shutil
 import subprocess
 import sys
 import tempfile
+import threading
+import time
+import urllib.error
+import urllib.request
 import uuid
 from pathlib import Path
 
@@ -27,6 +37,77 @@ PUBLIC = ("You are a helpful AI assistant chatting with a member of the public. 
 CLEAN_DIR = Path(tempfile.gettempdir()) / "ai-visibility-clean"
 CODEX_HOME = CLEAN_DIR / "codex-home"
 TIMEOUT = 280
+GEMINI_MODEL = "gemini-2.5-flash"
+GEMINI_URL = f"https://generativelanguage.googleapis.com/v1beta/models/{GEMINI_MODEL}:generateContent"
+GEMINI_GAP = 7.0  # seconds between Gemini calls (free-tier friendly)
+MODELS = ("claude", "claude-web", "chatgpt", "gemini", "gemini-web")
+REPO = Path(__file__).resolve().parents[2]
+_gemini_lock = threading.Lock()
+_gemini_last = 0.0
+_gemini_stopped = ""  # set after a 429: later calls fail fast
+
+
+class RateLimited(RuntimeError):
+    pass
+
+
+def _gemini_key() -> str:
+    if os.environ.get("GEMINI_API_KEY"):
+        return os.environ["GEMINI_API_KEY"]
+    main = Path("/home/drewp/main-projects/realpage")
+    for envf in (REPO / ".env", main / ".env"):
+        if envf.is_file():
+            for line in envf.read_text().splitlines():
+                if line.startswith("GEMINI_API_KEY="):
+                    return line.split("=", 1)[1].strip().strip('"').strip("'")
+    raise RuntimeError("GEMINI_API_KEY not found in .env")
+
+
+def _gemini_post(body: dict) -> dict:
+    req = urllib.request.Request(GEMINI_URL, data=json.dumps(body).encode(), method="POST",
+                                 headers={"content-type": "application/json",
+                                          "x-goog-api-key": _gemini_key()})
+    with urllib.request.urlopen(req, timeout=TIMEOUT) as resp:
+        return json.loads(resp.read())
+
+
+def _sources_file() -> Path:
+    return Path(os.environ.get("AI_VIS_SOURCES") or Path.cwd() / "gemini-sources.jsonl")
+
+
+def ask_gemini(model: str, prompt: str, want_json: bool = False) -> str:
+    global _gemini_last, _gemini_stopped
+    body = {"systemInstruction": {"parts": [{"text": PUBLIC}]},
+            "contents": [{"role": "user", "parts": [{"text": prompt}]}]}
+    if model == "gemini-web":
+        body["tools"] = [{"google_search": {}}]
+    elif want_json:
+        body["generationConfig"] = {"responseMimeType": "application/json"}
+    with _gemini_lock:  # one call at a time, at least GEMINI_GAP apart
+        if _gemini_stopped:
+            raise RateLimited(f"Gemini stopped after a rate limit: {_gemini_stopped}")
+        wait = _gemini_last + GEMINI_GAP - time.monotonic()
+        if wait > 0:
+            time.sleep(wait)
+        try:
+            data = _gemini_post(body)
+        except urllib.error.HTTPError as exc:
+            if exc.code == 429:
+                _gemini_stopped = time.strftime("%H:%M:%S")
+                raise RateLimited("Gemini rate limit (429); stopping Gemini calls") from None
+            raise RuntimeError(f"Gemini HTTP {exc.code}") from None  # no body: never echo the request
+        finally:
+            _gemini_last = time.monotonic()
+    cand = (data.get("candidates") or [{}])[0]
+    text = "".join(p.get("text", "") for p in cand.get("content", {}).get("parts", [])).strip()
+    if model == "gemini-web" and text:
+        chunks = cand.get("groundingMetadata", {}).get("groundingChunks", [])
+        sources = [{"url": c["web"].get("uri", ""), "title": c["web"].get("title", "")}
+                   for c in chunks if c.get("web")]
+        with _gemini_lock, _sources_file().open("a") as f:
+            f.write(json.dumps({"model": model, "prompt": prompt, "answer": text,
+                                "sources": sources}) + "\n")
+    return text
 
 
 def _clean_env() -> dict:
@@ -40,7 +121,12 @@ def _clean_env() -> dict:
     return env
 
 
-def ask(model: str, prompt: str) -> str:
+def ask(model: str, prompt: str, want_json: bool = False) -> str:
+    if model in ("gemini", "gemini-web"):
+        text = ask_gemini(model, prompt, want_json)
+        if not text:
+            raise RuntimeError(f"{model} gave no answer")
+        return text
     env = _clean_env()
     if model.startswith("claude"):
         tools = "WebSearch,WebFetch" if model == "claude-web" else ""
@@ -81,7 +167,7 @@ class Handler(http.server.BaseHTTPRequestHandler):
         self.wfile.write(data)
 
     def do_GET(self):  # model list
-        self._send(200, {"data": [{"id": m} for m in ("claude", "claude-web", "chatgpt")]})
+        self._send(200, {"data": [{"id": m} for m in MODELS]})
 
     def do_POST(self):
         req = json.loads(self.rfile.read(int(self.headers.get("content-length", 0))))
@@ -91,7 +177,10 @@ class Handler(http.server.BaseHTTPRequestHandler):
             prompt += ("\n\nReturn ONLY a JSON object (no markdown) matching this JSON schema:\n"
                        + json.dumps(tool.get("parameters", {})))
         try:
-            text = ask(req.get("model", ""), prompt)
+            text = ask(req.get("model", ""), prompt, want_json=bool(tool))
+        except RateLimited as exc:
+            print(f"[local_ai] {req.get('model')}: {exc}", file=sys.stderr, flush=True)
+            return self._send(429, {"error": {"message": str(exc)}})
         except Exception as exc:  # noqa: BLE001 -- report to NiubiGEO as a failed call
             print(f"[local_ai] {req.get('model')}: {exc}", file=sys.stderr, flush=True)
             return self._send(502, {"error": {"message": str(exc)[:500]}})
