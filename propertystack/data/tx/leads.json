@@ -32956,10 +32956,11 @@
   "buyer": "LA VILLA HOUSING FINANCE CORP",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.liveattheteak.com/",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.liveattheteak.com/"
   },
   "sources": [
    {
@@ -32976,7 +32977,7 @@
   "address": "1110 EL CAMINO VILLAGE DR 449",
   "lat": null,
   "lon": null,
-  "units": null,
+  "units": 449,
   "stage": "sold",
   "permit_date": "",
   "opening_date": "",
@@ -32993,9 +32994,13 @@
    {
     "fact": "sale_date",
     "url": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   },
+   {
+    "fact": "units",
+    "url": "https://cccres.com/apartments/detail/skylar-pointe-houston"
    }
   ],
-  "why": "Sold 2025-05-19 \u00b7 to EDCOUCH COMMUNITY HOUSING FINANCE CORP \u00b7 new owner may re-pick software"
+  "why": "Sold 2025-05-19 \u00b7 to EDCOUCH COMMUNITY HOUSING FINANCE CORP \u00b7 449 units \u00b7 new owner may re-pick software"
  },
  {
   "area": "tx",
@@ -33012,10 +33017,11 @@
   "buyer": "ARM BRIAR VILLAGE LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://ploteasy.com/property-details/340095/4040-synott-rd-255-houston-tx-77082",
   "software": "unknown",
   "links": {
-   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip",
+   "website": "https://ploteasy.com/property-details/340095/4040-synott-rd-255-houston-tx-77082"
   },
   "sources": [
    {
@@ -33032,7 +33038,7 @@
   "address": "14220 PARK ROW DR 318",
   "lat": null,
   "lon": null,
-  "units": null,
+  "units": 2545,
   "stage": "sold",
   "permit_date": "",
   "opening_date": "",
@@ -33040,18 +33046,23 @@
   "buyer": "PECOS HOUSING FINANCE CORP",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.ebby.com/realestate/details/103901716/14220-park-row-drive-318-houston-tx-77084",
   "software": "unknown",
   "links": {
-   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip",
+   "website": "https://www.ebby.com/realestate/details/103901716/14220-park-row-drive-318-houston-tx-77084"
   },
   "sources": [
    {
     "fact": "sale_date",
     "url": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   },
+   {
+    "fact": "units",
+    "url": "https://www.fastbackgroundcheck.com/address/14220-park-row-dr-unit-1526/houston-tx-77084"
    }
   ],
-  "why": "Sold 2025-05-19 \u00b7 to PECOS HOUSING FINANCE CORP \u00b7 new owner may re-pick software"
+  "why": "Sold 2025-05-19 \u00b7 to PECOS HOUSING FINANCE CORP \u00b7 2545 units \u00b7 new owner may re-pick software"
  },
  {
   "area": "tx",
@@ -33068,10 +33079,11 @@
   "buyer": "PECOS HOUSING FINANCE CORP",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.liveatkade.com/",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.liveatkade.com/"
   },
   "sources": [
    {
@@ -33096,10 +33108,11 @@
   "buyer": "SOUTH CREST IR LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.southcrestapts.com/availability",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.southcrestapts.com/availability"
   },
   "sources": [
    {
@@ -33124,10 +33137,11 @@
   "buyer": "PECOS HOUSING FINANCE CORP",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.livetheabram.com/",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.livetheabram.com/"
   },
   "sources": [
    {
@@ -33152,10 +33166,11 @@
   "buyer": "PECOS HOUSING FINANCE CORP",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.livetheabbott.com/",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.livetheabbott.com/"
   },
   "sources": [
    {
@@ -33180,10 +33195,11 @@
   "buyer": "PECOS HOUSING FINANCE CORP",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.livethealona.com/",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.livethealona.com/"
   },
   "sources": [
    {
@@ -33208,10 +33224,11 @@
   "buyer": "PECOS HOUSING FINANCE CORP",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.livetheabigailapts.com/",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.livetheabigailapts.com/"
   },
   "sources": [
    {
@@ -33231,7 +33248,7 @@
   "units": null,
   "stage": "sold",
   "permit_date": "",
-  "opening_date": "",
+  "opening_date": "1716",
   "sale_date": "2025-05-15",
   "buyer": "LA VILLA HOUSING FINANCE CORP",
   "developer": "",
@@ -33245,6 +33262,10 @@
    {
     "fact": "sale_date",
     "url": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   },
+   {
+    "fact": "opening_date",
+    "url": "https://github.com/Apoorve73/Real-Estate-Companies-Database/blob/master/Houston1.csv"
    }
   ],
   "why": "Sold 2025-05-15 \u00b7 to LA VILLA HOUSING FINANCE CORP \u00b7 new owner may re-pick software"
@@ -33264,10 +33285,11 @@
   "buyer": "COMMUNITY LOAN SERVICIHG LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://64cents.com/foreclosure-listing/6636-BELLFORT-ST-26-HOUSTON-TX-77087",
   "software": "unknown",
   "links": {
-   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip",
+   "website": "https://64cents.com/foreclosure-listing/6636-BELLFORT-ST-26-HOUSTON-TX-77087"
   },
   "sources": [
    {
@@ -33312,10 +33334,10 @@
   "address": "4200 SCOTLAND ST 308",
   "lat": null,
   "lon": null,
-  "units": null,
+  "units": 20,
   "stage": "sold",
   "permit_date": "",
-  "opening_date": "",
+  "opening_date": "2807",
   "sale_date": "2025-05-14",
   "buyer": "AR MIM MEMORIAL HILLS OWNER LP",
   "developer": "",
@@ -33329,9 +33351,17 @@
    {
     "fact": "sale_date",
     "url": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   },
+   {
+    "fact": "units",
+    "url": "https://ploteasy.com/commercial/texas/page/288"
+   },
+   {
+    "fact": "opening_date",
+    "url": "https://ploteasy.com/commercial/texas/page/288"
    }
   ],
-  "why": "Sold 2025-05-14 \u00b7 to AR MIM MEMORIAL HILLS OWNER LP \u00b7 new owner may re-pick software"
+  "why": "Sold 2025-05-14 \u00b7 to AR MIM MEMORIAL HILLS OWNER LP \u00b7 20 units \u00b7 new owner may re-pick software"
  },
  {
   "area": "tx",
@@ -33348,10 +33378,11 @@
   "buyer": "PECOS HOUSING FINANCE CORP",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://knockrentals.com/community/083394992011e9fe",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://knockrentals.com/community/083394992011e9fe"
   },
   "sources": [
    {
@@ -33368,7 +33399,7 @@
   "address": "5909 GLENMONT DR 534",
   "lat": null,
   "lon": null,
-  "units": null,
+  "units": 534,
   "stage": "sold",
   "permit_date": "",
   "opening_date": "",
@@ -33385,9 +33416,13 @@
    {
     "fact": "sale_date",
     "url": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   },
+   {
+    "fact": "units",
+    "url": "https://cccres.com/apartments/detail/la-plaza-houston"
    }
   ],
-  "why": "Sold 2025-05-13 \u00b7 to NAZAR INVEST INC \u00b7 new owner may re-pick software"
+  "why": "Sold 2025-05-13 \u00b7 to NAZAR INVEST INC \u00b7 534 units \u00b7 new owner may re-pick software"
  },
  {
   "area": "tx",
@@ -33399,7 +33434,7 @@
   "units": null,
   "stage": "sold",
   "permit_date": "",
-  "opening_date": "",
+  "opening_date": "1716",
   "sale_date": "2025-05-13",
   "buyer": "ARLINGTON PLACE SI LLC",
   "developer": "",
@@ -33413,6 +33448,10 @@
    {
     "fact": "sale_date",
     "url": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   },
+   {
+    "fact": "opening_date",
+    "url": "https://github.com/Apoorve73/Real-Estate-Companies-Database/blob/master/Houston1.csv"
    }
   ],
   "why": "Sold 2025-05-13 \u00b7 to ARLINGTON PLACE SI LLC \u00b7 new owner may re-pick software"
@@ -33455,20 +33494,25 @@
   "units": null,
   "stage": "sold",
   "permit_date": "",
-  "opening_date": "",
+  "opening_date": "1725",
   "sale_date": "2025-05-13",
   "buyer": "VINTAGE PARK APARTMENTS LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://ploteasy.com/property-details/245121850/14818-vintage-preserve-pky-350-houston-tx-77070",
   "software": "unknown",
   "links": {
-   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip",
+   "website": "https://ploteasy.com/property-details/245121850/14818-vintage-preserve-pky-350-houston-tx-77070"
   },
   "sources": [
    {
     "fact": "sale_date",
     "url": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   },
+   {
+    "fact": "opening_date",
+    "url": "https://ploteasy.com/commercial/texas/page/221"
    }
   ],
   "why": "Sold 2025-05-13 \u00b7 to VINTAGE PARK APARTMENTS LLC \u00b7 new owner may re-pick software"
@@ -33483,20 +33527,25 @@
   "units": null,
   "stage": "sold",
   "permit_date": "",
-  "opening_date": "",
+  "opening_date": "1040",
   "sale_date": "2025-05-13",
   "buyer": "HOLZWARTH RD APARTMENTS LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://ploteasy.com/property-details/240269110/20525-holzwarth-rd-spring-tx-77388",
   "software": "unknown",
   "links": {
-   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip",
+   "website": "https://ploteasy.com/property-details/240269110/20525-holzwarth-rd-spring-tx-77388"
   },
   "sources": [
    {
     "fact": "sale_date",
     "url": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   },
+   {
+    "fact": "opening_date",
+    "url": "https://ploteasy.com/commercial/texas/page/414"
    }
   ],
   "why": "Sold 2025-05-13 \u00b7 to HOLZWARTH RD APARTMENTS LLC \u00b7 new owner may re-pick software"
@@ -33519,7 +33568,8 @@
   "website": "",
   "software": "unknown",
   "links": {
-   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip",
+   "news": "https://www.zillow.com/homedetails/1822-Barker-Cypress-Rd-384-Houston-TX-77084/83894491_zpid/"
   },
   "sources": [
    {
@@ -33544,10 +33594,11 @@
   "buyer": "PECOS HOUSING FINANCE CORP",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://ploteasy.com/property-details/196989/1110-graham-dr-206-tomball-tx-77375",
   "software": "unknown",
   "links": {
-   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip",
+   "website": "https://ploteasy.com/property-details/196989/1110-graham-dr-206-tomball-tx-77375"
   },
   "sources": [
    {
@@ -33575,7 +33626,8 @@
   "website": "",
   "software": "unknown",
   "links": {
-   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip",
+   "news": "https://www.movoto.com/houston-tx/1800-barker-cypress-rd-apt-264-houston-tx-77084/pid_icvcsm9bnzbb/"
   },
   "sources": [
    {
@@ -33628,10 +33680,11 @@
   "buyer": "PECOS HOUSING FINANCE",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.greystar.com/rancho-mirage-irving-tx/p_22280",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.greystar.com/rancho-mirage-irving-tx/p_22280"
   },
   "sources": [
    {
