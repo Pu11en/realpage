@@ -184,3 +184,21 @@ text is junk, other fence wording is junk, a real apartment permit is not,
 and a street literally named "Fence Rd" is not caught by the false-positive
 guard). Checked with `bash tooling/qa/check-fixes.sh` (99 tests pass, 0
 design problems on 7 pages). Commit: see git log.
+
+## T13 No duplicate source links — done
+`sourceItems()` in `site/property.html` deduped saved sources by a
+`label|url` key, so the same URL (e.g. a `tdlr.texas.gov` state project
+record) showed twice when it appeared once as `p.website` (labeled
+"Website" by the page's own `sourceLabel()`, which doesn't know about
+tdlr.texas.gov) and once as a saved `{label: "State project record", url}`
+source. Changed the dedup key to the URL alone when a source has one
+(falling back to the label only for sources with no URL), and kept
+`p.sources` ahead of `p.website` in the list passed to `sourceItems()` so
+the saved, correctly-labeled entry wins and the plain website duplicate is
+dropped. Added `tooling/qa/fixes_tests/test_t13_duplicate_source_links.py`
+(4 tests: the old label-pair dedup key is gone and the new URL-based one is
+in place, the website field still feeds the same dedup pass, a same-URL
+pair under two labels collapses to one entry keeping the more specific
+label, and two genuinely different URLs both still show). Checked with
+`bash tooling/qa/check-fixes.sh` (103 tests pass, design check 0 problems
+on 7 pages). Commit: see git log.
