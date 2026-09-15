@@ -1,6 +1,6 @@
 # PropertyStack: AI Visibility v3 (a pro-style AI audit of RealPage)
 
-Written 2026-09-15 with Drew. **Starts only when Drew says "go work".** Localhost only, never push.
+Written 2026-09-15 with Drew. **PARKED until Drew's Claude and Codex plans reset (later Sept 2026) -- do not start before he says so.** Starts only when Drew says "go work". Localhost only, never push.
 Builds on v2 (`PLAN-ai-visibility-v2.md`, all done): Gemini answerer, run history, lawsuit data,
 `run-and-report.sh`, "run AI visibility" in Discord. Keep all of that working.
 
@@ -13,12 +13,15 @@ Drew's answers:
   runs, (5) a to-do list tied to the exact websites Gemini quotes ("Gemini trusts G2 and this Reddit
   thread for screening questions; RealPage is absent there").
 - **Richer data:** about 80 questions, each asked 3 times, so numbers are win rates, not coin flips.
-- **Gemini only** (`gemini` from memory + `gemini-web` with Google Search), key in the repo-root `.env`,
-  `gemini-2.5-flash`. No other AIs. Never print, copy or commit the key.
+- **AIs for the full run: Claude, ChatGPT (Codex), DeepSeek, GLM (if a key/CLI is available -- skip if not) and
+  Gemini** (`gemini` from memory + `gemini-web` with Google Search). Claude / ChatGPT via the logged-in
+  local sessions (`local_ai.py`, already works); DeepSeek via `DEEPSEEK_API_KEY` (already in Drew's shell);
+  GLM via whatever key is present, else drop it. Gemini key in the repo-root `.env`. Never print, copy or
+  commit any key. Add a T0 before T1: wire `deepseek` and `glm` into `local_ai.py` with offline tests.
 - On demand only; nothing pushes without Drew's "push it".
 
-Gemini safety rules (every task): tests never call Gemini (fixtures only). Keep the 7-second throttle.
-A full run is ~480 answers plus analysis calls, so it may hit Google's daily cap: **runs must resume** --
+Safety rules (every task): tests never call any AI (fixtures only). Keep the 7-second Gemini throttle.
+A full run is ~80 questions x 3 asks x 6 AI set-ups = ~1,400 answers plus analysis calls, so it may hit Google's daily cap: **runs must resume** --
 a stopped run keeps every saved answer and the next start continues where it left off. Only T8 makes
 real Gemini calls.
 
@@ -78,7 +81,7 @@ Open: http://localhost:8765/ai-visibility.html
   website. Drop the old stacked lawsuit boxes (the lawsuit shows up as a criticism reason and in the
   to-do list) and anything that reads as tool internals. Plain empty states. Phone size works. Update the
   page check on practice data. Update `report.py` and `to_research.py` to the new numbers. Commit.
-- [ ] **T8 First full real run.** Run `run-and-report.sh` for real (~480 answers, throttled, may need a
+- [ ] **T8 First full real run.** Run `run-and-report.sh` for real (all AIs, ~1,400 answers, throttled, may need a
   second start next day if Google's daily cap is hit -- resume, don't restart). Open the page on localhost
   and confirm real numbers. Recap for Drew in plain words: RealPage's AI market share vs rivals, the areas
   it wins and loses, top praise / criticism, and the top 5 to-dos. Do not push. Commit.
