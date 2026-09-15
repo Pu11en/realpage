@@ -1,0 +1,28 @@
+# Keep the chat-app upload (railway up) small: the webui Dockerfile only needs
+# chatbot/. Everything else here is repo history, other services, or scratch.
+.git/
+.worktrees/
+.railway-home/
+.railway-status.json
+business/
+archive/
+raw/
+handoffs/
+site/
+propertystack/
+tooling/
+01-company/
+02-products/
+03-reviews/
+04-reddit/
+05-social/
+06-news/
+07-competitors/
+08-voice-of-customer/
+09-ai-visibility/
+09-build-ideas/
+10-dashboard-wireframes/
+**/__pycache__/
+**/*.log
+.d1-*.log
+.live-*
