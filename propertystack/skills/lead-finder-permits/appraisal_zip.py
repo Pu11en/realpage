@@ -27,6 +27,7 @@ import csv
 import datetime
 import io
 import sys
+import urllib.parse
 import urllib.request
 import zipfile
 from pathlib import Path
@@ -40,7 +41,13 @@ FetchBytes = Callable[[str], bytes]
 
 
 def default_fetch_bytes(url: str) -> bytes:
-    req = urllib.request.Request(url, headers={"User-Agent": "propertystack-live-self-test"})
+    # Some county sites (County A's redirect link) hand back an unescaped
+    # Windows file path as a query value (backslashes and spaces), which
+    # `http.client` rejects outright as control characters -- percent-encode
+    # the whole URL before opening it (`safe` keeps the URL's own real
+    # delimiters untouched).
+    safe_url = urllib.parse.quote(url, safe=":/?&=%")
+    req = urllib.request.Request(safe_url, headers={"User-Agent": "propertystack-live-self-test"})
     with urllib.request.urlopen(req, timeout=280) as resp:
         return resp.read()
 

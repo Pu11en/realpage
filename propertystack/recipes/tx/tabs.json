@@ -1,4 +1,5 @@
 {
+  "system": "tabs",
   "endpoint": "https://www.tdlr.texas.gov/TABS/Search/SearchProjects",
   "detail_url_template": "https://www.tdlr.texas.gov/TABS/Search/Project/{project_number}",
   "keywords": ["apartment", "apartments", "multifamily", "multi-family", "lofts", "residences", "flats", "senior living"],

@@ -3,9 +3,10 @@ import io
 import sys
 import zipfile
 from pathlib import Path
+from unittest.mock import patch
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from appraisal_zip import find_new_apartment_projects, find_sold_apartments  # noqa: E402
+from appraisal_zip import default_fetch_bytes, find_new_apartment_projects, find_sold_apartments  # noqa: E402
 
 TODAY = datetime.date(2026, 9, 14)
 
@@ -206,3 +207,33 @@ def test_harris_sold_takes_latest_of_several_deed_rows():
     assert record.sale_date == "2025-10-05"  # the later of the two dated rows, not the first
     assert record.buyer == "DONEOWNER LLC"
     assert record.units is None  # this county's file has no unit-count column at all
+
+
+def test_default_fetch_bytes_percent_encodes_a_raw_windows_path_query_value():
+    """A real county redirect link (County A's) hands back a query value that
+    is a literal, un-escaped Windows file path -- backslashes and spaces --
+    which `http.client` rejects outright as control characters unless it's
+    percent-encoded first."""
+    raw_url = "https://example.test/ViewPDFs.aspx?type=3&id=\\\\HOST.ORG\\WEB\\DATA PRODUCTS\\FILE.ZIP"
+    captured = {}
+
+    class _FakeResponse:
+        def read(self):
+            return b"zip-bytes"
+
+        def __enter__(self):
+            return self
+
+        def __exit__(self, *exc):
+            return False
+
+    def _fake_urlopen(req, timeout=None):
+        captured["url"] = req.full_url
+        return _FakeResponse()
+
+    with patch("urllib.request.urlopen", _fake_urlopen):
+        data = default_fetch_bytes(raw_url)
+
+    assert data == b"zip-bytes"
+    assert "\\" not in captured["url"]
+    assert " " not in captured["url"]

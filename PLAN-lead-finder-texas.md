@@ -97,7 +97,7 @@ Open: http://localhost:8765 → Early Leads → Tx
   (2025 + 2026 files): sold with price, units, date, buyer where given. TDHCA HTC inventory (new
   construction approved since 2024) and the 4% status log: new affordable projects with units and
   applicant phone. Commit.
-- [ ] **T6 Texas run.** Records first, commit after each source: TABS + city recipes + appraisal files +
+- [x] **T6 Texas run.** Records first, commit after each source: TABS + city recipes + appraisal files + _(skipped: stopped by Drew 2026-09-15, redone in a new plan)_
   TDHCA (all free, no web search), then enrichment per "Data first"; full chain for `tx` with S0-S4: TABS + city recipes + appraisal files +
   TDHCA, merge duplicates across sources (address/geocode + name), website / software / phone
   enrichment, score (quality.json report only). Commit.
@@ -115,6 +115,6 @@ Open: http://localhost:8765 → Early Leads → Tx
   4. Run TABS (statewide registry, owner phones) next, before re-running Houston/Dallas, and order sources
      by the RealPage-gap rule (Houston, Dallas, Fort Worth, Austin last).
   5. Log before/after counts per city and source in the progress log. Commit after each fix.
-- [ ] **T7 Texas on the site + chat.** Build the site and rebuild the chat with the `tx` area; run the
+- [x] **T7 Texas on the site + chat.** Build the site and rebuild the chat with the `tx` area; run the _(skipped: stopped by Drew 2026-09-15, redone in a new plan)_
   Check and `tooling/qa/check-answers.sh`. Commit. Recap in plain words: Texas leads by city and by
   source, how many with software and phone, searches used.
