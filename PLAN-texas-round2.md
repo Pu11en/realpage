@@ -12,6 +12,10 @@ source (build copies delete uncommitted files), localhost only, never push.
   of 20+ unit properties -- never remodels, carports, repairs or finish-outs on existing complexes; one row
   per project/complex (group permits or accounts by parcel / owner + street + date), never one per building
   number; a real project name when any field has one; normalized city names ("HOUSTON" = "Houston").
+- **Reuse, don't rebuild:** use the Socrata, ArcGIS (paging past 1,000 rows) and appraisal-zip adapters the
+  Texas build already made (`test_appraisal_zip.py` shows the zip one); new code only where a source needs it.
+- **"Too small" cutoff when units are unknown:** use the same building-area cutoff constant the Texas build
+  uses for HCAD (one place in code, never a second number).
 - All new rows go into the existing `tx` area and merge with rows already there (same address or same name
   in the same city = one row with every source listed).
 - **Pre-approved, don't ask:** free public downloads and API calls; Jina up to 300 searches for enrichment of
@@ -30,17 +34,19 @@ Open: http://localhost:8765 → Early Leads → Tx
 ## Tasks
 
 - [ ] **R1 Williamson County (Socrata, data.wcad.org).** Recipe (data) + adapter if needed: building permits
-  table `fqhf-gyjx` since 2024-09 for new multifamily / apartment construction; property + characteristics
-  (`ij43-xknu`, `cvyp-ab5t`) for the multifamily state class (read the layout PDF at
-  `documents.wcad.org/DataDownloads/` to confirm the class code, likely B1/BCOM-MF), year built ≥ 2024 or
-  new improvement value → new projects; sale table `pvyy-mm8r` since 2024-09 on multifamily accounts →
-  sold (buyer, date). Drop under 20 units (or under the building-area cutoff when units are unknown). Live
+  table `fqhf-gyjx`: `issuedate` since 2024-09, `permittypecode='NS'` (New Structure), `permitdesc` matching
+  apartment / multifamily / multi-family / MF (drop "NEW SINGLE FAMILY" etc.); city from
+  `issuingagencydescription`; property + characteristics
+  (`ij43-xknu`, `cvyp-ab5t`; state class is `fsptb`, e.g. `A1` = single family -- confirm the multifamily
+  codes (B1/B2) from the layout PDF at `documents.wcad.org/DataDownloads/`), `actyrbuilt` ≥ 2024 → new
+  projects; `deeddate` since 2024-09 with a valid `transfervaliditycode` (or the sale table `pvyy-mm8r`)
+  on multifamily accounts → sold (buyer from the property table, date). Drop under 20 units (or under the building-area cutoff when units are unknown). Live
   self-test ≥1 row. Pull, merge into `tx`, commit.
 - [ ] **R2 Bexar County (ArcGIS, maps.bexar.org Parcels layer 0).** Recipe: `State_cd='B1'`, `YrBlt >= 2024`
   (new) → projects with owner, situs address, building area (`GBA`/`TOT_GBA`), stories; page past the
-  layer's row limit; skip parcels already in the San Antonio permit rows (merge instead). Check whether
-  the layer has a deed/sale date field; if yes, add recent sales, else note "Bexar sales: no field" in the
-  source notes. Live self-test. Pull, merge, commit.
+  layer's row limit; skip parcels already in the San Antonio permit rows (merge instead). The layer has **no
+  sale/deed date** (checked 2026-09-14): no Bexar sales this round; note "Bexar sales: no public field"
+  in the source notes. Units: none in the layer (`NumRooms` is not units) → building-area cutoff. Live self-test. Pull, merge, commit.
 - [ ] **R3 College Station (Socrata, data.cstx.gov `hrbn-znt6`).** Recipe: issued since 2024-09,
   `upper(permit_description) like '%APARTMENT%'` (plus MULTI-FAMILY / MULTIFAMILY), new-construction work
   types only (drop remodels/repairs); one row per project; units from a field or the description text,
