@@ -21,7 +21,7 @@ def test_script_parses_and_stays_under_the_reddit_cap():
 
 
 def post(url, date="2026-09-01"):
-    return {"url": url, "date": date, "title": "RealPage in Dallas", "excerpt": "", "companies": ["RealPage"]}
+    return {"url": url, "date": date, "title": "RealPage in Dallas", "excerpt": "Our Dallas complex uses RealPage.", "companies": ["RealPage"]}
 
 
 def test_blocked_run_keeps_last_week_and_is_reported(tmp_path):
@@ -41,8 +41,3 @@ def test_later_good_run_clears_the_warning(tmp_path):
     (tmp_path / "2026-09-15").mkdir()
     (tmp_path / "2026-09-15" / "rivals.json").write_text(json.dumps({"posts": []}))
     assert build.build(tmp_path)["failedRuns"] == {}
-
-
-def test_tab_shows_failed_refresh():
-    html = (HERE.parents[2] / "site" / "street-talk.html").read_text()
-    assert "failedRuns" in html and "failed" in html

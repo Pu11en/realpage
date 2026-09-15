@@ -3,7 +3,7 @@
 
 Reads the newest `propertystack/data/street-talk/raw/<date>/<part>.json` for each part (so a failed
 weekly run keeps last week's data), labels every post with plain word lists (no paid AI) and writes:
-  site/data/street-talk.json                    -- what the Street Talk tab shows
+  site/data/street-talk.json                    -- the same posts as JSON (no page shows it; Drew dropped the tab 2026-09-15)
   propertystack/data/street-talk/street_talk.csv -- what the chat loads
 """
 from __future__ import annotations
@@ -51,6 +51,26 @@ MANAGER_RE = re.compile(
     r"are switching|are moving|are migrating))\b", re.I)
 RENTER_RE = re.compile(r"\b(i'?m renting|renting a room|my (landlord|apartment|lease)|as a (tenant|renter)|"
                        r"move in|moving in)\b", re.I)
+
+
+# Not people talking: listings, loan records, tour/unit videos, callbox how-tos (seen in the 2026-09-15 pull).
+JUNK_RE = re.compile(
+    r"(^financed \||loan image|instagram\.com/p/|\b\d\s?bd\s?\d\s?ba\b|\bcallbox\b|^tour\b|"
+    r"\bapt \d+\b|\b\d/\d\s?b\b|\b[a-z]\d[a-z]?$|// \d{1,2} [a-z]{3} \d{4}|accommodation available)", re.I)
+MAX_AGE_DAYS = 730
+
+
+def is_junk(post: dict, today: str) -> bool:
+    title, excerpt = post.get("title", "").strip(), (post.get("excerpt") or "").strip()
+    if JUNK_RE.search(title) or JUNK_RE.search(excerpt[:200]):
+        return True
+    # A title with nothing else (mostly YouTube uploads) says nothing a rep can use.
+    if not excerpt or excerpt == title:
+        return True
+    try:
+        return (dt.date.fromisoformat(today) - dt.date.fromisoformat(post["date"][:10])).days > MAX_AGE_DAYS
+    except (KeyError, ValueError):
+        return True
 
 
 def text_of(post: dict) -> str:
@@ -133,16 +153,21 @@ def totals(posts: list[dict]) -> dict:
 
 
 def build(raw_dir: pathlib.Path = RAW_DIR, today: str | None = None) -> dict:
-    parts, dates, seen = {}, {}, set()
+    today = today or dt.date.today().isoformat()
+    parts, dates, seen, seen_titles = {}, {}, set(), set()
     for part in PARTS:
         found = latest_raw(raw_dir, part)
         rows = []
         if found:
             dates[part], raw = found
             for post in raw.get("posts", []):
-                if not post.get("url") or not post.get("date") or post["url"] in seen:
+                title_key = (part, post.get("title", "").strip().lower())
+                if not post.get("url") or not post.get("date") or post["url"] in seen or title_key in seen_titles:
+                    continue
+                if is_junk(post, today):
                     continue
                 seen.add(post["url"])
+                seen_titles.add(title_key)
                 row = label(post, part)
                 if part != "buildings" and not row["companies"]:
                     continue
@@ -152,7 +177,7 @@ def build(raw_dir: pathlib.Path = RAW_DIR, today: str | None = None) -> dict:
     everything = [p for rows in parts.values() for p in rows]
     return {
         "updated": max(dates.values()) if dates else "",
-        "builtAt": today or dt.date.today().isoformat(),
+        "builtAt": today,
         "sourceDates": dates,
         "failedRuns": failed_runs(raw_dir, dates),
         "totals": totals(everything),

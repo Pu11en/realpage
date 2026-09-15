@@ -63,3 +63,13 @@ def test_write_json_and_csv(tmp_path):
     rows = list(csv.DictReader((tmp_path / "st.csv").open()))
     assert len(rows) == 6 and all(r["url"].startswith("https://www.") for r in rows)
     assert {r["warm_lead"] for r in rows} == {"yes", ""}
+
+
+def test_junk_and_old_posts_are_dropped():
+    keep = {"title": "Worst management", "excerpt": "Repairs never get done here.", "date": "2026-08-01"}
+    assert not build.is_junk(keep, "2026-09-15")
+    for junk in ({"title": "Financed | Multi Family $96,500,000", "excerpt": "x y", "date": "2026-08-01"},
+                 {"title": "The Grand at Legacy West A1D", "excerpt": "The Grand at Legacy West A1D", "date": "2026-08-01"},
+                 {"title": "Grand at Legacy West Callbox Locations + Tutorial", "excerpt": "how to", "date": "2026-08-01"},
+                 dict(keep, date="2020-02-29")):
+        assert build.is_junk(junk, "2026-09-15"), junk["title"]
