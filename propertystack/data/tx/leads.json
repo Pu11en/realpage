@@ -24790,7 +24790,7 @@
   "address": "13333 NORTHBOROUGH DR 170",
   "lat": null,
   "lon": null,
-  "units": null,
+  "units": 1312,
   "stage": "sold",
   "permit_date": "",
   "opening_date": "",
@@ -24807,9 +24807,13 @@
    {
     "fact": "sale_date",
     "url": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   },
+   {
+    "fact": "units",
+    "url": "https://ploteasy.com/property-details/93279/22820-imperial-valley-dr-houston-tx-77073"
    }
   ],
-  "why": "Sold 2025-12-09 \u00b7 to NSI CANFIELD LLC \u00b7 new owner may re-pick software"
+  "why": "Sold 2025-12-09 \u00b7 to NSI CANFIELD LLC \u00b7 1312 units \u00b7 new owner may re-pick software"
  },
  {
   "area": "tx",
@@ -24854,10 +24858,11 @@
   "buyer": "NSI CANFIELD LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://ploteasy.com/property-details/93183/13350-northborough-dr-104-houston-tx-77067",
   "software": "unknown",
   "links": {
-   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip",
+   "website": "https://ploteasy.com/property-details/93183/13350-northborough-dr-104-houston-tx-77067"
   },
   "sources": [
    {
@@ -24902,7 +24907,7 @@
   "address": "8222 KINGSBROOK RD 306",
   "lat": null,
   "lon": null,
-  "units": null,
+  "units": 25,
   "stage": "sold",
   "permit_date": "",
   "opening_date": "",
@@ -24919,9 +24924,13 @@
    {
     "fact": "sale_date",
     "url": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   },
+   {
+    "fact": "units",
+    "url": "https://www.redfin.com/TX/Houston/8222-Kingsbrook-Rd-77024/unit-306/apartment/30238709"
    }
   ],
-  "why": "Sold 2025-12-08 \u00b7 to THFHA LLC \u00b7 new owner may re-pick software"
+  "why": "Sold 2025-12-08 \u00b7 to THFHA LLC \u00b7 25 units \u00b7 new owner may re-pick software"
  },
  {
   "area": "tx",
@@ -24930,7 +24939,7 @@
   "address": "8351 PARK PLACE BLVD 40",
   "lat": null,
   "lon": null,
-  "units": null,
+  "units": 40,
   "stage": "sold",
   "permit_date": "",
   "opening_date": "",
@@ -24947,9 +24956,13 @@
    {
     "fact": "sale_date",
     "url": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   },
+   {
+    "fact": "units",
+    "url": "https://cccres.com/apartments/detail/villas-at-park-place-houston"
    }
   ],
-  "why": "Sold 2025-12-04 \u00b7 to UNTITLED PROP LLC \u00b7 new owner may re-pick software"
+  "why": "Sold 2025-12-04 \u00b7 to UNTITLED PROP LLC \u00b7 40 units \u00b7 new owner may re-pick software"
  },
  {
   "area": "tx",
@@ -24958,7 +24971,7 @@
   "address": "8345 PARK PLACE BLVD 50",
   "lat": null,
   "lon": null,
-  "units": null,
+  "units": 20,
   "stage": "sold",
   "permit_date": "",
   "opening_date": "",
@@ -24966,18 +24979,23 @@
   "buyer": "FAT PROPERTY LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.enrichedrealestate.com/8345-Park-Place-Blvd-50-Houston-TX-77017/Apartments/ApartmentGarden14stories/Id=145289",
   "software": "unknown",
   "links": {
-   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip",
+   "website": "https://www.enrichedrealestate.com/8345-Park-Place-Blvd-50-Houston-TX-77017/Apartments/ApartmentGarden14stories/Id=145289"
   },
   "sources": [
    {
     "fact": "sale_date",
     "url": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   },
+   {
+    "fact": "units",
+    "url": "https://www.enrichedrealestate.com/8345-Park-Place-Blvd-50-Houston-TX-77017/Apartments/ApartmentGarden14stories/Id=145289"
    }
   ],
-  "why": "Sold 2025-12-04 \u00b7 to FAT PROPERTY LLC \u00b7 new owner may re-pick software"
+  "why": "Sold 2025-12-04 \u00b7 to FAT PROPERTY LLC \u00b7 20 units \u00b7 new owner may re-pick software"
  },
  {
   "area": "tx",
@@ -25050,10 +25068,11 @@
   "buyer": "AREIT DALLAS WYCLIFF LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://cccres.com/apartments/detail/aura-wycliff-phase-ii-dallas",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://cccres.com/apartments/detail/aura-wycliff-phase-ii-dallas"
   },
   "sources": [
    {
@@ -25078,10 +25097,11 @@
   "buyer": "UCP PROPCO LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.uptownatcolepark.com/",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.uptownatcolepark.com/"
   },
   "sources": [
    {
@@ -25241,20 +25261,25 @@
   "units": 398,
   "stage": "sold",
   "permit_date": "",
-  "opening_date": "",
+  "opening_date": "2026",
   "sale_date": "2025-12-02",
   "buyer": "13100 NOEL ROAD PARTNERS LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.hazelbythegalleriadallas.com/",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.hazelbythegalleriadallas.com/"
   },
   "sources": [
    {
     "fact": "sale_date",
     "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   },
+   {
+    "fact": "opening_date",
+    "url": "https://www.hazelbythegalleriadallas.com/floor-plans/"
    }
   ],
   "why": "Sold 2025-12-02 \u00b7 to 13100 NOEL ROAD PARTNERS LLC \u00b7 398 units \u00b7 new owner may re-pick software"
@@ -25274,10 +25299,11 @@
   "buyer": "REMOND DALLAS HOLDINGS LP",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.mylivingchoice.com/property/villas-of-remond-senior-living",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.mylivingchoice.com/property/villas-of-remond-senior-living"
   },
   "sources": [
    {
@@ -25330,10 +25356,11 @@
   "buyer": "645 N TOWN EAST BLVD OWNER LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.anthemtowneast.com/",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.anthemtowneast.com/"
   },
   "sources": [
    {
@@ -25378,7 +25405,7 @@
   "address": "1000 S ALLEN GENOA RD 78",
   "lat": null,
   "lon": null,
-  "units": null,
+  "units": 78,
   "stage": "sold",
   "permit_date": "",
   "opening_date": "",
@@ -25386,18 +25413,23 @@
   "buyer": "BELLATX2023 LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.tophap.com/homes/details/1000-S-ALLEN-GENOA-RD-78-SOUTH-HOUSTON-TX-77587/155103493",
   "software": "unknown",
   "links": {
-   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip",
+   "website": "https://www.tophap.com/homes/details/1000-S-ALLEN-GENOA-RD-78-SOUTH-HOUSTON-TX-77587/155103493"
   },
   "sources": [
    {
     "fact": "sale_date",
     "url": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   },
+   {
+    "fact": "units",
+    "url": "https://cccres.com/apartments/detail/bellatx2023-llc-south-houston"
    }
   ],
-  "why": "Sold 2025-11-28 \u00b7 to BELLATX2023 LLC \u00b7 new owner may re-pick software"
+  "why": "Sold 2025-11-28 \u00b7 to BELLATX2023 LLC \u00b7 78 units \u00b7 new owner may re-pick software"
  },
  {
   "area": "tx",
@@ -25406,7 +25438,7 @@
   "address": "17417 W LAKE HOUSTON PKY 327",
   "lat": null,
   "lon": null,
-  "units": null,
+  "units": 327,
   "stage": "sold",
   "permit_date": "",
   "opening_date": "",
@@ -25414,18 +25446,23 @@
   "buyer": "AG-HILLTOP HARPER AT LAKE HOUSTON",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://ploteasy.com/property-details/240269266/17417-w-lake-houston-pky-327-humble-tx-77346",
   "software": "unknown",
   "links": {
-   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip",
+   "website": "https://ploteasy.com/property-details/240269266/17417-w-lake-houston-pky-327-humble-tx-77346"
   },
   "sources": [
    {
     "fact": "sale_date",
     "url": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   },
+   {
+    "fact": "units",
+    "url": "https://cccres.com/apartments/detail/dryden-humble"
    }
   ],
-  "why": "Sold 2025-11-27 \u00b7 to AG-HILLTOP HARPER AT LAKE HOUSTON \u00b7 new owner may re-pick software"
+  "why": "Sold 2025-11-27 \u00b7 to AG-HILLTOP HARPER AT LAKE HOUSTON \u00b7 327 units \u00b7 new owner may re-pick software"
  },
  {
   "area": "tx",
@@ -25442,10 +25479,11 @@
   "buyer": "80 UNITS 811 W MORRELL LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://cccres.com/apartments/detail/ewing-vilas-txa20030115-dallas",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://cccres.com/apartments/detail/ewing-vilas-txa20030115-dallas"
   },
   "sources": [
    {
