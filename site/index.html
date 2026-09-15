@@ -90,6 +90,9 @@
           </thead>
           <tbody id="leads-tbody"></tbody>
         </table>
+        <div class="show-more-row" id="show-more-row" style="display:none">
+          <button type="button" class="btn" id="show-more-btn"></button>
+        </div>
       `;
 
       function contactHtml(contact) {
@@ -136,6 +139,8 @@
       // Clicking a table header sorts by that column (again to reverse) and
       // keeps the Sort dropdown showing the matching option when there is one.
       let headerSort = null; // {key, dir} or null to defer to the dropdown
+      const PAGE_SIZE = 50;
+      let visibleCount = PAGE_SIZE; // "Show more" reveals PAGE_SIZE more each click; filters/sort reset it
       function compareRows(a, b, key, dir) {
         let av, bv;
         if (key === "units") { av = a.units || 0; bv = b.units || 0; }
@@ -166,6 +171,7 @@
             : { key, dir: defaultDir };
           if (key === "score") document.getElementById("f-sort").value = "score";
           else if (key === "units") document.getElementById("f-sort").value = "size";
+          visibleCount = PAGE_SIZE;
           renderRows();
         });
       });
@@ -217,10 +223,21 @@
             document.getElementById("f-search").value = "";
             renderRows();
           });
+          document.getElementById("show-more-row").style.display = "none";
           return;
         }
 
-        document.getElementById("leads-tbody").innerHTML = rows.map((l, i) => `
+        const pageRows = rows.slice(0, visibleCount);
+        const showMoreRow = document.getElementById("show-more-row");
+        if (rows.length > pageRows.length) {
+          showMoreRow.style.display = "";
+          document.getElementById("show-more-btn").textContent =
+            `Show more (${pageRows.length} of ${rows.length})`;
+        } else {
+          showMoreRow.style.display = "none";
+        }
+
+        document.getElementById("leads-tbody").innerHTML = pageRows.map((l, i) => `
           <tr class="clickable" data-id="${l.propertyId || l.id}">
             <td data-label="Rank">${i + 1}</td>
             <td data-label="Score"><span class="score-badge" style="background:${scoreBadgeColor(l.score)}">${l.score}</span></td>
@@ -242,6 +259,11 @@
         });
 
         // The button sits inside a clickable row: stop the click reaching it.
+        document.getElementById("show-more-btn").addEventListener("click", () => {
+          visibleCount += PAGE_SIZE;
+          renderRows();
+        });
+
         document.querySelectorAll("#leads-tbody [data-deep-dive]").forEach((btn) => {
           btn.addEventListener("click", (e) => {
             e.stopPropagation();
@@ -270,6 +292,7 @@
         const url = new URL(location.href);
         if (name) url.searchParams.set("region", name); else url.searchParams.delete("region");
         history.replaceState(null, "", url);
+        visibleCount = PAGE_SIZE;
         renderRows();
       }
 
@@ -286,6 +309,7 @@
         const el = document.getElementById(id);
         el.addEventListener(el.tagName === "INPUT" && el.type !== "checkbox" ? "input" : "change", () => {
           if (id === "f-sort") headerSort = null; // dropdown wins until a header is clicked again
+          visibleCount = PAGE_SIZE;
           renderRows();
         });
       });

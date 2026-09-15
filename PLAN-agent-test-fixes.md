@@ -70,7 +70,7 @@ Open: http://localhost:8765/index.html
   to the non-apartment permit filter upstream; rebuild. Test. Commit.
 - [x] **T13 No duplicate source links.** Some building pages show "Website" and "State project record" as the
   same state link. When the website is only the state record, show it once. Test. Commit.
-- [ ] **T14 Shorter leads list.** Early Leads shows all 597 Texas rows at once. Show the first 50 with a
+- [x] **T14 Shorter leads list.** Early Leads shows all 597 Texas rows at once. Show the first 50 with a
   "Show more" button (filters and counts still use every row). Test. Commit.
 
 ### Finish

@@ -202,3 +202,21 @@ pair under two labels collapses to one entry keeping the more specific
 label, and two genuinely different URLs both still show). Checked with
 `bash tooling/qa/check-fixes.sh` (103 tests pass, design check 0 problems
 on 7 pages). Commit: see git log.
+
+## T14 Shorter leads list — done
+The Early Leads table (`site/index.html`) rendered every filtered/sorted row
+at once (597, now 593, Texas rows). Added a `PAGE_SIZE = 50` /
+`visibleCount` cap: `renderRows()` still computes and sorts the full
+filtered `rows` list first (so the stat cards and rank numbers stay correct),
+then slices to `pageRows = rows.slice(0, visibleCount)` only for what goes
+into the table body. A "Show more (50 of 593)" button below the table adds
+another 50 each click and hides itself once every row is shown.
+`visibleCount` resets back to 50 whenever a filter, the sort dropdown, a
+header-sort click, or a region/metro pick changes what's being shown, so a
+new search always starts back at page one. Added
+`tooling/qa/fixes_tests/test_t14_show_more_leads.py` (5 tests: page size is
+50, the button exists and is wired to grow `visibleCount`, the table body
+renders the sliced `pageRows` not the full list, stats run on the full
+`rows` before slicing, and paging resets on filter/sort changes). Checked
+with `bash tooling/qa/check-fixes.sh` (108 tests pass, design check 0
+problems on 7 pages).
