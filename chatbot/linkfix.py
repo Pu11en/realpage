@@ -85,10 +85,21 @@ def _is_maps(url: str) -> bool:
     return p.netloc.lower().endswith("google.com") and p.path.startswith("/maps")
 
 
+# CraneSignal's own "how it was built and tested" page: the readable source for
+# questions about CraneSignal itself, so it is always allowed.
+HOOD_URL = "https://app.cranesignal.com/under-the-hood.html"
+
+
+def _is_hood(url: str) -> bool:
+    return _norm(url) == _norm(HOOD_URL)
+
+
 def label_for(url: str) -> str:
     host = urlsplit(url).netloc.lower().removeprefix("www.")
     if _is_maps(url):
         return "Map"
+    if _is_hood(url):
+        return "Under the Hood"
     if host.endswith("swagit.com"):
         city = host.split(".")[0].removesuffix("tx").title()
         return f"{city} city video"
@@ -129,7 +140,7 @@ def _fix_line(line: str, seen: set[str], deep_dive: bool) -> str | None:
         for m in _LINK_RE.finditer(line):
             label, url = m.group(1), m.group(2)
             in_row = label.strip().lower() in _ROW_LABELS and line[: m.start()].rstrip().endswith(_ROW_EMOJI)
-            bad = not _is_maps(url) and _norm(url) not in seen
+            bad = not _is_maps(url) and not _is_hood(url) and _norm(url) not in seen
             if in_row and label.strip().lower() == "permit" and _VIDEO_RE.search(url):
                 bad = True
             if bad:
@@ -175,7 +186,7 @@ def _has_approved_readable_source(text: str, seen: set[str]) -> bool:
     """Whether a retained non-map link came from an approved tool result."""
     for match in _LINK_RE.finditer(text):
         url = match.group(2)
-        if not _is_maps(url) and _norm(url) in seen:
+        if not _is_maps(url) and (_is_hood(url) or _norm(url) in seen):
             return True
     return False
 
