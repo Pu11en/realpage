@@ -39,7 +39,7 @@ Open: http://localhost:8765/index.html
 
 ## Tasks
 
-- [ ] **T1 Fonts + shared colors + app frame.** Download Plus Jakarta Sans and Inter (latin, variable
+- [x] **T1 Fonts + shared colors + app frame.** Download Plus Jakarta Sans and Inter (latin, variable
   weight woff2, from the official fontsource / Google Fonts files) into `site/fonts/`. In
   `site/css/styles.css`: `@font-face` for both, replace the dark `:root` with the landing tokens
   (keep old variable names as aliases pointing at the new values so pages don't break), `--font-head`
