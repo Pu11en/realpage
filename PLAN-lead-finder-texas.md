@@ -93,7 +93,7 @@ Open: http://localhost:8765 → Early Leads → Tx
   address. HCAD bulk zip: state class B1 accounts with a deed since 2024-09 (drop small buildings by
   building area) → sold; new_construction_val > 0 → new projects. Stream-parse, cache the zips. Generic
   code ("appraisal file recipe"), county specifics in data. Tests with small saved samples. Commit.
-- [ ] **T5 Tarrant sales with prices + affordable pipeline.** TAD improved-sales zip, Apartment sheet
+- [x] **T5 Tarrant sales with prices + affordable pipeline.** TAD improved-sales zip, Apartment sheet
   (2025 + 2026 files): sold with price, units, date, buyer where given. TDHCA HTC inventory (new
   construction approved since 2024) and the 4% status log: new affordable projects with units and
   applicant phone. Commit.

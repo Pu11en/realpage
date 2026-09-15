@@ -1,0 +1,13 @@
+{
+  "state": "TX",
+  "system": "tdhca-affordable",
+  "htc_inventory_url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx",
+  "htc_inventory_sheet": "PropInventory",
+  "since_year": 2024,
+  "status_log_urls": [
+    "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/htc-4pct/2026260803-4HTC-StatusLog.xlsx"
+  ],
+  "date_tested": "2026-09-14",
+  "live_test": "The plan's guessed status-log URL (www.tdhca.texas.gov/sites/default/files/multifamily/docs/htc-4pct/2026260803-4HTC-StatusLog.xlsx) 404'd on its own -- tdhca.texas.gov restructured its site since the plan was written (old /TABS-style .htm pages are gone). Found the real current page live by walking www.tdhca.texas.gov -> /programs/multifamily-housing-programs -> /multifamily-bond-program -> /non-competitive-4-housing-tax-credits, which lists every posted status-log file; the plan's exact guessed filename (2026260803-4HTC-StatusLog.xlsx) turned out to still be the latest one listed there, just needed the corrected page path to discover. HTC inventory: real 'PropInventory' sheet, real header (Rowid/TDHCA#/Program Type/.../Development Name/Project Address/Project City/Project County/Zip Code/.../Total Units/.../ConType/...); filtering ConType='New Construction' and Year>=2024 gave exactly 200 real rows live (e.g. 'Huntington Place Senior Living', Garland, 204 units, 2024; 'The Arboretum at Woodland Hills', Houston, 366 units, 2024) -- matches the plan's expected count exactly. Status log: real header lives at row 11 (not row 1 -- rows 1-10 are a title block and numbered footnotes), found live by scanning for the row whose first cell is 'TDHCA Number'; filtering Construction Type='NC' on the 2026-08-03 file returned real rows with a real Applicant Phone, e.g. 'Bloom at Lamar Square', Austin, 58 units, (512) 610-4016; 'Mayfield Park Apts', Arlington, 240 units, (409) 284-6362.",
+  "notes": "HTC inventory has no phone field at all (checked live against its full real header) -- office_phone stays blank there; the status log fills it in via 'Applicant Phone'. The inventory sheet's 'Board Approval' column looked plausible at first but is a much smaller/older number on real new-construction rows (max 1998 across the whole sheet) -- it's a legacy tiebreaker-calculation field, not the award year; 'Year' (max 2027 on real rows) is the field that actually tracks the award and is what since_year filters against, confirmed by checking both columns live. Both sources are plain .xlsx downloads, not zips, unlike every other T3-T5 county file."
+}

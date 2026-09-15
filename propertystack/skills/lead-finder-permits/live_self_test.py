@@ -17,7 +17,9 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from ckan_sql import ckan_sql_http_get  # noqa: E402
 from find_upcoming import find_upcoming  # noqa: E402
 from houston_sold_permits import fetch_rows as houston_fetch_rows  # noqa: E402
+from tad_sales import find_apartment_sales  # noqa: E402
 from tad_zip import find_new_apartment_permits  # noqa: E402
+from tdhca import find_new_affordable_projects  # noqa: E402
 
 RECIPES_ROOT = Path(__file__).resolve().parents[2] / "recipes"
 
@@ -42,6 +44,10 @@ def main() -> int:
                 # county, tagged per-row, so it doesn't go through
                 # find_upcoming's one-caller-supplied-city signature.
                 records = find_new_apartment_permits(state_dir, recipe, today=today)
+            elif recipe.get("system") == "tad-improved-sales-zip":
+                records = find_apartment_sales(state_dir, recipe, today=today)
+            elif recipe.get("system") == "tdhca-affordable":
+                records = find_new_affordable_projects(state_dir, recipe, today=today)
             else:
                 if recipe.get("system") == "ckan-sql":
                     fetch = ckan_sql_http_get(recipe["endpoint"], recipe.get("sql", ""))

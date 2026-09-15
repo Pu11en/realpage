@@ -474,3 +474,73 @@ after the site was already marked skipped. Fixed by only setting the skip reason
 and always returning the already-stored reason afterward. Ran the flaky test 5x in a
 row plus the full check-lead-finder.sh (all lead-finder* test suites + check-panel.sh) —
 all green. Commit: fix race in fetch block-count skip.
+
+## T5 Tarrant sales with prices + affordable pipeline
+- **Tarrant TAD improved sales** (new module
+  `skills/lead-finder-permits/tad_sales.py`, recipe
+  `recipes/tx/tarrant-tad-sales.json`): reuses the "county specifics in
+  data, generic code" shape from T3/T4's `tad_zip.py`, but the apartment
+  sheet's own name changes between years -- live-confirmed the 2025 zip's
+  xlsx has a sheet literally named "Apartments" (129 rows) while the 2026
+  zip's is "Apartment" (49 rows) -- so the match is a case-insensitive
+  prefix, not an exact sheet name. Live-ran both years: 24 real sold
+  apartment rows (20+ units, since 2024-09), e.g. "LANDMARK AT CROWLEY",
+  305 W FM 1187, 267 units, sold 2025-04-08, $47,300,000. Checked the
+  sheet's real full header live and confirmed there is genuinely no
+  buyer/grantee column and no per-row city column anywhere in this file --
+  `buyer` is always left blank (never guessed) and `city` falls back to
+  the recipe's own county name, same fallback `find_sold.py` already uses
+  for a county file with no per-row city. Document Date is a raw Excel
+  day-serial number on real rows (e.g. 45552), not a formatted date cell --
+  converted via the standard 1899-12-30 epoch, verified against a known
+  serial/date pair. Price falls back from Adjusted Sale Price to Contract
+  Sale Price and is omitted from `why` entirely (never treated as $0) on
+  rows where both are the literal text "NULL", which does happen on real
+  rows (e.g. vacant/land-only sales).
+- **TDHCA affordable pipeline** (new module `skills/lead-finder-permits/tdhca.py`,
+  recipe `recipes/tx/tdhca.json`): combines two plain-xlsx TDHCA downloads
+  (not zips, unlike every other T3-T5 source) into one deduped list.
+  - HTC Property Inventory ("PropInventory" sheet): filtering
+    `ConType == "New Construction"` and `Year >= 2024` gave exactly 200 real
+    rows live, matching the plan's expected count exactly, e.g. "Huntington
+    Place Senior Living", Garland, 204 units, 2024; "The Arboretum at
+    Woodland Hills", Houston, 366 units, 2024. Checked live that the
+    sheet's "Board Approval" column (which looked like a plausible award-
+    year field at first) is actually a much older/smaller legacy tiebreaker
+    number (max value 1998 across the whole real sheet) -- "Year" (max 2027
+    on real rows) is the field that genuinely tracks the award year, used
+    for the since-2024 filter instead.
+  - 4% (non-competitive) HTC status log: the plan's exact guessed URL
+    (.../htc-4pct/2026260803-4HTC-StatusLog.xlsx) 404'd on its own -- the
+    TDHCA site was restructured since the plan was written (old .htm pages
+    gone). Found the real current listing page live by walking
+    tdhca.texas.gov -> /programs/multifamily-housing-programs ->
+    /multifamily-bond-program -> /non-competitive-4-housing-tax-credits;
+    the plan's guessed filename turned out to still be the latest file
+    listed there, just needed the corrected page path. The real header row
+    isn't row 1 (rows 1-10 are a title block + numbered footnotes) --
+    found live by scanning for the row whose first cell is literally
+    "TDHCA Number" (row 11 in the real 2026-08-03 file) instead of
+    assuming a fixed row number. Filtering `Construction Type == "NC"`
+    returned real rows with a real Applicant Phone, e.g. "Bloom at Lamar
+    Square", Austin, 58 units, (512) 610-4016; "Mayfield Park Apts",
+    Arlington, 240 units, (409) 284-6362. Live-ran both sources together:
+    212 real combined records.
+- Tests: `test_tad_sales.py` (4 new, offline via injected `fetch_bytes`)
+  covers sheet-name-prefix matching, small/old-sale dropping + county-name
+  city fallback, the null-price-omitted-from-why case, and the Excel
+  serial-date conversion; `test_tdhca.py` (3 new, offline) covers the
+  new-construction + since-year filter on the inventory sheet, the
+  scan-for-real-header-row + NC-only filter on the status log, and that a
+  broken status-log fetch doesn't drop the inventory-only records. Used
+  placeholder city/county names ("City A"/"City B"/"County A") in these
+  test fixtures, not real Texas place names, per the repo's
+  no-place-names-in-lead-finder-code check.
+- Checked: `bash tooling/qa/check-lead-finder.sh` passes (70 lead-finder*
+  tests total, up from 63, plus check-panel.sh clean). Full suite from
+  `propertystack/` (`python3 -m pytest -q --ignore=skills/client-map/tests`):
+  316 passed, up from 308, 0 failures.
+- Left open: neither `tad_sales.json` nor `tdhca.json` is wired into
+  `run.py`'s chain yet (that's T6, same as every other T2-T5 recipe); T6
+  (the real Texas run merging TABS + city recipes + appraisal files +
+  TDHCA) is next.
