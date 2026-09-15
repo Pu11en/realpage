@@ -19,9 +19,14 @@ from __future__ import annotations
 
 import io
 import re
+import sys
 import urllib.parse
 import urllib.request
+from pathlib import Path
 from typing import Callable, Iterable
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "lead-finder"))
+from junk_permits import is_junk_permit  # noqa: E402
 
 FetchBytes = Callable[[str], bytes]
 FetchText = Callable[[str], str]
@@ -86,6 +91,8 @@ def fetch_rows(recipe: dict, fetch_text: FetchText = default_fetch_text, fetch_b
                 if not comments:
                     continue
                 if not (new_re.search(comments) and keyword_re.search(comments)):
+                    continue
+                if is_junk_permit(comments):  # pool / carport / garage apartment etc.
                     continue
                 row["_source_url"] = url
                 row["_units"] = _parse_units(comments)

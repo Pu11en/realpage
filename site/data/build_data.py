@@ -559,7 +559,10 @@ def build_area(slug: str) -> dict:
     path = STATE_DATA_DIR / slug / "leads.json"
     with path.open() as f:
         raw = json.load(f)
+    from junk_permits import is_junk_permit  # noqa: E402
     records = [LeadRecord.from_dict(d) for d in raw]
+    # permits already saved before the lead finder learned to skip them
+    records = [r for r in records if not is_junk_permit(r.name)]
     ranked = sorted(score_and_rank(records), key=_area_sort_key)
 
     leads = [_area_lead_dict(r, i, len(ranked)) for i, r in enumerate(ranked, start=1)]
