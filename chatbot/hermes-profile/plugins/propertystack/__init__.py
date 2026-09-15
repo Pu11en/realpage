@@ -80,6 +80,7 @@ SOURCE_NAMES = {
     "dallas_software": "Dallas-area building survey (software check)",
     "dallas_sales": "Dallas-area building survey (county sales records)",
     "dallas_contacts": "Dallas-area building survey (contacts from websites)",
+    "map_summary": "CraneSignal lead map (state and top-city totals)",
 }
 
 
@@ -179,6 +180,11 @@ def ps_schema(args: dict, **_) -> str:
             "Dallas-area building survey (not leads) -- never add these buildings or units to any Texas or "
             "Dallas-Fort Worth lead count. dallas_software is almost entirely 'unknown' (not checked yet); "
             "don't count it toward vendor market share.",
+            "map_summary: one row per state/top-city pair, matching the site's lead map exactly -- "
+            "state_total is that state's total leads, city_count is that city's leads. Use this (not "
+            "state_leads) to answer 'which state/city has the most leads' so the numbers match the map; "
+            "group by state and sum/compare state_total (it repeats per city row, so don't sum it across "
+            "a state's own rows).",
         ],
     })
 

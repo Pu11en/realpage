@@ -25,6 +25,7 @@ QUESTIONS = [
     "How many leads in Dallas–Fort Worth?",
     "Which vendor runs the most buildings?",
     "How many buildings are in the Dallas-area survey, and is that different from your Dallas–Fort Worth leads?",
+    "Which state has the most leads, and what are its top cities?",
 ]
 # Questions whose answer must contain this number (same as the site shows).
 EXPECT_NUMBER = {"How many leads in Dallas–Fort Worth?": "311"}

@@ -41,7 +41,7 @@ Open: http://localhost:8765/map.html
   named tables (e.g. `dallas_buildings`, `dallas_software`, …) with an `area` column; describe in SKILL.md
   that it's a separate Dallas building survey, not extra leads, so Texas/DFW lead counts don't change.
   Test: the tables load and Texas lead count is unchanged. Add a check_answers question. Commit.
-- [ ] **D2 Map numbers in the chat.** Ship a small `map_summary` table built from `site/data/client-map.json`
+- [x] **D2 Map numbers in the chat.** Ship a small `map_summary` table built from `site/data/client-map.json`
   / `map-markers.json` (state, leads, top cities with counts) so "where are most leads?" matches the map.
   Test: totals equal the site's. Commit.
 - [ ] **D3 Software market share.** Ship the site's `site/data/software-share.json` (and the `reach.json`

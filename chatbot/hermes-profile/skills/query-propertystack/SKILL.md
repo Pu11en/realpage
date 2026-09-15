@@ -30,6 +30,7 @@ plus the Street Talk posts (`propertystack/data/street-talk/street_talk.csv`) as
 | `state_leads` | CraneSignal lead ranking | Every tracked state's leads, one flat row each -- filter with `WHERE area='<slug>'`. Texas (`tx`) also holds the 42 Plano/Richardson leads (region Dallas–Fort Worth), so counts match the site: count a state or region here only, never add `leads` on top |
 | `street_talk` | Reddit posts | What Texas people say on Reddit/YouTube: `part` = rivals / buildings / unhappy, `companies` (`LIKE '%Yardi%'`), `sentiment`, `city`, `building_id`, `warm_lead`. Quote briefly and **always link each post's `url`** (the real thread) |
 | `dallas_buildings`, `dallas_websites`, `dallas_software`, `dallas_sales`, `dallas_contacts` | Dallas-area building survey | A separate Dallas-wide building survey, **not leads** -- never add these buildings/units to a Texas or Dallas-Fort Worth lead count. `dallas_software` is almost all `unknown` (not checked yet), so don't use it for vendor market share. |
+| `map_summary` | CraneSignal lead map | One row per state/top-city pair, matching the site's lead map exactly -- use this (not `state_leads`) for "which state/city has the most leads" so the numbers match the map. `state_total` repeats per city row (don't sum it across a state's own rows). |
 
 **Software scope:** only Plano and Richardson have software data (`software`, `master`, and the
 Plano/Richardson rows of `state_leads`). Other areas' `software` is blank. Any vendor count or
