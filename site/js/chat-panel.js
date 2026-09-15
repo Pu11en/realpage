@@ -36,7 +36,7 @@
         <button class="chat-panel-close" id="chat-panel-close" aria-label="Close chat panel">&times;</button>
       </div>
       <div class="chat-panel-body">
-        <div class="chat-panel-loading" id="chat-panel-loading">Loading chat…</div>
+        <div class="chat-panel-loading" id="chat-panel-loading">Waking up the chat…</div>
         <iframe id="chat-panel-frame" class="chat-panel-frame" title="Ask CraneSignal chat"></iframe>
         <div class="chat-panel-error" id="chat-panel-error" style="display:none;">
           <p>Couldn't load the chat.</p>
@@ -68,21 +68,31 @@
 
     // The chat only ever lives in this panel: if it doesn't load, offer a
     // reload of the frame rather than sending people to a separate tab.
-    const loadTimeoutMs = window.PS_CHAT_LOAD_TIMEOUT_MS || 8000;
+    // The chat app is often asleep (Railway free tier) and can take well
+    // over 8s to wake, so wait longer and retry once automatically before
+    // giving up and showing the manual "Try again" button.
+    const loadTimeoutMs = window.PS_CHAT_LOAD_TIMEOUT_MS || 30000;
     let loadTimer = null;
+    let autoRetried = false;
     const startLoadTimer = () => {
       clearTimeout(loadTimer);
       loadTimer = setTimeout(() => {
-        if (!loaded) {
-          loading.style.display = "none";
-          errorEl.style.display = "flex";
+        if (loaded) return;
+        if (!autoRetried) {
+          autoRetried = true;
+          frame.setAttribute("src", CHAT_APP_URL);
+          startLoadTimer();
+          return;
         }
+        loading.style.display = "none";
+        errorEl.style.display = "flex";
       }, loadTimeoutMs);
     };
     startLoadTimer();
 
     panel.querySelector("#chat-panel-retry").addEventListener("click", () => {
       loaded = false;
+      autoRetried = false;
       errorEl.style.display = "none";
       frame.style.display = "none";
       loading.style.display = "flex";
