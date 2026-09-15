@@ -43,9 +43,9 @@ for _extra in (
         sys.path.insert(0, str(p))
 if str(HERE) not in sys.path:
     sys.path.insert(0, str(HERE))
-_REPO_ROOT = HERE.parents[2]
-if str(_REPO_ROOT) not in sys.path:
-    sys.path.insert(0, str(_REPO_ROOT))
+_PROPERTYSTACK_ROOT = HERE.parents[1]
+if str(_PROPERTYSTACK_ROOT) not in sys.path:
+    sys.path.insert(0, str(_PROPERTYSTACK_ROOT))
 
 from runfolder import RunFolder, RunCaps, pick_state  # noqa: E402
 from record import LeadRecord  # noqa: E402
