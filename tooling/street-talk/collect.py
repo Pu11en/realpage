@@ -43,6 +43,7 @@ COMPANIES = {
 TEXAS_WORDS = ["Texas", "Dallas", "Houston", "Austin", "San Antonio", "Fort Worth", "Plano"]
 TEXAS_RE = re.compile(r"\b(texas|tx|dallas|houston|austin|san antonio|fort worth|plano|dfw)\b", re.I)
 TEXAS_SUBS = {"dallas", "houston", "austin", "sanantonio", "texas"}
+JOB_RE = re.compile(r"\[\s*(hiring|job wanted|for hire)\s*\]|who'?s hiring|\bis \[?hiring\]?\b", re.I)
 RIVAL_SUBS = ["PropertyManagement", "multifamily", "Dallas", "houston", "Austin", "sanantonio", "texas"]
 
 
@@ -110,6 +111,11 @@ def companies_in(text: str) -> list[str]:
     return [name for name, pattern in COMPANIES.items() if pattern.search(text)]
 
 
+def is_job_ad(post: dict) -> bool:
+    """Job ads mention the companies but are not street talk."""
+    return "job" in post["subreddit"].lower() or bool(JOB_RE.search(post["title"]))
+
+
 def rivals_searches() -> list[tuple[str, str | None]]:
     """(query, subreddit) pairs for part 1, most useful first."""
     texas = "(" + " OR ".join(f'"{w}"' if " " in w else w for w in TEXAS_WORDS) + ")"
@@ -143,6 +149,9 @@ def collect_rivals(reddit: Reddit, now: dt.datetime, comment_posts: int = 99) ->
                     continue
                 if not post["createdUtc"] or post["createdUtc"] < cutoff:
                     drop("older than 12 months")
+                    continue
+                if is_job_ad(post):
+                    drop("job ad")
                     continue
                 text = f"{post['title']} {post['body']}"
                 names = companies_in(text)

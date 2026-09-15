@@ -4,3 +4,9 @@
 - New `tooling/street-talk/{tests,fixtures}` and `tooling/qa/check-street-talk.sh` (offline pytest, exit 5 = pass). 4 cookie tests pass.
 - Live proof: `"realpage texas" --limit 3` with the cookie-file cookie returned 3 posts (1 Reddit request).
 - Note: DSH credentials also hold a Reddit cookie, so it wins over the file unless `DSH_REDDIT_COOKIE` is set; collectors may want to pass the file cookie explicitly.
+
+## T2 — Part 1 collector: RealPage vs rivals (2026-09-15)
+- New `tooling/street-talk/collect.py --part rivals`: 4 company+Texas-word searches plus 7 subreddit searches, last 12 months, de-duped by link, keeps posts naming a company and Texas (or in a Texas subreddit), drops job ads, top 2 comments for the most-discussed posts. Shared `Reddit` fetcher: GET only, 3 s gap, budget (hard max 80), stops on 401/403/429 or login page and keeps what it has. Prefers the cookie file over DSH.
+- Live run: 20 Reddit requests (budget 30), not blocked, 18 kept; 8 were job ads, so a job-ad filter was added and applied to the saved file offline (no extra requests) -> **10 posts** (RealPage 7, AppFolio 2, Yardi 1). Raw file + report in `propertystack/data/street-talk/raw/2026-09-15/`.
+- Check: `bash tooling/qa/check-street-talk.sh` -> 9 passed (5 new fixture tests: filters/dedupe, budget cap, block stops, 3 s wait, report/save).
+- Open: yield is thin and partly news reposts (lawsuit stories that mention "Texas-based RealPage"); T5 labelling can down-rank those. Entrata got 0 posts.

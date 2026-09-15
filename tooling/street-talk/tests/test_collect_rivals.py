@@ -37,6 +37,7 @@ def test_keeps_texas_company_posts_and_dedupes():
     assert result["dropped"]["no Texas mention"] >= 1
     assert result["dropped"]["names none of the four companies"] >= 1
     assert result["dropped"]["duplicate link"] >= 1
+    assert result["dropped"]["job ad"] >= 1
     first = next(p for p in result["posts"] if p["title"].startswith("RealPage"))
     assert first["companies"] == ["RealPage"]
     assert first["comments"] == ["Same at my place in Frisco.", "Blame the algorithm."]

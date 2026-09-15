@@ -55,7 +55,7 @@ Open: http://localhost:8765/street-talk.html
   pytest; treat pytest's "no tests found" exit code 5 as a pass; no network). The existing tool already works with this cookie when it is passed in `DSH_REDDIT_COOKIE` (checked
   2026-09-14). One live search `"realpage texas" --limit 3` to prove the cookie
   works. Commit.
-- [ ] **T2 Part 1 collector: RealPage vs rivals in Texas.** `tooling/street-talk/collect.py --part rivals`
+- [x] **T2 Part 1 collector: RealPage vs rivals in Texas.** `tooling/street-talk/collect.py --part rivals`
   searches Reddit for RealPage, Yardi, Entrata and AppFolio together with Texas words (Texas, Dallas,
   Houston, Austin, San Antonio, Fort Worth, Plano) and in r/PropertyManagement, r/multifamily, r/Dallas,
   r/houston, r/Austin, r/sanantonio, r/texas. Last 12 months. Saves raw results to
