@@ -134,3 +134,11 @@
 - Test: tooling/qa/fixes_tests/test_e1_signin.py runs the real Caddyfile with the fake chat upstream (unpacks the Caddy binary from caddy:2-alpine into `.caddy-bin/` on first run): signed-out `/index.html` and `/data/leads.json` redirect, `/privacy.html` and `/css/*` do not, a valid cookie gets the 200 page, and the panel's iframe `/` stays public.
 - ⚠️ For D1 report: this is only live after the push; Drew must test the real sign-in on the live site. `/css/*` stays public (the public privacy page needs `css/styles.css`); it holds no data. Verified with Caddy v2.11.4.
 - Local `tooling/dev.sh` is unchanged (plain `python3 -m http.server`, no Caddy), so the Check and local testing keep working.
+
+## D1 Final check + report — done
+- `bash tooling/qa/check-fixes.sh`: 57 offline fix tests pass, design check 0 problems (7 pages).
+- `bash tooling/qa/check-panel.sh`: exit 0 (quick-check + panel test + design).
+- `bash tooling/qa/check-lead-finder.sh`: exit 0 (70 + 18 + 17 + 7 tests + design).
+- `python3 site/data/build_data.py` re-run: same files (no drift).
+- Wrote `docs/audit-fixes-REPORT.md`: what changed per fix, the new counts (TX 597 / AZ 279 / NY 2, total 878; DFW 311), and the seven things only Drew can do (live sign-in test, `WEBHOOK_URL` sign-up alerts, contact email, cal.com slug rename, running `check-answers.sh`, deploying the landing repo, and the Open WebUI name licence).
+- Final counts: TX 597 (DFW 311, Houston 70, Austin 84, San Antonio 41, rest 91), AZ 279, NY 2; site total 878.

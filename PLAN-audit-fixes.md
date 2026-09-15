@@ -110,7 +110,7 @@ Open: http://localhost:8765/index.html
   a request with a valid cookie gets the page. Don't deploy; note in the report that Drew must test the
   live sign-in after the push.
 
-- [ ] **D1 Final check + report.** Run the Check, `bash tooling/qa/check-panel.sh` and
+- [x] **D1 Final check + report.** Run the Check, `bash tooling/qa/check-panel.sh` and
   `bash tooling/qa/check-lead-finder.sh`. Write `docs/audit-fixes-REPORT.md` in plain words: what
   changed per fix, the new lead counts per state, and the list of things only Drew can do:
   the live chat CORS setting, renaming the cal.com link `propertystack-intro` (then update
