@@ -33,3 +33,8 @@
 - Screenshot: tooling/qa/shots/find-contact.png (+ -before.png). That folder is gitignored, so the images are on disk only, not committed.
 - Check: 48 passed. Stopped the site server I started (8766); left the shared ps-chat containers up because another session was already using them.
 - Nothing left open: the plan's goal is met end to end. Not pushed.
+
+## Next time (from how this build went)
+- Test commands should skip shell tricks — this plan's probe for a file existence broke the run. Use simple, validated commands instead.
+- Mark task checkboxes correctly; an incomplete mark got F2 stuck and didn't tick the next step.
+- The rest ran smoothly — the review step's verification was thorough, and implementation plus validation both went cleanly.
