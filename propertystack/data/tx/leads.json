@@ -25500,7 +25500,7 @@
   "address": "424 THORNTON RD 34",
   "lat": null,
   "lon": null,
-  "units": null,
+  "units": 34,
   "stage": "sold",
   "permit_date": "",
   "opening_date": "",
@@ -25508,18 +25508,23 @@
   "buyer": "THORNTON 414 LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://cccres.com/apartments/detail/thornton-414-llc-houston",
   "software": "unknown",
   "links": {
-   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip",
+   "website": "https://cccres.com/apartments/detail/thornton-414-llc-houston"
   },
   "sources": [
    {
     "fact": "sale_date",
     "url": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   },
+   {
+    "fact": "units",
+    "url": "https://cccres.com/apartments/detail/thornton-414-llc-houston"
    }
   ],
-  "why": "Sold 2025-11-26 \u00b7 to THORNTON 414 LLC \u00b7 new owner may re-pick software"
+  "why": "Sold 2025-11-26 \u00b7 to THORNTON 414 LLC \u00b7 34 units \u00b7 new owner may re-pick software"
  },
  {
   "area": "tx",
@@ -25536,10 +25541,11 @@
   "buyer": "KRE LC PROMENADE LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.promenadelascolinas.com/",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.promenadelascolinas.com/"
   },
   "sources": [
    {
@@ -25564,10 +25570,11 @@
   "buyer": "KRE LC EASTSHORE LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.eastshorelakecarolyn.com/",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.eastshorelakecarolyn.com/"
   },
   "sources": [
    {
@@ -25595,7 +25602,8 @@
   "website": "",
   "software": "unknown",
   "links": {
-   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip",
+   "news": "https://ploteasy.com/property-details/252737144/18300-marvelous-pl-cypress-tx-77433"
   },
   "sources": [
    {
@@ -25640,26 +25648,35 @@
   "address": "146 CENTER CT 94",
   "lat": null,
   "lon": null,
-  "units": null,
+  "units": 18,
   "stage": "sold",
   "permit_date": "",
-  "opening_date": "",
+  "opening_date": "0026",
   "sale_date": "2025-11-20",
   "buyer": "PAL PARKTOWN LP",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.xome.com/realestate/146-center-ct-94-deer-park-tx-77536-209951718",
   "software": "unknown",
   "links": {
-   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip",
+   "website": "https://www.xome.com/realestate/146-center-ct-94-deer-park-tx-77536-209951718"
   },
   "sources": [
    {
     "fact": "sale_date",
     "url": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   },
+   {
+    "fact": "units",
+    "url": "https://www.redfin.com/TX/Deer-Park/146-Center-Ct-77536/unit-94/home/30242671"
+   },
+   {
+    "fact": "opening_date",
+    "url": "https://www.redfin.com/TX/Deer-Park/146-Center-Ct-77536/unit-94/home/30242671"
    }
   ],
-  "why": "Sold 2025-11-20 \u00b7 to PAL PARKTOWN LP \u00b7 new owner may re-pick software"
+  "why": "Sold 2025-11-20 \u00b7 to PAL PARKTOWN LP \u00b7 18 units \u00b7 new owner may re-pick software"
  },
  {
   "area": "tx",
@@ -25676,10 +25693,11 @@
   "buyer": "1002 KATY GAP BORROWER LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://ploteasy.com/property-details/67195564/1002-katy-gap-rd-389-katy-tx-77494",
   "software": "unknown",
   "links": {
-   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip",
+   "website": "https://ploteasy.com/property-details/67195564/1002-katy-gap-rd-389-katy-tx-77494"
   },
   "sources": [
    {
@@ -25816,10 +25834,11 @@
   "buyer": "9999 KEMPWOOD DRIVE LP",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://ploteasy.com/property-details/403847/10010-kempwood-dr-houston-tx-77080",
   "software": "unknown",
   "links": {
-   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip",
+   "website": "https://ploteasy.com/property-details/403847/10010-kempwood-dr-houston-tx-77080"
   },
   "sources": [
    {
@@ -25839,7 +25858,7 @@
   "units": null,
   "stage": "sold",
   "permit_date": "",
-  "opening_date": "",
+  "opening_date": "1716",
   "sale_date": "2025-11-14",
   "buyer": "1716 CROWNOVER LLC",
   "developer": "",
@@ -25853,6 +25872,10 @@
    {
     "fact": "sale_date",
     "url": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   },
+   {
+    "fact": "opening_date",
+    "url": "https://github.com/Apoorve73/Real-Estate-Companies-Database/blob/master/Houston1.csv"
    }
   ],
   "why": "Sold 2025-11-14 \u00b7 to 1716 CROWNOVER LLC \u00b7 new owner may re-pick software"
@@ -25872,10 +25895,11 @@
   "buyer": "LAKEDALE OWNER LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://cccres.com/apartments/detail/lakedale-apts-dallas",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://cccres.com/apartments/detail/lakedale-apts-dallas"
   },
   "sources": [
    {
@@ -25900,10 +25924,11 @@
   "buyer": "UA RIVERAINE LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.homefacts.com/address/Texas/Harris-County/Houston/77036/9401-Tanager-St-224/166963295.html",
   "software": "unknown",
   "links": {
-   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip",
+   "website": "https://www.homefacts.com/address/Texas/Harris-County/Houston/77036/9401-Tanager-St-224/166963295.html"
   },
   "sources": [
    {
@@ -26012,10 +26037,11 @@
   "buyer": "RPMI 641 W CROSSTIMBERS ST OWNER LLC C/O RYAN LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.ebby.com/realestate/details/103832358/641-w-crosstimbers-street-houston-tx-77018",
   "software": "unknown",
   "links": {
-   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip",
+   "website": "https://www.ebby.com/realestate/details/103832358/641-w-crosstimbers-street-houston-tx-77018"
   },
   "sources": [
    {
@@ -26068,10 +26094,11 @@
   "buyer": "CWS ST JOSEPH LLC ET AL",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://cxre.co/houston/multifamily/902-cleveland-st-140",
   "software": "unknown",
   "links": {
-   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip",
+   "website": "https://cxre.co/houston/multifamily/902-cleveland-st-140"
   },
   "sources": [
    {
@@ -26096,10 +26123,11 @@
   "buyer": "BIRCHSTONE CEDAR RIDGE LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.birchstonecedarridge.com/",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.birchstonecedarridge.com/"
   },
   "sources": [
    {
@@ -26116,7 +26144,7 @@
   "address": "123 WINKLER DR 135",
   "lat": null,
   "lon": null,
-  "units": null,
+  "units": 135,
   "stage": "sold",
   "permit_date": "",
   "opening_date": "",
@@ -26133,9 +26161,13 @@
    {
     "fact": "sale_date",
     "url": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   },
+   {
+    "fact": "units",
+    "url": "https://cccres.com/apartments/detail/envue-square-houston"
    }
   ],
-  "why": "Sold 2025-11-10 \u00b7 to 123 WINKLER REALTY LLC \u00b7 new owner may re-pick software"
+  "why": "Sold 2025-11-10 \u00b7 to 123 WINKLER REALTY LLC \u00b7 135 units \u00b7 new owner may re-pick software"
  },
  {
   "area": "tx",
@@ -26144,7 +26176,7 @@
   "address": "9135 AIRLINE DR 33",
   "lat": null,
   "lon": null,
-  "units": null,
+  "units": 33,
   "stage": "sold",
   "permit_date": "",
   "opening_date": "",
@@ -26152,18 +26184,23 @@
   "buyer": "SULYUKMANOV ALBERT",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://cccres.com/apartments/detail/sulyukmanov-albert-houston",
   "software": "unknown",
   "links": {
-   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip",
+   "website": "https://cccres.com/apartments/detail/sulyukmanov-albert-houston"
   },
   "sources": [
    {
     "fact": "sale_date",
     "url": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   },
+   {
+    "fact": "units",
+    "url": "https://cccres.com/apartments/detail/sulyukmanov-albert-houston"
    }
   ],
-  "why": "Sold 2025-11-07 \u00b7 to SULYUKMANOV ALBERT \u00b7 new owner may re-pick software"
+  "why": "Sold 2025-11-07 \u00b7 to SULYUKMANOV ALBERT \u00b7 33 units \u00b7 new owner may re-pick software"
  },
  {
   "area": "tx",
@@ -26172,7 +26209,7 @@
   "address": "9447 CONCOURSE DR 268",
   "lat": null,
   "lon": null,
-  "units": null,
+  "units": 20,
   "stage": "sold",
   "permit_date": "",
   "opening_date": "",
@@ -26189,9 +26226,13 @@
    {
     "fact": "sale_date",
     "url": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   },
+   {
+    "fact": "units",
+    "url": "https://www.poconnor.com/blog/harris-county-appraisal-district-over-values-many-apartments-by-over-50-/"
    }
   ],
-  "why": "Sold 2025-11-07 \u00b7 to OCONEE REAL ESTATE HOLDINGS XVIII \u00b7 new owner may re-pick software"
+  "why": "Sold 2025-11-07 \u00b7 to OCONEE REAL ESTATE HOLDINGS XVIII \u00b7 20 units \u00b7 new owner may re-pick software"
  },
  {
   "area": "tx",
