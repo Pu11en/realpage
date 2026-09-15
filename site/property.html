@@ -227,7 +227,7 @@
       document.title = `CraneSignal -- ${l.property || l.address}`;
       content.innerHTML = leadPage(l, hit.area);
       content.querySelector("[data-deep-dive]").addEventListener("click", () => {
-        window.PSChatPanel.deepDive(window.PSChatPanel.deepDivePrompt({
+        window.PSChatPanel.deepDive(id, window.PSChatPanel.deepDivePrompt({
           name: l.property || l.address, city: l.city, units: l.units, software: l.software,
           stage: l.stage, signalType: l.signalType,
         }));
@@ -263,7 +263,7 @@
         </div>
         ${sourcesCard(p, isUpcoming)}`;
       content.querySelector("[data-deep-dive]").addEventListener("click", () => {
-        window.PSChatPanel.deepDive(window.PSChatPanel.deepDivePrompt({
+        window.PSChatPanel.deepDive(id, window.PSChatPanel.deepDivePrompt({
           name: p.community, city: p.city, units: p.units, software: p.software,
           upcoming: isUpcoming, stage: isUpcoming ? p.stage : null,
         }));

@@ -63,6 +63,10 @@
           <p class="chat-panel-signin-note">A small window opens. Use Google or your email. It closes by itself and the chat appears here.</p>
           <button class="chat-panel-signin" id="chat-panel-signin">Sign in free</button>
         </div>
+        <div class="chat-panel-deepdive-notice" id="chat-panel-deepdive-notice" style="display:none;">
+          <p id="chat-panel-deepdive-text"></p>
+          <button class="chat-panel-deepdive-redo" id="chat-panel-deepdive-redo" aria-label="Redo this deep dive">&#8635; Redo it</button>
+        </div>
       </div>
     `;
     document.body.appendChild(panel);
@@ -117,6 +121,16 @@
     });
 
     panel.querySelector("#chat-panel-close").addEventListener("click", closePanel);
+
+    panel.querySelector("#chat-panel-deepdive-redo").addEventListener("click", () => {
+      const id = panel.dataset.deepDiveId;
+      const text = panel.dataset.deepDiveText;
+      if (!id || !text) return;
+      hideDeepDiveNotice(panel);
+      frame.style.display = "block";
+      sendDeepDive(panel, text);
+      rememberDeepDive(id, text);
+    });
 
     // Google refuses to load inside a frame, so the chat app's own Google
     // button (inside the iframe) can't be used directly. Open the chat app
@@ -218,6 +232,8 @@
     const alreadyLoaded = !!panel.querySelector("#chat-panel-frame").getAttribute("src");
     ensureFrameLoaded(panel);
     if (alreadyLoaded) checkAuth(panel);
+    hideDeepDiveNotice(panel);
+    panel.querySelector("#chat-panel-frame").style.display = alreadyLoaded ? "block" : "";
     panel.classList.add("open");
     document.body.classList.add("chat-panel-open");
     setOpen(true);
@@ -262,23 +278,80 @@
     if (isOpen()) openPanel();
   }
 
-  // "Deep dive in chat": open the panel with a prompt typed in, not sent.
+  const DEEPDIVE_PREFIX = "propertystack.deepDive.";
+
+  function deepDiveKey(id) {
+    return DEEPDIVE_PREFIX + id;
+  }
+
+  // T6: a repeat "Deep dive in chat" click on the same building used to just
+  // reopen the same unsent question, discarding the fact it had already been
+  // asked and answered. Remember the last deep dive sent per building (id,
+  // prompt text and when) so a second click on the same building with the
+  // same prompt shows an instant "Saved deep dive from <date>" notice with a
+  // redo button, instead of silently re-typing the question.
+  function savedDeepDive(id) {
+    try {
+      const raw = localStorage.getItem(deepDiveKey(id));
+      return raw ? JSON.parse(raw) : null;
+    } catch (e) {
+      return null;
+    }
+  }
+
+  function rememberDeepDive(id, text) {
+    try {
+      localStorage.setItem(deepDiveKey(id), JSON.stringify({ text, ts: Date.now() }));
+    } catch (e) {
+      // storage unavailable (private mode, quota) -- just skip remembering.
+    }
+  }
+
+  function fmtSavedDate(ts) {
+    return new Date(ts).toLocaleDateString(undefined, { year: "numeric", month: "short", day: "numeric" });
+  }
+
+  function hideDeepDiveNotice(panel) {
+    const notice = panel.querySelector("#chat-panel-deepdive-notice");
+    if (notice) notice.style.display = "none";
+  }
+
   // Open WebUI 0.11 takes postMessage {type:"input:prompt"} only from its own
   // origin (true live, where site and chat share an address), so use that
   // when possible; otherwise (local :8765 -> :3000) load /?q=...&submit=false,
   // which fills the input without sending. See chatbot/README.md.
-  function deepDive(text) {
-    const panel = buildPanel();
+  function sendDeepDive(panel, text) {
     const frame = panel.querySelector("#chat-panel-frame");
     const base = CHAT_APP_URL.replace(/\/$/, "");
     const sameOrigin = new URL(base, location.href).origin === location.origin;
     const loaded = !!frame.getAttribute("src");
-    openPanel();
     if (sameOrigin && loaded && frame.contentWindow) {
       frame.contentWindow.postMessage({ type: "input:prompt", text }, location.origin);
     } else {
       frame.setAttribute("src", `${base}/?q=${encodeURIComponent(text)}&submit=false`);
     }
+  }
+
+  // "Deep dive in chat": open the panel with a prompt typed in, not sent --
+  // unless this exact building/question was already deep-dived, in which
+  // case show the saved-copy notice instead of retyping the question.
+  function deepDive(id, text) {
+    const panel = buildPanel();
+    openPanel();
+    const saved = savedDeepDive(id);
+    panel.dataset.deepDiveId = id;
+    panel.dataset.deepDiveText = text;
+    if (saved && saved.text === text) {
+      panel.querySelector("#chat-panel-frame").style.display = "none";
+      panel.querySelector("#chat-panel-deepdive-text").textContent =
+        `Saved deep dive from ${fmtSavedDate(saved.ts)}. Press ↻ to redo it.`;
+      panel.querySelector("#chat-panel-deepdive-notice").style.display = "flex";
+      return;
+    }
+    hideDeepDiveNotice(panel);
+    panel.querySelector("#chat-panel-frame").style.display = "block";
+    sendDeepDive(panel, text);
+    rememberDeepDive(id, text);
   }
 
   // Plain words for a lead's stage. Covers the state files (permitted, planned,

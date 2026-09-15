@@ -171,6 +171,44 @@
 .chat-panel-signin-card p:first-child { font-family: var(--font-head); font-weight: 700; font-size: 16px; color: var(--ink); }
 .chat-panel-signin-card .chat-panel-signin-note { font-size: 13px; color: var(--muted); margin-top: -4px; }
 
+/* T6: shown instead of the chat frame when a "Deep dive" is clicked a second
+   time for the same building with the same question -- the first click's
+   answer is still there in the chat, so this offers a redo rather than
+   silently retyping the same question. */
+.chat-panel-deepdive-notice {
+  position: absolute;
+  inset: 0;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: var(--paper-2);
+  z-index: 1;
+  padding: 24px;
+  text-align: center;
+}
+
+.chat-panel-deepdive-notice p {
+  margin: 0;
+  color: var(--ink-2);
+  font-size: 14px;
+  max-width: 34ch;
+}
+
+.chat-panel-deepdive-redo {
+  background: var(--amber);
+  color: var(--ink);
+  border: none;
+  border-radius: 4px;
+  padding: 10px 18px;
+  font-family: var(--font-head);
+  font-size: 14px;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 3px 0 #b88900;
+}
+
 /* Early Leads with the chat docked: the page is too narrow for 8 columns, so
    each lead becomes a card (same as phones) and Software and Why stay in view
    instead of scrolling off behind the panel. */

@@ -55,3 +55,20 @@ typical link. Added `tooling/qa/fixes_tests/test_t5_logo_links_home.py` (2 tests
 wordmark markup is an anchor to index.html, and every app page still calls renderShell()).
 Checked with `bash tooling/qa/check-fixes.sh` (74 tests pass, design check 0 problems).
 Commit: see git log.
+
+## T6 Saved deep dive comes back — done
+`chat-panel.js`'s `deepDive()` used to always reopen the panel and re-fill the same unsent
+question, so a second click on the same building looked like nothing was remembered.
+It now takes the building's id as well as the prompt text, remembers the last deep dive
+sent per building in `localStorage` (`propertystack.deepDive.<id>` -> `{text, ts}`), and
+on a repeat click with the same id and the same question shows a
+"Saved deep dive from <date>. Press ↻ to redo it." notice in place of the chat frame,
+with a Redo button that actually resends the question and refreshes the saved timestamp.
+A genuinely new question (different prompt text, e.g. the building's stage changed) still
+goes straight through as before. Updated the three deep-dive call sites
+(`site/index.html`, `site/property.html` x2) to pass the lead/property id. Added
+`tooling/qa/fixes_tests/test_t6_saved_deep_dive.py` (4 tests: the per-building memory
+functions exist, the saved-notice path in `deepDive()` doesn't fall through to
+re-sending the question, the redo button is wired, and all three call sites pass an id).
+Checked with `bash tooling/qa/check-fixes.sh` (78 tests pass, design check 0 problems).
+Commit: see git log.

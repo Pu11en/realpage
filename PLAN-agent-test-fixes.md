@@ -48,7 +48,7 @@ Open: http://localhost:8765/index.html
   index.html on every page. Test. Commit.
 
 ### Confusing
-- [ ] **T6 Saved deep dive comes back.** Clicking Deep dive a second time on the same building reopened
+- [x] **T6 Saved deep dive comes back.** Clicking Deep dive a second time on the same building reopened
   the unsent question instead of the instant saved copy ("Saved deep dive from <date>. Press ↻ to redo
   it."). Find why the live flow misses the saved copy and fix it. Test. Commit.
 - [ ] **T7 No broken "Sources: )" line.** The answer to "Which buildings sold recently?" ended with
