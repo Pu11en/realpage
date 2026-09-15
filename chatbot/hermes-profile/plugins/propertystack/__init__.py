@@ -81,6 +81,7 @@ SOURCE_NAMES = {
     "dallas_sales": "Dallas-area building survey (county sales records)",
     "dallas_contacts": "Dallas-area building survey (contacts from websites)",
     "map_summary": "CraneSignal lead map (state and top-city totals)",
+    "software_share": "Property software market share (Plano/Richardson only)",
 }
 
 
@@ -185,6 +186,10 @@ def ps_schema(args: dict, **_) -> str:
             "state_leads) to answer 'which state/city has the most leads' so the numbers match the map; "
             "group by state and sum/compare state_total (it repeats per city row, so don't sum it across "
             "a state's own rows).",
+            "software_share: the site's vendor market-share chart, Plano and Richardson only (same scope "
+            "as the software/master tables) -- pct_of_identified_properties is already computed, so use it "
+            "directly rather than recomputing from properties/units; never present it as covering any other "
+            "area.",
         ],
     })
 

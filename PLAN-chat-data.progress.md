@@ -62,3 +62,36 @@ pass (114 fixes_tests + design check, 35 chatbot tests).
 
 Anything left open: none for this task. Like D1, the chat container wasn't rebuilt/tried live
 (D7 does that).
+
+## D3 Software market share — done
+
+What I did:
+- Added `tooling/chat-data/build_software_share.py`, which flattens `site/data/software-share.json`'s
+  `share` list into one row per vendor (`vendor, properties, units, pct_of_identified_properties`).
+- Ran it once and committed its output at `propertystack/data/software-share/kb/software-share.csv`
+  (10 vendor rows, matching the site's chart).
+- Updated `chatbot/Dockerfile`'s `kb` stage to also copy `propertystack/data/software-share/kb/*.csv`
+  into `/kb/data`, landing as table `software_share`.
+- Updated `chatbot/hermes-profile/plugins/propertystack/__init__.py`: added `software_share` to
+  `SOURCE_NAMES` and a `ps_schema` note saying it's the site's vendor market-share chart, Plano and
+  Richardson only (same scope as `software`/`master`), and that `pct_of_identified_properties` is
+  already computed so it shouldn't be recomputed.
+- Updated `chatbot/hermes-profile/skills/query-propertystack/SKILL.md`'s table with the same row.
+- Added a check_answers question: "What percent of identified Plano/Richardson properties run
+  RealPage?" (not run — costs money, Drew runs it).
+- Added `tooling/qa/fixes_tests/test_d3_software_share.py`: rebuilds the kb the Dockerfile way into
+  a temp dir, runs the plugin's real `_build_db()`, asserts the `software_share` table loads, and
+  asserts every vendor's properties/units/pct in the built table exactly match
+  `software-share.json` (fails without the fix -- table wouldn't exist / numbers could drift).
+- Left `site/data/reach.json` out on purpose: it mixes Plano/Richardson building proof links with
+  out-of-area "scout" rows (no vendor field, just scored URLs) and isn't a vendor-share source, so
+  shipping it didn't fit this task's "software market share" scope. Can revisit separately if Drew
+  wants those proof links queryable.
+
+Commit: see git log (message "D3: ship the site's software market share into the chat as software_share").
+
+How I checked it: `bash tooling/qa/check-fixes.sh && python3 -m pytest -q chatbot/tests` — both
+pass (116 fixes_tests + design check, 35 chatbot tests).
+
+Anything left open: none for this task. Like D1/D2, the chat container wasn't rebuilt/tried live
+(D7 does that).

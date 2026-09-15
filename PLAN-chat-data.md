@@ -44,7 +44,7 @@ Open: http://localhost:8765/map.html
 - [x] **D2 Map numbers in the chat.** Ship a small `map_summary` table built from `site/data/client-map.json`
   / `map-markers.json` (state, leads, top cities with counts) so "where are most leads?" matches the map.
   Test: totals equal the site's. Commit.
-- [ ] **D3 Software market share.** Ship the site's `site/data/software-share.json` (and the `reach.json`
+- [x] **D3 Software market share.** Ship the site's `site/data/software-share.json` (and the `reach.json`
   proof list if it's lead-relevant) as a table, labeled "Plano and Richardson only" in SKILL.md. Test.
   Commit.
 - [ ] **D4 Building-page extras.** From `site/data/properties.json`, ship the fields the chat lacks (owner,
