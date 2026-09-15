@@ -1,7 +1,90 @@
-/* PropertyStack compact mode: Open WebUI framed inside the 480px slide-out
+/* CraneSignal compact mode: Open WebUI framed inside the 480px slide-out
    panel (site/js/chat-panel.js). Hide the model picker / settings clutter
    that don't apply when there's only one model and no per-user settings to
-   change from inside the panel. No other visual changes. */
+   change from inside the panel. */
+
+/* Same look as the dashboard and landing page (PLAN-app-redesign T8):
+   Inter body, Plus Jakarta Sans headings (self-hosted next to this file),
+   white paper, navy ink, blueprint blue, amber for the one primary action.
+   Light is the default theme (set once by loader.js); dark mode keeps
+   Open WebUI's own colours with our blue in place of the old green. */
+@font-face { font-family: "Inter"; font-style: normal; font-weight: 100 900; font-display: swap; src: url(/static/fonts/inter-latin.woff2) format("woff2"); }
+@font-face { font-family: "Plus Jakarta Sans"; font-style: normal; font-weight: 200 800; font-display: swap; src: url(/static/fonts/plus-jakarta-sans-latin.woff2) format("woff2"); }
+
+:root {
+	--cs-blue: #1a3d8f; --cs-blue-2: #15326f; --cs-blue-soft: #e8edf8;
+	--cs-amber: #f5b700; --cs-amber-2: #ffcb2e;
+	--cs-ink: #0e1320; --cs-muted: #5d6577;
+	--cs-paper: #ffffff; --cs-paper-2: #f3f4f6; --cs-rule: #d9dce3;
+}
+
+html, body, button, input, textarea, select {
+	font-family: "Inter", system-ui, -apple-system, sans-serif !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: "Plus Jakarta Sans", "Inter", system-ui, sans-serif !important;
+	letter-spacing: -0.01em;
+}
+
+html:not(.dark) body {
+	background: var(--cs-paper);
+	color: var(--cs-ink);
+}
+
+html:not(.dark) #messages-container a,
+html:not(.dark) .markdown-prose a {
+	color: var(--cs-blue) !important;
+	text-decoration-color: rgba(26, 61, 143, 0.35);
+}
+
+html:not(.dark) #messages-container .markdown-prose table,
+html:not(.dark) #messages-container .markdown-prose th,
+html:not(.dark) #messages-container .markdown-prose td {
+	border-color: var(--cs-rule) !important;
+}
+
+html:not(.dark) #messages-container .markdown-prose th {
+	background: var(--cs-paper-2);
+}
+
+/* The message box: white card with a thin grey rule, blue ring on focus. */
+html:not(.dark) form:has(textarea) .rounded-3xl,
+html:not(.dark) #message-input-container {
+	background: var(--cs-paper) !important;
+	border: 1px solid var(--cs-rule) !important;
+}
+
+html:not(.dark) form:has(textarea):focus-within .rounded-3xl,
+html:not(.dark) #message-input-container:focus-within {
+	border-color: var(--cs-blue) !important;
+	box-shadow: 0 0 0 3px var(--cs-blue-soft);
+}
+
+/* Send button = the one amber primary action, navy arrow. */
+#send-message-button:not(:disabled) {
+	background: var(--cs-amber) !important;
+	color: var(--cs-ink) !important;
+}
+
+#send-message-button:not(:disabled):hover {
+	background: var(--cs-amber-2) !important;
+}
+
+/* Sign-in page: blue primary button, navy heading. */
+html:not(.dark) form button[type='submit']:not(#send-message-button) {
+	background: var(--cs-blue) !important;
+	color: #fff !important;
+}
+
+html:not(.dark) form button[type='submit']:not(#send-message-button):hover {
+	background: var(--cs-blue-2) !important;
+}
+
+:focus-visible {
+	outline: 2px solid var(--cs-blue);
+	outline-offset: 2px;
+}
 
 /* Past chats (PLAN-chat-finish T5). Open WebUI already saves every chat per
    user; in the narrow panel its list is only rendered while open. Label the
@@ -18,7 +101,7 @@
 	font-size: 15px;
 	font-weight: 600;
 	line-height: 1.2;
-	color: #15803d !important;
+	color: #1a3d8f !important;
 	background: rgba(255, 255, 255, 0.9);
 }
 
@@ -29,7 +112,7 @@
 
 .dark #sidebar-toggle-button,
 .dark #sidebar button[aria-label='Close Sidebar'] {
-	color: #4ade80 !important;
+	color: #c9d6f2 !important;
 	background: rgba(17, 17, 17, 0.9);
 }
 
@@ -51,7 +134,7 @@
 	border-radius: 9999px;
 	font-size: 15px;
 	font-weight: 600;
-	color: #15803d;
+	color: #1a3d8f;
 	cursor: pointer !important;
 }
 
@@ -87,8 +170,7 @@
 }
 
 /* Readable answers (PLAN-chat-readable R3): bigger, airier message text,
-   spaced paragraphs/list items, padded table cells, heavier bold. Colors
-   untouched. */
+   spaced paragraphs/list items, padded table cells, heavier bold. */
 #messages-container .markdown-prose,
 #messages-container .prose,
 #messages-container #response-content-container {

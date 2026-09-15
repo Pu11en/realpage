@@ -74,6 +74,8 @@ services:
       # picker/settings clutter (W2). /app/build/static/custom.css is already
       # linked from Open WebUI's index.html and ships empty by default.
       - ./branding/custom.css:/app/build/static/custom.css:ro
+      # Inter + Plus Jakarta Sans for custom.css (same files as site/fonts/).
+      - ./branding/fonts:/app/build/static/fonts:ro
 volumes:
   hermes-home:
   open-webui:
