@@ -62,7 +62,7 @@ Open: http://localhost:8765 → Early Leads → Tx
   field or, failing that, the street address (Phoenix returned many blank names); make
   sure projects with a known unit count under 20 are never kept (8 slipped in, mostly Mesa). Fixture
   tests from those real rows. Commit.
-- [ ] **S4 Caps that don't cut cities off.** Per-state caps become 400 projects / 900 searches, and a
+- [x] **S4 Caps that don't cut cities off.** Per-state caps become 400 projects / 900 searches, and a
   cap is only checked between cities (a city is never cut in half). Tests. Commit.
 - [ ] **S5 Arizona re-run.** Start from the free permit pull (`permit_only.py --state AZ`), add the Maricopa
   County sales file (sold buildings -- it was never wired into run 1) and owner/builder fields, then

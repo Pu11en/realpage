@@ -9,8 +9,8 @@ import json
 from dataclasses import dataclass, field
 from pathlib import Path
 
-MAX_PROJECTS = 150
-MAX_SEARCHES = 450
+MAX_PROJECTS = 400
+MAX_SEARCHES = 900
 MIN_PROJECTS_TO_KEEP = 30
 
 REPO_ROOT = Path(__file__).resolve().parents[3]

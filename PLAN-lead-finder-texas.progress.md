@@ -173,3 +173,29 @@
   it does not re-run Arizona end to end (that's S5) or add unit-tests for
   every other AZ recipe file, so a similar header/mapping problem on a
   not-yet-tried city's endpoint could still exist until S5's re-run surfaces it.
+
+## S4 Caps that don't cut cities off
+- Raised the per-state caps in `propertystack/skills/lead-finder/runfolder.py`
+  from 150 projects / 450 searches to 400 projects / 900 searches (plan's new
+  numbers).
+- Checked the existing cap-check placement in `run.py`'s `run_chain` loop: it
+  already only tests `caps.any_cap_hit()` once per iteration, at the top of
+  the `for city in city_list` loop, before any step for that city runs -- so
+  a city already being processed always finishes every one of its steps
+  (sources, permits, details, agendas, legistar, civic, sales, merged) before
+  the next city is even considered. No code change was needed for the
+  "never cut in half" half of this task, just confirmation.
+- Tests: added
+  `test_run_chain_only_checks_caps_between_cities_never_mid_city` to
+  `skills/lead-finder/tests/test_run.py`, which monkeypatches
+  `runfolder.MAX_PROJECTS` to 1 and runs a two-city chain -- proves the first
+  city's full set of step files exist (nothing partial) while the second
+  city has none at all (sources/permits/merged all absent), i.e. the cap
+  stopped the chain cleanly between cities, not mid-city.
+- Checked: `bash tooling/qa/check-lead-finder.sh` passes (all suites +
+  check-panel.sh). Full suite from `propertystack/`
+  (`python3 -m pytest -q --ignore=skills/client-map/tests`): 282 passed, no
+  failures this time (the S1/S2 timing-race flake noted earlier didn't
+  reproduce in this run).
+- Left open: S5 (Arizona re-run) will be the first real end-to-end exercise
+  of the new 400/900 caps against live data.

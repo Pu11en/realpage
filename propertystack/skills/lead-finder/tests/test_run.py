@@ -16,6 +16,7 @@ HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE.parent))
 
 import run as chain  # noqa: E402
+import runfolder  # noqa: E402
 from runfolder import RunFolder  # noqa: E402
 
 TODAY = datetime.date(2026, 9, 14)
@@ -166,6 +167,35 @@ def test_run_folder_has_one_file_per_step_per_city(tmp_path):
         chain.STEP_MERGED,
     ):
         assert any(f.startswith(f"{step}.") for f in step_files), f"missing {step} output for {CITY}"
+
+
+def test_run_chain_only_checks_caps_between_cities_never_mid_city(tmp_path, monkeypatch):
+    """S4: a cap is only ever checked before a city starts, so a city already
+    in progress is always finished, never cut in half. With the cap set so
+    it's hit exactly by the first city's own output, the second city must
+    never start at all (no step files for it), while the first city's own
+    steps -- including the later state-level ones -- all still ran to
+    completion."""
+    monkeypatch.setattr(runfolder, "MAX_PROJECTS", 1)
+    run_folder = RunFolder(state=STATE, run_id="run1", runs_dir=tmp_path)
+    web = FakeWeb()
+    deps = _make_deps(web, tmp_path / "recipes")
+    CITY2 = "Otherville"
+
+    chain.run_chain(STATE, run_folder, deps, cities=[CITY, CITY2])
+
+    # First city ran every step to completion (not cut off mid-way).
+    for step in (
+        chain.STEP_SOURCES, chain.STEP_PERMITS, chain.STEP_DETAILS,
+        chain.STEP_AGENDAS, chain.STEP_LEGISTAR, chain.STEP_CIVIC, chain.STEP_SALES,
+        chain.STEP_MERGED,
+    ):
+        assert run_folder.step_file(step, CITY).exists(), f"{step} missing for {CITY}"
+
+    # The cap, hit after the first city, stopped the chain before the
+    # second city ever started -- no partial or full output for it.
+    for step in (chain.STEP_SOURCES, chain.STEP_PERMITS, chain.STEP_MERGED):
+        assert not run_folder.step_file(step, CITY2).exists(), f"{step} unexpectedly ran for {CITY2}"
 
 
 def test_run_chain_calls_on_city_done_once_per_city(tmp_path):
