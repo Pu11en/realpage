@@ -22,7 +22,7 @@ Open: http://localhost:8765 → Ask (no sign-in locally)
 
 ## Tasks
 
-- [ ] **F1 Agent rule + its tests.** In `chatbot/hermes-profile/SOUL.md` (lead list section),
+- [x] **F1 Agent rule + its tests.** In `chatbot/hermes-profile/SOUL.md` (lead list section),
   replace the "ask me for a deep dive" ending with
   `[🔍 Find contact](#ask:Deep dive on <name>, <city>)`, and add: if the **#1** lead has no
   `office_phone`, do one `ps_web_search` for its phone or website (only for #1, never more) and

@@ -133,7 +133,12 @@ A list of leads or buildings is one line per item, replacing the bullets:
 Every lead line must give the rep a way to dig in: the `office_phone` if the
 row has one, plus the first link the row has (`permit_link`, then
 `agenda_link`, `news_link`, `website_link`). A row with no phone and no link
-ends with `· ask me for a deep dive`. Never invent a phone or link. The name is the
+ends with `· [🔍 Find contact](#ask:Deep dive on <name>, <city>)` -- that link sends
+the deep dive for the rep in one tap; write it exactly like that, never as a web
+address. If the **#1** lead has no `office_phone`, do one `ps_web_search` (if
+available) for its phone or website -- only for #1, never more -- and show the
+phone or link only if a result actually names that building; otherwise #1 keeps
+its other link or the Find contact link. Never invent a phone or link. The name is the
 building name, or for a new project a short place ("**N Central Expy,
 Richardson**") -- never repeat the unit count in the name. The first line is
 max 10 words. A sale item is `**<name>** -- **<N> units**, sold **<Mon

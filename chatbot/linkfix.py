@@ -9,6 +9,8 @@
   can't mislabel a council video as a "County sales record".
 - The link row's 📄 Permit is never a meeting video: such a link is dropped.
 - Deep dives: the **Sources:** line is dropped (the link row covers it).
+- In-chat "#ask:" links (e.g. [🔍 Find contact](#ask:Deep dive on ...)) are
+  not web links: they are left untouched (only http(s) links are checked).
 
 fix_links(text, seen) works on whole text; LineFixer does the same for a
 stream, releasing text one finished line at a time.
