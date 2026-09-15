@@ -148,6 +148,7 @@ class ChainDeps:
     geocode_fn: Callable[[str], object] = _census_geocode
     gdelt_fetch_fn: Callable[[str], bytes] | None = None
     cities_fetcher: Callable | None = None  # rank.py's `fetcher`, Census BPS files
+    exclude_cities: list | None = None  # rank.py's `exclude_cities`, e.g. a finished county's cities
     hud_fetcher: Callable[[], bytes] | None = None  # zero-arg, returns the HUD workbook bytes
     agency_name: str | None = None  # state housing finance agency, for awards (3.2)
     legistar_clients: dict = field(default_factory=dict)  # city -> legistar client slug
@@ -418,7 +419,7 @@ def load_or_build_cities(run_folder: RunFolder, state: str, deps: ChainDeps, cit
 
     if deps.cities_fetcher is None:
         raise ValueError("no city list given and no cities_fetcher configured")
-    out = cities_rank.rank_cities(state, fetcher=deps.cities_fetcher)
+    out = cities_rank.rank_cities(state, fetcher=deps.cities_fetcher, exclude_cities=deps.exclude_cities)
     run_folder.save_step(STEP_CITIES, STATE_CITY_KEY, out)
     return [c["city"] for c in out["cities"]]
 
@@ -567,6 +568,10 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--run-id", help="resume an existing run folder")
     parser.add_argument("--city", action="append", help="run only these cities (repeatable)")
     parser.add_argument(
+        "--exclude-cities-file",
+        help="JSON list of city names to skip when ranking cities (e.g. a finished county's cities)",
+    )
+    parser.add_argument(
         "--commit-each", action="store_true",
         help="git commit the run folder + area leads.json after each city (save as you go)",
     )
@@ -588,10 +593,14 @@ def main(argv: list[str] | None = None) -> int:
     agencies = json.loads(agencies_path.read_text()) if agencies_path.exists() else {}
 
     owner_parcel_recipe = _load_county_sales_recipe(state)
+    exclude_cities = (
+        json.loads(Path(args.exclude_cities_file).read_text()) if args.exclude_cities_file else None
+    )
 
     deps = ChainDeps(
         web=WebHelper(),
         cities_fetcher=cities_rank.fetch,
+        exclude_cities=exclude_cities,
         hud_fetcher=hud_loans.fetch_workbook_bytes,
         agency_name=agencies.get(state.upper()),
         owner_parcel_recipe=owner_parcel_recipe,

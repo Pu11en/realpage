@@ -248,3 +248,47 @@
   http://localhost:8765 → Early Leads → Az locally to see the 279 leads and
   confirm sold properties show buyer/seller. Part 2 (Texas, T1 onward) is
   still all unchecked.
+
+## T1 Texas area
+- `skills/lead-finder-cities/rank.py`: `rank_cities`/`build` now take an
+  `exclude_cities` list (case-insensitive city-name match), and a new
+  `--exclude-file` CLI flag; `skills/lead-finder/run.py`'s `ChainDeps` gained
+  `exclude_cities` (threaded into `load_or_build_cities`'s `rank_cities` call)
+  and a matching `--exclude-cities-file` CLI flag, so any state's run can skip
+  a finished area's cities without hard-coding place names in the generic
+  code (area-agnostic rule) -- the excluded names live in a data file instead.
+- Added `data/tx/collin-county-cities.json`: the 26 Collin County
+  municipalities/unincorporated area (Plano, Richardson, McKinney, Frisco,
+  Allen, Wylie, Murphy, Sachse, Prosper, Celina, Anna, Melissa, Farmersville,
+  Lucas, Fairview, Princeton, Josephine, Nevada, Blue Ridge, New Hope, Weston,
+  Parker, Lowry Crossing, St. Paul, Lavon, Westminster + the county's
+  unincorporated area) -- Plano-Richardson is its own finished area and is
+  never rerun, per the plan.
+- Implemented the RealPage-gap ranking rule directly in `rank_cities`: cities
+  sort by (realpage_count >= 3, -permits_5plus), so cities with 3+ RealPage
+  buildings in the client map sort after every RealPage-gap city regardless
+  of permit volume, but still order themselves by permit volume within each
+  group (ranking, not a ban -- RealPage-heavy cities are still last in the
+  list, not removed, so caps that allow them still reach them).
+- Live-ran `python3 skills/lead-finder-cities/rank.py --state TX
+  --exclude-file data/tx/collin-county-cities.json` against the real Census
+  BPS files (background, ~15s): 99 Texas cities/county-areas, written to
+  `data/tx/cities.json`. Verified: none of the 26 Collin County names appear
+  in the output; the 6 cities with realpage_count >= 3 (Fort Worth, Houston,
+  Austin, Dallas, Denton, Grand Prairie -- from `data/client-map/counts.json`)
+  are exactly the last 6 entries in permit-descending order among themselves,
+  even though Houston (4,077-unit Harris County area aside) and several of
+  them have far more raw permit volume than cities ranked ahead of them.
+- Tests: `skills/lead-finder-cities/tests/test_rank.py` gained
+  `test_exclude_cities_drops_matching_names_case_insensitive` and
+  `test_realpage_gap_rule_pushes_heavy_cities_last` (monkeypatches
+  `rank.realpage_counts` directly, since `realpage_counts`'s `counts_path`
+  default arg is bound at def time and monkeypatching `rank.COUNTS_FILE`
+  after import doesn't reach it).
+- Checked: `bash tooling/qa/check-lead-finder.sh` passes (76 lead-finder*
+  tests, up from 70, + check-panel.sh). Full suite from `propertystack/`
+  (`python3 -m pytest -q --ignore=skills/client-map/tests`): 286 passed, 0
+  failures.
+- Left open: `data/tx/cities.json` will need a fresh rank right before T6's
+  full run (Census BPS data updates monthly and T2-T5's new sources aren't
+  wired in yet); T2 (TDLR TABS) is next.

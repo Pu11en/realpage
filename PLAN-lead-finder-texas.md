@@ -71,7 +71,7 @@ Open: http://localhost:8765 → Early Leads → Tx
   found). Commit.
 
 ### Part 2: Texas
-- [ ] **T1 Texas area.** Area `tx` = Texas minus Collin County (skip any city/record in Collin County;
+- [x] **T1 Texas area.** Area `tx` = Texas minus Collin County (skip any city/record in Collin County;
   Plano-Richardson untouched). City list from Census permits, reordered by the RealPage-gap rule above (fewest RealPage
   buildings first, RealPage-heavy cities last). Commit.
 - [ ] **T2 TDLR TABS -- the statewide backbone.** Puller for the Texas registry (endpoint and form fields
