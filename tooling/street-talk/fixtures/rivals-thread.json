@@ -1,0 +1,45 @@
+[
+ {
+  "kind": "Listing",
+  "data": {
+   "children": []
+  }
+ },
+ {
+  "kind": "Listing",
+  "data": {
+   "children": [
+    {
+     "kind": "t1",
+     "data": {
+      "id": "c1",
+      "author": "AutoModerator",
+      "body": "rules",
+      "score": 1,
+      "permalink": "/c1"
+     }
+    },
+    {
+     "kind": "t1",
+     "data": {
+      "id": "c2",
+      "author": "b",
+      "body": "Same at my place in Frisco.",
+      "score": 9,
+      "permalink": "/c2"
+     }
+    },
+    {
+     "kind": "t1",
+     "data": {
+      "id": "c3",
+      "author": "c",
+      "body": "Blame the algorithm.",
+      "score": 3,
+      "permalink": "/c3"
+     }
+    }
+   ]
+  }
+ }
+]
