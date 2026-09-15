@@ -10,6 +10,16 @@
     "claude",
     "claude-web"
    ]
+  },
+  {
+   "date": "2026-09-15",
+   "file": "2026-09-15.json",
+   "label": "Gemini (memory), Gemini + Google Search, 2026-09-15",
+   "baseline": false,
+   "models": [
+    "gemini",
+    "gemini-web"
+   ]
   }
  ]
 }

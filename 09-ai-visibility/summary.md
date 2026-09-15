@@ -1,4 +1,4 @@
-# AI Visibility: what AIs say about RealPage (test of 2026-09-12)
+# AI Visibility: what AIs say about RealPage (test of 2026-09-15)
 
 Shown on the dashboard in the AI Visibility tab.
 Based on: AI test of 2026-09-12 (51 answers: Claude from memory, Claude + web search, ChatGPT from memory) plus the RealPage research folder and a check of realpage.com the same day.
@@ -6,29 +6,27 @@ Based on: AI test of 2026-09-12 (51 answers: Claude from memory, Claude + web se
 **Verdict:** AIs know RealPage -- but they recommend Yardi, and they bring up the lawsuit.
 
 ## Key numbers
-- 51 AI answers. RealPage mentioned in 88%, recommended in 22%, named first in 43%.
-- When the question does not name RealPage: named in 80%, top pick in only 20%.
-- When the question names RealPage: 43% of answers bring up the antitrust lawsuit.
-- Top picks: Yardi 14, Appfolio 6, RealPage 6, Entrata 1, Buildium 1.
+- 34 AI answers. RealPage mentioned in 85%, recommended in 0%, named first in 50%.
+- When the question does not name RealPage: named in 75%, top pick in only 25%.
+- When the question names RealPage: 0% of answers bring up the antitrust lawsuit.
+- Top picks: Yardi 8, RealPage 5, Appfolio 3, Entrata 1.
 
 ## By AI
-- ChatGPT (from memory): mentioned 82%, recommended 29%, lawsuit 0%.
-- Claude (from memory): mentioned 94%, recommended 12%, lawsuit 57%.
-- Claude + web search: mentioned 88%, recommended 24%, lawsuit 71%.
+- Gemini (memory): mentioned 88%, recommended 0%, lawsuit 0%.
+- Gemini + Google Search: mentioned 82%, recommended 0%, lawsuit 0%.
 
 ## Competitors in AI answers
-- Yardi: mentioned 67%, won 15 questions.
-- Appfolio: mentioned 53%, won 10 questions.
-- Entrata: mentioned 49%, won 1 questions.
-- Buildium: mentioned 26%, won 1 questions.
-- Resman: mentioned 10%, won 0 questions.
+- Yardi: mentioned 65%, won 8 questions.
+- Appfolio: mentioned 47%, won 5 questions.
+- Entrata: mentioned 38%, won 1 questions.
+- Buildium: mentioned 32%, won 0 questions.
+- Resman: mentioned 6%, won 0 questions.
 
 ## Questions RealPage missed (a competitor won)
-- I manage a 500-unit apartment community and need software that handles resident screening and accounting in one platform. What should I use?
-- What is the best apartment property management software for large multifamily portfolios?
-- What is the best property management software for a multifamily apartment portfolio?
+- What AI tools can help automate apartment leasing and prospect follow-up?
+- What are the top resident screening and tenant background check services for landlords?
 - What property management accounting software do most multifamily operators use?
-- What tools do property owners use to set optimal rent pricing using market data and analytics?
+- What software helps affordable housing providers manage compliance and certifications?
 
 ## realpage.com facts
 - Problem: No llms.txt file (realpage.com/llms.txt returns 'page not found').

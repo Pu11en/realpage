@@ -1,0 +1,78 @@
+{
+ "date": "2026-09-15",
+ "generatedAt": "2026-09-15T08:01:07.603Z",
+ "label": "Gemini (memory), Gemini + Google Search, 2026-09-15",
+ "baseline": false,
+ "target": "RealPage",
+ "models": [
+  {
+   "model": "gemini",
+   "name": "Gemini (memory)",
+   "answers": 17,
+   "failed": 0,
+   "mentionPct": 88.2,
+   "unbrandedMentionPct": 80.0,
+   "topPickPct": 30.0,
+   "firstPct": 52.9,
+   "lawsuitPct": 0.0,
+   "missedQuestions": [
+    "What AI tools can help automate apartment leasing and prospect follow-up?",
+    "What are the top resident screening and tenant background check services for landlords?"
+   ],
+   "topPicks": [
+    {
+     "name": "Yardi",
+     "count": 4
+    },
+    {
+     "name": "RealPage",
+     "count": 3
+    },
+    {
+     "name": "Appfolio",
+     "count": 1
+    }
+   ]
+  },
+  {
+   "model": "gemini-web",
+   "name": "Gemini + Google Search",
+   "answers": 17,
+   "failed": 0,
+   "mentionPct": 82.4,
+   "unbrandedMentionPct": 70.0,
+   "topPickPct": 20.0,
+   "firstPct": 47.1,
+   "lawsuitPct": 0.0,
+   "missedQuestions": [
+    "What are the top resident screening and tenant background check services for landlords?",
+    "What property management accounting software do most multifamily operators use?",
+    "What software helps affordable housing providers manage compliance and certifications?"
+   ],
+   "topPicks": [
+    {
+     "name": "Yardi",
+     "count": 4
+    },
+    {
+     "name": "RealPage",
+     "count": 2
+    },
+    {
+     "name": "Appfolio",
+     "count": 2
+    },
+    {
+     "name": "Entrata",
+     "count": 1
+    }
+   ]
+  }
+ ],
+ "lawsuit": {
+  "mentions": [],
+  "toneMix": {},
+  "sources": [],
+  "comparedWith": null
+ }
+}
