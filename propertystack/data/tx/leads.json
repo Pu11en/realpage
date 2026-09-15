@@ -38166,10 +38166,11 @@
   "buyer": "CC MEYER PROPERTIES LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.city-data.com/forum/dallas/622307-jefferson-ross-1001-ross-ave.html",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.city-data.com/forum/dallas/622307-jefferson-ross-1001-ross-ave.html"
   },
   "sources": [
    {
@@ -38242,7 +38243,7 @@
   "address": "1919 PORTSMOUTH ST 30",
   "lat": null,
   "lon": null,
-  "units": null,
+  "units": 30,
   "stage": "sold",
   "permit_date": "",
   "opening_date": "",
@@ -38259,9 +38260,13 @@
    {
     "fact": "sale_date",
     "url": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   },
+   {
+    "fact": "units",
+    "url": "https://cccres.com/apartments/detail/le-ville-carre-houston"
    }
   ],
-  "why": "Sold 2025-03-06 \u00b7 to CSC 1919 PORTSMOUTH REALTY LLC \u00b7 new owner may re-pick software"
+  "why": "Sold 2025-03-06 \u00b7 to CSC 1919 PORTSMOUTH REALTY LLC \u00b7 30 units \u00b7 new owner may re-pick software"
  },
  {
   "area": "tx",
@@ -38270,7 +38275,7 @@
   "address": "9300 N SAM HOUSTON PKY E 324",
   "lat": null,
   "lon": null,
-  "units": null,
+  "units": 324,
   "stage": "sold",
   "permit_date": "",
   "opening_date": "",
@@ -38278,18 +38283,23 @@
   "buyer": "PLEASANTON HOUSING FINANCE CORPORATION",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://ploteasy.com/property-details/240607316/9300-n-sam-houston-pky-e-324-humble-tx-77396",
   "software": "unknown",
   "links": {
-   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip",
+   "website": "https://ploteasy.com/property-details/240607316/9300-n-sam-houston-pky-e-324-humble-tx-77396"
   },
   "sources": [
    {
     "fact": "sale_date",
     "url": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   },
+   {
+    "fact": "units",
+    "url": "https://cccres.com/apartments/detail/grove-east-at-fall-creek-humble"
    }
   ],
-  "why": "Sold 2025-03-06 \u00b7 to PLEASANTON HOUSING FINANCE CORPORATION \u00b7 new owner may re-pick software"
+  "why": "Sold 2025-03-06 \u00b7 to PLEASANTON HOUSING FINANCE CORPORATION \u00b7 324 units \u00b7 new owner may re-pick software"
  },
  {
   "area": "tx",
@@ -38334,10 +38344,11 @@
   "buyer": "PLEASANTON HOUSING FINANCE CORP",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.presidium-valleyview.com/",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.presidium-valleyview.com/"
   },
   "sources": [
    {
@@ -38362,10 +38373,11 @@
   "buyer": "PLEASANTON HOUSING FINANCE",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://liveat7900.com/",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://liveat7900.com/"
   },
   "sources": [
    {
@@ -38390,10 +38402,11 @@
   "buyer": "SAYEG LIVING TRUST",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://ploteasy.com/property-details/296408/3838-glen-arbor-dr-32-houston-tx-77025",
   "software": "unknown",
   "links": {
-   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip",
+   "website": "https://ploteasy.com/property-details/296408/3838-glen-arbor-dr-32-houston-tx-77025"
   },
   "sources": [
    {
@@ -38418,10 +38431,11 @@
   "buyer": "DHFC HIGHPOINT @ WYNNEWOOD",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.highpointatwynnewood.com/",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.highpointatwynnewood.com/"
   },
   "sources": [
    {
@@ -38446,10 +38460,11 @@
   "buyer": "MAVERICK COUNTY HOUSING",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "http://www.rentdeals.com/public/apartments/tx/dallas/gables-uptown-tower",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "http://www.rentdeals.com/public/apartments/tx/dallas/gables-uptown-tower"
   },
   "sources": [
    {
@@ -38522,7 +38537,7 @@
   "address": "902 OAK ST 44",
   "lat": null,
   "lon": null,
-  "units": null,
+  "units": 44,
   "stage": "sold",
   "permit_date": "",
   "opening_date": "",
@@ -38539,9 +38554,13 @@
    {
     "fact": "sale_date",
     "url": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   },
+   {
+    "fact": "units",
+    "url": "https://cccres.com/apartments/detail/whispering-oaks-houston"
    }
   ],
-  "why": "Sold 2025-02-28 \u00b7 to 902 OAK LLC \u00b7 new owner may re-pick software"
+  "why": "Sold 2025-02-28 \u00b7 to 902 OAK LLC \u00b7 44 units \u00b7 new owner may re-pick software"
  },
  {
   "area": "tx",
@@ -38558,10 +38577,11 @@
   "buyer": "12TEN SHELBY LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.apartmentadvisor.com/details/2707-shelby-ave-dallas-tx-75219",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.apartmentadvisor.com/details/2707-shelby-ave-dallas-tx-75219"
   },
   "sources": [
    {
@@ -38581,7 +38601,7 @@
   "units": null,
   "stage": "sold",
   "permit_date": "",
-  "opening_date": "",
+  "opening_date": "2024",
   "sale_date": "2025-02-26",
   "buyer": "HOUSTON VANDERBILT LODGE APARTMENTS LP",
   "developer": "",
@@ -38595,6 +38615,10 @@
    {
     "fact": "sale_date",
     "url": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   },
+   {
+    "fact": "opening_date",
+    "url": "https://www.movoto.com/houston-tx/12660-medfield-dr-apt-106-houston-tx-77082/pid_q2948rwcjpcb/"
    }
   ],
   "why": "Sold 2025-02-26 \u00b7 to HOUSTON VANDERBILT LODGE APARTMENTS LP \u00b7 new owner may re-pick software"
@@ -38614,11 +38638,12 @@
   "buyer": "",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.thewyattlifestyle.com/",
   "software": "unknown",
   "links": {
    "sales_file": "https://www.tad.org/content/data-download/2026CommImprovedSales.zip",
-   "deed_doc": "D225033316"
+   "deed_doc": "D225033316",
+   "website": "https://www.thewyattlifestyle.com/"
   },
   "sources": [
    {
@@ -38672,10 +38697,12 @@
   "buyer": "PLEASANTON HOUSING FINANCE",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.apartmentsearch.com/apartments/texas/grand-prairie/springs-at-grand-prairie",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.apartmentsearch.com/apartments/texas/grand-prairie/springs-at-grand-prairie",
+   "news": "https://business.grandprairiechamber.org/list/member/the-springs-at-grand-prairie-6306"
   },
   "sources": [
    {
@@ -38700,10 +38727,11 @@
   "buyer": "HUMBLE- EAGLE CREEK APTS LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://ploteasy.com/property-details/210135959/10373-n-sam-houston-pky-e-humble-tx-77396",
   "software": "unknown",
   "links": {
-   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip",
+   "website": "https://ploteasy.com/property-details/210135959/10373-n-sam-houston-pky-e-humble-tx-77396"
   },
   "sources": [
    {
@@ -38776,7 +38804,7 @@
   "address": "938 KINGWOOD DR 312",
   "lat": null,
   "lon": null,
-  "units": null,
+  "units": 20,
   "stage": "sold",
   "permit_date": "",
   "opening_date": "",
@@ -38784,18 +38812,23 @@
   "buyer": "CWS KINGWOOD SPE LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.enrichedrealestate.com/938-Kingwood-Dr-312-Humble-TX-77339/Apartments/ApartmentGarden14stories/Id=379431",
   "software": "unknown",
   "links": {
-   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip",
+   "website": "https://www.enrichedrealestate.com/938-Kingwood-Dr-312-Humble-TX-77339/Apartments/ApartmentGarden14stories/Id=379431"
   },
   "sources": [
    {
     "fact": "sale_date",
     "url": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   },
+   {
+    "fact": "units",
+    "url": "https://www.enrichedrealestate.com/938-Kingwood-Dr-312-Humble-TX-77339/Apartments/ApartmentGarden14stories/Id=379431"
    }
   ],
-  "why": "Sold 2025-02-24 \u00b7 to CWS KINGWOOD SPE LLC \u00b7 new owner may re-pick software"
+  "why": "Sold 2025-02-24 \u00b7 to CWS KINGWOOD SPE LLC \u00b7 20 units \u00b7 new owner may re-pick software"
  },
  {
   "area": "tx",
@@ -38812,10 +38845,11 @@
   "buyer": "ANNE NELSON IRREVOCABLE TRUST",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.carriagehouseaptsdallas.com/",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.carriagehouseaptsdallas.com/"
   },
   "sources": [
    {
