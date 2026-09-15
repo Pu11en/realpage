@@ -2,6 +2,16 @@
 // (Open WebUI in production, the stand-in page in tests). Loaded on all 5
 // pages via app.js's renderShell(). See PLAN-v6.md Part W.
 (function () {
+  // Guard against the script itself running twice on one page (a stray
+  // duplicate <script src="js/chat-panel.js"> tag, or a caching glitch that
+  // re-injects it): a second execution would attach a second set of click
+  // listeners to the same Ask/Chat buttons and build a second header bar the
+  // instant the first one is removed and re-added, which showed up live as
+  // two "Ask CraneSignal" bars stacked for a frame. Only the first execution
+  // does anything; window.initChatPanel/PSChatPanel keep pointing at it.
+  if (window.__chatPanelLoaded) return;
+  window.__chatPanelLoaded = true;
+
   const STORAGE_OPEN = "propertystack.chatPanelOpen";
 
   function isOpen() {
@@ -24,6 +34,12 @@
   }
 
   function buildPanel() {
+    // Belt-and-suspenders: if more than one #chat-panel ever ends up in the
+    // DOM (shouldn't happen given the guards above, but this is exactly the
+    // symptom -- two stacked header bars), keep only the first and drop the
+    // rest instead of building yet another one.
+    const stray = document.querySelectorAll("#chat-panel");
+    if (stray.length > 1) stray.forEach((el, i) => i > 0 && el.remove());
     const existing = document.getElementById("chat-panel");
     if (existing) return existing;
 
@@ -191,6 +207,13 @@
 
   function wireTriggers() {
     document.querySelectorAll("[data-chat-toggle]").forEach((el) => {
+      // renderShell() calls initChatPanel() again on view-as changes and the
+      // like; without this flag a repeat call would add a second click
+      // listener to the same Ask/Chat button, so one click opened then
+      // immediately closed the panel (and briefly rendered a second header
+      // while the first was being torn down).
+      if (el.dataset.chatWired) return;
+      el.dataset.chatWired = "1";
       el.addEventListener("click", (e) => {
         e.preventDefault();
         togglePanel();

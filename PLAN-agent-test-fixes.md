@@ -35,7 +35,7 @@ Open: http://localhost:8765/index.html
   chat often takes longer to wake. Raise the wait (e.g. 30 s) with a "Waking up the chat…" message, and
   one automatic retry before "Couldn't load the chat." (with a Try again button). Test: the timeout and
   retry logic. Commit.
-- [ ] **T2 One chat header bar.** The panel sometimes shows two stacked "Ask CraneSignal" bars (desktop and
+- [x] **T2 One chat header bar.** The panel sometimes shows two stacked "Ask CraneSignal" bars (desktop and
   phone). Find why the panel/header is built twice (double init, re-open, retry) and make it idempotent.
   Test: opening the panel twice leaves exactly one header. Commit.
 - [ ] **T3 Sign-out button.** Add "Sign out" to the site header on every app page (calls the chat app's
