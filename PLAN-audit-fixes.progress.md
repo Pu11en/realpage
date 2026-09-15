@@ -46,3 +46,10 @@
 - Test: tooling/qa/fixes_tests/test_a7_under_the_hood.py.
 - Checked: check-fixes.sh passes (19 tests, design 0 problems); browser shows 909, no PLACEHOLDER/error/plano-richardson, no page errors.
 - Left: pipeline.json still carries costPerArea and error runs (page just hides them); skill names like find-apartments still show under each step.
+
+## A8 Privacy page — done (a73ee37; landing repo 9b5b29f)
+- site/privacy.html: sign-in section now covers Google sign-in and email sign-up (name, email, hashed password), early-access sign-up emails, chats; new Contact section; old "support email on the Google sign-in screen" line removed. Date bumped to Sep 15, 2026.
+- App menu footer (site/js/app.js renderShell) has a "Privacy" link under Last updated.
+- Landing footer (business/marketing/landing/index.html, its own repo) links to https://app.cranesignal.com/privacy.html; committed there (9b5b29f).
+- ⚠️ No contact email exists on the landing page, so the page says CONTACT_EMAIL_TBD: Drew must pick one (for D1 report).
+- Test: tooling/qa/fixes_tests/test_a8_privacy.py. Checked: check-fixes.sh passes (21 tests, design 0 problems).

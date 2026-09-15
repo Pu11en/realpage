@@ -56,7 +56,7 @@ Open: http://localhost:8765/index.html
 - [x] **A7 Under the Hood cleaned for users.** Hide the raw bits: "area: plano-richardson",
   "propertystack/runs/*.json", the error row, the PLACEHOLDER box; make its lead count match the
   site. No other redesign (a rebuild is planned separately).
-- [ ] **A8 Privacy page.** Link it from the app menu footer and the landing footer
+- [x] **A8 Privacy page.** Link it from the app menu footer and the landing footer
   (`business/marketing/landing/index.html`, its own git repo: commit there too). Mention email
   sign-up next to Google sign-in, what we store (email, chat history, sign-ups) and a contact line
   using the address already on the landing page (if none, write `CONTACT_EMAIL_TBD` and flag it).
