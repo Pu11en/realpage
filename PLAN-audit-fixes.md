@@ -32,7 +32,7 @@ Open: http://localhost:8765/index.html
 ## Tasks
 
 ### Part A: site pages
-- [ ] **A1 Phones.** Add `<meta name="viewport" content="width=device-width, initial-scale=1">` to
+- [x] **A1 Phones.** Add `<meta name="viewport" content="width=device-width, initial-scale=1">` to
   `index.html`, `under-the-hood.html`, `property.html`, `ai-visibility.html` (that one line only).
   In `tooling/qa/sweep.py` and `quick-check.py` phone runs use `is_mobile=True, has_touch=True`; fix
   any page that now overflows. Test: every `site/*.html` has the viewport tag.
