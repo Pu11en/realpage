@@ -50,3 +50,12 @@ def test_linefixer_stream_keeps_ask_link():
     line = f"3. **Elm Park**, Frisco -- **150 units** · [News]({NEWS}) · {ASK}"
     out = lf.feed(line[:40]) + lf.feed(line[40:] + "\n") + lf.flush()
     assert ASK in out and NEWS in out
+
+
+def test_loader_makes_ask_links_clickable():
+    """F2: loader.js (runs inside Open WebUI) turns #ask: links into a one-tap send."""
+    js = open(os.path.join(ROOT, "chatbot", "branding", "loader.js"), encoding="utf-8").read()
+    assert 'a[href^="#ask:"]' in js
+    assert "input:prompt:submit" in js
+    assert "preventDefault" in js
+    assert "decodeURIComponent" in js
