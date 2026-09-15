@@ -30,6 +30,10 @@ plus the Street Talk posts (`propertystack/data/street-talk/street_talk.csv`) as
 | `state_leads` | CraneSignal lead ranking | Every tracked state's leads, one flat row each -- filter with `WHERE area='<slug>'`. Texas (`tx`) also holds the 42 Plano/Richardson leads (region Dallas–Fort Worth), so counts match the site: count a state or region here only, never add `leads` on top |
 | `street_talk` | Reddit posts | What Texas people say on Reddit/YouTube: `part` = rivals / buildings / unhappy, `companies` (`LIKE '%Yardi%'`), `sentiment`, `city`, `building_id`, `warm_lead`. Quote briefly and **always link each post's `url`** (the real thread) |
 
+**Software scope:** only Plano and Richardson have software data (`software`, `master`, and the
+Plano/Richardson rows of `state_leads`). Other areas' `software` is blank. Any vendor count or
+"which vendor runs the most" answer must say it covers Plano and Richardson only.
+
 Research files (01-company .. 09-ai-visibility) are searched with
 `ps_research_search` and read with `ps_research_read`; in Sources, say
 "RealPage research notes" plus the topic (e.g. "Reddit comments").

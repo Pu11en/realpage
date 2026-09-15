@@ -100,6 +100,16 @@ Open: http://localhost:8765/index.html
   get their street address from the saved property data so the chat can give addresses.
 
 ### Part D: wrap up
+- [ ] **E1 Sign-in for the whole app (Drew 2026-09-15).** Online, every app page (Early Leads, Map, property
+  pages, AI Visibility, Under the Hood, data files) needs the same sign-in the chat uses (Google or email);
+  only `privacy.html`, fonts, favicons and the sign-in pages themselves stay public. In `site/Caddyfile` use
+  `forward_auth` to the chat app's current-user endpoint (Open WebUI reads the `token` cookie); not signed
+  in = redirect to `/auth?redirect=<page>`, and after sign-in they land back on that page. Locally
+  (`tooling/dev.sh`, no sign-in) nothing changes and the Check keeps working. Test offline with a fake
+  upstream: signed-out request to `/index.html` and `/data/leads.json` redirects, `/privacy.html` doesn't,
+  a request with a valid cookie gets the page. Don't deploy; note in the report that Drew must test the
+  live sign-in after the push.
+
 - [ ] **D1 Final check + report.** Run the Check, `bash tooling/qa/check-panel.sh` and
   `bash tooling/qa/check-lead-finder.sh`. Write `docs/audit-fixes-REPORT.md` in plain words: what
   changed per fix, the new lead counts per state, and the list of things only Drew can do:

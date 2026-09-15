@@ -156,6 +156,8 @@ def ps_schema(args: dict, **_) -> str:
             "All columns are TEXT; CAST(units AS INTEGER) for numbers.",
             "master = apartments + websites + software joined; one row per building (apt_id).",
             "software='unknown' means not identified; the reason is in unknown_reason.",
+            "Software data covers Plano and Richardson only (software/master tables); other areas' "
+            "software is blank. Vendor counts must say they cover Plano and Richardson only.",
             "contacts: phone/email only where the website scrape actually found them.",
             "leads.ref_id is an apt_id (signal=sold) or an upcoming project_id (signal=upcoming).",
             "state_leads: every tracked state's leads, one flat row per lead (no separate master/contacts). "
