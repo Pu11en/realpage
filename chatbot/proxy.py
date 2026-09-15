@@ -557,15 +557,16 @@ async def gateway_chat(request: web.Request) -> web.StreamResponse:
     req_chars = sum(len(str(m.get("content", ""))) for m in body.get("messages", []) if isinstance(m, dict))
     question = _last_user_text(body)
     dive_key, fresh = _deep_dive_key(question)
-    if not question.lstrip().startswith("### Task:"):
-        used_up = await _free_take(email, deep_dive=bool(dive_key))
-        if used_up:
-            return await _gateway_replay(request, body, _free_limit_text(used_up))
+    # A saved deep dive costs nothing to replay, so it is served before the free-plan count.
     chat_id = request.headers.get("X-OpenWebUI-Chat-Id", "").strip()
     if dive_key and not _deep_dive_redo(chat_id, dive_key, fresh):
         saved = _deep_dive_load(dive_key)
         if saved:
             return await _gateway_replay(request, body, bold(fix_links(_deep_dive_note(saved), deep_dive=True)))
+    if not question.lstrip().startswith("### Task:"):
+        used_up = await _free_take(email, deep_dive=bool(dive_key))
+        if used_up:
+            return await _gateway_replay(request, body, _free_limit_text(used_up))
 
     async with _slots:
         try:
