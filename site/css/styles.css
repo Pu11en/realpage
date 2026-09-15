@@ -133,7 +133,8 @@ body {
   flex-wrap: wrap;
 }
 
-.area-buttons .area-btn {
+.area-buttons .area-btn,
+.metro-buttons .metro-btn {
   background: var(--card-bg);
   border: 1px solid var(--border);
   color: var(--text-muted);
@@ -143,7 +144,8 @@ body {
   cursor: pointer;
 }
 
-.area-buttons .area-btn.active {
+.area-buttons .area-btn.active,
+.metro-buttons .metro-btn.active {
   background: var(--accent, #6366f1);
   border-color: var(--accent, #6366f1);
   color: #fff;

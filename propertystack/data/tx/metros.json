@@ -1,0 +1,10 @@
+{
+  "note": "City -> metro group for the Early Leads metro buttons. Cities not listed show under 'Rest of state'. Metros follow the Census metro areas (counties).",
+  "rest_label": "Rest of Texas",
+  "metros": {
+    "Dallas–Fort Worth": ["Dallas", "Fort Worth", "Arlington", "Azle", "Bedford", "Crowley", "Denton", "Euless", "Everman", "Ferris", "Forney", "Garland", "Grand Prairie", "Grapevine", "Haltom City", "Hurst", "Keene", "Keller", "Kennedale", "Lewisville", "Little Elm", "Mansfield", "Mesquite", "North Richland Hills", "Richland Hills", "Roanoke", "Saginaw", "Southlake", "Tarrant County", "Terrell", "Watauga", "White Settlement", "Wilmer", "Irving", "Carrollton", "Frisco", "McKinney", "Rowlett", "Cedar Hill", "DeSoto", "Duncanville", "Lancaster", "Waxahachie", "Midlothian", "Burleson", "Cleburne", "Weatherford", "Colleyville", "Coppell", "Flower Mound", "The Colony", "Rockwall", "Sachse", "Wylie"],
+    "Houston": ["Houston", "Cleveland", "Cypress", "Hempstead", "Humble", "Katy", "Pearland", "Sealy", "Spring", "Sugar Land", "Tomball", "Webster", "Baytown", "Pasadena", "Conroe", "The Woodlands", "League City", "Missouri City", "Richmond", "Rosenberg", "Friendswood", "League City", "Galveston", "Texas City", "La Porte", "Seabrook", "South Houston", "Deer Park", "Kingwood", "Magnolia"],
+    "Austin": ["Austin", "Bastrop", "Elgin", "Georgetown", "Granger", "Manor", "Maxwell", "Pflugerville", "San Marcos", "Round Rock", "Cedar Park", "Leander", "Kyle", "Buda", "Hutto", "Lockhart", "Lakeway", "Taylor"],
+    "San Antonio": ["San Antonio", "Converse", "New Braunfels", "Pleasanton", "Seguin", "Schertz", "Boerne", "Universal City", "Live Oak", "Cibolo", "Helotes", "Leon Valley"]
+  }
+}

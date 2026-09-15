@@ -54,6 +54,10 @@
           <div class="stat-card"><div class="value">${s.unitsInPlay.toLocaleString()}</div><div class="label">Units in play</div></div>
           <div class="stat-card"><div class="value">${s.openingNext12mo.toLocaleString()}</div><div class="label">Opening soon</div></div>
         </div>
+        ${(data.metros || []).length ? `<div class="metro-buttons" style="display:flex;flex-wrap:wrap;gap:8px;margin:0 0 12px;">
+          <button class="metro-btn active" data-metro="">All (${data.leads.length})</button>
+          ${data.metros.map((m) => `<button class="metro-btn" data-metro="${m.name}">${m.name} (${m.leads})</button>`).join("")}
+        </div>` : ""}
         <div class="filters">
           <input id="f-search" placeholder="Search property" />
           <select id="f-signal">
@@ -115,6 +119,7 @@
         const search = document.getElementById("f-search").value.trim().toLowerCase();
         const signal = document.getElementById("f-signal").value;
         const city = document.getElementById("f-city").value;
+        const metro = (document.querySelector(".metro-btn.active") || {}).dataset?.metro || "";
         const software = document.getElementById("f-software").value;
         const sort = document.getElementById("f-sort").value;
         const hideMine = document.getElementById("f-hide-mine").checked;
@@ -124,6 +129,7 @@
           if (search && !l.property.toLowerCase().includes(search)) return false;
           if (signal && l.signalType !== signal) return false;
           if (city && l.city !== city) return false;
+          if (metro && l.metro !== metro) return false;
           if (software === "__none__" && l.software) return false;
           if (software && software !== "__none__" && l.software !== software) return false;
           if (hideMine && viewAs !== "Neutral" && l.software === viewAs) return false;
@@ -171,6 +177,13 @@
           });
         });
       }
+
+      document.querySelectorAll(".metro-btn").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          document.querySelectorAll(".metro-btn").forEach((b) => b.classList.toggle("active", b === btn));
+          renderRows();
+        });
+      });
 
       ["f-search", "f-signal", "f-city", "f-software", "f-sort", "f-hide-mine"].forEach((id) => {
         const el = document.getElementById(id);

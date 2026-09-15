@@ -516,7 +516,7 @@ def _area_sort_key(record):
     return (0, record.opening_date if (record.opening_date or "") > today else "9999", 0)
 
 
-def _area_lead_dict(record, idx: int) -> dict:
+def _area_lead_dict(record, idx: int, total: int = 34) -> dict:
     is_sold = record.stage == "sold"
     leasing = _is_leasing(record)
     name = _nice_name(record.name or record.address or "Unnamed project", record.address)
@@ -545,7 +545,7 @@ def _area_lead_dict(record, idx: int) -> dict:
         "why": _clean_why(record.why),
         # Records already come out of score_and_rank in rank order (4.5); this
         # is a display-only stand-in for a numeric score until the site needs one.
-        "score": max(0, 100 - (idx - 1) * 3),
+        "score": max(1, round(100 * (1 - (idx - 1) / total))),
         "isNew": False,
     }
 
@@ -562,7 +562,17 @@ def build_area(slug: str) -> dict:
     records = [LeadRecord.from_dict(d) for d in raw]
     ranked = sorted(score_and_rank(records), key=_area_sort_key)
 
-    leads = [_area_lead_dict(r, i) for i, r in enumerate(ranked, start=1)]
+    leads = [_area_lead_dict(r, i, len(ranked)) for i, r in enumerate(ranked, start=1)]
+    metros = _load_metros(slug)
+    if metros:
+        city_to_metro = {c.lower(): m for m, cs in metros["metros"].items() for c in cs}
+        for lead in leads:
+            lead["metro"] = city_to_metro.get((lead["city"] or "").lower(), metros["rest_label"])
+        order = list(metros["metros"]) + [metros["rest_label"]]
+        counts = Counter(lead["metro"] for lead in leads)
+        metro_list = [{"name": m, "leads": counts[m]} for m in order if counts[m]]
+    else:
+        metro_list = []
     cities = sorted({r.city for r in ranked if r.city})
     units_in_play = sum(r.units or 0 for r in ranked if r.units)
 
@@ -581,8 +591,18 @@ def build_area(slug: str) -> dict:
             ),
         },
         "cities": cities,
+        "metros": metro_list,
         "leads": leads,
     }
+
+
+def _load_metros(slug: str) -> dict | None:
+    """Optional data/<slug>/metros.json: city -> metro group for the metro buttons."""
+    path = STATE_DATA_DIR / slug / "metros.json"
+    if not path.exists():
+        return None
+    with path.open() as f:
+        return json.load(f)
 
 
 CHAT_LEADS_COLUMNS = [

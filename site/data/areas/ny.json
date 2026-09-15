@@ -11,6 +11,7 @@
   "cities": [
     "Buffalo"
   ],
+  "metros": [],
   "leads": [
     {
       "id": "ny-1",
@@ -69,7 +70,7 @@
       "signalType": "Upcoming",
       "signal": "Opens: not public yet",
       "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet",
-      "score": 97,
+      "score": 50,
       "isNew": false
     }
   ]
