@@ -19,6 +19,9 @@ const CHAT_APP_URL = window.PS_CHAT_URL || (location.port === "8876"
     ? "http://localhost:3000"
     : location.origin);  // live: same address as the site (site/Caddyfile)
 
+// The public landing page (the marketing site). The human preview runs it on :8765.
+const LANDING_URL = location.port === "8876" ? "http://localhost:8765" : "https://cranesignal.com";
+
 function getViewAs() {
   const v = localStorage.getItem("propertystack.viewAs");
   return !v || v === "Neutral" ? "Everyone" : v;  // "Neutral" = old saved name for Everyone
@@ -44,13 +47,14 @@ function renderShell(activeKey) {
 
   shell.innerHTML = `
     <aside class="sidebar">
-      <a class="wordmark" href="index.html">CraneSignal</a>
+      <a class="wordmark" href="${LANDING_URL}" title="Back to the CraneSignal home page">CraneSignal</a>
       <nav>${navHtml}</nav>
       <div class="top-controls">
         <label for="view-as-select" style="color: var(--text-dim); font-size: 11px;"
           title="${VIEW_AS_TIP}">View as</label>
         <select id="view-as-select" title="${VIEW_AS_TIP}">${vendorOptions}</select>
         <div id="last-updated" style="color: var(--text-dim); font-size: 11px;"></div>
+        <a href="${LANDING_URL}" style="color: var(--text-dim); font-size: 11px;">&larr; Home page</a>
         <a href="privacy.html" style="color: var(--text-dim); font-size: 11px;">Privacy</a>
         <a href="#" id="sign-out-link" style="color: var(--text-dim); font-size: 11px; display: none;">Sign out</a>
       </div>

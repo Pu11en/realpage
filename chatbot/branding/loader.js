@@ -22,7 +22,7 @@
   if (window.top !== window) return;                      // inside the dashboard panel
   if (window.opener || window.name === "ps-chat-signin") return; // sign-in popup; the dashboard closes it
   var allowed = function (p) { return /^\/(auth|oauth|admin)(\/|$)/.test(p); };
-  var toDashboard = function () { location.replace("/"); };
+  var toDashboard = function () { location.replace("/map.html"); };
   if (!allowed(location.pathname)) return toDashboard();
   var last = location.pathname;
   setInterval(function () {
@@ -56,10 +56,27 @@
     var start = document.querySelector('button[aria-label="Get started"]');
     if (start) start.setAttribute("aria-label", "Create your account");
   };
+  // Sign-in page: friendlier placeholders and a link back to the home page.
+  var brandAuth = function () {
+    if (!/^\/auth(\/|$)/.test(location.pathname)) return;
+    var ph = { "Enter Your Email": "you@company.com", "Enter Your Password": "Your password",
+               "Enter Your Full Name": "Your name" };
+    document.querySelectorAll("input[placeholder]").forEach(function (i) {
+      if (ph[i.placeholder]) i.placeholder = ph[i.placeholder];
+    });
+    if (window.top === window && !window.opener && !document.querySelector(".cs-auth-home")) {
+      var a = document.createElement("a");
+      a.className = "cs-auth-home";
+      a.href = location.port === "8876" ? "http://localhost:8765" : "https://cranesignal.com";
+      a.textContent = "\u2190 Back to home page";
+      document.body.appendChild(a);
+    }
+  };
   var clean = function () {
     if (document.title.indexOf(TAG) >= 0) document.title = document.title.split(TAG).join("");
     if (!document.body) return;
     brandFirstAccount();
+    brandAuth();
     var w = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
     for (var n = w.nextNode(); n; n = w.nextNode()) {
       if (n.nodeValue.indexOf(TAG) >= 0) n.nodeValue = n.nodeValue.split(TAG).join("");

@@ -22,7 +22,7 @@
 		file_server
 	}
 
-	# "/" is the site's home page, except inside the chat panel's frame, where it
+	# "/" is the site's home page (the Map), except inside the chat panel's frame, where it
 	# is the chat app's home. The site home needs sign-in, like the other pages.
 	@home {
 		path /
@@ -36,9 +36,8 @@
 				redir * /auth?redirect={http.request.uri} 302
 			}
 		}
-		root * {$SITE_ROOT:/srv}
-		rewrite * /index.html
-		file_server
+		# The app opens on the Map, not Early Leads.
+		redir * /map.html 302
 	}
 
 	# The app's pages and their data. Not signed in -> the chat's sign-in page,

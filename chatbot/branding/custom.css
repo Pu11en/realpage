@@ -202,3 +202,117 @@ html:not(.dark) form button[type='submit']:not(#send-message-button):hover {
 #messages-container .prose b {
 	font-weight: 700 !important;
 }
+
+/* Sign-in and create-account page (/auth). One white card on a soft grey
+   page, bold heading, inputs that look like inputs, a clear focus ring and a
+   way back to the CraneSignal home page (link added by loader.js). */
+html:not(.dark) #auth-login-card {
+	background: var(--cs-paper);
+	border: 1px solid var(--cs-rule);
+	border-radius: 16px;
+	padding: 40px 32px 32px !important;
+	margin-top: 24px;
+	box-shadow: 0 12px 32px -16px rgba(14, 19, 32, 0.18);
+	text-align: left;
+}
+
+#auth-login-card form > div:first-child .text-2xl {
+	font-family: "Plus Jakarta Sans", "Inter", system-ui, sans-serif !important;
+	font-weight: 700 !important;
+	font-size: 30px;
+	line-height: 36px;
+	letter-spacing: -0.02em;
+	color: var(--cs-ink);
+	text-wrap: balance;
+}
+
+#auth-login-card form > div:first-child .text-2xl::after {
+	content: "Sourced leads on new apartment buildings, every week.";
+	display: block;
+	margin-top: 8px;
+	font-family: "Inter", system-ui, sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 24px;
+	letter-spacing: 0;
+	color: var(--cs-muted);
+}
+
+#auth-login-card label:not(.sr-only) {
+	font-weight: 600 !important;
+	font-size: 14px;
+	color: var(--cs-ink);
+	margin-top: 8px;
+}
+
+html:not(.dark) #auth-login-card input[type='email'],
+html:not(.dark) #auth-login-card input[type='text'],
+html:not(.dark) #auth-login-card input[type='password'],
+html:not(.dark) #auth-login-card input#password {
+	border: 1px solid var(--cs-rule) !important;
+	border-radius: 8px;
+	padding: 12px 12px !important;
+	font-size: 16px !important;
+	background: var(--cs-paper) !important;
+	transition: border-color 200ms cubic-bezier(0.32, 0.72, 0, 1), box-shadow 200ms cubic-bezier(0.32, 0.72, 0, 1);
+}
+
+html:not(.dark) #auth-login-card input:focus {
+	border-color: var(--cs-blue) !important;
+	box-shadow: 0 0 0 3px var(--cs-blue-soft);
+}
+
+#auth-login-card input::placeholder { color: #9aa1b0 !important; }
+
+#auth-login-card button[aria-label*='password visible'] { margin-left: -40px; width: 32px; }
+
+#auth-login-card button[type='submit'] {
+	font-weight: 600 !important;
+	font-size: 16px !important;
+	padding: 12px !important;
+	border-radius: 8px !important;
+	transition: background 200ms cubic-bezier(0.32, 0.72, 0, 1), transform 200ms cubic-bezier(0.32, 0.72, 0, 1);
+}
+
+#auth-login-card button[type='submit']:active { transform: translateY(1px); }
+
+#auth-login-card button.underline {
+	color: var(--cs-blue);
+	font-weight: 600 !important;
+	text-underline-offset: 3px;
+}
+
+/* "Continue with Google": same shape as Sign in, outlined. */
+html:not(.dark) #auth-login-card .space-y-2 > button {
+	background: var(--cs-paper) !important;
+	border: 1px solid var(--cs-rule);
+	border-radius: 8px !important;
+	padding: 12px !important;
+	font-size: 16px !important;
+	font-weight: 600 !important;
+	gap: 8px;
+}
+
+html:not(.dark) #auth-login-card .space-y-2 > button:hover { background: var(--cs-paper-2) !important; }
+
+/* The "or" divider: full-width rules, the word never wraps. */
+#auth-login-card .inline-flex:has(> hr) hr { flex: 1; width: auto; }
+#auth-login-card .inline-flex:has(> hr) span { white-space: nowrap; color: var(--cs-muted); }
+
+.cs-auth-home {
+	position: fixed;
+	top: 32px;
+	right: 32px;
+	z-index: 60;
+	font-size: 14px;
+	font-weight: 600;
+	color: var(--cs-blue);
+	text-decoration: none;
+}
+
+.cs-auth-home:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+@media (max-width: 640px) {
+	html:not(.dark) #auth-login-card { padding: 32px 24px 24px !important; border-radius: 12px; }
+	.cs-auth-home { top: 24px; right: 24px; }
+}
