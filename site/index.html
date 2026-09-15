@@ -85,7 +85,7 @@
             <option value="size">Sort: size (units)</option>
             <option value="newest">Sort: newest</option>
           </select>
-          <label style="display:flex;align-items:center;gap:6px;color:var(--text-muted);font-size:13px;">
+          <label class="hide-mine">
             <input type="checkbox" id="f-hide-mine" /> hide properties already on my software
           </label>
         </div>
@@ -115,7 +115,7 @@
 
       // Upcoming = nothing picked yet; a sold building with no software found = unknown.
       function leadSoftwareHtml(l) {
-        if (!l.software && l.signalType === "Sold") return `<span class="pill" style="background:#27272a;color:#a1a1aa;">Unknown</span>`;
+        if (!l.software && l.signalType === "Sold") return `<span class="pill pill-unknown">Unknown</span>`;
         return vendorPill(l.software);
       }
 
@@ -149,10 +149,10 @@
         }
 
         document.getElementById("leads-tbody").innerHTML = rows.map((l, i) => `
-          <tr class="${l.propertyId ? "clickable" : ""}" ${l.propertyId ? `data-id="${l.propertyId}"` : ""} style="${l.propertyId ? "cursor:pointer;" : ""}">
+          <tr class="${l.propertyId ? "clickable" : ""}" ${l.propertyId ? `data-id="${l.propertyId}"` : ""}>
             <td data-label="Rank">${i + 1}</td>
             <td data-label="Score"><span class="score-badge" style="background:${scoreBadgeColor(l.score)}">${l.score}</span></td>
-            <td class="lead-prop"><strong>${l.property}</strong> ${l.isNew ? '<span class="pill" style="background:#22c55e22;color:#22c55e;">NEW</span>' : ""}${l.subArea ? `<div class="lead-subarea">${l.subArea}</div>` : ""}
+            <td class="lead-prop"><strong>${l.property}</strong> ${l.isNew ? '<span class="pill pill-new">NEW</span>' : ""}${l.subArea ? `<div class="lead-subarea">${l.subArea}</div>` : ""}
               ${contactHtml(l.contact)}
               <button class="btn deep-dive-btn" data-deep-dive="${l.id}" title="Open the chat with a deep-dive question about this building">✦ Deep dive</button></td>
             <td data-label="City">${l.city}</td>

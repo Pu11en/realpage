@@ -17,6 +17,7 @@
     .breakdown { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin: 12px 0; text-align: center; }
     .breakdown .n { font-family: var(--mono); font-weight: 700; font-size: 16px; }
     .breakdown .label { font-size: 11px; color: var(--text-muted); }
+    .sources ul { margin: 0; padding-left: 18px; font-size: 13px; }
     .sources li { margin-bottom: 6px; word-break: break-all; }
   </style>
 </head>
@@ -47,6 +48,9 @@
       const d = new Date(iso + "T00:00:00");
       return isNaN(d) ? esc(iso) : d.toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric" });
     }
+    function scoreClass(score) {
+      return score >= 70 ? "score-high" : score >= 40 ? "score-mid" : "score-low";
+    }
     function sourceLabel(url) {
       if (url.includes("data.texas.gov")) return "County record";
       if (url.includes("legistar") || url.includes("zabalist.com") || url.includes("civicplus")) return "City filing";
@@ -64,22 +68,22 @@
       ].filter(Boolean);
       const who = isUpcoming ? `Developer: ${esc(p.developer || "not listed")}` : `Owner: ${esc(p.owner || "--")}`;
       return `
-        <div style="margin-bottom:8px;"><a href="index.html" onclick="if (history.length > 1 && document.referrer.startsWith(location.origin)) { history.back(); return false; }" style="color:var(--text-muted);font-size:13px;">&larr; Back</a></div>
+        <div class="back-row"><a class="back-link" href="index.html" onclick="if (history.length > 1 && document.referrer.startsWith(location.origin)) { history.back(); return false; }">&larr; Back</a></div>
         <h1>${esc(p.community)}</h1>
         <div class="meta">${bits.join(" &middot; ")}<br/>${who}</div>
-        <button class="btn deep-dive-btn" data-deep-dive="${esc(p.id)}" style="margin-top:8px;">✦ Deep dive in chat</button>`;
+        <button class="btn deep-dive-btn detail-dive" data-deep-dive="${esc(p.id)}">✦ Deep dive in chat</button>`;
     }
 
     function softwareCard(p, colors, isUpcoming) {
       if (isUpcoming) {
         return `<div class="card"><h3>Software</h3>
-          <div style="margin-bottom:10px;">${vendorPill(null)}</div>
+          <div class="pill-row">${vendorPill(null)}</div>
           <div class="dim">Not built yet -- no leasing website to check.</div></div>`;
       }
       const sw = p.software && p.software !== "unknown" ? p.software : null;
       const reason = { "no-website": "No website found", "no-portal-link": "Website has no portal link", "in-house-portal": "In-house / unrecognized portal" }[p.unknownReason];
       return `<div class="card"><h3>Software</h3>
-        <div style="margin-bottom:10px;">${sw ? vendorPill(sw, colors) : `<span class="pill" style="background:#27272a;color:#a1a1aa;">Unknown</span>`}</div>
+        <div class="pill-row">${sw ? vendorPill(sw, colors) : `<span class="pill pill-unknown">Unknown</span>`}</div>
         <dl class="kv">
           <dt>Proof</dt><dd>${p.proof ? link(p.proof, "portal link") : "--"}</dd>
           <dt>Checked</dt><dd>${fmtDate(p.checkedAt)}</dd>
@@ -93,10 +97,10 @@
       if (isUpcoming) {
         const idx = STAGES.indexOf(p.stage);
         const dots = STAGES.map((s, i) => `<div class="dot ${i <= idx ? "done" : ""}"></div>`).join(`<div class="seg"></div>`);
-        const labels = STAGE_SHORT.map((s) => `<div class="step-label" style="font-size:10px;">${s}</div>`).join("");
+        const labels = STAGE_SHORT.map((s) => `<div class="step-label">${s}</div>`).join("");
         return `<div class="card"><h3>Signals -- Upcoming</h3>
           <div class="timeline">${dots}</div>
-          <div style="display:flex;gap:4px;margin:6px 0 12px;">${labels}</div>
+          <div class="step-labels">${labels}</div>
           <dl class="kv">
             <dt>Stage</dt><dd>${esc(STAGE_LABELS[p.stage] || p.stage)}</dd>
             <dt>Stage date</dt><dd>${fmtDate(p.stageDate)}</dd>
@@ -123,12 +127,12 @@
       const parts = [["Size", l.size], ["Timing", l.timing], ["Signal", l.signal], ["Open", l.open]]
         .map(([k, v]) => `<div><div class="n">${v}</div><div class="label">${k}</div></div>`).join("");
       return `<div class="card"><h3>Lead score</h3>
-        <div style="display:flex;align-items:center;gap:10px;">
-          <span class="score-badge" style="background:${scoreBadgeColor(l.total)};width:40px;height:40px;font-size:16px;">${l.total}</span>
+        <div class="score-row">
+          <span class="score-badge score-badge-lg ${scoreClass(l.total)}">${l.total}</span>
           <span class="dim">Rank #${l.rank} of the lead list</span>
         </div>
         <div class="breakdown">${parts}</div>
-        <div style="font-size:13px;color:var(--text-muted);">${esc(l.why)}</div></div>`;
+        <div class="why">${esc(l.why)}</div></div>`;
     }
 
     function contactCard(p, isUpcoming) {
@@ -154,7 +158,7 @@
       const items = urls.map((u) => `<li><span class="dim">${sourceLabel(u)}:</span> ${link(u)}</li>`);
       if (!isUpcoming) items.unshift(`<li><span class="dim">County record:</span> Collin County appraisal district (building, units, owner)</li>`);
       return `<div class="card sources"><h3>Sources</h3>
-        <ul style="margin:0;padding-left:18px;font-size:13px;">${items.join("")}</ul></div>`;
+        <ul>${items.join("")}</ul></div>`;
     }
 
     loadData("data/properties.json").then((data) => {
@@ -168,7 +172,7 @@
       if (!p) {
         content.innerHTML = `<h1>Property not found</h1>
           <div class="meta">No building or upcoming project with id "${esc(id)}".
-          <a href="index.html" style="color:var(--accent);">Back to Early Leads</a></div>`;
+          <a class="link" href="index.html">Back to Early Leads</a></div>`;
         return;
       }
       document.title = `CraneSignal -- ${p.community}`;

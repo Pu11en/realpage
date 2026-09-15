@@ -73,9 +73,9 @@ function scoreBadgeColor(score) {
 
 function vendorPill(vendor, colorMap) {
   if (!vendor) {
-    return `<span class="pill" style="background:#27272a;color:#a1a1aa;">Not chosen yet</span>`;
+    return `<span class="pill" style="background:var(--paper-2);color:var(--muted);">Not chosen yet</span>`;
   }
-  const color = (colorMap && colorMap[vendor]) || "#a1a1aa";  // readable default (was near-invisible grey)
+  const color = (colorMap && colorMap[vendor]) || "#5d6577";  // readable default on white
   return `<span class="pill" style="background:${color}22;color:${color};">${vendor}</span>`;
 }
 

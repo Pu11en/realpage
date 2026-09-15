@@ -1,21 +1,33 @@
-/* PropertyStack -- shared design tokens, matching the approved v3
-   "techie/dev-tool" wireframe direction (dark, thin borders, one accent
-   color, no shadows/gradients). See 10-dashboard-wireframes/design-direction.md
-   for the earlier navy/teal direction this superseded. */
+/* CraneSignal -- shared design tokens, same look as the landing page
+   (white paper, navy ink, blueprint blue, one amber highlight, thin grey rules).
+   Headings = Plus Jakarta Sans, body = Inter, both self-hosted in site/fonts/.
+   The old dark-theme variable names below are kept as aliases so pages keep working. */
+@font-face { font-family: "Inter"; font-style: normal; font-weight: 100 900; font-display: swap; src: url(../fonts/inter-latin.woff2) format("woff2"); }
+@font-face { font-family: "Plus Jakarta Sans"; font-style: normal; font-weight: 200 800; font-display: swap; src: url(../fonts/plus-jakarta-sans-latin.woff2) format("woff2"); }
 :root {
-  --bg: #0a0a0b;
-  --sidebar-bg: #0d0d0f;
-  --card-bg: #111113;
-  --border: #27272a;
-  --text: #f4f4f5;
-  --text-muted: #a1a1aa;
-  --text-dim: #6b7280;
-  --accent: #22c55e;
-  --accent-dim: rgba(34, 197, 94, 0.15);
-  --score-high: #22c55e;
-  --score-mid: #eab308;
-  --score-low: #ef4444;
-  --font: Inter, system-ui, -apple-system, sans-serif;
+  --blue: #1a3d8f; --blue-2: #15326f; --blue-line: rgba(255,255,255,.09); --blue-ink: #c9d6f2;
+  --amber: #f5b700; --amber-2: #ffcb2e; --ink: #0e1320; --ink-2: #343b4c; --muted: #5d6577;
+  --paper: #ffffff; --paper-2: #f3f4f6; --rule: #d9dce3;
+  --ok: #0f7a55; --ok-soft: #e3f3ea; --warn: #8f4a07; --warn-soft: #fcefd9;
+  --bad: #b42318; --bad-soft: #fde8e6;
+  --blue-soft: #e8edf8;
+  --ease: cubic-bezier(0.16,1,0.3,1);
+
+  /* old names -> new values */
+  --bg: var(--paper);
+  --sidebar-bg: var(--paper-2);
+  --card-bg: var(--paper);
+  --border: var(--rule);
+  --text: var(--ink);
+  --text-muted: var(--muted);
+  --text-dim: #646c7d;
+  --accent: var(--blue);
+  --accent-dim: var(--blue-soft);
+  --score-high: var(--ok);
+  --score-mid: var(--warn);
+  --score-low: var(--bad);
+  --font: "Inter", system-ui, -apple-system, sans-serif;
+  --font-head: "Plus Jakarta Sans", "Inter", system-ui, sans-serif;
   --mono: "SFMono-Regular", Consolas, monospace;
 }
 
@@ -23,6 +35,8 @@
 
 body {
   margin: 0;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
   background: var(--bg);
   color: var(--text);
   font-family: var(--font);
@@ -44,9 +58,15 @@ body {
   gap: 4px;
 }
 
+h1, h2, h3, .wordmark { font-family: var(--font-head); color: var(--ink); }
+a { color: var(--blue); text-underline-offset: 3px; }
+:focus-visible { outline: 3px solid var(--blue); outline-offset: 2px; }
+
 .sidebar .wordmark {
-  font-weight: 700;
-  font-size: 16px;
+  font-weight: 800;
+  font-size: 18px;
+  letter-spacing: -0.01em;
+  color: var(--blue);
   margin-bottom: 20px;
   display: flex;
   align-items: center;
@@ -60,27 +80,32 @@ body {
   color: var(--text-muted);
   text-decoration: none;
   font-size: 14px;
-  border-left: 2px solid transparent;
+  font-weight: 500;
+  border-left: 3px solid transparent;
+  transition: background .2s var(--ease), color .2s var(--ease);
 }
 
-.sidebar nav a:hover { color: var(--text); }
+.sidebar nav a:hover { color: var(--ink); background: var(--paper); }
 
 .sidebar nav a.active {
-  color: var(--accent);
-  border-left-color: var(--accent);
-  background: var(--accent-dim);
+  color: var(--blue);
+  font-weight: 700;
+  border-left-color: var(--amber);
+  background: var(--blue-soft);
 }
 
-.sidebar nav a.nav-chat { color: var(--accent); }
+.sidebar nav a.nav-chat { color: var(--blue); font-weight: 600; }
 .sidebar nav a.nav-chat::before { content: "✦ "; }
 /* Floating Ask button: opens the chat app from any page. */
 .ask-fab {
   position: fixed; right: 20px; bottom: 20px; z-index: 40;
-  background: var(--accent); color: #0a0a0b; font-weight: 700; font-size: 14px;
-  padding: 10px 18px; border-radius: 999px; text-decoration: none;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+  background: var(--amber); color: var(--ink); font-weight: 800; font-size: 14px;
+  font-family: var(--font-head);
+  padding: 10px 20px; border-radius: 4px; text-decoration: none;
+  box-shadow: 0 3px 0 #b88900;
+  transition: transform .2s var(--ease), box-shadow .2s var(--ease), background .2s var(--ease);
 }
-.ask-fab:hover { filter: brightness(1.1); }
+.ask-fab:hover { background: var(--amber-2); transform: translateY(-1px); box-shadow: 0 4px 0 #b88900; }
 .sidebar .top-controls {
   margin-top: auto;
   padding-top: 16px;
@@ -100,7 +125,7 @@ body {
   font-size: 13px;
 }
 
-.main { padding: 24px 32px; }
+.main { padding: 28px 36px; background: var(--paper); min-width: 0; }
 
 .stats-row {
   display: grid;
@@ -146,8 +171,8 @@ body {
 
 .area-buttons .area-btn.active,
 .metro-buttons .metro-btn.active {
-  background: var(--accent, #6366f1);
-  border-color: var(--accent, #6366f1);
+  background: var(--blue);
+  border-color: var(--blue);
   color: #fff;
 }
 
@@ -201,7 +226,7 @@ tr.clickable:hover td { background: var(--accent-dim); }
   font-family: var(--mono);
   font-weight: 700;
   font-size: 12px;
-  color: #0a0a0b;
+  color: #fff;
 }
 
 .funnel {
@@ -220,7 +245,7 @@ tr.clickable:hover td { background: var(--accent-dim); }
 .funnel .step .n { font-family: var(--mono); font-weight: 700; font-size: 20px; }
 .funnel .step .label { color: var(--text-muted); font-size: 11px; margin-top: 4px; }
 
-h1 { font-size: 22px; margin: 0 0 4px; }
+h1 { font-size: 26px; font-weight: 800; letter-spacing: -0.015em; margin: 0 0 4px; }
 .meta { color: var(--text-muted); font-size: 13px; margin-bottom: 20px; }
 
 .cards-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin-bottom: 20px; }
@@ -247,9 +272,9 @@ h1 { font-size: 22px; margin: 0 0 4px; }
 }
 
 .placeholder-banner {
-  background: rgba(234, 179, 8, 0.1);
-  border: 1px solid var(--score-mid);
-  color: var(--score-mid);
+  background: var(--warn-soft);
+  border: 1px solid #f0d49f;
+  color: var(--warn);
   border-radius: 6px;
   padding: 8px 12px;
   font-size: 12px;
@@ -267,8 +292,8 @@ h1 { font-size: 22px; margin: 0 0 4px; }
 .lead-contact { color: var(--text-muted); font-size: 12px; margin-top: 4px; word-break: break-word; }
 .lead-signal { min-width: 150px; }
 .sig-tag { display: inline-block; font-size: 11px; font-weight: 600; padding: 2px 7px; border-radius: 999px; white-space: nowrap; }
-.sig-up { background: #22c55e22; color: #22c55e; }
-.sig-sold { background: #f59e0b22; color: #f59e0b; }
+.sig-up { background: var(--ok-soft); color: var(--ok); }
+.sig-sold { background: var(--warn-soft); color: var(--warn); }
 .sig-text { display: block; color: var(--text-muted); font-size: 13px; margin-top: 4px; }
 .lead-why { color: var(--text-muted); min-width: 280px; line-height: 1.5; }
 .lead-src { color: var(--text-dim); font-size: 12px; }
@@ -286,3 +311,48 @@ h1 { font-size: 22px; margin: 0 0 4px; }
 .pick-row .pick-label { width: 56px; color: var(--text-muted); font-size: 12px; text-transform: uppercase; letter-spacing: .04em; }
 .pick-row .area-buttons, .pick-row .metro-buttons { display: flex; gap: 8px; flex-wrap: wrap; margin: 0; }
 .lead-subarea { color: var(--text-muted); font-size: 12px; margin-top: 2px; }
+
+/* Early Leads page (index.html): light table, zebra rows, blue links, soft pills. */
+.stat-card .value { font-family: var(--font-head); font-weight: 800; letter-spacing: -0.01em; color: var(--ink); }
+.filters input, .filters select { min-height: 36px; transition: border-color .15s var(--ease), box-shadow .15s var(--ease); }
+.filters input:focus, .filters select:focus { outline: none; border-color: var(--blue); box-shadow: 0 0 0 3px var(--blue-soft); }
+.filters input::placeholder { color: var(--text-dim); }
+.hide-mine { display: flex; align-items: center; gap: 6px; color: var(--text-muted); font-size: 13px; cursor: pointer; }
+.hide-mine input { accent-color: var(--blue); }
+.area-buttons .area-btn, .metro-buttons .metro-btn { transition: border-color .15s var(--ease), color .15s var(--ease), background .15s var(--ease); }
+.area-buttons .area-btn:hover:not(.active), .metro-buttons .metro-btn:hover:not(.active) { border-color: var(--blue); color: var(--blue); }
+.leads-table { border: 1px solid var(--rule); border-radius: 8px; border-collapse: separate; border-spacing: 0; overflow: hidden; }
+.leads-table th { background: var(--paper-2); color: var(--ink-2); font-weight: 600; }
+.leads-table tbody tr:nth-child(even) td { background: var(--paper-2); }
+.leads-table tr.clickable { cursor: pointer; }
+.leads-table tr.clickable:hover td { background: var(--blue-soft); }
+.leads-table strong { color: var(--ink); }
+.lead-src a { color: var(--blue); }
+.pill-new { background: var(--ok-soft); color: var(--ok); }
+.pill-unknown { background: var(--paper-2); color: var(--muted); border: 1px solid var(--rule); }
+.deep-dive-btn { color: var(--blue); border-color: var(--rule); background: var(--paper); }
+.deep-dive-btn:hover { border-color: var(--blue); background: var(--blue-soft); }
+@media (max-width: 760px) {
+  .leads-table { border: none; border-radius: 0; overflow: visible; }
+  .leads-table tbody tr:nth-child(even) td { background: transparent; }
+  .leads-table tr { background: var(--paper); }
+  .leads-table tbody tr:nth-child(even) { background: var(--paper-2); }
+}
+
+/* Property detail page (T3): inline colors moved here. */
+.back-row { margin-bottom: 8px; }
+.back-link { color: var(--text-muted); font-size: 13px; text-decoration: none; }
+.back-link:hover { color: var(--blue); }
+.detail-dive { margin: -8px 0 16px; }
+.pill-row { margin-bottom: 10px; }
+.step-labels { display: flex; gap: 4px; margin: 6px 0 12px; }
+.step-labels .step-label { font-size: 10px; }
+.score-row { display: flex; align-items: center; gap: 10px; }
+.score-badge.score-high { background: var(--score-high); }
+.score-badge.score-mid { background: var(--score-mid); }
+.score-badge.score-low { background: var(--score-low); }
+.score-badge-lg { width: 40px; height: 40px; font-size: 16px; }
+.card .why { font-size: 13px; color: var(--text-muted); }
+.card .breakdown > div { background: var(--paper-2); border: 1px solid var(--rule); border-radius: 6px; padding: 6px 4px; }
+.card a:hover, .sources a:hover { text-decoration: underline; }
+a.link { color: var(--blue); }
