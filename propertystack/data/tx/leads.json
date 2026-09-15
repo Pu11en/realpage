@@ -24092,20 +24092,25 @@
   "units": 319,
   "stage": "sold",
   "permit_date": "",
-  "opening_date": "",
+  "opening_date": "2736",
   "sale_date": "2025-12-29",
   "buyer": "CRP WOP TBLC OWNER LP",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.student.com/us/tx/irving/p/the-carolyn-kvkkjm",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.student.com/us/tx/irving/p/the-carolyn-kvkkjm"
   },
   "sources": [
    {
     "fact": "sale_date",
     "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   },
+   {
+    "fact": "opening_date",
+    "url": "https://banksatlascolinas.com/"
    }
   ],
   "why": "Sold 2025-12-29 \u00b7 to CRP WOP TBLC OWNER LP \u00b7 319 units \u00b7 new owner may re-pick software"
@@ -24145,7 +24150,7 @@
   "address": "9401 COVENTRY SQUARE DR 128",
   "lat": null,
   "lon": null,
-  "units": null,
+  "units": 128,
   "stage": "sold",
   "permit_date": "",
   "opening_date": "",
@@ -24162,9 +24167,13 @@
    {
     "fact": "sale_date",
     "url": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   },
+   {
+    "fact": "units",
+    "url": "https://cccres.com/apartments/detail/coventry-park-houston"
    }
   ],
-  "why": "Sold 2025-12-25 \u00b7 to MVC COVENTRY HOLDING LP \u00b7 new owner may re-pick software"
+  "why": "Sold 2025-12-25 \u00b7 to MVC COVENTRY HOLDING LP \u00b7 128 units \u00b7 new owner may re-pick software"
  },
  {
   "area": "tx",
@@ -24237,10 +24246,11 @@
   "buyer": "CAMELOT VILLAGE APTS LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.brazosforty200.com/",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.brazosforty200.com/"
   },
   "sources": [
    {
@@ -24316,7 +24326,7 @@
   "units": null,
   "stage": "sold",
   "permit_date": "",
-  "opening_date": "",
+  "opening_date": "1716",
   "sale_date": "2025-12-18",
   "buyer": "AMRITTA WEALTH MANAGEMENT LLC",
   "developer": "",
@@ -24330,6 +24340,10 @@
    {
     "fact": "sale_date",
     "url": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   },
+   {
+    "fact": "opening_date",
+    "url": "https://github.com/Apoorve73/Real-Estate-Companies-Database/blob/master/Houston1.csv"
    }
   ],
   "why": "Sold 2025-12-18 \u00b7 to AMRITTA WEALTH MANAGEMENT LLC \u00b7 new owner may re-pick software"
@@ -24349,10 +24363,11 @@
   "buyer": "HOLLISTER LUXURY APARTMENTS TX LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://ploteasy.com/property-details/219337918/1920-hollister-st-houston-tx-77080",
   "software": "unknown",
   "links": {
-   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip",
+   "website": "https://ploteasy.com/property-details/219337918/1920-hollister-st-houston-tx-77080"
   },
   "sources": [
    {
@@ -24369,7 +24384,7 @@
   "address": "11201 OLYMPIA DR 369",
   "lat": null,
   "lon": null,
-  "units": null,
+  "units": 26,
   "stage": "sold",
   "permit_date": "",
   "opening_date": "",
@@ -24377,18 +24392,23 @@
   "buyer": "QUINN WESTCHASE APARTMENTS LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://ploteasy.com/property-details/240258898/11201-olympia-dr-houston-tx-77077",
   "software": "unknown",
   "links": {
-   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip",
+   "website": "https://ploteasy.com/property-details/240258898/11201-olympia-dr-houston-tx-77077"
   },
   "sources": [
    {
     "fact": "sale_date",
     "url": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   },
+   {
+    "fact": "units",
+    "url": "https://www.realtor.com/local/property-records/texas/harris-county/77042/olympia-dr"
    }
   ],
-  "why": "Sold 2025-12-18 \u00b7 to QUINN WESTCHASE APARTMENTS LLC \u00b7 new owner may re-pick software"
+  "why": "Sold 2025-12-18 \u00b7 to QUINN WESTCHASE APARTMENTS LLC \u00b7 26 units \u00b7 new owner may re-pick software"
  },
  {
   "area": "tx",
@@ -24433,10 +24453,11 @@
   "buyer": "REEV I - 2218 GREENHOUSE LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.ebby.com/realestate/details/103903577/2218-greenhouse-road-houston-tx-77084",
   "software": "unknown",
   "links": {
-   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip",
+   "website": "https://www.ebby.com/realestate/details/103903577/2218-greenhouse-road-houston-tx-77084"
   },
   "sources": [
    {
@@ -24461,10 +24482,11 @@
   "buyer": "LAKESIDE 3PP LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://rentdeals.com/public/apartments/tx/dallas/lakeside-at-northpark",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://rentdeals.com/public/apartments/tx/dallas/lakeside-at-northpark"
   },
   "sources": [
    {
@@ -24517,10 +24539,11 @@
   "buyer": "KAW3N LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://cccres.com/apartments/detail/spanish-courtyard-apts-irving",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://cccres.com/apartments/detail/spanish-courtyard-apts-irving"
   },
   "sources": [
    {
@@ -24601,10 +24624,11 @@
   "buyer": "BEL SHEPHERD LIMITED PARTNERSHIP",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.ebby.com/realestate/details/103673531/611-shepherd-drive-245-houston-tx-77007",
   "software": "unknown",
   "links": {
-   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip",
+   "website": "https://www.ebby.com/realestate/details/103673531/611-shepherd-drive-245-houston-tx-77007"
   },
   "sources": [
    {
@@ -24621,7 +24645,7 @@
   "address": "700 CAVALCADE ST 292",
   "lat": null,
   "lon": null,
-  "units": null,
+  "units": 292,
   "stage": "sold",
   "permit_date": "",
   "opening_date": "",
@@ -24629,18 +24653,23 @@
   "buyer": "HILLTOP ELLORY HEIGHTS PROPERTY OWNER LP",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://ploteasy.com/property-details/237882336/700-cavalcade-st-houston-tx-77009",
   "software": "unknown",
   "links": {
-   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip",
+   "website": "https://ploteasy.com/property-details/237882336/700-cavalcade-st-houston-tx-77009"
   },
   "sources": [
    {
     "fact": "sale_date",
     "url": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   },
+   {
+    "fact": "units",
+    "url": "https://cccres.com/apartments/detail/lincoln-heights-houston"
    }
   ],
-  "why": "Sold 2025-12-10 \u00b7 to HILLTOP ELLORY HEIGHTS PROPERTY OWNER LP \u00b7 new owner may re-pick software"
+  "why": "Sold 2025-12-10 \u00b7 to HILLTOP ELLORY HEIGHTS PROPERTY OWNER LP \u00b7 292 units \u00b7 new owner may re-pick software"
  },
  {
   "area": "tx",
