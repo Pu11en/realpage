@@ -1,9 +1,10 @@
 #!/usr/bin/env bash
 # Ask AIs about apartment software with NiubiGEO, then refresh the dashboard's
-# AI Visibility tab. The AIs are local Claude / Codex sessions (local_ai.py),
-# so no API credit is spent.
+# AI Visibility tab. Every run asks the same frozen questions (questions.csv,
+# the 2026-09-12 list) so trends are fair. Answers come from local_ai.py:
+# Gemini by default (gemini = memory, gemini-web = Google Search grounding).
 #
-#   bash tooling/ai-visibility/run.sh            real run (local sessions, ~20-40 min)
+#   bash tooling/ai-visibility/run.sh            real run (Gemini, throttled, ~15-25 min)
 #   bash tooling/ai-visibility/run.sh --practice free run against a fake AI
 set -euo pipefail
 
@@ -12,8 +13,7 @@ REPO="$(cd "$HERE/../.." && pwd)"
 NIUBIGEO="${NIUBIGEO_DIR:-/home/drewp/main-projects/tools-src/niubigeo}"
 RUNS="${AI_VIS_RUNS:-$HOME/.local/state/realpage-ai-visibility/runs}"
 PORT="${AI_VIS_PORT:-18912}"
-KEYWORDS="${AI_VIS_KEYWORDS:-apartment property management software,multifamily revenue management software,resident screening software,property management accounting software}"
-COMPETITORS="yardi.com,entrata.com,appfolio.com,buildium.com,resman.com"
+QUESTIONS="${AI_VIS_QUESTIONS:-$HERE/questions.csv}"
 mkdir -p "$RUNS"
 
 [ -d "$NIUBIGEO/node_modules" ] || { echo "NiubiGEO not installed at $NIUBIGEO (git clone + npm ci)"; exit 1; }
@@ -23,9 +23,10 @@ if [ "${1:-}" = "--practice" ]; then
   MODELS_LIST=fake-chatgpt,fake-claude
   DEMO=--demo
 else
-  # Real run: answers come from local Claude / Codex sessions (no API credit).
+  # Real run: local_ai.py answers (Gemini by default; claude/claude-web/chatgpt still work).
+  export AI_VIS_SOURCES="$RUNS/gemini-sources.pending.jsonl"; rm -f "$AI_VIS_SOURCES"
   python3 "$HERE/local_ai.py" "$PORT" 2>>"$RUNS/local-ai.log" & SERVER=$!
-  MODELS_LIST="${AI_VIS_MODELS:-claude,claude-web,chatgpt}"
+  MODELS_LIST="${AI_VIS_MODELS:-gemini,gemini-web}"
   DEMO=
   export PROVIDER_TIMEOUT_MS=300000 PROVIDER_HTTP_ATTEMPTS=2 AUDIT_CONCURRENCY="${AUDIT_CONCURRENCY:-4}"
 fi
@@ -33,13 +34,11 @@ trap 'kill $SERVER 2>/dev/null' EXIT
 sleep 1
 export OPENAI_COMPATIBLE_API_KEY=local OPENAI_COMPATIBLE_BASE_URL="http://127.0.0.1:$PORT/v1"
 unset OPENROUTER_API_KEY
-TARGETS=(--provider openai-compatible --models "$MODELS_LIST")
 
 cd "$NIUBIGEO"
-RUNS_DIR="$RUNS" npx tsx src/cli.ts audit --domain realpage.com --name RealPage \
-  --aliases "RealPage OneSite,OneSite" --competitors "$COMPETITORS" \
-  "${TARGETS[@]}" --prompt-count "${AI_VIS_PROMPTS:-10}" \
-  --keywords "$KEYWORDS" --keyword-mode user_only --keyword-limit 4 --prompts-per-keyword 2 | tee "$RUNS/last-run.log"
+RUNS_DIR="$RUNS" npx tsx "$HERE/frozen_audit.ts" "$QUESTIONS" "$MODELS_LIST" | tee "$RUNS/last-run.log"
 
 RUN_DIR="$(ls -td "$RUNS"/*-realpage | head -1)"
+# gemini-web's source links for each answer belong with this run
+[ -f "${AI_VIS_SOURCES:-/nonexistent}" ] && mv "$AI_VIS_SOURCES" "$RUN_DIR/gemini-sources.jsonl"
 python3 "$REPO/site/data/build_ai_visibility.py" "$RUN_DIR" $DEMO

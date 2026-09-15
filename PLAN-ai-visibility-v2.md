@@ -42,7 +42,7 @@ Open: http://localhost:8765/ai-visibility.html
 
 ## Tasks
 
-- [ ] **T1 Gemini answerer + the check.** In `tooling/ai-visibility/local_ai.py` add models `gemini` and
+- [x] **T1 Gemini answerer + the check.** In `tooling/ai-visibility/local_ai.py` add models `gemini` and
   `gemini-web`, answered by the Gemini REST API (`generativelanguage.googleapis.com`, key from `.env`,
   `gemini-2.5-flash`, the same "member of the public" system prompt). `gemini-web` turns on the
   `google_search` tool and saves the grounding source URLs + titles per answer to a side file in the run
@@ -51,23 +51,23 @@ Open: http://localhost:8765/ai-visibility.html
   `do_GET`. Create `tooling/ai-visibility/tests/` with offline tests using fixtures, and
   `tooling/qa/check-ai-visibility.sh` (runs those tests with pytest; must work with no network and no key).
   Commit.
-- [ ] **T2 Frozen questions.** Save the question list from the 2026-09-12 real run
+- [x] **T2 Frozen questions.** Save the question list from the 2026-09-12 real run
   (`~/.local/state/realpage-ai-visibility/runs/2026-09-12T15-39-48-714Z-realpage/prompts.csv`) into the repo
   as `tooling/ai-visibility/questions.csv`. Make `run.sh` reuse exactly those questions (use a NiubiGEO
   option if one exists; otherwise feed them in with the smallest wrapper) and default the models to
   `gemini,gemini-web`. `--practice` still works with the fake AI and the frozen questions. Test it. Commit.
-- [ ] **T3 Run history.** `site/data/build_ai_visibility.py` saves each run as
+- [x] **T3 Run history.** `site/data/build_ai_visibility.py` saves each run as
   `site/data/ai-visibility-history/<date>.json` (per AI: answers, mentioned %, top pick %, named first %,
   lawsuit %, missed questions, top picks by company) and a small `index.json` listing runs. Import the
   2026-09-12 run once as the baseline, labelled "Claude / ChatGPT, Sept 12". The existing tab data keeps
   working. Tests on fixtures; extend the check. Commit.
-- [ ] **T4 Lawsuit data.** From each run, pull every answer that raises the antitrust case / DOJ /
+- [x] **T4 Lawsuit data.** From each run, pull every answer that raises the antitrust case / DOJ /
   settlement / price-fixing: the exact sentence(s), the AI, the question, and (for `gemini-web`) the source
   URLs. Label the tone harsh / neutral / settled with one extra `gemini` call per mention during real runs
   (fixture in tests; fall back to a simple word list if the call fails). Build the source leaderboard by
   website, with change vs the previous run and a flag for realpage.com. Save into the run's history file.
   Tests on fixtures. Commit.
-- [ ] **T5 The page.** `site/ai-visibility.html`: top line "last run: <date>, Gemini"; a trend chart per
+- [x] **T5 The page.** `site/ai-visibility.html`: top line "last run: <date>, Gemini"; a trend chart per
   number (mentioned %, top pick %, lawsuit %) with one line per AI and the Sept 12 baseline as labelled
   points; then the lawsuit section stacked: source leaderboard, tone bar, quote wall (newest first, links).
   Keep the existing to-do list. Plain "one run so far" state when there is only one Gemini run. Works on

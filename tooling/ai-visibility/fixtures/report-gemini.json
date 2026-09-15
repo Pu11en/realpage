@@ -1,0 +1,242 @@
+{
+ "generatedAt": "2026-09-20T12:00:00.000Z",
+ "audit": {
+  "target": {
+   "name": "RealPage",
+   "domain": "realpage.com"
+  },
+  "runs": [
+   {
+    "id": "gemini-q01",
+    "model": "gemini",
+    "prompt": {
+     "id": "q01",
+     "text": "What is the best property management software for apartments?",
+     "targetIncluded": false
+    },
+    "result": {
+     "text": "Yardi and RealPage are the leaders."
+    }
+   },
+   {
+    "id": "gemini-q02",
+    "model": "gemini",
+    "prompt": {
+     "id": "q02",
+     "text": "Which revenue management software do big landlords use?",
+     "targetIncluded": false
+    },
+    "result": {
+     "text": "Many use Yardi Revenue IQ."
+    }
+   },
+   {
+    "id": "gemini-q03",
+    "model": "gemini",
+    "prompt": {
+     "id": "q03",
+     "text": "Is RealPage a good company to work with?",
+     "targetIncluded": true
+    },
+    "result": {
+     "text": "RealPage is large, but it faced a DOJ antitrust lawsuit over price-fixing."
+    }
+   },
+   {
+    "id": "gemini-web-q01",
+    "model": "gemini-web",
+    "prompt": {
+     "id": "q01",
+     "text": "What is the best property management software for apartments?",
+     "targetIncluded": false
+    },
+    "result": {
+     "text": "RealPage is the top pick for large portfolios."
+    }
+   },
+   {
+    "id": "gemini-web-q02",
+    "model": "gemini-web",
+    "prompt": {
+     "id": "q02",
+     "text": "Which revenue management software do big landlords use?",
+     "targetIncluded": false
+    },
+    "result": {
+     "text": "RealPage AI Revenue Management is common."
+    }
+   },
+   {
+    "id": "gemini-web-q03",
+    "model": "gemini-web",
+    "prompt": {
+     "id": "q03",
+     "text": "Is RealPage a good company to work with?",
+     "targetIncluded": true
+    },
+    "result": {
+     "text": "RealPage is a big vendor with many products."
+    }
+   }
+  ]
+ },
+ "metrics": {
+  "slices": [
+   {
+    "sliceType": "provider_model",
+    "key": "openai-compatible:gemini",
+    "label": "openai-compatible / gemini",
+    "validResponses": 3,
+    "failedResponses": 0,
+    "mentionRate": {
+     "numerator": 2,
+     "denominator": 3,
+     "value": 0.6666666666666666
+    },
+    "recommendationRate": {
+     "numerator": 0,
+     "denominator": 3,
+     "value": 0.0
+    },
+    "firstPositionRate": {
+     "numerator": 1,
+     "denominator": 3,
+     "value": 0.3333333333333333
+    },
+    "citationRate": {
+     "numerator": 0,
+     "denominator": 3,
+     "value": 0.0
+    },
+    "averageRank": 1.5
+   },
+   {
+    "sliceType": "provider_model",
+    "key": "openai-compatible:gemini-web",
+    "label": "openai-compatible / gemini-web",
+    "validResponses": 3,
+    "failedResponses": 0,
+    "mentionRate": {
+     "numerator": 3,
+     "denominator": 3,
+     "value": 1.0
+    },
+    "recommendationRate": {
+     "numerator": 0,
+     "denominator": 3,
+     "value": 0.0
+    },
+    "firstPositionRate": {
+     "numerator": 3,
+     "denominator": 3,
+     "value": 1.0
+    },
+    "citationRate": {
+     "numerator": 0,
+     "denominator": 3,
+     "value": 0.0
+    },
+    "averageRank": 1.5
+   }
+  ],
+  "promptOutcomes": [
+   {
+    "promptId": "q01",
+    "model": "gemini",
+    "status": "completed",
+    "targetMentioned": true,
+    "targetRank": 2,
+    "sentiment": "neutral",
+    "winner": "Yardi"
+   },
+   {
+    "promptId": "q02",
+    "model": "gemini",
+    "status": "completed",
+    "targetMentioned": false,
+    "targetRank": null,
+    "sentiment": "neutral",
+    "winner": "Yardi"
+   },
+   {
+    "promptId": "q03",
+    "model": "gemini",
+    "status": "completed",
+    "targetMentioned": true,
+    "targetRank": 1,
+    "sentiment": "neutral",
+    "winner": null
+   },
+   {
+    "promptId": "q01",
+    "model": "gemini-web",
+    "status": "completed",
+    "targetMentioned": true,
+    "targetRank": 1,
+    "sentiment": "neutral",
+    "winner": "RealPage"
+   },
+   {
+    "promptId": "q02",
+    "model": "gemini-web",
+    "status": "completed",
+    "targetMentioned": true,
+    "targetRank": 1,
+    "sentiment": "neutral",
+    "winner": "RealPage"
+   },
+   {
+    "promptId": "q03",
+    "model": "gemini-web",
+    "status": "completed",
+    "targetMentioned": true,
+    "targetRank": 1,
+    "sentiment": "neutral",
+    "winner": null
+   }
+  ],
+  "validResponses": 6,
+  "failedResponses": 0,
+  "mentionRate": {
+   "numerator": 5,
+   "denominator": 6,
+   "value": 0.8333333333333334
+  },
+  "recommendationRate": {
+   "numerator": 0,
+   "denominator": 6,
+   "value": 0.0
+  },
+  "firstPositionRate": {
+   "numerator": 3,
+   "denominator": 6,
+   "value": 0.5
+  },
+  "naturalDiscoveryRate": {
+   "numerator": 3,
+   "denominator": 4,
+   "value": 0.75
+  },
+  "shareOfVoice": {
+   "numerator": 5,
+   "denominator": 9,
+   "value": 0.5555555555555556
+  },
+  "averageRank": 1.3,
+  "competitors": [
+   {
+    "name": "Yardi",
+    "domain": "yardi.com",
+    "mentionRate": {
+     "numerator": 2,
+     "denominator": 6,
+     "value": 0.3333333333333333
+    },
+    "recommendationCount": 0,
+    "wins": 2,
+    "averageRank": 1.0
+   }
+  ],
+  "citationDomains": []
+ }
+}

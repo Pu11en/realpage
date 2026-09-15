@@ -27,6 +27,24 @@
     .ai-answer { color: var(--text-muted); font-size: 12px; max-width: 520px; }
     .muted { color: var(--text-muted); }
     details.evidence > summary { cursor: pointer; font-size: 16px; font-weight: 600; margin: 28px 0 10px; }
+    .last-run { font-size: 13px; color: var(--text-muted); margin: 4px 0 10px; }
+    .trends { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; }
+    .trend svg { width: 100%; height: auto; display: block; }
+    .trend svg text { fill: var(--text-muted); font-size: 10px; }
+    .legend { font-size: 12px; color: var(--text-muted); margin: 8px 0 0; display: flex; flex-wrap: wrap; gap: 4px 14px; }
+    .legend i { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 5px; vertical-align: -1px; }
+    .legend i.base { background: none !important; border: 2px solid var(--text-muted); width: 6px; height: 6px; }
+    .src-row.us { color: var(--accent); font-weight: 600; }
+    .up { color: var(--score-low); } .down { color: var(--accent); }
+    .tone-bar { display: flex; height: 16px; border-radius: 3px; overflow: hidden; margin: 6px 0 4px; background: #18181b; }
+    .tone-bar span { display: block; height: 100%; }
+    .tone-harsh { background: var(--score-low); } .tone-neutral { background: var(--text-dim); } .tone-settled { background: var(--score-mid); }
+    .tone-row { font-size: 13px; margin: 10px 0; }
+    .quote { border-left: 3px solid var(--border); padding: 4px 0 4px 10px; margin: 12px 0; font-size: 13px; }
+    .quote blockquote { margin: 0 0 4px; color: var(--text); }
+    .quote .muted { font-size: 12px; }
+    .quote a { color: var(--accent); margin-right: 8px; }
+    .lawsuit-part { margin-bottom: 12px; }
   </style>
 </head>
 <body>
@@ -40,7 +58,96 @@
     const pct = (v) => (v === null || v === undefined ? "--" : `${Math.round(v)}%`);
     const rank = (v) => (v === null || v === undefined ? "--" : `#${Math.round(v * 10) / 10}`);
 
-    Promise.all([loadData("data/ai-visibility.json"), loadData("data/ai-visibility-actions.json")]).then(([d, plan]) => {
+
+    // Run history (T3/T4): index.json + one file per run. Missing history must not break the rest of the page.
+    const HIST = "data/ai-visibility-history/";
+    const loadHistory = () => loadData(HIST + "index.json")
+      .then((ix) => Promise.all(ix.runs.map((r) => loadData(HIST + r.file))))
+      .then((runs) => runs.sort((a, b) => a.date.localeCompare(b.date)))
+      .catch(() => []);
+    const COLORS = { gemini: "#60a5fa", "gemini-web": "#22c55e", claude: "#f97316", "claude-web": "#fb923c", chatgpt: "#a78bfa" };
+    const color = (m, i) => COLORS[m] || ["#f472b6", "#facc15", "#2dd4bf"][i % 3];
+    const niceDate = (d) => new Date(d + "T12:00:00Z").toLocaleDateString("en-US", { month: "short", day: "numeric", timeZone: "UTC" });
+
+    // One small SVG line chart: a line per AI across its own runs, baseline AIs as labelled hollow points.
+    function trendChart(title, key, runs) {
+      const W = 320, H = 170, L = 30, R = 10, T = 12, B = 26;
+      const dates = runs.map((r) => r.date);
+      const x = (d) => dates.length < 2 ? (L + W - R) / 2 : L + (dates.indexOf(d) / (dates.length - 1)) * (W - L - R);
+      const y = (v) => T + (1 - v / 100) * (H - T - B);
+      const series = {};
+      runs.forEach((r) => r.models.forEach((m) => {
+        if (m[key] === null || m[key] === undefined) return;
+        (series[m.model] ||= { name: m.name, baseline: r.baseline, pts: [] }).pts.push([r.date, m[key]]);
+      }));
+      const grid = [0, 50, 100].map((v) => `<line x1="${L}" x2="${W - R}" y1="${y(v)}" y2="${y(v)}" stroke="#27272a"/><text x="${L - 4}" y="${y(v) + 3}" text-anchor="end">${v}%</text>`).join("");
+      const anchor = (i) => dates.length < 2 ? "middle" : i === 0 ? "start" : i === dates.length - 1 ? "end" : "middle";
+      const ticks = dates.map((d, i) => `<text x="${x(d) + (anchor(i) === "start" ? -4 : anchor(i) === "end" ? 4 : 0)}" y="${H - 8}" text-anchor="${anchor(i)}">${esc(niceDate(d))}</text>`).join("");
+      const marks = Object.entries(series).map(([model, s], i) => {
+        const c = color(model, i);
+        if (s.baseline) return s.pts.map(([d, v]) => `<circle cx="${x(d)}" cy="${y(v)}" r="4" fill="none" stroke="${c}" stroke-width="2"><title>${esc(s.name)} (baseline): ${pct(v)}</title></circle>`).join("");
+        const line = s.pts.length > 1 ? `<polyline fill="none" stroke="${c}" stroke-width="2" points="${s.pts.map(([d, v]) => `${x(d)},${y(v)}`).join(" ")}"/>` : "";
+        return line + s.pts.map(([d, v]) => `<circle cx="${x(d)}" cy="${y(v)}" r="3.5" fill="${c}"><title>${esc(s.name)}: ${pct(v)}</title></circle>`).join("");
+      }).join("");
+      const legend = Object.entries(series).map(([model, s], i) => {
+        const last = s.pts[s.pts.length - 1][1];
+        return `<span><i class="${s.baseline ? "base" : ""}" style="background:${color(model, i)};border-color:${color(model, i)}"></i>${esc(s.name)}${s.baseline ? " (Sept 12 baseline)" : ""}: ${pct(last)}</span>`;
+      }).join("");
+      return `<div class="card trend" data-trend="${key}"><div class="muted" style="font-size:13px;margin-bottom:6px;">${esc(title)}</div>
+        <svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(title)} over time">${grid}${ticks}${marks}</svg>
+        <div class="legend">${legend}</div></div>`;
+    }
+
+    function historySection(runs, t) {
+      const own = runs.filter((r) => !r.baseline);
+      const latest = own[own.length - 1];
+      const aiNames = latest ? [...new Set(latest.models.map((m) => m.name.split(" ")[0]))].join(", ") : "";
+      const top = latest
+        ? `<div class="last-run" id="last-run">Last run: ${esc(niceDate(latest.date))}, ${esc(aiNames)}</div>`
+        : `<div class="last-run" id="last-run">No Gemini run yet -- only the Sept 12 Claude / ChatGPT baseline.</div>`;
+      const oneRun = own.length === 1 ? `<div class="muted" id="one-run" style="font-size:13px;margin-bottom:8px;">One run so far -- the lines start on the next run. Each AI is only compared with itself.</div>` : "";
+      const charts = `<h2>Trend over time</h2>${oneRun}<div class="trends">
+        ${trendChart(`Named ${t} (all questions)`, "mentionPct", runs)}
+        ${trendChart(`Made ${t} the top pick (no brand asked)`, "topPickPct", runs)}
+        ${trendChart(`Brought up the lawsuit (asked about ${t})`, "lawsuitPct", runs)}</div>`;
+      return top + charts + lawsuitSection(runs, latest);
+    }
+
+    function lawsuitSection(runs, latest) {
+      const law = latest && latest.lawsuit;
+      const withLaw = runs.filter((r) => r.lawsuit && r.lawsuit.mentions.length);
+      if (!law && !withLaw.length) return "";
+      // 1. Source leaderboard (latest own run).
+      const srcs = (law && law.sources) || [];
+      const maxSrc = Math.max(1, ...srcs.map((s) => s.count));
+      const change = (s) => s.change === null || s.change === undefined ? `<span class="muted">new</span>`
+        : s.change > 0 ? `<span class="up">▲ ${s.change}</span>` : s.change < 0 ? `<span class="down">▼ ${-s.change}</span>` : `<span class="muted">same</span>`;
+      const board = `<div class="card lawsuit-part" id="lawsuit-sources">
+        <div class="muted" style="font-size:13px;margin-bottom:10px;">Websites Gemini + Google Search quotes when it brings up the lawsuit${law && law.comparedWith ? ` (change vs ${esc(niceDate(law.comparedWith))})` : ""}</div>
+        ${srcs.map((s) => `<div class="bar-row src-row ${s.isTarget ? "us" : ""}"><div>${esc(s.site)}${s.isTarget ? " ★" : ""}</div><div class="track"><div class="fill" style="width:${(s.count / maxSrc) * 100}%"></div></div><div>${s.count} ${change(s)}</div></div>`).join("")
+          || `<div class="muted" style="font-size:13px;">No websites quoted on the lawsuit this run.</div>`}</div>`;
+      // 2. Tone meter: mix per AI per run, newest first.
+      const toneRows = runs.slice().reverse().filter((r) => r.lawsuit).flatMap((r) => Object.entries(r.lawsuit.toneMix || {}).map(([model, mix]) => {
+        const n = (mix.harsh || 0) + (mix.neutral || 0) + (mix.settled || 0);
+        if (!n) return "";
+        const name = (r.models.find((m) => m.model === model) || { name: model }).name;
+        const seg = (k) => mix[k] ? `<span class="tone-${k}" style="width:${(mix[k] / n) * 100}%" title="${k}: ${mix[k]}"></span>` : "";
+        return `<div class="tone-row"><div>${esc(name)} <span class="muted">· ${esc(niceDate(r.date))}${r.baseline ? " (baseline)" : ""}</span></div>
+          <div class="tone-bar">${seg("harsh")}${seg("neutral")}${seg("settled")}</div>
+          <div class="muted" style="font-size:12px;">${mix.harsh || 0} harsh · ${mix.neutral || 0} neutral · ${mix.settled || 0} "it's settled now"</div></div>`;
+      })).join("");
+      const tone = `<div class="card lawsuit-part" id="lawsuit-tone"><div class="muted" style="font-size:13px;">How each AI talks about the lawsuit:
+        <span style="color:var(--score-low)">harsh</span> · neutral · <span style="color:var(--score-mid)">"it's settled now"</span></div>${toneRows || `<div class="muted" style="font-size:13px;">No lawsuit mentions yet.</div>`}</div>`;
+      // 3. Quote wall: every mention, newest run first, with links.
+      const quotes = runs.slice().reverse().filter((r) => r.lawsuit).flatMap((r) => r.lawsuit.mentions.map((m) => `<div class="quote">
+        <blockquote>${m.sentences.map(esc).join(" ")}</blockquote>
+        <div class="muted">${esc(m.name)} · ${esc(niceDate(r.date))} · ${esc(m.tone)} · asked: “${esc(m.question)}”</div>
+        ${(m.sources || []).length ? `<div>${m.sources.map((s) => `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.site)}</a>`).join("")}</div>` : ""}</div>`)).join("");
+      const wall = `<div class="card lawsuit-part" id="lawsuit-quotes"><div class="muted" style="font-size:13px;">What they actually said (newest first)</div>${quotes}</div>`;
+      return `<h2>The lawsuit in AI answers</h2>${board}${tone}${wall}`;
+    }
+
+    Promise.all([loadData("data/ai-visibility.json"), loadData("data/ai-visibility-actions.json"), loadHistory()]).then(([d, plan, runs]) => {
       const content = document.getElementById("page-content");
       const f = d.founder, t = esc(d.target);
       const leader = f.topPicks[0] || { name: "--", count: 0 };
@@ -60,6 +167,7 @@
         <div class="meta">What AI chatbots tell apartment owners who ask which software to buy -- and what ${t} should do about it. For the founder / CMO. Tested ${esc((d.generatedAt || "").slice(0, 10))}.</div>
         ${placeholderBanner(d.status)}
         <div class="verdict">${esc(plan.headline)}</div>
+        ${runs.length ? historySection(runs, t) : ""}
 
         <div class="stats-row">
           <div class="stat-card"><div class="value">${pct(f.unbrandedNamedPct)}</div><div class="label">Named when buyers don't ask for ${t}</div><div class="sub">${f.unbrandedAnswers} answers with no brand in the question</div></div>
