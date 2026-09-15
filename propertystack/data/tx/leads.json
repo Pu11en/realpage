@@ -26249,10 +26249,11 @@
   "buyer": "AP KENSINGTON PROPERTY LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://ploteasy.com/property-details/94869/14651-philippine-st-houston-tx-77040",
   "software": "unknown",
   "links": {
-   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip",
+   "website": "https://ploteasy.com/property-details/94869/14651-philippine-st-houston-tx-77040"
   },
   "sources": [
    {
@@ -26269,7 +26270,7 @@
   "address": "2101 HAYES RD 367",
   "lat": null,
   "lon": null,
-  "units": null,
+  "units": 367,
   "stage": "sold",
   "permit_date": "",
   "opening_date": "",
@@ -26277,18 +26278,23 @@
   "buyer": "RC 2101 HAYES LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://ploteasy.com/property-details/240082153/2101-hayes-rd-houston-tx-77077",
   "software": "unknown",
   "links": {
-   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip",
+   "website": "https://ploteasy.com/property-details/240082153/2101-hayes-rd-houston-tx-77077"
   },
   "sources": [
    {
     "fact": "sale_date",
     "url": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   },
+   {
+    "fact": "units",
+    "url": "https://cccres.com/apartments/detail/quinn-at-westchase-the-houston"
    }
   ],
-  "why": "Sold 2025-11-05 \u00b7 to RC 2101 HAYES LLC \u00b7 new owner may re-pick software"
+  "why": "Sold 2025-11-05 \u00b7 to RC 2101 HAYES LLC \u00b7 367 units \u00b7 new owner may re-pick software"
  },
  {
   "area": "tx",
@@ -26297,7 +26303,7 @@
   "address": "8501 BROADWAY BLVD 328",
   "lat": null,
   "lon": null,
-  "units": null,
+  "units": 328,
   "stage": "sold",
   "permit_date": "",
   "opening_date": "",
@@ -26314,9 +26320,13 @@
    {
     "fact": "sale_date",
     "url": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   },
+   {
+    "fact": "units",
+    "url": "https://cccres.com/apartments/detail/altair-residences-houston"
    }
   ],
-  "why": "Sold 2025-11-04 \u00b7 to OCONEE REAL ESTATE HOLDINGS \u00b7 new owner may re-pick software"
+  "why": "Sold 2025-11-04 \u00b7 to OCONEE REAL ESTATE HOLDINGS \u00b7 328 units \u00b7 new owner may re-pick software"
  },
  {
   "area": "tx",
@@ -26417,10 +26427,11 @@
   "buyer": "2410 SOUTH KIRKWOOD ROAD HOLDINGS LP",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://64cents.com/foreclosure-listing/2410-S-KIRKWOOD-RD-279-HOUSTON-TX-77077",
   "software": "unknown",
   "links": {
-   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip",
+   "website": "https://64cents.com/foreclosure-listing/2410-S-KIRKWOOD-RD-279-HOUSTON-TX-77077"
   },
   "sources": [
    {
@@ -26445,10 +26456,11 @@
   "buyer": "SOLAMAR APTS LLC &",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.apartmentcities.com/Dallas-Apartments/dallas/claridge_point_TX/3673/",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.apartmentcities.com/Dallas-Apartments/dallas/claridge_point_TX/3673/"
   },
   "sources": [
    {
@@ -26473,10 +26485,11 @@
   "buyer": "212 MELBA OWNER LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.melbabishoparts.com/",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.melbabishoparts.com/"
   },
   "sources": [
    {
@@ -26501,10 +26514,11 @@
   "buyer": "SOLAMAR APTS LLC &",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.apartmentcities.com/Dallas-Apartments/dallas/claridge_point_TX/3673/",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.apartmentcities.com/Dallas-Apartments/dallas/claridge_point_TX/3673/"
   },
   "sources": [
    {
@@ -26557,10 +26571,11 @@
   "buyer": "DALPHA GROUP LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.enrichedrealestate.com/4137-Dover-St-32-Houston-TX-77087/Apartments/ApartmentGarden14stories/Id=159193",
   "software": "unknown",
   "links": {
-   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip",
+   "website": "https://www.enrichedrealestate.com/4137-Dover-St-32-Houston-TX-77087/Apartments/ApartmentGarden14stories/Id=159193"
   },
   "sources": [
    {
@@ -26585,10 +26600,11 @@
   "buyer": "7879 RIVERFALL PROPCO LLC &",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.waterfordatgoldmarkapts.com/",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.waterfordatgoldmarkapts.com/"
   },
   "sources": [
    {
@@ -26613,10 +26629,11 @@
   "buyer": "CAPRI EVERTON LLC &",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.evertonatbellmar.com/",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.evertonatbellmar.com/"
   },
   "sources": [
    {
@@ -26689,7 +26706,7 @@
   "address": "17610 CALI DR 134",
   "lat": null,
   "lon": null,
-  "units": null,
+  "units": 20,
   "stage": "sold",
   "permit_date": "",
   "opening_date": "",
@@ -26697,18 +26714,23 @@
   "buyer": "CALI CROSSING ACQUISITION LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.enrichedrealestate.com/17610-Cali-Dr-134-Houston-TX-77090/Apartments/ApartmentGarden14stories/Id=346903",
   "software": "unknown",
   "links": {
-   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip",
+   "website": "https://www.enrichedrealestate.com/17610-Cali-Dr-134-Houston-TX-77090/Apartments/ApartmentGarden14stories/Id=346903"
   },
   "sources": [
    {
     "fact": "sale_date",
     "url": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   },
+   {
+    "fact": "units",
+    "url": "https://www.enrichedrealestate.com/17610-Cali-Dr-134-Houston-TX-77090/Apartments/ApartmentGarden14stories/Id=346903"
    }
   ],
-  "why": "Sold 2025-10-28 \u00b7 to CALI CROSSING ACQUISITION LLC \u00b7 new owner may re-pick software"
+  "why": "Sold 2025-10-28 \u00b7 to CALI CROSSING ACQUISITION LLC \u00b7 20 units \u00b7 new owner may re-pick software"
  },
  {
   "area": "tx",
@@ -26748,7 +26770,7 @@
   "units": null,
   "stage": "sold",
   "permit_date": "",
-  "opening_date": "",
+  "opening_date": "5525",
   "sale_date": "2025-10-24",
   "buyer": "RK GLADE APARTMENTS LLC",
   "developer": "",
@@ -26766,6 +26788,10 @@
    {
     "fact": "sale_date",
     "url": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   },
+   {
+    "fact": "opening_date",
+    "url": "https://gladeatthegroves.com/"
    }
   ],
   "why": "Sold 2025-10-24 \u00b7 to RK GLADE APARTMENTS LLC \u00b7 new owner may re-pick software"
@@ -26777,7 +26803,7 @@
   "address": "2300 RED BLUFF RD 170",
   "lat": null,
   "lon": null,
-  "units": null,
+  "units": 170,
   "stage": "sold",
   "permit_date": "",
   "opening_date": "",
@@ -26794,9 +26820,13 @@
    {
     "fact": "sale_date",
     "url": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   },
+   {
+    "fact": "units",
+    "url": "https://cccres.com/apartments/detail/quarters-on-red-bluff-pasadena"
    }
   ],
-  "why": "Sold 2025-10-21 \u00b7 to JP QUARTERS ON RED BLUFF LLC \u00b7 new owner may re-pick software"
+  "why": "Sold 2025-10-21 \u00b7 to JP QUARTERS ON RED BLUFF LLC \u00b7 170 units \u00b7 new owner may re-pick software"
  },
  {
   "area": "tx",
@@ -26841,10 +26871,12 @@
   "buyer": "PAW INVESTORS GROUP LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.colliers.com/en/properties/champaign-park-apartments-liquidation-sale-100-vacant-champaign-il/usa-2106-w-white-st-champaign-il-61821-usa/usa1167028",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.colliers.com/en/properties/champaign-park-apartments-liquidation-sale-100-vacant-champaign-il/usa-2106-w-white-st-champaign-il-61821-usa/usa1167028",
+   "news": "https://www.rentv.com/content/financing/mainnews/news/archive&start=1080"
   },
   "sources": [
    {
@@ -26925,10 +26957,11 @@
   "buyer": "BRISTOL REALTY PARTNERS LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://knightvestresidential.com/communities/kimpton/",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://knightvestresidential.com/communities/kimpton/"
   },
   "sources": [
    {
