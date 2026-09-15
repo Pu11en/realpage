@@ -52,7 +52,7 @@ Open: http://localhost:8765/index.html
   counts, empty/loading states, inline `style=` colors in the page. Rows readable on white (zebra
   `--paper-2`, `--rule` borders), links in blue, primary action amber. Add `index.html` to the list.
   Screenshot desktop + phone to `docs/design-screens/T2-*.png`.
-- [ ] **T3 Property page (`property.html`).** Header card, facts, score, source links, all 11 inline
+- [x] **T3 Property page (`property.html`).** Header card, facts, score, source links, all 11 inline
   `style=` colors moved to classes in styles.css. Add `property.html`. Screenshots.
 - [ ] **T4 Map page (`map.html`, `site/js/map.js`).** Light map: land `--paper-2`, borders `--rule`,
   markers blue with amber for the selected/hot one, tooltip = white card with navy text. Add

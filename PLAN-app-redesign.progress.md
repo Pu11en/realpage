@@ -14,3 +14,10 @@
 - Primary amber action stays the Ask button (one amber per page); no copy or behaviour changes. No empty-state message added (would be new text).
 - Added index.html to tooling/qa/design-pages.txt. Check passes (quick check 0 problems, design 1 page 0 problems); no sideways scroll at 390px.
 - Screenshots: docs/design-screens/T2-desktop.png, T2-phone.png.
+
+## T3 Property page (property.html) — done 2026-09-15 (commit c164c68)
+- All 11 inline style= on property.html moved to classes (back link, deep-dive spacing, pill rows, stage labels, score row, why text, sources list, not-found link). Unknown software pill now uses .pill-unknown (was dark #27272a).
+- Score badge colour via score-high/mid/low classes (new scoreClass() on the page) instead of inline background; breakdown boxes get paper-2 + rule border.
+- Added property.html to tooling/qa/design-pages.txt. check-design.sh passes (0 problems, 2 design pages); no sideways scroll at 390px, no page errors (sold + upcoming examples).
+- Note: check-local.sh on default port 8799 showed 404s because another session held that port; CHECK_PORT=8811 run passes clean.
+- Screenshots: docs/design-screens/T3-desktop.png, T3-phone.png, T3-upcoming.png.
