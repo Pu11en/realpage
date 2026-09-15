@@ -19,8 +19,8 @@
     .facts li { margin: 4px 0; font-size: 13px; list-style: none; }
     .facts { padding-left: 0; }
     .bar-row { display: grid; grid-template-columns: 120px 1fr 60px; align-items: center; gap: 10px; margin: 4px 0; font-size: 13px; }
-    .bar-row .track { height: 12px; background: #18181b; border-radius: 3px; overflow: hidden; }
-    .bar-row .fill { height: 100%; background: var(--text-muted); }
+    .bar-row .track { height: 12px; background: var(--paper-2); border: 1px solid var(--rule); border-radius: 3px; overflow: hidden; }
+    .bar-row .fill { height: 100%; background: #9aa1b0; }
     .bar-row.us .fill { background: var(--accent); }
     .missed li { font-size: 13px; margin: 4px 0; }
     .ai-answer summary { cursor: pointer; }
@@ -33,14 +33,25 @@
     .trend svg text { fill: var(--text-muted); font-size: 10px; }
     .legend { font-size: 12px; color: var(--text-muted); margin: 8px 0 0; display: flex; flex-wrap: wrap; gap: 4px 14px; }
     .legend i { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 5px; vertical-align: -1px; }
-    .legend i.base { background: none !important; border: 2px solid var(--text-muted); width: 6px; height: 6px; }
+    .legend i { background: var(--c); }
+    .legend i.base { background: none; border: 2px solid var(--c); width: 6px; height: 6px; }
+    .trend .grid { stroke: var(--rule); }
+    .trend .ln { fill: none; stroke: var(--c); stroke-width: 2; }
+    .trend .pt { fill: var(--c); } .trend .pt.base { fill: var(--paper); stroke: var(--c); stroke-width: 2; }
+    /* Series colours: blue / amber / grey families that read on white (dataviz). */
+    .s0 { --c: #1a3d8f; } .s1 { --c: #6f8fd6; } .s2 { --c: #c98a00; } .s3 { --c: #e8b64a; } .s4 { --c: #5d6577; }
+    .s5 { --c: #2f5bbf; } .s6 { --c: #8f4a07; } .s7 { --c: #a3a9b6; }
+    .note { font-size: 13px; } .note-sm { font-size: 12px; }
+    .note-gap { font-size: 13px; margin-bottom: 6px; } .note-gap-lg { font-size: 13px; margin-bottom: 10px; }
+    .note-gap-md { font-size: 13px; margin-bottom: 8px; }
     .src-row.us { color: var(--accent); font-weight: 600; }
     .up { color: var(--score-low); } .down { color: var(--accent); }
-    .tone-bar { display: flex; height: 16px; border-radius: 3px; overflow: hidden; margin: 6px 0 4px; background: #18181b; }
+    .tone-bar { display: flex; height: 16px; border-radius: 3px; overflow: hidden; margin: 6px 0 4px; background: var(--paper-2); border: 1px solid var(--rule); }
     .tone-bar span { display: block; height: 100%; }
-    .tone-harsh { background: var(--score-low); } .tone-neutral { background: var(--text-dim); } .tone-settled { background: var(--score-mid); }
+    .tone-harsh { background: var(--score-low); } .tone-neutral { background: #9aa1b0; } .tone-settled { background: var(--amber); }
+    .tone-word-harsh { color: var(--score-low); } .tone-word-settled { color: var(--score-mid); }
     .tone-row { font-size: 13px; margin: 10px 0; }
-    .quote { border-left: 3px solid var(--border); padding: 4px 0 4px 10px; margin: 12px 0; font-size: 13px; }
+    .quote { border-left: 3px solid var(--blue-soft); padding: 4px 0 4px 10px; margin: 12px 0; font-size: 13px; }
     .quote blockquote { margin: 0 0 4px; color: var(--text); }
     .quote .muted { font-size: 12px; }
     .quote a { color: var(--accent); margin-right: 8px; }
@@ -65,8 +76,8 @@
       .then((ix) => Promise.all(ix.runs.map((r) => loadData(HIST + r.file))))
       .then((runs) => runs.sort((a, b) => a.date.localeCompare(b.date)))
       .catch(() => []);
-    const COLORS = { gemini: "#60a5fa", "gemini-web": "#22c55e", claude: "#f97316", "claude-web": "#fb923c", chatgpt: "#a78bfa" };
-    const color = (m, i) => COLORS[m] || ["#f472b6", "#facc15", "#2dd4bf"][i % 3];
+    const SERIES = ["gemini", "gemini-web", "claude", "claude-web", "chatgpt"];
+    const color = (m, i) => SERIES.includes(m) ? `s${SERIES.indexOf(m)}` : `s${5 + (i % 3)}`;
     const niceDate = (d) => new Date(d + "T12:00:00Z").toLocaleDateString("en-US", { month: "short", day: "numeric", timeZone: "UTC" });
 
     // One small SVG line chart: a line per AI across its own runs, baseline AIs as labelled hollow points.
@@ -80,20 +91,20 @@
         if (m[key] === null || m[key] === undefined) return;
         (series[m.model] ||= { name: m.name, baseline: r.baseline, pts: [] }).pts.push([r.date, m[key]]);
       }));
-      const grid = [0, 50, 100].map((v) => `<line x1="${L}" x2="${W - R}" y1="${y(v)}" y2="${y(v)}" stroke="#27272a"/><text x="${L - 4}" y="${y(v) + 3}" text-anchor="end">${v}%</text>`).join("");
+      const grid = [0, 50, 100].map((v) => `<line x1="${L}" x2="${W - R}" y1="${y(v)}" y2="${y(v)}" class="grid"/><text x="${L - 4}" y="${y(v) + 3}" text-anchor="end">${v}%</text>`).join("");
       const anchor = (i) => dates.length < 2 ? "middle" : i === 0 ? "start" : i === dates.length - 1 ? "end" : "middle";
       const ticks = dates.map((d, i) => `<text x="${x(d) + (anchor(i) === "start" ? -4 : anchor(i) === "end" ? 4 : 0)}" y="${H - 8}" text-anchor="${anchor(i)}">${esc(niceDate(d))}</text>`).join("");
       const marks = Object.entries(series).map(([model, s], i) => {
         const c = color(model, i);
-        if (s.baseline) return s.pts.map(([d, v]) => `<circle cx="${x(d)}" cy="${y(v)}" r="4" fill="none" stroke="${c}" stroke-width="2"><title>${esc(s.name)} (baseline): ${pct(v)}</title></circle>`).join("");
-        const line = s.pts.length > 1 ? `<polyline fill="none" stroke="${c}" stroke-width="2" points="${s.pts.map(([d, v]) => `${x(d)},${y(v)}`).join(" ")}"/>` : "";
-        return line + s.pts.map(([d, v]) => `<circle cx="${x(d)}" cy="${y(v)}" r="3.5" fill="${c}"><title>${esc(s.name)}: ${pct(v)}</title></circle>`).join("");
+        if (s.baseline) return s.pts.map(([d, v]) => `<circle class="pt base ${c}" cx="${x(d)}" cy="${y(v)}" r="4"><title>${esc(s.name)} (baseline): ${pct(v)}</title></circle>`).join("");
+        const line = s.pts.length > 1 ? `<polyline class="ln ${c}" points="${s.pts.map(([d, v]) => `${x(d)},${y(v)}`).join(" ")}"/>` : "";
+        return line + s.pts.map(([d, v]) => `<circle class="pt ${c}" cx="${x(d)}" cy="${y(v)}" r="3.5"><title>${esc(s.name)}: ${pct(v)}</title></circle>`).join("");
       }).join("");
       const legend = Object.entries(series).map(([model, s], i) => {
         const last = s.pts[s.pts.length - 1][1];
-        return `<span><i class="${s.baseline ? "base" : ""}" style="background:${color(model, i)};border-color:${color(model, i)}"></i>${esc(s.name)}${s.baseline ? " (Sept 12 baseline)" : ""}: ${pct(last)}</span>`;
+        return `<span><i class="${color(model, i)}${s.baseline ? " base" : ""}"></i>${esc(s.name)}${s.baseline ? " (Sept 12 baseline)" : ""}: ${pct(last)}</span>`;
       }).join("");
-      return `<div class="card trend" data-trend="${key}"><div class="muted" style="font-size:13px;margin-bottom:6px;">${esc(title)}</div>
+      return `<div class="card trend" data-trend="${key}"><div class="muted note-gap">${esc(title)}</div>
         <svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(title)} over time">${grid}${ticks}${marks}</svg>
         <div class="legend">${legend}</div></div>`;
     }
@@ -105,7 +116,7 @@
       const top = latest
         ? `<div class="last-run" id="last-run">Last run: ${esc(niceDate(latest.date))}, ${esc(aiNames)}</div>`
         : `<div class="last-run" id="last-run">No Gemini run yet -- only the Sept 12 Claude / ChatGPT baseline.</div>`;
-      const oneRun = own.length === 1 ? `<div class="muted" id="one-run" style="font-size:13px;margin-bottom:8px;">One run so far -- the lines start on the next run. Each AI is only compared with itself.</div>` : "";
+      const oneRun = own.length === 1 ? `<div class="muted note-gap-md" id="one-run">One run so far -- the lines start on the next run. Each AI is only compared with itself.</div>` : "";
       const charts = `<h2>Trend over time</h2>${oneRun}<div class="trends">
         ${trendChart(`Named ${t} (all questions)`, "mentionPct", runs)}
         ${trendChart(`Made ${t} the top pick (no brand asked)`, "topPickPct", runs)}
@@ -123,9 +134,9 @@
       const change = (s) => s.change === null || s.change === undefined ? `<span class="muted">new</span>`
         : s.change > 0 ? `<span class="up">▲ ${s.change}</span>` : s.change < 0 ? `<span class="down">▼ ${-s.change}</span>` : `<span class="muted">same</span>`;
       const board = `<div class="card lawsuit-part" id="lawsuit-sources">
-        <div class="muted" style="font-size:13px;margin-bottom:10px;">Websites Gemini + Google Search quotes when it brings up the lawsuit${law && law.comparedWith ? ` (change vs ${esc(niceDate(law.comparedWith))})` : ""}</div>
+        <div class="muted note-gap-lg">Websites Gemini + Google Search quotes when it brings up the lawsuit${law && law.comparedWith ? ` (change vs ${esc(niceDate(law.comparedWith))})` : ""}</div>
         ${srcs.map((s) => `<div class="bar-row src-row ${s.isTarget ? "us" : ""}"><div>${esc(s.site)}${s.isTarget ? " ★" : ""}</div><div class="track"><div class="fill" style="width:${(s.count / maxSrc) * 100}%"></div></div><div>${s.count} ${change(s)}</div></div>`).join("")
-          || `<div class="muted" style="font-size:13px;">No websites quoted on the lawsuit this run.</div>`}</div>`;
+          || `<div class="muted note">No websites quoted on the lawsuit this run.</div>`}</div>`;
       // 2. Tone meter: mix per AI per run, newest first.
       const toneRows = runs.slice().reverse().filter((r) => r.lawsuit).flatMap((r) => Object.entries(r.lawsuit.toneMix || {}).map(([model, mix]) => {
         const n = (mix.harsh || 0) + (mix.neutral || 0) + (mix.settled || 0);
@@ -134,16 +145,16 @@
         const seg = (k) => mix[k] ? `<span class="tone-${k}" style="width:${(mix[k] / n) * 100}%" title="${k}: ${mix[k]}"></span>` : "";
         return `<div class="tone-row"><div>${esc(name)} <span class="muted">· ${esc(niceDate(r.date))}${r.baseline ? " (baseline)" : ""}</span></div>
           <div class="tone-bar">${seg("harsh")}${seg("neutral")}${seg("settled")}</div>
-          <div class="muted" style="font-size:12px;">${mix.harsh || 0} harsh · ${mix.neutral || 0} neutral · ${mix.settled || 0} "it's settled now"</div></div>`;
+          <div class="muted note-sm">${mix.harsh || 0} harsh · ${mix.neutral || 0} neutral · ${mix.settled || 0} "it's settled now"</div></div>`;
       })).join("");
-      const tone = `<div class="card lawsuit-part" id="lawsuit-tone"><div class="muted" style="font-size:13px;">How each AI talks about the lawsuit:
-        <span style="color:var(--score-low)">harsh</span> · neutral · <span style="color:var(--score-mid)">"it's settled now"</span></div>${toneRows || `<div class="muted" style="font-size:13px;">No lawsuit mentions yet.</div>`}</div>`;
+      const tone = `<div class="card lawsuit-part" id="lawsuit-tone"><div class="muted note">How each AI talks about the lawsuit:
+        <span class="tone-word-harsh">harsh</span> · neutral · <span class="tone-word-settled">"it's settled now"</span></div>${toneRows || `<div class="muted note">No lawsuit mentions yet.</div>`}</div>`;
       // 3. Quote wall: every mention, newest run first, with links.
       const quotes = runs.slice().reverse().filter((r) => r.lawsuit).flatMap((r) => r.lawsuit.mentions.map((m) => `<div class="quote">
         <blockquote>${m.sentences.map(esc).join(" ")}</blockquote>
         <div class="muted">${esc(m.name)} · ${esc(niceDate(r.date))} · ${esc(m.tone)} · asked: “${esc(m.question)}”</div>
         ${(m.sources || []).length ? `<div>${m.sources.map((s) => `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.site)}</a>`).join("")}</div>` : ""}</div>`)).join("");
-      const wall = `<div class="card lawsuit-part" id="lawsuit-quotes"><div class="muted" style="font-size:13px;">What they actually said (newest first)</div>${quotes}</div>`;
+      const wall = `<div class="card lawsuit-part" id="lawsuit-quotes"><div class="muted note">What they actually said (newest first)</div>${quotes}</div>`;
       return `<h2>The lawsuit in AI answers</h2>${board}${tone}${wall}`;
     }
 
@@ -181,7 +192,7 @@
 
         <h2>Who the AIs pick instead</h2>
         <div class="card">
-          <div class="chart-title muted" style="font-size:13px;margin-bottom:10px;">Top pick in the ${f.unbrandedAnswers} answers where the buyer didn't name a brand</div>
+          <div class="chart-title muted note-gap-lg">Top pick in the ${f.unbrandedAnswers} answers where the buyer didn't name a brand</div>
           ${f.topPicks.map((p) => `<div class="bar-row ${p.name === d.target ? "us" : ""}"><div>${esc(p.name)}</div><div class="track"><div class="fill" style="width:${(p.count / maxPick) * 100}%"></div></div><div class="muted">${p.count}</div></div>`).join("")}
         </div>
 
