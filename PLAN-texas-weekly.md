@@ -26,6 +26,8 @@ Drew's decisions:
   the tool reads); each run reports "found X of 25" (report only). Refresh the key every 3 months.
 - **Discord note (bot `/api/notify` to thread 1548911246705959072):** just totals + cost, e.g.
   "Texas: 12 new projects, 5 new sales, 3 updated · found 19 of 25 · cost this week $0.02". No spending cap.
+- **Pre-approved, don't ask:** Jina searches for building this (answer key, tests, the one real run in W9);
+  Brave under its 800/month free cap; free public downloads.
 - **Not in the weekly run:** Agent Reach (its own section, planned separately).
 
 Run with: `Do the next unticked task in PLAN-texas-weekly.md, then tick it and stop.`
@@ -41,14 +43,16 @@ Open: http://localhost:8765 → Early Leads → Tx
 ## Tasks
 
 - [ ] **W1 Remember the last run.** `propertystack/runs/tx/state.json` keeps, per source, the date (or last
-  record id) of the last successful pull. Every Texas puller (TABS, city recipes, Houston sheets, DCAD/HCAD,
-  TAD) takes a `since` date and pulls only newer records; first run = the Texas build's own dates. Tests
+  record id) of the last successful pull. Every Texas puller built in `PLAN-lead-finder-texas.md` (T2-T5: TABS, city recipes, Houston sheets,
+  DCAD/HCAD, TAD) takes a `since` date and pulls only newer records. Seed `state.json` from the newest
+  record date per source in the Texas build's run folder. Appraisal-district zips (~200 MB, updated about
+  monthly) are re-downloaded only when the file changed (Last-Modified/size), else the cached copy is reused. Tests
   with saved responses. Commit.
-- [ ] **W2 One row per building.** Merge matches the same building across sources (same address after
+- [ ] **W2 One row per building.** Extend the existing `merge.py` (don't write a second merger): merge matches the same building across sources (same address after
   cleanup, or same distinctive name in the same city -- reuse `lib.building_match`); the row keeps every
   source (name + link) and the best facts (record fields beat news). Fixture tests from real Texas rows
   (a TABS project that is also an Austin permit). Commit.
-- [ ] **W3 NEW and UPDATED tags.** Compare the new `leads.json` to the previous one: new building →
+- [ ] **W3 NEW and UPDATED tags.** Compare the new `leads.json` to the last committed one (`git show HEAD:<path>`): new building →
   `tag: "NEW"`, changed stage/sale/phone/software → `tag: "UPDATED"` + what changed ("now leasing",
   "sold to X"); `tagged_on` date; tags older than 7 days are cleared. Leads are never deleted. Weekly
   totals (new projects, new sales, updated) written to the run folder. Tests. Commit.
@@ -76,13 +80,19 @@ Open: http://localhost:8765 → Early Leads → Tx
   `~/.local/state/ccdb/gowork-loops.json`) or the tree has uncommitted changes, wait and retry hourly
   for up to a day; else W1 pulls → W4 → W5 → W6 → merge (W2) → tags (W3) → software/phone lookups for new
   leads only → answer-key score → cost → `bash tooling/dev.sh` rebuild (site + chat) → local commit
-  "Texas weekly <date>" (**never push**) → Discord note via the bot's `/api/notify` (URL/secret from
-  `~/.config/propertystack/weekly.env`, not in the repo). If the answer key is older than 3 months, the
+  "Texas weekly <date>" (**never push**) → Discord note: `POST $CCDB_API_URL/api/notify` with `Authorization: Bearer $CCDB_API_SECRET` and
+  `{"message": ..., "channel_id": 1548911246705959072}`; URL + secret read from
+  `~/.config/propertystack/weekly.env` (chmod 600, never in the repo; create it from the session's
+  `CCDB_API_URL`/`CCDB_API_SECRET` env vars if missing). If the bot is down, save the note in the run folder. If the answer key is older than 3 months, the
   note adds "answer key due for refresh". `--dry-run` skips the commit and note. A failing source is
   skipped and listed in the note. Run it once for real; paste the note in the progress log. Commit.
 - [ ] **W10 Monday timer.** systemd user unit + timer (`OnCalendar=Mon 08:00`, `Persistent=true`) in
   `tooling/systemd/`, an install script that copies them to `~/.config/systemd/user/` and enables the
-  timer; confirm with `systemctl --user list-timers`. Commit.
+  timer; confirm with `systemctl --user list-timers`. **The unit runs the real checkout's script by
+  absolute path, `/home/drewp/main-projects/realpage/.worktrees/local-test/tooling/texas-weekly.sh`, never
+  the build copy (it is deleted after the build).** If that file isn't there yet (build not merged), the
+  unit logs "not installed yet" and exits 0. Also check WSL has systemd on (`systemctl --user status`);
+  if not, write that in the progress log and use a user crontab line instead. Commit.
 - [ ] **W11 Show it on the site + chat.** Texas table: small "NEW this week" / "UPDATED: …" badges, a
   "found in N sources" note that expands to the source links, and a line at the top "Updated Monday
   <date>: N new, M updated". Chat data includes the tags so "what's new in Texas this week?" works
