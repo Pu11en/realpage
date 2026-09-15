@@ -1,0 +1,50 @@
+{
+  "part": "unhappy",
+  "fetchedAt": "2026-09-15T07:52:23.573607+00:00",
+  "requestsUsed": 18,
+  "blocked": "",
+  "dropped": {
+    "older than 24 months": 28,
+    "job ad": 14,
+    "names none of Yardi / Entrata / AppFolio": 53,
+    "no complaint words": 20,
+    "no Texas mention": 12
+  },
+  "posts": [
+    {
+      "url": "https://www.reddit.com/r/askaustin/comments/1qjcz3l/has_anyone_used_bungalow/",
+      "subreddit": "askaustin",
+      "title": "Has anyone used Bungalow?",
+      "excerpt": "Hi friends! I’m renting a room through Bungalow and would like to know if anyone here is also using bungalow? \n\nI’m about to move in to a house in Austin next week but trying to contact someone for questions has been challenging.\n\nCan someone enlighten me on who do you contact or if you know of a d…",
+      "comments": [
+        "I’ve never heard of this service/app but their TrustPilot reviews are not inspiring. https://www.trustpilot.com/review/bungalow.com"
+      ],
+      "score": 5,
+      "commentCount": 1,
+      "date": "2026-01-21",
+      "companies": [
+        "AppFolio"
+      ],
+      "part": "unhappy",
+      "query": "appfolio (Texas OR Dallas OR Houston OR Austin OR \"San Antonio\" OR \"Fort Worth\" OR Plano)"
+    },
+    {
+      "url": "https://www.reddit.com/r/PropertyManagement/comments/1g676mt/seeking_advice_transitioning_from_appfolio_to/",
+      "subreddit": "PropertyManagement",
+      "title": "Seeking Advice: Transitioning from AppFolio to Entrata",
+      "excerpt": "Hi everyone,\n\nOur property management company currently oversees around 1,000 units, but we're on track to expand to 5,000 units soon. We're currently managing properties in multiple states—specifically California and Texas—and we're considering making the switch from AppFolio to Entrata to better …",
+      "comments": [
+        "Hey denis, we are creating an AI Bot for your use case i.e. specialised property management, which can handle thousands of units and tenants simultaneously and that will really help you guys with reducing payroll & quick response. Let me know if you want to have a chat and get a pilot program up an…"
+      ],
+      "score": 4,
+      "commentCount": 2,
+      "date": "2024-10-18",
+      "companies": [
+        "Entrata",
+        "AppFolio"
+      ],
+      "part": "unhappy",
+      "query": "r/PropertyManagement: (yardi OR entrata OR appfolio) (Texas OR Dallas OR Houston OR Austin OR \"San Antonio\" OR \"Fort Worth\" OR Plano)"
+    }
+  ]
+}

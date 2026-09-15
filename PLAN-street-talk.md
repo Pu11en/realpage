@@ -66,7 +66,7 @@ Open: http://localhost:8765/street-talk.html
   also a YouTube search per building via Agent Reach (title + link, transcript excerpt only if it names the
   building). Keeps a post only if it names the building. Saves `raw/<date>/buildings.json` with the building
   id attached. Test with a fixture. Run it live once (request cap from the safety rules), commit the raw file + its report, continue.
-- [ ] **T4 Part 3 collector: unhappy rival customers.** `--part unhappy` searches property-manager subreddits
+- [x] **T4 Part 3 collector: unhappy rival customers.** `--part unhappy` searches property-manager subreddits
   for Yardi / Entrata / AppFolio with complaint words (switching, leaving, support, hate, migrate, alternative)
   plus Texas words. Saves `raw/<date>/unhappy.json`. Test with a fixture. Run it live once (request cap from the safety rules), commit the raw file + its report, continue.
 - [ ] **T5 Labels + the saved tab data.** `tooling/street-talk/build.py` turns the raw files into

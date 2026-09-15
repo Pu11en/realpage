@@ -8,6 +8,7 @@ keeping whatever was already saved. The cookie is never printed.
 Usage:
   python3 tooling/street-talk/collect.py --part rivals [--budget 30] [--date 2026-09-15]
   python3 tooling/street-talk/collect.py --part buildings --budget 60
+  python3 tooling/street-talk/collect.py --part unhappy --budget 30
 
 Part 2 (buildings) also searches YouTube through yt-dlp (the Agent Reach YouTube
 channel, no login): title + link, plus a transcript excerpt only if the
@@ -478,7 +479,101 @@ def collect_buildings(reddit: Reddit, now: dt.datetime, buildings: list[dict] | 
             "blocked": blocked, "dropped": dropped, "posts": posts}
 
 
-PARTS = {"rivals": collect_rivals, "buildings": collect_buildings}
+# ---- Part 3: unhappy Yardi / Entrata / AppFolio customers ------------------------------
+
+UNHAPPY_MONTHS = 24
+RIVALS = ["Yardi", "Entrata", "AppFolio"]
+COMPLAINT_WORDS = ["switching", "leaving", "support", "hate", "migrate", "alternative"]
+COMPLAINT_RE = re.compile(
+    r"\b(switch(ing|ed)?|leav(e|ing)|support|hate[sd]?|migrat(e|ing|ion)|alternatives?|"
+    r"moving (away|off)|replace|cancel+(ing|ed)?|frustrat\w*|nightmare|terrible|awful|worst)\b", re.I)
+PM_SUBS = ["PropertyManagement", "multifamily", "Landlord", "realestateinvesting"]
+
+
+def unhappy_searches() -> list[tuple[str, str | None]]:
+    """(query, subreddit) pairs for part 3, most useful first.
+
+    Reddit search returns little when company, complaint and Texas words are all
+    required at once, so the complaint words are matched locally (COMPLAINT_RE).
+    """
+    texas = "(" + " OR ".join(f'"{w}"' if " " in w else w for w in TEXAS_WORDS) + ")"
+    complaint = "(" + " OR ".join(COMPLAINT_WORDS) + ")"
+    any_rival = "(" + " OR ".join(r.lower() for r in RIVALS) + ")"
+    searches = [(f"{name.lower()} {texas}", None) for name in RIVALS]
+    searches += [(f"{any_rival} {texas}", sub) for sub in PM_SUBS]
+    searches += [(f"{any_rival} {complaint}", sub) for sub in PM_SUBS]
+    searches += [(any_rival, sub) for sub in ["Dallas", "houston", "Austin", "sanantonio", "texas"]]
+    return searches
+
+
+def collect_unhappy(reddit: Reddit, now: dt.datetime, comment_posts: int = 99) -> dict:
+    cutoff = (now - dt.timedelta(days=30 * UNHAPPY_MONTHS)).timestamp()
+    kept: dict[str, dict] = {}
+    dropped: dict[str, int] = {}
+    blocked = ""
+
+    def drop(reason: str) -> None:
+        dropped[reason] = dropped.get(reason, 0) + 1
+
+    try:
+        for query, sub in unhappy_searches():
+            if reddit.left() <= 0:
+                break
+            payload = reddit.get(rs.search_url(query, sub, "relevance", "all", SEARCH_LIMIT))
+            for child in rs.children(payload):
+                post = rs.post_from(child)
+                if post is None:
+                    drop("missing title or link")
+                    continue
+                if post["url"] in kept:
+                    drop("duplicate link")
+                    continue
+                if not post["createdUtc"] or post["createdUtc"] < cutoff:
+                    drop(f"older than {UNHAPPY_MONTHS} months")
+                    continue
+                if is_job_ad(post):
+                    drop("job ad")
+                    continue
+                text = f"{post['title']} {post['body']}"
+                names = [n for n in companies_in(text) if n in RIVALS]
+                if not names:
+                    drop("names none of Yardi / Entrata / AppFolio")
+                    continue
+                if not COMPLAINT_RE.search(text):
+                    drop("no complaint words")
+                    continue
+                if post["subreddit"].lower() not in TEXAS_SUBS and not TEXAS_RE.search(text):
+                    drop("no Texas mention")
+                    continue
+                kept[post["url"]] = {
+                    "url": post["url"],
+                    "subreddit": post["subreddit"],
+                    "title": post["title"],
+                    "excerpt": rs.excerpt(post["body"], EXCERPT_CHARS),
+                    "comments": [],
+                    "score": post["score"],
+                    "commentCount": post["commentCount"],
+                    "date": iso_date(post["createdUtc"]),
+                    "companies": companies_in(text),
+                    "part": "unhappy",
+                    "query": query if sub is None else f"r/{sub}: {query}",
+                }
+        by_talk = sorted(kept.values(), key=lambda p: p["commentCount"], reverse=True)
+        for post in by_talk[:comment_posts]:
+            if reddit.left() <= 0 or not post["commentCount"]:
+                break
+            thread = reddit.get(post["url"] + ".json?sort=top&limit=2&depth=1&raw_json=1")
+            post["comments"] = [rs.excerpt(c["body"], EXCERPT_CHARS)
+                                for c in rs.comments_from(thread, 2)]
+    except Blocked as error:
+        blocked = str(error)
+
+    posts = sorted(kept.values(), key=lambda p: p["date"], reverse=True)
+    return {"part": "unhappy", "fetchedAt": now.isoformat(), "requestsUsed": reddit.used,
+            "blocked": blocked, "dropped": dropped, "posts": posts}
+
+
+PARTS = {"rivals": collect_rivals, "buildings": collect_buildings, "unhappy": collect_unhappy}
 
 
 def main() -> None:
