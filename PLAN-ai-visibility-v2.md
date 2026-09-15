@@ -67,7 +67,7 @@ Open: http://localhost:8765/ai-visibility.html
   (fixture in tests; fall back to a simple word list if the call fails). Build the source leaderboard by
   website, with change vs the previous run and a flag for realpage.com. Save into the run's history file.
   Tests on fixtures. Commit.
-- [ ] **T5 The page.** `site/ai-visibility.html`: top line "last run: <date>, Gemini"; a trend chart per
+- [x] **T5 The page.** `site/ai-visibility.html`: top line "last run: <date>, Gemini"; a trend chart per
   number (mentioned %, top pick %, lawsuit %) with one line per AI and the Sept 12 baseline as labelled
   points; then the lawsuit section stacked: source leaderboard, tone bar, quote wall (newest first, links).
   Keep the existing to-do list. Plain "one run so far" state when there is only one Gemini run. Works on
