@@ -162,7 +162,7 @@
         }
 
         document.getElementById("leads-tbody").innerHTML = rows.map((l, i) => `
-          <tr class="${l.propertyId ? "clickable" : ""}" ${l.propertyId ? `data-id="${l.propertyId}"` : ""}>
+          <tr class="clickable" data-id="${l.propertyId || l.id}">
             <td data-label="Rank">${i + 1}</td>
             <td data-label="Score"><span class="score-badge" style="background:${scoreBadgeColor(l.score)}">${l.score}</span></td>
             <td class="lead-prop"><strong>${l.property}</strong> ${l.isNew ? '<span class="pill pill-new">NEW</span>' : ""}${l.subArea ? `<div class="lead-subarea">${l.subArea}</div>` : ""}
@@ -178,7 +178,7 @@
 
         document.querySelectorAll("#leads-tbody tr.clickable").forEach((tr) => {
           tr.addEventListener("click", () => {
-            location.href = `property.html?id=${encodeURIComponent(tr.dataset.id)}`;
+            location.href = `property.html?id=${encodeURIComponent(tr.dataset.id)}&area=${encodeURIComponent(area.slug)}`;
           });
         });
 

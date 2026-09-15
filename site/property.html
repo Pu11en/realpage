@@ -162,13 +162,72 @@
         <ul>${items.join("")}</ul></div>`;
     }
 
-    loadData("data/properties.json").then((data) => {
+    // A lead row with no saved property record (Texas, Arizona, New York permits and sales).
+    const LEAD_STAGE = { planned: "Planned", permitted: "Permitted", "under construction": "Under construction", leasing: "Leasing", sold: "Sold" };
+    function leadPage(l, area) {
+      const name = l.property || l.community || l.address || "Unnamed project";
+      const sold = l.signalType === "Sold";
+      const stage = LEAD_STAGE[l.stage] || l.signalType || "--";
+      const sw = l.software ? vendorPill(l.software) : sold ? `<span class="pill pill-unknown">Unknown</span>` : vendorPill(null);
+      const urls = [];
+      const add = (u) => { if (u && !urls.includes(u)) urls.push(u); };
+      (l.sources || []).forEach(add);
+      Object.values(l.links || {}).forEach(add);
+      const items = urls.map((u) => /^https?:/.test(u)
+        ? `<li><span class="dim">${sourceLabel(u)}:</span> ${link(u)}</li>`
+        : `<li>${esc(u.replace(/^\[|\]$/g, ""))}</li>`);
+      const bits = [l.address ? esc(l.address) : null, esc(l.city), area ? esc(area.label) : null,
+        l.units ? `${l.units} units` : "units not stated"].filter(Boolean);
+      const who = sold ? `Buyer: ${esc(l.buyer || "not listed")}` : `Developer: ${esc(l.developer || "not listed")}`;
+      return `
+        <div class="back-row"><a class="back-link" href="index.html" onclick="if (history.length > 1 && document.referrer.startsWith(location.origin)) { history.back(); return false; }">&larr; Back</a></div>
+        <h1>${esc(name)}</h1>
+        <div class="meta">${bits.join(" &middot; ")}<br/>${who}</div>
+        <button class="btn deep-dive-btn detail-dive" data-deep-dive="${esc(l.id)}">✦ Deep dive in chat</button>
+        <div class="cards-row">
+          <div class="card"><h3>Stage</h3><dl class="kv">
+            <dt>Stage</dt><dd>${esc(stage)}</dd>
+            <dt>Signal</dt><dd>${esc(l.signal || "--")}</dd>
+            ${l.permitDate ? `<dt>Permit date</dt><dd>${fmtDate(l.permitDate)}</dd>` : ""}
+            ${l.saleDate ? `<dt>Sale date</dt><dd>${fmtDate(l.saleDate)}</dd>` : ""}
+            ${sold ? "" : `<dt>Expected open</dt><dd>${l.openingDate ? fmtDate(l.openingDate) : "not stated"}</dd>`}
+          </dl></div>
+          <div class="card"><h3>Software</h3><div class="pill-row">${sw}</div>
+            ${!l.software && !sold ? `<div class="dim">Not built yet -- software not picked.</div>` : ""}</div>
+          <div class="card"><h3>Lead score</h3>
+            <div class="score-row"><span class="score-badge score-badge-lg ${scoreClass(l.score)}">${l.score}</span></div>
+            <div class="why">${esc(l.why)}</div></div>
+          <div class="card"><h3>Contact</h3>${l.officePhone
+            ? `<dl class="kv"><dt>Phone</dt><dd><a href="tel:${esc(l.officePhone)}">${esc(l.officePhone)}</a></dd></dl>`
+            : `<div class="dim">Phone/email not found.${l.website ? `<br/>Try the website: ${link(l.website, "open site")}` : ""}</div>`}</div>
+        </div>
+        <div class="card sources"><h3>Sources</h3><ul>${items.join("") || `<li class="dim">No source saved.</li>`}</ul></div>`;
+    }
+
+    function showLead(hit) {
+      const content = document.getElementById("page-content");
+      const l = hit.lead;
+      document.title = `CraneSignal -- ${l.property || l.address}`;
+      content.innerHTML = leadPage(l, hit.area);
+      content.querySelector("[data-deep-dive]").addEventListener("click", () => {
+        window.PSChatPanel.deepDive(window.PSChatPanel.deepDivePrompt({
+          name: l.property || l.address, city: l.city, units: l.units, software: l.software,
+          upcoming: l.signalType !== "Sold",
+        }));
+      });
+    }
+
+    loadData("data/properties.json").then(async (data) => {
       const content = document.getElementById("page-content");
       let p = data.properties.find((row) => row.id === id);
       let isUpcoming = false;
       if (!p) {
         p = (data.upcoming || []).find((row) => row.id === id);
         isUpcoming = !!p;
+      }
+      if (!p) {
+        const hit = await findLead(id, new URLSearchParams(location.search).get("area")).catch(() => null);
+        if (hit) { showLead(hit); return; }
       }
       if (!p) {
         content.innerHTML = `<h1>Property not found</h1>

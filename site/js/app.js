@@ -99,6 +99,27 @@ function leadStats(rows, today) {
   };
 }
 
+// Detail page for a lead row with no propertyId: find the lead by its own id.
+// `areaFiles` = [{slug, label, leads}], the wanted area first when known.
+function pickLead(areaFiles, id) {
+  for (const a of areaFiles) {
+    const lead = (a.leads || []).find((l) => l.id === id);
+    if (lead) return { lead, area: a };
+  }
+  return null;
+}
+
+async function findLead(id, areaSlug) {
+  const m = await loadData("data/areas/index.json");
+  const areas = m.areas.slice().sort((a, b) => (b.slug === areaSlug) - (a.slug === areaSlug));
+  for (const a of areas) {
+    const data = await loadData(a.dataPath);
+    const hit = pickLead([{ slug: a.slug, label: a.label, leads: data.leads }], id);
+    if (hit) return hit;
+  }
+  return null;
+}
+
 function placeholderBanner(statusText) {
   if (!statusText) return "";
   return `<div class="placeholder-banner">${statusText}</div>`;
