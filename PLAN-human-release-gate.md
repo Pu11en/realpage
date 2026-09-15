@@ -79,7 +79,7 @@ Run with: `Do the next unticked task in PLAN-human-release-gate.md, then tick it
   fix release blocking problems, and rerun the Check. Clearly label this as an automated dry run,
   not human testing. Commit.
 
-- [ ] **H8 Hand Drew the real human test.** Leave the combined preview running and produce a short
+- [x] **H8 Hand Drew the real human test.** Leave the combined preview running and produce a short
   observation sheet that asks Drew to use his own words, not copy scripted prompts. Include the
   address, a stop command, the exact push rules below, and a place to record confusion. Do not call
   the candidate ready and do not push. Commit.

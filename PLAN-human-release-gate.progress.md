@@ -128,3 +128,22 @@
   missing; it remains recorded as a failure, not a passing release result.
 - Stopped the isolated preview after the dry run and removed only its disposable accounts and chats.
   H8 will start a new, clean preview for Drew's actual human test.
+
+## 2026-09-15 — H8: real human-test handoff
+
+- Started a new, isolated, sign-in-enabled CraneSignal preview and left it running at
+  `http://localhost:8765`. It has fresh local account and chat storage, separate from the everyday
+  preview. The account screen returned 200 before handoff.
+- Added a short observation sheet for Drew. It gives the address and stop command, asks for natural
+  use rather than scripted prompts, lists the key journeys and boundary checks, gives space for
+  confusion notes, and repeats the exact rule that the candidate is not ready to push until every
+  human and automated gate passes.
+- Added two offline H8 regression checks so the human handoff cannot lose its private-window,
+  fresh-account, address, stop-command, natural-use, note-taking, or push-gate instructions.
+- Checked: H8's offline checks passed (2 tests); `bash tooling/human-test.sh check` passed;
+  `bash tooling/qa/check-fixes.sh` passed (145 focused tests, three page checks, and seven design
+  page checks); and `chatbot/tests` passed (35 tests). `python3 -m pytest -q` still stops at the
+  pre-existing unrelated client-map collection error because its local `census` helper is missing;
+  this is recorded as a failure, not a passing release result.
+- The preview stays running for Drew's actual test. Stop it afterward with
+  `bash tooling/human-test.sh stop`; this removes only the preview's disposable accounts and chats.
