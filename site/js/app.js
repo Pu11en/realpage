@@ -49,6 +49,7 @@ function renderShell(activeKey) {
           title="${VIEW_AS_TIP}">View as</label>
         <select id="view-as-select" title="${VIEW_AS_TIP}">${vendorOptions}</select>
         <div id="last-updated" style="color: var(--text-dim); font-size: 11px;"></div>
+        <a href="privacy.html" style="color: var(--text-dim); font-size: 11px;">Privacy</a>
       </div>
     </aside>
     <main class="main" id="page-content"></main>
