@@ -479,6 +479,9 @@ _GENERIC_NAMES = {
     "building permit", "apartments (3+ dwelling units)", "new construction", "apartments",
     "multi-family dwelling", "commercial multi-family", "multifamily", "unnamed project",
 }
+# Raw subdivision/plat labels a permit feed uses instead of a project name, e.g.
+# "South Pier Lot 6" (developer "City of Tempe"): a plat name plus a lot/parcel/tract number.
+_LOT_LABEL_RE = re.compile(r"^.+\b(?:lot|parcel|tract)\s+\d+[a-z]?$", re.I)
 _DICT_URL_RE = re.compile(r"""^\{'url': '([^']+)'\}$""")
 
 
@@ -585,7 +588,8 @@ def sources_entries(items) -> list[dict]:
 def _nice_name(name: str, address: str = "") -> str:
     """ALL-CAPS names read as shouting; a generic permit label isn't a name --
     call it "Apartments at <address>" when there is one."""
-    if (name or "").strip().lower() in _GENERIC_NAMES:
+    stripped = (name or "").strip()
+    if stripped.lower() in _GENERIC_NAMES or _LOT_LABEL_RE.match(stripped):
         return f"Apartments at {address.title()}" if address else "Unnamed project"
     return name.title() if name and name.isupper() else name
 
