@@ -1,0 +1,21 @@
+---
+url: "https://www.realpage.com/news/realpage-launches-military-housing-solution/"
+title: "RealPage Launches Military Housing Solution"
+type: "posts"
+lastmod: "2009-01-19T00:00:00-06:00"
+crawled: "2026-09-15"
+source: "crawl4ai"
+---
+
+# RealPage Launches Military Housing Solution
+January 19, 2009
+### _Integrated approach increase management efficiency for privatized military family housing_
+**(January 19, 2009)—** RealPage, Inc., a leading provider of on-demand software and services to the multifamily industry, announces the release of OneSite Leasing & Rents Military Housing today at the Professional Housing Management Association (PHMA) conference in San Diego.
+OneSite Leasing & Rents Military Housing, a focused version of the popular RealPage property management software, easily handles the unique requirements of managing privatized military family housing. This powerful on-demand tool enables property managers to accurately and efficiently manage prospective military residents, service member housing assignments, collection of housing allowance, and provision of maintenance for on-base residents. It accommodates the unique demographic information relevant for housing entitlements and provides for automatic processing of clearinghouse transactions in each branch of service.
+“United Communities is excited to be the first Air Force/Army Privatization contractor to deploy the RealPage property management software,” says Jim Curren, director of property management for United Communities at McGuire Air Force Base and Fort Dix. “We have had terrific experiences with the RealPage CrossFire Contact Center services at McGuire/Dix and with the RealPage property management software across our entire conventional portfolio. The scope of RealPage solutions and a single enterprise platform makes sense for us.”
+OneSite Leasing & Rents Military Housing is part of the RealPage enterprise-wide property management solution that includes both front-office and back-office components for an integrated approach that helps management companies reduce their operating expenses through more streamlined and centralized business processes. In addition to Leasing & Rents and the CrossFire Contact Center, the RealPage solution includes prospect management solutions, renters insurance and screening, purchasing management, and utility management services. According to Dave McKenna, director of military markets for RealPage, “Best of all, RealPage frees up site personnel to do what they do best: lease housing and provide high-level customer service to military families, so you get the double benefit of improved operational efficiency and increased resident satisfaction.”
+“RealPage has been an excellent partner with us in our military housing program at the Naval Air Station — New Orleans. We’ve deployed OneSite Leasing & Rents as well as CrossFire Contact Center. The team at RealPage has been extremely engaged and responsive every step of the way,” stated Alex V. Lewis, president of Patrician Management. “When Hurricane Gustav hit last year, RealPage even helped us communicate evacuation information to our residents through the Contact Center. It was a great assistance in that emergency.”
+To schedule an interview with a RealPage executive, please contact Lisa Bascom at lisa.bascom@realpage.com or (972) 820-3246.
+* * *
+**About RealPage**
+Located in Carrollton, Texas, a suburb of Dallas, RealPage provides products and services to more than 20,000 apartment communities across the United States. Its six on-demand product lines include OneSite® property management systems that automate the leasing, renting, management, and accounting of conventional, affordable, tax credit, student housing, and military properties; CrossFire® sales and marketing systems that boost occupancy and build retention; YieldStar® asset optimization systems that maximize asset valuation and investment return; Velocity™ utility management services that accelerate payments for resident charges; LeasingDesk® risk mitigation systems that reduce a community’s exposure to risk and liability; and OpsTechnology™ spend management systems that help owners manage and reduce operating expenses. For more information, call 1-87-REALPAGE or visit www.realpage.com.

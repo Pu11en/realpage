@@ -1,0 +1,29 @@
+---
+url: "https://www.realpage.com/news/renters-insurance-claims-spike-in-the-aftermath-of-hurricane/"
+title: "Renter’s Insurance Claims Spike in the Aftermath of Hurricane"
+type: "posts"
+lastmod: "2008-10-21T00:00:00-05:00"
+crawled: "2026-09-15"
+source: "crawl4ai"
+---
+
+# Renter’s Insurance Claims Spike in the Aftermath of Hurricane
+October 21, 2008
+### _LeasingDesk and American Modern Insurance Group assisting more than 300 policyholders through claims process_
+**(October 21, 2008)—** LeasingDesk® Insurance Services, a wholly owned subsidiary of RealPage, Inc., and a leading provider of point of lease systems for the multifamily industry, along with American Modern Insurance Group, the major underwriter of its liability and renter’s insurance policies, today announced more than 300 renter’s insurance claims have been filed in the weeks following Hurricane Ike. The majority of the affected policyholders were in the Houston area and to date more than $404,000 in payments have been distributed, averaging $1,493 per claim. The companies anticipate providing more than $500,000 in total loss reimbursements once all claims are finalized.
+“The damage and loss caused by Hurricane Ike was undoubtedly extensive,” said Dirk Wakeham, president of LeasingDesk. “Our number one priority is to process every qualified claim quickly and efficiently to ensure our customers receive the resources they need immediately after a loss.”
+American Modern opened a catastrophe claims office in Houston to assist affected residents through the claims process and provide financial reimbursement to qualifying residents. Since opening the office on October 7th, 88 percent of the 308 claims have been managed and closed, providing residents with cash advances to assist with temporary housing and emergency living expenses.
+“The most important service we can provide residents following a disaster like this is peace of mind that their immediate needs will be met,” said Bob Crowley, vice president of claims for American Modern. “Our catastrophe teams are trained to provide our customers with the highest level of support throughout this difficult time.”
+The Houston apartment where Molly Stratton and her family live was one of many residences impacted by Hurricane Ike. The walls and carpet inside the unit sustained significant wind and water damage and needed to be completely renovated before they could move back in. Stratton was reassured to know LeasingDesk renter’s insurance policy provided her with cash advances for temporary housing, food and clothing as well as compensate her family for personal belongings damaged as a result of the storm.
+“Trying to get our life back to normal after the storm was a bit difficult,” explained Stratton. “We were living at a friend’s townhouse and making calls to our apartment community to figure out when we could return to our home. American Modern was incredibly responsive to our needs. I was so impressed with how quickly the company responded to our claim and how seamless the process was.”
+Residents who need to file a claim with LeasingDesk Insurance Services should contact a claims representative by calling (888) 205-8118, option #4 or visiting:
+http://kb.erenterplan.com/idx.php/0/007/article/How-do-I-file-a-claim.html
+To schedule an interview with a LeasingDesk or American Modern executive, please contact Don Canfield at (303) 682-3942 or at don@linnelltaylor.com.
+* * *
+**About LeasingDesk**
+Located in Irvine, California, LeasingDesk offerings are specifically designed for the multifamily industry. The suite of products and services automates everything from the lease application through execution of a signed lease. The product line includes online leasing, resident screening, electronic leasing forms and renter’s insurance. For more information on LeasingDesk, visit www.LeasingDesk.com, call 888-484-7132 or send an e-mail message to Sales@LeasingDesk.com
+**About RealPage**
+Located in Carrollton, Texas, a suburb of Dallas, RealPage provides products and services to more than 20,000 apartment communities across the United States. Its six on-demand product lines include OneSite® property management systems that automate the leasing, renting, management, and accounting of conventional, affordable, tax credit, student housing, and military properties; CrossFire® sales and marketing systems that boost occupancy and build retention; YieldStar® asset optimization systems that maximize asset valuation and investment return; VelocityTM utility management systems that accelerate payments for resident charges; LeasingDesk® risk mitigation systems that reduce a community’s exposure to risk and liability; and OpsTechnologyTM spend management systems that manage and reduce operating expenses. For more information, please call 1-87-REALPAGE or visit www.realpage.com.
+**About American Modern Insurance Group**
+American Modern Insurance Group, founded in 1965 and headquartered in Cincinnati, Ohio, is a provider of specialty insurance products and services. American Modern specializes in writing physical damage insurance and related coverages on manufactured housing and has expanded to other specialty insurance products including coverage for site-built homes, motorcycles, watercraft, snowmobiles, recreational vehicles, classic autos, physical damage on long-haul trucks, extended service contracts, excess and surplus lines coverages, credit life and related products, as well asral protection and mortgage fire products sold to financial institutions and their customers. American Modern serves 1.3 million policyholders nationwide, and is licensed in all 50 states. Additional information on the company can be found on the Internet at www.AMIG.com.
+American Modern is a subsidiary of The Midland Company, which has been in business since 1938.

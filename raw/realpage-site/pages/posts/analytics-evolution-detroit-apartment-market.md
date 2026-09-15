@@ -1,0 +1,22 @@
+---
+url: "https://www.realpage.com/analytics/evolution-detroit-apartment-market/"
+title: "The Evolution of the Detroit Apartment Market"
+type: "posts"
+lastmod: "2022-10-19T09:40:00-05:00"
+crawled: "2026-09-15"
+source: "crawl4ai"
+---
+
+# The Evolution of the Detroit Apartment Market
+![Photo of Kim O'Brien, Real Estate Writer](https://s.realpage.com/storage/files/blog/authors/images/2022/09/kim-obrien.jpg)
+_by_ [ Kim O'Brien](https://www.realpage.com/analytics/authors/kimobrien/)
+Detroit’s apartment market has made notable progress in recent years, evolving into a period of rapid growth after decades of turmoil. While demand has recently slipped, Detroit is preparing for an economic future that can sustain strength in a time of change.
+First, a history lesson. Roughly 20 years ago, Detroit’s housing market felt abandoned. Single-family homes were going for [cents on the dollar](https://www.reuters.com/article/us-usa-subprime-detroit/houses-cheaper-than-cars-in-detroit-idUSN1927997820070319). Apartment demand was hard to drum up. Factories were closing and jobs were leaving the metro. Declining auto sales damaged the market in the 2001 Recession, and then two of the area’s biggest locally based employers – Chrysler and General Motors – both [declared bankruptcy](https://www.reuters.com/article/us-gm/gm-files-for-bankruptcy-chrysler-sale-cleared-idUSN3044658620090601) in the Great Recession. Between 2001 and 2010, Detroit lost more than 200,000 jobs, on net. Total payroll employment declined by 24%. Finally, in 2013, the city declared Chapter 9 bankruptcy, becoming the [largest city in U.S. history](https://www.nytimes.com/2013/07/19/us/detroit-files-for-bankruptcy.html) to do so.
+[ ](https://www.realpage.com/insights-analytics/market-analytics/)
+In 2010, however, something changed in the Detroit apartment market. Demand returned in a big way, hitting historic highs. The U.S. overall started to blossom at this time, banking on economic recovery from the recession and increasing job growth. In Detroit, specifically, private and public investment revitalized the city's social and economic landscape and by 2017, the apartment market exceeded expectations.
+Detroit barely saw a blip in apartment market performance in 2020, when the COVID-19 recession rocked the country, and this market also saw one of the nation’s strongest recoveries when the shock wore off.
+In 2022’s 3rd quarter, as the U.S. started softening after a period of exceptional growth, Detroit followed suit. In fact, Detroit’s net move-outs for nearly 3,000 units in the July-September time frame placed the metro among the worst performers nationwide, only besting Dallas, Chicago, Los Angeles and Houston. Detroit’s poor 3rd quarter absorption performance wiped out previous gains and resulted in net move-outs from 2,600 units in the year-ending 3rd quarter 2022.
+Looking forward, it will be interesting to see if Detroit’s apartment market can sustain its hard-earned stability. One wild card could be the market’s economic base. In 2020, the Detroit economy contracted with the rest of the nation, with annual job cuts getting as deep as 20% in 2nd quarter. After the adjustment seen just a year later, when annual growth hit over 18%, employment in Detroit has settled at around 5% annual growth more recently. While Detroit hasn’t yet regained all the jobs lost during the pandemic, the market is only about 16,000 jobs, or 0.8% away.
+[ ](https://www.realpage.com/insights-analytics/market-analytics/)
+Detroit employers are trying to stay ahead of the curve, preparing for a future economy better able to adapt to change in the near term. This includes leading the [revolution into electric vehicles](https://www.pbs.org/newshour/nation/detroit-leads-the-way-as-the-nation-grapples-with-impending-electric-car-revolution). Earlier this year, locally based Ford Motor Company opened a $740 million innovation center for self-driving cars and electric vehicles. Jeep recently opened the Mack Detroit Assembly Complex, the first new automobile assembly plant in Detroit in nearly 30 years, to make electric vehicles. And General Motors is building the world’s largest design center to target the development of new hybrid vehicles.
+The Motor City has been through a lot. But the resiliency this market has built throughout the past 20 years has driven Detroit to adapt, making this a prime location to reshape what’s to come.

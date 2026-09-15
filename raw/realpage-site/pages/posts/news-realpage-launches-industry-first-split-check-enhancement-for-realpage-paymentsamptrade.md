@@ -1,0 +1,27 @@
+---
+url: "https://www.realpage.com/news/realpage-launches-industry-first-split-check-enhancement-for-realpage-paymentsamptrade/"
+title: "RealPage® Launches Industry-First Split-Check Enhancement  for RealPage Payments"
+type: "posts"
+lastmod: "2011-12-15T06:00:00-06:00"
+crawled: "2026-09-15"
+source: "crawl4ai"
+---
+
+# RealPage® Launches Industry-First Split-Check Enhancement for RealPage Payments and Trade
+December 15, 2011
+### _New split-check capability increases flexibility to accept one payment for multiple units or residents_
+**(Dec. 15, 2011)** — RealPage, Inc. (NASDAQ: [RP](http://finance.yahoo.com/q;_ylt=Ap5Wn9L7nK9q1JAadLn0p9axcq9_;_ylu=X3oDMTBzYm05a3ZkBHBvcwMxBHNlYwNuZXdzYXJzdGFydARzbGsDcnA-?s=rp)), a leading provider of on-demand software and software-enabled services to the rental housing industry, today launched split-check capability for its RealPage Payments electronic payments solution that introduces a new level of convenience for property management companies to process check payments.
+This first of its kind solution for the multifamily industry enables multifamily companies to accept one check and apply the payment to multiple units, residents’ ledgers and even sub-properties within the payments system, while still processing the check at face value. Previously, a check could only be processed to one unit at the face value, requiring manual ledger entries to split up the payment.
+“We’ve been looking forward to the new split-check functionality being available in RealPage Payments. We receive a significant number of payments from companies and individuals who pay for multiple units with one check,” said Kip Zacharias, vice president of business services, Camden Property Trust. “We know having the new split-check functionality will be a big time-saver for our sites by helping us streamline our process around applying and reconciling split-check payments.”
+The split-check enhancement will enable property management companies to more easily process payments in a number of payment situations, including:
+  * Accepting one corporate check for multiple resident units;
+  * Accepting a single check from parents or guarantors for multiple student residents;
+  * Electronically processing checks from universities and applying them to multiple student ledgers;
+  * Applying government subsidies or alternative funding checks to multiple resident ledgers.
+
+“The new Split-Check functionality benefits property owners by reducing check processing costs since only one check is processed rather than multiple checks,” said Kimberly Lang, vice president, Payment Services at RealPage. “The administrative burden at the property level is lessened because site staff doesn’t have to make payment adjustments. Finally, residents benefit from the convenience of writing only one check for multiple charges such as deposit, application fees and rent.”
+The RealPage Payments system also generates a detailed reconciliation report containing all distribution detail as well as a summary by source account (sub-property and ledger or bank account from which funds were deposited), destination account (sub-property and ledger or bank account into which funds will be moved), and transaction code.
+To learn more about RealPage Payments, please visit [www.realpage.com/online-payments/](https://www.realpage.com/online-payments/).To schedule an interview with a RealPage executive, please contact Linda Graham at linda.graham@realpage.com or (972) 820-3518.
+* * *
+**About RealPage**
+Located in Carrollton, Texas, a suburb of Dallas, RealPage provides on demand (also referred to as “Software-as-a-Service” or “SaaS”) products and services to apartment communities and single family rentals across the United States. Its on demand product lines include OneSite® [property management systems](https://www.realpage.com/) that automate the leasing, renting, management, and accounting of conventional, affordable, tax credit, student living, senior living and military housing properties; LeaseStar™ multichannel managed marketing that enables owners to originate, syndicate, manage and capture leads more effectively and at less overall cost; YieldStar® asset optimization systems that enable owners and managers to optimize rents to achieve the overall highest yield, or combination of rent and occupancy, at each property; Velocity™ billing and utility management services that increase collections and reduce delinquencies; LeasingDesk® risk mitigation systems that are designed to reduce a community’s exposure to risk and liability; OpsTechnology™ spend management systems that help owners manage and control operating expenses; and Compliance Depot™ vendor management and qualification services to assist a community in managing its vendor compliance program. Supporting this family of SaaS products is a suite of shared cloud services including electronic payments, document management, decision support and learning. RealPage’s MyNewPlace® subsidiary is one of the nation’s largest [apartment](https://www.mynewplace.com) and home rental websites, offering apartment owners and managers qualified, prospective residents under a results-oriented pricing program. Through its Propertyware® subsidiary, RealPage also provides software and services to single-family rentals and low density, centrally-managed multifamily housing. For more information, call 1-87-REALPAGE or visit [www.realpage.com.](https://www.realpage.com/).

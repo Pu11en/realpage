@@ -1,0 +1,20 @@
+---
+url: "https://www.realpage.com/news/thoma-bravo-completes-acquisition-of-realpage/"
+title: "Thoma Bravo: RealPage Acquisition"
+type: "posts"
+lastmod: "2021-04-22T00:00:00-05:00"
+crawled: "2026-09-15"
+source: "crawl4ai"
+---
+
+# Thoma Bravo Completes Acquisition of RealPage
+April 22, 2021
+**RICHARDSON, Texas & San Francisco, CA **– RealPage, Inc. (NASDAQ: RP), a leading global provider of software and data analytics to the real estate industry, today announced the completion of its acquisition by Thoma Bravo, a leading private equity investment firm focused on the software sector, in an all-cash transaction that valued RealPage at approximately $10.2 billion, including net debt. The acquisition was previously announced on December 21, 2020, and RealPage’s stockholders voted their shares in favor of the transaction on March 8, 2021.
+Upon the completion of the acquisition, RealPage shareholders were entitled to receive $88.75 in cash per share. The price per share represents a 30.8 percent premium to the company’s closing share price of $67.83 on December 18, 2020, and a premium of 36.5 percent over RealPage’s 30-day volume-weighted average share price through December 18, 2020. With the completion of the acquisition, RealPage becomes a privately-held company, and its common stock ceased trading and will no longer be listed on the Nasdaq stock exchange.
+“The closing of this transaction represents a new chapter in the RealPage journey. RealPage technology has revolutionized digital transformation in the real estate industry, and we believe the best is yet to come,” said Steve Winn, Chairman of the Board and CEO of RealPage. “Thoma Bravo brings significant expertise from its deep experience with software companies, and together we are committed to helping our customers innovate, grow and serve the next generation of multifamily operators and residents. Our mission is to continue to create value for our customers, partners and employees.”
+“Thoma Bravo has followed RealPage’s success in the real estate industry for a long time. The company’s exceptional products and commitment to innovation allow it to maintain its prominent position in an industry undergoing an extensive digital transformation,” said Orlando Bravo, Founder and a Managing Partner of Thoma Bravo. “As a firm, we embrace these fundamental shifts in industries where software driven solutions are making meaningful advancements and we have the expertise and resources to help grow these capabilities at companies like RealPage. We believe our partnership can accelerate RealPage’s momentum as it innovates on behalf of its customers.”
+BofA Securities acted as financial advisor to RealPage, and Wachtell, Lipton, Rosen & Katz acted as its legal counsel. Financing for the transaction was provided by Goldman Sachs & Co. LLC. Goldman Sachs & Co. LLC also served as financial advisor to Thoma Bravo, and Kirkland & Ellis LLP served as its legal counsel.
+**About RealPage**
+RealPage provides a technology platform that enables real estate owners and managers to change how people experience and use rental space. Clients use the platform to gain transparency in asset performance, leverage data insights and monetize space to create incremental yields. Founded in 1998 and headquartered in Richardson, Texas, RealPage currently serves over 19 million units worldwide from offices in North America, Europe and Asia. For more information about RealPage, please visit RealPage.com.
+**About Thoma Bravo**
+Thoma Bravo is a leading private equity firm focused on the software and technology-enabled services sectors. With more than $76 billion in assets under management as of December 31, 2021, Thoma Bravo partners with a company’s management team to implement operating best practices, invest in growth initiatives and make accretive acquisitions intended to accelerate revenue and earnings, with the goal of increasing the value of the business. The firm has offices in San Francisco and Chicago, with a planned expansion to Miami in 2021. For more information, visit thomabravo.com.

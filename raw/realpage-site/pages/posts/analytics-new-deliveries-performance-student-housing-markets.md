@@ -1,0 +1,33 @@
+---
+url: "https://www.realpage.com/analytics/new-deliveries-performance-student-housing-markets/"
+title: "New Deliveries and Performance in Student Housing Markets"
+type: "posts"
+lastmod: "2017-05-04T16:25:01-05:00"
+crawled: "2026-09-15"
+source: "crawl4ai"
+---
+
+# New Deliveries and Performance in Student Housing Markets
+by Analytics Contributor
+The growth in the student housing sector has continued through 2016 and into 2017 as more and more investors entered the space to develop additional assets at universities across the country. The expansion of new privately owned student housing supply seems to have a natural effect on the performance of select markets.
+Nationwide, the student housing industry is on track to receive slightly less supply in Fall 2017 than it did last fall. About 47,000 beds are scheduled to be delivered this fall (more than 1,000 of those beds have already delivered, as they were holdovers from construction delays last fall), compared to more than 48,000 beds that came to market in 2016. Though new supply is slightly lower, deliveries at the national level are still up relative to other years in the cycle and previous cycles. More than 330,000 new beds have come to market since 2011.
+There is little reason to fear that new supply will not be absorbed, even though leasing velocity is slightly lower in 2017. Leasing velocity remained ahead of Fall 2016 for the first few months of the 2017-2018 leasing season, and tightened in the months after. In March, prelease increased at a lower level than it did in 2016, but at a higher rate than 2015. As shown below, March’s average leasing velocity was slightly above 60%, some 210 basis points (bps) below March 2016 but 280 bps above March 2015.
+Out of more than 300 universities with some type of privately-owned student housing, the top 20 universities with the most supply account for one-third of the total supply delivered in the current development cycle.
+Among Axiometrics’ top 20 universities, some are seeing substantial levels of new purpose-built beds, while others are receiving little to no new supply. The effects of this supply (or lack thereof) can be seen in leasing performance across universities with very different supply and demand fundamentals. The following top 20 universities clearly illustrate the impact new supply can have on performance.
+**Texas Tech University**
+Nationwide, Texas Tech University will receive the highest number of deliveries this fall, with 3,700 new beds expected. Last fall, Raiderland received only 734 new beds, which was the market’s first new development since 2013. The university’s off-campus housing market hasn’t had an inventory growth rate this high since 2005.
+The development at Texas Tech may be partially attributed to growth in enrollment in the past few years, an increase of close to 3,500 total students from 2014-2016.
+Despite increasing demand, the large number of new beds this year may be contributing to the slower leasing velocity in March compared to March of last year. Collectively, same-store average leasing velocity in March was 43.7%, 890 bps below March 2016. The decrease in the average market prelease is mostly attributed to some properties located close to campus competing with new supply. Leasing velocity may recover in 2018, as no new supply has been identified for that year.
+**Texas A &M University **
+Out of the universities with deliveries this fall, Texas A&M University is expecting the second highest new off-campus student housing supply. Just more than 2,300 beds are scheduled to deliver in Aggie-land, adding to the 25,800 existing off-campus beds. Due to the privately-owned student housing development over the past several years, the university continues to hold first place in terms of purpose-built student housing supply. This may be the case again next year, given that more than 1,700 beds have already been identified in the market for Fall 2018.
+The constant development in the market can be attributed to the successful efforts of the university to increase the diversity of its student body. Additionally, according to university officials, Texas A&M has one of the best retention records for public institutions in the nation, increasing the attractiveness of the market for privately owned student housing developers.
+But new supply is showing an effect on market performance. Leasing velocity for privately-owned beds was 51.4% in March, 520 bps below March 2016. Last fall, off-campus student housing occupancy was around 90% after move-ins – below functionally full – and leasing velocity seems to be following similar trends this year.
+Despite solid enrollment growth the past few years, the market is struggling to absorb all the new deliveries. The university may improve in terms of privately-owned leasing velocity in the next few years: No new deliveries have been identified yet for 2019, and Axiometrics forecasts enrollment to keep growing at higher than historical levels.
+**University of Missouri**
+The University of Missouri is also set to receive one of the largest batches of new off-campus student housing supply in 2017. Mizzou is scheduled for 1,400 new beds this fall, the largest amount of new supply delivered in one year since 2013.
+The main driver of new development was the institution’s enrollment, which increased by more than 3,000 students from 2011-2015. However, due to diversity-based issues that put the University of Missouri in the spotlight nationwide, enrollment decreased by more than 2,000 students in 2016.
+This decline in enrollment continues to affect market performance. Leasing velocity was 40.5% in March, down 1,780 bps from March of last year. Due to the lack of demand, the university made the decision to take a couple of residence halls off-line indefinitely in 2017, which may help alleviate some impact in the future.
+**University of Central Florida**
+University of Central Florida has ranked among one of the top 20 universities for most off-campus supply, despite experiencing no new development since 2014, when 2,200 beds were delivered. Since then, UCF’s total supply has been over 16,000 privately-owned student housing beds, which have been almost full (above 99% occupancy) since at least 2015.
+Prelease for off-campus student housing was 71.2% in March, 950 bps above March 2016. This trend is expected to continue through the next couple of months, and occupancy will presumably be at the same levels as Fall 2016.
+POSH performance depends upon supply and demand factors that differ substantially across universities. While some universities are relatively more mature and attract less new supply, others still have ample demand and continue to attract new POSH development.

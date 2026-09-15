@@ -1,0 +1,29 @@
+---
+url: "https://www.realpage.com/news/udr-selects-yieldstar-for-revenue-management/"
+title: "UDR Selects YieldStar® for Revenue Management"
+type: "posts"
+lastmod: "2007-06-04T00:00:00-05:00"
+crawled: "2026-09-15"
+source: "crawl4ai"
+---
+
+# UDR Selects YieldStar® for Revenue Management
+June 4, 2007
+**(June 4, 2007)** —UDR, Inc. (NYSE:UDR – News) today announced that it has completed an extensive evaluation of two leading revenue management systems. The Company compared the pricing results with a set of control properties using the Company’s current pricing method. The test was conducted at operating communities, with resident prospects accepting or rejecting the rental terms. In addition, the Company evaluated more than a dozen user- and business-need criteria relating to ease of use, training, implementation and integration with existing software and processes.
+“Today’s announcement to deploy YieldStar© as our revenue management software is consistent with our strategy to transform operations,” stated Thomas W. Toomey, President and CEO. “We are an industry leader in web based marketing and lead generation and are committed to utilizing technology to increase efficiency, drive profitability and effectively serve customers. We will continue to work with the YieldStar© team to customize the application for our business needs, demonstrating our commitment to value creation through innovation.”
+“Our onsite associates provided valuable real-world analysis of both systems and we engaged pricing and business process experts in a rigorous side-by-side test of our current pricing process against these well respected systems,” stated Martha Carlin, Executive Vice President, Property Operations. “Revenue management encompasses a lot more than an algorithm generating monthly rent. YieldStar© was easily adopted by our communities, and its workflow and usability are consistent with how we do business – now and in the near future as we transform operations in our Operations 2.0 initiative. We concluded that a systematic approach adds consistency, particularly in response to changing market conditions.”
+UDR will deploy YieldStar© on its stabilized properties in a phased implementation throughout 2007.
+“I appreciate the cooperation and professionalism shown by everyone in this collaborative effort,” concluded Carlin.
+* * *
+**About UDR, Inc.**
+UDR, Inc. (NYSE:UDR – News) is a leading multi-family real estate investment trust (REIT) with a demonstrated performance history of delivering superior and dependable returns by successfully managing, buying, selling, developing and redeveloping attractive real estate properties in targeted U.S. markets. As of March 31, 2007, UDR owned 70,325 apartment homes and had 872 homes under development and another 1,109 homes under contract for development in its pre-sale program. For over 30 years, UDR has delivered long-term value to shareholders, the best standard of service to residents, and the highest quality experience for associates. An S&P 400 company, UDR is the fourth largest apartment REIT in the nation. Additional information can be found on the Company’s website at www.udr.com.
+**About RealPage, Inc.**
+Located in Carrollton, Texas, RealPage provides products and services to more than 20,000 apartment communities across the United States. Its five on-demand product lines include OneSite® property management systems that automate the leasing, renting, management and accounting of conventional and affordable properties; CrossFire® sales and marketing systems that automate and enhance the process of capturing and closing leads; M/PF YieldStar® asset optimization systems that maximize asset valuation and investment return through revenue management and market intelligence; VelocityTM utility and billing services that help accelerate payments for resident charges; and LeasingDeskTM risk mitigation systems. For more information, please call 1-87-REALPAGE or visit www.realpage.com.
+Statements contained in this press release, which are not historical facts, are forward-looking statements, as the term is defined in the Private Securities Litigation Reform Act of 1995. You can identify these forward-looking statements by the Company’s use of words such as, “expects,” “plans,” “estimates,” “projects,” “intends,” “believes,” and similar expressions that do not relate to historical matters. Such forward-looking statements are subject to risks and uncertainties which can cause actual results to differ materially from those currently anticipated, due to a number of factors, which include, but are not limited to, unfavorable changes in the apartment market, changing economic conditions, the impact of competition and competitive pricing, acquisitions or new developments not achieving anticipated results, delays in completing developments and lease-ups on schedule, expectations on job growth, home affordability and demand/supply ratio for multi-family housing, expectations concerning redevelopment activities, expectations on occupancy levels, expectations concerning the Texas joint venture, expectations that automation will help grow net operating income, expectations on post-renovated stabilized annual operating income, exceptions on annualized net operating income, and other risk factors discussed in documents filed by the Company with the Securities and Exchange Commission from time to time including the Company’s Annual Report on Form 10-K and the Company’s Quarterly Reports on Form 10-Q. All forward-looking statements in this press release are made as of today, based upon information known to management as of the date hereof. The Company assumes no obligation to update or revise any of its forward-looking statements even if experience or future changes show that indicated results or events will not be realized.
+### Contact:
+UDR, Inc.
+Larry Thede, 720-283-2450
+ir@udr.com
+www.udr.com
+* * *
+Source: UDR, Inc.
