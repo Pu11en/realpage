@@ -44,3 +44,11 @@
 - Added all three to design-pages.txt. check-design.sh passes (7 pages, 0 problems); no sideways scroll at 390px, no page errors.
 - Left open: Under the Hood shows the text "propertystack/runs/*.json" (existing copy; plan forbids copy rewrites) — Drew may want it renamed later.
 - Screenshots: docs/design-screens/T6-under-the-hood-{desktop,phone}.png, T6-privacy-{desktop,phone}.png.
+
+## T7 Chat panel inside the app — done 2026-09-15 (commit 18c163d)
+- chat-panel.css: header is a blueprint-blue band with white Plus Jakarta Sans title and amber underline; close button light blue, hover darker blue. Panel body white, soft shadow only while open.
+- "Try again" and "Sign in free" buttons now amber with navy text (same as the Ask button); sign-in card light grey with navy heading. Old dark #0b1410 and green-on-dark text gone.
+- Open button (.ask-fab) was already amber from T1; phone view stays full-width (390px checked).
+- Message bubbles and the input live inside the chat app (iframe) — those are T8's job, not changed here. No JS changes.
+- check-design.sh passes (quick check 0 problems, 7 design pages 0 problems); panel opens with no page errors on desktop and phone.
+- Screenshots: docs/design-screens/T7-chat-desktop.png, T7-chat-phone.png (sign-in card shown, since the chat app isn't running locally).

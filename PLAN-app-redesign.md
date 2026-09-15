@@ -62,7 +62,7 @@ Open: http://localhost:8765/index.html
   Screenshots.
 - [x] **T6 The rest: `under-the-hood.html`, `privacy.html`, `master-table.html`.** Add all three.
   Screenshots.
-- [ ] **T7 Chat panel inside the app (`site/css/chat-panel.css`, `site/js/chat-panel.js`).** Panel,
+- [x] **T7 Chat panel inside the app (`site/css/chat-panel.css`, `site/js/chat-panel.js`).** Panel,
   open button (amber), header (navy/blue), message bubbles, input, close button, phone full-screen
   view. The panel must match the pages; the check's quick-check (panel opens, no errors) must pass.
   Screenshot the panel open on desktop and phone.
