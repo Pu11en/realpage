@@ -16,3 +16,10 @@
 - test_find_contact.py: new test that loader.js has the `a[href^="#ask:"]` handler, uses input:prompt:submit, preventDefault and decodeURIComponent.
 - Check: 48 passed. Also a stand-alone Playwright check (fake page + loader.js): clicking the link posted exactly {type:"input:prompt:submit", text:"Deep dive on The Sherman, Richardson"}, URL unchanged, no new tab.
 - Open: real end-to-end run against the dev stack is F3.
+
+## F2 sent back by review, fixed (commit 00c17b4)
+- Review asked for proof the click really sends. Checked Open WebUI's built JS (ghcr.io/open-webui/open-webui:main): a same-origin postMessage {type:"input:prompt:submit", text} calls its submitPrompt; the site's chat-panel.js already uses the sibling "input:prompt" message the same way. So the mechanism is real.
+- Real run then showed the actual bug: Open WebUI printed "[🔍 Find contact](#ask:Deep dive on …)" as raw text, because Markdown will not parse a link whose address contains spaces. Fix: linkfix.py (the proxy's last step) percent-encodes the text after #ask: (no double-encoding); loader.js already decodes it. SOUL.md unchanged.
+- New tooling/qa/live_find_contact_click.py (real Playwright against the running stack; SITE env picks the site port): asked "give me top leads any area" -> 3 lead lines, 2 with 📞 + Texas building record, 1 (4030 N 44Th Ave, Phoenix) with 🔍 Find contact; clicked it -> "Deep dive on 4030 N 44Th Ave, Phoenix" appeared as the sent message, site URL unchanged, no new tab; deep-dive answer came back with a phone. PASS. Screenshot: tooling/qa/shots/find-contact.png (folder is gitignored, so not committed).
+- Note for F3: the run used this worktree's site on port 8766 (another stack holds 8765), with CORS_ALLOW_ORIGIN extended to include 8766 when starting the compose stack. On 8765 via tooling/dev.sh no extra setting is needed.
+- Check: 48 passed.
