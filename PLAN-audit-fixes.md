@@ -80,7 +80,7 @@ Open: http://localhost:8765/index.html
   deep-dive replay before `_free_take`, so replays don't use one of the 3 weekly deep dives.
 
 ### Part C: lead data (merge with Texas cleanup; rebuild after each)
-- [ ] **C1 Junk permits out.** Lead finder filter drops pool, carport, stair/remodel, repair, roof and
+- [x] **C1 Junk permits out.** Lead finder filter drops pool, carport, stair/remodel, repair, roof and
   garage-apartment permits (tx-301, 305, 325, 327, 328, 335, 343). Look at tx-7 and tx-365 and keep
   them only if they are real apartment buildings. Test with those ids.
 - [ ] **C2 Duplicates.** Westdale Hills Apts (Hurst + Euless, 2,141 units, an old complex) is one

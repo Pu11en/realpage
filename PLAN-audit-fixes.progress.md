@@ -89,3 +89,10 @@
 - chatbot/tests/test_usage_limits.py: test_replayed_deep_dive_counts replaced by test_replayed_deep_dive_is_free (5 replays free, 2 more fresh dives allowed, then the limit).
 - Checked: chatbot/tests 35 passed; check-fixes.sh passes (34 tests, design 0 problems).
 - Left: live chat picks this up only after redeploy (Drew).
+
+## C1 Junk permits out — done (b0e6fc3)
+- New shared filter propertystack/skills/lead-finder/junk_permits.py: pool, carport, stair/remodel, repair, roof and garage-apartment permits are not leads (a street like "Brentwood Stair Rd" is not caught). Used by the permit sources (find_upcoming.py by project name, houston_sold_permits.py by permit comments) and by build_data.py so already-saved leads are dropped on rebuild.
+- Dropped exactly the 7 audit rows (old tx-301, 305, 325, 327, 328, 335, 343). Kept tx-7 (mixed-use with multifamily + parking garage, North Richland Hills) and tx-365 (1401 South Lamar Multifamily, Austin): both real apartment buildings.
+- Rebuilt: Texas 628 -> 621 leads (DFW still 320; none of the 7 were in DFW). Lead ids are by rank, so Texas ids after the old positions shifted.
+- Test: tooling/qa/fixes_tests/test_c1_junk_permits.py (fails on the old data).
+- Checked: check-fixes.sh passes (36 tests, design 0 problems); lead-finder + permits tests 121 passed; chatbot/tests 35 passed.
