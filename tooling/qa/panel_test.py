@@ -70,7 +70,7 @@ async def main():
             await context.close()
 
         # W4: hardening checks (rapid double-click, close/reopen doesn't
-        # reload, ESC closes on desktop, Chat tab active while open).
+        # reload, ESC closes on desktop, Chat link never takes the selected look).
         context = await browser.new_context(viewport={"width": 1440, "height": 900})
         await context.add_init_script(f"window.PS_CHAT_URL = {chat!r};")
         page = await context.new_page()

@@ -12,9 +12,15 @@
     sessionStorage.setItem(STORAGE_OPEN, v ? "1" : "0");
   }
 
-  function markChatTabActive(active) {
+  // The Chat link opens and closes the panel; it is not a page, so it never
+  // takes the "selected" look (only the current page's tab does). While the
+  // panel is open it reads "Close chat" instead.
+  function markChatTabActive(open) {
     const navChat = document.querySelector(".sidebar nav a.nav-chat");
-    if (navChat) navChat.classList.toggle("active", active);
+    if (!navChat) return;
+    navChat.classList.remove("active");
+    navChat.setAttribute("aria-expanded", open ? "true" : "false");
+    navChat.textContent = open ? "Close chat" : "Chat";
   }
 
   function buildPanel() {
