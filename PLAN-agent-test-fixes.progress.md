@@ -166,3 +166,21 @@ the hit-area element and its sizing, plus a real headless-browser test that
 clicks a marker and asserts the page navigates). Checked with
 `bash tooling/qa/check-fixes.sh` (95 tests pass, design check 0 problems on
 7 pages). Commit: see git log.
+
+## T12 Fence permit gone — done
+The Houston "MULTI-FAMILY NEW PERIMETER FENCE, FENCE" permit matched the
+apartment-keyword regex (it literally contains "Multi-Family") before the
+existing renovation-type filter ever ran, so it slipped through as a lead.
+Added "fence"/"fences" to the shared `JUNK_PERMIT_RE` in
+`propertystack/skills/lead-finder/junk_permits.py`, which both the live
+permit fetch (`find_upcoming.py`) and the site rebuild
+(`site/data/build_data.py`) already run against every lead's name — so this
+one change drops fence permits from both new fetches and the existing saved
+data. Ran `python3 site/data/build_data.py` to rebuild; the Houston fence
+row is gone from `site/data/areas/tx.json` and `map-markers.json` counts
+dropped accordingly. Added
+`tooling/qa/fixes_tests/test_t12_fence_permit.py` (the real Houston permit
+text is junk, other fence wording is junk, a real apartment permit is not,
+and a street literally named "Fence Rd" is not caught by the false-positive
+guard). Checked with `bash tooling/qa/check-fixes.sh` (99 tests pass, 0
+design problems on 7 pages). Commit: see git log.

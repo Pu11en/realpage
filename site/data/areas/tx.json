@@ -2,7 +2,7 @@
   "area": "tx",
   "generatedFrom": "propertystack/data/tx/leads.json",
   "stats": {
-    "leads": 593,
+    "leads": 592,
     "cities": 108,
     "unitsInPlay": 91276,
     "newThisWeek": 1,
@@ -125,7 +125,7 @@
     },
     {
       "name": "Houston",
-      "leads": 70
+      "leads": 69
     },
     {
       "name": "Austin",
@@ -5278,50 +5278,6 @@
       "metro": "Dallas\u2013Fort Worth"
     },
     {
-      "id": "tx-147",
-      "property": "Apartments at 7009 Ed Bluestein Blvd Svrd Nb Bldg 3",
-      "community": "Building Permit",
-      "city": "Austin",
-      "address": "7009 ED BLUESTEIN BLVD SVRD NB BLDG 3",
-      "units": 72,
-      "stage": "permitted",
-      "permitDate": "2024-11-08",
-      "openingDate": null,
-      "saleDate": null,
-      "buyer": null,
-      "developer": null,
-      "officePhone": null,
-      "website": null,
-      "software": null,
-      "links": {
-        "permit": "https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13428558"
-      },
-      "sources": [
-        {
-          "label": "City permit record",
-          "url": "https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13428558"
-        },
-        {
-          "label": "City permit record",
-          "url": "https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13428560"
-        },
-        {
-          "label": "City permit record",
-          "url": "https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13428553"
-        },
-        {
-          "label": "City permit record",
-          "url": "https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13428556"
-        }
-      ],
-      "signalType": "Upcoming",
-      "signal": "Opens: not public yet",
-      "why": "Permitted \u00b7 opens: not public yet \u00b7 72 units \u00b7 software not picked yet",
-      "score": 74,
-      "isNew": false,
-      "metro": "Austin"
-    },
-    {
       "id": "plano-richardson-l13",
       "propertyId": "plano-the-parks-at-legacy-west",
       "score": 74,
@@ -5366,6 +5322,50 @@
       "metro": "Dallas\u2013Fort Worth",
       "subArea": "Plano\u2013Richardson",
       "address": "600 Kissimmee Drive, Plano, TX"
+    },
+    {
+      "id": "tx-147",
+      "property": "Apartments at 7009 Ed Bluestein Blvd Svrd Nb Bldg 3",
+      "community": "Building Permit",
+      "city": "Austin",
+      "address": "7009 ED BLUESTEIN BLVD SVRD NB BLDG 3",
+      "units": 72,
+      "stage": "permitted",
+      "permitDate": "2024-11-08",
+      "openingDate": null,
+      "saleDate": null,
+      "buyer": null,
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "permit": "https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13428558"
+      },
+      "sources": [
+        {
+          "label": "City permit record",
+          "url": "https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13428558"
+        },
+        {
+          "label": "City permit record",
+          "url": "https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13428560"
+        },
+        {
+          "label": "City permit record",
+          "url": "https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13428553"
+        },
+        {
+          "label": "City permit record",
+          "url": "https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13428556"
+        }
+      ],
+      "signalType": "Upcoming",
+      "signal": "Opens: not public yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 72 units \u00b7 software not picked yet",
+      "score": 73,
+      "isNew": false,
+      "metro": "Austin"
     },
     {
       "id": "tx-148",
@@ -5754,7 +5754,7 @@
       "signalType": "Upcoming",
       "signal": "Opens: not public yet",
       "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet",
-      "score": 72,
+      "score": 71,
       "isNew": false,
       "metro": "Austin"
     },
@@ -6111,6 +6111,29 @@
       "metro": "Austin"
     },
     {
+      "id": "plano-richardson-l16",
+      "propertyId": "2646098",
+      "score": 70,
+      "property": "Riachi At One 21 Apartments",
+      "city": "Plano",
+      "units": 402,
+      "signalType": "Sold",
+      "signal": "Owner changed to MFREVF V - PLANO LP",
+      "software": null,
+      "why": "Owner changed to MFREVF V - PLANO LP \u00b7 402 units \u00b7 software not yet identified \u2192 new owner may re-pick software.",
+      "sources": [
+        {
+          "label": "Texas county property records",
+          "url": "https://data.texas.gov/d/5tkr-3759"
+        }
+      ],
+      "contact": null,
+      "isNew": false,
+      "metro": "Dallas\u2013Fort Worth",
+      "subArea": "Plano\u2013Richardson",
+      "address": "9600 Coit Rd"
+    },
+    {
       "id": "tx-169",
       "property": "Carrier Place One",
       "community": "CARRIER PLACE ONE",
@@ -6138,32 +6161,9 @@
       "signalType": "Upcoming",
       "signal": "Opens: not public yet",
       "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet",
-      "score": 70,
+      "score": 69,
       "isNew": false,
       "metro": "Dallas\u2013Fort Worth"
-    },
-    {
-      "id": "plano-richardson-l16",
-      "propertyId": "2646098",
-      "score": 70,
-      "property": "Riachi At One 21 Apartments",
-      "city": "Plano",
-      "units": 402,
-      "signalType": "Sold",
-      "signal": "Owner changed to MFREVF V - PLANO LP",
-      "software": null,
-      "why": "Owner changed to MFREVF V - PLANO LP \u00b7 402 units \u00b7 software not yet identified \u2192 new owner may re-pick software.",
-      "sources": [
-        {
-          "label": "Texas county property records",
-          "url": "https://data.texas.gov/d/5tkr-3759"
-        }
-      ],
-      "contact": null,
-      "isNew": false,
-      "metro": "Dallas\u2013Fort Worth",
-      "subArea": "Plano\u2013Richardson",
-      "address": "9600 Coit Rd"
     },
     {
       "id": "tx-170",
@@ -6486,38 +6486,6 @@
       "metro": "Austin"
     },
     {
-      "id": "tx-180",
-      "property": "Paradise Apartments",
-      "community": "PARADISE APARTMENTS",
-      "city": "Everman",
-      "address": "917 COURY RD, EVERMAN",
-      "units": 120,
-      "stage": "permitted",
-      "permitDate": "2024-12-24",
-      "openingDate": null,
-      "saleDate": null,
-      "buyer": null,
-      "developer": null,
-      "officePhone": null,
-      "website": null,
-      "software": null,
-      "links": {
-        "permit": "https://www.tad.org/content/data-download/2026CommPermits.zip"
-      },
-      "sources": [
-        {
-          "label": "State permit data",
-          "url": "https://www.tad.org/content/data-download/2026CommPermits.zip"
-        }
-      ],
-      "signalType": "Upcoming",
-      "signal": "Opens: not public yet",
-      "why": "Permitted \u00b7 opens: not public yet \u00b7 120 units \u00b7 software not picked yet",
-      "score": 68,
-      "isNew": false,
-      "metro": "Dallas\u2013Fort Worth"
-    },
-    {
       "id": "plano-richardson-l17",
       "propertyId": "2820374",
       "score": 68,
@@ -6546,6 +6514,38 @@
       "metro": "Dallas\u2013Fort Worth",
       "subArea": "Plano\u2013Richardson",
       "address": "3640 Mapleshade Ln"
+    },
+    {
+      "id": "tx-180",
+      "property": "Paradise Apartments",
+      "community": "PARADISE APARTMENTS",
+      "city": "Everman",
+      "address": "917 COURY RD, EVERMAN",
+      "units": 120,
+      "stage": "permitted",
+      "permitDate": "2024-12-24",
+      "openingDate": null,
+      "saleDate": null,
+      "buyer": null,
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "permit": "https://www.tad.org/content/data-download/2026CommPermits.zip"
+      },
+      "sources": [
+        {
+          "label": "State permit data",
+          "url": "https://www.tad.org/content/data-download/2026CommPermits.zip"
+        }
+      ],
+      "signalType": "Upcoming",
+      "signal": "Opens: not public yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 120 units \u00b7 software not picked yet",
+      "score": 67,
+      "isNew": false,
+      "metro": "Dallas\u2013Fort Worth"
     },
     {
       "id": "tx-181",
@@ -7039,7 +7039,7 @@
       "signalType": "Upcoming",
       "signal": "Opens: not public yet",
       "why": "Permitted \u00b7 opens: not public yet \u00b7 586 units \u00b7 software not picked yet",
-      "score": 66,
+      "score": 65,
       "isNew": false,
       "metro": "Dallas\u2013Fort Worth"
     },
@@ -7394,38 +7394,6 @@
       "metro": "Dallas\u2013Fort Worth"
     },
     {
-      "id": "tx-202",
-      "property": "Rush Creek Apartments",
-      "community": "RUSH CREEK APARTMENTS",
-      "city": "Arlington",
-      "address": "1200 W SUBLETT RD, ARLINGTON",
-      "units": 248,
-      "stage": "permitted",
-      "permitDate": "2025-01-27",
-      "openingDate": null,
-      "saleDate": null,
-      "buyer": null,
-      "developer": null,
-      "officePhone": null,
-      "website": null,
-      "software": null,
-      "links": {
-        "permit": "https://www.tad.org/content/data-download/2026CommPermits.zip"
-      },
-      "sources": [
-        {
-          "label": "State permit data",
-          "url": "https://www.tad.org/content/data-download/2026CommPermits.zip"
-        }
-      ],
-      "signalType": "Upcoming",
-      "signal": "Opens: not public yet",
-      "why": "Permitted \u00b7 opens: not public yet \u00b7 248 units \u00b7 software not picked yet",
-      "score": 64,
-      "isNew": false,
-      "metro": "Dallas\u2013Fort Worth"
-    },
-    {
       "id": "plano-richardson-l23",
       "propertyId": "2945424",
       "score": 64,
@@ -7484,6 +7452,38 @@
       "metro": "Dallas\u2013Fort Worth",
       "subArea": "Plano\u2013Richardson",
       "address": "6000 Ohio Dr"
+    },
+    {
+      "id": "tx-202",
+      "property": "Rush Creek Apartments",
+      "community": "RUSH CREEK APARTMENTS",
+      "city": "Arlington",
+      "address": "1200 W SUBLETT RD, ARLINGTON",
+      "units": 248,
+      "stage": "permitted",
+      "permitDate": "2025-01-27",
+      "openingDate": null,
+      "saleDate": null,
+      "buyer": null,
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "permit": "https://www.tad.org/content/data-download/2026CommPermits.zip"
+      },
+      "sources": [
+        {
+          "label": "State permit data",
+          "url": "https://www.tad.org/content/data-download/2026CommPermits.zip"
+        }
+      ],
+      "signalType": "Upcoming",
+      "signal": "Opens: not public yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 248 units \u00b7 software not picked yet",
+      "score": 63,
+      "isNew": false,
+      "metro": "Dallas\u2013Fort Worth"
     },
     {
       "id": "tx-203",
@@ -7909,7 +7909,7 @@
       "signalType": "Upcoming",
       "signal": "Opens: not public yet",
       "why": "Permitted \u00b7 opens: not public yet \u00b7 45 units \u00b7 software not picked yet",
-      "score": 62,
+      "score": 61,
       "isNew": false,
       "metro": "Dallas\u2013Fort Worth"
     },
@@ -8258,6 +8258,32 @@
       "metro": "Austin"
     },
     {
+      "id": "plano-richardson-l28",
+      "propertyId": "2560139",
+      "score": 60,
+      "property": "Axis 3700",
+      "city": "Plano",
+      "units": 300,
+      "signalType": "Sold",
+      "signal": "Owner changed to APARTMENTS AXIS SPE LLC",
+      "software": null,
+      "why": "Owner changed to APARTMENTS AXIS SPE LLC \u00b7 300 units \u00b7 software not yet identified \u2192 new owner may re-pick software.",
+      "sources": [
+        {
+          "label": "Texas county property records",
+          "url": "https://data.texas.gov/d/5tkr-3759"
+        }
+      ],
+      "contact": {
+        "phone": "(972) 362-4050",
+        "email": null
+      },
+      "isNew": false,
+      "metro": "Dallas\u2013Fort Worth",
+      "subArea": "Plano\u2013Richardson",
+      "address": "3700 Mapleshade Ln"
+    },
+    {
       "id": "tx-224",
       "property": "Mylo Apartment Homes",
       "community": "MYLO APARTMENT HOMES",
@@ -8285,35 +8311,9 @@
       "signalType": "Upcoming",
       "signal": "Opens: not public yet",
       "why": "Permitted \u00b7 opens: not public yet \u00b7 325 units \u00b7 software not picked yet",
-      "score": 60,
+      "score": 59,
       "isNew": false,
       "metro": "Dallas\u2013Fort Worth"
-    },
-    {
-      "id": "plano-richardson-l28",
-      "propertyId": "2560139",
-      "score": 60,
-      "property": "Axis 3700",
-      "city": "Plano",
-      "units": 300,
-      "signalType": "Sold",
-      "signal": "Owner changed to APARTMENTS AXIS SPE LLC",
-      "software": null,
-      "why": "Owner changed to APARTMENTS AXIS SPE LLC \u00b7 300 units \u00b7 software not yet identified \u2192 new owner may re-pick software.",
-      "sources": [
-        {
-          "label": "Texas county property records",
-          "url": "https://data.texas.gov/d/5tkr-3759"
-        }
-      ],
-      "contact": {
-        "phone": "(972) 362-4050",
-        "email": null
-      },
-      "isNew": false,
-      "metro": "Dallas\u2013Fort Worth",
-      "subArea": "Plano\u2013Richardson",
-      "address": "3700 Mapleshade Ln"
     },
     {
       "id": "tx-225",
@@ -8667,7 +8667,7 @@
       "signalType": "Upcoming",
       "signal": "Opens: not public yet",
       "why": "Permitted \u00b7 opens: not public yet \u00b7 84 units \u00b7 software not picked yet",
-      "score": 58,
+      "score": 57,
       "isNew": false,
       "metro": "Dallas\u2013Fort Worth"
     },
@@ -9005,6 +9005,29 @@
       "metro": "Dallas\u2013Fort Worth"
     },
     {
+      "id": "plano-richardson-l29",
+      "propertyId": "1615274",
+      "score": 56,
+      "property": "Spring Pointe Apartments",
+      "city": "Richardson",
+      "units": 208,
+      "signalType": "Sold",
+      "signal": "Sold Apr 2025",
+      "software": null,
+      "why": "Sold Apr 2025 to THE CAMERON COUNTY HOUSING FINANCE CORPORATION \u00b7 208 units \u00b7 software not yet identified \u2192 new owner may re-pick software.",
+      "sources": [
+        {
+          "label": "Texas county property records",
+          "url": "https://data.texas.gov/d/5tkr-3759"
+        }
+      ],
+      "contact": null,
+      "isNew": false,
+      "metro": "Dallas\u2013Fort Worth",
+      "subArea": "Plano\u2013Richardson",
+      "address": "3501 N Jupiter Rd"
+    },
+    {
       "id": "tx-246",
       "property": "Joe Brown Insurance",
       "community": "JOE BROWN INSURANCE",
@@ -9032,32 +9055,9 @@
       "signalType": "Upcoming",
       "signal": "Opens: not public yet",
       "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet",
-      "score": 56,
+      "score": 55,
       "isNew": false,
       "metro": "Dallas\u2013Fort Worth"
-    },
-    {
-      "id": "plano-richardson-l29",
-      "propertyId": "1615274",
-      "score": 56,
-      "property": "Spring Pointe Apartments",
-      "city": "Richardson",
-      "units": 208,
-      "signalType": "Sold",
-      "signal": "Sold Apr 2025",
-      "software": null,
-      "why": "Sold Apr 2025 to THE CAMERON COUNTY HOUSING FINANCE CORPORATION \u00b7 208 units \u00b7 software not yet identified \u2192 new owner may re-pick software.",
-      "sources": [
-        {
-          "label": "Texas county property records",
-          "url": "https://data.texas.gov/d/5tkr-3759"
-        }
-      ],
-      "contact": null,
-      "isNew": false,
-      "metro": "Dallas\u2013Fort Worth",
-      "subArea": "Plano\u2013Richardson",
-      "address": "3501 N Jupiter Rd"
     },
     {
       "id": "tx-247",
@@ -9441,7 +9441,7 @@
       "signalType": "Upcoming",
       "signal": "Opens: not public yet",
       "why": "Permitted \u00b7 opens: not public yet \u00b7 74 units \u00b7 software not picked yet",
-      "score": 54,
+      "score": 53,
       "isNew": false,
       "metro": "Dallas\u2013Fort Worth"
     },
@@ -9860,38 +9860,6 @@
       "metro": "Dallas\u2013Fort Worth"
     },
     {
-      "id": "tx-268",
-      "property": "Aden Crest",
-      "community": "ADEN CREST",
-      "city": "Fort Worth",
-      "address": "2200 ADEN RD, FORT WORTH",
-      "units": 202,
-      "stage": "permitted",
-      "permitDate": "2025-05-30",
-      "openingDate": null,
-      "saleDate": null,
-      "buyer": null,
-      "developer": null,
-      "officePhone": null,
-      "website": null,
-      "software": null,
-      "links": {
-        "permit": "https://www.tad.org/content/data-download/2026CommPermits.zip"
-      },
-      "sources": [
-        {
-          "label": "State permit data",
-          "url": "https://www.tad.org/content/data-download/2026CommPermits.zip"
-        }
-      ],
-      "signalType": "Upcoming",
-      "signal": "Opens: not public yet",
-      "why": "Permitted \u00b7 opens: not public yet \u00b7 202 units \u00b7 software not picked yet",
-      "score": 52,
-      "isNew": false,
-      "metro": "Dallas\u2013Fort Worth"
-    },
-    {
       "id": "plano-richardson-l32",
       "propertyId": "2504520",
       "score": 52,
@@ -9920,6 +9888,38 @@
       "metro": "Dallas\u2013Fort Worth",
       "subArea": "Plano\u2013Richardson",
       "address": "8900 Independence Pkwy"
+    },
+    {
+      "id": "tx-268",
+      "property": "Aden Crest",
+      "community": "ADEN CREST",
+      "city": "Fort Worth",
+      "address": "2200 ADEN RD, FORT WORTH",
+      "units": 202,
+      "stage": "permitted",
+      "permitDate": "2025-05-30",
+      "openingDate": null,
+      "saleDate": null,
+      "buyer": null,
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "permit": "https://www.tad.org/content/data-download/2026CommPermits.zip"
+      },
+      "sources": [
+        {
+          "label": "State permit data",
+          "url": "https://www.tad.org/content/data-download/2026CommPermits.zip"
+        }
+      ],
+      "signalType": "Upcoming",
+      "signal": "Opens: not public yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 202 units \u00b7 software not picked yet",
+      "score": 51,
+      "isNew": false,
+      "metro": "Dallas\u2013Fort Worth"
     },
     {
       "id": "tx-269",
@@ -10290,7 +10290,7 @@
       "signalType": "Upcoming",
       "signal": "Opens: not public yet",
       "why": "Permitted \u00b7 opens: not public yet \u00b7 169 units \u00b7 software not picked yet",
-      "score": 50,
+      "score": 49,
       "isNew": false,
       "metro": "Dallas\u2013Fort Worth"
     },
@@ -10758,38 +10758,6 @@
       "metro": "Austin"
     },
     {
-      "id": "tx-290",
-      "property": "Apartments at 6410 Fm 969 Rd",
-      "community": "Building Permit",
-      "city": "Austin",
-      "address": "6410 FM 969 RD",
-      "units": 80,
-      "stage": "permitted",
-      "permitDate": "2025-12-01",
-      "openingDate": null,
-      "saleDate": null,
-      "buyer": null,
-      "developer": null,
-      "officePhone": null,
-      "website": null,
-      "software": null,
-      "links": {
-        "permit": "https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13610038"
-      },
-      "sources": [
-        {
-          "label": "City permit record",
-          "url": "https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13610038"
-        }
-      ],
-      "signalType": "Upcoming",
-      "signal": "Opens: not public yet",
-      "why": "Permitted \u00b7 opens: not public yet \u00b7 80 units \u00b7 software not picked yet",
-      "score": 48,
-      "isNew": false,
-      "metro": "Austin"
-    },
-    {
       "id": "plano-richardson-l34",
       "propertyId": "2058066",
       "score": 48,
@@ -10818,6 +10786,38 @@
       "metro": "Dallas\u2013Fort Worth",
       "subArea": "Plano\u2013Richardson",
       "address": "4250 E Renner Rd"
+    },
+    {
+      "id": "tx-290",
+      "property": "Apartments at 6410 Fm 969 Rd",
+      "community": "Building Permit",
+      "city": "Austin",
+      "address": "6410 FM 969 RD",
+      "units": 80,
+      "stage": "permitted",
+      "permitDate": "2025-12-01",
+      "openingDate": null,
+      "saleDate": null,
+      "buyer": null,
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "permit": "https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13610038"
+      },
+      "sources": [
+        {
+          "label": "City permit record",
+          "url": "https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13610038"
+        }
+      ],
+      "signalType": "Upcoming",
+      "signal": "Opens: not public yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 80 units \u00b7 software not picked yet",
+      "score": 47,
+      "isNew": false,
+      "metro": "Austin"
     },
     {
       "id": "tx-291",
@@ -11153,38 +11153,6 @@
       "metro": "Austin"
     },
     {
-      "id": "tx-301",
-      "property": "New 125 Kw Nat. Gas Exterior Generator Apartment 2021 Ibc",
-      "community": "NEW 125 KW NAT. GAS EXTERIOR GENERATOR APARTMENT 2021 IBC",
-      "city": "Houston",
-      "address": "2125 YALE ST",
-      "units": null,
-      "stage": "permitted",
-      "permitDate": "2026-02-20",
-      "openingDate": null,
-      "saleDate": null,
-      "buyer": null,
-      "developer": null,
-      "officePhone": null,
-      "website": null,
-      "software": null,
-      "links": {
-        "permit": "houston-weekly-xlsx"
-      },
-      "sources": [
-        {
-          "label": "Houston weekly permit list",
-          "url": "https://www.houstontx.gov/planning/DevelopRegs/"
-        }
-      ],
-      "signalType": "Upcoming",
-      "signal": "Opens: not public yet",
-      "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet",
-      "score": 46,
-      "isNew": false,
-      "metro": "Houston"
-    },
-    {
       "id": "plano-richardson-l35",
       "propertyId": "2058065",
       "score": 46,
@@ -11213,6 +11181,38 @@
       "metro": "Dallas\u2013Fort Worth",
       "subArea": "Plano\u2013Richardson",
       "address": "3500 North Star Rd"
+    },
+    {
+      "id": "tx-301",
+      "property": "New 125 Kw Nat. Gas Exterior Generator Apartment 2021 Ibc",
+      "community": "NEW 125 KW NAT. GAS EXTERIOR GENERATOR APARTMENT 2021 IBC",
+      "city": "Houston",
+      "address": "2125 YALE ST",
+      "units": null,
+      "stage": "permitted",
+      "permitDate": "2026-02-20",
+      "openingDate": null,
+      "saleDate": null,
+      "buyer": null,
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "permit": "houston-weekly-xlsx"
+      },
+      "sources": [
+        {
+          "label": "Houston weekly permit list",
+          "url": "https://www.houstontx.gov/planning/DevelopRegs/"
+        }
+      ],
+      "signalType": "Upcoming",
+      "signal": "Opens: not public yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet",
+      "score": 45,
+      "isNew": false,
+      "metro": "Houston"
     },
     {
       "id": "tx-302",
@@ -11317,38 +11317,6 @@
     },
     {
       "id": "tx-305",
-      "property": "Multi-Family New Perimeter Fence, Fence",
-      "community": "MULTI-FAMILY NEW PERIMETER FENCE, FENCE",
-      "city": "Houston",
-      "address": "720 1/2 THORNTON RD",
-      "units": null,
-      "stage": "permitted",
-      "permitDate": "2026-03-20",
-      "openingDate": null,
-      "saleDate": null,
-      "buyer": null,
-      "developer": null,
-      "officePhone": null,
-      "website": null,
-      "software": null,
-      "links": {
-        "permit": "houston-weekly-xlsx"
-      },
-      "sources": [
-        {
-          "label": "Houston weekly permit list",
-          "url": "https://www.houstontx.gov/planning/DevelopRegs/"
-        }
-      ],
-      "signalType": "Upcoming",
-      "signal": "Opens: not public yet",
-      "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet",
-      "score": 45,
-      "isNew": false,
-      "metro": "Houston"
-    },
-    {
-      "id": "tx-306",
       "property": "Apartments at 1420 E Howard Ln Bldg Dp",
       "community": "Building Permit",
       "city": "Austin",
@@ -11436,6 +11404,38 @@
       "metro": "Austin"
     },
     {
+      "id": "tx-306",
+      "property": "77,578 Sf/ New Apartment W/Sitewrk 1-4-5-R2/A3-A/21 Ibc/Spk13",
+      "community": "77,578 SF/ NEW APARTMENT W/SITEWRK 1-4-5-R2/A3-A/21 IBC/SPK13",
+      "city": "Houston",
+      "address": "2611 SAINT CHARLES ST",
+      "units": null,
+      "stage": "permitted",
+      "permitDate": "2026-05-08",
+      "openingDate": null,
+      "saleDate": null,
+      "buyer": null,
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "permit": "houston-weekly-xlsx"
+      },
+      "sources": [
+        {
+          "label": "Houston weekly permit list",
+          "url": "https://www.houstontx.gov/planning/DevelopRegs/"
+        }
+      ],
+      "signalType": "Upcoming",
+      "signal": "Opens: not public yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet",
+      "score": 45,
+      "isNew": false,
+      "metro": "Houston"
+    },
+    {
       "id": "plano-richardson-l36",
       "propertyId": "1511233",
       "score": 45,
@@ -11467,38 +11467,6 @@
     },
     {
       "id": "tx-307",
-      "property": "77,578 Sf/ New Apartment W/Sitewrk 1-4-5-R2/A3-A/21 Ibc/Spk13",
-      "community": "77,578 SF/ NEW APARTMENT W/SITEWRK 1-4-5-R2/A3-A/21 IBC/SPK13",
-      "city": "Houston",
-      "address": "2611 SAINT CHARLES ST",
-      "units": null,
-      "stage": "permitted",
-      "permitDate": "2026-05-08",
-      "openingDate": null,
-      "saleDate": null,
-      "buyer": null,
-      "developer": null,
-      "officePhone": null,
-      "website": null,
-      "software": null,
-      "links": {
-        "permit": "houston-weekly-xlsx"
-      },
-      "sources": [
-        {
-          "label": "Houston weekly permit list",
-          "url": "https://www.houstontx.gov/planning/DevelopRegs/"
-        }
-      ],
-      "signalType": "Upcoming",
-      "signal": "Opens: not public yet",
-      "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet",
-      "score": 44,
-      "isNew": false,
-      "metro": "Houston"
-    },
-    {
-      "id": "tx-308",
       "property": "Apartments at 1326 Lamar Square Dr",
       "community": "Building Permit",
       "city": "Austin",
@@ -11530,7 +11498,7 @@
       "metro": "Austin"
     },
     {
-      "id": "tx-309",
+      "id": "tx-308",
       "property": "Apartments at 6915 Bridge Point Pkwy Bldg 8",
       "community": "Building Permit",
       "city": "Austin",
@@ -11566,7 +11534,7 @@
       "metro": "Austin"
     },
     {
-      "id": "tx-310",
+      "id": "tx-309",
       "property": "Apartments at 512 Sabine St",
       "community": "Building Permit",
       "city": "Austin",
@@ -11606,7 +11574,7 @@
       "metro": "Austin"
     },
     {
-      "id": "tx-311",
+      "id": "tx-310",
       "property": "Apartments at 7504 Cota Vista Dr Bldg 7",
       "community": "Building Permit",
       "city": "Austin",
@@ -11672,7 +11640,7 @@
       "metro": "Austin"
     },
     {
-      "id": "tx-312",
+      "id": "tx-311",
       "property": "Apartments at 800 E St Johns Ave Bldg 1",
       "community": "Building Permit",
       "city": "Austin",
@@ -11708,7 +11676,7 @@
       "metro": "Austin"
     },
     {
-      "id": "tx-313",
+      "id": "tx-312",
       "property": "Apartments at 845 Blackson Ave",
       "community": "Building Permit",
       "city": "Austin",
@@ -11748,7 +11716,7 @@
       "metro": "Austin"
     },
     {
-      "id": "tx-314",
+      "id": "tx-313",
       "property": "Apartments at 1820 Estancia Pkwy Bldg 1",
       "community": "Building Permit",
       "city": "Austin",
@@ -11800,7 +11768,7 @@
       "metro": "Austin"
     },
     {
-      "id": "tx-315",
+      "id": "tx-314",
       "property": "New Apartment Electrical Service 2021 Ibc",
       "community": "NEW APARTMENT ELECTRICAL SERVICE 2021 IBC",
       "city": "Houston",
@@ -11832,7 +11800,7 @@
       "metro": "Houston"
     },
     {
-      "id": "tx-316",
+      "id": "tx-315",
       "property": "Apartments at 1415 Enclave Pky",
       "community": "Apartments at 1415 Enclave Pky",
       "city": "Houston",
@@ -11864,7 +11832,7 @@
       "metro": "Houston"
     },
     {
-      "id": "tx-317",
+      "id": "tx-316",
       "property": "Apartments at 1600 Wheless Ln",
       "community": "Building Permit",
       "city": "Austin",
@@ -11891,6 +11859,66 @@
       "signalType": "Upcoming",
       "signal": "Opens: not public yet",
       "why": "Permitted \u00b7 opens: not public yet \u00b7 50 units \u00b7 software not picked yet",
+      "score": 43,
+      "isNew": false,
+      "metro": "Austin"
+    },
+    {
+      "id": "tx-317",
+      "property": "Apartments at 13300 Center Lake Dr Bldg 1",
+      "community": "Building Permit",
+      "city": "Austin",
+      "address": "13300 CENTER LAKE DR BLDG 1",
+      "units": 42,
+      "stage": "permitted",
+      "permitDate": "2026-08-10",
+      "openingDate": null,
+      "saleDate": null,
+      "buyer": null,
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "permit": "https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13742902"
+      },
+      "sources": [
+        {
+          "label": "City permit record",
+          "url": "https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13742902"
+        },
+        {
+          "label": "City permit record",
+          "url": "https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13742908"
+        },
+        {
+          "label": "City permit record",
+          "url": "https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13742907"
+        },
+        {
+          "label": "City permit record",
+          "url": "https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13742904"
+        },
+        {
+          "label": "City permit record",
+          "url": "https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13742905"
+        },
+        {
+          "label": "City permit record",
+          "url": "https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13742903"
+        },
+        {
+          "label": "City permit record",
+          "url": "https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13742906"
+        },
+        {
+          "label": "City permit record",
+          "url": "https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13742909"
+        }
+      ],
+      "signalType": "Upcoming",
+      "signal": "Opens: not public yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 42 units \u00b7 software not picked yet",
       "score": 43,
       "isNew": false,
       "metro": "Austin"
@@ -11957,66 +11985,6 @@
     },
     {
       "id": "tx-318",
-      "property": "Apartments at 13300 Center Lake Dr Bldg 1",
-      "community": "Building Permit",
-      "city": "Austin",
-      "address": "13300 CENTER LAKE DR BLDG 1",
-      "units": 42,
-      "stage": "permitted",
-      "permitDate": "2026-08-10",
-      "openingDate": null,
-      "saleDate": null,
-      "buyer": null,
-      "developer": null,
-      "officePhone": null,
-      "website": null,
-      "software": null,
-      "links": {
-        "permit": "https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13742902"
-      },
-      "sources": [
-        {
-          "label": "City permit record",
-          "url": "https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13742902"
-        },
-        {
-          "label": "City permit record",
-          "url": "https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13742908"
-        },
-        {
-          "label": "City permit record",
-          "url": "https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13742907"
-        },
-        {
-          "label": "City permit record",
-          "url": "https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13742904"
-        },
-        {
-          "label": "City permit record",
-          "url": "https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13742905"
-        },
-        {
-          "label": "City permit record",
-          "url": "https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13742903"
-        },
-        {
-          "label": "City permit record",
-          "url": "https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13742906"
-        },
-        {
-          "label": "City permit record",
-          "url": "https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13742909"
-        }
-      ],
-      "signalType": "Upcoming",
-      "signal": "Opens: not public yet",
-      "why": "Permitted \u00b7 opens: not public yet \u00b7 42 units \u00b7 software not picked yet",
-      "score": 42,
-      "isNew": false,
-      "metro": "Austin"
-    },
-    {
-      "id": "tx-319",
       "property": "Apartment",
       "community": "Apartment",
       "city": "Fort Worth",
@@ -12048,7 +12016,7 @@
       "metro": "Dallas\u2013Fort Worth"
     },
     {
-      "id": "tx-320",
+      "id": "tx-319",
       "property": "Apartments at 2631 Kramer Ln Unit Fw3",
       "community": "Building Permit",
       "city": "Austin",
@@ -12088,7 +12056,7 @@
       "metro": "Austin"
     },
     {
-      "id": "tx-321",
+      "id": "tx-320",
       "property": "Desert Pearl Apartments",
       "community": "Desert Pearl Apartments",
       "city": "El Paso",
@@ -12120,7 +12088,7 @@
       "metro": "Rest of Texas"
     },
     {
-      "id": "tx-322",
+      "id": "tx-321",
       "property": "Epitome Thaxton Multi-Family",
       "community": "Epitome Thaxton Multi-Family",
       "city": "Austin",
@@ -12152,7 +12120,7 @@
       "metro": "Austin"
     },
     {
-      "id": "tx-323",
+      "id": "tx-322",
       "property": "2121 Broadway Apartments",
       "community": "2121 Broadway Apartments",
       "city": "Houston",
@@ -12214,7 +12182,7 @@
       "address": "2501 Ohio Dr"
     },
     {
-      "id": "tx-324",
+      "id": "tx-323",
       "property": "2910 Motley Senior Living",
       "community": "2910 Motley Senior Living",
       "city": "Mesquite",
@@ -12251,7 +12219,7 @@
       "metro": "Dallas\u2013Fort Worth"
     },
     {
-      "id": "tx-325",
+      "id": "tx-324",
       "property": "Village East Apartments",
       "community": "Village East Apartments",
       "city": "Fort Worth",
@@ -12283,7 +12251,7 @@
       "metro": "Dallas\u2013Fort Worth"
     },
     {
-      "id": "tx-326",
+      "id": "tx-325",
       "property": "Bird Creek Senior Living",
       "community": "Bird Creek Senior Living",
       "city": "Temple",
@@ -12320,7 +12288,7 @@
       "metro": "Rest of Texas"
     },
     {
-      "id": "tx-327",
+      "id": "tx-326",
       "property": "Mid-Town Pharr Apartments",
       "community": "Mid-Town Pharr Apartments",
       "city": "Pharr",
@@ -12352,7 +12320,7 @@
       "metro": "Rest of Texas"
     },
     {
-      "id": "tx-328",
+      "id": "tx-327",
       "property": "Avalon Gardens Apartments",
       "community": "Avalon Gardens Apartments",
       "city": "Hempstead",
@@ -12379,6 +12347,38 @@
       "signalType": "Leasing",
       "signal": "Opened 2026-05-01",
       "why": "Under construction \u00b7 opens 2026-05-01 \u00b7 40 units \u00b7 software not picked yet",
+      "score": 41,
+      "isNew": false,
+      "metro": "Houston"
+    },
+    {
+      "id": "tx-328",
+      "property": "Sam Houston Apartments",
+      "community": "SAM HOUSTON APARTMENTS",
+      "city": "Houston",
+      "address": "6125 SOUTH SAM HOUSTON EAST PKY",
+      "units": null,
+      "stage": "under construction",
+      "permitDate": "2025-07-11",
+      "openingDate": "2026-05-01",
+      "saleDate": null,
+      "buyer": null,
+      "developer": "8 WAY EQUITY LLC",
+      "officePhone": "(713) 245-0779",
+      "website": null,
+      "software": null,
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025023290"
+      },
+      "sources": [
+        {
+          "label": "State project record",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025023290"
+        }
+      ],
+      "signalType": "Leasing",
+      "signal": "Opened 2026-05-01",
+      "why": "Under construction \u00b7 opens 2026-05-01 \u00b7 software not picked yet",
       "score": 41,
       "isNew": false,
       "metro": "Houston"
@@ -12415,38 +12415,6 @@
     },
     {
       "id": "tx-329",
-      "property": "Sam Houston Apartments",
-      "community": "SAM HOUSTON APARTMENTS",
-      "city": "Houston",
-      "address": "6125 SOUTH SAM HOUSTON EAST PKY",
-      "units": null,
-      "stage": "under construction",
-      "permitDate": "2025-07-11",
-      "openingDate": "2026-05-01",
-      "saleDate": null,
-      "buyer": null,
-      "developer": "8 WAY EQUITY LLC",
-      "officePhone": "(713) 245-0779",
-      "website": null,
-      "software": null,
-      "links": {
-        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025023290"
-      },
-      "sources": [
-        {
-          "label": "State project record",
-          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025023290"
-        }
-      ],
-      "signalType": "Leasing",
-      "signal": "Opened 2026-05-01",
-      "why": "Under construction \u00b7 opens 2026-05-01 \u00b7 software not picked yet",
-      "score": 40,
-      "isNew": false,
-      "metro": "Houston"
-    },
-    {
-      "id": "tx-330",
       "property": "Mesa Hills Apartments",
       "community": "Mesa Hills Apartments",
       "city": "El Paso",
@@ -12478,7 +12446,7 @@
       "metro": "Rest of Texas"
     },
     {
-      "id": "tx-331",
+      "id": "tx-330",
       "property": "Prestige Apartments",
       "community": "Prestige Apartments",
       "city": "Denton",
@@ -12510,7 +12478,7 @@
       "metro": "Dallas\u2013Fort Worth"
     },
     {
-      "id": "tx-332",
+      "id": "tx-331",
       "property": "Lee Place Apartments",
       "community": "Lee Place Apartments",
       "city": "El Paso",
@@ -12542,7 +12510,7 @@
       "metro": "Rest of Texas"
     },
     {
-      "id": "tx-333",
+      "id": "tx-332",
       "property": "Bulverde Multifamily Apartments",
       "community": "Bulverde Multifamily Apartments",
       "city": "San Antonio",
@@ -12574,7 +12542,7 @@
       "metro": "San Antonio"
     },
     {
-      "id": "tx-334",
+      "id": "tx-333",
       "property": "Autumn Parc Apartments",
       "community": "Autumn Parc Apartments",
       "city": "Arlington",
@@ -12606,7 +12574,7 @@
       "metro": "Dallas\u2013Fort Worth"
     },
     {
-      "id": "tx-335",
+      "id": "tx-334",
       "property": "Tuscany Parkway Apartments",
       "community": "Tuscany Parkway Apartments",
       "city": "Amarillo",
@@ -12638,7 +12606,7 @@
       "metro": "Rest of Texas"
     },
     {
-      "id": "tx-336",
+      "id": "tx-335",
       "property": "Bibb Senior Living",
       "community": "Bibb Senior Living",
       "city": "Eagle Pass",
@@ -12675,7 +12643,7 @@
       "metro": "Rest of Texas"
     },
     {
-      "id": "tx-337",
+      "id": "tx-336",
       "property": "Apartments At Mckaskle Road Building A, B, & C",
       "community": "APARTMENTS AT MCKASKLE ROAD BUILDING A, B, & C",
       "city": "Sugar Land",
@@ -12707,7 +12675,7 @@
       "metro": "Houston"
     },
     {
-      "id": "tx-338",
+      "id": "tx-337",
       "property": "Guerlain Luxury Apartments",
       "community": "Guerlain Luxury Apartments",
       "city": "Edinburg",
@@ -12739,7 +12707,7 @@
       "metro": "Rest of Texas"
     },
     {
-      "id": "tx-339",
+      "id": "tx-338",
       "property": "Vineyard Springs Apartments",
       "community": "Vineyard Springs Apartments",
       "city": "Johnson City",
@@ -12771,7 +12739,7 @@
       "metro": "Rest of Texas"
     },
     {
-      "id": "tx-340",
+      "id": "tx-339",
       "property": "1401 South Lamar Multifamily and Garage",
       "community": "1401 South Lamar Multifamily and Garage",
       "city": "Austin",
@@ -12798,12 +12766,12 @@
       "signalType": "Leasing",
       "signal": "Opened 2025-09-01",
       "why": "Under construction \u00b7 opens 2025-09-01 \u00b7 software not picked yet",
-      "score": 38,
+      "score": 39,
       "isNew": false,
       "metro": "Austin"
     },
     {
-      "id": "tx-341",
+      "id": "tx-340",
       "property": "Quantum Drive",
       "community": "Quantum Drive",
       "city": "San Antonio",
@@ -12835,7 +12803,7 @@
       "metro": "San Antonio"
     },
     {
-      "id": "tx-342",
+      "id": "tx-341",
       "property": "Crystal Bend Apartments",
       "community": "Crystal Bend Apartments",
       "city": "Pflugerville",
@@ -12867,7 +12835,7 @@
       "metro": "Austin"
     },
     {
-      "id": "tx-343",
+      "id": "tx-342",
       "property": "The Arboretum at Woodland Hills",
       "community": "The Arboretum at Woodland Hills",
       "city": "Houston",
@@ -12899,7 +12867,7 @@
       "metro": "Houston"
     },
     {
-      "id": "tx-344",
+      "id": "tx-343",
       "property": "The Culbreath",
       "community": "The Culbreath",
       "city": "Dallas",
@@ -12931,7 +12899,7 @@
       "metro": "Dallas\u2013Fort Worth"
     },
     {
-      "id": "tx-345",
+      "id": "tx-344",
       "property": "Centerpoint Commons",
       "community": "Centerpoint Commons",
       "city": "San Marcos",
@@ -12993,7 +12961,7 @@
       "address": "700 18Th St"
     },
     {
-      "id": "tx-346",
+      "id": "tx-345",
       "property": "Tapestry at Katy",
       "community": "Tapestry at Katy",
       "city": "Katy",
@@ -13025,7 +12993,7 @@
       "metro": "Houston"
     },
     {
-      "id": "tx-347",
+      "id": "tx-346",
       "property": "Enclave on Louetta",
       "community": "Enclave on Louetta",
       "city": "Spring",
@@ -13057,7 +13025,7 @@
       "metro": "Houston"
     },
     {
-      "id": "tx-348",
+      "id": "tx-347",
       "property": "Reserve at Ella",
       "community": "Reserve at Ella",
       "city": "Houston",
@@ -13089,7 +13057,7 @@
       "metro": "Houston"
     },
     {
-      "id": "tx-349",
+      "id": "tx-348",
       "property": "Sageland Flats fka Brooks Family Apartments",
       "community": "Sageland Flats fka Brooks Family Apartments",
       "city": "San Antonio",
@@ -13121,7 +13089,7 @@
       "metro": "San Antonio"
     },
     {
-      "id": "tx-350",
+      "id": "tx-349",
       "property": "Oso Apartments",
       "community": "Oso Apartments",
       "city": "Converse",
@@ -13153,7 +13121,7 @@
       "metro": "San Antonio"
     },
     {
-      "id": "tx-351",
+      "id": "tx-350",
       "property": "The Orion Apartment Homes",
       "community": "The Orion Apartment Homes",
       "city": "San Antonio",
@@ -13180,12 +13148,12 @@
       "signalType": "Planned",
       "signal": "Planned (not permitted yet)",
       "why": "Planned \u00b7 expected: not public yet \u00b7 336 units \u00b7 software not chosen yet",
-      "score": 36,
+      "score": 37,
       "isNew": false,
       "metro": "San Antonio"
     },
     {
-      "id": "tx-352",
+      "id": "tx-351",
       "property": "Stones Crossing Apartment Homes",
       "community": "Stones Crossing Apartment Homes",
       "city": "San Antonio",
@@ -13217,7 +13185,7 @@
       "metro": "San Antonio"
     },
     {
-      "id": "tx-353",
+      "id": "tx-352",
       "property": "301 Lofts",
       "community": "301 Lofts",
       "city": "San Antonio",
@@ -13249,7 +13217,7 @@
       "metro": "San Antonio"
     },
     {
-      "id": "tx-354",
+      "id": "tx-353",
       "property": "The Gateway at Trinity Forest",
       "community": "The Gateway at Trinity Forest",
       "city": "Dallas",
@@ -13281,7 +13249,7 @@
       "metro": "Dallas\u2013Fort Worth"
     },
     {
-      "id": "tx-355",
+      "id": "tx-354",
       "property": "Tower Road Apartments",
       "community": "Tower Road Apartments",
       "city": "Manor",
@@ -13313,7 +13281,7 @@
       "metro": "Austin"
     },
     {
-      "id": "tx-356",
+      "id": "tx-355",
       "property": "Palladium Old FM 471 W",
       "community": "Palladium Old FM 471 W",
       "city": "San Antonio",
@@ -13345,7 +13313,7 @@
       "metro": "San Antonio"
     },
     {
-      "id": "tx-357",
+      "id": "tx-356",
       "property": "Torrington Briarwood",
       "community": "Torrington Briarwood",
       "city": "Mesquite",
@@ -13377,7 +13345,7 @@
       "metro": "Dallas\u2013Fort Worth"
     },
     {
-      "id": "tx-358",
+      "id": "tx-357",
       "property": "Creek Bend Apartment Homes",
       "community": "Creek Bend Apartment Homes",
       "city": "San Antonio",
@@ -13409,7 +13377,7 @@
       "metro": "San Antonio"
     },
     {
-      "id": "tx-359",
+      "id": "tx-358",
       "property": "Maxwell Hwy 21 Apartments",
       "community": "Maxwell Hwy 21 Apartments",
       "city": "Maxwell",
@@ -13441,7 +13409,7 @@
       "metro": "Austin"
     },
     {
-      "id": "tx-360",
+      "id": "tx-359",
       "property": "The Springs Apartments",
       "community": "The Springs Apartments",
       "city": "San Marcos",
@@ -13473,7 +13441,7 @@
       "metro": "Austin"
     },
     {
-      "id": "tx-361",
+      "id": "tx-360",
       "property": "Hughes House II",
       "community": "Hughes House II",
       "city": "Fort Worth",
@@ -13505,7 +13473,7 @@
       "metro": "Dallas\u2013Fort Worth"
     },
     {
-      "id": "tx-362",
+      "id": "tx-361",
       "property": "Lofts at Creekview",
       "community": "Lofts at Creekview",
       "city": "San Antonio",
@@ -13532,12 +13500,12 @@
       "signalType": "Planned",
       "signal": "Planned (not permitted yet)",
       "why": "Planned \u00b7 expected: not public yet \u00b7 301 units \u00b7 software not chosen yet",
-      "score": 34,
+      "score": 35,
       "isNew": false,
       "metro": "San Antonio"
     },
     {
-      "id": "tx-363",
+      "id": "tx-362",
       "property": "EMLI at Mesa Gardens",
       "community": "EMLI at Mesa Gardens",
       "city": "Houston",
@@ -13569,7 +13537,7 @@
       "metro": "Houston"
     },
     {
-      "id": "tx-364",
+      "id": "tx-363",
       "property": "The Ridge at Loop 12",
       "community": "The Ridge at Loop 12",
       "city": "Dallas",
@@ -13601,7 +13569,7 @@
       "metro": "Dallas\u2013Fort Worth"
     },
     {
-      "id": "tx-365",
+      "id": "tx-364",
       "property": "Torrington Wilmer",
       "community": "Torrington Wilmer",
       "city": "Dallas",
@@ -13638,7 +13606,7 @@
       "metro": "Dallas\u2013Fort Worth"
     },
     {
-      "id": "tx-366",
+      "id": "tx-365",
       "property": "West Dell Apartment Homes",
       "community": "West Dell Apartment Homes",
       "city": "San Antonio",
@@ -13670,7 +13638,7 @@
       "metro": "San Antonio"
     },
     {
-      "id": "tx-367",
+      "id": "tx-366",
       "property": "West Dell Apartments",
       "community": "West Dell Apartments",
       "city": "San Antonio",
@@ -13702,7 +13670,7 @@
       "metro": "San Antonio"
     },
     {
-      "id": "tx-368",
+      "id": "tx-367",
       "property": "Torrington Creekside",
       "community": "Torrington Creekside",
       "city": "Mesquite",
@@ -13734,7 +13702,7 @@
       "metro": "Dallas\u2013Fort Worth"
     },
     {
-      "id": "tx-369",
+      "id": "tx-368",
       "property": "Palladium San Antonio",
       "community": "Palladium San Antonio",
       "city": "San Antonio",
@@ -13766,7 +13734,7 @@
       "metro": "San Antonio"
     },
     {
-      "id": "tx-370",
+      "id": "tx-369",
       "property": "Palladium Carver Living",
       "community": "Palladium Carver Living",
       "city": "Mesquite",
@@ -13798,7 +13766,7 @@
       "metro": "Dallas\u2013Fort Worth"
     },
     {
-      "id": "tx-371",
+      "id": "tx-370",
       "property": "Wooded Lake Apartments",
       "community": "Wooded Lake Apartments",
       "city": "Mesquite",
@@ -13830,7 +13798,7 @@
       "metro": "Dallas\u2013Fort Worth"
     },
     {
-      "id": "tx-372",
+      "id": "tx-371",
       "property": "Cordova Apartments",
       "community": "Cordova Apartments",
       "city": "Houston",
@@ -13862,7 +13830,7 @@
       "metro": "Houston"
     },
     {
-      "id": "tx-373",
+      "id": "tx-372",
       "property": "Central at Commerce",
       "community": "Central at Commerce",
       "city": "San Antonio",
@@ -13889,12 +13857,12 @@
       "signalType": "Planned",
       "signal": "Planned (not permitted yet)",
       "why": "Planned \u00b7 expected: not public yet \u00b7 279 units \u00b7 software not chosen yet",
-      "score": 32,
+      "score": 33,
       "isNew": false,
       "metro": "San Antonio"
     },
     {
-      "id": "tx-374",
+      "id": "tx-373",
       "property": "Willow Creek Manor",
       "community": "Willow Creek Manor",
       "city": "Houston",
@@ -13926,7 +13894,7 @@
       "metro": "Houston"
     },
     {
-      "id": "tx-375",
+      "id": "tx-374",
       "property": "Riverbreeze Apartments",
       "community": "Riverbreeze Apartments",
       "city": "San Antonio",
@@ -13958,7 +13926,7 @@
       "metro": "San Antonio"
     },
     {
-      "id": "tx-376",
+      "id": "tx-375",
       "property": "Ed Bluestein Multifamily Apartments",
       "community": "Ed Bluestein Multifamily Apartments",
       "city": "Austin",
@@ -13990,7 +13958,7 @@
       "metro": "Austin"
     },
     {
-      "id": "tx-377",
+      "id": "tx-376",
       "property": "Hill View Heights",
       "community": "Hill View Heights",
       "city": "San Antonio",
@@ -14022,7 +13990,7 @@
       "metro": "San Antonio"
     },
     {
-      "id": "tx-378",
+      "id": "tx-377",
       "property": "Avanti Hills",
       "community": "Avanti Hills",
       "city": "Mesquite",
@@ -14084,7 +14052,7 @@
       "address": "1600 Amelia Ct"
     },
     {
-      "id": "tx-379",
+      "id": "tx-378",
       "property": "Timber Trails Apartments",
       "community": "Timber Trails Apartments",
       "city": "Seguin",
@@ -14116,7 +14084,7 @@
       "metro": "San Antonio"
     },
     {
-      "id": "tx-380",
+      "id": "tx-379",
       "property": "Covington Acres",
       "community": "Covington Acres",
       "city": "Keene",
@@ -14148,7 +14116,7 @@
       "metro": "Dallas\u2013Fort Worth"
     },
     {
-      "id": "tx-381",
+      "id": "tx-380",
       "property": "Northside Village",
       "community": "Northside Village",
       "city": "Georgetown",
@@ -14185,7 +14153,7 @@
       "metro": "Austin"
     },
     {
-      "id": "tx-382",
+      "id": "tx-381",
       "property": "Torrington Forest",
       "community": "Torrington Forest",
       "city": "Dallas",
@@ -14217,7 +14185,7 @@
       "metro": "Dallas\u2013Fort Worth"
     },
     {
-      "id": "tx-383",
+      "id": "tx-382",
       "property": "Cactus Trails Apartments",
       "community": "Cactus Trails Apartments",
       "city": "San Antonio",
@@ -14254,7 +14222,7 @@
       "metro": "San Antonio"
     },
     {
-      "id": "tx-384",
+      "id": "tx-383",
       "property": "Palladium E Lancaster Avenue",
       "community": "Palladium E Lancaster Avenue",
       "city": "Fort Worth",
@@ -14281,12 +14249,12 @@
       "signalType": "Planned",
       "signal": "Planned (not permitted yet)",
       "why": "Planned \u00b7 expected: not public yet \u00b7 243 units \u00b7 software not chosen yet",
-      "score": 30,
+      "score": 31,
       "isNew": false,
       "metro": "Dallas\u2013Fort Worth"
     },
     {
-      "id": "tx-385",
+      "id": "tx-384",
       "property": "Cedar Ridge Terrace fka Brooks Senior Apartments",
       "community": "Cedar Ridge Terrace fka Brooks Senior Apartments",
       "city": "San Antonio",
@@ -14318,7 +14286,7 @@
       "metro": "San Antonio"
     },
     {
-      "id": "tx-386",
+      "id": "tx-385",
       "property": "Residences at Pearsall Park",
       "community": "Residences at Pearsall Park",
       "city": "San Antonio",
@@ -14350,7 +14318,7 @@
       "metro": "San Antonio"
     },
     {
-      "id": "tx-387",
+      "id": "tx-386",
       "property": "Tabor Village",
       "community": "Tabor Village",
       "city": "Dallas",
@@ -14382,7 +14350,7 @@
       "metro": "Dallas\u2013Fort Worth"
     },
     {
-      "id": "tx-388",
+      "id": "tx-387",
       "property": "Richardson Ridge",
       "community": "Richardson Ridge",
       "city": "Fort Worth",
@@ -14414,7 +14382,7 @@
       "metro": "Dallas\u2013Fort Worth"
     },
     {
-      "id": "tx-389",
+      "id": "tx-388",
       "property": "Independence Heights II Apartments",
       "community": "Independence Heights II Apartments",
       "city": "Houston",
@@ -14446,7 +14414,7 @@
       "metro": "Houston"
     },
     {
-      "id": "tx-390",
+      "id": "tx-389",
       "property": "Westmoreland Townhomes",
       "community": "Westmoreland Townhomes",
       "city": "Dallas",
@@ -14478,7 +14446,7 @@
       "metro": "Dallas\u2013Fort Worth"
     },
     {
-      "id": "tx-391",
+      "id": "tx-390",
       "property": "Huntington Place Senior Living Dallas",
       "community": "Huntington Place Senior Living Dallas",
       "city": "Dallas",
@@ -14515,7 +14483,7 @@
       "metro": "Dallas\u2013Fort Worth"
     },
     {
-      "id": "tx-392",
+      "id": "tx-391",
       "property": "Heights at UNT Station",
       "community": "Heights at UNT Station",
       "city": "Dallas",
@@ -14547,7 +14515,7 @@
       "metro": "Dallas\u2013Fort Worth"
     },
     {
-      "id": "tx-393",
+      "id": "tx-392",
       "property": "Huntington Place Senior Living Garland",
       "community": "Huntington Place Senior Living Garland",
       "city": "Garland",
@@ -14579,7 +14547,7 @@
       "metro": "Dallas\u2013Fort Worth"
     },
     {
-      "id": "tx-394",
+      "id": "tx-393",
       "property": "Cedar Bluff Apartments",
       "community": "Cedar Bluff Apartments",
       "city": "Seguin",
@@ -14611,7 +14579,7 @@
       "metro": "San Antonio"
     },
     {
-      "id": "tx-395",
+      "id": "tx-394",
       "property": "The Commons at Acequia Trails",
       "community": "The Commons at Acequia Trails",
       "city": "San Antonio",
@@ -14638,12 +14606,12 @@
       "signalType": "Planned",
       "signal": "Planned (not permitted yet)",
       "why": "Planned \u00b7 expected: not public yet \u00b7 201 units \u00b7 software not chosen yet",
-      "score": 28,
+      "score": 29,
       "isNew": false,
       "metro": "San Antonio"
     },
     {
-      "id": "tx-396",
+      "id": "tx-395",
       "property": "THF Huntington Place Senior Living Little Elm",
       "community": "THF Huntington Place Senior Living Little Elm",
       "city": "Little Elm",
@@ -14675,7 +14643,7 @@
       "metro": "Dallas\u2013Fort Worth"
     },
     {
-      "id": "tx-397",
+      "id": "tx-396",
       "property": "Legacy Senior Residences",
       "community": "Legacy Senior Residences",
       "city": "San Antonio",
@@ -14707,7 +14675,7 @@
       "metro": "San Antonio"
     },
     {
-      "id": "tx-398",
+      "id": "tx-397",
       "property": "The Legacy on Kiest",
       "community": "The Legacy on Kiest",
       "city": "Dallas",
@@ -14739,7 +14707,7 @@
       "metro": "Dallas\u2013Fort Worth"
     },
     {
-      "id": "tx-399",
+      "id": "tx-398",
       "property": "Evans & Rosedale Urban Village",
       "community": "Evans & Rosedale Urban Village",
       "city": "Fort Worth",
@@ -14776,7 +14744,7 @@
       "metro": "Dallas\u2013Fort Worth"
     },
     {
-      "id": "tx-400",
+      "id": "tx-399",
       "property": "Walnut Springs",
       "community": "Walnut Springs",
       "city": "Seguin",
@@ -14808,7 +14776,7 @@
       "metro": "San Antonio"
     },
     {
-      "id": "tx-401",
+      "id": "tx-400",
       "property": "Paytom Gin Apartments",
       "community": "Paytom Gin Apartments",
       "city": "Austin",
@@ -14840,7 +14808,7 @@
       "metro": "Austin"
     },
     {
-      "id": "tx-402",
+      "id": "tx-401",
       "property": "Tenison Lofts",
       "community": "Tenison Lofts",
       "city": "Dallas",
@@ -14872,7 +14840,7 @@
       "metro": "Dallas\u2013Fort Worth"
     },
     {
-      "id": "tx-403",
+      "id": "tx-402",
       "property": "The Katy",
       "community": "The Katy",
       "city": "Elgin",
@@ -14904,7 +14872,7 @@
       "metro": "Austin"
     },
     {
-      "id": "tx-404",
+      "id": "tx-403",
       "property": "Preserve at Dominion Park",
       "community": "Preserve at Dominion Park",
       "city": "Houston",
@@ -14936,7 +14904,7 @@
       "metro": "Houston"
     },
     {
-      "id": "tx-405",
+      "id": "tx-404",
       "property": "New Faith Senior Village Apartments",
       "community": "New Faith Senior Village Apartments",
       "city": "Houston",
@@ -14968,7 +14936,7 @@
       "metro": "Houston"
     },
     {
-      "id": "tx-406",
+      "id": "tx-405",
       "property": "Hartwood at Windstone",
       "community": "Hartwood at Windstone",
       "city": "Houston",
@@ -14995,12 +14963,12 @@
       "signalType": "Planned",
       "signal": "Planned (not permitted yet)",
       "why": "Planned \u00b7 expected: not public yet \u00b7 123 units \u00b7 software not chosen yet",
-      "score": 26,
+      "score": 27,
       "isNew": false,
       "metro": "Houston"
     },
     {
-      "id": "tx-407",
+      "id": "tx-406",
       "property": "New Hope Housing Avenue C",
       "community": "New Hope Housing Avenue C",
       "city": "Houston",
@@ -15032,7 +15000,7 @@
       "metro": "Houston"
     },
     {
-      "id": "tx-408",
+      "id": "tx-407",
       "property": "3606 S Cockrell Hill Road Senior Living",
       "community": "3606 S Cockrell Hill Road Senior Living",
       "city": "Dallas",
@@ -15064,7 +15032,7 @@
       "metro": "Dallas\u2013Fort Worth"
     },
     {
-      "id": "tx-409",
+      "id": "tx-408",
       "property": "Andover Village Apartments",
       "community": "Andover Village Apartments",
       "city": "Houston",
@@ -15096,7 +15064,7 @@
       "metro": "Houston"
     },
     {
-      "id": "tx-410",
+      "id": "tx-409",
       "property": "Citrus Village Apartments",
       "community": "Citrus Village Apartments",
       "city": "Pharr",
@@ -15128,7 +15096,7 @@
       "metro": "Rest of Texas"
     },
     {
-      "id": "tx-411",
+      "id": "tx-410",
       "property": "Bernicia Place",
       "community": "Bernicia Place",
       "city": "Houston",
@@ -15165,7 +15133,7 @@
       "metro": "Houston"
     },
     {
-      "id": "tx-412",
+      "id": "tx-411",
       "property": "930 Military Parkway Living",
       "community": "930 Military Parkway Living",
       "city": "Mesquite",
@@ -15197,7 +15165,7 @@
       "metro": "Dallas\u2013Fort Worth"
     },
     {
-      "id": "tx-413",
+      "id": "tx-412",
       "property": "The Grove at Deerbrook",
       "community": "The Grove at Deerbrook",
       "city": "Houston",
@@ -15229,7 +15197,7 @@
       "metro": "Houston"
     },
     {
-      "id": "tx-414",
+      "id": "tx-413",
       "property": "Las Fuentes",
       "community": "Las Fuentes",
       "city": "Mission",
@@ -15261,7 +15229,7 @@
       "metro": "Rest of Texas"
     },
     {
-      "id": "tx-415",
+      "id": "tx-414",
       "property": "Burleson Studios",
       "community": "Burleson Studios",
       "city": "Austin",
@@ -15293,7 +15261,7 @@
       "metro": "Austin"
     },
     {
-      "id": "tx-416",
+      "id": "tx-415",
       "property": "Bailey at Stassney",
       "community": "Bailey at Stassney",
       "city": "Austin",
@@ -15325,7 +15293,7 @@
       "metro": "Austin"
     },
     {
-      "id": "tx-417",
+      "id": "tx-416",
       "property": "Mandalay",
       "community": "Mandalay",
       "city": "Palmview",
@@ -15357,7 +15325,7 @@
       "metro": "Rest of Texas"
     },
     {
-      "id": "tx-418",
+      "id": "tx-417",
       "property": "Villas at Primrose",
       "community": "Villas at Primrose",
       "city": "McAllen",
@@ -15389,7 +15357,7 @@
       "metro": "Rest of Texas"
     },
     {
-      "id": "tx-419",
+      "id": "tx-418",
       "property": "Retreat at Esther",
       "community": "Retreat at Esther",
       "city": "Houston",
@@ -15421,7 +15389,7 @@
       "metro": "Houston"
     },
     {
-      "id": "tx-420",
+      "id": "tx-419",
       "property": "WALIPP Senior Residence Expansion",
       "community": "WALIPP Senior Residence Expansion",
       "city": "Houston",
@@ -15453,7 +15421,7 @@
       "metro": "Houston"
     },
     {
-      "id": "tx-421",
+      "id": "tx-420",
       "property": "Westwood Apartments",
       "community": "Westwood Apartments",
       "city": "Killeen",
@@ -15485,7 +15453,7 @@
       "metro": "Rest of Texas"
     },
     {
-      "id": "tx-422",
+      "id": "tx-421",
       "property": "Columbia Renaissance Square III",
       "community": "Columbia Renaissance Square III",
       "city": "Fort Worth",
@@ -15517,7 +15485,7 @@
       "metro": "Dallas\u2013Fort Worth"
     },
     {
-      "id": "tx-423",
+      "id": "tx-422",
       "property": "The Tidwell",
       "community": "The Tidwell",
       "city": "Houston",
@@ -15549,7 +15517,7 @@
       "metro": "Houston"
     },
     {
-      "id": "tx-424",
+      "id": "tx-423",
       "property": "Dashwood Trails",
       "community": "Dashwood Trails",
       "city": "Houston",
@@ -15581,7 +15549,7 @@
       "metro": "Houston"
     },
     {
-      "id": "tx-425",
+      "id": "tx-424",
       "property": "Northpark Garden Villas",
       "community": "Northpark Garden Villas",
       "city": "Houston",
@@ -15613,7 +15581,7 @@
       "metro": "Houston"
     },
     {
-      "id": "tx-426",
+      "id": "tx-425",
       "property": "Sherry Pointe Apartments",
       "community": "Sherry Pointe Apartments",
       "city": "Arlington",
@@ -15645,7 +15613,7 @@
       "metro": "Dallas\u2013Fort Worth"
     },
     {
-      "id": "tx-427",
+      "id": "tx-426",
       "property": "Cedar Brook Village",
       "community": "Cedar Brook Village",
       "city": "Houston",
@@ -15677,7 +15645,7 @@
       "metro": "Houston"
     },
     {
-      "id": "tx-428",
+      "id": "tx-427",
       "property": "Reserve at Augustine",
       "community": "Reserve at Augustine",
       "city": "Dallas",
@@ -15709,7 +15677,7 @@
       "metro": "Dallas\u2013Fort Worth"
     },
     {
-      "id": "tx-429",
+      "id": "tx-428",
       "property": "Meadowbrook Apartments",
       "community": "Meadowbrook Apartments",
       "city": "Robinson",
@@ -15741,7 +15709,7 @@
       "metro": "Rest of Texas"
     },
     {
-      "id": "tx-430",
+      "id": "tx-429",
       "property": "Heritage Estates at Valley Ridge",
       "community": "Heritage Estates at Valley Ridge",
       "city": "Lewisville",
@@ -15773,7 +15741,7 @@
       "metro": "Dallas\u2013Fort Worth"
     },
     {
-      "id": "tx-431",
+      "id": "tx-430",
       "property": "The James at Wheatland",
       "community": "The James at Wheatland",
       "city": "Dallas",
@@ -15805,7 +15773,7 @@
       "metro": "Dallas\u2013Fort Worth"
     },
     {
-      "id": "tx-432",
+      "id": "tx-431",
       "property": "Riverside Garden Villas",
       "community": "Riverside Garden Villas",
       "city": "Houston",
@@ -15837,7 +15805,7 @@
       "metro": "Houston"
     },
     {
-      "id": "tx-433",
+      "id": "tx-432",
       "property": "Kingfield Trails",
       "community": "Kingfield Trails",
       "city": "Houston",
@@ -15869,7 +15837,7 @@
       "metro": "Houston"
     },
     {
-      "id": "tx-434",
+      "id": "tx-433",
       "property": "Connect Hillcroft",
       "community": "Connect Hillcroft",
       "city": "Houston",
@@ -15901,7 +15869,7 @@
       "metro": "Houston"
     },
     {
-      "id": "tx-435",
+      "id": "tx-434",
       "property": "CSH Silverleaf Senior Living, Ltd.",
       "community": "CSH Silverleaf Senior Living, Ltd.",
       "city": "Houston",
@@ -15933,7 +15901,7 @@
       "metro": "Houston"
     },
     {
-      "id": "tx-436",
+      "id": "tx-435",
       "property": "Trinity East Senior",
       "community": "Trinity East Senior",
       "city": "Houston",
@@ -15965,7 +15933,7 @@
       "metro": "Houston"
     },
     {
-      "id": "tx-437",
+      "id": "tx-436",
       "property": "Amarillo Lofts",
       "community": "Amarillo Lofts",
       "city": "Amarillo",
@@ -15997,7 +15965,7 @@
       "metro": "Rest of Texas"
     },
     {
-      "id": "tx-438",
+      "id": "tx-437",
       "property": "Greens at Retton",
       "community": "Greens at Retton",
       "city": "Houston",
@@ -16029,7 +15997,7 @@
       "metro": "Houston"
     },
     {
-      "id": "tx-439",
+      "id": "tx-438",
       "property": "Stella Haven",
       "community": "Stella Haven",
       "city": "Denton",
@@ -16061,7 +16029,7 @@
       "metro": "Dallas\u2013Fort Worth"
     },
     {
-      "id": "tx-440",
+      "id": "tx-439",
       "property": "Oasis Gardens",
       "community": "Oasis Gardens",
       "city": "Houston",
@@ -16093,7 +16061,7 @@
       "metro": "Houston"
     },
     {
-      "id": "tx-441",
+      "id": "tx-440",
       "property": "Bella Limon",
       "community": "Bella Limon",
       "city": "Dallas",
@@ -16125,7 +16093,7 @@
       "metro": "Dallas\u2013Fort Worth"
     },
     {
-      "id": "tx-442",
+      "id": "tx-441",
       "property": "Heritage Estates at Medina",
       "community": "Heritage Estates at Medina",
       "city": "San Antonio",
@@ -16157,7 +16125,7 @@
       "metro": "San Antonio"
     },
     {
-      "id": "tx-443",
+      "id": "tx-442",
       "property": "Park at Dogwood",
       "community": "Park at Dogwood",
       "city": "New Braunfels",
@@ -16189,7 +16157,7 @@
       "metro": "San Antonio"
     },
     {
-      "id": "tx-444",
+      "id": "tx-443",
       "property": "McAdams Haven",
       "community": "McAdams Haven",
       "city": "Denton",
@@ -16221,7 +16189,7 @@
       "metro": "Dallas\u2013Fort Worth"
     },
     {
-      "id": "tx-445",
+      "id": "tx-444",
       "property": "The Maven",
       "community": "The Maven",
       "city": "Austin",
@@ -16253,7 +16221,7 @@
       "metro": "Austin"
     },
     {
-      "id": "tx-446",
+      "id": "tx-445",
       "property": "Buena Vida Senior Living",
       "community": "Buena Vida Senior Living",
       "city": "Brownsville",
@@ -16285,7 +16253,7 @@
       "metro": "Rest of Texas"
     },
     {
-      "id": "tx-447",
+      "id": "tx-446",
       "property": "The Watson",
       "community": "The Watson",
       "city": "Arlington",
@@ -16317,7 +16285,7 @@
       "metro": "Dallas\u2013Fort Worth"
     },
     {
-      "id": "tx-448",
+      "id": "tx-447",
       "property": "Avenue at Lancaster",
       "community": "Avenue at Lancaster",
       "city": "Fort Worth",
@@ -16349,7 +16317,7 @@
       "metro": "Dallas\u2013Fort Worth"
     },
     {
-      "id": "tx-449",
+      "id": "tx-448",
       "property": "Buena Vida Apartments",
       "community": "Buena Vida Apartments",
       "city": "Brownsville",
@@ -16381,7 +16349,7 @@
       "metro": "Rest of Texas"
     },
     {
-      "id": "tx-450",
+      "id": "tx-449",
       "property": "Avenue U Villas",
       "community": "Avenue U Villas",
       "city": "Lubbock",
@@ -16413,7 +16381,7 @@
       "metro": "Rest of Texas"
     },
     {
-      "id": "tx-451",
+      "id": "tx-450",
       "property": "Tecovas Terrace",
       "community": "Tecovas Terrace",
       "city": "Amarillo",
@@ -16445,7 +16413,7 @@
       "metro": "Rest of Texas"
     },
     {
-      "id": "tx-452",
+      "id": "tx-451",
       "property": "NHH Little York",
       "community": "NHH Little York",
       "city": "Houston",
@@ -16477,7 +16445,7 @@
       "metro": "Houston"
     },
     {
-      "id": "tx-453",
+      "id": "tx-452",
       "property": "Emancipation West",
       "community": "Emancipation West",
       "city": "Houston",
@@ -16509,7 +16477,7 @@
       "metro": "Houston"
     },
     {
-      "id": "tx-454",
+      "id": "tx-453",
       "property": "West Fork Place",
       "community": "West Fork Place",
       "city": "Houston",
@@ -16541,7 +16509,7 @@
       "metro": "Houston"
     },
     {
-      "id": "tx-455",
+      "id": "tx-454",
       "property": "Hughes House III",
       "community": "Hughes House III",
       "city": "Fort Worth",
@@ -16573,7 +16541,7 @@
       "metro": "Dallas\u2013Fort Worth"
     },
     {
-      "id": "tx-456",
+      "id": "tx-455",
       "property": "Campbell Place",
       "community": "Campbell Place",
       "city": "Arlington",
@@ -16605,7 +16573,7 @@
       "metro": "Dallas\u2013Fort Worth"
     },
     {
-      "id": "tx-457",
+      "id": "tx-456",
       "property": "Aldine Station",
       "community": "Aldine Station",
       "city": "Houston",
@@ -16637,7 +16605,7 @@
       "metro": "Houston"
     },
     {
-      "id": "tx-458",
+      "id": "tx-457",
       "property": "Paredes Apartments",
       "community": "Paredes Apartments",
       "city": "Brownsville",
@@ -16669,7 +16637,7 @@
       "metro": "Rest of Texas"
     },
     {
-      "id": "tx-459",
+      "id": "tx-458",
       "property": "The Eleanor",
       "community": "The Eleanor",
       "city": "Dallas",
@@ -16701,7 +16669,7 @@
       "metro": "Dallas\u2013Fort Worth"
     },
     {
-      "id": "tx-460",
+      "id": "tx-459",
       "property": "Victory Lofts",
       "community": "Victory Lofts",
       "city": "Houston",
@@ -16733,7 +16701,7 @@
       "metro": "Houston"
     },
     {
-      "id": "tx-461",
+      "id": "tx-460",
       "property": "Palo Verde Senior Apartments",
       "community": "Palo Verde Senior Apartments",
       "city": "Corpus Christi",
@@ -16765,7 +16733,7 @@
       "metro": "Rest of Texas"
     },
     {
-      "id": "tx-462",
+      "id": "tx-461",
       "property": "Sycamores at Pleasant Valley",
       "community": "Sycamores at Pleasant Valley",
       "city": "Austin",
@@ -16797,7 +16765,7 @@
       "metro": "Austin"
     },
     {
-      "id": "tx-463",
+      "id": "tx-462",
       "property": "Crown Heritage Senior Village",
       "community": "Crown Heritage Senior Village",
       "city": "Kilgore",
@@ -16829,7 +16797,7 @@
       "metro": "Rest of Texas"
     },
     {
-      "id": "tx-464",
+      "id": "tx-463",
       "property": "Ironwood Apartments",
       "community": "Ironwood Apartments",
       "city": "McAllen",
@@ -16861,7 +16829,7 @@
       "metro": "Rest of Texas"
     },
     {
-      "id": "tx-465",
+      "id": "tx-464",
       "property": "Residences at Sakowitz",
       "community": "Residences at Sakowitz",
       "city": "Houston",
@@ -16893,7 +16861,7 @@
       "metro": "Houston"
     },
     {
-      "id": "tx-466",
+      "id": "tx-465",
       "property": "Palms at Morris",
       "community": "Palms at Morris",
       "city": "Corpus Christi",
@@ -16925,7 +16893,7 @@
       "metro": "Rest of Texas"
     },
     {
-      "id": "tx-467",
+      "id": "tx-466",
       "property": "Conway Village",
       "community": "Conway Village",
       "city": "Mission",
@@ -16957,7 +16925,7 @@
       "metro": "Rest of Texas"
     },
     {
-      "id": "tx-468",
+      "id": "tx-467",
       "property": "The Ashbourne",
       "community": "The Ashbourne",
       "city": "Houston",
@@ -16989,7 +16957,7 @@
       "metro": "Houston"
     },
     {
-      "id": "tx-469",
+      "id": "tx-468",
       "property": "The Enclave at Riverbank",
       "community": "The Enclave at Riverbank",
       "city": "Laredo",
@@ -17021,7 +16989,7 @@
       "metro": "Rest of Texas"
     },
     {
-      "id": "tx-470",
+      "id": "tx-469",
       "property": "Hudson Hallmark",
       "community": "Hudson Hallmark",
       "city": "Brownsville",
@@ -17053,7 +17021,7 @@
       "metro": "Rest of Texas"
     },
     {
-      "id": "tx-471",
+      "id": "tx-470",
       "property": "Cielo Towers II /FKA Cielo Seniors",
       "community": "Cielo Towers II /FKA Cielo Seniors",
       "city": "El Paso",
@@ -17085,7 +17053,7 @@
       "metro": "Rest of Texas"
     },
     {
-      "id": "tx-472",
+      "id": "tx-471",
       "property": "Ovetta Rosedale",
       "community": "Ovetta Rosedale",
       "city": "Austin",
@@ -17117,7 +17085,7 @@
       "metro": "Austin"
     },
     {
-      "id": "tx-473",
+      "id": "tx-472",
       "property": "Pebble Hills Place",
       "community": "Pebble Hills Place",
       "city": "El Paso",
@@ -17149,7 +17117,7 @@
       "metro": "Rest of Texas"
     },
     {
-      "id": "tx-474",
+      "id": "tx-473",
       "property": "McCart Meadows Senior Living",
       "community": "McCart Meadows Senior Living",
       "city": "Fort Worth",
@@ -17181,7 +17149,7 @@
       "metro": "Dallas\u2013Fort Worth"
     },
     {
-      "id": "tx-475",
+      "id": "tx-474",
       "property": "The Judy at VIDA",
       "community": "The Judy at VIDA",
       "city": "San Antonio",
@@ -17213,7 +17181,7 @@
       "metro": "San Antonio"
     },
     {
-      "id": "tx-476",
+      "id": "tx-475",
       "property": "Pine Creek Senior Village",
       "community": "Pine Creek Senior Village",
       "city": "Nacogdoches",
@@ -17245,7 +17213,7 @@
       "metro": "Rest of Texas"
     },
     {
-      "id": "tx-477",
+      "id": "tx-476",
       "property": "Livingston Estates",
       "community": "Livingston Estates",
       "city": "Livingston",
@@ -17277,7 +17245,7 @@
       "metro": "Rest of Texas"
     },
     {
-      "id": "tx-478",
+      "id": "tx-477",
       "property": "Jordan II Apartments",
       "community": "Jordan II Apartments",
       "city": "Austin",
@@ -17309,7 +17277,7 @@
       "metro": "Austin"
     },
     {
-      "id": "tx-479",
+      "id": "tx-478",
       "property": "Maple Lofts",
       "community": "Maple Lofts",
       "city": "Grand Prairie",
@@ -17341,7 +17309,7 @@
       "metro": "Dallas\u2013Fort Worth"
     },
     {
-      "id": "tx-480",
+      "id": "tx-479",
       "property": "Lofts at Wayfarer",
       "community": "Lofts at Wayfarer",
       "city": "Houston",
@@ -17373,7 +17341,7 @@
       "metro": "Houston"
     },
     {
-      "id": "tx-481",
+      "id": "tx-480",
       "property": "Asteri Waco",
       "community": "Asteri Waco",
       "city": "Waco",
@@ -17405,7 +17373,7 @@
       "metro": "Rest of Texas"
     },
     {
-      "id": "tx-482",
+      "id": "tx-481",
       "property": "Nuestra Tierra",
       "community": "Nuestra Tierra",
       "city": "San Antonio",
@@ -17437,7 +17405,7 @@
       "metro": "San Antonio"
     },
     {
-      "id": "tx-483",
+      "id": "tx-482",
       "property": "Mesa Hills I",
       "community": "Mesa Hills I",
       "city": "El Paso",
@@ -17469,7 +17437,7 @@
       "metro": "Rest of Texas"
     },
     {
-      "id": "tx-484",
+      "id": "tx-483",
       "property": "Rowen Vale",
       "community": "Rowen Vale",
       "city": "Austin",
@@ -17501,7 +17469,7 @@
       "metro": "Austin"
     },
     {
-      "id": "tx-485",
+      "id": "tx-484",
       "property": "Vista at Culebra",
       "community": "Vista at Culebra",
       "city": "San Antonio",
@@ -17533,7 +17501,7 @@
       "metro": "San Antonio"
     },
     {
-      "id": "tx-486",
+      "id": "tx-485",
       "property": "Eastside Crossings II / fka Eastside Crossing Senior",
       "community": "Eastside Crossings II / fka Eastside Crossing Senior",
       "city": "El Paso",
@@ -17565,7 +17533,7 @@
       "metro": "Rest of Texas"
     },
     {
-      "id": "tx-487",
+      "id": "tx-486",
       "property": "Riva Ridge",
       "community": "Riva Ridge",
       "city": "Beaumont",
@@ -17597,7 +17565,7 @@
       "metro": "Rest of Texas"
     },
     {
-      "id": "tx-488",
+      "id": "tx-487",
       "property": "Pebble Hills Seniors",
       "community": "Pebble Hills Seniors",
       "city": "El Paso",
@@ -17629,7 +17597,7 @@
       "metro": "Rest of Texas"
     },
     {
-      "id": "tx-489",
+      "id": "tx-488",
       "property": "Pleasant Pointe Apartments",
       "community": "Pleasant Pointe Apartments",
       "city": "Mount Pleasant",
@@ -17661,7 +17629,7 @@
       "metro": "Rest of Texas"
     },
     {
-      "id": "tx-490",
+      "id": "tx-489",
       "property": "Union Grove",
       "community": "Union Grove",
       "city": "Lufkin",
@@ -17693,7 +17661,7 @@
       "metro": "Rest of Texas"
     },
     {
-      "id": "tx-491",
+      "id": "tx-490",
       "property": "Villas at Augusta",
       "community": "Villas at Augusta",
       "city": "El Paso",
@@ -17725,7 +17693,7 @@
       "metro": "Rest of Texas"
     },
     {
-      "id": "tx-492",
+      "id": "tx-491",
       "property": "Shiloh Lofts",
       "community": "Shiloh Lofts",
       "city": "Dallas",
@@ -17757,7 +17725,7 @@
       "metro": "Dallas\u2013Fort Worth"
     },
     {
-      "id": "tx-493",
+      "id": "tx-492",
       "property": "Texano Apartments",
       "community": "Texano Apartments",
       "city": "Hidalgo",
@@ -17789,7 +17757,7 @@
       "metro": "Rest of Texas"
     },
     {
-      "id": "tx-494",
+      "id": "tx-493",
       "property": "Reserve at Kilgore",
       "community": "Reserve at Kilgore",
       "city": "Kilgore",
@@ -17821,7 +17789,7 @@
       "metro": "Rest of Texas"
     },
     {
-      "id": "tx-495",
+      "id": "tx-494",
       "property": "Corry Edwards Townhomes",
       "community": "Corry Edwards Townhomes",
       "city": "Kennedale",
@@ -17853,7 +17821,7 @@
       "metro": "Dallas\u2013Fort Worth"
     },
     {
-      "id": "tx-496",
+      "id": "tx-495",
       "property": "The Bloom at Lamar Square",
       "community": "The Bloom at Lamar Square",
       "city": "Austin",
@@ -17890,7 +17858,7 @@
       "metro": "Austin"
     },
     {
-      "id": "tx-497",
+      "id": "tx-496",
       "property": "Athens Trails",
       "community": "Athens Trails",
       "city": "Athens",
@@ -17922,7 +17890,7 @@
       "metro": "Rest of Texas"
     },
     {
-      "id": "tx-498",
+      "id": "tx-497",
       "property": "Prado Place",
       "community": "Prado Place",
       "city": "Beaumont",
@@ -17954,7 +17922,7 @@
       "metro": "Rest of Texas"
     },
     {
-      "id": "tx-499",
+      "id": "tx-498",
       "property": "Heritage Park",
       "community": "Heritage Park",
       "city": "Sealy",
@@ -17986,7 +17954,7 @@
       "metro": "Houston"
     },
     {
-      "id": "tx-500",
+      "id": "tx-499",
       "property": "Freedom's Path Kerrville II",
       "community": "Freedom's Path Kerrville II",
       "city": "Kerrville",
@@ -18018,7 +17986,7 @@
       "metro": "Rest of Texas"
     },
     {
-      "id": "tx-501",
+      "id": "tx-500",
       "property": "Early Pioneer Crossing",
       "community": "Early Pioneer Crossing",
       "city": "Early",
@@ -18050,7 +18018,7 @@
       "metro": "Rest of Texas"
     },
     {
-      "id": "tx-502",
+      "id": "tx-501",
       "property": "Pine Creek Apartments",
       "community": "Pine Creek Apartments",
       "city": "Bastrop",
@@ -18082,7 +18050,7 @@
       "metro": "Austin"
     },
     {
-      "id": "tx-503",
+      "id": "tx-502",
       "property": "Lantana Villas",
       "community": "Lantana Villas",
       "city": "Hidalgo",
@@ -18114,7 +18082,7 @@
       "metro": "Rest of Texas"
     },
     {
-      "id": "tx-504",
+      "id": "tx-503",
       "property": "Mount Pleasant Trails",
       "community": "Mount Pleasant Trails",
       "city": "Mount Pleasant",
@@ -18146,7 +18114,7 @@
       "metro": "Rest of Texas"
     },
     {
-      "id": "tx-505",
+      "id": "tx-504",
       "property": "Buena Vida Supportive Housing",
       "community": "Buena Vida Supportive Housing",
       "city": "Brownsville",
@@ -18178,7 +18146,7 @@
       "metro": "Rest of Texas"
     },
     {
-      "id": "tx-506",
+      "id": "tx-505",
       "property": "Cottages on Independence",
       "community": "Cottages on Independence",
       "city": "Port Lavaca",
@@ -18210,7 +18178,7 @@
       "metro": "Rest of Texas"
     },
     {
-      "id": "tx-507",
+      "id": "tx-506",
       "property": "Easy Street Lofts",
       "community": "Easy Street Lofts",
       "city": "Cleveland",
@@ -18242,7 +18210,7 @@
       "metro": "Houston"
     },
     {
-      "id": "tx-508",
+      "id": "tx-507",
       "property": "Abbington Station",
       "community": "Abbington Station",
       "city": "Pleasanton",
@@ -18274,7 +18242,7 @@
       "metro": "San Antonio"
     },
     {
-      "id": "tx-509",
+      "id": "tx-508",
       "property": "Patriot Pointe at Fox Ave",
       "community": "Patriot Pointe at Fox Ave",
       "city": "Lewisville",
@@ -18306,7 +18274,7 @@
       "metro": "Dallas\u2013Fort Worth"
     },
     {
-      "id": "tx-510",
+      "id": "tx-509",
       "property": "Gatesville Terrace",
       "community": "Gatesville Terrace",
       "city": "Gatesville",
@@ -18338,7 +18306,7 @@
       "metro": "Rest of Texas"
     },
     {
-      "id": "tx-511",
+      "id": "tx-510",
       "property": "Ortiz Lofts",
       "community": "Ortiz Lofts",
       "city": "Robstown",
@@ -18370,7 +18338,7 @@
       "metro": "Rest of Texas"
     },
     {
-      "id": "tx-512",
+      "id": "tx-511",
       "property": "Avalon at Levelland",
       "community": "Avalon at Levelland",
       "city": "Levelland",
@@ -18402,7 +18370,7 @@
       "metro": "Rest of Texas"
     },
     {
-      "id": "tx-513",
+      "id": "tx-512",
       "property": "Lantern at Big Spring",
       "community": "Lantern at Big Spring",
       "city": "Big Spring",
@@ -18434,7 +18402,7 @@
       "metro": "Rest of Texas"
     },
     {
-      "id": "tx-514",
+      "id": "tx-513",
       "property": "Gainesville Trails",
       "community": "Gainesville Trails",
       "city": "Gainesville",
@@ -18466,7 +18434,7 @@
       "metro": "Rest of Texas"
     },
     {
-      "id": "tx-515",
+      "id": "tx-514",
       "property": "Burkburnett Royal Gardens",
       "community": "Burkburnett Royal Gardens",
       "city": "Burkburnett",
@@ -18498,7 +18466,7 @@
       "metro": "Rest of Texas"
     },
     {
-      "id": "tx-516",
+      "id": "tx-515",
       "property": "Mesa Hills II",
       "community": "Mesa Hills II",
       "city": "El Paso",
@@ -18530,7 +18498,7 @@
       "metro": "Rest of Texas"
     },
     {
-      "id": "tx-517",
+      "id": "tx-516",
       "property": "The Rosie",
       "community": "The Rosie",
       "city": "Vinton",
@@ -18562,7 +18530,7 @@
       "metro": "Rest of Texas"
     },
     {
-      "id": "tx-518",
+      "id": "tx-517",
       "property": "The Lantern at Robstown",
       "community": "The Lantern at Robstown",
       "city": "Robstown",
@@ -18594,7 +18562,7 @@
       "metro": "Rest of Texas"
     },
     {
-      "id": "tx-519",
+      "id": "tx-518",
       "property": "The Lenora",
       "community": "The Lenora",
       "city": "Austin",
@@ -18626,7 +18594,7 @@
       "metro": "Austin"
     },
     {
-      "id": "tx-520",
+      "id": "tx-519",
       "property": "Green Manor Apartments",
       "community": "Green Manor Apartments",
       "city": "Burnet",
@@ -18658,7 +18626,7 @@
       "metro": "Rest of Texas"
     },
     {
-      "id": "tx-521",
+      "id": "tx-520",
       "property": "Reserve at Corsicana",
       "community": "Reserve at Corsicana",
       "city": "Corsicana",
@@ -18690,7 +18658,7 @@
       "metro": "Rest of Texas"
     },
     {
-      "id": "tx-522",
+      "id": "tx-521",
       "property": "Hillsboro Trails",
       "community": "Hillsboro Trails",
       "city": "Hillsboro",
@@ -18722,7 +18690,7 @@
       "metro": "Rest of Texas"
     },
     {
-      "id": "tx-523",
+      "id": "tx-522",
       "property": "The Residence at Red Cedar",
       "community": "The Residence at Red Cedar",
       "city": "Corsicana",
@@ -18754,7 +18722,7 @@
       "metro": "Rest of Texas"
     },
     {
-      "id": "tx-524",
+      "id": "tx-523",
       "property": "Gatesville Crossing",
       "community": "Gatesville Crossing",
       "city": "Gatesville",
@@ -18786,7 +18754,7 @@
       "metro": "Rest of Texas"
     },
     {
-      "id": "tx-525",
+      "id": "tx-524",
       "property": "The Residence at Green Meadow",
       "community": "The Residence at Green Meadow",
       "city": "San Angelo",
@@ -18818,7 +18786,7 @@
       "metro": "Rest of Texas"
     },
     {
-      "id": "tx-526",
+      "id": "tx-525",
       "property": "Meadow View Estates",
       "community": "Meadow View Estates",
       "city": "Homestead Meadows South",
@@ -18850,7 +18818,7 @@
       "metro": "Rest of Texas"
     },
     {
-      "id": "tx-527",
+      "id": "tx-526",
       "property": "Wildcat Villas",
       "community": "Wildcat Villas",
       "city": "Anthony",
@@ -18882,7 +18850,7 @@
       "metro": "Rest of Texas"
     },
     {
-      "id": "tx-528",
+      "id": "tx-527",
       "property": "The Park At Ashford",
       "community": "THE PARK AT ASHFORD",
       "city": "Arlington",
@@ -18920,7 +18888,7 @@
       "metro": "Dallas\u2013Fort Worth"
     },
     {
-      "id": "tx-529",
+      "id": "tx-528",
       "property": "Bella Vida",
       "community": "BELLA VIDA",
       "city": "Tarrant County",
@@ -18953,7 +18921,7 @@
       "metro": "Dallas\u2013Fort Worth"
     },
     {
-      "id": "tx-530",
+      "id": "tx-529",
       "property": "Westland Estates",
       "community": "WESTLAND ESTATES",
       "city": "Tarrant County",
@@ -18987,7 +18955,7 @@
       "metro": "Dallas\u2013Fort Worth"
     },
     {
-      "id": "tx-531",
+      "id": "tx-530",
       "property": "Landmark At Crowley",
       "community": "LANDMARK AT CROWLEY",
       "city": "Tarrant County",
@@ -19021,7 +18989,7 @@
       "metro": "Dallas\u2013Fort Worth"
     },
     {
-      "id": "tx-532",
+      "id": "tx-531",
       "property": "Richland Court",
       "community": "RICHLAND COURT",
       "city": "Richland Hills",
@@ -19064,7 +19032,7 @@
       "metro": "Dallas\u2013Fort Worth"
     },
     {
-      "id": "tx-533",
+      "id": "tx-532",
       "property": "Delara Chase Apts",
       "community": "DELARA CHASE APTS",
       "city": "Tarrant County",
@@ -19097,7 +19065,7 @@
       "metro": "Dallas\u2013Fort Worth"
     },
     {
-      "id": "tx-534",
+      "id": "tx-533",
       "property": "Oaks At Jane Lane",
       "community": "OAKS AT JANE LANE",
       "city": "Tarrant County",
@@ -19131,7 +19099,7 @@
       "metro": "Dallas\u2013Fort Worth"
     },
     {
-      "id": "tx-535",
+      "id": "tx-534",
       "property": "221 Arbrook",
       "community": "221 Arbrook",
       "city": "Tarrant County",
@@ -19164,7 +19132,7 @@
       "metro": "Dallas\u2013Fort Worth"
     },
     {
-      "id": "tx-536",
+      "id": "tx-535",
       "property": "Ashton Apartment Homes",
       "community": "ASHTON APARTMENT HOMES",
       "city": "Saginaw",
@@ -19202,7 +19170,7 @@
       "metro": "Dallas\u2013Fort Worth"
     },
     {
-      "id": "tx-537",
+      "id": "tx-536",
       "property": "The Wyatt At Presidio Junction",
       "community": "THE WYATT AT PRESIDIO JUNCTION",
       "city": "Tarrant County",
@@ -19236,7 +19204,7 @@
       "metro": "Dallas\u2013Fort Worth"
     },
     {
-      "id": "tx-538",
+      "id": "tx-537",
       "property": "Solea Tavolo Park",
       "community": "Solea Tavolo Park",
       "city": "Tarrant County",
@@ -19269,7 +19237,7 @@
       "metro": "Dallas\u2013Fort Worth"
     },
     {
-      "id": "tx-539",
+      "id": "tx-538",
       "property": "Solea Keller",
       "community": "SOLEA KELLER",
       "city": "Tarrant County",
@@ -19302,7 +19270,7 @@
       "metro": "Dallas\u2013Fort Worth"
     },
     {
-      "id": "tx-540",
+      "id": "tx-539",
       "property": "Cottages at Summer Cree",
       "community": "Cottages at Summer Cree",
       "city": "Tarrant County",
@@ -19335,7 +19303,7 @@
       "metro": "Dallas\u2013Fort Worth"
     },
     {
-      "id": "tx-541",
+      "id": "tx-540",
       "property": "Ranch Three0Five",
       "community": "RANCH THREE0FIVE",
       "city": "Tarrant County",
@@ -19368,7 +19336,7 @@
       "metro": "Dallas\u2013Fort Worth"
     },
     {
-      "id": "tx-542",
+      "id": "tx-541",
       "property": "Hampton Townhomes",
       "community": "HAMPTON TOWNHOMES",
       "city": "Tarrant County",
@@ -19401,7 +19369,7 @@
       "metro": "Dallas\u2013Fort Worth"
     },
     {
-      "id": "tx-543",
+      "id": "tx-542",
       "property": "Harlowe Apartments",
       "community": "HARLOWE APARTMENTS",
       "city": "Tarrant County",
@@ -19434,7 +19402,7 @@
       "metro": "Dallas\u2013Fort Worth"
     },
     {
-      "id": "tx-544",
+      "id": "tx-543",
       "property": "Forum At Grand Prairie",
       "community": "FORUM AT GRAND PRAIRIE",
       "city": "Tarrant County",
@@ -19467,7 +19435,7 @@
       "metro": "Dallas\u2013Fort Worth"
     },
     {
-      "id": "tx-545",
+      "id": "tx-544",
       "property": "Ten Twelve West",
       "community": "TEN TWELVE WEST",
       "city": "Tarrant County",
@@ -19500,7 +19468,7 @@
       "metro": "Dallas\u2013Fort Worth"
     },
     {
-      "id": "tx-546",
+      "id": "tx-545",
       "property": "The Biltmore Apts",
       "community": "THE BILTMORE APTS",
       "city": "Tarrant County",
@@ -19533,7 +19501,7 @@
       "metro": "Dallas\u2013Fort Worth"
     },
     {
-      "id": "tx-547",
+      "id": "tx-546",
       "property": "Hendrix",
       "community": "Hendrix",
       "city": "Tarrant County",
@@ -19566,7 +19534,7 @@
       "metro": "Dallas\u2013Fort Worth"
     },
     {
-      "id": "tx-548",
+      "id": "tx-547",
       "property": "The Borough",
       "community": "The Borough",
       "city": "Tarrant County",
@@ -19599,7 +19567,7 @@
       "metro": "Dallas\u2013Fort Worth"
     },
     {
-      "id": "tx-549",
+      "id": "tx-548",
       "property": "Cityscape Arts Apts",
       "community": "CITYSCAPE ARTS APTS",
       "city": "Tarrant County",
@@ -19632,7 +19600,7 @@
       "metro": "Dallas\u2013Fort Worth"
     },
     {
-      "id": "tx-550",
+      "id": "tx-549",
       "property": "Point at Forest Hill",
       "community": "Point at Forest Hill",
       "city": "Tarrant County",
@@ -19665,7 +19633,7 @@
       "metro": "Dallas\u2013Fort Worth"
     },
     {
-      "id": "tx-551",
+      "id": "tx-550",
       "property": "The Sydney",
       "community": "The Sydney",
       "city": "Tarrant County",

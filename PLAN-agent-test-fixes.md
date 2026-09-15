@@ -66,7 +66,7 @@ Open: http://localhost:8765/index.html
   but only show a popup. Either open that state's table or change the wording to match. Test. Commit.
 
 ### Polish
-- [ ] **T12 Fence permit gone.** One Houston lead is a "Multi-Family New Perimeter Fence" permit. Add fences
+- [x] **T12 Fence permit gone.** One Houston lead is a "Multi-Family New Perimeter Fence" permit. Add fences
   to the non-apartment permit filter upstream; rebuild. Test. Commit.
 - [ ] **T13 No duplicate source links.** Some building pages show "Website" and "State project record" as the
   same state link. When the website is only the state record, show it once. Test. Commit.
