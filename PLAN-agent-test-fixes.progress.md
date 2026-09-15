@@ -125,3 +125,23 @@ Tempe row, it also caught a same-shaped Texas row ("ASTORIA ADDITION Block 2
 Lot 34R" -> "Apartments at 3741 Stalcup Rd, Fort Worth"). Checked with
 `bash tooling/qa/check-fixes.sh` (87 tests pass, design check 0 problems).
 Commit: b403a97.
+
+## T10 Table headers sort — done
+The Early Leads table (`site/index.html`) already had a Sort dropdown
+(score/size/newest) but the column headers (Score, Property, City, Units,
+Signal, Software) just sat there looking clickable. Added `data-sort-key`
+attributes to those headers, a click handler that sorts by that column
+(numeric for Score/Units, alphabetical for the rest, missing software sorts
+last) and toggles ascending/descending on a repeat click, with a small
+▲/▼ arrow (CSS in `site/css/styles.css`) showing which column and
+direction is active. Clicking the Score or Units header also flips the
+existing Sort dropdown to match ("Sort: score" / "Sort: size"), and picking
+anything from the dropdown clears the header-driven sort so the two never
+fight over which one wins. Added
+`tooling/qa/fixes_tests/test_t10_table_headers_sort.py` (5 tests: all six
+sortable headers are declared, a repeat click reverses direction, a clicked
+header takes priority over the dropdown's own sort branches, Score/Units
+clicks sync the dropdown, and picking the dropdown clears the header sort).
+Checked with `bash tooling/qa/check-fixes.sh` (92 tests pass, design check
+0 problems on 7 pages) and a Node syntax check of the page's inline script.
+Commit: see git log.
