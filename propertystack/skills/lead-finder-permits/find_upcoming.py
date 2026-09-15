@@ -225,6 +225,16 @@ def _find_builder_phone(row: dict, recipe: dict, permit_link: str) -> tuple[str,
     return "", None
 
 
+# ArcGIS FeatureServer caps a single query response at 1,000 rows regardless
+# of resultRecordCount, and signals it with exceededTransferLimit=true rather
+# than erroring -- a source with 2,000+ matching permits silently loses
+# everything past row 1,000 unless the caller pages with resultOffset.
+# Capped at this many extra pages so a runaway feed can't loop forever;
+# large enough for every real permit layer seen so far (one real source
+# needed 3 pages for ~2,200 rows).
+MAX_ARCGIS_PAGES = 20
+
+
 def _fetch_rows(endpoint: str, http_get: HttpGet) -> list[dict]:
     if not endpoint:
         return []
@@ -235,5 +245,27 @@ def _fetch_rows(endpoint: str, http_get: HttpGet) -> list[dict]:
     if isinstance(data, list):
         return data
     if isinstance(data, dict) and "features" in data:
-        return [f.get("attributes", {}) for f in data.get("features", [])]
+        rows = [f.get("attributes", {}) for f in data.get("features", [])]
+        page = 1
+        offset = len(rows)
+        while data.get("exceededTransferLimit") and page < MAX_ARCGIS_PAGES:
+            page_url = _with_result_offset(endpoint, offset)
+            try:
+                data = http_get(page_url)
+            except Exception:
+                break
+            if not isinstance(data, dict):
+                break
+            page_rows = [f.get("attributes", {}) for f in data.get("features", [])]
+            if not page_rows:
+                break
+            rows.extend(page_rows)
+            offset += len(page_rows)
+            page += 1
+        return rows
     return []
+
+
+def _with_result_offset(endpoint: str, offset: int) -> str:
+    separator = "&" if "?" in endpoint else "?"
+    return f"{endpoint}{separator}resultOffset={offset}"

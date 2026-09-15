@@ -25,6 +25,51 @@ def _http_get(rows):
     return lambda url: rows
 
 
+def test_arcgis_pagination_follows_exceeded_transfer_limit():
+    """A layer with more than 1,000 matching rows must not silently drop
+    everything past row 1,000 -- exceededTransferLimit=true must trigger a
+    resultOffset page."""
+    page1 = {
+        "exceededTransferLimit": True,
+        "features": [
+            {"attributes": {"PermitType": "Multifamily new construction", "IssueDate": 1735689600000, "Units": "40", "Address": f"Row {i}"}}
+            for i in range(3)
+        ],
+    }
+    page2 = {
+        "exceededTransferLimit": False,
+        "features": [
+            {"attributes": {"PermitType": "Multifamily new construction", "IssueDate": 1735689600000, "Units": "40", "Address": "Row 3"}}
+        ],
+    }
+    calls = []
+
+    def http_get(url):
+        calls.append(url)
+        return page2 if "resultOffset" in url else page1
+
+    records = find_upcoming("Rivertown", "ZZ", "zz", RECIPE, http_get, today=TODAY)
+    assert len(records) == 4
+    assert any("resultOffset=3" in url for url in calls)
+
+
+def test_arcgis_no_pagination_when_not_exceeded():
+    page1 = {
+        "exceededTransferLimit": False,
+        "features": [
+            {"attributes": {"PermitType": "Multifamily new construction", "IssueDate": 1735689600000, "Units": "40", "Address": "Row 0"}}
+        ],
+    }
+    calls = []
+
+    def http_get(url):
+        calls.append(url)
+        return page1
+
+    find_upcoming("Rivertown", "ZZ", "zz", RECIPE, http_get, today=TODAY)
+    assert len(calls) == 1
+
+
 def test_recent_permit_no_co_is_permitted():
     rows = [
         {
