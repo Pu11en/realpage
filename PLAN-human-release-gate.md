@@ -47,7 +47,7 @@ Run with: `Do the next unticked task in PLAN-human-release-gate.md, then tick it
   other worktrees. Resolve conflicts by keeping the newest tested behavior, then run the Check.
   Commit.
 
-- [ ] **H2 Make Under the Hood completely defensible.** Replace weak or stale headline claims with
+- [x] **H2 Make Under the Hood completely defensible.** Replace weak or stale headline claims with
   the dated recruiter scorecard measurements. Show sample size, method, historical status, and open
   limitations in plain words. Remove absolute machine paths and any dependency on an old worktree.
   Keep the live agent as the primary action and the deeper proof closed by default. Test every shown
