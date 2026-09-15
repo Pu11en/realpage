@@ -31474,7 +31474,7 @@
   "address": "22820 IMPERIAL VALLEY DR 192",
   "lat": null,
   "lon": null,
-  "units": null,
+  "units": 1312,
   "stage": "sold",
   "permit_date": "",
   "opening_date": "",
@@ -31482,18 +31482,23 @@
   "buyer": "ROCKFISH CAPITAL IMERIAL VALLEY LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.enrichedrealestate.com/22820-Imperial-Valley-Dr-192-Houston-TX-77073/Apartments/ApartmentGarden14stories/Id=93279",
   "software": "unknown",
   "links": {
-   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip",
+   "website": "https://www.enrichedrealestate.com/22820-Imperial-Valley-Dr-192-Houston-TX-77073/Apartments/ApartmentGarden14stories/Id=93279"
   },
   "sources": [
    {
     "fact": "sale_date",
     "url": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   },
+   {
+    "fact": "units",
+    "url": "https://ploteasy.com/property-details/93279/22820-imperial-valley-dr-houston-tx-77073"
    }
   ],
-  "why": "Sold 2025-06-13 \u00b7 to ROCKFISH CAPITAL IMERIAL VALLEY LLC \u00b7 new owner may re-pick software"
+  "why": "Sold 2025-06-13 \u00b7 to ROCKFISH CAPITAL IMERIAL VALLEY LLC \u00b7 1312 units \u00b7 new owner may re-pick software"
  },
  {
   "area": "tx",
@@ -31510,10 +31515,11 @@
   "buyer": "HOP APARTMENTS LLC &",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.apartmentcities.com/Dallas-Apartments/dallas/homes_of_persimmons_/12494/",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.apartmentcities.com/Dallas-Apartments/dallas/homes_of_persimmons_/12494/"
   },
   "sources": [
    {
@@ -31530,26 +31536,35 @@
   "address": "5714 JESSAMINE ST 22",
   "lat": null,
   "lon": null,
-  "units": null,
+  "units": 22,
   "stage": "sold",
   "permit_date": "",
-  "opening_date": "",
+  "opening_date": "1716",
   "sale_date": "2025-06-12",
   "buyer": "5714 JESSAMINE LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://ploteasy.com/property-details/237094/5714-jessamine-st-22-houston-tx-77081",
   "software": "unknown",
   "links": {
-   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip",
+   "website": "https://ploteasy.com/property-details/237094/5714-jessamine-st-22-houston-tx-77081"
   },
   "sources": [
    {
     "fact": "sale_date",
     "url": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   },
+   {
+    "fact": "opening_date",
+    "url": "https://github.com/Apoorve73/Real-Estate-Companies-Database/blob/master/Houston1.csv"
+   },
+   {
+    "fact": "units",
+    "url": "https://cccres.com/apartments/detail/bienville-houston"
    }
   ],
-  "why": "Sold 2025-06-12 \u00b7 to 5714 JESSAMINE LLC \u00b7 new owner may re-pick software"
+  "why": "Sold 2025-06-12 \u00b7 to 5714 JESSAMINE LLC \u00b7 22 units \u00b7 new owner may re-pick software"
  },
  {
   "area": "tx",
@@ -31566,10 +31581,11 @@
   "buyer": "3425 SPOLK STREET LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.greentreeapts.com/",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.greentreeapts.com/"
   },
   "sources": [
    {
@@ -31670,7 +31686,7 @@
   "address": "10601 SABO RD 252",
   "lat": null,
   "lon": null,
-  "units": null,
+  "units": 252,
   "stage": "sold",
   "permit_date": "",
   "opening_date": "",
@@ -31687,9 +31703,13 @@
    {
     "fact": "sale_date",
     "url": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   },
+   {
+    "fact": "units",
+    "url": "https://cccres.com/apartments/detail/green-arbor-houston"
    }
   ],
-  "why": "Sold 2025-06-10 \u00b7 to GWR SABO ROAD OWNER LLC \u00b7 new owner may re-pick software"
+  "why": "Sold 2025-06-10 \u00b7 to GWR SABO ROAD OWNER LLC \u00b7 252 units \u00b7 new owner may re-pick software"
  },
  {
   "area": "tx",
@@ -31701,20 +31721,25 @@
   "units": 68,
   "stage": "sold",
   "permit_date": "",
-  "opening_date": "",
+  "opening_date": "2026",
   "sale_date": "2025-06-05",
   "buyer": "PECOS HOUSING FINANCE",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.apartmentadvisor.com/details/7760-mccallum-blvd-dallas-tx-75252",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.apartmentadvisor.com/details/7760-mccallum-blvd-dallas-tx-75252"
   },
   "sources": [
    {
     "fact": "sale_date",
     "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   },
+   {
+    "fact": "opening_date",
+    "url": "https://www.apartmentadvisor.com/details/7760-mccallum-blvd-dallas-tx-75252"
    }
   ],
   "why": "Sold 2025-06-05 \u00b7 to PECOS HOUSING FINANCE \u00b7 68 units \u00b7 new owner may re-pick software"
@@ -31734,10 +31759,11 @@
   "buyer": "LAKES AT MADERA CITYR FUND LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://ploteasy.com/property-details/579316/305-w-baker-rd-baytown-tx-77521",
   "software": "unknown",
   "links": {
-   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip",
+   "website": "https://ploteasy.com/property-details/579316/305-w-baker-rd-baytown-tx-77521"
   },
   "sources": [
    {
@@ -31757,20 +31783,25 @@
   "units": 38,
   "stage": "sold",
   "permit_date": "",
-  "opening_date": "",
+  "opening_date": "2023",
   "sale_date": "2025-06-03",
   "buyer": "4712 GASTON COMMONS LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.affordablehousing.com/dallas-tx/gaston-commons--565165/",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.affordablehousing.com/dallas-tx/gaston-commons--565165/"
   },
   "sources": [
    {
     "fact": "sale_date",
     "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   },
+   {
+    "fact": "opening_date",
+    "url": "https://www.affordablehousing.com/dallas-tx/gaston-commons--565165/"
    }
   ],
   "why": "Sold 2025-06-03 \u00b7 to 4712 GASTON COMMONS LLC \u00b7 38 units \u00b7 new owner may re-pick software"
@@ -31782,7 +31813,7 @@
   "address": "1010 JACKSON AVE 42",
   "lat": null,
   "lon": null,
-  "units": null,
+  "units": 42,
   "stage": "sold",
   "permit_date": "",
   "opening_date": "",
@@ -31799,9 +31830,13 @@
    {
     "fact": "sale_date",
     "url": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   },
+   {
+    "fact": "units",
+    "url": "https://cccres.com/apartments/detail/rio-sereno-pasadena"
    }
   ],
-  "why": "Sold 2025-06-03 \u00b7 to STORMFIELD CAPITAL FUNDING LLC \u00b7 new owner may re-pick software"
+  "why": "Sold 2025-06-03 \u00b7 to STORMFIELD CAPITAL FUNDING LLC \u00b7 42 units \u00b7 new owner may re-pick software"
  },
  {
   "area": "tx",
@@ -31866,7 +31901,7 @@
   "address": "505 WELLS FARGO DR 276",
   "lat": null,
   "lon": null,
-  "units": null,
+  "units": 1312,
   "stage": "sold",
   "permit_date": "",
   "opening_date": "",
@@ -31883,9 +31918,13 @@
    {
     "fact": "sale_date",
     "url": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   },
+   {
+    "fact": "units",
+    "url": "https://ploteasy.com/property-details/93279/22820-imperial-valley-dr-houston-tx-77073"
    }
   ],
-  "why": "Sold 2025-06-03 \u00b7 to LSF HOUSTON LLC \u00b7 new owner may re-pick software"
+  "why": "Sold 2025-06-03 \u00b7 to LSF HOUSTON LLC \u00b7 1312 units \u00b7 new owner may re-pick software"
  },
  {
   "area": "tx",
@@ -31958,10 +31997,11 @@
   "buyer": "900 TITLE JEFFERSON LLC % CWCAPITAL",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://ploteasy.com/property-details/67183203/1901-cullen-blvd-houston-tx-77023",
   "software": "unknown",
   "links": {
-   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip",
+   "website": "https://ploteasy.com/property-details/67183203/1901-cullen-blvd-houston-tx-77023"
   },
   "sources": [
    {
@@ -32014,10 +32054,11 @@
   "buyer": "COOKEVILLE CANE CREEK APARTMENTS LP",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.daveperrymiller.com/realestate/details/104240120/832-w-greens-road-232-houston-tx-77067",
   "software": "unknown",
   "links": {
-   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip",
+   "website": "https://www.daveperrymiller.com/realestate/details/104240120/832-w-greens-road-232-houston-tx-77067"
   },
   "sources": [
    {
@@ -32042,10 +32083,11 @@
   "buyer": "MMF I DFW PARK LANE LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://cccres.com/apartments/detail/galleries-at-park-lane-impt-only-dallas",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://cccres.com/apartments/detail/galleries-at-park-lane-impt-only-dallas"
   },
   "sources": [
    {
@@ -32070,10 +32112,11 @@
   "buyer": "MMF I DFW PARK LANE LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://knockcrm.com/community/e9f115b66057f911",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://knockcrm.com/community/e9f115b66057f911"
   },
   "sources": [
    {
@@ -32146,26 +32189,35 @@
   "address": "2311 MID LN 297",
   "lat": null,
   "lon": null,
-  "units": null,
+  "units": 20,
   "stage": "sold",
   "permit_date": "",
-  "opening_date": "",
+  "opening_date": "1556",
   "sale_date": "2025-05-30",
   "buyer": "BVF-VI IVY OWNER LP",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://ploteasy.com/property-details/64993673/2311-mid-ln-houston-tx-77027",
   "software": "unknown",
   "links": {
-   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip",
+   "website": "https://ploteasy.com/property-details/64993673/2311-mid-ln-houston-tx-77027"
   },
   "sources": [
    {
     "fact": "sale_date",
     "url": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   },
+   {
+    "fact": "units",
+    "url": "https://ploteasy.com/commercial/texas/page/127"
+   },
+   {
+    "fact": "opening_date",
+    "url": "https://ploteasy.com/commercial/texas/page/127"
    }
   ],
-  "why": "Sold 2025-05-30 \u00b7 to BVF-VI IVY OWNER LP \u00b7 new owner may re-pick software"
+  "why": "Sold 2025-05-30 \u00b7 to BVF-VI IVY OWNER LP \u00b7 20 units \u00b7 new owner may re-pick software"
  },
  {
   "area": "tx",
