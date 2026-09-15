@@ -29976,10 +29976,11 @@
   "buyer": "GVII-MS ROYAL OAKS OWNER LP",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://ploteasy.com/property-details/410622/11805-meadowglen-ln-104-houston-tx-77082",
   "software": "unknown",
   "links": {
-   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip",
+   "website": "https://ploteasy.com/property-details/410622/11805-meadowglen-ln-104-houston-tx-77082"
   },
   "sources": [
    {
@@ -30004,10 +30005,11 @@
   "buyer": "RIDGEWOOD MANOR LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.city-data.com/dallas-county/W/W-Wintergreen-Road-3.html",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.city-data.com/dallas-county/W/W-Wintergreen-Road-3.html"
   },
   "sources": [
    {
@@ -30052,10 +30054,10 @@
   "address": "2104 JAMES BOWIE DR 18",
   "lat": null,
   "lon": null,
-  "units": null,
+  "units": 7573,
   "stage": "sold",
   "permit_date": "",
-  "opening_date": "",
+  "opening_date": "2026",
   "sale_date": "2025-07-18",
   "buyer": "LUNA BAY TOWNHOMES LLC",
   "developer": "",
@@ -30069,9 +30071,17 @@
    {
     "fact": "sale_date",
     "url": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   },
+   {
+    "fact": "units",
+    "url": "https://hotpads.com/2104-james-bowie-dr-baytown-tx-77520-24u61s1/18/pad"
+   },
+   {
+    "fact": "opening_date",
+    "url": "https://hotpads.com/2104-james-bowie-dr-baytown-tx-77520-24u61s1/18/pad"
    }
   ],
-  "why": "Sold 2025-07-18 \u00b7 to LUNA BAY TOWNHOMES LLC \u00b7 new owner may re-pick software"
+  "why": "Sold 2025-07-18 \u00b7 to LUNA BAY TOWNHOMES LLC \u00b7 7573 units \u00b7 new owner may re-pick software"
  },
  {
   "area": "tx",
@@ -30108,7 +30118,7 @@
   "address": "12835 JONES RD 28",
   "lat": null,
   "lon": null,
-  "units": null,
+  "units": 23,
   "stage": "sold",
   "permit_date": "",
   "opening_date": "",
@@ -30125,9 +30135,13 @@
    {
     "fact": "sale_date",
     "url": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   },
+   {
+    "fact": "units",
+    "url": "https://hotpads.com/12835-jones-rd-houston-tx-77070-1kvh9ez/building"
    }
   ],
-  "why": "Sold 2025-07-17 \u00b7 to 12835 JONES ROAD LLC \u00b7 new owner may re-pick software"
+  "why": "Sold 2025-07-17 \u00b7 to 12835 JONES ROAD LLC \u00b7 23 units \u00b7 new owner may re-pick software"
  },
  {
   "area": "tx",
@@ -30139,20 +30153,26 @@
   "units": 305,
   "stage": "sold",
   "permit_date": "",
-  "opening_date": "",
+  "opening_date": "3333",
   "sale_date": "2025-07-16",
   "buyer": "DHFC BUCKNER STATION",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.palladiumbucknerstation.com/",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.palladiumbucknerstation.com/",
+   "news": "http://www.dallasecodev.org/m/newsflash/Home/Detail/1096"
   },
   "sources": [
    {
     "fact": "sale_date",
     "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   },
+   {
+    "fact": "opening_date",
+    "url": "https://www.palladiumbucknerstation.com/"
    }
   ],
   "why": "Sold 2025-07-16 \u00b7 to DHFC BUCKNER STATION \u00b7 305 units \u00b7 new owner may re-pick software"
@@ -30172,10 +30192,11 @@
   "buyer": "TOMBALL TORA BORROWER LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.enrichedrealestate.com/327-Hufsmith-48-Tomball-TX-77375/Apartments/ApartmentGarden14stories/Id=162807",
   "software": "unknown",
   "links": {
-   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip",
+   "website": "https://www.enrichedrealestate.com/327-Hufsmith-48-Tomball-TX-77375/Apartments/ApartmentGarden14stories/Id=162807"
   },
   "sources": [
    {
@@ -30200,10 +30221,11 @@
   "buyer": "DALLAS SAPPHIRE LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.foreclosure.com/address/6730-S-Lancaster-Rd-Dallas-TX-75241",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.foreclosure.com/address/6730-S-Lancaster-Rd-Dallas-TX-75241"
   },
   "sources": [
    {
@@ -30220,7 +30242,7 @@
   "address": "18828 SH 249 77",
   "lat": null,
   "lon": null,
-  "units": null,
+  "units": 77,
   "stage": "sold",
   "permit_date": "",
   "opening_date": "",
@@ -30237,9 +30259,13 @@
    {
     "fact": "sale_date",
     "url": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   },
+   {
+    "fact": "units",
+    "url": "https://cccres.com/apartments/detail/perla-249-houston"
    }
   ],
-  "why": "Sold 2025-07-14 \u00b7 to 18828 STATE HIGHWAY 249 REO LLC \u00b7 new owner may re-pick software"
+  "why": "Sold 2025-07-14 \u00b7 to 18828 STATE HIGHWAY 249 REO LLC \u00b7 77 units \u00b7 new owner may re-pick software"
  },
  {
   "area": "tx",
@@ -30251,20 +30277,25 @@
   "units": null,
   "stage": "sold",
   "permit_date": "",
-  "opening_date": "",
+  "opening_date": "1085",
   "sale_date": "2025-07-11",
   "buyer": "HSC STAR LP",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.realie.ai/data/TX/HARRIS/HOUSTON/1111-RUSK-ST-286/48201-001-079-000-0001",
   "software": "unknown",
   "links": {
-   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip",
+   "website": "https://www.realie.ai/data/TX/HARRIS/HOUSTON/1111-RUSK-ST-286/48201-001-079-000-0001"
   },
   "sources": [
    {
     "fact": "sale_date",
     "url": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   },
+   {
+    "fact": "opening_date",
+    "url": "https://ploteasy.com/commercial/texas/page/277"
    }
   ],
   "why": "Sold 2025-07-11 \u00b7 to HSC STAR LP \u00b7 new owner may re-pick software"
@@ -30332,7 +30363,7 @@
   "address": "8719 FM 1960 RD W 83",
   "lat": null,
   "lon": null,
-  "units": null,
+  "units": 83,
   "stage": "sold",
   "permit_date": "",
   "opening_date": "",
@@ -30343,15 +30374,20 @@
   "website": "",
   "software": "unknown",
   "links": {
-   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip",
+   "news": "https://www.realtor.com/realestateandhomes-detail/8719-Cypress-Creek-Pkwy_Houston_TX_77070_M94985-69777"
   },
   "sources": [
    {
     "fact": "sale_date",
     "url": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   },
+   {
+    "fact": "units",
+    "url": "https://cccres.com/apartments/detail/perla-1960-houston"
    }
   ],
-  "why": "Sold 2025-07-10 \u00b7 to 8719 FM 1960 ROAD WEST REO LLC \u00b7 new owner may re-pick software"
+  "why": "Sold 2025-07-10 \u00b7 to 8719 FM 1960 ROAD WEST REO LLC \u00b7 83 units \u00b7 new owner may re-pick software"
  },
  {
   "area": "tx",
@@ -30360,7 +30396,7 @@
   "address": "5959 FM 1960 RD W 404",
   "lat": null,
   "lon": null,
-  "units": null,
+  "units": 0,
   "stage": "sold",
   "permit_date": "",
   "opening_date": "",
@@ -30368,15 +30404,20 @@
   "buyer": "ARMOUR 5959 FM LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://ploteasy.com/property-details/94064/5959-fm-1960-rd-w-houston-tx-77066",
   "software": "unknown",
   "links": {
-   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip",
+   "website": "https://ploteasy.com/property-details/94064/5959-fm-1960-rd-w-houston-tx-77066"
   },
   "sources": [
    {
     "fact": "sale_date",
     "url": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   },
+   {
+    "fact": "units",
+    "url": "https://elementix.ai/companies/gables-residential"
    }
   ],
   "why": "Sold 2025-07-08 \u00b7 to ARMOUR 5959 FM LLC \u00b7 new owner may re-pick software"
@@ -30388,7 +30429,7 @@
   "address": "2215 SPRING STUEBNER RD",
   "lat": null,
   "lon": null,
-  "units": null,
+  "units": 231,
   "stage": "sold",
   "permit_date": "",
   "opening_date": "",
@@ -30396,10 +30437,11 @@
   "buyer": "NORTHWOODS APARTMENTS LP",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://ploteasy.com/property-details/241152273/2215-spring-stuebner-rd-spring-tx-77389",
   "software": "unknown",
   "links": {
-   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip",
+   "website": "https://ploteasy.com/property-details/241152273/2215-spring-stuebner-rd-spring-tx-77389"
   },
   "sources": [
    {
@@ -30409,9 +30451,13 @@
    {
     "fact": "sale_date",
     "url": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   },
+   {
+    "fact": "units",
+    "url": "https://amazing-spaces-storage-centers-1.wheree.com/"
    }
   ],
-  "why": "Sold 2025-07-07 \u00b7 to NORTHWOODS APARTMENTS LP \u00b7 new owner may re-pick software"
+  "why": "Sold 2025-07-07 \u00b7 to NORTHWOODS APARTMENTS LP \u00b7 231 units \u00b7 new owner may re-pick software"
  },
  {
   "area": "tx",
@@ -30507,20 +30553,25 @@
   "units": 130,
   "stage": "sold",
   "permit_date": "",
-  "opening_date": "",
+  "opening_date": "2027",
   "sale_date": "2025-07-03",
   "buyer": "ARKANSAS LANE PROPERTY",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.hellolanding.com/properties/viceroy-at-central-park",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.hellolanding.com/properties/viceroy-at-central-park"
   },
   "sources": [
    {
     "fact": "sale_date",
     "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   },
+   {
+    "fact": "opening_date",
+    "url": "https://www.hellolanding.com/properties/viceroy-at-central-park"
    }
   ],
   "why": "Sold 2025-07-03 \u00b7 to ARKANSAS LANE PROPERTY \u00b7 130 units \u00b7 new owner may re-pick software"
@@ -30540,10 +30591,11 @@
   "buyer": "VBA APARTMENTS LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.vistabuenaapts.com/",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.vistabuenaapts.com/"
   },
   "sources": [
    {
@@ -30624,10 +30676,12 @@
   "buyer": "RPMI 5050 KEENELAND PKWY",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.liveresia.com/communities/resia-dallas-west",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.liveresia.com/communities/resia-dallas-west",
+   "news": "https://www.multihousingnews.com/resia-sells-newly-completed-336-unit-asset-in-dallas/"
   },
   "sources": [
    {
