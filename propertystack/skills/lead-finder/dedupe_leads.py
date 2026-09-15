@@ -66,9 +66,8 @@ def same_project(a: LeadRecord, b: LeadRecord) -> bool:
         return True
     same_city = (a.city or "").strip().lower() == (b.city or "").strip().lower()
     # Two records with different city labels need real address/unit evidence
-    # above (e.g. one source says "Dallas", another says the annexed suburb
-    # "Wilmer", for the same address): the stage-only heuristic below is only
-    # safe once we already know they're in the same city.
+    # above: the stage-only heuristic below is only safe once we already know
+    # they're in the same city.
     return same_city and (a.stage == "planned") != (b.stage == "planned")
 
 
@@ -77,9 +76,9 @@ def _key(r: LeadRecord) -> tuple[str, str]:
 
 
 def _name_key(r: LeadRecord) -> str:
-    # Group by name alone: a permit feed and a funding list sometimes label the
-    # same project's city differently (e.g. Dallas vs. the annexed suburb
-    # Wilmer). same_project() still requires matching address/units/stage
+    # Group by name alone: a permit feed and a funding list sometimes use
+    # different city labels for the same address. same_project() still requires
+    # matching address/units/stage
     # before two same-named records actually merge, so unrelated projects that
     # happen to share a name in different cities are still told apart.
     return (r.name or "").strip().lower()

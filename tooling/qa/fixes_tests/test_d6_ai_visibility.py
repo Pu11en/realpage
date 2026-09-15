@@ -4,12 +4,15 @@ import importlib.util
 import json
 import pathlib
 import sqlite3
-import sys
 import tempfile
 
 ROOT = pathlib.Path(__file__).resolve().parents[3]
-sys.path.insert(0, str(ROOT / "tooling" / "chat-data"))
-import build_ai_visibility  # noqa: E402
+
+_builder_spec = importlib.util.spec_from_file_location(
+    "chat_data_build_ai_visibility", ROOT / "tooling" / "chat-data" / "build_ai_visibility.py"
+)
+build_ai_visibility = importlib.util.module_from_spec(_builder_spec)
+_builder_spec.loader.exec_module(build_ai_visibility)
 
 _spec = importlib.util.spec_from_file_location(
     "propertystack_plugin", ROOT / "chatbot" / "hermes-profile" / "plugins" / "propertystack" / "__init__.py"

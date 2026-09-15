@@ -213,3 +213,31 @@ and the D6-specific plus required plan checks passed.
 
 Anything left open: none for this task. The chat container itself wasn't rebuilt/tried live (D7
 does that rebuild + report).
+
+## D7 Final checks and report — done
+
+What I did:
+- Ran the required Check and the panel check.
+- Rebuilt the local chat stack with `bash tooling/dev.sh`.
+- Confirmed the rebuilt chat container includes all 27 new CSV files from this plan.
+- Confirmed the bot health endpoint and Open WebUI config endpoint respond.
+- Restarted the local static site process after the rebuild because the `tooling/dev.sh` site process did
+  not stay up, then confirmed `http://localhost:8765/map.html` returns HTTP 200.
+- Wrote the plain-English final report at `handoffs/2026-09-15-chat-data-report.md`.
+- Fixed two small test-suite cleanup issues found by the wider project test run: removed place names from
+  lead-finder comments that violated the existing no-place-names guard, and made the D6 test import its
+  chat-data builder by absolute path so it does not collide with the AI Visibility page builder during a
+  full pytest run.
+
+Commit: local commit with message "D7: finish chat data checks and report".
+
+How I checked it:
+- `bash tooling/qa/check-fixes.sh && python3 -m pytest -q chatbot/tests` passed (125 fix/design tests and
+  35 chatbot tests).
+- `bash tooling/qa/check-panel.sh` passed.
+- `python3 -m pytest -q --ignore=propertystack/skills/client-map` passed (542 tests).
+- Plain `python3 -m pytest -q` still stops during collection because
+  `propertystack/skills/client-map/targets.py` imports a missing local `census` helper from this worktree.
+
+Anything left open: software outside Plano/Richardson still needs new scraping, so it was intentionally
+left out; no paid `check_answers.py` run was made.

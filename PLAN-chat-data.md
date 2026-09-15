@@ -56,7 +56,7 @@ Open: http://localhost:8765/map.html
   old, so state their date. Test. Commit.
 - [x] **D6 AI Visibility scores, read-only.** Ship `site/data/ai-visibility.json` (and actions) as tables
   the chat can query, copying at build time without modifying the source files. Test. Commit.
-- [ ] **D7 Final checks and report.** Run the Check and the panel check; rebuild the local chat container;
+- [x] **D7 Final checks and report.** Run the Check and the panel check; rebuild the local chat container;
   write `handoffs/<date>-chat-data-report.md` in plain English: what the chat can now answer, three sample
   questions to try, and what's still missing (software outside Plano/Richardson needs new scraping, so it
   was left out on purpose). Commit.
