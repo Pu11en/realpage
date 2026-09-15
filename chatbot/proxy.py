@@ -17,6 +17,8 @@ import os
 import re
 import time
 from collections import defaultdict, deque
+from datetime import datetime
+from zoneinfo import ZoneInfo
 
 import aiohttp
 from aiohttp import web
@@ -42,6 +44,12 @@ GATEWAY_ADMIN_EMAIL = os.environ.get("CHAT_ADMIN_EMAIL", "kidquick360@gmail.com"
 GATEWAY_DAILY_CAP_USD = float(os.environ.get("CHAT_DAILY_CAP_USD", "3.0"))
 GATEWAY_RATE_PER_MINUTE = int(os.environ.get("CHAT_RATE_PER_MINUTE", "40"))
 GATEWAY_USAGE_FILE = os.path.join(os.environ.get("HERMES_HOME", "/opt/data"), "usage.json")
+# Free plan: questions per day and deep dives per week, per signed-in user (US Central calendar).
+# Open WebUI's own background calls (title/tags/follow-ups, "### Task:") don't count.
+FREE_QUESTIONS_PER_DAY = int(os.environ.get("CHAT_QUESTIONS_PER_DAY", "10"))
+FREE_DEEP_DIVES_PER_WEEK = int(os.environ.get("CHAT_DEEP_DIVES_PER_WEEK", "3"))
+FREE_TZ = ZoneInfo("America/Chicago")
+BOOK_CALL_URL = os.environ.get("CHAT_BOOK_CALL_URL", "https://cal.com/drew-pullen/propertystack-intro")
 # DeepSeek cache-miss pricing (USD per token); ~4 chars/token estimate since we
 # don't run Hermes' tokenizer here.
 GATEWAY_PRICE_IN_PER_TOKEN = 0.14 / 1_000_000
@@ -306,6 +314,40 @@ async def _gateway_check(email: str) -> str:
     return ""
 
 
+def _free_keys(now: float | None = None) -> tuple[str, str]:
+    """(day, week) labels on the US Central calendar; weeks start Monday."""
+    d = datetime.fromtimestamp(time.time() if now is None else now, FREE_TZ).date()
+    y, w, _ = d.isocalendar()
+    return d.isoformat(), f"{y}-W{w:02d}"
+
+
+async def _free_take(email: str, *, deep_dive: bool) -> str:
+    """Use one free question (or deep dive). Empty string if allowed, else which limit is used up."""
+    if not email or email == GATEWAY_ADMIN_EMAIL:
+        return ""
+    day, week = _free_keys()
+    key, cap, kind = ((f"{email}|dives|{week}", FREE_DEEP_DIVES_PER_WEEK, "dives") if deep_dive
+                      else (f"{email}|questions|{day}", FREE_QUESTIONS_PER_DAY, "questions"))
+    async with _gateway_usage_lock:
+        usage = _gateway_load_usage()
+        used = int(usage.get(key, 0))
+        if used >= cap:
+            return kind
+        usage[key] = used + 1
+        _gateway_save_usage(usage)
+    return ""
+
+
+def _free_limit_text(kind: str) -> str:
+    book = f"[Book a 15 minute call]({BOOK_CALL_URL})"
+    if kind == "dives":
+        return (f"You've used your {FREE_DEEP_DIVES_PER_WEEK} free deep dives for this week. "
+                f"They reset on Monday (Central time). You can still ask regular questions. "
+                f"Want more deep dives now? {book}.")
+    return (f"You've used your {FREE_QUESTIONS_PER_DAY} free questions for today. "
+            f"They reset at midnight Central time. Want more now? {book}.")
+
+
 async def _gateway_add_cost(email: str, cost: float) -> None:
     if not email or email == GATEWAY_ADMIN_EMAIL:
         return
@@ -498,6 +540,10 @@ async def gateway_chat(request: web.Request) -> web.StreamResponse:
     req_chars = sum(len(str(m.get("content", ""))) for m in body.get("messages", []) if isinstance(m, dict))
     question = _last_user_text(body)
     dive_key, fresh = _deep_dive_key(question)
+    if not question.lstrip().startswith("### Task:"):
+        used_up = await _free_take(email, deep_dive=bool(dive_key))
+        if used_up:
+            return await _gateway_replay(request, body, _free_limit_text(used_up))
     chat_id = request.headers.get("X-OpenWebUI-Chat-Id", "").strip()
     if dive_key and not _deep_dive_redo(chat_id, dive_key, fresh):
         saved = _deep_dive_load(dive_key)

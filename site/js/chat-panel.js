@@ -26,12 +26,12 @@
     panel.className = "chat-panel";
     panel.innerHTML = `
       <div class="chat-panel-header">
-        <span class="chat-panel-title">✦ Ask PropertyStack</span>
+        <span class="chat-panel-title">Ask CraneSignal</span>
         <button class="chat-panel-close" id="chat-panel-close" aria-label="Close chat panel">&times;</button>
       </div>
       <div class="chat-panel-body">
         <div class="chat-panel-loading" id="chat-panel-loading">Loading chat…</div>
-        <iframe id="chat-panel-frame" class="chat-panel-frame" title="Ask PropertyStack chat"></iframe>
+        <iframe id="chat-panel-frame" class="chat-panel-frame" title="Ask CraneSignal chat"></iframe>
         <div class="chat-panel-error" id="chat-panel-error" style="display:none;">
           <p>Couldn't load the chat.</p>
           <button class="chat-panel-retry" id="chat-panel-retry">Try again</button>

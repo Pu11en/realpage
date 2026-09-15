@@ -33,7 +33,7 @@ function renderShell(activeKey) {
 
   const navHtml = NAV_TABS.map(
     (t) => `<a href="${t.href}" class="${t.key === activeKey ? "active" : ""}">${t.label}</a>`
-  ).join("") + `<a href="#" class="nav-chat" data-chat-toggle title="Ask PropertyStack (Google sign-in)">Chat</a>`;
+  ).join("") + `<a href="#" class="nav-chat" data-chat-toggle title="Ask CraneSignal (sign in)">Chat</a>`;
 
   const vendorOptions = ["Neutral", ...VENDORS]
     .map((v) => `<option value="${v}" ${v === viewAs ? "selected" : ""}>${v}</option>`)
@@ -41,7 +41,7 @@ function renderShell(activeKey) {
 
   shell.innerHTML = `
     <aside class="sidebar">
-      <div class="wordmark">PropertyStack</div>
+      <div class="wordmark">CraneSignal</div>
       <nav>${navHtml}</nav>
       <div class="top-controls">
         <select id="view-as-select">${vendorOptions}</select>
@@ -49,7 +49,7 @@ function renderShell(activeKey) {
       </div>
     </aside>
     <main class="main" id="page-content"></main>
-    <a class="ask-fab" href="#" data-chat-toggle aria-label="Ask PropertyStack">Ask</a>
+    <a class="ask-fab" href="#" data-chat-toggle aria-label="Ask CraneSignal">Ask</a>
   `;
 
   document.getElementById("view-as-select").addEventListener("change", (e) => {

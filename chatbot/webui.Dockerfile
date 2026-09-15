@@ -5,6 +5,7 @@ FROM ghcr.io/open-webui/open-webui:main
 COPY chatbot/branding/favicon.png /app/build/favicon.png
 COPY chatbot/branding/favicon.png /app/build/static/favicon.png
 COPY chatbot/branding/favicon-96x96.png /app/build/static/favicon-96x96.png
+COPY chatbot/branding/apple-touch-icon.png /app/build/static/apple-touch-icon.png
 COPY chatbot/branding/favicon.svg /app/build/static/favicon.svg
 COPY chatbot/branding/logo.png /app/build/static/logo.png
 COPY chatbot/branding/logo-transparent.png /app/build/static/splash.png
