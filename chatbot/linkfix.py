@@ -26,6 +26,28 @@ _ROW_LABELS = {"map", "permit", "news", "website"}
 _VIDEO_RE = re.compile(r"swagit\.com|youtube\.com|youtu\.be|vimeo\.com|granicus\.com/player|/videos?/", re.I)
 _SOURCES_RE = re.compile(r"^\s*\**\s*Sources\s*:?", re.I)
 
+# A deterministic last line of defence: model text cannot be shown as a
+# verified fact unless it retains a link returned by a tool this turn. A plain
+# source name may explain the data, but it is not a readable source someone can
+# open and check.
+UNVERIFIED_REPLY = """**I couldn't verify that claim with a readable source.**
+**Next:** Ask about a Texas building with a source you can open."""
+_SAFE_NO_FACT_STARTS = (
+    "that's outside cranesignal",
+    "that’s outside cranesignal",
+    "i don't have that",
+    "i don’t have that",
+    "i couldn't verify",
+    "i couldn’t verify",
+    "i could not verify",
+    "i can't change",
+    "i cannot change",
+    "i can't add",
+    "i cannot add",
+    "i can't delete",
+    "i cannot delete",
+)
+
 _SITE_LABELS = [
     (r"(^|\.)tdlr\.texas\.gov$", "Texas building record"),
     (r"(^|\.)data\.texas\.gov$", "Texas county records"),
@@ -123,7 +145,7 @@ def _fix_line(line: str, seen: set[str], deep_dive: bool) -> str | None:
         if not changed:
             break
     # A Sources line left with nothing to cite goes; a bare link row too.
-    if _SOURCES_RE.match(line) and not re.sub(r"[\s*·:,;]|Sources", "", line, flags=re.I):
+    if _SOURCES_RE.match(line) and not re.sub(r"[\s*·:,;()]|Sources", "", line, flags=re.I):
         return None
     if line.strip() and not re.sub(r"[\s·🗺️🗺📄📰🌐️]", "", line):
         return None
@@ -138,6 +160,40 @@ def fix_links(text: str, seen: set[str] | None = None, deep_dive: bool = False) 
         if fixed is not None:
             out.append(fixed)
     return "\n".join(out)
+
+
+def _first_answer_text(text: str) -> str:
+    """First visible answer line, normalized for safe-reply detection."""
+    for line in text.splitlines():
+        line = re.sub(r"[*_`>#-]", "", line).strip().lower()
+        if line:
+            return line
+    return ""
+
+
+def _has_approved_readable_source(text: str, seen: set[str]) -> bool:
+    """Whether a retained non-map link came from an approved tool result."""
+    for match in _LINK_RE.finditer(text):
+        url = match.group(2)
+        if not _is_maps(url) and _norm(url) in seen:
+            return True
+    return False
+
+
+def finalize_answer(text: str, seen: set[str] | None = None, deep_dive: bool = False) -> str:
+    """Permit factual text only with a readable, approved source.
+
+    ``seen`` is injectable so the guard is regression-tested offline. Honest
+    unknowns and fixed safety boundaries are non-factual answers, so they stay
+    exactly as written.
+    """
+    seen = load_seen() if seen is None else seen
+    cleaned = fix_links(text, seen, deep_dive=deep_dive).strip()
+    if _first_answer_text(cleaned).startswith(_SAFE_NO_FACT_STARTS):
+        return cleaned
+    if _has_approved_readable_source(cleaned, seen):
+        return cleaned
+    return UNVERIFIED_REPLY
 
 
 class LineFixer:

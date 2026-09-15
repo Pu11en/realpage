@@ -7,6 +7,12 @@ FROM alpine:3.20 AS kb
 COPY . /ctx
 RUN mkdir -p /kb/data /kb/research && \
     cp /ctx/propertystack/data/plano-richardson/*.csv /kb/data/ && \
+    ( [ -d /ctx/propertystack/data/dallas-parked/kb ] && cp /ctx/propertystack/data/dallas-parked/kb/*.csv /kb/data/ || true ) && \
+    ( [ -d /ctx/propertystack/data/map-summary/kb ] && cp /ctx/propertystack/data/map-summary/kb/*.csv /kb/data/ || true ) && \
+    ( [ -d /ctx/propertystack/data/software-share/kb ] && cp /ctx/propertystack/data/software-share/kb/*.csv /kb/data/ || true ) && \
+    ( [ -d /ctx/propertystack/data/building-extras/kb ] && cp /ctx/propertystack/data/building-extras/kb/*.csv /kb/data/ || true ) && \
+    ( [ -d /ctx/propertystack/data/cranesignal-build/kb ] && cp /ctx/propertystack/data/cranesignal-build/kb/*.csv /kb/data/ || true ) && \
+    ( [ -d /ctx/propertystack/data/ai-visibility/kb ] && cp /ctx/propertystack/data/ai-visibility/kb/*.csv /kb/data/ || true ) && \
     ( first=1; for f in /ctx/propertystack/data/*/chat-leads.csv; do \
       [ -e "$f" ] || continue; case "$f" in */_*/*) continue;; esac; \
       if [ "$first" = 1 ]; then head -1 "$f" > /kb/data/state-leads.csv; first=0; fi; \
@@ -36,5 +42,11 @@ RUN chmod +x /opt/hermes-start/start-hermes.sh && \
     chmod -R a-w /opt/propertystack && \
     chown -R hermes:hermes /app /opt/hermes-profile /opt/hermes-start /opt/chatbot
 
-# Keep the base image ENTRYPOINT (s6 init, drops root to the hermes user).
+# The base entrypoint keeps its tiny, setuid bootstrap for s6, but all of this
+# image's application processes now start as the dedicated unprivileged user.
+# /opt/data is already owned by hermes in the base image and is the only
+# mutable application location; the baked knowledge base stays read-only.
+USER hermes
+
+# Keep the base image ENTRYPOINT (s6 init preserves the unprivileged user).
 CMD ["bash", "/opt/hermes-start/start-hermes.sh"]

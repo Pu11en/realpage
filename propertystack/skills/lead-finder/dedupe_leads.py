@@ -64,11 +64,24 @@ def same_project(a: LeadRecord, b: LeadRecord) -> bool:
         return True
     if a.units and a.units == b.units:
         return True
-    return (a.stage == "planned") != (b.stage == "planned")
+    same_city = (a.city or "").strip().lower() == (b.city or "").strip().lower()
+    # Two records with different city labels need real address/unit evidence
+    # above: the stage-only heuristic below is only safe once we already know
+    # they're in the same city.
+    return same_city and (a.stage == "planned") != (b.stage == "planned")
 
 
 def _key(r: LeadRecord) -> tuple[str, str]:
     return ((r.name or "").strip().lower(), (r.city or "").strip().lower())
+
+
+def _name_key(r: LeadRecord) -> str:
+    # Group by name alone: a permit feed and a funding list sometimes use
+    # different city labels for the same address. same_project() still requires
+    # matching address/units/stage
+    # before two same-named records actually merge, so unrelated projects that
+    # happen to share a name in different cities are still told apart.
+    return (r.name or "").strip().lower()
 
 
 _PERMIT_TEXT_RE = re.compile(r"^[\d,]+\s+(?:sf\s+)?new\b|\bibc\b", re.I)  # "20,376 NEW APARTMENT BLDG ... '21 IBC"
@@ -96,13 +109,13 @@ def dedupe_leads(records: list[LeadRecord]) -> list[LeadRecord]:
     records = [r for r in records if _key(r) not in EXISTING_COMPLEXES]
     records = _merge_same_address(records)
     out: list[LeadRecord] = []
-    groups: dict[tuple[str, str], list[LeadRecord]] = {}
+    groups: dict[str, list[LeadRecord]] = {}
     for r in records:
-        name, city = _key(r)
+        name = _name_key(r)
         if not name:
             out.append(r)
             continue
-        group = groups.setdefault((name, city), [])
+        group = groups.setdefault(name, [])
         generic = name in GENERIC_NAMES
         match = next(
             (g for g in group if (_base(g.address) == _base(r.address) and _base(r.address))
@@ -117,7 +130,7 @@ def dedupe_leads(records: list[LeadRecord]) -> list[LeadRecord]:
             if match.units and r.units and r.units > match.units:
                 match.units = r.units  # a planned total beats a blank/partial count
     # what's left with the same real name are phases of one project
-    for (name, _), group in groups.items():
+    for name, group in groups.items():
         if len(group) > 1 and name not in GENERIC_NAMES:
             ordered = sorted(group, key=lambda g: (g.permit_date or "9999", str(g.links.get("permit", "")), g.address))
             for i, g in enumerate(ordered, start=1):

@@ -4,5 +4,10 @@
   "p50_seconds": 13.8,
   "p95_seconds": 28.3,
   "measured_at": "2026-09-15",
-  "source_dir": "/home/drewp/.local/state/ccdb/gowork/drew's eval-plan-shipcheck-20260915-072728/work/chatbot-cache"
+  "evidence_status": "Historical recruiter scorecard \u2014 not a current release approval",
+  "method": "Timing from 105 saved chat answers in the 2026-09-15 scorecard run.",
+  "limitations": [
+    "This is a saved local sample, not a production speed guarantee.",
+    "It does not prove that a new account can sign in or use the current release candidate."
+  ]
 }

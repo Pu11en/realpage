@@ -13,9 +13,11 @@ const VENDORS = ["RealPage", "Yardi", "Entrata", "Yotta", "AppFolio"];
 // The chat is its own app (Open WebUI, Google sign-in). Local trial on :3000,
 // live URL on Railway. See PLAN-v5.md and PLAN-v6.md.
 // Tests override this via window.PS_CHAT_URL (see tooling/qa/check-panel.sh).
-const CHAT_APP_URL = window.PS_CHAT_URL || (location.hostname === "localhost"
-  ? "http://localhost:3000"
-  : location.origin);  // live: same address as the site (site/Caddyfile)
+const CHAT_APP_URL = window.PS_CHAT_URL || (location.port === "8876"
+  ? location.origin // isolated human preview: chat is behind the same front door
+  : location.hostname === "localhost"
+    ? "http://localhost:3000"
+    : location.origin);  // live: same address as the site (site/Caddyfile)
 
 function getViewAs() {
   const v = localStorage.getItem("propertystack.viewAs");
@@ -42,7 +44,7 @@ function renderShell(activeKey) {
 
   shell.innerHTML = `
     <aside class="sidebar">
-      <div class="wordmark">CraneSignal</div>
+      <a class="wordmark" href="index.html">CraneSignal</a>
       <nav>${navHtml}</nav>
       <div class="top-controls">
         <label for="view-as-select" style="color: var(--text-dim); font-size: 11px;"
@@ -50,6 +52,7 @@ function renderShell(activeKey) {
         <select id="view-as-select" title="${VIEW_AS_TIP}">${vendorOptions}</select>
         <div id="last-updated" style="color: var(--text-dim); font-size: 11px;"></div>
         <a href="privacy.html" style="color: var(--text-dim); font-size: 11px;">Privacy</a>
+        <a href="#" id="sign-out-link" style="color: var(--text-dim); font-size: 11px; display: none;">Sign out</a>
       </div>
     </aside>
     <main class="main" id="page-content"></main>
@@ -62,6 +65,7 @@ function renderShell(activeKey) {
 
   showLastUpdated();
   if (window.initChatPanel) window.initChatPanel();
+  if (window.wireSignOut) window.wireSignOut();
 }
 
 const VIEW_AS_TIP = "Highlight the buildings a Yardi / Entrata / AppFolio seller would win";

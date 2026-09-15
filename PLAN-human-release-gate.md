@@ -42,44 +42,44 @@ Run with: `Do the next unticked task in PLAN-human-release-gate.md, then tick it
 
 ## Preparation tasks
 
-- [ ] **H1 Make one clean release candidate.** Bring the completed product and chat data branch
+- [x] **H1 Make one clean release candidate.** Bring the completed product and chat data branch
   together with the Under the Hood work in one new local candidate. Preserve unrelated changes in
   other worktrees. Resolve conflicts by keeping the newest tested behavior, then run the Check.
   Commit.
 
-- [ ] **H2 Make Under the Hood completely defensible.** Replace weak or stale headline claims with
+- [x] **H2 Make Under the Hood completely defensible.** Replace weak or stale headline claims with
   the dated recruiter scorecard measurements. Show sample size, method, historical status, and open
   limitations in plain words. Remove absolute machine paths and any dependency on an old worktree.
   Keep the live agent as the primary action and the deeper proof closed by default. Test every shown
   number against the saved evidence. Commit.
 
-- [ ] **H3 Make off topic behavior predictable.** Use the seven saved failures to define the simple
+- [x] **H3 Make off topic behavior predictable.** Use the seven saved failures to define the simple
   rule a normal person should see: briefly say the question is outside CraneSignal, then offer a
   useful sales research question. Add offline regression fixtures covering normal small talk,
   unrelated factual questions, and attempts to redirect the agent. Do not call a model. Commit.
 
-- [ ] **H4 Never present an unsupported factual answer as proven.** Use the two saved grounding
+- [x] **H4 Never present an unsupported factual answer as proven.** Use the two saved grounding
   failures to add a deterministic final check: a factual result needs a readable approved source,
   or the answer must plainly say it could not verify the claim. Preserve valid unknown answers and
   add offline regression fixtures. Do not invent citations or call a model. Commit.
 
-- [ ] **H5 Close the two container findings.** Run the chatbot and site containers as an unprivileged
+- [x] **H5 Close the two container findings.** Run the chatbot and site containers as an unprivileged
   user while preserving only the file access they need. Re-run the same local security check and
   record the new result. If either finding cannot be safely closed, keep it visible and keep the
   push gate closed. Commit.
 
-- [ ] **H6 Build a safe first time user preview.** Add one command that starts the exact combined
+- [x] **H6 Build a safe first time user preview.** Add one command that starts the exact combined
   candidate with sign in enabled, fresh isolated local account storage, clear startup status, and a
   matching stop command. It must not overwrite Drew's existing local chat history or reuse a stale
   account. Add an offline check for the command and its isolation. Commit.
 
-- [ ] **H7 Do a novice browser dry run and fix blockers.** In a fresh browser profile, walk through
+- [x] **H7 Do a novice browser dry run and fix blockers.** In a fresh browser profile, walk through
   account creation, first use, navigation, chat loading, sources, errors, sign out, and return. Use
   ordinary wording and deliberately take one wrong turn. Record every confusing or broken moment,
   fix release blocking problems, and rerun the Check. Clearly label this as an automated dry run,
   not human testing. Commit.
 
-- [ ] **H8 Hand Drew the real human test.** Leave the combined preview running and produce a short
+- [x] **H8 Hand Drew the real human test.** Leave the combined preview running and produce a short
   observation sheet that asks Drew to use his own words, not copy scripted prompts. Include the
   address, a stop command, the exact push rules below, and a place to record confusion. Do not call
   the candidate ready and do not push. Commit.

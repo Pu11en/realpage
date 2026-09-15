@@ -12,8 +12,10 @@ from aiohttp import web  # noqa: E402
 from aiohttp.test_utils import TestClient, TestServer  # noqa: E402
 
 import proxy  # noqa: E402
+import linkfix  # noqa: E402
 
 QUESTION = "Deep dive on Orchards Market Plaza Senior Apts, Plano (178 units, Entrata)"
+SOURCE = "https://communityimpact.com/richardson/housing-real-estate/sherman-street/"
 
 
 def run(case):
@@ -23,7 +25,7 @@ def run(case):
         async def hermes(request):
             calls.append(await request.json())
             return web.json_response({"choices": [{"index": 0, "finish_reason": "stop", "message": {
-                "role": "assistant", "content": f"research #{len(calls)}"}}]})
+                "role": "assistant", "content": f"research #{len(calls)}\n[News]({SOURCE})"}}]})
 
         fake = TestServer(web.Application())
         fake.app.router.add_post("/v1/chat/completions", hermes)
@@ -35,6 +37,8 @@ def run(case):
         proxy.HERMES_URL = str(fake.make_url("/v1/chat/completions"))
         proxy.DEEP_DIVE_DIR = tempfile.mkdtemp()
         proxy._dive_chats.clear()
+        old_load_seen = linkfix.load_seen
+        linkfix.load_seen = lambda: {linkfix._norm(SOURCE)}
 
         async def ask(text, chat_id):
             r = await client.post("/v1/chat/completions", json={
@@ -45,6 +49,7 @@ def run(case):
         try:
             await case(ask, calls)
         finally:
+            linkfix.load_seen = old_load_seen
             await client.close()
             await fake.close()
 
@@ -53,12 +58,12 @@ def run(case):
 
 def test_first_ask_saves_and_new_chat_replays():
     async def case(ask, calls):
-        assert await ask(QUESTION, "chat-a") == "research #1"
-        assert proxy._deep_dive_load(proxy._deep_dive_key(QUESTION)[0])["answer"] == "research #1"
+        assert (await ask(QUESTION, "chat-a")).startswith("research #1")
+        assert proxy._deep_dive_load(proxy._deep_dive_key(QUESTION)[0])["answer"].startswith("research #1")
         again = await ask(QUESTION, "chat-b")
         assert len(calls) == 1
         assert "Saved deep dive from" in again and "Press ↻ to redo it." in again
-        assert again.endswith("research #1")
+        assert "research #1" in again
     run(case)
 
 
@@ -66,9 +71,9 @@ def test_same_chat_again_redoes_and_replaces():
     async def case(ask, calls):
         await ask(QUESTION, "chat-a")
         await ask(QUESTION, "chat-b")          # replay
-        assert await ask(QUESTION, "chat-b") == "research #2"   # ↻ in chat-b
+        assert (await ask(QUESTION, "chat-b")).startswith("research #2")   # ↻ in chat-b
         assert len(calls) == 2
-        assert (await ask(QUESTION, "chat-c")).endswith("research #2")  # new copy saved
+        assert "research #2" in (await ask(QUESTION, "chat-c"))  # new copy saved
         assert len(calls) == 2
     run(case)
 
@@ -76,8 +81,8 @@ def test_same_chat_again_redoes_and_replaces():
 def test_fresh_prefix_redoes():
     async def case(ask, calls):
         await ask(QUESTION, "chat-a")
-        assert await ask("Fresh " + QUESTION, "chat-b") == "research #2"
-        assert (await ask(QUESTION, "chat-c")).endswith("research #2")
+        assert (await ask("Fresh " + QUESTION, "chat-b")).startswith("research #2")
+        assert "research #2" in (await ask(QUESTION, "chat-c"))
     run(case)
 
 

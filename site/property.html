@@ -159,12 +159,16 @@
       return /^https?:/.test(s) ? { label: sourceLabel(s), url: s } : { label: String(s).replace(/^\[|\]$/g, ""), url: null };
     }
 
+    // T13: dedupe by URL alone when there is one -- the same link should never
+    // show twice just because two entries gave it different labels (e.g. the
+    // plain "website" field turning out to be the same page as a saved
+    // "State project record" source).
     function sourceItems(list) {
       const out = [];
       const seen = new Set();
       (list || []).forEach((s) => {
         const e = sourceItem(s);
-        const key = e ? `${e.label}|${e.url || ""}` : "";
+        const key = e ? (e.url ? `url|${e.url}` : `label|${e.label}`) : "";
         if (e && !seen.has(key)) { seen.add(key); out.push(e); }
       });
       return out;
@@ -227,7 +231,7 @@
       document.title = `CraneSignal -- ${l.property || l.address}`;
       content.innerHTML = leadPage(l, hit.area);
       content.querySelector("[data-deep-dive]").addEventListener("click", () => {
-        window.PSChatPanel.deepDive(window.PSChatPanel.deepDivePrompt({
+        window.PSChatPanel.deepDive(id, window.PSChatPanel.deepDivePrompt({
           name: l.property || l.address, city: l.city, units: l.units, software: l.software,
           stage: l.stage, signalType: l.signalType,
         }));
@@ -263,7 +267,7 @@
         </div>
         ${sourcesCard(p, isUpcoming)}`;
       content.querySelector("[data-deep-dive]").addEventListener("click", () => {
-        window.PSChatPanel.deepDive(window.PSChatPanel.deepDivePrompt({
+        window.PSChatPanel.deepDive(id, window.PSChatPanel.deepDivePrompt({
           name: p.community, city: p.city, units: p.units, software: p.software,
           upcoming: isUpcoming, stage: isUpcoming ? p.stage : null,
         }));

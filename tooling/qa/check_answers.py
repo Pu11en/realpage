@@ -24,6 +24,12 @@ QUESTIONS = [
     "Are any Texas property managers on Reddit unhappy with AppFolio or Entrata?",
     "How many leads in Dallas–Fort Worth?",
     "Which vendor runs the most buildings?",
+    "How many buildings are in the Dallas-area survey, and is that different from your Dallas–Fort Worth leads?",
+    "Which state has the most leads, and what are its top cities?",
+    "What percent of identified Plano/Richardson properties run RealPage?",
+    "Who owns Ellington in Plano, and has it sold recently or ranked as a lead?",
+    "How was CraneSignal built, and how many chatbot answers were measured?",
+    "What is RealPage's AI visibility score, and what should they fix first?",
 ]
 # Questions whose answer must contain this number (same as the site shows).
 EXPECT_NUMBER = {"How many leads in Dallas–Fort Worth?": "311"}
@@ -93,6 +99,9 @@ def problems(answer, question=""):
     if is_street_talk(question) and not re.search(r"\]\(https://www\.(reddit|youtube)\.com/", answer):
         out.append("Reddit answer has no thread link")
     out += [f"Sources names {w!r} without a link" for w in unlinked_sources(answer)]
+    for ln in answer.splitlines():
+        if SOURCES_RE.match(ln) and not re.sub(r"[\s*·:,;()]|Sources", "", ln, flags=re.I):
+            out.append(f"broken Sources line {ln!r}")
     out += [f"raw code {c!r}" for c in CODES if c in answer]
     out += [f"file name {f!r}" for f in FILES if f in answer]
     low = answer.lower()

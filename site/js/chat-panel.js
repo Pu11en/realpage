@@ -2,6 +2,16 @@
 // (Open WebUI in production, the stand-in page in tests). Loaded on all 5
 // pages via app.js's renderShell(). See PLAN-v6.md Part W.
 (function () {
+  // Guard against the script itself running twice on one page (a stray
+  // duplicate <script src="js/chat-panel.js"> tag, or a caching glitch that
+  // re-injects it): a second execution would attach a second set of click
+  // listeners to the same Ask/Chat buttons and build a second header bar the
+  // instant the first one is removed and re-added, which showed up live as
+  // two "Ask CraneSignal" bars stacked for a frame. Only the first execution
+  // does anything; window.initChatPanel/PSChatPanel keep pointing at it.
+  if (window.__chatPanelLoaded) return;
+  window.__chatPanelLoaded = true;
+
   const STORAGE_OPEN = "propertystack.chatPanelOpen";
 
   function isOpen() {
@@ -24,6 +34,12 @@
   }
 
   function buildPanel() {
+    // Belt-and-suspenders: if more than one #chat-panel ever ends up in the
+    // DOM (shouldn't happen given the guards above, but this is exactly the
+    // symptom -- two stacked header bars), keep only the first and drop the
+    // rest instead of building yet another one.
+    const stray = document.querySelectorAll("#chat-panel");
+    if (stray.length > 1) stray.forEach((el, i) => i > 0 && el.remove());
     const existing = document.getElementById("chat-panel");
     if (existing) return existing;
 
@@ -36,7 +52,7 @@
         <button class="chat-panel-close" id="chat-panel-close" aria-label="Close chat panel">&times;</button>
       </div>
       <div class="chat-panel-body">
-        <div class="chat-panel-loading" id="chat-panel-loading">Loading chat…</div>
+        <div class="chat-panel-loading" id="chat-panel-loading">Waking up the chat…</div>
         <iframe id="chat-panel-frame" class="chat-panel-frame" title="Ask CraneSignal chat"></iframe>
         <div class="chat-panel-error" id="chat-panel-error" style="display:none;">
           <p>Couldn't load the chat.</p>
@@ -46,6 +62,10 @@
           <p>Sign in free to ask a question.</p>
           <p class="chat-panel-signin-note">A small window opens. Use Google or your email. It closes by itself and the chat appears here.</p>
           <button class="chat-panel-signin" id="chat-panel-signin">Sign in free</button>
+        </div>
+        <div class="chat-panel-deepdive-notice" id="chat-panel-deepdive-notice" style="display:none;">
+          <p id="chat-panel-deepdive-text"></p>
+          <button class="chat-panel-deepdive-redo" id="chat-panel-deepdive-redo" aria-label="Redo this deep dive">&#8635; Redo it</button>
         </div>
       </div>
     `;
@@ -68,21 +88,31 @@
 
     // The chat only ever lives in this panel: if it doesn't load, offer a
     // reload of the frame rather than sending people to a separate tab.
-    const loadTimeoutMs = window.PS_CHAT_LOAD_TIMEOUT_MS || 8000;
+    // The chat app is often asleep (Railway free tier) and can take well
+    // over 8s to wake, so wait longer and retry once automatically before
+    // giving up and showing the manual "Try again" button.
+    const loadTimeoutMs = window.PS_CHAT_LOAD_TIMEOUT_MS || 30000;
     let loadTimer = null;
+    let autoRetried = false;
     const startLoadTimer = () => {
       clearTimeout(loadTimer);
       loadTimer = setTimeout(() => {
-        if (!loaded) {
-          loading.style.display = "none";
-          errorEl.style.display = "flex";
+        if (loaded) return;
+        if (!autoRetried) {
+          autoRetried = true;
+          frame.setAttribute("src", CHAT_APP_URL);
+          startLoadTimer();
+          return;
         }
+        loading.style.display = "none";
+        errorEl.style.display = "flex";
       }, loadTimeoutMs);
     };
     startLoadTimer();
 
     panel.querySelector("#chat-panel-retry").addEventListener("click", () => {
       loaded = false;
+      autoRetried = false;
       errorEl.style.display = "none";
       frame.style.display = "none";
       loading.style.display = "flex";
@@ -91,6 +121,16 @@
     });
 
     panel.querySelector("#chat-panel-close").addEventListener("click", closePanel);
+
+    panel.querySelector("#chat-panel-deepdive-redo").addEventListener("click", () => {
+      const id = panel.dataset.deepDiveId;
+      const text = panel.dataset.deepDiveText;
+      if (!id || !text) return;
+      hideDeepDiveNotice(panel);
+      frame.style.display = "block";
+      sendDeepDive(panel, text);
+      rememberDeepDive(id, text);
+    });
 
     // Google refuses to load inside a frame, so the chat app's own Google
     // button (inside the iframe) can't be used directly. Open the chat app
@@ -138,16 +178,53 @@
       .then((cfg) => {
         if (cfg && cfg.features && cfg.features.auth === false) {
           card.style.display = "none";
+          setSignOutVisible(false);
           return;
         }
         return fetch(`${base}/api/v1/auths/`, { credentials: "include" })
           .then((res) => {
             card.style.display = res.ok ? "none" : "flex";
+            setSignOutVisible(res.ok);
           })
           .catch(() => {
             card.style.display = "flex";
+            setSignOutVisible(false);
           });
       });
+  }
+
+  // T3: the sign-out link in the site header only makes sense once someone
+  // could actually be signed in (live, with auth on, and currently signed
+  // in). Local dev runs the chat app with auth off, so it stays hidden there.
+  function setSignOutVisible(visible) {
+    const link = document.getElementById("sign-out-link");
+    if (link) link.style.display = visible ? "" : "none";
+  }
+
+  function signOut() {
+    const base = CHAT_APP_URL.replace(/\/$/, "");
+    fetch(`${base}/api/v1/auths/signout`, { method: "POST", credentials: "include" })
+      .catch(() => {})
+      .then(() => {
+        // In the same-origin human preview Open WebUI also remembers its
+        // session token in this browser.  Clearing the server session alone
+        // leaves that stale token to route a person straight back into the
+        // app instead of showing the account screen.
+        localStorage.removeItem("token");
+        sessionStorage.removeItem(STORAGE_OPEN);
+        setSignOutVisible(false);
+        location.href = `${base}/auth`;
+      });
+  }
+
+  function wireSignOut() {
+    const link = document.getElementById("sign-out-link");
+    if (!link || link.dataset.signOutWired) return;
+    link.dataset.signOutWired = "1";
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      signOut();
+    });
   }
 
   function ensureFrameLoaded(panel) {
@@ -160,6 +237,8 @@
     const alreadyLoaded = !!panel.querySelector("#chat-panel-frame").getAttribute("src");
     ensureFrameLoaded(panel);
     if (alreadyLoaded) checkAuth(panel);
+    hideDeepDiveNotice(panel);
+    panel.querySelector("#chat-panel-frame").style.display = alreadyLoaded ? "block" : "";
     panel.classList.add("open");
     document.body.classList.add("chat-panel-open");
     setOpen(true);
@@ -181,6 +260,13 @@
 
   function wireTriggers() {
     document.querySelectorAll("[data-chat-toggle]").forEach((el) => {
+      // renderShell() calls initChatPanel() again on view-as changes and the
+      // like; without this flag a repeat call would add a second click
+      // listener to the same Ask/Chat button, so one click opened then
+      // immediately closed the panel (and briefly rendered a second header
+      // while the first was being torn down).
+      if (el.dataset.chatWired) return;
+      el.dataset.chatWired = "1";
       el.addEventListener("click", (e) => {
         e.preventDefault();
         togglePanel();
@@ -197,23 +283,80 @@
     if (isOpen()) openPanel();
   }
 
-  // "Deep dive in chat": open the panel with a prompt typed in, not sent.
+  const DEEPDIVE_PREFIX = "propertystack.deepDive.";
+
+  function deepDiveKey(id) {
+    return DEEPDIVE_PREFIX + id;
+  }
+
+  // T6: a repeat "Deep dive in chat" click on the same building used to just
+  // reopen the same unsent question, discarding the fact it had already been
+  // asked and answered. Remember the last deep dive sent per building (id,
+  // prompt text and when) so a second click on the same building with the
+  // same prompt shows an instant "Saved deep dive from <date>" notice with a
+  // redo button, instead of silently re-typing the question.
+  function savedDeepDive(id) {
+    try {
+      const raw = localStorage.getItem(deepDiveKey(id));
+      return raw ? JSON.parse(raw) : null;
+    } catch (e) {
+      return null;
+    }
+  }
+
+  function rememberDeepDive(id, text) {
+    try {
+      localStorage.setItem(deepDiveKey(id), JSON.stringify({ text, ts: Date.now() }));
+    } catch (e) {
+      // storage unavailable (private mode, quota) -- just skip remembering.
+    }
+  }
+
+  function fmtSavedDate(ts) {
+    return new Date(ts).toLocaleDateString(undefined, { year: "numeric", month: "short", day: "numeric" });
+  }
+
+  function hideDeepDiveNotice(panel) {
+    const notice = panel.querySelector("#chat-panel-deepdive-notice");
+    if (notice) notice.style.display = "none";
+  }
+
   // Open WebUI 0.11 takes postMessage {type:"input:prompt"} only from its own
   // origin (true live, where site and chat share an address), so use that
   // when possible; otherwise (local :8765 -> :3000) load /?q=...&submit=false,
   // which fills the input without sending. See chatbot/README.md.
-  function deepDive(text) {
-    const panel = buildPanel();
+  function sendDeepDive(panel, text) {
     const frame = panel.querySelector("#chat-panel-frame");
     const base = CHAT_APP_URL.replace(/\/$/, "");
     const sameOrigin = new URL(base, location.href).origin === location.origin;
     const loaded = !!frame.getAttribute("src");
-    openPanel();
     if (sameOrigin && loaded && frame.contentWindow) {
       frame.contentWindow.postMessage({ type: "input:prompt", text }, location.origin);
     } else {
       frame.setAttribute("src", `${base}/?q=${encodeURIComponent(text)}&submit=false`);
     }
+  }
+
+  // "Deep dive in chat": open the panel with a prompt typed in, not sent --
+  // unless this exact building/question was already deep-dived, in which
+  // case show the saved-copy notice instead of retyping the question.
+  function deepDive(id, text) {
+    const panel = buildPanel();
+    openPanel();
+    const saved = savedDeepDive(id);
+    panel.dataset.deepDiveId = id;
+    panel.dataset.deepDiveText = text;
+    if (saved && saved.text === text) {
+      panel.querySelector("#chat-panel-frame").style.display = "none";
+      panel.querySelector("#chat-panel-deepdive-text").textContent =
+        `Saved deep dive from ${fmtSavedDate(saved.ts)}. Press ↻ to redo it.`;
+      panel.querySelector("#chat-panel-deepdive-notice").style.display = "flex";
+      return;
+    }
+    hideDeepDiveNotice(panel);
+    panel.querySelector("#chat-panel-frame").style.display = "block";
+    sendDeepDive(panel, text);
+    rememberDeepDive(id, text);
   }
 
   // Plain words for a lead's stage. Covers the state files (permitted, planned,
@@ -247,4 +390,5 @@
 
   window.PSChatPanel = { open: openPanel, close: closePanel, toggle: togglePanel, isOpen, deepDive, deepDivePrompt };
   window.initChatPanel = initChatPanel;
+  window.wireSignOut = wireSignOut;
 })();
