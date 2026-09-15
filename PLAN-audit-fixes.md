@@ -40,7 +40,7 @@ Open: http://localhost:8765/index.html
   `renderPage`, the number boxes use the rows currently shown (state + region + city + search). An
   empty result shows one row "Nothing found. Clear the search or pick another region." with a
   clear-search button.
-- [ ] **A3 Chat panel no longer hides Software and Why.** With the panel open on desktop the table
+- [x] **A3 Chat panel no longer hides Software and Why.** With the panel open on desktop the table
   gets narrower (hide low-value columns first, or let it scroll sideways inside its own box), never
   covering Software/Why. Also fix both "Early Leads" and "Chat" showing as selected in the menu.
 - [ ] **A4 Every building opens a detail page.** `property.html` also works from a lead row with no

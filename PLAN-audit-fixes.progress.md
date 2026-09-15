@@ -11,3 +11,9 @@
 - Empty result: one row "Nothing found. Clear the search or pick another region." with a Clear search button.
 - Test: tooling/qa/fixes_tests/test_a2_stats_follow_filters.py (runs leadStats in node on the DFW rows).
 - Checked: check-fixes.sh passes (5 tests, design 0 problems); in a browser Texas shows 628 leads, DFW 320 leads / 68,254 units, "zzzz" shows Nothing found, Clear search brings back 320 rows; no page errors.
+
+## A3 Chat panel no longer hides Software and Why — done (7b801fc)
+- With the chat docked on desktop (900px+), the Early Leads table turns into one card per lead (same layout as phones), so Software and Why are always visible; before, the table scrolled sideways inside its box and those two columns sat out of view.
+- The Chat menu link no longer gets the selected look; while the panel is open it reads "Close chat". Only the current page's tab is selected.
+- Test: tooling/qa/fixes_tests/test_a3_chat_panel_layout.py.
+- Checked: check-fixes.sh passes (7 tests, design 0 problems); check-panel.sh clean; browser at 1000/1280/1440 wide with panel open: no sideways scroll, only "Early Leads" selected.
