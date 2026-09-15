@@ -66,3 +66,11 @@
 - Sign-in popup: Open WebUI adds " (Open WebUI)" to WEBUI_NAME itself. webui.Dockerfile (Railway) patches that line out (checked against the real image: env.py line becomes pass); branding/loader.js also strips it from the page title and text, covering the local compose.
 - ⚠️ For D1 report: the Open WebUI license only allows removing its name while we have 50 or fewer users in any 30 days; beyond that, restore it or buy their enterprise license. Takes effect live only after the chat app is redeployed (Drew).
 - Test: tooling/qa/fixes_tests/test_b1_chat_names.py. Checked: check-fixes.sh passes (28 tests, design 0 problems); chatbot/tests 35 passed.
+
+## B2 Chat counts match the site — done (c13eaa8)
+- build_data.py now writes each state's chat-leads.csv after merging its included areas, so Texas chat-leads.csv holds the 42 Plano-Richardson leads (region Dallas–Fort Worth; stage sold/planned from Sold/Upcoming). Chat Texas = 628 (site total), DFW = 320. Rebuilt; only tx/chat-leads.csv changed.
+- Skill table and ps_schema notes say Texas already includes Plano/Richardson: count from state_leads alone, never add the leads table on top.
+- check_answers.py: new question "How many leads in Dallas–Fort Worth?" with an expected-number check (320). Not run (costs money; Drew runs it).
+- Test: tooling/qa/fixes_tests/test_b2_chat_counts.py builds the chat database like the Dockerfile and runs the chat's SQL (fails on the old CSV).
+- Checked: check-fixes.sh passes (30 tests, design 0 problems); chatbot + lead-finder tests 105 passed.
+- Left: live chat picks this up only after redeploy (Drew).

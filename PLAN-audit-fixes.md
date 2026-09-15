@@ -70,7 +70,7 @@ Open: http://localhost:8765/index.html
   table and anywhere else in `chatbot/` a user could see it (SOUL.md, proxy.py messages, the
   sign-in popup title "CraneSignal (Open WebUI)" → "CraneSignal"). Test: grep of user-facing
   strings finds no "PropertyStack", "Hermes" or "Open WebUI".
-- [ ] **B2 Chat counts match the site.** Put Plano-Richardson's 42 leads into the Texas/DFW numbers
+- [x] **B2 Chat counts match the site.** Put Plano-Richardson's 42 leads into the Texas/DFW numbers
   the chat uses (data level: include them in Texas `chat-leads.csv` or make the skill count both
   tables), so Texas = site total and DFW = 320. Add a check_answers question "How many leads in
   Dallas–Fort Worth?" = 320 (don't run it). Offline test: the chat's SQL for DFW returns 320.
