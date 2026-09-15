@@ -47,7 +47,7 @@ Open: http://localhost:8765/street-talk.html
 
 ## Tasks
 
-- [ ] **T1 Hook up the cookie + install Agent Reach + the check.** `tooling/reddit_search.py` also reads the
+- [x] **T1 Hook up the cookie + install Agent Reach + the check.** `tooling/reddit_search.py` also reads the
   cookie from `~/.config/propertystack/reddit-cookies.json` (join name=value pairs; never print it); keep the
   existing env/DSH sources working. Install Agent Reach in default (non-system) mode and confirm
   `agent-reach doctor` shows YouTube and web working (skip anything needing a login). Create
