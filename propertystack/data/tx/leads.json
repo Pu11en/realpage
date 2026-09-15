@@ -21136,10 +21136,11 @@
   "buyer": "RP 4 LAS COLINAS OWNER LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://cccres.com/apartments/detail/amli-at-escena-ii-irving",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://cccres.com/apartments/detail/amli-at-escena-ii-irving"
   },
   "sources": [
    {
@@ -21164,10 +21165,11 @@
   "buyer": "RP 4 LAS COLINAS OWNER LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.city-data.com/dallas-county/E/Escena-Boulevard-1.html",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.city-data.com/dallas-county/E/Escena-Boulevard-1.html"
   },
   "sources": [
    {
@@ -21192,10 +21194,11 @@
   "buyer": "SRPF E/DFW MF 1 LP",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.lyraonmckinney.com/",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.lyraonmckinney.com/"
   },
   "sources": [
    {
@@ -21215,20 +21218,25 @@
   "units": 165,
   "stage": "sold",
   "permit_date": "",
-  "opening_date": "",
+  "opening_date": "0000",
   "sale_date": "2026-06-05",
   "buyer": "MADERA ARMSTRONG LLC &",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.greystar.com/the-armstrong-at-knox-dallas-tx/p_22849",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.greystar.com/the-armstrong-at-knox-dallas-tx/p_22849"
   },
   "sources": [
    {
     "fact": "sale_date",
     "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   },
+   {
+    "fact": "opening_date",
+    "url": "https://thearmstrongatknox.com/"
    }
   ],
   "why": "Sold 2026-06-05 \u00b7 to MADERA ARMSTRONG LLC & \u00b7 165 units \u00b7 new owner may re-pick software"
@@ -21248,10 +21256,11 @@
   "buyer": "STONELEX I 2 LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://livebh.com/apartments/knowlton-apartment-homes/",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://livebh.com/apartments/knowlton-apartment-homes/"
   },
   "sources": [
    {
@@ -21304,10 +21313,11 @@
   "buyer": "PARLEX 18 FINCO LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.doorprofit.com/crime-statistics/city/Dallas-TX/neighborhood/twelve_6_ten_at_the_park_apartments/",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.doorprofit.com/crime-statistics/city/Dallas-TX/neighborhood/twelve_6_ten_at_the_park_apartments/"
   },
   "sources": [
    {
@@ -21332,10 +21342,11 @@
   "buyer": "STONELEX I 3 LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://cccres.com/apartments/detail/hawke-apt-homes-irving",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://cccres.com/apartments/detail/hawke-apt-homes-irving"
   },
   "sources": [
    {
@@ -21360,10 +21371,11 @@
   "buyer": "LSREF7 RANGER REO LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.forestridgedallas.com/",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.forestridgedallas.com/"
   },
   "sources": [
    {
@@ -21388,10 +21400,11 @@
   "buyer": "ALLURA LEGACY I TIC &",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.alluralascolinas.com/",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.alluralascolinas.com/"
   },
   "sources": [
    {
@@ -21416,10 +21429,11 @@
   "buyer": "WALLIS FAMILY MULTIFAMILY LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://liveattheprincipal.com/",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://liveattheprincipal.com/"
   },
   "sources": [
    {
@@ -21444,10 +21458,11 @@
   "buyer": "LANDMARK NAH LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://landmarkonlovers.com/",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://landmarkonlovers.com/"
   },
   "sources": [
    {
@@ -21472,10 +21487,11 @@
   "buyer": "DALLAS COUNTY HOUSING FINANCE",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://candysdirt.com/2017/03/13/fiji-townhomes-sells-sphinx-announces-developments-third-phase/",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://candysdirt.com/2017/03/13/fiji-townhomes-sells-sphinx-announces-developments-third-phase/"
   },
   "sources": [
    {
@@ -21584,10 +21600,11 @@
   "buyer": "BNS BLUE SKY LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.myashwoodpark.com/",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.myashwoodpark.com/"
   },
   "sources": [
    {
@@ -21612,10 +21629,11 @@
   "buyer": "SYLVAN WWS LLC &",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://livebh.com/apartments/sylvan-thirty-apartments/",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://livebh.com/apartments/sylvan-thirty-apartments/"
   },
   "sources": [
    {
@@ -21635,20 +21653,25 @@
   "units": 240,
   "stage": "sold",
   "permit_date": "",
-  "opening_date": "",
+  "opening_date": "4055",
   "sale_date": "2026-05-12",
   "buyer": "BVF VI PARK WEST OWNER LP",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://parkwestoaklawn.com/",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://parkwestoaklawn.com/"
   },
   "sources": [
    {
     "fact": "sale_date",
     "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   },
+   {
+    "fact": "opening_date",
+    "url": "https://parkwestoaklawn.com/"
    }
   ],
   "why": "Sold 2026-05-12 \u00b7 to BVF VI PARK WEST OWNER LP \u00b7 240 units \u00b7 new owner may re-pick software"
@@ -21668,10 +21691,11 @@
   "buyer": "CLARIUS NORTH DALLAS OWNER",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.usdoh.org/property/tx_13250_landmark-at-rosewood-apartments",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.usdoh.org/property/tx_13250_landmark-at-rosewood-apartments"
   },
   "sources": [
    {
@@ -21696,10 +21720,11 @@
   "buyer": "900 TITLE JEFFERSON LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.drakewhiterock.com/",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.drakewhiterock.com/"
   },
   "sources": [
    {
@@ -21724,10 +21749,11 @@
   "buyer": "900 TITLE JEFFERSON LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.eastdallasapts.com/raleigh/",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.eastdallasapts.com/raleigh/"
   },
   "sources": [
    {
@@ -21747,20 +21773,25 @@
   "units": 27,
   "stage": "sold",
   "permit_date": "",
-  "opening_date": "",
+  "opening_date": "2026",
   "sale_date": "2026-05-06",
   "buyer": "900 TITLE JEFFERSON LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.avaloncommunities.com/texas/dallas-metroplex-apartments",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.avaloncommunities.com/texas/dallas-metroplex-apartments"
   },
   "sources": [
    {
     "fact": "sale_date",
     "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   },
+   {
+    "fact": "opening_date",
+    "url": "https://www.avaloncommunities.com/texas/dallas-metroplex-apartments"
    }
   ],
   "why": "Sold 2026-05-06 \u00b7 to 900 TITLE JEFFERSON LLC \u00b7 27 units \u00b7 new owner may re-pick software"
@@ -21780,10 +21811,11 @@
   "buyer": "900 TITLE JEFFERSON LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.eastdallasapts.com/le-parc/",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.eastdallasapts.com/le-parc/"
   },
   "sources": [
    {
