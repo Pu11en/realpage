@@ -135,7 +135,7 @@ Open: http://localhost:8765 → Early Leads → Az
   permit labels don't match their real marketing names; some brand-new permits have no public
   developer yet). Drew's call (2026-09-14): **drop every quality gate** -- `quality.json` stays as
   a report only, `run.py` never blocks or STUCKs on it, always builds what the tool found. Commit.
-- [ ] **F11 Full Arizona run.** First clean up display names: strip permit-system annotations
+- [x] **F11 Full Arizona run.** First clean up display names: strip permit-system annotations _(covered by the Texas build's Arizona re-run, 279 leads, 2026-09-15)_
   (`[NEW MIXED-USE]`, `- *LP*`, `(WD)`, etc, via `building_match.clean_project_name`) from `name`
   before it's shown or scored, so leads read "Revelry" not "REVELRY [NEW MIXED-USE] - *LP* /
   Phased Construction - Type D" (keep the raw name only for search queries/matching, already using
@@ -144,7 +144,7 @@ Open: http://localhost:8765 → Early Leads → Az
   junk run leaks in. New run id. Whole state in permit order until 150 projects or the 450-search
   cap, plus the county sales file. No quality gate -- keep whatever the tool finds; `quality.json`
   is written and reported, never blocks. Save recipes. Commit.
-- [ ] **F12 Arizona on the site + chat.** Build the site and rebuild the chat (`bash tooling/dev.sh`)
+- [x] **F12 Arizona on the site + chat.** Build the site and rebuild the chat (`bash tooling/dev.sh`) _(covered by the Texas build's Arizona re-run, 279 leads, 2026-09-15)_
   with the new AZ leads; run the Check and `tooling/qa/check-answers.sh`. Commit. Recap in plain words
   how many AZ leads, how many with software and phone, and the quality numbers (reported, not a gate).
 
