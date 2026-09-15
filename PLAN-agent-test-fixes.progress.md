@@ -220,3 +220,13 @@ renders the sliced `pageRows` not the full list, stats run on the full
 `rows` before slicing, and paging resets on filter/sort changes). Checked
 with `bash tooling/qa/check-fixes.sh` (108 tests pass, design check 0
 problems on 7 pages).
+
+## T16 Privacy contact email — done
+Replaced the `CONTACT_EMAIL_TBD` placeholder in `site/privacy.html` (link
+href and visible text) with `drewpullen2003@gmail.com`, the email Drew
+picked. Confirmed via grep that this was the only occurrence anywhere under
+`site/`. Added `tooling/qa/fixes_tests/test_t16_privacy_contact_email.py`
+(2 tests: no `CONTACT_EMAIL_TBD` left in any `site/` html/js file, and the
+privacy page has the real mailto link and visible email). Checked with
+`bash tooling/qa/check-fixes.sh` (110 tests pass, design check 0 problems
+on 7 pages).
