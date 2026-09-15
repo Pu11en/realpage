@@ -57,8 +57,8 @@
   },
   "human_review": {
     "n_reviewed": 17,
-    "n_comparable_to_ai": 13,
-    "agreement_pct": 92.3,
+    "n_comparable_to_ai": 17,
+    "agreement_pct": 94.1,
     "label_file": "drew-2026-09-15.json"
   },
   "false_alarm_rate": {

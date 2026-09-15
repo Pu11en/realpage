@@ -94,8 +94,10 @@ def build_evals():
     if drew_labels and isinstance(drew_labels.get("labels"), dict):
         labels = drew_labels["labels"]
         ai_by_id = {}
-        if pregrade and isinstance(pregrade.get("answers"), list):
-            ai_by_id = {a["id"]: a.get("ai_grade") for a in pregrade["answers"]}
+        if pregrade:
+            for key in ("answers", "bot_steps"):
+                for a in pregrade.get(key) or []:
+                    ai_by_id[a["id"]] = a.get("ai_grade")
         comparable = 0
         agree = 0
         for qid, entry in labels.items():
