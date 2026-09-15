@@ -28,6 +28,7 @@ QUESTIONS = [
     "Which state has the most leads, and what are its top cities?",
     "What percent of identified Plano/Richardson properties run RealPage?",
     "Who owns Ellington in Plano, and has it sold recently or ranked as a lead?",
+    "How was CraneSignal built, and how many chatbot answers were measured?",
 ]
 # Questions whose answer must contain this number (same as the site shows).
 EXPECT_NUMBER = {"How many leads in Dallas–Fort Worth?": "311"}

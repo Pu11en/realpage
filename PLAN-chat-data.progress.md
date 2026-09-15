@@ -138,3 +138,40 @@ tests pass.
 
 Anything left open: none for this task. Like D1-D3, the chat container wasn't rebuilt/tried live
 (D7 does that rebuild + report).
+
+## D5 CraneSignal's own numbers — done
+
+What I did:
+- Added `tooling/chat-data/build_cranesignal_numbers.py`, which flattens the site's own
+  `pipeline.json`, `chat-stats.json`, `evals.json`, and `buildbot.json` into chat-ready CSVs
+  under `propertystack/data/cranesignal-build/kb/`.
+- Produced 11 small tables: `cranesignal_pipeline_steps`, `cranesignal_pipeline_runs`,
+  `cranesignal_review_reasons`, `cranesignal_review_queue`, `cranesignal_accuracy_docs`,
+  `cranesignal_chat_stats`, `cranesignal_eval_checks`, `cranesignal_eval_summary`,
+  `cranesignal_eval_failure_types`, `cranesignal_buildbot_summary`, and
+  `cranesignal_buildbot_examples`.
+- Updated `chatbot/Dockerfile` so the new `cranesignal-build/kb/*.csv` files copy into `/kb/data`
+  during the chat image's knowledge-base build stage.
+- Updated `chatbot/hermes-profile/plugins/propertystack/__init__.py` with source names and a
+  schema note saying the `cranesignal_*` tables are only for questions about CraneSignal itself
+  (how it was built, checked, measured, or how accurate/fast it is), never for property/lead/
+  software facts. The note also tells the chat to state `measured_at` dates for eval/chat/buildbot
+  numbers because they may get old.
+- Updated `chatbot/hermes-profile/skills/query-propertystack/SKILL.md` with the same scope rule and
+  table descriptions.
+- Added a check_answers question: "How was CraneSignal built, and how many chatbot answers were
+  measured?" (not run -- costs money, Drew runs it).
+- Added `tooling/qa/fixes_tests/test_d5_cranesignal_numbers.py`: rebuilds the D5 kb files in a temp
+  dir, checks the Dockerfile copy rule, loads the real propertystack plugin's `_build_db()`, asserts
+  all `cranesignal_*` tables load with friendly source names, and verifies key values match the
+  site JSON exactly.
+
+Commit: see git log (message "D5: ship CraneSignal build and eval numbers into the chat").
+
+How I checked it: `python3 -m pytest -q tooling/qa/fixes_tests/test_d5_cranesignal_numbers.py`
+passes (3 tests), and the required plan check
+`bash tooling/qa/check-fixes.sh && python3 -m pytest -q chatbot/tests` passes (122 fix/design tests
+and 35 chatbot tests).
+
+Anything left open: none for this task. The chat container itself wasn't rebuilt/tried live (D7
+does that rebuild + report).

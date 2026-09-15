@@ -50,7 +50,7 @@ Open: http://localhost:8765/map.html
 - [x] **D4 Building-page extras.** From `site/data/properties.json`, ship the fields the chat lacks (owner,
   website confidence, reason something is unknown, sale/lead notes) keyed to the existing building id so
   they join `master`. Test: a join returns the owner for a known building. Commit.
-- [ ] **D5 CraneSignal's own numbers.** Ship `site/data/pipeline.json`, `chat-stats.json`, `evals.json`,
+- [x] **D5 CraneSignal's own numbers.** Ship `site/data/pipeline.json`, `chat-stats.json`, `evals.json`,
   `buildbot.json` (whichever exist) as small tables so "how was this built / how accurate is it?" gets real
   numbers with dates. SKILL.md: only use them for questions about CraneSignal itself; eval numbers may be
   old, so state their date. Test. Commit.

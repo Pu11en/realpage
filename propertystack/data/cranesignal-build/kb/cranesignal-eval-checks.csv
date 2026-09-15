@@ -1,0 +1,7 @@
+name,status,seconds,cost_usd,measured_at
+secrets-and-code,FAIL,16.7,0.0,2026-09-15
+site-flows,FAIL,113.5,0.0,2026-09-15
+site-attack-scan,FAIL,68.2,0.0,2026-09-15
+pipeline-accuracy,FAIL,0.1,0.0,2026-09-15
+chatbot,FAIL,134.0,0.0,2026-09-15
+chatbot-judge,PASS,66.2,0.0,2026-09-15

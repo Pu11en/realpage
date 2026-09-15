@@ -83,6 +83,17 @@ SOURCE_NAMES = {
     "map_summary": "CraneSignal lead map (state and top-city totals)",
     "software_share": "Property software market share (Plano/Richardson only)",
     "building_extras": "Building owner, sale and lead detail (Plano/Richardson only)",
+    "cranesignal_pipeline_steps": "CraneSignal build pipeline steps",
+    "cranesignal_pipeline_runs": "CraneSignal build run history",
+    "cranesignal_review_reasons": "CraneSignal review queue summary",
+    "cranesignal_review_queue": "CraneSignal review queue",
+    "cranesignal_accuracy_docs": "CraneSignal accuracy notes",
+    "cranesignal_chat_stats": "CraneSignal chat speed measurements",
+    "cranesignal_eval_checks": "CraneSignal eval checks",
+    "cranesignal_eval_summary": "CraneSignal eval summary",
+    "cranesignal_eval_failure_types": "CraneSignal eval failure types",
+    "cranesignal_buildbot_summary": "CraneSignal AI build summary",
+    "cranesignal_buildbot_examples": "CraneSignal AI build examples",
 }
 
 
@@ -195,6 +206,11 @@ def ps_schema(args: dict, **_) -> str:
             "website_confidence, unknown_reason (same values as master, handy without a join), plus "
             "sale_date/sale_new_owner/sale_previous_owner and lead_rank/lead_total_leads/lead_why -- all "
             "blank when that building has no sale or isn't a ranked lead, which is most of them.",
+            "cranesignal_* tables: CraneSignal's own build, eval, speed, and AI-agent progress numbers "
+            "from the Under the Hood page. Use them only for questions about CraneSignal itself (how it "
+            "was built, checked, measured, or how accurate/fast it is), never as property/lead/software "
+            "facts. eval/chat/buildbot rows have measured_at dates; state that date because those numbers "
+            "may be old. cost_note says per-area dollars are a placeholder until run logs record dollars.",
         ],
     })
 
