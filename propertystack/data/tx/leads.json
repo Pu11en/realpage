@@ -22913,6 +22913,35 @@
  },
  {
   "area": "tx",
+  "city": "Tarrant County",
+  "name": "THE PARK AT ASHFORD",
+  "address": "3500 S FIELDER RD",
+  "lat": null,
+  "lon": null,
+  "units": 144,
+  "stage": "sold",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "2025-08-22",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "sales_file": "https://www.tad.org/content/data-download/2026CommImprovedSales.zip",
+   "deed_doc": "D224150260"
+  },
+  "sources": [
+   {
+    "fact": "sale_date",
+    "url": "https://www.tad.org/content/data-download/2026CommImprovedSales.zip"
+   }
+  ],
+  "why": "Sold 2025-08-22 \u00b7 144 units \u00b7 new owner may re-pick software"
+ },
+ {
+  "area": "tx",
   "city": "DALLAS",
   "name": "TEMPLE CLIFF APTS",
   "address": "",
@@ -27753,6 +27782,64 @@
  },
  {
   "area": "tx",
+  "city": "Tarrant County",
+  "name": "BELLA VIDA",
+  "address": "927 N OAK ST",
+  "lat": null,
+  "lon": null,
+  "units": 84,
+  "stage": "sold",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "2025-05-07",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "sales_file": "https://www.tad.org/content/data-download/2026CommImprovedSales.zip",
+   "deed_doc": "D225081846"
+  },
+  "sources": [
+   {
+    "fact": "sale_date",
+    "url": "https://www.tad.org/content/data-download/2026CommImprovedSales.zip"
+   }
+  ],
+  "why": "Sold 2025-05-07 \u00b7 84 units \u00b7 new owner may re-pick software"
+ },
+ {
+  "area": "tx",
+  "city": "Tarrant County",
+  "name": "WESTLAND ESTATES",
+  "address": "2950 ALEMEDA ST",
+  "lat": null,
+  "lon": null,
+  "units": 192,
+  "stage": "sold",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "2025-05-07",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "sales_file": "https://www.tad.org/content/data-download/2026CommImprovedSales.zip",
+   "deed_doc": "D225081907"
+  },
+  "sources": [
+   {
+    "fact": "sale_date",
+    "url": "https://www.tad.org/content/data-download/2026CommImprovedSales.zip"
+   }
+  ],
+  "why": "Sold 2025-05-07 \u00b7 192 units \u00b7 new owner may re-pick software"
+ },
+ {
+  "area": "tx",
   "city": "HOUSTON",
   "name": "333 UVALDE RD 291",
   "address": "333 UVALDE RD 291",
@@ -29129,6 +29216,35 @@
  },
  {
   "area": "tx",
+  "city": "Tarrant County",
+  "name": "LANDMARK AT CROWLEY",
+  "address": "305 W FM 1187",
+  "lat": null,
+  "lon": null,
+  "units": 267,
+  "stage": "sold",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "2025-04-08",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "sales_file": "https://www.tad.org/content/data-download/2026CommImprovedSales.zip",
+   "deed_doc": "D225064276"
+  },
+  "sources": [
+   {
+    "fact": "sale_date",
+    "url": "https://www.tad.org/content/data-download/2026CommImprovedSales.zip"
+   }
+  ],
+  "why": "Sold 2025-04-08 \u00b7 267 units \u00b7 new owner may re-pick software"
+ },
+ {
+  "area": "tx",
   "city": "DALLAS",
   "name": "FOREST HILLS APTS",
   "address": "",
@@ -30313,6 +30429,35 @@
  },
  {
   "area": "tx",
+  "city": "Tarrant County",
+  "name": "RICHLAND COURT",
+  "address": "6626 REEVES ST",
+  "lat": null,
+  "lon": null,
+  "units": 45,
+  "stage": "sold",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "2025-03-25",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "sales_file": "https://www.tad.org/content/data-download/2026CommImprovedSales.zip",
+   "deed_doc": "D225051134"
+  },
+  "sources": [
+   {
+    "fact": "sale_date",
+    "url": "https://www.tad.org/content/data-download/2026CommImprovedSales.zip"
+   }
+  ],
+  "why": "Sold 2025-03-25 \u00b7 45 units \u00b7 new owner may re-pick software"
+ },
+ {
+  "area": "tx",
   "city": "GARLAND (DALLAS CO)",
   "name": "REPUBLIC WEST APARTMENTS (32 UNITS)",
   "address": "",
@@ -30761,6 +30906,35 @@
  },
  {
   "area": "tx",
+  "city": "Tarrant County",
+  "name": "DELARA CHASE APTS",
+  "address": "4805 ALTAMESA BLVD",
+  "lat": null,
+  "lon": null,
+  "units": 116,
+  "stage": "sold",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "2025-03-24",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "sales_file": "https://www.tad.org/content/data-download/2026CommImprovedSales.zip",
+   "deed_doc": "D225051518"
+  },
+  "sources": [
+   {
+    "fact": "sale_date",
+    "url": "https://www.tad.org/content/data-download/2026CommImprovedSales.zip"
+   }
+  ],
+  "why": "Sold 2025-03-24 \u00b7 116 units \u00b7 new owner may re-pick software"
+ },
+ {
+  "area": "tx",
   "city": "GRAND PRAIRIE (DALLAS CO)",
   "name": "BELMONT",
   "address": "",
@@ -31010,6 +31184,35 @@
    }
   ],
   "why": "Sold 2025-03-17 \u00b7 to PECOS HOUSING FINANCE \u00b7 100 units \u00b7 new owner may re-pick software"
+ },
+ {
+  "area": "tx",
+  "city": "Tarrant County",
+  "name": "OAKS AT JANE LANE",
+  "address": "3001 JANE LN",
+  "lat": null,
+  "lon": null,
+  "units": 109,
+  "stage": "sold",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "2025-03-14",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "sales_file": "https://www.tad.org/content/data-download/2026CommImprovedSales.zip",
+   "deed_doc": "D225044278"
+  },
+  "sources": [
+   {
+    "fact": "sale_date",
+    "url": "https://www.tad.org/content/data-download/2026CommImprovedSales.zip"
+   }
+  ],
+  "why": "Sold 2025-03-14 \u00b7 109 units \u00b7 new owner may re-pick software"
  },
  {
   "area": "tx",
@@ -31689,6 +31892,35 @@
  },
  {
   "area": "tx",
+  "city": "Tarrant County",
+  "name": "221 Arbrook",
+  "address": "2201 E ARBROOK BLVD",
+  "lat": null,
+  "lon": null,
+  "units": 30,
+  "stage": "sold",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "2025-03-10",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "sales_file": "https://www.tad.org/content/data-download/2026CommImprovedSales.zip",
+   "deed_doc": "D225040462"
+  },
+  "sources": [
+   {
+    "fact": "sale_date",
+    "url": "https://www.tad.org/content/data-download/2026CommImprovedSales.zip"
+   }
+  ],
+  "why": "Sold 2025-03-10 \u00b7 30 units \u00b7 new owner may re-pick software"
+ },
+ {
+  "area": "tx",
   "city": "DALLAS",
   "name": "JEFFERSON AT ROSS",
   "address": "",
@@ -32134,6 +32366,64 @@
    }
   ],
   "why": "Sold 2025-02-26 \u00b7 to HOUSTON VANDERBILT LODGE APARTMENTS LP \u00b7 new owner may re-pick software"
+ },
+ {
+  "area": "tx",
+  "city": "Tarrant County",
+  "name": "THE WYATT AT PRESIDIO JUNCTION",
+  "address": "2301 PRESIDIO VISTA DR",
+  "lat": null,
+  "lon": null,
+  "units": 348,
+  "stage": "sold",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "2025-02-26",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "sales_file": "https://www.tad.org/content/data-download/2026CommImprovedSales.zip",
+   "deed_doc": "D225033316"
+  },
+  "sources": [
+   {
+    "fact": "sale_date",
+    "url": "https://www.tad.org/content/data-download/2026CommImprovedSales.zip"
+   }
+  ],
+  "why": "Sold 2025-02-26 \u00b7 348 units \u00b7 new owner may re-pick software"
+ },
+ {
+  "area": "tx",
+  "city": "Tarrant County",
+  "name": "ASHTON APARTMENT HOMES",
+  "address": "681 N SAGINAW BLVD",
+  "lat": null,
+  "lon": null,
+  "units": 152,
+  "stage": "sold",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "2025-02-26",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "sales_file": "https://www.tad.org/content/data-download/2026CommImprovedSales.zip",
+   "deed_doc": "D225044964"
+  },
+  "sources": [
+   {
+    "fact": "sale_date",
+    "url": "https://www.tad.org/content/data-download/2026CommImprovedSales.zip"
+   }
+  ],
+  "why": "Sold 2025-02-26 \u00b7 152 units \u00b7 new owner may re-pick software"
  },
  {
   "area": "tx",
@@ -32697,6 +32987,64 @@
  },
  {
   "area": "tx",
+  "city": "Tarrant County",
+  "name": "Solea Tavolo Park (55+ Active)",
+  "address": "7545 HARRIS PKWY",
+  "lat": null,
+  "lon": null,
+  "units": 184,
+  "stage": "sold",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "2025-02-05",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "sales_file": "https://www.tad.org/content/data-download/2026CommImprovedSales.zip",
+   "deed_doc": "D225019792"
+  },
+  "sources": [
+   {
+    "fact": "sale_date",
+    "url": "https://www.tad.org/content/data-download/2026CommImprovedSales.zip"
+   }
+  ],
+  "why": "Sold 2025-02-05 \u00b7 184 units \u00b7 new owner may re-pick software"
+ },
+ {
+  "area": "tx",
+  "city": "Tarrant County",
+  "name": "SOLEA KELLER",
+  "address": "3661 KELLER HICKS RD",
+  "lat": null,
+  "lon": null,
+  "units": 558,
+  "stage": "sold",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "2025-02-05",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "sales_file": "https://www.tad.org/content/data-download/2026CommImprovedSales.zip",
+   "deed_doc": "D225019798"
+  },
+  "sources": [
+   {
+    "fact": "sale_date",
+    "url": "https://www.tad.org/content/data-download/2026CommImprovedSales.zip"
+   }
+  ],
+  "why": "Sold 2025-02-05 \u00b7 558 units \u00b7 new owner may re-pick software"
+ },
+ {
+  "area": "tx",
   "city": "TOMBALL",
   "name": "1515 RUDEL DR 128",
   "address": "1515 RUDEL DR 128",
@@ -32918,6 +33266,35 @@
    }
   ],
   "why": "Sold 2025-01-27 \u00b7 to IRG BGO OAKS DC LP \u00b7 348 units \u00b7 new owner may re-pick software"
+ },
+ {
+  "area": "tx",
+  "city": "Tarrant County",
+  "name": "Cottages at Summer Cree",
+  "address": "5400 MOUNTAIN BROOK LN",
+  "lat": null,
+  "lon": null,
+  "units": 196,
+  "stage": "sold",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "2025-01-25",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "sales_file": "https://www.tad.org/content/data-download/2026CommImprovedSales.zip",
+   "deed_doc": "D225017002"
+  },
+  "sources": [
+   {
+    "fact": "sale_date",
+    "url": "https://www.tad.org/content/data-download/2026CommImprovedSales.zip"
+   }
+  ],
+  "why": "Sold 2025-01-25 \u00b7 196 units \u00b7 new owner may re-pick software"
  },
  {
   "area": "tx",
@@ -33426,6 +33803,64 @@
    }
   ],
   "why": "Sold 2024-12-30 \u00b7 to SHIMOKAWA BUILDING CO LTD \u00b7 24 units \u00b7 new owner may re-pick software"
+ },
+ {
+  "area": "tx",
+  "city": "Tarrant County",
+  "name": "RANCH THREE0FIVE",
+  "address": "251 E BARDIN RD",
+  "lat": null,
+  "lon": null,
+  "units": 226,
+  "stage": "sold",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "2024-12-30",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "sales_file": "https://www.tad.org/content/data-download/2026CommImprovedSales.zip",
+   "deed_doc": "D225001950"
+  },
+  "sources": [
+   {
+    "fact": "sale_date",
+    "url": "https://www.tad.org/content/data-download/2026CommImprovedSales.zip"
+   }
+  ],
+  "why": "Sold 2024-12-30 \u00b7 226 units \u00b7 new owner may re-pick software"
+ },
+ {
+  "area": "tx",
+  "city": "Tarrant County",
+  "name": "HAMPTON TOWNHOMES",
+  "address": "121 S HAMPTON RD",
+  "lat": null,
+  "lon": null,
+  "units": 76,
+  "stage": "sold",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "2024-12-30",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "sales_file": "https://www.tad.org/content/data-download/2026CommImprovedSales.zip",
+   "deed_doc": "D224232767"
+  },
+  "sources": [
+   {
+    "fact": "sale_date",
+    "url": "https://www.tad.org/content/data-download/2026CommImprovedSales.zip"
+   }
+  ],
+  "why": "Sold 2024-12-30 \u00b7 76 units \u00b7 new owner may re-pick software"
  },
  {
   "area": "tx",
@@ -34633,6 +35068,35 @@
  },
  {
   "area": "tx",
+  "city": "Tarrant County",
+  "name": "HARLOWE APARTMENTS",
+  "address": "2525 STATE HWY 360",
+  "lat": null,
+  "lon": null,
+  "units": 486,
+  "stage": "sold",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "2024-12-19",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "sales_file": "https://www.tad.org/content/data-download/2026CommImprovedSales.zip",
+   "deed_doc": "D224227324"
+  },
+  "sources": [
+   {
+    "fact": "sale_date",
+    "url": "https://www.tad.org/content/data-download/2026CommImprovedSales.zip"
+   }
+  ],
+  "why": "Sold 2024-12-19 \u00b7 486 units \u00b7 new owner may re-pick software"
+ },
+ {
+  "area": "tx",
   "city": "DALLAS",
   "name": "WATERFORD AT GOLDMARK- (75% TC) TDHCA# 95155",
   "address": "",
@@ -35782,6 +36246,35 @@
    }
   ],
   "why": "Sold 2024-11-19 \u00b7 to LIFE TOWER OWNER LLC MONZER HOURANI, CEO \u00b7 new owner may re-pick software"
+ },
+ {
+  "area": "tx",
+  "city": "Tarrant County",
+  "name": "FORUM AT GRAND PRAIRIE",
+  "address": "2650 S FORUM DR",
+  "lat": null,
+  "lon": null,
+  "units": 304,
+  "stage": "sold",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "2024-11-19",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "sales_file": "https://www.tad.org/content/data-download/2026CommImprovedSales.zip",
+   "deed_doc": "D224208553"
+  },
+  "sources": [
+   {
+    "fact": "sale_date",
+    "url": "https://www.tad.org/content/data-download/2026CommImprovedSales.zip"
+   }
+  ],
+  "why": "Sold 2024-11-19 \u00b7 304 units \u00b7 new owner may re-pick software"
  },
  {
   "area": "tx",
@@ -36937,6 +37430,64 @@
  },
  {
   "area": "tx",
+  "city": "Tarrant County",
+  "name": "TEN TWELVE WEST",
+  "address": "1014 W PIONEER PKWY",
+  "lat": null,
+  "lon": null,
+  "units": 143,
+  "stage": "sold",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "2024-10-10",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "sales_file": "https://www.tad.org/content/data-download/2026CommImprovedSales.zip",
+   "deed_doc": "D224182570"
+  },
+  "sources": [
+   {
+    "fact": "sale_date",
+    "url": "https://www.tad.org/content/data-download/2026CommImprovedSales.zip"
+   }
+  ],
+  "why": "Sold 2024-10-10 \u00b7 143 units \u00b7 new owner may re-pick software"
+ },
+ {
+  "area": "tx",
+  "city": "Tarrant County",
+  "name": "THE BILTMORE APTS",
+  "address": "2300 MISTY RIDGE CIR",
+  "lat": null,
+  "lon": null,
+  "units": 186,
+  "stage": "sold",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "2024-10-10",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "sales_file": "https://www.tad.org/content/data-download/2026CommImprovedSales.zip",
+   "deed_doc": "D224182379"
+  },
+  "sources": [
+   {
+    "fact": "sale_date",
+    "url": "https://www.tad.org/content/data-download/2026CommImprovedSales.zip"
+   }
+  ],
+  "why": "Sold 2024-10-10 \u00b7 186 units \u00b7 new owner may re-pick software"
+ },
+ {
+  "area": "tx",
   "city": "CARROLLTON (DALLAS CO)",
   "name": "OLYMPUS ON MAIN",
   "address": "",
@@ -36990,6 +37541,35 @@
    }
   ],
   "why": "Sold 2024-10-08 \u00b7 to CANTERA CRG LLC \u00b7 172 units \u00b7 new owner may re-pick software"
+ },
+ {
+  "area": "tx",
+  "city": "Tarrant County",
+  "name": "Hendrix",
+  "address": "1625 CONSTITUTION PKWY",
+  "lat": null,
+  "lon": null,
+  "units": 249,
+  "stage": "sold",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "2024-10-08",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "sales_file": "https://www.tad.org/content/data-download/2026CommImprovedSales.zip",
+   "deed_doc": "D224180662"
+  },
+  "sources": [
+   {
+    "fact": "sale_date",
+    "url": "https://www.tad.org/content/data-download/2026CommImprovedSales.zip"
+   }
+  ],
+  "why": "Sold 2024-10-08 \u00b7 249 units \u00b7 new owner may re-pick software"
  },
  {
   "area": "tx",
@@ -37389,6 +37969,35 @@
  },
  {
   "area": "tx",
+  "city": "Tarrant County",
+  "name": "The Borough",
+  "address": "5700 BOCA RATON BLVD",
+  "lat": null,
+  "lon": null,
+  "units": 208,
+  "stage": "sold",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "2024-09-26",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "sales_file": "https://www.tad.org/content/data-download/2026CommImprovedSales.zip",
+   "deed_doc": "D224175228"
+  },
+  "sources": [
+   {
+    "fact": "sale_date",
+    "url": "https://www.tad.org/content/data-download/2026CommImprovedSales.zip"
+   }
+  ],
+  "why": "Sold 2024-09-26 \u00b7 208 units \u00b7 new owner may re-pick software"
+ },
+ {
+  "area": "tx",
   "city": "GRAND PRAIRIE (DALLAS CO)",
   "name": "THE WESTLYN",
   "address": "",
@@ -37701,6 +38310,64 @@
  },
  {
   "area": "tx",
+  "city": "Tarrant County",
+  "name": "CITYSCAPE ARTS APTS",
+  "address": "311 NICHOLS ST",
+  "lat": null,
+  "lon": null,
+  "units": 57,
+  "stage": "sold",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "2024-09-13",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "sales_file": "https://www.tad.org/content/data-download/2026CommImprovedSales.zip",
+   "deed_doc": "D224164521"
+  },
+  "sources": [
+   {
+    "fact": "sale_date",
+    "url": "https://www.tad.org/content/data-download/2026CommImprovedSales.zip"
+   }
+  ],
+  "why": "Sold 2024-09-13 \u00b7 57 units \u00b7 new owner may re-pick software"
+ },
+ {
+  "area": "tx",
+  "city": "Tarrant County",
+  "name": "Point at Forest Hill",
+  "address": "3401 HERITAGE LN",
+  "lat": null,
+  "lon": null,
+  "units": 52,
+  "stage": "sold",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "2024-09-11",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "sales_file": "https://www.tad.org/content/data-download/2026CommImprovedSales.zip",
+   "deed_doc": "D224163382"
+  },
+  "sources": [
+   {
+    "fact": "sale_date",
+    "url": "https://www.tad.org/content/data-download/2026CommImprovedSales.zip"
+   }
+  ],
+  "why": "Sold 2024-09-11 \u00b7 52 units \u00b7 new owner may re-pick software"
+ },
+ {
+  "area": "tx",
   "city": "DALLAS",
   "name": "LURE",
   "address": "",
@@ -37810,6 +38477,35 @@
    }
   ],
   "why": "Sold 2024-09-09 \u00b7 to PARK LANE PROPERTY LLC \u00b7 152 units \u00b7 new owner may re-pick software"
+ },
+ {
+  "area": "tx",
+  "city": "Tarrant County",
+  "name": "The Sydney",
+  "address": "401 N STATE HWY 360",
+  "lat": null,
+  "lon": null,
+  "units": 354,
+  "stage": "sold",
+  "permit_date": "",
+  "opening_date": "",
+  "sale_date": "2024-09-06",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "sales_file": "https://www.tad.org/content/data-download/2026CommImprovedSales.zip",
+   "deed_doc": "D224160734"
+  },
+  "sources": [
+   {
+    "fact": "sale_date",
+    "url": "https://www.tad.org/content/data-download/2026CommImprovedSales.zip"
+   }
+  ],
+  "why": "Sold 2024-09-06 \u00b7 354 units \u00b7 new owner may re-pick software"
  },
  {
   "area": "tx",
