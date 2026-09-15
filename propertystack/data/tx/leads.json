@@ -21840,10 +21840,11 @@
   "buyer": "TM STRATFORD HILL II LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://cccres.com/apartments/detail/stratford-midtown-dallas",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://cccres.com/apartments/detail/stratford-midtown-dallas"
   },
   "sources": [
    {
@@ -21868,10 +21869,11 @@
   "buyer": "HAMPTON PROPERTY OWNER LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.hamptonduplexes.com/",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.hamptonduplexes.com/"
   },
   "sources": [
    {
@@ -21891,20 +21893,25 @@
   "units": 65,
   "stage": "sold",
   "permit_date": "",
-  "opening_date": "",
+  "opening_date": "1125",
   "sale_date": "2026-04-14",
   "buyer": "MFMZ PROPERTY MANAGER LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.moveforfree.com/apartments/texas/dallas/luna-blanca.html",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.moveforfree.com/apartments/texas/dallas/luna-blanca.html"
   },
   "sources": [
    {
     "fact": "sale_date",
     "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   },
+   {
+    "fact": "opening_date",
+    "url": "https://mail.ratemyapartments.com/index.php/ratings/tx/dallas/luna-blanca-apartments-9524977"
    }
   ],
   "why": "Sold 2026-04-14 \u00b7 to MFMZ PROPERTY MANAGER LLC \u00b7 65 units \u00b7 new owner may re-pick software"
@@ -21975,20 +21982,25 @@
   "units": 33,
   "stage": "sold",
   "permit_date": "",
-  "opening_date": "",
+  "opening_date": "1125",
   "sale_date": "2026-04-14",
   "buyer": "MFMZ PROPERTY MANAGER LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.moveforfree.com/apartments/texas/dallas/luna-blanca.html",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.moveforfree.com/apartments/texas/dallas/luna-blanca.html"
   },
   "sources": [
    {
     "fact": "sale_date",
     "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   },
+   {
+    "fact": "opening_date",
+    "url": "https://mail.ratemyapartments.com/index.php/ratings/tx/dallas/luna-blanca-apartments-9524977"
    }
   ],
   "why": "Sold 2026-04-14 \u00b7 to MFMZ PROPERTY MANAGER LLC \u00b7 33 units \u00b7 new owner may re-pick software"
@@ -22036,10 +22048,11 @@
   "buyer": "OCONEE REAT ESTATE HOLDINGS XIX",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.thebernardaptsdallas.com/",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.thebernardaptsdallas.com/"
   },
   "sources": [
    {
@@ -22064,10 +22077,11 @@
   "buyer": "OCONEE REAT ESTATE HOLDINGS XIX",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://thebentleyseniorliving.com/",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://thebentleyseniorliving.com/"
   },
   "sources": [
    {
@@ -22092,10 +22106,11 @@
   "buyer": "OCONEE REAT ESTATE HOLDINGS XIX",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.thebeckhamdallas.com/",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.thebeckhamdallas.com/"
   },
   "sources": [
    {
@@ -22120,10 +22135,11 @@
   "buyer": "OCONEE REAT ESTATE HOLDINGS XIX",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.thebaxterapts.com/",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.thebaxterapts.com/"
   },
   "sources": [
    {
@@ -22176,10 +22192,12 @@
   "buyer": "KV ARDAN APARTMENT LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.ardanapts.com/",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.ardanapts.com/",
+   "news": "https://www.multihousingnews.com/knightvest-acquires-389-unit-dallas-luxury-tower/"
   },
   "sources": [
    {
@@ -22204,10 +22222,11 @@
   "buyer": "ANNEX EASTERN LP",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.theeasternapts.com/",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.theeasternapts.com/"
   },
   "sources": [
    {
@@ -22283,20 +22302,25 @@
   "units": 342,
   "stage": "sold",
   "permit_date": "",
-  "opening_date": "",
+  "opening_date": "0083",
   "sale_date": "2026-03-17",
   "buyer": "AREIT DALLAS MAPLE DISTRICT LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://mapledistrictdallas.com/",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://mapledistrictdallas.com/"
   },
   "sources": [
    {
     "fact": "sale_date",
     "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   },
+   {
+    "fact": "opening_date",
+    "url": "https://mapledistrictdallas.com/"
    }
   ],
   "why": "Sold 2026-03-17 \u00b7 to AREIT DALLAS MAPLE DISTRICT LLC \u00b7 342 units \u00b7 new owner may re-pick software"
@@ -22316,10 +22340,11 @@
   "buyer": "KW PEREGRINE OWNER LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.liveperegrine.com/",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.liveperegrine.com/"
   },
   "sources": [
    {
@@ -22344,10 +22369,11 @@
   "buyer": "GLOVER GABLEPOINT OWNER LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.gablepointapts.com/",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.gablepointapts.com/"
   },
   "sources": [
    {
@@ -22372,10 +22398,11 @@
   "buyer": "CLOVER CREEKSTONE OWNER LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.creekstoneapts.com/",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.creekstoneapts.com/"
   },
   "sources": [
    {
@@ -22428,10 +22455,11 @@
   "buyer": "2355 THOMAS AVENUE LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.dallasapartmentsuptown.com/jordan-uptown/",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.dallasapartmentsuptown.com/jordan-uptown/"
   },
   "sources": [
    {
@@ -22456,10 +22484,11 @@
   "buyer": "ORCHIDS 900 LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://apartmentwolf.com/property/lakefront-villas/",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://apartmentwolf.com/property/lakefront-villas/"
   },
   "sources": [
    {
@@ -22484,10 +22513,11 @@
   "buyer": "CSA 12653 ELEVENTH LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://cccres.com/apartments/detail/bay-island-apts-2-ecu-garland-dallas-co",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://cccres.com/apartments/detail/bay-island-apts-2-ecu-garland-dallas-co"
   },
   "sources": [
    {
@@ -22512,10 +22542,11 @@
   "buyer": "MURDEAUX VILLAS LANDOWNER LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.trinityhousingdevelopment.com/the-acquisition-and-rehab-of-murdeaux-villas-apartment-in-dallas-tx/",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.trinityhousingdevelopment.com/the-acquisition-and-rehab-of-murdeaux-villas-apartment-in-dallas-tx/"
   },
   "sources": [
    {
