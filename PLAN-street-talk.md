@@ -74,7 +74,7 @@ Open: http://localhost:8765/street-talk.html
   companies it names, happy / angry / mixed (a simple word list, no paid AI), the Texas city if any, the
   building id (part 2), and "warm lead" for part 3 when the poster sounds like a manager/owner. Also totals
   per company (posts, % angry, % happy). Tests on fixtures. Commit.
-- [ ] **T6 The Street Talk tab.** `site/street-talk.html` shows the totals at top, then the three parts,
+- [x] **T6 The Street Talk tab.** `site/street-talk.html` shows the totals at top, then the three parts,
   newest first, each post: quote, subreddit, date, label, link. Part 2 groups by building and links to that
   building's page (`property.html?id=<id>`); part 3 marks warm leads. Add "Street Talk" to the tab bar on every page. Works on phone
   size. Plain "no posts yet" if a part is empty. Commit.

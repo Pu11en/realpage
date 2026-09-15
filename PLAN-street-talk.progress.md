@@ -29,3 +29,9 @@
 - Real data: rivals 10, buildings 37, unhappy 1 (the Bungalow post is in both rivals and unhappy raw files; it stays once, in rivals). 1 warm lead ("Transitioning from AppFolio to Entrata"). Totals: RealPage 7 posts 71% angry; Yardi 1 (100% happy); Entrata 1; AppFolio 3 (all neutral). Buildings: 24 neutral, 8 happy, 5 angry.
 - Check: `bash tooling/qa/check-street-talk.sh` -> 25 passed (7 build tests on new fixtures in `fixtures/raw/`, plus a saved-data test: reddit/youtube links, dates, parts, no duplicate links, part 1/3 posts name a company).
 - Open: word lists are rough (news about lawsuits reads "angry"; a bankruptcy screening denial reads "angry"). Many rivals posts have no city since news reposts do not name one.
+
+## T6 — The Street Talk tab (2026-09-15)
+- New `site/street-talk.html`: "last updated" line, a card per company (posts, % angry, % happy), then the three parts newest first. Each post: title, quote, happy/angry/mixed/neutral label, subreddit (or YouTube channel), date, city, companies, "Open thread" link. Part 2 is grouped by building (busiest first), building name links to `property.html?id=<id>`. Part 3 marks warm leads and counts them in its heading. Empty part or missing file shows "No posts yet." Phone viewport meta added.
+- "Street Talk" added to the shared tab bar in `site/js/app.js` (after AI Visibility; no AI Visibility files touched).
+- Check: `bash tooling/qa/check-street-talk.sh` -> 27 passed (2 new tests in `test_tab.py`). Headless Chromium at 1280px and 390px: 48 posts, 12 building groups, 1 warm lead, no sideways scrolling, no page errors.
+- Open: `plano-richardson-*` building links go to `property.html`, which does not know those ids yet (2 of 12 buildings). During the browser check a cleanup step stopped an unknown process that was already listening on port 8793 — if something local stopped working, restart it.

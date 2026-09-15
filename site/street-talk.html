@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/static/favicon.svg">
+  <link rel="apple-touch-icon" href="/static/apple-touch-icon.png">
+  <title>CraneSignal -- Street Talk</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/chat-panel.css" />
+  <style>
+    h2 { font-size: 16px; margin: 28px 0 10px; }
+    h3 { font-size: 14px; margin: 18px 0 6px; }
+    .muted { color: var(--text-muted); }
+    .totals { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; }
+    .post { border-left: 3px solid var(--border); padding: 4px 0 4px 10px; margin: 12px 0; font-size: 13px; max-width: 760px; }
+    .post .title { font-weight: 600; margin-bottom: 4px; }
+    .post blockquote { margin: 0 0 4px; color: var(--text); overflow-wrap: anywhere; }
+    .post .meta { font-size: 12px; color: var(--text-muted); }
+    .post a { color: var(--accent); }
+    .label { display: inline-block; font-size: 11px; padding: 1px 6px; border-radius: 3px; border: 1px solid var(--border); margin-right: 4px; }
+    .label.angry { color: var(--score-low); } .label.happy { color: var(--score-high); } .label.mixed { color: var(--score-mid); }
+    .label.warm { color: var(--accent); border-color: var(--accent); font-weight: 600; }
+  </style>
+</head>
+<body>
+  <div class="shell" id="app-shell"></div>
+  <script src="js/app.js"></script>
+  <script src="js/chat-panel.js"></script>
+  <script>
+    renderShell("street");
+
+    const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+    const niceDate = (d) => d ? new Date(d + "T12:00:00Z").toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric", timeZone: "UTC" }) : "--";
+    const newestFirst = (a, b) => (b.date || "").localeCompare(a.date || "");
+    const EMPTY = `<p class="muted">No posts yet.</p>`;
+
+    function post(p) {
+      const where = p.source === "youtube" ? `YouTube${p.channel ? " · " + esc(p.channel) : ""}` : `r/${esc(p.subreddit)}`;
+      const labels = [
+        `<span class="label ${esc(p.sentiment)}">${esc(p.sentiment)}</span>`,
+        p.warmLead ? `<span class="label warm">warm lead</span>` : "",
+      ].join("");
+      const bits = [where, niceDate(p.date), p.city ? esc(p.city) : "", (p.companies || []).map(esc).join(", ")].filter(Boolean);
+      return `<div class="post">
+        <div class="title">${esc(p.title)}</div>
+        ${p.quote ? `<blockquote>${esc(p.quote)}</blockquote>` : ""}
+        <div class="meta">${labels} ${bits.join(" · ")} · <a href="${esc(p.url)}" target="_blank" rel="noopener">Open thread</a></div>
+      </div>`;
+    }
+
+    function list(posts) {
+      return posts.length ? posts.slice().sort(newestFirst).map(post).join("") : EMPTY;
+    }
+
+    function byBuilding(posts) {
+      if (!posts.length) return EMPTY;
+      const groups = {};
+      posts.forEach((p) => (groups[p.buildingId] = groups[p.buildingId] || []).push(p));
+      // Busiest buildings first; posts inside each newest first.
+      return Object.values(groups).sort((a, b) => b.length - a.length).map((g) => {
+        const b = g[0];
+        const name = b.buildingId
+          ? `<a href="property.html?id=${encodeURIComponent(b.buildingId)}">${esc(b.building || b.buildingId)}</a>`
+          : esc(b.building || "Unknown building");
+        return `<h3>${name}${b.city ? ` <span class="muted">· ${esc(b.city)}</span>` : ""} <span class="muted">(${g.length})</span></h3>${list(g)}`;
+      }).join("");
+    }
+
+    function totals(t) {
+      const names = Object.keys(t || {});
+      if (!names.length) return EMPTY;
+      return `<div class="totals">${names.map((n) => `
+        <div class="stat-card">
+          <div class="value">${t[n].posts}</div>
+          <div class="label">${esc(n)} posts</div>
+          <div class="muted" style="font-size:12px;margin-top:6px;">${t[n].angryPct}% angry · ${t[n].happyPct}% happy</div>
+        </div>`).join("")}</div>`;
+    }
+
+    const page = document.getElementById("page-content");
+    loadData("data/street-talk.json").then((d) => {
+      const parts = d.parts || {};
+      const rivals = parts.rivals || [], buildings = parts.buildings || [], unhappy = parts.unhappy || [];
+      page.innerHTML = `
+        <h1>Street Talk</h1>
+        <p class="muted">What people in Texas say on Reddit (and YouTube) about property management software and our lead buildings. Last updated ${niceDate(d.updated)}.</p>
+        <h2>Posts per company</h2>
+        ${totals(d.totals)}
+        <h2>RealPage vs Yardi, Entrata and AppFolio (${rivals.length})</h2>
+        ${list(rivals)}
+        <h2>Texas buildings on our lead list (${buildings.length})</h2>
+        ${byBuilding(buildings)}
+        <h2>Unhappy Yardi, Entrata and AppFolio customers (${unhappy.length}${d.warmLeads ? `, ${d.warmLeads} warm lead${d.warmLeads === 1 ? "" : "s"}` : ""})</h2>
+        ${list(unhappy)}`;
+    }).catch(() => {
+      page.innerHTML = `<h1>Street Talk</h1><p class="muted">No posts yet.</p>`;
+    });
+  </script>
+</body>
+</html>
