@@ -101,6 +101,20 @@ Open: http://localhost:8765 → Early Leads → Tx
   TDHCA (all free, no web search), then enrichment per "Data first"; full chain for `tx` with S0-S4: TABS + city recipes + appraisal files +
   TDHCA, merge duplicates across sources (address/geocode + name), website / software / phone
   enrichment, score (quality.json report only). Commit.
+  **Drew's T6 fixes (2026-09-14, after checking the first 668 rows):**
+  1. Arlington (178 rows, all named "Apartments (3+ dwelling units)"): keep only NEW building permits
+     (new construction work class), drop remodels/repairs/carports/fences/signs/finish-outs on existing
+     complexes; one row per project (group permits with the same project/parcel/address base), name from
+     the permit's project/description field.
+  2. HCAD sold (335 rows, 0 unit counts): group accounts of one complex (same buyer + same sale date + same
+     street, e.g. "803/903 DUNSON GLEN DR") into ONE row; get units or building area from the HCAD building
+     files; drop complexes under 20 units (or under the building-area cutoff when units are unknown);
+     name from the account's property/complex name when present. Normalize city case ("HOUSTON" = "Houston").
+  3. Fort Worth (1 row) and San Antonio (2 rows) are almost certainly a broken filter/date/paging -- debug
+     with the saved raw rows and fix; expect dozens.
+  4. Run TABS (statewide registry, owner phones) next, before re-running Houston/Dallas, and order sources
+     by the RealPage-gap rule (Houston, Dallas, Fort Worth, Austin last).
+  5. Log before/after counts per city and source in the progress log. Commit after each fix.
 - [ ] **T7 Texas on the site + chat.** Build the site and rebuild the chat with the `tx` area; run the
   Check and `tooling/qa/check-answers.sh`. Commit. Recap in plain words: Texas leads by city and by
   source, how many with software and phone, searches used.
