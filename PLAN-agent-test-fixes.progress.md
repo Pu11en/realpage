@@ -90,3 +90,21 @@ future live answer with a dangling `Sources: )`/`()` fails that check too; "Whic
 sold recently?" (the question that showed the bug) is already in its question list. Checked
 with `bash tooling/qa/check-fixes.sh` (81 tests pass, design check 0 problems). Commit: see
 git log.
+
+## T8 Duplicate building — done
+Found it: `dedupe_leads.py` only compared candidate duplicates within the same
+(name, city) group, but "Torrington Wilmer" appeared once labeled city
+"Dallas" and once as the annexed suburb "Wilmer" (slightly different address
+spelling, same 300 units) -- so the two records never got compared and both
+survived. Changed the grouping key to name alone, and tightened
+`same_project()`'s loose "one planned, one further along" fallback to require
+a matching city too (real address/street/unit evidence is still enough to
+merge two same-named records across differing city labels, so unrelated
+projects that happen to share a name in different cities still stay separate).
+Added `tooling/qa/fixes_tests/test_t8_duplicate_building.py` (2 tests: same
+name + different city label + matching address/units merges to one row;
+same name + different city + nothing else in common stays two rows). Rebuilt
+site data with `python3 site/data/build_data.py` (TX leads count dropped
+597 -> 593, matching the duplicates that merged). Checked with
+`bash tooling/qa/check-fixes.sh` (83 tests pass, design check 0 problems).
+Commit: see git log.

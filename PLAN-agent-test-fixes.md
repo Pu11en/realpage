@@ -54,7 +54,7 @@ Open: http://localhost:8765/index.html
 - [x] **T7 No broken "Sources: )" line.** The answer to "Which buildings sold recently?" ended with
   "Sources: )". Find where citations are formatted (chat skill/SOUL or the proxy) and never emit an empty
   or broken Sources line. Test on a fixture answer. Add a check_answers question (don't run it). Commit.
-- [ ] **T8 Duplicate building.** "Torrington Wilmer" (300 units, Planned) appears twice, once as Dallas and
+- [x] **T8 Duplicate building.** "Torrington Wilmer" (300 units, Planned) appears twice, once as Dallas and
   once as Wilmer. Fix the dedupe upstream so the same project in two city labels becomes one row;
   rebuild data. Test. Commit.
 - [ ] **T9 Arizona names cleaned.** Some Arizona rows still show raw lot labels (e.g. "South Pier Lot 6",
