@@ -1,5 +1,7 @@
 # PropertyStack: AI Visibility v3 (a pro-style AI audit of RealPage)
 
+**SUPERSEDED 2026-09-15 by `PLAN-ai-visibility-v4.md` (build) + `PLAN-ai-visibility-v4-run.md` (real runs). Do not build this file.**
+
 Written 2026-09-15 with Drew. **PARKED until Drew's Claude and Codex plans reset (later Sept 2026) -- do not start before he says so.** Starts only when Drew says "go work". Localhost only, never push.
 Builds on v2 (`PLAN-ai-visibility-v2.md`, all done): Gemini answerer, run history, lawsuit data,
 `run-and-report.sh`, "run AI visibility" in Discord. Keep all of that working.
