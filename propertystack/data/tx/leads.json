@@ -30706,10 +30706,11 @@
   "buyer": "CMTG WF FINANCE LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.4123cedarspringsaptsdallas.com/",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.4123cedarspringsaptsdallas.com/"
   },
   "sources": [
    {
@@ -30729,7 +30730,7 @@
   "units": null,
   "stage": "sold",
   "permit_date": "",
-  "opening_date": "",
+  "opening_date": "1716",
   "sale_date": "2025-07-01",
   "buyer": "900 TITLE JEFFERSON LLC C/O CW CAPITAL ASSEST MANAGEMENT LLC",
   "developer": "",
@@ -30743,6 +30744,10 @@
    {
     "fact": "sale_date",
     "url": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   },
+   {
+    "fact": "opening_date",
+    "url": "https://github.com/Apoorve73/Real-Estate-Companies-Database/blob/master/Houston1.csv"
    }
   ],
   "why": "Sold 2025-07-01 \u00b7 to 900 TITLE JEFFERSON LLC C/O CW CAPITAL ASSEST MANAGEMENT LLC \u00b7 new owner may re-pick software"
@@ -30785,7 +30790,7 @@
   "units": null,
   "stage": "sold",
   "permit_date": "",
-  "opening_date": "",
+  "opening_date": "1716",
   "sale_date": "2025-06-30",
   "buyer": "HOUSTON SPYGLASS LLC",
   "developer": "",
@@ -30799,6 +30804,10 @@
    {
     "fact": "sale_date",
     "url": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   },
+   {
+    "fact": "opening_date",
+    "url": "https://github.com/Apoorve73/Real-Estate-Companies-Database/blob/master/Houston1.csv"
    }
   ],
   "why": "Sold 2025-06-30 \u00b7 to HOUSTON SPYGLASS LLC \u00b7 new owner may re-pick software"
@@ -30874,10 +30883,11 @@
   "buyer": "MIA COTTONWOOD LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.cottonwoodparkvillage.com/",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.cottonwoodparkvillage.com/"
   },
   "sources": [
    {
@@ -30894,10 +30904,10 @@
   "address": "10202 CLUB CREEK DR 424",
   "lat": null,
   "lon": null,
-  "units": null,
+  "units": 424,
   "stage": "sold",
   "permit_date": "",
-  "opening_date": "",
+  "opening_date": "1716",
   "sale_date": "2025-06-26",
   "buyer": "VILLA MADRID 2025 LLC",
   "developer": "",
@@ -30911,9 +30921,17 @@
    {
     "fact": "sale_date",
     "url": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   },
+   {
+    "fact": "opening_date",
+    "url": "https://github.com/Apoorve73/Real-Estate-Companies-Database/blob/master/Houston1.csv"
+   },
+   {
+    "fact": "units",
+    "url": "https://cccres.com/apartments/detail/villa-madrid-houston"
    }
   ],
-  "why": "Sold 2025-06-26 \u00b7 to VILLA MADRID 2025 LLC \u00b7 new owner may re-pick software"
+  "why": "Sold 2025-06-26 \u00b7 to VILLA MADRID 2025 LLC \u00b7 424 units \u00b7 new owner may re-pick software"
  },
  {
   "area": "tx",
@@ -30933,7 +30951,8 @@
   "website": "",
   "software": "unknown",
   "links": {
-   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip",
+   "news": "https://ploteasy.com/property-details/252737144/18300-marvelous-pl-cypress-tx-77433"
   },
   "sources": [
    {
@@ -30950,7 +30969,7 @@
   "address": "1655 BLUE BELL RD 195",
   "lat": null,
   "lon": null,
-  "units": null,
+  "units": 195,
   "stage": "sold",
   "permit_date": "",
   "opening_date": "",
@@ -30967,9 +30986,13 @@
    {
     "fact": "sale_date",
     "url": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   },
+   {
+    "fact": "units",
+    "url": "https://cccres.com/apartments/detail/crossing-at-blue-bell-the-houston"
    }
   ],
-  "why": "Sold 2025-06-25 \u00b7 to IRG-BGO BLUE BELL ONE LP \u00b7 new owner may re-pick software"
+  "why": "Sold 2025-06-25 \u00b7 to IRG-BGO BLUE BELL ONE LP \u00b7 195 units \u00b7 new owner may re-pick software"
  },
  {
   "area": "tx",
@@ -30978,7 +31001,7 @@
   "address": "5050 SUNFLOWER ST 160",
   "lat": null,
   "lon": null,
-  "units": null,
+  "units": 160,
   "stage": "sold",
   "permit_date": "",
   "opening_date": "",
@@ -30986,18 +31009,23 @@
   "buyer": "SUNFLOWER TERRACE PRESERVATION LLC C/O FAIRSTEAD",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://cccres.com/apartments/detail/sunflower-terrace-preservation-llc-c-o-fairstead-houston",
   "software": "unknown",
   "links": {
-   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip",
+   "website": "https://cccres.com/apartments/detail/sunflower-terrace-preservation-llc-c-o-fairstead-houston"
   },
   "sources": [
    {
     "fact": "sale_date",
     "url": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   },
+   {
+    "fact": "units",
+    "url": "https://cccres.com/apartments/detail/sunflower-terrace-preservation-llc-c-o-fairstead-houston"
    }
   ],
-  "why": "Sold 2025-06-24 \u00b7 to SUNFLOWER TERRACE PRESERVATION LLC C/O FAIRSTEAD \u00b7 new owner may re-pick software"
+  "why": "Sold 2025-06-24 \u00b7 to SUNFLOWER TERRACE PRESERVATION LLC C/O FAIRSTEAD \u00b7 160 units \u00b7 new owner may re-pick software"
  },
  {
   "area": "tx",
@@ -31009,7 +31037,7 @@
   "units": null,
   "stage": "sold",
   "permit_date": "",
-  "opening_date": "",
+  "opening_date": "2454",
   "sale_date": "2025-06-24",
   "buyer": "GEP XI TOWN CENTER LP",
   "developer": "",
@@ -31023,6 +31051,10 @@
    {
     "fact": "sale_date",
     "url": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   },
+   {
+    "fact": "opening_date",
+    "url": "https://ploteasy.com/commercial/texas/page/202"
    }
   ],
   "why": "Sold 2025-06-24 \u00b7 to GEP XI TOWN CENTER LP \u00b7 new owner may re-pick software"
@@ -31118,10 +31150,10 @@
   "address": "23615 KINGSLAND BLVD",
   "lat": null,
   "lon": null,
-  "units": null,
+  "units": 360,
   "stage": "sold",
   "permit_date": "",
-  "opening_date": "",
+  "opening_date": "2027",
   "sale_date": "2025-06-23",
   "buyer": "OHT KATY GAP LP",
   "developer": "OHT Partners, LLC",
@@ -31151,9 +31183,17 @@
    {
     "fact": "office_phone",
     "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025009148"
+   },
+   {
+    "fact": "units",
+    "url": "https://communityimpact.com/katy-fulshear/development/new-multi-family-development-to-bring-360-units-to-katy/"
+   },
+   {
+    "fact": "opening_date",
+    "url": "https://communityimpact.com/katy-fulshear/development/new-multi-family-development-to-bring-360-units-to-katy/"
    }
   ],
-  "why": "Sold 2025-06-23 \u00b7 to OHT KATY GAP LP \u00b7 new owner may re-pick software"
+  "why": "Sold 2025-06-23 \u00b7 to OHT KATY GAP LP \u00b7 360 units \u00b7 new owner may re-pick software"
  },
  {
   "area": "tx",
@@ -31165,20 +31205,25 @@
   "units": null,
   "stage": "sold",
   "permit_date": "",
-  "opening_date": "",
+  "opening_date": "1716",
   "sale_date": "2025-06-23",
   "buyer": "JOHANNA VENTURES LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://ploteasy.com/property-details/247699/2015-johanna-dr-18-houston-tx-77055",
   "software": "unknown",
   "links": {
-   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip",
+   "website": "https://ploteasy.com/property-details/247699/2015-johanna-dr-18-houston-tx-77055"
   },
   "sources": [
    {
     "fact": "sale_date",
     "url": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   },
+   {
+    "fact": "opening_date",
+    "url": "https://github.com/Apoorve73/Real-Estate-Companies-Database/blob/master/Houston1.csv"
    }
   ],
   "why": "Sold 2025-06-23 \u00b7 to JOHANNA VENTURES LLC \u00b7 new owner may re-pick software"
@@ -31190,10 +31235,10 @@
   "address": "2010 JOHANNA DR 30",
   "lat": null,
   "lon": null,
-  "units": null,
+  "units": 30,
   "stage": "sold",
   "permit_date": "",
-  "opening_date": "",
+  "opening_date": "1716",
   "sale_date": "2025-06-23",
   "buyer": "JOHANNA VENTURES LLC",
   "developer": "",
@@ -31207,9 +31252,17 @@
    {
     "fact": "sale_date",
     "url": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   },
+   {
+    "fact": "opening_date",
+    "url": "https://github.com/Apoorve73/Real-Estate-Companies-Database/blob/master/Houston1.csv"
+   },
+   {
+    "fact": "units",
+    "url": "https://cccres.com/apartments/detail/johanna-houston"
    }
   ],
-  "why": "Sold 2025-06-23 \u00b7 to JOHANNA VENTURES LLC \u00b7 new owner may re-pick software"
+  "why": "Sold 2025-06-23 \u00b7 to JOHANNA VENTURES LLC \u00b7 30 units \u00b7 new owner may re-pick software"
  },
  {
   "area": "tx",
@@ -31254,10 +31307,11 @@
   "buyer": "OAKS MINNCHAHA TWO LLC &",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.oaksproperties.com/apartments/tx/dallas/white-rock/",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.oaksproperties.com/apartments/tx/dallas/white-rock/"
   },
   "sources": [
    {
@@ -31310,10 +31364,11 @@
   "buyer": "SOMP-PARKE LP",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.theparkeatup.com/",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.theparkeatup.com/"
   },
   "sources": [
    {
@@ -31338,10 +31393,11 @@
   "buyer": "SOMP-PARKE LP",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.theparkeatup.com/",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.theparkeatup.com/"
   },
   "sources": [
    {
@@ -31386,7 +31442,7 @@
   "address": "1901 RICHMOND AVE 42",
   "lat": null,
   "lon": null,
-  "units": null,
+  "units": 12,
   "stage": "sold",
   "permit_date": "",
   "opening_date": "",
@@ -31403,9 +31459,13 @@
    {
     "fact": "sale_date",
     "url": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   },
+   {
+    "fact": "units",
+    "url": "https://www.redfin.com/TX/Houston/1901-Richmond-Ave-77098/unit-42/apartment/29848449"
    }
   ],
-  "why": "Sold 2025-06-16 \u00b7 to 1901 RICHMOND INVESTORS LLC \u00b7 new owner may re-pick software"
+  "why": "Sold 2025-06-16 \u00b7 to 1901 RICHMOND INVESTORS LLC \u00b7 12 units \u00b7 new owner may re-pick software"
  },
  {
   "area": "tx",
