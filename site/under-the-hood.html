@@ -135,7 +135,6 @@
       const content = document.getElementById("page-content");
       const ft = evals.failure_types;
       const review = evals.human_review;
-      const vague = ft.types.find((t) => t.type.startsWith("ambiguous"));
       const areas = index.areas.filter((a) => (a.leads || 0) >= 50);
       const total = siteLeadTotal(index.areas);
       const sample = pipeline.steps.filter((s) => s.name !== "score-leads");
@@ -220,7 +219,6 @@
           <summary>Known limits</summary>
           <div class="body">
             <ul>
-              ${vague ? `<li><b>Vague questions.</b> In ${vague.count} test it answered a vague question instead of asking what was meant.</li>` : ""}
               ${unknownPct != null ? `<li><b>Not every building shows its software.</b> For about ${unknownPct}% of buildings in our sample, nothing public names the software. Those are marked "unknown" rather than guessed.</li>` : ""}
               <li><b>Coverage.</b> Leads today are strongest in ${areas.map((a) => esc(a.label)).join(" and ")}; any other US area can be added with the same lead finder.</li>
             </ul>
