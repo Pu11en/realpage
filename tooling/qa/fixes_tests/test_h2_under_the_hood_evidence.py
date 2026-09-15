@@ -33,21 +33,16 @@ def test_every_headline_measure_has_a_sample_and_matches_saved_evidence():
     assert evals["human_review"]["n_reviewed"] == 17
     assert chat["n_answers"] == 105
     assert evals["measured_at"] == chat["measured_at"] == "2026-09-15"
-    assert "n=${checksTotal}" in PAGE
-    assert "n=${failureTypes.n}" in PAGE
-    assert "n=${reviewN}" in PAGE
-    assert "n=${chatN}" in PAGE
+    for internal in ["checksTotal", "false_alarm", "False-alarm", "scorecard checks passing"]:
+        assert internal not in PAGE, internal
 
 
-def test_page_shows_historical_status_method_and_open_limits_not_an_inferred_claim():
-    for required in [
-        'loadData("data/recruiter-scorecard.json")',
-        "Historical status:",
-        "Method:",
-        "Open limitations",
-        "approval to release the current product",
-    ]:
+def test_page_explains_method_and_known_limits_without_internal_hedging():
+    for required in ['loadData("data/evals.json")', 'loadData("data/chat-stats.json")',
+                     "How I know it's good", "Known limits", "Measured "]:
         assert required in PAGE
+    assert "not a current release approval" not in PAGE
+    assert "not run yet" not in PAGE
     assert "passed check first try" not in PAGE
     assert "firstTryPct" not in PAGE
 

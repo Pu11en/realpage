@@ -14,6 +14,19 @@
 :{$PORT:8080} {
 	encode gzip
 
+	# Standard browser security headers on every response. No CSP: the chat app
+	# relies on inline scripts. COOP allows popups so sign-in providers still work.
+	header {
+		X-Content-Type-Options nosniff
+		X-Frame-Options SAMEORIGIN
+		Referrer-Policy strict-origin-when-cross-origin
+		Permissions-Policy "camera=(), geolocation=(), payment=(), usb=()"
+		Cross-Origin-Opener-Policy same-origin-allow-popups
+		Cross-Origin-Resource-Policy same-site
+		Strict-Transport-Security "max-age=31536000"
+		-Server
+	}
+
 	# Always public: the privacy page, and the shell it needs to look right
 	# (styles, fonts, favicon). None of these carry data.
 	@public_site path /privacy.html /css/* /fonts/* /favicon.ico /favicon.png /favicon.svg /apple-touch-icon.png
