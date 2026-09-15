@@ -89,7 +89,7 @@ SOURCE_NAMES = {
     "cranesignal_review_queue": "CraneSignal review queue",
     "cranesignal_accuracy_docs": "CraneSignal accuracy notes",
     "cranesignal_chat_stats": "CraneSignal chat speed measurements",
-    "cranesignal_eval_checks": "CraneSignal eval checks",
+    "cranesignal_how_tested": "CraneSignal: how it was built and tested",
     "cranesignal_eval_summary": "CraneSignal eval summary",
     "cranesignal_eval_failure_types": "CraneSignal eval failure types",
     "cranesignal_buildbot_summary": "CraneSignal AI build summary",
@@ -217,8 +217,9 @@ def ps_schema(args: dict, **_) -> str:
             "cranesignal_* tables: CraneSignal's own build, eval, speed, and AI-agent progress numbers "
             "from the Under the Hood page. Use them only for questions about CraneSignal itself (how it "
             "was built, checked, measured, or how accurate/fast it is), never as property/lead/software "
-            "facts. eval/chat/buildbot rows have measured_at dates; state that date because those numbers "
-            "may be old. cost_note says per-area dollars are a placeholder until run logs record dollars.",
+            "facts. For 'how was this built/tested?' start from cranesignal_how_tested and "
+            "cranesignal_eval_summary (92/100 test answers correct, 94% grader-human agreement, 10/10 "
+            "software hand check, measured_at date).",
             "ai_visibility_* tables: the read-only AI Visibility page snapshot for RealPage -- scores, "
             "model-by-model results, competitors, question answers, and recommended actions. Use these "
             "only for questions about RealPage's visibility in AI answers and how to improve it. Always "

@@ -26,27 +26,9 @@ _ROW_LABELS = {"map", "permit", "news", "website"}
 _VIDEO_RE = re.compile(r"swagit\.com|youtube\.com|youtu\.be|vimeo\.com|granicus\.com/player|/videos?/", re.I)
 _SOURCES_RE = re.compile(r"^\s*\**\s*Sources\s*:?", re.I)
 
-# A deterministic last line of defence: model text cannot be shown as a
-# verified fact unless it retains a link returned by a tool this turn. A plain
-# source name may explain the data, but it is not a readable source someone can
-# open and check.
-UNVERIFIED_REPLY = """**I couldn't verify that claim with a readable source.**
-**Next:** Ask about a Texas building with a source you can open."""
-_SAFE_NO_FACT_STARTS = (
-    "that's outside cranesignal",
-    "that’s outside cranesignal",
-    "i don't have that",
-    "i don’t have that",
-    "i couldn't verify",
-    "i couldn’t verify",
-    "i could not verify",
-    "i can't change",
-    "i cannot change",
-    "i can't add",
-    "i cannot add",
-    "i can't delete",
-    "i cannot delete",
-)
+# Only used when link cleaning leaves nothing to show.
+EMPTY_REPLY = """**I don't have that.**
+**Next:** Ask about a Texas building or RealPage."""
 
 _SITE_LABELS = [
     (r"(^|\.)tdlr\.texas\.gov$", "Texas building record"),
@@ -85,10 +67,21 @@ def _is_maps(url: str) -> bool:
     return p.netloc.lower().endswith("google.com") and p.path.startswith("/maps")
 
 
+# CraneSignal's own "how it was built and tested" page: the readable source for
+# questions about CraneSignal itself, so it is always allowed.
+HOOD_URL = "https://app.cranesignal.com/under-the-hood.html"
+
+
+def _is_hood(url: str) -> bool:
+    return _norm(url) == _norm(HOOD_URL)
+
+
 def label_for(url: str) -> str:
     host = urlsplit(url).netloc.lower().removeprefix("www.")
     if _is_maps(url):
         return "Map"
+    if _is_hood(url):
+        return "Under the Hood"
     if host.endswith("swagit.com"):
         city = host.split(".")[0].removesuffix("tx").title()
         return f"{city} city video"
@@ -129,7 +122,7 @@ def _fix_line(line: str, seen: set[str], deep_dive: bool) -> str | None:
         for m in _LINK_RE.finditer(line):
             label, url = m.group(1), m.group(2)
             in_row = label.strip().lower() in _ROW_LABELS and line[: m.start()].rstrip().endswith(_ROW_EMOJI)
-            bad = not _is_maps(url) and _norm(url) not in seen
+            bad = not _is_maps(url) and not _is_hood(url) and _norm(url) not in seen
             if in_row and label.strip().lower() == "permit" and _VIDEO_RE.search(url):
                 bad = True
             if bad:
@@ -162,38 +155,17 @@ def fix_links(text: str, seen: set[str] | None = None, deep_dive: bool = False) 
     return "\n".join(out)
 
 
-def _first_answer_text(text: str) -> str:
-    """First visible answer line, normalized for safe-reply detection."""
-    for line in text.splitlines():
-        line = re.sub(r"[*_`>#-]", "", line).strip().lower()
-        if line:
-            return line
-    return ""
-
-
-def _has_approved_readable_source(text: str, seen: set[str]) -> bool:
-    """Whether a retained non-map link came from an approved tool result."""
-    for match in _LINK_RE.finditer(text):
-        url = match.group(2)
-        if not _is_maps(url) and _norm(url) in seen:
-            return True
-    return False
-
-
 def finalize_answer(text: str, seen: set[str] | None = None, deep_dive: bool = False) -> str:
-    """Permit factual text only with a readable, approved source.
+    """Last step before an answer leaves the proxy.
 
-    ``seen`` is injectable so the guard is regression-tested offline. Honest
-    unknowns and fixed safety boundaries are non-factual answers, so they stay
-    exactly as written.
+    Fake links (never returned by a tool) are removed; the answer itself is
+    kept. A link is not required -- facts from our own data or general
+    knowledge name their source in words (see SOUL.md). ``seen`` is
+    injectable so this is tested offline.
     """
     seen = load_seen() if seen is None else seen
     cleaned = fix_links(text, seen, deep_dive=deep_dive).strip()
-    if _first_answer_text(cleaned).startswith(_SAFE_NO_FACT_STARTS):
-        return cleaned
-    if _has_approved_readable_source(cleaned, seen):
-        return cleaned
-    return UNVERIFIED_REPLY
+    return cleaned or EMPTY_REPLY
 
 
 class LineFixer:

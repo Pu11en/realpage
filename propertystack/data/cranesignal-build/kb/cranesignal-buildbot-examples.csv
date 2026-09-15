@@ -1,4 +1,4 @@
 plan,task,check,recap,measured_at
+agent-test-fixes,T1 Chat loads every time — done,"`tooling/qa/fixes_tests/test_t1_chat_load_timeout.py` (checks the 30s default, the wording, and that",T1 Chat loads every time — done,2026-09-15
 ai-visibility-v2,T1 Gemini answerer + the check — done (0f5dc1e),"- Tests: tooling/ai-visibility/tests (8, offline, fixtures in tooling/ai-visibility/fixtures). Check `bash tooling/qa/check-ai-visibility.sh` passes.",local_ai,2026-09-15
 app-redesign,T1 Fonts + shared colors + app frame — done 2026-09-15,- Check: `bash tooling/qa/check-design.sh` passes (quick check 0 problems; design list still empty). Both fonts confirmed loaded in the browser.,Self-hosted Inter + Plus Jakarta Sans (fontsource variable latin woff2) in `site/fonts/`,2026-09-15
-audit-fixes,A1 Phones — done (7f8a73b),"- sweep.py and quick-check.py phone runs now use is_mobile=True, has_touch=True.","Added the viewport tag to index, under-the-hood, property, ai-visibility (one line only) and the master-table redirect page, so every site/*",2026-09-15

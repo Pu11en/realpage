@@ -74,3 +74,13 @@ def test_labels():
     assert label_for(TDLR) == "Texas building record"
     assert label_for("https://property.onesite.realpage.com/x") == "Software proof"
     assert label_for("https://orchardsmarketplaza.com/") == "orchardsmarketplaza.com"
+
+
+def test_under_the_hood_link_is_an_approved_source():
+    from linkfix import finalize_answer
+    text = ("**Tested on 100 fixed questions; 92 passed.**\n"
+            "**Next:** Open the page.\n"
+            "**Sources:** [Under the Hood](https://app.cranesignal.com/under-the-hood.html)")
+    out = finalize_answer(text, seen=set())
+    assert "couldn't verify" not in out
+    assert "under-the-hood.html" in out

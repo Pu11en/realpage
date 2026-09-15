@@ -11,12 +11,13 @@
 	auto_https off
 }
 
-:{$PORT:8080} {
-	encode gzip
-
-	# Standard browser security headers on every response. No CSP: the chat app
-	# relies on inline scripts. COOP allows popups so sign-in providers still work.
+(security_headers) {
+	# Standard browser security headers on every response. COOP allows popups so
+	# sign-in providers still work. The CSP keeps scripts, frames and plugins to
+	# this site; the chat app (Open WebUI) still needs inline scripts and eval,
+	# so those stay allowed. Images may also come from Google (sign-in avatars).
 	header {
+		Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' blob:; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://*.googleusercontent.com; font-src 'self' data:; connect-src 'self'; media-src 'self' blob: data:; worker-src 'self' blob:; frame-src 'self'; frame-ancestors 'self'; object-src 'none'; base-uri 'self'; form-action 'self' https://accounts.google.com"
 		X-Content-Type-Options nosniff
 		X-Frame-Options SAMEORIGIN
 		Referrer-Policy strict-origin-when-cross-origin
@@ -26,6 +27,12 @@
 		Strict-Transport-Security "max-age=31536000"
 		-Server
 	}
+}
+
+:{$PORT:8080} {
+	encode gzip
+
+	import security_headers
 
 	# Always public: the privacy page, and the shell it needs to look right
 	# (styles, fonts, favicon). None of these carry data.
@@ -81,6 +88,8 @@
 		error * 404
 	}
 	handle_errors {
+		# Errors drop earlier headers, so set them again here.
+		import security_headers
 		@notfound expression {http.error.status_code} == 404
 		handle @notfound {
 			root * {$SITE_ROOT:/srv}
