@@ -52,7 +52,7 @@ Open: http://localhost:8765/street-talk.html
   `propertystack/data/street-talk/raw/<date>/rivals.json` (URL, subreddit, title, short excerpt, top 2
   comment excerpts, score, date). De-duplicate by URL. Test with a fixture. Run it live once. Commit.
 - [ ] **T3 Part 2 collector: Texas buildings.** `--part buildings` takes the biggest Texas lead buildings
-  (from the `tx` and `plano-richardson` areas, by units) and searches Reddit for "<building name> <city>";
+  (every TX area, top 40 by units) and searches Reddit for "<building name> <city>";
   also a YouTube search per building via Agent Reach (title + link, transcript excerpt only if it names the
   building). Keeps a post only if it names the building. Saves `raw/<date>/buildings.json` with the building
   id attached. Test with a fixture. Run live once. Commit.
@@ -78,5 +78,5 @@ Open: http://localhost:8765/street-talk.html
   (it costs money; Drew runs it). Commit.
 - [ ] **T9 Weekly refresh.** Write `tooling/street-talk/weekly.sh` (runs the three collectors + build, then
   commits the new data). If a weekly Texas refresh script exists by then, call it from there; otherwise leave
-  weekly.sh ready and tell Drew -- do not set up any timer yourself. Same safety limits (same safety limits); a failed Reddit run keeps last week's data and says so on the tab
+  weekly.sh ready and tell Drew -- do not set up any timer yourself. Same safety limits; a failed Reddit run keeps last week's data and says so on the tab
   ("last updated <date>"). Recap in plain words for Drew what changed. Commit.
