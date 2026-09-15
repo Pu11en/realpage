@@ -54,7 +54,7 @@ Open: http://localhost:8765/index.html
   Screenshot desktop + phone to `docs/design-screens/T2-*.png`.
 - [x] **T3 Property page (`property.html`).** Header card, facts, score, source links, all 11 inline
   `style=` colors moved to classes in styles.css. Add `property.html`. Screenshots.
-- [ ] **T4 Map page (`map.html`, `site/js/map.js`).** Light map: land `--paper-2`, borders `--rule`,
+- [x] **T4 Map page (`map.html`, `site/js/map.js`).** Light map: land `--paper-2`, borders `--rule`,
   markers blue with amber for the selected/hot one, tooltip = white card with navy text. Add
   `map.html`. Screenshots.
 - [ ] **T5 AI Visibility page (`ai-visibility.html`).** Cards, bars/charts and the 13 inline colors

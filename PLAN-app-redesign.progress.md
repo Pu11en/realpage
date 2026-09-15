@@ -21,3 +21,11 @@
 - Added property.html to tooling/qa/design-pages.txt. check-design.sh passes (0 problems, 2 design pages); no sideways scroll at 390px, no page errors (sold + upcoming examples).
 - Note: check-local.sh on default port 8799 showed 404s because another session held that port; CHECK_PORT=8811 run passes clean.
 - Screenshots: docs/design-screens/T3-desktop.png, T3-phone.png, T3-upcoming.png.
+
+## T4 Map page (map.html) — done 2026-09-15 (commit 8462ce5)
+- States: land --paper-2 with --rule borders; states with RealPage buildings shaded in a blue ramp (was green); legend ramp matches.
+- Lead markers amber with navy outline (the "hot" states), labels navy with white halo in Plus Jakarta Sans, hover brighter amber, keyboard focus ring blue. Tooltip = white card, navy text, soft shadow; lead count in --warn.
+- Page intro colour words updated to match ("Darker blue", "Amber markers") — only the colour names changed.
+- Added map.html to design-pages.txt. check-design.sh passes (3 pages, 0 problems); no sideways scroll at 390px, no page errors, tooltip shows on hover.
+- Left open: tooling/qa/check_map.py can't start — it waits for the text "PropertyStack" on index.html, which the site no longer shows (stale test, not caused by this task).
+- Screenshots: docs/design-screens/T4-desktop.png, T4-phone.png.
