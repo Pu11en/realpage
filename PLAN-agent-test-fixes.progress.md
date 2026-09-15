@@ -230,3 +230,10 @@ picked. Confirmed via grep that this was the only occurrence anywhere under
 privacy page has the real mailto link and visible email). Checked with
 `bash tooling/qa/check-fixes.sh` (110 tests pass, design check 0 problems
 on 7 pages).
+
+## T15 Final checks and report — done
+Ran `bash tooling/qa/check-fixes.sh` (110 tests pass, 0 design problems on 7 pages),
+`bash tooling/qa/check-panel.sh` (0 problems on 3 pages, panel_test.py clean). Wrote
+`handoffs/2026-09-15-agent-test-fixes-report.md` summarizing every fix in plain English,
+how to try each, and confirming nothing is left undone from the plan and nothing has been
+pushed or deployed. Commit: see git log.
