@@ -1,0 +1,86 @@
+[
+ {
+  "area": "az",
+  "city": "Tucson",
+  "name": "",
+  "address": "1138 N RICHEY BL",
+  "lat": null,
+  "lon": null,
+  "units": 1,
+  "stage": "permitted",
+  "permit_date": "2025-03-14",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis.tucsonaz.gov/public/rest/services/PublicMaps/PermitsCode/MapServer/84/query?where=StructureType%3D%27Apartment+Building%27+AND+WORKCLASS+LIKE+%27%25New%25%27&outFields=%2A&f=json&resultRecordCount=500&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis.tucsonaz.gov/public/rest/services/PublicMaps/PermitsCode/MapServer/84/query?where=StructureType%3D%27Apartment+Building%27+AND+WORKCLASS+LIKE+%27%25New%25%27&outFields=%2A&f=json&resultRecordCount=500&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "new multifamily permit"
+ },
+ {
+  "area": "az",
+  "city": "Tucson",
+  "name": "",
+  "address": "812 E SPEEDWAY BL",
+  "lat": null,
+  "lon": null,
+  "units": 165,
+  "stage": "permitted",
+  "permit_date": "2025-03-12",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis.tucsonaz.gov/public/rest/services/PublicMaps/PermitsCode/MapServer/84/query?where=StructureType%3D%27Apartment+Building%27+AND+WORKCLASS+LIKE+%27%25New%25%27&outFields=%2A&f=json&resultRecordCount=500&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis.tucsonaz.gov/public/rest/services/PublicMaps/PermitsCode/MapServer/84/query?where=StructureType%3D%27Apartment+Building%27+AND+WORKCLASS+LIKE+%27%25New%25%27&outFields=%2A&f=json&resultRecordCount=500&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "new multifamily permit"
+ },
+ {
+  "area": "az",
+  "city": "Tucson",
+  "name": "",
+  "address": "818 E Speedway BL",
+  "lat": null,
+  "lon": null,
+  "units": 165,
+  "stage": "permitted",
+  "permit_date": "2025-03-12",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://gis.tucsonaz.gov/public/rest/services/PublicMaps/PermitsCode/MapServer/84/query?where=StructureType%3D%27Apartment+Building%27+AND+WORKCLASS+LIKE+%27%25New%25%27&outFields=%2A&f=json&resultRecordCount=500&orderByFields=ISSUEDATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://gis.tucsonaz.gov/public/rest/services/PublicMaps/PermitsCode/MapServer/84/query?where=StructureType%3D%27Apartment+Building%27+AND+WORKCLASS+LIKE+%27%25New%25%27&outFields=%2A&f=json&resultRecordCount=500&orderByFields=ISSUEDATE+DESC"
+   }
+  ],
+  "why": "new multifamily permit"
+ }
+]

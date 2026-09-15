@@ -2,32 +2,30 @@
   "area": "az",
   "generatedFrom": "propertystack/data/az/leads.json",
   "stats": {
-    "leads": 19,
-    "cities": 8,
-    "unitsInPlay": 2640,
+    "leads": 94,
+    "cities": 6,
+    "unitsInPlay": 6716,
     "newThisWeek": 0,
     "openingNext12mo": 0
   },
   "cities": [
-    "Casa Grande",
-    "Cottonwood",
-    "Flagstaff",
-    "Glendale",
+    "Gilbert",
+    "Maricopa County unincorporated",
     "Mesa",
     "Phoenix",
-    "Scottsdale",
+    "Tempe",
     "Tucson"
   ],
   "leads": [
     {
       "id": "az-1",
-      "property": "Canyon Del Rio Village",
-      "community": "Canyon Del Rio Village",
-      "city": "Flagstaff",
-      "address": null,
-      "units": 170,
-      "stage": "permitted",
-      "permitDate": "2024-04-09",
+      "property": "La Victoria Commons On Apache",
+      "community": "La Victoria Commons On Apache",
+      "city": "Tempe",
+      "address": "2320 E APACHE BLVD",
+      "units": 104,
+      "stage": "leasing",
+      "permitDate": "2024-09-27",
       "openingDate": null,
       "saleDate": null,
       "buyer": null,
@@ -36,27 +34,26 @@
       "website": null,
       "software": null,
       "links": {
-        "hud": "HUD FHA #12335598"
+        "permit": "https://services.arcgis.com/lQySeXwbBg53XWDi/arcgis/rest/services/building_permits/FeatureServer/0/query?where=HousingUnits%3E%3D20&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssuedDate+DESC"
       },
       "sources": [
-        "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx",
-        "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx"
+        "https://services.arcgis.com/lQySeXwbBg53XWDi/arcgis/rest/services/building_permits/FeatureServer/0/query?where=HousingUnits%3E%3D20&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssuedDate+DESC"
       ],
       "signalType": "Upcoming",
       "signal": "Opens: not public yet",
-      "why": "Permitted \u00b7 opens: not public yet \u00b7 170 units \u00b7 software not picked yet",
+      "why": "Leasing \u00b7 opens: not public yet \u00b7 104 units \u00b7 software not picked yet",
       "score": 100,
       "isNew": false
     },
     {
       "id": "az-2",
-      "property": "The Lofts at G Diamond Ranch",
-      "community": "The Lofts at G Diamond Ranch",
-      "city": "Casa Grande",
-      "address": null,
-      "units": 120,
-      "stage": "permitted",
-      "permitDate": "2024-05-10",
+      "property": "1020 Apache",
+      "community": "1020 Apache",
+      "city": "Tempe",
+      "address": "1020 E APACHE BLVD",
+      "units": 289,
+      "stage": "leasing",
+      "permitDate": "2024-09-30",
       "openingDate": null,
       "saleDate": null,
       "buyer": null,
@@ -65,27 +62,26 @@
       "website": null,
       "software": null,
       "links": {
-        "hud": "HUD FHA #12335599"
+        "permit": "https://services.arcgis.com/lQySeXwbBg53XWDi/arcgis/rest/services/building_permits/FeatureServer/0/query?where=HousingUnits%3E%3D20&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssuedDate+DESC"
       },
       "sources": [
-        "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx",
-        "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx"
+        "https://services.arcgis.com/lQySeXwbBg53XWDi/arcgis/rest/services/building_permits/FeatureServer/0/query?where=HousingUnits%3E%3D20&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssuedDate+DESC"
       ],
       "signalType": "Upcoming",
       "signal": "Opens: not public yet",
-      "why": "Permitted \u00b7 opens: not public yet \u00b7 120 units \u00b7 software not picked yet",
+      "why": "Leasing \u00b7 opens: not public yet \u00b7 289 units \u00b7 software not picked yet",
       "score": 97,
       "isNew": false
     },
     {
       "id": "az-3",
-      "property": "San Cipriano Townhomes",
-      "community": "San Cipriano Townhomes",
-      "city": "Cottonwood",
-      "address": null,
-      "units": 52,
+      "property": "629 N 3Rd Ave",
+      "community": "629 N 3Rd Ave",
+      "city": "Phoenix",
+      "address": "629 N 3RD AVE",
+      "units": null,
       "stage": "permitted",
-      "permitDate": "2024-11-18",
+      "permitDate": "2024-10-01",
       "openingDate": null,
       "saleDate": null,
       "buyer": null,
@@ -94,27 +90,26 @@
       "website": null,
       "software": null,
       "links": {
-        "hud": "HUD FHA #12335608"
+        "permit": "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
       },
       "sources": [
-        "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx",
-        "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx"
+        "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
       ],
       "signalType": "Upcoming",
       "signal": "Opens: not public yet",
-      "why": "Permitted \u00b7 opens: not public yet \u00b7 52 units \u00b7 software not picked yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet",
       "score": 94,
       "isNew": false
     },
     {
       "id": "az-4",
-      "property": "The Place at Rita Ranch",
-      "community": "The Place at Rita Ranch",
-      "city": "Tucson",
-      "address": null,
-      "units": 189,
+      "property": "South Pier Lot 6",
+      "community": "South Pier Lot 6",
+      "city": "Tempe",
+      "address": "1314 E VISTA DEL LAGO DR",
+      "units": 232,
       "stage": "permitted",
-      "permitDate": "2025-03-14",
+      "permitDate": "2024-10-09",
       "openingDate": null,
       "saleDate": null,
       "buyer": null,
@@ -123,27 +118,26 @@
       "website": null,
       "software": null,
       "links": {
-        "hud": "HUD FHA #12335610"
+        "permit": "https://services.arcgis.com/lQySeXwbBg53XWDi/arcgis/rest/services/building_permits/FeatureServer/0/query?where=HousingUnits%3E%3D20&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssuedDate+DESC"
       },
       "sources": [
-        "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx",
-        "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx"
+        "https://services.arcgis.com/lQySeXwbBg53XWDi/arcgis/rest/services/building_permits/FeatureServer/0/query?where=HousingUnits%3E%3D20&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssuedDate+DESC"
       ],
       "signalType": "Upcoming",
       "signal": "Opens: not public yet",
-      "why": "Permitted \u00b7 opens: not public yet \u00b7 189 units \u00b7 software not picked yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 232 units \u00b7 software not picked yet",
       "score": 91,
       "isNew": false
     },
     {
       "id": "az-5",
-      "property": "Parkside Reserve",
-      "community": "Parkside Reserve",
-      "city": "Tucson",
-      "address": null,
-      "units": 210,
+      "property": "13000 N Tatum Blvd",
+      "community": "13000 N Tatum Blvd",
+      "city": "Phoenix",
+      "address": "13000 N TATUM BLVD",
+      "units": null,
       "stage": "permitted",
-      "permitDate": "2025-09-09",
+      "permitDate": "2024-10-25",
       "openingDate": null,
       "saleDate": null,
       "buyer": null,
@@ -152,27 +146,26 @@
       "website": null,
       "software": null,
       "links": {
-        "hud": "HUD FHA #12335607"
+        "permit": "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
       },
       "sources": [
-        "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx",
-        "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx"
+        "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
       ],
       "signalType": "Upcoming",
       "signal": "Opens: not public yet",
-      "why": "Permitted \u00b7 opens: not public yet \u00b7 210 units \u00b7 software not picked yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet",
       "score": 88,
       "isNew": false
     },
     {
       "id": "az-6",
-      "property": "Laveen Commons",
-      "community": "Laveen Commons",
-      "city": "Phoenix",
-      "address": null,
-      "units": 150,
+      "property": "1225 N Arizona Ave",
+      "community": "1225 N Arizona Ave",
+      "city": "Gilbert",
+      "address": "1225 N ARIZONA AVE",
+      "units": null,
       "stage": "permitted",
-      "permitDate": "2025-12-16",
+      "permitDate": "2024-11-06",
       "openingDate": null,
       "saleDate": null,
       "buyer": null,
@@ -181,27 +174,26 @@
       "website": null,
       "software": null,
       "links": {
-        "hud": "HUD FHA #12335606"
+        "permit": "https://maps.gilbertaz.gov/arcgis/rest/services/OD/Growth_Development_Tables_1/MapServer/3/query?where=PermitType%3D%27Commercial+Multi-Family%27+AND+WorkClass%3D%27New%27&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssuedDate+DESC"
       },
       "sources": [
-        "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx",
-        "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx"
+        "https://maps.gilbertaz.gov/arcgis/rest/services/OD/Growth_Development_Tables_1/MapServer/3/query?where=PermitType%3D%27Commercial+Multi-Family%27+AND+WorkClass%3D%27New%27&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssuedDate+DESC"
       ],
       "signalType": "Upcoming",
       "signal": "Opens: not public yet",
-      "why": "Permitted \u00b7 opens: not public yet \u00b7 150 units \u00b7 software not picked yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet",
       "score": 85,
       "isNew": false
     },
     {
       "id": "az-7",
-      "property": "San Cipriano Townhomes",
-      "community": "San Cipriano Townhomes",
-      "city": "Cottonwood",
-      "address": null,
-      "units": 52,
+      "property": "8336 E Quality Ave",
+      "community": "8336 E Quality Ave",
+      "city": "Mesa",
+      "address": "8336 E QUALITY AVE",
+      "units": 236,
       "stage": "permitted",
-      "permitDate": "2025-12-16",
+      "permitDate": "2024-11-12",
       "openingDate": null,
       "saleDate": null,
       "buyer": null,
@@ -210,27 +202,26 @@
       "website": null,
       "software": null,
       "links": {
-        "hud": "HUD FHA #12335608"
+        "permit": "https://data.mesaaz.gov/resource/dzpk-hxfb.json?type_of_work=Multi-Family+Residential&%24order=issued_date+DESC&%24limit=500"
       },
       "sources": [
-        "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx",
-        "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx"
+        "https://data.mesaaz.gov/resource/dzpk-hxfb.json?type_of_work=Multi-Family+Residential&%24order=issued_date+DESC&%24limit=500"
       ],
       "signalType": "Upcoming",
       "signal": "Opens: not public yet",
-      "why": "Permitted \u00b7 opens: not public yet \u00b7 52 units \u00b7 software not picked yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 236 units \u00b7 software not picked yet",
       "score": 82,
       "isNew": false
     },
     {
       "id": "az-8",
-      "property": "The Radley Scottsdale",
-      "community": "The Radley Scottsdale",
-      "city": "Scottsdale",
-      "address": null,
-      "units": 23,
+      "property": "7961 E Elliot Rd",
+      "community": "7961 E Elliot Rd",
+      "city": "Mesa",
+      "address": "7961 E ELLIOT RD",
+      "units": 419,
       "stage": "permitted",
-      "permitDate": "2026-05-21",
+      "permitDate": "2024-11-14",
       "openingDate": null,
       "saleDate": null,
       "buyer": null,
@@ -239,27 +230,26 @@
       "website": null,
       "software": null,
       "links": {
-        "hud": "HUD FHA #12335621"
+        "permit": "https://data.mesaaz.gov/resource/dzpk-hxfb.json?type_of_work=Multi-Family+Residential&%24order=issued_date+DESC&%24limit=500"
       },
       "sources": [
-        "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx",
-        "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx"
+        "https://data.mesaaz.gov/resource/dzpk-hxfb.json?type_of_work=Multi-Family+Residential&%24order=issued_date+DESC&%24limit=500"
       ],
       "signalType": "Upcoming",
       "signal": "Opens: not public yet",
-      "why": "Permitted \u00b7 opens: not public yet \u00b7 23 units \u00b7 software not picked yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 419 units \u00b7 software not picked yet",
       "score": 79,
       "isNew": false
     },
     {
       "id": "az-9",
-      "property": "The Radley Glendale",
-      "community": "The Radley Glendale",
-      "city": "Glendale",
-      "address": null,
-      "units": 37,
+      "property": "3340 E Warner Rd",
+      "community": "3340 E Warner Rd",
+      "city": "Gilbert",
+      "address": "3340 E WARNER RD",
+      "units": null,
       "stage": "permitted",
-      "permitDate": "2026-05-28",
+      "permitDate": "2024-11-25",
       "openingDate": null,
       "saleDate": null,
       "buyer": null,
@@ -268,27 +258,26 @@
       "website": null,
       "software": null,
       "links": {
-        "hud": "HUD FHA #12335619"
+        "permit": "https://maps.gilbertaz.gov/arcgis/rest/services/OD/Growth_Development_Tables_1/MapServer/3/query?where=PermitType%3D%27Commercial+Multi-Family%27+AND+WorkClass%3D%27New%27&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssuedDate+DESC"
       },
       "sources": [
-        "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx",
-        "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx"
+        "https://maps.gilbertaz.gov/arcgis/rest/services/OD/Growth_Development_Tables_1/MapServer/3/query?where=PermitType%3D%27Commercial+Multi-Family%27+AND+WorkClass%3D%27New%27&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssuedDate+DESC"
       ],
       "signalType": "Upcoming",
       "signal": "Opens: not public yet",
-      "why": "Permitted \u00b7 opens: not public yet \u00b7 37 units \u00b7 software not picked yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet",
       "score": 76,
       "isNew": false
     },
     {
       "id": "az-10",
-      "property": "Bella Victoria",
-      "community": "Bella Victoria",
+      "property": "6733 E Main St",
+      "community": "6733 E Main St",
       "city": "Mesa",
-      "address": null,
-      "units": 236,
-      "stage": "sold",
-      "permitDate": "2026-04-29",
+      "address": "6733 E MAIN ST",
+      "units": null,
+      "stage": "permitted",
+      "permitDate": "2024-12-03",
       "openingDate": null,
       "saleDate": null,
       "buyer": null,
@@ -297,27 +286,26 @@
       "website": null,
       "software": null,
       "links": {
-        "hud": "HUD FHA #12311364"
+        "permit": "https://data.mesaaz.gov/resource/dzpk-hxfb.json?type_of_work=Multi-Family+Residential&%24order=issued_date+DESC&%24limit=500"
       },
       "sources": [
-        "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx",
-        "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx"
+        "https://data.mesaaz.gov/resource/dzpk-hxfb.json?type_of_work=Multi-Family+Residential&%24order=issued_date+DESC&%24limit=500"
       ],
-      "signalType": "Sold",
-      "signal": "Sold",
-      "why": "Sold \u00b7 236 units \u00b7 new owner may re-pick software",
+      "signalType": "Upcoming",
+      "signal": "Opens: not public yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet",
       "score": 73,
       "isNew": false
     },
     {
       "id": "az-11",
-      "property": "The M at Shadow Mountain",
-      "community": "The M at Shadow Mountain",
-      "city": "Phoenix",
-      "address": null,
-      "units": 404,
-      "stage": "sold",
-      "permitDate": "2026-04-01",
+      "property": "4343 E Warner Rd",
+      "community": "4343 E Warner Rd",
+      "city": "Gilbert",
+      "address": "4343 E WARNER RD",
+      "units": null,
+      "stage": "permitted",
+      "permitDate": "2025-01-30",
       "openingDate": null,
       "saleDate": null,
       "buyer": null,
@@ -326,27 +314,26 @@
       "website": null,
       "software": null,
       "links": {
-        "hud": "HUD FHA #12311360"
+        "permit": "https://maps.gilbertaz.gov/arcgis/rest/services/OD/Growth_Development_Tables_1/MapServer/3/query?where=PermitType%3D%27Commercial+Multi-Family%27+AND+WorkClass%3D%27New%27&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssuedDate+DESC"
       },
       "sources": [
-        "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx",
-        "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx"
+        "https://maps.gilbertaz.gov/arcgis/rest/services/OD/Growth_Development_Tables_1/MapServer/3/query?where=PermitType%3D%27Commercial+Multi-Family%27+AND+WorkClass%3D%27New%27&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssuedDate+DESC"
       ],
-      "signalType": "Sold",
-      "signal": "Sold",
-      "why": "Sold \u00b7 404 units \u00b7 new owner may re-pick software",
+      "signalType": "Upcoming",
+      "signal": "Opens: not public yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet",
       "score": 70,
       "isNew": false
     },
     {
       "id": "az-12",
-      "property": "Portola Biltmore",
-      "community": "Portola Biltmore",
-      "city": "Phoenix",
-      "address": null,
-      "units": 114,
-      "stage": "sold",
-      "permitDate": "2026-02-23",
+      "property": "Verve Tempe",
+      "community": "Verve Tempe",
+      "city": "Tempe",
+      "address": "1047 S TERRACE RD",
+      "units": 240,
+      "stage": "permitted",
+      "permitDate": "2025-02-19",
       "openingDate": null,
       "saleDate": null,
       "buyer": null,
@@ -355,27 +342,26 @@
       "website": null,
       "software": null,
       "links": {
-        "hud": "HUD FHA #12311363"
+        "permit": "https://services.arcgis.com/lQySeXwbBg53XWDi/arcgis/rest/services/building_permits/FeatureServer/0/query?where=HousingUnits%3E%3D20&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssuedDate+DESC"
       },
       "sources": [
-        "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx",
-        "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx"
+        "https://services.arcgis.com/lQySeXwbBg53XWDi/arcgis/rest/services/building_permits/FeatureServer/0/query?where=HousingUnits%3E%3D20&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssuedDate+DESC"
       ],
-      "signalType": "Sold",
-      "signal": "Sold",
-      "why": "Sold \u00b7 114 units \u00b7 new owner may re-pick software",
+      "signalType": "Upcoming",
+      "signal": "Opens: not public yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 240 units \u00b7 software not picked yet",
       "score": 67,
       "isNew": false
     },
     {
       "id": "az-13",
-      "property": "Elevate on Vineyard",
-      "community": "Elevate on Vineyard",
-      "city": "Phoenix",
-      "address": null,
-      "units": 54,
-      "stage": "sold",
-      "permitDate": "2026-02-06",
+      "property": "8137 E Brown Rd",
+      "community": "8137 E Brown Rd",
+      "city": "Mesa",
+      "address": "8137 E BROWN RD",
+      "units": 36,
+      "stage": "permitted",
+      "permitDate": "2025-03-03",
       "openingDate": null,
       "saleDate": null,
       "buyer": null,
@@ -384,27 +370,26 @@
       "website": null,
       "software": null,
       "links": {
-        "hud": "HUD FHA #12311362"
+        "permit": "https://data.mesaaz.gov/resource/dzpk-hxfb.json?type_of_work=Multi-Family+Residential&%24order=issued_date+DESC&%24limit=500"
       },
       "sources": [
-        "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx",
-        "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx"
+        "https://data.mesaaz.gov/resource/dzpk-hxfb.json?type_of_work=Multi-Family+Residential&%24order=issued_date+DESC&%24limit=500"
       ],
-      "signalType": "Sold",
-      "signal": "Sold",
-      "why": "Sold \u00b7 54 units \u00b7 new owner may re-pick software",
+      "signalType": "Upcoming",
+      "signal": "Opens: not public yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 36 units \u00b7 software not picked yet",
       "score": 64,
       "isNew": false
     },
     {
       "id": "az-14",
-      "property": "Kivel Manor",
-      "community": "Kivel Manor",
-      "city": "Phoenix",
-      "address": null,
-      "units": 255,
-      "stage": "sold",
-      "permitDate": "2025-09-10",
+      "property": "812 E Speedway Bl",
+      "community": "812 E Speedway Bl",
+      "city": "Tucson",
+      "address": "812 E SPEEDWAY BL",
+      "units": 165,
+      "stage": "permitted",
+      "permitDate": "2025-03-12",
       "openingDate": null,
       "saleDate": null,
       "buyer": null,
@@ -413,27 +398,26 @@
       "website": null,
       "software": null,
       "links": {
-        "hud": "HUD FHA #12311359"
+        "permit": "https://gis.tucsonaz.gov/public/rest/services/PublicMaps/PermitsCode/MapServer/84/query?where=StructureType%3D%27Apartment+Building%27+AND+WORKCLASS+LIKE+%27%25New%25%27&outFields=%2A&f=json&resultRecordCount=500&orderByFields=ISSUEDATE+DESC"
       },
       "sources": [
-        "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx",
-        "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx"
+        "https://gis.tucsonaz.gov/public/rest/services/PublicMaps/PermitsCode/MapServer/84/query?where=StructureType%3D%27Apartment+Building%27+AND+WORKCLASS+LIKE+%27%25New%25%27&outFields=%2A&f=json&resultRecordCount=500&orderByFields=ISSUEDATE+DESC"
       ],
-      "signalType": "Sold",
-      "signal": "Sold",
-      "why": "Sold \u00b7 255 units \u00b7 new owner may re-pick software",
+      "signalType": "Upcoming",
+      "signal": "Opens: not public yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 165 units \u00b7 software not picked yet",
       "score": 61,
       "isNew": false
     },
     {
       "id": "az-15",
-      "property": "Council House Apartments",
-      "community": "Council House Apartments",
+      "property": "818 E Speedway Bl",
+      "community": "818 E Speedway Bl",
       "city": "Tucson",
-      "address": null,
-      "units": 149,
-      "stage": "sold",
-      "permitDate": "2025-08-20",
+      "address": "818 E Speedway BL",
+      "units": 165,
+      "stage": "permitted",
+      "permitDate": "2025-03-12",
       "openingDate": null,
       "saleDate": null,
       "buyer": null,
@@ -442,27 +426,26 @@
       "website": null,
       "software": null,
       "links": {
-        "hud": "HUD FHA #12311356"
+        "permit": "https://gis.tucsonaz.gov/public/rest/services/PublicMaps/PermitsCode/MapServer/84/query?where=StructureType%3D%27Apartment+Building%27+AND+WORKCLASS+LIKE+%27%25New%25%27&outFields=%2A&f=json&resultRecordCount=500&orderByFields=ISSUEDATE+DESC"
       },
       "sources": [
-        "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx",
-        "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx"
+        "https://gis.tucsonaz.gov/public/rest/services/PublicMaps/PermitsCode/MapServer/84/query?where=StructureType%3D%27Apartment+Building%27+AND+WORKCLASS+LIKE+%27%25New%25%27&outFields=%2A&f=json&resultRecordCount=500&orderByFields=ISSUEDATE+DESC"
       ],
-      "signalType": "Sold",
-      "signal": "Sold",
-      "why": "Sold \u00b7 149 units \u00b7 new owner may re-pick software",
+      "signalType": "Upcoming",
+      "signal": "Opens: not public yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 165 units \u00b7 software not picked yet",
       "score": 58,
       "isNew": false
     },
     {
       "id": "az-16",
-      "property": "The Reserve at Thunderbird II",
-      "community": "The Reserve at Thunderbird II",
+      "property": "32400 N 29Th Ave",
+      "community": "32400 N 29Th Ave",
       "city": "Phoenix",
-      "address": null,
-      "units": 134,
-      "stage": "sold",
-      "permitDate": "2025-04-18",
+      "address": "32400 N 29TH AVE",
+      "units": null,
+      "stage": "permitted",
+      "permitDate": "2025-03-13",
       "openingDate": null,
       "saleDate": null,
       "buyer": null,
@@ -471,27 +454,26 @@
       "website": null,
       "software": null,
       "links": {
-        "hud": "HUD FHA #12311358"
+        "permit": "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
       },
       "sources": [
-        "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx",
-        "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx"
+        "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
       ],
-      "signalType": "Sold",
-      "signal": "Sold",
-      "why": "Sold \u00b7 134 units \u00b7 new owner may re-pick software",
+      "signalType": "Upcoming",
+      "signal": "Opens: not public yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet",
       "score": 55,
       "isNew": false
     },
     {
       "id": "az-17",
-      "property": "The Reserve at Thunderbird I",
-      "community": "The Reserve at Thunderbird I",
-      "city": "Phoenix",
-      "address": null,
-      "units": 108,
-      "stage": "sold",
-      "permitDate": "2025-04-15",
+      "property": "Cabana Kyrene Apartments",
+      "community": "Cabana Kyrene Apartments",
+      "city": "Tempe",
+      "address": "515 W GUADALUPE RD",
+      "units": 57,
+      "stage": "permitted",
+      "permitDate": "2025-03-26",
       "openingDate": null,
       "saleDate": null,
       "buyer": null,
@@ -500,27 +482,26 @@
       "website": null,
       "software": null,
       "links": {
-        "hud": "HUD FHA #12311357"
+        "permit": "https://services.arcgis.com/lQySeXwbBg53XWDi/arcgis/rest/services/building_permits/FeatureServer/0/query?where=HousingUnits%3E%3D20&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssuedDate+DESC"
       },
       "sources": [
-        "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx",
-        "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx"
+        "https://services.arcgis.com/lQySeXwbBg53XWDi/arcgis/rest/services/building_permits/FeatureServer/0/query?where=HousingUnits%3E%3D20&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssuedDate+DESC"
       ],
-      "signalType": "Sold",
-      "signal": "Sold",
-      "why": "Sold \u00b7 108 units \u00b7 new owner may re-pick software",
+      "signalType": "Upcoming",
+      "signal": "Opens: not public yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 57 units \u00b7 software not picked yet",
       "score": 52,
       "isNew": false
     },
     {
       "id": "az-18",
-      "property": "Marquee on 5th",
-      "community": "Marquee on 5th",
-      "city": "Tucson",
-      "address": null,
-      "units": 96,
-      "stage": "sold",
-      "permitDate": "2024-11-05",
+      "property": "4110 S 3Rd Ave",
+      "community": "4110 S 3Rd Ave",
+      "city": "Phoenix",
+      "address": "4110 S 3RD AVE",
+      "units": null,
+      "stage": "permitted",
+      "permitDate": "2025-03-27",
       "openingDate": null,
       "saleDate": null,
       "buyer": null,
@@ -529,27 +510,26 @@
       "website": null,
       "software": null,
       "links": {
-        "hud": "HUD FHA #12311355"
+        "permit": "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
       },
       "sources": [
-        "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx",
-        "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx"
+        "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
       ],
-      "signalType": "Sold",
-      "signal": "Sold",
-      "why": "Sold \u00b7 96 units \u00b7 new owner may re-pick software",
+      "signalType": "Upcoming",
+      "signal": "Opens: not public yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet",
       "score": 49,
       "isNew": false
     },
     {
       "id": "az-19",
-      "property": "Escarlata 31",
-      "community": "Escarlata 31",
+      "property": "1435 E Taylor St",
+      "community": "1435 E Taylor St",
       "city": "Phoenix",
-      "address": null,
-      "units": 87,
-      "stage": "sold",
-      "permitDate": "2024-03-15",
+      "address": "1435 E TAYLOR ST",
+      "units": null,
+      "stage": "permitted",
+      "permitDate": "2025-04-28",
       "openingDate": null,
       "saleDate": null,
       "buyer": null,
@@ -558,16 +538,2115 @@
       "website": null,
       "software": null,
       "links": {
-        "hud": "HUD FHA #12311353"
+        "permit": "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
       },
       "sources": [
-        "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx",
-        "https://www.hud.gov/sites/default/files/Housing/documents/FHA-MF-Firm-Commitments-and-Endorsements-Database-FY01-FY26-Q3.xlsx"
+        "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
       ],
-      "signalType": "Sold",
-      "signal": "Sold",
-      "why": "Sold \u00b7 87 units \u00b7 new owner may re-pick software",
+      "signalType": "Upcoming",
+      "signal": "Opens: not public yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet",
       "score": 46,
+      "isNew": false
+    },
+    {
+      "id": "az-20",
+      "property": "225 N 17Th St",
+      "community": "225 N 17Th St",
+      "city": "Phoenix",
+      "address": "225 N 17TH ST",
+      "units": null,
+      "stage": "permitted",
+      "permitDate": "2025-05-08",
+      "openingDate": null,
+      "saleDate": null,
+      "buyer": null,
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "permit": "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
+      },
+      "sources": [
+        "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
+      ],
+      "signalType": "Upcoming",
+      "signal": "Opens: not public yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet",
+      "score": 43,
+      "isNew": false
+    },
+    {
+      "id": "az-21",
+      "property": "1817 W Mountain View Rd",
+      "community": "1817 W Mountain View Rd",
+      "city": "Phoenix",
+      "address": "1817 W MOUNTAIN VIEW RD",
+      "units": null,
+      "stage": "permitted",
+      "permitDate": "2025-05-09",
+      "openingDate": null,
+      "saleDate": null,
+      "buyer": null,
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "permit": "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
+      },
+      "sources": [
+        "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
+      ],
+      "signalType": "Upcoming",
+      "signal": "Opens: not public yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet",
+      "score": 40,
+      "isNew": false
+    },
+    {
+      "id": "az-22",
+      "property": "100 N 18Th St",
+      "community": "100 N 18Th St",
+      "city": "Phoenix",
+      "address": "100 N 18TH ST",
+      "units": null,
+      "stage": "permitted",
+      "permitDate": "2025-05-20",
+      "openingDate": null,
+      "saleDate": null,
+      "buyer": null,
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "permit": "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
+      },
+      "sources": [
+        "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
+      ],
+      "signalType": "Upcoming",
+      "signal": "Opens: not public yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet",
+      "score": 37,
+      "isNew": false
+    },
+    {
+      "id": "az-23",
+      "property": "19000 N 66Th St",
+      "community": "19000 N 66Th St",
+      "city": "Phoenix",
+      "address": "19000 N 66TH ST",
+      "units": null,
+      "stage": "permitted",
+      "permitDate": "2025-05-28",
+      "openingDate": null,
+      "saleDate": null,
+      "buyer": null,
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "permit": "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
+      },
+      "sources": [
+        "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
+      ],
+      "signalType": "Upcoming",
+      "signal": "Opens: not public yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet",
+      "score": 34,
+      "isNew": false
+    },
+    {
+      "id": "az-24",
+      "property": "460 N Gilbert Rd",
+      "community": "460 N Gilbert Rd",
+      "city": "Gilbert",
+      "address": "460 N GILBERT RD",
+      "units": null,
+      "stage": "permitted",
+      "permitDate": "2025-06-05",
+      "openingDate": null,
+      "saleDate": null,
+      "buyer": null,
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "permit": "https://maps.gilbertaz.gov/arcgis/rest/services/OD/Growth_Development_Tables_1/MapServer/3/query?where=PermitType%3D%27Commercial+Multi-Family%27+AND+WorkClass%3D%27New%27&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssuedDate+DESC"
+      },
+      "sources": [
+        "https://maps.gilbertaz.gov/arcgis/rest/services/OD/Growth_Development_Tables_1/MapServer/3/query?where=PermitType%3D%27Commercial+Multi-Family%27+AND+WorkClass%3D%27New%27&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssuedDate+DESC"
+      ],
+      "signalType": "Upcoming",
+      "signal": "Opens: not public yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet",
+      "score": 31,
+      "isNew": false
+    },
+    {
+      "id": "az-25",
+      "property": "4235 N 24Th St",
+      "community": "4235 N 24Th St",
+      "city": "Phoenix",
+      "address": "4235 N 24TH ST",
+      "units": null,
+      "stage": "permitted",
+      "permitDate": "2025-06-09",
+      "openingDate": null,
+      "saleDate": null,
+      "buyer": null,
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "permit": "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
+      },
+      "sources": [
+        "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
+      ],
+      "signalType": "Upcoming",
+      "signal": "Opens: not public yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet",
+      "score": 28,
+      "isNew": false
+    },
+    {
+      "id": "az-26",
+      "property": "13400 N 22Nd St",
+      "community": "13400 N 22Nd St",
+      "city": "Phoenix",
+      "address": "13400 N 22ND ST",
+      "units": null,
+      "stage": "permitted",
+      "permitDate": "2025-06-09",
+      "openingDate": null,
+      "saleDate": null,
+      "buyer": null,
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "permit": "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
+      },
+      "sources": [
+        "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
+      ],
+      "signalType": "Upcoming",
+      "signal": "Opens: not public yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet",
+      "score": 25,
+      "isNew": false
+    },
+    {
+      "id": "az-27",
+      "property": "140 S Pomeroy",
+      "community": "140 S Pomeroy",
+      "city": "Mesa",
+      "address": "140 S POMEROY",
+      "units": 110,
+      "stage": "permitted",
+      "permitDate": "2025-07-03",
+      "openingDate": null,
+      "saleDate": null,
+      "buyer": null,
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "permit": "https://data.mesaaz.gov/resource/dzpk-hxfb.json?type_of_work=Multi-Family+Residential&%24order=issued_date+DESC&%24limit=500"
+      },
+      "sources": [
+        "https://data.mesaaz.gov/resource/dzpk-hxfb.json?type_of_work=Multi-Family+Residential&%24order=issued_date+DESC&%24limit=500"
+      ],
+      "signalType": "Upcoming",
+      "signal": "Opens: not public yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 110 units \u00b7 software not picked yet",
+      "score": 22,
+      "isNew": false
+    },
+    {
+      "id": "az-28",
+      "property": "5307 N 17Th Ave",
+      "community": "5307 N 17Th Ave",
+      "city": "Phoenix",
+      "address": "5307 N 17TH AVE",
+      "units": null,
+      "stage": "permitted",
+      "permitDate": "2025-07-08",
+      "openingDate": null,
+      "saleDate": null,
+      "buyer": null,
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "permit": "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
+      },
+      "sources": [
+        "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
+      ],
+      "signalType": "Upcoming",
+      "signal": "Opens: not public yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet",
+      "score": 19,
+      "isNew": false
+    },
+    {
+      "id": "az-29",
+      "property": "14559 S 50Th St",
+      "community": "14559 S 50Th St",
+      "city": "Phoenix",
+      "address": "14559 S 50TH ST",
+      "units": null,
+      "stage": "permitted",
+      "permitDate": "2025-07-08",
+      "openingDate": null,
+      "saleDate": null,
+      "buyer": null,
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "permit": "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
+      },
+      "sources": [
+        "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
+      ],
+      "signalType": "Upcoming",
+      "signal": "Opens: not public yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet",
+      "score": 16,
+      "isNew": false
+    },
+    {
+      "id": "az-30",
+      "property": "3844 S Val Vista Dr",
+      "community": "3844 S Val Vista Dr",
+      "city": "Gilbert",
+      "address": "3844 S VAL VISTA DR",
+      "units": null,
+      "stage": "permitted",
+      "permitDate": "2025-07-15",
+      "openingDate": null,
+      "saleDate": null,
+      "buyer": null,
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "permit": "https://maps.gilbertaz.gov/arcgis/rest/services/OD/Growth_Development_Tables_1/MapServer/3/query?where=PermitType%3D%27Commercial+Multi-Family%27+AND+WorkClass%3D%27New%27&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssuedDate+DESC"
+      },
+      "sources": [
+        "https://maps.gilbertaz.gov/arcgis/rest/services/OD/Growth_Development_Tables_1/MapServer/3/query?where=PermitType%3D%27Commercial+Multi-Family%27+AND+WorkClass%3D%27New%27&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssuedDate+DESC"
+      ],
+      "signalType": "Upcoming",
+      "signal": "Opens: not public yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet",
+      "score": 13,
+      "isNew": false
+    },
+    {
+      "id": "az-31",
+      "property": "Unnamed project",
+      "community": null,
+      "city": "Mesa",
+      "address": null,
+      "units": 36,
+      "stage": "permitted",
+      "permitDate": "2025-07-30",
+      "openingDate": null,
+      "saleDate": null,
+      "buyer": null,
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "permit": "https://data.mesaaz.gov/resource/dzpk-hxfb.json?type_of_work=Multi-Family+Residential&%24order=issued_date+DESC&%24limit=500"
+      },
+      "sources": [
+        "https://data.mesaaz.gov/resource/dzpk-hxfb.json?type_of_work=Multi-Family+Residential&%24order=issued_date+DESC&%24limit=500"
+      ],
+      "signalType": "Upcoming",
+      "signal": "Opens: not public yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 36 units \u00b7 software not picked yet",
+      "score": 10,
+      "isNew": false
+    },
+    {
+      "id": "az-32",
+      "property": "Unnamed project",
+      "community": null,
+      "city": "Mesa",
+      "address": null,
+      "units": 36,
+      "stage": "permitted",
+      "permitDate": "2025-08-07",
+      "openingDate": null,
+      "saleDate": null,
+      "buyer": null,
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "permit": "https://data.mesaaz.gov/resource/dzpk-hxfb.json?type_of_work=Multi-Family+Residential&%24order=issued_date+DESC&%24limit=500"
+      },
+      "sources": [
+        "https://data.mesaaz.gov/resource/dzpk-hxfb.json?type_of_work=Multi-Family+Residential&%24order=issued_date+DESC&%24limit=500"
+      ],
+      "signalType": "Upcoming",
+      "signal": "Opens: not public yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 36 units \u00b7 software not picked yet",
+      "score": 7,
+      "isNew": false
+    },
+    {
+      "id": "az-33",
+      "property": "7101 N 27Th Ave",
+      "community": "7101 N 27Th Ave",
+      "city": "Phoenix",
+      "address": "7101 N 27TH AVE",
+      "units": null,
+      "stage": "permitted",
+      "permitDate": "2025-08-07",
+      "openingDate": null,
+      "saleDate": null,
+      "buyer": null,
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "permit": "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
+      },
+      "sources": [
+        "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
+      ],
+      "signalType": "Upcoming",
+      "signal": "Opens: not public yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet",
+      "score": 4,
+      "isNew": false
+    },
+    {
+      "id": "az-34",
+      "property": "515 N Mesa Dr",
+      "community": "515 N Mesa Dr",
+      "city": "Mesa",
+      "address": "515 N MESA DR",
+      "units": 60,
+      "stage": "permitted",
+      "permitDate": "2025-09-08",
+      "openingDate": null,
+      "saleDate": null,
+      "buyer": null,
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "permit": "https://data.mesaaz.gov/resource/dzpk-hxfb.json?type_of_work=Multi-Family+Residential&%24order=issued_date+DESC&%24limit=500"
+      },
+      "sources": [
+        "https://data.mesaaz.gov/resource/dzpk-hxfb.json?type_of_work=Multi-Family+Residential&%24order=issued_date+DESC&%24limit=500"
+      ],
+      "signalType": "Upcoming",
+      "signal": "Opens: not public yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 60 units \u00b7 software not picked yet",
+      "score": 1,
+      "isNew": false
+    },
+    {
+      "id": "az-35",
+      "property": "7500 S 32Nd St",
+      "community": "7500 S 32Nd St",
+      "city": "Phoenix",
+      "address": "7500 S 32ND ST",
+      "units": null,
+      "stage": "permitted",
+      "permitDate": "2025-09-08",
+      "openingDate": null,
+      "saleDate": null,
+      "buyer": null,
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "permit": "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
+      },
+      "sources": [
+        "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
+      ],
+      "signalType": "Upcoming",
+      "signal": "Opens: not public yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet",
+      "score": 0,
+      "isNew": false
+    },
+    {
+      "id": "az-36",
+      "property": "1145 S Rowen",
+      "community": "1145 S Rowen",
+      "city": "Mesa",
+      "address": "1145 S ROWEN",
+      "units": null,
+      "stage": "permitted",
+      "permitDate": "2025-10-09",
+      "openingDate": null,
+      "saleDate": null,
+      "buyer": null,
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "permit": "https://data.mesaaz.gov/resource/dzpk-hxfb.json?type_of_work=Multi-Family+Residential&%24order=issued_date+DESC&%24limit=500"
+      },
+      "sources": [
+        "https://data.mesaaz.gov/resource/dzpk-hxfb.json?type_of_work=Multi-Family+Residential&%24order=issued_date+DESC&%24limit=500"
+      ],
+      "signalType": "Upcoming",
+      "signal": "Opens: not public yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet",
+      "score": 0,
+      "isNew": false
+    },
+    {
+      "id": "az-37",
+      "property": "2261 E Mcdowell Rd",
+      "community": "2261 E Mcdowell Rd",
+      "city": "Mesa",
+      "address": "2261 E MCDOWELL RD",
+      "units": 222,
+      "stage": "permitted",
+      "permitDate": "2025-10-14",
+      "openingDate": null,
+      "saleDate": null,
+      "buyer": null,
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "permit": "https://data.mesaaz.gov/resource/dzpk-hxfb.json?type_of_work=Multi-Family+Residential&%24order=issued_date+DESC&%24limit=500"
+      },
+      "sources": [
+        "https://data.mesaaz.gov/resource/dzpk-hxfb.json?type_of_work=Multi-Family+Residential&%24order=issued_date+DESC&%24limit=500"
+      ],
+      "signalType": "Upcoming",
+      "signal": "Opens: not public yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 222 units \u00b7 software not picked yet",
+      "score": 0,
+      "isNew": false
+    },
+    {
+      "id": "az-38",
+      "property": "Astria",
+      "community": "Astria",
+      "city": "Tempe",
+      "address": "217 E 7TH ST",
+      "units": 380,
+      "stage": "permitted",
+      "permitDate": "2025-10-22",
+      "openingDate": null,
+      "saleDate": null,
+      "buyer": null,
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "permit": "https://services.arcgis.com/lQySeXwbBg53XWDi/arcgis/rest/services/building_permits/FeatureServer/0/query?where=HousingUnits%3E%3D20&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssuedDate+DESC"
+      },
+      "sources": [
+        "https://services.arcgis.com/lQySeXwbBg53XWDi/arcgis/rest/services/building_permits/FeatureServer/0/query?where=HousingUnits%3E%3D20&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssuedDate+DESC"
+      ],
+      "signalType": "Upcoming",
+      "signal": "Opens: not public yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 380 units \u00b7 software not picked yet",
+      "score": 0,
+      "isNew": false
+    },
+    {
+      "id": "az-39",
+      "property": "8927 N 10Th St",
+      "community": "8927 N 10Th St",
+      "city": "Phoenix",
+      "address": "8927 N 10TH ST",
+      "units": null,
+      "stage": "permitted",
+      "permitDate": "2025-10-27",
+      "openingDate": null,
+      "saleDate": null,
+      "buyer": null,
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "permit": "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
+      },
+      "sources": [
+        "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
+      ],
+      "signalType": "Upcoming",
+      "signal": "Opens: not public yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet",
+      "score": 0,
+      "isNew": false
+    },
+    {
+      "id": "az-40",
+      "property": "2328 N 52Nd St",
+      "community": "2328 N 52Nd St",
+      "city": "Phoenix",
+      "address": "2328 N 52ND ST",
+      "units": null,
+      "stage": "permitted",
+      "permitDate": "2025-10-28",
+      "openingDate": null,
+      "saleDate": null,
+      "buyer": null,
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "permit": "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
+      },
+      "sources": [
+        "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
+      ],
+      "signalType": "Upcoming",
+      "signal": "Opens: not public yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet",
+      "score": 0,
+      "isNew": false
+    },
+    {
+      "id": "az-41",
+      "property": "Wolsiffer Residence",
+      "community": "Wolsiffer Residence",
+      "city": "Tempe",
+      "address": "1036 E BISHOP CIR",
+      "units": 57,
+      "stage": "permitted",
+      "permitDate": "2025-11-03",
+      "openingDate": null,
+      "saleDate": null,
+      "buyer": null,
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "permit": "https://services.arcgis.com/lQySeXwbBg53XWDi/arcgis/rest/services/building_permits/FeatureServer/0/query?where=HousingUnits%3E%3D20&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssuedDate+DESC"
+      },
+      "sources": [
+        "https://services.arcgis.com/lQySeXwbBg53XWDi/arcgis/rest/services/building_permits/FeatureServer/0/query?where=HousingUnits%3E%3D20&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssuedDate+DESC"
+      ],
+      "signalType": "Upcoming",
+      "signal": "Opens: not public yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 57 units \u00b7 software not picked yet",
+      "score": 0,
+      "isNew": false
+    },
+    {
+      "id": "az-42",
+      "property": "10136 E Southern Ave",
+      "community": "10136 E Southern Ave",
+      "city": "Mesa",
+      "address": "10136 E SOUTHERN AVE",
+      "units": null,
+      "stage": "permitted",
+      "permitDate": "2025-11-05",
+      "openingDate": null,
+      "saleDate": null,
+      "buyer": null,
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "permit": "https://data.mesaaz.gov/resource/dzpk-hxfb.json?type_of_work=Multi-Family+Residential&%24order=issued_date+DESC&%24limit=500"
+      },
+      "sources": [
+        "https://data.mesaaz.gov/resource/dzpk-hxfb.json?type_of_work=Multi-Family+Residential&%24order=issued_date+DESC&%24limit=500"
+      ],
+      "signalType": "Upcoming",
+      "signal": "Opens: not public yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet",
+      "score": 0,
+      "isNew": false
+    },
+    {
+      "id": "az-43",
+      "property": "144 S 90Th St 123",
+      "community": "144 S 90Th St 123",
+      "city": "Mesa",
+      "address": "144 S 90TH ST 123",
+      "units": 29,
+      "stage": "permitted",
+      "permitDate": "2025-11-13",
+      "openingDate": null,
+      "saleDate": null,
+      "buyer": null,
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "permit": "https://data.mesaaz.gov/resource/dzpk-hxfb.json?type_of_work=Multi-Family+Residential&%24order=issued_date+DESC&%24limit=500"
+      },
+      "sources": [
+        "https://data.mesaaz.gov/resource/dzpk-hxfb.json?type_of_work=Multi-Family+Residential&%24order=issued_date+DESC&%24limit=500"
+      ],
+      "signalType": "Upcoming",
+      "signal": "Opens: not public yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 29 units \u00b7 software not picked yet",
+      "score": 0,
+      "isNew": false
+    },
+    {
+      "id": "az-44",
+      "property": "144 S 90Th St 103",
+      "community": "144 S 90Th St 103",
+      "city": "Mesa",
+      "address": "144 S 90TH ST 103",
+      "units": 29,
+      "stage": "permitted",
+      "permitDate": "2025-11-13",
+      "openingDate": null,
+      "saleDate": null,
+      "buyer": null,
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "permit": "https://data.mesaaz.gov/resource/dzpk-hxfb.json?type_of_work=Multi-Family+Residential&%24order=issued_date+DESC&%24limit=500"
+      },
+      "sources": [
+        "https://data.mesaaz.gov/resource/dzpk-hxfb.json?type_of_work=Multi-Family+Residential&%24order=issued_date+DESC&%24limit=500"
+      ],
+      "signalType": "Upcoming",
+      "signal": "Opens: not public yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 29 units \u00b7 software not picked yet",
+      "score": 0,
+      "isNew": false
+    },
+    {
+      "id": "az-45",
+      "property": "144 S 90Th St 107",
+      "community": "144 S 90Th St 107",
+      "city": "Mesa",
+      "address": "144 S 90TH ST 107",
+      "units": 29,
+      "stage": "permitted",
+      "permitDate": "2025-11-13",
+      "openingDate": null,
+      "saleDate": null,
+      "buyer": null,
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "permit": "https://data.mesaaz.gov/resource/dzpk-hxfb.json?type_of_work=Multi-Family+Residential&%24order=issued_date+DESC&%24limit=500"
+      },
+      "sources": [
+        "https://data.mesaaz.gov/resource/dzpk-hxfb.json?type_of_work=Multi-Family+Residential&%24order=issued_date+DESC&%24limit=500"
+      ],
+      "signalType": "Upcoming",
+      "signal": "Opens: not public yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 29 units \u00b7 software not picked yet",
+      "score": 0,
+      "isNew": false
+    },
+    {
+      "id": "az-46",
+      "property": "144 S 90Th St 119",
+      "community": "144 S 90Th St 119",
+      "city": "Mesa",
+      "address": "144 S 90TH ST 119",
+      "units": 29,
+      "stage": "permitted",
+      "permitDate": "2025-11-13",
+      "openingDate": null,
+      "saleDate": null,
+      "buyer": null,
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "permit": "https://data.mesaaz.gov/resource/dzpk-hxfb.json?type_of_work=Multi-Family+Residential&%24order=issued_date+DESC&%24limit=500"
+      },
+      "sources": [
+        "https://data.mesaaz.gov/resource/dzpk-hxfb.json?type_of_work=Multi-Family+Residential&%24order=issued_date+DESC&%24limit=500"
+      ],
+      "signalType": "Upcoming",
+      "signal": "Opens: not public yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 29 units \u00b7 software not picked yet",
+      "score": 0,
+      "isNew": false
+    },
+    {
+      "id": "az-47",
+      "property": "144 S 90Th St 108",
+      "community": "144 S 90Th St 108",
+      "city": "Mesa",
+      "address": "144 S 90TH ST 108",
+      "units": 29,
+      "stage": "permitted",
+      "permitDate": "2025-11-13",
+      "openingDate": null,
+      "saleDate": null,
+      "buyer": null,
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "permit": "https://data.mesaaz.gov/resource/dzpk-hxfb.json?type_of_work=Multi-Family+Residential&%24order=issued_date+DESC&%24limit=500"
+      },
+      "sources": [
+        "https://data.mesaaz.gov/resource/dzpk-hxfb.json?type_of_work=Multi-Family+Residential&%24order=issued_date+DESC&%24limit=500"
+      ],
+      "signalType": "Upcoming",
+      "signal": "Opens: not public yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 29 units \u00b7 software not picked yet",
+      "score": 0,
+      "isNew": false
+    },
+    {
+      "id": "az-48",
+      "property": "144 S 90Th St 115",
+      "community": "144 S 90Th St 115",
+      "city": "Mesa",
+      "address": "144 S 90TH ST 115",
+      "units": 29,
+      "stage": "permitted",
+      "permitDate": "2025-11-13",
+      "openingDate": null,
+      "saleDate": null,
+      "buyer": null,
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "permit": "https://data.mesaaz.gov/resource/dzpk-hxfb.json?type_of_work=Multi-Family+Residential&%24order=issued_date+DESC&%24limit=500"
+      },
+      "sources": [
+        "https://data.mesaaz.gov/resource/dzpk-hxfb.json?type_of_work=Multi-Family+Residential&%24order=issued_date+DESC&%24limit=500"
+      ],
+      "signalType": "Upcoming",
+      "signal": "Opens: not public yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 29 units \u00b7 software not picked yet",
+      "score": 0,
+      "isNew": false
+    },
+    {
+      "id": "az-49",
+      "property": "Unnamed project",
+      "community": null,
+      "city": "Mesa",
+      "address": null,
+      "units": 29,
+      "stage": "permitted",
+      "permitDate": "2025-11-13",
+      "openingDate": null,
+      "saleDate": null,
+      "buyer": null,
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "permit": "https://data.mesaaz.gov/resource/dzpk-hxfb.json?type_of_work=Multi-Family+Residential&%24order=issued_date+DESC&%24limit=500"
+      },
+      "sources": [
+        "https://data.mesaaz.gov/resource/dzpk-hxfb.json?type_of_work=Multi-Family+Residential&%24order=issued_date+DESC&%24limit=500"
+      ],
+      "signalType": "Upcoming",
+      "signal": "Opens: not public yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 29 units \u00b7 software not picked yet",
+      "score": 0,
+      "isNew": false
+    },
+    {
+      "id": "az-50",
+      "property": "144 S 90Th St 102",
+      "community": "144 S 90Th St 102",
+      "city": "Mesa",
+      "address": "144 S 90TH ST 102",
+      "units": 29,
+      "stage": "permitted",
+      "permitDate": "2025-11-13",
+      "openingDate": null,
+      "saleDate": null,
+      "buyer": null,
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "permit": "https://data.mesaaz.gov/resource/dzpk-hxfb.json?type_of_work=Multi-Family+Residential&%24order=issued_date+DESC&%24limit=500"
+      },
+      "sources": [
+        "https://data.mesaaz.gov/resource/dzpk-hxfb.json?type_of_work=Multi-Family+Residential&%24order=issued_date+DESC&%24limit=500"
+      ],
+      "signalType": "Upcoming",
+      "signal": "Opens: not public yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 29 units \u00b7 software not picked yet",
+      "score": 0,
+      "isNew": false
+    },
+    {
+      "id": "az-51",
+      "property": "144 S 90Th St 129",
+      "community": "144 S 90Th St 129",
+      "city": "Mesa",
+      "address": "144 S 90TH ST 129",
+      "units": 29,
+      "stage": "permitted",
+      "permitDate": "2025-11-13",
+      "openingDate": null,
+      "saleDate": null,
+      "buyer": null,
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "permit": "https://data.mesaaz.gov/resource/dzpk-hxfb.json?type_of_work=Multi-Family+Residential&%24order=issued_date+DESC&%24limit=500"
+      },
+      "sources": [
+        "https://data.mesaaz.gov/resource/dzpk-hxfb.json?type_of_work=Multi-Family+Residential&%24order=issued_date+DESC&%24limit=500"
+      ],
+      "signalType": "Upcoming",
+      "signal": "Opens: not public yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 29 units \u00b7 software not picked yet",
+      "score": 0,
+      "isNew": false
+    },
+    {
+      "id": "az-52",
+      "property": "144 S 90Th St 106",
+      "community": "144 S 90Th St 106",
+      "city": "Mesa",
+      "address": "144 S 90TH ST 106",
+      "units": 29,
+      "stage": "permitted",
+      "permitDate": "2025-11-13",
+      "openingDate": null,
+      "saleDate": null,
+      "buyer": null,
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "permit": "https://data.mesaaz.gov/resource/dzpk-hxfb.json?type_of_work=Multi-Family+Residential&%24order=issued_date+DESC&%24limit=500"
+      },
+      "sources": [
+        "https://data.mesaaz.gov/resource/dzpk-hxfb.json?type_of_work=Multi-Family+Residential&%24order=issued_date+DESC&%24limit=500"
+      ],
+      "signalType": "Upcoming",
+      "signal": "Opens: not public yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 29 units \u00b7 software not picked yet",
+      "score": 0,
+      "isNew": false
+    },
+    {
+      "id": "az-53",
+      "property": "144 S 90Th St 109",
+      "community": "144 S 90Th St 109",
+      "city": "Mesa",
+      "address": "144 S 90TH ST 109",
+      "units": 29,
+      "stage": "permitted",
+      "permitDate": "2025-11-13",
+      "openingDate": null,
+      "saleDate": null,
+      "buyer": null,
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "permit": "https://data.mesaaz.gov/resource/dzpk-hxfb.json?type_of_work=Multi-Family+Residential&%24order=issued_date+DESC&%24limit=500"
+      },
+      "sources": [
+        "https://data.mesaaz.gov/resource/dzpk-hxfb.json?type_of_work=Multi-Family+Residential&%24order=issued_date+DESC&%24limit=500"
+      ],
+      "signalType": "Upcoming",
+      "signal": "Opens: not public yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 29 units \u00b7 software not picked yet",
+      "score": 0,
+      "isNew": false
+    },
+    {
+      "id": "az-54",
+      "property": "144 S 90Th St 104",
+      "community": "144 S 90Th St 104",
+      "city": "Mesa",
+      "address": "144 S 90TH ST 104",
+      "units": 29,
+      "stage": "permitted",
+      "permitDate": "2025-11-13",
+      "openingDate": null,
+      "saleDate": null,
+      "buyer": null,
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "permit": "https://data.mesaaz.gov/resource/dzpk-hxfb.json?type_of_work=Multi-Family+Residential&%24order=issued_date+DESC&%24limit=500"
+      },
+      "sources": [
+        "https://data.mesaaz.gov/resource/dzpk-hxfb.json?type_of_work=Multi-Family+Residential&%24order=issued_date+DESC&%24limit=500"
+      ],
+      "signalType": "Upcoming",
+      "signal": "Opens: not public yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 29 units \u00b7 software not picked yet",
+      "score": 0,
+      "isNew": false
+    },
+    {
+      "id": "az-55",
+      "property": "144 S 90Th St 128",
+      "community": "144 S 90Th St 128",
+      "city": "Mesa",
+      "address": "144 S 90TH ST 128",
+      "units": 29,
+      "stage": "permitted",
+      "permitDate": "2025-11-13",
+      "openingDate": null,
+      "saleDate": null,
+      "buyer": null,
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "permit": "https://data.mesaaz.gov/resource/dzpk-hxfb.json?type_of_work=Multi-Family+Residential&%24order=issued_date+DESC&%24limit=500"
+      },
+      "sources": [
+        "https://data.mesaaz.gov/resource/dzpk-hxfb.json?type_of_work=Multi-Family+Residential&%24order=issued_date+DESC&%24limit=500"
+      ],
+      "signalType": "Upcoming",
+      "signal": "Opens: not public yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 29 units \u00b7 software not picked yet",
+      "score": 0,
+      "isNew": false
+    },
+    {
+      "id": "az-56",
+      "property": "144 S 90Th St 101",
+      "community": "144 S 90Th St 101",
+      "city": "Mesa",
+      "address": "144 S 90TH ST 101",
+      "units": 29,
+      "stage": "permitted",
+      "permitDate": "2025-11-13",
+      "openingDate": null,
+      "saleDate": null,
+      "buyer": null,
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "permit": "https://data.mesaaz.gov/resource/dzpk-hxfb.json?type_of_work=Multi-Family+Residential&%24order=issued_date+DESC&%24limit=500"
+      },
+      "sources": [
+        "https://data.mesaaz.gov/resource/dzpk-hxfb.json?type_of_work=Multi-Family+Residential&%24order=issued_date+DESC&%24limit=500"
+      ],
+      "signalType": "Upcoming",
+      "signal": "Opens: not public yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 29 units \u00b7 software not picked yet",
+      "score": 0,
+      "isNew": false
+    },
+    {
+      "id": "az-57",
+      "property": "144 S 90Th St 127",
+      "community": "144 S 90Th St 127",
+      "city": "Mesa",
+      "address": "144 S 90TH ST 127",
+      "units": 29,
+      "stage": "permitted",
+      "permitDate": "2025-11-13",
+      "openingDate": null,
+      "saleDate": null,
+      "buyer": null,
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "permit": "https://data.mesaaz.gov/resource/dzpk-hxfb.json?type_of_work=Multi-Family+Residential&%24order=issued_date+DESC&%24limit=500"
+      },
+      "sources": [
+        "https://data.mesaaz.gov/resource/dzpk-hxfb.json?type_of_work=Multi-Family+Residential&%24order=issued_date+DESC&%24limit=500"
+      ],
+      "signalType": "Upcoming",
+      "signal": "Opens: not public yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 29 units \u00b7 software not picked yet",
+      "score": 0,
+      "isNew": false
+    },
+    {
+      "id": "az-58",
+      "property": "144 S 90Th St 105",
+      "community": "144 S 90Th St 105",
+      "city": "Mesa",
+      "address": "144 S 90TH ST 105",
+      "units": 29,
+      "stage": "permitted",
+      "permitDate": "2025-11-13",
+      "openingDate": null,
+      "saleDate": null,
+      "buyer": null,
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "permit": "https://data.mesaaz.gov/resource/dzpk-hxfb.json?type_of_work=Multi-Family+Residential&%24order=issued_date+DESC&%24limit=500"
+      },
+      "sources": [
+        "https://data.mesaaz.gov/resource/dzpk-hxfb.json?type_of_work=Multi-Family+Residential&%24order=issued_date+DESC&%24limit=500"
+      ],
+      "signalType": "Upcoming",
+      "signal": "Opens: not public yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 29 units \u00b7 software not picked yet",
+      "score": 0,
+      "isNew": false
+    },
+    {
+      "id": "az-59",
+      "property": "144 S 90Th St 112",
+      "community": "144 S 90Th St 112",
+      "city": "Mesa",
+      "address": "144 S 90TH ST 112",
+      "units": 29,
+      "stage": "permitted",
+      "permitDate": "2025-11-13",
+      "openingDate": null,
+      "saleDate": null,
+      "buyer": null,
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "permit": "https://data.mesaaz.gov/resource/dzpk-hxfb.json?type_of_work=Multi-Family+Residential&%24order=issued_date+DESC&%24limit=500"
+      },
+      "sources": [
+        "https://data.mesaaz.gov/resource/dzpk-hxfb.json?type_of_work=Multi-Family+Residential&%24order=issued_date+DESC&%24limit=500"
+      ],
+      "signalType": "Upcoming",
+      "signal": "Opens: not public yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 29 units \u00b7 software not picked yet",
+      "score": 0,
+      "isNew": false
+    },
+    {
+      "id": "az-60",
+      "property": "The Samuel",
+      "community": "The Samuel",
+      "city": "Tempe",
+      "address": "712 S COLLEGE AVE",
+      "units": 226,
+      "stage": "permitted",
+      "permitDate": "2025-11-20",
+      "openingDate": null,
+      "saleDate": null,
+      "buyer": null,
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "permit": "https://services.arcgis.com/lQySeXwbBg53XWDi/arcgis/rest/services/building_permits/FeatureServer/0/query?where=HousingUnits%3E%3D20&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssuedDate+DESC"
+      },
+      "sources": [
+        "https://services.arcgis.com/lQySeXwbBg53XWDi/arcgis/rest/services/building_permits/FeatureServer/0/query?where=HousingUnits%3E%3D20&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssuedDate+DESC"
+      ],
+      "signalType": "Upcoming",
+      "signal": "Opens: not public yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 226 units \u00b7 software not picked yet",
+      "score": 0,
+      "isNew": false
+    },
+    {
+      "id": "az-61",
+      "property": "Friendship Village",
+      "community": "Friendship Village",
+      "city": "Tempe",
+      "address": "2645 E SOUTHERN AVE",
+      "units": 71,
+      "stage": "permitted",
+      "permitDate": "2025-12-03",
+      "openingDate": null,
+      "saleDate": null,
+      "buyer": null,
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "permit": "https://services.arcgis.com/lQySeXwbBg53XWDi/arcgis/rest/services/building_permits/FeatureServer/0/query?where=HousingUnits%3E%3D20&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssuedDate+DESC"
+      },
+      "sources": [
+        "https://services.arcgis.com/lQySeXwbBg53XWDi/arcgis/rest/services/building_permits/FeatureServer/0/query?where=HousingUnits%3E%3D20&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssuedDate+DESC"
+      ],
+      "signalType": "Upcoming",
+      "signal": "Opens: not public yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 71 units \u00b7 software not picked yet",
+      "score": 0,
+      "isNew": false
+    },
+    {
+      "id": "az-62",
+      "property": "12180 W Frier Rd",
+      "community": "12180 W Frier Rd",
+      "city": "Maricopa County unincorporated",
+      "address": "12180 W FRIER RD",
+      "units": 144,
+      "stage": "permitted",
+      "permitDate": "2025-12-09",
+      "openingDate": null,
+      "saleDate": null,
+      "buyer": null,
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "permit": "https://services.arcgis.com/ykpntM6e3tHvzKRJ/arcgis/rest/services/Building_Permits_(view)/FeatureServer/0/query?where=WorkClass%3D%27New+Construction%27+AND+%28PermitDescription+LIKE+%27%25MULTI-FAMILY%25%27+OR+PermitDescription+LIKE+%27%25MULTI+FAMILY%25%27+OR+PermitDescription+LIKE+%27%25APARTMENT%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssuedDate+DESC"
+      },
+      "sources": [
+        "https://services.arcgis.com/ykpntM6e3tHvzKRJ/arcgis/rest/services/Building_Permits_(view)/FeatureServer/0/query?where=WorkClass%3D%27New+Construction%27+AND+%28PermitDescription+LIKE+%27%25MULTI-FAMILY%25%27+OR+PermitDescription+LIKE+%27%25MULTI+FAMILY%25%27+OR+PermitDescription+LIKE+%27%25APARTMENT%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssuedDate+DESC"
+      ],
+      "signalType": "Upcoming",
+      "signal": "Opens: not public yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 144 units \u00b7 software not picked yet",
+      "score": 0,
+      "isNew": false
+    },
+    {
+      "id": "az-63",
+      "property": "12180 N Frier Dr",
+      "community": "12180 N Frier Dr",
+      "city": "Maricopa County unincorporated",
+      "address": "12180 N FRIER DR",
+      "units": 144,
+      "stage": "permitted",
+      "permitDate": "2025-12-09",
+      "openingDate": null,
+      "saleDate": null,
+      "buyer": null,
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "permit": "https://services.arcgis.com/ykpntM6e3tHvzKRJ/arcgis/rest/services/Building_Permits_(view)/FeatureServer/0/query?where=WorkClass%3D%27New+Construction%27+AND+%28PermitDescription+LIKE+%27%25MULTI-FAMILY%25%27+OR+PermitDescription+LIKE+%27%25MULTI+FAMILY%25%27+OR+PermitDescription+LIKE+%27%25APARTMENT%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssuedDate+DESC"
+      },
+      "sources": [
+        "https://services.arcgis.com/ykpntM6e3tHvzKRJ/arcgis/rest/services/Building_Permits_(view)/FeatureServer/0/query?where=WorkClass%3D%27New+Construction%27+AND+%28PermitDescription+LIKE+%27%25MULTI-FAMILY%25%27+OR+PermitDescription+LIKE+%27%25MULTI+FAMILY%25%27+OR+PermitDescription+LIKE+%27%25APARTMENT%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssuedDate+DESC"
+      ],
+      "signalType": "Upcoming",
+      "signal": "Opens: not public yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 144 units \u00b7 software not picked yet",
+      "score": 0,
+      "isNew": false
+    },
+    {
+      "id": "az-64",
+      "property": "12180 W Frier Dr",
+      "community": "12180 W Frier Dr",
+      "city": "Maricopa County unincorporated",
+      "address": "12180 W FRIER DR",
+      "units": 144,
+      "stage": "permitted",
+      "permitDate": "2025-12-09",
+      "openingDate": null,
+      "saleDate": null,
+      "buyer": null,
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "permit": "https://services.arcgis.com/ykpntM6e3tHvzKRJ/arcgis/rest/services/Building_Permits_(view)/FeatureServer/0/query?where=WorkClass%3D%27New+Construction%27+AND+%28PermitDescription+LIKE+%27%25MULTI-FAMILY%25%27+OR+PermitDescription+LIKE+%27%25MULTI+FAMILY%25%27+OR+PermitDescription+LIKE+%27%25APARTMENT%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssuedDate+DESC"
+      },
+      "sources": [
+        "https://services.arcgis.com/ykpntM6e3tHvzKRJ/arcgis/rest/services/Building_Permits_(view)/FeatureServer/0/query?where=WorkClass%3D%27New+Construction%27+AND+%28PermitDescription+LIKE+%27%25MULTI-FAMILY%25%27+OR+PermitDescription+LIKE+%27%25MULTI+FAMILY%25%27+OR+PermitDescription+LIKE+%27%25APARTMENT%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssuedDate+DESC"
+      ],
+      "signalType": "Upcoming",
+      "signal": "Opens: not public yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 144 units \u00b7 software not picked yet",
+      "score": 0,
+      "isNew": false
+    },
+    {
+      "id": "az-65",
+      "property": "25840 S Power Rd Bldg 1",
+      "community": "25840 S Power Rd Bldg 1",
+      "city": "Maricopa County unincorporated",
+      "address": "25840 S POWER RD BLDG 1",
+      "units": 24,
+      "stage": "permitted",
+      "permitDate": "2025-12-09",
+      "openingDate": null,
+      "saleDate": null,
+      "buyer": null,
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "permit": "https://services.arcgis.com/ykpntM6e3tHvzKRJ/arcgis/rest/services/Building_Permits_(view)/FeatureServer/0/query?where=WorkClass%3D%27New+Construction%27+AND+%28PermitDescription+LIKE+%27%25MULTI-FAMILY%25%27+OR+PermitDescription+LIKE+%27%25MULTI+FAMILY%25%27+OR+PermitDescription+LIKE+%27%25APARTMENT%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssuedDate+DESC"
+      },
+      "sources": [
+        "https://services.arcgis.com/ykpntM6e3tHvzKRJ/arcgis/rest/services/Building_Permits_(view)/FeatureServer/0/query?where=WorkClass%3D%27New+Construction%27+AND+%28PermitDescription+LIKE+%27%25MULTI-FAMILY%25%27+OR+PermitDescription+LIKE+%27%25MULTI+FAMILY%25%27+OR+PermitDescription+LIKE+%27%25APARTMENT%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssuedDate+DESC"
+      ],
+      "signalType": "Upcoming",
+      "signal": "Opens: not public yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 24 units \u00b7 software not picked yet",
+      "score": 0,
+      "isNew": false
+    },
+    {
+      "id": "az-66",
+      "property": "1010 E Greenway Pkwy",
+      "community": "1010 E Greenway Pkwy",
+      "city": "Phoenix",
+      "address": "1010 E GREENWAY PKWY",
+      "units": null,
+      "stage": "permitted",
+      "permitDate": "2025-12-12",
+      "openingDate": null,
+      "saleDate": null,
+      "buyer": null,
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "permit": "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
+      },
+      "sources": [
+        "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
+      ],
+      "signalType": "Upcoming",
+      "signal": "Opens: not public yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet",
+      "score": 0,
+      "isNew": false
+    },
+    {
+      "id": "az-67",
+      "property": "6939 W Thomas Rd",
+      "community": "6939 W Thomas Rd",
+      "city": "Phoenix",
+      "address": "6939 W THOMAS RD",
+      "units": null,
+      "stage": "permitted",
+      "permitDate": "2025-12-15",
+      "openingDate": null,
+      "saleDate": null,
+      "buyer": null,
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "permit": "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
+      },
+      "sources": [
+        "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
+      ],
+      "signalType": "Upcoming",
+      "signal": "Opens: not public yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet",
+      "score": 0,
+      "isNew": false
+    },
+    {
+      "id": "az-68",
+      "property": "16400 N 19Th Ave",
+      "community": "16400 N 19Th Ave",
+      "city": "Phoenix",
+      "address": "16400 N 19TH AVE",
+      "units": null,
+      "stage": "permitted",
+      "permitDate": "2026-02-24",
+      "openingDate": null,
+      "saleDate": null,
+      "buyer": null,
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "permit": "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
+      },
+      "sources": [
+        "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
+      ],
+      "signalType": "Upcoming",
+      "signal": "Opens: not public yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet",
+      "score": 0,
+      "isNew": false
+    },
+    {
+      "id": "az-69",
+      "property": "Unnamed project",
+      "community": null,
+      "city": "Mesa",
+      "address": null,
+      "units": 260,
+      "stage": "permitted",
+      "permitDate": "2026-03-18",
+      "openingDate": null,
+      "saleDate": null,
+      "buyer": null,
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "permit": "https://data.mesaaz.gov/resource/dzpk-hxfb.json?type_of_work=Multi-Family+Residential&%24order=issued_date+DESC&%24limit=500"
+      },
+      "sources": [
+        "https://data.mesaaz.gov/resource/dzpk-hxfb.json?type_of_work=Multi-Family+Residential&%24order=issued_date+DESC&%24limit=500"
+      ],
+      "signalType": "Upcoming",
+      "signal": "Opens: not public yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 260 units \u00b7 software not picked yet",
+      "score": 0,
+      "isNew": false
+    },
+    {
+      "id": "az-70",
+      "property": "4580 E Cactus Rd",
+      "community": "4580 E Cactus Rd",
+      "city": "Phoenix",
+      "address": "4580 E CACTUS RD",
+      "units": null,
+      "stage": "permitted",
+      "permitDate": "2026-03-27",
+      "openingDate": null,
+      "saleDate": null,
+      "buyer": null,
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "permit": "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
+      },
+      "sources": [
+        "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
+      ],
+      "signalType": "Upcoming",
+      "signal": "Opens: not public yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet",
+      "score": 0,
+      "isNew": false
+    },
+    {
+      "id": "az-71",
+      "property": "4638 E Banner Gateway Dr",
+      "community": "4638 E Banner Gateway Dr",
+      "city": "Mesa",
+      "address": "4638 E BANNER GATEWAY DR",
+      "units": 260,
+      "stage": "permitted",
+      "permitDate": "2026-04-02",
+      "openingDate": null,
+      "saleDate": null,
+      "buyer": null,
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "permit": "https://data.mesaaz.gov/resource/dzpk-hxfb.json?type_of_work=Multi-Family+Residential&%24order=issued_date+DESC&%24limit=500"
+      },
+      "sources": [
+        "https://data.mesaaz.gov/resource/dzpk-hxfb.json?type_of_work=Multi-Family+Residential&%24order=issued_date+DESC&%24limit=500"
+      ],
+      "signalType": "Upcoming",
+      "signal": "Opens: not public yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 260 units \u00b7 software not picked yet",
+      "score": 0,
+      "isNew": false
+    },
+    {
+      "id": "az-72",
+      "property": "2102 E Broadway Rd",
+      "community": "2102 E Broadway Rd",
+      "city": "Mesa",
+      "address": "2102 E BROADWAY RD",
+      "units": null,
+      "stage": "permitted",
+      "permitDate": "2026-04-02",
+      "openingDate": null,
+      "saleDate": null,
+      "buyer": null,
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "permit": "https://data.mesaaz.gov/resource/dzpk-hxfb.json?type_of_work=Multi-Family+Residential&%24order=issued_date+DESC&%24limit=500"
+      },
+      "sources": [
+        "https://data.mesaaz.gov/resource/dzpk-hxfb.json?type_of_work=Multi-Family+Residential&%24order=issued_date+DESC&%24limit=500"
+      ],
+      "signalType": "Upcoming",
+      "signal": "Opens: not public yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet",
+      "score": 0,
+      "isNew": false
+    },
+    {
+      "id": "az-73",
+      "property": "6833 E Hobart St",
+      "community": "6833 E Hobart St",
+      "city": "Mesa",
+      "address": "6833 E HOBART ST",
+      "units": 61,
+      "stage": "permitted",
+      "permitDate": "2026-04-27",
+      "openingDate": null,
+      "saleDate": null,
+      "buyer": null,
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "permit": "https://data.mesaaz.gov/resource/dzpk-hxfb.json?type_of_work=Multi-Family+Residential&%24order=issued_date+DESC&%24limit=500"
+      },
+      "sources": [
+        "https://data.mesaaz.gov/resource/dzpk-hxfb.json?type_of_work=Multi-Family+Residential&%24order=issued_date+DESC&%24limit=500"
+      ],
+      "signalType": "Upcoming",
+      "signal": "Opens: not public yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 61 units \u00b7 software not picked yet",
+      "score": 0,
+      "isNew": false
+    },
+    {
+      "id": "az-74",
+      "property": "10941 E Southern Ave",
+      "community": "10941 E Southern Ave",
+      "city": "Mesa",
+      "address": "10941 E SOUTHERN AVE",
+      "units": 353,
+      "stage": "permitted",
+      "permitDate": "2026-05-05",
+      "openingDate": null,
+      "saleDate": null,
+      "buyer": null,
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "permit": "https://data.mesaaz.gov/resource/dzpk-hxfb.json?type_of_work=Multi-Family+Residential&%24order=issued_date+DESC&%24limit=500"
+      },
+      "sources": [
+        "https://data.mesaaz.gov/resource/dzpk-hxfb.json?type_of_work=Multi-Family+Residential&%24order=issued_date+DESC&%24limit=500"
+      ],
+      "signalType": "Upcoming",
+      "signal": "Opens: not public yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 353 units \u00b7 software not picked yet",
+      "score": 0,
+      "isNew": false
+    },
+    {
+      "id": "az-75",
+      "property": "311 W Main St",
+      "community": "311 W Main St",
+      "city": "Mesa",
+      "address": "311 W MAIN ST",
+      "units": 161,
+      "stage": "permitted",
+      "permitDate": "2026-05-05",
+      "openingDate": null,
+      "saleDate": null,
+      "buyer": null,
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "permit": "https://data.mesaaz.gov/resource/dzpk-hxfb.json?type_of_work=Multi-Family+Residential&%24order=issued_date+DESC&%24limit=500"
+      },
+      "sources": [
+        "https://data.mesaaz.gov/resource/dzpk-hxfb.json?type_of_work=Multi-Family+Residential&%24order=issued_date+DESC&%24limit=500"
+      ],
+      "signalType": "Upcoming",
+      "signal": "Opens: not public yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 161 units \u00b7 software not picked yet",
+      "score": 0,
+      "isNew": false
+    },
+    {
+      "id": "az-76",
+      "property": "1410 S Country Club Dr",
+      "community": "1410 S Country Club Dr",
+      "city": "Mesa",
+      "address": "1410 S COUNTRY CLUB DR",
+      "units": 120,
+      "stage": "permitted",
+      "permitDate": "2026-05-11",
+      "openingDate": null,
+      "saleDate": null,
+      "buyer": null,
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "permit": "https://data.mesaaz.gov/resource/dzpk-hxfb.json?type_of_work=Multi-Family+Residential&%24order=issued_date+DESC&%24limit=500"
+      },
+      "sources": [
+        "https://data.mesaaz.gov/resource/dzpk-hxfb.json?type_of_work=Multi-Family+Residential&%24order=issued_date+DESC&%24limit=500"
+      ],
+      "signalType": "Upcoming",
+      "signal": "Opens: not public yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 120 units \u00b7 software not picked yet",
+      "score": 0,
+      "isNew": false
+    },
+    {
+      "id": "az-77",
+      "property": "Avenue 5/Trovita Rio",
+      "community": "Avenue 5/Trovita Rio",
+      "city": "Tempe",
+      "address": "701 W RIO SALADO PKWY",
+      "units": 206,
+      "stage": "permitted",
+      "permitDate": "2026-05-15",
+      "openingDate": null,
+      "saleDate": null,
+      "buyer": null,
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "permit": "https://services.arcgis.com/lQySeXwbBg53XWDi/arcgis/rest/services/building_permits/FeatureServer/0/query?where=HousingUnits%3E%3D20&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssuedDate+DESC"
+      },
+      "sources": [
+        "https://services.arcgis.com/lQySeXwbBg53XWDi/arcgis/rest/services/building_permits/FeatureServer/0/query?where=HousingUnits%3E%3D20&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssuedDate+DESC"
+      ],
+      "signalType": "Upcoming",
+      "signal": "Opens: not public yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 206 units \u00b7 software not picked yet",
+      "score": 0,
+      "isNew": false
+    },
+    {
+      "id": "az-78",
+      "property": "10222 N 12Th Ave",
+      "community": "10222 N 12Th Ave",
+      "city": "Phoenix",
+      "address": "10222 N 12TH AVE",
+      "units": null,
+      "stage": "permitted",
+      "permitDate": "2026-05-19",
+      "openingDate": null,
+      "saleDate": null,
+      "buyer": null,
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "permit": "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
+      },
+      "sources": [
+        "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
+      ],
+      "signalType": "Upcoming",
+      "signal": "Opens: not public yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet",
+      "score": 0,
+      "isNew": false
+    },
+    {
+      "id": "az-79",
+      "property": "16640 N Scottsdale Rd",
+      "community": "16640 N Scottsdale Rd",
+      "city": "Phoenix",
+      "address": "16640 N SCOTTSDALE RD",
+      "units": null,
+      "stage": "permitted",
+      "permitDate": "2026-05-27",
+      "openingDate": null,
+      "saleDate": null,
+      "buyer": null,
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "permit": "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
+      },
+      "sources": [
+        "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
+      ],
+      "signalType": "Upcoming",
+      "signal": "Opens: not public yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet",
+      "score": 0,
+      "isNew": false
+    },
+    {
+      "id": "az-80",
+      "property": "25200 N 17Th Ave",
+      "community": "25200 N 17Th Ave",
+      "city": "Phoenix",
+      "address": "25200 N 17TH AVE",
+      "units": null,
+      "stage": "permitted",
+      "permitDate": "2026-06-17",
+      "openingDate": null,
+      "saleDate": null,
+      "buyer": null,
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "permit": "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
+      },
+      "sources": [
+        "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
+      ],
+      "signalType": "Upcoming",
+      "signal": "Opens: not public yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet",
+      "score": 0,
+      "isNew": false
+    },
+    {
+      "id": "az-81",
+      "property": "26800 N 27Th Ave",
+      "community": "26800 N 27Th Ave",
+      "city": "Phoenix",
+      "address": "26800 N 27TH AVE",
+      "units": null,
+      "stage": "permitted",
+      "permitDate": "2026-06-24",
+      "openingDate": null,
+      "saleDate": null,
+      "buyer": null,
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "permit": "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
+      },
+      "sources": [
+        "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
+      ],
+      "signalType": "Upcoming",
+      "signal": "Opens: not public yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet",
+      "score": 0,
+      "isNew": false
+    },
+    {
+      "id": "az-82",
+      "property": "1500 N Central Ave",
+      "community": "1500 N Central Ave",
+      "city": "Phoenix",
+      "address": "1500 N CENTRAL AVE",
+      "units": null,
+      "stage": "permitted",
+      "permitDate": "2026-06-24",
+      "openingDate": null,
+      "saleDate": null,
+      "buyer": null,
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "permit": "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
+      },
+      "sources": [
+        "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
+      ],
+      "signalType": "Upcoming",
+      "signal": "Opens: not public yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet",
+      "score": 0,
+      "isNew": false
+    },
+    {
+      "id": "az-83",
+      "property": "245 N Neely St",
+      "community": "245 N Neely St",
+      "city": "Gilbert",
+      "address": "245 N NEELY ST",
+      "units": null,
+      "stage": "permitted",
+      "permitDate": "2026-06-30",
+      "openingDate": null,
+      "saleDate": null,
+      "buyer": null,
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "permit": "https://maps.gilbertaz.gov/arcgis/rest/services/OD/Growth_Development_Tables_1/MapServer/3/query?where=PermitType%3D%27Commercial+Multi-Family%27+AND+WorkClass%3D%27New%27&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssuedDate+DESC"
+      },
+      "sources": [
+        "https://maps.gilbertaz.gov/arcgis/rest/services/OD/Growth_Development_Tables_1/MapServer/3/query?where=PermitType%3D%27Commercial+Multi-Family%27+AND+WorkClass%3D%27New%27&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssuedDate+DESC"
+      ],
+      "signalType": "Upcoming",
+      "signal": "Opens: not public yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet",
+      "score": 0,
+      "isNew": false
+    },
+    {
+      "id": "az-84",
+      "property": "1314 N 24Th St",
+      "community": "1314 N 24Th St",
+      "city": "Phoenix",
+      "address": "1314 N 24TH ST",
+      "units": null,
+      "stage": "permitted",
+      "permitDate": "2026-06-30",
+      "openingDate": null,
+      "saleDate": null,
+      "buyer": null,
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "permit": "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
+      },
+      "sources": [
+        "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
+      ],
+      "signalType": "Upcoming",
+      "signal": "Opens: not public yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet",
+      "score": 0,
+      "isNew": false
+    },
+    {
+      "id": "az-85",
+      "property": "4312 N 12Th St",
+      "community": "4312 N 12Th St",
+      "city": "Phoenix",
+      "address": "4312 N 12TH ST",
+      "units": null,
+      "stage": "permitted",
+      "permitDate": "2026-07-02",
+      "openingDate": null,
+      "saleDate": null,
+      "buyer": null,
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "permit": "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
+      },
+      "sources": [
+        "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
+      ],
+      "signalType": "Upcoming",
+      "signal": "Opens: not public yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet",
+      "score": 0,
+      "isNew": false
+    },
+    {
+      "id": "az-86",
+      "property": "9705 E Main St",
+      "community": "9705 E Main St",
+      "city": "Mesa",
+      "address": "9705 E MAIN ST",
+      "units": 144,
+      "stage": "permitted",
+      "permitDate": "2026-07-06",
+      "openingDate": null,
+      "saleDate": null,
+      "buyer": null,
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "permit": "https://data.mesaaz.gov/resource/dzpk-hxfb.json?type_of_work=Multi-Family+Residential&%24order=issued_date+DESC&%24limit=500"
+      },
+      "sources": [
+        "https://data.mesaaz.gov/resource/dzpk-hxfb.json?type_of_work=Multi-Family+Residential&%24order=issued_date+DESC&%24limit=500"
+      ],
+      "signalType": "Upcoming",
+      "signal": "Opens: not public yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 144 units \u00b7 software not picked yet",
+      "score": 0,
+      "isNew": false
+    },
+    {
+      "id": "az-87",
+      "property": "1431 E Knoll Cir",
+      "community": "1431 E Knoll Cir",
+      "city": "Mesa",
+      "address": "1431 E KNOLL CIR",
+      "units": null,
+      "stage": "permitted",
+      "permitDate": "2026-07-09",
+      "openingDate": null,
+      "saleDate": null,
+      "buyer": null,
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "permit": "https://data.mesaaz.gov/resource/dzpk-hxfb.json?type_of_work=Multi-Family+Residential&%24order=issued_date+DESC&%24limit=500"
+      },
+      "sources": [
+        "https://data.mesaaz.gov/resource/dzpk-hxfb.json?type_of_work=Multi-Family+Residential&%24order=issued_date+DESC&%24limit=500"
+      ],
+      "signalType": "Upcoming",
+      "signal": "Opens: not public yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet",
+      "score": 0,
+      "isNew": false
+    },
+    {
+      "id": "az-88",
+      "property": "6147 E Main St",
+      "community": "6147 E Main St",
+      "city": "Mesa",
+      "address": "6147 E MAIN ST",
+      "units": 132,
+      "stage": "permitted",
+      "permitDate": "2026-07-15",
+      "openingDate": null,
+      "saleDate": null,
+      "buyer": null,
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "permit": "https://data.mesaaz.gov/resource/dzpk-hxfb.json?type_of_work=Multi-Family+Residential&%24order=issued_date+DESC&%24limit=500"
+      },
+      "sources": [
+        "https://data.mesaaz.gov/resource/dzpk-hxfb.json?type_of_work=Multi-Family+Residential&%24order=issued_date+DESC&%24limit=500"
+      ],
+      "signalType": "Upcoming",
+      "signal": "Opens: not public yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 132 units \u00b7 software not picked yet",
+      "score": 0,
+      "isNew": false
+    },
+    {
+      "id": "az-89",
+      "property": "8264 E Elliot Rd",
+      "community": "8264 E Elliot Rd",
+      "city": "Mesa",
+      "address": "8264 E ELLIOT RD",
+      "units": 84,
+      "stage": "permitted",
+      "permitDate": "2026-08-06",
+      "openingDate": null,
+      "saleDate": null,
+      "buyer": null,
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "permit": "https://data.mesaaz.gov/resource/dzpk-hxfb.json?type_of_work=Multi-Family+Residential&%24order=issued_date+DESC&%24limit=500"
+      },
+      "sources": [
+        "https://data.mesaaz.gov/resource/dzpk-hxfb.json?type_of_work=Multi-Family+Residential&%24order=issued_date+DESC&%24limit=500"
+      ],
+      "signalType": "Upcoming",
+      "signal": "Opens: not public yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 84 units \u00b7 software not picked yet",
+      "score": 0,
+      "isNew": false
+    },
+    {
+      "id": "az-90",
+      "property": "Revelry",
+      "community": "Revelry",
+      "city": "Tempe",
+      "address": "965 E UNIVERSITY DR",
+      "units": 533,
+      "stage": "permitted",
+      "permitDate": "2026-08-07",
+      "openingDate": null,
+      "saleDate": null,
+      "buyer": null,
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "permit": "https://services.arcgis.com/lQySeXwbBg53XWDi/arcgis/rest/services/building_permits/FeatureServer/0/query?where=HousingUnits%3E%3D20&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssuedDate+DESC"
+      },
+      "sources": [
+        "https://services.arcgis.com/lQySeXwbBg53XWDi/arcgis/rest/services/building_permits/FeatureServer/0/query?where=HousingUnits%3E%3D20&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssuedDate+DESC"
+      ],
+      "signalType": "Upcoming",
+      "signal": "Opens: not public yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 533 units \u00b7 software not picked yet",
+      "score": 0,
+      "isNew": false
+    },
+    {
+      "id": "az-91",
+      "property": "1345 S Signal Butte Rd",
+      "community": "1345 S Signal Butte Rd",
+      "city": "Mesa",
+      "address": "1345 S SIGNAL BUTTE RD",
+      "units": 276,
+      "stage": "permitted",
+      "permitDate": "2026-08-11",
+      "openingDate": null,
+      "saleDate": null,
+      "buyer": null,
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "permit": "https://data.mesaaz.gov/resource/dzpk-hxfb.json?type_of_work=Multi-Family+Residential&%24order=issued_date+DESC&%24limit=500"
+      },
+      "sources": [
+        "https://data.mesaaz.gov/resource/dzpk-hxfb.json?type_of_work=Multi-Family+Residential&%24order=issued_date+DESC&%24limit=500"
+      ],
+      "signalType": "Upcoming",
+      "signal": "Opens: not public yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 276 units \u00b7 software not picked yet",
+      "score": 0,
+      "isNew": false
+    },
+    {
+      "id": "az-92",
+      "property": "26000 N Norterra Pkwy",
+      "community": "26000 N Norterra Pkwy",
+      "city": "Phoenix",
+      "address": "26000 N NORTERRA PKWY",
+      "units": null,
+      "stage": "permitted",
+      "permitDate": "2026-08-24",
+      "openingDate": null,
+      "saleDate": null,
+      "buyer": null,
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "permit": "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
+      },
+      "sources": [
+        "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
+      ],
+      "signalType": "Upcoming",
+      "signal": "Opens: not public yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet",
+      "score": 0,
+      "isNew": false
+    },
+    {
+      "id": "az-93",
+      "property": "539 S Williams",
+      "community": "539 S Williams",
+      "city": "Mesa",
+      "address": "539 S WILLIAMS",
+      "units": 36,
+      "stage": "permitted",
+      "permitDate": "2026-08-26",
+      "openingDate": null,
+      "saleDate": null,
+      "buyer": null,
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "permit": "https://data.mesaaz.gov/resource/dzpk-hxfb.json?type_of_work=Multi-Family+Residential&%24order=issued_date+DESC&%24limit=500"
+      },
+      "sources": [
+        "https://data.mesaaz.gov/resource/dzpk-hxfb.json?type_of_work=Multi-Family+Residential&%24order=issued_date+DESC&%24limit=500"
+      ],
+      "signalType": "Upcoming",
+      "signal": "Opens: not public yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 36 units \u00b7 software not picked yet",
+      "score": 0,
+      "isNew": false
+    },
+    {
+      "id": "az-94",
+      "property": "944 W Main St 2025",
+      "community": "944 W Main St 2025",
+      "city": "Mesa",
+      "address": "944 W MAIN ST 2025",
+      "units": null,
+      "stage": "permitted",
+      "permitDate": "2026-09-01",
+      "openingDate": null,
+      "saleDate": null,
+      "buyer": null,
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "permit": "https://data.mesaaz.gov/resource/dzpk-hxfb.json?type_of_work=Multi-Family+Residential&%24order=issued_date+DESC&%24limit=500"
+      },
+      "sources": [
+        "https://data.mesaaz.gov/resource/dzpk-hxfb.json?type_of_work=Multi-Family+Residential&%24order=issued_date+DESC&%24limit=500"
+      ],
+      "signalType": "Upcoming",
+      "signal": "Opens: not public yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet",
+      "score": 0,
       "isNew": false
     }
   ]

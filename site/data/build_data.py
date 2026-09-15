@@ -368,6 +368,8 @@ def build_pipeline(properties: list[dict]) -> dict:
     for path in run_files:
         with open(path) as f:
             run = json.load(f)
+        if "skill" not in run:  # e.g. brave-usage.json, not a skill run
+            continue
         runs_by_skill.setdefault(run["skill"], []).append(run)
         runs.append({
             "runId": Path(path).stem,

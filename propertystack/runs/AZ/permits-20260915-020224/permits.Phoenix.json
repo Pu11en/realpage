@@ -1,0 +1,814 @@
+[
+ {
+  "area": "az",
+  "city": "Phoenix",
+  "name": "",
+  "address": "26000 N NORTERRA PKWY",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-08-24",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
+   }
+  ],
+  "why": "new multifamily permit"
+ },
+ {
+  "area": "az",
+  "city": "Phoenix",
+  "name": "",
+  "address": "4312 N 12TH ST",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-07-02",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
+   }
+  ],
+  "why": "new multifamily permit"
+ },
+ {
+  "area": "az",
+  "city": "Phoenix",
+  "name": "",
+  "address": "1314 N 24TH ST",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-06-30",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
+   }
+  ],
+  "why": "new multifamily permit"
+ },
+ {
+  "area": "az",
+  "city": "Phoenix",
+  "name": "",
+  "address": "26800 N 27TH AVE",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-06-24",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
+   }
+  ],
+  "why": "new multifamily permit"
+ },
+ {
+  "area": "az",
+  "city": "Phoenix",
+  "name": "",
+  "address": "1500 N CENTRAL AVE",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-06-24",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
+   }
+  ],
+  "why": "new multifamily permit"
+ },
+ {
+  "area": "az",
+  "city": "Phoenix",
+  "name": "",
+  "address": "25200 N 17TH AVE",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-06-17",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
+   }
+  ],
+  "why": "new multifamily permit"
+ },
+ {
+  "area": "az",
+  "city": "Phoenix",
+  "name": "",
+  "address": "16640 N SCOTTSDALE RD",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-05-27",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
+   }
+  ],
+  "why": "new multifamily permit"
+ },
+ {
+  "area": "az",
+  "city": "Phoenix",
+  "name": "",
+  "address": "10222 N 12TH AVE",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-05-19",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
+   }
+  ],
+  "why": "new multifamily permit"
+ },
+ {
+  "area": "az",
+  "city": "Phoenix",
+  "name": "",
+  "address": "4580 E CACTUS RD",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-03-27",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
+   }
+  ],
+  "why": "new multifamily permit"
+ },
+ {
+  "area": "az",
+  "city": "Phoenix",
+  "name": "",
+  "address": "16400 N 19TH AVE",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2026-02-24",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
+   }
+  ],
+  "why": "new multifamily permit"
+ },
+ {
+  "area": "az",
+  "city": "Phoenix",
+  "name": "",
+  "address": "6939 W THOMAS RD",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2025-12-15",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
+   }
+  ],
+  "why": "new multifamily permit"
+ },
+ {
+  "area": "az",
+  "city": "Phoenix",
+  "name": "",
+  "address": "1010 E GREENWAY PKWY",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2025-12-12",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
+   }
+  ],
+  "why": "new multifamily permit"
+ },
+ {
+  "area": "az",
+  "city": "Phoenix",
+  "name": "",
+  "address": "2328 N 52ND ST",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2025-10-28",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
+   }
+  ],
+  "why": "new multifamily permit"
+ },
+ {
+  "area": "az",
+  "city": "Phoenix",
+  "name": "",
+  "address": "8927 N 10TH ST",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2025-10-27",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
+   }
+  ],
+  "why": "new multifamily permit"
+ },
+ {
+  "area": "az",
+  "city": "Phoenix",
+  "name": "",
+  "address": "7500 S 32ND ST",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2025-09-08",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
+   }
+  ],
+  "why": "new multifamily permit"
+ },
+ {
+  "area": "az",
+  "city": "Phoenix",
+  "name": "",
+  "address": "7101 N 27TH AVE",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2025-08-07",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
+   }
+  ],
+  "why": "new multifamily permit"
+ },
+ {
+  "area": "az",
+  "city": "Phoenix",
+  "name": "",
+  "address": "5307 N 17TH AVE",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2025-07-08",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
+   }
+  ],
+  "why": "new multifamily permit"
+ },
+ {
+  "area": "az",
+  "city": "Phoenix",
+  "name": "",
+  "address": "14559 S 50TH ST",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2025-07-08",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
+   }
+  ],
+  "why": "new multifamily permit"
+ },
+ {
+  "area": "az",
+  "city": "Phoenix",
+  "name": "",
+  "address": "4235 N 24TH ST",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2025-06-09",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
+   }
+  ],
+  "why": "new multifamily permit"
+ },
+ {
+  "area": "az",
+  "city": "Phoenix",
+  "name": "",
+  "address": "13400 N 22ND ST",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2025-06-09",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
+   }
+  ],
+  "why": "new multifamily permit"
+ },
+ {
+  "area": "az",
+  "city": "Phoenix",
+  "name": "",
+  "address": "19000 N 66TH ST",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2025-05-28",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
+   }
+  ],
+  "why": "new multifamily permit"
+ },
+ {
+  "area": "az",
+  "city": "Phoenix",
+  "name": "",
+  "address": "100 N 18TH ST",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2025-05-20",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
+   }
+  ],
+  "why": "new multifamily permit"
+ },
+ {
+  "area": "az",
+  "city": "Phoenix",
+  "name": "",
+  "address": "1817 W MOUNTAIN VIEW RD",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2025-05-09",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
+   }
+  ],
+  "why": "new multifamily permit"
+ },
+ {
+  "area": "az",
+  "city": "Phoenix",
+  "name": "",
+  "address": "225 N 17TH ST",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2025-05-08",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
+   }
+  ],
+  "why": "new multifamily permit"
+ },
+ {
+  "area": "az",
+  "city": "Phoenix",
+  "name": "",
+  "address": "1435 E TAYLOR ST",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2025-04-28",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
+   }
+  ],
+  "why": "new multifamily permit"
+ },
+ {
+  "area": "az",
+  "city": "Phoenix",
+  "name": "",
+  "address": "4110 S 3RD AVE",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2025-03-27",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
+   }
+  ],
+  "why": "new multifamily permit"
+ },
+ {
+  "area": "az",
+  "city": "Phoenix",
+  "name": "",
+  "address": "32400 N 29TH AVE",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2025-03-13",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
+   }
+  ],
+  "why": "new multifamily permit"
+ },
+ {
+  "area": "az",
+  "city": "Phoenix",
+  "name": "",
+  "address": "13000 N TATUM BLVD",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2024-10-25",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
+   }
+  ],
+  "why": "new multifamily permit"
+ },
+ {
+  "area": "az",
+  "city": "Phoenix",
+  "name": "",
+  "address": "629 N 3RD AVE",
+  "lat": null,
+  "lon": null,
+  "units": null,
+  "stage": "permitted",
+  "permit_date": "2024-10-01",
+  "opening_date": "",
+  "sale_date": "",
+  "buyer": "",
+  "developer": "",
+  "office_phone": "",
+  "website": "",
+  "software": "unknown",
+  "links": {
+   "permit": "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
+  },
+  "sources": [
+   {
+    "fact": "permit_date",
+    "url": "https://maps.phoenix.gov/pub/rest/services/Public/Planning_Permit/MapServer/1/query?where=SCOPE_DESC%3D%27COMMERCIAL+NEW%27+AND+%28PERMIT_NAME+LIKE+%27%25APART%25%27+OR+PERMIT_NAME+LIKE+%27%25APT%25%27+OR+PERMIT_NAME+LIKE+%27%25MULTI%25%27+OR+PERMIT_NAME+LIKE+%27%25MF%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=PER_ISSUE_DATE+DESC"
+   }
+  ],
+  "why": "new multifamily permit"
+ }
+]
