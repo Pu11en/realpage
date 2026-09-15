@@ -103,6 +103,12 @@
       box.appendChild(b);
     });
     submit.parentElement.parentElement.insertBefore(box, submit.parentElement);
+    // Google sign-ups skip the form; remember the pick so the dashboard can
+    // send it once they land there signed in (site/js/app.js).
+    var google = form.parentElement && form.parentElement.querySelector(".space-y-2 > button");
+    if (google) google.addEventListener("click", function () {
+      try { if (picked) localStorage.setItem("cs-pending-role", picked); } catch (e) {}
+    }, true);
     form.addEventListener("submit", function () {
       var email = (form.querySelector("input#email") || {}).value || "";
       if (!picked || !email) return;

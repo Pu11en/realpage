@@ -22,6 +22,24 @@ const CHAT_APP_URL = window.PS_CHAT_URL || (location.port === "8876"
 // The public landing page (the marketing site). The human preview runs it on :8765.
 const LANDING_URL = location.port === "8876" ? "http://localhost:8765" : "https://cranesignal.com";
 
+// A Google sign-up's optional "What best describes you?" pick (chatbot/branding/
+// loader.js) is sent to the signup list once, now that we know their email.
+(function sendPendingRole() {
+  let role;
+  try { role = localStorage.getItem("cs-pending-role"); } catch (e) { return; }
+  if (!role) return;
+  fetch("/api/v1/auths/", { credentials: "include" })
+    .then((r) => (r.ok ? r.json() : null))
+    .then((me) => {
+      if (!me || !me.email) return;
+      localStorage.removeItem("cs-pending-role");
+      fetch(LANDING_URL + "/api/signup", { method: "POST", mode: "no-cors", keepalive: true,
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: "source=app&role=" + encodeURIComponent(role) + "&email=" + encodeURIComponent(me.email) });
+    })
+    .catch(() => {});
+})();
+
 function getViewAs() {
   const v = localStorage.getItem("propertystack.viewAs");
   return !v || v === "Neutral" ? "Everyone" : v;  // "Neutral" = old saved name for Everyone

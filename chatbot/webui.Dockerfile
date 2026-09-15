@@ -16,3 +16,7 @@ COPY chatbot/branding/loader.js /app/build/static/loader.js
 # license while we stay at 50 or fewer users in any 30 days; past that, restore it or buy
 # their enterprise license. loader.js does the same in the browser for the local compose.
 RUN sed -i "s/^    WEBUI_NAME += ' (Open WebUI)'$/    pass/" /app/backend/open_webui/env.py
+# New-account alerts for Discord with name, email and their optional pick
+# (chatbot/signup_alerts.py), running next to the app.
+COPY chatbot/signup_alerts.py /app/signup_alerts.py
+CMD ["bash", "-c", "python3 /app/signup_alerts.py & exec bash start.sh"]
