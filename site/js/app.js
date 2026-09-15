@@ -85,6 +85,20 @@ function isDimmedRow(vendor) {
   return vendor === viewAs;
 }
 
+// Early Leads number boxes, from the rows currently shown (state + region + city + search).
+// "Opening soon" = shown buildings, not sold, opening within the next 12 months.
+function leadStats(rows, today) {
+  const now = (today || new Date()).toISOString().slice(0, 10);
+  const horizon = `${Number(now.slice(0, 4)) + 1}${now.slice(4)}`;
+  return {
+    leads: rows.length,
+    newThisWeek: rows.filter((l) => l.isNew).length,
+    unitsInPlay: rows.reduce((sum, l) => sum + (l.units || 0), 0),
+    openingNext12mo: rows.filter((l) => l.signalType !== "Sold" && l.openingDate
+      && l.openingDate > now && l.openingDate <= horizon).length,
+  };
+}
+
 function placeholderBanner(statusText) {
   if (!statusText) return "";
   return `<div class="placeholder-banner">${statusText}</div>`;

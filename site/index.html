@@ -46,7 +46,6 @@
 
     function renderPage(areas, area) {
     loadData(area.dataPath).then((data) => {
-      const s = Object.assign({ leads: 0, newThisWeek: 0, unitsInPlay: 0, openingNext12mo: 0 }, data.stats);
       const cities = [...new Set(data.leads.map((l) => l.city))].sort();
       const softwareOptions = [...new Set(data.leads.map((l) => l.software).filter(Boolean))].sort();
 
@@ -59,12 +58,7 @@
           ${data.metros.map((m) => `<button class="metro-btn" data-metro="${m.name}">${m.name} (${m.leads})</button>`).join("")}
         </div></div>` : ""}
         ${placeholderBanner(data.status)}
-        <div class="stats-row">
-          <div class="stat-card"><div class="value">${s.leads}</div><div class="label">Leads</div></div>
-          <div class="stat-card"><div class="value">${s.newThisWeek}</div><div class="label">New</div></div>
-          <div class="stat-card"><div class="value">${s.unitsInPlay.toLocaleString()}</div><div class="label">Units in play</div></div>
-          <div class="stat-card"><div class="value">${s.openingNext12mo.toLocaleString()}</div><div class="label">Opening soon</div></div>
-        </div>
+        <div class="stats-row" id="lead-stats"></div>
 
         <div class="filters">
           <input id="f-search" placeholder="Search property" />
@@ -147,6 +141,24 @@
           rows = rows.slice().sort((a, b) => (b.isNew === a.isNew ? b.score - a.score : b.isNew ? 1 : -1));
         } else {
           rows = rows.slice().sort((a, b) => b.score - a.score);
+        }
+
+        const s = leadStats(rows);
+        document.getElementById("lead-stats").innerHTML = `
+          <div class="stat-card"><div class="value">${s.leads.toLocaleString()}</div><div class="label">Leads</div></div>
+          <div class="stat-card"><div class="value">${s.newThisWeek}</div><div class="label">New</div></div>
+          <div class="stat-card"><div class="value">${s.unitsInPlay.toLocaleString()}</div><div class="label">Units in play</div></div>
+          <div class="stat-card"><div class="value">${s.openingNext12mo.toLocaleString()}</div><div class="label">Opening soon</div></div>`;
+
+        if (!rows.length) {
+          document.getElementById("leads-tbody").innerHTML = `
+            <tr class="empty-row"><td colspan="8">Nothing found. Clear the search or pick another region.
+              <button type="button" class="btn" id="clear-search">Clear search</button></td></tr>`;
+          document.getElementById("clear-search").addEventListener("click", () => {
+            document.getElementById("f-search").value = "";
+            renderRows();
+          });
+          return;
         }
 
         document.getElementById("leads-tbody").innerHTML = rows.map((l, i) => `
