@@ -27720,7 +27720,7 @@
   "address": "301 TRI CITY BEACH RD 70",
   "lat": null,
   "lon": null,
-  "units": null,
+  "units": 70,
   "stage": "sold",
   "permit_date": "",
   "opening_date": "",
@@ -27737,9 +27737,13 @@
    {
     "fact": "sale_date",
     "url": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   },
+   {
+    "fact": "units",
+    "url": "https://cccres.com/apartments/detail/forest-view-baytown"
    }
   ],
-  "why": "Sold 2025-09-19 \u00b7 to BAYTOWN VOLLECTIVE LLC \u00b7 new owner may re-pick software"
+  "why": "Sold 2025-09-19 \u00b7 to BAYTOWN VOLLECTIVE LLC \u00b7 70 units \u00b7 new owner may re-pick software"
  },
  {
   "area": "tx",
@@ -27751,20 +27755,25 @@
   "units": null,
   "stage": "sold",
   "permit_date": "",
-  "opening_date": "",
+  "opening_date": "1716",
   "sale_date": "2025-09-19",
   "buyer": "PANK HOLDINGS LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://ploteasy.com/property-details/172938/3643-n-macgregor-way-houston-tx-77004",
   "software": "unknown",
   "links": {
-   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip",
+   "website": "https://ploteasy.com/property-details/172938/3643-n-macgregor-way-houston-tx-77004"
   },
   "sources": [
    {
     "fact": "sale_date",
     "url": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   },
+   {
+    "fact": "opening_date",
+    "url": "https://github.com/Apoorve73/Real-Estate-Companies-Database/blob/master/Houston1.csv"
    }
   ],
   "why": "Sold 2025-09-19 \u00b7 to PANK HOLDINGS LLC \u00b7 new owner may re-pick software"
@@ -27868,10 +27877,11 @@
   "buyer": "AT PARKWAY LP",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://ploteasy.com/property-details/219785352/16848-w-lake-houston-pky-humble-tx-77346",
   "software": "unknown",
   "links": {
-   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip",
+   "website": "https://ploteasy.com/property-details/219785352/16848-w-lake-houston-pky-humble-tx-77346"
   },
   "sources": [
    {
@@ -27896,10 +27906,11 @@
   "buyer": "BLUE ATLANTIC MONTECITO LP",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://ploteasy.com/property-details/359785/2300-mccue-rd-299-houston-tx-77056",
   "software": "unknown",
   "links": {
-   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip",
+   "website": "https://ploteasy.com/property-details/359785/2300-mccue-rd-299-houston-tx-77056"
   },
   "sources": [
    {
@@ -27975,20 +27986,25 @@
   "units": 38,
   "stage": "sold",
   "permit_date": "",
-  "opening_date": "",
+  "opening_date": "2025",
   "sale_date": "2025-09-10",
   "buyer": "HIGH DESERT HOLDINGS LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://carolinachaseapts.com/",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://carolinachaseapts.com/"
   },
   "sources": [
    {
     "fact": "sale_date",
     "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   },
+   {
+    "fact": "opening_date",
+    "url": "https://www.apartmenthomeliving.com/apartment-finder/Carolina-Apartments-Dallas-TX-75214-1948796"
    }
   ],
   "why": "Sold 2025-09-10 \u00b7 to HIGH DESERT HOLDINGS LLC \u00b7 38 units \u00b7 new owner may re-pick software"
@@ -28120,10 +28136,11 @@
   "buyer": "RPM LIVING  INVESTMENT LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.ltdwestcommerce.com/",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://www.ltdwestcommerce.com/"
   },
   "sources": [
    {
@@ -28168,7 +28185,7 @@
   "address": "4811 E SAM HOUSTON PKY S 294",
   "lat": null,
   "lon": null,
-  "units": null,
+  "units": 20,
   "stage": "sold",
   "permit_date": "",
   "opening_date": "",
@@ -28185,9 +28202,13 @@
    {
     "fact": "sale_date",
     "url": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   },
+   {
+    "fact": "units",
+    "url": "https://ploteasy.com/property-details/241638244/2800-e-league-city-pkwy-league-city-tx-77573"
    }
   ],
-  "why": "Sold 2025-09-05 \u00b7 to G&I XI CRESHAW LP \u00b7 new owner may re-pick software"
+  "why": "Sold 2025-09-05 \u00b7 to G&I XI CRESHAW LP \u00b7 20 units \u00b7 new owner may re-pick software"
  },
  {
   "area": "tx",
@@ -28224,10 +28245,10 @@
   "address": "10950 BRIAR FOREST DR 592",
   "lat": null,
   "lon": null,
-  "units": null,
+  "units": 20,
   "stage": "sold",
   "permit_date": "",
-  "opening_date": "",
+  "opening_date": "1716",
   "sale_date": "2025-09-03",
   "buyer": "PUBLIC WELFARE INVESTMENTS HOLDCO LLC",
   "developer": "",
@@ -28241,9 +28262,17 @@
    {
     "fact": "sale_date",
     "url": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   },
+   {
+    "fact": "opening_date",
+    "url": "https://github.com/Apoorve73/Real-Estate-Companies-Database/blob/master/Houston1.csv"
+   },
+   {
+    "fact": "units",
+    "url": "https://ploteasy.com/commercial/texas/page/535"
    }
   ],
-  "why": "Sold 2025-09-03 \u00b7 to PUBLIC WELFARE INVESTMENTS HOLDCO LLC \u00b7 new owner may re-pick software"
+  "why": "Sold 2025-09-03 \u00b7 to PUBLIC WELFARE INVESTMENTS HOLDCO LLC \u00b7 20 units \u00b7 new owner may re-pick software"
  },
  {
   "area": "tx",
@@ -28288,10 +28317,11 @@
   "buyer": "OH MAPLEWOOD OWNER LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://cccres.com/apartments/detail/lenox-maplewood-phase-1-dallas",
   "software": "unknown",
   "links": {
-   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+   "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP",
+   "website": "https://cccres.com/apartments/detail/lenox-maplewood-phase-1-dallas"
   },
   "sources": [
    {
@@ -28336,7 +28366,7 @@
   "address": "4801 ALLENDALE RD 182",
   "lat": null,
   "lon": null,
-  "units": null,
+  "units": 182,
   "stage": "sold",
   "permit_date": "",
   "opening_date": "",
@@ -28344,18 +28374,23 @@
   "buyer": "TC SPE 6 LLC",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://ploteasy.com/property-details/398362/4801-allendale-rd-houston-tx-77017",
   "software": "unknown",
   "links": {
-   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip",
+   "website": "https://ploteasy.com/property-details/398362/4801-allendale-rd-houston-tx-77017"
   },
   "sources": [
    {
     "fact": "sale_date",
     "url": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   },
+   {
+    "fact": "units",
+    "url": "https://cccres.com/apartments/detail/tc-spe-6-llc-houston"
    }
   ],
-  "why": "Sold 2025-09-02 \u00b7 to TC SPE 6 LLC \u00b7 new owner may re-pick software"
+  "why": "Sold 2025-09-02 \u00b7 to TC SPE 6 LLC \u00b7 182 units \u00b7 new owner may re-pick software"
  },
  {
   "area": "tx",
@@ -28367,7 +28402,7 @@
   "units": null,
   "stage": "sold",
   "permit_date": "",
-  "opening_date": "",
+  "opening_date": "1716",
   "sale_date": "2025-08-28",
   "buyer": "VA9 GREENWAY COURT LLC",
   "developer": "",
@@ -28381,6 +28416,10 @@
    {
     "fact": "sale_date",
     "url": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   },
+   {
+    "fact": "opening_date",
+    "url": "https://github.com/Apoorve73/Real-Estate-Companies-Database/blob/master/Houston1.csv"
    }
   ],
   "why": "Sold 2025-08-28 \u00b7 to VA9 GREENWAY COURT LLC \u00b7 new owner may re-pick software"
@@ -28400,10 +28439,11 @@
   "buyer": "8923-9021 ANTOINE DRIVE HOLDINGS LP",
   "developer": "",
   "office_phone": "",
-  "website": "",
+  "website": "https://www.estately.com/listings/info/8923-antoine-drive-houston-tx-77088",
   "software": "unknown",
   "links": {
-   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+   "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip",
+   "website": "https://www.estately.com/listings/info/8923-antoine-drive-houston-tx-77088"
   },
   "sources": [
    {
