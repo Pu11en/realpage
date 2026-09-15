@@ -1,0 +1,20 @@
+---
+url: "https://www.realpage.com/news/real-estate-advisory-firm-rclco-selects-realpage-portfolio-asset-management-software/"
+title: "Real Estate Advisory Firm RCLCO Selects RealPage® Portfolio Asset Management Sof"
+type: "posts"
+lastmod: "2017-03-27T09:30:27-05:00"
+crawled: "2026-09-15"
+source: "crawl4ai"
+---
+
+# Real Estate Advisory Firm RCLCO Selects RealPage® Portfolio Asset Management Software
+March 27, 2017
+**RICHARDSON, Texas (March, 27)** – [RealPage, Inc](https://www.realpage.com/). (NASDAQ:[RP](http://finance.yahoo.com/q?s=RP)), a leading provider of software and data analytics to the rental real estate industry, today announced that global real estate advisory firm RCLCO has chosen RealPage’s Portfolio Asset Management (PAM) software to aggregate and report data from its portfolio of 94 properties in support of its advisory activities.
+“As we celebrate our 50th anniversary, we’ve been looking at how best to position ourselves for growth over the coming years,” said Jomar Ereso, Director of Asset Management at RCLCO. “Putting this powerful tool in the hands of our team and clients will be a cornerstone in delivering a peerless degree of strategic insight to benefit our clients going forward.”
+RCLCO looked at other data aggregation/reporting solutions before selecting RealPage’s PAM. “It’s a real challenge to extract data from a diverse assortment of property management systems and present it to analysts in the form they want,” said Alan James, Senior Vice President, Investment Management and Commercial at RealPage. “The alternative is to count on the properties to deliver the data separately and then do your own data wrestling, which is slow, cumbersome and eats up the time of valuable analysts that is better spent increasing investment value.” James also points out that the PAM solution delivers reports in four or five days after the end of a quarter versus the 60 to 90 days it can take otherwise.
+RealPage’s PAM is a leading reporting and collaboration software solution for real estate investment firms and management professionals. It delivers daily oversight, including comprehensive evaluations on performance, trends and operations, with the ability to drill down to property level data. Users define the Key Performance Indicators, Key Success Indicators and any other business measures they want included in the reported data, and PAM delivers it on the defined schedule. “Profitable asset management always comes down to data,” said Ereso, “and we decided there is no better solution out there to get this data into the hands of the people who need it, in the form they need it.”
+Learn more about [Portfolio Asset Management](https://www.realpage.com/investment-management/) from RealPage.
+**About RealPage, Inc.**
+RealPage is a leading global provider of software and data analytics to the real estate industry. Clients use our platform to improve operating performance and increase capital returns. Founded in 1998 and headquartered in Richardson, Texas, RealPage currently serves over 11,000 clients worldwide from offices in North America, Europe and Asia. For more information about the company, visit [www.realpage.com](https://www.realpage.com).
+**About RCLCO**
+Since 1967, RCLCO (formerly Robert Charles Lesser & Co.) has been the “first call” for real estate developers, investors, public institutions and non-real estate companies seeking strategic and tactical advice regarding property investment, planning, and development. RCLCO leverages quantitative analytics platforms and a strategic planning framework to provide end-to-end business planning and implementation solutions at an entity, portfolio, or project level. With the insights and experience gained over 50 years and thousands of projects – touching over $5B of real estate activity each year – RCLCO brings success to all product types across the United States and around the world. RCLCO is headquartered in Washington, DC, and has offices in Los Angeles, Orlando, and Austin. To learn more about RCLCO, visit [www.rclco.com](http://www.rclco.com).

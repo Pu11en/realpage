@@ -1,0 +1,27 @@
+---
+url: "https://www.realpage.com/news/propertyware-contact-center-redefines-customer-service-access-property-management-group/"
+title: "Propertyware® Contact Center Redefines Customer Service for Access Property Mana"
+type: "posts"
+lastmod: "2014-03-07T15:56:31-06:00"
+crawled: "2026-09-15"
+source: "crawl4ai"
+---
+
+# Propertyware® Contact Center Redefines Customer Service for Access Property Management Group
+March 7, 2014
+### _Solution goes above and beyond traditional role of managing prospect leasing calls through relationship nurturing and scheduling showings outside normal business hours_
+**(March 10, 2014) –** [Propertyware, Inc.](https://www.propertyware.com), a wholly owned subsidiary of RealPage, Inc. (NASDAQ: [RP](http://finance.yahoo.com/q;_ylt=Ap5Wn9L7nK9q1JAadLn0p9axcq9_;_ylu=X3oDMTBzYm05a3ZkBHBvcwMxBHNlYwNuZXdzYXJzdGFydARzbGsDcnA-?s=rp)), launches Propertyware Contact Center, the first integrated solution for single-family property managers that directs leasing inquiries and service requests both during and after hours.
+[Propertyware Contact Center](https://www.propertyware.com/contact-center/) provides the agility and responsiveness of trained leasing specialists who answer prospective tenants’ calls to help maximize lead capture, and provide timely responses to current tenants’ service calls.
+“I truly believe that the Propertyware Contact Center presents the biggest opportunity for leveraging a business owner’s time, resources and ability to grow. Those who do not get on board will undoubtedly be unable to keep up with those that do,” shared Justin Bajema, president of Access Property Management Group and a Propertyware Contact Center client. “We are doing more today with less at a higher level of service than ever before. Both the volume and quality of our prospects has increased.”
+The Propertyware Contact Center also provides real-time tracking and reporting, enabling owners and managers to see where leads are coming from and evaluate which advertising sources are performing well.
+“We can now track and measure our leasing activity, which is great when reporting back to owners each week on the activity of their home,” continued Bajema. “Previously, when our team fielded calls, we could only speak to prospects during normal business hours limiting the number of showings we could schedule. Now the call center is easily able to lock down showings with prospects late into the evening.”
+Unlike on-site leasing agents who juggle many tasks at once, Propertyware Contact Center associates only focus on serving incoming leads, setting appointments and providing pertinent property information. Thus, they are able to deliver a heightened level of customer service resulting in increased tenant satisfaction, greater productivity and shorter sales cycles.
+And while the Propertyware Contact Center serves all small- to mid-sized property management companies, those who also use Propertyware software have the added benefits of integrated CRM tools, group calendar sync and mobile leasing. On the service front, Propertyware Contact Center provides immediate responses to tenant service requests, heightened customer service and risk management for owners.
+“The Propertyware Contact Center gives our clients the competitive advantage they want. Couple Propertyware with our sophisticated lead-tracking technology and professional associates, and you have a winning combination for reducing operating costs while continuing to provide exceptional levels of service,” said Jamie Clymer, executive vice president of Propertyware. “It’s a game changer.”
+Propertyware Contact Center is associated with the RealPage® Contact Center, an industry-recognized leader of outsourced contact center solutions for over a decade to the multifamily apartment industry.
+For more information, visit [www.propertyware.com](https://www.propertyware.com).
+* * *
+**About Propertyware**
+Located in San Francisco, California, Propertyware pioneered property management solutions for single-family and low density rental units through a full suite of on-demand property management tools that are self-provisioning. Propertyware features a full suite of integrated property management services: a real-time customized, hosted website; online payment processing via credit/debit cards and eChecks; work order management; customer portals; inspections and accounting — all in one easy-to-use solution. For more information or a no obligation free trial, visit Propertyware at [www.propertyware.com](https://www.propertyware.com).
+**About RealPage**
+Located in Carrollton, Texas, a suburb of Dallas, RealPage is a leading provider of comprehensive property management software solutions in the multifamily, commercial, and single-family and vacation rental housing industries. RealPage SaaS solutions help property owners increase efficiency, decrease expenses, enhance the resident experience and generate more revenue. Utilizing its innovative SaaS platform, RealPage software enables easy system integration and streamlines online property management. Its on-demand product line covers the full spectrum of property management solutions, including accounting, revenue management, marketing solutions, resident services, renter insurance, utility management, spend management and apartment market research. For more information, call 1-87-REALPAGE or visit [www.realpage.com](https://www.realpage.com/).

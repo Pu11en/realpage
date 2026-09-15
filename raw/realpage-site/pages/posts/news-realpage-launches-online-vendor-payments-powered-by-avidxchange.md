@@ -1,0 +1,23 @@
+---
+url: "https://www.realpage.com/news/realpage-launches-online-vendor-payments-powered-by-avidxchange/"
+title: "RealPage Launches Online Vendor Payments"
+type: "posts"
+lastmod: "2020-07-30T12:00:00-05:00"
+crawled: "2026-09-15"
+source: "crawl4ai"
+---
+
+# RealPage Launches Online Vendor Payments
+July 30, 2020
+**_Vastly reduces paper vendor payments_**
+**RICHARDSON, Texas, (July 30, 2020)****–**[RealPage, Inc.](https://www.realpage.com/) (NASDAQ:[RP](http://finance.yahoo.com/q?s=RP)), a leading global provider of software and data analytics to the real estate industry, today announced the general availability of Online Vendor Payments automating the entire vendor payment process from procurement to purchase order, invoice processing and payment. Online Vendor Payments, which is part of the RealPage Accounting and Financial Suite, enables property management companies to easily reduce expenses and eliminate 100% of paper checks and other manual processes that can lead to errors and slow down the procurement lifecycle. It also lowers risk and increases ROI, all while providing complete visibility into payments status real-time.
+RealPage Online Vendor Payments incorporates the AvidXchange network of over 680,000 suppliers processing $140 billion in vendor transactions in 2019 and integrates with RealPage Accounting and Spend Management, allowing users to track and manage expenses from a single platform.
+“We see so many advantages for customers with RealPage Vendor Payments,” said Sara Jones, RealPage SVP, Spend Management and Accounting. “The more suppliers move to electronic payments, the more customers can save the $3 to $7 average cost of processing a paper check while significantly reducing the risk of check fraud at the same time. Vendor Payments also allows suppliers to choose from virtual card, enhanced ACH or check options, which helps reduce payment processing time from 40 days to fewer than 10. And customers can rely on AvidXchange’s full-service payment team to work directly with vendors to maintain their payment data and verify their accepted payment types. It’s all upside!”
+“In partnership with RealPage, we’re helping real estate companies automate payments so they can spend more time focused on managing properties and less on paying bills,” said Dan Drees, Chief Growth Officer at AvidXchange. “With RealPage Vendor Payments backed by the AvidPay Network, customers are gaining efficiency and visibility into cash flow so they can make timely, secure payments to suppliers without the need to mail paper checks.”
+“RealPage has made our implementation of the new Vendor Payments solution such a breeze,” said Christina Van Zandt, Managing Director, CFO at Tishau GP, LLC, a participant in the Vendor Payments pilot test. “We can’t wait to realize all the time and cost savings that we know we’ll begin to receive in the coming weeks.”
+“We’ve worked with RealPage for many years, and we were thrilled to be asked to be an early adopter for RealPage Vendor Payments,” said Ryan Nigro, Senior Vice President of IT for CF Real Estate Services. “We’re always looking for new ways to stay ahead of the competition, realize the benefits of economies of scale and deliver a better toolkit for both our accounts payable and our vendor partners. Moving to RealPage Vendor Payments helps us deliver on those goals.”
+For more information about RealPage Vendor Payments, please visit <https://www.realpage.com/vendor-payments/>.
+**About RealPage**
+RealPage provides a technology platform that enables real estate owners and managers to change how people experience and use rental space. Clients use the platform to gain transparency in asset performance, leverage data insights and monetize space to create incremental yields. Founded in 1998 and headquartered in Richardson, Texas, RealPage currently serves approximately 19 million units worldwide from offices in North America, Europe and Asia. For more information about RealPage, please visit [https://www.RealPage.com](https://www.realpage.com/).
+**About AvidXchange**
+AvidXchange is the industry leader in automating invoice and payment processes for mid-market businesses. Founded in the year 2000,[ AvidXchange](https://www.avidxchange.com/) processes over $140 billion transactions annually across its network of more than 680,000 suppliers, transforming the way 6,000 customers in North America pay their bills. AvidXchange is distinguished as a global fintech unicorn and one of the fastest growing technology companies in the U.S. with 1,500 employees supporting customers across seven office locations. For more information about AvidXchange, visit [www.AvidXchange.com](http://www.avidxchange.com/).

@@ -43,7 +43,9 @@ JUNK_SELECTORS = [
     "[class*=social-share i]", "[class*=skip-link i]", "[aria-hidden=true]",
 ]
 JUNK_LINES = re.compile(r"^\s*(\[?skip to (main )?content\]?.*|accept( all)? cookies?|cookie settings|"
-                        r"we use cookies.*|share (on|this).*|back to top)\s*$", re.I)
+                        r"we use cookies.*|share (on|this).*|share|back to top|-+|[|•·]|"
+                        r"\[ ?(facebook|twitter|linkedin|email) ?\]\(.*|"
+                        r"#* ?have a question about our products or services\??|contact us)\s*$", re.I)
 
 ICON_MARKS = re.compile(r"(?<![\w_])__(?![\w_])\s?")  # leftover icon-font glyphs, e.g. "[ READ  __](...)"
 

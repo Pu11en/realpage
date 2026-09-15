@@ -11,3 +11,8 @@
 - Jina Reader fallback when Crawl4AI errors or text < 200 chars (key read from `.env`, never printed). 1 req/sec, one at a time, resumes by skipping saved files, failures to `failed.csv`. Flags: `--limit N`, `--only-failed` (for T3's retry), `--no-fallback`.
 - Tests: `tests/test_crawl.py` + fixture `product-page.html`, fake fetchers — check script 9 passed. Live smoke of 2 pages into /tmp (not kept): both clean, readable.
 - Open: nothing. T3 runs the real crawl.
+
+## T3 Real crawl — paused 2026-09-15
+- Drew is resetting Docker (shared with another tool; the crawl may have crashed it). Paused until he says go.
+- Saved so far: crawler cleaner now also strips share buttons, "|"/"--" separators and the "Have a question… Contact Us" footer (+1 test; check script 10 passed). 817 pages crawled into raw/realpage-site/pages; failed.csv empty.
+- Resume: rerun `crawl.py --limit 20` — it skips saved pages — then spot-check 5 pages by eye.

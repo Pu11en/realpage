@@ -87,3 +87,9 @@ def test_failures_logged(tmp_path):
 def test_slugs():
     assert cr.slug_for("https://www.realpage.com/") == "home"
     assert cr.slug_for("https://www.realpage.com/blog/Some_Post/") == "blog-some-post"
+
+
+def test_tidy_drops_share_and_contact_junk():
+    md = "# Title\n--\nBy Staff\n|\nShare\n[ Facebook ](https://x) [ Twitter ](https://y)\nBody text.\n##### Have a question about our products or services?\nContact Us\n"
+    out = cr.tidy_markdown(md)
+    assert out == "# Title\nBy Staff\nBody text.\n"

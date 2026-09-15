@@ -1,0 +1,22 @@
+---
+url: "https://www.realpage.com/news/realpage-launches-corporate-citizenship-initiative-realpagegives/"
+title: "RealPage Launches Corporate Citizenship Initiative, RealPageGIVES"
+type: "posts"
+lastmod: "2019-11-12T09:37:30-06:00"
+crawled: "2026-09-15"
+source: "crawl4ai"
+---
+
+# RealPage Launches Corporate Citizenship Initiative, RealPageGIVES
+November 12, 2019
+_Strategically expanding RealPage’s global philanthropic footprint_
+**RICHARDSON, Texas, (November 12, 2019)** — RealPage, Inc. (NASDAQ:[RP](http://finance.yahoo.com/q?s=RP)) announced its commitment to taking corporate citizenship to the next level with RealPageGIVES. RealPageGIVES is a platform for employees around the globe to engage with vetted nonprofit organizations of their choice. This platform provides a new way for employees to give back to the communities where they live and work, globally. RealPageGIVES leverages technology and innovation to bring the RealPage Promise of giving back to our communities by simplifying how employees look for volunteer opportunities and donate to causes they care about.
+“Need exists everywhere in the world. We [RealPage] must be global in the pursuit of our mission,” said Steve Winn, Chairman and CEO of RealPage, Inc.
+RealPageGIVES focuses on two key areas: education and community and economic development. RealPage invests in programs that inspire and prepare students to excel in science, technology, engineering, and math (STEM) and is committed to developing the next generation, while increasing access to education. Additionally, RealPage invests in building resilient communities by supporting nonprofit organizations focused on improving housing services and providing job and life-skills enrichment training.
+RealPage believes being a good corporate citizen is more than bringing jobs to the global communities we serve – it’s about engaging and empowering employees to give their time, talent, and treasure to those in need. RealPageGIVES is an innovative solution simplifying how employees can strategically engage and give back to causes most important to them in a more meaningful way.
+Our Richardson headquarters has supported Cristo Rey, a college prep high school for students with limited financial resources, through their corporate work study program giving students hands-on experience in a corporate setting. In the Philippines, RealPage is sponsoring a fundraising campaign to expand the school in the Cuatro community to include grades 11-12. This year, our team in India adopted a government primary school in Hyderabad and spends their Saturdays mentoring and teaching students English.
+“RealPage is committed to strategically investing time and resources in organizations that have a real impact in our communities,” said Taiwan Brown, Vice President of Inclusion and Community Engagement, “we have solidified corporate citizenship as a formal part of our corporate values and provided a simple process for employees to engage with the organizations most significant to them.”
+For the past 20 years, RealPage employees have been catalysts in transforming communities around the globe by giving to causes most important to them. Year over year, employee participation has grown significantly. This year, our goal is to raise $550,000 companywide. RealPage will match employee contributions 50 cents on the dollar up to $200,000. If we hit our company giving goal, RealPage will contribute an additional $50,000, bringing our total giving to $800,000.
+RealPage announced its strategic partnership with YourCause, a Software as a Service (SaaS) provider supporting corporate philanthropy and innovating the way meaningful connections are built between corporations, employees, and nonprofits. With RealPageGIVES, RealPage employees will maximize their impact, creating significant change in communities where they live and work.
+**About RealPage**
+RealPage provides a technology platform that enables real estate owners and managers to change how people experience and use rental space. Clients use the platform to gain transparency in asset performance, leverage data insights and monetize space to create incremental yields. Founded in 1998 and headquartered in Richardson, Texas, RealPage currently serves over 12,000 clients worldwide from offices in North America, Europe and Asia. For more information about RealPage, please visit [https://www.realpage.com](https://www.realpage.com/).

@@ -1,0 +1,20 @@
+---
+url: "https://www.realpage.com/news/realpage-extends-commitment-transforming-customer-experience/"
+title: "RealPage Extends Its Commitment to Transforming the Customer Experience"
+type: "posts"
+lastmod: "2014-11-18T16:21:07-06:00"
+crawled: "2026-09-15"
+source: "crawl4ai"
+---
+
+# RealPage Extends Its Commitment to Transforming the Customer Experience
+November 18, 2014
+### _Hires 20-year customer excellence expert to lead client success and service support operations_
+**(November 18, 2014) —**[RealPage, Inc.](https://www.realpage.com/) (NASDAQ:[RP](http://finance.yahoo.com/q?s=RP)), a leading provider of on-demand property management software, announces the appointment of George Patterson as senior vice president of client success and service support operations. Mr. Patterson will ensure the success of RealPage customers through the delivery of exceptional end-to-end client experiences and robust service delivery operations.
+“With more than 20 years of experience working with both domestic and global enterprises, George’s remarkable skillset and leadership abilities will tremendously benefit our client services group,” said Mike Sabbatis, chief revenue officer, RealPage. “He has the dedication and drive to provide continued profit and growth, while delivering outstanding customer service experience that translates directly into success for our clients.”
+As senior vice president, Mr. Patterson will provide management and leadership of client implementations and engagements, account management and product support center operations. He will also support the development of the RealPage client ecosystem and continuous improvement capabilities.
+“I look forward to working directly with our clients and suppliers to build on the world-class reputation that RealPage has in providing services that bring added revenue and a differentiated client and end-user experience,” said Patterson. “As we build an integrated cross-channel service experience, focusing on key touch points for our various clients and end users, the overall value to all parties will continue to increase dramatically.”
+Patterson joins RealPage from NCR Corporation where he served as global vice president, customer experience and continuous improvement. In this role, he was responsible for transforming the customer experience, building robust scalable processes, and building out enterprise continuous improvement capabilities, while delivering significant EBITDA benefits year after year. As the senior most customer experience executive at NCR, he developed strategies, processes and technologies that aligned operational initiatives to transform customer experiences, and drove a customer-centric culture across the enterprise. Prior to NCR, he served in key operational and customer experience transformational roles at Americold Logistics and CIBA Vision, as well as led a professional services organization as senior vice president at Aon Consulting, supporting client operations and managing Latin America service delivery.
+* * *
+**About RealPage, Inc.**
+RealPage, Inc. is a leading provider of comprehensive property management software solutions for the multifamily, commercial, single-family and vacation rental housing industries. These solutions help property owners increase efficiency, decrease expenses, enhance the resident experience and generate more revenue. Using its innovative SaaS platform, RealPage’s on-demand software enables easy system integration and streamlines online property management. Its product line covers the full spectrum of property management solutions, including leasing, accounting, revenue management, marketing solutions, resident services, renter insurance, utility management, spend management and apartment market research. Founded in 1998 and headquartered in Carrollton, Texas. RealPage currently serves over 10,000 clients worldwide from offices in North America, Europe and Asia. For more information about the company, visit [https://www.realpage.com.](https://www.realpage.com/)

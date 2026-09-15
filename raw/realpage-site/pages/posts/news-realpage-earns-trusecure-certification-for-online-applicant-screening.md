@@ -1,0 +1,19 @@
+---
+url: "https://www.realpage.com/news/realpage-earns-trusecure-certification-for-online-applicant-screening/"
+title: "RealPage Earns TruSecure Certification for Online Applicant Screening"
+type: "posts"
+lastmod: "2001-04-12T00:00:00-05:00"
+crawled: "2026-09-15"
+source: "crawl4ai"
+---
+
+# RealPage Earns TruSecure Certification for Online Applicant Screening
+April 12, 2001
+**(April 12, 2001)** —RealPage, Inc., a leading provider of property management software and services to the multifamily industry, today announced that it has received the TruSecure Corporation certification for its OneSite application.
+RealPage commissioned the fully independent security assurance program by TruSecure for its OneSite web-based property management system, which uses a centralized storage model and data transmissions that travel via the Web. TruSecure is the worldwide leader in security assurance services for web-connected companies. Its comprehensive information security programs validate and support a company’s security, operational, development and human resources practices and policies in order to ensure that company truly protects its customers’ data as well as its own intellectual property.
+“During the design, construction and operation of all OneSite systems and subsystems, data security has always been imperative,” said Steve Winn, chairman and CEO of RealPage. “The TruSecure certification is a major milestone for RealPage. We have successfully demonstrated our ability to operate our business proactively in a secure manner consistent with the needs of the company and our customers.”
+The TruSecure certification was needed for OneSite Screening, the first offering from the OneSite product line. OneSite Screening is a powerful web-based decision tool that provides property management companies with a centralized, standardized way to analyze and approve leasing applications at all sites. It simplifies and automates the screening process, returning data quickly, reducing extra work and helping to improve the bottom line.
+TruSecure certification now provides OneSite customers with the option to view actual credit report data online. “Using encryption and other security techniques, OneSite now delivers credit detail or summary reports, along with eviction, criminal, NSF check and other detailed consumer data,” said Winn. OneSite Screening’s reports are easy to read, making the rental decision-making process that much easier for its customers.
+OneSite is the first web-based, completely integrated property management system for the multifamily industry. Its nine product centers— OneSite Leasing (which includes OneSite Screening), OneSite Rents, OneSite Facilities, OneSite Property, OneSite Market, OneSite Compliance, OneSite Learning, OneSite Revenue Management and OneSite Accounting & Budgeting—are dedicated to specific business processes. These product centers provide a comprehensive suite of e-business, browser-based tools that fully automate important property management functions.
+More than 20,000 sites across the United States use RealPage’s products and services, which handle the entire management process for both affordable and conventional properties, including leasing, applicant screening, market intelligence, accounting, budgeting, property management, facilities management, marketing and compliance reporting.
+RealPage is headquartered in Carrollton, Texas, a suburb of Dallas, with offices in Atlanta, Georgia, and Burlington, Vermont. It is the combination of three industry leaders: Rent Roll, Inc., the largest developer of multifamily property management software; M/PF Research, Inc., the leading provider of apartment market research to the multifamily industry; and ChannelTECH, Inc., a leading provider of handheld wireless computing devices for facility management applications.

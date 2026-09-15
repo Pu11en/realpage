@@ -1,0 +1,33 @@
+---
+url: "https://www.realpage.com/news/leasingdesk-amp-american-modern-insurance-group-proactively-contact-policyholders-affected-by-atlanta-tornado/"
+title: "LeasingDesk and American Modern Insurance Group Proactively Contact Policyholder"
+type: "posts"
+lastmod: "2008-03-21T00:00:00-05:00"
+crawled: "2026-09-15"
+source: "crawl4ai"
+---
+
+# LeasingDesk and American Modern Insurance Group Proactively Contact Policyholders Affected by Atlanta Tornado
+March 21, 2008
+### _Onsite claims office established; free internat and cellphone access available to all Fulton Cotton Mills community residents_
+**(March 21, 2008)** — LeasingDeskTM Insurance Services, a wholly owned subsidiary of RealPage, Inc., and a leading provider of point of lease systems for the multifamily industry, along with American Modern Insurance Group, the major underwriter of its liability and renter’s insurance policies, today announced efforts to expedite the claims process for its 47 policyholders living at the Fulton Cotton Mill Lofts, impacted by the recent tornado in Atlanta. The community was severely damaged, destroying personal property and displacing some residents.
+“Considering the magnitude of damage to the community, it is very fortunate no one was seriously injured,” said Dirk Wakeham, president of LeasingDesk. “Our immediate priority is to take care of our policyholders and make resources available to all residents of the property during this exceptionally difficult time.”
+To provide prompt assistance at the community, a team of representatives from American Modern has opened a catastrophe claim office onsite to expedite the claims process. The team is also providing Internet access and cell phone use for affected residents insured by other carriers to assist them in reaching family members or in contacting other insurance providers to file claims.
+As of March 21, American Modern has filed 20 ‘wind damage’ claims, a covered peril in the resident’s renter’s insurance policy. Based on the extent of personal damages and individual need, qualifying residents will receive cash advances to assist with additional living expenses. Information is being distributed to residents regarding temporary housing available through the Red Cross.
+“The time following a natural disaster is the most difficult and emotionally stressful for anyone affected by this type of event,” said Bob Crowley, Vice President of Claims for American Modern. “Our team is working diligently to provide as many resources as possible to the residents of this community and process appropriate claims on behalf of our policyholders so they can quickly return to their normal lives.”
+The 500-unit community is composed of seven buildings; however only two structures were significantly damaged during the tornado. The roof and a portion of the upper floor of one building were completely torn off during the storm and several windows broken. As a result, water penetrated the structure damaging residents’ personal property. Once American Modern adjusters are able to enter the building, additional inspections will be conducted to determine if any other claims are appropriate.
+A video of the damage to the community is posted on YouTube and can be viewed at: <http://www.youtube.com/watch?v=CoerZgt34qA>.
+The owner of the community, Aderhold Properties, Inc., requires residents in market rate apartments at Fulton Cotton Mills Lofts to carry insurance as a condition of residency, also known as full-participation insurance. Tom Aderhold, president of the company, noted, “This type of unexpected damage underscores the value of having every resident carry renter’s insurance in the event of a natural disaster. You never expect it to happen to you, but when it does, there’s peace of mind knowing your residents are protected.” Aderhold is also the immediate past president of the Atlanta Apartment Association.
+Residents who need to file a claim with LeasingDesk Insurance Services, or residents insured with other companies, who would like to take advantage of Internet and cell phone access should visit American Modern’s onsite office located at:
+Fulton Cotton Mills Lofts
+170 Boulevard SE, Suite A-101
+Atlanta, GA 30312
+1-888-AMIG-USA
+To schedule an interview with a LeasingDesk or American Modern executive, please contact Don Canfield at (303) 684-0300 x 123 or at don@linnelltaylor.com.
+LeasingDesk offerings are specifically designed for the multifamily industry. The suite of products and services automates everything from the lease application through execution of a signed lease. The product line includes online leasing, resident screening, electronic leasing forms, eSignatures, security deposit alternatives and renter’s insurance. For more information on LeasingDesk, visit www.leasingdesk.com, call 888-484-7132 or send an e-mail message to sales@leasingdesk.com
+* * *
+**About RealPage**
+Located in Carrollton, Texas, a suburb of Dallas, RealPage provides products and services to more than 20,000 apartment communities across the United States. Its six on-demand product lines include OneSite© property management systems that automate the leasing, renting, management, and accounting of conventional, affordable, and student housing properties; CrossFire© sales and marketing systems that boost occupancy and build retention; YieldStar© asset optimization systems that maximize asset valuation and investment return; VelocityTM utility and billing services that accelerate payments for resident charges; LeasingDeskTM point of lease systems that streamline the leasing process; and StarFireTM entertainment and communication services that create IP-connected communities. For more information, please call 1-87-REALPAGE or visit www.realpage.com.
+**About American Modern Insurance Group**
+American Modern Insurance Group, founded in 1965 and headquartered in Cincinnati, Ohio, is a provider of specialty insurance products and services. American Modern specializes in writing physical damage insurance and related coverages on manufactured housing and has expanded to other specialty insurance products including coverage for site-built homes, motorcycles, watercraft, snowmobiles, recreational vehicles, classic autos, physical damage on long-haul trucks, extended service contracts, excess and surplus lines coverages, credit life and related products, as well asral protection and mortgage fire products sold to financial institutions and their customers. American Modern serves 1.3 million policyholders nationwide, and is licensed in all 50 states. Additional information on the company can be found on the Internet at www.amig.com.
+American Modern is a subsidiary of The Midland Company, which has been in business since 1938.

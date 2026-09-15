@@ -1,0 +1,27 @@
+---
+url: "https://www.realpage.com/news/realpage-offers-early-registration-discount-for-2012-realworld-user-conference/"
+title: "RealPage® Offers Early Registration Discount for 2012 RealWorld User Conference"
+type: "posts"
+lastmod: "2011-12-13T06:00:00-06:00"
+crawled: "2026-09-15"
+source: "crawl4ai"
+---
+
+# RealPage® Offers Early Registration Discount for 2012 RealWorld User Conference
+December 13, 2011
+### _Early registration discount of $100 offered through December 31, 2011_
+**(December 13, 2011)** —RealPage, Inc. (NASDAQ: [RP](http://finance.yahoo.com/q;_ylt=Ap5Wn9L7nK9q1JAadLn0p9axcq9_;_ylu=X3oDMTBzYm05a3ZkBHBvcwMxBHNlYwNuZXdzYXJzdGFydARzbGsDcnA-?s=rp)) is putting a little something into the stockings of its customers who register for its 2012 RealWorld user conference: $100 off the registration fee. To take advantage of the early registration discount, individuals must register online at [www.realpage.com/realworld/](https://www.realpage.com/realworld/) by midnight CST, December 31, and use the promotional code RW100.
+“We’re committed to delivering an event that leaves our customers with new ideas and best practices to drive their personal and professional success,” said Andrea Massey, senior vice president of marketing for RealPage. “We’re working closely with industry experts, our user group and our customers to ensure that our conference offers exceptional value and relevance.”
+Every year, more than 1,000 rental housing professionals attend the RealWorld user conference for insight into the latest industry trends and innovations. It also provides one of the best networking opportunities in the multifamily industry, as rental housing professionals gather along with industry and product experts and executives from RealPage.
+The highlight of RealWorld is the educational sessions that give conventional, affordable, student, senior living, and single-family professionals a first-hand look at strategies and tools for cutting expenses, boosting revenue and creating operational efficiencies. Session topics will include the importance of lead capture and management, optimizing marketing spend, and vendor management as well as general sessions featuring online reputation management and a state of the apartment market update from the experts at MPF Research.
+A preliminary list of sessions is now available on the RealWorld user conference web site at [www.realpage.com/realworld/](https://www.realpage.com/realworld/).
+The $100 early registration discount expires at midnight CST on December 31. To take advantage of this discount, please register online as soon as possible at [www.realpage.com/realworld/](https://www.realpage.com/realworld/) and use promotional code RW100.
+* * *
+**About RealWorld**
+When: July 22-24, 2012
+Where: Aria Resort & Casino in Las Vegas
+Conference Web Site: [www.realpage.com/realworld/](https://www.realpage.com/realworld/)
+Conference Blog: [www.realpage.com/realworld/](https://www.realpage.com/realworld/)
+RealWorld is the annual RealPage user conference that features educational sessions to provide interaction, information, and in-depth looks at industry trends. It also provides one of the best networking opportunities in the multifamily industry with more than 1,000 professionals gathering along with industry and product experts and executives from RealPage. For more detailed information about registration, the conference, and travel, please visit [www.realpage.com/realworld/](https://www.realpage.com/realworld/).
+**About RealPage**
+Located in Carrollton, Texas, a suburb of Dallas, RealPage provides on demand (also referred to as “Software-as-a-Service” or “SaaS”) products and services to apartment communities and single family rentals across the United States. Its on demand product lines include OneSite® [property management systems](https://www.realpage.com/) that automate the leasing, renting, management, and accounting of conventional, affordable, tax credit, student living, senior living and military housing properties; LeaseStar™ multichannel managed marketing that enables owners to originate, syndicate, manage and capture leads more effectively and at less overall cost; YieldStar® asset optimization systems that enable owners and managers to optimize rents to achieve the overall highest yield, or combination of rent and occupancy, at each property; Velocity™ billing and utility management services that increase collections and reduce delinquencies; LeasingDesk® risk mitigation systems that are designed to reduce a community’s exposure to risk and liability; OpsTechnology™ spend management systems that help owners manage and control operating expenses; and Compliance Depot™ vendor management and qualification services to assist a community in managing its vendor compliance program. Supporting this family of SaaS products is a suite of shared cloud services including electronic payments, document management, decision support and learning. RealPage’s MyNewPlace® subsidiary is one of the nation’s largest [apartment](http://www.mynewplace.com) and home rental websites, offering apartment owners and managers qualified, prospective residents under a results-oriented pricing program. Through its Propertyware® subsidiary, RealPage also provides software and services to single-family rentals and low density, centrally-managed multifamily housing. For more information, call 1-87-REALPAGE or visit [www.realpage.com.](https://www.realpage.com/).
