@@ -14,8 +14,10 @@ never guess facts; Plano never rerun; localhost only, never push).
   `/home/drewp/main-projects/realpage/.env`; never commit keys). No Google Places.
 - **Arizona first, then states near Texas** (New Mexico, Louisiana, then Oklahoma, Colorado, Arkansas).
   New York is finished (keep its 2 leads as they are).
-- **Quality alarms instead of blind non-stop:** a run must meet the quality bar on real data; if it
-  can't after two fix attempts, stop with STUCK and a plain report rather than fill the site with junk.
+- **Speed over gates (Drew 2026-09-14, after the Tempe test):** no quality gate blocks anything any more.
+  `quality.json` is still written as a report, but a run never fails or STUCKs on it -- keep whatever real
+  facts the tool finds and move on. The F2 "really about this building" check stays (it's how the tool finds
+  facts, not a gate).
 - **Pre-approved, don't ask:** Jina + Brave searches up to 450 per state run (Jina ~$0.0005/search;
   Brave has $5 free credit a month -- hard cap 800 Brave calls/month, then Jina-only; never pay
   beyond the free credit), free public data downloads.
@@ -128,14 +130,14 @@ Open: http://localhost:8765 → Early Leads → Az
 - [ ] **F10c Find websites by project name.** For existing (leasing) buildings, search the project/brand
   name from the permit or sales record first, then the street address; keep the F2 check and listing-site
   filter. Live test on Tempe's "1020 Apache" and "La Victoria Commons on Apache". Commit.
-- [ ] **F10 Tempe test run (again, after F10a-c).** Full chain on Tempe only (best data). Compare to the
-  bar (answer-key recall reported, not failed, for a single city). If below: find the step at fault, fix it, rerun -- up to 2 fix rounds;
-  still below → STUCK with a plain report of what's missing and why. Write the leads in plain words in
-  the progress log. Commit.
-- [ ] **F11 Full Arizona run.** First move `propertystack/data/az/` and `propertystack/runs/AZ/20260914-full/`
+- [x] **F10 Tempe test run (again, after F10a-c).** Done: run `20260914-tempe-retest3` -- 11 real leads,
+  websites on ~55%, Entrata found on Verve Tempe, developer+phone on 2/9 new permits. Gate dropped by Drew.
+- [ ] **F11 Full Arizona run (no quality gate).** Show clean names everywhere: use
+  `building_match.clean_project_name()` for the displayed name ("REVELRY [NEW MIXED-USE] - *LP* / ..." →
+  "Revelry", title case), keeping the raw permit name in the record. Then: First move `propertystack/data/az/` and `propertystack/runs/AZ/20260914-full/`
   to `propertystack/archive/az-run1/` so nothing from the junk run leaks in. New run id. Whole state in permit
-  order until 150 projects or the 450-search cap, plus the county sales file. Must pass the bar
-  (same 2-fix-rounds rule, then STUCK). Save recipes. Commit.
+  order until 150 projects or the 450-search cap, plus the county sales file. Write `quality.json` as a report
+  only -- never block, never STUCK on it. Save recipes. Commit.
 - [ ] **F12 Arizona on the site + chat.** Build the site and rebuild the chat (`bash tooling/dev.sh`)
   with the new AZ leads; run the Check and `tooling/qa/check-answers.sh`. Commit. Recap in plain words
   how many AZ leads, how many with software and phone, and the quality numbers.
