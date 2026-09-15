@@ -94,6 +94,14 @@ SOURCE_NAMES = {
     "cranesignal_eval_failure_types": "CraneSignal eval failure types",
     "cranesignal_buildbot_summary": "CraneSignal AI build summary",
     "cranesignal_buildbot_examples": "CraneSignal AI build examples",
+    "ai_visibility_summary": "AI Visibility score summary",
+    "ai_visibility_models": "AI Visibility model scores",
+    "ai_visibility_competitors": "AI Visibility competitor scores",
+    "ai_visibility_questions": "AI Visibility question results",
+    "ai_visibility_top_picks": "AI Visibility top picks",
+    "ai_visibility_actions": "AI Visibility recommended actions",
+    "ai_visibility_site_facts": "AI Visibility site facts",
+    "ai_visibility_caveats": "AI Visibility caveats",
 }
 
 
@@ -211,6 +219,10 @@ def ps_schema(args: dict, **_) -> str:
             "was built, checked, measured, or how accurate/fast it is), never as property/lead/software "
             "facts. eval/chat/buildbot rows have measured_at dates; state that date because those numbers "
             "may be old. cost_note says per-area dollars are a placeholder until run logs record dollars.",
+            "ai_visibility_* tables: the read-only AI Visibility page snapshot for RealPage -- scores, "
+            "model-by-model results, competitors, question answers, and recommended actions. Use these "
+            "only for questions about RealPage's visibility in AI answers and how to improve it. Always "
+            "state generated_at/based_on dates because the scores are point-in-time measurements.",
         ],
     })
 
