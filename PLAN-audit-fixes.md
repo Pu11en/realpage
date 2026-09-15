@@ -47,7 +47,7 @@ Open: http://localhost:8765/index.html
   `propertyId` (use the lead's own id): name, city, stage, units, software, why, sources, Deep dive
   button. All Texas/Arizona/New York rows become clickable. Test: every lead id in the built data
   opens without "not found".
-- [ ] **A5 Deep dive says the real stage.** `deepDivePrompt` in `site/js/chat-panel.js` passes the
+- [x] **A5 Deep dive says the real stage.** `deepDivePrompt` in `site/js/chat-panel.js` passes the
   lead's real stage (planned / under construction / leasing) instead of calling every "Upcoming" row
   planned.
 - [ ] **A6 Menu footer honest.** "Last updated" comes from the built data's date, not the hard-coded

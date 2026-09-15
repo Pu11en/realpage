@@ -24,3 +24,9 @@
 - Test: tooling/qa/fixes_tests/test_a4_every_lead_opens.py (all built lead ids resolve, via node).
 - Checked: check-fixes.sh passes (10 tests, design 0 problems); browser: tx-1, az-1, ny-1, a Plano property and a click from the Arizona list all open, "zzz" still says not found, Deep dive opens chat, no page errors.
 - Left for later tasks: Deep dive still calls non-sold rows "planned" (A5); raw ArcGIS source URLs shown as-is (C4); NY units 0 shows "units not stated" here.
+
+## A5 Deep dive says the real stage — done (11b4f02)
+- deepDivePrompt in site/js/chat-panel.js now takes the lead's stage/signalType and says it in plain words: "permit filed", "planned", "under construction", "leasing now" (asks who is leasing it / how full), or "recently sold". Plano property stages (zoning-filed, under-construction, ...) map too.
+- Early Leads and the detail page pass stage + signalType instead of a guessed "upcoming" flag (before, TX "Planned"/"Leasing" rows got the existing-building prompt and every other upcoming row was called "planned").
+- Test: tooling/qa/fixes_tests/test_a5_deep_dive_stage.py (fails on the old code).
+- Checked: check-fixes.sh passes (12 tests, design 0 problems).
