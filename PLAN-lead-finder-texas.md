@@ -49,7 +49,7 @@ Open: http://localhost:8765 → Early Leads → Tx
 - [x] **S0 Save as you go + data-first switch.** `run.py` commits the run folder + `leads.json` after
   each city (wrapper script or a `--commit-each` flag); enrichment runs only as described in "Data
   first" above (skip website search for not-yet-built projects). Tests. Commit.
-- [ ] **S1 Parallel lookups.** Details, website, software and contact lookups run 6 at a time (thread
+- [x] **S1 Parallel lookups.** Details, website, software and contact lookups run 6 at a time (thread
   pool) instead of one by one; keep 2 s between visits to the same site, stay under Jina ~100/min, cache
   every page. Time Tempe's details step before and after and write both in the progress log. Tests.
   Commit.

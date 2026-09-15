@@ -25,10 +25,17 @@ import subprocess
 import sys
 import urllib.parse
 import urllib.request
+from concurrent.futures import ThreadPoolExecutor
 from dataclasses import dataclass, field
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Callable
+
+# S1: details/software/contact lookups run this many records at a time
+# (thread pool) instead of one by one -- WebHelper still enforces >=2s
+# between visits to the same site and Jina's own rate limit, so more
+# workers speeds up *different* sites in parallel without hammering one.
+LOOKUP_WORKERS = 6
 
 HERE = Path(__file__).resolve().parent
 SKILLS = HERE.parent
@@ -239,14 +246,14 @@ def step_permits(run_folder: RunFolder, city: str, state: str, area: str, recipe
 
 def step_details(run_folder: RunFolder, city: str, records: list[LeadRecord], deps: ChainDeps) -> list:
     def _do():
-        filled = []
-        for record in records:
-            result = project_details.fill_project_details(
+        def _fill(record):
+            return project_details.fill_project_details(
                 record, deps.search_fn, lambda u: deps.web.fetch(u), deps.geocode_fn
             )
-            if result is not None:
-                filled.append(result.to_dict())
-        return filled
+
+        with ThreadPoolExecutor(max_workers=LOOKUP_WORKERS) as pool:
+            results = list(pool.map(_fill, records))
+        return [r.to_dict() for r in results if r is not None]
 
     return _run_step(run_folder, STEP_DETAILS, city, _do)
 

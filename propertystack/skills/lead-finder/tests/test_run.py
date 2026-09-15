@@ -238,3 +238,31 @@ def test_awards_and_hud_skip_gracefully_without_config(tmp_path):
     awards = chain.step_awards(run_folder, STATE, deps)
     assert hud["skipped"] is True
     assert awards["skipped"] is True
+
+
+def test_step_details_runs_in_parallel_but_keeps_order(tmp_path, monkeypatch):
+    """S1: step_details fills several records' details at once (thread
+    pool) instead of one by one -- output order must match input order even
+    when lookups finish out of order."""
+    import time
+
+    from record import LeadRecord
+
+    records = [LeadRecord(area="zz", city=CITY, name=f"Project {i}") for i in range(8)]
+
+    def fake_fill(record, search_fn, fetch_fn, geocode_fn):
+        # earlier records sleep longer, so if the pool ran serially in
+        # input order the *output* would happen to look ordered anyway --
+        # sleeping longer for the ones that should finish last proves the
+        # pool, not accidental scheduling, preserves order.
+        time.sleep(0.01 * (len(records) - int(record.name.split()[-1])))
+        return record
+
+    monkeypatch.setattr(chain.project_details, "fill_project_details", fake_fill)
+
+    run_folder = RunFolder(state=STATE, run_id="run-details", runs_dir=tmp_path)
+    web = FakeWeb()
+    deps = _make_deps(web, tmp_path / "recipes")
+
+    out = chain.step_details(run_folder, CITY, records, deps)
+    assert [d["name"] for d in out] == [f"Project {i}" for i in range(8)]
