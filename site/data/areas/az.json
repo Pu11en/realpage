@@ -30,7 +30,7 @@
   "leads": [
     {
       "id": "az-1",
-      "property": "LA VICTORIA COMMONS ON APACHE",
+      "property": "La Victoria Commons On Apache",
       "community": "LA VICTORIA COMMONS ON APACHE",
       "city": "Tempe",
       "address": "2320 E APACHE BLVD",
@@ -58,7 +58,7 @@
     },
     {
       "id": "az-2",
-      "property": "1020 APACHE",
+      "property": "1020 Apache",
       "community": "1020 APACHE",
       "city": "Tempe",
       "address": "1020 E APACHE BLVD",
@@ -86,7 +86,7 @@
     },
     {
       "id": "az-3",
-      "property": "GREENPRINT ON 3RD APARTMENTS",
+      "property": "Greenprint On 3Rd Apartments",
       "community": "GREENPRINT ON 3RD APARTMENTS",
       "city": "Phoenix",
       "address": "629 N 3RD AVE",
@@ -114,7 +114,7 @@
     },
     {
       "id": "az-4",
-      "property": "SOUTH PIER LOT 6",
+      "property": "South Pier Lot 6",
       "community": "SOUTH PIER LOT 6",
       "city": "Tempe",
       "address": "1314 E VISTA DEL LAGO DR",
@@ -142,7 +142,7 @@
     },
     {
       "id": "az-5",
-      "property": "MULTIFAMILY",
+      "property": "Multifamily",
       "community": "MULTIFAMILY",
       "city": "Phoenix",
       "address": "13000 N TATUM BLVD",
@@ -198,7 +198,7 @@
     },
     {
       "id": "az-7",
-      "property": "8336 E QUALITY AVE",
+      "property": "8336 E Quality Ave",
       "community": "8336 E QUALITY AVE",
       "city": "Mesa",
       "address": "8336 E QUALITY AVE",
@@ -226,7 +226,7 @@
     },
     {
       "id": "az-8",
-      "property": "7961 E ELLIOT RD",
+      "property": "7961 E Elliot Rd",
       "community": "7961 E ELLIOT RD",
       "city": "Mesa",
       "address": "7961 E ELLIOT RD",
@@ -254,7 +254,7 @@
     },
     {
       "id": "az-9",
-      "property": "APARTMENTS",
+      "property": "3380 N Scottsdale Rd",
       "community": "APARTMENTS",
       "city": "Scottsdale",
       "address": "3380 N SCOTTSDALE RD",
@@ -272,7 +272,6 @@
         "permit": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
       },
       "sources": [
-        "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC",
         "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
       ],
       "signalType": "Upcoming",
@@ -311,7 +310,7 @@
     },
     {
       "id": "az-11",
-      "property": "6733 E MAIN ST",
+      "property": "6733 E Main St",
       "community": "6733 E MAIN ST",
       "city": "Mesa",
       "address": "6733 E MAIN ST",
@@ -339,7 +338,7 @@
     },
     {
       "id": "az-12",
-      "property": "APARTMENTS",
+      "property": "13870 N Frank Lloyd Wright Bl Unit 1070",
       "community": "APARTMENTS",
       "city": "Scottsdale",
       "address": "13870 N FRANK LLOYD WRIGHT BL UNIT 1070",
@@ -357,7 +356,6 @@
         "permit": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
       },
       "sources": [
-        "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC",
         "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
       ],
       "signalType": "Upcoming",
@@ -396,7 +394,7 @@
     },
     {
       "id": "az-14",
-      "property": "APARTMENTS",
+      "property": "10200 E Dynamite Bl Bldg 7",
       "community": "APARTMENTS",
       "city": "Scottsdale",
       "address": "10200 E DYNAMITE BL BLDG 7",
@@ -414,7 +412,6 @@
         "permit": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
       },
       "sources": [
-        "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC",
         "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
       ],
       "signalType": "Upcoming",
@@ -425,7 +422,7 @@
     },
     {
       "id": "az-15",
-      "property": "VERVE TEMPE",
+      "property": "Verve Tempe",
       "community": "VERVE TEMPE",
       "city": "Tempe",
       "address": "1047 S TERRACE RD",
@@ -453,7 +450,7 @@
     },
     {
       "id": "az-16",
-      "property": "8137 E BROWN RD",
+      "property": "8137 E Brown Rd",
       "community": "8137 E BROWN RD",
       "city": "Mesa",
       "address": "8137 E BROWN RD",
@@ -481,7 +478,7 @@
     },
     {
       "id": "az-17",
-      "property": "MULTI-FAMILY DWELLING",
+      "property": "Multi-Family Dwelling",
       "community": "MULTI-FAMILY DWELLING",
       "city": "Scottsdale",
       "address": "6824 E INDIAN SCHOOL RD",
@@ -499,7 +496,6 @@
         "permit": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
       },
       "sources": [
-        "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC",
         "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
       ],
       "signalType": "Upcoming",
@@ -510,7 +506,7 @@
     },
     {
       "id": "az-18",
-      "property": "812 E SPEEDWAY BL",
+      "property": "812 E Speedway Bl",
       "community": "812 E SPEEDWAY BL",
       "city": "Tucson",
       "address": "812 E SPEEDWAY BL",
@@ -566,7 +562,7 @@
     },
     {
       "id": "az-20",
-      "property": "NORTH VALLEY APARTMENTS BLDG F",
+      "property": "North Valley Apartments Bldg F",
       "community": "NORTH VALLEY APARTMENTS BLDG F",
       "city": "Phoenix",
       "address": "32400 N 29TH AVE",
@@ -594,7 +590,7 @@
     },
     {
       "id": "az-21",
-      "property": "CABANA KYRENE APARTMENTS",
+      "property": "Cabana Kyrene Apartments",
       "community": "CABANA KYRENE APARTMENTS",
       "city": "Tempe",
       "address": "515 W GUADALUPE RD",
@@ -622,7 +618,7 @@
     },
     {
       "id": "az-22",
-      "property": "BEN BAR ON 3RD APARTMENTS BLDG 2",
+      "property": "Ben Bar On 3Rd Apartments Bldg 2",
       "community": "BEN BAR ON 3RD APARTMENTS BLDG 2",
       "city": "Phoenix",
       "address": "4110 S 3RD AVE",
@@ -650,7 +646,7 @@
     },
     {
       "id": "az-23",
-      "property": "MULTI-FAMILY DWELLING",
+      "property": "Multi-Family Dwelling",
       "community": "MULTI-FAMILY DWELLING",
       "city": "Scottsdale",
       "address": "8080 E CAMELBACK RD",
@@ -668,7 +664,6 @@
         "permit": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
       },
       "sources": [
-        "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC",
         "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
       ],
       "signalType": "Upcoming",
@@ -679,7 +674,7 @@
     },
     {
       "id": "az-24",
-      "property": "TAYLOR STREET DOWNTOWN APARTMENTS 1",
+      "property": "Taylor Street Downtown Apartments 1",
       "community": "TAYLOR STREET DOWNTOWN APARTMENTS 1",
       "city": "Phoenix",
       "address": "1435 E TAYLOR ST",
@@ -707,7 +702,7 @@
     },
     {
       "id": "az-25",
-      "property": "SIDNEY P OSBORN MULTIFAMILY BUILDING 2",
+      "property": "Sidney P Osborn Multifamily Building 2",
       "community": "SIDNEY P OSBORN MULTIFAMILY BUILDING 2",
       "city": "Phoenix",
       "address": "225 N 17TH ST",
@@ -735,7 +730,7 @@
     },
     {
       "id": "az-26",
-      "property": "1817 M VIEW APARTMENT-GAZEBO PERMIT",
+      "property": "1817 M View Apartment-Gazebo Permit",
       "community": "1817 M VIEW APARTMENT-GAZEBO PERMIT",
       "city": "Phoenix",
       "address": "1817 W MOUNTAIN VIEW RD",
@@ -763,7 +758,7 @@
     },
     {
       "id": "az-27",
-      "property": "APARTMENTS",
+      "property": "7550 E Legacy Bl Bldg 6",
       "community": "APARTMENTS",
       "city": "Scottsdale",
       "address": "7550 E LEGACY BL BLDG 6",
@@ -781,7 +776,6 @@
         "permit": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
       },
       "sources": [
-        "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC",
         "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
       ],
       "signalType": "Upcoming",
@@ -792,7 +786,7 @@
     },
     {
       "id": "az-28",
-      "property": "MULTI-FAMILY DWELLING",
+      "property": "Multi-Family Dwelling",
       "community": "MULTI-FAMILY DWELLING",
       "city": "Scottsdale",
       "address": "19670 N 76TH ST BLDG 21",
@@ -810,7 +804,6 @@
         "permit": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
       },
       "sources": [
-        "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC",
         "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
       ],
       "signalType": "Upcoming",
@@ -821,7 +814,7 @@
     },
     {
       "id": "az-29",
-      "property": "MULTI-FAMILY DWELLING",
+      "property": "Multi-Family Dwelling",
       "community": "MULTI-FAMILY DWELLING",
       "city": "Scottsdale",
       "address": "19544 N 76TH ST BLDG 8",
@@ -839,7 +832,6 @@
         "permit": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
       },
       "sources": [
-        "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC",
         "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
       ],
       "signalType": "Upcoming",
@@ -850,7 +842,7 @@
     },
     {
       "id": "az-30",
-      "property": "MULTI-FAMILY DWELLING",
+      "property": "Multi-Family Dwelling",
       "community": "MULTI-FAMILY DWELLING",
       "city": "Scottsdale",
       "address": "19562 N 76TH ST BLDG 10",
@@ -868,7 +860,6 @@
         "permit": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
       },
       "sources": [
-        "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC",
         "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
       ],
       "signalType": "Upcoming",
@@ -879,7 +870,7 @@
     },
     {
       "id": "az-31",
-      "property": "MULTI-FAMILY DWELLING",
+      "property": "Multi-Family Dwelling",
       "community": "MULTI-FAMILY DWELLING",
       "city": "Scottsdale",
       "address": "19580 N 76TH ST BLDG 12",
@@ -897,7 +888,6 @@
         "permit": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
       },
       "sources": [
-        "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC",
         "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
       ],
       "signalType": "Upcoming",
@@ -908,7 +898,7 @@
     },
     {
       "id": "az-32",
-      "property": "MULTI-FAMILY DWELLING",
+      "property": "Multi-Family Dwelling",
       "community": "MULTI-FAMILY DWELLING",
       "city": "Scottsdale",
       "address": "19616 N 76TH ST BLDG 16",
@@ -926,7 +916,6 @@
         "permit": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
       },
       "sources": [
-        "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC",
         "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
       ],
       "signalType": "Upcoming",
@@ -937,7 +926,7 @@
     },
     {
       "id": "az-33",
-      "property": "MULTI-FAMILY DWELLING",
+      "property": "Multi-Family Dwelling",
       "community": "MULTI-FAMILY DWELLING",
       "city": "Scottsdale",
       "address": "19652 N 76TH ST BLDG 20",
@@ -955,7 +944,6 @@
         "permit": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
       },
       "sources": [
-        "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC",
         "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
       ],
       "signalType": "Upcoming",
@@ -966,7 +954,7 @@
     },
     {
       "id": "az-34",
-      "property": "MULTI-FAMILY DWELLING",
+      "property": "Multi-Family Dwelling",
       "community": "MULTI-FAMILY DWELLING",
       "city": "Scottsdale",
       "address": "19672 N 76TH ST BLDG 22",
@@ -984,7 +972,6 @@
         "permit": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
       },
       "sources": [
-        "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC",
         "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
       ],
       "signalType": "Upcoming",
@@ -995,7 +982,7 @@
     },
     {
       "id": "az-35",
-      "property": "MULTI-FAMILY DWELLING",
+      "property": "Multi-Family Dwelling",
       "community": "MULTI-FAMILY DWELLING",
       "city": "Scottsdale",
       "address": "19690 N 76TH ST BLDG 24",
@@ -1013,7 +1000,6 @@
         "permit": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
       },
       "sources": [
-        "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC",
         "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
       ],
       "signalType": "Upcoming",
@@ -1024,7 +1010,7 @@
     },
     {
       "id": "az-36",
-      "property": "MULTI-FAMILY DWELLING",
+      "property": "Multi-Family Dwelling",
       "community": "MULTI-FAMILY DWELLING",
       "city": "Scottsdale",
       "address": "19596 N 76TH ST BLDG 13",
@@ -1042,7 +1028,6 @@
         "permit": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
       },
       "sources": [
-        "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC",
         "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
       ],
       "signalType": "Upcoming",
@@ -1053,7 +1038,7 @@
     },
     {
       "id": "az-37",
-      "property": "MULTI-FAMILY DWELLING",
+      "property": "Multi-Family Dwelling",
       "community": "MULTI-FAMILY DWELLING",
       "city": "Scottsdale",
       "address": "19488 N 76TH ST BLDG 1",
@@ -1071,7 +1056,6 @@
         "permit": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
       },
       "sources": [
-        "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC",
         "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
       ],
       "signalType": "Upcoming",
@@ -1082,7 +1066,7 @@
     },
     {
       "id": "az-38",
-      "property": "MULTI-FAMILY DWELLING",
+      "property": "Multi-Family Dwelling",
       "community": "MULTI-FAMILY DWELLING",
       "city": "Scottsdale",
       "address": "19506 N 76TH ST BLDG 3",
@@ -1100,7 +1084,6 @@
         "permit": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
       },
       "sources": [
-        "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC",
         "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
       ],
       "signalType": "Upcoming",
@@ -1111,7 +1094,7 @@
     },
     {
       "id": "az-39",
-      "property": "MULTI-FAMILY DWELLING",
+      "property": "Multi-Family Dwelling",
       "community": "MULTI-FAMILY DWELLING",
       "city": "Scottsdale",
       "address": "19524 N 76TH ST BLDG 5",
@@ -1129,7 +1112,6 @@
         "permit": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
       },
       "sources": [
-        "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC",
         "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
       ],
       "signalType": "Upcoming",
@@ -1140,7 +1122,7 @@
     },
     {
       "id": "az-40",
-      "property": "MULTI-FAMILY DWELLING",
+      "property": "Multi-Family Dwelling",
       "community": "MULTI-FAMILY DWELLING",
       "city": "Scottsdale",
       "address": "19542 N 76TH ST BLDG 7",
@@ -1158,7 +1140,6 @@
         "permit": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
       },
       "sources": [
-        "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC",
         "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
       ],
       "signalType": "Upcoming",
@@ -1169,7 +1150,7 @@
     },
     {
       "id": "az-41",
-      "property": "MULTI-FAMILY DWELLING",
+      "property": "Multi-Family Dwelling",
       "community": "MULTI-FAMILY DWELLING",
       "city": "Scottsdale",
       "address": "19614 N 76TH ST BLDG 15",
@@ -1187,7 +1168,6 @@
         "permit": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
       },
       "sources": [
-        "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC",
         "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
       ],
       "signalType": "Upcoming",
@@ -1198,7 +1178,7 @@
     },
     {
       "id": "az-42",
-      "property": "MULTI-FAMILY DWELLING",
+      "property": "Multi-Family Dwelling",
       "community": "MULTI-FAMILY DWELLING",
       "city": "Scottsdale",
       "address": "19632 N 76TH ST BLDG 17",
@@ -1216,7 +1196,6 @@
         "permit": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
       },
       "sources": [
-        "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC",
         "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
       ],
       "signalType": "Upcoming",
@@ -1227,7 +1206,7 @@
     },
     {
       "id": "az-43",
-      "property": "MULTI-FAMILY DWELLING",
+      "property": "Multi-Family Dwelling",
       "community": "MULTI-FAMILY DWELLING",
       "city": "Scottsdale",
       "address": "19688 N 76TH ST BLDG 23",
@@ -1245,7 +1224,6 @@
         "permit": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
       },
       "sources": [
-        "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC",
         "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
       ],
       "signalType": "Upcoming",
@@ -1256,7 +1234,7 @@
     },
     {
       "id": "az-44",
-      "property": "MULTI-FAMILY DWELLING",
+      "property": "Multi-Family Dwelling",
       "community": "MULTI-FAMILY DWELLING",
       "city": "Scottsdale",
       "address": "19526 N 76TH ST BLDG 6",
@@ -1274,7 +1252,6 @@
         "permit": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
       },
       "sources": [
-        "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC",
         "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
       ],
       "signalType": "Upcoming",
@@ -1285,7 +1262,7 @@
     },
     {
       "id": "az-45",
-      "property": "MULTI-FAMILY DWELLING",
+      "property": "Multi-Family Dwelling",
       "community": "MULTI-FAMILY DWELLING",
       "city": "Scottsdale",
       "address": "19634 N 76TH ST BLDG 18",
@@ -1303,7 +1280,6 @@
         "permit": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
       },
       "sources": [
-        "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC",
         "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
       ],
       "signalType": "Upcoming",
@@ -1314,7 +1290,7 @@
     },
     {
       "id": "az-46",
-      "property": "MULTI-FAMILY DWELLING",
+      "property": "Multi-Family Dwelling",
       "community": "MULTI-FAMILY DWELLING",
       "city": "Scottsdale",
       "address": "19560 N 76TH ST BLDG 9",
@@ -1332,7 +1308,6 @@
         "permit": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
       },
       "sources": [
-        "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC",
         "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
       ],
       "signalType": "Upcoming",
@@ -1343,7 +1318,7 @@
     },
     {
       "id": "az-47",
-      "property": "MULTI-FAMILY DWELLING",
+      "property": "Multi-Family Dwelling",
       "community": "MULTI-FAMILY DWELLING",
       "city": "Scottsdale",
       "address": "19578 N 76TH ST BLDG 11",
@@ -1361,7 +1336,6 @@
         "permit": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
       },
       "sources": [
-        "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC",
         "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
       ],
       "signalType": "Upcoming",
@@ -1372,7 +1346,7 @@
     },
     {
       "id": "az-48",
-      "property": "MULTI-FAMILY DWELLING",
+      "property": "Multi-Family Dwelling",
       "community": "MULTI-FAMILY DWELLING",
       "city": "Scottsdale",
       "address": "19650 N 76TH ST BLDG 19",
@@ -1390,7 +1364,6 @@
         "permit": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
       },
       "sources": [
-        "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC",
         "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
       ],
       "signalType": "Upcoming",
@@ -1401,7 +1374,7 @@
     },
     {
       "id": "az-49",
-      "property": "MULTI-FAMILY DWELLING",
+      "property": "Multi-Family Dwelling",
       "community": "MULTI-FAMILY DWELLING",
       "city": "Scottsdale",
       "address": "19598 N 76TH ST BLDG 14",
@@ -1419,7 +1392,6 @@
         "permit": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
       },
       "sources": [
-        "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC",
         "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
       ],
       "signalType": "Upcoming",
@@ -1430,7 +1402,7 @@
     },
     {
       "id": "az-50",
-      "property": "MULTI-FAMILY DWELLING",
+      "property": "Multi-Family Dwelling",
       "community": "MULTI-FAMILY DWELLING",
       "city": "Scottsdale",
       "address": "19490 N 76TH ST BLDG 2",
@@ -1448,7 +1420,6 @@
         "permit": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
       },
       "sources": [
-        "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC",
         "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
       ],
       "signalType": "Upcoming",
@@ -1459,7 +1430,7 @@
     },
     {
       "id": "az-51",
-      "property": "MULTI-FAMILY DWELLING",
+      "property": "Multi-Family Dwelling",
       "community": "MULTI-FAMILY DWELLING",
       "city": "Scottsdale",
       "address": "19508 N 76TH ST BLDG 4",
@@ -1477,7 +1448,6 @@
         "permit": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
       },
       "sources": [
-        "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC",
         "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
       ],
       "signalType": "Upcoming",
@@ -1488,7 +1458,7 @@
     },
     {
       "id": "az-52",
-      "property": "SIDNEY P OSBORN MULTIFAMILY PHASE 2",
+      "property": "Sidney P Osborn Multifamily Phase 2",
       "community": "SIDNEY P OSBORN MULTIFAMILY PHASE 2",
       "city": "Phoenix",
       "address": "100 N 18TH ST",
@@ -1516,7 +1486,7 @@
     },
     {
       "id": "az-53",
-      "property": "APT BLDG",
+      "property": "Apt Bldg",
       "community": "APT BLDG",
       "city": "Phoenix",
       "address": "19000 N 66TH ST",
@@ -1572,7 +1542,7 @@
     },
     {
       "id": "az-55",
-      "property": "APARTMENTS & GARAGE BLDG",
+      "property": "Apartments & Garage Bldg",
       "community": "APARTMENTS & GARAGE BLDG",
       "city": "Phoenix",
       "address": "4235 N 24TH ST",
@@ -1600,7 +1570,7 @@
     },
     {
       "id": "az-56",
-      "property": "8 UNIT MULTI-FAMILY APT.",
+      "property": "8 Unit Multi-Family Apt.",
       "community": "8 UNIT MULTI-FAMILY APT.",
       "city": "Phoenix",
       "address": "13400 N 22ND ST",
@@ -1628,7 +1598,7 @@
     },
     {
       "id": "az-57",
-      "property": "APARTMENTS",
+      "property": "4605 N Scottsdale Rd Bldg A",
       "community": "APARTMENTS",
       "city": "Scottsdale",
       "address": "4605 N SCOTTSDALE RD BLDG A",
@@ -1646,7 +1616,6 @@
         "permit": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
       },
       "sources": [
-        "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC",
         "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
       ],
       "signalType": "Upcoming",
@@ -1657,7 +1626,7 @@
     },
     {
       "id": "az-58",
-      "property": "140 S POMEROY",
+      "property": "140 S Pomeroy",
       "community": "140 S POMEROY",
       "city": "Mesa",
       "address": "140 S POMEROY",
@@ -1685,7 +1654,7 @@
     },
     {
       "id": "az-59",
-      "property": "EMORY HEIGHTS APARTMENTS",
+      "property": "Emory Heights Apartments",
       "community": "EMORY HEIGHTS APARTMENTS",
       "city": "Phoenix",
       "address": "5307 N 17TH AVE",
@@ -1713,7 +1682,7 @@
     },
     {
       "id": "az-60",
-      "property": "BLDG 1",
+      "property": "Bldg 1",
       "community": "BLDG 1",
       "city": "Phoenix",
       "address": "14559 S 50TH ST",
@@ -1825,7 +1794,7 @@
     },
     {
       "id": "az-64",
-      "property": "MULTI-FAMILY 2 NEW BUILDINGS",
+      "property": "Multi-Family 2 New Buildings",
       "community": "MULTI-FAMILY 2 NEW BUILDINGS",
       "city": "Phoenix",
       "address": "7101 N 27TH AVE",
@@ -1853,7 +1822,7 @@
     },
     {
       "id": "az-65",
-      "property": "515 N MESA DR",
+      "property": "515 N Mesa Dr",
       "community": "515 N MESA DR",
       "city": "Mesa",
       "address": "515 N MESA DR",
@@ -1881,7 +1850,7 @@
     },
     {
       "id": "az-66",
-      "property": "32ND & BASELINE MULTI-FAMILY BLD 1",
+      "property": "32Nd & Baseline Multi-Family Bld 1",
       "community": "32ND & BASELINE MULTI-FAMILY BLD 1",
       "city": "Phoenix",
       "address": "7500 S 32ND ST",
@@ -1909,7 +1878,7 @@
     },
     {
       "id": "az-67",
-      "property": "MULTI-FAMILY DWELLING",
+      "property": "Multi-Family Dwelling",
       "community": "MULTI-FAMILY DWELLING",
       "city": "Scottsdale",
       "address": "7000 E SHEA BL",
@@ -1927,7 +1896,6 @@
         "permit": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
       },
       "sources": [
-        "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC",
         "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
       ],
       "signalType": "Upcoming",
@@ -1938,7 +1906,7 @@
     },
     {
       "id": "az-68",
-      "property": "1145 S ROWEN",
+      "property": "1145 S Rowen",
       "community": "1145 S ROWEN",
       "city": "Mesa",
       "address": "1145 S ROWEN",
@@ -1966,7 +1934,7 @@
     },
     {
       "id": "az-69",
-      "property": "2261 E MCDOWELL RD",
+      "property": "2261 E Mcdowell Rd",
       "community": "2261 E MCDOWELL RD",
       "city": "Mesa",
       "address": "2261 E MCDOWELL RD",
@@ -1994,7 +1962,7 @@
     },
     {
       "id": "az-70",
-      "property": "ASTRIA",
+      "property": "Astria",
       "community": "ASTRIA",
       "city": "Tempe",
       "address": "217 E 7TH ST",
@@ -2022,7 +1990,7 @@
     },
     {
       "id": "az-71",
-      "property": "LOT B",
+      "property": "Lot B",
       "community": "LOT B",
       "city": "Phoenix",
       "address": "8927 N 10TH ST",
@@ -2050,7 +2018,7 @@
     },
     {
       "id": "az-72",
-      "property": "52ND ST APARTMENTS",
+      "property": "52Nd St Apartments",
       "community": "52ND ST APARTMENTS",
       "city": "Phoenix",
       "address": "2328 N 52ND ST",
@@ -2078,7 +2046,7 @@
     },
     {
       "id": "az-73",
-      "property": "WOLSIFFER RESIDENCE",
+      "property": "Wolsiffer Residence",
       "community": "WOLSIFFER RESIDENCE",
       "city": "Tempe",
       "address": "1036 E BISHOP CIR",
@@ -2106,7 +2074,7 @@
     },
     {
       "id": "az-74",
-      "property": "10136 E SOUTHERN AVE",
+      "property": "10136 E Southern Ave",
       "community": "10136 E SOUTHERN AVE",
       "city": "Mesa",
       "address": "10136 E SOUTHERN AVE",
@@ -2134,7 +2102,7 @@
     },
     {
       "id": "az-75",
-      "property": "144 S 90TH ST 123",
+      "property": "144 S 90Th St 123",
       "community": "144 S 90TH ST 123",
       "city": "Mesa",
       "address": "144 S 90TH ST 123",
@@ -2162,7 +2130,7 @@
     },
     {
       "id": "az-76",
-      "property": "144 S 90TH ST 103",
+      "property": "144 S 90Th St 103",
       "community": "144 S 90TH ST 103",
       "city": "Mesa",
       "address": "144 S 90TH ST 103",
@@ -2190,7 +2158,7 @@
     },
     {
       "id": "az-77",
-      "property": "144 S 90TH ST 107",
+      "property": "144 S 90Th St 107",
       "community": "144 S 90TH ST 107",
       "city": "Mesa",
       "address": "144 S 90TH ST 107",
@@ -2218,7 +2186,7 @@
     },
     {
       "id": "az-78",
-      "property": "144 S 90TH ST 119",
+      "property": "144 S 90Th St 119",
       "community": "144 S 90TH ST 119",
       "city": "Mesa",
       "address": "144 S 90TH ST 119",
@@ -2246,7 +2214,7 @@
     },
     {
       "id": "az-79",
-      "property": "144 S 90TH ST 108",
+      "property": "144 S 90Th St 108",
       "community": "144 S 90TH ST 108",
       "city": "Mesa",
       "address": "144 S 90TH ST 108",
@@ -2274,7 +2242,7 @@
     },
     {
       "id": "az-80",
-      "property": "144 S 90TH ST 115",
+      "property": "144 S 90Th St 115",
       "community": "144 S 90TH ST 115",
       "city": "Mesa",
       "address": "144 S 90TH ST 115",
@@ -2330,7 +2298,7 @@
     },
     {
       "id": "az-82",
-      "property": "144 S 90TH ST 102",
+      "property": "144 S 90Th St 102",
       "community": "144 S 90TH ST 102",
       "city": "Mesa",
       "address": "144 S 90TH ST 102",
@@ -2358,7 +2326,7 @@
     },
     {
       "id": "az-83",
-      "property": "144 S 90TH ST 129",
+      "property": "144 S 90Th St 129",
       "community": "144 S 90TH ST 129",
       "city": "Mesa",
       "address": "144 S 90TH ST 129",
@@ -2386,7 +2354,7 @@
     },
     {
       "id": "az-84",
-      "property": "144 S 90TH ST 106",
+      "property": "144 S 90Th St 106",
       "community": "144 S 90TH ST 106",
       "city": "Mesa",
       "address": "144 S 90TH ST 106",
@@ -2414,7 +2382,7 @@
     },
     {
       "id": "az-85",
-      "property": "144 S 90TH ST 109",
+      "property": "144 S 90Th St 109",
       "community": "144 S 90TH ST 109",
       "city": "Mesa",
       "address": "144 S 90TH ST 109",
@@ -2442,7 +2410,7 @@
     },
     {
       "id": "az-86",
-      "property": "144 S 90TH ST 104",
+      "property": "144 S 90Th St 104",
       "community": "144 S 90TH ST 104",
       "city": "Mesa",
       "address": "144 S 90TH ST 104",
@@ -2470,7 +2438,7 @@
     },
     {
       "id": "az-87",
-      "property": "144 S 90TH ST 128",
+      "property": "144 S 90Th St 128",
       "community": "144 S 90TH ST 128",
       "city": "Mesa",
       "address": "144 S 90TH ST 128",
@@ -2498,7 +2466,7 @@
     },
     {
       "id": "az-88",
-      "property": "144 S 90TH ST 101",
+      "property": "144 S 90Th St 101",
       "community": "144 S 90TH ST 101",
       "city": "Mesa",
       "address": "144 S 90TH ST 101",
@@ -2526,7 +2494,7 @@
     },
     {
       "id": "az-89",
-      "property": "144 S 90TH ST 127",
+      "property": "144 S 90Th St 127",
       "community": "144 S 90TH ST 127",
       "city": "Mesa",
       "address": "144 S 90TH ST 127",
@@ -2554,7 +2522,7 @@
     },
     {
       "id": "az-90",
-      "property": "144 S 90TH ST 105",
+      "property": "144 S 90Th St 105",
       "community": "144 S 90TH ST 105",
       "city": "Mesa",
       "address": "144 S 90TH ST 105",
@@ -2582,7 +2550,7 @@
     },
     {
       "id": "az-91",
-      "property": "144 S 90TH ST 112",
+      "property": "144 S 90Th St 112",
       "community": "144 S 90TH ST 112",
       "city": "Mesa",
       "address": "144 S 90TH ST 112",
@@ -2610,7 +2578,7 @@
     },
     {
       "id": "az-92",
-      "property": "APARTMENTS",
+      "property": "7370 E Henkel Wy",
       "community": "APARTMENTS",
       "city": "Scottsdale",
       "address": "7370 E HENKEL WY",
@@ -2628,7 +2596,6 @@
         "permit": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
       },
       "sources": [
-        "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC",
         "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
       ],
       "signalType": "Upcoming",
@@ -2639,7 +2606,7 @@
     },
     {
       "id": "az-93",
-      "property": "THE SAMUEL",
+      "property": "The Samuel",
       "community": "THE SAMUEL",
       "city": "Tempe",
       "address": "712 S COLLEGE AVE",
@@ -2667,7 +2634,7 @@
     },
     {
       "id": "az-94",
-      "property": "FRIENDSHIP VILLAGE",
+      "property": "Friendship Village",
       "community": "FRIENDSHIP VILLAGE",
       "city": "Tempe",
       "address": "2645 E SOUTHERN AVE",
@@ -2695,7 +2662,7 @@
     },
     {
       "id": "az-95",
-      "property": "12180 W FRIER RD",
+      "property": "12180 W Frier Rd",
       "community": "12180 W FRIER RD",
       "city": "Maricopa County unincorporated",
       "address": "12180 W FRIER RD",
@@ -2723,7 +2690,7 @@
     },
     {
       "id": "az-96",
-      "property": "12180 N FRIER DR",
+      "property": "12180 N Frier Dr",
       "community": "12180 N FRIER DR",
       "city": "Maricopa County unincorporated",
       "address": "12180 N FRIER DR",
@@ -2751,7 +2718,7 @@
     },
     {
       "id": "az-97",
-      "property": "12180 W FRIER DR",
+      "property": "12180 W Frier Dr",
       "community": "12180 W FRIER DR",
       "city": "Maricopa County unincorporated",
       "address": "12180 W FRIER DR",
@@ -2779,7 +2746,7 @@
     },
     {
       "id": "az-98",
-      "property": "25840 S POWER RD BLDG 1",
+      "property": "25840 S Power Rd Bldg 1",
       "community": "25840 S POWER RD BLDG 1",
       "city": "Maricopa County unincorporated",
       "address": "25840 S POWER RD BLDG 1",
@@ -2807,7 +2774,7 @@
     },
     {
       "id": "az-99",
-      "property": "EMBREY MULTIFAMILY-BLDG. TYPE I PERMIT",
+      "property": "Embrey Multifamily-Bldg. Type I Permit",
       "community": "EMBREY MULTIFAMILY-BLDG. TYPE I PERMIT",
       "city": "Phoenix",
       "address": "1010 E GREENWAY PKWY",
@@ -2835,7 +2802,7 @@
     },
     {
       "id": "az-100",
-      "property": "GARAGE 3 @ DESERT SKY APARTMENTS",
+      "property": "Garage 3 @ Desert Sky Apartments",
       "community": "GARAGE 3 @ DESERT SKY APARTMENTS",
       "city": "Phoenix",
       "address": "6939 W THOMAS RD",
@@ -2863,7 +2830,7 @@
     },
     {
       "id": "az-101",
-      "property": "BUILDING #14 SIHI BELL 17 APARTMENTS",
+      "property": "Building #14 Sihi Bell 17 Apartments",
       "community": "BUILDING #14 SIHI BELL 17 APARTMENTS",
       "city": "Phoenix",
       "address": "16400 N 19TH AVE",
@@ -2891,7 +2858,7 @@
     },
     {
       "id": "az-102",
-      "property": "APARTMENTS",
+      "property": "7515 E 1St St",
       "community": "APARTMENTS",
       "city": "Scottsdale",
       "address": "7515 E 1ST ST",
@@ -2909,7 +2876,6 @@
         "permit": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
       },
       "sources": [
-        "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC",
         "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
       ],
       "signalType": "Upcoming",
@@ -2948,7 +2914,7 @@
     },
     {
       "id": "az-104",
-      "property": "APARTMENTS",
+      "property": "3961 N 75Th St",
       "community": "APARTMENTS",
       "city": "Scottsdale",
       "address": "3961 N 75TH ST",
@@ -2966,7 +2932,6 @@
         "permit": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
       },
       "sources": [
-        "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC",
         "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
       ],
       "signalType": "Upcoming",
@@ -2977,7 +2942,7 @@
     },
     {
       "id": "az-105",
-      "property": "MODERA PARADISE VALLEY MULTIFAMILY",
+      "property": "Modera Paradise Valley Multifamily",
       "community": "MODERA PARADISE VALLEY MULTIFAMILY",
       "city": "Phoenix",
       "address": "4580 E CACTUS RD",
@@ -3005,7 +2970,7 @@
     },
     {
       "id": "az-106",
-      "property": "4638 E BANNER GATEWAY DR",
+      "property": "4638 E Banner Gateway Dr",
       "community": "4638 E BANNER GATEWAY DR",
       "city": "Mesa",
       "address": "4638 E BANNER GATEWAY DR",
@@ -3033,7 +2998,7 @@
     },
     {
       "id": "az-107",
-      "property": "2102 E BROADWAY RD",
+      "property": "2102 E Broadway Rd",
       "community": "2102 E BROADWAY RD",
       "city": "Mesa",
       "address": "2102 E BROADWAY RD",
@@ -3061,7 +3026,7 @@
     },
     {
       "id": "az-108",
-      "property": "6833 E HOBART ST",
+      "property": "6833 E Hobart St",
       "community": "6833 E HOBART ST",
       "city": "Mesa",
       "address": "6833 E HOBART ST",
@@ -3089,7 +3054,7 @@
     },
     {
       "id": "az-109",
-      "property": "10941 E SOUTHERN AVE",
+      "property": "10941 E Southern Ave",
       "community": "10941 E SOUTHERN AVE",
       "city": "Mesa",
       "address": "10941 E SOUTHERN AVE",
@@ -3117,7 +3082,7 @@
     },
     {
       "id": "az-110",
-      "property": "311 W MAIN ST",
+      "property": "311 W Main St",
       "community": "311 W MAIN ST",
       "city": "Mesa",
       "address": "311 W MAIN ST",
@@ -3145,7 +3110,7 @@
     },
     {
       "id": "az-111",
-      "property": "1410 S COUNTRY CLUB DR",
+      "property": "1410 S Country Club Dr",
       "community": "1410 S COUNTRY CLUB DR",
       "city": "Mesa",
       "address": "1410 S COUNTRY CLUB DR",
@@ -3173,7 +3138,7 @@
     },
     {
       "id": "az-112",
-      "property": "AVENUE 5/TROVITA RIO",
+      "property": "Avenue 5/Trovita Rio",
       "community": "AVENUE 5/TROVITA RIO",
       "city": "Tempe",
       "address": "701 W RIO SALADO PKWY",
@@ -3201,7 +3166,7 @@
     },
     {
       "id": "az-113",
-      "property": "BOGUE MULTIFAMILY",
+      "property": "Bogue Multifamily",
       "community": "BOGUE MULTIFAMILY",
       "city": "Phoenix",
       "address": "10222 N 12TH AVE",
@@ -3229,7 +3194,7 @@
     },
     {
       "id": "az-114",
-      "property": "IKONIC MULTIFAMILY",
+      "property": "Ikonic Multifamily",
       "community": "IKONIC MULTIFAMILY",
       "city": "Phoenix",
       "address": "16640 N SCOTTSDALE RD",
@@ -3257,7 +3222,7 @@
     },
     {
       "id": "az-115",
-      "property": "MULTIFAMILY, BUILDING 3",
+      "property": "Multifamily, Building 3",
       "community": "MULTIFAMILY, BUILDING 3",
       "city": "Phoenix",
       "address": "25200 N 17TH AVE",
@@ -3285,7 +3250,7 @@
     },
     {
       "id": "az-116",
-      "property": "BASK APARTMENT FITNESS CENTER",
+      "property": "Bask Apartment Fitness Center",
       "community": "BASK APARTMENT FITNESS CENTER",
       "city": "Phoenix",
       "address": "26800 N 27TH AVE",
@@ -3313,7 +3278,7 @@
     },
     {
       "id": "az-117",
-      "property": "CENTRAL AND MCDOWELL APARTMENTS",
+      "property": "Central And Mcdowell Apartments",
       "community": "CENTRAL AND MCDOWELL APARTMENTS",
       "city": "Phoenix",
       "address": "1500 N CENTRAL AVE",
@@ -3369,7 +3334,7 @@
     },
     {
       "id": "az-119",
-      "property": "24TH STREET APARTMENTS",
+      "property": "24Th Street Apartments",
       "community": "24TH STREET APARTMENTS",
       "city": "Phoenix",
       "address": "1314 N 24TH ST",
@@ -3397,7 +3362,7 @@
     },
     {
       "id": "az-120",
-      "property": "STUDIO APARTMENT",
+      "property": "Studio Apartment",
       "community": "STUDIO APARTMENT",
       "city": "Phoenix",
       "address": "4312 N 12TH ST",
@@ -3425,7 +3390,7 @@
     },
     {
       "id": "az-121",
-      "property": "9705 E MAIN ST",
+      "property": "9705 E Main St",
       "community": "9705 E MAIN ST",
       "city": "Mesa",
       "address": "9705 E MAIN ST",
@@ -3453,7 +3418,7 @@
     },
     {
       "id": "az-122",
-      "property": "1431 E KNOLL CIR",
+      "property": "1431 E Knoll Cir",
       "community": "1431 E KNOLL CIR",
       "city": "Mesa",
       "address": "1431 E KNOLL CIR",
@@ -3481,7 +3446,7 @@
     },
     {
       "id": "az-123",
-      "property": "6147 E MAIN ST",
+      "property": "6147 E Main St",
       "community": "6147 E MAIN ST",
       "city": "Mesa",
       "address": "6147 E MAIN ST",
@@ -3509,7 +3474,7 @@
     },
     {
       "id": "az-124",
-      "property": "APARTMENTS",
+      "property": "6210 E Oak St Unit 3 & 4",
       "community": "APARTMENTS",
       "city": "Scottsdale",
       "address": "6210 E OAK ST UNIT 3 & 4",
@@ -3527,7 +3492,6 @@
         "permit": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
       },
       "sources": [
-        "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC",
         "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
       ],
       "signalType": "Upcoming",
@@ -3538,7 +3502,7 @@
     },
     {
       "id": "az-125",
-      "property": "8264 E ELLIOT RD",
+      "property": "8264 E Elliot Rd",
       "community": "8264 E ELLIOT RD",
       "city": "Mesa",
       "address": "8264 E ELLIOT RD",
@@ -3566,7 +3530,7 @@
     },
     {
       "id": "az-126",
-      "property": "REVELRY",
+      "property": "Revelry",
       "community": "REVELRY",
       "city": "Tempe",
       "address": "965 E UNIVERSITY DR",
@@ -3594,7 +3558,7 @@
     },
     {
       "id": "az-127",
-      "property": "1345 S SIGNAL BUTTE RD",
+      "property": "1345 S Signal Butte Rd",
       "community": "1345 S SIGNAL BUTTE RD",
       "city": "Mesa",
       "address": "1345 S SIGNAL BUTTE RD",
@@ -3622,7 +3586,7 @@
     },
     {
       "id": "az-128",
-      "property": "MULTI-FAMILY DWELLING",
+      "property": "Multi-Family Dwelling",
       "community": "MULTI-FAMILY DWELLING",
       "city": "Scottsdale",
       "address": "7117 N SCOTTSDALE RD",
@@ -3640,7 +3604,6 @@
         "permit": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
       },
       "sources": [
-        "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC",
         "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
       ],
       "signalType": "Upcoming",
@@ -3651,7 +3614,7 @@
     },
     {
       "id": "az-129",
-      "property": "MULTI-FAMILY DWELLING",
+      "property": "Multi-Family Dwelling",
       "community": "MULTI-FAMILY DWELLING",
       "city": "Scottsdale",
       "address": "4251 N MARSHALL WY",
@@ -3669,7 +3632,6 @@
         "permit": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
       },
       "sources": [
-        "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC",
         "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
       ],
       "signalType": "Upcoming",
@@ -3680,7 +3642,7 @@
     },
     {
       "id": "az-130",
-      "property": "109 N ALMA SCHOOL RD",
+      "property": "109 N Alma School Rd",
       "community": "109 N ALMA SCHOOL RD",
       "city": "Mesa",
       "address": "109 N ALMA SCHOOL RD",
@@ -3708,7 +3670,7 @@
     },
     {
       "id": "az-131",
-      "property": "GARAGE 3 CRESCENT NORTERRA MULTIFAMILY",
+      "property": "Garage 3 Crescent Norterra Multifamily",
       "community": "GARAGE 3 CRESCENT NORTERRA MULTIFAMILY",
       "city": "Phoenix",
       "address": "26000 N NORTERRA PKWY",
@@ -3736,7 +3698,7 @@
     },
     {
       "id": "az-132",
-      "property": "539 S WILLIAMS",
+      "property": "539 S Williams",
       "community": "539 S WILLIAMS",
       "city": "Mesa",
       "address": "539 S WILLIAMS",
@@ -3764,7 +3726,7 @@
     },
     {
       "id": "az-133",
-      "property": "5135 S POWER RD",
+      "property": "5135 S Power Rd",
       "community": "5135 S POWER RD",
       "city": "Mesa",
       "address": "5135 S POWER RD",
@@ -3792,7 +3754,7 @@
     },
     {
       "id": "az-134",
-      "property": "944 W MAIN ST 2025",
+      "property": "944 W Main St 2025",
       "community": "944 W MAIN ST 2025",
       "city": "Mesa",
       "address": "944 W MAIN ST 2025",
@@ -3820,7 +3782,7 @@
     },
     {
       "id": "az-135",
-      "property": "4030 N 44TH AVE",
+      "property": "4030 N 44Th Ave",
       "community": null,
       "city": "Phoenix",
       "address": "4030 N 44TH AVE",
@@ -3849,7 +3811,7 @@
     },
     {
       "id": "az-136",
-      "property": "1 W CAMPBELL AVE",
+      "property": "1 W Campbell Ave",
       "community": null,
       "city": "Phoenix",
       "address": "1 W CAMPBELL AVE",
@@ -3878,7 +3840,7 @@
     },
     {
       "id": "az-137",
-      "property": "5727 N  7TH STREET ST",
+      "property": "5727 N  7Th Street St",
       "community": null,
       "city": "Phoenix",
       "address": "5727 N  7TH STREET ST",
@@ -3907,7 +3869,7 @@
     },
     {
       "id": "az-138",
-      "property": "4620 W MCDOWELL RD",
+      "property": "4620 W Mcdowell Rd",
       "community": null,
       "city": "Phoenix",
       "address": "4620 W MCDOWELL RD",
@@ -3936,7 +3898,7 @@
     },
     {
       "id": "az-139",
-      "property": "17840 N BLACK CANYON HWY",
+      "property": "17840 N Black Canyon Hwy",
       "community": null,
       "city": "Phoenix",
       "address": "17840 N BLACK CANYON HWY",
@@ -3965,7 +3927,7 @@
     },
     {
       "id": "az-140",
-      "property": "1530 S HIGLEY RD",
+      "property": "1530 S Higley Rd",
       "community": null,
       "city": "Gilbert",
       "address": "1530 S HIGLEY RD",
@@ -3994,7 +3956,7 @@
     },
     {
       "id": "az-141",
-      "property": "2354 W UNIVERSITY DR",
+      "property": "2354 W University Dr",
       "community": null,
       "city": "Mesa",
       "address": "2354 W UNIVERSITY DR",
@@ -4023,7 +3985,7 @@
     },
     {
       "id": "az-142",
-      "property": "2950 N RECKER RD",
+      "property": "2950 N Recker Rd",
       "community": null,
       "city": "Mesa",
       "address": "2950 N RECKER RD",
@@ -4081,7 +4043,7 @@
     },
     {
       "id": "az-144",
-      "property": "80 N MCQUEEN RD",
+      "property": "80 N Mcqueen Rd",
       "community": null,
       "city": "Gilbert",
       "address": "80 N MCQUEEN RD",
@@ -4110,7 +4072,7 @@
     },
     {
       "id": "az-145",
-      "property": "18330 N 79TH AVE",
+      "property": "18330 N 79Th Ave",
       "community": null,
       "city": "Glendale",
       "address": "18330 N 79TH AVE",
@@ -4168,7 +4130,7 @@
     },
     {
       "id": "az-147",
-      "property": "710 S HARDY DR",
+      "property": "710 S Hardy Dr",
       "community": null,
       "city": "Tempe",
       "address": "710 S HARDY DR",
@@ -4197,7 +4159,7 @@
     },
     {
       "id": "az-148",
-      "property": "5343 E TAYLOR ST",
+      "property": "5343 E Taylor St",
       "community": null,
       "city": "Phoenix",
       "address": "5343 E TAYLOR ST",
@@ -4226,7 +4188,7 @@
     },
     {
       "id": "az-149",
-      "property": "1855 E DON CARLOS AVE",
+      "property": "1855 E Don Carlos Ave",
       "community": null,
       "city": "Tempe",
       "address": "1855 E DON CARLOS AVE",
@@ -4255,7 +4217,7 @@
     },
     {
       "id": "az-150",
-      "property": "3015 N HAYDEN RD",
+      "property": "3015 N Hayden Rd",
       "community": null,
       "city": "Scottsdale",
       "address": "3015 N HAYDEN RD",
@@ -4284,7 +4246,7 @@
     },
     {
       "id": "az-151",
-      "property": "2747 E CAMELBACK RD",
+      "property": "2747 E Camelback Rd",
       "community": null,
       "city": "Phoenix",
       "address": "2747 E CAMELBACK RD",
@@ -4313,7 +4275,7 @@
     },
     {
       "id": "az-152",
-      "property": "16485 N STADIUM WAY",
+      "property": "16485 N Stadium Way",
       "community": null,
       "city": "Surprise",
       "address": "16485 N STADIUM WAY",
@@ -4342,7 +4304,7 @@
     },
     {
       "id": "az-153",
-      "property": "577 E BASELINE RD",
+      "property": "577 E Baseline Rd",
       "community": null,
       "city": "Tempe",
       "address": "577 E BASELINE RD",
@@ -4371,7 +4333,7 @@
     },
     {
       "id": "az-154",
-      "property": "25 E EVA ST",
+      "property": "25 E Eva St",
       "community": null,
       "city": "Phoenix",
       "address": "25 E EVA ST",
@@ -4400,7 +4362,7 @@
     },
     {
       "id": "az-155",
-      "property": "1055 W BASELINE RD",
+      "property": "1055 W Baseline Rd",
       "community": null,
       "city": "Mesa",
       "address": "1055 W BASELINE RD",
@@ -4429,7 +4391,7 @@
     },
     {
       "id": "az-156",
-      "property": "180 N APACHE RD 17",
+      "property": "180 N Apache Rd 17",
       "community": null,
       "city": "Buckeye",
       "address": "180 N APACHE RD 17",
@@ -4458,7 +4420,7 @@
     },
     {
       "id": "az-157",
-      "property": "180 N APACHE RD 13",
+      "property": "180 N Apache Rd 13",
       "community": null,
       "city": "Buckeye",
       "address": "180 N APACHE RD 13",
@@ -4487,7 +4449,7 @@
     },
     {
       "id": "az-158",
-      "property": "180 N APACHE RD 1",
+      "property": "180 N Apache Rd 1",
       "community": null,
       "city": "Buckeye",
       "address": "180 N APACHE RD 1",
@@ -4516,7 +4478,7 @@
     },
     {
       "id": "az-159",
-      "property": "180 N APACHE RD 5",
+      "property": "180 N Apache Rd 5",
       "community": null,
       "city": "Buckeye",
       "address": "180 N APACHE RD 5",
@@ -4545,7 +4507,7 @@
     },
     {
       "id": "az-160",
-      "property": "180 N APACHE RD 9",
+      "property": "180 N Apache Rd 9",
       "community": null,
       "city": "Buckeye",
       "address": "180 N APACHE RD 9",
@@ -4574,7 +4536,7 @@
     },
     {
       "id": "az-161",
-      "property": "180 N APACHE RD 21",
+      "property": "180 N Apache Rd 21",
       "community": null,
       "city": "Buckeye",
       "address": "180 N APACHE RD 21",
@@ -4632,7 +4594,7 @@
     },
     {
       "id": "az-163",
-      "property": "1835 E DON CARLOS AVE",
+      "property": "1835 E Don Carlos Ave",
       "community": null,
       "city": "Tempe",
       "address": "1835 E DON CARLOS AVE",
@@ -4661,7 +4623,7 @@
     },
     {
       "id": "az-164",
-      "property": "4747 N 99TH AVE",
+      "property": "4747 N 99Th Ave",
       "community": null,
       "city": "Phoenix",
       "address": "4747 N 99TH AVE",
@@ -4690,7 +4652,7 @@
     },
     {
       "id": "az-165",
-      "property": "4848 E ROOSEVELT ST",
+      "property": "4848 E Roosevelt St",
       "community": null,
       "city": "Phoenix",
       "address": "4848 E ROOSEVELT ST",
@@ -4719,7 +4681,7 @@
     },
     {
       "id": "az-166",
-      "property": "3875 W DOBBINS RD",
+      "property": "3875 W Dobbins Rd",
       "community": null,
       "city": "Phoenix",
       "address": "3875 W DOBBINS RD",
@@ -4748,7 +4710,7 @@
     },
     {
       "id": "az-167",
-      "property": "3940 W MCDOWELL RD",
+      "property": "3940 W Mcdowell Rd",
       "community": null,
       "city": "Phoenix",
       "address": "3940 W MCDOWELL RD",
@@ -4777,7 +4739,7 @@
     },
     {
       "id": "az-168",
-      "property": "2625 E CAMELBACK RD",
+      "property": "2625 E Camelback Rd",
       "community": null,
       "city": "Phoenix",
       "address": "2625 E CAMELBACK RD",
@@ -4806,7 +4768,7 @@
     },
     {
       "id": "az-169",
-      "property": "555 S GALLERIA",
+      "property": "555 S Galleria",
       "community": null,
       "city": "Chandler",
       "address": "555 S GALLERIA",
@@ -4835,7 +4797,7 @@
     },
     {
       "id": "az-170",
-      "property": "1735 W CORTEZ ST",
+      "property": "1735 W Cortez St",
       "community": null,
       "city": "Phoenix",
       "address": "1735 W CORTEZ ST",
@@ -4864,7 +4826,7 @@
     },
     {
       "id": "az-171",
-      "property": "2121 N GRACE BLVD",
+      "property": "2121 N Grace Blvd",
       "community": null,
       "city": "Chandler",
       "address": "2121 N GRACE BLVD",
@@ -4893,7 +4855,7 @@
     },
     {
       "id": "az-172",
-      "property": "6201 N 16TH ST",
+      "property": "6201 N 16Th St",
       "community": null,
       "city": "Phoenix",
       "address": "6201 N 16TH ST",
@@ -4922,7 +4884,7 @@
     },
     {
       "id": "az-173",
-      "property": "14014 N 32ND ST",
+      "property": "14014 N 32Nd St",
       "community": null,
       "city": "Phoenix",
       "address": "14014 N 32ND ST",
@@ -4951,7 +4913,7 @@
     },
     {
       "id": "az-174",
-      "property": "901 E VAN BUREN ST",
+      "property": "901 E Van Buren St",
       "community": null,
       "city": "Phoenix",
       "address": "901 E VAN BUREN ST",
@@ -4980,7 +4942,7 @@
     },
     {
       "id": "az-175",
-      "property": "835 N 6TH AVE",
+      "property": "835 N 6Th Ave",
       "community": null,
       "city": "Phoenix",
       "address": "835 N 6TH AVE",
@@ -5009,7 +4971,7 @@
     },
     {
       "id": "az-176",
-      "property": "1890 S COUNTRY CLUB",
+      "property": "1890 S Country Club",
       "community": null,
       "city": "Tempe",
       "address": "1890 S COUNTRY CLUB",
@@ -5038,7 +5000,7 @@
     },
     {
       "id": "az-177",
-      "property": "708 N COUNTRY CLUB DR",
+      "property": "708 N Country Club Dr",
       "community": null,
       "city": "Mesa",
       "address": "708 N COUNTRY CLUB DR",
@@ -5067,7 +5029,7 @@
     },
     {
       "id": "az-178",
-      "property": "278 S TEGNER ST",
+      "property": "278 S Tegner St",
       "community": null,
       "city": "Wickenburg",
       "address": "278 S TEGNER ST",
@@ -5096,7 +5058,7 @@
     },
     {
       "id": "az-179",
-      "property": "560 N PENN LN",
+      "property": "560 N Penn Ln",
       "community": null,
       "city": "Wickenburg",
       "address": "560 N PENN LN",
@@ -5125,7 +5087,7 @@
     },
     {
       "id": "az-180",
-      "property": "6901 E MAIN ST",
+      "property": "6901 E Main St",
       "community": null,
       "city": "Scottsdale",
       "address": "6901 E MAIN ST",
@@ -5154,7 +5116,7 @@
     },
     {
       "id": "az-181",
-      "property": "15826 N SCOTTSDALE RD",
+      "property": "15826 N Scottsdale Rd",
       "community": null,
       "city": "Scottsdale",
       "address": "15826 N SCOTTSDALE RD",
@@ -5183,7 +5145,7 @@
     },
     {
       "id": "az-182",
-      "property": "1317 S TERRACE RD",
+      "property": "1317 S Terrace Rd",
       "community": null,
       "city": "Tempe",
       "address": "1317 S TERRACE RD",
@@ -5212,7 +5174,7 @@
     },
     {
       "id": "az-183",
-      "property": "1720 E CAMELBACK RD",
+      "property": "1720 E Camelback Rd",
       "community": null,
       "city": "Phoenix",
       "address": "1720 E CAMELBACK RD",
@@ -5241,7 +5203,7 @@
     },
     {
       "id": "az-184",
-      "property": "4441 W BETHANY HOME RD",
+      "property": "4441 W Bethany Home Rd",
       "community": null,
       "city": "Glendale",
       "address": "4441 W BETHANY HOME RD",
@@ -5270,7 +5232,7 @@
     },
     {
       "id": "az-185",
-      "property": "4231 N 27TH ST",
+      "property": "4231 N 27Th St",
       "community": null,
       "city": "Phoenix",
       "address": "4231 N 27TH ST",
@@ -5299,7 +5261,7 @@
     },
     {
       "id": "az-186",
-      "property": "3722 E MCDOWELL RD",
+      "property": "3722 E Mcdowell Rd",
       "community": null,
       "city": "Phoenix",
       "address": "3722 E MCDOWELL RD",
@@ -5357,7 +5319,7 @@
     },
     {
       "id": "az-188",
-      "property": "1805 E CONCORDA DR",
+      "property": "1805 E Concorda Dr",
       "community": null,
       "city": "Tempe",
       "address": "1805 E CONCORDA DR",
@@ -5386,7 +5348,7 @@
     },
     {
       "id": "az-189",
-      "property": "4909 W JOSHUA BLVD",
+      "property": "4909 W Joshua Blvd",
       "community": null,
       "city": "Chandler",
       "address": "4909 W JOSHUA BLVD",
@@ -5415,7 +5377,7 @@
     },
     {
       "id": "az-190",
-      "property": "601 N RITA LN",
+      "property": "601 N Rita Ln",
       "community": null,
       "city": "Chandler",
       "address": "601 N RITA LN",
@@ -5444,7 +5406,7 @@
     },
     {
       "id": "az-191",
-      "property": "15608 N 71ST ST",
+      "property": "15608 N 71St St",
       "community": null,
       "city": "Scottsdale",
       "address": "15608 N 71ST ST",
@@ -5473,7 +5435,7 @@
     },
     {
       "id": "az-192",
-      "property": "1725 S CORONADO RD",
+      "property": "1725 S Coronado Rd",
       "community": null,
       "city": "Gilbert",
       "address": "1725 S CORONADO RD",
@@ -5502,7 +5464,7 @@
     },
     {
       "id": "az-193",
-      "property": "948 E DEVONSHIRE AVE",
+      "property": "948 E Devonshire Ave",
       "community": null,
       "city": "Phoenix",
       "address": "948 E DEVONSHIRE AVE",
@@ -5531,7 +5493,7 @@
     },
     {
       "id": "az-194",
-      "property": "2300 W PECOS RD",
+      "property": "2300 W Pecos Rd",
       "community": null,
       "city": "Chandler",
       "address": "2300 W PECOS RD",
@@ -5560,7 +5522,7 @@
     },
     {
       "id": "az-195",
-      "property": "6730 N 17TH AVE",
+      "property": "6730 N 17Th Ave",
       "community": null,
       "city": "Phoenix",
       "address": "6730 N 17TH AVE",
@@ -5589,7 +5551,7 @@
     },
     {
       "id": "az-196",
-      "property": "1505 N COUNTRY CLUB DR",
+      "property": "1505 N Country Club Dr",
       "community": null,
       "city": "Mesa",
       "address": "1505 N COUNTRY CLUB DR",
@@ -5618,7 +5580,7 @@
     },
     {
       "id": "az-197",
-      "property": "2402 W DEVONSHIRE AVE",
+      "property": "2402 W Devonshire Ave",
       "community": null,
       "city": "Phoenix",
       "address": "2402 W DEVONSHIRE AVE",
@@ -5647,7 +5609,7 @@
     },
     {
       "id": "az-198",
-      "property": "302 E MONTE VISTA RD",
+      "property": "302 E Monte Vista Rd",
       "community": null,
       "city": "Phoenix",
       "address": "302 E MONTE VISTA RD",
@@ -5676,7 +5638,7 @@
     },
     {
       "id": "az-199",
-      "property": "875 W PECOS RD",
+      "property": "875 W Pecos Rd",
       "community": null,
       "city": "Chandler",
       "address": "875 W PECOS RD",
@@ -5705,7 +5667,7 @@
     },
     {
       "id": "az-200",
-      "property": "7455 N 95TH AVE",
+      "property": "7455 N 95Th Ave",
       "community": null,
       "city": "Glendale",
       "address": "7455 N 95TH AVE",
@@ -5734,7 +5696,7 @@
     },
     {
       "id": "az-201",
-      "property": "9450 W CABELA DR",
+      "property": "9450 W Cabela Dr",
       "community": null,
       "city": "Glendale",
       "address": "9450 W CABELA DR",
@@ -5763,7 +5725,7 @@
     },
     {
       "id": "az-202",
-      "property": "800 W WILLIS RD",
+      "property": "800 W Willis Rd",
       "community": null,
       "city": "Chandler",
       "address": "800 W WILLIS RD",
@@ -5792,7 +5754,7 @@
     },
     {
       "id": "az-203",
-      "property": "18220 N 68TH ST",
+      "property": "18220 N 68Th St",
       "community": null,
       "city": "Phoenix",
       "address": "18220 N 68TH ST",
@@ -5821,7 +5783,7 @@
     },
     {
       "id": "az-204",
-      "property": "1012 E WASHINGTON ST 1112",
+      "property": "1012 E Washington St 1112",
       "community": null,
       "city": "Phoenix",
       "address": "1012 E WASHINGTON ST 1112",
@@ -5850,7 +5812,7 @@
     },
     {
       "id": "az-205",
-      "property": "11 S 12TH ST",
+      "property": "11 S 12Th St",
       "community": null,
       "city": "Phoenix",
       "address": "11 S 12TH ST",
@@ -5879,7 +5841,7 @@
     },
     {
       "id": "az-206",
-      "property": "1045 S SAN JOSE",
+      "property": "1045 S San Jose",
       "community": null,
       "city": "Mesa",
       "address": "1045 S SAN JOSE",
@@ -5908,7 +5870,7 @@
     },
     {
       "id": "az-207",
-      "property": "749 E MARYLAND AVE",
+      "property": "749 E Maryland Ave",
       "community": null,
       "city": "Phoenix",
       "address": "749 E MARYLAND AVE",
@@ -5937,7 +5899,7 @@
     },
     {
       "id": "az-208",
-      "property": "132 E BROWN RD",
+      "property": "132 E Brown Rd",
       "community": null,
       "city": "Mesa",
       "address": "132 E BROWN RD",
@@ -5966,7 +5928,7 @@
     },
     {
       "id": "az-209",
-      "property": "5407 W GLENROSA AVE",
+      "property": "5407 W Glenrosa Ave",
       "community": null,
       "city": "Phoenix",
       "address": "5407 W GLENROSA AVE",
@@ -5995,7 +5957,7 @@
     },
     {
       "id": "az-210",
-      "property": "151 E 1ST ST",
+      "property": "151 E 1St St",
       "community": null,
       "city": "Mesa",
       "address": "151 E 1ST ST",
@@ -6024,7 +5986,7 @@
     },
     {
       "id": "az-211",
-      "property": "157 S ROOSEVELT RD",
+      "property": "157 S Roosevelt Rd",
       "community": null,
       "city": "Mesa",
       "address": "157 S ROOSEVELT RD",
@@ -6053,7 +6015,7 @@
     },
     {
       "id": "az-212",
-      "property": "909 S MCCLINTOCK DR",
+      "property": "909 S Mcclintock Dr",
       "community": null,
       "city": "Tempe",
       "address": "909 S MCCLINTOCK DR",
@@ -6082,7 +6044,7 @@
     },
     {
       "id": "az-213",
-      "property": "2120 E RAY RD",
+      "property": "2120 E Ray Rd",
       "community": null,
       "city": "Gilbert",
       "address": "2120 E RAY RD",
@@ -6111,7 +6073,7 @@
     },
     {
       "id": "az-214",
-      "property": "4404 W BETHANY HOME RD",
+      "property": "4404 W Bethany Home Rd",
       "community": null,
       "city": "Glendale",
       "address": "4404 W BETHANY HOME RD",
@@ -6140,7 +6102,7 @@
     },
     {
       "id": "az-215",
-      "property": "7119 N 67TH AVE",
+      "property": "7119 N 67Th Ave",
       "community": null,
       "city": "Glendale",
       "address": "7119 N 67TH AVE",
@@ -6169,7 +6131,7 @@
     },
     {
       "id": "az-216",
-      "property": "7959 N 53RD AVE",
+      "property": "7959 N 53Rd Ave",
       "community": null,
       "city": "Glendale",
       "address": "7959 N 53RD AVE",
@@ -6198,7 +6160,7 @@
     },
     {
       "id": "az-217",
-      "property": "15333 N HAYDEN RD",
+      "property": "15333 N Hayden Rd",
       "community": null,
       "city": "Scottsdale",
       "address": "15333 N HAYDEN RD",
@@ -6227,7 +6189,7 @@
     },
     {
       "id": "az-218",
-      "property": "2409 W NORTHERN AVE",
+      "property": "2409 W Northern Ave",
       "community": null,
       "city": "Phoenix",
       "address": "2409 W NORTHERN AVE",
@@ -6256,7 +6218,7 @@
     },
     {
       "id": "az-219",
-      "property": "1700 N 103RD AVE",
+      "property": "1700 N 103Rd Ave",
       "community": null,
       "city": "Avondale",
       "address": "1700 N 103RD AVE",
@@ -6285,7 +6247,7 @@
     },
     {
       "id": "az-220",
-      "property": "280 W MCKINLEY ST",
+      "property": "280 W Mckinley St",
       "community": null,
       "city": "Phoenix",
       "address": "280 W MCKINLEY ST",
@@ -6314,7 +6276,7 @@
     },
     {
       "id": "az-221",
-      "property": "295 E ROOSEVELT ST",
+      "property": "295 E Roosevelt St",
       "community": null,
       "city": "Phoenix",
       "address": "295 E ROOSEVELT ST",
@@ -6343,7 +6305,7 @@
     },
     {
       "id": "az-222",
-      "property": "222 E ROOSEVELT ST",
+      "property": "222 E Roosevelt St",
       "community": null,
       "city": "Phoenix",
       "address": "222 E ROOSEVELT ST",
@@ -6372,7 +6334,7 @@
     },
     {
       "id": "az-223",
-      "property": "5145 N 7TH ST",
+      "property": "5145 N 7Th St",
       "community": null,
       "city": "Phoenix",
       "address": "5145 N 7TH ST",
@@ -6401,7 +6363,7 @@
     },
     {
       "id": "az-224",
-      "property": "2601 E MCKELLIPS RD",
+      "property": "2601 E Mckellips Rd",
       "community": null,
       "city": "Mesa",
       "address": "2601 E MCKELLIPS RD",
@@ -6430,7 +6392,7 @@
     },
     {
       "id": "az-225",
-      "property": "1250 W GROVE PKWY",
+      "property": "1250 W Grove Pkwy",
       "community": null,
       "city": "Tempe",
       "address": "1250 W GROVE PKWY",
@@ -6459,7 +6421,7 @@
     },
     {
       "id": "az-226",
-      "property": "1925 S CORONADO RD",
+      "property": "1925 S Coronado Rd",
       "community": null,
       "city": "Gilbert",
       "address": "1925 S CORONADO RD",
@@ -6488,7 +6450,7 @@
     },
     {
       "id": "az-227",
-      "property": "8555 E RAINTREE DR",
+      "property": "8555 E Raintree Dr",
       "community": null,
       "city": "Scottsdale",
       "address": "8555 E RAINTREE DR",
@@ -6517,7 +6479,7 @@
     },
     {
       "id": "az-228",
-      "property": "4917 E HOLLY ST",
+      "property": "4917 E Holly St",
       "community": null,
       "city": "Phoenix",
       "address": "4917 E HOLLY ST",
@@ -6546,7 +6508,7 @@
     },
     {
       "id": "az-229",
-      "property": "1852 N 52ND DR",
+      "property": "1852 N 52Nd Dr",
       "community": null,
       "city": "Phoenix",
       "address": "1852 N 52ND DR",
@@ -6575,7 +6537,7 @@
     },
     {
       "id": "az-230",
-      "property": "4316 N 20TH AVE 3",
+      "property": "4316 N 20Th Ave 3",
       "community": null,
       "city": "Phoenix",
       "address": "4316 N 20TH AVE 3",
@@ -6604,7 +6566,7 @@
     },
     {
       "id": "az-231",
-      "property": "4316 N 20TH AVE",
+      "property": "4316 N 20Th Ave",
       "community": null,
       "city": "Phoenix",
       "address": "4316 N 20TH AVE",
@@ -6633,7 +6595,7 @@
     },
     {
       "id": "az-232",
-      "property": "1975 E APACHE BLVD",
+      "property": "1975 E Apache Blvd",
       "community": null,
       "city": "Tempe",
       "address": "1975 E APACHE BLVD",
@@ -6662,7 +6624,7 @@
     },
     {
       "id": "az-233",
-      "property": "11025 S 51ST ST",
+      "property": "11025 S 51St St",
       "community": null,
       "city": "Phoenix",
       "address": "11025 S 51ST ST",
@@ -6691,7 +6653,7 @@
     },
     {
       "id": "az-234",
-      "property": "11200 S 50TH ST",
+      "property": "11200 S 50Th St",
       "community": null,
       "city": "Phoenix",
       "address": "11200 S 50TH ST",
@@ -6720,7 +6682,7 @@
     },
     {
       "id": "az-235",
-      "property": "600 N 53RD ST",
+      "property": "600 N 53Rd St",
       "community": null,
       "city": "Phoenix",
       "address": "600 N 53RD ST",
@@ -6749,7 +6711,7 @@
     },
     {
       "id": "az-236",
-      "property": "1283 W PARKLANE BLVD",
+      "property": "1283 W Parklane Blvd",
       "community": null,
       "city": "Chandler",
       "address": "1283 W PARKLANE BLVD",
@@ -6778,7 +6740,7 @@
     },
     {
       "id": "az-237",
-      "property": "4802 N 19TH AVE",
+      "property": "4802 N 19Th Ave",
       "community": null,
       "city": "Phoenix",
       "address": "4802 N 19TH AVE",
@@ -6807,7 +6769,7 @@
     },
     {
       "id": "az-238",
-      "property": "4221 W DUNLAP AVE",
+      "property": "4221 W Dunlap Ave",
       "community": null,
       "city": "Phoenix",
       "address": "4221 W DUNLAP AVE",
@@ -6836,7 +6798,7 @@
     },
     {
       "id": "az-239",
-      "property": "502 W CAMELBACK RD",
+      "property": "502 W Camelback Rd",
       "community": null,
       "city": "Phoenix",
       "address": "502 W CAMELBACK RD",
@@ -6865,7 +6827,7 @@
     },
     {
       "id": "az-240",
-      "property": "7111 E TIERRA BUENA LN",
+      "property": "7111 E Tierra Buena Ln",
       "community": null,
       "city": "Scottsdale",
       "address": "7111 E TIERRA BUENA LN",
@@ -6894,7 +6856,7 @@
     },
     {
       "id": "az-241",
-      "property": "1889 W QUEEN CREEK RD",
+      "property": "1889 W Queen Creek Rd",
       "community": null,
       "city": "Chandler",
       "address": "1889 W QUEEN CREEK RD",
@@ -6923,7 +6885,7 @@
     },
     {
       "id": "az-242",
-      "property": "2202 E ROOSEVELT ST",
+      "property": "2202 E Roosevelt St",
       "community": null,
       "city": "Phoenix",
       "address": "2202 E ROOSEVELT ST",
@@ -6952,7 +6914,7 @@
     },
     {
       "id": "az-243",
-      "property": "200 W GERMANN RD",
+      "property": "200 W Germann Rd",
       "community": null,
       "city": "Chandler",
       "address": "200 W GERMANN RD",
@@ -6981,7 +6943,7 @@
     },
     {
       "id": "az-244",
-      "property": "850 N MERIDIAN RD",
+      "property": "850 N Meridian Rd",
       "community": null,
       "city": "Apache Junction",
       "address": "850 N MERIDIAN RD",
@@ -7010,7 +6972,7 @@
     },
     {
       "id": "az-245",
-      "property": "830 N ALMA SCHOOL RD",
+      "property": "830 N Alma School Rd",
       "community": null,
       "city": "Mesa",
       "address": "830 N ALMA SCHOOL RD",
@@ -7068,7 +7030,7 @@
     },
     {
       "id": "az-247",
-      "property": "4343 W THOMAS RD",
+      "property": "4343 W Thomas Rd",
       "community": null,
       "city": "Phoenix",
       "address": "4343 W THOMAS RD",
@@ -7097,7 +7059,7 @@
     },
     {
       "id": "az-248",
-      "property": "16630 N 43RD AVE",
+      "property": "16630 N 43Rd Ave",
       "community": null,
       "city": "Glendale",
       "address": "16630 N 43RD AVE",
@@ -7126,7 +7088,7 @@
     },
     {
       "id": "az-249",
-      "property": "1586 W MAGGIO",
+      "property": "1586 W Maggio",
       "community": null,
       "city": "Chandler",
       "address": "1586 W MAGGIO",
@@ -7155,7 +7117,7 @@
     },
     {
       "id": "az-250",
-      "property": "1570 W MAGGIO WAY",
+      "property": "1570 W Maggio Way",
       "community": null,
       "city": "Chandler",
       "address": "1570 W MAGGIO WAY",
@@ -7184,7 +7146,7 @@
     },
     {
       "id": "az-251",
-      "property": "1547 E BROADWAY RD",
+      "property": "1547 E Broadway Rd",
       "community": null,
       "city": "Mesa",
       "address": "1547 E BROADWAY RD",
@@ -7213,7 +7175,7 @@
     },
     {
       "id": "az-252",
-      "property": "2802 E OSBORN RD",
+      "property": "2802 E Osborn Rd",
       "community": null,
       "city": "Phoenix",
       "address": "2802 E OSBORN RD",
@@ -7242,7 +7204,7 @@
     },
     {
       "id": "az-253",
-      "property": "8111 N 19TH AVE",
+      "property": "8111 N 19Th Ave",
       "community": null,
       "city": "Phoenix",
       "address": "8111 N 19TH AVE",
@@ -7271,7 +7233,7 @@
     },
     {
       "id": "az-254",
-      "property": "3025 N 32ND ST",
+      "property": "3025 N 32Nd St",
       "community": null,
       "city": "Phoenix",
       "address": "3025 N 32ND ST",
@@ -7300,7 +7262,7 @@
     },
     {
       "id": "az-255",
-      "property": "24032 N 19TH AVE",
+      "property": "24032 N 19Th Ave",
       "community": null,
       "city": "Phoenix",
       "address": "24032 N 19TH AVE",
@@ -7329,7 +7291,7 @@
     },
     {
       "id": "az-256",
-      "property": "5241 E THOMAS RD",
+      "property": "5241 E Thomas Rd",
       "community": null,
       "city": "Phoenix",
       "address": "5241 E THOMAS RD",
@@ -7358,7 +7320,7 @@
     },
     {
       "id": "az-257",
-      "property": "6767 W BUTLER DR",
+      "property": "6767 W Butler Dr",
       "community": null,
       "city": "Glendale",
       "address": "6767 W BUTLER DR",
@@ -7387,7 +7349,7 @@
     },
     {
       "id": "az-258",
-      "property": "3738 E MCDOWELL RD",
+      "property": "3738 E Mcdowell Rd",
       "community": null,
       "city": "Phoenix",
       "address": "3738 E MCDOWELL RD",
@@ -7416,7 +7378,7 @@
     },
     {
       "id": "az-259",
-      "property": "1979 E RIO SALADO      PKWY",
+      "property": "1979 E Rio Salado      Pkwy",
       "community": null,
       "city": "Tempe",
       "address": "1979 E RIO SALADO      PKWY",
@@ -7445,7 +7407,7 @@
     },
     {
       "id": "az-260",
-      "property": "1111 E BROWN RD",
+      "property": "1111 E Brown Rd",
       "community": null,
       "city": "Mesa",
       "address": "1111 E BROWN RD",
@@ -7474,7 +7436,7 @@
     },
     {
       "id": "az-261",
-      "property": "9200 W MCDOWELL RD",
+      "property": "9200 W Mcdowell Rd",
       "community": null,
       "city": "Phoenix",
       "address": "9200 W MCDOWELL RD",
@@ -7503,7 +7465,7 @@
     },
     {
       "id": "az-262",
-      "property": "510 E HATCHER RD",
+      "property": "510 E Hatcher Rd",
       "community": null,
       "city": "Phoenix",
       "address": "510 E HATCHER RD",
@@ -7532,7 +7494,7 @@
     },
     {
       "id": "az-263",
-      "property": "7606 W PEORIA AVE",
+      "property": "7606 W Peoria Ave",
       "community": null,
       "city": "Peoria",
       "address": "7606 W PEORIA AVE",
@@ -7561,7 +7523,7 @@
     },
     {
       "id": "az-264",
-      "property": "3802 N 27TH ST",
+      "property": "3802 N 27Th St",
       "community": null,
       "city": "Phoenix",
       "address": "3802 N 27TH ST",
@@ -7590,7 +7552,7 @@
     },
     {
       "id": "az-265",
-      "property": "2220 W MISSION LN",
+      "property": "2220 W Mission Ln",
       "community": null,
       "city": "Phoenix",
       "address": "2220 W MISSION LN",
@@ -7619,7 +7581,7 @@
     },
     {
       "id": "az-266",
-      "property": "12435 N 28TH  DR",
+      "property": "12435 N 28Th  Dr",
       "community": null,
       "city": "Phoenix",
       "address": "12435 N 28TH  DR",
@@ -7648,7 +7610,7 @@
     },
     {
       "id": "az-267",
-      "property": "15545 W HUDSON WAY",
+      "property": "15545 W Hudson Way",
       "community": null,
       "city": "Goodyear",
       "address": "15545 W HUDSON WAY",
@@ -7677,7 +7639,7 @@
     },
     {
       "id": "az-268",
-      "property": "435 E SUNLAND AVE",
+      "property": "435 E Sunland Ave",
       "community": null,
       "city": "Phoenix",
       "address": "435 E SUNLAND AVE",
@@ -7706,7 +7668,7 @@
     },
     {
       "id": "az-269",
-      "property": "21155 N 56TH ST",
+      "property": "21155 N 56Th St",
       "community": null,
       "city": "Phoenix",
       "address": "21155 N 56TH ST",
@@ -7735,7 +7697,7 @@
     },
     {
       "id": "az-270",
-      "property": "2542 W COLTER ST",
+      "property": "2542 W Colter St",
       "community": null,
       "city": "Phoenix",
       "address": "2542 W COLTER ST",
@@ -7764,7 +7726,7 @@
     },
     {
       "id": "az-271",
-      "property": "1616 N CENTRAL AVE",
+      "property": "1616 N Central Ave",
       "community": null,
       "city": "Phoenix",
       "address": "1616 N CENTRAL AVE",
@@ -7793,7 +7755,7 @@
     },
     {
       "id": "az-272",
-      "property": "7400 S MILLER RD",
+      "property": "7400 S Miller Rd",
       "community": null,
       "city": "Buckeye",
       "address": "7400 S MILLER RD",
@@ -7822,7 +7784,7 @@
     },
     {
       "id": "az-273",
-      "property": "15400 W MONTE VISTA RD",
+      "property": "15400 W Monte Vista Rd",
       "community": null,
       "city": "Goodyear",
       "address": "15400 W MONTE VISTA RD",
@@ -7851,7 +7813,7 @@
     },
     {
       "id": "az-274",
-      "property": "1350 E THOMAS RD",
+      "property": "1350 E Thomas Rd",
       "community": null,
       "city": "Phoenix",
       "address": "1350 E THOMAS RD",
@@ -7880,7 +7842,7 @@
     },
     {
       "id": "az-275",
-      "property": "6901 E CHAUNCEY LN",
+      "property": "6901 E Chauncey Ln",
       "community": null,
       "city": "Phoenix",
       "address": "6901 E CHAUNCEY LN",
@@ -7909,7 +7871,7 @@
     },
     {
       "id": "az-276",
-      "property": "7700 W ASPERA BLVD",
+      "property": "7700 W Aspera Blvd",
       "community": null,
       "city": "Glendale",
       "address": "7700 W ASPERA BLVD",
@@ -7938,7 +7900,7 @@
     },
     {
       "id": "az-277",
-      "property": "1249 E SPENCE AVE",
+      "property": "1249 E Spence Ave",
       "community": null,
       "city": "Tempe",
       "address": "1249 E SPENCE AVE",
@@ -7967,7 +7929,7 @@
     },
     {
       "id": "az-278",
-      "property": "16629 N GREASEWOOD ST",
+      "property": "16629 N Greasewood St",
       "community": null,
       "city": "Surprise",
       "address": "16629 N GREASEWOOD ST",
@@ -7996,7 +7958,7 @@
     },
     {
       "id": "az-279",
-      "property": "915 N 52ND ST",
+      "property": "915 N 52Nd St",
       "community": null,
       "city": "Phoenix",
       "address": "915 N 52ND ST",

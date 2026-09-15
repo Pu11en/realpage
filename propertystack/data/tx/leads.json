@@ -619,42 +619,6 @@
   {
     "area": "tx",
     "city": "Houston",
-    "name": "RMSphere Asset Management Apartments",
-    "address": "13303 Bammel North Houston Rd.",
-    "lat": null,
-    "lon": null,
-    "units": 1,
-    "stage": "under construction",
-    "permit_date": "2024-12-08",
-    "opening_date": "2026-08-28",
-    "sale_date": "",
-    "buyer": "",
-    "developer": "RMSphere Asset Management Inc",
-    "office_phone": "(832) 491-4904",
-    "website": "",
-    "software": "unknown",
-    "links": {
-      "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025007118"
-    },
-    "sources": [
-      {
-        "fact": "permit_date",
-        "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025007118"
-      },
-      {
-        "fact": "developer",
-        "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025007118"
-      },
-      {
-        "fact": "office_phone",
-        "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025007118"
-      }
-    ],
-    "why": "Under construction \u00b7 opens 2026-08-28 \u00b7 1 units \u00b7 software not picked yet"
-  },
-  {
-    "area": "tx",
-    "city": "Houston",
     "name": "2121 Broadway Apartments",
     "address": "2121 Broadway St",
     "lat": null,
@@ -939,42 +903,6 @@
       }
     ],
     "why": "Under construction \u00b7 opens 2026-11-01 \u00b7 software not picked yet"
-  },
-  {
-    "area": "tx",
-    "city": "Houston",
-    "name": "N Main Apartments",
-    "address": "2600 N Main St.",
-    "lat": null,
-    "lon": null,
-    "units": 12,
-    "stage": "under construction",
-    "permit_date": "2025-07-16",
-    "opening_date": "2026-11-15",
-    "sale_date": "",
-    "buyer": "",
-    "developer": "2600 N. Main",
-    "office_phone": "(713) 906-5149",
-    "website": "",
-    "software": "unknown",
-    "links": {
-      "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025023705"
-    },
-    "sources": [
-      {
-        "fact": "permit_date",
-        "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025023705"
-      },
-      {
-        "fact": "developer",
-        "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025023705"
-      },
-      {
-        "fact": "office_phone",
-        "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025023705"
-      }
-    ],
-    "why": "Under construction \u00b7 opens 2026-11-15 \u00b7 12 units \u00b7 software not picked yet"
   },
   {
     "area": "tx",

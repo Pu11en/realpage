@@ -470,9 +470,56 @@ def _area_signal_text(record) -> str:
     return f"Opens: {record.opening_date}" if record.opening_date else "Opens: not public yet"
 
 
+_URL_BITS_RE = re.compile(r"\s*\[?https?://\S+\]?")
+
+
+def _clean_why(why: str) -> str:
+    """Drop raw source URLs from the why text (sources show as links)."""
+    return re.sub(r"\s{2,}", " ", _URL_BITS_RE.sub("", why or "")).strip(" ·")
+
+
+_GENERIC_NAMES = {"building permit", "apartments (3+ dwelling units)", "new construction", "apartments"}
+_DICT_URL_RE = re.compile(r"""^\{'url': '([^']+)'\}$""")
+
+
+def _plain_url(s: str) -> str:
+    """Some sources were saved as "{'url': '...'}" text: keep just the URL."""
+    m = _DICT_URL_RE.match(s or "")
+    return m.group(1) if m else s
+
+
+def _nice_name(name: str, address: str = "") -> str:
+    """ALL-CAPS names read as shouting; a generic permit label isn't a name."""
+    if name and name.strip().lower() in _GENERIC_NAMES:
+        name = address or name
+    return name.title() if name and name.isupper() else name
+
+
+def _is_leasing(record) -> bool:
+    """Not sold, not planned, and its opening date already passed."""
+    return (
+        record.stage not in ("sold", "planned")
+        and bool(record.opening_date)
+        and record.opening_date <= date.today().isoformat()
+    )
+
+
+def _area_sort_key(record):
+    """Soonest openings first, then leasing now, planned, recently sold."""
+    today = date.today().isoformat()
+    if record.stage == "sold":
+        return (3, "", -int((record.sale_date or "0").replace("-", "") or 0))
+    if record.stage == "planned":
+        return (2, record.opening_date or "9999", 0)
+    if _is_leasing(record):
+        return (1, "", -int(record.opening_date.replace("-", "")))
+    return (0, record.opening_date if (record.opening_date or "") > today else "9999", 0)
+
+
 def _area_lead_dict(record, idx: int) -> dict:
     is_sold = record.stage == "sold"
-    name = record.name or record.address or "Unnamed project"
+    leasing = _is_leasing(record)
+    name = _nice_name(record.name or record.address or "Unnamed project", record.address)
     return {
         "id": f"{record.area}-{idx}",
         "property": name,
@@ -489,11 +536,13 @@ def _area_lead_dict(record, idx: int) -> dict:
         "officePhone": record.office_phone or None,
         "website": record.website or None,
         "software": record.software if record.software not in ("", "unknown") else None,
-        "links": {k: v for k, v in record.links.items() if v},
-        "sources": [s["url"] if isinstance(s, dict) else s.url for s in record.sources],
-        "signalType": "Sold" if is_sold else ("Planned" if record.stage == "planned" else "Upcoming"),
-        "signal": _area_signal_text(record),
-        "why": record.why,
+        "links": {k: _plain_url(str(v)) for k, v in record.links.items() if v},
+        "sources": list(dict.fromkeys(_plain_url(s["url"] if isinstance(s, dict) else s.url) for s in record.sources)),
+        "signalType": "Sold" if is_sold else (
+            "Planned" if record.stage == "planned" else ("Leasing" if leasing else "Upcoming")
+        ),
+        "signal": f"Opened {record.opening_date}" if leasing else _area_signal_text(record),
+        "why": _clean_why(record.why),
         # Records already come out of score_and_rank in rank order (4.5); this
         # is a display-only stand-in for a numeric score until the site needs one.
         "score": max(0, 100 - (idx - 1) * 3),
@@ -511,7 +560,7 @@ def build_area(slug: str) -> dict:
     with path.open() as f:
         raw = json.load(f)
     records = [LeadRecord.from_dict(d) for d in raw]
-    ranked = score_and_rank(records)
+    ranked = sorted(score_and_rank(records), key=_area_sort_key)
 
     leads = [_area_lead_dict(r, i) for i, r in enumerate(ranked, start=1)]
     cities = sorted({r.city for r in ranked if r.city})
@@ -525,7 +574,11 @@ def build_area(slug: str) -> dict:
             "cities": len(cities),
             "unitsInPlay": units_in_play,
             "newThisWeek": 0,
-            "openingNext12mo": 0,
+            "openingNext12mo": sum(
+                1 for r in ranked
+                if r.stage != "sold" and r.opening_date
+                and date.today().isoformat() < r.opening_date <= date.today().replace(year=date.today().year + 1).isoformat()
+            ),
         },
         "cities": cities,
         "leads": leads,
