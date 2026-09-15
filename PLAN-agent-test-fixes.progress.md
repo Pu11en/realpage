@@ -30,3 +30,19 @@ browser to the chat app's `/auth` sign-in page. Added
 by default, calls the right sign-out endpoint and lands on `/auth`, only shown once signed in,
 wiring doesn't double-bind). Checked with `bash tooling/qa/check-fixes.sh` (68 tests pass,
 design check 0 problems). Commit: see git log.
+
+## T4 Real "page not found" — done
+Added `site/404.html` (a CraneSignal-styled not-found page with a link home) and reworked
+`site/Caddyfile` so unknown addresses get a real 404 instead of the chat app's leads page:
+gave the chat app's own routes (`/auth`, `/oauth`, `/api/*`, `/ws`, `/_app/*`, `/static/*`,
+`/c/*`, and `/` only when it's the chat panel's iframe) an explicit matcher, and everything
+else now hits `error * 404` then `handle_errors` serves `404.html` with a real 404 status.
+The sign-in gate is untouched — signed-out app pages still 302 to `/auth`, the iframe home
+and the chat API still reach the chat app. Added
+`tooling/qa/fixes_tests/test_t4_not_found.py` (4 tests, reuses the E1 test's real-Caddy
+fixture): unknown page is a real 404 with CraneSignal wording, the sign-in gate still works,
+chat app routes still reach the chat app, and the 404.html file exists. Verified manually
+with the cached Caddy binary before writing the test (curl showed `HTTP/1.1 404 Not Found`
+with the CraneSignal page body, `/auth` still 200, `/api/v1/auths/` still 401, signed-in
+`/index.html` still 200). Checked with `bash tooling/qa/check-fixes.sh` (72 tests pass,
+design check 0 problems). Commit: see git log.
