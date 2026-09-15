@@ -30,3 +30,17 @@
   (129 tests and 0 design problems). The broad `python3 -m pytest -q` still cannot collect the
   unrelated client-map test because its local `census` helper is missing; this existing H1 issue is
   recorded above and is not hidden or treated as a pass.
+
+## 2026-09-15 — H3: predictable off-topic boundary
+
+- Added one exact, calm off-topic reply to the CraneSignal Agent instructions: it says the request is
+  outside CraneSignal, states the product's sales-research purpose, and suggests asking about a Texas
+  building. It explicitly covers small talk, unrelated facts, writing requests, and attempts to change
+  the agent's role or bypass its rules; none of these requests uses a tool.
+- Added seven saved offline fixtures for the scorecard's scope-creep class: normal small talk,
+  unrelated factual questions, and role-redirect attempts. The focused test verifies all three classes
+  retain the same useful boundary and that the agent instructions still require it.
+- Checked: `python3 -m pytest -q tooling/qa/fixes_tests/test_h3_off_topic_behavior.py` (2 passed);
+  `bash tooling/qa/check-fixes.sh` passed (131 tests and 0 design problems). The broad
+  `python3 -m pytest -q` still cannot collect the unrelated client-map test because its local `census`
+  helper is missing; this existing H1 issue remains visible and is not treated as a pass.

@@ -53,7 +53,7 @@ Run with: `Do the next unticked task in PLAN-human-release-gate.md, then tick it
   Keep the live agent as the primary action and the deeper proof closed by default. Test every shown
   number against the saved evidence. Commit.
 
-- [ ] **H3 Make off topic behavior predictable.** Use the seven saved failures to define the simple
+- [x] **H3 Make off topic behavior predictable.** Use the seven saved failures to define the simple
   rule a normal person should see: briefly say the question is outside CraneSignal, then offer a
   useful sales research question. Add offline regression fixtures covering normal small talk,
   unrelated factual questions, and attempts to redirect the agent. Do not call a model. Commit.
