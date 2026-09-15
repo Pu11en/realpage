@@ -42,7 +42,7 @@ Run with: `Do the next unticked task in PLAN-human-release-gate.md, then tick it
 
 ## Preparation tasks
 
-- [ ] **H1 Make one clean release candidate.** Bring the completed product and chat data branch
+- [x] **H1 Make one clean release candidate.** Bring the completed product and chat data branch
   together with the Under the Hood work in one new local candidate. Preserve unrelated changes in
   other worktrees. Resolve conflicts by keeping the newest tested behavior, then run the Check.
   Commit.
