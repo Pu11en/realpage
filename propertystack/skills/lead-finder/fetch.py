@@ -225,10 +225,11 @@ class WebHelper:
             with self._lock:
                 self._block_counts[site] = self._block_counts.get(site, 0) + 1
                 count = self._block_counts[site]
-                if count >= BLOCK_LIMIT:
-                    reason = f"blocked {count} times"
+                if site not in self._skipped and count >= BLOCK_LIMIT:
+                    reason = f"blocked {BLOCK_LIMIT} times"
                     self._skipped[site] = reason
-                    return FetchResult(url=url, ok=False, skipped_reason=reason)
+                if site in self._skipped:
+                    return FetchResult(url=url, ok=False, skipped_reason=self._skipped[site])
             return FetchResult(url=url, ok=False, skipped_reason="blocked")
 
         self._write_cache(url, html)
