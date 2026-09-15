@@ -23,6 +23,12 @@ commit), SearXNG banned, **no quality gates** (quality.json is a report only), l
 - **Texas scope:** the whole state except Collin County (Plano-Richardson is its own finished area and is
   never rerun). Texas has many RealPage clients (40 in the client map) -- RealPage buildings are dropped
   as usual.
+- **Aim at RealPage's gaps: rank, don't ban (Drew 2026-09-14).** Order Texas cities and sources so places
+  with few or no RealPage buildings in `propertystack/data/client-map/counts.json` come first, and the
+  growing suburbs around RealPage-heavy cities get priority. Cities with 3+ RealPage buildings in the
+  client map (today: Houston, Fort Worth, McKinney, Frisco, Grand Prairie, Allen, Austin, Dallas, Denton --
+  read them from the data file, never hard-code) go **last**, only if the caps allow. The client map is a
+  sample, so this is a ranking, not a ban. Each lead's "why" notes when its city is a RealPage gap.
 - **Pre-approved, don't ask:** Jina searches up to 1,500 for the Texas run (~$0.75) and 900 for the
   Arizona re-run; Brave stays under its 800/month free cap; free public downloads (incl. the ~200 MB
   appraisal-district files, cached under `propertystack/runs/cache/`, gitignored).
@@ -66,7 +72,8 @@ Open: http://localhost:8765 → Early Leads → Tx
 
 ### Part 2: Texas
 - [ ] **T1 Texas area.** Area `tx` = Texas minus Collin County (skip any city/record in Collin County;
-  Plano-Richardson untouched). City list from Census permits as before. Commit.
+  Plano-Richardson untouched). City list from Census permits, reordered by the RealPage-gap rule above (fewest RealPage
+  buildings first, RealPage-heavy cities last). Commit.
 - [ ] **T2 TDLR TABS -- the statewide backbone.** Puller for the Texas registry (endpoint and form fields
   in the research file): registrations since 2024-09, New Construction, estimated cost ≥ $3M, project or
   facility name / scope matching apartment, apartments, multifamily, multi-family, lofts, residences,
