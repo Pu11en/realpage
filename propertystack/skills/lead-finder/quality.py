@@ -64,9 +64,14 @@ def _pct(numerator: int, denominator: int) -> float:
 
 
 def check_quality(state: str, records: list[LeadRecord], cities_with_source: int,
-                   total_cities: int, answer_keys_dir: Path | None = None) -> dict:
+                   total_cities: int, answer_keys_dir: Path | None = None,
+                   single_city: bool = False) -> dict:
     """Compute the quality report for a finished run. Returns a dict (also
-    written as quality.json) with `passed: bool` and every metric behind it."""
+    written as quality.json) with `passed: bool` and every metric behind it.
+
+    `single_city=True` (a run scoped to one city with `--city`) still reports
+    answer-key recall against the whole state's key, but never fails the run
+    on it -- the plan judges recall for the whole state only."""
     total_leads = len(records)
 
     with_units = sum(1 for r in records if r.units is not None)
@@ -112,7 +117,7 @@ def check_quality(state: str, records: list[LeadRecord], cities_with_source: int
     reasons = []
     if not key_leads:
         reasons.append("no answer key found for this state")
-    if recall_pct < RECALL_BAR:
+    if not single_city and recall_pct < RECALL_BAR:
         reasons.append(f"answer-key recall {recall_pct:.0%} < {RECALL_BAR:.0%}")
     if software_checked and software_accuracy_pct < SOFTWARE_ACCURACY_BAR:
         reasons.append(f"software accuracy {software_accuracy_pct:.0%} < {SOFTWARE_ACCURACY_BAR:.0%}")

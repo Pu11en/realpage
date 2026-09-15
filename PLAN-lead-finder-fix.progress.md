@@ -506,3 +506,131 @@ Commit: (see git log for this file's commit)
   `ProjectName` field (e.g. news mentioning "REVELRY Tempe developer"), and/or
   reconsider whether a 2-building city-level answer-key check is a fair pass/fail bar
   versus running against the full state key in F11.
+
+## F10a Answer key matches the job -- done
+- Rebuilt `propertystack/answer-keys/az.json` from scratch with 20 entries, each researched live via
+  web search (news, press releases, developer sites, building's own site) -- never from a city permit
+  layer or the county sales file.
+- Dropped Northbend and Dwell at 5th and Farmer (both opened March 2025 -- too long ago per the plan).
+- Every entry is now either not-yet-open (permitted / under construction / pre-leasing / opened in the
+  last 6 months) or sold in the last 24 months, 20+ units.
+- Spread across the 6 target cities: Phoenix 4, Mesa 4, Scottsdale 4, Tucson 4, Tempe 2, Gilbert 2.
+- 6 entries carry a hand-verified `software` field (4 Yardi, 2 Entrata -- includes a non-Yardi vendor
+  as required), read off each building's own resident-portal/apply-now link.
+- Kept Marquee on 5th and Bella Victoria as F2/F7 fixture buildings (still leasing, still valid).
+- Checked: `bash tooling/qa/check-lead-finder.sh` passes (all skill test suites, panel_test, 0 QA
+  problems). Confirmed the new JSON parses and the city/stage/software spread matches the plan's aim.
+- Left open: `quality.py`'s recall-bar logic doesn't yet have the "single-city test reports recall but
+  doesn't fail on it" exemption the plan calls for -- that's part of F10 (the Tempe test run task
+  itself), not this answer-key rebuild, so it's untouched here.
+
+## F10b Developer + phone for brand-new permits -- done
+- Confirmed live (via an HTTP range request on Maricopa County's 108MB parcel zip, no
+  full download needed) that the county's free parcel file has real `OwnerName` and
+  `SitusAddress` columns -- added them to `propertystack/recipes/az/maricopa-county-sales.json`'s
+  `parcel_fields` (`owner`/`address`) alongside the existing `parcel`/`units` fields F5 uses.
+- `propertystack/skills/lead-finder-contact/contact.py`: added `find_owner_by_parcel`
+  (matches a permit's street address to the parcel file's current owner, offline-testable
+  via an injected `fetch_rows`), `find_developer_by_news` (F2-checked news/press-release
+  search for the project's own name, pulls a real company name from "developed by X" /
+  "X Communities/Development/Partners/..." phrasing -- never guesses), and
+  `find_developer_for_new_permit` (wires them in the plan's order: real-looking parcel
+  owner first; a generic ownership-entity name like "REVELRY TEMPE OWNER LLC" only counts
+  if news corroborates it or a real developer name turns up in news instead). `fill_contacts`
+  now calls this for any record with no developer yet and stage in
+  planned/permitted/under construction, before the existing website/phone lookup (so the
+  new developer name feeds straight into `find_website`/`find_office_phone`).
+- Wired into `propertystack/skills/lead-finder/run.py`: `ChainDeps` gained
+  `owner_parcel_recipe`/`owner_parcel_fetch_rows`; `main()` loads a state's `*-sales.json`
+  recipe (if one exists, e.g. AZ's Maricopa County one) and passes it + `find_sold.default_fetch_rows`
+  into `fill_contacts` -- generic, not AZ-specific in the chain code itself.
+- 14 new offline fixture tests in `tests/test_contact.py` (owner-by-address match/no-match/
+  no-recipe/fetch-error, news extraction, generic-owner fallback and news-confirmation,
+  "never guesses", and `fill_contacts` wiring for permitted vs. leasing records) -- all pass.
+- Live test (`live_self_test_f10b.py`, new file so F8's existing phone/website live test
+  stays intact) on 3 of Tempe's real new permits with empty contractor fields: REVELRY
+  (965 E University Dr) -> owner "RURAL & UNIVERSITY LLC" from the real parcel file; AVENUE
+  5/TROVITA RIO (701 W Rio Salado Pkwy) -> owner "GWL DIRECT 701 RIO SALADO LLC" from the
+  real parcel file; THE SAMUEL (712 S College Ave) -> not found in the parcel file and no
+  news match either, so correctly left blank rather than guessed. 2 of 3 got a real name --
+  matches the plan's "never guess" rule (an unmatched address stays unknown, it doesn't get
+  a fabricated developer).
+- Checked: `bash tooling/qa/check-lead-finder.sh` passes (all lead-finder* skill tests, 56
+  in the lead-finder skill itself, plus the site/panel checks). Committed.
+
+## F10c Find websites by project name -- done
+- `fill_project_details` (`propertystack/skills/lead-finder-details/project_details.py`) now builds a
+  query list: the project/brand name first (`"<name>" <city> apartments`), then the street address
+  (`"<address>" <city> apartments`) as fallback -- stops at the first query whose results pass the F2
+  `is_about_building` check via `_pick_website`. Unnamed records (no `record.name`) skip straight to the
+  address query, same as before.
+- Added 2 fixture tests: name query wins when it matches; falls back to the address query (and only
+  issues that second search) when the name query returns no real match. Full suite:
+  `python3 -m pytest propertystack/skills/lead-finder-details/tests/test_project_details.py -q` -- 15 passed.
+- Live test (not in the offline suite): `propertystack/skills/lead-finder-details/live_self_test_f10c.py`,
+  run by hand against real Jina/Brave + crawl4ai on Tempe's "1020 Apache" (1020 W Apache Blvd) and
+  "La Victoria Commons on Apache" (1140 E Apache Blvd). Result: "1020 Apache" got a website, but the
+  wrong one (lvcollective.com/work/rambler-tempe -- a different LV Collective project on the same
+  street) because the address-query fallback's street-number/street-name match (F2's `street_hit`) is
+  loose enough to accept a nearby unrelated building; "La Victoria Commons on Apache" got no website at
+  all (name query found only a news article, address query found nothing that passed F2). Flagging this
+  as an open weak spot for F10 (the Tempe test run) to catch and, if it fails the bar, fix -- not
+  patching `street_hit` here since F10c's scope was the query-ordering change, not the match-strength
+  threshold.
+- Checked: `bash tooling/qa/check-lead-finder.sh` -- all suites pass (unchanged pass counts elsewhere).
+
+## F10 Tempe test run (again, after F10a-c) -- STUCK, still below bar after 2 fix rounds
+Ran the full chain on Tempe three times, fixing real bugs found between runs:
+
+- **Run 1** (`20260914-tempe-retest`, deleted): failed with 0% on everything. Two causes: (a)
+  `check_quality` was failing every single-city run on the *state-wide* answer-key recall, even
+  though the plan says a single-city test should only report that number, not fail on it --
+  fixed by adding `single_city` to `check_quality`/`run.py` (wired via `--city`). (b)
+  `JINA_API_KEY`/`BRAVE_API_KEY` in `/home/drewp/main-projects/realpage/.env` were present but
+  empty, so no search-dependent step (website/developer/phone/software) could run at all --
+  raised to Drew as an ASK.
+- **Run 2** (`20260914-tempe-retest2`, deleted): Drew filled in real keys (also added a copy at
+  this worktree's own root `.env`, gitignored, for sandboxes that can't see the realpage repo;
+  `fetch.py`'s `_load_env_key` now tries both paths). Recall no longer failed the run, but
+  website/software/phone were still 0% for existing buildings and developer+phone was 1/9 (11%)
+  for new permits -- identical numbers to run 1's non-recall failures. Root cause: `find_website`
+  and `find_developer_by_news`/`find_developer_for_new_permit` were quoting the *raw* permit
+  name verbatim in search queries (e.g. `"REVELRY [NEW MIXED-USE] - *LP* / Phased Construction -
+  Type D" Tempe apartments`) -- no real page ever contains that exact bracketed/starred string,
+  so every quoted search returned zero results. This is exactly the weak spot F10c's own progress
+  entry flagged as open ("La Victoria Commons on Apache got no website at all").
+- Fix: added `building_match.clean_project_name()` (strips `[...]`, `(...)`, `*...*` annotations
+  and trailing `- X` suffixes, e.g. `"1020 APACHE [NEW MIXED-USE / MULTI-FAMILY]"` ->
+  `"1020 APACHE"`, `"VERVE TEMPE [NEW MIXED-USE] (WD)"` -> `"VERVE TEMPE"`) and used it everywhere
+  a raw record name feeds a search query or the F2 `is_about_building` check: `project_details.py`'s
+  website search, `contact.py`'s `find_developer_for_new_permit`. Added fixture tests
+  (`propertystack/lib/tests/test_building_match.py`).
+- **Run 3** (`20260914-tempe-retest3`, kept in `propertystack/runs/AZ/`): real improvement --
+  website coverage 0% -> 55% of all 11 leads, software actually detected on real sites (Entrata
+  on vervetempe.com), developer+phone for new permits 11% -> 22% (2/9: South Pier, The Samuel).
+  Still below the bar on:
+  - **Existing buildings (2 of 2 still no website):** "1020 APACHE" and "LA VICTORIA COMMONS ON
+    APACHE" are permit-system labels, not the real marketing names (the actual buildings are
+    "Rambler Tempe" and "La Victoria Commons" -- the permit record appends the street name,
+    "APACHE"/"ON APACHE", which the real sites never repeat). F2's `matches_building` correctly
+    requires every distinctive name word to appear, so it correctly rejects search hits missing
+    that extra street word. Loosening that match would reopen the exact false-positive holes F2
+    was built to close (Marquee on 5th vs. Marquee Sports Network / the St. Louis Marquee) --
+    this is a shared, safety-critical check used everywhere, not something to weaken as a side
+    effect of one city's test. Left untouched.
+  - **5 of 9 new permits still have no confirmed developer:** county parcel owner was a person's
+    name or a generic LLC with no matching news coverage (data doesn't exist yet for a
+    brand-new permit, not a lookup bug).
+- This was fix round 2 of the plan's "up to 2 fix rounds, then STUCK" rule. Both `quality.json`
+  runs and the fixed code are committed. Not built into the site (run failed quality).
+- Checked: `python3 -m pytest propertystack/lib propertystack/skills/lead-finder-details
+  propertystack/skills/lead-finder-contact -q` -- 58 passed. `bash tooling/qa/check-lead-finder.sh`
+  passes in full.
+
+**Open for Drew to decide before F11 (full AZ run):** the remaining gap is a real limitation, not
+a bug -- permit records name projects by street location, not brand name, and truly new permits
+often have no public developer info yet. Options: (1) accept it and let those leads show with
+"software not picked yet" / no developer, which is already correct per the plan's "no website yet
+= the best lead" rule; (2) add a second name-matching pass that only requires the street number
+(not the appended street-name word) to match for address-style permit names, accepting slightly
+more risk of a wrong-building website; (3) something else Drew wants to try.

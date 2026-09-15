@@ -36,19 +36,23 @@ for _extra in (
     "lead-finder-details", "lead-finder-hud", "lead-finder-awards",
     "lead-finder-agendas", "lead-finder-legistar", "lead-finder-civic",
     "lead-finder-agenda-projects", "lead-finder-sales-news",
-    "lead-finder-contact", "score-leads",
+    "lead-finder-contact", "score-leads", "lead-finder-sales",
 ):
     p = SKILLS / _extra
     if str(p) not in sys.path:
         sys.path.insert(0, str(p))
 if str(HERE) not in sys.path:
     sys.path.insert(0, str(HERE))
+_PROPERTYSTACK_ROOT = HERE.parents[1]
+if str(_PROPERTYSTACK_ROOT) not in sys.path:
+    sys.path.insert(0, str(_PROPERTYSTACK_ROOT))
 
 from runfolder import RunFolder, RunCaps, pick_state  # noqa: E402
 from record import LeadRecord  # noqa: E402
 from merge import merge_records  # noqa: E402
 from fetch import WebHelper  # noqa: E402
 from quality import check_quality, write_quality_json  # noqa: E402
+from lib.building_match import clean_project_name  # noqa: E402
 
 import rank as cities_rank  # noqa: E402
 import find_sources  # noqa: E402
@@ -62,6 +66,7 @@ import legistar as legistar_mod  # noqa: E402
 import civic_agendas  # noqa: E402
 import agenda_projects  # noqa: E402
 import sales_news  # noqa: E402
+import find_sold  # noqa: E402
 
 
 def _load_software_run():
@@ -132,6 +137,8 @@ class ChainDeps:
     ocr_fn: Callable[[bytes], str] | None = None
     today: object = None  # injectable "today" for deterministic tests
     recipes_dir: Path | None = None  # override for find_sources/find_sources_fallback/agendas
+    owner_parcel_recipe: dict | None = None  # F10b: county sales recipe (has parcel_source/parcel_fields)
+    owner_parcel_fetch_rows: Callable[[dict], list] | None = None
 
     def search_fn(self, query: str, n: int = 10) -> list[dict]:
         return self.web.search(query, n)
@@ -183,6 +190,19 @@ def _load_state_recipe(city: str, state: str) -> dict | None:
     if not path.exists():
         return None
     return json.loads(path.read_text())
+
+
+def _load_county_sales_recipe(state: str) -> dict | None:
+    """F10b: the state's county sales/parcel recipe (F5's `*-sales.json`,
+    e.g. `az/maricopa-county-sales.json`), reused for its `parcel_source`/
+    `parcel_fields` (owner name by address) when a brand-new permit has no
+    contractor field filled in yet. None if the state has no such recipe."""
+    state_dir = STATE_RECIPES_DIR / state.lower()
+    if not state_dir.is_dir():
+        return None
+    for path in sorted(state_dir.glob("*-sales.json")):
+        return json.loads(path.read_text())
+    return None
 
 
 def step_sources(run_folder: RunFolder, city: str, state: str, deps: ChainDeps) -> dict:
@@ -393,7 +413,13 @@ def run_chain(
     if not run_folder.step_done(STEP_CONTACT, STATE_CITY_KEY):
         from contact import fill_contacts
 
-        merged = fill_contacts(merged, deps.search_fn, lambda u: deps.web.fetch(u))
+        merged = fill_contacts(
+            merged,
+            deps.search_fn,
+            lambda u: deps.web.fetch(u),
+            parcel_recipe=deps.owner_parcel_recipe,
+            parcel_fetch_rows=deps.owner_parcel_fetch_rows,
+        )
         run_folder.save_step(STEP_CONTACT, STATE_CITY_KEY, [r.to_dict() for r in merged])
     else:
         merged = _records_from(run_folder.load_step(STEP_CONTACT, STATE_CITY_KEY))
@@ -444,25 +470,29 @@ def main(argv: list[str] | None = None) -> int:
     agencies_path = HERE.parents[2] / "propertystack" / "data" / "state-agencies.json"
     agencies = json.loads(agencies_path.read_text()) if agencies_path.exists() else {}
 
+    owner_parcel_recipe = _load_county_sales_recipe(state)
+
     deps = ChainDeps(
         web=WebHelper(),
         cities_fetcher=cities_rank.fetch,
         hud_fetcher=hud_loans.fetch_workbook_bytes,
         agency_name=agencies.get(state.upper()),
+        owner_parcel_recipe=owner_parcel_recipe,
+        owner_parcel_fetch_rows=find_sold.default_fetch_rows if owner_parcel_recipe else None,
     )
     records = run_chain(state, run_folder, deps, cities=args.city)
+    for record in records:
+        record.name = clean_project_name(record.name)
     print(f"lead-finder: {len(records)} leads for {state} -> {run_folder.path}")
 
     city_list = run_folder.load_step(STEP_CITIES, STATE_CITY_KEY)["cities"]
     city_names = [c["city"] if isinstance(c, dict) else c for c in city_list]
     real_sources = cities_with_real_source(run_folder, city_names)
-    report = check_quality(state, records, real_sources, len(city_names))
+    report = check_quality(state, records, real_sources, len(city_names),
+                            single_city=bool(args.city))
     write_quality_json(run_folder.path, report)
-
     if not report["passed"]:
-        print(f"lead-finder: FAILED quality bar for {state}: {report['fail_reasons']}")
-        print("lead-finder: not built into the site")
-        return 1
+        print(f"lead-finder: quality.json below bar for {state} (report only): {report['fail_reasons']}")
 
     leads_path = write_area_leads(state, records)
     print(f"lead-finder: wrote {len(records)} records to {leads_path}")

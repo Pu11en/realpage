@@ -288,13 +288,21 @@ def _looks_blocked(html: str) -> bool:
 
 
 def _load_env_key(name: str) -> str | None:
-    env_path = Path("/home/drewp/main-projects/realpage/.env")
-    if not env_path.exists():
-        return None
+    """Read `name` from the realpage repo's .env; if that's missing or
+    doesn't have it (e.g. this is a sandboxed worktree copy that can't see
+    outside itself), fall back to a `.env` at this repo's own root."""
     prefix = f"{name}="
-    for line in env_path.read_text(encoding="utf-8").splitlines():
-        if line.startswith(prefix):
-            return line.split("=", 1)[1].strip()
+    for env_path in (
+        Path("/home/drewp/main-projects/realpage/.env"),
+        Path(__file__).resolve().parents[3] / ".env",
+    ):
+        if not env_path.exists():
+            continue
+        for line in env_path.read_text(encoding="utf-8").splitlines():
+            if line.startswith(prefix):
+                value = line.split("=", 1)[1].strip()
+                if value:
+                    return value
     return None
 
 

@@ -186,6 +186,45 @@ def test_fill_project_details_rejects_same_word_unrelated_site():
     assert out.website == ""
 
 
+def test_fill_project_details_searches_name_before_address():
+    """F10c: the project/brand name is searched first; the street address is
+    only searched if the name query found no real match."""
+    record = make_record(name="La Victoria Commons", city="Tempe", address="1020 W Apache Blvd")
+    queries_seen = []
+
+    def search_fn(query, n):
+        queries_seen.append(query)
+        if "La Victoria Commons" in query:
+            return [{"title": "La Victoria Commons", "url": "https://lavictoriacommons.example.com"}]
+        return [{"title": "Wrong building", "url": "https://unrelated.example.com"}]
+
+    def fetch_fn(url):
+        return FakePage(ok=True, html="220-unit community")
+
+    out = fill_project_details(record, search_fn, fetch_fn)
+    assert out.website == "https://lavictoriacommons.example.com"
+    assert queries_seen[0].startswith('"La Victoria Commons"')
+
+
+def test_fill_project_details_falls_back_to_address_when_name_query_fails():
+    """No acceptable match on the name query -- fall back to the address query."""
+    record = make_record(name="1020 Apache", city="Tempe", address="1020 W Apache Blvd")
+    queries_seen = []
+
+    def search_fn(query, n):
+        queries_seen.append(query)
+        if "1020 W Apache Blvd" in query:
+            return [{"title": "1020 Apache Blvd Residences", "url": "https://1020apache.example.com"}]
+        return [{"title": "Unrelated site", "url": "https://unrelated.example.com"}]
+
+    def fetch_fn(url):
+        return FakePage(ok=True, html="150-unit community")
+
+    out = fill_project_details(record, search_fn, fetch_fn)
+    assert out.website == "https://1020apache.example.com"
+    assert len(queries_seen) == 2
+
+
 def test_fill_project_details_picks_real_building_site():
     record = make_record(name="Bella Victoria", city="Tucson", address="1 Bella Victoria Way")
     results = [{"title": "Bella Victoria Apartments", "url": "https://bellavictoria.com"}]

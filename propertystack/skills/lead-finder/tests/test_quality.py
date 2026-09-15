@@ -70,6 +70,28 @@ def test_low_recall_fails(tmp_path):
     assert any("recall" in r for r in report["fail_reasons"])
 
 
+def test_low_recall_does_not_fail_single_city_run(tmp_path):
+    key_leads = [
+        {"name": "Lumara", "address": "1 Main St, Sampleton, ZZ"},
+        {"name": "Bella Victoria", "address": "2 Main St, Sampleton, ZZ"},
+        {"name": "Third Place", "address": "3 Main St, Sampleton, ZZ"},
+    ]
+    answer_keys_dir = _write_key(tmp_path, key_leads)
+
+    records = [
+        LeadRecord(area="zz", city="Sampleton", name="Lumara", address="1 Main St, Sampleton, ZZ",
+                   stage="leasing", units=100, website="https://lumara.example",
+                   software="Yardi", office_phone="555-1111"),
+    ]
+
+    report = quality.check_quality("ZZ", records, cities_with_source=1, total_cities=1,
+                                    answer_keys_dir=answer_keys_dir, single_city=True)
+
+    assert report["answer_key_recall"] < quality.RECALL_BAR
+    assert not any("recall" in r for r in report["fail_reasons"])
+    assert report["passed"] is True
+
+
 def test_missing_answer_key_fails(tmp_path):
     empty_dir = tmp_path / "no-keys"
     empty_dir.mkdir()

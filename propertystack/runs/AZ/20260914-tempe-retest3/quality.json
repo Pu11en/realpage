@@ -1,0 +1,33 @@
+{
+ "state": "AZ",
+ "passed": false,
+ "fail_reasons": [
+  "existing-building website 0% < 70%",
+  "existing-building software 0% < 70%",
+  "existing-building phone 0% < 50%",
+  "not-yet-built developer+phone 22% < 50%"
+ ],
+ "total_leads": 11,
+ "cities_with_source_pct": 1.0,
+ "pct_with_units": 1.0,
+ "pct_with_website": 0.5455,
+ "pct_with_software": 0.4545,
+ "pct_with_phone": 0.3636,
+ "answer_key_recall": 0.0,
+ "answer_key_found": 0,
+ "answer_key_total": 20,
+ "software_accuracy": 0.0,
+ "software_checked": 0,
+ "software_correct": 0,
+ "existing_buildings": {
+  "count": 2,
+  "website_pct": 0.0,
+  "software_pct": 0.0,
+  "phone_pct": 0.0
+ },
+ "not_yet_built": {
+  "count": 9,
+  "software_not_picked_pct": 0.0,
+  "developer_and_phone_pct": 0.2222
+ }
+}

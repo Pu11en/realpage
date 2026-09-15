@@ -16,7 +16,7 @@ from typing import Callable
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "lead-finder"))
 sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
 from record import LeadRecord  # noqa: E402
-from lib.building_match import is_about_building  # noqa: E402
+from lib.building_match import is_about_building, clean_project_name  # noqa: E402
 
 GeocodeFn = Callable[[str], object]
 SearchFn = Callable[[str, int], list]
@@ -68,10 +68,24 @@ def fill_project_details(
         if coords is not None:
             record.lat, record.lon = coords
 
-    query = f'"{record.address}" {record.city} apartments'
-    results = search_fn(query, 5) or []
+    # Search the project/brand name first (an apartment community's own site
+    # almost always uses its marketing name, not its street address), then
+    # fall back to the address if the name didn't turn up a real match --
+    # F2's is_about_building check still gates both.
+    queries = []
+    clean_name = clean_project_name(record.name)
+    if clean_name:
+        queries.append(f'"{clean_name}" {record.city} apartments')
+    queries.append(f'"{record.address}" {record.city} apartments')
 
-    website = _pick_website(results, record.name, record.address)
+    results: list = []
+    website = ""
+    for query in queries:
+        results = search_fn(query, 5) or []
+        website = _pick_website(results, clean_name, record.address)
+        if website:
+            break
+
     if website:
         record.website = website
         record.links["website"] = website
