@@ -1,5 +1,8 @@
 # CraneSignal agent: one-tap "Find contact" on leads with no contact
 
+Goal: A sales rep never has to type the next step: every lead in a chat lead list shows a phone, a link, or a 🔍 Find contact link that sends the deep dive in one tap.
+Done when: The Check tests pass and a local Playwright run of "give me top leads any area" shows every lead line with a phone, link or 🔍 Find contact link, and clicking one sends "Deep dive on …" and gets an answer (screenshot saved to tooling/qa/shots/find-contact.png).
+
 Written 2026-09-15 (thread 1549506016125911081, Drew). In a lead list, a lead with no phone or
 link currently ends with plain text "ask me for a deep dive", so a sales rep has to type the
 next question. Drew wants every lead to show the rep exactly what to do: a phone/link, or a
