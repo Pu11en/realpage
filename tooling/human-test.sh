@@ -10,6 +10,21 @@ ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$ROOT"
 PROJECT="cranesignal-human-test"
 COMPOSE=(docker compose -p "$PROJECT" -f chatbot/docker-compose.local.yml -f chatbot/docker-compose.human-test.yml)
+MAIN_ROOT="$(cd "$(git -C "$ROOT" rev-parse --path-format=absolute --git-common-dir)/.." && pwd)"
+LANDING_DIR="$MAIN_ROOT/business/marketing/landing"
+LANDING_PIDFILE="/tmp/cranesignal-human-test-landing.pid"
+LANDING_LOG="/tmp/cranesignal-human-test-landing.log"
+
+stop_landing() {
+  if [ -f "$LANDING_PIDFILE" ]; then
+    local pid
+    pid="$(cat "$LANDING_PIDFILE")"
+    if [[ "$pid" =~ ^[0-9]+$ ]]; then
+      kill "$pid" 2>/dev/null || true
+    fi
+    rm -f "$LANDING_PIDFILE"
+  fi
+}
 
 offline_check() {
   local overlay="chatbot/docker-compose.human-test.yml"
@@ -20,9 +35,11 @@ offline_check() {
   grep -Fq 'WEBUI_AUTH: "True"' "$overlay"
   grep -Fq 'ENABLE_SIGNUP: "true"' "$overlay"
   grep -Fq 'ENABLE_LOGIN_FORM: "true"' "$overlay"
-  grep -Fq '"8765:8080"' "$overlay"
+  grep -Fq '"8876:8080"' "$overlay"
   grep -Fq 'ports: !reset []' "$overlay"
-  printf 'Human preview command is isolated, starts with sign-in enabled, and uses localhost:8765.\n'
+  grep -Fq 'APP_URL=http://localhost:8876' "$0"
+  grep -Fq 'LANDING_DIR="$MAIN_ROOT/business/marketing/landing"' "$0"
+  printf 'Human preview starts on the real landing page, then opens an isolated signed-in app.\n'
 }
 
 case "${1:-start}" in
@@ -31,8 +48,9 @@ case "${1:-start}" in
     exit 0
     ;;
   stop)
+    stop_landing
     "${COMPOSE[@]}" down --volumes --remove-orphans
-    echo "Stopped the private human-test preview and removed only its fresh test accounts and chats."
+    echo "Stopped the landing page and private app preview, and removed only its fresh test accounts and chats."
     exit 0
     ;;
   start)
@@ -43,31 +61,43 @@ case "${1:-start}" in
     ;;
 esac
 
-if fuser 8765/tcp >/dev/null 2>&1; then
-  echo "Port 8765 is already in use. Nothing was stopped or changed."
-  echo "Stop the process using that port, then run: bash tooling/human-test.sh"
-  exit 1
-fi
-
 if [ -z "${DEEPSEEK_API_KEY:-}" ]; then
   echo "DEEPSEEK_API_KEY is not available in this shell. Nothing was started or changed."
   echo "Export the existing key, then run: bash tooling/human-test.sh"
   exit 1
 fi
 
-echo "Preparing a fresh private CraneSignal preview with sign-in enabled..."
+if [ ! -f "$LANDING_DIR/index.html" ] || [ ! -f "$LANDING_DIR/server.py" ]; then
+  echo "The CraneSignal landing page is missing from $LANDING_DIR. Nothing was started."
+  exit 1
+fi
+
+echo "Preparing the CraneSignal landing page and a fresh private app preview..."
 # This project and these two named volumes are used nowhere else.  Clearing
 # them makes every start a first-time-account test without touching ps-chat.
+stop_landing
 "${COMPOSE[@]}" down --volumes --remove-orphans
+
+for port in 8765 8876; do
+  if fuser "$port/tcp" >/dev/null 2>&1; then
+    echo "Port $port is already in use by something outside this preview. Nothing was started."
+    exit 1
+  fi
+done
+
 "${COMPOSE[@]}" up -d --build
+APP_URL=http://localhost:8876 nohup python3 "$LANDING_DIR/server.py" --port 8765 >"$LANDING_LOG" 2>&1 &
+echo $! > "$LANDING_PIDFILE"
 
 printf 'Waiting for CraneSignal'
 for _ in $(seq 1 60); do
-  if curl -sf -o /dev/null http://localhost:8765/privacy.html && \
-     curl -sf -o /dev/null http://localhost:8765/auth; then
+  if curl -sf http://localhost:8765/ | grep -q 'New apartment buildings' && \
+     curl -sf -o /dev/null http://localhost:8876/privacy.html && \
+     curl -sf -o /dev/null http://localhost:8876/auth; then
     echo
     echo "Ready: http://localhost:8765"
-    echo "Sign-in is on. Create a new local account; it is separate from your usual local preview."
+    echo "This starts on the CraneSignal landing page. Start free opens the private local app."
+    echo "Sign-in is on there. Create a new local account; it is separate from your usual preview."
     echo "Stop when finished: bash tooling/human-test.sh stop"
     exit 0
   fi
@@ -77,5 +107,6 @@ done
 
 echo
 echo "The preview did not become ready in two minutes. It is still isolated."
+echo "Landing log: $LANDING_LOG"
 echo "Inspect with: docker compose -p $PROJECT -f chatbot/docker-compose.local.yml -f chatbot/docker-compose.human-test.yml ps"
 exit 1

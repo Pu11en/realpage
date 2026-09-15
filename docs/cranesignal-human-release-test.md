@@ -3,6 +3,8 @@
 ## Start here
 
 - **Address:** http://localhost:8765
+- This address opens the **CraneSignal landing page first**. Choose **Start free** to enter the
+  isolated local app and create a new account.
 - Open it in a **private browser window** and make a **brand-new local account**.
 - This is a fresh, local-only preview. It is **not ready to push** yet.
 - When you are done, stop it with: `bash tooling/human-test.sh stop`

@@ -36,7 +36,7 @@ def test_human_preview_loads_the_post_signin_cranesignal_redirect():
 def test_human_preview_routes_the_chat_panel_through_its_front_door():
     app_js = APP_JS.read_text(encoding="utf-8")
 
-    assert 'location.port === "8765"' in app_js
+    assert 'location.port === "8876"' in app_js
     assert "? location.origin // isolated human preview" in app_js
     assert '"http://localhost:3000"' in app_js
 

@@ -26,7 +26,9 @@ def test_human_preview_does_not_share_everyday_local_state():
 
     assert 'PROJECT="cranesignal-human-test"' in script
     assert 'down --volumes --remove-orphans' in script
-    assert "fuser 8765/tcp" in script
+    assert 'for port in 8765 8876' in script
+    assert 'APP_URL=http://localhost:8876' in script
+    assert 'LANDING_DIR="$MAIN_ROOT/business/marketing/landing"' in script
     assert "cranesignal-human-test-open-webui" in overlay
     assert "cranesignal-human-test-hermes-home" in overlay
     assert "-p ps-chat" not in script
@@ -39,5 +41,5 @@ def test_human_preview_has_a_real_sign_in_front_door():
     assert 'ENABLE_SIGNUP: "true"' in overlay
     assert 'ENABLE_LOGIN_FORM: "true"' in overlay
     assert 'CHAT_UPSTREAM: http://open-webui:8080' in overlay
-    assert '"8765:8080"' in overlay
+    assert '"8876:8080"' in overlay
     assert overlay.count("ports: !reset []") == 2

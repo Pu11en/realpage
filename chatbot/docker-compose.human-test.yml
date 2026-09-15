@@ -7,6 +7,8 @@ services:
     # The human preview reaches the chat through the same Caddy front door as
     # the site, so the internal gateway must not occupy a host port.
     ports: !reset []
+    environment:
+      CHAT_ALLOWED_ORIGINS: http://localhost:8876
 
   open-webui:
     environment:
@@ -14,6 +16,7 @@ services:
       WEBUI_AUTH: "True"
       ENABLE_SIGNUP: "true"
       ENABLE_LOGIN_FORM: "true"
+      CORS_ALLOW_ORIGIN: "http://localhost:8876"
     ports: !reset []
 
   site:
@@ -27,7 +30,7 @@ services:
       PORT: "8080"
       CHAT_UPSTREAM: http://open-webui:8080
     ports:
-      - "8765:8080"
+      - "8876:8080"
 
 volumes:
   # Fixed, deliberately distinctive names make the isolation auditable and
