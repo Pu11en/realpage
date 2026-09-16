@@ -172,3 +172,65 @@ class TestCleaning:
         assert d1 < d2
         # Earlier date should be kept
         assert d1 == min(d1, d2)
+
+
+def format_phone_for_output(phone: str, source: str = None) -> str:
+    """Format a phone for display in chat output.
+
+    If phone comes from office_phone (permit contact), label it as such.
+    If phone is invalid, return empty string (never display broken phones).
+
+    Args:
+        phone: The phone number string
+        source: Either 'office_phone' (permit contact) or None (website/other)
+
+    Returns:
+        Formatted phone string ready for display, or empty string if invalid
+    """
+    # Never show invalid phones
+    if not is_valid_phone(phone):
+        return ""
+
+    if not phone or not phone.strip():
+        return ""
+
+    phone = phone.strip()
+
+    # Add label if from permit office
+    if source == "office_phone":
+        return f"📞 **{phone}** (permit contact)"
+    else:
+        return f"📞 **{phone}**"
+
+
+class TestPhoneFormatting:
+    def test_format_valid_permit_phone(self):
+        """Valid phone from office_phone should include permit contact label."""
+        result = format_phone_for_output("(210) 326-1119", source="office_phone")
+        assert result == "📞 **(210) 326-1119** (permit contact)"
+
+    def test_format_valid_website_phone(self):
+        """Valid phone from website should not include label."""
+        result = format_phone_for_output("(210) 326-1119", source=None)
+        assert result == "📞 **(210) 326-1119**"
+
+    def test_format_invalid_phone_never_shown(self):
+        """Invalid phones should never be displayed."""
+        assert format_phone_for_output("8-773-367-2410", source="office_phone") == ""
+        assert format_phone_for_output("319-217-8136", source=None) == ""
+        assert format_phone_for_output("512-610-4016") == ""
+
+    def test_format_empty_phone_never_shown(self):
+        """Empty phones should not be displayed."""
+        assert format_phone_for_output("", source="office_phone") == ""
+        assert format_phone_for_output("   ", source=None) == ""
+        assert format_phone_for_output(None) == ""
+
+    def test_format_preserves_phone_format(self):
+        """Phone formatting should preserve the exact phone number."""
+        phone = "(972) 754-1024"
+        result_permit = format_phone_for_output(phone, source="office_phone")
+        result_website = format_phone_for_output(phone, source=None)
+
+        assert phone in result_permit
+        assert phone in result_website
