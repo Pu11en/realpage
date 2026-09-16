@@ -26,7 +26,7 @@ Open: no page; the report prints and is saved to `tooling/leadcheck/report.md`
 
 ## Tasks
 
-- [ ] **R1 Restore the data, fix the phone rule.** `git checkout` the lead CSVs from the commit
+- [x] **R1 Restore the data, fix the phone rule.** `git checkout` the lead CSVs from the commit
   before the first clean, so every original row and phone is back. In `tooling/leadcheck/clean.py`:
   a phone with exactly 10 digits (any punctuation, or a leading 1) is **reformatted** to
   `(XXX) XXX-XXXX`; only a phone that cannot make 10 digits is blanked. Add tests for
