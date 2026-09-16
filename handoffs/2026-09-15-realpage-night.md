@@ -69,3 +69,11 @@ merge that branch into main and push. It is told never to push itself.
 Leave the answer-fixes loop running. When it reports, Drew says "check it"; then read A5's four
 saved answers, merge `gowork/plan-agent-answer-fixes-20260915-214243` into `main` and push.
 Drew then opens a fresh session for the to-do list.
+
+## Done after that: the four answer fixes are live
+
+A5 finished and I read its four captured answers (Austin offers a `🔍 Check` link as the Next line;
+DFW returns Arlington/Tarrant rows and names the region; the Entrata answer says "from 1 Reddit
+post" and carries the real reddit.com link; the lawsuit answer carries the justice.gov release).
+Branch `gowork/plan-agent-answer-fixes-20260915-214243` merged into `main` and pushed (`7b0f404`).
+62 checks pass. Frozen shipcheck numbers still need re-asking those four questions on the LIVE agent.
