@@ -20,3 +20,17 @@
 - Check: `python3 -m pytest -q chatbot/tests tooling/qa/fixes_tests/test_agent_answer_fixes.py` → 43 passed.
 - Note: the previous attempt died on a bad model id ("each") before doing anything; redone from scratch.
 - Open: live answer check happens in A5.
+
+## A3 Reddit claims carry their post link — done 2026-09-15
+- New SOUL.md rule "Reddit claims carry their post link": every claim from
+  `street_talk` shows that row's `url` as a link on the same line, the query
+  always selects `url`, the first line says how many posts it is based on
+  ("From 2 posts"), a row without a real thread link is left out, and posts are
+  framed as "a Reddit user says". Same rule added to the query-propertystack
+  skill's street_talk row.
+- Checked the data: all 23 saved posts have a real reddit.com/r/ thread link,
+  so the strict rule never empties an answer. A test now guards that.
+- Tests: 5 new A3 tests in tooling/qa/fixes_tests/test_agent_answer_fixes.py.
+- Check: `python3 -m pytest -q chatbot/tests tooling/qa/fixes_tests/test_agent_answer_fixes.py` → 48 passed.
+- Commit: 398ec5d. Note: the previous attempt died on a bad model id ("each") before doing anything; redone from scratch.
+- Open: live answer check happens in A5.

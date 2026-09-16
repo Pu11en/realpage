@@ -41,7 +41,7 @@ Each task is one small change to the agent's rules plus its own check. Do them i
   Houston, Austin, San Antonio) must filter `state_leads` by that `region` column, never fall back
   to the Plano/Richardson `leads` tables, and must say the region it used in the first line.
   Add its test to the same file. Run Check. Commit.
-- [ ] **A3 Reddit claims carry their post link.** In `SOUL.md` and the `query-propertystack`
+- [x] **A3 Reddit claims carry their post link.** In `SOUL.md` and the `query-propertystack`
   skill notes: any claim drawn from `street_talk` must show that row's `url` as a link on the same
   line, and the answer must say how many posts it is based on (e.g. "from 2 posts"). If no post
   link exists, the claim is left out. Add its test. Run Check. Commit.
