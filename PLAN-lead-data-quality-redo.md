@@ -32,7 +32,7 @@ Open: no page; the report prints and is saved to `tooling/leadcheck/report.md`
   `(XXX) XXX-XXXX`; only a phone that cannot make 10 digits is blanked. Add tests for
   `319-217-8136`, `+1 512 610 4016`, `8-773-367-2410` (the only one that should be blanked).
   Run Check. Commit.
-- [x] **R2 Fix the duplicate rule.** Two rows are duplicates **only** when their street address
+- [ ] **R2 Fix the duplicate rule.** Two rows are duplicates **only** when their street address
   matches exactly (case/spacing ignored) and they are in the same city; a shared name is never
   enough, and a placeholder name ("Unnamed project", "Apartments at ...") never merges anything.
   When merging, keep the row with more filled-in fields. Add a test proving the 7 Arizona
