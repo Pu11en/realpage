@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """
-Clean lead data: blank broken phones, merge duplicates, preserve earlier opening dates.
+Clean lead data: reformat real phones (blank only unusable ones), merge duplicates,
+preserve earlier opening dates.
 Reads and modifies propertystack/data/*/chat-leads.csv files in-place.
 """
 import csv
@@ -11,11 +12,28 @@ from datetime import datetime
 
 
 def is_valid_phone(phone):
-    """Check if phone is in format (XXX) XXX-XXXX with 10 digits total."""
+    """Check if phone is already in the canonical (XXX) XXX-XXXX format."""
     if not phone or not phone.strip():
         return True  # Empty is not invalid, just missing
     phone = phone.strip()
     return bool(re.match(r'^\(\d{3}\) \d{3}-\d{4}$', phone))
+
+
+def normalize_phone(phone):
+    """Reformat any real 10-digit phone to (XXX) XXX-XXXX.
+
+    A phone is real when its digits make exactly 10 (a leading US country
+    code 1 is allowed and dropped). Punctuation and spacing do not matter.
+    Anything that cannot make 10 digits is blanked; empty stays empty.
+    """
+    if not phone or not str(phone).strip():
+        return ''
+    digits = re.sub(r'\D', '', str(phone))
+    if len(digits) == 11 and digits.startswith('1'):
+        digits = digits[1:]
+    if len(digits) != 10:
+        return ''
+    return f'({digits[0:3]}) {digits[3:6]}-{digits[6:10]}'
 
 
 def count_facts(row):
@@ -138,6 +156,8 @@ def clean_area(csv_path):
         'total': len(rows),
         'broken_phones': 0,
         'duplicates': 0,
+        'phones_reformatted': 0,
+        'phones_blanked': 0,
     }
 
     # Count issues before cleaning
@@ -149,11 +169,16 @@ def clean_area(csv_path):
     dup_groups = find_duplicate_groups(rows)
     before['duplicates'] = sum(len(indices) - 1 for indices in dup_groups.values())
 
-    # Blank broken phones
+    # Reformat real phones; blank only the ones that cannot make 10 digits
     for row in rows:
         phone = (row.get('office_phone') or '').strip()
-        if phone and not is_valid_phone(phone):
-            row['office_phone'] = ''
+        if phone:
+            fixed = normalize_phone(phone)
+            row['office_phone'] = fixed
+            if not fixed:
+                before['phones_blanked'] += 1
+            elif fixed != phone:
+                before['phones_reformatted'] += 1
 
     # Merge duplicates
     rows_to_keep = []

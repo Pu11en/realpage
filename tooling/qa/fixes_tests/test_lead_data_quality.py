@@ -1,6 +1,11 @@
 """Test lead data quality flagging rules."""
 import pytest
 import re
+import sys
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[3] / 'tooling' / 'leadcheck'))
+from clean import normalize_phone
 
 
 def is_valid_phone(phone):
@@ -234,3 +239,31 @@ class TestPhoneFormatting:
 
         assert phone in result_permit
         assert phone in result_website
+
+
+class TestPhoneNormalization:
+    """Real 10-digit phones are reformatted, never deleted."""
+
+    def test_dashed_phone_is_reformatted(self):
+        assert normalize_phone("319-217-8136") == "(319) 217-8136"
+        assert normalize_phone("512-610-4016") == "(512) 610-4016"
+        assert normalize_phone("440-263-0406") == "(440) 263-0406"
+
+    def test_country_code_is_dropped(self):
+        assert normalize_phone("+1 512 610 4016") == "(512) 610-4016"
+        assert normalize_phone("1-512-610-4016") == "(512) 610-4016"
+
+    def test_already_formatted_phone_is_unchanged(self):
+        assert normalize_phone("(210) 326-1119") == "(210) 326-1119"
+
+    def test_phone_without_ten_digits_is_blanked(self):
+        assert normalize_phone("8-773-367-2410") == ""
+        assert normalize_phone("555-1234") == ""
+
+    def test_empty_phone_stays_empty(self):
+        assert normalize_phone("") == ""
+        assert normalize_phone("   ") == ""
+        assert normalize_phone(None) == ""
+
+    def test_normalized_phone_passes_the_report_check(self):
+        assert is_valid_phone(normalize_phone("319-217-8136"))
