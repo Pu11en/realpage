@@ -30,25 +30,25 @@ Open: http://localhost:8765 → Ask (no sign-in locally)
 
 Each task is one small change to the agent's rules plus its own check. Do them in order.
 
-- [ ] **A1 Offer to check instead of "I don't have that".** In `chatbot/hermes-profile/SOUL.md`:
+- [x] **A1 Offer to check instead of "I don't have that".** In `chatbot/hermes-profile/SOUL.md`:
   when our data can't answer for an area (e.g. software isn't checked outside Plano/Richardson),
   the answer leads with what we DO have (the buildings), says in one short line what isn't checked,
   and ends with an offer to check one now, as a clickable
   `[🔍 Check <building>](#ask:Deep dive on <name>, <city>)`. Never open with "I don't have that"
   when we have rows to show. Add a test for this rule to
   `tooling/qa/fixes_tests/test_agent_answer_fixes.py`. Run Check. Commit.
-- [ ] **A2 Right area for sales.** In `SOUL.md`: a question naming a region (Dallas–Fort Worth,
+- [x] **A2 Right area for sales.** In `SOUL.md`: a question naming a region (Dallas–Fort Worth,
   Houston, Austin, San Antonio) must filter `state_leads` by that `region` column, never fall back
   to the Plano/Richardson `leads` tables, and must say the region it used in the first line.
   Add its test to the same file. Run Check. Commit.
-- [ ] **A3 Reddit claims carry their post link.** In `SOUL.md` and the `query-propertystack`
+- [x] **A3 Reddit claims carry their post link.** In `SOUL.md` and the `query-propertystack`
   skill notes: any claim drawn from `street_talk` must show that row's `url` as a link on the same
   line, and the answer must say how many posts it is based on (e.g. "from 2 posts"). If no post
   link exists, the claim is left out. Add its test. Run Check. Commit.
-- [ ] **A4 RealPage news carries a link.** In `SOUL.md`: RealPage news, lawsuit or funding claims
+- [x] **A4 RealPage news carries a link.** In `SOUL.md`: RealPage news, lawsuit or funding claims
   must include at least one readable link (from the research folders or a page read this turn);
   if none exists, say plainly that the summary has no link yet. Add its test. Run Check. Commit.
-- [ ] **A5 Ask the four questions locally and save the answers.** Start `bash tooling/dev.sh`,
+- [x] **A5 Ask the four questions locally and save the answers.** Start `bash tooling/dev.sh`,
   ask the four questions from "How to try it" with Playwright, paste the four real answers into
   `PLAN-agent-answer-fixes.progress.md`, and say for each whether the behaviour is there.
   Stop the stack. If one still fails, note exactly what it said and leave A5 unticked. Run Check.

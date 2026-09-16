@@ -19,7 +19,7 @@ It is also the richest source of "why competitors pivot" material.
   revenue-management software to align rents. (verify exact date/parties)
 - **Nov 24-25, 2025:** DOJ announces proposed settlement — RealPage must end
   use of real-time confidential competitor data in pricing software.
-  justice.gov/opa/pr/justice-department-requires-realpage-end-sharing-competitively-sensitive-information-and
+  https://www.justice.gov/opa/pr/justice-department-requires-realpage-end-sharing-competitively-sensitive-information-and
 - **Mar 26, 2026:** Stipulation and proposed settlement entered by the court.
 - **May 2026:** DOJ publishes response to public comments.
 - **Nov 2025 (parallel):** RealPage requests preliminary injunction against
