@@ -47,7 +47,7 @@ Open: http://localhost:3000
    a realpage.com link.
 
 ## Tasks
-- [ ] **T5 Product cards + key facts (Gemini, ~60-100 calls).** `tooling/realpage-library/cards.py`
+- [x] **T5 Product cards + key facts (Gemini, ~60-100 calls).** `tooling/realpage-library/cards.py`
   writes one card per **main** product to `02-products/realpage/<product>.md` -- the ~30 real product areas only: skip login/landing pages and near-duplicate vendor sub-pages (keep one Vendor Services card, not six), and skip anything already covered by another card; the page index still lists every page: what it does, who it's for,
   current name, old or acquired names, related products, 3-5 key claims -- every line with its
   realpage.com link. Gemini drafts from that product's pages only; code rejects any line without a
@@ -55,7 +55,7 @@ Open: http://localhost:3000
   leadership (management-team pages), acquisitions and renames, and the DOJ/legal status **as
   RealPage states it**, from press posts and legal pages, newest first, each with date and link.
   Resumes if stopped. Tests with a fake AI. Commit.
-- [ ] **T6 Library check.** Offline test that every card and fact line has a valid realpage.com link,
+- [x] **T6 Library check.** Offline test that every card and fact line has a valid realpage.com link,
   no card is empty, no duplicate products, and the chat folders (`01-company`, `02-products`) stay
   under 1 MB total (raw pages never leak in). Spot-check 5 cards against the live pages and fix
   wrong ones by hand, noting each fix in `CRAWL-REPORT.md`. Commit.
