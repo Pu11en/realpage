@@ -63,3 +63,9 @@ merge that branch into main and push. It is told never to push itself.
 
 - Thread 1549501531273961543 ("realpage ai visibility") built the cards + facts sheet.
 - Thread 1549506016125911081 is the shipcheck thread the first handoff came from.
+
+## Agreed with Drew (end of night)
+
+Leave the answer-fixes loop running. When it reports, Drew says "check it"; then read A5's four
+saved answers, merge `gowork/plan-agent-answer-fixes-20260915-214243` into `main` and push.
+Drew then opens a fresh session for the to-do list.
