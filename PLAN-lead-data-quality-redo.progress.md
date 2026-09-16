@@ -9,3 +9,13 @@
 - Added tests: `test_true_duplicate_pair_merges()` proves same-address pairs still merge
 - All 68 tests pass (tooling/qa/fixes_tests/test_lead_data_quality.py + chatbot/tests)
 - Commit: a57a105
+
+## R2 fix (reviewer follow-up)
+report.py's find_duplicates was still grouping by name+city, so the report kept flagging
+the 7 Arizona "Unnamed project" rows even though clean.py no longer merges them. Fixed
+find_duplicates to use the exact same rule as clean.py's find_duplicate_groups: address +
+city only, no name-based grouping. Also collapsed internal whitespace before comparing
+addresses/cities in both clean.py and report.py (e.g. "123  Main   St" now matches "123 Main St").
+Added tests: report.py duplicate rule matches clean.py's (Arizona rows not flagged, true
+address+city pair is flagged), and whitespace-collapsed address matching.
+Commit: f709791. Checked: `python3 -m pytest -q tooling/qa/fixes_tests/test_lead_data_quality.py chatbot/tests` — 71 passed.
