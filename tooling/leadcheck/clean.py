@@ -104,8 +104,8 @@ def find_duplicate_groups(rows):
     by_address_city = defaultdict(list)
 
     for i, row in enumerate(rows):
-        address = (row.get('address') or '').strip().lower()
-        city = (row.get('city') or '').strip().lower()
+        address = re.sub(r'\s+', ' ', (row.get('address') or '').strip().lower())
+        city = re.sub(r'\s+', ' ', (row.get('city') or '').strip().lower())
         # Only group by exact address + city match; placeholder names are ignored
         if address:  # Only rows with an address can be duplicates
             by_address_city[(address, city)].append(i)

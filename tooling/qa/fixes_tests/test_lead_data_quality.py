@@ -6,6 +6,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[3] / 'tooling' / 'leadcheck'))
 from clean import normalize_phone, find_duplicate_groups
+import report as report_module
 
 
 def is_valid_phone(phone):
@@ -160,6 +161,40 @@ class TestDuplicateDetection:
         assert len(dup_groups) == 1, f"Expected 1 group, got {len(dup_groups)}"
         assert 0 in dup_groups[0] and 1 in dup_groups[0]
         assert 2 not in dup_groups[0]
+
+
+class TestReportDuplicateRuleMatchesClean:
+    def test_report_arizona_unnamed_projects_not_flagged(self):
+        """report.py's find_duplicates must not flag same-name/no-address rows."""
+        rows = [
+            {"name": "Unnamed project", "city": "Mesa", "address": "", "units": "36"},
+            {"name": "Unnamed project", "city": "Mesa", "address": "", "units": "36"},
+            {"name": "Unnamed project", "city": "Mesa", "address": "", "units": "29"},
+        ]
+        dup_indices = report_module.find_duplicates(rows)
+        assert dup_indices == set(), f"Expected no duplicates, got {dup_indices}"
+
+    def test_report_same_address_city_flagged(self):
+        """report.py's find_duplicates still catches true address+city duplicates."""
+        rows = [
+            {"name": "Building A", "city": "Austin", "address": "123 Main St"},
+            {"name": "Building B", "city": "Austin", "address": "123 Main St"},
+            {"name": "Unique", "city": "Austin", "address": "456 Oak Ave"},
+        ]
+        dup_indices = report_module.find_duplicates(rows)
+        assert dup_indices == {0, 1}
+
+
+class TestWhitespaceInAddressMatching:
+    def test_internal_whitespace_collapsed_for_duplicate_match(self):
+        """Extra internal spaces in address/city should not block a true duplicate match."""
+        rows = [
+            {"name": "Building A", "city": "Austin", "address": "123  Main   St", "units": "100"},
+            {"name": "Building B", "city": "Austin", "address": "123 Main St", "units": "50"},
+        ]
+        dup_groups = find_duplicate_groups(rows)
+        assert len(dup_groups) == 1, f"Expected 1 group, got {len(dup_groups)}"
+        assert 0 in dup_groups[0] and 1 in dup_groups[0]
 
 
 class TestCleaning:
