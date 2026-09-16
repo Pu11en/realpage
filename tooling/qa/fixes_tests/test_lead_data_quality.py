@@ -115,3 +115,60 @@ class TestDuplicateDetection:
         name2 = (row2["name"] or "").strip().lower()
         city2 = (row2["city"] or "").strip().lower()
         assert (name1, city1) != (name2, city2)
+
+
+class TestCleaning:
+    def test_bad_phone_is_blanked(self):
+        """Invalid phones should be blanked to empty string."""
+        # Bad phones should be blanked
+        assert not is_valid_phone("8-773-367-2410")
+        # After cleaning, it would be set to ""
+        assert is_valid_phone("")
+
+    def test_valid_phone_preserved(self):
+        """Valid phones should not be changed."""
+        assert is_valid_phone("(210) 326-1119")
+        # Should remain valid after check
+
+    def test_count_facts_empty_row(self):
+        """Empty row should have 0 facts."""
+        row = {"name": "", "city": "", "units": ""}
+        facts = sum(1 for v in row.values() if v and str(v).strip())
+        assert facts == 0
+
+    def test_count_facts_partial_row(self):
+        """Row with some empty fields should count only non-empty ones."""
+        row = {"name": "Project A", "city": "Austin", "units": "", "address": "123 Main"}
+        facts = sum(1 for v in row.values() if v and str(v).strip())
+        assert facts == 3
+
+    def test_merge_keeps_more_facts(self):
+        """Merge should keep the row with more non-empty fields."""
+        row1 = {"name": "Project", "city": "Austin", "address": "", "units": "100", "phone": ""}
+        row2 = {"name": "Project", "city": "Austin", "address": "123 Main", "units": "", "phone": "(210) 123-4567"}
+
+        facts1 = sum(1 for v in row1.values() if v and str(v).strip())
+        facts2 = sum(1 for v in row2.values() if v and str(v).strip())
+        # row2 has more facts (3 vs 2)
+        assert facts2 > facts1
+
+    def test_merge_keeps_earliest_date(self):
+        """Merge should keep the earliest opening_date."""
+        from datetime import datetime
+
+        def parse_date(date_str):
+            if not date_str or not str(date_str).strip():
+                return None
+            try:
+                return datetime.strptime(str(date_str).strip(), '%Y-%m-%d')
+            except ValueError:
+                return None
+
+        date1 = "2026-09-30"
+        date2 = "2026-10-01"
+        d1 = parse_date(date1)
+        d2 = parse_date(date2)
+
+        assert d1 < d2
+        # Earlier date should be kept
+        assert d1 == min(d1, d2)

@@ -30,7 +30,7 @@ Open: no page; the report prints in the terminal and is saved as `tooling/leadch
   http(s). Save `tooling/leadcheck/report.md` with counts per area and up to 10 examples each.
   Add `tooling/qa/fixes_tests/test_lead_data_quality.py` checking the flagging rules on a small
   fixture. Run Check. Commit.
-- [ ] **L2 Clean them.** Add `tooling/leadcheck/clean.py`: blanks phones that fail the check
+- [x] **L2 Clean them.** Add `tooling/leadcheck/clean.py`: blanks phones that fail the check
   (never guesses a new one), merges duplicate rows (keep the row with more facts; keep the
   earliest opening date), and leaves unit counts alone. Run it over every area's
   `chat-leads.csv`, then re-run the report and put before/after counts in

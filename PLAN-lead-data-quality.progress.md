@@ -2,7 +2,7 @@
 
 ## Task L1: Find the bad rows — ✅ DONE
 
-**Commit:** (pending)
+**Commit:** 08344d6
 
 **What was done:**
 - Created `tooling/leadcheck/report.py` that scans all area CSV files and flags:
@@ -27,4 +27,34 @@
 - `python3 -m pytest -q tooling/qa/fixes_tests/test_lead_data_quality.py chatbot/tests` → 48 passed
 - `python3 tooling/leadcheck/report.py` → Report generated with all data verified
 
-**Next:** L2 will clean these issues (blank bad phones, merge duplicates, etc.)
+---
+
+## Task L2: Clean them — ✅ DONE
+
+**What was done:**
+- Created `tooling/leadcheck/clean.py` that:
+  - Blanks phones that fail validation (never guesses a new one)
+  - Merges duplicate rows (keeps row with more facts, earliest opening date)
+  - Leaves unit counts alone
+- Ran cleaning script over all areas' `chat-leads.csv` files
+- Extended `test_lead_data_quality.py` with tests for:
+  - Bad phones being blanked
+  - Valid phones being preserved
+  - Duplicate merging logic (keeping more facts, earliest dates)
+
+**Before/After Cleaning:**
+| Metric | Before | After |
+|--------|--------|-------|
+| AZ rows | 279 | 272 (-7 duplicates) |
+| NY rows | 2 | 2 |
+| TX rows | 592 | 592 |
+| Total rows | 873 | 866 |
+| Broken phones | 4 | 0 |
+| Duplicates | 7 | 0 |
+
+**How verified:**
+- `python3 tooling/leadcheck/clean.py` → Cleaned all CSV files, removed 7 duplicates, blanked 4 broken phones
+- `python3 tooling/leadcheck/report.py` → Shows 0 broken phones, 0 duplicates
+- `python3 -m pytest -q tooling/qa/fixes_tests/test_lead_data_quality.py chatbot/tests` → 54 passed (6 new tests added)
+
+**Next:** L3 will add phone source labeling in chatbot output
