@@ -9,18 +9,23 @@
   can't mislabel a council video as a "County sales record".
 - The link row's 📄 Permit is never a meeting video: such a link is dropped.
 - Deep dives: the **Sources:** line is dropped (the link row covers it).
+- In-chat "#ask:" links (e.g. [🔍 Find contact](#ask:Deep dive on ...)) are
+  not web links and are never dropped; their text gets URL-encoded (spaces ->
+  %20) because Markdown does not parse a link whose address has spaces, so
+  Open WebUI would show the raw brackets. loader.js decodes it on click.
 
 fix_links(text, seen) works on whole text; LineFixer does the same for a
 stream, releasing text one finished line at a time.
 """
 import os
 import re
-from urllib.parse import urlsplit
+from urllib.parse import quote, unquote, urlsplit
 
 HERMES_HOME = os.environ.get("HERMES_HOME", "/opt/data")
 SEEN_FILE = os.path.join(HERMES_HOME, "seen-urls.txt")
 
 _LINK_RE = re.compile(r"\[([^\]\n]*)\]\((https?://[^)\s]+)\)")
+_ASK_RE = re.compile(r"\]\(#ask:([^)\n]*)\)")
 _ROW_EMOJI = ("🗺️", "🗺", "📄", "📰", "🌐")
 _ROW_LABELS = {"map", "permit", "news", "website"}
 _VIDEO_RE = re.compile(r"swagit\.com|youtube\.com|youtu\.be|vimeo\.com|granicus\.com/player|/videos?/", re.I)
@@ -114,9 +119,15 @@ def _drop_span(line: str, start: int, end: int) -> str:
     return (b + " " + a).strip() if b and a else (b or a)
 
 
+def _encode_ask(m: "re.Match[str]") -> str:
+    text = unquote(m.group(1).strip())
+    return "](#ask:" + quote(text, safe="") + ")"
+
+
 def _fix_line(line: str, seen: set[str], deep_dive: bool) -> str | None:
     if deep_dive and _SOURCES_RE.match(line):
         return None
+    line = _ASK_RE.sub(_encode_ask, line)
     while True:
         changed = False
         for m in _LINK_RE.finditer(line):

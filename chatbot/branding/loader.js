@@ -133,3 +133,27 @@
   clean();
   new MutationObserver(clean).observe(document.documentElement, { childList: true, subtree: true, characterData: true });
 })();
+
+// One-tap "🔍 Find contact" links in answers: the agent writes
+// [🔍 Find contact](#ask:Deep dive on <name>, <city>). A click sends that text as the
+// next message. Open WebUI 0.11 accepts {type:"input:prompt:submit"} from its own window
+// (same origin) and submits it at once (its built JS: same-origin "input:prompt:submit"
+// -> submitPrompt; the site's chat-panel.js uses the sibling "input:prompt" the same way).
+// The proxy URL-encodes the text (chatbot/linkfix.py) so Markdown renders the link;
+// decoded here. No page jump, no new tab. Proven end to end by
+// tooling/qa/live_find_contact_click.py (screenshot tooling/qa/shots/find-contact.png).
+(function () {
+  var send = function (text) {
+    window.postMessage({ type: "input:prompt:submit", text: text }, location.origin);
+  };
+  document.addEventListener("click", function (ev) {
+    var a = ev.target && ev.target.closest ? ev.target.closest('a[href^="#ask:"]') : null;
+    if (!a) return;
+    ev.preventDefault(); ev.stopPropagation();
+    var text = "";
+    try { text = decodeURIComponent(a.getAttribute("href").slice(5)); }
+    catch (e) { text = a.getAttribute("href").slice(5); }
+    text = text.trim();
+    if (text) send(text);
+  }, true);
+})();
