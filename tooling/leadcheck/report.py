@@ -35,31 +35,20 @@ def get_area_from_path(path):
     return path.parent.name
 
 def find_duplicates(rows):
-    """Find duplicate projects (same address or same name+city)."""
-    duplicates = defaultdict(list)
+    """Find duplicate projects: exact street address + same city only.
 
-    # Check by address
-    by_address = defaultdict(list)
+    Name alone (including placeholder names like "Unnamed project") never
+    triggers a match; only rows with an address can be duplicates.
+    """
+    by_address_city = defaultdict(list)
     for i, row in enumerate(rows):
-        address = (row['address'] or '').strip().lower()
+        address = re.sub(r'\s+', ' ', (row['address'] or '').strip().lower())
+        city = re.sub(r'\s+', ' ', (row['city'] or '').strip().lower())
         if address:
-            by_address[address].append(i)
-
-    # Check by name+city
-    by_name_city = defaultdict(list)
-    for i, row in enumerate(rows):
-        name = (row['name'] or '').strip().lower()
-        city = (row['city'] or '').strip().lower()
-        if name and city:
-            by_name_city[(name, city)].append(i)
+            by_address_city[(address, city)].append(i)
 
     dup_pairs = set()
-    for indices in by_address.values():
-        if len(indices) > 1:
-            for idx in indices:
-                dup_pairs.add(idx)
-
-    for indices in by_name_city.values():
+    for indices in by_address_city.values():
         if len(indices) > 1:
             for idx in indices:
                 dup_pairs.add(idx)

@@ -3,7 +3,7 @@
 **Summary:** 0 broken phones, 0 duplicates, 182 missing units, 11 invalid links
 
 ## AZ
-- Total rows: 272
+- Total rows: 279
 - Broken phones: 0
 - Duplicates: 0
 - Missing units: 79

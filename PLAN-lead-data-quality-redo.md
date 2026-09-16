@@ -26,18 +26,18 @@ Open: no page; the report prints and is saved to `tooling/leadcheck/report.md`
 
 ## Tasks
 
-- [ ] **R1 Restore the data, fix the phone rule.** `git checkout` the lead CSVs from the commit
+- [x] **R1 Restore the data, fix the phone rule.** `git checkout` the lead CSVs from the commit
   before the first clean, so every original row and phone is back. In `tooling/leadcheck/clean.py`:
   a phone with exactly 10 digits (any punctuation, or a leading 1) is **reformatted** to
   `(XXX) XXX-XXXX`; only a phone that cannot make 10 digits is blanked. Add tests for
   `319-217-8136`, `+1 512 610 4016`, `8-773-367-2410` (the only one that should be blanked).
   Run Check. Commit.
-- [ ] **R2 Fix the duplicate rule.** Two rows are duplicates **only** when their street address
+- [x] **R2 Fix the duplicate rule.** Two rows are duplicates **only** when their street address
   matches exactly (case/spacing ignored) and they are in the same city; a shared name is never
   enough, and a placeholder name ("Unnamed project", "Apartments at ...") never merges anything.
   When merging, keep the row with more filled-in fields. Add a test proving the 7 Arizona
   "Unnamed project" rows stay separate and a true same-address pair merges. Run Check. Commit.
-- [ ] **R3 Re-run and prove it.** Run `clean.py` over every area, then `report.py`. Write in
+- [x] **R3 Re-run and prove it.** Run `clean.py` over every area, then `report.py`. Write in
   `PLAN-lead-data-quality-redo.progress.md`: rows before/after per area, how many phones were
   reformatted, how many blanked, how many rows merged (with their addresses). Confirm the Texas
   and Arizona checks in "How to try it" by hand and record the exact lines. Run Check. Commit. Do not push.

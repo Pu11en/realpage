@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """
-Clean lead data: blank broken phones, merge duplicates, preserve earlier opening dates.
+Clean lead data: reformat real phones (blank only unusable ones), merge duplicates,
+preserve earlier opening dates.
 Reads and modifies propertystack/data/*/chat-leads.csv files in-place.
 """
 import csv
@@ -11,11 +12,28 @@ from datetime import datetime
 
 
 def is_valid_phone(phone):
-    """Check if phone is in format (XXX) XXX-XXXX with 10 digits total."""
+    """Check if phone is already in the canonical (XXX) XXX-XXXX format."""
     if not phone or not phone.strip():
         return True  # Empty is not invalid, just missing
     phone = phone.strip()
     return bool(re.match(r'^\(\d{3}\) \d{3}-\d{4}$', phone))
+
+
+def normalize_phone(phone):
+    """Reformat any real 10-digit phone to (XXX) XXX-XXXX.
+
+    A phone is real when its digits make exactly 10 (a leading US country
+    code 1 is allowed and dropped). Punctuation and spacing do not matter.
+    Anything that cannot make 10 digits is blanked; empty stays empty.
+    """
+    if not phone or not str(phone).strip():
+        return ''
+    digits = re.sub(r'\D', '', str(phone))
+    if len(digits) == 11 and digits.startswith('1'):
+        digits = digits[1:]
+    if len(digits) != 10:
+        return ''
+    return f'({digits[0:3]}) {digits[3:6]}-{digits[6:10]}'
 
 
 def count_facts(row):
@@ -77,53 +95,31 @@ def merge_rows(row1, row2):
 
 
 def find_duplicate_groups(rows):
-    """Find groups of duplicate rows. Returns dict of {group_id: [row_indices]}."""
-    by_address = defaultdict(list)
-    by_name_city = defaultdict(list)
+    """Find groups of duplicate rows. Returns dict of {group_id: [row_indices]}.
+
+    Duplicates are rows with the exact same street address AND city (case/spacing ignored).
+    Name alone is never a duplicate criterion. Placeholder names like "Unnamed project" or
+    "Apartments at ..." never trigger merging.
+    """
+    by_address_city = defaultdict(list)
 
     for i, row in enumerate(rows):
-        address = (row.get('address') or '').strip().lower()
-        if address:
-            by_address[address].append(i)
+        address = re.sub(r'\s+', ' ', (row.get('address') or '').strip().lower())
+        city = re.sub(r'\s+', ' ', (row.get('city') or '').strip().lower())
+        # Only group by exact address + city match; placeholder names are ignored
+        if address:  # Only rows with an address can be duplicates
+            by_address_city[(address, city)].append(i)
 
-        name = (row.get('name') or '').strip().lower()
-        city = (row.get('city') or '').strip().lower()
-        if name and city:
-            by_name_city[(name, city)].append(i)
-
-    # Merge overlapping groups
-    merged_indices = set()
+    # Build groups from address + city matches
     groups = {}
     group_id = 0
 
-    for indices in by_address.values():
+    for indices in by_address_city.values():
         if len(indices) > 1:
             key = tuple(sorted(indices))
-            if key not in groups and not any(idx in merged_indices for idx in indices):
+            if key not in groups:
                 groups[group_id] = indices
-                merged_indices.update(indices)
                 group_id += 1
-
-    for indices in by_name_city.values():
-        if len(indices) > 1:
-            # Check if any of these indices are already in a group
-            in_group = [idx for idx in indices if idx in merged_indices]
-            not_in_group = [idx for idx in indices if idx not in merged_indices]
-
-            if not_in_group:
-                if in_group:
-                    # Merge into existing group
-                    for gid, gindices in groups.items():
-                        if any(idx in gindices for idx in in_group):
-                            groups[gid].extend(not_in_group)
-                            merged_indices.update(not_in_group)
-                            break
-                else:
-                    key = tuple(sorted(indices))
-                    if key not in groups:
-                        groups[group_id] = indices
-                        merged_indices.update(indices)
-                        group_id += 1
 
     return groups
 
@@ -138,6 +134,8 @@ def clean_area(csv_path):
         'total': len(rows),
         'broken_phones': 0,
         'duplicates': 0,
+        'phones_reformatted': 0,
+        'phones_blanked': 0,
     }
 
     # Count issues before cleaning
@@ -149,11 +147,16 @@ def clean_area(csv_path):
     dup_groups = find_duplicate_groups(rows)
     before['duplicates'] = sum(len(indices) - 1 for indices in dup_groups.values())
 
-    # Blank broken phones
+    # Reformat real phones; blank only the ones that cannot make 10 digits
     for row in rows:
         phone = (row.get('office_phone') or '').strip()
-        if phone and not is_valid_phone(phone):
-            row['office_phone'] = ''
+        if phone:
+            fixed = normalize_phone(phone)
+            row['office_phone'] = fixed
+            if not fixed:
+                before['phones_blanked'] += 1
+            elif fixed != phone:
+                before['phones_reformatted'] += 1
 
     # Merge duplicates
     rows_to_keep = []

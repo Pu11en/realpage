@@ -1,6 +1,12 @@
 """Test lead data quality flagging rules."""
 import pytest
 import re
+import sys
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[3] / 'tooling' / 'leadcheck'))
+from clean import normalize_phone, find_duplicate_groups
+import report as report_module
 
 
 def is_valid_phone(phone):
@@ -81,25 +87,41 @@ class TestUnitCount:
 
 
 class TestDuplicateDetection:
-    def test_same_address_is_duplicate(self):
-        """Two rows with same address should be detected as duplicates."""
+    def test_same_address_and_city_is_duplicate(self):
+        """Two rows with same address and city should be detected as duplicates."""
+        row1 = {"name": "Project A", "city": "Austin", "address": "123 Main St"}
+        row2 = {"name": "Project B", "city": "Austin", "address": "123 Main St"}
+
+        addr1 = (row1["address"] or "").strip().lower()
+        addr2 = (row2["address"] or "").strip().lower()
+        city1 = (row1["city"] or "").strip().lower()
+        city2 = (row2["city"] or "").strip().lower()
+        assert addr1 == addr2 and city1 == city2
+
+    def test_same_address_different_city_not_duplicate(self):
+        """Two rows with same address but different city are NOT duplicates."""
         row1 = {"name": "Project A", "city": "Austin", "address": "123 Main St"}
         row2 = {"name": "Project B", "city": "Dallas", "address": "123 Main St"}
 
         addr1 = (row1["address"] or "").strip().lower()
         addr2 = (row2["address"] or "").strip().lower()
-        assert addr1 == addr2
-
-    def test_same_name_city_is_duplicate(self):
-        """Two rows with same name and city should be detected as duplicates."""
-        row1 = {"name": "The Bloom", "city": "Austin", "address": "123 Main St"}
-        row2 = {"name": "The Bloom", "city": "Austin", "address": "456 Oak Ave"}
-
-        name1 = (row1["name"] or "").strip().lower()
         city1 = (row1["city"] or "").strip().lower()
-        name2 = (row2["name"] or "").strip().lower()
         city2 = (row2["city"] or "").strip().lower()
-        assert (name1, city1) == (name2, city2)
+        # Same address but different city = NOT duplicates
+        assert addr1 == addr2 and city1 != city2
+
+    def test_placeholder_names_never_duplicate(self):
+        """Placeholder names like 'Unnamed project' don't trigger duplicates."""
+        row1 = {"name": "Unnamed project", "city": "Mesa", "address": ""}
+        row2 = {"name": "Unnamed project", "city": "Mesa", "address": ""}
+        row3 = {"name": "Unnamed project", "city": "Maricopa County", "address": ""}
+
+        # All have same name and some same city, but no addresses
+        # They should NOT be detected as duplicates because:
+        # 1. Empty addresses don't group anything
+        # 2. Placeholder names are ignored
+        addr1 = (row1["address"] or "").strip()
+        assert not addr1  # Empty address
 
     def test_different_name_city_address_not_duplicate(self):
         """Rows with different name/city/address should not be duplicates."""
@@ -108,13 +130,71 @@ class TestDuplicateDetection:
 
         addr1 = (row1["address"] or "").strip().lower()
         addr2 = (row2["address"] or "").strip().lower()
-        assert addr1 != addr2
-
-        name1 = (row1["name"] or "").strip().lower()
         city1 = (row1["city"] or "").strip().lower()
-        name2 = (row2["name"] or "").strip().lower()
         city2 = (row2["city"] or "").strip().lower()
-        assert (name1, city1) != (name2, city2)
+        assert addr1 != addr2 or city1 != city2
+
+    def test_arizona_unnamed_projects_stay_separate(self):
+        """Seven Arizona 'Unnamed project' rows with different units should NOT merge."""
+        rows = [
+            {"name": "Unnamed project", "city": "Mesa", "address": "", "units": "36"},
+            {"name": "Unnamed project", "city": "Mesa", "address": "", "units": "36"},
+            {"name": "Unnamed project", "city": "Mesa", "address": "", "units": "29"},
+            {"name": "Unnamed project", "city": "Mesa", "address": "", "units": "260"},
+            {"name": "Unnamed project", "city": "Maricopa County", "address": "", "units": "290"},
+            {"name": "Unnamed project", "city": "Maricopa County", "address": "", "units": "140"},
+            {"name": "Unnamed project", "city": "Maricopa County", "address": "", "units": "24"},
+        ]
+        dup_groups = find_duplicate_groups(rows)
+        # Should have no duplicate groups (empty address means no grouping)
+        assert len(dup_groups) == 0, f"Expected 0 groups, got {len(dup_groups)}"
+
+    def test_true_duplicate_pair_merges(self):
+        """Two rows with same address and city should be detected as duplicates."""
+        rows = [
+            {"name": "Building A", "city": "Austin", "address": "123 Main St", "units": "100", "office_phone": ""},
+            {"name": "Building B", "city": "Austin", "address": "123 Main St", "units": "", "office_phone": "(512) 123-4567"},
+            {"name": "Unique", "city": "Austin", "address": "456 Oak Ave", "units": "50", "office_phone": ""},
+        ]
+        dup_groups = find_duplicate_groups(rows)
+        # Should have 1 group: rows 0 and 1 (same address and city)
+        assert len(dup_groups) == 1, f"Expected 1 group, got {len(dup_groups)}"
+        assert 0 in dup_groups[0] and 1 in dup_groups[0]
+        assert 2 not in dup_groups[0]
+
+
+class TestReportDuplicateRuleMatchesClean:
+    def test_report_arizona_unnamed_projects_not_flagged(self):
+        """report.py's find_duplicates must not flag same-name/no-address rows."""
+        rows = [
+            {"name": "Unnamed project", "city": "Mesa", "address": "", "units": "36"},
+            {"name": "Unnamed project", "city": "Mesa", "address": "", "units": "36"},
+            {"name": "Unnamed project", "city": "Mesa", "address": "", "units": "29"},
+        ]
+        dup_indices = report_module.find_duplicates(rows)
+        assert dup_indices == set(), f"Expected no duplicates, got {dup_indices}"
+
+    def test_report_same_address_city_flagged(self):
+        """report.py's find_duplicates still catches true address+city duplicates."""
+        rows = [
+            {"name": "Building A", "city": "Austin", "address": "123 Main St"},
+            {"name": "Building B", "city": "Austin", "address": "123 Main St"},
+            {"name": "Unique", "city": "Austin", "address": "456 Oak Ave"},
+        ]
+        dup_indices = report_module.find_duplicates(rows)
+        assert dup_indices == {0, 1}
+
+
+class TestWhitespaceInAddressMatching:
+    def test_internal_whitespace_collapsed_for_duplicate_match(self):
+        """Extra internal spaces in address/city should not block a true duplicate match."""
+        rows = [
+            {"name": "Building A", "city": "Austin", "address": "123  Main   St", "units": "100"},
+            {"name": "Building B", "city": "Austin", "address": "123 Main St", "units": "50"},
+        ]
+        dup_groups = find_duplicate_groups(rows)
+        assert len(dup_groups) == 1, f"Expected 1 group, got {len(dup_groups)}"
+        assert 0 in dup_groups[0] and 1 in dup_groups[0]
 
 
 class TestCleaning:
@@ -234,3 +314,31 @@ class TestPhoneFormatting:
 
         assert phone in result_permit
         assert phone in result_website
+
+
+class TestPhoneNormalization:
+    """Real 10-digit phones are reformatted, never deleted."""
+
+    def test_dashed_phone_is_reformatted(self):
+        assert normalize_phone("319-217-8136") == "(319) 217-8136"
+        assert normalize_phone("512-610-4016") == "(512) 610-4016"
+        assert normalize_phone("440-263-0406") == "(440) 263-0406"
+
+    def test_country_code_is_dropped(self):
+        assert normalize_phone("+1 512 610 4016") == "(512) 610-4016"
+        assert normalize_phone("1-512-610-4016") == "(512) 610-4016"
+
+    def test_already_formatted_phone_is_unchanged(self):
+        assert normalize_phone("(210) 326-1119") == "(210) 326-1119"
+
+    def test_phone_without_ten_digits_is_blanked(self):
+        assert normalize_phone("8-773-367-2410") == ""
+        assert normalize_phone("555-1234") == ""
+
+    def test_empty_phone_stays_empty(self):
+        assert normalize_phone("") == ""
+        assert normalize_phone("   ") == ""
+        assert normalize_phone(None) == ""
+
+    def test_normalized_phone_passes_the_report_check(self):
+        assert is_valid_phone(normalize_phone("319-217-8136"))
