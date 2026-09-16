@@ -1,24 +1,13 @@
 # Lead Data Quality Report
 
-**Summary:** 4 broken phones, 9 duplicates, 182 missing units, 11 invalid links
+**Summary:** 0 broken phones, 0 duplicates, 182 missing units, 11 invalid links
 
 ## AZ
 - Total rows: 279
 - Broken phones: 0
-- Duplicates: 9
+- Duplicates: 0
 - Missing units: 79
 - Invalid links: 0
-
-### Duplicates (up to 10)
-- Unnamed project, Maricopa County @ 
-- Unnamed project, Mesa @ 
-- Unnamed project, Maricopa County @ 
-- Unnamed project, Mesa @ 
-- Unnamed project, Maricopa County @ 
-- Unnamed project, Maricopa County @ 
-- Unnamed project, Maricopa County @ 
-- Unnamed project, Mesa @ 
-- Unnamed project, Mesa @ 
 
 ### Missing units (up to 10)
 - Greenprint On 3Rd Apartments, Phoenix
@@ -45,16 +34,10 @@
 
 ## TX
 - Total rows: 592
-- Broken phones: 4
+- Broken phones: 0
 - Duplicates: 0
 - Missing units: 101
 - Invalid links: 11
-
-### Broken phones (up to 10)
-- South Lamar Multifamily, Austin: `8-773-367-2410`
-- Richardson Ridge, Fort Worth: `319-217-8136`
-- The Bloom at Lamar Square, Austin: `512-610-4016`
-- Cottages on Independence, Port Lavaca: `440-263-0406`
 
 ### Missing units (up to 10)
 - New Site Development for Willowbrook Apartments, Waco
