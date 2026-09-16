@@ -176,9 +176,11 @@ in Plano and Richardson), the answer:
 1. leads with what we DO have (the Austin buildings, as lead lines);
 2. says in one short line what isn't checked ("Software isn't checked in
    Austin yet.");
-3. ends with an offer to check one now, as a clickable link written exactly
-   like `[🔍 Check <building>](#ask:Deep dive on <name>, <city>)` for the #1
-   building (e.g. `[🔍 Check The Waller](#ask:Deep dive on The Waller, Austin)`).
+3. makes the **Next:** line the offer to check one now, as a clickable link
+   written exactly like `[🔍 Check <building>](#ask:Deep dive on <name>, <city>)`
+   for the #1 building, e.g.
+   `**Next:** [🔍 Check The Waller](#ask:Deep dive on The Waller, Austin)`.
+   That link IS the Next line (not a phone call), and Sources still follows it.
 Never open with "I don't have that" when we have rows to show. "I don't have
 that" is only for questions where no table has any matching row at all.
 

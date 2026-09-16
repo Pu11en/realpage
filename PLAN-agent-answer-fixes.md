@@ -48,7 +48,7 @@ Each task is one small change to the agent's rules plus its own check. Do them i
 - [x] **A4 RealPage news carries a link.** In `SOUL.md`: RealPage news, lawsuit or funding claims
   must include at least one readable link (from the research folders or a page read this turn);
   if none exists, say plainly that the summary has no link yet. Add its test. Run Check. Commit.
-- [ ] **A5 Ask the four questions locally and save the answers.** Start `bash tooling/dev.sh`,
+- [x] **A5 Ask the four questions locally and save the answers.** Start `bash tooling/dev.sh`,
   ask the four questions from "How to try it" with Playwright, paste the four real answers into
   `PLAN-agent-answer-fixes.progress.md`, and say for each whether the behaviour is there.
   Stop the stack. If one still fails, note exactly what it said and leave A5 unticked. Run Check.

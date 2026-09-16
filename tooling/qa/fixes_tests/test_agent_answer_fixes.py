@@ -28,7 +28,7 @@ def test_a1_never_open_with_i_dont_have_that_when_rows_exist():
     assert 'Never open with "I don\'t have that" when we have rows to show.' in text
     # the offer must come after showing what we do have and naming what isn't checked
     rule = text[text.index("Offer to check"):]
-    assert rule.index("leads with what we DO have") < rule.index("isn't checked") < rule.index("ends with an offer")
+    assert rule.index("leads with what we DO have") < rule.index("isn't checked") < rule.index("the offer to check one now")
 
 
 def test_a1_i_dont_have_that_is_scoped_to_no_rows_at_all():
