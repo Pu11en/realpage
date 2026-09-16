@@ -34,3 +34,19 @@
 - Check: `python3 -m pytest -q chatbot/tests tooling/qa/fixes_tests/test_agent_answer_fixes.py` → 48 passed.
 - Commit: 398ec5d. Note: the previous attempt died on a bad model id ("each") before doing anything; redone from scratch.
 - Open: live answer check happens in A5.
+
+## A4 RealPage news carries a link — done 2026-09-15
+- New SOUL.md rule "RealPage news carries a link": any answer about RealPage
+  news, the lawsuit, DOJ case, settlement, funding, layoffs or an acquisition
+  must carry at least one readable link (a URL from the research folders read
+  this turn, or a page read with ps_web_read), on the same line as the claim
+  and repeated on the Sources line. A bare address in research gets `https://`
+  in front. No URL anywhere → `**Sources:** RealPage research (no link yet)`,
+  never a made-up link.
+- Fixed the DOJ timeline research file: its justice.gov press-release address
+  had no `https://`, so it wasn't a clickable link. Now it is.
+- Tests: 3 new A4 tests (rule present, no-link wording, DOJ timeline has a
+  real justice.gov link).
+- Check: `python3 -m pytest -q chatbot/tests tooling/qa/fixes_tests/test_agent_answer_fixes.py` → 51 passed.
+- Commit: f3c584d. Note: the previous attempt died on a bad model id ("each") before doing anything; redone from scratch.
+- Open: live answer check happens in A5.

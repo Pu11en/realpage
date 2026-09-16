@@ -45,7 +45,7 @@ Each task is one small change to the agent's rules plus its own check. Do them i
   skill notes: any claim drawn from `street_talk` must show that row's `url` as a link on the same
   line, and the answer must say how many posts it is based on (e.g. "from 2 posts"). If no post
   link exists, the claim is left out. Add its test. Run Check. Commit.
-- [ ] **A4 RealPage news carries a link.** In `SOUL.md`: RealPage news, lawsuit or funding claims
+- [x] **A4 RealPage news carries a link.** In `SOUL.md`: RealPage news, lawsuit or funding claims
   must include at least one readable link (from the research folders or a page read this turn);
   if none exists, say plainly that the summary has no link yet. Add its test. Run Check. Commit.
 - [ ] **A5 Ask the four questions locally and save the answers.** Start `bash tooling/dev.sh`,
