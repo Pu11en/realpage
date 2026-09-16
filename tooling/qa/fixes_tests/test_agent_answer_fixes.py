@@ -57,3 +57,48 @@ def test_a2_first_line_names_the_region_used():
     text = soul_text()
     rule = text[text.index("Right area for sales and leads."):]
     assert "first line of the answer must say the" in rule and "region used" in rule
+
+
+# A3: claims from street_talk carry the post's link on the same line, plus a post count.
+SKILL = SOUL.parent / "skills" / "query-propertystack" / "SKILL.md"
+
+
+def test_a3_reddit_link_rule_is_present():
+    text = soul_text()
+    assert "Reddit claims carry their post link." in text
+    rule = text[text.index("Reddit claims carry their post link."):]
+    assert "`street_talk`" in rule[:200]
+    assert "as a markdown link on the same line" in rule
+    assert "SELECT title, quote, url" in rule
+
+
+def test_a3_answer_says_how_many_posts():
+    text = soul_text()
+    rule = text[text.index("Reddit claims carry their post link."):]
+    assert "how many posts the answer is based on" in rule
+    assert "From 2 posts" in rule
+
+
+def test_a3_no_link_means_claim_left_out():
+    text = soul_text()
+    rule = text[text.index("Reddit claims carry their post link."):]
+    assert "leave" in rule and "that claim out entirely" in rule
+    assert "never quote a post you cannot link" in rule
+
+
+def test_a3_skill_notes_carry_the_same_rule():
+    text = SKILL.read_text(encoding="utf-8")
+    row = text[text.index("| `street_talk` |"):]
+    row = row[:row.index("\n")]
+    assert "`url` as a link on the same line" in row
+    assert "from 2 posts" in row
+    assert "left out" in row
+
+
+def test_a3_every_saved_post_has_a_real_thread_link():
+    import csv
+    csv_path = SOUL.parents[2] / "propertystack" / "data" / "street-talk" / "street_talk.csv"
+    rows = list(csv.DictReader(csv_path.open(encoding="utf-8")))
+    assert rows, "street_talk.csv has no posts"
+    bad = [r["title"] for r in rows if not (r["url"].startswith("https://www.reddit.com/r/") or "youtube.com/watch" in r["url"])]
+    assert not bad, f"posts without a real thread link: {bad}"

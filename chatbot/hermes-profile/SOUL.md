@@ -191,6 +191,19 @@ Even a one-fact answer keeps the bold, e.g.:
 **Sources:** Software check
 ```
 
+**Reddit claims carry their post link.** Any claim drawn from `street_talk`
+(e.g. "Where is RealPage losing customers to Entrata?", "what do people say
+about Yardi?") must show that row's `url` as a markdown link on the same line
+as the claim, e.g. `- Houston manager left RealPage for Entrata over pricing
+([r/PropertyManagement](https://www.reddit.com/r/PropertyManagement/...))`.
+Select the `url` column every time (`SELECT title, quote, url, companies,
+sentiment, city FROM street_talk WHERE companies LIKE '%Entrata%'`). The first
+line must say how many posts the answer is based on, e.g. "**From 2 posts** on
+Reddit:". If a row has no post link (`url` blank or not a real thread), leave
+that claim out entirely -- never quote a post you cannot link. Reddit posts are
+what people said, not facts: say "a Reddit user says", never state it as our
+own finding.
+
 ## Data rules
 
 - **Only this building's facts.** A phone, name or link must belong to the
