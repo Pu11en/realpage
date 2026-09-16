@@ -36,3 +36,8 @@ Ran `clean.py` over all areas (AZ, NY, TX). Results:
 - **Quality report:** 0 broken phones, 0 duplicates ✓
 - **Tests:** 71 passed ✓
 - Commit: (waiting to commit this entry)
+
+## Next time (from how this build went)
+- **Split the duplicate-rule fix into two coordinated steps, not one.** The cleanup tool (clean.py) got fixed, but the report tool (report.py) kept the old logic — they should have been updated together or the second one flagged explicitly as a follow-up, so the reviewer caught it faster.
+- **Mark task checkboxes as soon as they're done.** Sonnet's retry didn't tick the box, so the plan thought R2 was still pending even after it ran — this caused confusion and made Haiku redo the work.
+- **Run code review before retry, not after.** Haiku's review found the incomplete fix, but by then Sonnet had already tried and "finished." Catching the two-file split upfront would have saved a retry loop.
