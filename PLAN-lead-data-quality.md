@@ -36,7 +36,7 @@ Open: no page; the report prints in the terminal and is saved as `tooling/leadch
   `chat-leads.csv`, then re-run the report and put before/after counts in
   `PLAN-lead-data-quality.progress.md`. Extend the test to prove a bad phone is blanked and a
   duplicate pair becomes one row. Run Check. Commit.
-- [ ] **L3 Say where the phone came from.** In `chatbot/hermes-profile/SOUL.md` lead lists and
+- [x] **L3 Say where the phone came from.** In `chatbot/hermes-profile/SOUL.md` lead lists and
   deep dives: a phone from `office_phone` is shown as `📞 **<phone>** (permit contact)`, and a
   phone found on the building's own website stays plain. Never show a phone that fails the
   10-digit check. Add the rule check to `test_lead_data_quality.py`. Run Check. Commit.
