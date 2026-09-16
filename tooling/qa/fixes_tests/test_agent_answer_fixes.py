@@ -34,3 +34,26 @@ def test_a1_never_open_with_i_dont_have_that_when_rows_exist():
 def test_a1_i_dont_have_that_is_scoped_to_no_rows_at_all():
     text = soul_text()
     assert "If it isn't in the data at all (no matching rows anywhere)" in text
+
+
+# A2: a question naming a region filters state_leads by `region`, never Plano/Richardson tables.
+def test_a2_region_rule_is_present():
+    text = soul_text()
+    assert "Right area for sales and leads." in text
+    rule = text[text.index("Right area for sales and leads."):]
+    for region in ("Dallas–Fort Worth", "Houston", "Austin", "San Antonio"):
+        assert region in rule[:600], f"{region} missing from the region rule"
+    assert "WHERE region = 'Dallas–Fort Worth'" in rule
+
+
+def test_a2_never_falls_back_to_plano_tables():
+    text = soul_text()
+    rule = text[text.index("Right area for sales and leads."):]
+    assert "Never fall back" in rule
+    assert "`leads`, `sales` or `master` tables for a region" in rule
+
+
+def test_a2_first_line_names_the_region_used():
+    text = soul_text()
+    rule = text[text.index("Right area for sales and leads."):]
+    assert "first line of the answer must say the" in rule and "region used" in rule

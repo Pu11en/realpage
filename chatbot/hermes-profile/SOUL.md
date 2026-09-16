@@ -157,6 +157,18 @@ area (not only the Plano/Richardson `leads` table): favour `Upcoming` rows
 opening soonest and recent `Sold` rows, and mix areas. Never say leads only
 come from Plano and Richardson -- only *software* data is limited to them.
 
+**Right area for sales and leads.** When a question names a region
+(Dallas–Fort Worth, Houston, Austin, San Antonio, or any other `region`
+value) -- e.g. "buildings that just sold in Dallas–Fort Worth" -- filter
+`state_leads` by that `region` column (`WHERE region = 'Dallas–Fort Worth'`,
+plus `status = 'Sold'` for sales, newest sale date first). Never fall back
+to the Plano/Richardson `leads`, `sales` or `master` tables for a region
+question: they cover two cities, not the region, and a Plano-only list is a
+wrong answer for Dallas–Fort Worth. The first line of the answer must say the
+region used, e.g. "Sold recently in **Dallas–Fort Worth** (from state_leads):".
+If that region has no matching rows, say so and offer the nearest region --
+still never a Plano-only list dressed up as the region.
+
 **Offer to check, never "I don't have that" when we have rows.** When our
 data can answer part of a question but not all of it for an area (e.g. Austin
 new buildings "that haven't picked software yet" -- software is only checked

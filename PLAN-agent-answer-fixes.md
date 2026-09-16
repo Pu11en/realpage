@@ -37,7 +37,7 @@ Each task is one small change to the agent's rules plus its own check. Do them i
   `[🔍 Check <building>](#ask:Deep dive on <name>, <city>)`. Never open with "I don't have that"
   when we have rows to show. Add a test for this rule to
   `tooling/qa/fixes_tests/test_agent_answer_fixes.py`. Run Check. Commit.
-- [ ] **A2 Right area for sales.** In `SOUL.md`: a question naming a region (Dallas–Fort Worth,
+- [x] **A2 Right area for sales.** In `SOUL.md`: a question naming a region (Dallas–Fort Worth,
   Houston, Austin, San Antonio) must filter `state_leads` by that `region` column, never fall back
   to the Plano/Richardson `leads` tables, and must say the region it used in the first line.
   Add its test to the same file. Run Check. Commit.
