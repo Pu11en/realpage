@@ -1,5 +1,8 @@
 # CraneSignal leads: clean phone numbers, duplicates and missing facts
 
+Goal: Lead answers in the chat show no mangled phone numbers, no project listed twice, and each permit-office phone is clearly labelled as such.
+Done when: `python3 tooling/leadcheck/report.py` shows 0 broken phones and 0 duplicates, and the Check tests pass.
+
 Written 2026-09-15 (thread 1549506016125911081). Drew tested the chat and found bad lead data:
 a phone shown as "8-773-367-2410" (Austin, South Lamar), the same project listed twice with
 different phones, and rows with no unit count. The phones come from state permit records, so
