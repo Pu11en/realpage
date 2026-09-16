@@ -30,7 +30,7 @@ Open: http://localhost:8765 → Ask (no sign-in locally)
 
 Each task is one small change to the agent's rules plus its own check. Do them in order.
 
-- [ ] **A1 Offer to check instead of "I don't have that".** In `chatbot/hermes-profile/SOUL.md`:
+- [x] **A1 Offer to check instead of "I don't have that".** In `chatbot/hermes-profile/SOUL.md`:
   when our data can't answer for an area (e.g. software isn't checked outside Plano/Richardson),
   the answer leads with what we DO have (the buildings), says in one short line what isn't checked,
   and ends with an offer to check one now, as a clickable
