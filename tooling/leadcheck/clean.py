@@ -95,53 +95,31 @@ def merge_rows(row1, row2):
 
 
 def find_duplicate_groups(rows):
-    """Find groups of duplicate rows. Returns dict of {group_id: [row_indices]}."""
-    by_address = defaultdict(list)
-    by_name_city = defaultdict(list)
+    """Find groups of duplicate rows. Returns dict of {group_id: [row_indices]}.
+
+    Duplicates are rows with the exact same street address AND city (case/spacing ignored).
+    Name alone is never a duplicate criterion. Placeholder names like "Unnamed project" or
+    "Apartments at ..." never trigger merging.
+    """
+    by_address_city = defaultdict(list)
 
     for i, row in enumerate(rows):
         address = (row.get('address') or '').strip().lower()
-        if address:
-            by_address[address].append(i)
-
-        name = (row.get('name') or '').strip().lower()
         city = (row.get('city') or '').strip().lower()
-        if name and city:
-            by_name_city[(name, city)].append(i)
+        # Only group by exact address + city match; placeholder names are ignored
+        if address:  # Only rows with an address can be duplicates
+            by_address_city[(address, city)].append(i)
 
-    # Merge overlapping groups
-    merged_indices = set()
+    # Build groups from address + city matches
     groups = {}
     group_id = 0
 
-    for indices in by_address.values():
+    for indices in by_address_city.values():
         if len(indices) > 1:
             key = tuple(sorted(indices))
-            if key not in groups and not any(idx in merged_indices for idx in indices):
+            if key not in groups:
                 groups[group_id] = indices
-                merged_indices.update(indices)
                 group_id += 1
-
-    for indices in by_name_city.values():
-        if len(indices) > 1:
-            # Check if any of these indices are already in a group
-            in_group = [idx for idx in indices if idx in merged_indices]
-            not_in_group = [idx for idx in indices if idx not in merged_indices]
-
-            if not_in_group:
-                if in_group:
-                    # Merge into existing group
-                    for gid, gindices in groups.items():
-                        if any(idx in gindices for idx in in_group):
-                            groups[gid].extend(not_in_group)
-                            merged_indices.update(not_in_group)
-                            break
-                else:
-                    key = tuple(sorted(indices))
-                    if key not in groups:
-                        groups[group_id] = indices
-                        merged_indices.update(indices)
-                        group_id += 1
 
     return groups
 

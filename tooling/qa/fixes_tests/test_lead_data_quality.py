@@ -5,7 +5,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[3] / 'tooling' / 'leadcheck'))
-from clean import normalize_phone
+from clean import normalize_phone, find_duplicate_groups
 
 
 def is_valid_phone(phone):
@@ -86,25 +86,41 @@ class TestUnitCount:
 
 
 class TestDuplicateDetection:
-    def test_same_address_is_duplicate(self):
-        """Two rows with same address should be detected as duplicates."""
+    def test_same_address_and_city_is_duplicate(self):
+        """Two rows with same address and city should be detected as duplicates."""
+        row1 = {"name": "Project A", "city": "Austin", "address": "123 Main St"}
+        row2 = {"name": "Project B", "city": "Austin", "address": "123 Main St"}
+
+        addr1 = (row1["address"] or "").strip().lower()
+        addr2 = (row2["address"] or "").strip().lower()
+        city1 = (row1["city"] or "").strip().lower()
+        city2 = (row2["city"] or "").strip().lower()
+        assert addr1 == addr2 and city1 == city2
+
+    def test_same_address_different_city_not_duplicate(self):
+        """Two rows with same address but different city are NOT duplicates."""
         row1 = {"name": "Project A", "city": "Austin", "address": "123 Main St"}
         row2 = {"name": "Project B", "city": "Dallas", "address": "123 Main St"}
 
         addr1 = (row1["address"] or "").strip().lower()
         addr2 = (row2["address"] or "").strip().lower()
-        assert addr1 == addr2
-
-    def test_same_name_city_is_duplicate(self):
-        """Two rows with same name and city should be detected as duplicates."""
-        row1 = {"name": "The Bloom", "city": "Austin", "address": "123 Main St"}
-        row2 = {"name": "The Bloom", "city": "Austin", "address": "456 Oak Ave"}
-
-        name1 = (row1["name"] or "").strip().lower()
         city1 = (row1["city"] or "").strip().lower()
-        name2 = (row2["name"] or "").strip().lower()
         city2 = (row2["city"] or "").strip().lower()
-        assert (name1, city1) == (name2, city2)
+        # Same address but different city = NOT duplicates
+        assert addr1 == addr2 and city1 != city2
+
+    def test_placeholder_names_never_duplicate(self):
+        """Placeholder names like 'Unnamed project' don't trigger duplicates."""
+        row1 = {"name": "Unnamed project", "city": "Mesa", "address": ""}
+        row2 = {"name": "Unnamed project", "city": "Mesa", "address": ""}
+        row3 = {"name": "Unnamed project", "city": "Maricopa County", "address": ""}
+
+        # All have same name and some same city, but no addresses
+        # They should NOT be detected as duplicates because:
+        # 1. Empty addresses don't group anything
+        # 2. Placeholder names are ignored
+        addr1 = (row1["address"] or "").strip()
+        assert not addr1  # Empty address
 
     def test_different_name_city_address_not_duplicate(self):
         """Rows with different name/city/address should not be duplicates."""
@@ -113,13 +129,37 @@ class TestDuplicateDetection:
 
         addr1 = (row1["address"] or "").strip().lower()
         addr2 = (row2["address"] or "").strip().lower()
-        assert addr1 != addr2
-
-        name1 = (row1["name"] or "").strip().lower()
         city1 = (row1["city"] or "").strip().lower()
-        name2 = (row2["name"] or "").strip().lower()
         city2 = (row2["city"] or "").strip().lower()
-        assert (name1, city1) != (name2, city2)
+        assert addr1 != addr2 or city1 != city2
+
+    def test_arizona_unnamed_projects_stay_separate(self):
+        """Seven Arizona 'Unnamed project' rows with different units should NOT merge."""
+        rows = [
+            {"name": "Unnamed project", "city": "Mesa", "address": "", "units": "36"},
+            {"name": "Unnamed project", "city": "Mesa", "address": "", "units": "36"},
+            {"name": "Unnamed project", "city": "Mesa", "address": "", "units": "29"},
+            {"name": "Unnamed project", "city": "Mesa", "address": "", "units": "260"},
+            {"name": "Unnamed project", "city": "Maricopa County", "address": "", "units": "290"},
+            {"name": "Unnamed project", "city": "Maricopa County", "address": "", "units": "140"},
+            {"name": "Unnamed project", "city": "Maricopa County", "address": "", "units": "24"},
+        ]
+        dup_groups = find_duplicate_groups(rows)
+        # Should have no duplicate groups (empty address means no grouping)
+        assert len(dup_groups) == 0, f"Expected 0 groups, got {len(dup_groups)}"
+
+    def test_true_duplicate_pair_merges(self):
+        """Two rows with same address and city should be detected as duplicates."""
+        rows = [
+            {"name": "Building A", "city": "Austin", "address": "123 Main St", "units": "100", "office_phone": ""},
+            {"name": "Building B", "city": "Austin", "address": "123 Main St", "units": "", "office_phone": "(512) 123-4567"},
+            {"name": "Unique", "city": "Austin", "address": "456 Oak Ave", "units": "50", "office_phone": ""},
+        ]
+        dup_groups = find_duplicate_groups(rows)
+        # Should have 1 group: rows 0 and 1 (same address and city)
+        assert len(dup_groups) == 1, f"Expected 1 group, got {len(dup_groups)}"
+        assert 0 in dup_groups[0] and 1 in dup_groups[0]
+        assert 2 not in dup_groups[0]
 
 
 class TestCleaning:
