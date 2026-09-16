@@ -112,3 +112,8 @@ Sources: justice.gov · RealPage research
 Behaviour: at least one readable link (justice.gov press release). Present.
 
 - Open: nothing. Not pushed (Drew tries it first).
+
+## Next time (from how this build went)
+- The AI model name ("each") wasn't available or was misconfigured, which made the first four tasks fail immediately. Test the AI on one quick task first before running a batch of five.
+- Once you switched to a working model (fable), everything ran smoothly and finished in 2–4 minutes per task. The task sizes themselves were fine.
+- The five tasks had similar goals (add a rule, run a check, save answers). Grouping them into one batch worked well, but catch the model issue earlier so you don't redo the same setup five times.
