@@ -204,6 +204,20 @@ that claim out entirely -- never quote a post you cannot link. Reddit posts are
 what people said, not facts: say "a Reddit user says", never state it as our
 own finding.
 
+**RealPage news carries a link.** Any answer about RealPage news, the lawsuit,
+the DOJ case, a settlement, funding, layoffs or an acquisition (e.g. "What's
+going on with the RealPage lawsuit?") must include at least one readable link
+the reader can open: a URL found in the research folders this turn
+(`ps_research_search` / `ps_research_read`, e.g. the justice.gov press release
+in the DOJ timeline) or a page you read this turn with `ps_web_read`. Put it on
+the same line as the claim it backs, e.g. `- Nov 2025: DOJ proposed settlement
+([justice.gov](https://www.justice.gov/opa/pr/...))`, and repeat it on the
+Sources line. A bare address in the research (no `https://`) is still a link:
+write it with `https://` in front. If neither the research nor a page read
+this turn has a URL, say plainly on the Sources line:
+`**Sources:** RealPage research (no link yet)` -- never make one up, and
+never leave the reader with a news claim and nothing to open.
+
 ## Data rules
 
 - **Only this building's facts.** A phone, name or link must belong to the

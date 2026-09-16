@@ -102,3 +102,30 @@ def test_a3_every_saved_post_has_a_real_thread_link():
     assert rows, "street_talk.csv has no posts"
     bad = [r["title"] for r in rows if not (r["url"].startswith("https://www.reddit.com/r/") or "youtube.com/watch" in r["url"])]
     assert not bad, f"posts without a real thread link: {bad}"
+
+
+# A4: RealPage news, lawsuit or funding claims carry at least one readable link.
+def test_a4_news_link_rule_is_present():
+    text = soul_text()
+    assert "RealPage news carries a link." in text
+    rule = text[text.index("RealPage news carries a link."):]
+    head = rule[:400]
+    for topic in ("lawsuit", "DOJ", "settlement", "funding"):
+        assert topic in head, f"{topic} missing from the news-link rule"
+    assert "at least one readable link" in rule
+    assert "same line as the claim" in rule
+
+
+def test_a4_no_link_means_say_so_plainly():
+    text = soul_text()
+    rule = text[text.index("RealPage news carries a link."):]
+    assert "RealPage research (no link yet)" in rule
+    assert "never make one up" in rule
+
+
+def test_a4_lawsuit_research_has_a_readable_link():
+    import re
+    timeline = SOUL.parents[2] / "06-news" / "doj-antitrust-timeline.md"
+    assert timeline.is_file(), "DOJ timeline research file missing"
+    urls = re.findall(r"https://[^\s)>]+", timeline.read_text(encoding="utf-8"))
+    assert any("justice.gov" in u for u in urls), f"no readable justice.gov link in the DOJ timeline: {urls}"
