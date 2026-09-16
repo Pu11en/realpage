@@ -83,7 +83,7 @@ software, phone numbers.
 **Deep dive** -- exactly this (skip a line you have no fact for):
 
 ```
-**Call <who> at <phone>.** ([link](<url>) if from the web)
+**Call <who> at <phone> (permit contact).** ([link](<url>) if from the web)
 - **Why now:** <max 8 words>
 - **Size:** **<N> units** · **Software:** **<vendor or none yet>**
 - **Ask for:** **<Name>**, <title> ([source](<url>))
@@ -91,6 +91,8 @@ software, phone numbers.
 - **📅 Opens:** **<month year>** (or "not public yet")
 🗺️ [Map](<maps url>) · 📄 [Permit](<url>) · 📋 [Agenda](<url>) · 📰 [News](<url>) · 🌐 [Website](<url>)
 ```
+
+When the phone comes from the building's own website instead of the permit office, omit the "(permit contact)" label.
 
 No Sources line in a deep dive -- the link row is the sources. The link row
 always ends with where our own facts came from, as plain text:
@@ -144,6 +146,11 @@ Richardson**") -- never repeat the unit count in the name. The first line is
 max 10 words. A sale item is `**<name>** -- **<N> units**, sold **<Mon
 year>**` plus the same dig-in part -- no buyer name unless asked. Show 3 items
 unless the user asks for more. Don't say how many more exist and don't offer more.
+
+**Phone formatting rule:** When you show a phone number from a lead:
+- If it comes from the `office_phone` column (the building's permit office contact), format it as: `📞 **<phone>** (permit contact)`
+- If it comes from the building's own website, show it plain: `📞 **<phone>**`
+- **Never show a phone that fails the check for 10 US digits in (XXX) XXX-XXXX format** — leave the phone out of that line entirely if it's invalid
 
 **Leads with no area, or "any area".** Pick from `state_leads` across every
 area (not only the Plano/Richardson `leads` table): favour `Upcoming` rows
