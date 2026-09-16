@@ -24,7 +24,7 @@ Open: no page; the report prints in the terminal and is saved as `tooling/leadch
 
 ## Tasks
 
-- [ ] **L1 Find the bad rows.** Add `tooling/leadcheck/report.py` (offline, reads
+- [x] **L1 Find the bad rows.** Add `tooling/leadcheck/report.py` (offline, reads
   `propertystack/data/*/chat-leads.csv`): flags phones that are not 10 US digits, duplicate
   projects (same address or same name+city), rows with no unit count, and links that are not
   http(s). Save `tooling/leadcheck/report.md` with counts per area and up to 10 examples each.
