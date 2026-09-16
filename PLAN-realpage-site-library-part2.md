@@ -48,7 +48,7 @@ Open: http://localhost:3000
 
 ## Tasks
 - [ ] **T5 Product cards + key facts (Gemini, ~60-100 calls).** `tooling/realpage-library/cards.py`
-  writes one card per product to `02-products/realpage/<product>.md`: what it does, who it's for,
+  writes one card per **main** product to `02-products/realpage/<product>.md` -- the ~30 real product areas only: skip login/landing pages and near-duplicate vendor sub-pages (keep one Vendor Services card, not six), and skip anything already covered by another card; the page index still lists every page: what it does, who it's for,
   current name, old or acquired names, related products, 3-5 key claims -- every line with its
   realpage.com link. Gemini drafts from that product's pages only; code rejects any line without a
   link that exists in `urls.csv`. `facts.py` writes `01-company/realpage-key-facts.md`: company basics,
