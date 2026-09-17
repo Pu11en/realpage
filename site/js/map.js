@@ -96,10 +96,11 @@
   function showMarkerTip(e, m) {
     tip.innerHTML = `<strong>${esc(m.state)}</strong><div class="count lead-count">${m.leads} lead${m.leads === 1 ? "" : "s"}</div>
       <ul>${m.topCities.map((c) => `<li>${esc(c)}</li>`).join("")}</ul><div class="hint">Click to open the table</div>`;
-    place(e);
+    placeTip(e);
   }
 
-  function place(e) {
+  // Put the tooltip next to the pointer.
+  function placeTip(e) {
     const box = svg.parentElement.getBoundingClientRect();
     tip.style.left = `${e.clientX - box.left + 14}px`;
     tip.style.top = `${e.clientY - box.top + 14}px`;
@@ -111,10 +112,7 @@
       ? `<strong>${esc(name)}</strong><div class="count">${s.total} RealPage building${s.total === 1 ? "" : "s"}</div>
          <ul>${s.topCities.map((c) => `<li>${esc(c.city)}: ${c.count}</li>`).join("")}</ul>`
       : `<strong>${esc(name)}</strong><div>None found (not searched or no hits)</div>`;
-    const box = svg.parentElement.getBoundingClientRect();
-    tip.style.left = `${e.clientX - box.left + 14}px`;
-    tip.style.top = `${e.clientY - box.top + 14}px`;
-    tip.hidden = false;
+    placeTip(e);
   }
 })().catch((e) => {
   document.getElementById("page-content").insertAdjacentHTML("beforeend", `<div class="placeholder-banner">Map failed to load: ${e.message}</div>`);

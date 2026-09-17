@@ -11,7 +11,7 @@ const NAV_TABS = [
 const VENDORS = ["RealPage", "Yardi", "Entrata", "Yotta", "AppFolio"];
 
 // The chat is its own app (Open WebUI, Google sign-in). Local trial on :3000,
-// live URL on Railway. See PLAN-v5.md and PLAN-v6.md.
+// live URL on Railway.
 // Tests override this via window.PS_CHAT_URL (see tooling/qa/check-panel.sh).
 const CHAT_APP_URL = window.PS_CHAT_URL || (location.port === "8876"
   ? location.origin // isolated human preview: chat is behind the same front door
@@ -128,12 +128,6 @@ function vendorPill(vendor, colorMap) {
   }
   const color = (colorMap && colorMap[vendor]) || "#5d6577";  // readable default on white
   return `<span class="pill" style="background:${color}22;color:${color};">${vendor}</span>`;
-}
-
-function isDimmedRow(vendor) {
-  const viewAs = getViewAs();
-  if (viewAs === "Everyone") return false;
-  return vendor === viewAs;
 }
 
 // Early Leads number boxes, from the rows currently shown (state + region + city + search).

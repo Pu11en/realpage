@@ -1,6 +1,6 @@
 // PropertyStack chat panel -- right-side slide-out shell around the chat app
 // (Open WebUI in production, the stand-in page in tests). Loaded on all 5
-// pages via app.js's renderShell(). See PLAN-v6.md Part W.
+// pages via app.js's renderShell().
 (function () {
   // Guard against the script itself running twice on one page (a stray
   // duplicate <script src="js/chat-panel.js"> tag, or a caching glitch that

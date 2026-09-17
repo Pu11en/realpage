@@ -1,4 +1,4 @@
-# One address for the site and the chat (PLAN-v6 C2). The chat app (Open WebUI)
+# One address for the site and the chat. The chat app (Open WebUI)
 # sits behind this door on Railway's private network, so the framed chat and the
 # page are the same site and its sign-in cookie works everywhere (incl. Safari).
 #
@@ -43,20 +43,13 @@
 	}
 
 	# "/" is the site's home page (the Map), except inside the chat panel's frame, where it
-	# is the chat app's home. The site home needs sign-in, like the other pages.
+	# is the chat app's home.
 	@home {
 		path /
 		not header Sec-Fetch-Dest iframe
 	}
 	handle @home {
-		forward_auth {$CHAT_UPSTREAM:http://propertystack-chat.railway.internal:8080} {
-			uri /api/v1/auths/
-			@unauthorized status 401 403
-			handle_response @unauthorized {
-				redir * /auth?redirect={http.request.uri} 302
-			}
-		}
-		# The app opens on the Map, not Early Leads.
+		# The app opens on the Map, not Early Leads. The Map itself asks for sign-in (below).
 		redir * /map.html 302
 	}
 
