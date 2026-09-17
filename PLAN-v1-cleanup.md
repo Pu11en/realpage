@@ -22,7 +22,7 @@ Rules for every task:
   Drew says so in the thread.)
 - Do not touch `09-ai-visibility/` or the AI Visibility work.
 
-Check: `python3 -m pytest -q chatbot/tests tooling/realpage-library/tests tooling/qa/fixes_tests/test_agent_answer_fixes.py`
+Check: `python3 -m pytest -q chatbot/tests tooling/realpage-library/tests tooling/qa/fixes_tests`
 Try: `bash tooling/dev.sh`
 Open: http://localhost:8765
 
@@ -33,7 +33,7 @@ Open: http://localhost:8765
 
 ## Tasks
 
-- [ ] **V1 Make the tests honest.** Three checks in `tooling/qa/fixes_tests/` fail today and failed
+- [x] **V1 Make the tests honest.** Three checks in `tooling/qa/fixes_tests/` fail today and failed
   before any recent change: `test_e1_signin`, `test_h7_novice_browser_dry_run`,
   `test_t5_logo_links_home`. For each: decide if the app is wrong or the test is out of date, then
   fix the test (or the app, if it is genuinely broken) so the whole folder passes. Then widen the
