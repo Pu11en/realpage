@@ -45,3 +45,13 @@
 - Checked: Check command, 253 passed. Docker images were not rebuilt here; V7's local try covers it.
 - Open: chatbot/README.md, SPOT-CHECK.md and TEST-ANSWERS-2026-09-10.md were outside V4's list; V6
   may want to fold or move the last two.
+
+## V5 Clean the data tools — done (2026-09-17, commit 92acfbe)
+- tooling/ and propertystack/skills/ were already clean: no commented-out code, no unused functions.
+- All scripts already have one-line purpose headers (docstring or bash comment on line 2).
+- Deleted: 10 legacy unused probe scripts (tooling/probe/step1_cleanup.py, step1_debug.py,
+  step1_final_search.py, step1_finalize.py, step1_search_communities.py, step1_search_more.py,
+  step2_bakeoff.py, step2_debug.py, step3_improved.py, step3_vendor_detection.py). These were
+  experimental vendor-detection scripts from the probe phase, never called anywhere.
+- Checked: grep -r confirmed nothing imported or called these scripts; Check command, 253 passed.
+- propertystack/data/ untouched.

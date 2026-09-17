@@ -55,7 +55,7 @@ Open: http://localhost:8765
   one line at the top of each file what it is for and where it runs. If two compose files are
   near-identical, merge or delete the unused one (prove it is unused). Keep `SOUL.md` untouched.
   Run Check. Commit.
-- [ ] **V5 Clean the data tools.** `tooling/` and `propertystack/skills/`: delete scripts nothing
+- [x] **V5 Clean the data tools.** `tooling/` and `propertystack/skills/`: delete scripts nothing
   calls (prove with grep and list them), and give every kept script a one-line purpose header.
   Do not touch anything under `propertystack/data/`. Run Check. Commit.
 - [ ] **V6 Write the README a stranger can follow.** Rewrite `README.md` as the front door of a
