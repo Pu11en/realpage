@@ -55,3 +55,15 @@
   experimental vendor-detection scripts from the probe phase, never called anywhere.
 - Checked: grep -r confirmed nothing imported or called these scripts; Check command, 253 passed.
 - propertystack/data/ untouched.
+
+## V6 Write the README a stranger can follow — done (2026-09-17, commit a87f590)
+- Rewrote README.md as the product's front door: what CraneSignal is, who it is for, two screenshots
+  (docs/design-screens/final/map.png and property.png), what runs where, the one start command,
+  where the tests are, and what is deliberately not built yet. Outside-in paragraph kept word for word.
+- Dropped the old "RealPage Knowledge Base" framing, the file-format conventions and the folder map
+  that listed folders that no longer exist (05-social, 07-competitors, 08-voice-of-customer).
+- Removed the mention of a `local-test` branch: no such branch exists in this repo today.
+- Checked: every path the README names exists; Check command, 253 passed.
+- Open: chatbot/README.md still opens with "PropertyStack chatbot (Task 8)" and cites PLAN-v1.md;
+  chatbot/SPOT-CHECK.md and TEST-ANSWERS-2026-09-10.md still sit in chatbot/. AGENTS.md still says
+  `.worktrees/local-test`. All outside V6's scope; none affect the running services.

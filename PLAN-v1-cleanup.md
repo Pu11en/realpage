@@ -58,7 +58,7 @@ Open: http://localhost:8765
 - [x] **V5 Clean the data tools.** `tooling/` and `propertystack/skills/`: delete scripts nothing
   calls (prove with grep and list them), and give every kept script a one-line purpose header.
   Do not touch anything under `propertystack/data/`. Run Check. Commit.
-- [ ] **V6 Write the README a stranger can follow.** Rewrite `README.md` as the front door of a
+- [x] **V6 Write the README a stranger can follow.** Rewrite `README.md` as the front door of a
   finished product: what CraneSignal is in two lines, who it is for, a screenshot or two, what
   runs where (website service, chat service, data), how to start it locally in one command, where
   the tests are, and what is deliberately not built yet. Keep the outside-in constraint paragraph.
