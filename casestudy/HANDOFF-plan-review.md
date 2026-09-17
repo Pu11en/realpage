@@ -76,3 +76,32 @@ Write your review to `casestudy/REVIEW-astra.md`. Structure it as:
 `## Verdict` (2-3 sentences), `## Must fix before building`, `## Disagreements with the rulebook`,
 `## Revised task list`, `## Cut list`, `## Live-demo risks`. Be concrete; quote file and line where
 you can. Do not soften findings. If something is actually fine, say so briefly and move on.
+
+---
+
+## Second job: capture how this was planned (for Under the Hood)
+
+Run this as a **separate sub-agent**, in parallel with the review. Its output is not a review; it is
+a record.
+
+Drew wants the Under the Hood page to show not just the finished thing but **how the decision was
+reached** — the questions asked, the options considered, what was rejected and why, and the source
+behind each choice. That story is currently spread across a Discord thread and this repo's git log.
+
+Sources to read:
+
+- The planning conversation, via the local API (no auth needed for reads):
+  `curl -s "$CCDB_API_URL/api/threads/1549874755622928477/messages?limit=200"`
+  That thread is where the whole plan was argued out on 2026-09-17.
+- `git log --oneline --since=2026-09-17 --name-only` in this repo, for what was actually written.
+- The three research files (`casestudy/*-research.md`), which carry the citations.
+
+Produce `casestudy/DECISION-LOG.md` with one entry per real decision, in the order they were made.
+Each entry: **what was decided**, **what the alternatives were**, **why this one won**, and **the
+source** (a law, a paper, an engineering write-up, or "Drew's call"). Keep each entry to a few
+lines and write it in plain English a non-engineer can follow — it is going on a public page.
+
+Include the decisions that were *reversed* (for example: Wayfinder-style long planning was proposed
+and dropped because the interview is the next day; subscriptions as an LLM backend were investigated
+and rejected on terms-of-service and latency grounds). Reversals are the most credible part of the
+story; do not tidy them away.
