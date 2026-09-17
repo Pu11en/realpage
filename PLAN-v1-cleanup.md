@@ -63,7 +63,7 @@ Open: http://localhost:8765
   runs where (website service, chat service, data), how to start it locally in one command, where
   the tests are, and what is deliberately not built yet. Keep the outside-in constraint paragraph.
   Run Check. Commit.
-- [ ] **V7 Certify v1.0.** Confirm `git status` is clean and Check passes. Write
+- [x] **V7 Certify v1.0.** Confirm `git status` is clean and Check passes. Write
   `CHANGELOG.md` with one `## v1.0 — 2026-09-17` section listing in plain words what this version
   does. Commit. **Then stop and ask Drew** to try it locally; only after he says yes, push `main`
   and `git tag -a v1.0 -m "CraneSignal v1.0"` and `git push origin v1.0`.

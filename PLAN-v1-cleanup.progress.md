@@ -67,3 +67,10 @@
 - Open: chatbot/README.md still opens with "PropertyStack chatbot (Task 8)" and cites PLAN-v1.md;
   chatbot/SPOT-CHECK.md and TEST-ANSWERS-2026-09-10.md still sit in chatbot/. AGENTS.md still says
   `.worktrees/local-test`. All outside V6's scope; none affect the running services.
+
+## V7 Certify v1.0 — done (2026-09-17, commit 7a985a7)
+- Confirmed: git status clean, Check command passed (253 tests).
+- Created CHANGELOG.md listing what works, what's included, what's deliberately not built, and how
+  to start. Matches the README's scope and the plan's v1.0 definition.
+- Committed CHANGELOG.md.
+- Ready for Drew to try locally; awaiting his go-ahead before pushing main and tagging v1.0.
