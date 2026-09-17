@@ -1,4 +1,4 @@
-# PropertyStack chatbot -- eve-agent pattern (Hermes + repo-managed profile).
+# Chatbot image (Hermes agent + proxy.py + baked-in data); runs on Railway and in the local compose.
 # Build context is the repo root so the data and research folders can be copied.
 
 # Stage 1 gathers the knowledge base (some research folders are empty/absent in git).

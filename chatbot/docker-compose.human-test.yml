@@ -1,4 +1,4 @@
-# A private, sign-in-enabled preview for the human release gate.  This is an
+# Overlay for a private, sign-in-enabled local preview (the human release gate).  This is an
 # overlay on docker-compose.local.yml; tooling/human-test.sh always runs it
 # under its own project name and destroys only these named volumes before a new
 # trial.  It never shares the everyday ps-chat account or chat-history volume.

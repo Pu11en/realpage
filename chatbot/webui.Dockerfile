@@ -1,4 +1,4 @@
-# PropertyStack chat app on Railway: Open WebUI + our branding (same files the
+# Chat app image for Railway only: Open WebUI + our branding (same files the
 # local compose mounts). Build context = repo root. Data lives on a volume at
 # /app/backend/data (users, chats).
 FROM ghcr.io/open-webui/open-webui:main

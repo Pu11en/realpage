@@ -1,4 +1,4 @@
-"""Public chat endpoint for the CraneSignal site.
+"""Public front for the chat agent; runs in the chatbot container (Railway and local) beside Hermes.
 
 Hermes' API server needs a bearer key, which a static site can't hide, so this
 small front sits on Railway's $PORT and forwards to Hermes on localhost:
@@ -8,8 +8,8 @@ small front sits on Railway's $PORT and forwards to Hermes on localhost:
 
 Chats live on the server: the page sends a random session_id and Hermes keeps
 the transcript in its state.db (X-Hermes-Session-Id). Without a session_id the
-old stateless mode is used (page sends its own history). Guardrails on cost: message length cap, per-IP rate limit, a small
-concurrency cap and a timeout.
+old stateless mode is used (page sends its own history). Guardrails on cost:
+message length cap, per-IP rate limit, a small concurrency cap and a timeout.
 """
 import asyncio
 import json
@@ -38,6 +38,11 @@ HISTORY_MAX = 10          # prior user/assistant turns forwarded per request
 HISTORY_ITEM_CHARS = 6000
 RATE_PER_HOUR = int(os.environ.get("CHAT_RATE_PER_HOUR", "30"))
 TIMEOUT_S = 180  # call prep with web lookups can take ~1-2 min
+# What people see in the chat's model picker. The id stays the engine's own
+# ("hermes-agent") because the live chat's saved model settings are keyed to it;
+# only the shown name changes.
+ENGINE_MODEL_ID = "hermes-agent"
+PUBLIC_MODEL_NAME = "CraneSignal Agent"
 
 # Open WebUI gateway (/v1/*): per-signed-in-user rate limit + daily $ cap.
 GATEWAY_ADMIN_EMAIL = os.environ.get("CHAT_ADMIN_EMAIL", "kidquick360@gmail.com").strip().lower()
@@ -163,7 +168,7 @@ async def chat(request: web.Request) -> web.StreamResponse:
                 async with s.post(
                     HERMES_URL,
                     headers=_hermes_headers(session_id),
-                    json={"model": "hermes-agent", "stream": False,
+                    json={"model": ENGINE_MODEL_ID, "stream": False,
                           "messages": history + [{"role": "user", "content": message}]},
                 ) as r:
                     data = await r.json(content_type=None)
@@ -215,7 +220,7 @@ async def chat_stream(request: web.Request) -> web.StreamResponse:
                 async with s.post(
                     HERMES_URL,
                     headers=_hermes_headers(session_id),
-                    json={"model": "hermes-agent", "stream": True,
+                    json={"model": ENGINE_MODEL_ID, "stream": True,
                           "messages": history + [{"role": "user", "content": message}]},
                 ) as r:
                     if r.status != 200:
@@ -433,7 +438,7 @@ def _sse_text(raw: bytes) -> str:
 
 async def _gateway_replay(request: web.Request, body: dict, text: str) -> web.StreamResponse:
     """Answer from a saved deep dive, in the same shape Hermes would."""
-    base = {"id": f"chatcmpl-saved-{int(time.time())}", "created": int(time.time()), "model": body.get("model", "hermes-agent")}
+    base = {"id": f"chatcmpl-saved-{int(time.time())}", "created": int(time.time()), "model": body.get("model", ENGINE_MODEL_ID)}
     if not body.get("stream"):
         return web.json_response({**base, "object": "chat.completion", "choices": [
             {"index": 0, "message": {"role": "assistant", "content": text}, "finish_reason": "stop"}]})
@@ -506,13 +511,6 @@ class _SseBolder:
         out = self._line(self.pending) if self.pending else b""
         self.pending = b""
         return out + self._flush_text()
-
-
-# What people see in the chat's model picker. The id stays the engine's own
-# ("hermes-agent") because the live chat's saved model settings are keyed to it;
-# only the shown name changes.
-ENGINE_MODEL_ID = "hermes-agent"
-PUBLIC_MODEL_NAME = "CraneSignal Agent"
 
 
 def _public_models(data: dict) -> dict:
@@ -604,7 +602,7 @@ async def gateway_chat(request: web.Request) -> web.StreamResponse:
                     if dive_key and r.status == 200 and b"[DONE]" in raw:
                         _deep_dive_save(dive_key, question, answer)
                     base = {"id": f"chatcmpl-checked-{int(time.time())}", "created": int(time.time()),
-                            "model": body.get("model", "hermes-agent")}
+                            "model": body.get("model", ENGINE_MODEL_ID)}
                     for delta, finish in (({"role": "assistant", "content": answer}, None), ({}, "stop")):
                         event = {**base, "object": "chat.completion.chunk", "choices": [
                             {"index": 0, "delta": delta, "finish_reason": finish}]}

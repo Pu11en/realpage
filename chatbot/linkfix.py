@@ -1,4 +1,4 @@
-"""Clean the links in an answer before it leaves the proxy.
+"""Clean the links in an answer before it leaves the proxy; imported by proxy.py in the chatbot container.
 
 - Link guard: a markdown link whose URL no tool ever returned (see the
   propertystack plugin's seen-URLs file) is removed completely, with its

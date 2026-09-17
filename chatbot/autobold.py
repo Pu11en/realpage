@@ -1,4 +1,4 @@
-"""Bold the key facts the bot left plain (phones, unit counts, dates, labels).
+"""Bold the key facts the bot left plain (phones, unit counts, dates, labels); imported by proxy.py in the chatbot container.
 
 bold(text) is idempotent: text already inside **...**, links, URLs and `code`
 is never touched, and nothing but the added ** changes. StreamBolder does the

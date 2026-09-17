@@ -1,4 +1,4 @@
-"""Post each new CraneSignal account to the New Crane Users Discord channel.
+"""Post each new CraneSignal account to the New Crane Users Discord channel; runs in the Open WebUI container.
 
 Runs next to Open WebUI in the chat container (see webui.Dockerfile). Open
 WebUI's own "user created" webhook only sends an ID, so this reads the account

@@ -1,4 +1,4 @@
-# Local development without any sign-in. Layered on top of docker-compose.local.yml
+# Overlay for everyday local development without any sign-in. Layered on top of docker-compose.local.yml
 # by tooling/dev.sh. Open WebUI runs with WEBUI_AUTH=False (one built-in admin,
 # no login screen) on its OWN volume, so the Google-login trial data in the
 # "open-webui" volume is left untouched. Never use this file on Railway.

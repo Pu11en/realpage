@@ -1,4 +1,4 @@
-# Local trial of the full chat: PropertyStack bot (Hermes + proxy) + Open WebUI.
+# Base compose file, local machine only: the full chat, PropertyStack bot (Hermes + proxy) + Open WebUI.
 # Run from the repo root:
 #   docker compose -f chatbot/docker-compose.local.yml --env-file chatbot/.env.local -p ps-chat up -d --build
 # (create chatbot/.env.local from GOOGLE-SIGNIN.md; once the Google keys are in, also put
@@ -51,7 +51,7 @@ services:
          {"title": ["What software", "has the highest satisfaction score?"], "content": "What software has the highest satisfaction score?"},
          {"title": ["Summarize", "the top complaints in reviews"], "content": "Summarize the top complaints in the reviews data"}]
       WEBUI_SECRET_KEY: ${WEBUI_SECRET_KEY:-local-trial-secret}
-      # W8: the site panel calls GET /api/v1/auths/ (credentials: include)
+      # The site panel calls GET /api/v1/auths/ (credentials: include)
       # from the page to learn sign-in state; with the default "*" wildcard
       # that credentialed cross-origin fetch is refused, so name the site.
       # Semicolon-separated list (Open WebUI splits on ";"). The chat app's own
@@ -71,7 +71,7 @@ services:
       - ./branding/logo.png:/app/build/static/logo.png:ro
       - ./branding/logo-transparent.png:/app/build/static/splash.png:ro
       # Compact CSS for the 480px slide-out panel: "Past chats" list overlay, no model
-      # picker/settings clutter (W2). /app/build/static/custom.css is already
+      # picker/settings clutter. /app/build/static/custom.css is already
       # linked from Open WebUI's index.html and ships empty by default.
       - ./branding/custom.css:/app/build/static/custom.css:ro
       # Keep the chat app inside CraneSignal after sign-in.  The loader leaves
