@@ -39,7 +39,7 @@ Open: http://localhost:8765
   fix the test (or the app, if it is genuinely broken) so the whole folder passes. Then widen the
   `Check:` line in this plan to `python3 -m pytest -q chatbot/tests tooling/realpage-library/tests
   tooling/qa/fixes_tests`. Commit.
-- [ ] **V2 Tidy the top level.** 31 `PLAN-*`, `TODO-*`, `HOW-TO-*` and `D3-*` files sit in the
+- [x] **V2 Tidy the top level.** 31 `PLAN-*`, `TODO-*`, `HOW-TO-*` and `D3-*` files sit in the
   project root. Move finished ones to `docs/plans/done/` and unfinished ones to `docs/plans/`,
   keeping git history (`git mv`). Leave `README.md`, `AGENTS.md` and the folders. Add
   `docs/plans/README.md` listing what is done and what is still open, one line each. Check
