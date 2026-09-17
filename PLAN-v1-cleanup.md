@@ -1,14 +1,18 @@
 # CraneSignal v1: clean the project and certify the release
 
-Goal: the repo reads like a finished product someone can judge in an interview — a clear README,
-no leftover planning clutter at the top level, simple code in the two live services, honest tests
-— and the result is tagged `v1.0` on GitHub.
+Goal: the code we already have is clean and professional — a clear README, no leftover planning
+clutter at the top level, simple code in the two live services and the data tools, honest tests —
+and the result is tagged `v1.0`. Nothing new is built.
 Done when: every task below is ticked, Check passes, the live site and chat still work, and
 `git tag v1.0` is pushed.
 
-Written 2026-09-17 (thread 1549874755622928477). Drew's words: "I want the code to be simple and
-clean basically by principle ... then push ... make that the version one / final product version
-... solidify for the interview."
+Written 2026-09-17 (thread 1549874755622928477). Drew's words: "just clean up the codebase ...
+make it clean ... then tag it version one." Interview material is a separate, later session — do
+not write anything interview-flavoured here.
+
+Method for the code tasks (V3, V4, V5): use the `simplify` skill on the folder named in the task
+(it reviews the changed code for reuse, simplification, efficiency and then applies the fixes).
+Then hand-check the result against the rules below before committing.
 
 Rules for every task:
 - **Behaviour must not change.** This is tidying, not redesign. If a cleanup would change what the
@@ -58,7 +62,7 @@ Open: http://localhost:8765
   finished product: what CraneSignal is in two lines, who it is for, a screenshot or two, what
   runs where (website service, chat service, data), how to start it locally in one command, where
   the tests are, and what is deliberately not built yet. Keep the outside-in constraint paragraph.
-  Add a short `## What I built and why` section aimed at an interviewer. Run Check. Commit.
+  Run Check. Commit.
 - [ ] **V7 Certify v1.0.** Confirm `git status` is clean and Check passes. Write
   `CHANGELOG.md` with one `## v1.0 — 2026-09-17` section listing in plain words what this version
   does. Commit. **Then stop and ask Drew** to try it locally; only after he says yes, push `main`
