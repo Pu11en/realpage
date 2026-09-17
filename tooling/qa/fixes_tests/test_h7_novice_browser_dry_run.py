@@ -30,7 +30,7 @@ def test_human_preview_loads_the_post_signin_cranesignal_redirect():
     loader = (ROOT / "chatbot" / "branding" / "loader.js").read_text(encoding="utf-8")
 
     assert "./branding/loader.js:/app/build/static/loader.js:ro" in compose
-    assert 'var toDashboard = function () { location.replace("/"); };' in loader
+    assert 'var toDashboard = function () { location.replace("/map.html"); };' in loader
     assert 'if (p !== last) { last = p; if (!allowed(p)) toDashboard(); }' in loader
 
 
