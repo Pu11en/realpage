@@ -21,3 +21,14 @@
 - Checked: `grep -rn "PLAN-" --include="*.py" --include="*.sh" --include="*.md" .` — no broken references
   found (old references like PLAN-lead-finder-build are historical, not in current tree).
 - Checked: 253 pytest passed.
+
+## V3 Clean the website service — done (2026-09-17, commit 70756ce)
+- site/js, Dockerfile and Caddyfile were already tidy: every file had a header, no commented-out code.
+- Removed: unused isDimmedRow() in app.js; duplicate tooltip-placing lines in map.js (now one
+  placeTip()); the never-running forward_auth in the Caddyfile "/" block (noted in V1; redir is
+  ordered first, so visitors see no change); comment pointers to PLAN-v5/v6, which no longer exist.
+- Deleted pages/assets: none. grep showed every page, font, vendor file, css and data json is
+  linked or read by a page, tool or test.
+- Checked: node --check on the three JS files; Check command, 253 passed. caddy is not installed
+  here, so the Caddyfile was not machine-validated — V7's local try covers it.
+- Open: styles.css still has a "tr.dimmed" rule nothing sets (css was outside V3's file list).

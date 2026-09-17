@@ -45,7 +45,7 @@ Open: http://localhost:8765
   `docs/plans/README.md` listing what is done and what is still open, one line each. Check
   nothing references the old paths (`grep -rn "PLAN-" --include=*.py --include=*.sh --include=*.md`
   and fix links). Run Check. Commit.
-- [ ] **V3 Clean the website service.** `site/` only: read `site/js/*.js`, `site/Dockerfile` and
+- [x] **V3 Clean the website service.** `site/` only: read `site/js/*.js`, `site/Dockerfile` and
   `site/Caddyfile`. Remove dead code and commented-out blocks, give each file a one-line header
   saying what it does, make names say what they mean, and delete any page or asset nothing links
   to (prove it with grep first, and list what you deleted in the progress file). No visual or
