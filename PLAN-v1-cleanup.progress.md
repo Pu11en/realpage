@@ -74,3 +74,8 @@
   to start. Matches the README's scope and the plan's v1.0 definition.
 - Committed CHANGELOG.md.
 - Ready for Drew to try locally; awaiting his go-ahead before pushing main and tagging v1.0.
+
+## Next time (from how this build went)
+- One step (V3) needed a retry after Haiku hit a wall — that task might need clearer instructions or a more capable model to land it in one shot.
+- The final step (V7) ended by asking instead of deciding — the "Certify v1.0" instructions could spell out when the check is truly done so the AI finishes without a prompt.
+- Otherwise smooth: most steps took 2–4 minutes and landed cleanly, the task split and model rotation worked well.
