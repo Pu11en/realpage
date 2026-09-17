@@ -18,9 +18,9 @@ a build session starts.
 
 1. Read this README first.
 2. The product direction and every decision so far: `09-build-ideas/sell-plan-2026-09-12.md`.
-3. The build plans (gowork-ready, localhost first): `PLAN-map-deepdive.md`, `PLAN-scout.md`,
-   `PLAN-deep-dive.md`, `PLAN-chat-readable.md`, `PLAN-team-memory.md`, `PLAN-new-area.md`.
-   Each `PLAN-*.progress.md` is that plan's build log.
+3. The build plans (gowork-ready, localhost first): `docs/plans/done/PLAN-scout.md`,
+   `docs/plans/done/PLAN-chat-readable.md`, `docs/plans/PLAN-team-memory.md`, `docs/plans/PLAN-new-area.md`.
+   See `docs/plans/README.md` for the complete list of all plans (done and in progress).
 4. Run it locally, no sign-in: `bash tooling/dev.sh` → http://localhost:8765
    (`bash tooling/dev.sh stop` to stop). Live check: `bash tooling/qa/check-live.sh`.
 5. Branches: `main` is what GitHub/Railway deploy. New work is tested on the `local-test`

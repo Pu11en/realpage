@@ -15,16 +15,16 @@ Gemini is the only AI for now (Claude/Codex plans are used up until later in Sep
 
 ## RealPage site library, part 2 (Gemini step)
 
-Part 1 (`PLAN-realpage-site-library.md`: crawl realpage.com + page index, no AI) was started as a
+Part 1 (`docs/plans/done/PLAN-realpage-site-library.md`: crawl realpage.com + page index, no AI) was started as a
 go-work loop on 2026-09-15. When Drew says he's ready for the Gemini step (any wording, e.g. "ready to
 finish the RealPage library", "do the Gemini run now"): check part 1 is fully ticked and the shipcheck chatbot fixes (source-naming rule in SOUL.md) are merged, then start a
-go-work loop on `PLAN-realpage-site-library-part2.md` (T5-T8: ~60-100 free Gemini calls for product
+go-work loop on `docs/plans/PLAN-realpage-site-library-part2.md` (T5-T8: ~60-100 free Gemini calls for product
 cards + key facts, then local chat hookup and test). Gemini use for that plan is pre-approved by Drew.
 
 ## AI Visibility v4 (queued)
 
-`PLAN-ai-visibility-v4.md` (build on practice data, no real AI calls) starts as a go-work loop once
+`docs/plans/PLAN-ai-visibility-v4.md` (build on practice data, no real AI calls) starts as a go-work loop once
 both RealPage library plans are fully ticked -- when Drew says to start it or asks what's next after
 the library. It is Drew's explicit exception to "task loops never touch AI Visibility".
-`PLAN-ai-visibility-v4-run.md` (real Claude/Codex/Gemini runs, ~480 answers) starts only when Drew
-explicitly says to run it. `PLAN-ai-visibility-v3.md` is superseded.
+`docs/plans/PLAN-ai-visibility-v4-run.md` (real Claude/Codex/Gemini runs, ~480 answers) starts only when Drew
+explicitly says to run it. `docs/plans/PLAN-ai-visibility-v3.md` is superseded.

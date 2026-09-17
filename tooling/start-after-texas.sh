@@ -9,7 +9,7 @@ for i in $(seq 1 2160); do
   busy=$(python3 -c "import json;print(any(r['repo_dir']=='$REPO' for r in json.load(open('$LOOPS'))))" 2>/dev/null)
   if [ "$running" = "False" ] && [ "$merged" -gt 0 ] && [ "$busy" = "False" ]; then
     curl -s -X POST "$CCDB_API_URL/api/loops" -H "Authorization: Bearer $CCDB_API_SECRET" -H "Content-Type: application/json" \
-      -d '{"plan_path": "'$REPO'/PLAN-map-markers.md", "report_thread_id": 1548911246705959072, "harness": "claude", "model": "sonnet", "fallback_harness": "dsh", "fallback_model": "glm-5.3"}'
+      -d '{"plan_path": "'$REPO'/docs/plans/PLAN-map-markers.md", "report_thread_id": 1548911246705959072, "harness": "claude", "model": "sonnet", "fallback_harness": "dsh", "fallback_model": "glm-5.3"}'
     echo " started map build $(date)"; exit 0
   fi
   sleep 60
