@@ -32,3 +32,16 @@
 - Checked: node --check on the three JS files; Check command, 253 passed. caddy is not installed
   here, so the Caddyfile was not machine-validated — V7's local try covers it.
 - Open: styles.css still has a "tr.dimmed" rule nothing sets (css was outside V3's file list).
+
+## V4 Clean the chat service — done (2026-09-17, commit fcb8a02)
+- The chat service was already tidy: no commented-out code, no unused functions or imports
+  (checked every name in the four Python files with a script plus grep across the repo).
+- Changed: each of the 9 files now opens with one line saying what it is and where it runs;
+  proxy.py uses the one ENGINE_MODEL_ID setting instead of repeating "hermes-agent" five times
+  (same value, moved up with the other settings); dropped old plan codes (W2, W8) from comments.
+- Compose files: all three kept. local is the base; dev (used by tooling/dev.sh) and human-test
+  (used by tooling/human-test.sh and test_h6) are small overlays on it, not near-copies.
+- Deleted: nothing. SOUL.md untouched.
+- Checked: Check command, 253 passed. Docker images were not rebuilt here; V7's local try covers it.
+- Open: chatbot/README.md, SPOT-CHECK.md and TEST-ANSWERS-2026-09-10.md were outside V4's list; V6
+  may want to fold or move the last two.

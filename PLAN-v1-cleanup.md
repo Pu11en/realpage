@@ -50,7 +50,7 @@ Open: http://localhost:8765
   saying what it does, make names say what they mean, and delete any page or asset nothing links
   to (prove it with grep first, and list what you deleted in the progress file). No visual or
   behaviour change. Run Check. Commit.
-- [ ] **V4 Clean the chat service.** `chatbot/` only: `proxy.py`, `linkfix.py`, `autobold.py`,
+- [x] **V4 Clean the chat service.** `chatbot/` only: `proxy.py`, `linkfix.py`, `autobold.py`,
   `signup_alerts.py`, the two Dockerfiles and the three compose files. Same rules as V3. Say in
   one line at the top of each file what it is for and where it runs. If two compose files are
   near-identical, merge or delete the unused one (prove it is unused). Keep `SOUL.md` untouched.
