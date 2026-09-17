@@ -1,7 +1,12 @@
-# RealPage Knowledge Base
+# CraneSignal
 
-Single source of truth for everything we know about RealPage (realpage.com) —
-property management software company.
+CraneSignal shows which property-management software every apartment building in an area runs,
+and flags the buildings most likely to switch soon (just sold, new owner, under construction).
+A built-in chat agent answers questions about the same data, with sources.
+
+**Who it is for:** sales and marketing teams at property-management software companies
+(RealPage, Yardi, Entrata, AppFolio and the like) who want early, evidence-backed leads.
+It covers any US area; Plano/Richardson, Texas is the worked sample.
 
 **The constraint: outside-in only.** We have no access to RealPage — no
 insiders, no product login, no customer data, nobody there to ask. Everything
@@ -10,60 +15,62 @@ from this evidence that RealPage (or a business like theirs) would actually
 use, show from outside that they don't already have it, and pitch it. Drew
 makes the calls; ask him when a decision is his.
 
-Current direction and plans: `09-build-ideas/brainstorm-2026-09-10-pitch-to-realpage.md`.
-Every plan passes `/mvp-plan-review` (`.claude/skills/mvp-plan-review/`) before
-a build session starts.
+## What it looks like
 
-## How to use this KB (for any future session)
+![Map of buildings, coloured by software](docs/design-screens/final/map.png)
 
-1. Read this README first.
-2. The product direction and every decision so far: `09-build-ideas/sell-plan-2026-09-12.md`.
-3. The build plans (gowork-ready, localhost first): `docs/plans/done/PLAN-scout.md`,
-   `docs/plans/done/PLAN-chat-readable.md`, `docs/plans/PLAN-team-memory.md`, `docs/plans/PLAN-new-area.md`.
-   See `docs/plans/README.md` for the complete list of all plans (done and in progress).
-4. Run it locally, no sign-in: `bash tooling/dev.sh` → http://localhost:8765
-   (`bash tooling/dev.sh stop` to stop). Live check: `bash tooling/qa/check-live.sh`.
-5. Branches: `main` is what GitHub/Railway deploy. New work is tested on the `local-test`
-   branch first and only goes to `main` after Drew's OK.
-6. Older plans, handoffs and QA logs live in `archive/` (old plans in `archive/plans/`,
-   Discord summaries in `archive/discord-cards/`).
-7. Every folder holds markdown files. Synthesized files cite raw files; raw
-   files carry source URL + fetch date. Trust raw over summary on conflict.
-8. Add new evidence as files, register them in the folder's index section
-   below, never delete raw evidence.
+![One building: software, sale signal, lead score, sources](docs/design-screens/final/property.png)
 
-## Conventions
+More screens (Early Leads, Under the Hood, chat): `docs/design-screens/final/`.
 
-- One topic per file. File names: lowercase-hyphenated, dated `YYYY-MM-DD-`
-  prefix only when multiple snapshots of the same thing exist.
-- Every file starts with a header block: `Source:`, `Fetched:`, `Method:`,
-  `Confidence:` (high/medium/low).
-- Raw captures live in `raw/` (verbatim excerpts, JSON dumps, page text).
-  Distilled insight lives in the numbered folders and must link the raw file.
-- Voice-of-customer files preserve **exact phrases** in quotes — never
-  paraphrase complaints; paraphrase belongs in the analysis line below the quote.
-- Claims without a linked source are marked `(unsourced)`.
+## What runs where
 
-## Map
+| Part | Folder | What it is |
+|---|---|---|
+| Website service | `site/` | Static pages (Map, Early Leads, Property Detail, AI Visibility, Under the Hood) served by Caddy. Reads the JSON in `site/data/`. |
+| Chat service | `chatbot/` | A Hermes agent behind a small proxy (`proxy.py`) plus the Open WebUI chat app. Answers only from the baked-in data and research, read-only. Details: `chatbot/README.md`. |
+| Data | `propertystack/` | The pipeline of skills (find apartments → find website → detect software → find sales → score leads) and its outputs in `propertystack/data/<area>/`. Details: `propertystack/README.md`. |
+| Tools | `tooling/` | Local run scripts, QA checks, and the helpers that turn pipeline data into what the site and chat read. |
+| Research | `01-company/` … `09-build-ideas/`, `raw/` | Public-source evidence about RealPage and its market. `raw/` is verbatim captures: add, never edit. |
+| Plans | `docs/plans/` | Finished and open build plans, listed in `docs/plans/README.md`. Older material is in `archive/`. |
 
-| Folder | What's inside |
-|---|---|
-| `01-company/` | Profile, ownership, leadership, timeline, financials |
-| `02-products/` | Product lines, pricing, tech stack, integrations |
-| `03-reviews/` | G2, Capterra, TrustRadius, Glassdoor, app-store reviews |
-| `04-reddit/` | Subreddit evidence packs with URLs + dates |
-| `05-social/` | X posts (`x/`), LinkedIn observations |
-| `06-news/` | DOJ antitrust case, press, product launches |
-| `07-competitors/` | Yardi, AppFolio, Entrata, Buildium, etc. |
-| `08-voice-of-customer/` | Distilled pain themes, personas, exact language |
-| `09-build-ideas/` | Ranked things we could build, tied to evidence |
-| `raw/` | Unprocessed captures (never edit, only add) |
-| `tooling/` | Local scraping assets, how to run them |
+Both services deploy to Railway from the `main` branch. New work is tried locally first and
+goes to `main` only after Drew's OK.
+
+## Start it locally
+
+```bash
+bash tooling/dev.sh        # start, no sign-in anywhere
+bash tooling/dev.sh stop   # stop everything it started
+```
+
+Site: http://localhost:8765 · chat app: http://localhost:3000.
+Needs Docker, `DEEPSEEK_API_KEY` in your shell, and `JINA_API_KEY` in a gitignored `.env`.
+Keys are never committed.
+
+## Tests
+
+```bash
+python3 -m pytest -q chatbot/tests tooling/realpage-library/tests tooling/qa/fixes_tests
+```
+
+- `chatbot/tests/` — the chat proxy and answer formatting.
+- `tooling/realpage-library/tests/` — the realpage.com library tools.
+- `tooling/qa/fixes_tests/` — site and data checks, one per fixed issue.
+- `bash tooling/qa/check-live.sh` — checks the live site and chat.
+
+## Deliberately not built yet
+
+- **One-step new areas.** Adding an area still means running the pipeline skills by hand.
+- **Weekly refresh.** Data is a dated snapshot (the site shows "Last updated"); nothing re-runs on a schedule.
+- **Shared team memory.** The chat remembers one conversation, not a team's history.
+- **Pricing and billing.** The offer is free early access in exchange for feedback.
+
+Open plans for these are in `docs/plans/`.
 
 ## Ground rules
 
-- Collection is read-only toward third parties: no posting, voting, or
-  account actions. Rate-limit politely. Respect logged-in-session boundaries
-  (X session belongs to Drew; use it only for reads).
-- LinkedIn is auth-walled and bot-hostile: capture manually or via Drew's
-  logged-in browser only when he initiates it; label those captures clearly.
+- Collection is read-only toward third parties: no posting, voting or account actions.
+  Rate-limit politely.
+- Every claim links to a public source. Trust raw captures over summaries when they disagree.
+- Claims without a linked source are marked `(unsourced)`.
