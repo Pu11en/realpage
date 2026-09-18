@@ -26,6 +26,25 @@
       <p>Paste or upload JSONL. The export stays separate from the evidence used to produce it.</p>
     </section>
 
+    <section class="how-it-works" id="how-it-works" aria-labelledby="how-title">
+      <p class="eyebrow">How the agent works</p>
+      <h2 id="how-title">One record in, one answer out: code decides, the AI only writes</h2>
+      <figure class="agent-diagram">
+          <iframe src="/case-study/assets/agent-flow.html" title="Interactive agent flow diagram" loading="lazy"></iframe>
+          <figcaption>Interactive: click a box to trace its path, or use "Play story". <a href="/case-study/assets/agent-flow.html" target="_blank" rel="noopener">Open full screen ↗</a></figcaption>
+        </figure>
+        <ol class="phase-list">
+          <li><strong>Customer record in.</strong> One JSON line per customer. The answer key is removed before anything runs.</li>
+          <li><strong>Permission gates (Python).</strong> Checks consent for each channel and any STOP request. No permission means stop here: do not send, or create a human task. The AI is never called.</li>
+          <li><strong>Channel and time (Python).</strong> Picks the first preferred channel with consent, then the send time in the customer's time zone (text 9 a.m., email 10 a.m. in the samples).</li>
+          <li><strong>Buttons and next step (Python).</strong> Sets the exact reply options (Thu or Fri) or tour link, and the follow-up plan.</li>
+          <li><strong>Safe draft (Python).</strong> Builds a pre-checked template message, used as a starting point and as the backup.</li>
+          <li><strong>DeepSeek writer (AI).</strong> One call, temperature 0, JSON only, approved fields only. It may reword the message but cannot change buttons, time, or channel.</li>
+          <li><strong>Safety check (Python).</strong> Checks the opt-out line, subject, exact buttons or link, length, fair-housing words and personal details. It passes, or the safe draft is used.</li>
+          <li><strong>Final answer out.</strong> Exactly two parts: next message and next action. Nothing is actually sent.</li>
+        </ol>
+    </section>
+
     <section class="input-panel" aria-labelledby="input-title">
       <div class="section-heading">
         <div>
@@ -181,20 +200,7 @@
           <p class="eyebrow">Decision boundary</p>
           <h3 id="boundary-title">Code decides. The model may only write.</h3>
         </div>
-        <figure class="agent-diagram">
-          <a href="/case-study/assets/agent-flow.html" target="_blank" rel="noopener"><img src="/case-study/assets/agent-flow.png" alt="Agent flow: customer record, permission gates, channel and time, buttons and next step, safe draft, DeepSeek writer, safety check, final answer, with safe exits for no consent and rejected drafts" loading="lazy"></a>
-          <figcaption>Open the interactive diagram ↗</figcaption>
-        </figure>
-        <ol class="phase-list">
-          <li><strong>Customer record in.</strong> One JSON line per customer. The answer key is removed before anything runs.</li>
-          <li><strong>Permission gates (Python).</strong> Checks consent for each channel and any STOP request. No permission means stop here: do not send, or create a human task. The AI is never called.</li>
-          <li><strong>Channel and time (Python).</strong> Picks the first preferred channel with consent, then the send time in the customer's time zone (text 9 a.m., email 10 a.m. in the samples).</li>
-          <li><strong>Buttons and next step (Python).</strong> Sets the exact reply options (Thu or Fri) or tour link, and the follow-up plan.</li>
-          <li><strong>Safe draft (Python).</strong> Builds a pre-checked template message, used as a starting point and as the backup.</li>
-          <li><strong>DeepSeek writer (AI).</strong> One call, temperature 0, JSON only, approved fields only. It may reword the message but cannot change buttons, time, or channel.</li>
-          <li><strong>Safety check (Python).</strong> Checks the opt-out line, subject, exact buttons or link, length, fair-housing words and personal details. It passes, or the safe draft is used.</li>
-          <li><strong>Final answer out.</strong> Exactly two parts: next message and next action. Nothing is actually sent.</li>
-        </ol>
+        <p>See <a href="#how-it-works">How the agent works</a> above for the step-by-step diagram.</p>
         <p>The AI receives only approved record fields plus a pre-checked draft to improve, and must reply in JSON with the exact buttons or link it was given. It cannot choose consent, channel, timing, buttons, or next action. If its reply is invalid, late, or unsafe, a checked template is used instead, and the trace says why.</p>
       </div>
 
