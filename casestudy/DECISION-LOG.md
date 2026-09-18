@@ -259,3 +259,21 @@ automatically instead of relying on manual review each time. A small reference-d
 checklist (paraphrase-tolerant, wrong-facts-rejecting) was added alongside the structural test so
 later tasks have a pattern to extend rather than grading prose by exact string match.
 **Source:** `PLAN-casestudy-bot.md` task C0 and both records in `casestudy/data/sample.jsonl`.
+
+## 30. Gates are ordered reply → consent → lifecycle → frequency → dates, with labeled confidence
+
+**Decided:** `casestudy/gates.py` normalizes any input without crashing, classifies an inbound
+reply first (so STOP yields `mark_opted_out` even when consent is already false), then enforces
+consent, lifecycle/do-not-contact, frequency, and date/timezone validity. Every `GateResult`
+carries status, reason, citation, and one of `observed` / `input_required` / `hypothesis` /
+`conservative_default`. Unknown `required_states` are emitted as `unsupported`, never passed;
+`consent_verified` is the only state this module verifies (fair-housing and brand-style belong to
+C4). Consent is only ever an explicit `true`; missing or non-boolean values are unknown and never
+count. A numeric reply requires supplied prior options and produces `propose_follow_up`, not a
+booking. The reference clock is `input.reference_time` or `input.last_interaction`, never the
+server date. Frequency caps (24 h / 3 per day) are project defaults, not learned rules.
+**Alternatives:** consent first (would swallow STOP), treat missing consent as true, treat unknown
+states as passed, use `datetime.now()`. **Why it won:** PLAN C1 and REVIEW-astra's stop-order
+correction; two examples cannot justify inventing consent or state passes. Terminal decisions do
+not yet map to the public contract (`next_message` is non-nullable there); C7 decides that shape.
+**Source:** `PLAN-casestudy-bot.md` C1, `REVIEW-astra.md`, `RULEBOOK-research.md` §3 (as hypotheses).

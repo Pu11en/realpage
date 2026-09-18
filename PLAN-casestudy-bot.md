@@ -90,7 +90,7 @@ Check: `python3 -m pytest -q casestudy/tests`
   Identical body wording is optional template regression coverage, not the assignment's requirement.
   Check: both expected blocks round-trip and harmless paraphrases pass while wrong facts fail.
 
-- [ ] **C1 Input normalization and the five gates.** Normalize missing fields without crashing, but
+- [x] **C1 Input normalization and the five gates.** Normalize missing fields without crashing, but
   never invent consent or claim an unknown required state passed. Process opt-out intent before
   early exits for missing consent/lifecycle so STOP still produces `mark_opted_out`; then enforce
   consent, lifecycle/do-not-contact, frequency, and invalid/past dates or timezone. Never bypass
