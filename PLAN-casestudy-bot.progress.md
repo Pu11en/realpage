@@ -350,3 +350,36 @@ duplicate test module); the plan's complete case-study suite passes.
 Left open: C11 must put `/case-study*` behind the existing Caddy sign-in gate, add the navigation
 entry, containerize this service, and prove health, limits, restart, and isolation. No live model
 call was made.
+
+## C11 Container and local production wiring — done
+
+What I did:
+- Added a slim Python container that installs `tzdata`, runs as the unprivileged `casestudy` user,
+  and copies only `casestudy/` into the image. It has a Docker health check and a direct `/health`
+  endpoint.
+- Added configurable 2 MiB request and 100-record batch limits with JSON 413 responses. The local
+  Compose stack now starts the service, and the private human preview keeps it internal.
+- Routed `/case-study*` through the existing Caddy authentication check before proxying to the
+  separate service, and added the Case Study navigation link. Signed-out requests redirect to sign
+  in; a signed-in 12-record request succeeds through the front door.
+- Documented the separate Railway service, Dockerfile and start command, private upstream, health
+  path, `DEEPSEEK_API_KEY`/`DEEPSEEK_MODEL`, optional limits, and missing-key template fallback.
+- Added decision log entry 40 and deployment coverage. The first limit test used a deliberately
+  tiny request cap that was too small for 12 sample records, so the test cap was corrected while
+  keeping the production default at 2 MiB. A pre-existing browser upload assertion also exposed an
+  async race under the parallel run; it now waits for the file read before asserting.
+
+Code commit: `f2f8028` (`Case study C11: add production container wiring`).
+
+Check:
+- `python3 -m pytest -q casestudy/tests` — 220 passed.
+- `python3 -m pytest -q chatbot/tests tooling/realpage-library/tests tooling/qa/fixes_tests` —
+  254 passed.
+- Caddy validation, both Compose configurations, the human-preview offline check, Python compile,
+  JavaScript syntax checks, and `git diff --check` passed.
+- Built the real image and proved `/health`, a 12-record request, missing-key template fallback,
+  non-root runtime, restart recovery, no key material in logs, and no `/app/propertystack/data`,
+  `/app/chatbot`, or `/app/site` paths.
+
+Left open: the service is ready for Drew's localhost acceptance and then an authorized push and
+Railway setup. Nothing was pushed, deployed, or sent to a live model. C12 is next.

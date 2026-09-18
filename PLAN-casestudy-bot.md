@@ -193,7 +193,7 @@ Check: `python3 -m pytest -q casestudy/tests`
   and per-record error without losing the other records. Check in a browser with 1, 2, 12, malformed,
   and offline inputs; verify clipboard/download by reparsing the bytes.
 
-- [ ] **C11 Container and local production wiring.** Non-root slim image, `tzdata`, health endpoint,
+- [x] **C11 Container and local production wiring.** Non-root slim image, `tzdata`, health endpoint,
   request-size/batch-size limits, no secrets in logs, and only `casestudy/` copied. Wire
   `/case-study*` and navigation locally behind existing auth; document Railway service/start command
   and `DEEPSEEK_API_KEY`. Prove health, auth redirect, 12-record request, restart, missing-key offline
