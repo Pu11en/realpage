@@ -7,6 +7,7 @@ diagnostics.  Production proxy, authentication, limits, and container wiring are
 from __future__ import annotations
 
 import argparse
+import json
 import os
 from pathlib import Path
 from typing import Any
@@ -35,16 +36,27 @@ def _lines(text: str) -> list[str]:
     return text.splitlines()
 
 
+def _answer_key(line: str) -> dict[str, Any] | None:
+    """The record's `expected` block, read only after the run so the page can compare. Never fed to the pipeline."""
+    try:
+        expected = json.loads(line).get("expected")
+    except (ValueError, AttributeError):
+        return None
+    return expected if isinstance(expected, dict) else None
+
+
 def run_payload(text: str, *, offline: bool) -> dict[str, Any]:
     config = WriterConfig(enabled=False) if offline else WriterConfig.from_env()
     results = run_batch(_lines(text), config=config)
     exported = submission_jsonl(results)
+    lines = _lines(text)
     records = []
     for index, result in enumerate(results):
         records.append({
             "index": index,
             "submission_line": result.submission_line(),
             "diagnostics": result.diagnostics(),
+            "answer_key": _answer_key(lines[index]) if index < len(lines) else None,
         })
     return {
         "record_count": len(records),

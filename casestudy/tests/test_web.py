@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import json
+from pathlib import Path
 import socket
 import subprocess
 import sys
@@ -220,3 +221,15 @@ def test_browser_runs_1_2_12_malformed_upload_and_exact_exports(web_server, tmp_
         assert "malformed_json" in page.locator("#record-errors").inner_text()
         assert json.loads(page.locator("#submission-output").text_content())["next_action"]["type"] == "escalate"
         browser.close()
+
+
+def test_payload_carries_answer_key_for_display_only():
+    from casestudy.web import run_payload
+    text = (Path(__file__).resolve().parents[1] / "data" / "sample.jsonl").read_text(encoding="utf-8")
+    payload = run_payload(text.rstrip("\n") + "\nnot json\n", offline=True)
+    keys = [r["answer_key"] for r in payload["records"]]
+    assert keys[0]["next_action"]["name"] == "prospect_welcome_short_horizon"
+    assert keys[1]["next_message"]["channel"] == "email"
+    assert keys[2] is None
+    for r in payload["records"]:
+        assert "expected" not in r["submission_line"]

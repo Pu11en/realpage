@@ -172,12 +172,35 @@
     return rows.join("") || `<div class="check-row" data-status="not_measured"><span class="check-icon not_measured">?</span><span class="check-name">No assertions or thresholds supplied</span><span class="check-detail">not measured</span></div>`;
   }
 
+  function renderAnswerKey(answer, key) {
+    const box = byId("answer-key");
+    box.hidden = !key;
+    if (!key) return;
+    const got = answer.next_message;
+    const want = key.next_message;
+    const same = (a, b) => JSON.stringify(a ?? null) === JSON.stringify(b ?? null);
+    const rows = [];
+    if (!got || !want) {
+      rows.push([!got === !want, `Send or not: expected ${want ? "a message" : "no message"}, got ${got ? "a message" : "no message"}`]);
+    } else {
+      rows.push([got.channel === want.channel, `Channel: expected ${channelLabel(want.channel)}, got ${channelLabel(got.channel)}`]);
+      rows.push([got.send_at === want.send_at, `Time: expected ${formatSendAt(want.send_at)}, got ${formatSendAt(got.send_at)}`]);
+      rows.push([!got.subject === !want.subject, `Subject: expected ${want.subject ? "a subject" : "none"}, got ${got.subject ? "a subject" : "none"}`]);
+      rows.push([same(got.cta, want.cta), `Buttons or link: ${same(got.cta, want.cta) ? "match exactly" : "differ from the answer key"}`]);
+    }
+    rows.push([same(answer.next_action, key.next_action), `Next step: expected ${actionLabel(key.next_action)}, got ${actionLabel(answer.next_action)}`]);
+    byId("answer-key-list").innerHTML = rows.map(([ok, text]) => `<li><span class="${ok ? "ok" : "bad"}" aria-label="${ok ? "match" : "mismatch"}">${ok ? "✓" : "✗"}</span><span>${escapeHtml(text)}</span></li>`).join("");
+    byId("answer-key-body-row").hidden = !want?.body;
+    byId("answer-key-body").textContent = want?.body || "";
+  }
+
   function renderRecord(index) {
     state.active = index;
     const record = state.payload.records[index];
     const diagnostics = record.diagnostics;
     const answer = JSON.parse(record.submission_line);
     renderHumanAnswer(answer, diagnostics);
+    renderAnswerKey(answer, record.answer_key);
     byId("submission-output").textContent = JSON.stringify(answer, null, 2);
     byId("byte-count").textContent = encoder.encode(oneBytes(index)).length;
     byId("record-state").textContent = `Record ${index + 1} of ${state.payload.record_count}`;

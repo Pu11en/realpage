@@ -64,8 +64,7 @@ AMENITY_DISPLAY = {
 LEARNED_PROPERTY_FACTS: dict[str, dict[str, Any]] = {
     "oak ridge apartments": {
         "short_name": "Oak Ridge",
-        "amenity_detail": {"fitness": "24/7 fitness center"},
-        "source": "sample.jsonl record 1 body ('welcome to Oak Ridge') and record 2 body ('24/7 fitness center')",
+        "source": "sample.jsonl record 1 body ('welcome to Oak Ridge')",
     },
 }
 

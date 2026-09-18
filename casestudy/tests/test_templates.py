@@ -70,7 +70,7 @@ def test_email_reference_meaning_and_validators():
     assert "Taylor" in nm.body
     assert "mid-February" in nm.body  # natural move-month phrase
     assert "pool" in nm.body and "fitness" in nm.body  # amenity interests
-    assert "24/7 fitness center" in nm.body  # learned Oak Ridge fact, with provenance
+    assert "24/7" not in nm.body  # never borrow facts from the answer key
     assert "https://oakridge.example/tour" in nm.body  # URL from the training example, not a slug
     assert "click here or reply STOP" in nm.body
     assert "Oak Ridge" in nm.subject and "pool" in nm.subject
@@ -211,7 +211,7 @@ def test_helper_phrases():
     assert move_month_phrase(rec) == "mid-February"
     assert move_month_phrase(run_gates(_variant(1, move_date_target="2026-02-03")).record) == "early-February"
     assert move_month_phrase(run_gates(_variant(1, move_date_target="2026-02-28")).record) == "late-February"
-    assert amenity_phrases(rec) == ["pool", "24/7 fitness center"]
+    assert amenity_phrases(rec) == ["pool", "fitness center"]
     assert amenity_phrases(rec, detailed=False) == ["pool", "fitness center"]
     assert short_property_name(rec) == ("Oak Ridge", "observed")
     assert short_property_name(run_gates(_variant(1, property_name="Maple Court Residences")).record) == ("Maple Court", "hypothesis")

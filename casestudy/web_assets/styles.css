@@ -240,3 +240,13 @@ footer a { color: var(--blue); }
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition-duration: 0.01ms !important; }
 }
+
+.answer-key { margin-top: 16px; padding: 16px; border: 1px solid var(--rule); border-radius: 6px; background: var(--paper); }
+.answer-key h4 { margin: 0 0 4px; }
+.answer-key-note { margin: 0 0 12px; font-size: 0.875rem; opacity: 0.75; }
+.answer-key-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.answer-key-list li { display: grid; grid-template-columns: 24px minmax(0, 1fr); gap: 8px; overflow-wrap: anywhere; }
+.answer-key-list .ok { color: #1d7a3a; font-weight: 700; }
+.answer-key-list .bad { color: #b3261e; font-weight: 700; }
+.answer-key-body { margin-top: 12px; font-size: 0.875rem; }
+.answer-key-body p { margin: 4px 0 0; white-space: pre-wrap; }
