@@ -372,6 +372,12 @@
   byId("copy-one").addEventListener("click", () => copyText(oneBytes(), "Copied one exact export line"));
   byId("copy-all").addEventListener("click", () => copyText(allBytes(), "Copied the complete JSONL export"));
   byId("download-all").addEventListener("click", () => downloadText(allBytes()));
+  byId("load-practice").addEventListener("click", async () => {
+    const response = await fetch("/case-study/assets/practice-12.jsonl");
+    byId("jsonl-input").value = await response.text();
+    byId("file-name").textContent = "12 practice records loaded";
+  });
+
   byId("file-input").addEventListener("change", async (event) => {
     const file = event.target.files[0];
     if (!file) return;

@@ -164,7 +164,7 @@ async def run_handler(request: web.Request) -> web.Response:
 
 async def asset_handler(request: web.Request) -> web.FileResponse:
     name = request.match_info["name"]
-    if name not in {"app.js", "styles.css", "agent-flow.png", "agent-flow.html"}:
+    if name not in {"app.js", "styles.css", "agent-flow.png", "agent-flow.html", "practice-12.jsonl"}:
         raise web.HTTPNotFound()
     return web.FileResponse(WEB_ROOT / name)
 
