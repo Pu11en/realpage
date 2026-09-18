@@ -35,7 +35,7 @@ Check: `python3 casestudy/research/check_candidates.py`
 
 ## Tasks
 
-- [ ] **H1 Messaging orchestration platforms (most important).** Open-source products that already
+- [x] **H1 Messaging orchestration platforms (most important).** Open-source products that already
   decide channel, respect preferences and consent, apply quiet hours in the user's time zone, cap
   frequency and run cadences: Novu, Dittofeed, Laudspeaker, listmonk, Mautic, Apache Unomi, and
   whatever else you find. For each, find the actual files implementing preference resolution,
