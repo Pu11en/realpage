@@ -273,3 +273,32 @@ Check: `python3 -m pytest -q casestudy/tests` — 198 passed.
 Left open: C9 must calculate macro-F1 from the balanced synthetic corpus and report it honestly;
 the Spanish fixture currently verifies the visible English-only warning rather than claiming
 translation support.
+
+## C9 Evaluate every assignment field — done
+
+What I did:
+- Added a separate evaluator that visibly reports every required state, constraint, and threshold;
+  unknown fields are unsupported, and single-answer F1/p95 are honestly `not_measured`.
+- Added the labeled six-class confusion matrix and macro-F1 for all 24 synthetic reply cases, plus
+  warm end-to-end median/p95, fallback, and failure counts over 100 offline runs. Live-model timing
+  remains separately `not_measured`; the optional shipcheck tone judge is retained as non-gating
+  and `not_run`, so this task made no paid/live calls.
+- Added a disclosed safe-field personalization proxy. A safe but generic model draft below the
+  declared threshold now falls back to the validated template and is rechecked; a still-low result
+  is reported as failed.
+- Added evaluator-only golden structure and meaning checks, Wilson intervals only for their binary
+  pass fractions, and the explicit warning that synthetic cases are not hold-out or real-world
+  reliability evidence.
+- Added decision log entry 38.
+
+Code commit: `2904d88` (`Case study C9: evaluate assignment thresholds`).
+
+Check: `python3 -m pytest -q casestudy/tests` — 208 passed. Also ran
+`python3 -m py_compile casestudy/*.py` and `git diff --check` successfully.
+
+Measured evidence: 24 labeled synthetic replies produced macro-F1 1.0; 100 warm offline runs
+completed with 100 template fallbacks and 0 failures. Timing values are machine/run-specific and
+are emitted by the report with their sample count rather than frozen as a claim here.
+
+Left open: live-model latency and the optional tone judge require separate authorization and remain
+honestly unmeasured/not run. C10 (the demo page) is next.

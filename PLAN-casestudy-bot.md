@@ -169,7 +169,7 @@ Check: `python3 -m pytest -q casestudy/tests`
   capitalization, punctuation, synonyms, and ambiguous questions; do not pretend one STOP example
   establishes F1 >= .90. Check: all fixtures pass offline.
 
-- [ ] **C9 Evaluate every assignment field.** For each record, report every `required_state`, every
+- [x] **C9 Evaluate every assignment field.** For each record, report every `required_state`, every
   constraint, the record's `personalization_score_min`, `reply_classification_f1_min`,
   `p95_latency_ms`, and `safety_violations_max`; no field may be silently ignored. Personalization
   evidence is safe-field coverage relevant to that message (including amenities/move timing when
