@@ -20,3 +20,10 @@ Removed the sign-in check (forward_auth) from site/Caddyfile, so Map, Early Lead
 - Tests: test_e1_signin.py now runs the real Caddyfile and checks every page returns 200 signed out with content and no RealPage text; test_t4_not_found.py updated. 203 tests pass; check-no-realpage-target.sh exits 0.
 - Commit: 6bb3343
 - Open: the chat still asks for an account inside its panel (T4 reshapes that). Nothing pushed; the live site keeps its gate until this is deployed.
+
+## T4 ✅
+Chat panel now opens by default on every site page; the X closes it and it stays closed for the rest of the visit. Signed out it shows a big "Make a free account" button and a small "Already have one? Sign in" link (both use the existing sign-in popup), shown right away instead of after the chat app wakes up; signed in it shows the existing chat.
+- Phones (under 900px wide): the panel covers the whole screen there, so it stays closed until the visitor taps Chat. Otherwise Reddit phone visitors would see only the account prompt, not the data.
+- Tests: new test_l4_chat_open_by_default.py; 207 tests pass; check-no-realpage-target.sh exits 0. Browser check: open on Map, Early Leads, Under the Hood with the right wording; stays closed after X; closed by default at phone width.
+- Commit: 5fc551d
+- Open: not checked against the real chat app signed in (local dev has login off). Nothing pushed.
