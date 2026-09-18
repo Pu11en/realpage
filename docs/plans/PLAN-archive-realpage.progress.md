@@ -128,3 +128,13 @@
 **How checked:** check-no-realpage-target.sh passes; lead-finder + lead-finder-cities + fixes_tests: 270 pass, same 4 chatbot failures as before (T7). node --check on map.js. Did not run the browser map check (check_map.py).
 
 **Left open:** Old run folders (propertystack/runs/NY) still hold a realpage_count field (history). T10 should eyeball the map page.
+
+## T7 ✅ chatbot no longer knows RealPage the company (2026-09-18)
+
+**What:** SOUL.md now says who CraneSignal is for (any business selling to apartment owners; not tied to one software company), drops RealPage from the on-topic company list, drops AI Visibility and the case-study mention, and treats every software company the same (web page read this turn, or labeled general knowledge). The chat image no longer bakes in the archived RealPage research folders, so the ps_research_search / ps_research_read tools and the ai_visibility_* table notes were removed from the plugin, skill, proxy status labels and README. Fallback reply no longer says "or RealPage". SPOT-CHECK.md and TEST-ANSWERS moved to archive/realpage/chatbot/. RealPage stays only as a detected software brand (realpage.com = "Software proof" link label).
+
+**Commit:** 60f37cb
+
+**How checked:** check-no-realpage-target.sh passes; tooling/qa/fixes_tests + chatbot/tests: 238 pass, 0 fail (the 4 old failures fixed: tests now match the new wording; the DOJ-timeline research test was removed with the research). Plugin loads locally and registers ps_schema + ps_sql.
+
+**Left open:** Not tested against the live chat model (no Docker build / no paid chat run) — T10 asks the 5 questions. The public repo link in SOUL.md is still github.com/Pu11en/realpage (the real repo name). propertystack/data/tx/chat-leads.csv was already modified before this task (3 phone numbers reformatted, one looks broken: "8-773-367-2410"); left untouched and uncommitted.
