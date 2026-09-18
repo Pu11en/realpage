@@ -282,3 +282,13 @@ footer a { color: var(--blue); }
 .code-steps a { font-family: "Geist Mono", ui-monospace, monospace; font-size: 0.8125rem; font-weight: 600; color: var(--blue); margin-left: 6px; white-space: nowrap; }
 .code-steps .rule { font-weight: 600; }
 .code-steps .st-failed .rule { color: var(--warn); }
+.code-steps { gap: 14px; }
+.code-steps .step-head { display: flex; flex-wrap: wrap; gap: 10px; align-items: baseline; }
+.code-steps .verdict { font-size: 0.8125rem; font-weight: 700; color: var(--ok); }
+.code-steps .st-failed .verdict { color: var(--warn); }
+.code-steps .where { font-family: "Geist Mono", ui-monospace, monospace; font-size: 0.75rem; color: var(--muted); }
+.code-steps .plain { margin: 4px 0 6px; }
+.code-steps .snip { min-height: 0; margin: 0; padding: 8px 10px; font-size: 12px; line-height: 1.5; background: #181818; color: #e8e8e8; border-radius: 4px; white-space: pre; overflow-x: auto; }
+.code-steps .snip .ln { display: block; opacity: 0.6; }
+.code-steps .snip .ln.hit { opacity: 1; background: #3a3a1a; color: #fff6b0; }
+.code-steps .snip .no { display: inline-block; width: 3.2em; color: #888; user-select: none; }

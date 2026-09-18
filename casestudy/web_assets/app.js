@@ -229,9 +229,16 @@
   }
 
   function renderCodeTrail(diagnostics) {
-    const steps = (diagnostics.why || []).filter((item) => item.status !== "skipped" && item.code);
-    byId("code-steps").innerHTML = steps.map((item) => `<li class="st-${escapeHtml(item.status)}"><span class="rule">${escapeHtml(words(item.rule))}</span>: ${escapeHtml(sentence(item.plain_english))}${codeLink(item.code)}</li>`).join("")
-      || "<li>No rule steps were recorded for this line.</li>";
+    const steps = (diagnostics.why || []).filter((item) => item.status !== "skipped" && item.snippet && item.snippet.length);
+    byId("code-steps").innerHTML = steps.map((item) => {
+      const code = item.snippet.map((l) => `<span class="ln${l.hit ? " hit" : ""}"><span class="no">${l.line}</span>${escapeHtml(l.text) || " "}</span>`).join("");
+      const verdict = item.status === "passed" ? "✓ passed" : item.status === "failed" ? "✗ stopped here" : escapeHtml(words(item.status));
+      return `<li class="st-${escapeHtml(item.status)}">
+        <div class="step-head"><span class="rule">${escapeHtml(words(item.rule))}</span><span class="verdict">${verdict}</span><span class="where">${escapeHtml(item.code)}</span></div>
+        <p class="plain"><b>What happened:</b> ${escapeHtml(sentence(item.plain_english))}</p>
+        <pre class="snip">${code}</pre>
+      </li>`;
+    }).join("") || "<li>No rule steps were recorded for this line.</li>";
   }
 
   function renderAiProcess(answer, diagnostics) {

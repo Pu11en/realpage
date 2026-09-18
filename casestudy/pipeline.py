@@ -12,6 +12,7 @@ structured diagnostic and a safe public answer (`next_message: null`, `next_acti
 from __future__ import annotations
 
 import json
+from pathlib import Path
 import time
 from dataclasses import dataclass, field
 from typing import Any, Iterable, Optional
@@ -72,7 +73,7 @@ class RunResult:
             "malformed": self.malformed,
             "why": [
                 {"rule": r.rule, "status": r.status, "plain_english": r.reason, "citation": r.citation,
-                 "confidence": r.confidence, "details": _jsonable(r.details), "code": getattr(r, "code", "")}
+                 "confidence": r.confidence, "details": _jsonable(r.details), "code": getattr(r, "code", ""), "snippet": _snippet(getattr(r, "code", ""))}
                 for r in self.why
             ],
             "verified_states": list(self.verified_states),
@@ -87,6 +88,23 @@ class RunResult:
             "versions": dict(self.versions),
             "evaluation": _jsonable(self.evaluation),
         }
+
+
+def _snippet(code: str, before: int = 3, after: int = 1) -> list[dict[str, Any]]:
+    """The few source lines around the line that made a decision, for showing on the review page."""
+    import linecache
+    try:
+        file, line = code.split(":")
+        n = int(line)
+    except ValueError:
+        return []
+    path = str(Path(__file__).parent / file)
+    out = []
+    for i in range(max(1, n - before), n + after + 1):
+        text = linecache.getline(path, i).rstrip("\n")
+        if text or i <= n:
+            out.append({"line": i, "text": text, "hit": i == n})
+    return out
 
 
 def submission_line(answer: AssignmentAnswer) -> str:
