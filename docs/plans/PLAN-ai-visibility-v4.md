@@ -12,8 +12,8 @@ Builds on v2 (all done): `local_ai.py`, `run.sh`, `frozen_audit.ts`, run history
 Drew's answers:
 - **Story:** buyer market share vs Yardi, Entrata, AppFolio, Buildium, ResMan **plus "what AIs get
   wrong about RealPage"**. Not a renter/reputation study.
-- **"Wrong" means:** contradicts the realpage.com library (`01-company/realpage-key-facts.md`,
-  `02-products/realpage/*.md`) or one of ~15 hand-checked facts (things RealPage's own site won't say,
+- **"Wrong" means:** contradicts the realpage.com library (`archive/realpage/01-company/realpage-key-facts.md`,
+  `archive/realpage/02-products/realpage/*.md`) or one of ~15 hand-checked facts (things RealPage's own site won't say,
   e.g. lawsuit outcomes). The session drafts and sources the 15 facts; Drew only skims them.
 - **AIs (4 set-ups):** `claude-web` (Claude + web search), `chatgpt` (Codex; turn on its web search if
   the CLI supports it, else label "from memory"), `gemini-web` (Gemini + Google Search), `gemini`
@@ -63,7 +63,7 @@ Open: http://localhost:8765/ai-visibility.html
   page label to "ChatGPT engine (from memory)". Each question asked `AI_VIS_SAMPLES` times (default 3;
   `--practice` = 1). Saving as it goes; a restarted run skips answers already saved for that run.
   Tests with the fake AI. Update the repo `AGENTS.md` "Run AI visibility" note. Commit.
-- [ ] **T3 The 15 checked facts.** Write `09-ai-visibility/checked-facts.md`: ~15 facts an AI is
+- [ ] **T3 The 15 checked facts.** Write `archive/realpage/09-ai-visibility/checked-facts.md`: ~15 facts an AI is
   likely to get wrong about RealPage (DOJ and state lawsuit status and settlements, product renames
   and retirements, major acquisitions, headquarters, ownership, flagship product names), each with
   date and 2 independent source links (court records, major news, realpage.com). Research with the
@@ -80,8 +80,8 @@ Open: http://localhost:8765/ai-visibility.html
   company, named % and cited % (realpage.com link in the answer or in gemini-web's sources), average
   position, and a "shaky" flag where the 3 asks disagreed on the top pick. Old runs stay readable.
   Tests on fixtures. Commit.
-- [ ] **T6 Fix pages.** Write `09-ai-visibility/fixes/realpage-facts.md` and
-  `09-ai-visibility/fixes/realpage-vs-yardi.md` (optional third: the area RealPage loses most on
+- [ ] **T6 Fix pages.** Write `archive/realpage/09-ai-visibility/fixes/realpage-facts.md` and
+  `archive/realpage/09-ai-visibility/fixes/realpage-vs-yardi.md` (optional third: the area RealPage loses most on
   practice data, e.g. screening), built only from the library and `checked-facts.md`, fair to rivals,
   every claim with its source link -- written as pages RealPage could actually publish. Commit.
 - [ ] **T7 Before/after harness.** `tooling/ai-visibility/before_after.py`: picks up to 8 questions
@@ -102,5 +102,5 @@ Open: http://localhost:8765/ai-visibility.html
   trend charts, per-AI panels and stacked lawsuit boxes. Plain empty states. Update
   `tooling/qa/check_ai_visibility_page.py`. Commit.
 - [ ] **T10 Reports follow the page.** Update `report.py` (the Discord recap) and `to_research.py`
-  (the chat's summary in `09-ai-visibility/`) to the new numbers: market share, wrong claims, top
+  (the chat's summary in `archive/realpage/09-ai-visibility/`) to the new numbers: market share, wrong claims, top
   wrong claims, before/after. Tests on fixtures. Commit.

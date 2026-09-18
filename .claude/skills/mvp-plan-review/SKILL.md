@@ -12,9 +12,9 @@ plan's word for anything it doesn't cite.
 
 ## Context you must load first
 
-- `09-build-ideas/brainstorm-2026-09-10-pitch-to-realpage.md` §1 — the mission
+- `archive/realpage/09-build-ideas/brainstorm-2026-09-10-pitch-to-realpage.md` §1 — the mission
   and the eight scoring criteria
-- `findings.md` and `04-reddit/index.md` — the evidence a plan may cite
+- `findings.md` and `archive/realpage/04-reddit/index.md` — the evidence a plan may cite
 - The plan under review (and any research-run file it depends on)
 
 ## The mission in one line
@@ -78,7 +78,7 @@ already have it.
 
 ## Output format
 
-Write the review to `09-build-ideas/review-<plan-slug>.md` with the repo header
+Write the review to `archive/realpage/09-build-ideas/review-<plan-slug>.md` with the repo header
 block (`Source / Fetched / Method / Confidence`), then:
 
 ```

@@ -1,7 +1,7 @@
 """Write the AI Visibility results as a research note the chatbot can read.
 
 Reads site/data/ai-visibility.json + ai-visibility-actions.json and writes
-09-ai-visibility/summary.md (copied into the chatbot image with the other research folders).
+archive/realpage/09-ai-visibility/summary.md (copied into the chatbot image with the other research folders).
 Re-run after tooling/ai-visibility/run.sh.
 """
 import json
@@ -30,7 +30,7 @@ for g in a["groups"]:
     L.append(f"### {g['when']}")
     for x in g["actions"]:
         L.append(f"- **{x['title']}** ({x.get('effort', '')}). Why: {x['why']} Do: {x['do']}")
-out = ROOT / "09-ai-visibility/summary.md"
+out = ROOT / "archive/realpage/09-ai-visibility/summary.md"
 out.parent.mkdir(exist_ok=True)
 out.write_text("\n".join(L) + "\n")
 print(out)

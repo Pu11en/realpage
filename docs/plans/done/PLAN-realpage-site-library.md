@@ -22,10 +22,10 @@ What we know (checked 2026-09-15):
 - Tools already on this machine (free): Crawl4AI 0.8.6 (Python) and the `crawl4ai-server` Docker
   container; Jina Reader (`JINA_API_KEY` in repo-root `.env`) as fallback for pages Crawl4AI fails on.
   Brave is for search only and is not needed here. SearXNG is banned. Never print or commit keys.
-- The chat (`chatbot/`) reads markdown under `01-company` .. `09-ai-visibility` via
+- The chat (`chatbot/`) reads markdown under `archive/realpage/01-company` .. `archive/realpage/09-ai-visibility` via
   `ps_research_search` (line-by-line keyword match, returns the full file list on every call) and
   `ps_research_read`. So 3,000 raw pages must **not** go into those folders -- only the cards, the
-  facts sheet and a compact page index do. Raw pages live in `raw/realpage-site/`.
+  facts sheet and a compact page index do. Raw pages live in `archive/realpage/raw/realpage-site/`.
 
 Safety rules (every task): tests never touch the network or any AI (saved fixture pages only). The
 crawl is polite: 1 request per second, one at a time, a clear user agent, honours robots.txt,
@@ -35,7 +35,7 @@ Nothing pushes; the live chat is not redeployed by this plan.
 
 Run with: `Do the next unticked task in PLAN-realpage-site-library.md, then tick it and stop.`
 Check: `bash tooling/qa/check-realpage-library.sh`
-Try: `cat raw/realpage-site/CRAWL-REPORT.md`
+Try: `cat archive/realpage/raw/realpage-site/CRAWL-REPORT.md`
 Open: (no page -- part 1 is files only)
 
 ## How to try it (30 seconds)
@@ -46,22 +46,22 @@ Open: (no page -- part 1 is files only)
 ## Tasks
 
 - [x] **T1 Page list.** `tooling/realpage-library/sitemap.py` reads the cms sitemap index and all
-  sub-sitemaps into `raw/realpage-site/urls.csv` (url, type from the sitemap name, lastmod).
+  sub-sitemaps into `archive/realpage/raw/realpage-site/urls.csv` (url, type from the sitemap name, lastmod).
   Drops duplicates and `/search`. Create `tooling/qa/check-realpage-library.sh` (runs
   `pytest tooling/realpage-library/tests` offline, no keys) and test on saved sitemap fixtures. Commit.
 - [x] **T2 Crawler.** `tooling/realpage-library/crawl.py` fetches each URL with Crawl4AI and saves
-  clean markdown to `raw/realpage-site/pages/<type>/<slug>.md`, each starting with a small header:
+  clean markdown to `archive/realpage/raw/realpage-site/pages/<type>/<slug>.md`, each starting with a small header:
   url, title, type, lastmod, crawled date. Strips menus, footers and cookie banners. Jina Reader
   fallback when Crawl4AI returns an error or under 200 characters. 1 request/sec, resumes by skipping
-  saved pages, logs failures to `raw/realpage-site/failed.csv`. `--limit N` for a practice run. Tests
+  saved pages, logs failures to `archive/realpage/raw/realpage-site/failed.csv`. `--limit N` for a practice run. Tests
   with saved HTML fixtures and a fake fetcher. Commit.
 - [x] **T3 Real crawl.** Run `crawl.py --limit 20`, spot-check 5 pages by eye against the live site
   (text complete, no menu junk), fix the cleaner if needed, then run the full crawl (~3,000 pages,
   ~1 hour; restart resumes). Retry `failed.csv` once. Record counts per type and failures in
-  `raw/realpage-site/CRAWL-REPORT.md`. Commit the pages (plain text only).
-- [x] **T4 Page index.** `tooling/realpage-library/index.py` writes `01-company/realpage-site-index.md`:
+  `archive/realpage/raw/realpage-site/CRAWL-REPORT.md`. Commit the pages (plain text only).
+- [x] **T4 Page index.** `tooling/realpage-library/index.py` writes `archive/realpage/01-company/realpage-site-index.md`:
   one line per non-blog page (pages, case studies, ebooks, management team, testimonials, hub terms)
   with title, type and link, grouped by type; blog posts, videos, webcasts and episodes as a
   count plus the 50 newest titles. Also finds the product pages (from `/products/`-style URLs and
-  the site menu) and lists them in `raw/realpage-site/products.csv` (name, url, related pages).
+  the site menu) and lists them in `archive/realpage/raw/realpage-site/products.csv` (name, url, related pages).
   Tests on fixtures. Commit.

@@ -31,7 +31,7 @@ More screens (Early Leads, Under the Hood, chat): `docs/design-screens/final/`.
 | Chat service | `chatbot/` | A Hermes agent behind a small proxy (`proxy.py`) plus the Open WebUI chat app. Answers only from the baked-in data and research, read-only. Details: `chatbot/README.md`. |
 | Data | `propertystack/` | The pipeline of skills (find apartments → find website → detect software → find sales → score leads) and its outputs in `propertystack/data/<area>/`. Details: `propertystack/README.md`. |
 | Tools | `tooling/` | Local run scripts, QA checks, and the helpers that turn pipeline data into what the site and chat read. |
-| Research | `01-company/` … `09-build-ideas/`, `raw/` | Public-source evidence about RealPage and its market. `raw/` is verbatim captures: add, never edit. |
+| Research | `archive/realpage/01-company/` … `archive/realpage/09-build-ideas/`, `archive/realpage/raw/` | Public-source evidence about RealPage and its market. `raw/` is verbatim captures: add, never edit. |
 | Plans | `docs/plans/` | Finished and open build plans, listed in `docs/plans/README.md`. Older material is in `archive/`. |
 
 Both services deploy to Railway from the `main` branch. New work is tried locally first and

@@ -2,10 +2,10 @@
 
     python3 tooling/realpage-library/index.py
 
-Reads raw/realpage-site/pages/<type>/*.md (from crawl.py) and writes:
-  01-company/realpage-site-index.md   one line per non-blog page, grouped by type; blog-like
+Reads archive/realpage/raw/realpage-site/pages/<type>/*.md (from crawl.py) and writes:
+  archive/realpage/01-company/realpage-site-index.md   one line per non-blog page, grouped by type; blog-like
                                       types only as a count plus the newest titles
-  raw/realpage-site/products.csv      name, url, related pages (same top-level section)
+  archive/realpage/raw/realpage-site/products.csv      name, url, related pages (same top-level section)
 No network, no AI.
 """
 import argparse
@@ -15,8 +15,8 @@ from collections import defaultdict
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
-SITE = ROOT / "raw" / "realpage-site"
-INDEX_OUT = ROOT / "01-company" / "realpage-site-index.md"
+SITE = ROOT / "archive" / "realpage" / "raw" / "realpage-site"
+INDEX_OUT = ROOT / "archive" / "realpage" / "01-company" / "realpage-site-index.md"
 PRODUCTS_OUT = SITE / "products.csv"
 
 LISTED = ["pages", "case-studies", "ebooks", "management-team", "testimonials", "hub-terms"]

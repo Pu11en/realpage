@@ -20,7 +20,7 @@ Rules for every task:
 - Delete nothing that the running services read. Check with `grep -r` before moving any file.
 - Local only; **never push**. Drew pushes after trying it. (V7 is the exception, and only after
   Drew says so in the thread.)
-- Do not touch `09-ai-visibility/` or the AI Visibility work.
+- Do not touch `archive/realpage/09-ai-visibility/` or the AI Visibility work.
 
 Check: `python3 -m pytest -q chatbot/tests tooling/realpage-library/tests tooling/qa/fixes_tests`
 Try: `bash tooling/dev.sh`

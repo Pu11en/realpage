@@ -21,7 +21,7 @@ RUN mkdir -p /kb/data /kb/research && \
     ( [ -e /ctx/propertystack/data/street-talk/street_talk.csv ] && \
       cp /ctx/propertystack/data/street-talk/street_talk.csv /kb/data/street-talk.csv || true ) && \
     for d in 01-company 02-products 03-reviews 04-reddit 05-social 06-news 07-competitors 08-voice-of-customer 09-ai-visibility; do \
-      mkdir -p /kb/research/$d; if [ -d /ctx/$d ]; then cp -R /ctx/$d/. /kb/research/$d/; fi; \
+      mkdir -p /kb/research/$d; if [ -d /ctx/archive/realpage/$d ]; then cp -R /ctx/archive/realpage/$d/. /kb/research/$d/; fi; \
     done && \
     find /kb/research -type f ! -name '*.md' ! -name '*.txt' ! -name '*.csv' -delete
 
