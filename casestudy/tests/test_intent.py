@@ -121,9 +121,8 @@ def test_option_days_skip_sunday():
 def test_unknown_primary_cta_is_flagged():
     raw = _variant(0)
     raw["assertions"]["constraints"]["primary_cta"] = "apply_now"
-    intent, _, _ = _run(raw)
-    assert intent.cta["type"] == "schedule_tour"
-    assert next(r for r in intent.results if r.rule == "cta_type").status == "failed"
+    _, _, out = _run(raw)
+    assert out.decision == "escalate" and out.reason == "no_playbook_for_task"
 
 
 def test_stop_yields_mark_opted_out():

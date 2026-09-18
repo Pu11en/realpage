@@ -54,6 +54,13 @@ KNOWN_LIFECYCLE = {"new", "open", "active", "applicant", "resident", "former_res
 OPT_OUT_WORDS = {"stop", "stopall", "unsubscribe", "cancel", "end", "quit", "remove me", "opt out"}
 # Spanish keywords and near-misses: revocation is valid by "any reasonable means" (47 CFR 64.1200(a)(10)).
 OPT_OUT_FIRST_WORDS = OPT_OUT_WORDS | {"stopp", "stp", "alto", "parar", "para", "cancelar", "detener", "baja", "unsub"}
+# The only playbook the supplied examples teach is prospect outreach whose goal is a tour.
+TOUR_CTAS = {"book_tour", "schedule_tour", "tour"}
+TOUR_PERSONAS = {"prospect", "lead"}
+OTHER_PURPOSE_WORDS = ("rent", "payment", "maintenance", "work_order", "renewal", "renew", "survey", "moveout", "move_out",
+                       "application", "applicant", "document", "docs", "reminder", "post_tour", "delinquen", "lease_end", "notice")
+OTHER_PURPOSE_FIELDS = ("rent_due_date", "work_order_status", "work_order_time", "lease_end_date", "missing_documents",
+                        "move_out_date", "tour_at", "tour_scheduled_at", "tour_completed_at", "balance_due", "application_id")
 KNOWN_PERSONAS = {"prospect", "lead", "applicant", "resident", "renter", "former_resident"}
 HELP_WORDS = {"help", "info"}
 NEGATIVE_PHRASES = (
@@ -242,6 +249,23 @@ def normalize(raw: Any) -> NormalizedRecord:
         prior_options=prior,
         warnings=warnings,
     )
+
+
+def _unsupported_purpose(rec: "NormalizedRecord") -> Optional[str]:
+    cta = rec.constraints.get("primary_cta")
+    if isinstance(cta, str) and cta.strip().lower() not in TOUR_CTAS:
+        return f"a {cta!r} task"
+    persona = (rec.persona or "").strip().lower()
+    if persona and persona not in TOUR_PERSONAS:
+        return f"a {persona} message"
+    tid = rec.task_id.lower()
+    for w in OTHER_PURPOSE_WORDS:
+        if w in tid:
+            return f"a {w.replace('_', ' ')} task"
+    for f in OTHER_PURPOSE_FIELDS:
+        if rec.input.get(f) not in (None, "", []):
+            return f"a task about {f.replace('_', ' ')}"
+    return None
 
 
 def _clean_first_name(value: Any) -> Optional[str]:
@@ -494,6 +518,15 @@ def run_gates(raw: Any) -> GateOutcome:
     results.append(lc)
     if lc.status == "failed":
         return GateOutcome("suppress", "lifecycle_blocked", results, reply_class, verified_states=verified, unsupported_states=unsupported, record=rec)
+
+    # 3a. is this a tour-outreach task at all? Anything else has no approved playbook yet.
+    purpose = _unsupported_purpose(rec)
+    if purpose:
+        p = GateResult("purpose_gate", "failed", f"this looks like {purpose}, not prospect tour outreach; the only approved playbook is tour outreach, so a person handles it",
+                       "project rule: never send a tour pitch for a different job (rent, maintenance, renewal, application, survey)", "conservative_default", {"purpose": purpose})
+        results.append(p)
+        return GateOutcome("escalate", "no_playbook_for_task", results, reply_class, verified_states=verified,
+                           unsupported_states=unsupported, record=rec)
 
     # 3b. the customer said something we must not ignore (checked after consent, so no-consent still wins)
     if reply_class in ("question", "help", "unknown"):
