@@ -22,7 +22,8 @@ from casestudy.contract import AssignmentAnswer
 from casestudy.gates import GateOutcome, GateResult, run_gates
 from casestudy.intent import Intent, infer_intent
 from casestudy.schedule import Schedule, infer_schedule
-from casestudy.templates import TemplateOutput, render_templates
+from casestudy.templates import TemplateOutput, personalization_fields, render_templates
+from casestudy.validators import Draft
 from casestudy.writer import WriterConfig, WriterOutput, write
 
 PIPELINE_VERSION = "pipeline_v1"
@@ -159,14 +160,31 @@ def run_record(raw: Any, config: Optional[WriterConfig] = None, client=None, clo
         template = render_templates(outcome, schedule, intent)
         wo = write(outcome, schedule, intent, template, config=config, client=client, clock=clock)
         why += outcome.results + schedule.results + intent.results + template.results + wo.results
+        if wo.report is not None:
+            why += wo.report.results
         if wo.error:
             errors.append("writer: " + wo.error)
         answer = _assemble(outcome, schedule, intent, template, wo, why, errors)
         rec = outcome.record
+        final_message = answer.next_message
+        final_personalization = []
+        if rec is not None and final_message is not None:
+            final_draft = Draft(
+                channel=final_message.channel,
+                subject=final_message.subject,
+                body=final_message.body,
+                cta=final_message.cta.model_dump(mode="json"),
+                source=wo.engine,
+                label="public_answer",
+            )
+            final_personalization = personalization_fields(rec, final_draft)
+        final_verified = list(dict.fromkeys(
+            list(outcome.verified_states) + (list(wo.report.verified_states) if wo.report is not None else [])
+        ))
         return RunResult(
             task_id=rec.task_id if rec else task_id, answer=answer, why=why, decision=outcome.decision, engine=wo.engine,
-            verified_states=list(outcome.verified_states), unsupported_states=list(outcome.unsupported_states),
-            reply_class=outcome.reply_class, personalization_fields=list(template.personalization_fields),
+            verified_states=final_verified, unsupported_states=list(outcome.unsupported_states),
+            reply_class=outcome.reply_class, personalization_fields=final_personalization,
             errors=errors, warnings=list(rec.warnings) if rec else [], latency_ms=(clock() - t0) * 1000.0,
             model_latency_ms=wo.model_latency_ms, fallback_reason=wo.fallback_reason, malformed=malformed,
             versions={"pipeline": PIPELINE_VERSION, "schedule": schedule.version, "intent": intent.version,
@@ -182,6 +200,12 @@ def run_record(raw: Any, config: Optional[WriterConfig] = None, client=None, clo
 
 def run_line(line: str, index: int, config: Optional[WriterConfig] = None, client=None, clock=time.monotonic) -> RunResult:
     """Parse one JSONL line and run it; unparseable lines yield a diagnostic plus a safe answer."""
+    if not line.strip():
+        line_number = index + 1
+        why = [GateResult("parse", "failed", f"line {line_number} is blank", PLAN_CITE + ": one safe answer per input line", "conservative_default", {"line": line_number})]
+        return RunResult(task_id=f"malformed_line_{line_number}", answer=_no_message_answer("escalate", "blank_input"), why=why,
+                         decision="escalate", engine="none", errors=["blank_input: input line is blank"], malformed=True,
+                         versions={"pipeline": PIPELINE_VERSION})
     try:
         raw = json.loads(line)
     except ValueError as exc:
@@ -195,10 +219,10 @@ def run_line(line: str, index: int, config: Optional[WriterConfig] = None, clien
 # --------------------------------------------------------------------------- batch
 
 def run_batch(lines: Iterable[str], config: Optional[WriterConfig] = None, client=None, clock=time.monotonic) -> list[RunResult]:
-    """One RunResult per non-blank input line, in input order."""
+    """One safe RunResult per input line, including blank lines, in input order."""
     config = config or WriterConfig.from_env()
     results: list[RunResult] = []
-    for i, line in enumerate(l for l in lines if l.strip()):
+    for i, line in enumerate(lines):
         results.append(run_line(line, i, config=config, client=client, clock=clock))
     return results
 

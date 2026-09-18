@@ -7,6 +7,8 @@ import pytest
 from casestudy.cli import main
 from casestudy.contract import AssignmentAnswer
 from casestudy.pipeline import RunResult, diagnostics_jsonl, run_batch, run_record, submission_jsonl, submission_line
+from casestudy.validators import Draft, validate_draft
+from casestudy.writer import WriterOutput
 from casestudy.tests.test_contract import semantic_checklist_sms
 from casestudy.writer import WriterConfig
 
@@ -74,7 +76,8 @@ def test_diagnostics_carry_required_fields():
     d = run_record(SAMPLES[1], config=OFFLINE).diagnostics()
     assert d["task_id"] == "prospect_long_horizon_day3"
     assert d["engine"] == "template" and d["fallback_reason"] == "offline mode"
-    assert d["verified_states"] == ["consent_verified"] and d["unsupported_states"] == []
+    assert d["verified_states"] == ["consent_verified", "fair_housing_check_passed", "brand_style_applied"]
+    assert d["unsupported_states"] == []
     assert d["reply_class"] in (None, "none")
     assert {"profile.first_name", "profile.amenity_interest", "input.move_date_target"} <= set(d["personalization_fields"])
     assert d["latency_ms"] >= 0 and d["errors"] == []
@@ -82,6 +85,30 @@ def test_diagnostics_carry_required_fields():
         assert {"rule", "plain_english", "citation", "confidence", "status"} <= set(entry)
         assert entry["confidence"] in ("observed", "input_required", "hypothesis", "conservative_default")
     json.dumps(d)  # serializable
+
+
+def test_diagnostics_use_final_draft_for_personalization_and_validator_states(monkeypatch):
+    import casestudy.pipeline as p
+
+    final = Draft(
+        "sms",
+        "Hi there—welcome to our community! Want a tour? Reply 1 for Thu, 2 for Fri. Reply STOP to opt out.",
+        None,
+        SAMPLES[0]["expected"]["next_message"]["cta"],
+        source="model",
+        label="model.generic",
+    )
+
+    def final_writer(outcome, schedule, intent, template, **kwargs):
+        report = validate_draft(final, outcome.record)
+        assert report.passed
+        return WriterOutput(final, "model", report)
+
+    monkeypatch.setattr(p, "write", final_writer)
+    d = run_record(SAMPLES[0], config=OFFLINE).diagnostics()
+    assert d["personalization_fields"] == ["channel"]
+    assert {"consent_verified", "fair_housing_check_passed", "brand_style_applied"} <= set(d["verified_states"])
+    assert any(r["rule"] == "fair_housing_check_passed" for r in d["why"])
 
 
 # ------------------------------------------------------------------ terminal decisions
@@ -98,6 +125,7 @@ def test_no_consent_exports_suppress():
     res = run_record(r, config=OFFLINE)
     assert res.answer.next_message is None and res.answer.next_action.type == "suppress"
     assert res.answer.next_action.reason == "no_consent"
+    assert res.diagnostics()["personalization_fields"] == []
 
 
 def test_bad_timezone_exports_escalate():
@@ -135,6 +163,22 @@ def test_malformed_records_yield_safe_answers_and_keep_order():
         AssignmentAnswer.model_validate(json.loads(line))
 
 
+def test_blank_lines_get_safe_answers_without_renumbering_later_errors():
+    results = run_batch([LINES[0], "", "   ", "{not json", LINES[1]], config=OFFLINE)
+    assert len(results) == 5
+    assert [r.task_id for r in results] == [
+        "prospect_welcome_day0", "malformed_line_2", "malformed_line_3",
+        "malformed_line_4", "prospect_long_horizon_day3",
+    ]
+    for result in results[1:3]:
+        assert result.submission() == {
+            "next_message": None,
+            "next_action": {"type": "escalate", "reason": "blank_input"},
+        }
+        assert result.diagnostics()["why"][0]["details"]["line"] in (2, 3)
+    assert results[3].diagnostics()["why"][0]["details"]["line"] == 4
+
+
 def test_internal_error_is_contained(monkeypatch):
     import casestudy.pipeline as p
     monkeypatch.setattr(p, "infer_schedule", lambda o: (_ for _ in ()).throw(RuntimeError("boom")))
@@ -155,7 +199,7 @@ def _twelve():
 
 def test_twelve_line_batch_exports_twelve_ordered_lines(tmp_path):
     lines = _twelve()
-    results = run_batch(lines + ["", "   "], config=OFFLINE)
+    results = run_batch(lines, config=OFFLINE)
     assert [r.task_id for r in results] == [json.loads(l)["task_id"] for l in lines]
     sub = submission_jsonl(results)
     assert len(sub.splitlines()) == 12

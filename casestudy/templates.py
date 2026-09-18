@@ -240,7 +240,12 @@ def email_candidates(rec: NormalizedRecord, outcome: GateOutcome, intent: Intent
 
 # --------------------------------------------------------------------------- driver
 
-def _personalization_fields(rec: NormalizedRecord, draft: Draft) -> list[str]:
+def personalization_fields(rec: NormalizedRecord, draft: Draft) -> list[str]:
+    """Return safe input fields visibly used by this specific draft.
+
+    This must be run against the final selected draft (model or template), not merely the
+    template offered to the writer as a fallback.
+    """
     used: list[str] = []
     text = f"{draft.subject or ''}\n{draft.body}".lower()
     if _first_name(rec) and _first_name(rec).lower() in text:
@@ -297,4 +302,4 @@ def render_templates(outcome: GateOutcome, schedule: Schedule, intent: Intent) -
         results.append(GateResult("template", "failed", "every template candidate failed a hard validator rule", PLAN_CITE, "conservative_default", {"failures": [[r.rule for r in rep.hard_failures] for rep in reports]}))
         return TemplateOutput(None, candidates, reports, [], results)
     results.append(GateResult("template", "passed", f"template {chosen.label!r} passes all hard validator rules", PLAN_CITE, "conservative_default", {"label": chosen.label, "candidates_tried": candidates.index(chosen) + 1}))
-    return TemplateOutput(chosen, candidates, reports, _personalization_fields(rec, chosen), results)
+    return TemplateOutput(chosen, candidates, reports, personalization_fields(rec, chosen), results)
