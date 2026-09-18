@@ -17,6 +17,46 @@ docker run --rm -p 18091:8080 -e CASESTUDY_OFFLINE=true cranesignal-case-study
 Open `http://localhost:18091/case-study`. The signed-in CraneSignal preview also
 routes `/case-study*` to this service through its existing authentication gate.
 
+## Run the demo
+
+1. Paste assignment JSONL into the workbench or choose a `.jsonl` file. One JSON
+   object goes on each line.
+2. Leave **Offline templates** checked for the safest demo, then select **Run
+   records**. The exact submission object is on the left; explanations and checks
+   stay on the right and are never included in the export.
+3. Use **Copy one**, **Copy all**, or **Download**. All three use the server's
+   canonical serializer; the downloaded file is named
+   `case-study-submission.jsonl` and normally appears in the browser's Downloads
+   folder.
+
+To rehearse the HTTP service without credentials or live model calls, start it in
+one terminal and run the checker in another:
+
+```bash
+env -u DEEPSEEK_API_KEY -u DEEPSEEK_MODEL python3 -m casestudy.web --port 18091
+python3 -m casestudy.rehearsal --base-url http://127.0.0.1:18091 --output-dir /tmp/casestudy-rehearsal
+```
+
+The checker runs both supplied examples, a 12-record practice batch, forced
+offline copies, and a malformed middle row. It writes and reparses every export;
+every line must match the strict public contract. Run the second command twice
+for the full C13 dress rehearsal.
+
+## Recovery
+
+- **Model or key trouble:** check **Offline templates** and run the same input
+  again. The public shape is unchanged and diagnostics show `template` for a
+  message or `none` for a deterministic no-send decision.
+- **Service trouble:** stop the local server with `Ctrl-C`, rerun the start
+  command above, open `/health`, and expect `{"status": "ok"}`.
+- **One bad row:** keep the batch intact. The bad row becomes a safe escalation
+  with its own error while the other rows still export in order.
+- **Need the saved result:** look for `case-study-submission.jsonl` in Downloads,
+  or use **Copy all** and save the exact clipboard text as a `.jsonl` file.
+
+The one-page interview talk track and emergency checklist are in
+`casestudy/INTERVIEW-CARD.md`.
+
 ## Railway service
 
 Create a separate Railway service named `propertystack-case-study` from this

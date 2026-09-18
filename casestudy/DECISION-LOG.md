@@ -529,3 +529,19 @@ Fair Housing rule, federal calling rule, workflow guidance, and instruction-foll
 shipcheck and build-bot project links remain separate from those citations. **Source:**
 `PLAN-casestudy-bot.md` C12, decisions 26–40, `C12-citation-verification.md`, the two supplied expected
 blocks, and the C9 evaluator snapshot measured 2026-09-17.
+
+## 42. Dress rehearsal: prove recovery without spending a live call
+
+**Decided:** The final rehearsal uses the actual local HTTP service and verifies five cases: both
+goldens in configured mode with no credentials, 12 ordered practice records in that same
+missing-key fallback, both batches in explicit offline mode, and a malformed row between the two
+goldens. A standard-library checker saves and reparses the canonical export, validates every line
+against `AssignmentAnswer`, checks batch bytes against each server-owned line, requires the
+template engine for messages (or `none` for a deterministic no-send), and confirms that the
+malformed row becomes a safe escalation without losing its
+neighbors. The live 12 hold-outs are not stored in this repository; the card tells Drew how to
+paste or upload them during the interview. **Alternatives:** spending a live model call for a
+rehearsal; copying diagnostics into the submission; inventing 12 supposed hold-outs; checking only
+the Python pipeline rather than the HTTP boundary. **Why it won:** C13 needs a production-shaped,
+repeatable recovery proof while the build rules prohibit unapproved keys, spend, push, or deploy.
+**Source:** `PLAN-casestudy-bot.md` C13; decisions 36, 39, and 40.
