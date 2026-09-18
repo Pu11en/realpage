@@ -278,8 +278,19 @@
     if (e.key === "Escape" && isOpen()) closePanel();
   });
 
+  // Early Leads (reached from the nav or a map dot) opens the chat by itself
+  // once per page load on screens wide enough to show it beside the table.
+  // renderShell() calls initChatPanel() again later, so the flag keeps a
+  // later close from being undone.
+  let autoOpened = false;
+
   function initChatPanel() {
     wireTriggers();
+    if (!autoOpened && document.body.dataset.chatAutoOpen === "1" && window.innerWidth >= 900) {
+      autoOpened = true;
+      openPanel();
+      return;
+    }
     if (isOpen()) openPanel();
   }
 

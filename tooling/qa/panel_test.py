@@ -17,10 +17,18 @@ PAGES = ["index.html", "map.html", "under-the-hood.html", "property.html?id=1"]
 SCREENSHOT_DIR = "/tmp/qa"
 
 
+CHAT_ORIGIN = [""]
+
+
 async def check_console_errors(page, path, bugs):
     errs = []
     page.on("pageerror", lambda e: errs.append(f"pageerror: {e}"))
-    page.on("console", lambda m: m.type == "error" and errs.append(f"console: {m.text}"))
+    # Early Leads opens the chat on load, so the chat app's own signed-out
+    # auth checks (401/404 from the chat address) land here; those aren't site bugs.
+    chat = CHAT_ORIGIN[0]
+    page.on("console", lambda m: m.type == "error"
+            and not (chat and (m.location or {}).get("url", "").startswith(chat))
+            and errs.append(f"console: {m.text}"))
     resp = await page.goto(path, wait_until="networkidle")
     if resp is None or resp.status >= 400:
         bugs.append(f"{path}: failed to load (status {resp.status if resp else 'none'})")
@@ -33,6 +41,7 @@ async def main():
     site = sys.argv[1] if len(sys.argv) > 1 else "http://localhost:8766"
     chat = sys.argv[2] if len(sys.argv) > 2 else "http://localhost:3001"
     bugs = []
+    CHAT_ORIGIN[0] = chat.rstrip("/")
     os.makedirs(SCREENSHOT_DIR, exist_ok=True)
 
     async with async_playwright() as pw:
@@ -45,9 +54,14 @@ async def main():
                 page = await context.new_page()
                 await check_console_errors(page, f"{site}/{page_path}", bugs)
 
-                ask = page.locator("[data-chat-toggle]").first
-                await ask.click()
                 panel = page.locator("#chat-panel")
+                # Early Leads opens the chat by itself on wide screens.
+                auto = tag == "desktop" and page_path.split("?")[0] in ("", "index.html")
+                if auto:
+                    if not await panel.evaluate("(el) => el.classList.contains('open')"):
+                        bugs.append(f"{page_path} ({tag}): chat didn't open by itself on Early Leads")
+                else:
+                    await page.locator("[data-chat-toggle]").first.click()
                 is_open = await panel.evaluate("(el) => el.classList.contains('open')")
                 if not is_open:
                     bugs.append(f"{page_path} ({tag}): Ask button didn't open the panel")
@@ -60,7 +74,6 @@ async def main():
             if tag == "desktop":
                 page = await context.new_page()
                 await check_console_errors(page, f"{site}/index.html", bugs)
-                await page.locator("[data-chat-toggle]").first.click()
                 await page.goto(f"{site}/map.html", wait_until="networkidle")
                 still_open = await page.locator("#chat-panel").evaluate("(el) => el.classList.contains('open')")
                 if not still_open:
@@ -74,7 +87,7 @@ async def main():
         context = await browser.new_context(viewport={"width": 1440, "height": 900})
         await context.add_init_script(f"window.PS_CHAT_URL = {chat!r};")
         page = await context.new_page()
-        await check_console_errors(page, f"{site}/index.html", bugs)
+        await check_console_errors(page, f"{site}/map.html", bugs)
 
         ask = page.locator("[data-chat-toggle]").first
         await ask.click()
@@ -128,7 +141,7 @@ async def main():
         context = await browser.new_context(viewport={"width": 1440, "height": 900})
         await context.add_init_script(f"window.PS_CHAT_URL = {chat!r};")
         page = await context.new_page()
-        await check_console_errors(page, f"{site}/index.html", bugs)
+        await check_console_errors(page, f"{site}/map.html", bugs)
         await page.locator("[data-chat-toggle]").first.click()
 
         signin_card = page.locator("#chat-panel-signin-card")
@@ -188,7 +201,7 @@ async def main():
 
         await page.route(f"{chat.rstrip('/')}/**", chat_route)
         await page.route(chat.rstrip("/"), chat_route)
-        await check_console_errors(page, f"{site}/index.html", bugs)
+        await check_console_errors(page, f"{site}/map.html", bugs)
         await page.locator("[data-chat-toggle]").first.click()
         popout = await page.locator("#chat-panel a[target='_blank'], #chat-panel .chat-panel-fullpage").count()
         if popout:
@@ -229,7 +242,8 @@ async def main():
             for page_path in PAGES:
                 page = await context.new_page()
                 await check_console_errors(page, f"{site}/{page_path}", bugs)
-                await page.locator("[data-chat-toggle]").first.click()
+                if not await page.locator("#chat-panel.open").count():
+                    await page.locator("[data-chat-toggle]").first.click()
                 await page.wait_for_timeout(400)
 
                 shell_box = await page.locator(".shell").bounding_box()
