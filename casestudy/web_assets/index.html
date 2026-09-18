@@ -94,8 +94,101 @@
       <h2>Every public field on the left.<br>Every internal decision on the right.</h2>
       <p>Run one record or a full batch. The workbench keeps errors local and preserves export order.</p>
     </section>
+
+    <section class="under-hood" id="under-the-hood" aria-labelledby="hood-title">
+      <div class="hood-heading">
+        <p class="eyebrow">Under the hood</p>
+        <h2 id="hood-title">What is proven, what is assumed, and where this stops</h2>
+        <p>This evidence comes from the two supplied examples, the assignment fields, and the project decision log. Practice data exercises known branches but is not hidden test or production evidence.</p>
+      </div>
+
+      <div class="evidence-band" aria-label="Measured evidence">
+        <article><strong>2 of 2</strong><span>reference structures pass</span><small>supplied examples</small></article>
+        <article><strong>2 of 2</strong><span>meaning checks pass</span><small>supplied examples</small></article>
+        <article><strong>1.00</strong><span>reply macro F1</span><small>24 synthetic replies</small></article>
+        <article><strong>0.61 / 1.22 ms</strong><span>median / p95</span><small>100 warm offline runs</small></article>
+      </div>
+      <p class="evidence-note">Measured locally on September 17, 2026. All 100 timing runs used the validated offline template fallback. Live model timing and the optional tone judge were not run.</p>
+
+      <div class="hood-grid">
+        <article class="hood-card">
+          <div class="hood-card-head"><h3>Observed in the assignment</h3><span class="confidence observed">Observed</span></div>
+          <ul>
+            <li>Text wins when it is preferred and consented; email is used when text consent is false.</li>
+            <li>Text uses a null subject and options. Email uses a subject and link.</li>
+            <li>The two answers send at 9 a.m. and 10 a.m. local time and use different next actions.</li>
+          </ul>
+          <p class="source-line">Source: the two supplied expected blocks.</p>
+        </article>
+        <article class="hood-card">
+          <div class="hood-card-head"><h3>Project assumptions</h3><span class="confidence hypothesis">Hypothesis</span></div>
+          <ul>
+            <li>The final day number in an identifier controls the delay when no explicit delay exists.</li>
+            <li>Forty five days separates short and long move horizons.</li>
+            <li>The contact window and Sunday noon opening are conservative project defaults, not claims about Texas law.</li>
+          </ul>
+          <p class="source-line">Source: decisions 31 and 32 in the project decision log.</p>
+        </article>
+      </div>
+
+      <div class="hood-section" aria-labelledby="boundary-title">
+        <div class="hood-section-heading">
+          <p class="eyebrow">Decision boundary</p>
+          <h3 id="boundary-title">Code decides. The model may only write.</h3>
+        </div>
+        <div class="boundary-flow" aria-label="Decision flow">
+          <div><strong>1</strong><span>Consent and stop gates</span><small>deterministic</small></div>
+          <span class="flow-arrow" aria-hidden="true">→</span>
+          <div><strong>2</strong><span>Channel, time and action</span><small>deterministic</small></div>
+          <span class="flow-arrow" aria-hidden="true">→</span>
+          <div><strong>3</strong><span>Optional wording</span><small>one bounded call</small></div>
+          <span class="flow-arrow" aria-hidden="true">→</span>
+          <div><strong>4</strong><span>Safety validation</span><small>deterministic</small></div>
+          <span class="flow-arrow" aria-hidden="true">→</span>
+          <div><strong>5</strong><span>Exact public export</span><small>two keys only</small></div>
+        </div>
+        <p>The writer cannot choose consent, channel, timing, CTA, or next action. Invalid, late, unsafe, or unavailable model output falls back to a checked template.</p>
+      </div>
+
+      <div class="hood-grid">
+        <article class="hood-card">
+          <div class="hood-card-head"><h3>Decisions reversed after review</h3><span class="confidence reversed">Revised</span></div>
+          <ul>
+            <li>Both examples became golden tests after the email example disproved several text only rules.</li>
+            <li>Meaning checks replaced exact sentence matching.</li>
+            <li>Diagnostics moved beside the answer instead of inside the public export.</li>
+            <li>Two model attempts became one bounded attempt plus offline fallback.</li>
+          </ul>
+        </article>
+        <article class="hood-card">
+          <div class="hood-card-head"><h3>Still unhandled or unproven</h3><span class="confidence limited">Limited</span></div>
+          <ul>
+            <li>Only two supplied examples are known; hidden test and real world performance are unknown.</li>
+            <li>Live model latency, quality, and availability are not measured.</li>
+            <li>Spanish input is flagged but not translated.</li>
+            <li>Email delivery compliance and links for unseen properties remain unverified.</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="hood-section sources" aria-labelledby="sources-title">
+        <div class="hood-section-heading">
+          <p class="eyebrow">Primary sources</p>
+          <h3 id="sources-title">Rules and engineering choices</h3>
+        </div>
+        <div class="source-list">
+          <a href="https://uscode.house.gov/view.xhtml?edition=prelim&amp;f=treesort&amp;jumpTo=true&amp;num=0&amp;req=%28title%3A42+section%3A3604+edition%3Aprelim%29+OR+%28granuleid%3AUSC-prelim-title42-section3604%29" target="_blank" rel="noopener"><strong>Fair Housing Act, 42 U.S.C. §3604(c)</strong><span>Housing statements that indicate a protected preference or limitation.</span></a>
+          <a href="https://www.ecfr.gov/current/title-47/chapter-I/subchapter-B/part-64/subpart-L/section-64.1200" target="_blank" rel="noopener"><strong>47 CFR §64.1200</strong><span>Consent revocation and the scoped federal 8 a.m. to 9 p.m. solicitation window.</span></a>
+          <a href="https://www.anthropic.com/engineering/building-effective-agents" target="_blank" rel="noopener"><strong>Building Effective Agents</strong><span>Use a fixed workflow when the path can be predefined and audited.</span></a>
+          <a href="https://arxiv.org/abs/2507.11538" target="_blank" rel="noopener"><strong>IFScale</strong><span>Motivation for validating instruction following with deterministic checks.</span></a>
+        </div>
+      </div>
+    </section>
   </main>
-  <footer><a href="/privacy.html">Privacy</a><span>Internal interview demonstration</span></footer>
+  <footer>
+    <div><a href="/privacy.html">Privacy</a><span>Internal interview demonstration</span></div>
+    <div class="project-links"><a href="https://github.com/Pu11en/shipcheck" target="_blank" rel="noopener">shipcheck</a><a href="https://github.com/Pu11en/ebi-agent-chat-relay" target="_blank" rel="noopener">build bot</a></div>
+  </footer>
   <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
   <script src="/case-study/assets/app.js"></script>
 </body>

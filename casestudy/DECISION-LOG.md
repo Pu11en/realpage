@@ -109,7 +109,12 @@ of 9:00 a.m.–8:00 p.m. Monday–Saturday and noon–8:00 p.m. Sunday. Invalid 
 review rather than silently defaulting. **Alternatives:** use only the federal window, use server
 time, or let the model choose a time. **Why it won:** one deterministic national policy is safer for
 a live demo and handles state and daylight-saving traps. **Source:** 47 CFR §64.1200(c)(1), Texas
-Bus. & Com. Code §305.053, and the state-hours research recorded in `RULEBOOK-research.md`.
+Bus. & Com. Code §301.051, and the state-hours research recorded in `RULEBOOK-research.md`.
+
+**C12 scope correction:** Texas §301.051 covers defined consumer telephone calls and contains
+express-request and prior-relationship exceptions; it does not expressly make this window an SMS
+rule. The narrower 09:00–20:00 Monday–Saturday and 12:00–20:00 Sunday window is therefore a
+conservative project default inspired by federal and Texas call rules, not a universal legal claim.
 
 ## 14. Treat opt-outs and inbound replies as decisions, not prose
 
@@ -504,3 +509,23 @@ the full repository into the runtime image. **Why it won:** C11 requires separat
 existing-auth reuse, bounded requests, deterministic missing-key behavior, and proof that the
 container cannot read `propertystack/data/`.
 **Source:** `PLAN-casestudy-bot.md` C11; decision 39.
+
+## 41. Under the Hood: publish the boundary, not a polished certainty
+
+**Decided:** The case-study workbench now includes a compact evidence section drawn from this
+decision log. It leads with the two supplied examples, labels the scheduling and horizon rules as
+hypotheses, shows the deterministic gates and validators around the optional wording call, records
+the major reversed decisions, and names the unmeasured and unsupported areas. The result snapshot
+reports 2/2 structural passes, 2/2 meaning passes, macro F1 1.00 on 24 explicitly synthetic replies,
+and 0.61 ms median / 1.22 ms p95 over 100 warm offline runs; it does not describe those results as
+hidden-set or production performance. All 100 measured runs used the template fallback. Live model
+timing and the optional tone judge remain unmeasured/not run. **Alternatives:** a success-only story;
+mixing assumptions with observations; presenting practice data as hold-out evidence; publishing the
+conflicting Texas citations unchanged. **Why it won:** C12 requires the interviewer to see what the
+system knows, what the project chose, and where evidence ends. Primary-source review corrected the
+Texas citation from §305.053 to §301.051 and confirmed that the project contact window and exact STOP
+sentence must remain labeled project defaults. The public source cards use primary sources for the
+Fair Housing rule, federal calling rule, workflow guidance, and instruction-following research; the
+shipcheck and build-bot project links remain separate from those citations. **Source:**
+`PLAN-casestudy-bot.md` C12, decisions 26–40, `C12-citation-verification.md`, the two supplied expected
+blocks, and the C9 evaluator snapshot measured 2026-09-17.

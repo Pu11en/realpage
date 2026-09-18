@@ -62,6 +62,34 @@ def test_page_has_complete_interaction_and_accessibility_states():
     assert "window.alert" not in script
 
 
+def test_under_the_hood_distinguishes_evidence_assumptions_and_limits():
+    html = (WEB_ROOT / "index.html").read_text(encoding="utf-8")
+    assert 'id="under-the-hood"' in html
+    for claim in (
+        "2 of 2", "24 synthetic replies", "100 warm offline runs",
+        "Project assumptions", "conservative project defaults, not claims about Texas law",
+        "Code decides. The model may only write.", "Still unhandled or unproven",
+        "Live model latency, quality, and availability are not measured",
+    ):
+        assert claim in html
+    assert "hidden test or production evidence" in html
+
+
+def test_under_the_hood_links_primary_sources_and_existing_tools():
+    html = (WEB_ROOT / "index.html").read_text(encoding="utf-8")
+    links = (
+        "https://www.ecfr.gov/current/title-47/chapter-I/subchapter-B/part-64/subpart-L/section-64.1200",
+        "https://www.anthropic.com/engineering/building-effective-agents",
+        "https://arxiv.org/abs/2507.11538",
+        "https://github.com/Pu11en/shipcheck",
+        "https://github.com/Pu11en/ebi-agent-chat-relay",
+    )
+    assert "https://uscode.house.gov/view.xhtml?edition=prelim&amp;" in html
+    for link in links:
+        assert f'href="{link}"' in html
+    assert html.count('target="_blank" rel="noopener"') >= len(links) + 1
+
+
 @pytest.fixture(scope="module")
 def web_server():
     with socket.socket() as sock:
