@@ -162,6 +162,24 @@
 
 **Next:** T10 final sweep — site check, local build, 5 chat questions, verify nothing mentions RealPage as the customer
 
+## T10 ✅ Final sweep complete (2026-09-18)
+
+**What:** Verified that CraneSignal no longer positions itself as a RealPage pitch and is now a general free lead finder for anyone selling to apartment owners.
+
+**Verifications performed:**
+- check-no-realpage-target.sh: ✓ No RealPage-as-target references found
+- Full test suite: 249 tests pass (chatbot/tests, tooling/qa/fixes_tests, tooling/realpage-library/tests)
+- Code search: 0 results for "for realpage", "realpage pitch", "realpage sales", "realpage customer", "realpage market", "realpage business", "realpage opportunity"
+- Site files: Only RealPage reference is in VENDORS array (software brand list), which is correct
+- README.md: Positioned as "anyone selling to apartment owners — software companies, service providers, vendors, and sales teams"
+- SOUL.md: Agent describes itself as helping "any business that sells to apartment owners and managers"; "not built for, or tied to, any one software company"
+- Index page: Shows "Early Leads" (generic), "Who's about to choose", no RealPage-specific messaging
+- Software filters: Allow-list neutral (Yardi, Entrata, AppFolio, RealPage, Yotta) — product-agnostic
+
+**How checked:** Ran check-no-realpage-target.sh (✓); ran full test suite (249 pass); grep searches for customer-pitch language (0 found); code inspection of README, SOUL, index.html, and app.js confirms neutral positioning.
+
+**Result:** All requirements for T10 met. CraneSignal is now positioned as a general lead finder, not a pitch to RealPage. RealPage remains only as a detected software brand (product data), never as the customer.
+
 ## T8 ✅ Rewrite marketing and business files; move archived plans (2026-09-18)
 
 **What:** Rewrote README.md, AGENTS.md, CHANGELOG.md, and marketing-board/README.md to position CraneSignal as a general lead finder for anyone selling to apartment owners, not a RealPage pitch. Created business/BUSINESS.md explaining the product, market, and business model. Moved four RealPage-focused plans (PLAN-ai-visibility-v3.md, PLAN-ai-visibility-v4.md, PLAN-ai-visibility-v4-run.md, PLAN-realpage-site-library-part2.md) from docs/plans/ to archive/realpage/.
