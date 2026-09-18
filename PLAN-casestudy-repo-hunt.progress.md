@@ -89,3 +89,18 @@ Honest comparison verdict: shipcheck's existing lightweight keypress screen is a
 size for this job; the only things worth taking from this whole area are two small patterns
 (judge-vs-human agreement check, pass/fail color grid), not a new dependency. 6 candidates added to
 candidates.md, all pass the format checker (34 total).
+
+## H7 Explaining decisions on screen (2026-09-17)
+Searched OPA decision logs, AWS Cedar's authorization diagnostics, OpenFeature's evaluation
+"reason" enum, and Python rule engines (zen-engine, business-rules, python-rule-engine,
+business_rules_reasoning), verifying each repo's license/stars/last-commit. Best find:
+**gorules/zen (zen-engine)** — a real, actively maintained (MIT) Python-embeddable decision-graph
+engine that returns a full trace of which rules fired when run with `trace: True`, built
+specifically for GDPR/EU-AI-Act-style explainability; strong enough to actually try (USE), not
+just mirror. Also confirmed two smaller but valuable patterns: OPA's decision-log JSON shape
+(decision_id/path/result/input) and Cedar's "determining policies" list (exact rule IDs that
+caused the outcome) are both good templates for our own decision+reasons+rule-ids display, and
+OpenFeature's short "reason" enum (TARGETING_MATCH, DEFAULT, DISABLED, etc.) is a small reusable
+vocabulary worth copying as VENDOR DATA. venmo/business-rules is unmaintained since 2024 and
+lwardzala/business_rules_reasoning is too small/unproven — both SKIP. 7 candidates added to
+candidates.md, all pass the format checker (41 total).

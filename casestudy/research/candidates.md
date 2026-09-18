@@ -287,3 +287,59 @@ guardrails-ai, NeMo Guardrails, promptfoo, Python rules engines.
 **What we'd take:** Its "annotation queue" concept — a persistent worklist of records still needing a human pass/fail label, with progress tracked per queue — is a good vocabulary/pattern reference (queue, label, score) even though we won't self-host Langfuse for a one-off job with a source-available license.
 **Verdict:** MIRROR PATTERN
 **In plain words:** A very popular AI-monitoring tool with a "to-do list of things a human still needs to grade" feature; worth borrowing that to-do-list idea for our own review screen, but not worth installing the whole product.
+
+### open-policy-agent/opa
+**URL:** https://github.com/open-policy-agent/opa
+**Area:** H7 Explaining decisions on screen
+**License / stars / last commit:** Apache-2.0 / ~12,244 stars / active (pushed today)
+**What we'd take:** The decision-log JSON shape — `decision_id`, `path` (which rule was checked, e.g. `api/authz/allow`), `result`, `input`, `timestamp` — is a clean template for logging "which rule path decided this and what the inputs were."
+**Verdict:** MIRROR PATTERN
+**In plain words:** OPA writes a receipt for every decision it makes, saying which rule it checked and what it decided — we copy that receipt shape, not the software.
+
+### cedar-policy/cedar
+**URL:** https://github.com/cedar-policy/cedar
+**Area:** H7 Explaining decisions on screen
+**License / stars / last commit:** Apache-2.0 / ~1,737 stars / active (pushed today)
+**What we'd take:** Its authorization response includes "determining policies" — the exact list of rule/policy IDs that caused the outcome (deny wins over allow) — plus diagnostics on errors. Cleaner than OPA for "list the specific rules that fired."
+**Verdict:** MIRROR PATTERN
+**In plain words:** Cedar's answer isn't just yes or no — it also lists the exact rule IDs that caused that answer, which is exactly what we want to show on screen.
+
+### open-feature/spec (evaluation reason enum)
+**URL:** https://github.com/open-feature/spec
+**Area:** H7 Explaining decisions on screen
+**License / stars / last commit:** Apache-2.0 / ~1,257 stars / active (pushed today)
+**What we'd take:** The standardized "reason" enum for why a value was returned — `STATIC, DEFAULT, TARGETING_MATCH, SPLIT, CACHED, DISABLED, UNKNOWN, STALE, ERROR` — a small reusable vocabulary of short reason codes we can adapt for our own rule outcomes.
+**Verdict:** VENDOR DATA
+**In plain words:** Feature-flag tools label every decision with a short reason word like "targeting match" or "default" so people see why instantly — we borrow that idea of short reason codes.
+
+### gorules/zen (zen-engine)
+**URL:** https://github.com/gorules/zen
+**Area:** H7 Explaining decisions on screen
+**License / stars / last commit:** MIT / ~1,994 stars / active (pushed 2026-08-25)
+**What we'd take:** A Python-embeddable (Rust core) decision-graph engine; running it with `{"trace": True}` returns each node's input/output plus which rules fired, explicitly built for GDPR/EU-AI-Act-style explainable decision trails. The closest real match to "decision + reasons + rule ids" out of the box.
+**Verdict:** USE
+**In plain words:** This tool runs your business rules and hands back a replay showing exactly which rule caused each result — worth trying directly instead of hand-rolling the trace logic.
+
+### venmo/business-rules
+**URL:** https://github.com/venmo/business-rules
+**Area:** H7 Explaining decisions on screen
+**License / stars / last commit:** MIT / 994 stars / last push 2024-08-13 (stale, 2+ years)
+**What we'd take:** Nothing to install (unmaintained), but its JSON rule shape (`name`/`conditions`/`actions` in `business_rules/engine.py`) is a simple naming pattern worth glancing at for how to name and structure rules, even though it has no built-in "why" trace.
+**Verdict:** SKIP
+**In plain words:** A once-popular rule-naming format, but the project has gone quiet and doesn't explain its decisions anyway.
+
+### santalvarez/python-rule-engine
+**URL:** https://github.com/santalvarez/python-rule-engine
+**Area:** H7 Explaining decisions on screen
+**License / stars / last commit:** MIT / 60 stars / active (pushed 2026-03-05)
+**What we'd take:** A small, actively maintained JSON-rules engine, simple enough to read end-to-end in an afternoon for the "list of rule_id + passed/failed" result shape, if we decide not to use zen-engine.
+**Verdict:** MIRROR PATTERN
+**In plain words:** A small, well-kept rule library we could read in an afternoon to steal the "list of rule results" idea.
+
+### lwardzala/business_rules_reasoning
+**URL:** https://github.com/lwardzala/business_rules_reasoning
+**Area:** H7 Explaining decisions on screen
+**License / stars / last commit:** MIT / 14 stars / last push 2025-06-17 (borderline stale, ~15 months)
+**What we'd take:** Nothing to install — logs each reasoning step for transparency, which is the right shape, but too small a community to trust for anything beyond a glance at the idea.
+**Verdict:** SKIP
+**In plain words:** A small project that already explains every reasoning step, but almost nobody uses it yet, so we won't depend on it.

@@ -58,7 +58,7 @@ Check: `python3 casestudy/research/check_candidates.py`
 - [x] **H6 Human review screens.** Lightweight ways to pass/fail 50-200 outputs: Argilla, Label
   Studio, Langfuse annotation queues, Phoenix, Hamel Husain's annotation-app examples, promptfoo's
   viewer. Compare honestly against the existing shipcheck grading screen.
-- [ ] **H7 Explaining decisions on screen.** How mature projects show "which rules fired and why":
+- [x] **H7 Explaining decisions on screen.** How mature projects show "which rules fired and why":
   OPA decision logs, Cedar, OpenFeature / Unleash evaluation "reason" fields, fraud-rule engines.
   Any Python pattern giving decision + reasons + rule ids out of the box.
 - [ ] **H8 Small tool-page skeletons.** The professional minimal way to ship a "paste input, run,
