@@ -471,3 +471,19 @@ own safe input facts and expected CTA instead of recognizing the two fixture ide
 explicit null expected message is a measured no-message check. Full assignment evaluation runs
 every input once in list order, independently of the latency sample, so duplicate task IDs and
 batches larger than 100 timing runs cannot be skipped, collapsed, or matched to another record.
+
+## 39. Demo page: exact server-owned export bytes and separate diagnostics
+
+**Decided:** The case-study web service returns `submission_jsonl` and each compact
+`submission_line` directly from the C7 serializer, alongside a separate diagnostics object. The
+browser only pretty-prints a parsed line for display; Copy one appends the same terminating line
+break as the CLI, while Copy all and Download use `submission_jsonl` without rebuilding it. The
+full-width workbench defaults to offline templates, accepts pasted or uploaded arbitrary JSONL,
+keeps every record selectable, shows record-local errors, and renders every required state,
+constraint, and threshold status including unsupported and not-measured values. **Alternatives:**
+serializing public answers again in JavaScript; mixing diagnostics into the submission display;
+dropping malformed lines; making live model mode the default. **Why it won:** C10 requires the
+three export controls to produce the CLI's exact bytes and requires one bad record to remain
+visible without losing the others. Caddy authentication, route proxying, limits, health, and the
+container remain C11 work.
+**Source:** `PLAN-casestudy-bot.md` C10; decisions 36 and 38.

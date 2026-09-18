@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Run leasing assignment records and inspect exact exports with cited diagnostics.">
+  <meta name="robots" content="noindex,nofollow">
+  <title>CraneSignal | Case study workbench</title>
+  <link rel="stylesheet" href="/case-study/assets/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#workbench">Skip to workbench</a>
+  <header class="topbar">
+    <a class="wordmark" href="/map.html" aria-label="Back to CraneSignal">CraneSignal</a>
+    <div class="topbar-context">
+      <span>Case study</span>
+      <span class="status-dot" aria-hidden="true"></span>
+      <span id="mode-label">Offline ready</span>
+    </div>
+  </header>
+
+  <main id="workbench">
+    <section class="intro" aria-labelledby="page-title">
+      <p class="eyebrow">Assignment workbench</p>
+      <h1 id="page-title">From assignment record<br>to an explainable answer</h1>
+      <p>Paste or upload JSONL. The export stays separate from the evidence used to produce it.</p>
+    </section>
+
+    <section class="input-panel" aria-labelledby="input-title">
+      <div class="section-heading">
+        <div>
+          <h2 id="input-title">Run a batch</h2>
+          <p>One JSON object per line. A bad line becomes a safe result without stopping the batch.</p>
+        </div>
+        <label class="offline-control"><input id="offline" type="checkbox" checked> Use offline templates</label>
+      </div>
+      <label class="field-label" for="jsonl-input">Assignment JSONL</label>
+      <textarea id="jsonl-input" spellcheck="false" placeholder='{"task_id":"prospect_welcome_day0", ...}'></textarea>
+      <div class="input-actions">
+        <label class="file-button" for="file-input">Upload JSONL</label>
+        <input id="file-input" type="file" accept=".jsonl,.txt,application/json,text/plain">
+        <span id="file-name" aria-live="polite">No file selected</span>
+        <button id="run-button" class="primary-button" type="button">Run assignments</button>
+      </div>
+      <p class="inline-error" id="request-error" role="alert" hidden></p>
+    </section>
+
+    <section class="results" id="results" aria-labelledby="results-title" hidden>
+      <div class="results-toolbar">
+        <div>
+          <p class="eyebrow">Batch results</p>
+          <h2 id="results-title"><span id="record-count">0</span> records returned</h2>
+        </div>
+        <div class="export-actions">
+          <button class="secondary-button" id="copy-all" type="button">Copy all</button>
+          <button class="secondary-button" id="download-all" type="button">Download JSONL</button>
+        </div>
+      </div>
+      <nav class="record-tabs" id="record-tabs" aria-label="Batch records"></nav>
+      <div class="split-view">
+        <article class="output-pane" aria-labelledby="output-title">
+          <div class="pane-heading">
+            <div>
+              <p class="eyebrow">Public output</p>
+              <h3 id="output-title">Exact export object</h3>
+            </div>
+            <button class="secondary-button" id="copy-one" type="button">Copy one</button>
+          </div>
+          <pre id="submission-output" tabindex="0"></pre>
+          <p class="byte-note"><span id="byte-count">0</span> UTF 8 bytes including the line break</p>
+        </article>
+        <aside class="diagnostics-pane" aria-labelledby="diagnostics-title">
+          <div class="pane-heading">
+            <div>
+              <p class="eyebrow">Internal evidence</p>
+              <h3 id="diagnostics-title">Why this answer</h3>
+            </div>
+            <span class="record-state" id="record-state"></span>
+          </div>
+          <div class="diagnostic-summary" id="diagnostic-summary"></div>
+          <div class="error-box" id="record-errors" hidden></div>
+          <h4>Assertions and thresholds</h4>
+          <div class="check-list" id="check-list"></div>
+          <details>
+            <summary>Full cited decision trail</summary>
+            <div class="trail" id="decision-trail"></div>
+          </details>
+        </aside>
+      </div>
+    </section>
+
+    <section class="empty-state" id="empty-state" aria-live="polite">
+      <p class="eyebrow">Ready for evidence</p>
+      <h2>Every public field on the left.<br>Every internal decision on the right.</h2>
+      <p>Run one record or a full batch. The workbench keeps errors local and preserves export order.</p>
+    </section>
+  </main>
+  <footer><a href="/privacy.html">Privacy</a><span>Internal interview demonstration</span></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+  <script src="/case-study/assets/app.js"></script>
+</body>
+</html>
