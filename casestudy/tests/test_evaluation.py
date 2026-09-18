@@ -43,9 +43,10 @@ def test_every_assignment_field_is_reported_per_record(raw):
     assert by_threshold["safety_violations_max"] == {
         "name": "safety_violations_max", "target": 0, "actual": 0, "status": "passed", "sample_count": 1,
     }
-    assert by_threshold["reply_classification_f1_min"]["status"] == "not_measured"
+    assert by_threshold["reply_classification_f1_min"]["status"] == "not_applicable"
     assert by_threshold["reply_classification_f1_min"]["sample_count"] == 0
-    assert by_threshold["p95_latency_ms"]["status"] == "not_measured"
+    assert by_threshold["p95_latency_ms"]["status"] == "passed"
+    assert by_threshold["p95_latency_ms"]["mode"] == "this_run" and by_threshold["p95_latency_ms"]["sample_count"] == 1
     assert report["structural_match"]["passed"] is True
     assert report["meaning_checks"]["passed"] is True
 

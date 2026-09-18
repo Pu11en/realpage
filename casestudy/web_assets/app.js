@@ -46,6 +46,7 @@
   function statusMark(status) {
     if (status === "passed" || status === "measured") return { icon: "✓", cls: "passed" };
     if (status === "failed") return { icon: "×", cls: "failed" };
+    if (status === "not_applicable") return { icon: "–", cls: "not_applicable" };
     return { icon: "?", cls: status || "unsupported" };
   }
 
@@ -159,13 +160,17 @@
     const rows = [];
     groups.forEach(([kind, items]) => items.forEach((item) => {
       const mark = statusMark(item.status);
-      let detail = item.status;
-      if (Object.prototype.hasOwnProperty.call(item, "actual")) {
-        detail = `${item.actual ?? "not measured"} / ${item.target ?? item.expected ?? "required"}`;
+      let detail = words(item.status);
+      if (item.status === "not_applicable") {
+        detail = "does not apply";
+      } else if (Object.prototype.hasOwnProperty.call(item, "actual")) {
+        const unit = item.name === "p95_latency_ms" ? " ms" : "";
+        detail = `${item.actual ?? "not measured"}${item.actual == null ? "" : unit} / target ${item.target ?? item.expected ?? "required"}${unit}`;
       }
+      const note = item.note ? `<small class="check-note">${escapeHtml(item.note)}</small>` : "";
       rows.push(`<div class="check-row" data-status="${escapeHtml(item.status)}">
         <span class="check-icon ${escapeHtml(mark.cls)}" aria-hidden="true">${mark.icon}</span>
-        <span class="check-name"><strong>${kind}:</strong> ${escapeHtml(item.name)}</span>
+        <span class="check-name"><strong>${kind}:</strong> ${escapeHtml(item.name)}${note}</span>
         <span class="check-detail">${escapeHtml(detail)}</span>
       </div>`);
     }));

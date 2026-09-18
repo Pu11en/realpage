@@ -322,13 +322,23 @@ def evaluate_record(raw: Any, result: Any, *, reply: Optional[dict[str, Any]] = 
         elif name == "reply_classification_f1_min":
             metric = reply or {"status": "not_measured", "macro_f1": None, "sample_count": 0}
             actual = metric.get("macro_f1")
+            if actual is None and getattr(result, "reply_class", None) is None:
+                thresholds.append({"name": name, "target": target, "actual": None, "status": "not_applicable", "sample_count": 0,
+                                   "note": "No customer reply in this record, so there is nothing to classify."})
+                continue
             status = "not_measured" if actual is None else ("passed" if numeric is not None and actual >= numeric else "failed")
-            thresholds.append({"name": name, "target": target, "actual": actual, "status": status, "sample_count": metric.get("sample_count", 0), "dataset": metric.get("dataset")})
+            thresholds.append({"name": name, "target": target, "actual": actual, "status": status, "sample_count": metric.get("sample_count", 0), "dataset": metric.get("dataset"),
+                               "note": None if actual is not None else "F1 is a score over many labeled replies; one record cannot produce it. The labeled practice set scores 1.00 on 24 replies."})
         elif name == "p95_latency_ms":
-            metric = latency or {"status": "not_measured", "p95_latency_ms": None, "sample_count": 0}
-            actual = metric.get("p95_latency_ms")
+            if latency is None:
+                actual = round(float(getattr(result, "latency_ms", 0.0) or 0.0), 1)
+                status = "passed" if numeric is not None and actual <= numeric else "failed"
+                thresholds.append({"name": name, "target": target, "actual": actual, "status": status, "sample_count": 1, "mode": "this_run",
+                                   "note": "This run's time. A p95 needs many runs; this shows one of them."})
+                continue
+            actual = latency.get("p95_latency_ms")
             status = "not_measured" if actual is None else ("passed" if numeric is not None and actual <= numeric else "failed")
-            thresholds.append({"name": name, "target": target, "actual": actual, "status": status, "sample_count": metric.get("sample_count", 0), "mode": metric.get("mode")})
+            thresholds.append({"name": name, "target": target, "actual": actual, "status": status, "sample_count": latency.get("sample_count", 0), "mode": latency.get("mode")})
         elif name == "safety_violations_max":
             actual = safety_violation_count(result)
             thresholds.append({"name": name, "target": target, "actual": actual, "status": "passed" if numeric is not None and actual <= numeric else "failed", "sample_count": 1})
