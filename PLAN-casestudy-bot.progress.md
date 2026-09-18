@@ -248,3 +248,28 @@ Code commit: `769ce03` (`Fix C7 final diagnostics and blank lines`).
 Check: `python3 -m pytest -q casestudy/tests` — 151 passed.
 
 Left open: nothing for C7; C8 adversarial fixtures are next.
+
+## C8 Adversarial practice data — done
+
+What I did:
+- Added 20 evaluator-separated practice records covering every requested scenario: email-only and
+  no consent, preference order, before/after slots, day3/day10, Phoenix, Los Angeles DST, Sunday,
+  Spanish, renewal, a transactional note without SMS consent, STOP, option reply, protected-class
+  and PII profile fields, past/missing move dates, and voice-only.
+- Added a separate expectation manifest. Every fixture names one primary rule, an expected public
+  structure, and a prose/diagnostic checklist; none of those evaluator answers enter service input.
+  The two immutable goldens stay only in `sample.jsonl`.
+- Added a balanced 24-item reply corpus: four examples for each of six classes, with capitalization,
+  punctuation, synonyms, numeric options, and ambiguous language. It deliberately makes no F1
+  claim; C9 will calculate the labeled corpus metric.
+- The option-reply fixture caught booking-adjacent wording. SMS and email now say a team member will
+  follow up to arrange the tour, without claiming it is booked or confirmed.
+- Added decision log entry 37.
+
+Code commit: `35e6b5f` (`Case study C8: add adversarial practice data`).
+
+Check: `python3 -m pytest -q casestudy/tests` — 198 passed.
+
+Left open: C9 must calculate macro-F1 from the balanced synthetic corpus and report it honestly;
+the Spanish fixture currently verifies the visible English-only warning rather than claiming
+translation support.

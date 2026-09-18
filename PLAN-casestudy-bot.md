@@ -161,7 +161,7 @@ Check: `python3 -m pytest -q casestudy/tests`
   `--submission-out`, and `--diagnostics-out`. Check: both reference outputs pass structure/meaning
   checks, `expected` cannot influence inference, and a 12-line batch exports 12 ordered lines.
 
-- [ ] **C8 Adversarial practice data.** Keep the two goldens separate and add at least 16 focused
+- [x] **C8 Adversarial practice data.** Keep the two goldens separate and add at least 16 focused
   records: email-only consent; none; preference ordering; before/after slot; day3/day10; Phoenix;
   Los Angeles DST; weekend; Spanish; renewal; transactional note without SMS consent; STOP; option
   reply; protected-class profile; PII profile; past/missing move date; voice-only. Each fixture names
