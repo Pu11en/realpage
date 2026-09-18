@@ -383,3 +383,34 @@ Check:
 
 Left open: the service is ready for Drew's localhost acceptance and then an authorized push and
 Railway setup. Nothing was pushed, deployed, or sent to a live model. C12 is next.
+
+## C12 Under the Hood — done
+
+What I did:
+- Added an Under the Hood evidence section to the case-study workbench. It separates observed facts
+  from project hypotheses, shows the deterministic/model boundary, preserves the major reversed
+  decisions, and names the unhandled or unmeasured areas.
+- Published a dated evaluator snapshot: 2/2 structural passes, 2/2 meaning passes, macro F1 1.00 on
+  24 explicitly synthetic replies, and 0.61 ms median / 1.22 ms p95 over 100 warm offline runs. It
+  says plainly that all timing runs used the template fallback and that live-model evidence was not
+  measured.
+- Verified the public legal and engineering claims against primary sources. Corrected the Texas
+  statute from §305.053 to §301.051 and labeled the narrower contact window and exact STOP wording as
+  project defaults rather than universal legal requirements. All four published citation URLs
+  returned HTTP 200 on 2026-09-17. Preserved the shipcheck and build-bot project links separately.
+- Added responsive browser coverage and checked the section at 390, 820, and 1440 pixels with no
+  horizontal overflow. Added decision log entry 41 and saved the detailed citation review.
+
+Code commit: `d2139e5` (`Case study C12: add evidence boundary page`).
+
+Check:
+- `python3 -m pytest -q casestudy/tests` — 222 passed.
+- The C12 browser section rendered at phone, tablet, and desktop widths with four evidence cards and
+  four primary-source cards, and every published citation returned HTTP 200.
+- `git diff --check` passed. A repository-wide bare `pytest` still cannot collect the same unrelated
+  archive/client-map suites noted in C10 (`merge`, `census`, and a duplicate archived test module);
+  the complete case-study suite passes.
+
+Left open: the shipcheck GitHub project URL currently returns 404 because that separate repository
+has not been published; it is a preserved project link, not a source citation. C13 dress rehearsal
+and the recovery card are next. No live model call, push, or deployment happened.

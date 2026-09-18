@@ -200,7 +200,7 @@ Check: `python3 -m pytest -q casestudy/tests`
   fallback, and inability to read `propertystack/data/`. Run existing site checks. Stop and tell Drew
   it is ready to push; production verification is a separate, authorized step.
 
-- [ ] **C12 Under the Hood.** Use `DECISION-LOG.md` to show the observed-vs-assumed distinction,
+- [x] **C12 Under the Hood.** Use `DECISION-LOG.md` to show the observed-vs-assumed distinction,
   reversed decisions, rules and legal sources, deterministic/LLM boundary, exact-match and threshold
   results, median/p95, offline fallback, sample-size caveat, and honest unhandled list. Before publishing
   a legal or engineering claim, verify its primary citation and scope: the existing research conflicts
