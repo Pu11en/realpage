@@ -3,7 +3,8 @@
 **For:** a fresh Codex session (model Astra, highest reasoning effort) run inside
 `/home/drewp/main-projects/realpage`.
 **Purpose:** a second pair of eyes on the PLAN, before any code is written. Find what we missed.
-**Do not write code. Do not modify any file except the one review file named at the end.**
+**Do not write code.** You MAY edit `PLAN-casestudy-bot.md` directly to fix the holes you find
+(Drew asked for "review, find holes, and fix"); record every change you make in your review file.
 
 ## The situation
 
@@ -18,9 +19,8 @@ He has exactly **one** example record. Everything else is inference.
 
 1. `casestudy/data/problem_statement.txt` — the assignment, verbatim (13 lines).
 2. `casestudy/data/sample.jsonl` — the single example record, including its `expected` block.
-3. `PLAN-casestudy-bot.md` — the build plan (tasks C1-C9). **Note:** this plan predates the three
-   research documents below and has NOT yet been revised to match them. Judging that gap is part
-   of the job.
+3. `PLAN-casestudy-bot.md` — the build plan (tasks C1-C13), rewritten on 2026-09-17 to follow the
+   three research documents below. Check that it actually does.
 4. `casestudy/RULEBOOK-research.md` — reverse-engineered implicit rules, legal grounding
    (TCPA/CAN-SPAM/FHA), the proposed ordered rulebook (5 gates + 6 shapers), 16 predicted hold-out
    cases, and output-shape decisions.
@@ -64,9 +64,8 @@ Be adversarial and specific. Assume we are about to build this tonight in a few 
    drop? Which single case are we most likely to fail?
 4. **Output shape.** Will our output "semantically match" theirs? Flag any field-naming, null
    handling, enum vocabulary or timestamp-format risk. The expected block is the ground truth.
-5. **Plan-vs-research drift.** `PLAN-casestudy-bot.md` says six rules; the research says eleven.
-   Tell us the correct task list to build tonight, in order, sized so each task is one short
-   session, with the check that proves each one.
+5. **Plan-vs-research drift.** Anything the research recommends that the plan dropped, contradicts,
+   or under-specifies. Is each task one short session with a check that genuinely proves it?
 6. **Scope call.** Given a hard deadline tomorrow, what should we cut, and what is non-negotiable?
 7. **Risk list.** What breaks live on a shared screen, and what is the mitigation?
 
