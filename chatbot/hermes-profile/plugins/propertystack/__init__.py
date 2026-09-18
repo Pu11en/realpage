@@ -7,8 +7,6 @@ allows reads, so nothing the model sends can change data.
 Tools (toolset "propertystack"):
   ps_schema          tables, columns, row counts, and the citation name for each
   ps_sql             one read-only SELECT, max 200 rows
-  ps_research_search keyword search over the research folders
-  ps_research_read   read one research file
   ps_web_search      live web search (Jina Search), top results only
   ps_web_read        read one public web page as text (Jina Reader)
 
@@ -28,7 +26,6 @@ import urllib.request
 from pathlib import Path
 
 DATA_DIR = Path(os.getenv("PS_DATA_DIR", "/opt/propertystack/data"))
-RESEARCH_DIR = Path(os.getenv("PS_RESEARCH_DIR", "/opt/propertystack/research"))
 # One SQLite file per process: the gateway and other hermes processes load this
 # plugin at the same moment, and a shared file made them collide ("disk I/O
 # error", "table already exists", root-owned read-only file).
@@ -94,20 +91,7 @@ SOURCE_NAMES = {
     "cranesignal_eval_failure_types": "CraneSignal eval failure types",
     "cranesignal_buildbot_summary": "CraneSignal AI build summary",
     "cranesignal_buildbot_examples": "CraneSignal AI build examples",
-    "ai_visibility_summary": "AI Visibility score summary",
-    "ai_visibility_models": "AI Visibility model scores",
-    "ai_visibility_competitors": "AI Visibility competitor scores",
-    "ai_visibility_questions": "AI Visibility question results",
-    "ai_visibility_top_picks": "AI Visibility top picks",
-    "ai_visibility_actions": "AI Visibility recommended actions",
-    "ai_visibility_site_facts": "AI Visibility site facts",
-    "ai_visibility_caveats": "AI Visibility caveats",
 }
-
-
-def _research_source(rel: str) -> str:
-    topic = re.sub(r"^\d+-", "", rel.split("/")[0]).replace("-", " ")
-    return f"Research notes ({topic})"
 
 
 # Every URL a tool hands the agent is remembered, so the chat proxy's link
@@ -193,7 +177,7 @@ def ps_schema(args: dict, **_) -> str:
             "Filter with WHERE area='<slug>' from the area list below; stage is permitted/leasing/"
             "under_construction/sold/planned. permit_link/news_link/website_link/agenda_link/map_link "
             "are ready-made URLs for the deep-dive link row (map_link may be blank -- build it from address).",
-            "street_talk: saved Texas Reddit/YouTube posts. part=rivals (RealPage vs Yardi/Entrata/AppFolio), "
+            "street_talk: saved Texas Reddit/YouTube posts. part=rivals (software vendors compared, e.g. Yardi vs Entrata vs AppFolio), "
             "buildings (talk about a lead building; building_id/building), unhappy (rival customers; warm_lead=1 "
             "sounds like a manager/owner). companies is ';'-joined -- filter with companies LIKE '%Yardi%'. "
             "sentiment is happy/angry/mixed/neutral. Quote briefly and always give each post's url as its link.",
@@ -220,10 +204,6 @@ def ps_schema(args: dict, **_) -> str:
             "facts. For 'how was this built/tested?' start from cranesignal_how_tested and "
             "cranesignal_eval_summary (92/100 test answers correct, 94% grader-human agreement, 10/10 "
             "software hand check, measured_at date).",
-            "ai_visibility_* tables: the read-only AI Visibility page snapshot -- scores, "
-            "model-by-model results, competitors, question answers, and recommended actions. Use these "
-            "only for questions about vendor visibility in AI answers and how to improve it. Always "
-            "state generated_at/based_on dates because the scores are point-in-time measurements.",
         ],
     })
 
@@ -246,39 +226,6 @@ def ps_sql(args: dict, **_) -> str:
         "rows": rows[:MAX_ROWS],
         "truncated": len(rows) > MAX_ROWS,
     })
-
-
-def _research_files() -> list[Path]:
-    return sorted(p for p in RESEARCH_DIR.rglob("*") if p.is_file() and p.suffix in (".md", ".txt", ".csv"))
-
-
-def ps_research_search(args: dict, **_) -> str:
-    terms = [t.lower() for t in re.findall(r"\w+", args.get("query") or "") if len(t) > 2]
-    if not terms:
-        return json.dumps({"error": "Give at least one search word (3+ letters)."})
-    hits = []
-    for path in _research_files():
-        rel = str(path.relative_to(RESEARCH_DIR))
-        for i, line in enumerate(path.read_text(errors="replace").splitlines(), 1):
-            low = line.lower()
-            score = sum(t in low for t in terms)
-            if score:
-                hits.append((score, rel, i, line.strip()[:300]))
-    hits.sort(key=lambda h: (-h[0], h[1], h[2]))
-    return json.dumps({
-        "files": [str(p.relative_to(RESEARCH_DIR)) for p in _research_files()],
-        "hits": [{"file": rel, "source_name": _research_source(rel), "line": i, "text": t} for _, rel, i, t in hits[:40]],
-    })
-
-
-def ps_research_read(args: dict, **_) -> str:
-    rel = (args.get("path") or "").strip().lstrip("/")
-    target = (RESEARCH_DIR / rel).resolve()
-    if RESEARCH_DIR.resolve() not in target.parents or not target.is_file():
-        return json.dumps({"error": "Unknown file.", "files": [str(p.relative_to(RESEARCH_DIR)) for p in _research_files()]})
-    text = target.read_text(errors="replace")
-    _remember_urls(text[:20000])
-    return json.dumps({"source_name": _research_source(rel), "text": text[:20000], "truncated": len(text) > 20000})
 
 
 JINA_KEY = os.getenv("JINA_API_KEY", "").strip()
@@ -345,26 +292,6 @@ def register(ctx) -> None:
             ["query"],
         ),
         handler=ps_sql, description="CraneSignal read-only SQL",
-    )
-    ctx.register_tool(
-        name="ps_research_search", toolset="propertystack",
-        schema=_schema(
-            "ps_research_search",
-            "Keyword search over research data (company, products, reviews, reddit, social, news, competitors, voice of customer, AI visibility). Returns file + line hits.",
-            {"query": {"type": "string", "description": "Search words."}},
-            ["query"],
-        ),
-        handler=ps_research_search, description="Research search",
-    )
-    ctx.register_tool(
-        name="ps_research_read", toolset="propertystack",
-        schema=_schema(
-            "ps_research_read",
-            "Read one research file by its relative path, e.g. 04-reddit/index.md.",
-            {"path": {"type": "string", "description": "Relative path from ps_research_search."}},
-            ["path"],
-        ),
-        handler=ps_research_read, description="Research read",
     )
     if JINA_KEY:
         ctx.register_tool(

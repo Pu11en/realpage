@@ -30,7 +30,7 @@ SITE = f"http://localhost:{SITE_PORT}"
 ADMIN_EMAIL = "kidquick360@gmail.com"
 
 # Question -> facts that must appear in the answer (case-insensitive). These are
-# the facts Drew checked against the CSVs in chatbot/TEST-ANSWERS-2026-09-10.md.
+# the facts Drew checked against the CSVs in archive/realpage/chatbot/TEST-ANSWERS-2026-09-10.md.
 QUESTIONS = [
     ("Which vendor runs the most buildings?", ["Yardi", "66"]),
     ("Which buildings sold in 2026, and who bought them?", ["Park Residences"]),

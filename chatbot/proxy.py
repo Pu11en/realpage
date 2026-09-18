@@ -189,8 +189,6 @@ async def chat(request: web.Request) -> web.StreamResponse:
 TOOL_LABELS = {
     "ps_schema": "Checking what data there is…",
     "ps_sql": "Looking through the building data…",
-    "ps_research_search": "Searching the research notes…",
-    "ps_research_read": "Reading a research note…",
 }
 
 

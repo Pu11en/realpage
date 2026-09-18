@@ -33,7 +33,7 @@ _SOURCES_RE = re.compile(r"^\s*\**\s*Sources\s*:?", re.I)
 
 # Only used when link cleaning leaves nothing to show.
 EMPTY_REPLY = """**I don't have that.**
-**Next:** Ask about a Texas building or RealPage."""
+**Next:** Ask about an apartment building or a sales lead."""
 
 _SITE_LABELS = [
     (r"(^|\.)tdlr\.texas\.gov$", "Texas building record"),
