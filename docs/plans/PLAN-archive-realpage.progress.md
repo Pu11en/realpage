@@ -45,3 +45,27 @@
 **Next:** T3 moves case study to archive/realpage/casestudy
 
 **Follow-up fix:** Fixed stale path in `tooling/ai-visibility/run-and-report.sh` line 14: changed `09-ai-visibility/summary.md` to `archive/realpage/09-ai-visibility/summary.md` to reflect the moved research folders.
+
+## T3 ✅ Move case study to archive/realpage/casestudy (part 1 — file move complete)
+
+**What:** Moved the case study directory and related planning files to archive/realpage/casestudy using git mv to preserve history. Updated all path references across the codebase.
+
+**Files moved:**
+- casestudy/ directory (75 files including Python code, web assets, research, tests)
+- PLAN-casestudy-bot.md
+- PLAN-casestudy-bot.progress.md
+- PLAN-casestudy-repo-hunt.md
+- PLAN-casestudy-repo-hunt.progress.md
+
+**Path references updated in:**
+- tooling/qa/fixes_tests/test_e1_signin.py (line 160)
+- chatbot/hermes-profile/SOUL.md (line 54)
+- handoffs/2026-09-18-realpage.md (Key files section, lines 28-37)
+- .planning/2026-09-17-c13-dress-rehearsal/findings.md (lines 14, 31-34)
+- .planning/2026-09-17-case-study-human-results/findings.md (lines 44-47)
+
+**How checked:** Ran `bash tooling/check-no-realpage-target.sh` → ✓ No RealPage-as-target references found
+
+**Commit:** 7e5b41a "T3: Move case study to archive/realpage/casestudy and update path references"
+
+**Next:** Part 2 requires Drew's OK: turn off the case-study Railway service and the /case-study link on app.cranesignal.com
