@@ -138,3 +138,5 @@
 **How checked:** check-no-realpage-target.sh passes; tooling/qa/fixes_tests + chatbot/tests: 238 pass, 0 fail (the 4 old failures fixed: tests now match the new wording; the DOJ-timeline research test was removed with the research). Plugin loads locally and registers ps_schema + ps_sql.
 
 **Left open:** Not tested against the live chat model (no Docker build / no paid chat run) — T10 asks the 5 questions. The public repo link in SOUL.md is still github.com/Pu11en/realpage (the real repo name). propertystack/data/tx/chat-leads.csv was already modified before this task (3 phone numbers reformatted, one looks broken: "8-773-367-2410"); left untouched and uncommitted.
+
+- T7 follow-up: a stray uncommitted edit to propertystack/data/tx/chat-leads.csv (two phone numbers reformatted badly, not part of T7) was discarded so the repo is clean. Check passes. If it reappears, find which test or script rewrites that file.
