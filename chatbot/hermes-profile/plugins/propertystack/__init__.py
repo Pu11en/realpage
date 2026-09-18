@@ -107,7 +107,7 @@ SOURCE_NAMES = {
 
 def _research_source(rel: str) -> str:
     topic = re.sub(r"^\d+-", "", rel.split("/")[0]).replace("-", " ")
-    return f"RealPage research notes ({topic})"
+    return f"Research notes ({topic})"
 
 
 # Every URL a tool hands the agent is remembered, so the chat proxy's link
@@ -220,9 +220,9 @@ def ps_schema(args: dict, **_) -> str:
             "facts. For 'how was this built/tested?' start from cranesignal_how_tested and "
             "cranesignal_eval_summary (92/100 test answers correct, 94% grader-human agreement, 10/10 "
             "software hand check, measured_at date).",
-            "ai_visibility_* tables: the read-only AI Visibility page snapshot for RealPage -- scores, "
+            "ai_visibility_* tables: the read-only AI Visibility page snapshot -- scores, "
             "model-by-model results, competitors, question answers, and recommended actions. Use these "
-            "only for questions about RealPage's visibility in AI answers and how to improve it. Always "
+            "only for questions about vendor visibility in AI answers and how to improve it. Always "
             "state generated_at/based_on dates because the scores are point-in-time measurements.",
         ],
     })
@@ -350,7 +350,7 @@ def register(ctx) -> None:
         name="ps_research_search", toolset="propertystack",
         schema=_schema(
             "ps_research_search",
-            "Keyword search over the RealPage research folders (company, products, reviews, reddit, social, news, competitors, voice of customer, AI visibility = how AIs rank RealPage). Returns file + line hits.",
+            "Keyword search over research data (company, products, reviews, reddit, social, news, competitors, voice of customer, AI visibility). Returns file + line hits.",
             {"query": {"type": "string", "description": "Search words."}},
             ["query"],
         ),

@@ -7,7 +7,7 @@ Written 2026-09-15 at the end of the app redesign build. Everything is on this c
 - **Left menu:** light grey, CraneSignal name in blue, the open tab has a light blue background and an amber marker.
 - **Early Leads:** the table has grey and white rows, blue links, navy State/Region buttons, a score circle in green (high), amber (middle) or muted red (low).
 - **Property page:** white cards, blue source links. The colors written straight into the page were moved into the shared style file.
-- **Map:** light grey land, states shaded in blue (darker = more RealPage buildings), amber dots for the states we have leads in.
+- **Map:** light grey land, states shaded in blue (darker = more tracked buildings), amber dots for the states we have leads in.
 - **AI Visibility:** charts in blue, amber and grey that read well on white.
 - **Under the Hood, Privacy, Master Table:** same light look. Master Table only sends you to the Map.
 - **Chat panel inside the app:** blue header with an amber line, amber buttons.

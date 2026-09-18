@@ -1,5 +1,5 @@
-// Client map: states from vendor/states-albers-10m.json (already projected to 975x610),
-// shaded by RealPage buildings found per state (data/client-map.json, built by build_data.py).
+// Map: states from vendor/states-albers-10m.json (already projected to 975x610),
+// shaded by tracked buildings found per state (data/client-map.json, built by build_data.py).
 
 (async function () {
   const svg = document.getElementById("us-map");
@@ -109,7 +109,7 @@
 
   function showTip(e, name, s) {
     tip.innerHTML = s
-      ? `<strong>${esc(name)}</strong><div class="count">${s.total} RealPage building${s.total === 1 ? "" : "s"}</div>
+      ? `<strong>${esc(name)}</strong><div class="count">${s.total} tracked building${s.total === 1 ? "" : "s"}</div>
          <ul>${s.topCities.map((c) => `<li>${esc(c.city)}: ${c.count}</li>`).join("")}</ul>`
       : `<strong>${esc(name)}</strong><div>None found (not searched or no hits)</div>`;
     placeTip(e);

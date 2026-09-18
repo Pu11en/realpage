@@ -8,10 +8,10 @@ A built-in chat agent answers questions about the same data, with sources.
 (RealPage, Yardi, Entrata, AppFolio and the like) who want early, evidence-backed leads.
 It covers any US area; Plano/Richardson, Texas is the worked sample.
 
-**The constraint: outside-in only.** We have no access to RealPage — no
+**The constraint: outside-in only.** We have no access to proprietary sales data — no
 insiders, no product login, no customer data, nobody there to ask. Everything
 here comes from public sources. **The goal:** build a finished, working MVP
-from this evidence that RealPage (or a business like theirs) would actually
+from this evidence that any property-management software company would actually
 use, show from outside that they don't already have it, and pitch it. Drew
 makes the calls; ask him when a decision is his.
 

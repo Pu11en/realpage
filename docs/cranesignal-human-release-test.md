@@ -14,8 +14,7 @@
 Please do not copy a script or try to help CraneSignal pass. In your own words,
 use it as if you had just found it. Notice what you think it does, what you
 would click first, and whether you can find a useful Texas building and decide
-which lead deserves attention. Ask useful questions about leads, what people
-are saying about RealPage, and what RealPage could improve in AI search.
+which lead deserves attention. Ask useful questions about leads, vendor comparisons, and what competitors could improve in AI search.
 
 Move between the map, leads, a building, AI Visibility, and Under the Hood.
 Open a source, take one wrong turn, and see whether you can recover. Also ask
@@ -42,7 +41,7 @@ true:
 
 - You can explain its purpose in ten seconds without help.
 - A new account can sign up, enter, sign out, and return without a dead end.
-- You can independently complete the core lead, RealPage discussion, and AI
+- You can independently complete the core lead, vendor comparison, and AI
   Visibility tasks.
 - Representative answers are useful and factual claims have a readable source
   or clearly say they could not be verified.
