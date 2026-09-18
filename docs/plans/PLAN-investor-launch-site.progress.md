@@ -74,3 +74,7 @@ Final local walk-through: landing page → Start free → Early Leads → buildi
 - check-no-realpage-target.sh still exits 0
 - Commits: 3f9f8cd (remove vendor filter)
 - Done: complete investor flow verified, no RealPage anywhere, chat ready for sign-ups
+
+## Next time (from how this build went)
+- **This build went smoothly** — seven coordinated changes across the site in under 20 minutes, with no backtracking or rework needed.
+- **Knowledge base updates take longer to verify than UI changes** — step 7 (the chat agent knowledge) took 5 minutes because it required testing with real questions, while the UI and backend changes were each 1–3 minutes. Next time, split knowledge updates into "rewrite" and "verify by testing" as separate steps so you can see where the time actually goes.
