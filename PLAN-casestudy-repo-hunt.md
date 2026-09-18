@@ -51,7 +51,7 @@ Check: `python3 casestudy/research/check_candidates.py`
 - [x] **H4 LLM copywriting for CRM / real estate.** Prompt libraries, brand-voice rules expressed as
   checks, open datasets of good leasing or real-estate SMS and email templates, and any evaluation
   sets for marketing copy.
-- [ ] **H5 Evaluation that grades against a reference.** Code for checklist-from-reference grading
+- [x] **H5 Evaluation that grades against a reference.** Code for checklist-from-reference grading
   (RocketEval, TICK, Check-Eval, AutoChecklist), JSON field-level scoring, and confidence
   intervals (Inspect AI, DeepEval, Weave, others). Which one is the known professional choice for
   a small labelled set?

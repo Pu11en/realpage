@@ -191,3 +191,51 @@ guardrails-ai, NeMo Guardrails, promptfoo, Python rules engines.
 **What we'd take:** Nothing directly — searched for open leasing/real-estate SMS or email template datasets and marketing-copy evaluation benchmarks specifically; found only paywalled vendor blog "template lists" (Dexatel, Textus, EZ Texting) with no license or downloadable data, and one arXiv paper on LLM-as-judge for ad copy that does not release its dataset. Confirms C5's plan to hand-write a small set of templates per (intent × channel × language) is the right call — there is no reusable open dataset to import instead.
 **Verdict:** SKIP
 **In plain words:** We looked hard for a ready-made, free set of real leasing text/email examples or a scoring benchmark for marketing copy and found nothing open and trustworthy — writing our own dozen templates by hand, as already planned, is still the right move.
+
+### Joinn99/RocketEval-ICLR
+**URL:** https://github.com/Joinn99/RocketEval-ICLR
+**Area:** H5 Evaluation that grades against a reference
+**License / stars / last commit:** MIT / 18 stars / active (pushed 2025-08-21)
+**What we'd take:** `src/run_task.py` shows the concrete three-step pipeline: turn the expected/reference answer into a per-record checklist, grade each checklist item yes/no with a cheap LLM, then reweight items against human labels. This confirms RocketEval (cited in our STATE-OF-THE-ART-research.md as a paper) has real published code, but it's a research artifact hardcoded to its own benchmark, not an installable library.
+**Verdict:** MIRROR PATTERN
+**In plain words:** This project proves the "turn the expected answer into a yes/no checklist, then grade each item" idea has real code behind it, but the code itself is built for a research benchmark, not for us to install — we should copy the idea, not the code.
+
+### UKGovernmentBEIS/inspect_ai
+**URL:** https://github.com/UKGovernmentBEIS/inspect_ai
+**Area:** H5 Evaluation that grades against a reference
+**License / stars / last commit:** MIT / ~2,800 stars / active (daily commits)
+**What we'd take:** Its `model_graded_qa` scorer (`inspect_ai/scorer/_model.py`) grades free-text output against a reference `target` using an LLM judge and returns a clean `Score` object with `value`, `answer`, `explanation` and `metadata` fields. That field shape is a good template for our own eval's per-record judge output, even though it doesn't natively compute a confidence interval across a sample.
+**Verdict:** MIRROR PATTERN
+**In plain words:** This is a serious, actively maintained UK government AI-safety evaluation tool; we're too small to install the whole framework, but its tidy "score + reason" output format is worth copying for our own grader.
+
+### confident-ai/deepeval
+**URL:** https://github.com/confident-ai/deepeval
+**Area:** H5 Evaluation that grades against a reference
+**License / stars / last commit:** Apache-2.0 / ~18,300 stars / active (near-daily commits)
+**What we'd take:** Its G-Eval metric prompt template (`deepeval/metrics/g_eval/template.py`) asks the judge for a JSON object with an integer score plus a `reason` field — a clean, widely-used prompt contract worth reusing verbatim in our own tone judge, without installing the full framework (test cases, synthesizer, cloud dashboard).
+**Verdict:** MIRROR PATTERN
+**In plain words:** This is a very popular, actively maintained eval library; we don't need the whole thing, but its "ask the judge for a score and a reason as JSON" prompt pattern is worth copying directly.
+
+### wandb/weave
+**URL:** https://github.com/wandb/weave
+**Area:** H5 Evaluation that grades against a reference
+**License / stars / last commit:** Apache-2.0 / ~1,100 stars / active
+**What we'd take:** It is genuinely open source and can run local scoring functions without the paid cloud UI, but the entire value of the tool is the hosted tracing/dashboard — running it purely local throws away most of what it offers.
+**Verdict:** SKIP
+**In plain words:** This is a real open-source tool, but it's built around a cloud dashboard we don't need for a one-time, ~100-record grading job — too heavy for what we're doing.
+
+### jacobgil/confidenceinterval
+**URL:** https://github.com/jacobgil/confidenceinterval
+**Area:** H5 Evaluation that grades against a reference
+**License / stars / last commit:** MIT / 144 stars / last commit 2024-05-24 (18+ months, but a small stable utility, not abandoned functionality)
+**What we'd take:** scikit-learn-style calls (e.g. `precision_score`) that return both the point estimate and a proper confidence interval (Wilson score by default for small samples, bootstrap/BCa as an option) — exactly right for turning "73% pass" into "73% pass, 95% CI [64%, 81%]" on a 100-200 record eval set without hand-writing statistics.
+**Verdict:** MIRROR PATTERN
+**In plain words:** This tiny, well-made library computes the "give or take" range around a pass rate; the underlying formula (Wilson score interval) is simple enough to copy as a 10-line function instead of adding a new dependency, but it's a solid reference if we'd rather install it.
+
+### wandb/weave and DeepEval/Inspect AI honest comparison (no single repo — cross-cutting note)
+**URL:** https://github.com/UKGovernmentBEIS/inspect_ai
+**Area:** H5 Evaluation that grades against a reference
+**License / stars / last commit:** N/A — this entry is a decision note, not a new repo
+**What we'd take:** None of DeepEval, Inspect AI or Weave is the standard tool for a one-off 100-200 row labelled eval — they're built for teams running continuous evals across many models. The professional-but-right-sized move for this project is to hand-roll a small script that borrows RocketEval's checklist-extraction idea, DeepEval's "JSON score + reason" judge prompt, and a Wilson-interval confidence calculation — MIRROR PATTERN across the board, install nothing new.
+**Verdict:** MIRROR PATTERN
+**In plain words:** After comparing the well-known eval tools, the honest answer is that all of them are built for bigger, ongoing jobs than ours — the professional choice here is to steal their best ideas into one small script rather than install any of them.

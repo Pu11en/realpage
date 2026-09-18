@@ -53,3 +53,20 @@ already-planned STOP/HELP opt-out wording matches the real industry standard (VE
 Searched hard for an open leasing-SMS dataset or a marketing-copy eval benchmark and found none
 usable or free — this confirms C5's plan to hand-write the dozen templates is correct, no import
 shortcut exists. 5 candidates added, all pass the format checker.
+
+
+## H5 Evaluation that grades against a reference (2026-09-17)
+Searched for actual code (not just papers) behind RocketEval/Check-Eval/TICK, plus Inspect AI,
+DeepEval, Weave, and confidence-interval libraries for small labelled eval sets. Confirmed
+RocketEval does have a public code repo (Joinn99/RocketEval-ICLR) proving the "checklist from
+reference, graded yes/no, reweighted" idea is real, but it's a research artifact, not installable.
+Inspect AI (UK AI Safety Institute, ~2,800 stars) and DeepEval (~18,300 stars) are both
+professional, actively maintained frameworks, but both are sized for teams running many evals
+continuously — too heavy for our one-off 100-200 record job. Best find: jacobgil/confidenceinterval
+— a tiny MIT library that turns "73% pass" into "73% pass, 95% CI [64%, 81%]" via a Wilson score
+interval, small enough to either install or copy as a 10-line function. wandb/weave is real
+open-source but its whole value is a cloud dashboard we don't need, so SKIP. Verdict across the
+area: no single tool is the "known professional choice" for this size of eval — the right move is
+to hand-roll a small script mirroring RocketEval's checklist idea, DeepEval's JSON-score-plus-reason
+judge prompt, and a Wilson-interval confidence calculation. 6 candidates added to candidates.md,
+all pass the format checker (28 total).
