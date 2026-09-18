@@ -61,6 +61,38 @@ def test_pipeline_diagnostics_report_fields_without_looking_at_expected():
     assert evaluation["meaning_checks"]["checks"] == []
 
 
+def test_meaning_checks_are_derived_from_each_record_not_fixture_identity():
+    raw = json.loads(json.dumps(GOLDENS[0]))
+    raw["input"]["profile"]["first_name"] = "Jordan"
+    raw["input"]["property_name"] = "Maple Grove Apartments"
+    raw["expected"]["next_message"]["body"] = (
+        raw["expected"]["next_message"]["body"]
+        .replace("Taylor", "Jordan")
+        .replace("Oak Ridge", "Maple Grove")
+    )
+    result = run_record(raw, config=OFFLINE)
+    report = evaluate_record(raw, result)
+    checks = {item["name"]: item for item in report["meaning_checks"]["checks"]}
+    assert report["meaning_checks"]["passed"] is True
+    assert checks["first_name"]["expected_meaning"] == "jordan"
+    assert checks["property"]["expected_meaning"] == "maple grove"
+
+
+def test_null_expected_message_is_a_measured_no_message_meaning_check():
+    raw = json.loads(json.dumps(GOLDENS[0]))
+    raw["input"]["inbound_reply"] = "STOP"
+    result = run_record(raw, config=OFFLINE)
+    raw["expected"] = result.submission()
+    assert raw["expected"]["next_message"] is None
+    report = evaluate_record(raw, result)
+    assert report["meaning_checks"] == {
+        "status": "measured",
+        "passed": True,
+        "checks": [{"name": "no_message", "passed": True, "expected_meaning": "no automated message"}],
+        "sample_count": 1,
+    }
+
+
 def test_unknown_assertion_and_threshold_are_visible_not_ignored():
     raw = json.loads(json.dumps(GOLDENS[0]))
     raw["assertions"]["required_states"].append("quantum_check")
@@ -141,6 +173,33 @@ def test_full_report_resolves_aggregate_thresholds_and_is_honest():
     assert report["binary_pass_fractions"]["structural_match"]["sample_count"] == 2
     assert report["binary_pass_fractions"]["meaning_checks"]["sample_count"] == 2
     assert "do not estimate real-world" in report["proven_vs_estimated"]
+
+
+def test_full_report_evaluates_duplicate_task_ids_by_input_position():
+    records = json.loads(json.dumps(GOLDENS))
+    records[0]["input"].update({"cadence_days": 0, "flow": "welcome", "horizon": "short"})
+    records[1]["input"].update({"cadence_days": 3, "flow": "open", "horizon": "long"})
+    records[1]["task_id"] = records[0]["task_id"]
+    report = evaluate_assignment(records, REPLIES, runs=100)
+    assert len(report["records"]) == 2
+    assert [row["structural_match"]["passed"] for row in report["records"]] == [True, True]
+    assert [row["meaning_checks"]["passed"] for row in report["records"]] == [True, True]
+
+
+def test_full_report_evaluates_inputs_beyond_timing_sample_coverage():
+    records = []
+    for index in range(101):
+        raw = json.loads(json.dumps(GOLDENS[index % 2]))
+        if index % 2:
+            raw["input"].update({"cadence_days": 3, "flow": "open", "horizon": "long"})
+        else:
+            raw["input"].update({"cadence_days": 0, "flow": "welcome", "horizon": "short"})
+        raw["task_id"] = f"position-{index}"
+        records.append(raw)
+    report = evaluate_assignment(records, REPLIES, runs=100)
+    assert len(report["records"]) == 101
+    assert all(row["structural_match"]["passed"] for row in report["records"])
+    assert all(row["meaning_checks"]["passed"] for row in report["records"])
 
 
 def test_wilson_is_only_a_binary_fraction_helper():

@@ -11,6 +11,7 @@ import math
 import statistics
 import time
 from collections import Counter
+from datetime import date
 from typing import Any, Callable, Iterable, Optional
 
 from casestudy.contract import AssignmentAnswer
@@ -19,7 +20,7 @@ from casestudy.templates import personalization_fields
 from casestudy.validators import Draft
 from casestudy.writer import WriterConfig
 
-EVALUATION_VERSION = "evaluation_v1"
+EVALUATION_VERSION = "evaluation_v2"
 PLAN_CITE = "PLAN-casestudy-bot.md C9"
 PROXY_NOTE = "Project-defined safe-field coverage proxy; the employer's scoring formula is unknown."
 PROVEN_NOTE = (
@@ -209,16 +210,85 @@ def _structural_match(expected: Any, answer: AssignmentAnswer) -> dict[str, Any]
     return {"status": "measured", "passed": all(c["passed"] for c in checks), "checks": checks, "sample_count": 1}
 
 
+def _contains(body: str, value: Any) -> bool:
+    return isinstance(value, str) and bool(value.strip()) and value.strip().lower() in body
+
+
 def _meaning_checks(raw: dict[str, Any], result: Any) -> dict[str, Any]:
+    """Build semantic checks from this record instead of recognizing fixture IDs.
+
+    Only facts which the supplied expected message itself uses become requirements. This avoids
+    making every available profile field mandatory while still catching an answer that drops or
+    changes the reference's meaningful personalization, CTA, or opt-out instruction.
+    """
     expected = raw.get("expected")
     if not isinstance(expected, dict):
         return {"status": "not_measured", "passed": None, "checks": [], "sample_count": 0}
-    body = result.answer.next_message.body.lower() if result.answer.next_message else ""
-    if expected.get("next_message", {}).get("channel") == "sms":
-        requirements = {"first_name": "taylor", "property": "oak ridge", "tour": "tour", "option_1": "1", "option_2": "2", "opt_out": "stop"}
-    else:
-        requirements = {"first_name": "taylor", "move_timing": "mid-february", "pool": "pool", "fitness": "fitness", "tour_link": "https://oakridge.example/tour", "opt_out": "stop"}
-    checks = [{"name": name, "passed": phrase in body, "expected_meaning": phrase} for name, phrase in requirements.items()]
+    if "next_message" not in expected:
+        return {"status": "not_measured", "passed": None, "checks": [], "sample_count": 0}
+    expected_message = expected["next_message"]
+    actual_message = result.answer.next_message
+    if expected_message is None:
+        checks = [{"name": "no_message", "passed": actual_message is None, "expected_meaning": "no automated message"}]
+        return {"status": "measured", "passed": all(c["passed"] for c in checks), "checks": checks, "sample_count": 1}
+    if not isinstance(expected_message, dict):
+        return {"status": "not_measured", "passed": None, "checks": [], "sample_count": 0}
+
+    expected_body = expected_message.get("body")
+    expected_body_lower = expected_body.lower() if isinstance(expected_body, str) else ""
+    actual_body = actual_message.body.lower() if actual_message is not None else ""
+    requirements: list[tuple[str, str]] = []
+    input_data = raw.get("input") if isinstance(raw.get("input"), dict) else {}
+    profile = input_data.get("profile") if isinstance(input_data.get("profile"), dict) else {}
+
+    first_name = profile.get("first_name")
+    if _contains(expected_body_lower, first_name):
+        requirements.append(("first_name", first_name.strip().lower()))
+
+    property_name = input_data.get("property_name")
+    if isinstance(property_name, str):
+        property_words = property_name.strip().lower().split()
+        while property_words and property_words[-1] in {"apartments", "apartment", "community", "homes"}:
+            property_words.pop()
+        property_phrase = " ".join(property_words)
+        if property_phrase and property_phrase in expected_body_lower:
+            requirements.append(("property", property_phrase))
+
+    amenities = profile.get("amenity_interest") or profile.get("amenities")
+    if isinstance(amenities, list):
+        for amenity in amenities:
+            if _contains(expected_body_lower, amenity):
+                requirements.append((f"amenity:{str(amenity).strip().lower()}", str(amenity).strip().lower()))
+
+    move_date = input_data.get("move_date_target")
+    if isinstance(move_date, str):
+        try:
+            month = date.fromisoformat(move_date[:10]).strftime("%B").lower()
+        except ValueError:
+            month = ""
+        if month and month in expected_body_lower:
+            requirements.append(("move_month", month))
+
+    cta = expected_message.get("cta")
+    if isinstance(cta, dict) and cta.get("type") == "schedule_tour":
+        requirements.append(("tour_intent", "tour|visit"))
+        link = cta.get("link")
+        if isinstance(link, str) and link:
+            requirements.append(("tour_link", link.lower()))
+        options = cta.get("options")
+        if isinstance(options, list):
+            for index, option in enumerate(options, 1):
+                if isinstance(option, str) and option:
+                    requirements.append((f"cta_option_{index}", option.lower()))
+
+    constraints = raw.get("assertions", {}).get("constraints", {}) if isinstance(raw.get("assertions"), dict) else {}
+    if constraints.get("include_opt_out_instructions") is True and "stop" in expected_body_lower:
+        requirements.append(("opt_out", "stop"))
+
+    checks = []
+    for name, phrase in requirements:
+        passed = any(word in actual_body for word in ("tour", "visit")) if phrase == "tour|visit" else phrase in actual_body
+        checks.append({"name": name, "passed": passed, "expected_meaning": phrase})
     return {"status": "measured", "passed": all(c["passed"] for c in checks), "checks": checks, "sample_count": 1}
 
 
@@ -287,13 +357,18 @@ def wilson_interval(successes: int, total: int, z: float = 1.96) -> Optional[lis
 
 def evaluate_assignment(records: list[dict[str, Any]], reply_corpus: list[dict[str, Any]], runs: int = 100,
                         runner: Optional[Callable[..., Any]] = None) -> dict[str, Any]:
+    if runner is None:
+        from casestudy.pipeline import run_record
+        runner = run_record
     reply = reply_metrics(reply_corpus)
-    latency, measured = offline_latency_metrics(records, runs=runs, runner=runner)
-    # Use one result per input from the measured warm runs; all aggregate thresholds use the same evidence.
-    first_results: dict[str, Any] = {}
-    for result in measured:
-        first_results.setdefault(result.task_id, result)
-    record_reports = [evaluate_record(raw, first_results.get(normalize(raw).task_id), reply=reply, latency=latency) for raw in records]
+    latency, _timing_results = offline_latency_metrics(records, runs=runs, runner=runner)
+    # Evaluation coverage is independent of the timing sample. Run each input exactly once and
+    # preserve list position: task IDs are neither guaranteed unique nor authoritative business
+    # fields, and a batch may contain more records than the configured timing run count.
+    config = WriterConfig(enabled=False)
+    evaluated = [runner(raw, config=config) for raw in records]
+    record_reports = [evaluate_record(raw, result, reply=reply, latency=latency)
+                      for raw, result in zip(records, evaluated)]
     structural = [r["structural_match"]["passed"] for r in record_reports if r["structural_match"]["status"] == "measured"]
     meaning = [r["meaning_checks"]["passed"] for r in record_reports if r["meaning_checks"]["status"] == "measured"]
     binary = {
