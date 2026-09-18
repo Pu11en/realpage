@@ -95,3 +95,16 @@
 **How checked:** check-no-realpage-target.sh passes. tooling/qa/fixes_tests: 199 pass, 4 fail — the same 4 fail before this change (chatbot SOUL/link tests, T7's job).
 
 **Left open:** Chatbot SOUL/skill/plugin still mention AI Visibility (T7); README/AGENTS/plans mention it (T8); site/data/buildbot.json keeps a historical build-log entry naming it. Stale allow-list lines for the old paths remain in the check script (harmless).
+
+## T4 ✅ review fix — stale imports fixed (2026-09-18)
+
+**What:** Fixed import paths in `tooling/realpage-library/cards.py` and `tooling/realpage-library/facts.py`. Both were still pointing to `tooling/ai-visibility/local_ai.py` which had been moved to `archive/realpage/ai-visibility/tooling/local_ai.py` in T4. Updated both files to use the new archived path.
+
+**Files fixed:**
+- tooling/realpage-library/cards.py (line 17)
+- tooling/realpage-library/facts.py (line 15)
+
+**How checked:** 
+- `python3 tooling/realpage-library/cards.py --help` runs without error
+- `python3 tooling/realpage-library/facts.py` imports and executes successfully
+- `bash tooling/check-no-realpage-target.sh` passes

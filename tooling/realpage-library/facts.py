@@ -12,7 +12,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 SITE = ROOT / "archive" / "realpage" / "raw" / "realpage-site"
 OUT = ROOT / "archive" / "realpage" / "01-company" / "realpage-key-facts.md"
-spec = importlib.util.spec_from_file_location("local_ai", ROOT / "tooling" / "ai-visibility" / "local_ai.py")
+spec = importlib.util.spec_from_file_location("local_ai", ROOT / "archive" / "realpage" / "ai-visibility" / "tooling" / "local_ai.py")
 local_ai = importlib.util.module_from_spec(spec); spec.loader.exec_module(local_ai)
 
 KEYWORDS = ("acquire", "acquisition", "announces", "launches", "rebrand", "renamed", "settlement",

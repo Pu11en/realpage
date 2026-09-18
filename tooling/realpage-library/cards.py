@@ -14,7 +14,7 @@ SITE = ROOT / "archive" / "realpage" / "raw" / "realpage-site"
 OUT = ROOT / "archive" / "realpage" / "02-products" / "realpage"
 MAX_CHARS = 12000
 
-spec = importlib.util.spec_from_file_location("local_ai", ROOT / "tooling" / "ai-visibility" / "local_ai.py")
+spec = importlib.util.spec_from_file_location("local_ai", ROOT / "archive" / "realpage" / "ai-visibility" / "tooling" / "local_ai.py")
 local_ai = importlib.util.module_from_spec(spec); spec.loader.exec_module(local_ai)
 
 PROMPT = """You are summarising ONE product area from a software company's own website.
