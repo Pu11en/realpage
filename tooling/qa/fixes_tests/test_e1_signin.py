@@ -2,6 +2,7 @@
 site/Caddyfile with the fake chat upstream (tooling/qa/fake-webui) and checks
 the gate. Offline: no network and no paid calls. The first run unpacks the
 Caddy binary out of the cache/caddy:2-alpine image into .caddy-bin/."""
+import json
 import os
 import shutil
 import socket
@@ -72,16 +73,34 @@ def _get(url: str, cookie: str | None = None, headers: dict | None = None):
         return e.code, e.headers.get("Location"), e.read()
 
 
+def _post_json(url: str, payload: dict, cookie: str | None = None):
+    req = urllib.request.Request(url, data=json.dumps(payload).encode(), headers={"Content-Type": "application/json"})
+    if cookie:
+        req.add_header("Cookie", cookie)
+    opener = urllib.request.build_opener(urllib.request.ProxyHandler({}), _NoRedirect)
+    try:
+        with opener.open(req, timeout=20) as response:
+            return response.status, response.read()
+    except urllib.error.HTTPError as exc:
+        return exc.code, exc.read()
+
+
 @pytest.fixture(scope="module")
 def gate():
     _ensure_caddy()
-    chat_port, web_port = _free_port(), _free_port()
+    chat_port, case_port, web_port = _free_port(), _free_port(), _free_port()
     xdg = {"XDG_CONFIG_HOME": str(ROOT / ".caddy-bin" / "xdg-config"),
            "XDG_DATA_HOME": str(ROOT / ".caddy-bin" / "xdg-data")}
     fake = subprocess.Popen([sys.executable, str(FAKE), str(chat_port)],
                             stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    case_service = subprocess.Popen(
+        [sys.executable, "-m", "casestudy.web", "--port", str(case_port)], cwd=ROOT,
+        env=dict(os.environ, CASESTUDY_OFFLINE="true"),
+        stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
+    )
     env = dict(os.environ, **xdg, PORT=str(web_port),
-               CHAT_UPSTREAM=f"http://127.0.0.1:{chat_port}", SITE_ROOT=str(ROOT / "site"))
+               CHAT_UPSTREAM=f"http://127.0.0.1:{chat_port}",
+               CASESTUDY_UPSTREAM=f"http://127.0.0.1:{case_port}", SITE_ROOT=str(ROOT / "site"))
     caddy = subprocess.Popen([str(CADDY), "run", "--config", str(ROOT / "site" / "Caddyfile"),
                               "--adapter", "caddyfile"],
                              env=env, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
@@ -96,11 +115,13 @@ def gate():
     else:
         caddy.terminate()
         fake.terminate()
+        case_service.terminate()
         pytest.fail("Caddy did not start with site/Caddyfile")
     yield base
     caddy.terminate()
     fake.terminate()
-    for p in (caddy, fake):
+    case_service.terminate()
+    for p in (caddy, fake, case_service):
         try:
             p.wait(timeout=10)
         except subprocess.TimeoutExpired:
@@ -114,7 +135,7 @@ def test_signed_out_pages_and_data_are_sent_to_sign_in(gate):
     assert (status, loc) == (302, "/map.html")
     for path in ("/index.html", "/map.html", "/property.html?id=tx-1", "/master-table.html",
                  "/ai-visibility.html", "/under-the-hood.html", "/data/leads.json",
-                 "/data/areas/tx.json", "/js/app.js", "/vendor/x.js"):
+                 "/data/areas/tx.json", "/js/app.js", "/vendor/x.js", "/case-study"):
         status, loc, _ = _get(gate + path)
         assert status == 302, (path, status)
         assert loc and "/auth?redirect=" in loc, (path, loc)
@@ -131,6 +152,17 @@ def test_signed_in_request_gets_the_page_and_the_data(gate):
     assert status == 200 and b"Early Leads" in body
     status, _, body = _get(gate + "/data/areas/tx.json", cookie=COOKIE)
     assert status == 200 and b'"leads"' in body
+    status, _, body = _get(gate + "/case-study", cookie=COOKIE)
+    assert status == 200 and b"Case study workbench" in body
+
+
+def test_signed_in_case_study_runs_twelve_records(gate):
+    lines = (ROOT / "casestudy" / "data" / "sample.jsonl").read_text(encoding="utf-8").splitlines()
+    payload = {"jsonl": "\n".join(lines * 6), "offline": True}
+    status, body = _post_json(gate + "/case-study/api/run", payload, cookie=COOKIE)
+    result = json.loads(body)
+    assert status == 200 and result["record_count"] == 12
+    assert len(result["submission_jsonl"].splitlines()) == 12
 
 
 def test_chat_panel_frame_home_and_its_api_stay_public(gate):
@@ -146,3 +178,4 @@ def test_caddyfile_gates_the_app_paths():
     conf = (ROOT / "site" / "Caddyfile").read_text()
     assert "forward_auth" in conf and "uri /api/v1/auths/" in conf
     assert "/privacy.html" in conf
+    assert "@case_study path /case-study*" in conf and "CASESTUDY_UPSTREAM" in conf

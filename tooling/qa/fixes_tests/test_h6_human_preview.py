@@ -45,4 +45,7 @@ def test_human_preview_has_a_real_sign_in_front_door():
     assert 'ENABLE_LOGIN_FORM: "true"' in overlay
     assert 'CHAT_UPSTREAM: http://open-webui:8080' in overlay
     assert '"8876:8080"' in overlay
-    assert overlay.count("ports: !reset []") == 2
+    # Chatbot, Open WebUI, and the case-study service are internal-only; Caddy
+    # is the preview's single authenticated front door.
+    assert overlay.count("ports: !reset []") == 3
+    assert "CASESTUDY_UPSTREAM: http://casestudy:8080" in overlay

@@ -117,6 +117,7 @@ def test_browser_runs_1_2_12_malformed_upload_and_exact_exports(web_server, tmp_
         upload = tmp_path / "two.jsonl"
         upload.write_text("\n".join(SAMPLES) + "\n", encoding="utf-8")
         page.locator("#file-input").set_input_files(upload)
+        playwright.expect(page.locator("#jsonl-input")).to_have_value(upload.read_text(encoding="utf-8"))
         assert page.locator("#jsonl-input").input_value().splitlines() == SAMPLES
         page.locator("#run-button").click()
         page.locator("#record-count:text-is('2')").wait_for()

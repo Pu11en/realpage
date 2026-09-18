@@ -487,3 +487,20 @@ three export controls to produce the CLI's exact bytes and requires one bad reco
 visible without losing the others. Caddy authentication, route proxying, limits, health, and the
 container remain C11 work.
 **Source:** `PLAN-casestudy-bot.md` C10; decisions 36 and 38.
+
+## 40. Production wiring: isolated service behind the existing sign-in gate
+
+**Decided:** The case-study workbench runs as its own non-root Python container, with `tzdata`
+installed and only the `casestudy/` source copied into the image. The service exposes a direct
+`/health` endpoint for Railway, caps request bodies at 2 MiB and batches at 100 records by default,
+and keeps both limits configurable. CraneSignal's Caddy front door authenticates every
+`/case-study*` request before proxying it to the private service; the service health endpoint is
+not exposed through that public route. Local Compose includes the service, and the private human
+preview uses the same authenticated Caddy route. Missing model configuration uses the already
+validated offline templates rather than failing or attempting an unconfigured call. **Alternatives:**
+bundling the service into the static site image; exposing it on a second public domain; putting
+authentication into this service as a second source of truth; allowing unbounded uploads; copying
+the full repository into the runtime image. **Why it won:** C11 requires separate deployment,
+existing-auth reuse, bounded requests, deterministic missing-key behavior, and proof that the
+container cannot read `propertystack/data/`.
+**Source:** `PLAN-casestudy-bot.md` C11; decision 39.
