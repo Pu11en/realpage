@@ -11,7 +11,7 @@ Try: bash tooling/dev.sh
 Open: http://localhost:8765
 
 ## Tasks
-- [ ] T1 Clear the 52 leftover hits of tooling/check-no-realpage-target.sh (all in business/): move RealPage-pitch notes to archive/realpage/business, reword the rest; check must exit 0.
+- [x] T1 Clear the 52 leftover hits of tooling/check-no-realpage-target.sh (all in business/): move RealPage-pitch notes to archive/realpage/business, reword the rest; check must exit 0.
 - [ ] T2 Landing page (business/marketing/landing/index.html): rewrite for investors. Headline "See which apartment buildings just sold, who bought them, and what's being built." Primary button "Start free" links straight to the site (no login). Keep the design; update its test in business/tools/test_landing.py.
 - [ ] T3 Remove any login gate in front of the site pages (Caddy/proxy/Google sign-in) so Map, Early Leads, building pages and Under the Hood load signed out. Test: curl each page signed out returns 200 with content.
 - [ ] T4 Chat panel on every site page: open by default, X closes it (remember closed state per visit). Signed out, it shows "Make a free account" (primary) and "Already have one? Sign in" (small link) using the existing sign-in; signed in, it shows the existing chat.
