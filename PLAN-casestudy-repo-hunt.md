@@ -55,7 +55,7 @@ Check: `python3 casestudy/research/check_candidates.py`
   (RocketEval, TICK, Check-Eval, AutoChecklist), JSON field-level scoring, and confidence
   intervals (Inspect AI, DeepEval, Weave, others). Which one is the known professional choice for
   a small labelled set?
-- [ ] **H6 Human review screens.** Lightweight ways to pass/fail 50-200 outputs: Argilla, Label
+- [x] **H6 Human review screens.** Lightweight ways to pass/fail 50-200 outputs: Argilla, Label
   Studio, Langfuse annotation queues, Phoenix, Hamel Husain's annotation-app examples, promptfoo's
   viewer. Compare honestly against the existing shipcheck grading screen.
 - [ ] **H7 Explaining decisions on screen.** How mature projects show "which rules fired and why":

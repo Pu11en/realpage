@@ -239,3 +239,51 @@ guardrails-ai, NeMo Guardrails, promptfoo, Python rules engines.
 **What we'd take:** None of DeepEval, Inspect AI or Weave is the standard tool for a one-off 100-200 row labelled eval — they're built for teams running continuous evals across many models. The professional-but-right-sized move for this project is to hand-roll a small script that borrows RocketEval's checklist-extraction idea, DeepEval's "JSON score + reason" judge prompt, and a Wilson-interval confidence calculation — MIRROR PATTERN across the board, install nothing new.
 **Verdict:** MIRROR PATTERN
 **In plain words:** After comparing the well-known eval tools, the honest answer is that all of them are built for bigger, ongoing jobs than ours — the professional choice here is to steal their best ideas into one small script rather than install any of them.
+
+### AntoineF23/vasari
+**URL:** https://github.com/AntoineF23/vasari
+**Area:** H6 Human review screens
+**License / stars / last commit:** MIT / 1 star / pushed 2026-07-12 (recent, but essentially unused so far)
+**What we'd take:** Not the tool itself (too new and unverified to trust for real work) — the concept it's built around is exactly right: review traces, do "open and axial coding" error analysis, then validate the LLM judge against a small set of human labels using a confusion matrix, true-positive/true-negative rate and Cohen's kappa. That last piece — checking whether the automated judge agrees with a human on a sample — is worth adding as a small script even though we won't install Vasari.
+**Verdict:** SKIP
+**In plain words:** A tiny brand-new project (basically untested) that has the right idea — check that the AI grader agrees with a human before trusting it — but it's too new to depend on, so we'll write that agreement check ourselves in a few lines.
+
+### promptfoo
+**URL:** https://github.com/promptfoo/promptfoo
+**Area:** H6 Human review screens
+**License / stars / last commit:** MIT / ~25,200 stars / active (pushed today)
+**What we'd take:** Its local `promptfoo view` grid — a red/green pass-fail table per test case with expandable diffs and a one-click human override button — is the cleanest reference for a "look at 100-200 rows, mark pass/fail fast" screen. Not worth installing the whole eval framework just for the viewer, but its layout (table + expand + override) is worth copying into shipcheck's existing `grade_server.py`.
+**Verdict:** MIRROR PATTERN
+**In plain words:** A hugely popular, actively developed AI-testing tool; we don't need the whole thing, but the way its results screen shows pass/fail as a color grid you can click through is worth copying into the review page we already have.
+
+### argilla-io/argilla
+**URL:** https://github.com/argilla-io/argilla
+**Area:** H6 Human review screens
+**License / stars / last commit:** Apache-2.0 / ~5,100 stars / active (pushed today)
+**What we'd take:** Nothing to install — it's a full multi-annotator server (Docker, database, web UI, disagreement adjudication) built for teams labeling thousands of records with agreement tracking. For one person grading 100-200 records with pass/fail, that's substantially more infrastructure than the job needs.
+**Verdict:** SKIP
+**In plain words:** This is a serious, actively maintained team-labeling tool (now owned by Hugging Face), but it's built for many reviewers checking each other's work on big datasets — way more than we need for one person clicking through 100-200 answers.
+
+### HumanSignal/label-studio
+**URL:** https://github.com/HumanSignal/label-studio
+**Area:** H6 Human review screens
+**License / stars / last commit:** Apache-2.0 / ~28,300 stars / active (pushed today)
+**What we'd take:** Same verdict as Argilla — it's a general-purpose, multi-format (image/text/audio/video) labeling platform with its own server and database. Its keyboard-shortcut binary-choice interface is a nice UX touch, but standing up the whole platform for a one-off pass/fail pass on generated messages is overkill.
+**Verdict:** SKIP
+**In plain words:** A big, well-known labeling tool used across many industries; too heavy to install just to press pass/fail on our messages — our existing simple review screen already does this job.
+
+### Arize-ai/phoenix
+**URL:** https://github.com/Arize-ai/phoenix
+**Area:** H6 Human review screens
+**License / stars / last commit:** Elastic-2.0-style custom OSS license (NOASSERTION on GitHub, check terms) / ~11,500 stars / active (pushed today)
+**What we'd take:** Its trace-review UI lets a human attach a thumbs-up/down "annotation" directly onto a logged LLM call, which is a clean pattern for tagging pass/fail alongside the exact prompt/response that produced it — but Phoenix is an observability platform (tracing server, storage backend) and installing it just for that one annotation widget is not worth it.
+**Verdict:** SKIP
+**In plain words:** A well-known AI-observability tool; its "thumbs up/down on this specific AI response" idea is nice, but the tool itself is built for tracking live production traffic, not a one-time grading pass — too heavy for us.
+
+### langfuse/langfuse
+**URL:** https://github.com/langfuse/langfuse
+**Area:** H6 Human review screens
+**License / stars / last commit:** Source-available custom license (not fully open, some enterprise features gated) / ~34,700 stars / active (pushed today)
+**What we'd take:** Its "annotation queue" concept — a persistent worklist of records still needing a human pass/fail label, with progress tracked per queue — is a good vocabulary/pattern reference (queue, label, score) even though we won't self-host Langfuse for a one-off job with a source-available license.
+**Verdict:** MIRROR PATTERN
+**In plain words:** A very popular AI-monitoring tool with a "to-do list of things a human still needs to grade" feature; worth borrowing that to-do-list idea for our own review screen, but not worth installing the whole product.

@@ -70,3 +70,22 @@ area: no single tool is the "known professional choice" for this size of eval �
 to hand-roll a small script mirroring RocketEval's checklist idea, DeepEval's JSON-score-plus-reason
 judge prompt, and a Wilson-interval confidence calculation. 6 candidates added to candidates.md,
 all pass the format checker (28 total).
+
+## H6 Human review screens (2026-09-17)
+Searched Argilla, Label Studio, Langfuse annotation queues, Arize Phoenix, promptfoo's viewer, and
+Hamel Husain's annotation-app writing/tools, verifying each repo's license/stars/last-commit via
+the GitHub API. The existing shipcheck `grade_server.py` (a minimal local keypress 1/2 pass/fail
+server) was checked for as reuse-target but does not exist in this worktree — it's referenced only
+as something PLAN-casestudy-bot.md plans to copy later; confirmed via PLAN-casestudy-bot.md line
+144. Best find: a real but brand-new (1 star) tool called **vasari** (AntoineF23/vasari, MIT) whose
+core idea is worth stealing even though the repo itself is too unproven to install — validate the
+LLM judge against a small set of human labels with a confusion matrix / Cohen's kappa before
+trusting it on the full batch. promptfoo's local `view` grid (pass/fail color table with expandable
+diffs) is the best UI pattern to borrow for shipcheck's existing review screen. Argilla, Label
+Studio, Phoenix and Langfuse are all real, actively maintained, well-known tools, but every one is
+built for teams/continuous pipelines with their own server+database — installing any of them for a
+single person grading 100-200 records once would be a downgrade in simplicity, not an upgrade.
+Honest comparison verdict: shipcheck's existing lightweight keypress screen is already the right
+size for this job; the only things worth taking from this whole area are two small patterns
+(judge-vs-human agreement check, pass/fail color grid), not a new dependency. 6 candidates added to
+candidates.md, all pass the format checker (34 total).
