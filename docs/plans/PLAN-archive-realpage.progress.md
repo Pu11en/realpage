@@ -198,3 +198,6 @@
 **Commit:** 519e1c5
 
 **Left open:** T9 and T10 remain (propertystack skill docs/tests, final sweep)
+
+## Next time (from how this build went)
+- The task was well-scoped and focused: rewriting three related documentation pieces with a clear constraint (preserve the detector rules) was perfect for a quick pass, and Haiku handled it efficiently in 2 minutes.
