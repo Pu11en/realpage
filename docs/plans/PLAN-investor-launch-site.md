@@ -18,7 +18,7 @@ Open: http://localhost:8765
 - [x] T5 Hide New York (2 leads) from the area picker and map until it has real data (data/areas/index.json flag, not deletion).
 - [x] T6 Map headline: neutral ("Apartment activity by state"); lead cards: move "software not picked yet" below sale/buyer/opening info.
 - [x] T7 Chat agent knowledge (SOUL.md): describe CraneSignal as sales, buyers and new builds for investors; no RealPage-as-customer talk. Ask 5 investor questions locally; answers cite data.
-- [ ] T8 Final local walk-through: landing → Start free → Early Leads → a building → chat sign-up prompt. Screenshot each for Drew. Nothing pushed.
+- [x] T8 Final local walk-through: landing → Start free → Early Leads → a building → chat sign-up prompt. Screenshot each for Drew. Nothing pushed.
 
 ## How to try it
 1. Open the landing page: it talks about sales and buyers, and "Start free" drops you into the site with no login.

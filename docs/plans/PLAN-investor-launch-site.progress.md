@@ -61,3 +61,16 @@ Reframed chat agent knowledge (SOUL.md) for investors researching apartment oppo
 - check-no-realpage-target.sh still exits 0; no RealPage or vendor language in SOUL.md
 - Commit: 05e37a1
 - Done: agent redirected to investor use case, all investor questions on-topic, no vendor language
+
+## T8 ✅
+Final local walk-through: landing page → Start free → Early Leads → building → chat.
+- Walk-through verified: landing.html → "/" → index.html (Early Leads) → property.html (building) → chat panel visible
+- Landing page: investor headline ("See which apartment buildings just sold, who bought them, and what's being built"), "Start free" button
+- Early Leads page: list of buildings, clickable to view details
+- Building page: property info (units, status, owner, developer, stage, software), "Deep dive in chat" button
+- Chat panel: visible on building page, "Make a free account" prompt visible (signed out)
+- Also fixed: removed "View as" software vendor dropdown (RealPage/Yardi/Entrata) that shouldn't appear for investors
+- Verified: no RealPage text, no vendor references, all navigation works, chat ready, building data visible
+- check-no-realpage-target.sh still exits 0
+- Commits: 3f9f8cd (remove vendor filter)
+- Done: complete investor flow verified, no RealPage anywhere, chat ready for sign-ups
