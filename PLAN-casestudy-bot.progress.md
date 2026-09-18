@@ -302,3 +302,22 @@ are emitted by the report with their sample count rather than frozen as a claim 
 
 Left open: live-model latency and the optional tone judge require separate authorization and remain
 honestly unmeasured/not run. C10 (the demo page) is next.
+
+## C9 independent-review correction — done
+
+What I fixed:
+- Replaced fixture-specific names and phrases in the meaning evaluator with checks derived from
+  each record's first name, property, amenity interests, move month, CTA, and opt-out requirement.
+- Made an explicit `expected.next_message: null` a safe, measured no-message meaning check.
+- Separated per-input evaluation from timing samples and matched results by list position, so
+  duplicate task IDs stay independent and inputs beyond the 100-run latency sample are evaluated.
+- Added regression coverage for changed record facts, null expected messages, duplicate IDs, and
+  a 101-record input batch.
+
+Code commit: `7d71dc5` (`Fix C9 evaluation coverage and meaning checks`).
+
+Check: `python3 -m pytest -q casestudy/tests` — 212 passed. Also ran
+`python3 -m py_compile casestudy/*.py` and `git diff --check` successfully.
+
+Left open: live-model latency and the optional tone judge remain unmeasured/not run by design;
+C10 is still the next task.

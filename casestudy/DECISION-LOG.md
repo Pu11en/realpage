@@ -465,3 +465,9 @@ but validator-safe model draft pass; running the optional judge without authoriz
 counts, threshold-enforced personalization fallback, and a clear proven-versus-estimated boundary.
 **Source:** `PLAN-casestudy-bot.md` C9; the two expected blocks in `sample.jsonl` (evaluator only),
 `reply_corpus.jsonl`, decisions 33-37.
+
+**Review correction:** `evaluation_v2` derives message-meaning requirements from each record's
+own safe input facts and expected CTA instead of recognizing the two fixture identities. An
+explicit null expected message is a measured no-message check. Full assignment evaluation runs
+every input once in list order, independently of the latency sample, so duplicate task IDs and
+batches larger than 100 timing runs cannot be skipped, collapsed, or matched to another record.
