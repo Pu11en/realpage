@@ -55,7 +55,7 @@
 
 	# The app's pages and their data. Not signed in -> the chat's sign-in page,
 	# which brings them back to the page they asked for.
-	@app path /index.html /map.html /master-table.html /property.html /ai-visibility.html /under-the-hood.html /js/* /data/* /vendor/*
+	@app path /index.html /map.html /master-table.html /property.html /under-the-hood.html /js/* /data/* /vendor/*
 	handle @app {
 		forward_auth {$CHAT_UPSTREAM:http://propertystack-chat.railway.internal:8080} {
 			uri /api/v1/auths/

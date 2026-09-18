@@ -127,7 +127,7 @@ def test_signed_out_pages_and_data_are_sent_to_sign_in(gate):
     status, loc, _ = _get(gate + "/")
     assert (status, loc) == (302, "/map.html")
     for path in ("/index.html", "/map.html", "/property.html?id=tx-1", "/master-table.html",
-                 "/ai-visibility.html", "/under-the-hood.html", "/data/leads.json",
+                 "/under-the-hood.html", "/data/leads.json",
                  "/data/areas/tx.json", "/js/app.js", "/vendor/x.js"):
         status, loc, _ = _get(gate + path)
         assert status == 302, (path, status)

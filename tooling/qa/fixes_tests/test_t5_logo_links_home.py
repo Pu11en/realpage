@@ -5,7 +5,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[3]
 APP_JS = (ROOT / "site/js/app.js").read_text(encoding="utf-8")
 
-APP_PAGES = ["index.html", "map.html", "ai-visibility.html", "under-the-hood.html", "property.html"]
+APP_PAGES = ["index.html", "map.html", "under-the-hood.html", "property.html"]
 
 
 def test_wordmark_is_a_link_to_the_home_page():
