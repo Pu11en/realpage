@@ -239,3 +239,12 @@ def test_prior_options_nested_in_previous_message():
     raw["input"]["prior_message"] = {"cta": {"type": "schedule_tour", "options": ["Thu", "Fri"]}}
     out = run_gates(raw)
     assert out.decision == "propose_follow_up" and out.selected_option == "Thu"
+
+
+def test_confirm_tour_reply_keeps_the_chosen_option():
+    raw = json.loads(json.dumps(SAMPLES[0]))
+    raw["assertions"]["constraints"]["primary_cta"] = "confirm_tour"
+    raw["input"]["inbound_message"] = {"channel": "sms", "body": "1"}
+    raw["input"]["prior_message"] = {"cta": {"type": "schedule_tour", "options": ["Thu", "Fri"]}}
+    out = run_gates(raw)
+    assert out.purpose is None and out.decision == "propose_follow_up" and out.selected_option == "Thu"

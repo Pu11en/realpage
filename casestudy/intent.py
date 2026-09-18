@@ -43,7 +43,8 @@ FOLLOW_UP_INTERVAL_DAYS = 3  # observed once (prospect_long_horizon_day3); provi
 OPTION_OFFSETS = (2, 3)  # observed: Tuesday send -> Thu, Fri
 DAY_ABBR = ("Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun")
 
-CTA_MAP = {"book_tour": "schedule_tour", "schedule_tour": "schedule_tour"}  # observed
+CTA_MAP = {"book_tour": "schedule_tour", "schedule_tour": "schedule_tour", "tour": "schedule_tour", "confirm_tour": "schedule_tour",
+           "reschedule_tour": "schedule_tour", "select_tour_time": "schedule_tour", "tour_request": "schedule_tour"}  # book_tour observed; tour variants map to the same shape
 
 # Property facts learned from the supplied example, with provenance. Never generalized.
 LEARNED_PROPERTY_LINKS: dict[str, dict[str, str]] = {

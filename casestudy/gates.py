@@ -55,7 +55,7 @@ OPT_OUT_WORDS = {"stop", "stopall", "unsubscribe", "cancel", "end", "quit", "rem
 # Spanish keywords and near-misses: revocation is valid by "any reasonable means" (47 CFR 64.1200(a)(10)).
 OPT_OUT_FIRST_WORDS = OPT_OUT_WORDS | {"stopp", "stp", "alto", "parar", "para", "cancelar", "detener", "baja", "unsub"}
 # The only playbook the supplied examples teach is prospect outreach whose goal is a tour.
-TOUR_CTAS = {"book_tour", "schedule_tour", "tour"}
+TOUR_CTAS = {"book_tour", "schedule_tour", "tour", "confirm_tour", "reschedule_tour", "select_tour_time", "tour_request"}
 TOUR_PERSONAS = {"prospect", "lead"}
 OTHER_PURPOSE_WORDS = ("rent", "payment", "maintenance", "work_order", "renewal", "renew", "survey", "moveout", "move_out",
                        "application", "applicant", "document", "docs", "reminder", "post_tour", "delinquen", "lease_end", "notice")
