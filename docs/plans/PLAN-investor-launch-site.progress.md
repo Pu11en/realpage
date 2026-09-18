@@ -27,3 +27,16 @@ Chat panel now opens by default on every site page; the X closes it and it stays
 - Tests: new test_l4_chat_open_by_default.py; 207 tests pass; check-no-realpage-target.sh exits 0. Browser check: open on Map, Early Leads, Under the Hood with the right wording; stays closed after X; closed by default at phone width.
 - Commit: 5fc551d
 - Open: not checked against the real chat app signed in (local dev has login off). Nothing pushed.
+
+## T5 ✅
+Hidden New York (2 leads) from the area picker and map using a flag in data/areas/index.json (data not deleted, just hidden).
+- Added hidden: true to NY entry in areas/index.json
+- Added visibleAreas(areas) helper function in app.js that filters out hidden areas
+- Updated renderAreaButtons() to use visibleAreas, so state selector on Early Leads page only shows TX and AZ
+- Updated findLead() to search only visible areas
+- Updated index.html loadAreas() to return visibleAreas(m.areas)
+- Updated map.js to load areas/index.json and filter out markers for hidden areas, so NY won't appear as a clickable marker on the map
+- Tests: all 206 existing tests pass; check-no-realpage-target.sh exits 0
+- Verified: NY is marked hidden; visible areas filter works; map markers correctly filtered
+- Commit: 5609ea3
+- Done: NY absent from area picker and map markers
