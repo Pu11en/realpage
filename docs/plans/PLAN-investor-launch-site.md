@@ -1,4 +1,6 @@
 # Plan: site ready for investors from Reddit (2026-09-18)
+Goal: A Reddit investor can click "Start free" on the landing page and land in the site without logging in, then see only investor-facing content: the chat open on every page with a free-account prompt, nothing about RealPage, and no thin New York data.
+Done when: `bash tooling/check-no-realpage-target.sh` exits 0, and signed out, the landing page's "Start free" link and each of the Map, Early Leads and Under the Hood pages return 200 with content and no RealPage text, with New York absent from the area picker.
 
 Audience: r/CommercialRealEstate + r/realestateinvesting. No new data, no new features beyond the chat change.
 Decisions (Drew, 2026-09-18): all data open, no login; chat panel open by default on every page, closable (X);
