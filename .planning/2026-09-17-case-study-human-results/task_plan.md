@@ -4,10 +4,10 @@
 Make each case-study result understandable to a nontechnical human, use DeepSeek for normal message writing, and keep the exact JSON export and deterministic safety checks intact.
 
 ## Next Step
-Enable the live DeepSeek writer, deploy the already approved human results screen, and prove one production result was written by the model.
+Give Drew the exact employer Sample.jsonl records to paste into the verified live page.
 
 ## Current Phase
-Phase 6
+Phase 8
 
 ## Phases
 
@@ -48,10 +48,10 @@ Phase 6
 - **Status:** complete
 
 ### Phase 8: Production AI verification
-- [ ] Configure the case-study service to reference the existing Railway DeepSeek secret
-- [ ] Push the approved commits and wait for a successful deployment
-- [ ] Run one authorized live model example and verify the result reports the model engine
-- **Status:** in_progress
+- [x] Configure the case-study service to reference the existing Railway DeepSeek secret
+- [x] Push the approved commits and wait for a successful deployment
+- [x] Run one authorized live model example and verify the result reports the model engine
+- **Status:** complete
 
 ## Decisions Made
 | Decision | Rationale |
@@ -61,6 +61,7 @@ Phase 6
 | Preserve the deterministic safety boundary | The presentation change must not weaken consent, timing, or safety checks. |
 | Use AI for wording, not policy decisions | The model can make the message natural while deterministic gates protect consent, timing, channel, and next actions. |
 | Keep templates as a visible fallback | A provider failure must not break the interview, but fallback is no longer the normal selected path. |
+| Report the live smoke test without generalizing it | One passing call proves wiring and safety flow, not p95 performance or overall model quality. |
 
 ## Errors Encountered
 | Error | Resolution |

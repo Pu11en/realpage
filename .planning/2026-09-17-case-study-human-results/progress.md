@@ -31,6 +31,9 @@
 - Reworked the bounded writer so the p95 field remains an evaluation target while the provider has a separate configurable 8,000 ms hard safety timeout.
 - The first request after that change reached the provider but reported `finish_reason=length`; official DeepSeek documentation confirmed thinking is on by default.
 - Explicitly disabled thinking for the short structured drafting call and added a regression assertion for the provider request.
+- Deployed commit `5de49be` successfully and reran the employer's first sample against the production service.
+- Production returned `engine: model`, no fallback, no errors, 1,887.4 ms end to end, and 1,201.2 ms model time.
+- Updated the visible evidence note to distinguish that one passing live smoke test from a real p95 or broad quality evaluation.
 | Responsive visual check | Human view works at 390, 820, and 1440 pixels | Passed | Pass |
 
 ### Errors

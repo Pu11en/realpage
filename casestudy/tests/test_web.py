@@ -80,7 +80,7 @@ def test_under_the_hood_distinguishes_evidence_assumptions_and_limits():
         "2 of 2", "24 synthetic replies", "100 warm offline runs",
         "Project assumptions", "conservative project defaults, not claims about Texas law",
         "Code decides. The model may only write.", "Still unhandled or unproven",
-        "Live model latency, quality, and availability are not measured",
+        "One live model smoke test passed; broader latency, quality, and availability are not measured",
     ):
         assert claim in html
     assert "hidden test or production evidence" in html

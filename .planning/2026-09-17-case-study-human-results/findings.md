@@ -19,6 +19,7 @@
 - DeepSeek's current official OpenAI compatible base URL remains `https://api.deepseek.com`; its current low latency model identifier is `deepseek-flash`, while the older `deepseek-chat` name has been retired.
 - Two production calls reached DeepSeek but timed out at the old 2,000 ms hard cutoff. That sample field is a p95 performance target, not a safe per-request cancellation deadline; keeping it as an evaluation and using an 8,000 ms hard ceiling preserves honest measurement and lets the AI finish.
 - DeepSeek's current models enable thinking by default. The first longer-budget request spent the 400-token cap on reasoning and returned no complete JSON, so this short writing task must explicitly request non-thinking mode.
+- With non-thinking mode explicit, the production sample completed in 1,887.4 ms end to end, used the model engine, produced no writer errors, and needed no template fallback.
 
 ## Technical Decisions
 | Decision | Rationale |
@@ -32,6 +33,7 @@
 | Configure `deepseek-flash` | It is the current official fast model and better fits the assignment's strict latency budget than the larger Pro model. |
 | Separate the p95 target from the hard timeout | A statistical performance target remains reportable without forcing every individual live call to fail at exactly that number. |
 | Disable thinking for message drafting | The task is constrained rewriting, and the visible JSON needs the small output budget more than hidden reasoning does. |
+| Describe the production result as a smoke test | A single successful call proves the deployment path, not a latency distribution or general quality score. |
 
 ## Issues Encountered
 | Issue | Resolution |
