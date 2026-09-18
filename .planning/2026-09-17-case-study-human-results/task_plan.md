@@ -1,13 +1,13 @@
 # Task Plan: Human-readable case-study results
 
 ## Goal
-Make each case-study result understandable to a nontechnical human before showing the exact JSON export.
+Make each case-study result understandable to a nontechnical human, use DeepSeek for normal message writing, and keep the exact JSON export and deterministic safety checks intact.
 
 ## Next Step
-Wait for Drew's decision on whether to push the committed change live.
+Enable the live DeepSeek writer, deploy the already approved human results screen, and prove one production result was written by the model.
 
 ## Current Phase
-Phase 5
+Phase 6
 
 ## Phases
 
@@ -37,12 +37,30 @@ Phase 5
 - [x] Report the human-visible behavior and ask whether to push
 - **Status:** complete
 
+### Phase 6: Make AI the normal path
+- [x] Default the page to the configured DeepSeek writer
+- [x] Rename offline mode so it is clearly an emergency template fallback
+- **Status:** complete
+
+### Phase 7: Regression verification
+- [x] Test the default AI selection and the explicit template fallback
+- [x] Run the focused and full case-study suites
+- **Status:** complete
+
+### Phase 8: Production AI verification
+- [ ] Configure the case-study service to reference the existing Railway DeepSeek secret
+- [ ] Push the approved commits and wait for a successful deployment
+- [ ] Run one authorized live model example and verify the result reports the model engine
+- **Status:** in_progress
+
 ## Decisions Made
 | Decision | Rationale |
 |----------|-----------|
 | Lead with the human decision | Drew needs to understand and judge each result without reading JSON. |
 | Keep JSON secondary | The exact export remains necessary for the interview submission. |
 | Preserve the deterministic safety boundary | The presentation change must not weaken consent, timing, or safety checks. |
+| Use AI for wording, not policy decisions | The model can make the message natural while deterministic gates protect consent, timing, channel, and next actions. |
+| Keep templates as a visible fallback | A provider failure must not break the interview, but fallback is no longer the normal selected path. |
 
 ## Errors Encountered
 | Error | Resolution |

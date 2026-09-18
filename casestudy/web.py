@@ -63,7 +63,7 @@ async def run_handler(request: web.Request) -> web.Response:
         return web.json_response({"error": "Request body must be JSON."}, status=400)
     if not isinstance(payload, dict) or not isinstance(payload.get("jsonl"), str):
         return web.json_response({"error": "jsonl must be a string."}, status=400)
-    offline = payload.get("offline", True)
+    offline = payload.get("offline", False)
     if not isinstance(offline, bool):
         return web.json_response({"error": "offline must be true or false."}, status=400)
     line_count = len(_lines(payload["jsonl"]))

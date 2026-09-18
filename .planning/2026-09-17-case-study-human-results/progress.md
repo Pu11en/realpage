@@ -31,3 +31,24 @@
 | Planning initializer lacked execute permission | Invoked it through `sh`; plan created normally. |
 | Browser test saw empty text inside collapsed details | Changed the assertion to read DOM text content; user-visible details remain collapsed. |
 | CSS grid overrode the subject row's hidden attribute | Added `[hidden] { display: none !important; }` for reliable state changes. |
+
+## Session: 2026-09-17, AI default and live verification
+
+### Current Status
+- **Phase:** 6 - Make AI the normal path
+- **Authorization:** Drew selected the option to enable DeepSeek, push the human results screen, and spend the live model credit needed for verification.
+
+### Actions Taken
+- Confirmed the backend already implements the intended hybrid AI agent instead of needing a new architecture.
+- Traced the offline behavior to the browser checkbox being selected by default and the production service having no writer model configured yet.
+- Kept the deterministic safety boundary: AI writes wording only after consent, channel, timing, and next action are decided.
+- Verified the current provider endpoint and fast model name against DeepSeek's official API documentation.
+- Changed the browser and API defaults to the configured AI writer; the manual checkbox now plainly says it forces the template fallback.
+- Verified the browser posts `offline: false` by default and still supports a deliberate template rehearsal.
+
+### Test Results
+| Test | Expected | Actual | Status |
+|------|----------|--------|--------|
+| Focused browser and web suite | AI selected by default; fallback remains usable | 6 passed | Pass |
+| Full case-study suite | No regressions | 223 passed | Pass |
+| JavaScript syntax and diff check | Clean | Passed | Pass |

@@ -64,6 +64,8 @@ def test_page_has_complete_interaction_and_accessibility_states():
         assert f'id="{marker}"' in html
     assert "Skip to workbench" in html and "noindex,nofollow" in html
     assert "Human review" in html and "View exact submission and checks" in html
+    assert 'id="offline" type="checkbox"> Force template fallback' in html
+    assert "AI writer ready" in html
     assert ":focus-visible" in css and ":hover" in css and ":active" in css and ".loading" in css and ".empty-state" in css
     assert "submission_line + \"\\n\"" in script
     assert "payload.submission_jsonl" in script
@@ -136,7 +138,8 @@ def test_browser_runs_1_2_12_malformed_upload_and_exact_exports(web_server, tmp_
         page = context.new_page()
         page.goto(web_server + "/case-study")
         assert page.title() == "CraneSignal | Case study workbench"
-        assert page.locator("#offline").is_checked()
+        assert not page.locator("#offline").is_checked()
+        assert page.locator("#mode-label").inner_text() == "AI writer ready"
 
         def run(text: str, count: int):
             page.locator("#jsonl-input").fill(text)
@@ -145,6 +148,13 @@ def test_browser_runs_1_2_12_malformed_upload_and_exact_exports(web_server, tmp_
             page.locator("#run-button:not([disabled])").wait_for()
             assert page.locator(".record-tab").count() == count
 
+        with page.expect_request("**/case-study/api/run") as request_info:
+            run(SAMPLES[0], 1)
+        assert request_info.value.post_data_json["offline"] is False
+        assert page.locator("#mode-label").inner_text() == "AI writer result"
+
+        page.locator("#offline").check()
+        assert page.locator("#mode-label").inner_text() == "Template fallback ready"
         run(SAMPLES[0], 1)
         public = json.loads(page.locator("#submission-output").text_content())
         assert set(public) == {"next_message", "next_action"}

@@ -15,7 +15,7 @@
     <div class="topbar-context">
       <span>Case study</span>
       <span class="status-dot" aria-hidden="true"></span>
-      <span id="mode-label">Offline ready</span>
+      <span id="mode-label">AI writer ready</span>
     </div>
   </header>
 
@@ -32,7 +32,7 @@
           <h2 id="input-title">Run a batch</h2>
           <p>One JSON object per line. A bad line becomes a safe result without stopping the batch.</p>
         </div>
-        <label class="offline-control"><input id="offline" type="checkbox" checked> Use offline templates</label>
+        <label class="offline-control" title="Use this only to rehearse without the live AI writer"><input id="offline" type="checkbox"> Force template fallback</label>
       </div>
       <label class="field-label" for="jsonl-input">Assignment JSONL</label>
       <textarea id="jsonl-input" spellcheck="false" placeholder='{"task_id":"prospect_welcome_day0", ...}'></textarea>

@@ -207,7 +207,7 @@
     byId("empty-state").hidden = true;
     byId("results").hidden = false;
     byId("record-count").textContent = payload.record_count;
-    byId("mode-label").textContent = payload.mode === "offline" ? "Offline result" : "Configured writer";
+    byId("mode-label").textContent = payload.mode === "offline" ? "Template fallback result" : "AI writer result";
     byId("record-tabs").innerHTML = payload.records.map((record, index) => {
       const hasError = (record.diagnostics.errors || []).length > 0;
       const answer = JSON.parse(record.submission_line);
@@ -264,7 +264,7 @@
     byId("file-name").textContent = file.name;
   });
   byId("offline").addEventListener("change", (event) => {
-    byId("mode-label").textContent = event.target.checked ? "Offline ready" : "Configured writer ready";
+    byId("mode-label").textContent = event.target.checked ? "Template fallback ready" : "AI writer ready";
   });
 
   window.caseStudyDemo = { oneBytes, allBytes, renderBatch };
