@@ -246,3 +246,16 @@ start a competing implementation in this session. **Why it won:** Drew clarified
 the build and wants to learn from the working result. DeepSeek V4 Flash remains his intended app
 model; Astra Advisor's coding-helper cost notes do not concern that API. **Source:** Drew's latest
 instruction in this review session; exact provider model identifier remains to be checked at setup.
+
+## 29. Freeze the public contract as its own module, separate from diagnostics
+
+**Decided:** Define `AssignmentAnswer` (`next_message`, `next_action`) in `casestudy/contract.py`
+with `extra="forbid"` on every nested model, and prove both reference `expected` blocks round-trip
+through it before writing any inference logic. **Alternatives:** infer the shape ad hoc from each
+task's code as it's written, or bundle diagnostics fields (task_id, scores, engine, latency) into
+the same model behind optional fields. **Why it won:** the plan requires the public export to never
+leak internal keys, so forbidding extras at the model level catches that mistake at every later task
+automatically instead of relying on manual review each time. A small reference-derived semantic
+checklist (paraphrase-tolerant, wrong-facts-rejecting) was added alongside the structural test so
+later tasks have a pattern to extend rather than grading prose by exact string match.
+**Source:** `PLAN-casestudy-bot.md` task C0 and both records in `casestudy/data/sample.jsonl`.

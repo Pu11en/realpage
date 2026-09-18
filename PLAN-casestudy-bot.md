@@ -82,7 +82,7 @@ Check: `python3 -m pytest -q casestudy/tests`
 
 ## Tasks
 
-- [ ] **C0 Freeze the contract and reference tests.** Parse both sample lines and snapshot only their
+- [x] **C0 Freeze the contract and reference tests.** Parse both sample lines and snapshot only their
   `expected` blocks. Define `AssignmentAnswer`, `NextMessage`, CTA variants (`options` or `link`),
   and next-action variants (`name`, `value`, or `reason` as applicable). Reject extra public keys.
   Assert structure, nulls, enum values, CTA payloads, next actions and supplied timestamps exactly;
