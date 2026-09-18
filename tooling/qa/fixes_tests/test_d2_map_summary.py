@@ -1,4 +1,4 @@
-"""D2: the site's lead map (site/data/client-map.json) loads into the chat as `map_summary`,
+"""D2: the site's lead map (site/data/lead-map.json) loads into the chat as `map_summary`,
 with state totals matching the site exactly."""
 import importlib.util
 import json
@@ -56,7 +56,7 @@ def test_map_summary_totals_match_site():
         tmp_path = pathlib.Path(tmp)
         kb_data = _build_kb(tmp_path)
 
-        site_map = json.loads((ROOT / "site" / "data" / "client-map.json").read_text())
+        site_map = json.loads((ROOT / "site" / "data" / "lead-map.json").read_text())
 
         _spec.loader.exec_module(plugin)
         p = _load_plugin(kb_data, tmp_path)

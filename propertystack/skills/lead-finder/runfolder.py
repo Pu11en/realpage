@@ -18,27 +18,18 @@ DATA_DIR = REPO_ROOT / "propertystack" / "data"
 RUNS_DIR = REPO_ROOT / "propertystack" / "runs"
 
 
-def pick_state(targets_path: Path | None = None, counts_path: Path | None = None) -> dict:
+def pick_state(targets_path: Path | None = None) -> dict:
     """Pick the state to run next: among the states in targets.json, the one
-    with the lowest `total` in counts.json (missing = 0); ties -> more permits
-    wins. Returns {"state": ..., "backup_order": [...]} with the ordered
+    with the most permits. Returns {"state": ..., "backup_order": [...]} with the ordered
     backup list (remaining states, same rule, in order).
     """
-    targets_path = targets_path or DATA_DIR / "client-map" / "targets.json"
-    counts_path = counts_path or DATA_DIR / "client-map" / "counts.json"
+    targets_path = targets_path or DATA_DIR / "lead-finder-targets" / "targets.json"
 
     targets = json.loads(targets_path.read_text())
-    counts = json.loads(counts_path.read_text()) if counts_path.exists() else {}
 
     states = targets["states"]
 
-    def sort_key(entry: dict) -> tuple[int, int]:
-        state = entry["state"]
-        total = counts.get(state, {}).get("total", 0)
-        permits = entry.get("permits_5plus_12mo", 0)
-        return (total, -permits)
-
-    ordered = sorted(states, key=sort_key)
+    ordered = sorted(states, key=lambda entry: -entry.get("permits_5plus_12mo", 0))
     order = [entry["state"] for entry in ordered]
     return {"state": order[0], "backup_order": order}
 

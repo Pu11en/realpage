@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""site/data/client-map.json -> a chat-ready `map_summary` CSV.
+"""site/data/lead-map.json -> a chat-ready `map_summary` CSV.
 
-The site's leads-by-state map (`site/data/client-map.json`, built from
-`propertystack/data/client-map/counts.json`) never loaded into the chat, so "where are most
+The site's leads-by-state map (`site/data/lead-map.json`, built from the
+per-state lead files) never loaded into the chat, so "where are most
 leads?" couldn't match what the map shows. This flattens it to one row per state/top-city pair
 (state, abbr, state_total, city, city_count) and writes it to
 `propertystack/data/map-summary/kb/map-summary.csv`, which the Dockerfile's `kb` stage copies
@@ -15,7 +15,7 @@ import json
 import pathlib
 
 ROOT = pathlib.Path(__file__).resolve().parents[2]
-SRC = ROOT / "site" / "data" / "client-map.json"
+SRC = ROOT / "site" / "data" / "lead-map.json"
 OUT_DIR = ROOT / "propertystack" / "data" / "map-summary" / "kb"
 OUT = OUT_DIR / "map-summary.csv"
 

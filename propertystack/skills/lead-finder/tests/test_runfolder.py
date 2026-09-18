@@ -19,7 +19,7 @@ def write_json(path: Path, data) -> None:
     path.write_text(json.dumps(data))
 
 
-def test_pick_state_lowest_total_wins(tmp_path):
+def test_pick_state_most_permits_wins(tmp_path):
     targets = {
         "states": [
             {"state": "AA", "permits_5plus_12mo": 100},
@@ -27,45 +27,12 @@ def test_pick_state_lowest_total_wins(tmp_path):
             {"state": "CC", "permits_5plus_12mo": 50},
         ]
     }
-    counts = {"AA": {"total": 10}, "BB": {"total": 2}}
     targets_path = tmp_path / "targets.json"
-    counts_path = tmp_path / "counts.json"
     write_json(targets_path, targets)
-    write_json(counts_path, counts)
 
-    result = pick_state(targets_path, counts_path)
-    # CC has no entry in counts -> total 0, lowest -> picked first.
-    assert result["state"] == "CC"
-    assert result["backup_order"] == ["CC", "BB", "AA"]
-
-
-def test_pick_state_missing_from_counts_is_zero(tmp_path):
-    targets = {"states": [{"state": "AA", "permits_5plus_12mo": 5}]}
-    counts = {}
-    targets_path = tmp_path / "targets.json"
-    counts_path = tmp_path / "counts.json"
-    write_json(targets_path, targets)
-    write_json(counts_path, counts)
-
-    result = pick_state(targets_path, counts_path)
-    assert result["state"] == "AA"
-
-
-def test_pick_state_tie_more_permits_wins(tmp_path):
-    targets = {
-        "states": [
-            {"state": "AA", "permits_5plus_12mo": 100},
-            {"state": "BB", "permits_5plus_12mo": 300},
-        ]
-    }
-    counts = {"AA": {"total": 5}, "BB": {"total": 5}}
-    targets_path = tmp_path / "targets.json"
-    counts_path = tmp_path / "counts.json"
-    write_json(targets_path, targets)
-    write_json(counts_path, counts)
-
-    result = pick_state(targets_path, counts_path)
+    result = pick_state(targets_path)
     assert result["state"] == "BB"
+    assert result["backup_order"] == ["BB", "AA", "CC"]
 
 
 def test_run_folder_resume_skips_finished_step(tmp_path):

@@ -40,17 +40,6 @@ def test_rank_cities_keeps_county_areas_and_sorts():
     assert "Bayshore" not in [c["city"] for c in cities]  # other state filtered out
 
 
-def test_realpage_counts_reads_client_map(tmp_path):
-    counts = tmp_path / "counts.json"
-    counts.write_text(json.dumps({"TX": {"total": 3, "cities": {"Cedarville": 3}}}))
-    assert rank.realpage_counts("TX", counts) == {"Cedarville": 3}
-    assert rank.realpage_counts("ZZ", counts) == {}
-
-
-def test_realpage_counts_missing_file_returns_empty(tmp_path):
-    assert rank.realpage_counts("TX", tmp_path / "missing.json") == {}
-
-
 def test_build_writes_state_slug_file(tmp_path, monkeypatch):
     monkeypatch.setattr(rank, "DATA", tmp_path)
     out, path = rank.build("TX", fixture_fetcher())
@@ -63,13 +52,3 @@ def test_exclude_cities_drops_matching_names_case_insensitive():
     out = rank.rank_cities("TX", fixture_fetcher(), exclude_cities=["rivertown"])
     assert [c["city"] for c in out["cities"]] == \
         ["Cedarville", "Oakford County (unincorporated area)"]
-
-
-def test_realpage_gap_rule_pushes_heavy_cities_last(monkeypatch):
-    monkeypatch.setattr(rank, "realpage_counts", lambda state: {"Cedarville": 3})
-    out = rank.rank_cities("TX", fixture_fetcher())
-    cities = [c["city"] for c in out["cities"]]
-    # Cedarville has the most permits (480) but 3+ RealPage buildings, so it
-    # ranks after the smaller-permit, RealPage-gap Rivertown and the county area.
-    assert cities == ["Rivertown", "Oakford County (unincorporated area)", "Cedarville"]
-    assert cities[-1] == "Cedarville"

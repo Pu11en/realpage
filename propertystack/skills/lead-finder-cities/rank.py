@@ -1,8 +1,6 @@
 """lead-finder 2.1: rank a state's cities (free Census BPS place-level files).
 
-Self-contained (doesn't import client-map/targets.py, which depends on a since-deleted
-scout-areas/census.py): its own small cached `fetch()` and place-file parsing, for any state
-(not just the client map's top 15), keeping unincorporated-county permit areas instead of
+Self-contained: its own small cached `fetch()` and place-file parsing, for any state, keeping unincorporated-county permit areas instead of
 dropping them.
 """
 import argparse, csv, datetime, io, json, pathlib, re, sys
@@ -12,7 +10,6 @@ ROOT = HERE.parents[2]
 
 DATA = ROOT / "propertystack" / "data"
 CACHE = DATA / "raw" / "census"
-COUNTS_FILE = DATA / "client-map" / "counts.json"
 
 BPS = "https://www2.census.gov/econ/bps/"
 STATE_DIR = BPS + "State/"
@@ -73,17 +70,6 @@ def parse_places_all(text, state):
     return out
 
 
-def realpage_counts(state, counts_path=COUNTS_FILE):
-    """{city: count} from the client map's counts.json, empty if the state isn't there yet."""
-    if not counts_path.exists():
-        return {}
-    counts = json.loads(counts_path.read_text())
-    return counts.get(state, {}).get("cities", {})
-
-
-REALPAGE_HEAVY_MIN = 3  # plan: "3+ RealPage buildings in the client map ... go last"
-
-
 def rank_cities(state, fetcher=fetch, months_back=12, exclude_cities=None):
     """`exclude_cities`, if given, drops matching city names (case-insensitive) --
     e.g. a state's data recipe passing in one county's cities to skip a
@@ -103,16 +89,11 @@ def rank_cities(state, fetcher=fetch, months_back=12, exclude_cities=None):
                     continue
                 key = (city, is_county)
                 totals[key] = totals.get(key, 0) + units
-    rp_counts = realpage_counts(state)
     cities = [
-        {"city": city, "is_county_area": is_county, "permits_5plus": units,
-         "realpage_count": rp_counts.get(city, 0)}
+        {"city": city, "is_county_area": is_county, "permits_5plus": units}
         for (city, is_county), units in totals.items() if units > 0
     ]
-    # RealPage-gap rule (Drew 2026-09-14): rank, don't ban -- cities with few/no
-    # RealPage buildings first, 3+-RealPage cities last, only if the caps allow;
-    # permit volume still orders within each group.
-    cities.sort(key=lambda c: (c["realpage_count"] >= REALPAGE_HEAVY_MIN, -c["permits_5plus"]))
+    cities.sort(key=lambda c: -c["permits_5plus"])
     window = f"20{months[0][:2]}-{months[0][2:]}..20{months[-1][:2]}-{months[-1][2:]}"
     return {"state": state, "window": window, "source": BPS, "cities": cities}
 
@@ -135,5 +116,5 @@ if __name__ == "__main__":
     out, path = build(args.state.upper(), months_back=args.months, exclude_cities=exclude)
     for c in out["cities"][:20]:
         tag = " (county area)" if c["is_county_area"] else ""
-        print(f"{c['city']}{tag}: permits={c['permits_5plus']} realpage={c['realpage_count']}")
+        print(f"{c['city']}{tag}: permits={c['permits_5plus']}")
     print(f"{len(out['cities'])} cities -> {path.relative_to(ROOT)}")

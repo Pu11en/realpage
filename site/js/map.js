@@ -1,5 +1,5 @@
 // Map: states from vendor/states-albers-10m.json (already projected to 975x610),
-// shaded by tracked buildings found per state (data/client-map.json, built by build_data.py).
+// shaded by leads found per state (data/lead-map.json, built by build_data.py).
 
 (async function () {
   const svg = document.getElementById("us-map");
@@ -9,7 +9,7 @@
 
   const [us, data, markerData] = await Promise.all([
     loadData("vendor/states-albers-10m.json"),
-    loadData("data/client-map.json"),
+    loadData("data/lead-map.json"),
     loadData("data/map-markers.json").catch(() => ({ markers: [] })),
   ]);
   const markers = Object.fromEntries(markerData.markers.map((m) => [m.state, m]));
@@ -109,9 +109,9 @@
 
   function showTip(e, name, s) {
     tip.innerHTML = s
-      ? `<strong>${esc(name)}</strong><div class="count">${s.total} tracked building${s.total === 1 ? "" : "s"}</div>
+      ? `<strong>${esc(name)}</strong><div class="count">${s.total} lead${s.total === 1 ? "" : "s"}</div>
          <ul>${s.topCities.map((c) => `<li>${esc(c.city)}: ${c.count}</li>`).join("")}</ul>`
-      : `<strong>${esc(name)}</strong><div>None found (not searched or no hits)</div>`;
+      : `<strong>${esc(name)}</strong><div>No leads yet</div>`;
     placeTip(e);
   }
 })().catch((e) => {

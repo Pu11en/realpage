@@ -6,7 +6,7 @@ Sources (see propertystack/CONTRACTS.md):
   propertystack/data/plano-richardson/leads.csv   -> leads.json
   propertystack/data/plano-richardson/6-upcoming.csv -> leads.json (openingNext12mo)
   propertystack/runs/*.json                       -> pipeline.json (Under the Hood)
-  propertystack/data/client-map/counts.json       -> client-map.json (map.html state shading)
+  site/data/areas/<state>.json                     -> lead-map.json (map.html state shading)
   propertystack/data/<state-slug>/leads.json      -> site/data/areas/<state-slug>.json
     (part-1 LeadRecord format, see propertystack/skills/lead-finder/record.py;
      plano-richardson keeps using the CSV pipeline above, unchanged; the fixture
@@ -40,12 +40,11 @@ LEADS_FACTS_JSONL = DATA_DIR / "leads-facts.jsonl"
 SALES_CSV = DATA_DIR / "5-sales.csv"
 SALES_DALLAS_CSV = DATA_DIR / "5-sales-dallas.csv"
 
-CLIENT_MAP_COUNTS = ROOT / "propertystack" / "data" / "client-map" / "counts.json"
 
 # Part-1 lead format (any state area) -- see propertystack/skills/lead-finder/record.py.
 STATE_DATA_DIR = ROOT / "propertystack" / "data"
 AREAS_OUT_DIR = OUT_DIR / "areas"
-NON_STATE_AREA_DIRS = {"plano-richardson", "client-map", "dallas-parked", "raw", "scout"}
+NON_STATE_AREA_DIRS = {"plano-richardson", "lead-finder-targets", "dallas-parked", "raw", "scout"}
 SAMPLE_AREA = "_sample"
 
 sys.path.insert(0, str(ROOT / "propertystack" / "skills" / "lead-finder"))
@@ -422,23 +421,6 @@ def build_pipeline(properties: list[dict]) -> dict:
             "rows": queue,
         },
     }
-
-
-def build_client_map() -> dict:
-    """Per-state RealPage building counts + top 3 cities, keyed by full state name
-    (the map's topojson names states, not abbreviations)."""
-    counts = json.loads(CLIENT_MAP_COUNTS.read_text())
-    states = {}
-    for abbr, d in counts.items():
-        cities: dict[str, dict] = {}
-        for city, n in d["cities"].items():  # merge spelling variants (Mckinney / McKinney)
-            c = cities.setdefault(city.lower(), {"city": city, "count": 0})
-            c["count"] += n
-            if city != city.title() and c["city"] == c["city"].title():
-                c["city"] = city
-        top = sorted(cities.values(), key=lambda c: -c["count"])[:3]
-        states[STATE_NAMES.get(abbr, abbr)] = {"abbr": abbr, "total": d["total"], "topCities": top}
-    return {"source": "propertystack/data/client-map/counts.json", "states": states}
 
 
 def discover_state_areas(include_sample: bool = False) -> list[str]:
@@ -914,6 +896,26 @@ def build_map_markers(area_slugs: list[str]) -> dict:
     return {"markers": list(markers.values())}
 
 
+def build_lead_map(area_slugs: list[str]) -> dict:
+    """site/data/lead-map.json: per-state lead counts + top 3 cities, keyed by full
+    state name (the map's topojson names states, not abbreviations)."""
+    states = {}
+    for slug in area_slugs:
+        name = _STATE_NAMES.get(slug)
+        if not name:
+            continue
+        leads = json.loads((AREAS_OUT_DIR / f"{slug}.json").read_text())["leads"]
+        states[name] = {"abbr": slug.upper(), "rows": leads}
+    if "Texas" not in states:
+        legacy = json.loads((OUT_DIR / "leads.json").read_text())
+        states["Texas"] = {"abbr": "TX", "rows": legacy.get("leads", legacy) if isinstance(legacy, dict) else legacy}
+    for name, d in states.items():
+        rows = d.pop("rows")
+        top = Counter(r["city"] for r in rows if r.get("city")).most_common(3)
+        d.update(total=len(rows), topCities=[{"city": c, "count": n} for c, n in top])
+    return {"source": "site/data/areas", "states": states}
+
+
 def main() -> None:
     properties, properties_json, share_json = build_properties_and_share()
     (OUT_DIR / "properties.json").write_text(json.dumps(properties_json, indent=2))
@@ -930,10 +932,6 @@ def main() -> None:
     print(f"wrote leads.json ({len(leads_json['leads'])} leads)")
     print(f"wrote pipeline.json")
 
-    client_map = build_client_map()
-    (OUT_DIR / "client-map.json").write_text(json.dumps(client_map, indent=2))
-    print(f"wrote client-map.json ({len(client_map['states'])} states)")
-
     include_sample = os.environ.get("LEAD_FINDER_BUILD_SAMPLE") == "1"
     area_slugs = build_state_areas(include_sample=include_sample)
     if area_slugs:
@@ -945,6 +943,10 @@ def main() -> None:
     markers = build_map_markers(area_slugs)
     (OUT_DIR / "map-markers.json").write_text(json.dumps(markers, indent=2))
     print(f"wrote map-markers.json ({len(markers['markers'])} state marker(s))")
+
+    lead_map = build_lead_map(area_slugs)
+    (OUT_DIR / "lead-map.json").write_text(json.dumps(lead_map, indent=2))
+    print(f"wrote lead-map.json ({len(lead_map['states'])} states)")
 
 
 if __name__ == "__main__":

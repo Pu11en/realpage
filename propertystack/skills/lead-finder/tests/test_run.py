@@ -351,7 +351,7 @@ def test_run_chain_skips_agenda_legistar_civic_sales_for_a_dead_end_city(tmp_pat
     # step with a plain city-name list carrying no permit counts).
     run_folder.save_step(
         chain.STEP_CITIES, chain.STATE_CITY_KEY,
-        {"cities": [{"city": CITY, "permits_5plus": 3, "realpage_count": 0}], "source": "rank"},
+        {"cities": [{"city": CITY, "permits_5plus": 3}], "source": "rank"},
     )
     monkeypatch.setattr(chain, "load_or_build_cities", lambda *a, **k: [CITY])
 

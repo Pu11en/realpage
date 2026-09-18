@@ -1,11 +1,11 @@
-"""Check for the US client map (PLAN-client-map C4) + "Deep dive in chat" button.
+"""Check for the US lead map + "Deep dive in chat" button.
 
 Serves site/ itself on port 8791 (override with CHECK_MAP_PORT), runs Playwright
 against it, then stops the server. Free, offline, under 60 s. Exits non-zero on
 any problem.
 
 Contract the site must meet:
-- map.html: 0 console/script errors, states shaded from data/client-map.json
+- map.html: 0 console/script errors, states shaded from data/lead-map.json
   (`[data-count]` on every state in that file); pointing at the top state shows
   `#map-tip` with its count and top cities; no `[data-dot]` dots, no `#map-card`.
 - nav has a "Map" tab and no "Master Table" tab.
@@ -47,7 +47,7 @@ async def run() -> list[str]:
         page.on("console", lambda m: m.type == "error" and errs.append(f"console: {m.text[:150]}"))
 
         # 1. Map page loads, states shaded by count, hover shows count + top cities, no dots/cards.
-        cmap = json.loads((ROOT / "site/data/client-map.json").read_text())["states"]
+        cmap = json.loads((ROOT / "site/data/lead-map.json").read_text())["states"]
         resp = await page.goto(f"{BASE}/map.html", wait_until="networkidle", timeout=20000)
         if resp is None or resp.status >= 400:
             problems.append(f"map.html did not load ({resp.status if resp else 'no answer'})")
@@ -58,7 +58,7 @@ async def run() -> list[str]:
                 pass
             shaded = await page.locator(".state[data-count]").count()
             if shaded != len(cmap):
-                problems.append(f"map.html: {shaded} shaded states, client-map.json has {len(cmap)}")
+                problems.append(f"map.html: {shaded} shaded states, lead-map.json has {len(cmap)}")
             if await page.locator("[data-dot]").count():
                 problems.append("map.html: building dots still drawn")
             if await page.locator("#map-card").count():

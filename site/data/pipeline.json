@@ -33,16 +33,6 @@
   ],
   "runs": [
     {
-      "runId": "20260913T213834-client-map",
-      "started": null,
-      "skill": "client-map",
-      "area": null,
-      "status": null,
-      "counts": "",
-      "errors": 0,
-      "durationSec": null
-    },
-    {
       "runId": "20260913T145249-scout-areas",
       "started": "2026-09-13T14:52:49",
       "skill": "scout-areas",

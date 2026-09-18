@@ -1,0 +1,51 @@
+{
+  "source": "site/data/areas",
+  "states": {
+    "Arizona": {
+      "abbr": "AZ",
+      "total": 279,
+      "topCities": [
+        {
+          "city": "Phoenix",
+          "count": 94
+        },
+        {
+          "city": "Mesa",
+          "count": 57
+        },
+        {
+          "city": "Scottsdale",
+          "count": 45
+        }
+      ]
+    },
+    "New York": {
+      "abbr": "NY",
+      "total": 2,
+      "topCities": [
+        {
+          "city": "Buffalo",
+          "count": 2
+        }
+      ]
+    },
+    "Texas": {
+      "abbr": "TX",
+      "total": 592,
+      "topCities": [
+        {
+          "city": "Austin",
+          "count": 69
+        },
+        {
+          "city": "Fort Worth",
+          "count": 65
+        },
+        {
+          "city": "Houston",
+          "count": 58
+        }
+      ]
+    }
+  }
+}
