@@ -280,12 +280,17 @@ def write(outcome: GateOutcome, schedule: Schedule, intent: Intent, template: Te
         model_ms = (clock() - t0) * 1000.0
         return _fallback(template, results, "model request failed", deadline, f"{type(exc).__name__}: {str(exc)[:160]}", model_ms)
     model_ms = (clock() - t0) * 1000.0
-    results.append(GateResult("writer.request", "passed", f"one model request, {model_ms:.0f} ms, no retries", ARCH_CITE, "conservative_default", {"model": config.model, "latency_ms": round(model_ms)}))
+    results.append(GateResult("writer.request", "passed", f"one model request, {model_ms:.0f} ms, no retries", ARCH_CITE, "conservative_default",
+                              {"model": config.model, "latency_ms": round(model_ms), "temperature": 0,
+                               "max_tokens": config.max_output_tokens, "response_format": "json_object",
+                               "timeout_ms": round(remaining), "prompt": messages}))
 
     if deadline.remaining_ms() < config.reserve_ms:
         return _fallback(template, results, "deadline exceeded after the model reply", deadline, f"elapsed {deadline.elapsed_ms():.0f} ms of {deadline.budget_ms}", model_ms)
 
     content, finish = _content_of(response)
+    results.append(GateResult("writer.reply", "passed" if content else "failed", "the model's reply, exactly as received", ARCH_CITE, "observed",
+                              {"raw": content, "finish_reason": finish}))
     if finish == "length":
         return _fallback(template, results, "model output truncated at max_tokens", deadline, f"finish_reason=length, max_tokens={config.max_output_tokens}", model_ms)
     if not content or not content.strip():

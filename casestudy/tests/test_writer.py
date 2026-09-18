@@ -250,3 +250,14 @@ def test_terminal_decision_never_calls_model():
     client = FakeClient(lambda k: _resp("{}"))
     res = write(out, sched, intent, tpl, CFG, client=client)
     assert res.engine == "none" and res.draft is None and client.calls == []
+
+
+def test_trace_records_prompt_and_raw_reply_for_the_page():
+    out, sched, intent, tpl = _pipeline(SAMPLES[0])
+    raw = _good_json(intent, "Hi Taylor—tour Oak Ridge? Reply 1 for Thu, 2 for Fri. Reply STOP to opt out.")
+    client = FakeClient(lambda k: _resp(raw))
+    res = write(out, sched, intent, tpl, CFG, client=client)
+    trail = {r.rule: r for r in res.results}
+    assert trail["writer.request"].details["prompt"] == client.calls[0]["messages"]
+    assert trail["writer.request"].details["temperature"] == 0
+    assert trail["writer.reply"].details == {"raw": raw, "finish_reason": "stop"}

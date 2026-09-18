@@ -86,6 +86,10 @@
           <strong id="no-message-title">No message should be sent</strong>
           <p id="no-message-reason"></p>
         </article>
+        <details class="ai-process" id="ai-process" open>
+          <summary>How the AI answered this record</summary>
+          <ol class="ai-steps" id="ai-steps"></ol>
+        </details>
         <article class="answer-key" id="answer-key" hidden>
           <h4>Compared with the record's answer key</h4>
           <p class="answer-key-note">The agent never sees this answer. It is read only after the run, to grade the result.</p>
@@ -147,9 +151,9 @@
         <article><strong>2 of 2</strong><span>reference structures pass</span><small>supplied examples</small></article>
         <article><strong>2 of 2</strong><span>meaning checks pass</span><small>supplied examples</small></article>
         <article><strong>1.00</strong><span>reply macro F1</span><small>24 synthetic replies</small></article>
-        <article><strong>0.61 / 1.22 ms</strong><span>median / p95</span><small>100 warm offline runs</small></article>
+        <article><strong>1.3 to 1.9 s</strong><span>live AI reply time</span><small>a few DeepSeek runs, not a p95</small></article>
       </div>
-      <p class="evidence-note">The 100 timing runs used the validated template fallback. One production DeepSeek smoke test completed on September 17, 2026 in 1,887 ms end to end with no fallback; one run is not p95 evidence. The optional tone judge was not run.</p>
+      <p class="evidence-note">Every result on this page comes from the live DeepSeek writer unless it says otherwise. On September 17, 2026 both supplied examples ran through the live AI with no fallback and matched their answer keys. A few runs are not p95 evidence, and the optional tone judge was not run. Each result shows its own "How the AI answered" trace: the settings, the exact instructions and record details sent, the AI's raw reply, and the safety check.</p>
 
       <div class="hood-grid">
         <article class="hood-card">
@@ -182,13 +186,13 @@
           <span class="flow-arrow" aria-hidden="true">→</span>
           <div><strong>2</strong><span>Channel, time and action</span><small>deterministic</small></div>
           <span class="flow-arrow" aria-hidden="true">→</span>
-          <div><strong>3</strong><span>Optional wording</span><small>one bounded call</small></div>
+          <div><strong>3</strong><span>AI writes the wording</span><small>one DeepSeek call, temperature 0</small></div>
           <span class="flow-arrow" aria-hidden="true">→</span>
           <div><strong>4</strong><span>Safety validation</span><small>deterministic</small></div>
           <span class="flow-arrow" aria-hidden="true">→</span>
           <div><strong>5</strong><span>Exact public export</span><small>two keys only</small></div>
         </div>
-        <p>The writer cannot choose consent, channel, timing, CTA, or next action. Invalid, late, unsafe, or unavailable model output falls back to a checked template.</p>
+        <p>The AI receives only approved record fields plus a pre-checked draft to improve, and must reply in JSON with the exact buttons or link it was given. It cannot choose consent, channel, timing, buttons, or next action. If its reply is invalid, late, or unsafe, a checked template is used instead, and the trace says why.</p>
       </div>
 
       <div class="hood-grid">
@@ -199,13 +203,15 @@
             <li>Meaning checks replaced exact sentence matching.</li>
             <li>Diagnostics moved beside the answer instead of inside the public export.</li>
             <li>Two model attempts became one bounded attempt plus offline fallback.</li>
+            <li>A detail borrowed from the answer key ("24/7 fitness center") was removed; the AI now sees only the record.</li>
           </ul>
         </article>
         <article class="hood-card">
           <div class="hood-card-head"><h3>Still unhandled or unproven</h3><span class="confidence limited">Limited</span></div>
           <ul>
             <li>Only two supplied examples are known; hidden test and real world performance are unknown.</li>
-            <li>One live model smoke test passed; broader latency, quality, and availability are not measured.</li>
+            <li>Only a few live AI runs so far; broader latency, quality, and availability are not measured.</li>
+            <li>With a pre-checked draft to work from, the AI often keeps that wording almost as is.</li>
             <li>Spanish input is flagged but not translated.</li>
             <li>Email delivery compliance and links for unseen properties remain unverified.</li>
           </ul>

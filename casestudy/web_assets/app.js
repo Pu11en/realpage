@@ -172,6 +172,46 @@
     return rows.join("") || `<div class="check-row" data-status="not_measured"><span class="check-icon not_measured">?</span><span class="check-name">No assertions or thresholds supplied</span><span class="check-detail">not measured</span></div>`;
   }
 
+  function renderAiProcess(answer, diagnostics) {
+    const trail = diagnostics.why || [];
+    const find = (rule) => trail.find((item) => item.rule === rule);
+    const request = find("writer.request");
+    const reply = find("writer.reply");
+    const fallback = find("writer.fallback");
+    const final = find("writer");
+    const message = answer.next_message;
+    const pre = (text) => `<pre>${escapeHtml(text)}</pre>`;
+    const steps = [];
+    steps.push(["Rules decided first, without the AI",
+      message ? `${channelLabel(message.channel)}, ${formatSendAt(message.send_at)}, next step: ${actionLabel(answer.next_action)}. The AI cannot change any of these.`
+              : `No automated message. Next step: ${actionLabel(answer.next_action)}. The AI was not asked to write anything.`]);
+    if (request) {
+      const d = request.details || {};
+      steps.push(["AI settings", `Model ${d.model}, temperature ${d.temperature} (no randomness), JSON-only reply, at most ${d.max_tokens} tokens, time limit ${d.timeout_ms} ms, one try with no retries.`]);
+      const prompt = d.prompt || [];
+      const system = prompt.find((m) => m.role === "system");
+      const user = prompt.find((m) => m.role === "user");
+      if (system) steps.push(["Instructions sent to the AI", "The fixed rules every record gets." + pre(system.content)]);
+      if (user) {
+        let input = user.content;
+        try { input = JSON.stringify(JSON.parse(user.content.replace(/^Input \(JSON\):\n/, "")), null, 2); } catch (_) { /* show as sent */ }
+        steps.push(["Record details sent to the AI", "Only approved fields. The answer key and any sensitive profile details are never sent." + pre(input)]);
+      }
+      steps.push(["AI replied", `${Math.round(d.latency_ms)} ms.` + (reply ? pre(reply.details?.raw ?? "(empty)") : "")]);
+    } else if (fallback) {
+      steps.push(["AI not called", sentence(fallback.details?.reason || fallback.plain_english)]);
+    } else {
+      steps.push(["AI not needed", "The rules made the whole decision, so no wording was written."]);
+    }
+    if (final && diagnostics.engine === "model") {
+      steps.push(["Safety check passed", "Code checked the AI's wording: opt-out line, subject rules, the exact buttons or link, length, fair-housing words and no personal details. The AI's wording was used."]);
+    } else if (request && fallback) {
+      steps.push(["Safety check rejected the AI's wording", `${sentence(fallback.details?.reason || "")} ${fallback.details?.error ? fallback.details.error + "." : ""} A pre-checked template was used instead.`]);
+    }
+    steps.push(["Total time", `${diagnostics.latency_ms} ms for this record.`]);
+    byId("ai-steps").innerHTML = steps.map(([title, body]) => `<li><strong>${escapeHtml(title)}</strong><p>${body.includes("<pre>") ? escapeHtml(body.split("<pre>")[0]) + "<pre>" + body.split("<pre>").slice(1).join("<pre>") : escapeHtml(body)}</p></li>`).join("");
+  }
+
   function renderAnswerKey(answer, key) {
     const box = byId("answer-key");
     box.hidden = !key;
@@ -200,6 +240,7 @@
     const diagnostics = record.diagnostics;
     const answer = JSON.parse(record.submission_line);
     renderHumanAnswer(answer, diagnostics);
+    renderAiProcess(answer, diagnostics);
     renderAnswerKey(answer, record.answer_key);
     byId("submission-output").textContent = JSON.stringify(answer, null, 2);
     byId("byte-count").textContent = encoder.encode(oneBytes(index)).length;
