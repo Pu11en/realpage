@@ -252,3 +252,18 @@ def test_recent_runs_need_the_review_token(monkeypatch):
             body = await ok.json()
             assert body["runs"][0]["input_jsonl"] == text and body["runs"][0]["result"]["record_count"] == 2
     asyncio.run(go())
+
+
+@pytest.mark.parametrize("shape", ["array", "pretty", "blank_lines", "crlf"])
+def test_page_accepts_common_handover_shapes(shape):
+    from casestudy.web import run_payload
+    recs = [json.loads(l) for l in (Path(__file__).resolve().parents[1] / "data" / "sample.jsonl").read_text(encoding="utf-8").splitlines()]
+    text = {
+        "array": json.dumps(recs),
+        "pretty": "\n".join(json.dumps(r, indent=2) for r in recs),
+        "blank_lines": "\n\n".join(json.dumps(r) for r in recs) + "\n\n",
+        "crlf": "\r\n".join(json.dumps(r) for r in recs),
+    }[shape]
+    payload = run_payload(text, offline=True)
+    assert payload["record_count"] == 2
+    assert [json.loads(r["submission_line"])["next_action"]["type"] for r in payload["records"]] == ["start_cadence", "follow_up_in_days"]

@@ -48,7 +48,48 @@ def _answer_key(line: str) -> dict[str, Any] | None:
     return expected if isinstance(expected, dict) else None
 
 
+def _normalize_text(text: str) -> str:
+    """Accept what an interviewer may hand over: JSONL, a JSON array, or pretty-printed objects.
+
+    Strict JSONL passes through byte for byte. Otherwise, if the whole text is a JSON array or a
+    sequence of JSON objects, re-emit one compact object per line. Anything else is left alone so
+    malformed lines still surface as visible errors.
+    """
+    lines = [l for l in _lines(text) if l.strip()]
+    def is_obj(line: str) -> bool:
+        try:
+            return isinstance(json.loads(line), dict)
+        except ValueError:
+            return False
+    if lines and all(is_obj(l) for l in lines):
+        return "\n".join(lines)
+    stripped = text.strip()
+    try:
+        whole = json.loads(stripped)
+        if isinstance(whole, list) and whole and all(isinstance(x, dict) for x in whole):
+            return "\n".join(json.dumps(x, ensure_ascii=False) for x in whole)
+        if isinstance(whole, dict):
+            return json.dumps(whole, ensure_ascii=False)
+    except ValueError:
+        pass
+    decoder, objs, i = json.JSONDecoder(), [], 0
+    while i < len(stripped):
+        while i < len(stripped) and stripped[i] in " \t\r\n,":
+            i += 1
+        if i >= len(stripped):
+            break
+        try:
+            obj, i = decoder.raw_decode(stripped, i)
+        except ValueError:
+            return text
+        if not isinstance(obj, dict):
+            return text
+        objs.append(obj)
+    return "\n".join(json.dumps(o, ensure_ascii=False) for o in objs) if len(objs) > 1 else text
+
+
 def run_payload(text: str, *, offline: bool) -> dict[str, Any]:
+    text = _normalize_text(text)
     config = WriterConfig(enabled=False) if offline else WriterConfig.from_env()
     results = run_batch(_lines(text), config=config)
     exported = submission_jsonl(results)
@@ -105,6 +146,7 @@ async def run_handler(request: web.Request) -> web.Response:
     offline = payload.get("offline", False)
     if not isinstance(offline, bool):
         return web.json_response({"error": "offline must be true or false."}, status=400)
+    payload["jsonl"] = _normalize_text(payload["jsonl"])
     line_count = len(_lines(payload["jsonl"]))
     max_batch_size = request.app[MAX_BATCH_SIZE_KEY]
     if line_count > max_batch_size:
