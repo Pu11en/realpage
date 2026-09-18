@@ -394,3 +394,26 @@ request per record, shared deadline, deterministic validation that a model draft
 with a fake client; the live smoke test needs Drew's authorization and happens in C11/C13.
 **Source:** `PLAN-casestudy-bot.md` C6 and architecture, decision 33 (validators), decision 34
 (templates), IFScale arXiv 2507.11538.
+
+## 36. Assembly and JSONL: one public serializer, diagnostics kept separate, bad records contained
+
+**Decided:** `casestudy/pipeline.py` (`pipeline_v1`) is the sole orchestration layer for one record
+and a JSONL batch. It defensively removes `expected` before any inference, runs the C1-C6 stages,
+and validates the final public object as `AssignmentAnswer`. `submission_line()` is the one compact
+UTF-8 serializer for library, CLI, and later page/download use. The public stream contains exactly
+`next_message` and `next_action`; a separate diagnostics stream contains task ID, cited `why`
+entries, verified and unsupported states, reply class, personalization evidence, engine, errors,
+latency, fallback reason, and component versions. A malformed JSON line, non-object record, or
+unexpected per-record exception cannot stop the batch: it produces `next_message: null` and a
+reason-bearing `escalate` action plus a structured diagnostic. Deterministic no-send outcomes use
+the same nullable message shape with `suppress`, `escalate`, or `create_call_task`; STOP uses the
+existing `mark_opted_out` action. These no-message variants are conservative project-defined
+extensions because neither supplied example demonstrates a no-send public answer. The CLI reads a
+file or stdin and supports `--offline`, `--submission-out`, and `--diagnostics-out`; offline mode
+constructs no model client. **Alternatives:** aborting the batch on bad JSON; mixing diagnostics
+into submission objects; exposing a fabricated message for suppression/escalation; separate CLI
+and library serializers that could drift. **Why it won:** PLAN C7 requires ordered one-answer-per-
+record export, exact public-key isolation, visible diagnostics, safe malformed-record handling, and
+proof that `expected` cannot influence inference.
+**Source:** `PLAN-casestudy-bot.md` C7 and architecture; both records in
+`casestudy/data/sample.jsonl`.

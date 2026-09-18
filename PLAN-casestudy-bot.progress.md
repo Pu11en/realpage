@@ -203,3 +203,31 @@ Check: `python3 -m pytest -q casestudy/tests` — 132 passed.
 Left open: the output-limit/truncation behaviour is proven only against a fake client; the live
 schema smoke test and model-list preflight against the real endpoint wait for Drew's
 authorization (C11/C13). The prompt is English-only, matching the templates.
+
+## C7 Assemble one record and batch JSONL — done
+
+What I did:
+- Added `casestudy/pipeline.py`: assembles the gate, schedule, intent, validated template, and
+  bounded-writer stages into one `AssignmentAnswer`; strips `expected` before inference; and keeps
+  the public `{next_message, next_action}` export separate from diagnostics containing task ID,
+  cited reasoning, verified/unsupported states, reply class, personalization evidence, engine,
+  errors, versions, and latency. Malformed JSON, non-object values, and internal per-record errors
+  return a safe no-message escalation without stopping the rest of the batch.
+- Extended the public contract for deterministic no-send outcomes with `next_message: null` and a
+  reason-bearing `suppress`, `escalate`, or `create_call_task` action. STOP similarly exports no
+  message plus the existing `mark_opted_out` action. These shapes are project-defined because the
+  two supplied examples contain only sendable messages, and diagnostics label that provenance.
+- Added `casestudy/cli.py`: JSONL from a file or stdin, `--offline`, `--submission-out`, and
+  `--diagnostics-out`. Both library and CLI use one compact UTF-8 submission serializer.
+- Added 17 pipeline/CLI tests covering both references, poisoned/deleted `expected`, public-key
+  isolation, required diagnostic fields, terminal outcomes, malformed records, contained internal
+  errors, a 12-line ordered batch, file/stdin operation, identical serialization bytes, and proof
+  that offline mode never builds a network client.
+- Decision log entry 36.
+
+Commit: see git log ("Case study C7").
+
+Check: `python3 -m pytest -q casestudy/tests` — 149 passed.
+
+Left open: the no-message action variants are conservative project shapes, not observed assignment
+outputs; the diagnostics make that explicit. C8 adversarial fixtures are next.

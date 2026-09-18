@@ -153,7 +153,7 @@ Check: `python3 -m pytest -q casestudy/tests`
   template validation and serialization. Tests monkeypatch timeout, empty content, invalid JSON,
   wrong CTA shape, unsafe draft, exhausted budget, and successful draft; no test calls the network.
 
-- [ ] **C7 Assemble one record and batch JSONL.** The public submission path emits one
+- [x] **C7 Assemble one record and batch JSONL.** The public submission path emits one
   `AssignmentAnswer` per input line with no diagnostic keys. A separate diagnostics path carries
   `task_id`, `why[{rule, plain_english, citation, confidence}]`, verified states, reply class,
   personalization evidence, engine, errors, and latency. Malformed records yield a structured

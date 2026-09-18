@@ -76,13 +76,29 @@ class MarkOptedOutAction(BaseModel):
     reason: str
 
 
-NextAction = Union[StartCadenceAction, FollowUpInDaysAction, MarkOptedOutAction]
-
-
-class AssignmentAnswer(BaseModel):
-    """The exact public export shape. Reject any extra top-level key."""
+class NoMessageAction(BaseModel):
+    """C7 extension for outcomes the two samples never show: the service proposes no automated
+    message and instead reports why (suppressed, escalated for a human, a voice call task, or a
+    malformed record). Not observed; a project-defined shape, labeled as such in diagnostics.
+    """
 
     model_config = ConfigDict(extra="forbid")
 
-    next_message: NextMessage
+    type: Literal["suppress", "escalate", "create_call_task"]
+    reason: str
+
+
+NextAction = Union[StartCadenceAction, FollowUpInDaysAction, MarkOptedOutAction, NoMessageAction]
+
+
+class AssignmentAnswer(BaseModel):
+    """The exact public export shape. Reject any extra top-level key.
+
+    `next_message` is null only when no automated message is proposed (opt-out, suppress,
+    escalate, call task, malformed record); both observed samples carry a message.
+    """
+
+    model_config = ConfigDict(extra="forbid")
+
+    next_message: Optional[NextMessage]
     next_action: NextAction = Field(discriminator="type")
