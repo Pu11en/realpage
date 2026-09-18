@@ -161,6 +161,38 @@ def _sms_options(intent: Intent) -> Optional[list[str]]:
     return [str(o) for o in opts] if isinstance(opts, list) and len(opts) >= 2 else None
 
 
+TOPICS = (
+    (("renew", "lease_end"), "your lease renewal"), (("maintenance", "work_order", "service_request", "repair"), "your maintenance request"),
+    (("rent", "payment", "balance", "delinquen"), "your rent payment"), (("application", "applicant", "document", "docs"), "your application"),
+    (("survey", "review", "feedback"), "a quick survey"), (("move_out", "moveout", "move-out"), "your move-out"),
+    (("confirm_tour", "tour_at", "tour_scheduled", "reminder"), "your upcoming tour"), (("post_tour", "apply", "toured"), "next steps after your tour"),
+)
+
+
+def general_topic(rec: NormalizedRecord) -> str:
+    hay = " ".join([rec.task_id or "", str(rec.constraints.get("primary_cta") or ""), rec.lifecycle_stage or "",
+                    " ".join(k for k, v in rec.input.items() if v not in (None, "", []))]).lower()
+    for words, topic in TOPICS:
+        if any(w in hay for w in words):
+            return topic
+    return "your home search" if (rec.persona or "prospect").lower() in ("prospect", "lead") else "your home"
+
+
+def general_candidates(rec: NormalizedRecord, intent: Intent, channel: str) -> list[Draft]:
+    who = _first_name(rec) or "there"
+    short, _ = short_property_name(rec)
+    place = short or "our community"
+    topic = general_topic(rec)
+    link = (intent.cta or {}).get("link")
+    if channel == "sms":
+        tail = f"Details: {link}" if link else "Reply here and our team will help."
+        body = f"Hi {who}—a quick note from {place} about {topic}. {tail} {SMS_STOP}"
+        return [Draft("sms", body, None, intent.cta, "template", "sms.general")]
+    tail = f"Details → {link}" if link else "Reply to this email and our team will help."
+    body = f"Hi {who},\nA quick note from {place} about {topic}. {tail}\n{EMAIL_OPT_OUT}"
+    return [Draft("email", body, f"{place}: about {topic}", intent.cta, "template", "email.general")]
+
+
 def sms_candidates(rec: NormalizedRecord, outcome: GateOutcome, intent: Intent) -> list[Draft]:
     first = _first_name(rec)
     short, _ = short_property_name(rec)
@@ -285,7 +317,9 @@ def render_templates(outcome: GateOutcome, schedule: Schedule, intent: Intent) -
     if isinstance(lang, str) and lang.strip().lower() not in ("en", "en-us", ""):
         results.append(GateResult("template.language", "passed", f"language {lang!r} requested; only English templates exist, flagging uncertainty", PLAN_CITE, "conservative_default", {"warning": "language_unsupported"}))
 
-    if schedule.channel == "sms":
+    if intent.flow == "general":
+        candidates = general_candidates(rec, intent, schedule.channel)
+    elif schedule.channel == "sms":
         candidates = sms_candidates(rec, outcome, intent)
     else:
         candidates = email_candidates(rec, outcome, intent)

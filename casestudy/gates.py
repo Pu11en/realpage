@@ -118,6 +118,7 @@ class GateOutcome:
     unsupported_states: list[str] = field(default_factory=list)
     selected_option: Optional[str] = None
     record: Optional[NormalizedRecord] = None
+    purpose: Optional[str] = None  # set for non-tour tasks, which get a general checked message
 
     @property
     def proceed(self) -> bool:
@@ -218,6 +219,20 @@ def normalize(raw: Any) -> NormalizedRecord:
                 break
         if prior is not None:
             break
+    if prior is None:
+        # The options may arrive inside the previous message itself, in the same shape as our own output.
+        for container in (inp, raw):
+            for key in ("prior_message", "last_message", "previous_message", "last_outbound_message", "previous_output"):
+                v = container.get(key)
+                if isinstance(v, dict):
+                    v = v.get("next_message", v)
+                    cta = v.get("cta") if isinstance(v, dict) else None
+                    opts = cta.get("options") if isinstance(cta, dict) else None
+                    if isinstance(opts, list) and opts and all(isinstance(x, str) for x in opts):
+                        prior = opts
+                        break
+            if prior is not None:
+                break
 
     task_id = raw.get("task_id")
     if not isinstance(task_id, str) or not task_id:
@@ -521,14 +536,11 @@ def run_gates(raw: Any) -> GateOutcome:
     if lc.status == "failed":
         return GateOutcome("suppress", "lifecycle_blocked", results, reply_class, verified_states=verified, unsupported_states=unsupported, record=rec)
 
-    # 3a. is this a tour-outreach task at all? Anything else has no approved playbook yet.
+    # 3a. is this a tour-outreach task? Other tasks get a short, general, checked message instead of a tour pitch.
     purpose = _unsupported_purpose(rec)
     if purpose:
-        p = GateResult("purpose_gate", "failed", f"this looks like {purpose}, not prospect tour outreach; the only approved playbook is tour outreach, so a person handles it",
-                       "project rule: never send a tour pitch for a different job (rent, maintenance, renewal, application, survey)", "conservative_default", {"purpose": purpose})
-        results.append(p)
-        return GateOutcome("escalate", "no_playbook_for_task", results, reply_class, verified_states=verified,
-                           unsupported_states=unsupported, record=rec)
+        results.append(GateResult("purpose_gate", "passed", f"this looks like {purpose}, not prospect tour outreach; a general checked message is used, never a tour pitch",
+                                  "project rule: never send a tour pitch for a different job", "conservative_default", {"purpose": purpose}))
 
     # 3b. the customer said something we must not ignore (checked after consent, so no-consent still wins)
     if reply_class in ("question", "help", "unknown"):
@@ -546,5 +558,6 @@ def run_gates(raw: Any) -> GateOutcome:
     if d.status == "failed":
         return GateOutcome("escalate", "dates_or_timezone_invalid", results, reply_class, ref, tz, verified, unsupported, record=rec)
 
-    decision = "propose_follow_up" if reply_class == "choose_option" else "proceed"
-    return GateOutcome(decision, "all_gates_passed", results, reply_class, ref, tz, verified, unsupported, selected, record=rec)
+    decision = "propose_follow_up" if reply_class == "choose_option" and not purpose else "proceed"
+    return GateOutcome(decision, "all_gates_passed", results, reply_class, ref, tz, verified, unsupported,
+                       None if purpose else selected, record=rec, purpose=purpose)

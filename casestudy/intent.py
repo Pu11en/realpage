@@ -181,6 +181,27 @@ def build_next_action(flow: str, horizon: str, outcome: GateOutcome) -> tuple[di
     return {"type": "follow_up_in_days", "value": FOLLOW_UP_INTERVAL_DAYS}, GateResult("next_action", "passed", f"open follow-up flow: follow up in {FOLLOW_UP_INTERVAL_DAYS} days (provisional interval from the sample, NOT the task_id dayN suffix)", SAMPLE_CITE + ": record 2 follow_up_in_days 3", "hypothesis", {"next_action": "follow_up_in_days", "value": FOLLOW_UP_INTERVAL_DAYS})
 
 
+def _any_link(rec: NormalizedRecord) -> Optional[str]:
+    for container in (rec.input, rec.input.get("links") if isinstance(rec.input.get("links"), dict) else {}):
+        for k, v in container.items():
+            if isinstance(v, str) and v.strip().lower().startswith(("https://", "http://")) and "tour" not in k.lower():
+                return v.strip()
+    return None
+
+
+def _general_intent(rec: NormalizedRecord, outcome: GateOutcome, schedule: Schedule, results: list) -> "Intent":
+    raw = _str(rec.constraints.get("primary_cta")) if isinstance(rec.constraints, dict) else None
+    cta_type = raw if raw and raw not in CTA_MAP else "contact_us"
+    link = _any_link(rec)
+    cta = {"type": cta_type, "link": link} if link else {"type": cta_type}
+    results.append(GateResult("intent", "passed", f"general task ({outcome.purpose}): CTA {cta_type!r} from the record, " + ("supplied link" if link else "reply to the team"),
+                              "project rule: use the record's own goal; never a tour pitch", "conservative_default", {"flow": "general", "cta": cta}))
+    action = {"type": "follow_up_in_days", "value": FOLLOW_UP_INTERVAL_DAYS}
+    results.append(GateResult("next_action", "passed", f"general task: follow up in {FOLLOW_UP_INTERVAL_DAYS} days if there is no response",
+                              SAMPLE_CITE + ": record 2 follow_up_in_days 3", "hypothesis", {"next_action": "follow_up_in_days"}))
+    return Intent("general", None, "none", cta, action, uncertain=True, results=results)
+
+
 # --------------------------------------------------------------------------- driver
 
 def infer_intent(outcome: GateOutcome, schedule: Schedule) -> Intent:
@@ -193,6 +214,8 @@ def infer_intent(outcome: GateOutcome, schedule: Schedule) -> Intent:
         results.append(GateResult("intent", "skipped", f"gate decision {outcome.decision!r}; no intent inferred", "project rule: terminal gate decisions never compose", "conservative_default"))
         return Intent("none", None, "none", None, None, uncertain=True, results=results)
 
+    if outcome.purpose:
+        return _general_intent(rec, outcome, schedule, results)
     flow, fres = infer_flow(rec, outcome)
     horizon, hsrc, huncertain, hres = infer_horizon(rec, outcome)
     results += [fres, hres]

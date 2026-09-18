@@ -247,6 +247,9 @@ def write(outcome: GateOutcome, schedule: Schedule, intent: Intent, template: Te
     if template.draft is None:
         results.append(GateResult("writer", "skipped", "no template draft (terminal decision or call task); the model is never asked to invent one", ARCH_CITE, "conservative_default"))
         return WriterOutput(None, "none", None, results, deadline.elapsed_ms())
+    if intent.flow == "general":
+        # Non-tour tasks have no approved AI playbook yet: the checked template is the whole answer.
+        return _fallback(template, results, "general task uses the checked template (no AI playbook yet)", deadline)
     if not config.configured:
         why = "offline mode" if not config.enabled else "DEEPSEEK_API_KEY or DEEPSEEK_MODEL not set"
         return _fallback(template, results, why, deadline)

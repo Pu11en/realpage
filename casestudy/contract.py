@@ -42,7 +42,24 @@ class ScheduleTourReplyCTA(BaseModel):
     type: Literal["schedule_tour"]
 
 
-CTA = Union[ScheduleTourOptionsCTA, ScheduleTourLinkCTA, ScheduleTourReplyCTA]
+class GeneralLinkCTA(BaseModel):
+    """Non-tour task (renewal, maintenance, application...): the record's own primary_cta plus a supplied link."""
+
+    model_config = ConfigDict(extra="forbid")
+
+    type: str
+    link: str
+
+
+class GeneralReplyCTA(BaseModel):
+    """Non-tour task with no supplied link: the recipient replies and the team helps."""
+
+    model_config = ConfigDict(extra="forbid")
+
+    type: str
+
+
+CTA = Union[ScheduleTourOptionsCTA, ScheduleTourLinkCTA, ScheduleTourReplyCTA, GeneralLinkCTA, GeneralReplyCTA]
 
 
 class NextMessage(BaseModel):

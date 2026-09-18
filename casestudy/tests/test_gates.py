@@ -231,3 +231,11 @@ def test_string_consent_is_not_consent():
     raw["consent"] = {"email_opt_in": "yes", "sms_opt_in": "true", "voice_opt_in": False}
     out = run_gates(raw)
     assert out.decision == "suppress" and out.reason == "no_consent"
+
+
+def test_prior_options_nested_in_previous_message():
+    raw = json.loads(json.dumps(SAMPLES[0]))
+    raw["input"]["inbound_message"] = {"channel": "sms", "body": "1"}
+    raw["input"]["prior_message"] = {"cta": {"type": "schedule_tour", "options": ["Thu", "Fri"]}}
+    out = run_gates(raw)
+    assert out.decision == "propose_follow_up" and out.selected_option == "Thu"
