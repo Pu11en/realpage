@@ -67,7 +67,7 @@
     "false_alarm_pct": 84.8
   },
   "measured_at": "2026-09-15",
-  "evidence_status": "Historical recruiter scorecard \u2014 not a current release approval",
+  "evidence_status": "Historical scorecard \u2014 not a current release approval",
   "method": "Six offline checks; 100 saved answers were graded against the rubric; 17 human labels were compared with the AI grade; 79 saved findings were reviewed for false alarms.",
   "limitations": [
     "This is one saved run from 2026-09-15, not a result from the combined release candidate.",

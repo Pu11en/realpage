@@ -1,4 +1,4 @@
-"""H2: recruiter evidence is reproducible, plainly historical, and auditable."""
+"""H2: saved evidence is reproducible, plainly historical, and auditable."""
 import json
 import subprocess
 from pathlib import Path
@@ -17,14 +17,14 @@ def test_historical_scorecard_rebuilds_without_an_old_worktree():
     """The public values must survive after the disposable eval worktree is gone."""
     subprocess.run(["python3", str(DATA / "build_evals.py")], cwd=ROOT, check=True)
 
-    scorecard = read_json("recruiter-scorecard.json")
-    assert scorecard["evidence_status"] == "Historical recruiter scorecard — not a current release approval"
+    scorecard = read_json("saved-scorecard.json")
+    assert scorecard["evidence_status"] == "Historical scorecard — not a current release approval"
     assert read_json("evals.json") == scorecard["evals"]
     assert read_json("chat-stats.json") == scorecard["chat_stats"]
 
 
 def test_every_headline_measure_has_a_sample_and_matches_saved_evidence():
-    scorecard = read_json("recruiter-scorecard.json")
+    scorecard = read_json("saved-scorecard.json")
     evals = scorecard["evals"]
     chat = scorecard["chat_stats"]
 
@@ -48,7 +48,7 @@ def test_page_explains_method_and_known_limits_without_internal_hedging():
 
 
 def test_public_evidence_has_no_machine_paths():
-    for path in [DATA / "recruiter-scorecard.json", DATA / "evals.json", DATA / "chat-stats.json"]:
+    for path in [DATA / "saved-scorecard.json", DATA / "evals.json", DATA / "chat-stats.json"]:
         assert "/home/" not in path.read_text(encoding="utf-8")
         assert "source_dir" not in path.read_text(encoding="utf-8")
     assert "/home/" not in (DATA / "build_evals.py").read_text(encoding="utf-8")

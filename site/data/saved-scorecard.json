@@ -1,5 +1,5 @@
 {
-  "evidence_status": "Historical recruiter scorecard — not a current release approval",
+  "evidence_status": "Historical scorecard — not a current release approval",
   "evals": {
     "checks": [
       {"name": "secrets-and-code", "status": "FAIL", "seconds": 16.7, "cost_usd": 0.0},
@@ -22,7 +22,7 @@
     "human_review": {"n_reviewed": 17, "n_comparable_to_ai": 17, "agreement_pct": 94.1, "label_file": "drew-2026-09-15.json"},
     "false_alarm_rate": {"n_reviewed": 79, "false_alarm_count": 67, "false_alarm_pct": 84.8},
     "measured_at": "2026-09-15",
-    "evidence_status": "Historical recruiter scorecard — not a current release approval",
+    "evidence_status": "Historical scorecard — not a current release approval",
     "method": "Six offline checks; 100 saved answers were graded against the rubric; 17 human labels were compared with the AI grade; 79 saved findings were reviewed for false alarms.",
     "limitations": [
       "This is one saved run from 2026-09-15, not a result from the combined release candidate.",
@@ -38,7 +38,7 @@
     "p50_seconds": 13.8,
     "p95_seconds": 28.3,
     "measured_at": "2026-09-15",
-    "evidence_status": "Historical recruiter scorecard — not a current release approval",
+    "evidence_status": "Historical scorecard — not a current release approval",
     "method": "Timing from 105 saved chat answers in the 2026-09-15 scorecard run.",
     "limitations": [
       "This is a saved local sample, not a production speed guarantee.",

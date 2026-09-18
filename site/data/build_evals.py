@@ -2,7 +2,7 @@
 """Build page measurements from a current scorecard or the saved historical one.
 
 The saved scorecard is deliberately committed with the site.  That keeps the
-recruiter evidence reproducible after the disposable evaluation worktree is
+saved evidence reproducible after the disposable evaluation worktree is
 gone, while its ``historical`` status prevents it from being mistaken for a
 passing release check.
 """
@@ -15,7 +15,7 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 SHIPCHECK_DIR = Path(os.environ["SHIPCHECK_DIR"]) if os.environ.get("SHIPCHECK_DIR") else None
-SAVED_SCORECARD = HERE / "recruiter-scorecard.json"
+SAVED_SCORECARD = HERE / "saved-scorecard.json"
 NOT_RUN = "not run yet"
 
 
@@ -27,7 +27,7 @@ def safe_json(path):
 
 
 def saved_measurements():
-    """Return the checked-in recruiter evidence, without machine-specific paths."""
+    """Return the checked-in saved evidence, without machine-specific paths."""
     saved = safe_json(SAVED_SCORECARD)
     if not isinstance(saved, dict):
         return None
