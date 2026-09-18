@@ -17,9 +17,9 @@ def test_unknown_page_is_a_real_404(gate):
     assert b"CraneSignal" in body
 
 
-def test_signed_in_gate_still_works(gate):
-    status, loc, _ = _get(gate + "/index.html")
-    assert status == 302 and loc and "/auth?redirect=" in loc
+def test_pages_load_signed_out_and_signed_in(gate):
+    status, _, body = _get(gate + "/index.html")
+    assert status == 200 and b"Early Leads" in body
     status, _, body = _get(gate + "/index.html", cookie=COOKIE)
     assert status == 200 and b"Early Leads" in body
 
