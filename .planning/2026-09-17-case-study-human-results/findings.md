@@ -18,6 +18,7 @@
 - The backend already supports the desired hybrid: deterministic policy and scheduling first, one bounded DeepSeek wording call second, validation third, and a template fallback on provider failure.
 - DeepSeek's current official OpenAI compatible base URL remains `https://api.deepseek.com`; its current low latency model identifier is `deepseek-flash`, while the older `deepseek-chat` name has been retired.
 - Two production calls reached DeepSeek but timed out at the old 2,000 ms hard cutoff. That sample field is a p95 performance target, not a safe per-request cancellation deadline; keeping it as an evaluation and using an 8,000 ms hard ceiling preserves honest measurement and lets the AI finish.
+- DeepSeek's current models enable thinking by default. The first longer-budget request spent the 400-token cap on reasoning and returned no complete JSON, so this short writing task must explicitly request non-thinking mode.
 
 ## Technical Decisions
 | Decision | Rationale |
@@ -30,6 +31,7 @@
 | Reuse the existing Railway secret by service reference | The case-study service gets authorization without copying or exposing the credential. |
 | Configure `deepseek-flash` | It is the current official fast model and better fits the assignment's strict latency budget than the larger Pro model. |
 | Separate the p95 target from the hard timeout | A statistical performance target remains reportable without forcing every individual live call to fail at exactly that number. |
+| Disable thinking for message drafting | The task is constrained rewriting, and the visible JSON needs the small output budget more than hidden reasoning does. |
 
 ## Issues Encountered
 | Issue | Resolution |

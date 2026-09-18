@@ -77,6 +77,7 @@ def test_successful_sms_draft_is_used():
     call = client.calls[0]
     assert call["model"] == "deepseek-chat" and call["temperature"] == 0
     assert call["response_format"] == {"type": "json_object"}
+    assert call["extra_body"] == {"thinking": {"type": "disabled"}}
     assert call["max_tokens"] == w.MAX_OUTPUT_TOKENS and 0 < call["timeout"] <= 8.0
     assert call["messages"][0]["role"] == "system" and call["messages"][-1]["role"] == "user"
     assert any(r.rule == "writer.preflight" and r.status == "passed" for r in res.results)

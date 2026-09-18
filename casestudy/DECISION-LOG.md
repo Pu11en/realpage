@@ -381,7 +381,7 @@ configuration (`DEEPSEEK_API_KEY`, `DEEPSEEK_BASE_URL`, `DEEPSEEK_MODEL`, `CASES
 no model name is guessed in code, and the configured model is preflight-verified against the
 endpoint's model list (cached) before any request. The SDK client is built with `max_retries=0`
 and the writer never re-asks. The prompt is a stable system prefix with the record last, sent with
-`json_object`, temperature 0 and `max_tokens=400`; only approved profile fields (first name,
+`json_object`, non-thinking mode, temperature 0 and `max_tokens=400`; only approved profile fields (first name,
 amenity interest) and business input reach the model. A monotonic per-record safety deadline is
 configured separately from the record's `p95_latency_ms` performance target, with an 8,000 ms
 default ceiling and 250 ms reserved for validation and serialization: too little budget skips the
@@ -399,7 +399,9 @@ next action; a parse-and-repair loop on bad JSON; calling the model even for ter
 request per record, shared deadline, deterministic validation that a model draft cannot override.
 **Observed:** the first authorized production smoke test showed that DeepSeek's request can exceed
 the supplied 2,000 ms target even when using its fast model, which is why the target and hard
-timeout are now reported and enforced separately.
+timeout are now reported and enforced separately. DeepSeek's current models enable thinking by
+default, so the request explicitly disables it; otherwise hidden reasoning can consume the small
+structured-output token budget before the message JSON is returned.
 **Source:** `PLAN-casestudy-bot.md` C6 and architecture, decision 33 (validators), decision 34
 (templates), IFScale arXiv 2507.11538.
 

@@ -69,3 +69,5 @@ Phase 6
 | Browser test read hidden JSON with `inner_text()` | Use `text_content()` for the intentionally collapsed submission details. |
 | Subject row stayed visible when marked hidden | Added a global author-level hidden rule so layout display styles cannot override visibility. |
 | First production AI smoke test fell back after 2,042 ms | The one-time model-list preflight consumed part of the record's 2,000 ms budget; inspect the recorded writer error and retry with the now-warm preflight cache before changing the architecture. |
+| First request with the new timeout ended at the 400-token cap | DeepSeek enables thinking by default; explicitly disable thinking for this short structured writing task so hidden reasoning cannot consume the output budget. |
+| Deployment wait compared against a mistyped full hash | Stopped that poll after the correct deployed commit was already successful and used Railway's returned hash for later verification. |

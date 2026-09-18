@@ -29,6 +29,8 @@
 - The first authorized live request safely returned the validated template after 2,042 ms because the model request failed during the strict first-call budget; no unsafe or partial model output reached the user.
 - A second request with the preflight cache warm confirmed the provider request itself was timing out at the two second ceiling.
 - Reworked the bounded writer so the p95 field remains an evaluation target while the provider has a separate configurable 8,000 ms hard safety timeout.
+- The first request after that change reached the provider but reported `finish_reason=length`; official DeepSeek documentation confirmed thinking is on by default.
+- Explicitly disabled thinking for the short structured drafting call and added a regression assertion for the provider request.
 | Responsive visual check | Human view works at 390, 820, and 1440 pixels | Passed | Pass |
 
 ### Errors

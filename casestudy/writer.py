@@ -274,6 +274,7 @@ def write(outcome: GateOutcome, schedule: Schedule, intent: Intent, template: Te
             temperature=0,
             max_tokens=config.max_output_tokens,
             timeout=remaining / 1000.0,
+            extra_body={"thinking": {"type": "disabled"}},
         )
     except Exception as exc:  # noqa: BLE001 - timeouts, connection errors, API errors: all fall back
         model_ms = (clock() - t0) * 1000.0
