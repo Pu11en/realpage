@@ -233,3 +233,22 @@ def test_payload_carries_answer_key_for_display_only():
     assert keys[2] is None
     for r in payload["records"]:
         assert "expected" not in r["submission_line"]
+
+
+def test_recent_runs_need_the_review_token(monkeypatch):
+    import asyncio
+    from aiohttp.test_utils import TestClient, TestServer
+    from casestudy import web as w
+    monkeypatch.setenv("CASESTUDY_REVIEW_TOKEN", "secret-token")
+    w.RECENT_RUNS.clear()
+
+    async def go():
+        async with TestClient(TestServer(w.create_app())) as client:
+            text = (Path(__file__).resolve().parents[1] / "data" / "sample.jsonl").read_text(encoding="utf-8")
+            assert (await client.post("/case-study/api/run", json={"jsonl": text, "offline": True})).status == 200
+            assert (await client.get("/case-study/api/recent")).status == 404
+            assert (await client.get("/case-study/api/recent", headers={"X-Review-Token": "wrong"})).status == 404
+            ok = await client.get("/case-study/api/recent", headers={"X-Review-Token": "secret-token"})
+            body = await ok.json()
+            assert body["runs"][0]["input_jsonl"] == text and body["runs"][0]["result"]["record_count"] == 2
+    asyncio.run(go())

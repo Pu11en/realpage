@@ -7,6 +7,9 @@ diagnostics.  Production proxy, authentication, limits, and container wiring are
 from __future__ import annotations
 
 import argparse
+import collections
+import hmac
+from datetime import datetime, timezone
 import json
 import os
 from pathlib import Path
@@ -66,6 +69,29 @@ def run_payload(text: str, *, offline: bool) -> dict[str, Any]:
     }
 
 
+RECENT_RUNS: "collections.deque[dict[str, Any]]" = collections.deque(maxlen=50)
+
+
+def _remember(text: str, result: dict[str, Any]) -> None:
+    """Keep the last runs in memory only (lost on restart) so a reviewer can inspect exactly what ran."""
+    RECENT_RUNS.appendleft({"at": datetime.now(timezone.utc).isoformat(timespec="seconds"), "input_jsonl": text, "result": result})
+
+
+async def recent_handler(request: web.Request) -> web.Response:
+    token = os.environ.get("CASESTUDY_REVIEW_TOKEN")
+    if not token or not hmac.compare_digest(request.headers.get("X-Review-Token", ""), token):
+        raise web.HTTPNotFound()
+    limit = max(1, min(50, _positive_env_int_value(request.query.get("limit"), 10)))
+    return web.json_response({"runs": list(RECENT_RUNS)[:limit]})
+
+
+def _positive_env_int_value(value: Any, default: int) -> int:
+    try:
+        return int(value)
+    except (TypeError, ValueError):
+        return default
+
+
 async def run_handler(request: web.Request) -> web.Response:
     try:
         payload = await request.json()
@@ -86,7 +112,9 @@ async def run_handler(request: web.Request) -> web.Response:
             status=413,
         )
     try:
-        return web.json_response(run_payload(payload["jsonl"], offline=offline))
+        result = run_payload(payload["jsonl"], offline=offline)
+        _remember(payload["jsonl"], result)
+        return web.json_response(result)
     except Exception as exc:  # the batch protects records; this protects the request shell
         return web.json_response({"error": f"The batch could not run: {type(exc).__name__}."}, status=500)
 
@@ -125,6 +153,7 @@ def create_app(*, max_request_bytes: int | None = None, max_batch_size: int | No
     app[MAX_BATCH_SIZE_KEY] = batch_limit
     app.router.add_get("/health", health_handler)
     app.router.add_post("/case-study/api/run", run_handler)
+    app.router.add_get("/case-study/api/recent", recent_handler)
     app.router.add_get("/case-study/assets/{name}", asset_handler)
     app.router.add_get("/case-study", page_handler)
     app.router.add_get("/case-study/", page_handler)
