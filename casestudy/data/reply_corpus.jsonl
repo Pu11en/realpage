@@ -1,0 +1,24 @@
+{"text":"STOP","expected_class":"opt_out","feature":"canonical"}
+{"text":"stop!!!","expected_class":"opt_out","feature":"capitalization_punctuation"}
+{"text":"Unsubscribe.","expected_class":"opt_out","feature":"synonym"}
+{"text":"Remove me!","expected_class":"opt_out","feature":"phrase_synonym"}
+{"text":"HELP","expected_class":"help","feature":"canonical"}
+{"text":"help???","expected_class":"help","feature":"capitalization_punctuation"}
+{"text":"Info","expected_class":"help","feature":"synonym"}
+{"text":"INFO!","expected_class":"help","feature":"synonym_punctuation"}
+{"text":"1","expected_class":"choose_option","feature":"canonical"}
+{"text":"2.","expected_class":"choose_option","feature":"punctuation"}
+{"text":"03","expected_class":"choose_option","feature":"leading_zero"}
+{"text":"99!","expected_class":"choose_option","feature":"out_of_range_still_intent"}
+{"text":"Not interested","expected_class":"not_interested","feature":"canonical"}
+{"text":"NO THANKS!","expected_class":"not_interested","feature":"capitalization_punctuation"}
+{"text":"I already leased.","expected_class":"not_interested","feature":"synonym"}
+{"text":"Wrong number","expected_class":"not_interested","feature":"synonym"}
+{"text":"How much is rent?","expected_class":"question","feature":"canonical"}
+{"text":"PETS???","expected_class":"question","feature":"capitalization_punctuation"}
+{"text":"Is parking available.","expected_class":"question","feature":"question_without_question_mark"}
+{"text":"What about the deposit","expected_class":"question","feature":"ambiguous_question"}
+{"text":"Sounds good","expected_class":"unknown","feature":"ambiguous_acknowledgement"}
+{"text":"Maybe later.","expected_class":"unknown","feature":"ambiguous_deferral"}
+{"text":"Thursday works","expected_class":"unknown","feature":"unmapped_option_text"}
+{"text":"Send details","expected_class":"unknown","feature":"ambiguous_request"}

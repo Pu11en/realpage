@@ -176,14 +176,15 @@ def test_open_follow_up_sms_and_welcome_email():
     assert intent.next_action == {"type": "start_cadence", "name": "prospect_welcome_short_horizon"}
 
 
-def test_option_reply_confirms_without_booking():
+def test_option_reply_proposes_follow_up_without_claiming_a_booking():
     raw = _variant(0)
     raw["input"]["inbound_reply"] = "2"
     raw["input"]["prior_options"] = ["Thu", "Fri"]
     t, _, intent, out = _render(raw)
     assert out.decision == "propose_follow_up" and out.selected_option == "Fri"
     assert t.draft.label == "sms.option_reply" and t.report.passed
-    assert "Fri tour" in t.draft.body and "confirm" in t.draft.body
+    assert "Fri" in t.draft.body and "follow up" in t.draft.body and "arrange your tour" in t.draft.body
+    assert "confirmed" not in t.draft.body and "booked" not in t.draft.body
     assert t.draft.body.count("?") <= 1
     assert intent.next_action == {"type": "follow_up_in_days", "value": 3}
 

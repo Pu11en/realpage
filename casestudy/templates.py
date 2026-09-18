@@ -178,8 +178,8 @@ def sms_candidates(rec: NormalizedRecord, outcome: GateOutcome, intent: Intent) 
     drafts: list[Draft] = []
     if outcome.decision == "propose_follow_up" and outcome.selected_option:
         sel = outcome.selected_option
-        body = f"Hi {who}—thanks, we will confirm your {sel} tour at {place}. Prefer another day? {ask_compact} {SMS_STOP}"
-        compact = f"Hi {who}, we will confirm your {sel} tour at {place}. {ask_compact} {SMS_STOP}"
+        body = f"Hi {who}—thanks for choosing {sel}. A team member will follow up to arrange your tour at {place}. Prefer another day? {ask_compact} {SMS_STOP}"
+        compact = f"Hi {who}, thanks for choosing {sel}. We will follow up to arrange your tour at {place}. {ask_compact} {SMS_STOP}"
         label = "sms.option_reply"
     elif intent.flow == "welcome":
         body = f"Hi {who}—welcome to {place}! Tours are available this week. {ask} {SMS_STOP}"
@@ -225,7 +225,7 @@ def email_candidates(rec: NormalizedRecord, outcome: GateOutcome, intent: Intent
     if outcome.decision == "propose_follow_up" and outcome.selected_option:
         sel = outcome.selected_option
         subject = f"Your {sel} tour at {place}"
-        body = f"Hi {who},\nThanks, we will follow up to confirm your {sel} tour at {place}. {cta_line}\n{EMAIL_OPT_OUT}"
+        body = f"Hi {who},\nThanks for choosing {sel}. A team member will follow up to arrange your tour at {place}. {cta_line}\n{EMAIL_OPT_OUT}"
         label = "email.option_reply"
     elif intent.flow == "welcome":
         subject = f"Welcome to {place}—{subj_focus.lower()}" if amen else f"Welcome to {place}—book your tour"

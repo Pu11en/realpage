@@ -422,3 +422,22 @@ proof that `expected` cannot influence inference.
 message, merge the final validator report's verified states with gate states, and expose that
 validator's cited results in `why`. Blank and whitespace-only JSONL lines produce safe escalation
 answers and retain their physical line numbers, so later parse errors are never misnumbered.
+
+## 37. Practice data: evaluator-owned expectations and a balanced reply corpus
+
+**Decided:** The two supplied records remain untouched in `sample.jsonl`. Twenty focused inputs
+live separately in `practice.jsonl`, while each input's primary rule, expected public structure,
+and prose checklist live in an evaluator-only manifest so the service cannot learn from its answer.
+The cases cover consent and channel order, slot boundaries, day3/day10, Phoenix and Los Angeles
+DST, Sunday timing, Spanish, renewal, a transactional note without consent, STOP, an option reply,
+protected-class and PII profile fields, past/missing move dates, and voice-only handling. A second
+24-item corpus has exactly four examples for each project-defined reply class and deliberately
+varies case, punctuation, synonyms, option numbers, and ambiguous language. C8 freezes and checks
+the labels but makes no F1 claim; C9 must calculate and label macro-F1 on this synthetic corpus.
+The option-reply fixture exposed wording that could sound like a booking confirmation, so both SMS
+and email now say a team member will follow up to arrange the tour.
+**Alternatives:** mixing expected answers into service inputs; copying the two goldens into the
+practice set; reporting an F1 threshold from one STOP example; leaving the booking-adjacent wording.
+**Why it won:** PLAN C8 requires separate goldens, adversarial coverage, per-fixture structure and
+meaning checks, balanced reply examples, and honest claims about what that synthetic data proves.
+**Source:** `PLAN-casestudy-bot.md` C8; decisions 31-36.
