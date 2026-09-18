@@ -140,3 +140,22 @@
 **Left open:** Not tested against the live chat model (no Docker build / no paid chat run) — T10 asks the 5 questions. The public repo link in SOUL.md is still github.com/Pu11en/realpage (the real repo name). propertystack/data/tx/chat-leads.csv was already modified before this task (3 phone numbers reformatted, one looks broken: "8-773-367-2410"); left untouched and uncommitted.
 
 - T7 follow-up: a stray uncommitted edit to propertystack/data/tx/chat-leads.csv (two phone numbers reformatted badly, not part of T7) was discarded so the repo is clean. Check passes. If it reappears, find which test or script rewrites that file.
+
+## T8 ✅ Rewrite marketing and business files; move archived plans (2026-09-18)
+
+**What:** Rewrote README.md, AGENTS.md, CHANGELOG.md, and marketing-board/README.md to position CraneSignal as a general lead finder for anyone selling to apartment owners, not a RealPage pitch. Created business/BUSINESS.md explaining the product, market, and business model. Moved four RealPage-focused plans (PLAN-ai-visibility-v3.md, PLAN-ai-visibility-v4.md, PLAN-ai-visibility-v4-run.md, PLAN-realpage-site-library-part2.md) from docs/plans/ to archive/realpage/.
+
+**Changes:**
+- README.md: changed "Who it is for" from property-management software companies (RealPage, etc.) to "anyone selling to apartment owners"; removed "Plano/Richardson, Texas" sample specificity; removed "AI Visibility" from the website service list
+- AGENTS.md: replaced RealPage-specific instructions with general project workflow description; notes that AI Visibility and site library research are archived
+- CHANGELOG.md v1.0: rewrote to describe general lead-finding product, removed RealPage library references, changed pitch to "apartment building software detection and lead scoring"
+- marketing-board/README.md: fixed hardcoded path to use relative ./start.sh
+- business/BUSINESS.md: new file explaining who buys, why it works, business model (free MVP, feedback-driven), and growth phases
+
+**How checked:** 
+- Ran `bash tooling/check-no-realpage-target.sh` → ✓ No RealPage-as-target references found
+- Ran `python3 -m pytest -q chatbot/tests tooling/realpage-library/tests tooling/qa/fixes_tests` → ✓ 249 passed
+
+**Commit:** 519e1c5
+
+**Left open:** T9 and T10 remain (propertystack skill docs/tests, final sweep)
