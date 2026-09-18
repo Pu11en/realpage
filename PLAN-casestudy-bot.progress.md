@@ -321,3 +321,5 @@ Check: `python3 -m pytest -q casestudy/tests` — 212 passed. Also ran
 
 Left open: live-model latency and the optional tone judge remain unmeasured/not run by design;
 C10 is still the next task.
+
+- Reviewer still had concerns about **C9 Evaluate every assignment field.** For each record, report every `required_state`, every: Preserve the reference’s move-timing meaning in casestudy/evaluation.py instead of checking only the month, and add a regression test proving early February fails against the mid-February reference.
