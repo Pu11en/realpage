@@ -23,6 +23,12 @@
 | Focused web suite | Human states and exact exports remain correct | 6 passed | Pass |
 | Full case-study suite | No regressions | 223 passed | Pass |
 | JavaScript syntax and diff check | Clean | Passed | Pass |
+
+### Production Verification
+- Deployed commit `2f59a43` successfully with a Railway reference to the existing protected DeepSeek key and the current `deepseek-flash` model.
+- The first authorized live request safely returned the validated template after 2,042 ms because the model request failed during the strict first-call budget; no unsafe or partial model output reached the user.
+- A second request with the preflight cache warm confirmed the provider request itself was timing out at the two second ceiling.
+- Reworked the bounded writer so the p95 field remains an evaluation target while the provider has a separate configurable 8,000 ms hard safety timeout.
 | Responsive visual check | Human view works at 390, 820, and 1440 pixels | Passed | Pass |
 
 ### Errors

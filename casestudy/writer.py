@@ -11,10 +11,11 @@ Guarantees:
     live call; an unverified model never gets a request.
   * At most one model request per record. The SDK client is built with `max_retries=0`; the writer
     never re-asks the model.
-  * One monotonic end-to-end deadline per record, bounded by the record's `p95_latency_ms`
-    threshold (2,000 ms in both samples) and a project ceiling. A reserve for validation and
-    serialization is subtracted before the call; if the remaining budget is too small the model is
-    skipped, and a draft that arrives after the deadline is discarded.
+  * One monotonic end-to-end safety deadline per record, configured separately from the record's
+    `p95_latency_ms` performance target. A reserve for validation and serialization is subtracted
+    before the call; if the remaining budget is too small the model is skipped, and a draft that
+    arrives after the deadline is discarded. Performance targets stay visible in evaluation rather
+    than silently changing the provider timeout.
   * Stable prompt prefix (system + rules) with the record last, `json_object` response format,
     temperature 0, and a small `max_tokens`; a `finish_reason == "length"` reply is treated as
     truncated and rejected rather than parsed.
@@ -45,9 +46,17 @@ ARCH_CITE = "PLAN architecture: one optional structured model call, no retries, 
 
 DEFAULT_BASE_URL = "https://api.deepseek.com"
 MAX_OUTPUT_TOKENS = 400        # small; SMS <= 3 segments and a short email fit well under this
-DEFAULT_BUDGET_MS = 2000       # project ceiling; the record threshold can only lower it
+DEFAULT_BUDGET_MS = 8000       # hard provider ceiling; p95_latency_ms remains an evaluation target
 RESERVE_MS = 250               # kept back for validation + serialization (conservative_default)
 MIN_MODEL_BUDGET_MS = 300      # below this the call is not worth starting
+
+
+def _positive_int(value: Optional[str], default: int) -> int:
+    try:
+        parsed = int(value or "")
+    except ValueError:
+        return default
+    return parsed if parsed > 0 else default
 
 
 # --------------------------------------------------------------------------- config / deadline
@@ -69,6 +78,7 @@ class WriterConfig:
             api_key=(e.get("DEEPSEEK_API_KEY") or None),
             base_url=(e.get("DEEPSEEK_BASE_URL") or DEFAULT_BASE_URL),
             model=(e.get("DEEPSEEK_MODEL") or None),
+            budget_ms=_positive_int(e.get("CASESTUDY_MODEL_BUDGET_MS"), DEFAULT_BUDGET_MS),
             enabled=(e.get("CASESTUDY_OFFLINE", "").strip().lower() not in ("1", "true", "yes")),
         )
 
@@ -97,13 +107,9 @@ class Deadline:
 
 
 def record_budget_ms(outcome: GateOutcome, config: WriterConfig) -> int:
-    """The record's p95_latency_ms threshold bounds the budget; the project ceiling caps it."""
-    rec = outcome.record
-    raw = rec.thresholds.get("p95_latency_ms") if rec is not None else None
-    budget = config.budget_ms
-    if isinstance(raw, (int, float)) and not isinstance(raw, bool) and raw > 0:
-        budget = min(budget, int(raw))
-    return budget
+    """Return the hard provider deadline; the record's p95 target is evaluated separately."""
+    del outcome
+    return config.budget_ms
 
 
 # --------------------------------------------------------------------------- client / preflight

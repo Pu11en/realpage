@@ -382,10 +382,12 @@ no model name is guessed in code, and the configured model is preflight-verified
 endpoint's model list (cached) before any request. The SDK client is built with `max_retries=0`
 and the writer never re-asks. The prompt is a stable system prefix with the record last, sent with
 `json_object`, temperature 0 and `max_tokens=400`; only approved profile fields (first name,
-amenity interest) and business input reach the model. A monotonic per-record deadline is bounded
-by the record's `p95_latency_ms` threshold and a 2,000 ms project ceiling, with 250 ms reserved for
-validation and serialization: too little budget skips the call, and a reply after the deadline is
-discarded. Model JSON is validated by Pydantic with extra keys forbidden, the CTA must equal the
+amenity interest) and business input reach the model. A monotonic per-record safety deadline is
+configured separately from the record's `p95_latency_ms` performance target, with an 8,000 ms
+default ceiling and 250 ms reserved for validation and serialization: too little budget skips the
+call, and a reply after the deadline is discarded. The performance target remains visible in the
+evaluation instead of silently becoming a provider timeout. Model JSON is validated by Pydantic
+with extra keys forbidden, the CTA must equal the
 deterministic intent CTA, `finish_reason == "length"` is treated as truncation, and the draft is
 then run through the C4 validators as `source="model"`. Every failure path (offline, missing
 config, unverified model, exhausted budget, timeout, empty content, truncation, invalid JSON, bad
@@ -395,8 +397,9 @@ cited `writer.fallback` trail entry and the engine label `template`.
 next action; a parse-and-repair loop on bad JSON; calling the model even for terminal decisions.
 **Why it won:** PLAN C6 and the architecture section: configurable, preflight-verified model, one
 request per record, shared deadline, deterministic validation that a model draft cannot override.
-**Open:** the 400-token output limit has been tested against truncation and empty content only
-with a fake client; the live smoke test needs Drew's authorization and happens in C11/C13.
+**Observed:** the first authorized production smoke test showed that DeepSeek's request can exceed
+the supplied 2,000 ms target even when using its fast model, which is why the target and hard
+timeout are now reported and enforced separately.
 **Source:** `PLAN-casestudy-bot.md` C6 and architecture, decision 33 (validators), decision 34
 (templates), IFScale arXiv 2507.11538.
 

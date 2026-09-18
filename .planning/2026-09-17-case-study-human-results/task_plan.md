@@ -68,3 +68,4 @@ Phase 6
 | `init-session.sh` was not executable | Ran the same installed script explicitly with `sh`. |
 | Browser test read hidden JSON with `inner_text()` | Use `text_content()` for the intentionally collapsed submission details. |
 | Subject row stayed visible when marked hidden | Added a global author-level hidden rule so layout display styles cannot override visibility. |
+| First production AI smoke test fell back after 2,042 ms | The one-time model-list preflight consumed part of the record's 2,000 ms budget; inspect the recorded writer error and retry with the now-warm preflight cache before changing the architecture. |

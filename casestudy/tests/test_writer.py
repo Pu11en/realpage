@@ -77,7 +77,7 @@ def test_successful_sms_draft_is_used():
     call = client.calls[0]
     assert call["model"] == "deepseek-chat" and call["temperature"] == 0
     assert call["response_format"] == {"type": "json_object"}
-    assert call["max_tokens"] == w.MAX_OUTPUT_TOKENS and 0 < call["timeout"] <= 2.0
+    assert call["max_tokens"] == w.MAX_OUTPUT_TOKENS and 0 < call["timeout"] <= 8.0
     assert call["messages"][0]["role"] == "system" and call["messages"][-1]["role"] == "user"
     assert any(r.rule == "writer.preflight" and r.status == "passed" for r in res.results)
 
@@ -141,9 +141,9 @@ def test_budget_exhausted_before_call_skips_model():
     assert client.calls == []
 
 
-def test_record_threshold_bounds_the_budget():
+def test_performance_target_does_not_shorten_the_hard_safety_timeout():
     out, _, _, _ = _pipeline(SAMPLES[0])
-    assert w.record_budget_ms(out, WriterConfig(budget_ms=5000)) == 2000  # sample p95_latency_ms
+    assert w.record_budget_ms(out, WriterConfig(budget_ms=5000)) == 5000
     assert w.record_budget_ms(out, WriterConfig(budget_ms=1500)) == 1500
 
 
@@ -156,7 +156,7 @@ def test_slow_reply_after_deadline_is_discarded():
         return _resp(_good_json(intent, tpl.draft.body))
 
     client = FakeClient(slow)
-    res = write(out, sched, intent, tpl, CFG, client=client, clock=clock)
+    res = write(out, sched, intent, tpl, WriterConfig(api_key="k", model="deepseek-chat", budget_ms=2000), client=client, clock=clock)
     assert res.engine == "template" and res.fallback_reason == "deadline exceeded after the model reply"
     assert res.model_latency_ms == pytest.approx(2500) and res.latency_ms >= 2500
 
@@ -187,6 +187,8 @@ def test_config_from_env_has_no_guessed_model():
     assert cfg.model is None and cfg.api_key is None and not cfg.configured
     cfg = WriterConfig.from_env({"DEEPSEEK_API_KEY": "k", "DEEPSEEK_MODEL": "deepseek-chat", "CASESTUDY_OFFLINE": "1"})
     assert not cfg.enabled and not cfg.configured
+    cfg = WriterConfig.from_env({"CASESTUDY_MODEL_BUDGET_MS": "6500"})
+    assert cfg.budget_ms == 6500
 
 
 def test_unverified_model_gets_no_request():

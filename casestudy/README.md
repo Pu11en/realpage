@@ -21,9 +21,9 @@ routes `/case-study*` to this service through its existing authentication gate.
 
 1. Paste assignment JSONL into the workbench or choose a `.jsonl` file. One JSON
    object goes on each line.
-2. Leave **Offline templates** checked for the safest demo, then select **Run
-   records**. The exact submission object is on the left; explanations and checks
-   stay on the right and are never included in the export.
+2. Leave **Force template fallback** clear so the configured AI writes the message,
+   then select **Run assignments**. The human result appears first; the exact export
+   and checks stay in the expandable section and are never mixed together.
 3. Use **Copy one**, **Copy all**, or **Download**. All three use the server's
    canonical serializer; the downloaded file is named
    `case-study-submission.jsonl` and normally appears in the browser's Downloads
@@ -44,7 +44,7 @@ for the full C13 dress rehearsal.
 
 ## Recovery
 
-- **Model or key trouble:** check **Offline templates** and run the same input
+- **Model or key trouble:** check **Force template fallback** and run the same input
   again. The public shape is unchanged and diagnostics show `template` for a
   message or `none` for a deterministic no-send decision.
 - **Service trouble:** stop the local server with `Ctrl-C`, rerun the start
@@ -67,7 +67,9 @@ same command.
 
 Set `DEEPSEEK_API_KEY`, `DEEPSEEK_MODEL`, and optionally `DEEPSEEK_BASE_URL` on
 the case-study service only. Without the key or model, requests automatically
-use the validated offline templates. Optional limits are
+use the validated offline templates. `CASESTUDY_MODEL_BUDGET_MS` sets the hard
+provider timeout and defaults to 8,000 ms; the record's `p95_latency_ms` remains a
+separate measured performance target. Optional request limits are
 `CASESTUDY_MAX_REQUEST_BYTES` (default 2 MiB) and `CASESTUDY_MAX_BATCH_SIZE`
 (default 100). Set the front-door site's `CASESTUDY_UPSTREAM` to
 `http://propertystack-case-study.railway.internal:8080`, and configure Railway's
