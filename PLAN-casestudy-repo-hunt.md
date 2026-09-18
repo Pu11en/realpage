@@ -45,7 +45,7 @@ Check: `python3 casestudy/research/check_candidates.py`
   time" inside a window, day-of-week rules, DST-safe scheduling, "next two weekdays at least N
   days out", and US holidays (dateutil rrule, pendulum, workalendar, holidays). Decide whether
   holidays matter here.
-- [ ] **H3 Compliance and guardrails beyond what we have.** TCPA/CTIA/CAN-SPAM helpers, opt-out
+- [x] **H3 Compliance and guardrails beyond what we have.** TCPA/CTIA/CAN-SPAM helpers, opt-out
   keyword handling, fair-housing or discrimination classifiers (e.g. Zillow's open-source Fair
   Housing Classifier — find the code), PII detectors that run offline and light.
 - [ ] **H4 LLM copywriting for CRM / real estate.** Prompt libraries, brand-voice rules expressed as

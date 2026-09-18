@@ -23,5 +23,18 @@ re-reading PLAN-casestudy-bot.md that holidays are out of scope for both the sen
 and the tour-day picker (C3): neither rule nor its test cases mention holidays, so no
 holiday-awareness library should be added.
 
-## **H2 Send-time and business-day logic.** Libraries or reference code for "next allowed send (built alongside other steps)
-- 
+## H3 Compliance and guardrails (2026-09-17)
+Searched for Zillow's Fair Housing Classifier, TCPA/CTIA opt-out keyword libraries, and
+lightweight offline PII detectors, avoiding everything already vendored (python-phonenumbers,
+tcpa-quiet-hours, fair-housing phrase lists, CommonRegex). Found the real repo:
+zillow/fair-housing-guardrail (MIT-adjacent custom license, 39 stars, active) — but its actual
+trained classifier and training data are gated behind a partner request to Zillow, not in the
+public repo, so SKIP in favor of our already-vendored phrase lists. Checked DataFog
+(datafog-python) and piisa/pii-extract-plg-regex as alternative PII detectors — both SKIP
+(DataFog validates our regex-first approach but is heavier than needed; piisa is stale since
+2024). Confirmed Twilio's canonical opt-out keyword list (STOP, STOPALL, UNSUBSCRIBE, CANCEL,
+END, QUIT, REVOKE, OPTOUT) as VENDOR DATA — a 10-line constant, no library needed. Surprising:
+no area produced a "USE" verdict — compliance/guardrails for this project's size is best served
+by small hand-written lists, not by installing frameworks. 4 candidates added, all pass the
+format checker.
+

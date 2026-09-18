@@ -16,6 +16,38 @@ guardrails-ai, NeMo Guardrails, promptfoo, Python rules engines.
 
 ## Candidates
 
+### zillow/fair-housing-guardrail
+**URL:** https://github.com/zillow/fair-housing-guardrail
+**Area:** H3 Compliance and guardrails
+**License / stars / last commit:** custom OSS license (NOASSERTION, review terms before use) / 39 stars / active (pushed 2026-04-08)
+**What we'd take:** Not the model itself (it's a fine-tuned BERT classifier and the training data/weights are gated behind a partner request to Zillow, not in the public repo) — the README's framework for what counts as illegal "steering" language is useful to read once, but our existing phrase-list approach (`lint-fair-housing.py` + `fair-housing-patterns.ts`, already vendored) covers the same ground far more cheaply.
+**Verdict:** SKIP
+**In plain words:** Zillow built a real fair-housing AI checker, but the actual trained model is locked behind a partner request, so we can't just copy it — our simpler word-list approach already does the job for this project's size.
+
+### DataFog (datafog-python)
+**URL:** https://github.com/DataFog/datafog-python
+**Area:** H3 Compliance and guardrails
+**License / stars / last commit:** MIT / 72 stars / active (pushed today)
+**What we'd take:** Confirms our regex-first approach is the current best practice — DataFog's own pitch is "regex cascade first, NER only if you opt in," same shape as our planned `pii.py`. Not worth installing (pulls in more than we need for a handful of fields), but their regex pattern list for phone/email/SSN/address is a decent second reference to CommonRegex if we want to double-check a pattern.
+**Verdict:** SKIP
+**In plain words:** This tool detects personal info offline without a big AI model, same idea as our plan — it validates our approach but is bigger than we need, so we write our own six regexes instead of installing it.
+
+### piisa/pii-extract-plg-regex
+**URL:** https://github.com/piisa/pii-extract-plg-regex
+**Area:** H3 Compliance and guardrails
+**License / stars / last commit:** Apache-2.0 / 14 stars / last push 2024-01-24 (stale, 2+ years)
+**What we'd take:** Nothing new — it's a plugin for a larger PII-detection framework (piisa) and its regex patterns overlap with CommonRegex, which we already vendored.
+**Verdict:** SKIP
+**In plain words:** Same idea as a tool we already picked, but this one hasn't been updated in over two years and needs a bigger framework around it, so it's not worth adding.
+
+### Twilio opt-out keyword set (reference, not a repo)
+**URL:** https://www.twilio.com/docs/proxy/opt-out-keywords
+**Area:** H3 Compliance and guardrails
+**License / stars / last commit:** N/A (vendor documentation, not code) / N/A / current (2026)
+**What we'd take:** The canonical opt-out keyword list Twilio treats as opt-out by default: STOP, STOPALL, UNSUBSCRIBE, CANCEL, END, QUIT, REVOKE, OPTOUT — matches and confirms the list already in `RULEBOOK-research.md`. No library needed; this is a 10-line constant, not a dependency.
+**Verdict:** VENDOR DATA
+**In plain words:** This is the official list of words carriers treat as "stop texting me" — we just type the eight words into our own code instead of installing anything.
+
 ### Novu
 **URL:** https://github.com/novuhq/novu
 **Area:** H1 Messaging orchestration platforms
