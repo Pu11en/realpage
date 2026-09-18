@@ -177,6 +177,51 @@
     return rows.join("") || `<div class="check-row" data-status="not_measured"><span class="check-icon not_measured">?</span><span class="check-name">No assertions or thresholds supplied</span><span class="check-detail">not measured</span></div>`;
   }
 
+  function renderInput(line) {
+    const grid = byId("input-grid");
+    const note = byId("input-raw-note");
+    let raw = null;
+    try { raw = JSON.parse(line); } catch (_) { raw = null; }
+    if (!raw || typeof raw !== "object" || Array.isArray(raw)) {
+      grid.innerHTML = "";
+      note.hidden = false;
+      note.textContent = line.trim() ? `This line is not a valid record, so it could not be read: ${line.slice(0, 200)}` : "This line is empty.";
+      return;
+    }
+    note.hidden = true;
+    const input = raw.input && typeof raw.input === "object" ? raw.input : {};
+    const profile = input.profile && typeof input.profile === "object" ? input.profile : {};
+    const consent = raw.consent && typeof raw.consent === "object" ? raw.consent : {};
+    const yesNo = (v) => v === true ? "Yes" : v === false ? "No" : "Not given";
+    const names = { sms: "Text", email: "Email", voice: "Phone" };
+    const list = (v) => Array.isArray(v) && v.length ? v.map((x) => names[x] || words(x)).join(" → ") : "None given";
+    const date = (v) => { const d = new Date(v); return v && !isNaN(d) ? d.toLocaleString("en-US", { dateStyle: "medium", timeStyle: "short", timeZone: "UTC" }) + " UTC" : (v || "Not given"); };
+    const known = new Set(["first_name", "amenity_interest", "city_interest", "amenities", "preferred_name"]);
+    const other = Object.keys(profile).filter((k) => !known.has(k));
+    const rows = [
+      ["Customer", profile.first_name ? String(profile.first_name) : "No first name"],
+      ["Type", [raw.persona, raw.lifecycle_stage].filter(Boolean).map(words).join(", ") || "Not given"],
+      ["Property", input.property_name || "Not given"],
+      ["Allowed to text?", yesNo(consent.sms_opt_in)],
+      ["Allowed to email?", yesNo(consent.email_opt_in)],
+      ["Allowed to call?", yesNo(consent.voice_opt_in)],
+      ["Preferred order", list(raw.channel_preferences)],
+      ["Target move date", input.move_date_target || "Not given"],
+      ["Last contact", date(input.last_interaction)],
+      ["Customer's time zone", input.timezone || "Not given"],
+      ["Language", input.language || "Not given"],
+    ];
+    if (Array.isArray(profile.amenity_interest)) rows.push(["Interested in", profile.amenity_interest.map(words).join(", ")]);
+    if (profile.city_interest) rows.push(["Looking in", String(profile.city_interest)]);
+    const reply = input.inbound_reply || raw.inbound_reply;
+    if (reply) rows.push(["Customer replied", `"${reply}"`, true]);
+    const prior = input.prior_options || raw.prior_options;
+    if (Array.isArray(prior)) rows.push(["Options they were offered", prior.map((o, i) => `${i + 1} = ${o}`).join(", ")]);
+    if (other.length) rows.push(["Other profile details", other.map((k) => `${words(k)}: ${typeof profile[k] === "object" ? JSON.stringify(profile[k]) : profile[k]}`).join("; ") + " (never shown to the AI)", true]);
+    if (raw.expected) rows.push(["Answer key included", "Yes, used only to grade the result afterwards"]);
+    grid.innerHTML = rows.map(([label, value, flag]) => `<div${flag ? ' class="flag"' : ""}><dt>${escapeHtml(label)}</dt><dd>${escapeHtml(value)}</dd></div>`).join("");
+  }
+
   function renderAiProcess(answer, diagnostics) {
     const trail = diagnostics.why || [];
     const find = (rule) => trail.find((item) => item.rule === rule);
@@ -245,6 +290,7 @@
     const diagnostics = record.diagnostics;
     const answer = JSON.parse(record.submission_line);
     renderHumanAnswer(answer, diagnostics);
+    renderInput(record.input_line || "");
     renderAiProcess(answer, diagnostics);
     renderAnswerKey(answer, record.answer_key);
     byId("submission-output").textContent = JSON.stringify(answer, null, 2);

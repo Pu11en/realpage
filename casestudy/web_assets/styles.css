@@ -265,3 +265,11 @@ footer a { color: var(--blue); }
 @media (max-width: 760px) { .agent-diagram iframe { height: 560px; } }
 .agent-diagram figcaption { margin-top: 6px; font-size: 0.875rem; }
 .phase-list { margin: 0 0 16px; padding-left: 22px; display: grid; gap: 8px; }
+.input-summary { margin-bottom: 16px; padding: 20px; border: 1px solid var(--rule); border-radius: 8px; background: var(--paper); }
+.input-summary h3 { margin: 4px 0 12px; }
+.input-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 150px), 1fr)); gap: 10px; margin: 0; }
+.input-grid div { padding: 10px 12px; border: 1px solid var(--rule); border-radius: 6px; background: var(--paper-soft); }
+.input-grid dt { font-size: 0.75rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.04em; }
+.input-grid dd { margin: 4px 0 0; font-weight: 600; overflow-wrap: anywhere; }
+.input-grid .flag dd { color: var(--warn); }
+.input-raw-note { margin: 10px 0 0; color: var(--warn); }

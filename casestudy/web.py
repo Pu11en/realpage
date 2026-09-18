@@ -60,6 +60,7 @@ def run_payload(text: str, *, offline: bool) -> dict[str, Any]:
             "submission_line": result.submission_line(),
             "diagnostics": result.diagnostics(),
             "answer_key": _answer_key(lines[index]) if index < len(lines) else None,
+            "input_line": lines[index] if index < len(lines) else "",
         })
     return {
         "record_count": len(records),
