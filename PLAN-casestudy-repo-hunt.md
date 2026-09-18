@@ -41,7 +41,7 @@ Check: `python3 casestudy/research/check_candidates.py`
   whatever else you find. For each, find the actual files implementing preference resolution,
   channel fallback, quiet hours / do-not-disturb, throttling and digests, and note the vocabulary
   they use (subscriber, workflow, step, preference, digest, delay, throttle).
-- [ ] **H2 Send-time and business-day logic.** Libraries or reference code for "next allowed send
+- [x] **H2 Send-time and business-day logic.** Libraries or reference code for "next allowed send
   time" inside a window, day-of-week rules, DST-safe scheduling, "next two weekdays at least N
   days out", and US holidays (dateutil rrule, pendulum, workalendar, holidays). Decide whether
   holidays matter here.

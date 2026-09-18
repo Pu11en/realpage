@@ -22,3 +22,6 @@ still actively maintained) — noted the rename so nobody imports the stale name
 re-reading PLAN-casestudy-bot.md that holidays are out of scope for both the send-time window (C2)
 and the tour-day picker (C3): neither rule nor its test cases mention holidays, so no
 holiday-awareness library should be added.
+
+## **H2 Send-time and business-day logic.** Libraries or reference code for "next allowed send (built alongside other steps)
+- 
