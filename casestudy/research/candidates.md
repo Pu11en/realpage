@@ -71,3 +71,51 @@ guardrails-ai, NeMo Guardrails, promptfoo, Python rules engines.
 **What we'd take:** This is the most directly on-target find: explicit "timezone-aware quiet hours that defer non-urgent sends," "user preferences, topic opt-outs, and consent gates," "ordered multi-channel fallback (push, then email, then sms)" with exponential backoff, "priority scheduling with sendAt," and "stateful multi-step workflows with wait/waitForEvent." Check `notifkit.dev/docs/guides/preferences.html` and `.../routing.html` for the documented logic, then the source repo for the matching implementation files.
 **Verdict:** USE
 **In plain words:** notifkit is a small open-source project built almost exactly for our problem — quiet hours, channel fallback order, and opt-outs — so it's worth pulling actual code or config patterns from it, though its small size (114 stars) means it should be double-checked for maturity.
+
+### zoneinfo + dateutil (stdlib/dateutil, no new library needed)
+**URL:** https://github.com/dateutil/dateutil
+**Area:** H2 Send-time and business-day logic
+**License / stars / last commit:** Apache-2.0/BSD dual / ~2.6k / active (pushed 2026-05-19)
+**What we'd take:** Nothing needs vendoring — Python's built-in `zoneinfo` (already required by the plan) plus plain `datetime.timedelta` arithmetic is enough to compute "next 09:00 local strictly after reference, rolling forward, window Mon–Sat 09:00–20:00, Sunday not before 12:00." `dateutil.rrule` is only useful if the rule ever needs a real recurrence spec (e.g. "every weekday"); for a single next-send-time calculation it's unneeded complexity. Its `tz` module is a reasonable fallback reference for DST edge-case tests if `zoneinfo` behavior needs double-checking.
+**Verdict:** SKIP
+**In plain words:** The send-time rule in the plan is simple enough (roll forward to 9am, respect a Mon–Sat/Sunday window) that Python's built-in date tools already do the job — pulling in a recurrence-rule library would be over-engineering a 20-line function.
+
+### pendulum
+**URL:** https://github.com/python-pendulum/pendulum
+**Area:** H2 Send-time and business-day logic
+**License / stars / last commit:** MIT / ~6.7k / active (pushed 2026-08-20)
+**What we'd take:** Nothing directly — it's a nicer datetime API (fluent `.add()`, `.at()`, built-in DST-safe arithmetic) but does the same job `zoneinfo` already does, and the plan explicitly requires numeric offsets rendered via `zoneinfo`/`tzdata`, which pendulum would just wrap. Worth knowing about only as a design reference for how a mature library documents its DST-safety guarantees, in case the sample tests (`America/Phoenix` no-DST, `America/Los_Angeles` December `-08:00`) need a second implementation to cross-check against.
+**Verdict:** SKIP
+**In plain words:** Pendulum is a well-liked alternative to Python's date tools, but since the plan already commits to `zoneinfo`, adding pendulum too would just be a second way to do the same thing.
+
+### workalendar
+**URL:** https://github.com/workalendar/workalendar
+**Area:** H2 Send-time and business-day logic
+**License / stars / last commit:** MIT / ~950 / last commit 2024-04-12 (>18 months old as of 2026-09, borderline-stale)
+**What we'd take:** If holidays ever matter, its `Calendar.is_working_day()` / `add_working_days()` per-country logic (including US federal holidays and some state-specific ones) is the standard reference implementation to copy the *pattern* from, not to import as a dependency for one rule.
+**Verdict:** SKIP
+**In plain words:** workalendar is the well-known library for "is this a business day," but it hasn't been updated in over two years and the plan's send-time rule doesn't mention holidays at all, so it's not worth adding.
+
+### holidays (vacanza/holidays)
+**URL:** https://github.com/vacanza/holidays
+**Area:** H2 Send-time and business-day logic
+**License / stars / last commit:** MIT / ~1.9k / active (pushed 2026-09-16, this is the actively maintained successor to the old `dr-prodigy/python-holidays` project)
+**What we'd take:** `holidays.US()` gives an instantly checkable US federal holiday calendar (`date in holidays.US()`) if the bot ever needs to skip sends on holidays. Not needed for the plan as written — the send-time spec only names Mon–Sat/Sunday rules, no holiday exception — but this is the correct, current library to reach for if that requirement is added later (avoid the archived `dr-prodigy/python-holidays` name, which redirects here).
+**Verdict:** SKIP
+**In plain words:** This is the right library if we ever need to skip US holidays, but the plan doesn't ask for that, so we shouldn't add the dependency now — just remember the name if the rule changes.
+
+### pandas CustomBusinessDay / exchange_calendars
+**URL:** https://github.com/gerrymanoim/exchange_calendars
+**Area:** H2 Send-time and business-day logic
+**License / stars / last commit:** Apache-2.0 / ~667 / active (pushed 2026-09-15)
+**What we'd take:** Nothing — this is a trading-calendar library (NYSE, NASDAQ session hours) built for financial market hours, not general business-day math. It's included here to rule it out explicitly: pandas' `tseries.offsets.CustomBusinessDay` and this package are the "professional" tools people reach for, but they're overkill and mismatched (market sessions, not messaging windows) for a Mon–Sat 09:00–20:00 send window.
+**Verdict:** SKIP
+**In plain words:** This is a stock-market trading-hours library, not a messaging one — it looked promising by name but doesn't fit; mentioned here so nobody wastes time checking it again.
+
+### Decision: holidays do not matter for this task
+**URL:** https://github.com/vacanza/holidays
+**Area:** H2 Send-time and business-day logic
+**License / stars / last commit:** (see holidays entry above)
+**What we'd take:** N/A — this is a decision note, not a code pull. `PLAN-casestudy-bot.md` task C2 defines the send-time window purely as Mon–Sat 09:00–20:00 local, Sunday not before 12:00, with explicit test cases for DST (`America/Phoenix`, `America/Los_Angeles`) and weekends. It never mentions holidays, and C3's tour-scheduling rule ("first two weekdays at least two days out") also only checks weekday-ness, not holiday-ness. Adding a holiday check would be scope creep not asked for by the sample tests.
+**Verdict:** SKIP
+**In plain words:** We looked specifically at whether US holidays should affect send-time or tour-day logic, and the answer is no — the plan's own test cases never test a holiday, so building or importing holiday-awareness now would be solving a problem nobody asked for; `vacanza/holidays` is noted above in case that changes later.
