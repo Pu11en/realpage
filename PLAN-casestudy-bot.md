@@ -138,7 +138,7 @@ Check: `python3 -m pytest -q casestudy/tests`
   by context. Fair-housing HARD/WARN entries retain citation and rewrite. Tests prove the email sample
   passes, unsafe profile data is ignored, and a model draft cannot override a hard failure.
 
-- [ ] **C5 Offline templates.** Start with templates that satisfy both reference checklists, then
+- [x] **C5 Offline templates.** Start with templates that satisfy both reference checklists, then
   add the smallest set needed for tested intents/channels. The email template must use amenity
   interests and a natural move-month phrase; its Oak Ridge URL comes from the supplied training
   example rather than a fabricated property slug. SMS keeps literal STOP. Every template passes C4.

@@ -341,3 +341,29 @@ a generic street-address PII regex (self-contradictory), banning all `$` amounts
 fair-housing judge. **Why it won:** PLAN C4 and REVIEW-astra: the email sample must pass as
 supplied, and a rule the model can talk its way past is not a compliance rule.
 **Source:** `PLAN-casestudy-bot.md` C4, `REVIEW-astra.md`, `RULEBOOK-research.md` §2 (citations).
+
+## 34. Offline templates: reference-shaped first, compact GSM-7 fallback, learned facts never generalized
+
+**Decided:** `casestudy/templates.py` (`templates_v1`) renders a small ordered set of templates
+(SMS and email × welcome / open follow-up / option reply, email with or without a link) and runs
+every candidate through the C4 validators via `select_draft()`, so no template can be emitted
+unvalidated. The SMS welcome template reproduces record 1's body byte-for-byte (optional
+regression, not a requirement); the email template uses the amenity interests and a natural
+move-month phrase ("mid-February" for Feb 15; early <= 10, mid 11-20, late > 20 is a hypothesis)
+and takes its Oak Ridge URL from the C3 learned-link table, never a fabricated slug. Property
+facts learned from the supplied example (short name "Oak Ridge", the "24/7 fitness center"
+detail, the tour link) are keyed to the exact property name with provenance and are not applied
+to any other property; another property gets a generic display name (suffix stripping is a
+hypothesis) and generic amenity names. SMS keeps the literal `Reply STOP to opt out.`. Because
+the observed em dash forces UCS-2 encoding, long names can push the reference-shaped SMS past the
+3-segment cap; a compact ASCII variant without the em dash is tried second and passes. Missing
+first name, property name, move date, or amenities degrade to neutral wording ("Hi there",
+"our community", "floor plans and amenities"); templates read only `first_name` and
+`amenity_interest` from the profile, so unsafe fields cannot leak by construction. Voice/call
+tasks and terminal gate decisions produce no draft, with a cited `skipped` trail entry.
+**Alternatives:** one template per record with hard-coded Oak Ridge wording; model-only drafting;
+a single long SMS template that fails the segment cap for long names.
+**Why it won:** PLAN C5: pass both reference checklists, add the smallest tested set, preserve
+provenance, degrade instead of crash.
+**Source:** `PLAN-casestudy-bot.md` C5, both records in `casestudy/data/sample.jsonl`,
+decision 33 (validators).

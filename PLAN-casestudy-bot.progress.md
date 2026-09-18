@@ -140,3 +140,35 @@ Left open: the sample SMS is 3 UCS-2 segments because of its em dash, so the 3-s
 its limit; C5 templates should keep the em dash (observed) but avoid growing the body. Subject
 "accuracy" is a shallow word-overlap heuristic. The fair-housing lexicon is a project list, not a
 legal authority; C12 must say so.
+
+## C5 Offline templates — done
+
+What I did:
+- Added `casestudy/templates.py` (`templates_v1`): `render_templates(outcome, schedule, intent)`
+  fills SMS/email templates for welcome, open follow-up, and option-reply flows (email with a link
+  or a reply-to-arrange fallback), validates every candidate with C4's `select_draft()`, and returns
+  the first passing draft plus the candidates, reports, personalization fields used, and a cited
+  trail. SMS welcome reproduces record 1 byte-for-byte; the email template uses amenity interests
+  and a "mid-February"-style move-month phrase and the Oak Ridge link learned in C3. Learned Oak
+  Ridge facts (short name, "24/7 fitness center") carry provenance and are keyed to that exact
+  property only. A compact GSM-7 SMS variant (no em dash) is the fallback when the 3-segment cap
+  would be exceeded. Missing fields degrade to neutral wording; only `first_name` and
+  `amenity_interest` are read from the profile.
+- Added `casestudy/tests/test_templates.py` (14 tests): SMS reference identical + semantic
+  checklist, email reference meaning checklist (name, move month, amenities, learned fact, URL,
+  opt-out, subject), every candidate validated with cited trail, Oak Ridge facts never generalize,
+  unseen property without link → reply fallback, missing optional fields → neutral, missing
+  property/first name SMS, unsafe profile fields never used, long name → compact GSM-7 fallback,
+  open follow-up SMS and welcome email, option reply confirms without booking, STOP and voice
+  produce no draft, helper phrases.
+- Decision log entry 34.
+
+Commit: see git log ("Case study C5").
+
+Check: `python3 -m pytest -q casestudy/tests` — 110 passed.
+
+Left open: the email body's apostrophes are ASCII while the reference uses curly ones (meaning
+identical, bytes differ; fine per plan). Non-English `language` is flagged, not translated (C8
+Spanish fixture will need a decision). The email option-reply template exists but is only exercised
+via SMS in tests. Subject wording for the email reference differs from the sample ("pool and
+fitness center" vs "pool & fitness rooms") by design.
