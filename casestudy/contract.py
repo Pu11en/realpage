@@ -30,7 +30,19 @@ class ScheduleTourLinkCTA(BaseModel):
     link: str
 
 
-CTA = Union[ScheduleTourOptionsCTA, ScheduleTourLinkCTA]
+class ScheduleTourReplyCTA(BaseModel):
+    """Fallback CTA (C3): no safe link and no option days; the recipient replies to arrange a tour.
+
+    Emitted only with a visible unresolved-link / uncertainty diagnostic. Not observed in the
+    samples; kept as the smallest shape that still names the intent.
+    """
+
+    model_config = ConfigDict(extra="forbid")
+
+    type: Literal["schedule_tour"]
+
+
+CTA = Union[ScheduleTourOptionsCTA, ScheduleTourLinkCTA, ScheduleTourReplyCTA]
 
 
 class NextMessage(BaseModel):

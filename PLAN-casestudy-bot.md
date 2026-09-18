@@ -115,7 +115,7 @@ Check: `python3 -m pytest -q casestudy/tests`
   Tests: both exact sample timestamps, same-day pre-slot, post-slot, Sunday, Phoenix, Los Angeles,
   DST boundary, malformed timezone, and `day10` (do not parse only one digit).
 
-- [ ] **C3 Intent, horizon, CTA, and next action.** Explicit business fields outrank identifier hints.
+- [x] **C3 Intent, horizon, CTA, and next action.** Explicit business fields outrank identifier hints.
   Use recognized `welcome`, `short_horizon`, `long_horizon`, and `dayN` tokens only as fallbacks with
   hypothesis labels; opaque IDs must still work. Without a horizon token, short <=45 days and long
   >45 days is a provisional two-tier fallback, not a learned boundary; do not invent a

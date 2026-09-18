@@ -294,3 +294,25 @@ the token as proof of elapsed cadence time. **Why it won:** it is the simplest r
 both observations, and PLAN C2 requires it disclosed as a hypothesis. The window is a project
 default, not a verified national legal rule; the token is an identifier hint, not a business field.
 **Source:** `PLAN-casestudy-bot.md` C2, both records in `casestudy/data/sample.jsonl`.
+
+## 32. Intent, horizon, CTA, and next action: explicit fields > identifier tokens > computed fallback
+
+**Decided:** `casestudy/intent.py` (`intent_v1`). Flow: an explicit `input.intent`/`flow` wins;
+otherwise lifecycle `new` is the welcome flow and `open` is the follow-up flow (both observed); a
+`welcome` token in `task_id` is only a hypothesis fallback. Horizon: explicit `input.horizon`,
+else a `short_horizon`/`long_horizon` token (hypothesis), else a provisional two-tier fallback
+(<=45 days to move short, >45 long, configurable, no medium tier), else short with an uncertainty
+flag. Record 1's id has no horizon token, so its short horizon comes from the 33-day fallback.
+`primary_cta: book_tour` maps to `schedule_tour`. SMS CTA = the 2nd and 3rd non-Sunday days after
+the send date (observed Tue -> Thu, Fri). Email CTA = an explicit input link, else the Oak Ridge
+link learned from record 2 with provenance recorded; an unseen property gets no invented URL but a
+bare `{type: schedule_tour}` reply fallback plus a visible `unresolved_link` diagnostic. The public
+contract gained that bare CTA variant for this case only. Next action: welcome starts
+`prospect_welcome_<horizon>_horizon` (observed for short; the long name is a hypothesis); the open
+flow returns `follow_up_in_days: 3` as a provisional interval, never the `dayN` suffix (day10 still
+yields 3); an option reply proposes a 3-day follow-up, not a booking; STOP yields `mark_opted_out`.
+**Alternatives:** trusting the task_id over fields; a 120-day or medium tier; deriving the follow-up
+interval from dayN; inventing `https://<slug>.example/tour` for unknown properties.
+**Why it won:** PLAN C3 and REVIEW-astra: identifier tokens are hints, the two records prove no
+boundary, and a fabricated URL is worse than a visible gap.
+**Source:** `PLAN-casestudy-bot.md` C3, both records in `casestudy/data/sample.jsonl`.

@@ -81,3 +81,33 @@ Check: `python3 -m pytest -q casestudy/tests` — 62 passed.
 Left open: `Schedule.send_at_iso` is the string that C7 should place in `next_message.send_at`.
 The voice slot (10:00) and the quiet-hours window are project defaults. Sunday clamp shifts SMS
 and email to the same 12:00 slot, which the samples neither confirm nor deny.
+
+## C3 Intent, horizon, CTA, and next action — done
+
+What I did:
+- Added `casestudy/intent.py` (`intent_v1`): `infer_intent(outcome, schedule)` returns an `Intent`
+  with flow, horizon (+source), CTA dict, next-action dict, uncertainty/unresolved-link flags, and
+  a cited, confidence-labelled trail. Precedence is explicit input fields → lifecycle (observed) →
+  task_id tokens (hypothesis) → computed fallback. Horizon fallback is <=45 days short / >45 long,
+  no medium tier. SMS CTA = 2nd/3rd non-Sunday days after the send date; email CTA = explicit link
+  or the Oak Ridge link learned from the sample (provenance kept); unseen property → bare
+  `{type: schedule_tour}` plus an `unresolved_link` diagnostic. Welcome → `start_cadence
+  prospect_welcome_<horizon>_horizon`; open flow / option reply → `follow_up_in_days 3` (never the
+  dayN suffix); STOP → `mark_opted_out`.
+- `casestudy/contract.py`: added `ScheduleTourReplyCTA` (bare `{type}`) for the unresolved-link
+  fallback only; everything else unchanged.
+- Added `casestudy/tests/test_intent.py` (15 tests): both expected CTA/actions exactly (and they
+  validate against the public contract), opaque IDs, boundary 45/46 days, explicit fields beating
+  a conflicting task_id, day10 still → 3, explicit link over learned, unseen property never gets a
+  URL, learned-link provenance, Sunday skipping in option days, unknown primary_cta flagged, STOP,
+  option reply, suppressed record.
+- Decision log entry 32.
+
+Commit: see git log ("Case study C3").
+
+Check: `python3 -m pytest -q casestudy/tests` — 77 passed.
+
+Left open: record 1's short horizon comes from the move-date fallback (its id carries no horizon
+token), so the 45-day boundary is load-bearing for that golden; keep it configurable. The long
+welcome cadence name and the Sunday-skip in tour options are project hypotheses. Voice call tasks
+get the bare CTA; C7 must decide how a call task appears in the public shape.
