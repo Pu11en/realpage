@@ -1,0 +1,50 @@
+{
+  "schema_version": 2,
+  "diagram_type": "workflow",
+  "meta": {
+    "title": "Case Study Agent: How One Record Becomes One Answer",
+    "quality_profile": "showcase",
+    "views": [
+      { "id": "happy-path", "label": "Record to answer", "focus": ["record", "gates", "schedule", "intent", "template", "writer", "validator", "answer"], "note": "Code decides everything first; the AI writes only the wording; code checks it." },
+      { "id": "safety", "label": "Safety exits", "focus": ["gates", "hold", "validator", "fallback", "answer"], "note": "No permission means no AI call. A rejected AI draft falls back to the checked template." }
+    ]
+  },
+  "lanes": [
+    { "id": "io", "label": "Input and output" },
+    { "id": "rules", "label": "Rules in Python code" },
+    { "id": "ai", "label": "AI writer and safety check" },
+    { "id": "exits", "label": "Safe exits", "variant": "exception" }
+  ],
+  "phases": [
+    { "id": "decide", "label": "Code decides", "fromCol": 0, "toCol": 3 },
+    { "id": "write", "label": "AI writes, code checks", "fromCol": 4, "toCol": 5, "variant": "emphasis" }
+  ],
+  "mainPath": ["record", "gates", "schedule", "intent", "template", "writer", "validator", "answer"],
+  "nodes": [
+    { "id": "record", "lane": "io", "col": 0, "type": "external", "label": "Customer Record", "sublabel": "answer key removed", "width": 140 },
+    { "id": "answer", "lane": "io", "col": 5, "type": "frontend", "label": "Final Answer", "sublabel": "next message + next step", "width": 140 },
+    { "id": "gates", "lane": "rules", "col": 1, "type": "security", "label": "Permission Gates", "sublabel": "consent + STOP", "tag": "no AI", "width": 140 },
+    { "id": "schedule", "lane": "rules", "col": 2, "type": "backend", "label": "Channel + Time", "sublabel": "text 9am / email 10am", "width": 140 },
+    { "id": "intent", "lane": "rules", "col": 3, "type": "backend", "label": "Buttons + Next Step", "sublabel": "Thu/Fri or tour link", "width": 140 },
+    { "id": "template", "lane": "rules", "col": 4, "type": "backend", "label": "Safe Draft", "sublabel": "pre-checked template", "width": 140 },
+    { "id": "writer", "lane": "ai", "col": 4, "type": "cloud", "label": "DeepSeek Writer", "sublabel": "1 call, temp 0, JSON", "tag": "wording only", "width": 140 },
+    { "id": "validator", "lane": "ai", "col": 5, "type": "security", "label": "Safety Check", "sublabel": "opt-out, links, fair housing", "width": 140 },
+    { "id": "hold", "lane": "exits", "col": 2, "type": "security", "label": "Do Not Send", "sublabel": "or human task", "width": 140 },
+    { "id": "fallback", "lane": "exits", "col": 5, "type": "messagebus", "label": "Use Safe Draft", "sublabel": "AI failed or slow", "width": 140 }
+  ],
+  "edges": [
+    { "id": "e-record-gates", "from": "record", "to": "gates", "variant": "default" },
+    { "id": "e-gates-schedule", "from": "gates", "to": "schedule", "label": "allowed", "variant": "emphasis" },
+    { "id": "e-gates-hold", "from": "gates", "to": "hold", "label": "no consent", "variant": "security", "role": "error" },
+    { "id": "e-schedule-intent", "from": "schedule", "to": "intent", "variant": "default" },
+    { "id": "e-intent-template", "from": "intent", "to": "template", "variant": "default" },
+    { "id": "e-template-writer", "from": "template", "to": "writer", "label": "draft to improve", "variant": "emphasis" },
+    { "id": "e-writer-validator", "from": "writer", "to": "validator", "variant": "default" },
+    { "id": "e-validator-answer", "from": "validator", "to": "answer", "label": "passes", "variant": "emphasis" },
+    { "id": "e-validator-fallback", "from": "validator", "to": "fallback", "label": "rejected", "variant": "security", "role": "error" }
+  ],
+  "cards": [
+    { "dot": "cyan", "title": "Code decides", "items": ["Permission, channel, time, buttons and next step are Python rules", "The AI cannot change any of them"] },
+    { "dot": "rose", "title": "AI writes, code checks", "items": ["One DeepSeek call, no retries, JSON only", "Any failure uses the pre-checked draft"] }
+  ]
+}
