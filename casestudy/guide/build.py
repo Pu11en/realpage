@@ -2,6 +2,15 @@ import html, json
 from pathlib import Path
 D = Path(__file__).parent
 QA = [
+("Opening and the website", [
+ ("Why are you showing a website instead of your IDE?", "Say this at the start: 'I built a small review page on top of the agent so you can see each decision, the AI's exact prompt and reply, and the safety checks side by side. The page calls the same Python code; nothing is hidden. The code is in my GitHub repo, and I'm happy to walk through it in the editor anytime.'", ["They won't be upset: you're offering both. A working, deployed demo shows more than an IDE does.", "Keep the GitHub repo open in a second tab. If they ask, switch over and open gates.py (rules), writer.py (AI step) and validators.py (safety check)."]),
+ ("Can you show me the code?", "'Sure.' Open the repo and walk the same 8 steps: gates.py (permission and replies), schedule.py (channel and time), intent.py (buttons and next step), templates.py (safe draft), writer.py (DeepSeek), validators.py (safety check), pipeline.py (ties it together), web.py (this page).", []),
+]),
+("The 3 hold-out records that may not match", [
+ ("A renewal record says 'day 30' and we send 30 days later. Why?", "In the samples, 'day3' meant 3 days after the last contact, so the agent applies the same rule to 'day30'. It's a labeled assumption; if 'day30' means '30 days before the lease ends', that's one setting to change.", ["Don't argue. Say: 'Good catch, that's the one timing rule I had to guess from two examples.'"]),
+ ("A resident replied 'I'm not renewing'. Why hand it to a person?", "Their reply needs a real response, like move-out steps and dates, which the record doesn't contain. Rather than guess at their lease terms, the agent routes it to the leasing team.", ["With move-out data I'd add a template for it behind the same checks."]),
+ ("Someone asked 'Is this a good neighborhood for families like mine?' Why no reply?", "That's a fair-housing-sensitive question. Any answer about who a neighborhood suits risks steering by family status, so a trained person answers it. That's the safe, defensible choice.", ["Fair Housing Act, 42 U.S.C. 3604(c)."]),
+]),
 ("The big picture", [
  ("What did you build, in one sentence?", "An agent that reads a customer record and proposes the next message and next step. Code decides, the AI only writes, and code checks the writing.", ["It never actually sends anything. It returns exactly two things: next_message and next_action."]),
  ("Walk me through how it works.", "Eight steps: record in, permission gates, channel and time, buttons and next step, safe draft, DeepSeek writes the wording, safety check, final answer out.", ["Point at the diagram on the page, left to right.", "Steps 2 to 5 and 7 are Python. Only step 6 is AI."]),
@@ -37,7 +46,7 @@ QA = [
  ("Spanish speaker?", "Flagged, not translated yet, and STOP words work in Spanish. Next step: reviewed Spanish templates.", []),
 ]),
 ("Proof and testing", [
- ("You only had two examples. How do you know it works?", "Two examples prove the rules fire, not an accuracy rate. So I wrote 239 automated tests and ran 51 tricky records through the live AI. That found 8 real bugs, each fixed with a test so it can't come back.", ["Bugs: ignored 'not interested'; missed ALTO and 'stopp'; answered over a customer's question; printed an injected name; AI ignored the chosen option; missed 'lose my number'; texted a closed_lost lead; sent tour pitches for rent and maintenance tasks."]),
+ ("You only had two examples. How do you know it works?", "Two examples prove the rules fire, not an accuracy rate. So I wrote 247 automated tests and ran over 100 tricky records through the live AI, checking every answer against hard rules. I also had a second AI review the code and predict the hidden answer key. That found about 10 real bugs, each fixed with a test so it can't come back.", ["Bugs: ignored 'not interested'; missed ALTO and 'stopp'; answered over a customer's question; printed an injected name; AI ignored the chosen option; missed 'lose my number'; texted a closed_lost lead; sent tour pitches for rent and maintenance tasks."]),
  ("How do you measure quality?", "Code checks for anything measurable (channel, time, buttons, opt-out, next step), plus the answer-key comparison on the page. A tone judge would come later, with human labels.", ["Binary pass/fail over 1 to 5 ratings (Hamel Husain's evals guidance)."]),
  ("What does the page show?", "What came in (in plain words), the decision, the message, how the AI answered (settings, prompt, raw reply, safety check), a comparison with the answer key, and every check with its source.", []),
 ]),
