@@ -212,9 +212,9 @@
             ${l.permitDate ? `<dt>Permit date</dt><dd>${fmtDate(l.permitDate)}</dd>` : ""}
             ${l.saleDate ? `<dt>Sale date</dt><dd>${fmtDate(l.saleDate)}</dd>` : ""}
             ${sold ? "" : `<dt>Expected open</dt><dd>${l.openingDate ? fmtDate(l.openingDate) : "not stated"}</dd>`}
+            ${!l.software && !sold ? `<dt>Software</dt><dd>Not picked yet</dd>` : ""}
           </dl></div>
-          <div class="card"><h3>Software</h3><div class="pill-row">${sw}</div>
-            ${!l.software && !sold ? `<div class="dim">Not built yet -- software not picked.</div>` : ""}</div>
+          <div class="card"><h3>Software</h3><div class="pill-row">${sw}</div></div>
           <div class="card"><h3>Lead score</h3>
             <div class="score-row"><span class="score-badge score-badge-lg ${scoreClass(l.score)}">${l.score}</span></div>
             <div class="why">${esc(l.why)}</div></div>

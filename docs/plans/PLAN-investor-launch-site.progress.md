@@ -40,3 +40,12 @@ Hidden New York (2 leads) from the area picker and map using a flag in data/area
 - Verified: NY is marked hidden; visible areas filter works; map markers correctly filtered
 - Commit: 5609ea3
 - Done: NY absent from area picker and map markers
+
+## T6 ✅
+Changed map headline to be neutral and moved "software not picked yet" text on lead detail cards.
+- Changed map.html headline from "Apartment buildings by software" to "Apartment activity by state"
+- In property.html leadPage function: moved "Not built yet -- software not picked" message from Software card to Stage card, displayed as "Software: Not picked yet" below the Expected open field
+- Tests: all 206 tests pass; check-no-realpage-target.sh exits 0
+- Verified: map headline updated, lead cards show software status in proper order (stage/signal first, software status below)
+- Commit: pending
+- Done: neutral map headline, software status moved below opening info
