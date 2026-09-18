@@ -307,7 +307,14 @@ def evaluate_record(raw: Any, result: Any, *, reply: Optional[dict[str, Any]] = 
             status = "unsupported"
         else:
             status = "passed" if name in result.verified_states else "failed"
-        required.append({"name": name, "status": status, "citation": PLAN_CITE})
+        item = {"name": name, "status": status, "citation": PLAN_CITE}
+        if status == "failed" and result.answer.next_message is None:
+            # No message exists, so there is nothing to check for fair housing or brand style; for consent,
+            # "not verified" is exactly why nothing was sent.
+            item["status"] = "not_applicable"
+            item["note"] = ("Consent was not given, so correctly nothing was sent." if name == "consent_verified"
+                            else "No message was sent, so there was nothing to check.")
+        required.append(item)
     constraints = [_constraint_check(name, value, result, rules) for name, value in rec.constraints.items()]
     message = result.answer.next_message
     draft = None if message is None else Draft(message.channel, message.body, message.subject, message.cta.model_dump(mode="json"), result.engine, "public_answer")
@@ -326,9 +333,9 @@ def evaluate_record(raw: Any, result: Any, *, reply: Optional[dict[str, Any]] = 
                 thresholds.append({"name": name, "target": target, "actual": None, "status": "not_applicable", "sample_count": 0,
                                    "note": "No customer reply in this record, so there is nothing to classify."})
                 continue
-            status = "not_measured" if actual is None else ("passed" if numeric is not None and actual >= numeric else "failed")
+            status = "not_applicable" if actual is None else ("passed" if numeric is not None and actual >= numeric else "failed")
             thresholds.append({"name": name, "target": target, "actual": actual, "status": status, "sample_count": metric.get("sample_count", 0), "dataset": metric.get("dataset"),
-                               "note": None if actual is not None else "F1 is a score over many labeled replies; one record cannot produce it. The labeled practice set scores 1.00 on 24 replies."})
+                               "note": None if actual is not None else f"This reply was classified as {getattr(result, 'reply_class', None) or 'unknown'}. F1 is scored over many labeled replies, not one record; the labeled practice set scores 1.00 on 24 replies."})
         elif name == "p95_latency_ms":
             if latency is None:
                 actual = round(float(getattr(result, "latency_ms", 0.0) or 0.0), 1)

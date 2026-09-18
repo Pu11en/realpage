@@ -187,8 +187,8 @@ def run_record(raw: Any, config: Optional[WriterConfig] = None, client=None, clo
         why += outcome.results + schedule.results + intent.results + template.results + wo.results
         if wo.report is not None:
             why += wo.report.results
-        if wo.error:
-            errors.append("writer: " + wo.error)
+        # A rejected AI draft is handled safely by the validated template: a note, not a record error.
+        writer_notes = [f"AI draft rejected ({wo.fallback_reason}): {wo.error}; the checked template was used"] if wo.error else []
         answer = _assemble(outcome, schedule, intent, template, wo, why, errors)
         rec = outcome.record
         final_message = answer.next_message
@@ -210,7 +210,7 @@ def run_record(raw: Any, config: Optional[WriterConfig] = None, client=None, clo
             task_id=rec.task_id if rec else task_id, answer=answer, why=why, decision=outcome.decision, engine=wo.engine,
             verified_states=final_verified, unsupported_states=list(outcome.unsupported_states),
             reply_class=outcome.reply_class, personalization_fields=final_personalization,
-            errors=errors, warnings=list(rec.warnings) if rec else [], latency_ms=(clock() - t0) * 1000.0,
+            errors=errors, warnings=(list(rec.warnings) if rec else []) + writer_notes, latency_ms=(clock() - t0) * 1000.0,
             model_latency_ms=wo.model_latency_ms, fallback_reason=wo.fallback_reason, malformed=malformed,
             versions={"pipeline": PIPELINE_VERSION, "schedule": schedule.version, "intent": intent.version,
                       "templates": template.version, "writer": wo.version},
