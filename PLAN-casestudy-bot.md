@@ -208,7 +208,7 @@ Check: `python3 -m pytest -q casestudy/tests`
   shipcheck/build-bot links. Check every citation link and never claim a synthetic practice score is
   hold-out performance.
 
-- [ ] **C13 Dress rehearsal and recovery card.** Run both goldens and a 12-record batch through the
+- [x] **C13 Dress rehearsal and recovery card.** Run both goldens and a 12-record batch through the
   local live-style stack; export and parse it; repeat offline and with a malformed middle record.
   Record commands and actual results in `PLAN-casestudy-bot.progress.md`. Write the README and a
   one-page interview card: 3-minute explanation, how to paste/export the live 12, switch offline,

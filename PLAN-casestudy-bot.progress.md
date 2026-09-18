@@ -414,3 +414,45 @@ Check:
 Left open: the shipcheck GitHub project URL currently returns 404 because that separate repository
 has not been published; it is a preserved project link, not a source citation. C13 dress rehearsal
 and the recovery card are next. No live model call, push, or deployment happened.
+
+## C13 Dress rehearsal and recovery card — done
+
+What I did:
+- Added `casestudy/rehearsal.py`, a repeatable HTTP-boundary checker that runs both supplied
+  examples, the first 12 focused practice records, explicit offline copies of both batches, and a
+  malformed row between the goldens. It saves and reparses canonical JSONL, validates every line
+  against the strict public contract, compares batch bytes with the server's per-record bytes,
+  requires template/deterministic engines, and proves the malformed row safely escalates without
+  losing either neighbor.
+- Expanded `casestudy/README.md` with paste/upload, exact export, download location, offline switch,
+  restart, malformed-row recovery, and reproducible rehearsal commands. Added the one-page
+  `casestudy/INTERVIEW-CARD.md` with the three-minute explanation, steps for the live 12, under-one-
+  minute recovery, saved-download location, and honest limits.
+- Added focused rehearsal coverage and decision-log entry 42. The real 12 hold-outs are not stored
+  in this repository, so the rehearsal uses 12 labeled practice records; the page and card are
+  ready to accept the arbitrary live 12 during the interview.
+
+Implementation commit: `320e981` (`Case study C13: add rehearsal and recovery card`).
+
+Rehearsal commands and actual results:
+- Built the deployment image with
+  `docker build -f casestudy/Dockerfile -t cranesignal-case-study-c13 .` — passed.
+- Started that non-root image on port 18091 with no model credentials and ran
+  `python3 -m casestudy.rehearsal --base-url http://127.0.0.1:18091 --output-dir <run-dir>` twice.
+  Each run passed all five exports and 31 result rows: 2 configured-mode goldens, 12 configured-
+  mode practice records, 2 offline goldens, 12 offline practice records, and 3 offline rows with a
+  malformed middle record. Both runs reported exact counts 2/12/2/12/3; every saved line reparsed.
+- Repeated the same full rehearsal twice against the direct Python HTTP service as an additional
+  check; both runs also passed all 31 results. `/health` returned `{"status": "ok"}`, and Docker
+  reported runtime user `casestudy`.
+
+Checks:
+- `python3 -m pytest -q casestudy/tests` — 223 passed.
+- `python3 -m pytest -q chatbot/tests tooling/realpage-library/tests tooling/qa/fixes_tests` —
+  254 passed.
+- `python3 -m py_compile casestudy/*.py`, `node --check casestudy/web_assets/app.js`, and
+  `git diff --check` — passed.
+
+Left open: no live model call, deployment, push, or interview hold-out run occurred. Production
+deployment and Drew's live-site acceptance still require separate authorization after localhost
+acceptance, exactly as planned.

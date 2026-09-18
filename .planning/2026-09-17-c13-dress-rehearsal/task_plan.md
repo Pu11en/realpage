@@ -4,10 +4,10 @@
 Prove the case-study service can process, export, and recover through the local HTTP stack, then leave concise interview instructions and reproducible evidence.
 
 ## Next Step
-Repeat the rehearsal against the containerized local stack, then run all required tests and record evidence.
+Commit the completion metadata and hand the locally verified build to Drew for acceptance.
 
 ## Current Phase
-Phase 3
+Complete
 
 ## Phases
 
@@ -27,18 +27,18 @@ Phase 3
 - [x] Run both goldens and a 12-record batch through the Python HTTP service
 - [x] Parse configured-mode, offline-mode, and malformed-middle exports
 - [x] Repeat the Python-service rehearsal twice
-- [ ] Repeat the full rehearsal against the containerized local stack
-- **Status:** in_progress
+- [x] Repeat the full rehearsal against the containerized local stack
+- **Status:** complete
 
 ### Phase 4: Verification
-- [ ] Run the plan Check command and project checks
-- [ ] Record commands and actual results in the canonical progress log
-- **Status:** pending
+- [x] Run the plan Check command and project checks
+- [x] Record commands and actual results in the canonical progress log
+- **Status:** complete
 
 ### Phase 5: Delivery
-- [ ] Add C13 decision-log entry
-- [ ] Tick C13, commit all work, and leave the worktree clean
-- **Status:** pending
+- [x] Add C13 decision-log entry
+- [x] Tick C13, commit all work, and leave the worktree clean
+- **Status:** complete
 
 ## Decisions Made
 | Decision | Rationale |
