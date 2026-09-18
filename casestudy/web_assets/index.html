@@ -57,42 +57,74 @@
         </div>
       </div>
       <nav class="record-tabs" id="record-tabs" aria-label="Batch records"></nav>
-      <div class="split-view">
-        <article class="output-pane" aria-labelledby="output-title">
-          <div class="pane-heading">
-            <div>
-              <p class="eyebrow">Public output</p>
-              <h3 id="output-title">Exact export object</h3>
-            </div>
-            <button class="secondary-button" id="copy-one" type="button">Copy one</button>
+      <section class="human-result" aria-labelledby="human-result-title" aria-live="polite">
+        <div class="human-result-heading">
+          <div>
+            <p class="eyebrow">Human review</p>
+            <h3 id="human-result-title">Proposed message</h3>
           </div>
-          <pre id="submission-output" tabindex="0"></pre>
-          <p class="byte-note"><span id="byte-count">0</span> UTF 8 bytes including the line break</p>
+          <div class="human-result-actions">
+            <span class="decision-badge" id="human-decision-badge">Decision</span>
+            <button class="secondary-button" id="copy-one" type="button">Copy this answer</button>
+          </div>
+        </div>
+        <p class="human-engine-note" id="human-engine-note"></p>
+        <dl class="decision-grid">
+          <div><dt>Channel</dt><dd id="human-channel"></dd></div>
+          <div><dt>When</dt><dd id="human-send-at"></dd></div>
+          <div><dt>Next step</dt><dd id="human-next-action"></dd></div>
+        </dl>
+        <article class="message-preview" id="message-preview">
+          <div class="message-subject" id="human-subject-row" hidden>
+            <span>Subject</span>
+            <strong id="human-subject"></strong>
+          </div>
+          <p class="message-body" id="human-body"></p>
+          <p class="message-cta" id="human-cta"></p>
         </article>
-        <aside class="diagnostics-pane" aria-labelledby="diagnostics-title">
-          <div class="pane-heading">
-            <div>
-              <p class="eyebrow">Internal evidence</p>
-              <h3 id="diagnostics-title">Why this answer</h3>
+        <article class="no-message" id="no-message" hidden>
+          <strong id="no-message-title">No message should be sent</strong>
+          <p id="no-message-reason"></p>
+        </article>
+      </section>
+      <details class="submission-details">
+        <summary>View exact submission and checks</summary>
+        <div class="split-view">
+          <article class="output-pane" aria-labelledby="output-title">
+            <div class="pane-heading">
+              <div>
+                <p class="eyebrow">Submission format</p>
+                <h3 id="output-title">Exact JSON answer</h3>
+              </div>
             </div>
-            <span class="record-state" id="record-state"></span>
-          </div>
-          <div class="diagnostic-summary" id="diagnostic-summary"></div>
-          <div class="error-box" id="record-errors" hidden></div>
-          <h4>Assertions and thresholds</h4>
-          <div class="check-list" id="check-list"></div>
-          <details>
-            <summary>Full cited decision trail</summary>
-            <div class="trail" id="decision-trail"></div>
-          </details>
-        </aside>
-      </div>
+            <pre id="submission-output" tabindex="0"></pre>
+            <p class="byte-note"><span id="byte-count">0</span> UTF 8 bytes including the line break</p>
+          </article>
+          <aside class="diagnostics-pane" aria-labelledby="diagnostics-title">
+            <div class="pane-heading">
+              <div>
+                <p class="eyebrow">Internal evidence</p>
+                <h3 id="diagnostics-title">Why this answer</h3>
+              </div>
+              <span class="record-state" id="record-state"></span>
+            </div>
+            <div class="diagnostic-summary" id="diagnostic-summary"></div>
+            <div class="error-box" id="record-errors" hidden></div>
+            <h4>Assertions and thresholds</h4>
+            <div class="check-list" id="check-list"></div>
+            <details>
+              <summary>Full cited decision trail</summary>
+              <div class="trail" id="decision-trail"></div>
+            </details>
+          </aside>
+        </div>
+      </details>
     </section>
 
     <section class="empty-state" id="empty-state" aria-live="polite">
       <p class="eyebrow">Ready for evidence</p>
-      <h2>Every public field on the left.<br>Every internal decision on the right.</h2>
-      <p>Run one record or a full batch. The workbench keeps errors local and preserves export order.</p>
+      <h2>See the human decision first.<br>Inspect the evidence when you need it.</h2>
+      <p>Run one record or a full batch. Read the proposed message, timing, and next step without decoding JSON.</p>
     </section>
 
     <section class="under-hood" id="under-the-hood" aria-labelledby="hood-title">

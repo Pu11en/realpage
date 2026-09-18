@@ -49,6 +49,106 @@
     return { icon: "?", cls: status || "unsupported" };
   }
 
+  function words(value) {
+    return String(value || "").replaceAll("_", " ").replace(/\s+/g, " ").trim();
+  }
+
+  function sentence(value) {
+    const text = words(value);
+    return text ? text.charAt(0).toUpperCase() + text.slice(1) : "Not provided";
+  }
+
+  function channelLabel(channel) {
+    return ({ sms: "Text message", email: "Email", voice: "Human phone call" })[channel] || sentence(channel);
+  }
+
+  function formatSendAt(value) {
+    const match = String(value || "").match(/^(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2})(?::\d{2})?(Z|[+-]\d{2}:\d{2})$/);
+    if (!match) return value || "Not scheduled";
+    const [, year, month, day, rawHour, minute, rawOffset] = match;
+    const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    const hour = Number(rawHour);
+    const displayHour = hour % 12 || 12;
+    const period = hour >= 12 ? "PM" : "AM";
+    const offset = rawOffset === "Z" ? "UTC" : `UTC${rawOffset.replace("-", "−")}`;
+    return `${months[Number(month) - 1]} ${Number(day)}, ${year} at ${displayHour}:${minute} ${period} (${offset})`;
+  }
+
+  function actionLabel(action) {
+    if (!action) return "No next step supplied";
+    if (action.type === "start_cadence") return `Start ${words(action.name)}`;
+    if (action.type === "follow_up_in_days") return `Follow up in ${action.value} ${action.value === 1 ? "day" : "days"}`;
+    if (action.type === "mark_opted_out") return "Mark this person opted out";
+    if (action.type === "suppress") return "Do not contact this person";
+    if (action.type === "escalate") return "Send this record to a human";
+    if (action.type === "create_call_task") return "Create a human call task";
+    return sentence(action.type);
+  }
+
+  function decisionSummary(answer) {
+    if (answer.next_message) {
+      const label = answer.next_message.channel === "sms" ? "Send text" : `Send ${answer.next_message.channel}`;
+      return { label, cls: "send" };
+    }
+    if (answer.next_action?.type === "create_call_task") return { label: "Human call", cls: "call" };
+    if (answer.next_action?.type === "escalate") return { label: "Human review", cls: "review" };
+    return { label: "Do not send", cls: "hold" };
+  }
+
+  function ctaLabel(cta) {
+    if (!cta) return "";
+    if (Array.isArray(cta.options) && cta.options.length) return `Reply choices: ${cta.options.join(" or ")}`;
+    if (cta.link) return `Tour link: ${cta.link}`;
+    if (cta.type === "schedule_tour") return "Ask them to reply to arrange a tour";
+    return sentence(cta.type);
+  }
+
+  function noMessageTitle(action) {
+    if (action?.type === "mark_opted_out") return "Do not send. Mark this person opted out.";
+    if (action?.type === "create_call_task") return "Do not send a text or email. Create a call task.";
+    if (action?.type === "escalate") return "Do not send. A human needs to review this.";
+    return "No message should be sent.";
+  }
+
+  function renderHumanAnswer(answer, diagnostics) {
+    const message = answer.next_message;
+    const action = answer.next_action;
+    const decision = decisionSummary(answer);
+    const badge = byId("human-decision-badge");
+    badge.textContent = decision.label;
+    badge.className = `decision-badge ${decision.cls}`;
+    byId("human-channel").textContent = message ? channelLabel(message.channel) : (action?.type === "create_call_task" ? "Human phone call" : "No automated message");
+    byId("human-send-at").textContent = message ? formatSendAt(message.send_at) : "Not scheduled";
+    byId("human-next-action").textContent = actionLabel(action);
+
+    const preview = byId("message-preview");
+    const noMessage = byId("no-message");
+    preview.hidden = !message;
+    noMessage.hidden = Boolean(message);
+    if (message) {
+      byId("human-result-title").textContent = message.channel === "email" ? "Email to send" : "Text message to send";
+      const subjectRow = byId("human-subject-row");
+      subjectRow.hidden = !message.subject;
+      byId("human-subject").textContent = message.subject || "";
+      byId("human-body").textContent = message.body;
+      const cta = ctaLabel(message.cta);
+      byId("human-cta").hidden = !cta;
+      byId("human-cta").textContent = cta;
+    } else {
+      byId("human-result-title").textContent = "Human decision";
+      byId("no-message-title").textContent = noMessageTitle(action);
+      byId("no-message-reason").textContent = action?.reason ? sentence(action.reason) : actionLabel(action);
+    }
+
+    if (message && diagnostics.engine === "model") {
+      byId("human-engine-note").textContent = "AI wrote the wording. The safety rules checked it before showing this result.";
+    } else if (message) {
+      byId("human-engine-note").textContent = "A validated template wrote the wording. No live AI model was used for this result.";
+    } else {
+      byId("human-engine-note").textContent = "The safety rules made this decision. No wording model was needed.";
+    }
+  }
+
   function checkRows(diagnostics) {
     const evaluation = diagnostics.evaluation || {};
     const groups = [
@@ -76,7 +176,9 @@
     state.active = index;
     const record = state.payload.records[index];
     const diagnostics = record.diagnostics;
-    byId("submission-output").textContent = JSON.stringify(JSON.parse(record.submission_line), null, 2);
+    const answer = JSON.parse(record.submission_line);
+    renderHumanAnswer(answer, diagnostics);
+    byId("submission-output").textContent = JSON.stringify(answer, null, 2);
     byId("byte-count").textContent = encoder.encode(oneBytes(index)).length;
     byId("record-state").textContent = `Record ${index + 1} of ${state.payload.record_count}`;
     byId("diagnostic-summary").innerHTML = [
@@ -108,7 +210,9 @@
     byId("mode-label").textContent = payload.mode === "offline" ? "Offline result" : "Configured writer";
     byId("record-tabs").innerHTML = payload.records.map((record, index) => {
       const hasError = (record.diagnostics.errors || []).length > 0;
-      return `<button type="button" class="record-tab${hasError ? " has-error" : ""}" role="tab" aria-selected="${index === 0}" data-index="${index}">Record ${index + 1}</button>`;
+      const answer = JSON.parse(record.submission_line);
+      const decision = decisionSummary(answer);
+      return `<button type="button" class="record-tab${hasError ? " has-error" : ""}" role="tab" aria-selected="${index === 0}" data-index="${index}"><span>Record ${index + 1}</span><small>${escapeHtml(decision.label)}</small></button>`;
     }).join("");
     document.querySelectorAll(".record-tab").forEach((button) => button.addEventListener("click", () => renderRecord(Number(button.dataset.index))));
     renderRecord(0);

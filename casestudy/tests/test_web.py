@@ -18,6 +18,9 @@ from casestudy.writer import WriterConfig
 ROOT = Path(__file__).resolve().parents[2]
 DATA = ROOT / "casestudy" / "data"
 SAMPLES = (DATA / "sample.jsonl").read_text(encoding="utf-8").splitlines()
+PRACTICE = (DATA / "practice.jsonl").read_text(encoding="utf-8").splitlines()
+NO_CONSENT = PRACTICE[1]
+VOICE_ONLY = PRACTICE[-1]
 OFFLINE = WriterConfig(enabled=False)
 
 
@@ -53,12 +56,18 @@ def test_page_has_complete_interaction_and_accessibility_states():
     html = (WEB_ROOT / "index.html").read_text(encoding="utf-8")
     css = (WEB_ROOT / "styles.css").read_text(encoding="utf-8")
     script = (WEB_ROOT / "app.js").read_text(encoding="utf-8")
-    for marker in ("jsonl-input", "file-input", "copy-one", "copy-all", "download-all", "check-list", "record-errors"):
+    for marker in (
+        "jsonl-input", "file-input", "copy-one", "copy-all", "download-all", "check-list",
+        "record-errors", "human-decision-badge", "human-channel", "human-send-at",
+        "human-next-action", "human-body", "no-message",
+    ):
         assert f'id="{marker}"' in html
     assert "Skip to workbench" in html and "noindex,nofollow" in html
+    assert "Human review" in html and "View exact submission and checks" in html
     assert ":focus-visible" in css and ":hover" in css and ":active" in css and ".loading" in css and ".empty-state" in css
     assert "submission_line + \"\\n\"" in script
     assert "payload.submission_jsonl" in script
+    assert "No live AI model was used for this result" in script
     assert "window.alert" not in script
 
 
@@ -137,10 +146,40 @@ def test_browser_runs_1_2_12_malformed_upload_and_exact_exports(web_server, tmp_
             assert page.locator(".record-tab").count() == count
 
         run(SAMPLES[0], 1)
-        public = json.loads(page.locator("#submission-output").inner_text())
+        public = json.loads(page.locator("#submission-output").text_content())
         assert set(public) == {"next_message", "next_action"}
+        assert page.locator("#human-decision-badge").inner_text() == "Send text"
+        assert page.locator("#human-channel").inner_text() == "Text message"
+        assert "Dec 9, 2025 at 9:00 AM" in page.locator("#human-send-at").inner_text()
+        assert "Hi Taylor" in page.locator("#human-body").inner_text()
+        assert "Start prospect welcome short horizon" in page.locator("#human-next-action").inner_text()
+        assert page.locator("#human-subject-row").is_hidden()
+        assert "No live AI model" in page.locator("#human-engine-note").inner_text()
+        page.locator(".submission-details > summary").click()
         assert page.locator("#diagnostic-summary").get_by_text("template", exact=True).is_visible()
         assert page.locator(".check-row").count() == 11
+
+        run(SAMPLES[1], 1)
+        assert page.locator("#human-decision-badge").inner_text() == "Send email"
+        assert page.locator("#human-channel").inner_text() == "Email"
+        assert page.locator("#human-subject-row").is_visible()
+        assert "Tour Oak Ridge" in page.locator("#human-subject").inner_text()
+        assert "oakridge.example/tour" in page.locator("#human-cta").inner_text()
+
+        run(NO_CONSENT, 1)
+        assert page.locator("#human-decision-badge").inner_text() == "Do not send"
+        assert page.locator("#message-preview").is_hidden()
+        assert page.locator("#no-message").is_visible()
+        assert "Do not contact" in page.locator("#human-next-action").inner_text()
+
+        run(VOICE_ONLY, 1)
+        assert page.locator("#human-decision-badge").inner_text() == "Human call"
+        assert page.locator("#human-channel").inner_text() == "Human phone call"
+        assert "Create a human call task" in page.locator("#human-next-action").inner_text()
+
+        run("{not json", 1)
+        assert page.locator("#human-decision-badge").inner_text() == "Human review"
+        assert "A human needs to review" in page.locator("#no-message-title").inner_text()
 
         upload = tmp_path / "two.jsonl"
         upload.write_text("\n".join(SAMPLES) + "\n", encoding="utf-8")
@@ -169,5 +208,5 @@ def test_browser_runs_1_2_12_malformed_upload_and_exact_exports(web_server, tmp_
         page.locator(".record-tab").nth(1).click()
         assert page.locator("#record-errors").is_visible()
         assert "malformed_json" in page.locator("#record-errors").inner_text()
-        assert json.loads(page.locator("#submission-output").inner_text())["next_action"]["type"] == "escalate"
+        assert json.loads(page.locator("#submission-output").text_content())["next_action"]["type"] == "escalate"
         browser.close()
