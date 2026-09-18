@@ -153,9 +153,11 @@ def normalize(raw: Any) -> NormalizedRecord:
         consent_raw = {}
     consent: dict[str, Optional[bool]] = {}
     for ch, key in CONSENT_KEYS.items():
-        val = _as_bool_or_none(consent_raw.get(key))
+        # Consent must be an explicit boolean true. Strings like "yes" are not proof of consent (fail closed).
+        raw_val = consent_raw.get(key)
+        val = raw_val if isinstance(raw_val, bool) else None
         if key in consent_raw and val is None:
-            warnings.append(f"consent.{key} has non-boolean value; treated as unknown (not consented)")
+            warnings.append(f"consent.{key} is {raw_val!r}, not true/false; treated as no consent")
         consent[ch] = val
 
     prefs_raw = raw.get("channel_preferences")

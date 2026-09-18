@@ -54,9 +54,9 @@ NAME_SUFFIX_RE = re.compile(r"\s+(apartments?|apts?\.?|residences?|homes?|commun
 # Amenity display names (project defaults; the reference wrote "fitness center" for "fitness").
 AMENITY_DISPLAY = {
     "pool": "pool", "fitness": "fitness center", "gym": "fitness center", "fitness_center": "fitness center",
-    "parking": "covered parking", "garage": "garage parking", "pet": "pet-friendly spaces", "pets": "pet-friendly spaces",
-    "dog_park": "dog park", "balcony": "private balconies", "washer_dryer": "in-unit washer and dryer",
-    "laundry": "in-unit washer and dryer", "clubhouse": "clubhouse", "coworking": "coworking lounge",
+    "parking": "parking", "garage": "garage parking", "pet": "pet-friendly spaces", "pets": "pet-friendly spaces",
+    "dog_park": "dog park", "balcony": "private balconies", "washer_dryer": "washer and dryer",
+    "laundry": "laundry", "clubhouse": "clubhouse", "coworking": "coworking lounge",
     "ev_charging": "EV charging", "rooftop": "rooftop lounge", "playground": "playground",
 }
 

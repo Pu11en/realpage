@@ -224,3 +224,10 @@ def test_closed_stages_are_not_contacted(stage):
 def test_stop_by_is_a_visit_not_an_opt_out():
     assert classify_reply("Can I stop by tomorrow?") != "opt_out"
     assert classify_reply("Stop by tomorrow?") == "question"
+
+
+def test_string_consent_is_not_consent():
+    raw = json.loads(json.dumps(SAMPLES[0]))
+    raw["consent"] = {"email_opt_in": "yes", "sms_opt_in": "true", "voice_opt_in": False}
+    out = run_gates(raw)
+    assert out.decision == "suppress" and out.reason == "no_consent"
