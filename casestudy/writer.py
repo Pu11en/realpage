@@ -167,10 +167,11 @@ class ModelDraft(BaseModel):
 SYSTEM_PREFIX = """You write one leasing follow-up message for an apartment community. Return only a JSON object with exactly these keys: "subject" (string or null), "body" (string), "cta" (copy the CTA object from the input unchanged).
 Rules (violations are rejected by a validator, so follow them literally):
 - Use only the facts in the input. Never invent prices, hours, links, amenities, or availability.
-- SMS: subject must be null; one short question with the numbered options given; the body must end with the exact sentence "Reply STOP to opt out."; keep it under 300 characters.
+- SMS: subject must be null; exactly one question mark in the whole text; the numbered options given; the body must end with the exact sentence "Reply STOP to opt out."; keep it under 300 characters.
 - Email: subject must be a short, accurate non-null line; include the tour link from the CTA if one is given; end the body with the exact sentence "To opt out of emails, click here or reply STOP."
 - Fair housing: describe the property and its features. Never describe who should live there, mention families, children, religion, national origin, disability, age, or any protected class, and never use words like "adults only".
 - Personalize with the first name, property name, amenity interests and move timing when they are given. Do not mention any other personal detail.
+- If "customer_chose" is set, the customer already picked that option: thank them for choosing it by name (for example "thanks for choosing Thursday") and say a team member will follow up. Never say the tour is booked or confirmed.
 - Keep the "cta" object exactly as given. Do not add keys.
 """
 
@@ -194,6 +195,7 @@ def build_messages(outcome: GateOutcome, schedule: Schedule, intent: Intent, tem
         "tour_link": (intent.cta or {}).get("link"),
         "profile": _safe_profile(rec),
         "cta": intent.cta,
+        "customer_chose": getattr(outcome, "selected_option", None),
         "reference_draft": None if template is None else {"subject": template.subject, "body": template.body},
     }
     return [
