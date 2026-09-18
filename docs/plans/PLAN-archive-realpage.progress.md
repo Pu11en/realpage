@@ -21,4 +21,25 @@
 
 **How checked:** Ran `bash tooling/check-no-realpage-target.sh` → ✓ No RealPage-as-target references found
 
-**Next:** T2 moves research folders to archive/realpage/
+## T2 ✅ Move research folders to archive/realpage/
+
+**What:** Moved 10 research folders (01-company, 02-products, 03-reviews, 04-reddit, 06-news, 09-ai-visibility, 09-build-ideas, 10-dashboard-wireframes, raw/realpage-site, raw/research-01) from root into archive/realpage/ using `git mv` to preserve history.
+
+**Fixed path references:** Updated 10 files that had hardcoded references to the old paths:
+- .claude/skills/mvp-plan-review/SKILL.md (2 references)
+- PLAN-v1-cleanup.md (1 reference)
+- README.md (1 reference)
+- chatbot/Dockerfile (research folder copy paths)
+- chatbot/README.md (1 reference)
+- docs/plans/PLAN-ai-visibility-v4.md (4 references)
+- docs/plans/done/PLAN-realpage-site-library.md (5 references)
+- tooling/ai-visibility/to_research.py (output path)
+- tooling/realpage-library/cards.py (2 paths)
+- tooling/realpage-library/facts.py (2 paths)
+- tooling/realpage-library/index.py (2 paths)
+
+**How checked:** Ran `bash tooling/check-no-realpage-target.sh` → ✓ No issues found
+
+**Commit:** d987858 "T2: Move research folders to archive/realpage/ and fix all path references"
+
+**Next:** T3 moves case study to archive/realpage/casestudy
