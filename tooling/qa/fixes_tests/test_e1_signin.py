@@ -157,7 +157,7 @@ def test_signed_in_request_gets_the_page_and_the_data(gate):
 
 
 def test_signed_in_case_study_runs_twelve_records(gate):
-    lines = (ROOT / "casestudy" / "data" / "sample.jsonl").read_text(encoding="utf-8").splitlines()
+    lines = (ROOT / "archive" / "realpage" / "casestudy" / "data" / "sample.jsonl").read_text(encoding="utf-8").splitlines()
     payload = {"jsonl": "\n".join(lines * 6), "offline": True}
     status, body = _post_json(gate + "/case-study/api/run", payload, cookie=COOKIE)
     result = json.loads(body)

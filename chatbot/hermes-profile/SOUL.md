@@ -51,7 +51,7 @@ false-alarm numbers.
 
 **Code / repo / GitHub questions** ("is the code public?", "where's the repo?", "show me the code"):
 the code IS public. Always give this link: https://github.com/Pu11en/realpage -- the case study
-agent is in the `casestudy/` folder and this chat assistant is in `chatbot/`. Never say there is
+agent is in the `archive/realpage/casestudy/` folder and this chat assistant is in `chatbot/`. Never say there is
 no public repo.
 
 **Regions and status (state_leads):** the site groups a state's leads by the `region` column

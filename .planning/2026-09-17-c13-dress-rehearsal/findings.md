@@ -11,7 +11,7 @@
 - The service exposes `GET /health`, `POST /case-study/api/run`, and the workbench at `/case-study`.
 - The API returns canonical `submission_jsonl`, per-record `submission_line`, separate diagnostics, and a mode label.
 - The browser already saves all exported rows as `case-study-submission.jsonl` and uses the server-provided bytes.
-- The two supplied goldens are in `casestudy/data/sample.jsonl`; 20 focused practice records are in `casestudy/data/practice.jsonl`.
+- The two supplied goldens are in `archive/realpage/casestudy/data/sample.jsonl`; 20 focused practice records are in `archive/realpage/casestudy/data/practice.jsonl`.
 - No 12-record hold-out file exists in the repository, so a 12-record practice slice is appropriate for rehearsal while the interview card explains how to paste the live 12.
 
 ## Technical Decisions
@@ -28,7 +28,7 @@
 
 ## Resources
 
-- `PLAN-casestudy-bot.md` task C13
-- `casestudy/web.py`
-- `casestudy/tests/test_web.py`
-- `casestudy/README.md`
+- `archive/realpage/casestudy/PLAN-casestudy-bot.md` task C13
+- `archive/realpage/casestudy/web.py`
+- `archive/realpage/casestudy/tests/test_web.py`
+- `archive/realpage/casestudy/README.md`

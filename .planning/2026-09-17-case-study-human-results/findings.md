@@ -41,7 +41,7 @@
 | The live service currently defaults to offline templates | Treat AI enablement as a separate provider decision; this task fixes human presentation. |
 
 ## Resources
-- `casestudy/web_assets/index.html`
-- `casestudy/web_assets/app.js`
-- `casestudy/web_assets/styles.css`
-- `casestudy/tests/test_web.py`
+- `archive/realpage/casestudy/web_assets/index.html`
+- `archive/realpage/casestudy/web_assets/app.js`
+- `archive/realpage/casestudy/web_assets/styles.css`
+- `archive/realpage/casestudy/tests/test_web.py`
