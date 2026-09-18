@@ -172,3 +172,34 @@ identical, bytes differ; fine per plan). Non-English `language` is flagged, not 
 Spanish fixture will need a decision). The email option-reply template exists but is only exercised
 via SMS in tests. Subject wording for the email reference differs from the sample ("pool and
 fitness center" vs "pool & fitness rooms") by design.
+
+## C6 Bounded writer — done
+
+What I did:
+- Added `casestudy/writer.py` (`writer_v1`): `WriterConfig.from_env()` reads `DEEPSEEK_API_KEY`,
+  `DEEPSEEK_BASE_URL`, `DEEPSEEK_MODEL`, `CASESTUDY_OFFLINE` (no guessed model constant);
+  `make_client()` builds the OpenAI-compatible client with `max_retries=0`; `verify_model()`
+  preflights the configured model against the endpoint list (cached); `Deadline` is a monotonic
+  per-record budget bounded by the record's `p95_latency_ms` and a 2,000 ms ceiling with a 250 ms
+  reserve; `build_messages()` sends a stable system prefix and the record last with only approved
+  profile fields; `write()` makes at most one `json_object`/temperature-0/`max_tokens=400` request,
+  validates the reply with a strict Pydantic `ModelDraft` (extra keys forbidden, CTA must equal the
+  intent CTA, `finish_reason=length` rejected), runs the C4 validators on it as a model draft, and
+  otherwise returns the validated C5 template with a cited `writer.fallback` trail entry.
+- Added `casestudy/tests/test_writer.py` (22 tests, fake client, no network): successful SMS and
+  email drafts; timeout, empty, None, invalid JSON, wrong CTA, extra key, truncated → template with
+  exactly one request; unsafe (fair-housing) and STOP-less drafts rejected; budget exhausted before
+  the call skips the model; record threshold bounds the budget; slow reply after the deadline is
+  discarded; deadline is monotonic; offline/unconfigured never builds a client; env config has no
+  guessed model; unverified model gets no request; preflight cached and error-tolerant; client
+  built with retries disabled; prompt excludes unsafe profile fields; terminal decisions never
+  call the model.
+- Decision log entry 35.
+
+Commit: see git log ("Case study C6").
+
+Check: `python3 -m pytest -q casestudy/tests` — 132 passed.
+
+Left open: the output-limit/truncation behaviour is proven only against a fake client; the live
+schema smoke test and model-list preflight against the real endpoint wait for Drew's
+authorization (C11/C13). The prompt is English-only, matching the templates.

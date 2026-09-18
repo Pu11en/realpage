@@ -146,7 +146,7 @@ Check: `python3 -m pytest -q casestudy/tests`
   hours/link to another property. Missing unsafe or optional fields degrades to a neutral template,
   never a crash. Check: offline generation passes both references and all template validator tests.
 
-- [ ] **C6 Bounded writer.** Use the OpenAI-compatible DeepSeek endpoint with a configurable,
+- [x] **C6 Bounded writer.** Use the OpenAI-compatible DeepSeek endpoint with a configurable,
   preflight-verified model. Stable prompt prefix, record last, `json_object`, temperature 0,
   Pydantic validation, and a small output limit that has been smoke-tested against truncation/empty
   content. Enforce one monotonic end-to-end deadline and no SDK/model retries; reserve time for

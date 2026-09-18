@@ -367,3 +367,30 @@ a single long SMS template that fails the segment cap for long names.
 provenance, degrade instead of crash.
 **Source:** `PLAN-casestudy-bot.md` C5, both records in `casestudy/data/sample.jsonl`,
 decision 33 (validators).
+
+## 35. Bounded writer: one verified model request per record, template on every failure path
+
+**Decided:** `casestudy/writer.py` (`writer_v1`) makes at most one structured DeepSeek request per
+record through the OpenAI-compatible endpoint. The API key, base URL and model name are
+configuration (`DEEPSEEK_API_KEY`, `DEEPSEEK_BASE_URL`, `DEEPSEEK_MODEL`, `CASESTUDY_OFFLINE`);
+no model name is guessed in code, and the configured model is preflight-verified against the
+endpoint's model list (cached) before any request. The SDK client is built with `max_retries=0`
+and the writer never re-asks. The prompt is a stable system prefix with the record last, sent with
+`json_object`, temperature 0 and `max_tokens=400`; only approved profile fields (first name,
+amenity interest) and business input reach the model. A monotonic per-record deadline is bounded
+by the record's `p95_latency_ms` threshold and a 2,000 ms project ceiling, with 250 ms reserved for
+validation and serialization: too little budget skips the call, and a reply after the deadline is
+discarded. Model JSON is validated by Pydantic with extra keys forbidden, the CTA must equal the
+deterministic intent CTA, `finish_reason == "length"` is treated as truncation, and the draft is
+then run through the C4 validators as `source="model"`. Every failure path (offline, missing
+config, unverified model, exhausted budget, timeout, empty content, truncation, invalid JSON, bad
+schema, changed CTA, unsafe draft, late reply) returns the already-validated C5 template with a
+cited `writer.fallback` trail entry and the engine label `template`.
+**Alternatives:** a hard-coded model constant; SDK retries; letting the model choose the CTA or
+next action; a parse-and-repair loop on bad JSON; calling the model even for terminal decisions.
+**Why it won:** PLAN C6 and the architecture section: configurable, preflight-verified model, one
+request per record, shared deadline, deterministic validation that a model draft cannot override.
+**Open:** the 400-token output limit has been tested against truncation and empty content only
+with a fake client; the live smoke test needs Drew's authorization and happens in C11/C13.
+**Source:** `PLAN-casestudy-bot.md` C6 and architecture, decision 33 (validators), decision 34
+(templates), IFScale arXiv 2507.11538.
