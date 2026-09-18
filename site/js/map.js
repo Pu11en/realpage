@@ -7,12 +7,15 @@
   const NS = "http://www.w3.org/2000/svg";
   const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 
-  const [us, data, markerData] = await Promise.all([
+  const [us, data, markerData, areasIndex] = await Promise.all([
     loadData("vendor/states-albers-10m.json"),
     loadData("data/lead-map.json"),
     loadData("data/map-markers.json").catch(() => ({ markers: [] })),
+    loadData("data/areas/index.json"),
   ]);
-  const markers = Object.fromEntries(markerData.markers.map((m) => [m.state, m]));
+  const hiddenAreas = new Set((areasIndex.areas || []).filter((a) => a.hidden).map((a) => a.slug.toUpperCase()));
+  const visibleMarkers = markerData.markers.filter((m) => !hiddenAreas.has(m.code));
+  const markers = Object.fromEntries(visibleMarkers.map((m) => [m.state, m]));
   const centers = {};
   const max = Math.max(1, ...Object.values(data.states).map((s) => s.total));
   const path = d3.geoPath();
