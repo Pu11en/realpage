@@ -118,3 +118,13 @@
 **How checked:** check-no-realpage-target.sh passes; test_h2 passes; fixes_tests 199 pass, the same 4 chatbot failures as before (T7).
 
 **Left open:** map.js still loads client-map.json (T6). Old docs/plans/done and .planning notes still say "recruiter" (history, not shown on the site; T8 may archive).
+
+## T6 ✅ client map archived, scoring no longer looks at RealPage (2026-09-18)
+
+**What:** Moved the client-map skill, its buildings.csv/counts.json, its run record, site/data/client-map.json and check-client-map.sh to archive/realpage/client-map/. The Census permit targets file (not RealPage data) moved to propertystack/data/lead-finder-targets/. City ranking now sorts by permits only (no "3+ RealPage buildings go last"); pick_state picks the state with the most permits. The site map is now shaded by our lead counts (new site/data/lead-map.json, built by build_data.py), and the chat's map_summary table is built from it, so "where are most leads" is finally about leads.
+
+**Commit:** e04a7e5
+
+**How checked:** check-no-realpage-target.sh passes; lead-finder + lead-finder-cities + fixes_tests: 270 pass, same 4 chatbot failures as before (T7). node --check on map.js. Did not run the browser map check (check_map.py).
+
+**Left open:** Old run folders (propertystack/runs/NY) still hold a realpage_count field (history). T10 should eyeball the map page.

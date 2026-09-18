@@ -14,7 +14,7 @@ Open: http://localhost:8080
 - [x] T3 Move case study to archive/realpage/casestudy (+ PLAN-casestudy-*.md, handoffs about the interview, .ccdb-* interview cards). Turn off the case-study Railway service and the /case-study link on app.cranesignal.com (only after Drew's OK).
 - [x] T4 Remove AI Visibility: site/ai-visibility.html, site/data/ai-visibility*, ai_visibility_lawsuit.py, build_ai_visibility.py, propertystack/data/ai-visibility, tooling/ai-visibility → archive; drop nav links.
 - [x] T5 Remove recruiter-scorecard.json and any "for RealPage" panels from site pages (map, under-the-hood, index, app.js).
-- [ ] T6 Client-map skill ("buildings already on RealPage, skip them"): archive it and client-map.json; make lead scores stop penalising/boosting by RealPage.
+- [x] T6 Client-map skill ("buildings already on RealPage, skip them"): archive it and client-map.json; make lead scores stop penalising/boosting by RealPage.
 - [ ] T7 Chatbot: rewrite SOUL.md, query skill and plugin so the agent knows nothing about RealPage the company; archive TEST-ANSWERS/SPOT-CHECK; fix link_guard tests.
 - [ ] T8 Rewrite README.md, AGENTS.md, CHANGELOG header, business/BUSINESS.md, marketing-board to the new "leads for anyone selling to apartment owners" story; drop RealPage plans from docs/plans (site-library, ai-visibility v3/v4) into archive.
 - [ ] T9 propertystack skill docs/tests (lead-finder, deep-dive, find-upcoming): reword "RealPage sales" to general buyers; keep detector rules.
