@@ -261,3 +261,14 @@ def test_trace_records_prompt_and_raw_reply_for_the_page():
     assert trail["writer.request"].details["prompt"] == client.calls[0]["messages"]
     assert trail["writer.request"].details["temperature"] == 0
     assert trail["writer.reply"].details == {"raw": raw, "finish_reason": "stop"}
+
+
+def test_model_must_mention_the_option_the_customer_chose():
+    raw = json.loads(json.dumps(SAMPLES[0]))
+    raw["input"]["inbound_reply"] = "2"
+    raw["input"]["prior_options"] = ["Thursday", "Friday"]
+    out, sched, intent, tpl = _pipeline(raw)
+    ignoring = "Hi Taylor—which day works? Reply 1 for Thu, 2 for Fri. Reply STOP to opt out."
+    res = write(out, sched, intent, tpl, CFG, client=FakeClient(lambda k: _resp(_good_json(intent, ignoring))))
+    assert res.engine == "template" and res.fallback_reason == "model ignored the customer's chosen option"
+    assert "Friday" in res.draft.body

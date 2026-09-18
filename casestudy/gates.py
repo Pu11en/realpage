@@ -52,6 +52,9 @@ BLOCKED_LIFECYCLE = {
 KNOWN_LIFECYCLE = {"new", "open", "active", "applicant", "resident", "former_resident", "renewal"}
 
 OPT_OUT_WORDS = {"stop", "stopall", "unsubscribe", "cancel", "end", "quit", "remove me", "opt out"}
+# Spanish keywords and near-misses: revocation is valid by "any reasonable means" (47 CFR 64.1200(a)(10)).
+OPT_OUT_FIRST_WORDS = OPT_OUT_WORDS | {"stopp", "stp", "alto", "parar", "para", "cancelar", "detener", "baja", "unsub"}
+KNOWN_PERSONAS = {"prospect", "lead", "applicant", "resident", "renter", "former_resident"}
 HELP_WORDS = {"help", "info"}
 NEGATIVE_PHRASES = (
     "not interested",
@@ -213,6 +216,14 @@ def normalize(raw: Any) -> NormalizedRecord:
         warnings.append("task_id missing; using 'unknown_task'")
 
     persona = raw.get("persona") if isinstance(raw.get("persona"), str) else None
+    name = profile.get("first_name")
+    if name is not None:
+        clean = _clean_first_name(name)
+        if clean != name:
+            warnings.append(f"first_name {name!r} " + (f"cleaned to {clean!r}" if clean else "is not a plausible name; omitted"))
+            profile = {k: v for k, v in profile.items() if k != "first_name"}
+            if clean:
+                profile["first_name"] = clean
     stage = raw.get("lifecycle_stage") if isinstance(raw.get("lifecycle_stage"), str) else None
 
     return NormalizedRecord(
@@ -233,6 +244,17 @@ def normalize(raw: Any) -> NormalizedRecord:
     )
 
 
+def _clean_first_name(value: Any) -> Optional[str]:
+    """Keep letters, spaces, hyphens, apostrophes and dots; reject markup, sentences and instructions."""
+    if not isinstance(value, str) or "<" in value or ">" in value:
+        return None
+    kept = re.sub(r"[^\w\s'.-]|[\d_]", "", value).strip()
+    kept = re.sub(r"\s+", " ", kept)
+    if not kept or len(kept) > 30 or len(kept.split()) > 3:
+        return None
+    return kept
+
+
 # --------------------------------------------------------------------------- reply classification
 
 
@@ -242,7 +264,9 @@ def classify_reply(text: Optional[str]) -> str:
         return "none"
     t = text.strip().lower()
     t_norm = re.sub(r"[^\w\s]", "", t).strip()
-    if t_norm in OPT_OUT_WORDS:
+    words = t_norm.split()
+    if t_norm in OPT_OUT_WORDS or (words and (words[0] in OPT_OUT_FIRST_WORDS or words[0].startswith("stop"))) \
+            or any(p in t_norm for p in ("remove me", "opt out", "unsubscribe", "stop texting", "stop messaging")):
         return "opt_out"
     if t_norm in HELP_WORDS:
         return "help"
@@ -295,9 +319,17 @@ def reply_gate(rec: NormalizedRecord) -> tuple[GateResult, Optional[GateOutcome]
         )
         # Not terminal: later gates (consent etc.) still apply to any confirmation message.
         return res, None
+    if cls == "not_interested":
+        res = GateResult(
+            "reply_gate", "passed", f"inbound reply {rec.inbound_reply!r} says the customer is not interested; stop the cadence, send nothing",
+            "project rule: never keep marketing to someone who declined", "conservative_default", {"reply_class": cls},
+        )
+        return res, GateOutcome("suppress", "customer_not_interested", [res], reply_class=cls, record=rec)
+    # A question or any free text we cannot map needs a person: an automated welcome would ignore what they said,
+    # and answering (pets, rent, availability) would require property facts the record does not contain.
     res = GateResult(
-        "reply_gate", "passed", f"inbound reply classified as {cls}; later validation still applies",
-        cite, "hypothesis", {"reply_class": cls},
+        "reply_gate", "passed", f"inbound reply {rec.inbound_reply!r} classified as {cls}; a leasing agent must answer it, so no automated message",
+        "project rule: never ignore or guess an answer to a customer's own words", "conservative_default", {"reply_class": cls},
     )
     return res, None
 
@@ -434,6 +466,13 @@ def run_gates(raw: Any) -> GateOutcome:
         terminal.unsupported_states = unsupported
         return terminal
 
+    # 1b. persona we have no playbook for
+    if rec.persona is not None and rec.persona.strip().lower() not in KNOWN_PERSONAS:
+        p = GateResult("persona_gate", "failed", f"persona {rec.persona!r} is not a renter or prospect; no approved messaging playbook, so a person decides",
+                       "project rule: unknown audiences are escalated, not guessed", "conservative_default")
+        results.append(p)
+        return GateOutcome("escalate", "unknown_persona", results, reply_class, unsupported_states=unsupported, record=rec)
+
     # 2. consent
     verified: list[str] = []
     c = consent_gate(rec)
@@ -448,6 +487,11 @@ def run_gates(raw: Any) -> GateOutcome:
     results.append(lc)
     if lc.status == "failed":
         return GateOutcome("suppress", "lifecycle_blocked", results, reply_class, verified_states=verified, unsupported_states=unsupported, record=rec)
+
+    # 3b. the customer said something we must not ignore (checked after consent, so no-consent still wins)
+    if reply_class in ("question", "help", "unknown"):
+        return GateOutcome("escalate", f"customer_reply_needs_human_{reply_class}", results, reply_class,
+                           verified_states=verified, unsupported_states=unsupported, record=rec)
 
     # 5 (needs reference clock before 4)
     d, ref, tz = dates_gate(rec)

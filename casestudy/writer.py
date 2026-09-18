@@ -306,6 +306,9 @@ def write(outcome: GateOutcome, schedule: Schedule, intent: Intent, template: Te
     if parsed.cta != (intent.cta or {}):
         return _fallback(template, results, "model changed the CTA", deadline, f"expected {intent.cta}, got {parsed.cta}", model_ms)
 
+    selected = getattr(outcome, "selected_option", None)
+    if selected and selected.lower() not in parsed.body.lower():
+        return _fallback(template, results, "model ignored the customer's chosen option", deadline, f"body does not mention {selected!r}", model_ms)
     draft = Draft(schedule.channel, parsed.body, parsed.subject, intent.cta, source="model", label=f"model.{intent.flow}")
     report = validate_draft(draft, outcome.record)
     if not report.passed:
