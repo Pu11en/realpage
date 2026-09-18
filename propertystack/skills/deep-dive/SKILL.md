@@ -92,8 +92,9 @@ lease-up/operations, same public-page rule.
 
 - Every line under **Why now** and **Who to ask for** carries a URL (or says "not found").
 - No email or phone anywhere unless it's in `contacts.csv`.
-- The opener says "[your name]" and "[your company]" and **never** claims to be RealPage
-  ("with RealPage", "from RealPage"). The seller could be RealPage or a competitor.
+- The opener says "[your name]" and "[your company]" and **never** claims to work for the company
+  you're calling ("with [their company]", "from [their company]"). The seller could be any
+  property-management software vendor.
 - Facts only from the CSVs or a page you actually read; if unsure, say "unconfirmed".
 - Plain words, short bullets. No PDF — the brief is text (the site chat has a Copy button).
 - Bottom line comes **first**, always.

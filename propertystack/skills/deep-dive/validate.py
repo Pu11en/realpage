@@ -11,7 +11,7 @@ Rules:
   2. Every line under "Why now" and "Who to ask for" has a URL
      ("not found" lines under "Who to ask for" are allowed without one).
   3. No email or phone appears unless it is in a contacts.csv.
-  4. The opener never says "with RealPage".
+  4. The opener never claims to work for the company you're calling.
 """
 import argparse
 import csv
@@ -97,8 +97,10 @@ def validate(text, contacts):
             errors.append(f"phone not in contacts.csv: {p.strip()}")
 
     opener = " ".join(body.get(norm("30-second opener"), []))
-    if re.search(r"\bwith\s+realpage\b", opener, re.I):
-        errors.append('opener says "with RealPage"')
+    # Check for claiming to work for known property management companies
+    company_brands = r"\b(?:realpage|yardi|entrata|appfolio|property shark|buildium|rent manager|property manager)\b"
+    if re.search(rf"with\s+{company_brands}|from\s+{company_brands}", opener, re.I):
+        errors.append('opener claims to work for a property-management company (use "[your company]" instead)')
     return errors
 
 

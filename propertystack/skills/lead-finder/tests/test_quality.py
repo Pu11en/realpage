@@ -31,7 +31,7 @@ def test_passing_run_meets_every_bar(tmp_path):
                    software="Yardi", office_phone="555-1111"),
         LeadRecord(area="zz", city="Sampleton", name="Bella Victoria", address="2 Main St, Sampleton, ZZ",
                    stage="sold", units=50, website="https://bv.example",
-                   software="RealPage", office_phone="555-2222"),
+                   software="Entrata", office_phone="555-2222"),
         LeadRecord(area="zz", city="Sampleton", name="New Build", address="3 Main St, Sampleton, ZZ",
                    stage="permitted", units=30, software="not picked yet",
                    developer="Acme Dev", office_phone="555-3333"),

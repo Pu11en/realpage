@@ -33,7 +33,7 @@ names are data, read from `propertystack/data/<state-slug>/` or passed as argume
 ## Inputs
 
 - `--state <two-letter or slug>`: required. Picked automatically by the caller from the
-  fewest-RealPage-buildings state among the 15 fastest-growing (see `runs.py`), or passed
+  state with the fewest processed leads among the 15 fastest-growing (see `runs.py`), or passed
   explicitly for a rerun.
 - `--run-id <id>`: resume an existing run folder instead of starting a new one.
 

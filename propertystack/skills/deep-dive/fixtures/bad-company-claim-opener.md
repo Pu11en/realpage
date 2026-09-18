@@ -17,7 +17,7 @@
 - Jane Doe, Regional Manager, Example Living: https://example.com/team
 
 ## 30-second opener
-Hi, this is [your name] with RealPage. I saw Example Apartments changed hands...
+Hi, this is [your name] with Yardi. I saw Example Apartments changed hands...
 
 ## 3 questions
 1. What software did the new owner standardize on?
