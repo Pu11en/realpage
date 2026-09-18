@@ -79,3 +79,9 @@
 **How checked:** check-no-realpage-target.sh passes; the two edited test files pass (8 tests); Railway deployment list shows REMOVED.
 
 **Left open:** The live site still shows the Case Study tab until this branch is pushed (nothing pushed, per the GitHub-last rule); clicking it now gives an error page. SOUL.md still mentions the case study folder — T7 rewrites it.
+
+## T3 ✅ review fix — interview handoffs archived (2026-09-18)
+
+**What:** Moved handoffs/2026-09-18-realpage.md (case-study interview) and handoffs/2026-09-14-realpage.md (goal = RealPage interview leverage) to archive/realpage/handoffs/. Kept 2026-09-15-realpage.md and -night.md: they are about the CraneSignal agent and shipcheck, not the interview. No other file referenced the old paths; no .ccdb-* interview cards exist in the repo. T3 box ticked.
+
+**How checked:** check-no-realpage-target.sh passes; grep for the old paths finds nothing outside this log.
