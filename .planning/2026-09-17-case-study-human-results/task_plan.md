@@ -4,7 +4,7 @@
 Make each case-study result understandable to a nontechnical human before showing the exact JSON export.
 
 ## Next Step
-Commit the verified local change and ask Drew whether to push it live.
+Wait for Drew's decision on whether to push the committed change live.
 
 ## Current Phase
 Phase 5
@@ -33,9 +33,9 @@ Phase 5
 - **Status:** complete
 
 ### Phase 5: Delivery
-- [ ] Commit the focused change locally
-- [ ] Report the human-visible behavior and ask whether to push
-- **Status:** in_progress
+- [x] Commit the focused change locally
+- [x] Report the human-visible behavior and ask whether to push
+- **Status:** complete
 
 ## Decisions Made
 | Decision | Rationale |

@@ -14,6 +14,7 @@
 - Added a human decision badge, plain channel and time, next step, message preview, explicit AI/template note, and no-message state.
 - Moved exact JSON and diagnostics into secondary expandable details while preserving all copy and download controls.
 - Verified the human result visually at phone, tablet, and desktop sizes with no horizontal overflow.
+- Saved the implementation in local commit `d24e074`; nothing from this change has been pushed yet.
 
 ### Test Results
 | Test | Expected | Actual | Status |
