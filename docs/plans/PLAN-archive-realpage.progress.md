@@ -43,3 +43,5 @@
 **Commit:** d987858 "T2: Move research folders to archive/realpage/ and fix all path references"
 
 **Next:** T3 moves case study to archive/realpage/casestudy
+
+- Reviewer still had concerns about T2 Move research folders to archive/realpage/: 01-company, 02-products, 03-reviews, 04-reddit, 06-news, 09-ai-visibility, 09-build-ideas, 10-dashboard-wireframes, raw/realpage-site, raw/research-01.: In `tooling/ai-visibility/run-and-report.sh` line 14, change `09-ai-visibility/summary.md` to `archive/realpage/09-ai-visibility/summary.md`. It's a stale path that breaks the script.
