@@ -17,7 +17,7 @@ Open: http://localhost:8080
 - [x] T6 Client-map skill ("buildings already on RealPage, skip them"): archive it and client-map.json; make lead scores stop penalising/boosting by RealPage.
 - [x] T7 Chatbot: rewrite SOUL.md, query skill and plugin so the agent knows nothing about RealPage the company; archive TEST-ANSWERS/SPOT-CHECK; fix link_guard tests.
 - [x] T8 Rewrite README.md, AGENTS.md, CHANGELOG header, business/BUSINESS.md, marketing-board to the new "leads for anyone selling to apartment owners" story; drop RealPage plans from docs/plans (site-library, ai-visibility v3/v4) into archive.
-- [ ] T9 propertystack skill docs/tests (lead-finder, deep-dive, find-upcoming): reword "RealPage sales" to general buyers; keep detector rules.
+- [x] T9 propertystack skill docs/tests (lead-finder, deep-dive, find-upcoming): reword "RealPage sales" to general buyers; keep detector rules.
 - [ ] T10 Final sweep: run the check, start the site locally, click every page, chat 5 questions; nothing mentions RealPage as the customer.
 
 ## How to try it

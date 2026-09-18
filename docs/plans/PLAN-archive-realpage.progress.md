@@ -141,6 +141,27 @@
 
 - T7 follow-up: a stray uncommitted edit to propertystack/data/tx/chat-leads.csv (two phone numbers reformatted badly, not part of T7) was discarded so the repo is clean. Check passes. If it reappears, find which test or script rewrites that file.
 
+## T9 ✅ propertystack skill docs/tests reworded for general buyers (2026-09-18)
+
+**What:** Rewrote propertystack skill docs and tests to position them for general lead-finding, not RealPage sales:
+
+- **lead-finder/SKILL.md** line 36: Changed "fewest-RealPage-buildings state" to "state with the fewest processed leads" (more accurate and vendor-agnostic)
+- **lead-finder/tests/test_quality.py** line 34: Changed test fixture software from "RealPage" to "Entrata" 
+- **deep-dive/SKILL.md** lines 95-96: Generalized rule from "never claims to be RealPage" to "never claims to work for the company you're calling" — now covers any property-management vendor
+- **deep-dive/validate.py** lines 9-14 and 100-103: Updated comment and validation check to detect common PMS brands (Yardi, Entrata, AppFolio, RealPage, etc.) rather than just RealPage
+- **deep-dive/fixtures**: Renamed `bad-realpage-opener.md` → `bad-company-claim-opener.md`; changed example opener from "with RealPage" to "with Yardi"
+
+**Detector rules kept:** Comment on `record.py` line 48 about software brands remains unchanged — the software field still tracks all vendors.
+
+**How checked:**
+- `bash tooling/check-no-realpage-target.sh` → ✓ No RealPage-as-target references found
+- `propertystack/skills/deep-dive validate.py --self-test` → ✓ All 4 fixtures pass (good.md valid; 3 bad cases detected correctly)
+- Full test suite: 556 tests pass (chatbot, tooling, propertystack skills)
+
+**Commit:** fed800b
+
+**Next:** T10 final sweep — site check, local build, 5 chat questions, verify nothing mentions RealPage as the customer
+
 ## T8 ✅ Rewrite marketing and business files; move archived plans (2026-09-18)
 
 **What:** Rewrote README.md, AGENTS.md, CHANGELOG.md, and marketing-board/README.md to position CraneSignal as a general lead finder for anyone selling to apartment owners, not a RealPage pitch. Created business/BUSINESS.md explaining the product, market, and business model. Moved four RealPage-focused plans (PLAN-ai-visibility-v3.md, PLAN-ai-visibility-v4.md, PLAN-ai-visibility-v4-run.md, PLAN-realpage-site-library-part2.md) from docs/plans/ to archive/realpage/.
