@@ -11,6 +11,6 @@ cd "$REPO"
 bash "$HERE/run.sh" >/tmp/ai-visibility-run.log 2>&1 || { tail -20 /tmp/ai-visibility-run.log; exit 1; }
 python3 "$HERE/to_research.py" >/dev/null
 
-git add site/data/ai-visibility.json site/data/ai-visibility-history 09-ai-visibility/summary.md
+git add site/data/ai-visibility.json site/data/ai-visibility-history archive/realpage/09-ai-visibility/summary.md
 git diff --cached --quiet || git commit -qm "AI Visibility: Gemini run $(date +%F)"
 python3 "$HERE/report.py"
