@@ -102,7 +102,7 @@ Check: `python3 -m pytest -q casestudy/tests`
   input, and both samples passing. Missing clocks or invalid zones escalate; historical sample
   dates must be evaluated using the input/reference clock, never today's server date.
 
-- [ ] **C2 Channel and send-time inference.** Select the first preferred consented channel; voice
+- [x] **C2 Channel and send-time inference.** Select the first preferred consented channel; voice
   proposes a call task rather than an automated message. Use explicit schedule/cadence fields if
   supplied. Otherwise use this versioned, disclosed hypothesis for the sample cadence form: parse a final
   `dayN` token from `task_id`, set the due date to interaction-local date + N, and use the observed

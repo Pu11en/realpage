@@ -55,3 +55,29 @@ public `AssignmentAnswer`, whose `next_message` is non-nullable; C7 must decide 
 nullable for do-not-send cases. Inbound reply / prior-option field names are guesses at the
 hold-out shape (several aliases accepted). `days_to_move` is measured from the reference date
 (33 and 71 for the samples), not the send date.
+
+## C2 Channel and send-time inference — done
+
+What I did:
+- Added `casestudy/schedule.py`: `select_channel()` (first preferred channel with explicit
+  consent; voice → `call_task`, never an automated message), `parse_day_token()` (final `dayN`,
+  all digits), `compute_send_time()` (interaction-local date + N at the channel slot, SMS 09:00 /
+  email 10:00, clamped into the 09:00-20:00 Mon-Sat / 12:00-20:00 Sunday project window before
+  comparison, advance a day if not strictly after the interaction), and `infer_schedule()` which
+  takes a `GateOutcome` and returns a `Schedule` with an explained, cited, confidence-labelled trail.
+  Explicit `input.send_at` / `cadence_days` / `follow_up_days` / `cadence.delay_days` outrank the
+  token; no token means N=0 flagged uncertain. Versioned as `send_time_v1`.
+- Added `casestudy/tests/test_schedule.py` (16 tests): both exact sample timestamps, email when
+  SMS is first but unconsented, voice call task, same-day pre-slot, post-slot (incl. exactly 09:00),
+  Sunday noon clamp computed before comparison, Phoenix (no DST), Los Angeles, fall-back and
+  spring-forward DST boundaries, malformed timezone never schedules, `day10` parses all digits,
+  opaque ID flags uncertainty, explicit fields beat the token, explicit send_at inside/outside window.
+- Decision log entry 31.
+
+Commit: see git log ("Case study C2").
+
+Check: `python3 -m pytest -q casestudy/tests` — 62 passed.
+
+Left open: `Schedule.send_at_iso` is the string that C7 should place in `next_message.send_at`.
+The voice slot (10:00) and the quiet-hours window are project defaults. Sunday clamp shifts SMS
+and email to the same 12:00 slot, which the samples neither confirm nor deny.

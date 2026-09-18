@@ -277,3 +277,20 @@ states as passed, use `datetime.now()`. **Why it won:** PLAN C1 and REVIEW-astra
 correction; two examples cannot justify inventing consent or state passes. Terminal decisions do
 not yet map to the public contract (`next_message` is non-nullable there); C7 decides that shape.
 **Source:** `PLAN-casestudy-bot.md` C1, `REVIEW-astra.md`, `RULEBOOK-research.md` §3 (as hypotheses).
+
+## 31. Send time = interaction-local date + `dayN`, at the channel slot, clamped to the window first
+
+**Decided:** `casestudy/schedule.py` picks the first preferred channel with explicit consent
+(voice yields a human call task, never an automated message). Send time (`send_time_v1`): an
+explicit `input.send_at` or cadence field wins; otherwise the final `dayN` token of `task_id`
+(all digits, so `day10` is 10) is the delay; due date = interaction-local date + N at the observed
+slot (SMS 09:00, email 10:00); the slot is clamped into the day's window (09:00-20:00 Mon-Sat,
+12:00-20:00 Sunday) *before* comparing with the interaction, and if the candidate is not strictly
+after the interaction it advances one day. No token and no field means N=0 with a visible
+uncertainty flag. This reproduces both sample timestamps (Dec 8 09:04 local + day0 → Dec 9 09:00;
+Dec 6 05:30 local + day3 → Dec 9 10:00). Offsets come from `zoneinfo` on the send date, so DST
+and Phoenix behave. **Alternatives:** a shared Dec 9 evaluation clock; parsing one digit; treating
+the token as proof of elapsed cadence time. **Why it won:** it is the simplest rule that explains
+both observations, and PLAN C2 requires it disclosed as a hypothesis. The window is a project
+default, not a verified national legal rule; the token is an identifier hint, not a business field.
+**Source:** `PLAN-casestudy-bot.md` C2, both records in `casestudy/data/sample.jsonl`.
