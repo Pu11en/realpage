@@ -48,7 +48,7 @@ Check: `python3 casestudy/research/check_candidates.py`
 - [x] **H3 Compliance and guardrails beyond what we have.** TCPA/CTIA/CAN-SPAM helpers, opt-out
   keyword handling, fair-housing or discrimination classifiers (e.g. Zillow's open-source Fair
   Housing Classifier — find the code), PII detectors that run offline and light.
-- [ ] **H4 LLM copywriting for CRM / real estate.** Prompt libraries, brand-voice rules expressed as
+- [x] **H4 LLM copywriting for CRM / real estate.** Prompt libraries, brand-voice rules expressed as
   checks, open datasets of good leasing or real-estate SMS and email templates, and any evaluation
   sets for marketing copy.
 - [ ] **H5 Evaluation that grades against a reference.** Code for checklist-from-reference grading

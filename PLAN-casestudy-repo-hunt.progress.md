@@ -38,3 +38,18 @@ no area produced a "USE" verdict — compliance/guardrails for this project's si
 by small hand-written lists, not by installing frameworks. 4 candidates added, all pass the
 format checker.
 
+
+## H4 LLM copywriting for CRM / real estate (2026-09-17)
+Searched for real-estate/leasing prompt libraries, brand-voice linters, open leasing SMS/email
+datasets, and marketing-copy evaluation benchmarks. Best find: **digital-marketing-pro**
+(indranilbanerjee, MIT, 824 stars, active) — its `/check` pre-publish gate combines an AI-tell
+scanner, a brand-voice distance score (≤0.15 threshold against a stored brand profile), and a
+regex claim-verifier; worth mirroring as a pattern for our C4 validators, not worth installing.
+Also found `efeoncepro/voice.md`, a tiny (1 star) but well-shaped spec for a per-brand
+forbidden-words/length-limits file with a CLI linter — concept worth stealing, code too new to
+trust. `KRASA-AI/real-estate-ai-skills` looked promising but couldn't be verified (7 stars, no
+visible working prompt files) — SKIP. Confirmed via the CTIA Messaging Principles page that our
+already-planned STOP/HELP opt-out wording matches the real industry standard (VENDOR DATA).
+Searched hard for an open leasing-SMS dataset or a marketing-copy eval benchmark and found none
+usable or free — this confirms C5's plan to hand-write the dozen templates is correct, no import
+shortcut exists. 5 candidates added, all pass the format checker.

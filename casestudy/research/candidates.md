@@ -151,3 +151,43 @@ guardrails-ai, NeMo Guardrails, promptfoo, Python rules engines.
 **What we'd take:** N/A — this is a decision note, not a code pull. `PLAN-casestudy-bot.md` task C2 defines the send-time window purely as Mon–Sat 09:00–20:00 local, Sunday not before 12:00, with explicit test cases for DST (`America/Phoenix`, `America/Los_Angeles`) and weekends. It never mentions holidays, and C3's tour-scheduling rule ("first two weekdays at least two days out") also only checks weekday-ness, not holiday-ness. Adding a holiday check would be scope creep not asked for by the sample tests.
 **Verdict:** SKIP
 **In plain words:** We looked specifically at whether US holidays should affect send-time or tour-day logic, and the answer is no — the plan's own test cases never test a holiday, so building or importing holiday-awareness now would be solving a problem nobody asked for; `vacanza/holidays` is noted above in case that changes later.
+
+### indranilbanerjee/digital-marketing-pro
+**URL:** https://github.com/indranilbanerjee/digital-marketing-pro
+**Area:** H4 LLM copywriting for CRM / real estate
+**License / stars / last commit:** MIT / 824 stars / active (pushed 2026-09-07)
+**What we'd take:** Not the whole "marketing OS" (way too heavy) — the pattern behind its `/check` skill, a pre-publish gate that runs three cheap, deterministic checks before anything ships: an AI-tell scanner (`ai-tell-scan.py`, catches generic-sounding phrases and adverb clustering), a `brand_voice_match` score (0–1 distance against a stored `brand-profile.json`, gate at ≤0.15), and a regex-based `claim-verifier.py` that flags unverifiable numeric claims (e.g. `%` figures). This is the same shape as our planned C4 validators — worth copying the idea of scoring "distance from brand voice" as one more automatic check, and the idea of a small `claim-verifier` regex for anything that looks like a factual promise (e.g. "guaranteed", specific dollar amounts) in generated leasing copy.
+**Verdict:** MIRROR PATTERN
+**In plain words:** A large open-source marketing tool has a neat, cheap trick for catching AI-sounding or unsupported copy before it ships — three small automatic checks instead of one big AI judge — and we can copy that idea (not the tool) for our own message-checking step.
+
+### efeoncepro/voice.md
+**URL:** https://github.com/efeoncepro/voice.md
+**Area:** H4 LLM copywriting for CRM / real estate
+**License / stars / last commit:** Apache-2.0 / 1 star / active (pushed 2026-05-16)
+**What we'd take:** Nothing to install (too new/unproven, 1 star), but the idea is worth stealing: a single `VOICE.md` file per brand with forbidden words, emoji rules, and per-channel length limits, plus a tiny CLI that lints a candidate message string against it and reports which rule failed. That's basically a spec for what a `brand-voice.json` + `check_brand_voice()` function in our own `casestudy/templates.py`/validators could look like.
+**Verdict:** SKIP
+**In plain words:** This is a neat idea for writing brand voice rules as a small checklist file, but the project itself is brand new with almost no users, so we should borrow the concept, not the code.
+
+### KRASA-AI/real-estate-ai-skills
+**URL:** https://github.com/KRASA-AI/real-estate-ai-skills
+**Area:** H4 LLM copywriting for CRM / real estate
+**License / stars / last commit:** MIT / 7 stars / active (pushed 2026-07-31)
+**What we'd take:** Unclear — the README advertises 30+ real-estate prompt "skills" including multi-touch SMS/email nurture sequences, but the actual prompt files were not visible without cloning, and with only 7 stars and no verifiable working examples in the page content, it reads more like a marketing landing page than proven code.
+**Verdict:** SKIP
+**In plain words:** This repo claims to have ready-made real-estate texting/email prompts, but we could not confirm the actual files are there or good, and almost nobody has starred it, so it is not trustworthy enough to build on.
+
+### CTIA Messaging Principles and Best Practices (reference document, not a repo)
+**URL:** https://www.ctia.org/the-wireless-industry/industry-commitments/messaging-interoperability-sms-mms
+**Area:** H4 LLM copywriting for CRM / real estate
+**License / stars / last commit:** N/A — industry PDF/webpage, no code, updated periodically (latest cited 2023, still the active version)
+**What we'd take:** Not code — a vocabulary and rule check. It confirms our already-vendored opt-out keyword list (STOP/HELP etc.) and "Msg & Data rates may apply" disclosure pattern are the actual industry standard for any generated SMS copy, so C4's copy validator should also reject generated SMS text that promises anything the record doesn't support, per CTIA's anti-deception rule.
+**Verdict:** VENDOR DATA
+**In plain words:** This is the official rulebook the wireless carriers use for text-message marketing; it backs up the STOP/HELP wording we already planned and reminds us generated text should never promise something not in the data.
+
+### No open real-estate/leasing marketing-copy dataset or eval benchmark found
+**URL:** https://arxiv.org/abs/2506.17863
+**Area:** H4 LLM copywriting for CRM / real estate
+**License / stars / last commit:** N/A — research paper, no released dataset/code found
+**What we'd take:** Nothing directly — searched for open leasing/real-estate SMS or email template datasets and marketing-copy evaluation benchmarks specifically; found only paywalled vendor blog "template lists" (Dexatel, Textus, EZ Texting) with no license or downloadable data, and one arXiv paper on LLM-as-judge for ad copy that does not release its dataset. Confirms C5's plan to hand-write a small set of templates per (intent × channel × language) is the right call — there is no reusable open dataset to import instead.
+**Verdict:** SKIP
+**In plain words:** We looked hard for a ready-made, free set of real leasing text/email examples or a scoring benchmark for marketing copy and found nothing open and trustworthy — writing our own dozen templates by hand, as already planned, is still the right move.
