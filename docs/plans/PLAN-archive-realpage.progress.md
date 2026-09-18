@@ -85,3 +85,13 @@
 **What:** Moved handoffs/2026-09-18-realpage.md (case-study interview) and handoffs/2026-09-14-realpage.md (goal = RealPage interview leverage) to archive/realpage/handoffs/. Kept 2026-09-15-realpage.md and -night.md: they are about the CraneSignal agent and shipcheck, not the interview. No other file referenced the old paths; no .ccdb-* interview cards exist in the repo. T3 box ticked.
 
 **How checked:** check-no-realpage-target.sh passes; grep for the old paths finds nothing outside this log.
+
+## T4 ✅ AI Visibility removed (2026-09-18)
+
+**What:** Moved the AI Visibility page, its site data and history, the two builder scripts, propertystack/data/ai-visibility, tooling/ai-visibility, its chat-data builder, its QA checks/test and design screenshot to archive/realpage/ai-visibility/. Dropped the nav tab (site/js/app.js), the Caddyfile route, the Dockerfile KB copy line, the design-pages entry, the AI-visibility question in check_answers.py, and the page from three test page lists.
+
+**Commit:** 2df476e
+
+**How checked:** check-no-realpage-target.sh passes. tooling/qa/fixes_tests: 199 pass, 4 fail — the same 4 fail before this change (chatbot SOUL/link tests, T7's job).
+
+**Left open:** Chatbot SOUL/skill/plugin still mention AI Visibility (T7); README/AGENTS/plans mention it (T8); site/data/buildbot.json keeps a historical build-log entry naming it. Stale allow-list lines for the old paths remain in the check script (harmless).
