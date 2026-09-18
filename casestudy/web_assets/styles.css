@@ -258,3 +258,7 @@ footer a { color: var(--blue); }
 .ai-steps li p { margin: 2px 0 0; }
 .ai-steps pre { margin: 6px 0 0; padding: 10px; min-height: 0; height: auto; max-height: 260px; color: var(--ink, #1a1a1a); border: 0; overflow: auto; border-radius: 4px; background: var(--blue-soft); font-size: 0.8125rem; white-space: pre-wrap; overflow-wrap: anywhere; }
 .check-note { display: block; margin-top: 2px; color: var(--muted); font-size: 0.8125rem; }
+.agent-diagram { margin: 16px 0; }
+.agent-diagram img { display: block; width: 100%; height: auto; border: 1px solid var(--rule); border-radius: 6px; background: var(--paper); }
+.agent-diagram figcaption { margin-top: 6px; font-size: 0.875rem; }
+.phase-list { margin: 0 0 16px; padding-left: 22px; display: grid; gap: 8px; }

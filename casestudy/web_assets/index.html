@@ -181,17 +181,20 @@
           <p class="eyebrow">Decision boundary</p>
           <h3 id="boundary-title">Code decides. The model may only write.</h3>
         </div>
-        <div class="boundary-flow" aria-label="Decision flow">
-          <div><strong>1</strong><span>Consent and stop gates</span><small>deterministic</small></div>
-          <span class="flow-arrow" aria-hidden="true">→</span>
-          <div><strong>2</strong><span>Channel, time and action</span><small>deterministic</small></div>
-          <span class="flow-arrow" aria-hidden="true">→</span>
-          <div><strong>3</strong><span>AI writes the wording</span><small>one DeepSeek call, temperature 0</small></div>
-          <span class="flow-arrow" aria-hidden="true">→</span>
-          <div><strong>4</strong><span>Safety validation</span><small>deterministic</small></div>
-          <span class="flow-arrow" aria-hidden="true">→</span>
-          <div><strong>5</strong><span>Exact public export</span><small>two keys only</small></div>
-        </div>
+        <figure class="agent-diagram">
+          <a href="/case-study/assets/agent-flow.html" target="_blank" rel="noopener"><img src="/case-study/assets/agent-flow.png" alt="Agent flow: customer record, permission gates, channel and time, buttons and next step, safe draft, DeepSeek writer, safety check, final answer, with safe exits for no consent and rejected drafts" loading="lazy"></a>
+          <figcaption>Open the interactive diagram ↗</figcaption>
+        </figure>
+        <ol class="phase-list">
+          <li><strong>Customer record in.</strong> One JSON line per customer. The answer key is removed before anything runs.</li>
+          <li><strong>Permission gates (Python).</strong> Checks consent for each channel and any STOP request. No permission means stop here: do not send, or create a human task. The AI is never called.</li>
+          <li><strong>Channel and time (Python).</strong> Picks the first preferred channel with consent, then the send time in the customer's time zone (text 9 a.m., email 10 a.m. in the samples).</li>
+          <li><strong>Buttons and next step (Python).</strong> Sets the exact reply options (Thu or Fri) or tour link, and the follow-up plan.</li>
+          <li><strong>Safe draft (Python).</strong> Builds a pre-checked template message, used as a starting point and as the backup.</li>
+          <li><strong>DeepSeek writer (AI).</strong> One call, temperature 0, JSON only, approved fields only. It may reword the message but cannot change buttons, time, or channel.</li>
+          <li><strong>Safety check (Python).</strong> Checks the opt-out line, subject, exact buttons or link, length, fair-housing words and personal details. It passes, or the safe draft is used.</li>
+          <li><strong>Final answer out.</strong> Exactly two parts: next message and next action. Nothing is actually sent.</li>
+        </ol>
         <p>The AI receives only approved record fields plus a pre-checked draft to improve, and must reply in JSON with the exact buttons or link it was given. It cannot choose consent, channel, timing, buttons, or next action. If its reply is invalid, late, or unsafe, a checked template is used instead, and the trace says why.</p>
       </div>
 
