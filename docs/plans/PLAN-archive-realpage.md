@@ -9,7 +9,7 @@ Try: bash tooling/run-local.sh
 Open: http://localhost:8080
 
 ## Tasks
-- [ ] T1 Write `tooling/check-no-realpage-target.sh`: greps site/, chatbot/, README/AGENTS for RealPage-as-target wording (allow-list: software-brand fields in data JSON, detector rules); exits non-zero with file list.
+- [x] T1 Write `tooling/check-no-realpage-target.sh`: greps site/, chatbot/, README/AGENTS for RealPage-as-target wording (allow-list: software-brand fields in data JSON, detector rules); exits non-zero with file list.
 - [ ] T2 Move research folders to archive/realpage/: 01-company, 02-products, 03-reviews, 04-reddit, 06-news, 09-ai-visibility, 09-build-ideas, 10-dashboard-wireframes, raw/realpage-site, raw/research-01.
 - [ ] T3 Move case study to archive/realpage/casestudy (+ PLAN-casestudy-*.md, handoffs about the interview, .ccdb-* interview cards). Turn off the case-study Railway service and the /case-study link on app.cranesignal.com (only after Drew's OK).
 - [ ] T4 Remove AI Visibility: site/ai-visibility.html, site/data/ai-visibility*, ai_visibility_lawsuit.py, build_ai_visibility.py, propertystack/data/ai-visibility, tooling/ai-visibility → archive; drop nav links.
