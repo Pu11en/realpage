@@ -323,3 +323,30 @@ Left open: live-model latency and the optional tone judge remain unmeasured/not 
 C10 is still the next task.
 
 - Reviewer still had concerns about **C9 Evaluate every assignment field.** For each record, report every `required_state`, every: Preserve the reference’s move-timing meaning in casestudy/evaluation.py instead of checking only the month, and add a regression test proving early February fails against the mid-February reference.
+
+## C10 Build the demo page — done
+
+What I did:
+- Added a full-width case-study workbench that accepts pasted or uploaded JSONL, defaults to the
+  offline templates, and keeps all batch records selectable even when one is malformed.
+- Kept the exact public export on the left and separate diagnostics on the right, including engine,
+  latency, fallback, record-local errors, the cited decision trail, and a row for every required
+  state, constraint, and threshold (including unsupported or not-measured values).
+- Copy one, Copy all, and Download use the server-returned C7 serializer bytes rather than
+  rebuilding JSON in the browser. Added API, structure, accessibility/state, and real Chromium
+  coverage for 1, 2, 12, uploaded, malformed, and offline inputs, including clipboard and download
+  byte reparsing.
+- Added decision log entry 39. Authentication proxying, navigation, container, health, and request
+  limits remain C11 as planned.
+
+Code commit: `03f14d4` (`Case study C10: build exact export demo page`).
+
+Check: `python3 -m pytest -q casestudy/tests` — 216 passed. Also ran
+`python3 -m py_compile casestudy/*.py`, `node --check casestudy/web_assets/app.js`, and
+`git diff --check` successfully. A repository-wide bare `pytest` cannot collect three unrelated
+legacy/archive suites because of their existing import-path collisions (`merge`, `census`, and a
+duplicate test module); the plan's complete case-study suite passes.
+
+Left open: C11 must put `/case-study*` behind the existing Caddy sign-in gate, add the navigation
+entry, containerize this service, and prove health, limits, restart, and isolation. No live model
+call was made.

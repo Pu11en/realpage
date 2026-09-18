@@ -186,7 +186,7 @@ Check: `python3 -m pytest -q casestudy/tests`
   for the planned optional tone/human grading; retain this choice, and label unavailable judge runs
   `not_run`. The tone judge is non-gating and uncalibrated; it is never a deployed server backend.
 
-- [ ] **C10 Build the demo page.** Full-width Case study page behind existing sign-in; paste/upload
+- [x] **C10 Build the demo page.** Full-width Case study page behind existing sign-in; paste/upload
   arbitrary JSONL. Left side shows only the exact export object; right side shows diagnostics and a
   row for every assertion/threshold, including unsupported ones. Copy one, Copy all, and Download
   must serialize the same submission bytes as the CLI. Show engine, latency, fallback/offline state,
