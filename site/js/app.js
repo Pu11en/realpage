@@ -58,18 +58,11 @@ function renderShell(activeKey) {
     (t) => `<a href="${t.href}" class="${t.key === activeKey ? "active" : ""}">${t.label}</a>`
   ).join("") + `<a href="#" class="nav-chat" data-chat-toggle title="Ask CraneSignal (sign in)">Chat</a>`;
 
-  const vendorOptions = ["Everyone", ...VENDORS]
-    .map((v) => `<option value="${v}" ${v === viewAs ? "selected" : ""}>${v}</option>`)
-    .join("");
-
   shell.innerHTML = `
     <aside class="sidebar">
       <a class="wordmark" href="${LANDING_URL}" title="Back to the CraneSignal home page">CraneSignal</a>
       <nav>${navHtml}</nav>
       <div class="top-controls">
-        <label for="view-as-select" style="color: var(--text-dim); font-size: 11px;"
-          title="${VIEW_AS_TIP}">View as</label>
-        <select id="view-as-select" title="${VIEW_AS_TIP}">${vendorOptions}</select>
         <div id="last-updated" style="color: var(--text-dim); font-size: 11px;"></div>
         <a href="${LANDING_URL}" style="color: var(--text-dim); font-size: 11px;">&larr; Home page</a>
         <a href="privacy.html" style="color: var(--text-dim); font-size: 11px;">Privacy</a>
@@ -79,10 +72,6 @@ function renderShell(activeKey) {
     <main class="main" id="page-content"></main>
     <a class="ask-fab" href="#" data-chat-toggle aria-label="Ask CraneSignal">Ask</a>
   `;
-
-  document.getElementById("view-as-select").addEventListener("change", (e) => {
-    setViewAs(e.target.value);
-  });
 
   showLastUpdated();
   if (window.initChatPanel) window.initChatPanel();
