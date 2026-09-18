@@ -108,3 +108,13 @@
 - `python3 tooling/realpage-library/cards.py --help` runs without error
 - `python3 tooling/realpage-library/facts.py` imports and executes successfully
 - `bash tooling/check-no-realpage-target.sh` passes
+
+## T5 ✅ recruiter scorecard framing removed (2026-09-18)
+
+**What:** Renamed site/data/recruiter-scorecard.json to saved-scorecard.json and reworded its status from "Historical recruiter scorecard" to "Historical scorecard" (also in evals.json, chat-stats.json, build_evals.py and test_h2). The file was kept, not deleted, because Under the Hood's frozen numbers are rebuilt from it. Searched map, under-the-hood, index and app.js for "for RealPage" panels: none remain (T1 already removed them); the only RealPage mention in pages is the software-brand list in app.js.
+
+**Commit:** 1b10fd1
+
+**How checked:** check-no-realpage-target.sh passes; test_h2 passes; fixes_tests 199 pass, the same 4 chatbot failures as before (T7).
+
+**Left open:** map.js still loads client-map.json (T6). Old docs/plans/done and .planning notes still say "recruiter" (history, not shown on the site; T8 may archive).
