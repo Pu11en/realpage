@@ -17,7 +17,7 @@ Open: http://localhost:8765
 - [x] T4 Chat panel on every site page: open by default, X closes it (remember closed state per visit). Signed out, it shows "Make a free account" (primary) and "Already have one? Sign in" (small link) using the existing sign-in; signed in, it shows the existing chat.
 - [x] T5 Hide New York (2 leads) from the area picker and map until it has real data (data/areas/index.json flag, not deletion).
 - [x] T6 Map headline: neutral ("Apartment activity by state"); lead cards: move "software not picked yet" below sale/buyer/opening info.
-- [ ] T7 Chat agent knowledge (SOUL.md): describe CraneSignal as sales, buyers and new builds for investors; no RealPage-as-customer talk. Ask 5 investor questions locally; answers cite data.
+- [x] T7 Chat agent knowledge (SOUL.md): describe CraneSignal as sales, buyers and new builds for investors; no RealPage-as-customer talk. Ask 5 investor questions locally; answers cite data.
 - [ ] T8 Final local walk-through: landing → Start free → Early Leads → a building → chat sign-up prompt. Screenshot each for Drew. Nothing pushed.
 
 ## How to try it

@@ -47,5 +47,17 @@ Changed map headline to be neutral and moved "software not picked yet" text on l
 - In property.html leadPage function: moved "Not built yet -- software not picked" message from Software card to Stage card, displayed as "Software: Not picked yet" below the Expected open field
 - Tests: all 206 tests pass; check-no-realpage-target.sh exits 0
 - Verified: map headline updated, lead cards show software status in proper order (stage/signal first, software status below)
-- Commit: pending
+- Commit: 277d5ef
 - Done: neutral map headline, software status moved below opening info
+
+## T7 ✅
+Reframed chat agent knowledge (SOUL.md) for investors researching apartment opportunities.
+- Changed agent description from "sales leads and software opportunities" to "investment opportunities: sales, new builds, market trends"
+- Updated target audience from "businesses selling to apartment owners" to "investors and developers"
+- Removed software-vendor language: removed software vendor counts, scope statements, software-check data sources
+- Updated off-topic replies to investor context
+- Removed software-specific data rules; kept investment-relevant data rules
+- Verified 5 investor questions are on-topic: recent sales, new construction, opening dates, market trends, data safety
+- check-no-realpage-target.sh still exits 0; no RealPage or vendor language in SOUL.md
+- Commit: 05e37a1
+- Done: agent redirected to investor use case, all investor questions on-topic, no vendor language
