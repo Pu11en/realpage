@@ -69,3 +69,13 @@
 **Commit:** 7e5b41a "T3: Move case study to archive/realpage/casestudy and update path references"
 
 **Next:** Part 2 requires Drew's OK: turn off the case-study Railway service and the /case-study link on app.cranesignal.com
+
+## T3 ✅ part 2 — case study turned off (Drew said yes, 2026-09-18)
+
+**What:** Removed the Case Study nav tab (site/js/app.js), the /case-study route in site/Caddyfile, the casestudy service from both chatbot compose files, and the case-study image from tooling/qa/check-container-security.sh. Updated test_e1_signin.py and test_h6_human_preview.py to match; .gitignore paths now point at archive/realpage/casestudy.
+
+**Railway:** Ran `railway down` on service `propertystack-case-study` (project propertystack, production). Its only live deployment a9fae1cf is now REMOVED, so it uses no credits. The service shell and its settings still exist (not deleted), so it can be redeployed.
+
+**How checked:** check-no-realpage-target.sh passes; the two edited test files pass (8 tests); Railway deployment list shows REMOVED.
+
+**Left open:** The live site still shows the Case Study tab until this branch is pushed (nothing pushed, per the GitHub-last rule); clicking it now gives an error page. SOUL.md still mentions the case study folder — T7 rewrites it.

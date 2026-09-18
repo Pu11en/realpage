@@ -32,20 +32,16 @@ services:
       CORS_ALLOW_ORIGIN: "http://localhost:8876"
     ports: !reset []
 
-  casestudy:
-    ports: !reset []
-
   site:
     build:
       # site/Dockerfile copies its Caddyfile and public files from the build
       # context, so this must be the site directory rather than the repo root.
       context: ../site
       dockerfile: Dockerfile
-    depends_on: [open-webui, casestudy]
+    depends_on: [open-webui]
     environment:
       PORT: "8080"
       CHAT_UPSTREAM: http://open-webui:8080
-      CASESTUDY_UPSTREAM: http://casestudy:8080
     ports:
       - "8876:8080"
 

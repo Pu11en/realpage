@@ -5,7 +5,6 @@ const NAV_TABS = [
   { key: "map", label: "Map", href: "map.html" },
   { key: "leads", label: "Early Leads", href: "index.html" },
   { key: "ai", label: "AI Visibility", href: "ai-visibility.html" },
-  { key: "case-study", label: "Case Study", href: location.hostname === "localhost" && location.port === "8765" ? "http://localhost:18091/case-study" : "/case-study" },
   { key: "hood", label: "Under the Hood", href: "under-the-hood.html" },
 ];
 
