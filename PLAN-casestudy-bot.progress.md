@@ -231,3 +231,20 @@ Check: `python3 -m pytest -q casestudy/tests` — 149 passed.
 
 Left open: the no-message action variants are conservative project shapes, not observed assignment
 outputs; the diagnostics make that explicit. C8 adversarial fixtures are next.
+
+## C7 independent-review correction — done
+
+What I fixed:
+- Personalization evidence is computed from the final public message, including model-written
+  messages, and is empty when the safe public answer contains no message.
+- Diagnostics merge the final validator's verified states with the gate states and include the
+  final validator's cited rule results in the visible reasoning trail.
+- Blank and whitespace-only JSONL lines now return a safe escalation answer instead of being
+  dropped; physical line numbers remain correct for every later malformed line.
+- Added focused regression tests for all three review findings.
+
+Code commit: `769ce03` (`Fix C7 final diagnostics and blank lines`).
+
+Check: `python3 -m pytest -q casestudy/tests` — 151 passed.
+
+Left open: nothing for C7; C8 adversarial fixtures are next.

@@ -417,3 +417,8 @@ record export, exact public-key isolation, visible diagnostics, safe malformed-r
 proof that `expected` cannot influence inference.
 **Source:** `PLAN-casestudy-bot.md` C7 and architecture; both records in
 `casestudy/data/sample.jsonl`.
+
+**Review correction:** Diagnostics now derive personalization evidence from the final public
+message, merge the final validator report's verified states with gate states, and expose that
+validator's cited results in `why`. Blank and whitespace-only JSONL lines produce safe escalation
+answers and retain their physical line numbers, so later parse errors are never misnumbered.
