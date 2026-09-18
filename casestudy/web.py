@@ -11,6 +11,7 @@ import collections
 import hmac
 from datetime import datetime, timezone
 import json
+import re
 import os
 from pathlib import Path
 from typing import Any
@@ -55,6 +56,13 @@ def _normalize_text(text: str) -> str:
     sequence of JSON objects, re-emit one compact object per line. Anything else is left alone so
     malformed lines still surface as visible errors.
     """
+    text = text.lstrip("\ufeff")
+    # Drop wrappers that chat apps, email and Markdown add around pasted data: ``` / ```json / ~~~ fences.
+    text = "\n".join(l for l in _lines(text) if not re.fullmatch(r"\s*(```|~~~)\s*[\w-]*\s*", l))
+    # Word, Slack and phones turn straight quotes into curly ones; JSON needs straight quotes.
+    if any(q in text for q in "\u201c\u201d\u201e"):
+        fixed = text.translate(str.maketrans({"\u201c": '"', "\u201d": '"', "\u201e": '"'}))
+        text = fixed
     lines = [l for l in _lines(text) if l.strip()]
     def is_obj(line: str) -> bool:
         try:

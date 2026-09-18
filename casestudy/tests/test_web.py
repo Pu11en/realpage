@@ -267,3 +267,13 @@ def test_page_accepts_common_handover_shapes(shape):
     payload = run_payload(text, offline=True)
     assert payload["record_count"] == 2
     assert [json.loads(r["submission_line"])["next_action"]["type"] for r in payload["records"]] == ["start_cadence", "follow_up_in_days"]
+
+
+def test_page_ignores_markdown_fences_and_curly_quotes():
+    from casestudy.web import run_payload
+    lines = (Path(__file__).resolve().parents[1] / "data" / "sample.jsonl").read_text(encoding="utf-8").splitlines()
+    fenced = "```json\n" + "\n".join(lines) + "\n```\n"
+    assert run_payload(fenced, offline=True)["record_count"] == 2
+    curly = "\n".join(lines).replace('"task_id"', "“task_id”")
+    payload = run_payload(curly, offline=True)
+    assert payload["record_count"] == 2 and not any(r["diagnostics"]["errors"] for r in payload["records"])
