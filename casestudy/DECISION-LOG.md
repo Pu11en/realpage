@@ -441,3 +441,27 @@ practice set; reporting an F1 threshold from one STOP example; leaving the booki
 **Why it won:** PLAN C8 requires separate goldens, adversarial coverage, per-fixture structure and
 meaning checks, balanced reply examples, and honest claims about what that synthetic data proves.
 **Source:** `PLAN-casestudy-bot.md` C8; decisions 31-36.
+
+## 38. Evaluation: every field visible, aggregate evidence never invented per record
+
+**Decided:** `casestudy/evaluation.py` (`evaluation_v1`) reports every named required state,
+constraint, and threshold for each record. Unknown fields are `unsupported`; reply F1 and p95 are
+`not_measured` in a single-record diagnostic and become pass/fail only when the batch evaluator has
+the labeled 24-case reply corpus or at least 100 warm offline end-to-end runs. The reply report is a
+labeled multiclass confusion matrix with macro-F1 and sample count. Offline timing includes the full
+pipeline plus public and diagnostic serialization, reports median/p95, fallback/failure counts, and
+stays separate from live-model timing (`not_measured` without authorization). Personalization is a
+disclosed project proxy over safe, message-relevant field coverage: name/property/channel for both
+channels, plus amenity and move timing opportunities for email. A safe model draft below the record's
+threshold falls back to the validated template and is rechecked; a still-low template is reported as
+failed rather than passed. Golden structural and meaning results use Wilson intervals only for their
+binary pass fractions. Synthetic cases are explicitly not represented as hold-out or real-world
+reliability. The existing shipcheck Claude judge and grading server are retained by path as optional,
+uncalibrated, non-gating tools and are reported `not_run`; C9 spends no model credits.
+**Alternatives:** treating per-record latency as p95; assigning F1 from one reply; using a Wilson
+interval for macro-F1; counting every profile field as desirable personalization; letting a generic
+but validator-safe model draft pass; running the optional judge without authorization.
+**Why it won:** PLAN C9 requires complete field accounting, honest corpus/run metrics and sample
+counts, threshold-enforced personalization fallback, and a clear proven-versus-estimated boundary.
+**Source:** `PLAN-casestudy-bot.md` C9; the two expected blocks in `sample.jsonl` (evaluator only),
+`reply_corpus.jsonl`, decisions 33-37.

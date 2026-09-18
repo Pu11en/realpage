@@ -106,7 +106,12 @@ def test_diagnostics_use_final_draft_for_personalization_and_validator_states(mo
 
     monkeypatch.setattr(p, "write", final_writer)
     d = run_record(SAMPLES[0], config=OFFLINE).diagnostics()
-    assert d["personalization_fields"] == ["channel"]
+    # C9 rejects the safe-but-generic model draft on the declared personalization threshold
+    # and rechecks the validated template before exporting it.
+    assert d["engine"] == "template"
+    assert d["fallback_reason"] == "personalization below threshold"
+    assert {"profile.first_name", "input.property_name", "channel"} <= set(d["personalization_fields"])
+    assert any(r["rule"] == "personalization.fallback" for r in d["why"])
     assert {"consent_verified", "fair_housing_check_passed", "brand_style_applied"} <= set(d["verified_states"])
     assert any(r["rule"] == "fair_housing_check_passed" for r in d["why"])
 

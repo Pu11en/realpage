@@ -19,6 +19,7 @@ from typing import Any, Iterable, Optional
 from pydantic import ValidationError
 
 from casestudy.contract import AssignmentAnswer
+from casestudy.evaluation import evaluate_record, personalization_proxy
 from casestudy.gates import GateOutcome, GateResult, run_gates
 from casestudy.intent import Intent, infer_intent
 from casestudy.schedule import Schedule, infer_schedule
@@ -52,6 +53,7 @@ class RunResult:
     fallback_reason: Optional[str] = None
     malformed: bool = False
     versions: dict[str, str] = field(default_factory=dict)
+    evaluation: dict[str, Any] = field(default_factory=dict)
 
     # ---- public path -------------------------------------------------------------
     def submission(self) -> dict[str, Any]:
@@ -83,6 +85,7 @@ class RunResult:
             "model_latency_ms": None if self.model_latency_ms is None else round(self.model_latency_ms, 1),
             "fallback_reason": self.fallback_reason,
             "versions": dict(self.versions),
+            "evaluation": _jsonable(self.evaluation),
         }
 
 
@@ -159,6 +162,28 @@ def run_record(raw: Any, config: Optional[WriterConfig] = None, client=None, clo
         intent = infer_intent(outcome, schedule)
         template = render_templates(outcome, schedule, intent)
         wo = write(outcome, schedule, intent, template, config=config, client=client, clock=clock)
+        # A safe model draft can still be too generic for the record's declared personalization
+        # threshold. In that case C9 requires the validated template fallback and a second check.
+        threshold = rec.thresholds.get("personalization_score_min") if (rec := outcome.record) else None
+        if wo.draft is not None and isinstance(threshold, (int, float)) and not isinstance(threshold, bool):
+            proxy = personalization_proxy(rec, wo.draft)
+            below = proxy["score"] is not None and proxy["score"] < float(threshold)
+            if below and wo.engine == "model" and template.draft is not None:
+                template_proxy = personalization_proxy(rec, template.draft)
+                wo.results.append(GateResult(
+                    "personalization.fallback", "passed" if template_proxy["score"] >= float(threshold) else "failed",
+                    f"model proxy {proxy['score']:.4f} was below {float(threshold):.4f}; rechecked validated template proxy {template_proxy['score']:.4f}",
+                    "PLAN-casestudy-bot.md C9", "conservative_default",
+                    {"model_score": proxy["score"], "template_score": template_proxy["score"], "threshold": threshold},
+                ))
+                wo = WriterOutput(template.draft, "template", template.report, wo.results, wo.latency_ms,
+                                  wo.model_latency_ms, wo.error, "personalization below threshold", wo.version)
+            else:
+                wo.results.append(GateResult(
+                    "personalization.threshold", "failed" if below else "passed",
+                    f"project proxy {proxy['score']:.4f} {'is below' if below else 'meets'} threshold {float(threshold):.4f}",
+                    "PLAN-casestudy-bot.md C9; employer formula unknown", "conservative_default", proxy,
+                ))
         why += outcome.results + schedule.results + intent.results + template.results + wo.results
         if wo.report is not None:
             why += wo.report.results
@@ -181,7 +206,7 @@ def run_record(raw: Any, config: Optional[WriterConfig] = None, client=None, clo
         final_verified = list(dict.fromkeys(
             list(outcome.verified_states) + (list(wo.report.verified_states) if wo.report is not None else [])
         ))
-        return RunResult(
+        result = RunResult(
             task_id=rec.task_id if rec else task_id, answer=answer, why=why, decision=outcome.decision, engine=wo.engine,
             verified_states=final_verified, unsupported_states=list(outcome.unsupported_states),
             reply_class=outcome.reply_class, personalization_fields=final_personalization,
@@ -190,12 +215,16 @@ def run_record(raw: Any, config: Optional[WriterConfig] = None, client=None, clo
             versions={"pipeline": PIPELINE_VERSION, "schedule": schedule.version, "intent": intent.version,
                       "templates": template.version, "writer": wo.version},
         )
+        result.evaluation = evaluate_record(raw, result)
+        return result
     except Exception as exc:  # noqa: BLE001 - one bad record must never abort the batch
         errors.append(f"internal_error: {type(exc).__name__}: {str(exc)[:160]}")
         why.append(GateResult("pipeline", "failed", "an internal error stopped this record; safe answer: escalate", PLAN_CITE + ": malformed records never abort the batch", "conservative_default", {"error": errors[-1]}))
-        return RunResult(task_id=task_id, answer=_no_message_answer("escalate", "internal_error"), why=why, decision="escalate",
-                         engine="none", errors=errors, latency_ms=(clock() - t0) * 1000.0, malformed=True,
-                         versions={"pipeline": PIPELINE_VERSION})
+        result = RunResult(task_id=task_id, answer=_no_message_answer("escalate", "internal_error"), why=why, decision="escalate",
+                           engine="none", errors=errors, latency_ms=(clock() - t0) * 1000.0, malformed=True,
+                           versions={"pipeline": PIPELINE_VERSION})
+        result.evaluation = evaluate_record(raw, result)
+        return result
 
 
 def run_line(line: str, index: int, config: Optional[WriterConfig] = None, client=None, clock=time.monotonic) -> RunResult:
