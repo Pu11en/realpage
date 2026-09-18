@@ -1,168 +1,223 @@
 # Case-study bot: a context-aware message agent, isolated inside CraneSignal
 
-Goal: a separate, live service that reads an assignment record and decides whether to message a
-person, on which channel, at what time, with what words and what next action — every compliance
-rule enforced in code, every decision citing its source on screen, a scored eval, and a
-full-screen **Case study** tab inside CraneSignal that Drew can use as a real signed-in user.
-Done when: the 12 practice records all pass, the page works **live on app.cranesignal.com**, and
-12 outputs can be exported in one click.
+Goal: a separate service that reads assignment records and returns the same public shape as each
+record's `expected` block: whether to message, the channel and time, the message and CTA, and the
+next action. Compliance decisions stay deterministic and every internal decision can be explained
+with a cited source on screen.
 
-Written 2026-09-17, rewritten after research (thread 1549874755622928477).
-**The interview is 2026-09-18.** Drew will not test on localhost — he tests the live site.
+Done before the interview: both supplied examples pass structural and semantic reference checks; the service accepts
+and exports an arbitrary JSONL batch (including the 12 live hold-out records); every per-record
+assertion and threshold is visibly evaluated; the offline path passes; and the production wiring is
+ready for Drew to push. Drew's live-site acceptance remains required after the authorized deployment;
+local verification is an engineering milestone, not a replacement for that acceptance.
 
-## Source of truth
-- `casestudy/data/problem_statement.txt` — the assignment, verbatim.
-- `casestudy/data/sample.jsonl` — the ONE example record, with its `expected` block.
-- `casestudy/RULEBOOK-research.md` — reverse-engineered rules + legal citations + predicted cases.
-- `casestudy/OPENSOURCE-research.md` — what to reuse, vendor, skip.
-- `casestudy/STATE-OF-THE-ART-research.md` — 2025-2026 practice; every design choice below traces
-  to it.
+Written 2026-09-17; corrected after independent review of **both** records in `sample.jsonl`.
+**The interview is 2026-09-18.** Optimize for a reliable demo, exact output shape, and fast recovery.
 
-## Architecture (decided, with sources — put these citations on screen)
-- **A routing workflow with one structured LLM call. No agent loop.** The decision path is fixed.
-  (Anthropic, *Building Effective Agents*, Dec 2024.)
-- **Compliance rules live in Python, never in the prompt alone.** Instruction-following degrades
-  past ~6 simultaneous constraints. (IFScale, arXiv 2507.11538, Jul 2025.)
-- **Deterministic branches never call the model** (no consent, opted out, quiet-hours-only,
-  suppressed). Biggest latency lever; also free correctness.
-- **Model draft is re-validated by the rules and discarded if it fails**; one bounded regenerate
-  naming the violation, then template. (Evaluator-optimizer, bounded; Anthropic Dec 2024.)
-- **DeepSeek `json_object`** (no `json_schema` support): the word "json" + one example in the
-  system prompt, temperature 0, `max_tokens<=120`, Pydantic validation, one error-fed retry, then
-  template. (DeepSeek JSON-mode docs; instructor pattern.)
-- **Deadlines:** 1,200 ms per model call, 2,000 ms total; template fallback is pre-validated.
-- **Scoring:** deterministic assertions for everything measurable; a reference-derived yes/no
-  checklist; a pointwise binary tone judge. Embedding similarity logged, never gating.
-  (Hamel Husain *Evals FAQ*; Braintrust; Check-Eval/RocketEval.)
-- **Honesty about numbers:** 12 records cannot establish a rate; report Wilson intervals and say
-  what is proven vs estimated. (Bowyer et al., ICML 2025.)
+## Source of truth and confidence
+
+1. `casestudy/data/problem_statement.txt` is the assignment.
+2. `casestudy/data/sample.jsonl` contains **two** examples, not one. Their two `expected` blocks are
+   the only observed output examples and remain immutable reference fixtures.
+3. `casestudy/RULEBOOK-research.md` is a hypothesis list. An observed example overrides it.
+4. `casestudy/OPENSOURCE-research.md` and `casestudy/STATE-OF-THE-ART-research.md` guide engineering
+   choices, not the grader's unknown semantics.
+
+Label every rule `observed`, `input_required`, `hypothesis`, or `conservative_default` in the internal trail.
+Do not describe a law-based safety default as something learned from the two examples.
+Preserve existing research as historical evidence; the corrections recorded in `REVIEW-astra.md`
+govern implementation where that research or the initial review conflicts with this plan.
+
+## Facts the two examples actually establish
+
+- Preference order is constrained by consent: SMS wins when first and consented; email is used when
+  SMS is not consented.
+- SMS has `subject: null`, an options CTA, and a trailing `Reply STOP to opt out.` Email has a
+  subject, a link CTA, and click-or-STOP opt-out text.
+- The observed timestamps are Dec 9 at 09:00 local for SMS and Dec 9 at 10:00 local for email.
+  Channel-specific slots plus a cadence-day delay explain them, but so could a shared, unspecified
+  Dec 9 evaluation clock; neither general timing algorithm is proven. Both timestamps include seconds
+  and a numeric recipient-local offset.
+- `short_horizon` covers the 32-day example and `long_horizon` covers the 68-day example. There is
+  no evidence for a medium tier or a 120-day boundary. The second label appears in `task_id`, not
+  its expected action. Identifier tokens are hints, not authoritative business fields; any inferred
+  boundary must remain configurable and marked as a hypothesis.
+- Day 0 starts `prospect_welcome_short_horizon`; day 3 returns
+  `{ "type": "follow_up_in_days", "value": 3 }`. The latter must not be replaced by a cadence name.
+- The email example personalizes with amenity interest and the move-month phrase. A score based only
+  on name/property/channel/time can therefore overstate personalization.
+
+## Architecture
+
+- Fixed routing workflow, one optional structured DeepSeek call, no agent loop. (Anthropic,
+  *Building Effective Agents*, Dec 2024.)
+- This service proposes messages/actions and exports them; it never sends an SMS/email, schedules
+  a real tour, or writes to a CRM. Actual delivery integrations are outside this assignment.
+- Compliance rules live in Python and validate both model and template drafts. (IFScale,
+  arXiv 2507.11538.) Deterministic stop paths never call the model.
+- `AssignmentAnswer` is exactly `{next_message, next_action}`. `task_id`, rule trails, states,
+  scores, engine, and latency belong to a separate `RunResult`/diagnostics object and must never
+  leak into submission JSONL.
+- DeepSeek model name is configuration, not a guessed constant. Before the first authorized live
+  call, query/verify the available model and run one schema smoke test. Use `json_object`, a tiny
+  schema and temperature 0. Make at most one model request per record and use the validated template
+  on failure; disable SDK retries. Share a deadline bounded by the record's latency threshold
+  (2,000 ms in both samples), including validation and serialization.
+- Deterministic checks grade exact fields and constraints. A pointwise judge is optional and only
+  grades tone; it cannot gate correctness with this sample size. Report Wilson intervals for rates.
+- Keep `expected` in the evaluator only. Derive a versioned policy and templates from the supplied
+  examples before evaluation, then strip any held-out record's `expected` before calling the engine.
+  Test that deleting or changing `expected` does not change the engine's answer.
 
 ## Rules for every task
-- **Isolation is a hard requirement.** `casestudy/` imports nothing from `chatbot/` and reads
-  nothing under `propertystack/data/`. Its container copies only `casestudy/`.
-- Do not change existing site behaviour. Do not touch AI Visibility.
-- Each task ends with: Check passes, a commit, and a few lines appended to
-  `casestudy/DECISION-LOG.md` (what was decided, what else was considered, why, the source) —
-  that file feeds the Under the Hood page.
-- **Do not push.** Drew pushes (he has said he wants it live; he still presses the button).
+
+- `casestudy/` imports nothing from `chatbot/` and reads nothing under `propertystack/data/`; its
+  container copies only `casestudy/`.
+- Do not touch AI Visibility or alter existing site behavior.
+- Each task ends with its named check, one focused commit, and a short addition to
+  `casestudy/DECISION-LOG.md`.
+- Do not push. Stop at ready-to-push and let Drew authorize production deployment.
 
 Check: `python3 -m pytest -q casestudy/tests`
-Try: `bash casestudy/dev.sh`
-Open: http://localhost:8790
-
-## How to try it (30 seconds)
-1. Paste the sample record → a text for Taylor, 9am Chicago, ending "Reply STOP to opt out.",
-   with the rules that fired listed beside it, each citing its law.
-2. Paste all 12 practice records → 12 cards, "Copy all" and "Download".
-3. Unplug the network (or tick Offline) → it still answers all 12, safely.
 
 ## Tasks
 
-- [ ] **C1 Rulebook part 1: the five gates.** `casestudy/rules/gates.py` + tests.
-  Pure Python, no network. In order, each returning pass/stop with a one-line reason **and a
-  citation string**:
-  1. `consent_gate` — a channel may be used only if `consent.<channel>_opt_in is True`; missing
-     field = false; never infer consent from `channel_preferences`; none consented → stop,
-     `next_action.type="suppress"`, reason `no_consent`.
-     Cite: TCPA 47 U.S.C. §227 / 47 CFR §64.1200(a)(2).
-  2. `lifecycle_gate` — stop on `closed|lost|do_not_contact|opted_out|moved_out`, or
-     `do_not_contact: true`. Unknown persona → `escalate_to_human`.
-  3. `inbound_reply_gate` — if the record carries an inbound reply: `STOP|STOPALL|UNSUBSCRIBE|
-     CANCEL|END|QUIT` → stop + `mark_opted_out` (send NOTHING, not even a goodbye);
-     `HELP` → help text; `1`/`2` → confirm that option; negative phrases ("not interested",
-     "already leased", "wrong number") → stop + `stop_cadence`; a question → short ack +
-     `escalate_to_human`. Emit `reply_classification` on the output.
-     Cite: FCC revocation rule, effective 2025-04-11; CTIA Messaging Principles.
-  4. `frequency_gate` — nothing within 24 h of `last_message_sent_at`; nothing if
-     `messages_sent_24h >= 3`. Missing → pass.
-  5. `sanity_gate` — move-in date already past, or an unparseable `timezone` → `escalate_to_human`,
-     no message. (Do not silently default a bad timezone.)
-  Tests: one per gate, plus the sample record passing all five. Run Check. Commit. Log decisions.
-- [ ] **C2 Rulebook part 2: send time.** `casestudy/rules/send_time.py` + tests. The single most
-  likely trap. Rule: **the next 09:00 local strictly after the reference time**, where reference =
-  `last_interaction` (in `input.timezone`), rolling forward only if 09:00 has already passed.
-  Window 09:00–20:00 Mon–Sat; Sunday not before 12:00. Render ISO-8601 with the recipient's numeric
-  offset (`-06:00`), never `Z`, using `zoneinfo` (add `tzdata` to the image).
-  Tests that MUST pass: the sample (09:04 Mon Chicago → 2025-12-09T09:00:00-06:00);
-  07:15 local → **same day** 09:00; 20:30 local → next day; `America/Phoenix` in July → `-07:00`
-  (no DST); `America/Los_Angeles` in December → `-08:00`; a Saturday; a Sunday → 12:00.
-  Cite: TCPA 47 CFR §64.1200(c)(1); Texas Bus. & Com. Code §305.053 (Sun 12:00).
-  Run Check. Commit. Log decisions.
-- [ ] **C3 Rulebook part 3: the six shapers.** `casestudy/rules/shapers.py` + tests.
-  `channel_select` (first preferred channel that is consented; voice is never automated → a call
-  task), `intent_select` (persona × lifecycle → welcome, follow_up, tour_reminder,
-  application_status, renewal, payment_reminder, maintenance_followup),
-  `horizon` (≤45 d short, ≤120 d medium, else long, missing = unknown),
-  `cta_select` (map `assertions.constraints.primary_cta` → output vocabulary, e.g.
-  `book_tour → schedule_tour`; tour options = the first two weekdays at least two days out inside
-  the same Mon–Fri week, else Mon/Tue next week),
-  `cadence_name` (`{persona}_{intent}_{horizon}_horizon`),
-  `states` (emit each `assertions.required_states` once its rule has passed).
-  Run Check. Commit. Log decisions.
-- [ ] **C4 The validators (what the model can never override).** `casestudy/rules/validate.py` +
-  `casestudy/data/fair_housing.json` + `casestudy/data/pii_patterns.json` + tests.
-  Checks any candidate body: opt-out sentence present and last (SMS) / unsubscribe + property
-  postal address present (email); no PII (phone, email, street address, SSN, money amounts, last
-  name) via ~6 regexes; no protected-class or coded language — HARD list ("no kids", "adults only",
-  "Christian community", "safe neighborhood", "able-bodied") and WARN list ("great schools",
-  "family-friendly", "perfect for young professionals"), each entry carrying its citation and a
-  suggested compliant rewrite; style lint (first-name greeting, ≤1 "!", no emoji, one question,
-  numbered options, length ≤ 320 chars); segment count via `sms-toolkit`.
-  Cite: Fair Housing Act 42 U.S.C. §3604(c); CAN-SPAM 15 U.S.C. §7704; Zillow's open-source Fair
-  Housing Classifier as prior art. Run Check. Commit. Log decisions.
-- [ ] **C5 Templates that can answer with no internet.** `casestudy/templates.py` + tests.
-  One short template per (intent × channel × language en/es), filled from the record; every
-  template is run through C4's validators in the tests, so the fallback is provably safe.
-  Spanish keeps the literal word STOP. Run Check. Commit. Log decisions.
-- [ ] **C6 The writer.** `casestudy/writer.py` + tests (no network in tests — monkeypatch).
-  DeepSeek via the `openai` SDK, `base_url=https://api.deepseek.com`, model `deepseek-flash`,
-  `response_format={"type":"json_object"}`, temperature 0, `max_tokens<=120`, per-call deadline
-  1,200 ms. System prompt = stable prefix (role, ≤6 wording constraints, one worked example) so
-  provider prefix caching applies; the record goes last. Pydantic-validate the reply; on failure
-  retry once with the validation error named; then template. Every draft is re-checked by C4 and
-  discarded if it fails. Record `engine` (`deepseek` | `template`) and `latency_ms`.
-  Run Check. Commit. Log decisions.
-- [ ] **C7 One record in, one answer out.** `casestudy/agent.py` + tests. Assemble the output:
-  `task_id`, `decision` ("send" | "do_not_send"), `next_message` ({channel, send_at, subject, body,
-  cta} or null), `next_action` ({type, name, reason?}), `why` (array of {rule, plain_english,
-  citation}), `states`, `reply_classification` (null unless an inbound reply), `personalization_score`
-  (filled slots ÷ available slots), `latency_ms`. Deterministic branches must never call the model.
-  CLI: `python3 -m casestudy.agent --in f.jsonl --out answers.jsonl [--offline] [--pretty]`.
-  Malformed or missing fields must never crash. Run Check. Commit. Log decisions.
-- [ ] **C8 The 12 practice records.** `casestudy/data/holdout-ours.jsonl` + `holdout-ours.md`
-  (one plain-English paragraph per case: the situation, which rule it probes, the expected answer).
-  The 12: email-only consent; nothing consented; prefers email though both allowed; 20:30 local;
-  **07:15 local (same-day trap)**; Phoenix/LA offset trap; Saturday/Sunday; Spanish; resident
-  renewal at 60 days; maintenance note with SMS consent off; inbound "STOP"; profile containing
-  children, a wheelchair and "wants good schools". Each carries an `expected` block.
-  Run the agent over all 12 — every one must return a valid answer. Run Check. Commit. Log.
-- [ ] **C9 The eval.** `casestudy/eval/`: deterministic assertions per record (channel, exact
-  `send_at`, send-or-not, opt-out present, banned phrases absent, latency under 2,000 ms), a
-  reference-derived yes/no checklist per record (3-6 items), and a pointwise binary tone judge
-  reusing shipcheck's `claude_judge.py` (local `claude -p`, no API key). `casestudy/eval/run.sh`
-  prints a table and writes `results.json` including **Wilson intervals** and a line stating what is
-  proven vs estimated. Also copy shipcheck's `grade_server.py` so Drew can press 1/2 per answer.
-  Run Check. Commit. Log decisions.
-- [ ] **C10 The page.** `casestudy/app.py` (stdlib `http.server` or FastAPI — no heavy deps) +
-  `casestudy/static/`. Full width, CraneSignal's real header, fonts and colours (read
-  `site/css/`), NOT the chat side panel. Paste one record, paste many, or upload `.jsonl`.
-  Per record a card: **left** the exact assignment output with a Copy button; **right** the plain
-  English "why", each line carrying its citation. Buttons: Copy all, Download answers.jsonl.
-  Badge showing engine and milliseconds; a clear banner in offline mode. `casestudy/dev.sh` runs it
-  on 8790. Run Check. Commit. Log decisions.
-- [ ] **C11 Its own container, wired in and live.** `casestudy/Dockerfile` (slim, non-root, copies
-  only `casestudy/`, installs `tzdata`), a `/case-study*` route in `site/Caddyfile` behind the
-  existing sign-in, and a **Case study** item in the site navigation opening full screen. Write
-  `casestudy/DEPLOY.md`: the Railway service name, start command, and the `DEEPSEEK_API_KEY`
-  variable. Prove the container cannot read `propertystack/data/`. Existing site tests must still
-  pass. Run Check. Commit. **Stop and tell Drew it is ready to push.**
-- [ ] **C12 Under the Hood: the case-study section.** In `site/under-the-hood.html`: what the bot
-  does, the eleven rules in plain English each with its law, the design choices each with its
-  source (no agent loop, rules outside the model, skip-the-model branches, checklist scoring, the
-  12-records-can't-prove-a-rate caveat), the score from C9, median and p95 speed, the offline
-  fallback, and an honest "not handled yet" list. Pull the story from `casestudy/DECISION-LOG.md`.
-  Keep the existing shipcheck and build-bot links. Run Check. Commit. Log decisions.
-- [ ] **C13 Dress rehearsal.** Run all 12 through the live-style stack, export the answers, then
-  repeat with the network off. Paste the real output into `PLAN-casestudy-bot.progress.md`.
-  Write `casestudy/README.md`: what it is, how to run it, the rulebook, the score, known gaps, and
-  a "how I'd explain this in 3 minutes" script. Run Check. Commit. Do not push.
+- [ ] **C0 Freeze the contract and reference tests.** Parse both sample lines and snapshot only their
+  `expected` blocks. Define `AssignmentAnswer`, `NextMessage`, CTA variants (`options` or `link`),
+  and next-action variants (`name`, `value`, or `reason` as applicable). Reject extra public keys.
+  Assert structure, nulls, enum values, CTA payloads, next actions and supplied timestamps exactly;
+  grade prose with a reference-derived checklist for meaning, personalization and constraints.
+  Identical body wording is optional template regression coverage, not the assignment's requirement.
+  Check: both expected blocks round-trip and harmless paraphrases pass while wrong facts fail.
+
+- [ ] **C1 Input normalization and the five gates.** Normalize missing fields without crashing, but
+  never invent consent or claim an unknown required state passed. Process opt-out intent before
+  early exits for missing consent/lifecycle so STOP still produces `mark_opted_out`; then enforce
+  consent, lifecycle/do-not-contact, frequency, and invalid/past dates or timezone. Never bypass
+  later validation for HELP or an option reply; a numeric reply needs supplied prior options and
+  creates a proposed follow-up, not a booked appointment.
+  Each result carries status, reason, citation, and confidence label. Unknown `required_states`
+  cause a visible unsupported-state failure; known states are marked passed only by the named check.
+  Tests cover STOP with consent already false, HELP/1/2/questions, missing prior options, malformed
+  input, and both samples passing. Missing clocks or invalid zones escalate; historical sample
+  dates must be evaluated using the input/reference clock, never today's server date.
+
+- [ ] **C2 Channel and send-time inference.** Select the first preferred consented channel; voice
+  proposes a call task rather than an automated message. Use explicit schedule/cadence fields if
+  supplied. Otherwise use this versioned, disclosed hypothesis for the sample cadence form: parse a final
+  `dayN` token from `task_id`, set the due date to interaction-local date + N, and use the observed
+  channel slot (SMS 09:00, email 10:00). If that wall-clock candidate is not strictly after the
+  interaction, advance to the next permitted day. Use `zoneinfo`, numeric offsets, and a conservative
+  09:00-20:00 Mon-Sat / 12:00-20:00 Sunday demo window, labeled as a project default, not a verified
+  national legal rule. Compute the day's permitted slot before comparing it with the reference
+  time, so Sunday 10:00 can yield Sunday 12:00. If `dayN` is absent, use the earliest eligible slot
+  and flag uncertainty. Do not claim the suffix proves an elapsed cadence delay.
+  Tests: both exact sample timestamps, same-day pre-slot, post-slot, Sunday, Phoenix, Los Angeles,
+  DST boundary, malformed timezone, and `day10` (do not parse only one digit).
+
+- [ ] **C3 Intent, horizon, CTA, and next action.** Explicit business fields outrank identifier hints.
+  Use recognized `welcome`, `short_horizon`, `long_horizon`, and `dayN` tokens only as fallbacks with
+  hypothesis labels; opaque IDs must still work. Without a horizon token, short <=45 days and long
+  >45 days is a provisional two-tier fallback, not a learned boundary; do not invent a
+  medium tier. Map `book_tour` to `schedule_tour`. SMS tour CTA uses two day options; email uses the
+  explicit input link or a property-specific link learned from the supplied example; never invent a
+  URL for an unseen property. If no safe link exists, emit a visible unresolved-link diagnostic and
+  use a reply-to-arrange-tour fallback with `cta:{type:"schedule_tour"}` and an uncertainty warning.
+  The observed new-prospect welcome starts the named cadence; the observed open long-horizon flow
+  follows up in 3 days. Use 3 as the provisional interval for that flow, not the arbitrary dayN suffix:
+  day10 does not imply waiting another 10 days. Tests assert both expected CTA/actions, an opaque ID,
+  and conflicting ID versus explicit fields.
+
+- [ ] **C4 Channel-specific validators.** SMS: null subject, trailing STOP sentence, applicable
+  one-question/numbered-options style, no unsafe profile leakage, and segment count. Email: non-null
+  accurate subject, link CTA when expected, and conspicuous click-or-STOP opt-out. Do **not** require
+  a postal address to pass the supplied simulation example, which omits it; explicitly mark actual
+  email-delivery compliance as unverified and out of scope. Do not assume a transport adds a footer
+  when no such transport exists. Do not classify all money or all street
+  addresses as PII; block unapproved profile-field echoing and allow required property/business data
+  by context. Fair-housing HARD/WARN entries retain citation and rewrite. Tests prove the email sample
+  passes, unsafe profile data is ignored, and a model draft cannot override a hard failure.
+
+- [ ] **C5 Offline templates.** Start with templates that satisfy both reference checklists, then
+  add the smallest set needed for tested intents/channels. The email template must use amenity
+  interests and a natural move-month phrase; its Oak Ridge URL comes from the supplied training
+  example rather than a fabricated property slug. SMS keeps literal STOP. Every template passes C4.
+  Preserve provenance for property facts learned from a supplied example; never generalize Oak Ridge's
+  hours/link to another property. Missing unsafe or optional fields degrades to a neutral template,
+  never a crash. Check: offline generation passes both references and all template validator tests.
+
+- [ ] **C6 Bounded writer.** Use the OpenAI-compatible DeepSeek endpoint with a configurable,
+  preflight-verified model. Stable prompt prefix, record last, `json_object`, temperature 0,
+  Pydantic validation, and a small output limit that has been smoke-tested against truncation/empty
+  content. Enforce one monotonic end-to-end deadline and no SDK/model retries; reserve time for
+  template validation and serialization. Tests monkeypatch timeout, empty content, invalid JSON,
+  wrong CTA shape, unsafe draft, exhausted budget, and successful draft; no test calls the network.
+
+- [ ] **C7 Assemble one record and batch JSONL.** The public submission path emits one
+  `AssignmentAnswer` per input line with no diagnostic keys. A separate diagnostics path carries
+  `task_id`, `why[{rule, plain_english, citation, confidence}]`, verified states, reply class,
+  personalization evidence, engine, errors, and latency. Malformed records yield a structured
+  diagnostic and a safe public answer rather than aborting the batch. CLI supports `--offline`,
+  `--submission-out`, and `--diagnostics-out`. Check: both reference outputs pass structure/meaning
+  checks, `expected` cannot influence inference, and a 12-line batch exports 12 ordered lines.
+
+- [ ] **C8 Adversarial practice data.** Keep the two goldens separate and add at least 16 focused
+  records: email-only consent; none; preference ordering; before/after slot; day3/day10; Phoenix;
+  Los Angeles DST; weekend; Spanish; renewal; transactional note without SMS consent; STOP; option
+  reply; protected-class profile; PII profile; past/missing move date; voice-only. Each fixture names
+  one primary rule and has expected structure plus a prose checklist. Add a separate balanced reply corpus with
+  capitalization, punctuation, synonyms, and ambiguous questions; do not pretend one STOP example
+  establishes F1 >= .90. Check: all fixtures pass offline.
+
+- [ ] **C9 Evaluate every assignment field.** For each record, report every `required_state`, every
+  constraint, the record's `personalization_score_min`, `reply_classification_f1_min`,
+  `p95_latency_ms`, and `safety_violations_max`; no field may be silently ignored. Personalization
+  evidence is safe-field coverage relevant to that message (including amenities/move timing when
+  used), and below-threshold drafts fall back and are rechecked; if still below, report failure rather
+  than claiming success. Label this score a project-defined proxy: the employer's formula is unknown.
+  Report a labeled
+  multiclass confusion matrix and macro-F1 for the balanced reply corpus. Measure warm end-to-end
+  p95 over >=100 offline runs and, only when authorized, a clearly separate live-model sample;
+  count fallbacks and failures. F1/p95 are corpus/run metrics, not measurements from a single answer;
+  show their dataset/sample count and use `not_measured` when evidence is absent. Emit structural
+  match, meaning-check results, Wilson intervals only for binary pass fractions, and an honest
+  proven-vs-estimated note (synthetic cases do not estimate real-world reliability). Reuse shipcheck's
+  `checks/chatbot/claude_judge.py` and `scripts/grade_server.py` from `/home/drewp/main-projects/drew's eval`
+  for the planned optional tone/human grading; retain this choice, and label unavailable judge runs
+  `not_run`. The tone judge is non-gating and uncalibrated; it is never a deployed server backend.
+
+- [ ] **C10 Build the demo page.** Full-width Case study page behind existing sign-in; paste/upload
+  arbitrary JSONL. Left side shows only the exact export object; right side shows diagnostics and a
+  row for every assertion/threshold, including unsupported ones. Copy one, Copy all, and Download
+  must serialize the same submission bytes as the CLI. Show engine, latency, fallback/offline state,
+  and per-record error without losing the other records. Check in a browser with 1, 2, 12, malformed,
+  and offline inputs; verify clipboard/download by reparsing the bytes.
+
+- [ ] **C11 Container and local production wiring.** Non-root slim image, `tzdata`, health endpoint,
+  request-size/batch-size limits, no secrets in logs, and only `casestudy/` copied. Wire
+  `/case-study*` and navigation locally behind existing auth; document Railway service/start command
+  and `DEEPSEEK_API_KEY`. Prove health, auth redirect, 12-record request, restart, missing-key offline
+  fallback, and inability to read `propertystack/data/`. Run existing site checks. Stop and tell Drew
+  it is ready to push; production verification is a separate, authorized step.
+
+- [ ] **C12 Under the Hood.** Use `DECISION-LOG.md` to show the observed-vs-assumed distinction,
+  reversed decisions, rules and legal sources, deterministic/LLM boundary, exact-match and threshold
+  results, median/p95, offline fallback, sample-size caveat, and honest unhandled list. Before publishing
+  a legal or engineering claim, verify its primary citation and scope: the existing research conflicts
+  on Texas statute numbers and Sunday rules. Hypotheses cite the sample/decision, not a law. Keep existing
+  shipcheck/build-bot links. Check every citation link and never claim a synthetic practice score is
+  hold-out performance.
+
+- [ ] **C13 Dress rehearsal and recovery card.** Run both goldens and a 12-record batch through the
+  local live-style stack; export and parse it; repeat offline and with a malformed middle record.
+  Record commands and actual results in `PLAN-casestudy-bot.progress.md`. Write the README and a
+  one-page interview card: 3-minute explanation, how to paste/export the live 12, switch offline,
+  restart the service, and find the saved download. Check the full rehearsal twice. Do not push.
+
+## Deadline cut order
+
+Non-negotiable: C0-C9, the paste/export/offline/error parts of C10, local container/auth proof in C11,
+and the C13 recovery card. If time runs short, cut live LLM judging first, then decorative UI, broad
+intent/template coverage beyond observed + practice cases, and finally the expanded Under the Hood
+narrative. Do not cut reference structure/meaning tests, threshold reporting, offline fallback, or
+export verification. Restore the full live-site acceptance after Drew's deployment authorization.
