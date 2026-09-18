@@ -4,9 +4,9 @@ CraneSignal shows which property-management software every apartment building in
 and flags the buildings most likely to switch soon (just sold, new owner, under construction).
 A built-in chat agent answers questions about the same data, with sources.
 
-**Who it is for:** sales and marketing teams at property-management software companies
-(RealPage, Yardi, Entrata, AppFolio and the like) who want early, evidence-backed leads.
-It covers any US area; Plano/Richardson, Texas is the worked sample.
+**Who it is for:** anyone selling to apartment owners — software companies, service providers,
+vendors, and sales teams who want early, evidence-backed leads about which buildings might buy.
+It covers any US area; Texas is the worked sample.
 
 **The constraint: outside-in only.** We have no access to proprietary sales data — no
 insiders, no product login, no customer data, nobody there to ask. Everything
@@ -27,7 +27,7 @@ More screens (Early Leads, Under the Hood, chat): `docs/design-screens/final/`.
 
 | Part | Folder | What it is |
 |---|---|---|
-| Website service | `site/` | Static pages (Map, Early Leads, Property Detail, AI Visibility, Under the Hood) served by Caddy. Reads the JSON in `site/data/`. |
+| Website service | `site/` | Static pages (Map, Early Leads, Property Detail, Under the Hood) served by Caddy. Reads the JSON in `site/data/`. |
 | Chat service | `chatbot/` | A Hermes agent behind a small proxy (`proxy.py`) plus the Open WebUI chat app. Answers only from the baked-in data and research, read-only. Details: `chatbot/README.md`. |
 | Data | `propertystack/` | The pipeline of skills (find apartments → find website → detect software → find sales → score leads) and its outputs in `propertystack/data/<area>/`. Details: `propertystack/README.md`. |
 | Tools | `tooling/` | Local run scripts, QA checks, and the helpers that turn pipeline data into what the site and chat read. |
