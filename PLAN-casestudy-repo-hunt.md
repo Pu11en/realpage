@@ -35,30 +35,30 @@ Check: `python3 casestudy/research/check_candidates.py`
 
 ## Tasks
 
-- [ ] **H1 Messaging orchestration platforms (most important).** Open-source products that already
+- [x] **H1 Messaging orchestration platforms (most important).** Open-source products that already
   decide channel, respect preferences and consent, apply quiet hours in the user's time zone, cap
   frequency and run cadences: Novu, Dittofeed, Laudspeaker, listmonk, Mautic, Apache Unomi, and
   whatever else you find. For each, find the actual files implementing preference resolution,
   channel fallback, quiet hours / do-not-disturb, throttling and digests, and note the vocabulary
   they use (subscriber, workflow, step, preference, digest, delay, throttle).
-- [ ] **H2 Send-time and business-day logic.** Libraries or reference code for "next allowed send
+- [x] **H2 Send-time and business-day logic.** Libraries or reference code for "next allowed send
   time" inside a window, day-of-week rules, DST-safe scheduling, "next two weekdays at least N
   days out", and US holidays (dateutil rrule, pendulum, workalendar, holidays). Decide whether
   holidays matter here.
-- [ ] **H3 Compliance and guardrails beyond what we have.** TCPA/CTIA/CAN-SPAM helpers, opt-out
+- [x] **H3 Compliance and guardrails beyond what we have.** TCPA/CTIA/CAN-SPAM helpers, opt-out
   keyword handling, fair-housing or discrimination classifiers (e.g. Zillow's open-source Fair
   Housing Classifier — find the code), PII detectors that run offline and light.
-- [ ] **H4 LLM copywriting for CRM / real estate.** Prompt libraries, brand-voice rules expressed as
+- [x] **H4 LLM copywriting for CRM / real estate.** Prompt libraries, brand-voice rules expressed as
   checks, open datasets of good leasing or real-estate SMS and email templates, and any evaluation
   sets for marketing copy.
-- [ ] **H5 Evaluation that grades against a reference.** Code for checklist-from-reference grading
+- [x] **H5 Evaluation that grades against a reference.** Code for checklist-from-reference grading
   (RocketEval, TICK, Check-Eval, AutoChecklist), JSON field-level scoring, and confidence
   intervals (Inspect AI, DeepEval, Weave, others). Which one is the known professional choice for
   a small labelled set?
-- [ ] **H6 Human review screens.** Lightweight ways to pass/fail 50-200 outputs: Argilla, Label
+- [x] **H6 Human review screens.** Lightweight ways to pass/fail 50-200 outputs: Argilla, Label
   Studio, Langfuse annotation queues, Phoenix, Hamel Husain's annotation-app examples, promptfoo's
   viewer. Compare honestly against the existing shipcheck grading screen.
-- [ ] **H7 Explaining decisions on screen.** How mature projects show "which rules fired and why":
+- [x] **H7 Explaining decisions on screen.** How mature projects show "which rules fired and why":
   OPA decision logs, Cedar, OpenFeature / Unleash evaluation "reason" fields, fraud-rule engines.
   Any Python pattern giving decision + reasons + rule ids out of the box.
 - [ ] **H8 Small tool-page skeletons.** The professional minimal way to ship a "paste input, run,
