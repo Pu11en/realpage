@@ -456,3 +456,6 @@ Checks:
 Left open: no live model call, deployment, push, or interview hold-out run occurred. Production
 deployment and Drew's live-site acceptance still require separate authorization after localhost
 acceptance, exactly as planned.
+
+## Next time (from how this build went)
+- Everything shipped smoothly — all three steps completed in sequence, every test passed, and execution time actually got faster with each step, suggesting good task scope and AI selection.
