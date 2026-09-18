@@ -111,3 +111,32 @@ Left open: record 1's short horizon comes from the move-date fallback (its id ca
 token), so the 45-day boundary is load-bearing for that golden; keep it configurable. The long
 welcome cadence name and the Sunday-skip in tour options are project hypotheses. Voice call tasks
 get the bare CTA; C7 must decide how a call task appears in the public shape.
+
+## C4 Channel-specific validators — done
+
+What I did:
+- Added `casestudy/validators.py` (`validators_v1`): `Draft`, `ValidationReport`, `validate_draft()`
+  and `select_draft()`. Checks: profile echo (only first_name/amenity_interest approved; money and
+  street addresses allowed when from property/business fields, blocked when from the profile;
+  email/phone/SSN patterns hard unless supplied business data), fair-housing lexicon with HARD and
+  WARN entries each carrying the §3604(c) citation and a rewrite, brand style (greeting, <=1 "!",
+  no emoji/shouting/shorteners), SMS (null subject, literal trailing STOP sentence, numbered
+  options, one question, GSM-7/UCS-2 segment count <=3), email (non-null accurate subject, link
+  CTA in body, click-or-STOP opt-out). Email delivery compliance (postal address etc.) is reported
+  as `unverified`/out of scope, not required and not assumed. Model drafts get the same hard rules;
+  `select_draft()` never picks a hard-failing model draft over a passing template.
+- Added `casestudy/tests/test_validators.py` (19 tests): both samples pass (email without postal
+  address), SMS/email rule failures, segment counting, unsafe profile data ignored when not echoed
+  and hard when echoed (last_name, phone, income, city_interest, address), business money/address
+  allowed, PII pattern provenance, HARD vs WARN fair housing with citation/rewrite, brand style,
+  model draft cannot override.
+- Decision log entry 33.
+
+Commit: see git log ("Case study C4").
+
+Check: `python3 -m pytest -q casestudy/tests` — 96 passed.
+
+Left open: the sample SMS is 3 UCS-2 segments because of its em dash, so the 3-segment cap is at
+its limit; C5 templates should keep the em dash (observed) but avoid growing the body. Subject
+"accuracy" is a shallow word-overlap heuristic. The fair-housing lexicon is a project list, not a
+legal authority; C12 must say so.

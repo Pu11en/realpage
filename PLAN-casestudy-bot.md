@@ -128,7 +128,7 @@ Check: `python3 -m pytest -q casestudy/tests`
   day10 does not imply waiting another 10 days. Tests assert both expected CTA/actions, an opaque ID,
   and conflicting ID versus explicit fields.
 
-- [ ] **C4 Channel-specific validators.** SMS: null subject, trailing STOP sentence, applicable
+- [x] **C4 Channel-specific validators.** SMS: null subject, trailing STOP sentence, applicable
   one-question/numbered-options style, no unsafe profile leakage, and segment count. Email: non-null
   accurate subject, link CTA when expected, and conspicuous click-or-STOP opt-out. Do **not** require
   a postal address to pass the supplied simulation example, which omits it; explicitly mark actual

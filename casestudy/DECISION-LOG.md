@@ -316,3 +316,28 @@ interval from dayN; inventing `https://<slug>.example/tour` for unknown properti
 **Why it won:** PLAN C3 and REVIEW-astra: identifier tokens are hints, the two records prove no
 boundary, and a fabricated URL is worse than a visible gap.
 **Source:** `PLAN-casestudy-bot.md` C3, both records in `casestudy/data/sample.jsonl`.
+
+## 33. Channel-specific validators: hard rules in Python, no imaginary email footer
+
+**Decided:** `casestudy/validators.py` (`validators_v1`) validates any draft, template or model,
+with the same deterministic rules; `select_draft()` returns the first candidate with no HARD
+failure, so a model draft can never override a hard rule. SMS: subject must be null, body must end
+with the literal `Reply STOP to opt out.`, CTA options must appear as numbered replies, at most one
+question, and at most 3 segments (GSM-7/UCS-2 counted; the observed em dash makes the sample body
+3 UCS-2 segments). Email: non-null subject that names the property or shares words with the body,
+CTA link present in the body, and a conspicuous click-or-STOP opt-out sentence. No postal address
+is required: the supplied simulation example has none and no transport exists to append one, so
+`email_delivery_compliance` is reported as unverified and out of scope, never passed or assumed.
+Profile echo: only `first_name` and `amenity_interest` may be echoed; any other profile value found
+literally in the copy is a HARD `no_pii_leak` failure, and emails/phones/SSNs are hard unless they
+are supplied business contact data. Money and street addresses are not PII by themselves; they are
+allowed when they come from property/business fields and blocked only when they come from the
+profile. Fair housing is a lexicon with HARD entries (explicit protected-class preference/limitation
+or obvious proxy) and WARN entries (coded language); every hit carries the 42 U.S.C. §3604(c)
+citation and a rewrite; only HARD blocks `fair_housing_check_passed`. Brand style (greeting, <=1 "!",
+no emoji, no shouting, no URL shorteners) is what `brand_style_applied` means here, labelled a
+hypothesis from two examples. **Alternatives:** the old rulebook's CAN-SPAM address requirement plus
+a generic street-address PII regex (self-contradictory), banning all `$` amounts, a model-based
+fair-housing judge. **Why it won:** PLAN C4 and REVIEW-astra: the email sample must pass as
+supplied, and a rule the model can talk its way past is not a compliance rule.
+**Source:** `PLAN-casestudy-bot.md` C4, `REVIEW-astra.md`, `RULEBOOK-research.md` §2 (citations).
