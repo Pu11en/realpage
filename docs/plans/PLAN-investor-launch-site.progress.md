@@ -14,3 +14,9 @@ Created landing page at business/marketing/landing/index.html with:
 - Test suite created in business/tools/test_landing.py (validates headline, CTAs, no RealPage text, branding)
 - All tests pass; check-no-realpage-target.sh still exits 0
 - Commit: 94e17bd
+
+## T3 ✅
+Removed the sign-in check (forward_auth) from site/Caddyfile, so Map, Early Leads, building pages, Under the Hood, landing.html and their data load signed out. "/" still opens the Map, so the landing page's "Start free" link lands there with no login.
+- Tests: test_e1_signin.py now runs the real Caddyfile and checks every page returns 200 signed out with content and no RealPage text; test_t4_not_found.py updated. 203 tests pass; check-no-realpage-target.sh exits 0.
+- Commit: 6bb3343
+- Open: the chat still asks for an account inside its panel (T4 reshapes that). Nothing pushed; the live site keeps its gate until this is deployed.
