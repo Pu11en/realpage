@@ -222,6 +222,18 @@
     grid.innerHTML = rows.map(([label, value, flag]) => `<div${flag ? ' class="flag"' : ""}><dt>${escapeHtml(label)}</dt><dd>${escapeHtml(value)}</dd></div>`).join("");
   }
 
+  function codeLink(code) {
+    if (!code || !state.payload?.code_base) return "";
+    const [file, line] = code.split(":");
+    return `<a href="${escapeHtml(state.payload.code_base + file)}#L${escapeHtml(line)}" target="_blank" rel="noopener">${escapeHtml(code)} ↗</a>`;
+  }
+
+  function renderCodeTrail(diagnostics) {
+    const steps = (diagnostics.why || []).filter((item) => item.status !== "skipped" && item.code);
+    byId("code-steps").innerHTML = steps.map((item) => `<li class="st-${escapeHtml(item.status)}"><span class="rule">${escapeHtml(words(item.rule))}</span>: ${escapeHtml(sentence(item.plain_english))}${codeLink(item.code)}</li>`).join("")
+      || "<li>No rule steps were recorded for this line.</li>";
+  }
+
   function renderAiProcess(answer, diagnostics) {
     const trail = diagnostics.why || [];
     const find = (rule) => trail.find((item) => item.rule === rule);
@@ -237,7 +249,7 @@
               : `No automated message. Next step: ${actionLabel(answer.next_action)}. The AI was not asked to write anything.`]);
     if (request) {
       const d = request.details || {};
-      steps.push(["AI settings", `Model ${d.model}, temperature ${d.temperature} (no randomness), JSON-only reply, at most ${d.max_tokens} tokens, time limit ${d.timeout_ms} ms, one try with no retries.`]);
+      steps.push(["AI settings", `Model ${d.model}, temperature ${d.temperature} (no randomness), JSON-only reply, at most ${d.max_tokens} tokens, time limit ${d.timeout_ms} ms, one try with no retries.`, codeLink(request.code)]);
       const prompt = d.prompt || [];
       const system = prompt.find((m) => m.role === "system");
       const user = prompt.find((m) => m.role === "user");
@@ -259,7 +271,7 @@
       steps.push(["Safety check rejected the AI's wording", `${sentence(fallback.details?.reason || "")} ${fallback.details?.error ? fallback.details.error + "." : ""} A pre-checked template was used instead.`]);
     }
     steps.push(["Total time", `${diagnostics.latency_ms} ms for this record.`]);
-    byId("ai-steps").innerHTML = steps.map(([title, body]) => `<li><strong>${escapeHtml(title)}</strong><p>${body.includes("<pre>") ? escapeHtml(body.split("<pre>")[0]) + "<pre>" + body.split("<pre>").slice(1).join("<pre>") : escapeHtml(body)}</p></li>`).join("");
+    byId("ai-steps").innerHTML = steps.map(([title, body, link]) => `<li><strong>${escapeHtml(title)}</strong>${link ? " " + link : ""}<p>${body.includes("<pre>") ? escapeHtml(body.split("<pre>")[0]) + "<pre>" + body.split("<pre>").slice(1).join("<pre>") : escapeHtml(body)}</p></li>`).join("");
   }
 
   function renderAnswerKey(answer, key) {
@@ -291,6 +303,7 @@
     const answer = JSON.parse(record.submission_line);
     renderHumanAnswer(answer, diagnostics);
     renderInput(record.input_line || "");
+    renderCodeTrail(diagnostics);
     renderAiProcess(answer, diagnostics);
     renderAnswerKey(answer, record.answer_key);
     byId("submission-output").textContent = JSON.stringify(answer, null, 2);
@@ -311,7 +324,7 @@
     byId("decision-trail").innerHTML = (diagnostics.why || []).map((item) => `<article class="trail-item">
       <div class="trail-head"><span>${escapeHtml(item.rule)}</span><span>${escapeHtml(item.status)}</span></div>
       <p>${escapeHtml(item.plain_english)}</p>
-      <small>${escapeHtml(item.confidence)} · ${escapeHtml(item.citation)}</small>
+      <small>${escapeHtml(item.confidence)} · ${escapeHtml(item.citation)} ${codeLink(item.code)}</small>
     </article>`).join("");
     document.querySelectorAll(".record-tab").forEach((tab, tabIndex) => tab.setAttribute("aria-selected", tabIndex === index ? "true" : "false"));
   }

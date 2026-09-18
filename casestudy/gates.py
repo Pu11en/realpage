@@ -21,6 +21,8 @@ is decided in C7; this module only records what and why.
 from __future__ import annotations
 
 import re
+import sys
+import os
 from dataclasses import dataclass, field
 from datetime import date, datetime, timezone
 from typing import Any, Literal, Optional
@@ -86,6 +88,13 @@ class GateResult:
     citation: str
     confidence: Confidence
     details: dict[str, Any] = field(default_factory=dict)
+    code: str = field(default="", compare=False)  # "file.py:line" that produced this result
+
+    def __post_init__(self) -> None:
+        if not self.code:
+            # Frame 0 is this method, 1 is the generated __init__, 2 is the code that made the decision.
+            frame = sys._getframe(2)
+            self.code = f"{os.path.basename(frame.f_code.co_filename)}:{frame.f_lineno}"
 
 
 @dataclass

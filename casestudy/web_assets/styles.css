@@ -274,3 +274,11 @@ footer a { color: var(--blue); }
 .input-grid .flag dd { color: var(--warn); }
 .input-raw-note { margin: 10px 0 0; color: var(--warn); }
 .code-link { margin-left: 12px; font-weight: 600; color: var(--blue); }
+.code-trail { margin-top: 16px; padding: 16px; border: 1px solid var(--rule); border-radius: 6px; background: var(--paper); }
+.code-trail summary { font-weight: 700; cursor: pointer; }
+.code-trail-note { margin: 8px 0 0; color: var(--muted); font-size: 0.875rem; }
+.code-steps { margin: 10px 0 0; padding-left: 22px; display: grid; gap: 6px; }
+.code-steps li { overflow-wrap: anywhere; }
+.code-steps a { font-family: "Geist Mono", ui-monospace, monospace; font-size: 0.8125rem; font-weight: 600; color: var(--blue); margin-left: 6px; white-space: nowrap; }
+.code-steps .rule { font-weight: 600; }
+.code-steps .st-failed .rule { color: var(--warn); }

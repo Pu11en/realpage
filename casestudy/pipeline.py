@@ -72,7 +72,7 @@ class RunResult:
             "malformed": self.malformed,
             "why": [
                 {"rule": r.rule, "status": r.status, "plain_english": r.reason, "citation": r.citation,
-                 "confidence": r.confidence, "details": _jsonable(r.details)}
+                 "confidence": r.confidence, "details": _jsonable(r.details), "code": getattr(r, "code", "")}
                 for r in self.why
             ],
             "verified_states": list(self.verified_states),

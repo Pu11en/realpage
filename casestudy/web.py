@@ -111,7 +111,9 @@ def run_payload(text: str, *, offline: bool) -> dict[str, Any]:
             "answer_key": _answer_key(lines[index]) if index < len(lines) else None,
             "input_line": lines[index] if index < len(lines) else "",
         })
+    sha = os.environ.get("RAILWAY_GIT_COMMIT_SHA") or "main"
     return {
+        "code_base": f"https://github.com/Pu11en/realpage/blob/{sha}/casestudy/",
         "record_count": len(records),
         "submission_jsonl": exported,
         "records": records,
