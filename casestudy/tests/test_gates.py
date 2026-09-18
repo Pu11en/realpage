@@ -183,7 +183,7 @@ def test_reference_clock_never_server_date():
     assert out.reference_time.isoformat() == "2025-12-09T08:00:00-06:00"
 
 
-@pytest.mark.parametrize("text", ["ALTO", "stopp pls", "Stop texting me", "please unsubscribe me", "PARAR"])
+@pytest.mark.parametrize("text", ["ALTO", "stopp pls", "Stop texting me", "please unsubscribe me", "PARAR", "you guys are scammers, lose my number", "Do not text me again"])
 def test_opt_out_variants(text):
     assert classify_reply(text) == "opt_out"
 
@@ -211,3 +211,16 @@ def test_first_name_is_cleaned(name, clean):
     raw = json.loads(json.dumps(SAMPLES[0]))
     raw["input"]["profile"]["first_name"] = name
     assert run_gates(raw).record.profile.get("first_name") == clean
+
+
+@pytest.mark.parametrize("stage", ["closed_lost", "inactive", "lease_cancelled"])
+def test_closed_stages_are_not_contacted(stage):
+    raw = json.loads(json.dumps(SAMPLES[0]))
+    raw["lifecycle_stage"] = stage
+    out = run_gates(raw)
+    assert out.decision == "suppress" and out.reason == "lifecycle_blocked"
+
+
+def test_stop_by_is_a_visit_not_an_opt_out():
+    assert classify_reply("Can I stop by tomorrow?") != "opt_out"
+    assert classify_reply("Stop by tomorrow?") == "question"

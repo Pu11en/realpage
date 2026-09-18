@@ -265,8 +265,13 @@ def classify_reply(text: Optional[str]) -> str:
     t = text.strip().lower()
     t_norm = re.sub(r"[^\w\s]", "", t).strip()
     words = t_norm.split()
-    if t_norm in OPT_OUT_WORDS or (words and (words[0] in OPT_OUT_FIRST_WORDS or words[0].startswith("stop"))) \
-            or any(p in t_norm for p in ("remove me", "opt out", "unsubscribe", "stop texting", "stop messaging")):
+    visiting = re.match(r"^stop (by|in|over|at|to)\b", t_norm) is not None  # "stop by tomorrow?" is a visit, not an opt-out
+    phrases = ("remove me", "opt out", "unsubscribe", "stop texting", "stop messaging", "lose my number",
+               "delete my number", "dont text", "don't text", "do not text", "dont contact",
+               "do not contact", "stop contacting", "no more texts", "no more messages")
+    if not visiting and (t_norm in OPT_OUT_WORDS
+                         or (words and (words[0] in OPT_OUT_FIRST_WORDS or words[0].startswith("stop")))
+                         or any(p in t_norm for p in phrases)):
         return "opt_out"
     if t_norm in HELP_WORDS:
         return "help"
@@ -368,6 +373,8 @@ def lifecycle_gate(rec: NormalizedRecord) -> GateResult:
         )
     if stage in BLOCKED_LIFECYCLE:
         return GateResult("lifecycle_gate", "failed", f"lifecycle_stage {stage!r} means do not contact", cite, "conservative_default")
+    if any(w in stage for w in ("closed", "lost", "dead", "inactive", "archiv", "cancel", "evict", "do_not")):
+        return GateResult("lifecycle_gate", "failed", f"lifecycle_stage {stage!r} reads as closed or lost; do not contact", cite, "conservative_default")
     if stage in KNOWN_LIFECYCLE:
         conf: Confidence = "observed" if stage in {"new", "open"} else "hypothesis"
         return GateResult("lifecycle_gate", "passed", f"lifecycle_stage {stage!r} is contactable", cite, conf)
