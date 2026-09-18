@@ -273,3 +273,4 @@ footer a { color: var(--blue); }
 .input-grid dd { margin: 4px 0 0; font-weight: 600; overflow-wrap: anywhere; }
 .input-grid .flag dd { color: var(--warn); }
 .input-raw-note { margin: 10px 0 0; color: var(--warn); }
+.code-link { margin-left: 12px; font-weight: 600; color: var(--blue); }
