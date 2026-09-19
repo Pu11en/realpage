@@ -69,7 +69,7 @@ function renderShell(activeKey) {
       <div class="top-controls">
         <label for="view-as-select" style="color: var(--text-dim); font-size: 11px;"
           title="${VIEW_AS_TIP}">View as</label>
-        <select id="view-as-select" title="${VIEW_AS_TIP}">${vendorOptions}</select>
+        <select id="view-as-select" title="${VIEW_AS_TIP}" aria-label="View as">${vendorOptions}</select>
         <div id="last-updated" style="color: var(--text-dim); font-size: 11px;"></div>
         <a href="${LANDING_URL}" style="color: var(--text-dim); font-size: 11px;">&larr; Home page</a>
         <a href="privacy.html" style="color: var(--text-dim); font-size: 11px;">Privacy</a>

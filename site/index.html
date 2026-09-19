@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="icon" type="image/svg+xml" href="/static/favicon.svg">
   <link rel="apple-touch-icon" href="/static/apple-touch-icon.png">
+  <meta name="description" content="CraneSignal: apartment buildings about to pick software or change owners, with who to call and why now. Free.">
   <title>CraneSignal -- Early Leads</title>
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="stylesheet" href="css/chat-panel.css" />
@@ -87,20 +88,20 @@
           <div class="filters-disclosure-body" id="lead-filters" hidden>
             <div class="filters">
               <input id="f-search" placeholder="Search property" />
-              <select id="f-signal">
+              <select id="f-signal" aria-label="Signal">
                 <option value="">All signals</option>
                 <option value="Upcoming">Upcoming</option>
                 <option value="Leasing">Leasing now</option>
                 <option value="Planned">Planned</option>
                 <option value="Sold">Recently sold</option>
               </select>
-              <select id="f-city"></select>
-              <select id="f-software">
+              <select id="f-city" aria-label="City"></select>
+              <select id="f-software" aria-label="Software">
                 <option value="">All software</option>
                 <option value="__none__">Not chosen yet</option>
                 ${softwareOptions.map((v) => `<option value="${v}">${v}</option>`).join("")}
               </select>
-              <select id="f-sort">
+              <select id="f-sort" aria-label="Sort by">
                 <option value="score">Sort: score</option>
                 <option value="size">Sort: size (units)</option>
                 <option value="newest">Sort: newest</option>
