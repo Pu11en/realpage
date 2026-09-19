@@ -21,3 +21,10 @@
 - Skill validation: the Codex-only quick validator rejects the existing Hermes frontmatter keys (`author`, `platforms`, `version`); separately validated YAML, required fields and unchanged Hermes metadata. No metadata migration was needed.
 - Limits: these are instruction changes, checked offline; no real AI calls, paid searches, push or deployment. Actual generated answers have not been live-tested.
 - Open: G1-T3 and subsequent tasks remain untouched. This step supports the overall goal; buttons, search/filter UI, freshness display and eventual approved publishing remain for later work.
+
+## 2026-09-19 — G1-T2 review follow-up
+
+- Added an offline regression test for the complete contact-research contract: contact-first answers, saved data before web lookup, six-search limit, sourced phone/website, visible not-found gaps, no guessed numbers, and a sourced new owner for recent sales.
+- Test commit: `329abd5` (`test: cover sourced contact research rules`).
+- Checks: the focused test passed (7); required QA passed (214); all active project suites passed (612). `git diff --check` passed.
+- Open: no live or paid AI call was made. G1-T3 and later tasks remain for subsequent workers.
