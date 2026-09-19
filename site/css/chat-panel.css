@@ -227,3 +227,10 @@
   body.chat-panel-open .leads-table td[data-label="Rank"],
   body.chat-panel-open .leads-table td[data-label="Score"] { display: inline-block; width: auto; margin-right: 12px; }
 }
+
+.chat-panel-signin-link {
+  font-size: 13px;
+  color: var(--muted);
+  text-decoration: underline;
+}
+.chat-panel-signin-link:hover { color: var(--ink); }
