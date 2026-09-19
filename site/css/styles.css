@@ -466,7 +466,6 @@ h1 { font-size: 26px; font-weight: 800; letter-spacing: -0.015em; margin: 0 0 4p
 .leads-table tr.clickable:hover td { background: var(--blue-soft); }
 .leads-table strong { color: var(--ink); }
 .lead-src a { color: var(--blue); }
-.pill-new { background: var(--ok-soft); color: var(--ok); }
 .pill-unknown { background: var(--paper-2); color: var(--muted); border: 1px solid var(--rule); }
 .deep-dive-btn { color: var(--blue); border-color: var(--rule); background: var(--paper); }
 .deep-dive-btn:hover { border-color: var(--blue); background: var(--blue-soft); }

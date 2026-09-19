@@ -365,7 +365,6 @@
         const s = leadStats(rows);
         document.getElementById("lead-stats").innerHTML = `
           <div class="stat-card"><div class="value">${s.leads.toLocaleString()}</div><div class="label">Leads</div></div>
-          <div class="stat-card"><div class="value">${s.newThisWeek}</div><div class="label">New</div></div>
           <div class="stat-card"><div class="value">${s.unitsInPlay.toLocaleString()}</div><div class="label">Units in play</div></div>
           <div class="stat-card"><div class="value">${s.openingNext12mo.toLocaleString()}</div><div class="label">Opening soon</div></div>`;
 
@@ -395,7 +394,7 @@
           <tr class="clickable" data-id="${l.propertyId || l.id}">
             <td data-label="Rank">${i + 1}</td>
             <td data-label="Score"><span class="score-badge" style="background:${scoreBadgeColor(l.score)}">${l.score}</span></td>
-            <td class="lead-prop"><strong>${l.property}</strong> ${l.isNew ? '<span class="pill pill-new">NEW</span>' : ""}${l.subArea ? `<div class="lead-subarea">${l.subArea}</div>` : ""}
+            <td class="lead-prop"><strong>${l.property}</strong>${l.subArea ? `<div class="lead-subarea">${l.subArea}</div>` : ""}
               <button class="btn deep-dive-btn" data-deep-dive="${l.id}" title="Find who to call about this building">Get contact &rarr;</button>
               ${contactHtml(l.contact)}</td>
             <td data-label="City">${l.city}</td>
