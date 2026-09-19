@@ -38,3 +38,12 @@
 - Implementation commit: `284dcfe` (`feat: send sourced contact requests from every lead`).
 - Checks: required `python3 -m pytest -q tooling/qa/fixes_tests/` passed (219); the other active project suites passed (398); `bash tooling/qa/check-panel.sh` passed; `node --check site/js/chat-panel.js` and `git diff --check` passed.
 - Limits: all checks used local fake/offline services; no paid or live AI call, push or deployment. AF-T1 and later tasks remain for subsequent workers.
+
+## 2026-09-19 — AF-T1 Agent lead search
+
+- Added a wide “Describe the leads you want…” bar above the existing filters, with an accessible label and an Ask agent button; pressing Enter submits it too.
+- Requests use the shared agent `ask` path, so the panel opens and sends automatically for signed-in visitors, while signed-out visitors keep the question queued through account creation.
+- Added offline coverage for placement, full-width styling, accessible form controls, empty-query handling and the shared send path.
+- Implementation commit: `10f85c3` (`feat: add agent lead search bar`).
+- Checks: required QA and all active project suites passed together (628); `git diff --check` passed.
+- Limits: no real AI call, paid service, push or deployment. AF-T2 and later tasks remain for subsequent workers.
