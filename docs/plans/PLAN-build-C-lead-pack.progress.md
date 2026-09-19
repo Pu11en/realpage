@@ -21,3 +21,14 @@
 - Browser smoke: Chromium downloaded `cranesignal-lead-pack-dallas-fort-worth-2026-09-19.pdf` with 307 leads across 27 pages, 307 source links, the correct success message, and no page errors; the first page was visually checked for readable layout.
 - Build notes: a first temporary-package inspection command was rejected because it included prohibited cleanup, then succeeded without that cleanup. Bare repository-wide `pytest` still cannot collect archived projects with missing legacy imports, while the documented active suites pass. The first browser smoke timed out because its catch-all mock intercepted the auth-config request; a single corrected route then passed.
 - Left open: T3–T4 remain untouched.
+
+## 2026-09-19 — T3 new-leads follow-up download
+
+- Added a secondary “Get new leads” action that appears only after a successful Lead Pack download for the exact selected state or region.
+- Saved each area's last download date in browser storage and filtered follow-up PDFs to leads whose stable `firstSeen` date is later; an empty follow-up shows the requested dated Map message instead of downloading an empty PDF.
+- Kept the existing free-account gate for both download actions, with shared loading, success, and error states. The secondary styling follows the existing interface while keeping the all-leads download visually primary.
+- Added regression tests for per-area storage isolation, strict date filtering, button visibility, and the empty state.
+- Implementation commit: `1130e21`.
+- Checked with `python3 -m pytest -q tooling/qa/fixes_tests/` (`227 passed`) and the active full project suite (`274 passed`). JavaScript syntax and whitespace checks passed.
+- Browser smoke: Chromium downloaded all 307 Dallas–Fort Worth rows, revealed the follow-up action, showed “No new leads since September 19, 2026” when current, then downloaded 307 new rows from a seeded older date; switching to Houston correctly hid the action because its history is separate.
+- Left open: T4 cross-browser and phone-emulation proof remains untouched.
