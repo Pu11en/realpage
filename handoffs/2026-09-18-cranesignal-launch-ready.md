@@ -9,8 +9,8 @@
 - Leftovers: 51 RealPage mentions in private business/ notes (`bash tooling/check-no-realpage-target.sh`); not visitor-facing.
 - The case-study Railway service may still be running (no auth on /case-study/api/run); switch it off.
 
-## Next job: make it ready for 20 users at once (all free tools)
-Drew wants coding agents to review the code and simulated users to load-test it.
+## Next job: make it ready for a marketing-week rush of users (free tools, cheap tests)
+Drew wants coding agents to review the code and simulated users to load-test it. "20" was only an example: find how many users at once it handles before it slows or breaks (ramp up 10, 50, 100, 200) and fix the weak spot.
 1. **Code review (free):** CodeRabbit (free for public repos, github.com/Pu11en/realpage is public) or self-hosted qodo-ai/pr-agent. Also Semgrep for security checks. Open a PR from a branch so the reviewer comments on it.
 2. **20 simulated users (free):** Locust (github.com/locustio/locust, Python) or k6 (github.com/grafana/k6). Script: land on cranesignal.com → Start free → map → Early Leads → a building page, 20 users at once, report slow pages and errors.
 3. **Chat under load, the cheap way (Drew asked for this):**
