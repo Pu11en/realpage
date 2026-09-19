@@ -92,6 +92,13 @@ function renderShell(activeKey) {
 const VIEW_AS_TIP = "Highlight the buildings a Yardi / Entrata / AppFolio seller would win";
 
 // "Last updated" = the lead snapshot date, never the site deploy date.
+function formatDataDate(iso) {
+  if (!iso) return "";
+  const d = new Date(`${iso}T12:00:00`);
+  if (isNaN(d)) return "";
+  return d.toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" });
+}
+
 function formatUpdated(iso) {
   if (!iso) return "";
   const d = new Date(`${iso}T12:00:00`);
