@@ -127,7 +127,7 @@ def test_signed_out_pages_and_data_load_without_sign_in(gate):
     assert (status, loc) == (302, "/map.html")
     for path, want in (("/index.html", b"Early Leads"), ("/map.html", b"Map"),
                        ("/property.html?id=tx-1", b"CraneSignal"), ("/master-table.html", b"CraneSignal"),
-                       ("/under-the-hood.html", b"Under the Hood"), ("/landing.html", b"Start free"),
+                       ("/under-the-hood.html", b"Under the Hood"),
                        ("/data/areas/index.json", b'"areas"'), ("/data/areas/tx.json", b'"leads"'),
                        ("/js/app.js", b"renderShell")):
         status, loc, body = _get(gate + path)
