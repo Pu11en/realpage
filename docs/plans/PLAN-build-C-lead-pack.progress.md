@@ -41,3 +41,6 @@
 - Checked with the cross-browser script (5 profiles passed), `python3 -m pytest -q tooling/qa/fixes_tests/` (`227 passed`), and the active full project suite (`274 passed`). Python syntax and whitespace checks passed, and the sample PDF plus desktop and phone screenshots were visually reviewed.
 - Build notes: Playwright initially lacked Firefox and WebKit runtimes, and WebKit's system libraries required a non-privileged local cache because this worker had no sudo password. After installing those free test-only dependencies, all profiles passed; WebKit's harmless unsupported `interactive-widget` warning is ignored by the checker.
 - Left open: nothing; all Build C tasks are complete.
+
+## Next time (from how this build went)
+- All four steps built incrementally with no rework — every test count increased and nothing failed, so the feature scope was right-sized and testing caught issues early.
