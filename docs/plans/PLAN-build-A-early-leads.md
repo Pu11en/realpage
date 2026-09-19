@@ -1,4 +1,6 @@
 # Build A: Early Leads agent-first (Software Sellers edition, 2026-09-18)
+Goal: On Early Leads, every building has a "Get contact →" button that asks the agent who to call (company, phone, website and role, each with a source), a "Describe the leads you want…" bar with example chips sits above a folded "Filters" toggle, and the page shows the real data date with no fake "NEW" count, all finished and pushed live.
+Done when: `python3 -m pytest -q tooling/qa/fixes_tests/` passes, and in 30 seconds on http://localhost:8765/index.html you can see "Get contact →" on the building rows, the search bar with chips, and no "NEW" card.
 
 Combined from PLAN-gap1-who-to-call.md, PLAN-agent-first-leads.md, PLAN-gap3-freshness.md (read them for the decisions).
 These all touch site/js/chat-panel.js, site/js/app.js and site/index.html, so they run in order in ONE build.
