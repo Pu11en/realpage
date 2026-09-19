@@ -56,3 +56,13 @@
 - Checks: required QA passed (234); the other active project suites passed (398); a local Chromium check showed all three Texas examples, sent a clicked query, and refreshed all three for Austin. `git diff --check` passed.
 - Check correction: the first combined test command named the old nonexistent `propertystack/tests` path; reran against the actual `propertystack/lib/tests` and `propertystack/skills/*/tests` paths successfully.
 - Limits: no real AI call, paid service, push or deployment. AF-T3 and later tasks remain untouched; those tasks are still needed to fold filters, finish mobile layout, remove the fake New count, show the real data date, and complete the overall build.
+
+## 2026-09-19 — AF-T3 Folded filters
+
+- Put property search, signal, city, software, sort, and hide-my-software controls behind a small Filters button that starts closed; the state and region pills remain visible.
+- The button reports its open/closed state for assistive technology, and opening or closing it leaves the existing filter controls and event handlers intact.
+- Added offline coverage for the closed default, accessible toggle, control placement, visible location pills, and unchanged filter listeners.
+- Implementation commit: `b6d5f35` (`feat: fold early lead filters by default`).
+- Checks: required QA passed (239); the other active project suites passed (398); focused AF-T1 through AF-T3 tests passed (12); `git diff --check` passed.
+- Browser check: Chromium confirmed the controls start closed, open from the button, property search narrows to the matching building, and the Sold dropdown returns only sold rows.
+- Limits: no real AI call, paid service, push or deployment. AF-T4 and later tasks remain untouched; the overall build still needs the mobile pass, fake New removal, real data date, final screenshots, and approved publishing.
