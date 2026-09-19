@@ -207,6 +207,27 @@ a { color: var(--blue); text-underline-offset: 3px; }
 .lead-agent-search button:hover { background: var(--blue-2); }
 .lead-agent-search button:focus-visible { outline: 3px solid var(--amber); outline-offset: -4px; }
 
+.lead-agent-examples {
+  display: flex;
+  gap: 8px;
+  margin: 0 0 16px;
+  flex-wrap: wrap;
+}
+
+.lead-agent-example {
+  padding: 7px 12px;
+  background: var(--paper-2);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--text-muted);
+  font: 12px var(--font);
+  cursor: pointer;
+  transition: border-color .15s var(--ease), color .15s var(--ease), background .15s var(--ease);
+}
+
+.lead-agent-example:hover { border-color: var(--blue); color: var(--blue); background: var(--blue-soft); }
+.lead-agent-example:focus-visible { outline: 3px solid var(--amber); outline-offset: 2px; }
+
 .area-buttons {
   display: flex;
   gap: 8px;

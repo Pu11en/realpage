@@ -76,6 +76,7 @@
           <input id="lead-agent-query" type="text" placeholder="Describe the leads you want…" autocomplete="off" />
           <button type="submit">Ask agent &rarr;</button>
         </form>
+        <div class="lead-agent-examples" id="lead-agent-examples" aria-label="Example lead searches"></div>
 
         <div class="filters">
           <input id="f-search" placeholder="Search property" />
@@ -219,6 +220,26 @@
         const query = document.getElementById("lead-agent-query").value.trim();
         if (!query) return;
         window.PSChatPanel.ask(query);
+      });
+
+      function renderLeadExamples() {
+        const metro = (document.querySelector(".metro-btn.active") || {}).dataset?.metro || "";
+        const place = metro || area.label;
+        const locationPhrase = metro ? `near ${place}` : `in ${place}`;
+        const examples = [
+          `${place} buildings opening in 2027`,
+          `Recently sold ${locationPhrase}, 200+ units`,
+          `Not on any software yet ${locationPhrase}`,
+        ];
+        document.getElementById("lead-agent-examples").innerHTML = examples.map((query) =>
+          `<button type="button" class="lead-agent-example" data-agent-query="${esc(query)}">${esc(query)}</button>`
+        ).join("");
+      }
+
+      document.getElementById("lead-agent-examples").addEventListener("click", (event) => {
+        const example = event.target.closest("[data-agent-query]");
+        if (!example) return;
+        window.PSChatPanel.ask(example.dataset.agentQuery);
       });
 
       // "Sold Jun 2026" + type "Sold" shouldn't read "Sold: Sold Jun 2026".
@@ -407,6 +428,7 @@
       function pickMetro(name) {
         document.querySelectorAll(".metro-btn").forEach((b) => b.classList.toggle("active", b.dataset.metro === name));
         fillCities();
+        renderLeadExamples();
         const url = new URL(location.href);
         if (name) url.searchParams.set("region", name); else url.searchParams.delete("region");
         history.replaceState(null, "", url);
@@ -423,6 +445,7 @@
       if (wantedRegion && [...document.querySelectorAll(".metro-btn")].some((b) => b.dataset.metro === wantedRegion)) {
         document.querySelectorAll(".metro-btn").forEach((b) => b.classList.toggle("active", b.dataset.metro === wantedRegion));
       }
+      renderLeadExamples();
       fillCities();
       updateNewLeadsAction();
 
