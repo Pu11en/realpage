@@ -1,4 +1,4 @@
-"""D5: CraneSignal's own Under the Hood numbers load into the chat as
+"""D5: CraneSignal's own How it works numbers load into the chat as
 `cranesignal_*` tables, with values matching site/data exactly."""
 import importlib.util
 import json

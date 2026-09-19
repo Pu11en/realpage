@@ -1,4 +1,4 @@
-"""A4: every Early Leads row opens a detail page, including rows with no propertyId (TX/AZ/NY)."""
+"""A4: every Leads row opens a detail page, including rows with no propertyId (TX/AZ/NY)."""
 import json
 import shutil
 import subprocess
@@ -18,7 +18,7 @@ def test_every_row_is_clickable():
 
 def test_property_page_falls_back_to_lead():
     assert "findLead(id" in PROPERTY
-    for bit in ("Stage", "Software", "Sources", "Get contact &rarr;", "l.why", "l.units"):
+    for bit in ("Stage", "Software", "Sources", "See who to call &rarr;", "l.why", "l.units"):
         assert bit in PROPERTY
 
 

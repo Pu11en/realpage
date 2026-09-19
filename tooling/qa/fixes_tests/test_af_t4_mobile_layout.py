@@ -1,4 +1,4 @@
-"""AF-T4: Agent-first Early Leads controls stack cleanly on phones."""
+"""AF-T4: Agent-first Leads controls stack cleanly on phones."""
 from pathlib import Path
 
 

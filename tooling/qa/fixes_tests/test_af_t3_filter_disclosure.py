@@ -1,4 +1,4 @@
-"""AF-T3: Early Leads keeps its working controls in a closed filter disclosure."""
+"""AF-T3: Leads keeps its working controls in a closed filter disclosure."""
 from pathlib import Path
 
 

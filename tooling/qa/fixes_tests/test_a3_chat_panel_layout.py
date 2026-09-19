@@ -1,4 +1,4 @@
-"""A3: with the chat docked on desktop, Early Leads rows become cards so Software and Why stay in view,
+"""A3: with the chat docked on desktop, Leads rows become cards so Software and Why stay in view,
 and the Chat menu link never shows as a second selected tab."""
 import re
 from pathlib import Path

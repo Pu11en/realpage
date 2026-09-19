@@ -21,10 +21,11 @@
   // Below 900px the panel floats over the whole page instead of docking, so
   // there it only opens when asked; otherwise a phone visitor would see
   // nothing but the account prompt.
+  // Closed until asked (2026-09-19): first-time visitors said the panel covered
+  // the page and popped over forms. The page now explains the agent on its own,
+  // so it opens only when the visitor clicks Ask, See who to call or a download.
   function isOpen() {
-    const v = sessionStorage.getItem(STORAGE_OPEN);
-    if (v === null) return window.matchMedia("(min-width: 900px)").matches;
-    return v === "1";
+    return sessionStorage.getItem(STORAGE_OPEN) === "1";
   }
 
   function setOpen(v) {
@@ -69,7 +70,7 @@
         </div>
         <div class="chat-panel-signin-card" id="chat-panel-signin-card" style="display:none;">
           <p id="chat-panel-signin-purpose">${DEFAULT_SIGNIN_PURPOSE}</p>
-          <p class="chat-panel-signin-note">Takes about 20 seconds, with Google or your email. No card. It also unlocks the agent and your Lead Pack.</p>
+          <p class="chat-panel-signin-note">Takes about 20 seconds, with Google or your email. No card. It also unlocks the agent and your call list.</p>
           <button class="chat-panel-signin" id="chat-panel-signin">Make a free account</button>
           <a href="#" class="chat-panel-signin-link" id="chat-panel-signin-link">Already have one? Sign in</a>
         </div>
@@ -467,7 +468,7 @@
     const upcoming = p.upcoming != null ? p.upcoming
       : (p.stage ? p.stage !== "sold" : ["Upcoming", "Planned", "Leasing"].includes(p.signalType));
     if (upcoming) {
-      const bits = [units, stage || "not open yet", "software not chosen yet"].join(", ");
+      const bits = [units, stage || "not open yet", "software no software yet"].join(", ");
       const ask = stage === "leasing now" ? "who is leasing it, how full is it" : "who is developing it, when does it open";
       return `Deep dive on ${p.name}, ${p.city} (${bits}): ${whoToCall}. Then tell me ${ask}, and why call now.`;
     }

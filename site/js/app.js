@@ -3,8 +3,8 @@
 
 const NAV_TABS = [
   { key: "map", label: "Map", href: "map.html" },
-  { key: "leads", label: "Early Leads", href: "index.html" },
-  { key: "hood", label: "Under the Hood", href: "under-the-hood.html" },
+  { key: "leads", label: "Leads", href: "index.html" },
+  { key: "hood", label: "How it works", href: "under-the-hood.html" },
 ];
 
 
@@ -50,6 +50,7 @@ function renderShell(activeKey) {
       <a class="wordmark" href="${LANDING_URL}" title="Back to the CraneSignal home page">CraneSignal</a>
       <nav>${navHtml}</nav>
       <div class="top-controls">
+        <div style="color: var(--text-dim); font-size: 11px;">Covered: Texas, Arizona</div>
         <div id="last-updated" style="color: var(--text-dim); font-size: 11px;"></div>
         <a href="${LANDING_URL}" style="color: var(--text-dim); font-size: 11px;">&larr; Home page</a>
         <a href="privacy.html" style="color: var(--text-dim); font-size: 11px;">Privacy</a>
@@ -109,13 +110,13 @@ function scoreBadgeColor(score) {
 
 function vendorPill(vendor, colorMap) {
   if (!vendor) {
-    return `<span class="pill" style="background:var(--paper-2);color:var(--muted);">Not chosen yet</span>`;
+    return `<span class="pill" style="background:var(--paper-2);color:var(--muted);">No software yet</span>`;
   }
   const color = (colorMap && colorMap[vendor]) || "#5d6577";  // readable default on white
   return `<span class="pill" style="background:${color}22;color:${color};">${vendor}</span>`;
 }
 
-// Early Leads number boxes, from the rows currently shown (state + region + city + search).
+// Leads number boxes, from the rows currently shown (state + region + city + search).
 // "Opening soon" = shown buildings, not sold, opening within the next 12 months.
 function leadStats(rows, today) {
   const now = (today || new Date()).toISOString().slice(0, 10);
@@ -160,7 +161,7 @@ function visibleAreas(areas) {
   return (areas || []).filter((a) => !a.hidden);
 }
 
-// Early Leads: one button per area (5.2). `areas` is site/data/areas/index.json's
+// Leads: one button per area (5.2). `areas` is site/data/areas/index.json's
 // `areas` list; `activeSlug` is the one currently shown; `onSelect(slug)` swaps data.
 function renderAreaButtons(areas, activeSlug) {
   const visible = visibleAreas(areas);
@@ -174,4 +175,13 @@ function wireAreaButtons(container, onSelect) {
   container.querySelectorAll(".area-btn").forEach((btn) => {
     btn.addEventListener("click", () => onSelect(btn.dataset.area));
   });
+}
+
+// One wording everywhere: the data files still say "software not picked yet".
+function sameWords(text) {
+  return String(text || "")
+    .replace(/software not picked yet/gi, "no software yet")
+    .replace(/software not chosen yet/gi, "no software yet")
+    .replace(/not picked yet/gi, "no software yet")
+    .replace(/not chosen yet/gi, "no software yet");
 }

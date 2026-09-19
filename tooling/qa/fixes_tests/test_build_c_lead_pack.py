@@ -24,9 +24,9 @@ def test_pdf_libraries_are_pinned_local_and_licensed():
 def test_lead_pack_ui_uses_the_existing_account_check():
     page = (SITE / "index.html").read_text(encoding="utf-8")
     panel = (SITE / "js" / "chat-panel.js").read_text(encoding="utf-8")
-    assert "Download Lead Pack (PDF)" in page
+    assert "Download call list (PDF)" in page
     assert 'window.PSChatPanel.requireAuth(' in page
-    assert "Make a free account to download your Lead Pack" in page
+    assert "Make a free account to download your call list" in page
     assert "function requireAuth(purpose, onSuccess)" in panel
     assert "return checkAuth(panel).then" in panel
     assert "sendPendingAuthAction(panel)" in panel
@@ -81,7 +81,7 @@ process.stdout.write(JSON.stringify({
     assert all(row["source"].startswith(("http://", "https://")) for row in built["rows"])
 
     reader = PdfReader(pdf_path)
-    assert reader.metadata.title == "CraneSignal Lead Pack: Dallas–Fort Worth, September 19, 2026"
+    assert reader.metadata.title == "CraneSignal call list: Dallas–Fort Worth, September 19, 2026"
     first_page = reader.pages[0]
     assert round(float(first_page.mediabox.width)) == 792
     assert round(float(first_page.mediabox.height)) == 612
@@ -96,6 +96,6 @@ process.stdout.write(JSON.stringify({
     assert len(source_links) == len(leads)
 
     text = "\n".join(page.extract_text() or "" for page in reader.pages)
-    assert "CraneSignal Lead Pack: Dallas" in text
+    assert "CraneSignal call list: Dallas" in text
     assert all(label in text for label in ("Hot", "Warm", "Early"))
     assert "Find who to call for any building at app.cranesignal.com" in text

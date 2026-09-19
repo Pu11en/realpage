@@ -1,4 +1,4 @@
-"""G3-T3: Early Leads names the snapshot date and links area requests."""
+"""G3-T3: Leads names the snapshot date and links area requests."""
 import shutil
 import subprocess
 from pathlib import Path

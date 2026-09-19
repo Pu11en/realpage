@@ -1,4 +1,4 @@
-"""A2: Early Leads number boxes follow the rows shown (region, city, search), and an empty result says "Nothing found"."""
+"""A2: Leads number boxes follow the rows shown (region, city, search), and an empty result says "Nothing found"."""
 import json
 import shutil
 import subprocess

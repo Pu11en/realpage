@@ -9,8 +9,8 @@ PROPERTY = (ROOT / "site/property.html").read_text(encoding="utf-8")
 
 
 def test_every_building_surface_uses_get_contact_label():
-    assert INDEX.count("Get contact &rarr;") == 1
-    assert PROPERTY.count("Get contact &rarr;") == 2
+    assert INDEX.count("See who to call &rarr;") == 1
+    assert PROPERTY.count("See who to call &rarr;") == 2
     assert "✦ Deep dive" not in INDEX
     assert "✦ Deep dive in chat" not in PROPERTY
 

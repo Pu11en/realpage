@@ -125,9 +125,9 @@ def test_signed_out_pages_and_data_load_without_sign_in(gate):
     # Investor launch (Drew 2026-09-18): all data open, no login. "/" opens the Map.
     status, loc, _ = _get(gate + "/")
     assert (status, loc) == (302, "/map.html")
-    for path, want in (("/index.html", b"Early Leads"), ("/map.html", b"Map"),
+    for path, want in (("/index.html", b"Leads"), ("/map.html", b"Map"),
                        ("/property.html?id=tx-1", b"CraneSignal"), ("/master-table.html", b"CraneSignal"),
-                       ("/under-the-hood.html", b"Under the Hood"),
+                       ("/under-the-hood.html", b"How it works"),
                        ("/data/areas/index.json", b'"areas"'), ("/data/areas/tx.json", b'"leads"'),
                        ("/js/app.js", b"renderShell")):
         status, loc, body = _get(gate + path)
@@ -145,7 +145,7 @@ def test_public_page_and_shell_stay_open(gate):
 
 def test_signed_in_request_gets_the_page_and_the_data(gate):
     status, _, body = _get(gate + "/index.html", cookie=COOKIE)
-    assert status == 200 and b"Early Leads" in body
+    assert status == 200 and b"Leads" in body
     status, _, body = _get(gate + "/data/areas/tx.json", cookie=COOKIE)
     assert status == 200 and b'"leads"' in body
 

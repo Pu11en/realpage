@@ -1,4 +1,4 @@
-"""T14: Early Leads must not dump every row on screen at once (e.g. 593 Texas
+"""T14: Leads must not dump every row on screen at once (e.g. 593 Texas
 rows). It should start at 50 rows with a "Show more" button, while filters
 and counts (stats, header rank numbers via `rows`) still see every matching
 row. Offline: checks the pagination logic in site/index.html by source

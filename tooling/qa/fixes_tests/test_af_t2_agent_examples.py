@@ -1,4 +1,4 @@
-"""AF-T2: Early Leads offers location-aware example searches for the agent."""
+"""AF-T2: Leads offers location-aware example searches for the agent."""
 from pathlib import Path
 
 
@@ -19,7 +19,7 @@ def test_three_examples_sit_between_agent_bar_and_filters():
     assert "const examples = [" in renderer
     assert "`${place} buildings opening in 2027`" in renderer
     assert "`Recently sold ${locationPhrase}, 200+ units`" in renderer
-    assert "`Not on any software yet ${locationPhrase}`" in renderer
+    assert "`No software yet ${locationPhrase}`" in renderer
     assert 'type="button"' in renderer
 
 

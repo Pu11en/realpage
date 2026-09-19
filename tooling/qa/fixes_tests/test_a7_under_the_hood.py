@@ -1,4 +1,4 @@
-"""A7: Under the Hood hides raw internals and shows the same lead count as the site."""
+"""A7: How it works hides raw internals and shows the same lead count as the site."""
 import json
 import shutil
 import subprocess

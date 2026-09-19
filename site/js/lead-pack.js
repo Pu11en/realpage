@@ -148,12 +148,12 @@
   function buildLeadPack(options) {
     const opts = options || {};
     const JsPDF = opts.jsPDF || (root.jspdf && root.jspdf.jsPDF);
-    if (!JsPDF) throw new Error("The Lead Pack PDF library did not load. Refresh the page and try again.");
+    if (!JsPDF) throw new Error("The PDF library did not load. Refresh the page and try again.");
     const doc = opts.doc || new JsPDF({ orientation: "landscape", unit: "pt", format: "letter", compress: true });
     const region = String(opts.region || "Selected area");
     const date = opts.date || new Date();
     const rows = leadPackRows(opts.leads || []);
-    const title = `CraneSignal Lead Pack: ${region}, ${displayDate(date)}`;
+    const title = `CraneSignal call list: ${region}, ${displayDate(date)}`;
     const pageWidth = doc.internal.pageSize.getWidth();
     const pageHeight = doc.internal.pageSize.getHeight();
 
@@ -161,7 +161,7 @@
       title,
       subject: `${rows.length} apartment leads for ${region}`,
       author: "CraneSignal",
-      creator: "CraneSignal Lead Pack",
+      creator: "CraneSignal call list",
       keywords: "apartment leads, property management software, CraneSignal",
     });
     doc.setFont("helvetica", "bold");
@@ -233,7 +233,7 @@
     } else if (root.jspdfAutoTable && typeof root.jspdfAutoTable.autoTable === "function") {
       root.jspdfAutoTable.autoTable(doc, tableOptions);
     } else {
-      throw new Error("The Lead Pack table library did not load. Refresh the page and try again.");
+      throw new Error("The PDF table library did not load. Refresh the page and try again.");
     }
 
     return {

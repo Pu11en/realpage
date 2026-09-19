@@ -6,7 +6,7 @@
   <link rel="icon" type="image/svg+xml" href="/static/favicon.svg">
   <link rel="apple-touch-icon" href="/static/apple-touch-icon.png">
   <meta name="description" content="CraneSignal: apartment buildings about to pick software or change owners, with who to call and why now. Free.">
-  <title>CraneSignal -- Early Leads</title>
+  <title>CraneSignal -- Leads</title>
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="stylesheet" href="css/chat-panel.css" />
 </head>
@@ -55,7 +55,7 @@
       const softwareOptions = [...new Set(data.leads.map((l) => l.software).filter(Boolean))].sort();
 
       content.innerHTML = `
-        <h1>Early Leads</h1>
+        <h1>Leads</h1>
         <div class="meta">Apartment buildings worth a call now: being built, opening soon, or just sold to a new owner.</div>
         <div class="pick-row"><span class="pick-label">State</span>${renderAreaButtons(areas, area.slug)}</div>
         ${(data.metros || []).length ? `<div class="pick-row"><span class="pick-label">Region</span><div class="metro-buttons">
@@ -63,17 +63,17 @@
           ${data.metros.map((m) => `<button class="metro-btn" data-metro="${m.name}">${m.name} (${m.leads})</button>`).join("")}
         </div></div>` : ""}
         <div class="pick-row lead-pack-row">
-          <span class="pick-label">Lead pack</span>
+          <span class="pick-label">Call list</span>
           <div class="lead-pack-actions">
-            <button type="button" class="lead-pack-btn" id="download-lead-pack">Download Lead Pack (PDF)</button>
+            <button type="button" class="lead-pack-btn" id="download-lead-pack">Download call list (PDF)</button>
             <button type="button" class="lead-pack-btn secondary" id="download-csv">Download spreadsheet (CSV)</button>
-            <button type="button" class="lead-pack-btn secondary" id="download-new-leads" hidden>Get new leads</button>
-            <a class="pack-sample-link" href="sample-lead-pack.pdf" target="_blank" rel="noopener">See a sample pack</a>
+            <button type="button" class="lead-pack-btn secondary" id="download-new-leads" hidden>Get only the new ones</button>
+            <a class="pack-sample-link" href="sample-lead-pack.pdf" target="_blank" rel="noopener">See a sample call list</a>
             <span class="lead-pack-status" id="lead-pack-status" role="status" aria-live="polite"></span>
           </div>
         </div>
-        <p class="free-note"><b>Browse every lead free.</b> A free account unlocks who to call, the agent and your Lead Pack.</p>
-        <p class="unlock-note">A free account unlocks: <b>manager name</b>, <b>direct phone</b>, a <b>why-now brief</b> for any building, the Lead Pack and the spreadsheet. Free during early access, no card.</p>
+        <p class="free-note"><b>Browse every lead free.</b> A free account unlocks who to call, the agent and your call list (PDF).</p>
+        <p class="unlock-note">A free account unlocks: <b>manager name</b>, <b>direct phone</b>, a <b>'why call now' note</b> for any building, the call list and the spreadsheet. Free during early access, no card.</p>
         <p class="coverage-note">Covered now: Texas, Arizona. Don't see yours? <a href="map.html#request-area">Ask for it</a></p>
         <div class="quick-filters" id="quick-filters" aria-label="Quick filters">
           <button type="button" class="quick-filter active" data-signal="">All leads</button>
@@ -111,7 +111,7 @@
               <select id="f-city" aria-label="City"></select>
               <select id="f-software" aria-label="Software">
                 <option value="">All software</option>
-                <option value="__none__">Not chosen yet</option>
+                <option value="__none__">No software yet</option>
                 ${softwareOptions.map((v) => `<option value="${v}">${v}</option>`).join("")}
               </select>
               <select id="f-sort" aria-label="Sort by">
@@ -124,7 +124,7 @@
         </div>
         <table class="leads-table">
           <thead>
-            <tr><th>Rank</th><th data-sort-key="score">Score <span class="info" tabindex="0" role="note" aria-label="Score: how good this lead is right now, 0 to 100" title="How good this lead is right now, 0 to 100">&#9432;</span></th><th data-sort-key="property">Property</th><th data-sort-key="city">City</th><th data-sort-key="units">Units</th><th data-sort-key="signalType">Signal <span class="info" tabindex="0" role="note" aria-label="Signal: why this building is worth a call now" title="Why this building is worth a call now: being built, opening soon or recently sold">&#9432;</span></th><th data-sort-key="software">Software</th><th>Why</th></tr>
+            <tr><th>Rank</th><th data-sort-key="score">Score <span class="info" tabindex="0" role="note" aria-label="Score: how good this lead is right now, 0 to 100" title="How good this lead is right now, 0 to 100">&#9432;</span></th><th data-sort-key="property">Property</th><th data-sort-key="city">City</th><th data-sort-key="units">Units</th><th data-sort-key="signalType">Why now <span class="info" tabindex="0" role="note" aria-label="Signal: why this building is worth a call now" title="Why this building is worth a call now: being built, opening soon or recently sold">&#9432;</span></th><th data-sort-key="software">Software</th><th>Why</th></tr>
           </thead>
           <tbody id="leads-tbody"></tbody>
         </table>
@@ -211,7 +211,7 @@
               leadPackStatus.textContent = `${result.rowCount.toLocaleString()} ${onlyNew ? "new " : ""}leads downloaded.`;
             } catch (error) {
               leadPackStatus.classList.add("error");
-              leadPackStatus.textContent = error.message || "The Lead Pack could not be built. Please try again.";
+              leadPackStatus.textContent = error.message || "The call list could not be built. Please try again.";
             } finally {
               setLeadPackBusy(false);
             }
@@ -219,7 +219,7 @@
         };
 
         window.PSChatPanel.requireAuth(
-          "Make a free account to download your Lead Pack",
+          "Make a free account to download your call list",
           startDownload
         ).then((signedIn) => {
           if (signedIn) return;
@@ -298,7 +298,7 @@
         const examples = [
           `${place} buildings opening in 2027`,
           `Recently sold ${locationPhrase}, 200+ units`,
-          `Not on any software yet ${locationPhrase}`,
+          `No software yet ${locationPhrase}`,
         ];
         document.getElementById("lead-agent-examples").innerHTML = examples.map((query) =>
           `<button type="button" class="lead-agent-example" data-agent-query="${esc(query)}">${esc(query)}</button>`
@@ -463,13 +463,13 @@
             <td data-label="Rank">${i + 1}</td>
             <td data-label="Score"><span class="score-badge" style="background:${scoreBadgeColor(l.score)}">${l.score}</span></td>
             <td class="lead-prop"><strong>${l.property}</strong>${l.subArea ? `<div class="lead-subarea">${l.subArea}</div>` : ""}
-              <button class="btn deep-dive-btn" data-deep-dive="${l.id}" title="Find who to call about this building">Get contact &rarr;</button>
+              <button class="btn deep-dive-btn" data-deep-dive="${l.id}" title="See who to call about this building">See who to call &rarr;</button>
               ${contactHtml(l.contact, l)}</td>
             <td data-label="City">${l.city}</td>
             <td data-label="Units">${l.units ?? "?"}</td>
             <td data-label="Signal" class="lead-signal">${signalHtml(l)}</td>
             <td data-label="Software">${leadSoftwareHtml(l)}</td>
-            <td class="lead-why">${l.why} <span class="lead-src">${sourceLinks(l.sources)}</span></td>
+            <td class="lead-why">${sameWords(l.why)} <span class="lead-src">${sourceLinks(l.sources)}</span></td>
           </tr>
         `).join("");
 

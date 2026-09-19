@@ -1,4 +1,4 @@
-"""G3: Early Leads shows honest freshness information without a fake New count."""
+"""G3: Leads shows honest freshness information without a fake New count."""
 import json
 from pathlib import Path
 

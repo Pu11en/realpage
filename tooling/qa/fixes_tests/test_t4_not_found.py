@@ -19,9 +19,9 @@ def test_unknown_page_is_a_real_404(gate):
 
 def test_pages_load_signed_out_and_signed_in(gate):
     status, _, body = _get(gate + "/index.html")
-    assert status == 200 and b"Early Leads" in body
+    assert status == 200 and b"Leads" in body
     status, _, body = _get(gate + "/index.html", cookie=COOKIE)
-    assert status == 200 and b"Early Leads" in body
+    assert status == 200 and b"Leads" in body
 
 
 def test_chat_app_routes_still_reach_the_chat_app(gate):

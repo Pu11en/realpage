@@ -72,7 +72,7 @@
       return `
         <div class="back-row"><a class="back-link" href="index.html" onclick="if (history.length > 1 && document.referrer.startsWith(location.origin)) { history.back(); return false; }">&larr; Back</a></div>
         <h1>${esc(p.community)}</h1>
-        <button class="btn deep-dive-btn detail-dive" data-deep-dive="${esc(p.id)}">Get contact &rarr;</button>
+        <button class="btn deep-dive-btn detail-dive" data-deep-dive="${esc(p.id)}">See who to call &rarr;</button>
         <div class="meta">${bits.join(" &middot; ")}<br/>${who}</div>`;
     }
 
@@ -134,7 +134,7 @@
           <span class="dim">Rank #${l.rank} of the lead list</span>
         </div>
         <div class="breakdown">${parts}</div>
-        <div class="why">${esc(l.why)}</div></div>`;
+        <div class="why">${esc(sameWords(l.why))}</div></div>`;
     }
 
     function contactCard(p, isUpcoming) {
@@ -204,7 +204,7 @@
       return `
         <div class="back-row"><a class="back-link" href="index.html" onclick="if (history.length > 1 && document.referrer.startsWith(location.origin)) { history.back(); return false; }">&larr; Back</a></div>
         <h1>${esc(name)}</h1>
-        <button class="btn deep-dive-btn detail-dive" data-deep-dive="${esc(l.id)}">Get contact &rarr;</button>
+        <button class="btn deep-dive-btn detail-dive" data-deep-dive="${esc(l.id)}">See who to call &rarr;</button>
         <div class="meta">${bits.join(" &middot; ")}<br/>${who}</div>
         <div class="cards-row">
           <div class="card"><h3>Stage</h3><dl class="kv">
@@ -218,7 +218,7 @@
             ${!l.software && !sold ? `<div class="dim">Not built yet -- software not picked.</div>` : ""}</div>
           <div class="card"><h3>Lead score</h3>
             <div class="score-row"><span class="score-badge score-badge-lg ${scoreClass(l.score)}">${l.score}</span></div>
-            <div class="why">${esc(l.why)}</div></div>
+            <div class="why">${esc(sameWords(l.why))}</div></div>
           <div class="card"><h3>Contact</h3>${l.officePhone
             ? `<dl class="kv"><dt>Phone</dt><dd><a href="tel:${esc(l.officePhone)}">${esc(l.officePhone)}</a></dd></dl>`
             : `<div class="dim">Phone/email not found.${l.website ? `<br/>Try the website: ${link(l.website, "open site")}` : ""}</div>`}</div>
@@ -254,7 +254,7 @@
       if (!p) {
         content.innerHTML = `<h1>Property not found</h1>
           <div class="meta">No building or upcoming project with id "${esc(id)}".
-          <a class="link" href="index.html">Back to Early Leads</a></div>`;
+          <a class="link" href="index.html">Back to Leads</a></div>`;
         return;
       }
       document.title = `CraneSignal -- ${p.community}`;

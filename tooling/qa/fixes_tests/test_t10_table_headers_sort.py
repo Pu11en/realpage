@@ -1,4 +1,4 @@
-"""T10: the Early Leads table headers are clickable and sort the rows,
+"""T10: the Leads table headers are clickable and sort the rows,
 clicking again reverses the order, and the Sort dropdown stays in step."""
 from pathlib import Path
 

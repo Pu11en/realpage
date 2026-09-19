@@ -1,4 +1,4 @@
-"""AF-T1: Early Leads can send a plain-language lead request to the agent."""
+"""AF-T1: Leads can send a plain-language lead request to the agent."""
 from pathlib import Path
 
 
