@@ -164,6 +164,29 @@ a { color: var(--blue); text-underline-offset: 3px; }
   flex-wrap: wrap;
 }
 
+.filters-disclosure-body[hidden] { display: none; }
+
+.filters-disclosure { margin-bottom: 16px; }
+
+.filters-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text-muted);
+  font: 600 12px var(--font);
+  cursor: pointer;
+}
+
+.filters-toggle:hover { border-color: var(--blue); color: var(--blue); }
+.filters-toggle:focus-visible { outline: 3px solid var(--amber); outline-offset: 2px; }
+.filters-toggle[aria-expanded="true"] { margin-bottom: 10px; color: var(--text); }
+.filters-toggle-icon { font-size: 15px; line-height: 10px; transition: transform .15s var(--ease); }
+.filters-toggle[aria-expanded="true"] .filters-toggle-icon { transform: rotate(180deg); }
+
 .lead-agent-search {
   display: flex;
   width: 100%;

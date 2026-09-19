@@ -78,29 +78,36 @@
         </form>
         <div class="lead-agent-examples" id="lead-agent-examples" aria-label="Example lead searches"></div>
 
-        <div class="filters">
-          <input id="f-search" placeholder="Search property" />
-          <select id="f-signal">
-            <option value="">All signals</option>
-            <option value="Upcoming">Upcoming</option>
-            <option value="Leasing">Leasing now</option>
-            <option value="Planned">Planned</option>
-            <option value="Sold">Recently sold</option>
-          </select>
-          <select id="f-city"></select>
-          <select id="f-software">
-            <option value="">All software</option>
-            <option value="__none__">Not chosen yet</option>
-            ${softwareOptions.map((v) => `<option value="${v}">${v}</option>`).join("")}
-          </select>
-          <select id="f-sort">
-            <option value="score">Sort: score</option>
-            <option value="size">Sort: size (units)</option>
-            <option value="newest">Sort: newest</option>
-          </select>
-          <label class="hide-mine">
-            <input type="checkbox" id="f-hide-mine" /> hide properties already on my software
-          </label>
+        <div class="filters-disclosure">
+          <button type="button" class="filters-toggle" id="filters-toggle" aria-expanded="false" aria-controls="lead-filters">
+            Filters <span class="filters-toggle-icon" aria-hidden="true">&#8964;</span>
+          </button>
+          <div class="filters-disclosure-body" id="lead-filters" hidden>
+            <div class="filters">
+              <input id="f-search" placeholder="Search property" />
+              <select id="f-signal">
+                <option value="">All signals</option>
+                <option value="Upcoming">Upcoming</option>
+                <option value="Leasing">Leasing now</option>
+                <option value="Planned">Planned</option>
+                <option value="Sold">Recently sold</option>
+              </select>
+              <select id="f-city"></select>
+              <select id="f-software">
+                <option value="">All software</option>
+                <option value="__none__">Not chosen yet</option>
+                ${softwareOptions.map((v) => `<option value="${v}">${v}</option>`).join("")}
+              </select>
+              <select id="f-sort">
+                <option value="score">Sort: score</option>
+                <option value="size">Sort: size (units)</option>
+                <option value="newest">Sort: newest</option>
+              </select>
+              <label class="hide-mine">
+                <input type="checkbox" id="f-hide-mine" /> hide properties already on my software
+              </label>
+            </div>
+          </div>
         </div>
         <table class="leads-table">
           <thead>
@@ -240,6 +247,14 @@
         const example = event.target.closest("[data-agent-query]");
         if (!example) return;
         window.PSChatPanel.ask(example.dataset.agentQuery);
+      });
+
+      const filtersToggle = document.getElementById("filters-toggle");
+      const leadFilters = document.getElementById("lead-filters");
+      filtersToggle.addEventListener("click", () => {
+        const opening = leadFilters.hidden;
+        leadFilters.hidden = !opening;
+        filtersToggle.setAttribute("aria-expanded", String(opening));
       });
 
       // "Sold Jun 2026" + type "Sold" shouldn't read "Sold: Sold Jun 2026".
