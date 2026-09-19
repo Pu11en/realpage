@@ -75,3 +75,6 @@
 - Checks: required QA passed (242); the other active project suites passed (398); focused AF-T1 through AF-T4 tests passed (15); `git diff --check` passed. Chromium at 390px confirmed the column layout and no horizontal overflow.
 - Check correction: the first browser geometry assertion compared the bordered form to its inner button exactly; the expected two-pixel border difference was allowed and the corrected browser check passed.
 - Limits: no real AI call, paid service, push or deployment. G3-T1 and later tasks remain untouched; the overall build still needs fake New removal, the real data date, final freshness text/screenshots, and approved publishing.
+
+## G3-T1 Early Leads: remove the "NEW" stat card (and the "New" badge on rows if it depends on newThisWeek). Keep Leads, Units in play, Opening soon. (built alongside other steps)
+- — the step is finished and committed
