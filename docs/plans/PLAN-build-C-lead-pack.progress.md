@@ -32,3 +32,12 @@
 - Checked with `python3 -m pytest -q tooling/qa/fixes_tests/` (`227 passed`) and the active full project suite (`274 passed`). JavaScript syntax and whitespace checks passed.
 - Browser smoke: Chromium downloaded all 307 Dallas–Fort Worth rows, revealed the follow-up action, showed “No new leads since September 19, 2026” when current, then downloaded 307 new rows from a seeded older date; switching to Houston correctly hid the action because its history is separate.
 - Left open: T4 cross-browser and phone-emulation proof remains untouched.
+
+## 2026-09-19 — T4 cross-browser and phone proof
+
+- Added a repeatable Playwright check for desktop Chromium, Firefox, and WebKit plus iPhone 13 and Pixel 7 emulation; every profile downloaded and opened a valid 27-page Dallas–Fort Worth Lead Pack with all 307 rows represented by 307 source links.
+- Saved the sample 307-lead PDF, a rendered first-page preview, and successful download screenshots for all five profiles under `docs/plans/`.
+- Implementation commit: `fa3ca95`.
+- Checked with the cross-browser script (5 profiles passed), `python3 -m pytest -q tooling/qa/fixes_tests/` (`227 passed`), and the active full project suite (`274 passed`). Python syntax and whitespace checks passed, and the sample PDF plus desktop and phone screenshots were visually reviewed.
+- Build notes: Playwright initially lacked Firefox and WebKit runtimes, and WebKit's system libraries required a non-privileged local cache because this worker had no sudo password. After installing those free test-only dependencies, all profiles passed; WebKit's harmless unsupported `interactive-widget` warning is ignored by the checker.
+- Left open: nothing; all Build C tasks are complete.
