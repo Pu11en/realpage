@@ -66,11 +66,14 @@
           <span class="pick-label">Lead pack</span>
           <div class="lead-pack-actions">
             <button type="button" class="lead-pack-btn" id="download-lead-pack">Download Lead Pack (PDF)</button>
+            <button type="button" class="lead-pack-btn secondary" id="download-csv">Download spreadsheet (CSV)</button>
             <button type="button" class="lead-pack-btn secondary" id="download-new-leads" hidden>Get new leads</button>
+            <a class="pack-sample-link" href="sample-lead-pack.pdf" target="_blank" rel="noopener">See a sample pack</a>
             <span class="lead-pack-status" id="lead-pack-status" role="status" aria-live="polite"></span>
           </div>
         </div>
         <p class="free-note"><b>Browse every lead free.</b> A free account unlocks who to call, the agent and your Lead Pack.</p>
+        <p class="unlock-note">A free account unlocks: <b>manager name</b>, <b>direct phone</b>, a <b>why-now brief</b> for any building, the Lead Pack and the spreadsheet. Free during early access, no card.</p>
         <p class="coverage-note">Covered now: Texas, Arizona. Don't see yours? <a href="map.html#request-area">Ask for it</a></p>
         <div class="quick-filters" id="quick-filters" aria-label="Quick filters">
           <button type="button" class="quick-filter active" data-signal="">All leads</button>
@@ -167,7 +170,7 @@
       }
 
       function setLeadPackBusy(busy) {
-        [leadPackButton, newLeadsButton].forEach((button) => {
+        [leadPackButton, newLeadsButton, document.getElementById("download-csv")].forEach((button) => {
           button.disabled = busy;
           if (busy) button.setAttribute("aria-busy", "true");
           else button.removeAttribute("aria-busy");
@@ -221,7 +224,7 @@
         ).then((signedIn) => {
           if (signedIn) return;
           setLeadPackBusy(false);
-          leadPackStatus.textContent = "Sign in in the account panel to start your download.";
+          leadPackStatus.textContent = "Make a free account in the panel to start your download.";
         }).catch(() => {
           setLeadPackBusy(false);
           leadPackStatus.classList.add("error");
@@ -229,6 +232,53 @@
         });
       }
 
+      function csvText(selection) {
+        const cols = ["Building", "City", "Units", "Stage", "Signal", "Opens or sold", "Owner or developer or buyer", "Phone", "Why now", "Source"];
+        const cell = (v) => `"${String(v == null || v === "" ? "" : v).replace(/"/g, '""')}"`;
+        const rows = selection.leads.map((l) => [
+          l.property, l.city, l.units ?? "", l.stage ?? "", l.signalType ?? "",
+          l.saleDate || l.openingDate || "", l.buyer || l.developer || "",
+          l.officePhone || "", l.why || "", (l.sources && l.sources[0] && l.sources[0].url) || "",
+        ].map(cell).join(","));
+        return [cols.map(cell).join(","), ...rows].join("\r\n");
+      }
+
+      function requestCsv() {
+        const selection = selectedLeadPack();
+        setLeadPackBusy(true);
+        leadPackStatus.classList.remove("error");
+        leadPackStatus.textContent = "Checking your account…";
+        const startDownload = () => {
+          try {
+            const blob = new Blob(["\ufeff" + csvText(selection)], { type: "text/csv;charset=utf-8" });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement("a");
+            a.href = url;
+            a.download = `cranesignal-leads-${selection.region.toLowerCase().replace(/[^a-z0-9]+/g, "-")}-${new Date().toISOString().slice(0, 10)}.csv`;
+            document.body.appendChild(a); a.click(); a.remove();
+            setTimeout(() => URL.revokeObjectURL(url), 5000);
+            leadPackStatus.textContent = `${selection.leads.length.toLocaleString()} leads downloaded as a spreadsheet.`;
+          } catch (error) {
+            leadPackStatus.classList.add("error");
+            leadPackStatus.textContent = "The spreadsheet could not be built. Please try again.";
+          } finally {
+            setLeadPackBusy(false);
+          }
+        };
+        window.PSChatPanel.requireAuth("Make a free account to download the spreadsheet", startDownload)
+          .then((signedIn) => {
+            if (signedIn) return;
+            setLeadPackBusy(false);
+            leadPackStatus.textContent = "Make a free account in the panel to start your download.";
+          })
+          .catch(() => {
+            setLeadPackBusy(false);
+            leadPackStatus.classList.add("error");
+            leadPackStatus.textContent = "We could not check your account. Please try again.";
+          });
+      }
+
+      document.getElementById("download-csv").addEventListener("click", requestCsv);
       leadPackButton.addEventListener("click", () => requestLeadPack(false));
       newLeadsButton.addEventListener("click", () => requestLeadPack(true));
 
