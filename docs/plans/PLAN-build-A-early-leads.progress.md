@@ -78,3 +78,6 @@
 
 ## G3-T1 Early Leads: remove the "NEW" stat card (and the "New" badge on rows if it depends on newThisWeek). Keep Leads, Units in play, Opening soon. (built alongside other steps)
 - — the step is finished and committed
+
+## G3-T2 "Last updated" in the sidebar shows the date the lead data was built (from the area JSON / build time of site/data/areas/*.json), not the site deploy date. Today it wrongly shows Sep 18 while the data is from Sep 15. (built alongside other steps)
+- — the step is finished and committed
