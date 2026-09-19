@@ -13,6 +13,8 @@
   window.__chatPanelLoaded = true;
 
   const STORAGE_OPEN = "propertystack.chatPanelOpen";
+  const DEFAULT_SIGNIN_PURPOSE = "Ask anything about these buildings.";
+  let pendingAuthAction = null;
 
   // Open by default on every page; only an explicit close (the X) keeps it
   // shut, and only for this visit (sessionStorage).
@@ -66,7 +68,7 @@
           <button class="chat-panel-retry" id="chat-panel-retry">Try again</button>
         </div>
         <div class="chat-panel-signin-card" id="chat-panel-signin-card" style="display:none;">
-          <p>Ask anything about these buildings.</p>
+          <p id="chat-panel-signin-purpose">${DEFAULT_SIGNIN_PURPOSE}</p>
           <p class="chat-panel-signin-note">A small window opens. Use Google or your email. It closes by itself and the chat appears here.</p>
           <button class="chat-panel-signin" id="chat-panel-signin">Make a free account</button>
           <a href="#" class="chat-panel-signin-link" id="chat-panel-signin-link">Already have one? Sign in</a>
@@ -158,6 +160,7 @@
         if (!popup.closed) popup.close();
         panel.querySelector("#chat-panel-signin-card").style.display = "none";
         setFrameSource(panel, CHAT_APP_URL);
+        checkAuth(panel);
       };
       const timer = setInterval(() => {
         if (popup.closed) return finish();
@@ -183,7 +186,7 @@
     const base = CHAT_APP_URL.replace(/\/$/, "");
     // Local dev runs the chat app with login turned off (tooling/dev.sh):
     // its public config says auth:false, so there's nothing to sign in to.
-    fetch(`${base}/api/config`)
+    return fetch(`${base}/api/config`)
       .then((res) => (res.ok ? res.json() : {}))
       .catch(() => ({}))
       .then((cfg) => {
@@ -192,6 +195,7 @@
           panel.dataset.canAsk = "1";
           setSignOutVisible(false);
           sendPendingQuestion(panel);
+          sendPendingAuthAction(panel);
           return true;
         }
         return fetch(`${base}/api/v1/auths/`, { credentials: "include" })
@@ -200,6 +204,7 @@
             panel.dataset.canAsk = res.ok ? "1" : "0";
             setSignOutVisible(res.ok);
             if (res.ok) sendPendingQuestion(panel);
+            if (res.ok) sendPendingAuthAction(panel);
             return res.ok;
           })
           .catch(() => {
@@ -209,6 +214,20 @@
             return false;
           });
       });
+  }
+
+  function setSignInPurpose(panel, text) {
+    const purpose = panel.querySelector("#chat-panel-signin-purpose");
+    if (purpose) purpose.textContent = text || DEFAULT_SIGNIN_PURPOSE;
+  }
+
+  function sendPendingAuthAction(panel) {
+    if (!pendingAuthAction || panel.dataset.canAsk !== "1") return false;
+    const action = pendingAuthAction;
+    pendingAuthAction = null;
+    setSignInPurpose(panel, DEFAULT_SIGNIN_PURPOSE);
+    action();
+    return true;
   }
 
   // T3: the sign-out link in the site header only makes sense once someone
@@ -255,8 +274,10 @@
     if (!frame.getAttribute("src")) setFrameSource(panel, CHAT_APP_URL);
   }
 
-  function openPanel() {
+  function openPanel(signinPurpose) {
     const panel = buildPanel();
+    if (signinPurpose) setSignInPurpose(panel, signinPurpose);
+    else if (!pendingAuthAction) setSignInPurpose(panel, DEFAULT_SIGNIN_PURPOSE);
     const alreadyLoaded = !!panel.querySelector("#chat-panel-frame").getAttribute("src");
     ensureFrameLoaded(panel);
     // Check right away (not only after the frame loads) so a signed-out
@@ -268,6 +289,19 @@
     document.body.classList.add("chat-panel-open");
     setOpen(true);
     markChatTabActive(true);
+  }
+
+  // Reuse the chat panel's session check for gated site actions. Signed-in
+  // visitors continue immediately. Signed-out visitors see this purpose in
+  // the existing account card, and the action resumes after sign-in succeeds.
+  function requireAuth(purpose, onSuccess) {
+    const panel = buildPanel();
+    pendingAuthAction = onSuccess;
+    setSignInPurpose(panel, purpose);
+    return checkAuth(panel).then((signedIn) => {
+      if (!signedIn) openPanel(purpose);
+      return signedIn;
+    });
   }
 
   function closePanel() {
@@ -443,7 +477,7 @@
     return `Deep dive on ${p.name}, ${p.city} (${units}, ${sw}${sold}): ${whoToCall}.${newOwner} Then tell me why call now and why they might switch.`;
   }
 
-  window.PSChatPanel = { open: openPanel, close: closePanel, toggle: togglePanel, isOpen, ask, deepDive, deepDivePrompt };
+  window.PSChatPanel = { open: openPanel, close: closePanel, toggle: togglePanel, isOpen, ask, deepDive, deepDivePrompt, requireAuth };
   window.initChatPanel = initChatPanel;
   window.wireSignOut = wireSignOut;
 })();

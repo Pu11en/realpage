@@ -13,6 +13,9 @@
   <div class="shell" id="app-shell"></div>
   <script src="js/app.js"></script>
   <script src="js/chat-panel.js"></script>
+  <script src="vendor/jspdf-4.2.1.umd.min.js"></script>
+  <script src="vendor/jspdf-autotable-5.0.8.min.js"></script>
+  <script src="js/lead-pack.js"></script>
   <script>
     renderShell("leads");
 
@@ -57,6 +60,13 @@
           <button class="metro-btn active" data-metro="">All ${area.label} (${data.leads.length})</button>
           ${data.metros.map((m) => `<button class="metro-btn" data-metro="${m.name}">${m.name} (${m.leads})</button>`).join("")}
         </div></div>` : ""}
+        <div class="pick-row lead-pack-row">
+          <span class="pick-label">Lead pack</span>
+          <div class="lead-pack-actions">
+            <button type="button" class="lead-pack-btn" id="download-lead-pack">Download Lead Pack (PDF)</button>
+            <span class="lead-pack-status" id="lead-pack-status" role="status" aria-live="polite"></span>
+          </div>
+        </div>
         ${placeholderBanner(data.status)}
         <div class="stats-row" id="lead-stats"></div>
 
@@ -102,6 +112,57 @@
         if (contact.email) parts.push(contact.email);
         return parts.length ? `<div class="lead-contact">${parts.join(" · ")}</div>` : "";
       }
+
+      function selectedLeadPack() {
+        const metro = (document.querySelector(".metro-btn.active") || {}).dataset?.metro || "";
+        return {
+          region: metro || area.label,
+          leads: metro ? data.leads.filter((lead) => lead.metro === metro) : data.leads.slice(),
+        };
+      }
+
+      const leadPackButton = document.getElementById("download-lead-pack");
+      const leadPackStatus = document.getElementById("lead-pack-status");
+      leadPackButton.addEventListener("click", () => {
+        const selection = selectedLeadPack();
+        leadPackButton.disabled = true;
+        leadPackButton.setAttribute("aria-busy", "true");
+        leadPackStatus.classList.remove("error");
+        leadPackStatus.textContent = "Checking your account…";
+
+        const startDownload = () => {
+          leadPackButton.disabled = true;
+          leadPackButton.setAttribute("aria-busy", "true");
+          leadPackStatus.textContent = `Building ${selection.leads.length.toLocaleString()} lead rows…`;
+          requestAnimationFrame(() => {
+            try {
+              const result = window.CraneSignalLeadPack.downloadLeadPack(selection);
+              leadPackStatus.textContent = `${result.rowCount.toLocaleString()} leads downloaded.`;
+            } catch (error) {
+              leadPackStatus.classList.add("error");
+              leadPackStatus.textContent = error.message || "The Lead Pack could not be built. Please try again.";
+            } finally {
+              leadPackButton.disabled = false;
+              leadPackButton.removeAttribute("aria-busy");
+            }
+          });
+        };
+
+        window.PSChatPanel.requireAuth(
+          "Make a free account to download your Lead Pack",
+          startDownload
+        ).then((signedIn) => {
+          if (signedIn) return;
+          leadPackButton.disabled = false;
+          leadPackButton.removeAttribute("aria-busy");
+          leadPackStatus.textContent = "Sign in in the account panel to start your download.";
+        }).catch(() => {
+          leadPackButton.disabled = false;
+          leadPackButton.removeAttribute("aria-busy");
+          leadPackStatus.classList.add("error");
+          leadPackStatus.textContent = "We could not check your account. Please try again.";
+        });
+      });
 
       // "Sold Jun 2026" + type "Sold" shouldn't read "Sold: Sold Jun 2026".
       function signalHtml(l) {
