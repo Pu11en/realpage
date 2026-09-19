@@ -61,12 +61,53 @@ Plano/Richardson rows of `state_leads`). Other areas' `software` is blank. Any v
 
 1. `ps_schema` if you don't already know the columns.
 2. `ps_sql` with one SELECT. Columns are TEXT -- `CAST(units AS INTEGER)` to sort or sum.
-3. Answer under the rules in SOUL.md: plain words (glossary above), one
-   `**Sources**` list at the end instead of inline brackets, "I don't have
-   that" when the data is silent, table for 3+ items, no invented numbers or
-   contacts.
+3. Follow SOUL.md's layout and glossary: deep dives start with **Who to call**
+   and inline source links; other answers end with `**Sources:**`. Use lead
+   lines for lists, not tables. Show matching data before describing gaps;
+   never invent numbers or contacts.
+
+## Deep dive: who to call
+
+For research or a contact request about one building:
+
+1. **Our data first.** Match the building by name and city/address. For any
+   tracked area, query its `state_leads` row, including `office_phone` (the
+   site's `officePhone`), `website`, `website_link`, `developer`, `buyer`,
+   `permit_link`, `news_link` and `agenda_link`. For Plano/Richardson, also
+   use the relevant `leads`, `master`, `upcoming`, `contacts`, `sales` and
+   `building_extras` rows. Use schema column names, not CSV filenames as
+   table names: `sales` is loaded from `5-sales.csv`. Contact evidence is in
+   `contacts.source_url`; sale evidence is in `sales.source_url`, paired
+   with `new_owner`. `building_extras.sale_new_owner` is another buyer field.
+2. **Fill the gaps.** After the saved data, use `ps_web_search` and
+   `ps_web_read` if available to find the management company, office phone,
+   official website and role to ask for. Prefer the building/manager's own
+   site for contact details. Match the city/address, not just a similar
+   name. Use saved `developer` as a research lead or a sourced developer
+   fallback; do not relabel a developer as the management company. Label
+   permit office phones as **(permit contact)**.
+3. **Recent sale.** Include **New owner** even if the user did not separately
+   ask for it. Use `buyer`, `sales.new_owner` or `sale_new_owner` from our
+   data first, with the record/article that identifies that buyer. If the
+   buyer or its evidence is missing, search county deed/property records
+   or sale news for this building and sale. Never substitute `previous_owner`,
+   the developer, or an undated `owner` value for the buyer.
+4. **Answer contact-first.** Use SOUL.md's short **Who to call** block with
+   Company, Office phone, Website and Ask for (role), then New owner for a
+   sale, before Why now. Each contact/owner value must have its own source
+   link beside it, including phones/websites from our data. Use only a URL
+   in the queried data or a search result/page read this turn that supports
+   that specific value; merely sharing a row with a permit/news URL is not
+   proof. A verified official website can link to itself. If no supporting
+   source is found, retain the field with **not found** and no invented link.
+   Never guess a number or infer a role. Keep found details when others are
+   missing, and answer with these explicit gaps if web tools are unavailable
+   or the budget is exhausted.
 
 ## Budget
 
-One question, one answer. At most 6 tool calls. Read-only -- `ps_sql` rejects
-anything but a single SELECT, and the database is opened read-only.
+One question, one answer. Ordinary questions: at most 6 tool calls.
+Deep dives: at most 6 web searches and 12 tool calls total, counting schema,
+SQL, searches and page reads; stop early once the requested details are
+sourced. Read-only -- `ps_sql` rejects anything but a single SELECT, and the
+database is opened read-only.
