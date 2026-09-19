@@ -1,4 +1,4 @@
-"""E1, reversed for the investor launch (Drew 2026-09-18): the whole site is open, no sign-in. Runs the real
+"""E1: the whole app needs sign-in (Drew 2026-09-15). Runs the real
 site/Caddyfile with the fake chat upstream (tooling/qa/fake-webui) and checks
 the gate. Offline: no network and no paid calls. The first run unpacks the
 Caddy binary out of the cache/caddy:2-alpine image into .caddy-bin/."""
@@ -121,20 +121,17 @@ def gate():
             p.kill()
 
 
-def test_signed_out_pages_and_data_load_without_sign_in(gate):
-    # Investor launch (Drew 2026-09-18): all data open, no login. "/" opens the Map.
+def test_signed_out_pages_and_data_are_sent_to_sign_in(gate):
+    # "/" redirects to the Map first (the app opens there); the Map is in the gated list below,
+    # so a signed-out visitor still ends at sign-in.
     status, loc, _ = _get(gate + "/")
     assert (status, loc) == (302, "/map.html")
-    for path, want in (("/index.html", b"Early Leads"), ("/map.html", b"Map"),
-                       ("/property.html?id=tx-1", b"CraneSignal"), ("/master-table.html", b"CraneSignal"),
-                       ("/under-the-hood.html", b"Under the Hood"), ("/landing.html", b"Start free"),
-                       ("/data/areas/index.json", b'"areas"'), ("/data/areas/tx.json", b'"leads"'),
-                       ("/js/app.js", b"renderShell")):
-        status, loc, body = _get(gate + path)
-        assert status == 200 and loc is None, (path, status, loc)
-        assert want in body, path
-        if path.endswith(".html") or ".html?" in path:
-            assert b"realpage" not in body.lower(), path
+    for path in ("/index.html", "/map.html", "/property.html?id=tx-1", "/master-table.html",
+                 "/under-the-hood.html", "/data/leads.json",
+                 "/data/areas/tx.json", "/js/app.js", "/vendor/x.js"):
+        status, loc, _ = _get(gate + path)
+        assert status == 302, (path, status)
+        assert loc and "/auth?redirect=" in loc, (path, loc)
 
 
 def test_public_page_and_shell_stay_open(gate):
@@ -159,8 +156,8 @@ def test_chat_panel_frame_home_and_its_api_stay_public(gate):
     assert status == 401  # the fake chat app's "not signed in", proxied through
 
 
-def test_caddyfile_has_no_sign_in_gate():
+def test_caddyfile_gates_the_app_paths():
     conf = (ROOT / "site" / "Caddyfile").read_text()
-    assert "forward_auth" not in conf and "/auth?redirect=" not in conf
+    assert "forward_auth" in conf and "uri /api/v1/auths/" in conf
     assert "/privacy.html" in conf
     assert "/case-study" not in conf and "CASESTUDY_UPSTREAM" not in conf

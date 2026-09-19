@@ -58,11 +58,18 @@ function renderShell(activeKey) {
     (t) => `<a href="${t.href}" class="${t.key === activeKey ? "active" : ""}">${t.label}</a>`
   ).join("") + `<a href="#" class="nav-chat" data-chat-toggle title="Ask CraneSignal (sign in)">Chat</a>`;
 
+  const vendorOptions = ["Everyone", ...VENDORS]
+    .map((v) => `<option value="${v}" ${v === viewAs ? "selected" : ""}>${v}</option>`)
+    .join("");
+
   shell.innerHTML = `
     <aside class="sidebar">
       <a class="wordmark" href="${LANDING_URL}" title="Back to the CraneSignal home page">CraneSignal</a>
       <nav>${navHtml}</nav>
       <div class="top-controls">
+        <label for="view-as-select" style="color: var(--text-dim); font-size: 11px;"
+          title="${VIEW_AS_TIP}">View as</label>
+        <select id="view-as-select" title="${VIEW_AS_TIP}">${vendorOptions}</select>
         <div id="last-updated" style="color: var(--text-dim); font-size: 11px;"></div>
         <a href="${LANDING_URL}" style="color: var(--text-dim); font-size: 11px;">&larr; Home page</a>
         <a href="privacy.html" style="color: var(--text-dim); font-size: 11px;">Privacy</a>
@@ -72,6 +79,10 @@ function renderShell(activeKey) {
     <main class="main" id="page-content"></main>
     <a class="ask-fab" href="#" data-chat-toggle aria-label="Ask CraneSignal">Ask</a>
   `;
+
+  document.getElementById("view-as-select").addEventListener("change", (e) => {
+    setViewAs(e.target.value);
+  });
 
   showLastUpdated();
   if (window.initChatPanel) window.initChatPanel();
@@ -144,7 +155,7 @@ function pickLead(areaFiles, id) {
 
 async function findLead(id, areaSlug) {
   const m = await loadData("data/areas/index.json");
-  const areas = visibleAreas(m.areas).slice().sort((a, b) => (b.slug === areaSlug) - (a.slug === areaSlug));
+  const areas = m.areas.slice().sort((a, b) => (b.slug === areaSlug) - (a.slug === areaSlug));
   for (const a of areas) {
     const data = await loadData(a.dataPath);
     const hit = pickLead([{ slug: a.slug, label: a.label, leads: data.leads }], id);
@@ -158,17 +169,11 @@ function placeholderBanner(statusText) {
   return `<div class="placeholder-banner">${statusText}</div>`;
 }
 
-// Filter out hidden areas (those with hidden: true in areas/index.json).
-function visibleAreas(areas) {
-  return (areas || []).filter((a) => !a.hidden);
-}
-
 // Early Leads: one button per area (5.2). `areas` is site/data/areas/index.json's
 // `areas` list; `activeSlug` is the one currently shown; `onSelect(slug)` swaps data.
 function renderAreaButtons(areas, activeSlug) {
-  const visible = visibleAreas(areas);
-  if (!visible || visible.length < 2) return "";
-  return `<div class="area-buttons">${visible.map((a) => `
+  if (!areas || areas.length < 2) return "";
+  return `<div class="area-buttons">${areas.map((a) => `
     <button type="button" class="area-btn ${a.slug === activeSlug ? "active" : ""}" data-area="${a.slug}">${a.label}</button>
   `).join("")}</div>`;
 }

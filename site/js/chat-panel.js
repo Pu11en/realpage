@@ -14,15 +14,8 @@
 
   const STORAGE_OPEN = "propertystack.chatPanelOpen";
 
-  // Open by default on every page; only an explicit close (the X) keeps it
-  // shut, and only for this visit (sessionStorage).
-  // Below 900px the panel floats over the whole page instead of docking, so
-  // there it only opens when asked; otherwise a phone visitor would see
-  // nothing but the account prompt.
   function isOpen() {
-    const v = sessionStorage.getItem(STORAGE_OPEN);
-    if (v === null) return window.matchMedia("(min-width: 900px)").matches;
-    return v === "1";
+    return sessionStorage.getItem(STORAGE_OPEN) === "1";
   }
 
   function setOpen(v) {
@@ -66,10 +59,9 @@
           <button class="chat-panel-retry" id="chat-panel-retry">Try again</button>
         </div>
         <div class="chat-panel-signin-card" id="chat-panel-signin-card" style="display:none;">
-          <p>Ask anything about these buildings.</p>
+          <p>Sign in free to ask a question.</p>
           <p class="chat-panel-signin-note">A small window opens. Use Google or your email. It closes by itself and the chat appears here.</p>
-          <button class="chat-panel-signin" id="chat-panel-signin">Make a free account</button>
-          <a href="#" class="chat-panel-signin-link" id="chat-panel-signin-link">Already have one? Sign in</a>
+          <button class="chat-panel-signin" id="chat-panel-signin">Sign in free</button>
         </div>
         <div class="chat-panel-deepdive-notice" id="chat-panel-deepdive-notice" style="display:none;">
           <p id="chat-panel-deepdive-text"></p>
@@ -145,8 +137,7 @@
     // as a top-level popup instead -- Google is happy to load there -- and
     // reload the framed copy once the popup closes, so it picks up the new
     // signed-in session.
-    const startSignIn = (e) => {
-      if (e) e.preventDefault();
+    signinBtn.addEventListener("click", () => {
       // /auth, not "/": live, "/" in a normal tab is the site home (site/Caddyfile).
       const popup = window.open(`${CHAT_APP_URL.replace(/\/$/, "")}/auth`, "ps-chat-signin", "width=480,height=700");
       if (!popup) return;
@@ -165,9 +156,7 @@
           .then((res) => { if (res.ok) finish(); })
           .catch(() => {});
       }, 1000);
-    };
-    signinBtn.addEventListener("click", startSignIn);
-    panel.querySelector("#chat-panel-signin-link").addEventListener("click", startSignIn);
+    });
 
     return panel;
   }
@@ -247,9 +236,7 @@
     const panel = buildPanel();
     const alreadyLoaded = !!panel.querySelector("#chat-panel-frame").getAttribute("src");
     ensureFrameLoaded(panel);
-    // Check right away (not only after the frame loads) so a signed-out
-    // visitor sees the free-account prompt without waiting for the chat app.
-    checkAuth(panel);
+    if (alreadyLoaded) checkAuth(panel);
     hideDeepDiveNotice(panel);
     panel.querySelector("#chat-panel-frame").style.display = alreadyLoaded ? "block" : "";
     panel.classList.add("open");
@@ -267,8 +254,7 @@
   }
 
   function togglePanel() {
-    const panel = document.getElementById("chat-panel");
-    if (panel && panel.classList.contains("open")) closePanel();
+    if (isOpen()) closePanel();
     else openPanel();
   }
 

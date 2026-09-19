@@ -23,7 +23,7 @@
       try {
         const m = await loadData("data/areas/index.json");
         aliases = m.aliases || {};
-        return visibleAreas(m.areas);
+        return m.areas;
       } catch (e) {
         return [{ slug: "plano-richardson", label: "Plano–Richardson", dataPath: "data/leads.json" }];
       }
