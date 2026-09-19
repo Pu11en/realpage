@@ -97,3 +97,8 @@
 - Implementation commit: `a74a12f` (`test: verify Early Leads freshness display`).
 - Checks: required `python3 -m pytest -q tooling/qa/fixes_tests/` passed (247); all other active project suites passed (398); focused freshness tests passed (9); `git diff --check` passed.
 - Limits: no paid or live API call, push, or deployment. Every build task is complete locally; publishing remains outside this worker's allowed scope.
+
+## Next time (from how this build went)
+- It went smoothly — all 11 tasks finished, tests passed throughout, and the model stayed consistent across both feature areas (agent search and data freshness).
+- AF-T1 through AF-T4 (the agent search interface) could have been grouped as one coordinated task instead of four serial ones, since they all landed on the same page and depended on each other — would've saved orchestration overhead.
+- Phone layout testing (AF-T4) happened last; doing it earlier (right after AF-T1) would've caught any mobile constraints sooner and let T2 and T3 iterate with that context from the start.
