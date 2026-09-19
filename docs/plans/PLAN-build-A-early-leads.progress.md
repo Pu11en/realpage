@@ -28,3 +28,13 @@
 - Test commit: `329abd5` (`test: cover sourced contact research rules`).
 - Checks: the focused test passed (7); required QA passed (214); all active project suites passed (612). `git diff --check` passed.
 - Open: no live or paid AI call was made. G1-T3 and later tasks remain for subsequent workers.
+
+## 2026-09-19 — G1-T3 Get contact button
+
+- Replaced the visible Deep dive buttons on every Early Leads row and both building-page paths with “Get contact →”, directly under the building name on the left.
+- Contact questions now submit automatically. Signed-out visitors see “Make a free account” while the question waits, and that same question sends as soon as signup finishes; a shared `ask` path is ready for the later lead-search task.
+- Updated saved-contact behavior so a request is remembered only after it actually sends, not while it is waiting for signup.
+- Added offline coverage for labels, placement, automatic submission and the signup queue. Extended the fake chat and browser check to prove the waiting question sends after signup, and brought that harness in line with the existing open-by-default panel.
+- Implementation commit: `284dcfe` (`feat: send sourced contact requests from every lead`).
+- Checks: required `python3 -m pytest -q tooling/qa/fixes_tests/` passed (219); the other active project suites passed (398); `bash tooling/qa/check-panel.sh` passed; `node --check site/js/chat-panel.js` and `git diff --check` passed.
+- Limits: all checks used local fake/offline services; no paid or live AI call, push or deployment. AF-T1 and later tasks remain for subsequent workers.
