@@ -331,6 +331,8 @@ h1 { font-size: 26px; font-weight: 800; letter-spacing: -0.015em; margin: 0 0 4p
 .lead-pack-btn:active:not(:disabled) { transform: scale(.98); }
 .lead-pack-btn:focus-visible { outline: 3px solid var(--amber); outline-offset: 2px; }
 .lead-pack-btn:disabled { cursor: wait; opacity: .65; }
+.lead-pack-btn.secondary { background: var(--paper); color: var(--blue); }
+.lead-pack-btn.secondary:hover:not(:disabled) { background: var(--blue-soft); color: var(--blue-2); }
 .lead-pack-status { color: var(--text-muted); font-size: 14px; line-height: 20px; text-wrap: pretty; }
 .lead-pack-status.error { color: var(--bad); }
 .lead-subarea { color: var(--text-muted); font-size: 12px; margin-top: 2px; }

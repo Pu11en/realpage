@@ -11,6 +11,7 @@
   const WARM_SCORE = 40;
   const FOOTER = "Find who to call for any building at app.cranesignal.com";
   const APP_URL = "https://app.cranesignal.com";
+  const DOWNLOAD_DATE_KEY_PREFIX = "cranesignal.leadPack.lastDownloaded";
 
   function priorityForLead(lead) {
     const score = Number(lead.score) || 0;
@@ -114,6 +115,34 @@
 
   function filenameFor(region, date) {
     return `cranesignal-lead-pack-${slugifyRegion(region)}-${isoDate(date)}.pdf`;
+  }
+
+  function downloadDateKey(areaSlug, region) {
+    return `${DOWNLOAD_DATE_KEY_PREFIX}:${encodeURIComponent(areaSlug || "area")}:${encodeURIComponent(region || "__all__")}`;
+  }
+
+  function lastDownloadDate(storage, areaSlug, region) {
+    try {
+      const value = storage && storage.getItem(downloadDateKey(areaSlug, region));
+      return typeof value === "string" && /^\d{4}-\d{2}-\d{2}$/.test(value) ? value : "";
+    } catch (error) {
+      return "";
+    }
+  }
+
+  function rememberDownloadDate(storage, areaSlug, region, value) {
+    const date = isoDate(value);
+    try {
+      if (storage) storage.setItem(downloadDateKey(areaSlug, region), date);
+      return date;
+    } catch (error) {
+      return "";
+    }
+  }
+
+  function leadsFirstSeenAfter(leads, date) {
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(date || "")) return [];
+    return (leads || []).filter((lead) => /^\d{4}-\d{2}-\d{2}$/.test(lead.firstSeen || "") && lead.firstSeen > date);
   }
 
   function buildLeadPack(options) {
@@ -231,6 +260,12 @@
     sourceForLead,
     leadPackRows,
     filenameFor,
+    isoDate,
+    displayDate,
+    downloadDateKey,
+    lastDownloadDate,
+    rememberDownloadDate,
+    leadsFirstSeenAfter,
     buildLeadPack,
     downloadLeadPack,
   };
