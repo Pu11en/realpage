@@ -13,7 +13,10 @@
 Drew wants coding agents to review the code and simulated users to load-test it.
 1. **Code review (free):** CodeRabbit (free for public repos, github.com/Pu11en/realpage is public) or self-hosted qodo-ai/pr-agent. Also Semgrep for security checks. Open a PR from a branch so the reviewer comments on it.
 2. **20 simulated users (free):** Locust (github.com/locustio/locust, Python) or k6 (github.com/grafana/k6). Script: land on cranesignal.com → Start free → map → Early Leads → a building page, 20 users at once, report slow pages and errors.
-3. **Chat under load:** each chat message costs DeepSeek credits, so ask Drew before any load test that sends real chat messages; test sign-up/open-chat without sending, or with 20 total messages.
+3. **Chat under load, the cheap way (Drew asked for this):**
+   - First, free: point the chat at a fake AI that answers instantly (a tiny local stub instead of DeepSeek) and run 20 users chatting at once. This tests our servers, sign-up and chat app without spending anything.
+   - Then one small real run: 20 users x 2 messages = 40 real DeepSeek messages. DeepSeek is very cheap, so this should cost pennies. Tell Drew the estimate and get his OK first.
+   - Run against the local copy (bash tooling/dev.sh), not the live site, so real visitors aren't affected.
 4. Fix what the review and load test find, one small task each.
 
 ## After that
