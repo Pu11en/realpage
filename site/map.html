@@ -10,6 +10,14 @@
   <link rel="stylesheet" href="css/chat-panel.css" />
   <style>
     .map-wrap { position: relative; max-width: 1000px; }
+    .area-req { max-width: 1000px; margin: 28px 0 0; padding: 18px 20px; border: 1px solid var(--rule); border-radius: 8px; background: var(--paper-2); }
+    .area-req h2 { font-size: 18px; margin: 0 0 4px; }
+    .area-req p { margin: 0 0 12px; color: var(--text-muted); font-size: 14px; }
+    .area-req form { display: flex; flex-wrap: wrap; gap: 8px; }
+    .area-req input { flex: 1 1 220px; padding: 10px 12px; border: 1px solid var(--border); border-radius: 6px; font: inherit; font-size: 14px; }
+    .area-req input[name="website"] { display: none; }
+    .area-req button { background: var(--amber); color: var(--ink); font-weight: 800; font-family: var(--font-head); border: none; border-radius: 4px; padding: 10px 18px; cursor: pointer; box-shadow: 0 3px 0 #b88900; }
+    .area-req .done { margin-top: 10px; font-weight: 600; color: var(--ink); }
     #us-map { width: 100%; height: auto; display: block; }
     #us-map .state { fill: var(--paper-2); stroke: var(--rule); stroke-width: 0.8; }
     #us-map .state[data-count] { cursor: default; }
@@ -55,7 +63,35 @@
         <svg id="us-map" viewBox="0 0 975 610" role="img" aria-label="US map shaded by apartment buildings with detected software per state"></svg>
         <div id="map-tip" hidden></div>
       </div>
+      <section class="area-req" id="request-area">
+        <h2>Don't see your area?</h2>
+        <p>Tell us the city or county and we'll add its buildings.</p>
+        <form id="area-form">
+          <input name="area" required maxlength="120" placeholder="City or county, state (e.g. Tulsa, OK)" aria-label="Area">
+          <input name="email" type="email" maxlength="200" placeholder="Email (optional, we'll tell you when it's ready)" aria-label="Email (optional)">
+          <input name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <button type="submit">Ask for it</button>
+        </form>
+        <div class="done" id="area-done" hidden></div>
+      </section>
     `;
+    // Area requests go to the landing server (it saves them and posts to the sign-ups Discord channel).
+    (function () {
+      const local = ["localhost", "127.0.0.1"].includes(location.hostname);
+      const endpoint = local ? "http://localhost:8791/api/signup" : "https://cranesignal.com/api/signup";
+      const form = document.getElementById("area-form"), done = document.getElementById("area-done");
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const data = new URLSearchParams(new FormData(form));
+        data.set("source", "area-request");
+        const btn = form.querySelector("button"); btn.disabled = true;
+        fetch(endpoint, { method: "POST", body: data })
+          .then((r) => { if (!r.ok) throw new Error(r.status); done.textContent = "Got it. We'll add " + data.get("area") + "."; form.reset(); })
+          .catch(() => { done.textContent = "Sorry, that didn't go through. Please try again."; })
+          .finally(() => { done.hidden = false; btn.disabled = false; });
+      });
+      if (location.hash === "#request-area") setTimeout(() => document.getElementById("request-area").scrollIntoView({ behavior: "smooth" }), 300);
+    })();
   </script>
   <script src="js/map.js"></script>
 </body>
