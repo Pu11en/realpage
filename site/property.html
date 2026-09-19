@@ -233,7 +233,7 @@
       content.querySelector("[data-deep-dive]").addEventListener("click", () => {
         window.PSChatPanel.deepDive(id, window.PSChatPanel.deepDivePrompt({
           name: l.property || l.address, city: l.city, units: l.units, software: l.software,
-          stage: l.stage, signalType: l.signalType,
+          stage: l.stage, signalType: l.signalType, buyer: l.buyer,
         }));
       });
     }
@@ -269,7 +269,8 @@
       content.querySelector("[data-deep-dive]").addEventListener("click", () => {
         window.PSChatPanel.deepDive(id, window.PSChatPanel.deepDivePrompt({
           name: p.community, city: p.city, units: p.units, software: p.software,
-          upcoming: isUpcoming, stage: isUpcoming ? p.stage : null,
+          upcoming: isUpcoming, stage: isUpcoming ? p.stage : (p.sale ? "sold" : null),
+          buyer: p.buyer || (p.sale && p.sale.newOwner),
         }));
       });
     });

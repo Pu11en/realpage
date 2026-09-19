@@ -270,7 +270,7 @@
             const l = data.leads.find((x) => x.id === btn.dataset.deepDive);
             window.PSChatPanel.deepDive(l.id, window.PSChatPanel.deepDivePrompt({
               name: l.property, city: l.city, units: l.units, software: l.software,
-              stage: l.stage, signalType: l.signalType,
+              stage: l.stage, signalType: l.signalType, buyer: l.buyer,
             }));
           });
         });

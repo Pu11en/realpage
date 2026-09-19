@@ -390,16 +390,18 @@
   function deepDivePrompt(p) {
     const units = p.units != null ? `${p.units} units` : "units not stated";
     const stage = stageWords(p);
+    const whoToCall = "Who to call: management company, office phone, website, and the role to ask for (with a source link for each)";
     const upcoming = p.upcoming != null ? p.upcoming
       : (p.stage ? p.stage !== "sold" : ["Upcoming", "Planned", "Leasing"].includes(p.signalType));
     if (upcoming) {
       const bits = [units, stage || "not open yet", "software not chosen yet"].join(", ");
       const ask = stage === "leasing now" ? "who is leasing it, how full is it" : "who is developing it, when does it open";
-      return `Deep dive on ${p.name}, ${p.city} (${bits}): ${ask}, and why call now?`;
+      return `Deep dive on ${p.name}, ${p.city} (${bits}): ${whoToCall}. Then tell me ${ask}, and why call now.`;
     }
     const sw = p.software && p.software !== "unknown" ? p.software : "software unknown";
     const sold = stage === "recently sold" ? ", recently sold" : "";
-    return `Deep dive on ${p.name}, ${p.city} (${units}, ${sw}${sold}): who runs it, and why would they switch now?`;
+    const newOwner = stage === "recently sold" && !p.buyer ? " Also find who bought it (new owner), with a source link." : "";
+    return `Deep dive on ${p.name}, ${p.city} (${units}, ${sw}${sold}): ${whoToCall}.${newOwner} Then tell me why call now and why they might switch.`;
   }
 
   window.PSChatPanel = { open: openPanel, close: closePanel, toggle: togglePanel, isOpen, deepDive, deepDivePrompt };
