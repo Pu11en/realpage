@@ -1,4 +1,6 @@
 # Build C: Lead Pack download (Software Sellers edition, 2026-09-19)
+Goal: A signed-in visitor picks an area on Early Leads and taps one button to get a phone-readable PDF of every lead there. Each lead shows why it's a lead now, a Hot, Warm or Early label with its reason, and whatever details we already have, such as owner, phone and a free source link. No paid AI calls are used, and "Get new leads" later gives only leads they haven't downloaded yet.
+Done when: `python3 -m pytest -q tooling/qa/fixes_tests/` passes, including a test that builds a Lead Pack PDF for one area and checks it has one row per lead, each with a why-it's-a-lead sentence, a Hot/Warm/Early label and a source link. Drew can check the same thing in 30 seconds by running `bash tooling/dev.sh`, opening http://localhost:8765/index.html, signing in and downloading the Dallas–Fort Worth PDF.
 
 Decision (Drew): the deliverable is a Lead Pack anyone can download, covering ALL current leads for the
 area they picked. Later, after Drew adds leads in a new lead session, a "Get new leads" button downloads
