@@ -71,6 +71,12 @@
         ${placeholderBanner(data.status)}
         <div class="stats-row" id="lead-stats"></div>
 
+        <form class="lead-agent-search" id="lead-agent-search">
+          <label class="sr-only" for="lead-agent-query">Describe the leads you want</label>
+          <input id="lead-agent-query" type="text" placeholder="Describe the leads you want…" autocomplete="off" />
+          <button type="submit">Ask agent &rarr;</button>
+        </form>
+
         <div class="filters">
           <input id="f-search" placeholder="Search property" />
           <select id="f-signal">
@@ -205,6 +211,15 @@
 
       leadPackButton.addEventListener("click", () => requestLeadPack(false));
       newLeadsButton.addEventListener("click", () => requestLeadPack(true));
+
+      // Use the same send-or-wait path as Get contact. Signed-out visitors see
+      // account creation first, and their question sends after sign-up.
+      document.getElementById("lead-agent-search").addEventListener("submit", (event) => {
+        event.preventDefault();
+        const query = document.getElementById("lead-agent-query").value.trim();
+        if (!query) return;
+        window.PSChatPanel.ask(query);
+      });
 
       // "Sold Jun 2026" + type "Sold" shouldn't read "Sold: Sold Jun 2026".
       function signalHtml(l) {
