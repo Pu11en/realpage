@@ -1,5 +1,8 @@
 # Handoff: CraneSignal launch readiness (2026-09-18, evening)
 
+## 🎯 Session goal (set by Drew)
+By the end of the session: CraneSignal handles **200 people using it at the same time** with no errors and pages loading in under 2 seconds, proven by a load test report; and a free code review has run with its top problems fixed. All local first; push only after Drew's OK.
+
 ## Where things stand
 - Interview is over. CraneSignal is now a free lead tool for **real estate investors** (first audience: r/CommercialRealEstate, r/realestateinvesting). One buyer type at a time; roofers dropped.
 - **Live and pushed:** RealPage material archived (archive/realpage/), AI Visibility and Case Study tabs gone, map headline "Apartment activity by state", New York hidden, site open with no login, chat panel open by default (closable) asking visitors to make a free account.
@@ -7,7 +10,7 @@
 - Outer repo main pushed at 436f8a3 (auto-deploys app.cranesignal.com). Plans done: docs/plans/PLAN-archive-realpage.md, docs/plans/PLAN-investor-launch-site.md.
 - Not yet verified live: the chat's "Make a free account" screen (local dev skips sign-in).
 - Leftovers: 51 RealPage mentions in private business/ notes (`bash tooling/check-no-realpage-target.sh`); not visitor-facing.
-- The case-study Railway service may still be running (no auth on /case-study/api/run); switch it off.
+- Case-study Railway service: nothing running (last deploy failed after the archive, so no cost, all 404). The CLI can't delete services; Drew can delete `propertystack-case-study` in the Railway dashboard.
 
 ## Next job: make it ready for a marketing-week rush of users (free tools, cheap tests)
 Drew wants coding agents to review the code and simulated users to load-test it. "20" was only an example: find how many users at once it handles before it slows or breaks (ramp up 10, 50, 100, 200) and fix the weak spot.
