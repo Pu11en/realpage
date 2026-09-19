@@ -89,3 +89,11 @@
 - Implementation commit: `53d0383` (`feat: show Early Leads data date and area request`).
 - Checks: required QA passed (244); all other active project suites passed (398); `git diff --check` passed. A local Chromium render showed “Data from Sep 15, 2026” and the correct `map.html#request-area` link.
 - Limits: no paid or live API call, push, or deployment. G3-T4 remains for the final full tests and screenshot; that later task is still required to finish the overall build.
+
+## 2026-09-19 — G3-T4 Freshness tests and final screenshot
+
+- Added focused coverage proving Early Leads renders exactly the three useful stat cards, has no New count or badge, uses the selected area's Sep 15 snapshot date in the sidebar, and places the dated area-request line directly under the stats.
+- Saved and visually reviewed a final 1440×1000 Early Leads screenshot in `docs/plans/g3-t4-screenshots/early-leads.png`; the browser check also confirmed three stat cards, “Data from Sep 15, 2026,” the lead-search bar, and visible “Get contact →” actions.
+- Implementation commit: `a74a12f` (`test: verify Early Leads freshness display`).
+- Checks: required `python3 -m pytest -q tooling/qa/fixes_tests/` passed (247); all other active project suites passed (398); focused freshness tests passed (9); `git diff --check` passed.
+- Limits: no paid or live API call, push, or deployment. Every build task is complete locally; publishing remains outside this worker's allowed scope.

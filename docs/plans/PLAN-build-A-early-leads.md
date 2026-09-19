@@ -22,7 +22,7 @@ Open: http://localhost:8765/index.html
 - [x] G3-T1 Early Leads: remove the "NEW" stat card (and the "New" badge on rows if it depends on newThisWeek). Keep Leads, Units in play, Opening soon.
 - [x] G3-T2 "Last updated" in the sidebar shows the date the lead data was built (from the area JSON / build time of site/data/areas/*.json), not the site deploy date. Today it wrongly shows Sep 18 while the data is from Sep 15.
 - [x] G3-T3 Under the stats on Early Leads: one line "Data from <date>. Don't see your area? Ask for it" linking to map.html#request-area (Gap 2).
-- [ ] G3-T4 Tests for all three; screenshot Early Leads for Drew.
+- [x] G3-T4 Tests for all three; screenshot Early Leads for Drew.
 
 ## How to try it
 1. Early Leads: each building has "Get contact →" on the left next to its name; clicking opens the agent and sends the question.
