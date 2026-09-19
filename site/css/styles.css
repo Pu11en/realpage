@@ -313,6 +313,28 @@ h1 { font-size: 26px; font-weight: 800; letter-spacing: -0.015em; margin: 0 0 4p
 .pick-row { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; flex-wrap: wrap; }
 .pick-row .pick-label { width: 56px; color: var(--text-muted); font-size: 12px; text-transform: uppercase; letter-spacing: .04em; }
 .pick-row .area-buttons, .pick-row .metro-buttons { display: flex; gap: 8px; flex-wrap: wrap; margin: 0; }
+.lead-pack-actions { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.lead-pack-btn {
+  background: var(--blue);
+  border: 1px solid var(--blue);
+  border-radius: 6px;
+  color: var(--paper);
+  cursor: pointer;
+  font-family: var(--font);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  padding: 8px 12px;
+  transition: background .25s cubic-bezier(.32,.72,0,1), border-color .25s cubic-bezier(.32,.72,0,1), transform .25s cubic-bezier(.32,.72,0,1);
+}
+.lead-pack-btn:hover:not(:disabled) { background: var(--blue-2); border-color: var(--blue-2); }
+.lead-pack-btn:active:not(:disabled) { transform: scale(.98); }
+.lead-pack-btn:focus-visible { outline: 3px solid var(--amber); outline-offset: 2px; }
+.lead-pack-btn:disabled { cursor: wait; opacity: .65; }
+.lead-pack-btn.secondary { background: var(--paper); color: var(--blue); }
+.lead-pack-btn.secondary:hover:not(:disabled) { background: var(--blue-soft); color: var(--blue-2); }
+.lead-pack-status { color: var(--text-muted); font-size: 14px; line-height: 20px; text-wrap: pretty; }
+.lead-pack-status.error { color: var(--bad); }
 .lead-subarea { color: var(--text-muted); font-size: 12px; margin-top: 2px; }
 
 /* Early Leads page (index.html): light table, zebra rows, blue links, soft pills. */

@@ -13,6 +13,9 @@
   <div class="shell" id="app-shell"></div>
   <script src="js/app.js"></script>
   <script src="js/chat-panel.js"></script>
+  <script src="vendor/jspdf-4.2.1.umd.min.js"></script>
+  <script src="vendor/jspdf-autotable-5.0.8.min.js"></script>
+  <script src="js/lead-pack.js"></script>
   <script>
     renderShell("leads");
 
@@ -57,6 +60,14 @@
           <button class="metro-btn active" data-metro="">All ${area.label} (${data.leads.length})</button>
           ${data.metros.map((m) => `<button class="metro-btn" data-metro="${m.name}">${m.name} (${m.leads})</button>`).join("")}
         </div></div>` : ""}
+        <div class="pick-row lead-pack-row">
+          <span class="pick-label">Lead pack</span>
+          <div class="lead-pack-actions">
+            <button type="button" class="lead-pack-btn" id="download-lead-pack">Download Lead Pack (PDF)</button>
+            <button type="button" class="lead-pack-btn secondary" id="download-new-leads" hidden>Get new leads</button>
+            <span class="lead-pack-status" id="lead-pack-status" role="status" aria-live="polite"></span>
+          </div>
+        </div>
         ${placeholderBanner(data.status)}
         <div class="stats-row" id="lead-stats"></div>
 
@@ -102,6 +113,98 @@
         if (contact.email) parts.push(contact.email);
         return parts.length ? `<div class="lead-contact">${parts.join(" · ")}</div>` : "";
       }
+
+      function selectedLeadPack() {
+        const metro = (document.querySelector(".metro-btn.active") || {}).dataset?.metro || "";
+        return {
+          areaSlug: area.slug,
+          storageRegion: metro || "__all__",
+          region: metro || area.label,
+          leads: metro ? data.leads.filter((lead) => lead.metro === metro) : data.leads.slice(),
+        };
+      }
+
+      const leadPackButton = document.getElementById("download-lead-pack");
+      const newLeadsButton = document.getElementById("download-new-leads");
+      const leadPackStatus = document.getElementById("lead-pack-status");
+
+      function lastDownloadFor(selection) {
+        return window.CraneSignalLeadPack.lastDownloadDate(
+          window.localStorage,
+          selection.areaSlug,
+          selection.storageRegion
+        );
+      }
+
+      function updateNewLeadsAction() {
+        newLeadsButton.hidden = !lastDownloadFor(selectedLeadPack());
+      }
+
+      function setLeadPackBusy(busy) {
+        [leadPackButton, newLeadsButton].forEach((button) => {
+          button.disabled = busy;
+          if (busy) button.setAttribute("aria-busy", "true");
+          else button.removeAttribute("aria-busy");
+        });
+      }
+
+      function requestLeadPack(onlyNew) {
+        const selection = selectedLeadPack();
+        setLeadPackBusy(true);
+        leadPackStatus.classList.remove("error");
+        leadPackStatus.textContent = "Checking your account…";
+
+        const startDownload = () => {
+          const lastDownload = lastDownloadFor(selection);
+          const leads = onlyNew
+            ? window.CraneSignalLeadPack.leadsFirstSeenAfter(selection.leads, lastDownload)
+            : selection.leads;
+          if (onlyNew && !leads.length) {
+            leadPackStatus.textContent = `No new leads since ${window.CraneSignalLeadPack.displayDate(lastDownload)}. Ask for your area on the Map.`;
+            setLeadPackBusy(false);
+            return;
+          }
+
+          leadPackStatus.textContent = `Building ${leads.length.toLocaleString()} ${onlyNew ? "new " : ""}lead rows…`;
+          requestAnimationFrame(() => {
+            try {
+              const result = window.CraneSignalLeadPack.downloadLeadPack({
+                ...selection,
+                leads,
+              });
+              window.CraneSignalLeadPack.rememberDownloadDate(
+                window.localStorage,
+                selection.areaSlug,
+                selection.storageRegion,
+                new Date()
+              );
+              updateNewLeadsAction();
+              leadPackStatus.textContent = `${result.rowCount.toLocaleString()} ${onlyNew ? "new " : ""}leads downloaded.`;
+            } catch (error) {
+              leadPackStatus.classList.add("error");
+              leadPackStatus.textContent = error.message || "The Lead Pack could not be built. Please try again.";
+            } finally {
+              setLeadPackBusy(false);
+            }
+          });
+        };
+
+        window.PSChatPanel.requireAuth(
+          "Make a free account to download your Lead Pack",
+          startDownload
+        ).then((signedIn) => {
+          if (signedIn) return;
+          setLeadPackBusy(false);
+          leadPackStatus.textContent = "Sign in in the account panel to start your download.";
+        }).catch(() => {
+          setLeadPackBusy(false);
+          leadPackStatus.classList.add("error");
+          leadPackStatus.textContent = "We could not check your account. Please try again.";
+        });
+      }
+
+      leadPackButton.addEventListener("click", () => requestLeadPack(false));
+      newLeadsButton.addEventListener("click", () => requestLeadPack(true));
 
       // "Sold Jun 2026" + type "Sold" shouldn't read "Sold: Sold Jun 2026".
       function signalHtml(l) {
@@ -293,6 +396,8 @@
         if (name) url.searchParams.set("region", name); else url.searchParams.delete("region");
         history.replaceState(null, "", url);
         visibleCount = PAGE_SIZE;
+        leadPackStatus.textContent = "";
+        updateNewLeadsAction();
         renderRows();
       }
 
@@ -304,6 +409,7 @@
         document.querySelectorAll(".metro-btn").forEach((b) => b.classList.toggle("active", b.dataset.metro === wantedRegion));
       }
       fillCities();
+      updateNewLeadsAction();
 
       ["f-search", "f-signal", "f-city", "f-software", "f-sort", "f-hide-mine"].forEach((id) => {
         const el = document.getElementById(id);

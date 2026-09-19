@@ -65,6 +65,7 @@ STATE_NAMES = {
 }
 
 TODAY = date.fromisoformat("2026-09-10")  # matches score-leads' fixed TODAY, see run.py
+CURRENT_DATA_DATE = "2026-09-15"
 
 VENDOR_COLORS = {
     "RealPage": "#f472b6",
@@ -83,6 +84,31 @@ VENDOR_COLORS = {
 def read_csv(path: Path) -> list[dict]:
     with open(path, newline="") as f:
         return list(csv.DictReader(f))
+
+
+def add_first_seen(leads: list[dict], previous_path: Path, new_date: str | None = None) -> None:
+    """Add the stable date each lead first appeared in a built area file.
+
+    Existing output is the history store: a saved ``firstSeen`` survives every
+    rebuild. Rows that predate this field use the current data snapshot date,
+    while an id not present in the previous output is stamped on build day.
+    """
+    previous_by_id = {}
+    if previous_path.exists():
+        previous = json.loads(previous_path.read_text())
+        previous_leads = previous.get("leads", []) if isinstance(previous, dict) else previous
+        previous_by_id = {
+            lead["id"]: lead for lead in previous_leads
+            if isinstance(lead, dict) and lead.get("id")
+        }
+
+    first_seen_for_new = new_date or date.today().isoformat()
+    for lead in leads:
+        previous = previous_by_id.get(lead.get("id"))
+        if previous:
+            lead["firstSeen"] = previous.get("firstSeen") or CURRENT_DATA_DATE
+        else:
+            lead["firstSeen"] = first_seen_for_new
 
 
 def lead_score(r: dict) -> dict:
@@ -313,6 +339,8 @@ def build_leads() -> dict:
             "contact": contact,
             "isNew": is_new,
         })
+
+    add_first_seen(leads, OUT_DIR / "leads.json")
 
     units_in_play = sum(l["units"] or 0 for l in leads)
     new_count = sum(1 for l in leads if l["isNew"])
@@ -768,6 +796,7 @@ def build_state_areas(include_sample: bool = False) -> list[str]:
     AREAS_OUT_DIR.mkdir(parents=True, exist_ok=True)
     for slug in slugs:
         area_json = _merge_included_areas(slug, build_area(slug))
+        add_first_seen(area_json["leads"], AREAS_OUT_DIR / f"{slug}.json")
         # after the merge, so the chat counts included areas (Plano-Richardson
         # in Texas / Dallas-Fort Worth) exactly like the site does
         write_chat_leads_csv(slug, area_json)
