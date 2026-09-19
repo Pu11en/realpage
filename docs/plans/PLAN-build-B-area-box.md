@@ -11,7 +11,7 @@ Open: http://localhost:8765/map.html
 
 ## Tasks
 - [ ] T3 (this repo) Map page: small "Don't see your area?" box under the map (id request-area): one text field "City or county, state", optional email, button "Ask for it". Sends to the landing server (cranesignal.com/api/signup locally → http://localhost:8791). Shows "Got it — we'll add it" on success. Test that the box renders and posts the right fields.
-- [ ] T4 Local end-to-end: submit "Tulsa, OK" on the local map; the row appears in the local signups CSV. (Discord post only fires where SIGNUP_WEBHOOK_URL is set — verify on live after Drew's OK.)
+- [x] T4 Local end-to-end: submit "Tulsa, OK" on the local map; the row appears in the local signups CSV. (Discord post only fires where SIGNUP_WEBHOOK_URL is set — verify on live after Drew's OK.)
 
 ## How to try it
 1. The Map page shows "Don't see your area?" under the map.
