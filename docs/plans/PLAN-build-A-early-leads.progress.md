@@ -81,3 +81,11 @@
 
 ## G3-T2 "Last updated" in the sidebar shows the date the lead data was built (from the area JSON / build time of site/data/areas/*.json), not the site deploy date. Today it wrongly shows Sep 18 while the data is from Sep 15. (built alongside other steps)
 - — the step is finished and committed
+
+## 2026-09-19 — G3-T3 Data date and area request
+
+- Added a line directly under the Early Leads stats showing the selected area's real snapshot date and linking “Ask for it” to the existing area-request section on the map page.
+- Added offline regression coverage for placement, wording, destination, and date formatting.
+- Implementation commit: `53d0383` (`feat: show Early Leads data date and area request`).
+- Checks: required QA passed (244); all other active project suites passed (398); `git diff --check` passed. A local Chromium render showed “Data from Sep 15, 2026” and the correct `map.html#request-area` link.
+- Limits: no paid or live API call, push, or deployment. G3-T4 remains for the final full tests and screenshot; that later task is still required to finish the overall build.
