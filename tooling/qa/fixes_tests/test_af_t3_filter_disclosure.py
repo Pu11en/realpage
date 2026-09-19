@@ -43,7 +43,7 @@ def test_toggle_opens_and_closes_without_replacing_filter_controls():
 def test_state_and_region_pills_remain_outside_the_fold():
     disclosure = INDEX.index('<div class="filters-disclosure">')
     assert INDEX.index('class="pick-row"><span class="pick-label">State</span>') < disclosure
-    assert INDEX.index('<span class="pick-label">Region</span>') < disclosure
+    assert INDEX.index('"Region"}</span>') < disclosure  # "State" when the All tab is open
 
 
 def test_existing_filter_listeners_are_unchanged():

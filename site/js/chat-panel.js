@@ -21,11 +21,18 @@
   // Below 900px the panel floats over the whole page instead of docking, so
   // there it only opens when asked; otherwise a phone visitor would see
   // nothing but the account prompt.
-  // Closed until asked (2026-09-19): first-time visitors said the panel covered
-  // the page and popped over forms. The page now explains the agent on its own,
-  // so it opens only when the visitor clicks Ask, See who to call or a download.
+  // On the Leads page, wide screens show the agent docked beside the list from
+  // the first look (it shrinks the page, it never covers it). Everywhere else --
+  // and on narrow screens, where it would cover the page -- it waits to be asked.
+  function docksByDefault() {
+    const onLeads = /(^|\/)(index\.html)?$/.test(location.pathname) && !/property|map|under-the-hood/.test(location.pathname);
+    return onLeads && window.matchMedia("(min-width: 1200px)").matches;
+  }
+
   function isOpen() {
-    return sessionStorage.getItem(STORAGE_OPEN) === "1";
+    const v = sessionStorage.getItem(STORAGE_OPEN);
+    if (v === null) return docksByDefault();
+    return v === "1";
   }
 
   function setOpen(v) {

@@ -42,14 +42,43 @@
       return areas[0].slug;
     }
 
-    loadAreas().then((areas) => {
+    // "All areas" (2026-09-19): one ranked list across every state we cover.
+    const ALL_AREA = { slug: "all", label: "All areas", dataPath: "__all__" };
+
+    function withAllArea(areas) {
+      return areas.length > 1 ? [ALL_AREA, ...areas] : areas;
+    }
+
+    async function loadAreaData(areas, area) {
+      if (area.slug !== "all") return loadData(area.dataPath);
+      const parts = await Promise.all(areas.filter((a) => a.slug !== "all").map((a) =>
+        loadData(a.dataPath).then((d) => ({ area: a, d })).catch(() => null)
+      ));
+      const good = parts.filter(Boolean);
+      const leads = [];
+      for (const { area: a, d } of good) {
+        for (const lead of d.leads) leads.push({ ...lead, stateLabel: a.label, areaSlug: a.slug });
+      }
+      leads.sort((x, y) => (y.score || 0) - (x.score || 0));
+      const sum = (key) => good.reduce((n, g) => n + ((g.d.stats && g.d.stats[key]) || 0), 0);
+      return {
+        area: "all",
+        updated: good.map((g) => g.d.updated).filter(Boolean).sort().pop(),
+        stats: { leads: leads.length, unitsInPlay: sum("unitsInPlay"), newThisWeek: sum("newThisWeek"), openingNext12mo: sum("openingNext12mo") },
+        metros: good.map((g) => ({ name: g.area.label, leads: g.d.leads.length })),
+        leads,
+      };
+    }
+
+    loadAreas().then((rawAreas) => {
+      const areas = withAllArea(rawAreas);
       const slug = pickInitialSlug(areas);
       const area = areas.find((a) => a.slug === slug) || areas[0];
       renderPage(areas, area);
     });
 
     function renderPage(areas, area) {
-    loadData(area.dataPath).then((data) => {
+    loadAreaData(areas, area).then((data) => {
       setLastUpdated(data.updated);
       const cities = [...new Set(data.leads.map((l) => l.city))].sort();
       const softwareOptions = [...new Set(data.leads.map((l) => l.software).filter(Boolean))].sort();
@@ -60,8 +89,8 @@
 
         <div class="lead-toolbar">
           <div class="pick-row"><span class="pick-label">State</span>${renderAreaButtons(areas, area.slug)}</div>
-          ${(data.metros || []).length ? `<div class="pick-row"><span class="pick-label">Region</span><div class="metro-buttons">
-            <button class="metro-btn active" data-metro="">All ${area.label} (${data.leads.length})</button>
+          ${(data.metros || []).length ? `<div class="pick-row"><span class="pick-label">${area.slug === "all" ? "Narrow" : "Region"}</span><div class="metro-buttons">
+            <button class="metro-btn active" data-metro="">${area.slug === "all" ? "Everywhere" : "All " + area.label} (${data.leads.length})</button>
             ${data.metros.map((m) => `<button class="metro-btn" data-metro="${m.name}">${m.name} (${m.leads})</button>`).join("")}
           </div></div>` : ""}
           <div class="quick-filters" id="quick-filters" aria-label="Quick filters">
@@ -159,7 +188,7 @@
           areaSlug: area.slug,
           storageRegion: metro || "__all__",
           region: metro || area.label,
-          leads: metro ? data.leads.filter((lead) => lead.metro === metro) : data.leads.slice(),
+          leads: metro ? data.leads.filter((lead) => (area.slug === "all" ? lead.stateLabel : lead.metro) === metro) : data.leads.slice(),
         };
       }
 
@@ -303,7 +332,7 @@
 
       function renderLeadExamples() {
         const metro = (document.querySelector(".metro-btn.active") || {}).dataset?.metro || "";
-        const place = metro || area.label;
+        const place = metro || (area.slug === "all" ? "" : area.label);
         const locationPhrase = metro ? `near ${place}` : `in ${place}`;
         const examples = [
           `${place} buildings opening in 2027`,
@@ -323,7 +352,7 @@
 
       function updateQuickFilterCounts() {
         const metro = (document.querySelector(".metro-btn.active") || {}).dataset?.metro || "";
-        const pool = metro ? data.leads.filter((l) => l.metro === metro) : data.leads;
+        const pool = metro ? data.leads.filter((l) => (area.slug === "all" ? l.stateLabel : l.metro) === metro) : data.leads;
         document.querySelectorAll(".quick-filter").forEach((btn) => {
           const signal = btn.dataset.signal;
           const n = signal ? pool.filter((l) => l.signalType === signal).length : pool.length;
@@ -438,7 +467,7 @@
           if (search && !l.property.toLowerCase().includes(search)) return false;
           if (signal && l.signalType !== signal) return false;
           if (city && l.city !== city) return false;
-          if (metro && l.metro !== metro) return false;
+          if (metro && (area.slug === "all" ? l.stateLabel : l.metro) !== metro) return false;
           if (software === "__none__" && l.software) return false;
           if (software && software !== "__none__" && l.software !== software) return false;
           return true;
@@ -483,13 +512,13 @@
         }
 
         document.getElementById("leads-tbody").innerHTML = pageRows.map((l, i) => `
-          <tr class="clickable" data-id="${l.propertyId || l.id}">
+          <tr class="clickable" data-id="${l.propertyId || l.id}" data-area-slug="${l.areaSlug || area.slug}">
             <td data-label="Rank">${i + 1}</td>
             <td data-label="Score"><span class="score-badge" style="background:${scoreBadgeColor(l.score)}">${l.score}</span></td>
             <td class="lead-prop"><strong>${l.property}</strong>${l.address ? `<div class="lead-subarea">${l.address}</div>` : (l.subArea ? `<div class="lead-subarea">${l.subArea}</div>` : "")}
               <button class="btn deep-dive-btn" data-deep-dive="${l.id}" title="See who to call about this building">See who to call &rarr;</button>
               ${contactHtml(l.contact, l)}</td>
-            <td data-label="City">${l.city}</td>
+            <td data-label="City">${l.city}${area.slug === "all" && l.stateLabel ? `<div class="lead-subarea">${l.stateLabel}</div>` : ""}</td>
             <td data-label="Units">${l.units ?? "?"}</td>
             <td data-label="Signal" class="lead-signal">${signalHtml(l)}</td>
             <td data-label="Software">${leadSoftwareHtml(l)}</td>
@@ -499,7 +528,8 @@
 
         document.querySelectorAll("#leads-tbody tr.clickable").forEach((tr) => {
           tr.addEventListener("click", () => {
-            location.href = `property.html?id=${encodeURIComponent(tr.dataset.id)}&area=${encodeURIComponent(area.slug)}`;
+            const rowArea = tr.dataset.areaSlug || area.slug;
+            location.href = `property.html?id=${encodeURIComponent(tr.dataset.id)}&area=${encodeURIComponent(rowArea)}`;
           });
         });
 

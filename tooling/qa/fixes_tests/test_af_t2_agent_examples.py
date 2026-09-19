@@ -26,7 +26,7 @@ def test_three_examples_sit_between_agent_bar_and_filters():
 def test_examples_use_the_current_state_or_region_and_refresh_on_region_change():
     renderer = INDEX.split("function renderLeadExamples()", 1)[1].split("\n      }", 1)[0]
     assert 'document.querySelector(".metro-btn.active")' in renderer
-    assert "metro || area.label" in renderer
+    assert "metro || (area.slug === \"all\" ? \"\" : area.label)" in renderer
 
     metro_picker = INDEX.split("function pickMetro(name)", 1)[1].split("\n      }", 1)[0]
     assert "renderLeadExamples()" in metro_picker
