@@ -16,7 +16,7 @@ def test_stats_come_from_shown_rows():
 
 
 def test_empty_result_message_and_clear_button():
-    assert "Nothing found. Clear the search or pick another region." in INDEX
+    assert "No buildings match this in" in INDEX  # reworded 2026-09-19: say where and what to try
     assert 'id="clear-search"' in INDEX
 
 

@@ -311,6 +311,19 @@
         window.PSChatPanel.ask(example.dataset.agentQuery);
       });
 
+      function updateQuickFilterCounts() {
+        const metro = (document.querySelector(".metro-btn.active") || {}).dataset?.metro || "";
+        const pool = metro ? data.leads.filter((l) => l.metro === metro) : data.leads;
+        document.querySelectorAll(".quick-filter").forEach((btn) => {
+          const signal = btn.dataset.signal;
+          const n = signal ? pool.filter((l) => l.signalType === signal).length : pool.length;
+          const label = btn.dataset.label || (btn.dataset.label = btn.textContent.trim());
+          btn.textContent = `${label} (${n})`;
+          btn.disabled = n === 0;                // nothing there: don't let them hit an empty table
+          btn.title = n === 0 ? `No ${label.toLowerCase()} here yet` : "";
+        });
+      }
+
       document.getElementById("quick-filters").addEventListener("click", (event) => {
         const btn = event.target.closest(".quick-filter");
         if (!btn) return;
@@ -403,6 +416,7 @@
 
       function renderRows() {
         updateSortIndicators();
+        updateQuickFilterCounts();
         const search = document.getElementById("f-search").value.trim().toLowerCase();
         const signal = document.getElementById("f-signal").value;
         const city = document.getElementById("f-city").value;
@@ -438,7 +452,7 @@
 
         if (!rows.length) {
           document.getElementById("leads-tbody").innerHTML = `
-            <tr class="empty-row"><td colspan="8">Nothing found. Clear the search or pick another region.
+            <tr class="empty-row"><td colspan="8">No buildings match this in ${(document.querySelector(".metro-btn.active") || {}).textContent || area.label}. Try another region, or pick "All leads".
               <button type="button" class="btn" id="clear-search">Clear search</button></td></tr>`;
           document.getElementById("clear-search").addEventListener("click", () => {
             document.getElementById("f-search").value = "";
@@ -462,7 +476,7 @@
           <tr class="clickable" data-id="${l.propertyId || l.id}">
             <td data-label="Rank">${i + 1}</td>
             <td data-label="Score"><span class="score-badge" style="background:${scoreBadgeColor(l.score)}">${l.score}</span></td>
-            <td class="lead-prop"><strong>${l.property}</strong>${l.subArea ? `<div class="lead-subarea">${l.subArea}</div>` : ""}
+            <td class="lead-prop"><strong>${l.property}</strong>${l.address ? `<div class="lead-subarea">${l.address}</div>` : (l.subArea ? `<div class="lead-subarea">${l.subArea}</div>` : "")}
               <button class="btn deep-dive-btn" data-deep-dive="${l.id}" title="See who to call about this building">See who to call &rarr;</button>
               ${contactHtml(l.contact, l)}</td>
             <td data-label="City">${l.city}</td>
