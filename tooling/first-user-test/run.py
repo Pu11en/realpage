@@ -37,10 +37,15 @@ PERSONAS = [
     "You are Priya, a marketing lead at a package-locker company, on your PHONE, very busy. Your goal: get a list of leads for Houston you can share with your team.",
     "You are Tom, a business development rep at a leasing-services firm in Phoenix. Your goal: find apartment buildings in Arizona that recently sold (new owners) and see who bought them.",
     "You are Dana, a VP of sales at an apartment internet provider; your market is Tulsa, Oklahoma. Your goal: find leads for Tulsa, and if the site doesn't cover it, find out what you can do about that.",
+    "You are Luis, an account executive at a property-management company (you manage buildings for owners). Your goal: find new Austin buildings whose owner hasn't picked a manager yet, and who the developer is.",
+    "You are Grace, a sales ops analyst who lives in spreadsheets. Your goal: get all San Antonio leads into a file you can open, and check how fresh the data is.",
+    "You are Ben, a founder of a tiny proptech startup, on your PHONE, deciding in 60 seconds if this is worth your time. Your goal: understand what it does, what it costs, and who is behind it.",
+    "You are Aisha, a regional sales director at Yardi-like software company covering all of Texas. Your goal: find the biggest buildings (most units) opening soon anywhere in Texas and pick the top 3 to call this week.",
+    "You are Mike, a door-to-door style old-school salesman who is not techy. Your goal: find one building near Fort Worth and a phone number to call today. Use the simplest path you can find.",
 ]
 
 async def run(i):
-    mobile = i == 2
+    mobile = i in (2, 7)
     profile = BrowserProfile(headless=True, viewport={"width": 390, "height": 844} if mobile else {"width": 1366, "height": 900},
                              user_agent=("Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Mobile/15E148 Safari/604.1" if mobile else None))
     agent = Agent(task=f"Start at {START}.\n{PERSONAS[i]}\n{RULES}", llm=ChatDeepSeek(model="deepseek-chat", api_key=os.environ["DEEPSEEK_API_KEY"]),
