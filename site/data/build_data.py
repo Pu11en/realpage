@@ -718,6 +718,8 @@ def build_area(slug: str) -> dict:
 
     return {
         "area": slug,
+        # The lead snapshot date, not the day the site happens to be rebuilt.
+        "updated": CURRENT_DATA_DATE,
         "generatedFrom": f"propertystack/data/{slug}/leads.json",
         "stats": {
             "leads": len(leads),
@@ -862,8 +864,10 @@ def build_areas_manifest(area_slugs: list[str]) -> dict:
     discovered state area (5.1) points at its file under data/areas/."""
     included = _included_slugs(area_slugs)
     areas = [] if AREA in included else [{"slug": AREA, "label": "Plano–Richardson", "dataPath": "data/leads.json", "leads": None}]
+    area_dates = []
     for slug in area_slugs:
         area = json.loads((AREAS_OUT_DIR / f"{slug}.json").read_text())
+        area_dates.append(area["updated"])
         areas.append({
             "slug": slug,
             "label": _STATE_NAMES.get(slug, slug.replace("-", " ").title()),
@@ -874,8 +878,9 @@ def build_areas_manifest(area_slugs: list[str]) -> dict:
     areas.sort(key=lambda a: -(a["leads"] or 0))
     # Old links (?area=plano-richardson) open the state that now holds that area.
     aliases = {inc: s for s in area_slugs for inc in [i["slug"] for i in (_load_metros(s) or {}).get("include_areas", [])]}
-    # "updated" = the day this data was built; the menu footer shows it as "Last updated".
-    manifest = {"areas": areas, "aliases": aliases, "updated": date.today().isoformat()}
+    # Derive freshness from the area snapshots. Rebuilding/deploying the site
+    # must not make unchanged lead data appear newer than it is.
+    manifest = {"areas": areas, "aliases": aliases, "updated": max(area_dates, default=CURRENT_DATA_DATE)}
     AREAS_OUT_DIR.mkdir(parents=True, exist_ok=True)
     (AREAS_OUT_DIR / "index.json").write_text(json.dumps(manifest, indent=2))
     return manifest
