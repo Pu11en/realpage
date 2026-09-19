@@ -171,7 +171,7 @@
 .chat-panel-signin-card p:first-child { font-family: var(--font-head); font-weight: 700; font-size: 16px; color: var(--ink); }
 .chat-panel-signin-card .chat-panel-signin-note { font-size: 13px; color: var(--muted); margin-top: -4px; }
 
-/* T6: shown instead of the chat frame when a "Deep dive" is clicked a second
+/* T6: shown instead of the chat frame when "Get contact" is clicked a second
    time for the same building with the same question -- the first click's
    answer is still there in the chat, so this offers a redo rather than
    silently retyping the same question. */

@@ -242,8 +242,8 @@
             <td data-label="Rank">${i + 1}</td>
             <td data-label="Score"><span class="score-badge" style="background:${scoreBadgeColor(l.score)}">${l.score}</span></td>
             <td class="lead-prop"><strong>${l.property}</strong> ${l.isNew ? '<span class="pill pill-new">NEW</span>' : ""}${l.subArea ? `<div class="lead-subarea">${l.subArea}</div>` : ""}
-              ${contactHtml(l.contact)}
-              <button class="btn deep-dive-btn" data-deep-dive="${l.id}" title="Open the chat with a deep-dive question about this building">✦ Deep dive</button></td>
+              <button class="btn deep-dive-btn" data-deep-dive="${l.id}" title="Find who to call about this building">Get contact &rarr;</button>
+              ${contactHtml(l.contact)}</td>
             <td data-label="City">${l.city}</td>
             <td data-label="Units">${l.units ?? "?"}</td>
             <td data-label="Signal" class="lead-signal">${signalHtml(l)}</td>

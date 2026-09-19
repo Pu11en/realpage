@@ -18,7 +18,7 @@ def test_every_row_is_clickable():
 
 def test_property_page_falls_back_to_lead():
     assert "findLead(id" in PROPERTY
-    for bit in ("Stage", "Software", "Sources", "Deep dive in chat", "l.why", "l.units"):
+    for bit in ("Stage", "Software", "Sources", "Get contact &rarr;", "l.why", "l.units"):
         assert bit in PROPERTY
 
 

@@ -71,8 +71,8 @@
       return `
         <div class="back-row"><a class="back-link" href="index.html" onclick="if (history.length > 1 && document.referrer.startsWith(location.origin)) { history.back(); return false; }">&larr; Back</a></div>
         <h1>${esc(p.community)}</h1>
-        <div class="meta">${bits.join(" &middot; ")}<br/>${who}</div>
-        <button class="btn deep-dive-btn detail-dive" data-deep-dive="${esc(p.id)}">✦ Deep dive in chat</button>`;
+        <button class="btn deep-dive-btn detail-dive" data-deep-dive="${esc(p.id)}">Get contact &rarr;</button>
+        <div class="meta">${bits.join(" &middot; ")}<br/>${who}</div>`;
     }
 
     function softwareCard(p, colors, isUpcoming) {
@@ -203,8 +203,8 @@
       return `
         <div class="back-row"><a class="back-link" href="index.html" onclick="if (history.length > 1 && document.referrer.startsWith(location.origin)) { history.back(); return false; }">&larr; Back</a></div>
         <h1>${esc(name)}</h1>
+        <button class="btn deep-dive-btn detail-dive" data-deep-dive="${esc(l.id)}">Get contact &rarr;</button>
         <div class="meta">${bits.join(" &middot; ")}<br/>${who}</div>
-        <button class="btn deep-dive-btn detail-dive" data-deep-dive="${esc(l.id)}">✦ Deep dive in chat</button>
         <div class="cards-row">
           <div class="card"><h3>Stage</h3><dl class="kv">
             <dt>Stage</dt><dd>${esc(stage)}</dd>

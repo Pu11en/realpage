@@ -284,8 +284,8 @@ h1 { font-size: 26px; font-weight: 800; letter-spacing: -0.015em; margin: 0 0 4p
   margin-bottom: 16px;
 }
 
-/* "Deep dive in chat" button (Early Leads rows + building page). */
-.deep-dive-btn { padding: 2px 8px; font-size: 12px; margin-left: 6px; white-space: nowrap; }
+/* "Get contact" button (Early Leads rows + building page). */
+.deep-dive-btn { padding: 4px 8px; font-size: 14px; font-weight: 600; margin-left: 0; white-space: nowrap; }
 
 /* Early Leads table: tidy cells, no wrapping pills, roomy "Why"; cards on phones. */
 .leads-table .pill { white-space: nowrap; }
@@ -351,7 +351,7 @@ h1 { font-size: 26px; font-weight: 800; letter-spacing: -0.015em; margin: 0 0 4p
 .back-row { margin-bottom: 8px; }
 .back-link { color: var(--text-muted); font-size: 13px; text-decoration: none; }
 .back-link:hover { color: var(--blue); }
-.detail-dive { margin: -8px 0 16px; }
+.detail-dive { display: table; margin: 0 0 12px; }
 .pill-row { margin-bottom: 10px; }
 .step-labels { display: flex; gap: 4px; margin: 6px 0 12px; }
 .step-labels .step-label { font-size: 10px; }

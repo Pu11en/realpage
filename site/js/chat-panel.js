@@ -88,6 +88,7 @@
 
     frame.addEventListener("load", () => {
       loaded = true;
+      panel.dataset.frameReady = "1";
       loading.style.display = "none";
       errorEl.style.display = "none";
       frame.style.display = "block";
@@ -108,7 +109,7 @@
         if (loaded) return;
         if (!autoRetried) {
           autoRetried = true;
-          frame.setAttribute("src", CHAT_APP_URL);
+          setFrameSource(panel, CHAT_APP_URL);
           startLoadTimer();
           return;
         }
@@ -124,7 +125,7 @@
       errorEl.style.display = "none";
       frame.style.display = "none";
       loading.style.display = "flex";
-      frame.setAttribute("src", CHAT_APP_URL);
+      setFrameSource(panel, CHAT_APP_URL);
       startLoadTimer();
     });
 
@@ -136,8 +137,7 @@
       if (!id || !text) return;
       hideDeepDiveNotice(panel);
       frame.style.display = "block";
-      sendDeepDive(panel, text);
-      rememberDeepDive(id, text);
+      queueQuestion(panel, text, id);
     });
 
     // Google refuses to load inside a frame, so the chat app's own Google
@@ -157,7 +157,7 @@
         clearInterval(timer);
         if (!popup.closed) popup.close();
         panel.querySelector("#chat-panel-signin-card").style.display = "none";
-        frame.setAttribute("src", CHAT_APP_URL);
+        setFrameSource(panel, CHAT_APP_URL);
       };
       const timer = setInterval(() => {
         if (popup.closed) return finish();
@@ -189,17 +189,24 @@
       .then((cfg) => {
         if (cfg && cfg.features && cfg.features.auth === false) {
           card.style.display = "none";
+          panel.dataset.canAsk = "1";
           setSignOutVisible(false);
-          return;
+          sendPendingQuestion(panel);
+          return true;
         }
         return fetch(`${base}/api/v1/auths/`, { credentials: "include" })
           .then((res) => {
             card.style.display = res.ok ? "none" : "flex";
+            panel.dataset.canAsk = res.ok ? "1" : "0";
             setSignOutVisible(res.ok);
+            if (res.ok) sendPendingQuestion(panel);
+            return res.ok;
           })
           .catch(() => {
             card.style.display = "flex";
+            panel.dataset.canAsk = "0";
             setSignOutVisible(false);
+            return false;
           });
       });
   }
@@ -238,9 +245,14 @@
     });
   }
 
+  function setFrameSource(panel, url) {
+    panel.dataset.frameReady = "0";
+    panel.querySelector("#chat-panel-frame").setAttribute("src", url);
+  }
+
   function ensureFrameLoaded(panel) {
     const frame = panel.querySelector("#chat-panel-frame");
-    if (!frame.getAttribute("src")) frame.setAttribute("src", CHAT_APP_URL);
+    if (!frame.getAttribute("src")) setFrameSource(panel, CHAT_APP_URL);
   }
 
   function openPanel() {
@@ -303,8 +315,8 @@
     return DEEPDIVE_PREFIX + id;
   }
 
-  // T6: a repeat "Deep dive in chat" click on the same building used to just
-  // reopen the same unsent question, discarding the fact it had already been
+  // T6: a repeat contact request for the same building used to just reopen
+  // the same question, discarding the fact it had already been
   // asked and answered. Remember the last deep dive sent per building (id,
   // prompt text and when) so a second click on the same building with the
   // same prompt shows an instant "Saved deep dive from <date>" notice with a
@@ -335,25 +347,45 @@
     if (notice) notice.style.display = "none";
   }
 
-  // Open WebUI 0.11 takes postMessage {type:"input:prompt"} only from its own
-  // origin (true live, where site and chat share an address), so use that
-  // when possible; otherwise (local :8765 -> :3000) load /?q=...&submit=false,
-  // which fills the input without sending. See chatbot/README.md.
-  function sendDeepDive(panel, text) {
+  // Open WebUI 0.11 takes postMessage {type:"input:prompt:submit"} only from
+  // its own origin (true live, where site and chat share an address). Locally
+  // the chat is cross-origin, so use its q URL with submit=true instead.
+  function sendQuestion(panel, text) {
     const frame = panel.querySelector("#chat-panel-frame");
     const base = CHAT_APP_URL.replace(/\/$/, "");
     const sameOrigin = new URL(base, location.href).origin === location.origin;
-    const loaded = !!frame.getAttribute("src");
-    if (sameOrigin && loaded && frame.contentWindow) {
-      frame.contentWindow.postMessage({ type: "input:prompt", text }, location.origin);
+    if (sameOrigin) {
+      if (panel.dataset.frameReady !== "1" || !frame.contentWindow) return false;
+      frame.contentWindow.postMessage({ type: "input:prompt:submit", text }, location.origin);
     } else {
-      frame.setAttribute("src", `${base}/?q=${encodeURIComponent(text)}&submit=false`);
+      setFrameSource(panel, `${base}/?q=${encodeURIComponent(text)}&submit=true`);
     }
+    return true;
   }
 
-  // "Deep dive in chat": open the panel with a prompt typed in, not sent --
-  // unless this exact building/question was already deep-dived, in which
-  // case show the saved-copy notice instead of retyping the question.
+  // Hold the question while a signed-out visitor creates an account. Every
+  // successful auth check tries this queue, so the same waiting question is
+  // sent automatically as soon as the reloaded chat is ready.
+  function sendPendingQuestion(panel) {
+    const text = panel.dataset.pendingQuestion;
+    if (!text || panel.dataset.canAsk !== "1") return false;
+    if (!sendQuestion(panel, text)) return false;
+    const id = panel.dataset.pendingQuestionId;
+    delete panel.dataset.pendingQuestion;
+    delete panel.dataset.pendingQuestionId;
+    if (id) rememberDeepDive(id, text);
+    return true;
+  }
+
+  function queueQuestion(panel, text, id) {
+    panel.dataset.pendingQuestion = text;
+    if (id) panel.dataset.pendingQuestionId = id;
+    else delete panel.dataset.pendingQuestionId;
+    checkAuth(panel);
+  }
+
+  // "Get contact": open the panel and send the contact-first question. If
+  // this exact building/question was already sent, show the saved-copy notice.
   function deepDive(id, text) {
     const panel = buildPanel();
     openPanel();
@@ -369,8 +401,15 @@
     }
     hideDeepDiveNotice(panel);
     panel.querySelector("#chat-panel-frame").style.display = "block";
-    sendDeepDive(panel, text);
-    rememberDeepDive(id, text);
+    queueQuestion(panel, text, id);
+  }
+
+  function ask(text) {
+    const panel = buildPanel();
+    openPanel();
+    hideDeepDiveNotice(panel);
+    panel.querySelector("#chat-panel-frame").style.display = "block";
+    queueQuestion(panel, text);
   }
 
   // Plain words for a lead's stage. Covers the state files (permitted, planned,
@@ -404,7 +443,7 @@
     return `Deep dive on ${p.name}, ${p.city} (${units}, ${sw}${sold}): ${whoToCall}.${newOwner} Then tell me why call now and why they might switch.`;
   }
 
-  window.PSChatPanel = { open: openPanel, close: closePanel, toggle: togglePanel, isOpen, deepDive, deepDivePrompt };
+  window.PSChatPanel = { open: openPanel, close: closePanel, toggle: togglePanel, isOpen, ask, deepDive, deepDivePrompt };
   window.initChatPanel = initChatPanel;
   window.wireSignOut = wireSignOut;
 })();

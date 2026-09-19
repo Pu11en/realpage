@@ -1,5 +1,5 @@
-"""T6: a second "Deep dive" click on the same building with the same question
-shows the saved copy instead of silently retyping the unsent question."""
+"""T6: a second contact request for the same building and question
+shows the saved copy instead of silently sending the question again."""
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[3]
