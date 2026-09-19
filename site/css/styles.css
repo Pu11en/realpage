@@ -371,6 +371,15 @@ h1 { font-size: 26px; font-weight: 800; letter-spacing: -0.015em; margin: 0 0 4p
   .main table { display: block; overflow-x: auto; }
   h1, .meta { overflow-wrap: anywhere; }
   .funnel { flex-wrap: wrap; }
+
+  .lead-agent-search { flex-direction: column; }
+  .lead-agent-search button { width: 100%; min-height: 44px; }
+  .lead-agent-examples { flex-direction: column; gap: 6px; }
+  .lead-agent-example { width: 100%; min-height: 44px; text-align: left; white-space: normal; overflow-wrap: anywhere; }
+  .filters-toggle { width: 100%; min-height: 44px; justify-content: space-between; }
+  .filters { flex-direction: column; }
+  .filters input, .filters select { width: 100%; }
+  .hide-mine { min-height: 44px; }
 }
 
 .placeholder-banner {
