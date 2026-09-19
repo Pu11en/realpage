@@ -535,3 +535,19 @@ th .info, .info { color: var(--text-dim); cursor: help; font-size: 12px; }
 .take-it-sub { font-size: 12px; color: var(--text-muted); }
 .take-it-row .lead-pack-actions { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
 @media (max-width: 700px) { .take-it-row { flex-direction: column; align-items: flex-start; } }
+
+/* Phones: the agent is always present as a bottom bar (the desktop docks the panel). */
+.ask-bar { display: none; }
+@media (max-width: 899px) {
+  .ask-fab { display: none; }
+  .ask-bar {
+    display: flex; align-items: center; justify-content: space-between; gap: 12px;
+    position: fixed; left: 10px; right: 10px; bottom: 10px; z-index: 60;
+    background: var(--amber); color: var(--ink); border: none; border-radius: 10px;
+    padding: 14px 16px; font-family: var(--font-head); font-weight: 700; font-size: 15px;
+    box-shadow: 0 4px 0 #b88900, 0 8px 20px rgba(14, 19, 32, .18); cursor: pointer; text-align: left;
+  }
+  .ask-bar-go { font-size: 18px; }
+  body { padding-bottom: 76px; }          /* nothing hides behind the bar */
+  body.chat-panel-open .ask-bar { display: none; }
+}

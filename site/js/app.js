@@ -58,7 +58,12 @@ function renderShell(activeKey) {
       </div>
     </aside>
     <main class="main" id="page-content"></main>
-    <a class="ask-fab" href="#" data-chat-toggle aria-label="Ask CraneSignal">Ask</a>
+    <a class="ask-fab" href="#" data-chat-toggle aria-label="Ask the CraneSignal agent">Ask</a>
+    <!-- Phones: the agent is always on screen as a bar at the bottom; tapping it opens the agent. -->
+    <button class="ask-bar" type="button" data-chat-toggle aria-label="Ask the CraneSignal agent">
+      <span class="ask-bar-text">Ask the agent: who should I call?</span>
+      <span class="ask-bar-go" aria-hidden="true">&rarr;</span>
+    </button>
   `;
 
   showLastUpdated();
