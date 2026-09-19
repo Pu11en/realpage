@@ -18,7 +18,7 @@ Open: http://localhost:8765/index.html
 - [x] AF-T1 Top of the filter area on Early Leads: a wide search bar, placeholder "Describe the leads you want…". Enter sends the text to the agent panel (opens it, sends automatically; signed-out visitors see "Make a free account" first and the question sends after sign-up). Reuse the Get-contact send path from PLAN-gap1 T3.
 - [x] AF-T2 Under the bar, 3 example chips built from the current state/region (e.g. "Dallas buildings opening in 2027", "Recently sold, 200+ units", "Not on any software yet near Austin"); a click sends that chip to the agent.
 - [x] AF-T3 Fold the existing dropdowns (signal, city, software, sort, "hide properties already on my software") and the plain "Search property" box under a small "Filters" toggle button, closed by default; state and region pills stay visible. Filtering must still work exactly as before when opened.
-- [ ] AF-T4 Phone width (<900px): bar, chips and Filters button stack cleanly; screenshot desktop + phone for Drew. Tests for T1-T3.
+- [x] AF-T4 Phone width (<900px): bar, chips and Filters button stack cleanly; screenshot desktop + phone for Drew. Tests for T1-T3.
 - [ ] G3-T1 Early Leads: remove the "NEW" stat card (and the "New" badge on rows if it depends on newThisWeek). Keep Leads, Units in play, Opening soon.
 - [ ] G3-T2 "Last updated" in the sidebar shows the date the lead data was built (from the area JSON / build time of site/data/areas/*.json), not the site deploy date. Today it wrongly shows Sep 18 while the data is from Sep 15.
 - [ ] G3-T3 Under the stats on Early Leads: one line "Data from <date>. Don't see your area? Ask for it" linking to map.html#request-area (Gap 2).

@@ -66,3 +66,12 @@
 - Checks: required QA passed (239); the other active project suites passed (398); focused AF-T1 through AF-T3 tests passed (12); `git diff --check` passed.
 - Browser check: Chromium confirmed the controls start closed, open from the button, property search narrows to the matching building, and the Sold dropdown returns only sold rows.
 - Limits: no real AI call, paid service, push or deployment. AF-T4 and later tasks remain untouched; the overall build still needs the mobile pass, fake New removal, real data date, final screenshots, and approved publishing.
+
+## 2026-09-19 — AF-T4 Phone layout
+
+- At widths below 900px, the lead request input and submit button, all three example chips, the Filters toggle, and opened filter controls now stack at full width with 44px touch targets and readable wrapping.
+- Added regression coverage for the mobile behavior while retaining the existing AF-T1 through AF-T3 tests, plus desktop and 390px phone screenshots in `docs/plans/af-t4-screenshots/`.
+- Implementation commit: `d9744cf` (`feat: stack early lead controls on phones`).
+- Checks: required QA passed (242); the other active project suites passed (398); focused AF-T1 through AF-T4 tests passed (15); `git diff --check` passed. Chromium at 390px confirmed the column layout and no horizontal overflow.
+- Check correction: the first browser geometry assertion compared the bordered form to its inner button exactly; the expected two-pixel border difference was allowed and the corrected browser check passed.
+- Limits: no real AI call, paid service, push or deployment. G3-T1 and later tasks remain untouched; the overall build still needs fake New removal, the real data date, final freshness text/screenshots, and approved publishing.
