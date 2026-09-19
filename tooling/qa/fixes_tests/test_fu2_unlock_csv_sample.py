@@ -5,10 +5,11 @@ SITE = pathlib.Path(__file__).resolve().parents[3] / "site"
 INDEX = (SITE / "index.html").read_text()
 
 
-def test_unlock_note_appears_before_the_gated_buttons():
-    note = INDEX.index('class="unlock-note"')
-    assert INDEX.index("manager name") > note
-    assert "free during early access" in INDEX.lower()
+def test_account_terms_sit_next_to_the_gated_buttons():
+    # Layout 2026-09-19: one short "Take the list with you" row instead of three sentences.
+    row = INDEX.index('class="take-it-row"')
+    assert INDEX.index('id="download-lead-pack"') > row
+    assert "Free account. No card. Also unlocks who to call." in INDEX
 
 
 def test_spreadsheet_download_exists_and_is_account_gated():

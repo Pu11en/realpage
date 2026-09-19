@@ -11,14 +11,14 @@ APP = (ROOT / "site/js/app.js").read_text(encoding="utf-8")
 
 
 def test_data_note_sits_directly_under_stats_and_links_area_request():
+    note = INDEX.index('Data from ${formatDataDate(data.updated)}')
     stats = INDEX.index('<div class="stats-row" id="lead-stats"></div>')
-    note = INDEX.index('<p class="lead-data-note">')
     search = INDEX.index('<form class="lead-agent-search"')
 
-    assert stats < note < search
-    assert "Data from ${formatDataDate(data.updated)}." in INDEX
-    assert "Don't see yours?" in INDEX  # coverage line moved above the stats (2026-09-19)
-    assert '<a href="map.html#request-area">Ask for it</a>' in INDEX
+    assert note < stats < search
+    assert "Data from ${formatDataDate(data.updated)}" in INDEX
+    assert 'href="map.html#request-area">add yours' in INDEX  # coverage chip (2026-09-19)
+
 
 
 @pytest.mark.skipif(not shutil.which("node"), reason="node not installed")

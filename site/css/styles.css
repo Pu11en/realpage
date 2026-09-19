@@ -519,3 +519,19 @@ th .info, .info { color: var(--text-dim); cursor: help; font-size: 12px; }
 #us-map .state-covered:hover { stroke: var(--amber); stroke-width: 2; }
 .unlock-note { margin: 0 0 4px; font-size: 13px; color: var(--text-muted); }
 .pack-sample-link { font-size: 13px; color: var(--accent); align-self: center; }
+
+/* Leads page layout (2026-09-19): one toolbar, one facts strip, one take-it row. */
+.lead-toolbar { border: 1px solid var(--rule); border-radius: 10px; padding: 14px 16px; margin: 18px 0 12px; background: var(--card-bg); }
+.lead-toolbar .pick-row { margin: 0 0 10px; }
+.lead-toolbar .quick-filters { margin: 4px 0 0; padding-top: 10px; border-top: 1px solid var(--rule); }
+.lead-strip { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 14px; }
+.lead-strip .chip { font-size: 12px; color: var(--text-muted); background: var(--paper-2); border: 1px solid var(--rule); border-radius: 999px; padding: 5px 12px; }
+.take-it-row {
+  display: flex; flex-wrap: wrap; gap: 12px 20px; align-items: center; justify-content: space-between;
+  border: 1px solid var(--border); border-radius: 10px; padding: 14px 16px; margin: 0 0 18px;
+}
+.take-it-main { display: flex; flex-direction: column; gap: 2px; }
+.take-it-title { font-family: var(--font-head); font-weight: 700; font-size: 15px; }
+.take-it-sub { font-size: 12px; color: var(--text-muted); }
+.take-it-row .lead-pack-actions { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+@media (max-width: 700px) { .take-it-row { flex-direction: column; align-items: flex-start; } }

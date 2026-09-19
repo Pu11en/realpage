@@ -30,11 +30,11 @@ def test_sidebar_uses_the_selected_areas_real_snapshot_date():
 
 
 def test_data_date_and_area_request_follow_the_stats():
+    note = INDEX.index('Data from ${formatDataDate(data.updated)}')
     stats = INDEX.index('<div class="stats-row" id="lead-stats"></div>')
-    note = INDEX.index('<p class="lead-data-note">')
     lead_search = INDEX.index('<form class="lead-agent-search"')
 
-    assert stats < note < lead_search
-    assert "Data from ${formatDataDate(data.updated)}." in INDEX
-    assert "Don't see yours?" in INDEX  # coverage line moved above the stats (2026-09-19)
-    assert '<a href="map.html#request-area">Ask for it</a>' in INDEX
+    assert note < stats < lead_search
+    assert "Data from ${formatDataDate(data.updated)}" in INDEX
+    assert 'href="map.html#request-area">add yours' in INDEX  # coverage chip (2026-09-19)
+

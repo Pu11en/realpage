@@ -56,34 +56,44 @@
 
       content.innerHTML = `
         <h1>Leads</h1>
-        <div class="meta">Apartment buildings worth a call now: being built, opening soon, or just sold to a new owner.</div>
-        <div class="pick-row"><span class="pick-label">State</span>${renderAreaButtons(areas, area.slug)}</div>
-        ${(data.metros || []).length ? `<div class="pick-row"><span class="pick-label">Region</span><div class="metro-buttons">
-          <button class="metro-btn active" data-metro="">All ${area.label} (${data.leads.length})</button>
-          ${data.metros.map((m) => `<button class="metro-btn" data-metro="${m.name}">${m.name} (${m.leads})</button>`).join("")}
-        </div></div>` : ""}
-        <div class="pick-row lead-pack-row">
-          <span class="pick-label">Call list</span>
+        <div class="meta">Buildings worth a call now. Being built. Opening soon. Just sold.</div>
+
+        <div class="lead-toolbar">
+          <div class="pick-row"><span class="pick-label">State</span>${renderAreaButtons(areas, area.slug)}</div>
+          ${(data.metros || []).length ? `<div class="pick-row"><span class="pick-label">Region</span><div class="metro-buttons">
+            <button class="metro-btn active" data-metro="">All ${area.label} (${data.leads.length})</button>
+            ${data.metros.map((m) => `<button class="metro-btn" data-metro="${m.name}">${m.name} (${m.leads})</button>`).join("")}
+          </div></div>` : ""}
+          <div class="quick-filters" id="quick-filters" aria-label="Quick filters">
+            <button type="button" class="quick-filter active" data-signal="">All leads</button>
+            <button type="button" class="quick-filter" data-signal="Upcoming">New builds</button>
+            <button type="button" class="quick-filter" data-signal="Leasing">Opening soon</button>
+            <button type="button" class="quick-filter" data-signal="Sold">Recently sold</button>
+          </div>
+        </div>
+
+        <div class="lead-strip">
+          <span class="chip">Free to browse</span>
+          <span class="chip">Texas &amp; Arizona &middot; <a href="map.html#request-area">add yours</a></span>
+          <span class="chip">Data from ${formatDataDate(data.updated)}</span>
+        </div>
+
+        <div class="take-it-row">
+          <div class="take-it-main">
+            <span class="take-it-title">Take the list with you</span>
+            <span class="take-it-sub">Free account. No card. Also unlocks who to call.</span>
+          </div>
           <div class="lead-pack-actions">
             <button type="button" class="lead-pack-btn" id="download-lead-pack">Download call list (PDF)</button>
             <button type="button" class="lead-pack-btn secondary" id="download-csv">Download spreadsheet (CSV)</button>
             <button type="button" class="lead-pack-btn secondary" id="download-new-leads" hidden>Get only the new ones</button>
-            <a class="pack-sample-link" href="sample-lead-pack.pdf" target="_blank" rel="noopener">See a sample call list</a>
+            <a class="pack-sample-link" href="sample-lead-pack.pdf" target="_blank" rel="noopener">See a sample</a>
             <span class="lead-pack-status" id="lead-pack-status" role="status" aria-live="polite"></span>
           </div>
         </div>
-        <p class="free-note"><b>Browse every lead free.</b> A free account unlocks who to call, the agent and your call list (PDF).</p>
-        <p class="unlock-note">A free account unlocks: <b>manager name</b>, <b>direct phone</b>, a <b>'why call now' note</b> for any building, the call list and the spreadsheet. Free during early access, no card.</p>
-        <p class="coverage-note">Covered now: Texas, Arizona. Don't see yours? <a href="map.html#request-area">Ask for it</a></p>
-        <div class="quick-filters" id="quick-filters" aria-label="Quick filters">
-          <button type="button" class="quick-filter active" data-signal="">All leads</button>
-          <button type="button" class="quick-filter" data-signal="Upcoming">New builds</button>
-          <button type="button" class="quick-filter" data-signal="Leasing">Opening soon</button>
-          <button type="button" class="quick-filter" data-signal="Sold">Recently sold</button>
-        </div>
+
         ${placeholderBanner(data.status)}
         <div class="stats-row" id="lead-stats"></div>
-        <p class="lead-data-note">Data from ${formatDataDate(data.updated)}.</p>
 
         <form class="lead-agent-search" id="lead-agent-search">
           <label class="sr-only" for="lead-agent-query">Describe the leads you want</label>
