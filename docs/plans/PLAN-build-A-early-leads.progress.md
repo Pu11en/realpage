@@ -47,3 +47,12 @@
 - Implementation commit: `10f85c3` (`feat: add agent lead search bar`).
 - Checks: required QA and all active project suites passed together (628); `git diff --check` passed.
 - Limits: no real AI call, paid service, push or deployment. AF-T2 and later tasks remain for subsequent workers.
+
+## 2026-09-19 — AF-T2 Location-aware example searches
+
+- Added three example chips below the agent search for openings, recent large sales, and buildings without software; the wording uses the selected state or region and refreshes immediately when the region changes.
+- Clicking a chip sends its full text through the shared agent `ask` path, including the existing sign-up queue for signed-out visitors. Added offline checks for placement, location-aware wording, click behavior, wrapping chip styles, and region refresh.
+- Implementation commit: `1dbed75` (`feat: add location-aware lead examples`).
+- Checks: required QA passed (234); the other active project suites passed (398); a local Chromium check showed all three Texas examples, sent a clicked query, and refreshed all three for Austin. `git diff --check` passed.
+- Check correction: the first combined test command named the old nonexistent `propertystack/tests` path; reran against the actual `propertystack/lib/tests` and `propertystack/skills/*/tests` paths successfully.
+- Limits: no real AI call, paid service, push or deployment. AF-T3 and later tasks remain untouched; those tasks are still needed to fold filters, finish mobile layout, remove the fake New count, show the real data date, and complete the overall build.
