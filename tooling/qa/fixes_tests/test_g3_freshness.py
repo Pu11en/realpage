@@ -35,5 +35,6 @@ def test_data_date_and_area_request_follow_the_stats():
     lead_search = INDEX.index('<form class="lead-agent-search"')
 
     assert stats < note < lead_search
-    assert "Data from ${formatDataDate(data.updated)}. Don't see your area?" in INDEX
+    assert "Data from ${formatDataDate(data.updated)}." in INDEX
+    assert "Don't see yours?" in INDEX  # coverage line moved above the stats (2026-09-19)
     assert '<a href="map.html#request-area">Ask for it</a>' in INDEX

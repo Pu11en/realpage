@@ -16,7 +16,8 @@ def test_data_note_sits_directly_under_stats_and_links_area_request():
     search = INDEX.index('<form class="lead-agent-search"')
 
     assert stats < note < search
-    assert "Data from ${formatDataDate(data.updated)}. Don't see your area?" in INDEX
+    assert "Data from ${formatDataDate(data.updated)}." in INDEX
+    assert "Don't see yours?" in INDEX  # coverage line moved above the stats (2026-09-19)
     assert '<a href="map.html#request-area">Ask for it</a>' in INDEX
 
 

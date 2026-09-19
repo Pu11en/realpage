@@ -501,3 +501,19 @@ h1 { font-size: 26px; font-weight: 800; letter-spacing: -0.015em; margin: 0 0 4p
 .card .breakdown > div { background: var(--paper-2); border: 1px solid var(--rule); border-radius: 6px; padding: 6px 4px; }
 .card a:hover, .sources a:hover { text-decoration: underline; }
 a.link { color: var(--blue); }
+
+/* First-time-user fixes (2026-09-19) */
+.free-note { margin: 14px 0 2px; font-size: 14px; }
+.coverage-note { margin: 0 0 14px; font-size: 13px; color: var(--text-muted); }
+.quick-filters { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 16px; }
+.quick-filter {
+  font-family: var(--font-head); font-weight: 700; font-size: 13px; cursor: pointer;
+  background: var(--card-bg); color: var(--ink); border: 1px solid var(--border);
+  border-radius: 999px; padding: 7px 14px;
+}
+.quick-filter:hover { border-color: var(--ink-2); }
+.quick-filter.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+.agent-examples-row { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 8px 0 16px; }
+.agent-examples-label { font-size: 12px; color: var(--text-muted); text-transform: uppercase; letter-spacing: .03em; font-weight: 600; }
+th .info, .info { color: var(--text-dim); cursor: help; font-size: 12px; }
+#us-map .state-covered:hover { stroke: var(--amber); stroke-width: 2; }

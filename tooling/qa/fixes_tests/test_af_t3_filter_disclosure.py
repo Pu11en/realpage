@@ -26,7 +26,6 @@ def test_all_existing_filter_controls_stay_inside_the_disclosure():
         "f-city",
         "f-software",
         "f-sort",
-        "f-hide-mine",
     ):
         assert f'id="{control_id}"' in filters
     assert 'placeholder="Search property"' in filters
@@ -49,7 +48,7 @@ def test_state_and_region_pills_remain_outside_the_fold():
 
 def test_existing_filter_listeners_are_unchanged():
     listener_block = INDEX.split(
-        '["f-search", "f-signal", "f-city", "f-software", "f-sort", "f-hide-mine"]', 1
+        '["f-search", "f-signal", "f-city", "f-software", "f-sort"]', 1
     )[1].split("});", 1)[0]
     assert "visibleCount = PAGE_SIZE" in listener_block
     assert "renderRows()" in listener_block

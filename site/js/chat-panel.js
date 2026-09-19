@@ -13,7 +13,7 @@
   window.__chatPanelLoaded = true;
 
   const STORAGE_OPEN = "propertystack.chatPanelOpen";
-  const DEFAULT_SIGNIN_PURPOSE = "Ask anything about these buildings.";
+  const DEFAULT_SIGNIN_PURPOSE = "Make a free account to see who to call.";
   let pendingAuthAction = null;
 
   // Open by default on every page; only an explicit close (the X) keeps it
@@ -69,7 +69,7 @@
         </div>
         <div class="chat-panel-signin-card" id="chat-panel-signin-card" style="display:none;">
           <p id="chat-panel-signin-purpose">${DEFAULT_SIGNIN_PURPOSE}</p>
-          <p class="chat-panel-signin-note">A small window opens. Use Google or your email. It closes by itself and the chat appears here.</p>
+          <p class="chat-panel-signin-note">Takes about 20 seconds, with Google or your email. No card. It also unlocks the agent and your Lead Pack.</p>
           <button class="chat-panel-signin" id="chat-panel-signin">Make a free account</button>
           <a href="#" class="chat-panel-signin-link" id="chat-panel-signin-link">Already have one? Sign in</a>
         </div>

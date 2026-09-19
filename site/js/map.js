@@ -34,6 +34,19 @@
     }
     p.addEventListener("mousemove", (e) => showTip(e, name, s));
     p.addEventListener("mouseleave", () => { tip.hidden = true; });
+    // A covered state is clickable anywhere, not only on its amber marker:
+    // first-time visitors kept clicking the state itself and nothing happened.
+    const covered = markers[name];
+    if (covered) {
+      p.classList.add("state-covered");
+      p.style.cursor = "pointer";
+      p.setAttribute("tabindex", "0");
+      p.setAttribute("role", "link");
+      p.setAttribute("aria-label", `${name}: see the leads`);
+      const open = () => { location.href = covered.link; };
+      p.addEventListener("click", open);
+      p.addEventListener("keydown", (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); open(); } });
+    }
     svg.appendChild(p);
     centers[name] = path.centroid(f);
   }

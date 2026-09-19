@@ -13,7 +13,8 @@ def test_three_examples_sit_between_agent_bar_and_filters():
     filters = INDEX.index('<div class="filters">')
 
     assert search < examples < filters
-    assert 'aria-label="Example lead searches"' in INDEX
+    assert 'aria-label="Example questions for the agent"' in INDEX
+    assert "Ask the agent:" in INDEX  # chips must not read as filters
     renderer = INDEX.split("function renderLeadExamples()", 1)[1].split("\n      }", 1)[0]
     assert "const examples = [" in renderer
     assert "`${place} buildings opening in 2027`" in renderer

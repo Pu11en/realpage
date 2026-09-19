@@ -7,7 +7,6 @@ const NAV_TABS = [
   { key: "hood", label: "Under the Hood", href: "under-the-hood.html" },
 ];
 
-const VENDORS = ["RealPage", "Yardi", "Entrata", "Yotta", "AppFolio"];
 
 // The chat is its own app (Open WebUI, Google sign-in). Local trial on :3000,
 // live URL on Railway.
@@ -39,37 +38,18 @@ const LANDING_URL = location.port === "8876" ? "http://localhost:8765" : "https:
     .catch(() => {});
 })();
 
-function getViewAs() {
-  const v = localStorage.getItem("propertystack.viewAs");
-  return !v || v === "Neutral" ? "Everyone" : v;  // "Neutral" = old saved name for Everyone
-}
-
-function setViewAs(vendor) {
-  localStorage.setItem("propertystack.viewAs", vendor);
-  document.body.dataset.viewAs = vendor;
-}
-
 function renderShell(activeKey) {
   const shell = document.getElementById("app-shell");
-  const viewAs = getViewAs();
-  document.body.dataset.viewAs = viewAs;
 
   const navHtml = NAV_TABS.map(
     (t) => `<a href="${t.href}" class="${t.key === activeKey ? "active" : ""}">${t.label}</a>`
-  ).join("") + `<a href="#" class="nav-chat" data-chat-toggle title="Ask CraneSignal (sign in)">Chat</a>`;
-
-  const vendorOptions = ["Everyone", ...VENDORS]
-    .map((v) => `<option value="${v}" ${v === viewAs ? "selected" : ""}>${v}</option>`)
-    .join("");
+  ).join("") + `<a href="#" class="nav-chat" data-chat-toggle title="Ask CraneSignal (free account)">Chat</a>`;
 
   shell.innerHTML = `
     <aside class="sidebar">
       <a class="wordmark" href="${LANDING_URL}" title="Back to the CraneSignal home page">CraneSignal</a>
       <nav>${navHtml}</nav>
       <div class="top-controls">
-        <label for="view-as-select" style="color: var(--text-dim); font-size: 11px;"
-          title="${VIEW_AS_TIP}">View as</label>
-        <select id="view-as-select" title="${VIEW_AS_TIP}" aria-label="View as">${vendorOptions}</select>
         <div id="last-updated" style="color: var(--text-dim); font-size: 11px;"></div>
         <a href="${LANDING_URL}" style="color: var(--text-dim); font-size: 11px;">&larr; Home page</a>
         <a href="privacy.html" style="color: var(--text-dim); font-size: 11px;">Privacy</a>
@@ -80,16 +60,11 @@ function renderShell(activeKey) {
     <a class="ask-fab" href="#" data-chat-toggle aria-label="Ask CraneSignal">Ask</a>
   `;
 
-  document.getElementById("view-as-select").addEventListener("change", (e) => {
-    setViewAs(e.target.value);
-  });
-
   showLastUpdated();
   if (window.initChatPanel) window.initChatPanel();
   if (window.wireSignOut) window.wireSignOut();
 }
 
-const VIEW_AS_TIP = "Highlight the buildings a Yardi / Entrata / AppFolio seller would win";
 
 // "Last updated" = the lead snapshot date, never the site deploy date.
 function formatDataDate(iso) {

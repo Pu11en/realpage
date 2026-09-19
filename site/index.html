@@ -56,7 +56,7 @@
 
       content.innerHTML = `
         <h1>Early Leads</h1>
-        <div class="meta">Who's about to choose -- upcoming buildings + recently sold.</div>
+        <div class="meta">Apartment buildings worth a call now: being built, opening soon, or just sold to a new owner.</div>
         <div class="pick-row"><span class="pick-label">State</span>${renderAreaButtons(areas, area.slug)}</div>
         ${(data.metros || []).length ? `<div class="pick-row"><span class="pick-label">Region</span><div class="metro-buttons">
           <button class="metro-btn active" data-metro="">All ${area.label} (${data.leads.length})</button>
@@ -70,16 +70,26 @@
             <span class="lead-pack-status" id="lead-pack-status" role="status" aria-live="polite"></span>
           </div>
         </div>
+        <p class="free-note"><b>Browse every lead free.</b> A free account unlocks who to call, the agent and your Lead Pack.</p>
+        <p class="coverage-note">Covered now: Texas, Arizona. Don't see yours? <a href="map.html#request-area">Ask for it</a></p>
+        <div class="quick-filters" id="quick-filters" aria-label="Quick filters">
+          <button type="button" class="quick-filter active" data-signal="">All leads</button>
+          <button type="button" class="quick-filter" data-signal="Upcoming">New builds</button>
+          <button type="button" class="quick-filter" data-signal="Leasing">Opening soon</button>
+          <button type="button" class="quick-filter" data-signal="Sold">Recently sold</button>
+        </div>
         ${placeholderBanner(data.status)}
         <div class="stats-row" id="lead-stats"></div>
-        <p class="lead-data-note">Data from ${formatDataDate(data.updated)}. Don't see your area? <a href="map.html#request-area">Ask for it</a></p>
+        <p class="lead-data-note">Data from ${formatDataDate(data.updated)}.</p>
 
         <form class="lead-agent-search" id="lead-agent-search">
           <label class="sr-only" for="lead-agent-query">Describe the leads you want</label>
           <input id="lead-agent-query" type="text" placeholder="Describe the leads you want…" autocomplete="off" />
           <button type="submit">Ask agent &rarr;</button>
         </form>
-        <div class="lead-agent-examples" id="lead-agent-examples" aria-label="Example lead searches"></div>
+        <div class="agent-examples-row"><span class="agent-examples-label">Ask the agent:</span>
+          <div class="lead-agent-examples" id="lead-agent-examples" aria-label="Example questions for the agent"></div>
+        </div>
 
         <div class="filters-disclosure">
           <button type="button" class="filters-toggle" id="filters-toggle" aria-expanded="false" aria-controls="lead-filters">
@@ -106,15 +116,12 @@
                 <option value="size">Sort: size (units)</option>
                 <option value="newest">Sort: newest</option>
               </select>
-              <label class="hide-mine">
-                <input type="checkbox" id="f-hide-mine" /> hide properties already on my software
-              </label>
             </div>
           </div>
         </div>
         <table class="leads-table">
           <thead>
-            <tr><th>Rank</th><th data-sort-key="score">Score</th><th data-sort-key="property">Property</th><th data-sort-key="city">City</th><th data-sort-key="units">Units</th><th data-sort-key="signalType">Signal</th><th data-sort-key="software">Software</th><th>Why</th></tr>
+            <tr><th>Rank</th><th data-sort-key="score">Score <span class="info" tabindex="0" role="note" aria-label="Score: how good this lead is right now, 0 to 100" title="How good this lead is right now, 0 to 100">&#9432;</span></th><th data-sort-key="property">Property</th><th data-sort-key="city">City</th><th data-sort-key="units">Units</th><th data-sort-key="signalType">Signal <span class="info" tabindex="0" role="note" aria-label="Signal: why this building is worth a call now" title="Why this building is worth a call now: being built, opening soon or recently sold">&#9432;</span></th><th data-sort-key="software">Software</th><th>Why</th></tr>
           </thead>
           <tbody id="leads-tbody"></tbody>
         </table>
@@ -123,12 +130,14 @@
         </div>
       `;
 
-      function contactHtml(contact) {
-        if (!contact) return "";
+      // Show whatever contact we already hold (the building pages always did);
+      // "Get contact" then adds the manager and the rest.
+      function contactHtml(contact, lead) {
         const parts = [];
-        if (contact.phone) parts.push(contact.phone);
-        if (contact.email) parts.push(contact.email);
-        return parts.length ? `<div class="lead-contact">${parts.join(" · ")}</div>` : "";
+        if (contact && contact.phone) parts.push(contact.phone);
+        else if (lead && lead.officePhone) parts.push(lead.officePhone);
+        if (contact && contact.email) parts.push(contact.email);
+        return parts.length ? `<div class="lead-contact">Office: ${parts.join(" · ")}</div>` : "";
       }
 
       function selectedLeadPack() {
@@ -252,6 +261,15 @@
         window.PSChatPanel.ask(example.dataset.agentQuery);
       });
 
+      document.getElementById("quick-filters").addEventListener("click", (event) => {
+        const btn = event.target.closest(".quick-filter");
+        if (!btn) return;
+        document.querySelectorAll(".quick-filter").forEach((b) => b.classList.toggle("active", b === btn));
+        document.getElementById("f-signal").value = btn.dataset.signal;
+        visibleCount = PAGE_SIZE;
+        renderRows();
+      });
+
       const filtersToggle = document.getElementById("filters-toggle");
       const leadFilters = document.getElementById("lead-filters");
       filtersToggle.addEventListener("click", () => {
@@ -341,9 +359,7 @@
         const metro = (document.querySelector(".metro-btn.active") || {}).dataset?.metro || "";
         const software = document.getElementById("f-software").value;
         const sort = document.getElementById("f-sort").value;
-        const hideMine = document.getElementById("f-hide-mine").checked;
-        const viewAs = getViewAs();
-
+        
         let rows = data.leads.filter((l) => {
           if (search && !l.property.toLowerCase().includes(search)) return false;
           if (signal && l.signalType !== signal) return false;
@@ -351,7 +367,6 @@
           if (metro && l.metro !== metro) return false;
           if (software === "__none__" && l.software) return false;
           if (software && software !== "__none__" && l.software !== software) return false;
-          if (hideMine && viewAs !== "Everyone" && l.software === viewAs) return false;
           return true;
         });
 
@@ -399,7 +414,7 @@
             <td data-label="Score"><span class="score-badge" style="background:${scoreBadgeColor(l.score)}">${l.score}</span></td>
             <td class="lead-prop"><strong>${l.property}</strong>${l.subArea ? `<div class="lead-subarea">${l.subArea}</div>` : ""}
               <button class="btn deep-dive-btn" data-deep-dive="${l.id}" title="Find who to call about this building">Get contact &rarr;</button>
-              ${contactHtml(l.contact)}</td>
+              ${contactHtml(l.contact, l)}</td>
             <td data-label="City">${l.city}</td>
             <td data-label="Units">${l.units ?? "?"}</td>
             <td data-label="Signal" class="lead-signal">${signalHtml(l)}</td>
@@ -466,7 +481,7 @@
       fillCities();
       updateNewLeadsAction();
 
-      ["f-search", "f-signal", "f-city", "f-software", "f-sort", "f-hide-mine"].forEach((id) => {
+      ["f-search", "f-signal", "f-city", "f-software", "f-sort"].forEach((id) => {
         const el = document.getElementById(id);
         el.addEventListener(el.tagName === "INPUT" && el.type !== "checkbox" ? "input" : "change", () => {
           if (id === "f-sort") headerSort = null; // dropdown wins until a header is clicked again

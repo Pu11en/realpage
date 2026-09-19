@@ -29,14 +29,13 @@ def test_built_data_has_a_date():
     assert '"updated": date.today().isoformat()' not in build_script
 
 
-def test_view_as_label_and_everyone():
-    assert ">View as</label>" in APP
-    assert "Highlight the buildings a Yardi / Entrata / AppFolio seller would win" in APP
-    assert '["Everyone", ...VENDORS]' in APP
-    assert '"Neutral", ...VENDORS' not in APP
+def test_view_as_menu_is_gone():
+    # Removed 2026-09-19: first-time users did not understand "View as: RealPage / Yardi".
+    assert ">View as</label>" not in APP
+    assert 'id="view-as-select"' not in APP
 
 
-@pytest.mark.skipif(not shutil.which("node"), reason="node not installed")
+
 def test_format_updated():
     fn = "function formatUpdated" + APP.split("function formatUpdated", 1)[1].split("\n}\n", 1)[0] + "\n}\n"
     out = subprocess.run(["node", "-e", fn + "console.log(formatUpdated('2026-09-15'), '|', formatUpdated(''))"],
