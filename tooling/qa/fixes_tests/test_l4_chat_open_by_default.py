@@ -6,13 +6,12 @@ JS = (ROOT / "site/js/chat-panel.js").read_text(encoding="utf-8")
 PAGES = ["index.html", "map.html", "property.html", "under-the-hood.html"]
 
 
-def test_docked_on_wide_leads_page_only():
-    # Wide Leads page: docked from the first look (it shrinks the page, never covers it).
-    # Narrow screens and every other page: waits to be asked.
+def test_docked_on_every_wide_page():
+    # Drew 2026-09-19: the agent is part of the page. Every page opens with it docked
+    # on screens >= 900px; closing it only lasts for that page view.
     assert 'function docksByDefault()' in JS
-    assert 'window.matchMedia("(min-width: 1200px)")' in JS
-    assert "if (v === null) return docksByDefault();" in JS
-    assert 'sessionStorage.setItem(STORAGE_OPEN, v ? "1" : "0")' in JS
+    assert 'window.matchMedia("(min-width: 900px)")' in JS
+    assert "return docksByDefault() || sessionStorage.getItem(STORAGE_OPEN) === \"1\";" in JS
     assert 'addEventListener("click", closePanel)' in JS
 
 

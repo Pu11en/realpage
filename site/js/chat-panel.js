@@ -21,22 +21,24 @@
   // Below 900px the panel floats over the whole page instead of docking, so
   // there it only opens when asked; otherwise a phone visitor would see
   // nothing but the account prompt.
-  // On the Leads page, wide screens show the agent docked beside the list from
-  // the first look (it shrinks the page, it never covers it). Everywhere else --
-  // and on narrow screens, where it would cover the page -- it waits to be asked.
+  // The agent is part of the page, not a pop-up (Drew, 2026-09-19): on every page,
+  // on screens wide enough to dock it (>= 900px, where it shrinks the layout and
+  // never covers the list), it is open from the first look. A visitor can close it,
+  // but that is only for that page view -- the next page opens with it there again.
+  // Phones stay closed by default: there the panel fills the screen and would hide
+  // the leads; the Ask button opens it.
   function docksByDefault() {
-    const onLeads = /(^|\/)(index\.html)?$/.test(location.pathname) && !/property|map|under-the-hood/.test(location.pathname);
-    return onLeads && window.matchMedia("(min-width: 1200px)").matches;
+    return window.matchMedia("(min-width: 900px)").matches;
   }
 
   function isOpen() {
-    const v = sessionStorage.getItem(STORAGE_OPEN);
-    if (v === null) return docksByDefault();
-    return v === "1";
+    return docksByDefault() || sessionStorage.getItem(STORAGE_OPEN) === "1";
   }
 
   function setOpen(v) {
-    sessionStorage.setItem(STORAGE_OPEN, v ? "1" : "0");
+    // Remember an explicit open for this visit; a close is only for this page view.
+    if (v) sessionStorage.setItem(STORAGE_OPEN, "1");
+    else sessionStorage.removeItem(STORAGE_OPEN);
   }
 
   // The Chat link opens and closes the panel; it is not a page, so it never
