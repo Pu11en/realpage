@@ -16,8 +16,9 @@ def test_spreadsheet_download_exists_and_is_account_gated():
     csv_block = INDEX.split("function requestCsv", 1)[1].split("document.getElementById(\"download-csv\")", 1)[0]
     assert "requireAuth" in csv_block
     assert "text/csv" in csv_block
+    cols = INDEX.split("const cols = [", 1)[1].split("]", 1)[0]
     for column in ("Building", "City", "Units", "Phone", "Why now", "Source"):
-        assert f'"{column}"' in csv_block
+        assert f'"{column}"' in cols
 
 
 def test_sample_lead_pack_is_public():
