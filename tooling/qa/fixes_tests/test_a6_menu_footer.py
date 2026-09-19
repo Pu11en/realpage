@@ -18,7 +18,15 @@ def test_no_hard_coded_date():
 def test_built_data_has_a_date():
     updated = json.loads((ROOT / "site/data/areas/index.json").read_text())["updated"]
     assert re.fullmatch(r"\d{4}-\d{2}-\d{2}", updated)
-    assert '"updated": date.today().isoformat()' in (ROOT / "site/data/build_data.py").read_text()
+    area_dates = {
+        json.loads(path.read_text())["updated"]
+        for path in (ROOT / "site/data/areas").glob("[a-z][a-z].json")
+    }
+    assert area_dates == {"2026-09-15"}
+    assert updated == max(area_dates)
+    build_script = (ROOT / "site/data/build_data.py").read_text()
+    assert '"updated": CURRENT_DATA_DATE' in build_script
+    assert '"updated": date.today().isoformat()' not in build_script
 
 
 def test_view_as_label_and_everyone():

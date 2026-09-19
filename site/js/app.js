@@ -91,7 +91,7 @@ function renderShell(activeKey) {
 
 const VIEW_AS_TIP = "Highlight the buildings a Yardi / Entrata / AppFolio seller would win";
 
-// "Last updated" = the day the lead data was built (areas/index.json "updated").
+// "Last updated" = the lead snapshot date, never the site deploy date.
 function formatUpdated(iso) {
   if (!iso) return "";
   const d = new Date(`${iso}T12:00:00`);
@@ -99,13 +99,17 @@ function formatUpdated(iso) {
   return `Last updated: ${d.toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })}`;
 }
 
-async function showLastUpdated() {
+function setLastUpdated(iso) {
   const el = document.getElementById("last-updated");
+  if (el) el.textContent = formatUpdated(iso);
+}
+
+async function showLastUpdated() {
   try {
     const manifest = await loadData("data/areas/index.json");
-    el.textContent = formatUpdated(manifest.updated);
+    setLastUpdated(manifest.updated);
   } catch (e) {
-    el.textContent = "";
+    setLastUpdated("");
   }
 }
 

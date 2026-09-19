@@ -49,6 +49,7 @@
 
     function renderPage(areas, area) {
     loadData(area.dataPath).then((data) => {
+      setLastUpdated(data.updated);
       const cities = [...new Set(data.leads.map((l) => l.city))].sort();
       const softwareOptions = [...new Set(data.leads.map((l) => l.software).filter(Boolean))].sort();
 
