@@ -20,5 +20,5 @@ def test_waking_up_message_shown_while_loading():
 def test_one_automatic_retry_before_showing_error():
     fn = JS.split("const startLoadTimer = () => {", 1)[1].split("panel.querySelector(\"#chat-panel-retry\")", 1)[0]
     assert "autoRetried" in fn
-    assert 'frame.setAttribute("src", CHAT_APP_URL)' in fn
+    assert "setFrameSource(panel, CHAT_APP_URL)" in fn
     assert 'errorEl.style.display = "flex"' in fn

@@ -41,6 +41,9 @@ class Handler(http.server.SimpleHTTPRequestHandler):
         self.end_headers()
 
     def do_GET(self):
+        if self.path.split("?")[0].rstrip("/") == "/api/config":
+            self._json(200, b'{"features":{"auth":true}}')
+            return
         if self.path.split("?")[0].rstrip("/") == "/api/v1/auths":
             if self._signed_in():
                 self._json(200, b'{"id":"fake-user"}')

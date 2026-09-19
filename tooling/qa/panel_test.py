@@ -20,13 +20,24 @@ SCREENSHOT_DIR = "/tmp/qa"
 async def check_console_errors(page, path, bugs):
     errs = []
     page.on("pageerror", lambda e: errs.append(f"pageerror: {e}"))
-    page.on("console", lambda m: m.type == "error" and errs.append(f"console: {m.text}"))
+    # A signed-out auth probe intentionally returns 401 before the free-account
+    # card appears; Chromium logs that expected response as a console error.
+    page.on("console", lambda m: m.type == "error" and "401 (Unauthorized)" not in m.text
+            and errs.append(f"console: {m.text}"))
     resp = await page.goto(path, wait_until="networkidle")
     if resp is None or resp.status >= 400:
         bugs.append(f"{path}: failed to load (status {resp.status if resp else 'none'})")
     for e in errs:
         bugs.append(f"{path}: {e}")
     return resp
+
+
+async def ensure_panel_open(page):
+    panel = page.locator("#chat-panel")
+    if not await panel.count() or not await panel.evaluate("(el) => el.classList.contains('open')"):
+        await page.locator("[data-chat-toggle]").first.click()
+        await panel.wait_for(state="attached")
+    return panel
 
 
 async def main():
@@ -45,9 +56,7 @@ async def main():
                 page = await context.new_page()
                 await check_console_errors(page, f"{site}/{page_path}", bugs)
 
-                ask = page.locator("[data-chat-toggle]").first
-                await ask.click()
-                panel = page.locator("#chat-panel")
+                panel = await ensure_panel_open(page)
                 is_open = await panel.evaluate("(el) => el.classList.contains('open')")
                 if not is_open:
                     bugs.append(f"{page_path} ({tag}): Ask button didn't open the panel")
@@ -60,7 +69,7 @@ async def main():
             if tag == "desktop":
                 page = await context.new_page()
                 await check_console_errors(page, f"{site}/index.html", bugs)
-                await page.locator("[data-chat-toggle]").first.click()
+                await ensure_panel_open(page)
                 await page.goto(f"{site}/map.html", wait_until="networkidle")
                 still_open = await page.locator("#chat-panel").evaluate("(el) => el.classList.contains('open')")
                 if not still_open:
@@ -77,12 +86,15 @@ async def main():
         await check_console_errors(page, f"{site}/index.html", bugs)
 
         ask = page.locator("[data-chat-toggle]").first
+        panel = page.locator("#chat-panel")
+        if await panel.evaluate("(el) => el.classList.contains('open')"):
+            await ask.click()
         await ask.click()
         await ask.click()
         frame_count = await page.locator("#chat-panel-frame").count()
         if frame_count != 1:
             bugs.append(f"rapid double-click created {frame_count} chat frames, expected 1")
-        still_open = await page.locator("#chat-panel").evaluate("(el) => el.classList.contains('open')")
+        still_open = await panel.evaluate("(el) => el.classList.contains('open')")
         if still_open:
             bugs.append("rapid double-click (open, close) left the panel open")
 
@@ -120,16 +132,18 @@ async def main():
         await page.close()
         await context.close()
 
-        # W3/W8: sign-in from inside the panel. The panel decides sign-in
-        # state itself via GET /api/v1/auths/ (the stand-in's server.py
-        # answers like the real app): signed out -> a card with one
-        # "Sign in with Google" button over the frame; click -> popup;
-        # popup closes -> frame reloads, card gone.
+        # W3/W8/G1: a signed-out Get contact click holds its question while
+        # the free-account card is visible. After signup, the panel reloads
+        # the chat and sends that waiting question automatically.
         context = await browser.new_context(viewport={"width": 1440, "height": 900})
         await context.add_init_script(f"window.PS_CHAT_URL = {chat!r};")
         page = await context.new_page()
         await check_console_errors(page, f"{site}/index.html", bugs)
-        await page.locator("[data-chat-toggle]").first.click()
+        contact_btn = page.locator("#leads-tbody [data-deep-dive]").first
+        await contact_btn.wait_for(state="visible", timeout=5000)
+        if "Get contact" not in await contact_btn.inner_text():
+            bugs.append("contact: Early Leads button does not say 'Get contact'")
+        await contact_btn.click()
 
         signin_card = page.locator("#chat-panel-signin-card")
         signin_btn = page.locator("#chat-panel-signin")
@@ -170,6 +184,19 @@ async def main():
             if not card_hidden:
                 bugs.append("sign-in: sign-in card still visible after signing in (W8 auth check)")
 
+            sent = False
+            for _ in range(20):
+                try:
+                    messages = await page.frame_locator("#chat-panel-frame").locator("#messages").inner_text(timeout=500)
+                    if "Who to call:" in messages:
+                        sent = True
+                        break
+                except Exception:
+                    pass
+                await page.wait_for_timeout(300)
+            if not sent:
+                bugs.append("contact: waiting question was not sent automatically after signup")
+
         await page.close()
         await context.close()
 
@@ -177,6 +204,7 @@ async def main():
         # panel, and a chat that doesn't load shows "Try again", which
         # reloads the frame in place.
         context = await browser.new_context(viewport={"width": 1440, "height": 900})
+        await context.add_cookies([{"name": "fake_signed_in", "value": "1", "url": chat}])
         await context.add_init_script(f"window.PS_CHAT_URL = {chat!r}; window.PS_CHAT_LOAD_TIMEOUT_MS = 800;")
         page = await context.new_page()
         hang = {"on": True}
@@ -188,8 +216,10 @@ async def main():
 
         await page.route(f"{chat.rstrip('/')}/**", chat_route)
         await page.route(chat.rstrip("/"), chat_route)
-        await check_console_errors(page, f"{site}/index.html", bugs)
-        await page.locator("[data-chat-toggle]").first.click()
+        resp = await page.goto(f"{site}/index.html", wait_until="domcontentloaded")
+        if resp is None or resp.status >= 400:
+            bugs.append(f"index.html: failed to load (status {resp.status if resp else 'none'})")
+        await ensure_panel_open(page)
         popout = await page.locator("#chat-panel a[target='_blank'], #chat-panel .chat-panel-fullpage").count()
         if popout:
             bugs.append(f"panel has {popout} full-page/new-tab link(s); the chat must stay in the panel")
@@ -229,7 +259,7 @@ async def main():
             for page_path in PAGES:
                 page = await context.new_page()
                 await check_console_errors(page, f"{site}/{page_path}", bugs)
-                await page.locator("[data-chat-toggle]").first.click()
+                await ensure_panel_open(page)
                 await page.wait_for_timeout(400)
 
                 shell_box = await page.locator(".shell").bounding_box()

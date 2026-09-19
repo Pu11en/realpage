@@ -46,6 +46,12 @@
     document.getElementById("login").style.display = "none";
     document.getElementById("chat").style.display = "block";
     postAuthState(true);
+    const params = new URLSearchParams(location.search);
+    const question = params.get("q");
+    if (question) {
+      document.getElementById("msg-input").value = question;
+      if (params.get("submit") !== "false") sendMessage();
+    }
   }
 
   function showLogin() {
@@ -64,14 +70,16 @@
     });
   });
 
-  document.getElementById("send").addEventListener("click", () => {
+  function sendMessage() {
     const input = document.getElementById("msg-input");
     const text = input.value.trim();
     if (!text) return;
     const messages = document.getElementById("messages");
     messages.innerHTML += `<div class="msg">You: ${text}</div><div class="msg">Bot: (fake) ${text}</div>`;
     input.value = "";
-  });
+  }
+
+  document.getElementById("send").addEventListener("click", sendMessage);
 </script>
 </body>
 </html>
