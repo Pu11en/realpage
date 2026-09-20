@@ -151,3 +151,45 @@ def test_empty_source_is_finished_and_dry_run_never_calls_source(tmp_path):
     assert calls == 1
     assert (untouched / "propertystack/data/zz/leads.json").read_text() == before
     assert not (untouched / "propertystack/runs").exists()
+
+
+def test_auto_found_structured_recipe_runs_through_normal_permit_adapter(
+    tmp_path, monkeypatch
+):
+    recipe_path = tmp_path / "auto-found.json"
+    recipe_path.write_text(
+        json.dumps(
+            {
+                "city": "Exampleville",
+                "state": "ZZ",
+                "system": "open-data",
+                "endpoint": "https://data.example.test/permits.json",
+                "source": "auto-found",
+                "fields": {
+                    "address": "address",
+                    "issue_date": "issued",
+                    "units": "units",
+                    "permit_type": "description",
+                    "name": "description",
+                },
+            }
+        )
+    )
+    monkeypatch.setattr(
+        run_area,
+        "_http_get_structured",
+        lambda _url: [
+            {
+                "address": "100 Main St",
+                "issued": "2026-09-01",
+                "units": 40,
+                "description": "New apartment building",
+            }
+        ],
+    )
+
+    rows = run_area.run_recipe(recipe_path, "zz")
+
+    assert len(rows) == 1
+    assert rows[0]["address"] == "100 Main St"
+    assert rows[0]["sources"][0]["url"] == "https://data.example.test/permits.json"

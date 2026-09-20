@@ -1,0 +1,25 @@
+{
+  "searches": {
+    "city-open-data": [
+      {
+        "title": "Exampleville official building permits API",
+        "url": "https://data.example.test/permits.json",
+        "jurisdiction": "Exampleville"
+      }
+    ],
+    "socrata": [],
+    "arcgis": [],
+    "accela": [],
+    "county": []
+  },
+  "fetches": {
+    "https://data.example.test/permits.json": [
+      {"address": "100 Main St", "issued": "2026-09-01", "units": 40, "description": "New apartment building"},
+      {"address": "200 Main St", "issued": "2026-09-02", "units": 52, "description": "New apartment building"},
+      {"address": "300 Main St", "issued": "2026-09-03", "units": 64, "description": "New multifamily building"},
+      {"address": "400 Main St", "issued": "2026-09-04", "units": 72, "description": "New apartment building"},
+      {"address": "500 Main St", "issued": "2026-09-05", "units": 84, "description": "New multifamily building"},
+      {"address": "600 Main St", "issued": "2026-09-06", "units": 96, "description": "New apartment building"}
+    ]
+  }
+}

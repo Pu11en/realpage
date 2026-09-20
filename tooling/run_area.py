@@ -8,6 +8,8 @@ or empty source results are saved by date so an interrupted run can resume.
 from __future__ import annotations
 
 import argparse
+import csv
+import io
 import json
 import os
 import sys
@@ -126,6 +128,17 @@ def _http_get_json(url: str):
         return json.loads(response.read().decode("utf-8", errors="replace"))
 
 
+def _http_get_structured(url: str):
+    """Fetch an auto-found structured endpoint without guessing its format."""
+    request = urllib.request.Request(url, headers=HTTP_HEADERS)
+    with urllib.request.urlopen(request, timeout=60) as response:
+        text = response.read().decode("utf-8", errors="replace")
+    try:
+        return json.loads(text)
+    except json.JSONDecodeError:
+        return list(csv.DictReader(io.StringIO(text)))
+
+
 def _http_get_bytes(url: str) -> bytes:
     request = urllib.request.Request(url, headers=HTTP_HEADERS)
     with urllib.request.urlopen(request, timeout=280) as response:
@@ -160,8 +173,8 @@ def run_recipe(recipe_path: Path, state: str) -> list[dict]:
     system = recipe.get("system")
     area = state.lower()
 
-    if system in {"arcgis", "socrata"}:
-        fetch = TrackingFetch(_http_get_json)
+    if system in {"arcgis", "socrata", "accela", "open-data"}:
+        fetch = TrackingFetch(_http_get_structured)
         records = find_upcoming.find_upcoming(
             recipe.get("city") or recipe.get("county", ""),
             state.upper(),
