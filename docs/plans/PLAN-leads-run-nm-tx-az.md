@@ -11,6 +11,9 @@ Decisions (Drew, 2026-09-19):
 - Hero element (site + landing), filled from data after every run:
   "Last check <date>: <N> buildings just filed permits, <M> just sold. <TOTAL> tracked."
 - Say "check" or "run", never "scrape", in anything a visitor sees.
+- **The run never stops to ask Drew anything.** Rules decide; a source that fails is retried once, then skipped with a note; the run carries on and reports at the end.
+- **Cheap by design:** the pulls are plain downloads with no AI. AI is used only to find a replacement source for a city that has none, capped at **20 searches per city** and **100 per run**; when the cap is hit the city is listed as "needs a source" and the run continues.
+- Keep a copy of each state's data before a run (instant undo), and record each source's health (worked / empty / failed) in propertystack/runs/source-health.json.
 
 Check: python3 -m pytest -q tooling/qa/fixes_tests/ propertystack -x -q
 Try: bash tooling/dev.sh
@@ -25,6 +28,7 @@ Open: http://localhost:8765/index.html
 - [ ] T1 Stable ids + honest "new": give every lead a content id (state + normalised address + name), keep it across runs, and stamp `firstSeen` by that id in site/data/build_data.py (today it matches by list position, so a re-run mislabels new leads). Migrate existing tx/az leads so today's rows keep their first-seen date. Tests.
 - [ ] T2 `tooling/qa/check_lead_data.py`: the data sanity check above, runnable on any state folder, exits non-zero with a plain-English list of problems.
 - [ ] T3 `tooling/run-area.sh <state...>`: one command per state that runs every recipe source for that state **in parallel** (max 6 at once), retries a failed source once, skips a source that is down and says so, writes propertystack/data/<state>/leads.json, and prints counts (total, new since last run, permits, sales). Resumable: re-running skips sources already finished today. Dry-run flag for testing without network.
+- [ ] T3b "Find a source" skill (propertystack/skills/find-source/): given a city and state, try the usual homes for permit data in order -- the city open-data portal, Socrata, ArcGIS, Accela/Citizen Access, then the county -- test each candidate for real apartment rows, and write a working recipe JSON when one passes. Capped: 20 searches per city, 100 per run. Never invents a URL; if nothing passes it writes the city to propertystack/runs/needs-a-source.md and returns cleanly. Offline test with recorded responses.
 - [ ] T4 New Mexico recipes in propertystack/recipes/nm/: albuquerque.json, rio-rancho.json, santa-fe.json, las-cruces.json (city permit feeds, ArcGIS/Socrata style, copy the shape of recipes/az/phoenix.json) and bernalillo-county-sales.json (county assessor sales, shape of recipes/az/maricopa-county-sales.json). Find each feed's real URL from the city/county open-data portal; if a city has no usable feed, say so in the file and skip it rather than inventing one.
 - [ ] T5 Run New Mexico for real with T3. Verify with T2. Expect a few hundred buildings; if under 50, stop and report which sources came back empty.
 - [ ] T6 Refresh Texas with T3 (all existing tx recipes). Report how many are genuinely new.
@@ -33,6 +37,7 @@ Open: http://localhost:8765/index.html
 - [ ] T9 Landing page hero element: business/marketing/landing/server.py fetches https://app.cranesignal.com/data/summary.json at startup and every hour (cached, falls back to the last good copy) and injects the same line into the hero. No state names on the landing page either. Test with a fake summary.
 - [ ] T10 Chat agent: rebuild its baked data so it knows the new buildings, and redeploy the chat service. Ask it 3 questions about New Mexico buildings locally and check the answers cite sources.
 - [ ] T11 `tooling/new-run.sh <state...>`: the whole chain in one command — run-area (parallel) → build site data → Check + quality gates → commit → push (auto-deploys) → post one Discord line to the sign-ups webhook: "Last check <date>: N permits, M sales, TOTAL tracked (<state list>)". Any failed gate stops before publishing and says what broke.
+- [ ] T11b Undo and health: `tooling/new-run.sh --undo <state>` restores the pre-run copy and republishes; the Discord summary line adds "sources: X worked, Y empty, Z failed" and links needs-a-source.md.
 - [ ] T12 End to end: `bash tooling/new-run.sh nm tx az`, confirm the live site shows the new hero line and the new leads, and post the summary here.
 
 ## How to try it
