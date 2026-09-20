@@ -1,0 +1,10 @@
+{
+  "state": "nm",
+  "recipe": "rio-rancho.json",
+  "date": "2026-09-20",
+  "status": "empty",
+  "count": 0,
+  "attempts": 0,
+  "note": "disabled: No machine-readable city permit feed exists; the Accela Citizen Access site is a stateful search form, not a public data endpoint.",
+  "records": []
+}

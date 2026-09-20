@@ -1,0 +1,707 @@
+{
+  "state": "tx",
+  "recipe": "tarrant-tad-sales.json",
+  "date": "2026-09-20",
+  "status": "worked",
+  "count": 24,
+  "attempts": 1,
+  "note": "",
+  "records": [
+    {
+      "area": "tx",
+      "city": "Tarrant County",
+      "name": "LANDMARK AT CROWLEY",
+      "address": "305 W FM 1187",
+      "lat": null,
+      "lon": null,
+      "units": 267,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2025-04-08",
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.tad.org/content/data-download/2026CommImprovedSales.zip",
+        "deed_doc": "D225064276"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.tad.org/content/data-download/2026CommImprovedSales.zip"
+        }
+      ],
+      "why": "recently sold apartment property (267 units, $47,300,000)"
+    },
+    {
+      "area": "tx",
+      "city": "Tarrant County",
+      "name": "THE PARK AT ASHFORD",
+      "address": "3500 S FIELDER RD",
+      "lat": null,
+      "lon": null,
+      "units": 144,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2025-08-22",
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.tad.org/content/data-download/2026CommImprovedSales.zip",
+        "deed_doc": "D224150260"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.tad.org/content/data-download/2026CommImprovedSales.zip"
+        }
+      ],
+      "why": "recently sold apartment property (144 units, $22,750,000)"
+    },
+    {
+      "area": "tx",
+      "city": "Tarrant County",
+      "name": "BELLA VIDA",
+      "address": "927 N OAK ST",
+      "lat": null,
+      "lon": null,
+      "units": 84,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2025-05-07",
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.tad.org/content/data-download/2026CommImprovedSales.zip",
+        "deed_doc": "D225081846"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.tad.org/content/data-download/2026CommImprovedSales.zip"
+        }
+      ],
+      "why": "recently sold apartment property (84 units, $9,475,000)"
+    },
+    {
+      "area": "tx",
+      "city": "Tarrant County",
+      "name": "RICHLAND COURT",
+      "address": "6626 REEVES ST",
+      "lat": null,
+      "lon": null,
+      "units": 45,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2025-03-25",
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.tad.org/content/data-download/2026CommImprovedSales.zip",
+        "deed_doc": "D225051134"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.tad.org/content/data-download/2026CommImprovedSales.zip"
+        }
+      ],
+      "why": "recently sold apartment property (45 units, $4,000,000)"
+    },
+    {
+      "area": "tx",
+      "city": "Tarrant County",
+      "name": "DELARA CHASE APTS",
+      "address": "4805 ALTAMESA BLVD",
+      "lat": null,
+      "lon": null,
+      "units": 116,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2025-03-24",
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.tad.org/content/data-download/2026CommImprovedSales.zip",
+        "deed_doc": "D225051518"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.tad.org/content/data-download/2026CommImprovedSales.zip"
+        }
+      ],
+      "why": "recently sold apartment property (116 units, $11,750,000)"
+    },
+    {
+      "area": "tx",
+      "city": "Tarrant County",
+      "name": "OAKS AT JANE LANE",
+      "address": "3001 JANE LN",
+      "lat": null,
+      "lon": null,
+      "units": 109,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2025-03-14",
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.tad.org/content/data-download/2026CommImprovedSales.zip",
+        "deed_doc": "D225044278"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.tad.org/content/data-download/2026CommImprovedSales.zip"
+        }
+      ],
+      "why": "recently sold apartment property (109 units, $11,525,000)"
+    },
+    {
+      "area": "tx",
+      "city": "Tarrant County",
+      "name": "221 Arbrook",
+      "address": "2201 E ARBROOK BLVD",
+      "lat": null,
+      "lon": null,
+      "units": 30,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2025-03-10",
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.tad.org/content/data-download/2026CommImprovedSales.zip",
+        "deed_doc": "D225040462"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.tad.org/content/data-download/2026CommImprovedSales.zip"
+        }
+      ],
+      "why": "recently sold apartment property (30 units, $5,000,000)"
+    },
+    {
+      "area": "tx",
+      "city": "Tarrant County",
+      "name": "THE WYATT AT PRESIDIO JUNCTION",
+      "address": "2301 PRESIDIO VISTA DR",
+      "lat": null,
+      "lon": null,
+      "units": 348,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2025-02-26",
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.tad.org/content/data-download/2026CommImprovedSales.zip",
+        "deed_doc": "D225033316"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.tad.org/content/data-download/2026CommImprovedSales.zip"
+        }
+      ],
+      "why": "recently sold apartment property (348 units, $62,000,000)"
+    },
+    {
+      "area": "tx",
+      "city": "Tarrant County",
+      "name": "ASHTON APARTMENT HOMES",
+      "address": "681 N SAGINAW BLVD",
+      "lat": null,
+      "lon": null,
+      "units": 152,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2025-02-26",
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.tad.org/content/data-download/2026CommImprovedSales.zip",
+        "deed_doc": "D225044964"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.tad.org/content/data-download/2026CommImprovedSales.zip"
+        }
+      ],
+      "why": "recently sold apartment property (152 units, $18,750,000)"
+    },
+    {
+      "area": "tx",
+      "city": "Tarrant County",
+      "name": "Solea Tavolo Park (55+ Active)",
+      "address": "7545 HARRIS PKWY",
+      "lat": null,
+      "lon": null,
+      "units": 184,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2025-02-05",
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.tad.org/content/data-download/2026CommImprovedSales.zip",
+        "deed_doc": "D225019792"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.tad.org/content/data-download/2026CommImprovedSales.zip"
+        }
+      ],
+      "why": "recently sold apartment property (184 units, $37,866,145)"
+    },
+    {
+      "area": "tx",
+      "city": "Tarrant County",
+      "name": "SOLEA KELLER",
+      "address": "3661 KELLER HICKS RD",
+      "lat": null,
+      "lon": null,
+      "units": 558,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2025-02-05",
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.tad.org/content/data-download/2026CommImprovedSales.zip",
+        "deed_doc": "D225019798"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.tad.org/content/data-download/2026CommImprovedSales.zip"
+        }
+      ],
+      "why": "recently sold apartment property (558 units, $43,200,000)"
+    },
+    {
+      "area": "tx",
+      "city": "Tarrant County",
+      "name": "Cottages at Summer Cree",
+      "address": "5400 MOUNTAIN BROOK LN",
+      "lat": null,
+      "lon": null,
+      "units": 196,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2025-01-25",
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.tad.org/content/data-download/2026CommImprovedSales.zip",
+        "deed_doc": "D225017002"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.tad.org/content/data-download/2026CommImprovedSales.zip"
+        }
+      ],
+      "why": "recently sold apartment property (196 units, $41,150,000)"
+    },
+    {
+      "area": "tx",
+      "city": "Tarrant County",
+      "name": "RANCH THREE0FIVE",
+      "address": "251 E BARDIN RD",
+      "lat": null,
+      "lon": null,
+      "units": 226,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2024-12-30",
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.tad.org/content/data-download/2026CommImprovedSales.zip",
+        "deed_doc": "D225001950"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.tad.org/content/data-download/2026CommImprovedSales.zip"
+        }
+      ],
+      "why": "recently sold apartment property (226 units, $44,000,000)"
+    },
+    {
+      "area": "tx",
+      "city": "Tarrant County",
+      "name": "HAMPTON TOWNHOMES",
+      "address": "121 S HAMPTON RD",
+      "lat": null,
+      "lon": null,
+      "units": 76,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2024-12-30",
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.tad.org/content/data-download/2026CommImprovedSales.zip",
+        "deed_doc": "D224232767"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.tad.org/content/data-download/2026CommImprovedSales.zip"
+        }
+      ],
+      "why": "recently sold apartment property (76 units, $10,225,000)"
+    },
+    {
+      "area": "tx",
+      "city": "Tarrant County",
+      "name": "HARLOWE APARTMENTS",
+      "address": "2525 STATE HWY 360",
+      "lat": null,
+      "lon": null,
+      "units": 486,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2024-12-19",
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.tad.org/content/data-download/2026CommImprovedSales.zip",
+        "deed_doc": "D224227324"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.tad.org/content/data-download/2026CommImprovedSales.zip"
+        }
+      ],
+      "why": "recently sold apartment property (486 units, $113,100,000)"
+    },
+    {
+      "area": "tx",
+      "city": "Tarrant County",
+      "name": "FORUM AT GRAND PRAIRIE",
+      "address": "2650 S FORUM DR",
+      "lat": null,
+      "lon": null,
+      "units": 304,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2024-11-19",
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.tad.org/content/data-download/2026CommImprovedSales.zip",
+        "deed_doc": "D224208553"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.tad.org/content/data-download/2026CommImprovedSales.zip"
+        }
+      ],
+      "why": "recently sold apartment property (304 units, $47,178,000)"
+    },
+    {
+      "area": "tx",
+      "city": "Tarrant County",
+      "name": "TEN TWELVE WEST",
+      "address": "1014 W PIONEER PKWY",
+      "lat": null,
+      "lon": null,
+      "units": 143,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2024-10-10",
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.tad.org/content/data-download/2026CommImprovedSales.zip",
+        "deed_doc": "D224182570"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.tad.org/content/data-download/2026CommImprovedSales.zip"
+        }
+      ],
+      "why": "recently sold apartment property (143 units, $15,800,000)"
+    },
+    {
+      "area": "tx",
+      "city": "Tarrant County",
+      "name": "THE BILTMORE APTS",
+      "address": "2300 MISTY RIDGE CIR",
+      "lat": null,
+      "lon": null,
+      "units": 186,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2024-10-10",
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.tad.org/content/data-download/2026CommImprovedSales.zip",
+        "deed_doc": "D224182379"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.tad.org/content/data-download/2026CommImprovedSales.zip"
+        }
+      ],
+      "why": "recently sold apartment property (186 units, $21,800,000)"
+    },
+    {
+      "area": "tx",
+      "city": "Tarrant County",
+      "name": "Hendrix",
+      "address": "1625 CONSTITUTION PKWY",
+      "lat": null,
+      "lon": null,
+      "units": 249,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2024-10-08",
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.tad.org/content/data-download/2026CommImprovedSales.zip",
+        "deed_doc": "D224180662"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.tad.org/content/data-download/2026CommImprovedSales.zip"
+        }
+      ],
+      "why": "recently sold apartment property (249 units, $27,600,000)"
+    },
+    {
+      "area": "tx",
+      "city": "Tarrant County",
+      "name": "The Borough",
+      "address": "5700 BOCA RATON BLVD",
+      "lat": null,
+      "lon": null,
+      "units": 208,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2024-09-26",
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.tad.org/content/data-download/2026CommImprovedSales.zip",
+        "deed_doc": "D224175228"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.tad.org/content/data-download/2026CommImprovedSales.zip"
+        }
+      ],
+      "why": "recently sold apartment property (208 units, $18,178,356)"
+    },
+    {
+      "area": "tx",
+      "city": "Tarrant County",
+      "name": "CITYSCAPE ARTS APTS",
+      "address": "311 NICHOLS ST",
+      "lat": null,
+      "lon": null,
+      "units": 57,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2024-09-13",
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.tad.org/content/data-download/2026CommImprovedSales.zip",
+        "deed_doc": "D224164521"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.tad.org/content/data-download/2026CommImprovedSales.zip"
+        }
+      ],
+      "why": "recently sold apartment property (57 units, $14,500,000)"
+    },
+    {
+      "area": "tx",
+      "city": "Tarrant County",
+      "name": "Point at Forest Hill",
+      "address": "3401 HERITAGE LN",
+      "lat": null,
+      "lon": null,
+      "units": 52,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2024-09-11",
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.tad.org/content/data-download/2026CommImprovedSales.zip",
+        "deed_doc": "D224163382"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.tad.org/content/data-download/2026CommImprovedSales.zip"
+        }
+      ],
+      "why": "recently sold apartment property (52 units, $9,600,000)"
+    },
+    {
+      "area": "tx",
+      "city": "Tarrant County",
+      "name": "The Sydney",
+      "address": "401 N STATE HWY 360",
+      "lat": null,
+      "lon": null,
+      "units": 354,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2024-09-06",
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.tad.org/content/data-download/2026CommImprovedSales.zip",
+        "deed_doc": "D224160734"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.tad.org/content/data-download/2026CommImprovedSales.zip"
+        }
+      ],
+      "why": "recently sold apartment property (354 units, $70,500,000)"
+    },
+    {
+      "area": "tx",
+      "city": "Tarrant County",
+      "name": "WESTLAND ESTATES",
+      "address": "2950 ALEMEDA ST",
+      "lat": null,
+      "lon": null,
+      "units": 192,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2025-05-07",
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.tad.org/content/data-download/2026CommImprovedSales.zip",
+        "deed_doc": "D225081907"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.tad.org/content/data-download/2026CommImprovedSales.zip"
+        }
+      ],
+      "why": "recently sold apartment property (192 units, $19,250,000)"
+    }
+  ]
+}

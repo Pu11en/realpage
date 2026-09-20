@@ -1,0 +1,4595 @@
+{
+  "state": "tx",
+  "recipe": "tabs.json",
+  "date": "2026-09-20",
+  "status": "worked",
+  "count": 126,
+  "attempts": 1,
+  "note": "",
+  "records": [
+    {
+      "area": "tx",
+      "city": "Brownsville",
+      "name": "Sonrisa Village Apartments",
+      "address": "5000 Bowie Road",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2026-09-14",
+      "opening_date": "2028-07-17",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "Luis Torres",
+      "office_phone": "(956) 579-3471",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2027000986"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2027000986"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2027000986"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2027000986"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "Waco",
+      "name": "Floyd Casey Development VM-2 Retail/Apartments",
+      "address": "914 S. Valley Mills Dr.",
+      "lat": null,
+      "lon": null,
+      "units": 32,
+      "stage": "permitted",
+      "permit_date": "2026-08-03",
+      "opening_date": "2028-04-01",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "Floyd Casey-One, LLC",
+      "office_phone": "(254) 759-8027",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026026765"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026026765"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026026765"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026026765"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "Mckinney",
+      "name": "Franklin Branch Apartments",
+      "address": "3565 FM 1461",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2026-07-16",
+      "opening_date": "2028-11-04",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "Franklin Branch Apartments Ltd.",
+      "office_phone": "(512) 202-9011",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026025468"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026025468"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026025468"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026025468"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "San Antonio",
+      "name": "Durango Apartments",
+      "address": "427 S Presa St",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2026-07-10",
+      "opening_date": "2028-12-31",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "Durango Owner, LLC",
+      "office_phone": "(609) 634-3332",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026024986"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026024986"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026024986"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026024986"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "Dallas",
+      "name": "The Apperson Apartments",
+      "address": "1431 Apple Street",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2026-06-22",
+      "opening_date": "2029-01-31",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "Apple Caddo MF Venture LP",
+      "office_phone": "(903) 278-7923",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026023464"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026023464"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026023464"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026023464"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "Socorro",
+      "name": "HORIZON ESTATES APARTMENTS",
+      "address": "975 S. HORIZON BLVD.",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "under construction",
+      "permit_date": "2026-05-12",
+      "opening_date": "2027-09-30",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "ARH HORIZON ESTATES LLC",
+      "office_phone": "(915) 532-3100",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026020039"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026020039"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026020039"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026020039"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "Houston",
+      "name": "STERLINGSHIRE APARTMENTS",
+      "address": "9002 STERLINGSHIRE ST",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2026-05-07",
+      "opening_date": "2027-10-01",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "STERLINGSHIRE PRESERVATION LLC",
+      "office_phone": "(212) 507-9325",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026019665"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026019665"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026019665"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026019665"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "Austin",
+      "name": "Quarry Oaks Apartments",
+      "address": "10911 Stonelake Boulevard",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "under construction",
+      "permit_date": "2026-04-29",
+      "opening_date": "2028-09-01",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "10911 Stonelake, LP",
+      "office_phone": "(512) 638-2139",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026018898"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026018898"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026018898"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026018898"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "Houston",
+      "name": "Patricia On Arbor Apartments",
+      "address": "2008 & 2014 Arbor Street",
+      "lat": null,
+      "lon": null,
+      "units": 24,
+      "stage": "permitted",
+      "permit_date": "2026-04-09",
+      "opening_date": "2028-10-01",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "Arbor Development Company LLC",
+      "office_phone": "(713) 302-4438",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026017265"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026017265"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026017265"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026017265"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "Brownsville",
+      "name": "Palm Village Apartments",
+      "address": "1400 Palm Blvd.",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "under construction",
+      "permit_date": "2026-04-07",
+      "opening_date": "2027-04-13",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "UPTOWN BROWNSVILLE LLC",
+      "office_phone": "(956) 574-9373",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026016980"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026016980"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026016980"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026016980"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "Dallas",
+      "name": "Hidalgo Apartments",
+      "address": "3434 Hidalgo Dr",
+      "lat": null,
+      "lon": null,
+      "units": 93,
+      "stage": "under construction",
+      "permit_date": "2026-04-03",
+      "opening_date": "2027-12-31",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "ARHAM LAND HOLDINGS LLC",
+      "office_phone": "(469) 980-8532",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026016781"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026016781"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026016781"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026016781"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "Dallas",
+      "name": "Oram Apartments",
+      "address": "6235 Oram St.",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "under construction",
+      "permit_date": "2026-03-31",
+      "opening_date": "2027-08-30",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "2CK O&E, LLC",
+      "office_phone": "(972) 975-7126",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026016335"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026016335"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026016335"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026016335"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "San Antonio",
+      "name": "Tezel Road Apartments",
+      "address": "5590 Tezel Road",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "under construction",
+      "permit_date": "2026-03-18",
+      "opening_date": "2028-06-30",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "Tezel Road Apartments Ltd.",
+      "office_phone": "(512) 202-9011",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026015360"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026015360"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026015360"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026015360"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "Abilene",
+      "name": "ACU Apartment",
+      "address": "525 East North 19th Street",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "under construction",
+      "permit_date": "2026-03-06",
+      "opening_date": "2026-10-26",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "Abilene Christian University",
+      "office_phone": "(325) 674-2535",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026014371"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026014371"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026014371"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026014371"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "San Antonio",
+      "name": "Bulverde Multifamily Apartments",
+      "address": "17626 Bulverde Avenue",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "under construction",
+      "permit_date": "2026-02-20",
+      "opening_date": "2026-02-28",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "Bulverde Apartments 2022, LLC",
+      "office_phone": "(205) 443-4550",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026013108"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026013108"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026013108"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026013108"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "LAKEWORTH MULTI FAMILY APARTMENTS",
+      "address": "6251 SHADY OAKS MANOR DR",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "under construction",
+      "permit_date": "2026-02-10",
+      "opening_date": "2026-12-31",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "LAKEWORTH CITY REALTY LLC",
+      "office_phone": "(214) 796-2983",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026012259"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026012259"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026012259"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026012259"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "Lubbock",
+      "name": "Memphis Ave Apartment Complex",
+      "address": "1103 N Memphis Ave",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "under construction",
+      "permit_date": "2026-02-06",
+      "opening_date": "2027-07-01",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "5G Memphis LLC",
+      "office_phone": "(806) 438-9328",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026011968"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026011968"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026011968"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026011968"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "Houston",
+      "name": "Dosuns Apartments",
+      "address": "14805 Lindita Drive",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "under construction",
+      "permit_date": "2026-01-19",
+      "opening_date": "2028-03-10",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "Dosuns Holding Corporation",
+      "office_phone": "(210) 287-9339",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026010419"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026010419"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026010419"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026010419"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "Austin",
+      "name": "E. MLK Apartment",
+      "address": "4810 E. MLK Blvd",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "under construction",
+      "permit_date": "2026-01-14",
+      "opening_date": "2027-12-01",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "2654 Imperial Crossing LLC",
+      "office_phone": "(281) 296-2367",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026010049"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026010049"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026010049"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026010049"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "Harmon Road Apartments",
+      "address": "1701 E. Harmon Road",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "under construction",
+      "permit_date": "2026-01-14",
+      "opening_date": "2027-08-01",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "DD East Harmon LLC",
+      "office_phone": "(770) 474-4345",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026010032"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026010032"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026010032"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026010032"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "Terrell",
+      "name": "Terrell Apartments",
+      "address": "1010 Rose Hill Rd",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "under construction",
+      "permit_date": "2026-01-13",
+      "opening_date": "2028-05-01",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "Terrell Leased Housing Associates I, LP",
+      "office_phone": "(214) 971-8747",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026009904"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026009904"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026009904"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026009904"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "Bryan",
+      "name": "Copperfield Drive Apartments",
+      "address": "4251 Boonville Road",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "under construction",
+      "permit_date": "2025-12-22",
+      "opening_date": "2028-01-09",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "Adam Development Properties, L.P.",
+      "office_phone": "(979) 776-1111",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026008710"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026008710"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026008710"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026008710"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "Lubbock",
+      "name": "19th Street Apartments",
+      "address": "2615 19th Street",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "under construction",
+      "permit_date": "2025-12-19",
+      "opening_date": "2028-06-01",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "PINECREST 2601/2615 19TH LLC",
+      "office_phone": "(646) 385-3169",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026008632"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026008632"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026008632"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026008632"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "Austin",
+      "name": "Oak Springs Apartments",
+      "address": "2900 Oak Springs",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "under construction",
+      "permit_date": "2025-12-15",
+      "opening_date": "2028-10-31",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "2900 Oak Springs Horizontal Investors LP",
+      "office_phone": "(512) 774-4750",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026007992"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026007992"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026007992"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026007992"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "Mesquite",
+      "name": "Avanti Hills Apartments",
+      "address": "2235 East Glen Blvd.",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "under construction",
+      "permit_date": "2025-12-11",
+      "opening_date": "2028-01-28",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "KCG Avanti Hills LP",
+      "office_phone": "(317) 708-6519",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026007797"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026007797"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026007797"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026007797"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "El Paso",
+      "name": "Pebble Hills Place Apartments",
+      "address": "12670 Pebble Hills Blvd",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "under construction",
+      "permit_date": "2025-12-11",
+      "opening_date": "2027-04-12",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "GM Pebble Hills Place, LTD",
+      "office_phone": "(954) 507-6222",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026007793"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026007793"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026007793"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026007793"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "Garland",
+      "name": "Eden Apartment Building",
+      "address": "325 King Lane",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "under construction",
+      "permit_date": "2025-12-09",
+      "opening_date": "2028-01-31",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "Hills and Valleys Properties LLC",
+      "office_phone": "(972) 809-8722",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026007598"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026007598"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026007598"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026007598"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "Grand Prairie",
+      "name": "Foxfern I-30 Apartments",
+      "address": "305 W Interstate Highway 30",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "under construction",
+      "permit_date": "2025-11-20",
+      "opening_date": "2027-12-01",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "Foxfern Holdings, LLC",
+      "office_phone": "(214) 729-9042",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026006454"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026006454"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026006454"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026006454"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "Houston",
+      "name": "Trinity East Village Senior Apartments",
+      "address": "2611 Saint Charles",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "under construction",
+      "permit_date": "2025-11-04",
+      "opening_date": "2027-10-31",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "Trinity East United Methodist Church",
+      "office_phone": "(832) 280-7554",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026004985"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026004985"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026004985"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026004985"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "Austin",
+      "name": "William Cannon Apartments",
+      "address": "FM RD 1625",
+      "lat": null,
+      "lon": null,
+      "units": 276,
+      "stage": "under construction",
+      "permit_date": "2025-10-31",
+      "opening_date": "2028-04-01",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "Bradley Carol Ann C Trust",
+      "office_phone": "(325) 218-2182",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026004733"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026004733"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026004733"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026004733"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "Houston",
+      "name": "Park Row Apartments",
+      "address": "14192 Park Row Dr.",
+      "lat": null,
+      "lon": null,
+      "units": 360,
+      "stage": "under construction",
+      "permit_date": "2025-10-10",
+      "opening_date": "2028-02-15",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "OHT Park Row, LP",
+      "office_phone": "(512) 220-7816",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026003096"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026003096"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026003096"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026003096"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "Austin",
+      "name": "Bluff Springs Apartments",
+      "address": "7333 Bluff Springs Road",
+      "lat": null,
+      "lon": null,
+      "units": 241,
+      "stage": "under construction",
+      "permit_date": "2025-09-29",
+      "opening_date": "2027-02-01",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "RPMD 7333 Bluff Springs Road Owner, LLC",
+      "office_phone": "(512) 762-9541",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026002009"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026002009"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026002009"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026002009"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "Lufkin",
+      "name": "Union Grove Apartments",
+      "address": "TBD Union Grove",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "under construction",
+      "permit_date": "2025-09-19",
+      "opening_date": "2027-06-01",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "Bruce Love",
+      "office_phone": "(936) 631-3110",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026001346"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026001346"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026001346"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026001346"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "Fort Worth Apartments",
+      "address": "3320 Hemphill Street",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "under construction",
+      "permit_date": "2025-09-18",
+      "opening_date": "2028-01-01",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "Fort Worth Residences, LLC",
+      "office_phone": "(205) 202-9262",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026001191"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026001191"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026001191"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026001191"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "Village East Apartments",
+      "address": "2750 West Cantey Street",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "under construction",
+      "permit_date": "2025-08-21",
+      "opening_date": "2026-07-01",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "Newsome Development",
+      "office_phone": "(785) 331-4644",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025026462"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025026462"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025026462"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025026462"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "Arlington",
+      "name": "Randol Mill Apartments",
+      "address": "2601 W Randol Mill Road",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "under construction",
+      "permit_date": "2025-08-13",
+      "opening_date": "2027-11-01",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "OHT Dev Holdings, LLC",
+      "office_phone": "(469) 722-4652",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025025810"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025025810"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025025810"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025025810"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "Cypress",
+      "name": "Venterra Spring Cypress Apartments",
+      "address": "16614 Spring Cypress Apartments",
+      "lat": null,
+      "lon": null,
+      "units": 384,
+      "stage": "under construction",
+      "permit_date": "2025-08-11",
+      "opening_date": "2027-11-30",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "VR DEVELOPMENT GP, LLC",
+      "office_phone": "(281) 558-8787",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025025553"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025025553"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025025553"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025025553"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "Tomball",
+      "name": "The Oaks At Carrell Street Apartments",
+      "address": "722 Carrell St.",
+      "lat": null,
+      "lon": null,
+      "units": 20,
+      "stage": "under construction",
+      "permit_date": "2025-07-28",
+      "opening_date": "2027-06-18",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "OAKS AT CARRELL STREET LLC",
+      "office_phone": "(281) 394-1172",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025024549"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025024549"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025024549"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025024549"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "Houston",
+      "name": "N Main Apartments",
+      "address": "2600 N Main St.",
+      "lat": null,
+      "lon": null,
+      "units": 12,
+      "stage": "under construction",
+      "permit_date": "2025-07-16",
+      "opening_date": "2026-11-15",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "2600 N. Main",
+      "office_phone": "(713) 906-5149",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025023705"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025023705"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025023705"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025023705"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "Houston",
+      "name": "SAM HOUSTON APARTMENTS",
+      "address": "6125 SOUTH SAM HOUSTON EAST PKY",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "under construction",
+      "permit_date": "2025-07-11",
+      "opening_date": "2026-05-01",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "8 WAY EQUITY LLC",
+      "office_phone": "(713) 245-0779",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025023290"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025023290"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025023290"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025023290"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "Prosper",
+      "name": "Prosper Elms Apartments",
+      "address": "634 N. Teel Parkway",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "under construction",
+      "permit_date": "2025-07-09",
+      "opening_date": "2027-09-01",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "FIDELITY NATIONAL TITLE AGENCY INC",
+      "office_phone": "(972) 422-2000",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025023098"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025023098"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025023098"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025023098"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "San Antonio",
+      "name": "Emberstone Apartments",
+      "address": "Watson Road",
+      "lat": null,
+      "lon": null,
+      "units": 48,
+      "stage": "under construction",
+      "permit_date": "2025-07-02",
+      "opening_date": "2028-02-01",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "Emberstone Apartments LP",
+      "office_phone": "(317) 907-3870",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025022601"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025022601"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025022601"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025022601"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "Johnson City",
+      "name": "Vineyard Springs Apartments",
+      "address": "893 W. Highway 290",
+      "lat": null,
+      "lon": null,
+      "units": 168,
+      "stage": "under construction",
+      "permit_date": "2025-06-24",
+      "opening_date": "2025-09-01",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "TX-290-1031, LLC",
+      "office_phone": "(714) 546-4255",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025021961"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025021961"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025021961"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025021961"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "Denton",
+      "name": "NRP Village Apartments",
+      "address": "2800 Roselawn Drive",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "under construction",
+      "permit_date": "2025-06-23",
+      "opening_date": "2027-09-30",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "RAYZOR INV LTD",
+      "office_phone": "(210) 507-0743",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025021863"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025021863"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025021863"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025021863"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "Forney",
+      "name": "Gateway West Apartments",
+      "address": "North Gateway Boulevard",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "under construction",
+      "permit_date": "2025-06-04",
+      "opening_date": "2027-08-25",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "Forney Residential XXIII, LP",
+      "office_phone": "(214) 360-1831",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025020563"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025020563"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025020563"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025020563"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "Houston",
+      "name": "Foxlake II Apartments",
+      "address": "19615 Park Row Blvd.",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "under construction",
+      "permit_date": "2025-05-28",
+      "opening_date": "2027-12-01",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "OHT Foxlake II, LP",
+      "office_phone": "(512) 220-7816",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025019864"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025019864"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025019864"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025019864"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "El Paso",
+      "name": "Desert Pearl Apartments",
+      "address": "12400 Vista Del Sol Drive",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "under construction",
+      "permit_date": "2025-05-23",
+      "opening_date": "2026-09-01",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "EP Heritage Development",
+      "office_phone": "(915) 892-0400",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025019646"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025019646"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025019646"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025019646"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "Ferris",
+      "name": "Ferris Casitas Multifamily Apartments",
+      "address": "361 FM 983",
+      "lat": null,
+      "lon": null,
+      "units": 204,
+      "stage": "under construction",
+      "permit_date": "2025-05-19",
+      "opening_date": "2027-08-01",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "HSM Ferris Casitas, LLC",
+      "office_phone": "(214) 208-8299",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025019315"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025019315"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025019315"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025019315"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "Lubbock",
+      "name": "Monterey Villas Apartment Complex",
+      "address": "6107 66th Street",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "under construction",
+      "permit_date": "2025-05-15",
+      "opening_date": "2026-11-01",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "8G Capital Holding LLC",
+      "office_phone": "(806) 438-9328",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025019063"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025019063"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025019063"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025019063"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "Webster",
+      "name": "Highway 3 Apartments",
+      "address": "16200 State Highway 3",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "under construction",
+      "permit_date": "2025-04-23",
+      "opening_date": "2027-08-13",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "OHT Dev Holding, LLC",
+      "office_phone": "(512) 220-7816",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025017346"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025017346"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025017346"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025017346"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "College Station",
+      "name": "Traditions Apartments",
+      "address": "5068 Raymond Stotzer Parkway",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "under construction",
+      "permit_date": "2025-04-14",
+      "opening_date": "2026-12-04",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "McGrath Real Estate Partners",
+      "office_phone": "(832) 449-0551",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025016571"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025016571"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025016571"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025016571"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "Houston",
+      "name": "2121 Broadway Apartments",
+      "address": "2121 Broadway St",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "under construction",
+      "permit_date": "2025-03-20",
+      "opening_date": "2026-08-28",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "PMG Project Management Group, LLC",
+      "office_phone": "(713) 880-2626",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025014674"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025014674"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025014674"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025014674"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "Edinburg",
+      "name": "Guerlain Luxury Apartments",
+      "address": "Lot 2-Los Lagos Apt. Sub&#39;n. 2406 S. Raul Longoria",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "under construction",
+      "permit_date": "2025-02-14",
+      "opening_date": "2025-12-25",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "Apartment Guerlain no.1 LLC",
+      "office_phone": "(956) 605-9445",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025011931"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025011931"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025011931"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025011931"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "Hempstead",
+      "name": "Avalon Gardens Apartments",
+      "address": "21801 Blassingame Road",
+      "lat": null,
+      "lon": null,
+      "units": 40,
+      "stage": "under construction",
+      "permit_date": "2025-02-10",
+      "opening_date": "2026-05-01",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "Enclave Property",
+      "office_phone": "(832) 715-2321",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025011461"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025011461"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025011461"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025011461"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "Austin",
+      "name": "Dessau Apartments",
+      "address": "10701 Dessau Rd",
+      "lat": null,
+      "lon": null,
+      "units": 300,
+      "stage": "under construction",
+      "permit_date": "2025-02-04",
+      "opening_date": "2027-11-01",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "OHT Dessau, LP",
+      "office_phone": "(512) 438-9715",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025011047"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025011047"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025011047"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025011047"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "El Paso",
+      "name": "Lee Place Apartments",
+      "address": "11520 Montana Ave",
+      "lat": null,
+      "lon": null,
+      "units": 80,
+      "stage": "under construction",
+      "permit_date": "2025-02-04",
+      "opening_date": "2026-03-01",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "Lee Place Apartments, llc",
+      "office_phone": "(915) 850-0009",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025011014"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025011014"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025011014"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025011014"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "Rock Creek Apartments - Phase 2",
+      "address": "SW Brewer Blvd",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "under construction",
+      "permit_date": "2025-01-27",
+      "opening_date": "2027-05-30",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "AMFP VI Chisholm Trail II LLC",
+      "office_phone": "(212) 203-4964",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025010443"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025010443"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025010443"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025010443"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "College Station",
+      "name": "201 Boyett Street Apartments",
+      "address": "201 Boyett St",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "under construction",
+      "permit_date": "2025-01-16",
+      "opening_date": "2027-06-02",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "Parallel, Co",
+      "office_phone": "(512) 265-1130",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025009675"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025009675"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025009675"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025009675"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "Pharr",
+      "name": "Mid-Town Pharr Apartments - site improvements",
+      "address": "601 West Polk Ave.",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "under construction",
+      "permit_date": "2025-01-14",
+      "opening_date": "2026-05-13",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "Mid-Town Pharr, LLC, TX LLC",
+      "office_phone": "(956) 631-9500",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025009480"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025009480"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025009480"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025009480"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "El Paso",
+      "name": "Mesa Hills Apartments",
+      "address": "1040 Mesa Hills El Paso, Tx 79912",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "under construction",
+      "permit_date": "2025-01-10",
+      "opening_date": "2026-04-01",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "Housing Opportunity Management Enterprises",
+      "office_phone": "(915) 849-3631",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025009259"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025009259"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025009259"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025009259"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "Katy",
+      "name": "Katy Gap Apartments",
+      "address": "23615 Kingsland Blvd.",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "under construction",
+      "permit_date": "2025-01-09",
+      "opening_date": "2027-05-23",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "OHT Partners, LLC",
+      "office_phone": "(512) 813-7103",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025009148"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025009148"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025009148"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025009148"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "Brownsville",
+      "name": "Stargaze Apartments",
+      "address": "3271 East Ruben Torres BLVD.",
+      "lat": null,
+      "lon": null,
+      "units": 206,
+      "stage": "under construction",
+      "permit_date": "2024-12-09",
+      "opening_date": "2027-01-30",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "Startgaze Colony LLC",
+      "office_phone": "(956) 343-6375",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025007120"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025007120"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025007120"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025007120"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "Houston",
+      "name": "RMSphere Asset Management Apartments",
+      "address": "13303 Bammel North Houston Rd.",
+      "lat": null,
+      "lon": null,
+      "units": 1,
+      "stage": "under construction",
+      "permit_date": "2024-12-08",
+      "opening_date": "2026-08-28",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "RMSphere Asset Management Inc",
+      "office_phone": "(832) 491-4904",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025007118"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025007118"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025007118"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025007118"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "Humble",
+      "name": "Groves Apartments",
+      "address": "15910 Woodland Hills Drive",
+      "lat": null,
+      "lon": null,
+      "units": 336,
+      "stage": "under construction",
+      "permit_date": "2024-10-24",
+      "opening_date": "2026-09-30",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "RK Commercial Properties, Inc.",
+      "office_phone": "(210) 326-1119",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025003997"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025003997"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025003997"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025003997"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "Lubbock",
+      "name": "Crescendo Apartments at Elm Park",
+      "address": "34th Street and Milwaukee Avenue",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "under construction",
+      "permit_date": "2024-10-03",
+      "opening_date": "2027-03-31",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "Tigris Holdings, LLC",
+      "office_phone": "(806) 687-8888",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025002457"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025002457"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025002457"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025002457"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "Denton",
+      "name": "Prestige Apartments",
+      "address": "4111 Edwards  Road Salem Oaks Cove",
+      "lat": null,
+      "lon": null,
+      "units": 250,
+      "stage": "under construction",
+      "permit_date": "2024-10-02",
+      "opening_date": "2026-03-09",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "Honors Way Group",
+      "office_phone": "(817) 409-8795",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025002275"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025002275"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025002275"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025002275"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "Waco",
+      "name": "New Site Development for Willowbrook Apartments",
+      "address": "Near Corner of Willowbrook St. & Valley Mills Dr.",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "under construction",
+      "permit_date": "2024-09-30",
+      "opening_date": "2026-10-01",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "Willowbrook Apartments Waco, LLC",
+      "office_phone": "(254) 759-8027",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025002103"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025002103"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025002103"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025002103"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "Amarillo",
+      "name": "Tuscany Parkway Apartments",
+      "address": "0 Tuscany Pkwy (The Colonies #54 Lot 003 Block 0001)",
+      "lat": null,
+      "lon": null,
+      "units": 73,
+      "stage": "under construction",
+      "permit_date": "2024-09-18",
+      "opening_date": "2025-12-31",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "Tuscany Parkway Apartments LLC",
+      "office_phone": "(949) 529-7011",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025001287"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025001287"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025001287"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025001287"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "Sugar Land",
+      "name": "APARTMENTS AT MCKASKLE ROAD BUILDING A, B, & C",
+      "address": "15410 MCKASKLE ROAD",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "under construction",
+      "permit_date": "2024-09-17",
+      "opening_date": "2025-12-31",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "PARTNERS REALTY AND DEVELOPMENT LP",
+      "office_phone": "(281) 777-7944",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025001215"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025001215"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025001215"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025001215"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "Austin",
+      "name": "Belmont Apartments",
+      "address": "4401 E Slaughter Lane",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "under construction",
+      "permit_date": "2024-09-17",
+      "opening_date": "2027-04-30",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "Belmont Apartments Ltd.",
+      "office_phone": "(913) 439-8117",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025001200"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025001200"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025001200"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025001200"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "Arlington",
+      "name": "Autumn Parc Apartments",
+      "address": "W Arkansas LN",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "under construction",
+      "permit_date": "2024-09-11",
+      "opening_date": "2026-01-05",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "OM Housing",
+      "office_phone": "(214) 432-7610",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025000674"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025000674"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025000674"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025000674"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "San Antonio",
+      "name": "Pleasanton Multifamily",
+      "address": "1100 Pleasanton Rd",
+      "lat": null,
+      "lon": null,
+      "units": 72,
+      "stage": "under construction",
+      "permit_date": "2026-07-30",
+      "opening_date": "2028-01-01",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "Fierro Enterprises, LLC",
+      "office_phone": "(210) 534-4315",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026026577"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026026577"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026026577"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026026577"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "Plano",
+      "name": "Collin Creek Multifamily S1",
+      "address": "811 N Central Expressway",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "under construction",
+      "permit_date": "2026-06-19",
+      "opening_date": "2027-07-30",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "Centurion American",
+      "office_phone": "(469) 892-7200",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026023342"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026023342"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026023342"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026023342"
+        },
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026003465"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026003465"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026003465"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "Arlington",
+      "name": "Balfour Flats Multifamily",
+      "address": "700 E South Street",
+      "lat": null,
+      "lon": null,
+      "units": 99,
+      "stage": "under construction",
+      "permit_date": "2026-06-04",
+      "opening_date": "2027-09-15",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "Balfour Flats Venture LP",
+      "office_phone": "(903) 278-7923",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026022106"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026022106"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026022106"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026022106"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "Houston",
+      "name": "Center St Multifamily East",
+      "address": "3616 center st",
+      "lat": null,
+      "lon": null,
+      "units": 172,
+      "stage": "under construction",
+      "permit_date": "2026-04-03",
+      "opening_date": "2028-10-02",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "Center St Owner (TX), LP",
+      "office_phone": "(512) 657-3433",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026016802"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026016802"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026016802"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026016802"
+        },
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026016794"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026016794"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026016794"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "Grand Prairie",
+      "name": "Gateway Multifamily East",
+      "address": "1800 IH 30 Hwy",
+      "lat": null,
+      "lon": null,
+      "units": 177,
+      "stage": "permitted",
+      "permit_date": "2026-03-18",
+      "opening_date": "2028-10-01",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "GRTP LTD",
+      "office_phone": "(214) 559-0091",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026015283"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026015283"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026015283"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026015283"
+        },
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026015162"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026015162"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026015162"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "Dallas",
+      "name": "5550 LBJ Multifamily - Phase I",
+      "address": "5550 LBJ Freeway",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "under construction",
+      "permit_date": "2025-11-06",
+      "opening_date": "2028-02-01",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "LBJ Financial JV, LLC",
+      "office_phone": "(806) 224-3380",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026005264"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026005264"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026005264"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026005264"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "Dallas",
+      "name": "Bowser Multifamily",
+      "address": "4516 Bowser Avenue",
+      "lat": null,
+      "lon": null,
+      "units": 28,
+      "stage": "under construction",
+      "permit_date": "2025-10-03",
+      "opening_date": "2027-04-05",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "SIEKIELSKI MATT & SHEA LIVING TRUST",
+      "office_phone": "(214) 232-9984",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026002511"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026002511"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026002511"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026002511"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "Richardson",
+      "name": "Polk St Multifamily",
+      "address": "110 E. Polk Street",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "under construction",
+      "permit_date": "2025-08-25",
+      "opening_date": "2027-10-01",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "DRA Owner LLC",
+      "office_phone": "(214) 863-4277",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025026678"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025026678"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025026678"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025026678"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "Austin",
+      "name": "1401 South Lamar Multifamily and Garage",
+      "address": "1401 S Lamar",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "under construction",
+      "permit_date": "2025-08-07",
+      "opening_date": "2025-09-01",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "Seamless SOLA I LP",
+      "office_phone": "(512) 330-9502",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025025389"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025025389"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025025389"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025025389"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "Manor",
+      "name": "Cameron-Yager Multifamily",
+      "address": "4915 E. Yager Lane",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "under construction",
+      "permit_date": "2025-07-22",
+      "opening_date": "2028-01-16",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "Cameron Road Apartments Ltd.",
+      "office_phone": "(216) 584-0613",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025024076"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025024076"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025024076"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025024076"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "Dallas",
+      "name": "Mockingbird Station East Phase 2 Multifamily",
+      "address": "5399 Twin Sixties Dr",
+      "lat": null,
+      "lon": null,
+      "units": 395,
+      "stage": "under construction",
+      "permit_date": "2025-04-30",
+      "opening_date": "2027-07-23",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "Trammell Crow Company",
+      "office_phone": "(806) 224-3380",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025017840"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025017840"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025017840"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025017840"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "Bula",
+      "name": "Prairie Lakes Multifamily",
+      "address": "5081 FM 2001",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "under construction",
+      "permit_date": "2025-04-23",
+      "opening_date": "2028-07-31",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "Continental Homes of Texas, LP",
+      "office_phone": "(972) 822-4848",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025017372"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025017372"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025017372"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025017372"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "Austin",
+      "name": "South Lamar Multifamily",
+      "address": "2700 South Lamar Boulevard",
+      "lat": null,
+      "lon": null,
+      "units": 399,
+      "stage": "under construction",
+      "permit_date": "2025-04-16",
+      "opening_date": "2029-02-01",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "Seamless LMA, Ltd",
+      "office_phone": "8-773-367-2410",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025016806"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025016806"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025016806"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025016806"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "Houston",
+      "name": "Montrose Multifamily Development Foundation Package",
+      "address": "1005 Westheimer Rd",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "under construction",
+      "permit_date": "2025-04-09",
+      "opening_date": "2028-01-21",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "SCD MONTROSE HOUSTON LLC",
+      "office_phone": "(917) 438-4500",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025016217"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025016217"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025016217"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025016217"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "Brownsville",
+      "name": "BUENA VIDA MULTIFAMILY",
+      "address": "1500 Ringgold St",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "under construction",
+      "permit_date": "2025-01-17",
+      "opening_date": "2027-04-21",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "THE HOUSING AUTHORITY OF THE CITY OF BROWNSVILLE",
+      "office_phone": "(956) 214-1530",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025009834"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025009834"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025009834"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025009834"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "Brownsville",
+      "name": "BUENA VIDA MULTIFAMILY",
+      "address": "1525 E TYLER ST",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "under construction",
+      "permit_date": "2025-01-17",
+      "opening_date": "2027-04-21",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "THE HOUSING AUTHORITY OF THE CITY OF BROWNSVILLE",
+      "office_phone": "(856) 214-1530",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025009832"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025009832"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025009832"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025009832"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "Pearland",
+      "name": "Pelican Pearland Town Center Multifamily",
+      "address": "3200 Business Center Dr",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "under construction",
+      "permit_date": "2024-12-12",
+      "opening_date": "2027-01-15",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "CRP / Pelican Pearland Venture, LLC",
+      "office_phone": "(713) 871-8170",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025007480"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025007480"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025007480"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025007480"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "Denton",
+      "name": "Avenue A Multifamily",
+      "address": "1234 Avenue A",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "under construction",
+      "permit_date": "2024-11-12",
+      "opening_date": "2027-05-28",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "1234 AVE A LLC",
+      "office_phone": "(972) 965-2071",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025005363"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025005363"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025005363"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025005363"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "Celina",
+      "name": "Celina Multifamily",
+      "address": "Knox ST and Collin County Outer Loop",
+      "lat": null,
+      "lon": null,
+      "units": 272,
+      "stage": "under construction",
+      "permit_date": "2024-09-06",
+      "opening_date": "2027-09-30",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "Celina Apt Associates, L.L.C.",
+      "office_phone": "(330) 664-9430",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025000344"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025000344"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025000344"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025000344"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "Granger",
+      "name": "Oak Street Family Multi-Family",
+      "address": "401 E Oak Street",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "under construction",
+      "permit_date": "2026-03-26",
+      "opening_date": "2028-04-01",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "Hyo Sop Kim",
+      "office_phone": "(512) 565-0980",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026015953"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026015953"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026015953"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026015953"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "Frisco",
+      "name": "North Fields Park Multi-Family Blk A Lot 4",
+      "address": "PGA Parkway",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "under construction",
+      "permit_date": "2025-10-10",
+      "opening_date": "2026-11-02",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "North Fields Investment Partners, LP",
+      "office_phone": "(214) 978-8761",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026003137"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026003137"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026003137"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026003137"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "Denton",
+      "name": "N. Elm Multi-Family",
+      "address": "3301 N. Elm",
+      "lat": null,
+      "lon": null,
+      "units": 67,
+      "stage": "under construction",
+      "permit_date": "2025-09-02",
+      "opening_date": "2028-06-30",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "SY3M LLC",
+      "office_phone": "(214) 228-5338",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026000110"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026000110"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026000110"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026000110"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "Celina",
+      "name": "Build-To-Rent Multi-Family (New Construction)",
+      "address": "Northeast corner of FM 1385 & Tudor Pl",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "under construction",
+      "permit_date": "2025-03-26",
+      "opening_date": "2027-01-01",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "MRP TMHCBTR LLC",
+      "office_phone": "(903) 521-5340",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025015127"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025015127"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025015127"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025015127"
+        },
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025015124"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025015124"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025015124"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "Austin",
+      "name": "Epitome Thaxton Multi-Family",
+      "address": "8318 Thaxton Rd",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "under construction",
+      "permit_date": "2025-01-31",
+      "opening_date": "2026-08-30",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "Epitome Development",
+      "office_phone": "(281) 216-9630",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025010869"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025010869"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025010869"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025010869"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "Carrollton",
+      "name": "Jackson Road Multi-family Development",
+      "address": "2255 N. Broadway Street",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "under construction",
+      "permit_date": "2025-01-21",
+      "opening_date": "2027-07-01",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "NRP Group LLC",
+      "office_phone": "(844) 677-0002",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025010005"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025010005"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025010005"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025010005"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "North Richland Hills",
+      "name": "New mixed-use project, includes structured parking garage, multi-family, and retail",
+      "address": "6401 Smithfield",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "under construction",
+      "permit_date": "2024-10-04",
+      "opening_date": "2026-12-30",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "C2C Smithfield LP",
+      "office_phone": "(214) 505-5080",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025002557"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025002557"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025002557"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025002557"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "Grand Prairie",
+      "name": "Maple Lofts",
+      "address": "2422 Graham Street",
+      "lat": null,
+      "lon": null,
+      "units": 65,
+      "stage": "permitted",
+      "permit_date": "2026-09-17",
+      "opening_date": "2028-04-27",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "KCG Maple Lofts, LP",
+      "office_phone": "(317) 708-6519",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2027001346"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2027001346"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2027001346"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2027001346"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "Abilene",
+      "name": "The Lofts at Allen Ridge Phase II",
+      "address": "North Judge Ely Blvd",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2026-07-13",
+      "opening_date": "2028-07-02",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "Abilene Christian University",
+      "office_phone": "(325) 518-6615",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026025156"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026025156"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026025156"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026025156"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "El Paso",
+      "name": "Vistara Lofts",
+      "address": "12500 Vista Del Sol Drive",
+      "lat": null,
+      "lon": null,
+      "units": 120,
+      "stage": "under construction",
+      "permit_date": "2026-05-19",
+      "opening_date": "2027-06-30",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "Chita, LP",
+      "office_phone": "(915) 500-1032",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026020744"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026020744"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026020744"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026020744"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "San Antonio",
+      "name": "NRP 301 Lofts",
+      "address": "13388 W. US Highway 90",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2026-05-11",
+      "opening_date": "2028-07-01",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "301 Lofts Ltd.",
+      "office_phone": "(844) 677-0002",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026019962"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026019962"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026019962"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026019962"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "Big Spring",
+      "name": "Lofts at Birdwell",
+      "address": "TBD Birdwell Lane",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "under construction",
+      "permit_date": "2026-04-17",
+      "opening_date": "2027-05-01",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "Big Spring Multifamily #1 LP",
+      "office_phone": "(512) 658-9070",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026017966"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026017966"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026017966"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026017966"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "San Antonio",
+      "name": "Lakeside Lofts",
+      "address": "5726 US Highway 87 E.",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "under construction",
+      "permit_date": "2025-11-19",
+      "opening_date": "2027-12-15",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "Lakeside Lofts Ltd.",
+      "office_phone": "(512) 202-9011",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026006319"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026006319"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026006319"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026006319"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "San Antonio",
+      "name": "6802 Marbach Lofts",
+      "address": "1611 Pinn Road",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "under construction",
+      "permit_date": "2025-11-19",
+      "opening_date": "2027-08-01",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "6802 Marbach Lofts Ltd.",
+      "office_phone": "(512) 202-9011",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026006304"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026006304"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026006304"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026006304"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "San Antonio",
+      "name": "811 Park Lofts",
+      "address": "811 Park Ave",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "under construction",
+      "permit_date": "2025-11-12",
+      "opening_date": "2027-03-01",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "811 AND 815 E PARK AVE LLC",
+      "office_phone": "(210) 540-6000",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026005754"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026005754"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026005754"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026005754"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "San Antonio",
+      "name": "Haynes Lofts",
+      "address": "9427 SE 410",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "under construction",
+      "permit_date": "2025-03-03",
+      "opening_date": "2027-09-15",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "Sabot Development LTD",
+      "office_phone": "(512) 565-7509",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025013167"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025013167"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025013167"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025013167"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "Dallas",
+      "name": "Tenison Lofts",
+      "address": "3602 Samuell Blvd",
+      "lat": null,
+      "lon": null,
+      "units": 164,
+      "stage": "under construction",
+      "permit_date": "2024-12-05",
+      "opening_date": "2026-12-15",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "TX Tenison 2023, Ltd.",
+      "office_phone": "(214) 613-6569",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025006916"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025006916"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025006916"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025006916"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "Roanoke",
+      "name": "Roanoke Lofts",
+      "address": "1104 TX-114",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "under construction",
+      "permit_date": "2024-10-15",
+      "opening_date": "2026-10-15",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "Leeds Residential Inc.",
+      "office_phone": "(972) 754-1024",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025003222"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025003222"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025003222"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025003222"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "Houston",
+      "name": "Greenbriar Residences",
+      "address": "5610 Greenbriar",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2026-09-11",
+      "opening_date": "2029-09-15",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "Chaucer Eat LLC",
+      "office_phone": "(713) 348-6115",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2027000841"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2027000841"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2027000841"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2027000841"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "New Braunfels",
+      "name": "The Klein Residences",
+      "address": "Sophie Lane",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2026-07-06",
+      "opening_date": "2029-06-01",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "Solms Residences LLC",
+      "office_phone": "(773) 682-4343",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026024527"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026024527"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026024527"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026024527"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "Houston",
+      "name": "Fairmont Residences",
+      "address": "2585 W. Tidwell",
+      "lat": null,
+      "lon": null,
+      "units": 204,
+      "stage": "under construction",
+      "permit_date": "2026-06-24",
+      "opening_date": "2028-07-31",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "Tidwell 5 Dev LLC",
+      "office_phone": "(281) 221-2699",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026023711"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026023711"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026023711"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026023711"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "Houston",
+      "name": "St. Regis Residences",
+      "address": "102 Asbury Street",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "under construction",
+      "permit_date": "2025-12-09",
+      "opening_date": "2028-06-02",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "SR Luxury Condominium, LTD",
+      "office_phone": "(832) 795-7205",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026007491"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026007491"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026007491"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026007491"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "Longview",
+      "name": "Toler Developments LLC, Residences at Toler, Ph. 2",
+      "address": "1900 Toler Road",
+      "lat": null,
+      "lon": null,
+      "units": 96,
+      "stage": "under construction",
+      "permit_date": "2025-10-25",
+      "opening_date": "2027-03-01",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "Toler Developments",
+      "office_phone": "(903) 812-9897",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026004251"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026004251"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026004251"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026004251"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "Plano",
+      "name": "Maranello - Premier Auto Residences",
+      "address": "Mapleshade LN -NE corner appr. 235 LF east of Ohio",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "under construction",
+      "permit_date": "2024-11-05",
+      "opening_date": "2026-03-23",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "Maranello \u2013 Plano, LP",
+      "office_phone": "(214) 597-3569",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025004910"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025004910"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025004910"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025004910"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "San Antonio",
+      "name": "Brickstone Flats",
+      "address": "9003 Somerset Road",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "under construction",
+      "permit_date": "2026-02-12",
+      "opening_date": "2028-06-30",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "Brickstone Flats LP",
+      "office_phone": "(317) 846-3111",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026012493"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026012493"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026012493"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026012493"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "Austin",
+      "name": "Moontower Flats",
+      "address": "1910 E Martin Luther King Jr Blvd",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "under construction",
+      "permit_date": "2025-06-05",
+      "opening_date": "2027-07-31",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "Building/Facility Owner: Texas State Affordable Housing Corporation",
+      "office_phone": "(512) 477-3562",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025020604"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025020604"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025020604"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025020604"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "Plano",
+      "name": "The Legacy at Willow Bend Expansion - FLATS",
+      "address": "6101 Ohio Dr.",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "under construction",
+      "permit_date": "2024-11-26",
+      "opening_date": "2026-05-01",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "The Legacy at Willow Bend Retirement Community Inc",
+      "office_phone": "(972) 468-6166",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025006463"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025006463"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025006463"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025006463"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "Mckinney",
+      "name": "Lake Forest Senior Living, LLC",
+      "address": "4656 W UNIVERSITY DR",
+      "lat": null,
+      "lon": null,
+      "units": 222,
+      "stage": "permitted",
+      "permit_date": "2026-09-15",
+      "opening_date": "2028-11-01",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "KAYASA HOLDINGS LLC",
+      "office_phone": "(817) 233-1121",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2027001111"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2027001111"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2027001111"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2027001111"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "Dallas",
+      "name": "Camp Wisdom Senior Living",
+      "address": "1431 W Camp Wisdom Road",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2026-06-02",
+      "opening_date": "2028-10-16",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "Texaz Perceptions Partners, LTD",
+      "office_phone": "(214) 739-5553",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026021731"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026021731"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026021731"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026021731"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "Bastrop",
+      "name": "Pine Creek Senior Living",
+      "address": "Lovers Lane, Bastrop, TX 78602",
+      "lat": null,
+      "lon": null,
+      "units": 52,
+      "stage": "under construction",
+      "permit_date": "2025-12-02",
+      "opening_date": "2027-07-30",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "Pine Creek Bastrop, LP",
+      "office_phone": "(214) 336-7495",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026007055"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026007055"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026007055"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026007055"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "Dallas",
+      "name": "Inwood Senior Living",
+      "address": "3700 Inwood Road",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "under construction",
+      "permit_date": "2025-06-30",
+      "opening_date": "2027-05-31",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "HARBERT SOUTH BAY",
+      "office_phone": "(214) 370-2632",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025022308"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025022308"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025022308"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025022308"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "Garland",
+      "name": "WEST CENTERVILLE ACTIVE SENIOR LIVING",
+      "address": "505 WEST CENTERVILLE RD",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "under construction",
+      "permit_date": "2025-05-28",
+      "opening_date": "2027-10-01",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "M& A DEVELOPMENT",
+      "office_phone": "(804) 999-4449",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025019904"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025019904"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025019904"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025019904"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "Horseshoe Bay",
+      "name": "Falcon Senior Living",
+      "address": "East State Highway 71",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "under construction",
+      "permit_date": "2025-02-14",
+      "opening_date": "2027-01-15",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "Falcon Senior Housing",
+      "office_phone": "(925) 708-8994",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025011961"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025011961"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025011961"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025011961"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "Temple",
+      "name": "Bird Creek Senior Living",
+      "address": "S General Bruce Drive & W Avenue K",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "under construction",
+      "permit_date": "2024-11-19",
+      "opening_date": "2026-06-01",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "Temple TXHP, LP",
+      "office_phone": "(913) 638-2500",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025005898"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025005898"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025005898"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025005898"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "Mesquite",
+      "name": "2910 Motley Senior Living",
+      "address": "2910 Motley Dr",
+      "lat": null,
+      "lon": null,
+      "units": 133,
+      "stage": "under construction",
+      "permit_date": "2024-10-01",
+      "opening_date": "2026-07-01",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "2910 Motley Senior Living, Ltd.",
+      "office_phone": "(972) 774-4439",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025002194"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025002194"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025002194"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025002194"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    },
+    {
+      "area": "tx",
+      "city": "Eagle Pass",
+      "name": "Bibb Senior Living",
+      "address": "574. S Bibb",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "under construction",
+      "permit_date": "2024-09-24",
+      "opening_date": "2025-12-31",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "Bibb TXHP, LP",
+      "office_phone": "(913) 638-2500",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025001659"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025001659"
+        },
+        {
+          "fact": "developer",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025001659"
+        },
+        {
+          "fact": "office_phone",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025001659"
+        }
+      ],
+      "why": "new multifamily project registered with TDLR TABS"
+    }
+  ]
+}

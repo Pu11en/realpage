@@ -1,6 +1,6 @@
 {
   "area": "tx",
-  "updated": "2026-09-19",
+  "updated": "2026-09-20",
   "generatedFrom": "propertystack/data/tx/leads.json",
   "stats": {
     "leads": 1176,
@@ -15903,14 +15903,14 @@
       "firstSeen": "2026-09-19"
     },
     {
-      "id": "tx-7010-comanche-land-city-of-san-antonio-tx-78233-nacogdoches-apartments-bld-1-apt",
-      "property": "Nacogdoches Apartments - Bld#  1-Apt.",
-      "community": "Nacogdoches Apartments - Bld#  1-Apt.",
+      "id": "tx-7010-comanche-land-city-of-san-antonio-tx-78233-nacogdoches-apartments-bld-2-apt-bldg-clubhouse",
+      "property": "Nacogdoches Apartments - Bld#  2-Apt. Bldg. & Clubhouse",
+      "community": "Nacogdoches Apartments - Bld#  2-Apt. Bldg. & Clubhouse",
       "city": "San Antonio",
       "address": "7010 COMANCHE LAND, CITY OF SAN ANTONIO, TX 78233",
       "units": null,
       "stage": "permitted",
-      "permitDate": "2025-11-24",
+      "permitDate": "2025-11-19",
       "openingDate": null,
       "saleDate": null,
       "buyer": null,
@@ -15933,7 +15933,7 @@
       "score": 61,
       "isNew": false,
       "metro": "San Antonio",
-      "firstSeen": "2026-09-19"
+      "firstSeen": "2026-09-20"
     },
     {
       "id": "tx-1795-mansfield-webb-rd-apartments-at-1795-mansfield-webb-rd",

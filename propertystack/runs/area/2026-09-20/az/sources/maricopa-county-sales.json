@@ -1,0 +1,4715 @@
+{
+  "state": "az",
+  "recipe": "maricopa-county-sales.json",
+  "date": "2026-09-20",
+  "status": "worked",
+  "count": 147,
+  "attempts": 1,
+  "note": "",
+  "records": [
+    {
+      "area": "az",
+      "city": "PHOENIX",
+      "name": "",
+      "address": "1616 N CENTRAL AVE",
+      "lat": null,
+      "lon": null,
+      "units": 367,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2024-10-01",
+      "buyer": "MG MUSE APARTMENTS LLC ETAL",
+      "developer": "MG MUSE APARTMENTS LLC/MG MUSE APARTMENTS L13",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (367 units, $9477500)"
+    },
+    {
+      "area": "az",
+      "city": "BUCKEYE",
+      "name": "",
+      "address": "7400 S MILLER RD",
+      "lat": null,
+      "lon": null,
+      "units": 180,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2024-10-01",
+      "buyer": "BUCKEYE LEASED HOUSING ASSOCIATES III LLLP",
+      "developer": "WHCF CHOLLA RANCH LP",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (180 units, $18370000)"
+    },
+    {
+      "area": "az",
+      "city": "PHOENIX",
+      "name": "",
+      "address": "2220 W MISSION LN",
+      "lat": null,
+      "lon": null,
+      "units": 604,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2024-11-01",
+      "buyer": "SAN VALIENTE LLC",
+      "developer": "BCORE MF SAN VALIENTE LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (604 units, $142273000)"
+    },
+    {
+      "area": "az",
+      "city": "PHOENIX",
+      "name": "",
+      "address": "12435 N 28TH  DR",
+      "lat": null,
+      "lon": null,
+      "units": 232,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2024-11-01",
+      "buyer": "PHOENIX 28TH DR OWNER LLC",
+      "developer": "BANYANTREE PROPERTY OWNER LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (232 units, $28250000)"
+    },
+    {
+      "area": "az",
+      "city": "GOODYEAR",
+      "name": "",
+      "address": "15545 W HUDSON WAY",
+      "lat": null,
+      "lon": null,
+      "units": 183,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2024-11-01",
+      "buyer": "PHOENIX M3-15 LLC",
+      "developer": "ESTRELLA OWNER LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (183 units, $56000000)"
+    },
+    {
+      "area": "az",
+      "city": "PHOENIX",
+      "name": "",
+      "address": "435 E SUNLAND AVE",
+      "lat": null,
+      "lon": null,
+      "units": 80,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2024-11-01",
+      "buyer": "SUNLAND TERRACE HOUSING PARTNERS LP",
+      "developer": "CASA DE PAZ IV APARTMENTS LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (80 units, $8000000)"
+    },
+    {
+      "area": "az",
+      "city": "PHOENIX",
+      "name": "",
+      "address": "3738 E MCDOWELL RD",
+      "lat": null,
+      "lon": null,
+      "units": 36,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2024-12-01",
+      "buyer": "JP2 HOLDINGS LLC",
+      "developer": "TERRY JULIE H TR",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (36 units, $4705000)"
+    },
+    {
+      "area": "az",
+      "city": "Tempe",
+      "name": "",
+      "address": "1979 E RIO SALADO      PKWY",
+      "lat": null,
+      "lon": null,
+      "units": 310,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2024-12-01",
+      "buyer": "SMITH & RIO OWNER LLC",
+      "developer": "PR III/CROW SMITH RIO LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (310 units, $106250000)"
+    },
+    {
+      "area": "az",
+      "city": "MESA",
+      "name": "",
+      "address": "1111 E BROWN RD",
+      "lat": null,
+      "lon": null,
+      "units": 108,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2024-12-01",
+      "buyer": "COPPER POINT APARTMENTS LLC",
+      "developer": "CLARK COUNTY PROPERTIES/CONTINENTAL APARTMENS",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (108 units, $24650000)"
+    },
+    {
+      "area": "az",
+      "city": "PHOENIX",
+      "name": "",
+      "address": "9200 W MCDOWELL RD",
+      "lat": null,
+      "lon": null,
+      "units": 167,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2024-12-01",
+      "buyer": "AC T16 MCDOWELL OWNER LLC",
+      "developer": "TM BTR AT MCDOWELL LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (167 units, $46500000)"
+    },
+    {
+      "area": "az",
+      "city": "GOODYEAR",
+      "name": "",
+      "address": "15400 W MONTE VISTA RD",
+      "lat": null,
+      "lon": null,
+      "units": 352,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2024-10-01",
+      "buyer": "DISTRICT AT CIVIC SQUARE LLC",
+      "developer": "CRP/KAPLAN CIVIC CENTER OWNER LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (352 units, $94500000)"
+    },
+    {
+      "area": "az",
+      "city": "PHOENIX",
+      "name": "",
+      "address": "510 E HATCHER RD",
+      "lat": null,
+      "lon": null,
+      "units": 24,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2024-12-01",
+      "buyer": "TS8A PROP LLC",
+      "developer": "HATCHER RD 510 E LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (24 units, $3400000)"
+    },
+    {
+      "area": "az",
+      "city": "PHOENIX",
+      "name": "",
+      "address": "24032 N 19TH AVE",
+      "lat": null,
+      "lon": null,
+      "units": 388,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2025-01-01",
+      "buyer": "GRE SEDONA LLC/GRE MIRAMONTE LLC/ETAL",
+      "developer": "TOWN DEER VALLEY OWNER LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (388 units, $131100000)"
+    },
+    {
+      "area": "az",
+      "city": "PHOENIX",
+      "name": "",
+      "address": "21155 N 56TH ST",
+      "lat": null,
+      "lon": null,
+      "units": 370,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2024-11-01",
+      "buyer": "IMT CAPITAL VI DESERT RIDGE LLC",
+      "developer": "CWS DESERT RIDGE LP/ETAL",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (370 units, $126000000)"
+    },
+    {
+      "area": "az",
+      "city": "MESA",
+      "name": "",
+      "address": "1547 E BROADWAY RD",
+      "lat": null,
+      "lon": null,
+      "units": 42,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2025-02-01",
+      "buyer": "FLOWER APARTMENTS AZ LLC/PARK MESA APTS LFT-L",
+      "developer": "1547 PM LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (42 units, $7775000)"
+    },
+    {
+      "area": "az",
+      "city": "PHOENIX",
+      "name": "",
+      "address": "2802 E OSBORN RD",
+      "lat": null,
+      "lon": null,
+      "units": 302,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2025-02-01",
+      "buyer": "AMARA APARTMENTS AZ LLC",
+      "developer": "AMARA PHOENIX PO LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (302 units, $48000000)"
+    },
+    {
+      "area": "az",
+      "city": "PHOENIX",
+      "name": "",
+      "address": "2542 W COLTER ST",
+      "lat": null,
+      "lon": null,
+      "units": 124,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2024-11-01",
+      "buyer": "VENTURE ON COLTER LLC",
+      "developer": "CRECFIV THOM SLATE LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (124 units, $13000000)"
+    },
+    {
+      "area": "az",
+      "city": "PHOENIX",
+      "name": "",
+      "address": "5241 E THOMAS RD",
+      "lat": null,
+      "lon": null,
+      "units": 71,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2025-01-01",
+      "buyer": "VENTURE ON 52ND LLC",
+      "developer": "ELISSE HOMES LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (71 units, $11000000)"
+    },
+    {
+      "area": "az",
+      "city": "GLENDALE",
+      "name": "",
+      "address": "16630 N 43RD AVE",
+      "lat": null,
+      "lon": null,
+      "units": 180,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2025-03-01",
+      "buyer": "CANTAMAR TIC I LLC/CANTAMAR TIC IV LLC/CANTAM",
+      "developer": "CANTAMAR TIC I LLC/CANTAMAR TIC IV LLC/CANTAM",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (180 units, $201764)"
+    },
+    {
+      "area": "az",
+      "city": "CHANDLER",
+      "name": "",
+      "address": "1586 W MAGGIO",
+      "lat": null,
+      "lon": null,
+      "units": 432,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2025-03-01",
+      "buyer": "ARCHES LLC",
+      "developer": "BCORE MF ARCHES LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (432 units, $95446000)"
+    },
+    {
+      "area": "az",
+      "city": "CHANDLER",
+      "name": "",
+      "address": "1570 W MAGGIO WAY",
+      "lat": null,
+      "lon": null,
+      "units": 432,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2025-03-01",
+      "buyer": "ARCHES LLC",
+      "developer": "BCORE MF ARCHES LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (432 units, $95446000)"
+    },
+    {
+      "area": "az",
+      "city": "PHOENIX",
+      "name": "",
+      "address": "4221 W DUNLAP AVE",
+      "lat": null,
+      "lon": null,
+      "units": 137,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2025-04-01",
+      "buyer": "GC WEST DUNLAP LLC",
+      "developer": "TIDES ON WEST DUNLAP TIC I LLC/VILLA SERENA S",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (137 units, $29616882)"
+    },
+    {
+      "area": "az",
+      "city": "PHOENIX",
+      "name": "",
+      "address": "502 W CAMELBACK RD",
+      "lat": null,
+      "lon": null,
+      "units": 280,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2025-04-01",
+      "buyer": "RENUE UPTOWN PHOENIX LLC",
+      "developer": "CRP/AR UPTOWN PHX OWNER LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (280 units, $87000000)"
+    },
+    {
+      "area": "az",
+      "city": "SCOTTSDALE",
+      "name": "",
+      "address": "7111 E TIERRA BUENA LN",
+      "lat": null,
+      "lon": null,
+      "units": 202,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2025-04-01",
+      "buyer": "7111 E TIERRA SOLTRA LLC",
+      "developer": "LCG2MF KIERLAND LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (202 units, $107500000)"
+    },
+    {
+      "area": "az",
+      "city": "GLENDALE",
+      "name": "",
+      "address": "6767 W BUTLER DR",
+      "lat": null,
+      "lon": null,
+      "units": 208,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2025-01-01",
+      "buyer": "BWF III AZ MONTE VISTA LLC",
+      "developer": "FRAME PROPERTIES LIMITED PARTNERSHIP",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (208 units, $25500000)"
+    },
+    {
+      "area": "az",
+      "city": "PEORIA",
+      "name": "",
+      "address": "7606 W PEORIA AVE",
+      "lat": null,
+      "lon": null,
+      "units": 224,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2024-12-01",
+      "buyer": "SANTANA VILLAGE OWNER LLC",
+      "developer": "SANTANA VILLAGE APARTMENTS LLLP",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (224 units, $48000000)"
+    },
+    {
+      "area": "az",
+      "city": "PHOENIX",
+      "name": "",
+      "address": "8111 N 19TH AVE",
+      "lat": null,
+      "lon": null,
+      "units": 225,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2025-02-01",
+      "buyer": "19N PARTNERS LLC",
+      "developer": "LWH MISSION SHADOWS APARTMENTS LP",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (225 units, $37100000)"
+    },
+    {
+      "area": "az",
+      "city": "CHANDLER",
+      "name": "",
+      "address": "1889 W QUEEN CREEK RD",
+      "lat": null,
+      "lon": null,
+      "units": 296,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2025-04-01",
+      "buyer": "TGM QUEEN CREEK LLC",
+      "developer": "PHX QUEEN CREEK 2012 LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (296 units, $90500000)"
+    },
+    {
+      "area": "az",
+      "city": "SCOTTSDALE",
+      "name": "",
+      "address": "15333 N HAYDEN RD",
+      "lat": null,
+      "lon": null,
+      "units": 282,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2025-05-01",
+      "buyer": "SANTANA SMLLC LLC/EDGEWOOD SMLLC LLC/VFH SMLL",
+      "developer": "NORTH SCOTTSDALE ACQUISITION LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (282 units, $97500000)"
+    },
+    {
+      "area": "az",
+      "city": "PHOENIX",
+      "name": "",
+      "address": "2202 E ROOSEVELT ST",
+      "lat": null,
+      "lon": null,
+      "units": 44,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2025-04-01",
+      "buyer": "2202 ROOSEVELT LLC",
+      "developer": "ROCKIE LEE SUTTLE LIVING TRUST",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (44 units, $3500000)"
+    },
+    {
+      "area": "az",
+      "city": "PHOENIX",
+      "name": "",
+      "address": "3025 N 32ND ST",
+      "lat": null,
+      "lon": null,
+      "units": 62,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2025-02-01",
+      "buyer": "MOUNTAIN WEST 32 LLC",
+      "developer": "BELBROOK 32 LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (62 units, $8250000)"
+    },
+    {
+      "area": "az",
+      "city": "CHANDLER",
+      "name": "",
+      "address": "200 W GERMANN RD",
+      "lat": null,
+      "lon": null,
+      "units": 392,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2025-04-01",
+      "buyer": "AREIT ZATERRA LLC",
+      "developer": "ARDEN PARK OWNER LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (392 units, $137500000)"
+    },
+    {
+      "area": "az",
+      "city": "PHOENIX",
+      "name": "",
+      "address": "2409 W NORTHERN AVE",
+      "lat": null,
+      "lon": null,
+      "units": 51,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2025-05-01",
+      "buyer": "HULIINVEST LLC/PEAK PULSE LLC/SUMMIT OAK INVE",
+      "developer": "NORTHERN WEST TERRACE APARTMENTS I LLC/NORTHE",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (51 units, $8864000)"
+    },
+    {
+      "area": "az",
+      "city": "AVONDALE",
+      "name": "",
+      "address": "1700 N 103RD AVE",
+      "lat": null,
+      "lon": null,
+      "units": 240,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2025-05-01",
+      "buyer": "1700 N 103RD AVE LLC",
+      "developer": "29SC OCEANA OWNER LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (240 units, $53000000)"
+    },
+    {
+      "area": "az",
+      "city": "PHOENIX",
+      "name": "",
+      "address": "280 W MCKINLEY ST",
+      "lat": null,
+      "lon": null,
+      "units": 108,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2025-05-01",
+      "buyer": "W MCKINLEY INVESTMENT LLC",
+      "developer": "MCKINLEY LAND DEVELOPMENT LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (108 units, $30600000)"
+    },
+    {
+      "area": "az",
+      "city": "PHOENIX",
+      "name": "",
+      "address": "295 E ROOSEVELT ST",
+      "lat": null,
+      "lon": null,
+      "units": 104,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2025-05-01",
+      "buyer": "LINEAR INVESTMENT LLC",
+      "developer": "LINEAR APTS LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (104 units, $28800000)"
+    },
+    {
+      "area": "az",
+      "city": "PHOENIX",
+      "name": "",
+      "address": "222 E ROOSEVELT ST",
+      "lat": null,
+      "lon": null,
+      "units": 111,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2025-05-01",
+      "buyer": "ILUMINATE INVESTMENT LLC",
+      "developer": "ILUMINATE APTS LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (111 units, $30600000)"
+    },
+    {
+      "area": "az",
+      "city": "GILBERT",
+      "name": "",
+      "address": "2120 E RAY RD",
+      "lat": null,
+      "lon": null,
+      "units": 159,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2025-06-01",
+      "buyer": "CPT SAN TAN BTR LLC",
+      "developer": "BUNGALOWS AT SAN TAN VILLAGE SPE LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (159 units, $66100000)"
+    },
+    {
+      "area": "az",
+      "city": "PHOENIX",
+      "name": "",
+      "address": "5145 N 7TH ST",
+      "lat": null,
+      "lon": null,
+      "units": 286,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2025-05-01",
+      "buyer": "WMD SEVENTH LLC",
+      "developer": "UC SEVENTH LP",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (286 units, $34750000)"
+    },
+    {
+      "area": "az",
+      "city": "MESA",
+      "name": "",
+      "address": "2601 E MCKELLIPS RD",
+      "lat": null,
+      "lon": null,
+      "units": 256,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2025-05-01",
+      "buyer": "RED MOUNTAIN REALTY COMPANY LLC",
+      "developer": "RED MOUNTAIN MESA LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (256 units, $52000000)"
+    },
+    {
+      "area": "az",
+      "city": "TEMPE",
+      "name": "",
+      "address": "1250 W GROVE PKWY",
+      "lat": null,
+      "lon": null,
+      "units": 356,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2025-05-01",
+      "buyer": "KW FUND VII GROVE PARKWAY LLC",
+      "developer": "BREIT MF FINISTERRA LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (356 units, $96000000)"
+    },
+    {
+      "area": "az",
+      "city": "GILBERT",
+      "name": "",
+      "address": "1925 S CORONADO RD",
+      "lat": null,
+      "lon": null,
+      "units": 382,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2025-05-01",
+      "buyer": "MFREVF V - REDSTONE LLC",
+      "developer": "BREIT OLYMPUS MF REDSTONE LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (382 units, $118500000)"
+    },
+    {
+      "area": "az",
+      "city": "GLENDALE",
+      "name": "",
+      "address": "4404 W BETHANY HOME RD",
+      "lat": null,
+      "lon": null,
+      "units": 85,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2025-06-01",
+      "buyer": "48 MGG PARK WEST AZ LLC/HIRSCH FAMILY TRUST C",
+      "developer": "LSF GLENDALE 1 LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (85 units, $9500000)"
+    },
+    {
+      "area": "az",
+      "city": "APACHE JUNCTION",
+      "name": "",
+      "address": "850 N MERIDIAN RD",
+      "lat": null,
+      "lon": null,
+      "units": 20,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2025-04-01",
+      "buyer": "AZ MERIDIAN 21 LLC",
+      "developer": "850 N MERIDIAN LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (20 units, $3100000)"
+    },
+    {
+      "area": "az",
+      "city": "GLENDALE",
+      "name": "",
+      "address": "7119 N 67TH AVE",
+      "lat": null,
+      "lon": null,
+      "units": 22,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2025-06-01",
+      "buyer": "2202 ROOSEVELT LLC",
+      "developer": "ROCKIE LEE SUTTLE LIVING TRUST",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (22 units, $976000)"
+    },
+    {
+      "area": "az",
+      "city": "SCOTTSDALE",
+      "name": "",
+      "address": "8555 E RAINTREE DR",
+      "lat": null,
+      "lon": null,
+      "units": 192,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2025-05-01",
+      "buyer": "HUXLEY SCOTTSDALE APARTMENTS LLC",
+      "developer": "PR III/CROW RAINTREE RESIDENTIAL LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (192 units, $76000000)"
+    },
+    {
+      "area": "az",
+      "city": "CHANDLER",
+      "name": "",
+      "address": "875 W PECOS RD",
+      "lat": null,
+      "lon": null,
+      "units": 346,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2025-07-01",
+      "buyer": "FAIRFIELD LAZO LLC",
+      "developer": "SUNROAD LAZO APARTMENTS LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (346 units, $100500000)"
+    },
+    {
+      "area": "az",
+      "city": "GLENDALE",
+      "name": "",
+      "address": "7455 N 95TH AVE",
+      "lat": null,
+      "lon": null,
+      "units": 308,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2025-07-01",
+      "buyer": "FAIRFIELD ZONE LLC",
+      "developer": "SUNROAD COURTNEY VISTA APARTMENTS LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (308 units, $81750000)"
+    },
+    {
+      "area": "az",
+      "city": "GLENDALE",
+      "name": "",
+      "address": "9450 W CABELA DR",
+      "lat": null,
+      "lon": null,
+      "units": 253,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2025-07-01",
+      "buyer": "FAIRFIELD ZONE LUXE LLC",
+      "developer": "SUNROAD METRO AT ZANJERO APARTMENTS LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (253 units, $62550000)"
+    },
+    {
+      "area": "az",
+      "city": "CHANDLER",
+      "name": "",
+      "address": "800 W WILLIS RD",
+      "lat": null,
+      "lon": null,
+      "units": 383,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2025-07-01",
+      "buyer": "FAIRFIELD LAUREL LLC",
+      "developer": "SUNROAD PARCLAND APARTMENTS LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (383 units, $120200000)"
+    },
+    {
+      "area": "az",
+      "city": "PHOENIX",
+      "name": "",
+      "address": "18220 N 68TH ST",
+      "lat": null,
+      "lon": null,
+      "units": 278,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2025-07-01",
+      "buyer": "FAIRFIELD SLATE LLC",
+      "developer": "SUNROAD SLATE APARTMENTS LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (278 units, $97375000)"
+    },
+    {
+      "area": "az",
+      "city": "PHOENIX",
+      "name": "",
+      "address": "4917 E HOLLY ST",
+      "lat": null,
+      "lon": null,
+      "units": 22,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2025-05-01",
+      "buyer": "S&C BELL PROPERTIES LLC",
+      "developer": "HOLLY PAPAGO LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (22 units, $1013650)"
+    },
+    {
+      "area": "az",
+      "city": "PHOENIX",
+      "name": "",
+      "address": "4917 E HOLLY ST",
+      "lat": null,
+      "lon": null,
+      "units": 22,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2025-05-01",
+      "buyer": "S&C BELL PROPERTIES LLC",
+      "developer": "HOLLY PAPAGO LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (22 units, $960300)"
+    },
+    {
+      "area": "az",
+      "city": "PHOENIX",
+      "name": "",
+      "address": "4917 E HOLLY ST",
+      "lat": null,
+      "lon": null,
+      "units": 22,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2025-05-01",
+      "buyer": "S&C BELL PROPERTIES LLC",
+      "developer": "HOLLY PAPAGO LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (22 units, $1076700)"
+    },
+    {
+      "area": "az",
+      "city": "PHOENIX",
+      "name": "",
+      "address": "4917 E HOLLY ST",
+      "lat": null,
+      "lon": null,
+      "units": 22,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2025-05-01",
+      "buyer": "AED3 LLC",
+      "developer": "HOLLY PAPAGO LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (22 units, $1062150)"
+    },
+    {
+      "area": "az",
+      "city": "PHOENIX",
+      "name": "",
+      "address": "1852 N 52ND DR",
+      "lat": null,
+      "lon": null,
+      "units": 24,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2025-05-01",
+      "buyer": "M&R REAL ESTATE VENTURES LLC",
+      "developer": "CASTOR PAPAGO LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (24 units, $4700000)"
+    },
+    {
+      "area": "az",
+      "city": "PHOENIX",
+      "name": "",
+      "address": "4316 N 20TH AVE 3",
+      "lat": null,
+      "lon": null,
+      "units": 21,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2025-05-01",
+      "buyer": "MULBERRY LIVING LIMITED LIABILITY COMPANY",
+      "developer": "MULBERRY PLACE LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (21 units, $3200000)"
+    },
+    {
+      "area": "az",
+      "city": "PHOENIX",
+      "name": "",
+      "address": "4316 N 20TH AVE",
+      "lat": null,
+      "lon": null,
+      "units": 21,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2025-05-01",
+      "buyer": "MULBERRY LIVING LIMITED LIABILITY COMPANY",
+      "developer": "MULBERRY PLACE LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (21 units, $3200000)"
+    },
+    {
+      "area": "az",
+      "city": "PHOENIX",
+      "name": "",
+      "address": "1012 E WASHINGTON ST 1112",
+      "lat": null,
+      "lon": null,
+      "units": 140,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2025-07-01",
+      "buyer": "CR MASON OLIVER COMMUNITIES LLC",
+      "developer": "KV MASON OLIVER APARTMENTS LP",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (140 units, $62300000)"
+    },
+    {
+      "area": "az",
+      "city": "PHOENIX",
+      "name": "",
+      "address": "11 S 12TH ST",
+      "lat": null,
+      "lon": null,
+      "units": 152,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2025-07-01",
+      "buyer": "CR MASON OLIVER COMMUNITIES LLC",
+      "developer": "KV MASON OLIVER APARTMENTS LP",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (152 units, $62300000)"
+    },
+    {
+      "area": "az",
+      "city": "MESA",
+      "name": "",
+      "address": "1045 S SAN JOSE",
+      "lat": null,
+      "lon": null,
+      "units": 112,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2025-07-01",
+      "buyer": "FLATS MESA OWNER LLC",
+      "developer": "DISTRICT FLATS OWNER LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (112 units, $16100000)"
+    },
+    {
+      "area": "az",
+      "city": "TEMPE",
+      "name": "",
+      "address": "1975 E APACHE BLVD",
+      "lat": null,
+      "lon": null,
+      "units": 84,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2025-05-01",
+      "buyer": "APACHE LA PALOMA LLC",
+      "developer": "1975 E APACHE DRIVE LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (84 units, $13000000)"
+    },
+    {
+      "area": "az",
+      "city": "CHANDLER",
+      "name": "",
+      "address": "4909 W JOSHUA BLVD",
+      "lat": null,
+      "lon": null,
+      "units": 396,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2025-08-01",
+      "buyer": "COUNTRY BROOK PARTNERS LLC",
+      "developer": "MG COUNTRY BROOK APARTMENTS LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (396 units, $109500000)"
+    },
+    {
+      "area": "az",
+      "city": "CHANDLER",
+      "name": "",
+      "address": "601 N RITA LN",
+      "lat": null,
+      "lon": null,
+      "units": 396,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2025-08-01",
+      "buyer": "COUNTRY BROOK PARTNERS LLC",
+      "developer": "MG COUNTRY BROOK APARTMENTS LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (396 units, $109500000)"
+    },
+    {
+      "area": "az",
+      "city": "SCOTTSDALE",
+      "name": "",
+      "address": "15608 N 71ST ST",
+      "lat": null,
+      "lon": null,
+      "units": 276,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2025-08-01",
+      "buyer": "FAIRFIELD NINES LLC",
+      "developer": "SUNROAD KIERLAND APARTMENTS LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (276 units, $115750000)"
+    },
+    {
+      "area": "az",
+      "city": "PHOENIX",
+      "name": "",
+      "address": "11025 S 51ST ST",
+      "lat": null,
+      "lon": null,
+      "units": 183,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2025-05-01",
+      "buyer": "TRS SERAFINA APARTMENTS LLC/TRS SERAFINA BUTL",
+      "developer": "SERAFINA LP",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (183 units, $39750000)"
+    },
+    {
+      "area": "az",
+      "city": "PHOENIX",
+      "name": "",
+      "address": "11200 S 50TH ST",
+      "lat": null,
+      "lon": null,
+      "units": 183,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2025-05-01",
+      "buyer": "TRS SERAFINA APARTMENTS LLC/TRS SERAFINA BUTL",
+      "developer": "SERAFINA LP",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (183 units, $39750000)"
+    },
+    {
+      "area": "az",
+      "city": "Phoenix",
+      "name": "",
+      "address": "600 N 53RD ST",
+      "lat": null,
+      "lon": null,
+      "units": 49,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2025-05-01",
+      "buyer": "VILLA FIFTY2 OWNER LLC",
+      "developer": "VILLA FIFTY2 LP",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (49 units, $18250000)"
+    },
+    {
+      "area": "az",
+      "city": "PHOENIX",
+      "name": "",
+      "address": "749 E MARYLAND AVE",
+      "lat": null,
+      "lon": null,
+      "units": 78,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2025-07-01",
+      "buyer": "VENTURE ON MARYLAND LLC",
+      "developer": "MARYLAND GREEN MULTIFAMILY LLC/MARYLAND GREEN",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (78 units, $10700000)"
+    },
+    {
+      "area": "az",
+      "city": "GILBERT",
+      "name": "",
+      "address": "1725 S CORONADO RD",
+      "lat": null,
+      "lon": null,
+      "units": 366,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2025-08-01",
+      "buyer": "MFREVF V - VISTARA LLC",
+      "developer": "BREIT OLYMPUS MF VISTARA LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (366 units, $115250000)"
+    },
+    {
+      "area": "az",
+      "city": "PHOENIX",
+      "name": "",
+      "address": "948 E DEVONSHIRE AVE",
+      "lat": null,
+      "lon": null,
+      "units": 104,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2025-08-01",
+      "buyer": "MIDTOWN ON DEVONSHIRE LLC",
+      "developer": "FRINGE CAPITAL PARTNERS ACQUISITION COMPANY 1",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (104 units, $21250000)"
+    },
+    {
+      "area": "az",
+      "city": "CHANDLER",
+      "name": "",
+      "address": "1283 W PARKLANE BLVD",
+      "lat": null,
+      "lon": null,
+      "units": 180,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2025-05-01",
+      "buyer": "TA PARKLANE COMMONS FEE OWNER LLC",
+      "developer": "PARK TOWER CHANDLER LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (180 units, $40100000)"
+    },
+    {
+      "area": "az",
+      "city": "MESA",
+      "name": "",
+      "address": "830 N ALMA SCHOOL RD",
+      "lat": null,
+      "lon": null,
+      "units": 44,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2025-04-01",
+      "buyer": "830 RIO SALADO LLC",
+      "developer": "830 PIEDMONT LLC/3025 N 36TH STREET LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (44 units, $9950000)"
+    },
+    {
+      "area": "az",
+      "city": "PHOENIX",
+      "name": "",
+      "address": "4802 N 19TH AVE",
+      "lat": null,
+      "lon": null,
+      "units": 236,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2025-05-01",
+      "buyer": "NORTH 19TH AVE TNC LLC",
+      "developer": "BRSP U19 OWNER LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (236 units, $36060000)"
+    },
+    {
+      "area": "az",
+      "city": "GLENDALE",
+      "name": "",
+      "address": "7959 N 53RD AVE",
+      "lat": null,
+      "lon": null,
+      "units": 71,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2025-06-01",
+      "buyer": "NWI AC OWNER LLC",
+      "developer": "SHELLE COMPANY LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (71 units, $23450000)"
+    },
+    {
+      "area": "az",
+      "city": "MESA",
+      "name": "",
+      "address": "132 E BROWN RD",
+      "lat": null,
+      "lon": null,
+      "units": 154,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2025-07-01",
+      "buyer": "RISE MOUNTAIN RIDGE LLC/NAMO EQUITY PARTNERS",
+      "developer": "EMP INVESTMENTS 2 LLC/TAMWOOD LIMITED PARTNER",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (154 units, $24250000)"
+    },
+    {
+      "area": "az",
+      "city": "PHOENIX",
+      "name": "",
+      "address": "5407 W GLENROSA AVE",
+      "lat": null,
+      "lon": null,
+      "units": 36,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2025-07-01",
+      "buyer": "PARKWAY APTS LLC",
+      "developer": "DORN PROPERTIES LLC/FAR WESTERN PROPERTIES LL",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (36 units, $4500000)"
+    },
+    {
+      "area": "az",
+      "city": "SCOTTSDALE",
+      "name": "",
+      "address": "6901 E MAIN ST",
+      "lat": null,
+      "lon": null,
+      "units": 121,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2025-10-01",
+      "buyer": "SCOTTSDALE OWNER LLC/GRE VIBE LLC",
+      "developer": "MAIN STREET SCOTTSDALE LLLP",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (121 units, $66100000)"
+    },
+    {
+      "area": "az",
+      "city": "PHOENIX",
+      "name": "",
+      "address": "3802 N 27TH ST",
+      "lat": null,
+      "lon": null,
+      "units": 138,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2024-12-01",
+      "buyer": "MORAN TIC LLC",
+      "developer": "MORAN TIC LLC/ROBSON 27TH STREET LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (138 units, $5150000)"
+    },
+    {
+      "area": "az",
+      "city": "MESA",
+      "name": "",
+      "address": "151 E 1ST ST",
+      "lat": null,
+      "lon": null,
+      "units": 210,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2025-07-01",
+      "buyer": "CIMARRON INVESTMENT PARTNERS I LLC/CIMARRON I",
+      "developer": "CIMARRON TWO LLC/CIMARRON ONE LLC/EMP INVESTM",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (210 units, $33000000)"
+    },
+    {
+      "area": "az",
+      "city": "CHANDLER",
+      "name": "",
+      "address": "2300 W PECOS RD",
+      "lat": null,
+      "lon": null,
+      "units": 163,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2025-08-01",
+      "buyer": "MSH CHANDLER LLC",
+      "developer": "SRGMF III PECOS ROAD CHANDLER LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (163 units, $46000000)"
+    },
+    {
+      "area": "az",
+      "city": "GLENDALE",
+      "name": "",
+      "address": "4441 W BETHANY HOME RD",
+      "lat": null,
+      "lon": null,
+      "units": 164,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2025-09-01",
+      "buyer": "RN BETHANY LLC",
+      "developer": "WREF SUMMER LP",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (164 units, $20000000)"
+    },
+    {
+      "area": "az",
+      "city": "PHOENIX",
+      "name": "",
+      "address": "6730 N 17TH AVE",
+      "lat": null,
+      "lon": null,
+      "units": 21,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2025-08-01",
+      "buyer": "WLC HOLDINGS LLC/KAT HOLDINGS LLC",
+      "developer": "ACI-FORTE LLLP",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (21 units, $3525000)"
+    },
+    {
+      "area": "az",
+      "city": "SCOTTSDALE",
+      "name": "",
+      "address": "15826 N SCOTTSDALE RD",
+      "lat": null,
+      "lon": null,
+      "units": 266,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2025-10-01",
+      "buyer": "SCP II 15826 SCOTTSDALE RD LLC",
+      "developer": "KIERLAND SDL LP",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (266 units, $110250000)"
+    },
+    {
+      "area": "az",
+      "city": "MESA",
+      "name": "",
+      "address": "157 S ROOSEVELT RD",
+      "lat": null,
+      "lon": null,
+      "units": 336,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2025-07-01",
+      "buyer": "IPG CORAL POINT OWNER LLC",
+      "developer": "LWH CORAL POINT APARTMENTS LP",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (336 units, $59600000)"
+    },
+    {
+      "area": "az",
+      "city": "CHANDLER",
+      "name": "",
+      "address": "2121 N GRACE BLVD",
+      "lat": null,
+      "lon": null,
+      "units": 194,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2025-11-01",
+      "buyer": "CHANDLER BELLA GRACE LLC/CHANDLER BELLA GRACE",
+      "developer": "CHANDLER MULTIFAMILY DST",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (194 units, $69000000)"
+    },
+    {
+      "area": "az",
+      "city": "PHOENIX",
+      "name": "",
+      "address": "6201 N 16TH ST",
+      "lat": null,
+      "lon": null,
+      "units": 92,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2025-11-01",
+      "buyer": "SORA ON ROSE APARTMENTS LLC",
+      "developer": "N 16TH ST LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (92 units, $19000000)"
+    },
+    {
+      "area": "az",
+      "city": "PHOENIX",
+      "name": "",
+      "address": "14014 N 32ND ST",
+      "lat": null,
+      "lon": null,
+      "units": 116,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2025-11-01",
+      "buyer": "VILLAGE SQUARE OWNER LLC",
+      "developer": "VILLAGE SQUARE HOUSING INVESTORS LP",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (116 units, $12300000)"
+    },
+    {
+      "area": "az",
+      "city": "PHOENIX",
+      "name": "",
+      "address": "901 E VAN BUREN ST",
+      "lat": null,
+      "lon": null,
+      "units": 332,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2025-11-01",
+      "buyer": "CR KONRAD COMMUNITIES LLC/KONRAD KFT LLC",
+      "developer": "CAMDEN USA INC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (332 units, $77000000)"
+    },
+    {
+      "area": "az",
+      "city": "PHOENIX",
+      "name": "",
+      "address": "4231 N 27TH ST",
+      "lat": null,
+      "lon": null,
+      "units": 20,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2025-09-01",
+      "buyer": "WLC HOLDINGS LLC/KAT HOLDINGS LLC",
+      "developer": "MANSFIELD JEFFERY SCOTT",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (20 units, $4700000)"
+    },
+    {
+      "area": "az",
+      "city": "PHOENIX",
+      "name": "",
+      "address": "4231 N 27TH ST",
+      "lat": null,
+      "lon": null,
+      "units": 20,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2025-09-01",
+      "buyer": "WLC HOLDINGS LLC/KAT HOLDINGS LLC",
+      "developer": "MANSFIELD JEFFERY SCOTT",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (20 units, $4700000)"
+    },
+    {
+      "area": "az",
+      "city": "TEMPE",
+      "name": "",
+      "address": "909 S MCCLINTOCK DR",
+      "lat": null,
+      "lon": null,
+      "units": 56,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2025-07-01",
+      "buyer": "AZARA TEMPE HOLDINGS LLC",
+      "developer": "TMK INVESTMENTS LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (56 units, $10400000)"
+    },
+    {
+      "area": "az",
+      "city": "TEMPE",
+      "name": "",
+      "address": "1317 S TERRACE RD",
+      "lat": null,
+      "lon": null,
+      "units": 285,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2025-10-01",
+      "buyer": "SP CARDINAL TEMPE OWNER LLC",
+      "developer": "CD PARK7 TEMPE OWNER LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (285 units, $125000008)"
+    },
+    {
+      "area": "az",
+      "city": "TEMPE",
+      "name": "",
+      "address": "1317 S TERRACE RD",
+      "lat": null,
+      "lon": null,
+      "units": 285,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2025-10-01",
+      "buyer": "SP CARDINAL TEMPE OWNER LLC",
+      "developer": "CD PARK7 TEMPE OWNER LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (285 units, $125000008)"
+    },
+    {
+      "area": "az",
+      "city": "PHOENIX",
+      "name": "",
+      "address": "835 N 6TH AVE",
+      "lat": null,
+      "lon": null,
+      "units": 32,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2025-11-01",
+      "buyer": "RC OWNER LLC",
+      "developer": "ROOSEVELT HISTORIC HOUSING LP",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (32 units, $4675000)"
+    },
+    {
+      "area": "az",
+      "city": "PHOENIX",
+      "name": "",
+      "address": "4848 E ROOSEVELT ST",
+      "lat": null,
+      "lon": null,
+      "units": 368,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2025-12-01",
+      "buyer": "GL SAGELEAF RED MOUNTAIN LLC/GL RED MOUNTAIN",
+      "developer": "ROOSEVELT AZ PARTNERS LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (368 units, $88000000)"
+    },
+    {
+      "area": "az",
+      "city": "MESA",
+      "name": "",
+      "address": "1505 N COUNTRY CLUB DR",
+      "lat": null,
+      "lon": null,
+      "units": 92,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2025-08-01",
+      "buyer": "IPG NCC OWNER LLC",
+      "developer": "NCC INVESTMENTS LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (92 units, $16335000)"
+    },
+    {
+      "area": "az",
+      "city": "PHOENIX",
+      "name": "",
+      "address": "3875 W DOBBINS RD",
+      "lat": null,
+      "lon": null,
+      "units": 360,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2025-12-01",
+      "buyer": "RG LIV LAVEEN LLC/ETAL",
+      "developer": "RG LAVEEN MEMBER LLC/RG LIV LAVEEN LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (360 units, $52477465)"
+    },
+    {
+      "area": "az",
+      "city": "TEMPE",
+      "name": "",
+      "address": "1890 S COUNTRY CLUB",
+      "lat": null,
+      "lon": null,
+      "units": 90,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2025-11-01",
+      "buyer": "CVG V ON BROADWAY LLC",
+      "developer": "VIRTUA BROADWAY TEMPE LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (90 units, $21600000)"
+    },
+    {
+      "area": "az",
+      "city": "PHOENIX",
+      "name": "",
+      "address": "3940 W MCDOWELL RD",
+      "lat": null,
+      "lon": null,
+      "units": 41,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2025-12-01",
+      "buyer": "RCS OWNER LLC",
+      "developer": "RANCHO CIELO SENIOR APARTMENTS LP",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (41 units, $3800000)"
+    },
+    {
+      "area": "az",
+      "city": "MESA",
+      "name": "",
+      "address": "708 N COUNTRY CLUB DR",
+      "lat": null,
+      "lon": null,
+      "units": 92,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2025-11-01",
+      "buyer": "MARK AT 87 LLC",
+      "developer": "RED KITE VENTURES LLC/ETAL",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (92 units, $10250000)"
+    },
+    {
+      "area": "az",
+      "city": "PHOENIX",
+      "name": "",
+      "address": "2402 W DEVONSHIRE AVE",
+      "lat": null,
+      "lon": null,
+      "units": 33,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2025-08-01",
+      "buyer": "WLC HOLDINGS LLC/KAT HOLDINGS LLC",
+      "developer": "SHINEON OASIS PROPERTIES LLC/J&J REALTY PARTN",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (33 units, $6025000)"
+    },
+    {
+      "area": "az",
+      "city": "PHOENIX",
+      "name": "",
+      "address": "3722 E MCDOWELL RD",
+      "lat": null,
+      "lon": null,
+      "units": 50,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2025-09-01",
+      "buyer": "PAPAGO VIEW APARTMENT LLC",
+      "developer": "AZ PAPAGO LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (50 units, $6625000)"
+    },
+    {
+      "area": "az",
+      "city": "PHOENIX",
+      "name": "",
+      "address": "2625 E CAMELBACK RD",
+      "lat": null,
+      "lon": null,
+      "units": 270,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2025-12-01",
+      "buyer": "BC PROPERTY OWNER LLC",
+      "developer": "HART CAMELBACK LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (270 units, $97350000)"
+    },
+    {
+      "area": "az",
+      "city": "CHANDLER",
+      "name": "",
+      "address": "555 S GALLERIA",
+      "lat": null,
+      "lon": null,
+      "units": 335,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2025-12-01",
+      "buyer": "SCP II 555 S GALLERIA WAY LLC",
+      "developer": "FASHION CENTER ACQUISITION LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (335 units, $109000000)"
+    },
+    {
+      "area": "az",
+      "city": "Maricopa County",
+      "name": "",
+      "address": "",
+      "lat": null,
+      "lon": null,
+      "units": 44,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2025-09-01",
+      "buyer": "1806 EAST CONCORDA DRIVE LLC",
+      "developer": "DONOVAN JOHN H JR/CHER",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (44 units, $7400000)"
+    },
+    {
+      "area": "az",
+      "city": "TEMPE",
+      "name": "",
+      "address": "1805 E CONCORDA DR",
+      "lat": null,
+      "lon": null,
+      "units": 44,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2025-09-01",
+      "buyer": "1806 EAST CONCORDA DRIVE LLC",
+      "developer": "DONOVAN JOHN H JR/CHER",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (44 units, $7400000)"
+    },
+    {
+      "area": "az",
+      "city": "MESA",
+      "name": "",
+      "address": "1055 W BASELINE RD",
+      "lat": null,
+      "lon": null,
+      "units": 200,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2026-01-01",
+      "buyer": "PHOENIX 2026 ONE PARTNERS LLC",
+      "developer": "RW WATERFORD LLC/REL WATERFORD LLC/ETAL",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (200 units, $42000000)"
+    },
+    {
+      "area": "az",
+      "city": "PHOENIX",
+      "name": "",
+      "address": "1720 E CAMELBACK RD",
+      "lat": null,
+      "lon": null,
+      "units": 215,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2025-10-01",
+      "buyer": "ECHO BILTMORE APARTMENTS SPE LLC",
+      "developer": "ALTA BLUEWATER LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (215 units, $71300000)"
+    },
+    {
+      "area": "az",
+      "city": "SURPRISE",
+      "name": "",
+      "address": "16485 N STADIUM WAY",
+      "lat": null,
+      "lon": null,
+      "units": 382,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2026-02-01",
+      "buyer": "PX STADIUM VILLAGE OWNER LLC",
+      "developer": "BREIT MF STADIUM VILLAGE LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (382 units, $87710000)"
+    },
+    {
+      "area": "az",
+      "city": "SURPRISE",
+      "name": "",
+      "address": "16485 N STADIUM WAY",
+      "lat": null,
+      "lon": null,
+      "units": 382,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2026-02-01",
+      "buyer": "PX STADIUM VILLAGE OWNER LLC",
+      "developer": "BREIT MF STADIUM VILLAGE LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (382 units, $87710000)"
+    },
+    {
+      "area": "az",
+      "city": "TEMPE",
+      "name": "",
+      "address": "577 E BASELINE RD",
+      "lat": null,
+      "lon": null,
+      "units": 224,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2026-02-01",
+      "buyer": "RW EASTGATE LLC/REL EASTGATE LLC/WJC EASTGATE",
+      "developer": "RW EASTGATE LLC/WJC EASTGATE LLC/REL EASTGATE",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (224 units, $3695921)"
+    },
+    {
+      "area": "az",
+      "city": "Maricopa County",
+      "name": "",
+      "address": "",
+      "lat": null,
+      "lon": null,
+      "units": 36,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2025-04-01",
+      "buyer": "SONORAN TOWNHOMES TBBG LLC",
+      "developer": "3426 UNIVERSITY LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (36 units, $13390000)"
+    },
+    {
+      "area": "az",
+      "city": "PHOENIX",
+      "name": "",
+      "address": "302 E MONTE VISTA RD",
+      "lat": null,
+      "lon": null,
+      "units": 60,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2025-08-01",
+      "buyer": "STARLIGHT REALTY GROUP LLC",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (60 units, $11500000)"
+    },
+    {
+      "area": "az",
+      "city": "WICKENBURG",
+      "name": "",
+      "address": "278 S TEGNER ST",
+      "lat": null,
+      "lon": null,
+      "units": 31,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2025-11-01",
+      "buyer": "KKN WICKENBURG LLC",
+      "developer": "KOKOPELLI OWNER LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (31 units, $4200000)"
+    },
+    {
+      "area": "az",
+      "city": "WICKENBURG",
+      "name": "",
+      "address": "560 N PENN LN",
+      "lat": null,
+      "lon": null,
+      "units": 48,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2025-11-01",
+      "buyer": "TSN WICKENBURG LLC",
+      "developer": "BRADSHAW OWNER LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (48 units, $7300000)"
+    },
+    {
+      "area": "az",
+      "city": "PHOENIX",
+      "name": "",
+      "address": "2747 E CAMELBACK RD",
+      "lat": null,
+      "lon": null,
+      "units": 253,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2026-03-01",
+      "buyer": "2727 LLC",
+      "developer": "CAMELBACK AZ PARTNERS LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (253 units, $125000000)"
+    },
+    {
+      "area": "az",
+      "city": "BUCKEYE",
+      "name": "",
+      "address": "180 N APACHE RD 17",
+      "lat": null,
+      "lon": null,
+      "units": 24,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2026-01-01",
+      "buyer": "3500 HILLSIDE LLC",
+      "developer": "180 APACHE OWNER LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (24 units, $4400000)"
+    },
+    {
+      "area": "az",
+      "city": "BUCKEYE",
+      "name": "",
+      "address": "180 N APACHE RD 13",
+      "lat": null,
+      "lon": null,
+      "units": 24,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2026-01-01",
+      "buyer": "3500 HILLSIDE LLC",
+      "developer": "180 APACHE OWNER LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (24 units, $4400000)"
+    },
+    {
+      "area": "az",
+      "city": "BUCKEYE",
+      "name": "",
+      "address": "180 N APACHE RD 1",
+      "lat": null,
+      "lon": null,
+      "units": 24,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2026-01-01",
+      "buyer": "3500 HILLSIDE LLC",
+      "developer": "180 APACHE OWNER LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (24 units, $4400000)"
+    },
+    {
+      "area": "az",
+      "city": "BUCKEYE",
+      "name": "",
+      "address": "180 N APACHE RD 5",
+      "lat": null,
+      "lon": null,
+      "units": 24,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2026-01-01",
+      "buyer": "3500 HILLSIDE LLC",
+      "developer": "180 APACHE OWNER LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (24 units, $4400000)"
+    },
+    {
+      "area": "az",
+      "city": "BUCKEYE",
+      "name": "",
+      "address": "180 N APACHE RD 9",
+      "lat": null,
+      "lon": null,
+      "units": 24,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2026-01-01",
+      "buyer": "3500 HILLSIDE LLC",
+      "developer": "180 APACHE OWNER LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (24 units, $4400000)"
+    },
+    {
+      "area": "az",
+      "city": "BUCKEYE",
+      "name": "",
+      "address": "180 N APACHE RD 21",
+      "lat": null,
+      "lon": null,
+      "units": 24,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2026-01-01",
+      "buyer": "3500 HILLSIDE LLC",
+      "developer": "180 APACHE OWNER LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (24 units, $4400000)"
+    },
+    {
+      "area": "az",
+      "city": "PHOENIX",
+      "name": "",
+      "address": "1735 W CORTEZ ST",
+      "lat": null,
+      "lon": null,
+      "units": 26,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2025-12-01",
+      "buyer": "RRRDT PROPERTIES LLC",
+      "developer": "M3 CAPITAL GROUP ACQUISITION COMPANY 4 LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (26 units, $3900000)"
+    },
+    {
+      "area": "az",
+      "city": "PHOENIX",
+      "name": "",
+      "address": "25 E EVA ST",
+      "lat": null,
+      "lon": null,
+      "units": 22,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2026-02-01",
+      "buyer": "TROVIL SIERRA LLC",
+      "developer": "B & H ENTERPRISES I LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (22 units, $2825000)"
+    },
+    {
+      "area": "az",
+      "city": "Maricopa County",
+      "name": "",
+      "address": "",
+      "lat": null,
+      "lon": null,
+      "units": 24,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2026-01-01",
+      "buyer": "BENDER-ARCADIA 24 LLC",
+      "developer": "3622 N 38TH STREET LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (24 units, $5203000)"
+    },
+    {
+      "area": "az",
+      "city": "GLENDALE",
+      "name": "",
+      "address": "18330 N 79TH AVE",
+      "lat": null,
+      "lon": null,
+      "units": 412,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2026-04-01",
+      "buyer": "NALS ARROWHEAD SUMMIT-109 LP",
+      "developer": "18330 N 79TH AZ OWNER LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (412 units, $101352000)"
+    },
+    {
+      "area": "az",
+      "city": "GLENDALE",
+      "name": "",
+      "address": "18330 N 79TH AVE",
+      "lat": null,
+      "lon": null,
+      "units": 412,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2026-04-01",
+      "buyer": "NALS ARROWHEAD SUMMIT-109 LP",
+      "developer": "18330 N 79TH AZ OWNER LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (412 units, $101352000)"
+    },
+    {
+      "area": "az",
+      "city": "Maricopa County",
+      "name": "",
+      "address": "",
+      "lat": null,
+      "lon": null,
+      "units": 140,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2026-04-01",
+      "buyer": "MSFR GRANDSTONE OWNER LLC",
+      "developer": "WATERMARK AT PEORIA AZ LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (140 units, $45850000)"
+    },
+    {
+      "area": "az",
+      "city": "PHOENIX",
+      "name": "",
+      "address": "4343 W THOMAS RD",
+      "lat": null,
+      "lon": null,
+      "units": 152,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2025-04-01",
+      "buyer": "GRANVILLE SENIOR LP",
+      "developer": "URBAN LEAGUE MANOR ASSOCIATES LIMITED PARTNER",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (152 units, $22500000)"
+    },
+    {
+      "area": "az",
+      "city": "Mesa",
+      "name": "",
+      "address": "2950 N RECKER RD",
+      "lat": null,
+      "lon": null,
+      "units": 339,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2026-05-01",
+      "buyer": "LONGBOW APARTMENTS SPE LLC/LBNB APARTMENTS SP",
+      "developer": "DHIC-LONGBOW LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (339 units, $95250000)"
+    },
+    {
+      "area": "az",
+      "city": "Maricopa County",
+      "name": "",
+      "address": "",
+      "lat": null,
+      "lon": null,
+      "units": 290,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2026-05-01",
+      "buyer": "KIERLAND PARTNERS LLC",
+      "developer": "LMV II KIERLAND HOLDINGS LP",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (290 units, $0)"
+    },
+    {
+      "area": "az",
+      "city": "TEMPE",
+      "name": "",
+      "address": "1835 E DON CARLOS AVE",
+      "lat": null,
+      "lon": null,
+      "units": 39,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2026-01-01",
+      "buyer": "RED SEA GROVE HOLDINGS LLC",
+      "developer": "KELLOGG HOLDINGS LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (39 units, $6150000)"
+    },
+    {
+      "area": "az",
+      "city": "Gilbert",
+      "name": "",
+      "address": "80 N MCQUEEN RD",
+      "lat": null,
+      "lon": null,
+      "units": 278,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2026-05-01",
+      "buyer": "CPRF 80 NORTH MCQUEEN ROAD LLC",
+      "developer": "CRP/WP ALTA ELLIOT IX OWNER LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (278 units, $81600000)"
+    },
+    {
+      "area": "az",
+      "city": "TEMPE",
+      "name": "",
+      "address": "710 S HARDY DR",
+      "lat": null,
+      "lon": null,
+      "units": 239,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2026-04-01",
+      "buyer": "710 S HARDY DRIVE LLC",
+      "developer": "STUDIO 710 PARTNERS LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (239 units, $32000000)"
+    },
+    {
+      "area": "az",
+      "city": "TEMPE",
+      "name": "",
+      "address": "710 S HARDY DR",
+      "lat": null,
+      "lon": null,
+      "units": 239,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2026-04-01",
+      "buyer": "710 S HARDY DRIVE LLC",
+      "developer": "STUDIO 710 PARTNERS LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (239 units, $32000000)"
+    },
+    {
+      "area": "az",
+      "city": "Phoenix",
+      "name": "",
+      "address": "5727 N  7TH STREET ST",
+      "lat": null,
+      "lon": null,
+      "units": 258,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2026-06-01",
+      "buyer": "SEVENTH STREET OWNER LLC",
+      "developer": "CRP/AR 7TH STREET OWNER LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (258 units, $81375000)"
+    },
+    {
+      "area": "az",
+      "city": "PHOENIX",
+      "name": "",
+      "address": "4620 W MCDOWELL RD",
+      "lat": null,
+      "lon": null,
+      "units": 274,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2026-06-01",
+      "buyer": "MCDOWELL 4620 LLC",
+      "developer": "TIDES ON MCDOWELL OWNER LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (274 units, $41000000)"
+    },
+    {
+      "area": "az",
+      "city": "PHOENIX",
+      "name": "",
+      "address": "17840 N BLACK CANYON HWY",
+      "lat": null,
+      "lon": null,
+      "units": 108,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2026-06-01",
+      "buyer": "RISE NORTHERN LLC/RISE NORTHERN WENZEL 1031 L",
+      "developer": "ORBIS SOLANO PINES LLC/OSDIP SOLANO PINES LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (108 units, $21700000)"
+    },
+    {
+      "area": "az",
+      "city": "GILBERT",
+      "name": "",
+      "address": "1530 S HIGLEY RD",
+      "lat": null,
+      "lon": null,
+      "units": 320,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2026-06-01",
+      "buyer": "CAMDEN GILBERT LLC",
+      "developer": "EPICENTER RESIDENTIAL OWNER",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (320 units, $124500000)"
+    },
+    {
+      "area": "az",
+      "city": "PHOENIX",
+      "name": "",
+      "address": "4747 N 99TH AVE",
+      "lat": null,
+      "lon": null,
+      "units": 334,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2026-01-01",
+      "buyer": "MERRICK EP LLC/MERRICK ON CAMELBACK LLC/MERRI",
+      "developer": "BUNGALOWS ON CAMELBACK SPE LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (334 units, $112500000)"
+    },
+    {
+      "area": "az",
+      "city": "PHOENIX",
+      "name": "",
+      "address": "5343 E TAYLOR ST",
+      "lat": null,
+      "lon": null,
+      "units": 47,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2026-04-01",
+      "buyer": "LGL CAPITAL ON PAPAGO FAIRWAYS LLC",
+      "developer": "CASTOR FAIRWAYS LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (47 units, $8600000)"
+    },
+    {
+      "area": "az",
+      "city": "PHOENIX",
+      "name": "",
+      "address": "1 W CAMPBELL AVE",
+      "lat": null,
+      "lon": null,
+      "units": 254,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2026-07-01",
+      "buyer": "1 WEST CAMPBELL AVENUE LLC",
+      "developer": "PAVILIONS ON CENTRAL OWNER LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (254 units, $73650000)"
+    },
+    {
+      "area": "az",
+      "city": "TEMPE",
+      "name": "",
+      "address": "1855 E DON CARLOS AVE",
+      "lat": null,
+      "lon": null,
+      "units": 56,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2026-04-01",
+      "buyer": "STARMARK ARIZONA VIII LLC",
+      "developer": "ELEMENT AT TEMPE NORTH LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (56 units, $10500000)"
+    },
+    {
+      "area": "az",
+      "city": "SCOTTSDALE",
+      "name": "",
+      "address": "3015 N HAYDEN RD",
+      "lat": null,
+      "lon": null,
+      "units": 182,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2026-04-01",
+      "buyer": "HAYDEN PROPERTY OWNER LLC/HAYDEN PROPERTY OWN",
+      "developer": "HAYDEN PARK APARTMENTS LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (182 units, $42000000)"
+    },
+    {
+      "area": "az",
+      "city": "MESA",
+      "name": "",
+      "address": "2354 W UNIVERSITY DR",
+      "lat": null,
+      "lon": null,
+      "units": 266,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2026-06-01",
+      "buyer": "CR AVIA 266 COMMUNITIES LLC",
+      "developer": "GC AVIA LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (266 units, $52500000)"
+    },
+    {
+      "area": "az",
+      "city": "PHOENIX",
+      "name": "",
+      "address": "4030 N 44TH AVE",
+      "lat": null,
+      "lon": null,
+      "units": 256,
+      "stage": "sold",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "2026-08-01",
+      "buyer": "LEGACY MULTIFAMILY HOLDINGS LLC",
+      "developer": "4030 PHOENIX APARTMENTS LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "sales_file": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+      },
+      "sources": [
+        {
+          "fact": "sale_date",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/f3484c72a938497286adc4e5de7e9963?f=json"
+        },
+        {
+          "fact": "units",
+          "url": "https://www.arcgis.com/sharing/rest/content/items/936bbba512bf4c368618cc6e79e64668?f=json"
+        }
+      ],
+      "why": "recently sold apartment property (256 units, $22600000)"
+    }
+  ]
+}

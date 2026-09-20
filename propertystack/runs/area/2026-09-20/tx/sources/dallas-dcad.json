@@ -1,0 +1,10 @@
+{
+  "state": "tx",
+  "recipe": "dallas-dcad.json",
+  "date": "2026-09-20",
+  "status": "failed",
+  "count": 0,
+  "attempts": 2,
+  "note": "attempt 1: SourceFetchError: InvalidURL: URL can't contain control characters. '/ViewPDFs.aspx?type=3&id=\\\\\\\\DCAD.ORG\\\\WEB\\\\WEBDATA\\\\WEBFORMS\\\\DATA PRODUCTS\\\\DCAD2026_CURRENT.ZIP' (found at least ' '); attempt 2: SourceFetchError: InvalidURL: URL can't contain control characters. '/ViewPDFs.aspx?type=3&id=\\\\\\\\DCAD.ORG\\\\WEB\\\\WEBDATA\\\\WEBFORMS\\\\DATA PRODUCTS\\\\DCAD2026_CURRENT.ZIP' (found at least ' ')",
+  "records": []
+}

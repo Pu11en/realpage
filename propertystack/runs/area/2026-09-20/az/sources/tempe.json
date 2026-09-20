@@ -1,0 +1,319 @@
+{
+  "state": "az",
+  "recipe": "tempe.json",
+  "date": "2026-09-20",
+  "status": "worked",
+  "count": 11,
+  "attempts": 1,
+  "note": "",
+  "records": [
+    {
+      "area": "az",
+      "city": "Tempe",
+      "name": "REVELRY [NEW MIXED-USE] - *LP* / Phased Construction - Type D",
+      "address": "965 E UNIVERSITY DR",
+      "lat": null,
+      "lon": null,
+      "units": 533,
+      "stage": "permitted",
+      "permit_date": "2026-08-07",
+      "opening_date": "",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services.arcgis.com/lQySeXwbBg53XWDi/arcgis/rest/services/building_permits/FeatureServer/0/query?where=HousingUnits%3E%3D20&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssuedDate+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services.arcgis.com/lQySeXwbBg53XWDi/arcgis/rest/services/building_permits/FeatureServer/0/query?where=HousingUnits%3E%3D20&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssuedDate+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "az",
+      "city": "Tempe",
+      "name": "AVENUE 5/TROVITA RIO",
+      "address": "701 W RIO SALADO PKWY",
+      "lat": null,
+      "lon": null,
+      "units": 206,
+      "stage": "permitted",
+      "permit_date": "2026-05-15",
+      "opening_date": "",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services.arcgis.com/lQySeXwbBg53XWDi/arcgis/rest/services/building_permits/FeatureServer/0/query?where=HousingUnits%3E%3D20&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssuedDate+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services.arcgis.com/lQySeXwbBg53XWDi/arcgis/rest/services/building_permits/FeatureServer/0/query?where=HousingUnits%3E%3D20&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssuedDate+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "az",
+      "city": "Tempe",
+      "name": "FRIENDSHIP VILLAGE - PHASE 3",
+      "address": "2645 E SOUTHERN AVE",
+      "lat": null,
+      "lon": null,
+      "units": 71,
+      "stage": "permitted",
+      "permit_date": "2025-12-03",
+      "opening_date": "",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services.arcgis.com/lQySeXwbBg53XWDi/arcgis/rest/services/building_permits/FeatureServer/0/query?where=HousingUnits%3E%3D20&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssuedDate+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services.arcgis.com/lQySeXwbBg53XWDi/arcgis/rest/services/building_permits/FeatureServer/0/query?where=HousingUnits%3E%3D20&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssuedDate+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "az",
+      "city": "Tempe",
+      "name": "THE SAMUEL (COLLEGE + 7TH) [NEW MIXED-USE]",
+      "address": "712 S COLLEGE AVE",
+      "lat": null,
+      "lon": null,
+      "units": 226,
+      "stage": "permitted",
+      "permit_date": "2025-11-20",
+      "opening_date": "",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services.arcgis.com/lQySeXwbBg53XWDi/arcgis/rest/services/building_permits/FeatureServer/0/query?where=HousingUnits%3E%3D20&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssuedDate+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services.arcgis.com/lQySeXwbBg53XWDi/arcgis/rest/services/building_permits/FeatureServer/0/query?where=HousingUnits%3E%3D20&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssuedDate+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "az",
+      "city": "Tempe",
+      "name": "WOLSIFFER RESIDENCE",
+      "address": "1036 E BISHOP CIR",
+      "lat": null,
+      "lon": null,
+      "units": 57,
+      "stage": "permitted",
+      "permit_date": "2025-11-03",
+      "opening_date": "",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services.arcgis.com/lQySeXwbBg53XWDi/arcgis/rest/services/building_permits/FeatureServer/0/query?where=HousingUnits%3E%3D20&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssuedDate+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services.arcgis.com/lQySeXwbBg53XWDi/arcgis/rest/services/building_permits/FeatureServer/0/query?where=HousingUnits%3E%3D20&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssuedDate+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "az",
+      "city": "Tempe",
+      "name": "(EXPEDITED) Astria (Formerly Trinitas) on 7th St",
+      "address": "217 E 7TH ST",
+      "lat": null,
+      "lon": null,
+      "units": 380,
+      "stage": "permitted",
+      "permit_date": "2025-10-22",
+      "opening_date": "",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services.arcgis.com/lQySeXwbBg53XWDi/arcgis/rest/services/building_permits/FeatureServer/0/query?where=HousingUnits%3E%3D20&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssuedDate+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services.arcgis.com/lQySeXwbBg53XWDi/arcgis/rest/services/building_permits/FeatureServer/0/query?where=HousingUnits%3E%3D20&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssuedDate+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "az",
+      "city": "Tempe",
+      "name": "CABANA KYRENE APARTMENTS - BUILDING 'F'",
+      "address": "515 W GUADALUPE RD",
+      "lat": null,
+      "lon": null,
+      "units": 57,
+      "stage": "permitted",
+      "permit_date": "2025-03-26",
+      "opening_date": "",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services.arcgis.com/lQySeXwbBg53XWDi/arcgis/rest/services/building_permits/FeatureServer/0/query?where=HousingUnits%3E%3D20&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssuedDate+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services.arcgis.com/lQySeXwbBg53XWDi/arcgis/rest/services/building_permits/FeatureServer/0/query?where=HousingUnits%3E%3D20&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssuedDate+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "az",
+      "city": "Tempe",
+      "name": "VERVE TEMPE [NEW MIXED-USE] (WD)",
+      "address": "1047 S TERRACE RD",
+      "lat": null,
+      "lon": null,
+      "units": 240,
+      "stage": "permitted",
+      "permit_date": "2025-02-19",
+      "opening_date": "",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services.arcgis.com/lQySeXwbBg53XWDi/arcgis/rest/services/building_permits/FeatureServer/0/query?where=HousingUnits%3E%3D20&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssuedDate+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services.arcgis.com/lQySeXwbBg53XWDi/arcgis/rest/services/building_permits/FeatureServer/0/query?where=HousingUnits%3E%3D20&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssuedDate+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "az",
+      "city": "Tempe",
+      "name": "SOUTH PIER LOT 6 - TOWER 3",
+      "address": "1314 E VISTA DEL LAGO DR",
+      "lat": null,
+      "lon": null,
+      "units": 232,
+      "stage": "permitted",
+      "permit_date": "2024-10-09",
+      "opening_date": "",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services.arcgis.com/lQySeXwbBg53XWDi/arcgis/rest/services/building_permits/FeatureServer/0/query?where=HousingUnits%3E%3D20&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssuedDate+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services.arcgis.com/lQySeXwbBg53XWDi/arcgis/rest/services/building_permits/FeatureServer/0/query?where=HousingUnits%3E%3D20&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssuedDate+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "az",
+      "city": "Tempe",
+      "name": "1020 APACHE [NEW MIXED-USE / MULTI-FAMILY]",
+      "address": "1020 E APACHE BLVD",
+      "lat": null,
+      "lon": null,
+      "units": 289,
+      "stage": "leasing",
+      "permit_date": "2024-09-30",
+      "opening_date": "",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services.arcgis.com/lQySeXwbBg53XWDi/arcgis/rest/services/building_permits/FeatureServer/0/query?where=HousingUnits%3E%3D20&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssuedDate+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services.arcgis.com/lQySeXwbBg53XWDi/arcgis/rest/services/building_permits/FeatureServer/0/query?where=HousingUnits%3E%3D20&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssuedDate+DESC"
+        }
+      ],
+      "why": "certificate of occupancy issued recently"
+    },
+    {
+      "area": "az",
+      "city": "Tempe",
+      "name": "LA VICTORIA COMMONS ON APACHE [EXPEDITED]",
+      "address": "2320 E APACHE BLVD",
+      "lat": null,
+      "lon": null,
+      "units": 104,
+      "stage": "leasing",
+      "permit_date": "2024-09-27",
+      "opening_date": "",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services.arcgis.com/lQySeXwbBg53XWDi/arcgis/rest/services/building_permits/FeatureServer/0/query?where=HousingUnits%3E%3D20&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssuedDate+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services.arcgis.com/lQySeXwbBg53XWDi/arcgis/rest/services/building_permits/FeatureServer/0/query?where=HousingUnits%3E%3D20&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssuedDate+DESC"
+        }
+      ],
+      "why": "certificate of occupancy issued recently"
+    }
+  ]
+}

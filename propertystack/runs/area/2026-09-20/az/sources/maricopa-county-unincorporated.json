@@ -1,0 +1,123 @@
+{
+  "state": "az",
+  "recipe": "maricopa-county-unincorporated.json",
+  "date": "2026-09-20",
+  "status": "worked",
+  "count": 4,
+  "attempts": 1,
+  "note": "",
+  "records": [
+    {
+      "area": "az",
+      "city": "Maricopa County unincorporated",
+      "name": "25840 S POWER RD BLDG 1",
+      "address": "25840 S POWER RD BLDG 1",
+      "lat": null,
+      "lon": null,
+      "units": 24,
+      "stage": "permitted",
+      "permit_date": "2025-12-09",
+      "opening_date": "",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services.arcgis.com/ykpntM6e3tHvzKRJ/arcgis/rest/services/Building_Permits_(view)/FeatureServer/0/query?where=WorkClass%3D%27New+Construction%27+AND+%28PermitDescription+LIKE+%27%25MULTI-FAMILY%25%27+OR+PermitDescription+LIKE+%27%25MULTI+FAMILY%25%27+OR+PermitDescription+LIKE+%27%25APARTMENT%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssuedDate+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services.arcgis.com/ykpntM6e3tHvzKRJ/arcgis/rest/services/Building_Permits_(view)/FeatureServer/0/query?where=WorkClass%3D%27New+Construction%27+AND+%28PermitDescription+LIKE+%27%25MULTI-FAMILY%25%27+OR+PermitDescription+LIKE+%27%25MULTI+FAMILY%25%27+OR+PermitDescription+LIKE+%27%25APARTMENT%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssuedDate+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "az",
+      "city": "Maricopa County unincorporated",
+      "name": "12180 W FRIER RD",
+      "address": "12180 W FRIER RD",
+      "lat": null,
+      "lon": null,
+      "units": 144,
+      "stage": "permitted",
+      "permit_date": "2025-12-09",
+      "opening_date": "",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services.arcgis.com/ykpntM6e3tHvzKRJ/arcgis/rest/services/Building_Permits_(view)/FeatureServer/0/query?where=WorkClass%3D%27New+Construction%27+AND+%28PermitDescription+LIKE+%27%25MULTI-FAMILY%25%27+OR+PermitDescription+LIKE+%27%25MULTI+FAMILY%25%27+OR+PermitDescription+LIKE+%27%25APARTMENT%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssuedDate+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services.arcgis.com/ykpntM6e3tHvzKRJ/arcgis/rest/services/Building_Permits_(view)/FeatureServer/0/query?where=WorkClass%3D%27New+Construction%27+AND+%28PermitDescription+LIKE+%27%25MULTI-FAMILY%25%27+OR+PermitDescription+LIKE+%27%25MULTI+FAMILY%25%27+OR+PermitDescription+LIKE+%27%25APARTMENT%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssuedDate+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "az",
+      "city": "Maricopa County unincorporated",
+      "name": "12180 N FRIER DR",
+      "address": "12180 N FRIER DR",
+      "lat": null,
+      "lon": null,
+      "units": 144,
+      "stage": "permitted",
+      "permit_date": "2025-12-09",
+      "opening_date": "",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services.arcgis.com/ykpntM6e3tHvzKRJ/arcgis/rest/services/Building_Permits_(view)/FeatureServer/0/query?where=WorkClass%3D%27New+Construction%27+AND+%28PermitDescription+LIKE+%27%25MULTI-FAMILY%25%27+OR+PermitDescription+LIKE+%27%25MULTI+FAMILY%25%27+OR+PermitDescription+LIKE+%27%25APARTMENT%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssuedDate+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services.arcgis.com/ykpntM6e3tHvzKRJ/arcgis/rest/services/Building_Permits_(view)/FeatureServer/0/query?where=WorkClass%3D%27New+Construction%27+AND+%28PermitDescription+LIKE+%27%25MULTI-FAMILY%25%27+OR+PermitDescription+LIKE+%27%25MULTI+FAMILY%25%27+OR+PermitDescription+LIKE+%27%25APARTMENT%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssuedDate+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "az",
+      "city": "Maricopa County unincorporated",
+      "name": "12180 W FRIER DR",
+      "address": "12180 W FRIER DR",
+      "lat": null,
+      "lon": null,
+      "units": 144,
+      "stage": "permitted",
+      "permit_date": "2025-12-09",
+      "opening_date": "",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services.arcgis.com/ykpntM6e3tHvzKRJ/arcgis/rest/services/Building_Permits_(view)/FeatureServer/0/query?where=WorkClass%3D%27New+Construction%27+AND+%28PermitDescription+LIKE+%27%25MULTI-FAMILY%25%27+OR+PermitDescription+LIKE+%27%25MULTI+FAMILY%25%27+OR+PermitDescription+LIKE+%27%25APARTMENT%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssuedDate+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services.arcgis.com/ykpntM6e3tHvzKRJ/arcgis/rest/services/Building_Permits_(view)/FeatureServer/0/query?where=WorkClass%3D%27New+Construction%27+AND+%28PermitDescription+LIKE+%27%25MULTI-FAMILY%25%27+OR+PermitDescription+LIKE+%27%25MULTI+FAMILY%25%27+OR+PermitDescription+LIKE+%27%25APARTMENT%25%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssuedDate+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    }
+  ]
+}
