@@ -66,3 +66,8 @@
   - Commit: `ebd20ac` (summary pipeline, Leads hero, visibility rule, rebuilt site data, and regression tests)
   - Checks: plan Check command passed; `python3 tooling/qa/check_lead_data.py` passed for 4 states and 1,472 source leads; 80 additional chatbot, street-talk, and library tests passed; Python compilation and `git diff --check` passed.
   - Open: New Mexico has 12 leads, so it is counted in the national summary but stays out of the area picker until it reaches 25. No action is required.
+
+- 2026-09-19 — T9 complete: the marketing landing server now fetches the app's lead summary at startup and every hour, validates and atomically caches the last good response, and injects the same dated permit, sale, and total counts into the existing hero. A failed refresh keeps the last good line, the page has no named state coverage, and the focused design pass preserved its existing layout and CTA flow.
+  - Commit: `7bb92e1` in the nested business repository (landing server, hero line, coverage-copy cleanup, cache ignore, business log, and fake-summary regression coverage)
+  - Checks: `python3 business/tools/test_landing.py --offline` (52/52 passed); plan Check command (598 passed); `python3 tooling/qa/check_lead_data.py` (4 states and 1,472 leads passed); Python compilation and whitespace validation passed.
+  - Open: nothing for T9. The landing change is committed locally but intentionally not pushed or deployed; T11 owns automatic publishing after every gate passes.
