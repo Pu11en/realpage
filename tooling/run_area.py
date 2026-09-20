@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import inspect
 import io
 import json
 import os
@@ -171,8 +172,12 @@ def _records_as_dicts(records: list[LeadRecord]) -> list[dict]:
     return [record.to_dict() if isinstance(record, LeadRecord) else record for record in records]
 
 
-def run_recipe(recipe_path: Path, state: str) -> list[dict]:
-    """Dispatch one recipe to its existing, tested source adapter."""
+def run_recipe(recipe_path: Path, state: str, stats: dict | None = None) -> list[dict]:
+    """Dispatch one recipe to its existing, tested source adapter.
+
+    `stats`, when given, is filled by the permit adapter with why rows were
+    dropped so an empty result can name its own cause.
+    """
     recipe = json.loads(recipe_path.read_text())
     if recipe.get("enabled") is False:
         return []
@@ -187,13 +192,14 @@ def run_recipe(recipe_path: Path, state: str) -> list[dict]:
             area,
             recipe,
             fetch,
+            stats=stats,
         )
         fetch.raise_if_failed()
     elif system == "ckan-sql":
         fetch = TrackingFetch(_http_get_json)
         adapted = ckan_sql.ckan_sql_http_get(recipe["endpoint"], recipe["sql"], fetch)
         records = find_upcoming.find_upcoming(
-            recipe.get("city", ""), state.upper(), area, recipe, adapted
+            recipe.get("city", ""), state.upper(), area, recipe, adapted, stats=stats
         )
         fetch.raise_if_failed()
     elif system == "houston-sold-permits-xlsx":
@@ -208,6 +214,7 @@ def run_recipe(recipe_path: Path, state: str) -> list[dict]:
             area,
             recipe,
             lambda _endpoint: rows,
+            stats=stats,
         )
     elif system == "appraisal-district-bulk-file":
         fetch = TrackingFetch(_http_get_bytes)
@@ -262,6 +269,34 @@ def run_recipe(recipe_path: Path, state: str) -> list[dict]:
     return _records_as_dicts(records)
 
 
+def _accepts_stats(source_runner: Callable) -> bool:
+    """Only the real runner reports why rows were dropped; test fakes take two."""
+    try:
+        return len(inspect.signature(source_runner).parameters) >= 3
+    except (TypeError, ValueError):
+        return False
+
+
+def _empty_note(stats: dict) -> str:
+    """Explain an empty source in the run log instead of leaving it blank."""
+    if not stats:
+        return ""
+    rows = stats.get("rows") or 0
+    apartments = stats.get("apartmentRows") or 0
+    if not rows:
+        return "the source returned no rows at all"
+    if not apartments:
+        return f"{rows} rows returned, none of them an apartment project"
+    newest = stats.get("newestDate") or ""
+    age = stats.get("newestAgeDays")
+    if newest and age is not None:
+        return (
+            f"stale source: {apartments} apartment rows, "
+            f"newest issued {newest} ({age} days ago), none recent enough to list"
+        )
+    return f"{apartments} apartment rows, none carried a usable date"
+
+
 def _artifact_result(path: Path) -> SourceResult | None:
     payload = _read_json(path, None)
     if not isinstance(payload, dict) or payload.get("status") not in FINISHED_STATUSES:
@@ -304,11 +339,17 @@ def _run_source(
         return result
 
     notes: list[str] = []
+    pass_stats = _accepts_stats(source_runner)
     for attempt in (1, 2):
+        stats: dict = {}
         try:
-            records = source_runner(recipe_path, state)
+            if pass_stats:
+                records = source_runner(recipe_path, state, stats)
+            else:
+                records = source_runner(recipe_path, state)
             status = "worked" if records else "empty"
-            result = SourceResult(recipe_path.name, status, records, attempt)
+            note = "" if records else _empty_note(stats)
+            result = SourceResult(recipe_path.name, status, records, attempt, note)
             _atomic_json(artifact_path, result.payload(state, run_date))
             return result
         except Exception as exc:
@@ -412,6 +453,8 @@ def run_state(
                 print(f"{state}: skipped {result.recipe}; source failed twice: {result.note}")
             elif result.attempts == 0:
                 print(f"{state}: skipped {result.recipe}; {result.note}")
+            elif result.status == "empty" and result.note:
+                print(f"{state}: {result.recipe} empty; {result.note}")
             else:
                 print(f"{state}: {result.recipe} {result.status} ({len(result.records)} leads)")
 

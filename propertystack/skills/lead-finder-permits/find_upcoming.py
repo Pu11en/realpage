@@ -46,23 +46,40 @@ def find_upcoming(
     recipe: dict,
     http_get: HttpGet,
     today: datetime.date | None = None,
+    stats: dict | None = None,
 ) -> list[LeadRecord]:
     """Fetch permit rows for `city` using `recipe` (from lead-finder-sources)
-    and return one merged LeadRecord per apartment project."""
+    and return one merged LeadRecord per apartment project.
+
+    When `stats` is given it is filled with why rows were dropped, so a caller
+    can tell an empty result caused by a stale feed (the city stopped
+    publishing) apart from one caused by a broken fetch.  Without it, a source
+    whose newest apartment permit has simply aged out of the freshness window
+    looks identical to a source that failed.
+    """
     today = today or datetime.date.today()
     endpoint = recipe.get("endpoint", "")
     fields = recipe.get("fields", {})
     units_pattern = recipe.get("units_text_pattern")
     rows = _fetch_rows(endpoint, http_get)
 
+    apartment_rows = 0
+    aged_out = 0
+    newest: datetime.date | None = None
     records = []
     for row in rows:
         if not _is_apartment(row, fields, units_pattern):
             continue
+        apartment_rows += 1
         issue_date = _parse_date(row.get(fields.get("issue_date", "")))
         co_date = _parse_date(_find_co_value(row, fields))
+        for candidate in (issue_date, co_date):
+            if candidate is not None and (newest is None or candidate > newest):
+                newest = candidate
         stage = _infer_stage(issue_date, co_date, today)
         if stage is None:
+            if issue_date is not None or co_date is not None:
+                aged_out += 1
             continue
         record = _build_record(row, fields, city, area, endpoint, stage, issue_date, units_pattern, recipe)
         # a pool, carport, stair remodel, repair, roof or garage apartment is
@@ -71,7 +88,19 @@ def find_upcoming(
             continue
         records.append(record)
 
-    return merge_records(records)
+    merged = merge_records(records)
+    if stats is not None:
+        stats.update(
+            {
+                "rows": len(rows),
+                "apartmentRows": apartment_rows,
+                "agedOut": aged_out,
+                "newestDate": newest.isoformat() if newest else "",
+                "newestAgeDays": (today - newest).days if newest else None,
+                "kept": len(merged),
+            }
+        )
+    return merged
 
 
 def _is_apartment(row: dict, fields: dict, units_pattern: str | None) -> bool:

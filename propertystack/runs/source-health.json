@@ -5,12 +5,12 @@
       "count": 0,
       "attempts": 1,
       "checked": "2026-09-20",
-      "note": ""
+      "note": "stale source: 191 apartment rows, newest issued 2024-09-19 (731 days ago), none recent enough to list"
     },
     "nm/bernalillo-county-sales.json": {
       "status": "empty",
       "count": 0,
-      "attempts": 1,
+      "attempts": 0,
       "checked": "2026-09-20",
       "note": "disabled: The county does not publish a free machine-readable sales or transfer feed; its free assessor layer has no sale date or sale price."
     },
@@ -31,14 +31,14 @@
     "nm/rio-rancho.json": {
       "status": "empty",
       "count": 0,
-      "attempts": 1,
+      "attempts": 0,
       "checked": "2026-09-20",
       "note": "disabled: No machine-readable city permit feed exists; the Accela Citizen Access site is a stateful search form, not a public data endpoint."
     },
     "nm/santa-fe.json": {
       "status": "empty",
       "count": 0,
-      "attempts": 1,
+      "attempts": 0,
       "checked": "2026-09-20",
       "note": "disabled: No machine-readable building-permit layer exists in the city's live GIS services; the public permit page is not a queryable data feed."
     },
@@ -183,5 +183,5 @@
       "note": ""
     }
   },
-  "updatedAt": "2026-09-20T05:18:12.823219+00:00"
+  "updatedAt": "2026-09-20T05:46:38.384063+00:00"
 }

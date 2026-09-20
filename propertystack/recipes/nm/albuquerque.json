@@ -16,6 +16,8 @@
   "builder_field": "Applicant",
   "date_format": "epoch_ms",
   "date_tested": "2026-09-19",
-  "live_test": "236 new apartment permits returned live. The newest verified row was Farolito Apartments at 10501 Central Ave NE: 82 units, issued 2024-09-19, with owner, applicant, and contractor names.",
-  "notes": "The city layer provides a direct apartment-structure filter, owner/applicant/contractor names, valuation, and sometimes NumberofUnits. When NumberofUnits is blank, the runner may parse an explicit unit count from WorkDescription; it never estimates one."
+  "live_test": "236 apartment-structure permits returned live on 2026-09-19, but all of them are old: the newest was issued 2024-09-19 (Farolito Apartments, 10501 Central Ave NE, 82 units). Rechecked 2026-09-20 — the whole layer's max DateIssued is 2025-01-16, so the city has stopped adding permits and this recipe correctly yields zero current leads.",
+  "notes": "The city layer provides a direct apartment-structure filter, owner/applicant/contractor names, valuation, and sometimes NumberofUnits. When NumberofUnits is blank, the runner may parse an explicit unit count from WorkDescription; it never estimates one.",
+  "freshness_checked": "2026-09-20",
+  "freshness_note": "Stale at the source, not a runner fault. Before touching the runner, confirm freshness with outStatistics max(DateIssued) on the layer; if it moves past 2025-01-16 the city has resumed publishing and this recipe starts producing leads again with no code change."
 }

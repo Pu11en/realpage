@@ -249,3 +249,89 @@ def test_auto_found_structured_recipe_runs_through_normal_permit_adapter(
     assert len(rows) == 1
     assert rows[0]["address"] == "100 Main St"
     assert rows[0]["sources"][0]["url"] == "https://data.example.test/permits.json"
+
+
+def _stale_recipe(tmp_path: Path) -> Path:
+    recipe_dir = tmp_path / "propertystack" / "recipes" / "zz"
+    recipe_dir.mkdir(parents=True)
+    recipe_path = recipe_dir / "stale-city.json"
+    recipe_path.write_text(
+        json.dumps(
+            {
+                "city": "Stale City",
+                "state": "ZZ",
+                "system": "arcgis",
+                "endpoint": "https://gis.example.test/permits.json",
+                "fields": {
+                    "address": "address",
+                    "issue_date": "issued",
+                    "units": "units",
+                    "permit_type": "description",
+                    "name": "description",
+                },
+            }
+        )
+    )
+    return recipe_path
+
+
+def test_a_city_that_stopped_publishing_says_so_instead_of_looking_broken(
+    tmp_path, monkeypatch
+):
+    # A feed frozen years ago returns plenty of apartment rows that are all
+    # older than the freshness window.  Without a reason recorded, that empty
+    # result reads exactly like a broken fetch -- which is how the New Mexico
+    # run was misread as a runner bug.
+    recipe_path = _stale_recipe(tmp_path)
+    monkeypatch.setattr(
+        run_area,
+        "_http_get_structured",
+        lambda _url: [
+            {
+                "address": f"{number} Old St",
+                "issued": "2019-04-02",
+                "units": 60,
+                "description": "New apartment building",
+            }
+            for number in range(3)
+        ],
+    )
+
+    stats: dict = {}
+    rows = run_area.run_recipe(recipe_path, "zz", stats)
+
+    assert rows == []
+    assert stats["apartmentRows"] == 3
+    assert stats["newestDate"] == "2019-04-02"
+
+    note = run_area._empty_note(stats)
+    assert "stale source" in note
+    assert "2019-04-02" in note
+
+
+def test_stale_reason_reaches_the_run_log_and_source_health(tmp_path, capsys):
+    _stale_recipe(tmp_path)
+
+    def stale_runner(_recipe, _state, stats):
+        stats.update(
+            {
+                "rows": 400,
+                "apartmentRows": 236,
+                "agedOut": 236,
+                "newestDate": "2024-09-19",
+                "newestAgeDays": 731,
+                "kept": 0,
+            }
+        )
+        return []
+
+    summary = run_area.run_state(
+        "zz", root=tmp_path, run_date="2026-09-20", source_runner=stale_runner
+    )
+
+    assert summary["empty"] == 1
+    assert "stale source" in capsys.readouterr().out
+    health = json.loads(
+        (tmp_path / "propertystack/runs/source-health.json").read_text()
+    )
+    assert "stale source" in health["sources"]["zz/stale-city.json"]["note"]
