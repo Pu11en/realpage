@@ -335,10 +335,23 @@ def _signal_note(signal: dict) -> str:
             f"{signal['newestDate']}, {signal['newestAgeDays']} days old"
         )
     if "suspect" in flags:
-        return (
+        note = (
             f"suspect: the endpoint held {signal['apartmentRows']} apartment rows "
             f"and only {signal['kept']} became leads"
         )
+        reasons = [
+            f"{signal[key]} {label}"
+            for key, label in (
+                ("agedOut", "too old"),
+                ("placeholderAddress", "with a stand-in address"),
+                ("junkDropped", "not a new building"),
+                ("mergedAway", "merged into another project"),
+            )
+            if signal.get(key)
+        ]
+        if reasons:
+            note += " (" + ", ".join(reasons) + ")"
+        return note
     return ""
 
 
@@ -356,6 +369,14 @@ def _source_signal(stats: dict, kept: int) -> dict:
         }
     apartment_rows = int(stats.get("apartmentRows") or 0)
     age = stats.get("newestAgeDays")
+    # One building routinely files many permits at the same address, and
+    # merge_records collapses those into a single project on purpose.  Judging
+    # the post-merge count against the raw row count therefore calls a healthy
+    # source broken: a real city filed 377 usable permits at 149 addresses.
+    # When the adapter reports how many rows survived every quality filter
+    # (`built`, pre-merge), judge on that; otherwise fall back to `kept`.
+    built = stats.get("built")
+    judged = int(built) if isinstance(built, int) else kept
     flags: list[str] = []
     if isinstance(age, int) and age > STALE_AFTER_DAYS:
         # A frozen feed is a finding, not an under-read: everything it holds is
@@ -363,7 +384,7 @@ def _source_signal(stats: dict, kept: int) -> dict:
         flags.append("stale")
     elif (
         apartment_rows >= MIN_ROWS_TO_JUDGE
-        and kept < apartment_rows * SUSPECT_KEEP_RATIO
+        and judged < apartment_rows * SUSPECT_KEEP_RATIO
     ):
         flags.append("suspect")
     signal = {
@@ -376,6 +397,11 @@ def _source_signal(stats: dict, kept: int) -> dict:
         "newestAgeDays": age,
         "flags": flags,
     }
+    # Why rows went missing, when the adapter counted it -- so a suspect source
+    # names its own cause instead of leaving someone to re-derive it.
+    for key in ("noDate", "placeholderAddress", "junkDropped", "built", "mergedAway"):
+        if isinstance(stats.get(key), int):
+            signal[key] = int(stats[key])
     signal["note"] = _signal_note(signal)
     return signal
 

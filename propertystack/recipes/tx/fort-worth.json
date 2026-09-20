@@ -4,15 +4,23 @@
   "system": "arcgis",
   "endpoint": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC",
   "fields": {
+    "name": "B1_SPECIAL_TEXT",
     "permit_type": "Specific_Use",
     "issue_date": "File_Date",
     "address": "Full_Street_Address",
+    "address_parts": [
+      "Addr_No",
+      "Direction",
+      "Street_Name",
+      "Street_Suffix",
+      "Street_Suffix_Dir"
+    ],
     "units_text_field": "Units",
     "owner_field": "Owner_Full_Name"
   },
   "units_text_pattern": "(\\d+)",
   "date_format": "epoch_ms",
-  "date_tested": "2026-09-14",
+  "date_tested": "2026-09-20",
   "live_test": "returnCountOnly=true against the real query gave 2,227 matching rows since 2024-09-01; a resultRecordCount=1000 page returned exceededTransferLimit=true with 1,000 rows (e.g. CB-DIRECT BONDS RANCH LP, 302 units); confirms this layer genuinely needs resultOffset paging past row 1,000 -- added generic ArcGIS pagination to find_upcoming._fetch_rows (loops on exceededTransferLimit, capped at 20 pages) rather than a one-off Fort-Worth-specific fetch wrapper, since it's a shared shape any large TX/AZ layer could hit.",
-  "notes": "Units is a text field on this layer (values like '1', '0', '302' were seen as plain digit strings, not free text like '212 units', but units_text_pattern '(\\\\d+)' still matches either shape safely). Full_Street_Address was null on the sampled rows -- Addr_No/Street_Name/Street_Suffix are the real address parts on this layer; find_upcoming's name fallback (permit type -> address) still produces a usable label from Specific_Use when address is blank. Owner_Full_Name is a real owner field, mapped as owner_field."
+  "notes": "Units is a text field on this layer (values like '1', '0', '302' were seen as plain digit strings, not free text like '212 units', but units_text_pattern '(\\\\d+)' still matches either shape safely). Full_Street_Address is null on EVERY row of this layer -- the real address lives in Addr_No/Direction/Street_Name/Street_Suffix/Street_Suffix_Dir, now mapped as address_parts. B1_SPECIAL_TEXT is the real project name (e.g. 'Alexan Copper Ranch', 'Hughes House Phase 2'), mapped as fields.name; without it every row fell back to Specific_Use ('Apartment') and was nameless. Owner_Full_Name is a real owner field. Plan-review submittals with no sited address are filed at '<submittal no> FOR REVIEW ONLY WAY' and are dropped as placeholder addresses. Audited 2026-09-20, see propertystack/runs/2026-09-20-fort-worth-audit.md."
 }

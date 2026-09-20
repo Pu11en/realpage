@@ -476,3 +476,37 @@ def test_a_healthy_run_says_so_out_loud(tmp_path, capsys):
     )
 
     assert "every measured source returned its fair share" in capsys.readouterr().out
+
+
+def test_many_permits_at_one_address_is_not_an_under_read():
+    # A healthy real source: 640 apartment rows, 377 of them usable permits,
+    # merged down to 126 buildings because one project files a permit per
+    # building.  Judging 126 against 640 would call this broken; judging the
+    # 377 that survived the quality filters does not.
+    signal = run_area._source_signal(
+        {"rows": 2227, "apartmentRows": 640, "agedOut": 45,
+         "placeholderAddress": 218, "junkDropped": 0, "built": 377,
+         "mergedAway": 251, "newestDate": "2026-08-25", "newestAgeDays": 26},
+        kept=126,
+    )
+
+    assert signal["flags"] == []
+    assert signal["note"] == ""
+    assert signal["built"] == 377
+    assert signal["mergedAway"] == 251
+    assert signal["placeholderAddress"] == 218
+
+
+def test_a_suspect_source_names_where_its_rows_went():
+    signal = run_area._source_signal(
+        {"rows": 900, "apartmentRows": 400, "agedOut": 30,
+         "placeholderAddress": 350, "junkDropped": 5, "built": 15,
+         "mergedAway": 3, "newestDate": "2026-09-15", "newestAgeDays": 5},
+        kept=12,
+    )
+
+    assert signal["flags"] == ["suspect"]
+    assert "30 too old" in signal["note"]
+    assert "350 with a stand-in address" in signal["note"]
+    assert "5 not a new building" in signal["note"]
+    assert "3 merged into another project" in signal["note"]
