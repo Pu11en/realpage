@@ -5,16 +5,18 @@ description: Find and verify a replacement apartment-permit source for a city wh
 
 # Find a source
 
-Use this only for a city whose normal permit recipe is missing or no longer works. Run:
+Use this only for cities whose normal permit recipes are missing or no longer work. Pass every
+city in the run to one command so the run-wide search limit is enforced:
 
 ```bash
-python3 propertystack/skills/find-source/find_source.py "<city>" <state>
+python3 propertystack/skills/find-source/find_source.py "<city>" <state> ["<city>" <state> ...]
 ```
 
 The runner uses the lead finder's already-configured search service and never asks for a new
 key. It searches in this order: the city's open-data portal, Socrata, ArcGIS, Accela/Citizen
-Access, then the county. Pass one shared `SearchBudget` when checking several cities so the
-hard limits remain 20 searches per city and 100 searches for the whole run.
+Access, then the county. The batch command owns one shared `SearchBudget`, enforcing hard limits
+of 20 searches per city and 100 searches for the whole run; after search 100, remaining cities
+are recorded as needing a source without starting search 101.
 
 A URL from search is only accepted after its live response yields at least five distinct
 apartment projects with a street address, a usable date, and either 20+ units or an explicit

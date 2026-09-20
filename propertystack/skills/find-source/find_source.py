@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Find, prove, and save an apartment-permit source for one city.
+"""Find, prove, and save apartment-permit sources for one run of cities.
 
 Discovery is deliberately separate from acceptance: search may suggest URLs, but the exact
 URL must return structured rows and those rows must pass both apartment-project guardrails and
@@ -157,6 +157,31 @@ def find_source(
     note = "no candidate returned five QA-clean apartment projects"
     _record_needs_source(root, city, state, today, budget.used_for(city, state), note)
     return FindResult(city, state, None, budget.used_for(city, state), note)
+
+
+def find_sources(
+    locations: list[tuple[str, str]],
+    search_fn: SearchFn,
+    fetch_fn: FetchFn,
+    *,
+    root: Path = ROOT,
+    budget: SearchBudget | None = None,
+    today: dt.date | None = None,
+) -> list[FindResult]:
+    """Process a whole run with one budget, so search 101 can never start."""
+    run_budget = budget or SearchBudget()
+    return [
+        find_source(
+            city,
+            state,
+            search_fn,
+            fetch_fn,
+            root=root,
+            budget=run_budget,
+            today=today,
+        )
+        for city, state in locations
+    ]
 
 
 def _test_candidate(
@@ -416,28 +441,37 @@ class RecordedResponses:
 
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("city")
-    parser.add_argument("state")
+    parser.add_argument(
+        "locations",
+        nargs="+",
+        metavar="CITY STATE",
+        help='one or more city/state pairs, for example: "Santa Fe" NM "Austin" TX',
+    )
     parser.add_argument("--recorded", type=Path, help="offline recorded search/fetch responses")
     parser.add_argument("--root", type=Path, default=ROOT, help=argparse.SUPPRESS)
     args = parser.parse_args(argv)
+
+    if len(args.locations) % 2:
+        parser.error("locations must be CITY STATE pairs")
+    locations = list(zip(args.locations[0::2], args.locations[1::2]))
 
     if args.recorded:
         replay = RecordedResponses.from_path(args.recorded)
         search_fn, fetch_fn = replay.search, replay.fetch
     else:
         search_fn, fetch_fn = LiveSearch(args.root), _fetch_url
-    result = find_source(args.city, args.state, search_fn, fetch_fn, root=args.root)
-    if result.found:
-        print(
-            f"{result.city}, {result.state}: source found and tested "
-            f"({result.recipe['endpoint']}; {result.searches} searches)"
-        )
-    else:
-        print(
-            f"{result.city}, {result.state}: needs a source; {result.note} "
-            f"({result.searches} searches)"
-        )
+    results = find_sources(locations, search_fn, fetch_fn, root=args.root)
+    for result in results:
+        if result.found:
+            print(
+                f"{result.city}, {result.state}: source found and tested "
+                f"({result.recipe['endpoint']}; {result.searches} searches)"
+            )
+        else:
+            print(
+                f"{result.city}, {result.state}: needs a source; {result.note} "
+                f"({result.searches} searches)"
+            )
     return 0
 
 

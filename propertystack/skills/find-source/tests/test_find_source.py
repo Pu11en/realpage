@@ -138,6 +138,49 @@ def test_per_city_and_whole_run_caps_return_cleanly(tmp_path):
     assert run_budget.total == 1
 
 
+def test_batch_entry_point_owns_one_budget_and_never_starts_search_101(tmp_path):
+    calls = []
+
+    def no_results(stage, _query, city, state):
+        calls.append((stage, city, state))
+        return []
+
+    locations = [(f"City {number}", "NM") for number in range(1, 22)]
+    results = find_source.find_sources(
+        locations,
+        no_results,
+        lambda _url: [],
+        root=tmp_path,
+        today=TODAY,
+    )
+
+    assert len(calls) == find_source.MAX_SEARCHES_PER_RUN == 100
+    assert len(results) == 21
+    assert results[-2].searches == len(find_source.SEARCH_STAGES)
+    assert results[-1].searches == 0
+    assert "limit reached" in results[-1].note
+
+
+def test_cli_batches_city_state_pairs_through_shared_run_budget(tmp_path, monkeypatch):
+    received = []
+
+    def fake_find_sources(locations, _search_fn, _fetch_fn, **kwargs):
+        received.extend(locations)
+        assert kwargs["root"] == tmp_path
+        return [
+            find_source.FindResult(city, state, None, 0, "search limit reached")
+            for city, state in locations
+        ]
+
+    monkeypatch.setattr(find_source, "find_sources", fake_find_sources)
+    monkeypatch.setattr(find_source, "LiveSearch", lambda _root: lambda *_args: [])
+
+    assert find_source.main([
+        "Santa Fe", "NM", "Rio Rancho", "NM", "Austin", "TX", "--root", str(tmp_path)
+    ]) == 0
+    assert received == [("Santa Fe", "NM"), ("Rio Rancho", "NM"), ("Austin", "TX")]
+
+
 def test_unrelated_search_result_is_not_fetched(tmp_path):
     fetched = []
 
