@@ -22,7 +22,7 @@ def _rows(slug):
 
 
 def _all_sources():
-    for slug in ("tx", "az", "ny"):
+    for slug in ("tx", "az", "nm", "ny"):
         for l in _rows(slug):
             for s in l.get("sources") or []:
                 yield slug, l["id"], s
@@ -50,6 +50,8 @@ def test_known_datasets_map_to_public_pages():
         "Maricopa County Assessor sales records",
         "City of San Marcos building permits",
         "City of Fort Worth development permits",
+        "City of Arlington issued permits",
+        "City of Las Cruces building permits",
         "City of Buffalo building permits",
         "Texas county property records",
         "Houston weekly permit list",

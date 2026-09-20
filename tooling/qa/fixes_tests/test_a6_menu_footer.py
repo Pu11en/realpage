@@ -22,10 +22,9 @@ def test_built_data_has_a_date():
         json.loads(path.read_text())["updated"]
         for path in (ROOT / "site/data/areas").glob("[a-z][a-z].json")
     }
-    assert area_dates == {"2026-09-15"}
     assert updated == max(area_dates)
     build_script = (ROOT / "site/data/build_data.py").read_text()
-    assert '"updated": CURRENT_DATA_DATE' in build_script
+    assert '"updated": latest_area_run_date(slug) or CURRENT_DATA_DATE' in build_script
     assert '"updated": date.today().isoformat()' not in build_script
 
 

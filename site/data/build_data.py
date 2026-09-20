@@ -68,6 +68,8 @@ STATE_NAMES = {
 
 TODAY = date.fromisoformat("2026-09-10")  # matches score-leads' fixed TODAY, see run.py
 CURRENT_DATA_DATE = "2026-09-15"
+MIN_VISIBLE_AREA_LEADS = 25
+AUTO_HIDDEN_REASON = "under-25-leads"
 
 VENDOR_COLORS = {
     "RealPage": "#f472b6",
@@ -611,6 +613,9 @@ _SOURCE_PAGES = [
      "https://www.sanmarcostx.gov/254/Building-Permits"),
     ("services5.arcgis.com/3ddLCBXe1bRt7mzj", "City of Fort Worth development permits",
      "https://www.arcgis.com/home/item.html?id=d2740f4d746b4bfaa03e25de0376238b"),
+    ("gis2.arlingtontx.gov", "City of Arlington issued permits", "https://opendata.arlingtontx.gov/"),
+    ("maps.las-cruces.org", "City of Las Cruces building permits",
+     "https://lascruces.gov/directories-resources/permits-licenses-and-registrations/"),
     ("data.texas.gov/resource/5tkr-3759", "Texas county property records", "https://data.texas.gov/d/5tkr-3759"),
     ("data.buffalony.gov/resource/9p2d-f3yt", "City of Buffalo building permits",
      "https://data.buffalony.gov/Government/Building-Permits/9p2d-f3yt"),
@@ -783,7 +788,7 @@ def build_area(slug: str) -> dict:
     from junk_permits import is_junk_permit  # noqa: E402
     records = [LeadRecord.from_dict(d) for d in raw]
     # permits already saved before the lead finder learned to skip them
-    records = [r for r in records if not is_junk_permit(r.name)]
+    records = [r for r in records if not is_junk_permit(r.name, r.address, r.why)]
     # one row per building: same-name duplicates merged, phases labeled (C2)
     from dedupe_leads import dedupe_leads  # noqa: E402
     records = dedupe_leads(records)
@@ -806,7 +811,7 @@ def build_area(slug: str) -> dict:
     return {
         "area": slug,
         # The lead snapshot date, not the day the site happens to be rebuilt.
-        "updated": CURRENT_DATA_DATE,
+        "updated": latest_area_run_date(slug) or CURRENT_DATA_DATE,
         "generatedFrom": f"propertystack/data/{slug}/leads.json",
         "stats": {
             "leads": len(leads),
@@ -913,6 +918,11 @@ def _merge_included_areas(slug: str, area_json: dict) -> dict:
     table, under their metro, instead of as a separate button."""
     metros = _load_metros(slug)
     addrs = _address_by_lead_id() if (metros or {}).get("include_areas") else {}
+    existing_by_name_city = {
+        (_id_slug(lead.get("property") or ""), _id_slug(lead.get("city") or "")): lead
+        for lead in area_json["leads"]
+        if lead.get("property") and lead.get("city")
+    }
     for inc in (metros or {}).get("include_areas", []):
         path = OUT_DIR / inc["dataPath"]
         if not path.exists():
@@ -927,6 +937,20 @@ def _merge_included_areas(slug: str, area_json: dict) -> dict:
                 lead["address"] = addrs.get(lead.get("propertyId")) or None
             lead["id"] = content_id(slug, lead.get("address") or "", lead.get("property") or "")
             lead.setdefault("sources", [])
+            duplicate = existing_by_name_city.get((
+                _id_slug(lead.get("property") or ""),
+                _id_slug(lead.get("city") or ""),
+            ))
+            if duplicate:
+                duplicate["metro"] = inc["metro"]
+                duplicate["subArea"] = inc["label"]
+                for field in ("units", "website", "software", "contact"):
+                    if not duplicate.get(field) and lead.get(field):
+                        duplicate[field] = lead[field]
+                duplicate["sources"] = sources_entries(
+                    [*(duplicate.get("sources") or []), *lead["sources"]]
+                )
+                continue
             area_json["leads"].append(lead)
     if (metros or {}).get("include_areas"):
         area_json["leads"].sort(key=lambda lead: -lead.get("score", 0))
@@ -944,6 +968,19 @@ def _merge_included_areas(slug: str, area_json: dict) -> dict:
 def _included_slugs(area_slugs: list[str]) -> set[str]:
     """Areas shown inside a state's table rather than as their own button."""
     return {inc["slug"] for s in area_slugs for inc in ((_load_metros(s) or {}).get("include_areas", []))}
+
+
+def latest_area_run_date(slug: str) -> str | None:
+    """Return the newest completed run date for one state area."""
+    dates = []
+    for path in (RUNS_DIR / "area").glob(f"*/{slug}/summary.json"):
+        value = path.parent.parent.name
+        try:
+            date.fromisoformat(value)
+        except ValueError:
+            continue
+        dates.append(value)
+    return max(dates, default=None)
 
 
 def build_areas_manifest(area_slugs: list[str]) -> dict:
@@ -974,8 +1011,16 @@ def build_areas_manifest(area_slugs: list[str]) -> dict:
             "dataPath": f"data/areas/{slug}.json",
             "leads": len(area["leads"]),
         }
-        if previous_areas.get(slug, {}).get("hidden") is True:
+        previous = previous_areas.get(slug, {})
+        was_auto_hidden = previous.get("hiddenReason") == AUTO_HIDDEN_REASON
+        manually_hidden = previous.get("hidden") is True and not was_auto_hidden
+        if manually_hidden:
             manifest_area["hidden"] = True
+            if previous.get("hiddenReason"):
+                manifest_area["hiddenReason"] = previous["hiddenReason"]
+        elif len(area["leads"]) < MIN_VISIBLE_AREA_LEADS:
+            manifest_area["hidden"] = True
+            manifest_area["hiddenReason"] = AUTO_HIDDEN_REASON
         areas.append(manifest_area)
     # Biggest first: the state with the most leads opens by default.
     areas.sort(key=lambda a: -(a["leads"] or 0))
@@ -987,6 +1032,52 @@ def build_areas_manifest(area_slugs: list[str]) -> dict:
     AREAS_OUT_DIR.mkdir(parents=True, exist_ok=True)
     manifest_path.write_text(json.dumps(manifest, indent=2) + "\n")
     return manifest
+
+
+def build_summary(area_slugs: list[str], manifest: dict) -> dict:
+    """Build the public, state-agnostic counts used by both site heroes.
+
+    Areas automatically hidden only because they are still small remain part of
+    the tracked total. Manually hidden fixture/retired areas do not.
+    """
+    by_slug = {area["slug"]: area for area in manifest.get("areas", [])}
+    leads = []
+    check_dates = []
+    for slug in area_slugs:
+        area_meta = by_slug.get(slug, {})
+        manually_hidden = (
+            area_meta.get("hidden") is True
+            and area_meta.get("hiddenReason") != AUTO_HIDDEN_REASON
+        )
+        if manually_hidden:
+            continue
+        path = AREAS_OUT_DIR / f"{slug}.json"
+        if not path.exists():
+            continue
+        area = json.loads(path.read_text())
+        leads.extend(area.get("leads", []))
+        if area.get("updated"):
+            check_dates.append(area["updated"])
+
+    last_check = max(check_dates, default=manifest.get("updated") or CURRENT_DATA_DATE)
+    try:
+        new_cutoff = (date.fromisoformat(last_check) - timedelta(days=6)).isoformat()
+    except ValueError:
+        new_cutoff = last_check
+
+    sold = sum(lead.get("signalType") == "Sold" for lead in leads)
+    return {
+        "lastCheck": last_check,
+        "totalTracked": len(leads),
+        "newLast7Days": sum(
+            new_cutoff <= lead.get("firstSeen", "") <= last_check
+            for lead in leads
+        ),
+        # Keep the runner's established definition: every current non-sale
+        # building signal is in the permits side of the summary.
+        "permitsFiled": len(leads) - sold,
+        "sold": sold,
+    }
 
 
 _STATE_NAMES = {
@@ -1076,6 +1167,10 @@ def main() -> None:
 
     manifest = build_areas_manifest(area_slugs)
     print(f"wrote areas/index.json ({len(manifest['areas'])} area button(s))")
+
+    summary = build_summary(area_slugs, manifest)
+    (OUT_DIR / "summary.json").write_text(json.dumps(summary, indent=2) + "\n")
+    print(f"wrote summary.json ({summary['totalTracked']} tracked buildings)")
 
     markers = build_map_markers(area_slugs)
     (OUT_DIR / "map-markers.json").write_text(json.dumps(markers, indent=2))

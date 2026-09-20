@@ -39,8 +39,10 @@ def test_audit_pairs():
     tx = _rows("tx")
     by_name = Counter(l["property"] for l in tx)
     for name in ("Belmont Apartments", "Lakeside Lofts", "Emberstone Apartments", "6802 Marbach Lofts",
-                 "Tezel Road Apartments", "Lofts at Birdwell", "Oak Park", "The Reid"):
+                 "Tezel Road Apartments", "Oak Park", "The Reid"):
         assert by_name[name] == 1, name
+    assert by_name["Lofts at Birdwell Phase 1"] == 1
+    assert by_name["Lofts at Birdwell Phase 2"] == 1
     belmont = next(l for l in tx if l["property"] == "Belmont Apartments")
     assert belmont["stage"] == "under construction" and belmont["units"] == 348  # both sources kept
     assert by_name["Buena Vida Multifamily Phase 1"] == by_name["Buena Vida Multifamily Phase 2"] == 1

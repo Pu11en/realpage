@@ -3,19 +3,37 @@
   "states": {
     "Arizona": {
       "abbr": "AZ",
-      "total": 279,
+      "total": 274,
       "topCities": [
         {
-          "city": "Phoenix",
-          "count": 94
+          "city": "PHOENIX",
+          "count": 60
         },
         {
           "city": "Mesa",
-          "count": 57
+          "count": 46
         },
         {
           "city": "Scottsdale",
-          "count": 45
+          "count": 38
+        }
+      ]
+    },
+    "New Mexico": {
+      "abbr": "NM",
+      "total": 12,
+      "topCities": [
+        {
+          "city": "Las Cruces",
+          "count": 3
+        },
+        {
+          "city": "Albuquerque",
+          "count": 3
+        },
+        {
+          "city": "Santa Fe",
+          "count": 2
         }
       ]
     },
@@ -31,19 +49,19 @@
     },
     "Texas": {
       "abbr": "TX",
-      "total": 592,
+      "total": 1176,
       "topCities": [
         {
+          "city": "HOUSTON",
+          "count": 316
+        },
+        {
+          "city": "Arlington",
+          "count": 200
+        },
+        {
           "city": "Austin",
-          "count": 69
-        },
-        {
-          "city": "Fort Worth",
-          "count": 65
-        },
-        {
-          "city": "Houston",
-          "count": 58
+          "count": 68
         }
       ]
     }

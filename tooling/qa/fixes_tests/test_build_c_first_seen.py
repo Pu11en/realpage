@@ -1,6 +1,7 @@
 """Build C T1: every lead keeps a stable first-seen date across data builds."""
 import importlib.util
 import json
+import re
 from pathlib import Path
 
 
@@ -51,13 +52,13 @@ def test_first_seen_migrates_old_positional_ids_by_content(tmp_path):
     assert [lead["firstSeen"] for lead in leads] == ["2026-09-10", "2026-08-01"]
 
 
-def test_all_built_area_leads_have_the_current_data_date():
+def test_all_built_area_leads_have_a_stable_first_seen_date():
     paths = [ROOT / "site/data/leads.json", *sorted((ROOT / "site/data/areas").glob("[a-z][a-z].json"))]
     assert paths
     for path in paths:
         leads = json.loads(path.read_text())["leads"]
         assert leads, path
-        assert all(lead.get("firstSeen") == "2026-09-15" for lead in leads), path
+        assert all(re.fullmatch(r"\d{4}-\d{2}-\d{2}", lead.get("firstSeen", "")) for lead in leads), path
 
 
 def test_area_manifest_preserves_hidden_areas_during_rebuild(tmp_path, monkeypatch):
