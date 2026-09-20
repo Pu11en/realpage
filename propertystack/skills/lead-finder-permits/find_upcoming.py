@@ -33,6 +33,23 @@ RENOVATION_TYPE_RE = re.compile(
     re.I,
 )
 
+# Some permit feeds fill the address columns with a stand-in instead of
+# leaving them empty when a permit has no sited address yet (one real TX city
+# files plan-review submittals at "<submittal no> FOR REVIEW ONLY WAY"). A stand-in
+# is worse than a blank: it looks like a real street to a seller, and every row
+# sharing it merges into one bogus building.
+# Some permit systems prefix the project name with the routing tag of the
+# third-party plan reviewer handling it, separated by a triple slash
+# ("X TEAM /// Spring Hill East"). The tag is who reviewed the drawings, not
+# the building a seller is calling, so it is stripped off the front.
+REVIEW_TAG_SEPARATOR = "///"
+
+PLACEHOLDER_ADDRESS_RE = re.compile(
+    r"\bfor review only\b|\bno address\b|\baddress (unknown|pending|tbd)\b"
+    r"|\b(un|not )assigned\b|^\s*(none|null|n/?a|tbd|unknown)\s*$",
+    re.I,
+)
+
 # permits issued this long ago or more recently are still "in the pipeline"
 PERMIT_WINDOW_DAYS = 24 * 30
 # a CO issued within this window means the project is now leasing
@@ -65,6 +82,9 @@ def find_upcoming(
 
     apartment_rows = 0
     aged_out = 0
+    no_date = 0
+    placeholder_address = 0
+    junk_dropped = 0
     newest: datetime.date | None = None
     records = []
     for row in rows:
@@ -80,11 +100,18 @@ def find_upcoming(
         if stage is None:
             if issue_date is not None or co_date is not None:
                 aged_out += 1
+            else:
+                no_date += 1
+            continue
+        if _has_placeholder_address(row, fields):
+            # the feed itself says this permit has no sited address yet
+            placeholder_address += 1
             continue
         record = _build_record(row, fields, city, area, endpoint, stage, issue_date, units_pattern, recipe)
         # a pool, carport, stair remodel, repair, roof or garage apartment is
         # work on an existing place, not a new apartment building
         if is_junk_permit(record.name):
+            junk_dropped += 1
             continue
         records.append(record)
 
@@ -97,6 +124,11 @@ def find_upcoming(
                 "agedOut": aged_out,
                 "newestDate": newest.isoformat() if newest else "",
                 "newestAgeDays": (today - newest).days if newest else None,
+                "noDate": no_date,
+                "placeholderAddress": placeholder_address,
+                "junkDropped": junk_dropped,
+                "built": len(records),
+                "mergedAway": len(records) - len(merged),
                 "kept": len(merged),
             }
         )
@@ -139,6 +171,42 @@ def _parse_units(row: dict, fields: dict, units_pattern: str | None) -> int | No
             except (TypeError, ValueError, IndexError):
                 return None
     return None
+
+
+def _row_address(row: dict, fields: dict) -> str:
+    """The row's street address, as a seller would dial it.
+
+    Three things go wrong on real feeds and all three are handled here:
+    a mapped address column that exists but holds null (``row.get(key, "")``
+    returns None, and ``str(None)`` is the literal text "None" -- which then
+    normalizes to "none" and merges every row in the feed into a single
+    building); a layer that has no single address column at all and keeps the
+    parts in separate columns (``fields.address_parts``); and a layer that
+    writes a stand-in address rather than leaving it blank.
+    """
+    address = _joined_address(row, fields)
+    if PLACEHOLDER_ADDRESS_RE.search(address):
+        return ""
+    return address
+
+
+def _joined_address(row: dict, fields: dict) -> str:
+    """The row's address text exactly as the feed wrote it, stand-in and all."""
+    address_key = fields.get("address")
+    address = str(row.get(address_key) or "").strip() if address_key else ""
+    if not address:
+        parts = fields.get("address_parts") or []
+        pieces = [str(row.get(part) or "").strip() for part in parts]
+        address = " ".join(piece for piece in pieces if piece)
+    return re.sub(r"\s+", " ", address).strip()
+
+
+def _has_placeholder_address(row: dict, fields: dict) -> bool:
+    """True only when the feed wrote a stand-in address. A genuinely empty
+    address is not a placeholder -- some sources legitimately have leads with
+    no street address yet, and those are kept."""
+    address = _joined_address(row, fields)
+    return bool(address) and bool(PLACEHOLDER_ADDRESS_RE.search(address))
 
 
 def _find_co_value(row: dict, fields: dict) -> str:
@@ -188,10 +256,9 @@ def _build_record(
     units_pattern: str | None = None,
     recipe: dict | None = None,
 ) -> LeadRecord:
-    address_key = fields.get("address")
-    address = str(row.get(address_key, "")) if address_key else ""
+    address = _row_address(row, fields)
     name_key = fields.get("name")
-    name = str(row.get(name_key) or "").strip() if name_key else ""
+    name = _clean_name(str(row.get(name_key) or "")) if name_key else ""
     if not name:
         # No mapped name field (or it was blank on this row): a city's
         # permit-type field often doubles as the real project name (e.g. a
@@ -224,6 +291,14 @@ def _build_record(
         sources=sources,
         why="new multifamily permit" if stage != "leasing" else "certificate of occupancy issued recently",
     )
+
+
+def _clean_name(name: str) -> str:
+    """The project name as a seller would recognise it, with any plan-review
+    routing tag stripped off the front."""
+    if REVIEW_TAG_SEPARATOR in name:
+        name = name.rsplit(REVIEW_TAG_SEPARATOR, 1)[-1]
+    return re.sub(r"\s+", " ", name).strip()
 
 
 def _find_owner(row: dict, recipe: dict, permit_link: str) -> tuple[str, dict | None]:

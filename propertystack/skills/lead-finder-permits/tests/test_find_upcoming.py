@@ -404,3 +404,138 @@ def test_arcgis_features_shape_supported():
     records = find_upcoming("Rivertown", "ZZ", "zz", recipe, get, today=TODAY)
     assert len(records) == 1
     assert records[0].units == 60
+
+
+def test_null_address_column_does_not_merge_every_row_into_one():
+    """A mapped address column that exists but holds null used to become the
+    literal string "None" on every row, so merge_records saw one building and
+    collapsed a whole feed into a single lead."""
+    rows = [
+        {"PermitType": "Apartment", "IssueDate": "2026-08-01", "Units": "120", "Address": None, "Name": "Copper Ranch"},
+        {"PermitType": "Apartment", "IssueDate": "2026-08-02", "Units": "90", "Address": None, "Name": "Rock Creek"},
+        {"PermitType": "Apartment", "IssueDate": "2026-08-03", "Units": "60", "Address": None, "Name": "Basswood"},
+    ]
+    recipe = {**RECIPE, "fields": {**RECIPE["fields"], "name": "Name"}}
+    records = find_upcoming("Rivertown", "ZZ", "zz", recipe, _http_get(rows), today=TODAY)
+    assert len(records) == 3
+    assert [r.address for r in records] == ["", "", ""]
+    assert {r.name for r in records} == {"Copper Ranch", "Rock Creek", "Basswood"}
+
+
+def test_address_parts_build_the_address_when_there_is_no_single_column():
+    """Some permit layers keep no whole-address column at all -- the number,
+    street and suffix live in separate columns and must be joined."""
+    rows = [
+        {
+            "PermitType": "Apartment", "IssueDate": "2026-08-01", "Units": "228",
+            "Address": None, "No": 4000, "Dir": None, "Street": "WESTBROOK", "Suffix": "DR",
+        }
+    ]
+    recipe = {
+        **RECIPE,
+        "fields": {**RECIPE["fields"], "address_parts": ["No", "Dir", "Street", "Suffix"]},
+    }
+    records = find_upcoming("Rivertown", "ZZ", "zz", recipe, _http_get(rows), today=TODAY)
+    assert len(records) == 1
+    assert records[0].address == "4000 WESTBROOK DR"
+
+
+def test_address_parts_ignored_when_the_real_address_column_has_a_value():
+    rows = [
+        {
+            "PermitType": "Apartment", "IssueDate": "2026-08-01", "Units": "228",
+            "Address": "100 Main St", "No": 4000, "Street": "WESTBROOK", "Suffix": "DR",
+        }
+    ]
+    recipe = {**RECIPE, "fields": {**RECIPE["fields"], "address_parts": ["No", "Street", "Suffix"]}}
+    records = find_upcoming("Rivertown", "ZZ", "zz", recipe, _http_get(rows), today=TODAY)
+    assert records[0].address == "100 Main St"
+
+
+def test_placeholder_address_rows_are_dropped_not_sold_as_real_streets():
+    """A feed that files un-sited plan reviews at a stand-in street must not
+    produce leads a seller would try to drive to."""
+    rows = [
+        {"PermitType": "Apartment", "IssueDate": "2026-08-01", "Units": "200",
+         "Address": None, "No": 25060118, "Street": "FOR REVIEW ONLY", "Suffix": "WAY", "Name": "Hughes House"},
+        {"PermitType": "Apartment", "IssueDate": "2026-08-02", "Units": "228",
+         "Address": None, "No": 4000, "Street": "WESTBROOK", "Suffix": "DR", "Name": "Ridgeway Flats"},
+    ]
+    recipe = {
+        **RECIPE,
+        "fields": {**RECIPE["fields"], "name": "Name", "address_parts": ["No", "Street", "Suffix"]},
+    }
+    stats: dict = {}
+    records = find_upcoming("Rivertown", "ZZ", "zz", recipe, _http_get(rows), today=TODAY, stats=stats)
+    assert [r.name for r in records] == ["Ridgeway Flats"]
+    assert stats["placeholderAddress"] == 1
+
+
+def test_genuinely_blank_address_is_kept_not_treated_as_placeholder():
+    """An empty address is not a stand-in: some sources legitimately have a
+    named project with no street yet, and dropping those would lose real leads."""
+    rows = [
+        {"PermitType": "Apartment", "IssueDate": "2026-08-01", "Units": "200", "Address": "", "Name": "Hughes House"},
+    ]
+    recipe = {**RECIPE, "fields": {**RECIPE["fields"], "name": "Name"}}
+    stats: dict = {}
+    records = find_upcoming("Rivertown", "ZZ", "zz", recipe, _http_get(rows), today=TODAY, stats=stats)
+    assert [r.name for r in records] == ["Hughes House"]
+    assert stats["placeholderAddress"] == 0
+
+
+def test_stats_name_every_drop_reason():
+    """The run must be able to say where rows went, not just how few survived."""
+    rows = [
+        # kept
+        {"PermitType": "Apartment", "IssueDate": "2026-08-01", "Units": "120", "Address": "1 A St"},
+        # merged away: same address as the row above
+        {"PermitType": "Apartment", "IssueDate": "2026-08-02", "Units": "120", "Address": "1 A St"},
+        # aged out: permit older than the 24-month window, no CO
+        {"PermitType": "Apartment", "IssueDate": "2020-01-01", "Units": "120", "Address": "2 B St"},
+        # no usable date at all
+        {"PermitType": "Apartment", "IssueDate": "", "Units": "120", "Address": "3 C St"},
+        # placeholder address
+        {"PermitType": "Apartment", "IssueDate": "2026-08-01", "Units": "120", "Address": "9 FOR REVIEW ONLY WAY"},
+        # junk: a pool at an apartment complex is not a new building
+        {"PermitType": "Apartment", "IssueDate": "2026-08-01", "Units": "120", "Address": "4 D St",
+         "Name": "Swimming Pool"},
+        # not an apartment at all: known unit count under 20
+        {"PermitType": "Apartment", "IssueDate": "2026-08-01", "Units": "4", "Address": "5 E St"},
+    ]
+    recipe = {**RECIPE, "fields": {**RECIPE["fields"], "name": "Name"}}
+    stats: dict = {}
+    find_upcoming("Rivertown", "ZZ", "zz", recipe, _http_get(rows), today=TODAY, stats=stats)
+    assert stats["rows"] == 7
+    assert stats["apartmentRows"] == 6
+    assert stats["agedOut"] == 1
+    assert stats["noDate"] == 1
+    assert stats["placeholderAddress"] == 1
+    assert stats["junkDropped"] == 1
+    assert stats["built"] == 2
+    assert stats["mergedAway"] == 1
+    assert stats["kept"] == 1
+    assert stats["newestDate"] == "2026-08-02"
+
+
+def test_plan_review_routing_tag_is_stripped_from_the_project_name():
+    """Some permit systems prefix the project name with the third-party plan
+    reviewer's routing tag; the seller is calling the building, not the
+    reviewer."""
+    rows = [
+        {"PermitType": "Apartment", "IssueDate": "2026-08-01", "Units": "322",
+         "Address": "3200 Hamilton Ave", "Name": "Q TEAM /// Spring Hill East"},
+    ]
+    recipe = {**RECIPE, "fields": {**RECIPE["fields"], "name": "Name"}}
+    records = find_upcoming("Rivertown", "ZZ", "zz", recipe, _http_get(rows), today=TODAY)
+    assert records[0].name == "Spring Hill East"
+
+
+def test_a_name_without_a_routing_tag_is_untouched():
+    rows = [
+        {"PermitType": "Apartment", "IssueDate": "2026-08-01", "Units": "310",
+         "Address": "1000 Jones St", "Name": "The Calhoun"},
+    ]
+    recipe = {**RECIPE, "fields": {**RECIPE["fields"], "name": "Name"}}
+    records = find_upcoming("Rivertown", "ZZ", "zz", recipe, _http_get(rows), today=TODAY)
+    assert records[0].name == "The Calhoun"

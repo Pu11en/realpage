@@ -58,9 +58,13 @@ Open: http://localhost:8765/index.html
 
 ## Stage 2 — the four suspects (independent of each other; safe to run side by side)
 
-- [ ] S4 **Fort Worth returned 1 lead.** Its own recipe note records 2,227 matching rows from a
+- [x] S4 **Fort Worth returned 1 lead.** Its own recipe note records 2,227 matching rows from a
   live `returnCountOnly` check, and the note says ArcGIS paging was added for exactly this layer.
   Find why 2,227 became 1, fix it if the fix is contained, and record the evidence. Tests.
+  **Done 2026-09-20: 1 -> 126 leads.** `Full_Street_Address` is null on every row, and a null
+  column was read as the literal text "None", so all 595 usable rows shared one address and
+  merged into one lead. Evidence, the full drop-reason table and one open (not contained)
+  finding are in `propertystack/runs/2026-09-20-fort-worth-audit.md`.
 - [ ] S5 **San Antonio returned 2 leads** for a city of 1.4 million. Its note records 156 real
   rows found live across two CKAN resources. Same audit, same decision, same evidence. Tests.
 - [ ] S6 **San Marcos returned 4 and Austin 47.** Audit both together — neighbouring Central Texas
