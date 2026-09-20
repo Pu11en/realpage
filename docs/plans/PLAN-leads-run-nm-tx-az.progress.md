@@ -9,3 +9,5 @@
   - Commit: `78962a2` (durable hidden-area preservation and regression test)
   - Checks: `python3 -m pytest -q tooling/qa/fixes_tests/test_build_c_first_seen.py -q` (5 passed); `python3 site/data/build_data.py` followed by an assertion that New York remains hidden; `python3 -m pytest -q tooling/qa/fixes_tests/ propertystack -x -q` (571 passed); `python3 -m py_compile site/data/build_data.py`; `git diff --check`.
   - Open: the separate `tooling/qa/check_lead_data.py` gate is introduced by T2 and does not exist yet.
+
+- Reviewer still had concerns about T1 Stable ids + honest "new": give every lead a content id (state + normalised address + name), keep it across runs, and stamp `firstSeen` by that id in site/data/build_data.py (today it matches by list position, so a re-run mislabels new leads). Migrate existing tx/az leads so today's rows keep their first-seen date. Tests.: Make duplicate/sparse lead IDs depend only on durable source identity (or exclude rows without address/name), never score/rank or other changing display fields; add a test that reranking the same sparse leads preserves IDs and firstSeen.
