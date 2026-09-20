@@ -58,3 +58,20 @@ def test_all_built_area_leads_have_the_current_data_date():
         leads = json.loads(path.read_text())["leads"]
         assert leads, path
         assert all(lead.get("firstSeen") == "2026-09-15" for lead in leads), path
+
+
+def test_area_manifest_preserves_hidden_areas_during_rebuild(tmp_path, monkeypatch):
+    (tmp_path / "index.json").write_text(json.dumps({
+        "areas": [{"slug": "ny", "hidden": True}],
+    }))
+    (tmp_path / "ny.json").write_text(json.dumps({
+        "updated": "2026-09-15",
+        "leads": [{"id": "ny-example"}],
+    }))
+    monkeypatch.setattr(build_data, "AREAS_OUT_DIR", tmp_path)
+    monkeypatch.setattr(build_data, "_included_slugs", lambda _slugs: set())
+
+    manifest = build_data.build_areas_manifest(["ny"])
+
+    new_york = next(area for area in manifest["areas"] if area["slug"] == "ny")
+    assert new_york["hidden"] is True

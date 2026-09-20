@@ -950,18 +950,33 @@ def build_areas_manifest(area_slugs: list[str]) -> dict:
     """Write site/data/areas/index.json: one entry per area button on the Early
     Leads page (5.2). Plano-Richardson keeps its own legacy leads.json; every
     discovered state area (5.1) points at its file under data/areas/."""
+    manifest_path = AREAS_OUT_DIR / "index.json"
+    previous_areas = {}
+    if manifest_path.exists():
+        try:
+            previous_manifest = json.loads(manifest_path.read_text())
+            previous_areas = {
+                area["slug"]: area
+                for area in previous_manifest.get("areas", [])
+                if isinstance(area, dict) and area.get("slug")
+            }
+        except (json.JSONDecodeError, OSError):
+            pass
     included = _included_slugs(area_slugs)
     areas = [] if AREA in included else [{"slug": AREA, "label": "Plano–Richardson", "dataPath": "data/leads.json", "leads": None}]
     area_dates = []
     for slug in area_slugs:
         area = json.loads((AREAS_OUT_DIR / f"{slug}.json").read_text())
         area_dates.append(area["updated"])
-        areas.append({
+        manifest_area = {
             "slug": slug,
             "label": _STATE_NAMES.get(slug, slug.replace("-", " ").title()),
             "dataPath": f"data/areas/{slug}.json",
             "leads": len(area["leads"]),
-        })
+        }
+        if previous_areas.get(slug, {}).get("hidden") is True:
+            manifest_area["hidden"] = True
+        areas.append(manifest_area)
     # Biggest first: the state with the most leads opens by default.
     areas.sort(key=lambda a: -(a["leads"] or 0))
     # Old links (?area=plano-richardson) open the state that now holds that area.
@@ -970,7 +985,7 @@ def build_areas_manifest(area_slugs: list[str]) -> dict:
     # must not make unchanged lead data appear newer than it is.
     manifest = {"areas": areas, "aliases": aliases, "updated": max(area_dates, default=CURRENT_DATA_DATE)}
     AREAS_OUT_DIR.mkdir(parents=True, exist_ok=True)
-    (AREAS_OUT_DIR / "index.json").write_text(json.dumps(manifest, indent=2))
+    manifest_path.write_text(json.dumps(manifest, indent=2) + "\n")
     return manifest
 
 

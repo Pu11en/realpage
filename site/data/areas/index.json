@@ -16,7 +16,8 @@
       "slug": "ny",
       "label": "New York",
       "dataPath": "data/areas/ny.json",
-      "leads": 2
+      "leads": 2,
+      "hidden": true
     }
   ],
   "aliases": {
