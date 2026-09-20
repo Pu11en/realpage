@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="CraneSignal ready post shelf by platform.">
+<meta name="description" content="CraneSignal public post shelf by platform.">
 <title>CraneSignal ready posts</title>
 <style>
   :root {
@@ -172,6 +172,21 @@
     color:var(--muted);
     max-width:680px;
   }
+  .targets {
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    margin-top:12px;
+  }
+  .target {
+    border:1px solid var(--line);
+    border-radius:8px;
+    background:#fffdf8;
+    padding:4px 8px;
+    color:var(--muted);
+    font-size:12px;
+    line-height:16px;
+  }
   .post {
     border:1px solid var(--line);
     border-radius:8px;
@@ -282,7 +297,7 @@
 <header>
   <div>
     <h1>Ready posts by platform</h1>
-    <p class="micro">Click a platform. Grab the post parts. No planning clutter.</p>
+    <p class="micro">Click a platform. Grab ready posts. Communities go inside platforms later.</p>
   </div>
   <div class="summary" aria-label="ready post counts">
     <div class="stat"><b id="platformCount">0</b><span>platforms</span></div>
@@ -296,14 +311,84 @@
 </main>
 
 <footer>
-  <span>Only put finished posts here. Drafts stay out.</span>
+  <span>Public posts only. Email and DMs stay out.</span>
 </footer>
 
 <script>
 const PLATFORMS = [
   {
-    name: "LinkedIn",
+    name: "Multifamily Insiders",
+    note: "Blogs, discussions",
+    targets: ["Expert blogs", "Discussions"],
+    posts: []
+  },
+  {
+    name: "BiggerPockets",
+    note: "Investor forums",
+    targets: ["Real Estate Technology", "Managing Your Property", "Multifamily"],
+    posts: []
+  },
+  {
+    name: "Multi-Housing News",
+    note: "Guest viewpoint",
+    targets: ["Viewpoint", "Guest columns"],
+    posts: []
+  },
+  {
+    name: "Multifamily Dive",
+    note: "Trade media",
+    targets: ["Opinion", "Tech", "Operations"],
+    posts: []
+  },
+  {
+    name: "Multifamily Executive",
+    note: "Trade media",
+    targets: ["Owners", "Operators", "Developers"],
+    posts: []
+  },
+  {
+    name: "CREtech",
+    note: "Proptech news",
+    targets: ["News", "AI", "Built world"],
+    posts: []
+  },
+  {
+    name: "CraneSignal Blog",
+    note: "Public home base",
+    targets: ["Product blog", "SEO"],
+    posts: [
+      {
+        title: "First blog draft",
+        type: "blog post",
+        parts: {
+          headline: `Which apartment accounts changed recently?`,
+          body: `Most apartment prospecting starts too broad.
+
+CraneSignal starts with change.
+
+A building that sold, filed a permit, changed ownership, or started construction is not automatically a buyer.
+
+It is a better place to start research than a stale list.`
+        }
+      }
+    ]
+  },
+  {
+    name: "Substack",
     note: "Public posts",
+    targets: ["Profile posts", "Publication"],
+    posts: []
+  },
+  {
+    name: "Medium",
+    note: "Public articles",
+    targets: ["Real estate", "Proptech", "SaaS"],
+    posts: []
+  },
+  {
+    name: "LinkedIn",
+    note: "Posts, articles, newsletter",
+    targets: ["Articles", "Newsletter", "Real Estate"],
     posts: [
       {
         title: "Which building would you call first",
@@ -322,6 +407,25 @@ That does not prove they are buying. It tells me which buildings are worth resea
 That is what I am building with CraneSignal. Browsing is free. A free account unlocks who to call and downloads.`,
           firstComment: `Free early access: cranesignal.com`,
           videoTitle: `Which apartment building would you call first?`
+        }
+      },
+      {
+        title: "Long post seed",
+        type: "article",
+        parts: {
+          headline: `The apartment leads I would research before I pitch`,
+          body: `I do not want a giant apartment list first.
+
+I want a smaller set of buildings where something changed.
+
+Recent sale.
+New owner.
+Permit.
+New construction.
+
+That does not prove the account is buying.
+
+It proves the account is worth researching before the pitch.`
         }
       }
     ]
@@ -345,7 +449,8 @@ I would start with buildings that recently sold or filed permits, then research 
   },
   {
     name: "Reddit",
-    note: "Add communities when ready",
+    note: "Careful tests",
+    targets: ["r/realestateinvesting", "r/PptyMgmtSoftware", "r/PropertyManagement"],
     posts: []
   },
   {
@@ -471,6 +576,9 @@ function renderReady(platformName) {
       <div>
         <h2>${esc(platform.name)}</h2>
         <p>${esc(platform.note)}</p>
+        ${platform.targets?.length ? `<div class="targets" aria-label="targets">
+          ${platform.targets.map(target => `<span class="target">${esc(target)}</span>`).join("")}
+        </div>` : ""}
       </div>
       <button class="copyAll" data-platform-all="${esc(platform.name)}">Copy all</button>
     </section>
