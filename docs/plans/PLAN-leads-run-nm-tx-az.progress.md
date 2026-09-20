@@ -61,3 +61,8 @@
   - Commit: `d30a811` (Arizona lead data, pre-run backup, per-source artifacts, summary, and source health)
   - Checks: `python3 tooling/qa/check_lead_data.py propertystack/data/az` (274 leads passed); `python3 -m pytest -q tooling/qa/fixes_tests/ propertystack -x -q` (all passed); `python3 tooling/qa/check_lead_data.py` (4 states, 1,472 leads passed); stable identity comparison confirmed 16 genuinely new leads; `git diff --check` passed.
   - Open: nothing for Arizona; all configured sources completed successfully. The unrelated generated Texas chat CSV change present before T7 was preserved in a named git stash and was not included in this task.
+
+- 2026-09-19 — T8 complete: added the state-agnostic site summary and Leads hero, made run dates flow into built site data, hid areas below 25 leads with automatic reappearance at the threshold, and removed the hard-coded coverage claims. Rebuilt the site from the refreshed Texas, Arizona, and New Mexico data; the current summary is 1,462 tracked buildings, 936 permit signals, and 526 sale signals as of September 19. The refreshed build also exposed and fixed junk permit rows, a duplicate across the statewide and legacy lists, and two raw source links.
+  - Commit: `ebd20ac` (summary pipeline, Leads hero, visibility rule, rebuilt site data, and regression tests)
+  - Checks: plan Check command passed; `python3 tooling/qa/check_lead_data.py` passed for 4 states and 1,472 source leads; 80 additional chatbot, street-talk, and library tests passed; Python compilation and `git diff --check` passed.
+  - Open: New Mexico has 12 leads, so it is counted in the national summary but stays out of the area picker until it reaches 25. No action is required.
