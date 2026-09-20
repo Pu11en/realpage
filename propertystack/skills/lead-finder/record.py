@@ -44,6 +44,9 @@ class LeadRecord:
     # "month" when the county only publishes month and year, so nothing shows a
     # day the source never recorded; "" means the date is exact.
     sale_date_precision: str = ""
+    # The year a housing agency awarded the project. An award has no permit or
+    # sale, so without this the lead reaches the site with no published date.
+    award_year: int | None = None
     buyer: str = ""
     developer: str = ""
     office_phone: str = ""

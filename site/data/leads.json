@@ -26,6 +26,12 @@
       ],
       "contact": null,
       "isNew": false,
+      "stage": "planned",
+      "saleDate": null,
+      "permitDate": "2024-01-08",
+      "openingDate": null,
+      "buyer": null,
+      "dateStatus": null,
       "firstSeen": "2026-09-15"
     },
     {
@@ -48,6 +54,12 @@
       ],
       "contact": null,
       "isNew": true,
+      "stage": "planned",
+      "saleDate": null,
+      "permitDate": "2026-08-13",
+      "openingDate": null,
+      "buyer": null,
+      "dateStatus": null,
       "firstSeen": "2026-09-15"
     },
     {
@@ -70,6 +82,12 @@
       ],
       "contact": null,
       "isNew": false,
+      "stage": "planned",
+      "saleDate": null,
+      "permitDate": null,
+      "openingDate": null,
+      "buyer": null,
+      "dateStatus": "stage date was not published by the source",
       "firstSeen": "2026-09-15"
     },
     {
@@ -92,6 +110,12 @@
       ],
       "contact": null,
       "isNew": false,
+      "stage": "permitted",
+      "saleDate": null,
+      "permitDate": "2026-06-15",
+      "openingDate": "2028-11-01",
+      "buyer": null,
+      "dateStatus": null,
       "firstSeen": "2026-09-15"
     },
     {
@@ -114,6 +138,12 @@
       ],
       "contact": null,
       "isNew": false,
+      "stage": "planned",
+      "saleDate": null,
+      "permitDate": "2026-07-02",
+      "openingDate": null,
+      "buyer": null,
+      "dateStatus": null,
       "firstSeen": "2026-09-15"
     },
     {
@@ -136,6 +166,12 @@
       ],
       "contact": null,
       "isNew": false,
+      "stage": "under construction",
+      "saleDate": null,
+      "permitDate": null,
+      "openingDate": null,
+      "buyer": null,
+      "dateStatus": "stage date was not published by the source",
       "firstSeen": "2026-09-15"
     },
     {
@@ -158,6 +194,12 @@
       ],
       "contact": null,
       "isNew": false,
+      "stage": "sold",
+      "saleDate": "2026-06-24",
+      "permitDate": null,
+      "openingDate": null,
+      "buyer": "WINSTON GT HOLDINGS LP",
+      "dateStatus": null,
       "firstSeen": "2026-09-15"
     },
     {
@@ -187,6 +229,12 @@
         "email": null
       },
       "isNew": false,
+      "stage": "sold",
+      "saleDate": "2026-06-11",
+      "permitDate": null,
+      "openingDate": null,
+      "buyer": "TREA ROUTH CREEK TX OWNER LP",
+      "dateStatus": null,
       "firstSeen": "2026-09-15"
     },
     {
@@ -216,6 +264,12 @@
         "email": null
       },
       "isNew": false,
+      "stage": "sold",
+      "saleDate": "2026-07-08",
+      "permitDate": null,
+      "openingDate": null,
+      "buyer": "S2 PRESTON PARK LP",
+      "dateStatus": null,
       "firstSeen": "2026-09-15"
     },
     {
@@ -238,6 +292,12 @@
       ],
       "contact": null,
       "isNew": false,
+      "stage": "under construction",
+      "saleDate": null,
+      "permitDate": "2026-04-06",
+      "openingDate": "2027-10-01",
+      "buyer": null,
+      "dateStatus": null,
       "firstSeen": "2026-09-15"
     },
     {
@@ -260,6 +320,12 @@
       ],
       "contact": null,
       "isNew": false,
+      "stage": "sold",
+      "saleDate": "2025-06-26",
+      "permitDate": null,
+      "openingDate": null,
+      "buyer": "CH REALTY X MF PLANO 23 HUNDRED LP",
+      "dateStatus": null,
       "firstSeen": "2026-09-15"
     },
     {
@@ -282,6 +348,12 @@
       ],
       "contact": null,
       "isNew": false,
+      "stage": "planned",
+      "saleDate": null,
+      "permitDate": "2026-06-08",
+      "openingDate": null,
+      "buyer": null,
+      "dateStatus": null,
       "firstSeen": "2026-09-15"
     },
     {
@@ -304,6 +376,12 @@
       ],
       "contact": null,
       "isNew": false,
+      "stage": "under construction",
+      "saleDate": null,
+      "permitDate": "2026-07-10",
+      "openingDate": "2029-02-01",
+      "buyer": null,
+      "dateStatus": null,
       "firstSeen": "2026-09-15"
     },
     {
@@ -314,7 +392,7 @@
       "city": "Plano",
       "address": "600 Kissimmee Drive, Plano, TX",
       "units": 338,
-      "signalType": "Upcoming",
+      "signalType": "Leasing",
       "signal": "Leasing Apr 2026",
       "software": null,
       "why": "Leasing Apr 2026 \u00b7 338 units \u2192 software not chosen yet.",
@@ -326,6 +404,12 @@
       ],
       "contact": null,
       "isNew": false,
+      "stage": "leasing",
+      "saleDate": null,
+      "permitDate": "2026-04-01",
+      "openingDate": null,
+      "buyer": null,
+      "dateStatus": null,
       "firstSeen": "2026-09-15"
     },
     {
@@ -348,6 +432,12 @@
       ],
       "contact": null,
       "isNew": false,
+      "stage": "planned",
+      "saleDate": null,
+      "permitDate": null,
+      "openingDate": null,
+      "buyer": null,
+      "dateStatus": "stage date was not published by the source",
       "firstSeen": "2026-09-15"
     },
     {
@@ -370,6 +460,12 @@
       ],
       "contact": null,
       "isNew": false,
+      "stage": "sold",
+      "saleDate": null,
+      "permitDate": null,
+      "openingDate": null,
+      "buyer": "MFREVF V - PLANO LP",
+      "dateStatus": "sale date was not published by the source",
       "firstSeen": "2026-09-15"
     },
     {
@@ -399,6 +495,12 @@
         "email": null
       },
       "isNew": false,
+      "stage": "sold",
+      "saleDate": "2026-07-17",
+      "permitDate": null,
+      "openingDate": null,
+      "buyer": "CSH PLANO ACT LLC",
+      "dateStatus": null,
       "firstSeen": "2026-09-15"
     },
     {
@@ -425,6 +527,12 @@
       ],
       "contact": null,
       "isNew": false,
+      "stage": "sold",
+      "saleDate": "2025-12-01",
+      "permitDate": null,
+      "openingDate": null,
+      "buyer": "AREIT DALLAS CITYLINE LLC",
+      "dateStatus": null,
       "firstSeen": "2026-09-15"
     },
     {
@@ -454,6 +562,12 @@
         "email": null
       },
       "isNew": false,
+      "stage": "sold",
+      "saleDate": "2025-09-29",
+      "permitDate": null,
+      "openingDate": null,
+      "buyer": "701 LEGACY DRIVE SPE LLC",
+      "dateStatus": null,
       "firstSeen": "2026-09-15"
     },
     {
@@ -476,6 +590,12 @@
       ],
       "contact": null,
       "isNew": false,
+      "stage": "permitted",
+      "saleDate": null,
+      "permitDate": "2026-06-19",
+      "openingDate": "2027-07-30",
+      "buyer": null,
+      "dateStatus": null,
       "firstSeen": "2026-09-15"
     },
     {
@@ -498,6 +618,12 @@
       ],
       "contact": null,
       "isNew": false,
+      "stage": "permitted",
+      "saleDate": null,
+      "permitDate": null,
+      "openingDate": "2027-06-30",
+      "buyer": null,
+      "dateStatus": null,
       "firstSeen": "2026-09-15"
     },
     {
@@ -527,6 +653,12 @@
         "email": null
       },
       "isNew": false,
+      "stage": "sold",
+      "saleDate": "2025-04-28",
+      "permitDate": null,
+      "openingDate": null,
+      "buyer": "LW OWNER 1 LLC",
+      "dateStatus": null,
       "firstSeen": "2026-09-15"
     },
     {
@@ -556,6 +688,12 @@
         "email": null
       },
       "isNew": false,
+      "stage": "sold",
+      "saleDate": "2026-03-12",
+      "permitDate": null,
+      "openingDate": null,
+      "buyer": "PARK RESIDENCES PLANO WEST LLC",
+      "dateStatus": null,
       "firstSeen": "2026-09-15"
     },
     {
@@ -585,6 +723,12 @@
         "email": null
       },
       "isNew": false,
+      "stage": "sold",
+      "saleDate": "2025-04-01",
+      "permitDate": null,
+      "openingDate": null,
+      "buyer": "PECOS HOUSING FINANCE CORPORATION",
+      "dateStatus": null,
       "firstSeen": "2026-09-15"
     },
     {
@@ -607,6 +751,12 @@
       ],
       "contact": null,
       "isNew": false,
+      "stage": "sold",
+      "saleDate": "2025-06-24",
+      "permitDate": null,
+      "openingDate": null,
+      "buyer": "SPRING CREEK 278 LLC",
+      "dateStatus": null,
       "firstSeen": "2026-09-15"
     },
     {
@@ -636,6 +786,12 @@
         "email": null
       },
       "isNew": false,
+      "stage": "sold",
+      "saleDate": "2024-09-26",
+      "permitDate": null,
+      "openingDate": null,
+      "buyer": "KEY CREEKSIDE LLC",
+      "dateStatus": null,
       "firstSeen": "2026-09-15"
     },
     {
@@ -658,6 +814,12 @@
       ],
       "contact": null,
       "isNew": false,
+      "stage": "under construction",
+      "saleDate": null,
+      "permitDate": "2025-12-11",
+      "openingDate": "2027-10-01",
+      "buyer": null,
+      "dateStatus": null,
       "firstSeen": "2026-09-15"
     },
     {
@@ -683,6 +845,12 @@
         "email": null
       },
       "isNew": false,
+      "stage": "sold",
+      "saleDate": null,
+      "permitDate": null,
+      "openingDate": null,
+      "buyer": "APARTMENTS AXIS SPE LLC",
+      "dateStatus": "sale date was not published by the source",
       "firstSeen": "2026-09-15"
     },
     {
@@ -705,6 +873,12 @@
       ],
       "contact": null,
       "isNew": false,
+      "stage": "sold",
+      "saleDate": "2025-04-14",
+      "permitDate": null,
+      "openingDate": null,
+      "buyer": "THE CAMERON COUNTY HOUSING FINANCE CORPORATION",
+      "dateStatus": null,
       "firstSeen": "2026-09-15"
     },
     {
@@ -734,6 +908,12 @@
         "email": null
       },
       "isNew": false,
+      "stage": "sold",
+      "saleDate": "2024-09-26",
+      "permitDate": null,
+      "openingDate": null,
+      "buyer": "SIMFA LAKESHORE FEE SIMPLE LLC",
+      "dateStatus": null,
       "firstSeen": "2026-09-15"
     },
     {
@@ -763,6 +943,12 @@
         "email": null
       },
       "isNew": false,
+      "stage": "sold",
+      "saleDate": null,
+      "permitDate": null,
+      "openingDate": null,
+      "buyer": "HERITAGE CREEKSIDE BLOCK B OWNER LLC",
+      "dateStatus": "sale date was not published by the source",
       "firstSeen": "2026-09-15"
     },
     {
@@ -792,6 +978,12 @@
         "email": "mcdermottplace@willowbridgepc.com"
       },
       "isNew": false,
+      "stage": "sold",
+      "saleDate": null,
+      "permitDate": null,
+      "openingDate": null,
+      "buyer": "HEITMAN CREDIT ACQUISITION XL LP",
+      "dateStatus": "sale date was not published by the source",
       "firstSeen": "2026-09-15"
     },
     {
@@ -821,6 +1013,12 @@
         "email": null
       },
       "isNew": false,
+      "stage": "sold",
+      "saleDate": "2025-09-26",
+      "permitDate": null,
+      "openingDate": null,
+      "buyer": "DHC HYB SLC PROPERTIES LLC",
+      "dateStatus": null,
       "firstSeen": "2026-09-15"
     },
     {
@@ -850,6 +1048,12 @@
         "email": null
       },
       "isNew": false,
+      "stage": "sold",
+      "saleDate": "2025-06-13",
+      "permitDate": null,
+      "openingDate": null,
+      "buyer": "BRECKINRIDGE POINT TX LLC",
+      "dateStatus": null,
       "firstSeen": "2026-09-15"
     },
     {
@@ -879,6 +1083,12 @@
         "email": null
       },
       "isNew": false,
+      "stage": "sold",
+      "saleDate": "2025-06-13",
+      "permitDate": null,
+      "openingDate": null,
+      "buyer": "BRECKINRIDGE POINT TX LLC",
+      "dateStatus": null,
       "firstSeen": "2026-09-15"
     },
     {
@@ -908,6 +1118,12 @@
         "email": "thewexley@founderspropertymanagement.com"
       },
       "isNew": false,
+      "stage": "sold",
+      "saleDate": "2025-08-01",
+      "permitDate": null,
+      "openingDate": null,
+      "buyer": "HARVESTREE OWNER LLC",
+      "dateStatus": null,
       "firstSeen": "2026-09-15"
     },
     {
@@ -937,6 +1153,12 @@
         "email": null
       },
       "isNew": false,
+      "stage": "sold",
+      "saleDate": "2025-04-22",
+      "permitDate": null,
+      "openingDate": null,
+      "buyer": "LW RESIDENTIAL PARTNERS LP",
+      "dateStatus": null,
       "firstSeen": "2026-09-15"
     },
     {
@@ -966,6 +1188,12 @@
         "email": null
       },
       "isNew": false,
+      "stage": "sold",
+      "saleDate": null,
+      "permitDate": null,
+      "openingDate": null,
+      "buyer": "CLOVER WOODLANDS PLANO OWNER LLC",
+      "dateStatus": "sale date was not published by the source",
       "firstSeen": "2026-09-15"
     },
     {
@@ -995,6 +1223,12 @@
         "email": "calvin@reapmgt.com"
       },
       "isNew": false,
+      "stage": "sold",
+      "saleDate": "2024-12-13",
+      "permitDate": null,
+      "openingDate": null,
+      "buyer": "RC CALVIN LLC",
+      "dateStatus": null,
       "firstSeen": "2026-09-15"
     },
     {
@@ -1024,6 +1258,12 @@
         "email": null
       },
       "isNew": false,
+      "stage": "sold",
+      "saleDate": "2025-04-28",
+      "permitDate": null,
+      "openingDate": null,
+      "buyer": "LW OWNER 2 LLC",
+      "dateStatus": null,
       "firstSeen": "2026-09-15"
     },
     {
@@ -1053,6 +1293,12 @@
         "email": null
       },
       "isNew": false,
+      "stage": "sold",
+      "saleDate": "2025-02-07",
+      "permitDate": null,
+      "openingDate": null,
+      "buyer": "ALTA VISTA APARTMENTS & TJFL LEGACY LP",
+      "dateStatus": null,
       "firstSeen": "2026-09-15"
     },
     {
@@ -1082,6 +1328,12 @@
         "email": null
       },
       "isNew": false,
+      "stage": "sold",
+      "saleDate": "2025-05-03",
+      "permitDate": null,
+      "openingDate": null,
+      "buyer": "AMELIA 77 LLC",
+      "dateStatus": null,
       "firstSeen": "2026-09-15"
     }
   ]

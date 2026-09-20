@@ -87,8 +87,9 @@ def _find_htc_inventory_records(area: str, recipe: dict, fetch_bytes: FetchBytes
                 address=address,
                 units=units,
                 stage="planned",
+                award_year=year,
                 links={"htc_inventory": url},
-                sources=[{"fact": "units", "url": url}],
+                sources=[{"fact": "units", "url": url}, {"fact": "award_year", "url": url}],
                 why=f"tax-credit new-construction award ({year})",
             )
         )

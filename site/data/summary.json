@@ -1,8 +1,15 @@
 {
   "lastCheck": "2026-09-20",
   "totalTracked": 1873,
-  "newLast7Days": 1873,
+  "leadsInAreaFiles": 1875,
+  "notTracked": [
+    {
+      "area": "ny",
+      "leads": 2,
+      "why": "area is hidden by hand, so its leads are not published"
+    }
+  ],
   "permitsFiled": 935,
   "sold": 938,
-  "recentLast180Days": 174
+  "recentLast180Days": 185
 }
