@@ -31,3 +31,8 @@
   - Commit: `3f0dadc` (source finder, recorded fixture, runner support, and offline tests)
   - Checks: targeted source-finder and runner tests (9 passed); `python3 -m pytest -q tooling/qa/fixes_tests/ propertystack -x -q` (all passed); `python3 tooling/qa/check_lead_data.py` (3 states, 867 leads passed); skill validation passed; Python compilation and `git diff --check` passed.
   - Open: live source discovery is intentionally deferred to the New Mexico recipe task; T11 must include every recipe marked `source: auto-found` in its Discord summary. The earlier reviewer concern about sparse T1 IDs remains outside this task.
+
+- 2026-09-19 — T3b reviewer repair complete: changed the real command from a one-city entry point into a batch entry point that owns one shared search budget for every city in the run. Added regression coverage proving a 21-city run makes exactly 100 searches, never starts search 101, records the capped city cleanly, and routes CLI city/state pairs through the shared run path.
+  - Commit: `08edc21` (batch entry point and enforceable run-wide search cap)
+  - Checks: targeted source-finder tests (7 passed); offline two-city CLI smoke test passed; `python3 -m pytest -q tooling/qa/fixes_tests/ propertystack -x -q` (all passed); `python3 tooling/qa/check_lead_data.py` (3 states, 867 leads passed); Python compilation and `git diff --check` passed.
+  - Open: live source discovery remains intentionally deferred to T4; T11 still needs to include each auto-found source in the Discord summary. The earlier reviewer concern about sparse T1 IDs remains outside this task.
