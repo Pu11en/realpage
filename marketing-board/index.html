@@ -303,7 +303,7 @@
 const PLATFORMS = [
   {
     name: "LinkedIn",
-    note: "Feed, comments, groups",
+    note: "Public posts",
     posts: [
       {
         title: "Which building would you call first",
@@ -323,21 +323,12 @@ That is what I am building with CraneSignal. Browsing is free. A free account un
           firstComment: `Free early access: cranesignal.com`,
           videoTitle: `Which apartment building would you call first?`
         }
-      },
-      {
-        title: "Comment reply",
-        type: "comment",
-        parts: {
-          reply: `This is the part I would check first: sale, permit, owner, manager.
-
-The signal is not proof they are buying. It is a reason to research the account before pitching.`
-        }
       }
     ]
   },
   {
     name: "X",
-    note: "Post, reply, DM",
+    note: "Public posts",
     posts: [
       {
         title: "Short video post",
@@ -347,50 +338,15 @@ The signal is not proof they are buying. It is a reason to research the account 
 
 It is a pile to narrow.
 
-I would start with buildings that recently sold or filed permits, then research who actually picks the software.`,
-          reply: `Free early access: cranesignal.com`
-        }
-      },
-      {
-        title: "DM after someone engages",
-        type: "DM",
-        parts: {
-          dm: `Would this help your team pick better apartment accounts?
-
-I can send one fresh building from your market.`
+I would start with buildings that recently sold or filed permits, then research who actually picks the software.`
         }
       }
     ]
   },
   {
     name: "Reddit",
-    note: "Answers only",
-    posts: [
-      {
-        title: "r/sales answer",
-        type: "answer",
-        parts: {
-          answer: `Build the list from recent events first.
-
-Sale. Permit. New owner.
-
-Then work backward to the company or person who can actually say yes.
-
-Full disclosure: I am building a free tool for this, so I am biased. But even without it, those are the records I would check before buying a giant contact list.`
-        }
-      },
-      {
-        title: "r/PropertyMgmt answer",
-        type: "answer",
-        parts: {
-          answer: `If you are picking software, the management company usually matters first.
-
-The building is the starting point. The buyer is often at the owner or manager level.
-
-That is why I would start with recent sales, permits, and management changes instead of just calling the property number.`
-        }
-      }
-    ]
+    note: "Add communities when ready",
+    posts: []
   },
   {
     name: "YouTube",
@@ -447,7 +403,7 @@ CraneSignal helps me find apartment buildings worth researching before I pitch.`
   },
   {
     name: "Facebook",
-    note: "Page, groups",
+    note: "Public posts",
     posts: [
       {
         title: "Page post",
@@ -458,15 +414,6 @@ CraneSignal helps me find apartment buildings worth researching before I pitch.`
 Free list.
 
 Feedback wanted from people selling into apartments.`
-        }
-      },
-      {
-        title: "Group answer",
-        type: "answer",
-        parts: {
-          answer: `Start with the building event, then find the owner or manager.
-
-A recent sale or permit gives you a reason to research before reaching out.`
         }
       }
     ]
@@ -488,41 +435,6 @@ Sale. Permit. New owner.`
       }
     ]
   },
-  {
-    name: "Email or DM",
-    note: "One to one",
-    posts: [
-      {
-        title: "After sending video",
-        type: "DM",
-        parts: {
-          message: `I recorded a quick screen video showing how I would narrow apartment leads before pitching.
-
-The basic idea: do not call every building. Start with what changed, then research who can actually say yes.
-
-Would this be useful for the kind of apartment accounts you sell into?`
-        }
-      }
-    ]
-  },
-  {
-    name: "Newsletter",
-    note: "The Permit Signal",
-    posts: [
-      {
-        title: "Issue intro",
-        type: "email",
-        parts: {
-          subject: `Buildings that changed this week`,
-          intro: `This week I am looking at apartment buildings with a recent sale, permit, or new project signal.
-
-The point is not to call everything.
-
-The point is to pick what deserves research.`
-        }
-      }
-    ]
-  }
 ];
 
 const platforms = document.getElementById("platforms");
