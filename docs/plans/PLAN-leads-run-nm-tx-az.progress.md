@@ -11,3 +11,8 @@
   - Open: the separate `tooling/qa/check_lead_data.py` gate is introduced by T2 and does not exist yet.
 
 - Reviewer still had concerns about T1 Stable ids + honest "new": give every lead a content id (state + normalised address + name), keep it across runs, and stamp `firstSeen` by that id in site/data/build_data.py (today it matches by list position, so a re-run mislabels new leads). Migrate existing tx/az leads so today's rows keep their first-seen date. Tests.: Make duplicate/sparse lead IDs depend only on durable source identity (or exclude rows without address/name), never score/rank or other changing display fields; add a test that reranking the same sparse leads preserves IDs and firstSeen.
+
+- 2026-09-19 — T2 complete: added a reusable lead-data publishing gate that checks source URLs, duplicate normalized addresses, stable and unique built IDs, and lead-count losses over 20%. It accepts any state folder or leads JSON file, reports all problems in plain English, prefers a saved `leads.before-run.json` baseline, and otherwise compares with the currently published state snapshot.
+  - Commit: `a974c29` (checker and four offline regression tests)
+  - Checks: `python3 tooling/qa/check_lead_data.py` (3 states, 867 leads passed); `python3 -m pytest -q tooling/qa/fixes_tests/ propertystack -x -q` (all passed); targeted checker tests (4 passed); `python3 -m py_compile tooling/qa/check_lead_data.py tooling/qa/fixes_tests/test_check_lead_data.py`; `git diff --check`.
+  - Open: T3 must preserve each state's pre-run file as `leads.before-run.json` (or pass `--previous`) so the loss guard still has the old count after site data is rebuilt. The earlier reviewer concern about sparse T1 IDs remains outside this task.
