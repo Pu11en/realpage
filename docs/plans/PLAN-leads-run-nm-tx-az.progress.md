@@ -16,3 +16,8 @@
   - Commit: `a974c29` (checker and four offline regression tests)
   - Checks: `python3 tooling/qa/check_lead_data.py` (3 states, 867 leads passed); `python3 -m pytest -q tooling/qa/fixes_tests/ propertystack -x -q` (all passed); targeted checker tests (4 passed); `python3 -m py_compile tooling/qa/check_lead_data.py tooling/qa/fixes_tests/test_check_lead_data.py`; `git diff --check`.
   - Open: T3 must preserve each state's pre-run file as `leads.before-run.json` (or pass `--previous`) so the loss guard still has the old count after site data is rebuilt. The earlier reviewer concern about sparse T1 IDs remains outside this task.
+
+- 2026-09-19 — T2 reviewer repair complete: built files under `site/data/areas/<state>.json` now derive the state from their filename, current input always receives source-URL and duplicate-address checks, and stable IDs are checked separately in the built output. Source aliases are normalized by the same rules used by the site build, so valid stored source references still count as URLs.
+  - Commit: `d79be73` (state detection, validation boundary fix, and two regression tests)
+  - Checks: `python3 tooling/qa/check_lead_data.py site/data/areas/tx.json` (592 leads passed); `python3 tooling/qa/check_lead_data.py` (3 states, 867 leads passed); targeted checker tests (6 passed); `python3 -m pytest -q tooling/qa/fixes_tests/ propertystack -x -q` (all passed); `python3 -m py_compile tooling/qa/check_lead_data.py`; `git diff --check`.
+  - Open: T3 must preserve each state's pre-run file as `leads.before-run.json` (or pass `--previous`) so the loss guard compares against the actual pre-run count. The earlier reviewer concern about sparse T1 IDs remains outside this task.
