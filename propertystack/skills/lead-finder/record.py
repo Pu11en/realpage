@@ -41,6 +41,9 @@ class LeadRecord:
     permit_date: str = ""  # ISO date, blank if unknown
     opening_date: str = ""  # ISO date, blank if unknown
     sale_date: str = ""
+    # "month" when the county only publishes month and year, so nothing shows a
+    # day the source never recorded; "" means the date is exact.
+    sale_date_precision: str = ""
     buyer: str = ""
     developer: str = ""
     office_phone: str = ""

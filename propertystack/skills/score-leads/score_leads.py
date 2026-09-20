@@ -58,6 +58,26 @@ def _active_key(record: LeadRecord):
     )
 
 
+def sale_date_label(record) -> str:
+    """The sale date as the source actually knows it.
+
+    Maricopa County publishes SALEDATE_MMYYYY -- month and year only -- so its
+    dates are stored on the first of the month. Printing "2026-08-01" claims a
+    day the county never recorded (that sale was really the 14th), so a
+    month-precision record reads "Aug 2026".
+    """
+    value = getattr(record, "sale_date", "") or ""
+    if getattr(record, "sale_date_precision", "") != "month" or len(value) < 7:
+        return value
+    import datetime
+
+    try:
+        parsed = datetime.date.fromisoformat(value)
+    except ValueError:
+        return value
+    return f"{parsed.strftime('%b')} {parsed.year}"
+
+
 def _to_ordinal(date_str: str) -> int:
     try:
         return datetime.date.fromisoformat(date_str).toordinal()
@@ -96,7 +116,7 @@ def _why(record: LeadRecord) -> str:
         pitch = "software not picked yet" if software in _UNDECIDED_SOFTWARE else f"on {record.software} today"
         parts = [record.stage.capitalize(), opens, units_part, pitch]
     elif record.stage == "sold":
-        sold = f"Sold {record.sale_date}" if record.sale_date else "Sold"
+        sold = f"Sold {sale_date_label(record)}" if record.sale_date else "Sold"
         buyer = f"to {record.buyer}" if record.buyer else ""
         parts = [sold, buyer, units_part, "new owner may re-pick software"]
     else:

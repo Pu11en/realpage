@@ -333,6 +333,6 @@ def _dallas_zip_with_streets() -> bytes:
     ]
     acct_rows = [
         DALLAS_ACCT_HEADER + ["STREET_NUM", "FULL_STREET_NAME"],
-        ["9", "05/06/2025", "NEW OWNER LP", "2145550000", "Dallas", "4321", "CEDAR SPRINGS RD"],
+        ["9", "05/06/2025", "NEW OWNER LP", "2145550000", "City A", "4321", "CEDAR SPRINGS RD"],
     ]
     return _zip_bytes({"COM_DETAIL.CSV": _csv(bldg_rows), "ACCOUNT_INFO.CSV": _csv(acct_rows)})

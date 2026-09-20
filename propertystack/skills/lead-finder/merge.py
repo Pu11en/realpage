@@ -49,14 +49,16 @@ def _merge_pair(keep: LeadRecord, other: LeadRecord) -> LeadRecord:
         # other is further along -- promote its stage/dates onto the kept record,
         # but don't throw away facts keep already has.
         keep.stage = other.stage
-        for field_name in ("permit_date", "opening_date", "sale_date", "buyer"):
+        for field_name in (
+            "permit_date", "opening_date", "sale_date", "sale_date_precision", "buyer",
+        ):
             other_value = getattr(other, field_name)
             if other_value and not getattr(keep, field_name):
                 setattr(keep, field_name, other_value)
 
     for field_name in (
         "name", "address", "lat", "lon", "units", "developer",
-        "office_phone", "website",
+        "office_phone", "website", "sale_date_precision",
     ):
         if not getattr(keep, field_name) and getattr(other, field_name):
             setattr(keep, field_name, getattr(other, field_name))

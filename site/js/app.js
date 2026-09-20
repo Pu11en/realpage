@@ -93,7 +93,13 @@ function summaryHero(summary) {
   const permits = Number(summary.permitsFiled || 0).toLocaleString("en-US");
   const sold = Number(summary.sold || 0).toLocaleString("en-US");
   const total = Number(summary.totalTracked || 0).toLocaleString("en-US");
-  return `Last check ${formatDataDate(summary.lastCheck)}: ${permits} buildings just filed permits, ${sold} just sold. ${total} tracked.`;
+  // "just filed" and "just sold" claimed the whole list was recent; most of
+  // these buildings last moved over a year ago. State the size and the real
+  // recent count separately, and let each lead carry its own date.
+  const recent = Number(summary.recentLast180Days || 0).toLocaleString("en-US");
+  const headline = `Last check ${formatDataDate(summary.lastCheck)}: ${total} buildings tracked — ${permits} being built or planned, ${sold} sold to a new owner.`;
+  if (!summary.recentLast180Days) return headline;
+  return `${headline} ${recent} with a permit or sale in the last 6 months.`;
 }
 
 function setLastUpdated(iso) {

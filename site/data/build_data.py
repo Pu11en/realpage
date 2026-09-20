@@ -560,7 +560,9 @@ def _area_signal_text(record) -> str:
     public yet', 'Sold <date>' -- for whatever stage/date data a state-area
     record actually has (never guessed)."""
     if record.stage == "sold":
-        return f"Sold {record.sale_date}" if record.sale_date else "Sold"
+        from score_leads import sale_date_label  # noqa: E402
+
+        return f"Sold {sale_date_label(record)}" if record.sale_date else "Sold"
     if record.stage == "planned":
         return "Planned (not permitted yet)"
     return f"Opens: {record.opening_date}" if record.opening_date else "Opens: not public yet"
@@ -756,6 +758,7 @@ def _area_lead_dict(record, idx: int, total: int = 34) -> dict:
         "permitDate": record.permit_date or None,
         "openingDate": record.opening_date or None,
         "saleDate": record.sale_date or None,
+        "saleDatePrecision": record.sale_date_precision or None,
         "buyer": record.buyer or None,
         "developer": record.developer or None,
         "officePhone": record.office_phone or None,
@@ -1072,6 +1075,10 @@ def build_summary(area_slugs: list[str], manifest: dict) -> dict:
         new_cutoff = last_check
 
     sold = sum(lead.get("signalType") == "Sold" for lead in leads)
+    try:
+        recent_cutoff = (date.fromisoformat(last_check) - timedelta(days=180)).isoformat()
+    except ValueError:
+        recent_cutoff = last_check
     return {
         "lastCheck": last_check,
         "totalTracked": len(leads),
@@ -1083,7 +1090,22 @@ def build_summary(area_slugs: list[str], manifest: dict) -> dict:
         # building signal is in the permits side of the summary.
         "permitsFiled": len(leads) - sold,
         "sold": sold,
+        # How many buildings actually did something lately. The hero used to
+        # call every tracked building one that "just" filed or sold; most of
+        # them last moved over a year ago, so the recent count is stated on
+        # its own instead of implied over the whole list.
+        "recentLast180Days": sum(_moved_since(lead, recent_cutoff) for lead in leads),
     }
+
+
+def _moved_since(lead: dict, cutoff: str) -> bool:
+    """True when a lead's own newest recorded event is on or after `cutoff`."""
+    # Only events that have already happened. An openingDate is often in the
+    # future, and a building that opens next spring did not do anything in the
+    # last six months.
+    dates = [str(lead.get(field) or "")[:10] for field in ("saleDate", "permitDate")]
+    newest = max((value for value in dates if value), default="")
+    return bool(newest) and cutoff <= newest
 
 
 _STATE_NAMES = {

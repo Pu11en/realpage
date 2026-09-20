@@ -67,7 +67,9 @@ def find_sold(
         units = units_by_parcel.get(parcel_id)
         if units is None or units < min_units:
             continue
-        records.append(_build_record(row, sales_fields, area, recipe, units, sale_date))
+        records.append(
+            _build_record(row, sales_fields, area, recipe, units, sale_date, date_format)
+        )
     return records
 
 
@@ -123,6 +125,7 @@ def _build_record(
     recipe: dict,
     units: int,
     sale_date: datetime.date,
+    date_format: str = "",
 ) -> LeadRecord:
     address = str(row.get(sales_fields.get("address", ""), "")).strip()
     city = str(row.get(sales_fields.get("city", ""), "")).strip()
@@ -137,6 +140,9 @@ def _build_record(
         units=units,
         stage="sold",
         sale_date=sale_date.isoformat(),
+        # This county's column is SALEDATE_MMYYYY -- it has no day in it, so the
+        # first of the month is a placeholder and must never be shown as one.
+        sale_date_precision="month" if date_format == "MMYYYY" else "",
         buyer=grantee,
         developer=grantor,
         links={"sales_file": source_url},
