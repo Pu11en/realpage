@@ -234,7 +234,8 @@ def run_recipe(recipe_path: Path, state: str, stats: dict | None = None) -> list
     elif system == "houston-sold-permits-xlsx":
         text_fetch = TrackingFetch(_http_get_text)
         bytes_fetch = TrackingFetch(_http_get_bytes)
-        rows = houston_sold_permits.fetch_rows(recipe, text_fetch, bytes_fetch)
+        feed_stats: dict = {}
+        rows = houston_sold_permits.fetch_rows(recipe, text_fetch, bytes_fetch, stats=feed_stats)
         text_fetch.raise_if_failed()
         bytes_fetch.raise_if_failed()
         records = find_upcoming.find_upcoming(
@@ -245,6 +246,15 @@ def run_recipe(recipe_path: Path, state: str, stats: dict | None = None) -> list
             lambda _endpoint: rows,
             stats=stats,
         )
+        # The adapter hands find_upcoming an already-filtered list, so its own
+        # row count is the filtered count. Report what the weekly files really
+        # held instead, plus any week that could not be read -- a silently
+        # missing week is the failure this source actually had.
+        if stats is not None and feed_stats:
+            stats["rows"] = feed_stats["rawRows"]
+            stats["filesPosted"] = feed_stats["filesPosted"]
+            stats["filesRead"] = feed_stats["filesRead"]
+            stats["filesFailed"] = feed_stats["filesFailed"]
     elif system == "appraisal-district-bulk-file":
         fetch = TrackingFetch(_http_get_bytes)
         cache: dict[str, bytes] = {}
@@ -339,6 +349,12 @@ def _signal_note(signal: dict) -> str:
             f"suspect: the endpoint held {signal['apartmentRows']} apartment rows "
             f"and only {signal['kept']} became leads"
         )
+    if "incomplete" in flags:
+        missed = signal.get("filesFailed") or []
+        return (
+            f"incomplete: {len(missed)} of {signal.get('filesPosted')} posted files "
+            f"could not be read, so whole periods are missing (first: {missed[0]})"
+        )
     return ""
 
 
@@ -366,6 +382,11 @@ def _source_signal(stats: dict, kept: int) -> dict:
         and kept < apartment_rows * SUSPECT_KEEP_RATIO
     ):
         flags.append("suspect")
+    # A source made of many part-files can look healthy while quietly losing
+    # whole periods: every file it could not read is a hole in the history.
+    files_failed = stats.get("filesFailed") or []
+    if files_failed:
+        flags.append("incomplete")
     signal = {
         "measured": True,
         "endpointRows": int(stats.get("rows") or 0),
@@ -376,6 +397,10 @@ def _source_signal(stats: dict, kept: int) -> dict:
         "newestAgeDays": age,
         "flags": flags,
     }
+    if "filesPosted" in stats:
+        signal["filesPosted"] = int(stats.get("filesPosted") or 0)
+        signal["filesRead"] = int(stats.get("filesRead") or 0)
+        signal["filesFailed"] = list(files_failed)
     signal["note"] = _signal_note(signal)
     return signal
 
@@ -590,6 +615,7 @@ def run_state(
         "failed": sum(result.status == "failed" for result in results),
         "suspect": sum("suspect" in result.flags for result in results),
         "stale": sum("stale" in result.flags for result in results),
+        "incomplete": sum("incomplete" in result.flags for result in results),
     }
     _atomic_json(run_dir / "summary.json", summary)
     print(

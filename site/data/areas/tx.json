@@ -3,7 +3,7 @@
   "updated": "2026-09-20",
   "generatedFrom": "propertystack/data/tx/leads.json",
   "stats": {
-    "leads": 1590,
+    "leads": 1587,
     "cities": 146,
     "unitsInPlay": 259251,
     "newThisWeek": 1,
@@ -164,7 +164,7 @@
     },
     {
       "name": "Houston",
-      "leads": 446
+      "leads": 443
     },
     {
       "name": "Austin",
@@ -4304,7 +4304,7 @@
       "signalType": "Upcoming",
       "signal": "Opens: not public yet",
       "why": "Under construction \u00b7 opens: not public yet \u00b7 327 units \u00b7 software not picked yet",
-      "score": 93,
+      "score": 92,
       "isNew": false,
       "metro": "Dallas\u2013Fort Worth",
       "firstSeen": "2026-09-20"
@@ -5406,7 +5406,7 @@
       "signalType": "Upcoming",
       "signal": "Opens: not public yet",
       "why": "Under construction \u00b7 opens: not public yet \u00b7 182 units \u00b7 software not picked yet",
-      "score": 91,
+      "score": 90,
       "isNew": false,
       "metro": "Dallas\u2013Fort Worth",
       "firstSeen": "2026-09-20"
@@ -6484,7 +6484,7 @@
       "signalType": "Upcoming",
       "signal": "Opens: not public yet",
       "why": "Under construction \u00b7 opens: not public yet \u00b7 22 units \u00b7 software not picked yet",
-      "score": 89,
+      "score": 88,
       "isNew": false,
       "metro": "Dallas\u2013Fort Worth",
       "firstSeen": "2026-09-20"
@@ -7582,7 +7582,7 @@
       "signalType": "Upcoming",
       "signal": "Opens: not public yet",
       "why": "Permitted \u00b7 opens: not public yet \u00b7 118 units \u00b7 software not picked yet",
-      "score": 87,
+      "score": 86,
       "isNew": false,
       "metro": "Dallas\u2013Fort Worth",
       "firstSeen": "2026-09-15"
@@ -8705,7 +8705,7 @@
       "signalType": "Upcoming",
       "signal": "Opens: not public yet",
       "why": "Permitted \u00b7 opens: not public yet \u00b7 256 units \u00b7 software not picked yet",
-      "score": 85,
+      "score": 84,
       "isNew": false,
       "metro": "Dallas\u2013Fort Worth",
       "firstSeen": "2026-09-15"
@@ -9779,6 +9779,30 @@
       "firstSeen": "2026-09-19"
     },
     {
+      "id": "tx-2525-preston-rd-hathaway-at-willow-bend",
+      "propertyId": "1716655",
+      "score": 83,
+      "property": "Hathaway At Willow Bend",
+      "city": "Plano",
+      "address": "2525 Preston Rd",
+      "units": 229,
+      "signalType": "Sold",
+      "signal": "Sold Jun 2026",
+      "software": null,
+      "why": "Sold Jun 2026 to WINSTON GT HOLDINGS LP \u00b7 229 units \u00b7 software not yet identified \u2192 new owner may re-pick software.",
+      "sources": [
+        {
+          "label": "Texas county property records",
+          "url": "https://data.texas.gov/d/5tkr-3759"
+        }
+      ],
+      "contact": null,
+      "isNew": false,
+      "firstSeen": "2026-09-15",
+      "metro": "Dallas\u2013Fort Worth",
+      "subArea": "Plano\u2013Richardson"
+    },
+    {
       "id": "tx-9500-trinity-blvd-fort-worth-trinity-bell-gardens-apartments",
       "property": "Trinity Bell  Gardens Apartments",
       "community": "TRINITY BELL  GARDENS APARTMENTS",
@@ -9807,34 +9831,10 @@
       "signalType": "Upcoming",
       "signal": "Opens: not public yet",
       "why": "Permitted \u00b7 opens: not public yet \u00b7 240 units \u00b7 software not picked yet",
-      "score": 83,
+      "score": 82,
       "isNew": false,
       "metro": "Dallas\u2013Fort Worth",
       "firstSeen": "2026-09-15"
-    },
-    {
-      "id": "tx-2525-preston-rd-hathaway-at-willow-bend",
-      "propertyId": "1716655",
-      "score": 83,
-      "property": "Hathaway At Willow Bend",
-      "city": "Plano",
-      "address": "2525 Preston Rd",
-      "units": 229,
-      "signalType": "Sold",
-      "signal": "Sold Jun 2026",
-      "software": null,
-      "why": "Sold Jun 2026 to WINSTON GT HOLDINGS LP \u00b7 229 units \u00b7 software not yet identified \u2192 new owner may re-pick software.",
-      "sources": [
-        {
-          "label": "Texas county property records",
-          "url": "https://data.texas.gov/d/5tkr-3759"
-        }
-      ],
-      "contact": null,
-      "isNew": false,
-      "firstSeen": "2026-09-15",
-      "metro": "Dallas\u2013Fort Worth",
-      "subArea": "Plano\u2013Richardson"
     },
     {
       "id": "tx-316-northgate-rd-the-springs-apartments-club-bldg1",
@@ -10926,7 +10926,7 @@
       "signalType": "Upcoming",
       "signal": "Opens: not public yet",
       "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet",
-      "score": 81,
+      "score": 80,
       "isNew": false,
       "metro": "Dallas\u2013Fort Worth",
       "firstSeen": "2026-09-19"
@@ -11408,40 +11408,6 @@
       "firstSeen": "2026-09-19"
     },
     {
-      "id": "tx-1400-sierra-springs-bedford-the-logan",
-      "property": "The Logan",
-      "community": "THE LOGAN",
-      "city": "Bedford",
-      "address": "1400 SIERRA SPRINGS, BEDFORD",
-      "units": 490,
-      "stage": "permitted",
-      "permitDate": "2025-02-24",
-      "openingDate": null,
-      "saleDate": null,
-      "saleDatePrecision": null,
-      "buyer": null,
-      "developer": null,
-      "officePhone": null,
-      "website": null,
-      "software": null,
-      "links": {
-        "permit": "https://www.tad.org/content/data-download/2026CommPermits.zip"
-      },
-      "sources": [
-        {
-          "label": "State permit data",
-          "url": "https://www.tad.org/content/data-download/2026CommPermits.zip"
-        }
-      ],
-      "signalType": "Upcoming",
-      "signal": "Opens: not public yet",
-      "why": "Permitted \u00b7 opens: not public yet \u00b7 490 units \u00b7 software not picked yet",
-      "score": 80,
-      "isNew": false,
-      "metro": "Dallas\u2013Fort Worth",
-      "firstSeen": "2026-09-15"
-    },
-    {
       "id": "tx-2810-routh-creek-pkwy-vantage-at-spring-creek",
       "propertyId": "2748103",
       "score": 80,
@@ -11471,6 +11437,40 @@
       "firstSeen": "2026-09-15",
       "metro": "Dallas\u2013Fort Worth",
       "subArea": "Plano\u2013Richardson"
+    },
+    {
+      "id": "tx-1400-sierra-springs-bedford-the-logan",
+      "property": "The Logan",
+      "community": "THE LOGAN",
+      "city": "Bedford",
+      "address": "1400 SIERRA SPRINGS, BEDFORD",
+      "units": 490,
+      "stage": "permitted",
+      "permitDate": "2025-02-24",
+      "openingDate": null,
+      "saleDate": null,
+      "saleDatePrecision": null,
+      "buyer": null,
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "permit": "https://www.tad.org/content/data-download/2026CommPermits.zip"
+      },
+      "sources": [
+        {
+          "label": "State permit data",
+          "url": "https://www.tad.org/content/data-download/2026CommPermits.zip"
+        }
+      ],
+      "signalType": "Upcoming",
+      "signal": "Opens: not public yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 490 units \u00b7 software not picked yet",
+      "score": 79,
+      "isNew": false,
+      "metro": "Dallas\u2013Fort Worth",
+      "firstSeen": "2026-09-15"
     },
     {
       "id": "tx-14400-trinity-blvd-fort-worth-camden-centreport-apartments",
@@ -12039,7 +12039,7 @@
       "signalType": "Upcoming",
       "signal": "Opens: not public yet",
       "why": "Permitted \u00b7 opens: not public yet \u00b7 110 units \u00b7 software not picked yet",
-      "score": 79,
+      "score": 78,
       "isNew": false,
       "metro": "Dallas\u2013Fort Worth",
       "firstSeen": "2026-09-15"
@@ -12562,7 +12562,7 @@
       "signalType": "Upcoming",
       "signal": "Opens: not public yet",
       "why": "Permitted \u00b7 opens: not public yet \u00b7 36 units \u00b7 software not picked yet",
-      "score": 78,
+      "score": 77,
       "isNew": false,
       "metro": "Dallas\u2013Fort Worth",
       "firstSeen": "2026-09-15"
@@ -13078,40 +13078,6 @@
       "firstSeen": "2026-09-19"
     },
     {
-      "id": "tx-1833-mansfield-webb-rd-apartments-at-1833-mansfield-webb-rd",
-      "property": "Apartments at 1833  Mansfield Webb Rd   ",
-      "community": "Apartments (3+ dwelling units)",
-      "city": "Arlington",
-      "address": "1833  MANSFIELD WEBB RD   ",
-      "units": null,
-      "stage": "permitted",
-      "permitDate": "2025-04-07",
-      "openingDate": null,
-      "saleDate": null,
-      "saleDatePrecision": null,
-      "buyer": null,
-      "developer": null,
-      "officePhone": null,
-      "website": null,
-      "software": null,
-      "links": {
-        "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
-      },
-      "sources": [
-        {
-          "label": "City of Arlington issued permits",
-          "url": "https://opendata.arlingtontx.gov/"
-        }
-      ],
-      "signalType": "Upcoming",
-      "signal": "Opens: not public yet",
-      "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet",
-      "score": 77,
-      "isNew": false,
-      "metro": "Dallas\u2013Fort Worth",
-      "firstSeen": "2026-09-19"
-    },
-    {
       "id": "tx-4701-preston-park-blvd-ellington",
       "propertyId": "2041713",
       "score": 77,
@@ -13141,6 +13107,40 @@
       "firstSeen": "2026-09-15",
       "metro": "Dallas\u2013Fort Worth",
       "subArea": "Plano\u2013Richardson"
+    },
+    {
+      "id": "tx-1833-mansfield-webb-rd-apartments-at-1833-mansfield-webb-rd",
+      "property": "Apartments at 1833  Mansfield Webb Rd   ",
+      "community": "Apartments (3+ dwelling units)",
+      "city": "Arlington",
+      "address": "1833  MANSFIELD WEBB RD   ",
+      "units": null,
+      "stage": "permitted",
+      "permitDate": "2025-04-07",
+      "openingDate": null,
+      "saleDate": null,
+      "saleDatePrecision": null,
+      "buyer": null,
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+      },
+      "sources": [
+        {
+          "label": "City of Arlington issued permits",
+          "url": "https://opendata.arlingtontx.gov/"
+        }
+      ],
+      "signalType": "Upcoming",
+      "signal": "Opens: not public yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet",
+      "score": 76,
+      "isNew": false,
+      "metro": "Dallas\u2013Fort Worth",
+      "firstSeen": "2026-09-19"
     },
     {
       "id": "tx-1797-mansfield-webb-rd-apartments-at-1797-mansfield-webb-rd",
@@ -13647,7 +13647,7 @@
       "signalType": "Upcoming",
       "signal": "Opens: not public yet",
       "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet",
-      "score": 76,
+      "score": 75,
       "isNew": false,
       "metro": "Dallas\u2013Fort Worth",
       "firstSeen": "2026-09-19"
@@ -14810,40 +14810,6 @@
       "firstSeen": "2026-09-19"
     },
     {
-      "id": "tx-2213-poquito-st-apartments-at-2213-poquito-st",
-      "property": "Apartments at 2213 Poquito St",
-      "community": "Building Permit",
-      "city": "Austin",
-      "address": "2213 POQUITO ST",
-      "units": 67,
-      "stage": "permitted",
-      "permitDate": "2025-09-02",
-      "openingDate": null,
-      "saleDate": null,
-      "saleDatePrecision": null,
-      "buyer": null,
-      "developer": null,
-      "officePhone": null,
-      "website": null,
-      "software": null,
-      "links": {
-        "permit": "https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13574446"
-      },
-      "sources": [
-        {
-          "label": "City permit record",
-          "url": "https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13574446"
-        }
-      ],
-      "signalType": "Upcoming",
-      "signal": "Opens: not public yet",
-      "why": "Permitted \u00b7 opens: not public yet \u00b7 67 units \u00b7 software not picked yet",
-      "score": 74,
-      "isNew": false,
-      "metro": "Austin",
-      "firstSeen": "2026-09-15"
-    },
-    {
       "id": "tx-6501-legacy-dr-plano-tx-the-parks-at-legacy-west",
       "propertyId": "plano-the-parks-at-legacy-west",
       "score": 74,
@@ -14890,6 +14856,40 @@
       "firstSeen": "2026-09-15",
       "metro": "Dallas\u2013Fort Worth",
       "subArea": "Plano\u2013Richardson"
+    },
+    {
+      "id": "tx-2213-poquito-st-apartments-at-2213-poquito-st",
+      "property": "Apartments at 2213 Poquito St",
+      "community": "Building Permit",
+      "city": "Austin",
+      "address": "2213 POQUITO ST",
+      "units": 67,
+      "stage": "permitted",
+      "permitDate": "2025-09-02",
+      "openingDate": null,
+      "saleDate": null,
+      "saleDatePrecision": null,
+      "buyer": null,
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "permit": "https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13574446"
+      },
+      "sources": [
+        {
+          "label": "City permit record",
+          "url": "https://abc.austintexas.gov/web/permit/public-search-other?t_detail=1&t_selected_folderrsn=13574446"
+        }
+      ],
+      "signalType": "Upcoming",
+      "signal": "Opens: not public yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 67 units \u00b7 software not picked yet",
+      "score": 73,
+      "isNew": false,
+      "metro": "Austin",
+      "firstSeen": "2026-09-15"
     },
     {
       "id": "tx-1720-lawrence-st-apartments-at-1720-lawrence-st",
@@ -16077,7 +16077,7 @@
       "signalType": "Upcoming",
       "signal": "Opens: not public yet",
       "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet",
-      "score": 72,
+      "score": 71,
       "isNew": false,
       "metro": "Dallas\u2013Fort Worth",
       "firstSeen": "2026-09-19"
@@ -17107,6 +17107,30 @@
       "firstSeen": "2026-09-15"
     },
     {
+      "id": "tx-9600-coit-rd-riachi-at-one-21-apartments",
+      "propertyId": "2646098",
+      "score": 70,
+      "property": "Riachi At One 21 Apartments",
+      "city": "Plano",
+      "address": "9600 Coit Rd",
+      "units": 402,
+      "signalType": "Sold",
+      "signal": "Owner changed to MFREVF V - PLANO LP",
+      "software": null,
+      "why": "Owner changed to MFREVF V - PLANO LP \u00b7 402 units \u00b7 software not yet identified \u2192 new owner may re-pick software.",
+      "sources": [
+        {
+          "label": "Texas county property records",
+          "url": "https://data.texas.gov/d/5tkr-3759"
+        }
+      ],
+      "contact": null,
+      "isNew": false,
+      "firstSeen": "2026-09-15",
+      "metro": "Dallas\u2013Fort Worth",
+      "subArea": "Plano\u2013Richardson"
+    },
+    {
       "id": "tx-701-saginaw-square-blvd-saginaw-alpine-at-the-square",
       "property": "Alpine At The Square",
       "community": "ALPINE AT THE SQUARE",
@@ -17139,34 +17163,10 @@
       "signalType": "Upcoming",
       "signal": "Opens: not public yet",
       "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet",
-      "score": 70,
+      "score": 69,
       "isNew": false,
       "metro": "Dallas\u2013Fort Worth",
       "firstSeen": "2026-09-15"
-    },
-    {
-      "id": "tx-9600-coit-rd-riachi-at-one-21-apartments",
-      "propertyId": "2646098",
-      "score": 70,
-      "property": "Riachi At One 21 Apartments",
-      "city": "Plano",
-      "address": "9600 Coit Rd",
-      "units": 402,
-      "signalType": "Sold",
-      "signal": "Owner changed to MFREVF V - PLANO LP",
-      "software": null,
-      "why": "Owner changed to MFREVF V - PLANO LP \u00b7 402 units \u00b7 software not yet identified \u2192 new owner may re-pick software.",
-      "sources": [
-        {
-          "label": "Texas county property records",
-          "url": "https://data.texas.gov/d/5tkr-3759"
-        }
-      ],
-      "contact": null,
-      "isNew": false,
-      "firstSeen": "2026-09-15",
-      "metro": "Dallas\u2013Fort Worth",
-      "subArea": "Plano\u2013Richardson"
     },
     {
       "id": "tx-3810-transportation-way-3810-transportation-way-unit-329-plan-3b",
@@ -17678,7 +17678,7 @@
       "signalType": "Upcoming",
       "signal": "Opens: not public yet",
       "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet",
-      "score": 69,
+      "score": 68,
       "isNew": false,
       "metro": "Dallas\u2013Fort Worth",
       "firstSeen": "2026-09-19"
@@ -17956,40 +17956,6 @@
       "firstSeen": "2026-09-19"
     },
     {
-      "id": "tx-2125-yale-st-new-125-kw-nat-gas-exterior-generator-apartment-2021-ibc",
-      "property": "New 125 Kw Nat. Gas Exterior Generator Apartment 2021 Ibc",
-      "community": "NEW 125 KW NAT. GAS EXTERIOR GENERATOR APARTMENT 2021 IBC",
-      "city": "Houston",
-      "address": "2125 YALE ST",
-      "units": null,
-      "stage": "permitted",
-      "permitDate": "2026-02-20",
-      "openingDate": null,
-      "saleDate": null,
-      "saleDatePrecision": null,
-      "buyer": null,
-      "developer": null,
-      "officePhone": null,
-      "website": null,
-      "software": null,
-      "links": {
-        "permit": "houston-weekly-xlsx"
-      },
-      "sources": [
-        {
-          "label": "Houston weekly permit list",
-          "url": "https://www.houstontx.gov/planning/DevelopRegs/"
-        }
-      ],
-      "signalType": "Upcoming",
-      "signal": "Opens: not public yet",
-      "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet",
-      "score": 68,
-      "isNew": false,
-      "metro": "Houston",
-      "firstSeen": "2026-09-15"
-    },
-    {
       "id": "tx-2587-w-randol-mill-rd-apartments-at-2587-w-randol-mill-rd",
       "property": "Apartments at 2587 W Randol Mill Rd   ",
       "community": "Apartments (3+ dwelling units)",
@@ -18262,40 +18228,6 @@
       "firstSeen": "2026-09-15",
       "metro": "Dallas\u2013Fort Worth",
       "subArea": "Plano\u2013Richardson"
-    },
-    {
-      "id": "tx-6007-memorial-dr-new-exterior-48-kw-natural-gas-generator-apartment-2021-ibc",
-      "property": "New Exterior 48 Kw Natural Gas Generator, Apartment 2021 Ibc",
-      "community": "NEW EXTERIOR 48 KW NATURAL GAS GENERATOR, APARTMENT 2021 IBC",
-      "city": "Houston",
-      "address": "6007 MEMORIAL DR",
-      "units": null,
-      "stage": "permitted",
-      "permitDate": "2026-03-16",
-      "openingDate": null,
-      "saleDate": null,
-      "saleDatePrecision": null,
-      "buyer": null,
-      "developer": null,
-      "officePhone": null,
-      "website": null,
-      "software": null,
-      "links": {
-        "permit": "houston-weekly-xlsx"
-      },
-      "sources": [
-        {
-          "label": "Houston weekly permit list",
-          "url": "https://www.houstontx.gov/planning/DevelopRegs/"
-        }
-      ],
-      "signalType": "Upcoming",
-      "signal": "Opens: not public yet",
-      "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet",
-      "score": 67,
-      "isNew": false,
-      "metro": "Houston",
-      "firstSeen": "2026-09-15"
     },
     {
       "id": "tx-11901-dionda-ln-apartments-at-11901-dionda-ln-bldg-1",
@@ -18830,6 +18762,40 @@
       "firstSeen": "2026-09-19"
     },
     {
+      "id": "tx-300-e-stephens-st-garage-8-apartments-at-300-e-stephens-st-garage-8",
+      "property": "Apartments at 300 E Stephens St   Garage 8",
+      "community": "Apartments (3+ dwelling units)",
+      "city": "Arlington",
+      "address": "300 E STEPHENS ST   GARAGE 8",
+      "units": null,
+      "stage": "permitted",
+      "permitDate": "2026-05-28",
+      "openingDate": null,
+      "saleDate": null,
+      "saleDatePrecision": null,
+      "buyer": null,
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+      },
+      "sources": [
+        {
+          "label": "City of Arlington issued permits",
+          "url": "https://opendata.arlingtontx.gov/"
+        }
+      ],
+      "signalType": "Upcoming",
+      "signal": "Opens: not public yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet",
+      "score": 67,
+      "isNew": false,
+      "metro": "Dallas\u2013Fort Worth",
+      "firstSeen": "2026-09-19"
+    },
+    {
       "id": "tx-110-w-cityline-dr-axis-110",
       "propertyId": "2721394",
       "score": 67,
@@ -18935,40 +18901,6 @@
       "firstSeen": "2026-09-15",
       "metro": "Dallas\u2013Fort Worth",
       "subArea": "Plano\u2013Richardson"
-    },
-    {
-      "id": "tx-300-e-stephens-st-garage-8-apartments-at-300-e-stephens-st-garage-8",
-      "property": "Apartments at 300 E Stephens St   Garage 8",
-      "community": "Apartments (3+ dwelling units)",
-      "city": "Arlington",
-      "address": "300 E STEPHENS ST   GARAGE 8",
-      "units": null,
-      "stage": "permitted",
-      "permitDate": "2026-05-28",
-      "openingDate": null,
-      "saleDate": null,
-      "saleDatePrecision": null,
-      "buyer": null,
-      "developer": null,
-      "officePhone": null,
-      "website": null,
-      "software": null,
-      "links": {
-        "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
-      },
-      "sources": [
-        {
-          "label": "City of Arlington issued permits",
-          "url": "https://opendata.arlingtontx.gov/"
-        }
-      ],
-      "signalType": "Upcoming",
-      "signal": "Opens: not public yet",
-      "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet",
-      "score": 66,
-      "isNew": false,
-      "metro": "Dallas\u2013Fort Worth",
-      "firstSeen": "2026-09-19"
     },
     {
       "id": "tx-300-e-stephens-st-garage-7-apartments-at-300-e-stephens-st-garage-7",
@@ -19513,7 +19445,7 @@
       "signalType": "Upcoming",
       "signal": "Opens: not public yet",
       "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet",
-      "score": 65,
+      "score": 66,
       "isNew": false,
       "metro": "Dallas\u2013Fort Worth",
       "firstSeen": "2026-09-19"
@@ -20069,6 +20001,40 @@
       "firstSeen": "2026-09-19"
     },
     {
+      "id": "tx-2319-ascension-blv-apartments-at-2319-ascension-blv",
+      "property": "Apartments at 2319  Ascension Blv   ",
+      "community": "Apartments (3+ dwelling units)",
+      "city": "Arlington",
+      "address": "2319  ASCENSION BLV   ",
+      "units": null,
+      "stage": "permitted",
+      "permitDate": "2026-07-27",
+      "openingDate": null,
+      "saleDate": null,
+      "saleDatePrecision": null,
+      "buyer": null,
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+      },
+      "sources": [
+        {
+          "label": "City of Arlington issued permits",
+          "url": "https://opendata.arlingtontx.gov/"
+        }
+      ],
+      "signalType": "Upcoming",
+      "signal": "Opens: not public yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet",
+      "score": 65,
+      "isNew": false,
+      "metro": "Dallas\u2013Fort Worth",
+      "firstSeen": "2026-09-19"
+    },
+    {
       "id": "tx-6080-water-st-grand-at-legacy-west-apartments",
       "propertyId": "2750390",
       "score": 65,
@@ -20098,40 +20064,6 @@
       "firstSeen": "2026-09-15",
       "metro": "Dallas\u2013Fort Worth",
       "subArea": "Plano\u2013Richardson"
-    },
-    {
-      "id": "tx-2319-ascension-blv-apartments-at-2319-ascension-blv",
-      "property": "Apartments at 2319  Ascension Blv   ",
-      "community": "Apartments (3+ dwelling units)",
-      "city": "Arlington",
-      "address": "2319  ASCENSION BLV   ",
-      "units": null,
-      "stage": "permitted",
-      "permitDate": "2026-07-27",
-      "openingDate": null,
-      "saleDate": null,
-      "saleDatePrecision": null,
-      "buyer": null,
-      "developer": null,
-      "officePhone": null,
-      "website": null,
-      "software": null,
-      "links": {
-        "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
-      },
-      "sources": [
-        {
-          "label": "City of Arlington issued permits",
-          "url": "https://opendata.arlingtontx.gov/"
-        }
-      ],
-      "signalType": "Upcoming",
-      "signal": "Opens: not public yet",
-      "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet",
-      "score": 64,
-      "isNew": false,
-      "metro": "Dallas\u2013Fort Worth",
-      "firstSeen": "2026-09-19"
     },
     {
       "id": "tx-2315-ascension-blv-apartments-at-2315-ascension-blv",
@@ -20268,40 +20200,6 @@
       "isNew": false,
       "metro": "Dallas\u2013Fort Worth",
       "firstSeen": "2026-09-19"
-    },
-    {
-      "id": "tx-1919-w-main-st-new-apartment-electrical-service-2021-ibc",
-      "property": "New Apartment Electrical Service 2021 Ibc",
-      "community": "NEW APARTMENT ELECTRICAL SERVICE 2021 IBC",
-      "city": "Houston",
-      "address": "1919 W MAIN ST",
-      "units": null,
-      "stage": "permitted",
-      "permitDate": "2026-07-27",
-      "openingDate": null,
-      "saleDate": null,
-      "saleDatePrecision": null,
-      "buyer": null,
-      "developer": null,
-      "officePhone": null,
-      "website": null,
-      "software": null,
-      "links": {
-        "permit": "houston-weekly-xlsx"
-      },
-      "sources": [
-        {
-          "label": "Houston weekly permit list",
-          "url": "https://www.houstontx.gov/planning/DevelopRegs/"
-        }
-      ],
-      "signalType": "Upcoming",
-      "signal": "Opens: not public yet",
-      "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet",
-      "score": 64,
-      "isNew": false,
-      "metro": "Houston",
-      "firstSeen": "2026-09-15"
     },
     {
       "id": "tx-1415-enclave-pky-bld-3-apartments-at-1415-enclave-pky",
@@ -20680,6 +20578,74 @@
       "firstSeen": "2026-09-15"
     },
     {
+      "id": "tx-340-e-stephens-st-apartments-at-340-e-stephens-street-bldg",
+      "property": "Apartments at 340 E Stephens Street Bldg",
+      "community": "Apartments (3+ dwelling units)",
+      "city": "Arlington",
+      "address": "340 E STEPHENS STREET Bldg",
+      "units": null,
+      "stage": "permitted",
+      "permitDate": "2026-09-02",
+      "openingDate": null,
+      "saleDate": null,
+      "saleDatePrecision": null,
+      "buyer": null,
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+      },
+      "sources": [
+        {
+          "label": "City of Arlington issued permits",
+          "url": "https://opendata.arlingtontx.gov/"
+        }
+      ],
+      "signalType": "Upcoming",
+      "signal": "Opens: not public yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet",
+      "score": 64,
+      "isNew": false,
+      "metro": "Dallas\u2013Fort Worth",
+      "firstSeen": "2026-09-19"
+    },
+    {
+      "id": "tx-300-e-stephens-st-apartments-at-300-e-stephens-street",
+      "property": "Apartments at 300 E Stephens Street",
+      "community": "Apartments (3+ dwelling units)",
+      "city": "Arlington",
+      "address": "300 E STEPHENS STREET",
+      "units": null,
+      "stage": "permitted",
+      "permitDate": "2026-09-02",
+      "openingDate": null,
+      "saleDate": null,
+      "saleDatePrecision": null,
+      "buyer": null,
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
+      },
+      "sources": [
+        {
+          "label": "City of Arlington issued permits",
+          "url": "https://opendata.arlingtontx.gov/"
+        }
+      ],
+      "signalType": "Upcoming",
+      "signal": "Opens: not public yet",
+      "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet",
+      "score": 64,
+      "isNew": false,
+      "metro": "Dallas\u2013Fort Worth",
+      "firstSeen": "2026-09-19"
+    },
+    {
       "id": "tx-1109-park-vista-rd-park-residences-plano",
       "propertyId": "2945424",
       "score": 64,
@@ -20740,74 +20706,6 @@
       "firstSeen": "2026-09-15",
       "metro": "Dallas\u2013Fort Worth",
       "subArea": "Plano\u2013Richardson"
-    },
-    {
-      "id": "tx-340-e-stephens-st-apartments-at-340-e-stephens-street-bldg",
-      "property": "Apartments at 340 E Stephens Street Bldg",
-      "community": "Apartments (3+ dwelling units)",
-      "city": "Arlington",
-      "address": "340 E STEPHENS STREET Bldg",
-      "units": null,
-      "stage": "permitted",
-      "permitDate": "2026-09-02",
-      "openingDate": null,
-      "saleDate": null,
-      "saleDatePrecision": null,
-      "buyer": null,
-      "developer": null,
-      "officePhone": null,
-      "website": null,
-      "software": null,
-      "links": {
-        "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
-      },
-      "sources": [
-        {
-          "label": "City of Arlington issued permits",
-          "url": "https://opendata.arlingtontx.gov/"
-        }
-      ],
-      "signalType": "Upcoming",
-      "signal": "Opens: not public yet",
-      "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet",
-      "score": 63,
-      "isNew": false,
-      "metro": "Dallas\u2013Fort Worth",
-      "firstSeen": "2026-09-19"
-    },
-    {
-      "id": "tx-300-e-stephens-st-apartments-at-300-e-stephens-street",
-      "property": "Apartments at 300 E Stephens Street",
-      "community": "Apartments (3+ dwelling units)",
-      "city": "Arlington",
-      "address": "300 E STEPHENS STREET",
-      "units": null,
-      "stage": "permitted",
-      "permitDate": "2026-09-02",
-      "openingDate": null,
-      "saleDate": null,
-      "saleDatePrecision": null,
-      "buyer": null,
-      "developer": null,
-      "officePhone": null,
-      "website": null,
-      "software": null,
-      "links": {
-        "permit": "https://gis2.arlingtontx.gov/agsext2/rest/services/OpenData/OD_Property/MapServer/1/query?where=MainUse+LIKE+%27Apartments%25%27+AND+WORKDESC%3D%27New+Construction%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUEDATE+DESC"
-      },
-      "sources": [
-        {
-          "label": "City of Arlington issued permits",
-          "url": "https://opendata.arlingtontx.gov/"
-        }
-      ],
-      "signalType": "Upcoming",
-      "signal": "Opens: not public yet",
-      "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet",
-      "score": 63,
-      "isNew": false,
-      "metro": "Dallas\u2013Fort Worth",
-      "firstSeen": "2026-09-19"
     },
     {
       "id": "tx-12400-vista-del-sol-dr-desert-pearl-apartments",
@@ -21262,6 +21160,74 @@
       "firstSeen": "2026-09-19"
     },
     {
+      "id": "tx-4111-edwards-rd-salem-oaks-cove-prestige-apartments",
+      "property": "Prestige Apartments",
+      "community": "Prestige Apartments",
+      "city": "Denton",
+      "address": "4111 Edwards  Road Salem Oaks Cove",
+      "units": 250,
+      "stage": "under construction",
+      "permitDate": "2024-10-02",
+      "openingDate": "2026-03-09",
+      "saleDate": null,
+      "saleDatePrecision": null,
+      "buyer": null,
+      "developer": "Honors Way Group",
+      "officePhone": "(817) 409-8795",
+      "website": null,
+      "software": null,
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025002275"
+      },
+      "sources": [
+        {
+          "label": "State project record",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025002275"
+        }
+      ],
+      "signalType": "Leasing",
+      "signal": "Opened 2026-03-09",
+      "why": "Under construction \u00b7 opens 2026-03-09 \u00b7 250 units \u00b7 software not picked yet",
+      "score": 63,
+      "isNew": false,
+      "metro": "Dallas\u2013Fort Worth",
+      "firstSeen": "2026-09-15"
+    },
+    {
+      "id": "tx-11520-montana-ave-lee-place-apartments",
+      "property": "Lee Place Apartments",
+      "community": "Lee Place Apartments",
+      "city": "El Paso",
+      "address": "11520 Montana Ave",
+      "units": 80,
+      "stage": "under construction",
+      "permitDate": "2025-02-04",
+      "openingDate": "2026-03-01",
+      "saleDate": null,
+      "saleDatePrecision": null,
+      "buyer": null,
+      "developer": "Lee Place Apartments, llc",
+      "officePhone": "(915) 850-0009",
+      "website": null,
+      "software": null,
+      "links": {
+        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025011014"
+      },
+      "sources": [
+        {
+          "label": "State project record",
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025011014"
+        }
+      ],
+      "signalType": "Leasing",
+      "signal": "Opened 2026-03-01",
+      "why": "Under construction \u00b7 opens 2026-03-01 \u00b7 80 units \u00b7 software not picked yet",
+      "score": 63,
+      "isNew": false,
+      "metro": "Rest of Texas",
+      "firstSeen": "2026-09-15"
+    },
+    {
       "id": "tx-2401-w-spring-creek-pkwy-bellevue-at-spring-creek-apartments",
       "propertyId": "1503117",
       "score": 63,
@@ -21339,74 +21305,6 @@
       "firstSeen": "2026-09-15",
       "metro": "Dallas\u2013Fort Worth",
       "subArea": "Plano\u2013Richardson"
-    },
-    {
-      "id": "tx-4111-edwards-rd-salem-oaks-cove-prestige-apartments",
-      "property": "Prestige Apartments",
-      "community": "Prestige Apartments",
-      "city": "Denton",
-      "address": "4111 Edwards  Road Salem Oaks Cove",
-      "units": 250,
-      "stage": "under construction",
-      "permitDate": "2024-10-02",
-      "openingDate": "2026-03-09",
-      "saleDate": null,
-      "saleDatePrecision": null,
-      "buyer": null,
-      "developer": "Honors Way Group",
-      "officePhone": "(817) 409-8795",
-      "website": null,
-      "software": null,
-      "links": {
-        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025002275"
-      },
-      "sources": [
-        {
-          "label": "State project record",
-          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025002275"
-        }
-      ],
-      "signalType": "Leasing",
-      "signal": "Opened 2026-03-09",
-      "why": "Under construction \u00b7 opens 2026-03-09 \u00b7 250 units \u00b7 software not picked yet",
-      "score": 62,
-      "isNew": false,
-      "metro": "Dallas\u2013Fort Worth",
-      "firstSeen": "2026-09-15"
-    },
-    {
-      "id": "tx-11520-montana-ave-lee-place-apartments",
-      "property": "Lee Place Apartments",
-      "community": "Lee Place Apartments",
-      "city": "El Paso",
-      "address": "11520 Montana Ave",
-      "units": 80,
-      "stage": "under construction",
-      "permitDate": "2025-02-04",
-      "openingDate": "2026-03-01",
-      "saleDate": null,
-      "saleDatePrecision": null,
-      "buyer": null,
-      "developer": "Lee Place Apartments, llc",
-      "officePhone": "(915) 850-0009",
-      "website": null,
-      "software": null,
-      "links": {
-        "permit": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025011014"
-      },
-      "sources": [
-        {
-          "label": "State project record",
-          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025011014"
-        }
-      ],
-      "signalType": "Leasing",
-      "signal": "Opened 2026-03-01",
-      "why": "Under construction \u00b7 opens 2026-03-01 \u00b7 80 units \u00b7 software not picked yet",
-      "score": 62,
-      "isNew": false,
-      "metro": "Rest of Texas",
-      "firstSeen": "2026-09-15"
     },
     {
       "id": "tx-17626-bulverde-ave-bulverde-multifamily-apartments",
@@ -21918,7 +21816,7 @@
       "signalType": "Planned",
       "signal": "Planned (not permitted yet)",
       "why": "Planned \u00b7 expected: not public yet \u00b7 358 units \u00b7 software not chosen yet",
-      "score": 61,
+      "score": 62,
       "isNew": false,
       "metro": "Houston",
       "firstSeen": "2026-09-15"
@@ -21952,7 +21850,7 @@
       "signalType": "Planned",
       "signal": "Planned (not permitted yet)",
       "why": "Planned \u00b7 expected: not public yet \u00b7 344 units \u00b7 software not chosen yet",
-      "score": 61,
+      "score": 62,
       "isNew": false,
       "metro": "Houston",
       "firstSeen": "2026-09-15"
@@ -22428,7 +22326,7 @@
       "signalType": "Planned",
       "signal": "Planned (not permitted yet)",
       "why": "Planned \u00b7 expected: not public yet \u00b7 301 units \u00b7 software not chosen yet",
-      "score": 60,
+      "score": 61,
       "isNew": false,
       "metro": "San Antonio",
       "firstSeen": "2026-09-15"
@@ -22462,7 +22360,7 @@
       "signalType": "Planned",
       "signal": "Planned (not permitted yet)",
       "why": "Planned \u00b7 expected: not public yet \u00b7 300 units \u00b7 software not chosen yet",
-      "score": 60,
+      "score": 61,
       "isNew": false,
       "metro": "Houston",
       "firstSeen": "2026-09-15"
@@ -22949,33 +22847,6 @@
       "firstSeen": "2026-09-15"
     },
     {
-      "id": "tx-3700-mapleshade-ln-axis-3700",
-      "propertyId": "2560139",
-      "score": 60,
-      "property": "Axis 3700",
-      "city": "Plano",
-      "address": "3700 Mapleshade Ln",
-      "units": 300,
-      "signalType": "Sold",
-      "signal": "Owner changed to APARTMENTS AXIS SPE LLC",
-      "software": null,
-      "why": "Owner changed to APARTMENTS AXIS SPE LLC \u00b7 300 units \u00b7 software not yet identified \u2192 new owner may re-pick software.",
-      "sources": [
-        {
-          "label": "Texas county property records",
-          "url": "https://data.texas.gov/d/5tkr-3759"
-        }
-      ],
-      "contact": {
-        "phone": "(972) 362-4050",
-        "email": null
-      },
-      "isNew": false,
-      "firstSeen": "2026-09-15",
-      "metro": "Dallas\u2013Fort Worth",
-      "subArea": "Plano\u2013Richardson"
-    },
-    {
       "id": "tx-nwq-e-glen-blvd-clay-mathis-rd-avanti-hills",
       "property": "Avanti Hills",
       "community": "Avanti Hills",
@@ -23004,7 +22875,7 @@
       "signalType": "Planned",
       "signal": "Planned (not permitted yet)",
       "why": "Planned \u00b7 expected: not public yet \u00b7 260 units \u00b7 software not chosen yet",
-      "score": 59,
+      "score": 60,
       "isNew": false,
       "metro": "Dallas\u2013Fort Worth",
       "firstSeen": "2026-09-15"
@@ -23038,10 +22909,37 @@
       "signalType": "Planned",
       "signal": "Planned (not permitted yet)",
       "why": "Planned \u00b7 expected: not public yet \u00b7 255 units \u00b7 software not chosen yet",
-      "score": 59,
+      "score": 60,
       "isNew": false,
       "metro": "San Antonio",
       "firstSeen": "2026-09-15"
+    },
+    {
+      "id": "tx-3700-mapleshade-ln-axis-3700",
+      "propertyId": "2560139",
+      "score": 60,
+      "property": "Axis 3700",
+      "city": "Plano",
+      "address": "3700 Mapleshade Ln",
+      "units": 300,
+      "signalType": "Sold",
+      "signal": "Owner changed to APARTMENTS AXIS SPE LLC",
+      "software": null,
+      "why": "Owner changed to APARTMENTS AXIS SPE LLC \u00b7 300 units \u00b7 software not yet identified \u2192 new owner may re-pick software.",
+      "sources": [
+        {
+          "label": "Texas county property records",
+          "url": "https://data.texas.gov/d/5tkr-3759"
+        }
+      ],
+      "contact": {
+        "phone": "(972) 362-4050",
+        "email": null
+      },
+      "isNew": false,
+      "firstSeen": "2026-09-15",
+      "metro": "Dallas\u2013Fort Worth",
+      "subArea": "Plano\u2013Richardson"
     },
     {
       "id": "tx-2632-us-hwy-67-covington-acres",
@@ -23529,7 +23427,7 @@
       "signalType": "Planned",
       "signal": "Planned (not permitted yet)",
       "why": "Planned \u00b7 expected: not public yet \u00b7 204 units \u00b7 software not chosen yet",
-      "score": 58,
+      "score": 59,
       "isNew": false,
       "metro": "Dallas\u2013Fort Worth",
       "firstSeen": "2026-09-15"
@@ -23563,7 +23461,7 @@
       "signalType": "Planned",
       "signal": "Planned (not permitted yet)",
       "why": "Planned \u00b7 expected: not public yet \u00b7 203 units \u00b7 software not chosen yet",
-      "score": 58,
+      "score": 59,
       "isNew": false,
       "metro": "San Antonio",
       "firstSeen": "2026-09-15"
@@ -24078,7 +23976,7 @@
       "signalType": "Planned",
       "signal": "Planned (not permitted yet)",
       "why": "Planned \u00b7 expected: not public yet \u00b7 120 units \u00b7 software not chosen yet",
-      "score": 57,
+      "score": 58,
       "isNew": false,
       "metro": "Houston",
       "firstSeen": "2026-09-19"
@@ -24112,7 +24010,7 @@
       "signalType": "Planned",
       "signal": "Planned (not permitted yet)",
       "why": "Planned \u00b7 expected: not public yet \u00b7 120 units \u00b7 software not chosen yet",
-      "score": 57,
+      "score": 58,
       "isNew": false,
       "metro": "Rest of Texas",
       "firstSeen": "2026-09-15"
@@ -24593,7 +24491,7 @@
       "signalType": "Planned",
       "signal": "Planned (not permitted yet)",
       "why": "Planned \u00b7 expected: not public yet \u00b7 98 units \u00b7 software not chosen yet",
-      "score": 56,
+      "score": 57,
       "isNew": false,
       "metro": "Houston",
       "firstSeen": "2026-09-15"
@@ -24627,7 +24525,7 @@
       "signalType": "Planned",
       "signal": "Planned (not permitted yet)",
       "why": "Planned \u00b7 expected: not public yet \u00b7 98 units \u00b7 software not chosen yet",
-      "score": 56,
+      "score": 57,
       "isNew": false,
       "metro": "Houston",
       "firstSeen": "2026-09-15"
@@ -25109,30 +25007,6 @@
       "firstSeen": "2026-09-15"
     },
     {
-      "id": "tx-3501-n-jupiter-rd-spring-pointe-apartments",
-      "propertyId": "1615274",
-      "score": 56,
-      "property": "Spring Pointe Apartments",
-      "city": "Richardson",
-      "address": "3501 N Jupiter Rd",
-      "units": 208,
-      "signalType": "Sold",
-      "signal": "Sold Apr 2025",
-      "software": null,
-      "why": "Sold Apr 2025 to THE CAMERON COUNTY HOUSING FINANCE CORPORATION \u00b7 208 units \u00b7 software not yet identified \u2192 new owner may re-pick software.",
-      "sources": [
-        {
-          "label": "Texas county property records",
-          "url": "https://data.texas.gov/d/5tkr-3759"
-        }
-      ],
-      "contact": null,
-      "isNew": false,
-      "firstSeen": "2026-09-15",
-      "metro": "Dallas\u2013Fort Worth",
-      "subArea": "Plano\u2013Richardson"
-    },
-    {
       "id": "tx-12709-beechnut-st-oasis-gardens",
       "property": "Oasis Gardens",
       "community": "Oasis Gardens",
@@ -25161,10 +25035,34 @@
       "signalType": "Planned",
       "signal": "Planned (not permitted yet)",
       "why": "Planned \u00b7 expected: not public yet \u00b7 88 units \u00b7 software not chosen yet",
-      "score": 55,
+      "score": 56,
       "isNew": false,
       "metro": "Houston",
       "firstSeen": "2026-09-15"
+    },
+    {
+      "id": "tx-3501-n-jupiter-rd-spring-pointe-apartments",
+      "propertyId": "1615274",
+      "score": 56,
+      "property": "Spring Pointe Apartments",
+      "city": "Richardson",
+      "address": "3501 N Jupiter Rd",
+      "units": 208,
+      "signalType": "Sold",
+      "signal": "Sold Apr 2025",
+      "software": null,
+      "why": "Sold Apr 2025 to THE CAMERON COUNTY HOUSING FINANCE CORPORATION \u00b7 208 units \u00b7 software not yet identified \u2192 new owner may re-pick software.",
+      "sources": [
+        {
+          "label": "Texas county property records",
+          "url": "https://data.texas.gov/d/5tkr-3759"
+        }
+      ],
+      "contact": null,
+      "isNew": false,
+      "firstSeen": "2026-09-15",
+      "metro": "Dallas\u2013Fort Worth",
+      "subArea": "Plano\u2013Richardson"
     },
     {
       "id": "tx-4311-4329-belmont-ave-bella-limon",
@@ -25643,37 +25541,6 @@
       "firstSeen": "2026-09-15"
     },
     {
-      "id": "tx-3700-preston-rd-lakeshore-at-preston-apartments",
-      "propertyId": "1976049",
-      "score": 55,
-      "property": "Lakeshore At Preston Apartments",
-      "city": "Plano",
-      "address": "3700 Preston Rd",
-      "units": 302,
-      "signalType": "Sold",
-      "signal": "Sold Sep 2024",
-      "software": "Yardi",
-      "why": "Sold Sep 2024 to SIMFA LAKESHORE FEE SIMPLE LLC \u00b7 302 units \u00b7 on Yardi \u2192 new owner may re-pick software.",
-      "sources": [
-        {
-          "label": "Texas county property records",
-          "url": "https://data.texas.gov/d/5tkr-3759"
-        },
-        {
-          "label": "Website",
-          "url": "https://lakeshoreatpreston.securecafe.com/onlineleasing/lakeshore-at-preston0/guestlogin.aspx"
-        }
-      ],
-      "contact": {
-        "phone": "(833) 590-1453",
-        "email": null
-      },
-      "isNew": false,
-      "firstSeen": "2026-09-15",
-      "metro": "Dallas\u2013Fort Worth",
-      "subArea": "Plano\u2013Richardson"
-    },
-    {
       "id": "tx-4912-east-rosedale-st-and-5021-ave-g-hughes-house-iii",
       "property": "Hughes House III",
       "community": "Hughes House III",
@@ -25702,7 +25569,7 @@
       "signalType": "Planned",
       "signal": "Planned (not permitted yet)",
       "why": "Planned \u00b7 expected: not public yet \u00b7 78 units \u00b7 software not chosen yet",
-      "score": 54,
+      "score": 55,
       "isNew": false,
       "metro": "Dallas\u2013Fort Worth",
       "firstSeen": "2026-09-15"
@@ -25736,10 +25603,41 @@
       "signalType": "Planned",
       "signal": "Planned (not permitted yet)",
       "why": "Planned \u00b7 expected: not public yet \u00b7 78 units \u00b7 software not chosen yet",
-      "score": 54,
+      "score": 55,
       "isNew": false,
       "metro": "Dallas\u2013Fort Worth",
       "firstSeen": "2026-09-15"
+    },
+    {
+      "id": "tx-3700-preston-rd-lakeshore-at-preston-apartments",
+      "propertyId": "1976049",
+      "score": 55,
+      "property": "Lakeshore At Preston Apartments",
+      "city": "Plano",
+      "address": "3700 Preston Rd",
+      "units": 302,
+      "signalType": "Sold",
+      "signal": "Sold Sep 2024",
+      "software": "Yardi",
+      "why": "Sold Sep 2024 to SIMFA LAKESHORE FEE SIMPLE LLC \u00b7 302 units \u00b7 on Yardi \u2192 new owner may re-pick software.",
+      "sources": [
+        {
+          "label": "Texas county property records",
+          "url": "https://data.texas.gov/d/5tkr-3759"
+        },
+        {
+          "label": "Website",
+          "url": "https://lakeshoreatpreston.securecafe.com/onlineleasing/lakeshore-at-preston0/guestlogin.aspx"
+        }
+      ],
+      "contact": {
+        "phone": "(833) 590-1453",
+        "email": null
+      },
+      "isNew": false,
+      "firstSeen": "2026-09-15",
+      "metro": "Dallas\u2013Fort Worth",
+      "subArea": "Plano\u2013Richardson"
     },
     {
       "id": "tx-sec-of-aldine-mail-rte-rd-and-fall-meadow-ln-aldine-station",
@@ -26246,7 +26144,7 @@
       "signalType": "Planned",
       "signal": "Planned (not permitted yet)",
       "why": "Planned \u00b7 expected: not public yet \u00b7 72 units \u00b7 software not chosen yet",
-      "score": 53,
+      "score": 54,
       "isNew": false,
       "metro": "Rest of Texas",
       "firstSeen": "2026-09-15"
@@ -26728,37 +26626,6 @@
       "firstSeen": "2026-09-15"
     },
     {
-      "id": "tx-601-belpree-dr-the-ludlow",
-      "propertyId": "2908642",
-      "score": 53,
-      "property": "The Ludlow",
-      "city": "Plano",
-      "address": "601 Belpree Dr",
-      "units": 326,
-      "signalType": "Sold",
-      "signal": "Owner changed to HERITAGE CREEKSIDE BLOCK B OWNER LLC",
-      "software": "RealPage",
-      "why": "Owner changed to HERITAGE CREEKSIDE BLOCK B OWNER LLC \u00b7 326 units \u00b7 on RealPage \u2192 new owner may re-pick software.",
-      "sources": [
-        {
-          "label": "Texas county property records",
-          "url": "https://data.texas.gov/d/5tkr-3759"
-        },
-        {
-          "label": "Website",
-          "url": "https://9033774.onlineleasing.realpage.com/"
-        }
-      ],
-      "contact": {
-        "phone": "(469) 797-0770",
-        "email": null
-      },
-      "isNew": false,
-      "firstSeen": "2026-09-15",
-      "metro": "Dallas\u2013Fort Worth",
-      "subArea": "Plano\u2013Richardson"
-    },
-    {
       "id": "tx-seq-concord-rd-gober-rd-riva-ridge",
       "property": "Riva Ridge",
       "community": "Riva Ridge",
@@ -26787,7 +26654,7 @@
       "signalType": "Planned",
       "signal": "Planned (not permitted yet)",
       "why": "Planned \u00b7 expected: not public yet \u00b7 63 units \u00b7 software not chosen yet",
-      "score": 52,
+      "score": 53,
       "isNew": false,
       "metro": "Rest of Texas",
       "firstSeen": "2026-09-15"
@@ -26821,10 +26688,41 @@
       "signalType": "Planned",
       "signal": "Planned (not permitted yet)",
       "why": "Planned \u00b7 expected: not public yet \u00b7 60 units \u00b7 software not chosen yet",
-      "score": 52,
+      "score": 53,
       "isNew": false,
       "metro": "Rest of Texas",
       "firstSeen": "2026-09-15"
+    },
+    {
+      "id": "tx-601-belpree-dr-the-ludlow",
+      "propertyId": "2908642",
+      "score": 53,
+      "property": "The Ludlow",
+      "city": "Plano",
+      "address": "601 Belpree Dr",
+      "units": 326,
+      "signalType": "Sold",
+      "signal": "Owner changed to HERITAGE CREEKSIDE BLOCK B OWNER LLC",
+      "software": "RealPage",
+      "why": "Owner changed to HERITAGE CREEKSIDE BLOCK B OWNER LLC \u00b7 326 units \u00b7 on RealPage \u2192 new owner may re-pick software.",
+      "sources": [
+        {
+          "label": "Texas county property records",
+          "url": "https://data.texas.gov/d/5tkr-3759"
+        },
+        {
+          "label": "Website",
+          "url": "https://9033774.onlineleasing.realpage.com/"
+        }
+      ],
+      "contact": {
+        "phone": "(469) 797-0770",
+        "email": null
+      },
+      "isNew": false,
+      "firstSeen": "2026-09-15",
+      "metro": "Dallas\u2013Fort Worth",
+      "subArea": "Plano\u2013Richardson"
     },
     {
       "id": "tx-1708-west-16th-st-pleasant-pointe-apartments",
@@ -27308,6 +27206,40 @@
       "firstSeen": "2026-09-15"
     },
     {
+      "id": "tx-600-block-of-east-coma-ave-lantana-villas",
+      "property": "Lantana Villas",
+      "community": "Lantana Villas",
+      "city": "Hidalgo",
+      "address": "600 Block of East Coma Avenue",
+      "units": 52,
+      "stage": "planned",
+      "permitDate": null,
+      "openingDate": null,
+      "saleDate": null,
+      "saleDatePrecision": null,
+      "buyer": null,
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+      },
+      "sources": [
+        {
+          "label": "State permit data",
+          "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
+        }
+      ],
+      "signalType": "Planned",
+      "signal": "Planned (not permitted yet)",
+      "why": "Planned \u00b7 expected: not public yet \u00b7 52 units \u00b7 software not chosen yet",
+      "score": 52,
+      "isNew": false,
+      "metro": "Rest of Texas",
+      "firstSeen": "2026-09-15"
+    },
+    {
       "id": "tx-8900-independence-pkwy-mcdermott-place-apartments",
       "propertyId": "2504520",
       "score": 52,
@@ -27337,40 +27269,6 @@
       "firstSeen": "2026-09-15",
       "metro": "Dallas\u2013Fort Worth",
       "subArea": "Plano\u2013Richardson"
-    },
-    {
-      "id": "tx-600-block-of-east-coma-ave-lantana-villas",
-      "property": "Lantana Villas",
-      "community": "Lantana Villas",
-      "city": "Hidalgo",
-      "address": "600 Block of East Coma Avenue",
-      "units": 52,
-      "stage": "planned",
-      "permitDate": null,
-      "openingDate": null,
-      "saleDate": null,
-      "saleDatePrecision": null,
-      "buyer": null,
-      "developer": null,
-      "officePhone": null,
-      "website": null,
-      "software": null,
-      "links": {
-        "htc_inventory": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
-      },
-      "sources": [
-        {
-          "label": "State permit data",
-          "url": "https://www.tdhca.texas.gov/sites/default/files/multifamily/docs/HTCPropertyInventory_2.xlsx"
-        }
-      ],
-      "signalType": "Planned",
-      "signal": "Planned (not permitted yet)",
-      "why": "Planned \u00b7 expected: not public yet \u00b7 52 units \u00b7 software not chosen yet",
-      "score": 51,
-      "isNew": false,
-      "metro": "Rest of Texas",
-      "firstSeen": "2026-09-15"
     },
     {
       "id": "tx-n-side-of-tennison-rd-approx-2150-ft-east-of-s-jefferson-ave-mount-pleasant-trails",
@@ -27877,7 +27775,7 @@
       "signalType": "Planned",
       "signal": "Planned (not permitted yet)",
       "why": "Planned \u00b7 expected: not public yet \u00b7 39 units \u00b7 software not chosen yet",
-      "score": 50,
+      "score": 51,
       "isNew": false,
       "metro": "Rest of Texas",
       "firstSeen": "2026-09-15"
@@ -27911,7 +27809,7 @@
       "signalType": "Planned",
       "signal": "Planned (not permitted yet)",
       "why": "Planned \u00b7 expected: not public yet \u00b7 39 units \u00b7 software not chosen yet",
-      "score": 50,
+      "score": 51,
       "isNew": false,
       "metro": "Rest of Texas",
       "firstSeen": "2026-09-19"
@@ -28421,7 +28319,7 @@
       "signalType": "Sold",
       "signal": "Sold 2026-06-04",
       "why": "Sold 2026-06-04 \u00b7 to STONELEX I 3 LLC \u00b7 320 units \u00b7 new owner may re-pick software",
-      "score": 49,
+      "score": 50,
       "isNew": false,
       "metro": "Dallas\u2013Fort Worth",
       "firstSeen": "2026-09-20"
@@ -28903,37 +28801,6 @@
       "firstSeen": "2026-09-20"
     },
     {
-      "id": "tx-500-coit-rd-overture-plano-senior-apartments",
-      "propertyId": "2710065",
-      "score": 49,
-      "property": "Overture Plano Senior Apartments",
-      "city": "Plano",
-      "address": "500 Coit Rd",
-      "units": 168,
-      "signalType": "Sold",
-      "signal": "Sold Sep 2025",
-      "software": "Entrata",
-      "why": "Sold Sep 2025 to DHC HYB SLC PROPERTIES LLC \u00b7 168 units \u00b7 on Entrata \u2192 new owner may re-pick software.",
-      "sources": [
-        {
-          "label": "Texas county property records",
-          "url": "https://data.texas.gov/d/5tkr-3759"
-        },
-        {
-          "label": "Website",
-          "url": "https://overtureplanonew.residentportal.com/"
-        }
-      ],
-      "contact": {
-        "phone": "(469) 240-6328",
-        "email": null
-      },
-      "isNew": false,
-      "firstSeen": "2026-09-15",
-      "metro": "Dallas\u2013Fort Worth",
-      "subArea": "Plano\u2013Richardson"
-    },
-    {
       "id": "tx-13250-emily-rd-fire-dmg-the-grove-at-rosewood",
       "property": "(*Fire Dmg*) The Grove At Rosewood",
       "community": "(*FIRE DMG*) THE GROVE AT ROSEWOOD",
@@ -28962,7 +28829,7 @@
       "signalType": "Sold",
       "signal": "Sold 2026-05-07",
       "why": "Sold 2026-05-07 \u00b7 to CLARIUS NORTH DALLAS OWNER \u00b7 232 units \u00b7 new owner may re-pick software",
-      "score": 48,
+      "score": 49,
       "isNew": false,
       "metro": "Dallas\u2013Fort Worth",
       "firstSeen": "2026-09-20"
@@ -28996,10 +28863,41 @@
       "signalType": "Sold",
       "signal": "Sold 2026-05-06",
       "why": "Sold 2026-05-06 \u00b7 to 900 TITLE JEFFERSON LLC \u00b7 21 units \u00b7 new owner may re-pick software",
-      "score": 48,
+      "score": 49,
       "isNew": false,
       "metro": "Dallas\u2013Fort Worth",
       "firstSeen": "2026-09-20"
+    },
+    {
+      "id": "tx-500-coit-rd-overture-plano-senior-apartments",
+      "propertyId": "2710065",
+      "score": 49,
+      "property": "Overture Plano Senior Apartments",
+      "city": "Plano",
+      "address": "500 Coit Rd",
+      "units": 168,
+      "signalType": "Sold",
+      "signal": "Sold Sep 2025",
+      "software": "Entrata",
+      "why": "Sold Sep 2025 to DHC HYB SLC PROPERTIES LLC \u00b7 168 units \u00b7 on Entrata \u2192 new owner may re-pick software.",
+      "sources": [
+        {
+          "label": "Texas county property records",
+          "url": "https://data.texas.gov/d/5tkr-3759"
+        },
+        {
+          "label": "Website",
+          "url": "https://overtureplanonew.residentportal.com/"
+        }
+      ],
+      "contact": {
+        "phone": "(469) 240-6328",
+        "email": null
+      },
+      "isNew": false,
+      "firstSeen": "2026-09-15",
+      "metro": "Dallas\u2013Fort Worth",
+      "subArea": "Plano\u2013Richardson"
     },
     {
       "id": "tx-1001-grigsby-ave-raleigh",
@@ -29478,6 +29376,40 @@
       "firstSeen": "2026-09-20"
     },
     {
+      "id": "tx-2901-blackburn-ardan",
+      "property": "Ardan",
+      "community": "ARDAN",
+      "city": "DALLAS",
+      "address": "2901 BLACKBURN",
+      "units": 389,
+      "stage": "sold",
+      "permitDate": null,
+      "openingDate": null,
+      "saleDate": "2026-04-01",
+      "saleDatePrecision": null,
+      "buyer": "KV ARDAN APARTMENT LLC",
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+      },
+      "sources": [
+        {
+          "label": "Website",
+          "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+        }
+      ],
+      "signalType": "Sold",
+      "signal": "Sold 2026-04-01",
+      "why": "Sold 2026-04-01 \u00b7 to KV ARDAN APARTMENT LLC \u00b7 389 units \u00b7 new owner may re-pick software",
+      "score": 48,
+      "isNew": false,
+      "metro": "Dallas\u2013Fort Worth",
+      "firstSeen": "2026-09-20"
+    },
+    {
       "id": "tx-4250-e-renner-rd-breckinridge-point-apartments",
       "propertyId": "2058066",
       "score": 48,
@@ -29507,40 +29439,6 @@
       "firstSeen": "2026-09-15",
       "metro": "Dallas\u2013Fort Worth",
       "subArea": "Plano\u2013Richardson"
-    },
-    {
-      "id": "tx-2901-blackburn-ardan",
-      "property": "Ardan",
-      "community": "ARDAN",
-      "city": "DALLAS",
-      "address": "2901 BLACKBURN",
-      "units": 389,
-      "stage": "sold",
-      "permitDate": null,
-      "openingDate": null,
-      "saleDate": "2026-04-01",
-      "saleDatePrecision": null,
-      "buyer": "KV ARDAN APARTMENT LLC",
-      "developer": null,
-      "officePhone": null,
-      "website": null,
-      "software": null,
-      "links": {
-        "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
-      },
-      "sources": [
-        {
-          "label": "Website",
-          "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
-        }
-      ],
-      "signalType": "Sold",
-      "signal": "Sold 2026-04-01",
-      "why": "Sold 2026-04-01 \u00b7 to KV ARDAN APARTMENT LLC \u00b7 389 units \u00b7 new owner may re-pick software",
-      "score": 47,
-      "isNew": false,
-      "metro": "Dallas\u2013Fort Worth",
-      "firstSeen": "2026-09-20"
     },
     {
       "id": "tx-2500-n-houston-st-cirque-residential-tower",
@@ -30047,7 +29945,7 @@
       "signalType": "Sold",
       "signal": "Sold 2026-02-19",
       "why": "Sold 2026-02-19 \u00b7 to 9835 W VALLEY RANCH \u00b7 181 units \u00b7 new owner may re-pick software",
-      "score": 46,
+      "score": 47,
       "isNew": false,
       "metro": "Dallas\u2013Fort Worth",
       "firstSeen": "2026-09-20"
@@ -30081,7 +29979,7 @@
       "signalType": "Sold",
       "signal": "Sold 2026-02-19",
       "why": "Sold 2026-02-19 \u00b7 to EASTLINE DALLAS LLC & \u00b7 330 units \u00b7 new owner may re-pick software",
-      "score": 46,
+      "score": 47,
       "isNew": false,
       "metro": "Dallas\u2013Fort Worth",
       "firstSeen": "2026-09-20"
@@ -30563,6 +30461,40 @@
       "firstSeen": "2026-09-20"
     },
     {
+      "id": "tx-228-seventh-st-victor-prosper-ii",
+      "property": "Victor Prosper Ii",
+      "community": "VICTOR PROSPER II",
+      "city": "DALLAS",
+      "address": "228 SEVENTH ST",
+      "units": 210,
+      "stage": "sold",
+      "permitDate": null,
+      "openingDate": null,
+      "saleDate": "2026-02-02",
+      "saleDatePrecision": null,
+      "buyer": "AM VICTOR PROSPER OWNER LLC",
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+      },
+      "sources": [
+        {
+          "label": "Website",
+          "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+        }
+      ],
+      "signalType": "Sold",
+      "signal": "Sold 2026-02-02",
+      "why": "Sold 2026-02-02 \u00b7 to AM VICTOR PROSPER OWNER LLC \u00b7 210 units \u00b7 new owner may re-pick software",
+      "score": 46,
+      "isNew": false,
+      "metro": "Dallas\u2013Fort Worth",
+      "firstSeen": "2026-09-20"
+    },
+    {
       "id": "tx-3500-north-star-rd-breckenridge-point-apartments",
       "propertyId": "2058065",
       "score": 46,
@@ -30592,40 +30524,6 @@
       "firstSeen": "2026-09-15",
       "metro": "Dallas\u2013Fort Worth",
       "subArea": "Plano\u2013Richardson"
-    },
-    {
-      "id": "tx-228-seventh-st-victor-prosper-ii",
-      "property": "Victor Prosper Ii",
-      "community": "VICTOR PROSPER II",
-      "city": "DALLAS",
-      "address": "228 SEVENTH ST",
-      "units": 210,
-      "stage": "sold",
-      "permitDate": null,
-      "openingDate": null,
-      "saleDate": "2026-02-02",
-      "saleDatePrecision": null,
-      "buyer": "AM VICTOR PROSPER OWNER LLC",
-      "developer": null,
-      "officePhone": null,
-      "website": null,
-      "software": null,
-      "links": {
-        "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
-      },
-      "sources": [
-        {
-          "label": "Website",
-          "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
-        }
-      ],
-      "signalType": "Sold",
-      "signal": "Sold 2026-02-02",
-      "why": "Sold 2026-02-02 \u00b7 to AM VICTOR PROSPER OWNER LLC \u00b7 210 units \u00b7 new owner may re-pick software",
-      "score": 45,
-      "isNew": false,
-      "metro": "Dallas\u2013Fort Worth",
-      "firstSeen": "2026-09-20"
     },
     {
       "id": "tx-14208-heritage-cir-ventana-at-valwood-all-bills-paid",
@@ -31104,37 +31002,6 @@
       "firstSeen": "2026-09-20"
     },
     {
-      "id": "tx-5401-independence-pkwy-the-wexley",
-      "propertyId": "1511233",
-      "score": 45,
-      "property": "The Wexley",
-      "city": "Plano",
-      "address": "5401 Independence Pkwy",
-      "units": 204,
-      "signalType": "Sold",
-      "signal": "Sold Aug 2025",
-      "software": "Yardi",
-      "why": "Sold Aug 2025 to HARVESTREE OWNER LLC \u00b7 204 units \u00b7 on Yardi \u2192 new owner may re-pick software.",
-      "sources": [
-        {
-          "label": "Texas county property records",
-          "url": "https://data.texas.gov/d/5tkr-3759"
-        },
-        {
-          "label": "Website",
-          "url": "https://thewexleyplano.securecafenet.com/residentservices/harvestree-apartments-llc/userlogin"
-        }
-      ],
-      "contact": {
-        "phone": "(972) 784-8600",
-        "email": "thewexley@founderspropertymanagement.com"
-      },
-      "isNew": false,
-      "firstSeen": "2026-09-15",
-      "metro": "Dallas\u2013Fort Worth",
-      "subArea": "Plano\u2013Richardson"
-    },
-    {
       "id": "tx-5200-gaston-ave-green-house-flats",
       "property": "Green House Flats",
       "community": "GREEN HOUSE FLATS",
@@ -31163,7 +31030,7 @@
       "signalType": "Sold",
       "signal": "Sold 2026-01-07",
       "why": "Sold 2026-01-07 \u00b7 to 900 TITLE JEFFERSON LLC \u00b7 54 units \u00b7 new owner may re-pick software",
-      "score": 44,
+      "score": 45,
       "isNew": false,
       "metro": "Dallas\u2013Fort Worth",
       "firstSeen": "2026-09-20"
@@ -31197,10 +31064,41 @@
       "signalType": "Sold",
       "signal": "Sold 2026-01-07",
       "why": "Sold 2026-01-07 \u00b7 to 900 TITLE JEFFERSON LLC \u00b7 36 units \u00b7 new owner may re-pick software",
-      "score": 44,
+      "score": 45,
       "isNew": false,
       "metro": "Dallas\u2013Fort Worth",
       "firstSeen": "2026-09-20"
+    },
+    {
+      "id": "tx-5401-independence-pkwy-the-wexley",
+      "propertyId": "1511233",
+      "score": 45,
+      "property": "The Wexley",
+      "city": "Plano",
+      "address": "5401 Independence Pkwy",
+      "units": 204,
+      "signalType": "Sold",
+      "signal": "Sold Aug 2025",
+      "software": "Yardi",
+      "why": "Sold Aug 2025 to HARVESTREE OWNER LLC \u00b7 204 units \u00b7 on Yardi \u2192 new owner may re-pick software.",
+      "sources": [
+        {
+          "label": "Texas county property records",
+          "url": "https://data.texas.gov/d/5tkr-3759"
+        },
+        {
+          "label": "Website",
+          "url": "https://thewexleyplano.securecafenet.com/residentservices/harvestree-apartments-llc/userlogin"
+        }
+      ],
+      "contact": {
+        "phone": "(972) 784-8600",
+        "email": "thewexley@founderspropertymanagement.com"
+      },
+      "isNew": false,
+      "firstSeen": "2026-09-15",
+      "metro": "Dallas\u2013Fort Worth",
+      "subArea": "Plano\u2013Richardson"
     },
     {
       "id": "tx-5601-gaston-ave-london",
@@ -31707,7 +31605,7 @@
       "signalType": "Sold",
       "signal": "Sold 2025-12-24",
       "why": "Sold 2025-12-24 \u00b7 to 201 CLARK RD APTS LLC \u00b7 168 units \u00b7 new owner may re-pick software",
-      "score": 43,
+      "score": 44,
       "isNew": false,
       "metro": "Dallas\u2013Fort Worth",
       "firstSeen": "2026-09-20"
@@ -32189,6 +32087,40 @@
       "firstSeen": "2026-09-19"
     },
     {
+      "id": "tx-700-cavalcade-st-700-cavalcade-st",
+      "property": "700 Cavalcade St",
+      "community": "700 CAVALCADE ST",
+      "city": "HOUSTON",
+      "address": "700 CAVALCADE ST",
+      "units": 292,
+      "stage": "sold",
+      "permitDate": null,
+      "openingDate": null,
+      "saleDate": "2025-12-10",
+      "saleDatePrecision": null,
+      "buyer": "HILLTOP ELLORY HEIGHTS PROPERTY OWNER LP",
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+      },
+      "sources": [
+        {
+          "label": "Website",
+          "url": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+        }
+      ],
+      "signalType": "Sold",
+      "signal": "Sold 2025-12-10",
+      "why": "Sold 2025-12-10 \u00b7 to HILLTOP ELLORY HEIGHTS PROPERTY OWNER LP \u00b7 292 units \u00b7 new owner may re-pick software",
+      "score": 43,
+      "isNew": false,
+      "metro": "Houston",
+      "firstSeen": "2026-09-19"
+    },
+    {
       "id": "tx-8020-windrose-ave-the-holland",
       "propertyId": "2734943",
       "score": 43,
@@ -32249,40 +32181,6 @@
       "firstSeen": "2026-09-15",
       "metro": "Dallas\u2013Fort Worth",
       "subArea": "Plano\u2013Richardson"
-    },
-    {
-      "id": "tx-700-cavalcade-st-700-cavalcade-st",
-      "property": "700 Cavalcade St",
-      "community": "700 CAVALCADE ST",
-      "city": "HOUSTON",
-      "address": "700 CAVALCADE ST",
-      "units": 292,
-      "stage": "sold",
-      "permitDate": null,
-      "openingDate": null,
-      "saleDate": "2025-12-10",
-      "saleDatePrecision": null,
-      "buyer": "HILLTOP ELLORY HEIGHTS PROPERTY OWNER LP",
-      "developer": null,
-      "officePhone": null,
-      "website": null,
-      "software": null,
-      "links": {
-        "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
-      },
-      "sources": [
-        {
-          "label": "Website",
-          "url": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
-        }
-      ],
-      "signalType": "Sold",
-      "signal": "Sold 2025-12-10",
-      "why": "Sold 2025-12-10 \u00b7 to HILLTOP ELLORY HEIGHTS PROPERTY OWNER LP \u00b7 292 units \u00b7 new owner may re-pick software",
-      "score": 42,
-      "isNew": false,
-      "metro": "Houston",
-      "firstSeen": "2026-09-19"
     },
     {
       "id": "tx-14814-perthshire-rd-14814-perthshire-rd",
@@ -32795,6 +32693,40 @@
       "firstSeen": "2026-09-20"
     },
     {
+      "id": "tx-13100-noel-rd-hazel-by-the-galleria",
+      "property": "Hazel By The Galleria",
+      "community": "HAZEL BY THE GALLERIA",
+      "city": "DALLAS",
+      "address": "13100 NOEL RD",
+      "units": 398,
+      "stage": "sold",
+      "permitDate": null,
+      "openingDate": null,
+      "saleDate": "2025-12-02",
+      "saleDatePrecision": null,
+      "buyer": "13100 NOEL ROAD PARTNERS LLC",
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+      },
+      "sources": [
+        {
+          "label": "Website",
+          "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+        }
+      ],
+      "signalType": "Sold",
+      "signal": "Sold 2025-12-02",
+      "why": "Sold 2025-12-02 \u00b7 to 13100 NOEL ROAD PARTNERS LLC \u00b7 398 units \u00b7 new owner may re-pick software",
+      "score": 42,
+      "isNew": false,
+      "metro": "Dallas\u2013Fort Worth",
+      "firstSeen": "2026-09-20"
+    },
+    {
       "id": "tx-2501-ohio-dr-the-calvin",
       "propertyId": "2027278",
       "score": 42,
@@ -32824,40 +32756,6 @@
       "firstSeen": "2026-09-15",
       "metro": "Dallas\u2013Fort Worth",
       "subArea": "Plano\u2013Richardson"
-    },
-    {
-      "id": "tx-13100-noel-rd-hazel-by-the-galleria",
-      "property": "Hazel By The Galleria",
-      "community": "HAZEL BY THE GALLERIA",
-      "city": "DALLAS",
-      "address": "13100 NOEL RD",
-      "units": 398,
-      "stage": "sold",
-      "permitDate": null,
-      "openingDate": null,
-      "saleDate": "2025-12-02",
-      "saleDatePrecision": null,
-      "buyer": "13100 NOEL ROAD PARTNERS LLC",
-      "developer": null,
-      "officePhone": null,
-      "website": null,
-      "software": null,
-      "links": {
-        "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
-      },
-      "sources": [
-        {
-          "label": "Website",
-          "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
-        }
-      ],
-      "signalType": "Sold",
-      "signal": "Sold 2025-12-02",
-      "why": "Sold 2025-12-02 \u00b7 to 13100 NOEL ROAD PARTNERS LLC \u00b7 398 units \u00b7 new owner may re-pick software",
-      "score": 41,
-      "isNew": false,
-      "metro": "Dallas\u2013Fort Worth",
-      "firstSeen": "2026-09-20"
     },
     {
       "id": "tx-1417-n-nursery-rd-north-oak-apts-tdhca-92001",
@@ -33336,6 +33234,40 @@
       "firstSeen": "2026-09-19"
     },
     {
+      "id": "tx-500-w-pasadena-blvd-500-w-pasadena-blvd",
+      "property": "500 W Pasadena Blvd",
+      "community": "500 W PASADENA BLVD",
+      "city": "DEER PARK",
+      "address": "500 W PASADENA BLVD",
+      "units": 215,
+      "stage": "sold",
+      "permitDate": null,
+      "openingDate": null,
+      "saleDate": "2025-11-20",
+      "saleDatePrecision": null,
+      "buyer": "PAL PARKTOWN LP",
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+      },
+      "sources": [
+        {
+          "label": "Website",
+          "url": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+        }
+      ],
+      "signalType": "Sold",
+      "signal": "Sold 2025-11-20",
+      "why": "Sold 2025-11-20 \u00b7 to PAL PARKTOWN LP \u00b7 215 units \u00b7 new owner may re-pick software",
+      "score": 41,
+      "isNew": false,
+      "metro": "Houston",
+      "firstSeen": "2026-09-19"
+    },
+    {
       "id": "tx-7850-communications-pkwy-instrata-at-legacy-west",
       "propertyId": "2808931",
       "score": 41,
@@ -33365,40 +33297,6 @@
       "firstSeen": "2026-09-15",
       "metro": "Dallas\u2013Fort Worth",
       "subArea": "Plano\u2013Richardson"
-    },
-    {
-      "id": "tx-500-w-pasadena-blvd-500-w-pasadena-blvd",
-      "property": "500 W Pasadena Blvd",
-      "community": "500 W PASADENA BLVD",
-      "city": "DEER PARK",
-      "address": "500 W PASADENA BLVD",
-      "units": 215,
-      "stage": "sold",
-      "permitDate": null,
-      "openingDate": null,
-      "saleDate": "2025-11-20",
-      "saleDatePrecision": null,
-      "buyer": "PAL PARKTOWN LP",
-      "developer": null,
-      "officePhone": null,
-      "website": null,
-      "software": null,
-      "links": {
-        "permit": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
-      },
-      "sources": [
-        {
-          "label": "Website",
-          "url": "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
-        }
-      ],
-      "signalType": "Sold",
-      "signal": "Sold 2025-11-20",
-      "why": "Sold 2025-11-20 \u00b7 to PAL PARKTOWN LP \u00b7 215 units \u00b7 new owner may re-pick software",
-      "score": 40,
-      "isNew": false,
-      "metro": "Houston",
-      "firstSeen": "2026-09-19"
     },
     {
       "id": "tx-146-center-ct-146-center-ct",
@@ -33939,7 +33837,7 @@
       "signalType": "Sold",
       "signal": "Sold 2025-11-11",
       "why": "Sold 2025-11-11 \u00b7 to CWS ST JOSEPH LLC ET AL \u00b7 140 units \u00b7 new owner may re-pick software",
-      "score": 39,
+      "score": 40,
       "isNew": false,
       "metro": "Houston",
       "firstSeen": "2026-09-19"
@@ -34449,7 +34347,7 @@
       "signalType": "Sold",
       "signal": "Sold 2025-10-30",
       "why": "Sold 2025-10-30 \u00b7 to DALPHA GROUP LLC \u00b7 32 units \u00b7 new owner may re-pick software",
-      "score": 38,
+      "score": 39,
       "isNew": false,
       "metro": "Houston",
       "firstSeen": "2026-09-19"
@@ -34965,6 +34863,40 @@
       "firstSeen": "2026-09-20"
     },
     {
+      "id": "tx-425-n-rosemont-ave-the-district-apartments",
+      "property": "The District Apartments",
+      "community": "THE DISTRICT APARTMENTS",
+      "city": "DALLAS",
+      "address": "425 N ROSEMONT AVE",
+      "units": 23,
+      "stage": "sold",
+      "permitDate": null,
+      "openingDate": null,
+      "saleDate": "2025-10-09",
+      "saleDatePrecision": null,
+      "buyer": "DISTRICT REALTY LLC",
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+      },
+      "sources": [
+        {
+          "label": "Website",
+          "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+        }
+      ],
+      "signalType": "Sold",
+      "signal": "Sold 2025-10-09",
+      "why": "Sold 2025-10-09 \u00b7 to DISTRICT REALTY LLC \u00b7 23 units \u00b7 new owner may re-pick software",
+      "score": 38,
+      "isNew": false,
+      "metro": "Dallas\u2013Fort Worth",
+      "firstSeen": "2026-09-20"
+    },
+    {
       "id": "tx-700-18th-st-alta-vista-apartments",
       "propertyId": "148646",
       "score": 38,
@@ -34994,40 +34926,6 @@
       "firstSeen": "2026-09-15",
       "metro": "Dallas\u2013Fort Worth",
       "subArea": "Plano\u2013Richardson"
-    },
-    {
-      "id": "tx-425-n-rosemont-ave-the-district-apartments",
-      "property": "The District Apartments",
-      "community": "THE DISTRICT APARTMENTS",
-      "city": "DALLAS",
-      "address": "425 N ROSEMONT AVE",
-      "units": 23,
-      "stage": "sold",
-      "permitDate": null,
-      "openingDate": null,
-      "saleDate": "2025-10-09",
-      "saleDatePrecision": null,
-      "buyer": "DISTRICT REALTY LLC",
-      "developer": null,
-      "officePhone": null,
-      "website": null,
-      "software": null,
-      "links": {
-        "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
-      },
-      "sources": [
-        {
-          "label": "Website",
-          "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
-        }
-      ],
-      "signalType": "Sold",
-      "signal": "Sold 2025-10-09",
-      "why": "Sold 2025-10-09 \u00b7 to DISTRICT REALTY LLC \u00b7 23 units \u00b7 new owner may re-pick software",
-      "score": 37,
-      "isNew": false,
-      "metro": "Dallas\u2013Fort Worth",
-      "firstSeen": "2026-09-20"
     },
     {
       "id": "tx-9873-brockbank-dr-southwind-apts-all-bills-paid",
@@ -35534,7 +35432,7 @@
       "signalType": "Sold",
       "signal": "Sold 2025-09-25",
       "why": "Sold 2025-09-25 \u00b7 to SSB ASSETS LLC \u00b7 544 units \u00b7 new owner may re-pick software",
-      "score": 36,
+      "score": 37,
       "isNew": false,
       "metro": "Houston",
       "firstSeen": "2026-09-19"
@@ -36078,7 +35976,7 @@
       "signalType": "Sold",
       "signal": "Sold 2025-09-09",
       "why": "Sold 2025-09-09 \u00b7 to RETREAT AT FAULKNER POINT LLC \u00b7 28 units \u00b7 new owner may re-pick software",
-      "score": 35,
+      "score": 36,
       "isNew": false,
       "metro": "Rest of Texas",
       "firstSeen": "2026-09-20"
@@ -36588,7 +36486,7 @@
       "signalType": "Sold",
       "signal": "Sold 2025-08-27",
       "why": "Sold 2025-08-27 \u00b7 to MG OVATION APT CBK PCH LLC & \u00b7 361 units \u00b7 new owner may re-pick software",
-      "score": 34,
+      "score": 35,
       "isNew": false,
       "metro": "Rest of Texas",
       "firstSeen": "2026-09-20"
@@ -37133,7 +37031,7 @@
       "signalType": "Sold",
       "signal": "Sold 2025-08-13",
       "why": "Sold 2025-08-13 \u00b7 to LOFTS ARMANDO LLC \u00b7 150 units \u00b7 new owner may re-pick software",
-      "score": 33,
+      "score": 34,
       "isNew": false,
       "metro": "Houston",
       "firstSeen": "2026-09-19"
@@ -37643,7 +37541,7 @@
       "signalType": "Sold",
       "signal": "Sold 2025-08-03",
       "why": "Sold 2025-08-03 \u00b7 to MAR DEL SOL OWNER 2 LLC \u00b7 248 units \u00b7 new owner may re-pick software",
-      "score": 32,
+      "score": 33,
       "isNew": false,
       "metro": "Houston",
       "firstSeen": "2026-09-19"
@@ -38159,6 +38057,40 @@
       "firstSeen": "2026-09-19"
     },
     {
+      "id": "tx-14181-noel-rd-neo-midtown-phase-i",
+      "property": "Neo Midtown Phase I",
+      "community": "NEO MIDTOWN PHASE I",
+      "city": "DALLAS",
+      "address": "14181 NOEL RD",
+      "units": 222,
+      "stage": "sold",
+      "permitDate": null,
+      "openingDate": null,
+      "saleDate": "2025-07-24",
+      "saleDatePrecision": null,
+      "buyer": "NEO MIDTOWN PHASE I LLC",
+      "developer": null,
+      "officePhone": null,
+      "website": null,
+      "software": null,
+      "links": {
+        "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+      },
+      "sources": [
+        {
+          "label": "Website",
+          "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+        }
+      ],
+      "signalType": "Sold",
+      "signal": "Sold 2025-07-24",
+      "why": "Sold 2025-07-24 \u00b7 to NEO MIDTOWN PHASE I LLC \u00b7 222 units \u00b7 new owner may re-pick software",
+      "score": 32,
+      "isNew": false,
+      "metro": "Dallas\u2013Fort Worth",
+      "firstSeen": "2026-09-20"
+    },
+    {
       "id": "tx-1600-amelia-ct-aspen-court-apartments",
       "propertyId": "1808832",
       "score": 32,
@@ -38188,40 +38120,6 @@
       "firstSeen": "2026-09-15",
       "metro": "Dallas\u2013Fort Worth",
       "subArea": "Plano\u2013Richardson"
-    },
-    {
-      "id": "tx-14181-noel-rd-neo-midtown-phase-i",
-      "property": "Neo Midtown Phase I",
-      "community": "NEO MIDTOWN PHASE I",
-      "city": "DALLAS",
-      "address": "14181 NOEL RD",
-      "units": 222,
-      "stage": "sold",
-      "permitDate": null,
-      "openingDate": null,
-      "saleDate": "2025-07-24",
-      "saleDatePrecision": null,
-      "buyer": "NEO MIDTOWN PHASE I LLC",
-      "developer": null,
-      "officePhone": null,
-      "website": null,
-      "software": null,
-      "links": {
-        "permit": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
-      },
-      "sources": [
-        {
-          "label": "Website",
-          "url": "https://www.dallascad.org/ViewPDFs.aspx?type=3&id=\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
-        }
-      ],
-      "signalType": "Sold",
-      "signal": "Sold 2025-07-24",
-      "why": "Sold 2025-07-24 \u00b7 to NEO MIDTOWN PHASE I LLC \u00b7 222 units \u00b7 new owner may re-pick software",
-      "score": 31,
-      "isNew": false,
-      "metro": "Dallas\u2013Fort Worth",
-      "firstSeen": "2026-09-20"
     },
     {
       "id": "tx-3130-stag-rd-villas-of-sorrento-txa19970195",
@@ -38738,7 +38636,7 @@
       "signalType": "Sold",
       "signal": "Sold 2025-07-10",
       "why": "Sold 2025-07-10 \u00b7 to CIMARRON APARTMENT OWNER \u00b7 286 units \u00b7 new owner may re-pick software",
-      "score": 30,
+      "score": 31,
       "isNew": false,
       "metro": "Dallas\u2013Fort Worth",
       "firstSeen": "2026-09-20"
@@ -39800,7 +39698,7 @@
       "signalType": "Sold",
       "signal": "Sold 2025-06-18",
       "why": "Sold 2025-06-18 \u00b7 to OAKS MINNCHAHA TWO LLC & \u00b7 207 units \u00b7 new owner may re-pick software",
-      "score": 28,
+      "score": 29,
       "isNew": false,
       "metro": "Dallas\u2013Fort Worth",
       "firstSeen": "2026-09-20"
@@ -40854,7 +40752,7 @@
       "signalType": "Sold",
       "signal": "Sold 2025-05-28",
       "why": "Sold 2025-05-28 \u00b7 to AMERITAS LIFE INSURANCE CORP \u00b7 105 units \u00b7 new owner may re-pick software",
-      "score": 26,
+      "score": 27,
       "isNew": false,
       "metro": "Houston",
       "firstSeen": "2026-09-19"
@@ -41908,7 +41806,7 @@
       "signalType": "Sold",
       "signal": "Sold 2025-05-15",
       "why": "Sold 2025-05-15 \u00b7 to PECOS HOUSING FINANCE CORP \u00b7 198 units \u00b7 new owner may re-pick software",
-      "score": 24,
+      "score": 25,
       "isNew": false,
       "metro": "Dallas\u2013Fort Worth",
       "firstSeen": "2026-09-20"
@@ -42418,7 +42316,7 @@
       "signalType": "Sold",
       "signal": "Sold 2025-05-08",
       "why": "Sold 2025-05-08 \u00b7 to PECOS HOUSING FINANCE \u00b7 310 units \u00b7 new owner may re-pick software",
-      "score": 23,
+      "score": 24,
       "isNew": false,
       "metro": "Dallas\u2013Fort Worth",
       "firstSeen": "2026-09-20"
@@ -42964,7 +42862,7 @@
       "signalType": "Sold",
       "signal": "Sold 2025-05-01",
       "why": "Sold 2025-05-01 \u00b7 to PLEASANTON HOUSING FINANCE CORPORATION \u00b7 356 units \u00b7 new owner may re-pick software",
-      "score": 22,
+      "score": 23,
       "isNew": false,
       "metro": "Houston",
       "firstSeen": "2026-09-19"
@@ -43474,7 +43372,7 @@
       "signalType": "Sold",
       "signal": "Sold 2025-04-17",
       "why": "Sold 2025-04-17 \u00b7 to EDCOUCH COMMUNITY HOUSING \u00b7 160 units \u00b7 new owner may re-pick software",
-      "score": 21,
+      "score": 22,
       "isNew": false,
       "metro": "Dallas\u2013Fort Worth",
       "firstSeen": "2026-09-20"
@@ -44018,7 +43916,7 @@
       "signalType": "Sold",
       "signal": "Sold 2025-04-09",
       "why": "Sold 2025-04-09 \u00b7 to LA VILLA HOUSING FINANCE CORP \u00b7 136 units \u00b7 new owner may re-pick software",
-      "score": 20,
+      "score": 21,
       "isNew": false,
       "metro": "Dallas\u2013Fort Worth",
       "firstSeen": "2026-09-20"
@@ -44529,7 +44427,7 @@
       "signalType": "Sold",
       "signal": "Sold 2025-04-03",
       "why": "Sold 2025-04-03 \u00b7 to PECOS HOUSING FINANCE CORPORATION \u00b7 256 units \u00b7 new owner may re-pick software",
-      "score": 19,
+      "score": 20,
       "isNew": false,
       "metro": "Houston",
       "firstSeen": "2026-09-19"
@@ -45589,7 +45487,7 @@
       "signalType": "Sold",
       "signal": "Sold 2025-03-24",
       "why": "Sold 2025-03-24 \u00b7 to PLEASANTON HOUSING FINANCE \u00b7 224 units \u00b7 new owner may re-pick software",
-      "score": 17,
+      "score": 18,
       "isNew": false,
       "metro": "Rest of Texas",
       "firstSeen": "2026-09-20"
@@ -46645,7 +46543,7 @@
       "signalType": "Sold",
       "signal": "Sold 2025-03-12",
       "why": "Sold 2025-03-12 \u00b7 to PECOS HOUSING FINANCE CORP \u00b7 88 units \u00b7 new owner may re-pick software",
-      "score": 15,
+      "score": 16,
       "isNew": false,
       "metro": "Houston",
       "firstSeen": "2026-09-19"
@@ -47707,7 +47605,7 @@
       "signalType": "Sold",
       "signal": "Sold 2025-02-25",
       "why": "Sold 2025-02-25 \u00b7 to PLEASANTON HOUSING FINANCE \u00b7 276 units \u00b7 new owner may re-pick software",
-      "score": 13,
+      "score": 14,
       "isNew": false,
       "metro": "Rest of Texas",
       "firstSeen": "2026-09-20"
@@ -48772,7 +48670,7 @@
       "signalType": "Sold",
       "signal": "Sold 2025-01-24",
       "why": "Sold 2025-01-24 \u00b7 to WSP POLANCO LLC \u00b7 154 units \u00b7 new owner may re-pick software",
-      "score": 11,
+      "score": 12,
       "isNew": false,
       "metro": "Dallas\u2013Fort Worth",
       "firstSeen": "2026-09-20"
@@ -49828,7 +49726,7 @@
       "signalType": "Sold",
       "signal": "Sold 2024-12-23",
       "why": "Sold 2024-12-23 \u00b7 to ONE HOME REALTY II LLC \u00b7 27 units \u00b7 new owner may re-pick software",
-      "score": 9,
+      "score": 10,
       "isNew": false,
       "metro": "Dallas\u2013Fort Worth",
       "firstSeen": "2026-09-20"
@@ -50883,7 +50781,7 @@
       "signalType": "Sold",
       "signal": "Sold 2024-12-18",
       "why": "Sold 2024-12-18 \u00b7 to BOARDWALK DOVER POINTE LLC \u00b7 168 units \u00b7 new owner may re-pick software",
-      "score": 7,
+      "score": 8,
       "isNew": false,
       "metro": "Houston",
       "firstSeen": "2026-09-19"

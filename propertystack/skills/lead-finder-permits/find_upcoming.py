@@ -61,6 +61,8 @@ def find_upcoming(
     endpoint = recipe.get("endpoint", "")
     fields = recipe.get("fields", {})
     units_pattern = recipe.get("units_text_pattern")
+    keyword_pattern = recipe.get("keyword_pattern")
+    keyword_re = re.compile(keyword_pattern, re.I) if keyword_pattern else None
     rows = _fetch_rows(endpoint, http_get)
 
     apartment_rows = 0
@@ -68,7 +70,7 @@ def find_upcoming(
     newest: datetime.date | None = None
     records = []
     for row in rows:
-        if not _is_apartment(row, fields, units_pattern):
+        if not _is_apartment(row, fields, units_pattern, keyword_re):
             continue
         apartment_rows += 1
         issue_date = _parse_date(row.get(fields.get("issue_date", "")))
@@ -103,7 +105,12 @@ def find_upcoming(
     return merged
 
 
-def _is_apartment(row: dict, fields: dict, units_pattern: str | None) -> bool:
+def _is_apartment(
+    row: dict,
+    fields: dict,
+    units_pattern: str | None,
+    keyword_re: "re.Pattern[str] | None" = None,
+) -> bool:
     # A known unit count is authoritative: a record that reports fewer than
     # 20 units is never a qualifying apartment project, even when the permit
     # type text matches (a duplex permitted as "MULTI-FAMILY DWELLING" is a
@@ -114,6 +121,12 @@ def _is_apartment(row: dict, fields: dict, units_pattern: str | None) -> bool:
         return units >= 20
     type_key = fields.get("permit_type")
     type_value = str(row.get(type_key, "")) if type_key else ""
+    # A recipe whose feed writes its own shorthand ("NEW APT BLD", an "R-2"
+    # occupancy code) supplies the vocabulary its own permits use. Without it
+    # this test only knew the words "apartment" and "multifamily", so a whole
+    # 22-building project was dropped for spelling it "APT BLD".
+    if keyword_re is not None and keyword_re.search(type_value):
+        return True
     if APARTMENT_RE.search(type_value):
         return True
     if RENOVATION_TYPE_RE.match(type_value.strip()):
@@ -154,6 +167,11 @@ def _find_co_value(row: dict, fields: dict) -> str:
 def _parse_date(value) -> datetime.date | None:
     if not value:
         return None
+    # A spreadsheet cell formatted as a date arrives already parsed, not as text.
+    if isinstance(value, datetime.datetime):
+        return value.date()
+    if isinstance(value, datetime.date):
+        return value
     if isinstance(value, (int, float)):
         # ArcGIS FeatureServer fields return dates as epoch milliseconds.
         return datetime.datetime.fromtimestamp(value / 1000, tz=datetime.timezone.utc).date()
