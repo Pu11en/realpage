@@ -6,7 +6,7 @@ Sources (see propertystack/CONTRACTS.md):
   propertystack/data/plano-richardson/leads.csv   -> leads.json
   propertystack/data/plano-richardson/6-upcoming.csv -> leads.json (openingNext12mo)
   propertystack/runs/*.json                       -> pipeline.json (Under the Hood)
-  site/data/areas/<state>.json                     -> lead-map.json (map.html state shading)
+  site/data/areas/<state>.json                     -> lead-map.json (state counts for the chat)
   propertystack/data/<state-slug>/leads.json      -> site/data/areas/<state-slug>.json
     (part-1 LeadRecord format, see propertystack/skills/lead-finder/record.py;
      plano-richardson keeps using the CSV pipeline above, unchanged; the fixture

@@ -1,9 +1,16 @@
-# Crane Marketing Board
+# CraneSignal ready post shelf
 
-One view-only page listing Drew's hand-done marketing work (videos, posts, where to post, files). No live data, no automation.
+A one-page posting shelf for CraneSignal public posts. It works one target at a time: only the current target is active, and future targets stay locked until Drew says the current one is done.
 
 - Open: `bash ./start.sh` then http://localhost:8740
-- Edit: only the `CARDS` list in `index.html` (newest first). Put files in `assets/`.
-- When to edit: only when Drew finishes a content session and says yes to "Add this to the Marketing Board?", or tells a session to remove/change a card. Cards never leave on their own.
-- Interview practice tab: the `INTERVIEW` list, filled only by interview-practice sessions from Drew's spoken run-throughs.
-- Not on the board: outreach emails (automated), posting calendar, replies, LinkedIn outreach.
+- Edit: update the `PLATFORMS` list in `index.html`.
+- Current target: set `CURRENT_PLATFORM` and mark the matching platform with `current: true`.
+- Only put finished, ready-to-copy post parts here.
+- Drafts, strategy notes, research, and long planning copy do not belong here.
+- Each post can have parts like `caption`, `title`, `description`, `publicComment`, or `firstComment`.
+- Target chips can name public communities or sections, but they are not ready posts.
+- Public newsletter or blog-style posts are allowed when they are visible as public posts.
+- Do not add email blasts, DMs, outreach, or private messages.
+- Communities are added under a platform only after a real public community is found and a post is ready for it.
+
+Before posting to Reddit, Facebook groups, LinkedIn groups, Slack groups, or forums, check that place's current rules in the browser.

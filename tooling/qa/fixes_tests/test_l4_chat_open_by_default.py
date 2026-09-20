@@ -3,7 +3,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[3]
 JS = (ROOT / "site/js/chat-panel.js").read_text(encoding="utf-8")
-PAGES = ["index.html", "map.html", "property.html", "under-the-hood.html"]
+PAGES = ["index.html", "property.html", "under-the-hood.html"]
 
 
 def test_docked_on_every_wide_page():

@@ -75,7 +75,7 @@ def test_get_new_leads_ui_is_hidden_until_a_download_and_has_empty_state():
     assert 'id="download-new-leads" hidden' in page
     assert "newLeadsButton.hidden = !lastDownloadFor(selectedLeadPack())" in page
     assert "leadsFirstSeenAfter(selection.leads, lastDownload)" in page
-    assert "No new leads since ${window.CraneSignalLeadPack.displayDate(lastDownload)}. Ask for your area on the Map." in page
+    assert "No new leads since ${window.CraneSignalLeadPack.displayDate(lastDownload)}. Ask for your area below." in page
     assert "rememberDownloadDate(" in page
     assert "selection.areaSlug" in page
     assert "selection.storageRegion" in page

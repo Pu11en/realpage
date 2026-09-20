@@ -3,118 +3,688 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Crane Marketing Board</title>
+<meta name="description" content="CraneSignal one target posting shelf.">
+<title>CraneSignal current post</title>
 <style>
-  :root { --bg:#f6f5f2; --card:#fff; --ink:#1c1c1c; --muted:#6b6b6b; --line:#e4e2dd; --accent:#d9731a; }
+  :root {
+    --bg:#f7f4ee;
+    --ink:#151915;
+    --muted:#59635d;
+    --line:#d9d2c4;
+    --panel:#fffdf8;
+    --soft:#fffaf1;
+    --accent:#bd5a19;
+    --focus:#3d5a9b;
+  }
   * { box-sizing:border-box; }
-  body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; }
-  header { max-width:880px; margin:0 auto; padding:40px 24px 8px; }
-  h1 { margin:0; font-size:28px; }
-  header p { margin:4px 0 0; color:var(--muted); }
-  main { max-width:880px; margin:0 auto; padding:16px 24px 64px; display:grid; gap:20px; }
-  .card { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:24px; }
-  .meta { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:8px; }
-  .tag { font-size:12px; font-weight:600; text-transform:uppercase; letter-spacing:.04em; padding:2px 8px; border-radius:6px; background:#f1ece4; color:#7a4a14; }
-  .tag.date { background:#eee; color:var(--muted); }
-  h2 { margin:0 0 12px; font-size:20px; }
-  h3 { margin:20px 0 8px; font-size:14px; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
-  .block { position:relative; }
-  pre { margin:0; white-space:pre-wrap; background:#faf9f7; border:1px solid var(--line); border-radius:8px; padding:16px; font:14px/1.6 ui-monospace, SFMono-Regular, Menlo, monospace; }
-  button { position:absolute; top:8px; right:8px; border:1px solid var(--line); background:#fff; border-radius:6px; padding:4px 10px; font:13px system-ui, sans-serif; cursor:pointer; }
-  button:hover { border-color:var(--accent); }
-  ul { margin:0; padding-left:20px; }
-  a { color:var(--accent); }
-  .empty { color:var(--muted); }
-  nav { max-width:880px; margin:16px auto 0; padding:0 24px; display:flex; gap:8px; }
-  nav a { text-decoration:none; color:var(--muted); padding:6px 14px; border-radius:8px; border:1px solid transparent; }
-  nav a.on { color:var(--ink); background:#fff; border-color:var(--line); font-weight:600; }
+  body {
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font:14px/20px Manrope, ui-sans-serif, system-ui, sans-serif;
+    font-variant-numeric:tabular-nums;
+  }
+  .skip {
+    position:absolute;
+    left:12px;
+    top:12px;
+    transform:translateY(-64px);
+    background:var(--ink);
+    color:#fff;
+    border-radius:8px;
+    padding:8px 12px;
+    transition:transform 700ms cubic-bezier(0.32,0.72,0,1);
+    z-index:10;
+  }
+  .skip:focus { transform:translateY(0); }
+  header {
+    max-width:1440px;
+    margin:0 auto;
+    padding:32px 24px 16px;
+    display:grid;
+    grid-template-columns:minmax(0, 1fr) auto;
+    gap:24px;
+    align-items:end;
+  }
+  h1 {
+    margin:0;
+    max-width:680px;
+    font-size:36px;
+    line-height:40px;
+    font-weight:700;
+    letter-spacing:0;
+    text-wrap:balance;
+    background:linear-gradient(90deg, #000, #666);
+    color:transparent;
+    -webkit-background-clip:text;
+    background-clip:text;
+  }
+  .micro {
+    margin:8px 0 0;
+    color:var(--muted);
+    max-width:680px;
+    font-size:16px;
+    line-height:24px;
+    text-wrap:pretty;
+  }
+  .summary {
+    display:grid;
+    grid-template-columns:repeat(2, auto);
+    gap:8px;
+    justify-content:end;
+  }
+  .stat {
+    border:1px solid var(--line);
+    border-radius:8px;
+    background:var(--soft);
+    padding:8px 12px;
+    min-width:128px;
+  }
+  .stat b {
+    display:block;
+    font-size:20px;
+    line-height:28px;
+  }
+  .stat span {
+    display:block;
+    color:var(--muted);
+    font-size:12px;
+    line-height:16px;
+  }
+  .status {
+    display:inline-flex;
+    align-items:center;
+    border:1px solid var(--line);
+    border-radius:8px;
+    background:var(--panel);
+    color:var(--muted);
+    padding:4px 8px;
+    font-size:12px;
+    line-height:16px;
+    font-weight:700;
+    text-transform:uppercase;
+  }
+  main {
+    max-width:1440px;
+    margin:0 auto;
+    padding:0 24px 48px;
+    display:grid;
+    grid-template-columns:320px minmax(0, 1fr);
+    gap:24px;
+  }
+  nav {
+    position:sticky;
+    top:16px;
+    align-self:start;
+    display:grid;
+    gap:8px;
+  }
+  .platform {
+    width:100%;
+    border:1px solid var(--line);
+    border-radius:8px;
+    background:var(--panel);
+    color:var(--ink);
+    padding:12px;
+    text-align:left;
+    cursor:pointer;
+    display:grid;
+    grid-template-columns:1fr auto;
+    gap:8px;
+    transition:all 700ms cubic-bezier(0.32,0.72,0,1);
+  }
+  .platform:hover { transform:translateY(-1px); border-color:var(--accent); }
+  .platform:active { transform:scale(.98); }
+  .platform:focus-visible { outline:2px solid var(--focus); outline-offset:2px; }
+  .platform.active {
+    background:#151915;
+    color:#fff;
+    border-color:#151915;
+  }
+  .platform strong {
+    font-size:18px;
+    line-height:28px;
+  }
+  .platform span {
+    color:var(--muted);
+    font-size:12px;
+    line-height:16px;
+  }
+  .platform.active span { color:#d8d1c5; }
+  .platform.locked {
+    cursor:not-allowed;
+    opacity:.56;
+  }
+  .platform.locked:hover {
+    transform:none;
+    border-color:var(--line);
+  }
+  .badge {
+    border:1px solid currentColor;
+    border-radius:8px;
+    padding:2px 8px;
+    height:24px;
+    align-self:start;
+    font-size:12px;
+    line-height:18px;
+  }
+  .detail {
+    min-width:0;
+    display:grid;
+    gap:16px;
+  }
+  .detailHead {
+    border:1px solid var(--line);
+    border-radius:8px;
+    background:var(--soft);
+    padding:16px;
+    display:grid;
+    grid-template-columns:1fr auto;
+    gap:16px;
+    align-items:start;
+  }
+  .detailHead h2 {
+    margin:0;
+    font-size:30px;
+    line-height:36px;
+  }
+  .detailHead p {
+    margin:4px 0 0;
+    color:var(--muted);
+    max-width:680px;
+  }
+  .targets {
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    margin-top:12px;
+  }
+  .target {
+    border:1px solid var(--line);
+    border-radius:8px;
+    background:#fffdf8;
+    padding:4px 8px;
+    color:var(--muted);
+    font-size:12px;
+    line-height:16px;
+  }
+  .post {
+    border:1px solid var(--line);
+    border-radius:8px;
+    background:var(--panel);
+    padding:16px;
+    display:grid;
+    gap:12px;
+  }
+  .postHead {
+    display:grid;
+    grid-template-columns:1fr auto;
+    gap:12px;
+    align-items:start;
+  }
+  .post h3 {
+    margin:0;
+    font-size:20px;
+    line-height:28px;
+    text-wrap:balance;
+  }
+  .postType {
+    color:var(--muted);
+    font-size:12px;
+    line-height:16px;
+    text-align:right;
+  }
+  .parts {
+    display:grid;
+    grid-template-columns:repeat(2, minmax(0, 1fr));
+    gap:12px;
+  }
+  .part {
+    border:1px solid var(--line);
+    border-radius:8px;
+    background:#fbf6ec;
+    padding:12px;
+    display:grid;
+    grid-template-rows:auto 1fr auto;
+    gap:8px;
+  }
+  .label {
+    color:var(--muted);
+    font-size:12px;
+    line-height:16px;
+    font-weight:700;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+  }
+  pre {
+    margin:0;
+    white-space:pre-wrap;
+    overflow-wrap:anywhere;
+    font:13px/20px "Geist Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  }
+  button.copy,
+  button.copyAll {
+    justify-self:start;
+    border:1px solid var(--line);
+    background:#fff;
+    border-radius:8px;
+    padding:8px 12px;
+    color:var(--muted);
+    font:600 12px/16px Manrope, ui-sans-serif, system-ui, sans-serif;
+    cursor:pointer;
+    transition:all 700ms cubic-bezier(0.32,0.72,0,1);
+  }
+  button.copy:hover,
+  button.copyAll:hover {
+    transform:translateY(-1px);
+    border-color:var(--accent);
+    color:var(--accent);
+  }
+  button.copy:active,
+  button.copyAll:active { transform:scale(.98); }
+  button.copy:focus-visible,
+  button.copyAll:focus-visible { outline:2px solid var(--focus); outline-offset:2px; }
+  button.copyAll {
+    background:#151915;
+    border-color:#151915;
+    color:#fff;
+  }
+  .empty {
+    border:1px solid var(--line);
+    border-radius:8px;
+    background:var(--panel);
+    padding:24px;
+    color:var(--muted);
+  }
+  footer {
+    max-width:1440px;
+    margin:0 auto;
+    padding:24px;
+    border-top:1px solid var(--line);
+    color:var(--muted);
+    font-size:12px;
+    line-height:16px;
+  }
+  @media (max-width:980px) {
+    header, main { grid-template-columns:1fr; }
+    .summary { justify-content:stretch; grid-template-columns:repeat(2, 1fr); }
+    nav { position:static; grid-template-columns:repeat(2, minmax(0, 1fr)); }
+  }
+  @media (max-width:680px) {
+    header, main, footer { padding-inline:16px; }
+    h1 { font-size:30px; line-height:36px; }
+    nav, .parts, .summary, .detailHead, .postHead { grid-template-columns:1fr; }
+    .postType { text-align:left; }
+  }
 </style>
 </head>
 <body>
+<a class="skip" href="#ready">Skip to ready posts</a>
 <header>
-  <h1>Crane Marketing Board</h1>
-  <p>Only the marketing work you do by hand. Tell a session "remove this card" once you've posted it.</p>
+  <div>
+    <span class="status">Current target</span>
+    <h1>Multifamily Insiders post</h1>
+    <p class="micro">Copy it. Test it. We do not move on until you say done.</p>
+  </div>
+  <div class="summary" aria-label="ready post counts">
+    <div class="stat"><b id="platformCount">1</b><span>current</span></div>
+    <div class="stat"><b id="postCount">0</b><span>assets</span></div>
+  </div>
 </header>
-<nav><a href="#marketing" data-tab="marketing">Marketing</a><a href="#interview" data-tab="interview">Interview practice</a></nav>
-<main id="board"></main>
+
+<main>
+  <nav id="platforms" aria-label="platforms"></nav>
+  <section id="ready" class="detail" aria-live="polite"></section>
+</main>
+
+<footer>
+  <span>Public posts only. Email and DMs stay out.</span>
+</footer>
 
 <script>
-/*
-  THE CARDS. Sessions edit only this list (newest first). Fields:
-  type, title, added (YYYY-MM-DD), basedOn (data the card uses),
-  sections: [{ label, text }]  -> each shows with a Copy button
-  whereToPost: [text or URL], files: [{ name, path }] (paths relative to this folder, put in ./assets/)
-*/
-const CARDS = [
+const CURRENT_PLATFORM = "Multifamily Insiders";
+const PLATFORMS = [
   {
-    type: "Video · product demo",
-    title: "CraneSignal product demo (2–3 min, your voice over a screen recording)",
-    added: "2026-09-15",
-    basedOn: "Current CraneSignal data: 307 Dallas–Fort Worth projects, ~61,000 apartments, 198 permitted or under construction",
-    sections: [
-      { label: "Rough outline (a content session will turn this into a full script)", text:
-`0:00 Hook — "There are 198 apartment buildings being built in Dallas–Fort Worth right now. Most people who sell to them find out after they open."
-0:15 The problem — by opening day, the building has already picked its management company, software and vendors.
-0:30 Open CraneSignal — show the Early Leads list for Dallas–Fort Worth.
-0:50 Pick one big project — name, city, number of apartments, opening date, developer, office phone.
-1:15 Show the map — where the new buildings are clustering.
-1:35 Show the permit or news link — every lead comes from a public record you can check.
-1:55 Ask the chat a question — e.g. "Which DFW projects open in the next 6 months?"
-2:20 Close — "It's free early access right now. Link below — tell me what you'd want it to do."` },
-      { label: "Video title", text: "198 apartment buildings are going up in Dallas–Fort Worth. Here's how to find them before they open." },
-      { label: "Video description", text:
-`CraneSignal finds new apartment buildings while they're still permits and construction sites, so you can reach them before opening day.
+    name: "Multifamily Insiders",
+    note: "Blogs, discussions",
+    targets: ["Expert blogs", "Discussions"],
+    current: true,
+    posts: [
+      {
+        title: "Public signals discussion",
+        type: "blog or discussion",
+        parts: {
+          title: `5 public signs an apartment owner may be changing its operating stack`,
+          post: `Most apartment prospecting starts too broad.
 
-This demo covers Dallas–Fort Worth: 307 projects, about 61,000 apartments.
+Every building looks like a possible account until you know what changed.
 
-Free early access — I'd love your feedback.` }
-    ],
-    whereToPost: ["YouTube (full video)", "Later: cut into Shorts under 60 seconds"],
-    files: []
-  }
+I am watching for public signals that suggest an owner or operator may be rethinking the way a property runs:
+
+1. Recent sale or new ownership
+2. Active permits
+3. New construction or lease up
+4. Management company change
+5. Visible software or resident tech changes
+
+None of those prove a property is buying.
+
+They just tell me where research should start.
+
+For people here who work around multifamily operations, what usually changes first after an acquisition: property manager, leasing workflow, accounting, maintenance, or software?`,
+          softContext: `I am building CraneSignal around this question, but I am trying to pressure test the signals before turning it into a pitch.`,
+          noLinkClose: `Curious what you would add or remove from the list.`
+        }
+      }
+    ]
+  },
+  {
+    name: "BiggerPockets",
+    note: "Investor forums",
+    targets: ["Real Estate Technology", "Managing Your Property", "Multifamily"],
+    posts: []
+  },
+  {
+    name: "Multi-Housing News",
+    note: "Guest viewpoint",
+    targets: ["Viewpoint", "Guest columns"],
+    posts: []
+  },
+  {
+    name: "Multifamily Dive",
+    note: "Trade media",
+    targets: ["Opinion", "Tech", "Operations"],
+    posts: []
+  },
+  {
+    name: "Multifamily Executive",
+    note: "Trade media",
+    targets: ["Owners", "Operators", "Developers"],
+    posts: []
+  },
+  {
+    name: "CREtech",
+    note: "Proptech news",
+    targets: ["News", "AI", "Built world"],
+    posts: []
+  },
+  {
+    name: "CraneSignal Blog",
+    note: "Public home base",
+    targets: ["Product blog", "SEO"],
+    posts: [
+      {
+        title: "First blog draft",
+        type: "blog post",
+        parts: {
+          headline: `Which apartment accounts changed recently?`,
+          body: `Most apartment prospecting starts too broad.
+
+CraneSignal starts with change.
+
+A building that sold, filed a permit, changed ownership, or started construction is not automatically a buyer.
+
+It is a better place to start research than a stale list.`
+        }
+      }
+    ]
+  },
+  {
+    name: "Substack",
+    note: "Public posts",
+    targets: ["Profile posts", "Publication"],
+    posts: []
+  },
+  {
+    name: "Medium",
+    note: "Public articles",
+    targets: ["Real estate", "Proptech", "SaaS"],
+    posts: []
+  },
+  {
+    name: "LinkedIn",
+    note: "Posts, articles, newsletter",
+    targets: ["Articles", "Newsletter", "Real Estate"],
+    posts: [
+      {
+        title: "Which building would you call first",
+        type: "native video",
+        parts: {
+          caption: `1,876 apartment buildings is too many to call.
+
+If I sold software or services into apartments, I would start with one question:
+
+What changed recently?
+
+Sale, permit, new owner, new project.
+
+That does not prove they are buying. It tells me which buildings are worth researching before I write the pitch.
+
+That is what I am building with CraneSignal. Browsing is free. A free account unlocks who to call and downloads.`,
+          firstComment: `Free early access: cranesignal.com`,
+          videoTitle: `Which apartment building would you call first?`
+        }
+      },
+      {
+        title: "Long post seed",
+        type: "article",
+        parts: {
+          headline: `The apartment leads I would research before I pitch`,
+          body: `I do not want a giant apartment list first.
+
+I want a smaller set of buildings where something changed.
+
+Recent sale.
+New owner.
+Permit.
+New construction.
+
+That does not prove the account is buying.
+
+It proves the account is worth researching before the pitch.`
+        }
+      }
+    ]
+  },
+  {
+    name: "X",
+    note: "Public posts",
+    posts: [
+      {
+        title: "Short video post",
+        type: "native video",
+        parts: {
+          post: `1,876 apartment buildings is not a call list.
+
+It is a pile to narrow.
+
+I would start with buildings that recently sold or filed permits, then research who actually picks the software.`
+        }
+      }
+    ]
+  },
+  {
+    name: "Reddit",
+    note: "Careful tests",
+    targets: ["r/realestateinvesting", "r/PptyMgmtSoftware", "r/PropertyManagement"],
+    posts: []
+  },
+  {
+    name: "YouTube",
+    note: "Shorts",
+    posts: [
+      {
+        title: "Shorts upload",
+        type: "short",
+        parts: {
+          title: `1,876 apartment buildings. Which one would you call first?`,
+          description: `CraneSignal is a free list of apartment buildings that recently sold, filed permits, or are being built.
+
+Browse free. Create a free account for who to call research, CSV export, and call list PDFs.
+
+Early access is free while I build it and I want feedback from people selling into apartments.`,
+          pinnedComment: `Try it free: cranesignal.com`
+        }
+      }
+    ]
+  },
+  {
+    name: "TikTok",
+    note: "Short video",
+    posts: [
+      {
+        title: "Short video caption",
+        type: "video",
+        parts: {
+          caption: `I found the apartment leads I would research before pitching software.
+
+Recent sale. Permit. New owner.
+
+That is where I would start.`
+        }
+      }
+    ]
+  },
+  {
+    name: "Instagram",
+    note: "Reels",
+    posts: [
+      {
+        title: "Reel caption",
+        type: "video",
+        parts: {
+          caption: `A sale does not prove they are buying.
+
+It proves I should look closer.
+
+CraneSignal helps me find apartment buildings worth researching before I pitch.`
+        }
+      }
+    ]
+  },
+  {
+    name: "Facebook",
+    note: "Public posts",
+    posts: [
+      {
+        title: "Page post",
+        type: "video",
+        parts: {
+          caption: `New apartment sales and permits.
+
+Free list.
+
+Feedback wanted from people selling into apartments.`
+        }
+      }
+    ]
+  },
+  {
+    name: "Threads",
+    note: "Post",
+    posts: [
+      {
+        title: "Short post",
+        type: "native video",
+        parts: {
+          post: `I would not call all 1,876.
+
+I would start with the fresh ones.
+
+Sale. Permit. New owner.`
+        }
+      }
+    ]
+  },
 ];
 
-/*
-  INTERVIEW PRACTICE TAB. Filled only by interview-practice sessions, built from Drew's own
-  spoken run-throughs. Same card fields as above (type, title, added, sections, whereToPost, files).
-*/
-const INTERVIEW = [];
+const platforms = document.getElementById("platforms");
+const ready = document.getElementById("ready");
+const currentPlatform = PLATFORMS.find(platform => platform.name === CURRENT_PLATFORM) || PLATFORMS[0];
+document.getElementById("platformCount").textContent = "1";
+document.getElementById("postCount").textContent = currentPlatform.posts.reduce((sum, post) => sum + Object.keys(post.parts).length, 0);
 
-const board = document.getElementById("board");
-const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;" }[c]));
-const link = s => /^https?:\/\//.test(s) ? `<a href="${esc(s)}" target="_blank">${esc(s)}</a>` : esc(s);
-
-function render() {
-const tab = location.hash === "#interview" ? "interview" : "marketing";
-document.querySelectorAll("nav a").forEach(a => a.classList.toggle("on", a.dataset.tab === tab));
-const list = tab === "interview" ? INTERVIEW : CARDS;
-board.innerHTML = list.length ? list.map((c, i) => `
-  <article class="card">
-    <div class="meta"><span class="tag">${esc(c.type)}</span><span class="tag date">Added ${esc(c.added)}</span></div>
-    <h2>${esc(c.title)}</h2>
-    ${c.basedOn ? `<p class="empty">Based on: ${esc(c.basedOn)}</p>` : ""}
-    ${c.sections.map((s, j) => `
-      <h3>${esc(s.label)}</h3>
-      <div class="block"><pre id="t${i}-${j}">${esc(s.text)}</pre><button data-t="t${i}-${j}">Copy</button></div>`).join("")}
-    ${c.whereToPost?.length ? `<h3>Where to post</h3>
-    <ul>${c.whereToPost.map(w => `<li>${link(w)}</li>`).join("")}</ul>` : ""}
-    ${!c.files ? "" : `<h3>Files</h3>`}
-    ${!c.files ? "" : c.files.length ? `<ul>${c.files.map(f => `<li><a href="${esc(f.path)}" download>${esc(f.name)}</a></li>`).join("")}</ul>`
-                     : `<p class="empty">None yet.</p>`}
-  </article>`).join("") : `<p class="empty">${tab === "interview"
-    ? "Nothing yet. Your first interview-practice session fills this in from how you talk through CraneSignal."
-    : "No cards yet."}</p>`;
+function esc(value) {
+  return String(value).replace(/[&<>"]/g, char => ({ "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;" }[char]));
 }
-render();
-addEventListener("hashchange", render);
 
-board.addEventListener("click", e => {
-  const id = e.target.dataset.t;
-  if (!id) return;
-  navigator.clipboard.writeText(document.getElementById(id).textContent);
-  e.target.textContent = "Copied";
-  setTimeout(() => e.target.textContent = "Copy", 1200);
+function flattenPost(post) {
+  return Object.entries(post.parts).map(([label, value]) => `${label}\n${value}`).join("\n\n");
+}
+
+function labelName(label) {
+  return label.replace(/([a-z])([A-Z])/g, "$1 $2").toLowerCase();
+}
+
+function renderPlatforms(activeName) {
+  platforms.innerHTML = PLATFORMS.map(platform => `
+    <button class="platform ${platform.name === activeName ? "active" : ""} ${platform.current ? "" : "locked"}" data-platform="${esc(platform.name)}" ${platform.current ? "" : "aria-disabled=\"true\""}>
+      <span><strong>${esc(platform.name)}</strong><br><span>${esc(platform.note)}</span></span>
+      <span class="badge">${platform.current ? platform.posts.length : "next"}</span>
+    </button>
+  `).join("");
+}
+
+function renderReady(platformName) {
+  const platform = PLATFORMS.find(item => item.name === platformName) || PLATFORMS[0];
+  renderPlatforms(platform.name);
+  ready.innerHTML = `
+    <section class="detailHead">
+      <div>
+        <h2>${esc(platform.name)}</h2>
+        <p>${esc(platform.note)}</p>
+        ${platform.targets?.length ? `<div class="targets" aria-label="targets">
+          ${platform.targets.map(target => `<span class="target">${esc(target)}</span>`).join("")}
+        </div>` : ""}
+      </div>
+      <button class="copyAll" data-platform-all="${esc(platform.name)}">Copy all</button>
+    </section>
+    ${platform.posts.length ? platform.posts.map((post, postIndex) => `
+      <article class="post">
+        <div class="postHead">
+          <h3>${esc(post.title)}</h3>
+          <div class="postType">${esc(post.type)}</div>
+        </div>
+        <section class="parts">
+          ${Object.entries(post.parts).map(([label, value], partIndex) => {
+            const id = `part-${platform.name.replace(/\W+/g, "")}-${postIndex}-${partIndex}`;
+            return `<div class="part">
+              <div class="label">${esc(labelName(label))}</div>
+              <pre id="${id}">${esc(value)}</pre>
+              <button class="copy" data-copy="${id}">Copy</button>
+            </div>`;
+          }).join("")}
+        </section>
+      </article>
+    `).join("") : `<section class="empty">Nothing ready for this platform yet.</section>`}
+  `;
+}
+
+platforms.addEventListener("click", event => {
+  const button = event.target.closest("[data-platform]");
+  if (!button) return;
+  const platform = PLATFORMS.find(item => item.name === button.dataset.platform);
+  if (!platform?.current) return;
+  renderReady(button.dataset.platform);
 });
+
+ready.addEventListener("click", event => {
+  const copyId = event.target.dataset.copy;
+  const platformName = event.target.dataset.platformAll;
+  if (copyId) {
+    navigator.clipboard.writeText(document.getElementById(copyId).textContent);
+    event.target.textContent = "Done";
+    setTimeout(() => event.target.textContent = "Copy", 900);
+  }
+  if (platformName) {
+    const platform = PLATFORMS.find(item => item.name === platformName);
+    navigator.clipboard.writeText(platform.posts.map(flattenPost).join("\n\n---\n\n"));
+    event.target.textContent = "Done";
+    setTimeout(() => event.target.textContent = "Copy all", 900);
+  }
+});
+
+renderReady(currentPlatform.name);
 </script>
 </body>
 </html>
