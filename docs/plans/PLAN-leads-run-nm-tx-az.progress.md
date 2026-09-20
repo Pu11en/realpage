@@ -71,3 +71,8 @@
   - Commit: `7bb92e1` in the nested business repository (landing server, hero line, coverage-copy cleanup, cache ignore, business log, and fake-summary regression coverage)
   - Checks: `python3 business/tools/test_landing.py --offline` (52/52 passed); plan Check command (598 passed); `python3 tooling/qa/check_lead_data.py` (4 states and 1,472 leads passed); Python compilation and whitespace validation passed.
   - Open: nothing for T9. The landing change is committed locally but intentionally not pushed or deployed; T11 owns automatic publishing after every gate passes.
+
+- 2026-09-19 — T9 reviewer repair complete: landing routes now parse the URL path before matching the homepage, so campaign and referral query strings still receive the live server-rendered lead summary instead of the template placeholder. Added regression coverage for tracked root and `index.html` URLs.
+  - Commit: `08e759f` in the nested business repository (query-safe landing routing and regression tests)
+  - Checks: `python3 business/tools/test_landing.py --offline` (54/54 passed); plan Check command passed; `python3 tooling/qa/check_lead_data.py` passed for 4 states and 1,472 leads; Python compilation and whitespace validation passed.
+  - Open: nothing for T9. Publishing remains intentionally deferred to the one-command chain in T11.
