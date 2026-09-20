@@ -1,0 +1,319 @@
+{
+  "state": "nm",
+  "recipe": "mfa-awards.json",
+  "date": "2026-09-19",
+  "status": "worked",
+  "count": 11,
+  "attempts": 1,
+  "note": "",
+  "records": [
+    {
+      "area": "nm",
+      "city": "Albuquerque",
+      "name": "Somos Apartments",
+      "address": "7200 Central Avenue SE",
+      "lat": null,
+      "lon": null,
+      "units": 70,
+      "stage": "planned",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "Sol Housing",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "housing_award": "https://housingnm.org/uploads/documents/2001-2026_Housing_Tax_Credit_Awards_05.22.2026.xlsx"
+      },
+      "sources": [
+        {
+          "fact": "units",
+          "url": "https://housingnm.org/uploads/documents/2001-2026_Housing_Tax_Credit_Awards_05.22.2026.xlsx"
+        }
+      ],
+      "why": "state housing tax-credit new-construction award (2024)"
+    },
+    {
+      "area": "nm",
+      "city": "Ruidoso",
+      "name": "Elk Meadows Apartments",
+      "address": "1104 Mechem Drive",
+      "lat": null,
+      "lon": null,
+      "units": 72,
+      "stage": "planned",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "Enriched Communities LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "housing_award": "https://housingnm.org/uploads/documents/2001-2026_Housing_Tax_Credit_Awards_05.22.2026.xlsx"
+      },
+      "sources": [
+        {
+          "fact": "units",
+          "url": "https://housingnm.org/uploads/documents/2001-2026_Housing_Tax_Credit_Awards_05.22.2026.xlsx"
+        }
+      ],
+      "why": "state housing tax-credit new-construction award (2024)"
+    },
+    {
+      "area": "nm",
+      "city": "Santa Fe",
+      "name": "Ocate Apartments",
+      "address": "1111 Ocate Road",
+      "lat": null,
+      "lon": null,
+      "units": 60,
+      "stage": "planned",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "Santa Fe Civic Housing Authority",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "housing_award": "https://housingnm.org/uploads/documents/2001-2026_Housing_Tax_Credit_Awards_05.22.2026.xlsx"
+      },
+      "sources": [
+        {
+          "fact": "units",
+          "url": "https://housingnm.org/uploads/documents/2001-2026_Housing_Tax_Credit_Awards_05.22.2026.xlsx"
+        }
+      ],
+      "why": "state housing tax-credit new-construction award (2024)"
+    },
+    {
+      "area": "nm",
+      "city": "Santa Fe",
+      "name": "Nueva Acequia 9%",
+      "address": "0 Camino de Jacobo",
+      "lat": null,
+      "lon": null,
+      "units": 53,
+      "stage": "planned",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "TWG Development, LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "housing_award": "https://housingnm.org/uploads/documents/2001-2026_Housing_Tax_Credit_Awards_05.22.2026.xlsx"
+      },
+      "sources": [
+        {
+          "fact": "units",
+          "url": "https://housingnm.org/uploads/documents/2001-2026_Housing_Tax_Credit_Awards_05.22.2026.xlsx"
+        }
+      ],
+      "why": "state housing tax-credit new-construction award (2025)"
+    },
+    {
+      "area": "nm",
+      "city": "Albuquerque",
+      "name": "San Mateo Manor",
+      "address": "612 San Mateo Blvd SE",
+      "lat": null,
+      "lon": null,
+      "units": 50,
+      "stage": "planned",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "Spire Development, Inc.",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "housing_award": "https://housingnm.org/uploads/documents/2001-2026_Housing_Tax_Credit_Awards_05.22.2026.xlsx"
+      },
+      "sources": [
+        {
+          "fact": "units",
+          "url": "https://housingnm.org/uploads/documents/2001-2026_Housing_Tax_Credit_Awards_05.22.2026.xlsx"
+        }
+      ],
+      "why": "state housing tax-credit new-construction award (2025)"
+    },
+    {
+      "area": "nm",
+      "city": "Las Cruces",
+      "name": "Desert Hope II dba Paseos Verdes",
+      "address": "SEC Colorado Ave & S Campo St",
+      "lat": null,
+      "lon": null,
+      "units": 80,
+      "stage": "planned",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "Mesilla Valley Public Housing Authority",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "housing_award": "https://housingnm.org/uploads/documents/2001-2026_Housing_Tax_Credit_Awards_05.22.2026.xlsx"
+      },
+      "sources": [
+        {
+          "fact": "units",
+          "url": "https://housingnm.org/uploads/documents/2001-2026_Housing_Tax_Credit_Awards_05.22.2026.xlsx"
+        }
+      ],
+      "why": "state housing tax-credit new-construction award (2025)"
+    },
+    {
+      "area": "nm",
+      "city": "Santa Fe",
+      "name": "Plaza Luna Lofts",
+      "address": "1111 Ocate Road",
+      "lat": null,
+      "lon": null,
+      "units": 57,
+      "stage": "planned",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "Spire Development, Inc.",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "housing_award": "https://housingnm.org/uploads/documents/2001-2026_Housing_Tax_Credit_Awards_05.22.2026.xlsx"
+      },
+      "sources": [
+        {
+          "fact": "units",
+          "url": "https://housingnm.org/uploads/documents/2001-2026_Housing_Tax_Credit_Awards_05.22.2026.xlsx"
+        }
+      ],
+      "why": "state housing tax-credit new-construction award (2025)"
+    },
+    {
+      "area": "nm",
+      "city": "Albuquerque",
+      "name": "Edward Romero Terrace II",
+      "address": "103 Texas Street NE",
+      "lat": null,
+      "lon": null,
+      "units": 51,
+      "stage": "planned",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "Elderly Housing Development and",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "housing_award": "https://housingnm.org/uploads/documents/2001-2026_Housing_Tax_Credit_Awards_05.22.2026.xlsx"
+      },
+      "sources": [
+        {
+          "fact": "units",
+          "url": "https://housingnm.org/uploads/documents/2001-2026_Housing_Tax_Credit_Awards_05.22.2026.xlsx"
+        }
+      ],
+      "why": "state housing tax-credit new-construction award (2026)"
+    },
+    {
+      "area": "nm",
+      "city": "Bernalillo",
+      "name": "Niko Commons",
+      "address": "230 Spartan Alley",
+      "lat": null,
+      "lon": null,
+      "units": 55,
+      "stage": "planned",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "Spire Development, Inc.",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "housing_award": "https://housingnm.org/uploads/documents/2001-2026_Housing_Tax_Credit_Awards_05.22.2026.xlsx"
+      },
+      "sources": [
+        {
+          "fact": "units",
+          "url": "https://housingnm.org/uploads/documents/2001-2026_Housing_Tax_Credit_Awards_05.22.2026.xlsx"
+        }
+      ],
+      "why": "state housing tax-credit new-construction award (2026)"
+    },
+    {
+      "area": "nm",
+      "city": "Deming",
+      "name": "Desert Sun III",
+      "address": "Fairfield Dr NW, east of 8th St",
+      "lat": null,
+      "lon": null,
+      "units": 53,
+      "stage": "planned",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "H.E.R.O.",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "housing_award": "https://housingnm.org/uploads/documents/2001-2026_Housing_Tax_Credit_Awards_05.22.2026.xlsx"
+      },
+      "sources": [
+        {
+          "fact": "units",
+          "url": "https://housingnm.org/uploads/documents/2001-2026_Housing_Tax_Credit_Awards_05.22.2026.xlsx"
+        }
+      ],
+      "why": "state housing tax-credit new-construction award (2026)"
+    },
+    {
+      "area": "nm",
+      "city": "Taos",
+      "name": "Este Es Otono",
+      "address": "SWC Este Es & Otono Roads",
+      "lat": null,
+      "lon": null,
+      "units": 35,
+      "stage": "planned",
+      "permit_date": "",
+      "opening_date": "",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "GHK Properties, LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "housing_award": "https://housingnm.org/uploads/documents/2001-2026_Housing_Tax_Credit_Awards_05.22.2026.xlsx"
+      },
+      "sources": [
+        {
+          "fact": "units",
+          "url": "https://housingnm.org/uploads/documents/2001-2026_Housing_Tax_Credit_Awards_05.22.2026.xlsx"
+        }
+      ],
+      "why": "state housing tax-credit new-construction award (2026)"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "sources": {
+    "nm/albuquerque.json": {
+      "status": "empty",
+      "count": 0,
+      "attempts": 1,
+      "checked": "2026-09-19",
+      "note": ""
+    },
+    "nm/bernalillo-county-sales.json": {
+      "status": "empty",
+      "count": 0,
+      "attempts": 0,
+      "checked": "2026-09-19",
+      "note": "disabled: The county does not publish a free machine-readable sales or transfer feed; its free assessor layer has no sale date or sale price."
+    },
+    "nm/las-cruces.json": {
+      "status": "worked",
+      "count": 2,
+      "attempts": 1,
+      "checked": "2026-09-19",
+      "note": ""
+    },
+    "nm/mfa-awards.json": {
+      "status": "worked",
+      "count": 11,
+      "attempts": 1,
+      "checked": "2026-09-19",
+      "note": ""
+    },
+    "nm/rio-rancho.json": {
+      "status": "empty",
+      "count": 0,
+      "attempts": 0,
+      "checked": "2026-09-19",
+      "note": "disabled: No machine-readable city permit feed exists; the Accela Citizen Access site is a stateful search form, not a public data endpoint."
+    },
+    "nm/santa-fe.json": {
+      "status": "empty",
+      "count": 0,
+      "attempts": 0,
+      "checked": "2026-09-19",
+      "note": "disabled: No machine-readable building-permit layer exists in the city's live GIS services; the public permit page is not a queryable data feed."
+    }
+  },
+  "updatedAt": "2026-09-20T01:55:33.108795+00:00"
+}
