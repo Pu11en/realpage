@@ -237,3 +237,74 @@ def test_default_fetch_bytes_percent_encodes_a_raw_windows_path_query_value():
     assert data == b"zip-bytes"
     assert "\\" not in captured["url"]
     assert " " not in captured["url"]
+
+
+# --- County B with its unit column named: str_unit is the unit count and
+# --- Harris County glues it onto site_addr_1 ("9757 WINDWATER DR 150").
+
+HARRIS_UNIT_HEADER = [
+    "acct", "state_class", "bld_ar", "new_construction_val",
+    "str_unit", "site_addr_1", "site_addr_2", "mailto",
+]
+
+
+def _harris_unit_recipe():
+    recipe = _harris_recipe()
+    recipe["bldg_table"]["units_field"] = "str_unit"
+    recipe["bldg_table"]["address_unit_suffix_field"] = "str_unit"
+    return recipe
+
+
+def _harris_unit_zip():
+    acct_rows = [
+        HARRIS_UNIT_HEADER,
+        ["1", "B1", "160000", "500000", "150", "9757 WINDWATER DR 150", "City B", "BUILDER LLC"],
+        # the street name itself ends in a number -- only the unit suffix goes
+        ["2", "B1", "480000", "0", "490", "1315 NASA RD 1 490", "City B", "NASAOWNER LLC"],
+        # no unit designator recorded: the address is already clean, units unknown
+        ["3", "B1", "90000", "0", "", "2500 TEXAS ST", "City B", "TEXASOWNER LLC"],
+    ]
+    deed_rows = [
+        HARRIS_DEED_HEADER,
+        ["2", "03/11/2025"],
+        ["3", "04/22/2025"],
+    ]
+    return _zip_bytes({"real_acct.txt": _tsv(acct_rows), "deeds.txt": _tsv(deed_rows)})
+
+
+def test_harris_sold_reads_units_and_drops_the_unit_suffix_from_the_address():
+    records = find_sold_apartments(
+        "tx", _harris_unit_recipe(), fetch_bytes=lambda url: _harris_unit_zip(), today=TODAY
+    )
+    by_address = {r.address: r for r in records}
+
+    # "1315 NASA RD 1 490" is 1315 NASA RD 1, unit designator 490 -- the street
+    # keeps its own trailing number, only the recorded suffix comes off.
+    assert "1315 NASA RD 1" in by_address
+    assert by_address["1315 NASA RD 1"].units == 490
+
+    # nothing to trim and nothing to read: left exactly as the county has it
+    assert "2500 TEXAS ST" in by_address
+    assert by_address["2500 TEXAS ST"].units is None
+
+    assert all(not r.address.endswith(" 490") for r in records)
+
+
+def test_harris_new_construction_reads_units_and_cleans_the_address():
+    records = find_new_apartment_projects(
+        "tx", _harris_unit_recipe(), fetch_bytes=lambda url: _harris_unit_zip()
+    )
+    assert len(records) == 1
+    assert records[0].address == "9757 WINDWATER DR"
+    assert records[0].units == 150
+    # the name falls back to the address, so it must be the cleaned one
+    assert records[0].name == "9757 WINDWATER DR"
+
+
+def test_a_recipe_without_the_suffix_field_leaves_the_address_untouched():
+    recipe = _harris_recipe()
+    recipe["bldg_table"]["units_field"] = "str_unit"
+    records = find_sold_apartments(
+        "tx", recipe, fetch_bytes=lambda url: _harris_unit_zip(), today=TODAY
+    )
+    assert "1315 NASA RD 1 490" in {r.address for r in records}

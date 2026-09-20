@@ -87,10 +87,27 @@ def _to_date(value: str, date_format: str) -> datetime.date | None:
 def _address(row: dict, fields: dict) -> str:
     address_field = fields.get("address_field")
     if address_field:
-        return str(row.get(address_field) or "").strip()
+        return _without_unit_suffix(str(row.get(address_field) or "").strip(), row, fields)
     num = str(row.get(fields.get("street_num_field", ""), "") or "").strip()
     street = str(row.get(fields.get("street_name_field", ""), "") or "").strip()
     return " ".join(part for part in (num, street) if part)
+
+
+def _without_unit_suffix(address: str, row: dict, fields: dict) -> str:
+    """Drop a unit designator a district glued onto its street address.
+
+    Harris County builds `site_addr_1` as the street address followed by
+    `str_unit`, so a 150-unit complex is stored as "9757 WINDWATER DR 150" --
+    an address no map or CRM can find.  A recipe naming that column here gets
+    the street address back; the column itself still carries the unit count.
+    """
+    suffix_field = fields.get("address_unit_suffix_field")
+    if not suffix_field:
+        return address
+    suffix = str(row.get(suffix_field) or "").strip()
+    if not suffix or not address.endswith(" " + suffix):
+        return address
+    return address[: -len(suffix)].strip() or address
 
 
 def _class_matches(row: dict, fields: dict) -> bool:
