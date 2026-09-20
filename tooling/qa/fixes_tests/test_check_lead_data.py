@@ -90,6 +90,39 @@ def test_exactly_twenty_percent_loss_is_allowed(tmp_path):
     assert result.errors == []
 
 
+def test_built_area_file_uses_filename_as_state(tmp_path):
+    rows = [_lead(1), _lead(2)]
+    for row in rows:
+        row.pop("area")
+    areas = tmp_path / "site" / "data" / "areas"
+    areas.mkdir(parents=True)
+    built = _write_built(areas / "zz.json", rows)
+
+    result = check_lead_data.check_state(built)
+
+    assert result.state == "zz"
+    assert result.errors == []
+
+
+def test_current_urls_and_addresses_are_checked_when_built_snapshot_exists(tmp_path):
+    current = [_lead(1), _lead(2)]
+    current[0]["sources"] = [{"url": "not-a-url"}]
+    current[1]["address"] = "1 MAIN ST."
+    folder = _write_raw(tmp_path / "zz", current)
+
+    # The built output is deliberately healthy.  It supplies stable IDs but
+    # must not hide bad source URLs or duplicate addresses in current data.
+    built_rows = [_lead(1), _lead(2)]
+    built = _write_built(tmp_path / "built.json", built_rows)
+
+    result = check_lead_data.check_state(folder, built=built)
+    message = "\n".join(result.errors)
+
+    assert "no valid http(s) source URL" in message
+    assert 'address "1 Main Street" appears more than once' in message
+    assert "unstable id" not in message
+
+
 def test_cli_returns_nonzero_and_lists_problems(tmp_path, capsys):
     rows = [_lead(1)]
     rows[0]["sources"] = [{"url": "not-a-url"}]

@@ -27,7 +27,7 @@ ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "site" / "data"))
 sys.path.insert(0, str(ROOT / "propertystack" / "skills" / "lead-finder"))
 
-from build_data import content_id  # noqa: E402
+from build_data import content_id, source_entry  # noqa: E402
 from record import normalize_address  # noqa: E402
 
 
@@ -51,7 +51,12 @@ def _state_name(path: Path, rows: list[dict]) -> str:
         area = rows[0].get("area") or rows[0].get("state")
         if area:
             return str(area).strip().lower()
-    return (path.parent.name if path.is_file() else path.name).lower()
+    if path.is_file():
+        # Raw state data uses ``<state>/leads.json`` while built snapshots use
+        # ``site/data/areas/<state>.json``.  Using the parent for both turns a
+        # built Texas snapshot into the fictitious state "areas".
+        return (path.parent.name if path.name == "leads.json" else path.stem).lower()
+    return path.name.lower()
 
 
 def _display_name(lead: dict, row_number: int) -> str:
@@ -74,12 +79,12 @@ def _source_urls(lead: dict) -> list[str]:
         sources = [sources]
     urls = []
     for source in sources if isinstance(sources, list) else []:
-        if isinstance(source, dict) and _valid_web_url(source.get("url")):
-            urls.append(source["url"].strip())
-        elif _valid_web_url(source):
-            urls.append(source.strip())
-    if _valid_web_url(lead.get("source_url")):
-        urls.append(lead["source_url"].strip())
+        normalized = source_entry(source)
+        if normalized and _valid_web_url(normalized.get("url")):
+            urls.append(normalized["url"].strip())
+    normalized = source_entry(lead.get("source_url"))
+    if normalized and _valid_web_url(normalized.get("url")):
+        urls.append(normalized["url"].strip())
     return urls
 
 
@@ -224,6 +229,12 @@ def check_state(
     state = _state_name(state_path, rows)
     result = CheckResult(state=state, lead_count=len(rows))
 
+    # These checks describe the current state data supplied by the caller.  A
+    # published snapshot may still contain valid URLs and unique addresses
+    # from the previous build, so it must never mask problems in current data.
+    _check_sources(rows, result)
+    _check_duplicate_addresses(rows, result)
+
     built_path = _leads_path(Path(built)) if built is not None else _find_built_snapshot(
         state_path, state, is_built
     )
@@ -233,12 +244,8 @@ def check_state(
         except ValueError as exc:
             result.errors.append(str(exc))
         else:
-            _check_sources(built_rows, result)
-            _check_duplicate_addresses(built_rows, result)
             _check_ids(built_rows, state, result)
     else:
-        _check_sources(rows, result)
-        _check_duplicate_addresses(rows, result)
         result.notes.append(
             "no built state snapshot was found, so stable ids could not be checked"
         )
