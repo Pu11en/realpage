@@ -4,7 +4,7 @@
 Merge the finished Texas worker branches, verify the integrated result, push the approved work, and summarize what changed.
 
 ## Current Phase
-Phase 1
+Phase 3
 
 ## Phases
 
@@ -14,9 +14,9 @@ Phase 1
 - **Status:** complete
 
 ### Phase 2: Merge
-- [ ] Merge the five worker branches into the coordinator branch.
-- [ ] Resolve conflicts only within the approved worker scope.
-- **Status:** pending
+- [x] Merge the five worker branches into the coordinator branch.
+- [x] Resolve conflicts only within the approved worker scope.
+- **Status:** complete
 
 ### Phase 3: Verify
 - [ ] Run the relevant test and lead-data checks.
