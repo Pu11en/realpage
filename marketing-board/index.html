@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="CraneSignal public post shelf by platform.">
-<title>CraneSignal ready posts</title>
+<meta name="description" content="CraneSignal one target posting shelf.">
+<title>CraneSignal current post</title>
 <style>
   :root {
     --bg:#f7f4ee;
@@ -91,6 +91,19 @@
     font-size:12px;
     line-height:16px;
   }
+  .status {
+    display:inline-flex;
+    align-items:center;
+    border:1px solid var(--line);
+    border-radius:8px;
+    background:var(--panel);
+    color:var(--muted);
+    padding:4px 8px;
+    font-size:12px;
+    line-height:16px;
+    font-weight:700;
+    text-transform:uppercase;
+  }
   main {
     max-width:1440px;
     margin:0 auto;
@@ -138,6 +151,14 @@
     line-height:16px;
   }
   .platform.active span { color:#d8d1c5; }
+  .platform.locked {
+    cursor:not-allowed;
+    opacity:.56;
+  }
+  .platform.locked:hover {
+    transform:none;
+    border-color:var(--line);
+  }
   .badge {
     border:1px solid currentColor;
     border-radius:8px;
@@ -263,6 +284,11 @@
   button.copyAll:active { transform:scale(.98); }
   button.copy:focus-visible,
   button.copyAll:focus-visible { outline:2px solid var(--focus); outline-offset:2px; }
+  button.copyAll {
+    background:#151915;
+    border-color:#151915;
+    color:#fff;
+  }
   .empty {
     border:1px solid var(--line);
     border-radius:8px;
@@ -296,12 +322,13 @@
 <a class="skip" href="#ready">Skip to ready posts</a>
 <header>
   <div>
-    <h1>Ready posts by platform</h1>
-    <p class="micro">Click a platform. Grab ready posts. Communities go inside platforms later.</p>
+    <span class="status">Current target</span>
+    <h1>Multifamily Insiders post</h1>
+    <p class="micro">Copy it. Test it. We do not move on until you say done.</p>
   </div>
   <div class="summary" aria-label="ready post counts">
-    <div class="stat"><b id="platformCount">0</b><span>platforms</span></div>
-    <div class="stat"><b id="postCount">0</b><span>ready posts</span></div>
+    <div class="stat"><b id="platformCount">1</b><span>current</span></div>
+    <div class="stat"><b id="postCount">0</b><span>assets</span></div>
   </div>
 </header>
 
@@ -315,12 +342,41 @@
 </footer>
 
 <script>
+const CURRENT_PLATFORM = "Multifamily Insiders";
 const PLATFORMS = [
   {
     name: "Multifamily Insiders",
     note: "Blogs, discussions",
     targets: ["Expert blogs", "Discussions"],
-    posts: []
+    current: true,
+    posts: [
+      {
+        title: "Public signals discussion",
+        type: "blog or discussion",
+        parts: {
+          title: `5 public signs an apartment owner may be changing its operating stack`,
+          post: `Most apartment prospecting starts too broad.
+
+Every building looks like a possible account until you know what changed.
+
+I am watching for public signals that suggest an owner or operator may be rethinking the way a property runs:
+
+1. Recent sale or new ownership
+2. Active permits
+3. New construction or lease up
+4. Management company change
+5. Visible software or resident tech changes
+
+None of those prove a property is buying.
+
+They just tell me where research should start.
+
+For people here who work around multifamily operations, what usually changes first after an acquisition: property manager, leasing workflow, accounting, maintenance, or software?`,
+          softContext: `I am building CraneSignal around this question, but I am trying to pressure test the signals before turning it into a pitch.`,
+          noLinkClose: `Curious what you would add or remove from the list.`
+        }
+      }
+    ]
   },
   {
     name: "BiggerPockets",
@@ -544,8 +600,9 @@ Sale. Permit. New owner.`
 
 const platforms = document.getElementById("platforms");
 const ready = document.getElementById("ready");
-document.getElementById("platformCount").textContent = PLATFORMS.length;
-document.getElementById("postCount").textContent = PLATFORMS.reduce((sum, platform) => sum + platform.posts.length, 0);
+const currentPlatform = PLATFORMS.find(platform => platform.name === CURRENT_PLATFORM) || PLATFORMS[0];
+document.getElementById("platformCount").textContent = "1";
+document.getElementById("postCount").textContent = currentPlatform.posts.reduce((sum, post) => sum + Object.keys(post.parts).length, 0);
 
 function esc(value) {
   return String(value).replace(/[&<>"]/g, char => ({ "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;" }[char]));
@@ -561,9 +618,9 @@ function labelName(label) {
 
 function renderPlatforms(activeName) {
   platforms.innerHTML = PLATFORMS.map(platform => `
-    <button class="platform ${platform.name === activeName ? "active" : ""}" data-platform="${esc(platform.name)}">
+    <button class="platform ${platform.name === activeName ? "active" : ""} ${platform.current ? "" : "locked"}" data-platform="${esc(platform.name)}" ${platform.current ? "" : "aria-disabled=\"true\""}>
       <span><strong>${esc(platform.name)}</strong><br><span>${esc(platform.note)}</span></span>
-      <span class="badge">${platform.posts.length}</span>
+      <span class="badge">${platform.current ? platform.posts.length : "next"}</span>
     </button>
   `).join("");
 }
@@ -606,6 +663,8 @@ function renderReady(platformName) {
 platforms.addEventListener("click", event => {
   const button = event.target.closest("[data-platform]");
   if (!button) return;
+  const platform = PLATFORMS.find(item => item.name === button.dataset.platform);
+  if (!platform?.current) return;
   renderReady(button.dataset.platform);
 });
 
@@ -625,7 +684,7 @@ ready.addEventListener("click", event => {
   }
 });
 
-renderReady(PLATFORMS[0].name);
+renderReady(currentPlatform.name);
 </script>
 </body>
 </html>

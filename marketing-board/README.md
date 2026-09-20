@@ -1,9 +1,10 @@
 # CraneSignal ready post shelf
 
-A one-page posting shelf for CraneSignal public posts. The first screen is only platforms; click a platform to see the ready assets for that platform.
+A one-page posting shelf for CraneSignal public posts. It works one target at a time: only the current target is active, and future targets stay locked until Drew says the current one is done.
 
 - Open: `bash ./start.sh` then http://localhost:8740
 - Edit: update the `PLATFORMS` list in `index.html`.
+- Current target: set `CURRENT_PLATFORM` and mark the matching platform with `current: true`.
 - Only put finished, ready-to-copy post parts here.
 - Drafts, strategy notes, research, and long planning copy do not belong here.
 - Each post can have parts like `caption`, `title`, `description`, `publicComment`, or `firstComment`.
