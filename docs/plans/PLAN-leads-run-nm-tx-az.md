@@ -1,0 +1,41 @@
+# Plan: one-command lead runs — New Mexico + fresh Texas and Arizona (2026-09-19)
+
+Goal: Drew triggers one run; everything downstream updates by itself and goes live.
+Speed matters: sources are pulled in parallel inside the runner (the bot runs one build at a time,
+so parallelism belongs in the script, not in extra builds).
+
+Decisions (Drew, 2026-09-19):
+- Cover: New Mexico (Albuquerque, Rio Rancho, Santa Fe, Las Cruces + Bernalillo County sales), plus fresh runs of Texas and Arizona using their existing sources.
+- Publish live automatically when the checks pass. No waiting for Drew.
+- Never advertise which states we cover, anywhere. The product is "U.S. apartment leads".
+- Hero element (site + landing), filled from data after every run:
+  "Last check <date>: <N> buildings just filed permits, <M> just sold. <TOTAL> tracked."
+- Say "check" or "run", never "scrape", in anything a visitor sees.
+
+Check: python3 -m pytest -q tooling/qa/fixes_tests/ propertystack -x -q
+Try: bash tooling/dev.sh
+Open: http://localhost:8765/index.html
+
+## Quality gates (run after every task; a task is not done until they pass)
+- The Check command above passes.
+- `python3 tooling/qa/check_lead_data.py` passes: every lead has a source URL, no duplicate address inside a state,
+  every lead has a stable id, and no state loses more than 20% of its leads versus the previous build (that means a broken source).
+
+## Tasks
+- [ ] T1 Stable ids + honest "new": give every lead a content id (state + normalised address + name), keep it across runs, and stamp `firstSeen` by that id in site/data/build_data.py (today it matches by list position, so a re-run mislabels new leads). Migrate existing tx/az leads so today's rows keep their first-seen date. Tests.
+- [ ] T2 `tooling/qa/check_lead_data.py`: the data sanity check above, runnable on any state folder, exits non-zero with a plain-English list of problems.
+- [ ] T3 `tooling/run-area.sh <state...>`: one command per state that runs every recipe source for that state **in parallel** (max 6 at once), retries a failed source once, skips a source that is down and says so, writes propertystack/data/<state>/leads.json, and prints counts (total, new since last run, permits, sales). Resumable: re-running skips sources already finished today. Dry-run flag for testing without network.
+- [ ] T4 New Mexico recipes in propertystack/recipes/nm/: albuquerque.json, rio-rancho.json, santa-fe.json, las-cruces.json (city permit feeds, ArcGIS/Socrata style, copy the shape of recipes/az/phoenix.json) and bernalillo-county-sales.json (county assessor sales, shape of recipes/az/maricopa-county-sales.json). Find each feed's real URL from the city/county open-data portal; if a city has no usable feed, say so in the file and skip it rather than inventing one.
+- [ ] T5 Run New Mexico for real with T3. Verify with T2. Expect a few hundred buildings; if under 50, stop and report which sources came back empty.
+- [ ] T6 Refresh Texas with T3 (all existing tx recipes). Report how many are genuinely new.
+- [ ] T7 Refresh Arizona with T3 (all existing az recipes). Report how many are genuinely new.
+- [ ] T8 Site data: build_data.py writes site/data/summary.json (total tracked, new in last 7 days, permits filed, sold, last check date) and hides any area with under 25 leads automatically. The Leads page shows the hero line from summary.json and no longer names covered states anywhere (drop the "Covered: Texas, Arizona" chip and sidebar line). Tests.
+- [ ] T9 Landing page hero element: business/marketing/landing/server.py fetches https://app.cranesignal.com/data/summary.json at startup and every hour (cached, falls back to the last good copy) and injects the same line into the hero. No state names on the landing page either. Test with a fake summary.
+- [ ] T10 Chat agent: rebuild its baked data so it knows the new buildings, and redeploy the chat service. Ask it 3 questions about New Mexico buildings locally and check the answers cite sources.
+- [ ] T11 `tooling/new-run.sh <state...>`: the whole chain in one command — run-area (parallel) → build site data → Check + quality gates → commit → push (auto-deploys) → post one Discord line to the sign-ups webhook: "Last check <date>: N permits, M sales, TOTAL tracked (<state list>)". Any failed gate stops before publishing and says what broke.
+- [ ] T12 End to end: `bash tooling/new-run.sh nm tx az`, confirm the live site shows the new hero line and the new leads, and post the summary here.
+
+## How to try it
+1. The Leads page hero says "Last check <date>: N buildings just filed permits, M just sold. TOTAL tracked."
+2. No page names which states are covered.
+3. "Get only the new ones" downloads only buildings added since your last download.
