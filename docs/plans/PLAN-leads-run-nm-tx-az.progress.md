@@ -92,3 +92,8 @@
   - Commit: `7283ab2` (runner, shell entry point, and five offline regression tests)
   - Checks: `bash tooling/new-run.sh --dry-run nm tx az` listed all 26 sources without network or file changes; focused tests (5 passed); plan Check command passed; `python3 tooling/qa/check_lead_data.py` passed for 4 states and 1,472 leads; Python compilation, shell syntax, and `git diff --check` passed.
   - Open: undo, per-source health totals, and the needs-a-source link remain scoped to T11b. The real push and Discord post were intentionally not performed in this implementation task; T12 owns the authorized live end-to-end run.
+
+- 2026-09-19 — T11b complete: added `tooling/new-run.sh --undo <state>` to atomically restore one state's saved pre-run lead list, rebuild and validate all downstream data, commit the restored output, republish `main`, and send the normal Discord notice. Every notice now includes worked, empty, and failed counts for the selected states plus a direct link to the maintained needs-a-source list.
+  - Commit: `3c49bd5` (undo workflow, source-health summary, source-gap link, and regression tests)
+  - Checks: focused new-run tests (8 passed); plan Check command passed; `python3 tooling/qa/check_lead_data.py` passed for 4 states and 1,472 leads; Python compilation, shell syntax, and `git diff --check` passed.
+  - Open: no live restore or publish was performed. T12 owns the authorized live end-to-end run; the one-state-at-a-time undo limit keeps an accidental rollback narrow.
