@@ -39,7 +39,7 @@ Open: http://localhost:8765/index.html
 - [x] T10 Chat agent: rebuild its baked data so it knows the new buildings, and redeploy the chat service. Ask it 3 questions about New Mexico buildings locally and check the answers cite sources.
 - [x] T11 `tooling/new-run.sh <state...>`: the whole chain in one command — run-area (parallel) → build site data → Check + quality gates → commit → push (auto-deploys) → post one Discord line to the sign-ups webhook: "Last check <date>: N permits, M sales, TOTAL tracked (<state list>)". Any failed gate stops before publishing and says what broke.
 - [x] T11b Undo and health: `tooling/new-run.sh --undo <state>` restores the pre-run copy and republishes; the Discord summary line adds "sources: X worked, Y empty, Z failed" and links needs-a-source.md.
-- [ ] T12 End to end: `bash tooling/new-run.sh nm tx az`, confirm the live site shows the new hero line and the new leads, and post the summary here.
+- [x] T12 End to end: `bash tooling/new-run.sh nm tx az`, confirm the live site shows the new hero line and the new leads, and post the summary here.
 
 ## How to try it
 1. The Leads page hero says "Last check <date>: N buildings just filed permits, M just sold. TOTAL tracked."
