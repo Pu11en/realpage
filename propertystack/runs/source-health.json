@@ -125,7 +125,63 @@
       "attempts": 1,
       "checked": "2026-09-19",
       "note": ""
+    },
+    "az/gilbert.json": {
+      "status": "worked",
+      "count": 6,
+      "attempts": 1,
+      "checked": "2026-09-19",
+      "note": ""
+    },
+    "az/maricopa-county-sales.json": {
+      "status": "worked",
+      "count": 147,
+      "attempts": 1,
+      "checked": "2026-09-19",
+      "note": ""
+    },
+    "az/maricopa-county-unincorporated.json": {
+      "status": "worked",
+      "count": 4,
+      "attempts": 1,
+      "checked": "2026-09-19",
+      "note": ""
+    },
+    "az/mesa.json": {
+      "status": "worked",
+      "count": 45,
+      "attempts": 1,
+      "checked": "2026-09-19",
+      "note": ""
+    },
+    "az/phoenix.json": {
+      "status": "worked",
+      "count": 29,
+      "attempts": 1,
+      "checked": "2026-09-19",
+      "note": ""
+    },
+    "az/scottsdale.json": {
+      "status": "worked",
+      "count": 38,
+      "attempts": 1,
+      "checked": "2026-09-19",
+      "note": ""
+    },
+    "az/tempe.json": {
+      "status": "worked",
+      "count": 11,
+      "attempts": 1,
+      "checked": "2026-09-19",
+      "note": ""
+    },
+    "az/tucson.json": {
+      "status": "worked",
+      "count": 2,
+      "attempts": 1,
+      "checked": "2026-09-19",
+      "note": ""
     }
   },
-  "updatedAt": "2026-09-20T02:01:32.252027+00:00"
+  "updatedAt": "2026-09-20T02:13:16.771479+00:00"
 }
