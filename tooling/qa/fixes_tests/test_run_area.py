@@ -87,6 +87,29 @@ def test_runs_at_most_six_sources_in_parallel_and_writes_summary(tmp_path):
     )[0]["name"] == "Old Apartments"
 
 
+def test_whitespace_only_name_change_is_not_counted_as_new(tmp_path):
+    recipe_dir = _make_state(tmp_path, count=1)
+    data_path = tmp_path / "propertystack/data/zz/leads.json"
+    previous = _lead(recipe_dir / "source-0.json", "zz")
+    previous["name"] = "Station 121 At Town Center Apts"
+    data_path.write_text(json.dumps([previous]))
+
+    def whitespace_changed_runner(recipe, state):
+        lead = _lead(recipe, state)
+        lead["name"] = "Station 121  At Town Center Apts"
+        return [lead]
+
+    summary = run_area.run_state(
+        "zz",
+        root=tmp_path,
+        run_date="2026-09-19",
+        source_runner=whitespace_changed_runner,
+    )
+
+    assert summary["total"] == 1
+    assert summary["new"] == 0
+
+
 def test_retries_once_reports_failure_and_resumes_finished_sources(tmp_path, capsys):
     _make_state(tmp_path, count=3)
     calls = {}

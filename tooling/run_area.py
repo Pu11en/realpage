@@ -35,6 +35,7 @@ for relative in (
     "score-leads",
 ):
     sys.path.insert(0, str(SKILLS / relative))
+sys.path.insert(0, str(ROOT / "site" / "data"))
 
 import appraisal_zip  # noqa: E402
 import awards  # noqa: E402
@@ -46,8 +47,9 @@ import tad_sales  # noqa: E402
 import tad_zip  # noqa: E402
 import tabs  # noqa: E402
 import tdhca  # noqa: E402
+from build_data import content_id  # noqa: E402
 from merge import merge_records  # noqa: E402
-from record import LeadRecord, normalize_address  # noqa: E402
+from record import LeadRecord  # noqa: E402
 from score_leads import score_and_rank  # noqa: E402
 
 
@@ -317,11 +319,12 @@ def _run_source(
     return result
 
 
-def _identity(row: dict, state: str) -> tuple[str, str, str]:
-    return (
-        state.lower(),
-        normalize_address(str(row.get("address") or "")),
-        str(row.get("name") or row.get("property") or "").strip().casefold(),
+def _identity(row: dict, state: str) -> str:
+    """Match the site's stable content identity when counting new leads."""
+    return content_id(
+        state,
+        str(row.get("address") or ""),
+        str(row.get("name") or row.get("property") or ""),
     )
 
 
