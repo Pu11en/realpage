@@ -3,7 +3,7 @@ from playwright.async_api import async_playwright
 B = sys.argv[1] if len(sys.argv) > 1 else "https://propertystack-production.up.railway.app"
 CHAT = "--chat" in sys.argv
 OUT = "/tmp/qa"
-PAGES = ["index.html", "map.html", "under-the-hood.html"]
+PAGES = ["index.html", "under-the-hood.html"]
 WIDTHS = {"desktop": (1440, 900), "tablet": (820, 1180), "phone": (390, 844)}
 bugs = []
 def bug(page, width, steps, what, shot=""):
@@ -137,7 +137,7 @@ async def main():
                     await check(pg, page, wname, f"click row {idx} -> {pg.url.split('/')[-1]}")
                     await go(pg, f"{B}/{page}", "networkidle")
             # nav links on each width
-            for key in ["index.html", "map.html", "under-the-hood.html"]:
+            for key in ["index.html", "under-the-hood.html"]:
                 await go(pg, f"{B}/index.html", "networkidle")
                 await pg.locator(f".sidebar nav a[href='{key}']").click(); await pg.wait_for_load_state("networkidle")
                 if not pg.url.endswith(key): bug("nav", wname, f"click nav {key}", f"went to {pg.url}")
@@ -156,14 +156,14 @@ async def main():
                     await back.first.click(); await pg.wait_for_load_state("networkidle")
                     if "property.html" in pg.url: bug("property.html", wname, "click Back", "Back link did not leave page")
             if wname == "phone" and CHAT or wname == "phone":
-                await go(pg, f"{B}/map.html", "networkidle")
-                if not await pg.locator(".ask-fab").is_visible(): bug("map.html", wname, "load", "Ask button missing on phone")
+                await go(pg, f"{B}/index.html", "networkidle")
+                if not await pg.locator(".ask-fab").is_visible(): bug("index.html", wname, "load", "Ask button missing on phone")
                 else:
                     await pg.click(".ask-fab"); await pg.screenshot(path=f"{OUT}/phone-chat-open.png")
-                    await check(pg, "map.html", wname, "tap Ask button", "phone-chat-open")
-                    if await pg.locator("#chat-panel a[target='_blank']").count(): bug("map.html", wname, "tap Ask button", "chat panel has a full-page/new-tab link (chat must stay in the panel)")
+                    await check(pg, "index.html", wname, "tap Ask button", "phone-chat-open")
+                    if await pg.locator("#chat-panel a[target='_blank']").count(): bug("index.html", wname, "tap Ask button", "chat panel has a full-page/new-tab link (chat must stay in the panel)")
                     await pg.click("#chat-panel-close")
-                    if await pg.locator("#chat-panel.open").count(): bug("map.html", wname, "tap close", "chat did not close")
+                    if await pg.locator("#chat-panel.open").count(): bug("index.html", wname, "tap close", "chat did not close")
             await pg.context.close()
 
         # all property ids resolve, desktop
@@ -197,15 +197,15 @@ async def main():
 
         if CHAT:
             pg = await newpage(1440, 900, "desktop")
-            await go(pg, f"{B}/map.html", "networkidle")
+            await go(pg, f"{B}/index.html", "networkidle")
             for i, q in enumerate(["Which buildings in Richardson use RealPage?", "which of those are biggest?", "and what year was the biggest one built?"]):
                 await pg.fill("#chat-input", q); await pg.press("#chat-input", "Enter")
                 await pg.wait_for_function(f"document.querySelectorAll('.msg.bot,.msg.error').length > {i}", timeout=150000)
                 a = await pg.locator(".msg.bot,.msg.error").last.inner_text()
                 print(f"CHAT A{i+1}:", a[:300].replace("\n", " | "))
-                if "error" in (await pg.locator(".msg.bot,.msg.error").last.get_attribute("class")): bug("map.html", "desktop", f"chat: {q}", "chat returned error: " + a[:100])
+                if "error" in (await pg.locator(".msg.bot,.msg.error").last.get_attribute("class")): bug("index.html", "desktop", f"chat: {q}", "chat returned error: " + a[:100])
             await pg.screenshot(path=f"{OUT}/desktop-chat-3turn.png")
-            await check(pg, "map.html", "desktop", "3-turn chat", "desktop-chat-3turn")
+            await check(pg, "index.html", "desktop", "3-turn chat", "desktop-chat-3turn")
         await br.close()
     json.dump(bugs, open(f"{OUT}/bugs.json", "w"), indent=1)
     print(len(bugs), "bugs")

@@ -40,19 +40,19 @@
 		file_server
 	}
 
-	# "/" is the site's home page (the Map), except inside the chat panel's frame, where it
-	# is the chat app's home.
+	# "/" is the site's home page (the lead list), except inside the chat panel's frame, where
+	# it is the chat app's home.
 	@home {
 		path /
 		not header Sec-Fetch-Dest iframe
 	}
 	handle @home {
-		# The app opens on the Map, not Early Leads. 
-		redir * /map.html 302
+		# The app opens on the lead list.
+		redir * /index.html 302
 	}
 
 	# The app's pages and their data: open to everyone, no sign-in.
-	@app path /index.html /landing.html /map.html /master-table.html /property.html /under-the-hood.html /sample-lead-pack.pdf /js/* /data/* /vendor/* /img/*
+	@app path /index.html /landing.html /master-table.html /property.html /under-the-hood.html /sample-lead-pack.pdf /js/* /data/* /vendor/* /img/*
 	handle @app {
 		root * {$SITE_ROOT:/srv}
 		file_server

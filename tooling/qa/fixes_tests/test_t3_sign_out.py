@@ -7,7 +7,7 @@ ROOT = Path(__file__).resolve().parents[3]
 APP_JS = (ROOT / "site/js/app.js").read_text(encoding="utf-8")
 CHAT_JS = (ROOT / "site/js/chat-panel.js").read_text(encoding="utf-8")
 
-APP_PAGES = ["index.html", "map.html", "under-the-hood.html", "property.html"]
+APP_PAGES = ["index.html", "under-the-hood.html", "property.html"]
 
 
 def test_every_app_page_calls_render_shell():

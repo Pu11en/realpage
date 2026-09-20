@@ -2,7 +2,6 @@
 // Every page calls renderShell(activeTab) then fetches its own data/*.json.
 
 const NAV_TABS = [
-  { key: "map", label: "Map", href: "map.html" },
   { key: "leads", label: "Leads", href: "index.html" },
   { key: "hood", label: "How it works", href: "under-the-hood.html" },
 ];

@@ -22,7 +22,7 @@
   if (window.top !== window) return;                      // inside the dashboard panel
   if (window.opener || window.name === "ps-chat-signin") return; // sign-in popup; the dashboard closes it
   var allowed = function (p) { return /^\/(auth|oauth|admin)(\/|$)/.test(p); };
-  var toDashboard = function () { location.replace("/map.html"); };
+  var toDashboard = function () { location.replace("/index.html"); };
   if (!allowed(location.pathname)) return toDashboard();
   var last = location.pathname;
   setInterval(function () {
