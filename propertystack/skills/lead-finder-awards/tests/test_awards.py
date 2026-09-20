@@ -4,6 +4,8 @@ import json
 import pathlib
 import sys
 
+import openpyxl
+
 HERE = pathlib.Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE.parent))
 import awards  # noqa: E402
@@ -110,3 +112,41 @@ def test_find_awards_no_recipe_returns_empty(tmp_path):
 
 def test_slugify():
     assert awards.slugify("Rivertown State") == "rivertown-state"
+
+
+def test_saved_multiline_workbook_keeps_only_recent_new_construction():
+    from io import BytesIO
+
+    workbook = openpyxl.Workbook()
+    old = workbook.active
+    old.title = "2023"
+    current = workbook.create_sheet("2026")
+    current.append(("title",))
+    current.append(("New Homes", "Builder LLC", "Partner", 1000000, 40, 48, "New"))
+    current.append(("100 Main Street", "Contact", None, None, None, None, "Construction"))
+    current.append(("Rivertown, ZZ 00000",))
+    current.append(("Old Homes", "Other LLC", "Partner", 500000, 30, 30, "Acquisition/"))
+    current.append(("200 Main Street", None, None, None, None, None, "Rehabilitation"))
+    current.append(("Rivertown, ZZ 00000",))
+    payload = BytesIO()
+    workbook.save(payload)
+    recipe = {
+        "state": "ZZ",
+        "list_url": "https://example.test/awards.xlsx",
+        "since_year": 2024,
+        "min_units": 20,
+        "columns": {"project": 0, "developer": 1, "units": 5, "type": 6},
+    }
+
+    records = awards.find_saved_multiline_awards(
+        "zz", recipe, lambda _url: payload.getvalue(), today=TODAY
+    )
+
+    assert len(records) == 1
+    assert records[0].name == "New Homes"
+    assert records[0].address == "100 Main Street"
+    assert records[0].city == "Rivertown"
+    assert records[0].units == 48
+    assert records[0].developer == "Builder LLC"
+    assert records[0].permit_date == ""
+    assert "2026" in records[0].why

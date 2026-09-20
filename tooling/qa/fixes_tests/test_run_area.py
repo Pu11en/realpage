@@ -153,6 +153,39 @@ def test_empty_source_is_finished_and_dry_run_never_calls_source(tmp_path):
     assert not (untouched / "propertystack/runs").exists()
 
 
+def test_disabled_source_is_skipped_without_retry_and_records_reason(tmp_path, capsys):
+    recipe_dir = _make_state(tmp_path, count=1)
+    recipe_path = recipe_dir / "source-0.json"
+    recipe_path.write_text(
+        json.dumps(
+            {
+                "system": "unavailable",
+                "enabled": False,
+                "reason": "no machine-readable event feed",
+            }
+        )
+    )
+
+    def should_not_run(_recipe, _state):
+        raise AssertionError("a disabled source must never be fetched")
+
+    summary = run_area.run_state(
+        "zz", root=tmp_path, run_date="2026-09-19", source_runner=should_not_run
+    )
+
+    assert summary["empty"] == 1
+    assert summary["failed"] == 0
+    assert "disabled: no machine-readable event feed" in capsys.readouterr().out
+    artifact = json.loads(
+        (
+            tmp_path
+            / "propertystack/runs/area/2026-09-19/zz/sources/source-0.json"
+        ).read_text()
+    )
+    assert artifact["attempts"] == 0
+    assert artifact["note"] == "disabled: no machine-readable event feed"
+
+
 def test_auto_found_structured_recipe_runs_through_normal_permit_adapter(
     tmp_path, monkeypatch
 ):

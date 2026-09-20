@@ -28,6 +28,7 @@ ROOT = Path(__file__).resolve().parents[1]
 SKILLS = ROOT / "propertystack" / "skills"
 for relative in (
     "lead-finder",
+    "lead-finder-awards",
     "lead-finder-permits",
     "lead-finder-sales",
     "lead-finder-tabs",
@@ -36,6 +37,7 @@ for relative in (
     sys.path.insert(0, str(SKILLS / relative))
 
 import appraisal_zip  # noqa: E402
+import awards  # noqa: E402
 import ckan_sql  # noqa: E402
 import find_sold  # noqa: E402
 import find_upcoming  # noqa: E402
@@ -170,6 +172,8 @@ def _records_as_dicts(records: list[LeadRecord]) -> list[dict]:
 def run_recipe(recipe_path: Path, state: str) -> list[dict]:
     """Dispatch one recipe to its existing, tested source adapter."""
     recipe = json.loads(recipe_path.read_text())
+    if recipe.get("enabled") is False:
+        return []
     system = recipe.get("system")
     area = state.lower()
 
@@ -234,6 +238,10 @@ def run_recipe(recipe_path: Path, state: str) -> list[dict]:
         fetch = TrackingFetch(_http_get_bytes)
         records = tdhca.find_new_affordable_projects(area, recipe, fetch)
         fetch.raise_if_failed()
+    elif system == "housing-awards-multiline-xlsx":
+        fetch = TrackingFetch(_http_get_bytes)
+        records = awards.find_saved_multiline_awards(area, recipe, fetch)
+        fetch.raise_if_failed()
     elif system == "county-assessor-flat-file":
         fetch = TrackingFetch(find_sold.default_fetch_rows)
         records = find_sold.find_sold(area, recipe, fetch)
@@ -279,6 +287,19 @@ def _run_source(
     resumed = _artifact_result(artifact_path)
     if resumed is not None:
         return resumed
+
+    recipe = _read_json(recipe_path, {})
+    if recipe.get("enabled") is False:
+        reason = str(recipe.get("reason") or "disabled by recipe")
+        result = SourceResult(
+            recipe_path.name,
+            "empty",
+            [],
+            0,
+            f"disabled: {reason}",
+        )
+        _atomic_json(artifact_path, result.payload(state, run_date))
+        return result
 
     notes: list[str] = []
     for attempt in (1, 2):
@@ -355,7 +376,8 @@ def run_state(
         print(f"{state}: dry run; {len(recipes)} sources would run (no network or files changed)")
         for recipe_path in recipes:
             recipe = _read_json(recipe_path, {})
-            print(f"  - {recipe_path.name}: {recipe.get('system', 'unknown')}")
+            disabled = " (disabled)" if recipe.get("enabled") is False else ""
+            print(f"  - {recipe_path.name}: {recipe.get('system', 'unknown')}{disabled}")
         return {"state": state, "dry_run": True, "sources": len(recipes)}
 
     state_dir = root / "propertystack" / "data" / state
@@ -385,6 +407,8 @@ def run_state(
                 print(f"{state}: skipped {result.recipe}; already finished today")
             elif result.status == "failed":
                 print(f"{state}: skipped {result.recipe}; source failed twice: {result.note}")
+            elif result.attempts == 0:
+                print(f"{state}: skipped {result.recipe}; {result.note}")
             else:
                 print(f"{state}: {result.recipe} {result.status} ({len(result.records)} leads)")
 

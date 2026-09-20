@@ -1,0 +1,17 @@
+{
+  "state": "NM",
+  "agency": "Housing New Mexico / New Mexico Mortgage Finance Authority",
+  "system": "housing-awards-multiline-xlsx",
+  "list_url": "https://housingnm.org/uploads/documents/2001-2026_Housing_Tax_Credit_Awards_05.22.2026.xlsx",
+  "since_year": 2024,
+  "min_units": 20,
+  "columns": {
+    "project": 0,
+    "developer": 1,
+    "units": 5,
+    "type": 6
+  },
+  "date_tested": "2026-09-19",
+  "live_test": "The live workbook contains annual sheets through 2026. The 2024-2026 sheets include verified new-construction projects in Albuquerque, Santa Fe, Las Cruces, Bernalillo, and other New Mexico communities, with names, addresses, developers, and unit counts.",
+  "notes": "Each project spans several worksheet rows. The adapter keeps only 20+ unit rows whose split type label reads New Construction, uses the published award year without inventing an exact award date, and excludes acquisition/rehabilitation projects."
+}
