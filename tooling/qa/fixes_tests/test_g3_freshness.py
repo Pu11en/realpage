@@ -23,8 +23,9 @@ def test_stats_keep_the_three_useful_cards_without_a_new_count_or_badge():
 
 def test_sidebar_uses_the_selected_areas_real_snapshot_date():
     area = json.loads((ROOT / "site/data/areas/tx.json").read_text(encoding="utf-8"))
+    summary = json.loads((ROOT / "site/data/summary.json").read_text(encoding="utf-8"))
 
-    assert area["updated"] == "2026-09-19"
+    assert area["updated"] == summary["lastCheck"]
     assert "setLastUpdated(data.updated);" in INDEX
     assert "setLastUpdated(new Date" not in INDEX
 
