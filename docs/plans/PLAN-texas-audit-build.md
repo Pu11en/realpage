@@ -44,16 +44,16 @@ Open: http://localhost:8765/index.html
 
 ## Stage 1 — the alarm (run alone, first; it touches the shared runner)
 
-- [ ] S1 Record what each source **actually holds**. For every recipe, the run stores the
+- [x] S1 Record what each source **actually holds**. For every recipe, the run stores the
   endpoint's true total and its newest date next to the lead count it kept, in
   `propertystack/runs/source-health.json`. Sources that cannot be counted cheaply (the county zip
   files) record why instead of a fake number. Tests.
-- [ ] S2 Make it shout. A source that keeps **under 25%** of what its endpoint holds is flagged
+- [x] S2 Make it shout. A source that keeps **under 25%** of what its endpoint holds is flagged
   `suspect` with both numbers, and the run prints a loud line naming it. A source whose newest
   record is **over 12 months old** is flagged `stale` the same way. The run still finishes — one
   bad source never blocks a refresh. Tests, including one that proves Fort Worth's real numbers
   trip it.
-- [ ] S3 Put the alarm where it is seen. The weekly Discord notice names every `suspect` and
+- [x] S3 Put the alarm where it is seen. The weekly Discord notice names every `suspect` and
   `stale` source, or says "all sources healthy". Tests.
 
 ## Stage 2 — the four suspects (independent of each other; safe to run side by side)

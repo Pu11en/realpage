@@ -91,7 +91,7 @@ def test_full_run_checks_before_commit_push_and_discord(tmp_path):
     ]
     assert line == (
         "Last check 2026-09-19: 936 permits, 526 sales, 1462 tracked (NM, TX, AZ); "
-        "sources: 3 worked, 0 empty, 0 failed; "
+        "sources: 3 worked, 0 empty, 0 failed; all measured sources healthy; "
         f"[needs a source]({new_run.NEEDS_SOURCE_URL})"
     )
     assert posts == [("https://discord.test/webhook", line)]
@@ -160,7 +160,7 @@ def test_names_every_auto_found_source_in_the_one_line(tmp_path):
         new_run.NEEDS_SOURCE_URL,
     )
     assert line.endswith(
-        "sources: 1 worked, 2 empty, 3 failed; "
+        "sources: 1 worked, 2 empty, 3 failed; all measured sources healthy; "
         f"[needs a source]({new_run.NEEDS_SOURCE_URL}); auto-found sources: NM/source"
     )
 
@@ -268,3 +268,57 @@ def test_undo_still_needs_an_explicit_state(monkeypatch, capsys):
 
     assert new_run.main(["--undo"]) == 1
     assert "give at least one state" in capsys.readouterr().err
+
+
+def test_the_weekly_notice_names_every_suspect_and_stale_source(tmp_path):
+    _repo(tmp_path)
+    health = tmp_path / "propertystack" / "runs" / "source-health.json"
+    health.write_text(
+        json.dumps(
+            {
+                "sources": {
+                    "tx/source.json": {
+                        "status": "worked",
+                        "signal": {"measured": True, "flags": ["suspect"]},
+                    },
+                    "nm/source.json": {
+                        "status": "empty",
+                        "signal": {"measured": True, "flags": ["stale"]},
+                    },
+                    "az/source.json": {
+                        "status": "worked",
+                        "signal": {"measured": True, "flags": []},
+                    },
+                }
+            }
+        )
+    )
+
+    flagged = new_run._flagged_sources(tmp_path, ["nm", "tx", "az"])
+
+    assert flagged == ["NM/source (stale)", "TX/source (suspect)"]
+    line = new_run.summary_line(
+        {"lastCheck": "2026-09-20", "permitsFiled": 1, "sold": 2, "totalTracked": 3},
+        ["nm", "tx", "az"],
+        [],
+        {"worked": 2, "empty": 1, "failed": 0},
+        "",
+        flagged,
+    )
+    assert "CHECK THESE SOURCES: NM/source (stale), TX/source (suspect)" in line
+    assert "all measured sources healthy" not in line
+
+
+def test_a_clean_week_says_all_sources_healthy(tmp_path):
+    _repo(tmp_path)
+
+    assert new_run._flagged_sources(tmp_path, ["nm", "tx", "az"]) == []
+    line = new_run.summary_line(
+        {"lastCheck": "2026-09-20", "permitsFiled": 1, "sold": 2, "totalTracked": 3},
+        ["nm", "tx", "az"],
+        [],
+        {"worked": 3, "empty": 0, "failed": 0},
+        "",
+        [],
+    )
+    assert "all measured sources healthy" in line

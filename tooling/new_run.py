@@ -143,6 +143,34 @@ def _source_health(root: Path, states: Sequence[str]) -> dict[str, int]:
     return counts
 
 
+def _flagged_sources(root: Path, states: Sequence[str]) -> list[str]:
+    """Name every source the run measured as under-reading or frozen.
+
+    The health file recorded these already; nobody read it while Dallas County
+    was broken, so the weekly notice says them out loud instead.
+    """
+    health_path = root / "propertystack" / "runs" / "source-health.json"
+    try:
+        payload = json.loads(health_path.read_text())
+    except (OSError, json.JSONDecodeError):
+        return []
+    entries = payload.get("sources", {}) if isinstance(payload, dict) else {}
+    flagged = []
+    for state in states:
+        recipe_dir = root / "propertystack" / "recipes" / state
+        for recipe_path in sorted(recipe_dir.glob("*.json")):
+            entry = entries.get(f"{state}/{recipe_path.name}")
+            if not isinstance(entry, dict):
+                continue
+            signal = entry.get("signal")
+            flags = signal.get("flags") if isinstance(signal, dict) else None
+            if isinstance(flags, list) and flags:
+                flagged.append(
+                    f"{state.upper()}/{recipe_path.stem} ({', '.join(flags)})"
+                )
+    return flagged
+
+
 def _needs_source_url(root: Path) -> str:
     path = root / "propertystack" / "runs" / "needs-a-source.md"
     return NEEDS_SOURCE_URL if path.is_file() else ""
@@ -154,6 +182,7 @@ def summary_line(
     auto_found: Sequence[str],
     health: dict[str, int],
     needs_source_url: str,
+    flagged: Sequence[str] = (),
 ) -> str:
     state_list = ", ".join(state.upper() for state in states)
     line = (
@@ -164,6 +193,10 @@ def summary_line(
         f"; sources: {health.get('worked', 0)} worked, "
         f"{health.get('empty', 0)} empty, {health.get('failed', 0)} failed"
     )
+    if flagged:
+        line += "; CHECK THESE SOURCES: " + ", ".join(flagged)
+    else:
+        line += "; all measured sources healthy"
     if needs_source_url:
         line += f"; [needs a source]({needs_source_url})"
     if auto_found:
@@ -312,6 +345,7 @@ def run_pipeline(
         _auto_found_sources(root, states),
         _source_health(root, states),
         _needs_source_url(root),
+        _flagged_sources(root, states),
     )
 
     runner.run(

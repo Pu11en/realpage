@@ -80,6 +80,8 @@ def test_runs_at_most_six_sources_in_parallel_and_writes_summary(tmp_path):
         "worked": 8,
         "empty": 0,
         "failed": 0,
+        "suspect": 0,
+        "stale": 0,
     }
     assert len(json.loads((tmp_path / "propertystack/data/zz/leads.json").read_text())) == 8
     assert json.loads(
@@ -364,3 +366,113 @@ def test_a_url_that_already_works_is_passed_through_byte_for_byte():
 
     assert run_area._safe_url(plain) == plain
     assert run_area._safe_url(already_encoded) == already_encoded
+
+
+# --- the under-read and staleness alarm -------------------------------------
+#
+# Every case below uses numbers taken from a real run, so the alarm is tested
+# against the failures that actually happened rather than invented ones.
+
+
+def test_a_measured_source_records_what_its_endpoint_held():
+    signal = run_area._source_signal(
+        {"rows": 900, "apartmentRows": 120, "agedOut": 4, "newestDate": "2026-09-17",
+         "newestAgeDays": 3},
+        kept=95,
+    )
+
+    assert signal["measured"] is True
+    assert signal["endpointRows"] == 900
+    assert signal["apartmentRows"] == 120
+    assert signal["kept"] == 95
+    assert signal["flags"] == []
+    assert signal["note"] == ""
+
+
+def test_fort_worths_real_numbers_are_flagged_suspect():
+    # Fort Worth's own recipe records a live returnCountOnly of 2,227 matching
+    # rows since 2024-09-01.  The 2026-09-20 run kept one lead.
+    signal = run_area._source_signal(
+        {"rows": 2227, "apartmentRows": 2227, "agedOut": 0,
+         "newestDate": "2026-09-15", "newestAgeDays": 5},
+        kept=1,
+    )
+
+    assert signal["flags"] == ["suspect"]
+    assert "2227 apartment rows" in signal["note"]
+    assert "only 1 became leads" in signal["note"]
+
+
+def test_a_frozen_feed_reads_as_stale_not_suspect():
+    # Albuquerque: 191 apartment rows, newest permit 2024-09-19, 731 days old.
+    # Nothing is being under-read -- the whole feed simply stopped.
+    signal = run_area._source_signal(
+        {"rows": 5000, "apartmentRows": 191, "agedOut": 191,
+         "newestDate": "2024-09-19", "newestAgeDays": 731},
+        kept=0,
+    )
+
+    assert signal["flags"] == ["stale"]
+    assert "2024-09-19" in signal["note"] and "731 days old" in signal["note"]
+
+
+def test_a_genuinely_small_source_is_not_accused():
+    signal = run_area._source_signal(
+        {"rows": 40, "apartmentRows": 3, "agedOut": 0,
+         "newestDate": "2026-09-01", "newestAgeDays": 19},
+        kept=1,
+    )
+
+    assert signal["flags"] == []
+
+
+def test_a_source_that_cannot_be_counted_says_so_instead_of_guessing():
+    signal = run_area._source_signal({}, kept=481)
+
+    assert signal["measured"] is False
+    assert "does not report" in signal["why"]
+    assert "endpointRows" not in signal
+
+
+def test_a_suspect_source_is_named_in_the_run_and_never_stops_it(tmp_path, capsys):
+    _make_state(tmp_path, count=2)
+
+    def fake_runner(recipe, state, stats):
+        if recipe.stem == "source-0":
+            stats.update({"rows": 2227, "apartmentRows": 2227, "agedOut": 0,
+                          "newestDate": "2026-09-15", "newestAgeDays": 5})
+            return [_lead(recipe, state)]
+        stats.update({"rows": 90, "apartmentRows": 4, "agedOut": 0,
+                      "newestDate": "2026-09-15", "newestAgeDays": 5})
+        return [_lead(recipe, state)]
+
+    summary = run_area.run_state(
+        "zz", root=tmp_path, run_date="2026-09-20", source_runner=fake_runner
+    )
+
+    assert summary["suspect"] == 1
+    assert summary["stale"] == 0
+    assert summary["total"] == 2  # the run finished with both sources' leads
+    printed = capsys.readouterr().out
+    assert "*** SUSPECT *** source-0.json" in printed
+
+    health = json.loads(
+        (tmp_path / "propertystack" / "runs" / "source-health.json").read_text()
+    )
+    assert health["sources"]["zz/source-0.json"]["signal"]["flags"] == ["suspect"]
+    assert health["sources"]["zz/source-1.json"]["signal"]["flags"] == []
+
+
+def test_a_healthy_run_says_so_out_loud(tmp_path, capsys):
+    _make_state(tmp_path, count=1)
+
+    def fake_runner(recipe, state, stats):
+        stats.update({"rows": 90, "apartmentRows": 4, "agedOut": 0,
+                      "newestDate": "2026-09-15", "newestAgeDays": 5})
+        return [_lead(recipe, state)]
+
+    run_area.run_state(
+        "zz", root=tmp_path, run_date="2026-09-20", source_runner=fake_runner
+    )
+
+    assert "every measured source returned its fair share" in capsys.readouterr().out

@@ -19,7 +19,7 @@ import threading
 import urllib.parse
 import urllib.request
 from concurrent.futures import ThreadPoolExecutor, as_completed
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from datetime import date, datetime, timezone
 from pathlib import Path
 from typing import Callable
@@ -56,6 +56,15 @@ from score_leads import score_and_rank  # noqa: E402
 
 MAX_WORKERS = 6
 FINISHED_STATUSES = {"worked", "empty"}
+# A source that keeps less than this share of the apartment rows its endpoint
+# actually held is reported as suspect.  Dallas, Fort Worth and Albuquerque all
+# looked healthy for months because the run recorded only what we kept.
+SUSPECT_KEEP_RATIO = 0.25
+# Below this many apartment rows the ratio says nothing useful -- a genuinely
+# small city keeping 1 of 3 is not a failure.
+MIN_ROWS_TO_JUDGE = 4
+# A feed still answering but with nothing newer than this is frozen, not broken.
+STALE_AFTER_DAYS = 365
 HTTP_HEADERS = {"User-Agent": "CraneSignalLeadRun/1.0"}
 
 
@@ -93,6 +102,7 @@ class SourceResult:
     attempts: int
     note: str = ""
     resumed: bool = False
+    signal: dict = field(default_factory=dict)
 
     def payload(self, state: str, run_date: str) -> dict:
         return {
@@ -103,8 +113,14 @@ class SourceResult:
             "count": len(self.records),
             "attempts": self.attempts,
             "note": self.note,
+            "signal": self.signal,
             "records": self.records,
         }
+
+    @property
+    def flags(self) -> list[str]:
+        flags = self.signal.get("flags")
+        return list(flags) if isinstance(flags, list) else []
 
 
 def _atomic_json(path: Path, payload: object) -> None:
@@ -310,6 +326,60 @@ def _empty_note(stats: dict) -> str:
     return f"{apartments} apartment rows, none carried a usable date"
 
 
+def _signal_note(signal: dict) -> str:
+    """One plain sentence a person can act on, or nothing when all is well."""
+    flags = signal.get("flags") or []
+    if "stale" in flags:
+        return (
+            f"stale: the newest record this source holds is "
+            f"{signal['newestDate']}, {signal['newestAgeDays']} days old"
+        )
+    if "suspect" in flags:
+        return (
+            f"suspect: the endpoint held {signal['apartmentRows']} apartment rows "
+            f"and only {signal['kept']} became leads"
+        )
+    return ""
+
+
+def _source_signal(stats: dict, kept: int) -> dict:
+    """Record what the endpoint actually held next to what the run kept.
+
+    Without both numbers a source returning 1 row out of thousands is filed as
+    "worked", which is exactly how Dallas County stayed broken for months.
+    Adapters that cannot report a row count say so rather than invent one.
+    """
+    if not stats:
+        return {
+            "measured": False,
+            "why": "this source type does not report how many rows its endpoint holds",
+        }
+    apartment_rows = int(stats.get("apartmentRows") or 0)
+    age = stats.get("newestAgeDays")
+    flags: list[str] = []
+    if isinstance(age, int) and age > STALE_AFTER_DAYS:
+        # A frozen feed is a finding, not an under-read: everything it holds is
+        # simply too old, so the keep ratio would blame the wrong thing.
+        flags.append("stale")
+    elif (
+        apartment_rows >= MIN_ROWS_TO_JUDGE
+        and kept < apartment_rows * SUSPECT_KEEP_RATIO
+    ):
+        flags.append("suspect")
+    signal = {
+        "measured": True,
+        "endpointRows": int(stats.get("rows") or 0),
+        "apartmentRows": apartment_rows,
+        "kept": kept,
+        "agedOut": int(stats.get("agedOut") or 0),
+        "newestDate": stats.get("newestDate") or "",
+        "newestAgeDays": age,
+        "flags": flags,
+    }
+    signal["note"] = _signal_note(signal)
+    return signal
+
+
 def _artifact_result(path: Path) -> SourceResult | None:
     payload = _read_json(path, None)
     if not isinstance(payload, dict) or payload.get("status") not in FINISHED_STATUSES:
@@ -324,6 +394,7 @@ def _artifact_result(path: Path) -> SourceResult | None:
         attempts=int(payload.get("attempts") or 1),
         note=str(payload.get("note") or ""),
         resumed=True,
+        signal=payload.get("signal") if isinstance(payload.get("signal"), dict) else {},
     )
 
 
@@ -362,7 +433,14 @@ def _run_source(
                 records = source_runner(recipe_path, state)
             status = "worked" if records else "empty"
             note = "" if records else _empty_note(stats)
-            result = SourceResult(recipe_path.name, status, records, attempt, note)
+            result = SourceResult(
+                recipe_path.name,
+                status,
+                records,
+                attempt,
+                note,
+                signal=_source_signal(stats, len(records)),
+            )
             _atomic_json(artifact_path, result.payload(state, run_date))
             return result
         except Exception as exc:
@@ -409,6 +487,7 @@ def _update_health(root: Path, state: str, run_date: str, results: list[SourceRe
             "attempts": result.attempts,
             "checked": run_date,
             "note": result.note,
+            "signal": result.signal,
         }
     health["updatedAt"] = datetime.now(timezone.utc).isoformat()
     _atomic_json(health_path, health)
@@ -474,6 +553,16 @@ def run_state(
     # Completion order varies under the thread pool.  Recipe order keeps the
     # merge base and final ranked output repeatable from the same inputs.
     results.sort(key=lambda result: result.recipe)
+
+    flagged = [(result, flag) for result in results for flag in result.flags]
+    for result, flag in flagged:
+        print(
+            f"{state}: *** {flag.upper()} *** {result.recipe}: "
+            f"{result.signal.get('note', '')}"
+        )
+    if not flagged:
+        print(f"{state}: every measured source returned its fair share")
+
     records = [
         LeadRecord.from_dict(row)
         for result in results
@@ -499,13 +588,16 @@ def run_state(
         "worked": sum(result.status == "worked" for result in results),
         "empty": sum(result.status == "empty" for result in results),
         "failed": sum(result.status == "failed" for result in results),
+        "suspect": sum("suspect" in result.flags for result in results),
+        "stale": sum("stale" in result.flags for result in results),
     }
     _atomic_json(run_dir / "summary.json", summary)
     print(
         f"{state}: total {summary['total']}, new {summary['new']}, "
         f"permits {summary['permits']}, sales {summary['sales']} "
         f"(sources: {summary['worked']} worked, {summary['empty']} empty, "
-        f"{summary['failed']} failed)"
+        f"{summary['failed']} failed, {summary['suspect']} suspect, "
+        f"{summary['stale']} stale)"
     )
     return summary
 
