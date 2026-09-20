@@ -146,6 +146,8 @@ def test_retries_once_reports_failure_and_resumes_finished_sources(tmp_path, cap
     )["sources"]
     assert health["zz/source-0.json"]["status"] == "worked"
     assert health["zz/source-1.json"]["status"] == "failed"
+    assert health["zz/source-0.json"]["published"] == 1
+    assert health["zz/source-1.json"]["published"] == 0
 
 
 def test_empty_source_is_finished_and_dry_run_never_calls_source(tmp_path):
@@ -461,6 +463,38 @@ def test_a_suspect_source_is_named_in_the_run_and_never_stops_it(tmp_path, capsy
     )
     assert health["sources"]["zz/source-0.json"]["signal"]["flags"] == ["suspect"]
     assert health["sources"]["zz/source-1.json"]["signal"]["flags"] == []
+    assert health["states"]["zz"] == {
+        "checked": "2026-09-20",
+        "sourceRows": 2,
+        "published": 2,
+        "mergedAway": 0,
+    }
+
+
+def test_health_records_source_rows_and_published_rows_separately(tmp_path):
+    _make_state(tmp_path, count=2)
+
+    def fake_runner(recipe, state):
+        if recipe.stem == "source-0":
+            first = _lead(recipe, state)
+            second = _lead(recipe, state)
+            second["name"] = "Same Building Alias"
+            return [first, second]
+        return [_lead(recipe, state)]
+
+    run_area.run_state(
+        "zz", root=tmp_path, run_date="2026-09-20", source_runner=fake_runner
+    )
+
+    health = json.loads(
+        (tmp_path / "propertystack" / "runs" / "source-health.json").read_text()
+    )
+    assert health["sources"]["zz/source-0.json"]["count"] == 2
+    assert health["sources"]["zz/source-0.json"]["published"] == 1
+    assert health["sources"]["zz/source-0.json"]["mergedAway"] == 1
+    assert health["states"]["zz"]["sourceRows"] == 3
+    assert health["states"]["zz"]["published"] == 2
+    assert health["states"]["zz"]["mergedAway"] == 1
 
 
 def test_a_healthy_run_says_so_out_loud(tmp_path, capsys):

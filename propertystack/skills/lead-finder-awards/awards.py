@@ -196,9 +196,10 @@ def parse_multiline_award_sheet(
                 address=address,
                 units=units,
                 stage="planned",
+                award_year=year,
                 developer=developer,
                 links={"housing_award": list_url},
-                sources=[{"fact": "units", "url": list_url}],
+                sources=[{"fact": "units", "url": list_url}, {"fact": "award_year", "url": list_url}],
                 why=f"state housing tax-credit new-construction award ({year})",
             )
         )
@@ -323,11 +324,13 @@ def parse_award_rows(
             units=units,
             stage="planned",
             permit_date=date.isoformat(),
+            award_year=date.year,
             developer=str(row.get(developer_key) or "").strip() if developer_key else "",
             why="state housing agency tax-credit/bond award",
             sources=[
                 Source(fact="units", url=list_url).__dict__,
                 Source(fact="permit_date", url=list_url).__dict__,
+                Source(fact="award_year", url=list_url).__dict__,
             ],
         )
         out.append(record)

@@ -161,6 +161,39 @@ def ensure_unique_content_ids(leads: list[dict]) -> None:
             row["id"] = candidate
 
 
+_PHASE_IN_NAME_RE = re.compile(r"\bphase\s+(\d+|i+)\b", re.I)
+
+
+def _street_label(address: str | None) -> str:
+    street = re.sub(r"\s+", " ", str(address or "").split(",", 1)[0]).strip()
+    return street.title() if street else "Address Unknown"
+
+
+def disambiguate_duplicate_display_names(leads: list[dict], state: str) -> None:
+    """Keep distinct same-name leads callable after clerical notes are removed."""
+    groups: dict[str, list[dict]] = {}
+    for lead in leads:
+        name = str(lead.get("property") or "").strip()
+        if not name or name.lower() in _GENERIC_NAMES or _PHASE_IN_NAME_RE.search(name):
+            continue
+        groups.setdefault(name.lower(), []).append(lead)
+    for rows in groups.values():
+        if len(rows) < 2:
+            continue
+        ordered = sorted(
+            rows,
+            key=lambda row: (
+                str(row.get("community") or "").strip().lower()
+                != str(row.get("property") or "").strip().lower(),
+                str(row.get("address") or ""),
+            ),
+        )
+        for lead in ordered[1:]:
+            base = str(lead.get("property") or "").strip()
+            lead["property"] = f"{base} - {_street_label(lead.get('address'))}"
+            lead["id"] = content_id(state, lead.get("address") or "", lead["property"])
+
+
 def add_first_seen(
     leads: list[dict],
     previous_path: Path,
@@ -381,6 +414,57 @@ def load_contacts() -> dict:
     return contacts
 
 
+# The Plano-Richardson research CSVs record a stage in their own words; the
+# state areas use the five lead-finder stages, and the site mixes both lists.
+_INCLUDED_STAGES = {
+    "zoning-filed": "planned",
+    "zoning-approved": "planned",
+    "site-plan-approved": "planned",
+    "permit": "permitted",
+    "under-construction": "under construction",
+    "leasing": "leasing",
+}
+
+
+def _iso_date(value) -> str | None:
+    """Keep only a full YYYY-MM-DD; these CSVs also carry bare years ("2027")."""
+    text = str(value or "").strip()
+    try:
+        date.fromisoformat(text)
+    except ValueError:
+        return None
+    return text
+
+
+def _included_lead_dates(fact: dict, is_sold: bool) -> dict:
+    """The real dates behind an included lead's signal text (S13).
+
+    `leads-facts.jsonl` already holds the exact sale date, stage date and
+    expected opening for these rows; only the "Sold Jun 2026" wording was ever
+    published, so a seller saw a lead with no date field at all.
+    """
+    if is_sold:
+        sale_date = _iso_date(fact.get("sale_date"))
+        return {
+            "stage": "sold",
+            "saleDate": sale_date,
+            "permitDate": None,
+            "openingDate": None,
+            "buyer": fact.get("new_owner") or None,
+            "dateStatus": None if sale_date else "sale date was not published by the source",
+        }
+    permit_date = _iso_date(fact.get("stage_date"))
+    opening_date = _iso_date(fact.get("expected_open"))
+    return {
+        "stage": _INCLUDED_STAGES.get(str(fact.get("stage") or "").strip(), "planned"),
+        "saleDate": None,
+        "permitDate": permit_date,
+        "openingDate": opening_date,
+        "buyer": None,
+        "dateStatus": None if (permit_date or opening_date) else "stage date was not published by the source",
+    }
+
+
 def build_leads() -> dict:
     rows = read_csv(LEADS_CSV)
     facts = load_leads_facts()
@@ -411,6 +495,8 @@ def build_leads() -> dict:
         property_id = ref_id
         contact = contacts.get(ref_id) if is_sold else None
 
+        lead_dates = _included_lead_dates(fact, is_sold)
+        stage = lead_dates["stage"]
         leads.append({
             "id": content_id("tx", addresses.get(property_id, ""), r["name"]),
             "propertyId": property_id,
@@ -419,13 +505,14 @@ def build_leads() -> dict:
             "city": r["city"],
             "address": addresses.get(property_id, "") or None,
             "units": int(r["units"]) if r["units"] else None,
-            "signalType": "Upcoming" if r["signal"] == "upcoming" else "Sold",
+            "signalType": "Sold" if is_sold else ("Leasing" if stage == "leasing" else "Upcoming"),
             "signal": short_signal(r["signal"], r["why"]),
             "software": software,
             "why": r["why"],
             "sources": sources,
             "contact": contact,
             "isNew": is_new,
+            **lead_dates,
         })
 
     ensure_unique_content_ids(leads)
@@ -558,14 +645,36 @@ def discover_state_areas(include_sample: bool = False) -> list[str]:
 def _area_signal_text(record) -> str:
     """The plan's exact labels: 'Planned (not permitted yet)', 'Opens: not
     public yet', 'Sold <date>' -- for whatever stage/date data a state-area
-    record actually has (never guessed)."""
+    record actually has (never guessed).
+
+    A housing-agency award carries no permit and no sale, so its award year --
+    the one date the source did publish -- is stated instead of leaving the
+    lead with no date at all (S13).
+    """
     if record.stage == "sold":
         from score_leads import sale_date_label  # noqa: E402
 
         return f"Sold {sale_date_label(record)}" if record.sale_date else "Sold"
+    award_year = getattr(record, "award_year", None)
     if record.stage == "planned":
+        if award_year:
+            return f"Awarded {award_year} (not permitted yet)"
         return "Planned (not permitted yet)"
-    return f"Opens: {record.opening_date}" if record.opening_date else "Opens: not public yet"
+    if record.opening_date:
+        return f"Opens: {record.opening_date}"
+    if award_year:
+        return f"Awarded {award_year} · opening date not public yet"
+    return "Opens: not public yet"
+
+
+def _area_date_status(record) -> str | None:
+    if any((record.sale_date, record.permit_date, record.opening_date, getattr(record, "award_year", None))):
+        return None
+    if record.stage == "sold":
+        return "sale date was not published by the source"
+    if record.stage == "planned":
+        return "award or planning date was not published by the source"
+    return "permit or opening date was not published by the source"
 
 
 _URL_BITS_RE = re.compile(r"\s*\[?https?://\S+\]?")
@@ -689,11 +798,110 @@ def sources_entries(items) -> list[dict]:
     return out
 
 
+# --- county shorthand inside a building name (S12) ---------------------------
+# Dallas CAD stores its own clerical notes inside the "name" column: completion
+# and occupancy percentages, an "ECU" (economic unit) marker, an abatement or
+# fire-damage note, a TDHCA file number.  "(N/C 89%) SOLTRA FIREWHEEL" is the
+# county talking to itself, not the building's name.
+#
+# The rule is deliberately narrow, because a blind rule would cut real words:
+# a bracketed part is dropped only when it is a percentage, or when every word
+# left in it after removing digits and punctuation is one of the county's own
+# code words below.  "(24 UNITS)" and "(Phase C)" are therefore kept -- "units"
+# and "phase" are facts about the building, not clerical codes.
+_COUNTY_CODE_WORDS = {
+    # construction / occupancy status
+    "n", "c", "u", "nc", "uc", "ecu", "complete", "completed", "comp",
+    "incomplete", "vacant", "vac", "unocc", "unoccupied", "occ", "occupied",
+    # billing and tax notes
+    "all", "bills", "bill", "paid", "abatement", "tdhca", "tc", "tax", "credit",
+    # condition notes
+    "fire", "dmg", "damage", "damaged", "to", "be", "demoed", "demo",
+    "demolished", "undergoing", "underway", "reno", "renovation", "remo",
+    "rehab", "issue", "def", "maint", "maintenance",
+    # appraisal-account bookkeeping
+    "acct", "accts", "account", "accounts", "includes", "resi",
+}
+# A bracketed part that is nothing but digits/# is a file number, e.g. "(2562)".
+_NUMERIC_ONLY_RE = re.compile(r"^[\d\s#.,\-]+$")
+_BRACKET_RE = re.compile(r"\(([^()]*)\)")
+# Loose percentage notes outside brackets: "WOODED LAKE APARTMENTS 95%",
+# "60% N/C HICKORY APARTMENTS", "FITZ 2 50% COMPLETE".
+_LOOSE_PERCENT_RE = re.compile(
+    r"\s*\b(?P<lead>n/c|nc|u/c)?\s*(?P<pct>\d{1,3})\s*%"
+    r"(?P<status>\s*(?:n/c|nc|u/c|complete|completed|comp|vacant|unocc|occ|occupied)\b)?",
+    re.I,
+)
+# "4%" and "9%" on their own are the two federal housing tax-credit types, which
+# state award lists write straight into the project name ("Nueva Acequia 9%").
+# Those are facts about the deal, not a county completion note, so an unbracketed
+# 4%/9% with no status word beside it is kept.
+_CREDIT_TYPE_PERCENTS = {"4", "9"}
+
+
+def _drop_loose_percent(match: re.Match) -> str:
+    if (
+        match.group("pct") in _CREDIT_TYPE_PERCENTS
+        and not match.group("lead")
+        and not match.group("status")
+    ):
+        return match.group(0)
+    return " "
+# A bare TDHCA file number left behind, e.g. "WATERFORD AT GOLDMARK- TDHCA# 95155".
+_LOOSE_TDHCA_RE = re.compile(r"\s*\btdhca\s*#?\s*\d*", re.I)
+
+
+def _is_county_shorthand(part: str) -> bool:
+    """True when a bracketed part is the county's own code, not a real name."""
+    inner = part.strip().strip("*").strip()
+    if not inner:
+        return True
+    if "%" in inner:
+        return True  # no building is named with a percent sign
+    if _NUMERIC_ONLY_RE.match(inner):
+        return True
+    words = [w for w in re.split(r"[^A-Za-z0-9/]+", inner.lower()) if w]
+    if not words:
+        return True
+    for word in words:
+        if word.isdigit():
+            continue
+        if word in _COUNTY_CODE_WORDS:
+            continue
+        if all(piece in _COUNTY_CODE_WORDS for piece in word.split("/") if piece):
+            continue
+        return False
+    return True
+
+
+def strip_county_shorthand(name: str) -> str:
+    """Remove a county's clerical codes from a building name, never a real word.
+
+    Returns "" when the whole name was shorthand (e.g. "(TO BE DEMOED) 100%
+    VACANT"), so the caller can fall back to naming the building by address.
+    """
+    text = name or ""
+    if "(" not in text and "%" not in text and "tdhca" not in text.lower():
+        return text.strip()
+    previous = None
+    while previous != text:  # innermost brackets first, so "((ECU 49%))" clears
+        previous = text
+        text = _BRACKET_RE.sub(
+            lambda m: "" if _is_county_shorthand(m.group(1)) else m.group(0), text
+        )
+    text = _LOOSE_PERCENT_RE.sub(_drop_loose_percent, text)
+    text = _LOOSE_TDHCA_RE.sub(" ", text)
+    text = re.sub(r"\s{2,}", " ", text).strip()
+    return text.strip(" -,;/&").strip()
+
+
 def _nice_name(name: str, address: str = "") -> str:
     """ALL-CAPS names read as shouting; a generic permit label isn't a name --
-    call it "Apartments at <address>" when there is one."""
+    call it "Apartments at <address>" when there is one.  County shorthand
+    inside the name is dropped first (S12)."""
+    name = strip_county_shorthand(name)
     stripped = (name or "").strip()
-    if stripped.lower() in _GENERIC_NAMES or _LOT_LABEL_RE.match(stripped):
+    if not stripped or stripped.lower() in _GENERIC_NAMES or _LOT_LABEL_RE.match(stripped):
         return f"Apartments at {address.title()}" if address else "Unnamed project"
     return name.title() if name and name.isupper() else name
 
@@ -759,6 +967,8 @@ def _area_lead_dict(record, idx: int, total: int = 34) -> dict:
         "openingDate": record.opening_date or None,
         "saleDate": record.sale_date or None,
         "saleDatePrecision": record.sale_date_precision or None,
+        "awardYear": getattr(record, "award_year", None) or None,
+        "dateStatus": _area_date_status(record),
         "buyer": record.buyer or None,
         "developer": record.developer or None,
         "officePhone": record.office_phone or None,
@@ -899,6 +1109,7 @@ def build_state_areas(include_sample: bool = False) -> list[str]:
     AREAS_OUT_DIR.mkdir(parents=True, exist_ok=True)
     for slug in slugs:
         area_json = _merge_included_areas(slug, build_area(slug))
+        disambiguate_duplicate_display_names(area_json["leads"], slug)
         ensure_unique_content_ids(area_json["leads"])
         add_first_seen(area_json["leads"], AREAS_OUT_DIR / f"{slug}.json", state=slug)
         # after the merge, so the chat counts included areas (Plano-Richardson
@@ -1052,27 +1263,35 @@ def build_summary(area_slugs: list[str], manifest: dict) -> dict:
     by_slug = {area["slug"]: area for area in manifest.get("areas", [])}
     leads = []
     check_dates = []
+    not_tracked = []
+    in_area_files = 0
     for slug in area_slugs:
         area_meta = by_slug.get(slug, {})
         manually_hidden = (
             area_meta.get("hidden") is True
             and area_meta.get("hiddenReason") != AUTO_HIDDEN_REASON
         )
-        if manually_hidden:
-            continue
         path = AREAS_OUT_DIR / f"{slug}.json"
         if not path.exists():
             continue
         area = json.loads(path.read_text())
-        leads.extend(area.get("leads", []))
+        area_leads = area.get("leads", [])
+        in_area_files += len(area_leads)
+        if manually_hidden:
+            # Counted nowhere in the public totals, but named here so the gap
+            # between the area files and totalTracked reads as a decision
+            # rather than a bug (S11).
+            not_tracked.append({
+                "area": slug,
+                "leads": len(area_leads),
+                "why": "area is hidden by hand, so its leads are not published",
+            })
+            continue
+        leads.extend(area_leads)
         if area.get("updated"):
             check_dates.append(area["updated"])
 
     last_check = max(check_dates, default=manifest.get("updated") or CURRENT_DATA_DATE)
-    try:
-        new_cutoff = (date.fromisoformat(last_check) - timedelta(days=6)).isoformat()
-    except ValueError:
-        new_cutoff = last_check
 
     sold = sum(lead.get("signalType") == "Sold" for lead in leads)
     try:
@@ -1082,10 +1301,10 @@ def build_summary(area_slugs: list[str], manifest: dict) -> dict:
     return {
         "lastCheck": last_check,
         "totalTracked": len(leads),
-        "newLast7Days": sum(
-            new_cutoff <= lead.get("firstSeen", "") <= last_check
-            for lead in leads
-        ),
+        # Every lead in every area file, hidden areas included.  totalTracked
+        # plus the notTracked counts below must equal this, always.
+        "leadsInAreaFiles": in_area_files,
+        "notTracked": not_tracked,
         # Keep the runner's established definition: every current non-sale
         # building signal is in the permits side of the summary.
         "permitsFiled": len(leads) - sold,

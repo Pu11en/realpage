@@ -88,3 +88,14 @@ def test_planned_then_permit_upgrades_not_duplicates():
     assert len(merged) == 1
     assert merged[0].stage == "permitted"
     assert merged[0].permit_date == "2026-03-01"
+
+
+def test_award_year_survives_a_merge():
+    award = _record(address="789 Elm Ct", stage="planned", award_year=2026)
+    later_permit = _record(address="789 Elm Court", stage="permitted", permit_date="2026-03-01")
+
+    merged = merge_records([award, later_permit])
+
+    assert len(merged) == 1
+    assert merged[0].stage == "permitted"
+    assert merged[0].award_year == 2026

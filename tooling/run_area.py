@@ -474,20 +474,82 @@ def _prepare_backup(state_dir: Path, run_dir: Path) -> list[dict]:
     return old_rows
 
 
-def _update_health(root: Path, state: str, run_date: str, results: list[SourceResult]) -> None:
+def _row_urls(row: dict) -> set[str]:
+    """Every source URL a row carries, however the adapter recorded it."""
+    urls: set[str] = set()
+    for source in row.get("sources") or []:
+        if isinstance(source, dict):
+            url = str(source.get("url") or "").strip()
+        else:
+            url = str(source or "").strip()
+        if url:
+            urls.add(url)
+    for value in (row.get("links") or {}).values():
+        url = str(value or "").strip()
+        if url:
+            urls.add(url)
+    return urls
+
+
+def published_by_source(results: list[SourceResult], rows: list[dict]) -> dict[str, int]:
+    """How many published leads still carry each source's own URLs.
+
+    A source's ``count`` is the rows it returned.  ``merge_records`` then
+    collapses rows that describe the same building, so Dallas County returning
+    501 rows and 481 Dallas leads reaching the site are *both* true.  Recording
+    only one of them is what made those two numbers read as a contradiction
+    (S11); the run now stores both next to each other.
+    """
+    source_urls = {
+        result.recipe: {url for row in result.records for url in _row_urls(row)}
+        for result in results
+    }
+    published = {recipe: 0 for recipe in source_urls}
+    for row in rows:
+        urls = _row_urls(row)
+        if not urls:
+            continue
+        for recipe, known in source_urls.items():
+            if known & urls:
+                published[recipe] += 1
+    return published
+
+
+def _update_health(
+    root: Path,
+    state: str,
+    run_date: str,
+    results: list[SourceResult],
+    rows: list[dict] | None = None,
+) -> None:
     health_path = root / "propertystack" / "runs" / "source-health.json"
     health = _read_json(health_path, {})
     if not isinstance(health, dict):
         health = {}
     sources = health.setdefault("sources", {})
+    published = published_by_source(results, rows or [])
     for result in results:
-        sources[f"{state}/{result.recipe}"] = {
+        entry = {
             "status": result.status,
+            # rows this source returned, before same-address merging
             "count": len(result.records),
             "attempts": result.attempts,
             "checked": run_date,
             "note": result.note,
             "signal": result.signal,
+        }
+        if rows is not None:
+            entry["published"] = published.get(result.recipe, 0)
+            entry["mergedAway"] = len(result.records) - entry["published"]
+        sources[f"{state}/{result.recipe}"] = entry
+    if rows is not None:
+        source_rows = sum(len(result.records) for result in results)
+        health.setdefault("states", {})[state] = {
+            "checked": run_date,
+            # the three numbers that must always reconcile for this state
+            "sourceRows": source_rows,
+            "published": len(rows),
+            "mergedAway": source_rows - len(rows),
         }
     health["updatedAt"] = datetime.now(timezone.utc).isoformat()
     _atomic_json(health_path, health)
@@ -577,7 +639,7 @@ def run_state(
     new_count = sum(_identity(row, state) not in previous_ids for row in rows)
     permits = sum(row.get("stage") != "sold" for row in rows)
     sales = sum(row.get("stage") == "sold" for row in rows)
-    _update_health(root, state, run_date, results)
+    _update_health(root, state, run_date, results, rows)
 
     summary = {
         "state": state,

@@ -67,7 +67,14 @@ def test_summary_counts_current_runs_and_excludes_manually_hidden_area(tmp_path,
     assert build_data.build_summary(["tx", "nm", "ny"], manifest) == {
         "lastCheck": "2026-09-19",
         "totalTracked": 3,
-        "newLast7Days": 2,
+        "leadsInAreaFiles": 4,
+        "notTracked": [
+            {
+                "area": "ny",
+                "leads": 1,
+                "why": "area is hidden by hand, so its leads are not published",
+            }
+        ],
         "permitsFiled": 2,
         "sold": 1,
         "recentLast180Days": 0,
@@ -93,6 +100,91 @@ def test_summary_counts_only_buildings_that_actually_moved_lately(tmp_path, monk
 
     assert summary["totalTracked"] == 6
     assert summary["recentLast180Days"] == 2  # the 2027 opening has not happened yet
+    assert "newLast7Days" not in summary
+
+
+def test_published_summary_reconciles_with_area_files_and_hidden_leads():
+    summary = json.loads((ROOT / "site/data/summary.json").read_text(encoding="utf-8"))
+    manifest = json.loads((ROOT / "site/data/areas/index.json").read_text(encoding="utf-8"))
+    public_slugs = {
+        area["slug"]
+        for area in manifest["areas"]
+        if not (area.get("hidden") is True and area.get("hiddenReason") != build_data.AUTO_HIDDEN_REASON)
+    }
+    all_area_count = 0
+    public_count = 0
+    for area_path in (ROOT / "site/data/areas").glob("*.json"):
+        if area_path.name == "index.json":
+            continue
+        area = json.loads(area_path.read_text(encoding="utf-8"))
+        lead_count = len(area.get("leads", []))
+        all_area_count += lead_count
+        if area_path.stem in public_slugs:
+            public_count += lead_count
+
+    assert summary["totalTracked"] == public_count
+    assert summary["leadsInAreaFiles"] == all_area_count
+    assert summary["totalTracked"] + sum(item["leads"] for item in summary["notTracked"]) == all_area_count
+    assert summary["notTracked"] == [
+        {
+            "area": "ny",
+            "leads": 2,
+            "why": "area is hidden by hand, so its leads are not published",
+        }
+    ]
+
+
+def test_texas_source_health_reconciles_source_state_and_site_counts():
+    health = json.loads((ROOT / "propertystack/runs/source-health.json").read_text(encoding="utf-8"))
+    tx_state_rows = json.loads((ROOT / "propertystack/data/tx/leads.json").read_text(encoding="utf-8"))
+    tx_site_rows = json.loads((ROOT / "site/data/areas/tx.json").read_text(encoding="utf-8"))["leads"]
+    tx_sources = {
+        key: value
+        for key, value in health["sources"].items()
+        if key.startswith("tx/")
+    }
+
+    assert health["states"]["tx"]["sourceRows"] == sum(source["count"] for source in tx_sources.values())
+    assert health["states"]["tx"]["published"] == len(tx_state_rows)
+    assert health["states"]["tx"]["mergedAway"] == (
+        health["states"]["tx"]["sourceRows"] - health["states"]["tx"]["published"]
+    )
+    assert health["sources"]["tx/dallas-dcad.json"]["count"] == 501
+    assert health["sources"]["tx/dallas-dcad.json"]["published"] == 481
+    assert health["sources"]["tx/dallas-dcad.json"]["mergedAway"] == 20
+    assert len(tx_site_rows) <= len(tx_state_rows)
+
+
+def test_county_shorthand_cleaner_covers_real_texas_names():
+    raw_rows = json.loads((ROOT / "propertystack/data/tx/leads.json").read_text(encoding="utf-8"))
+    changed = {
+        row["name"]: build_data.strip_county_shorthand(row.get("name") or "")
+        for row in raw_rows
+        if build_data.strip_county_shorthand(row.get("name") or "") != (row.get("name") or "").strip()
+    }
+
+    assert changed["(N/C 89%) SOLTRA FIREWHEEL"] == "SOLTRA FIREWHEEL"
+    assert changed["(91% COMPLETE) FLYNN @ LIVE OAK"] == "FLYNN @ LIVE OAK"
+    assert changed["AMLI TREE HOUSE (ECU 2 ACCTS)"] == "AMLI TREE HOUSE"
+    assert len(changed) >= 62
+    assert build_data.strip_county_shorthand("The National (324 Units)") == "The National (324 Units)"
+    assert build_data.strip_county_shorthand("Tapestry at Katy (fka Enclave at Katy)") == (
+        "Tapestry at Katy (fka Enclave at Katy)"
+    )
+
+
+def test_public_texas_leads_have_stage_and_date_status_when_source_has_no_date():
+    leads = json.loads((ROOT / "site/data/areas/tx.json").read_text(encoding="utf-8"))["leads"]
+    no_stage = [lead["id"] for lead in leads if not lead.get("stage")]
+    no_date = [
+        lead["id"]
+        for lead in leads
+        if not any(lead.get(field) for field in ("saleDate", "permitDate", "openingDate", "awardYear"))
+        and not lead.get("dateStatus")
+    ]
+
+    assert no_stage == []
+    assert no_date == []
 
 
 @pytest.mark.skipif(not shutil.which("node"), reason="node not installed")

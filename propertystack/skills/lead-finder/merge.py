@@ -58,7 +58,7 @@ def _merge_pair(keep: LeadRecord, other: LeadRecord) -> LeadRecord:
 
     for field_name in (
         "name", "address", "lat", "lon", "units", "developer",
-        "office_phone", "website", "sale_date_precision",
+        "office_phone", "website", "sale_date_precision", "award_year",
     ):
         if not getattr(keep, field_name) and getattr(other, field_name):
             setattr(keep, field_name, getattr(other, field_name))

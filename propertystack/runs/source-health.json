@@ -47,84 +47,120 @@
       "count": 178,
       "attempts": 1,
       "checked": "2026-09-20",
-      "note": ""
+      "note": "",
+      "signal": {},
+      "published": 178,
+      "mergedAway": 0
     },
     "tx/austin.json": {
       "status": "worked",
       "count": 47,
       "attempts": 1,
       "checked": "2026-09-20",
-      "note": ""
+      "note": "",
+      "signal": {},
+      "published": 47,
+      "mergedAway": 0
     },
     "tx/dallas-dcad.json": {
       "status": "worked",
       "count": 501,
       "attempts": 1,
       "checked": "2026-09-20",
-      "note": ""
+      "note": "",
+      "signal": {},
+      "published": 481,
+      "mergedAway": 20
     },
     "tx/fort-worth.json": {
       "status": "worked",
       "count": 1,
       "attempts": 1,
       "checked": "2026-09-20",
-      "note": ""
+      "note": "",
+      "signal": {},
+      "published": 1,
+      "mergedAway": 0
     },
     "tx/houston-hcad.json": {
       "status": "worked",
       "count": 383,
       "attempts": 1,
       "checked": "2026-09-20",
-      "note": ""
+      "note": "",
+      "signal": {},
+      "published": 378,
+      "mergedAway": 5
     },
     "tx/houston.json": {
       "status": "worked",
       "count": 18,
       "attempts": 1,
       "checked": "2026-09-20",
-      "note": ""
+      "note": "",
+      "signal": {},
+      "published": 18,
+      "mergedAway": 0
     },
     "tx/san-antonio.json": {
       "status": "worked",
       "count": 2,
       "attempts": 1,
       "checked": "2026-09-20",
-      "note": ""
+      "note": "",
+      "signal": {},
+      "published": 2,
+      "mergedAway": 0
     },
     "tx/san-marcos.json": {
       "status": "worked",
       "count": 4,
       "attempts": 1,
       "checked": "2026-09-20",
-      "note": ""
+      "note": "",
+      "signal": {},
+      "published": 4,
+      "mergedAway": 0
     },
     "tx/tabs.json": {
       "status": "worked",
       "count": 126,
       "attempts": 1,
       "checked": "2026-09-20",
-      "note": ""
+      "note": "",
+      "signal": {},
+      "published": 126,
+      "mergedAway": 0
     },
     "tx/tarrant-tad-sales.json": {
       "status": "worked",
       "count": 24,
       "attempts": 1,
       "checked": "2026-09-20",
-      "note": ""
+      "note": "",
+      "signal": {},
+      "published": 24,
+      "mergedAway": 0
     },
     "tx/tarrant-tad.json": {
       "status": "worked",
       "count": 177,
       "attempts": 1,
       "checked": "2026-09-20",
-      "note": ""
+      "note": "",
+      "signal": {},
+      "published": 177,
+      "mergedAway": 0
     },
     "tx/tdhca.json": {
       "status": "worked",
       "count": 212,
       "attempts": 1,
       "checked": "2026-09-20",
-      "note": ""
+      "note": "",
+      "signal": {},
+      "published": 212,
+      "mergedAway": 0
     },
     "az/gilbert.json": {
       "status": "worked",
@@ -183,5 +219,13 @@
       "note": ""
     }
   },
-  "updatedAt": "2026-09-20T07:14:24.202391+00:00"
+  "updatedAt": "2026-09-20T22:58:52.960847+00:00",
+  "states": {
+    "tx": {
+      "checked": "2026-09-20",
+      "sourceRows": 1673,
+      "published": 1629,
+      "mergedAway": 44
+    }
+  }
 }

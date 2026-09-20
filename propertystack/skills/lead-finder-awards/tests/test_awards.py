@@ -38,6 +38,7 @@ def test_new_construction_award_becomes_planned_lead():
     assert r.city == "Rivertown"
     assert r.area == "zz"
     assert r.permit_date == "2026-01-15"
+    assert r.award_year == 2026
     assert r.developer == "Sample Developer LLC"
     assert "tax-credit" in r.why
 
@@ -149,4 +150,5 @@ def test_saved_multiline_workbook_keeps_only_recent_new_construction():
     assert records[0].units == 48
     assert records[0].developer == "Builder LLC"
     assert records[0].permit_date == ""
+    assert records[0].award_year == 2026
     assert "2026" in records[0].why
