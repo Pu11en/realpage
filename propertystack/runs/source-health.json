@@ -57,11 +57,11 @@
       "note": ""
     },
     "tx/dallas-dcad.json": {
-      "status": "failed",
-      "count": 0,
-      "attempts": 2,
+      "status": "worked",
+      "count": 501,
+      "attempts": 1,
       "checked": "2026-09-20",
-      "note": "attempt 1: SourceFetchError: InvalidURL: URL can't contain control characters. '/ViewPDFs.aspx?type=3&id=\\\\\\\\DCAD.ORG\\\\WEB\\\\WEBDATA\\\\WEBFORMS\\\\DATA PRODUCTS\\\\DCAD2026_CURRENT.ZIP' (found at least ' '); attempt 2: SourceFetchError: InvalidURL: URL can't contain control characters. '/ViewPDFs.aspx?type=3&id=\\\\\\\\DCAD.ORG\\\\WEB\\\\WEBDATA\\\\WEBFORMS\\\\DATA PRODUCTS\\\\DCAD2026_CURRENT.ZIP' (found at least ' ')"
+      "note": ""
     },
     "tx/fort-worth.json": {
       "status": "worked",
@@ -183,5 +183,5 @@
       "note": ""
     }
   },
-  "updatedAt": "2026-09-20T06:54:43.965487+00:00"
+  "updatedAt": "2026-09-20T07:01:45.830215+00:00"
 }

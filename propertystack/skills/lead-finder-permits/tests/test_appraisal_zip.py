@@ -308,3 +308,31 @@ def test_a_recipe_without_the_suffix_field_leaves_the_address_untouched():
         "tx", recipe, fetch_bytes=lambda url: _harris_unit_zip(), today=TODAY
     )
     assert "1315 NASA RD 1 490" in {r.address for r in records}
+
+
+def test_dallas_sold_takes_its_street_from_the_account_file():
+    # The building-facts file has no street at all for County A, so without the
+    # fallback every sold lead arrived with a name and no address.
+    recipe = _dallas_recipe()
+    recipe["sold"]["info_table"].update(
+        {"street_num_field": "STREET_NUM", "street_name_field": "FULL_STREET_NAME"}
+    )
+    records = find_sold_apartments(
+        "tx", recipe, fetch_bytes=lambda url: _dallas_zip_with_streets(), today=TODAY
+    )
+
+    assert records
+    assert all(r.address for r in records)
+    assert "4321 CEDAR SPRINGS RD" in {r.address for r in records}
+
+
+def _dallas_zip_with_streets() -> bytes:
+    bldg_rows = [
+        DALLAS_BLDG_HEADER,
+        ["9", "APARTMENT (BRICK EXTERIOR)", "240", "CEDAR SPRINGS TOWERS", "1.00"],
+    ]
+    acct_rows = [
+        DALLAS_ACCT_HEADER + ["STREET_NUM", "FULL_STREET_NAME"],
+        ["9", "05/06/2025", "NEW OWNER LP", "2145550000", "Dallas", "4321", "CEDAR SPRINGS RD"],
+    ]
+    return _zip_bytes({"COM_DETAIL.CSV": _csv(bldg_rows), "ACCOUNT_INFO.CSV": _csv(acct_rows)})

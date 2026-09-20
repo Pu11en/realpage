@@ -290,6 +290,12 @@ def find_sold_apartments(
                 facts_row = candidates[key]
                 info_row = info_by_key.get(key, facts_row)
                 address = _address(facts_row, facts)
+                if not address and info_table:
+                    # County A keeps the street only in its one-row-per-account
+                    # file, the same place the new-construction path already
+                    # looks.  Without this a sold lead arrives named but with no
+                    # address at all -- nothing a salesperson can drive to.
+                    address = _address(info_row, info_table)
                 records.append(
                     LeadRecord(
                         name=str(facts_row.get(facts.get("name_field", "")) or "").strip() or address,

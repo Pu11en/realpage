@@ -28,7 +28,9 @@
   "sold": {
     "info_table": {
       "file": "ACCOUNT_INFO.CSV",
-      "key_field": "ACCOUNT_NUM"
+      "key_field": "ACCOUNT_NUM",
+      "street_num_field": "STREET_NUM",
+      "street_name_field": "FULL_STREET_NAME"
     },
     "date_field": "DEED_TXFR_DATE",
     "date_format": "%m/%d/%Y",

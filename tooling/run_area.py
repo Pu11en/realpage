@@ -127,15 +127,28 @@ def _read_json(path: Path, default):
         return default
 
 
+def _safe_url(url: str) -> str:
+    """Percent-encode a URL a county published with characters http.client rejects.
+
+    Dallas's bulk-file link carries a literal Windows path as a query value --
+    backslashes and a space -- so `http.client` refuses it as containing control
+    characters and the source failed on every run. A URL that is already valid is
+    returned byte-for-byte unchanged, so no working source changes behaviour.
+    """
+    if " " not in url and "\\" not in url and url.isascii() and url.isprintable():
+        return url
+    return urllib.parse.quote(url, safe=":/?&=%")
+
+
 def _http_get_json(url: str):
-    request = urllib.request.Request(url, headers=HTTP_HEADERS)
+    request = urllib.request.Request(_safe_url(url), headers=HTTP_HEADERS)
     with urllib.request.urlopen(request, timeout=60) as response:
         return json.loads(response.read().decode("utf-8", errors="replace"))
 
 
 def _http_get_structured(url: str):
     """Fetch an auto-found structured endpoint without guessing its format."""
-    request = urllib.request.Request(url, headers=HTTP_HEADERS)
+    request = urllib.request.Request(_safe_url(url), headers=HTTP_HEADERS)
     with urllib.request.urlopen(request, timeout=60) as response:
         text = response.read().decode("utf-8", errors="replace")
     try:
@@ -145,7 +158,7 @@ def _http_get_structured(url: str):
 
 
 def _http_get_bytes(url: str) -> bytes:
-    request = urllib.request.Request(url, headers=HTTP_HEADERS)
+    request = urllib.request.Request(_safe_url(url), headers=HTTP_HEADERS)
     with urllib.request.urlopen(request, timeout=280) as response:
         return response.read()
 

@@ -335,3 +335,32 @@ def test_stale_reason_reaches_the_run_log_and_source_health(tmp_path, capsys):
         (tmp_path / "propertystack/runs/source-health.json").read_text()
     )
     assert "stale source" in health["sources"]["zz/stale-city.json"]["note"]
+
+
+def test_a_county_link_holding_a_windows_path_is_encoded_not_dropped():
+    # Dallas publishes its bulk-file link with a literal Windows path as the
+    # query value. http.client rejects the raw backslashes and space as control
+    # characters, so the county failed on every run and silently contributed
+    # nothing -- an entire metro missing from the data.
+    dallas = (
+        "https://www.dallascad.org/ViewPDFs.aspx?type=3&id="
+        "\\\\DCAD.ORG\\WEB\\WEBDATA\\WEBFORMS\\DATA PRODUCTS\\DCAD2026_CURRENT.ZIP"
+    )
+
+    encoded = run_area._safe_url(dallas)
+
+    assert " " not in encoded and "\\" not in encoded
+    assert encoded.startswith("https://www.dallascad.org/ViewPDFs.aspx?type=3&id=")
+    assert "%5C%5CDCAD.ORG" in encoded
+    assert "DATA%20PRODUCTS" in encoded
+
+
+def test_a_url_that_already_works_is_passed_through_byte_for_byte():
+    plain = "https://download.hcad.org/data/CAMA/2026/Real_acct_owner.zip"
+    already_encoded = (
+        "https://gis.example.org/rest/services/x/FeatureServer/0/query"
+        "?where=Type%20IN%20(%27APT%27)&outFields=*&f=json"
+    )
+
+    assert run_area._safe_url(plain) == plain
+    assert run_area._safe_url(already_encoded) == already_encoded
