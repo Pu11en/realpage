@@ -4,3 +4,8 @@
   - Commit: `770ed4e` (implementation and rebuilt data)
   - Checks: `python3 -m pytest -q tooling/qa/fixes_tests/ propertystack -x -q` (570 collected, all passed); `python3 site/data/build_data.py`; `python3 -m py_compile site/data/build_data.py`; `git diff --check`.
   - Open: the separate `tooling/qa/check_lead_data.py` gate is introduced by T2 and does not exist yet.
+
+- 2026-09-19 — T1 reviewer repair complete: restored New York's `hidden: true` setting, made the area-manifest rebuild preserve existing hidden areas, and added a regression test proving a rebuild cannot reveal New York again.
+  - Commit: `78962a2` (durable hidden-area preservation and regression test)
+  - Checks: `python3 -m pytest -q tooling/qa/fixes_tests/test_build_c_first_seen.py -q` (5 passed); `python3 site/data/build_data.py` followed by an assertion that New York remains hidden; `python3 -m pytest -q tooling/qa/fixes_tests/ propertystack -x -q` (571 passed); `python3 -m py_compile site/data/build_data.py`; `git diff --check`.
+  - Open: the separate `tooling/qa/check_lead_data.py` gate is introduced by T2 and does not exist yet.
