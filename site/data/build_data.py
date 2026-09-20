@@ -17,10 +17,12 @@ No dependencies beyond stdlib. Usage: python3 site/data/build_data.py
 """
 import csv
 import glob
+import hashlib
 import json
 import os
 import re
 import sys
+import unicodedata
 from collections import Counter
 from datetime import date, timedelta
 from pathlib import Path
@@ -86,7 +88,83 @@ def read_csv(path: Path) -> list[dict]:
         return list(csv.DictReader(f))
 
 
-def add_first_seen(leads: list[dict], previous_path: Path, new_date: str | None = None) -> None:
+def _id_slug(value: str) -> str:
+    """Make one human-readable, deterministic part of a lead content ID."""
+    text = unicodedata.normalize("NFKC", str(value or "")).casefold()
+    text = re.sub(r"[^a-z0-9]+", "-", text)
+    return text.strip("-") or "unknown"
+
+
+def content_id(state: str, address: str, name: str) -> str:
+    """Return the stable identity for a building lead.
+
+    IDs intentionally use only durable content: the state, normalized street
+    address, and project name. Ranking and source order must never affect them.
+    """
+    from record import normalize_address  # noqa: E402
+
+    normalized_address = normalize_address(address or "")
+    return "-".join((
+        _id_slug(state),
+        _id_slug(normalized_address),
+        _id_slug(name),
+    ))
+
+
+def _lead_content_id(lead: dict, state: str | None = None) -> str:
+    """Build a content ID from either a raw record-shaped or site-shaped row."""
+    lead_state = state or lead.get("area") or lead.get("state") or "unknown"
+    address = lead.get("address") or ""
+    if not address and lead.get("propertyId"):
+        address = _address_by_lead_id().get(lead["propertyId"], "")
+    name = lead.get("property") or lead.get("name") or lead.get("community") or ""
+    return content_id(lead_state, address, name)
+
+
+def _has_content_identity(lead: dict) -> bool:
+    """Avoid treating sparse test/legacy rows as the same building."""
+    return bool(
+        lead.get("address")
+        or lead.get("propertyId")
+        or lead.get("property")
+        or lead.get("name")
+        or lead.get("community")
+    )
+
+
+def ensure_unique_content_ids(leads: list[dict]) -> None:
+    """Add a deterministic source-detail suffix when sparse rows collide.
+
+    A few feeds contain unnamed, address-less rows. Their required base ID is
+    necessarily the same, so use the remaining saved facts to keep every row
+    addressable without falling back to its rank or input position.
+    """
+    groups = {}
+    for lead in leads:
+        groups.setdefault(lead.get("id"), []).append(lead)
+    for base, rows in groups.items():
+        if len(rows) < 2:
+            continue
+        ordered = sorted(rows, key=lambda row: json.dumps(row, sort_keys=True, default=str))
+        used = set()
+        for row in ordered:
+            payload = json.dumps(row, sort_keys=True, default=str).encode("utf-8")
+            suffix = hashlib.sha1(payload).hexdigest()[:12]
+            candidate = f"{base}-{suffix}"
+            ordinal = 2
+            while candidate in used:
+                candidate = f"{base}-{suffix}-{ordinal}"
+                ordinal += 1
+            used.add(candidate)
+            row["id"] = candidate
+
+
+def add_first_seen(
+    leads: list[dict],
+    previous_path: Path,
+    new_date: str | None = None,
+    state: str | None = None,
+) -> None:
     """Add the stable date each lead first appeared in a built area file.
 
     Existing output is the history store: a saved ``firstSeen`` survives every
@@ -94,17 +172,23 @@ def add_first_seen(leads: list[dict], previous_path: Path, new_date: str | None 
     while an id not present in the previous output is stamped on build day.
     """
     previous_by_id = {}
+    previous_by_content = {}
     if previous_path.exists():
         previous = json.loads(previous_path.read_text())
         previous_leads = previous.get("leads", []) if isinstance(previous, dict) else previous
-        previous_by_id = {
-            lead["id"]: lead for lead in previous_leads
-            if isinstance(lead, dict) and lead.get("id")
-        }
+        for lead in previous_leads:
+            if not isinstance(lead, dict):
+                continue
+            if lead.get("id"):
+                previous_by_id[lead["id"]] = lead
+            if _has_content_identity(lead):
+                previous_by_content.setdefault(_lead_content_id(lead, state), lead)
 
     first_seen_for_new = new_date or date.today().isoformat()
     for lead in leads:
         previous = previous_by_id.get(lead.get("id"))
+        if not previous and _has_content_identity(lead):
+            previous = previous_by_content.get(_lead_content_id(lead, state))
         if previous:
             lead["firstSeen"] = previous.get("firstSeen") or CURRENT_DATA_DATE
         else:
@@ -299,6 +383,7 @@ def build_leads() -> dict:
     rows = read_csv(LEADS_CSV)
     facts = load_leads_facts()
     contacts = load_contacts()
+    addresses = _address_by_lead_id()
 
     leads = []
     for r in rows:
@@ -325,11 +410,12 @@ def build_leads() -> dict:
         contact = contacts.get(ref_id) if is_sold else None
 
         leads.append({
-            "id": f"l{r['rank']}",
+            "id": content_id("tx", addresses.get(property_id, ""), r["name"]),
             "propertyId": property_id,
             "score": int(r["score"]),
             "property": r["name"],
             "city": r["city"],
+            "address": addresses.get(property_id, "") or None,
             "units": int(r["units"]) if r["units"] else None,
             "signalType": "Upcoming" if r["signal"] == "upcoming" else "Sold",
             "signal": short_signal(r["signal"], r["why"]),
@@ -340,7 +426,8 @@ def build_leads() -> dict:
             "isNew": is_new,
         })
 
-    add_first_seen(leads, OUT_DIR / "leads.json")
+    ensure_unique_content_ids(leads)
+    add_first_seen(leads, OUT_DIR / "leads.json", state="tx")
 
     units_in_play = sum(l["units"] or 0 for l in leads)
     new_count = sum(1 for l in leads if l["isNew"])
@@ -654,7 +741,7 @@ def _area_lead_dict(record, idx: int, total: int = 34) -> dict:
     leasing = _is_leasing(record)
     name = _nice_name(record.name or record.address or "Unnamed project", record.address)
     return {
-        "id": f"{record.area}-{idx}",
+        "id": content_id(record.area, record.address, name),
         "property": name,
         "community": record.name or None,
         "city": record.city,
@@ -798,7 +885,8 @@ def build_state_areas(include_sample: bool = False) -> list[str]:
     AREAS_OUT_DIR.mkdir(parents=True, exist_ok=True)
     for slug in slugs:
         area_json = _merge_included_areas(slug, build_area(slug))
-        add_first_seen(area_json["leads"], AREAS_OUT_DIR / f"{slug}.json")
+        ensure_unique_content_ids(area_json["leads"])
+        add_first_seen(area_json["leads"], AREAS_OUT_DIR / f"{slug}.json", state=slug)
         # after the merge, so the chat counts included areas (Plano-Richardson
         # in Texas / Dallas-Fort Worth) exactly like the site does
         write_chat_leads_csv(slug, area_json)
@@ -833,11 +921,11 @@ def _merge_included_areas(slug: str, area_json: dict) -> dict:
         rows = extra.get("leads", []) if isinstance(extra, dict) else extra
         for i, lead in enumerate(rows, start=1):
             lead = dict(lead)
-            lead["id"] = f"{inc['slug']}-{lead.get('id', i)}"
             lead["metro"] = inc["metro"]
             lead["subArea"] = inc["label"]
             if not lead.get("address"):
                 lead["address"] = addrs.get(lead.get("propertyId")) or None
+            lead["id"] = content_id(slug, lead.get("address") or "", lead.get("property") or "")
             lead.setdefault("sources", [])
             area_json["leads"].append(lead)
     if (metros or {}).get("include_areas"):

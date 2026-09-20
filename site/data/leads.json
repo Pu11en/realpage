@@ -7,11 +7,12 @@
   },
   "leads": [
     {
-      "id": "l1",
+      "id": "tx-2520-n-central-expressway-richardson-tx-390-unit-project-at-2520-n-central-expressway",
       "propertyId": "richardson-390-unit-project-at-2520-n-central-expressway",
       "score": 97,
       "property": "390-unit project at 2520 N Central Expressway",
       "city": "Richardson",
+      "address": "2520 N Central Expressway, Richardson, TX",
       "units": 390,
       "signalType": "Upcoming",
       "signal": "Zoning approved Jan 2024",
@@ -28,11 +29,12 @@
       "firstSeen": "2026-09-15"
     },
     {
-      "id": "l2",
+      "id": "tx-4701-w-park-blvd-plano-tx-351-unit-project-at-4701-w-park-blvd",
       "propertyId": "plano-351-unit-project-at-4701-w-park-blvd",
       "score": 95,
       "property": "351-unit project at 4701 W Park Blvd",
       "city": "Plano",
+      "address": "4701 W Park Blvd, Plano, TX",
       "units": 351,
       "signalType": "Upcoming",
       "signal": "Zoning filed Aug 2026",
@@ -49,11 +51,12 @@
       "firstSeen": "2026-09-15"
     },
     {
-      "id": "l3",
+      "id": "tx-unknown-360-unit-project-in-downtown-plano",
       "propertyId": "plano-360-unit-project-in-downtown-plano",
       "score": 92,
       "property": "360-unit project in downtown Plano",
       "city": "Plano",
+      "address": null,
       "units": 360,
       "signalType": "Upcoming",
       "signal": "Site plan approved",
@@ -70,11 +73,12 @@
       "firstSeen": "2026-09-15"
     },
     {
-      "id": "l4",
+      "id": "tx-250-e-arapaho-rd-richardson-tx-75081-legacy-arapaho",
       "propertyId": "richardson-legacy-arapaho",
       "score": 92,
       "property": "Legacy Arapaho",
       "city": "Richardson",
+      "address": "250 E Arapaho Road, Richardson, TX 75081",
       "units": 443,
       "signalType": "Upcoming",
       "signal": "Permit issued Jun 2026",
@@ -91,11 +95,12 @@
       "firstSeen": "2026-09-15"
     },
     {
-      "id": "l5",
+      "id": "tx-north-side-of-spring-creek-pkwy-375-ft-east-of-k-ave-plano-tx-304-unit-project-at-spring-creek-pkwy-k-ave",
       "propertyId": "plano-304-unit-project-at-spring-creek-pkwy-k-ave",
       "score": 90,
       "property": "304-unit project at Spring Creek Pkwy & K Ave",
       "city": "Plano",
+      "address": "North side of Spring Creek Pkwy, 375 ft east of K Ave, Plano, TX",
       "units": 304,
       "signalType": "Upcoming",
       "signal": "Zoning filed Jul 2026",
@@ -112,11 +117,12 @@
       "firstSeen": "2026-09-15"
     },
     {
-      "id": "l6",
+      "id": "tx-1735-n-greenville-ave-richardson-tx-the-caroline-eastside",
       "propertyId": "richardson-the-caroline-eastside",
       "score": 86,
       "property": "The Caroline Eastside",
       "city": "Richardson",
+      "address": "1735 N. Greenville Ave, Richardson, TX",
       "units": 384,
       "signalType": "Upcoming",
       "signal": "Under construction",
@@ -133,11 +139,12 @@
       "firstSeen": "2026-09-15"
     },
     {
-      "id": "l7",
+      "id": "tx-2525-preston-rd-hathaway-at-willow-bend",
       "propertyId": "1716655",
       "score": 83,
       "property": "Hathaway At Willow Bend",
       "city": "Plano",
+      "address": "2525 Preston Rd",
       "units": 229,
       "signalType": "Sold",
       "signal": "Sold Jun 2026",
@@ -154,11 +161,12 @@
       "firstSeen": "2026-09-15"
     },
     {
-      "id": "l8",
+      "id": "tx-2810-routh-creek-pkwy-vantage-at-spring-creek",
       "propertyId": "2748103",
       "score": 80,
       "property": "Vantage At Spring Creek",
       "city": "Richardson",
+      "address": "2810 Routh Creek Pkwy",
       "units": 420,
       "signalType": "Sold",
       "signal": "Sold Jun 2026",
@@ -182,11 +190,12 @@
       "firstSeen": "2026-09-15"
     },
     {
-      "id": "l9",
+      "id": "tx-4701-preston-park-blvd-ellington",
       "propertyId": "2041713",
       "score": 77,
       "property": "Ellington",
       "city": "Plano",
+      "address": "4701 Preston Park Blvd",
       "units": 266,
       "signalType": "Sold",
       "signal": "Sold Jul 2026",
@@ -210,11 +219,12 @@
       "firstSeen": "2026-09-15"
     },
     {
-      "id": "l10",
+      "id": "tx-110-e-polk-st-richardson-tx-75081-polk-st-multifamily",
       "propertyId": "richardson-polk-st-multifamily",
       "score": 76,
       "property": "Polk St Multifamily",
       "city": "Richardson",
+      "address": "110 E. Polk Street, Richardson, TX 75081",
       "units": 281,
       "signalType": "Upcoming",
       "signal": "Under construction Apr 2026",
@@ -231,11 +241,12 @@
       "firstSeen": "2026-09-15"
     },
     {
-      "id": "l11",
+      "id": "tx-2300-kathryn-ln-23hundred-ridgeview",
       "propertyId": "2095999",
       "score": 75,
       "property": "23Hundred @ Ridgeview",
       "city": "Plano",
+      "address": "2300 Kathryn Ln",
       "units": 480,
       "signalType": "Sold",
       "signal": "Sold Jun 2025",
@@ -252,11 +263,12 @@
       "firstSeen": "2026-09-15"
     },
     {
-      "id": "l12",
+      "id": "tx-unknown-haggard-farm-townhomes",
       "propertyId": "plano-haggard-farm-townhomes",
       "score": 75,
       "property": "Haggard Farm Townhomes",
       "city": "Plano",
+      "address": null,
       "units": null,
       "signalType": "Upcoming",
       "signal": "Zoning filed Jun 2026",
@@ -273,11 +285,12 @@
       "firstSeen": "2026-09-15"
     },
     {
-      "id": "l13",
+      "id": "tx-6501-legacy-dr-plano-tx-the-parks-at-legacy-west",
       "propertyId": "plano-the-parks-at-legacy-west",
       "score": 74,
       "property": "The Parks at Legacy West",
       "city": "Plano",
+      "address": "6501 Legacy Drive, Plano, TX",
       "units": 261,
       "signalType": "Upcoming",
       "signal": "Under construction Jul 2026",
@@ -294,11 +307,12 @@
       "firstSeen": "2026-09-15"
     },
     {
-      "id": "l14",
+      "id": "tx-600-kissimmee-dr-plano-tx-the-buckley",
       "propertyId": "plano-the-buckley",
       "score": 74,
       "property": "The Buckley",
       "city": "Plano",
+      "address": "600 Kissimmee Drive, Plano, TX",
       "units": 338,
       "signalType": "Upcoming",
       "signal": "Leasing Apr 2026",
@@ -315,11 +329,12 @@
       "firstSeen": "2026-09-15"
     },
     {
-      "id": "l15",
+      "id": "tx-sherman-st-richardson-tx-apartment-complex-on-sherman-street",
       "propertyId": "richardson-apartment-complex-on-sherman-street",
       "score": 73,
       "property": "Apartment complex on Sherman Street",
       "city": "Richardson",
+      "address": "Sherman Street, Richardson, TX",
       "units": null,
       "signalType": "Upcoming",
       "signal": "Zoning approved",
@@ -336,11 +351,12 @@
       "firstSeen": "2026-09-15"
     },
     {
-      "id": "l16",
+      "id": "tx-9600-coit-rd-riachi-at-one-21-apartments",
       "propertyId": "2646098",
       "score": 70,
       "property": "Riachi At One 21 Apartments",
       "city": "Plano",
+      "address": "9600 Coit Rd",
       "units": 402,
       "signalType": "Sold",
       "signal": "Owner changed to MFREVF V - PLANO LP",
@@ -357,11 +373,12 @@
       "firstSeen": "2026-09-15"
     },
     {
-      "id": "l17",
+      "id": "tx-3640-mapleshade-ln-orchards-market-plaza-senior-apts",
       "propertyId": "2820374",
       "score": 68,
       "property": "Orchards Market Plaza Senior Apts",
       "city": "Plano",
+      "address": "3640 Mapleshade Ln",
       "units": 178,
       "signalType": "Sold",
       "signal": "Sold Jul 2026",
@@ -385,11 +402,12 @@
       "firstSeen": "2026-09-15"
     },
     {
-      "id": "l18",
+      "id": "tx-110-w-cityline-dr-axis-110",
       "propertyId": "2721394",
       "score": 67,
       "property": "Axis 110",
       "city": "Richardson",
+      "address": "110 W Cityline Dr",
       "units": 351,
       "signalType": "Sold",
       "signal": "Sold Dec 2025",
@@ -410,11 +428,12 @@
       "firstSeen": "2026-09-15"
     },
     {
-      "id": "l19",
+      "id": "tx-701-legacy-dr-legends-at-chase-oaks-apartments",
       "propertyId": "2058069",
       "score": 67,
       "property": "Legends At Chase Oaks Apartments",
       "city": "Plano",
+      "address": "701 Legacy Dr",
       "units": 346,
       "signalType": "Sold",
       "signal": "Sold Sep 2025",
@@ -438,11 +457,12 @@
       "firstSeen": "2026-09-15"
     },
     {
-      "id": "l20",
+      "id": "tx-811-n-central-expressway-plano-tx-75075-collin-creek-multifamily",
       "propertyId": "plano-collin-creek-multifamily",
       "score": 67,
       "property": "Collin Creek Multifamily",
       "city": "Plano",
+      "address": "811 N Central Expressway, Plano, TX 75075",
       "units": null,
       "signalType": "Upcoming",
       "signal": "Permit issued Jun 2026",
@@ -459,11 +479,12 @@
       "firstSeen": "2026-09-15"
     },
     {
-      "id": "l21",
+      "id": "tx-3500-routh-creek-pkwy-richardson-tx-75082-jlb-west-cityline",
       "propertyId": "richardson-jlb-west-cityline",
       "score": 67,
       "property": "JLB West Cityline",
       "city": "Richardson",
+      "address": "3500 Routh Creek Pkwy, Richardson, TX 75082",
       "units": null,
       "signalType": "Upcoming",
       "signal": "Permit issued",
@@ -480,11 +501,12 @@
       "firstSeen": "2026-09-15"
     },
     {
-      "id": "l22",
+      "id": "tx-6080-water-st-grand-at-legacy-west-apartments",
       "propertyId": "2750390",
       "score": 65,
       "property": "Grand At Legacy West Apartments",
       "city": "Plano",
+      "address": "6080 Water St",
       "units": 621,
       "signalType": "Sold",
       "signal": "Sold Apr 2025",
@@ -508,11 +530,12 @@
       "firstSeen": "2026-09-15"
     },
     {
-      "id": "l23",
+      "id": "tx-1109-park-vista-rd-park-residences-plano",
       "propertyId": "2945424",
       "score": 64,
       "property": "Park Residences Plano",
       "city": "Plano",
+      "address": "1109 Park Vista Rd",
       "units": 318,
       "signalType": "Sold",
       "signal": "Sold Mar 2026",
@@ -536,11 +559,12 @@
       "firstSeen": "2026-09-15"
     },
     {
-      "id": "l24",
+      "id": "tx-6000-ohio-dr-the-dayton",
       "propertyId": "1627494",
       "score": 64,
       "property": "The Dayton",
       "city": "Plano",
+      "address": "6000 Ohio Dr",
       "units": 389,
       "signalType": "Sold",
       "signal": "Sold Apr 2025",
@@ -564,11 +588,12 @@
       "firstSeen": "2026-09-15"
     },
     {
-      "id": "l25",
+      "id": "tx-2401-w-spring-creek-pkwy-bellevue-at-spring-creek-apartments",
       "propertyId": "1503117",
       "score": 63,
       "property": "Bellevue At Spring Creek Apartments",
       "city": "Plano",
+      "address": "2401 W Spring Creek Pkwy",
       "units": 278,
       "signalType": "Sold",
       "signal": "Sold Jun 2025",
@@ -585,11 +610,12 @@
       "firstSeen": "2026-09-15"
     },
     {
-      "id": "l26",
+      "id": "tx-6300-windcrest-dr-creekside-at-legacy-apartments",
       "propertyId": "2058512",
       "score": 63,
       "property": "Creekside At Legacy Apartments",
       "city": "Plano",
+      "address": "6300 Windcrest Dr",
       "units": 380,
       "signalType": "Sold",
       "signal": "Sold Sep 2024",
@@ -613,11 +639,12 @@
       "firstSeen": "2026-09-15"
     },
     {
-      "id": "l27",
+      "id": "tx-spring-creek-pkwy-and-parkwood-blvd-plano-tx-75024-haggard-farm",
       "propertyId": "plano-haggard-farm",
       "score": 63,
       "property": "Haggard Farm",
       "city": "Plano",
+      "address": "Spring Creek Parkway and Parkwood Boulevard, Plano, TX 75024",
       "units": null,
       "signalType": "Upcoming",
       "signal": "Under construction Dec 2025",
@@ -634,11 +661,12 @@
       "firstSeen": "2026-09-15"
     },
     {
-      "id": "l28",
+      "id": "tx-3700-mapleshade-ln-axis-3700",
       "propertyId": "2560139",
       "score": 60,
       "property": "Axis 3700",
       "city": "Plano",
+      "address": "3700 Mapleshade Ln",
       "units": 300,
       "signalType": "Sold",
       "signal": "Owner changed to APARTMENTS AXIS SPE LLC",
@@ -658,11 +686,12 @@
       "firstSeen": "2026-09-15"
     },
     {
-      "id": "l29",
+      "id": "tx-3501-n-jupiter-rd-spring-pointe-apartments",
       "propertyId": "1615274",
       "score": 56,
       "property": "Spring Pointe Apartments",
       "city": "Richardson",
+      "address": "3501 N Jupiter Rd",
       "units": 208,
       "signalType": "Sold",
       "signal": "Sold Apr 2025",
@@ -679,11 +708,12 @@
       "firstSeen": "2026-09-15"
     },
     {
-      "id": "l30",
+      "id": "tx-3700-preston-rd-lakeshore-at-preston-apartments",
       "propertyId": "1976049",
       "score": 55,
       "property": "Lakeshore At Preston Apartments",
       "city": "Plano",
+      "address": "3700 Preston Rd",
       "units": 302,
       "signalType": "Sold",
       "signal": "Sold Sep 2024",
@@ -707,11 +737,12 @@
       "firstSeen": "2026-09-15"
     },
     {
-      "id": "l31",
+      "id": "tx-601-belpree-dr-the-ludlow",
       "propertyId": "2908642",
       "score": 53,
       "property": "The Ludlow",
       "city": "Plano",
+      "address": "601 Belpree Dr",
       "units": 326,
       "signalType": "Sold",
       "signal": "Owner changed to HERITAGE CREEKSIDE BLOCK B OWNER LLC",
@@ -735,11 +766,12 @@
       "firstSeen": "2026-09-15"
     },
     {
-      "id": "l32",
+      "id": "tx-8900-independence-pkwy-mcdermott-place-apartments",
       "propertyId": "2504520",
       "score": 52,
       "property": "Mcdermott Place Apartments",
       "city": "Plano",
+      "address": "8900 Independence Pkwy",
       "units": 324,
       "signalType": "Sold",
       "signal": "Owner changed to HEITMAN CREDIT ACQUISITION XL LP",
@@ -763,11 +795,12 @@
       "firstSeen": "2026-09-15"
     },
     {
-      "id": "l33",
+      "id": "tx-500-coit-rd-overture-plano-senior-apartments",
       "propertyId": "2710065",
       "score": 49,
       "property": "Overture Plano Senior Apartments",
       "city": "Plano",
+      "address": "500 Coit Rd",
       "units": 168,
       "signalType": "Sold",
       "signal": "Sold Sep 2025",
@@ -791,11 +824,12 @@
       "firstSeen": "2026-09-15"
     },
     {
-      "id": "l34",
+      "id": "tx-4250-e-renner-rd-breckinridge-point-apartments",
       "propertyId": "2058066",
       "score": 48,
       "property": "Breckinridge Point Apartments",
       "city": "Richardson",
+      "address": "4250 E Renner Rd",
       "units": 226,
       "signalType": "Sold",
       "signal": "Sold Jun 2025",
@@ -819,11 +853,12 @@
       "firstSeen": "2026-09-15"
     },
     {
-      "id": "l35",
+      "id": "tx-3500-north-star-rd-breckenridge-point-apartments",
       "propertyId": "2058065",
       "score": 46,
       "property": "Breckenridge Point Apartments",
       "city": "Richardson",
+      "address": "3500 North Star Rd",
       "units": 214,
       "signalType": "Sold",
       "signal": "Sold Jun 2025",
@@ -847,11 +882,12 @@
       "firstSeen": "2026-09-15"
     },
     {
-      "id": "l36",
+      "id": "tx-5401-independence-pkwy-the-wexley",
       "propertyId": "1511233",
       "score": 45,
       "property": "The Wexley",
       "city": "Plano",
+      "address": "5401 Independence Pkwy",
       "units": 204,
       "signalType": "Sold",
       "signal": "Sold Aug 2025",
@@ -875,11 +911,12 @@
       "firstSeen": "2026-09-15"
     },
     {
-      "id": "l37",
+      "id": "tx-8020-windrose-ave-the-holland",
       "propertyId": "2734943",
       "score": 43,
       "property": "The Holland",
       "city": "Plano",
+      "address": "8020 Windrose Ave",
       "units": 175,
       "signalType": "Sold",
       "signal": "Sold Apr 2025",
@@ -903,11 +940,12 @@
       "firstSeen": "2026-09-15"
     },
     {
-      "id": "l38",
+      "id": "tx-1300-rigsbee-dr-woodlands-of-plano-apartments-tc",
       "propertyId": "365483",
       "score": 43,
       "property": "Woodlands Of Plano Apartments Tc",
       "city": "Plano",
+      "address": "1300 Rigsbee Dr",
       "units": 232,
       "signalType": "Sold",
       "signal": "Owner changed to CLOVER WOODLANDS PLANO OWNER LLC",
@@ -931,11 +969,12 @@
       "firstSeen": "2026-09-15"
     },
     {
-      "id": "l39",
+      "id": "tx-2501-ohio-dr-the-calvin",
       "propertyId": "2027278",
       "score": 42,
       "property": "The Calvin",
       "city": "Plano",
+      "address": "2501 Ohio Dr",
       "units": 167,
       "signalType": "Sold",
       "signal": "Sold Dec 2024",
@@ -959,11 +998,12 @@
       "firstSeen": "2026-09-15"
     },
     {
-      "id": "l40",
+      "id": "tx-7850-communications-pkwy-instrata-at-legacy-west",
       "propertyId": "2808931",
       "score": 41,
       "property": "Instrata At Legacy West",
       "city": "Plano",
+      "address": "7850 Communications Pkwy",
       "units": 161,
       "signalType": "Sold",
       "signal": "Sold Apr 2025",
@@ -987,11 +1027,12 @@
       "firstSeen": "2026-09-15"
     },
     {
-      "id": "l41",
+      "id": "tx-700-18th-st-alta-vista-apartments",
       "propertyId": "148646",
       "score": 38,
       "property": "Alta Vista Apartments",
       "city": "Plano",
+      "address": "700 18Th St",
       "units": 133,
       "signalType": "Sold",
       "signal": "Sold Feb 2025",
@@ -1015,11 +1056,12 @@
       "firstSeen": "2026-09-15"
     },
     {
-      "id": "l42",
+      "id": "tx-1600-amelia-ct-aspen-court-apartments",
       "propertyId": "1808832",
       "score": 32,
       "property": "Aspen Court Apartments",
       "city": "Plano",
+      "address": "1600 Amelia Ct",
       "units": 70,
       "signalType": "Sold",
       "signal": "Sold May 2025",
