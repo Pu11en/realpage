@@ -3,117 +3,376 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Crane Marketing Board</title>
+<title>CraneSignal Marketing Board</title>
 <style>
-  :root { --bg:#f6f5f2; --card:#fff; --ink:#1c1c1c; --muted:#6b6b6b; --line:#e4e2dd; --accent:#d9731a; }
+  :root {
+    --bg:#f7f4ee;
+    --panel:#fffdf8;
+    --ink:#1d2420;
+    --muted:#67706b;
+    --line:#ded8cd;
+    --accent:#c45f1d;
+    --accent-2:#2f7768;
+    --accent-3:#3d5a9b;
+    --soft:#f0eadf;
+    --ready:#e9f4ef;
+    --draft:#f7eadf;
+    --needs:#eef0f6;
+  }
   * { box-sizing:border-box; }
-  body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; }
-  header { max-width:880px; margin:0 auto; padding:40px 24px 8px; }
-  h1 { margin:0; font-size:28px; }
-  header p { margin:4px 0 0; color:var(--muted); }
-  main { max-width:880px; margin:0 auto; padding:16px 24px 64px; display:grid; gap:20px; }
-  .card { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:24px; }
-  .meta { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:8px; }
-  .tag { font-size:12px; font-weight:600; text-transform:uppercase; letter-spacing:.04em; padding:2px 8px; border-radius:6px; background:#f1ece4; color:#7a4a14; }
-  .tag.date { background:#eee; color:var(--muted); }
-  h2 { margin:0 0 12px; font-size:20px; }
-  h3 { margin:20px 0 8px; font-size:14px; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
-  .block { position:relative; }
-  pre { margin:0; white-space:pre-wrap; background:#faf9f7; border:1px solid var(--line); border-radius:8px; padding:16px; font:14px/1.6 ui-monospace, SFMono-Regular, Menlo, monospace; }
-  button { position:absolute; top:8px; right:8px; border:1px solid var(--line); background:#fff; border-radius:6px; padding:4px 10px; font:13px system-ui, sans-serif; cursor:pointer; }
-  button:hover { border-color:var(--accent); }
-  ul { margin:0; padding-left:20px; }
+  body { margin:0; background:var(--bg); color:var(--ink); font:15px/1.5 Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; }
+  header { max-width:1180px; margin:0 auto; padding:28px 20px 12px; display:grid; gap:14px; }
+  .topline { color:var(--muted); font-size:13px; font-weight:700; text-transform:uppercase; letter-spacing:.08em; }
+  h1 { margin:0; font-size:34px; line-height:1.05; letter-spacing:0; max-width:760px; }
+  p { margin:0; }
+  .summary { max-width:820px; color:var(--muted); font-size:16px; }
+  .stats { display:grid; grid-template-columns:repeat(4, minmax(0, 1fr)); gap:10px; }
+  .stat { background:var(--panel); border:1px solid var(--line); border-radius:8px; padding:14px; min-height:92px; }
+  .stat strong { display:block; font-size:24px; line-height:1.1; }
+  .stat span { color:var(--muted); font-size:13px; }
+  nav { position:sticky; top:0; z-index:4; background:rgba(247,244,238,.94); border-block:1px solid var(--line); backdrop-filter:blur(10px); }
+  .tabs { max-width:1180px; margin:0 auto; padding:10px 20px; display:flex; gap:8px; overflow-x:auto; }
+  .tabs a { text-decoration:none; color:var(--muted); white-space:nowrap; padding:8px 12px; border-radius:8px; border:1px solid transparent; font-weight:700; }
+  .tabs a.on { color:var(--ink); background:var(--panel); border-color:var(--line); }
+  main { max-width:1180px; margin:0 auto; padding:20px 20px 70px; }
+  .grid { display:grid; grid-template-columns:repeat(3, minmax(0, 1fr)); gap:14px; align-items:start; }
+  .grid.two { grid-template-columns:1.1fr .9fr; }
+  .card { background:var(--panel); border:1px solid var(--line); border-radius:8px; padding:18px; display:grid; gap:12px; }
+  .card h2, .card h3 { margin:0; line-height:1.15; letter-spacing:0; }
+  .card h2 { font-size:20px; }
+  .card h3 { font-size:16px; }
+  .muted { color:var(--muted); }
+  .meta { display:flex; gap:6px; flex-wrap:wrap; align-items:center; }
+  .tag { display:inline-flex; align-items:center; min-height:24px; border-radius:6px; padding:3px 8px; background:var(--soft); color:#765126; font-size:12px; font-weight:800; text-transform:uppercase; letter-spacing:.04em; }
+  .tag.ready { background:var(--ready); color:#22664f; }
+  .tag.draft { background:var(--draft); color:#8a4d18; }
+  .tag.needs { background:var(--needs); color:#40507e; }
+  .tag.priority { background:#fdeec9; color:#6f4b08; }
+  ul { margin:0; padding-left:18px; }
+  li + li { margin-top:5px; }
+  .matrix { display:grid; gap:10px; }
+  .row { display:grid; grid-template-columns:150px 1fr; gap:12px; padding:12px; border:1px solid var(--line); border-radius:8px; background:#fffaf1; }
+  .row strong { display:block; }
+  .row small { color:var(--muted); }
+  .copyblock { position:relative; }
+  pre { margin:0; overflow:auto; white-space:pre-wrap; background:#fbf8f1; border:1px solid var(--line); border-radius:8px; padding:14px 64px 14px 14px; color:#222822; font:13px/1.55 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+  button.copy { position:absolute; top:8px; right:8px; min-width:46px; height:30px; border:1px solid var(--line); background:#fff; border-radius:7px; cursor:pointer; color:var(--muted); font-weight:900; }
+  button.copy:hover { color:var(--accent); border-color:var(--accent); }
+  .idea { border-left:4px solid var(--accent-2); }
+  .idea:nth-child(2n) { border-left-color:var(--accent-3); }
+  .repo { border-left:4px solid var(--accent); }
+  .checklist { display:grid; gap:8px; }
+  .check { display:flex; gap:8px; align-items:flex-start; padding:9px 10px; border:1px solid var(--line); border-radius:8px; background:#fffaf1; }
+  .box { width:16px; height:16px; margin-top:2px; border:2px solid var(--accent-2); border-radius:4px; flex:0 0 auto; }
   a { color:var(--accent); }
-  .empty { color:var(--muted); }
-  nav { max-width:880px; margin:16px auto 0; padding:0 24px; display:flex; gap:8px; }
-  nav a { text-decoration:none; color:var(--muted); padding:6px 14px; border-radius:8px; border:1px solid transparent; }
-  nav a.on { color:var(--ink); background:#fff; border-color:var(--line); font-weight:600; }
+  @media (max-width:900px) {
+    .stats, .grid, .grid.two { grid-template-columns:1fr; }
+    h1 { font-size:28px; }
+    .row { grid-template-columns:1fr; }
+  }
 </style>
 </head>
 <body>
 <header>
-  <h1>Crane Marketing Board</h1>
-  <p>Only the marketing work you do by hand. Tell a session "remove this card" once you've posted it.</p>
+  <div class="topline">CraneSignal campaign command board</div>
+  <h1>Plan the video once, then adapt it for every place the audience actually hangs out.</h1>
+  <p class="summary">Audience: people selling software or services into apartment buildings. Core angle: use recent permits and sales to choose who is worth researching, then find the person worth contacting.</p>
+  <section class="stats" aria-label="Campaign facts">
+    <div class="stat"><strong>1,876</strong><span>buildings tracked. Use the live screen before filming.</span></div>
+    <div class="stat"><strong>175</strong><span>with a permit or sale in the last six months.</span></div>
+    <div class="stat"><strong>Free</strong><span>browsing without login; account unlocks contact research and downloads.</span></div>
+    <div class="stat"><strong>Rule</strong><span>Reddit answers first. LinkedIn is the main posting channel.</span></div>
+  </section>
 </header>
-<nav><a href="#marketing" data-tab="marketing">Marketing</a><a href="#interview" data-tab="interview">Interview practice</a></nav>
+
+<nav><div class="tabs">
+  <a href="#today" data-tab="today">Today</a>
+  <a href="#videos" data-tab="videos">Video Backlog</a>
+  <a href="#channels" data-tab="channels">Where To Post</a>
+  <a href="#copy" data-tab="copy">Text Variants</a>
+  <a href="#research" data-tab="research">Repos & Skills</a>
+</div></nav>
+
 <main id="board"></main>
 
 <script>
-/*
-  THE CARDS. Sessions edit only this list (newest first). Fields:
-  type, title, added (YYYY-MM-DD), basedOn (data the card uses),
-  sections: [{ label, text }]  -> each shows with a Copy button
-  whereToPost: [text or URL], files: [{ name, path }] (paths relative to this folder, put in ./assets/)
-*/
-const CARDS = [
+const CAMPAIGN = {
+  goal: "Get apartment-software and apartment-services sellers to try CraneSignal by showing one specific reason to research a building before pitching.",
+  promise: "CraneSignal helps you narrow a huge apartment list into leads worth checking, then helps find who to call.",
+  avoid: ["Do not claim a sale or permit proves a vendor switch.", "Do not name covered states.", "Do not say scrape.", "Do not pitch Reddit before answering the question.", "Do not publish a count without matching it to the live product screen."],
+  next: ["Record one 30-60 second screen video.", "Pick one primary channel and one comment/reply channel.", "Write a native text wrapper for each channel.", "Log where it went and what came back."]
+};
+
+const VIDEOS = [
   {
-    type: "Video · product demo",
-    title: "CraneSignal product demo (2–3 min, your voice over a screen recording)",
-    added: "2026-09-15",
-    basedOn: "Current CraneSignal data: 307 Dallas–Fort Worth projects, ~61,000 apartments, 198 permitted or under construction",
-    sections: [
-      { label: "Rough outline (a content session will turn this into a full script)", text:
-`0:00 Hook — "There are 198 apartment buildings being built in Dallas–Fort Worth right now. Most people who sell to them find out after they open."
-0:15 The problem — by opening day, the building has already picked its management company, software and vendors.
-0:30 Open CraneSignal — show the Early Leads list for Dallas–Fort Worth.
-0:50 Pick one big project — name, city, number of apartments, opening date, developer, office phone.
-1:15 Show the map — where the new buildings are clustering.
-1:35 Show the permit or news link — every lead comes from a public record you can check.
-1:55 Ask the chat a question — e.g. "Which DFW projects open in the next 6 months?"
-2:20 Close — "It's free early access right now. Link below — tell me what you'd want it to do."` },
-      { label: "Video title", text: "198 apartment buildings are going up in Dallas–Fort Worth. Here's how to find them before they open." },
-      { label: "Video description", text:
-`CraneSignal finds new apartment buildings while they're still permits and construction sites, so you can reach them before opening day.
-
-This demo covers Dallas–Fort Worth: 307 projects, about 61,000 apartments.
-
-Free early access — I'd love your feedback.` }
-    ],
-    whereToPost: ["YouTube (full video)", "Later: cut into Shorts under 60 seconds"],
-    files: []
+    status: "ready",
+    priority: "Start here",
+    title: "Which building would you call first?",
+    hook: "1,876 apartment buildings. If you sell software to apartment owners, which one would you call first?",
+    shoot: ["Open the list.", "Filter or point to recent activity.", "Open one building.", "Say why you would research it before pitching."],
+    best: ["LinkedIn native video", "X video with short text", "YouTube Shorts"],
+    copy: "I would not call the whole list. I would start with what changed: sale, permit, new owner, new project. That is what CraneSignal is for."
+  },
+  {
+    status: "ready",
+    priority: "Strong proof",
+    title: "The $22.6M Phoenix example",
+    hook: "$22.6 million. That is what this apartment building sold for in August.",
+    shoot: ["Show the building.", "Show sale date and source.", "Show the buyer/new owner if visible.", "Ask who a software seller should research next."],
+    best: ["LinkedIn", "X", "Founder-led sales email follow-up"],
+    copy: "A recent sale is not a guaranteed software switch. It is a reason to look closer before everyone else sends the same cold email."
+  },
+  {
+    status: "draft",
+    priority: "Good Reddit seed",
+    title: "Making tomorrow's call list",
+    hook: "Ten prospects for tomorrow. I am starting with apartments that changed recently, then checking who is behind them.",
+    shoot: ["Make a shortlist from recent sales/permits.", "Open the research/chat panel.", "Show what a free account unlocks.", "End with feedback ask."],
+    best: ["LinkedIn", "r/sales helpful answer when someone asks about prospecting", "X thread"],
+    copy: "The job is not 'more leads.' The job is knowing which leads deserve research before you spend the morning calling."
+  },
+  {
+    status: "draft",
+    priority: "Explainer",
+    title: "Finding the actual buyer",
+    hook: "One apartment building, but who actually picks the software: the building, the owner, or the management company?",
+    shoot: ["Open one building.", "Show owner/manager fields.", "Show the AI research prompt.", "Explain why a front desk number is not enough."],
+    best: ["LinkedIn", "YouTube Shorts", "Reddit reply only if directly relevant"],
+    copy: "The first question is the building. The second question is who can actually say yes."
+  },
+  {
+    status: "needs",
+    priority: "Needs new screen count",
+    title: "Start with the freshest 175",
+    hook: "175 apartment buildings had a permit or sale in the last six months. That is where I would start.",
+    shoot: ["Verify the count in app.", "Show the freshness claim on screen.", "Open two examples.", "Invite someone to tell you their metro."],
+    best: ["LinkedIn", "X", "Newsletter intro"],
+    copy: "Most lead lists hide staleness. I would rather show the date and let you decide if the lead is worth your time."
   }
 ];
 
-/*
-  INTERVIEW PRACTICE TAB. Filled only by interview-practice sessions, built from Drew's own
-  spoken run-throughs. Same card fields as above (type, title, added, sections, whereToPost, files).
-*/
-const INTERVIEW = [];
+const CHANNELS = [
+  {
+    name: "LinkedIn",
+    audience: "Founders, sales leaders, partnerships people, apartment-tech operators.",
+    use: "Main place for native video, short founder POV, and comments on multifamily/software posts.",
+    format: "Native video plus 3-6 short lines. Mention free browsing and account unlock clearly.",
+    caution: "Do not make it sound like a guaranteed buying trigger. Say 'reason to research.'"
+  },
+  {
+    name: "X",
+    audience: "Sales/startup people, CRE data people, builders, founders.",
+    use: "Short clips, one-number hooks, replies to relevant real estate or sales threads.",
+    format: "One sharp sentence above the video. Threads only when there are 3+ real facts.",
+    caution: "Avoid vague build-in-public chatter. Lead with the specific building or number."
+  },
+  {
+    name: "Reddit",
+    audience: "r/sales, r/PropertyManagement, r/CommercialRealEstate, r/RealEstateTechnology when the question fits.",
+    use: "Helpful replies first. Only mention CraneSignal when it is natural and disclosed.",
+    format: "Answer the person, give 2-3 practical checks, then disclose the tool if useful.",
+    caution: "Never drop a promotional video cold. Check subreddit rules in browser before posting."
+  },
+  {
+    name: "YouTube Shorts",
+    audience: "Search and discovery audience for apartment leads, multifamily sales, property-tech sales.",
+    use: "Archive the best short videos so the campaign has a public shelf life.",
+    format: "Title with the number or building. Description says what the viewer can do free.",
+    caution: "Shorts need the point in the first 2 seconds. Do not start with your name."
+  },
+  {
+    name: "Founder email / DM",
+    audience: "Specific software/service sellers you already know or found manually.",
+    use: "Send the video as proof after a personal first line about their market.",
+    format: "One sentence why this building matters, one sentence what the video shows, one ask for feedback.",
+    caution: "No bulk blast from this board. Keep it hand-picked."
+  }
+];
 
-const board = document.getElementById("board");
+const COPY = [
+  {
+    label: "LinkedIn wrapper",
+    text: `1,876 apartment buildings is too many to call.
+
+If I sold software or services into apartments, I would start with one question:
+
+What changed recently?
+
+Sale, permit, new owner, new project.
+
+That does not prove they are buying. It tells me which buildings are worth researching before I write the pitch.
+
+That is what I am building with CraneSignal. Browsing is free; a free account unlocks the who-to-call research and downloads.`
+  },
+  {
+    label: "X wrapper",
+    text: `1,876 apartment buildings is not a call list.
+
+It is a pile to narrow.
+
+I would start with the buildings that recently sold or filed permits, then research who actually picks the software.`
+  },
+  {
+    label: "Reddit-safe disclosure",
+    text: `One practical way to do this is to start with a recent event, like a sale or permit, then work backward to the owner or management company instead of calling the building cold.
+
+Full disclosure: I am building a free tool that tracks apartment buildings like this, so I am biased. But even without the tool, city permit records, sale records, and management-company press releases are the path I would check first.`
+  },
+  {
+    label: "YouTube Shorts description",
+    text: `CraneSignal is a free list of apartment buildings that recently sold, filed permits, or are being built.
+
+Browse free. Create a free account for who-to-call research, CSV export, and call-list PDFs.
+
+Early access is free while I build it and I want feedback from people selling into apartments.`
+  },
+  {
+    label: "DM after posting",
+    text: `I recorded a quick screen video showing how I would narrow apartment leads before pitching.
+
+The basic idea: do not call every building; start with what changed, then research who can actually say yes.
+
+Would this be useful for the kind of apartment accounts you sell into?`
+  }
+];
+
+const REPOS = [
+  {
+    name: "stepolan/marketing-repo-template",
+    url: "https://github.com/stepolan/marketing-repo-template",
+    why: "Best structure idea: keep campaign briefs, voice profiles, content calendar, drafts, and posted work as versioned files.",
+    borrow: "Use the folder/status logic, not the whole repo.",
+    quality: "MIT, small, pushed 2026-05-04, low stars but directly relevant."
+  },
+  {
+    name: "jakeolschewski/social-media-content-calendar",
+    url: "https://github.com/jakeolschewski/social-media-content-calendar",
+    why: "Useful model for content pillars, platform fit, batching, and repurposing one idea across formats.",
+    borrow: "Steal the layered calendar idea: pillar, format, hook.",
+    quality: "MIT, pushed 2026-03-26, small but on-topic."
+  },
+  {
+    name: "Gingiris/gingiris-b2b-growth",
+    url: "https://github.com/Gingiris/gingiris-b2b-growth",
+    why: "Broad B2B SaaS go-to-market playbook. Helpful for thinking beyond posting into partnerships, sales, and channel strategy.",
+    borrow: "Use sparingly for strategy prompts; it is much bigger than this campaign needs.",
+    quality: "MIT, 98 stars, pushed 2026-05-07."
+  },
+  {
+    name: "Gingiris/gingiris-launch",
+    url: "https://github.com/Gingiris/gingiris-launch",
+    why: "Good launch checklist and Reddit/community angle, but more launch-event oriented than daily campaign work.",
+    borrow: "Use for a later launch week, not today's daily posting board.",
+    quality: "MIT, 205 stars, pushed 2026-05-07."
+  },
+  {
+    name: "rediumvex/social-media-caption-generator-claude",
+    url: "https://github.com/rediumvex/social-media-caption-generator-claude",
+    why: "Skill pattern for generating platform-native captions from one script or screenshot.",
+    borrow: "The board now has per-channel copy variants for this exact reason.",
+    quality: "MIT, 127 stars, pushed 2026-08-11."
+  },
+  {
+    name: "CosmoBlk/email-marketing-bible",
+    url: "https://github.com/CosmoBlk/email-marketing-bible",
+    why: "Strong email-marketing skill if this campaign turns into a newsletter or feedback sequence.",
+    borrow: "Later. Not needed for the first video posting board.",
+    quality: "MIT, 309 stars, pushed 2026-09-08."
+  }
+];
+
 const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;" }[c]));
-const link = s => /^https?:\/\//.test(s) ? `<a href="${esc(s)}" target="_blank">${esc(s)}</a>` : esc(s);
+const board = document.getElementById("board");
+
+function tagClass(status) {
+  return status === "ready" ? "ready" : status === "draft" ? "draft" : "needs";
+}
+
+function copyBlock(text, id) {
+  return `<div class="copyblock"><pre id="${id}">${esc(text)}</pre><button class="copy" data-t="${id}" title="Copy text">Copy</button></div>`;
+}
+
+function renderToday() {
+  return `<section class="grid two">
+    <article class="card">
+      <div class="meta"><span class="tag priority">Campaign spine</span></div>
+      <h2>What this board is for</h2>
+      <p><strong>Goal:</strong> ${esc(CAMPAIGN.goal)}</p>
+      <p><strong>Promise:</strong> ${esc(CAMPAIGN.promise)}</p>
+      <h3>Next session checklist</h3>
+      <div class="checklist">${CAMPAIGN.next.map(item => `<div class="check"><span class="box"></span><span>${esc(item)}</span></div>`).join("")}</div>
+    </article>
+    <article class="card">
+      <div class="meta"><span class="tag needs">Do not break</span></div>
+      <h2>Public-post guardrails</h2>
+      <ul>${CAMPAIGN.avoid.map(item => `<li>${esc(item)}</li>`).join("")}</ul>
+      <h3>Recommended first post</h3>
+      <p><strong>${esc(VIDEOS[0].title)}</strong></p>
+      <p class="muted">${esc(VIDEOS[0].hook)}</p>
+    </article>
+  </section>`;
+}
+
+function renderVideos() {
+  return `<section class="grid">${VIDEOS.map((v, i) => `<article class="card idea">
+    <div class="meta"><span class="tag ${tagClass(v.status)}">${esc(v.status)}</span><span class="tag priority">${esc(v.priority)}</span></div>
+    <h2>${esc(v.title)}</h2>
+    <p><strong>Hook:</strong> ${esc(v.hook)}</p>
+    <h3>Shot list</h3>
+    <ul>${v.shoot.map(s => `<li>${esc(s)}</li>`).join("")}</ul>
+    <h3>Best places</h3>
+    <ul>${v.best.map(s => `<li>${esc(s)}</li>`).join("")}</ul>
+    <h3>Native angle</h3>
+    ${copyBlock(v.copy, `video-${i}`)}
+  </article>`).join("")}</section>`;
+}
+
+function renderChannels() {
+  return `<section class="matrix">${CHANNELS.map(c => `<article class="card">
+    <div class="row">
+      <div><strong>${esc(c.name)}</strong><small>${esc(c.audience)}</small></div>
+      <div>
+        <p><strong>Use:</strong> ${esc(c.use)}</p>
+        <p><strong>Format:</strong> ${esc(c.format)}</p>
+        <p><strong>Watch:</strong> ${esc(c.caution)}</p>
+      </div>
+    </div>
+  </article>`).join("")}</section>`;
+}
+
+function renderCopy() {
+  return `<section class="grid two">${COPY.map((c, i) => `<article class="card">
+    <div class="meta"><span class="tag ready">Ready text</span></div>
+    <h2>${esc(c.label)}</h2>
+    ${copyBlock(c.text, `copy-${i}`)}
+  </article>`).join("")}</section>`;
+}
+
+function renderResearch() {
+  return `<section class="grid">${REPOS.map(r => `<article class="card repo">
+    <div class="meta"><span class="tag ready">Useful pattern</span></div>
+    <h2><a href="${esc(r.url)}" target="_blank" rel="noreferrer">${esc(r.name)}</a></h2>
+    <p>${esc(r.why)}</p>
+    <p><strong>Borrow:</strong> ${esc(r.borrow)}</p>
+    <p class="muted">${esc(r.quality)}</p>
+  </article>`).join("")}</section>`;
+}
 
 function render() {
-const tab = location.hash === "#interview" ? "interview" : "marketing";
-document.querySelectorAll("nav a").forEach(a => a.classList.toggle("on", a.dataset.tab === tab));
-const list = tab === "interview" ? INTERVIEW : CARDS;
-board.innerHTML = list.length ? list.map((c, i) => `
-  <article class="card">
-    <div class="meta"><span class="tag">${esc(c.type)}</span><span class="tag date">Added ${esc(c.added)}</span></div>
-    <h2>${esc(c.title)}</h2>
-    ${c.basedOn ? `<p class="empty">Based on: ${esc(c.basedOn)}</p>` : ""}
-    ${c.sections.map((s, j) => `
-      <h3>${esc(s.label)}</h3>
-      <div class="block"><pre id="t${i}-${j}">${esc(s.text)}</pre><button data-t="t${i}-${j}">Copy</button></div>`).join("")}
-    ${c.whereToPost?.length ? `<h3>Where to post</h3>
-    <ul>${c.whereToPost.map(w => `<li>${link(w)}</li>`).join("")}</ul>` : ""}
-    ${!c.files ? "" : `<h3>Files</h3>`}
-    ${!c.files ? "" : c.files.length ? `<ul>${c.files.map(f => `<li><a href="${esc(f.path)}" download>${esc(f.name)}</a></li>`).join("")}</ul>`
-                     : `<p class="empty">None yet.</p>`}
-  </article>`).join("") : `<p class="empty">${tab === "interview"
-    ? "Nothing yet. Your first interview-practice session fills this in from how you talk through CraneSignal."
-    : "No cards yet."}</p>`;
+  const tab = (location.hash || "#today").slice(1);
+  document.querySelectorAll(".tabs a").forEach(a => a.classList.toggle("on", a.dataset.tab === tab));
+  const views = { today: renderToday, videos: renderVideos, channels: renderChannels, copy: renderCopy, research: renderResearch };
+  board.innerHTML = (views[tab] || views.today)();
 }
+
 render();
 addEventListener("hashchange", render);
-
 board.addEventListener("click", e => {
   const id = e.target.dataset.t;
   if (!id) return;
   navigator.clipboard.writeText(document.getElementById(id).textContent);
-  e.target.textContent = "Copied";
-  setTimeout(() => e.target.textContent = "Copy", 1200);
+  e.target.textContent = "Done";
+  setTimeout(() => e.target.textContent = "Copy", 1100);
 });
 </script>
 </body>
