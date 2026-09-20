@@ -843,7 +843,7 @@ CHAT_LEADS_COLUMNS = [
     "area", "name", "city", "address", "units", "stage", "signal", "why",
     "permit_date", "opening_date", "sale_date", "buyer", "developer",
     "office_phone", "website", "software", "permit_link", "news_link",
-    "website_link", "agenda_link", "map_link", "region", "status",
+    "website_link", "agenda_link", "map_link", "source_link", "region", "status",
 ]
 
 
@@ -866,6 +866,11 @@ def write_chat_leads_csv(slug: str, area_json: dict) -> None:
         writer.writerow(CHAT_LEADS_COLUMNS)
         for lead in area_json["leads"]:
             links = lead.get("links") or {}
+            source_link = next(
+                (source.get("url") for source in (lead.get("sources") or [])
+                 if isinstance(source, dict) and source.get("url")),
+                "",
+            ) or next((url for url in links.values() if url), "")
             writer.writerow([
                 slug, lead.get("property") or "", lead.get("city") or "",
                 lead.get("address") or "", lead.get("units") or "",
@@ -877,6 +882,7 @@ def write_chat_leads_csv(slug: str, area_json: dict) -> None:
                 links.get("permit") or "", links.get("news") or "",
                 links.get("website") or "", links.get("agenda") or "",
                 links.get("map") or "",
+                source_link,
                 lead.get("metro") or "", lead.get("signalType") or "",
             ])
 

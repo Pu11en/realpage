@@ -84,3 +84,7 @@ def test_write_chat_leads_csv_flattens_for_the_chatbot(tmp_path):
     assert {r["area"] for r in rows} == {"_sample"}
     assert set(build_data.CHAT_LEADS_COLUMNS) == set(rows[0].keys())
     assert all(r["why"] for r in rows)
+    assert {r["source_link"] for r in rows} == {
+        "https://example.test/permit/1",
+        "https://example.test/news/2",
+    }

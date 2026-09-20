@@ -73,7 +73,9 @@ For research or a contact request about one building:
 1. **Our data first.** Match the building by name and city/address. For any
    tracked area, query its `state_leads` row, including `office_phone` (the
    site's `officePhone`), `website`, `website_link`, `developer`, `buyer`,
-   `permit_link`, `news_link` and `agenda_link`. For Plano/Richardson, also
+   `permit_link`, `news_link`, `agenda_link` and `source_link`. `source_link`
+   is the general evidence link and must be used when the more specific link
+   columns are blank. For Plano/Richardson, also
    use the relevant `leads`, `master`, `upcoming`, `contacts`, `sales` and
    `building_extras` rows. Use schema column names, not CSV filenames as
    table names: `sales` is loaded from `5-sales.csv`. Contact evidence is in

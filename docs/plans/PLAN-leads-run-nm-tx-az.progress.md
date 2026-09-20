@@ -76,3 +76,8 @@
   - Commit: `08e759f` in the nested business repository (query-safe landing routing and regression tests)
   - Checks: `python3 business/tools/test_landing.py --offline` (54/54 passed); plan Check command passed; `python3 tooling/qa/check_lead_data.py` passed for 4 states and 1,472 leads; Python compilation and whitespace validation passed.
   - Open: nothing for T9. Publishing remains intentionally deferred to the one-command chain in T11.
+
+- 2026-09-19 — T10 local checkpoint: rebuilt the chat image with all 12 New Mexico buildings and added a generic evidence link to every baked lead, including the Housing New Mexico award rows whose source did not fit the older permit/news-only columns. Updated the agent's data instructions to query and cite that evidence link.
+  - Checks: focused area-builder tests passed; the baked SQLite data returned sourced results for three New Mexico query shapes; the plan Check command passed; `python3 tooling/qa/check_lead_data.py` passed for 4 states and 1,472 leads; all 36 chatbot tests passed; Python compilation and whitespace validation passed.
+  - Error resolved: the first direct plugin smoke test queried before initializing its temporary SQLite database; the corrected smoke test called the normal database builder first and all three queries passed.
+  - Open: T10 remains unchecked. The three live local answers would spend DeepSeek credits, and the Railway redeploy changes the live service, so both wait for Drew's explicit authorization under this run's safety rule.

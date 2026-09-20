@@ -176,7 +176,8 @@ def ps_schema(args: dict, **_) -> str:
             "(region='Dallas–Fort Worth') from state_leads alone -- never add the leads table on top. "
             "Filter with WHERE area='<slug>' from the area list below; stage is permitted/leasing/"
             "under_construction/sold/planned. permit_link/news_link/website_link/agenda_link/map_link "
-            "are ready-made URLs for the deep-dive link row (map_link may be blank -- build it from address).",
+            "are ready-made URLs for the deep-dive link row (map_link may be blank -- build it from address). "
+            "source_link is the general evidence URL; select and cite it whenever the specific link is blank.",
             "street_talk: saved Texas Reddit/YouTube posts. part=rivals (software vendors compared, e.g. Yardi vs Entrata vs AppFolio), "
             "buildings (talk about a lead building; building_id/building), unhappy (rival customers; warm_lead=1 "
             "sounds like a manager/owner). companies is ';'-joined -- filter with companies LIKE '%Yardi%'. "
