@@ -56,3 +56,8 @@
   - Commit: `b9671bd` (shared identity normalization, corrected summary, and regression test)
   - Checks: targeted runner tests (6 passed); `python3 -m pytest -q tooling/qa/fixes_tests/ propertystack -x -q` (all passed); `python3 tooling/qa/check_lead_data.py` (4 states, 1,477 leads passed); Python compilation and `git diff --check` passed.
   - Open: Dallas County remains the only failed Texas source, as already recorded; no new issue was introduced by this repair.
+
+- 2026-09-19 — T7 complete: refreshed all 8 Arizona recipes with the live area runner and saved 274 unique buildings: 16 genuinely new identities versus the 279-row pre-run snapshot, 135 permit signals, and 139 sale signals. Every source worked on its first attempt; none were empty or failed.
+  - Commit: `d30a811` (Arizona lead data, pre-run backup, per-source artifacts, summary, and source health)
+  - Checks: `python3 tooling/qa/check_lead_data.py propertystack/data/az` (274 leads passed); `python3 -m pytest -q tooling/qa/fixes_tests/ propertystack -x -q` (all passed); `python3 tooling/qa/check_lead_data.py` (4 states, 1,472 leads passed); stable identity comparison confirmed 16 genuinely new leads; `git diff --check` passed.
+  - Open: nothing for Arizona; all configured sources completed successfully. The unrelated generated Texas chat CSV change present before T7 was preserved in a named git stash and was not included in this task.
