@@ -78,6 +78,7 @@ def find_upcoming(
     endpoint = recipe.get("endpoint", "")
     fields = recipe.get("fields", {})
     units_pattern = recipe.get("units_text_pattern")
+    apartment_re = _apartment_matcher(recipe)
     rows = _fetch_rows(endpoint, http_get)
 
     apartment_rows = 0
@@ -88,7 +89,7 @@ def find_upcoming(
     newest: datetime.date | None = None
     records = []
     for row in rows:
-        if not _is_apartment(row, fields, units_pattern):
+        if not _is_apartment(row, fields, units_pattern, apartment_re):
             continue
         apartment_rows += 1
         issue_date = _parse_date(row.get(fields.get("issue_date", "")))
@@ -134,23 +135,44 @@ def find_upcoming(
         )
     return merged
 
+def _apartment_matcher(recipe: dict) -> "re.Pattern[str]":
+    """The regex that decides whether a permit row is an apartment project.
 
-def _is_apartment(row: dict, fields: dict, units_pattern: str | None) -> bool:
+    Defaults to the generic "multifamily / apartment" wording.  A city whose
+    permit feed labels apartment projects with its own filing code instead can
+    supply `apartment_pattern` in its recipe -- one real city prefixes every
+    affordable-housing-bond project with a two-letter programme code and never
+    writes "apartment" on the row, so the generic wording found none of the
+    apartment permits it issued in the last year.
+    """
+    pattern = recipe.get("apartment_pattern")
+    if not pattern:
+        return APARTMENT_RE
+    return re.compile(pattern, re.I)
+
+
+def _is_apartment(
+    row: dict,
+    fields: dict,
+    units_pattern: str | None,
+    apartment_re: "re.Pattern[str] | None" = None,
+) -> bool:
     # A known unit count is authoritative: a record that reports fewer than
     # 20 units is never a qualifying apartment project, even when the permit
     # type text matches (a duplex permitted as "MULTI-FAMILY DWELLING" is a
     # real example that slipped through when type matching won regardless of
     # the row's own unit count).
+    apartment_re = apartment_re or APARTMENT_RE
     units = _parse_units(row, fields, units_pattern)
     if units is not None:
         return units >= 20
     type_key = fields.get("permit_type")
     type_value = str(row.get(type_key, "")) if type_key else ""
-    if APARTMENT_RE.search(type_value):
+    if apartment_re.search(type_value):
         return True
     if RENOVATION_TYPE_RE.match(type_value.strip()):
         return False
-    return APARTMENT_RE.search(" ".join(str(v) for v in row.values())) is not None
+    return apartment_re.search(" ".join(str(v) for v in row.values())) is not None
 
 
 def _parse_units(row: dict, fields: dict, units_pattern: str | None) -> int | None:
@@ -225,7 +247,21 @@ def _parse_date(value) -> datetime.date | None:
     if isinstance(value, (int, float)):
         # ArcGIS FeatureServer fields return dates as epoch milliseconds.
         return datetime.datetime.fromtimestamp(value / 1000, tz=datetime.timezone.utc).date()
-    for fmt in ("%Y-%m-%d", "%m/%d/%Y", "%Y/%m/%d", "%Y-%m-%dT%H:%M:%S", "%Y-%m-%dT%H:%M:%S.%f"):
+    for fmt in (
+        "%Y-%m-%d",
+        "%m/%d/%Y",
+        "%Y/%m/%d",
+        "%Y-%m-%dT%H:%M:%S",
+        "%Y-%m-%dT%H:%M:%S.%f",
+        # A CKAN datastore column typed as timestamp renders as
+        # "2021-09-21 00:00:00" (a space, not a T).  One real city publishes
+        # its permits across two resources that disagree on the column type,
+        # so most of its rows arrived in this shape, failed every format
+        # above, and were dropped as "no usable date" -- invisible, because a
+        # row with no date at all is not counted as aged out.
+        "%Y-%m-%d %H:%M:%S",
+        "%Y-%m-%d %H:%M:%S.%f",
+    ):
         try:
             return datetime.datetime.strptime(value, fmt).date()
         except ValueError:
@@ -258,7 +294,7 @@ def _build_record(
 ) -> LeadRecord:
     address = _row_address(row, fields)
     name_key = fields.get("name")
-    name = _clean_name(str(row.get(name_key) or "")) if name_key else ""
+    name = _clean_name(str(row.get(name_key) or ""), recipe or {}) if name_key else ""
     if not name:
         # No mapped name field (or it was blank on this row): a city's
         # permit-type field often doubles as the real project name (e.g. a
@@ -267,7 +303,7 @@ def _build_record(
         # street address, rather than leaving the lead nameless.
         type_key = fields.get("permit_type")
         type_value = str(row.get(type_key) or "").strip() if type_key else ""
-        name = type_value or address
+        name = _clean_name(type_value, recipe or {}) or address
     units = _parse_units(row, fields, units_pattern)
     permit_link = str(row.get("link") or row.get("url") or endpoint)
     developer, developer_source = _find_owner(row, recipe or {}, permit_link)
@@ -293,9 +329,16 @@ def _build_record(
     )
 
 
-def _clean_name(name: str) -> str:
-    """The project name as a seller would recognise it, with any plan-review
-    routing tag stripped off the front."""
+def _clean_name(name: str, recipe: dict | None = None) -> str:
+    """The project name as a seller would recognise it.
+
+    A recipe can strip city filing prefixes, and reviewer routing tags are
+    stripped when the feed writes them as "reviewer /// project".
+    """
+    recipe = recipe or {}
+    pattern = recipe.get("name_strip_pattern")
+    if pattern and name:
+        name = re.sub(pattern, "", name, count=1, flags=re.I).strip(" -")
     if REVIEW_TAG_SEPARATOR in name:
         name = name.rsplit(REVIEW_TAG_SEPARATOR, 1)[-1]
     return re.sub(r"\s+", " ", name).strip()
