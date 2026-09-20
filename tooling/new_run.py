@@ -22,6 +22,10 @@ from typing import Sequence
 
 ROOT = Path(__file__).resolve().parents[1]
 STATE_RE = re.compile(r"^[a-z][a-z0-9-]*$")
+# The routine weekly refresh is Texas only.  Every other state keeps the lead
+# data it already has on the site and is re-run only when named explicitly,
+# e.g. ``tooling/new-run.sh az``.
+ROUTINE_STATES = ("tx",)
 NEEDS_SOURCE_URL = (
     "https://github.com/Pu11en/realpage/blob/main/"
     "propertystack/runs/needs-a-source.md"
@@ -341,7 +345,14 @@ def parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description="Refresh lead sources, check them, publish main, and announce the result."
     )
-    parser.add_argument("states", nargs="+", help="state slugs, such as nm tx az")
+    parser.add_argument(
+        "states",
+        nargs="*",
+        help=(
+            "state slugs, such as nm tx az; with none given the routine refresh "
+            "runs " + " ".join(ROUTINE_STATES)
+        ),
+    )
     parser.add_argument(
         "--dry-run",
         action="store_true",
@@ -357,9 +368,13 @@ def parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
 
 def main(argv: Sequence[str] | None = None) -> int:
     args = parse_args(argv)
+    states = args.states
+    if not states and not args.undo:
+        states = list(ROUTINE_STATES)
+        print(f"No state named; running the routine refresh: {' '.join(states)}")
     try:
         run_pipeline(
-            args.states,
+            states,
             webhook_url=os.environ.get("SIGNUP_WEBHOOK_URL", ""),
             dry_run=args.dry_run,
             undo=args.undo,

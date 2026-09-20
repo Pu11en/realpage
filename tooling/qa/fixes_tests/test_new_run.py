@@ -229,3 +229,42 @@ def test_source_health_counts_only_selected_configured_sources(tmp_path):
         "empty": 1,
         "failed": 1,
     }
+
+
+def _capture_states(monkeypatch):
+    """Record the states main() hands to run_pipeline, running nothing."""
+    seen = {}
+
+    def fake_pipeline(states, **kwargs):
+        seen["states"] = list(states)
+        seen["undo"] = kwargs.get("undo")
+        return "ran"
+
+    monkeypatch.setattr(new_run, "run_pipeline", fake_pipeline)
+    return seen
+
+
+def test_no_state_named_runs_texas_only(monkeypatch):
+    seen = _capture_states(monkeypatch)
+
+    assert new_run.main([]) == 0
+    assert seen["states"] == ["tx"]
+
+
+def test_named_states_still_beat_the_routine_default(monkeypatch):
+    seen = _capture_states(monkeypatch)
+
+    assert new_run.main(["az", "nm"]) == 0
+    assert seen["states"] == ["az", "nm"]
+
+
+def test_undo_still_needs_an_explicit_state(monkeypatch, capsys):
+    _capture_states(monkeypatch)
+
+    def refuse(states, **kwargs):
+        raise new_run.PublishError("give at least one state, for example: nm tx az")
+
+    monkeypatch.setattr(new_run, "run_pipeline", refuse)
+
+    assert new_run.main(["--undo"]) == 1
+    assert "give at least one state" in capsys.readouterr().err
