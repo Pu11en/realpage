@@ -24,7 +24,7 @@ def test_stats_keep_the_three_useful_cards_without_a_new_count_or_badge():
 def test_sidebar_uses_the_selected_areas_real_snapshot_date():
     area = json.loads((ROOT / "site/data/areas/tx.json").read_text(encoding="utf-8"))
 
-    assert area["updated"] == "2026-09-15"
+    assert area["updated"] == "2026-09-19"
     assert "setLastUpdated(data.updated);" in INDEX
     assert "setLastUpdated(new Date" not in INDEX
 
@@ -36,5 +36,4 @@ def test_data_date_and_area_request_follow_the_stats():
 
     assert note < stats < lead_search
     assert "Data from ${formatDataDate(data.updated)}" in INDEX
-    assert 'href="map.html#request-area">add yours' in INDEX  # coverage chip (2026-09-19)
-
+    assert "Texas &amp; Arizona" not in INDEX

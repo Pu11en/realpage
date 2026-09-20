@@ -1,0 +1,346 @@
+[
+  {
+    "area": "nm",
+    "city": "Las Cruces",
+    "name": "24CB0506272",
+    "address": "3635 CENTRAL AVE",
+    "lat": null,
+    "lon": null,
+    "units": null,
+    "stage": "permitted",
+    "permit_date": "2025-02-14",
+    "opening_date": "",
+    "sale_date": "",
+    "buyer": "",
+    "developer": "SIERRA NORTE DEVELOPMENT INC",
+    "office_phone": "",
+    "website": "",
+    "software": "unknown",
+    "links": {
+      "permit": "https://maps.las-cruces.org/gis/rest/services/Information_Services/MapServer/1/query?where=PropUseGrp%3D%27APARTMENT%27%20AND%20Permit_Type%3D%27NEW%27&outFields=*&f=json&resultRecordCount=1000&orderByFields=Issued_Date%20DESC&returnGeometry=false"
+    },
+    "sources": [
+      {
+        "fact": "permit_date",
+        "url": "https://maps.las-cruces.org/gis/rest/services/Information_Services/MapServer/1/query?where=PropUseGrp%3D%27APARTMENT%27%20AND%20Permit_Type%3D%27NEW%27&outFields=*&f=json&resultRecordCount=1000&orderByFields=Issued_Date%20DESC&returnGeometry=false"
+      },
+      {
+        "fact": "developer",
+        "url": "https://maps.las-cruces.org/gis/rest/services/Information_Services/MapServer/1/query?where=PropUseGrp%3D%27APARTMENT%27%20AND%20Permit_Type%3D%27NEW%27&outFields=*&f=json&resultRecordCount=1000&orderByFields=Issued_Date%20DESC&returnGeometry=false"
+      }
+    ],
+    "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+  },
+  {
+    "area": "nm",
+    "city": "Las Cruces",
+    "name": "24CB0502937",
+    "address": "1155 N MIRANDA ST",
+    "lat": null,
+    "lon": null,
+    "units": null,
+    "stage": "permitted",
+    "permit_date": "2025-11-14",
+    "opening_date": "",
+    "sale_date": "",
+    "buyer": "",
+    "developer": "ORL CONSTRUCTION LP",
+    "office_phone": "",
+    "website": "",
+    "software": "unknown",
+    "links": {
+      "permit": "https://maps.las-cruces.org/gis/rest/services/Information_Services/MapServer/1/query?where=PropUseGrp%3D%27APARTMENT%27%20AND%20Permit_Type%3D%27NEW%27&outFields=*&f=json&resultRecordCount=1000&orderByFields=Issued_Date%20DESC&returnGeometry=false"
+    },
+    "sources": [
+      {
+        "fact": "permit_date",
+        "url": "https://maps.las-cruces.org/gis/rest/services/Information_Services/MapServer/1/query?where=PropUseGrp%3D%27APARTMENT%27%20AND%20Permit_Type%3D%27NEW%27&outFields=*&f=json&resultRecordCount=1000&orderByFields=Issued_Date%20DESC&returnGeometry=false"
+      },
+      {
+        "fact": "developer",
+        "url": "https://maps.las-cruces.org/gis/rest/services/Information_Services/MapServer/1/query?where=PropUseGrp%3D%27APARTMENT%27%20AND%20Permit_Type%3D%27NEW%27&outFields=*&f=json&resultRecordCount=1000&orderByFields=Issued_Date%20DESC&returnGeometry=false"
+      }
+    ],
+    "why": "Permitted \u00b7 opens: not public yet \u00b7 software not picked yet"
+  },
+  {
+    "area": "nm",
+    "city": "Las Cruces",
+    "name": "Desert Hope II dba Paseos Verdes",
+    "address": "SEC Colorado Ave & S Campo St",
+    "lat": null,
+    "lon": null,
+    "units": 80,
+    "stage": "planned",
+    "permit_date": "",
+    "opening_date": "",
+    "sale_date": "",
+    "buyer": "",
+    "developer": "Mesilla Valley Public Housing Authority",
+    "office_phone": "",
+    "website": "",
+    "software": "unknown",
+    "links": {
+      "housing_award": "https://housingnm.org/uploads/documents/2001-2026_Housing_Tax_Credit_Awards_05.22.2026.xlsx"
+    },
+    "sources": [
+      {
+        "fact": "units",
+        "url": "https://housingnm.org/uploads/documents/2001-2026_Housing_Tax_Credit_Awards_05.22.2026.xlsx"
+      }
+    ],
+    "why": "Planned \u00b7 expected: not public yet \u00b7 80 units \u00b7 software not chosen yet"
+  },
+  {
+    "area": "nm",
+    "city": "Ruidoso",
+    "name": "Elk Meadows Apartments",
+    "address": "1104 Mechem Drive",
+    "lat": null,
+    "lon": null,
+    "units": 72,
+    "stage": "planned",
+    "permit_date": "",
+    "opening_date": "",
+    "sale_date": "",
+    "buyer": "",
+    "developer": "Enriched Communities LLC",
+    "office_phone": "",
+    "website": "",
+    "software": "unknown",
+    "links": {
+      "housing_award": "https://housingnm.org/uploads/documents/2001-2026_Housing_Tax_Credit_Awards_05.22.2026.xlsx"
+    },
+    "sources": [
+      {
+        "fact": "units",
+        "url": "https://housingnm.org/uploads/documents/2001-2026_Housing_Tax_Credit_Awards_05.22.2026.xlsx"
+      }
+    ],
+    "why": "Planned \u00b7 expected: not public yet \u00b7 72 units \u00b7 software not chosen yet"
+  },
+  {
+    "area": "nm",
+    "city": "Albuquerque",
+    "name": "Somos Apartments",
+    "address": "7200 Central Avenue SE",
+    "lat": null,
+    "lon": null,
+    "units": 70,
+    "stage": "planned",
+    "permit_date": "",
+    "opening_date": "",
+    "sale_date": "",
+    "buyer": "",
+    "developer": "Sol Housing",
+    "office_phone": "",
+    "website": "",
+    "software": "unknown",
+    "links": {
+      "housing_award": "https://housingnm.org/uploads/documents/2001-2026_Housing_Tax_Credit_Awards_05.22.2026.xlsx"
+    },
+    "sources": [
+      {
+        "fact": "units",
+        "url": "https://housingnm.org/uploads/documents/2001-2026_Housing_Tax_Credit_Awards_05.22.2026.xlsx"
+      }
+    ],
+    "why": "Planned \u00b7 expected: not public yet \u00b7 70 units \u00b7 software not chosen yet"
+  },
+  {
+    "area": "nm",
+    "city": "Santa Fe",
+    "name": "Ocate Apartments",
+    "address": "1111 Ocate Road",
+    "lat": null,
+    "lon": null,
+    "units": 60,
+    "stage": "planned",
+    "permit_date": "",
+    "opening_date": "",
+    "sale_date": "",
+    "buyer": "",
+    "developer": "Santa Fe Civic Housing Authority",
+    "office_phone": "",
+    "website": "",
+    "software": "unknown",
+    "links": {
+      "housing_award": "https://housingnm.org/uploads/documents/2001-2026_Housing_Tax_Credit_Awards_05.22.2026.xlsx"
+    },
+    "sources": [
+      {
+        "fact": "units",
+        "url": "https://housingnm.org/uploads/documents/2001-2026_Housing_Tax_Credit_Awards_05.22.2026.xlsx"
+      }
+    ],
+    "why": "Planned \u00b7 expected: not public yet \u00b7 60 units \u00b7 software not chosen yet"
+  },
+  {
+    "area": "nm",
+    "city": "Bernalillo",
+    "name": "Niko Commons",
+    "address": "230 Spartan Alley",
+    "lat": null,
+    "lon": null,
+    "units": 55,
+    "stage": "planned",
+    "permit_date": "",
+    "opening_date": "",
+    "sale_date": "",
+    "buyer": "",
+    "developer": "Spire Development, Inc.",
+    "office_phone": "",
+    "website": "",
+    "software": "unknown",
+    "links": {
+      "housing_award": "https://housingnm.org/uploads/documents/2001-2026_Housing_Tax_Credit_Awards_05.22.2026.xlsx"
+    },
+    "sources": [
+      {
+        "fact": "units",
+        "url": "https://housingnm.org/uploads/documents/2001-2026_Housing_Tax_Credit_Awards_05.22.2026.xlsx"
+      }
+    ],
+    "why": "Planned \u00b7 expected: not public yet \u00b7 55 units \u00b7 software not chosen yet"
+  },
+  {
+    "area": "nm",
+    "city": "Santa Fe",
+    "name": "Nueva Acequia 9%",
+    "address": "0 Camino de Jacobo",
+    "lat": null,
+    "lon": null,
+    "units": 53,
+    "stage": "planned",
+    "permit_date": "",
+    "opening_date": "",
+    "sale_date": "",
+    "buyer": "",
+    "developer": "TWG Development, LLC",
+    "office_phone": "",
+    "website": "",
+    "software": "unknown",
+    "links": {
+      "housing_award": "https://housingnm.org/uploads/documents/2001-2026_Housing_Tax_Credit_Awards_05.22.2026.xlsx"
+    },
+    "sources": [
+      {
+        "fact": "units",
+        "url": "https://housingnm.org/uploads/documents/2001-2026_Housing_Tax_Credit_Awards_05.22.2026.xlsx"
+      }
+    ],
+    "why": "Planned \u00b7 expected: not public yet \u00b7 53 units \u00b7 software not chosen yet"
+  },
+  {
+    "area": "nm",
+    "city": "Deming",
+    "name": "Desert Sun III",
+    "address": "Fairfield Dr NW, east of 8th St",
+    "lat": null,
+    "lon": null,
+    "units": 53,
+    "stage": "planned",
+    "permit_date": "",
+    "opening_date": "",
+    "sale_date": "",
+    "buyer": "",
+    "developer": "H.E.R.O.",
+    "office_phone": "",
+    "website": "",
+    "software": "unknown",
+    "links": {
+      "housing_award": "https://housingnm.org/uploads/documents/2001-2026_Housing_Tax_Credit_Awards_05.22.2026.xlsx"
+    },
+    "sources": [
+      {
+        "fact": "units",
+        "url": "https://housingnm.org/uploads/documents/2001-2026_Housing_Tax_Credit_Awards_05.22.2026.xlsx"
+      }
+    ],
+    "why": "Planned \u00b7 expected: not public yet \u00b7 53 units \u00b7 software not chosen yet"
+  },
+  {
+    "area": "nm",
+    "city": "Albuquerque",
+    "name": "Edward Romero Terrace II",
+    "address": "103 Texas Street NE",
+    "lat": null,
+    "lon": null,
+    "units": 51,
+    "stage": "planned",
+    "permit_date": "",
+    "opening_date": "",
+    "sale_date": "",
+    "buyer": "",
+    "developer": "Elderly Housing Development and",
+    "office_phone": "",
+    "website": "",
+    "software": "unknown",
+    "links": {
+      "housing_award": "https://housingnm.org/uploads/documents/2001-2026_Housing_Tax_Credit_Awards_05.22.2026.xlsx"
+    },
+    "sources": [
+      {
+        "fact": "units",
+        "url": "https://housingnm.org/uploads/documents/2001-2026_Housing_Tax_Credit_Awards_05.22.2026.xlsx"
+      }
+    ],
+    "why": "Planned \u00b7 expected: not public yet \u00b7 51 units \u00b7 software not chosen yet"
+  },
+  {
+    "area": "nm",
+    "city": "Albuquerque",
+    "name": "San Mateo Manor",
+    "address": "612 San Mateo Blvd SE",
+    "lat": null,
+    "lon": null,
+    "units": 50,
+    "stage": "planned",
+    "permit_date": "",
+    "opening_date": "",
+    "sale_date": "",
+    "buyer": "",
+    "developer": "Spire Development, Inc.",
+    "office_phone": "",
+    "website": "",
+    "software": "unknown",
+    "links": {
+      "housing_award": "https://housingnm.org/uploads/documents/2001-2026_Housing_Tax_Credit_Awards_05.22.2026.xlsx"
+    },
+    "sources": [
+      {
+        "fact": "units",
+        "url": "https://housingnm.org/uploads/documents/2001-2026_Housing_Tax_Credit_Awards_05.22.2026.xlsx"
+      }
+    ],
+    "why": "Planned \u00b7 expected: not public yet \u00b7 50 units \u00b7 software not chosen yet"
+  },
+  {
+    "area": "nm",
+    "city": "Taos",
+    "name": "Este Es Otono",
+    "address": "SWC Este Es & Otono Roads",
+    "lat": null,
+    "lon": null,
+    "units": 35,
+    "stage": "planned",
+    "permit_date": "",
+    "opening_date": "",
+    "sale_date": "",
+    "buyer": "",
+    "developer": "GHK Properties, LLC",
+    "office_phone": "",
+    "website": "",
+    "software": "unknown",
+    "links": {
+      "housing_award": "https://housingnm.org/uploads/documents/2001-2026_Housing_Tax_Credit_Awards_05.22.2026.xlsx"
+    },
+    "sources": [
+      {
+        "fact": "units",
+        "url": "https://housingnm.org/uploads/documents/2001-2026_Housing_Tax_Credit_Awards_05.22.2026.xlsx"
+      }
+    ],
+    "why": "Planned \u00b7 expected: not public yet \u00b7 35 units \u00b7 software not chosen yet"
+  }
+]

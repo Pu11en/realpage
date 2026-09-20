@@ -1,0 +1,187 @@
+{
+  "sources": {
+    "nm/albuquerque.json": {
+      "status": "empty",
+      "count": 0,
+      "attempts": 1,
+      "checked": "2026-09-19",
+      "note": ""
+    },
+    "nm/bernalillo-county-sales.json": {
+      "status": "empty",
+      "count": 0,
+      "attempts": 0,
+      "checked": "2026-09-19",
+      "note": "disabled: The county does not publish a free machine-readable sales or transfer feed; its free assessor layer has no sale date or sale price."
+    },
+    "nm/las-cruces.json": {
+      "status": "worked",
+      "count": 2,
+      "attempts": 1,
+      "checked": "2026-09-19",
+      "note": ""
+    },
+    "nm/mfa-awards.json": {
+      "status": "worked",
+      "count": 11,
+      "attempts": 1,
+      "checked": "2026-09-19",
+      "note": ""
+    },
+    "nm/rio-rancho.json": {
+      "status": "empty",
+      "count": 0,
+      "attempts": 0,
+      "checked": "2026-09-19",
+      "note": "disabled: No machine-readable city permit feed exists; the Accela Citizen Access site is a stateful search form, not a public data endpoint."
+    },
+    "nm/santa-fe.json": {
+      "status": "empty",
+      "count": 0,
+      "attempts": 0,
+      "checked": "2026-09-19",
+      "note": "disabled: No machine-readable building-permit layer exists in the city's live GIS services; the public permit page is not a queryable data feed."
+    },
+    "tx/arlington.json": {
+      "status": "worked",
+      "count": 178,
+      "attempts": 1,
+      "checked": "2026-09-19",
+      "note": ""
+    },
+    "tx/austin.json": {
+      "status": "worked",
+      "count": 47,
+      "attempts": 1,
+      "checked": "2026-09-19",
+      "note": ""
+    },
+    "tx/dallas-dcad.json": {
+      "status": "failed",
+      "count": 0,
+      "attempts": 2,
+      "checked": "2026-09-19",
+      "note": "attempt 1: SourceFetchError: InvalidURL: URL can't contain control characters. '/ViewPDFs.aspx?type=3&id=\\\\\\\\DCAD.ORG\\\\WEB\\\\WEBDATA\\\\WEBFORMS\\\\DATA PRODUCTS\\\\DCAD2026_CURRENT.ZIP' (found at least ' '); attempt 2: SourceFetchError: InvalidURL: URL can't contain control characters. '/ViewPDFs.aspx?type=3&id=\\\\\\\\DCAD.ORG\\\\WEB\\\\WEBDATA\\\\WEBFORMS\\\\DATA PRODUCTS\\\\DCAD2026_CURRENT.ZIP' (found at least ' ')"
+    },
+    "tx/fort-worth.json": {
+      "status": "worked",
+      "count": 1,
+      "attempts": 1,
+      "checked": "2026-09-19",
+      "note": ""
+    },
+    "tx/houston-hcad.json": {
+      "status": "worked",
+      "count": 424,
+      "attempts": 1,
+      "checked": "2026-09-19",
+      "note": ""
+    },
+    "tx/houston.json": {
+      "status": "worked",
+      "count": 18,
+      "attempts": 1,
+      "checked": "2026-09-19",
+      "note": ""
+    },
+    "tx/san-antonio.json": {
+      "status": "worked",
+      "count": 2,
+      "attempts": 1,
+      "checked": "2026-09-19",
+      "note": ""
+    },
+    "tx/san-marcos.json": {
+      "status": "worked",
+      "count": 4,
+      "attempts": 1,
+      "checked": "2026-09-19",
+      "note": ""
+    },
+    "tx/tabs.json": {
+      "status": "worked",
+      "count": 126,
+      "attempts": 1,
+      "checked": "2026-09-19",
+      "note": ""
+    },
+    "tx/tarrant-tad-sales.json": {
+      "status": "worked",
+      "count": 24,
+      "attempts": 1,
+      "checked": "2026-09-19",
+      "note": ""
+    },
+    "tx/tarrant-tad.json": {
+      "status": "worked",
+      "count": 177,
+      "attempts": 1,
+      "checked": "2026-09-19",
+      "note": ""
+    },
+    "tx/tdhca.json": {
+      "status": "worked",
+      "count": 212,
+      "attempts": 1,
+      "checked": "2026-09-19",
+      "note": ""
+    },
+    "az/gilbert.json": {
+      "status": "worked",
+      "count": 6,
+      "attempts": 1,
+      "checked": "2026-09-19",
+      "note": ""
+    },
+    "az/maricopa-county-sales.json": {
+      "status": "worked",
+      "count": 147,
+      "attempts": 1,
+      "checked": "2026-09-19",
+      "note": ""
+    },
+    "az/maricopa-county-unincorporated.json": {
+      "status": "worked",
+      "count": 4,
+      "attempts": 1,
+      "checked": "2026-09-19",
+      "note": ""
+    },
+    "az/mesa.json": {
+      "status": "worked",
+      "count": 45,
+      "attempts": 1,
+      "checked": "2026-09-19",
+      "note": ""
+    },
+    "az/phoenix.json": {
+      "status": "worked",
+      "count": 29,
+      "attempts": 1,
+      "checked": "2026-09-19",
+      "note": ""
+    },
+    "az/scottsdale.json": {
+      "status": "worked",
+      "count": 38,
+      "attempts": 1,
+      "checked": "2026-09-19",
+      "note": ""
+    },
+    "az/tempe.json": {
+      "status": "worked",
+      "count": 11,
+      "attempts": 1,
+      "checked": "2026-09-19",
+      "note": ""
+    },
+    "az/tucson.json": {
+      "status": "worked",
+      "count": 2,
+      "attempts": 1,
+      "checked": "2026-09-19",
+      "note": ""
+    }
+  },
+  "updatedAt": "2026-09-20T02:13:16.771479+00:00"
+}

@@ -118,6 +118,135 @@ def load_xlsx_rows(xlsx_bytes: bytes) -> list[dict]:
     return out
 
 
+def _positive_int(value) -> int | None:
+    try:
+        parsed = int(float(str(value).strip()))
+    except (TypeError, ValueError):
+        return None
+    return parsed if parsed > 0 else None
+
+
+def _cell(row: tuple, index: int):
+    return row[index] if 0 <= index < len(row) else None
+
+
+def parse_multiline_award_sheet(
+    rows: list[tuple],
+    *,
+    area: str,
+    state: str,
+    year: int,
+    list_url: str,
+    columns: dict,
+    min_units: int = 20,
+) -> list[LeadRecord]:
+    """Parse annual award sheets where one project spans several rows.
+
+    A project begins on a row with a numeric total-unit value. Its address,
+    city, and split type label live on the following rows until the next
+    project. Column positions stay in recipe data so the parser has no agency
+    or state-specific literals.
+    """
+    project_col = int(columns["project"])
+    developer_col = int(columns["developer"])
+    units_col = int(columns["units"])
+    type_col = int(columns["type"])
+
+    starts = [
+        index
+        for index, row in enumerate(rows)
+        if _cell(row, project_col) and _positive_int(_cell(row, units_col)) is not None
+    ]
+    records: list[LeadRecord] = []
+    location_re = re.compile(rf"^(.+?),\s*{re.escape(state)}\s+\d{{5}}(?:-\d{{4}})?\s*$", re.I)
+
+    for position, start in enumerate(starts):
+        end = starts[position + 1] if position + 1 < len(starts) else len(rows)
+        block = rows[start:end]
+        units = _positive_int(_cell(rows[start], units_col))
+        if units is None or units < min_units:
+            continue
+        type_text = " ".join(
+            str(_cell(row, type_col) or "").strip() for row in block
+        )
+        if not re.search(r"\bnew\s+construction\b", type_text, re.I):
+            continue
+
+        first_column = [
+            str(_cell(row, project_col) or "").strip()
+            for row in block
+            if str(_cell(row, project_col) or "").strip()
+        ]
+        if not first_column:
+            continue
+        name = first_column[0]
+        address = first_column[1] if len(first_column) > 1 else ""
+        city = ""
+        for value in first_column[2:]:
+            match = location_re.match(value)
+            if match:
+                city = match.group(1).strip().title()
+                break
+        developer = str(_cell(rows[start], developer_col) or "").strip()
+        records.append(
+            LeadRecord(
+                area=area,
+                city=city,
+                name=name,
+                address=address,
+                units=units,
+                stage="planned",
+                developer=developer,
+                links={"housing_award": list_url},
+                sources=[{"fact": "units", "url": list_url}],
+                why=f"state housing tax-credit new-construction award ({year})",
+            )
+        )
+    return records
+
+
+def find_saved_multiline_awards(
+    area: str,
+    recipe: dict,
+    fetch_bytes_fn: FetchBytesFn,
+    today=None,
+) -> list[LeadRecord]:
+    """Read a verified saved multi-sheet award workbook without web search."""
+    import io
+
+    import openpyxl
+
+    today = today or datetime.date.today()
+    list_url = recipe["list_url"]
+    workbook = openpyxl.load_workbook(
+        io.BytesIO(fetch_bytes_fn(list_url)), read_only=True, data_only=True
+    )
+    since_year = int(recipe.get("since_year", today.year - 2))
+    state = str(recipe.get("state") or "").upper()
+    columns = recipe["columns"]
+    records: list[LeadRecord] = []
+    for worksheet in workbook.worksheets:
+        title = worksheet.title.strip()
+        if not title.isdigit():
+            continue
+        year = int(title)
+        if year < since_year or year > today.year:
+            continue
+        rows = list(worksheet.iter_rows(values_only=True))
+        records.extend(
+            parse_multiline_award_sheet(
+                rows,
+                area=area,
+                state=state,
+                year=year,
+                list_url=list_url,
+                columns=columns,
+                min_units=int(recipe.get("min_units", 20)),
+            )
+        )
+    return records
+
+
 def _first_matching_key(row: dict, needle: str) -> str | None:
     for key in row:
         if needle in key.lower():

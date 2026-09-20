@@ -3,14 +3,26 @@
     {
       "state": "Arizona",
       "code": "AZ",
-      "leads": 279,
-      "label": "AZ \u00b7 279 leads",
+      "leads": 274,
+      "label": "AZ \u00b7 274 leads",
       "topCities": [
-        "Phoenix",
+        "PHOENIX",
         "Mesa",
         "Scottsdale"
       ],
       "link": "index.html?area=az"
+    },
+    {
+      "state": "New Mexico",
+      "code": "NM",
+      "leads": 12,
+      "label": "NM \u00b7 12 leads",
+      "topCities": [
+        "Las Cruces",
+        "Albuquerque",
+        "Santa Fe"
+      ],
+      "link": "index.html?area=nm"
     },
     {
       "state": "New York",
@@ -25,12 +37,12 @@
     {
       "state": "Texas",
       "code": "TX",
-      "leads": 592,
-      "label": "TX \u00b7 592 leads",
+      "leads": 1176,
+      "label": "TX \u00b7 1176 leads",
       "topCities": [
-        "Austin",
-        "Fort Worth",
-        "Houston"
+        "HOUSTON",
+        "Arlington",
+        "Austin"
       ],
       "link": "index.html?area=tx"
     }

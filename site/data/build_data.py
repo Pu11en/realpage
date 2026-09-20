@@ -17,10 +17,12 @@ No dependencies beyond stdlib. Usage: python3 site/data/build_data.py
 """
 import csv
 import glob
+import hashlib
 import json
 import os
 import re
 import sys
+import unicodedata
 from collections import Counter
 from datetime import date, timedelta
 from pathlib import Path
@@ -66,6 +68,8 @@ STATE_NAMES = {
 
 TODAY = date.fromisoformat("2026-09-10")  # matches score-leads' fixed TODAY, see run.py
 CURRENT_DATA_DATE = "2026-09-15"
+MIN_VISIBLE_AREA_LEADS = 25
+AUTO_HIDDEN_REASON = "under-25-leads"
 
 VENDOR_COLORS = {
     "RealPage": "#f472b6",
@@ -86,7 +90,83 @@ def read_csv(path: Path) -> list[dict]:
         return list(csv.DictReader(f))
 
 
-def add_first_seen(leads: list[dict], previous_path: Path, new_date: str | None = None) -> None:
+def _id_slug(value: str) -> str:
+    """Make one human-readable, deterministic part of a lead content ID."""
+    text = unicodedata.normalize("NFKC", str(value or "")).casefold()
+    text = re.sub(r"[^a-z0-9]+", "-", text)
+    return text.strip("-") or "unknown"
+
+
+def content_id(state: str, address: str, name: str) -> str:
+    """Return the stable identity for a building lead.
+
+    IDs intentionally use only durable content: the state, normalized street
+    address, and project name. Ranking and source order must never affect them.
+    """
+    from record import normalize_address  # noqa: E402
+
+    normalized_address = normalize_address(address or "")
+    return "-".join((
+        _id_slug(state),
+        _id_slug(normalized_address),
+        _id_slug(name),
+    ))
+
+
+def _lead_content_id(lead: dict, state: str | None = None) -> str:
+    """Build a content ID from either a raw record-shaped or site-shaped row."""
+    lead_state = state or lead.get("area") or lead.get("state") or "unknown"
+    address = lead.get("address") or ""
+    if not address and lead.get("propertyId"):
+        address = _address_by_lead_id().get(lead["propertyId"], "")
+    name = lead.get("property") or lead.get("name") or lead.get("community") or ""
+    return content_id(lead_state, address, name)
+
+
+def _has_content_identity(lead: dict) -> bool:
+    """Avoid treating sparse test/legacy rows as the same building."""
+    return bool(
+        lead.get("address")
+        or lead.get("propertyId")
+        or lead.get("property")
+        or lead.get("name")
+        or lead.get("community")
+    )
+
+
+def ensure_unique_content_ids(leads: list[dict]) -> None:
+    """Add a deterministic source-detail suffix when sparse rows collide.
+
+    A few feeds contain unnamed, address-less rows. Their required base ID is
+    necessarily the same, so use the remaining saved facts to keep every row
+    addressable without falling back to its rank or input position.
+    """
+    groups = {}
+    for lead in leads:
+        groups.setdefault(lead.get("id"), []).append(lead)
+    for base, rows in groups.items():
+        if len(rows) < 2:
+            continue
+        ordered = sorted(rows, key=lambda row: json.dumps(row, sort_keys=True, default=str))
+        used = set()
+        for row in ordered:
+            payload = json.dumps(row, sort_keys=True, default=str).encode("utf-8")
+            suffix = hashlib.sha1(payload).hexdigest()[:12]
+            candidate = f"{base}-{suffix}"
+            ordinal = 2
+            while candidate in used:
+                candidate = f"{base}-{suffix}-{ordinal}"
+                ordinal += 1
+            used.add(candidate)
+            row["id"] = candidate
+
+
+def add_first_seen(
+    leads: list[dict],
+    previous_path: Path,
+    new_date: str | None = None,
+    state: str | None = None,
+) -> None:
     """Add the stable date each lead first appeared in a built area file.
 
     Existing output is the history store: a saved ``firstSeen`` survives every
@@ -94,17 +174,23 @@ def add_first_seen(leads: list[dict], previous_path: Path, new_date: str | None 
     while an id not present in the previous output is stamped on build day.
     """
     previous_by_id = {}
+    previous_by_content = {}
     if previous_path.exists():
         previous = json.loads(previous_path.read_text())
         previous_leads = previous.get("leads", []) if isinstance(previous, dict) else previous
-        previous_by_id = {
-            lead["id"]: lead for lead in previous_leads
-            if isinstance(lead, dict) and lead.get("id")
-        }
+        for lead in previous_leads:
+            if not isinstance(lead, dict):
+                continue
+            if lead.get("id"):
+                previous_by_id[lead["id"]] = lead
+            if _has_content_identity(lead):
+                previous_by_content.setdefault(_lead_content_id(lead, state), lead)
 
     first_seen_for_new = new_date or date.today().isoformat()
     for lead in leads:
         previous = previous_by_id.get(lead.get("id"))
+        if not previous and _has_content_identity(lead):
+            previous = previous_by_content.get(_lead_content_id(lead, state))
         if previous:
             lead["firstSeen"] = previous.get("firstSeen") or CURRENT_DATA_DATE
         else:
@@ -299,6 +385,7 @@ def build_leads() -> dict:
     rows = read_csv(LEADS_CSV)
     facts = load_leads_facts()
     contacts = load_contacts()
+    addresses = _address_by_lead_id()
 
     leads = []
     for r in rows:
@@ -325,11 +412,12 @@ def build_leads() -> dict:
         contact = contacts.get(ref_id) if is_sold else None
 
         leads.append({
-            "id": f"l{r['rank']}",
+            "id": content_id("tx", addresses.get(property_id, ""), r["name"]),
             "propertyId": property_id,
             "score": int(r["score"]),
             "property": r["name"],
             "city": r["city"],
+            "address": addresses.get(property_id, "") or None,
             "units": int(r["units"]) if r["units"] else None,
             "signalType": "Upcoming" if r["signal"] == "upcoming" else "Sold",
             "signal": short_signal(r["signal"], r["why"]),
@@ -340,7 +428,8 @@ def build_leads() -> dict:
             "isNew": is_new,
         })
 
-    add_first_seen(leads, OUT_DIR / "leads.json")
+    ensure_unique_content_ids(leads)
+    add_first_seen(leads, OUT_DIR / "leads.json", state="tx")
 
     units_in_play = sum(l["units"] or 0 for l in leads)
     new_count = sum(1 for l in leads if l["isNew"])
@@ -524,6 +613,9 @@ _SOURCE_PAGES = [
      "https://www.sanmarcostx.gov/254/Building-Permits"),
     ("services5.arcgis.com/3ddLCBXe1bRt7mzj", "City of Fort Worth development permits",
      "https://www.arcgis.com/home/item.html?id=d2740f4d746b4bfaa03e25de0376238b"),
+    ("gis2.arlingtontx.gov", "City of Arlington issued permits", "https://opendata.arlingtontx.gov/"),
+    ("maps.las-cruces.org", "City of Las Cruces building permits",
+     "https://lascruces.gov/directories-resources/permits-licenses-and-registrations/"),
     ("data.texas.gov/resource/5tkr-3759", "Texas county property records", "https://data.texas.gov/d/5tkr-3759"),
     ("data.buffalony.gov/resource/9p2d-f3yt", "City of Buffalo building permits",
      "https://data.buffalony.gov/Government/Building-Permits/9p2d-f3yt"),
@@ -654,7 +746,7 @@ def _area_lead_dict(record, idx: int, total: int = 34) -> dict:
     leasing = _is_leasing(record)
     name = _nice_name(record.name or record.address or "Unnamed project", record.address)
     return {
-        "id": f"{record.area}-{idx}",
+        "id": content_id(record.area, record.address, name),
         "property": name,
         "community": record.name or None,
         "city": record.city,
@@ -696,7 +788,7 @@ def build_area(slug: str) -> dict:
     from junk_permits import is_junk_permit  # noqa: E402
     records = [LeadRecord.from_dict(d) for d in raw]
     # permits already saved before the lead finder learned to skip them
-    records = [r for r in records if not is_junk_permit(r.name)]
+    records = [r for r in records if not is_junk_permit(r.name, r.address, r.why)]
     # one row per building: same-name duplicates merged, phases labeled (C2)
     from dedupe_leads import dedupe_leads  # noqa: E402
     records = dedupe_leads(records)
@@ -719,7 +811,7 @@ def build_area(slug: str) -> dict:
     return {
         "area": slug,
         # The lead snapshot date, not the day the site happens to be rebuilt.
-        "updated": CURRENT_DATA_DATE,
+        "updated": latest_area_run_date(slug) or CURRENT_DATA_DATE,
         "generatedFrom": f"propertystack/data/{slug}/leads.json",
         "stats": {
             "leads": len(leads),
@@ -751,7 +843,7 @@ CHAT_LEADS_COLUMNS = [
     "area", "name", "city", "address", "units", "stage", "signal", "why",
     "permit_date", "opening_date", "sale_date", "buyer", "developer",
     "office_phone", "website", "software", "permit_link", "news_link",
-    "website_link", "agenda_link", "map_link", "region", "status",
+    "website_link", "agenda_link", "map_link", "source_link", "region", "status",
 ]
 
 
@@ -774,6 +866,11 @@ def write_chat_leads_csv(slug: str, area_json: dict) -> None:
         writer.writerow(CHAT_LEADS_COLUMNS)
         for lead in area_json["leads"]:
             links = lead.get("links") or {}
+            source_link = next(
+                (source.get("url") for source in (lead.get("sources") or [])
+                 if isinstance(source, dict) and source.get("url")),
+                "",
+            ) or next((url for url in links.values() if url), "")
             writer.writerow([
                 slug, lead.get("property") or "", lead.get("city") or "",
                 lead.get("address") or "", lead.get("units") or "",
@@ -785,6 +882,7 @@ def write_chat_leads_csv(slug: str, area_json: dict) -> None:
                 links.get("permit") or "", links.get("news") or "",
                 links.get("website") or "", links.get("agenda") or "",
                 links.get("map") or "",
+                source_link,
                 lead.get("metro") or "", lead.get("signalType") or "",
             ])
 
@@ -798,7 +896,8 @@ def build_state_areas(include_sample: bool = False) -> list[str]:
     AREAS_OUT_DIR.mkdir(parents=True, exist_ok=True)
     for slug in slugs:
         area_json = _merge_included_areas(slug, build_area(slug))
-        add_first_seen(area_json["leads"], AREAS_OUT_DIR / f"{slug}.json")
+        ensure_unique_content_ids(area_json["leads"])
+        add_first_seen(area_json["leads"], AREAS_OUT_DIR / f"{slug}.json", state=slug)
         # after the merge, so the chat counts included areas (Plano-Richardson
         # in Texas / Dallas-Fort Worth) exactly like the site does
         write_chat_leads_csv(slug, area_json)
@@ -825,6 +924,11 @@ def _merge_included_areas(slug: str, area_json: dict) -> dict:
     table, under their metro, instead of as a separate button."""
     metros = _load_metros(slug)
     addrs = _address_by_lead_id() if (metros or {}).get("include_areas") else {}
+    existing_by_name_city = {
+        (_id_slug(lead.get("property") or ""), _id_slug(lead.get("city") or "")): lead
+        for lead in area_json["leads"]
+        if lead.get("property") and lead.get("city")
+    }
     for inc in (metros or {}).get("include_areas", []):
         path = OUT_DIR / inc["dataPath"]
         if not path.exists():
@@ -833,12 +937,26 @@ def _merge_included_areas(slug: str, area_json: dict) -> dict:
         rows = extra.get("leads", []) if isinstance(extra, dict) else extra
         for i, lead in enumerate(rows, start=1):
             lead = dict(lead)
-            lead["id"] = f"{inc['slug']}-{lead.get('id', i)}"
             lead["metro"] = inc["metro"]
             lead["subArea"] = inc["label"]
             if not lead.get("address"):
                 lead["address"] = addrs.get(lead.get("propertyId")) or None
+            lead["id"] = content_id(slug, lead.get("address") or "", lead.get("property") or "")
             lead.setdefault("sources", [])
+            duplicate = existing_by_name_city.get((
+                _id_slug(lead.get("property") or ""),
+                _id_slug(lead.get("city") or ""),
+            ))
+            if duplicate:
+                duplicate["metro"] = inc["metro"]
+                duplicate["subArea"] = inc["label"]
+                for field in ("units", "website", "software", "contact"):
+                    if not duplicate.get(field) and lead.get(field):
+                        duplicate[field] = lead[field]
+                duplicate["sources"] = sources_entries(
+                    [*(duplicate.get("sources") or []), *lead["sources"]]
+                )
+                continue
             area_json["leads"].append(lead)
     if (metros or {}).get("include_areas"):
         area_json["leads"].sort(key=lambda lead: -lead.get("score", 0))
@@ -858,22 +976,58 @@ def _included_slugs(area_slugs: list[str]) -> set[str]:
     return {inc["slug"] for s in area_slugs for inc in ((_load_metros(s) or {}).get("include_areas", []))}
 
 
+def latest_area_run_date(slug: str) -> str | None:
+    """Return the newest completed run date for one state area."""
+    dates = []
+    for path in (RUNS_DIR / "area").glob(f"*/{slug}/summary.json"):
+        value = path.parent.parent.name
+        try:
+            date.fromisoformat(value)
+        except ValueError:
+            continue
+        dates.append(value)
+    return max(dates, default=None)
+
+
 def build_areas_manifest(area_slugs: list[str]) -> dict:
     """Write site/data/areas/index.json: one entry per area button on the Early
     Leads page (5.2). Plano-Richardson keeps its own legacy leads.json; every
     discovered state area (5.1) points at its file under data/areas/."""
+    manifest_path = AREAS_OUT_DIR / "index.json"
+    previous_areas = {}
+    if manifest_path.exists():
+        try:
+            previous_manifest = json.loads(manifest_path.read_text())
+            previous_areas = {
+                area["slug"]: area
+                for area in previous_manifest.get("areas", [])
+                if isinstance(area, dict) and area.get("slug")
+            }
+        except (json.JSONDecodeError, OSError):
+            pass
     included = _included_slugs(area_slugs)
     areas = [] if AREA in included else [{"slug": AREA, "label": "Plano–Richardson", "dataPath": "data/leads.json", "leads": None}]
     area_dates = []
     for slug in area_slugs:
         area = json.loads((AREAS_OUT_DIR / f"{slug}.json").read_text())
         area_dates.append(area["updated"])
-        areas.append({
+        manifest_area = {
             "slug": slug,
             "label": _STATE_NAMES.get(slug, slug.replace("-", " ").title()),
             "dataPath": f"data/areas/{slug}.json",
             "leads": len(area["leads"]),
-        })
+        }
+        previous = previous_areas.get(slug, {})
+        was_auto_hidden = previous.get("hiddenReason") == AUTO_HIDDEN_REASON
+        manually_hidden = previous.get("hidden") is True and not was_auto_hidden
+        if manually_hidden:
+            manifest_area["hidden"] = True
+            if previous.get("hiddenReason"):
+                manifest_area["hiddenReason"] = previous["hiddenReason"]
+        elif len(area["leads"]) < MIN_VISIBLE_AREA_LEADS:
+            manifest_area["hidden"] = True
+            manifest_area["hiddenReason"] = AUTO_HIDDEN_REASON
+        areas.append(manifest_area)
     # Biggest first: the state with the most leads opens by default.
     areas.sort(key=lambda a: -(a["leads"] or 0))
     # Old links (?area=plano-richardson) open the state that now holds that area.
@@ -882,8 +1036,54 @@ def build_areas_manifest(area_slugs: list[str]) -> dict:
     # must not make unchanged lead data appear newer than it is.
     manifest = {"areas": areas, "aliases": aliases, "updated": max(area_dates, default=CURRENT_DATA_DATE)}
     AREAS_OUT_DIR.mkdir(parents=True, exist_ok=True)
-    (AREAS_OUT_DIR / "index.json").write_text(json.dumps(manifest, indent=2))
+    manifest_path.write_text(json.dumps(manifest, indent=2) + "\n")
     return manifest
+
+
+def build_summary(area_slugs: list[str], manifest: dict) -> dict:
+    """Build the public, state-agnostic counts used by both site heroes.
+
+    Areas automatically hidden only because they are still small remain part of
+    the tracked total. Manually hidden fixture/retired areas do not.
+    """
+    by_slug = {area["slug"]: area for area in manifest.get("areas", [])}
+    leads = []
+    check_dates = []
+    for slug in area_slugs:
+        area_meta = by_slug.get(slug, {})
+        manually_hidden = (
+            area_meta.get("hidden") is True
+            and area_meta.get("hiddenReason") != AUTO_HIDDEN_REASON
+        )
+        if manually_hidden:
+            continue
+        path = AREAS_OUT_DIR / f"{slug}.json"
+        if not path.exists():
+            continue
+        area = json.loads(path.read_text())
+        leads.extend(area.get("leads", []))
+        if area.get("updated"):
+            check_dates.append(area["updated"])
+
+    last_check = max(check_dates, default=manifest.get("updated") or CURRENT_DATA_DATE)
+    try:
+        new_cutoff = (date.fromisoformat(last_check) - timedelta(days=6)).isoformat()
+    except ValueError:
+        new_cutoff = last_check
+
+    sold = sum(lead.get("signalType") == "Sold" for lead in leads)
+    return {
+        "lastCheck": last_check,
+        "totalTracked": len(leads),
+        "newLast7Days": sum(
+            new_cutoff <= lead.get("firstSeen", "") <= last_check
+            for lead in leads
+        ),
+        # Keep the runner's established definition: every current non-sale
+        # building signal is in the permits side of the summary.
+        "permitsFiled": len(leads) - sold,
+        "sold": sold,
+    }
 
 
 _STATE_NAMES = {
@@ -973,6 +1173,10 @@ def main() -> None:
 
     manifest = build_areas_manifest(area_slugs)
     print(f"wrote areas/index.json ({len(manifest['areas'])} area button(s))")
+
+    summary = build_summary(area_slugs, manifest)
+    (OUT_DIR / "summary.json").write_text(json.dumps(summary, indent=2) + "\n")
+    print(f"wrote summary.json ({summary['totalTracked']} tracked buildings)")
 
     markers = build_map_markers(area_slugs)
     (OUT_DIR / "map-markers.json").write_text(json.dumps(markers, indent=2))

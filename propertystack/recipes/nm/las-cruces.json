@@ -1,0 +1,25 @@
+{
+  "city": "Las Cruces",
+  "state": "NM",
+  "system": "arcgis",
+  "endpoint": "https://maps.las-cruces.org/gis/rest/services/Information_Services/MapServer/1/query?where=PropUseGrp%3D%27APARTMENT%27%20AND%20Permit_Type%3D%27NEW%27&outFields=*&f=json&resultRecordCount=1000&orderByFields=Issued_Date%20DESC&returnGeometry=false",
+  "fields": {
+    "permit_type": "PropUseGrp",
+    "name": "Permit_Number",
+    "issue_date": "Issued_Date",
+    "address": "Permit_Location"
+  },
+  "owner_field": "Owner_Name",
+  "builder_field": "Contractor_Business_Name",
+  "date_format": "epoch_ms",
+  "supporting_source": {
+    "title": "Doña Ana County assessor parcels",
+    "endpoint": "https://gis.donaana.gov/server/rest/services/Parcels/FeatureServer/0/query?where=1%3D1&outFields=*&f=json",
+    "owner_field": "OWNERNAME",
+    "address_field": "SITUSADDRS",
+    "notes": "Owner lookup only; it has no sale date, sale price, or permit event."
+  },
+  "date_tested": "2026-09-19",
+  "live_test": "13 apartment records with Permit_Type=NEW returned live; recent verified rows included 1155 N Miranda St and 3635 Central Ave, with owner and contractor fields.",
+  "notes": "The permit layer has no unit-count field, so units remain unknown rather than estimated. The county parcel layer is retained as a verified supporting owner source, not misrepresented as a sales feed."
+}

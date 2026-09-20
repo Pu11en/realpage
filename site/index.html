@@ -23,10 +23,16 @@
     const content = document.getElementById("page-content");
 
     let aliases = {};
+    let siteSummary = null;
     async function loadAreas() {
       try {
         const m = await loadData("data/areas/index.json");
         aliases = m.aliases || {};
+        try {
+          siteSummary = await loadData("data/summary.json");
+        } catch (e) {
+          siteSummary = null;
+        }
         return visibleAreas(m.areas);
       } catch (e) {
         return [{ slug: "plano-richardson", label: "Plano–Richardson", dataPath: "data/leads.json" }];
@@ -85,7 +91,7 @@
 
       content.innerHTML = `
         <h1>Leads</h1>
-        <div class="meta">Buildings worth a call now. Being built. Opening soon. Just sold.</div>
+        <div class="meta" id="site-summary">${summaryHero(siteSummary)}</div>
 
         <div class="lead-toolbar">
           <div class="pick-row"><span class="pick-label">State</span>${renderAreaButtons(areas, area.slug)}</div>
@@ -103,7 +109,6 @@
 
         <div class="lead-strip">
           <span class="chip">Free to browse</span>
-          <span class="chip">Texas &amp; Arizona &middot; <a href="map.html#request-area">add yours</a></span>
           <span class="chip">Data from ${formatDataDate(data.updated)}</span>
         </div>
 

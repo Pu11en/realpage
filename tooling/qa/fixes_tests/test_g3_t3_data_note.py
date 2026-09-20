@@ -10,14 +10,14 @@ INDEX = (ROOT / "site/index.html").read_text(encoding="utf-8")
 APP = (ROOT / "site/js/app.js").read_text(encoding="utf-8")
 
 
-def test_data_note_sits_directly_under_stats_and_links_area_request():
+def test_data_note_sits_directly_under_stats_without_a_coverage_claim():
     note = INDEX.index('Data from ${formatDataDate(data.updated)}')
     stats = INDEX.index('<div class="stats-row" id="lead-stats"></div>')
     search = INDEX.index('<form class="lead-agent-search"')
 
     assert note < stats < search
     assert "Data from ${formatDataDate(data.updated)}" in INDEX
-    assert 'href="map.html#request-area">add yours' in INDEX  # coverage chip (2026-09-19)
+    assert "Texas &amp; Arizona" not in INDEX
 
 
 

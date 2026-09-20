@@ -1,0 +1,1227 @@
+{
+  "state": "az",
+  "recipe": "scottsdale.json",
+  "date": "2026-09-19",
+  "status": "worked",
+  "count": 38,
+  "attempts": 1,
+  "note": "",
+  "records": [
+    {
+      "area": "az",
+      "city": "Scottsdale",
+      "name": "MULTI-FAMILY DWELLING",
+      "address": "4251 N MARSHALL WY",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2026-08-20",
+      "opening_date": "",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "MREG 101 Bell LLC / Mack Real Estate Group",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+        },
+        {
+          "fact": "developer",
+          "url": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "az",
+      "city": "Scottsdale",
+      "name": "MULTI-FAMILY DWELLING",
+      "address": "7117 N SCOTTSDALE RD",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2026-08-13",
+      "opening_date": "",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "Artesia Multifamily Owner, LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+        },
+        {
+          "fact": "developer",
+          "url": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "az",
+      "city": "Scottsdale",
+      "name": "APARTMENTS",
+      "address": "6210 E OAK ST UNIT 3 & 4",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2026-07-17",
+      "opening_date": "",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "MODUS HOLDINGS INC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+        },
+        {
+          "fact": "developer",
+          "url": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "az",
+      "city": "Scottsdale",
+      "name": "APARTMENTS",
+      "address": "3961 N 75TH ST",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2026-03-18",
+      "opening_date": "",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "Robert  Miranda",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+        },
+        {
+          "fact": "developer",
+          "url": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "az",
+      "city": "Scottsdale",
+      "name": "APARTMENTS",
+      "address": "7515 E 1ST ST",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2026-03-10",
+      "opening_date": "",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "Scottsdale Holdings, LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+        },
+        {
+          "fact": "developer",
+          "url": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "az",
+      "city": "Scottsdale",
+      "name": "APARTMENTS",
+      "address": "7370 E HENKEL WY",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2025-11-17",
+      "opening_date": "",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "MAA SCOTTSDALE EXCHANGE, LLC.",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+        },
+        {
+          "fact": "developer",
+          "url": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "az",
+      "city": "Scottsdale",
+      "name": "MULTI-FAMILY DWELLING",
+      "address": "7000 E SHEA BL",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2025-10-06",
+      "opening_date": "",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "High Street Residential",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+        },
+        {
+          "fact": "developer",
+          "url": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "az",
+      "city": "Scottsdale",
+      "name": "APARTMENTS",
+      "address": "4605 N SCOTTSDALE RD BLDG A",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2025-06-30",
+      "opening_date": "",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "ZT Scottsdale Owner, LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+        },
+        {
+          "fact": "developer",
+          "url": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "az",
+      "city": "Scottsdale",
+      "name": "MULTI-FAMILY DWELLING",
+      "address": "19670 N 76TH ST BLDG 21",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2025-05-14",
+      "opening_date": "",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "RA2 -TOWNHOMES AT LEGACY LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+        },
+        {
+          "fact": "developer",
+          "url": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "az",
+      "city": "Scottsdale",
+      "name": "MULTI-FAMILY DWELLING",
+      "address": "19544 N 76TH ST BLDG 8",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2025-05-14",
+      "opening_date": "",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "RA2 -TOWNHOMES AT LEGACY LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+        },
+        {
+          "fact": "developer",
+          "url": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "az",
+      "city": "Scottsdale",
+      "name": "MULTI-FAMILY DWELLING",
+      "address": "19562 N 76TH ST BLDG 10",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2025-05-14",
+      "opening_date": "",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "RA2 -TOWNHOMES AT LEGACY LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+        },
+        {
+          "fact": "developer",
+          "url": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "az",
+      "city": "Scottsdale",
+      "name": "MULTI-FAMILY DWELLING",
+      "address": "19580 N 76TH ST BLDG 12",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2025-05-14",
+      "opening_date": "",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "RA2 -TOWNHOMES AT LEGACY LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+        },
+        {
+          "fact": "developer",
+          "url": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "az",
+      "city": "Scottsdale",
+      "name": "MULTI-FAMILY DWELLING",
+      "address": "19616 N 76TH ST BLDG 16",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2025-05-14",
+      "opening_date": "",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "RA2 -TOWNHOMES AT LEGACY LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+        },
+        {
+          "fact": "developer",
+          "url": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "az",
+      "city": "Scottsdale",
+      "name": "MULTI-FAMILY DWELLING",
+      "address": "19652 N 76TH ST BLDG 20",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2025-05-14",
+      "opening_date": "",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "RA2 -TOWNHOMES AT LEGACY LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+        },
+        {
+          "fact": "developer",
+          "url": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "az",
+      "city": "Scottsdale",
+      "name": "MULTI-FAMILY DWELLING",
+      "address": "19672 N 76TH ST BLDG 22",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2025-05-14",
+      "opening_date": "",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "RA2 -TOWNHOMES AT LEGACY LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+        },
+        {
+          "fact": "developer",
+          "url": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "az",
+      "city": "Scottsdale",
+      "name": "MULTI-FAMILY DWELLING",
+      "address": "19690 N 76TH ST BLDG 24",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2025-05-14",
+      "opening_date": "",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "RA2 -TOWNHOMES AT LEGACY LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+        },
+        {
+          "fact": "developer",
+          "url": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "az",
+      "city": "Scottsdale",
+      "name": "MULTI-FAMILY DWELLING",
+      "address": "19596 N 76TH ST BLDG 13",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2025-05-14",
+      "opening_date": "",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "RA2 -TOWNHOMES AT LEGACY LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+        },
+        {
+          "fact": "developer",
+          "url": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "az",
+      "city": "Scottsdale",
+      "name": "MULTI-FAMILY DWELLING",
+      "address": "19488 N 76TH ST BLDG 1",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2025-05-14",
+      "opening_date": "",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "RA2 -TOWNHOMES AT LEGACY LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+        },
+        {
+          "fact": "developer",
+          "url": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "az",
+      "city": "Scottsdale",
+      "name": "MULTI-FAMILY DWELLING",
+      "address": "19506 N 76TH ST BLDG 3",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2025-05-14",
+      "opening_date": "",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "RA2 -TOWNHOMES AT LEGACY LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+        },
+        {
+          "fact": "developer",
+          "url": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "az",
+      "city": "Scottsdale",
+      "name": "MULTI-FAMILY DWELLING",
+      "address": "19524 N 76TH ST BLDG 5",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2025-05-14",
+      "opening_date": "",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "RA2 -TOWNHOMES AT LEGACY LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+        },
+        {
+          "fact": "developer",
+          "url": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "az",
+      "city": "Scottsdale",
+      "name": "MULTI-FAMILY DWELLING",
+      "address": "19542 N 76TH ST BLDG 7",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2025-05-14",
+      "opening_date": "",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "RA2 -TOWNHOMES AT LEGACY LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+        },
+        {
+          "fact": "developer",
+          "url": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "az",
+      "city": "Scottsdale",
+      "name": "MULTI-FAMILY DWELLING",
+      "address": "19614 N 76TH ST BLDG 15",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2025-05-14",
+      "opening_date": "",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "RA2 -TOWNHOMES AT LEGACY LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+        },
+        {
+          "fact": "developer",
+          "url": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "az",
+      "city": "Scottsdale",
+      "name": "MULTI-FAMILY DWELLING",
+      "address": "19632 N 76TH ST BLDG 17",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2025-05-14",
+      "opening_date": "",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "RA2 -TOWNHOMES AT LEGACY LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+        },
+        {
+          "fact": "developer",
+          "url": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "az",
+      "city": "Scottsdale",
+      "name": "MULTI-FAMILY DWELLING",
+      "address": "19688 N 76TH ST BLDG 23",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2025-05-14",
+      "opening_date": "",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "RA2 -TOWNHOMES AT LEGACY LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+        },
+        {
+          "fact": "developer",
+          "url": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "az",
+      "city": "Scottsdale",
+      "name": "MULTI-FAMILY DWELLING",
+      "address": "19526 N 76TH ST BLDG 6",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2025-05-14",
+      "opening_date": "",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "RA2 -TOWNHOMES AT LEGACY LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+        },
+        {
+          "fact": "developer",
+          "url": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "az",
+      "city": "Scottsdale",
+      "name": "MULTI-FAMILY DWELLING",
+      "address": "19634 N 76TH ST BLDG 18",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2025-05-14",
+      "opening_date": "",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "RA2 -TOWNHOMES AT LEGACY LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+        },
+        {
+          "fact": "developer",
+          "url": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "az",
+      "city": "Scottsdale",
+      "name": "MULTI-FAMILY DWELLING",
+      "address": "19560 N 76TH ST BLDG 9",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2025-05-14",
+      "opening_date": "",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "RA2 -TOWNHOMES AT LEGACY LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+        },
+        {
+          "fact": "developer",
+          "url": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "az",
+      "city": "Scottsdale",
+      "name": "MULTI-FAMILY DWELLING",
+      "address": "19578 N 76TH ST BLDG 11",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2025-05-14",
+      "opening_date": "",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "RA2 -TOWNHOMES AT LEGACY LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+        },
+        {
+          "fact": "developer",
+          "url": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "az",
+      "city": "Scottsdale",
+      "name": "MULTI-FAMILY DWELLING",
+      "address": "19650 N 76TH ST BLDG 19",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2025-05-14",
+      "opening_date": "",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "RA2 -TOWNHOMES AT LEGACY LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+        },
+        {
+          "fact": "developer",
+          "url": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "az",
+      "city": "Scottsdale",
+      "name": "MULTI-FAMILY DWELLING",
+      "address": "19598 N 76TH ST BLDG 14",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2025-05-14",
+      "opening_date": "",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "RA2 -TOWNHOMES AT LEGACY LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+        },
+        {
+          "fact": "developer",
+          "url": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "az",
+      "city": "Scottsdale",
+      "name": "MULTI-FAMILY DWELLING",
+      "address": "19490 N 76TH ST BLDG 2",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2025-05-14",
+      "opening_date": "",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "RA2 -TOWNHOMES AT LEGACY LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+        },
+        {
+          "fact": "developer",
+          "url": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "az",
+      "city": "Scottsdale",
+      "name": "MULTI-FAMILY DWELLING",
+      "address": "19508 N 76TH ST BLDG 4",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2025-05-14",
+      "opening_date": "",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "RA2 -TOWNHOMES AT LEGACY LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+        },
+        {
+          "fact": "developer",
+          "url": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "az",
+      "city": "Scottsdale",
+      "name": "APARTMENTS",
+      "address": "7550 E LEGACY BL BLDG 6",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2025-05-12",
+      "opening_date": "",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "RA2 - Garden Apartments at Legacy LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+        },
+        {
+          "fact": "developer",
+          "url": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "az",
+      "city": "Scottsdale",
+      "name": "MULTI-FAMILY DWELLING",
+      "address": "8080 E CAMELBACK RD",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2025-03-27",
+      "opening_date": "",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "Spectrum Retirement Communities LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+        },
+        {
+          "fact": "developer",
+          "url": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "az",
+      "city": "Scottsdale",
+      "name": "MULTI-FAMILY DWELLING",
+      "address": "6824 E INDIAN SCHOOL RD",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2025-03-04",
+      "opening_date": "",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "MPC Indian School, LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+        },
+        {
+          "fact": "developer",
+          "url": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "az",
+      "city": "Scottsdale",
+      "name": "APARTMENTS",
+      "address": "10200 E DYNAMITE BL BLDG 7",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2025-02-03",
+      "opening_date": "",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "Mike Anderson with MBA Development Partners, LLC",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+        },
+        {
+          "fact": "developer",
+          "url": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "az",
+      "city": "Scottsdale",
+      "name": "APARTMENTS",
+      "address": "13870 N FRANK LLOYD WRIGHT BL UNIT 1070",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2024-12-04",
+      "opening_date": "",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "Jeff Hoffman",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+        },
+        {
+          "fact": "developer",
+          "url": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "az",
+      "city": "Scottsdale",
+      "name": "APARTMENTS",
+      "address": "3380 N SCOTTSDALE RD",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2024-11-22",
+      "opening_date": "",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "Empire Group",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+        },
+        {
+          "fact": "developer",
+          "url": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/12/query?where=PermitType+IN+%28%27APARTMENTS%27%2C%27MULTI-FAMILY+DWELLING%27%29&outFields=%2A&f=json&resultRecordCount=500&orderByFields=IssueDate+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "state": "nm",
+  "recipe": "bernalillo-county-sales.json",
+  "date": "2026-09-19",
+  "status": "empty",
+  "count": 0,
+  "attempts": 0,
+  "note": "disabled: The county does not publish a free machine-readable sales or transfer feed; its free assessor layer has no sale date or sale price.",
+  "records": []
+}

@@ -50,7 +50,6 @@ function renderShell(activeKey) {
       <a class="wordmark" href="${LANDING_URL}" title="Back to the CraneSignal home page">CraneSignal</a>
       <nav>${navHtml}</nav>
       <div class="top-controls">
-        <div style="color: var(--text-dim); font-size: 11px;">Covered: Texas, Arizona</div>
         <div id="last-updated" style="color: var(--text-dim); font-size: 11px;"></div>
         <a href="${LANDING_URL}" style="color: var(--text-dim); font-size: 11px;">&larr; Home page</a>
         <a href="privacy.html" style="color: var(--text-dim); font-size: 11px;">Privacy</a>
@@ -85,6 +84,16 @@ function formatUpdated(iso) {
   const d = new Date(`${iso}T12:00:00`);
   if (isNaN(d)) return "";
   return `Last updated: ${d.toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })}`;
+}
+
+function summaryHero(summary) {
+  if (!summary || !summary.lastCheck) {
+    return "Buildings worth a call now. Being built. Opening soon. Just sold.";
+  }
+  const permits = Number(summary.permitsFiled || 0).toLocaleString("en-US");
+  const sold = Number(summary.sold || 0).toLocaleString("en-US");
+  const total = Number(summary.totalTracked || 0).toLocaleString("en-US");
+  return `Last check ${formatDataDate(summary.lastCheck)}: ${permits} buildings just filed permits, ${sold} just sold. ${total} tracked.`;
 }
 
 function setLastUpdated(iso) {
