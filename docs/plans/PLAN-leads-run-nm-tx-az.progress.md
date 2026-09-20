@@ -103,3 +103,8 @@
   - Checks: the plan Check command passed; `python3 tooling/qa/check_lead_data.py` passed for 4 states and 1,472 source leads; Railway app deployment `0995c703-472e-4296-8763-148953a93050` and landing deployment `36d957bf-2f61-4de9-9d2c-26cf8b57f3a0` both reached `SUCCESS`; live app summary, New Mexico, Texas, and landing responses returned HTTP 200 with the September 20 data.
   - Errors resolved: the first guarded run stopped before publishing because a regression test hard-coded September 19; it now compares the area date with the built summary date. Two landing uploads used the repository root and failed safely before release; retrying with `marketing/landing` as the archive root succeeded.
   - Open: New Mexico remains below the 25-lead area-picker threshold by design. Future `new-run.sh` runs rebuild and publish the root app data automatically, but the separately hosted chatbot image is not redeployed by that command; automating that service remains a gap in the one-trigger goal.
+
+## Next time (from how this build went)
+- Several tasks needed fixes during review (T1, T2, T3b, T6, T9) — writing and running tests for each piece before moving on would have caught these earlier and kept the flow smoother.
+- The search limit in the "find a source" tool didn't work as designed (T3b) — thinking through how a rule will actually be enforced in practice, not just what it sounds like, saves a back-and-forth.
+- Two different parts of the code normalized building names differently, which broke the "new leads" count (T6) — using one shared helper for tricky logic saves time and bugs.
