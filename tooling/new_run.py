@@ -12,6 +12,7 @@ import argparse
 import json
 import os
 import re
+import shutil
 import subprocess
 import sys
 import urllib.request
@@ -21,6 +22,10 @@ from typing import Sequence
 
 ROOT = Path(__file__).resolve().parents[1]
 STATE_RE = re.compile(r"^[a-z][a-z0-9-]*$")
+NEEDS_SOURCE_URL = (
+    "https://github.com/Pu11en/realpage/blob/main/"
+    "propertystack/runs/needs-a-source.md"
+)
 
 
 class PublishError(RuntimeError):
@@ -115,15 +120,81 @@ def _auto_found_sources(root: Path, states: Sequence[str]) -> list[str]:
     return found
 
 
-def summary_line(summary: dict, states: Sequence[str], auto_found: Sequence[str]) -> str:
+def _source_health(root: Path, states: Sequence[str]) -> dict[str, int]:
+    """Count the latest health entry for every configured source in the run."""
+    health_path = root / "propertystack" / "runs" / "source-health.json"
+    try:
+        payload = json.loads(health_path.read_text())
+    except (OSError, json.JSONDecodeError):
+        payload = {}
+    entries = payload.get("sources", {}) if isinstance(payload, dict) else {}
+    counts = {"worked": 0, "empty": 0, "failed": 0}
+    for state in states:
+        recipe_dir = root / "propertystack" / "recipes" / state
+        for recipe_path in recipe_dir.glob("*.json"):
+            entry = entries.get(f"{state}/{recipe_path.name}", {})
+            status = entry.get("status") if isinstance(entry, dict) else None
+            if status in counts:
+                counts[status] += 1
+    return counts
+
+
+def _needs_source_url(root: Path) -> str:
+    path = root / "propertystack" / "runs" / "needs-a-source.md"
+    return NEEDS_SOURCE_URL if path.is_file() else ""
+
+
+def summary_line(
+    summary: dict,
+    states: Sequence[str],
+    auto_found: Sequence[str],
+    health: dict[str, int],
+    needs_source_url: str,
+) -> str:
     state_list = ", ".join(state.upper() for state in states)
     line = (
         f"Last check {summary['lastCheck']}: {summary['permitsFiled']} permits, "
         f"{summary['sold']} sales, {summary['totalTracked']} tracked ({state_list})"
     )
+    line += (
+        f"; sources: {health.get('worked', 0)} worked, "
+        f"{health.get('empty', 0)} empty, {health.get('failed', 0)} failed"
+    )
+    if needs_source_url:
+        line += f"; [needs a source]({needs_source_url})"
     if auto_found:
         line += "; auto-found sources: " + ", ".join(auto_found)
     return line
+
+
+def _backup_path(root: Path, state: str) -> Path:
+    return root / "propertystack" / "data" / state / "leads.before-run.json"
+
+
+def _validate_backup(root: Path, state: str) -> Path:
+    backup = _backup_path(root, state)
+    try:
+        rows = json.loads(backup.read_text())
+    except FileNotFoundError as exc:
+        raise PublishError(
+            f'no pre-run copy exists for "{state}"; nothing was restored'
+        ) from exc
+    except (OSError, json.JSONDecodeError) as exc:
+        raise PublishError(
+            f'the pre-run copy for "{state}" could not be read: {exc}'
+        ) from exc
+    if not isinstance(rows, list):
+        raise PublishError(f'the pre-run copy for "{state}" is not a lead list')
+    return backup
+
+
+def _restore_backup(root: Path, state: str) -> None:
+    backup = _validate_backup(root, state)
+    leads_path = root / "propertystack" / "data" / state / "leads.json"
+    temporary = leads_path.with_suffix(".json.undo-tmp")
+    shutil.copyfile(backup, temporary)
+    temporary.replace(leads_path)
+    print(f'\nRestored the pre-run copy for {state.upper()} ({backup.name}).')
 
 
 def post_discord(webhook_url: str, line: str) -> None:
@@ -170,10 +241,13 @@ def run_pipeline(
     root: Path = ROOT,
     webhook_url: str = "",
     dry_run: bool = False,
+    undo: bool = False,
     runner: CommandRunner | None = None,
     webhook_sender=post_discord,
 ) -> str | None:
     states = validate_states(states, root)
+    if undo and len(states) != 1:
+        raise PublishError("undo exactly one state at a time")
     runner = runner or CommandRunner(root)
 
     if dry_run:
@@ -183,10 +257,14 @@ def run_pipeline(
         )
         if status:
             raise PublishError("the worktree already has changes; dry-run from a clean checkout")
-        runner.run(
-            ["bash", "tooling/run-area.sh", "--dry-run", *states],
-            label="Previewing source runs",
-        )
+        if undo:
+            _validate_backup(root, states[0])
+            print(f"\nDry run: {states[0].upper()} has a pre-run copy ready to restore.")
+        else:
+            runner.run(
+                ["bash", "tooling/run-area.sh", "--dry-run", *states],
+                label="Previewing source runs",
+            )
         print("\nDry run complete; no data was changed or published.")
         return None
 
@@ -196,9 +274,12 @@ def run_pipeline(
         )
     _require_clean_main(runner)
 
-    runner.run(
-        ["bash", "tooling/run-area.sh", *states], label="Refreshing lead sources"
-    )
+    if undo:
+        _restore_backup(root, states[0])
+    else:
+        runner.run(
+            ["bash", "tooling/run-area.sh", *states], label="Refreshing lead sources"
+        )
     runner.run(
         ["python3", "site/data/build_data.py"], label="Building site and chat data"
     )
@@ -222,7 +303,11 @@ def run_pipeline(
 
     built_summary = _summary(root)
     line = summary_line(
-        built_summary, states, _auto_found_sources(root, states)
+        built_summary,
+        states,
+        _auto_found_sources(root, states),
+        _source_health(root, states),
+        _needs_source_url(root),
     )
 
     runner.run(
@@ -235,8 +320,12 @@ def run_pipeline(
     )
     _check_only_generated_changes(status)
     if status:
+        if undo:
+            commit_message = f"Restore {states[0].upper()} lead data backup"
+        else:
+            commit_message = f"Refresh {' '.join(state.upper() for state in states)} lead data"
         runner.run(
-            ["git", "commit", "-m", f"Refresh {' '.join(state.upper() for state in states)} lead data"],
+            ["git", "commit", "-m", commit_message],
             label="Committing refreshed data",
         )
     else:
@@ -258,6 +347,11 @@ def parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
         action="store_true",
         help="list the source work without downloading, committing, pushing, or posting",
     )
+    parser.add_argument(
+        "--undo",
+        action="store_true",
+        help="restore one state's pre-run copy, check it, publish it, and announce it",
+    )
     return parser.parse_args(argv)
 
 
@@ -268,6 +362,7 @@ def main(argv: Sequence[str] | None = None) -> int:
             args.states,
             webhook_url=os.environ.get("SIGNUP_WEBHOOK_URL", ""),
             dry_run=args.dry_run,
+            undo=args.undo,
         )
     except PublishError as exc:
         print(f"\nSTOPPED: {exc}", file=sys.stderr)
