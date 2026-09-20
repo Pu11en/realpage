@@ -4,7 +4,7 @@
   "system": "houston-sold-permits-xlsx",
   "search_page_url": "https://www.houstonpermittingcenter.org/sold-permits-search",
   "endpoint": "houston-weekly-xlsx",
-  "keyword_pattern": "apart|multi[- ]?family|\\br-?2\\b",
+  "keyword_pattern": "apart|\\bapts?\\b|multi[- ]?family|\\br-?2\\b",
   "new_construction_pattern": "\\bnew\\b",
   "fields": {
     "permit_type": "Comments",
@@ -15,5 +15,6 @@
   "date_format": "iso",
   "date_tested": "2026-09-14",
   "live_test": "Scraped the real search page HTML live and found 34 posted weekly .xlsx links (Jan 5 2026 through at least June 1-7 2026); downloaded 3 of them live and confirmed the real column layout (Zip Code/Permit Date/Permit Type/Project No/Address/Comments starting row 3) matches the research doc exactly. Real matching row found live in the April 13-19 2026 file: '2520 HOUSTON AVE FL 7' / \"NEW CONDOS (7TH FLOOR) BUILDOUT 1-9-1-R2-B 21'IBC\" (Permit Date 2026/04/15) -- confirms the new+apartment/R2 keyword filter genuinely matches real rows, not just a guess. Most rows in this dataset are repairs/remodels/EV chargers on existing apartment buildings (11 apartment-keyword hits in the Jan 5 file, 0 of them new construction) -- true new-construction apartment rows are rare in any single week's file, which matches this being a weekly permit-fee-paid feed rather than a project registry.",
+  "audit_decision": "S7 audit 2026-09-20: keep enabled. The feed is not under-reading after reading all posted weekly spreadsheets: 34 posted files, 34 read, 13,780 permit rows, 28 apartment-building rows kept, newest permit 2026-08-10. All 28 are unique versus HCAD by normalized address. The feed has weak completeness -- only 4 rows state units and none has owner/contact/valuation -- but it adds city permit dates and building-level permit descriptions that HCAD does not provide.",
   "notes": "This is not a Socrata/ArcGIS/CKAN source -- a new module, skills/lead-finder-permits/houston_sold_permits.py, discovers the posted weekly xlsx URLs from the search page's own HTML (regex on href=\"...xlsx\") and parses each with openpyxl (already a project dependency, no new one added). No units field exists anywhere in this feed; a project's unit count is only kept when the Comments text itself states 'NN units' (rare -- most rows never mention a unit count), otherwise None ('Units: not public yet'), never estimated. No owner/developer field either. Each weekly file only covers permits issued that week, so this recipe must be re-run against the full discovered URL list every run to build up history since 2024-09 -- discover_weekly_urls() returns every currently-posted link, but the site itself appears to only keep a rolling window of past weeks (earliest link seen live was January 2026, not September 2024), so full 2024-09-onward coverage from this source alone is not possible -- TABS (T2) and TDHCA (T5) are the sources that actually cover that full window for Houston; this recipe adds only what's still posted."
 }

@@ -82,6 +82,7 @@ def test_runs_at_most_six_sources_in_parallel_and_writes_summary(tmp_path):
         "failed": 0,
         "suspect": 0,
         "stale": 0,
+        "incomplete": 0,
     }
     assert len(json.loads((tmp_path / "propertystack/data/zz/leads.json").read_text())) == 8
     assert json.loads(

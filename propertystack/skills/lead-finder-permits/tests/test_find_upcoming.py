@@ -183,6 +183,20 @@ def test_unknown_units_kept_as_none_for_details_step():
     assert records[0].units is None
 
 
+def test_recipe_keyword_pattern_can_match_local_shorthand():
+    recipe = dict(RECIPE, keyword_pattern=r"\bapt\b|\br-?2\b")
+    rows = [
+        {
+            "PermitType": "NEW APT BLD 1-5-3-R2-A",
+            "IssueDate": datetime.date(2026, 8, 1),
+            "Units": "",
+            "Address": "7 River Rd",
+        }
+    ]
+    records = find_upcoming("Rivertown", "ZZ", "zz", recipe, _http_get(rows), today=TODAY)
+    assert len(records) == 1
+
+
 def test_multiple_permits_same_address_merged_into_one_record():
     rows = [
         {

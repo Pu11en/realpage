@@ -139,13 +139,10 @@ def _apartment_matcher(recipe: dict) -> "re.Pattern[str]":
     """The regex that decides whether a permit row is an apartment project.
 
     Defaults to the generic "multifamily / apartment" wording.  A city whose
-    permit feed labels apartment projects with its own filing code instead can
-    supply `apartment_pattern` in its recipe -- one real city prefixes every
-    affordable-housing-bond project with a two-letter programme code and never
-    writes "apartment" on the row, so the generic wording found none of the
-    apartment permits it issued in the last year.
+    permit feed labels apartment projects with its own filing code or shorthand
+    can supply `apartment_pattern` or `keyword_pattern` in its recipe.
     """
-    pattern = recipe.get("apartment_pattern")
+    pattern = recipe.get("apartment_pattern") or recipe.get("keyword_pattern")
     if not pattern:
         return APARTMENT_RE
     return re.compile(pattern, re.I)
@@ -244,6 +241,11 @@ def _find_co_value(row: dict, fields: dict) -> str:
 def _parse_date(value) -> datetime.date | None:
     if not value:
         return None
+    # A spreadsheet cell formatted as a date arrives already parsed, not as text.
+    if isinstance(value, datetime.datetime):
+        return value.date()
+    if isinstance(value, datetime.date):
+        return value
     if isinstance(value, (int, float)):
         # ArcGIS FeatureServer fields return dates as epoch milliseconds.
         return datetime.datetime.fromtimestamp(value / 1000, tz=datetime.timezone.utc).date()
