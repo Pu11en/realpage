@@ -1,0 +1,67 @@
+{
+  "state": "tx",
+  "recipe": "san-antonio.json",
+  "date": "2026-09-19",
+  "status": "worked",
+  "count": 2,
+  "attempts": 1,
+  "note": "",
+  "records": [
+    {
+      "area": "tx",
+      "city": "San Antonio",
+      "name": "Nacogdoches Apartments - Bld#  1-Apt.",
+      "address": "7010 COMANCHE LAND, CITY OF SAN ANTONIO, TX 78233",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2025-11-24",
+      "opening_date": "",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://data.sanantonio.gov/api/3/action/datastore_search_sql"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://data.sanantonio.gov/api/3/action/datastore_search_sql"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "San Antonio",
+      "name": "AFF - 13039 SW 410 Building 1 - The Orion Apartments",
+      "address": "13039 SW 410, City of San Antonio, TX 78224",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2025-09-15",
+      "opening_date": "",
+      "sale_date": "",
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://data.sanantonio.gov/api/3/action/datastore_search_sql"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://data.sanantonio.gov/api/3/action/datastore_search_sql"
+        }
+      ],
+      "why": "new multifamily permit"
+    }
+  ]
+}
