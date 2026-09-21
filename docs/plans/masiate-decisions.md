@@ -20,6 +20,9 @@ and per-lead saved-note decisions below.
   The report is the main outcome; chat supports further investigation.
 - Agent research happens on request and stays in the person's saved chats;
   the agent must retrieve prior findings when that person asks again.
+- Agent scope is research only: facts, sources and available business contacts.
+  No outreach-message drafting or call briefs; Masiate handles preparation and
+  contact itself. Nothing is sent to prospects by the system.
 - **Cancel separate per-lead notes, note visibility controls and shared-record
   edits.** The latest user instruction makes the previous Q7 unnecessary.
 - One initial collection/research run and one fixed PDF are selected. No
@@ -311,7 +314,7 @@ Missing contacts do not automatically erase otherwise promising properties.
 Treat this as an assistant planning default, not a claimed user preference or
 a calibrated prediction of sales success. No need to re-ask for scoring weights.
 
-## Current Question
+## Agent Outreach Boundary
 
 Q12: Beyond researching a property, what should the agent help the owner prepare?
 
@@ -321,9 +324,28 @@ Q12: Beyond researching a property, what should the agent help the owner prepare
 - C. A call briefing with what is known and questions to ask; no written message.
 - D. Both a first-contact message and call briefing on request; broader assistance.
 
-Answer: pending. Every option retains the agreed research capability. None
-authorizes the agent to send messages, contact prospects, or invent company
-qualifications, relationships, price quotes or confirmed work availability.
+Answer: **B**, selected by Drew on 2026-09-20. Keep the agent focused on research
+answers, evidence and available business contacts. Outreach preparation belongs
+to the owner; message drafting and call briefs are outside this feature's scope.
+No sending messages, contacting prospects or inventing company qualifications,
+relationships, price quotes or confirmed work availability.
+
+## Current Question
+
+Q13: What spending rule should apply to collecting information for the first PDF?
+
+- A. Free public sources first; recommended starting point, with paid-only gaps
+  clearly marked instead of purchasing access.
+- B. Allow paid sources within a budget Drew specifies before any spending;
+  potentially more coverage, but a firm cap and cost checks are required.
+- C. Use existing subscriptions only where their included allowances and access
+  are verified; no new subscriptions, purchases or overage charges.
+- D. Compare free and paid coverage first, then decide whether paid access is
+  worthwhile; no purchase while preparing that comparison.
+
+Answer: pending. This concerns additional record-access/search costs for initial
+collection, not an assumption that AI processing, hosting or live agent research
+is free. No paid work or unbounded usage is authorized by this question.
 
 ## Product Questions To Explore Next
 
