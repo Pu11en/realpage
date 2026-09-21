@@ -14,7 +14,7 @@ read public pages and public AI answers, we post nothing anywhere.
 | 1. Baseline dashboard | **CrawlSEO** | `crawlseo/crawlseo` (MIT) | Docker; Google OAuth client (login + Search Console) | WSL2 + Docker Desktop, port 3100 |
 | 2. Audit + fixes | **Fire Your SEO Agency** | `leopard627/fire-your-seo-agency` (MIT) | Claude Code only, no keys | Claude Code plugin |
 | 3. Buying-intent tracking loop | **GeoLook** | `aigclink/geolook` (MIT) | Python 3.9+, Linux (`fcntl`); DeepSeek key optional | WSL2, port 8765 |
-| 4. Weekly answer-share run | **NiubiGEO** | `Albert-Weasker/niubigeo` (Apache-2.0) | Node 22.13+; OpenRouter key | WSL2, port 8787 |
+| 4. Weekly answer-share run | **NiubiGEO** | `Albert-Weasker/niubigeo` (Apache-2.0) | Node 22.13+; Claude + Gemini keys direct (no OpenRouter) | WSL2, port 8787 |
 
 Second opinion (optional, not week 1): `AgriciDaniel/claude-seo` (`/seo audit`, `/seo schema`, `/seo geo`;
 Python, has a Windows installer). Install only if the Fire Your SEO Agency audit leaves gaps.
@@ -48,8 +48,13 @@ or start the dev site on another port. NiubiGEO 8787 is free.
 
 1. **Google.** Who does the Google runbook below (G1-G5): the Porkbun login holds G1; the rest can be David on
    the same Google account. Also: GA4 yes/no (G4).
-2. **OpenRouter key** for NiubiGEO (pay per call; a weekly run of ~20 questions x 4 models with web search is roughly
-   $2-10). Or say which existing key to use instead.
+2. **Keys.** We have Claude (`ANTHROPIC_API_KEY`), Google (`GEMINI_API_KEY`) and DeepSeek. NiubiGEO's `.env.example`
+   takes those directly (`ANTHROPIC_API_KEY`, `GEMINI_API_KEY`, `DEEPSEEK_API_KEY`; also `OPENAI_API_KEY`,
+   `PERPLEXITY_API_KEY`), so **no OpenRouter**. Week 1 runs 3 engines: Claude + web search, Gemini + Google Search,
+   DeepSeek (from memory, labelled so). ChatGPT joins later two ways: the ChatGPT plan (consumer app) is sampled by
+   hand through GeoLook's sample-sheet when it is back on, and an `OPENAI_API_KEY` slots into NiubiGEO if Drew ever
+   wants it. Same labels as the archived plan: these are the vendors' API engines, not the consumer apps, except
+   the hand-pasted ones. Cost with our keys: ~25 questions x 3 engines weekly, well under $5.
 3. **Site changes.** OK to change `site/Caddyfile` (serve robots/sitemap/llms.txt, `/` served directly instead of a 302)
    and to add **static, crawlable HTML** to the app: a pre-rendered summary on the home page, one static page per
    state (`/leads/tx.html` ...), and later one per building. This is the change that actually moves rankings; the
@@ -172,11 +177,13 @@ Try: `bash tooling/seo/crawl.sh` then open http://localhost:3100
   (crawl -> audit -> sample every engine we have keys for -> tickets -> assets). Compare its generated `llms.txt` /
   JSON-LD with T3's and merge anything better into `site/`. Record which of its 10 API engines we actually have keys
   for (its README doesn't list them) and which 7 are manual; do one manual sampling pass via its sample-sheet for
-  ChatGPT / Perplexity / Google AI Overviews (a human pastes answers). Copy `work/<slug>/` outputs to
+  Perplexity (free tier) and Google AI Overviews now, ChatGPT once the plan is back on (a human pastes answers). Copy `work/<slug>/` outputs to
   `docs/seo/geolook/<date>/`. Commit.
-- [ ] **T6 First weekly NiubiGEO run (the demo footage).** `npm ci`, `OPENROUTER_API_KEY` in `.env`, `npm run server`
-  (8787). Project = `app.cranesignal.com`; models: one each of OpenAI, Anthropic, Google, Perplexity via OpenRouter,
-  web search on; keyword tests = Set B without the brand name. Run, then record the dashboard walkthrough
+- [ ] **T6 First weekly NiubiGEO run (the demo footage).** `npm ci`, `ANTHROPIC_API_KEY` + `GEMINI_API_KEY` +
+  `DEEPSEEK_API_KEY` in its `.env` (no OpenRouter), `npm run server` (8787). Project = `app.cranesignal.com`;
+  models: the newest Claude and Gemini the tool lists, web search on where it offers it, DeepSeek as the no-search
+  control; keyword tests = Set B without the brand name. First run: confirm the direct-key path actually
+  works for each provider and note the exact model IDs in `report.md`. Run, then record the dashboard walkthrough
   (Win+G / OBS, ~2 min: domain -> models -> side-by-side descriptions -> competitor table -> a source click) to
   `docs/seo/answer-share/<date>/demo.mp4` (path only in git if > 10 MB: keep the file in `raw/`). Export the answers
   and write `report.md`: table question x model -> vendors named, plus "share of answers naming each vendor". Commit.
