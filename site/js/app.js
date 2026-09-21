@@ -180,13 +180,17 @@ function visibleAreas(areas) {
   return (areas || []).filter((a) => !a.hidden);
 }
 
+function fmtCount(n) {
+  return Number(n || 0).toLocaleString("en-US");
+}
+
 // Leads: one button per area (5.2). `areas` is site/data/areas/index.json's
 // `areas` list; `activeSlug` is the one currently shown; `onSelect(slug)` swaps data.
 function renderAreaButtons(areas, activeSlug) {
   const visible = visibleAreas(areas);
   if (!visible || visible.length < 2) return "";
   return `<div class="area-buttons">${visible.map((a) => `
-    <button type="button" class="area-btn ${a.slug === activeSlug ? "active" : ""}" data-area="${a.slug}">${a.label}</button>
+    <button type="button" class="area-btn ${a.slug === activeSlug ? "active" : ""}" data-area="${a.slug}">${a.label} (${fmtCount(a.leads)})</button>
   `).join("")}</div>`;
 }
 

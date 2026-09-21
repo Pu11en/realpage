@@ -52,7 +52,8 @@
     const ALL_AREA = { slug: "all", label: "All areas", dataPath: "__all__" };
 
     function withAllArea(areas) {
-      return areas.length > 1 ? [ALL_AREA, ...areas] : areas;
+      const total = areas.reduce((n, a) => n + Number(a.leads || 0), 0);
+      return areas.length > 1 ? [{ ...ALL_AREA, leads: total }, ...areas] : areas;
     }
 
     async function loadAreaData(areas, area) {
@@ -95,8 +96,8 @@
 
         <div class="lead-toolbar">
           <div class="pick-row"><span class="pick-label">State</span>${renderAreaButtons(areas, area.slug)}</div>
-          ${(data.metros || []).length ? `<div class="pick-row"><span class="pick-label">${area.slug === "all" ? "Narrow" : "Region"}</span><div class="metro-buttons">
-            <button class="metro-btn active" data-metro="">${area.slug === "all" ? "Everywhere" : "All " + area.label} (${data.leads.length})</button>
+          ${area.slug !== "all" && (data.metros || []).length ? `<div class="pick-row"><span class="pick-label">Region</span><div class="metro-buttons">
+            <button class="metro-btn active" data-metro="">All ${area.label} (${data.leads.length})</button>
             ${data.metros.map((m) => `<button class="metro-btn" data-metro="${m.name}">${m.name} (${m.leads})</button>`).join("")}
           </div></div>` : ""}
           <div class="quick-filters" id="quick-filters" aria-label="Quick filters">
