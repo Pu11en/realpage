@@ -1,0 +1,21 @@
+{
+  "worker": "coverage",
+  "state": "complete",
+  "started_at": "2026-09-21T02:20:40Z",
+  "checkpoint_at": "2026-09-21T02:23:07Z",
+  "finished_at": "2026-09-21T02:23:07Z",
+  "records_saved": 267,
+  "source_receipts_saved": 76,
+  "output_paths": {
+    "coverage_json": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/finish/coverage/coverage.json",
+    "counts_json": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/finish/coverage/counts.json",
+    "coverage_md": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/finish/coverage/coverage.md",
+    "summary_md": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/finish/coverage/summary.md",
+    "status_json": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/finish/coverage/status.json"
+  },
+  "notes": [
+    "Reconciled immutable review-input source receipts and raw-record counts.",
+    "No new collection, paid API use, outreach, pushes or live changes.",
+    "All record source local_path references checked by this worker existed."
+  ]
+}

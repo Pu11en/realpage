@@ -1,0 +1,2010 @@
+[
+  {
+    "receipt_id": "brazos-coverage-001",
+    "lane": "brazos",
+    "name": "City of Bryan SDRC 2026 development-review archive",
+    "url": "https://docs.bryantx.gov/planning_development/SDRC/2026%20SDRC/",
+    "county": "Brazos",
+    "requested_from": "2026-06-22",
+    "requested_to": "2026-09-20",
+    "covered_from": "2026-07-28",
+    "covered_to": "2026-09-15",
+    "status": "partial",
+    "records_found": 9,
+    "files_read_count": 14,
+    "files_read_sample": 14,
+    "reason": "Inspected the dated archive index and downloaded/extracted the strongest address-level PDFs from 2026-07-28 through 2026-09-15. The 2026-09-22 folder existed but was outside the requested cutoff/current run date and was not used for candidates.",
+    "next_cursor": "Continue with 2026-06-23, 2026-06-30, 2026-07-07, 2026-07-14 and 2026-07-21 folders; then join repeated revisions by case number.",
+    "retrieved_at": "2026-09-21T01:59:14Z",
+    "audit_notes": [
+      "Not exhausted; keep this as a gap in the PDF coverage section.",
+      "Continuation path is documented.",
+      "Covered dates differ from the requested window; do not summarize as complete window coverage without context."
+    ],
+    "source_class": "other"
+  },
+  {
+    "receipt_id": "brazos-coverage-002",
+    "lane": "brazos",
+    "name": "City of Bryan monthly building reports",
+    "url": "https://www.bryantx.gov/development-services/monthly-building-reports/",
+    "county": "Brazos",
+    "requested_from": "2026-06-22",
+    "requested_to": "2026-09-20",
+    "covered_from": "2026-08-01",
+    "covered_to": "2026-08-31",
+    "status": "partial",
+    "records_found": 0,
+    "files_read_count": 2,
+    "files_read_sample": 2,
+    "reason": "Downloaded the public page and August 2026 PDF. It reports aggregate counts/values only, not address-level permits; August showed residential remodel/addition, multifamily and commercial activity but no project identities.",
+    "next_cursor": "Request or find an address-level export from Bryan Development Services / Citizenserve.",
+    "retrieved_at": "2026-09-21T01:59:14Z",
+    "audit_notes": [
+      "Not exhausted; keep this as a gap in the PDF coverage section.",
+      "Continuation path is documented.",
+      "Aggregate counts do not identify address-level leads.",
+      "Covered dates differ from the requested window; do not summarize as complete window coverage without context."
+    ],
+    "source_class": "other"
+  },
+  {
+    "receipt_id": "brazos-coverage-003",
+    "lane": "brazos",
+    "name": "City of Bryan online permitting / Citizenserve",
+    "url": "https://www.bryantx.gov/development-services/online-permitting/",
+    "county": "Brazos",
+    "requested_from": "2026-06-22",
+    "requested_to": "2026-09-20",
+    "covered_from": null,
+    "covered_to": null,
+    "status": "blocked",
+    "records_found": 0,
+    "files_read_count": 1,
+    "files_read_sample": 1,
+    "reason": "Official page says users must create an account to access the portal and track application activity. No login/register action was taken.",
+    "next_cursor": "Use open-records/export request or approved login route if coordinator authorizes it later.",
+    "retrieved_at": "2026-09-21T01:59:14Z",
+    "audit_notes": [
+      "Not exhausted; keep this as a gap in the PDF coverage section.",
+      "No claim of full county coverage should rely on this source.",
+      "Continuation path is documented.",
+      "Access restriction was recorded; no circumvention is implied.",
+      "Covered date window is not fully established from saved evidence."
+    ],
+    "source_class": "permit"
+  },
+  {
+    "receipt_id": "brazos-coverage-004",
+    "lane": "brazos",
+    "name": "City of College Station building permits issued listing",
+    "url": "https://www.cstx.gov/your-government/departments/planning-development-services-department/building-permits-issued/",
+    "county": "Brazos",
+    "requested_from": "2026-06-22",
+    "requested_to": "2026-09-20",
+    "covered_from": null,
+    "covered_to": null,
+    "status": "blocked",
+    "records_found": 0,
+    "files_read_count": 3,
+    "files_read_sample": 3,
+    "reason": "Downloaded current and past listing pages. The static page exposes a Govstack document filter but no document rows in the fetched HTML; a direct POST to the official filter endpoint returned HTTP 400, so no address-level permit file was safely collected.",
+    "next_cursor": "Use browser-based endpoint discovery or ask College Station PDS for the weekly file export.",
+    "retrieved_at": "2026-09-21T01:59:14Z",
+    "audit_notes": [
+      "Not exhausted; keep this as a gap in the PDF coverage section.",
+      "No claim of full county coverage should rely on this source.",
+      "Continuation path is documented.",
+      "Covered date window is not fully established from saved evidence."
+    ],
+    "source_class": "permit"
+  },
+  {
+    "receipt_id": "brazos-coverage-005",
+    "lane": "brazos",
+    "name": "City of College Station new development list",
+    "url": "https://www.cstx.gov/your-government/departments/planning-development-services-department/new-development-list/",
+    "county": "Brazos",
+    "requested_from": "2026-06-22",
+    "requested_to": "2026-09-20",
+    "covered_from": null,
+    "covered_to": null,
+    "status": "blocked",
+    "records_found": 0,
+    "files_read_count": 2,
+    "files_read_sample": 2,
+    "reason": "Downloaded current and past listing pages. Static HTML showed source description and filters but no document rows without the Govstack dynamic listing.",
+    "next_cursor": "Resolve Govstack document filter in a browser session or request weekly new-development export.",
+    "retrieved_at": "2026-09-21T01:59:14Z",
+    "audit_notes": [
+      "Not exhausted; keep this as a gap in the PDF coverage section.",
+      "No claim of full county coverage should rely on this source.",
+      "Continuation path is documented.",
+      "Covered date window is not fully established from saved evidence."
+    ],
+    "source_class": "other"
+  },
+  {
+    "receipt_id": "brazos-coverage-006",
+    "lane": "brazos",
+    "name": "College Station/Bryan/Brazos Valley public bid route",
+    "url": "https://brazosbid.ionwave.net/SourcingEvents.aspx?SourceType=1",
+    "county": "Brazos",
+    "requested_from": "2026-09-20",
+    "requested_to": "2026-09-20",
+    "covered_from": "2026-07-09",
+    "covered_to": "2026-10-20",
+    "status": "complete",
+    "records_found": 0,
+    "files_read_count": 4,
+    "files_read_sample": 4,
+    "reason": "College Station and Bryan official bid pages both route vendors to Brazos Valley e-Marketplace. Public current bids listed 11 open items; none were strong construction/remodel/property leads for Masiate (mostly services, utility testing/transmission, warehouse reorder, appraisal, depository, water well rehab design).",
+    "next_cursor": "Recheck before final package for new construction solicitations; current list preserved.",
+    "retrieved_at": "2026-09-21T01:59:14Z",
+    "audit_notes": [
+      "Continuation path is documented.",
+      "Covered dates differ from the requested window; do not summarize as complete window coverage without context."
+    ],
+    "source_class": "bid_or_procurement"
+  },
+  {
+    "receipt_id": "brazos-coverage-007",
+    "lane": "brazos",
+    "name": "Brazos CAD certified data downloads and property search",
+    "url": "https://brazoscad.org/certified-data-downloads/",
+    "county": "Brazos",
+    "requested_from": "2026-09-20",
+    "requested_to": "2026-09-20",
+    "covered_from": "2026-01-01",
+    "covered_to": "2026-12-31",
+    "status": "partial",
+    "records_found": 0,
+    "files_read_count": 3,
+    "files_read_sample": 3,
+    "reason": "Verified official certified-download page and property-search links. The page offers 2026 certified data and a layout reference. Individual eSearch appears app/recaptcha-backed; no bypass attempted and no full bulk join was run within this hour.",
+    "next_cursor": "Download 2026 certified zip and layout, map selected addresses/legal descriptions to owner/property IDs in a separate approved pass.",
+    "retrieved_at": "2026-09-21T01:59:14Z",
+    "audit_notes": [
+      "Not exhausted; keep this as a gap in the PDF coverage section.",
+      "Continuation path is documented.",
+      "Covered dates differ from the requested window; do not summarize as complete window coverage without context."
+    ],
+    "source_class": "parcel_validation"
+  },
+  {
+    "receipt_id": "burleson-coverage-001",
+    "lane": "burleson",
+    "name": "City of Somerville ordinances",
+    "url": "https://somervilletx.gov/nav/ordinances.php",
+    "county": "Burleson",
+    "requested_from": "2025-09-20",
+    "requested_to": "2026-09-20",
+    "covered_from": "2025-06-10",
+    "covered_to": "2026-07-29",
+    "status": "partial",
+    "records_found": 8,
+    "files_read_count": 15,
+    "files_read_sample": 15,
+    "reason": "Official ordinance index exposed 2025-2026 SUP/zoning/building-fee PDFs. Read/downloaded current relevant SUP/zoning PDFs and extracted project-level address/scope from official scans; did not exhaust every non-project ordinance or full application packet.",
+    "next_cursor": "Ordinances 2026 and 2025 document-center list; remaining application packets/minutes behind agendas still need follow-up.",
+    "retrieved_at": "2026-09-21T02:00:02.272374Z",
+    "audit_notes": [
+      "Not exhausted; keep this as a gap in the PDF coverage section.",
+      "Continuation path is documented.",
+      "Covered dates differ from the requested window; do not summarize as complete window coverage without context."
+    ],
+    "source_class": "other"
+  },
+  {
+    "receipt_id": "burleson-coverage-002",
+    "lane": "burleson",
+    "name": "City of Somerville permits page",
+    "url": "https://somervilletx.gov/services/permits.php",
+    "county": "Burleson",
+    "requested_from": "2026-06-22",
+    "requested_to": "2026-09-20",
+    "covered_from": null,
+    "covered_to": null,
+    "status": "partial",
+    "records_found": 0,
+    "files_read_count": 1,
+    "files_read_sample": 1,
+    "reason": "Page provides permit contact, SafeBuilt inspection schedule, and application forms; no issued-permit register visible.",
+    "next_cursor": "Request issued building-permit log from permittingcos@somervilletx.gov or inspect any authenticated/office permit export.",
+    "retrieved_at": "2026-09-21T02:00:02.272374Z",
+    "audit_notes": [
+      "Not exhausted; keep this as a gap in the PDF coverage section.",
+      "Continuation path is documented.",
+      "Covered date window is not fully established from saved evidence."
+    ],
+    "source_class": "permit"
+  },
+  {
+    "receipt_id": "burleson-coverage-003",
+    "lane": "burleson",
+    "name": "City of Somerville Planning & Zoning agendas/minutes",
+    "url": "https://somervilletx.gov/services/planning___zoning_agendas/index.php",
+    "county": "Burleson",
+    "requested_from": "2024-09-20",
+    "requested_to": "2026-09-20",
+    "covered_from": "2024-01-18",
+    "covered_to": "2024-10-17",
+    "status": "partial",
+    "records_found": 15,
+    "files_read_count": 15,
+    "files_read_sample": 15,
+    "reason": "Public P&Z page exposed 2024 agendas/minutes only; extracted address-level accessory/subdivision/planning items. 2025-2026 P&Z agendas were not visible on this page, but related adopted ordinances were available separately.",
+    "next_cursor": "Find 2025-2026 P&Z agendas/minutes or request them from City Hall.",
+    "retrieved_at": "2026-09-21T02:00:02.272374Z",
+    "audit_notes": [
+      "Not exhausted; keep this as a gap in the PDF coverage section.",
+      "Continuation path is documented.",
+      "Covered dates differ from the requested window; do not summarize as complete window coverage without context."
+    ],
+    "source_class": "planning_or_agenda"
+  },
+  {
+    "receipt_id": "burleson-coverage-004",
+    "lane": "burleson",
+    "name": "City of Somerville RFQ/RFP documents",
+    "url": "https://somervilletx.gov/",
+    "county": "Burleson",
+    "requested_from": "2025-09-20",
+    "requested_to": "2026-09-20",
+    "covered_from": "2025-02-25",
+    "covered_to": "2025-03-05",
+    "status": "partial",
+    "records_found": 1,
+    "files_read_count": 4,
+    "files_read_sample": 4,
+    "reason": "Downloaded RFQ New City Hall and addenda plus non-construction solid-waste RFP. New City Hall is expired but address-level and relevant; no award status found.",
+    "next_cursor": "Search council minutes for award/construction update after March 2025.",
+    "retrieved_at": "2026-09-21T02:00:02.272374Z",
+    "audit_notes": [
+      "Not exhausted; keep this as a gap in the PDF coverage section.",
+      "Continuation path is documented.",
+      "Covered dates differ from the requested window; do not summarize as complete window coverage without context."
+    ],
+    "source_class": "bid_or_procurement"
+  },
+  {
+    "receipt_id": "burleson-coverage-005",
+    "lane": "burleson",
+    "name": "City of Caldwell building and construction pages",
+    "url": "https://www.caldwelltx.gov/building",
+    "county": "Burleson",
+    "requested_from": "2026-06-22",
+    "requested_to": "2026-09-20",
+    "covered_from": null,
+    "covered_to": null,
+    "status": "blocked",
+    "records_found": 0,
+    "files_read_count": 5,
+    "files_read_sample": 5,
+    "reason": "Official page identifies Cloudpermit and a SharePoint Permits / Inspection Reports folder, but anonymous direct fetch of the SharePoint public folder returned 403. Page itself contains no issued permit rows.",
+    "next_cursor": "Use browser-authenticated public share if available or request issued permit/inspection report from permits@caldwelltx.gov.",
+    "retrieved_at": "2026-09-21T02:00:02.272374Z",
+    "audit_notes": [
+      "Not exhausted; keep this as a gap in the PDF coverage section.",
+      "No claim of full county coverage should rely on this source.",
+      "Continuation path is documented.",
+      "Access restriction was recorded; no circumvention is implied.",
+      "Covered date window is not fully established from saved evidence."
+    ],
+    "source_class": "permit"
+  },
+  {
+    "receipt_id": "burleson-coverage-006",
+    "lane": "burleson",
+    "name": "City of Caldwell agendas and construction projects",
+    "url": "https://www.caldwelltx.gov/agendas",
+    "county": "Burleson",
+    "requested_from": "2025-09-20",
+    "requested_to": "2026-09-20",
+    "covered_from": null,
+    "covered_to": null,
+    "status": "blocked",
+    "records_found": 0,
+    "files_read_count": 3,
+    "files_read_sample": 3,
+    "reason": "Official agenda page links a SharePoint Meeting Agendas/Minutes folder that returned 403 to direct anonymous fetch. Construction page has Active Projects/Capital Improvement links but no visible address-level project rows in static HTML.",
+    "next_cursor": "Access SharePoint via browser/manual download or request meeting packet/project list from city secretary.",
+    "retrieved_at": "2026-09-21T02:00:02.272374Z",
+    "audit_notes": [
+      "Not exhausted; keep this as a gap in the PDF coverage section.",
+      "No claim of full county coverage should rely on this source.",
+      "Continuation path is documented.",
+      "Access restriction was recorded; no circumvention is implied.",
+      "Covered date window is not fully established from saved evidence."
+    ],
+    "source_class": "planning_or_agenda"
+  },
+  {
+    "receipt_id": "burleson-coverage-007",
+    "lane": "burleson",
+    "name": "Burleson County construction permits page",
+    "url": "https://www.burlesoncountytx.gov/page/living.permits",
+    "county": "Burleson",
+    "requested_from": "2026-06-22",
+    "requested_to": "2026-09-20",
+    "covered_from": "2026-07-23",
+    "covered_to": "2026-07-23",
+    "status": "complete",
+    "records_found": 0,
+    "files_read_count": 1,
+    "files_read_sample": 1,
+    "reason": "County page states unincorporated county does not require ordinary building permits/inspections; it routes floodplain, OSSF, utility ROW and driveway/culvert permits. No issued-record register is visible.",
+    "next_cursor": "For construction in floodplain/ROW/septic scope, request logs from the relevant county office.",
+    "retrieved_at": "2026-09-21T02:00:02.272374Z",
+    "audit_notes": [
+      "Continuation path is documented.",
+      "Source documents process or forms, not an issued permit register.",
+      "Covered dates differ from the requested window; do not summarize as complete window coverage without context."
+    ],
+    "source_class": "permit"
+  },
+  {
+    "receipt_id": "burleson-coverage-008",
+    "lane": "burleson",
+    "name": "Burleson County BID / RFP / RFQ notices",
+    "url": "https://www.burlesoncountytx.gov/page/bus.bidnotices",
+    "county": "Burleson",
+    "requested_from": "2025-09-20",
+    "requested_to": "2026-09-20",
+    "covered_from": "2025-07-01",
+    "covered_to": "2026-09-20",
+    "status": "partial",
+    "records_found": 0,
+    "files_read_count": 1,
+    "files_read_sample": 1,
+    "reason": "Bid page exposed road/bridge materials and bridge bid notices; no open building/remodel project fit was found in visible text. Road/bridge work was not entered as Masiate candidate.",
+    "next_cursor": "If public works concrete/bridge scopes become relevant, inspect bid PDFs separately.",
+    "retrieved_at": "2026-09-21T02:00:02.272374Z",
+    "audit_notes": [
+      "Not exhausted; keep this as a gap in the PDF coverage section.",
+      "Continuation path is documented.",
+      "Covered dates differ from the requested window; do not summarize as complete window coverage without context."
+    ],
+    "source_class": "bid_or_procurement"
+  },
+  {
+    "receipt_id": "burleson-coverage-009",
+    "lane": "burleson",
+    "name": "Burleson CAD property search",
+    "url": "https://esearch.burlesonappraisal.com/",
+    "county": "Burleson",
+    "requested_from": "2026-09-20",
+    "requested_to": "2026-09-20",
+    "covered_from": "2024-12-20",
+    "covered_to": "2026-09-21",
+    "status": "partial",
+    "records_found": 1,
+    "files_read_count": 3,
+    "files_read_sample": 3,
+    "reason": "Used official CAD to verify the Avenue P multifamily parcel and owner after ordinance record supplied BCAD ID. Did not bulk-crawl CAD or private owner contacts.",
+    "next_cursor": "Use targeted CAD checks for shortlisted ordinance/permit records only.",
+    "retrieved_at": "2026-09-21T02:00:02.272374Z",
+    "audit_notes": [
+      "Not exhausted; keep this as a gap in the PDF coverage section.",
+      "Continuation path is documented.",
+      "Covered dates differ from the requested window; do not summarize as complete window coverage without context."
+    ],
+    "source_class": "parcel_validation"
+  },
+  {
+    "receipt_id": "burleson-coverage-010",
+    "lane": "burleson",
+    "name": "Snook local permit/agendas",
+    "url": "search: official Snook city permit/agendas",
+    "county": "Burleson",
+    "requested_from": "2026-06-22",
+    "requested_to": "2026-09-20",
+    "covered_from": null,
+    "covered_to": null,
+    "status": "blocked",
+    "records_found": 0,
+    "files_read_count": 0,
+    "files_read_sample": 0,
+    "reason": "No official Snook municipal website or issued-permit register was found in bounded search. County page only gives Snook city phone number for permit information; search results showed Facebook and nonofficial summaries, not official downloadable records.",
+    "next_cursor": "Call/request City of Snook issued building permit and agenda log; avoid relying on Facebook unless coordinator approves social-source use.",
+    "retrieved_at": "2026-09-21T02:00:02.272374Z",
+    "audit_notes": [
+      "Not exhausted; keep this as a gap in the PDF coverage section.",
+      "No claim of full county coverage should rely on this source.",
+      "Continuation path is documented.",
+      "Covered date window is not fully established from saved evidence."
+    ],
+    "source_class": "permit"
+  },
+  {
+    "receipt_id": "grimes-coverage-001",
+    "lane": "grimes",
+    "name": "City of Navasota Project Dashboard ArcGIS layer",
+    "url": "https://navasota.maps.arcgis.com/apps/dashboards/17b7b6efb2794a54b6a2f4ce3473cb12",
+    "county": "Grimes",
+    "requested_from": "2026-06-22",
+    "requested_to": "2026-09-20",
+    "covered_from": null,
+    "covered_to": "2026-09-20",
+    "status": "complete",
+    "records_found": 32,
+    "files_read_count": 4,
+    "files_read_sample": [
+      "navasota_dashboard_item.json",
+      "navasota_dashboard_data.json",
+      "navasota_webmap_data.json",
+      "navasota_project_layer_query.json"
+    ],
+    "reason": "Queried public ArcGIS feature service and reviewed all 32 active project rows; extracted address/street/coordinate-level construction candidates where rows named projects, budgets, contractors or construction status. Dashboard lacks record dates, permit numbers and full street addresses for several private rows.",
+    "next_cursor": null,
+    "retrieved_at": "2026-09-21T02:24:00Z",
+    "audit_notes": [
+      "Covered date window is not fully established from saved evidence."
+    ],
+    "source_class": "planning_or_agenda"
+  },
+  {
+    "receipt_id": "grimes-coverage-002",
+    "lane": "grimes",
+    "name": "Navasota Planning & Zoning Destiny agendas",
+    "url": "https://destinyhosted.com/agenda_publish.cfm?id=62827",
+    "county": "Grimes",
+    "requested_from": "2026-06-22",
+    "requested_to": "2026-09-20",
+    "covered_from": "2026-06-01",
+    "covered_to": "2026-09-24",
+    "status": "partial",
+    "records_found": 5,
+    "files_read_count": 15,
+    "files_read_sample": [
+      "navasota_agenda_235_citycouncil_20260824.html",
+      "navasota_agenda_239.html",
+      "navasota_agenda_244.html",
+      "navasota_agenda_246.html",
+      "navasota_july_agendas.html",
+      "navasota_june_agendas.html"
+    ],
+    "reason": "Reviewed June-September meeting index pages and extracted address-level development items from August 13, August 27 and September 24 P&Z agendas/memos; also checked City Council follow-up for NKQ and found denial-risk memo. September 24 is a future meeting.",
+    "next_cursor": "Review City Council agendas for follow-up approvals and minutes after meetings occur.",
+    "retrieved_at": "2026-09-21T02:24:00Z",
+    "audit_notes": [
+      "Not exhausted; keep this as a gap in the PDF coverage section.",
+      "Continuation path is documented.",
+      "Covered dates differ from the requested window; do not summarize as complete window coverage without context."
+    ],
+    "source_class": "planning_or_agenda"
+  },
+  {
+    "receipt_id": "grimes-coverage-003",
+    "lane": "grimes",
+    "name": "Navasota Citizenserve building/development permit portal",
+    "url": "https://www2.citizenserve.com/Portal/PortalController?Action=showSearchPage&ctzPagePrefix=Portal_&installationID=343",
+    "county": "Grimes",
+    "requested_from": "2026-06-22",
+    "requested_to": "2026-09-20",
+    "covered_from": null,
+    "covered_to": null,
+    "status": "blocked",
+    "records_found": 0,
+    "files_read_count": 4,
+    "files_read_sample": [
+      "citizenserve_navasota_home.html",
+      "citizenserve_navasota_search.html",
+      "citizenserve_search_fields_permit.html",
+      "citizenserve_search_token_post.html"
+    ],
+    "reason": "Anonymous search page and permit fields loaded, but normal form POST with page token/cookie returned HTTP 401 Access Denied. Stopped rather than bypassing access controls.",
+    "next_cursor": "Manual browser search or open-records export for issued permits after 2026-06-22.",
+    "retrieved_at": "2026-09-21T02:05:00Z",
+    "audit_notes": [
+      "Not exhausted; keep this as a gap in the PDF coverage section.",
+      "No claim of full county coverage should rely on this source.",
+      "Continuation path is documented.",
+      "Access restriction was recorded; no circumvention is implied.",
+      "Covered date window is not fully established from saved evidence."
+    ],
+    "source_class": "permit"
+  },
+  {
+    "receipt_id": "grimes-coverage-004",
+    "lane": "grimes",
+    "name": "City of Navasota bid proposals",
+    "url": "https://www.navasotatx.gov/departments/finance/bid_proposals.php",
+    "county": "Grimes",
+    "requested_from": "2026-06-22",
+    "requested_to": "2026-09-20",
+    "covered_from": "2026-09-03",
+    "covered_to": "2026-09-24",
+    "status": "complete",
+    "records_found": 0,
+    "files_read_count": 1,
+    "files_read_sample": [
+      "navasota_bid_proposals.html"
+    ],
+    "reason": "Only current visible solicitation was depository banking services; not construction/remodel/property work.",
+    "next_cursor": null,
+    "retrieved_at": "2026-09-21T02:05:00Z",
+    "audit_notes": [
+      "Covered dates differ from the requested window; do not summarize as complete window coverage without context."
+    ],
+    "source_class": "bid_or_procurement"
+  },
+  {
+    "receipt_id": "grimes-coverage-005",
+    "lane": "grimes",
+    "name": "Grimes County development/floodplain/road pages",
+    "url": "https://grimescountytexas.gov/development",
+    "county": "Grimes",
+    "requested_from": "2026-06-22",
+    "requested_to": "2026-09-20",
+    "covered_from": null,
+    "covered_to": "2026-09-20",
+    "status": "partial",
+    "records_found": 0,
+    "files_read_count": 3,
+    "files_read_sample": [
+      "grimes_development.html",
+      "grimes_floodplain.html",
+      "grimes_road.html"
+    ],
+    "reason": "Pages define required development, residential construction, driveway/culvert and road-use permit processes but do not publish issued address-level permit registers.",
+    "next_cursor": "Request issued development/road-use permit register if coordinator approves records request.",
+    "retrieved_at": "2026-09-21T02:05:00Z",
+    "audit_notes": [
+      "Not exhausted; keep this as a gap in the PDF coverage section.",
+      "Continuation path is documented.",
+      "Covered date window is not fully established from saved evidence."
+    ],
+    "source_class": "other"
+  },
+  {
+    "receipt_id": "grimes-coverage-006",
+    "lane": "grimes",
+    "name": "Grimes County request for bids/qualifications",
+    "url": "https://grimescountytexas.gov/request-for-bids-qualifications",
+    "county": "Grimes",
+    "requested_from": "2026-06-22",
+    "requested_to": "2026-09-20",
+    "covered_from": null,
+    "covered_to": "2026-09-20",
+    "status": "partial",
+    "records_found": 3,
+    "files_read_count": 4,
+    "files_read_sample": [
+      "grimes_bids.html",
+      "grimes_bid_bridge.pdf",
+      "grimes_bid_concrete.pdf",
+      "grimes_bid_culverts.pdf"
+    ],
+    "reason": "Current bid page lists annual contracts including bridge construction labor, reinforced concrete and culverts; PDFs preserved but image-only through pdftotext, so detailed dates/status were not extracted.",
+    "next_cursor": "OCR bid packets or check auditor updates for bid opening dates and awards.",
+    "retrieved_at": "2026-09-21T02:05:00Z",
+    "audit_notes": [
+      "Not exhausted; keep this as a gap in the PDF coverage section.",
+      "Continuation path is documented.",
+      "Covered date window is not fully established from saved evidence."
+    ],
+    "source_class": "bid_or_procurement"
+  },
+  {
+    "receipt_id": "grimes-coverage-007",
+    "lane": "grimes",
+    "name": "Grimes County CivicClerk commissioners agendas",
+    "url": "https://grimescotx.portal.civicclerk.com/",
+    "county": "Grimes",
+    "requested_from": "2026-06-22",
+    "requested_to": "2026-09-20",
+    "covered_from": "2026-06-22",
+    "covered_to": "2026-09-16",
+    "status": "complete",
+    "records_found": 0,
+    "files_read_count": 30,
+    "files_read_sample": [
+      "grimes_civicclerk_events.json",
+      "grimes_civicclerk_events_page2.json",
+      "grimes_civicclerk_meeting_1276.json",
+      "grimes_civicclerk_meeting_1277.json",
+      "grimes_civicclerk_meeting_1278.json",
+      "grimes_civicclerk_meeting_1279.json"
+    ],
+    "reason": "Queried tenant API from 2026-06-22 forward, followed page 2, and pulled 28 meeting detail JSON files through September 16; keyword scan did not surface address-level construction/property project records.",
+    "next_cursor": null,
+    "retrieved_at": "2026-09-21T02:24:00Z",
+    "audit_notes": [
+      "Covered dates differ from the requested window; do not summarize as complete window coverage without context."
+    ],
+    "source_class": "planning_or_agenda"
+  },
+  {
+    "receipt_id": "grimes-coverage-008",
+    "lane": "grimes",
+    "name": "Grimes CAD quick property search",
+    "url": "https://grimescad.org/Advanced-Search",
+    "county": "Grimes",
+    "requested_from": "2026-06-22",
+    "requested_to": "2026-09-20",
+    "covered_from": "2027",
+    "covered_to": "2027",
+    "status": "partial",
+    "records_found": 5,
+    "files_read_count": 5,
+    "files_read_sample": [
+      "grimescad_R14167.json",
+      "grimescad_217_w_hill.json",
+      "grimescad_316_mcalpine.json",
+      "grimescad_9030_hwy6.json",
+      "grimescad_9345_hwy6.json"
+    ],
+    "reason": "Used official 2027 CAD quick-search endpoint only to validate selected candidate parcels/owners/situs addresses; did not crawl unrelated owners.",
+    "next_cursor": "Open selected full property cards if needed for legal descriptions/value; avoid mass contact harvesting.",
+    "retrieved_at": "2026-09-21T02:05:00Z",
+    "audit_notes": [
+      "Not exhausted; keep this as a gap in the PDF coverage section.",
+      "Continuation path is documented.",
+      "Covered dates differ from the requested window; do not summarize as complete window coverage without context."
+    ],
+    "source_class": "parcel_validation"
+  },
+  {
+    "receipt_id": "grimes-coverage-009",
+    "lane": "grimes",
+    "name": "City of Iola current projects and council agendas",
+    "url": "https://cityofiola.myruralwater.com/current-projects",
+    "county": "Grimes",
+    "requested_from": "2026-06-22",
+    "requested_to": "2026-09-20",
+    "covered_from": "2026-06-11",
+    "covered_to": "2026-08-26",
+    "status": "partial",
+    "records_found": 1,
+    "files_read_count": 4,
+    "files_read_sample": [
+      "iola_current_projects.html",
+      "iola_agendas.html",
+      "iola_agenda_august_11_2026.pdf",
+      "iola_wwtp_plans.pdf"
+    ],
+    "reason": "Found current WWTP project, expired June bid notice, August agenda construction-contract item and plan set. Did not exhaust all 2026 agendas/minutes.",
+    "next_cursor": "Check August minutes/award documents for executed value and NTP.",
+    "retrieved_at": "2026-09-21T02:05:00Z",
+    "audit_notes": [
+      "Not exhausted; keep this as a gap in the PDF coverage section.",
+      "Continuation path is documented.",
+      "Covered dates differ from the requested window; do not summarize as complete window coverage without context."
+    ],
+    "source_class": "planning_or_agenda"
+  },
+  {
+    "receipt_id": "grimes-coverage-010",
+    "lane": "grimes",
+    "name": "Town of Anderson permits and downtown projects",
+    "url": "https://andersontx.gov/permits/",
+    "county": "Grimes",
+    "requested_from": "2026-06-22",
+    "requested_to": "2026-09-20",
+    "covered_from": "2026-06-11",
+    "covered_to": "2026-09-17",
+    "status": "partial",
+    "records_found": 0,
+    "files_read_count": 11,
+    "files_read_sample": [
+      "anderson_agenda_20260611.html",
+      "anderson_agenda_20260709.html",
+      "anderson_agenda_20260723.html",
+      "anderson_agenda_20260813.html",
+      "anderson_agenda_20260819.html",
+      "anderson_agenda_20260820.html"
+    ],
+    "reason": "Permits page states permits are required before construction/remodels over 250 sqft/demos; checked target-window agenda posts and found only generic permit reports, zoning ordinance/public hearing items and mowing contracts, not address-level construction records.",
+    "next_cursor": "Minutes or permit register would be needed for issued address-level permit details.",
+    "retrieved_at": "2026-09-21T02:24:00Z",
+    "audit_notes": [
+      "Not exhausted; keep this as a gap in the PDF coverage section.",
+      "Continuation path is documented.",
+      "Covered dates differ from the requested window; do not summarize as complete window coverage without context."
+    ],
+    "source_class": "permit"
+  },
+  {
+    "receipt_id": "grimes-coverage-011",
+    "lane": "grimes",
+    "name": "City of Bedias official site",
+    "url": "https://www.cityofbedias.gov/",
+    "county": "Grimes",
+    "requested_from": "2026-06-22",
+    "requested_to": "2026-09-20",
+    "covered_from": "2026-06-08",
+    "covered_to": "2026-08-10",
+    "status": "blocked",
+    "records_found": 0,
+    "files_read_count": 3,
+    "files_read_sample": [
+      "bedias_gov.html",
+      "bedias_minutes.html",
+      "small_city_download_failures.txt"
+    ],
+    "reason": "Official minutes page lists 2026 minute PDFs, but all four target-window PDF URLs returned 404 during collection; no permit register or address-level construction records found on visible pages.",
+    "next_cursor": "Recheck corrected Bedias minutes links later or request permit/minutes records directly.",
+    "retrieved_at": "2026-09-21T02:24:00Z",
+    "audit_notes": [
+      "Not exhausted; keep this as a gap in the PDF coverage section.",
+      "No claim of full county coverage should rely on this source.",
+      "Continuation path is documented.",
+      "Covered dates differ from the requested window; do not summarize as complete window coverage without context."
+    ],
+    "source_class": "other"
+  },
+  {
+    "receipt_id": "grimes-coverage-012",
+    "lane": "grimes",
+    "name": "City of Todd Mission permits",
+    "url": "https://toddmissiontx.gov/business/permits/index.php",
+    "county": "Grimes",
+    "requested_from": "2026-06-22",
+    "requested_to": "2026-09-20",
+    "covered_from": "2026-06-23",
+    "covered_to": "2026-09-10",
+    "status": "partial",
+    "records_found": 0,
+    "files_read_count": 13,
+    "files_read_sample": [
+      "toddmission_agendas.html",
+      "toddmission_home.html",
+      "toddmission_notice_20260623.pdf",
+      "toddmission_notice_20260623.txt",
+      "toddmission_notice_20260709.pdf",
+      "toddmission_notice_20260709.txt"
+    ],
+    "reason": "Official permit page lists iWorQ/forms but no issued register. Target-window agenda PDFs mention building-permit updates, a CDBG drainage construction-contract award item, and Mill Creek Estates replats, but no address-level permit/project detail or award outcome was available in the agenda text.",
+    "next_cursor": "Check minutes or iWorQ public search if it exposes issued permit details without login.",
+    "retrieved_at": "2026-09-21T02:24:00Z",
+    "audit_notes": [
+      "Not exhausted; keep this as a gap in the PDF coverage section.",
+      "Continuation path is documented.",
+      "Covered dates differ from the requested window; do not summarize as complete window coverage without context."
+    ],
+    "source_class": "permit"
+  },
+  {
+    "receipt_id": "leon-coverage-001",
+    "lane": "leon",
+    "name": "Leon County Bid Documents",
+    "url": "https://www.co.leon.tx.us/page/leon.BidDocuments",
+    "county": "Leon",
+    "requested_from": "2025-09-20",
+    "requested_to": "2026-09-20",
+    "covered_from": "2026-08-19",
+    "covered_to": "2026-09-10",
+    "status": "partial",
+    "records_found": 6,
+    "files_read_count": 5,
+    "files_read_sample": [
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/leon/evidence/county/leon.BidDocuments",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/leon/evidence/county/RFB 2026-364 COMMUNICATION EQUIPMENT SHELTERS.pdf",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/leon/evidence/county/RFB 2026-364 Communication Equipment SheltersAddendum No1pdf.pdf",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/leon/evidence/county/RFB 2026-364 Communication Equipment Shelters Addendum No2.pdf",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/leon/evidence/county/RFB_2026-365_Notice_of_Postponement.pdf"
+    ],
+    "reason": "Current RFB 2026-364 shelter package and RFB 2026-365 postponement found; no issued-permit register.",
+    "next_cursor": "Check after 2026-09-10 for RFB 2026-364 bid tab/award and RFB 2026-365 reissue.",
+    "retrieved_at": "2026-09-21T01:57:09Z",
+    "audit_notes": [
+      "Not exhausted; keep this as a gap in the PDF coverage section.",
+      "Continuation path is documented.",
+      "Covered dates differ from the requested window; do not summarize as complete window coverage without context."
+    ],
+    "source_class": "bid_or_procurement"
+  },
+  {
+    "receipt_id": "leon-coverage-002",
+    "lane": "leon",
+    "name": "Leon County Bid Tabulations",
+    "url": "https://www.co.leon.tx.us/page/leon.BidTabulations",
+    "county": "Leon",
+    "requested_from": "2024-09-20",
+    "requested_to": "2026-09-20",
+    "covered_from": "2023-11-13",
+    "covered_to": "2026-06-10",
+    "status": "partial",
+    "records_found": 1,
+    "files_read_count": 6,
+    "files_read_sample": [
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/leon/evidence/county/leon.BidTabulations",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/leon/evidence/county/RFP 2026-355 CMAR BID TABULATION COMMISSIONER COURT APPROVAL_5-12-2026.pdf",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/leon/evidence/county/RFP 2026-361 RADIO COMMUNICATION TOWERS Bid Tabulation and Commissioners Court Approval 5-11-26.pdf",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/leon/evidence/county/BID TAB 2025-329 ELECTRICAL INSTALLATION.xlsx",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/leon/evidence/county/BID TAB 2024 315A Expo Equipment Building Court Decision.pdf",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/leon/evidence/county/BID TAB 2024-303 Metal Building Repairs for Road and Bridge Maintenance Facilities.pdf"
+    ],
+    "reason": "Reviewed construction-related tabs; most were historical or non-building, CMAR courthouse/building improvements promoted as candidate.",
+    "next_cursor": "Inspect full RFP 2026-355 package and post-June minutes for award details.",
+    "retrieved_at": "2026-09-21T01:57:09Z",
+    "audit_notes": [
+      "Not exhausted; keep this as a gap in the PDF coverage section.",
+      "Continuation path is documented.",
+      "Covered dates differ from the requested window; do not summarize as complete window coverage without context."
+    ],
+    "source_class": "bid_or_procurement"
+  },
+  {
+    "receipt_id": "leon-coverage-003",
+    "lane": "leon",
+    "name": "Leon County floodplain/development permits",
+    "url": "https://www.co.leon.tx.us/page/leon.FloodPlain",
+    "county": "Leon",
+    "requested_from": "2025-09-20",
+    "requested_to": "2026-09-20",
+    "covered_from": null,
+    "covered_to": null,
+    "status": "empty",
+    "records_found": 0,
+    "files_read_count": 1,
+    "files_read_sample": [
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/leon/evidence/county/leon.FloodPlain"
+    ],
+    "reason": "Page provides procedures/applications and says permits are required for new construction/substantial improvements, but no public issued-record register was found.",
+    "next_cursor": "Request/export issued floodplain-development permits from 911 Addressing/Emergency Management if another pass is approved.",
+    "retrieved_at": "2026-09-21T01:57:09Z",
+    "audit_notes": [
+      "Not exhausted; keep this as a gap in the PDF coverage section.",
+      "Continuation path is documented.",
+      "Source documents process or forms, not an issued permit register.",
+      "Covered date window is not fully established from saved evidence."
+    ],
+    "source_class": "permit"
+  },
+  {
+    "receipt_id": "leon-coverage-004",
+    "lane": "leon",
+    "name": "Leon County subdivision/county judge page",
+    "url": "https://www.co.leon.tx.us/page/leon.County.Judge",
+    "county": "Leon",
+    "requested_from": "2024-09-20",
+    "requested_to": "2026-09-20",
+    "covered_from": "2026-08-24",
+    "covered_to": "2026-08-24",
+    "status": "partial",
+    "records_found": 0,
+    "files_read_count": 2,
+    "files_read_sample": [
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/leon/evidence/county/leon.County.Judge",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/leon/evidence/county/Subdivision Requirements updated Aug 24 2026.pdf"
+    ],
+    "reason": "Subdivision requirements and checklist found, but not address-level subdivision applications/approvals.",
+    "next_cursor": "Inspect Commissioners Court agenda/minute attachments or clerk records for subdivision plats.",
+    "retrieved_at": "2026-09-21T01:57:09Z",
+    "audit_notes": [
+      "Not exhausted; keep this as a gap in the PDF coverage section.",
+      "Continuation path is documented.",
+      "Covered dates differ from the requested window; do not summarize as complete window coverage without context."
+    ],
+    "source_class": "other"
+  },
+  {
+    "receipt_id": "leon-coverage-005",
+    "lane": "leon",
+    "name": "Leon County Commissioners Court agendas/minutes",
+    "url": "https://www.co.leon.tx.us/page/leon.Comm.Agenda.Minutes",
+    "county": "Leon",
+    "requested_from": "2026-06-22",
+    "requested_to": "2026-09-20",
+    "covered_from": "2026-06-22",
+    "covered_to": "2026-09-14",
+    "status": "partial",
+    "records_found": 0,
+    "files_read_count": 1,
+    "files_read_sample": [
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/leon/evidence/county/leon.Comm.Agenda.Minutes"
+    ],
+    "reason": "Index reviewed and recent agenda/minute links identified, but not all PDFs read due time; used bid pages for extracted records instead.",
+    "next_cursor": "Read September 14 and post-September-10 minutes for radio shelter bid award and concrete pad reissue.",
+    "retrieved_at": "2026-09-21T01:57:09Z",
+    "audit_notes": [
+      "Not exhausted; keep this as a gap in the PDF coverage section.",
+      "Continuation path is documented.",
+      "Covered dates differ from the requested window; do not summarize as complete window coverage without context."
+    ],
+    "source_class": "planning_or_agenda"
+  },
+  {
+    "receipt_id": "leon-coverage-006",
+    "lane": "leon",
+    "name": "Centerville council posts/agendas/minutes",
+    "url": "https://centervilletx.gov/",
+    "county": "Leon",
+    "requested_from": "2026-06-22",
+    "requested_to": "2026-09-20",
+    "covered_from": "2026-06-26",
+    "covered_to": "2026-09-11",
+    "status": "partial",
+    "records_found": 4,
+    "files_read_count": 5,
+    "files_read_sample": [
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/leon/evidence/centerville/wp-posts-after-2026-06-21.json",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/leon/evidence/centerville/8-5-2026-City-Council-Meeting-Minutes.pdf",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/leon/evidence/centerville/CC-agenda-7-8-26.doc_20260707_171607_0000.pdf",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/leon/evidence/centerville/CC-agenda-8-5-26-revised.pdf",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/leon/evidence/centerville/TWDB-WSIG-RFPQ-Combo-Public-Notice.pdf"
+    ],
+    "reason": "Recent posts and PDFs downloaded; scanned minutes manually inspected for project language; several agendas/minutes are image-only so full text search incomplete.",
+    "next_cursor": "Manually/OCR September 9 agenda/minutes when available and pull EDC minutes if published.",
+    "retrieved_at": "2026-09-21T01:57:09Z",
+    "audit_notes": [
+      "Not exhausted; keep this as a gap in the PDF coverage section.",
+      "Continuation path is documented.",
+      "Covered dates differ from the requested window; do not summarize as complete window coverage without context."
+    ],
+    "source_class": "planning_or_agenda"
+  },
+  {
+    "receipt_id": "leon-coverage-007",
+    "lane": "leon",
+    "name": "Buffalo agendas/minutes and bid notices",
+    "url": "https://buffalotex.com/nav/new_page/buffalo_city_council/agendas_and_minutes/index.php",
+    "county": "Leon",
+    "requested_from": "2026-06-22",
+    "requested_to": "2026-09-20",
+    "covered_from": "2026-01-09",
+    "covered_to": "2026-09-14",
+    "status": "blocked",
+    "records_found": 0,
+    "files_read_count": 3,
+    "files_read_sample": [
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/leon/evidence/buffalo/index.php.html",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/leon/evidence/buffalo/bid_notices.php.html",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/leon/evidence/buffalo/permits_and_licenses.php.html"
+    ],
+    "reason": "Index exposed 2026 agendas/minutes and bid notices; direct agenda PDF fetches returned 403 from Revize document paths. Bid page showed fuel/depository only; permits page is instructions/forms, not issued permits.",
+    "next_cursor": "Use browser/session download or request records; avoid treating forms as project records.",
+    "retrieved_at": "2026-09-21T01:57:09Z",
+    "audit_notes": [
+      "Not exhausted; keep this as a gap in the PDF coverage section.",
+      "No claim of full county coverage should rely on this source.",
+      "Continuation path is documented.",
+      "Access restriction was recorded; no circumvention is implied.",
+      "Covered dates differ from the requested window; do not summarize as complete window coverage without context."
+    ],
+    "source_class": "bid_or_procurement"
+  },
+  {
+    "receipt_id": "leon-coverage-008",
+    "lane": "leon",
+    "name": "Jewett city site, permits, planning and CDBG notice",
+    "url": "https://cityofjewett.com/",
+    "county": "Leon",
+    "requested_from": "2025-09-20",
+    "requested_to": "2026-09-20",
+    "covered_from": "2025-11-13",
+    "covered_to": "2026-09-20",
+    "status": "partial",
+    "records_found": 3,
+    "files_read_count": 14,
+    "files_read_sample": [
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/leon/evidence/jewett/news-detail_item_id_30087.html",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/leon/evidence/jewett/Jewett-CDBG-MIT-MOD-FONSI-English.pdf",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/leon/evidence/jewett/building-permits-and-inspections.html",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/leon/evidence/jewett/planning-and-inspections.html",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/leon/evidence/jewett/ocr-pages/Jewett-CDBG-MIT-MOD-FONSI-English-1.png",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/leon/evidence/jewett/ocr-pages/Jewett-CDBG-MIT-MOD-FONSI-English-2.png"
+    ],
+    "reason": "City permit/planning pages and CDBG-MIT FONSI checked; manual visual extraction found three address/corridor-level sewer/street candidates. Downloaded 2026 agendas through September and text searched for CDBG/MIT/project terms; no obvious construction award/status follow-up found.",
+    "next_cursor": "Inspect Jewett minutes if later published, GLO project files, or city procurement records for construction bid/award status.",
+    "retrieved_at": "2026-09-21T02:00:12Z",
+    "audit_notes": [
+      "Not exhausted; keep this as a gap in the PDF coverage section.",
+      "Continuation path is documented.",
+      "Covered dates differ from the requested window; do not summarize as complete window coverage without context."
+    ],
+    "source_class": "permit"
+  },
+  {
+    "receipt_id": "leon-coverage-009",
+    "lane": "leon",
+    "name": "Oakwood official city site",
+    "url": "https://www.cityofoakwood.tx.citygovt.org/",
+    "county": "Leon",
+    "requested_from": "2026-06-22",
+    "requested_to": "2026-09-20",
+    "covered_from": null,
+    "covered_to": null,
+    "status": "blocked",
+    "records_found": 0,
+    "files_read_count": 0,
+    "files_read_sample": [],
+    "reason": "Official-looking site did not return useful HTML content to curl during quick check.",
+    "next_cursor": "Open with browser or call city records route in later pass.",
+    "retrieved_at": "2026-09-21T01:57:09Z",
+    "audit_notes": [
+      "Not exhausted; keep this as a gap in the PDF coverage section.",
+      "No claim of full county coverage should rely on this source.",
+      "Continuation path is documented.",
+      "Covered date window is not fully established from saved evidence."
+    ],
+    "source_class": "other"
+  },
+  {
+    "receipt_id": "leon-coverage-010",
+    "lane": "leon",
+    "name": "Marquez official source discovery",
+    "url": "https://directory.tml.org/profile/city/498",
+    "county": "Leon",
+    "requested_from": "2026-06-22",
+    "requested_to": "2026-09-20",
+    "covered_from": null,
+    "covered_to": null,
+    "status": "partial",
+    "records_found": 0,
+    "files_read_count": 1,
+    "files_read_sample": [
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/leon/evidence/marquez"
+    ],
+    "reason": "TML directory found as source for city/contact/building-regulation existence, but no public project register identified.",
+    "next_cursor": "Find direct city records page or request city permit log.",
+    "retrieved_at": "2026-09-21T01:57:09Z",
+    "audit_notes": [
+      "Not exhausted; keep this as a gap in the PDF coverage section.",
+      "Continuation path is documented.",
+      "Covered date window is not fully established from saved evidence."
+    ],
+    "source_class": "other"
+  },
+  {
+    "receipt_id": "madison-coverage-001",
+    "lane": "madison",
+    "name": "City of Madisonville document resources feed",
+    "url": "https://madisonvilletexas.gov/agendasandminutes",
+    "county": "Madison",
+    "requested_from": "2025-09-20",
+    "requested_to": "2026-09-20",
+    "covered_from": "2025-06-10",
+    "covered_to": "2026-09-21",
+    "status": "partial",
+    "records_found": 3,
+    "files_read_count": 16,
+    "files_read_sample": 16,
+    "reason": "Official CMS feed exposed 349 files. Recent P&Z packets/minutes plus July, August and September 2026 council packets were downloaded and searched; not every council file was read end-to-end.",
+    "next_cursor": "Review remaining council packets before July 2026 and then older P&Z files if another pass is approved.",
+    "retrieved_at": "2026-09-21T01:57:23Z",
+    "audit_notes": [
+      "Not exhausted; keep this as a gap in the PDF coverage section.",
+      "Continuation path is documented.",
+      "Covered dates differ from the requested window; do not summarize as complete window coverage without context."
+    ],
+    "source_class": "other"
+  },
+  {
+    "receipt_id": "madison-coverage-002",
+    "lane": "madison",
+    "name": "Madisonville Planning and Zoning packets/minutes",
+    "url": "https://madisonvilletexas.gov/planningandzoning",
+    "county": "Madison",
+    "requested_from": "2024-09-20",
+    "requested_to": "2026-09-20",
+    "covered_from": "2025-06-10",
+    "covered_to": "2026-09-01",
+    "status": "partial",
+    "records_found": 3,
+    "files_read_count": 11,
+    "files_read_sample": 11,
+    "reason": "Recent planning files yielded three address-level candidates; coverage is partial because not every file in the 24-month planning window was fully reviewed.",
+    "next_cursor": "Start from remaining P&Z agenda/minute files in the CMS feed, especially late 2025 through early 2026 packets.",
+    "retrieved_at": "2026-09-21T01:57:23Z",
+    "audit_notes": [
+      "Not exhausted; keep this as a gap in the PDF coverage section.",
+      "Continuation path is documented.",
+      "Covered dates differ from the requested window; do not summarize as complete window coverage without context."
+    ],
+    "source_class": "planning_or_agenda"
+  },
+  {
+    "receipt_id": "madison-coverage-003",
+    "lane": "madison",
+    "name": "Madisonville forms and permits page",
+    "url": "https://madisonvilletexas.gov/formsandpermits",
+    "county": "Madison",
+    "requested_from": "2025-09-20",
+    "requested_to": "2026-09-20",
+    "covered_from": null,
+    "covered_to": null,
+    "status": "partial",
+    "records_found": 0,
+    "files_read_count": 1,
+    "files_read_sample": 1,
+    "reason": "Page confirms permit forms/application route but did not expose an issued-permit register in the page HTML checked.",
+    "next_cursor": "Request or locate an issued-permit export for 2026-06-22 through 2026-09-20.",
+    "retrieved_at": "2026-09-21T01:57:23Z",
+    "audit_notes": [
+      "Not exhausted; keep this as a gap in the PDF coverage section.",
+      "Continuation path is documented.",
+      "Covered date window is not fully established from saved evidence."
+    ],
+    "source_class": "permit"
+  },
+  {
+    "receipt_id": "madison-coverage-004",
+    "lane": "madison",
+    "name": "Madison County permits page",
+    "url": "https://www.co.madison.tx.us/page/madison.permits",
+    "county": "Madison",
+    "requested_from": "2025-09-20",
+    "requested_to": "2026-09-20",
+    "covered_from": null,
+    "covered_to": null,
+    "status": "partial",
+    "records_found": 0,
+    "files_read_count": 1,
+    "files_read_sample": 1,
+    "reason": "County page lists application forms for electric, solar, septic, food, driveway and floodplain but no public issued-record register was found in the page.",
+    "next_cursor": "Contact/request county issued permits for septic, driveway, floodplain and electric records if coordinator approves records requests.",
+    "retrieved_at": "2026-09-21T01:57:23Z",
+    "audit_notes": [
+      "Not exhausted; keep this as a gap in the PDF coverage section.",
+      "Continuation path is documented.",
+      "Source documents process or forms, not an issued permit register.",
+      "Covered date window is not fully established from saved evidence."
+    ],
+    "source_class": "permit"
+  },
+  {
+    "receipt_id": "madison-coverage-005",
+    "lane": "madison",
+    "name": "Madison County bids page",
+    "url": "https://www.co.madison.tx.us/page/madison.Bids",
+    "county": "Madison",
+    "requested_from": "2025-09-20",
+    "requested_to": "2026-09-20",
+    "covered_from": null,
+    "covered_to": null,
+    "status": "empty",
+    "records_found": 0,
+    "files_read_count": 1,
+    "files_read_sample": 1,
+    "reason": "Official bids page loaded but no current construction bid entries were visible in the checked HTML.",
+    "next_cursor": "Recheck bids page in a later pass; verify whether county posts bids elsewhere.",
+    "retrieved_at": "2026-09-21T01:57:23Z",
+    "audit_notes": [
+      "Not exhausted; keep this as a gap in the PDF coverage section.",
+      "Continuation path is documented.",
+      "Covered date window is not fully established from saved evidence."
+    ],
+    "source_class": "bid_or_procurement"
+  },
+  {
+    "receipt_id": "madison-coverage-006",
+    "lane": "madison",
+    "name": "Madison CAD property search",
+    "url": "https://esearch.madisoncad.org/",
+    "county": "Madison",
+    "requested_from": "2026-01-01",
+    "requested_to": "2026-09-20",
+    "covered_from": "2026-01-01",
+    "covered_to": "2026-09-20",
+    "status": "partial",
+    "records_found": 3,
+    "files_read_count": 7,
+    "files_read_sample": 7,
+    "reason": "Used only to verify ownership/property IDs for the three planning candidates, not to scrape unrelated owners.",
+    "next_cursor": "Open property detail pages for selected candidates if more owner/parcel detail is needed; avoid broad owner harvesting.",
+    "retrieved_at": "2026-09-21T01:57:23Z",
+    "audit_notes": [
+      "Not exhausted; keep this as a gap in the PDF coverage section.",
+      "Continuation path is documented."
+    ],
+    "source_class": "parcel_validation"
+  },
+  {
+    "receipt_id": "madison-coverage-007",
+    "lane": "madison",
+    "name": "Normangee public notices",
+    "url": "https://cityofnormangee.org/public-notices/",
+    "county": "Madison/Leon jurisdiction check",
+    "requested_from": "2025-09-20",
+    "requested_to": "2026-09-20",
+    "covered_from": "2025-12-11",
+    "covered_to": "2026-06-17",
+    "status": "partial",
+    "records_found": 0,
+    "files_read_count": 1,
+    "files_read_sample": 1,
+    "reason": "Official old site says it is no longer updated; recent visible notices were water/burn-ban items, while construction bids found were closed 2024 or older and mostly Leon County/citywide utility work.",
+    "next_cursor": "Use new municipalimpact site for current Normangee sources; check agendas/minutes if exposed.",
+    "retrieved_at": "2026-09-21T01:57:23Z",
+    "audit_notes": [
+      "Not exhausted; keep this as a gap in the PDF coverage section.",
+      "Continuation path is documented.",
+      "Covered dates differ from the requested window; do not summarize as complete window coverage without context."
+    ],
+    "source_class": "other"
+  },
+  {
+    "receipt_id": "madison-coverage-008",
+    "lane": "madison",
+    "name": "Normangee municipalimpact ordinances/application route",
+    "url": "https://normangee.municipalimpact.com/ordinances",
+    "county": "Madison/Leon jurisdiction check",
+    "requested_from": "2025-09-20",
+    "requested_to": "2026-09-20",
+    "covered_from": null,
+    "covered_to": null,
+    "status": "partial",
+    "records_found": 0,
+    "files_read_count": 1,
+    "files_read_sample": 1,
+    "reason": "New official site exposes ordinance and mobile-home permit application documents, not a current issued-permit or project register in the checked page.",
+    "next_cursor": "Check municipalimpact application-process, agendas and public-notices pages in a later pass.",
+    "retrieved_at": "2026-09-21T01:57:23Z",
+    "audit_notes": [
+      "Not exhausted; keep this as a gap in the PDF coverage section.",
+      "Continuation path is documented.",
+      "Covered date window is not fully established from saved evidence."
+    ],
+    "source_class": "other"
+  },
+  {
+    "receipt_id": "robertson-coverage-001",
+    "lane": "robertson",
+    "name": "City of Hearne Agenda Center and Planning/P&Z documents",
+    "url": "https://www.cityofhearne.org/AgendaCenter",
+    "county": "Robertson",
+    "requested_from": "2026-06-22",
+    "requested_to": "2026-09-20",
+    "covered_from": "2026-06-23",
+    "covered_to": "2026-09-15",
+    "status": "complete",
+    "records_found": 5,
+    "files_read_count": 8,
+    "files_read_sample": [
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/robertson/evidence/hearne/agenda-center.html",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/robertson/evidence/hearne/planning-and-development.html",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/robertson/evidence/hearne/2026-08-20-pnz-agenda.pdf",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/robertson/evidence/hearne/agenda-09032026-250.pdf",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/robertson/evidence/hearne/agenda-09152026-251.pdf",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/robertson/evidence/hearne/agenda-08252026-247.pdf"
+    ],
+    "reason": "Official agenda center and P&Z page were checked for recent planning, variance and public-works items. Useful records came from the August 20 P&Z agenda, September 3 special agenda and September 15 packet with recent minutes. Some PDFs were scanned/noisy but the key records were readable with pdftotext.",
+    "next_cursor": null,
+    "retrieved_at": "2026-09-21T02:12:29Z",
+    "audit_notes": [
+      "Covered dates differ from the requested window; do not summarize as complete window coverage without context."
+    ],
+    "source_class": "planning_or_agenda"
+  },
+  {
+    "receipt_id": "robertson-coverage-002",
+    "lane": "robertson",
+    "name": "Robertson CAD property search",
+    "url": "https://esearch.robertsoncad.com/",
+    "county": "Robertson",
+    "requested_from": "2026-06-22",
+    "requested_to": "2026-09-20",
+    "covered_from": "2026",
+    "covered_to": "2026",
+    "status": "partial",
+    "records_found": 2,
+    "files_read_count": 7,
+    "files_read_sample": [
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/robertson/evidence/robertsoncad/home.html",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/robertson/evidence/robertsoncad/search-EL_CONSTRUCTION.json",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/robertson/evidence/robertsoncad/property-20833-2026.html",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/robertson/evidence/robertsoncad/search-Iron_Oak.json",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/robertson/evidence/robertsoncad/property-93096-2026.html",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/robertson/evidence/robertsoncad/search-LOTS_114_115_IRON_OAK_RESERVE.json"
+    ],
+    "reason": "CAD was used to match agenda items to ownership and parcel context. EL Construction and Iron Oak parent tract matched; exact Iron Oak lots 114/115, 208 Fulton and LT 9X/LT 9F did not produce clean exact matches in this pass.",
+    "next_cursor": "Use specific deed references and later roll updates for exact-lot searches",
+    "retrieved_at": "2026-09-21T02:12:29Z",
+    "audit_notes": [
+      "Not exhausted; keep this as a gap in the PDF coverage section.",
+      "Continuation path is documented.",
+      "Covered dates differ from the requested window; do not summarize as complete window coverage without context."
+    ],
+    "source_class": "parcel_validation"
+  },
+  {
+    "receipt_id": "robertson-coverage-003",
+    "lane": "robertson",
+    "name": "City of Franklin official agendas",
+    "url": "https://www.cityoffranklintx.com/government/agendas/",
+    "county": "Robertson",
+    "requested_from": "2026-06-22",
+    "requested_to": "2026-09-20",
+    "covered_from": "2026-08-17",
+    "covered_to": "2026-09-21",
+    "status": "partial",
+    "records_found": 1,
+    "files_read_count": 7,
+    "files_read_sample": [
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/robertson/evidence/franklin/government-agendas.html",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/robertson/evidence/franklin/August-17-2026-Agenda.pdf",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/robertson/evidence/franklin/August-24-2026-Special-Called-Agenda.pdf",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/robertson/evidence/franklin/September-21-2026-Agenda.pdf",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/robertson/evidence/franklin/images/August-17-2026-Agenda.png",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/robertson/evidence/franklin/images/August-24-2026-Special-Called-Agenda.png"
+    ],
+    "reason": "The official agenda page only exposed three recent agenda PDFs in this pass. They were scanned, so images were preserved and reviewed. One City Park pickleball/lighting item was found; Aug. 24 and Sept. 21 did not show construction leads.",
+    "next_cursor": "Find minutes or 4B board packets for August 17 action result",
+    "retrieved_at": "2026-09-21T02:12:29Z",
+    "audit_notes": [
+      "Not exhausted; keep this as a gap in the PDF coverage section.",
+      "Continuation path is documented.",
+      "Covered dates differ from the requested window; do not summarize as complete window coverage without context."
+    ],
+    "source_class": "planning_or_agenda"
+  },
+  {
+    "receipt_id": "robertson-coverage-004",
+    "lane": "robertson",
+    "name": "City of Calvert agendas/minutes and forms/permits",
+    "url": "https://www.calverttx.gov/agendasandminutes",
+    "county": "Robertson",
+    "requested_from": "2026-06-22",
+    "requested_to": "2026-09-20",
+    "covered_from": "2026-01-26",
+    "covered_to": "2026-09-22",
+    "status": "blocked",
+    "records_found": 0,
+    "files_read_count": 6,
+    "files_read_sample": [
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/robertson/evidence/calvert/source-1.txt",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/robertson/evidence/calvert/source-2.txt",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/robertson/evidence/calvert/source-3.txt",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/robertson/evidence/calvert/Sept-2-2026-H.D.C.-NOTICE-AGENDA.html",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/robertson/evidence/calvert/H.D.C.-8.13.2026-Notice-and-Agenda.html",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/robertson/evidence/calvert/HDC-8.4.2026-Meeting-Notice-and-Agenda.html"
+    ],
+    "reason": "Official pages and MembershipWare resource metadata were accessible and listed HDC/agendas, but direct blob downloads returned access-denied or viewer shells rather than readable official PDFs. No issued permit register was exposed on the forms/permits page during this pass.",
+    "next_cursor": "Use the Calvert site UI manually or ask the city for accessible agenda/minute PDFs; do not rely on nonofficial summaries without the official record.",
+    "retrieved_at": "2026-09-21T02:12:29Z",
+    "audit_notes": [
+      "Not exhausted; keep this as a gap in the PDF coverage section.",
+      "No claim of full county coverage should rely on this source.",
+      "Continuation path is documented.",
+      "Covered dates differ from the requested window; do not summarize as complete window coverage without context."
+    ],
+    "source_class": "permit"
+  },
+  {
+    "receipt_id": "robertson-coverage-005",
+    "lane": "robertson",
+    "name": "City of Bremond official website",
+    "url": "https://cityofbremondtx.com/",
+    "county": "Robertson",
+    "requested_from": "2026-06-22",
+    "requested_to": "2026-09-20",
+    "covered_from": "2026-09-20",
+    "covered_to": "2026-09-20",
+    "status": "empty",
+    "records_found": 0,
+    "files_read_count": 1,
+    "files_read_sample": [
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/robertson/evidence/bremond/home.html"
+    ],
+    "reason": "The official site was saved and searched for agenda, permit, bid, project and construction terms. Visible navigation/pages did not expose recent address-level building/project records during this pass.",
+    "next_cursor": "Check the Mayor/Council agenda section manually or request recent minutes if Bremond becomes a priority.",
+    "retrieved_at": "2026-09-21T02:12:29Z",
+    "audit_notes": [
+      "Not exhausted; keep this as a gap in the PDF coverage section.",
+      "Continuation path is documented.",
+      "Covered dates differ from the requested window; do not summarize as complete window coverage without context."
+    ],
+    "source_class": "other"
+  },
+  {
+    "receipt_id": "robertson-coverage-006",
+    "lane": "robertson",
+    "name": "Robertson County official public notices and OSSF page",
+    "url": "https://www.co.robertson.tx.us/",
+    "county": "Robertson",
+    "requested_from": "2026-06-22",
+    "requested_to": "2026-09-20",
+    "covered_from": "2024-09-20",
+    "covered_to": "2026-09-20",
+    "status": "partial",
+    "records_found": 0,
+    "files_read_count": 2,
+    "files_read_sample": [
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/robertson/evidence/county/home.html",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/robertson/evidence/county/2026-03-31-buffalo-meadow-tax-abatement-notice.pdf"
+    ],
+    "reason": "County public notices and OSSF link were checked. The site exposes forms, public hearings, tax abatements and older bid notices, but not address-level issued OSSF/building records in the requested recent window. Statewide environmental and tax portals were intentionally excluded for the statewide worker.",
+    "next_cursor": "If approved later, request county OSSF issued-permit logs directly or check commissioner court minutes for awards not posted as separate notices.",
+    "retrieved_at": "2026-09-21T02:12:29Z",
+    "audit_notes": [
+      "Not exhausted; keep this as a gap in the PDF coverage section.",
+      "Continuation path is documented.",
+      "Covered dates differ from the requested window; do not summarize as complete window coverage without context."
+    ],
+    "source_class": "other"
+  },
+  {
+    "receipt_id": "statewide-coverage-001",
+    "lane": "statewide",
+    "name": "TDLR TABS Brazos recent",
+    "url": "https://www.tdlr.texas.gov/TABS/Search",
+    "county": "Brazos",
+    "requested_from": "06/22/2026",
+    "requested_to": "09/20/2026",
+    "covered_from": "06/22/2026",
+    "covered_to": "09/20/2026",
+    "status": "complete",
+    "records_found": 69,
+    "files_read_count": 1,
+    "files_read_sample": [
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/brazos_recent_0000.json"
+    ],
+    "reason": "Official TDLR SearchProjects endpoint returned 69 rows and all 69 project detail pages were downloaded/converted for this county/window.",
+    "next_cursor": null,
+    "retrieved_at": "2026-09-21T01:53:30Z",
+    "audit_notes": [
+      "TDLR/TABS is an accessibility registration source, not proof of open trade packages."
+    ],
+    "source_class": "statewide_registration"
+  },
+  {
+    "receipt_id": "statewide-coverage-002",
+    "lane": "statewide",
+    "name": "TDLR TABS Brazos backfill",
+    "url": "https://www.tdlr.texas.gov/TABS/Search",
+    "county": "Brazos",
+    "requested_from": "09/20/2025",
+    "requested_to": "06/21/2026",
+    "covered_from": "09/20/2025",
+    "covered_to": "06/21/2026",
+    "status": "partial",
+    "records_found": 172,
+    "files_read_count": 2,
+    "files_read_sample": [
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/brazos_backfill_0000.json",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/brazos_backfill_0100.json"
+    ],
+    "reason": "Official TDLR SearchProjects endpoint returned 172 rows for county id 2021; 51 project detail pages were downloaded and converted to records in this bounded pass.",
+    "next_cursor": "Continue downloading remaining TDLR detail pages from the saved search-result JSON for this county/window.",
+    "retrieved_at": "2026-09-21T01:56:04Z",
+    "audit_notes": [
+      "Not exhausted; keep this as a gap in the PDF coverage section.",
+      "Continuation path is documented.",
+      "TDLR/TABS is an accessibility registration source, not proof of open trade packages."
+    ],
+    "source_class": "statewide_registration"
+  },
+  {
+    "receipt_id": "statewide-coverage-003",
+    "lane": "statewide",
+    "name": "TDLR TABS Robertson recent",
+    "url": "https://www.tdlr.texas.gov/TABS/Search",
+    "county": "Robertson",
+    "requested_from": "06/22/2026",
+    "requested_to": "09/20/2026",
+    "covered_from": "06/22/2026",
+    "covered_to": "09/20/2026",
+    "status": "complete",
+    "records_found": 0,
+    "files_read_count": 1,
+    "files_read_sample": [
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/robertson_recent_0000.json"
+    ],
+    "reason": "Official TDLR SearchProjects endpoint returned 0 rows and all 0 project detail pages were downloaded/converted for this county/window.",
+    "next_cursor": null,
+    "retrieved_at": "2026-09-21T01:59:04Z",
+    "audit_notes": [
+      "TDLR/TABS is an accessibility registration source, not proof of open trade packages."
+    ],
+    "source_class": "statewide_registration"
+  },
+  {
+    "receipt_id": "statewide-coverage-004",
+    "lane": "statewide",
+    "name": "TDLR TABS Burleson recent",
+    "url": "https://www.tdlr.texas.gov/TABS/Search",
+    "county": "Burleson",
+    "requested_from": "06/22/2026",
+    "requested_to": "09/20/2026",
+    "covered_from": "06/22/2026",
+    "covered_to": "09/20/2026",
+    "status": "complete",
+    "records_found": 3,
+    "files_read_count": 1,
+    "files_read_sample": [
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/burleson_recent_0000.json"
+    ],
+    "reason": "Official TDLR SearchProjects endpoint returned 3 rows and all 3 project detail pages were downloaded/converted for this county/window.",
+    "next_cursor": null,
+    "retrieved_at": "2026-09-21T01:59:06Z",
+    "audit_notes": [
+      "TDLR/TABS is an accessibility registration source, not proof of open trade packages."
+    ],
+    "source_class": "statewide_registration"
+  },
+  {
+    "receipt_id": "statewide-coverage-005",
+    "lane": "statewide",
+    "name": "TDLR TABS Grimes recent",
+    "url": "https://www.tdlr.texas.gov/TABS/Search",
+    "county": "Grimes",
+    "requested_from": "06/22/2026",
+    "requested_to": "09/20/2026",
+    "covered_from": "06/22/2026",
+    "covered_to": "09/20/2026",
+    "status": "complete",
+    "records_found": 2,
+    "files_read_count": 1,
+    "files_read_sample": [
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/grimes_recent_0000.json"
+    ],
+    "reason": "Official TDLR SearchProjects endpoint returned 2 rows and all 2 project detail pages were downloaded/converted for this county/window.",
+    "next_cursor": null,
+    "retrieved_at": "2026-09-21T01:59:15Z",
+    "audit_notes": [
+      "TDLR/TABS is an accessibility registration source, not proof of open trade packages."
+    ],
+    "source_class": "statewide_registration"
+  },
+  {
+    "receipt_id": "statewide-coverage-006",
+    "lane": "statewide",
+    "name": "TDLR TABS Leon recent",
+    "url": "https://www.tdlr.texas.gov/TABS/Search",
+    "county": "Leon",
+    "requested_from": "06/22/2026",
+    "requested_to": "09/20/2026",
+    "covered_from": "06/22/2026",
+    "covered_to": "09/20/2026",
+    "status": "complete",
+    "records_found": 0,
+    "files_read_count": 1,
+    "files_read_sample": [
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/leon_recent_0000.json"
+    ],
+    "reason": "Official TDLR SearchProjects endpoint returned 0 rows and all 0 project detail pages were downloaded/converted for this county/window.",
+    "next_cursor": null,
+    "retrieved_at": "2026-09-21T01:59:22Z",
+    "audit_notes": [
+      "TDLR/TABS is an accessibility registration source, not proof of open trade packages."
+    ],
+    "source_class": "statewide_registration"
+  },
+  {
+    "receipt_id": "statewide-coverage-007",
+    "lane": "statewide",
+    "name": "TDLR TABS Madison recent",
+    "url": "https://www.tdlr.texas.gov/TABS/Search",
+    "county": "Madison",
+    "requested_from": "06/22/2026",
+    "requested_to": "09/20/2026",
+    "covered_from": "06/22/2026",
+    "covered_to": "09/20/2026",
+    "status": "complete",
+    "records_found": 1,
+    "files_read_count": 1,
+    "files_read_sample": [
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/madison_recent_0000.json"
+    ],
+    "reason": "Official TDLR SearchProjects endpoint returned 1 rows and all 1 project detail pages were downloaded/converted for this county/window.",
+    "next_cursor": null,
+    "retrieved_at": "2026-09-21T01:59:24Z",
+    "audit_notes": [
+      "TDLR/TABS is an accessibility registration source, not proof of open trade packages."
+    ],
+    "source_class": "statewide_registration"
+  },
+  {
+    "receipt_id": "statewide-coverage-008",
+    "lane": "statewide",
+    "name": "TDLR TABS Washington recent",
+    "url": "https://www.tdlr.texas.gov/TABS/Search",
+    "county": "Washington",
+    "requested_from": "06/22/2026",
+    "requested_to": "09/20/2026",
+    "covered_from": "06/22/2026",
+    "covered_to": "09/20/2026",
+    "status": "complete",
+    "records_found": 10,
+    "files_read_count": 1,
+    "files_read_sample": [
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/washington_recent_0000.json"
+    ],
+    "reason": "Official TDLR SearchProjects endpoint returned 10 rows and all 10 project detail pages were downloaded/converted for this county/window.",
+    "next_cursor": null,
+    "retrieved_at": "2026-09-21T01:59:28Z",
+    "audit_notes": [
+      "TDLR/TABS is an accessibility registration source, not proof of open trade packages."
+    ],
+    "source_class": "statewide_registration"
+  },
+  {
+    "receipt_id": "statewide-coverage-009",
+    "lane": "statewide",
+    "name": "TDLR TABS Robertson backfill",
+    "url": "https://www.tdlr.texas.gov/TABS/Search",
+    "county": "Robertson",
+    "requested_from": "09/20/2025",
+    "requested_to": "06/21/2026",
+    "covered_from": "09/20/2025",
+    "covered_to": "06/21/2026",
+    "status": "complete",
+    "records_found": 7,
+    "files_read_count": 1,
+    "files_read_sample": [
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/robertson_backfill_0000.json"
+    ],
+    "reason": "Official TDLR SearchProjects endpoint returned 7 rows and all 7 project detail pages were downloaded/converted for this county/window.",
+    "next_cursor": null,
+    "retrieved_at": "2026-09-21T01:59:52Z",
+    "audit_notes": [
+      "TDLR/TABS is an accessibility registration source, not proof of open trade packages."
+    ],
+    "source_class": "statewide_registration"
+  },
+  {
+    "receipt_id": "statewide-coverage-010",
+    "lane": "statewide",
+    "name": "TDLR TABS Burleson backfill",
+    "url": "https://www.tdlr.texas.gov/TABS/Search",
+    "county": "Burleson",
+    "requested_from": "09/20/2025",
+    "requested_to": "06/21/2026",
+    "covered_from": "09/20/2025",
+    "covered_to": "06/21/2026",
+    "status": "complete",
+    "records_found": 9,
+    "files_read_count": 1,
+    "files_read_sample": [
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/burleson_backfill_0000.json"
+    ],
+    "reason": "Official TDLR SearchProjects endpoint returned 9 rows and all 9 project detail pages were downloaded/converted for this county/window.",
+    "next_cursor": null,
+    "retrieved_at": "2026-09-21T02:00:11Z",
+    "audit_notes": [
+      "TDLR/TABS is an accessibility registration source, not proof of open trade packages."
+    ],
+    "source_class": "statewide_registration"
+  },
+  {
+    "receipt_id": "statewide-coverage-011",
+    "lane": "statewide",
+    "name": "TDLR TABS Grimes backfill",
+    "url": "https://www.tdlr.texas.gov/TABS/Search",
+    "county": "Grimes",
+    "requested_from": "09/20/2025",
+    "requested_to": "06/21/2026",
+    "covered_from": "09/20/2025",
+    "covered_to": "06/21/2026",
+    "status": "complete",
+    "records_found": 12,
+    "files_read_count": 1,
+    "files_read_sample": [
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/grimes_backfill_0000.json"
+    ],
+    "reason": "Official TDLR SearchProjects endpoint returned 12 rows and all 12 project detail pages were downloaded/converted for this county/window.",
+    "next_cursor": null,
+    "retrieved_at": "2026-09-21T02:00:33Z",
+    "audit_notes": [
+      "TDLR/TABS is an accessibility registration source, not proof of open trade packages."
+    ],
+    "source_class": "statewide_registration"
+  },
+  {
+    "receipt_id": "statewide-coverage-012",
+    "lane": "statewide",
+    "name": "TDLR TABS Leon backfill",
+    "url": "https://www.tdlr.texas.gov/TABS/Search",
+    "county": "Leon",
+    "requested_from": "09/20/2025",
+    "requested_to": "06/21/2026",
+    "covered_from": "09/20/2025",
+    "covered_to": "06/21/2026",
+    "status": "complete",
+    "records_found": 4,
+    "files_read_count": 1,
+    "files_read_sample": [
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/leon_backfill_0000.json"
+    ],
+    "reason": "Official TDLR SearchProjects endpoint returned 4 rows and all 4 project detail pages were downloaded/converted for this county/window.",
+    "next_cursor": null,
+    "retrieved_at": "2026-09-21T02:01:02Z",
+    "audit_notes": [
+      "TDLR/TABS is an accessibility registration source, not proof of open trade packages."
+    ],
+    "source_class": "statewide_registration"
+  },
+  {
+    "receipt_id": "statewide-coverage-013",
+    "lane": "statewide",
+    "name": "TDLR TABS Madison backfill",
+    "url": "https://www.tdlr.texas.gov/TABS/Search",
+    "county": "Madison",
+    "requested_from": "09/20/2025",
+    "requested_to": "06/21/2026",
+    "covered_from": "09/20/2025",
+    "covered_to": "06/21/2026",
+    "status": "complete",
+    "records_found": 1,
+    "files_read_count": 1,
+    "files_read_sample": [
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/madison_backfill_0000.json"
+    ],
+    "reason": "Official TDLR SearchProjects endpoint returned 1 rows and all 1 project detail pages were downloaded/converted for this county/window.",
+    "next_cursor": null,
+    "retrieved_at": "2026-09-21T02:01:13Z",
+    "audit_notes": [
+      "TDLR/TABS is an accessibility registration source, not proof of open trade packages."
+    ],
+    "source_class": "statewide_registration"
+  },
+  {
+    "receipt_id": "statewide-coverage-014",
+    "lane": "statewide",
+    "name": "TDLR TABS Washington backfill",
+    "url": "https://www.tdlr.texas.gov/TABS/Search",
+    "county": "Washington",
+    "requested_from": "09/20/2025",
+    "requested_to": "06/21/2026",
+    "covered_from": "09/20/2025",
+    "covered_to": "06/21/2026",
+    "status": "partial",
+    "records_found": 28,
+    "files_read_count": 1,
+    "files_read_sample": [
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/washington_backfill_0000.json"
+    ],
+    "reason": "Official TDLR SearchProjects endpoint returned 28 rows for county id 2239; 25 project detail pages were downloaded and converted to records in this bounded pass.",
+    "next_cursor": "Continue downloading remaining TDLR detail pages from the saved search-result JSON for this county/window.",
+    "retrieved_at": "2026-09-21T02:01:18Z",
+    "audit_notes": [
+      "Not exhausted; keep this as a gap in the PDF coverage section.",
+      "Continuation path is documented.",
+      "TDLR/TABS is an accessibility registration source, not proof of open trade packages."
+    ],
+    "source_class": "statewide_registration"
+  },
+  {
+    "receipt_id": "statewide-coverage-015",
+    "lane": "statewide",
+    "name": "TCEQ permit search / records online stormwater construction signal",
+    "url": "https://records.tceq.texas.gov/ and https://permit-search.tceq.texas.gov/",
+    "county": "statewide",
+    "requested_from": "06/22/2026",
+    "requested_to": "09/20/2026",
+    "covered_from": null,
+    "covered_to": null,
+    "status": "blocked",
+    "records_found": 0,
+    "files_read_count": 4,
+    "files_read_sample": [
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/statewide-signals/tceq/permit-search.html",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/statewide-signals/tceq/records-online.html",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/statewide-signals/tceq/status-stormwater-wastewater.html",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/statewide-signals/tceq/search-brazos-stormwater.html"
+    ],
+    "reason": "Official pages were reachable and records-online exposes WQ / Stormwater Construction General Permit series, but a direct public search for Brazos stormwater construction returned a TCEQ Content Server error; the separate permit-search portal is a JavaScript app and no address-level records were extracted in this bounded pass.",
+    "next_cursor": "Use a browser session or documented TCEQ export route to query WQ / Stormwater Construction General Permit records for each target county; keep as continuation, not an inferred lead source.",
+    "retrieved_at": "2026-09-21T02:06:12Z",
+    "audit_notes": [
+      "Not exhausted; keep this as a gap in the PDF coverage section.",
+      "No claim of full county coverage should rely on this source.",
+      "Continuation path is documented.",
+      "Covered date window is not fully established from saved evidence."
+    ],
+    "source_class": "permit"
+  },
+  {
+    "receipt_id": "washington-coverage-001",
+    "lane": "washington",
+    "name": "City of Brenham building permits monthly reports",
+    "url": "https://docs.cityofbrenham.org/city_government/departments/development_services/building_permits___inspections.php",
+    "county": "Washington",
+    "requested_from": "2026-06-22",
+    "requested_to": "2026-09-20",
+    "covered_from": "2026-06-01",
+    "covered_to": "2026-08-31",
+    "status": "partial",
+    "records_found": 17,
+    "files_read_count": 4,
+    "files_read_sample": [
+      "archive-page.html",
+      "2026-06.pdf",
+      "2026-07.pdf",
+      "2026-08.pdf"
+    ],
+    "reason": "January-August 2026 files are listed; September 2026 was not listed on the archive page at retrieval. June-August official PDFs produced the promoted address-level permit candidates in records.json.",
+    "next_cursor": "Check archive for September 2026 file after city publishes it; use Accela for permit detail/inspection stage on top candidates.",
+    "retrieved_at": "2026-09-21T02:21:00Z",
+    "audit_notes": [
+      "Not exhausted; keep this as a gap in the PDF coverage section.",
+      "Continuation path is documented.",
+      "Covered dates differ from the requested window; do not summarize as complete window coverage without context."
+    ],
+    "source_class": "permit"
+  },
+  {
+    "receipt_id": "washington-coverage-002",
+    "lane": "washington",
+    "name": "Washington CAD official property search",
+    "url": "https://washingtoncad.org/",
+    "county": "Washington",
+    "requested_from": "2026-06-22",
+    "requested_to": "2026-09-20",
+    "covered_from": "2026-01-01",
+    "covered_to": "2026-12-31",
+    "status": "partial",
+    "records_found": 10,
+    "files_read_count": 4,
+    "files_read_sample": [
+      "final-*.json attempted targeted searches",
+      "fresh*.json selected address searches",
+      "fresh2-StreetNumber_411_StreetName_Church_Year_2026.json",
+      "washingtoncad-esearch-home.html"
+    ],
+    "reason": "Used official Washington CAD esearch for selected candidate addresses only; 411 Church matched, several additional final targeted pulls returned empty/session responses and were not promoted as matches.",
+    "next_cursor": "Use browser/manual CAD search or parcel map for unresolved addresses: 1307 N Park, 1402 W Jefferson, 801 Mangrum, 107 S Saeger and other coordinator shortlist items.",
+    "retrieved_at": "2026-09-21T02:21:00Z",
+    "audit_notes": [
+      "Not exhausted; keep this as a gap in the PDF coverage section.",
+      "Continuation path is documented.",
+      "Covered dates differ from the requested window; do not summarize as complete window coverage without context."
+    ],
+    "source_class": "parcel_validation"
+  },
+  {
+    "receipt_id": "washington-coverage-003",
+    "lane": "washington",
+    "name": "Washington County Engineering and Development Services / Road and Bridge",
+    "url": "https://www.co.washington.tx.us/page/washington.Road",
+    "county": "Washington",
+    "requested_from": "2026-06-22",
+    "requested_to": "2026-09-20",
+    "covered_from": null,
+    "covered_to": null,
+    "status": "partial",
+    "records_found": 0,
+    "files_read_count": 1,
+    "files_read_sample": [
+      "road-bridge.html"
+    ],
+    "reason": "Page identifies permit routes including MGO, floodplain, OSSF, culvert, utility installation and subdivision application, but no issued-record register was found on the page.",
+    "next_cursor": "If approved, use MGO/public request route for issued culvert/floodplain/subdivision records; no request sent in this worker.",
+    "retrieved_at": "2026-09-21T02:21:00Z",
+    "audit_notes": [
+      "Not exhausted; keep this as a gap in the PDF coverage section.",
+      "Continuation path is documented.",
+      "Source documents process or forms, not an issued permit register.",
+      "Covered date window is not fully established from saved evidence."
+    ],
+    "source_class": "other"
+  },
+  {
+    "receipt_id": "washington-coverage-004",
+    "lane": "washington",
+    "name": "Washington County Environmental Health",
+    "url": "https://www.co.washington.tx.us/page/washington.Environmental",
+    "county": "Washington",
+    "requested_from": "2026-06-22",
+    "requested_to": "2026-09-20",
+    "covered_from": null,
+    "covered_to": null,
+    "status": "partial",
+    "records_found": 0,
+    "files_read_count": 1,
+    "files_read_sample": [
+      "environmental.html"
+    ],
+    "reason": "Page documents OSSF and floodplain permitting/review requirements but does not expose individual issued records in the checked page.",
+    "next_cursor": "Request or locate public OSSF/floodplain permit log for selected unincorporated projects if later approved.",
+    "retrieved_at": "2026-09-21T02:21:00Z",
+    "audit_notes": [
+      "Not exhausted; keep this as a gap in the PDF coverage section.",
+      "Continuation path is documented.",
+      "Covered date window is not fully established from saved evidence."
+    ],
+    "source_class": "other"
+  },
+  {
+    "receipt_id": "washington-coverage-005",
+    "lane": "washington",
+    "name": "City of Burton public agenda source",
+    "url": "https://cityofburton-tx.gov/",
+    "county": "Washington",
+    "requested_from": "2026-06-22",
+    "requested_to": "2026-09-20",
+    "covered_from": "2026-09-22",
+    "covered_to": "2026-09-22",
+    "status": "partial",
+    "records_found": 1,
+    "files_read_count": 2,
+    "files_read_sample": [
+      "home.html",
+      "special-called-council-2026-09-22.pdf"
+    ],
+    "reason": "Home page surfaced a current special-called agenda with one infrastructure-related planning item; no permit register was found in the timebox.",
+    "next_cursor": "Check Burton agenda/minutes after the meeting and search for city permit records or public-information route.",
+    "retrieved_at": "2026-09-21T02:21:00Z",
+    "audit_notes": [
+      "Not exhausted; keep this as a gap in the PDF coverage section.",
+      "Continuation path is documented.",
+      "Covered dates differ from the requested window; do not summarize as complete window coverage without context."
+    ],
+    "source_class": "planning_or_agenda"
+  },
+  {
+    "receipt_id": "washington-coverage-006",
+    "lane": "washington",
+    "name": "City of Brenham purchasing / local bids",
+    "url": "https://www.cityofbrenham.org/city_government/departments/finance/purchasing.php",
+    "county": "Washington",
+    "requested_from": "2026-06-22",
+    "requested_to": "2026-09-20",
+    "covered_from": "2026-05-28",
+    "covered_to": "2026-09-21",
+    "status": "partial",
+    "records_found": 2,
+    "files_read_count": 3,
+    "files_read_sample": [
+      "brenham-purchasing.html",
+      "bid-26-015-henderson-park.pdf",
+      "bid-26-013-city-hall-rtu5.pdf"
+    ],
+    "reason": "Visible 2026 construction-related bid documents found; Henderson Park and City Hall RTU-5 deadlines were expired before this worker run. No currently open construction bid identified on checked page.",
+    "next_cursor": "Check later council agendas/minutes for awards and monitor purchasing page for new postings.",
+    "retrieved_at": "2026-09-21T02:21:00Z",
+    "audit_notes": [
+      "Not exhausted; keep this as a gap in the PDF coverage section.",
+      "Continuation path is documented.",
+      "Covered dates differ from the requested window; do not summarize as complete window coverage without context."
+    ],
+    "source_class": "bid_or_procurement"
+  },
+  {
+    "receipt_id": "washington-coverage-007",
+    "lane": "washington",
+    "name": "Brenham Accela / online permit portal",
+    "url": "https://cityofbrenham.online/dev-permits",
+    "county": "Washington",
+    "requested_from": "2026-06-22",
+    "requested_to": "2026-09-20",
+    "covered_from": null,
+    "covered_to": null,
+    "status": "partial",
+    "records_found": 0,
+    "files_read_count": 3,
+    "files_read_sample": [
+      "dev-permits.html",
+      "accela-https___aca_prod_accela_com_BRENHAM_Cap_CapHome_aspx_module_Building_TabName_Bui.html",
+      "accela-search-com-new-26-0012.html"
+    ],
+    "reason": "Anonymous Accela building search page loaded from official host, but controlled postback for permit COM-NEW-26-0012 returned no results; no detail/inspection records were captured.",
+    "next_cursor": "Try permit-number format variants or manual/browser Accela search for top permit IDs; city monthly PDFs remain the authoritative source captured here.",
+    "retrieved_at": "2026-09-21T02:21:00Z",
+    "audit_notes": [
+      "Not exhausted; keep this as a gap in the PDF coverage section.",
+      "Continuation path is documented.",
+      "Covered date window is not fully established from saved evidence."
+    ],
+    "source_class": "permit"
+  },
+  {
+    "receipt_id": "washington-coverage-008",
+    "lane": "washington",
+    "name": "Statewide TDLR/TCEQ/TABC/Comptroller portals",
+    "url": null,
+    "county": "Washington",
+    "requested_from": "2026-06-22",
+    "requested_to": "2026-09-20",
+    "covered_from": null,
+    "covered_to": null,
+    "status": "not_checked",
+    "records_found": 0,
+    "files_read_count": 0,
+    "files_read_sample": [],
+    "reason": "Explicitly excluded from this local worker; statewide worker owns those sources.",
+    "next_cursor": "Coordinator should merge statewide worker output separately.",
+    "retrieved_at": "2026-09-21T02:21:00Z",
+    "audit_notes": [
+      "Not exhausted; keep this as a gap in the PDF coverage section.",
+      "No claim of full county coverage should rely on this source.",
+      "Continuation path is documented.",
+      "TDLR/TABS is an accessibility registration source, not proof of open trade packages.",
+      "Covered date window is not fully established from saved evidence."
+    ],
+    "source_class": "statewide_registration"
+  }
+]

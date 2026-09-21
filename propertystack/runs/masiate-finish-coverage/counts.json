@@ -1,0 +1,335 @@
+{
+  "generated_at": "2026-09-21T02:23:07Z",
+  "review_input_root": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/review-input",
+  "scope_note": "Counts are source receipts and raw collected records, not deduped projects or final PDF leads.",
+  "lanes": {
+    "brazos": {
+      "state": "complete",
+      "records_saved_reported": 9,
+      "records_json_count": 9,
+      "coverage_receipts": 7
+    },
+    "burleson": {
+      "state": "complete",
+      "records_saved_reported": 8,
+      "records_json_count": 8,
+      "coverage_receipts": 10
+    },
+    "grimes": {
+      "state": "complete",
+      "records_saved_reported": 13,
+      "records_json_count": 13,
+      "coverage_receipts": 12
+    },
+    "leon": {
+      "state": "complete",
+      "records_saved_reported": 14,
+      "records_json_count": 14,
+      "coverage_receipts": 10
+    },
+    "madison": {
+      "state": "partial",
+      "records_saved_reported": 3,
+      "records_json_count": 3,
+      "coverage_receipts": 8
+    },
+    "robertson": {
+      "state": "complete",
+      "records_saved_reported": 6,
+      "records_json_count": 6,
+      "coverage_receipts": 6
+    },
+    "statewide": {
+      "state": "complete",
+      "records_saved_reported": 194,
+      "records_json_count": 194,
+      "coverage_receipts": 15
+    },
+    "washington": {
+      "state": "complete",
+      "records_saved_reported": 20,
+      "records_json_count": 20,
+      "coverage_receipts": 8
+    }
+  },
+  "totals": {
+    "raw_records": 267,
+    "coverage_receipts": 76,
+    "record_source_entries": 336,
+    "record_source_local_paths": 336,
+    "missing_local_paths": 0,
+    "duplicate_record_ids": 0
+  },
+  "coverage_status_counts": {
+    "partial": 42,
+    "blocked": 12,
+    "complete": 18,
+    "empty": 3,
+    "not_checked": 1
+  },
+  "source_class_counts": {
+    "other": 16,
+    "permit": 17,
+    "bid_or_procurement": 10,
+    "parcel_validation": 6,
+    "planning_or_agenda": 12,
+    "statewide_registration": 15
+  },
+  "records_by_county": {
+    "Brazos": {
+      "raw_records": 129,
+      "record_type:planning": 9,
+      "stage:planned": 119,
+      "disposition:candidate": 117,
+      "disposition:watchlist": 12,
+      "record_type:registration": 120,
+      "stage:unknown": 10
+    },
+    "Burleson": {
+      "raw_records": 20,
+      "record_type:planning": 7,
+      "stage:planned": 18,
+      "disposition:candidate": 9,
+      "record_type:bid": 1,
+      "stage:historical": 1,
+      "disposition:watchlist": 11,
+      "record_type:registration": 12,
+      "stage:unknown": 1
+    },
+    "Grimes": {
+      "raw_records": 27,
+      "record_type:planning": 12,
+      "stage:planned": 20,
+      "disposition:candidate": 23,
+      "disposition:watchlist": 4,
+      "stage:construction_reported": 4,
+      "record_type:bid": 1,
+      "stage:preconstruction_reported": 1,
+      "record_type:registration": 14,
+      "stage:unknown": 1,
+      "stage:historical": 1
+    },
+    "Leon": {
+      "raw_records": 18,
+      "record_type:bid": 7,
+      "stage:historical": 6,
+      "disposition:watchlist": 7,
+      "stage:planned": 9,
+      "disposition:candidate": 11,
+      "record_type:other": 4,
+      "stage:construction_reported": 2,
+      "record_type:planning": 3,
+      "record_type:registration": 4,
+      "stage:unknown": 1
+    },
+    "Madison": {
+      "raw_records": 5,
+      "record_type:planning": 3,
+      "stage:planned": 5,
+      "disposition:candidate": 5,
+      "record_type:registration": 2
+    },
+    "Robertson": {
+      "raw_records": 13,
+      "record_type:planning": 5,
+      "stage:planned": 10,
+      "disposition:candidate": 9,
+      "disposition:watchlist": 3,
+      "record_type:bid": 1,
+      "stage:construction_reported": 1,
+      "stage:unknown": 2,
+      "disposition:excluded": 1,
+      "record_type:registration": 7
+    },
+    "Washington": {
+      "raw_records": 55,
+      "record_type:registration": 35,
+      "stage:planned": 33,
+      "disposition:candidate": 46,
+      "disposition:watchlist": 9,
+      "stage:unknown": 3,
+      "record_type:permit": 17,
+      "stage:permitted": 17,
+      "record_type:bid": 2,
+      "stage:historical": 2,
+      "record_type:planning": 1
+    }
+  },
+  "local_records_by_county": {
+    "Brazos": {
+      "raw_records": 9,
+      "record_type:planning": 9,
+      "stage:planned": 9,
+      "disposition:candidate": 7,
+      "disposition:watchlist": 2
+    },
+    "Burleson": {
+      "raw_records": 8,
+      "record_type:planning": 7,
+      "stage:planned": 7,
+      "disposition:candidate": 1,
+      "record_type:bid": 1,
+      "stage:historical": 1,
+      "disposition:watchlist": 7
+    },
+    "Grimes": {
+      "raw_records": 13,
+      "record_type:planning": 12,
+      "stage:planned": 8,
+      "disposition:candidate": 9,
+      "disposition:watchlist": 4,
+      "stage:construction_reported": 4,
+      "record_type:bid": 1,
+      "stage:preconstruction_reported": 1
+    },
+    "Leon": {
+      "raw_records": 14,
+      "record_type:bid": 7,
+      "stage:historical": 6,
+      "disposition:watchlist": 7,
+      "stage:planned": 6,
+      "disposition:candidate": 7,
+      "record_type:other": 4,
+      "stage:construction_reported": 2,
+      "record_type:planning": 3
+    },
+    "Madison": {
+      "raw_records": 3,
+      "record_type:planning": 3,
+      "stage:planned": 3,
+      "disposition:candidate": 3
+    },
+    "Robertson": {
+      "raw_records": 6,
+      "record_type:planning": 5,
+      "stage:planned": 4,
+      "disposition:candidate": 2,
+      "disposition:watchlist": 3,
+      "record_type:bid": 1,
+      "stage:construction_reported": 1,
+      "stage:unknown": 1,
+      "disposition:excluded": 1
+    },
+    "Washington": {
+      "raw_records": 20,
+      "record_type:permit": 17,
+      "stage:permitted": 17,
+      "disposition:candidate": 13,
+      "record_type:bid": 2,
+      "stage:historical": 2,
+      "disposition:watchlist": 7,
+      "record_type:planning": 1,
+      "stage:planned": 1
+    }
+  },
+  "statewide_records_by_county": {
+    "Brazos": {
+      "raw_records": 120,
+      "record_type:registration": 120,
+      "stage:planned": 110,
+      "disposition:candidate": 110,
+      "disposition:watchlist": 10,
+      "stage:unknown": 10
+    },
+    "Burleson": {
+      "raw_records": 12,
+      "record_type:registration": 12,
+      "stage:planned": 11,
+      "disposition:candidate": 8,
+      "disposition:watchlist": 4,
+      "stage:unknown": 1
+    },
+    "Grimes": {
+      "raw_records": 14,
+      "record_type:registration": 14,
+      "stage:planned": 12,
+      "disposition:candidate": 14,
+      "stage:unknown": 1,
+      "stage:historical": 1
+    },
+    "Leon": {
+      "raw_records": 4,
+      "record_type:registration": 4,
+      "stage:planned": 3,
+      "disposition:candidate": 4,
+      "stage:unknown": 1
+    },
+    "Madison": {
+      "raw_records": 2,
+      "record_type:registration": 2,
+      "stage:planned": 2,
+      "disposition:candidate": 2
+    },
+    "Robertson": {
+      "raw_records": 7,
+      "record_type:registration": 7,
+      "stage:planned": 6,
+      "disposition:candidate": 7,
+      "stage:unknown": 1
+    },
+    "Washington": {
+      "raw_records": 35,
+      "record_type:registration": 35,
+      "stage:planned": 32,
+      "disposition:candidate": 33,
+      "disposition:watchlist": 2,
+      "stage:unknown": 3
+    }
+  },
+  "source_receipts_by_county": {
+    "Brazos": {
+      "partial": 4,
+      "blocked": 3,
+      "complete": 2
+    },
+    "Burleson": {
+      "partial": 6,
+      "blocked": 3,
+      "complete": 3
+    },
+    "Grimes": {
+      "complete": 5,
+      "partial": 7,
+      "blocked": 2
+    },
+    "Leon": {
+      "partial": 7,
+      "empty": 1,
+      "blocked": 2,
+      "complete": 2
+    },
+    "Madison": {
+      "partial": 5,
+      "empty": 1,
+      "complete": 2
+    },
+    "Madison/Leon jurisdiction check": {
+      "partial": 2
+    },
+    "Robertson": {
+      "complete": 3,
+      "partial": 3,
+      "blocked": 1,
+      "empty": 1
+    },
+    "Washington": {
+      "complete": 1,
+      "partial": 8,
+      "not_checked": 1
+    },
+    "statewide": {
+      "blocked": 1
+    }
+  },
+  "record_source_entries_per_record": {
+    "1": 230,
+    "2": 16,
+    "4": 3,
+    "5": 4,
+    "3": 14
+  },
+  "integrity": {
+    "missing_local_paths": [],
+    "duplicate_record_ids": []
+  }
+}
