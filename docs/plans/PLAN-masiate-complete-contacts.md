@@ -103,7 +103,7 @@ and permit status still do not establish a current request for contractors.
 
 ## Small Go Work Tasks
 
-- [x] MC1: Establish the all-row contact ledger and offline checks (15-25 minutes; foundation).
+- [ ] MC1: Establish the all-row contact ledger and offline checks (15-25 minutes; foundation).
   Own `tooling/masiate_pdf/contact_coverage.py`, related focused tests, and `propertystack/data/masiate/pilot-20260920/contact-research/manifest.json` plus schema notes. Create an inventory keyed by all 49 immutable property IDs with original ranks, actors and source links, four non-overlapping batch assignments, and explicit not-yet-researched status. Design a structured per-property research result containing sources checked/results, contact name/role/phone/email/site, public-business basis, match evidence, source type, checked date, selected route, alternatives and researched gap where applicable. Reuse the existing nine-number supplement without changing original records. Provide a standard-library validation command that reports partial versus complete coverage and fails a final gate on missing IDs, duplicate IDs, unchecked links without a disposition, missing phone provenance, role loss, ambiguous contacts counted as strong, or unsupported generic "not found". Initial/partial checks must allow unfinished batches without claiming done. Document the exact contract for workers, keep fixture tests offline, run Check and commit. Do not crawl or alter the PDF in this task.
 
 - [ ] MC2: Finish contact research for original rows 1-13 (20-30 minutes; depends on MC1; independent of MC3-MC5).
