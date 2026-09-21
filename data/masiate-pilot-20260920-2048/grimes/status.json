@@ -1,0 +1,10 @@
+{
+  "county": "Grimes",
+  "lane": "grimes",
+  "started_at": "2026-09-21T01:49:32Z",
+  "checkpoint_at": "2026-09-21T02:29:00Z",
+  "finished_at": "2026-09-21T02:29:00Z",
+  "state": "complete",
+  "records_saved": 13,
+  "notes": "Finished Grimes County pilot collection with sanitized outputs committed locally; raw evidence preserved in runtime lane."
+}

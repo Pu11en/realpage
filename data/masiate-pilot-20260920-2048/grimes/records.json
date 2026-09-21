@@ -1,0 +1,803 @@
+[
+  {
+    "id": "grimes-navasota-pz-20260924-pecan-grove-phase2",
+    "county": "Grimes",
+    "project_name": "Pecan Grove Estates Phase 2 final plat and subdivision agreement",
+    "address": "Highway 105 W / Pecan Lakes Drive, Navasota, TX 77868",
+    "city": "Navasota",
+    "record_type": "planning",
+    "source_record_id": "Navasota P&Z agenda seq 246 item 6 / memo seq 1064; parcel R14167",
+    "record_date": "2026-09-24",
+    "retrieved_at": "2026-09-21T02:05:00Z",
+    "stage": "planned",
+    "status_basis": "September 24, 2026 P&Z agenda is for consideration of final plat and subdivision agreement; memo says Phase 2 public infrastructure is substantially complete but outstanding items remain under a letter of credit. It does not prove vertical home construction has started.",
+    "scope": "57-lot residential subdivision; subdivision agreement covers outstanding public improvements including Phase 2 lot-frontage sidewalks.",
+    "masiate_fit": "Concrete/sidewalk, fencing, flatwork, framing and later residential trade packages could fit; trade availability is an inference because the source only confirms subdivision approval/infrastructure status.",
+    "estimated_value": "$101,265.00 outstanding infrastructure letter of credit; $69,615.00 listed for missing lot frontage sidewalks; $74,584 parkland fee-in-lieu noted separately",
+    "estimated_start": null,
+    "estimated_completion": "No later than two years after final plat signature for required public improvements, per subdivision agreement summary",
+    "bid_deadline": null,
+    "participants": [
+      {
+        "name": "Crosstrails Development, LLC",
+        "role": "owner/subdivider",
+        "source_url": "https://destinyhosted.com/agenda_publish.cfm?id=62827&mt=ALL&get_month=9&get_year=2026&dsp=agm&seq=1064&rev=0&ag=246&ln=2931"
+      },
+      {
+        "name": "413 Pecan Grove, LLC",
+        "role": "associated owner named in memo",
+        "source_url": "https://destinyhosted.com/agenda_publish.cfm?id=62827&mt=ALL&get_month=9&get_year=2026&dsp=agm&seq=1064&rev=0&ag=246&ln=2931"
+      },
+      {
+        "name": "Brandon Goodyk",
+        "role": "project owner representative",
+        "source_url": "https://destinyhosted.com/agenda_publish.cfm?id=62827&mt=ALL&get_month=9&get_year=2026&dsp=agm&seq=1064&rev=0&ag=246&ln=2931"
+      },
+      {
+        "name": "Chad Murphy",
+        "role": "project owner representative",
+        "source_url": "https://destinyhosted.com/agenda_publish.cfm?id=62827&mt=ALL&get_month=9&get_year=2026&dsp=agm&seq=1064&rev=0&ag=246&ln=2931"
+      },
+      {
+        "name": "Paul Malek / MBC",
+        "role": "project engineer",
+        "source_url": "https://destinyhosted.com/agenda_publish.cfm?id=62827&mt=ALL&get_month=9&get_year=2026&dsp=agm&seq=1064&rev=0&ag=246&ln=2931"
+      }
+    ],
+    "business_contacts": [
+      {
+        "name": "Crosstrails Development, LLC",
+        "role": "owner/subdivider verified in city memo and CAD",
+        "phone": null,
+        "email": null,
+        "website": null,
+        "source_url": "https://grimescad.org/ProxyT/Search/Properties/quick/?f=R14167&pn=1&st=4&so=desc&pt=RP;PP;MH;NR&ty=2027"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://destinyhosted.com/agenda_publish.cfm?id=62827&mt=ALL&get_month=9&get_year=2026&dsp=ag&seq=246",
+        "title": "Navasota Planning & Zoning Commission agenda",
+        "date": "2026-09-24",
+        "page": "item 6",
+        "evidence": "Agenda identifies Crosstrails final plat/subdivision agreement for Pecan Grove Estates Phase 2, 57 lots along Pecan Lakes Drive.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/grimes/evidence/navasota_agenda_246.html"
+      },
+      {
+        "url": "https://destinyhosted.com/agenda_publish.cfm?id=62827&mt=ALL&get_month=9&get_year=2026&dsp=agm&seq=1064&rev=0&ag=246&ln=2931",
+        "title": "Navasota P&Z agenda memo 1064",
+        "date": "2026-09-24",
+        "page": "summary/property information",
+        "evidence": "Memo gives parcel R14167, owner, address, 57-lot Phase 2 scope, substantially complete public infrastructure, outstanding sidewalks and staff recommendation.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/grimes/evidence/navasota_memo_1064_pecan_grove.html"
+      },
+      {
+        "url": "https://destinyhosted.com/navasdocs/2026/NPAZ/20260924_246/1064_Navasota%20-%20Pecan%20Grove%20-%20Subdivision%20Agreement%20Phase%202%20Final.pdf",
+        "title": "Subdivision agreement PDF",
+        "date": "2026-09-24",
+        "page": "agreement attachment",
+        "evidence": "Agreement attachment preserved for outstanding public improvement obligations.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/grimes/evidence/pecan_grove_subdivision_agreement.pdf"
+      },
+      {
+        "url": "https://grimescad.org/ProxyT/Search/Properties/quick/?f=R14167&pn=1&st=4&so=desc&pt=RP;PP;MH;NR&ty=2027",
+        "title": "Grimes CAD quick search R14167",
+        "date": "2027",
+        "page": null,
+        "evidence": "CAD result confirms R14167 owner Crosstrails Development, LLC and situs HWY105 W, Navasota.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/grimes/evidence/grimescad_R14167.json"
+      }
+    ],
+    "unknowns": [
+      "Whether final plat was approved after the September 24 meeting",
+      "Which sidewalk/flatwork scopes remain available to outside contractors",
+      "Whether vertical builders have been selected"
+    ],
+    "next_research": "After the meeting, check approved minutes and filed plat; then identify developer/builder procurement contacts from the subdivision agreement or county deed/plat filings.",
+    "disposition": "candidate"
+  },
+  {
+    "id": "grimes-navasota-pz-20260924-nkq-plumbing-217-hill",
+    "county": "Grimes",
+    "project_name": "NKQ Plumbing specific use permit / zoning path for 217 W Hill Street",
+    "address": "217 W Hill Street, Navasota, TX 77868",
+    "city": "Navasota",
+    "record_type": "planning",
+    "source_record_id": "Navasota P&Z agenda seq 246 item 5 / memo seq 1062; prior memo seq 1023; City Council memo seq 1024; parcel R25041",
+    "record_date": "2026-09-24",
+    "retrieved_at": "2026-09-21T02:05:00Z",
+    "stage": "planned",
+    "status_basis": "September P&Z agenda considers a specific use permit for plumbing-company operation; August memo says NKQ recently purchased the property and intends to apply for applicable building permits to improve/modify or expand the property. However, the August City Council follow-up memo states P&Z recommended denial of the earlier zoning request due to spot-zoning/neighborhood-disruption concerns, so entitlement risk is material. No issued building permit was accessible.",
+    "scope": "Specific use permit and prior zoning change for retail-service plumbing company at 217 W Hill Street; potential building improvements/modification or expansion noted by city staff.",
+    "masiate_fit": "Potential plumbing business site improvement could involve remodeling, plumbing, concrete, electrical, painting or fencing, but this should be treated as an uncertain watchlist item until entitlement and permits are confirmed.",
+    "estimated_value": null,
+    "estimated_start": null,
+    "estimated_completion": null,
+    "bid_deadline": null,
+    "participants": [
+      {
+        "name": "NKQ Plumbing, LLC",
+        "role": "applicant/owner",
+        "source_url": "https://destinyhosted.com/agenda_publish.cfm?id=62827&mt=ALL&get_month=9&get_year=2026&dsp=agm&seq=1062&rev=0&ag=246&ln=2929"
+      },
+      {
+        "name": "Nick Quezada",
+        "role": "project representative",
+        "source_url": "https://destinyhosted.com/agenda_publish.cfm?id=62827&mt=ALL&get_month=9&get_year=2026&dsp=agm&seq=1062&rev=0&ag=246&ln=2929"
+      }
+    ],
+    "business_contacts": [
+      {
+        "name": "NKQ Plumbing, LLC",
+        "role": "owner/applicant verified in city memo and CAD",
+        "phone": null,
+        "email": null,
+        "website": null,
+        "source_url": "https://grimescad.org/ProxyT/Search/Properties/quick/?f=217%20W%20HILL&pn=1&st=4&so=desc&pt=RP;PP;MH;NR&ty=2027"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://destinyhosted.com/agenda_publish.cfm?id=62827&mt=ALL&get_month=9&get_year=2026&dsp=ag&seq=246",
+        "title": "Navasota P&Z agenda",
+        "date": "2026-09-24",
+        "page": "item 5",
+        "evidence": "Agenda describes specific use permit for NKQ Plumbing at 217 W Hill Street.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/grimes/evidence/navasota_agenda_246.html"
+      },
+      {
+        "url": "https://destinyhosted.com/agenda_publish.cfm?id=62827&mt=ALL&get_month=9&get_year=2026&dsp=agm&seq=1062&rev=0&ag=246&ln=2929",
+        "title": "Navasota P&Z memo 1062",
+        "date": "2026-09-24",
+        "page": "property information",
+        "evidence": "Memo gives parcel R25041, owner NKQ Plumbing LLC, address, current/proposed use, and staff recommendation conditions.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/grimes/evidence/navasota_memo_1062_nkq.html"
+      },
+      {
+        "url": "https://destinyhosted.com/agenda_publish.cfm?id=62827&mt=ALL&get_month=8&get_year=2026&dsp=agm&seq=1023&rev=0&ag=239&ln=2836",
+        "title": "Navasota P&Z memo 1023",
+        "date": "2026-08-13",
+        "page": "summary/property information",
+        "evidence": "Prior zoning memo states NKQ recently purchased the property and intends to apply for applicable building permits to improve the property.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/grimes/evidence/navasota_memo_1023_nkq_zoning.html"
+      },
+      {
+        "url": "https://grimescad.org/ProxyT/Search/Properties/quick/?f=217%20W%20HILL&pn=1&st=4&so=desc&pt=RP;PP;MH;NR&ty=2027",
+        "title": "Grimes CAD quick search 217 W Hill",
+        "date": "2027",
+        "page": null,
+        "evidence": "CAD confirms R25041 owner NKQ Plumbing LLC and situs 217 W Hill St.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/grimes/evidence/grimescad_217_w_hill.json"
+      },
+      {
+        "url": "https://destinyhosted.com/agenda_publish.cfm?id=62827&mt=ALL&get_month=8&get_year=2026&dsp=agm&seq=1024&rev=0&ag=235&ln=2840",
+        "title": "Navasota City Council memo 1024 for Ordinance 1087-26",
+        "date": "2026-08-24",
+        "page": "summary/recommendation",
+        "evidence": "City Council follow-up memo says P&Z recommended denial of NKQ zoning due to spot-zoning/neighborhood disruption concerns; outcome minutes endpoint returned an error during collection.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/grimes/evidence/navasota_memo_1024_nkq_citycouncil.html"
+      }
+    ],
+    "unknowns": [
+      "Whether City Council approved or denied the zoning/specific use sequence after the P&Z denial recommendation",
+      "Whether building permits were filed after any use approval",
+      "Scope, budget and contractor for any improvements"
+    ],
+    "next_research": "Check City Council minutes/outcome for Ordinance 1087-26 and later Citizenserve/building-permit records by R25041/R25042 or 217 W Hill.",
+    "disposition": "watchlist"
+  },
+  {
+    "id": "grimes-navasota-pz-20260924-316-mcalpine-carport",
+    "county": "Grimes",
+    "project_name": "316 E McAlpine detached carport/garage conditional use permit",
+    "address": "316 E McAlpine Street, Navasota, TX 77868",
+    "city": "Navasota",
+    "record_type": "planning",
+    "source_record_id": "Navasota P&Z agenda seq 246 item 4 / memo seq 1063; parcel R25262",
+    "record_date": "2026-09-24",
+    "retrieved_at": "2026-09-21T02:05:00Z",
+    "stage": "planned",
+    "status_basis": "P&Z agenda/memo considers conditional use permit for accessory unit construction; no issued building permit or contractor found in accessible sources.",
+    "scope": "Detached accessory unit, described as carport/garage, on residential/CBD property.",
+    "masiate_fit": "Small structure could involve framing, roofing, siding, concrete, paint or electrical; fit is likely but scope and contractor are not yet known.",
+    "estimated_value": null,
+    "estimated_start": null,
+    "estimated_completion": null,
+    "bid_deadline": null,
+    "participants": [
+      {
+        "name": "Eric Linder",
+        "role": "applicant/owner",
+        "source_url": "https://destinyhosted.com/agenda_publish.cfm?id=62827&mt=ALL&get_month=9&get_year=2026&dsp=agm&seq=1063&rev=0&ag=246&ln=2930"
+      },
+      {
+        "name": "Linder, Eric & Melodie",
+        "role": "owner verified in CAD",
+        "source_url": "https://grimescad.org/ProxyT/Search/Properties/quick/?f=316%20E%20MC%20ALPINE&pn=1&st=4&so=desc&pt=RP;PP;MH;NR&ty=2027"
+      }
+    ],
+    "business_contacts": [],
+    "sources": [
+      {
+        "url": "https://destinyhosted.com/agenda_publish.cfm?id=62827&mt=ALL&get_month=9&get_year=2026&dsp=agm&seq=1063&rev=0&ag=246&ln=2930",
+        "title": "Navasota P&Z memo 1063",
+        "date": "2026-09-24",
+        "page": "summary/property information",
+        "evidence": "Memo gives parcel R25262, owner, address and conditional use request for construction of detached carport/garage.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/grimes/evidence/navasota_memo_1063_mcalpine.html"
+      },
+      {
+        "url": "https://grimescad.org/ProxyT/Search/Properties/quick/?f=316%20E%20MC%20ALPINE&pn=1&st=4&so=desc&pt=RP;PP;MH;NR&ty=2027",
+        "title": "Grimes CAD quick search 316 E McAlpine",
+        "date": "2027",
+        "page": null,
+        "evidence": "CAD confirms R25262 owner Linder, Eric & Melodie and situs 316 E McAlpine.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/grimes/evidence/grimescad_316_mcalpine.json"
+      }
+    ],
+    "unknowns": [
+      "Whether conditional use is approved",
+      "Whether owner will self-perform or hire trades",
+      "Permit number and building permit issue date"
+    ],
+    "next_research": "Recheck P&Z minutes and Citizenserve by address after meeting; avoid exporting private homeowner phone/email.",
+    "disposition": "watchlist"
+  },
+  {
+    "id": "grimes-navasota-pz-20260827-sterling-auto-expansion",
+    "county": "Grimes",
+    "project_name": "Sterling Auto / Navasota Ventures preliminary site plan expansion",
+    "address": "9030 Highway 6, Navasota, TX 77868",
+    "city": "Navasota",
+    "record_type": "planning",
+    "source_record_id": "Navasota P&Z agenda seq 244 item 4 / memo seq 1041; parcel R10132",
+    "record_date": "2026-08-27",
+    "retrieved_at": "2026-09-21T02:05:00Z",
+    "stage": "planned",
+    "status_basis": "P&Z memo says preliminary site plan for expanding vehicular sales use was under consideration and staff recommended approval; source does not confirm construction permit issuance.",
+    "scope": "Expansion phase for vehicle-sales site at 9030 Highway 6; site plan review references drainage report and later phase previously designed.",
+    "masiate_fit": "Site expansion may involve concrete paving/flatwork, fencing, lighting/electrical, paint/striping and site trades; exact trade packages remain unknown.",
+    "estimated_value": null,
+    "estimated_start": null,
+    "estimated_completion": null,
+    "bid_deadline": null,
+    "participants": [
+      {
+        "name": "Navasota Ventures, LLC",
+        "role": "applicant/owner in city memo",
+        "source_url": "https://destinyhosted.com/agenda_publish.cfm?id=62827&mt=ALL&get_month=8&get_year=2026&dsp=agm&seq=1041&rev=0&ag=244&ln=2885"
+      },
+      {
+        "name": "Lay Construction",
+        "role": "project representative",
+        "source_url": "https://destinyhosted.com/agenda_publish.cfm?id=62827&mt=ALL&get_month=8&get_year=2026&dsp=agm&seq=1041&rev=0&ag=244&ln=2885"
+      }
+    ],
+    "business_contacts": [
+      {
+        "name": "Lay Construction",
+        "role": "project representative verified in city memo",
+        "phone": null,
+        "email": null,
+        "website": null,
+        "source_url": "https://destinyhosted.com/agenda_publish.cfm?id=62827&mt=ALL&get_month=8&get_year=2026&dsp=agm&seq=1041&rev=0&ag=244&ln=2885"
+      },
+      {
+        "name": "Navasota Ventures, LLC",
+        "role": "owner/applicant verified in city memo",
+        "phone": null,
+        "email": null,
+        "website": null,
+        "source_url": "https://destinyhosted.com/agenda_publish.cfm?id=62827&mt=ALL&get_month=8&get_year=2026&dsp=agm&seq=1041&rev=0&ag=244&ln=2885"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://destinyhosted.com/agenda_publish.cfm?id=62827&mt=ALL&get_month=8&get_year=2026&dsp=ag&seq=244",
+        "title": "Navasota P&Z agenda",
+        "date": "2026-08-27",
+        "page": "item 4",
+        "evidence": "Agenda identifies preliminary site plan for Navasota Ventures/Sterling Auto expansion at 9030 Highway 6.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/grimes/evidence/navasota_agenda_244.html"
+      },
+      {
+        "url": "https://destinyhosted.com/agenda_publish.cfm?id=62827&mt=ALL&get_month=8&get_year=2026&dsp=agm&seq=1041&rev=0&ag=244&ln=2885",
+        "title": "Navasota P&Z memo 1041",
+        "date": "2026-08-27",
+        "page": "summary/property information",
+        "evidence": "Memo gives project rep Lay Construction, parcel R10132, owner Navasota Ventures, LLC, address and staff recommendation.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/grimes/evidence/navasota_memo_1041_sterling_auto.html"
+      },
+      {
+        "url": "https://grimescad.org/ProxyT/Search/Properties/quick/?f=9030%20HWY6&pn=1&st=4&so=desc&pt=RP;PP;MH;NR&ty=2027",
+        "title": "Grimes CAD quick search 9030 HWY6",
+        "date": "2027",
+        "page": null,
+        "evidence": "CAD returns R10132 owner Navasota Ventures LLC at 9030 HWY6 plus related personal property/holding records.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/grimes/evidence/grimescad_9030_hwy6.json"
+      }
+    ],
+    "unknowns": [
+      "Whether P&Z approved the preliminary site plan",
+      "Whether a construction/site permit has been issued",
+      "Whether Lay Construction is only representative or contractor of record"
+    ],
+    "next_research": "Check August 27 minutes and Citizenserve permit results for 9030 HWY6 / R10132.",
+    "disposition": "candidate"
+  },
+  {
+    "id": "grimes-navasota-dashboard-20260920-autozone",
+    "county": "Grimes",
+    "project_name": "Autozone Navasota construction underway",
+    "address": "Unknown street address; dashboard point 30.390583, -96.091332 in Navasota",
+    "city": "Navasota",
+    "record_type": "planning",
+    "source_record_id": "Navasota Project Dashboard ObjectId 23",
+    "record_date": null,
+    "retrieved_at": "2026-09-21T02:05:00Z",
+    "stage": "construction_reported",
+    "status_basis": "City dashboard says preliminary site plan approved, construction plans approved, permit for construction issued and construction underway. Dashboard does not expose permit number, issue date, street address or contractor.",
+    "scope": "Autozone private commercial project; construction plans approved and construction underway according to city dashboard.",
+    "masiate_fit": "Commercial retail construction can involve concrete, framing, paint, electrical, plumbing, roofing, siding and lighting; exact open packages unknown.",
+    "estimated_value": null,
+    "estimated_start": null,
+    "estimated_completion": "Dec-26",
+    "bid_deadline": null,
+    "participants": [],
+    "business_contacts": [
+      {
+        "name": "Autozone",
+        "role": "project/business name from city dashboard",
+        "phone": null,
+        "email": null,
+        "website": null,
+        "source_url": "https://services2.arcgis.com/A1oRcvECJ7UaClOw/arcgis/rest/services/Navasota_Project___Sheet1(in)/FeatureServer/0/query?where=1%3D1&outFields=*&returnGeometry=true&f=json"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://navasota.maps.arcgis.com/apps/dashboards/17b7b6efb2794a54b6a2f4ce3473cb12",
+        "title": "City of Navasota Project Dashboard",
+        "date": null,
+        "page": "Feature ObjectId 23",
+        "evidence": "Feature row states Autozone site plan and construction plans approved, construction permit issued and construction underway; includes Dec-26 estimated completion and coordinates.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/grimes/evidence/navasota_project_layer_query.json"
+      }
+    ],
+    "unknowns": [
+      "Street address",
+      "Permit number and issue date",
+      "Contractor/subcontractors",
+      "Whether remaining trade packages are still available"
+    ],
+    "next_research": "Use Citizenserve or city permit request by project name/coordinates; check future P&Z/City Council minutes for Autozone attachments.",
+    "disposition": "candidate"
+  },
+  {
+    "id": "grimes-navasota-dashboard-20260920-stoneridge-phase2",
+    "county": "Grimes",
+    "project_name": "Stoneridge Phase 2 / sections 1-3 construction plan review",
+    "address": "Unknown street address; dashboard point 30.406191, -96.103359 in Navasota",
+    "city": "Navasota",
+    "record_type": "planning",
+    "source_record_id": "Navasota Project Dashboard ObjectId 21",
+    "record_date": null,
+    "retrieved_at": "2026-09-21T02:05:00Z",
+    "stage": "planned",
+    "status_basis": "City dashboard says PUD zoning and preliminary plat approved; construction plan review approved for section 1/phase 2 and comments provided for sections 2 and 3 (labeled phases 3 and 4); awaiting TxDOT Bus 6 improvement approvals.",
+    "scope": "Residential subdivision phase/sections with approved/reviewed construction plans and pending roadway-related approval.",
+    "masiate_fit": "Subdivision infrastructure and later vertical lots may create concrete, fencing, framing, roofing, paint and related trade opportunities; source does not confirm active vertical construction.",
+    "estimated_value": null,
+    "estimated_start": null,
+    "estimated_completion": "TBD",
+    "bid_deadline": null,
+    "participants": [],
+    "business_contacts": [],
+    "sources": [
+      {
+        "url": "https://navasota.maps.arcgis.com/apps/dashboards/17b7b6efb2794a54b6a2f4ce3473cb12",
+        "title": "City of Navasota Project Dashboard",
+        "date": null,
+        "page": "Feature ObjectId 21",
+        "evidence": "Dashboard describes Stoneridge Phase 2 approvals and pending construction-plan/TxDOT status; coordinates included.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/grimes/evidence/navasota_project_layer_query.json"
+      }
+    ],
+    "unknowns": [
+      "Developer and parcel details",
+      "Address/legal description",
+      "TxDOT approval status",
+      "Builder/contractor roles"
+    ],
+    "next_research": "Search P&Z archive for Stoneridge and match dashboard point to CAD/subdivision records.",
+    "disposition": "candidate"
+  },
+  {
+    "id": "grimes-navasota-dashboard-20260920-altamira-hwy90-east",
+    "county": "Grimes",
+    "project_name": "Hwy 90 East Development - Altamira utilities",
+    "address": "Hwy 90 East development area; dashboard point 30.40589714, -96.04988911 in Navasota",
+    "city": "Navasota",
+    "record_type": "planning",
+    "source_record_id": "Navasota Project Dashboard ObjectId 18",
+    "record_date": null,
+    "retrieved_at": "2026-09-21T02:05:00Z",
+    "stage": "construction_reported",
+    "status_basis": "City dashboard says lift station and forcemain, Phase 1 and Phase 2 utilities are underway. No street address, permit number or contractor found.",
+    "scope": "Lift station, forcemain and Phase 1/2 utility work for east-side private development.",
+    "masiate_fit": "Utility work itself is less aligned, but associated site/vertical phases could need concrete, fencing, electrical, lighting, paint and framing; current source supports utility construction only.",
+    "estimated_value": null,
+    "estimated_start": null,
+    "estimated_completion": "TBD",
+    "bid_deadline": null,
+    "participants": [],
+    "business_contacts": [],
+    "sources": [
+      {
+        "url": "https://navasota.maps.arcgis.com/apps/dashboards/17b7b6efb2794a54b6a2f4ce3473cb12",
+        "title": "City of Navasota Project Dashboard",
+        "date": null,
+        "page": "Feature ObjectId 18",
+        "evidence": "Dashboard states Hwy 90 East Development - Altamira lift station/forcemain and Phase 1/2 utilities are underway; coordinates included.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/grimes/evidence/navasota_project_layer_query.json"
+      }
+    ],
+    "unknowns": [
+      "Developer/owner confirmation",
+      "Address/parcel boundaries",
+      "Vertical construction timing",
+      "Contractor roles"
+    ],
+    "next_research": "Follow east-side water plant/Altamira council or P&Z records and CAD parcels near dashboard point.",
+    "disposition": "watchlist"
+  },
+  {
+    "id": "grimes-iola-20260811-wwtp-contract",
+    "county": "Grimes",
+    "project_name": "City of Iola 0.100 MGD wastewater treatment plant construction",
+    "address": "Project location in Iola city limits near FM 39 / TX 90 per plan vicinity map; exact site address not stated in extracted text",
+    "city": "Iola",
+    "record_type": "bid",
+    "source_record_id": "City of Iola current project and August 11, 2026 agenda item L",
+    "record_date": "2026-08-11",
+    "retrieved_at": "2026-09-21T02:05:00Z",
+    "stage": "planned",
+    "status_basis": "Current Projects page includes June 2026 bid notice; August 11 agenda includes approval of a construction contract agreement between City of Iola and Teal Services, LLC for TWDB wastewater treatment plant construction. It does not prove notice to proceed or mobilization.",
+    "scope": "0.100 MGD package wastewater treatment plant, lift station and general site work; construction drawings preserved.",
+    "masiate_fit": "Public utility construction may require concrete, site work, electrical, plumbing/process piping, fencing and lighting; fit is stronger for subs than direct property-owner outreach.",
+    "estimated_value": null,
+    "estimated_start": null,
+    "estimated_completion": null,
+    "bid_deadline": "2026-06-25 2:00 PM Central (expired bid notice)",
+    "participants": [
+      {
+        "name": "City of Iola",
+        "role": "owner/public buyer",
+        "source_url": "https://cityofiola.myruralwater.com/current-projects"
+      },
+      {
+        "name": "Teal Services, LLC",
+        "role": "construction contract party named in August agenda",
+        "source_url": "https://cityofiola.myruralwater.com/documents/1511/Agenda_August_11_LJ_2026.pdf"
+      },
+      {
+        "name": "Bleyl Engineering",
+        "role": "engineer on construction drawings",
+        "source_url": "https://cityofiola.myruralwater.com/documents/1511/Plans-IolaWWTP_2026-0209.pdf"
+      }
+    ],
+    "business_contacts": [
+      {
+        "name": "Teal Services, LLC",
+        "role": "construction contract party named in public agenda",
+        "phone": null,
+        "email": null,
+        "website": null,
+        "source_url": "https://cityofiola.myruralwater.com/documents/1511/Agenda_August_11_LJ_2026.pdf"
+      },
+      {
+        "name": "Bleyl Engineering",
+        "role": "engineer named on construction drawings",
+        "phone": null,
+        "email": null,
+        "website": "https://www.bleylengineering.com",
+        "source_url": "https://cityofiola.myruralwater.com/documents/1511/Plans-IolaWWTP_2026-0209.pdf"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://cityofiola.myruralwater.com/current-projects",
+        "title": "City of Iola Current Projects",
+        "date": "2026-08-26",
+        "page": "current projects entries June 11 and August 26",
+        "evidence": "Page lists WWTP bid notice and plan link; June bid notice identifies package WWTP, lift station and general site work.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/grimes/evidence/iola_current_projects.html"
+      },
+      {
+        "url": "https://cityofiola.myruralwater.com/documents/1511/Agenda_August_11_LJ_2026.pdf",
+        "title": "City of Iola agenda August 11, 2026",
+        "date": "2026-08-11",
+        "page": "item L",
+        "evidence": "Agenda item L is to approve construction contract agreement with Teal Services, LLC for TWDB WWTP construction.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/grimes/evidence/iola_agenda_august_11_2026.pdf"
+      },
+      {
+        "url": "https://cityofiola.myruralwater.com/documents/1511/Plans-IolaWWTP_2026-0209.pdf",
+        "title": "Iola WWTP construction drawings",
+        "date": "2026-02-09",
+        "page": "cover/vicinity map",
+        "evidence": "Plans identify City of Iola 0.100 MGD wastewater treatment plant, TWDB CWSRF project no. 10422 and GLO project no. 24-065-165-F080.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/grimes/evidence/iola_wwtp_plans.pdf"
+      }
+    ],
+    "unknowns": [
+      "Exact construction site address",
+      "Executed contract value",
+      "Notice to proceed/mobilization date",
+      "Subcontracting opportunities"
+    ],
+    "next_research": "Request/check award packet or minutes for August 11; inspect plan sheets manually for site coordinates; identify Teal Services project manager only from public/approved sources.",
+    "disposition": "candidate"
+  },
+  {
+    "id": "grimes-navasota-pz-20260813-skp-hospitality-replat",
+    "county": "Grimes",
+    "project_name": "SKP Hospitality Lot 5B replat at Dove Crossing Lakeview Center",
+    "address": "9345 Highway 6, Navasota, TX 77868",
+    "city": "Navasota",
+    "record_type": "planning",
+    "source_record_id": "Navasota P&Z agenda seq 239 item 4 / memo seq 1017; parcel R70391",
+    "record_date": "2026-08-13",
+    "retrieved_at": "2026-09-21T02:05:00Z",
+    "stage": "planned",
+    "status_basis": "P&Z memo recommends approval of a replat splitting Lot 5B into two lots; proposed use listed as hotel and vacant lot. Replat alone does not prove construction.",
+    "scope": "Commercial replat of hotel property into hotel and vacant lot; possible future development site.",
+    "masiate_fit": "Future hotel/vacant-lot development could involve many Masiate trades, but the current source is only land entitlement; treat as watchlist.",
+    "estimated_value": null,
+    "estimated_start": null,
+    "estimated_completion": null,
+    "bid_deadline": null,
+    "participants": [
+      {
+        "name": "SKP Hospitality, LLC",
+        "role": "applicant/owner",
+        "source_url": "https://destinyhosted.com/agenda_publish.cfm?id=62827&mt=ALL&get_month=8&get_year=2026&dsp=agm&seq=1017&rev=0&ag=239&ln=2824"
+      },
+      {
+        "name": "Steven Wisnoski",
+        "role": "surveyor/project rep",
+        "source_url": "https://destinyhosted.com/agenda_publish.cfm?id=62827&mt=ALL&get_month=8&get_year=2026&dsp=agm&seq=1017&rev=0&ag=239&ln=2824"
+      },
+      {
+        "name": "Kamlesh Patel",
+        "role": "owner/project rep",
+        "source_url": "https://destinyhosted.com/agenda_publish.cfm?id=62827&mt=ALL&get_month=8&get_year=2026&dsp=agm&seq=1017&rev=0&ag=239&ln=2824"
+      }
+    ],
+    "business_contacts": [
+      {
+        "name": "SKP Hospitality, LLC",
+        "role": "owner/applicant verified in city memo and CAD",
+        "phone": null,
+        "email": null,
+        "website": null,
+        "source_url": "https://grimescad.org/ProxyT/Search/Properties/quick/?f=9345%20HWY6&pn=1&st=4&so=desc&pt=RP;PP;MH;NR&ty=2027"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://destinyhosted.com/agenda_publish.cfm?id=62827&mt=ALL&get_month=8&get_year=2026&dsp=ag&seq=239",
+        "title": "Navasota P&Z agenda",
+        "date": "2026-08-13",
+        "page": "item 4",
+        "evidence": "Agenda identifies SKP Hospitality replat at 9345 Highway 6.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/grimes/evidence/navasota_agenda_239.html"
+      },
+      {
+        "url": "https://destinyhosted.com/agenda_publish.cfm?id=62827&mt=ALL&get_month=8&get_year=2026&dsp=agm&seq=1017&rev=0&ag=239&ln=2824",
+        "title": "Navasota P&Z memo 1017",
+        "date": "2026-08-13",
+        "page": "property information",
+        "evidence": "Memo gives parcel R70391, owner, reps, address, current hotel and proposed hotel/vacant lot.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/grimes/evidence/navasota_memo_1017_skp_hospitality.html"
+      },
+      {
+        "url": "https://grimescad.org/ProxyT/Search/Properties/quick/?f=9345%20HWY6&pn=1&st=4&so=desc&pt=RP;PP;MH;NR&ty=2027",
+        "title": "Grimes CAD quick search 9345 HWY6",
+        "date": "2027",
+        "page": null,
+        "evidence": "CAD confirms R70391 owner SKP Hospitality LLC and situs 9345 HWY6.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/grimes/evidence/grimescad_9345_hwy6.json"
+      }
+    ],
+    "unknowns": [
+      "Whether replat was approved/recorded",
+      "Specific intended use of new vacant lot",
+      "Any building or site permit filings"
+    ],
+    "next_research": "Watch later P&Z, City Council and Citizenserve records for 9345 HWY6 / R70391.",
+    "disposition": "watchlist"
+  },
+  {
+    "id": "grimes-navasota-dashboard-20260920-hidden-hills-phase3",
+    "county": "Grimes",
+    "project_name": "Hidden Hills Subdivision Phase 3 pre-construction",
+    "address": "Hidden Hills subdivision area; dashboard point 30.4008246, -96.09510408 in Navasota",
+    "city": "Navasota",
+    "record_type": "planning",
+    "source_record_id": "Navasota Project Dashboard row: Hidden Hills Subdivision Phase 3",
+    "record_date": null,
+    "retrieved_at": "2026-09-21T02:24:00Z",
+    "stage": "preconstruction_reported",
+    "status_basis": "City dashboard says Phase 3, the last phase, is awaiting a pre-construction meeting to begin work.",
+    "scope": "Residential subdivision Phase 3 horizontal construction/pre-construction signal.",
+    "masiate_fit": "Subdivision phase could involve concrete/flatwork, fencing, site utilities, framing and later homebuilder trades; current source confirms only pre-construction status.",
+    "estimated_value": null,
+    "estimated_start": null,
+    "estimated_completion": "6/12/2027",
+    "bid_deadline": null,
+    "participants": [],
+    "business_contacts": [],
+    "sources": [
+      {
+        "url": "https://navasota.maps.arcgis.com/apps/dashboards/17b7b6efb2794a54b6a2f4ce3473cb12",
+        "title": "City of Navasota Project Dashboard",
+        "date": null,
+        "page": "Navasota Project Dashboard row: Hidden Hills Subdivision Phase 3",
+        "evidence": "Dashboard row states Hidden Hills Subdivision Phase 3 is awaiting a pre-construction meeting to begin work and gives coordinates.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/grimes/evidence/navasota_project_layer_query.json"
+      }
+    ],
+    "unknowns": [
+      "Developer/owner and contractor not identified in dashboard row",
+      "Street addresses/lot count not exposed in dashboard",
+      "Whether pre-construction meeting has occurred"
+    ],
+    "next_research": "Check Navasota P&Z/council plats and CAD near dashboard coordinates for Hidden Hills Phase 3 owner/developer; then follow permit releases.",
+    "disposition": "candidate"
+  },
+  {
+    "id": "grimes-navasota-dashboard-20260920-8th-street-townhomes",
+    "county": "Grimes",
+    "project_name": "8th Street Townhomes preliminary plat and construction drawings",
+    "address": "8th Street area; dashboard point 30.386408, -96.093311 in Navasota",
+    "city": "Navasota",
+    "record_type": "planning",
+    "source_record_id": "Navasota Project Dashboard row: 8th Street Townhomes",
+    "record_date": null,
+    "retrieved_at": "2026-09-21T02:24:00Z",
+    "stage": "planned",
+    "status_basis": "City dashboard says setback variance was approved by ZBOA and preliminary plat/construction drawings are under review, awaiting developer resubmittals.",
+    "scope": "Townhome development entitlement/design review on 8th Street.",
+    "masiate_fit": "Potential townhome construction aligns with framing, concrete, roofing, electrical, plumbing, painting and finish trades, but timing is early and dependent on resubmittals.",
+    "estimated_value": null,
+    "estimated_start": null,
+    "estimated_completion": null,
+    "bid_deadline": null,
+    "participants": [],
+    "business_contacts": [],
+    "sources": [
+      {
+        "url": "https://navasota.maps.arcgis.com/apps/dashboards/17b7b6efb2794a54b6a2f4ce3473cb12",
+        "title": "City of Navasota Project Dashboard",
+        "date": null,
+        "page": "Navasota Project Dashboard row: 8th Street Townhomes",
+        "evidence": "Dashboard row states variance approved and preliminary plat/construction drawings under review for 8th Street Townhomes.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/grimes/evidence/navasota_project_layer_query.json"
+      }
+    ],
+    "unknowns": [
+      "Developer name not exposed in dashboard row",
+      "Unit count, address range and construction schedule not exposed",
+      "No permit number found"
+    ],
+    "next_research": "Search Navasota ZBOA/P&Z records for 8th Street Townhomes variance/plat attachments and identify owner/developer before outreach.",
+    "disposition": "candidate"
+  },
+  {
+    "id": "grimes-navasota-dashboard-20260920-minnie-street-cdbg",
+    "county": "Grimes",
+    "project_name": "Minnie Street water and sewer replacement CDBG project",
+    "address": "Minnie Street, Navasota, TX 77868; dashboard point 30.383, -96.093",
+    "city": "Navasota",
+    "record_type": "planning",
+    "source_record_id": "Navasota Project Dashboard row: CDBG TDA Grant - Minnie Street - Water and Sewer Replacement",
+    "record_date": null,
+    "retrieved_at": "2026-09-21T02:24:00Z",
+    "stage": "construction_reported",
+    "status_basis": "City dashboard says TDA Contract No. CDV23-0305 has a $475,000 construction budget, contract awarded to Terra Bella Construction for $377,842.48, project began 2026-05-01 and mobilization was scheduled mid-June.",
+    "scope": "Water and sewer replacement project on Minnie Street.",
+    "masiate_fit": "Public utility work is a contractor/subcontractor opportunity more than a private property lead; possible fit for concrete, pavement restoration, utility subs, traffic control and site restoration.",
+    "estimated_value": "$475,000 construction budget; $377,842.48 awarded contract",
+    "estimated_start": "2026-05-01",
+    "estimated_completion": null,
+    "bid_deadline": null,
+    "participants": [
+      {
+        "name": "Terra Bella Construction",
+        "role": "awarded contractor",
+        "source_url": "https://navasota.maps.arcgis.com/apps/dashboards/17b7b6efb2794a54b6a2f4ce3473cb12"
+      }
+    ],
+    "business_contacts": [
+      {
+        "name": "Terra Bella Construction",
+        "role": "awarded contractor named by city dashboard",
+        "phone": null,
+        "email": null,
+        "website": null,
+        "source_url": "https://navasota.maps.arcgis.com/apps/dashboards/17b7b6efb2794a54b6a2f4ce3473cb12"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://navasota.maps.arcgis.com/apps/dashboards/17b7b6efb2794a54b6a2f4ce3473cb12",
+        "title": "City of Navasota Project Dashboard",
+        "date": null,
+        "page": "Navasota Project Dashboard row: CDBG TDA Grant - Minnie Street - Water and Sewer Replacement",
+        "evidence": "Dashboard row names Minnie Street, budget, award amount, Terra Bella Construction, start date and scheduled mobilization.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/grimes/evidence/navasota_project_layer_query.json"
+      }
+    ],
+    "unknowns": [
+      "Whether remaining subcontractor scopes are open",
+      "Exact construction limits on Minnie Street",
+      "Current percent complete"
+    ],
+    "next_research": "Check council award item/pay apps or contact public works procurement records for Terra Bella scope and schedule before treating as active opportunity.",
+    "disposition": "candidate"
+  },
+  {
+    "id": "grimes-navasota-dashboard-20260920-fosters-levy-louise-mitmod",
+    "county": "Grimes",
+    "project_name": "Foster, Levy and Louise water/sewer replacement Mit-Mod project",
+    "address": "Foster Street, Levy Street and Louise Street, Navasota, TX 77868; dashboard point 30.382, -96.091",
+    "city": "Navasota",
+    "record_type": "planning",
+    "source_record_id": "Navasota Project Dashboard row: Mit Mod Grant - Fosters, Levy, Luise - Water and Sewer Replacement",
+    "record_date": null,
+    "retrieved_at": "2026-09-21T02:24:00Z",
+    "stage": "construction_reported",
+    "status_basis": "City dashboard says GLO Contract No. 24-065-107-E839 has a $917,400 construction budget, JTM Construction was awarded $917,385, the project started 2026-04-13, and contractors are replacing the sewer main on Foster Street.",
+    "scope": "Water/sewer replacement on Foster, Levy and Louise streets.",
+    "masiate_fit": "Public infrastructure lead; possible fit for utility subs, concrete, pavement restoration, traffic control, fencing/safety and related site work, not a private property owner lead.",
+    "estimated_value": "$917,400 construction budget; $917,385.00 awarded contract",
+    "estimated_start": "2026-04-13",
+    "estimated_completion": "2026-12-31 GLO grant contract end date",
+    "bid_deadline": null,
+    "participants": [
+      {
+        "name": "JTM Construction",
+        "role": "awarded contractor",
+        "source_url": "https://navasota.maps.arcgis.com/apps/dashboards/17b7b6efb2794a54b6a2f4ce3473cb12"
+      }
+    ],
+    "business_contacts": [
+      {
+        "name": "JTM Construction",
+        "role": "awarded contractor named by city dashboard",
+        "phone": null,
+        "email": null,
+        "website": null,
+        "source_url": "https://navasota.maps.arcgis.com/apps/dashboards/17b7b6efb2794a54b6a2f4ce3473cb12"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://navasota.maps.arcgis.com/apps/dashboards/17b7b6efb2794a54b6a2f4ce3473cb12",
+        "title": "City of Navasota Project Dashboard",
+        "date": null,
+        "page": "Navasota Project Dashboard row: Mit Mod Grant - Fosters, Levy, Luise - Water and Sewer Replacement",
+        "evidence": "Dashboard row names Foster/Levy/Louise streets, budget, award amount, JTM Construction, start date and active sewer main replacement on Foster Street.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/grimes/evidence/navasota_project_layer_query.json"
+      }
+    ],
+    "unknowns": [
+      "Exact status and remaining scopes by street",
+      "Whether JTM self-performs or uses subcontractors",
+      "Pay application/current schedule"
+    ],
+    "next_research": "Check council award/pay records and public works updates for remaining street restoration or subcontract scopes.",
+    "disposition": "candidate"
+  }
+]
