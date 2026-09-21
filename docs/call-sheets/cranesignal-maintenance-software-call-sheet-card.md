@@ -2,23 +2,24 @@
 
 ## ✅ What Changed
 
-- Removed the **call notes template** from the PDF.
-- Removed vague **find named sales/BD** wording.
-- Rebuilt the sheet around one thing: **the best phone number to try for every company**.
-- Kept confidence labels so the worker knows which numbers are official and which are backup-quality.
+- Added **website links** for every company.
+- Kept the PDF as a **view-only call sheet**, not a notes worksheet.
+- Added the most useful caller context: **who to ask for**, **why they might care**, and **the first question to ask**.
+- Kept the best phone number and confidence label for each company.
 
-## ✅ How To Use The PDF
+## ✅ Most Useful Cold Caller Info
 
-- Start with **Tier A**.
-- Call the number in **Best phone to try**.
+- **Website:** lets the caller quickly understand what the company sells before dialing.
+- **Ask for:** tells the caller whether to request sales, partnerships, business development, revenue leadership, or a product-specific team.
+- **Why they might care:** gives the caller a one-sentence reason CraneSignal is relevant to that company.
+- **First question:** makes the call feel specific instead of generic.
+- **Confidence:** tells the caller whether the number is official, support/general, or backup-quality.
+
+## ✅ Call Opener
+
+- **Say:** “Hi, this is Drew with CraneSignal. We are mapping Texas apartment communities showing public maintenance pain signals. I pulled a few accounts your sales team may want. Who is the best person to send that to?”
 - If support answers, ask for **sales, partnerships, business development, or revenue leadership**.
-- Use the opener exactly: **“We are mapping Texas apartment communities showing public maintenance pain signals. I pulled a few accounts your sales team may want. Who is the best person to send that to?”**
-
-## ✅ Number Confidence
-
-- **High:** official site, help center, contact page, terms page, or company-owned page.
-- **Medium:** public app listing or general support line.
-- **Low:** third-party public company listing; use only as a backup and verify before repeat dialing.
+- Do **not** say every apartment needs software.
 
 ## ✅ First Calls
 
