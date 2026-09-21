@@ -67,6 +67,9 @@ The following pages were inspected on 2026-09-20. **A source page being found do
 
 ### Tools selected for the plan
 
+- **Confirmed tool policy:** use CraneSignal's existing services, including
+  already-paid Jina/other access, plus suitable open-source tools; no new purchases
+  or unapproved overages. [Verified tool inventory and remaining checks](masiate-tool-research.md).
 - Start with official CSV, JSON, ZIP or spreadsheet downloads and direct requests using the existing Python HTTP approach. This is easier to count, resume and verify than clicking every page. [Python HTTP documentation](https://docs.python.org/3/library/urllib.request.html).
 - Use the existing HTML collectors for ordinary pages. Use [Playwright](https://playwright.dev/python/docs/network) when a public document list or search form needs a browser; inspect its normal network requests before deciding whether direct downloads are possible.
 - Use `pdftotext` for ordinary PDF text and [pdfplumber](https://github.com/jsvine/pdfplumber) for tables, keeping page numbers. Scanned documents need a separate OCR check; save uncertain readings for review.

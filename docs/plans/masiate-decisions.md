@@ -36,6 +36,10 @@ and per-lead saved-note decisions below.
   to them even though the section is public.
 - Property count is flexible: select by quality and available evidence, with no
   fixed quota or padding. This is not authorization for unlimited research cost.
+- Use existing CraneSignal services, including already-paid access, plus useful
+  open-source tools. No new subscriptions, paid datasets, credit purchases or
+  unapproved overages. Verify allowances before collection; a configured key is
+  not proof of a paid balance. See [tool research](masiate-tool-research.md).
 - Geographic scope: wider Brazos Valley, covering Brazos, Robertson, Burleson,
   Grimes, Leon, Madison and Washington counties. Source coverage must be checked
   separately for each jurisdiction; this is a collection boundary, not proof of
@@ -330,7 +334,7 @@ to the owner; message drafting and call briefs are outside this feature's scope.
 No sending messages, contacting prospects or inventing company qualifications,
 relationships, price quotes or confirmed work availability.
 
-## Current Question
+## Collection Tools And Spending
 
 Q13: What spending rule should apply to collecting information for the first PDF?
 
@@ -343,9 +347,29 @@ Q13: What spending rule should apply to collecting information for the first PDF
 - D. Compare free and paid coverage first, then decide whether paid access is
   worthwhile; no purchase while preparing that comparison.
 
-Answer: pending. This concerns additional record-access/search costs for initial
-collection, not an assumption that AI processing, hosting or live agent research
-is free. No paid work or unbounded usage is authorized by this question.
+Answer: **Existing services plus open source**, clarified by Drew on 2026-09-20.
+Use what CraneSignal already has, including Jina AI and already-paid tools;
+research useful open-source additions. Do not buy new services or credits.
+This is broader than free sources alone, closest to C, but no exact letter was
+chosen. It does not authorize implementation or a live collection run yet.
+Verify remaining allowances and billing behavior before using paid endpoints;
+stop or use a no-new-charge alternative if an extra charge would be required.
+No unlimited token budget or provider billing cap is assumed.
+
+## Current Question
+
+Q14: Besides downloading the PDF, what should visitors see in Masiate's section?
+
+- A. A short ranked property list and an Ask Agent action; recommended useful
+  preview while keeping the detailed PDF the main deliverable.
+- B. The PDF and agent only; smallest section, with property browsing in the PDF.
+- C. Full searchable property profiles on the website too; more convenient
+  browsing, with a larger interface to build and test.
+- D. A map with property summaries, PDF and agent; geographic browsing, requiring
+  verified locations and a map source with no new charges.
+
+Answer: pending. All choices retain the fixed detailed PDF, research-only agent,
+regular public section, and user-scoped saved chats already selected.
 
 ## Product Questions To Explore Next
 
