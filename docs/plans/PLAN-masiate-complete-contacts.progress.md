@@ -48,3 +48,6 @@
 - Remaining: MC2-MC5 must populate their assigned research batches, then MC6 must run the final 49-row gate and produce the new PDF.
 
 - Reviewer still had concerns about MC1: Establish the all-row contact ledger and offline checks (15-25 minutes; foundation).: Reject generic “no phone found” variants (not only exact short phrases), and include/require checking actor-attached public source URLs for property IDs `burleson-somerville-ord-26-011-avenue-p-multifamily` and `grimes-navasota-dashboard-20260920-autozone`.
+
+## MC2: Finish contact research for original rows 1-13 (20-30 minutes; depends on MC1; independent of MC3-MC5). (built alongside other steps)
+- — the step is finished and committed
