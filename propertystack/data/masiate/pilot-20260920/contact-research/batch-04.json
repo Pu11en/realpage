@@ -1,0 +1,717 @@
+{
+  "batch_id": "batch-04",
+  "properties": [
+    {
+      "property_id": "statewide-tdlr-tabs-TABS2026025695",
+      "rank": 40,
+      "research_status": "researched",
+      "sources_checked": [
+        {
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026025695",
+          "disposition": "contact_found",
+          "outcome": "The exact TDLR project record identifies MDS Maintenance, LLC as owner/developer, publishes its Austin address and 832-515-6017, and assigns no tenant or design firm.",
+          "checked_on": "2026-09-20"
+        }
+      ],
+      "actors_checked": [
+        {
+          "name": "MDS Maintenance, LLC",
+          "role": "owner/developer",
+          "outcome": "The exact public project filing supplies a business/project number. Targeted exact-name and exact-number lookups found only republished filing data, not an independent official company site, so the TDLR route is retained without claiming it is a direct construction manager."
+        },
+        {
+          "name": "Marie Gardner",
+          "role": "person filing TDLR form",
+          "outcome": "TDLR names the filer but does not publish a separate contact route for her."
+        }
+      ],
+      "contacts": [
+        {
+          "route_id": "owner-project-line",
+          "contact_name": "MDS Maintenance, LLC",
+          "role": "owner/developer business route",
+          "phone": "832-515-6017",
+          "email": null,
+          "website": null,
+          "public_business_basis": "Phone published by the state on the exact office/warehouse project filing",
+          "match_evidence": "TDLR ties the company name, phone, and owner role directly to the 1700 N La Salle project; no conflicting same-name entity was used.",
+          "source_type": "government_record",
+          "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026025695",
+          "checked_on": "2026-09-20",
+          "match_status": "confirmed",
+          "source_strength": "strong",
+          "contact_note": "Owner/developer route from the exact filing; no named builder or construction manager was found and the number was not test-called."
+        }
+      ],
+      "selected_route_id": "owner-project-line",
+      "alternative_route_ids": [],
+      "researched_gap": null
+    },
+    {
+      "property_id": "statewide-tdlr-tabs-TABS2026024787",
+      "rank": 41,
+      "research_status": "researched",
+      "sources_checked": [
+        {
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026024787",
+          "disposition": "contact_found",
+          "outcome": "The exact filing names Somerville ISD owner contact Eric Holton at 979-596-2153 and SZS Architecture at 979-779-5757.",
+          "checked_on": "2026-09-20"
+        },
+        {
+          "url": "https://www.somervilleisd.org/",
+          "disposition": "contact_found",
+          "outcome": "The district's official site matches the filing address and publishes the administration line 979-596-2153.",
+          "checked_on": "2026-09-20"
+        },
+        {
+          "url": "https://www.somervilleisd.org/o/somerville-isd/staff",
+          "disposition": "contact_found",
+          "outcome": "The official staff page identifies Eric Holton as superintendent at 979-596-2153 and lists maintenance staff for internal routing.",
+          "checked_on": "2026-09-20"
+        },
+        {
+          "url": "https://szsarchitecture.com/contact-us/",
+          "disposition": "contact_found",
+          "outcome": "SZS's official contact page matches the filing's 1711 Cavitt Avenue office and 979-779-5757 and publishes info@szsarchitecture.com.",
+          "checked_on": "2026-09-20"
+        }
+      ],
+      "actors_checked": [
+        {
+          "name": "Somerville ISD",
+          "role": "owner/developer school district",
+          "outcome": "TDLR and the district's official pages agree on the owner identity, address, superintendent contact, and public administration number."
+        },
+        {
+          "name": "SZS Architecture",
+          "role": "design firm on TDLR record",
+          "outcome": "The official firm page exactly matches the design-office address and number on the project filing; it is a design fallback, not a builder."
+        }
+      ],
+      "contacts": [
+        {
+          "route_id": "owner-district-office",
+          "contact_name": "Somerville ISD / Eric Holton",
+          "role": "owner/developer district office; TDLR contact is the superintendent",
+          "phone": "979-596-2153",
+          "email": null,
+          "website": "https://www.somervilleisd.org/",
+          "public_business_basis": "Official school-district administration line",
+          "match_evidence": "The district's official address and phone match the exact TDLR project owner details, and the official staff page confirms Eric Holton's role.",
+          "source_type": "institution",
+          "source_url": "https://www.somervilleisd.org/o/somerville-isd/staff",
+          "checked_on": "2026-09-20",
+          "match_status": "confirmed",
+          "source_strength": "strong",
+          "contact_note": "Ask for Eric Holton or the facilities/maintenance administrator handling Phase 2; this is not a named project-manager line."
+        },
+        {
+          "route_id": "designer-office",
+          "contact_name": "SZS Architecture",
+          "role": "design firm on TDLR record",
+          "phone": "979-779-5757",
+          "email": "info@szsarchitecture.com",
+          "website": "https://szsarchitecture.com/",
+          "public_business_basis": "Official architecture-firm contact page",
+          "match_evidence": "The official office address and phone exactly match the firm named on the Somerville project filing.",
+          "source_type": "official_company",
+          "source_url": "https://szsarchitecture.com/contact-us/",
+          "checked_on": "2026-09-20",
+          "match_status": "confirmed",
+          "source_strength": "strong",
+          "contact_note": "Design-team fallback only; SZS is not identified as the builder or buyer."
+        }
+      ],
+      "selected_route_id": "owner-district-office",
+      "alternative_route_ids": [
+        "designer-office"
+      ],
+      "researched_gap": null
+    },
+    {
+      "property_id": "statewide-tdlr-tabs-TABS2026023660",
+      "rank": 42,
+      "research_status": "researched",
+      "sources_checked": [
+        {
+          "url": "https://destinyhosted.com/agenda_publish.cfm?id=62827&mt=ALL&get_month=8&get_year=2026&dsp=ag&seq=244",
+          "disposition": "no_contact_fields",
+          "outcome": "The City agenda confirms Navasota Ventures submitted the preliminary site plan for the Sterling Auto expansion at 9030 Highway 6 but publishes no phone or email.",
+          "checked_on": "2026-09-20"
+        },
+        {
+          "url": "https://destinyhosted.com/agenda_publish.cfm?id=62827&mt=ALL&get_month=8&get_year=2026&dsp=agm&seq=1041&rev=0&ag=244&ln=2885",
+          "disposition": "no_contact_fields",
+          "outcome": "The City item memo identifies Navasota Ventures as owner and Lay Construction as project representative for parcel R10132 but exposes no contact field.",
+          "checked_on": "2026-09-20"
+        },
+        {
+          "url": "https://grimescad.org/ProxyT/Search/Properties/quick/?f=9030%20HWY6&pn=1&st=4&so=desc&pt=RP;PP;MH;NR&ty=2027",
+          "disposition": "no_contact_fields",
+          "outcome": "The official CAD result matches parcel R10132, Navasota Ventures LLC, and the 9030 HWY6 situs but has no public phone or email.",
+          "checked_on": "2026-09-20"
+        },
+        {
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026023660",
+          "disposition": "contact_found",
+          "outcome": "The exact TDLR filing names owner contact Christopher B. Elliott at 903-434-4911 and Lay Design/Build at 903-245-7153.",
+          "checked_on": "2026-09-20"
+        },
+        {
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025020592",
+          "disposition": "contact_found",
+          "outcome": "A second public TDLR filing independently matches Lay Construction, LLC's Lindale PO box and 903-245-7153, corroborating the company identity.",
+          "checked_on": "2026-09-20"
+        }
+      ],
+      "actors_checked": [
+        {
+          "name": "Lay Construction / Lay Design-Build",
+          "role": "project representative in City memo and design firm on TDLR record",
+          "outcome": "The City assigns Lay as project representative and TDLR publishes its project phone. A second TDLR record matches the same Lindale company details; Lay is not silently promoted to confirmed general contractor."
+        },
+        {
+          "name": "Navasota Ventures, LLC / Christopher B. Elliott",
+          "role": "owner/applicant; TDLR owner contact",
+          "outcome": "City agenda, memo, CAD, and TDLR align on the exact site and owner; TDLR provides the owner's public project route."
+        }
+      ],
+      "contacts": [
+        {
+          "route_id": "project-representative",
+          "contact_name": "Lay Construction / Lay Design-Build",
+          "role": "project representative and TDLR-listed design firm",
+          "phone": "903-245-7153",
+          "email": null,
+          "website": null,
+          "public_business_basis": "Project phone published on the exact state filing",
+          "match_evidence": "The City memo assigns Lay Construction to this site, the exact TDLR filing assigns Lay Design/Build, and a second filing matches the Lindale address and number.",
+          "source_type": "government_record",
+          "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026023660",
+          "checked_on": "2026-09-20",
+          "match_status": "confirmed",
+          "source_strength": "strong",
+          "contact_note": "Best construction-adjacent route found, but the public records call Lay the representative/design firm rather than the confirmed general contractor."
+        },
+        {
+          "route_id": "owner-project-line",
+          "contact_name": "Navasota Ventures, LLC / Christopher B. Elliott",
+          "role": "owner/applicant and TDLR owner contact",
+          "phone": "903-434-4911",
+          "email": null,
+          "website": null,
+          "public_business_basis": "Owner contact phone published by the state on the exact project filing",
+          "match_evidence": "The TDLR address and project match the City and CAD evidence for Navasota Ventures at 9030 Highway 6.",
+          "source_type": "government_record",
+          "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026023660",
+          "checked_on": "2026-09-20",
+          "match_status": "confirmed",
+          "source_strength": "strong",
+          "contact_note": "Owner/applicant fallback; not a consumer dealership line."
+        }
+      ],
+      "selected_route_id": "project-representative",
+      "alternative_route_ids": [
+        "owner-project-line"
+      ],
+      "researched_gap": null
+    },
+    {
+      "property_id": "statewide-tdlr-tabs-TABS2026021299",
+      "rank": 43,
+      "research_status": "researched",
+      "sources_checked": [
+        {
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026021299",
+          "disposition": "contact_found",
+          "outcome": "The exact project filing identifies TxDOT owner contact Lori Sons at 512-831-9623 and Jacobs as design firm at 817-222-8625.",
+          "checked_on": "2026-09-20"
+        },
+        {
+          "url": "https://www.txdot.gov/about/districts/bryan-district/bryan-district-contact.html",
+          "disposition": "contact_found",
+          "outcome": "TxDOT's official Bryan District page publishes the district engineer/main office line 979-778-2165 for the district named in the project's scope.",
+          "checked_on": "2026-09-20"
+        }
+      ],
+      "actors_checked": [
+        {
+          "name": "Texas Department of Transportation, Bryan District",
+          "role": "owner/developer public agency",
+          "outcome": "The project is explicitly for the Bryan District/Leon County area; the official district office is the most relevant institutional routing line, while TDLR names Lori Sons on the exact filing."
+        },
+        {
+          "name": "Jacobs",
+          "role": "design firm on TDLR record",
+          "outcome": "The exact filing supplies a Dallas/Fort Worth design-office number; it is retained only as a design-team fallback."
+        }
+      ],
+      "contacts": [
+        {
+          "route_id": "owner-district-office",
+          "contact_name": "TxDOT Bryan District",
+          "role": "owner/developer district office",
+          "phone": "979-778-2165",
+          "email": null,
+          "website": "https://www.txdot.gov/about/districts/bryan-district.html",
+          "public_business_basis": "Official TxDOT district contact page",
+          "match_evidence": "The TDLR scope says the facility serves the Bryan District/Leon County area, and the official TxDOT page publishes this district office route.",
+          "source_type": "institution",
+          "source_url": "https://www.txdot.gov/about/districts/bryan-district/bryan-district-contact.html",
+          "checked_on": "2026-09-20",
+          "match_status": "confirmed",
+          "source_strength": "strong",
+          "contact_note": "Institutional routing office, not a direct project manager; ask for the Centerville AE/MNT facilities or procurement contact."
+        },
+        {
+          "route_id": "designer-office",
+          "contact_name": "Jacobs",
+          "role": "design firm on TDLR record",
+          "phone": "817-222-8625",
+          "email": null,
+          "website": null,
+          "public_business_basis": "Design-office phone published on the exact state project filing",
+          "match_evidence": "TDLR directly assigns Jacobs to TABS2026021299 and supplies the office number.",
+          "source_type": "government_record",
+          "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026021299",
+          "checked_on": "2026-09-20",
+          "match_status": "confirmed",
+          "source_strength": "strong",
+          "contact_note": "Design-team fallback only; Jacobs is not identified as the builder or purchasing office."
+        }
+      ],
+      "selected_route_id": "owner-district-office",
+      "alternative_route_ids": [
+        "designer-office"
+      ],
+      "researched_gap": null
+    },
+    {
+      "property_id": "statewide-tdlr-tabs-TABS2026020312",
+      "rank": 44,
+      "research_status": "researched",
+      "sources_checked": [
+        {
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026020312",
+          "disposition": "contact_found",
+          "outcome": "The exact filing names owner contact Atilla Tuna at 832-715-2321 and Ted Trout Architect & Associates at 713-257-0224.",
+          "checked_on": "2026-09-20"
+        },
+        {
+          "url": "https://tedtroutarch.com/about/",
+          "disposition": "contact_found",
+          "outcome": "The design firm's official page matches the exact Katy Freeway suite on TDLR and publishes 713-266-7887 and info@tedtroutarch.com.",
+          "checked_on": "2026-09-20"
+        }
+      ],
+      "actors_checked": [
+        {
+          "name": "Burton Creek Ventures LLC & Rudder Frontage LLC / Atilla Tuna",
+          "role": "owner/developer group and TDLR owner contact",
+          "outcome": "The exact project filing supplies the owner contact and phone; no unrelated similarly named property company was substituted."
+        },
+        {
+          "name": "Ted Trout Architect & Associates, Ltd.",
+          "role": "design firm on TDLR record",
+          "outcome": "The firm's official site matches the filing suite and publishes its office number and email; retained as the professional-team fallback."
+        }
+      ],
+      "contacts": [
+        {
+          "route_id": "owner-project-line",
+          "contact_name": "Burton Creek Ventures LLC & Rudder Frontage LLC / Atilla Tuna",
+          "role": "owner/developer; TDLR owner contact",
+          "phone": "832-715-2321",
+          "email": null,
+          "website": null,
+          "public_business_basis": "Owner phone published on the exact state project filing",
+          "match_evidence": "TDLR ties the owner group, Atilla Tuna, and number directly to The Icon at Creekside filing.",
+          "source_type": "government_record",
+          "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026020312",
+          "checked_on": "2026-09-20",
+          "match_status": "confirmed",
+          "source_strength": "strong",
+          "contact_note": "Owner/developer project route; no general contractor was named in the checked public records."
+        },
+        {
+          "route_id": "designer-office",
+          "contact_name": "Ted Trout Architect & Associates, Ltd.",
+          "role": "design firm on TDLR record",
+          "phone": "713-266-7887",
+          "email": "info@tedtroutarch.com",
+          "website": "https://tedtroutarch.com/",
+          "public_business_basis": "Official architecture-firm office contact",
+          "match_evidence": "The official site and TDLR filing match on firm identity and the exact 11111 Katy Freeway Suite 625 address.",
+          "source_type": "official_company",
+          "source_url": "https://tedtroutarch.com/about/",
+          "checked_on": "2026-09-20",
+          "match_status": "confirmed",
+          "source_strength": "strong",
+          "contact_note": "Design-team fallback only; this office is not identified as the builder."
+        }
+      ],
+      "selected_route_id": "owner-project-line",
+      "alternative_route_ids": [
+        "designer-office"
+      ],
+      "researched_gap": null
+    },
+    {
+      "property_id": "statewide-tdlr-tabs-TABS2026018848",
+      "rank": 45,
+      "research_status": "researched",
+      "sources_checked": [
+        {
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026018848",
+          "disposition": "contact_found",
+          "outcome": "The exact filing names First Financial Bank facilities contact Gary Milliorn at 325-627-7151 and Parkhill at 325-673-8178.",
+          "checked_on": "2026-09-20"
+        },
+        {
+          "url": "https://ffin.com/gary-milliorn",
+          "disposition": "no_contact_fields",
+          "outcome": "The bank's official profile confirms Gary Milliorn is senior vice president/property manager responsible for new construction, renovations, and facilities, but does not publish his phone on the page.",
+          "checked_on": "2026-09-20"
+        },
+        {
+          "url": "https://ffin.com/locations",
+          "disposition": "contact_found",
+          "outcome": "The bank's official locations page confirms its Franklin operation and publishes the existing Franklin office at 979-364-6029; this consumer-facing branch route is less project-specific than the TDLR facilities contact.",
+          "checked_on": "2026-09-20"
+        },
+        {
+          "url": "https://parkhill.com/location/abilene-tx/",
+          "disposition": "contact_found",
+          "outcome": "Parkhill's official Abilene office page matches the filing and publishes 325-673-8178.",
+          "checked_on": "2026-09-20"
+        }
+      ],
+      "actors_checked": [
+        {
+          "name": "First Financial Bank / Gary Milliorn",
+          "role": "owner/developer; senior vice president and property manager",
+          "outcome": "TDLR names Milliorn on the exact filing and the bank's official profile confirms he handles new construction and bank facilities."
+        },
+        {
+          "name": "Parkhill",
+          "role": "design firm on TDLR record",
+          "outcome": "Official office details match the project filing; retained as a design fallback."
+        }
+      ],
+      "contacts": [
+        {
+          "route_id": "owner-facilities-contact",
+          "contact_name": "First Financial Bank / Gary Milliorn",
+          "role": "owner facilities contact; senior vice president/property manager",
+          "phone": "325-627-7151",
+          "email": null,
+          "website": "https://ffin.com/gary-milliorn",
+          "public_business_basis": "Facilities contact phone published on the exact state project filing",
+          "match_evidence": "TDLR names Gary Milliorn on the Franklin branch project and the bank's official profile states that he is responsible for new construction and facilities.",
+          "source_type": "government_record",
+          "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026018848",
+          "checked_on": "2026-09-20",
+          "match_status": "confirmed",
+          "source_strength": "strong",
+          "contact_note": "Project-relevant facilities route; the number was not test-called."
+        },
+        {
+          "route_id": "designer-office",
+          "contact_name": "Parkhill",
+          "role": "design firm on TDLR record",
+          "phone": "325-673-8178",
+          "email": null,
+          "website": "https://parkhill.com/location/abilene-tx/",
+          "public_business_basis": "Official Parkhill Abilene office line",
+          "match_evidence": "Parkhill's official page matches the Abilene office and number assigned to the project by TDLR.",
+          "source_type": "official_company",
+          "source_url": "https://parkhill.com/location/abilene-tx/",
+          "checked_on": "2026-09-20",
+          "match_status": "confirmed",
+          "source_strength": "strong",
+          "contact_note": "Design-team fallback only; Parkhill is not identified as the builder."
+        }
+      ],
+      "selected_route_id": "owner-facilities-contact",
+      "alternative_route_ids": [
+        "designer-office"
+      ],
+      "researched_gap": null
+    },
+    {
+      "property_id": "burleson-somerville-ord-26-011-avenue-p-multifamily",
+      "rank": 46,
+      "research_status": "researched",
+      "sources_checked": [
+        {
+          "url": "https://somervilletx.gov/Ordinance%2026-011%20for%20SUP%20Multifamily%20in%20RS1%20Zone.pdf?t=202604241102040",
+          "disposition": "no_contact_fields",
+          "outcome": "The ordinance authorizes multifamily use for Burleson CAD property 1043275 and requires site-plan review, permits, utilities, and inspections, but names no individual and publishes no phone or email.",
+          "checked_on": "2026-09-20"
+        },
+        {
+          "url": "https://esearch.burlesonappraisal.com/Property/View/1043275",
+          "disposition": "no_contact_fields",
+          "outcome": "The official CAD page matches the ordinance parcel and identifies Altura Capital LLC at a Caldwell mailing address but has no public business contact field.",
+          "checked_on": "2026-09-20"
+        },
+        {
+          "url": "https://somervilletx.gov/nav/ordinances.php",
+          "disposition": "no_contact_fields",
+          "outcome": "The official ordinances index was checked because it is attached to the approving-jurisdiction actor; it links the public ordinance record but does not identify an owner contact.",
+          "checked_on": "2026-09-20"
+        },
+        {
+          "url": "https://somervilletx.gov/",
+          "disposition": "contact_found",
+          "outcome": "The City of Somerville's official site publishes City Hall at 979-596-1122, the relevant routing office for the ordinance's later site-plan, permitting, utility, and inspection steps.",
+          "checked_on": "2026-09-20"
+        }
+      ],
+      "actors_checked": [
+        {
+          "name": "Altura Capital LLC",
+          "role": "CAD-listed owner/developer",
+          "outcome": "CAD confirms this exact owner and mailing address, but targeted official-contact and exact-name alternate searches produced multiple unrelated same-name entities and no safely matched public business number."
+        },
+        {
+          "name": "City of Somerville",
+          "role": "approving jurisdiction and permitting/inspection routing office",
+          "outcome": "The ordinance makes later City site-plan review, permitting, utilities, and inspections necessary; the official City Hall line is retained as a clearly labeled institutional fallback, not presented as the owner or builder."
+        }
+      ],
+      "contacts": [
+        {
+          "route_id": "city-permitting-route",
+          "contact_name": "City of Somerville City Hall",
+          "role": "approving-jurisdiction routing office for site plan, permits, utilities, and inspections",
+          "phone": "979-596-1122",
+          "email": null,
+          "website": "https://somervilletx.gov/",
+          "public_business_basis": "Official municipal main line",
+          "match_evidence": "The exact ordinance requires City review and permitting for this parcel, while the official City site publishes the City Hall number.",
+          "source_type": "institution",
+          "source_url": "https://somervilletx.gov/",
+          "checked_on": "2026-09-20",
+          "match_status": "confirmed",
+          "source_strength": "strong",
+          "contact_note": "Institutional fallback only. No suitable public Altura Capital or builder number was verified; ask which office holds the site-plan or permit contact."
+        }
+      ],
+      "selected_route_id": "city-permitting-route",
+      "alternative_route_ids": [],
+      "researched_gap": null
+    },
+    {
+      "property_id": "statewide-tdlr-tabs-TABS2026017297",
+      "rank": 47,
+      "research_status": "researched",
+      "sources_checked": [
+        {
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026017297",
+          "disposition": "contact_found",
+          "outcome": "The exact filing identifies Murphy Commercial Holdings owner contact Terrance Murphy at 979-820-7036 and assigns no tenant or design firm.",
+          "checked_on": "2026-09-20"
+        },
+        {
+          "url": "https://docs.bryantx.gov/planning_development/SDRC/2025%20SDRC/05-27-2025/05-27-2025.pdf",
+          "disposition": "no_contact_fields",
+          "outcome": "The City of Bryan SDRC agenda independently identifies Murphy Commercial Holdings/Terrance Murphy as owner-applicant for 3798 Tabor Road and J4 Engineering as agent but publishes no phone in the item.",
+          "checked_on": "2026-09-20"
+        }
+      ],
+      "actors_checked": [
+        {
+          "name": "Murphy Commercial Holdings LLC / Terrance Murphy",
+          "role": "owner/developer and owner contact",
+          "outcome": "TDLR and the City agenda agree on the exact owner, contact, and 3798 Tabor Road project; TDLR supplies the public project phone."
+        },
+        {
+          "name": "J4 Engineering",
+          "role": "agent identified in City SDRC agenda",
+          "outcome": "The City agenda names J4 as agent, but the exact owner's TDLR route is more direct and no separate agent route was needed."
+        }
+      ],
+      "contacts": [
+        {
+          "route_id": "owner-project-line",
+          "contact_name": "Murphy Commercial Holdings LLC / Terrance Murphy",
+          "role": "owner/developer contact",
+          "phone": "979-820-7036",
+          "email": null,
+          "website": null,
+          "public_business_basis": "Owner phone published on the exact state project filing",
+          "match_evidence": "TDLR ties Terrance Murphy and the number directly to 3798 Tabor Road, and the City agenda independently confirms the owner/contact identity at that address.",
+          "source_type": "government_record",
+          "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026017297",
+          "checked_on": "2026-09-20",
+          "match_status": "confirmed",
+          "source_strength": "strong",
+          "contact_note": "Owner/developer route; no named builder or designer was published in the exact filing."
+        }
+      ],
+      "selected_route_id": "owner-project-line",
+      "alternative_route_ids": [],
+      "researched_gap": null
+    },
+    {
+      "property_id": "statewide-tdlr-tabs-TABS2026014634",
+      "rank": 48,
+      "research_status": "researched",
+      "sources_checked": [
+        {
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026014634",
+          "disposition": "contact_found",
+          "outcome": "The exact filing identifies project-specific developer LLC contact Juliann Lewright at 417-708-5145 and Kinetic Design + Development at 417-530-4321.",
+          "checked_on": "2026-09-20"
+        },
+        {
+          "url": "https://kineticdd.com/contact-us",
+          "disposition": "contact_found",
+          "outcome": "Kinetic's official page matches the filing's Springfield address and 417-530-4321 and publishes info@kineticdd.com.",
+          "checked_on": "2026-09-20"
+        }
+      ],
+      "actors_checked": [
+        {
+          "name": "DGOGMADISONVILLETX10012025 LLC / Juliann Lewright",
+          "role": "owner/developer and TDLR owner contact",
+          "outcome": "The exact project filing supplies the project-specific LLC and phone. Targeted exact-name and exact-number searches found no independent official company page, so the government-record route is used without broader company claims."
+        },
+        {
+          "name": "Kinetic Design + Development",
+          "role": "design firm on TDLR record",
+          "outcome": "Official firm contact details match the exact design-office details on the Dollar General project filing."
+        }
+      ],
+      "contacts": [
+        {
+          "route_id": "developer-project-line",
+          "contact_name": "DGOGMADISONVILLETX10012025 LLC / Juliann Lewright",
+          "role": "owner/developer contact",
+          "phone": "417-708-5145",
+          "email": null,
+          "website": null,
+          "public_business_basis": "Developer contact phone published on the exact state project filing",
+          "match_evidence": "The unusually specific LLC name, named contact, phone, and Madisonville Dollar General project are linked in one TDLR record; no generic Dollar General customer line was substituted.",
+          "source_type": "government_record",
+          "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026014634",
+          "checked_on": "2026-09-20",
+          "match_status": "confirmed",
+          "source_strength": "strong",
+          "contact_note": "Project-specific developer route; no named general contractor was found."
+        },
+        {
+          "route_id": "designer-office",
+          "contact_name": "Kinetic Design + Development",
+          "role": "design firm on TDLR record",
+          "phone": "417-530-4321",
+          "email": "info@kineticdd.com",
+          "website": "https://kineticdd.com/",
+          "public_business_basis": "Official design-firm contact page",
+          "match_evidence": "Kinetic's official address and phone match the firm details on the exact project filing.",
+          "source_type": "official_company",
+          "source_url": "https://kineticdd.com/contact-us",
+          "checked_on": "2026-09-20",
+          "match_status": "confirmed",
+          "source_strength": "strong",
+          "contact_note": "Design-team fallback only; Kinetic is not identified as the builder."
+        }
+      ],
+      "selected_route_id": "developer-project-line",
+      "alternative_route_ids": [
+        "designer-office"
+      ],
+      "researched_gap": null
+    },
+    {
+      "property_id": "grimes-navasota-dashboard-20260920-autozone",
+      "rank": 49,
+      "research_status": "researched",
+      "sources_checked": [
+        {
+          "url": "https://navasota.maps.arcgis.com/apps/dashboards/17b7b6efb2794a54b6a2f4ce3473cb12",
+          "disposition": "no_contact_fields",
+          "outcome": "The official City ArcGIS dashboard shell provides the project view but no phone, email, or named development contact.",
+          "checked_on": "2026-09-20"
+        },
+        {
+          "url": "https://services2.arcgis.com/A1oRcvECJ7UaClOw/arcgis/rest/services/Navasota_Project___Sheet1(in)/FeatureServer/0/query?where=1%3D1&outFields=*&returnGeometry=true&f=json",
+          "disposition": "no_contact_fields",
+          "outcome": "The actor-attached official feature service identifies AutoZone as a private project with approved plans, issued construction permit, and construction underway but contains no contact fields.",
+          "checked_on": "2026-09-20"
+        },
+        {
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026011198",
+          "disposition": "contact_found",
+          "outcome": "The exact filing identifies owner/developer contact William Kent Martin at 830-230-5333 and publishes AutoZone tenant and design-office routes.",
+          "checked_on": "2026-09-20"
+        },
+        {
+          "url": "https://about.autozone.com/about-autozone/real-estate/new-store",
+          "disposition": "contact_found",
+          "outcome": "AutoZone's official new-store development page confirms the company maintains a dedicated development program and links its role-specific support brochure.",
+          "checked_on": "2026-09-20"
+        },
+        {
+          "url": "https://about.autozone.com/static-files/15983da4-17c3-4588-a822-270c8bc1f555",
+          "disposition": "contact_found",
+          "outcome": "AutoZone's official new-store development brochure publishes Director of Construction Michael Petty at 901-495-7232 and michael.petty@autozone.com.",
+          "checked_on": "2026-09-20"
+        }
+      ],
+      "actors_checked": [
+        {
+          "name": "AutoZone / Michael Petty",
+          "role": "tenant and official director of construction",
+          "outcome": "The City feature service confirms active construction, TDLR names AutoZone as tenant/design firm, and AutoZone's official development brochure provides a construction-specific corporate route rather than a store/customer-service line."
+        },
+        {
+          "name": "Roy L Martin & Assoc. Partners, Ltd. / William Kent Martin",
+          "role": "owner/developer and TDLR owner contact",
+          "outcome": "The exact filing supplies the developer identity and phone. Targeted exact-name and exact-number lookups found no separate official company page, so this remains a government-record project route."
+        }
+      ],
+      "contacts": [
+        {
+          "route_id": "tenant-construction-office",
+          "contact_name": "AutoZone / Michael Petty",
+          "role": "tenant's director of construction",
+          "phone": "901-495-7232",
+          "email": "michael.petty@autozone.com",
+          "website": "https://about.autozone.com/about-autozone/real-estate/new-store",
+          "public_business_basis": "Official AutoZone new-store development brochure",
+          "match_evidence": "The official City record says AutoZone construction is underway, TDLR names AutoZone on the exact Navasota project, and the company brochure publishes a dedicated director-of-construction route.",
+          "source_type": "official_company",
+          "source_url": "https://about.autozone.com/static-files/15983da4-17c3-4588-a822-270c8bc1f555",
+          "checked_on": "2026-09-20",
+          "match_status": "confirmed",
+          "source_strength": "strong",
+          "contact_note": "Role-specific corporate construction route, not a retail store or customer-service number; the brochure does not name this individual as the Navasota project manager."
+        },
+        {
+          "route_id": "developer-project-line",
+          "contact_name": "Roy L Martin & Assoc. Partners, Ltd. / William Kent Martin",
+          "role": "owner/developer contact",
+          "phone": "830-230-5333",
+          "email": null,
+          "website": null,
+          "public_business_basis": "Owner/developer phone published on the exact state project filing",
+          "match_evidence": "TDLR directly links the developer, named contact, number, and 409 North La Salle AutoZone project.",
+          "source_type": "government_record",
+          "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026011198",
+          "checked_on": "2026-09-20",
+          "match_status": "confirmed",
+          "source_strength": "strong",
+          "contact_note": "Project-specific developer fallback; no separate official company page was found and the number was not test-called."
+        }
+      ],
+      "selected_route_id": "tenant-construction-office",
+      "alternative_route_ids": [
+        "developer-project-line"
+      ],
+      "researched_gap": null
+    }
+  ]
+}
