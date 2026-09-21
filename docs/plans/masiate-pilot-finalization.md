@@ -1,5 +1,34 @@
 # Masiate Pilot: Coordinator Finalization
 
+## Current Phase Overrides The Original Watcher
+
+On September 20 around 9:20 PM Central, Drew requested closing done sessions
+and keeping multiple workers on remaining work. All eight collection workers
+finished their turns, saved/committed outputs, and their Discord threads were
+archived (not deleted). The old statewide completion relay may arrive late:
+it means COLLECTION is done, not that the following review phase is done.
+
+Eight fresh isolated Codex workers are confirmed running: three county-group
+evidence reviewers, business-contact verification, duplicate matching, coverage
+audit, independent evidence QA, and PDF rendering. This remains the original
+first-pass deliverable, NOT a second collection pass or the deleted 50-task run.
+Read masiate-pilot-finish-launch.json for exact threads and directories and
+masiate-pilot-finish-workers.md for the data contracts.
+
+Read outputs under the existing run root's finish/<role>/ directories and the
+immutable review-input/ snapshot before assembly. The PDF worker sends the
+single next completion relay when all review tasks finish or 02:38 UTC arrives.
+Do NOT launch another review team on receipt of the older collection relay.
+Resolve independent remaining QA fixes in parallel when ready, up to eight
+active workers; do not create busywork to hold the count at eight during serial
+assembly. Archive each completed review thread after its turn is idle and
+outputs are committed; preserve raw data/worktrees/history. No new broad pass.
+
+Collection snapshot contains 267 SOURCE records before deduplication/selection.
+Some worker checkpoint timestamps were in the future at observation; evidence
+QA is explicitly checking this. Do not use those timestamps to claim measured
+elapsed effort or assume every source date is accurate.
+
 ## Current State
 
 Eight Codex workers were confirmed simultaneously running for the approved

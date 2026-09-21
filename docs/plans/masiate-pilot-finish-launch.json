@@ -1,0 +1,49 @@
+{
+  "run_id": "pilot-20260920-2048",
+  "phase": "first-pass review and PDF",
+  "report_thread_id": "1551377360756940940",
+  "root": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048",
+  "deadline": "2026-09-21T02:38:00Z",
+  "workers": [
+    {
+      "role": "review-brazos",
+      "thread_id": "1551417440452345938",
+      "working_dir": "/home/drewp/.local/state/ccdb/masiate-finish-20260920/review-brazos"
+    },
+    {
+      "role": "review-west",
+      "thread_id": "1551417450405298289",
+      "working_dir": "/home/drewp/.local/state/ccdb/masiate-finish-20260920/review-west"
+    },
+    {
+      "role": "review-east",
+      "thread_id": "1551417460698255421",
+      "working_dir": "/home/drewp/.local/state/ccdb/masiate-finish-20260920/review-east"
+    },
+    {
+      "role": "contacts",
+      "thread_id": "1551417470928027749",
+      "working_dir": "/home/drewp/.local/state/ccdb/masiate-finish-20260920/contacts"
+    },
+    {
+      "role": "dedup",
+      "thread_id": "1551417477664079934",
+      "working_dir": "/home/drewp/.local/state/ccdb/masiate-finish-20260920/dedup"
+    },
+    {
+      "role": "coverage",
+      "thread_id": "1551417485901832244",
+      "working_dir": "/home/drewp/.local/state/ccdb/masiate-finish-20260920/coverage"
+    },
+    {
+      "role": "evidence-qa",
+      "thread_id": "1551417496056234024",
+      "working_dir": "/home/drewp/.local/state/ccdb/masiate-finish-20260920/evidence-qa"
+    },
+    {
+      "role": "pdf-renderer",
+      "thread_id": "1551417502763065434",
+      "working_dir": "/home/drewp/.local/state/ccdb/masiate-finish-20260920/pdf-renderer"
+    }
+  ]
+}
