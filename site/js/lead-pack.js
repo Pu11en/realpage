@@ -11,7 +11,7 @@
   const WARM_SCORE = 40;
   const FOOTER = "Find who to call for any building at app.cranesignal.com";
   const APP_URL = "https://app.cranesignal.com";
-  const CONTACT_CTA = "Get who to call >";
+  const CONTACT_CTA = "Ask the free CraneSignal agent >";
   const DOWNLOAD_DATE_KEY_PREFIX = "cranesignal.leadPack.lastDownloaded";
 
   function priorityForLead(lead) {
@@ -218,7 +218,7 @@
     doc.setFont("helvetica", "normal");
     doc.setFontSize(9);
     doc.setTextColor(93, 101, 119);
-    doc.text(`${rows.length} leads · One row per building · Free source links · Click \"Get who to call\" in a row and the CraneSignal agent finds the manager and who to ask for.`, 30, 51);
+    doc.text(`${rows.length} leads · One row per building · Free source links · Click \"Ask the free CraneSignal agent\" in any row to find the manager and who to ask for.`, 30, 51);
 
     const drawFooter = (pageNumber) => {
       doc.setFont("helvetica", "normal");
