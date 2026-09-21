@@ -67,3 +67,12 @@
 - Checks: final coverage gate reports 49/49 unique rows researched, 47 confirmed/strong phone routes, two provisional/best-guess routes, and zero no-number gaps; full lead-finder suite passed 93 tests in 4.73 seconds.
 - Two tooling errors were resolved without changing scope: the planning helper needed `sh` because it was not executable, and a rejected temporary cleanup command was replaced by a non-destructive read.
 - Remaining: MC6 must merge the results into the new PDF, inspect it, rerun the final gate and tests, and attach the actual PDF.
+
+## MC6 Complete — All-Property Contact PDF Delivered
+
+- Combined all four validated research batches with the immutable 49-property snapshot and created the separately named 19-page all-property contact PDF.
+- Every row shows its selected public business phone, actual role, contact-evidence link, September 20, 2026 check date, and up to two useful alternatives; the two best-guess routes are visibly separated from the 47 confirmed/strong routes.
+- Added a merged 49-row contact/coverage summary with 47 distinct selected contact names, 46 distinct selected phone numbers, and derived role-category totals. No original property JSON or older PDF was changed.
+- Delivery commit: `6e1a325` (`Deliver all-row Masiate contact PDF`).
+- Checks: final coverage gate passed 49/49 unique researched IDs with zero gaps; `python3 -m pytest propertystack/skills/lead-finder/tests -q` passed all 93 tests; all 19 rendered page images were visually reviewed for readable alignment, unsplit rows, visible phones/roles, provisional labels and footers.
+- Nothing remains open in this plan. The actual new PDF was queued for attachment to the parent Discord thread; no push, outreach or deployment occurred.
