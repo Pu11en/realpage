@@ -22,6 +22,16 @@
 
 ## Remaining
 
-- All six plan tasks are unexecuted at this handoff.
-- After AI selection, verify actual worker/run receipts before reporting active execution or parallel capacity.
+- MC1 is complete; the four research batches and final PDF task remain.
+- The worker loop is active and completed MC1 sequentially; no parallel research execution is claimed.
 - Final task must deliver a new PDF with all 49 rows researched and honest per-row contact results; old PDF files remain unchanged.
+
+## MC1 Complete — All-Row Ledger Foundation
+
+- Created the immutable 49-property manifest with ranks, actors, 74 deduplicated source links, and fixed batch sizes of 13, 13, 13, and 10.
+- Reused all nine saved construction-company phone records as seeds: eight strong company/association sources and one provisional directory match.
+- Added the standard-library partial/final coverage validator, schema contract, and six offline regression tests. The final gate rejects missing or duplicate IDs, unchecked sources, missing provenance or roles, false strong classifications, and generic unsupported gaps.
+- Code commit: `1d296b2` (`Add Masiate contact coverage ledger foundation`).
+- Checks: `python3 -m pytest propertystack/skills/lead-finder/tests -q` passed 91 tests; partial validation reports 0/49 researched without claiming completion; `--require-complete` correctly exits with failure while 49 results are still missing.
+- One test-loader error occurred on the first focused run because the dynamically imported dataclass module was not registered; the test loader was corrected and all subsequent focused and full-suite checks passed.
+- Remaining: MC2-MC5 must populate their assigned research batches, then MC6 must run the final 49-row gate and produce the new PDF.
