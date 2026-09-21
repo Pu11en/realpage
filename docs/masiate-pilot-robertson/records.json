@@ -1,0 +1,357 @@
+[
+  {
+    "id": "robertson-hearne-el-construction-w-blackshear-2026-09-15",
+    "county": "Robertson",
+    "project_name": "EL Construction petition for AB 31 G A Nixon tract on West Blackshear Street",
+    "address": "W Blackshear St; AB 31 G A Nixon 1612/83 4 acres",
+    "city": "Hearne",
+    "record_type": "planning",
+    "source_record_id": "Hearne City Council agenda item 9 / Robertson CAD property 20833",
+    "record_date": "2026-09-15",
+    "retrieved_at": "2026-09-21T02:12:29Z",
+    "stage": "planned",
+    "status_basis": "Hearne posted a council action item for Emiliano Loya, owner of EL Construction LLC, for the AB 31 G A Nixon tract on West Blackshear Street. Minutes in the same packet say no action was taken on August 25; the September 15 item shows the petition returned to council but does not prove permit issuance or active construction.",
+    "scope": "Petition/planning matter tied to a 4-acre West Blackshear Street tract; exact construction scope not stated in the agenda.",
+    "masiate_fit": "Candidate by inference: a construction-company owner and a recently considered tract may need sitework, utility, concrete, framing, fencing, roofing or finish trades if the petition turns into development.",
+    "estimated_value": "$116,000 Robertson CAD 2026 appraised value for property 20833, not project cost",
+    "estimated_start": null,
+    "estimated_completion": null,
+    "bid_deadline": null,
+    "participants": [
+      {
+        "name": "Emiliano Loya",
+        "role": "applicant/owner named in Hearne agenda",
+        "source_url": "https://www.cityofhearne.org/AgendaCenter/ViewFile/Agenda/_09152026-251"
+      },
+      {
+        "name": "EL Construction, LLC",
+        "role": "property owner in Robertson CAD",
+        "source_url": "https://esearch.robertsoncad.com/Property/View?Id=20833&year=2026"
+      }
+    ],
+    "business_contacts": [
+      {
+        "name": "EL Construction, LLC",
+        "role": "property owner / applicant business",
+        "phone": null,
+        "email": null,
+        "website": null,
+        "source_url": "https://esearch.robertsoncad.com/Property/View?Id=20833&year=2026"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.cityofhearne.org/AgendaCenter/ViewFile/Agenda/_09152026-251",
+        "title": "City of Hearne Council Agenda - September 15, 2026",
+        "date": "2026-09-15",
+        "page": "pdftotext lines 101-107, 218-222",
+        "evidence": "Agenda item names Emiliano Loya, owner of EL Construction LLC, for AB 31 GA Nixon A612/83 4 acres - West Blackshear Street; minutes say no action was taken on August 25 and variance/fence items were tabled separately.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/robertson/evidence/hearne/agenda-09152026-251.pdf"
+      },
+      {
+        "url": "https://esearch.robertsoncad.com/Property/View?Id=20833&year=2026",
+        "title": "Robertson CAD Property 20833",
+        "date": "2026",
+        "page": "property detail",
+        "evidence": "CAD lists W BLACKSHEAR ST, AB 31 G A NIXON 1612/83 4 ACRES, owner EL CONSTRUCTION, LLC, appraised value $116,000.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/robertson/evidence/robertsoncad/property-20833-2026.html"
+      },
+      {
+        "url": "https://esearch.robertsoncad.com/Search/SearchResults?keywords=EL%20CONSTRUCTION",
+        "title": "Robertson CAD search results for EL CONSTRUCTION",
+        "date": "2026",
+        "page": "JSON result row propertyId 20833",
+        "evidence": "CAD search returned W BLACKSHEAR ST as EL Construction property 20833 and also showed other EL Construction Hearne holdings at 509 Milam and 1309 Dawson St.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/robertson/evidence/robertsoncad/search-EL_CONSTRUCTION.json"
+      }
+    ],
+    "unknowns": [
+      "Whether the petition was approved after September 15",
+      "Whether any building, utility or sitework permits have been issued",
+      "Whether trade packages are open or already assigned"
+    ],
+    "next_research": "Check later Hearne minutes or call agenda packet attachments for the September 15 action result; then match any permit or utility application to CAD property 20833.",
+    "disposition": "candidate"
+  },
+  {
+    "id": "robertson-hearne-iron-oak-lots-114-115-variance-2026-08-25",
+    "county": "Robertson",
+    "project_name": "Iron Oak Reserve lots 114 and 115 variance",
+    "address": "Lots 114 and 115 Iron Oak Reserve 1633/699 2.004 acres; parent CAD situs FM 485",
+    "city": "Hearne",
+    "record_type": "planning",
+    "source_record_id": "Hearne P&Z agenda item 4 / council minutes August 25 / Robertson CAD property 93096",
+    "record_date": "2026-08-25",
+    "retrieved_at": "2026-09-21T02:12:29Z",
+    "stage": "planned",
+    "status_basis": "Hearne P&Z agenda listed a variance request for Lots 114 and 115 Iron Oak Reserve. Council minutes in the September 15 packet say the variance request passed unanimously on August 25. CAD did not return exact lot 114/115 records but did return the parent unsold-lots Iron Oak Reserve tract on FM 485.",
+    "scope": "Approved variance for two Iron Oak Reserve lots totaling 2.004 acres; detailed building scope not stated.",
+    "masiate_fit": "Candidate by inference: approved residential subdivision lot variance may precede site prep, concrete, framing, roofing, plumbing, paint, fencing, flooring and exterior trades.",
+    "estimated_value": "$3,657,480 Robertson CAD 2026 appraised value for parent property 93096, not project cost",
+    "estimated_start": null,
+    "estimated_completion": null,
+    "bid_deadline": null,
+    "participants": [
+      {
+        "name": "Iron Oak Reserve, LLC",
+        "role": "parent tract owner in Robertson CAD",
+        "source_url": "https://esearch.robertsoncad.com/Property/View?Id=93096&year=2026"
+      }
+    ],
+    "business_contacts": [
+      {
+        "name": "Iron Oak Reserve, LLC",
+        "role": "property owner of unsold Iron Oak Reserve lots",
+        "phone": null,
+        "email": null,
+        "website": null,
+        "source_url": "https://esearch.robertsoncad.com/Property/View?Id=93096&year=2026"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.cityofhearne.org/AgendaCenter/ViewFile/Agenda/_08202026-243",
+        "title": "City of Hearne Planning and Zoning Meeting Agenda - August 20, 2026",
+        "date": "2026-08-20",
+        "page": "pdftotext lines 20-21",
+        "evidence": "P&Z agenda listed discussion/action on a variance request for Lots 114 and 115 Iron Oak Reserve 1633/699 2.004 acres.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/robertson/evidence/hearne/2026-08-20-pnz-agenda.pdf"
+      },
+      {
+        "url": "https://www.cityofhearne.org/AgendaCenter/ViewFile/Agenda/_09152026-251",
+        "title": "City of Hearne Council Agenda Packet - September 15, 2026",
+        "date": "2026-09-15",
+        "page": "pdftotext lines 223-225",
+        "evidence": "Minutes state council approved the variance request for Lots 114 and 115 Iron Oak Reserve 1633/699 2.004 acres unanimously on August 25.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/robertson/evidence/hearne/agenda-09152026-251.pdf"
+      },
+      {
+        "url": "https://esearch.robertsoncad.com/Property/View?Id=93096&year=2026",
+        "title": "Robertson CAD Property 93096",
+        "date": "2026",
+        "page": "property detail",
+        "evidence": "CAD lists FM 485, UNSOLD LOTS IRON OAK RESERVE 1582/556 121.916 ACRES, owner IRON OAK RESERVE, LLC, appraised value $3,657,480.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/robertson/evidence/robertsoncad/property-93096-2026.html"
+      },
+      {
+        "url": "https://esearch.robertsoncad.com/Search/SearchResults?keywords=Iron%20Oak",
+        "title": "Robertson CAD search results for Iron Oak",
+        "date": "2026",
+        "page": "JSON result row propertyId 93096",
+        "evidence": "Search returned parent unsold-lots property 93096 on FM 485 and did not identify exact lots 114 and 115 in the downloaded exact-lot searches.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/robertson/evidence/robertsoncad/search-Iron_Oak.json"
+      }
+    ],
+    "unknowns": [
+      "Exact street address for lots 114 and 115",
+      "Applicant name from the variance request",
+      "Whether variance approval led to building permits or contractor selection"
+    ],
+    "next_research": "Get the underlying variance application or plat sheet from Hearne and rerun CAD after the 2026 roll updates for lot-specific parcel IDs.",
+    "disposition": "candidate"
+  },
+  {
+    "id": "robertson-franklin-city-park-pickleball-lighting-2026-08-17",
+    "county": "Robertson",
+    "project_name": "Franklin City Park pickleball courts, dirt work and pavilion lighting",
+    "address": "City Park, street address not stated in agenda",
+    "city": "Franklin",
+    "record_type": "planning",
+    "source_record_id": "Franklin City Council agenda item 4",
+    "record_date": "2026-08-17",
+    "retrieved_at": "2026-09-21T02:12:29Z",
+    "stage": "planned",
+    "status_basis": "The official Franklin agenda page exposed an August 17, 2026 agenda PDF. The PDF was scanned, so the record was read from the preserved image; it shows council discussion/action on additional cost for 4B funding to install pickleball courts at City Park, including dirt work and pavilion-extension lighting. The available record does not show whether the council approved the cost or whether work has started.",
+    "scope": "Install pickleball courts at City Park, including necessary dirt work and lighting on the pavilion extension.",
+    "masiate_fit": "Watchlist by direct scope: concrete or court surfacing, dirt work, lighting/electrical, fencing and painting could fit if the project proceeds and local trade packages are still open.",
+    "estimated_value": null,
+    "estimated_start": null,
+    "estimated_completion": null,
+    "bid_deadline": null,
+    "participants": [
+      {
+        "name": "City of Franklin",
+        "role": "project owner / agenda authority",
+        "source_url": "https://www.cityoffranklintx.com/government/agendas/"
+      }
+    ],
+    "business_contacts": [],
+    "sources": [
+      {
+        "url": "https://www.cityoffranklintx.com/government/agendas/",
+        "title": "City of Franklin Agendas",
+        "date": "2026-09-20",
+        "page": "August 17 Agenda listing",
+        "evidence": "Official agenda page linked the August 17, 2026 agenda used for this record.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/robertson/evidence/franklin/government-agendas.html"
+      },
+      {
+        "url": "https://www.cityoffranklintx.com/wp-content/uploads/2026/08/August-17-2026-Agenda.pdf",
+        "title": "August 17, 2026 Franklin City Council Agenda",
+        "date": "2026-08-17",
+        "page": "agenda image item 4",
+        "evidence": "Agenda item 4 discusses approving additional cost for 4B funding to install pickleball courts at City Park, including necessary dirt work and lighting on the pavilion extension.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/robertson/evidence/franklin/August-17-2026-Agenda.pdf"
+      },
+      {
+        "url": "local:image-review",
+        "title": "Rendered image of scanned Franklin August 17 agenda",
+        "date": "2026-08-17",
+        "page": "single-page agenda image",
+        "evidence": "Local image rendering preserved the readable scanned agenda page because pdftotext returned no usable text.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/robertson/evidence/franklin/images/August-17-2026-Agenda.png"
+      }
+    ],
+    "unknowns": [
+      "Street address for City Park from official source",
+      "Approval/action result",
+      "Whether a contractor or bid process exists",
+      "Project value"
+    ],
+    "next_research": "Request or find the August 17 minutes and any 4B board packet; verify City Park address before coordinator publication.",
+    "disposition": "watchlist"
+  },
+  {
+    "id": "robertson-hearne-san-antonio-water-pumping-station-rehab-2026-09-03",
+    "county": "Robertson",
+    "project_name": "San Antonio Water Pumping Station Rehabilitation CDBG-MIT",
+    "address": "San Antonio Water Pumping Station, street address not stated in agenda",
+    "city": "Hearne",
+    "record_type": "bid",
+    "source_record_id": "CDBG-MIT Contract No. 24-065-074-E685",
+    "record_date": "2026-09-03",
+    "retrieved_at": "2026-09-21T02:12:29Z",
+    "stage": "construction_reported",
+    "status_basis": "Hearne's September 3 agenda and minutes show an award contingent on GLO extension approval and approval of additional local funds for the San Antonio Water Pumping Station Rehabilitation. The record shows a public infrastructure rehabilitation project but does not identify remaining subcontract opportunities.",
+    "scope": "San Antonio Water Pumping Station rehabilitation under CDBG-MIT Contract No. 24-065-074-E685; additional local funds authorized up to $120,000 for costs not covered by grant funding.",
+    "masiate_fit": "Watchlist by direct construction scope: public rehab may involve concrete, electrical/lighting, plumbing/utility work, painting/coatings, fencing or sitework, but procurement status likely limits near-term outreach.",
+    "estimated_value": "Additional local funds not to exceed $120,000; not total project cost",
+    "estimated_start": null,
+    "estimated_completion": null,
+    "bid_deadline": null,
+    "participants": [
+      {
+        "name": "City of Hearne",
+        "role": "project owner",
+        "source_url": "https://www.cityofhearne.org/AgendaCenter/ViewFile/Agenda/_09032026-250"
+      },
+      {
+        "name": "Texas General Land Office CDBG-MIT",
+        "role": "grant/extension approval referenced by source",
+        "source_url": "https://www.cityofhearne.org/AgendaCenter/ViewFile/Agenda/_09032026-250"
+      }
+    ],
+    "business_contacts": [],
+    "sources": [
+      {
+        "url": "https://www.cityofhearne.org/AgendaCenter/ViewFile/Agenda/_09032026-250",
+        "title": "City of Hearne Special City Council Meeting Agenda - September 3, 2026",
+        "date": "2026-09-03",
+        "page": "pdftotext lines 24-33",
+        "evidence": "Agenda lists award contingent on GLO extension and additional local funds for San Antonio Water Pumping Station Rehabilitation CDBG-MIT contract, amount not to exceed $120,000.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/robertson/evidence/hearne/agenda-09032026-250.pdf"
+      },
+      {
+        "url": "https://www.cityofhearne.org/AgendaCenter/ViewFile/Agenda/_09152026-251",
+        "title": "City of Hearne Council Agenda Packet - September 15, 2026",
+        "date": "2026-09-15",
+        "page": "pdftotext lines 267-279",
+        "evidence": "Minutes state council approved the award contingent on GLO extension and approved additional funds for the San Antonio Water Pumping Station Rehabilitation, not to exceed $120,000.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/robertson/evidence/hearne/agenda-09152026-251.pdf"
+      }
+    ],
+    "unknowns": [
+      "Prime contractor or awardee name",
+      "Street address for the pumping station",
+      "Whether any trade packages remain available",
+      "Total project cost"
+    ],
+    "next_research": "Find the award tabulation, contract agenda backup, or procurement notice for CDBG-MIT Contract No. 24-065-074-E685.",
+    "disposition": "watchlist"
+  },
+  {
+    "id": "robertson-hearne-208-fulton-fence-variance-2026-08-25",
+    "county": "Robertson",
+    "project_name": "208 Fulton fence variance",
+    "address": "208 Fulton St; 51/3 (39.8') of Lt 3 and all Lt 4 Blk 8 Hearne Fielder Addition",
+    "city": "Hearne",
+    "record_type": "planning",
+    "source_record_id": "Hearne council minutes August 25",
+    "record_date": "2026-08-25",
+    "retrieved_at": "2026-09-21T02:12:29Z",
+    "stage": "unknown",
+    "status_basis": "Hearne minutes say no action was taken and the variance was tabled until the fence is moved back 4 feet for sight clearance. This confirms a specific address and fence-related issue, but not an approved project or buyer.",
+    "scope": "Fence variance / fence relocation at corner of Fulton Street and West 6th Street.",
+    "masiate_fit": "Excluded or low-priority watchlist: fence work fits Masiate services, but the record is a small private-property issue, tabled, and no business contact was identified.",
+    "estimated_value": null,
+    "estimated_start": null,
+    "estimated_completion": null,
+    "bid_deadline": null,
+    "participants": [],
+    "business_contacts": [],
+    "sources": [
+      {
+        "url": "https://www.cityofhearne.org/AgendaCenter/ViewFile/Agenda/_09152026-251",
+        "title": "City of Hearne Council Agenda Packet - September 15, 2026",
+        "date": "2026-09-15",
+        "page": "pdftotext lines 182-184 and 218-222",
+        "evidence": "Minutes say no action was taken on the 208 Fulton variance and council asked that the fence be moved back 4 feet for clearance; later minutes tabled the variance until that happens.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/robertson/evidence/hearne/agenda-09152026-251.pdf"
+      }
+    ],
+    "unknowns": [
+      "Owner/applicant name",
+      "Whether the fence was moved",
+      "Whether any contractor is involved"
+    ],
+    "next_research": "Check later Hearne agendas for the item returning after fence relocation; do not export private homeowner contact details.",
+    "disposition": "excluded"
+  },
+  {
+    "id": "robertson-hearne-lt9x-lt9f-blk-g-variance-2026-08-26",
+    "county": "Robertson",
+    "project_name": "LT 9X and LT 9F Block G Hearne variance",
+    "address": "LT 9X BLK G (between 9E and 9F) Hearne 1630/66 0.115 acres; LT 9F BLK G Hearne 1365/422 0.115 acres",
+    "city": "Hearne",
+    "record_type": "planning",
+    "source_record_id": "Hearne P&Z agenda items 2-3 / council minutes August 26",
+    "record_date": "2026-08-26",
+    "retrieved_at": "2026-09-21T02:12:29Z",
+    "stage": "planned",
+    "status_basis": "Hearne P&Z agenda listed variance requests for LT 9X and LT 9F Block G, and council minutes say the variance request passed unanimously on August 26. Exact street address, applicant and scope are not in the available record.",
+    "scope": "Approved variance for two 0.115-acre Block G Hearne lots; detailed work scope not stated.",
+    "masiate_fit": "Watchlist by inference: approved lot variances can precede residential or small commercial improvements requiring sitework, concrete, framing, roofing, paint, plumbing, flooring or fencing, but this record is weaker without an address/applicant.",
+    "estimated_value": null,
+    "estimated_start": null,
+    "estimated_completion": null,
+    "bid_deadline": null,
+    "participants": [],
+    "business_contacts": [],
+    "sources": [
+      {
+        "url": "https://www.cityofhearne.org/AgendaCenter/ViewFile/Agenda/_08202026-243",
+        "title": "City of Hearne Planning and Zoning Meeting Agenda - August 20, 2026",
+        "date": "2026-08-20",
+        "page": "pdftotext lines 16-19",
+        "evidence": "P&Z agenda lists variance requests for LT 9X BLK G and LT 9F BLK G in Hearne.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/robertson/evidence/hearne/2026-08-20-pnz-agenda.pdf"
+      },
+      {
+        "url": "https://www.cityofhearne.org/AgendaCenter/ViewFile/Agenda/_09152026-251",
+        "title": "City of Hearne Council Agenda Packet - September 15, 2026",
+        "date": "2026-09-15",
+        "page": "pdftotext lines 252-255",
+        "evidence": "Minutes say the variance request for LT 9X BLK G and LT 9F BLK G passed unanimously on August 26.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/robertson/evidence/hearne/agenda-09152026-251.pdf"
+      }
+    ],
+    "unknowns": [
+      "Street address",
+      "Owner/applicant",
+      "Intended improvement",
+      "Permit status"
+    ],
+    "next_research": "Request the variance applications or staff backup from Hearne and use deed references 1630/66 and 1365/422 to match CAD parcels.",
+    "disposition": "watchlist"
+  }
+]
