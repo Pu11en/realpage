@@ -54,3 +54,6 @@
 
 ## MC3: Finish contact research for original rows 14-26 (20-30 minutes; depends on MC1; independent of MC2/MC4/MC5). (built alongside other steps)
 - — the step is finished and committed
+
+## MC4: Finish contact research for original rows 27-39 (20-30 minutes; depends on MC1; independent of MC2/MC3/MC5). (built alongside other steps)
+- — the step is finished and committed
