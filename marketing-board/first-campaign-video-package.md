@@ -9,39 +9,41 @@
 
 ## ✅ Core Hook
 
-**I sell to apartment companies, and I was spending half my day just finding properties to call. Then I found this free list with 1,590 Texas apartment properties.**
+**If I sold to apartment companies, I would not start with every building. I would start with the ones where something changed.**
 
 Why this hook works:
 
 - It says who the video is for.
-- It says the pain immediately.
-- It says what the product is.
+- It says the prospecting mistake immediately.
+- It makes CraneSignal useful before it makes CraneSignal promotional.
 - It uses the Texas proof without over-explaining.
-- It sounds like a useful find, not a fake testimonial.
+- It sounds like Drew explaining how he thinks, not a fake testimonial.
 
-## ✅ 35 Second Script
+## ✅ 45 Second Script
 
 ### Spoken Script
 
-I sell to apartment companies, and honestly, the worst part is not even the selling.
+If I sold software or services to apartment companies, I would not start with a giant list of buildings.
 
-It is building the list before I can sell.
+I would start with the buildings where something changed.
 
-I was spending way too much time just trying to find properties worth calling.
+A sale. A new owner. A permit. A project getting ready to lease.
 
-Then I found this free site called CraneSignal.
+That does not mean they are buying today.
 
-Right now it has 1,590 Texas apartment properties, representing 259,251 apartment units.
+It does mean the account is more worth researching than a random building.
 
-And it is not just a random list.
+That is the basic idea behind CraneSignal.
 
-It shows signals like recently sold properties, upcoming projects, planned projects, and properties currently leasing.
+Right now the free Texas list has 1,587 apartment properties, representing 259,251 units.
 
-For Texas, that is 799 sold, 581 upcoming, 187 planned, and 23 leasing.
+It breaks them down by signal: 799 sold, 577 upcoming, 187 planned, and 24 leasing.
 
-If you sell software or services to apartment owners, this is the kind of list I would start with.
+So instead of asking "who owns apartments in Texas," I would ask "which apartment accounts are in motion?"
 
-The site is free to browse.
+That is the list I would start with.
+
+CraneSignal is free to browse while I am building it.
 
 ### On Screen Text
 
@@ -49,24 +51,27 @@ Frame 1:
 Selling to apartments?
 
 Frame 2:
-Stop building lists from scratch
+Do not start with every building
 
 Frame 3:
-1,590 Texas apartment properties
+Start where something changed
 
 Frame 4:
-259,251 apartment units
+1,587 Texas apartment properties
 
 Frame 5:
-799 sold
-581 upcoming
-187 planned
-23 leasing
+259,251 apartment units
 
 Frame 6:
-Free to browse
+799 sold
+577 upcoming
+187 planned
+24 leasing
 
 Frame 7:
+Free to browse
+
+Frame 8:
 CraneSignal
 
 ## ✅ Shot List
@@ -74,69 +79,83 @@ CraneSignal
 ### Shot 1
 
 - Face to camera.
-- Say: **I sell to apartment companies, and honestly, the worst part is not even the selling.**
+- Say: **If I sold software or services to apartment companies, I would not start with a giant list of buildings.**
 - On screen: **Selling to apartments?**
 
 ### Shot 2
 
-- Screen recording of messy spreadsheet, tabs, or search results.
-- Say: **It is building the list before I can sell.**
-- On screen: **Stop building lists from scratch**
+- Screen recording of a broad apartment list, search results, or spreadsheet.
+- Say: **I would start with the buildings where something changed.**
+- On screen: **Do not start with every building**
 
 ### Shot 3
 
 - Screen recording of CraneSignal Texas list.
-- Say: **Then I found this free site called CraneSignal.**
-- On screen: **1,590 Texas apartment properties**
+- Say: **A sale. A new owner. A permit. A project getting ready to lease.**
+- On screen: **Start where something changed**
 
 ### Shot 4
 
 - Zoom into total units or stats.
-- Say: **Right now it has 1,590 Texas apartment properties, representing 259,251 apartment units.**
+- Say: **Right now the free Texas list has 1,587 apartment properties, representing 259,251 units.**
 - On screen: **259,251 apartment units**
 
 ### Shot 5
 
 - Show signal categories or use big text cards.
-- Say: **It shows signals like recently sold, upcoming, planned, and leasing.**
+- Say: **It breaks them down by signal: sold, upcoming, planned, and leasing.**
 - On screen:
   - **799 sold**
-  - **581 upcoming**
+  - **577 upcoming**
   - **187 planned**
-  - **23 leasing**
+  - **24 leasing**
 
 ### Shot 6
 
 - Face to camera or product screen.
-- Say: **If you sell software or services to apartment owners, this is the kind of list I would start with.**
+- Say: **Instead of asking who owns apartments in Texas, I would ask which apartment accounts are in motion. That is the list I would start with.**
 - On screen: **Free to browse**
+
+### Shot 7
+
+- End on CraneSignal screen or simple title card.
+- Say: **CraneSignal is free to browse while I am building it.**
+- On screen: **CraneSignal**
 
 ## ✅ Platform Text Context
 
 ### LinkedIn
 
-I sell to apartment companies, and the annoying part is not always the selling.
+If I sold software or services to apartment companies, I would not start with every building.
 
-It is building the list before you can sell.
+I would start with the buildings where something changed.
 
-This is why CraneSignal caught my eye: 1,590 Texas apartment properties, 259,251 apartment units, and buying signals like sold, upcoming, planned, and leasing.
+Sale. New owner. Permit. New project. Lease up.
 
-If you sell software or services to apartment owners, this is the kind of list I would start with.
+None of those prove someone is buying today.
+
+They tell you where the research should start.
+
+That is the idea behind CraneSignal: a free Texas list with 1,587 apartment properties, 259,251 units, and signals like sold, upcoming, planned, and leasing.
 
 ### X
 
 Selling to apartment companies?
 
-The list-building part is brutal.
+I would not start with every building.
+
+I would start where something changed:
+
+sold, upcoming, planned, leasing.
 
 CraneSignal has a free Texas list:
 
-1,590 apartment properties
+1,587 apartment properties
 259,251 units
 799 sold
-581 upcoming
+577 upcoming
 187 planned
-23 leasing
+24 leasing
 
 That is where I would start.
 
@@ -146,7 +165,7 @@ For people selling into apartment owners or property managers:
 
 Do you start with raw property lists, or do you filter first by trigger signals like recent sale, new owner, construction, planned projects, or leasing?
 
-I have been looking at a Texas list with 1,590 apartment properties and the trigger signals make it way easier to decide where to start.
+I have been looking at a Texas list with 1,587 apartment properties and the trigger signals make it way easier to decide where to start.
 
 Curious what signals people here trust most before reaching out.
 
@@ -158,7 +177,13 @@ Curious what signals people here trust most before reaching out.
 - Do **not** say the product magically tells who is buying.
 - Say it helps find better places to start research.
 - Keep it useful, not hypey.
+- Do **not** imply the signals prove buying intent.
+- Use the current Texas numbers from `site/data/areas/tx.json`: **1,587 properties, 259,251 units, 799 sold, 577 upcoming, 187 planned, 24 leasing.**
 
-## ⬜ Best Next Edit
+## ✅ Film This Version First
 
-Make the spoken script sound more like Drew talking into his phone.
+- Use vertical video.
+- Keep Drew on camera for the first and last shots.
+- Use product screen recording in the middle.
+- Do one take with the full script, then one looser take where Drew only follows the beats.
+- Pick the looser take unless it drops a number or overclaims what the signal means.
