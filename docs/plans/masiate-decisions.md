@@ -137,7 +137,7 @@ selected. Scheduled collection remains a separate open decision. This is a
 future capability, not authorization to spend on live research during planning.
 Outreach remains with the owner under Q1.
 
-## Current Question
+## Superseded Save Question
 
 Q6: When the agent discovers new information about a lead, how should it be saved?
 
@@ -151,9 +151,36 @@ Q6: When the agent discovers new information about a lead, how should it be save
 - D. Save a dated research appendix alongside the lead; include it in future
   PDFs while preserving the collector's original fields.
 
-Answer: pending. Public read access remains agreed; who may trigger research
-or save shared edits will be resolved separately. Already-downloaded PDFs are
-dated snapshots and cannot change retroactively.
+Answer: no option selected. Drew clarified that the complete PDF stays fixed;
+the agent helps find more information but does not write that research back to
+the PDF. Drew asked how difficult option A would be. The earlier choices that
+fed agent updates into future PDFs are superseded by this clarification.
+
+## Fixed Report And Separate Research
+
+- Confirmed: keep the original complete collection PDF unchanged by agent research.
+- New findings may be shown in chat; whether/how to retain them is still open.
+- Any later report edition from a new collection is a separate, unresolved
+  product decision, not an automatic consequence of asking the agent questions.
+- Saving a finding is feasible, but needs persistent storage, a save action,
+  retrieval on return visits and clear editing permissions. The current agent
+  data tools are read-only, so shared-record updates require additional work.
+- A separate saved note can preserve source/date without changing the original
+  collector record or PDF. No precise delivery estimate has been promised.
+
+## Current Question
+
+Q6 revised: With the PDF fixed, how should extra research be kept?
+
+- A. Save useful findings as notes attached to each lead; recommended reusable
+  research without overwriting the original record, with some additional build work.
+- B. Keep research in saved chat conversations; simpler, but findings are less organized.
+- C. Download a separate research note; portable, without in-app saved findings.
+- D. Save changes into the shared lead record itself; richer integration, with
+  more work for validation, edit permissions and history; PDF still unchanged.
+
+Answer: pending. The section remains public; research persistence and editing
+permissions have not been silently assumed.
 
 ## Product Questions To Explore Next
 
