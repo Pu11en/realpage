@@ -57,3 +57,13 @@
 
 ## MC4: Finish contact research for original rows 27-39 (20-30 minutes; depends on MC1; independent of MC2/MC3/MC5). (built alongside other steps)
 - — the step is finished and committed
+
+## MC5 Complete — Contact Research For Rows 40-49
+
+- Researched all ten assigned properties from MDS Maintenance through AutoZone Navasota and recorded every original and actor-attached source outcome.
+- Selected ten sourced public routes: owner/developer, district, facilities, project-representative, City permitting, or AutoZone construction contacts, each labeled by its actual role. The City of Somerville route is explicitly a permitting fallback because no safely matched public Altura Capital number was found.
+- Added official-page corroboration for Somerville ISD, SZS Architecture, TxDOT Bryan District, Ted Trout, First Financial Bank, Parkhill, Kinetic, City of Somerville, and AutoZone's construction team; generic consumer/customer-service lines were not used.
+- Research commit: `22ce12b` (`Research final Masiate contact batch`).
+- Checks: final coverage gate reports 49/49 unique rows researched, 47 confirmed/strong phone routes, two provisional/best-guess routes, and zero no-number gaps; full lead-finder suite passed 93 tests in 4.73 seconds.
+- Two tooling errors were resolved without changing scope: the planning helper needed `sh` because it was not executable, and a rejected temporary cleanup command was replaced by a non-destructive read.
+- Remaining: MC6 must merge the results into the new PDF, inspect it, rerun the final gate and tests, and attach the actual PDF.
