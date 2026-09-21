@@ -2,11 +2,18 @@
   "snapshot": "pilot-20260920",
   "source_sha256": "e7a363e5332c12488ad8f8e6c3eaebdba0679b1ab7d67b32829ea3e456360bcd",
   "sections": [
-    {"title": "1. Construction-company contacts to approach", "description": "Three initial prospects, now with clearly labeled business phone numbers. Ask about remaining trade work; none is confirmed to need help.", "ranks": [1, 32, 30]},
-    {"title": "2. More named contractors; phone lookup completed", "description": "Public numbers added for all six names; Valco is directory-only and its project match is unconfirmed. Atlas is sign/wall scope only, not the parking lot.", "ranks": [2, 6, 7, 29, 33, 4]},
-    {"title": "3. Engineering contacts, not confirmed buyers", "description": "Three projects have an engineering contact route. These firms may clarify project status; they are not established as the builder or buyer of Masiate's work.", "ranks": [36, 38, 39]},
-    {"title": "4. Projects to qualify; building contractor unresolved", "description": "Thirty-seven other profiles. A missing contractor name does not mean the job is available. Owner-listed permits and project representatives are labeled separately.", "ranks": [37, 14, 12, 9, 11, 16, 17, 18, 20, 15, 24, 10, 19, 3, 5, 31, 34, 40, 47, 45, 35, 22, 23, 42, 49, 48, 21, 25, 26, 27, 28, 41, 13, 44, 43, 8, 46]}
+    {"title": "Original rows 1-13", "description": "Brenham permits and statewide registrations from Citizens National Bank through Hub College Station Phase II. Every row shows the best researched phone route and its actual role.", "ranks": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]},
+    {"title": "Original rows 14-26", "description": "Tenant work, public/institutional projects and lodging from Glo Tanning through the Franklin ISD Field House. Designer and institutional fallbacks are labeled as such.", "ranks": [14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26]},
+    {"title": "Original rows 27-39", "description": "Schools, commercial work, apartments and planning records from Donald Steven Davis Gymnasium through Oxbow Business Park. Provisional and engineering routes remain visibly separate from confirmed builders.", "ranks": [27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39]},
+    {"title": "Original rows 40-49", "description": "The final ten profiles from MDS Maintenance through AutoZone Navasota. Owner, institution, representative and permitting-office routes are labeled by what they can actually answer.", "ranks": [40, 41, 42, 43, 44, 45, 46, 47, 48, 49]}
   ],
+  "contact_role_groups": {
+    "construction_contractor": {"label": "rows route to a permit-listed construction contractor", "ranks": [1, 2, 6, 7, 29, 30, 32, 33]},
+    "owner_tenant_institution": {"label": "rows route to an owner, developer, tenant or institution", "ranks": [3, 4, 5, 8, 11, 13, 18, 19, 20, 21, 22, 24, 25, 26, 27, 28, 31, 35, 36, 40, 41, 43, 44, 45, 47, 48, 49]},
+    "design_engineering_professional": {"label": "rows route to a designer, engineer or accessibility professional", "ranks": [9, 10, 12, 14, 15, 16, 17, 23, 34, 37, 38, 39]},
+    "project_representative": {"label": "row routes to a project representative/design firm", "ranks": [42]},
+    "public_routing_office": {"label": "row routes to an approving-jurisdiction office", "ranks": [46]}
+  },
   "briefs": {
     "1": ["New bank building plus nine parking spaces.", "Commercial finishes and concrete."],
     "2": ["Fire-damage remodel of the city's maintenance building.", "Repair, framing, paint and finishes."],
