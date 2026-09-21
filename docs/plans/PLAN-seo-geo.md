@@ -46,10 +46,8 @@ or start the dev site on another port. NiubiGEO 8787 is free.
 
 ## Decisions for Drew (ask before the task that needs them)
 
-1. **Google.** Verify `cranesignal.com` and `app.cranesignal.com` in Google Search Console (DNS TXT at the registrar,
-   Drew's account) and create one Google Cloud OAuth client (Search Console API on, redirect
-   `http://localhost:3100/api/auth/callback/google`). CrawlSEO has **no other login**; the crawler and vitals work
-   without GSC data, but the login still needs the OAuth client. Optional free PageSpeed API key for more vitals quota.
+1. **Google.** Who does the Google runbook below (G1-G5): the Porkbun login holds G1; the rest can be David on
+   the same Google account. Also: GA4 yes/no (G4).
 2. **OpenRouter key** for NiubiGEO (pay per call; a weekly run of ~20 questions x 4 models with web search is roughly
    $2-10). Or say which existing key to use instead.
 3. **Site changes.** OK to change `site/Caddyfile` (serve robots/sitemap/llms.txt, `/` served directly instead of a 302)
@@ -62,6 +60,38 @@ or start the dev site on another port. NiubiGEO 8787 is free.
    Rent Manager) and whether CraneSignal itself is in the set (it isn't a PMS; it can only be cited on "how do I find
    new apartment buildings / which software does a building run" questions -- see the two question sets in T5).
 6. **Weekly note.** Post the Monday answer-share totals to Discord like the Texas weekly run does, or keep it in the repo.
+
+## The Google setup (runbook: one sitting, ~45 min, one Google account)
+
+Use **one** Google account for all of it and write which one in `tooling/seo/INSTALL.md` (no passwords). DNS is at
+**Porkbun** (nameservers `*.ns.porkbun.com`); whoever holds the Porkbun login does G1. The site has no Google tag
+of any kind today.
+
+- **G1 Search Console -- a Domain property for `cranesignal.com`.** search.google.com/search-console -> Add property
+  -> *Domain* -> `cranesignal.com`. It gives one `google-site-verification=...` TXT. Porkbun -> DNS -> add TXT, host
+  blank, that value. Verify (can take up to an hour). A Domain property covers `app.cranesignal.com` and `www` too, so
+  it's the only property we need. Fallback if DNS is out of reach: a URL-prefix property for
+  `https://app.cranesignal.com/` verified with the HTML meta tag; T3 puts the tag in every page head.
+- **G2 Submit the sitemaps** (after T3 deploys): Sitemaps -> `https://app.cranesignal.com/sitemap.xml`, and the
+  landing's once it has one. Then URL Inspection -> "Request indexing" for `/index.html`, `/under-the-hood.html`
+  and each `/leads/<state>.html` (T4). Note the date in `docs/seo/2026-09-baseline.md`; GSC data starts here.
+- **G3 Google Cloud project `cranesignal-seo`.** console.cloud.google.com -> new project -> APIs & Services ->
+  enable **Google Search Console API** and **PageSpeed Insights API**. OAuth consent screen: External, app name
+  "CrawlSEO local", add the G1 account as a test user (stays in "Testing", nobody else can log in). Credentials ->
+  OAuth client ID -> Web application -> authorized redirect URI `http://localhost:3100/api/auth/callback/google`
+  (and `http://localhost:3000/...` in case the port is left at default). Copy client ID + secret into CrawlSEO's
+  `.env` (`GOOGLE_CLIENT_ID`, `GOOGLE_CLIENT_SECRET`). Credentials -> API key restricted to PageSpeed Insights ->
+  `GOOGLE_PAGESPEED_KEY`. Nothing here costs money; these two APIs are free.
+- **G4 Analytics (GA4) -- optional, Drew decides.** Only worth it to see if AI referrals arrive
+  (`chatgpt.com`, `perplexity.ai` show as referrers). If yes: analytics.google.com -> property -> web stream for
+  `app.cranesignal.com` -> `G-XXXXXXXX`; T3 adds the gtag snippet and the CSP in `site/Caddyfile` must allow
+  `https://www.googletagmanager.com` in `script-src` and `https://*.google-analytics.com` in `connect-src`; add a
+  line to `site/privacy.html`. If no, skip -- GSC impressions are enough for the weekly numbers.
+- **G5 Bing Webmaster Tools (5 min, same sitting).** bing.com/webmasters -> "Import from Google Search Console".
+  Free; Bing's index feeds ChatGPT search and Copilot, so it counts for the GEO side as much as Google does.
+- **Not doing:** Google Business Profile (no physical address to show), Google Ads, Merchant Center.
+
+Where each lands in the tasks: G1 + G3 before **T1**, G2 right after **T3** deploys, G4 inside **T3** if yes, G5 any time.
 
 ## Question sets (the loop tracks these every week)
 
@@ -103,8 +133,8 @@ Try: `bash tooling/seo/crawl.sh` then open http://localhost:3100
   with the WSL2 backend, then inside Ubuntu: `nvm` + Node 22, `pip3 install requests beautifulsoup4 lxml`. Clone the
   four repos under `~/seo-tools/` (outside this repo). Write `tooling/seo/INSTALL.md` with the exact commands run,
   versions seen, and the port map (3100 / 8765 / 8787). Commit only the doc.
-- [ ] **T1 CrawlSEO baseline (day one).** `cp .env.example .env`, set `NEXTAUTH_URL=http://localhost:3100`, the OAuth
-  client from decision 1, `APP_SECRET`/`NEXTAUTH_SECRET` via `openssl rand -hex 32`; change the compose port to 3100;
+- [ ] **T1 CrawlSEO baseline (day one).** Needs G1 + G3 done. `cp .env.example .env`, set `NEXTAUTH_URL=http://localhost:3100`, the OAuth
+  client + PageSpeed key from G3, `APP_SECRET`/`NEXTAUTH_SECRET` via `openssl rand -hex 32`; change the compose port to 3100;
   `docker compose pull && docker compose up -d`. Add both hosts, run the first crawl and vitals. Export keywords/pages
   CSV (empty until GSC is verified: say so). Save `docs/seo/2026-09-baseline.md`: health score, the 16 issue counts,
   vitals, and the list of pages the crawler could actually read (expect: shells). Add `tooling/seo/crawl.sh`
@@ -120,12 +150,14 @@ Try: `bash tooling/seo/crawl.sh` then open http://localhost:3100
   `llms.txt` (what CraneSignal is, the areas, how the data is sourced, links to under-the-hood and the free PDF) and
   `llms-full.txt`; JSON-LD on every page (`Organization`, `WebSite`, `SoftwareApplication` for the app, `Dataset`
   for the lead list with `temporalCoverage` = the "Last updated" date); unique `<title>`/description per page,
-  `<link rel="canonical">`, Open Graph + Twitter cards using `docs/design-screens/final/*.png`. `site/Caddyfile`: add
+  `<link rel="canonical">`, Open Graph + Twitter cards using `docs/design-screens/final/*.png`, the GSC
+  `google-site-verification` meta tag (G1 fallback) and the GA4 snippet + CSP change only if G4 is yes. `site/Caddyfile`: add
   `/robots.txt /sitemap.xml /llms.txt /llms-full.txt` to the public list; serve `/` as `index.html` directly
   (`rewrite`/`try_files`, no 302). Update the landing hand-off list in `docs/seo/2026-09-audit.md`. Tests in
   `tooling/qa/fixes_tests/test_seo_files.py`: files exist, sitemap lists every `.html` in `site/` except 404 and
   master-table, JSON-LD parses on every page, Caddyfile serves the new paths; `tooling/qa/check-seo.sh` runs them
-  plus a live curl of the three files. Re-crawl in CrawlSEO; note the score delta in the baseline doc. Commit.
+  plus a live curl of the three files. Re-crawl in CrawlSEO; note the score delta in the baseline doc. Commit. After Drew deploys: do G2 (submit sitemap,
+  request indexing).
 - [ ] **T4 Crawlable content (needs decision 3).** Add a build step to `site/data/build_data.py` (don't write a
   second builder) that emits static HTML: (a) a `<noscript>`-free, always-present summary block in `index.html`
   (areas, lead counts, last-updated, top 10 leads per area as plain links), (b) one page per state,
