@@ -75,7 +75,7 @@ The earlier decision tree is a topic checklist, not a requirement to exhaust
 business questions before discussing the product. Resolve travel/capacity only
 when needed for an actual feature behavior, without revisiting broad coverage.
 
-## Current Question
+## Feature Experience
 
 Q3: What should the finished CraneSignal section let the owner do?
 
@@ -90,7 +90,42 @@ Q3: What should the finished CraneSignal section let the owner do?
 All options retain a regular public section and shared sourced agent knowledge.
 Personal notes or follow-up visibility, if selected, remain a later explicit
 design decision; a public section does not automatically mean public sales notes.
-Answer: pending; Drew may combine outcomes or describe another deliverable.
+Answer: **D**, selected by Drew on 2026-09-20. Agent-led research and saved
+shortlists are the main experience. Do not assume a full sales-tracking system
+was selected. The regular public CraneSignal section remains agreed.
+
+Drew also requested "a pdf of everything" and wants to explore the feature
+further. PDF delivery is required; its scope and whether this means a product
+export or an immediate planning document need the next answer.
+
+## Current Question
+
+Q4: What should "a PDF of everything" contain?
+
+- A. A complete lead report: overview, every lead in the selected collection,
+  project details, known business contacts, fit reasons, source links, dates and
+  gaps; recommended complete takeaway, potentially a long document.
+- B. A chosen shortlist with those details: a smaller working document based on
+  the owner's selected leads.
+- C. The agent's research session: questions, findings and supporting sources,
+  rather than every record in the collection.
+- D. The full feature/build plan as a PDF for Drew now, rather than a future
+  lead-report export.
+
+Answer: pending. Multiple PDF types can be selected. Do not silently omit leads
+from an "everything" report, substitute a shortlist, or generate invented leads.
+
+## Product Questions To Explore Next
+
+- What the agent can actually do: search collected records, verify live sources,
+  research a new opportunity, compare jobs, and suggest a next step.
+- What a useful answer contains and what happens when evidence or a contact is
+  missing; demonstrate with a clearly hypothetical example before building.
+- How the user opens, saves, revisits and exports research; public visibility
+  and persistence are not yet decided beyond the section itself being public.
+- Whether data refresh is scheduled, requested by the user, or both; report
+  freshness and collection coverage must be visible.
+- A first-use walkthrough and concrete acceptance checks for the chosen output.
 
 ## Build Boundary
 
