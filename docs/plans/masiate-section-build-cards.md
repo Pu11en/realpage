@@ -19,6 +19,8 @@
 
 ## Six Small Build Tasks
 
+- ⏳ The task-loop request is submitted; **the bot is waiting for your AI choice** before starting workers.
+- Its **A option** chooses a Codex model for each task and is the recommended continuation.
 - **1. Shared data:** turn the saved research into matching website and agent data, with the original PDF unchanged.
 - **2. Public section:** add the page, filters, navigation, source links and download.
 - **3. Agent knowledge:** package the same evidence into the agent's existing searchable data.
