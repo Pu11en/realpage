@@ -1,0 +1,382 @@
+[
+  {
+    "id": "burleson-somerville-ord-26-011-avenue-p-multifamily",
+    "county": "Burleson",
+    "project_name": "Avenue P multifamily special-use permit",
+    "address": "Avenue P lot; Landolt #9 Addition Block 2 west half, 2.0 acres; situs street number not listed in ordinance or CAD",
+    "city": "Somerville",
+    "record_type": "planning",
+    "source_record_id": "Somerville Ordinance No. 26-011; BCAD property ID 1043275",
+    "record_date": "2026-04-21",
+    "retrieved_at": "2026-09-21T02:00:02.272374Z",
+    "stage": "planned",
+    "status_basis": "City Council approved a special-use permit on 2026-04-21; the ordinance requires detailed site-plan review before any building permits and says the owner must obtain building permits and pass inspections. CAD shows vacant/native pasture land for 2026, so construction was not proven in this pass.",
+    "scope": "Special-use permit to allow development and construction of a multifamily facility with rental units under single-entity ownership and management on a 2.0-acre Avenue P tract.",
+    "masiate_fit": "Strong planning-stage fit: future multifamily work can require concrete, framing/metal, roofing, siding, paint, plumbing, electrical, lighting, fencing, flatwork and make-ready trades. This is an inference from the approved multifamily development scope, not proof that trade packages are open.",
+    "estimated_value": null,
+    "estimated_start": null,
+    "estimated_completion": null,
+    "bid_deadline": null,
+    "participants": [
+      {
+        "name": "ALTURA CAPITAL LLC",
+        "role": "owner/developer",
+        "source_url": "https://esearch.burlesonappraisal.com/Property/View/1043275"
+      },
+      {
+        "name": "City of Somerville",
+        "role": "approving jurisdiction",
+        "source_url": "https://somervilletx.gov/nav/ordinances.php"
+      }
+    ],
+    "business_contacts": [
+      {
+        "name": "ALTURA CAPITAL LLC",
+        "role": "CAD-listed owner of property ID 1043275",
+        "phone": null,
+        "email": null,
+        "website": null,
+        "source_url": "https://esearch.burlesonappraisal.com/Property/View/1043275"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://somervilletx.gov/Ordinance%2026-011%20for%20SUP%20Multifamily%20in%20RS1%20Zone.pdf?t=202604241102040",
+        "title": "Ordinance 26-011 for SUP Multifamily in RS1 Zone",
+        "date": "2026-04-21",
+        "page": "pp. 1-2",
+        "evidence": "Authorizes multifamily use on an RS-1 zoned Avenue P tract, Landolt #9 Addition Block 2 west half, 2.0 acres, BCAD 1043275; requires site-plan review, building permits, utilities and inspections.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/burleson/evidence/somerville/ordinances/Ordinance 26-011 for SUP Multifamily in RS1 Zone.pdf"
+      },
+      {
+        "url": "https://esearch.burlesonappraisal.com/Property/View/1043275",
+        "title": "Burleson CAD Property ID 1043275, 2026",
+        "date": "2026-09-21",
+        "page": "property details",
+        "evidence": "CAD lists legal description S2440 LANDOLT #9 BLK 2 SW HALF 2. ACRES, owner ALTURA CAPITAL LLC, 2026 land value $65,000 and zero improvement value.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/burleson/evidence/bcad-1043275.html"
+      }
+    ],
+    "unknowns": [
+      "Whether site-plan review has occurred after ordinance approval",
+      "Whether a city building permit has been issued in Cloudpermit",
+      "Whether any Masiate-relevant trade packages remain available",
+      "Exact street number for the Avenue P tract"
+    ],
+    "next_research": "Request or access Caldwell/Somerville Cloudpermit issued-permit detail for BCAD 1043275 or Avenue P; then verify owner/developer contact and project schedule.",
+    "disposition": "candidate"
+  },
+  {
+    "id": "burleson-somerville-rfq-2025-new-city-hall-150-8th",
+    "county": "Burleson",
+    "project_name": "Somerville New City Hall design-build RFQ",
+    "address": "150 8th Street",
+    "city": "Somerville",
+    "record_type": "bid",
+    "source_record_id": "RFQ New City Hall Building",
+    "record_date": "2025-02-25",
+    "retrieved_at": "2026-09-21T02:00:02.272374Z",
+    "stage": "historical",
+    "status_basis": "Official RFQ requested design-build qualifications due 2025-03-05; deadline is expired. No award, notice to proceed or current construction status was found in this pass.",
+    "scope": "Design and construction of a new one-story pre-engineered metal City Hall of approximately 4,000 square feet, including architectural, civil, structural, mechanical, electrical, plumbing design and construction administration services.",
+    "masiate_fit": "Good fit by scope for metal building, concrete, MEP, interior buildout, paint, doors, lighting and sitework, but only as a historical/watchlist item until current award or construction status is verified.",
+    "estimated_value": null,
+    "estimated_start": null,
+    "estimated_completion": null,
+    "bid_deadline": "2025-03-05 14:00 Central",
+    "participants": [
+      {
+        "name": "City of Somerville",
+        "role": "owner/issuer",
+        "source_url": "https://somervilletx.gov/RFQ%20New%20City%20Hall%20Building.pdf"
+      }
+    ],
+    "business_contacts": [
+      {
+        "name": "City of Somerville",
+        "role": "public owner/issuer",
+        "phone": "979-596-1122",
+        "email": "Managercos@somervilletx.gov",
+        "website": "https://somervilletx.gov/",
+        "source_url": "https://somervilletx.gov/RFQ%20New%20City%20Hall%20Building.pdf"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://somervilletx.gov/RFQ%20New%20City%20Hall%20Building.pdf",
+        "title": "City of Somerville RFQ for Design Build Services, New City Hall",
+        "date": "2025-02-25",
+        "page": "pp. 1-2",
+        "evidence": "RFQ due page gives March 5, 2025 deadline and project contact; purpose page states new City Hall at 150 8th Street, approximately 4,000 sf pre-engineered metal building with design and construction services.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/burleson/evidence/somerville/RFQ New City Hall Building.pdf"
+      }
+    ],
+    "unknowns": [
+      "Whether the RFQ was awarded",
+      "Whether construction has started or completed",
+      "Whether subcontract packages remain available"
+    ],
+    "next_research": "Check Somerville council minutes after March 2025 for award/NTP, then verify current site status before contacting any contractor.",
+    "disposition": "watchlist"
+  },
+  {
+    "id": "burleson-somerville-ord-25-018-441-gun-range-road-zoning",
+    "county": "Burleson",
+    "project_name": "441 Gun Range Road zoning change to C-2",
+    "address": "441 Gun Range Road",
+    "city": "Somerville",
+    "record_type": "planning",
+    "source_record_id": "Somerville Ordinance No. 25-018; property IDs 21925 and 21926",
+    "record_date": "2025-10-14",
+    "retrieved_at": "2026-09-21T02:00:02.272374Z",
+    "stage": "planned",
+    "status_basis": "City Council approved a zoning-map amendment from RS-1 single-family residential to C-2 general business on 2025-10-14; no construction permit or specific building scope was found.",
+    "scope": "0.439-acre tract out of W.A. Lyons Addition at 441 Gun Range Road rezoned to general business.",
+    "masiate_fit": "Possible future commercial conversion/new-build fit, but Masiate need is inferred from commercial zoning only; no building work is proven.",
+    "estimated_value": null,
+    "estimated_start": null,
+    "estimated_completion": null,
+    "bid_deadline": null,
+    "participants": [
+      {
+        "name": "City of Somerville",
+        "role": "approving jurisdiction",
+        "source_url": "https://somervilletx.gov/nav/ordinances.php"
+      }
+    ],
+    "business_contacts": [],
+    "sources": [
+      {
+        "url": "https://somervilletx.gov/Ordinance%2025-018.pdf?t=202512180954170",
+        "title": "Ordinance 25-018 Zoning Change",
+        "date": "2025-10-14",
+        "page": "p. 1",
+        "evidence": "Ordinance changes approximately 0.439-acre tract at 441 Gun Range Road from RS-1 to C-2 general business; property IDs 21925 and 21926.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/burleson/evidence/somerville/ordinances/Ordinance 25-018.pdf"
+      }
+    ],
+    "unknowns": [
+      "Applicant/owner not captured in front page",
+      "No specific project, permit or construction date found"
+    ],
+    "next_research": "Match property IDs in BCAD and check later permits or agendas for commercial site plan/building activity.",
+    "disposition": "watchlist"
+  },
+  {
+    "id": "burleson-somerville-ord-25-020-16252-sh36s-accessory",
+    "county": "Burleson",
+    "project_name": "16252 S.H. 36 S accessory-structure SUP",
+    "address": "16252 S.H. 36 S.",
+    "city": "Somerville",
+    "record_type": "planning",
+    "source_record_id": "Somerville Ordinance No. 25-020",
+    "record_date": "2025-11-20",
+    "retrieved_at": "2026-09-21T02:00:02.272374Z",
+    "stage": "planned",
+    "status_basis": "City Council approved a special-use permit on 2025-11-20 after an October 16, 2025 P&Z hearing; no building permit or completion record found.",
+    "scope": "Special-use permit to allow an accessory structure on Seals Addition Block 4 Lot 1, 0.3444 acres.",
+    "masiate_fit": "Small-project fit for concrete slab, metal/wood structure, roofing, siding, doors, electrical or paint if the owner proceeds; scope is limited and not a confirmed open job.",
+    "estimated_value": null,
+    "estimated_start": null,
+    "estimated_completion": null,
+    "bid_deadline": null,
+    "participants": [
+      {
+        "name": "City of Somerville",
+        "role": "approving jurisdiction",
+        "source_url": "https://somervilletx.gov/nav/ordinances.php"
+      }
+    ],
+    "business_contacts": [],
+    "sources": [
+      {
+        "url": "https://somervilletx.gov/Ordinance%2025-020.pdf?t=202512180956400",
+        "title": "Ordinance 25-020 SUP",
+        "date": "2025-11-20",
+        "page": "p. 1",
+        "evidence": "Authorizes SUP for accessory structure at 16252 S.H. 36 S., Seals Addition Block 4 Lot 1, 0.3444 acres.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/burleson/evidence/somerville/ordinances/Ordinance 25-020.pdf"
+      }
+    ],
+    "unknowns": [
+      "Applicant/owner not captured in front page",
+      "Whether permit was later issued or work completed",
+      "Exact accessory-structure dimensions not captured"
+    ],
+    "next_research": "Pull full application packet or later permit record for structure dimensions and current status.",
+    "disposition": "watchlist"
+  },
+  {
+    "id": "burleson-somerville-ord-25-013-640-or-649-7th-accessory",
+    "county": "Burleson",
+    "project_name": "7th Street accessory-structure SUP",
+    "address": "640 7th Street per ordinance title; 649 7th Street per ordinance body",
+    "city": "Somerville",
+    "record_type": "planning",
+    "source_record_id": "Somerville Ordinance No. 25-013",
+    "record_date": "2025-09-09",
+    "retrieved_at": "2026-09-21T02:00:02.272374Z",
+    "stage": "planned",
+    "status_basis": "City Council approved a special-use permit on 2025-09-09; the official ordinance contains a 640 vs 649 7th Street address conflict, so location needs verification before use.",
+    "scope": "Special-use permit to allow an accessory structure on a portion of Lot 4, S2646 Yegua Crossing Addition.",
+    "masiate_fit": "Small-project fit for structure/slab/roofing/siding/electrical only if not already built; address uncertainty makes it lower confidence.",
+    "estimated_value": null,
+    "estimated_start": null,
+    "estimated_completion": null,
+    "bid_deadline": null,
+    "participants": [
+      {
+        "name": "City of Somerville",
+        "role": "approving jurisdiction",
+        "source_url": "https://somervilletx.gov/nav/ordinances.php"
+      }
+    ],
+    "business_contacts": [],
+    "sources": [
+      {
+        "url": "https://somervilletx.gov/25-013%20SUP.pdf?t=202509221359240",
+        "title": "Ordinance 25-013 SUP",
+        "date": "2025-09-09",
+        "page": "p. 1",
+        "evidence": "Title authorizes an accessory structure at 640 7th Street; body states the application was on property at 649 7th Street; both cite Yegua Crossing Addition portion of Lot 4.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/burleson/evidence/somerville/ordinances/25-013 SUP.pdf"
+      }
+    ],
+    "unknowns": [
+      "Correct street number",
+      "Whether work has begun or completed",
+      "Structure dimensions"
+    ],
+    "next_research": "Verify address against city packet or BCAD before any prospect use.",
+    "disposition": "watchlist"
+  },
+  {
+    "id": "burleson-somerville-ord-25-012-169-switchback-hud-home",
+    "county": "Burleson",
+    "project_name": "169 Switchback Road HUD-code manufactured-home SUP",
+    "address": "169 Switchback Road",
+    "city": "Somerville",
+    "record_type": "planning",
+    "source_record_id": "Somerville Ordinance No. 25-012; BCAD R22284; Case SUP 622.25",
+    "record_date": "2025-09-09",
+    "retrieved_at": "2026-09-21T02:00:02.272374Z",
+    "stage": "planned",
+    "status_basis": "City Council granted a specific-use permit for placement of a HUD-code manufactured home; this is a low-fit construction signal unless pad, utility, skirting or accessory work is separately documented.",
+    "scope": "Specific-use permit for HUD-code manufactured home placement on Burleson Oil lots 5 and 6.",
+    "masiate_fit": "Limited fit; possible utility tie-in, flatwork, skirting, steps, porch or fencing, but not a strong Masiate trade package without later permit details.",
+    "estimated_value": null,
+    "estimated_start": null,
+    "estimated_completion": null,
+    "bid_deadline": null,
+    "participants": [
+      {
+        "name": "City of Somerville",
+        "role": "approving jurisdiction",
+        "source_url": "https://somervilletx.gov/nav/ordinances.php"
+      }
+    ],
+    "business_contacts": [],
+    "sources": [
+      {
+        "url": "https://somervilletx.gov/Ordinance%2025-012.pdf?t=202512181019460",
+        "title": "Ordinance 25-012 SUP",
+        "date": "2025-09-09",
+        "page": "p. 1",
+        "evidence": "Adds a specific-use permit to current land use for HUD-code manufactured-home placement at 169 Switchback Road, BCAD R22284, Burleson Oil lots 5 and 6.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/burleson/evidence/somerville/ordinances/Ordinance 25-012.pdf"
+      }
+    ],
+    "unknowns": [
+      "Whether any sitework beyond home placement is needed",
+      "Whether placement has occurred"
+    ],
+    "next_research": "Check building/manufactured-home permit records for installation status and any accessory improvements.",
+    "disposition": "watchlist"
+  },
+  {
+    "id": "burleson-somerville-ord-25-005-363-4th-accessory",
+    "county": "Burleson",
+    "project_name": "363 4th Street accessory-structure SUP",
+    "address": "363 4th Street",
+    "city": "Somerville",
+    "record_type": "planning",
+    "source_record_id": "Somerville Ordinance No. 25-005",
+    "record_date": "2025-06-10",
+    "retrieved_at": "2026-09-21T02:00:02.272374Z",
+    "stage": "planned",
+    "status_basis": "City Council approved a special-use permit on 2025-06-10; no building permit or completion proof found in this pass.",
+    "scope": "Special-use permit to allow an accessory structure on Lot 37 Block 11 of the S2414 Brenham Addition.",
+    "masiate_fit": "Small accessory-structure fit for slab/framing/roofing/siding/paint/electrical if unbuilt; lower priority due age and limited scope.",
+    "estimated_value": null,
+    "estimated_start": null,
+    "estimated_completion": null,
+    "bid_deadline": null,
+    "participants": [
+      {
+        "name": "City of Somerville",
+        "role": "approving jurisdiction",
+        "source_url": "https://somervilletx.gov/nav/ordinances.php"
+      }
+    ],
+    "business_contacts": [],
+    "sources": [
+      {
+        "url": "https://somervilletx.gov/25-005%20SUP.pdf?t=202509221356210",
+        "title": "Ordinance 25-005 SUP",
+        "date": "2025-06-10",
+        "page": "p. 1",
+        "evidence": "Authorizes an accessory structure at 363 4th Street, Lot 37 Block 11, S2414 Brenham Addition.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/burleson/evidence/somerville/ordinances/25-005 SUP.pdf"
+      }
+    ],
+    "unknowns": [
+      "Whether permit was issued or work completed",
+      "Structure dimensions"
+    ],
+    "next_research": "Check Somerville permits/building records for completion status.",
+    "disposition": "watchlist"
+  },
+  {
+    "id": "burleson-somerville-ord-25-006-518-avenue-l-accessory",
+    "county": "Burleson",
+    "project_name": "518 Avenue L accessory-structure SUP",
+    "address": "518 Avenue L",
+    "city": "Somerville",
+    "record_type": "planning",
+    "source_record_id": "Somerville Ordinance No. 25-006",
+    "record_date": "2025-06-10",
+    "retrieved_at": "2026-09-21T02:00:02.272374Z",
+    "stage": "planned",
+    "status_basis": "City Council approved a special-use permit on 2025-06-10; no building permit or completion proof found in this pass.",
+    "scope": "Special-use permit to allow an accessory structure on Lots 1 and 2 Block 1 of the S2414 Brenham Addition.",
+    "masiate_fit": "Small accessory-structure fit for slab/framing/roofing/siding/paint/electrical if unbuilt; lower priority due age and limited scope.",
+    "estimated_value": null,
+    "estimated_start": null,
+    "estimated_completion": null,
+    "bid_deadline": null,
+    "participants": [
+      {
+        "name": "City of Somerville",
+        "role": "approving jurisdiction",
+        "source_url": "https://somervilletx.gov/nav/ordinances.php"
+      }
+    ],
+    "business_contacts": [],
+    "sources": [
+      {
+        "url": "https://somervilletx.gov/25-006%20SUP.pdf?t=202509221354510",
+        "title": "Ordinance 25-006 SUP",
+        "date": "2025-06-10",
+        "page": "p. 1",
+        "evidence": "Authorizes an accessory structure at 518 Avenue L, Lots 1 and 2 Block 1, S2414 Brenham Addition.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/burleson/evidence/somerville/ordinances/25-006 SUP.pdf"
+      }
+    ],
+    "unknowns": [
+      "Whether permit was issued or work completed",
+      "Structure dimensions"
+    ],
+    "next_research": "Check Somerville permits/building records for completion status.",
+    "disposition": "watchlist"
+  }
+]
