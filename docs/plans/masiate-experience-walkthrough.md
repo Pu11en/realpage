@@ -46,8 +46,9 @@ This is the proposed finished experience, not a feature that has been built or a
 - The owner should be able to return to saved research and ask about it again without recreating all the work.
 - Example: after a chat finds a newer planning document, the owner later asks, "What did we find about that property's revised plans?"
 - The agent should return the saved finding with its date and source, without calling an old finding current unless it rechecks it on request.
-- **One detail still needs a decision:** whether this works automatically from any new chat, only after reopening the old chat, by choosing a previous chat, or by resuming the property's conversation.
-- Existing repository code documents saved sessions and an account-based chat panel, but that does not establish automatic searching across earlier chats; persistent storage and user identity must be tested too.
+- **Chosen default after Drew delegated the detail:** reopen the original saved chat and continue there; a new chat will not automatically search other conversations.
+- Reuse the existing saved-chat experience without a separate memory system or property-linked conversation routing; do not promise that merely saving messages makes every earlier finding available to the agent.
+- Existing repository code documents saved sessions and an account-based chat panel; persistent storage, restored context in long chats and user identity still need verification.
 - One person's conversation must never appear in another person's answers, even though the property report itself is public.
 - No chat behavior changes the downloaded PDF or the public property list.
 
@@ -66,7 +67,7 @@ This is the proposed finished experience, not a feature that has been built or a
 - Open the section on a phone and desktop; check the ranked list, source links, PDF access and correct property context in the agent.
 - Read the PDF itself for clipped text, working links, readable pages, evidence and clearly marked unknowns.
 - Ask the agent a question supported by the collected data, an unanswered question and an explicit live-research question; verify its sources and dates in each case.
-- Return after signing out and back in, then test the selected recall behavior; repeat with a second account to prove histories stay separate.
+- Return after signing out and back in, reopen the original conversation and ask about a saved finding, including one from earlier in a long chat; repeat with a second account to prove histories stay separate.
 - Test unavailable sources, empty results, exhausted allowances and chat failure without misleading the user.
 - Confirm that new chat findings leave the PDF unchanged and that Masiate data does not alter CraneSignal's existing apartment leads.
 - Nothing has been built, crawled, purchased or deployed during this walkthrough; source-by-source collection details and small build tasks still need to be finalized.

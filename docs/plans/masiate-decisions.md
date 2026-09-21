@@ -21,7 +21,9 @@ and per-lead saved-note decisions below.
 - The section shows a short ranked property list, the detailed PDF and an Ask
   Agent action. Full on-site property profiles and map browsing are not selected.
 - Agent research happens on request and stays in the person's saved chats;
-  the agent must retrieve prior findings when that person asks again.
+  reopen the original saved chat to ask about its earlier findings. Drew
+  delegated this detail; the assistant chose existing-chat continuity for the
+  first version, without automatic search across different conversations.
 - Agent scope is research only: facts, sources and available business contacts.
   No outreach-message drafting or call briefs; Masiate handles preparation and
   contact itself. Nothing is sent to prospects by the system.
@@ -34,8 +36,9 @@ and per-lead saved-note decisions below.
   and do not rewrite the report or imply the baseline has refreshed.
 - Remembering requires persisted chat history and retrieval, not an assumption
   of automatic model memory. Inspect the existing chat/session behavior before
-  promising return-visit or cross-chat recall; keep each person's history scoped
-  to them even though the section is public.
+  promising return-visit recall; verify earlier findings can actually be used
+  after reopening, including long conversations. Keep each person's history
+  scoped to them even though the section is public; cross-chat recall is excluded.
 - Property count is flexible: select by quality and available evidence, with no
   fixed quota or padding. This is not authorization for unlimited research cost.
 - Use existing CraneSignal services, including already-paid access, plus useful
@@ -395,7 +398,7 @@ is written in [the walkthrough](masiate-experience-walkthrough.md), including
 failure states and checks. This chooses a planning walkthrough, not approval of
 every newly proposed detail or authorization to build.
 
-## Current Question: Returning To Research
+## Returning To Research
 
 Q16: When someone asks about earlier research, where should recall work?
 
@@ -408,10 +411,15 @@ Q16: When someone asks about earlier research, where should recall work?
 - D. Asking about a property reopens its earlier conversation; property-linked
   continuity without general history search.
 
-Answer: pending. This clarifies how the already-requested saved-chat recall
-works, not whether to save research. Existing saved-chat plumbing does not prove
-cross-chat search exists. Every option must isolate each person's history and
-keep the PDF unchanged; none introduces separate lead notes.
+Answer: **Delegated to the assistant**, on 2026-09-20. Drew said this detail
+does not matter and to choose. Assistant default: **B**, reopen the original
+saved chat and continue there. This is not a claimed explicit letter selection.
+Reuse the existing saved-chat experience; no automatic cross-chat search,
+separate memory database or property-to-conversation routing in version one.
+Verify persistence, restored context and user isolation before calling it done;
+stored messages alone do not prove older findings reach the agent in long chats.
+Keep the PDF unchanged and add no separate lead notes. Do not re-ask this choice
+unless a verified limitation makes the selected behavior unworkable.
 
 ## Product Questions To Explore Next
 
