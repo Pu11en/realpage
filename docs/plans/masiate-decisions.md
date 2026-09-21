@@ -37,7 +37,9 @@ and per-lead saved-note decisions below.
   Grimes, Leon, Madison and Washington counties. Source coverage must be checked
   separately for each jurisdiction; this is a collection boundary, not proof of
   Masiate's willingness to travel to every property.
-- Ranking acceptance rules and depth of each profile still need planning.
+- Assistant ranking default: recent relevant work, evidence quality and an
+  identifiable business contact first; distinguish likely need from an explicit
+  open request for bids. Deeper profile acceptance checks still need planning.
   No collection/build has started.
 
 ## Confirmed Instructions
@@ -285,7 +287,7 @@ generation or user-triggered whole-report refresh is part of the first version.
 The collected dataset/report must show their dates to avoid claiming freshness
 that only an individual chat lookup has established.
 
-## Current Question
+## Ranking Default
 
 Q11: What should put a property near the top of the report?
 
@@ -298,8 +300,30 @@ Q11: What should put a property near the top of the report?
 - D. Repeat-work potential: properties tied to builders/owners with multiple
   projects, emphasizing relationships rather than a single immediate job.
 
-Answer: pending. All service types remain eligible. This decision sets ordering,
-not permission to invent work availability or discard all other candidates.
+User answer: **Idk**. No option was selected. Assistant will use a practical
+default: prioritize relevant, recent projects with clear evidence and an
+identifiable business contact. Keep early opportunities and repeat-work
+potential as secondary signals. Do not rank purely by total project value.
+
+Separate documented open bids from inferred trade needs, explain why each
+property ranks well, and retain unknowns rather than inventing hiring intent.
+Missing contacts do not automatically erase otherwise promising properties.
+Treat this as an assistant planning default, not a claimed user preference or
+a calibrated prediction of sales success. No need to re-ask for scoring weights.
+
+## Current Question
+
+Q12: Beyond researching a property, what should the agent help the owner prepare?
+
+- A. A tailored first-contact message based on known facts; recommended practical
+  next step, with the owner reviewing and sending it.
+- B. Research answers only; the owner handles all outreach preparation.
+- C. A call briefing with what is known and questions to ask; no written message.
+- D. Both a first-contact message and call briefing on request; broader assistance.
+
+Answer: pending. Every option retains the agreed research capability. None
+authorizes the agent to send messages, contact prospects, or invent company
+qualifications, relationships, price quotes or confirmed work availability.
 
 ## Product Questions To Explore Next
 
