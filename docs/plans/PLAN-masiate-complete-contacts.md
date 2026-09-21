@@ -1,4 +1,6 @@
 # Finish Masiate Contacts For Every Property
+Goal: All 49 property rows in the new PDF each end with a sourced phone number for a real business route (labeled by who it belongs to), or a specific written reason no suitable public number was found, with best-guess numbers counted separately from confirmed ones.
+Done when: `python3 -m pytest propertystack/skills/lead-finder/tests -q` passes and the new coverage check in `tooling/masiate_pdf/contact_coverage.py` reports all 49 property IDs researched (none missing or duplicated), with `Masiate-All-Property-Contacts-2026-09-20.pdf` existing and showing a number or reason on every row.
 
 Check: python3 -m pytest propertystack/skills/lead-finder/tests -q
 Try: python3 tooling/masiate_pdf/render_table.py
