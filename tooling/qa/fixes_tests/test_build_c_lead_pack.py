@@ -87,13 +87,17 @@ process.stdout.write(JSON.stringify({
     assert round(float(first_page.mediabox.height)) == 612
 
     source_links = []
+    contact_links = []
     for page in reader.pages:
         for annotation_ref in page.get("/Annots", []):
             annotation = annotation_ref.get_object()
             uri = annotation.get("/A", {}).get("/URI", "")
-            if uri and uri != "https://app.cranesignal.com":
+            if uri.startswith("https://app.cranesignal.com/?contact="):
+                contact_links.append(uri)
+            elif uri and uri != "https://app.cranesignal.com":
                 source_links.append(uri)
     assert len(source_links) == len(leads)
+    assert len(contact_links) == len(leads)
 
     text = "\n".join(page.extract_text() or "" for page in reader.pages)
     assert "CraneSignal call list: Dallas" in text

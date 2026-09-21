@@ -11,6 +11,7 @@
   const WARM_SCORE = 40;
   const FOOTER = "Find who to call for any building at app.cranesignal.com";
   const APP_URL = "https://app.cranesignal.com";
+  const CONTACT_CTA = "Get who to call: ask the agent at cranesignal.com";
   const DOWNLOAD_DATE_KEY_PREFIX = "cranesignal.leadPack.lastDownloaded";
 
   function priorityForLead(lead) {
@@ -61,11 +62,13 @@
     if (lead.owner) lines.push(`Owner: ${lead.owner}`);
     if (lead.developer) lines.push(`Developer: ${lead.developer}`);
     if (lead.buyer) lines.push(`Buyer: ${lead.buyer}`);
-    return lines.length ? lines.join("\n") : "Not listed";
+    return lines.length ? lines.join("\n") : "Owner not listed";
   }
 
-  function phoneForLead(lead) {
-    return (lead.contact && lead.contact.phone) || lead.officePhone || "Not listed";
+  // Contacts are not in the free PDF: each row links to the agent, which asks
+  // the reader to sign in and then finds the manager, phone and who to ask for.
+  function contactUrlForLead(lead) {
+    return `${APP_URL}/?contact=${encodeURIComponent(lead.id)}`;
   }
 
   function leadPackRows(leads) {
@@ -76,12 +79,13 @@
         id: lead.id,
         priority,
         source,
+        contactUrl: contactUrlForLead(lead),
         whyNow: whyNowSentence(lead),
         cells: [
           `${lead.property || lead.community || "Unnamed building"}\n${lead.city || "City not listed"} · ${lead.units == null ? "Units not listed" : `${lead.units} units`}`,
           `${priority.label}\n${priority.reason}`,
           `${lead.stage || "Stage not listed"}\nSignal: ${lead.signalType || lead.signal || "Not listed"}\n${timingForLead(lead)}`,
-          `${contactForLead(lead)}\nPhone: ${phoneForLead(lead)}`,
+          `${contactForLead(lead)}\n${CONTACT_CTA}`,
           whyNowSentence(lead),
           source.label,
         ],
@@ -171,7 +175,7 @@
     doc.setFont("helvetica", "normal");
     doc.setFontSize(9);
     doc.setTextColor(93, 101, 119);
-    doc.text(`${rows.length} leads · One row per building · Free source links`, 30, 51);
+    doc.text(`${rows.length} leads · One row per building · Free source links · Need a phone, email or who to ask for? Click \"Get who to call\" in any row.`, 30, 51);
 
     const drawFooter = (pageNumber) => {
       doc.setFont("helvetica", "normal");
@@ -185,7 +189,7 @@
 
     const tableOptions = {
       startY: 64,
-      head: [["Building / city / units", "Priority", "Stage / signal / date", "Owner / developer / buyer / phone", "Why now", "Source"]],
+      head: [["Building / city / units", "Priority", "Stage / signal / date", "Owner on record / who to call", "Why now", "Source"]],
       body: rows.map((row) => row.cells),
       theme: "grid",
       margin: { top: 30, right: 30, bottom: 28, left: 30 },
@@ -216,11 +220,18 @@
       },
       rowPageBreak: "avoid",
       showHead: "everyPage",
+      didParseCell(data) {
+        if (data.section === "body" && data.column.index === 3) data.cell.styles.textColor = [26, 61, 143];
+      },
       didDrawCell(data) {
-        if (data.section !== "body" || data.column.index !== 5) return;
-        const source = rows[data.row.index] && rows[data.row.index].source;
-        if (source && source.url) {
-          doc.link(data.cell.x, data.cell.y, data.cell.width, data.cell.height, { url: source.url });
+        if (data.section !== "body") return;
+        const row = rows[data.row.index];
+        if (!row) return;
+        if (data.column.index === 3) {
+          doc.link(data.cell.x, data.cell.y, data.cell.width, data.cell.height, { url: row.contactUrl });
+        }
+        if (data.column.index === 5 && row.source && row.source.url) {
+          doc.link(data.cell.x, data.cell.y, data.cell.width, data.cell.height, { url: row.source.url });
         }
       },
       didDrawPage(data) {

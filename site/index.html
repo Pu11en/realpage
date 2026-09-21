@@ -614,6 +614,20 @@
       const swSel = document.getElementById("f-software");
       if (wanted && [...swSel.options].some((o) => o.value === wanted)) swSel.value = wanted;
 
+      // Deep link from the PDF: index.html?contact=<lead id> runs "Get contact"
+      // for that building (the agent asks for sign-in first).
+      const wantedContact = new URLSearchParams(location.search).get("contact");
+      const contactLead = wantedContact && data.leads.find((x) => x.id === wantedContact);
+      if (contactLead) {
+        const url = new URL(location.href);
+        url.searchParams.delete("contact");
+        history.replaceState(null, "", url);
+        window.PSChatPanel.deepDive(contactLead.id, window.PSChatPanel.deepDivePrompt({
+          name: contactLead.property, city: contactLead.city, units: contactLead.units, software: contactLead.software,
+          stage: contactLead.stage, signalType: contactLead.signalType, buyer: contactLead.buyer,
+        }));
+      }
+
       wireAreaButtons(content, (newSlug) => {
         const newArea = areas.find((a) => a.slug === newSlug);
         history.replaceState(null, "", `?area=${encodeURIComponent(newSlug)}`);  // new state: region resets
