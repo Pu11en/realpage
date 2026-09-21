@@ -1,0 +1,1329 @@
+{
+  "worker": "review-west",
+  "reviewed_at": "2026-09-21T02:24:17Z",
+  "input_scope": {
+    "counties": [
+      "Burleson",
+      "Robertson",
+      "Washington"
+    ],
+    "local_lanes": [
+      "robertson",
+      "burleson",
+      "washington"
+    ],
+    "statewide_filter": [
+      "Burleson",
+      "Robertson",
+      "Washington"
+    ]
+  },
+  "counts": {
+    "source_records_accounted_for": 88,
+    "reviewed_records": 88,
+    "include": 25,
+    "watchlist": 60,
+    "exclude": 3
+  },
+  "notes": [
+    "Included records are recommended for detailed PDF consideration, not validated open contracts.",
+    "Watchlist records preserve registrations, planning items, expired bids and duplicate/supporting phases without double-counting them as detailed leads.",
+    "Private homeowner contact details were not added; no new outreach, purchases, live changes or paid APIs were used.",
+    "Distinct phases and permits at the same address were kept separate unless a local permit and TDLR record clearly supported the same scope."
+  ],
+  "decisions": [
+    {
+      "id": "burleson-somerville-rfq-2025-new-city-hall-150-8th",
+      "county": "Burleson",
+      "project_name": "Somerville New City Hall design-build RFQ",
+      "reviewed": true,
+      "review_decision": "watchlist",
+      "canonical_member_ids": [
+        "burleson-somerville-rfq-2025-new-city-hall-150-8th",
+        "statewide-tdlr-tabs-TABS2026021872"
+      ],
+      "disposition_reason": "Supporting evidence for canonical project group statewide-tdlr-tabs-TABS2026021872; keep for audit and dedup context.",
+      "source_local_paths_checked": [
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/burleson/evidence/somerville/RFQ New City Hall Building.pdf",
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2026021872.html"
+      ]
+    },
+    {
+      "id": "burleson-somerville-ord-25-005-363-4th-accessory",
+      "county": "Burleson",
+      "project_name": "363 4th Street accessory-structure SUP",
+      "reviewed": true,
+      "review_decision": "watchlist",
+      "canonical_member_ids": [
+        "burleson-somerville-ord-25-005-363-4th-accessory"
+      ],
+      "disposition_reason": "Planning-stage signal without a confirmed permit, current construction status or open trade package.",
+      "source_local_paths_checked": [
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/burleson/evidence/somerville/ordinances/25-005 SUP.pdf"
+      ]
+    },
+    {
+      "id": "burleson-somerville-ord-25-006-518-avenue-l-accessory",
+      "county": "Burleson",
+      "project_name": "518 Avenue L accessory-structure SUP",
+      "reviewed": true,
+      "review_decision": "watchlist",
+      "canonical_member_ids": [
+        "burleson-somerville-ord-25-006-518-avenue-l-accessory"
+      ],
+      "disposition_reason": "Planning-stage signal without a confirmed permit, current construction status or open trade package.",
+      "source_local_paths_checked": [
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/burleson/evidence/somerville/ordinances/25-006 SUP.pdf"
+      ]
+    },
+    {
+      "id": "burleson-somerville-ord-25-012-169-switchback-hud-home",
+      "county": "Burleson",
+      "project_name": "169 Switchback Road HUD-code manufactured-home SUP",
+      "reviewed": true,
+      "review_decision": "watchlist",
+      "canonical_member_ids": [
+        "burleson-somerville-ord-25-012-169-switchback-hud-home"
+      ],
+      "disposition_reason": "Planning-stage signal without a confirmed permit, current construction status or open trade package.",
+      "source_local_paths_checked": [
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/burleson/evidence/somerville/ordinances/Ordinance 25-012.pdf"
+      ]
+    },
+    {
+      "id": "burleson-somerville-ord-25-013-640-or-649-7th-accessory",
+      "county": "Burleson",
+      "project_name": "7th Street accessory-structure SUP",
+      "reviewed": true,
+      "review_decision": "watchlist",
+      "canonical_member_ids": [
+        "burleson-somerville-ord-25-013-640-or-649-7th-accessory"
+      ],
+      "disposition_reason": "Planning-stage signal without a confirmed permit, current construction status or open trade package.",
+      "source_local_paths_checked": [
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/burleson/evidence/somerville/ordinances/25-013 SUP.pdf"
+      ]
+    },
+    {
+      "id": "burleson-somerville-ord-25-018-441-gun-range-road-zoning",
+      "county": "Burleson",
+      "project_name": "441 Gun Range Road zoning change to C-2",
+      "reviewed": true,
+      "review_decision": "watchlist",
+      "canonical_member_ids": [
+        "burleson-somerville-ord-25-018-441-gun-range-road-zoning"
+      ],
+      "disposition_reason": "Planning-stage signal without a confirmed permit, current construction status or open trade package.",
+      "source_local_paths_checked": [
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/burleson/evidence/somerville/ordinances/Ordinance 25-018.pdf"
+      ]
+    },
+    {
+      "id": "burleson-somerville-ord-25-020-16252-sh36s-accessory",
+      "county": "Burleson",
+      "project_name": "16252 S.H. 36 S accessory-structure SUP",
+      "reviewed": true,
+      "review_decision": "watchlist",
+      "canonical_member_ids": [
+        "burleson-somerville-ord-25-020-16252-sh36s-accessory"
+      ],
+      "disposition_reason": "Planning-stage signal without a confirmed permit, current construction status or open trade package.",
+      "source_local_paths_checked": [
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/burleson/evidence/somerville/ordinances/Ordinance 25-020.pdf"
+      ]
+    },
+    {
+      "id": "statewide-tdlr-tabs-TABS2026009232",
+      "county": "Burleson",
+      "project_name": "Lake Somerville Trailway Bridge Replacement Nails Creek & Yegua Creek",
+      "reviewed": true,
+      "review_decision": "watchlist",
+      "canonical_member_ids": [
+        "statewide-tdlr-tabs-TABS2026009232"
+      ],
+      "disposition_reason": "TDLR registration-only signal; needs local permit, current status or contractor path before detailed use.",
+      "source_local_paths_checked": [
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2026009232.html"
+      ]
+    },
+    {
+      "id": "statewide-tdlr-tabs-TABS2026010963",
+      "county": "Burleson",
+      "project_name": "S.A.A.M. House Expansion",
+      "reviewed": true,
+      "review_decision": "watchlist",
+      "canonical_member_ids": [
+        "statewide-tdlr-tabs-TABS2026010963"
+      ],
+      "disposition_reason": "TDLR registration-only signal; needs local permit, current status or contractor path before detailed use.",
+      "source_local_paths_checked": [
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2026010963.html"
+      ]
+    },
+    {
+      "id": "statewide-tdlr-tabs-TABS2026011740",
+      "county": "Burleson",
+      "project_name": "Johnson Shell",
+      "reviewed": true,
+      "review_decision": "watchlist",
+      "canonical_member_ids": [
+        "statewide-tdlr-tabs-TABS2026011740"
+      ],
+      "disposition_reason": "TDLR registration-only signal; needs local permit, current status or contractor path before detailed use.",
+      "source_local_paths_checked": [
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2026011740.html"
+      ]
+    },
+    {
+      "id": "statewide-tdlr-tabs-TABS2026011859",
+      "county": "Burleson",
+      "project_name": "Somerville ISD - High School and Gym Additions and Renovations",
+      "reviewed": true,
+      "review_decision": "watchlist",
+      "canonical_member_ids": [
+        "statewide-tdlr-tabs-TABS2026011859"
+      ],
+      "disposition_reason": "TDLR registration-only signal; needs local permit, current status or contractor path before detailed use.",
+      "source_local_paths_checked": [
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2026011859.html"
+      ]
+    },
+    {
+      "id": "burleson-somerville-ord-26-011-avenue-p-multifamily",
+      "county": "Burleson",
+      "project_name": "Avenue P multifamily special-use permit",
+      "reviewed": true,
+      "review_decision": "include",
+      "canonical_member_ids": [
+        "burleson-somerville-ord-26-011-avenue-p-multifamily"
+      ],
+      "disposition_reason": "Somerville multifamily SUP is planning-stage, but it is recent, address-level by tract, and strong for Masiate trades if site-plan/building permits follow.",
+      "source_local_paths_checked": [
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/burleson/evidence/somerville/ordinances/Ordinance 26-011 for SUP Multifamily in RS1 Zone.pdf",
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/burleson/evidence/bcad-1043275.html"
+      ]
+    },
+    {
+      "id": "statewide-tdlr-tabs-TABS2026018879",
+      "county": "Burleson",
+      "project_name": "Drover's Village",
+      "reviewed": true,
+      "review_decision": "watchlist",
+      "canonical_member_ids": [
+        "statewide-tdlr-tabs-TABS2026018879"
+      ],
+      "disposition_reason": "TDLR registration-only signal; needs local permit, current status or contractor path before detailed use.",
+      "source_local_paths_checked": [
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2026018879.html"
+      ]
+    },
+    {
+      "id": "statewide-tdlr-tabs-TABS2026020630",
+      "county": "Burleson",
+      "project_name": "Burleson City Hall Rebuild",
+      "reviewed": true,
+      "review_decision": "exclude",
+      "canonical_member_ids": [
+        "statewide-tdlr-tabs-TABS2026020630"
+      ],
+      "disposition_reason": "Record is for City of Burleson at 141 W Renfro, outside Burleson County review-west geography.",
+      "source_local_paths_checked": [
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2026020630.html"
+      ]
+    },
+    {
+      "id": "statewide-tdlr-tabs-TABS2026020714",
+      "county": "Burleson",
+      "project_name": "Caldwell Headstart",
+      "reviewed": true,
+      "review_decision": "watchlist",
+      "canonical_member_ids": [
+        "statewide-tdlr-tabs-TABS2026020714"
+      ],
+      "disposition_reason": "TDLR registration-only signal; needs local permit, current status or contractor path before detailed use.",
+      "source_local_paths_checked": [
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2026020714.html"
+      ]
+    },
+    {
+      "id": "statewide-tdlr-tabs-TABS2026021872",
+      "county": "Burleson",
+      "project_name": "Somerville City Hall",
+      "reviewed": true,
+      "review_decision": "include",
+      "canonical_member_ids": [
+        "burleson-somerville-rfq-2025-new-city-hall-150-8th",
+        "statewide-tdlr-tabs-TABS2026021872"
+      ],
+      "disposition_reason": "Somerville City Hall has current TDLR evidence for new city hall, parking and landscape work; the older RFQ is expired and only supports project history.",
+      "source_local_paths_checked": [
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/burleson/evidence/somerville/RFQ New City Hall Building.pdf",
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2026021872.html"
+      ]
+    },
+    {
+      "id": "statewide-tdlr-tabs-TABS2026023109",
+      "county": "Burleson",
+      "project_name": "Port Arthur Fire Station No. 2",
+      "reviewed": true,
+      "review_decision": "exclude",
+      "canonical_member_ids": [
+        "statewide-tdlr-tabs-TABS2026023109"
+      ],
+      "disposition_reason": "Address is Port Arthur, not the review-west county geography; likely false county match.",
+      "source_local_paths_checked": [
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2026023109.html"
+      ]
+    },
+    {
+      "id": "statewide-tdlr-tabs-TABS2026024787",
+      "county": "Burleson",
+      "project_name": "Somerville ISD - Phase 2",
+      "reviewed": true,
+      "review_decision": "include",
+      "canonical_member_ids": [
+        "statewide-tdlr-tabs-TABS2026024787"
+      ],
+      "disposition_reason": "Somerville ISD Phase 2 has separate new ag/athletic/concession buildings and a current TDLR review; availability remains unknown.",
+      "source_local_paths_checked": [
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2026024787.html"
+      ]
+    },
+    {
+      "id": "statewide-tdlr-tabs-TABS2026028954",
+      "county": "Burleson",
+      "project_name": "Snook Watering Hole",
+      "reviewed": true,
+      "review_decision": "include",
+      "canonical_member_ids": [
+        "statewide-tdlr-tabs-TABS2026028954"
+      ],
+      "disposition_reason": "Snook Watering Hole is not the largest job, but restroom, bar and seating additions are a concrete Masiate remodel fit; availability remains unknown.",
+      "source_local_paths_checked": [
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2026028954.html"
+      ]
+    },
+    {
+      "id": "statewide-tdlr-tabs-TABS2027001187",
+      "county": "Burleson",
+      "project_name": "SH 21 (CSJ: 0116-03-074)",
+      "reviewed": true,
+      "review_decision": "watchlist",
+      "canonical_member_ids": [
+        "statewide-tdlr-tabs-TABS2027001187"
+      ],
+      "disposition_reason": "TDLR registration-only signal; needs local permit, current status or contractor path before detailed use.",
+      "source_local_paths_checked": [
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2027001187.html"
+      ]
+    },
+    {
+      "id": "statewide-tdlr-tabs-TABS2026008039",
+      "county": "Robertson",
+      "project_name": "Donald Steven Davis Gymnasium",
+      "reviewed": true,
+      "review_decision": "include",
+      "canonical_member_ids": [
+        "statewide-tdlr-tabs-TABS2026008039"
+      ],
+      "disposition_reason": "Hearne ISD gymnasium record has direct new-construction, parking, restroom, concession and finish scopes; availability remains unknown.",
+      "source_local_paths_checked": [
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2026008039.html"
+      ]
+    },
+    {
+      "id": "statewide-tdlr-tabs-TABS2026012773",
+      "county": "Robertson",
+      "project_name": "306 Cedar Street Office Building",
+      "reviewed": true,
+      "review_decision": "watchlist",
+      "canonical_member_ids": [
+        "statewide-tdlr-tabs-TABS2026012773"
+      ],
+      "disposition_reason": "TDLR registration-only signal; needs local permit, current status or contractor path before detailed use.",
+      "source_local_paths_checked": [
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2026012773.html"
+      ]
+    },
+    {
+      "id": "statewide-tdlr-tabs-TABS2026014016",
+      "county": "Robertson",
+      "project_name": "Field House Addition",
+      "reviewed": true,
+      "review_decision": "include",
+      "canonical_member_ids": [
+        "statewide-tdlr-tabs-TABS2026014016"
+      ],
+      "disposition_reason": "Franklin ISD field house addition is a distinct same-campus phase with locker room/restroom work and metal-building fit; availability remains unknown.",
+      "source_local_paths_checked": [
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2026014016.html"
+      ]
+    },
+    {
+      "id": "statewide-tdlr-tabs-TABS2026014091",
+      "county": "Robertson",
+      "project_name": "Ag Classroom Addition",
+      "reviewed": true,
+      "review_decision": "include",
+      "canonical_member_ids": [
+        "statewide-tdlr-tabs-TABS2026014091"
+      ],
+      "disposition_reason": "Franklin ISD ag classroom addition is a separate metal-building and renovation phase with concrete, metal, finish and MEP fit; availability remains unknown.",
+      "source_local_paths_checked": [
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2026014091.html"
+      ]
+    },
+    {
+      "id": "statewide-tdlr-tabs-TABS2026014890",
+      "county": "Robertson",
+      "project_name": "Brazos Valley GCD - Office Renovations",
+      "reviewed": true,
+      "review_decision": "include",
+      "canonical_member_ids": [
+        "statewide-tdlr-tabs-TABS2026014890"
+      ],
+      "disposition_reason": "Robertson office renovation is smaller than several projects but has a direct remodel/finish-services fit and an active 2026 TDLR window; availability remains unknown.",
+      "source_local_paths_checked": [
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2026014890.html"
+      ]
+    },
+    {
+      "id": "statewide-tdlr-tabs-TABS2026018848",
+      "county": "Robertson",
+      "project_name": "FFB - Franklin",
+      "reviewed": true,
+      "review_decision": "include",
+      "canonical_member_ids": [
+        "statewide-tdlr-tabs-TABS2026018848"
+      ],
+      "disposition_reason": "Robertson bank branch new construction has address-level TDLR evidence and a broad trade fit; availability remains unknown.",
+      "source_local_paths_checked": [
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2026018848.html"
+      ]
+    },
+    {
+      "id": "statewide-tdlr-tabs-TABS2026019833",
+      "county": "Robertson",
+      "project_name": "Studio 6 Extended Stay",
+      "reviewed": true,
+      "review_decision": "include",
+      "canonical_member_ids": [
+        "statewide-tdlr-tabs-TABS2026019833"
+      ],
+      "disposition_reason": "Robertson hotel new-construction registration has an identifiable address, dated TDLR record and direct fit for sitework, framing, roofing, finishes, plumbing and electrical; availability remains unknown.",
+      "source_local_paths_checked": [
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2026019833.html"
+      ]
+    },
+    {
+      "id": "robertson-franklin-city-park-pickleball-lighting-2026-08-17",
+      "county": "Robertson",
+      "project_name": "Franklin City Park pickleball courts, dirt work and pavilion lighting",
+      "reviewed": true,
+      "review_decision": "watchlist",
+      "canonical_member_ids": [
+        "robertson-franklin-city-park-pickleball-lighting-2026-08-17"
+      ],
+      "disposition_reason": "Planning-stage signal without a confirmed permit, current construction status or open trade package.",
+      "source_local_paths_checked": [
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/robertson/evidence/franklin/government-agendas.html",
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/robertson/evidence/franklin/August-17-2026-Agenda.pdf",
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/robertson/evidence/franklin/images/August-17-2026-Agenda.png"
+      ]
+    },
+    {
+      "id": "robertson-hearne-208-fulton-fence-variance-2026-08-25",
+      "county": "Robertson",
+      "project_name": "208 Fulton fence variance",
+      "reviewed": true,
+      "review_decision": "exclude",
+      "canonical_member_ids": [
+        "robertson-hearne-208-fulton-fence-variance-2026-08-25"
+      ],
+      "disposition_reason": "Private/small fence-variance matter was tabled; no business buyer or approved work should be exported.",
+      "source_local_paths_checked": [
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/robertson/evidence/hearne/agenda-09152026-251.pdf"
+      ]
+    },
+    {
+      "id": "robertson-hearne-iron-oak-lots-114-115-variance-2026-08-25",
+      "county": "Robertson",
+      "project_name": "Iron Oak Reserve lots 114 and 115 variance",
+      "reviewed": true,
+      "review_decision": "watchlist",
+      "canonical_member_ids": [
+        "robertson-hearne-iron-oak-lots-114-115-variance-2026-08-25"
+      ],
+      "disposition_reason": "Planning-stage signal without a confirmed permit, current construction status or open trade package.",
+      "source_local_paths_checked": [
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/robertson/evidence/hearne/2026-08-20-pnz-agenda.pdf",
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/robertson/evidence/hearne/agenda-09152026-251.pdf",
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/robertson/evidence/robertsoncad/property-93096-2026.html",
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/robertson/evidence/robertsoncad/search-Iron_Oak.json"
+      ]
+    },
+    {
+      "id": "robertson-hearne-lt9x-lt9f-blk-g-variance-2026-08-26",
+      "county": "Robertson",
+      "project_name": "LT 9X and LT 9F Block G Hearne variance",
+      "reviewed": true,
+      "review_decision": "watchlist",
+      "canonical_member_ids": [
+        "robertson-hearne-lt9x-lt9f-blk-g-variance-2026-08-26"
+      ],
+      "disposition_reason": "Planning-stage signal without a confirmed permit, current construction status or open trade package.",
+      "source_local_paths_checked": [
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/robertson/evidence/hearne/2026-08-20-pnz-agenda.pdf",
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/robertson/evidence/hearne/agenda-09152026-251.pdf"
+      ]
+    },
+    {
+      "id": "robertson-hearne-san-antonio-water-pumping-station-rehab-2026-09-03",
+      "county": "Robertson",
+      "project_name": "San Antonio Water Pumping Station Rehabilitation CDBG-MIT",
+      "reviewed": true,
+      "review_decision": "watchlist",
+      "canonical_member_ids": [
+        "robertson-hearne-san-antonio-water-pumping-station-rehab-2026-09-03"
+      ],
+      "disposition_reason": "Expired or historical bid/procurement item; useful context only until award/current status is verified.",
+      "source_local_paths_checked": [
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/robertson/evidence/hearne/agenda-09032026-250.pdf",
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/robertson/evidence/hearne/agenda-09152026-251.pdf"
+      ]
+    },
+    {
+      "id": "robertson-hearne-el-construction-w-blackshear-2026-09-15",
+      "county": "Robertson",
+      "project_name": "EL Construction petition for AB 31 G A Nixon tract on West Blackshear Street",
+      "reviewed": true,
+      "review_decision": "watchlist",
+      "canonical_member_ids": [
+        "robertson-hearne-el-construction-w-blackshear-2026-09-15"
+      ],
+      "disposition_reason": "Planning-stage signal without a confirmed permit, current construction status or open trade package.",
+      "source_local_paths_checked": [
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/robertson/evidence/hearne/agenda-09152026-251.pdf",
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/robertson/evidence/robertsoncad/property-20833-2026.html",
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/robertson/evidence/robertsoncad/search-EL_CONSTRUCTION.json"
+      ]
+    },
+    {
+      "id": "statewide-tdlr-tabs-TABS2026003432",
+      "county": "Washington",
+      "project_name": "Brenham Family Park-Phase 1",
+      "reviewed": true,
+      "review_decision": "watchlist",
+      "canonical_member_ids": [
+        "statewide-tdlr-tabs-TABS2026003432"
+      ],
+      "disposition_reason": "TDLR registration-only signal; needs local permit, current status or contractor path before detailed use.",
+      "source_local_paths_checked": [
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2026003432.html"
+      ]
+    },
+    {
+      "id": "statewide-tdlr-tabs-TABS2026003929",
+      "county": "Washington",
+      "project_name": "Camp for All",
+      "reviewed": true,
+      "review_decision": "watchlist",
+      "canonical_member_ids": [
+        "statewide-tdlr-tabs-TABS2026003929"
+      ],
+      "disposition_reason": "TDLR registration-only signal; needs local permit, current status or contractor path before detailed use.",
+      "source_local_paths_checked": [
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2026003929.html"
+      ]
+    },
+    {
+      "id": "statewide-tdlr-tabs-TABS2026005166",
+      "county": "Washington",
+      "project_name": "Home2Suites by Hilton - Brenham",
+      "reviewed": true,
+      "review_decision": "watchlist",
+      "canonical_member_ids": [
+        "statewide-tdlr-tabs-TABS2026005166"
+      ],
+      "disposition_reason": "TDLR registration-only signal; needs local permit, current status or contractor path before detailed use.",
+      "source_local_paths_checked": [
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2026005166.html"
+      ]
+    },
+    {
+      "id": "statewide-tdlr-tabs-TABS2026006791",
+      "county": "Washington",
+      "project_name": "City of Brenham Surface Water Treatment Rehabilitation Expansion",
+      "reviewed": true,
+      "review_decision": "watchlist",
+      "canonical_member_ids": [
+        "statewide-tdlr-tabs-TABS2026006791"
+      ],
+      "disposition_reason": "TDLR registration-only signal; needs local permit, current status or contractor path before detailed use.",
+      "source_local_paths_checked": [
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2026006791.html"
+      ]
+    },
+    {
+      "id": "statewide-tdlr-tabs-TABS2026007161",
+      "county": "Washington",
+      "project_name": "Brenham AT Challenge",
+      "reviewed": true,
+      "review_decision": "watchlist",
+      "canonical_member_ids": [
+        "statewide-tdlr-tabs-TABS2026007161"
+      ],
+      "disposition_reason": "TDLR registration-only signal; needs local permit, current status or contractor path before detailed use.",
+      "source_local_paths_checked": [
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2026007161.html"
+      ]
+    },
+    {
+      "id": "statewide-tdlr-tabs-TABS2026007651",
+      "county": "Washington",
+      "project_name": "Viridien US HPC Hub",
+      "reviewed": true,
+      "review_decision": "watchlist",
+      "canonical_member_ids": [
+        "statewide-tdlr-tabs-TABS2026007651"
+      ],
+      "disposition_reason": "TDLR registration-only signal; needs local permit, current status or contractor path before detailed use.",
+      "source_local_paths_checked": [
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2026007651.html"
+      ]
+    },
+    {
+      "id": "statewide-tdlr-tabs-TABS2026008498",
+      "county": "Washington",
+      "project_name": "Redeemer Church Campus",
+      "reviewed": true,
+      "review_decision": "watchlist",
+      "canonical_member_ids": [
+        "statewide-tdlr-tabs-TABS2026008498"
+      ],
+      "disposition_reason": "TDLR registration-only signal; needs local permit, current status or contractor path before detailed use.",
+      "source_local_paths_checked": [
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2026008498.html"
+      ]
+    },
+    {
+      "id": "statewide-tdlr-tabs-TABS2026009609",
+      "county": "Washington",
+      "project_name": "The Toasted Yolk Cafe - Brenham",
+      "reviewed": true,
+      "review_decision": "watchlist",
+      "canonical_member_ids": [
+        "statewide-tdlr-tabs-TABS2026009609"
+      ],
+      "disposition_reason": "TDLR registration-only signal; needs local permit, current status or contractor path before detailed use.",
+      "source_local_paths_checked": [
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2026009609.html"
+      ]
+    },
+    {
+      "id": "statewide-tdlr-tabs-TABS2026011144",
+      "county": "Washington",
+      "project_name": "Eye Clinic Building",
+      "reviewed": true,
+      "review_decision": "watchlist",
+      "canonical_member_ids": [
+        "statewide-tdlr-tabs-TABS2026011144"
+      ],
+      "disposition_reason": "TDLR registration-only signal; needs local permit, current status or contractor path before detailed use.",
+      "source_local_paths_checked": [
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2026011144.html"
+      ]
+    },
+    {
+      "id": "statewide-tdlr-tabs-TABS2026011149",
+      "county": "Washington",
+      "project_name": "Office Building",
+      "reviewed": true,
+      "review_decision": "watchlist",
+      "canonical_member_ids": [
+        "statewide-tdlr-tabs-TABS2026011149"
+      ],
+      "disposition_reason": "TDLR registration-only signal; needs local permit, current status or contractor path before detailed use.",
+      "source_local_paths_checked": [
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2026011149.html"
+      ]
+    },
+    {
+      "id": "statewide-tdlr-tabs-TABS2026011560",
+      "county": "Washington",
+      "project_name": "Sacrifice Vineyards",
+      "reviewed": true,
+      "review_decision": "watchlist",
+      "canonical_member_ids": [
+        "statewide-tdlr-tabs-TABS2026011560"
+      ],
+      "disposition_reason": "TDLR registration-only signal; needs local permit, current status or contractor path before detailed use.",
+      "source_local_paths_checked": [
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2026011560.html"
+      ]
+    },
+    {
+      "id": "statewide-tdlr-tabs-TABS2026012540",
+      "county": "Washington",
+      "project_name": "Valmont Highway 290 Entrances",
+      "reviewed": true,
+      "review_decision": "watchlist",
+      "canonical_member_ids": [
+        "statewide-tdlr-tabs-TABS2026012540"
+      ],
+      "disposition_reason": "TDLR registration-only signal; needs local permit, current status or contractor path before detailed use.",
+      "source_local_paths_checked": [
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2026012540.html"
+      ]
+    },
+    {
+      "id": "statewide-tdlr-tabs-TABS2026012963",
+      "county": "Washington",
+      "project_name": "Rally Room",
+      "reviewed": true,
+      "review_decision": "watchlist",
+      "canonical_member_ids": [
+        "statewide-tdlr-tabs-TABS2026012963"
+      ],
+      "disposition_reason": "TDLR registration-only signal; needs local permit, current status or contractor path before detailed use.",
+      "source_local_paths_checked": [
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2026012963.html"
+      ]
+    },
+    {
+      "id": "statewide-tdlr-tabs-TABS2026014210",
+      "county": "Washington",
+      "project_name": "Select Furnishing Parking Improvements",
+      "reviewed": true,
+      "review_decision": "watchlist",
+      "canonical_member_ids": [
+        "statewide-tdlr-tabs-TABS2026014210"
+      ],
+      "disposition_reason": "TDLR registration-only signal; needs local permit, current status or contractor path before detailed use.",
+      "source_local_paths_checked": [
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2026014210.html"
+      ]
+    },
+    {
+      "id": "statewide-tdlr-tabs-TABS2026015454",
+      "county": "Washington",
+      "project_name": "Brenham Housing Authority",
+      "reviewed": true,
+      "review_decision": "watchlist",
+      "canonical_member_ids": [
+        "statewide-tdlr-tabs-TABS2026015454"
+      ],
+      "disposition_reason": "TDLR registration-only signal; needs local permit, current status or contractor path before detailed use.",
+      "source_local_paths_checked": [
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2026015454.html"
+      ]
+    },
+    {
+      "id": "statewide-tdlr-tabs-TABS2026016298",
+      "county": "Washington",
+      "project_name": "Brenham Industrial Warehouse",
+      "reviewed": true,
+      "review_decision": "watchlist",
+      "canonical_member_ids": [
+        "statewide-tdlr-tabs-TABS2026016298"
+      ],
+      "disposition_reason": "TDLR registration-only signal; needs local permit, current status or contractor path before detailed use.",
+      "source_local_paths_checked": [
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2026016298.html"
+      ]
+    },
+    {
+      "id": "statewide-tdlr-tabs-TABS2026017134",
+      "county": "Washington",
+      "project_name": "Thielemann Workspace Reconfiguration",
+      "reviewed": true,
+      "review_decision": "watchlist",
+      "canonical_member_ids": [
+        "statewide-tdlr-tabs-TABS2026017134"
+      ],
+      "disposition_reason": "TDLR registration-only signal; needs local permit, current status or contractor path before detailed use.",
+      "source_local_paths_checked": [
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2026017134.html"
+      ]
+    },
+    {
+      "id": "statewide-tdlr-tabs-TABS2026017664",
+      "county": "Washington",
+      "project_name": "1119 Industrial Blvd Addition",
+      "reviewed": true,
+      "review_decision": "watchlist",
+      "canonical_member_ids": [
+        "statewide-tdlr-tabs-TABS2026017664",
+        "washington-brenham-permit-com-add-26-0006"
+      ],
+      "disposition_reason": "Supporting evidence for canonical project group washington-brenham-permit-com-add-26-0006; keep for audit and dedup context.",
+      "source_local_paths_checked": [
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2026017664.html",
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/brenham-permits/2026-08.pdf",
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/cad/fresh-StreetNumber_1119_StreetName_Industrial_Year_2026.json"
+      ]
+    },
+    {
+      "id": "statewide-tdlr-tabs-TABS2026018795",
+      "county": "Washington",
+      "project_name": "Blinn Wheeler Hall South Wing Flooring Replacement",
+      "reviewed": true,
+      "review_decision": "watchlist",
+      "canonical_member_ids": [
+        "statewide-tdlr-tabs-TABS2026018795"
+      ],
+      "disposition_reason": "TDLR registration-only signal; needs local permit, current status or contractor path before detailed use.",
+      "source_local_paths_checked": [
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2026018795.html"
+      ]
+    },
+    {
+      "id": "statewide-tdlr-tabs-TABS2026019757",
+      "county": "Washington",
+      "project_name": "Cannery Center Carriage House",
+      "reviewed": true,
+      "review_decision": "watchlist",
+      "canonical_member_ids": [
+        "statewide-tdlr-tabs-TABS2026019757"
+      ],
+      "disposition_reason": "TDLR registration-only signal; needs local permit, current status or contractor path before detailed use.",
+      "source_local_paths_checked": [
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2026019757.html"
+      ]
+    },
+    {
+      "id": "statewide-tdlr-tabs-TABS2026020346",
+      "county": "Washington",
+      "project_name": "Frost Brenham Financial Center",
+      "reviewed": true,
+      "review_decision": "watchlist",
+      "canonical_member_ids": [
+        "statewide-tdlr-tabs-TABS2026020346",
+        "washington-brenham-permit-com-new-26-0011"
+      ],
+      "disposition_reason": "Supporting evidence for canonical project group washington-brenham-permit-com-new-26-0011; keep for audit and dedup context.",
+      "source_local_paths_checked": [
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2026020346.html",
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/brenham-permits/2026-07.pdf",
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/cad/fresh4-StreetNumber_862_Year_2026.json",
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/business/frost-bank-location.html",
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/business/spawglass-home.html"
+      ]
+    },
+    {
+      "id": "statewide-tdlr-tabs-TABS2026020756",
+      "county": "Washington",
+      "project_name": "Sacrifice Vineyards II",
+      "reviewed": true,
+      "review_decision": "watchlist",
+      "canonical_member_ids": [
+        "statewide-tdlr-tabs-TABS2026020756"
+      ],
+      "disposition_reason": "TDLR registration-only signal; needs local permit, current status or contractor path before detailed use.",
+      "source_local_paths_checked": [
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2026020756.html"
+      ]
+    },
+    {
+      "id": "statewide-tdlr-tabs-TABS2026021492",
+      "county": "Washington",
+      "project_name": "Citizens National Bank",
+      "reviewed": true,
+      "review_decision": "watchlist",
+      "canonical_member_ids": [
+        "statewide-tdlr-tabs-TABS2026021492",
+        "washington-brenham-permit-com-new-26-0012"
+      ],
+      "disposition_reason": "Supporting evidence for canonical project group washington-brenham-permit-com-new-26-0012; keep for audit and dedup context.",
+      "source_local_paths_checked": [
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2026021492.html",
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/brenham-permits/2026-08.pdf",
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/cad/fresh-StreetNumber_400_StreetName_Austin_Year_2026.json",
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/business/ebco.html"
+      ]
+    },
+    {
+      "id": "statewide-tdlr-tabs-TABS2026022754",
+      "county": "Washington",
+      "project_name": "Paving & Drainage Improvements",
+      "reviewed": true,
+      "review_decision": "watchlist",
+      "canonical_member_ids": [
+        "statewide-tdlr-tabs-TABS2026022754",
+        "washington-brenham-permit-misc-prkg-26-0018-grace-drainage"
+      ],
+      "disposition_reason": "Supporting evidence for canonical project group washington-brenham-permit-misc-prkg-26-0018-grace-drainage; keep for audit and dedup context.",
+      "source_local_paths_checked": [
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2026022754.html",
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/brenham-permits/2026-07.pdf"
+      ]
+    },
+    {
+      "id": "statewide-tdlr-tabs-TABS2026023085",
+      "county": "Washington",
+      "project_name": "Edward Jones Branch #96683",
+      "reviewed": true,
+      "review_decision": "watchlist",
+      "canonical_member_ids": [
+        "statewide-tdlr-tabs-TABS2026023085",
+        "washington-brenham-permit-com-new-26-0014"
+      ],
+      "disposition_reason": "Supporting evidence for canonical project group washington-brenham-permit-com-new-26-0014; keep for audit and dedup context.",
+      "source_local_paths_checked": [
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2026023085.html",
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/brenham-permits/2026-06.pdf",
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/cad/fresh2-StreetNumber_1504_StreetName_Day_Year_2026.json"
+      ]
+    },
+    {
+      "id": "washington-brenham-permit-com-new-26-0010-apartment",
+      "county": "Washington",
+      "project_name": "Nelson Sosa multifamily apartment building",
+      "reviewed": true,
+      "review_decision": "include",
+      "canonical_member_ids": [
+        "washington-brenham-permit-com-new-26-0010-apartment"
+      ],
+      "disposition_reason": "Brenham multifamily permit is local, recent, permitted and directly fits multiple Masiate residential/commercial trades; subcontract availability remains unknown.",
+      "source_local_paths_checked": [
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/brenham-permits/2026-06.pdf",
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/cad/fresh2-StreetNumber_411_StreetName_Church_Year_2026.json"
+      ]
+    },
+    {
+      "id": "washington-brenham-bid-26-013-city-hall-rtu5",
+      "county": "Washington",
+      "project_name": "Brenham City Hall RTU-5 replacement",
+      "reviewed": true,
+      "review_decision": "watchlist",
+      "canonical_member_ids": [
+        "washington-brenham-bid-26-013-city-hall-rtu5"
+      ],
+      "disposition_reason": "Expired or historical bid/procurement item; useful context only until award/current status is verified.",
+      "source_local_paths_checked": [
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/bids/brenham-purchasing.html",
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/bids/bid-26-013-city-hall-rtu5.pdf"
+      ]
+    },
+    {
+      "id": "washington-brenham-permit-com-add-26-0008-stanpac-silos",
+      "county": "Washington",
+      "project_name": "Stanpac USA storage silo addition",
+      "reviewed": true,
+      "review_decision": "include",
+      "canonical_member_ids": [
+        "washington-brenham-permit-com-add-26-0008-stanpac-silos"
+      ],
+      "disposition_reason": "Stanpac silo addition is local, permitted, and likely needs concrete, metal, utility or site trades; owner/prime status remains unknown.",
+      "source_local_paths_checked": [
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/brenham-permits/2026-06.pdf"
+      ]
+    },
+    {
+      "id": "washington-brenham-permit-com-new-26-0014",
+      "county": "Washington",
+      "project_name": "Lex Investments tenant office buildout",
+      "reviewed": true,
+      "review_decision": "include",
+      "canonical_member_ids": [
+        "statewide-tdlr-tabs-TABS2026023085",
+        "washington-brenham-permit-com-new-26-0014"
+      ],
+      "disposition_reason": "Lex/Edward Jones tenant office buildout is supported by local permit plus TDLR record; interior buildout services fit, but contractor control is unknown.",
+      "source_local_paths_checked": [
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2026023085.html",
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/brenham-permits/2026-06.pdf",
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/cad/fresh2-StreetNumber_1504_StreetName_Day_Year_2026.json"
+      ]
+    },
+    {
+      "id": "washington-brenham-permit-com-roof-26-0003",
+      "county": "Washington",
+      "project_name": "Sage Longwood Holdings commercial roof replacement",
+      "reviewed": true,
+      "review_decision": "include",
+      "canonical_member_ids": [
+        "washington-brenham-permit-com-roof-26-0003"
+      ],
+      "disposition_reason": "Commercial roof replacement is a direct Masiate service fit with recent local permit evidence, even though the listed contractor may control the work.",
+      "source_local_paths_checked": [
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/brenham-permits/2026-06.pdf",
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/cad/fresh2-StreetNumber_1901_StreetName_Longwood_Year_2026.json"
+      ]
+    },
+    {
+      "id": "washington-brenham-permit-com-add-26-0009",
+      "county": "Washington",
+      "project_name": "Brenham Water Treatment Plant rehabilitation and expansion",
+      "reviewed": true,
+      "review_decision": "watchlist",
+      "canonical_member_ids": [
+        "washington-brenham-permit-com-add-26-0009"
+      ],
+      "disposition_reason": "Lower service-fit or lower evidence strength than the included PDF candidates.",
+      "source_local_paths_checked": [
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/brenham-permits/2026-06.pdf",
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/cad/fresh2-StreetNumber_1105_StreetName_Austin_Year_2026.json"
+      ]
+    },
+    {
+      "id": "washington-brenham-permit-com-new-26-0013",
+      "county": "Washington",
+      "project_name": "Wilkins Valley phase 3 public infrastructure / commercial office site development",
+      "reviewed": true,
+      "review_decision": "include",
+      "canonical_member_ids": [
+        "washington-brenham-permit-com-new-26-0013"
+      ],
+      "disposition_reason": "Wilkins Valley phase 3 has recent local permit evidence for public infrastructure/site development and concrete/sitework fit; parcel details need follow-up.",
+      "source_local_paths_checked": [
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/brenham-permits/2026-06.pdf",
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/business/collier-contact.html",
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/cad/fresh2-StreetNumber_1402_StreetName_Jefferson_Year_2026.json"
+      ]
+    },
+    {
+      "id": "washington-brenham-permit-misc-prkg-26-0022-sherwin-williams",
+      "county": "Washington",
+      "project_name": "Sherwin Williams driveway replacement",
+      "reviewed": true,
+      "review_decision": "watchlist",
+      "canonical_member_ids": [
+        "washington-brenham-permit-misc-prkg-26-0022-sherwin-williams"
+      ],
+      "disposition_reason": "Lower service-fit or lower evidence strength than the included PDF candidates.",
+      "source_local_paths_checked": [
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/brenham-permits/2026-06.pdf"
+      ]
+    },
+    {
+      "id": "washington-brenham-permit-com-add-26-0001-rv-parking",
+      "county": "Washington",
+      "project_name": "Brennan Taylor Developments RV parking addition",
+      "reviewed": true,
+      "review_decision": "include",
+      "canonical_member_ids": [
+        "washington-brenham-permit-com-add-26-0001-rv-parking"
+      ],
+      "disposition_reason": "RV parking addition is a modest but direct paving/sitework fit with local permit evidence; contractor and status remain unknown.",
+      "source_local_paths_checked": [
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/brenham-permits/2026-07.pdf"
+      ]
+    },
+    {
+      "id": "statewide-tdlr-tabs-TABS2026024689",
+      "county": "Washington",
+      "project_name": "St Anthony's Heritage Plaza",
+      "reviewed": true,
+      "review_decision": "watchlist",
+      "canonical_member_ids": [
+        "statewide-tdlr-tabs-TABS2026024689"
+      ],
+      "disposition_reason": "TDLR registration-only signal; needs local permit, current status or contractor path before detailed use.",
+      "source_local_paths_checked": [
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2026024689.html"
+      ]
+    },
+    {
+      "id": "washington-brenham-permit-com-new-26-0007",
+      "county": "Washington",
+      "project_name": "Redeemer Church parking lot improvements",
+      "reviewed": true,
+      "review_decision": "include",
+      "canonical_member_ids": [
+        "washington-brenham-permit-com-new-26-0007"
+      ],
+      "disposition_reason": "Redeemer Church parking lot phase is a direct paving/drainage/lighting/fencing fit with local permit evidence; kept separate from the older campus TDLR phase.",
+      "source_local_paths_checked": [
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/brenham-permits/2026-07.pdf",
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/cad/fresh2-StreetNumber_2111_StreetName_Blue_Bell_Year_2026.json"
+      ]
+    },
+    {
+      "id": "washington-brenham-permit-com-new-26-0009-apartments",
+      "county": "Washington",
+      "project_name": "Arete Property Group apartment buildings",
+      "reviewed": true,
+      "review_decision": "include",
+      "canonical_member_ids": [
+        "washington-brenham-permit-com-new-26-0009-apartments"
+      ],
+      "disposition_reason": "Arete apartments are local, recent and permitted with 13 units across two buildings, a strong concrete/framing/finish fit; parcel/contractor details remain incomplete.",
+      "source_local_paths_checked": [
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/brenham-permits/2026-07.pdf",
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/cad/fresh4-StreetNumber_1307_Year_2026.json"
+      ]
+    },
+    {
+      "id": "washington-brenham-permit-misc-prkg-26-0018-grace-drainage",
+      "county": "Washington",
+      "project_name": "Grace Community Fellowship paving and drainage improvements",
+      "reviewed": true,
+      "review_decision": "include",
+      "canonical_member_ids": [
+        "statewide-tdlr-tabs-TABS2026022754",
+        "washington-brenham-permit-misc-prkg-26-0018-grace-drainage"
+      ],
+      "disposition_reason": "Grace paving/drainage has both local permit and TDLR support, with direct concrete/drainage/paving fit; named contractor is not exposed.",
+      "source_local_paths_checked": [
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2026022754.html",
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/brenham-permits/2026-07.pdf"
+      ]
+    },
+    {
+      "id": "statewide-tdlr-tabs-TABS2026025600",
+      "county": "Washington",
+      "project_name": "Henderson Park Basketball Court Cover",
+      "reviewed": true,
+      "review_decision": "watchlist",
+      "canonical_member_ids": [
+        "statewide-tdlr-tabs-TABS2026025600"
+      ],
+      "disposition_reason": "TDLR registration-only signal; needs local permit, current status or contractor path before detailed use.",
+      "source_local_paths_checked": [
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2026025600.html"
+      ]
+    },
+    {
+      "id": "washington-brenham-permit-com-new-26-0009-lcra-tower",
+      "county": "Washington",
+      "project_name": "Bluebonnet Electric / LCRA telecommunications tower",
+      "reviewed": true,
+      "review_decision": "watchlist",
+      "canonical_member_ids": [
+        "washington-brenham-permit-com-new-26-0009-lcra-tower"
+      ],
+      "disposition_reason": "Lower service-fit or lower evidence strength than the included PDF candidates.",
+      "source_local_paths_checked": [
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/brenham-permits/2026-07.pdf"
+      ]
+    },
+    {
+      "id": "statewide-tdlr-tabs-TABS2026026153",
+      "county": "Washington",
+      "project_name": "Bluebonnet Electric Cooperative, Interior Finishout",
+      "reviewed": true,
+      "review_decision": "watchlist",
+      "canonical_member_ids": [
+        "statewide-tdlr-tabs-TABS2026026153"
+      ],
+      "disposition_reason": "TDLR registration-only signal; needs local permit, current status or contractor path before detailed use.",
+      "source_local_paths_checked": [
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2026026153.html"
+      ]
+    },
+    {
+      "id": "statewide-tdlr-tabs-TABS2026026194",
+      "county": "Washington",
+      "project_name": "T REX BRENHAM",
+      "reviewed": true,
+      "review_decision": "watchlist",
+      "canonical_member_ids": [
+        "statewide-tdlr-tabs-TABS2026026194"
+      ],
+      "disposition_reason": "TDLR registration-only signal; needs local permit, current status or contractor path before detailed use.",
+      "source_local_paths_checked": [
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2026026194.html"
+      ]
+    },
+    {
+      "id": "statewide-tdlr-tabs-TABS2026026486",
+      "county": "Washington",
+      "project_name": "Remodel/Expansion Wal-Mart Brenham, TX",
+      "reviewed": true,
+      "review_decision": "watchlist",
+      "canonical_member_ids": [
+        "statewide-tdlr-tabs-TABS2026026486"
+      ],
+      "disposition_reason": "TDLR registration-only signal; needs local permit, current status or contractor path before detailed use.",
+      "source_local_paths_checked": [
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2026026486.html"
+      ]
+    },
+    {
+      "id": "washington-brenham-permit-com-new-26-0011",
+      "county": "Washington",
+      "project_name": "Frost Bank Brenham financial center",
+      "reviewed": true,
+      "review_decision": "include",
+      "canonical_member_ids": [
+        "statewide-tdlr-tabs-TABS2026020346",
+        "washington-brenham-permit-com-new-26-0011"
+      ],
+      "disposition_reason": "Frost Bank has local permit, CAD and TDLR support for ground-up bank construction; SpawGlass is listed, so package availability is unknown.",
+      "source_local_paths_checked": [
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2026020346.html",
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/brenham-permits/2026-07.pdf",
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/cad/fresh4-StreetNumber_862_Year_2026.json",
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/business/frost-bank-location.html",
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/business/spawglass-home.html"
+      ]
+    },
+    {
+      "id": "washington-brenham-permit-com-add-26-0006",
+      "county": "Washington",
+      "project_name": "Moeller Electric metal building addition",
+      "reviewed": true,
+      "review_decision": "include",
+      "canonical_member_ids": [
+        "statewide-tdlr-tabs-TABS2026017664",
+        "washington-brenham-permit-com-add-26-0006"
+      ],
+      "disposition_reason": "Moeller Electric has local permit, CAD and TDLR support for a 5,000 sf metal-building addition, a strong metal/concrete/electrical fit.",
+      "source_local_paths_checked": [
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2026017664.html",
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/brenham-permits/2026-08.pdf",
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/cad/fresh-StreetNumber_1119_StreetName_Industrial_Year_2026.json"
+      ]
+    },
+    {
+      "id": "statewide-tdlr-tabs-TABS2026027395",
+      "county": "Washington",
+      "project_name": "Office Expansion",
+      "reviewed": true,
+      "review_decision": "watchlist",
+      "canonical_member_ids": [
+        "statewide-tdlr-tabs-TABS2026027395"
+      ],
+      "disposition_reason": "TDLR registration-only signal; needs local permit, current status or contractor path before detailed use.",
+      "source_local_paths_checked": [
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2026027395.html"
+      ]
+    },
+    {
+      "id": "statewide-tdlr-tabs-TABS2026027672",
+      "county": "Washington",
+      "project_name": "BRENHAM HEAD SPA & WELLNESS",
+      "reviewed": true,
+      "review_decision": "watchlist",
+      "canonical_member_ids": [
+        "statewide-tdlr-tabs-TABS2026027672"
+      ],
+      "disposition_reason": "TDLR registration-only signal; needs local permit, current status or contractor path before detailed use.",
+      "source_local_paths_checked": [
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2026027672.html"
+      ]
+    },
+    {
+      "id": "statewide-tdlr-tabs-TABS2026027978",
+      "county": "Washington",
+      "project_name": "City of Brenham Maintenance Building Remodel",
+      "reviewed": true,
+      "review_decision": "watchlist",
+      "canonical_member_ids": [
+        "statewide-tdlr-tabs-TABS2026027978",
+        "washington-brenham-permit-com-rem-26-0028"
+      ],
+      "disposition_reason": "Supporting evidence for canonical project group washington-brenham-permit-com-rem-26-0028; keep for audit and dedup context.",
+      "source_local_paths_checked": [
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2026027978.html",
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/brenham-permits/2026-08.pdf"
+      ]
+    },
+    {
+      "id": "washington-brenham-bid-26-015-henderson-park",
+      "county": "Washington",
+      "project_name": "Henderson Park Basketball Court Cover",
+      "reviewed": true,
+      "review_decision": "watchlist",
+      "canonical_member_ids": [
+        "washington-brenham-bid-26-015-henderson-park"
+      ],
+      "disposition_reason": "Expired or historical bid/procurement item; useful context only until award/current status is verified.",
+      "source_local_paths_checked": [
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/bids/brenham-purchasing.html",
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/bids/bid-26-015-henderson-park.pdf"
+      ]
+    },
+    {
+      "id": "washington-brenham-permit-com-rem-26-0027-central-warehouse",
+      "county": "Washington",
+      "project_name": "City of Brenham Central Warehouse remediation and remodel",
+      "reviewed": true,
+      "review_decision": "watchlist",
+      "canonical_member_ids": [
+        "washington-brenham-permit-com-rem-26-0027-central-warehouse"
+      ],
+      "disposition_reason": "Lower service-fit or lower evidence strength than the included PDF candidates.",
+      "source_local_paths_checked": [
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/brenham-permits/2026-08.pdf"
+      ]
+    },
+    {
+      "id": "washington-brenham-permit-com-rem-26-0028",
+      "county": "Washington",
+      "project_name": "City of Brenham Maintenance Building fire remodel",
+      "reviewed": true,
+      "review_decision": "include",
+      "canonical_member_ids": [
+        "statewide-tdlr-tabs-TABS2026027978",
+        "washington-brenham-permit-com-rem-26-0028"
+      ],
+      "disposition_reason": "Brenham maintenance building fire remodel has local permit plus TDLR support for code/fire repair, a direct remodel/MEP/finish fit.",
+      "source_local_paths_checked": [
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2026027978.html",
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/brenham-permits/2026-08.pdf"
+      ]
+    },
+    {
+      "id": "washington-brenham-permit-com-new-26-0012",
+      "county": "Washington",
+      "project_name": "Citizens National Bank new construction and parking addition",
+      "reviewed": true,
+      "review_decision": "include",
+      "canonical_member_ids": [
+        "statewide-tdlr-tabs-TABS2026021492",
+        "washington-brenham-permit-com-new-26-0012"
+      ],
+      "disposition_reason": "Citizens National Bank has local permit, CAD and TDLR support for ground-up bank construction plus parking, with broad trade fit and unknown package availability.",
+      "source_local_paths_checked": [
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2026021492.html",
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/brenham-permits/2026-08.pdf",
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/cad/fresh-StreetNumber_400_StreetName_Austin_Year_2026.json",
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/business/ebco.html"
+      ]
+    },
+    {
+      "id": "statewide-tdlr-tabs-TABS2027001065",
+      "county": "Washington",
+      "project_name": "TSC Brenham Fusion",
+      "reviewed": true,
+      "review_decision": "include",
+      "canonical_member_ids": [
+        "statewide-tdlr-tabs-TABS2027001065"
+      ],
+      "disposition_reason": "TSC interior renovation is a direct remodel fit, but the TDLR estimated start is 2027, so it should be labeled future/unknown rather than open work.",
+      "source_local_paths_checked": [
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2027001065.html"
+      ]
+    },
+    {
+      "id": "statewide-tdlr-tabs-TABS2027001180",
+      "county": "Washington",
+      "project_name": "Brenham Rodeo",
+      "reviewed": true,
+      "review_decision": "include",
+      "canonical_member_ids": [
+        "statewide-tdlr-tabs-TABS2027001180"
+      ],
+      "disposition_reason": "Brenham Rodeo C-store has a very recent TDLR registration and direct new-construction fit, but it is registration-only and starts after this pilot window.",
+      "source_local_paths_checked": [
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2027001180.html"
+      ]
+    },
+    {
+      "id": "washington-burton-isd-fire-suppression-line",
+      "county": "Washington",
+      "project_name": "Burton ISD fire suppression line connection agreement",
+      "reviewed": true,
+      "review_decision": "watchlist",
+      "canonical_member_ids": [
+        "washington-burton-isd-fire-suppression-line"
+      ],
+      "disposition_reason": "Planning-stage signal without a confirmed permit, current construction status or open trade package.",
+      "source_local_paths_checked": [
+        "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/burton/special-called-council-2026-09-22.pdf"
+      ]
+    }
+  ]
+}
