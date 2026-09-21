@@ -1,0 +1,129 @@
+[
+  {
+    "name": "City of Hearne Agenda Center and Planning/P&Z documents",
+    "url": "https://www.cityofhearne.org/AgendaCenter",
+    "county": "Robertson",
+    "requested_from": "2026-06-22",
+    "requested_to": "2026-09-20",
+    "covered_from": "2026-06-23",
+    "covered_to": "2026-09-15",
+    "status": "complete",
+    "records_found": 5,
+    "files_read": [
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/robertson/evidence/hearne/agenda-center.html",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/robertson/evidence/hearne/planning-and-development.html",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/robertson/evidence/hearne/2026-08-20-pnz-agenda.pdf",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/robertson/evidence/hearne/agenda-09032026-250.pdf",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/robertson/evidence/hearne/agenda-09152026-251.pdf",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/robertson/evidence/hearne/agenda-08252026-247.pdf",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/robertson/evidence/hearne/agenda-08262026-248.pdf",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/robertson/evidence/hearne/agenda-08272026-249.pdf"
+    ],
+    "reason": "Official agenda center and P&Z page were checked for recent planning, variance and public-works items. Useful records came from the August 20 P&Z agenda, September 3 special agenda and September 15 packet with recent minutes. Some PDFs were scanned/noisy but the key records were readable with pdftotext.",
+    "next_cursor": null,
+    "retrieved_at": "2026-09-21T02:12:29Z"
+  },
+  {
+    "name": "Robertson CAD property search",
+    "url": "https://esearch.robertsoncad.com/",
+    "county": "Robertson",
+    "requested_from": "2026-06-22",
+    "requested_to": "2026-09-20",
+    "covered_from": "2026",
+    "covered_to": "2026",
+    "status": "partial",
+    "records_found": 2,
+    "files_read": [
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/robertson/evidence/robertsoncad/home.html",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/robertson/evidence/robertsoncad/search-EL_CONSTRUCTION.json",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/robertson/evidence/robertsoncad/property-20833-2026.html",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/robertson/evidence/robertsoncad/search-Iron_Oak.json",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/robertson/evidence/robertsoncad/property-93096-2026.html",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/robertson/evidence/robertsoncad/search-LOTS_114_115_IRON_OAK_RESERVE.json",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/robertson/evidence/robertsoncad/search-208_Fulton_Hearne.json"
+    ],
+    "reason": "CAD was used to match agenda items to ownership and parcel context. EL Construction and Iron Oak parent tract matched; exact Iron Oak lots 114/115, 208 Fulton and LT 9X/LT 9F did not produce clean exact matches in this pass.",
+    "next_cursor": "Use specific deed references and later roll updates for exact-lot searches",
+    "retrieved_at": "2026-09-21T02:12:29Z"
+  },
+  {
+    "name": "City of Franklin official agendas",
+    "url": "https://www.cityoffranklintx.com/government/agendas/",
+    "county": "Robertson",
+    "requested_from": "2026-06-22",
+    "requested_to": "2026-09-20",
+    "covered_from": "2026-08-17",
+    "covered_to": "2026-09-21",
+    "status": "partial",
+    "records_found": 1,
+    "files_read": [
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/robertson/evidence/franklin/government-agendas.html",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/robertson/evidence/franklin/August-17-2026-Agenda.pdf",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/robertson/evidence/franklin/August-24-2026-Special-Called-Agenda.pdf",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/robertson/evidence/franklin/September-21-2026-Agenda.pdf",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/robertson/evidence/franklin/images/August-17-2026-Agenda.png",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/robertson/evidence/franklin/images/August-24-2026-Special-Called-Agenda.png",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/robertson/evidence/franklin/images/September-21-2026-Agenda.png"
+    ],
+    "reason": "The official agenda page only exposed three recent agenda PDFs in this pass. They were scanned, so images were preserved and reviewed. One City Park pickleball/lighting item was found; Aug. 24 and Sept. 21 did not show construction leads.",
+    "next_cursor": "Find minutes or 4B board packets for August 17 action result",
+    "retrieved_at": "2026-09-21T02:12:29Z"
+  },
+  {
+    "name": "City of Calvert agendas/minutes and forms/permits",
+    "url": "https://www.calverttx.gov/agendasandminutes",
+    "county": "Robertson",
+    "requested_from": "2026-06-22",
+    "requested_to": "2026-09-20",
+    "covered_from": "2026-01-26",
+    "covered_to": "2026-09-22",
+    "status": "blocked",
+    "records_found": 0,
+    "files_read": [
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/robertson/evidence/calvert/source-1.txt",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/robertson/evidence/calvert/source-2.txt",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/robertson/evidence/calvert/source-3.txt",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/robertson/evidence/calvert/Sept-2-2026-H.D.C.-NOTICE-AGENDA.html",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/robertson/evidence/calvert/H.D.C.-8.13.2026-Notice-and-Agenda.html",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/robertson/evidence/calvert/HDC-8.4.2026-Meeting-Notice-and-Agenda.html"
+    ],
+    "reason": "Official pages and MembershipWare resource metadata were accessible and listed HDC/agendas, but direct blob downloads returned access-denied or viewer shells rather than readable official PDFs. No issued permit register was exposed on the forms/permits page during this pass.",
+    "next_cursor": "Use the Calvert site UI manually or ask the city for accessible agenda/minute PDFs; do not rely on nonofficial summaries without the official record.",
+    "retrieved_at": "2026-09-21T02:12:29Z"
+  },
+  {
+    "name": "City of Bremond official website",
+    "url": "https://cityofbremondtx.com/",
+    "county": "Robertson",
+    "requested_from": "2026-06-22",
+    "requested_to": "2026-09-20",
+    "covered_from": "2026-09-20",
+    "covered_to": "2026-09-20",
+    "status": "empty",
+    "records_found": 0,
+    "files_read": [
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/robertson/evidence/bremond/home.html"
+    ],
+    "reason": "The official site was saved and searched for agenda, permit, bid, project and construction terms. Visible navigation/pages did not expose recent address-level building/project records during this pass.",
+    "next_cursor": "Check the Mayor/Council agenda section manually or request recent minutes if Bremond becomes a priority.",
+    "retrieved_at": "2026-09-21T02:12:29Z"
+  },
+  {
+    "name": "Robertson County official public notices and OSSF page",
+    "url": "https://www.co.robertson.tx.us/",
+    "county": "Robertson",
+    "requested_from": "2026-06-22",
+    "requested_to": "2026-09-20",
+    "covered_from": "2024-09-20",
+    "covered_to": "2026-09-20",
+    "status": "partial",
+    "records_found": 0,
+    "files_read": [
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/robertson/evidence/county/home.html",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/robertson/evidence/county/2026-03-31-buffalo-meadow-tax-abatement-notice.pdf"
+    ],
+    "reason": "County public notices and OSSF link were checked. The site exposes forms, public hearings, tax abatements and older bid notices, but not address-level issued OSSF/building records in the requested recent window. Statewide environmental and tax portals were intentionally excluded for the statewide worker.",
+    "next_cursor": "If approved later, request county OSSF issued-permit logs directly or check commissioner court minutes for awards not posted as separate notices.",
+    "retrieved_at": "2026-09-21T02:12:29Z"
+  }
+]
