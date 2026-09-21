@@ -22,7 +22,7 @@ REVIEW_INPUT = pathlib.Path(
 RUNTIME_OUT = pathlib.Path(
     "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/finish/contacts"
 )
-MIRROR_OUT = pathlib.Path("docs/plans/masiate-pilot-finish-contacts-output")
+MIRROR_OUT = pathlib.Path("propertystack/data/masiate/pilot-20260920/workers/finish-contacts")
 
 
 SELECTED_CONTACTS = [

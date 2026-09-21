@@ -12,7 +12,7 @@ from pathlib import Path
 ROOT = Path("/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048")
 INPUT = ROOT / "review-input"
 OUT = ROOT / "finish" / "review-west"
-MIRROR = Path("docs/plans/masiate-review-west-output")
+MIRROR = Path("propertystack/data/masiate/pilot-20260920/workers/review-west")
 COUNTIES = {"Robertson", "Burleson", "Washington"}
 
 
