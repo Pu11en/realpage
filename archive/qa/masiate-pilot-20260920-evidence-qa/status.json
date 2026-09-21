@@ -1,0 +1,16 @@
+{
+  "role": "evidence-qa",
+  "state": "complete",
+  "started_at": "2026-09-21T02:19:57Z",
+  "checkpoint_at": "2026-09-21T02:23:37Z",
+  "finished_at": "2026-09-21T02:23:37Z",
+  "checked_count": 267,
+  "unchecked_count": 0,
+  "finding_count": 10,
+  "high_or_medium_finding_count": 8,
+  "output_paths": {
+    "findings_json": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/finish/evidence-qa/findings.json",
+    "summary_md": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/finish/evidence-qa/summary.md",
+    "status_json": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/finish/evidence-qa/status.json"
+  }
+}
