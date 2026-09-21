@@ -1,0 +1,275 @@
+[
+  {
+    "name": "TDLR TABS Brazos recent",
+    "url": "https://www.tdlr.texas.gov/TABS/Search",
+    "county": "Brazos",
+    "requested_from": "06/22/2026",
+    "requested_to": "09/20/2026",
+    "covered_from": "06/22/2026",
+    "covered_to": "09/20/2026",
+    "status": "complete",
+    "records_found": 69,
+    "files_read": [
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/brazos_recent_0000.json"
+    ],
+    "reason": "Official TDLR SearchProjects endpoint returned 69 rows and all 69 project detail pages were downloaded/converted for this county/window.",
+    "next_cursor": null,
+    "retrieved_at": "2026-09-21T01:53:30Z",
+    "details_saved": 69
+  },
+  {
+    "name": "TDLR TABS Brazos backfill",
+    "url": "https://www.tdlr.texas.gov/TABS/Search",
+    "county": "Brazos",
+    "requested_from": "09/20/2025",
+    "requested_to": "06/21/2026",
+    "covered_from": "09/20/2025",
+    "covered_to": "06/21/2026",
+    "status": "partial",
+    "records_found": 172,
+    "files_read": [
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/brazos_backfill_0000.json",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/brazos_backfill_0100.json"
+    ],
+    "reason": "Official TDLR SearchProjects endpoint returned 172 rows for county id 2021; 51 project detail pages were downloaded and converted to records in this bounded pass.",
+    "next_cursor": "Continue downloading remaining TDLR detail pages from the saved search-result JSON for this county/window.",
+    "retrieved_at": "2026-09-21T01:56:04Z",
+    "details_saved": 51
+  },
+  {
+    "name": "TDLR TABS Robertson recent",
+    "url": "https://www.tdlr.texas.gov/TABS/Search",
+    "county": "Robertson",
+    "requested_from": "06/22/2026",
+    "requested_to": "09/20/2026",
+    "covered_from": "06/22/2026",
+    "covered_to": "09/20/2026",
+    "status": "complete",
+    "records_found": 0,
+    "files_read": [
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/robertson_recent_0000.json"
+    ],
+    "reason": "Official TDLR SearchProjects endpoint returned 0 rows and all 0 project detail pages were downloaded/converted for this county/window.",
+    "next_cursor": null,
+    "retrieved_at": "2026-09-21T01:59:04Z",
+    "details_saved": 0
+  },
+  {
+    "name": "TDLR TABS Burleson recent",
+    "url": "https://www.tdlr.texas.gov/TABS/Search",
+    "county": "Burleson",
+    "requested_from": "06/22/2026",
+    "requested_to": "09/20/2026",
+    "covered_from": "06/22/2026",
+    "covered_to": "09/20/2026",
+    "status": "complete",
+    "records_found": 3,
+    "files_read": [
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/burleson_recent_0000.json"
+    ],
+    "reason": "Official TDLR SearchProjects endpoint returned 3 rows and all 3 project detail pages were downloaded/converted for this county/window.",
+    "next_cursor": null,
+    "retrieved_at": "2026-09-21T01:59:06Z",
+    "details_saved": 3
+  },
+  {
+    "name": "TDLR TABS Grimes recent",
+    "url": "https://www.tdlr.texas.gov/TABS/Search",
+    "county": "Grimes",
+    "requested_from": "06/22/2026",
+    "requested_to": "09/20/2026",
+    "covered_from": "06/22/2026",
+    "covered_to": "09/20/2026",
+    "status": "complete",
+    "records_found": 2,
+    "files_read": [
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/grimes_recent_0000.json"
+    ],
+    "reason": "Official TDLR SearchProjects endpoint returned 2 rows and all 2 project detail pages were downloaded/converted for this county/window.",
+    "next_cursor": null,
+    "retrieved_at": "2026-09-21T01:59:15Z",
+    "details_saved": 2
+  },
+  {
+    "name": "TDLR TABS Leon recent",
+    "url": "https://www.tdlr.texas.gov/TABS/Search",
+    "county": "Leon",
+    "requested_from": "06/22/2026",
+    "requested_to": "09/20/2026",
+    "covered_from": "06/22/2026",
+    "covered_to": "09/20/2026",
+    "status": "complete",
+    "records_found": 0,
+    "files_read": [
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/leon_recent_0000.json"
+    ],
+    "reason": "Official TDLR SearchProjects endpoint returned 0 rows and all 0 project detail pages were downloaded/converted for this county/window.",
+    "next_cursor": null,
+    "retrieved_at": "2026-09-21T01:59:22Z",
+    "details_saved": 0
+  },
+  {
+    "name": "TDLR TABS Madison recent",
+    "url": "https://www.tdlr.texas.gov/TABS/Search",
+    "county": "Madison",
+    "requested_from": "06/22/2026",
+    "requested_to": "09/20/2026",
+    "covered_from": "06/22/2026",
+    "covered_to": "09/20/2026",
+    "status": "complete",
+    "records_found": 1,
+    "files_read": [
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/madison_recent_0000.json"
+    ],
+    "reason": "Official TDLR SearchProjects endpoint returned 1 rows and all 1 project detail pages were downloaded/converted for this county/window.",
+    "next_cursor": null,
+    "retrieved_at": "2026-09-21T01:59:24Z",
+    "details_saved": 1
+  },
+  {
+    "name": "TDLR TABS Washington recent",
+    "url": "https://www.tdlr.texas.gov/TABS/Search",
+    "county": "Washington",
+    "requested_from": "06/22/2026",
+    "requested_to": "09/20/2026",
+    "covered_from": "06/22/2026",
+    "covered_to": "09/20/2026",
+    "status": "complete",
+    "records_found": 10,
+    "files_read": [
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/washington_recent_0000.json"
+    ],
+    "reason": "Official TDLR SearchProjects endpoint returned 10 rows and all 10 project detail pages were downloaded/converted for this county/window.",
+    "next_cursor": null,
+    "retrieved_at": "2026-09-21T01:59:28Z",
+    "details_saved": 10
+  },
+  {
+    "name": "TDLR TABS Robertson backfill",
+    "url": "https://www.tdlr.texas.gov/TABS/Search",
+    "county": "Robertson",
+    "requested_from": "09/20/2025",
+    "requested_to": "06/21/2026",
+    "covered_from": "09/20/2025",
+    "covered_to": "06/21/2026",
+    "status": "complete",
+    "records_found": 7,
+    "files_read": [
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/robertson_backfill_0000.json"
+    ],
+    "reason": "Official TDLR SearchProjects endpoint returned 7 rows and all 7 project detail pages were downloaded/converted for this county/window.",
+    "next_cursor": null,
+    "retrieved_at": "2026-09-21T01:59:52Z",
+    "details_saved": 7
+  },
+  {
+    "name": "TDLR TABS Burleson backfill",
+    "url": "https://www.tdlr.texas.gov/TABS/Search",
+    "county": "Burleson",
+    "requested_from": "09/20/2025",
+    "requested_to": "06/21/2026",
+    "covered_from": "09/20/2025",
+    "covered_to": "06/21/2026",
+    "status": "complete",
+    "records_found": 9,
+    "files_read": [
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/burleson_backfill_0000.json"
+    ],
+    "reason": "Official TDLR SearchProjects endpoint returned 9 rows and all 9 project detail pages were downloaded/converted for this county/window.",
+    "next_cursor": null,
+    "retrieved_at": "2026-09-21T02:00:11Z",
+    "details_saved": 9
+  },
+  {
+    "name": "TDLR TABS Grimes backfill",
+    "url": "https://www.tdlr.texas.gov/TABS/Search",
+    "county": "Grimes",
+    "requested_from": "09/20/2025",
+    "requested_to": "06/21/2026",
+    "covered_from": "09/20/2025",
+    "covered_to": "06/21/2026",
+    "status": "complete",
+    "records_found": 12,
+    "files_read": [
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/grimes_backfill_0000.json"
+    ],
+    "reason": "Official TDLR SearchProjects endpoint returned 12 rows and all 12 project detail pages were downloaded/converted for this county/window.",
+    "next_cursor": null,
+    "retrieved_at": "2026-09-21T02:00:33Z",
+    "details_saved": 12
+  },
+  {
+    "name": "TDLR TABS Leon backfill",
+    "url": "https://www.tdlr.texas.gov/TABS/Search",
+    "county": "Leon",
+    "requested_from": "09/20/2025",
+    "requested_to": "06/21/2026",
+    "covered_from": "09/20/2025",
+    "covered_to": "06/21/2026",
+    "status": "complete",
+    "records_found": 4,
+    "files_read": [
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/leon_backfill_0000.json"
+    ],
+    "reason": "Official TDLR SearchProjects endpoint returned 4 rows and all 4 project detail pages were downloaded/converted for this county/window.",
+    "next_cursor": null,
+    "retrieved_at": "2026-09-21T02:01:02Z",
+    "details_saved": 4
+  },
+  {
+    "name": "TDLR TABS Madison backfill",
+    "url": "https://www.tdlr.texas.gov/TABS/Search",
+    "county": "Madison",
+    "requested_from": "09/20/2025",
+    "requested_to": "06/21/2026",
+    "covered_from": "09/20/2025",
+    "covered_to": "06/21/2026",
+    "status": "complete",
+    "records_found": 1,
+    "files_read": [
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/madison_backfill_0000.json"
+    ],
+    "reason": "Official TDLR SearchProjects endpoint returned 1 rows and all 1 project detail pages were downloaded/converted for this county/window.",
+    "next_cursor": null,
+    "retrieved_at": "2026-09-21T02:01:13Z",
+    "details_saved": 1
+  },
+  {
+    "name": "TDLR TABS Washington backfill",
+    "url": "https://www.tdlr.texas.gov/TABS/Search",
+    "county": "Washington",
+    "requested_from": "09/20/2025",
+    "requested_to": "06/21/2026",
+    "covered_from": "09/20/2025",
+    "covered_to": "06/21/2026",
+    "status": "partial",
+    "records_found": 28,
+    "files_read": [
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/washington_backfill_0000.json"
+    ],
+    "reason": "Official TDLR SearchProjects endpoint returned 28 rows for county id 2239; 25 project detail pages were downloaded and converted to records in this bounded pass.",
+    "next_cursor": "Continue downloading remaining TDLR detail pages from the saved search-result JSON for this county/window.",
+    "retrieved_at": "2026-09-21T02:01:18Z",
+    "details_saved": 25
+  },
+  {
+    "name": "TCEQ permit search / records online stormwater construction signal",
+    "url": "https://records.tceq.texas.gov/ and https://permit-search.tceq.texas.gov/",
+    "county": "statewide",
+    "requested_from": "06/22/2026",
+    "requested_to": "09/20/2026",
+    "covered_from": null,
+    "covered_to": null,
+    "status": "blocked",
+    "records_found": 0,
+    "files_read": [
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/statewide-signals/tceq/permit-search.html",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/statewide-signals/tceq/records-online.html",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/statewide-signals/tceq/status-stormwater-wastewater.html",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/statewide-signals/tceq/search-brazos-stormwater.html"
+    ],
+    "reason": "Official pages were reachable and records-online exposes WQ / Stormwater Construction General Permit series, but a direct public search for Brazos stormwater construction returned a TCEQ Content Server error; the separate permit-search portal is a JavaScript app and no address-level records were extracted in this bounded pass.",
+    "next_cursor": "Use a browser session or documented TCEQ export route to query WQ / Stormwater Construction General Permit records for each target county; keep as continuation, not an inferred lead source.",
+    "retrieved_at": "2026-09-21T02:06:12Z"
+  }
+]
