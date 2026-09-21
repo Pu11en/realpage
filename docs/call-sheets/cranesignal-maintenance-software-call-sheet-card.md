@@ -2,37 +2,21 @@
 
 ## ✅ What Changed
 
-- Added **website links** for every company.
-- Kept the PDF as a **view-only call sheet**, not a notes worksheet.
-- Added the most useful caller context: **who to ask for**, **why they might care**, and **the first question to ask**.
-- Kept the best phone number and confidence label for each company.
+- Reformatted the PDF so text should **not be cut off**.
+- Replaced the dense table with **wrapped company cards**.
+- Kept website links, best phone number, confidence, who to ask for, why they might care, first question, and fallback note.
+- Kept all 30 companies in the PDF.
 
-## ✅ Most Useful Cold Caller Info
+## ✅ How To Use It
 
-- **Website:** lets the caller quickly understand what the company sells before dialing.
-- **Ask for:** tells the caller whether to request sales, partnerships, business development, revenue leadership, or a product-specific team.
-- **Why they might care:** gives the caller a one-sentence reason CraneSignal is relevant to that company.
-- **First question:** makes the call feel specific instead of generic.
-- **Confidence:** tells the caller whether the number is official, support/general, or backup-quality.
+- Open the company website first.
+- Call the best phone number.
+- Ask for the role shown in **Ask for**.
+- Use the company-specific **First question** so the call feels relevant.
 
-## ✅ Call Opener
+## ✅ Best Opener
 
-- **Say:** “Hi, this is Drew with CraneSignal. We are mapping Texas apartment communities showing public maintenance pain signals. I pulled a few accounts your sales team may want. Who is the best person to send that to?”
-- If support answers, ask for **sales, partnerships, business development, or revenue leadership**.
-- Do **not** say every apartment needs software.
-
-## ✅ First Calls
-
-- **AppWork**
-- **Leonardo247**
-- **Maintenance Care**
-- **zInspector**
-- **Latchel**
-- **Lula**
-- **TaskEstate**
-- **SuiteSpot**
-- **Property Meld**
-- **Mezo**
+- “Hi, this is Drew with CraneSignal. We are mapping Texas apartment communities showing public maintenance pain signals. I pulled a few accounts your sales team may want. Who is the best person to send that to?”
 
 ## ⬜ Best Next Asset
 
