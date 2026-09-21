@@ -159,7 +159,8 @@ fed agent updates into future PDFs are superseded by this clarification.
 ## Fixed Report And Separate Research
 
 - Confirmed: keep the original complete collection PDF unchanged by agent research.
-- New findings may be shown in chat; whether/how to retain them is still open.
+- New findings appear in chat and can be saved as separate notes attached to a
+  lead, as confirmed in Q6 revised; note visibility is still open.
 - Any later report edition from a new collection is a separate, unresolved
   product decision, not an automatic consequence of asking the agent questions.
 - Saving a finding is feasible, but needs persistent storage, a save action,
@@ -168,7 +169,7 @@ fed agent updates into future PDFs are superseded by this clarification.
 - A separate saved note can preserve source/date without changing the original
   collector record or PDF. No precise delivery estimate has been promised.
 
-## Current Question
+## Saved Research Notes
 
 Q6 revised: With the PDF fixed, how should extra research be kept?
 
@@ -179,8 +180,23 @@ Q6 revised: With the PDF fixed, how should extra research be kept?
 - D. Save changes into the shared lead record itself; richer integration, with
   more work for validation, edit permissions and history; PDF still unchanged.
 
-Answer: pending. The section remains public; research persistence and editing
-permissions have not been silently assumed.
+Answer: **A**, selected by Drew on 2026-09-20 before an interrupted turn.
+Save useful research findings as notes attached to each lead. Preserve the
+original collected record and fixed PDF. Visibility and editing permissions
+remain undecided; this answer does not select shared-record editing.
+
+## Current Question
+
+Q7: Who should see research notes saved on a lead?
+
+- A. Everyone viewing the public section; recommended match for shared public
+  research, with only source-backed project findings published as research notes.
+- B. Only the person who saved them; the leads and original PDF remain public.
+- C. Masiate's selected team; research is shared among team members.
+- D. Choose public or personal when saving each note; more flexibility and controls.
+
+Answer: pending. Public visibility does not by itself grant anonymous editing;
+who can create, change or remove notes remains a separate product decision.
 
 ## Product Questions To Explore Next
 
