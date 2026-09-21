@@ -1,0 +1,65 @@
+MC3 evidence ledger — rows 14-26
+Checked 2026-09-20. URLs below are the exact public pages used in batch-02.json.
+
+Rank 14 Glo Tanning
+- TDLR project page identifies Brixmor/A Central Station LLC and McGregor Murphy Architecture for TABS2026029241.
+- The live TDLR print view publishes Brixmor owner route 713-660-4317, tenant Onyi Odunukwe 479-879-1309, and design firm 817-454-2384.
+- Official McGregor Murphy Architecture page https://www.mcmarc.com/ publishes 817-454-2384 and jenna@mcmarc.com; selected as the construction-relevant design-firm route.
+- Official Glo College Station page https://www.glotanning.com/location/college-station-tx/ lists the coming-soon College Station location and 479-966-4977; retained only as a tenant/company alternative, not presented as a construction contact.
+
+Rank 15 Snook Watering Hole
+- TDLR project page identifies E & K Mason Enterprises LLC and Thetford Architecture for TABS2026028954.
+- The live TDLR print view publishes E & K Mason Enterprises owner route 979-255-6770 and Thetford Architecture 979-587-6483; the design firm is the selected construction-relevant route.
+- Waze listing https://www.waze.com/live-map/directions/us/tx/somerville/snook-watering-hole?to=place.ChIJswURzO4mRIYRmEpZEVTt3qA publishes 979-272-3715 for Snook Watering Hole at 10353 FM 2155 Loop; this is provisional because it is directory evidence and the TDLR street number is recorded as 1353.
+
+Rank 16 The Owl Expansion
+- TDLR project page identifies 315 South Main OZ LP and Winchester Architects for TABS2026026072.
+- TDLR also publishes 315 South Main OZ owner route 979-574-9400, tenant Jake Mitchell 979-721-9158, and Winchester Architects 979-823-4039.
+- Official The Owl site https://www.theowlbcs.com/ publishes 979-314-1955 at 315 South Main Street, matching the project address.
+- Official Winchester Architects projects page https://winchester-architects.com/projects/ publishes 979-823-4039; selected as the construction-relevant design-firm route.
+
+Rank 17 Sourdough & Co.
+- TDLR project page identifies Lehtonen Investment II LTD and Hudson Architecture PLLC for TABS2026025481.
+- TDLR publishes owner/contact Robert Young 979-431-5566, tenant Sara Sultz 210-705-7720, and Hudson Architecture 979-324-6062; Hudson is the selected construction-relevant design route.
+- Official Sourdough Texas page https://sourdoughandco.com/texas publishes corporate office 916-294-7749 and lists College Station among Texas locations; this is a corporate routing fallback, not a local construction contact.
+
+Rank 18 TCP Bryan
+- TDLR TABS2026025128 identifies the tenant as Allie Jones — Texas Children's Hospital and publishes 713-299-9142; this tenant/project route is selected.
+- TDLR also publishes Bryan Medical Properties LP owner route 979-446-3765 for Christine Batten.
+- The NPPES-derived profile https://npiprofile.com/npi/1457215956 matches TCP Bryan/TCH Pediatric Associates at 3201 University Drive E and publishes the organization main line 832-824-2999; this is an institutional fallback, not the selected project route.
+
+Rank 19 Taco Bell 30118 Remodel
+- TDLR TABS2026023612 publishes Taco Bell owner/project contact Dwayne Kostiha at 737-209-7400 and design firm Hoover & Associates at 512-467-2626; the owner/project route is selected.
+- Official location page https://locations.tacobell.com/tx/college-station/310-n-harvey-road.html publishes store 979-693-1963, but it is a consumer order/store route and is not used as a construction contact.
+
+Rank 20 SpinXpress College Station
+- TDLR TABS2026022284 publishes tenant Bhavin Patel 210-643-6700 and owner Donald A. Ball 979-774-5522; the tenant/project route is selected.
+- Official SpinXpress contact page https://gospinxpress.com/contact-us/ publishes 832-240-9067, but it is a general customer route and is not selected over the project-specific TDLR contacts.
+
+Rank 21 Somerville City Hall
+- TDLR TABS2026021872 publishes City of Somerville project contact Martin Mangum at the City office, 979-596-1122, and design firm Brown Reynolds Watford Architects at 979-694-1791.
+- Official city permit form https://webgen1files1.revize.com/cityofsomervilletx/New%20Building%20Application-2022.pdf corroborates the City Hall address and 979-596-1122.
+
+Rank 22 Pickleball Junction
+- TDLR TABS2026020202 publishes MSCBH Properties LLC owner/project contact Mark Stasny at 979-229-0972 and design firm GLS at 936-637-4900; the owner/project route is selected.
+- Official Pickleball Junction page https://www.pickleball-junction.com/ confirms it is now building at 3175 Wildflower Drive and publishes info@pickleball-junction.com but says its phone is coming soon.
+- Official GLS Bryan page https://www.glstexas.com/bryan publishes the Bryan office at 979-776-9700; retained as a professional-team alternative because the TDLR filing lists a different GLS office number.
+
+Rank 23 Studio 6 Extended Stay
+- TDLR TABS2026019833 publishes owner Ajitanatha at 713-443-7155 and design firm Paragan Solutions LLC at 713-446-7810; Paragan is selected as the construction-relevant professional route.
+- Official Paragan contact page https://paragansolutions.com/contact/ matches the TDLR company, address and 713-446-7810.
+- Official Studio 6 site https://www.studio6.com/ confirms the brand but does not identify the planned Hearne property or a project-specific route.
+
+Rank 24 Brazos Valley GCD Office Renovations
+- TDLR TABS2026014890 publishes district project contact Alan Day at 979-279-9350 and GLS at 979-776-9700.
+- Official district contact page https://brazosvalleygcd.org/contact/ corroborates the 112 West 3rd Street address, district phone 979-279-9350, and Alan Day as general manager; selected as the owner/institution route.
+- Official GLS Bryan page https://www.glstexas.com/bryan corroborates 979-776-9700 as the design-firm alternative.
+
+Rank 25 Ag Classroom Addition
+- TDLR TABS2026014091 publishes Franklin ISD project contact Superintendent Russell White at 979-828-1900 and Harris Craig Architects at 903-534-0995.
+- Official Franklin ISD site https://www.franklinisd.net/ matches the project address and publishes the current district main line 979-828-7000; the project-specific TDLR route remains selected.
+- Official Harris Craig Architects site https://hcarch.com/ corroborates 903-534-0995 as the design-firm alternative.
+
+Rank 26 Field House Addition
+- TDLR TABS2026014016 separately identifies the field-house project and publishes Franklin ISD project contact Superintendent Russell White at 979-828-1900 and Harris Craig Architects at 903-534-0995.
+- The same official Franklin ISD and Harris Craig sources corroborate the institution and designer, but this remains a distinct property row with its own TDLR project number and source outcome.
