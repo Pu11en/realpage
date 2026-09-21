@@ -297,12 +297,13 @@
       }
 
       function csvText(selection) {
-        const cols = ["Building", "City", "Units", "Stage", "Signal", "Opens or sold", "Owner or developer or buyer", "Phone", "Why now", "Source"];
+        const cols = ["Building", "City", "Units", "Stage", "Signal", "Opens or sold", "Owner or developer or buyer", "Phone", "Whose phone", "Why now", "Source"];
         const cell = (v) => `"${String(v == null || v === "" ? "" : v).replace(/"/g, '""')}"`;
         const rows = selection.leads.map((l) => [
           l.property, l.city, l.units ?? "", l.stage ?? "", l.signalType ?? "",
           l.saleDate || l.openingDate || "", l.buyer || l.developer || "",
-          l.officePhone || "", l.why || "", (l.sources && l.sources[0] && l.sources[0].url) || "",
+          ...(() => { const ph = window.CraneSignalLeadPack.phoneForLead(l); return ph ? [ph.number, ph.label] : ["", ""]; })(),
+          l.why || "", (l.sources && l.sources[0] && l.sources[0].url) || "",
         ].map(cell).join(","));
         return [cols.map(cell).join(","), ...rows].join("\r\n");
       }

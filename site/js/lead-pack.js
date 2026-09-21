@@ -11,7 +11,7 @@
   const WARM_SCORE = 40;
   const FOOTER = "Find who to call for any building at app.cranesignal.com";
   const APP_URL = "https://app.cranesignal.com";
-  const CONTACT_CTA = "Get who to call: ask the agent at cranesignal.com";
+  const CONTACT_CTA = "Get who to call >";
   const DOWNLOAD_DATE_KEY_PREFIX = "cranesignal.leadPack.lastDownloaded";
 
   function priorityForLead(lead) {
@@ -50,11 +50,39 @@
     return { label: "Source not listed", url: "" };
   }
 
+  function shortDate(value) {
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(value || "")) return value;
+    const [year, month, day] = value.split("-").map(Number);
+    return new Intl.DateTimeFormat("en-US", { month: "short", day: "numeric", year: "numeric", timeZone: "UTC" })
+      .format(new Date(Date.UTC(year, month - 1, day, 12)));
+  }
+
   function timingForLead(lead) {
-    if (lead.saleDate) return `Sold ${lead.saleDate}`;
-    if (lead.openingDate) return `Opens ${lead.openingDate}`;
-    if (lead.permitDate) return `Permit ${lead.permitDate}`;
-    return "Date not listed";
+    if (lead.saleDate) return `Sold ${shortDate(lead.saleDate)}`;
+    if (lead.openingDate) return `Opens ${shortDate(lead.openingDate)}`;
+    if (lead.permitDate) return `Permit ${shortDate(lead.permitDate)}`;
+    return "";
+  }
+
+  const STAGE_LABELS = {
+    planned: "Planned", permitted: "Permit filed", permit: "Permit filed",
+    "under construction": "Under construction", leasing: "Leasing now", sold: "Sold",
+  };
+
+  function stageForLead(lead) {
+    const stage = STAGE_LABELS[lead.stage] || lead.stage || lead.signalType || "Stage not listed";
+    const leasing = lead.signalType === "Leasing" && stage !== "Leasing now" ? " · leasing now" : "";
+    const timing = timingForLead(lead);
+    if (stage === "Sold" && timing.startsWith("Sold")) return timing;
+    return [stage + leasing, timing].filter(Boolean).join("\n");
+  }
+
+  // Say whose number it is: the leasing office (from the building's website)
+  // or the owner/developer office listed on the state building filing.
+  function phoneForLead(lead) {
+    if (lead.contact && lead.contact.phone) return { number: lead.contact.phone, label: "Leasing office" };
+    if (lead.officePhone) return { number: lead.officePhone, label: lead.developer ? "Developer office" : "Project office" };
+    return null;
   }
 
   function contactForLead(lead) {
@@ -62,7 +90,10 @@
     if (lead.owner) lines.push(`Owner: ${lead.owner}`);
     if (lead.developer) lines.push(`Developer: ${lead.developer}`);
     if (lead.buyer) lines.push(`Buyer: ${lead.buyer}`);
-    return lines.length ? lines.join("\n") : "Owner not listed";
+    const phone = phoneForLead(lead);
+    if (phone) lines.push(`${phone.label}: ${phone.number}`);
+    lines.push(CONTACT_CTA);
+    return lines.join("\n");
   }
 
   // Contacts are not in the free PDF: each row links to the agent, which asks
@@ -71,10 +102,22 @@
     return `${APP_URL}/?contact=${encodeURIComponent(lead.id)}`;
   }
 
+  // "Why now" without the parts other columns already show (units, stage,
+  // dates, buyer), so each fact appears once.
+  const REPEATED_WHY = /^(\d[\d,]* units|sold\b|permitted$|planned$|under construction$|opens\b|expected\b|to )/i;
+
+  function shortWhy(lead) {
+    const parts = String(lead.why || lead.signal || "").split(/\s*·\s*/).filter((part) => part && !REPEATED_WHY.test(part));
+    // The PDF font has no arrow, so "a → b" becomes "a, so b".
+    const text = (parts.length ? parts.join(", ") : whyNowSentence(lead)).replace(/\s*→\s*/g, ", so ").replace(/\.$/, "");
+    return text.charAt(0).toUpperCase() + text.slice(1) + ".";
+  }
+
   function leadPackRows(leads) {
     return (leads || []).map((lead) => {
       const priority = priorityForLead(lead);
       const source = sourceForLead(lead);
+      const units = lead.units == null ? "units not listed" : `${lead.units} units`;
       return {
         id: lead.id,
         priority,
@@ -82,11 +125,11 @@
         contactUrl: contactUrlForLead(lead),
         whyNow: whyNowSentence(lead),
         cells: [
-          `${lead.property || lead.community || "Unnamed building"}\n${lead.city || "City not listed"} · ${lead.units == null ? "Units not listed" : `${lead.units} units`}`,
-          `${priority.label}\n${priority.reason}`,
-          `${lead.stage || "Stage not listed"}\nSignal: ${lead.signalType || lead.signal || "Not listed"}\n${timingForLead(lead)}`,
-          `${contactForLead(lead)}\n${CONTACT_CTA}`,
-          whyNowSentence(lead),
+          `${lead.property || lead.community || "Unnamed building"}\n${lead.city || "City not listed"} · ${units}`,
+          `${priority.label} · ${Number(lead.score) || 0}`,
+          stageForLead(lead),
+          contactForLead(lead),
+          shortWhy(lead),
           source.label,
         ],
       };
@@ -175,7 +218,7 @@
     doc.setFont("helvetica", "normal");
     doc.setFontSize(9);
     doc.setTextColor(93, 101, 119);
-    doc.text(`${rows.length} leads · One row per building · Free source links · Need a phone, email or who to ask for? Click \"Get who to call\" in any row.`, 30, 51);
+    doc.text(`${rows.length} leads · One row per building · Free source links · Click \"Get who to call\" in a row and the CraneSignal agent finds the manager and who to ask for.`, 30, 51);
 
     const drawFooter = (pageNumber) => {
       doc.setFont("helvetica", "normal");
@@ -189,7 +232,7 @@
 
     const tableOptions = {
       startY: 64,
-      head: [["Building / city / units", "Priority", "Stage / signal / date", "Owner on record / who to call", "Why now", "Source"]],
+      head: [["Building", "Priority", "Stage", "Owner / phone / who to call", "Why now", "Source"]],
       body: rows.map((row) => row.cells),
       theme: "grid",
       margin: { top: 30, right: 30, bottom: 28, left: 30 },
@@ -211,11 +254,11 @@
       },
       alternateRowStyles: { fillColor: [243, 244, 246] },
       columnStyles: {
-        0: { cellWidth: 125, fontStyle: "bold", textColor: [14, 19, 32] },
-        1: { cellWidth: 96 },
-        2: { cellWidth: 110 },
-        3: { cellWidth: 135 },
-        4: { cellWidth: 170 },
+        0: { cellWidth: 150, fontStyle: "bold", textColor: [14, 19, 32] },
+        1: { cellWidth: 56 },
+        2: { cellWidth: 100 },
+        3: { cellWidth: 180 },
+        4: { cellWidth: 150 },
         5: { cellWidth: 96, textColor: [26, 61, 143] },
       },
       rowPageBreak: "avoid",
@@ -267,6 +310,7 @@
     WARM_SCORE,
     FOOTER,
     priorityForLead,
+    phoneForLead,
     whyNowSentence,
     sourceForLead,
     leadPackRows,
