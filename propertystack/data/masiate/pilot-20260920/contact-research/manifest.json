@@ -1,0 +1,2688 @@
+{
+  "schema_version": 1,
+  "created_for": "Masiate all-row public business contact research",
+  "source_records_file": "masiate-reviewed-properties.json",
+  "source_records_sha256": "e7a363e5332c12488ad8f8e6c3eaebdba0679b1ab7d67b32829ea3e456360bcd",
+  "property_count": 49,
+  "batch_assignments": [
+    {
+      "batch_id": "batch-01",
+      "result_file": "batch-01.json",
+      "property_ids": [
+        "washington-brenham-permit-com-new-26-0012",
+        "washington-brenham-permit-com-rem-26-0028",
+        "washington-brenham-permit-misc-prkg-26-0018-grace-drainage",
+        "washington-brenham-permit-com-new-26-0007",
+        "washington-brenham-permit-com-add-26-0001-rv-parking",
+        "washington-brenham-permit-com-new-26-0014",
+        "washington-brenham-permit-com-roof-26-0003",
+        "washington-brenham-permit-com-add-26-0008-stanpac-silos",
+        "statewide-tdlr-tabs-TABS2027001105",
+        "statewide-tdlr-tabs-TABS2027001065",
+        "statewide-tdlr-tabs-TABS2027000539",
+        "statewide-tdlr-tabs-TABS2027000300",
+        "statewide-tdlr-tabs-TABS2027000261"
+      ]
+    },
+    {
+      "batch_id": "batch-02",
+      "result_file": "batch-02.json",
+      "property_ids": [
+        "statewide-tdlr-tabs-TABS2026029241",
+        "statewide-tdlr-tabs-TABS2026028954",
+        "statewide-tdlr-tabs-TABS2026026072",
+        "statewide-tdlr-tabs-TABS2026025481",
+        "statewide-tdlr-tabs-TABS2026025128",
+        "statewide-tdlr-tabs-TABS2026023612",
+        "statewide-tdlr-tabs-TABS2026022284",
+        "statewide-tdlr-tabs-TABS2026021872",
+        "statewide-tdlr-tabs-TABS2026020202",
+        "statewide-tdlr-tabs-TABS2026019833",
+        "statewide-tdlr-tabs-TABS2026014890",
+        "statewide-tdlr-tabs-TABS2026014091",
+        "statewide-tdlr-tabs-TABS2026014016"
+      ]
+    },
+    {
+      "batch_id": "batch-03",
+      "result_file": "batch-03.json",
+      "property_ids": [
+        "statewide-tdlr-tabs-TABS2026008039",
+        "statewide-tdlr-tabs-TABS2026006838",
+        "washington-brenham-permit-com-add-26-0006",
+        "washington-brenham-permit-com-new-26-0011",
+        "washington-brenham-permit-com-new-26-0009-apartments",
+        "washington-brenham-permit-com-new-26-0013",
+        "washington-brenham-permit-com-new-26-0010-apartment",
+        "statewide-tdlr-tabs-TABS2027001470",
+        "statewide-tdlr-tabs-TABS2027001180",
+        "brazos-bryan-sdrc-sp26-000062-north-dunn-apartments",
+        "statewide-tdlr-tabs-TABS2027000633",
+        "brazos-bryan-sdrc-sp26-000059-tabor-road-apartments",
+        "brazos-bryan-sdrc-sp26-000053-oxbow-business-park"
+      ]
+    },
+    {
+      "batch_id": "batch-04",
+      "result_file": "batch-04.json",
+      "property_ids": [
+        "statewide-tdlr-tabs-TABS2026025695",
+        "statewide-tdlr-tabs-TABS2026024787",
+        "statewide-tdlr-tabs-TABS2026023660",
+        "statewide-tdlr-tabs-TABS2026021299",
+        "statewide-tdlr-tabs-TABS2026020312",
+        "statewide-tdlr-tabs-TABS2026018848",
+        "burleson-somerville-ord-26-011-avenue-p-multifamily",
+        "statewide-tdlr-tabs-TABS2026017297",
+        "statewide-tdlr-tabs-TABS2026014634",
+        "grimes-navasota-dashboard-20260920-autozone"
+      ]
+    }
+  ],
+  "properties": [
+    {
+      "property_id": "washington-brenham-permit-com-new-26-0012",
+      "rank": 1,
+      "batch_id": "batch-01",
+      "project_name": "Citizens National Bank new construction and parking addition",
+      "location": {
+        "address": "400 S Austin Street",
+        "city": "Brenham",
+        "county": "Washington"
+      },
+      "actors": [
+        {
+          "name": "Citizens National Bank",
+          "roles": [
+            "owner/applicant",
+            "CAD owner",
+            "permit applicant / CAD owner"
+          ],
+          "source_urls": [
+            "https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-08.pdf",
+            "https://esearch.washingtoncad.org/"
+          ]
+        },
+        {
+          "name": "EBCO General Contractor",
+          "roles": [
+            "contractor",
+            "permit-listed general contractor"
+          ],
+          "source_urls": [
+            "https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-08.pdf",
+            "https://ebcogc.com/"
+          ]
+        }
+      ],
+      "source_links": [
+        {
+          "url": "https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-08.pdf",
+          "title": "City of Brenham August 2026 Building Permits",
+          "recorded_date": "2026-09-02",
+          "evidence": "Permit report lists new construction for Citizens National Bank at 400 S Austin Street and parking spaces on W. First Street."
+        },
+        {
+          "url": "https://esearch.washingtoncad.org/",
+          "title": "Washington CAD property-search JSON",
+          "recorded_date": "2026-09-21",
+          "evidence": "CAD result matches 400 S AUSTIN ST to owner Citizens National Bank, legal description KEYS 1ST, appraised value $389,810."
+        },
+        {
+          "url": "https://ebcogc.com/",
+          "title": "EBCO General Contractor website",
+          "recorded_date": null,
+          "evidence": "Contractor website describes commercial/retail, industrial, public and multifamily construction services."
+        },
+        {
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026021492",
+          "title": "TDLR TABS Project Details: TABS2026021492",
+          "recorded_date": "2026-05-29",
+          "evidence": "Citizens National Bank; 400 S. Austin Street Brenham, TX 77833; New Construction; New Construction for a bank"
+        }
+      ],
+      "seed_contacts": [
+        {
+          "contact_name": "EBCO General Contractor",
+          "role": "contractor",
+          "phone": "254-697-8516",
+          "email": null,
+          "website": "https://ebcogc.com/",
+          "source_url": "https://ebcogc.com/contact-us/",
+          "source_type": "official_company",
+          "match_status": "confirmed",
+          "source_strength": "strong",
+          "public_business_basis": "Corporate / general office",
+          "match_evidence": "Exact business name; official contact page lists Cameron corporate and Bryan/College Station satellite offices.",
+          "contact_note": "Ask for the Citizens National Bank project estimator; direct project contact not established.",
+          "checked_on": "2026-09-20"
+        }
+      ],
+      "initial_research_status": "not_yet_researched"
+    },
+    {
+      "property_id": "washington-brenham-permit-com-rem-26-0028",
+      "rank": 2,
+      "batch_id": "batch-01",
+      "project_name": "City of Brenham Maintenance Building fire remodel",
+      "location": {
+        "address": "506 S Austin Street",
+        "city": "Brenham",
+        "county": "Washington"
+      },
+      "actors": [
+        {
+          "name": "City of Brenham Maintenance Building",
+          "roles": [
+            "owner/applicant"
+          ],
+          "source_urls": [
+            "https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-08.pdf"
+          ]
+        },
+        {
+          "name": "Rhodes Building Systems",
+          "roles": [
+            "contractor",
+            "permit-listed contractor"
+          ],
+          "source_urls": [
+            "https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-08.pdf"
+          ]
+        }
+      ],
+      "source_links": [
+        {
+          "url": "https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-08.pdf",
+          "title": "City of Brenham August 2026 Building Permits",
+          "recorded_date": "2026-09-02",
+          "evidence": "Permit report lists City of Brenham Maintenance Building remodel due to fire at 506 S Austin Street."
+        },
+        {
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026027978",
+          "title": "TDLR TABS Project Details: TABS2026027978",
+          "recorded_date": "2026-08-17",
+          "evidence": "City of Brenham Maintenance; 506 S. Austin St Brenham, TX 77833; Renovation/Alteration; Bringing existing building up to code from previous fire at building."
+        }
+      ],
+      "seed_contacts": [
+        {
+          "contact_name": "Rhodes Building Systems",
+          "role": "contractor",
+          "phone": "979-596-1451",
+          "email": "info@rbstx.com",
+          "website": "https://www.rbstx.com/",
+          "source_url": "https://www.rbstx.com/commercial",
+          "source_type": "official_company",
+          "match_status": "confirmed",
+          "source_strength": "strong",
+          "public_business_basis": "Somerville company office",
+          "match_evidence": "Official site identifies Rhodes Building Systems Inc., Somerville, with Central Texas commercial construction services.",
+          "contact_note": "Ask for the maintenance-building fire-remodel estimator.",
+          "checked_on": "2026-09-20"
+        }
+      ],
+      "initial_research_status": "not_yet_researched"
+    },
+    {
+      "property_id": "washington-brenham-permit-misc-prkg-26-0018-grace-drainage",
+      "rank": 3,
+      "batch_id": "batch-01",
+      "project_name": "Grace Community Fellowship paving and drainage improvements",
+      "location": {
+        "address": "107 S Saeger Street",
+        "city": "Brenham",
+        "county": "Washington"
+      },
+      "actors": [
+        {
+          "name": "Grace Community Fellowship - Brenham",
+          "roles": [
+            "permit applicant / owner-listed contractor"
+          ],
+          "source_urls": [
+            "https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-07.pdf"
+          ]
+        }
+      ],
+      "source_links": [
+        {
+          "url": "https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-07.pdf",
+          "title": "City of Brenham July 2026 Building Permits",
+          "recorded_date": "2026-08-04",
+          "evidence": "Permit report lists paving and drainage improvements for Grace Community Fellowship - Brenham at 107 S Saeger Street, valued at $1,000,000, contractor Owner."
+        },
+        {
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026022754",
+          "title": "TDLR TABS Project Details: TABS2026022754",
+          "recorded_date": "2026-06-12",
+          "evidence": "Grace Community Church-Brenham; 107 South Saeger Street Brenham, TX 77833; Renovation/Alteration; New and improve drainage and paving for parking lot"
+        }
+      ],
+      "seed_contacts": [],
+      "initial_research_status": "not_yet_researched"
+    },
+    {
+      "property_id": "washington-brenham-permit-com-new-26-0007",
+      "rank": 4,
+      "batch_id": "batch-01",
+      "project_name": "Redeemer Church parking lot improvements",
+      "location": {
+        "address": "2111 S Blue Bell Road",
+        "city": "Brenham",
+        "county": "Washington"
+      },
+      "actors": [
+        {
+          "name": "Redeemer Church Brenham",
+          "roles": [
+            "owner/applicant"
+          ],
+          "source_urls": [
+            "https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-07.pdf"
+          ]
+        },
+        {
+          "name": "Atlas Sign Services",
+          "roles": [
+            "contractor for wall sign",
+            "permit-listed sign/wall contractor"
+          ],
+          "source_urls": [
+            "https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-07.pdf"
+          ]
+        }
+      ],
+      "source_links": [
+        {
+          "url": "https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-07.pdf",
+          "title": "City of Brenham July 2026 Building Permits",
+          "recorded_date": "2026-08-03",
+          "evidence": "Permit report lists parking lot improvements and wall sign work for Redeemer Church Brenham at 2111 S Blue Bell Road."
+        },
+        {
+          "url": "https://esearch.washingtoncad.org/",
+          "title": "Washington CAD property-search JSON",
+          "recorded_date": "2026-09-21",
+          "evidence": "CAD result matches 2111 S Blue Bell Rd to Redeemer Church Brenham on 44.876 acres, appraised value $2,390,910."
+        }
+      ],
+      "seed_contacts": [
+        {
+          "contact_name": "Atlas Sign Services",
+          "role": "contractor for wall sign",
+          "phone": "713-699-1121",
+          "email": null,
+          "website": "https://www.atlassigns.com/",
+          "source_url": "https://www.atlassigns.com/",
+          "source_type": "official_company",
+          "match_status": "confirmed",
+          "source_strength": "strong",
+          "public_business_basis": "Houston company office",
+          "match_evidence": "Official site identifies Atlas Sign Services Inc. at 6411 Airline Drive, Houston, and electrical sign work.",
+          "contact_note": "Sign/wall scope only; not established as the church parking-lot contractor.",
+          "checked_on": "2026-09-20"
+        }
+      ],
+      "initial_research_status": "not_yet_researched"
+    },
+    {
+      "property_id": "washington-brenham-permit-com-add-26-0001-rv-parking",
+      "rank": 5,
+      "batch_id": "batch-01",
+      "project_name": "Brennan Taylor Developments RV parking addition",
+      "location": {
+        "address": "4040 State Highway 36 S",
+        "city": "Brenham",
+        "county": "Washington"
+      },
+      "actors": [
+        {
+          "name": "Brennan Taylor Developments",
+          "roles": [
+            "permit applicant / owner-listed contractor"
+          ],
+          "source_urls": [
+            "https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-07.pdf"
+          ]
+        }
+      ],
+      "source_links": [
+        {
+          "url": "https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-07.pdf",
+          "title": "City of Brenham July 2026 Building Permits",
+          "recorded_date": "2026-08-04",
+          "evidence": "Permit report lists Brennan Taylor Developments addition for RV parking at 4040 State Highway 36 S, valued at $163,000, contractor Owner."
+        }
+      ],
+      "seed_contacts": [],
+      "initial_research_status": "not_yet_researched"
+    },
+    {
+      "property_id": "washington-brenham-permit-com-new-26-0014",
+      "rank": 6,
+      "batch_id": "batch-01",
+      "project_name": "Lex Investments tenant office buildout",
+      "location": {
+        "address": "1504 S Day Street",
+        "city": "Brenham",
+        "county": "Washington"
+      },
+      "actors": [
+        {
+          "name": "Lex Investments",
+          "roles": [
+            "owner/applicant"
+          ],
+          "source_urls": [
+            "https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-06.pdf"
+          ]
+        },
+        {
+          "name": "United Constructors of Texas",
+          "roles": [
+            "contractor",
+            "permit-listed contractor"
+          ],
+          "source_urls": [
+            "https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-06.pdf"
+          ]
+        },
+        {
+          "name": "Lex Investments LLC",
+          "roles": [
+            "CAD owner"
+          ],
+          "source_urls": [
+            "https://esearch.washingtoncad.org/"
+          ]
+        }
+      ],
+      "source_links": [
+        {
+          "url": "https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-06.pdf",
+          "title": "City of Brenham June 2026 Building Permits",
+          "recorded_date": "2026-07-02",
+          "evidence": "Permit report lists tenant buildout for office space at 1504 S Day Street."
+        },
+        {
+          "url": "https://esearch.washingtoncad.org/",
+          "title": "Washington CAD property-search JSON",
+          "recorded_date": "2026-09-21",
+          "evidence": "CAD result matches 1504 S Day St to Lex Investments LLC, appraised value $780,380."
+        },
+        {
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026023085",
+          "title": "TDLR TABS Project Details: TABS2026023085",
+          "recorded_date": "2026-06-17",
+          "evidence": "Edward Jones Branch #96683; 1504 S Day St., Ste 1504 Brenham, TX 77833; New Construction; Interior build-out"
+        }
+      ],
+      "seed_contacts": [
+        {
+          "contact_name": "United Constructors of Texas",
+          "role": "contractor",
+          "phone": "713-934-9929",
+          "email": "bids@unitedconstructors.com",
+          "website": "https://www.unitedconstructors.com/",
+          "source_url": "https://www.unitedconstructors.com/contact-us",
+          "source_type": "official_company",
+          "match_status": "confirmed",
+          "source_strength": "strong",
+          "public_business_basis": "Houston company office",
+          "match_evidence": "Contact-page footer uses the exact legal/business name in the permit; commercial tenant improvements are listed.",
+          "contact_note": "Ask whether they handle the Lex Investments buildout; the bid-request inbox is not proof of an open package.",
+          "checked_on": "2026-09-20"
+        }
+      ],
+      "initial_research_status": "not_yet_researched"
+    },
+    {
+      "property_id": "washington-brenham-permit-com-roof-26-0003",
+      "rank": 7,
+      "batch_id": "batch-01",
+      "project_name": "Sage Longwood Holdings commercial roof replacement",
+      "location": {
+        "address": "1901 Longwood Drive",
+        "city": "Brenham",
+        "county": "Washington"
+      },
+      "actors": [
+        {
+          "name": "Sage Longwood Holdings LLC",
+          "roles": [
+            "permit applicant"
+          ],
+          "source_urls": [
+            "https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-06.pdf"
+          ]
+        },
+        {
+          "name": "Guardian Roof Systems",
+          "roles": [
+            "contractor",
+            "permit-listed roofing contractor"
+          ],
+          "source_urls": [
+            "https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-06.pdf"
+          ]
+        },
+        {
+          "name": "Longwood Elastomers Inc",
+          "roles": [
+            "CAD owner/related property record"
+          ],
+          "source_urls": [
+            "https://esearch.washingtoncad.org/"
+          ]
+        }
+      ],
+      "source_links": [
+        {
+          "url": "https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-06.pdf",
+          "title": "City of Brenham June 2026 Building Permits",
+          "recorded_date": "2026-07-02",
+          "evidence": "Permit report lists Sage Longwood Holdings LLC replacing roof on commercial building at 1901 Longwood Drive."
+        },
+        {
+          "url": "https://esearch.washingtoncad.org/",
+          "title": "Washington CAD property-search JSON",
+          "recorded_date": "2026-09-21",
+          "evidence": "CAD returns Longwood Elastomers Inc and Longwood Elastomers Inc Buildings at 1901 Longwood Dr, including building appraised value $4,171,770."
+        }
+      ],
+      "seed_contacts": [
+        {
+          "contact_name": "Guardian Roof Systems",
+          "role": "contractor",
+          "phone": "281-485-7663",
+          "email": null,
+          "website": "https://www.guardianroofsystems.com/",
+          "source_url": "https://www.guardianroofsystems.com/contact-us",
+          "source_type": "official_company",
+          "match_status": "confirmed",
+          "source_strength": "strong",
+          "public_business_basis": "Pearland main office",
+          "match_evidence": "Exact business name and commercial roofing services; do not confuse with Guardian Roofing in Tomball or Arlington.",
+          "contact_note": "Site also lists 281-407-7280; primary number here is its labeled main-office phone. Confirm the Brenham project.",
+          "checked_on": "2026-09-20"
+        }
+      ],
+      "initial_research_status": "not_yet_researched"
+    },
+    {
+      "property_id": "washington-brenham-permit-com-add-26-0008-stanpac-silos",
+      "rank": 8,
+      "batch_id": "batch-01",
+      "project_name": "Stanpac USA storage silo addition",
+      "location": {
+        "address": "801 Mangrum Street",
+        "city": "Brenham",
+        "county": "Washington"
+      },
+      "actors": [
+        {
+          "name": "Stanpac USA",
+          "roles": [
+            "permit applicant / owner-listed contractor"
+          ],
+          "source_urls": [
+            "https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-06.pdf"
+          ]
+        }
+      ],
+      "source_links": [
+        {
+          "url": "https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-06.pdf",
+          "title": "City of Brenham June 2026 Building Permits",
+          "recorded_date": "2026-07-02",
+          "evidence": "Permit report lists Stanpac USA addition of 2 storage silos at 801 Mangrum Street, valued at $413,300, contractor Owner."
+        }
+      ],
+      "seed_contacts": [],
+      "initial_research_status": "not_yet_researched"
+    },
+    {
+      "property_id": "statewide-tdlr-tabs-TABS2027001105",
+      "rank": 9,
+      "batch_id": "batch-01",
+      "project_name": "Pink",
+      "location": {
+        "address": "1001 University Dr. College Station, TX 77840",
+        "city": "College Station",
+        "county": "Brazos"
+      },
+      "actors": [
+        {
+          "name": "Aspire A&M II LLC",
+          "roles": [
+            "owner/developer"
+          ],
+          "source_urls": [
+            "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2027001105"
+          ]
+        },
+        {
+          "name": "PAA Consulting LLC",
+          "roles": [
+            "designer",
+            "design firm on TDLR record"
+          ],
+          "source_urls": [
+            "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2027001105"
+          ]
+        },
+        {
+          "name": "ROBERT V,BUCK",
+          "roles": [
+            "registered accessibility specialist"
+          ],
+          "source_urls": [
+            "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2027001105"
+          ]
+        }
+      ],
+      "source_links": [
+        {
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2027001105",
+          "title": "TDLR TABS Project Details: TABS2027001105",
+          "recorded_date": "2026-09-15",
+          "evidence": "Espire II; 1001 University Dr. College Station, TX 77840; New Construction; Interior Finish out"
+        }
+      ],
+      "seed_contacts": [],
+      "initial_research_status": "not_yet_researched"
+    },
+    {
+      "property_id": "statewide-tdlr-tabs-TABS2027001065",
+      "rank": 10,
+      "batch_id": "batch-01",
+      "project_name": "TSC Brenham Fusion",
+      "location": {
+        "address": "2718 South Market St Brenham, TX 77833",
+        "city": "Brenham",
+        "county": "Washington"
+      },
+      "actors": [
+        {
+          "name": "EXCHANGERIGHT NET LEASED PORTFOLIO 74 DST",
+          "roles": [
+            "owner/developer"
+          ],
+          "source_urls": [
+            "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2027001065"
+          ]
+        },
+        {
+          "name": "Onyx Creative",
+          "roles": [
+            "designer",
+            "design firm on TDLR record"
+          ],
+          "source_urls": [
+            "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2027001065"
+          ]
+        },
+        {
+          "name": "MELVYN,ARCHER",
+          "roles": [
+            "registered accessibility specialist"
+          ],
+          "source_urls": [
+            "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2027001065"
+          ]
+        }
+      ],
+      "source_links": [
+        {
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2027001065",
+          "title": "TDLR TABS Project Details: TABS2027001065",
+          "recorded_date": "2026-09-15",
+          "evidence": "Tractor Supply Co; 2718 South Market St Brenham, TX 77833; Renovation/Alteration; Interior Renovation"
+        }
+      ],
+      "seed_contacts": [],
+      "initial_research_status": "not_yet_researched"
+    },
+    {
+      "property_id": "statewide-tdlr-tabs-TABS2027000539",
+      "rank": 11,
+      "batch_id": "batch-01",
+      "project_name": "Baylor Scott & White Rock Prairie Clinic Renovations",
+      "location": {
+        "address": "800 Scott & White Dr College Station, TX 77845",
+        "city": "College Station",
+        "county": "Brazos"
+      },
+      "actors": [
+        {
+          "name": "SCOTT & WHITE HEALTHCARE",
+          "roles": [
+            "owner/developer"
+          ],
+          "source_urls": [
+            "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2027000539"
+          ]
+        },
+        {
+          "name": "ROB ROY,PARNELL",
+          "roles": [
+            "registered accessibility specialist"
+          ],
+          "source_urls": [
+            "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2027000539"
+          ]
+        }
+      ],
+      "source_links": [
+        {
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2027000539",
+          "title": "TDLR TABS Project Details: TABS2027000539",
+          "recorded_date": "2026-09-08",
+          "evidence": "Rock Prairie Clinic; 800 Scott & White Dr College Station, TX 77845; Renovation/Alteration; Renovation to an existing medical office building to reconfigure clinical spaces."
+        }
+      ],
+      "seed_contacts": [],
+      "initial_research_status": "not_yet_researched"
+    },
+    {
+      "property_id": "statewide-tdlr-tabs-TABS2027000300",
+      "rank": 12,
+      "batch_id": "batch-01",
+      "project_name": "Barron Project",
+      "location": {
+        "address": "2800 Barron Rd Suite 204 College Station, TX 77845",
+        "city": "College Station",
+        "county": "Brazos"
+      },
+      "actors": [
+        {
+          "name": "Derrill Chad Brantley & Jannie Kadjar",
+          "roles": [
+            "owner/developer"
+          ],
+          "source_urls": [
+            "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2027000300"
+          ]
+        },
+        {
+          "name": "EDDIE,HARE",
+          "roles": [
+            "registered accessibility specialist"
+          ],
+          "source_urls": [
+            "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2027000300"
+          ]
+        }
+      ],
+      "source_links": [
+        {
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2027000300",
+          "title": "TDLR TABS Project Details: TABS2027000300",
+          "recorded_date": "2026-09-03",
+          "evidence": "Barron Office Bldg; 2800 Barron Rd Suite 204 College Station, TX 77845; Renovation/Alteration; Tenant Office Bldg. Finish Out"
+        }
+      ],
+      "seed_contacts": [],
+      "initial_research_status": "not_yet_researched"
+    },
+    {
+      "property_id": "statewide-tdlr-tabs-TABS2027000261",
+      "rank": 13,
+      "batch_id": "batch-01",
+      "project_name": "Hub College Station Phase II",
+      "location": {
+        "address": "403 Cherry Street College Station, TX 77840",
+        "city": "College Station",
+        "county": "Brazos"
+      },
+      "actors": [
+        {
+          "name": "Core College Station Cherry, LLC",
+          "roles": [
+            "owner/developer"
+          ],
+          "source_urls": [
+            "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2027000261"
+          ]
+        },
+        {
+          "name": "Antunovich Associates",
+          "roles": [
+            "designer",
+            "design firm on TDLR record"
+          ],
+          "source_urls": [
+            "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2027000261"
+          ]
+        },
+        {
+          "name": "STEVEN EDWARD,MONTGOMERY",
+          "roles": [
+            "registered accessibility specialist"
+          ],
+          "source_urls": [
+            "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2027000261"
+          ]
+        }
+      ],
+      "source_links": [
+        {
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2027000261",
+          "title": "TDLR TABS Project Details: TABS2027000261",
+          "recorded_date": "2026-09-03",
+          "evidence": "Hub College Station Phase II; 403 Cherry Street College Station, TX 77840; New Construction; 8-story residential building comprised of student housing and office(s) limited to servicing the property as well as a rooftop amenity terrace."
+        }
+      ],
+      "seed_contacts": [],
+      "initial_research_status": "not_yet_researched"
+    },
+    {
+      "property_id": "statewide-tdlr-tabs-TABS2026029241",
+      "rank": 14,
+      "batch_id": "batch-02",
+      "project_name": "Glo Tanning",
+      "location": {
+        "address": "1607 Texas Ave S College Station, TX 77840",
+        "city": "College Station",
+        "county": "Brazos"
+      },
+      "actors": [
+        {
+          "name": "Brixmor/A Central Station, LLC",
+          "roles": [
+            "owner/developer"
+          ],
+          "source_urls": [
+            "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026029241"
+          ]
+        },
+        {
+          "name": "McGregor Murphy Architecture",
+          "roles": [
+            "designer",
+            "design firm on TDLR record"
+          ],
+          "source_urls": [
+            "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026029241"
+          ]
+        },
+        {
+          "name": "GEORGE A,PATTERSON",
+          "roles": [
+            "registered accessibility specialist"
+          ],
+          "source_urls": [
+            "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026029241"
+          ]
+        }
+      ],
+      "source_links": [
+        {
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026029241",
+          "title": "TDLR TABS Project Details: TABS2026029241",
+          "recorded_date": "2026-08-31",
+          "evidence": "Central Station Shopping Center; 1607 Texas Ave S College Station, TX 77840; Renovation/Alteration; 2500 SF interior tenant finish out for a tanning salon in an existing shell space"
+        }
+      ],
+      "seed_contacts": [],
+      "initial_research_status": "not_yet_researched"
+    },
+    {
+      "property_id": "statewide-tdlr-tabs-TABS2026028954",
+      "rank": 15,
+      "batch_id": "batch-02",
+      "project_name": "Snook Watering Hole",
+      "location": {
+        "address": "1353 FM 2155 Somerville, TX 77879",
+        "city": "Somerville",
+        "county": "Burleson"
+      },
+      "actors": [
+        {
+          "name": "E & K MASON ENTERISES LLC",
+          "roles": [
+            "owner/developer"
+          ],
+          "source_urls": [
+            "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026028954"
+          ]
+        },
+        {
+          "name": "Thetford Architecture, LLC",
+          "roles": [
+            "designer",
+            "design firm on TDLR record"
+          ],
+          "source_urls": [
+            "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026028954"
+          ]
+        },
+        {
+          "name": "EDDIE,HARE",
+          "roles": [
+            "registered accessibility specialist"
+          ],
+          "source_urls": [
+            "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026028954"
+          ]
+        }
+      ],
+      "source_links": [
+        {
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026028954",
+          "title": "TDLR TABS Project Details: TABS2026028954",
+          "recorded_date": "2026-08-27",
+          "evidence": "Snook Watering Hole; 1353 FM 2155 Somerville, TX 77879; Additions to Existing Building; Additions of restrooms, bar and seating areas"
+        }
+      ],
+      "seed_contacts": [],
+      "initial_research_status": "not_yet_researched"
+    },
+    {
+      "property_id": "statewide-tdlr-tabs-TABS2026026072",
+      "rank": 16,
+      "batch_id": "batch-02",
+      "project_name": "The Owl Expansion",
+      "location": {
+        "address": "315 S. Main Street Bryan, TX 77803",
+        "city": "Bryan",
+        "county": "Brazos"
+      },
+      "actors": [
+        {
+          "name": "315 South Main OZ, LP",
+          "roles": [
+            "owner/developer"
+          ],
+          "source_urls": [
+            "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026026072"
+          ]
+        },
+        {
+          "name": "Winchester Architects",
+          "roles": [
+            "designer",
+            "design firm on TDLR record"
+          ],
+          "source_urls": [
+            "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026026072"
+          ]
+        },
+        {
+          "name": "EDDIE,HARE",
+          "roles": [
+            "registered accessibility specialist"
+          ],
+          "source_urls": [
+            "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026026072"
+          ]
+        }
+      ],
+      "source_links": [
+        {
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026026072",
+          "title": "TDLR TABS Project Details: TABS2026026072",
+          "recorded_date": "2026-07-24",
+          "evidence": "315 South Main Building; 315 S. Main Street Bryan, TX 77803; Renovation/Alteration; Interior renovations and an extension of the bar area."
+        }
+      ],
+      "seed_contacts": [],
+      "initial_research_status": "not_yet_researched"
+    },
+    {
+      "property_id": "statewide-tdlr-tabs-TABS2026025481",
+      "rank": 17,
+      "batch_id": "batch-02",
+      "project_name": "Sourdough & Co. Restaurant",
+      "location": {
+        "address": "4444 SH-6 South, College Station, TX 77845",
+        "city": "College Station",
+        "county": "Brazos"
+      },
+      "actors": [
+        {
+          "name": "Lehtonen Investment II LTD",
+          "roles": [
+            "owner/developer"
+          ],
+          "source_urls": [
+            "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026025481"
+          ]
+        },
+        {
+          "name": "Hudson Architecture, PLLC",
+          "roles": [
+            "designer",
+            "design firm on TDLR record"
+          ],
+          "source_urls": [
+            "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026025481"
+          ]
+        },
+        {
+          "name": "EDDIE,HARE",
+          "roles": [
+            "registered accessibility specialist"
+          ],
+          "source_urls": [
+            "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026025481"
+          ]
+        }
+      ],
+      "source_links": [
+        {
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026025481",
+          "title": "TDLR TABS Project Details: TABS2026025481",
+          "recorded_date": "2026-07-16",
+          "evidence": "Tower Point Phase 11b Block 3, Lot 9r; 4444 SH-6 South, College Station, TX 77845; Renovation/Alteration; Restaurant tenant finishes"
+        }
+      ],
+      "seed_contacts": [],
+      "initial_research_status": "not_yet_researched"
+    },
+    {
+      "property_id": "statewide-tdlr-tabs-TABS2026025128",
+      "rank": 18,
+      "batch_id": "batch-02",
+      "project_name": "TCP Bryan",
+      "location": {
+        "address": "3201 University Dr E Suite 205 Bryan, TX 77802",
+        "city": "Bryan",
+        "county": "Brazos"
+      },
+      "actors": [
+        {
+          "name": "Bryan Medical Properties LP",
+          "roles": [
+            "owner/developer"
+          ],
+          "source_urls": [
+            "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026025128"
+          ]
+        },
+        {
+          "name": "JEROMY G,MURPHY",
+          "roles": [
+            "registered accessibility specialist"
+          ],
+          "source_urls": [
+            "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026025128"
+          ]
+        }
+      ],
+      "source_links": [
+        {
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026025128",
+          "title": "TDLR TABS Project Details: TABS2026025128",
+          "recorded_date": "2026-07-13",
+          "evidence": "Physicians Center Office Building; 3201 University Dr E Suite 205 Bryan, TX 77802; Renovation/Alteration; Renovation of an existing medical clinic."
+        }
+      ],
+      "seed_contacts": [],
+      "initial_research_status": "not_yet_researched"
+    },
+    {
+      "property_id": "statewide-tdlr-tabs-TABS2026023612",
+      "rank": 19,
+      "batch_id": "batch-02",
+      "project_name": "Taco Bell 30118 Remodel",
+      "location": {
+        "address": "310 Harvey Road College Station, TX 77840",
+        "city": "College Station",
+        "county": "Brazos"
+      },
+      "actors": [
+        {
+          "name": "Taco Bell",
+          "roles": [
+            "owner/developer"
+          ],
+          "source_urls": [
+            "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026023612"
+          ]
+        },
+        {
+          "name": "Hoover & Associates",
+          "roles": [
+            "designer",
+            "design firm on TDLR record"
+          ],
+          "source_urls": [
+            "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026023612"
+          ]
+        },
+        {
+          "name": "ROBERT,RONSON",
+          "roles": [
+            "registered accessibility specialist"
+          ],
+          "source_urls": [
+            "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026023612"
+          ]
+        }
+      ],
+      "source_links": [
+        {
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026023612",
+          "title": "TDLR TABS Project Details: TABS2026023612",
+          "recorded_date": "2026-06-23",
+          "evidence": "Taco Bell 30118; 310 Harvey Road College Station, TX 77840; Renovation/Alteration; Remodel of existing Taco Bell including the new exterior and interior walls, new finishes, new lighting, new restrooms, relocation of existing kitchen equipment and plumbing fixtures."
+        }
+      ],
+      "seed_contacts": [],
+      "initial_research_status": "not_yet_researched"
+    },
+    {
+      "property_id": "statewide-tdlr-tabs-TABS2026022284",
+      "rank": 20,
+      "batch_id": "batch-02",
+      "project_name": "SPX College Station",
+      "location": {
+        "address": "2220 Texas Ave S, Suite G - H College Station, TX 77840",
+        "city": "College Station",
+        "county": "Brazos"
+      },
+      "actors": [
+        {
+          "name": "Donald A. Ball",
+          "roles": [
+            "owner/developer"
+          ],
+          "source_urls": [
+            "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026022284"
+          ]
+        },
+        {
+          "name": "DAVID M,DANTE",
+          "roles": [
+            "registered accessibility specialist"
+          ],
+          "source_urls": [
+            "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026022284"
+          ]
+        }
+      ],
+      "source_links": [
+        {
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026022284",
+          "title": "TDLR TABS Project Details: TABS2026022284",
+          "recorded_date": "2026-06-08",
+          "evidence": "SpinXpress Laundry; 2220 Texas Ave S, Suite G - H College Station, TX 77840; Renovation/Alteration; Existing lease space to be renovated into a SpinXpress Laundry, including mechanical, electrical, and plumbing modifications, along with light-gauge metal framing for new partition walls."
+        }
+      ],
+      "seed_contacts": [],
+      "initial_research_status": "not_yet_researched"
+    },
+    {
+      "property_id": "statewide-tdlr-tabs-TABS2026021872",
+      "rank": 21,
+      "batch_id": "batch-02",
+      "project_name": "Somerville City Hall",
+      "location": {
+        "address": "150 8th Street Somerville, TX 77879",
+        "city": "Somerville",
+        "county": "Burleson"
+      },
+      "actors": [
+        {
+          "name": "City of Somerville",
+          "roles": [
+            "owner/developer"
+          ],
+          "source_urls": [
+            "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026021872"
+          ]
+        },
+        {
+          "name": "Brown Reynolds Watford Architects, Inc.",
+          "roles": [
+            "designer",
+            "design firm on TDLR record"
+          ],
+          "source_urls": [
+            "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026021872"
+          ]
+        },
+        {
+          "name": "EDDIE,HARE",
+          "roles": [
+            "registered accessibility specialist"
+          ],
+          "source_urls": [
+            "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026021872"
+          ]
+        }
+      ],
+      "source_links": [
+        {
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026021872",
+          "title": "TDLR TABS Project Details: TABS2026021872",
+          "recorded_date": "2026-06-03",
+          "evidence": "Somerville City Hall; 150 8th Street Somerville, TX 77879; New Construction; New 3045 SF City Hall, Parking Lot, and landscape"
+        },
+        {
+          "url": "https://somervilletx.gov/RFQ%20New%20City%20Hall%20Building.pdf",
+          "title": "City of Somerville RFQ for Design Build Services, New City Hall",
+          "recorded_date": "2025-02-25",
+          "evidence": "RFQ due page gives March 5, 2025 deadline and project contact; purpose page states new City Hall at 150 8th Street, approximately 4,000 sf pre-engineered metal building with design and construction services."
+        }
+      ],
+      "seed_contacts": [],
+      "initial_research_status": "not_yet_researched"
+    },
+    {
+      "property_id": "statewide-tdlr-tabs-TABS2026020202",
+      "rank": 22,
+      "batch_id": "batch-02",
+      "project_name": "Pickleball Junction",
+      "location": {
+        "address": "3175 Wildflower Dr. Bryan, TX 77802",
+        "city": "Bryan",
+        "county": "Brazos"
+      },
+      "actors": [
+        {
+          "name": "MSCBH Properties LLC",
+          "roles": [
+            "owner/developer"
+          ],
+          "source_urls": [
+            "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026020202"
+          ]
+        },
+        {
+          "name": "GLS",
+          "roles": [
+            "designer",
+            "design firm on TDLR record"
+          ],
+          "source_urls": [
+            "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026020202"
+          ]
+        },
+        {
+          "name": "PHILLIP BERTRAM,CHAPMAN",
+          "roles": [
+            "registered accessibility specialist"
+          ],
+          "source_urls": [
+            "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026020202"
+          ]
+        }
+      ],
+      "source_links": [
+        {
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026020202",
+          "title": "TDLR TABS Project Details: TABS2026020202",
+          "recorded_date": "2026-05-13",
+          "evidence": "MSCBH Properties; 3175 Wildflower Dr. Bryan, TX 77802; New Construction; New concrete tilt-wall shopping center addition with tenant finish out of indoor recreation business."
+        }
+      ],
+      "seed_contacts": [],
+      "initial_research_status": "not_yet_researched"
+    },
+    {
+      "property_id": "statewide-tdlr-tabs-TABS2026019833",
+      "rank": 23,
+      "batch_id": "batch-02",
+      "project_name": "Studio 6 Extended Stay",
+      "location": {
+        "address": "1135 N Market Street Hearne, TX 77859",
+        "city": "Hearne",
+        "county": "Robertson"
+      },
+      "actors": [
+        {
+          "name": "Ajitanatha",
+          "roles": [
+            "owner/developer"
+          ],
+          "source_urls": [
+            "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026019833"
+          ]
+        },
+        {
+          "name": "Paragan Solutions LLC",
+          "roles": [
+            "designer",
+            "design firm on TDLR record"
+          ],
+          "source_urls": [
+            "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026019833"
+          ]
+        },
+        {
+          "name": "NARESH K,DHAM",
+          "roles": [
+            "registered accessibility specialist"
+          ],
+          "source_urls": [
+            "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026019833"
+          ]
+        }
+      ],
+      "source_links": [
+        {
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026019833",
+          "title": "TDLR TABS Project Details: TABS2026019833",
+          "recorded_date": "2026-05-08",
+          "evidence": "Studio 6 Extended Stay; 1135 N Market Street Hearne, TX 77859; New Construction; 3 Story interior corridor Inn"
+        }
+      ],
+      "seed_contacts": [],
+      "initial_research_status": "not_yet_researched"
+    },
+    {
+      "property_id": "statewide-tdlr-tabs-TABS2026014890",
+      "rank": 24,
+      "batch_id": "batch-02",
+      "project_name": "Brazos Valley GCD - Office Renovations",
+      "location": {
+        "address": "112 W. 3rd St. Hearne, TX 77859",
+        "city": "Hearne",
+        "county": "Robertson"
+      },
+      "actors": [
+        {
+          "name": "Brazos Valley Groundwater",
+          "roles": [
+            "owner/developer"
+          ],
+          "source_urls": [
+            "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026014890"
+          ]
+        },
+        {
+          "name": "GLS",
+          "roles": [
+            "designer",
+            "design firm on TDLR record"
+          ],
+          "source_urls": [
+            "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026014890"
+          ]
+        },
+        {
+          "name": "PHILLIP BERTRAM,CHAPMAN",
+          "roles": [
+            "registered accessibility specialist"
+          ],
+          "source_urls": [
+            "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026014890"
+          ]
+        }
+      ],
+      "source_links": [
+        {
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026014890",
+          "title": "TDLR TABS Project Details: TABS2026014890",
+          "recorded_date": "2026-03-12",
+          "evidence": "Brazos Valley Ground Water District; 112 W. 3rd St. Hearne, TX 77859; Renovation/Alteration; office renovation"
+        }
+      ],
+      "seed_contacts": [],
+      "initial_research_status": "not_yet_researched"
+    },
+    {
+      "property_id": "statewide-tdlr-tabs-TABS2026014091",
+      "rank": 25,
+      "batch_id": "batch-02",
+      "project_name": "Ag Classroom Addition",
+      "location": {
+        "address": "1216 W FM 1644 Franklin, TX 77856",
+        "city": "Franklin",
+        "county": "Robertson"
+      },
+      "actors": [
+        {
+          "name": "Franklin ISD",
+          "roles": [
+            "owner/developer"
+          ],
+          "source_urls": [
+            "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026014091"
+          ]
+        },
+        {
+          "name": "Harris Craig Architects, Inc.",
+          "roles": [
+            "designer",
+            "design firm on TDLR record"
+          ],
+          "source_urls": [
+            "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026014091"
+          ]
+        },
+        {
+          "name": "JEFFERY L,KELLEY",
+          "roles": [
+            "registered accessibility specialist"
+          ],
+          "source_urls": [
+            "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026014091"
+          ]
+        }
+      ],
+      "source_links": [
+        {
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026014091",
+          "title": "TDLR TABS Project Details: TABS2026014091",
+          "recorded_date": "2026-03-04",
+          "evidence": "Franklin High School; 1216 W FM 1644 Franklin, TX 77856; Additions to Existing Building; Project consists of a approximate 3,000sf metal building which will include classroom space, dressing rooms and renovations to the existing classroom / storage spaces."
+        }
+      ],
+      "seed_contacts": [],
+      "initial_research_status": "not_yet_researched"
+    },
+    {
+      "property_id": "statewide-tdlr-tabs-TABS2026014016",
+      "rank": 26,
+      "batch_id": "batch-02",
+      "project_name": "Field House Addition",
+      "location": {
+        "address": "1216 W FM 1644 Franklin, TX 77856",
+        "city": "Franklin",
+        "county": "Robertson"
+      },
+      "actors": [
+        {
+          "name": "Franklin ISD",
+          "roles": [
+            "owner/developer"
+          ],
+          "source_urls": [
+            "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026014016"
+          ]
+        },
+        {
+          "name": "Harris Craig Architects, Inc.",
+          "roles": [
+            "designer",
+            "design firm on TDLR record"
+          ],
+          "source_urls": [
+            "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026014016"
+          ]
+        },
+        {
+          "name": "JEFFERY L,KELLEY",
+          "roles": [
+            "registered accessibility specialist"
+          ],
+          "source_urls": [
+            "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026014016"
+          ]
+        }
+      ],
+      "source_links": [
+        {
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026014016",
+          "title": "TDLR TABS Project Details: TABS2026014016",
+          "recorded_date": "2026-03-03",
+          "evidence": "Franklin Boys Athletics; 1216 W FM 1644 Franklin, TX 77856; Additions to Existing Building; Project consists of approximately 6,000sf metal building addition to the existing boys field house, which includes a locker room and associated shower/toilet facilities and filming classroom."
+        }
+      ],
+      "seed_contacts": [],
+      "initial_research_status": "not_yet_researched"
+    },
+    {
+      "property_id": "statewide-tdlr-tabs-TABS2026008039",
+      "rank": 27,
+      "batch_id": "batch-03",
+      "project_name": "Donald Steven Davis Gymnasium",
+      "location": {
+        "address": "1210 Hackberry Street Hearne, TX 77859",
+        "city": "Hearne",
+        "county": "Robertson"
+      },
+      "actors": [
+        {
+          "name": "Hearne Independent School District",
+          "roles": [
+            "owner/developer"
+          ],
+          "source_urls": [
+            "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026008039"
+          ]
+        },
+        {
+          "name": "IDG Architects + Partners Inc",
+          "roles": [
+            "designer",
+            "design firm on TDLR record"
+          ],
+          "source_urls": [
+            "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026008039"
+          ]
+        },
+        {
+          "name": "KENNETH,OTTEN",
+          "roles": [
+            "registered accessibility specialist"
+          ],
+          "source_urls": [
+            "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026008039"
+          ]
+        }
+      ],
+      "source_links": [
+        {
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026008039",
+          "title": "TDLR TABS Project Details: TABS2026008039",
+          "recorded_date": "2025-12-15",
+          "evidence": "Donald Steven Davis Gymnasium; 1210 Hackberry Street Hearne, TX 77859; New Construction; Gymnasium, weight room, locker rooms, concession, restroom. classroom, offices amd parking"
+        }
+      ],
+      "seed_contacts": [],
+      "initial_research_status": "not_yet_researched"
+    },
+    {
+      "property_id": "statewide-tdlr-tabs-TABS2026006838",
+      "rank": 28,
+      "batch_id": "batch-03",
+      "project_name": "New Upper Jr High Campus & Lower Jr. High Addition",
+      "location": {
+        "address": "145 Bison Trail Buffalo, TX 75831",
+        "city": "Buffalo",
+        "county": "Leon"
+      },
+      "actors": [
+        {
+          "name": "Buffalo ISD",
+          "roles": [
+            "owner/developer"
+          ],
+          "source_urls": [
+            "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026006838"
+          ]
+        },
+        {
+          "name": "GLS",
+          "roles": [
+            "designer",
+            "design firm on TDLR record"
+          ],
+          "source_urls": [
+            "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026006838"
+          ]
+        },
+        {
+          "name": "PHILLIP BERTRAM,CHAPMAN",
+          "roles": [
+            "registered accessibility specialist"
+          ],
+          "source_urls": [
+            "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026006838"
+          ]
+        }
+      ],
+      "source_links": [
+        {
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026006838",
+          "title": "TDLR TABS Project Details: TABS2026006838",
+          "recorded_date": "2025-11-26",
+          "evidence": "Buffalo ISD; 145 Bison Trail Buffalo, TX 75831; New Construction; New construction of 78,000 sf Jr. High campus and 8,000 sf addition to lower Jr. High."
+        }
+      ],
+      "seed_contacts": [],
+      "initial_research_status": "not_yet_researched"
+    },
+    {
+      "property_id": "washington-brenham-permit-com-add-26-0006",
+      "rank": 29,
+      "batch_id": "batch-03",
+      "project_name": "Moeller Electric metal building addition",
+      "location": {
+        "address": "1119 Industrial Boulevard",
+        "city": "Brenham",
+        "county": "Washington"
+      },
+      "actors": [
+        {
+          "name": "Moeller Electric",
+          "roles": [
+            "applicant/occupant named in permit"
+          ],
+          "source_urls": [
+            "https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-08.pdf"
+          ]
+        },
+        {
+          "name": "Davis Custom Builders of Texas",
+          "roles": [
+            "contractor",
+            "permit-listed contractor"
+          ],
+          "source_urls": [
+            "https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-08.pdf"
+          ]
+        },
+        {
+          "name": "Four D RE Holdings LLC Series C",
+          "roles": [
+            "CAD owner"
+          ],
+          "source_urls": [
+            "https://esearch.washingtoncad.org/"
+          ]
+        }
+      ],
+      "source_links": [
+        {
+          "url": "https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-08.pdf",
+          "title": "City of Brenham August 2026 Building Permits",
+          "recorded_date": "2026-09-02",
+          "evidence": "Permit report lists Moeller Electric adding a 5,000 sq ft metal building at 1119 Industrial Boulevard."
+        },
+        {
+          "url": "https://esearch.washingtoncad.org/",
+          "title": "Washington CAD property-search JSON",
+          "recorded_date": "2026-09-21",
+          "evidence": "CAD result matches 1119 INDUSTRIAL BLVD to Four D RE Holdings LLC Series C with DBA D&S Residential, appraised value $933,550."
+        },
+        {
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026017664",
+          "title": "TDLR TABS Project Details: TABS2026017664",
+          "recorded_date": "2026-04-15",
+          "evidence": "1119 Industrial Blvd Addition; 1119 Industrial Blvd Brenham, TX 77833; Additions to Existing Building; Add 5000 SF to existing metal building"
+        }
+      ],
+      "seed_contacts": [
+        {
+          "contact_name": "Davis Custom Builders of Texas",
+          "role": "contractor",
+          "phone": "979-251-4872",
+          "email": null,
+          "website": null,
+          "source_url": "https://members.texasbuilders.org/builder-directory/FindStartsWith?term=D",
+          "source_type": "association",
+          "match_status": "confirmed",
+          "source_strength": "strong",
+          "public_business_basis": "Association-listed business number",
+          "match_evidence": "Exact company name and Brenham address in the association's own member directory; the business Houzz profile agrees.",
+          "contact_note": "Texas Association of Builders listing, not a tested call; company website did not expose readable contact details.",
+          "checked_on": "2026-09-20"
+        }
+      ],
+      "initial_research_status": "not_yet_researched"
+    },
+    {
+      "property_id": "washington-brenham-permit-com-new-26-0011",
+      "rank": 30,
+      "batch_id": "batch-03",
+      "project_name": "Frost Bank Brenham financial center",
+      "location": {
+        "address": "862 US Highway 290 E",
+        "city": "Brenham",
+        "county": "Washington"
+      },
+      "actors": [
+        {
+          "name": "Frost Bank",
+          "roles": [
+            "owner/applicant",
+            "CAD owner",
+            "permit applicant / CAD owner / future branch operator"
+          ],
+          "source_urls": [
+            "https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-07.pdf",
+            "https://esearch.washingtoncad.org/",
+            "https://locations.frostbank.com/tx/brenham/862-us-highway-290-e"
+          ]
+        },
+        {
+          "name": "SpawGlass",
+          "roles": [
+            "contractor",
+            "permit-listed general contractor"
+          ],
+          "source_urls": [
+            "https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-07.pdf",
+            "https://www.spawglass.com/"
+          ]
+        }
+      ],
+      "source_links": [
+        {
+          "url": "https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-07.pdf",
+          "title": "City of Brenham July 2026 Building Permits",
+          "recorded_date": "2026-08-03",
+          "evidence": "Permit report lists new construction of Frost Bank at 862 US Highway 290 E with SpawGlass as contractor."
+        },
+        {
+          "url": "https://esearch.washingtoncad.org/",
+          "title": "Washington CAD property-search JSON",
+          "recorded_date": "2026-09-21",
+          "evidence": "CAD result matches 862 HWY 290 E to Frost Bank, S1514 BK Stringer Development S/D, appraised value $1,329,450."
+        },
+        {
+          "url": "https://locations.frostbank.com/tx/brenham/862-us-highway-290-e",
+          "title": "Frost Bank Brenham Financial Center location page",
+          "recorded_date": null,
+          "evidence": "Frost lists the Brenham financial center at 862 US Highway 290 E as coming 2027."
+        },
+        {
+          "url": "https://www.spawglass.com/",
+          "title": "SpawGlass website",
+          "recorded_date": null,
+          "evidence": "SpawGlass describes Texas-based construction services across construction phases."
+        },
+        {
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026020346",
+          "title": "TDLR TABS Project Details: TABS2026020346",
+          "recorded_date": "2026-05-14",
+          "evidence": "Frost Bank; 862 US Highway 290 E Brenham, TX 77833; New Construction; Ground up construction of a 5,336sf financial bank branch including site utility improvements."
+        }
+      ],
+      "seed_contacts": [
+        {
+          "contact_name": "SpawGlass",
+          "role": "contractor",
+          "phone": "979-401-3270",
+          "email": "BV.Estimating@SpawGlass.com",
+          "website": "https://spawglass.com/brazos-valley/",
+          "source_url": "https://spawglass.com/brazos-valley/",
+          "source_type": "official_company",
+          "match_status": "confirmed",
+          "source_strength": "strong",
+          "public_business_basis": "Brazos Valley regional office",
+          "match_evidence": "Official regional-office and subcontractor pages agree on the phone. Estimating email is on the official 2024 bidder form.",
+          "contact_note": "Ask for estimating / subcontractor onboarding; regional office is not confirmed as the Frost project team.",
+          "checked_on": "2026-09-20"
+        }
+      ],
+      "initial_research_status": "not_yet_researched"
+    },
+    {
+      "property_id": "washington-brenham-permit-com-new-26-0009-apartments",
+      "rank": 31,
+      "batch_id": "batch-03",
+      "project_name": "Arete Property Group apartment buildings",
+      "location": {
+        "address": "1307 N Park Street",
+        "city": "Brenham",
+        "county": "Washington"
+      },
+      "actors": [
+        {
+          "name": "Arete Property Group",
+          "roles": [
+            "applicant/developer"
+          ],
+          "source_urls": [
+            "https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-07.pdf"
+          ]
+        }
+      ],
+      "source_links": [
+        {
+          "url": "https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-07.pdf",
+          "title": "City of Brenham July 2026 Building Permits",
+          "recorded_date": "2026-08-03",
+          "evidence": "Permit report lists Arete Property Group for new construction of two apartment buildings at 1307 N Park Street."
+        },
+        {
+          "url": "https://esearch.washingtoncad.org/",
+          "title": "Washington CAD tested search responses",
+          "recorded_date": "2026-09-21",
+          "evidence": "StreetNumber/StreetName searches for 1307 N Park, Park St and broad StreetNumber:1307 did not produce a clean 1307 N Park parcel match."
+        }
+      ],
+      "seed_contacts": [],
+      "initial_research_status": "not_yet_researched"
+    },
+    {
+      "property_id": "washington-brenham-permit-com-new-26-0013",
+      "rank": 32,
+      "batch_id": "batch-03",
+      "project_name": "Wilkins Valley phase 3 public infrastructure / commercial office site development",
+      "location": {
+        "address": "1402 W Jefferson Street",
+        "city": "Brenham",
+        "county": "Washington"
+      },
+      "actors": [
+        {
+          "name": "Collier Construction",
+          "roles": [
+            "permit applicant/contractor as listed"
+          ],
+          "source_urls": [
+            "https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-06.pdf"
+          ]
+        },
+        {
+          "name": "Collier Construction LLC",
+          "roles": [
+            "permit-listed construction participant"
+          ],
+          "source_urls": [
+            "https://www.collierconstruction.com/contact"
+          ]
+        }
+      ],
+      "source_links": [
+        {
+          "url": "https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-06.pdf",
+          "title": "City of Brenham June 2026 Building Permits",
+          "recorded_date": "2026-07-02",
+          "evidence": "Permit report lists Collier Construction for public infrastructure phase 3 Wilkins Valley site development at 1402 W Jefferson Street."
+        },
+        {
+          "url": "https://www.collierconstruction.com/contact",
+          "title": "Collier Construction contact page",
+          "recorded_date": null,
+          "evidence": "Company page identifies Collier Construction LLC in Brenham as a construction business."
+        },
+        {
+          "url": "https://esearch.washingtoncad.org/",
+          "title": "Washington CAD tested search response",
+          "recorded_date": "2026-09-21",
+          "evidence": "CAD StreetNumber:1402 StreetName:Jefferson query returned no result in the tested public search."
+        }
+      ],
+      "seed_contacts": [
+        {
+          "contact_name": "Collier Construction LLC",
+          "role": "permit-listed construction participant",
+          "phone": "979-836-4477",
+          "email": "maceyt@collierconstruction.com",
+          "website": "https://www.collierconstruction.com/contact",
+          "source_url": "https://www.collierconstruction.com/contact",
+          "source_type": "official_company",
+          "match_status": "confirmed",
+          "source_strength": "strong",
+          "public_business_basis": "Brenham main office",
+          "match_evidence": "Exact company name and Brenham office; exact Wilkins Valley role remains unresolved.",
+          "contact_note": "Ask who handles estimating; published email is also used for warranty requests, not verified as a bid inbox.",
+          "checked_on": "2026-09-20"
+        }
+      ],
+      "initial_research_status": "not_yet_researched"
+    },
+    {
+      "property_id": "washington-brenham-permit-com-new-26-0010-apartment",
+      "rank": 33,
+      "batch_id": "batch-03",
+      "project_name": "Nelson Sosa multifamily apartment building",
+      "location": {
+        "address": "411 Church Street",
+        "city": "Brenham",
+        "county": "Washington"
+      },
+      "actors": [
+        {
+          "name": "Nelson Sosa",
+          "roles": [
+            "permit applicant / CAD owner"
+          ],
+          "source_urls": [
+            "https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-06.pdf"
+          ]
+        },
+        {
+          "name": "Valco Builders",
+          "roles": [
+            "contractor",
+            "permit-listed contractor"
+          ],
+          "source_urls": [
+            "https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-06.pdf"
+          ]
+        },
+        {
+          "name": "Sosa Nelson",
+          "roles": [
+            "CAD owner"
+          ],
+          "source_urls": [
+            "https://esearch.washingtoncad.org/"
+          ]
+        }
+      ],
+      "source_links": [
+        {
+          "url": "https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-06.pdf",
+          "title": "City of Brenham June 2026 Building Permits",
+          "recorded_date": "2026-07-02",
+          "evidence": "Permit report lists new construction multifamily apartment building for Nelson Sosa at 411 Church Street, valued at $730,000, contractor Valco Builders."
+        },
+        {
+          "url": "https://esearch.washingtoncad.org/",
+          "title": "Washington CAD property-search JSON",
+          "recorded_date": "2026-09-21",
+          "evidence": "CAD result matches 411 CHURCH ST to owner SOSA NELSON, legal ORIGINAL TOWN ADD'N, appraised value $134,690."
+        }
+      ],
+      "seed_contacts": [
+        {
+          "contact_name": "Valco Builders",
+          "role": "contractor",
+          "phone": "832-708-7069",
+          "email": null,
+          "website": null,
+          "source_url": "https://www.houzz.com/professionals/general-contractors/valco-builders-pfvwus-pf~1387626994",
+          "source_type": "directory",
+          "match_status": "provisional",
+          "source_strength": "provisional",
+          "public_business_basis": "UNCONFIRMED directory-listed number",
+          "match_evidence": "Exact name and Texas construction business, but no project/address bridge to 411 Church Street. Not a verified contractor contact.",
+          "contact_note": "Humble business profile only; same company as the Brenham permit NOT confirmed. Website redirects to a private page. Verify identity first.",
+          "checked_on": "2026-09-20"
+        }
+      ],
+      "initial_research_status": "not_yet_researched"
+    },
+    {
+      "property_id": "statewide-tdlr-tabs-TABS2027001470",
+      "rank": 34,
+      "batch_id": "batch-03",
+      "project_name": "Adamson Engineering",
+      "location": {
+        "address": "4025 Cross Park Drive Bryan, TX 77802",
+        "city": "Bryan",
+        "county": "Brazos"
+      },
+      "actors": [
+        {
+          "name": "Adamson Investments LLC",
+          "roles": [
+            "owner/developer"
+          ],
+          "source_urls": [
+            "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2027001470"
+          ]
+        },
+        {
+          "name": "PACT DESIGN STUDIO",
+          "roles": [
+            "designer",
+            "design firm on TDLR record"
+          ],
+          "source_urls": [
+            "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2027001470"
+          ]
+        },
+        {
+          "name": "EDDIE,HARE",
+          "roles": [
+            "registered accessibility specialist"
+          ],
+          "source_urls": [
+            "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2027001470"
+          ]
+        }
+      ],
+      "source_links": [
+        {
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2027001470",
+          "title": "TDLR TABS Project Details: TABS2027001470",
+          "recorded_date": "2026-09-19",
+          "evidence": "Adamson Engineering; 4025 Cross Park Drive Bryan, TX 77802; New Construction; New office building and associated site work"
+        }
+      ],
+      "seed_contacts": [],
+      "initial_research_status": "not_yet_researched"
+    },
+    {
+      "property_id": "statewide-tdlr-tabs-TABS2027001180",
+      "rank": 35,
+      "batch_id": "batch-03",
+      "project_name": "Brenham Rodeo",
+      "location": {
+        "address": "3823 HWY 290 Brenham, TX 77833",
+        "city": "Brenham",
+        "county": "Washington"
+      },
+      "actors": [
+        {
+          "name": "Blaze RE Holdings LLC",
+          "roles": [
+            "owner/developer"
+          ],
+          "source_urls": [
+            "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2027001180"
+          ]
+        },
+        {
+          "name": "Four Nexus Studio",
+          "roles": [
+            "designer",
+            "design firm on TDLR record"
+          ],
+          "source_urls": [
+            "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2027001180"
+          ]
+        },
+        {
+          "name": "WILLIAM G,PAGE",
+          "roles": [
+            "registered accessibility specialist"
+          ],
+          "source_urls": [
+            "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2027001180"
+          ]
+        }
+      ],
+      "source_links": [
+        {
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2027001180",
+          "title": "TDLR TABS Project Details: TABS2027001180",
+          "recorded_date": "2026-09-16",
+          "evidence": "Brenham Rodeo C-Store; 3823 HWY 290 Brenham, TX 77833; New Construction; Proposed new one story 10890 sqft convenience store."
+        }
+      ],
+      "seed_contacts": [],
+      "initial_research_status": "not_yet_researched"
+    },
+    {
+      "property_id": "brazos-bryan-sdrc-sp26-000062-north-dunn-apartments",
+      "rank": 36,
+      "batch_id": "batch-03",
+      "project_name": "North and Dunn Apartments",
+      "location": {
+        "address": "600 E North Ave",
+        "city": "Bryan",
+        "county": "Brazos"
+      },
+      "actors": [
+        {
+          "name": "VGC Ventures, LLC",
+          "roles": [
+            "developer"
+          ],
+          "source_urls": [
+            "https://docs.bryantx.gov/planning_development/SDRC/2026%20SDRC/09-15-2026/SP26-000062%2C%20Ramsey%20Place%2C%20600%20E%20North%20Ave%2C%20North%20and%20Dunn%20Apartments%2C%209-15-26.pdf"
+          ]
+        },
+        {
+          "name": "McClure & Browne Engineering/Surveying, Inc.",
+          "roles": [
+            "designer / engineering-surveying preparer"
+          ],
+          "source_urls": [
+            "https://docs.bryantx.gov/planning_development/SDRC/2026%20SDRC/09-15-2026/SP26-000062%2C%20Ramsey%20Place%2C%20600%20E%20North%20Ave%2C%20North%20and%20Dunn%20Apartments%2C%209-15-26.pdf"
+          ]
+        }
+      ],
+      "source_links": [
+        {
+          "url": "https://docs.bryantx.gov/planning_development/SDRC/2026%20SDRC/09-15-2026/SP26-000062%2C%20Ramsey%20Place%2C%20600%20E%20North%20Ave%2C%20North%20and%20Dunn%20Apartments%2C%209-15-26.pdf",
+          "title": "SP26-000062, Ramsey Place, 600 E North Ave, North and Dunn Apartments",
+          "recorded_date": "09-15-2026",
+          "evidence": "PDF text names North and Dunn Apartments, Bryan, Brazos County; developer VGC Ventures, LLC; McClure & Browne preparer; site vicinity North E Ave and Dunn Street; issued-for-bidding text appears in the extraction."
+        }
+      ],
+      "seed_contacts": [],
+      "initial_research_status": "not_yet_researched"
+    },
+    {
+      "property_id": "statewide-tdlr-tabs-TABS2027000633",
+      "rank": 37,
+      "batch_id": "batch-03",
+      "project_name": "Galaxy Spa",
+      "location": {
+        "address": "1201 Briarcrest Drive Bryan, TX 77802",
+        "city": "Bryan",
+        "county": "Brazos"
+      },
+      "actors": [
+        {
+          "name": "Tran Nhon & Chau Huynh",
+          "roles": [
+            "owner/developer"
+          ],
+          "source_urls": [
+            "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2027000633"
+          ]
+        },
+        {
+          "name": "Constantin Barbu",
+          "roles": [
+            "designer",
+            "design firm on TDLR record"
+          ],
+          "source_urls": [
+            "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2027000633"
+          ]
+        },
+        {
+          "name": "EDDIE,HARE",
+          "roles": [
+            "registered accessibility specialist"
+          ],
+          "source_urls": [
+            "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2027000633"
+          ]
+        }
+      ],
+      "source_links": [
+        {
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2027000633",
+          "title": "TDLR TABS Project Details: TABS2027000633",
+          "recorded_date": "2026-09-09",
+          "evidence": "Galaxy Spa; 1201 Briarcrest Drive Bryan, TX 77802; Renovation/Alteration; demo walls, new walls, new restrooms, plumbing, and HVAC"
+        }
+      ],
+      "seed_contacts": [],
+      "initial_research_status": "not_yet_researched"
+    },
+    {
+      "property_id": "brazos-bryan-sdrc-sp26-000059-tabor-road-apartments",
+      "rank": 38,
+      "batch_id": "batch-03",
+      "project_name": "Tabor Road Apartments",
+      "location": {
+        "address": "2816 Tabor Road",
+        "city": "Bryan",
+        "county": "Brazos"
+      },
+      "actors": [
+        {
+          "name": "Haswell Park Properties, LLC",
+          "roles": [
+            "owner/developer"
+          ],
+          "source_urls": [
+            "https://docs.bryantx.gov/planning_development/SDRC/2026%20SDRC/09-08-2026/SP26-000059%2C%20Siegert%2C%20Tabor%20Road%20Apts%2C%202816%20Tabor%20Rd%2C%209-8-26.pdf"
+          ]
+        },
+        {
+          "name": "J4 Engineering",
+          "roles": [
+            "engineer"
+          ],
+          "source_urls": [
+            "https://docs.bryantx.gov/planning_development/SDRC/2026%20SDRC/09-08-2026/SP26-000059%2C%20Siegert%2C%20Tabor%20Road%20Apts%2C%202816%20Tabor%20Rd%2C%209-8-26.pdf"
+          ]
+        }
+      ],
+      "source_links": [
+        {
+          "url": "https://docs.bryantx.gov/planning_development/SDRC/2026%20SDRC/09-08-2026/SP26-000059%2C%20Siegert%2C%20Tabor%20Road%20Apts%2C%202816%20Tabor%20Rd%2C%209-8-26.pdf",
+          "title": "SP26-000059, Siegert, Tabor Road Apts, 2816 Tabor Rd",
+          "recorded_date": "09-08-2026",
+          "evidence": "PDF text lists Tabor Road Apartments at 2816 Tabor Road, owner/developer Haswell Park Properties, LLC, and J4 Engineering contact details."
+        }
+      ],
+      "seed_contacts": [],
+      "initial_research_status": "not_yet_researched"
+    },
+    {
+      "property_id": "brazos-bryan-sdrc-sp26-000053-oxbow-business-park",
+      "rank": 39,
+      "batch_id": "batch-03",
+      "project_name": "Oxbow Business Park / Hwy 30 Business Park",
+      "location": {
+        "address": "11400 State Highway 30",
+        "city": "Bryan",
+        "county": "Brazos"
+      },
+      "actors": [
+        {
+          "name": "Oxbow Construction, LLC",
+          "roles": [
+            "owner/developer"
+          ],
+          "source_urls": [
+            "https://docs.bryantx.gov/planning_development/SDRC/2026%20SDRC/08-11-2026/SP26-000053%2C%20Hwy%2030%20Business%20Park%2C%20Oxbow%20Business%20Park%2C%208-11-26.pdf"
+          ]
+        },
+        {
+          "name": "J4 Engineering",
+          "roles": [
+            "engineer"
+          ],
+          "source_urls": [
+            "https://docs.bryantx.gov/planning_development/SDRC/2026%20SDRC/08-11-2026/SP26-000053%2C%20Hwy%2030%20Business%20Park%2C%20Oxbow%20Business%20Park%2C%208-11-26.pdf"
+          ]
+        }
+      ],
+      "source_links": [
+        {
+          "url": "https://docs.bryantx.gov/planning_development/SDRC/2026%20SDRC/08-11-2026/SP26-000053%2C%20Hwy%2030%20Business%20Park%2C%20Oxbow%20Business%20Park%2C%208-11-26.pdf",
+          "title": "SP26-000053, Hwy 30 Business Park, Oxbow Business Park",
+          "recorded_date": "08-11-2026",
+          "evidence": "PDF text lists Oxbow Business Park, Hwy 30 Business Park, 11400 State Highway 30, Lot 1R 5.62 acres, owner/developer Oxbow Construction LLC, and J4 Engineering."
+        }
+      ],
+      "seed_contacts": [],
+      "initial_research_status": "not_yet_researched"
+    },
+    {
+      "property_id": "statewide-tdlr-tabs-TABS2026025695",
+      "rank": 40,
+      "batch_id": "batch-04",
+      "project_name": "MDS Maintenance LLC - Office Warehouse",
+      "location": {
+        "address": "1700 N La Salle Navasota, TX 77868",
+        "city": "Navasota",
+        "county": "Grimes"
+      },
+      "actors": [
+        {
+          "name": "MDS Maintenance, LLC",
+          "roles": [
+            "owner/developer"
+          ],
+          "source_urls": [
+            "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026025695"
+          ]
+        },
+        {
+          "name": "BLAIR,BAKER",
+          "roles": [
+            "registered accessibility specialist"
+          ],
+          "source_urls": [
+            "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026025695"
+          ]
+        }
+      ],
+      "source_links": [
+        {
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026025695",
+          "title": "TDLR TABS Project Details: TABS2026025695",
+          "recorded_date": "2026-07-20",
+          "evidence": "MDS Maintainance LLC - Office Warehouse; 1700 N La Salle Navasota, TX 77868; New Construction; Office Warehouse Space ~ 11,200 SF Metal Building"
+        }
+      ],
+      "seed_contacts": [],
+      "initial_research_status": "not_yet_researched"
+    },
+    {
+      "property_id": "statewide-tdlr-tabs-TABS2026024787",
+      "rank": 41,
+      "batch_id": "batch-04",
+      "project_name": "Somerville ISD - Phase 2",
+      "location": {
+        "address": "570 8th St Somerville, TX 77879",
+        "city": "Somerville",
+        "county": "Burleson"
+      },
+      "actors": [
+        {
+          "name": "Somerville ISD",
+          "roles": [
+            "owner/developer"
+          ],
+          "source_urls": [
+            "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026024787"
+          ]
+        },
+        {
+          "name": "SZS Architecture",
+          "roles": [
+            "designer",
+            "design firm on TDLR record"
+          ],
+          "source_urls": [
+            "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026024787"
+          ]
+        },
+        {
+          "name": "EDDIE,HARE",
+          "roles": [
+            "registered accessibility specialist"
+          ],
+          "source_urls": [
+            "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026024787"
+          ]
+        }
+      ],
+      "source_links": [
+        {
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026024787",
+          "title": "TDLR TABS Project Details: TABS2026024787",
+          "recorded_date": "2026-07-08",
+          "evidence": "Ag Barn, Halftime Building, Softball and Baseball Concessions; 570 8th St Somerville, TX 77879; New Construction; New ag barn, new halftime building, new softball concessions, and new baseball concession."
+        }
+      ],
+      "seed_contacts": [],
+      "initial_research_status": "not_yet_researched"
+    },
+    {
+      "property_id": "statewide-tdlr-tabs-TABS2026023660",
+      "rank": 42,
+      "batch_id": "batch-04",
+      "project_name": "EAG Chevrolet / Sterling Auto showroom and service center expansion",
+      "location": {
+        "address": "9030 State Hwy 6 Navasota, TX 77868",
+        "city": "Navasota",
+        "county": "Grimes"
+      },
+      "actors": [
+        {
+          "name": "Navasota Ventures, LLC",
+          "roles": [
+            "applicant/owner in city memo",
+            "owner/applicant verified in city memo"
+          ],
+          "source_urls": [
+            "https://destinyhosted.com/agenda_publish.cfm?id=62827&mt=ALL&get_month=8&get_year=2026&dsp=agm&seq=1041&rev=0&ag=244&ln=2885"
+          ]
+        },
+        {
+          "name": "Lay Construction",
+          "roles": [
+            "project representative",
+            "project representative verified in city memo"
+          ],
+          "source_urls": [
+            "https://destinyhosted.com/agenda_publish.cfm?id=62827&mt=ALL&get_month=8&get_year=2026&dsp=agm&seq=1041&rev=0&ag=244&ln=2885"
+          ]
+        },
+        {
+          "name": "NAVASOTA VENTURES LLC",
+          "roles": [
+            "owner/developer"
+          ],
+          "source_urls": [
+            "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026023660"
+          ]
+        },
+        {
+          "name": "Lay Design/Build",
+          "roles": [
+            "designer",
+            "design firm on TDLR record"
+          ],
+          "source_urls": [
+            "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026023660"
+          ]
+        },
+        {
+          "name": "JAMES CHESLEY,FANCHER",
+          "roles": [
+            "registered accessibility specialist"
+          ],
+          "source_urls": [
+            "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026023660"
+          ]
+        }
+      ],
+      "source_links": [
+        {
+          "url": "https://destinyhosted.com/agenda_publish.cfm?id=62827&mt=ALL&get_month=8&get_year=2026&dsp=ag&seq=244",
+          "title": "Navasota P&Z agenda",
+          "recorded_date": "2026-08-27",
+          "evidence": "Agenda identifies preliminary site plan for Navasota Ventures/Sterling Auto expansion at 9030 Highway 6."
+        },
+        {
+          "url": "https://destinyhosted.com/agenda_publish.cfm?id=62827&mt=ALL&get_month=8&get_year=2026&dsp=agm&seq=1041&rev=0&ag=244&ln=2885",
+          "title": "Navasota P&Z memo 1041",
+          "recorded_date": "2026-08-27",
+          "evidence": "Memo gives project rep Lay Construction, parcel R10132, owner Navasota Ventures, LLC, address and staff recommendation."
+        },
+        {
+          "url": "https://grimescad.org/ProxyT/Search/Properties/quick/?f=9030%20HWY6&pn=1&st=4&so=desc&pt=RP;PP;MH;NR&ty=2027",
+          "title": "Grimes CAD quick search 9030 HWY6",
+          "recorded_date": "2027",
+          "evidence": "CAD returns R10132 owner Navasota Ventures LLC at 9030 HWY6 plus related personal property/holding records."
+        },
+        {
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026023660",
+          "title": "TDLR TABS Project Details: TABS2026023660",
+          "recorded_date": "2026-06-24",
+          "evidence": "EAG Chevrolet; 9030 State Hwy 6 Navasota, TX 77868; New Construction; New Showroom & Service Center with related sitework"
+        }
+      ],
+      "seed_contacts": [],
+      "initial_research_status": "not_yet_researched"
+    },
+    {
+      "property_id": "statewide-tdlr-tabs-TABS2026021299",
+      "rank": 43,
+      "batch_id": "batch-04",
+      "project_name": "TxDOT Centerville AE/MNT",
+      "location": {
+        "address": "775 STATE HIGHWAY 75N Centerville, TX 75833",
+        "city": "Centerville",
+        "county": "Leon"
+      },
+      "actors": [
+        {
+          "name": "Texas Department of Transportation",
+          "roles": [
+            "owner/developer"
+          ],
+          "source_urls": [
+            "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026021299"
+          ]
+        },
+        {
+          "name": "Jacobs",
+          "roles": [
+            "designer",
+            "design firm on TDLR record"
+          ],
+          "source_urls": [
+            "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026021299"
+          ]
+        },
+        {
+          "name": "ERNESTO,SARABIA",
+          "roles": [
+            "registered accessibility specialist"
+          ],
+          "source_urls": [
+            "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026021299"
+          ]
+        }
+      ],
+      "source_links": [
+        {
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026021299",
+          "title": "TDLR TABS Project Details: TABS2026021299",
+          "recorded_date": "2026-05-27",
+          "evidence": "TxDOT Centerville AE/MNT; 775 STATE HIGHWAY 75N Centerville, TX 75833; New Construction; CONSTRUCTION AND SITE DEVELOPMENT OF NEW VEHICLE MAINTENANCE AND OFFICE FACILITY FOR THE BRYAN DISTRICT/LEON COUNTY AREA. NEW BUILDINGS TO INCLUDE AREA ENGINEER & MAINTENANCE, EQUIPMENT STORAGE SHEDS, BRINEMAKER, FIRE PUMP HOUSE, AND FUEL STATION."
+        }
+      ],
+      "seed_contacts": [],
+      "initial_research_status": "not_yet_researched"
+    },
+    {
+      "property_id": "statewide-tdlr-tabs-TABS2026020312",
+      "rank": 44,
+      "batch_id": "batch-04",
+      "project_name": "The Icon at Creekside",
+      "location": {
+        "address": "N Earl Rudder Freeway Bryan, TX 77802",
+        "city": "Bryan",
+        "county": "Brazos"
+      },
+      "actors": [
+        {
+          "name": "burton creek ventures llc & Rudder frontage LLC",
+          "roles": [
+            "owner/developer"
+          ],
+          "source_urls": [
+            "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026020312"
+          ]
+        },
+        {
+          "name": "TED TROUT ARCHITECT & ASSOCIATES, LTD.",
+          "roles": [
+            "designer",
+            "design firm on TDLR record"
+          ],
+          "source_urls": [
+            "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026020312"
+          ]
+        },
+        {
+          "name": "RICHARD TODD,LOZANO",
+          "roles": [
+            "registered accessibility specialist"
+          ],
+          "source_urls": [
+            "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026020312"
+          ]
+        }
+      ],
+      "source_links": [
+        {
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026020312",
+          "title": "TDLR TABS Project Details: TABS2026020312",
+          "recorded_date": "2026-05-14",
+          "evidence": "multifamily apartments; N Earl Rudder Freeway Bryan, TX 77802; New Construction; new construction of multifamily apartments with 2(high density ) buildings 233 units in total and about 5,000 ft2 clubhouse"
+        }
+      ],
+      "seed_contacts": [],
+      "initial_research_status": "not_yet_researched"
+    },
+    {
+      "property_id": "statewide-tdlr-tabs-TABS2026018848",
+      "rank": 45,
+      "batch_id": "batch-04",
+      "project_name": "FFB - Franklin",
+      "location": {
+        "address": "106 W Hwy 79 Franklin, TX 77856",
+        "city": "Franklin",
+        "county": "Robertson"
+      },
+      "actors": [
+        {
+          "name": "First Financial Bank",
+          "roles": [
+            "owner/developer"
+          ],
+          "source_urls": [
+            "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026018848"
+          ]
+        },
+        {
+          "name": "Parkhill",
+          "roles": [
+            "designer",
+            "design firm on TDLR record"
+          ],
+          "source_urls": [
+            "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026018848"
+          ]
+        },
+        {
+          "name": "STEPHEN D,MACPHIE",
+          "roles": [
+            "registered accessibility specialist"
+          ],
+          "source_urls": [
+            "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026018848"
+          ]
+        }
+      ],
+      "source_links": [
+        {
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026018848",
+          "title": "TDLR TABS Project Details: TABS2026018848",
+          "recorded_date": "2026-04-28",
+          "evidence": "First Financial Bank; 106 W Hwy 79 Franklin, TX 77856; New Construction; New construction of single-story FFB branch approximately 3,500 sq ft."
+        }
+      ],
+      "seed_contacts": [],
+      "initial_research_status": "not_yet_researched"
+    },
+    {
+      "property_id": "burleson-somerville-ord-26-011-avenue-p-multifamily",
+      "rank": 46,
+      "batch_id": "batch-04",
+      "project_name": "Avenue P multifamily special-use permit",
+      "location": {
+        "address": "Avenue P lot; Landolt #9 Addition Block 2 west half, 2.0 acres; situs street number not listed in ordinance or CAD",
+        "city": "Somerville",
+        "county": "Burleson"
+      },
+      "actors": [
+        {
+          "name": "ALTURA CAPITAL LLC",
+          "roles": [
+            "owner/developer",
+            "CAD-listed owner of property ID 1043275",
+            "CAD-listed owner/developer"
+          ],
+          "source_urls": [
+            "https://esearch.burlesonappraisal.com/Property/View/1043275"
+          ]
+        },
+        {
+          "name": "City of Somerville",
+          "roles": [
+            "approving jurisdiction"
+          ],
+          "source_urls": [
+            "https://somervilletx.gov/nav/ordinances.php"
+          ]
+        }
+      ],
+      "source_links": [
+        {
+          "url": "https://somervilletx.gov/Ordinance%2026-011%20for%20SUP%20Multifamily%20in%20RS1%20Zone.pdf?t=202604241102040",
+          "title": "Ordinance 26-011 for SUP Multifamily in RS1 Zone",
+          "recorded_date": "2026-04-21",
+          "evidence": "Authorizes multifamily use on an RS-1 zoned Avenue P tract, Landolt #9 Addition Block 2 west half, 2.0 acres, BCAD 1043275; requires site-plan review, building permits, utilities and inspections."
+        },
+        {
+          "url": "https://esearch.burlesonappraisal.com/Property/View/1043275",
+          "title": "Burleson CAD Property ID 1043275, 2026",
+          "recorded_date": "2026-09-21",
+          "evidence": "CAD lists legal description S2440 LANDOLT #9 BLK 2 SW HALF 2. ACRES, owner ALTURA CAPITAL LLC, 2026 land value $65,000 and zero improvement value."
+        }
+      ],
+      "seed_contacts": [],
+      "initial_research_status": "not_yet_researched"
+    },
+    {
+      "property_id": "statewide-tdlr-tabs-TABS2026017297",
+      "rank": 47,
+      "batch_id": "batch-04",
+      "project_name": "3798 Tabor Road Office/Warehouse",
+      "location": {
+        "address": "3798 Tabor Road Bryan, TX 77808",
+        "city": "Bryan",
+        "county": "Brazos"
+      },
+      "actors": [
+        {
+          "name": "Murphy Commercial Holdings LLC",
+          "roles": [
+            "owner/developer"
+          ],
+          "source_urls": [
+            "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026017297"
+          ]
+        },
+        {
+          "name": "EDDIE,HARE",
+          "roles": [
+            "registered accessibility specialist"
+          ],
+          "source_urls": [
+            "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026017297"
+          ]
+        }
+      ],
+      "source_links": [
+        {
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026017297",
+          "title": "TDLR TABS Project Details: TABS2026017297",
+          "recorded_date": "2026-04-10",
+          "evidence": "3798 Tabor Road; 3798 Tabor Road Bryan, TX 77808; New Construction; New Warehouse with office space"
+        }
+      ],
+      "seed_contacts": [],
+      "initial_research_status": "not_yet_researched"
+    },
+    {
+      "property_id": "statewide-tdlr-tabs-TABS2026014634",
+      "rank": 48,
+      "batch_id": "batch-04",
+      "project_name": "Dollar General \u00b7 Store #31843",
+      "location": {
+        "address": "Southwest Corner of Texas State Highway 75 & E Par Madisonville, TX 77864",
+        "city": "Madisonville",
+        "county": "Madison"
+      },
+      "actors": [
+        {
+          "name": "DGOGMADISONVILLETX10012025 LLC",
+          "roles": [
+            "owner/developer"
+          ],
+          "source_urls": [
+            "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026014634"
+          ]
+        },
+        {
+          "name": "Kinetic Design + Development",
+          "roles": [
+            "designer",
+            "design firm on TDLR record"
+          ],
+          "source_urls": [
+            "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026014634"
+          ]
+        },
+        {
+          "name": "LANDY,PERKINS",
+          "roles": [
+            "registered accessibility specialist"
+          ],
+          "source_urls": [
+            "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026014634"
+          ]
+        }
+      ],
+      "source_links": [
+        {
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026014634",
+          "title": "TDLR TABS Project Details: TABS2026014634",
+          "recorded_date": "2026-03-10",
+          "evidence": "Dollar General; Southwest Corner of Texas State Highway 75 & E Par Madisonville, TX 77864; New Construction; New Construction of 10,640 s.f. Dollar General Store, Pre-Manufactured Metal Building"
+        }
+      ],
+      "seed_contacts": [],
+      "initial_research_status": "not_yet_researched"
+    },
+    {
+      "property_id": "grimes-navasota-dashboard-20260920-autozone",
+      "rank": 49,
+      "batch_id": "batch-04",
+      "project_name": "AutoZone #10769 / Navasota construction underway",
+      "location": {
+        "address": "409 North La Salle Street, Navasota, TX 77868",
+        "city": "Navasota",
+        "county": "Grimes"
+      },
+      "actors": [
+        {
+          "name": "ROY L MARTIN & ASSOC. PARTNERS, LTD",
+          "roles": [
+            "owner/developer"
+          ],
+          "source_urls": [
+            "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026011198"
+          ]
+        },
+        {
+          "name": "AutoZone",
+          "roles": [
+            "designer",
+            "project/business name from city dashboard",
+            "design firm on TDLR record"
+          ],
+          "source_urls": [
+            "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026011198",
+            "https://services2.arcgis.com/A1oRcvECJ7UaClOw/arcgis/rest/services/Navasota_Project___Sheet1(in)/FeatureServer/0/query?where=1%3D1&outFields=*&returnGeometry=true&f=json"
+          ]
+        },
+        {
+          "name": "JEFFERY L,KELLEY",
+          "roles": [
+            "registered accessibility specialist"
+          ],
+          "source_urls": [
+            "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026011198"
+          ]
+        }
+      ],
+      "source_links": [
+        {
+          "url": "https://navasota.maps.arcgis.com/apps/dashboards/17b7b6efb2794a54b6a2f4ce3473cb12",
+          "title": "City of Navasota Project Dashboard",
+          "recorded_date": null,
+          "evidence": "Feature row states Autozone site plan and construction plans approved, construction permit issued and construction underway; includes Dec-26 estimated completion and coordinates."
+        },
+        {
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026011198",
+          "title": "TDLR TABS Project Details: TABS2026011198",
+          "recorded_date": "2026-01-29",
+          "evidence": "AutoZone; 409 North La Salle Street Navasota, TX 77868; New Construction; Construct an Auto Parts Retail Store from Ground Up."
+        }
+      ],
+      "seed_contacts": [],
+      "initial_research_status": "not_yet_researched"
+    }
+  ]
+}
