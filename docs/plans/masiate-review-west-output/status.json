@@ -1,0 +1,24 @@
+{
+  "worker": "review-west",
+  "status": "complete",
+  "started_at_utc": "2026-09-21T02:19:47Z",
+  "checkpoint_at_utc": "2026-09-21T02:24:17Z",
+  "finished_at_utc": "2026-09-21T02:24:17Z",
+  "deadline_utc": "2026-09-21T02:38:00Z",
+  "records_accounted_for": 88,
+  "reviewed_records": 88,
+  "recommended_includes": 25,
+  "watchlist_records": 60,
+  "excluded_records": 3,
+  "output_paths": {
+    "reviewed_records": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/finish/review-west/reviewed_records.json",
+    "decisions": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/finish/review-west/decisions.json",
+    "summary": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/finish/review-west/summary.md",
+    "repo_mirror": "/home/drewp/.local/state/ccdb/masiate-finish-20260920/review-west/docs/plans/masiate-review-west-output"
+  },
+  "notes": [
+    "Used preserved source evidence at local_path only.",
+    "No new crawl, paid API call, outreach, push, live change or extra agent.",
+    "Detailed include recommendations preserve units, suites, phases and distinct permits."
+  ]
+}
