@@ -11,6 +11,9 @@ Collect broadly, then rank and investigate the best candidates in more detail.
 Agent follow-up stays in saved chats and does not change the PDF; separate
 per-lead notes are canceled. This supersedes earlier complete-report wording
 below. See [current decisions](masiate-decisions.md) for the authoritative scope.
+The first version is a **one-time collection and report**, with agent follow-up
+on request. Do not implement scheduled recrawls, recurring report editions or
+a whole-report refresh button from this earlier source-design draft.
 
 ## 1. What We Are Collecting
 
@@ -28,7 +31,7 @@ below. See [current decisions](masiate-decisions.md) for the authoritative scope
 - Backfill permits and registrations to **12 months**, and planning/development records to **24 months**, checking which older projects are still active. These are proposed collection windows, not claims about available archives.
 - Keep earlier records as history, with their real dates. Do not label an old permit as new because the scraper just found it.
 - Broad collection means residential, commercial, multifamily, renovations, additions, pools and related work. No apartment-only keywords or $3 million minimum.
-- Proposed update rhythm after the initial run: daily checks for changing permits/bids, weekly agendas/development lists, and appraisal refreshes when new files are released. Scheduling is a later implementation step.
+- Update rhythm: none scheduled in the first version. This is one initial collection; show its date and the dates of any later, explicitly requested agent research.
 
 ## 2. Where The Leads Come From
 
@@ -181,6 +184,6 @@ There is no new local server to start yet: this turn produces a plan only.
 
 ### Decision still needed
 
-Collection boundary is confirmed as **all seven Brazos Valley counties**. It is a research boundary, not a verified company travel policy. The next interview decision concerns one-time versus recurring collection and PDF editions.
+Collection boundary is confirmed as **all seven Brazos Valley counties**. It is a research boundary, not a verified company travel policy. One initial collection and PDF are selected; no scheduled editions. The next interview decision concerns which properties deserve the top positions.
 
 After the area is settled, the next planning decision is how to run the small implementation tasks: /gowork or a normal session. No agent workers, schedules or paid crawls have been started.

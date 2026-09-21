@@ -22,8 +22,11 @@ and per-lead saved-note decisions below.
   the agent must retrieve prior findings when that person asks again.
 - **Cancel separate per-lead notes, note visibility controls and shared-record
   edits.** The latest user instruction makes the previous Q7 unnecessary.
-- The PDF stays unchanged by chat research. Later editions from new collection
-  runs remain undecided.
+- One initial collection/research run and one fixed PDF are selected. No
+  scheduled crawling, recurring editions or broad report-refresh feature in
+  the first version. The agent still researches a selected lead on request.
+- Show the report and dataset dates; later chat findings have their own dates
+  and do not rewrite the report or imply the baseline has refreshed.
 - Remembering requires persisted chat history and retrieval, not an assumption
   of automatic model memory. Inspect the existing chat/session behavior before
   promising return-visit or cross-chat recall; keep each person's history scoped
@@ -263,7 +266,7 @@ The source inventory must cover selected cities and unincorporated areas,
 recording gaps instead of treating Brazos-only results as region-wide coverage.
 DFW and statewide collection are outside this chosen boundary.
 
-## Current Question
+## Report Frequency
 
 Q10: After the first PDF, when should the system collect again and make a new report?
 
@@ -276,8 +279,27 @@ Q10: After the first PDF, when should the system collect again and make a new re
 - D. Daily new editions and refreshed data; more frequent checking and work,
   even when official sources have not published new records.
 
-Answer: pending. All PDFs are fixed dated editions; chat research never rewrites
-them. This is a future product decision, not authorization to start a scheduler.
+Answer: **B**, selected by Drew on 2026-09-20. Produce one initial report and
+let the agent investigate its leads on request. No scheduler, recurring PDF
+generation or user-triggered whole-report refresh is part of the first version.
+The collected dataset/report must show their dates to avoid claiming freshness
+that only an individual chat lookup has established.
+
+## Current Question
+
+Q11: What should put a property near the top of the report?
+
+- A. Best chance of useful near-term outreach: recent matching work and an
+  identifiable buyer; recommended actionable ranking, without claiming hiring
+  intent or a probability of winning the job.
+- B. Largest relevant potential jobs: emphasize scope/value even if the sale
+  takes longer; whole-project budget is not Masiate's contract value.
+- C. Earliest warning: properties still in planning, with longer lead times.
+- D. Repeat-work potential: properties tied to builders/owners with multiple
+  projects, emphasizing relationships rather than a single immediate job.
+
+Answer: pending. All service types remain eligible. This decision sets ordering,
+not permission to invent work availability or discard all other candidates.
 
 ## Product Questions To Explore Next
 
@@ -287,8 +309,8 @@ them. This is a future product decision, not authorization to start a scheduler.
   missing; demonstrate with a clearly hypothetical example before building.
 - How the user opens, saves, revisits and exports research; public visibility
   and persistence are not yet decided beyond the section itself being public.
-- Whether data refresh is scheduled, requested by the user, or both; report
-  freshness and collection coverage must be visible.
+- How dated baseline facts and newer chat findings are distinguished; report
+  date and collection coverage must be visible, with no recurring refresh.
 - A first-use walkthrough and concrete acceptance checks for the chosen output.
 
 ## Build Boundary
