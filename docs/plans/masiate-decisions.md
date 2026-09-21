@@ -52,7 +52,7 @@ and per-lead saved-note decisions below.
 - Assistant ranking default: recent relevant work, evidence quality and an
   identifiable business contact first; distinguish likely need from an explicit
   open request for bids. Deeper profile acceptance checks still need planning.
-  No collection/build has started.
+  No collection has started as of preparation of the multi-session run below.
 
 ## Confirmed Instructions
 
@@ -458,7 +458,12 @@ Answer: pending. No request has been sent and no agency account created.
 
 ## Build Boundary
 
-Planning answers are decisions, not commands to start a build. Once the complete
-plan is reviewed, choose the execution method and start only when instructed.
-The usual /gowork option runs small checked tasks in fresh sessions; a normal
-session remains an option. No loop has been created or queued.
+Earlier preference answers were planning only. On 2026-09-20 Drew explicitly
+requested several /gowork sessions to collect as much data as possible. The
+assistant prepared `PLAN-masiate-collection.md` for one coordinated run with
+fresh small-task sessions, necessary collection code and the local property PDF.
+This supersedes the prior no-build boundary only for collection and local report
+work; live-site changes, agency requests, purchases and deployment remain out.
+No worker AI was named, so the bot must ask for the model before execution.
+For Q17 use the assistant's interim draft-only default while continuing public
+sources; this is not an explicit user selection of A or permission to send.
