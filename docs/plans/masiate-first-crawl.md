@@ -5,6 +5,21 @@ Check: `git diff --check`
 This check validates this planning change only, not a scraper or live data.
 Status: planning, 2026-09-20. No collection job, paid service, outreach or app build has started.
 
+**Expanded source checks and current run design:** see
+[the seven-county collection run](masiate-collection-run.md). It adds named
+sources beyond Brazos/Robertson and distinguishes discovered pages from tested
+individual records. This earlier document remains supporting design detail.
+
+**Updated deliverable:** Drew now wants a deeply researched PDF of the top
+properties, supported by the agent, rather than a PDF containing every lead.
+Collect broadly, then rank and investigate the best candidates in more detail.
+Agent follow-up stays in saved chats and does not change the PDF; separate
+per-lead notes are canceled. This supersedes earlier complete-report wording
+below. See [current decisions](masiate-decisions.md) for the authoritative scope.
+The first version is a **one-time collection and report**, with agent follow-up
+on request. Do not implement scheduled recrawls, recurring report editions or
+a whole-report refresh button from this earlier source-design draft.
+
 ## 1. What We Are Collecting
 
 **Agreed:** a regular public section inside CraneSignal, shaped around Masiate Construction's work, with the same information available to the existing agent. This is not a separate app or a private customer area.
@@ -15,13 +30,13 @@ Status: planning, 2026-09-20. No collection job, paid service, outreach or app b
 
 ### Area and dates
 
-- **Area decision pending:** suggested first area is Brazos and Robertson counties, including Bryan, College Station and Hearne. The founder's Hearne background does not establish the company's current base or driving limit.
-- Prepare the source inventory to expand to Burleson, Grimes, Leon, Madison and Washington counties if Drew chooses the wider Brazos Valley. Verify each city's sources separately; do not assume a county feed covers city permits.
+- **Area confirmed:** wider Brazos Valley: Brazos, Robertson, Burleson, Grimes, Leon, Madison and Washington counties. The founder's Hearne background does not establish the company's current base or driving limit.
+- Cover all seven counties in the source inventory, including relevant city and unincorporated-area records. Verify each city's sources separately; do not assume a county feed covers city permits. The expanded collection-run document adds starting points for all seven counties; smaller jurisdictions and individual-record access still need checks.
 - First pass: the latest **90 days** of permits and business-opening signals, plus all currently open matching bids and currently pending planning projects.
 - Backfill permits and registrations to **12 months**, and planning/development records to **24 months**, checking which older projects are still active. These are proposed collection windows, not claims about available archives.
 - Keep earlier records as history, with their real dates. Do not label an old permit as new because the scraper just found it.
 - Broad collection means residential, commercial, multifamily, renovations, additions, pools and related work. No apartment-only keywords or $3 million minimum.
-- Proposed update rhythm after the initial run: daily checks for changing permits/bids, weekly agendas/development lists, and appraisal refreshes when new files are released. Scheduling is a later implementation step.
+- Update rhythm: none scheduled in the first version. This is one initial collection; show its date and the dates of any later, explicitly requested agent research.
 
 ## 2. Where The Leads Come From
 
@@ -57,6 +72,9 @@ The following pages were inspected on 2026-09-20. **A source page being found do
 
 ### Tools selected for the plan
 
+- **Confirmed tool policy:** use CraneSignal's existing services, including
+  already-paid Jina/other access, plus suitable open-source tools; no new purchases
+  or unapproved overages. [Verified tool inventory and remaining checks](masiate-tool-research.md).
 - Start with official CSV, JSON, ZIP or spreadsheet downloads and direct requests using the existing Python HTTP approach. This is easier to count, resume and verify than clicking every page. [Python HTTP documentation](https://docs.python.org/3/library/urllib.request.html).
 - Use the existing HTML collectors for ordinary pages. Use [Playwright](https://playwright.dev/python/docs/network) when a public document list or search form needs a browser; inspect its normal network requests before deciding whether direct downloads are possible.
 - Use `pdftotext` for ordinary PDF text and [pdfplumber](https://github.com/jsvine/pdfplumber) for tables, keeping page numbers. Scanned documents need a separate OCR check; save uncertain readings for review.
@@ -86,7 +104,7 @@ The following pages were inspected on 2026-09-20. **A source page being found do
 - Start with one request at a time per host and at least two seconds between requests, or a slower published limit. Respect retry instructions; pause repeated failures. Separate hosts can be worked on independently.
 - Set a visible page/time limit per source before the run. Reaching a limit means **partial**, not complete or no results. Do not promise a fixed number of leads before seeing the records.
 - Handle maintenance, empty results, unexpected HTML and login pages as different outcomes. Never treat an error page as a valid fixture.
-- Refresh with overlapping date windows and compare document hashes to catch corrections. Track missing/withdrawn records without silently deleting history.
+- Within this one-time run, resume with overlapping date windows and compare document hashes to catch corrections. Track missing/withdrawn records without silently deleting history; this does not introduce scheduled refreshes.
 - Where exports are unavailable, draft a request for existing electronic records, including IDs, dates, addresses, work descriptions, status and applicant/contractor fields already held. Sending a request or creating an account is a separate action.
 
 ## 4. What Counts As A Useful Lead
@@ -116,7 +134,7 @@ The following pages were inspected on 2026-09-20. **A source page being found do
 
 - Report records downloaded, parsed, rejected, deduplicated, matched to Masiate, still active, and with business contacts. Do not add those categories together as if they were separate leads.
 - For each source, show the requested and actually covered dates, pages/files read, errors and access gaps. Compare to published totals only where categories and dates genuinely match.
-- Review up to ten records per source, including low-confidence entries, and the first twenty highest-ranked results. A bad parser fails its source even if the code runs successfully.
+- Review up to ten records per source, including low-confidence entries, and every final shortlisted property. A bad parser fails its source even if the code runs successfully.
 - Verify every published lead has an identity, service reason, dated evidence and status; separate unknown from no results. Re-running the same files must not create duplicate projects.
 - Initial success is a checked sample plus honest coverage, followed by complete collection of the agreed accessible sources. It is not a claim to have found every job in the region.
 
@@ -174,6 +192,8 @@ There is no new local server to start yet: this turn produces a plan only.
 
 ### Decision still needed
 
-Choose the first collection boundary: **Brazos + Robertson**, **all seven Brazos Valley counties**, **a drive-time area from Masiate's actual base**, or **Brazos only**. The source plan supports expansion; no wider service radius has been assumed as a company fact.
-
-After the area is settled, the next planning decision is how to run the small implementation tasks: /gowork or a normal session. No agent workers, schedules or paid crawls have been started.
+The collection-run document records the current question: how to handle useful
+records obtainable only by requesting them from an office. Geography, one-time
+reporting, the ranking default and existing-tool reuse are already settled.
+Execution mode and runnable checks still belong in the later build handoff;
+no agent workers, schedules or paid crawls have been started.

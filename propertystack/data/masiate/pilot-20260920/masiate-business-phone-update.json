@@ -1,0 +1,90 @@
+{
+  "checked_on": "2026-09-20",
+  "scope": "Public business phone lookup for the nine named construction-company prospects only. No calls, messages or project-status verification.",
+  "contacts": {
+    "EBCO General Contractor": {
+      "phone": "254-697-8516",
+      "phone_kind": "Corporate / general office",
+      "phone_status": "company_published",
+      "website": "https://ebcogc.com/",
+      "source_url": "https://ebcogc.com/contact-us/",
+      "contact_note": "Ask for the Citizens National Bank project estimator; direct project contact not established.",
+      "match_basis": "Exact business name; official contact page lists Cameron corporate and Bryan/College Station satellite offices."
+    },
+    "Collier Construction LLC": {
+      "phone": "979-836-4477",
+      "phone_kind": "Brenham main office",
+      "phone_status": "company_published",
+      "email": "maceyt@collierconstruction.com",
+      "website": "https://www.collierconstruction.com/contact",
+      "source_url": "https://www.collierconstruction.com/contact",
+      "contact_note": "Ask who handles estimating; published email is also used for warranty requests, not verified as a bid inbox.",
+      "match_basis": "Exact company name and Brenham office; exact Wilkins Valley role remains unresolved."
+    },
+    "SpawGlass": {
+      "phone": "979-401-3270",
+      "phone_kind": "Brazos Valley regional office",
+      "phone_status": "company_published",
+      "email": "BV.Estimating@SpawGlass.com",
+      "website": "https://spawglass.com/brazos-valley/",
+      "source_url": "https://spawglass.com/brazos-valley/",
+      "email_source_url": "https://spawglass.com/wp-content/uploads/2024/02/Bidder_Information_Form_02-2024.pdf",
+      "contact_note": "Ask for estimating / subcontractor onboarding; regional office is not confirmed as the Frost project team.",
+      "match_basis": "Official regional-office and subcontractor pages agree on the phone. Estimating email is on the official 2024 bidder form."
+    },
+    "Rhodes Building Systems": {
+      "phone": "979-596-1451",
+      "phone_kind": "Somerville company office",
+      "phone_status": "company_published",
+      "email": "info@rbstx.com",
+      "website": "https://www.rbstx.com/",
+      "source_url": "https://www.rbstx.com/commercial",
+      "contact_note": "Ask for the maintenance-building fire-remodel estimator.",
+      "match_basis": "Official site identifies Rhodes Building Systems Inc., Somerville, with Central Texas commercial construction services."
+    },
+    "United Constructors of Texas": {
+      "phone": "713-934-9929",
+      "phone_kind": "Houston company office",
+      "phone_status": "company_published",
+      "email": "bids@unitedconstructors.com",
+      "website": "https://www.unitedconstructors.com/",
+      "source_url": "https://www.unitedconstructors.com/contact-us",
+      "contact_note": "Ask whether they handle the Lex Investments buildout; the bid-request inbox is not proof of an open package.",
+      "match_basis": "Contact-page footer uses the exact legal/business name in the permit; commercial tenant improvements are listed."
+    },
+    "Guardian Roof Systems": {
+      "phone": "281-485-7663",
+      "phone_kind": "Pearland main office",
+      "phone_status": "company_published",
+      "website": "https://www.guardianroofsystems.com/",
+      "source_url": "https://www.guardianroofsystems.com/contact-us",
+      "contact_note": "Site also lists 281-407-7280; primary number here is its labeled main-office phone. Confirm the Brenham project.",
+      "match_basis": "Exact business name and commercial roofing services; do not confuse with Guardian Roofing in Tomball or Arlington."
+    },
+    "Davis Custom Builders of Texas": {
+      "phone": "979-251-4872",
+      "phone_kind": "Association-listed business number",
+      "phone_status": "association_published",
+      "source_url": "https://members.texasbuilders.org/builder-directory/FindStartsWith?term=D",
+      "contact_note": "Texas Association of Builders listing, not a tested call; company website did not expose readable contact details.",
+      "match_basis": "Exact company name and Brenham address in the association's own member directory; the business Houzz profile agrees."
+    },
+    "Atlas Sign Services": {
+      "phone": "713-699-1121",
+      "phone_kind": "Houston company office",
+      "phone_status": "company_published",
+      "website": "https://www.atlassigns.com/",
+      "source_url": "https://www.atlassigns.com/",
+      "contact_note": "Sign/wall scope only; not established as the church parking-lot contractor.",
+      "match_basis": "Official site identifies Atlas Sign Services Inc. at 6411 Airline Drive, Houston, and electrical sign work."
+    },
+    "Valco Builders": {
+      "phone": "832-708-7069",
+      "phone_kind": "UNCONFIRMED directory-listed number",
+      "phone_status": "directory_only",
+      "source_url": "https://www.houzz.com/professionals/general-contractors/valco-builders-pfvwus-pf~1387626994",
+      "contact_note": "Humble business profile only; same company as the Brenham permit NOT confirmed. Website redirects to a private page. Verify identity first.",
+      "match_basis": "Exact name and Texas construction business, but no project/address bridge to 411 Church Street. Not a verified contractor contact."
+    }
+  }
+}

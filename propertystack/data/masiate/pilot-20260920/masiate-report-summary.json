@@ -1,0 +1,25 @@
+{
+  "source_records_collected": 267,
+  "out_of_area_source_records_excluded": 3,
+  "detailed_properties": 49,
+  "county_counts": {
+    "Brazos": 18,
+    "Burleson": 4,
+    "Grimes": 3,
+    "Leon": 2,
+    "Madison": 1,
+    "Robertson": 6,
+    "Washington": 15
+  },
+  "source_receipts": 76,
+  "contact_routes_with_phone_email_or_website": 6,
+  "profiles_with_direct_contact_method": 6,
+  "open_trade_packages_confirmed": 0,
+  "source_records_linked_to_detailed_profiles": 58,
+  "watchlist_downgrades": 3,
+  "generated_at": "2026-09-21T02:38:18.125979+00:00",
+  "report_date": "September 20, 2026 (Central)",
+  "scope": "One bounded pilot; incomplete geographic/source coverage; not a verified open-bid list.",
+  "unreviewed_brazos_records": 98,
+  "clock_note": "Future worker checkpoint times were not used to measure duration; report uses coordinator clock."
+}

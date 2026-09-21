@@ -1,0 +1,279 @@
+{
+  "batch_id": "batch-01",
+  "properties": [
+    {
+      "property_id": "washington-brenham-permit-com-new-26-0012",
+      "rank": 1,
+      "research_status": "researched",
+      "sources_checked": [
+        {"url": "https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-08.pdf", "disposition": "no_contact_fields", "outcome": "The city permit report identifies Citizens National Bank and EBCO General Contractor for the exact address, but publishes no phone field.", "checked_on": "2026-09-20"},
+        {"url": "https://esearch.washingtoncad.org/", "disposition": "no_contact_fields", "outcome": "The public appraisal search corroborates Citizens National Bank at 400 S Austin Street; it does not provide a suitable project contact number.", "checked_on": "2026-09-20"},
+        {"url": "https://ebcogc.com/", "disposition": "contact_found", "outcome": "EBCO's official site identifies the commercial general contractor and publishes 254-697-8516.", "checked_on": "2026-09-20"},
+        {"url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026021492", "disposition": "contact_found", "outcome": "The exact bank-project registration lists Citizens National Bank owner contact Steven M. Wise at 254-697-7210 and Spencer-Pierce as designer; it does not name the builder.", "checked_on": "2026-09-20"},
+        {"url": "https://ebcogc.com/contact-us/", "disposition": "contact_found", "outcome": "EBCO's official contact page publishes 254-697-8516 for its corporate/general office and lists its Bryan/College Station satellite office.", "checked_on": "2026-09-20"}
+      ],
+      "actors_checked": [
+        {"name": "EBCO General Contractor", "role": "permit-listed general contractor", "outcome": "Exact permit-listed company matched to its official commercial-construction site and public office line."},
+        {"name": "Citizens National Bank", "role": "owner/applicant", "outcome": "The exact TDLR registration supplies a public owner-project route for Steven M. Wise; retained as an alternative to the builder."}
+      ],
+      "contacts": [
+        {"route_id": "builder-office", "contact_name": "EBCO General Contractor", "role": "permit-listed general contractor office", "phone": "254-697-8516", "email": null, "website": "https://ebcogc.com/", "public_business_basis": "Official corporate/general office published by the contractor.", "match_evidence": "The city permit names EBCO and the official site uses the exact company name and lists a Bryan/College Station satellite office.", "source_type": "official_company", "source_url": "https://ebcogc.com/contact-us/", "checked_on": "2026-09-20", "match_status": "confirmed", "source_strength": "strong", "contact_note": "Ask for the Citizens National Bank project estimator; this is not a direct project-manager line."},
+        {"route_id": "owner-project-contact", "contact_name": "Citizens National Bank / Steven M. Wise", "role": "owner/applicant contact on TDLR registration", "phone": "254-697-7210", "email": null, "website": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026021492", "public_business_basis": "TDLR publishes this as the owner phone on the exact construction registration.", "match_evidence": "The registration matches the bank name and 400 S Austin Street project.", "source_type": "government_record", "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026021492", "checked_on": "2026-09-20", "match_status": "confirmed", "source_strength": "strong", "contact_note": "Owner route; not a builder or proof that work is available."}
+      ],
+      "selected_route_id": "builder-office",
+      "alternative_route_ids": ["owner-project-contact"],
+      "researched_gap": null
+    },
+    {
+      "property_id": "washington-brenham-permit-com-rem-26-0028",
+      "rank": 2,
+      "research_status": "researched",
+      "sources_checked": [
+        {"url": "https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-08.pdf", "disposition": "no_contact_fields", "outcome": "The permit report identifies the City maintenance-building fire remodel and Rhodes Building Systems, but has no phone field.", "checked_on": "2026-09-20"},
+        {"url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026027978", "disposition": "contact_found", "outcome": "The exact project registration lists City of Brenham owner contact Dane Rau at 979-337-7407 and Eddie Hare as the accessibility specialist; it does not list the builder.", "checked_on": "2026-09-20"},
+        {"url": "https://www.rbstx.com/commercial", "disposition": "contact_found", "outcome": "Rhodes Building Systems' official commercial page identifies the Somerville company, publishes info@rbstx.com, and supplies its 979-596-1451 business route.", "checked_on": "2026-09-20"}
+      ],
+      "actors_checked": [
+        {"name": "Rhodes Building Systems", "role": "permit-listed contractor", "outcome": "Exact permit name matched to the official Central Texas commercial-construction company."},
+        {"name": "City of Brenham / Dane Rau", "role": "owner project contact", "outcome": "The exact TDLR registration publishes the city contact and business phone; retained as an owner alternative."}
+      ],
+      "contacts": [
+        {"route_id": "builder-office", "contact_name": "Rhodes Building Systems", "role": "permit-listed contractor office", "phone": "979-596-1451", "email": "info@rbstx.com", "website": "https://www.rbstx.com/", "public_business_basis": "Official Somerville company office for commercial construction.", "match_evidence": "The exact permit-listed name matches the official company identity and Central Texas service area.", "source_type": "official_company", "source_url": "https://www.rbstx.com/commercial", "checked_on": "2026-09-20", "match_status": "confirmed", "source_strength": "strong", "contact_note": "Ask for the maintenance-building fire-remodel estimator."},
+        {"route_id": "owner-project-contact", "contact_name": "City of Brenham / Dane Rau", "role": "owner contact on TDLR registration", "phone": "979-337-7407", "email": null, "website": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026027978", "public_business_basis": "TDLR publishes the municipal owner's business contact on the exact project.", "match_evidence": "The registration matches 506 S Austin Street and the fire-remodel scope.", "source_type": "government_record", "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026027978", "checked_on": "2026-09-20", "match_status": "confirmed", "source_strength": "strong", "contact_note": "Municipal owner route; not the contractor office."}
+      ],
+      "selected_route_id": "builder-office",
+      "alternative_route_ids": ["owner-project-contact"],
+      "researched_gap": null
+    },
+    {
+      "property_id": "washington-brenham-permit-misc-prkg-26-0018-grace-drainage",
+      "rank": 3,
+      "research_status": "researched",
+      "sources_checked": [
+        {"url": "https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-07.pdf", "disposition": "no_contact_fields", "outcome": "The permit report names Grace Community Fellowship as applicant and owner-listed contractor for the exact paving/drainage project, but contains no phone field.", "checked_on": "2026-09-20"},
+        {"url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026022754", "disposition": "contact_found", "outcome": "The exact registration publishes Grace Community Church owner contact Matt Sweeny at 979-337-9991 and identifies Stolz Engineering as designer.", "checked_on": "2026-09-20"},
+        {"url": "https://www.gcfbrenham.org/connect/contact/", "disposition": "contact_found", "outcome": "The church's official contact page matches 107 South Saeger Street and publishes office phone 979-337-9991.", "checked_on": "2026-09-20"}
+      ],
+      "actors_checked": [
+        {"name": "Grace Community Fellowship of Brenham", "role": "permit applicant and owner-listed contractor", "outcome": "Official site and TDLR record match the project address and agree on the church office number."},
+        {"name": "Stolz Engineering & Associates", "role": "TDLR-listed design firm", "outcome": "The TDLR record supplies a designer route, but the exact owner/applicant office is the more appropriate first route."}
+      ],
+      "contacts": [
+        {"route_id": "owner-applicant-office", "contact_name": "Grace Community Fellowship of Brenham", "role": "permit applicant and owner-listed contractor office", "phone": "979-337-9991", "email": null, "website": "https://www.gcfbrenham.org/", "public_business_basis": "Official church office phone at the construction address.", "match_evidence": "Official page and TDLR registration both match 107 South Saeger Street and the same phone.", "source_type": "institution", "source_url": "https://www.gcfbrenham.org/connect/contact/", "checked_on": "2026-09-20", "match_status": "confirmed", "source_strength": "strong", "contact_note": "Owner/applicant route for the drainage and paving scope; no separate general contractor is named."}
+      ],
+      "selected_route_id": "owner-applicant-office",
+      "alternative_route_ids": [],
+      "researched_gap": null
+    },
+    {
+      "property_id": "washington-brenham-permit-com-new-26-0007",
+      "rank": 4,
+      "research_status": "researched",
+      "sources_checked": [
+        {"url": "https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-07.pdf", "disposition": "no_contact_fields", "outcome": "The report ties Redeemer Church to the parking work and Atlas Sign Services only to wall-sign work; it publishes no phone.", "checked_on": "2026-09-20"},
+        {"url": "https://esearch.washingtoncad.org/", "disposition": "no_contact_fields", "outcome": "The appraisal search corroborates Redeemer Church ownership at 2111 S Blue Bell Road but provides no suitable business phone.", "checked_on": "2026-09-20"},
+        {"url": "https://www.redeemerbrenham.org/about-us/", "disposition": "contact_found", "outcome": "Redeemer's official page matches 2111 S Blue Bell Road and publishes 979-251-9220 and info@redeemerbrenham.org.", "checked_on": "2026-09-20"},
+        {"url": "https://www.atlassigns.com/", "disposition": "contact_found", "outcome": "Atlas Sign Services' official site publishes 713-699-1121; this route is limited to the wall-sign scope named in the permit.", "checked_on": "2026-09-20"}
+      ],
+      "actors_checked": [
+        {"name": "Redeemer Church Brenham", "role": "owner/applicant for parking improvements", "outcome": "Official contact page matches the exact project address and supplies the relevant owner route."},
+        {"name": "Atlas Sign Services", "role": "permit-listed sign/wall contractor", "outcome": "Official business number confirmed, but the permit limits Atlas to sign/wall work, not the parking-lot scope."}
+      ],
+      "contacts": [
+        {"route_id": "owner-office", "contact_name": "Redeemer Church Brenham", "role": "owner/applicant office for parking improvements", "phone": "979-251-9220", "email": "info@redeemerbrenham.org", "website": "https://www.redeemerbrenham.org/", "public_business_basis": "Official church contact information at the project address.", "match_evidence": "The official page and permit both identify 2111 S Blue Bell Road.", "source_type": "institution", "source_url": "https://www.redeemerbrenham.org/about-us/", "checked_on": "2026-09-20", "match_status": "confirmed", "source_strength": "strong", "contact_note": "Best route for the parking work because Atlas is documented only for the wall sign."},
+        {"route_id": "sign-contractor-office", "contact_name": "Atlas Sign Services", "role": "permit-listed contractor for wall-sign scope only", "phone": "713-699-1121", "email": null, "website": "https://www.atlassigns.com/", "public_business_basis": "Official Houston company office.", "match_evidence": "Exact permit-listed business name matches the official electrical-sign company.", "source_type": "official_company", "source_url": "https://www.atlassigns.com/", "checked_on": "2026-09-20", "match_status": "confirmed", "source_strength": "strong", "contact_note": "Do not treat this as the parking-lot contractor."}
+      ],
+      "selected_route_id": "owner-office",
+      "alternative_route_ids": ["sign-contractor-office"],
+      "researched_gap": null
+    },
+    {
+      "property_id": "washington-brenham-permit-com-add-26-0001-rv-parking",
+      "rank": 5,
+      "research_status": "researched",
+      "sources_checked": [
+        {"url": "https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-07.pdf", "disposition": "no_contact_fields", "outcome": "The permit names Brennan Taylor Developments as applicant and owner-listed contractor for 4040 State Highway 36 S but publishes no phone or business address.", "checked_on": "2026-09-20"},
+        {"url": "https://lslbc.gov/wp-content/uploads/2025/10/9_Sept-New-Licenses-Issued-ALL.pdf", "disposition": "no_contact_fields", "outcome": "Louisiana's licensing-board list contains the exact legal name Brennan Taylor Developments LLC and license CL.05420, but it does not connect that entity to Brenham or publish a phone in this list.", "checked_on": "2026-09-20"},
+        {"url": "https://www.buildzoom.com/contractor/brennan-taylor-developments-llc", "disposition": "contact_found", "outcome": "The directory lists the exact legal name in DeQuincy, Louisiana, license CL.05420, employee Brennan Michael Taylor, and 337-842-3303; no public source established that this is the Brenham permit entity.", "checked_on": "2026-09-20"}
+      ],
+      "actors_checked": [
+        {"name": "Brennan Taylor Developments", "role": "permit applicant and owner-listed contractor", "outcome": "Exact-name Louisiana license and directory records were found, but neither provides a Texas-project or address link, so the phone remains a best-guess route."}
+      ],
+      "contacts": [
+        {"route_id": "provisional-exact-name-directory", "contact_name": "Brennan Taylor Developments LLC", "role": "possible permit applicant / owner-listed contractor", "phone": "337-842-3303", "email": null, "website": "https://www.buildzoom.com/contractor/brennan-taylor-developments-llc", "public_business_basis": "Public contractor-directory business listing for the exact legal name and Louisiana license.", "match_evidence": "The name exactly matches the Brenham permit and the directory license matches Louisiana's official list, but there is no public geographic or project link to 4040 State Highway 36 S.", "source_type": "directory", "source_url": "https://www.buildzoom.com/contractor/brennan-taylor-developments-llc", "checked_on": "2026-09-20", "match_status": "provisional", "source_strength": "provisional", "contact_note": "Best guess only; verify identity before discussing the Brenham RV-parking project."}
+      ],
+      "selected_route_id": "provisional-exact-name-directory",
+      "alternative_route_ids": [],
+      "researched_gap": null
+    },
+    {
+      "property_id": "washington-brenham-permit-com-new-26-0014",
+      "rank": 6,
+      "research_status": "researched",
+      "sources_checked": [
+        {"url": "https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-06.pdf", "disposition": "no_contact_fields", "outcome": "The report names United Constructors of Texas for the tenant office buildout but contains no phone field.", "checked_on": "2026-09-20"},
+        {"url": "https://esearch.washingtoncad.org/", "disposition": "no_contact_fields", "outcome": "The appraisal search corroborates Lex Investments LLC at 1504 S Day Street and provides no suitable public project phone.", "checked_on": "2026-09-20"},
+        {"url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026023085", "disposition": "contact_found", "outcome": "The exact-address registration identifies the tenant scope as Edward Jones Branch #96683 and publishes owner, tenant, designer, and RAS phones; none supersedes the permit-listed builder route.", "checked_on": "2026-09-20"},
+        {"url": "https://www.unitedconstructors.com/contact-us", "disposition": "contact_found", "outcome": "United Constructors' official page publishes 713-934-9929 and bids@unitedconstructors.com under the exact company name.", "checked_on": "2026-09-20"}
+      ],
+      "actors_checked": [
+        {"name": "United Constructors of Texas", "role": "permit-listed contractor", "outcome": "Exact permit company matched to its official commercial tenant-improvement contact page."},
+        {"name": "Lex Investments LLC", "role": "owner/applicant", "outcome": "Owner identity and project phone were checked in TDLR; the confirmed builder is the more relevant route."},
+        {"name": "Edward Jones Branch #96683", "role": "tenant named on TDLR project", "outcome": "The exact-address registration identifies the tenant; its listed phone was not selected over the contractor office."}
+      ],
+      "contacts": [
+        {"route_id": "builder-office", "contact_name": "United Constructors of Texas", "role": "permit-listed contractor office", "phone": "713-934-9929", "email": "bids@unitedconstructors.com", "website": "https://www.unitedconstructors.com/", "public_business_basis": "Official Houston company office and published bid-request inbox.", "match_evidence": "The contact-page footer uses the exact legal/business name in the permit and lists commercial tenant improvements.", "source_type": "official_company", "source_url": "https://www.unitedconstructors.com/contact-us", "checked_on": "2026-09-20", "match_status": "confirmed", "source_strength": "strong", "contact_note": "Ask whether they handle this exact buildout; the bids inbox is not proof of an open package."}
+      ],
+      "selected_route_id": "builder-office",
+      "alternative_route_ids": [],
+      "researched_gap": null
+    },
+    {
+      "property_id": "washington-brenham-permit-com-roof-26-0003",
+      "rank": 7,
+      "research_status": "researched",
+      "sources_checked": [
+        {"url": "https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-06.pdf", "disposition": "no_contact_fields", "outcome": "The permit report identifies Guardian Roof Systems for the commercial roof replacement but publishes no phone.", "checked_on": "2026-09-20"},
+        {"url": "https://esearch.washingtoncad.org/", "disposition": "no_contact_fields", "outcome": "The appraisal search returns Longwood Elastomers records at the address but no suitable project contact field.", "checked_on": "2026-09-20"},
+        {"url": "https://www.guardianroofsystems.com/contact-us", "disposition": "contact_found", "outcome": "Guardian Roof Systems' official contact page labels 281-485-7663 as its main-office phone and also publishes 281-407-7280.", "checked_on": "2026-09-20"}
+      ],
+      "actors_checked": [
+        {"name": "Guardian Roof Systems", "role": "permit-listed roofing contractor", "outcome": "Exact name matched to the official commercial-roofing company; similarly named Texas roofers were excluded."},
+        {"name": "Sage Longwood Holdings LLC / Longwood Elastomers Inc", "role": "permit applicant and CAD owner/related property record", "outcome": "Ownership records were checked, but the named roofing contractor offers the stronger scope-specific route."}
+      ],
+      "contacts": [
+        {"route_id": "roofing-contractor-office", "contact_name": "Guardian Roof Systems", "role": "permit-listed roofing contractor main office", "phone": "281-485-7663", "email": null, "website": "https://www.guardianroofsystems.com/", "public_business_basis": "Official page labels this as the Pearland main-office number.", "match_evidence": "Exact permit name and commercial-roofing services match; unrelated Guardian Roofing businesses were excluded.", "source_type": "official_company", "source_url": "https://www.guardianroofsystems.com/contact-us", "checked_on": "2026-09-20", "match_status": "confirmed", "source_strength": "strong", "contact_note": "Official page also lists 281-407-7280; confirm the Brenham project when routed."}
+      ],
+      "selected_route_id": "roofing-contractor-office",
+      "alternative_route_ids": [],
+      "researched_gap": null
+    },
+    {
+      "property_id": "washington-brenham-permit-com-add-26-0008-stanpac-silos",
+      "rank": 8,
+      "research_status": "researched",
+      "sources_checked": [
+        {"url": "https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-06.pdf", "disposition": "no_contact_fields", "outcome": "The permit identifies Stanpac USA as applicant and owner-listed contractor for two storage silos at 801 Mangrum Street but includes no phone.", "checked_on": "2026-09-20"},
+        {"url": "https://www.stanpacnet.com/contact-stanpac/", "disposition": "contact_found", "outcome": "Stanpac's official contact page lists the Texas facility at 801 Mangrum Street, Brenham, and publishes 979-251-9851.", "checked_on": "2026-09-20"}
+      ],
+      "actors_checked": [
+        {"name": "Stanpac USA", "role": "permit applicant and owner-listed contractor", "outcome": "Official facility contact exactly matches the project street address."}
+      ],
+      "contacts": [
+        {"route_id": "facility-office", "contact_name": "Stanpac USA — Texas Facility", "role": "owner/applicant facility office", "phone": "979-251-9851", "email": null, "website": "https://www.stanpacnet.com/", "public_business_basis": "Official manufacturer contact page for the Brenham facility.", "match_evidence": "The official page and permit both identify 801 Mangrum Street.", "source_type": "official_company", "source_url": "https://www.stanpacnet.com/contact-stanpac/", "checked_on": "2026-09-20", "match_status": "confirmed", "source_strength": "strong", "contact_note": "Facility route for the owner-managed silo addition; no separate builder is named."}
+      ],
+      "selected_route_id": "facility-office",
+      "alternative_route_ids": [],
+      "researched_gap": null
+    },
+    {
+      "property_id": "statewide-tdlr-tabs-TABS2027001105",
+      "rank": 9,
+      "research_status": "researched",
+      "sources_checked": [
+        {"url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2027001105", "disposition": "contact_found", "outcome": "The exact Pink/Espire II registration publishes PAA Consulting LLC as design firm at 2101 West Ave with 210-375-7700; the owner phone is malformed in the record and the tenant mobile was not treated as a general business line.", "checked_on": "2026-09-20"},
+        {"url": "https://content.civicplus.com/api/assets/9a3e3ada-84d2-487f-a1cb-5616848df60b", "disposition": "contact_found", "outcome": "A City of Plano registered-contractor list independently matches PAA Consulting LLC, 2101 West Ave, and 210-375-7700.", "checked_on": "2026-09-20"}
+      ],
+      "actors_checked": [
+        {"name": "PAA Consulting LLC", "role": "design firm on TDLR record", "outcome": "Exact name, address, and phone appear on the project registration and an independent municipal contractor list."},
+        {"name": "Aspire A&M II LLC", "role": "owner/developer", "outcome": "The owner is identified in TDLR, but its displayed phone is malformed and was not used."},
+        {"name": "Chad Baccus", "role": "tenant named on TDLR record", "outcome": "The registration provides an individual mobile number without a separate public-business basis, so it was excluded."},
+        {"name": "Robert V. Buck", "role": "registered accessibility specialist", "outcome": "The registration includes the RAS route; the project design firm is a more useful construction contact."}
+      ],
+      "contacts": [
+        {"route_id": "design-firm-office", "contact_name": "PAA Consulting LLC", "role": "TDLR-listed design firm", "phone": "210-375-7700", "email": null, "website": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2027001105", "public_business_basis": "Government project record and municipal contractor list both publish the company office number.", "match_evidence": "TDLR ties the exact firm, address, and phone to Pink/Espire II at 1001 University Drive.", "source_type": "government_record", "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2027001105", "checked_on": "2026-09-20", "match_status": "confirmed", "source_strength": "strong", "contact_note": "Designer/specialty-contractor route, not a confirmed general contractor or buying decision-maker."}
+      ],
+      "selected_route_id": "design-firm-office",
+      "alternative_route_ids": [],
+      "researched_gap": null
+    },
+    {
+      "property_id": "statewide-tdlr-tabs-TABS2027001065",
+      "rank": 10,
+      "research_status": "researched",
+      "sources_checked": [
+        {"url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2027001065", "disposition": "contact_found", "outcome": "The exact Tractor Supply renovation registration says tenant-funded, identifies Onyx Creative as designer with project phone 216-223-3243, and lists ExchangeRight as owner at 855-317-4448.", "checked_on": "2026-09-20"},
+        {"url": "https://www.onyxcreative.com/", "disposition": "contact_found", "outcome": "Onyx Creative's official site confirms the Cleveland design firm at the TDLR address and publishes its 216-223-3200 headquarters line and contact@onyxcreative.com.", "checked_on": "2026-09-20"},
+        {"url": "https://www.exchangeright.com/", "disposition": "contact_found", "outcome": "ExchangeRight's official site matches the TDLR owner address and publishes 855-317-4448 and info@exchangeright.com.", "checked_on": "2026-09-20"}
+      ],
+      "actors_checked": [
+        {"name": "Onyx Creative", "role": "design firm on TDLR record", "outcome": "Exact firm and Cleveland address matched to the official architecture and engineering company; TDLR supplies a project-specific office number."},
+        {"name": "ExchangeRight Net Leased Portfolio 74 DST", "role": "owner/developer", "outcome": "Exact portfolio owner is managed at ExchangeRight's matching official address and phone; retained as an alternative."},
+        {"name": "Tractor Supply Co.", "role": "tenant funding the renovation", "outcome": "TDLR identifies the tenant-funded scope, but its listed phone was not established as a construction-routing office."}
+      ],
+      "contacts": [
+        {"route_id": "designer-project-office", "contact_name": "Onyx Creative", "role": "TDLR-listed design firm", "phone": "216-223-3243", "email": "contact@onyxcreative.com", "website": "https://www.onyxcreative.com/", "public_business_basis": "TDLR publishes the design-firm phone on the exact project; the official firm site corroborates identity and office address.", "match_evidence": "The TDLR name and 25001 Emery Road address match Onyx Creative's official Cleveland office.", "source_type": "government_record", "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2027001065", "checked_on": "2026-09-20", "match_status": "confirmed", "source_strength": "strong", "contact_note": "Design-team route for the tenant-funded renovation; not a confirmed builder."},
+        {"route_id": "owner-manager-office", "contact_name": "ExchangeRight Real Estate", "role": "manager of TDLR-listed owner/developer", "phone": "855-317-4448", "email": "info@exchangeright.com", "website": "https://www.exchangeright.com/", "public_business_basis": "Official company general office at the same address as the owner record.", "match_evidence": "TDLR lists c/o ExchangeRight at 1055 E Colorado Blvd and the official site publishes that same address and phone.", "source_type": "official_company", "source_url": "https://www.exchangeright.com/", "checked_on": "2026-09-20", "match_status": "confirmed", "source_strength": "strong", "contact_note": "Passive owner/manager route; TDLR says the tenant funds the work."}
+      ],
+      "selected_route_id": "designer-project-office",
+      "alternative_route_ids": ["owner-manager-office"],
+      "researched_gap": null
+    },
+    {
+      "property_id": "statewide-tdlr-tabs-TABS2027000539",
+      "rank": 11,
+      "research_status": "researched",
+      "sources_checked": [
+        {"url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2027000539", "disposition": "contact_found", "outcome": "The exact Rock Prairie Clinic registration lists Scott & White Healthcare owner contact Roy Martinez at 713-898-3150 and no separate tenant or designer.", "checked_on": "2026-09-20"},
+        {"url": "https://www.bswhealth.com/locations/clinic/college-station-rock-prairie", "disposition": "contact_found", "outcome": "Baylor Scott & White's official location page matches 800 Scott & White Drive and publishes the clinic office at 979-207-3300.", "checked_on": "2026-09-20"}
+      ],
+      "actors_checked": [
+        {"name": "Scott & White Healthcare / Roy Martinez", "role": "owner/developer contact on TDLR record", "outcome": "Exact project registration publishes the owner-project phone; selected because its business purpose is explicitly the project filing."},
+        {"name": "Baylor Scott & White Clinic — College Station Rock Prairie", "role": "facility office", "outcome": "Official local institution line confirmed at the exact project address; retained only as a general routing alternative."},
+        {"name": "Rob Roy Parnell", "role": "registered accessibility specialist", "outcome": "RAS route was checked in TDLR but is less useful than the named owner contact."}
+      ],
+      "contacts": [
+        {"route_id": "owner-project-contact", "contact_name": "Scott & White Healthcare / Roy Martinez", "role": "owner/developer contact on exact TDLR project", "phone": "713-898-3150", "email": null, "website": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2027000539", "public_business_basis": "TDLR explicitly publishes the number as the owner phone and names the project contact on this registration.", "match_evidence": "The source is the exact Rock Prairie Clinic renovation registration at 800 Scott & White Drive.", "source_type": "government_record", "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2027000539", "checked_on": "2026-09-20", "match_status": "confirmed", "source_strength": "strong", "contact_note": "Owner-project route; publication does not prove active procurement."},
+        {"route_id": "facility-routing-office", "contact_name": "Baylor Scott & White Clinic — College Station Rock Prairie", "role": "institutional facility routing office", "phone": "979-207-3300", "email": null, "website": "https://www.bswhealth.com/locations/clinic/college-station-rock-prairie", "public_business_basis": "Official institution page for the exact clinic address.", "match_evidence": "Official location page matches the 800 Scott & White Drive project site.", "source_type": "institution", "source_url": "https://www.bswhealth.com/locations/clinic/college-station-rock-prairie", "checked_on": "2026-09-20", "match_status": "confirmed", "source_strength": "strong", "contact_note": "General clinic office only; ask to be routed to facilities/project administration, not patient services."}
+      ],
+      "selected_route_id": "owner-project-contact",
+      "alternative_route_ids": ["facility-routing-office"],
+      "researched_gap": null
+    },
+    {
+      "property_id": "statewide-tdlr-tabs-TABS2027000300",
+      "rank": 12,
+      "research_status": "researched",
+      "sources_checked": [
+        {"url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2027000300", "disposition": "contact_found", "outcome": "The Suite 204 registration names private owners and RAS Eddie Hare, but no tenant, designer, or contractor; the private-owner phone was not used as a business route.", "checked_on": "2026-09-20"},
+        {"url": "https://www.cstx.gov/media/xyvokjhs/08_august-building-permits-issued.xlsx", "disposition": "irrelevant", "outcome": "The official August permit workbook names contractors for units 102, 401, 402, and 403 at 2800 Barron Road, not Suite 204; those builders were not transferred to this row.", "checked_on": "2026-09-20"},
+        {"url": "https://www.cstx.gov/your-government/departments/planning-development-services-department/building-permits-issued/", "disposition": "no_contact_fields", "outcome": "The city permit-report index was used to check the posted 2026 workbooks; no issued-permit row for exact Suite 204 was identified through the September 11 cutoff.", "checked_on": "2026-09-20"},
+        {"url": "https://blog.cstx.gov/wp-content/uploads/2023/08/230824-CC-Packet.pdf", "disposition": "contact_found", "outcome": "An official College Station council packet publishes Eddie Hare's accessibility-specialist business office at 979-775-6850 and ehare@eddiehare.com.", "checked_on": "2026-09-20"}
+      ],
+      "actors_checked": [
+        {"name": "Eddie Hare — Accessibility Specialist", "role": "registered accessibility specialist on exact TDLR project", "outcome": "Exact RAS identity matched to an official government packet publishing his business office line."},
+        {"name": "Derrill Chad Brantley & Jannie Kadjar", "role": "private owner/developer", "outcome": "TDLR lists the private owners, but their number was excluded because no separate public-business purpose was established."},
+        {"name": "Lintz Construction, Keys & Walsh Construction, and Create Construction", "role": "contractors on other 2800 Barron Road suites", "outcome": "Official workbooks tie these builders only to Units 102, 401-403, and 305; none was assigned to Suite 204."}
+      ],
+      "contacts": [
+        {"route_id": "ras-business-office", "contact_name": "Eddie Hare — Accessibility Specialist", "role": "registered accessibility specialist for Suite 204", "phone": "979-775-6850", "email": "ehare@eddiehare.com", "website": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2027000300", "public_business_basis": "Official city packet publishes the RAS business office and email.", "match_evidence": "The exact Suite 204 TDLR registration names Eddie Hare as RAS; the city packet identifies the same professional and license number 0008.", "source_type": "government_record", "source_url": "https://blog.cstx.gov/wp-content/uploads/2023/08/230824-CC-Packet.pdf", "checked_on": "2026-09-20", "match_status": "confirmed", "source_strength": "strong", "contact_note": "Accessibility-project representative only; no Suite 204 builder is established, and contractors from other suites must not be substituted."}
+      ],
+      "selected_route_id": "ras-business-office",
+      "alternative_route_ids": [],
+      "researched_gap": null
+    },
+    {
+      "property_id": "statewide-tdlr-tabs-TABS2027000261",
+      "rank": 13,
+      "research_status": "researched",
+      "sources_checked": [
+        {"url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2027000261", "disposition": "contact_found", "outcome": "The exact Hub Phase II registration names Core College Station Cherry LLC as owner, Antunovich Associates as designer, and publishes owner/design/RAS phones.", "checked_on": "2026-09-20"},
+        {"url": "https://corespaces.com/contact", "disposition": "contact_found", "outcome": "Core Spaces' official contact page publishes 773-969-5740 and info@corespaces.com for general inquiries.", "checked_on": "2026-09-20"},
+        {"url": "https://corespaces.com/privacy-policy", "disposition": "no_contact_fields", "outcome": "Core Spaces' official legal page gives 1400 N Kingsbury Street, 3rd Floor, the same address TDLR gives for Core College Station Cherry LLC, establishing the owner affiliate match.", "checked_on": "2026-09-20"},
+        {"url": "https://www.antunovich.com/contact", "disposition": "contact_found", "outcome": "Antunovich Associates' official contact page matches the TDLR Chicago address and publishes 312-266-1126.", "checked_on": "2026-09-20"}
+      ],
+      "actors_checked": [
+        {"name": "Core College Station Cherry LLC / Core Spaces", "role": "owner/developer and matched parent/affiliate", "outcome": "Exact TDLR owner address matches Core Spaces' official legal address; official general contact route confirmed."},
+        {"name": "Antunovich Associates", "role": "design firm on TDLR record", "outcome": "Official design-firm address and phone exactly match the TDLR project record; retained as an alternative."},
+        {"name": "Steven Edward Montgomery", "role": "registered accessibility specialist", "outcome": "TDLR includes the RAS phone, but owner and designer routes are more useful for construction questions."}
+      ],
+      "contacts": [
+        {"route_id": "developer-office", "contact_name": "Core Spaces", "role": "general office for matched owner/developer affiliate", "phone": "773-969-5740", "email": "info@corespaces.com", "website": "https://corespaces.com/", "public_business_basis": "Official developer general-inquiries line.", "match_evidence": "Core Spaces' official 1400 N Kingsbury Street address exactly matches the TDLR owner Core College Station Cherry LLC, and the project uses Core's Hub brand.", "source_type": "official_company", "source_url": "https://corespaces.com/contact", "checked_on": "2026-09-20", "match_status": "confirmed", "source_strength": "strong", "contact_note": "Developer routing office; ask for Hub College Station Phase II development or construction administration."},
+        {"route_id": "designer-office", "contact_name": "Antunovich Associates", "role": "TDLR-listed design firm", "phone": "312-266-1126", "email": null, "website": "https://www.antunovich.com/", "public_business_basis": "Official Chicago design-firm office.", "match_evidence": "Official address and phone exactly match the design firm on the TDLR project registration.", "source_type": "official_company", "source_url": "https://www.antunovich.com/contact", "checked_on": "2026-09-20", "match_status": "confirmed", "source_strength": "strong", "contact_note": "Designer route, not a confirmed builder."}
+      ],
+      "selected_route_id": "developer-office",
+      "alternative_route_ids": ["designer-office"],
+      "researched_gap": null
+    }
+  ]
+}

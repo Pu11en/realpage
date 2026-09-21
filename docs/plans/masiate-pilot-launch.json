@@ -1,0 +1,65 @@
+{
+  "run_id": "pilot-20260920-2048",
+  "report_thread_id": "1551377360756940940",
+  "run_root": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048",
+  "coordinator_worktree": "/home/drewp/main-projects/realpage/.worktrees/wt-1551377360756940940",
+  "mode": "eight independent bot sessions; not /gowork",
+  "backend": "codex",
+  "collection_wrap_target": "2026-09-21T02:35:00Z",
+  "delivery_target": "2026-09-21T02:45:00Z",
+  "requested_workers": 8,
+  "observed_running_workers": 8,
+  "workers": [
+    {
+      "lane": "brazos",
+      "thread_id": "1551409818999328819",
+      "working_dir": "/home/drewp/.local/state/ccdb/masiate-pilot-20260920-2048/brazos"
+    },
+    {
+      "lane": "robertson",
+      "thread_id": "1551409927560368138",
+      "working_dir": "/home/drewp/.local/state/ccdb/masiate-pilot-20260920-2048/robertson"
+    },
+    {
+      "lane": "burleson",
+      "thread_id": "1551409932128100472",
+      "working_dir": "/home/drewp/.local/state/ccdb/masiate-pilot-20260920-2048/burleson"
+    },
+    {
+      "lane": "grimes",
+      "thread_id": "1551409944731983891",
+      "working_dir": "/home/drewp/.local/state/ccdb/masiate-pilot-20260920-2048/grimes"
+    },
+    {
+      "lane": "leon",
+      "thread_id": "1551409953057538139",
+      "working_dir": "/home/drewp/.local/state/ccdb/masiate-pilot-20260920-2048/leon"
+    },
+    {
+      "lane": "madison",
+      "thread_id": "1551409958879232120",
+      "working_dir": "/home/drewp/.local/state/ccdb/masiate-pilot-20260920-2048/madison"
+    },
+    {
+      "lane": "washington",
+      "thread_id": "1551409967020511302",
+      "working_dir": "/home/drewp/.local/state/ccdb/masiate-pilot-20260920-2048/washington"
+    },
+    {
+      "lane": "statewide",
+      "thread_id": "1551409974968717362",
+      "working_dir": "/home/drewp/.local/state/ccdb/masiate-pilot-20260920-2048/statewide"
+    }
+  ],
+  "completion_relay_worker": "1551409974968717362",
+  "completion_relay_status": "watcher resumed and confirmed running after restart at 2026-09-21T02:13Z",
+  "restart_recovery": {
+    "user_authorized": true,
+    "checked_at": "2026-09-21T02:13Z",
+    "existing_threads_resumed": ["washington", "statewide watcher only"],
+    "existing_running_workers_authorized_to_finish": ["robertson", "grimes"],
+    "new_workers_started": 0,
+    "old_50_task_plan_restored": false,
+    "notes": "masiate-pilot-recovery.md"
+  }
+}

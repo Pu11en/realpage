@@ -1,0 +1,945 @@
+{
+  "batch_id": "batch-03",
+  "properties": [
+    {
+      "property_id": "statewide-tdlr-tabs-TABS2026008039",
+      "rank": 27,
+      "research_status": "researched",
+      "sources_checked": [
+        {
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026008039",
+          "disposition": "contact_found",
+          "outcome": "The live TDLR record confirms Hearne ISD as owner/developer and IDG Architects + Partners as designer, and publishes 979-279-3200 for the district and 832-448-2462 for IDG.",
+          "checked_on": "2026-09-20"
+        },
+        {
+          "url": "https://www.hearneisd.com/en-US/staff",
+          "disposition": "contact_found",
+          "outcome": "Hearne ISD's official staff page publishes the district office at 900 Wheelock Street and main phone 979-279-3200.",
+          "checked_on": "2026-09-20"
+        },
+        {
+          "url": "https://idgarch.com/contact-us/",
+          "disposition": "contact_found",
+          "outcome": "IDG's official contact page publishes its Houston office at the same address shown by TDLR and phone 832-448-2462.",
+          "checked_on": "2026-09-20"
+        }
+      ],
+      "actors_checked": [
+        {
+          "name": "Hearne Independent School District",
+          "role": "owner/developer",
+          "outcome": "TDLR and the district's official page agree on the district identity, Wheelock Street office, and main phone. This is an institutional routing line, not a named construction manager."
+        },
+        {
+          "name": "IDG Architects + Partners Inc",
+          "role": "design firm on TDLR record",
+          "outcome": "TDLR's exact project record and IDG's official contact page agree on the Houston office and phone; IDG is a design fallback, not the builder or buyer."
+        },
+        {
+          "name": "Kenneth Otten",
+          "role": "registered accessibility specialist",
+          "outcome": "The TDLR record lists this compliance participant, but the district and design firm are more relevant public routes."
+        }
+      ],
+      "contacts": [
+        {
+          "route_id": "owner-district-office",
+          "contact_name": "Hearne Independent School District",
+          "role": "owner/developer district office",
+          "phone": "979-279-3200",
+          "email": null,
+          "website": "https://www.hearneisd.com/",
+          "public_business_basis": "Official school-district main office line",
+          "match_evidence": "The official district address and phone match the owner address and phone on the exact TDLR project record.",
+          "source_type": "institution",
+          "source_url": "https://www.hearneisd.com/en-US/staff",
+          "checked_on": "2026-09-20",
+          "match_status": "confirmed",
+          "source_strength": "strong",
+          "contact_note": "Ask the district office which facilities or construction administrator handles the gymnasium; this is not a direct project-manager line."
+        },
+        {
+          "route_id": "designer-office",
+          "contact_name": "IDG Architects + Partners Inc",
+          "role": "design firm on TDLR record",
+          "phone": "832-448-2462",
+          "email": null,
+          "website": "https://idgarch.com/",
+          "public_business_basis": "Official Houston design-office line",
+          "match_evidence": "TDLR names IDG on this project and its official page matches the TDLR Houston office and phone.",
+          "source_type": "official_company",
+          "source_url": "https://idgarch.com/contact-us/",
+          "checked_on": "2026-09-20",
+          "match_status": "confirmed",
+          "source_strength": "strong",
+          "contact_note": "Design-team fallback only; IDG is not identified as the builder or purchasing decision-maker."
+        }
+      ],
+      "selected_route_id": "owner-district-office",
+      "alternative_route_ids": [
+        "designer-office"
+      ],
+      "researched_gap": null
+    },
+    {
+      "property_id": "statewide-tdlr-tabs-TABS2026006838",
+      "rank": 28,
+      "research_status": "researched",
+      "sources_checked": [
+        {
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026006838",
+          "disposition": "contact_found",
+          "outcome": "The live TDLR record identifies Buffalo ISD as owner, Adam Ivy as its contact, and GLS as designer, with 903-322-2473 and 936-637-4900 respectively.",
+          "checked_on": "2026-09-20"
+        },
+        {
+          "url": "https://www.buffaloisd.net/437674_2",
+          "disposition": "contact_found",
+          "outcome": "Buffalo ISD's official superintendent page publishes the district address at 708 Cedar Creek Road and main phone 903-322-2473.",
+          "checked_on": "2026-09-20"
+        },
+        {
+          "url": "https://www.glstexas.com/lufkin",
+          "disposition": "contact_found",
+          "outcome": "GLS's official Lufkin office page publishes the same Chestnut Street address and 936-637-4900 number shown on the TDLR record.",
+          "checked_on": "2026-09-20"
+        }
+      ],
+      "actors_checked": [
+        {
+          "name": "Buffalo ISD",
+          "role": "owner/developer",
+          "outcome": "The exact TDLR record and official district site agree on the district main line; TDLR additionally names Adam Ivy as the owner contact."
+        },
+        {
+          "name": "GLS",
+          "role": "design firm on TDLR record",
+          "outcome": "The exact project filing and GLS's official Lufkin page agree on the firm address and number. GLS is retained as a design-team fallback only."
+        },
+        {
+          "name": "Phillip Bertram Chapman",
+          "role": "registered accessibility specialist",
+          "outcome": "The TDLR record lists this compliance participant, but the owner and design firm offer more relevant public business routes."
+        }
+      ],
+      "contacts": [
+        {
+          "route_id": "owner-district-office",
+          "contact_name": "Buffalo ISD",
+          "role": "owner/developer district office; TDLR contact is Adam Ivy",
+          "phone": "903-322-2473",
+          "email": null,
+          "website": "https://www.buffaloisd.net/",
+          "public_business_basis": "Official school-district main office line",
+          "match_evidence": "Official district address and number match the owner details on the exact TDLR project record.",
+          "source_type": "institution",
+          "source_url": "https://www.buffaloisd.net/437674_2",
+          "checked_on": "2026-09-20",
+          "match_status": "confirmed",
+          "source_strength": "strong",
+          "contact_note": "Ask for Adam Ivy or the administrator handling the junior-high construction; no open trade package was established."
+        },
+        {
+          "route_id": "designer-office",
+          "contact_name": "GLS",
+          "role": "design firm on TDLR record",
+          "phone": "936-637-4900",
+          "email": null,
+          "website": "https://www.glstexas.com/",
+          "public_business_basis": "Official Lufkin architecture/engineering office line",
+          "match_evidence": "TDLR names GLS on this project and its official Lufkin page matches the filing address and number.",
+          "source_type": "official_company",
+          "source_url": "https://www.glstexas.com/lufkin",
+          "checked_on": "2026-09-20",
+          "match_status": "confirmed",
+          "source_strength": "strong",
+          "contact_note": "Designer fallback only; GLS is not identified as the general contractor or buyer."
+        }
+      ],
+      "selected_route_id": "owner-district-office",
+      "alternative_route_ids": [
+        "designer-office"
+      ],
+      "researched_gap": null
+    },
+    {
+      "property_id": "washington-brenham-permit-com-add-26-0006",
+      "rank": 29,
+      "research_status": "researched",
+      "sources_checked": [
+        {
+          "url": "https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-08.pdf",
+          "disposition": "no_contact_fields",
+          "outcome": "The City permit report confirms Moeller Electric and Davis Custom Builders of Texas on COM-ADD-26-0006 but does not publish a phone or email in the row.",
+          "checked_on": "2026-09-20"
+        },
+        {
+          "url": "https://esearch.washingtoncad.org/",
+          "disposition": "no_contact_fields",
+          "outcome": "The CAD result identifies Four D RE Holdings LLC Series C and the D&S Residential DBA at 1119 Industrial Boulevard but exposes no suitable public contact field for this ledger.",
+          "checked_on": "2026-09-20"
+        },
+        {
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026017664",
+          "disposition": "contact_found",
+          "outcome": "The live TDLR record confirms the same 1119 Industrial Boulevard addition and publishes the owner contact as Mitchell Davis at 979-251-4872, matching the contractor number found independently.",
+          "checked_on": "2026-09-20"
+        },
+        {
+          "url": "https://members.texasbuilders.org/builder-directory/FindStartsWith?term=D",
+          "disposition": "contact_found",
+          "outcome": "The Texas Association of Builders directory publishes Davis Custom Builders of Texas at a Brenham address with 979-251-4872.",
+          "checked_on": "2026-09-20"
+        },
+        {
+          "url": "https://www.moellertx.com/contact",
+          "disposition": "contact_found",
+          "outcome": "Moeller Plumbing & Electric's official page identifies Moeller Electric Company, its nearby 1105 Industrial Boulevard business address, 979-836-7218, and office@moellertx.com.",
+          "checked_on": "2026-09-20"
+        }
+      ],
+      "actors_checked": [
+        {
+          "name": "Davis Custom Builders of Texas",
+          "role": "permit-listed contractor",
+          "outcome": "The City permit names Davis as contractor; the association directory and related TDLR filing corroborate its Brenham identity and business number."
+        },
+        {
+          "name": "Moeller Electric",
+          "role": "applicant/occupant named in permit",
+          "outcome": "The official Moeller site identifies the same electrical company one parcel number away on Industrial Boulevard and provides a public office route."
+        },
+        {
+          "name": "Four D RE Holdings LLC Series C",
+          "role": "CAD owner",
+          "outcome": "CAD names this owner and TDLR names Mitchell Davis, but Davis Custom Builders is the more direct permit-listed construction route."
+        }
+      ],
+      "contacts": [
+        {
+          "route_id": "builder-office",
+          "contact_name": "Davis Custom Builders of Texas",
+          "role": "permit-listed contractor",
+          "phone": "979-251-4872",
+          "email": null,
+          "website": null,
+          "public_business_basis": "Association-listed construction-company number, corroborated by the related TDLR owner contact",
+          "match_evidence": "Exact company name and Brenham address appear in the builders association directory, while the City permit assigns Davis to this job and TDLR publishes the same number for Mitchell Davis on the same-address addition.",
+          "source_type": "association",
+          "source_url": "https://members.texasbuilders.org/builder-directory/FindStartsWith?term=D",
+          "checked_on": "2026-09-20",
+          "match_status": "confirmed",
+          "source_strength": "strong",
+          "contact_note": "Public business number was not test-called; ask for the Moeller Electric addition estimator or project team."
+        },
+        {
+          "route_id": "occupant-office",
+          "contact_name": "Moeller Plumbing & Electric",
+          "role": "applicant/occupant business office",
+          "phone": "979-836-7218",
+          "email": "office@moellertx.com",
+          "website": "https://www.moellertx.com/",
+          "public_business_basis": "Official Moeller business contact page",
+          "match_evidence": "The official site identifies Moeller Electric Company at 1105 Industrial Boulevard, adjacent to the permitted 1119 Industrial Boulevard expansion.",
+          "source_type": "official_company",
+          "source_url": "https://www.moellertx.com/contact",
+          "checked_on": "2026-09-20",
+          "match_status": "confirmed",
+          "source_strength": "strong",
+          "contact_note": "Occupant route, not the contractor; useful for routing questions about the company's own expansion."
+        }
+      ],
+      "selected_route_id": "builder-office",
+      "alternative_route_ids": [
+        "occupant-office"
+      ],
+      "researched_gap": null
+    },
+    {
+      "property_id": "washington-brenham-permit-com-new-26-0011",
+      "rank": 30,
+      "research_status": "researched",
+      "sources_checked": [
+        {
+          "url": "https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-07.pdf",
+          "disposition": "no_contact_fields",
+          "outcome": "The City permit report confirms Frost Bank as applicant and SpawGlass as contractor for COM-NEW-26-0011 but does not publish phone or email fields.",
+          "checked_on": "2026-09-20"
+        },
+        {
+          "url": "https://esearch.washingtoncad.org/",
+          "disposition": "no_contact_fields",
+          "outcome": "Washington CAD confirms Frost Bank ownership at 862 Highway 290 East but does not provide a suitable public contact field.",
+          "checked_on": "2026-09-20"
+        },
+        {
+          "url": "https://locations.frostbank.com/tx/brenham/862-us-highway-290-e",
+          "disposition": "no_contact_fields",
+          "outcome": "Frost's official location page matches the permit address and says the financial center is coming in 2027, but it does not expose a completed branch contact route.",
+          "checked_on": "2026-09-20"
+        },
+        {
+          "url": "https://www.spawglass.com/",
+          "disposition": "no_contact_fields",
+          "outcome": "The official home page verifies SpawGlass as a Texas construction-services company; the regional page provides the usable contact fields.",
+          "checked_on": "2026-09-20"
+        },
+        {
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026020346",
+          "disposition": "contact_found",
+          "outcome": "The live TDLR record confirms the same Frost Bank address and publishes owner contact Dena Allen at 210-220-4798 plus the O'Connell Robertson design-office number.",
+          "checked_on": "2026-09-20"
+        },
+        {
+          "url": "https://spawglass.com/brazos-valley/",
+          "disposition": "contact_found",
+          "outcome": "SpawGlass's official Brazos Valley page publishes the regional office at 979-401-3270.",
+          "checked_on": "2026-09-20"
+        }
+      ],
+      "actors_checked": [
+        {
+          "name": "SpawGlass",
+          "role": "permit-listed general contractor",
+          "outcome": "The City permit assigns SpawGlass to the project, and its official regional page provides a Brazos Valley construction-office route."
+        },
+        {
+          "name": "Frost Bank",
+          "role": "permit applicant / CAD owner / future branch operator",
+          "outcome": "The permit, CAD, official location page, and TDLR record all match Frost and the exact address; the TDLR owner phone is retained as a fallback."
+        },
+        {
+          "name": "O'Connell Robertson",
+          "role": "design firm on related TDLR record",
+          "outcome": "TDLR lists this firm, but the permit-listed builder and owner routes are more directly useful."
+        }
+      ],
+      "contacts": [
+        {
+          "route_id": "builder-regional-office",
+          "contact_name": "SpawGlass",
+          "role": "permit-listed general contractor; Brazos Valley regional office",
+          "phone": "979-401-3270",
+          "email": "BV.Estimating@SpawGlass.com",
+          "website": "https://spawglass.com/brazos-valley/",
+          "public_business_basis": "Official SpawGlass regional construction office",
+          "match_evidence": "The City permit names SpawGlass as general contractor and the company publishes this nearby regional construction-office route.",
+          "source_type": "official_company",
+          "source_url": "https://spawglass.com/brazos-valley/",
+          "checked_on": "2026-09-20",
+          "match_status": "confirmed",
+          "source_strength": "strong",
+          "contact_note": "Ask for the Frost Bank team or estimating/subcontractor routing; the regional office is not confirmed as the direct project team."
+        },
+        {
+          "route_id": "owner-project-contact",
+          "contact_name": "Frost Bank / Dena Allen",
+          "role": "owner contact on TDLR project record",
+          "phone": "210-220-4798",
+          "email": null,
+          "website": "https://locations.frostbank.com/tx/brenham/862-us-highway-290-e",
+          "public_business_basis": "Owner contact published on the exact state accessibility registration",
+          "match_evidence": "TDLR identifies Frost Bank, Dena Allen, and the exact 862 Highway 290 East project address.",
+          "source_type": "government_record",
+          "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026020346",
+          "checked_on": "2026-09-20",
+          "match_status": "confirmed",
+          "source_strength": "strong",
+          "contact_note": "Owner-side fallback from a public filing, not proof this person manages trade purchasing."
+        }
+      ],
+      "selected_route_id": "builder-regional-office",
+      "alternative_route_ids": [
+        "owner-project-contact"
+      ],
+      "researched_gap": null
+    },
+    {
+      "property_id": "washington-brenham-permit-com-new-26-0009-apartments",
+      "rank": 31,
+      "research_status": "researched",
+      "sources_checked": [
+        {
+          "url": "https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-07.pdf",
+          "disposition": "no_contact_fields",
+          "outcome": "The City permit report identifies Arete Property Group as applicant/developer for two apartment buildings and lists Owner in the contractor field, without a phone or email.",
+          "checked_on": "2026-09-20"
+        },
+        {
+          "url": "https://esearch.washingtoncad.org/",
+          "disposition": "ambiguous_entity",
+          "outcome": "The tested CAD street queries did not return a clean parcel match for 1307 North Park Street, so no owner contact was promoted from CAD.",
+          "checked_on": "2026-09-20"
+        },
+        {
+          "url": "https://www.aretecompaniesusa.com/our-team",
+          "disposition": "contact_found",
+          "outcome": "Arete's official team page identifies Arete Property Group, its Bryan office, 979-777-1881, and admin@aretepg.com.",
+          "checked_on": "2026-09-20"
+        },
+        {
+          "url": "https://docs.cityofbrenham.org/boards/planning-zoning/2024/2024-08-26-PZ-PACKET.pdf?t=202409271359410",
+          "disposition": "contact_found",
+          "outcome": "A City planning packet carries an Arete Property Group letter signed by partner Jake Carlile with the matching aretepg.com domain and public business phone, corroborating the local entity identity.",
+          "checked_on": "2026-09-20"
+        }
+      ],
+      "actors_checked": [
+        {
+          "name": "Arete Property Group",
+          "role": "permit applicant/developer and owner-listed contractor",
+          "outcome": "The permit uses the exact Arete name, while its official site and a City planning packet establish the same local property group and a public office route. No outside builder was named."
+        }
+      ],
+      "contacts": [
+        {
+          "route_id": "developer-office",
+          "contact_name": "Arete Property Group",
+          "role": "permit applicant/developer and owner-listed contractor",
+          "phone": "979-777-1881",
+          "email": "admin@aretepg.com",
+          "website": "https://www.aretecompaniesusa.com/",
+          "public_business_basis": "Official Arete company office route",
+          "match_evidence": "The permit names Arete Property Group; its official site identifies the same local company, and a City planning packet corroborates the aretepg.com business identity.",
+          "source_type": "official_company",
+          "source_url": "https://www.aretecompaniesusa.com/our-team",
+          "checked_on": "2026-09-20",
+          "match_status": "confirmed",
+          "source_strength": "strong",
+          "contact_note": "Developer/owner route; the permit does not identify a separate general contractor."
+        }
+      ],
+      "selected_route_id": "developer-office",
+      "alternative_route_ids": [],
+      "researched_gap": null
+    },
+    {
+      "property_id": "washington-brenham-permit-com-new-26-0013",
+      "rank": 32,
+      "research_status": "researched",
+      "sources_checked": [
+        {
+          "url": "https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-06.pdf",
+          "disposition": "no_contact_fields",
+          "outcome": "The City report names Collier Construction on the Wilkins Valley Phase 3 permit but does not publish phone or email fields.",
+          "checked_on": "2026-09-20"
+        },
+        {
+          "url": "https://www.collierconstruction.com/contact",
+          "disposition": "contact_found",
+          "outcome": "Collier's official contact page publishes its Brenham office, 979-836-4477, and maceyt@collierconstruction.com.",
+          "checked_on": "2026-09-20"
+        },
+        {
+          "url": "https://esearch.washingtoncad.org/",
+          "disposition": "no_contact_fields",
+          "outcome": "The tested 1402 Jefferson CAD query returned no result, so it did not add an owner or contact route.",
+          "checked_on": "2026-09-20"
+        }
+      ],
+      "actors_checked": [
+        {
+          "name": "Collier Construction LLC",
+          "role": "permit-listed construction participant",
+          "outcome": "The City permit names Collier and the official company page confirms the exact Brenham construction business and office route; the permit does not clarify whether Collier is owner, developer, or general contractor."
+        }
+      ],
+      "contacts": [
+        {
+          "route_id": "construction-office",
+          "contact_name": "Collier Construction LLC",
+          "role": "permit-listed construction participant",
+          "phone": "979-836-4477",
+          "email": "maceyt@collierconstruction.com",
+          "website": "https://www.collierconstruction.com/contact",
+          "public_business_basis": "Official Brenham construction-company office",
+          "match_evidence": "The exact company name is on the permit and the official site confirms the Brenham construction business and office details.",
+          "source_type": "official_company",
+          "source_url": "https://www.collierconstruction.com/contact",
+          "checked_on": "2026-09-20",
+          "match_status": "confirmed",
+          "source_strength": "strong",
+          "contact_note": "Ask who handles Wilkins Valley estimating; the published email is also used for warranty requests and is not verified as a bid inbox."
+        }
+      ],
+      "selected_route_id": "construction-office",
+      "alternative_route_ids": [],
+      "researched_gap": null
+    },
+    {
+      "property_id": "washington-brenham-permit-com-new-26-0010-apartment",
+      "rank": 33,
+      "research_status": "researched",
+      "sources_checked": [
+        {
+          "url": "https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-06.pdf",
+          "disposition": "no_contact_fields",
+          "outcome": "The City permit report names Nelson Sosa and Valco Builders for the 411 Church Street apartment building but does not include a contractor phone or email.",
+          "checked_on": "2026-09-20"
+        },
+        {
+          "url": "https://esearch.washingtoncad.org/",
+          "disposition": "privacy_only",
+          "outcome": "Washington CAD confirms Nelson Sosa as the individual parcel owner at 411 Church Street; no public business route was taken from the private-owner record.",
+          "checked_on": "2026-09-20"
+        },
+        {
+          "url": "https://www.houzz.com/professionals/general-contractors/valco-builders-pfvwus-pf~1387626994",
+          "disposition": "contact_found",
+          "outcome": "A Houzz business profile publishes 832-708-7069 for a Texas Valco Builders, but the profile is in Humble and no address or project bridge to the Brenham permit was found.",
+          "checked_on": "2026-09-20"
+        },
+        {
+          "url": "https://docs.cityofbrenham.org/city_government/departments/development_services/index.php",
+          "disposition": "contact_found",
+          "outcome": "The City's official Development Services page publishes 979-337-7220 for building-permit and inspection questions; this is a permit-information fallback, not a project buyer.",
+          "checked_on": "2026-09-20"
+        }
+      ],
+      "actors_checked": [
+        {
+          "name": "Valco Builders",
+          "role": "permit-listed contractor",
+          "outcome": "The City permit establishes the contractor name, but exact-name and location checks did not connect the Humble directory business to the Brenham job; its number remains provisional."
+        },
+        {
+          "name": "Nelson Sosa",
+          "role": "permit applicant / CAD owner",
+          "outcome": "The individual owner identity is confirmed by permit and CAD, but no suitable public business phone was established and private personal contact information was excluded."
+        },
+        {
+          "name": "City of Brenham Development Services",
+          "role": "permit-information routing office",
+          "outcome": "The official municipal office can clarify public permit and contractor-registration details but is not a project contact or sales lead."
+        }
+      ],
+      "contacts": [
+        {
+          "route_id": "provisional-builder-directory",
+          "contact_name": "Valco Builders",
+          "role": "permit-listed contractor; identity not confirmed",
+          "phone": "832-708-7069",
+          "email": null,
+          "website": null,
+          "public_business_basis": "UNCONFIRMED directory-listed construction-business number",
+          "match_evidence": "The directory business shares the exact Valco Builders name and Texas construction trade, but no public source ties the Humble profile to the 411 Church Street permit.",
+          "source_type": "directory",
+          "source_url": "https://www.houzz.com/professionals/general-contractors/valco-builders-pfvwus-pf~1387626994",
+          "checked_on": "2026-09-20",
+          "match_status": "provisional",
+          "source_strength": "provisional",
+          "contact_note": "Best guess only: verify identity before treating this as the permit contractor. The linked private WordPress page did not establish the match."
+        },
+        {
+          "route_id": "permit-routing-office",
+          "contact_name": "City of Brenham Development Services",
+          "role": "permit-information routing office",
+          "phone": "979-337-7220",
+          "email": null,
+          "website": "https://docs.cityofbrenham.org/city_government/departments/development_services/index.php",
+          "public_business_basis": "Official municipal building-permit information line",
+          "match_evidence": "The City office publishes and administers Brenham building-permit and contractor-registration information, including the source permit series.",
+          "source_type": "government_record",
+          "source_url": "https://docs.cityofbrenham.org/city_government/departments/development_services/index.php",
+          "checked_on": "2026-09-20",
+          "match_status": "confirmed",
+          "source_strength": "strong",
+          "contact_note": "Useful only to clarify public permit/contractor records; not a builder, buyer, or substitute sales contact."
+        }
+      ],
+      "selected_route_id": "provisional-builder-directory",
+      "alternative_route_ids": [
+        "permit-routing-office"
+      ],
+      "researched_gap": null
+    },
+    {
+      "property_id": "statewide-tdlr-tabs-TABS2027001470",
+      "rank": 34,
+      "research_status": "researched",
+      "sources_checked": [
+        {
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2027001470",
+          "disposition": "contact_found",
+          "outcome": "The live TDLR record names Adamson Investments LLC as owner, Kelley Adamson as contact, and PACT Design Studio as designer, publishing 979-229-8634 and 979-704-6894 respectively.",
+          "checked_on": "2026-09-20"
+        },
+        {
+          "url": "https://adamsonengineering.com/contact/",
+          "disposition": "contact_found",
+          "outcome": "Adamson Engineering's official page publishes 979-307-5341, Kelley@adamson-engineering.com, and 2427 Earl Rudder Freeway South, the same address TDLR gives for the owner LLC.",
+          "checked_on": "2026-09-20"
+        },
+        {
+          "url": "https://pactdesignstudio.com/contact/",
+          "disposition": "no_contact_fields",
+          "outcome": "PACT's official contact form verifies the design firm's active official web presence but does not render a public phone; the exact TDLR project record supplies its office number.",
+          "checked_on": "2026-09-20"
+        }
+      ],
+      "actors_checked": [
+        {
+          "name": "Adamson Investments LLC / Adamson Engineering",
+          "role": "owner/developer and future office occupant",
+          "outcome": "The project name is Adamson Engineering, and the owner mailing address on TDLR exactly matches the official Adamson Engineering office address; the official office route is selected instead of the filing's likely mobile number."
+        },
+        {
+          "name": "PACT Design Studio",
+          "role": "design firm on TDLR record",
+          "outcome": "TDLR supplies a public business phone for PACT and its official site confirms the firm; PACT is a design fallback, not the builder."
+        },
+        {
+          "name": "Eddie Hare",
+          "role": "registered accessibility specialist",
+          "outcome": "The TDLR record lists this compliance participant; the owner business and design firm are more relevant routes."
+        }
+      ],
+      "contacts": [
+        {
+          "route_id": "owner-business-office",
+          "contact_name": "Adamson Engineering",
+          "role": "owner-linked future office occupant",
+          "phone": "979-307-5341",
+          "email": "Kelley@adamson-engineering.com",
+          "website": "https://adamsonengineering.com/",
+          "public_business_basis": "Official Adamson Engineering office contact",
+          "match_evidence": "The TDLR project is named Adamson Engineering, names Kelley Adamson, and gives the exact same 2427 Earl Rudder Freeway South owner address as the official business page.",
+          "source_type": "official_company",
+          "source_url": "https://adamsonengineering.com/contact/",
+          "checked_on": "2026-09-20",
+          "match_status": "confirmed",
+          "source_strength": "strong",
+          "contact_note": "Owner/occupant business route; no general contractor or open trade package was identified."
+        },
+        {
+          "route_id": "designer-office",
+          "contact_name": "PACT Design Studio",
+          "role": "design firm on TDLR record",
+          "phone": "979-704-6894",
+          "email": null,
+          "website": "https://pactdesignstudio.com/",
+          "public_business_basis": "Design-office phone published on the exact state project filing",
+          "match_evidence": "TDLR identifies PACT as the designer for this exact Adamson Engineering office project, and PACT's official site confirms the firm.",
+          "source_type": "government_record",
+          "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2027001470",
+          "checked_on": "2026-09-20",
+          "match_status": "confirmed",
+          "source_strength": "strong",
+          "contact_note": "Designer fallback only; PACT is not identified as builder or buyer."
+        }
+      ],
+      "selected_route_id": "owner-business-office",
+      "alternative_route_ids": [
+        "designer-office"
+      ],
+      "researched_gap": null
+    },
+    {
+      "property_id": "statewide-tdlr-tabs-TABS2027001180",
+      "rank": 35,
+      "research_status": "researched",
+      "sources_checked": [
+        {
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2027001180",
+          "disposition": "contact_found",
+          "outcome": "The live TDLR record identifies Blaze RE Holdings LLC as owner/developer at 979-251-9826 and Four Nexus Studio as designer at 217-710-7149 for the exact Brenham Rodeo C-Store project.",
+          "checked_on": "2026-09-20"
+        },
+        {
+          "url": "https://fournexusstudio.com/privacy-policy/",
+          "disposition": "contact_found",
+          "outcome": "Four Nexus Studio's official page publishes the same Jollyville Road office address and 217-710-7149 phone shown by TDLR, plus Patrick@fournexusstudio.com.",
+          "checked_on": "2026-09-20"
+        }
+      ],
+      "actors_checked": [
+        {
+          "name": "Blaze RE Holdings LLC",
+          "role": "owner/developer",
+          "outcome": "The exact TDLR registration publishes the owner LLC's business contact number; no separate public owner website or builder was established."
+        },
+        {
+          "name": "Four Nexus Studio",
+          "role": "design firm on TDLR record",
+          "outcome": "TDLR and the firm's official page agree on its Austin-area address and phone; it is a design fallback, not the general contractor."
+        },
+        {
+          "name": "William G. Page",
+          "role": "registered accessibility specialist",
+          "outcome": "The TDLR record lists this compliance participant, but the owner and design firm are more relevant routes."
+        }
+      ],
+      "contacts": [
+        {
+          "route_id": "owner-developer-filing",
+          "contact_name": "Blaze RE Holdings LLC",
+          "role": "owner/developer",
+          "phone": "979-251-9826",
+          "email": null,
+          "website": null,
+          "public_business_basis": "Owner/developer business number published on the exact state project registration",
+          "match_evidence": "TDLR ties the LLC, phone, and owner address directly to Brenham Rodeo C-Store at 3823 Highway 290.",
+          "source_type": "government_record",
+          "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2027001180",
+          "checked_on": "2026-09-20",
+          "match_status": "confirmed",
+          "source_strength": "strong",
+          "contact_note": "Owner/developer filing route; no named builder or open trade package was verified."
+        },
+        {
+          "route_id": "designer-office",
+          "contact_name": "Four Nexus Studio",
+          "role": "design firm on TDLR record",
+          "phone": "217-710-7149",
+          "email": "Patrick@fournexusstudio.com",
+          "website": "https://fournexusstudio.com/",
+          "public_business_basis": "Official design-studio contact page",
+          "match_evidence": "TDLR names Four Nexus on this exact project, and its official page matches the filing's office address and phone.",
+          "source_type": "official_company",
+          "source_url": "https://fournexusstudio.com/privacy-policy/",
+          "checked_on": "2026-09-20",
+          "match_status": "confirmed",
+          "source_strength": "strong",
+          "contact_note": "Designer fallback only; not a confirmed builder or purchasing contact."
+        }
+      ],
+      "selected_route_id": "owner-developer-filing",
+      "alternative_route_ids": [
+        "designer-office"
+      ],
+      "researched_gap": null
+    },
+    {
+      "property_id": "brazos-bryan-sdrc-sp26-000062-north-dunn-apartments",
+      "rank": 36,
+      "research_status": "researched",
+      "sources_checked": [
+        {
+          "url": "https://docs.bryantx.gov/planning_development/SDRC/2026%20SDRC/09-15-2026/SP26-000062%2C%20Ramsey%20Place%2C%20600%20E%20North%20Ave%2C%20North%20and%20Dunn%20Apartments%2C%209-15-26.pdf",
+          "disposition": "contact_found",
+          "outcome": "The City-hosted plan names VGC Ventures LLC as developer with 832-776-3395 and McClure & Browne as preparer with 979-693-3838; the sheet is marked issued for bidding and construction.",
+          "checked_on": "2026-09-20"
+        },
+        {
+          "url": "https://www.mcclurebrowne.com/our-mission/contact-us/",
+          "disposition": "contact_found",
+          "outcome": "McClure & Browne's official contact page confirms 979-693-3838, mbesi@mcclurebrowne.com, and the same Woodcreek Drive office printed on the plan.",
+          "checked_on": "2026-09-20"
+        }
+      ],
+      "actors_checked": [
+        {
+          "name": "VGC Ventures, LLC",
+          "role": "developer",
+          "outcome": "The City-hosted project cover sheet directly publishes the developer name, address, and phone; this exact project record is the strongest route."
+        },
+        {
+          "name": "McClure & Browne Engineering/Surveying, Inc.",
+          "role": "designer / engineering-surveying preparer",
+          "outcome": "The plan and official company contact page agree on the engineering office and phone; this is a professional-team fallback, not a builder."
+        }
+      ],
+      "contacts": [
+        {
+          "route_id": "developer-plan-contact",
+          "contact_name": "VGC Ventures, LLC",
+          "role": "developer",
+          "phone": "832-776-3395",
+          "email": null,
+          "website": null,
+          "public_business_basis": "Developer business contact printed on the City-hosted project plan",
+          "match_evidence": "The exact North and Dunn Apartments cover sheet identifies VGC Ventures LLC as developer and prints the phone beneath its business address.",
+          "source_type": "government_record",
+          "source_url": "https://docs.bryantx.gov/planning_development/SDRC/2026%20SDRC/09-15-2026/SP26-000062%2C%20Ramsey%20Place%2C%20600%20E%20North%20Ave%2C%20North%20and%20Dunn%20Apartments%2C%209-15-26.pdf",
+          "checked_on": "2026-09-20",
+          "match_status": "confirmed",
+          "source_strength": "strong",
+          "contact_note": "Developer route from the exact plan; the issued-for-bidding text does not prove a current trade package remains open."
+        },
+        {
+          "route_id": "engineer-office",
+          "contact_name": "McClure & Browne Engineering/Surveying, Inc.",
+          "role": "designer / engineering-surveying preparer",
+          "phone": "979-693-3838",
+          "email": "mbesi@mcclurebrowne.com",
+          "website": "https://www.mcclurebrowne.com/",
+          "public_business_basis": "Official engineering/surveying company office",
+          "match_evidence": "The City-hosted project plan names McClure & Browne and its official page matches the plan's office address and phone.",
+          "source_type": "official_company",
+          "source_url": "https://www.mcclurebrowne.com/our-mission/contact-us/",
+          "checked_on": "2026-09-20",
+          "match_status": "confirmed",
+          "source_strength": "strong",
+          "contact_note": "Professional-team fallback only; the engineer is not promoted to builder or buyer."
+        }
+      ],
+      "selected_route_id": "developer-plan-contact",
+      "alternative_route_ids": [
+        "engineer-office"
+      ],
+      "researched_gap": null
+    },
+    {
+      "property_id": "statewide-tdlr-tabs-TABS2027000633",
+      "rank": 37,
+      "research_status": "researched",
+      "sources_checked": [
+        {
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2027000633",
+          "disposition": "contact_found",
+          "outcome": "The live TDLR record names private individual owners, Constantin Barbu as designer at 979-575-7310, and Eddie Hare as accessibility specialist; no contractor is identified.",
+          "checked_on": "2026-09-20"
+        },
+        {
+          "url": "https://docs.bryantx.gov/planning_development/SDRC/2025%20SDRC/10-21-2025/SP24-000152%2C%20Site%20Plan%202%2C%203905%20College%20Main%20Street%2C%2010-13-2025.pdf",
+          "disposition": "contact_found",
+          "outcome": "A separate City-hosted signed project plan identifies Constantin Barbu as a Texas architect and publishes the same 979-575-7310 professional number, corroborating that it is a business route.",
+          "checked_on": "2026-09-20"
+        }
+      ],
+      "actors_checked": [
+        {
+          "name": "Tran Nhon & Chau Huynh",
+          "role": "owner/developer",
+          "outcome": "TDLR lists private individual owners and a phone, but no public business purpose for that personal route was established, so it was excluded."
+        },
+        {
+          "name": "Constantin Barbu",
+          "role": "design firm on TDLR record",
+          "outcome": "The exact TDLR project and a separate City-hosted signed plan agree on the architect's professional phone, making it the usable fallback."
+        },
+        {
+          "name": "Eddie Hare",
+          "role": "registered accessibility specialist",
+          "outcome": "This compliance participant is listed by TDLR, but the project designer is the more relevant fallback and no builder was found."
+        }
+      ],
+      "contacts": [
+        {
+          "route_id": "designer-professional-line",
+          "contact_name": "Constantin Barbu",
+          "role": "design firm on TDLR record / architect",
+          "phone": "979-575-7310",
+          "email": null,
+          "website": null,
+          "public_business_basis": "Architect phone published in the exact TDLR filing and corroborated on a City-hosted signed plan",
+          "match_evidence": "TDLR assigns Constantin Barbu to Galaxy Spa and publishes the number; a City plan separately identifies the same person as a Texas architect with the same professional number.",
+          "source_type": "government_record",
+          "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2027000633",
+          "checked_on": "2026-09-20",
+          "match_status": "confirmed",
+          "source_strength": "strong",
+          "contact_note": "Designer fallback only. No building contractor or open work was verified, and the private owners' filing phone was not used."
+        }
+      ],
+      "selected_route_id": "designer-professional-line",
+      "alternative_route_ids": [],
+      "researched_gap": null
+    },
+    {
+      "property_id": "brazos-bryan-sdrc-sp26-000059-tabor-road-apartments",
+      "rank": 38,
+      "research_status": "researched",
+      "sources_checked": [
+        {
+          "url": "https://docs.bryantx.gov/planning_development/SDRC/2026%20SDRC/09-08-2026/SP26-000059%2C%20Siegert%2C%20Tabor%20Road%20Apts%2C%202816%20Tabor%20Rd%2C%209-8-26.pdf",
+          "disposition": "contact_found",
+          "outcome": "The City-hosted plan identifies Haswell Park Properties LLC as owner/developer and J4 Engineering at 979-739-0567; it explicitly says the interim plans are not for construction, bidding, or permitting.",
+          "checked_on": "2026-09-20"
+        },
+        {
+          "url": "https://j4engineering.com/",
+          "disposition": "contact_found",
+          "outcome": "J4 Engineering's official site confirms its Bryan office, 979-739-0567, ContactUs@j4engineering.com, and civil/site-development services.",
+          "checked_on": "2026-09-20"
+        }
+      ],
+      "actors_checked": [
+        {
+          "name": "Haswell Park Properties, LLC",
+          "role": "owner/developer",
+          "outcome": "The exact plan gives the LLC's Bryan mailing address but no owner phone; exact-name and address checks did not establish a separate official public business route."
+        },
+        {
+          "name": "J4 Engineering",
+          "role": "engineer",
+          "outcome": "The project plan and J4's official site agree on the engineer's business phone; it is retained as a professional-team fallback only."
+        }
+      ],
+      "contacts": [
+        {
+          "route_id": "engineer-office",
+          "contact_name": "J4 Engineering",
+          "role": "project engineer",
+          "phone": "979-739-0567",
+          "email": "ContactUs@j4engineering.com",
+          "website": "https://j4engineering.com/",
+          "public_business_basis": "Official engineering-company office route",
+          "match_evidence": "The exact City-hosted Tabor Road plan identifies J4 and prints the same phone published on the firm's official site.",
+          "source_type": "official_company",
+          "source_url": "https://j4engineering.com/",
+          "checked_on": "2026-09-20",
+          "match_status": "confirmed",
+          "source_strength": "strong",
+          "contact_note": "Engineer fallback only, not a builder or buyer. The source plans are interim review documents explicitly not for construction, bidding, or permitting."
+        }
+      ],
+      "selected_route_id": "engineer-office",
+      "alternative_route_ids": [],
+      "researched_gap": null
+    },
+    {
+      "property_id": "brazos-bryan-sdrc-sp26-000053-oxbow-business-park",
+      "rank": 39,
+      "research_status": "researched",
+      "sources_checked": [
+        {
+          "url": "https://docs.bryantx.gov/planning_development/SDRC/2026%20SDRC/08-11-2026/SP26-000053%2C%20Hwy%2030%20Business%20Park%2C%20Oxbow%20Business%20Park%2C%208-11-26.pdf",
+          "disposition": "contact_found",
+          "outcome": "The City-hosted plan identifies Oxbow Construction LLC as owner/developer and J4 Engineering at 979-739-0567; it does not identify Oxbow as the building contractor or publish an owner phone.",
+          "checked_on": "2026-09-20"
+        },
+        {
+          "url": "https://j4engineering.com/",
+          "disposition": "contact_found",
+          "outcome": "J4 Engineering's official site confirms the Bryan office, 979-739-0567, ContactUs@j4engineering.com, and site-development services.",
+          "checked_on": "2026-09-20"
+        }
+      ],
+      "actors_checked": [
+        {
+          "name": "Oxbow Construction, LLC",
+          "role": "owner/developer",
+          "outcome": "The exact plan identifies Oxbow as owner/developer and gives only a PO box; exact-name and location checks did not establish a matching Texas public phone, and unrelated Oregon/Nebraska companies were excluded."
+        },
+        {
+          "name": "J4 Engineering",
+          "role": "engineer",
+          "outcome": "The exact project plan and J4's official site agree on the engineering office route; J4 is not promoted to owner, builder, or buyer."
+        }
+      ],
+      "contacts": [
+        {
+          "route_id": "engineer-office",
+          "contact_name": "J4 Engineering",
+          "role": "project engineer",
+          "phone": "979-739-0567",
+          "email": "ContactUs@j4engineering.com",
+          "website": "https://j4engineering.com/",
+          "public_business_basis": "Official engineering-company office route",
+          "match_evidence": "The exact City-hosted Oxbow plan identifies J4 and prints the same phone published on the firm's official site.",
+          "source_type": "official_company",
+          "source_url": "https://j4engineering.com/",
+          "checked_on": "2026-09-20",
+          "match_status": "confirmed",
+          "source_strength": "strong",
+          "contact_note": "Engineer fallback only. Oxbow remains the owner/developer, not a confirmed builder, and no matching owner phone was found."
+        }
+      ],
+      "selected_route_id": "engineer-office",
+      "alternative_route_ids": [],
+      "researched_gap": null
+    }
+  ]
+}

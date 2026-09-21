@@ -1,0 +1,1099 @@
+{
+  "batch_id": "batch-02",
+  "properties": [
+    {
+      "property_id": "statewide-tdlr-tabs-TABS2026029241",
+      "rank": 14,
+      "research_status": "researched",
+      "sources_checked": [
+        {
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026029241",
+          "disposition": "contact_found",
+          "outcome": "The live Texas project record identifies Brixmor/A Central Station as owner, Onyi Odunukwe as tenant, and McGregor Murphy Architecture as designer, and publishes business/project phones for all three.",
+          "checked_on": "2026-09-20"
+        },
+        {
+          "url": "https://www.mcmarc.com/",
+          "disposition": "contact_found",
+          "outcome": "The design firm's official site publishes 817-454-2384 and jenna@mcmarc.com and describes commercial tenant-finish services.",
+          "checked_on": "2026-09-20"
+        },
+        {
+          "url": "https://www.glotanning.com/location/college-station-tx/",
+          "disposition": "contact_found",
+          "outcome": "The official brand page identifies the College Station location as coming soon and publishes 479-966-4977, but this is a tenant/customer route rather than a construction office.",
+          "checked_on": "2026-09-20"
+        }
+      ],
+      "actors_checked": [
+        {
+          "name": "Brixmor/A Central Station, LLC",
+          "role": "owner/developer",
+          "outcome": "TDLR publishes an owner/project contact and phone, retained as an owner alternative."
+        },
+        {
+          "name": "Onyi Odunukwe / Glo Tanning",
+          "role": "tenant/company route",
+          "outcome": "TDLR and the official Glo page publish tenant/company phones, but neither is labeled as construction estimating."
+        },
+        {
+          "name": "McGregor Murphy Architecture",
+          "role": "design firm on TDLR record",
+          "outcome": "The project record and official firm site agree on 817-454-2384; selected as the most construction-relevant public route."
+        }
+      ],
+      "contacts": [
+        {
+          "route_id": "designer-office",
+          "contact_name": "McGregor Murphy Architecture",
+          "role": "design firm on TDLR record",
+          "phone": "817-454-2384",
+          "email": "jenna@mcmarc.com",
+          "website": "https://www.mcmarc.com/",
+          "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026029241",
+          "source_type": "government_record",
+          "match_status": "confirmed",
+          "source_strength": "strong",
+          "public_business_basis": "TDLR publishes the firm and phone as the project's design firm; the official firm site corroborates both the number and commercial design work.",
+          "match_evidence": "The same firm name and 817-454-2384 appear in the Glo Tanning TDLR record and on McGregor Murphy Architecture's official site.",
+          "checked_on": "2026-09-20"
+        },
+        {
+          "route_id": "owner-project-contact",
+          "contact_name": "Stephen Trommsdorff / Brixmor",
+          "role": "owner/developer contact on TDLR record",
+          "phone": "713-660-4317",
+          "email": null,
+          "website": null,
+          "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026029241",
+          "source_type": "government_record",
+          "match_status": "confirmed",
+          "source_strength": "strong",
+          "public_business_basis": "The state project record publishes this number in the owner section for the exact project.",
+          "match_evidence": "TDLR ties Brixmor/A Central Station LLC and Stephen Trommsdorff directly to TABS2026029241 at Central Station Shopping Center.",
+          "checked_on": "2026-09-20"
+        },
+        {
+          "route_id": "tenant-project-contact",
+          "contact_name": "Onyi Odunukwe",
+          "role": "Glo Tanning tenant contact on TDLR record",
+          "phone": "479-879-1309",
+          "email": null,
+          "website": "https://www.glotanning.com/location/college-station-tx/",
+          "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026029241",
+          "source_type": "government_record",
+          "match_status": "confirmed",
+          "source_strength": "strong",
+          "public_business_basis": "TDLR publicly lists the number as the tenant phone for this fit-out.",
+          "match_evidence": "The tenant is recorded on the exact Glo Tanning College Station project and the brand site confirms that location is coming soon.",
+          "checked_on": "2026-09-20"
+        }
+      ],
+      "selected_route_id": "designer-office",
+      "alternative_route_ids": [
+        "owner-project-contact",
+        "tenant-project-contact"
+      ],
+      "researched_gap": null
+    },
+    {
+      "property_id": "statewide-tdlr-tabs-TABS2026028954",
+      "rank": 15,
+      "research_status": "researched",
+      "sources_checked": [
+        {
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026028954",
+          "disposition": "contact_found",
+          "outcome": "The state project record publishes E & K Mason Enterprises owner contact Kathryn Powell at 979-255-6770 and Thetford Architecture at 979-587-6483.",
+          "checked_on": "2026-09-20"
+        },
+        {
+          "url": "https://www.waze.com/live-map/directions/us/tx/somerville/snook-watering-hole?to=place.ChIJswURzO4mRIYRmEpZEVTt3qA",
+          "disposition": "ambiguous_entity",
+          "outcome": "The directory publishes 979-272-3715 for Snook Watering Hole but gives 10353 FM 2155 Loop rather than the TDLR record's 1353 FM 2155, so it was not promoted over project-record contacts.",
+          "checked_on": "2026-09-20"
+        }
+      ],
+      "actors_checked": [
+        {
+          "name": "E & K MASON ENTERISES LLC",
+          "role": "owner/developer",
+          "outcome": "TDLR publishes Kathryn Powell and a project-owner phone; retained as an alternative."
+        },
+        {
+          "name": "Thetford Architecture, LLC",
+          "role": "design firm on TDLR record",
+          "outcome": "TDLR publishes the firm phone on the exact project; selected as the construction-relevant route."
+        },
+        {
+          "name": "Snook Watering Hole",
+          "role": "project business/venue",
+          "outcome": "A directory phone was found, but the street-number conflict makes the listing provisional and unnecessary because stronger project routes exist."
+        }
+      ],
+      "contacts": [
+        {
+          "route_id": "designer-office",
+          "contact_name": "Thetford Architecture, LLC",
+          "role": "design firm on TDLR record",
+          "phone": "979-587-6483",
+          "email": null,
+          "website": null,
+          "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026028954",
+          "source_type": "government_record",
+          "match_status": "confirmed",
+          "source_strength": "strong",
+          "public_business_basis": "The state project record publicly identifies the design firm and office phone.",
+          "match_evidence": "TDLR links Thetford Architecture directly to TABS2026028954 at 1353 FM 2155.",
+          "checked_on": "2026-09-20"
+        },
+        {
+          "route_id": "owner-project-contact",
+          "contact_name": "Kathryn Powell / E & K Mason Enterprises LLC",
+          "role": "owner/developer contact on TDLR record",
+          "phone": "979-255-6770",
+          "email": null,
+          "website": null,
+          "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026028954",
+          "source_type": "government_record",
+          "match_status": "confirmed",
+          "source_strength": "strong",
+          "public_business_basis": "TDLR publishes the number in the owner section of the exact project record.",
+          "match_evidence": "Kathryn Powell and E & K Mason Enterprises are tied directly to the Snook Watering Hole addition in TDLR.",
+          "checked_on": "2026-09-20"
+        }
+      ],
+      "selected_route_id": "designer-office",
+      "alternative_route_ids": [
+        "owner-project-contact"
+      ],
+      "researched_gap": null
+    },
+    {
+      "property_id": "statewide-tdlr-tabs-TABS2026026072",
+      "rank": 16,
+      "research_status": "researched",
+      "sources_checked": [
+        {
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026026072",
+          "disposition": "contact_found",
+          "outcome": "TDLR publishes phones for owner 315 South Main OZ LP, tenant Jake Mitchell, and Winchester Architects on this exact expansion.",
+          "checked_on": "2026-09-20"
+        },
+        {
+          "url": "https://winchester-architects.com/projects/",
+          "disposition": "contact_found",
+          "outcome": "The design firm's official site publishes its Bryan office address and 979-823-4039, matching the TDLR project record.",
+          "checked_on": "2026-09-20"
+        },
+        {
+          "url": "https://www.theowlbcs.com/",
+          "disposition": "contact_found",
+          "outcome": "The venue's official site publishes 979-314-1955 at 315 South Main Street; it is a venue line, not a construction office.",
+          "checked_on": "2026-09-20"
+        }
+      ],
+      "actors_checked": [
+        {
+          "name": "315 South Main OZ, LP",
+          "role": "owner/developer",
+          "outcome": "TDLR publishes an owner phone tied to the exact building."
+        },
+        {
+          "name": "Jake Mitchell / The Owl",
+          "role": "tenant contact on TDLR record",
+          "outcome": "TDLR publishes a tenant project phone and the official venue site confirms the business and address."
+        },
+        {
+          "name": "Winchester Architects",
+          "role": "design firm on TDLR record",
+          "outcome": "TDLR and the official firm site agree on the office phone; selected for construction relevance."
+        }
+      ],
+      "contacts": [
+        {
+          "route_id": "designer-office",
+          "contact_name": "Winchester Architects",
+          "role": "design firm on TDLR record",
+          "phone": "979-823-4039",
+          "email": null,
+          "website": "https://winchester-architects.com/projects/",
+          "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026026072",
+          "source_type": "government_record",
+          "match_status": "confirmed",
+          "source_strength": "strong",
+          "public_business_basis": "The state record and official firm site publish the same business office number.",
+          "match_evidence": "TDLR names Winchester Architects for The Owl Expansion and matches its official Bryan office phone.",
+          "checked_on": "2026-09-20"
+        },
+        {
+          "route_id": "tenant-project-contact",
+          "contact_name": "Jake Mitchell",
+          "role": "tenant contact on TDLR record",
+          "phone": "979-721-9158",
+          "email": null,
+          "website": "https://www.theowlbcs.com/",
+          "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026026072",
+          "source_type": "government_record",
+          "match_status": "confirmed",
+          "source_strength": "strong",
+          "public_business_basis": "TDLR publicly lists the number as the tenant contact for this tenant-funded project.",
+          "match_evidence": "The exact project record names Jake Mitchell as tenant at the same 315 South Main address confirmed by The Owl's site.",
+          "checked_on": "2026-09-20"
+        },
+        {
+          "route_id": "owner-office",
+          "contact_name": "315 South Main OZ, LP",
+          "role": "owner/developer on TDLR record",
+          "phone": "979-574-9400",
+          "email": null,
+          "website": null,
+          "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026026072",
+          "source_type": "government_record",
+          "match_status": "confirmed",
+          "source_strength": "strong",
+          "public_business_basis": "TDLR publishes the number in the owner section for the exact building project.",
+          "match_evidence": "The owner entity is tied directly to TABS2026026072 and 315 South Main Street.",
+          "checked_on": "2026-09-20"
+        }
+      ],
+      "selected_route_id": "designer-office",
+      "alternative_route_ids": [
+        "tenant-project-contact",
+        "owner-office"
+      ],
+      "researched_gap": null
+    },
+    {
+      "property_id": "statewide-tdlr-tabs-TABS2026025481",
+      "rank": 17,
+      "research_status": "researched",
+      "sources_checked": [
+        {
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026025481",
+          "disposition": "contact_found",
+          "outcome": "TDLR publishes owner contact Robert Young, tenant Sara Sultz, and Hudson Architecture phones for the exact restaurant finish-out.",
+          "checked_on": "2026-09-20"
+        },
+        {
+          "url": "https://sourdoughandco.com/texas",
+          "disposition": "contact_found",
+          "outcome": "The official brand page lists College Station among Texas locations and publishes the corporate office phone 916-294-7749; this is not selected over project-tied routes.",
+          "checked_on": "2026-09-20"
+        }
+      ],
+      "actors_checked": [
+        {
+          "name": "Lehtonen Investment II LTD / Robert Young",
+          "role": "owner/developer contact on TDLR record",
+          "outcome": "TDLR publishes a confirmed owner/project phone."
+        },
+        {
+          "name": "Sara Sultz / Sourdough & Co.",
+          "role": "tenant contact on TDLR record",
+          "outcome": "TDLR publishes a tenant phone and the official brand site confirms College Station expansion."
+        },
+        {
+          "name": "Hudson Architecture, PLLC",
+          "role": "design firm on TDLR record",
+          "outcome": "TDLR publishes the firm's number for this project; selected for construction relevance."
+        }
+      ],
+      "contacts": [
+        {
+          "route_id": "designer-office",
+          "contact_name": "Hudson Architecture, PLLC",
+          "role": "design firm on TDLR record",
+          "phone": "979-324-6062",
+          "email": null,
+          "website": null,
+          "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026025481",
+          "source_type": "government_record",
+          "match_status": "confirmed",
+          "source_strength": "strong",
+          "public_business_basis": "TDLR publicly lists the firm's phone in the design-firm section for the exact project.",
+          "match_evidence": "Hudson Architecture is named on TABS2026025481 at 4444 SH-6 South.",
+          "checked_on": "2026-09-20"
+        },
+        {
+          "route_id": "tenant-project-contact",
+          "contact_name": "Sara Sultz",
+          "role": "tenant contact on TDLR record",
+          "phone": "210-705-7720",
+          "email": null,
+          "website": "https://sourdoughandco.com/texas",
+          "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026025481",
+          "source_type": "government_record",
+          "match_status": "confirmed",
+          "source_strength": "strong",
+          "public_business_basis": "TDLR publishes the number as the tenant contact for the tenant-funded finish-out.",
+          "match_evidence": "The state record ties Sara Sultz to the Sourdough & Co. project and the official brand page confirms College Station.",
+          "checked_on": "2026-09-20"
+        },
+        {
+          "route_id": "owner-project-contact",
+          "contact_name": "Robert Young / Lehtonen Investment II LTD",
+          "role": "owner/developer contact on TDLR record",
+          "phone": "979-431-5566",
+          "email": null,
+          "website": null,
+          "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026025481",
+          "source_type": "government_record",
+          "match_status": "confirmed",
+          "source_strength": "strong",
+          "public_business_basis": "The public project record lists this contact and number in its owner section.",
+          "match_evidence": "TDLR ties Robert Young and Lehtonen Investment II LTD to the exact project address.",
+          "checked_on": "2026-09-20"
+        }
+      ],
+      "selected_route_id": "designer-office",
+      "alternative_route_ids": [
+        "tenant-project-contact",
+        "owner-project-contact"
+      ],
+      "researched_gap": null
+    },
+    {
+      "property_id": "statewide-tdlr-tabs-TABS2026025128",
+      "rank": 18,
+      "research_status": "researched",
+      "sources_checked": [
+        {
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026025128",
+          "disposition": "contact_found",
+          "outcome": "TDLR identifies Allie Jones of Texas Children's Hospital as tenant contact with 713-299-9142 and Christine Batten of Bryan Medical Properties with 979-446-3765.",
+          "checked_on": "2026-09-20"
+        },
+        {
+          "url": "https://npiprofile.com/npi/1457215956",
+          "disposition": "contact_found",
+          "outcome": "The NPPES-derived organization profile matches TCH Pediatric Associates doing business as TCP Bryan at 3201 University Drive E and publishes organization main line 832-824-2999.",
+          "checked_on": "2026-09-20"
+        }
+      ],
+      "actors_checked": [
+        {
+          "name": "Allie Jones / Texas Children's Hospital",
+          "role": "tenant contact on TDLR record",
+          "outcome": "TDLR publishes a direct tenant/project route; selected because the renovation is tenant-funded."
+        },
+        {
+          "name": "Bryan Medical Properties LP / Christine Batten",
+          "role": "owner/developer contact on TDLR record",
+          "outcome": "TDLR publishes an owner/project number as a useful alternative."
+        },
+        {
+          "name": "TCH Pediatric Associates, Inc. / TCP Bryan",
+          "role": "medical clinic organization",
+          "outcome": "A public registry-derived profile corroborates the exact address and provides an institutional main line."
+        }
+      ],
+      "contacts": [
+        {
+          "route_id": "tenant-project-contact",
+          "contact_name": "Allie Jones / Texas Children's Hospital",
+          "role": "tenant contact on TDLR record",
+          "phone": "713-299-9142",
+          "email": null,
+          "website": null,
+          "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026025128",
+          "source_type": "government_record",
+          "match_status": "confirmed",
+          "source_strength": "strong",
+          "public_business_basis": "The state project record publishes this as the tenant phone for the exact clinic renovation.",
+          "match_evidence": "TDLR identifies Allie Jones of Texas Children's Hospital on TABS2026025128 at Suite 205, 3201 University Drive E.",
+          "checked_on": "2026-09-20"
+        },
+        {
+          "route_id": "owner-project-contact",
+          "contact_name": "Christine Batten / Bryan Medical Properties LP",
+          "role": "owner/developer contact on TDLR record",
+          "phone": "979-446-3765",
+          "email": null,
+          "website": null,
+          "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026025128",
+          "source_type": "government_record",
+          "match_status": "confirmed",
+          "source_strength": "strong",
+          "public_business_basis": "TDLR publishes the number with the owner and named contact for this project.",
+          "match_evidence": "The owner entity and Christine Batten appear on the exact TCP Bryan project record.",
+          "checked_on": "2026-09-20"
+        },
+        {
+          "route_id": "clinic-main-line",
+          "contact_name": "TCH Pediatric Associates, Inc. dba TCP Bryan",
+          "role": "medical clinic organization main line",
+          "phone": "832-824-2999",
+          "email": null,
+          "website": "https://npiprofile.com/npi/1457215956",
+          "source_url": "https://npiprofile.com/npi/1457215956",
+          "source_type": "directory",
+          "match_status": "provisional",
+          "source_strength": "provisional",
+          "public_business_basis": "The public NPPES-derived organization profile publishes the business phone.",
+          "match_evidence": "The profile matches the TCP Bryan name and exact 3201 University Drive E address, but it is a registry mirror rather than the project's primary filing.",
+          "checked_on": "2026-09-20"
+        }
+      ],
+      "selected_route_id": "tenant-project-contact",
+      "alternative_route_ids": [
+        "owner-project-contact",
+        "clinic-main-line"
+      ],
+      "researched_gap": null
+    },
+    {
+      "property_id": "statewide-tdlr-tabs-TABS2026023612",
+      "rank": 19,
+      "research_status": "researched",
+      "sources_checked": [
+        {
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026023612",
+          "disposition": "contact_found",
+          "outcome": "TDLR publishes Taco Bell owner contact Dwayne Kostiha at 737-209-7400 and Hoover & Associates at 512-467-2626 for this exact remodel.",
+          "checked_on": "2026-09-20"
+        },
+        {
+          "url": "https://locations.tacobell.com/tx/college-station/310-n-harvey-road.html",
+          "disposition": "contact_found",
+          "outcome": "The official restaurant page publishes store phone 979-693-1963 at 310 North Harvey Road; this consumer ordering/store route was not selected for construction outreach.",
+          "checked_on": "2026-09-20"
+        }
+      ],
+      "actors_checked": [
+        {
+          "name": "Dwayne Kostiha / Taco Bell",
+          "role": "owner/developer contact on TDLR record",
+          "outcome": "TDLR publishes a project-specific owner phone; selected over the consumer store line."
+        },
+        {
+          "name": "Hoover & Associates",
+          "role": "design firm on TDLR record",
+          "outcome": "TDLR publishes a design-firm phone as the professional-team alternative."
+        },
+        {
+          "name": "Taco Bell 310 Harvey Road",
+          "role": "restaurant/store route",
+          "outcome": "The official location page has a store line, but it is for restaurant operations rather than construction."
+        }
+      ],
+      "contacts": [
+        {
+          "route_id": "owner-project-contact",
+          "contact_name": "Dwayne Kostiha / Taco Bell",
+          "role": "owner/developer contact on TDLR record",
+          "phone": "737-209-7400",
+          "email": null,
+          "website": null,
+          "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026023612",
+          "source_type": "government_record",
+          "match_status": "confirmed",
+          "source_strength": "strong",
+          "public_business_basis": "The public state project record publishes the owner phone and named contact.",
+          "match_evidence": "Dwayne Kostiha is listed in the owner section of TABS2026023612 for Taco Bell 30118 at 310 Harvey Road.",
+          "checked_on": "2026-09-20"
+        },
+        {
+          "route_id": "designer-office",
+          "contact_name": "Hoover & Associates",
+          "role": "design firm on TDLR record",
+          "phone": "512-467-2626",
+          "email": null,
+          "website": null,
+          "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026023612",
+          "source_type": "government_record",
+          "match_status": "confirmed",
+          "source_strength": "strong",
+          "public_business_basis": "TDLR publicly lists the firm's office phone for the remodel.",
+          "match_evidence": "Hoover & Associates is named as design firm on the exact Taco Bell project record.",
+          "checked_on": "2026-09-20"
+        }
+      ],
+      "selected_route_id": "owner-project-contact",
+      "alternative_route_ids": [
+        "designer-office"
+      ],
+      "researched_gap": null
+    },
+    {
+      "property_id": "statewide-tdlr-tabs-TABS2026022284",
+      "rank": 20,
+      "research_status": "researched",
+      "sources_checked": [
+        {
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026022284",
+          "disposition": "contact_found",
+          "outcome": "TDLR publishes tenant Bhavin Patel at 210-643-6700 and owner Donald A. Ball at 979-774-5522 for the SpinXpress renovation.",
+          "checked_on": "2026-09-20"
+        },
+        {
+          "url": "https://gospinxpress.com/contact-us/",
+          "disposition": "contact_found",
+          "outcome": "The official company contact page publishes general customer route 832-240-9067; it was not selected over the project-specific tenant and owner contacts.",
+          "checked_on": "2026-09-20"
+        }
+      ],
+      "actors_checked": [
+        {
+          "name": "Bhavin Patel",
+          "role": "tenant contact on TDLR record",
+          "outcome": "TDLR publishes a direct tenant/project phone; selected as the best project route."
+        },
+        {
+          "name": "Donald A. Ball",
+          "role": "owner/developer on TDLR record",
+          "outcome": "TDLR publishes an owner phone tied to the exact property; retained as an alternative."
+        },
+        {
+          "name": "SpinXpress",
+          "role": "laundry brand/customer-service route",
+          "outcome": "The official site has a general customer contact, but no College Station construction role is identified."
+        }
+      ],
+      "contacts": [
+        {
+          "route_id": "tenant-project-contact",
+          "contact_name": "Bhavin Patel",
+          "role": "tenant contact on TDLR record",
+          "phone": "210-643-6700",
+          "email": null,
+          "website": null,
+          "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026022284",
+          "source_type": "government_record",
+          "match_status": "confirmed",
+          "source_strength": "strong",
+          "public_business_basis": "TDLR publicly lists this as the tenant phone on the project record.",
+          "match_evidence": "Bhavin Patel is tied directly to the SpinXpress Laundry project at 2220 Texas Avenue South.",
+          "checked_on": "2026-09-20"
+        },
+        {
+          "route_id": "owner-project-contact",
+          "contact_name": "Donald A. Ball",
+          "role": "owner/developer on TDLR record",
+          "phone": "979-774-5522",
+          "email": null,
+          "website": null,
+          "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026022284",
+          "source_type": "government_record",
+          "match_status": "confirmed",
+          "source_strength": "strong",
+          "public_business_basis": "The public project record publishes this number in the owner section.",
+          "match_evidence": "Donald A. Ball is the owner named on TABS2026022284 for the exact suite renovation.",
+          "checked_on": "2026-09-20"
+        }
+      ],
+      "selected_route_id": "tenant-project-contact",
+      "alternative_route_ids": [
+        "owner-project-contact"
+      ],
+      "researched_gap": null
+    },
+    {
+      "property_id": "statewide-tdlr-tabs-TABS2026021872",
+      "rank": 21,
+      "research_status": "researched",
+      "sources_checked": [
+        {
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026021872",
+          "disposition": "contact_found",
+          "outcome": "The current TDLR record publishes City of Somerville project contact Martin Mangum at 979-596-1122 and Brown Reynolds Watford Architects at 979-694-1791.",
+          "checked_on": "2026-09-20"
+        },
+        {
+          "url": "https://somervilletx.gov/RFQ%20New%20City%20Hall%20Building.pdf",
+          "disposition": "contact_found",
+          "outcome": "The City's expired 2025 design-build RFQ identifies David Resendiz and the City office number 979-596-1122 for the same 150 8th Street project; used only as project history and corroboration.",
+          "checked_on": "2026-09-20"
+        },
+        {
+          "url": "https://webgen1files1.revize.com/cityofsomervilletx/New%20Building%20Application-2022.pdf",
+          "disposition": "contact_found",
+          "outcome": "The official City building application publishes 979-596-1122 at 150 8th Street, corroborating the institutional route.",
+          "checked_on": "2026-09-20"
+        }
+      ],
+      "actors_checked": [
+        {
+          "name": "City of Somerville / Martin Mangum",
+          "role": "owner and current project contact on TDLR record",
+          "outcome": "The current state record and official City material agree on the City office number; selected as the owner route."
+        },
+        {
+          "name": "Brown Reynolds Watford Architects, Inc.",
+          "role": "design firm on TDLR record",
+          "outcome": "TDLR publishes the design office phone as a professional-team alternative."
+        },
+        {
+          "name": "David Resendiz",
+          "role": "2025 City design-build RFQ project contact",
+          "outcome": "The older RFQ lists the same City office line, but its deadline is expired and it is retained only as historical project evidence."
+        }
+      ],
+      "contacts": [
+        {
+          "route_id": "city-project-office",
+          "contact_name": "Martin Mangum / City of Somerville",
+          "role": "owner and project contact on current TDLR record",
+          "phone": "979-596-1122",
+          "email": null,
+          "website": "https://somervilletx.gov/",
+          "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026021872",
+          "source_type": "government_record",
+          "match_status": "confirmed",
+          "source_strength": "strong",
+          "public_business_basis": "The current state project record and official City documents publish the same government office number.",
+          "match_evidence": "TDLR names Martin Mangum for the City-owned project at 150 8th Street; official City material matches the address and phone.",
+          "checked_on": "2026-09-20"
+        },
+        {
+          "route_id": "designer-office",
+          "contact_name": "Brown Reynolds Watford Architects, Inc.",
+          "role": "design firm on TDLR record",
+          "phone": "979-694-1791",
+          "email": null,
+          "website": null,
+          "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026021872",
+          "source_type": "government_record",
+          "match_status": "confirmed",
+          "source_strength": "strong",
+          "public_business_basis": "TDLR publicly lists this office phone in the design-firm section.",
+          "match_evidence": "The exact current City Hall record names Brown Reynolds Watford Architects as designer.",
+          "checked_on": "2026-09-20"
+        }
+      ],
+      "selected_route_id": "city-project-office",
+      "alternative_route_ids": [
+        "designer-office"
+      ],
+      "researched_gap": null
+    },
+    {
+      "property_id": "statewide-tdlr-tabs-TABS2026020202",
+      "rank": 22,
+      "research_status": "researched",
+      "sources_checked": [
+        {
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026020202",
+          "disposition": "contact_found",
+          "outcome": "TDLR publishes MSCBH Properties project contact Mark Stasny at 979-229-0972 and design firm GLS at 936-637-4900.",
+          "checked_on": "2026-09-20"
+        },
+        {
+          "url": "https://www.pickleball-junction.com/",
+          "disposition": "contact_found",
+          "outcome": "The official venue page says it is now building at 3175 Wildflower Drive and publishes info@pickleball-junction.com; its phone remains marked coming soon.",
+          "checked_on": "2026-09-20"
+        },
+        {
+          "url": "https://www.glstexas.com/bryan",
+          "disposition": "contact_found",
+          "outcome": "The official GLS page publishes the Bryan office at 4077 Cross Park Drive, 979-776-9700 and admin@glstexas.com.",
+          "checked_on": "2026-09-20"
+        }
+      ],
+      "actors_checked": [
+        {
+          "name": "MSCBH Properties LLC / Mark Stasny",
+          "role": "owner/developer contact on TDLR record",
+          "outcome": "TDLR publishes a named owner/project phone; selected as the closest decision route."
+        },
+        {
+          "name": "GLS",
+          "role": "design firm on TDLR record",
+          "outcome": "TDLR and the official firm site provide professional-team phones; retained as an alternative."
+        },
+        {
+          "name": "Pickleball Junction",
+          "role": "indoor recreation tenant/business",
+          "outcome": "Its official site confirms the exact construction address and gives an email but says the phone is coming soon."
+        }
+      ],
+      "contacts": [
+        {
+          "route_id": "owner-project-contact",
+          "contact_name": "Mark Stasny / MSCBH Properties LLC",
+          "role": "owner/developer contact on TDLR record",
+          "phone": "979-229-0972",
+          "email": null,
+          "website": null,
+          "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026020202",
+          "source_type": "government_record",
+          "match_status": "confirmed",
+          "source_strength": "strong",
+          "public_business_basis": "TDLR publishes the named owner contact and phone for the exact property development.",
+          "match_evidence": "Mark Stasny and MSCBH Properties LLC are tied directly to TABS2026020202 at 3175 Wildflower Drive.",
+          "checked_on": "2026-09-20"
+        },
+        {
+          "route_id": "designer-office",
+          "contact_name": "GLS",
+          "role": "design firm on TDLR record",
+          "phone": "936-637-4900",
+          "email": "admin@glstexas.com",
+          "website": "https://www.glstexas.com/bryan",
+          "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026020202",
+          "source_type": "government_record",
+          "match_status": "confirmed",
+          "source_strength": "strong",
+          "public_business_basis": "The state project record publishes the design firm's phone and the official firm site provides a current contact route.",
+          "match_evidence": "GLS is named on the exact Pickleball Junction TDLR record; its official site confirms the regional firm identity.",
+          "checked_on": "2026-09-20"
+        },
+        {
+          "route_id": "tenant-email",
+          "contact_name": "Pickleball Junction",
+          "role": "indoor recreation business at project address",
+          "phone": null,
+          "email": "info@pickleball-junction.com",
+          "website": "https://www.pickleball-junction.com/",
+          "source_url": "https://www.pickleball-junction.com/",
+          "source_type": "official_company",
+          "match_status": "confirmed",
+          "source_strength": "strong",
+          "public_business_basis": "The official company page publishes this business email while stating its phone is coming soon.",
+          "match_evidence": "The page says it is now building at the exact 3175 Wildflower Drive project address.",
+          "checked_on": "2026-09-20"
+        }
+      ],
+      "selected_route_id": "owner-project-contact",
+      "alternative_route_ids": [
+        "designer-office",
+        "tenant-email"
+      ],
+      "researched_gap": null
+    },
+    {
+      "property_id": "statewide-tdlr-tabs-TABS2026019833",
+      "rank": 23,
+      "research_status": "researched",
+      "sources_checked": [
+        {
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026019833",
+          "disposition": "contact_found",
+          "outcome": "TDLR publishes owner Ajitanatha at 713-443-7155 and design firm Paragan Solutions at 713-446-7810 for the exact hotel project.",
+          "checked_on": "2026-09-20"
+        },
+        {
+          "url": "https://paragansolutions.com/contact/",
+          "disposition": "contact_found",
+          "outcome": "The official design firm's page matches the TDLR company and address and publishes 713-446-7810 and info@paragansolutions.com.",
+          "checked_on": "2026-09-20"
+        },
+        {
+          "url": "https://www.studio6.com/",
+          "disposition": "irrelevant",
+          "outcome": "The official brand site confirms Studio 6 as an extended-stay brand but does not identify the planned Hearne property or a construction contact for it.",
+          "checked_on": "2026-09-20"
+        }
+      ],
+      "actors_checked": [
+        {
+          "name": "Ajitanatha",
+          "role": "owner/developer on TDLR record",
+          "outcome": "TDLR publishes an owner phone tied to this exact hotel project."
+        },
+        {
+          "name": "Paragan Solutions LLC",
+          "role": "design firm on TDLR record",
+          "outcome": "TDLR and the official company site agree on the phone and address; selected as the construction-relevant route."
+        },
+        {
+          "name": "Studio 6",
+          "role": "hotel brand",
+          "outcome": "The public brand site did not yet list the planned Hearne property or provide a project-specific business route."
+        }
+      ],
+      "contacts": [
+        {
+          "route_id": "designer-office",
+          "contact_name": "Paragan Solutions LLC",
+          "role": "design firm on TDLR record",
+          "phone": "713-446-7810",
+          "email": "info@paragansolutions.com",
+          "website": "https://paragansolutions.com/contact/",
+          "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026019833",
+          "source_type": "government_record",
+          "match_status": "confirmed",
+          "source_strength": "strong",
+          "public_business_basis": "The state project record publishes the firm phone and the official company contact page corroborates it.",
+          "match_evidence": "Paragan's official address and phone match the design firm entry on TABS2026019833.",
+          "checked_on": "2026-09-20"
+        },
+        {
+          "route_id": "owner-project-contact",
+          "contact_name": "Ajitanatha",
+          "role": "owner/developer on TDLR record",
+          "phone": "713-443-7155",
+          "email": null,
+          "website": null,
+          "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026019833",
+          "source_type": "government_record",
+          "match_status": "confirmed",
+          "source_strength": "strong",
+          "public_business_basis": "TDLR publicly lists the number in the owner section of the exact hotel record.",
+          "match_evidence": "Ajitanatha is the owner named for TABS2026019833 at 1135 North Market Street.",
+          "checked_on": "2026-09-20"
+        }
+      ],
+      "selected_route_id": "designer-office",
+      "alternative_route_ids": [
+        "owner-project-contact"
+      ],
+      "researched_gap": null
+    },
+    {
+      "property_id": "statewide-tdlr-tabs-TABS2026014890",
+      "rank": 24,
+      "research_status": "researched",
+      "sources_checked": [
+        {
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026014890",
+          "disposition": "contact_found",
+          "outcome": "TDLR publishes Brazos Valley Groundwater contact Alan Day at 979-279-9350 and GLS at 979-776-9700 for this office renovation.",
+          "checked_on": "2026-09-20"
+        },
+        {
+          "url": "https://brazosvalleygcd.org/contact/",
+          "disposition": "contact_found",
+          "outcome": "The district's official page matches the project address and publishes district phone 979-279-9350 and General Manager Alan Day.",
+          "checked_on": "2026-09-20"
+        },
+        {
+          "url": "https://www.glstexas.com/bryan",
+          "disposition": "contact_found",
+          "outcome": "The official GLS Bryan page publishes 979-776-9700 and admin@glstexas.com, matching the design-firm entry on TDLR.",
+          "checked_on": "2026-09-20"
+        }
+      ],
+      "actors_checked": [
+        {
+          "name": "Alan M. Day / Brazos Valley Groundwater Conservation District",
+          "role": "owner/institution project contact and general manager",
+          "outcome": "TDLR and the official district page agree on name, office address and phone; selected as the public owner route."
+        },
+        {
+          "name": "GLS",
+          "role": "design firm on TDLR record",
+          "outcome": "The project record and official regional office page agree on 979-776-9700; retained as the designer alternative."
+        }
+      ],
+      "contacts": [
+        {
+          "route_id": "district-project-office",
+          "contact_name": "Alan M. Day / Brazos Valley Groundwater Conservation District",
+          "role": "owner/institution project contact and general manager",
+          "phone": "979-279-9350",
+          "email": "aday@brazosvalleygcd.org",
+          "website": "https://brazosvalleygcd.org/contact/",
+          "source_url": "https://brazosvalleygcd.org/contact/",
+          "source_type": "institution",
+          "match_status": "confirmed",
+          "source_strength": "strong",
+          "public_business_basis": "The district's official contact page publishes its office route and general manager.",
+          "match_evidence": "The official page matches the exact 112 West 3rd Street project address and Alan Day named in TDLR.",
+          "checked_on": "2026-09-20"
+        },
+        {
+          "route_id": "designer-office",
+          "contact_name": "GLS",
+          "role": "design firm on TDLR record",
+          "phone": "979-776-9700",
+          "email": "admin@glstexas.com",
+          "website": "https://www.glstexas.com/bryan",
+          "source_url": "https://www.glstexas.com/bryan",
+          "source_type": "official_company",
+          "match_status": "confirmed",
+          "source_strength": "strong",
+          "public_business_basis": "The firm's official Bryan office page publishes this phone and email.",
+          "match_evidence": "The official Bryan address and phone match GLS's entry on the exact TDLR renovation record.",
+          "checked_on": "2026-09-20"
+        }
+      ],
+      "selected_route_id": "district-project-office",
+      "alternative_route_ids": [
+        "designer-office"
+      ],
+      "researched_gap": null
+    },
+    {
+      "property_id": "statewide-tdlr-tabs-TABS2026014091",
+      "rank": 25,
+      "research_status": "researched",
+      "sources_checked": [
+        {
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026014091",
+          "disposition": "contact_found",
+          "outcome": "TDLR separately identifies the Ag Classroom Addition and publishes Superintendent Russell White at 979-828-1900 and Harris Craig Architects at 903-534-0995.",
+          "checked_on": "2026-09-20"
+        },
+        {
+          "url": "https://www.franklinisd.net/",
+          "disposition": "contact_found",
+          "outcome": "The district's official site matches 1216 West FM 1644 and publishes current district main line 979-828-7000.",
+          "checked_on": "2026-09-20"
+        },
+        {
+          "url": "https://hcarch.com/",
+          "disposition": "contact_found",
+          "outcome": "The design firm's official site publishes 903-534-0995 and describes K-12 educational architecture services.",
+          "checked_on": "2026-09-20"
+        }
+      ],
+      "actors_checked": [
+        {
+          "name": "Russell White / Franklin ISD",
+          "role": "superintendent and owner/institution contact on TDLR record",
+          "outcome": "TDLR publishes a project-specific district route; selected for this separate Ag Classroom project."
+        },
+        {
+          "name": "Harris Craig Architects, Inc.",
+          "role": "design firm on TDLR record",
+          "outcome": "TDLR and the official company site agree on the design office phone."
+        }
+      ],
+      "contacts": [
+        {
+          "route_id": "district-project-contact",
+          "contact_name": "Russell White / Franklin ISD",
+          "role": "superintendent and owner/institution contact on TDLR record",
+          "phone": "979-828-1900",
+          "email": null,
+          "website": "https://www.franklinisd.net/",
+          "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026014091",
+          "source_type": "government_record",
+          "match_status": "confirmed",
+          "source_strength": "strong",
+          "public_business_basis": "The public state record publishes the superintendent and district phone for this exact project.",
+          "match_evidence": "TDLR ties Russell White and 979-828-1900 to the Ag Classroom Addition at Franklin High School.",
+          "checked_on": "2026-09-20"
+        },
+        {
+          "route_id": "designer-office",
+          "contact_name": "Harris Craig Architects, Inc.",
+          "role": "design firm on TDLR record",
+          "phone": "903-534-0995",
+          "email": null,
+          "website": "https://hcarch.com/",
+          "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026014091",
+          "source_type": "government_record",
+          "match_status": "confirmed",
+          "source_strength": "strong",
+          "public_business_basis": "TDLR publishes the design-firm phone and the official company site corroborates it.",
+          "match_evidence": "Harris Craig Architects is named on TABS2026014091 and its official site matches the phone and office address.",
+          "checked_on": "2026-09-20"
+        },
+        {
+          "route_id": "district-main-line",
+          "contact_name": "Franklin Independent School District",
+          "role": "institution main office",
+          "phone": "979-828-7000",
+          "email": null,
+          "website": "https://www.franklinisd.net/",
+          "source_url": "https://www.franklinisd.net/",
+          "source_type": "institution",
+          "match_status": "confirmed",
+          "source_strength": "strong",
+          "public_business_basis": "The school district's official site publishes its main office phone.",
+          "match_evidence": "The official site uses the exact 1216 West FM 1644 address shown on the project record.",
+          "checked_on": "2026-09-20"
+        }
+      ],
+      "selected_route_id": "district-project-contact",
+      "alternative_route_ids": [
+        "designer-office",
+        "district-main-line"
+      ],
+      "researched_gap": null
+    },
+    {
+      "property_id": "statewide-tdlr-tabs-TABS2026014016",
+      "rank": 26,
+      "research_status": "researched",
+      "sources_checked": [
+        {
+          "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026014016",
+          "disposition": "contact_found",
+          "outcome": "TDLR separately identifies the Field House Addition and publishes Superintendent Russell White at 979-828-1900 and Harris Craig Architects at 903-534-0995.",
+          "checked_on": "2026-09-20"
+        },
+        {
+          "url": "https://www.franklinisd.net/",
+          "disposition": "contact_found",
+          "outcome": "The district's official site matches 1216 West FM 1644 and publishes current district main line 979-828-7000.",
+          "checked_on": "2026-09-20"
+        },
+        {
+          "url": "https://hcarch.com/",
+          "disposition": "contact_found",
+          "outcome": "The design firm's official site publishes 903-534-0995 and describes K-12 and athletic-facility architecture work.",
+          "checked_on": "2026-09-20"
+        }
+      ],
+      "actors_checked": [
+        {
+          "name": "Russell White / Franklin ISD",
+          "role": "superintendent and owner/institution contact on TDLR record",
+          "outcome": "TDLR publishes a project-specific district route; selected for this distinct Field House project."
+        },
+        {
+          "name": "Harris Craig Architects, Inc.",
+          "role": "design firm on TDLR record",
+          "outcome": "TDLR and the official company site agree on the design office phone."
+        }
+      ],
+      "contacts": [
+        {
+          "route_id": "district-project-contact",
+          "contact_name": "Russell White / Franklin ISD",
+          "role": "superintendent and owner/institution contact on TDLR record",
+          "phone": "979-828-1900",
+          "email": null,
+          "website": "https://www.franklinisd.net/",
+          "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026014016",
+          "source_type": "government_record",
+          "match_status": "confirmed",
+          "source_strength": "strong",
+          "public_business_basis": "The public state record publishes the superintendent and district phone for this exact project.",
+          "match_evidence": "TDLR ties Russell White and 979-828-1900 to the Field House Addition at Franklin Boys Athletics.",
+          "checked_on": "2026-09-20"
+        },
+        {
+          "route_id": "designer-office",
+          "contact_name": "Harris Craig Architects, Inc.",
+          "role": "design firm on TDLR record",
+          "phone": "903-534-0995",
+          "email": null,
+          "website": "https://hcarch.com/",
+          "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026014016",
+          "source_type": "government_record",
+          "match_status": "confirmed",
+          "source_strength": "strong",
+          "public_business_basis": "TDLR publishes the design-firm phone and the official company site corroborates it.",
+          "match_evidence": "Harris Craig Architects is named on TABS2026014016 and its official site matches the phone and office address.",
+          "checked_on": "2026-09-20"
+        },
+        {
+          "route_id": "district-main-line",
+          "contact_name": "Franklin Independent School District",
+          "role": "institution main office",
+          "phone": "979-828-7000",
+          "email": null,
+          "website": "https://www.franklinisd.net/",
+          "source_url": "https://www.franklinisd.net/",
+          "source_type": "institution",
+          "match_status": "confirmed",
+          "source_strength": "strong",
+          "public_business_basis": "The school district's official site publishes its main office phone.",
+          "match_evidence": "The official site uses the exact 1216 West FM 1644 address shown on this separate project record.",
+          "checked_on": "2026-09-20"
+        }
+      ],
+      "selected_route_id": "district-project-contact",
+      "alternative_route_ids": [
+        "designer-office",
+        "district-main-line"
+      ],
+      "researched_gap": null
+    }
+  ]
+}

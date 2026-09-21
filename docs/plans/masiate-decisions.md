@@ -1,6 +1,66 @@
 # Masiate Full Plan: Decision Interview
 
+Latest execution decision: Drew approved approximately one hour with eight
+workers, allowing a little over/under and deciding on further work afterward.
+Q18 below is superseded for the first pass. Eight independent Codex sessions
+were launched through the existing bot session API and confirmed running;
+this is not /gowork and does not change its three-worker cap. See
+PLAN-masiate-one-hour.md and masiate-pilot-launch.json. First-pass coverage can
+be partial; do not execute the full 50-task backlog before delivering.
+
 Check: `git diff --check`
+
+## Current Deliverable: Top-Property PDF
+
+Latest direction from Drew on 2026-09-20 supersedes the earlier all-leads PDF
+and per-lead saved-note decisions below.
+
+- **Primary deliverable:** a PDF of the best properties/projects for Masiate,
+  with as much useful, source-backed detail as can be found on each.
+- Collect broadly across relevant services, rank candidates, then concentrate
+  deeper research on the strongest properties. The report is a selected set,
+  not an automatic dump of every collected record.
+- Proposed property profile: address/map link, what is planned or happening,
+  matching Masiate work, owner/developer/builder roles, available business
+  contacts, known scope/budget, dates/stage, evidence, uncertainty and a useful
+  next step. Project budget must not be presented as Masiate's contract value.
+- Keep the public CraneSignal section and agent access to the underlying data.
+  The report is the main outcome; chat supports further investigation.
+- The section shows a short ranked property list, the detailed PDF and an Ask
+  Agent action. Full on-site property profiles and map browsing are not selected.
+- Agent research happens on request and stays in the person's saved chats;
+  reopen the original saved chat to ask about its earlier findings. Drew
+  delegated this detail; the assistant chose existing-chat continuity for the
+  first version, without automatic search across different conversations.
+- Agent scope is research only: facts, sources and available business contacts.
+  No outreach-message drafting or call briefs; Masiate handles preparation and
+  contact itself. Nothing is sent to prospects by the system.
+- **Cancel separate per-lead notes, note visibility controls and shared-record
+  edits.** The latest user instruction makes the previous Q7 unnecessary.
+- One initial collection/research run and one fixed PDF are selected. No
+  scheduled crawling, recurring editions or broad report-refresh feature in
+  the first version. The agent still researches a selected lead on request.
+- Show the report and dataset dates; later chat findings have their own dates
+  and do not rewrite the report or imply the baseline has refreshed.
+- Remembering requires persisted chat history and retrieval, not an assumption
+  of automatic model memory. Inspect the existing chat/session behavior before
+  promising return-visit recall; verify earlier findings can actually be used
+  after reopening, including long conversations. Keep each person's history
+  scoped to them even though the section is public; cross-chat recall is excluded.
+- Property count is flexible: select by quality and available evidence, with no
+  fixed quota or padding. This is not authorization for unlimited research cost.
+- Use existing CraneSignal services, including already-paid access, plus useful
+  open-source tools. No new subscriptions, paid datasets, credit purchases or
+  unapproved overages. Verify allowances before collection; a configured key is
+  not proof of a paid balance. See [tool research](masiate-tool-research.md).
+- Geographic scope: wider Brazos Valley, covering Brazos, Robertson, Burleson,
+  Grimes, Leon, Madison and Washington counties. Source coverage must be checked
+  separately for each jurisdiction; this is a collection boundary, not proof of
+  Masiate's willingness to travel to every property.
+- Assistant ranking default: recent relevant work, evidence quality and an
+  identifiable business contact first; distinguish likely need from an explicit
+  open request for bids. Deeper profile acceptance checks still need planning.
+  No collection has started as of preparation of the multi-session run below.
 
 ## Confirmed Instructions
 
@@ -19,7 +79,7 @@ Check: `git diff --check`
 [First crawl research](masiate-first-crawl.md) is a provisional source design,
 not an approved full product/build plan. Suggested areas, collection windows,
 ranking rules, cadence and task order remain proposals until resolved here.
-The prior area question has no recorded answer.
+The area question is resolved in Q9: wider Brazos Valley.
 
 ## Decision Tree
 
@@ -75,7 +135,7 @@ The earlier decision tree is a topic checklist, not a requirement to exhaust
 business questions before discussing the product. Resolve travel/capacity only
 when needed for an actual feature behavior, without revisiting broad coverage.
 
-## Feature Experience
+## Earlier Feature Choice
 
 Q3: What should the finished CraneSignal section let the owner do?
 
@@ -97,7 +157,7 @@ was selected. The regular public CraneSignal section remains agreed.
 Drew also requested "a pdf of everything" and wants to explore the feature
 further. Q4 below resolves this as a feature export of the complete lead report.
 
-## PDF Deliverable
+## Earlier PDF Choice: Superseded
 
 Q4: What should "a PDF of everything" contain?
 
@@ -156,10 +216,11 @@ the agent helps find more information but does not write that research back to
 the PDF. Drew asked how difficult option A would be. The earlier choices that
 fed agent updates into future PDFs are superseded by this clarification.
 
-## Fixed Report And Separate Research
+## Earlier Save Design: Superseded
 
 - Confirmed: keep the original complete collection PDF unchanged by agent research.
-- New findings may be shown in chat; whether/how to retain them is still open.
+- New findings appear in chat and can be saved as separate notes attached to a
+  lead, as confirmed in Q6 revised; note visibility is still open.
 - Any later report edition from a new collection is a separate, unresolved
   product decision, not an automatic consequence of asking the agent questions.
 - Saving a finding is feasible, but needs persistent storage, a save action,
@@ -168,7 +229,7 @@ fed agent updates into future PDFs are superseded by this clarification.
 - A separate saved note can preserve source/date without changing the original
   collector record or PDF. No precise delivery estimate has been promised.
 
-## Current Question
+## Earlier Lead Notes: Canceled
 
 Q6 revised: With the PDF fixed, how should extra research be kept?
 
@@ -179,10 +240,219 @@ Q6 revised: With the PDF fixed, how should extra research be kept?
 - D. Save changes into the shared lead record itself; richer integration, with
   more work for validation, edit permissions and history; PDF still unchanged.
 
-Answer: pending. The section remains public; research persistence and editing
-permissions have not been silently assumed.
+Answer: **A**, selected by Drew on 2026-09-20 before an interrupted turn.
+Save useful research findings as notes attached to each lead. Preserve the
+original collected record and fixed PDF. Visibility and editing permissions
+remain undecided; this answer does not select shared-record editing.
+
+## Canceled Visibility Question
+
+Q7: Who should see research notes saved on a lead?
+
+- A. Everyone viewing the public section; recommended match for shared public
+  research, with only source-backed project findings published as research notes.
+- B. Only the person who saved them; the leads and original PDF remain public.
+- C. Masiate's selected team; research is shared among team members.
+- D. Choose public or personal when saving each note; more flexibility and controls.
+
+Canceled by Drew's latest instruction: research stays in saved chat history,
+so do not ask who can see separate lead notes or build note controls.
+
+## Report Length
+
+Q8: How many top properties should the first detailed PDF cover?
+
+- A. Up to 20: recommended focused report with substantial research per property.
+- B. Up to 10: a smaller, more deeply investigated first selection.
+- C. Up to 50: broader choice, with more research and a longer report.
+- D. Up to 100: extensive coverage, with the most work and a much larger report.
+
+Answer: **Does not matter**, stated by Drew. Use judgment on count and report
+length based on meaningful, well-supported opportunities. Do not impose the
+suggested 20-property limit or ask for another number. Keep research budgets
+and source coverage as separate decisions; no unlimited spend is implied.
+
+## Collection Area
+
+Q9: Which area should the PDF's properties cover?
+
+- A. The wider Brazos Valley: recommended for broad coverage around the stated
+  service region, with more sources and potentially farther-away properties.
+- B. Bryan and College Station only: concentrated report, fewer jurisdictions.
+- C. Brazos and Robertson counties: both cities plus Hearne and nearby areas.
+- D. A chosen travel radius from Masiate's base: user provides town and limit.
+
+Answer: **A**, selected by Drew on 2026-09-20. Cover the wider Brazos Valley:
+Brazos, Robertson, Burleson, Grimes, Leon, Madison and Washington counties.
+The source inventory must cover selected cities and unincorporated areas,
+recording gaps instead of treating Brazos-only results as region-wide coverage.
+DFW and statewide collection are outside this chosen boundary.
+
+## Report Frequency
+
+Q10: After the first PDF, when should the system collect again and make a new report?
+
+- A. Weekly new editions, with refreshed data for the agent; recommended useful
+  cadence without generating a daily report that may repeat the same properties.
+- B. One initial report; the agent can investigate it on request, with no
+  scheduled broad collection or report generation.
+- C. New collection/report only when an authorized user requests a refresh;
+  control over timing, with a wait while the job runs.
+- D. Daily new editions and refreshed data; more frequent checking and work,
+  even when official sources have not published new records.
+
+Answer: **B**, selected by Drew on 2026-09-20. Produce one initial report and
+let the agent investigate its leads on request. No scheduler, recurring PDF
+generation or user-triggered whole-report refresh is part of the first version.
+The collected dataset/report must show their dates to avoid claiming freshness
+that only an individual chat lookup has established.
+
+## Ranking Default
+
+Q11: What should put a property near the top of the report?
+
+- A. Best chance of useful near-term outreach: recent matching work and an
+  identifiable buyer; recommended actionable ranking, without claiming hiring
+  intent or a probability of winning the job.
+- B. Largest relevant potential jobs: emphasize scope/value even if the sale
+  takes longer; whole-project budget is not Masiate's contract value.
+- C. Earliest warning: properties still in planning, with longer lead times.
+- D. Repeat-work potential: properties tied to builders/owners with multiple
+  projects, emphasizing relationships rather than a single immediate job.
+
+User answer: **Idk**. No option was selected. Assistant will use a practical
+default: prioritize relevant, recent projects with clear evidence and an
+identifiable business contact. Keep early opportunities and repeat-work
+potential as secondary signals. Do not rank purely by total project value.
+
+Separate documented open bids from inferred trade needs, explain why each
+property ranks well, and retain unknowns rather than inventing hiring intent.
+Missing contacts do not automatically erase otherwise promising properties.
+Treat this as an assistant planning default, not a claimed user preference or
+a calibrated prediction of sales success. No need to re-ask for scoring weights.
+
+## Agent Outreach Boundary
+
+Q12: Beyond researching a property, what should the agent help the owner prepare?
+
+- A. A tailored first-contact message based on known facts; recommended practical
+  next step, with the owner reviewing and sending it.
+- B. Research answers only; the owner handles all outreach preparation.
+- C. A call briefing with what is known and questions to ask; no written message.
+- D. Both a first-contact message and call briefing on request; broader assistance.
+
+Answer: **B**, selected by Drew on 2026-09-20. Keep the agent focused on research
+answers, evidence and available business contacts. Outreach preparation belongs
+to the owner; message drafting and call briefs are outside this feature's scope.
+No sending messages, contacting prospects or inventing company qualifications,
+relationships, price quotes or confirmed work availability.
+
+## Collection Tools And Spending
+
+Q13: What spending rule should apply to collecting information for the first PDF?
+
+- A. Free public sources first; recommended starting point, with paid-only gaps
+  clearly marked instead of purchasing access.
+- B. Allow paid sources within a budget Drew specifies before any spending;
+  potentially more coverage, but a firm cap and cost checks are required.
+- C. Use existing subscriptions only where their included allowances and access
+  are verified; no new subscriptions, purchases or overage charges.
+- D. Compare free and paid coverage first, then decide whether paid access is
+  worthwhile; no purchase while preparing that comparison.
+
+Answer: **Existing services plus open source**, clarified by Drew on 2026-09-20.
+Use what CraneSignal already has, including Jina AI and already-paid tools;
+research useful open-source additions. Do not buy new services or credits.
+This is broader than free sources alone, closest to C, but no exact letter was
+chosen. It does not authorize implementation or a live collection run yet.
+Verify remaining allowances and billing behavior before using paid endpoints;
+stop or use a no-new-charge alternative if an extra charge would be required.
+No unlimited token budget or provider billing cap is assumed.
+
+## Public Section Experience
+
+Q14: Besides downloading the PDF, what should visitors see in Masiate's section?
+
+- A. A short ranked property list and an Ask Agent action; recommended useful
+  preview while keeping the detailed PDF the main deliverable.
+- B. The PDF and agent only; smallest section, with property browsing in the PDF.
+- C. Full searchable property profiles on the website too; more convenient
+  browsing, with a larger interface to build and test.
+- D. A map with property summaries, PDF and agent; geographic browsing, requiring
+  verified locations and a map source with no new charges.
+
+Answer: **A**, selected by Drew on 2026-09-20. Show a short ranked property list
+with PDF access and an Ask Agent action. Keep the detailed PDF as the primary
+deliverable, rather than duplicating every property profile on the website.
+Map browsing and full searchable web profiles are not part of this first version.
+The regular public section and user-scoped saved chats remain as selected.
+
+## Next Walkthrough
+
+The core product choices are now recorded. Move from preference questions to
+demonstrating the proposed experience and checking the plan's remaining gaps.
+
+Q15: Which part should we walk through first before building?
+
+- A. The complete experience from opening the section to returning to a saved
+  research chat; recommended to expose missing steps across the whole feature.
+- B. One clearly hypothetical property profile showing the PDF's level of detail.
+- C. The collection run: where records come from, how they become ranked leads,
+  and what happens when a source is unavailable.
+- D. The agent: example questions, sourced answers and retrieving earlier research.
+
+Answer: **A**, selected by Drew on 2026-09-20. The complete proposed experience
+is written in [the walkthrough](masiate-experience-walkthrough.md), including
+failure states and checks. This chooses a planning walkthrough, not approval of
+every newly proposed detail or authorization to build.
+
+## Returning To Research
+
+Q16: When someone asks about earlier research, where should recall work?
+
+- A. In any new chat, search that person's previous chats automatically;
+  recommended match for the requested experience, with extra retrieval work.
+- B. In the original saved chat after they reopen it; simplest implementation,
+  without automatic cross-chat recall.
+- C. Let them choose a previous chat to use in a new conversation; explicit
+  control over the research carried forward.
+- D. Asking about a property reopens its earlier conversation; property-linked
+  continuity without general history search.
+
+Answer: **Delegated to the assistant**, on 2026-09-20. Drew said this detail
+does not matter and to choose. Assistant default: **B**, reopen the original
+saved chat and continue there. This is not a claimed explicit letter selection.
+Reuse the existing saved-chat experience; no automatic cross-chat search,
+separate memory database or property-to-conversation routing in version one.
+Verify persistence, restored context and user isolation before calling it done;
+stored messages alone do not prove older findings reach the agent in long chats.
+Keep the PDF unchanged and add no separate lead notes. Do not re-ask this choice
+unless a verified limitation makes the selected behavior unworkable.
 
 ## Product Questions To Explore Next
+
+Drew selected the collection-run walkthrough on 2026-09-20. See
+[the seven-county run design](masiate-collection-run.md) for source checks,
+proposed date windows, processing order, limits, output and acceptance criteria.
+This choice authorized planning research, not a crawl or a build.
+
+## Current Question: Office-Held Records
+
+Q17: How should the plan handle useful records available only by asking a city
+or county office for them?
+
+- A. Draft requests for review and keep going with accessible sources;
+  recommended practical start, with outstanding gaps disclosed.
+- B. Include sending requests for no-charge electronic records in the later
+  authorized run and wait for replies before finalizing the PDF; sender details
+  and availability need checking, and any fee quote stops that request.
+- C. Use online-accessible records only; no requests, with missing sources listed.
+- D. Finish accessible collection first, then choose requests based on the gaps;
+  fewer speculative requests but a later decision about report completeness.
+
+Answer: pending. No request has been sent and no agency account created.
+
+## Remaining Acceptance Work
 
 - What the agent can actually do: search collected records, verify live sources,
   research a new opportunity, compare jobs, and suggest a next step.
@@ -190,13 +460,64 @@ permissions have not been silently assumed.
   missing; demonstrate with a clearly hypothetical example before building.
 - How the user opens, saves, revisits and exports research; public visibility
   and persistence are not yet decided beyond the section itself being public.
-- Whether data refresh is scheduled, requested by the user, or both; report
-  freshness and collection coverage must be visible.
+- How dated baseline facts and newer chat findings are distinguished; report
+  date and collection coverage must be visible, with no recurring refresh.
 - A first-use walkthrough and concrete acceptance checks for the chosen output.
 
 ## Build Boundary
 
-Planning answers are decisions, not commands to start a build. Once the complete
-plan is reviewed, choose the execution method and start only when instructed.
-The usual /gowork option runs small checked tasks in fresh sessions; a normal
-session remains an option. No loop has been created or queued.
+Earlier preference answers were planning only. On 2026-09-20 Drew explicitly
+requested several /gowork sessions to collect as much data as possible. The
+assistant prepared `PLAN-masiate-collection.md` for one coordinated run with
+fresh small-task sessions, necessary collection code and the local property PDF.
+This supersedes the prior no-build boundary only for collection and local report
+work; live-site changes, agency requests, purchases and deployment remain out.
+No worker AI was named, so the bot must ask for the model before execution.
+For Q17 use the assistant's interim draft-only default while continuing public
+sources; this is not an explicit user selection of A or permission to send.
+
+## Parallel Execution And Timing
+
+Drew subsequently requested parallel tasks organized by elapsed completion time.
+Inspection of /gowork code found a maximum of three parallel tasks, isolated
+working copies, dependency grouping and duration recording. The earlier Codex
+worker was created, began M01 and reported stopped; no completed Masiate task
+was recorded when checked. Do not describe that state as awaiting initial setup
+or as active collection.
+
+The first parallel revision grouped 50 tasks into 23 three-worker waves; Drew
+subsequently selected eight workers, now planned as 14 dependency waves with
+separate ownership and proposed 15-30 minute task budgets. No claim is made
+that the stopped worker has loaded these changes. Preserve the existing run and
+verify its plan before any resumption, rather than starting duplicate loops.
+See [timing and tradeoffs](masiate-parallel-timing.md).
+
+Q18: Which first-delivery time target should set the collection scope?
+
+- A. Four-hour first report: recommended balance, with checked leads and a PDF,
+  and explicit incomplete-source coverage; deeper collection would be later work.
+- B. One-hour pilot: access checks and whatever verified sample is available,
+  without promising a full report.
+- C. Two-hour quick report: fewer proven sources and a smaller researched shortlist.
+- D. Full accessible-source pass: roughly 6-12 hours under the current assumptions,
+  plus extra batches or external delays; preserves the original breadth intent.
+
+Answer: pending. These are estimates/targets, not measured runtimes or a selected
+hard deadline. Reforecast after actual batches finish; do not invent leads or
+claim all-source completion to meet a clock. No extra paid providers or unbounded
+model spending are authorized by this timing discussion.
+
+## Eight-Worker Decision
+
+Drew explicitly said "we need 8 workers actuallly" on September 20, 2026.
+Eight is the requested concurrent worker count, not eight workers already running.
+Preserve one coordinated run, eight independent slots during broad collection,
+shared website pacing and allowance checks, then fewer workers for serial merges
+and PDF stages. This replaces the earlier three-worker planning limit.
+
+The installed runner still has MAX_PARALLEL = 3. A per-run setting needs separate
+implementation and verification before this schedule can launch as requested;
+do not change other runs' defaults or restart the shared bot from this plan.
+The current shared ten-session cap does not reserve eight seats for this project.
+This turn changes planning only, starts no workers and selects no deadline;
+Q18 remains open and the full accessible-source intent is retained meanwhile.
