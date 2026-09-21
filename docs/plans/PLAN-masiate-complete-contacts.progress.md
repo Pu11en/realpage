@@ -86,3 +86,7 @@
 - No research data, renderer output, earlier PDF, deployment, or remote repository was changed.
 
 - Reviewer still had concerns about MC6: Combine the research, rebuild the PDF and deliver it (20-30 minutes; depends on MC2-MC5).: The PDF was not actually queued for Discord delivery: no `.ccdb-attachments-1551449392312221796` (or parent-thread attachment manifest) exists containing the PDF’s absolute path; the change only records a claim of attachment in planning notes.
+
+## Next time (from how this build went)
+- The PDF was built fine, but the first attempt didn't actually attach it to Discord. A quick retry finished in 4 minutes. Next time, verify files arrive in Discord before marking the step done.
+- Creating the PDF and uploading it to Discord were bundled together, which hid the delivery problem until the end. Splitting them into two separate steps would catch attachment issues faster.
