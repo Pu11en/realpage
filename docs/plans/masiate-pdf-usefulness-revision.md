@@ -2,7 +2,7 @@
 
 ## The Question This PDF Should Answer
 
-**Which of the things we found could realistically help Masiate get work, and what is still missing before treating each one as a lead?**
+**Which projects and named construction businesses could Masiate approach about work, and what do we actually know about each opportunity?**
 
 Status: planning only, September 20, 2026. Drew asked to plan a remake using
 existing findings before doing the proposed search for explicit contractor-bid
@@ -10,12 +10,57 @@ requests. Do not start that new search, resume the site build, launch task-loop
 workers, contact anyone or replace the original PDF from this instruction.
 The explicit-bid search is the intended later direction, not work performed here.
 
+Latest format/use decision: Drew wants a spreadsheet-style table with a brief
+project description, contractor information and URLs so Masiate can ask the
+contractor whether it needs help. Include this as a second prospect type,
+separate from owners still selecting a builder. This is a planning preference,
+not permission to contact anyone, buy enrichment or restart implementation.
+
 - The existing work is **useful as project research and a way to screen out unsuitable prospects**.
 - It is **not yet a proven list of owners still selecting contractors**.
 - The pilot collected 267 source entries and produced 49 detailed profiles across seven counties; those are different counts, not 267 verified leads.
 - The original report had six profiles with a business phone, email or website, but those contacts were not all verified buyers.
 - It confirmed zero currently open trade packages. The follow-up on Galaxy Spa, Glo Tanning and Barron Suite 204 also confirmed no owner still accepting construction estimates.
 - The revised report must be allowed to conclude that **zero prospects are ready for an owner-hiring shortlist**; that is a useful finding, not a reason to pad the list.
+- A project with a named contractor is **not automatically useless**: it can identify a construction business Masiate may approach about helping with that project, while its actual need for help remains unverified.
+
+## The Main Deliverable: A Brief Project Table
+
+One row per project, with a short opening brief explaining the scope and the
+difference between a project prospect and a confirmed request for help.
+An editable spreadsheet plus a matching PDF table is the proposed format;
+the user has selected table-style presentation, not yet explicitly chosen
+which file formats to receive. Do not create the full artifacts at planning time.
+
+### Columns
+
+- Project name and town/address, keeping suite and phase distinct.
+- Brief description of the actual work, ideally one sentence.
+- Masiate services that might fit, clearly labeled as an inference where needed.
+- Recorded project stage and evidence date; actual start unknown unless supported.
+- Named contractor/company and its exact role on this project.
+- Public business phone and email, where already sourced; otherwise **not found**.
+- Contractor website, separate from the record proving its project role.
+- Prospect type: **ask the contractor about helping**, **owner/tenant hiring unknown**, **explicit request for estimates**, or **hold**.
+- Hiring evidence: confirmed request, unknown, expired, or other supported status.
+- Source links and the single missing fact to verify next.
+
+Keep the PDF landscape with repeated column headings and readable wrapped
+briefs, not every long research paragraph squeezed into a row. The editable
+version can carry extra source/contact columns; the PDF can use a short
+linked evidence appendix keyed by stable project ID. Freeze headers and add
+filters in the spreadsheet; do not use color alone to convey status.
+
+### Contractor Contact Rules
+
+- Preserve named general contractors, roofers and other trade firms, with their actual roles; do not label an architect or accessibility specialist as the builder.
+- Treat an owner/developer whose name contains "Construction" as an owner/developer unless evidence establishes its contracting role.
+- Where multiple firms cover different scopes, preserve those distinctions rather than guessing one company is responsible for everything.
+- Include a business website even when no phone or email is in the saved evidence, but do not turn guessed website patterns into links.
+- Never guess personal phone numbers or infer email addresses; use only sourced business routes and show missing fields honestly.
+- A permit date or proposed start date does not establish that a project has "just started"; show the actual evidence and unknowns.
+- A named contractor with a phone number is a **contactable prospect**, not proof it needs a crew; the human checks that before treating it as an opportunity.
+- Group repeated contractor contacts in an optional company index so Masiate can see related projects without mistakenly counting them as separate businesses.
 
 ## How The Revised PDF Will Sort The Findings
 
@@ -25,11 +70,13 @@ Each reviewed project gets one clear status, grounded in dated evidence:
 
 - **Owner or tenant requesting a contractor:** a current, project-specific request for estimates or contractor bids is in the saved evidence; show scope, deadline, source and buying party. This section may be empty.
 - **Work fits, but hiring is unknown:** the saved evidence describes relevant work, but does not establish whether a contractor has been selected. These are verification candidates, not sales-ready leads.
-- **Contractor already named for this scope:** show the company, role, exact job and source; remove it from the owner-hiring shortlist. A sign contractor does not establish the building contractor, and one suite's builder does not establish another suite's builder.
+- **Contractor already named for this scope:** show the company, role, exact job and source; place it in the contractor-contact prospect group, not the owner-hiring shortlist. A sign contractor does not establish the building contractor, and one suite's builder does not establish another suite's builder.
 - **Hold or exclude:** weak service fit, expired tender, unrelated location, unresolved identity, old/completed work, or evidence too thin for a useful next step; explain which reason applies.
 
 Do not present a named contractor as proof that every trade is filled, or turn
-it into a subcontract lead without evidence of an unmet subcontract need.
+it into a confirmed subcontract opportunity without evidence of an unmet need.
+It may still be a clearly labeled contractor-contact prospect under Drew's
+latest instruction, with "need for help unknown" beside its contact route.
 Do not describe a project as contractor-free merely because the record omits
 the contractor. Accessibility review, a construction permit and a contract
 award are different facts. "Issued for bidding" on drawings is a research
@@ -53,6 +100,7 @@ clue, not proof that the owner is still soliciting bids today.
 - The saved [Brenham August permit report](https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-08.pdf) identifies **EBCO General Contractor** on the bank project.
 - Useful result: we know not to pitch the bank as though no builder has been selected.
 - Possible subcontracting is a separate idea, with **no verified open package** in our research.
+- Contractor-contact row can include **EBCO**, its saved business number **254-697-8516**, and [company website](https://ebcogc.com/), labeled as saved evidence rather than freshly reverified contact details.
 - This should not remain the number-one owner-hiring prospect simply because it is a substantial construction project.
 
 ### Sage Longwood Roof Replacement: Relevant Work, Named Roofer
@@ -60,6 +108,14 @@ clue, not proof that the owner is still soliciting bids today.
 - The saved [Brenham June permit report](https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-06.pdf) identifies **Guardian Roof Systems** for the roof replacement.
 - Useful result: roofing fits a Masiate service, but this evidence points to an already named roofing contractor.
 - Remove it from the owner-still-choosing-a-roofer list; do not invent an opening for another crew.
+- It may remain a named-roofer prospect in the contractor table; no direct business contact method for Guardian was captured in the published pilot, so those cells stay **not found** unless separately researched later.
+
+### Wilkins Valley Phase 3: A Saved Contractor Contact Route
+
+- The published pilot identifies **Collier Construction LLC** as the permit-listed construction participant at 1402 W Jefferson Street, Brenham.
+- The saved [business contact page](https://www.collierconstruction.com/contact) supplies **979-836-4477** and **maceyt@collierconstruction.com**.
+- The project brief concerns phase 3 public infrastructure/commercial office site development; exact parcel/owner and the wrapped permit description still need verification.
+- This is a practical business route for asking about helping, not evidence of a currently open position or subcontract package.
 
 ### Galaxy Spa, Glo Tanning And Barron Suite 204: Potential Fit, Not Proven Demand
 
@@ -90,7 +146,8 @@ clue, not proof that the owner is still soliciting bids today.
 ### Pass 2: Write A Decision-Useful Report
 
 - Open with a one-page verdict: what the effort produced, whether any owner-hiring leads are confirmed, and its main limitations.
-- Follow with a short selection of the most useful verification candidates and their exact missing facts, using fit and evidence rather than large budgets as the ordering rule.
+- Make the spreadsheet-style project table the main body, with brief scope, contractor, sourced business contact/URL and hiring uncertainty; keep long explanations in an appendix.
+- Put contactable, relevant contractor prospects and useful owner/tenant verification candidates in clearly distinct groups, using fit and evidence rather than large budgets as the ordering rule.
 - Put projects with named contractors in their own clearly labeled section, not among owners still hiring.
 - Include a compact appendix accounting for all 49 profiles, including rejected or unresolved ones, so nothing disappears silently.
 - Preserve source links and dates; keep original facts distinct from our judgment.
@@ -101,7 +158,7 @@ clue, not proof that the owner is still soliciting bids today.
 - Confirm all 49 profiles are accounted for once; category totals add up; no future date, old bid, unrelated suite or missing contractor field is treated as evidence of availability.
 - Confirm each positive hiring claim has explicit supporting evidence, and every contact is labeled with its actual role.
 - Check PDF layout, links, text extraction and mobile readability; keep the original PDF unchanged as the original snapshot.
-- Deliver the revised PDF plus a short plain-English verdict about whether the research is useful for Masiate now, only useful after qualification, or not suitable for its chosen buyer type.
+- Deliver the chosen table file format(s) plus a short plain-English verdict distinguishing useful contractor contact routes, unresolved owner-hiring candidates and any genuinely confirmed opportunities.
 - Only afterward consider the separately proposed search for explicit requests for contractor bids; its scope will be decided from the gaps this review exposes.
 
 No task loop is active for this revision. This document is the proposed shape
