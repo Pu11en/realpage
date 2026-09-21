@@ -1,0 +1,2630 @@
+[
+  {
+    "canonical_id": "dedup-burleson-saam-house-441-gun-range",
+    "member_ids": [
+      "burleson-somerville-ord-25-018-441-gun-range-road-zoning",
+      "statewide-tdlr-tabs-TABS2026010963"
+    ],
+    "match_basis": [
+      "same county and same address: 441 Gun Range Road",
+      "local zoning change to C-2 general business plausibly supports the later TDLR S.A.A.M. House expansion at the same site",
+      "records are complementary planning/registration records rather than duplicate bid records"
+    ],
+    "conflicts": [
+      "local ordinance does not name S.A.A.M. House or establish construction status",
+      "TDLR registration gives expansion scope but no open contract evidence"
+    ]
+  },
+  {
+    "canonical_id": "dedup-burleson-somerville-city-hall-150-8th",
+    "member_ids": [
+      "burleson-somerville-rfq-2025-new-city-hall-150-8th",
+      "statewide-tdlr-tabs-TABS2026021872"
+    ],
+    "match_basis": [
+      "same county and same address: 150 8th Street",
+      "both identify new Somerville City Hall",
+      "historical RFQ plus later TDLR registration appear to describe the same civic building project"
+    ],
+    "conflicts": [
+      "RFQ bid deadline expired 2025-03-05; do not treat as open bid",
+      "scope sizes differ: RFQ says approximately 4,000 sf and TDLR says 3,045 sf"
+    ]
+  },
+  {
+    "canonical_id": "dedup-grimes-altamira-hwy-90-east",
+    "member_ids": [
+      "grimes-navasota-dashboard-20260920-altamira-hwy90-east",
+      "statewide-tdlr-tabs-TABS2026004667"
+    ],
+    "match_basis": [
+      "same county and same development name: Altamira / Hwy 90 East Development",
+      "both reference Phase 1/2 infrastructure for the east-side development area",
+      "city dashboard adds underway utility status while TDLR supplies registered sitework scope"
+    ],
+    "conflicts": [
+      "city dashboard has coordinates/development area, not a street address",
+      "TDLR estimated completion 2026-07-01 is not proof of current work by itself"
+    ]
+  },
+  {
+    "canonical_id": "dedup-grimes-eag-chevrolet-9030-hwy-6",
+    "member_ids": [
+      "grimes-navasota-pz-20260827-sterling-auto-expansion",
+      "statewide-tdlr-tabs-TABS2026023660"
+    ],
+    "match_basis": [
+      "same county and same address: 9030 Highway/State Hwy 6, Navasota",
+      "local planning record concerns expanding a vehicle-sales site; TDLR concerns new showroom/service center with sitework",
+      "both point to a dealership/auto-use project at the same parcel"
+    ],
+    "conflicts": [
+      "project names differ: Sterling Auto / Navasota Ventures versus EAG Chevrolet",
+      "local planning source does not prove a permit or open subcontract package"
+    ]
+  },
+  {
+    "canonical_id": "dedup-single-brazos-bryan-sdrc-sp26-000026-shops-at-carter-creek",
+    "member_ids": [
+      "brazos-bryan-sdrc-sp26-000026-shops-at-carter-creek"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-brazos-bryan-sdrc-sp26-000047-11183-sh30",
+    "member_ids": [
+      "brazos-bryan-sdrc-sp26-000047-11183-sh30"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-brazos-bryan-sdrc-sp26-000053-oxbow-business-park",
+    "member_ids": [
+      "brazos-bryan-sdrc-sp26-000053-oxbow-business-park"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-brazos-bryan-sdrc-sp26-000055-traditions-villages-6b",
+    "member_ids": [
+      "brazos-bryan-sdrc-sp26-000055-traditions-villages-6b"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-brazos-bryan-sdrc-sp26-000056-lorca-apartments",
+    "member_ids": [
+      "brazos-bryan-sdrc-sp26-000056-lorca-apartments"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-brazos-bryan-sdrc-sp26-000059-tabor-road-apartments",
+    "member_ids": [
+      "brazos-bryan-sdrc-sp26-000059-tabor-road-apartments"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-brazos-bryan-sdrc-sp26-000060-traditions-ph38-townhomes",
+    "member_ids": [
+      "brazos-bryan-sdrc-sp26-000060-traditions-ph38-townhomes"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-brazos-bryan-sdrc-sp26-000061-reveille-park-phase-1",
+    "member_ids": [
+      "brazos-bryan-sdrc-sp26-000061-reveille-park-phase-1"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": [
+      "kept separate from nearby Reveille TDLR records at 4317/4319 G Rollie White because names and parcels indicate different Reveille-area projects"
+    ]
+  },
+  {
+    "canonical_id": "dedup-single-brazos-bryan-sdrc-sp26-000062-north-dunn-apartments",
+    "member_ids": [
+      "brazos-bryan-sdrc-sp26-000062-north-dunn-apartments"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-burleson-somerville-ord-25-005-363-4th-accessory",
+    "member_ids": [
+      "burleson-somerville-ord-25-005-363-4th-accessory"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-burleson-somerville-ord-25-006-518-avenue-l-accessory",
+    "member_ids": [
+      "burleson-somerville-ord-25-006-518-avenue-l-accessory"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-burleson-somerville-ord-25-012-169-switchback-hud-home",
+    "member_ids": [
+      "burleson-somerville-ord-25-012-169-switchback-hud-home"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-burleson-somerville-ord-25-013-640-or-649-7th-accessory",
+    "member_ids": [
+      "burleson-somerville-ord-25-013-640-or-649-7th-accessory"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-burleson-somerville-ord-25-020-16252-sh36s-accessory",
+    "member_ids": [
+      "burleson-somerville-ord-25-020-16252-sh36s-accessory"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-burleson-somerville-ord-26-011-avenue-p-multifamily",
+    "member_ids": [
+      "burleson-somerville-ord-26-011-avenue-p-multifamily"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-grimes-iola-20260811-wwtp-contract",
+    "member_ids": [
+      "grimes-iola-20260811-wwtp-contract"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-grimes-navasota-dashboard-20260920-8th-street-townhomes",
+    "member_ids": [
+      "grimes-navasota-dashboard-20260920-8th-street-townhomes"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-grimes-navasota-dashboard-20260920-autozone",
+    "member_ids": [
+      "grimes-navasota-dashboard-20260920-autozone"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-grimes-navasota-dashboard-20260920-fosters-levy-louise-mitmod",
+    "member_ids": [
+      "grimes-navasota-dashboard-20260920-fosters-levy-louise-mitmod"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-grimes-navasota-dashboard-20260920-hidden-hills-phase3",
+    "member_ids": [
+      "grimes-navasota-dashboard-20260920-hidden-hills-phase3"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-grimes-navasota-dashboard-20260920-minnie-street-cdbg",
+    "member_ids": [
+      "grimes-navasota-dashboard-20260920-minnie-street-cdbg"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-grimes-navasota-dashboard-20260920-stoneridge-phase2",
+    "member_ids": [
+      "grimes-navasota-dashboard-20260920-stoneridge-phase2"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-grimes-navasota-pz-20260813-skp-hospitality-replat",
+    "member_ids": [
+      "grimes-navasota-pz-20260813-skp-hospitality-replat"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-grimes-navasota-pz-20260924-316-mcalpine-carport",
+    "member_ids": [
+      "grimes-navasota-pz-20260924-316-mcalpine-carport"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-grimes-navasota-pz-20260924-nkq-plumbing-217-hill",
+    "member_ids": [
+      "grimes-navasota-pz-20260924-nkq-plumbing-217-hill"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-grimes-navasota-pz-20260924-pecan-grove-phase2",
+    "member_ids": [
+      "grimes-navasota-pz-20260924-pecan-grove-phase2"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-leon-centerville-city-hall-ceiling-water-damage-2026-08-05",
+    "member_ids": [
+      "leon-centerville-city-hall-ceiling-water-damage-2026-08-05"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-leon-centerville-days-inn-i45-feeder-water-line-2026-08-05",
+    "member_ids": [
+      "leon-centerville-days-inn-i45-feeder-water-line-2026-08-05"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-leon-centerville-jefferson-street-sewer-replacement-2026-08-05",
+    "member_ids": [
+      "leon-centerville-jefferson-street-sewer-replacement-2026-08-05"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-leon-centerville-stewart-street-water-line-2026-08-05",
+    "member_ids": [
+      "leon-centerville-stewart-street-water-line-2026-08-05"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-leon-county-rfb-2026-364-expo",
+    "member_ids": [
+      "leon-county-rfb-2026-364-expo"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-leon-county-rfb-2026-364-hilltop-lakes",
+    "member_ids": [
+      "leon-county-rfb-2026-364-hilltop-lakes"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-leon-county-rfb-2026-364-leon-high",
+    "member_ids": [
+      "leon-county-rfb-2026-364-leon-high"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-leon-county-rfb-2026-364-oakwood",
+    "member_ids": [
+      "leon-county-rfb-2026-364-oakwood"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-leon-county-rfb-2026-364-pleasant-springs",
+    "member_ids": [
+      "leon-county-rfb-2026-364-pleasant-springs"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-leon-county-rfb-2026-364-tri-circle-ranch",
+    "member_ids": [
+      "leon-county-rfb-2026-364-tri-circle-ranch"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-leon-county-rfp-2026-355-courthouse-building-improvements",
+    "member_ids": [
+      "leon-county-rfp-2026-355-courthouse-building-improvements"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-leon-jewett-cdbg-mit-oakwood-street",
+    "member_ids": [
+      "leon-jewett-cdbg-mit-oakwood-street"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-leon-jewett-cdbg-mit-sewer-facility-703-sugar",
+    "member_ids": [
+      "leon-jewett-cdbg-mit-sewer-facility-703-sugar"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-leon-jewett-cdbg-mit-south-broadway-street",
+    "member_ids": [
+      "leon-jewett-cdbg-mit-south-broadway-street"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-madison-madisonville-pz-20260804-205-w-south-homes",
+    "member_ids": [
+      "madison-madisonville-pz-20260804-205-w-south-homes"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-madison-madisonville-pz-20260804-805-n-may-mixed-use",
+    "member_ids": [
+      "madison-madisonville-pz-20260804-805-n-may-mixed-use"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-madison-madisonville-pz-20260901-301-n-short-mf",
+    "member_ids": [
+      "madison-madisonville-pz-20260901-301-n-short-mf"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-robertson-franklin-city-park-pickleball-lighting-2026-08-17",
+    "member_ids": [
+      "robertson-franklin-city-park-pickleball-lighting-2026-08-17"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-robertson-hearne-208-fulton-fence-variance-2026-08-25",
+    "member_ids": [
+      "robertson-hearne-208-fulton-fence-variance-2026-08-25"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-robertson-hearne-el-construction-w-blackshear-2026-09-15",
+    "member_ids": [
+      "robertson-hearne-el-construction-w-blackshear-2026-09-15"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-robertson-hearne-iron-oak-lots-114-115-variance-2026-08-25",
+    "member_ids": [
+      "robertson-hearne-iron-oak-lots-114-115-variance-2026-08-25"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-robertson-hearne-lt9x-lt9f-blk-g-variance-2026-08-26",
+    "member_ids": [
+      "robertson-hearne-lt9x-lt9f-blk-g-variance-2026-08-26"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-robertson-hearne-san-antonio-water-pumping-station-rehab-2026-09-03",
+    "member_ids": [
+      "robertson-hearne-san-antonio-water-pumping-station-rehab-2026-09-03"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026001636",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026001636"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026003432",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026003432"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": [
+      "kept separate from Washington City Hall RTU-5 bid despite 200 W Vulcan address because the project names/scopes conflict"
+    ]
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026003929",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026003929"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026005166",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026005166"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026006838",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026006838"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026007161",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026007161"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026007651",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026007651"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026007901",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026007901"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026008039",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026008039"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026008637",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026008637"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026009232",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026009232"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026009609",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026009609"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026009793",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026009793"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026010513",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026010513"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026010928",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026010928"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026011142",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026011142"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026011144",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026011144"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026011149",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026011149"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026011198",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026011198"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026011560",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026011560"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026011619",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026011619"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026011740",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026011740"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026011859",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026011859"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026012540",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026012540"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026012773",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026012773"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026012963",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026012963"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026014016",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026014016"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026014091",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026014091"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026014210",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026014210"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026014634",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026014634"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026014890",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026014890"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026015454",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026015454"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026016276",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026016276"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026016298",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026016298"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026016402",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026016402"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026016772",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026016772"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026016997",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026016997"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026017023",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026017023"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026017038",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026017038"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026017134",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026017134"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026017297",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026017297"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026017414",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026017414"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026017576",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026017576"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026017682",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026017682"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026017710",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026017710"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026018148",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026018148"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026018281",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026018281"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026018293",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026018293"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026018342",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026018342"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026018370",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026018370"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026018674",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026018674"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026018795",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026018795"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026018848",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026018848"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026018879",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026018879"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026018895",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026018895"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026019418",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026019418"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026019442",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026019442"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026019476",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026019476"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026019510",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026019510"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026019529",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026019529"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026019644",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026019644"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026019757",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026019757"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": [
+      "kept separate from Sherwin Williams driveway permit because the address and scope do not match"
+    ]
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026019833",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026019833"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026019919",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026019919"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026020020",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026020020"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026020024",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026020024"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026020041",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026020041"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026020097",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026020097"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026020132",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026020132"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026020202",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026020202"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026020312",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026020312"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026020367",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026020367"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026020630",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026020630"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026020711",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026020711"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026020714",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026020714"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026020756",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026020756"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026020787",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026020787"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026020826",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026020826"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026020929",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026020929"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026020990",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026020990"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026021067",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026021067"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026021283",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026021283"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026021284",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026021284"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026021299",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026021299"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026021545",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026021545"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026021562",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026021562"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026021649",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026021649"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026021942",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026021942"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026022052",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026022052"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026022242",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026022242"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026022284",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026022284"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026022569",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026022569"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026022669",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026022669"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026022757",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026022757"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026022792",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026022792"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026022938",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026022938"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026023109",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026023109"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026023312",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026023312"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026023391",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026023391"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026023598",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026023598"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026023612",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026023612"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026023679",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026023679"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026024173",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026024173"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026024399",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026024399"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026024601",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026024601"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026024607",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026024607"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026024637",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026024637"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026024689",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026024689"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026024712",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026024712"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026024787",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026024787"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026024833",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026024833"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026024880",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026024880"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026024883",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026024883"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026024885",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026024885"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026024926",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026024926"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026024965",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026024965"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026024966",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026024966"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026025071",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026025071"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026025128",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026025128"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026025395",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026025395"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026025481",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026025481"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026025665",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026025665"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026025695",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026025695"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026025873",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026025873"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026025948",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026025948"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026026026",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026026026"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026026042",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026026042"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026026072",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026026072"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026026153",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026026153"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026026194",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026026194"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026026456",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026026456"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026026486",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026026486"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026026523",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026026523"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026026524",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026026524"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026026639",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026026639"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026026782",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026026782"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026027042",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026027042"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026027188",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026027188"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026027338",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026027338"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026027395",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026027395"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026027504",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026027504"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026027511",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026027511"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026027514",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026027514"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026027521",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026027521"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026027531",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026027531"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026027555",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026027555"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026027556",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026027556"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026027627",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026027627"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026027672",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026027672"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026027782",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026027782"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026027802",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026027802"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026027926",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026027926"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026027977",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026027977"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026028165",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026028165"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026028296",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026028296"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026028789",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026028789"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026028823",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026028823"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026028954",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026028954"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026028975",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026028975"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026028980",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026028980"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026029004",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026029004"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026029241",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026029241"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2026029279",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026029279"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2027000261",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2027000261"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2027000300",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2027000300"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2027000344",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2027000344"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2027000375",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2027000375"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2027000443",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2027000443"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2027000444",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2027000444"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2027000445",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2027000445"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2027000457",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2027000457"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2027000539",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2027000539"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2027000633",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2027000633"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2027000754",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2027000754"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2027000819",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2027000819"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2027001065",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2027001065"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2027001105",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2027001105"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2027001180",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2027001180"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2027001187",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2027001187"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2027001327",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2027001327"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-statewide-tdlr-tabs-tabs2027001470",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2027001470"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-washington-brenham-bid-26-013-city-hall-rtu5",
+    "member_ids": [
+      "washington-brenham-bid-26-013-city-hall-rtu5"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": [
+      "kept separate from TABS2026003432: same civic street address string appears, but local record is City Hall RTU-5 replacement and TDLR record is Brenham Family Park Phase 1"
+    ]
+  },
+  {
+    "canonical_id": "dedup-single-washington-brenham-permit-com-add-26-0001-rv-parking",
+    "member_ids": [
+      "washington-brenham-permit-com-add-26-0001-rv-parking"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-washington-brenham-permit-com-add-26-0008-stanpac-silos",
+    "member_ids": [
+      "washington-brenham-permit-com-add-26-0008-stanpac-silos"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-washington-brenham-permit-com-new-26-0009-apartments",
+    "member_ids": [
+      "washington-brenham-permit-com-new-26-0009-apartments"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-washington-brenham-permit-com-new-26-0009-lcra-tower",
+    "member_ids": [
+      "washington-brenham-permit-com-new-26-0009-lcra-tower"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-washington-brenham-permit-com-new-26-0010-apartment",
+    "member_ids": [
+      "washington-brenham-permit-com-new-26-0010-apartment"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-washington-brenham-permit-com-new-26-0013",
+    "member_ids": [
+      "washington-brenham-permit-com-new-26-0013"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-washington-brenham-permit-com-rem-26-0027-central-warehouse",
+    "member_ids": [
+      "washington-brenham-permit-com-rem-26-0027-central-warehouse"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-washington-brenham-permit-com-roof-26-0003",
+    "member_ids": [
+      "washington-brenham-permit-com-roof-26-0003"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-single-washington-brenham-permit-misc-prkg-26-0022-sherwin-williams",
+    "member_ids": [
+      "washington-brenham-permit-misc-prkg-26-0022-sherwin-williams"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": [
+      "kept separate from TABS2026019757: same street number only; N Park driveway replacement and E Academy interior restroom addition are different projects"
+    ]
+  },
+  {
+    "canonical_id": "dedup-single-washington-burton-isd-fire-suppression-line",
+    "member_ids": [
+      "washington-burton-isd-fire-suppression-line"
+    ],
+    "match_basis": [
+      "singleton: no conservative duplicate match found in the supplied review inputs"
+    ],
+    "conflicts": []
+  },
+  {
+    "canonical_id": "dedup-washington-citizens-bank-400-s-austin",
+    "member_ids": [
+      "washington-brenham-permit-com-new-26-0012",
+      "statewide-tdlr-tabs-TABS2026021492"
+    ],
+    "match_basis": [
+      "same county and same address: 400 S Austin Street",
+      "both identify Citizens National Bank",
+      "both describe new bank construction"
+    ],
+    "conflicts": [
+      "city permit includes a related parking-spaces permit not included in the TDLR scope",
+      "estimated values differ: city permit $2,568,491 building plus $15,000 parking versus TDLR $2,400,000"
+    ]
+  },
+  {
+    "canonical_id": "dedup-washington-edward-jones-1504-s-day",
+    "member_ids": [
+      "washington-brenham-permit-com-new-26-0014",
+      "statewide-tdlr-tabs-TABS2026023085"
+    ],
+    "match_basis": [
+      "same county and same address: 1504 S Day Street / 1504 S Day St., Ste 1504",
+      "city permit value $181,300 closely matches TDLR estimated cost $181,234",
+      "permit scope tenant office buildout aligns with TDLR interior build-out"
+    ],
+    "conflicts": [
+      "project names differ: Lex Investments owner/permit wording versus Edward Jones branch tenant wording",
+      "city permit proves permitted work; TDLR proves registration/review status only"
+    ]
+  },
+  {
+    "canonical_id": "dedup-washington-frost-bank-862-us-290-e",
+    "member_ids": [
+      "washington-brenham-permit-com-new-26-0011",
+      "statewide-tdlr-tabs-TABS2026020346"
+    ],
+    "match_basis": [
+      "same county and same address: 862 US Highway 290 E",
+      "both identify Frost/Frost Bank financial center",
+      "both describe new ground-up bank construction"
+    ],
+    "conflicts": [
+      "estimated values differ: city permit $7,831,737 versus TDLR $9,000,000",
+      "Frost business page says coming 2027 while TDLR lists estimated completion 2027-02-07"
+    ]
+  },
+  {
+    "canonical_id": "dedup-washington-grace-community-107-s-saeger",
+    "member_ids": [
+      "washington-brenham-permit-misc-prkg-26-0018-grace-drainage",
+      "statewide-tdlr-tabs-TABS2026022754"
+    ],
+    "match_basis": [
+      "same county and same address: 107 S/South Saeger Street",
+      "same $1,000,000 paving/drainage scope",
+      "permit identifies Grace Community Fellowship; TDLR identifies Grace Community Church-Brenham"
+    ],
+    "conflicts": [
+      "city permit contractor field says Owner and does not establish open trade packages",
+      "TDLR is registration/review evidence only"
+    ]
+  },
+  {
+    "canonical_id": "dedup-washington-henderson-park-cover",
+    "member_ids": [
+      "washington-brenham-bid-26-015-henderson-park",
+      "statewide-tdlr-tabs-TABS2026025600"
+    ],
+    "match_basis": [
+      "same county and same project name: Henderson Park Basketball Court Cover",
+      "bid packet and TDLR both describe an open-air basketball court cover/pavilion with concrete flatwork",
+      "TDLR supplies address where the bid record only named Henderson Park, Brenham"
+    ],
+    "conflicts": [
+      "bid deadline expired on 2026-08-18 before the finalization run",
+      "TDLR registration is not evidence that bidding remains open"
+    ]
+  },
+  {
+    "canonical_id": "dedup-washington-maintenance-building-506-s-austin",
+    "member_ids": [
+      "washington-brenham-permit-com-rem-26-0028",
+      "statewide-tdlr-tabs-TABS2026027978"
+    ],
+    "match_basis": [
+      "same county and same address: 506 S Austin Street",
+      "both identify City of Brenham maintenance building remodel",
+      "both scopes describe fire-related remodel/code work"
+    ],
+    "conflicts": [
+      "estimated values differ: city permit $737,212 versus TDLR $275,000",
+      "TDLR registration date is before the city permit date and is not bid evidence"
+    ]
+  },
+  {
+    "canonical_id": "dedup-washington-moeller-1119-industrial",
+    "member_ids": [
+      "washington-brenham-permit-com-add-26-0006",
+      "statewide-tdlr-tabs-TABS2026017664"
+    ],
+    "match_basis": [
+      "same county and same address: 1119 Industrial Boulevard/Blvd",
+      "both scopes describe adding 5,000 sf to an existing metal building",
+      "city permit gives current permitted status after the earlier TDLR registration"
+    ],
+    "conflicts": [
+      "city permit names Moeller Electric; TDLR project name is generic address addition",
+      "estimated values differ: city permit $400,000 versus TDLR $100,000"
+    ]
+  },
+  {
+    "canonical_id": "dedup-washington-redeemer-church-2111-s-blue-bell",
+    "member_ids": [
+      "washington-brenham-permit-com-new-26-0007",
+      "statewide-tdlr-tabs-TABS2026008498"
+    ],
+    "match_basis": [
+      "same county and same address: 2111 S Blue Bell Road",
+      "both identify Redeemer Church / Redeemer Church Campus",
+      "permit and TDLR scopes both cover exterior/site work around the existing church campus"
+    ],
+    "conflicts": [
+      "city permit specifically records parking lot and sign-wall work; TDLR describes broader interior/exterior modifications",
+      "TDLR expected completion is a past/near-term date and does not prove current subcontract availability"
+    ]
+  },
+  {
+    "canonical_id": "dedup-washington-water-treatment-1105-s-austin",
+    "member_ids": [
+      "washington-brenham-permit-com-add-26-0009",
+      "statewide-tdlr-tabs-TABS2026006791"
+    ],
+    "match_basis": [
+      "same county and same address: 1105 S Austin Street",
+      "both scopes describe rehabilitation/expansion of Brenham water treatment plant",
+      "city permit and TDLR both support the same large public works project"
+    ],
+    "conflicts": [
+      "estimated values differ: city permit $28,297,500 versus TDLR $25,770,000",
+      "TDLR registration predates the city permit and is not open-bid evidence"
+    ]
+  }
+]

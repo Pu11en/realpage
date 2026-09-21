@@ -1,0 +1,120 @@
+{
+  "generated_at": "2026-09-21T02:24:49Z",
+  "tests_run": 8,
+  "tests_passed": 8,
+  "tests_failed": 0,
+  "cases": [
+    {
+      "name": "group exact permit and TDLR Frost Bank",
+      "record_ids": [
+        "washington-brenham-permit-com-new-26-0011",
+        "statewide-tdlr-tabs-TABS2026020346"
+      ],
+      "expected_same_group": true,
+      "actual_canonical_ids": [
+        "dedup-washington-frost-bank-862-us-290-e",
+        "dedup-washington-frost-bank-862-us-290-e"
+      ],
+      "passed": true,
+      "reason": "same address, same bank name, same new-construction scope"
+    },
+    {
+      "name": "group exact permit and TDLR Grace paving",
+      "record_ids": [
+        "washington-brenham-permit-misc-prkg-26-0018-grace-drainage",
+        "statewide-tdlr-tabs-TABS2026022754"
+      ],
+      "expected_same_group": true,
+      "actual_canonical_ids": [
+        "dedup-washington-grace-community-107-s-saeger",
+        "dedup-washington-grace-community-107-s-saeger"
+      ],
+      "passed": true,
+      "reason": "same address and same paving/drainage scope/value"
+    },
+    {
+      "name": "group historical RFQ and later TDLR Somerville City Hall",
+      "record_ids": [
+        "burleson-somerville-rfq-2025-new-city-hall-150-8th",
+        "statewide-tdlr-tabs-TABS2026021872"
+      ],
+      "expected_same_group": true,
+      "actual_canonical_ids": [
+        "dedup-burleson-somerville-city-hall-150-8th",
+        "dedup-burleson-somerville-city-hall-150-8th"
+      ],
+      "passed": true,
+      "reason": "same address and same city hall project, while preserving expired bid status"
+    },
+    {
+      "name": "do not merge Barron Landing different buildings/units",
+      "record_ids": [
+        "statewide-tdlr-tabs-TABS2026027188",
+        "statewide-tdlr-tabs-TABS2026024607"
+      ],
+      "expected_same_group": false,
+      "actual_canonical_ids": [
+        "dedup-single-statewide-tdlr-tabs-tabs2026027188",
+        "dedup-single-statewide-tdlr-tabs-tabs2026024607"
+      ],
+      "passed": true,
+      "reason": "same campus/address but Building 700 and Building 600 Unit 602 are separate units/phases"
+    },
+    {
+      "name": "do not merge Greens Prairie phases",
+      "record_ids": [
+        "statewide-tdlr-tabs-TABS2026028296",
+        "statewide-tdlr-tabs-TABS2026027977"
+      ],
+      "expected_same_group": false,
+      "actual_canonical_ids": [
+        "dedup-single-statewide-tdlr-tabs-tabs2026028296",
+        "dedup-single-statewide-tdlr-tabs-tabs2026027977"
+      ],
+      "passed": true,
+      "reason": "same base address but Section 6 Phase 603 and Section 8 Phase 801 are distinct phases"
+    },
+    {
+      "name": "do not merge Gameday Suites numbered registrations",
+      "record_ids": [
+        "statewide-tdlr-tabs-TABS2026024885",
+        "statewide-tdlr-tabs-TABS2026024883"
+      ],
+      "expected_same_group": false,
+      "actual_canonical_ids": [
+        "dedup-single-statewide-tdlr-tabs-tabs2026024885",
+        "dedup-single-statewide-tdlr-tabs-tabs2026024883"
+      ],
+      "passed": true,
+      "reason": "same base address but separate numbered records Aggieland-3 and Aggieland-2"
+    },
+    {
+      "name": "do not merge City Hall RTU with Brenham Family Park",
+      "record_ids": [
+        "washington-brenham-bid-26-013-city-hall-rtu5",
+        "statewide-tdlr-tabs-TABS2026003432"
+      ],
+      "expected_same_group": false,
+      "actual_canonical_ids": [
+        "dedup-single-washington-brenham-bid-26-013-city-hall-rtu5",
+        "dedup-single-statewide-tdlr-tabs-tabs2026003432"
+      ],
+      "passed": true,
+      "reason": "same civic-address string but different project name and scope"
+    },
+    {
+      "name": "do not merge Sherwin driveway with Cannery Center",
+      "record_ids": [
+        "washington-brenham-permit-misc-prkg-26-0022-sherwin-williams",
+        "statewide-tdlr-tabs-TABS2026019757"
+      ],
+      "expected_same_group": false,
+      "actual_canonical_ids": [
+        "dedup-single-washington-brenham-permit-misc-prkg-26-0022-sherwin-williams",
+        "dedup-single-statewide-tdlr-tabs-tabs2026019757"
+      ],
+      "passed": true,
+      "reason": "same street number only; different street, party and scope"
+    }
+  ]
+}
