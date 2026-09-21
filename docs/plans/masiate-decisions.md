@@ -28,8 +28,10 @@ and per-lead saved-note decisions below.
   of automatic model memory. Inspect the existing chat/session behavior before
   promising return-visit or cross-chat recall; keep each person's history scoped
   to them even though the section is public.
-- The property count, geographic boundary, ranking acceptance rules and depth
-  of each profile still need planning. No collection/build has started.
+- Property count is flexible: select by quality and available evidence, with no
+  fixed quota or padding. This is not authorization for unlimited research cost.
+- Geographic boundary, ranking acceptance rules and depth of each profile
+  still need planning. No collection/build has started.
 
 ## Confirmed Instructions
 
@@ -227,7 +229,7 @@ Q7: Who should see research notes saved on a lead?
 Canceled by Drew's latest instruction: research stays in saved chat history,
 so do not ask who can see separate lead notes or build note controls.
 
-## Current Question
+## Report Length
 
 Q8: How many top properties should the first detailed PDF cover?
 
@@ -236,8 +238,24 @@ Q8: How many top properties should the first detailed PDF cover?
 - C. Up to 50: broader choice, with more research and a longer report.
 - D. Up to 100: extensive coverage, with the most work and a much larger report.
 
-Answer: pending. These are targets, not guaranteed counts; do not pad with weak
-or invented prospects to hit a number. Drew may choose a different count.
+Answer: **Does not matter**, stated by Drew. Use judgment on count and report
+length based on meaningful, well-supported opportunities. Do not impose the
+suggested 20-property limit or ask for another number. Keep research budgets
+and source coverage as separate decisions; no unlimited spend is implied.
+
+## Current Question
+
+Q9: Which area should the PDF's properties cover?
+
+- A. The wider Brazos Valley: recommended for broad coverage around the stated
+  service region, with more sources and potentially farther-away properties.
+- B. Bryan and College Station only: concentrated report, fewer jurisdictions.
+- C. Brazos and Robertson counties: both cities plus Hearne and nearby areas.
+- D. A chosen travel radius from Masiate's base: user provides town and limit.
+
+Answer: pending. Wider Brazos Valley is a proposed collection area, not a claim
+that Masiate accepts work in every town. The earlier area question remains
+unanswered; do not assume DFW or statewide coverage.
 
 ## Product Questions To Explore Next
 
