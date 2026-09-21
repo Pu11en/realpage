@@ -69,6 +69,11 @@ GENERIC_GAPS = {
     "na",
 }
 DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
+PHONE_RE = re.compile(
+    r"^(?:\+?1[ .-]?)?(?:\(\d{3}\)|\d{3})[ .-]?\d{3}[ .-]?\d{4}"
+    r"(?:\s*(?:x|ext\.?|extension)\s*\d{1,6})?$",
+    re.IGNORECASE,
+)
 
 
 def load_json(path: Path) -> Any:
@@ -97,6 +102,11 @@ def valid_date(value: Any) -> bool:
     except ValueError:
         return False
     return True
+
+
+def usable_phone(value: Any) -> bool:
+    """Return whether value is a callable North American business number."""
+    return bool(PHONE_RE.fullmatch(clean_text(value)))
 
 
 def batch_for_rank(rank: int) -> str:
@@ -367,8 +377,19 @@ def _validate_contacts(
             _error(report, property_id, f"contact {route_id} needs a public-business basis")
         if not clean_text(contact.get("match_evidence")):
             _error(report, property_id, f"contact {route_id} needs entity/project match evidence")
-        if clean_text(contact.get("phone")) and not is_web_url(source_url):
-            _error(report, property_id, f"contact {route_id} phone is missing provenance")
+        phone = clean_text(contact.get("phone"))
+        if phone:
+            if not usable_phone(phone):
+                _error(report, property_id, f"contact {route_id} phone is not a usable phone number")
+            if not is_web_url(source_url):
+                _error(report, property_id, f"contact {route_id} phone is missing provenance")
+            source_check = checked_sources.get(source_url)
+            if source_check and source_check.get("disposition") != "contact_found":
+                _error(
+                    report,
+                    property_id,
+                    f"contact {route_id} phone source disposition does not support a phone",
+                )
         if (
             contact.get("match_status") == "provisional"
             or contact.get("source_type") == "directory"
@@ -378,7 +399,10 @@ def _validate_contacts(
 
 
 def _validate_selection(
-    result: dict[str, Any], contacts: dict[str, dict[str, Any]], report: CoverageReport
+    result: dict[str, Any],
+    contacts: dict[str, dict[str, Any]],
+    checked_sources: dict[str, dict[str, Any]],
+    report: CoverageReport,
 ) -> None:
     property_id = result["property_id"]
     selected_id = clean_text(result.get("selected_route_id"))
@@ -397,8 +421,14 @@ def _validate_selection(
         if not selected:
             _error(report, property_id, f"unknown selected_route_id {selected_id!r}")
             return
-        if not clean_text(selected.get("phone")):
+        phone = clean_text(selected.get("phone"))
+        if not phone:
             _error(report, property_id, "selected route must provide a public business phone")
+            return
+        if not usable_phone(phone):
+            return
+        source_check = checked_sources.get(clean_text(selected.get("source_url")))
+        if not source_check or source_check.get("disposition") != "contact_found":
             return
         if result.get("researched_gap") not in (None, {}):
             _error(report, property_id, "a selected phone route and researched_gap are mutually exclusive")
@@ -441,7 +471,7 @@ def validate_result(
     checked_sources = _validate_source_checks(result, inventory, report)
     _validate_actors(result, report)
     contacts = _validate_contacts(result, checked_sources, report)
-    _validate_selection(result, contacts, report)
+    _validate_selection(result, contacts, checked_sources, report)
 
 
 def validate_coverage(

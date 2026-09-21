@@ -65,6 +65,8 @@ the same list. Every item requires:
 
 Repeated URLs should be checked once. A failed extraction is not a completed
 source check when the public page or PDF can be inspected another way.
+Use `contact_found` for the cited source of any recorded phone; a source marked
+`no_contact_fields` or another non-contact disposition cannot support a phone.
 
 ## Actors Checked
 
@@ -97,7 +99,9 @@ record matches. Publication is not proof the phone still connects; no test
 calls are part of this ledger.
 
 `selected_route_id` must point to the best contact containing a public business
-phone. `alternative_route_ids` can point to at most two other useful contacts.
+phone in a recognizable North American format (10 digits, optional country code
+and extension). Arbitrary non-empty text does not qualify as a phone.
+`alternative_route_ids` can point to at most two other useful contacts.
 The selected route and alternatives must be distinct. Consumer order lines,
 unrelated stores, registered agents, fax numbers, and unverified private-owner
 numbers are not suitable fillers.

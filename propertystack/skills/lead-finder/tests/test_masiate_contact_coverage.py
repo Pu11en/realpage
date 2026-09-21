@@ -162,3 +162,23 @@ def test_validator_rejects_generic_unsupported_no_number_reason():
         require_complete=False,
     )
     assert any("unsupported or generic" in error for error in report.errors)
+
+
+def test_validator_rejects_non_phone_text_and_does_not_count_it_as_confirmed():
+    documents = complete_documents()
+    first = documents[0]["properties"][0]
+    first["contacts"][0]["phone"] = "not a phone number"
+    report = coverage.validate_coverage(MANIFEST, documents, require_complete=True)
+    assert any("phone is not a usable phone number" in error for error in report.errors)
+    assert report.confirmed_phone_count == 48
+    assert not report.complete
+
+
+def test_validator_requires_phone_evidence_disposition_before_counting_route():
+    documents = complete_documents()
+    first = documents[0]["properties"][0]
+    first["sources_checked"][0]["disposition"] = "no_contact_fields"
+    report = coverage.validate_coverage(MANIFEST, documents, require_complete=True)
+    assert any("phone source disposition does not support a phone" in error for error in report.errors)
+    assert report.confirmed_phone_count == 48
+    assert not report.complete
