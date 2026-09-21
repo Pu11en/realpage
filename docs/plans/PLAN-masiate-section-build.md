@@ -1,5 +1,18 @@
 # Masiate Section Build
 
+## PAUSED By Drew
+
+On September 20, 2026, after submission but before AI selection, Drew said
+"no pause that" and redirected discussion to whether the listed projects
+actually need Masiate. Do not execute this plan or interpret answers to the
+lead-fit discussion as an AI/build selection. Resume requires explicit human
+instruction. No Masiate build worker was present in the loop store at this pause.
+The key unresolved question is target buyer: owner hiring a main contractor,
+general contractor hiring a trade crew, or another explicitly defined buyer.
+The bank ranked first already names EBCO as general contractor; its open
+subcontract needs were NOT established. Construction activity and service fit
+must not be presented as proven demand for Masiate.
+
 Check: bash tooling/qa/check-panel.sh
 Try: python3 -m http.server 8891 --bind 127.0.0.1 --directory site
 Open: http://localhost:8891/masiate.html

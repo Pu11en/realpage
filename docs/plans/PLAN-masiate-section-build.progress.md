@@ -1,5 +1,14 @@
 # Masiate Section Build Progress
 
+## Paused Before Implementation
+
+Drew explicitly paused the build and questioned lead usefulness, particularly
+projects with an existing contractor. Loop store inspected after the pause:
+no Masiate execution record. Keep all six tasks unexecuted. Discussion choices
+are not permission to select an AI or resume the build. Need to distinguish
+owner/direct-work prospects from general-contractor/subcontract prospects and
+require evidence of an unmet work need before claiming a qualified opportunity.
+
 ## Planning
 
 - User explicitly authorized planning and task-loop implementation after the pilot delivery.
