@@ -21,12 +21,12 @@ def test_pdf_libraries_are_pinned_local_and_licensed():
         assert "MIT" in text or "Permission is hereby granted" in text
 
 
-def test_lead_pack_ui_uses_the_existing_account_check():
+def test_pdf_needs_no_account_but_csv_still_does():
     page = (SITE / "index.html").read_text(encoding="utf-8")
     panel = (SITE / "js" / "chat-panel.js").read_text(encoding="utf-8")
     assert "Download call list (PDF)" in page
-    assert 'window.PSChatPanel.requireAuth(' in page
-    assert "Make a free account to download your call list" in page
+    assert "Make a free account to download your call list" not in page
+    assert "Make a free account to download the spreadsheet" in page
     assert "function requireAuth(purpose, onSuccess)" in panel
     assert "return checkAuth(panel).then" in panel
     assert "sendPendingAuthAction(panel)" in panel

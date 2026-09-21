@@ -116,7 +116,7 @@
         <div class="take-it-row">
           <div class="take-it-main">
             <span class="take-it-title">Take the list with you</span>
-            <span class="take-it-sub">Free account. No card. Also unlocks who to call.</span>
+            <span class="take-it-sub">PDF is free, no account needed. A free account adds the spreadsheet and who to call.</span>
           </div>
           <div class="lead-pack-actions">
             <button type="button" class="lead-pack-btn" id="download-lead-pack">Download call list (PDF)</button>
@@ -256,7 +256,7 @@
         const selection = selectedLeadPack();
         setLeadPackBusy(true);
         leadPackStatus.classList.remove("error");
-        leadPackStatus.textContent = "Checking your account…";
+        leadPackStatus.textContent = "Building your call list…";
 
         const startDownload = () => {
           const lastDownload = lastDownloadFor(selection);
@@ -293,18 +293,7 @@
           });
         };
 
-        window.PSChatPanel.requireAuth(
-          "Make a free account to download your call list",
-          startDownload
-        ).then((signedIn) => {
-          if (signedIn) return;
-          setLeadPackBusy(false);
-          leadPackStatus.textContent = "Make a free account in the panel to start your download.";
-        }).catch(() => {
-          setLeadPackBusy(false);
-          leadPackStatus.classList.add("error");
-          leadPackStatus.textContent = "We could not check your account. Please try again.";
-        });
+        startDownload();
       }
 
       function csvText(selection) {
