@@ -390,8 +390,28 @@ Q15: Which part should we walk through first before building?
   and what happens when a source is unavailable.
 - D. The agent: example questions, sourced answers and retrieving earlier research.
 
-Answer: pending. This chooses the next planning walkthrough, not implementation
-authorization; all four areas must ultimately be covered by acceptance checks.
+Answer: **A**, selected by Drew on 2026-09-20. The complete proposed experience
+is written in [the walkthrough](masiate-experience-walkthrough.md), including
+failure states and checks. This chooses a planning walkthrough, not approval of
+every newly proposed detail or authorization to build.
+
+## Current Question: Returning To Research
+
+Q16: When someone asks about earlier research, where should recall work?
+
+- A. In any new chat, search that person's previous chats automatically;
+  recommended match for the requested experience, with extra retrieval work.
+- B. In the original saved chat after they reopen it; simplest implementation,
+  without automatic cross-chat recall.
+- C. Let them choose a previous chat to use in a new conversation; explicit
+  control over the research carried forward.
+- D. Asking about a property reopens its earlier conversation; property-linked
+  continuity without general history search.
+
+Answer: pending. This clarifies how the already-requested saved-chat recall
+works, not whether to save research. Existing saved-chat plumbing does not prove
+cross-chat search exists. Every option must isolate each person's history and
+keep the PDF unchanged; none introduces separate lead notes.
 
 ## Product Questions To Explore Next
 
