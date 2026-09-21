@@ -1,0 +1,463 @@
+[
+  {
+    "id": "brazos-bryan-sdrc-sp26-000062-north-dunn-apartments",
+    "county": "Brazos",
+    "project_name": "North and Dunn Apartments",
+    "address": "600 E North Ave",
+    "city": "Bryan",
+    "record_type": "planning",
+    "source_record_id": "SP26-000062",
+    "record_date": "2026-09-15",
+    "retrieved_at": "2026-09-21T01:59:14Z",
+    "stage": "planned",
+    "status_basis": "Bryan SDRC public archive posted a September 15, 2026 site-plan PDF. The plan text says North and Dunn Apartments, Bryan, Brazos County, September 2026; it is planning evidence, not a building permit or awarded trade package.",
+    "scope": "Apartment site plan for Ramsey Place / North and Dunn Apartments; plan text names VGC Ventures, LLC as developer and McClure & Browne as preparer. Extracted notes show the drawing set was issued for bidding.",
+    "masiate_fit": "Strong multifamily fit by inference: apartment site plan could need concrete, framing, plumbing, lighting, paint, flooring and exterior work if construction moves forward; source does not prove subcontractor availability.",
+    "estimated_value": null,
+    "estimated_start": null,
+    "estimated_completion": null,
+    "bid_deadline": null,
+    "participants": [
+      {
+        "name": "VGC Ventures, LLC",
+        "role": "developer",
+        "source_url": "https://docs.bryantx.gov/planning_development/SDRC/2026%20SDRC/09-15-2026/SP26-000062%2C%20Ramsey%20Place%2C%20600%20E%20North%20Ave%2C%20North%20and%20Dunn%20Apartments%2C%209-15-26.pdf"
+      }
+    ],
+    "business_contacts": [
+      {
+        "name": "McClure & Browne Engineering/Surveying, Inc.",
+        "role": "designer / engineering-surveying preparer",
+        "phone": "979-693-3838",
+        "email": null,
+        "website": null,
+        "source_url": "https://docs.bryantx.gov/planning_development/SDRC/2026%20SDRC/09-15-2026/SP26-000062%2C%20Ramsey%20Place%2C%20600%20E%20North%20Ave%2C%20North%20and%20Dunn%20Apartments%2C%209-15-26.pdf"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://docs.bryantx.gov/planning_development/SDRC/2026%20SDRC/09-15-2026/SP26-000062%2C%20Ramsey%20Place%2C%20600%20E%20North%20Ave%2C%20North%20and%20Dunn%20Apartments%2C%209-15-26.pdf",
+        "title": "SP26-000062, Ramsey Place, 600 E North Ave, North and Dunn Apartments",
+        "date": "09-15-2026",
+        "page": "PDF/text extraction",
+        "evidence": "PDF text names North and Dunn Apartments, Bryan, Brazos County; developer VGC Ventures, LLC; McClure & Browne preparer; site vicinity North E Ave and Dunn Street; issued-for-bidding text appears in the extraction.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/brazos/evidence/bryan/sdrc-09-15-2026/SP26-000062, Ramsey Place, 600 E North Ave, North and Dunn Apartments, 9-15-26.pdf"
+      }
+    ],
+    "unknowns": [
+      "Whether construction permits have issued",
+      "Whether trade packages remain available",
+      "Current contractor procurement status"
+    ],
+    "next_research": "Match the parcel in Brazos CAD and check Bryan Citizenserve or an open-records export for permit status.",
+    "disposition": "candidate"
+  },
+  {
+    "id": "brazos-bryan-sdrc-sp26-000059-tabor-road-apartments",
+    "county": "Brazos",
+    "project_name": "Tabor Road Apartments",
+    "address": "2816 Tabor Road",
+    "city": "Bryan",
+    "record_type": "planning",
+    "source_record_id": "SP26-000059",
+    "record_date": "2026-09-08",
+    "retrieved_at": "2026-09-21T01:59:14Z",
+    "stage": "planned",
+    "status_basis": "Bryan SDRC archive posted a September 8, 2026 site-plan PDF. The plan states it is interim review only and not for construction, bidding or permitting.",
+    "scope": "Site plans for Tabor Road Apartments, Siegert Subdivision, Block 2 Lot 6R, 1.051 acres, 2816 Tabor Road, Bryan. Sheet list includes site, utility, pavement/grading and landscape plans.",
+    "masiate_fit": "Multifamily apartment project with site, utility, grading and landscape plans; potential Masiate trades include concrete, plumbing/utility tie-ins, exterior work, paint/flooring later, but status is pre-permit review.",
+    "estimated_value": null,
+    "estimated_start": null,
+    "estimated_completion": null,
+    "bid_deadline": null,
+    "participants": [
+      {
+        "name": "Haswell Park Properties, LLC",
+        "role": "owner/developer",
+        "source_url": "https://docs.bryantx.gov/planning_development/SDRC/2026%20SDRC/09-08-2026/SP26-000059%2C%20Siegert%2C%20Tabor%20Road%20Apts%2C%202816%20Tabor%20Rd%2C%209-8-26.pdf"
+      }
+    ],
+    "business_contacts": [
+      {
+        "name": "J4 Engineering",
+        "role": "engineer",
+        "phone": "979-739-0567",
+        "email": null,
+        "website": "https://www.J4Engineering.com",
+        "source_url": "https://docs.bryantx.gov/planning_development/SDRC/2026%20SDRC/09-08-2026/SP26-000059%2C%20Siegert%2C%20Tabor%20Road%20Apts%2C%202816%20Tabor%20Rd%2C%209-8-26.pdf"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://docs.bryantx.gov/planning_development/SDRC/2026%20SDRC/09-08-2026/SP26-000059%2C%20Siegert%2C%20Tabor%20Road%20Apts%2C%202816%20Tabor%20Rd%2C%209-8-26.pdf",
+        "title": "SP26-000059, Siegert, Tabor Road Apts, 2816 Tabor Rd",
+        "date": "09-08-2026",
+        "page": "PDF/text extraction",
+        "evidence": "PDF text lists Tabor Road Apartments at 2816 Tabor Road, owner/developer Haswell Park Properties, LLC, and J4 Engineering contact details.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/brazos/evidence/bryan/sdrc-09-08-2026/SP26-000059, Siegert, Tabor Road Apts, 2816 Tabor Rd, 9-8-26.pdf"
+      }
+    ],
+    "unknowns": [
+      "Whether construction permits have issued",
+      "Whether trade packages remain available",
+      "Current contractor procurement status"
+    ],
+    "next_research": "Match the parcel in Brazos CAD and check Bryan Citizenserve or an open-records export for permit status.",
+    "disposition": "candidate"
+  },
+  {
+    "id": "brazos-bryan-sdrc-sp26-000061-reveille-park-phase-1",
+    "county": "Brazos",
+    "project_name": "Reveille Park Phase 1 Lot 6",
+    "address": "4310 G. Rollie White Rd.",
+    "city": "Bryan",
+    "record_type": "planning",
+    "source_record_id": "SP26-000061",
+    "record_date": "2026-09-15",
+    "retrieved_at": "2026-09-21T01:59:14Z",
+    "stage": "planned",
+    "status_basis": "Bryan SDRC archive posted a September 15, 2026 site-plan PDF. Text extraction identifies the address and lot, but owner/applicant details were not legible in the extraction.",
+    "scope": "Site plan for Lot 6, Block 2, Phase 1 of Reveille Park at 4310 G. Rollie White Rd., College Station TX 77845 / Bryan review area.",
+    "masiate_fit": "Address-level residential/commercial development signal; possible framing, concrete, roofing, siding, paint, floor and MEP opportunities if building proceeds, but owner and permit status need follow-up.",
+    "estimated_value": null,
+    "estimated_start": null,
+    "estimated_completion": null,
+    "bid_deadline": null,
+    "participants": [],
+    "business_contacts": [
+      {
+        "name": "Scurlock Drafting & Design",
+        "role": "plan drafter named in plan notes",
+        "phone": null,
+        "email": null,
+        "website": null,
+        "source_url": "https://docs.bryantx.gov/planning_development/SDRC/2026%20SDRC/09-15-2026/SP26-000061%2C%20Reveille%20Park%20Ph%201%2C%204310%20G%20Rollie%20White%20Rd%2C%209-15-26.pdf"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://docs.bryantx.gov/planning_development/SDRC/2026%20SDRC/09-15-2026/SP26-000061%2C%20Reveille%20Park%20Ph%201%2C%204310%20G%20Rollie%20White%20Rd%2C%209-15-26.pdf",
+        "title": "SP26-000061, Reveille Park Ph 1, 4310 G Rollie White Rd",
+        "date": "09-15-2026",
+        "page": "PDF/text extraction",
+        "evidence": "PDF text identifies Lot 6 Block 2 Phase 1 of Reveille Park and address 4310 G. Rollie White Rd.; plan notes name Scurlock Drafting & Design.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/brazos/evidence/bryan/sdrc-09-15-2026/SP26-000061, Reveille Park Ph 1, 4310 G Rollie White Rd, 9-15-26.pdf"
+      }
+    ],
+    "unknowns": [
+      "Owner/developer not extracted",
+      "Permit/construction status unknown",
+      "Whether trade packages remain available"
+    ],
+    "next_research": "Match the parcel in Brazos CAD and check Bryan Citizenserve or an open-records export for permit status.",
+    "disposition": "candidate"
+  },
+  {
+    "id": "brazos-bryan-sdrc-sp26-000055-traditions-villages-6b",
+    "county": "Brazos",
+    "project_name": "Villages at Traditions Phase 19 / Village 6B",
+    "address": "3089 S Traditions",
+    "city": "Bryan",
+    "record_type": "planning",
+    "source_record_id": "SP26-000055",
+    "record_date": "2026-09-15",
+    "retrieved_at": "2026-09-21T01:59:14Z",
+    "stage": "planned",
+    "status_basis": "Bryan SDRC archive posted a September 15, 2026 site-plan PDF. The filename gives the address; extracted title block shows Traditions Subdivision Phase 19, Bryan, Texas, September 2026.",
+    "scope": "Villages at Traditions / Traditions Subdivision Phase 19 site plan and erosion-control plan, job 26-447.",
+    "masiate_fit": "Subdivision/village residential construction signal; possible concrete, framing, roofing, siding, paint, flooring and MEP work if lots/buildings are active. Source is planning review, not permit issuance.",
+    "estimated_value": null,
+    "estimated_start": null,
+    "estimated_completion": null,
+    "bid_deadline": null,
+    "participants": [],
+    "business_contacts": [
+      {
+        "name": "Kerr",
+        "role": "surveyed/designed/drawn title-block name",
+        "phone": null,
+        "email": null,
+        "website": null,
+        "source_url": "https://docs.bryantx.gov/planning_development/SDRC/2026%20SDRC/09-15-2026/SP26-000055%2C%20Traditions%20Ph%2019%2C%20Villages%206B%2C%203089%20S%20Traditions%2C%209-15-26.pdf"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://docs.bryantx.gov/planning_development/SDRC/2026%20SDRC/09-15-2026/SP26-000055%2C%20Traditions%20Ph%2019%2C%20Villages%206B%2C%203089%20S%20Traditions%2C%209-15-26.pdf",
+        "title": "SP26-000055, Traditions Ph 19, Villages 6B, 3089 S Traditions",
+        "date": "09-15-2026",
+        "page": "PDF/text extraction",
+        "evidence": "Filename identifies 3089 S Traditions; PDF text identifies Villages at Traditions and Traditions Subdivision Phase 19, Bryan, Texas, September 2026.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/brazos/evidence/bryan/sdrc-09-15-2026/SP26-000055, Traditions Ph 19, Villages 6B, 3089 S Traditions, 9-15-26.pdf"
+      }
+    ],
+    "unknowns": [
+      "Whether construction permits have issued",
+      "Whether trade packages remain available",
+      "Current contractor procurement status"
+    ],
+    "next_research": "Match the parcel in Brazos CAD and check Bryan Citizenserve or an open-records export for permit status.",
+    "disposition": "candidate"
+  },
+  {
+    "id": "brazos-bryan-sdrc-sp26-000060-traditions-ph38-townhomes",
+    "county": "Brazos",
+    "project_name": "Traditions Subdivision Phase 38 Townhomes",
+    "address": "Traditions Subdivision Phase 38, Bryan, TX",
+    "city": "Bryan",
+    "record_type": "planning",
+    "source_record_id": "SP26-000060",
+    "record_date": "2026-09-15",
+    "retrieved_at": "2026-09-21T01:59:14Z",
+    "stage": "planned",
+    "status_basis": "Bryan SDRC archive posted a September 15, 2026 site-plan PDF. The title block identifies Phase 38 townhomes and September 2026; an exact street address was not present in extracted text.",
+    "scope": "Townhome site plan for Traditions Subdivision Phase 38, with grading/site sheets and project file name for Phase 38-39 townhomes.",
+    "masiate_fit": "Townhome construction is a direct fit for framing, roofing, siding, concrete, paint, floors and MEP trades; needs exact parcel/permit follow-up before outreach.",
+    "estimated_value": null,
+    "estimated_start": null,
+    "estimated_completion": null,
+    "bid_deadline": null,
+    "participants": [],
+    "business_contacts": [
+      {
+        "name": "Kerr",
+        "role": "surveyed/designed/drawn title-block name",
+        "phone": null,
+        "email": null,
+        "website": null,
+        "source_url": "https://docs.bryantx.gov/planning_development/SDRC/2026%20SDRC/09-15-2026/SP26-000060%2C%20Traditions%20Ph%2038%2C%20Townhomes%2C%209-15-26.pdf"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://docs.bryantx.gov/planning_development/SDRC/2026%20SDRC/09-15-2026/SP26-000060%2C%20Traditions%20Ph%2038%2C%20Townhomes%2C%209-15-26.pdf",
+        "title": "SP26-000060, Traditions Ph 38, Townhomes",
+        "date": "09-15-2026",
+        "page": "PDF/text extraction",
+        "evidence": "PDF text identifies Traditions Subdivision Phase 38, Bryan TX, site plan, September 2026, and project file for Phase 38-39 townhomes.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/brazos/evidence/bryan/sdrc-09-15-2026/SP26-000060, Traditions Ph 38, Townhomes, 9-15-26.pdf"
+      }
+    ],
+    "unknowns": [
+      "Exact street address not extracted",
+      "Owner/developer not extracted",
+      "Permit/construction status unknown"
+    ],
+    "next_research": "Match the parcel in Brazos CAD and check Bryan Citizenserve or an open-records export for permit status.",
+    "disposition": "watchlist"
+  },
+  {
+    "id": "brazos-bryan-sdrc-sp26-000047-11183-sh30",
+    "county": "Brazos",
+    "project_name": "11183 SH30 site plan",
+    "address": "11183 State Highway 30",
+    "city": "Bryan",
+    "record_type": "planning",
+    "source_record_id": "SP26-000047",
+    "record_date": "2026-09-15",
+    "retrieved_at": "2026-09-21T01:59:14Z",
+    "stage": "planned",
+    "status_basis": "Bryan SDRC archive posted a September 15, 2026 site-plan PDF. The plan states preliminary review by permitting authorities only and not intended for construction.",
+    "scope": "Site plan on 2.208 acres / called 2.21 acres in Maria Kegans League A-28 at 11183 SH30; revisions through September 9, 2026.",
+    "masiate_fit": "Address-level commercial/site-development lead; potential concrete, fencing, plumbing/utility, lighting and exterior work depending on final use. Status is preliminary review.",
+    "estimated_value": null,
+    "estimated_start": null,
+    "estimated_completion": null,
+    "bid_deadline": null,
+    "participants": [
+      {
+        "name": "Bull Red Cimarron, LLC",
+        "role": "owner/developer",
+        "source_url": "https://docs.bryantx.gov/planning_development/SDRC/2026%20SDRC/09-15-2026/SP26-000047%2C%20Maria%20Kegan%2C%20%2011183%20State%20Highway%2030%2C%209-15-26.pdf"
+      }
+    ],
+    "business_contacts": [
+      {
+        "name": "Civil Constructors Inc.",
+        "role": "engineer",
+        "phone": "979-690-7711",
+        "email": null,
+        "website": null,
+        "source_url": "https://docs.bryantx.gov/planning_development/SDRC/2026%20SDRC/09-15-2026/SP26-000047%2C%20Maria%20Kegan%2C%20%2011183%20State%20Highway%2030%2C%209-15-26.pdf"
+      },
+      {
+        "name": "Kerr Surveying",
+        "role": "surveyor",
+        "phone": null,
+        "email": null,
+        "website": null,
+        "source_url": "https://docs.bryantx.gov/planning_development/SDRC/2026%20SDRC/09-15-2026/SP26-000047%2C%20Maria%20Kegan%2C%20%2011183%20State%20Highway%2030%2C%209-15-26.pdf"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://docs.bryantx.gov/planning_development/SDRC/2026%20SDRC/09-15-2026/SP26-000047%2C%20Maria%20Kegan%2C%20%2011183%20State%20Highway%2030%2C%209-15-26.pdf",
+        "title": "SP26-000047, Maria Kegan, 11183 State Highway 30",
+        "date": "09-15-2026",
+        "page": "PDF/text extraction",
+        "evidence": "PDF text lists 11183 SH30, 2.208 acres, owner Bull Red Cimarron LLC, Kerr Surveying, Civil Constructors Inc., and preliminary-review limitation.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/brazos/evidence/bryan/sdrc-09-15-2026/SP26-000047, Maria Kegan,  11183 State Highway 30, 9-15-26.pdf"
+      }
+    ],
+    "unknowns": [
+      "Whether construction permits have issued",
+      "Whether trade packages remain available",
+      "Current contractor procurement status"
+    ],
+    "next_research": "Match the parcel in Brazos CAD and check Bryan Citizenserve or an open-records export for permit status.",
+    "disposition": "candidate"
+  },
+  {
+    "id": "brazos-bryan-sdrc-sp26-000053-oxbow-business-park",
+    "county": "Brazos",
+    "project_name": "Oxbow Business Park / Hwy 30 Business Park",
+    "address": "11400 State Highway 30",
+    "city": "Bryan",
+    "record_type": "planning",
+    "source_record_id": "SP26-000053",
+    "record_date": "2026-08-11",
+    "retrieved_at": "2026-09-21T01:59:14Z",
+    "stage": "planned",
+    "status_basis": "Bryan SDRC archive posted an August 11, 2026 site-plan PDF. The plan text identifies a business-park site plan and owner/developer; it does not establish permits or open subcontract packages.",
+    "scope": "Site plans for Oxbow Business Park / Hwy 30 Business Park, Lot 1R, 5.62 acres, 11400 State Highway 30, Bryan. Sheets include site, erosion/sediment, utility, grading/pavement, water and landscape plans.",
+    "masiate_fit": "Commercial/business-park site work is relevant for concrete, fencing, utility/plumbing, lighting and later tenant-finish work; needs permit and tenant-package follow-up.",
+    "estimated_value": null,
+    "estimated_start": null,
+    "estimated_completion": null,
+    "bid_deadline": null,
+    "participants": [
+      {
+        "name": "Oxbow Construction, LLC",
+        "role": "owner/developer",
+        "source_url": "https://docs.bryantx.gov/planning_development/SDRC/2026%20SDRC/08-11-2026/SP26-000053%2C%20Hwy%2030%20Business%20Park%2C%20Oxbow%20Business%20Park%2C%208-11-26.pdf"
+      }
+    ],
+    "business_contacts": [
+      {
+        "name": "J4 Engineering",
+        "role": "engineer",
+        "phone": "979-739-0567",
+        "email": null,
+        "website": "https://www.J4Engineering.com",
+        "source_url": "https://docs.bryantx.gov/planning_development/SDRC/2026%20SDRC/08-11-2026/SP26-000053%2C%20Hwy%2030%20Business%20Park%2C%20Oxbow%20Business%20Park%2C%208-11-26.pdf"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://docs.bryantx.gov/planning_development/SDRC/2026%20SDRC/08-11-2026/SP26-000053%2C%20Hwy%2030%20Business%20Park%2C%20Oxbow%20Business%20Park%2C%208-11-26.pdf",
+        "title": "SP26-000053, Hwy 30 Business Park, Oxbow Business Park",
+        "date": "08-11-2026",
+        "page": "PDF/text extraction",
+        "evidence": "PDF text lists Oxbow Business Park, Hwy 30 Business Park, 11400 State Highway 30, Lot 1R 5.62 acres, owner/developer Oxbow Construction LLC, and J4 Engineering.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/brazos/evidence/bryan/sdrc-08-11-2026/SP26-000053, Hwy 30 Business Park, Oxbow Business Park, 8-11-26.pdf"
+      }
+    ],
+    "unknowns": [
+      "Whether construction permits have issued",
+      "Whether trade packages remain available",
+      "Current contractor procurement status"
+    ],
+    "next_research": "Match the parcel in Brazos CAD and check Bryan Citizenserve or an open-records export for permit status.",
+    "disposition": "candidate"
+  },
+  {
+    "id": "brazos-bryan-sdrc-sp26-000056-lorca-apartments",
+    "county": "Brazos",
+    "project_name": "Lorca Apartments",
+    "address": "Bryan downtown district; exact street address not extracted",
+    "city": "Bryan",
+    "record_type": "planning",
+    "source_record_id": "SP26-000056",
+    "record_date": "2026-09-01",
+    "retrieved_at": "2026-09-21T01:59:14Z",
+    "stage": "planned",
+    "status_basis": "Bryan SDRC archive posted a September 1, 2026 site-plan PDF. The plan identifies a proposed 100-unit apartment building and owner, but the property-address field was not extracted.",
+    "scope": "Proposed multifamily residential apartment building with 100 dwelling units, studios/one-bedroom/two-bedroom units, open-air courtyard, located within downtown Bryan; legal description Lots 2-R, Block 264-R, Bryan Original Townsite, 1.652 acres.",
+    "masiate_fit": "Very strong multifamily fit for Masiate trades if address and permit status are confirmed; likely building-scope opportunities include framing, plumbing, lighting, flooring, paint, concrete and exterior details.",
+    "estimated_value": null,
+    "estimated_start": null,
+    "estimated_completion": null,
+    "bid_deadline": null,
+    "participants": [
+      {
+        "name": "Caliber Co.",
+        "role": "property owner",
+        "source_url": "https://docs.bryantx.gov/planning_development/SDRC/2026%20SDRC/09-01-2026/SP26-000056%2C%20Lorca%20Apartments%2C%209-1-26.pdf"
+      }
+    ],
+    "business_contacts": [
+      {
+        "name": "Stewart + Reindersma",
+        "role": "architect/designer shown on plan extraction",
+        "phone": null,
+        "email": null,
+        "website": null,
+        "source_url": "https://docs.bryantx.gov/planning_development/SDRC/2026%20SDRC/09-01-2026/SP26-000056%2C%20Lorca%20Apartments%2C%209-1-26.pdf"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://docs.bryantx.gov/planning_development/SDRC/2026%20SDRC/09-01-2026/SP26-000056%2C%20Lorca%20Apartments%2C%209-1-26.pdf",
+        "title": "SP26-000056, Lorca Apartments",
+        "date": "09-01-2026",
+        "page": "PDF/text extraction",
+        "evidence": "PDF text states proposed multifamily residential apartment building with 100 dwelling units; owner Caliber Co.; downtown district; legal description Lots 2-R Block 264-R Bryan Original Townsite, 1.652 acres.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/brazos/evidence/bryan/sdrc-09-01-2026/SP26-000056, Lorca Apartments, 9-1-26.pdf"
+      }
+    ],
+    "unknowns": [
+      "Exact street address not extracted from text",
+      "Permit/construction status unknown",
+      "Whether trade packages remain available"
+    ],
+    "next_research": "Match the parcel in Brazos CAD and check Bryan Citizenserve or an open-records export for permit status.",
+    "disposition": "candidate"
+  },
+  {
+    "id": "brazos-bryan-sdrc-sp26-000026-shops-at-carter-creek",
+    "county": "Brazos",
+    "project_name": "Shops at Carter Creek Phase 1",
+    "address": "Exact address not extracted",
+    "city": "Bryan",
+    "record_type": "planning",
+    "source_record_id": "SP26-000026",
+    "record_date": "2026-08-11",
+    "retrieved_at": "2026-09-21T01:59:14Z",
+    "stage": "planned",
+    "status_basis": "Bryan SDRC archive posted an August 11, 2026 site-plan PDF. Extraction mostly surfaced the engineering title block; exact address/owner were not captured.",
+    "scope": "Site-plan PDF for Shops at Carter Creek Phase 1; engineer block identifies RME / civil@rmengineer.com, College Station, Texas.",
+    "masiate_fit": "Commercial retail/tenant project could fit concrete, framing, paint, flooring, plumbing, lighting and exterior trades, but address and current status must be resolved before use as a candidate.",
+    "estimated_value": null,
+    "estimated_start": null,
+    "estimated_completion": null,
+    "bid_deadline": null,
+    "participants": [],
+    "business_contacts": [
+      {
+        "name": "RME",
+        "role": "civil engineer / plan preparer",
+        "phone": "979-219-4174",
+        "email": "civil@rmengineer.com",
+        "website": null,
+        "source_url": "https://docs.bryantx.gov/planning_development/SDRC/2026%20SDRC/08-11-2026/SP26-000026%2C%20Shops%20at%20Carter%20Creek%20Ph%201%2C%208-11-26.pdf"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://docs.bryantx.gov/planning_development/SDRC/2026%20SDRC/08-11-2026/SP26-000026%2C%20Shops%20at%20Carter%20Creek%20Ph%201%2C%208-11-26.pdf",
+        "title": "SP26-000026, Shops at Carter Creek Ph 1",
+        "date": "08-11-2026",
+        "page": "PDF/text extraction",
+        "evidence": "PDF filename identifies Shops at Carter Creek Phase 1; extracted title block lists RME in College Station with civil@rmengineer.com and phone 979-219-4174.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/brazos/evidence/bryan/sdrc-08-11-2026/SP26-000026, Shops at Carter Creek Ph 1, 8-11-26.pdf"
+      }
+    ],
+    "unknowns": [
+      "Exact address not extracted",
+      "Owner/developer not extracted",
+      "Permit/construction status unknown"
+    ],
+    "next_research": "Match the parcel in Brazos CAD and check Bryan Citizenserve or an open-records export for permit status.",
+    "disposition": "watchlist"
+  }
+]
