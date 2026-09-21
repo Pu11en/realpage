@@ -35,3 +35,14 @@
 - Checks: `python3 -m pytest propertystack/skills/lead-finder/tests -q` passed 91 tests; partial validation reports 0/49 researched without claiming completion; `--require-complete` correctly exits with failure while 49 results are still missing.
 - One test-loader error occurred on the first focused run because the dynamically imported dataclass module was not registered; the test loader was corrected and all subsequent focused and full-suite checks passed.
 - Remaining: MC2-MC5 must populate their assigned research batches, then MC6 must run the final 49-row gate and produce the new PDF.
+
+## MC1 Reviewer Repair — Phone Evidence Validation
+
+- Tightened the final validator so arbitrary non-empty text cannot qualify as a phone; selected routes now require a recognizable 10-digit North American number, with optional country code and extension.
+- A phone's cited source check must use the `contact_found` disposition. Invalid or unsupported routes are rejected and excluded from confirmed/provisional totals.
+- Added two regression tests covering the reviewer's exact cases: `phone: "not a phone number"` and a phone cited to a source marked `no_contact_fields`.
+- Updated the worker schema contract to state both requirements.
+- Repair commit: `f5d3f08` (`Reject unsupported Masiate phone routes`).
+- Checks: focused validator tests passed 8 tests; partial ledger validation succeeded without claiming completion; full `python3 -m pytest propertystack/skills/lead-finder/tests -q` passed 93 tests in 4.73 seconds.
+- One focused test run initially exposed a missing `checked_sources` function parameter; the parameter was added before the successful rerun.
+- Remaining: MC2-MC5 must populate their assigned research batches, then MC6 must run the final 49-row gate and produce the new PDF.
