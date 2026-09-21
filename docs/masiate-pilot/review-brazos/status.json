@@ -1,0 +1,28 @@
+{
+  "state": "complete",
+  "started_at": "2026-09-21T02:19:58Z",
+  "checkpoint_at": "2026-09-21T02:23:49Z",
+  "finished_at": "2026-09-21T02:23:49Z",
+  "output_paths": {
+    "reviewed_records": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/finish/review-brazos/reviewed_records.json",
+    "decisions": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/finish/review-brazos/decisions.json",
+    "summary": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/finish/review-brazos/summary.md",
+    "status": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/finish/review-brazos/status.json"
+  },
+  "total_input_records_considered": 129,
+  "local_brazos_records": 9,
+  "statewide_brazos_records": 120,
+  "records_reviewed": 31,
+  "records_included": 19,
+  "records_watchlist": 12,
+  "records_excluded": 0,
+  "records_not_reviewed": 98,
+  "validated_at": "2026-09-21T02:24:31Z",
+  "validation": {
+    "json_valid": true,
+    "decisions_count": 129,
+    "reviewed_records_count": 31,
+    "test_command": "python3 -m pytest -q propertystack/skills/lead-finder/tests",
+    "test_result": "69 passed in 1.99s"
+  }
+}
