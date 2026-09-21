@@ -2,22 +2,18 @@
 
 ## ✅ What Changed
 
-- Rebuilt the PDF again as **plain vertical contact cards**.
-- Removed the table-like two-column grid feel.
-- Each company now reads top-to-bottom: company, phone, website, ask-for role, why they care, first question, fallback.
-- It is longer, but it should be easier for a caller to view without clipped text or table scanning.
+- Restored the PDF to a **table format**.
+- Fixed the cutoff issue with a **wide landscape table** and hard-wrapped columns.
+- Tightened the layout so all 30 rows fit on one page.
+- The last column, **Fallback / Note**, is visible instead of clipped.
 
 ## ✅ How To Use It
 
 - Start with **Tier A**.
 - Open the company website.
-- Call the phone number.
-- Ask for the role shown on the card.
-- Use the company-specific first question.
-
-## ✅ Best Opener
-
-- “Hi, this is Drew with CraneSignal. We are mapping Texas apartment communities showing public maintenance pain signals. I pulled a few accounts your sales team may want. Who is the best person to send that to?”
+- Call the best phone number.
+- Ask for the role shown in **Ask For**.
+- Use the **First Question** to make the call specific.
 
 ## ⬜ Best Next Asset
 
