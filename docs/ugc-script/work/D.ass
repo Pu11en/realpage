@@ -1,0 +1,163 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 2
+
+[V4+ Styles]
+Format: Name,Fontname,Fontsize,PrimaryColour,SecondaryColour,OutlineColour,BackColour,Bold,Italic,Underline,StrikeOut,ScaleX,ScaleY,Spacing,Angle,BorderStyle,Outline,Shadow,Alignment,MarginL,MarginR,MarginV,Encoding
+Style: D,Inter ExtraBold,62,&H00FFFFFF,&H00FFFFFF,&H00000000,&H90000000,0,0,0,0,100,100,0,0,1,5,4,2,60,60,320,1
+
+[Events]
+Format: Layer,Start,End,Style,Name,MarginL,MarginR,MarginV,Effect,Text
+Dialogue: 0,0:00:00.00,0:00:00.80,D,,0,0,0,,{\c&H0000E6FF&}If{\c&H00FFFFFF&} you sell\Nproducts or services
+Dialogue: 0,0:00:00.80,0:00:00.92,D,,0,0,0,,If {\c&H0000E6FF&}you{\c&H00FFFFFF&} sell\Nproducts or services
+Dialogue: 0,0:00:00.90,0:00:01.14,D,,0,0,0,,If you {\c&H0000E6FF&}sell{\c&H00FFFFFF&}\Nproducts or services
+Dialogue: 0,0:00:01.14,0:00:01.52,D,,0,0,0,,If you sell\N{\c&H0000E6FF&}products{\c&H00FFFFFF&} or services
+Dialogue: 0,0:00:01.52,0:00:01.76,D,,0,0,0,,If you sell\Nproducts {\c&H0000E6FF&}or{\c&H00FFFFFF&} services
+Dialogue: 0,0:00:01.76,0:00:02.20,D,,0,0,0,,If you sell\Nproducts or {\c&H0000E6FF&}services{\c&H00FFFFFF&}
+Dialogue: 0,0:00:02.20,0:00:02.66,D,,0,0,0,,{\c&H0000E6FF&}to{\c&H00FFFFFF&} apartment buildings,
+Dialogue: 0,0:00:02.66,0:00:03.24,D,,0,0,0,,to {\c&H0000E6FF&}apartment{\c&H00FFFFFF&} buildings,
+Dialogue: 0,0:00:03.24,0:00:03.64,D,,0,0,0,,to apartment {\c&H0000E6FF&}buildings,{\c&H00FFFFFF&}
+Dialogue: 0,0:00:04.18,0:00:04.38,D,,0,0,0,,{\c&H0000E6FF&}you{\c&H00FFFFFF&} know that\Ngetting in early
+Dialogue: 0,0:00:04.38,0:00:04.66,D,,0,0,0,,you {\c&H0000E6FF&}know{\c&H00FFFFFF&} that\Ngetting in early
+Dialogue: 0,0:00:04.66,0:00:04.90,D,,0,0,0,,you know {\c&H0000E6FF&}that{\c&H00FFFFFF&}\Ngetting in early
+Dialogue: 0,0:00:04.90,0:00:05.20,D,,0,0,0,,you know that\N{\c&H0000E6FF&}getting{\c&H00FFFFFF&} in early
+Dialogue: 0,0:00:05.20,0:00:05.50,D,,0,0,0,,you know that\Ngetting {\c&H0000E6FF&}in{\c&H00FFFFFF&} early
+Dialogue: 0,0:00:05.50,0:00:05.84,D,,0,0,0,,you know that\Ngetting in {\c&H0000E6FF&}early{\c&H00FFFFFF&}
+Dialogue: 0,0:00:05.84,0:00:06.62,D,,0,0,0,,{\c&H0000E6FF&}matters{\c&H00FFFFFF&} because that\Nclient becomes sticky.
+Dialogue: 0,0:00:06.62,0:00:07.02,D,,0,0,0,,matters {\c&H0000E6FF&}because{\c&H00FFFFFF&} that\Nclient becomes sticky.
+Dialogue: 0,0:00:07.02,0:00:07.38,D,,0,0,0,,matters because {\c&H0000E6FF&}that{\c&H00FFFFFF&}\Nclient becomes sticky.
+Dialogue: 0,0:00:07.38,0:00:07.90,D,,0,0,0,,matters because that\N{\c&H0000E6FF&}client{\c&H00FFFFFF&} becomes sticky.
+Dialogue: 0,0:00:07.90,0:00:08.70,D,,0,0,0,,matters because that\Nclient {\c&H0000E6FF&}becomes{\c&H00FFFFFF&} sticky.
+Dialogue: 0,0:00:08.70,0:00:09.20,D,,0,0,0,,matters because that\Nclient becomes {\c&H0000E6FF&}sticky.{\c&H00FFFFFF&}
+Dialogue: 0,0:00:09.78,0:00:09.90,D,,0,0,0,,{\c&H0000E6FF&}So{\c&H00FFFFFF&} that's why\NI look for
+Dialogue: 0,0:00:09.84,0:00:10.10,D,,0,0,0,,So {\c&H0000E6FF&}that's{\c&H00FFFFFF&} why\NI look for
+Dialogue: 0,0:00:10.10,0:00:10.30,D,,0,0,0,,So that's {\c&H0000E6FF&}why{\c&H00FFFFFF&}\NI look for
+Dialogue: 0,0:00:10.30,0:00:10.74,D,,0,0,0,,So that's why\N{\c&H0000E6FF&}I{\c&H00FFFFFF&} look for
+Dialogue: 0,0:00:10.74,0:00:10.90,D,,0,0,0,,So that's why\NI {\c&H0000E6FF&}look{\c&H00FFFFFF&} for
+Dialogue: 0,0:00:10.90,0:00:11.08,D,,0,0,0,,So that's why\NI look {\c&H0000E6FF&}for{\c&H00FFFFFF&}
+Dialogue: 0,0:00:11.08,0:00:11.46,D,,0,0,0,,{\c&H0000E6FF&}signals{\c&H00FFFFFF&} for early\Ndevelopment,
+Dialogue: 0,0:00:11.46,0:00:12.04,D,,0,0,0,,signals {\c&H0000E6FF&}for{\c&H00FFFFFF&} early\Ndevelopment,
+Dialogue: 0,0:00:12.04,0:00:12.32,D,,0,0,0,,signals for {\c&H0000E6FF&}early{\c&H00FFFFFF&}\Ndevelopment,
+Dialogue: 0,0:00:12.32,0:00:12.80,D,,0,0,0,,signals for early\N{\c&H0000E6FF&}development,{\c&H00FFFFFF&}
+Dialogue: 0,0:00:13.08,0:00:13.48,D,,0,0,0,,{\c&H0000E6FF&}looking{\c&H00FFFFFF&} for permits,
+Dialogue: 0,0:00:13.48,0:00:13.70,D,,0,0,0,,looking {\c&H0000E6FF&}for{\c&H00FFFFFF&} permits,
+Dialogue: 0,0:00:13.70,0:00:14.16,D,,0,0,0,,looking for {\c&H0000E6FF&}permits,{\c&H00FFFFFF&}
+Dialogue: 0,0:00:14.60,0:00:14.78,D,,0,0,0,,{\c&H0000E6FF&}looking{\c&H00FFFFFF&} for construction,
+Dialogue: 0,0:00:14.78,0:00:14.96,D,,0,0,0,,looking {\c&H0000E6FF&}for{\c&H00FFFFFF&} construction,
+Dialogue: 0,0:00:14.96,0:00:15.56,D,,0,0,0,,looking for {\c&H0000E6FF&}construction,{\c&H00FFFFFF&}
+Dialogue: 0,0:00:16.00,0:00:16.36,D,,0,0,0,,{\c&H0000E6FF&}right?{\c&H00FFFFFF&}
+Dialogue: 0,0:00:16.62,0:00:16.74,D,,0,0,0,,{\c&H0000E6FF&}And{\c&H00FFFFFF&} that got\Neasier with me
+Dialogue: 0,0:00:16.70,0:00:16.92,D,,0,0,0,,And {\c&H0000E6FF&}that{\c&H00FFFFFF&} got\Neasier with me
+Dialogue: 0,0:00:16.92,0:00:17.08,D,,0,0,0,,And that {\c&H0000E6FF&}got{\c&H00FFFFFF&}\Neasier with me
+Dialogue: 0,0:00:17.08,0:00:17.60,D,,0,0,0,,And that got\N{\c&H0000E6FF&}easier{\c&H00FFFFFF&} with me
+Dialogue: 0,0:00:17.60,0:00:18.12,D,,0,0,0,,And that got\Neasier {\c&H0000E6FF&}with{\c&H00FFFFFF&} me
+Dialogue: 0,0:00:18.12,0:00:18.38,D,,0,0,0,,And that got\Neasier with {\c&H0000E6FF&}me{\c&H00FFFFFF&}
+Dialogue: 0,0:00:18.38,0:00:19.04,D,,0,0,0,,{\c&H0000E6FF&}using{\c&H00FFFFFF&} CraneSignal.
+Dialogue: 0,0:00:19.04,0:00:19.96,D,,0,0,0,,using {\c&H0000E6FF&}CraneSignal.{\c&H00FFFFFF&}
+Dialogue: 0,0:00:20.28,0:00:21.18,D,,0,0,0,,{\c&H0000E6FF&}CraneSignal{\c&H00FFFFFF&} allows me\Nto find the
+Dialogue: 0,0:00:21.18,0:00:22.00,D,,0,0,0,,CraneSignal {\c&H0000E6FF&}allows{\c&H00FFFFFF&} me\Nto find the
+Dialogue: 0,0:00:22.00,0:00:22.44,D,,0,0,0,,CraneSignal allows {\c&H0000E6FF&}me{\c&H00FFFFFF&}\Nto find the
+Dialogue: 0,0:00:22.44,0:00:22.94,D,,0,0,0,,CraneSignal allows me\N{\c&H0000E6FF&}to{\c&H00FFFFFF&} find the
+Dialogue: 0,0:00:22.94,0:00:23.42,D,,0,0,0,,CraneSignal allows me\Nto {\c&H0000E6FF&}find{\c&H00FFFFFF&} the
+Dialogue: 0,0:00:23.42,0:00:23.70,D,,0,0,0,,CraneSignal allows me\Nto find {\c&H0000E6FF&}the{\c&H00FFFFFF&}
+Dialogue: 0,0:00:23.70,0:00:24.44,D,,0,0,0,,{\c&H0000E6FF&}leads{\c&H00FFFFFF&} early for\Nvery big and
+Dialogue: 0,0:00:24.44,0:00:25.02,D,,0,0,0,,leads {\c&H0000E6FF&}early{\c&H00FFFFFF&} for\Nvery big and
+Dialogue: 0,0:00:25.02,0:00:25.80,D,,0,0,0,,leads early {\c&H0000E6FF&}for{\c&H00FFFFFF&}\Nvery big and
+Dialogue: 0,0:00:25.80,0:00:26.46,D,,0,0,0,,leads early for\N{\c&H0000E6FF&}very{\c&H00FFFFFF&} big and
+Dialogue: 0,0:00:26.46,0:00:26.88,D,,0,0,0,,leads early for\Nvery {\c&H0000E6FF&}big{\c&H00FFFFFF&} and
+Dialogue: 0,0:00:26.88,0:00:27.16,D,,0,0,0,,leads early for\Nvery big {\c&H0000E6FF&}and{\c&H00FFFFFF&}
+Dialogue: 0,0:00:27.16,0:00:27.62,D,,0,0,0,,{\c&H0000E6FF&}small{\c&H00FFFFFF&} apartment buildings.
+Dialogue: 0,0:00:27.62,0:00:28.16,D,,0,0,0,,small {\c&H0000E6FF&}apartment{\c&H00FFFFFF&} buildings.
+Dialogue: 0,0:00:28.16,0:00:28.60,D,,0,0,0,,small apartment {\c&H0000E6FF&}buildings.{\c&H00FFFFFF&}
+Dialogue: 0,0:00:28.60,0:00:29.28,D,,0,0,0,,{\c&H0000E6FF&}Now{\c&H00FFFFFF&} when I\Ngo here,
+Dialogue: 0,0:00:29.28,0:00:29.50,D,,0,0,0,,Now {\c&H0000E6FF&}when{\c&H00FFFFFF&} I\Ngo here,
+Dialogue: 0,0:00:29.50,0:00:29.62,D,,0,0,0,,Now when {\c&H0000E6FF&}I{\c&H00FFFFFF&}\Ngo here,
+Dialogue: 0,0:00:29.62,0:00:29.80,D,,0,0,0,,Now when I\N{\c&H0000E6FF&}go{\c&H00FFFFFF&} here,
+Dialogue: 0,0:00:29.80,0:00:30.06,D,,0,0,0,,Now when I\Ngo {\c&H0000E6FF&}here,{\c&H00FFFFFF&}
+Dialogue: 0,0:00:30.16,0:00:30.30,D,,0,0,0,,{\c&H0000E6FF&}I'm{\c&H00FFFFFF&} able to\Nactually ask their
+Dialogue: 0,0:00:30.30,0:00:30.46,D,,0,0,0,,I'm {\c&H0000E6FF&}able{\c&H00FFFFFF&} to\Nactually ask their
+Dialogue: 0,0:00:30.46,0:00:30.60,D,,0,0,0,,I'm able {\c&H0000E6FF&}to{\c&H00FFFFFF&}\Nactually ask their
+Dialogue: 0,0:00:30.60,0:00:31.02,D,,0,0,0,,I'm able to\N{\c&H0000E6FF&}actually{\c&H00FFFFFF&} ask their
+Dialogue: 0,0:00:31.02,0:00:31.62,D,,0,0,0,,I'm able to\Nactually {\c&H0000E6FF&}ask{\c&H00FFFFFF&} their
+Dialogue: 0,0:00:31.62,0:00:31.88,D,,0,0,0,,I'm able to\Nactually ask {\c&H0000E6FF&}their{\c&H00FFFFFF&}
+Dialogue: 0,0:00:31.88,0:00:32.34,D,,0,0,0,,{\c&H0000E6FF&}agent{\c&H00FFFFFF&} for what\Nthe best leads
+Dialogue: 0,0:00:32.34,0:00:32.98,D,,0,0,0,,agent {\c&H0000E6FF&}for{\c&H00FFFFFF&} what\Nthe best leads
+Dialogue: 0,0:00:32.98,0:00:33.16,D,,0,0,0,,agent for {\c&H0000E6FF&}what{\c&H00FFFFFF&}\Nthe best leads
+Dialogue: 0,0:00:33.16,0:00:33.36,D,,0,0,0,,agent for what\N{\c&H0000E6FF&}the{\c&H00FFFFFF&} best leads
+Dialogue: 0,0:00:33.36,0:00:33.72,D,,0,0,0,,agent for what\Nthe {\c&H0000E6FF&}best{\c&H00FFFFFF&} leads
+Dialogue: 0,0:00:33.72,0:00:34.12,D,,0,0,0,,agent for what\Nthe best {\c&H0000E6FF&}leads{\c&H00FFFFFF&}
+Dialogue: 0,0:00:34.12,0:00:34.98,D,,0,0,0,,{\c&H0000E6FF&}for{\c&H00FFFFFF&} them right\Nnow.
+Dialogue: 0,0:00:34.98,0:00:35.16,D,,0,0,0,,for {\c&H0000E6FF&}them{\c&H00FFFFFF&} right\Nnow.
+Dialogue: 0,0:00:35.16,0:00:35.34,D,,0,0,0,,for them {\c&H0000E6FF&}right{\c&H00FFFFFF&}\Nnow.
+Dialogue: 0,0:00:35.34,0:00:35.52,D,,0,0,0,,for them right\N{\c&H0000E6FF&}now.{\c&H00FFFFFF&}
+Dialogue: 0,0:00:35.66,0:00:35.78,D,,0,0,0,,{\c&H0000E6FF&}I{\c&H00FFFFFF&} sell software\Nto these apartments,
+Dialogue: 0,0:00:35.78,0:00:35.98,D,,0,0,0,,I {\c&H0000E6FF&}sell{\c&H00FFFFFF&} software\Nto these apartments,
+Dialogue: 0,0:00:35.98,0:00:36.44,D,,0,0,0,,I sell {\c&H0000E6FF&}software{\c&H00FFFFFF&}\Nto these apartments,
+Dialogue: 0,0:00:36.44,0:00:36.68,D,,0,0,0,,I sell software\N{\c&H0000E6FF&}to{\c&H00FFFFFF&} these apartments,
+Dialogue: 0,0:00:36.68,0:00:36.94,D,,0,0,0,,I sell software\Nto {\c&H0000E6FF&}these{\c&H00FFFFFF&} apartments,
+Dialogue: 0,0:00:36.94,0:00:37.38,D,,0,0,0,,I sell software\Nto these {\c&H0000E6FF&}apartments,{\c&H00FFFFFF&}
+Dialogue: 0,0:00:37.64,0:00:38.00,D,,0,0,0,,{\c&H0000E6FF&}and{\c&H00FFFFFF&} so I\Nasked them for
+Dialogue: 0,0:00:38.00,0:00:38.16,D,,0,0,0,,and {\c&H0000E6FF&}so{\c&H00FFFFFF&} I\Nasked them for
+Dialogue: 0,0:00:38.16,0:00:38.32,D,,0,0,0,,and so {\c&H0000E6FF&}I{\c&H00FFFFFF&}\Nasked them for
+Dialogue: 0,0:00:38.32,0:00:38.62,D,,0,0,0,,and so I\N{\c&H0000E6FF&}asked{\c&H00FFFFFF&} them for
+Dialogue: 0,0:00:38.62,0:00:38.74,D,,0,0,0,,and so I\Nasked {\c&H0000E6FF&}them{\c&H00FFFFFF&} for
+Dialogue: 0,0:00:38.72,0:00:38.84,D,,0,0,0,,and so I\Nasked them {\c&H0000E6FF&}for{\c&H00FFFFFF&}
+Dialogue: 0,0:00:38.82,0:00:38.94,D,,0,0,0,,{\c&H0000E6FF&}the{\c&H00FFFFFF&} best leads\Nto sell the
+Dialogue: 0,0:00:38.92,0:00:39.18,D,,0,0,0,,the {\c&H0000E6FF&}best{\c&H00FFFFFF&} leads\Nto sell the
+Dialogue: 0,0:00:39.18,0:00:39.44,D,,0,0,0,,the best {\c&H0000E6FF&}leads{\c&H00FFFFFF&}\Nto sell the
+Dialogue: 0,0:00:39.44,0:00:39.66,D,,0,0,0,,the best leads\N{\c&H0000E6FF&}to{\c&H00FFFFFF&} sell the
+Dialogue: 0,0:00:39.66,0:00:39.90,D,,0,0,0,,the best leads\Nto {\c&H0000E6FF&}sell{\c&H00FFFFFF&} the
+Dialogue: 0,0:00:39.90,0:00:40.02,D,,0,0,0,,the best leads\Nto sell {\c&H0000E6FF&}the{\c&H00FFFFFF&}
+Dialogue: 0,0:00:40.02,0:00:40.42,D,,0,0,0,,{\c&H0000E6FF&}software{\c&H00FFFFFF&} right now.
+Dialogue: 0,0:00:40.42,0:00:40.80,D,,0,0,0,,software {\c&H0000E6FF&}right{\c&H00FFFFFF&} now.
+Dialogue: 0,0:00:40.80,0:00:41.14,D,,0,0,0,,software right {\c&H0000E6FF&}now.{\c&H00FFFFFF&}
+Dialogue: 0,0:00:41.48,0:00:41.62,D,,0,0,0,,{\c&H0000E6FF&}It{\c&H00FFFFFF&} gave me\Nthe number,
+Dialogue: 0,0:00:41.62,0:00:41.82,D,,0,0,0,,It {\c&H0000E6FF&}gave{\c&H00FFFFFF&} me\Nthe number,
+Dialogue: 0,0:00:41.82,0:00:42.00,D,,0,0,0,,It gave {\c&H0000E6FF&}me{\c&H00FFFFFF&}\Nthe number,
+Dialogue: 0,0:00:42.00,0:00:42.18,D,,0,0,0,,It gave me\N{\c&H0000E6FF&}the{\c&H00FFFFFF&} number,
+Dialogue: 0,0:00:42.18,0:00:42.50,D,,0,0,0,,It gave me\Nthe {\c&H0000E6FF&}number,{\c&H00FFFFFF&}
+Dialogue: 0,0:00:42.86,0:00:43.02,D,,0,0,0,,{\c&H0000E6FF&}it{\c&H00FFFFFF&} gave me\Nwhere it's at,
+Dialogue: 0,0:00:43.02,0:00:43.14,D,,0,0,0,,it {\c&H0000E6FF&}gave{\c&H00FFFFFF&} me\Nwhere it's at,
+Dialogue: 0,0:00:43.14,0:00:43.28,D,,0,0,0,,it gave {\c&H0000E6FF&}me{\c&H00FFFFFF&}\Nwhere it's at,
+Dialogue: 0,0:00:43.28,0:00:43.64,D,,0,0,0,,it gave me\N{\c&H0000E6FF&}where{\c&H00FFFFFF&} it's at,
+Dialogue: 0,0:00:43.64,0:00:44.22,D,,0,0,0,,it gave me\Nwhere {\c&H0000E6FF&}it's{\c&H00FFFFFF&} at,
+Dialogue: 0,0:00:44.22,0:00:44.46,D,,0,0,0,,it gave me\Nwhere it's {\c&H0000E6FF&}at,{\c&H00FFFFFF&}
+Dialogue: 0,0:00:44.84,0:00:45.16,D,,0,0,0,,{\c&H0000E6FF&}and{\c&H00FFFFFF&} everything I\Nneeded to know.
+Dialogue: 0,0:00:45.16,0:00:45.44,D,,0,0,0,,and {\c&H0000E6FF&}everything{\c&H00FFFFFF&} I\Nneeded to know.
+Dialogue: 0,0:00:45.44,0:00:45.58,D,,0,0,0,,and everything {\c&H0000E6FF&}I{\c&H00FFFFFF&}\Nneeded to know.
+Dialogue: 0,0:00:45.58,0:00:45.72,D,,0,0,0,,and everything I\N{\c&H0000E6FF&}needed{\c&H00FFFFFF&} to know.
+Dialogue: 0,0:00:45.72,0:00:45.84,D,,0,0,0,,and everything I\Nneeded {\c&H0000E6FF&}to{\c&H00FFFFFF&} know.
+Dialogue: 0,0:00:45.84,0:00:45.96,D,,0,0,0,,and everything I\Nneeded to {\c&H0000E6FF&}know.{\c&H00FFFFFF&}
+Dialogue: 0,0:00:46.06,0:00:46.18,D,,0,0,0,,{\c&H0000E6FF&}And{\c&H00FFFFFF&} I also\Nget to download
+Dialogue: 0,0:00:46.12,0:00:46.38,D,,0,0,0,,And {\c&H0000E6FF&}I{\c&H00FFFFFF&} also\Nget to download
+Dialogue: 0,0:00:46.38,0:00:46.82,D,,0,0,0,,And I {\c&H0000E6FF&}also{\c&H00FFFFFF&}\Nget to download
+Dialogue: 0,0:00:46.82,0:00:47.26,D,,0,0,0,,And I also\N{\c&H0000E6FF&}get{\c&H00FFFFFF&} to download
+Dialogue: 0,0:00:47.26,0:00:47.40,D,,0,0,0,,And I also\Nget {\c&H0000E6FF&}to{\c&H00FFFFFF&} download
+Dialogue: 0,0:00:47.40,0:00:47.98,D,,0,0,0,,And I also\Nget to {\c&H0000E6FF&}download{\c&H00FFFFFF&}
+Dialogue: 0,0:00:47.98,0:00:49.06,D,,0,0,0,,{\c&H0000E6FF&}the{\c&H00FFFFFF&} actual PDF,
+Dialogue: 0,0:00:49.06,0:00:49.32,D,,0,0,0,,the {\c&H0000E6FF&}actual{\c&H00FFFFFF&} PDF,
+Dialogue: 0,0:00:49.32,0:00:49.78,D,,0,0,0,,the actual {\c&H0000E6FF&}PDF,{\c&H00FFFFFF&}
+Dialogue: 0,0:00:50.24,0:00:50.64,D,,0,0,0,,{\c&H0000E6FF&}which{\c&H00FFFFFF&} is amazing.
+Dialogue: 0,0:00:50.64,0:00:50.76,D,,0,0,0,,which {\c&H0000E6FF&}is{\c&H00FFFFFF&} amazing.
+Dialogue: 0,0:00:50.74,0:00:51.18,D,,0,0,0,,which is {\c&H0000E6FF&}amazing.{\c&H00FFFFFF&}
+Dialogue: 0,0:00:51.60,0:00:51.74,D,,0,0,0,,{\c&H0000E6FF&}For{\c&H00FFFFFF&} free.
+Dialogue: 0,0:00:51.74,0:00:52.14,D,,0,0,0,,For {\c&H0000E6FF&}free.{\c&H00FFFFFF&}
+Dialogue: 0,0:00:52.58,0:00:52.70,D,,0,0,0,,{\c&H0000E6FF&}I{\c&H00FFFFFF&} didn't even\Nsign in.
+Dialogue: 0,0:00:52.66,0:00:52.82,D,,0,0,0,,I {\c&H0000E6FF&}didn't{\c&H00FFFFFF&} even\Nsign in.
+Dialogue: 0,0:00:52.82,0:00:53.02,D,,0,0,0,,I didn't {\c&H0000E6FF&}even{\c&H00FFFFFF&}\Nsign in.
+Dialogue: 0,0:00:53.02,0:00:53.34,D,,0,0,0,,I didn't even\N{\c&H0000E6FF&}sign{\c&H00FFFFFF&} in.
+Dialogue: 0,0:00:53.34,0:00:53.56,D,,0,0,0,,I didn't even\Nsign {\c&H0000E6FF&}in.{\c&H00FFFFFF&}
+Dialogue: 0,0:00:53.56,0:00:54.24,D,,0,0,0,,{\c&H0000E6FF&}So{\c&H00FFFFFF&} I would\Nsay definitely use
+Dialogue: 0,0:00:54.24,0:00:55.34,D,,0,0,0,,So {\c&H0000E6FF&}I{\c&H00FFFFFF&} would\Nsay definitely use
+Dialogue: 0,0:00:55.34,0:00:55.46,D,,0,0,0,,So I {\c&H0000E6FF&}would{\c&H00FFFFFF&}\Nsay definitely use
+Dialogue: 0,0:00:55.46,0:00:55.62,D,,0,0,0,,So I would\N{\c&H0000E6FF&}say{\c&H00FFFFFF&} definitely use
+Dialogue: 0,0:00:55.62,0:00:55.92,D,,0,0,0,,So I would\Nsay {\c&H0000E6FF&}definitely{\c&H00FFFFFF&} use
+Dialogue: 0,0:00:55.92,0:00:56.20,D,,0,0,0,,So I would\Nsay definitely {\c&H0000E6FF&}use{\c&H00FFFFFF&}
+Dialogue: 0,0:00:56.20,0:00:56.82,D,,0,0,0,,{\c&H0000E6FF&}CraneSignal{\c&H00FFFFFF&} if you\Nneed more leads.
+Dialogue: 0,0:00:56.82,0:00:57.06,D,,0,0,0,,CraneSignal {\c&H0000E6FF&}if{\c&H00FFFFFF&} you\Nneed more leads.
+Dialogue: 0,0:00:57.06,0:00:57.20,D,,0,0,0,,CraneSignal if {\c&H0000E6FF&}you{\c&H00FFFFFF&}\Nneed more leads.
+Dialogue: 0,0:00:57.20,0:00:57.56,D,,0,0,0,,CraneSignal if you\N{\c&H0000E6FF&}need{\c&H00FFFFFF&} more leads.
+Dialogue: 0,0:00:57.56,0:00:57.90,D,,0,0,0,,CraneSignal if you\Nneed {\c&H0000E6FF&}more{\c&H00FFFFFF&} leads.
+Dialogue: 0,0:00:57.90,0:00:58.32,D,,0,0,0,,CraneSignal if you\Nneed more {\c&H0000E6FF&}leads.{\c&H00FFFFFF&}
