@@ -1,0 +1,19 @@
+{
+  "role": "contacts",
+  "state": "complete",
+  "started_at": "2026-09-21T02:19:48Z",
+  "checkpoint_at": "2026-09-21T02:23:28Z",
+  "finished_at": "2026-09-21T02:23:28Z",
+  "records_reviewed": 267,
+  "contacts_saved": 25,
+  "output_paths": {
+    "contacts_json": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/finish/contacts/contacts.json",
+    "summary_md": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/finish/contacts/summary.md",
+    "status_json": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/finish/contacts/status.json"
+  },
+  "notes": [
+    "Selected verified business routes from strongest service-fit candidate records.",
+    "Excluded private homeowner contacts and architect/designer-only routes where stronger owner/GC routes existed.",
+    "Used preserved local evidence paths; no paid APIs, outreach, pushes, live changes, extra agents or broad crawl."
+  ]
+}

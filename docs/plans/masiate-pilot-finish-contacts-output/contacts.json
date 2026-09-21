@@ -1,0 +1,610 @@
+[
+  {
+    "record_ids": [
+      "washington-brenham-permit-com-new-26-0011"
+    ],
+    "verified_business_name": "SpawGlass",
+    "role": "permit-listed general contractor",
+    "phone": null,
+    "email": null,
+    "website": "https://www.spawglass.com/",
+    "source_url": "https://www.spawglass.com/",
+    "retrieved_at": "2026-09-21T02:23:28Z",
+    "role_basis": "City permit report names SpawGlass as contractor for Frost Bank new construction; preserved SpawGlass website evidence verifies it is a Texas construction-services business.",
+    "county": "Washington",
+    "project_name": "Frost Bank Brenham financial center",
+    "address": "862 US Highway 290 E",
+    "record_type": "permit",
+    "record_stage": "permitted",
+    "record_date": "2026-07-29",
+    "contact_limits": "No guessed emails, no private homeowner contact details, and no inferred purchasing authority. A permit-listed contractor or public award does not prove open subcontracting.",
+    "evidence_local_paths_checked": [
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/brenham-permits/2026-07.pdf",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/cad/fresh4-StreetNumber_862_Year_2026.json",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/business/frost-bank-location.html",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/business/spawglass-home.html"
+    ]
+  },
+  {
+    "record_ids": [
+      "washington-brenham-permit-com-new-26-0011"
+    ],
+    "verified_business_name": "Frost Bank",
+    "role": "permit applicant / CAD owner / future branch operator",
+    "phone": null,
+    "email": null,
+    "website": "https://locations.frostbank.com/tx/brenham/862-us-highway-290-e",
+    "source_url": "https://locations.frostbank.com/tx/brenham/862-us-highway-290-e",
+    "retrieved_at": "2026-09-21T02:23:28Z",
+    "role_basis": "City permit report and CAD identify Frost Bank as owner/applicant; preserved Frost location page lists the Brenham financial center at the permit address as coming 2027.",
+    "county": "Washington",
+    "project_name": "Frost Bank Brenham financial center",
+    "address": "862 US Highway 290 E",
+    "record_type": "permit",
+    "record_stage": "permitted",
+    "record_date": "2026-07-29",
+    "contact_limits": "No guessed emails, no private homeowner contact details, and no inferred purchasing authority. A permit-listed contractor or public award does not prove open subcontracting.",
+    "evidence_local_paths_checked": [
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/brenham-permits/2026-07.pdf",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/cad/fresh4-StreetNumber_862_Year_2026.json",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/business/frost-bank-location.html",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/business/spawglass-home.html"
+    ]
+  },
+  {
+    "record_ids": [
+      "washington-brenham-permit-com-new-26-0012"
+    ],
+    "verified_business_name": "EBCO General Contractor",
+    "role": "permit-listed general contractor",
+    "phone": "254-697-8516",
+    "email": null,
+    "website": "https://ebcogc.com/",
+    "source_url": "https://ebcogc.com/",
+    "retrieved_at": "2026-09-21T02:23:28Z",
+    "role_basis": "City permit report names EBCO as contractor for Citizens National Bank new construction; preserved company site evidence verifies commercial, industrial, public and multifamily construction services.",
+    "county": "Washington",
+    "project_name": "Citizens National Bank new construction and parking addition",
+    "address": "400 S Austin Street",
+    "record_type": "permit",
+    "record_stage": "permitted",
+    "record_date": "2026-08-31",
+    "contact_limits": "No guessed emails, no private homeowner contact details, and no inferred purchasing authority. A permit-listed contractor or public award does not prove open subcontracting.",
+    "evidence_local_paths_checked": [
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/brenham-permits/2026-08.pdf",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/cad/fresh-StreetNumber_400_StreetName_Austin_Year_2026.json",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/business/ebco.html"
+    ]
+  },
+  {
+    "record_ids": [
+      "washington-brenham-permit-com-new-26-0012"
+    ],
+    "verified_business_name": "Citizens National Bank",
+    "role": "permit applicant / CAD owner",
+    "phone": null,
+    "email": null,
+    "website": null,
+    "source_url": "https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-08.pdf",
+    "retrieved_at": "2026-09-21T02:23:28Z",
+    "role_basis": "City permit report and CAD identify Citizens National Bank as applicant and parcel owner for the new bank construction.",
+    "county": "Washington",
+    "project_name": "Citizens National Bank new construction and parking addition",
+    "address": "400 S Austin Street",
+    "record_type": "permit",
+    "record_stage": "permitted",
+    "record_date": "2026-08-31",
+    "contact_limits": "No guessed emails, no private homeowner contact details, and no inferred purchasing authority. A permit-listed contractor or public award does not prove open subcontracting.",
+    "evidence_local_paths_checked": [
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/brenham-permits/2026-08.pdf",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/cad/fresh-StreetNumber_400_StreetName_Austin_Year_2026.json",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/business/ebco.html"
+    ]
+  },
+  {
+    "record_ids": [
+      "washington-brenham-permit-com-new-26-0013"
+    ],
+    "verified_business_name": "Collier Construction LLC",
+    "role": "permit-listed construction participant",
+    "phone": "979-836-4477",
+    "email": "maceyt@collierconstruction.com",
+    "website": "https://www.collierconstruction.com/contact",
+    "source_url": "https://www.collierconstruction.com/contact",
+    "retrieved_at": "2026-09-21T02:23:28Z",
+    "role_basis": "City permit report names Collier Construction on the Wilkins Valley phase 3 infrastructure/office permit; preserved contact-page evidence verifies Collier Construction LLC as a Brenham construction business.",
+    "county": "Washington",
+    "project_name": "Wilkins Valley phase 3 public infrastructure / commercial office site development",
+    "address": "1402 W Jefferson Street",
+    "record_type": "permit",
+    "record_stage": "permitted",
+    "record_date": "2026-06-29",
+    "contact_limits": "No guessed emails, no private homeowner contact details, and no inferred purchasing authority. A permit-listed contractor or public award does not prove open subcontracting.",
+    "evidence_local_paths_checked": [
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/brenham-permits/2026-06.pdf",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/business/collier-contact.html",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/cad/fresh2-StreetNumber_1402_StreetName_Jefferson_Year_2026.json"
+    ]
+  },
+  {
+    "record_ids": [
+      "washington-brenham-permit-com-add-26-0006"
+    ],
+    "verified_business_name": "Davis Custom Builders of Texas",
+    "role": "permit-listed contractor",
+    "phone": null,
+    "email": null,
+    "website": null,
+    "source_url": "https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-08.pdf",
+    "retrieved_at": "2026-09-21T02:23:28Z",
+    "role_basis": "City permit report names Davis Custom Builders of Texas as contractor for the Moeller Electric metal-building addition.",
+    "county": "Washington",
+    "project_name": "Moeller Electric metal building addition",
+    "address": "1119 Industrial Boulevard",
+    "record_type": "permit",
+    "record_stage": "permitted",
+    "record_date": "2026-08-06",
+    "contact_limits": "No guessed emails, no private homeowner contact details, and no inferred purchasing authority. A permit-listed contractor or public award does not prove open subcontracting.",
+    "evidence_local_paths_checked": [
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/brenham-permits/2026-08.pdf",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/cad/fresh-StreetNumber_1119_StreetName_Industrial_Year_2026.json"
+    ]
+  },
+  {
+    "record_ids": [
+      "washington-brenham-permit-com-roof-26-0003"
+    ],
+    "verified_business_name": "Guardian Roof Systems",
+    "role": "permit-listed roofing contractor",
+    "phone": null,
+    "email": null,
+    "website": null,
+    "source_url": "https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-06.pdf",
+    "retrieved_at": "2026-09-21T02:23:28Z",
+    "role_basis": "City permit report names Guardian Roof Systems as contractor for the commercial roof replacement at 1901 Longwood Drive.",
+    "county": "Washington",
+    "project_name": "Sage Longwood Holdings commercial roof replacement",
+    "address": "1901 Longwood Drive",
+    "record_type": "permit",
+    "record_stage": "permitted",
+    "record_date": "2026-06-25",
+    "contact_limits": "No guessed emails, no private homeowner contact details, and no inferred purchasing authority. A permit-listed contractor or public award does not prove open subcontracting.",
+    "evidence_local_paths_checked": [
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/brenham-permits/2026-06.pdf",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/cad/fresh2-StreetNumber_1901_StreetName_Longwood_Year_2026.json"
+    ]
+  },
+  {
+    "record_ids": [
+      "washington-brenham-permit-com-new-26-0014"
+    ],
+    "verified_business_name": "United Constructors of Texas",
+    "role": "permit-listed contractor",
+    "phone": null,
+    "email": null,
+    "website": null,
+    "source_url": "https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-06.pdf",
+    "retrieved_at": "2026-09-21T02:23:28Z",
+    "role_basis": "City permit report names United Constructors of Texas as contractor for the Lex Investments tenant office buildout.",
+    "county": "Washington",
+    "project_name": "Lex Investments tenant office buildout",
+    "address": "1504 S Day Street",
+    "record_type": "permit",
+    "record_stage": "permitted",
+    "record_date": "2026-06-25",
+    "contact_limits": "No guessed emails, no private homeowner contact details, and no inferred purchasing authority. A permit-listed contractor or public award does not prove open subcontracting.",
+    "evidence_local_paths_checked": [
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/brenham-permits/2026-06.pdf",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/cad/fresh2-StreetNumber_1504_StreetName_Day_Year_2026.json"
+    ]
+  },
+  {
+    "record_ids": [
+      "washington-brenham-permit-com-new-26-0010-apartment"
+    ],
+    "verified_business_name": "Valco Builders",
+    "role": "permit-listed contractor",
+    "phone": null,
+    "email": null,
+    "website": null,
+    "source_url": "https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-06.pdf",
+    "retrieved_at": "2026-09-21T02:23:28Z",
+    "role_basis": "City permit report names Valco Builders as contractor for the Nelson Sosa multifamily apartment building; private owner contact details were not exported.",
+    "county": "Washington",
+    "project_name": "Nelson Sosa multifamily apartment building",
+    "address": "411 Church Street",
+    "record_type": "permit",
+    "record_stage": "permitted",
+    "record_date": "2026-06-22",
+    "contact_limits": "No guessed emails, no private homeowner contact details, and no inferred purchasing authority. A permit-listed contractor or public award does not prove open subcontracting.",
+    "evidence_local_paths_checked": [
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/brenham-permits/2026-06.pdf",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/cad/fresh2-StreetNumber_411_StreetName_Church_Year_2026.json"
+    ]
+  },
+  {
+    "record_ids": [
+      "washington-brenham-permit-com-new-26-0007"
+    ],
+    "verified_business_name": "Redeemer Church Brenham",
+    "role": "owner/applicant",
+    "phone": null,
+    "email": null,
+    "website": null,
+    "source_url": "https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-07.pdf",
+    "retrieved_at": "2026-09-21T02:23:28Z",
+    "role_basis": "City permit report and CAD identify Redeemer Church Brenham for the permitted parking-lot improvements; no private contact details were exported.",
+    "county": "Washington",
+    "project_name": "Redeemer Church parking lot improvements",
+    "address": "2111 S Blue Bell Road",
+    "record_type": "permit",
+    "record_stage": "permitted",
+    "record_date": "2026-07-07",
+    "contact_limits": "No guessed emails, no private homeowner contact details, and no inferred purchasing authority. A permit-listed contractor or public award does not prove open subcontracting.",
+    "evidence_local_paths_checked": [
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/brenham-permits/2026-07.pdf",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/cad/fresh2-StreetNumber_2111_StreetName_Blue_Bell_Year_2026.json"
+    ]
+  },
+  {
+    "record_ids": [
+      "washington-brenham-permit-com-new-26-0007"
+    ],
+    "verified_business_name": "Atlas Sign Services",
+    "role": "permit-listed sign/wall contractor",
+    "phone": null,
+    "email": null,
+    "website": null,
+    "source_url": "https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-07.pdf",
+    "retrieved_at": "2026-09-21T02:23:28Z",
+    "role_basis": "City permit report names Atlas Sign Services for the related wall/sign construction at Redeemer Church.",
+    "county": "Washington",
+    "project_name": "Redeemer Church parking lot improvements",
+    "address": "2111 S Blue Bell Road",
+    "record_type": "permit",
+    "record_stage": "permitted",
+    "record_date": "2026-07-07",
+    "contact_limits": "No guessed emails, no private homeowner contact details, and no inferred purchasing authority. A permit-listed contractor or public award does not prove open subcontracting.",
+    "evidence_local_paths_checked": [
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/brenham-permits/2026-07.pdf",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/cad/fresh2-StreetNumber_2111_StreetName_Blue_Bell_Year_2026.json"
+    ]
+  },
+  {
+    "record_ids": [
+      "washington-brenham-permit-com-add-26-0009"
+    ],
+    "verified_business_name": "Dudley Construction",
+    "role": "permit-listed contractor",
+    "phone": null,
+    "email": null,
+    "website": null,
+    "source_url": "https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-06.pdf",
+    "retrieved_at": "2026-09-21T02:23:28Z",
+    "role_basis": "City permit report names Dudley Construction for the Brenham Water Treatment Plant rehabilitation and expansion.",
+    "county": "Washington",
+    "project_name": "Brenham Water Treatment Plant rehabilitation and expansion",
+    "address": "1105 S Austin Street",
+    "record_type": "permit",
+    "record_stage": "permitted",
+    "record_date": "2026-06-29",
+    "contact_limits": "No guessed emails, no private homeowner contact details, and no inferred purchasing authority. A permit-listed contractor or public award does not prove open subcontracting.",
+    "evidence_local_paths_checked": [
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/brenham-permits/2026-06.pdf",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/cad/fresh2-StreetNumber_1105_StreetName_Austin_Year_2026.json"
+    ]
+  },
+  {
+    "record_ids": [
+      "washington-brenham-permit-misc-prkg-26-0018-grace-drainage"
+    ],
+    "verified_business_name": "Grace Community Fellowship - Brenham",
+    "role": "permit applicant / owner-listed contractor",
+    "phone": null,
+    "email": null,
+    "website": null,
+    "source_url": "https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-07.pdf",
+    "retrieved_at": "2026-09-21T02:23:28Z",
+    "role_basis": "City permit report identifies Grace Community Fellowship for paving and drainage improvements; source does not prove outside subcontract packages remain open.",
+    "county": "Washington",
+    "project_name": "Grace Community Fellowship paving and drainage improvements",
+    "address": "107 S Saeger Street",
+    "record_type": "permit",
+    "record_stage": "permitted",
+    "record_date": "2026-07-09",
+    "contact_limits": "No guessed emails, no private homeowner contact details, and no inferred purchasing authority. A permit-listed contractor or public award does not prove open subcontracting.",
+    "evidence_local_paths_checked": [
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/brenham-permits/2026-07.pdf"
+    ]
+  },
+  {
+    "record_ids": [
+      "grimes-navasota-dashboard-20260920-minnie-street-cdbg"
+    ],
+    "verified_business_name": "Terra Bella Construction",
+    "role": "awarded contractor named by city dashboard",
+    "phone": null,
+    "email": null,
+    "website": null,
+    "source_url": "https://navasota.maps.arcgis.com/apps/dashboards/17b7b6efb2794a54b6a2f4ce3473cb12",
+    "retrieved_at": "2026-09-21T02:23:28Z",
+    "role_basis": "City dashboard names Terra Bella Construction as awarded contractor for the Minnie Street water and sewer replacement project.",
+    "county": "Grimes",
+    "project_name": "Minnie Street water and sewer replacement CDBG project",
+    "address": "Minnie Street, Navasota, TX 77868; dashboard point 30.383, -96.093",
+    "record_type": "planning",
+    "record_stage": "construction_reported",
+    "record_date": null,
+    "contact_limits": "No guessed emails, no private homeowner contact details, and no inferred purchasing authority. A permit-listed contractor or public award does not prove open subcontracting.",
+    "evidence_local_paths_checked": [
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/grimes/evidence/navasota_project_layer_query.json"
+    ]
+  },
+  {
+    "record_ids": [
+      "grimes-navasota-dashboard-20260920-fosters-levy-louise-mitmod"
+    ],
+    "verified_business_name": "JTM Construction",
+    "role": "awarded contractor named by city dashboard",
+    "phone": null,
+    "email": null,
+    "website": null,
+    "source_url": "https://navasota.maps.arcgis.com/apps/dashboards/17b7b6efb2794a54b6a2f4ce3473cb12",
+    "retrieved_at": "2026-09-21T02:23:28Z",
+    "role_basis": "City dashboard names JTM Construction as awarded contractor and reports active sewer-main replacement on Foster Street.",
+    "county": "Grimes",
+    "project_name": "Foster, Levy and Louise water/sewer replacement Mit-Mod project",
+    "address": "Foster Street, Levy Street and Louise Street, Navasota, TX 77868; dashboard point 30.382, -96.091",
+    "record_type": "planning",
+    "record_stage": "construction_reported",
+    "record_date": null,
+    "contact_limits": "No guessed emails, no private homeowner contact details, and no inferred purchasing authority. A permit-listed contractor or public award does not prove open subcontracting.",
+    "evidence_local_paths_checked": [
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/grimes/evidence/navasota_project_layer_query.json"
+    ]
+  },
+  {
+    "record_ids": [
+      "grimes-iola-20260811-wwtp-contract"
+    ],
+    "verified_business_name": "Teal Services, LLC",
+    "role": "construction contract party named in public agenda",
+    "phone": null,
+    "email": null,
+    "website": null,
+    "source_url": "https://cityofiola.myruralwater.com/documents/1511/Agenda_August_11_LJ_2026.pdf",
+    "retrieved_at": "2026-09-21T02:23:28Z",
+    "role_basis": "City of Iola agenda item names Teal Services, LLC as construction contract party for the TWDB wastewater-treatment-plant project.",
+    "county": "Grimes",
+    "project_name": "City of Iola 0.100 MGD wastewater treatment plant construction",
+    "address": "Project location in Iola city limits near FM 39 / TX 90 per plan vicinity map; exact site address not stated in extracted text",
+    "record_type": "bid",
+    "record_stage": "planned",
+    "record_date": "2026-08-11",
+    "contact_limits": "No guessed emails, no private homeowner contact details, and no inferred purchasing authority. A permit-listed contractor or public award does not prove open subcontracting.",
+    "evidence_local_paths_checked": [
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/grimes/evidence/iola_current_projects.html",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/grimes/evidence/iola_agenda_august_11_2026.pdf",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/grimes/evidence/iola_wwtp_plans.pdf"
+    ]
+  },
+  {
+    "record_ids": [
+      "grimes-iola-20260811-wwtp-contract"
+    ],
+    "verified_business_name": "City of Iola",
+    "role": "owner/public buyer",
+    "phone": null,
+    "email": null,
+    "website": null,
+    "source_url": "https://cityofiola.myruralwater.com/current-projects",
+    "retrieved_at": "2026-09-21T02:23:28Z",
+    "role_basis": "City current-projects and agenda evidence identify City of Iola as public owner/buyer for the WWTP project.",
+    "county": "Grimes",
+    "project_name": "City of Iola 0.100 MGD wastewater treatment plant construction",
+    "address": "Project location in Iola city limits near FM 39 / TX 90 per plan vicinity map; exact site address not stated in extracted text",
+    "record_type": "bid",
+    "record_stage": "planned",
+    "record_date": "2026-08-11",
+    "contact_limits": "No guessed emails, no private homeowner contact details, and no inferred purchasing authority. A permit-listed contractor or public award does not prove open subcontracting.",
+    "evidence_local_paths_checked": [
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/grimes/evidence/iola_current_projects.html",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/grimes/evidence/iola_agenda_august_11_2026.pdf",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/grimes/evidence/iola_wwtp_plans.pdf"
+    ]
+  },
+  {
+    "record_ids": [
+      "leon-county-rfp-2026-355-courthouse-building-improvements"
+    ],
+    "verified_business_name": "Phoenix I Restoration and Construction LLC",
+    "role": "bidder / recommended CMAR",
+    "phone": null,
+    "email": null,
+    "website": null,
+    "source_url": "https://www.co.leon.tx.us/upload/page/10054/RFP%202026-355%20CMAR%20BID%20TABULATION%20COMMISSIONER%20COURT%20APPROVAL_5-12-2026.pdf",
+    "retrieved_at": "2026-09-21T02:23:28Z",
+    "role_basis": "Leon County bid-tab evidence names Phoenix I Restoration and Construction LLC as bidder/recommended CMAR for courthouse/building improvements.",
+    "county": "Leon",
+    "project_name": "Leon County Courthouse and Building Improvements Project",
+    "address": "Explicitly unknown in inspected bid tab; project identified as Leon County courthouse/building improvements in Centerville, TX",
+    "record_type": "bid",
+    "record_stage": "planned",
+    "record_date": "2026-06-10",
+    "contact_limits": "No guessed emails, no private homeowner contact details, and no inferred purchasing authority. A permit-listed contractor or public award does not prove open subcontracting.",
+    "evidence_local_paths_checked": [
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/leon/evidence/county/RFP 2026-355 CMAR BID TABULATION COMMISSIONER COURT APPROVAL_5-12-2026.pdf"
+    ]
+  },
+  {
+    "record_ids": [
+      "leon-county-rfp-2026-355-courthouse-building-improvements"
+    ],
+    "verified_business_name": "Leon County, Texas",
+    "role": "owner/public buyer",
+    "phone": null,
+    "email": null,
+    "website": null,
+    "source_url": "https://www.co.leon.tx.us/page/leon.BidTabulations",
+    "retrieved_at": "2026-09-21T02:23:28Z",
+    "role_basis": "Leon County bid-tab evidence identifies the county as owner for the courthouse/building improvements project.",
+    "county": "Leon",
+    "project_name": "Leon County Courthouse and Building Improvements Project",
+    "address": "Explicitly unknown in inspected bid tab; project identified as Leon County courthouse/building improvements in Centerville, TX",
+    "record_type": "bid",
+    "record_stage": "planned",
+    "record_date": "2026-06-10",
+    "contact_limits": "No guessed emails, no private homeowner contact details, and no inferred purchasing authority. A permit-listed contractor or public award does not prove open subcontracting.",
+    "evidence_local_paths_checked": [
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/leon/evidence/county/RFP 2026-355 CMAR BID TABULATION COMMISSIONER COURT APPROVAL_5-12-2026.pdf"
+    ]
+  },
+  {
+    "record_ids": [
+      "grimes-navasota-pz-20260827-sterling-auto-expansion"
+    ],
+    "verified_business_name": "Lay Construction",
+    "role": "project representative verified in city memo",
+    "phone": null,
+    "email": null,
+    "website": null,
+    "source_url": "https://destinyhosted.com/agenda_publish.cfm?id=62827&mt=ALL&get_month=8&get_year=2026&dsp=agm&seq=1041&rev=0&ag=244&ln=2885",
+    "retrieved_at": "2026-09-21T02:23:28Z",
+    "role_basis": "Navasota P&Z memo identifies Lay Construction as project representative for the Sterling Auto / Navasota Ventures site expansion.",
+    "county": "Grimes",
+    "project_name": "Sterling Auto / Navasota Ventures preliminary site plan expansion",
+    "address": "9030 Highway 6, Navasota, TX 77868",
+    "record_type": "planning",
+    "record_stage": "planned",
+    "record_date": "2026-08-27",
+    "contact_limits": "No guessed emails, no private homeowner contact details, and no inferred purchasing authority. A permit-listed contractor or public award does not prove open subcontracting.",
+    "evidence_local_paths_checked": [
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/grimes/evidence/navasota_agenda_244.html",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/grimes/evidence/navasota_memo_1041_sterling_auto.html",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/grimes/evidence/grimescad_9030_hwy6.json"
+    ]
+  },
+  {
+    "record_ids": [
+      "grimes-navasota-pz-20260827-sterling-auto-expansion"
+    ],
+    "verified_business_name": "Navasota Ventures, LLC",
+    "role": "owner/applicant verified in city memo",
+    "phone": null,
+    "email": null,
+    "website": null,
+    "source_url": "https://destinyhosted.com/agenda_publish.cfm?id=62827&mt=ALL&get_month=8&get_year=2026&dsp=agm&seq=1041&rev=0&ag=244&ln=2885",
+    "retrieved_at": "2026-09-21T02:23:28Z",
+    "role_basis": "Navasota P&Z memo and CAD evidence identify Navasota Ventures, LLC as owner/applicant for the site-expansion planning case.",
+    "county": "Grimes",
+    "project_name": "Sterling Auto / Navasota Ventures preliminary site plan expansion",
+    "address": "9030 Highway 6, Navasota, TX 77868",
+    "record_type": "planning",
+    "record_stage": "planned",
+    "record_date": "2026-08-27",
+    "contact_limits": "No guessed emails, no private homeowner contact details, and no inferred purchasing authority. A permit-listed contractor or public award does not prove open subcontracting.",
+    "evidence_local_paths_checked": [
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/grimes/evidence/navasota_agenda_244.html",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/grimes/evidence/navasota_memo_1041_sterling_auto.html",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/grimes/evidence/grimescad_9030_hwy6.json"
+    ]
+  },
+  {
+    "record_ids": [
+      "burleson-somerville-ord-26-011-avenue-p-multifamily"
+    ],
+    "verified_business_name": "ALTURA CAPITAL LLC",
+    "role": "CAD-listed owner/developer",
+    "phone": null,
+    "email": null,
+    "website": null,
+    "source_url": "https://esearch.burlesonappraisal.com/Property/View/1043275",
+    "retrieved_at": "2026-09-21T02:23:28Z",
+    "role_basis": "Somerville ordinance and Burleson CAD evidence identify ALTURA CAPITAL LLC as owner/developer for the Avenue P multifamily special-use permit.",
+    "county": "Burleson",
+    "project_name": "Avenue P multifamily special-use permit",
+    "address": "Avenue P lot; Landolt #9 Addition Block 2 west half, 2.0 acres; situs street number not listed in ordinance or CAD",
+    "record_type": "planning",
+    "record_stage": "planned",
+    "record_date": "2026-04-21",
+    "contact_limits": "No guessed emails, no private homeowner contact details, and no inferred purchasing authority. A permit-listed contractor or public award does not prove open subcontracting.",
+    "evidence_local_paths_checked": [
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/burleson/evidence/somerville/ordinances/Ordinance 26-011 for SUP Multifamily in RS1 Zone.pdf",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/burleson/evidence/bcad-1043275.html"
+    ]
+  },
+  {
+    "record_ids": [
+      "robertson-hearne-el-construction-w-blackshear-2026-09-15"
+    ],
+    "verified_business_name": "EL Construction, LLC",
+    "role": "property owner / applicant business",
+    "phone": null,
+    "email": null,
+    "website": null,
+    "source_url": "https://esearch.robertsoncad.com/Property/View?Id=20833&year=2026",
+    "retrieved_at": "2026-09-21T02:23:28Z",
+    "role_basis": "Hearne agenda and Robertson CAD evidence identify EL Construction, LLC as business owner/applicant for the West Blackshear Street tract petition.",
+    "county": "Robertson",
+    "project_name": "EL Construction petition for AB 31 G A Nixon tract on West Blackshear Street",
+    "address": "W Blackshear St; AB 31 G A Nixon 1612/83 4 acres",
+    "record_type": "planning",
+    "record_stage": "planned",
+    "record_date": "2026-09-15",
+    "contact_limits": "No guessed emails, no private homeowner contact details, and no inferred purchasing authority. A permit-listed contractor or public award does not prove open subcontracting.",
+    "evidence_local_paths_checked": [
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/robertson/evidence/hearne/agenda-09152026-251.pdf",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/robertson/evidence/robertsoncad/property-20833-2026.html",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/robertson/evidence/robertsoncad/search-EL_CONSTRUCTION.json"
+    ]
+  },
+  {
+    "record_ids": [
+      "robertson-hearne-iron-oak-lots-114-115-variance-2026-08-25"
+    ],
+    "verified_business_name": "Iron Oak Reserve, LLC",
+    "role": "property owner of unsold Iron Oak Reserve lots",
+    "phone": null,
+    "email": null,
+    "website": null,
+    "source_url": "https://esearch.robertsoncad.com/Property/View?Id=93096&year=2026",
+    "retrieved_at": "2026-09-21T02:23:28Z",
+    "role_basis": "Hearne variance agenda and Robertson CAD evidence identify Iron Oak Reserve, LLC for lots 114 and 115.",
+    "county": "Robertson",
+    "project_name": "Iron Oak Reserve lots 114 and 115 variance",
+    "address": "Lots 114 and 115 Iron Oak Reserve 1633/699 2.004 acres; parent CAD situs FM 485",
+    "record_type": "planning",
+    "record_stage": "planned",
+    "record_date": "2026-08-25",
+    "contact_limits": "No guessed emails, no private homeowner contact details, and no inferred purchasing authority. A permit-listed contractor or public award does not prove open subcontracting.",
+    "evidence_local_paths_checked": [
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/robertson/evidence/hearne/2026-08-20-pnz-agenda.pdf",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/robertson/evidence/hearne/agenda-09152026-251.pdf",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/robertson/evidence/robertsoncad/property-93096-2026.html",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/robertson/evidence/robertsoncad/search-Iron_Oak.json"
+    ]
+  },
+  {
+    "record_ids": [
+      "brazos-bryan-sdrc-sp26-000053-oxbow-business-park"
+    ],
+    "verified_business_name": "Oxbow Construction, LLC",
+    "role": "owner/developer",
+    "phone": null,
+    "email": null,
+    "website": null,
+    "source_url": "https://docs.bryantx.gov/planning_development/SDRC/2026%20SDRC/08-11-2026/SP26-000053%2C%20Hwy%2030%20Business%20Park%2C%20Oxbow%20Business%20Park%2C%208-11-26.pdf",
+    "retrieved_at": "2026-09-21T02:23:28Z",
+    "role_basis": "Bryan SDRC plan evidence identifies Oxbow Construction, LLC as owner/developer for the Oxbow Business Park site plan.",
+    "county": "Brazos",
+    "project_name": "Oxbow Business Park / Hwy 30 Business Park",
+    "address": "11400 State Highway 30",
+    "record_type": "planning",
+    "record_stage": "planned",
+    "record_date": "2026-08-11",
+    "contact_limits": "No guessed emails, no private homeowner contact details, and no inferred purchasing authority. A permit-listed contractor or public award does not prove open subcontracting.",
+    "evidence_local_paths_checked": [
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/brazos/evidence/bryan/sdrc-08-11-2026/SP26-000053, Hwy 30 Business Park, Oxbow Business Park, 8-11-26.pdf"
+    ]
+  }
+]
