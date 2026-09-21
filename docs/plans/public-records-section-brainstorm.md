@@ -93,4 +93,15 @@ Suggested first lane: fencing/concrete through local builders, because the
 project records offer a concrete reason to contact them, though Masiate would
 usually be doing part of the job rather than the entire project.
 
-No implementation tasks are queued and no outreach has been sent.
+## Confirmed Product And Collection Direction
+
+On 2026-09-20 Drew clarified that this should be a regular public section inside
+CraneSignal, not a private area, and that the existing agent must have the data.
+The first planning deliverable is a broad crawl for relevant Masiate prospects
+across its services. Do not restrict the collection to one trade based on the
+earlier suggested options.
+
+The source-by-source design, tool choices, evidence checks and integration
+requirements are in [Masiate: First Lead Collection Plan](masiate-first-crawl.md).
+Geographic boundary remains an open question; no implementation tasks are
+running and no outreach has been sent.
