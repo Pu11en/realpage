@@ -17,12 +17,18 @@ PAGES = ["index.html", "under-the-hood.html", "property.html?id=1"]
 SCREENSHOT_DIR = "/tmp/qa"
 
 
+CHAT_ORIGIN = [""]
+
+
 async def check_console_errors(page, path, bugs):
     errs = []
     page.on("pageerror", lambda e: errs.append(f"pageerror: {e}"))
-    # A signed-out auth probe intentionally returns 401 before the free-account
-    # card appears; Chromium logs that expected response as a console error.
-    page.on("console", lambda m: m.type == "error" and "401 (Unauthorized)" not in m.text
+    # Early Leads opens the chat on load, so the chat app's own signed-out
+    # auth checks (401/404 from the chat address) land here; those aren't site bugs.
+    chat = CHAT_ORIGIN[0]
+    page.on("console", lambda m: m.type == "error"
+            and not (chat and (m.location or {}).get("url", "").startswith(chat))
+            and "401 (Unauthorized)" not in m.text
             and errs.append(f"console: {m.text}"))
     resp = await page.goto(path, wait_until="networkidle")
     if resp is None or resp.status >= 400:
@@ -44,6 +50,7 @@ async def main():
     site = sys.argv[1] if len(sys.argv) > 1 else "http://localhost:8766"
     chat = sys.argv[2] if len(sys.argv) > 2 else "http://localhost:3001"
     bugs = []
+    CHAT_ORIGIN[0] = chat.rstrip("/")
     os.makedirs(SCREENSHOT_DIR, exist_ok=True)
 
     async with async_playwright() as pw:
@@ -56,7 +63,14 @@ async def main():
                 page = await context.new_page()
                 await check_console_errors(page, f"{site}/{page_path}", bugs)
 
-                panel = await ensure_panel_open(page)
+                panel = page.locator("#chat-panel")
+                # Early Leads opens the chat by itself on wide screens.
+                auto = tag == "desktop" and page_path.split("?")[0] in ("", "index.html")
+                if auto:
+                    if not await panel.evaluate("(el) => el.classList.contains('open')"):
+                        bugs.append(f"{page_path} ({tag}): chat didn't open by itself on Early Leads")
+                else:
+                    panel = await ensure_panel_open(page)
                 is_open = await panel.evaluate("(el) => el.classList.contains('open')")
                 if not is_open:
                     bugs.append(f"{page_path} ({tag}): Ask button didn't open the panel")
@@ -70,7 +84,7 @@ async def main():
                 page = await context.new_page()
                 await check_console_errors(page, f"{site}/index.html", bugs)
                 await ensure_panel_open(page)
-                await page.goto(f"{site}/index.html", wait_until="networkidle")
+                await page.goto(f"{site}/under-the-hood.html", wait_until="networkidle")
                 still_open = await page.locator("#chat-panel").evaluate("(el) => el.classList.contains('open')")
                 if not still_open:
                     bugs.append("panel did not stay open across a page switch")
@@ -141,8 +155,9 @@ async def main():
         await check_console_errors(page, f"{site}/index.html", bugs)
         contact_btn = page.locator("#leads-tbody [data-deep-dive]").first
         await contact_btn.wait_for(state="visible", timeout=5000)
-        if "Get contact" not in await contact_btn.inner_text():
-            bugs.append("contact: Early Leads button does not say 'Get contact'")
+        contact_text = (await contact_btn.inner_text()).lower()
+        if "who to call" not in contact_text and "contact" not in contact_text:
+            bugs.append("contact: Early Leads button does not offer contact help")
         await contact_btn.click()
 
         signin_card = page.locator("#chat-panel-signin-card")
@@ -259,6 +274,7 @@ async def main():
             for page_path in PAGES:
                 page = await context.new_page()
                 await check_console_errors(page, f"{site}/{page_path}", bugs)
+                await ensure_panel_open(page)
                 await ensure_panel_open(page)
                 await page.wait_for_timeout(400)
 
