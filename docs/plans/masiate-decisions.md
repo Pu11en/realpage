@@ -467,3 +467,33 @@ work; live-site changes, agency requests, purchases and deployment remain out.
 No worker AI was named, so the bot must ask for the model before execution.
 For Q17 use the assistant's interim draft-only default while continuing public
 sources; this is not an explicit user selection of A or permission to send.
+
+## Parallel Execution And Timing
+
+Drew subsequently requested parallel tasks organized by elapsed completion time.
+Inspection of /gowork code found a maximum of three parallel tasks, isolated
+working copies, dependency grouping and duration recording. The earlier Codex
+worker was created, began M01 and reported stopped; no completed Masiate task
+was recorded when checked. Do not describe that state as awaiting initial setup
+or as active collection.
+
+The planner's 50 initial tasks are now ordered into 23 explicit dependency waves
+with separate ownership and proposed 15-30 minute task budgets. No claim is made
+that the stopped worker has loaded these changes. Preserve the existing run and
+verify its plan before any resumption, rather than starting duplicate loops.
+See [timing and tradeoffs](masiate-parallel-timing.md).
+
+Q18: Which first-delivery time target should set the collection scope?
+
+- A. Four-hour first report: recommended balance, with checked leads and a PDF,
+  and explicit incomplete-source coverage; deeper collection would be later work.
+- B. One-hour pilot: access checks and whatever verified sample is available,
+  without promising a full report.
+- C. Two-hour quick report: fewer proven sources and a smaller researched shortlist.
+- D. Full accessible-source pass: roughly 6-12 hours under the current assumptions,
+  plus extra batches or external delays; preserves the original breadth intent.
+
+Answer: pending. These are estimates/targets, not measured runtimes or a selected
+hard deadline. Reforecast after actual batches finish; do not invent leads or
+claim all-source completion to meet a clock. No extra paid providers or unbounded
+model spending are authorized by this timing discussion.
