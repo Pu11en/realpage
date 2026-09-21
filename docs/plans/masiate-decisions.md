@@ -477,8 +477,9 @@ worker was created, began M01 and reported stopped; no completed Masiate task
 was recorded when checked. Do not describe that state as awaiting initial setup
 or as active collection.
 
-The planner's 50 initial tasks are now ordered into 23 explicit dependency waves
-with separate ownership and proposed 15-30 minute task budgets. No claim is made
+The first parallel revision grouped 50 tasks into 23 three-worker waves; Drew
+subsequently selected eight workers, now planned as 14 dependency waves with
+separate ownership and proposed 15-30 minute task budgets. No claim is made
 that the stopped worker has loaded these changes. Preserve the existing run and
 verify its plan before any resumption, rather than starting duplicate loops.
 See [timing and tradeoffs](masiate-parallel-timing.md).
@@ -497,3 +498,18 @@ Answer: pending. These are estimates/targets, not measured runtimes or a selecte
 hard deadline. Reforecast after actual batches finish; do not invent leads or
 claim all-source completion to meet a clock. No extra paid providers or unbounded
 model spending are authorized by this timing discussion.
+
+## Eight-Worker Decision
+
+Drew explicitly said "we need 8 workers actuallly" on September 20, 2026.
+Eight is the requested concurrent worker count, not eight workers already running.
+Preserve one coordinated run, eight independent slots during broad collection,
+shared website pacing and allowance checks, then fewer workers for serial merges
+and PDF stages. This replaces the earlier three-worker planning limit.
+
+The installed runner still has MAX_PARALLEL = 3. A per-run setting needs separate
+implementation and verification before this schedule can launch as requested;
+do not change other runs' defaults or restart the shared bot from this plan.
+The current shared ten-session cap does not reserve eight seats for this project.
+This turn changes planning only, starts no workers and selects no deadline;
+Q18 remains open and the full accessible-source intent is retained meanwhile.
