@@ -1,0 +1,199 @@
+[
+  {
+    "name": "Leon County Bid Documents",
+    "url": "https://www.co.leon.tx.us/page/leon.BidDocuments",
+    "county": "Leon",
+    "requested_from": "2025-09-20",
+    "requested_to": "2026-09-20",
+    "covered_from": "2026-08-19",
+    "covered_to": "2026-09-10",
+    "status": "partial",
+    "records_found": 6,
+    "files_read": [
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/leon/evidence/county/leon.BidDocuments",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/leon/evidence/county/RFB 2026-364 COMMUNICATION EQUIPMENT SHELTERS.pdf",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/leon/evidence/county/RFB 2026-364 Communication Equipment SheltersAddendum No1pdf.pdf",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/leon/evidence/county/RFB 2026-364 Communication Equipment Shelters Addendum No2.pdf",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/leon/evidence/county/RFB_2026-365_Notice_of_Postponement.pdf"
+    ],
+    "reason": "Current RFB 2026-364 shelter package and RFB 2026-365 postponement found; no issued-permit register.",
+    "next_cursor": "Check after 2026-09-10 for RFB 2026-364 bid tab/award and RFB 2026-365 reissue.",
+    "retrieved_at": "2026-09-21T01:57:09Z"
+  },
+  {
+    "name": "Leon County Bid Tabulations",
+    "url": "https://www.co.leon.tx.us/page/leon.BidTabulations",
+    "county": "Leon",
+    "requested_from": "2024-09-20",
+    "requested_to": "2026-09-20",
+    "covered_from": "2023-11-13",
+    "covered_to": "2026-06-10",
+    "status": "partial",
+    "records_found": 1,
+    "files_read": [
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/leon/evidence/county/leon.BidTabulations",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/leon/evidence/county/RFP 2026-355 CMAR BID TABULATION COMMISSIONER COURT APPROVAL_5-12-2026.pdf",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/leon/evidence/county/RFP 2026-361 RADIO COMMUNICATION TOWERS Bid Tabulation and Commissioners Court Approval 5-11-26.pdf",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/leon/evidence/county/BID TAB 2025-329 ELECTRICAL INSTALLATION.xlsx",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/leon/evidence/county/BID TAB 2024 315A Expo Equipment Building Court Decision.pdf",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/leon/evidence/county/BID TAB 2024-303 Metal Building Repairs for Road and Bridge Maintenance Facilities.pdf"
+    ],
+    "reason": "Reviewed construction-related tabs; most were historical or non-building, CMAR courthouse/building improvements promoted as candidate.",
+    "next_cursor": "Inspect full RFP 2026-355 package and post-June minutes for award details.",
+    "retrieved_at": "2026-09-21T01:57:09Z"
+  },
+  {
+    "name": "Leon County floodplain/development permits",
+    "url": "https://www.co.leon.tx.us/page/leon.FloodPlain",
+    "county": "Leon",
+    "requested_from": "2025-09-20",
+    "requested_to": "2026-09-20",
+    "covered_from": null,
+    "covered_to": null,
+    "status": "empty",
+    "records_found": 0,
+    "files_read": [
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/leon/evidence/county/leon.FloodPlain"
+    ],
+    "reason": "Page provides procedures/applications and says permits are required for new construction/substantial improvements, but no public issued-record register was found.",
+    "next_cursor": "Request/export issued floodplain-development permits from 911 Addressing/Emergency Management if another pass is approved.",
+    "retrieved_at": "2026-09-21T01:57:09Z"
+  },
+  {
+    "name": "Leon County subdivision/county judge page",
+    "url": "https://www.co.leon.tx.us/page/leon.County.Judge",
+    "county": "Leon",
+    "requested_from": "2024-09-20",
+    "requested_to": "2026-09-20",
+    "covered_from": "2026-08-24",
+    "covered_to": "2026-08-24",
+    "status": "partial",
+    "records_found": 0,
+    "files_read": [
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/leon/evidence/county/leon.County.Judge",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/leon/evidence/county/Subdivision Requirements updated Aug 24 2026.pdf"
+    ],
+    "reason": "Subdivision requirements and checklist found, but not address-level subdivision applications/approvals.",
+    "next_cursor": "Inspect Commissioners Court agenda/minute attachments or clerk records for subdivision plats.",
+    "retrieved_at": "2026-09-21T01:57:09Z"
+  },
+  {
+    "name": "Leon County Commissioners Court agendas/minutes",
+    "url": "https://www.co.leon.tx.us/page/leon.Comm.Agenda.Minutes",
+    "county": "Leon",
+    "requested_from": "2026-06-22",
+    "requested_to": "2026-09-20",
+    "covered_from": "2026-06-22",
+    "covered_to": "2026-09-14",
+    "status": "partial",
+    "records_found": 0,
+    "files_read": [
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/leon/evidence/county/leon.Comm.Agenda.Minutes"
+    ],
+    "reason": "Index reviewed and recent agenda/minute links identified, but not all PDFs read due time; used bid pages for extracted records instead.",
+    "next_cursor": "Read September 14 and post-September-10 minutes for radio shelter bid award and concrete pad reissue.",
+    "retrieved_at": "2026-09-21T01:57:09Z"
+  },
+  {
+    "name": "Centerville council posts/agendas/minutes",
+    "url": "https://centervilletx.gov/",
+    "county": "Leon",
+    "requested_from": "2026-06-22",
+    "requested_to": "2026-09-20",
+    "covered_from": "2026-06-26",
+    "covered_to": "2026-09-11",
+    "status": "partial",
+    "records_found": 4,
+    "files_read": [
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/leon/evidence/centerville/wp-posts-after-2026-06-21.json",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/leon/evidence/centerville/8-5-2026-City-Council-Meeting-Minutes.pdf",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/leon/evidence/centerville/CC-agenda-7-8-26.doc_20260707_171607_0000.pdf",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/leon/evidence/centerville/CC-agenda-8-5-26-revised.pdf",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/leon/evidence/centerville/TWDB-WSIG-RFPQ-Combo-Public-Notice.pdf"
+    ],
+    "reason": "Recent posts and PDFs downloaded; scanned minutes manually inspected for project language; several agendas/minutes are image-only so full text search incomplete.",
+    "next_cursor": "Manually/OCR September 9 agenda/minutes when available and pull EDC minutes if published.",
+    "retrieved_at": "2026-09-21T01:57:09Z"
+  },
+  {
+    "name": "Buffalo agendas/minutes and bid notices",
+    "url": "https://buffalotex.com/nav/new_page/buffalo_city_council/agendas_and_minutes/index.php",
+    "county": "Leon",
+    "requested_from": "2026-06-22",
+    "requested_to": "2026-09-20",
+    "covered_from": "2026-01-09",
+    "covered_to": "2026-09-14",
+    "status": "blocked",
+    "records_found": 0,
+    "files_read": [
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/leon/evidence/buffalo/index.php.html",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/leon/evidence/buffalo/bid_notices.php.html",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/leon/evidence/buffalo/permits_and_licenses.php.html"
+    ],
+    "reason": "Index exposed 2026 agendas/minutes and bid notices; direct agenda PDF fetches returned 403 from Revize document paths. Bid page showed fuel/depository only; permits page is instructions/forms, not issued permits.",
+    "next_cursor": "Use browser/session download or request records; avoid treating forms as project records.",
+    "retrieved_at": "2026-09-21T01:57:09Z"
+  },
+  {
+    "name": "Jewett city site, permits, planning and CDBG notice",
+    "url": "https://cityofjewett.com/",
+    "county": "Leon",
+    "requested_from": "2025-09-20",
+    "requested_to": "2026-09-20",
+    "covered_from": "2025-11-13",
+    "covered_to": "2026-09-20",
+    "status": "partial",
+    "records_found": 3,
+    "files_read": [
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/leon/evidence/jewett/news-detail_item_id_30087.html",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/leon/evidence/jewett/Jewett-CDBG-MIT-MOD-FONSI-English.pdf",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/leon/evidence/jewett/building-permits-and-inspections.html",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/leon/evidence/jewett/planning-and-inspections.html",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/leon/evidence/jewett/ocr-pages/Jewett-CDBG-MIT-MOD-FONSI-English-1.png",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/leon/evidence/jewett/ocr-pages/Jewett-CDBG-MIT-MOD-FONSI-English-2.png",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/leon/evidence/jewett/Jewett-CDBG-MIT-MOD-FONSI-manual-extraction.txt",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/leon/evidence/jewett/agendas.html",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/leon/evidence/jewett/September 14_ 2026 Agenda.pdf",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/leon/evidence/jewett/AUGUST 10_ 2026 City Council Meeting.pdf",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/leon/evidence/jewett/August 3_ 2026 Special Called Meeting.docx",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/leon/evidence/jewett/July 2026 Agenda.pdf",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/leon/evidence/jewett/May 2026 Agenda.pdf",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/leon/evidence/jewett/March 2026 City of Jewett Agenda.pdf"
+    ],
+    "reason": "City permit/planning pages and CDBG-MIT FONSI checked; manual visual extraction found three address/corridor-level sewer/street candidates. Downloaded 2026 agendas through September and text searched for CDBG/MIT/project terms; no obvious construction award/status follow-up found.",
+    "next_cursor": "Inspect Jewett minutes if later published, GLO project files, or city procurement records for construction bid/award status.",
+    "retrieved_at": "2026-09-21T02:00:12Z"
+  },
+  {
+    "name": "Oakwood official city site",
+    "url": "https://www.cityofoakwood.tx.citygovt.org/",
+    "county": "Leon",
+    "requested_from": "2026-06-22",
+    "requested_to": "2026-09-20",
+    "covered_from": null,
+    "covered_to": null,
+    "status": "blocked",
+    "records_found": 0,
+    "files_read": [],
+    "reason": "Official-looking site did not return useful HTML content to curl during quick check.",
+    "next_cursor": "Open with browser or call city records route in later pass.",
+    "retrieved_at": "2026-09-21T01:57:09Z"
+  },
+  {
+    "name": "Marquez official source discovery",
+    "url": "https://directory.tml.org/profile/city/498",
+    "county": "Leon",
+    "requested_from": "2026-06-22",
+    "requested_to": "2026-09-20",
+    "covered_from": null,
+    "covered_to": null,
+    "status": "partial",
+    "records_found": 0,
+    "files_read": [
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/leon/evidence/marquez"
+    ],
+    "reason": "TML directory found as source for city/contact/building-regulation existence, but no public project register identified.",
+    "next_cursor": "Find direct city records page or request city permit log.",
+    "retrieved_at": "2026-09-21T01:57:09Z"
+  }
+]
