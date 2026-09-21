@@ -14,7 +14,7 @@ read public pages and public AI answers, we post nothing anywhere.
 | 1. Baseline dashboard | **CrawlSEO** | `crawlseo/crawlseo` (MIT) | Docker; Google OAuth client (login + Search Console) | WSL2 + Docker Desktop, port 3100 |
 | 2. Audit + fixes | **Fire Your SEO Agency** | `leopard627/fire-your-seo-agency` (MIT) | Claude Code only, no keys | Claude Code plugin |
 | 3. Buying-intent tracking loop | **GeoLook** | `aigclink/geolook` (MIT) | Python 3.9+, Linux (`fcntl`); DeepSeek key optional | WSL2, port 8765 |
-| 4. Weekly answer-share run | **NiubiGEO** | `Albert-Weasker/niubigeo` (Apache-2.0) | Node 22.13+; Claude + Gemini keys direct (no OpenRouter) | WSL2, port 8787 |
+| 4. Weekly answer-share run | **NiubiGEO** | `Albert-Weasker/niubigeo` (Apache-2.0) | Node 22.13+; Gemini + DeepSeek keys direct (no OpenRouter); Claude via `claude -p` import | WSL2, port 8787 |
 
 Second opinion (optional, not week 1): `AgriciDaniel/claude-seo` (`/seo audit`, `/seo schema`, `/seo geo`;
 Python, has a Windows installer). Install only if the Fire Your SEO Agency audit leaves gaps.
@@ -48,13 +48,16 @@ or start the dev site on another port. NiubiGEO 8787 is free.
 
 1. **Google.** Who does the Google runbook below (G1-G5): the Porkbun login holds G1; the rest can be David on
    the same Google account. Also: GA4 yes/no (G4).
-2. **Keys.** We have Claude (`ANTHROPIC_API_KEY`), Google (`GEMINI_API_KEY`) and DeepSeek. NiubiGEO's `.env.example`
-   takes those directly (`ANTHROPIC_API_KEY`, `GEMINI_API_KEY`, `DEEPSEEK_API_KEY`; also `OPENAI_API_KEY`,
-   `PERPLEXITY_API_KEY`), so **no OpenRouter**. Week 1 runs 3 engines: Claude + web search, Gemini + Google Search,
-   DeepSeek (from memory, labelled so). ChatGPT joins later two ways: the ChatGPT plan (consumer app) is sampled by
-   hand through GeoLook's sample-sheet when it is back on, and an `OPENAI_API_KEY` slots into NiubiGEO if Drew ever
-   wants it. Same labels as the archived plan: these are the vendors' API engines, not the consumer apps, except
-   the hand-pasted ones. Cost with our keys: ~25 questions x 3 engines weekly, well under $5.
+2. **Keys.** We have a Google API key (`GEMINI_API_KEY`), `DEEPSEEK_API_KEY`, and Claude as a **subscription, not an
+   API key**. NiubiGEO's `.env.example` takes provider keys directly (`GEMINI_API_KEY`, `DEEPSEEK_API_KEY`; also
+   `OPENAI_API_KEY`, `ANTHROPIC_API_KEY`, `PERPLEXITY_API_KEY`), so **no OpenRouter**. Claude is sampled the way the
+   archived AI Visibility run did it: `claude -p --model sonnet` with `WebSearch,WebFetch` on the subscription
+   (`archive/realpage/ai-visibility/tooling/local_ai.py`, the `claude-web` model), answers imported into the same
+   run folder. Week 1 = 3 engines: Gemini + Google Search (NiubiGEO), DeepSeek from memory as the control (NiubiGEO),
+   Claude + web search (`claude -p`). ChatGPT joins when the plan is back: the consumer app sampled by hand via
+   GeoLook's sample-sheet; an `OPENAI_API_KEY` would slot into NiubiGEO if Drew ever wants it automated. Same labels
+   as the archived plan: API/CLI engines are not the consumer apps; say which is which on every report. Cost: Gemini
+   + DeepSeek for ~25 questions weekly is cents; Claude comes out of the subscription's usage, ~25 short runs.
 3. **Site changes.** OK to change `site/Caddyfile` (serve robots/sitemap/llms.txt, `/` served directly instead of a 302)
    and to add **static, crawlable HTML** to the app: a pre-rendered summary on the home page, one static page per
    state (`/leads/tx.html` ...), and later one per building. This is the change that actually moves rankings; the
@@ -179,11 +182,14 @@ Try: `bash tooling/seo/crawl.sh` then open http://localhost:3100
   for (its README doesn't list them) and which 7 are manual; do one manual sampling pass via its sample-sheet for
   Perplexity (free tier) and Google AI Overviews now, ChatGPT once the plan is back on (a human pastes answers). Copy `work/<slug>/` outputs to
   `docs/seo/geolook/<date>/`. Commit.
-- [ ] **T6 First weekly NiubiGEO run (the demo footage).** `npm ci`, `ANTHROPIC_API_KEY` + `GEMINI_API_KEY` +
-  `DEEPSEEK_API_KEY` in its `.env` (no OpenRouter), `npm run server` (8787). Project = `app.cranesignal.com`;
-  models: the newest Claude and Gemini the tool lists, web search on where it offers it, DeepSeek as the no-search
-  control; keyword tests = Set B without the brand name. First run: confirm the direct-key path actually
-  works for each provider and note the exact model IDs in `report.md`. Run, then record the dashboard walkthrough
+- [ ] **T6 First weekly NiubiGEO run (the demo footage).** `npm ci`, `GEMINI_API_KEY` + `DEEPSEEK_API_KEY` in its
+  `.env` (no OpenRouter, no Anthropic key), `npm run server` (8787). Project = `app.cranesignal.com`; models: the
+  newest Gemini the tool lists with web search on, DeepSeek as the no-search control; keyword tests = Set B without
+  the brand name. First run: confirm the direct-key path actually works for both providers and note the exact model
+  IDs in `report.md`. **Claude leg:** `tooling/seo/sample_claude.py`, lifted from the archived `local_ai.py`
+  (`claude -p --model sonnet --setting-sources "" --allowedTools WebSearch,WebFetch`, fresh process per question,
+  no repo context), reads `questions.csv`, writes one JSON per answer with the sources it cited, and the report
+  merges the three engines. Reuse its tests (`fake_ai.py`) so tests never call Claude. Run, then record the dashboard walkthrough
   (Win+G / OBS, ~2 min: domain -> models -> side-by-side descriptions -> competitor table -> a source click) to
   `docs/seo/answer-share/<date>/demo.mp4` (path only in git if > 10 MB: keep the file in `raw/`). Export the answers
   and write `report.md`: table question x model -> vendors named, plus "share of answers naming each vendor". Commit.
