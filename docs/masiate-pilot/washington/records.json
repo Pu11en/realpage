@@ -1,0 +1,1210 @@
+[
+  {
+    "id": "washington-brenham-permit-com-new-26-0010-apartment",
+    "county": "Washington",
+    "project_name": "Nelson Sosa multifamily apartment building",
+    "address": "411 Church Street",
+    "city": "Brenham",
+    "record_type": "permit",
+    "source_record_id": "COM-NEW-26-0010",
+    "record_date": "2026-06-22",
+    "retrieved_at": "2026-09-21T02:21:00Z",
+    "stage": "permitted",
+    "status_basis": "City permit report shows new multifamily apartment building issued 2026-06-22; Washington CAD confirms the 411 Church Street parcel owner/address match.",
+    "scope": "New construction multifamily apartment building valued at $730,000.",
+    "masiate_fit": "Strong apartment new-build fit for sitework, concrete, framing, MEP, drywall, flooring, painting and finish trades; subcontract availability is not established.",
+    "estimated_value": "$730,000",
+    "estimated_start": null,
+    "estimated_completion": null,
+    "bid_deadline": null,
+    "participants": [
+      {
+        "name": "Nelson Sosa",
+        "role": "permit applicant / CAD owner",
+        "source_url": "https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-06.pdf"
+      },
+      {
+        "name": "Valco Builders",
+        "role": "contractor",
+        "source_url": "https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-06.pdf"
+      },
+      {
+        "name": "Sosa Nelson",
+        "role": "CAD owner",
+        "source_url": "https://esearch.washingtoncad.org/"
+      }
+    ],
+    "business_contacts": [
+      {
+        "name": "Valco Builders",
+        "role": "permit-listed contractor",
+        "phone": null,
+        "email": null,
+        "website": null,
+        "source_url": "https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-06.pdf"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-06.pdf",
+        "title": "City of Brenham June 2026 Building Permits",
+        "date": "2026-07-02",
+        "page": "COM-NEW-26-0010",
+        "evidence": "Permit report lists new construction multifamily apartment building for Nelson Sosa at 411 Church Street, valued at $730,000, contractor Valco Builders.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/brenham-permits/2026-06.pdf"
+      },
+      {
+        "url": "https://esearch.washingtoncad.org/",
+        "title": "Washington CAD property-search JSON",
+        "date": "2026-09-21",
+        "page": "propertyId 24935",
+        "evidence": "CAD result matches 411 CHURCH ST to owner SOSA NELSON, legal ORIGINAL TOWN ADD'N, appraised value $134,690.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/cad/fresh2-StreetNumber_411_StreetName_Church_Year_2026.json"
+      }
+    ],
+    "unknowns": [
+      "Whether subcontract packages remain open after permit issuance.",
+      "Whether the building is already under active construction."
+    ],
+    "next_research": "Check Accela inspection status or request current permit detail from Brenham Development Services.",
+    "disposition": "candidate"
+  },
+  {
+    "id": "washington-brenham-bid-26-013-city-hall-rtu5",
+    "county": "Washington",
+    "project_name": "Brenham City Hall RTU-5 replacement",
+    "address": "200 W Vulcan Street",
+    "city": "Brenham",
+    "record_type": "bid",
+    "source_record_id": "RFP 26-013",
+    "record_date": "2026-06-23",
+    "retrieved_at": "2026-09-21T02:21:00Z",
+    "stage": "historical",
+    "status_basis": "City RFP packet shows proposal deadline Tuesday, June 23, 2026 and possible council award July 16, 2026; it was expired before this worker run.",
+    "scope": "Demolish/remove existing rooftop package unit RTU-5 and modify associated HVAC system at Brenham City Hall.",
+    "masiate_fit": "Mechanical/electrical public-project signal for HVAC and electrical subcontractors, but expired and likely awarded or closed.",
+    "estimated_value": null,
+    "estimated_start": null,
+    "estimated_completion": null,
+    "bid_deadline": "2026-06-23 2:00 PM CST",
+    "participants": [
+      {
+        "name": "City of Brenham",
+        "role": "owner/procuring entity",
+        "source_url": "https://www.cityofbrenham.org/city_government/departments/finance/purchasing.php"
+      },
+      {
+        "name": "Talex, Inc.",
+        "role": "engineer named in packet",
+        "source_url": "https://www.cityofbrenham.org/city_government/departments/finance/purchasing.php"
+      }
+    ],
+    "business_contacts": [],
+    "sources": [
+      {
+        "url": "https://www.cityofbrenham.org/city_government/departments/finance/purchasing.php",
+        "title": "City of Brenham Purchasing",
+        "date": "2026-09-21",
+        "page": "RFP 26-013 document link",
+        "evidence": "Purchasing page exposed RFP 26-013 City Hall RTU-5 replacement among 2026 construction-related bids checked.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/bids/brenham-purchasing.html"
+      },
+      {
+        "url": "https://www.cityofbrenham.org/Departments/Finance/purchasing/bid-26-013.pdf",
+        "title": "RFP 26-013 Brenham City Hall RTU-5 Replacement",
+        "date": "2026-05-28",
+        "page": "Event schedule and intent",
+        "evidence": "RFP packet says proposals due June 23, 2026 and describes RTU-5 demolition/removal and HVAC modification work at Brenham City Hall, 200 W Vulcan Street.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/bids/bid-26-013-city-hall-rtu5.pdf"
+      }
+    ],
+    "unknowns": [
+      "Awarded contractor not checked in this worker pass."
+    ],
+    "next_research": "Check July 16, 2026 council agenda/minutes for award if public HVAC project history is useful.",
+    "disposition": "watchlist"
+  },
+  {
+    "id": "washington-brenham-permit-com-add-26-0008-stanpac-silos",
+    "county": "Washington",
+    "project_name": "Stanpac USA storage silo addition",
+    "address": "801 Mangrum Street",
+    "city": "Brenham",
+    "record_type": "permit",
+    "source_record_id": "COM-ADD-26-0008",
+    "record_date": "2026-06-24",
+    "retrieved_at": "2026-09-21T02:21:00Z",
+    "stage": "permitted",
+    "status_basis": "City permit report shows the storage-silo addition issued 2026-06-24; no parcel or construction-status detail was confirmed in this pass.",
+    "scope": "Addition of two storage silos for Stanpac USA, valued at $413,300.",
+    "masiate_fit": "Industrial addition could fit concrete, steel, controls/electrical, crane/rigging and sitework trades; Masiate relevance depends on whether work remains open.",
+    "estimated_value": "$413,300",
+    "estimated_start": null,
+    "estimated_completion": null,
+    "bid_deadline": null,
+    "participants": [
+      {
+        "name": "Stanpac USA",
+        "role": "permit applicant / owner-listed contractor",
+        "source_url": "https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-06.pdf"
+      }
+    ],
+    "business_contacts": [],
+    "sources": [
+      {
+        "url": "https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-06.pdf",
+        "title": "City of Brenham June 2026 Building Permits",
+        "date": "2026-07-02",
+        "page": "COM-ADD-26-0008",
+        "evidence": "Permit report lists Stanpac USA addition of 2 storage silos at 801 Mangrum Street, valued at $413,300, contractor Owner.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/brenham-permits/2026-06.pdf"
+      }
+    ],
+    "unknowns": [
+      "No CAD match or construction schedule confirmed.",
+      "Owner self-performing or prime-contractor status unknown."
+    ],
+    "next_research": "Check city permit detail/inspections and Stanpac project announcements for execution status.",
+    "disposition": "candidate"
+  },
+  {
+    "id": "washington-brenham-permit-com-new-26-0014",
+    "county": "Washington",
+    "project_name": "Lex Investments tenant office buildout",
+    "address": "1504 S Day Street",
+    "city": "Brenham",
+    "record_type": "permit",
+    "source_record_id": "COM-NEW-26-0014",
+    "record_date": "2026-06-25",
+    "retrieved_at": "2026-09-21T02:03:00Z",
+    "stage": "permitted",
+    "status_basis": "City permit report shows tenant buildout issued 2026-06-25; CAD confirms Lex Investments LLC owns the parcel.",
+    "scope": "Tenant buildout for office space, valued at $181,300.",
+    "masiate_fit": "Office buildout fit for flooring, paint, framing, lighting and finish trades; inference based on tenant buildout scope.",
+    "estimated_value": "$181,300",
+    "estimated_start": null,
+    "estimated_completion": null,
+    "bid_deadline": null,
+    "participants": [
+      {
+        "name": "Lex Investments",
+        "role": "owner/applicant",
+        "source_url": "https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-06.pdf"
+      },
+      {
+        "name": "United Constructors of Texas",
+        "role": "contractor",
+        "source_url": "https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-06.pdf"
+      },
+      {
+        "name": "Lex Investments LLC",
+        "role": "CAD owner",
+        "source_url": "https://esearch.washingtoncad.org/"
+      }
+    ],
+    "business_contacts": [
+      {
+        "name": "United Constructors of Texas",
+        "role": "permit-listed contractor",
+        "phone": null,
+        "email": null,
+        "website": null,
+        "source_url": "https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-06.pdf"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-06.pdf",
+        "title": "City of Brenham June 2026 Building Permits",
+        "date": "2026-07-02",
+        "page": "COM-NEW-26-0014",
+        "evidence": "Permit report lists tenant buildout for office space at 1504 S Day Street.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/brenham-permits/2026-06.pdf"
+      },
+      {
+        "url": "https://esearch.washingtoncad.org/",
+        "title": "Washington CAD property-search JSON",
+        "date": "2026-09-21",
+        "page": "propertyId 26824",
+        "evidence": "CAD result matches 1504 S Day St to Lex Investments LLC, appraised value $780,380.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/cad/fresh2-StreetNumber_1504_StreetName_Day_Year_2026.json"
+      }
+    ],
+    "unknowns": [
+      "Tenant identity and buildout status unknown.",
+      "Contractor may already control subcontracting."
+    ],
+    "next_research": "Check permit inspections or business opening/occupancy record for tenant and current phase.",
+    "disposition": "candidate"
+  },
+  {
+    "id": "washington-brenham-permit-com-roof-26-0003",
+    "county": "Washington",
+    "project_name": "Sage Longwood Holdings commercial roof replacement",
+    "address": "1901 Longwood Drive",
+    "city": "Brenham",
+    "record_type": "permit",
+    "source_record_id": "COM-ROOF-26-0003",
+    "record_date": "2026-06-25",
+    "retrieved_at": "2026-09-21T02:03:00Z",
+    "stage": "permitted",
+    "status_basis": "City permit report shows a commercial roof replacement issued 2026-06-25; CAD confirms Longwood property records at this address.",
+    "scope": "Replace roof on commercial building, valued at $507,152.",
+    "masiate_fit": "Direct roofing/siding/exterior repair fit; potential follow-on for paint, gutters and envelope-related work; inference based on roof scope.",
+    "estimated_value": "$507,152",
+    "estimated_start": null,
+    "estimated_completion": null,
+    "bid_deadline": null,
+    "participants": [
+      {
+        "name": "Sage Longwood Holdings LLC",
+        "role": "permit applicant",
+        "source_url": "https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-06.pdf"
+      },
+      {
+        "name": "Guardian Roof Systems",
+        "role": "contractor",
+        "source_url": "https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-06.pdf"
+      },
+      {
+        "name": "Longwood Elastomers Inc",
+        "role": "CAD owner/related property record",
+        "source_url": "https://esearch.washingtoncad.org/"
+      }
+    ],
+    "business_contacts": [
+      {
+        "name": "Guardian Roof Systems",
+        "role": "permit-listed roofing contractor",
+        "phone": null,
+        "email": null,
+        "website": null,
+        "source_url": "https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-06.pdf"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-06.pdf",
+        "title": "City of Brenham June 2026 Building Permits",
+        "date": "2026-07-02",
+        "page": "COM-ROOF-26-0003",
+        "evidence": "Permit report lists Sage Longwood Holdings LLC replacing roof on commercial building at 1901 Longwood Drive.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/brenham-permits/2026-06.pdf"
+      },
+      {
+        "url": "https://esearch.washingtoncad.org/",
+        "title": "Washington CAD property-search JSON",
+        "date": "2026-09-21",
+        "page": "propertyIds 12601 and 128018",
+        "evidence": "CAD returns Longwood Elastomers Inc and Longwood Elastomers Inc Buildings at 1901 Longwood Dr, including building appraised value $4,171,770.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/cad/fresh2-StreetNumber_1901_StreetName_Longwood_Year_2026.json"
+      }
+    ],
+    "unknowns": [
+      "Permit applicant differs from CAD owner naming; lease/entity relationship unknown.",
+      "Roof work may already be awarded to listed contractor."
+    ],
+    "next_research": "Verify whether Sage Longwood Holdings is tenant, owner affiliate or project manager and whether related envelope work remains.",
+    "disposition": "candidate"
+  },
+  {
+    "id": "washington-brenham-permit-com-add-26-0009",
+    "county": "Washington",
+    "project_name": "Brenham Water Treatment Plant rehabilitation and expansion",
+    "address": "1105 S Austin Street",
+    "city": "Brenham",
+    "record_type": "permit",
+    "source_record_id": "COM-ADD-26-0009",
+    "record_date": "2026-06-29",
+    "retrieved_at": "2026-09-21T02:03:00Z",
+    "stage": "permitted",
+    "status_basis": "City permit report shows rehabilitation and expansion to the water treatment plant issued 2026-06-29; CAD confirms City of Brenham property record.",
+    "scope": "Rehabilitation and expansion to Water Treatment Plant, valued at $28,297,500.",
+    "masiate_fit": "Large public infrastructure project may fit concrete, painting/coatings, metal/framing, lighting and specialty subcontractor support; inference, with public-procurement restrictions.",
+    "estimated_value": "$28,297,500",
+    "estimated_start": null,
+    "estimated_completion": null,
+    "bid_deadline": null,
+    "participants": [
+      {
+        "name": "City of Brenham - Water Treatment Plant",
+        "role": "owner/applicant",
+        "source_url": "https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-06.pdf"
+      },
+      {
+        "name": "Dudley Construction",
+        "role": "contractor",
+        "source_url": "https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-06.pdf"
+      }
+    ],
+    "business_contacts": [
+      {
+        "name": "Dudley Construction",
+        "role": "permit-listed contractor",
+        "phone": null,
+        "email": null,
+        "website": null,
+        "source_url": "https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-06.pdf"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-06.pdf",
+        "title": "City of Brenham June 2026 Building Permits",
+        "date": "2026-07-02",
+        "page": "COM-ADD-26-0009",
+        "evidence": "Permit report lists rehabilitation and expansion to the Water Treatment Plant at 1105 S Austin Street.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/brenham-permits/2026-06.pdf"
+      },
+      {
+        "url": "https://esearch.washingtoncad.org/",
+        "title": "Washington CAD property-search JSON",
+        "date": "2026-09-21",
+        "page": "propertyId 22351",
+        "evidence": "CAD result matches 1105 S Austin St to City of Brenham, City Water Dept, appraised value $544,130.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/cad/fresh2-StreetNumber_1105_StreetName_Austin_Year_2026.json"
+      }
+    ],
+    "unknowns": [
+      "Public procurement/bid packages likely already awarded by permit stage.",
+      "Specialty water-treatment scope may be outside Masiate core."
+    ],
+    "next_research": "Check council award documents and subcontracting opportunities under Dudley Construction if approved for follow-up.",
+    "disposition": "watchlist"
+  },
+  {
+    "id": "washington-brenham-permit-com-new-26-0013",
+    "county": "Washington",
+    "project_name": "Wilkins Valley phase 3 public infrastructure / commercial office site development",
+    "address": "1402 W Jefferson Street",
+    "city": "Brenham",
+    "record_type": "permit",
+    "source_record_id": "COM-NEW-26-0013",
+    "record_date": "2026-06-29",
+    "retrieved_at": "2026-09-21T02:03:00Z",
+    "stage": "permitted",
+    "status_basis": "City permit report shows phase 3 Wilkins Valley site development/public infrastructure issued 2026-06-29; CAD search did not match the permit address in tested queries.",
+    "scope": "Public infrastructure for phase 3 Wilkins Valley site development and commercial office, valued at $688,923.",
+    "masiate_fit": "Good sitework/concrete/utility/fencing/lighting fit if phase work remains; inference based on infrastructure and commercial office development wording.",
+    "estimated_value": "$688,923",
+    "estimated_start": null,
+    "estimated_completion": null,
+    "bid_deadline": null,
+    "participants": [
+      {
+        "name": "Collier Construction",
+        "role": "permit applicant/contractor as listed",
+        "source_url": "https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-06.pdf"
+      }
+    ],
+    "business_contacts": [
+      {
+        "name": "Collier Construction LLC",
+        "role": "permit-listed construction participant",
+        "phone": null,
+        "email": null,
+        "website": "https://www.collierconstruction.com/contact",
+        "source_url": "https://www.collierconstruction.com/contact"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-06.pdf",
+        "title": "City of Brenham June 2026 Building Permits",
+        "date": "2026-07-02",
+        "page": "COM-NEW-26-0013",
+        "evidence": "Permit report lists Collier Construction for public infrastructure phase 3 Wilkins Valley site development at 1402 W Jefferson Street.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/brenham-permits/2026-06.pdf"
+      },
+      {
+        "url": "https://www.collierconstruction.com/contact",
+        "title": "Collier Construction contact page",
+        "date": null,
+        "page": "contact page",
+        "evidence": "Company page identifies Collier Construction LLC in Brenham as a construction business.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/business/collier-contact.html"
+      },
+      {
+        "url": "https://esearch.washingtoncad.org/",
+        "title": "Washington CAD tested search response",
+        "date": "2026-09-21",
+        "page": "1402 Jefferson query",
+        "evidence": "CAD StreetNumber:1402 StreetName:Jefferson query returned no result in the tested public search.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/cad/fresh2-StreetNumber_1402_StreetName_Jefferson_Year_2026.json"
+      }
+    ],
+    "unknowns": [
+      "Exact parcel and owner unresolved.",
+      "Permit text is wrapped; project naming should be rechecked in Accela/detail view."
+    ],
+    "next_research": "Confirm permit detail in Accela or request city permit row export with parcel/site-plan reference.",
+    "disposition": "candidate"
+  },
+  {
+    "id": "washington-brenham-permit-misc-prkg-26-0022-sherwin-williams",
+    "county": "Washington",
+    "project_name": "Sherwin Williams driveway replacement",
+    "address": "500 N Park Street",
+    "city": "Brenham",
+    "record_type": "permit",
+    "source_record_id": "MISC-PRKG-26-0022",
+    "record_date": "2026-06-30",
+    "retrieved_at": "2026-09-21T02:21:00Z",
+    "stage": "permitted",
+    "status_basis": "City permit report shows driveway removal/replacement issued 2026-06-30 with Mulanax Concrete Contractors listed.",
+    "scope": "Remove and replace driveway for Sherwin Williams, valued at $68,910.",
+    "masiate_fit": "Concrete/sitework signal and contractor mapping point; likely too small/late for primary outreach unless paired with adjacent work.",
+    "estimated_value": "$68,910",
+    "estimated_start": null,
+    "estimated_completion": null,
+    "bid_deadline": null,
+    "participants": [
+      {
+        "name": "Sherwin Williams",
+        "role": "permit applicant",
+        "source_url": "https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-06.pdf"
+      },
+      {
+        "name": "Mulanax Concrete Contractors",
+        "role": "contractor",
+        "source_url": "https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-06.pdf"
+      }
+    ],
+    "business_contacts": [
+      {
+        "name": "Mulanax Concrete Contractors",
+        "role": "permit-listed contractor",
+        "phone": null,
+        "email": null,
+        "website": null,
+        "source_url": "https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-06.pdf"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-06.pdf",
+        "title": "City of Brenham June 2026 Building Permits",
+        "date": "2026-07-02",
+        "page": "MISC-PRKG-26-0022",
+        "evidence": "Permit report lists remove/replace driveway for Sherwin Williams at 500 N Park Street, valued at $68,910, contractor Mulanax Concrete Contractors.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/brenham-permits/2026-06.pdf"
+      }
+    ],
+    "unknowns": [
+      "Likely short-duration project; current availability unknown."
+    ],
+    "next_research": "Use only as contractor/source mapping unless later evidence shows broader site work.",
+    "disposition": "watchlist"
+  },
+  {
+    "id": "washington-brenham-permit-com-add-26-0001-rv-parking",
+    "county": "Washington",
+    "project_name": "Brennan Taylor Developments RV parking addition",
+    "address": "4040 State Highway 36 S",
+    "city": "Brenham",
+    "record_type": "permit",
+    "source_record_id": "COM-ADD-26-0001",
+    "record_date": "2026-07-01",
+    "retrieved_at": "2026-09-21T02:21:00Z",
+    "stage": "permitted",
+    "status_basis": "City permit report shows an addition for RV parking issued 2026-07-01; no site-plan or contractor detail was confirmed.",
+    "scope": "Addition for RV parking, valued at $163,000.",
+    "masiate_fit": "Sitework/paving/utilities candidate if work remains unbuilt; lower value and owner-listed contractor make it secondary.",
+    "estimated_value": "$163,000",
+    "estimated_start": null,
+    "estimated_completion": null,
+    "bid_deadline": null,
+    "participants": [
+      {
+        "name": "Brennan Taylor Developments",
+        "role": "permit applicant / owner-listed contractor",
+        "source_url": "https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-07.pdf"
+      }
+    ],
+    "business_contacts": [],
+    "sources": [
+      {
+        "url": "https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-07.pdf",
+        "title": "City of Brenham July 2026 Building Permits",
+        "date": "2026-08-04",
+        "page": "COM-ADD-26-0001",
+        "evidence": "Permit report lists Brennan Taylor Developments addition for RV parking at 4040 State Highway 36 S, valued at $163,000, contractor Owner.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/brenham-permits/2026-07.pdf"
+      }
+    ],
+    "unknowns": [
+      "No current project phase or parcel details confirmed."
+    ],
+    "next_research": "Use Accela or city development file to identify site plan and current construction status.",
+    "disposition": "candidate"
+  },
+  {
+    "id": "washington-brenham-permit-com-new-26-0007",
+    "county": "Washington",
+    "project_name": "Redeemer Church parking lot improvements",
+    "address": "2111 S Blue Bell Road",
+    "city": "Brenham",
+    "record_type": "permit",
+    "source_record_id": "COM-NEW-26-0007; COM-REM-26-0020",
+    "record_date": "2026-07-07",
+    "retrieved_at": "2026-09-21T02:03:00Z",
+    "stage": "permitted",
+    "status_basis": "City permit report shows phase 1 and 2 parking improvements issued 2026-07-07 and sign-wall work issued 2026-07-24; CAD confirms the church parcel.",
+    "scope": "Phase 1 and 2 parking lot improvements valued at $1,050,000 plus wall/sign construction valued at $48,650.",
+    "masiate_fit": "Strong concrete/paving/drainage/fencing/site-lighting fit; inference based on parking improvements and church campus parcel.",
+    "estimated_value": "$1,098,650 combined permit value",
+    "estimated_start": null,
+    "estimated_completion": null,
+    "bid_deadline": null,
+    "participants": [
+      {
+        "name": "Redeemer Church Brenham",
+        "role": "owner/applicant",
+        "source_url": "https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-07.pdf"
+      },
+      {
+        "name": "Atlas Sign Services",
+        "role": "contractor for wall sign",
+        "source_url": "https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-07.pdf"
+      }
+    ],
+    "business_contacts": [
+      {
+        "name": "Atlas Sign Services",
+        "role": "permit-listed sign/wall contractor",
+        "phone": null,
+        "email": null,
+        "website": null,
+        "source_url": "https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-07.pdf"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-07.pdf",
+        "title": "City of Brenham July 2026 Building Permits",
+        "date": "2026-08-03",
+        "page": "COM-NEW-26-0007; COM-REM-26-0020",
+        "evidence": "Permit report lists parking lot improvements and wall sign work for Redeemer Church Brenham at 2111 S Blue Bell Road.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/brenham-permits/2026-07.pdf"
+      },
+      {
+        "url": "https://esearch.washingtoncad.org/",
+        "title": "Washington CAD property-search JSON",
+        "date": "2026-09-21",
+        "page": "propertyId 46489",
+        "evidence": "CAD result matches 2111 S Blue Bell Rd to Redeemer Church Brenham on 44.876 acres, appraised value $2,390,910.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/cad/fresh2-StreetNumber_2111_StreetName_Blue_Bell_Year_2026.json"
+      }
+    ],
+    "unknowns": [
+      "Whether parking-lot contractor is owner-managed or already selected.",
+      "Whether drainage/lighting/fencing packages remain."
+    ],
+    "next_research": "Check church/city agenda or permit detail for site-plan status and contractor identity.",
+    "disposition": "candidate"
+  },
+  {
+    "id": "washington-brenham-permit-com-new-26-0009-apartments",
+    "county": "Washington",
+    "project_name": "Arete Property Group apartment buildings",
+    "address": "1307 N Park Street",
+    "city": "Brenham",
+    "record_type": "permit",
+    "source_record_id": "COM-NEW-26-0009",
+    "record_date": "2026-07-09",
+    "retrieved_at": "2026-09-21T02:03:00Z",
+    "stage": "permitted",
+    "status_basis": "City permit report shows new construction of two apartment buildings issued 2026-07-09; CAD search did not cleanly match 1307 N Park Street in the tested public queries.",
+    "scope": "New construction of two apartment buildings, noted as 8 units and 5 units, valued at $1,800,000.",
+    "masiate_fit": "Strong multifamily fit for framing, flooring, paint, concrete, roofing, lighting and finish trades; inference based on multifamily new construction scope.",
+    "estimated_value": "$1,800,000",
+    "estimated_start": null,
+    "estimated_completion": null,
+    "bid_deadline": null,
+    "participants": [
+      {
+        "name": "Arete Property Group",
+        "role": "applicant/developer",
+        "source_url": "https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-07.pdf"
+      }
+    ],
+    "business_contacts": [],
+    "sources": [
+      {
+        "url": "https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-07.pdf",
+        "title": "City of Brenham July 2026 Building Permits",
+        "date": "2026-08-03",
+        "page": "COM-NEW-26-0009",
+        "evidence": "Permit report lists Arete Property Group for new construction of two apartment buildings at 1307 N Park Street.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/brenham-permits/2026-07.pdf"
+      },
+      {
+        "url": "https://esearch.washingtoncad.org/",
+        "title": "Washington CAD tested search responses",
+        "date": "2026-09-21",
+        "page": "1307 N Park variants",
+        "evidence": "StreetNumber/StreetName searches for 1307 N Park, Park St and broad StreetNumber:1307 did not produce a clean 1307 N Park parcel match.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/cad/fresh4-StreetNumber_1307_Year_2026.json"
+      }
+    ],
+    "unknowns": [
+      "Parcel/owner match unresolved.",
+      "Contractor not listed beyond Owner in permit report.",
+      "Whether units are under active construction or awaiting inspections."
+    ],
+    "next_research": "Use Accela or city permit detail request to confirm parcel, applicant contact role and current inspection stage.",
+    "disposition": "candidate"
+  },
+  {
+    "id": "washington-brenham-permit-misc-prkg-26-0018-grace-drainage",
+    "county": "Washington",
+    "project_name": "Grace Community Fellowship paving and drainage improvements",
+    "address": "107 S Saeger Street",
+    "city": "Brenham",
+    "record_type": "permit",
+    "source_record_id": "MISC-PRKG-26-0018",
+    "record_date": "2026-07-09",
+    "retrieved_at": "2026-09-21T02:21:00Z",
+    "stage": "permitted",
+    "status_basis": "City permit report shows paving and drainage improvements issued 2026-07-09; contractor field says Owner and no bid status was confirmed.",
+    "scope": "Paving and drainage improvements for Grace Community Fellowship, valued at $1,000,000.",
+    "masiate_fit": "Strong sitework/concrete/drainage/asphalt fit by scope and value, but owner-listed contractor may mean a known local contractor is already engaged off-record.",
+    "estimated_value": "$1,000,000",
+    "estimated_start": null,
+    "estimated_completion": null,
+    "bid_deadline": null,
+    "participants": [
+      {
+        "name": "Grace Community Fellowship - Brenham",
+        "role": "permit applicant / owner-listed contractor",
+        "source_url": "https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-07.pdf"
+      }
+    ],
+    "business_contacts": [],
+    "sources": [
+      {
+        "url": "https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-07.pdf",
+        "title": "City of Brenham July 2026 Building Permits",
+        "date": "2026-08-04",
+        "page": "MISC-PRKG-26-0018",
+        "evidence": "Permit report lists paving and drainage improvements for Grace Community Fellowship - Brenham at 107 S Saeger Street, valued at $1,000,000, contractor Owner.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/brenham-permits/2026-07.pdf"
+      }
+    ],
+    "unknowns": [
+      "Named contractor not exposed in monthly permit report.",
+      "No inspection/active-work status confirmed."
+    ],
+    "next_research": "Check Accela detail, church facility postings, or city inspection status for phase timing.",
+    "disposition": "candidate"
+  },
+  {
+    "id": "washington-brenham-permit-com-new-26-0009-lcra-tower",
+    "county": "Washington",
+    "project_name": "Bluebonnet Electric / LCRA telecommunications tower",
+    "address": "2409 US Highway 290 W",
+    "city": "Brenham",
+    "record_type": "permit",
+    "source_record_id": "COM-NEW-26-0009",
+    "record_date": "2026-07-21",
+    "retrieved_at": "2026-09-21T02:21:00Z",
+    "stage": "permitted",
+    "status_basis": "City permit report shows telecommunications tower new construction issued 2026-07-21; no tower detail or subcontract status was confirmed.",
+    "scope": "New telecommunications tower for LCRA, valued at $513,158.",
+    "masiate_fit": "Specialty infrastructure fit for civil/site, concrete foundation, electrical and access work; likely narrow trade set and may already be contracted.",
+    "estimated_value": "$513,158",
+    "estimated_start": null,
+    "estimated_completion": null,
+    "bid_deadline": null,
+    "participants": [
+      {
+        "name": "Bluebonnet Electric Co-op for LCRA",
+        "role": "permit applicant",
+        "source_url": "https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-07.pdf"
+      },
+      {
+        "name": "C A Bass Ventures",
+        "role": "contractor as listed",
+        "source_url": "https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-07.pdf"
+      }
+    ],
+    "business_contacts": [
+      {
+        "name": "C A Bass Ventures",
+        "role": "permit-listed contractor",
+        "phone": null,
+        "email": null,
+        "website": null,
+        "source_url": "https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-07.pdf"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-07.pdf",
+        "title": "City of Brenham July 2026 Building Permits",
+        "date": "2026-08-04",
+        "page": "COM-NEW-26-0009",
+        "evidence": "Permit report lists new construction of a telecommunications tower for LCRA at 2409 US Highway 290 W, valued at $513,158, contractor C A Bass Ventures.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/brenham-permits/2026-07.pdf"
+      }
+    ],
+    "unknowns": [
+      "No current construction status confirmed.",
+      "Exact procurement/prime relationship not confirmed."
+    ],
+    "next_research": "Check LCRA/Bluebonnet board or project materials and city inspection status.",
+    "disposition": "candidate"
+  },
+  {
+    "id": "washington-brenham-permit-com-new-26-0011",
+    "county": "Washington",
+    "project_name": "Frost Bank Brenham financial center",
+    "address": "862 US Highway 290 E",
+    "city": "Brenham",
+    "record_type": "permit",
+    "source_record_id": "COM-NEW-26-0011",
+    "record_date": "2026-07-29",
+    "retrieved_at": "2026-09-21T02:03:00Z",
+    "stage": "permitted",
+    "status_basis": "City permit report shows new construction issued 2026-07-29; CAD confirms a 2026 Frost Bank property record at 862 HWY 290 E; Frost location page says coming 2027.",
+    "scope": "New construction of a Frost Bank valued at $7,831,737.",
+    "masiate_fit": "Very strong commercial new-build fit for flooring, paint, concrete, framing, lighting and exterior/site packages; inference based on permit scope and value.",
+    "estimated_value": "$7,831,737",
+    "estimated_start": null,
+    "estimated_completion": "Coming 2027 per Frost location page, exact source completion date not stated",
+    "bid_deadline": null,
+    "participants": [
+      {
+        "name": "Frost Bank",
+        "role": "owner/applicant",
+        "source_url": "https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-07.pdf"
+      },
+      {
+        "name": "SpawGlass",
+        "role": "contractor",
+        "source_url": "https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-07.pdf"
+      },
+      {
+        "name": "Frost Bank",
+        "role": "CAD owner",
+        "source_url": "https://esearch.washingtoncad.org/"
+      }
+    ],
+    "business_contacts": [
+      {
+        "name": "SpawGlass",
+        "role": "permit-listed general contractor",
+        "phone": null,
+        "email": null,
+        "website": "https://www.spawglass.com/",
+        "source_url": "https://www.spawglass.com/"
+      },
+      {
+        "name": "Frost Bank",
+        "role": "permit applicant / CAD owner / future branch operator",
+        "phone": null,
+        "email": null,
+        "website": "https://locations.frostbank.com/tx/brenham/862-us-highway-290-e",
+        "source_url": "https://locations.frostbank.com/tx/brenham/862-us-highway-290-e"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-07.pdf",
+        "title": "City of Brenham July 2026 Building Permits",
+        "date": "2026-08-03",
+        "page": "COM-NEW-26-0011",
+        "evidence": "Permit report lists new construction of Frost Bank at 862 US Highway 290 E with SpawGlass as contractor.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/brenham-permits/2026-07.pdf"
+      },
+      {
+        "url": "https://esearch.washingtoncad.org/",
+        "title": "Washington CAD property-search JSON",
+        "date": "2026-09-21",
+        "page": "propertyId 322014",
+        "evidence": "CAD result matches 862 HWY 290 E to Frost Bank, S1514 BK Stringer Development S/D, appraised value $1,329,450.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/cad/fresh4-StreetNumber_862_Year_2026.json"
+      },
+      {
+        "url": "https://locations.frostbank.com/tx/brenham/862-us-highway-290-e",
+        "title": "Frost Bank Brenham Financial Center location page",
+        "date": null,
+        "page": "location page",
+        "evidence": "Frost lists the Brenham financial center at 862 US Highway 290 E as coming 2027.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/business/frost-bank-location.html"
+      },
+      {
+        "url": "https://www.spawglass.com/",
+        "title": "SpawGlass website",
+        "date": null,
+        "page": "home page",
+        "evidence": "SpawGlass describes Texas-based construction services across construction phases.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/business/spawglass-home.html"
+      }
+    ],
+    "unknowns": [
+      "Whether remaining trade work is still buyable.",
+      "Frost page gives coming year, not exact construction status."
+    ],
+    "next_research": "Check permit inspections or SpawGlass/Frost public project updates for current phase.",
+    "disposition": "candidate"
+  },
+  {
+    "id": "washington-brenham-permit-com-add-26-0006",
+    "county": "Washington",
+    "project_name": "Moeller Electric metal building addition",
+    "address": "1119 Industrial Boulevard",
+    "city": "Brenham",
+    "record_type": "permit",
+    "source_record_id": "COM-ADD-26-0006",
+    "record_date": "2026-08-06",
+    "retrieved_at": "2026-09-21T02:03:00Z",
+    "stage": "permitted",
+    "status_basis": "City permit report shows a 5,000 sq ft metal-building addition issued 2026-08-06; CAD confirms 1119 Industrial Blvd parcel and business DBA.",
+    "scope": "Add 5,000 sq ft metal building to existing structure, valued at $400,000.",
+    "masiate_fit": "Good industrial addition fit for concrete slab, framing/metal building, electrical/lighting, siding, paint and sitework; inference based on addition scope.",
+    "estimated_value": "$400,000",
+    "estimated_start": null,
+    "estimated_completion": null,
+    "bid_deadline": null,
+    "participants": [
+      {
+        "name": "Moeller Electric",
+        "role": "applicant/occupant named in permit",
+        "source_url": "https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-08.pdf"
+      },
+      {
+        "name": "Davis Custom Builders of Texas",
+        "role": "contractor",
+        "source_url": "https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-08.pdf"
+      },
+      {
+        "name": "Four D RE Holdings LLC Series C",
+        "role": "CAD owner",
+        "source_url": "https://esearch.washingtoncad.org/"
+      }
+    ],
+    "business_contacts": [
+      {
+        "name": "Davis Custom Builders of Texas",
+        "role": "permit-listed contractor",
+        "phone": null,
+        "email": null,
+        "website": null,
+        "source_url": "https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-08.pdf"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-08.pdf",
+        "title": "City of Brenham August 2026 Building Permits",
+        "date": "2026-09-02",
+        "page": "COM-ADD-26-0006",
+        "evidence": "Permit report lists Moeller Electric adding a 5,000 sq ft metal building at 1119 Industrial Boulevard.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/brenham-permits/2026-08.pdf"
+      },
+      {
+        "url": "https://esearch.washingtoncad.org/",
+        "title": "Washington CAD property-search JSON",
+        "date": "2026-09-21",
+        "page": "propertyId 55371",
+        "evidence": "CAD result matches 1119 INDUSTRIAL BLVD to Four D RE Holdings LLC Series C with DBA D&S Residential, appraised value $933,550.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/cad/fresh-StreetNumber_1119_StreetName_Industrial_Year_2026.json"
+      }
+    ],
+    "unknowns": [
+      "Relationship between Moeller Electric and CAD owner/DBA needs confirmation.",
+      "Whether all building packages are already contracted."
+    ],
+    "next_research": "Check permit detail/inspection status and contractor business registration.",
+    "disposition": "candidate"
+  },
+  {
+    "id": "washington-brenham-bid-26-015-henderson-park",
+    "county": "Washington",
+    "project_name": "Henderson Park Basketball Court Cover",
+    "address": "Henderson Park, Brenham, Texas",
+    "city": "Brenham",
+    "record_type": "bid",
+    "source_record_id": "RFP 26-015",
+    "record_date": "2026-08-18",
+    "retrieved_at": "2026-09-21T02:03:00Z",
+    "stage": "historical",
+    "status_basis": "City purchasing page and bid packet show the bid deadline was Tuesday, August 18, 2026 at 2:00 PM CDT, which was expired before this worker run.",
+    "scope": "Basketball court pavilion / cover construction, with base bid furnishing and installing a large outdoor pavilion addition.",
+    "masiate_fit": "Construction scope could fit concrete, steel/framing, paint/coatings and sitework, but the bid is expired; keep for history/award follow-up only.",
+    "estimated_value": null,
+    "estimated_start": null,
+    "estimated_completion": null,
+    "bid_deadline": "2026-08-18 2:00 PM CDT",
+    "participants": [
+      {
+        "name": "City of Brenham",
+        "role": "owner/procuring entity",
+        "source_url": "https://www.cityofbrenham.org/city_government/departments/finance/purchasing.php"
+      },
+      {
+        "name": "BBA Architects LP",
+        "role": "architect/contact named in bid packet",
+        "source_url": "https://www.cityofbrenham.org/city_government/departments/finance/purchasing.php"
+      }
+    ],
+    "business_contacts": [],
+    "sources": [
+      {
+        "url": "https://www.cityofbrenham.org/city_government/departments/finance/purchasing.php",
+        "title": "City of Brenham Purchasing",
+        "date": "2026-09-21",
+        "page": "RFP 26-015 section",
+        "evidence": "Purchasing page lists RFP 26-015 Henderson Park Basketball Court Cover with deadline Tuesday, August 18, 2026 2:00 pm.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/bids/brenham-purchasing.html"
+      },
+      {
+        "url": "https://www.cityofbrenham.org/Departments/Finance/purchasing/bid-26-015.pdf",
+        "title": "RFP 26-015 Henderson Park Basketball Court Cover",
+        "date": null,
+        "page": "Instructions to Bidders and proposal form",
+        "evidence": "Bid packet states due date and describes renovation/addition work for Henderson Park Basketball Court Pavilion.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/bids/bid-26-015-henderson-park.pdf"
+      }
+    ],
+    "unknowns": [
+      "Award status and selected contractor not checked in this pass."
+    ],
+    "next_research": "Check council agenda/minutes after August 18, 2026 for award and possible construction phase.",
+    "disposition": "watchlist"
+  },
+  {
+    "id": "washington-brenham-permit-com-rem-26-0027-central-warehouse",
+    "county": "Washington",
+    "project_name": "City of Brenham Central Warehouse remediation and remodel",
+    "address": "315 W Second Street",
+    "city": "Brenham",
+    "record_type": "permit",
+    "source_record_id": "COM-REM-26-0027",
+    "record_date": "2026-08-21",
+    "retrieved_at": "2026-09-21T02:21:00Z",
+    "stage": "permitted",
+    "status_basis": "City permit report shows asbestos and mold remediation plus interior remodel issued 2026-08-21; monthly report lists contractor as Owner.",
+    "scope": "Asbestos and mold remediation and interior remodel for City of Brenham Central Warehouse, valued at $49,999.",
+    "masiate_fit": "Small public remodel/remediation watchlist lead for abatement, drywall, interiors and painting; low value makes it secondary.",
+    "estimated_value": "$49,999",
+    "estimated_start": null,
+    "estimated_completion": null,
+    "bid_deadline": null,
+    "participants": [
+      {
+        "name": "City of Brenham Central Warehouse",
+        "role": "permit applicant / owner-listed contractor",
+        "source_url": "https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-08.pdf"
+      }
+    ],
+    "business_contacts": [],
+    "sources": [
+      {
+        "url": "https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-08.pdf",
+        "title": "City of Brenham August 2026 Building Permits",
+        "date": "2026-09-02",
+        "page": "COM-REM-26-0027",
+        "evidence": "Permit report lists asbestos and mold remediation and interior remodel for City of Brenham Central Warehouse at 315 W Second Street, valued at $49,999.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/brenham-permits/2026-08.pdf"
+      }
+    ],
+    "unknowns": [
+      "Whether work was procured internally, already awarded, or available to outside contractors."
+    ],
+    "next_research": "Check purchasing records/council approval if the coordinator wants small public remodel follow-up.",
+    "disposition": "watchlist"
+  },
+  {
+    "id": "washington-brenham-permit-com-rem-26-0028",
+    "county": "Washington",
+    "project_name": "City of Brenham Maintenance Building fire remodel",
+    "address": "506 S Austin Street",
+    "city": "Brenham",
+    "record_type": "permit",
+    "source_record_id": "COM-REM-26-0028",
+    "record_date": "2026-08-21",
+    "retrieved_at": "2026-09-21T02:03:00Z",
+    "stage": "permitted",
+    "status_basis": "City permit report shows remodel due to fire issued 2026-08-21; no CAD lookup performed for this city facility during the first pass.",
+    "scope": "Remodel due to fire, valued at $737,212.",
+    "masiate_fit": "Good public-building remodel fit for framing, paint, flooring, electrical/lighting, roofing/envelope and remediation-adjacent work; inference based on fire remodel scope.",
+    "estimated_value": "$737,212",
+    "estimated_start": null,
+    "estimated_completion": null,
+    "bid_deadline": null,
+    "participants": [
+      {
+        "name": "City of Brenham Maintenance Building",
+        "role": "owner/applicant",
+        "source_url": "https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-08.pdf"
+      },
+      {
+        "name": "Rhodes Building Systems",
+        "role": "contractor",
+        "source_url": "https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-08.pdf"
+      }
+    ],
+    "business_contacts": [
+      {
+        "name": "Rhodes Building Systems",
+        "role": "permit-listed contractor",
+        "phone": null,
+        "email": null,
+        "website": null,
+        "source_url": "https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-08.pdf"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-08.pdf",
+        "title": "City of Brenham August 2026 Building Permits",
+        "date": "2026-09-02",
+        "page": "COM-REM-26-0028",
+        "evidence": "Permit report lists City of Brenham Maintenance Building remodel due to fire at 506 S Austin Street.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/brenham-permits/2026-08.pdf"
+      }
+    ],
+    "unknowns": [
+      "Public-procurement/insurance restoration status unknown.",
+      "Whether any subpackages are still available."
+    ],
+    "next_research": "Check council purchasing/insurance award records or permit detail for current inspection phase.",
+    "disposition": "watchlist"
+  },
+  {
+    "id": "washington-brenham-permit-com-new-26-0012",
+    "county": "Washington",
+    "project_name": "Citizens National Bank new construction and parking addition",
+    "address": "400 S Austin Street",
+    "city": "Brenham",
+    "record_type": "permit",
+    "source_record_id": "COM-NEW-26-0012; MISC-PRKG-26-0024",
+    "record_date": "2026-08-31",
+    "retrieved_at": "2026-09-21T02:03:00Z",
+    "stage": "permitted",
+    "status_basis": "City permit report shows new construction issued 2026-08-31 and a related parking-spaces permit issued 2026-08-20; CAD confirms the 2026 parcel record but no construction schedule or subcontract availability.",
+    "scope": "New construction for Citizens National Bank valued at $2,568,491 plus nine parking spaces on W. First Street valued at $15,000.",
+    "masiate_fit": "Strong commercial new-build and sitework fit for concrete, paving, flooring, painting, lighting, framing and finish trades; inference based on scope and value.",
+    "estimated_value": "$2,568,491 building permit plus $15,000 parking permit",
+    "estimated_start": null,
+    "estimated_completion": null,
+    "bid_deadline": null,
+    "participants": [
+      {
+        "name": "Citizens National Bank",
+        "role": "owner/applicant",
+        "source_url": "https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-08.pdf"
+      },
+      {
+        "name": "EBCO General Contractor",
+        "role": "contractor",
+        "source_url": "https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-08.pdf"
+      },
+      {
+        "name": "Citizens National Bank",
+        "role": "CAD owner",
+        "source_url": "https://esearch.washingtoncad.org/"
+      }
+    ],
+    "business_contacts": [
+      {
+        "name": "EBCO General Contractor",
+        "role": "permit-listed general contractor",
+        "phone": null,
+        "email": null,
+        "website": "https://ebcogc.com/",
+        "source_url": "https://ebcogc.com/"
+      },
+      {
+        "name": "Citizens National Bank",
+        "role": "permit applicant / CAD owner",
+        "phone": null,
+        "email": null,
+        "website": null,
+        "source_url": "https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-08.pdf"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://docs.cityofbrenham.org/Departments/development/building/permits/2026/2026-08.pdf",
+        "title": "City of Brenham August 2026 Building Permits",
+        "date": "2026-09-02",
+        "page": "COM-NEW-26-0012; MISC-PRKG-26-0024",
+        "evidence": "Permit report lists new construction for Citizens National Bank at 400 S Austin Street and parking spaces on W. First Street.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/brenham-permits/2026-08.pdf"
+      },
+      {
+        "url": "https://esearch.washingtoncad.org/",
+        "title": "Washington CAD property-search JSON",
+        "date": "2026-09-21",
+        "page": "propertyId 23413",
+        "evidence": "CAD result matches 400 S AUSTIN ST to owner Citizens National Bank, legal description KEYS 1ST, appraised value $389,810.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/cad/fresh-StreetNumber_400_StreetName_Austin_Year_2026.json"
+      },
+      {
+        "url": "https://ebcogc.com/",
+        "title": "EBCO General Contractor website",
+        "date": null,
+        "page": "home page",
+        "evidence": "Contractor website describes commercial/retail, industrial, public and multifamily construction services.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/business/ebco.html"
+      }
+    ],
+    "unknowns": [
+      "Whether subcontract packages remain open after permit issuance.",
+      "Whether the parking and building permits share the same construction schedule."
+    ],
+    "next_research": "Check city inspection/Accela permit status or direct public project notice for active construction phase.",
+    "disposition": "candidate"
+  },
+  {
+    "id": "washington-burton-isd-fire-suppression-line",
+    "county": "Washington",
+    "project_name": "Burton ISD fire suppression line connection agreement",
+    "address": "12200 E Mulberry St / Burton ISD connection route unknown",
+    "city": "Burton",
+    "record_type": "planning",
+    "source_record_id": "Special Called Council Meeting 2026-09-22 item 1",
+    "record_date": "2026-09-22",
+    "retrieved_at": "2026-09-21T02:03:00Z",
+    "stage": "planned",
+    "status_basis": "Burton agenda for September 22, 2026 lists possible action on a draft legal agreement for Burton ISD connecting a fire suppression line to the City water system; it is a planning/legal item, not a permit or bid.",
+    "scope": "Draft legal agreement between City of Burton and Burton ISD regarding connection of fire suppression line to City water system and related stipulations.",
+    "masiate_fit": "Possible underground utility/site/concrete restoration fit if the line proceeds, but current record does not prove construction timing, address-level route or contractor need.",
+    "estimated_value": null,
+    "estimated_start": null,
+    "estimated_completion": null,
+    "bid_deadline": null,
+    "participants": [
+      {
+        "name": "City of Burton",
+        "role": "municipal party",
+        "source_url": "https://cityofburton-tx.gov/documents/247/Special_Called_Council_Mtg_Sept_22_2026__1_.pdf"
+      },
+      {
+        "name": "Burton ISD",
+        "role": "school district party",
+        "source_url": "https://cityofburton-tx.gov/documents/247/Special_Called_Council_Mtg_Sept_22_2026__1_.pdf"
+      }
+    ],
+    "business_contacts": [],
+    "sources": [
+      {
+        "url": "https://cityofburton-tx.gov/documents/247/Special_Called_Council_Mtg_Sept_22_2026__1_.pdf",
+        "title": "City of Burton Special Called Council Meeting Agenda",
+        "date": "2026-09-22",
+        "page": "item 1",
+        "evidence": "Agenda item concerns an agreement for Burton ISD fire suppression line connection to the City water system.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/washington/evidence/burton/special-called-council-2026-09-22.pdf"
+      }
+    ],
+    "unknowns": [
+      "No route, budget, bid, permit or construction date in agenda.",
+      "Meeting occurs after this run, so action outcome is unknown."
+    ],
+    "next_research": "After 2026-09-22, check Burton minutes/packet or Burton ISD board materials for approval and construction procurement.",
+    "disposition": "watchlist"
+  }
+]

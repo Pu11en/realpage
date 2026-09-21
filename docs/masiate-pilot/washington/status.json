@@ -1,0 +1,16 @@
+{
+  "county": "Washington",
+  "lane": "washington",
+  "state": "complete",
+  "started_at": "2026-09-21T01:49:48Z",
+  "checkpoint_at": "2026-09-21T02:21:00Z",
+  "finished_at": "2026-09-21T02:21:00Z",
+  "records_saved": 20,
+  "notes": [
+    "Collected Brenham June-August 2026 permit PDFs and extracted address-level commercial, multifamily, sitework and public-project records.",
+    "Checked Washington CAD official esearch for selected candidates; promoted only confirmed matches and recorded unresolved parcel gaps.",
+    "Checked Burton agenda, Washington County engineering/environmental pages and City of Brenham purchasing.",
+    "Tested Brenham Accela anonymous search enough to document the gap; exact permit postback returned no result in this pass.",
+    "Statewide TDLR/TCEQ/TABC/Comptroller portals deliberately excluded."
+  ]
+}
