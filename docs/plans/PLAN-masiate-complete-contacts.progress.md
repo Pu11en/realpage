@@ -46,3 +46,5 @@
 - Checks: focused validator tests passed 8 tests; partial ledger validation succeeded without claiming completion; full `python3 -m pytest propertystack/skills/lead-finder/tests -q` passed 93 tests in 4.73 seconds.
 - One focused test run initially exposed a missing `checked_sources` function parameter; the parameter was added before the successful rerun.
 - Remaining: MC2-MC5 must populate their assigned research batches, then MC6 must run the final 49-row gate and produce the new PDF.
+
+- Reviewer still had concerns about MC1: Establish the all-row contact ledger and offline checks (15-25 minutes; foundation).: Reject generic “no phone found” variants (not only exact short phrases), and include/require checking actor-attached public source URLs for property IDs `burleson-somerville-ord-26-011-avenue-p-multifamily` and `grimes-navasota-dashboard-20260920-autozone`.
