@@ -22,8 +22,8 @@ below. See [current decisions](masiate-decisions.md) for the authoritative scope
 
 ### Area and dates
 
-- **Area decision pending:** suggested first area is Brazos and Robertson counties, including Bryan, College Station and Hearne. The founder's Hearne background does not establish the company's current base or driving limit.
-- Prepare the source inventory to expand to Burleson, Grimes, Leon, Madison and Washington counties if Drew chooses the wider Brazos Valley. Verify each city's sources separately; do not assume a county feed covers city permits.
+- **Area confirmed:** wider Brazos Valley: Brazos, Robertson, Burleson, Grimes, Leon, Madison and Washington counties. The founder's Hearne background does not establish the company's current base or driving limit.
+- Cover all seven counties in the source inventory, including relevant city and unincorporated-area records. Verify each city's sources separately; do not assume a county feed covers city permits. Most source checks below currently concern Brazos and Hearne; the remaining jurisdictions still need discovery.
 - First pass: the latest **90 days** of permits and business-opening signals, plus all currently open matching bids and currently pending planning projects.
 - Backfill permits and registrations to **12 months**, and planning/development records to **24 months**, checking which older projects are still active. These are proposed collection windows, not claims about available archives.
 - Keep earlier records as history, with their real dates. Do not label an old permit as new because the scraper just found it.
@@ -181,6 +181,6 @@ There is no new local server to start yet: this turn produces a plan only.
 
 ### Decision still needed
 
-Choose the first collection boundary: **Brazos + Robertson**, **all seven Brazos Valley counties**, **a drive-time area from Masiate's actual base**, or **Brazos only**. The source plan supports expansion; no wider service radius has been assumed as a company fact.
+Collection boundary is confirmed as **all seven Brazos Valley counties**. It is a research boundary, not a verified company travel policy. The next interview decision concerns one-time versus recurring collection and PDF editions.
 
 After the area is settled, the next planning decision is how to run the small implementation tasks: /gowork or a normal session. No agent workers, schedules or paid crawls have been started.

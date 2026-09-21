@@ -30,8 +30,12 @@ and per-lead saved-note decisions below.
   to them even though the section is public.
 - Property count is flexible: select by quality and available evidence, with no
   fixed quota or padding. This is not authorization for unlimited research cost.
-- Geographic boundary, ranking acceptance rules and depth of each profile
-  still need planning. No collection/build has started.
+- Geographic scope: wider Brazos Valley, covering Brazos, Robertson, Burleson,
+  Grimes, Leon, Madison and Washington counties. Source coverage must be checked
+  separately for each jurisdiction; this is a collection boundary, not proof of
+  Masiate's willingness to travel to every property.
+- Ranking acceptance rules and depth of each profile still need planning.
+  No collection/build has started.
 
 ## Confirmed Instructions
 
@@ -50,7 +54,7 @@ and per-lead saved-note decisions below.
 [First crawl research](masiate-first-crawl.md) is a provisional source design,
 not an approved full product/build plan. Suggested areas, collection windows,
 ranking rules, cadence and task order remain proposals until resolved here.
-The prior area question has no recorded answer.
+The area question is resolved in Q9: wider Brazos Valley.
 
 ## Decision Tree
 
@@ -243,7 +247,7 @@ length based on meaningful, well-supported opportunities. Do not impose the
 suggested 20-property limit or ask for another number. Keep research budgets
 and source coverage as separate decisions; no unlimited spend is implied.
 
-## Current Question
+## Collection Area
 
 Q9: Which area should the PDF's properties cover?
 
@@ -253,9 +257,27 @@ Q9: Which area should the PDF's properties cover?
 - C. Brazos and Robertson counties: both cities plus Hearne and nearby areas.
 - D. A chosen travel radius from Masiate's base: user provides town and limit.
 
-Answer: pending. Wider Brazos Valley is a proposed collection area, not a claim
-that Masiate accepts work in every town. The earlier area question remains
-unanswered; do not assume DFW or statewide coverage.
+Answer: **A**, selected by Drew on 2026-09-20. Cover the wider Brazos Valley:
+Brazos, Robertson, Burleson, Grimes, Leon, Madison and Washington counties.
+The source inventory must cover selected cities and unincorporated areas,
+recording gaps instead of treating Brazos-only results as region-wide coverage.
+DFW and statewide collection are outside this chosen boundary.
+
+## Current Question
+
+Q10: After the first PDF, when should the system collect again and make a new report?
+
+- A. Weekly new editions, with refreshed data for the agent; recommended useful
+  cadence without generating a daily report that may repeat the same properties.
+- B. One initial report; the agent can investigate it on request, with no
+  scheduled broad collection or report generation.
+- C. New collection/report only when an authorized user requests a refresh;
+  control over timing, with a wait while the job runs.
+- D. Daily new editions and refreshed data; more frequent checking and work,
+  even when official sources have not published new records.
+
+Answer: pending. All PDFs are fixed dated editions; chat research never rewrites
+them. This is a future product decision, not authorization to start a scheduler.
 
 ## Product Questions To Explore Next
 
