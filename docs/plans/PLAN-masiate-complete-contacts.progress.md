@@ -76,3 +76,10 @@
 - Delivery commit: `6e1a325` (`Deliver all-row Masiate contact PDF`).
 - Checks: final coverage gate passed 49/49 unique researched IDs with zero gaps; `python3 -m pytest propertystack/skills/lead-finder/tests -q` passed all 93 tests; all 19 rendered page images were visually reviewed for readable alignment, unsplit rows, visible phones/roles, provisional labels and footers.
 - Nothing remains open in this plan. The actual new PDF was queued for attachment to the parent Discord thread; no push, outreach or deployment occurred.
+
+## MC6 Reviewer Repair — PDF Attachment Queued
+
+- Added the absolute path of `Masiate-All-Property-Contacts-2026-09-20.pdf` to this worker thread's bot attachment manifest so the bot will deliver the actual file when this run finishes.
+- Verified the queued file exists, is non-empty, and is a valid 19-page PDF.
+- Checks: final coverage gate passed all 49 unique researched IDs with 47 confirmed/strong routes and two provisional routes; the full lead-finder suite passed all 93 tests.
+- No research data, renderer output, earlier PDF, deployment, or remote repository was changed.
