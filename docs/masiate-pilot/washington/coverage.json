@@ -1,0 +1,147 @@
+[
+  {
+    "name": "City of Brenham building permits monthly reports",
+    "url": "https://docs.cityofbrenham.org/city_government/departments/development_services/building_permits___inspections.php",
+    "county": "Washington",
+    "requested_from": "2026-06-22",
+    "requested_to": "2026-09-20",
+    "covered_from": "2026-06-01",
+    "covered_to": "2026-08-31",
+    "status": "partial",
+    "records_found": 17,
+    "files_read": [
+      "archive-page.html",
+      "2026-06.pdf",
+      "2026-07.pdf",
+      "2026-08.pdf"
+    ],
+    "reason": "January-August 2026 files are listed; September 2026 was not listed on the archive page at retrieval. June-August official PDFs produced the promoted address-level permit candidates in records.json.",
+    "next_cursor": "Check archive for September 2026 file after city publishes it; use Accela for permit detail/inspection stage on top candidates.",
+    "retrieved_at": "2026-09-21T02:21:00Z"
+  },
+  {
+    "name": "Washington CAD official property search",
+    "url": "https://washingtoncad.org/",
+    "county": "Washington",
+    "requested_from": "2026-06-22",
+    "requested_to": "2026-09-20",
+    "covered_from": "2026-01-01",
+    "covered_to": "2026-12-31",
+    "status": "partial",
+    "records_found": 10,
+    "files_read": [
+      "final-*.json attempted targeted searches",
+      "fresh*.json selected address searches",
+      "fresh2-StreetNumber_411_StreetName_Church_Year_2026.json",
+      "washingtoncad-esearch-home.html"
+    ],
+    "reason": "Used official Washington CAD esearch for selected candidate addresses only; 411 Church matched, several additional final targeted pulls returned empty/session responses and were not promoted as matches.",
+    "next_cursor": "Use browser/manual CAD search or parcel map for unresolved addresses: 1307 N Park, 1402 W Jefferson, 801 Mangrum, 107 S Saeger and other coordinator shortlist items.",
+    "retrieved_at": "2026-09-21T02:21:00Z"
+  },
+  {
+    "name": "Washington County Engineering and Development Services / Road and Bridge",
+    "url": "https://www.co.washington.tx.us/page/washington.Road",
+    "county": "Washington",
+    "requested_from": "2026-06-22",
+    "requested_to": "2026-09-20",
+    "covered_from": null,
+    "covered_to": null,
+    "status": "partial",
+    "records_found": 0,
+    "files_read": [
+      "road-bridge.html"
+    ],
+    "reason": "Page identifies permit routes including MGO, floodplain, OSSF, culvert, utility installation and subdivision application, but no issued-record register was found on the page.",
+    "next_cursor": "If approved, use MGO/public request route for issued culvert/floodplain/subdivision records; no request sent in this worker.",
+    "retrieved_at": "2026-09-21T02:21:00Z"
+  },
+  {
+    "name": "Washington County Environmental Health",
+    "url": "https://www.co.washington.tx.us/page/washington.Environmental",
+    "county": "Washington",
+    "requested_from": "2026-06-22",
+    "requested_to": "2026-09-20",
+    "covered_from": null,
+    "covered_to": null,
+    "status": "partial",
+    "records_found": 0,
+    "files_read": [
+      "environmental.html"
+    ],
+    "reason": "Page documents OSSF and floodplain permitting/review requirements but does not expose individual issued records in the checked page.",
+    "next_cursor": "Request or locate public OSSF/floodplain permit log for selected unincorporated projects if later approved.",
+    "retrieved_at": "2026-09-21T02:21:00Z"
+  },
+  {
+    "name": "City of Burton public agenda source",
+    "url": "https://cityofburton-tx.gov/",
+    "county": "Washington",
+    "requested_from": "2026-06-22",
+    "requested_to": "2026-09-20",
+    "covered_from": "2026-09-22",
+    "covered_to": "2026-09-22",
+    "status": "partial",
+    "records_found": 1,
+    "files_read": [
+      "home.html",
+      "special-called-council-2026-09-22.pdf"
+    ],
+    "reason": "Home page surfaced a current special-called agenda with one infrastructure-related planning item; no permit register was found in the timebox.",
+    "next_cursor": "Check Burton agenda/minutes after the meeting and search for city permit records or public-information route.",
+    "retrieved_at": "2026-09-21T02:21:00Z"
+  },
+  {
+    "name": "City of Brenham purchasing / local bids",
+    "url": "https://www.cityofbrenham.org/city_government/departments/finance/purchasing.php",
+    "county": "Washington",
+    "requested_from": "2026-06-22",
+    "requested_to": "2026-09-20",
+    "covered_from": "2026-05-28",
+    "covered_to": "2026-09-21",
+    "status": "partial",
+    "records_found": 2,
+    "files_read": [
+      "brenham-purchasing.html",
+      "bid-26-015-henderson-park.pdf",
+      "bid-26-013-city-hall-rtu5.pdf"
+    ],
+    "reason": "Visible 2026 construction-related bid documents found; Henderson Park and City Hall RTU-5 deadlines were expired before this worker run. No currently open construction bid identified on checked page.",
+    "next_cursor": "Check later council agendas/minutes for awards and monitor purchasing page for new postings.",
+    "retrieved_at": "2026-09-21T02:21:00Z"
+  },
+  {
+    "name": "Brenham Accela / online permit portal",
+    "url": "https://cityofbrenham.online/dev-permits",
+    "county": "Washington",
+    "requested_from": "2026-06-22",
+    "requested_to": "2026-09-20",
+    "covered_from": null,
+    "covered_to": null,
+    "status": "partial",
+    "records_found": 0,
+    "files_read": [
+      "dev-permits.html",
+      "accela-https___aca_prod_accela_com_BRENHAM_Cap_CapHome_aspx_module_Building_TabName_Bui.html",
+      "accela-search-com-new-26-0012.html"
+    ],
+    "reason": "Anonymous Accela building search page loaded from official host, but controlled postback for permit COM-NEW-26-0012 returned no results; no detail/inspection records were captured.",
+    "next_cursor": "Try permit-number format variants or manual/browser Accela search for top permit IDs; city monthly PDFs remain the authoritative source captured here.",
+    "retrieved_at": "2026-09-21T02:21:00Z"
+  },
+  {
+    "name": "Statewide TDLR/TCEQ/TABC/Comptroller portals",
+    "url": null,
+    "county": "Washington",
+    "requested_from": "2026-06-22",
+    "requested_to": "2026-09-20",
+    "covered_from": null,
+    "covered_to": null,
+    "status": "not_checked",
+    "records_found": 0,
+    "files_read": [],
+    "reason": "Explicitly excluded from this local worker; statewide worker owns those sources.",
+    "next_cursor": "Coordinator should merge statewide worker output separately.",
+    "retrieved_at": "2026-09-21T02:21:00Z"
+  }
+]
