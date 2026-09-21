@@ -52,5 +52,14 @@
     }
   ],
   "completion_relay_worker": "1551409974968717362",
-  "completion_relay_status": "queued instruction delivered"
+  "completion_relay_status": "watcher resumed and confirmed running after restart at 2026-09-21T02:13Z",
+  "restart_recovery": {
+    "user_authorized": true,
+    "checked_at": "2026-09-21T02:13Z",
+    "existing_threads_resumed": ["washington", "statewide watcher only"],
+    "existing_running_workers_authorized_to_finish": ["robertson", "grimes"],
+    "new_workers_started": 0,
+    "old_50_task_plan_restored": false,
+    "notes": "masiate-pilot-recovery.md"
+  }
 }
