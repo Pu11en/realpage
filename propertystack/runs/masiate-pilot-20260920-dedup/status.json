@@ -1,0 +1,25 @@
+{
+  "state": "complete",
+  "started_at": "2026-09-21T02:19:38Z",
+  "checkpoint_at": "2026-09-21T02:24:49Z",
+  "finished_at": "2026-09-21T02:24:49Z",
+  "input_record_count": 267,
+  "canonical_group_count": 254,
+  "multi_record_group_count": 13,
+  "singleton_group_count": 241,
+  "duplicate_tests": {
+    "tests_run": 8,
+    "tests_passed": 8,
+    "tests_failed": 0
+  },
+  "output_paths": {
+    "groups_json": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/finish/dedup/groups.json",
+    "duplicate_tests_json": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/finish/dedup/duplicate_tests.json",
+    "summary_md": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/finish/dedup/summary.md",
+    "status_json": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/finish/dedup/status.json"
+  },
+  "notes": [
+    "Conservative dedup pass only; no collection crawl, paid API, prospect message, push or live change.",
+    "Ambiguous same-address unit/phase records are intentionally retained as separate canonical groups."
+  ]
+}
