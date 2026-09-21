@@ -172,10 +172,10 @@ a { color: #145e83; text-decoration: underline; overflow-wrap: anywhere; }
 .lead { font-size: 12pt; max-width: 230mm; margin-bottom: 5mm; }
 .cover { break-after: page; }
 .metrics { width: 100%; margin: 5mm 0; border-collapse: collapse; }
-.metrics td { width: 25%; font-size: 10pt; padding: 3mm; border-top: 2pt solid #2b7666; }
+.metrics td { width: 25%; vertical-align: top; font-size: 10pt; padding: 3mm; border-top: 2pt solid #2b7666; }
 .metrics b { font-size: 23pt; display: block; color: #174d46; }
-.columns { display: flex; gap: 10mm; }
-.columns > div { width: 50%; }
+.columns { display: flex; gap: 4%; }
+.columns > div { width: 48%; flex: none; min-width: 0; }
 ul { margin: 1mm 0 3mm; padding-left: 5mm; }
 li { margin-bottom: 2mm; }
 .notice { padding: 3mm 0; border-top: 1pt solid #a75c28; border-bottom: 1pt solid #a75c28; margin: 4mm 0; }
