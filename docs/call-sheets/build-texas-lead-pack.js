@@ -1,0 +1,13 @@
+const fs = require("fs");
+const site = "/home/drewp/main-projects/realpage/site";
+global.window = global; global.self = global;
+const jspdfMod = require(site + "/vendor/jspdf-4.2.1.umd.min.js");
+global.jspdf = jspdfMod;
+const at = require(site + "/vendor/jspdf-autotable-5.0.8.min.js");
+if (at && at.applyPlugin) at.applyPlugin(jspdfMod.jsPDF); global.jspdfAutoTable = at;
+const pack = require(site + "/js/lead-pack.js");
+const data = JSON.parse(fs.readFileSync(site + "/data/areas/tx.json", "utf8"));
+const r = pack.buildLeadPack({ leads: data.leads, region: "Texas", date: "2026-09-21", jsPDF: global.jspdf.jsPDF });
+const out = __dirname + "/cranesignal-lead-pack-texas-2026-09-21.pdf";
+fs.writeFileSync(out, Buffer.from(r.doc.output("arraybuffer")));
+console.log(r.rowCount, r.title, r.doc.getNumberOfPages(), "pages");
