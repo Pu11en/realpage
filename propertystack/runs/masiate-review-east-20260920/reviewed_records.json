@@ -1,0 +1,1767 @@
+[
+  {
+    "id": "grimes-iola-20260811-wwtp-contract",
+    "county": "Grimes",
+    "project_name": "City of Iola 0.100 MGD wastewater treatment plant construction",
+    "address": "Project location in Iola city limits near FM 39 / TX 90 per plan vicinity map; exact site address not stated in extracted text",
+    "city": "Iola",
+    "record_type": "bid",
+    "source_record_id": "City of Iola current project and August 11, 2026 agenda item L",
+    "record_date": "2026-08-11",
+    "retrieved_at": "2026-09-21T02:05:00Z",
+    "stage": "planned",
+    "status_basis": "Current Projects page includes June 2026 bid notice; August 11 agenda includes approval of a construction contract agreement between City of Iola and Teal Services, LLC for TWDB wastewater treatment plant construction. It does not prove notice to proceed or mobilization.",
+    "scope": "0.100 MGD package wastewater treatment plant, lift station and general site work; construction drawings preserved.",
+    "masiate_fit": "Public utility construction may require concrete, site work, electrical, plumbing/process piping, fencing and lighting; fit is stronger for subs than direct property-owner outreach.",
+    "estimated_value": null,
+    "estimated_start": null,
+    "estimated_completion": null,
+    "bid_deadline": "2026-06-25 2:00 PM Central (expired bid notice)",
+    "participants": [
+      {
+        "name": "City of Iola",
+        "role": "owner/public buyer",
+        "source_url": "https://cityofiola.myruralwater.com/current-projects"
+      },
+      {
+        "name": "Teal Services, LLC",
+        "role": "construction contract party named in August agenda",
+        "source_url": "https://cityofiola.myruralwater.com/documents/1511/Agenda_August_11_LJ_2026.pdf"
+      },
+      {
+        "name": "Bleyl Engineering",
+        "role": "engineer on construction drawings",
+        "source_url": "https://cityofiola.myruralwater.com/documents/1511/Plans-IolaWWTP_2026-0209.pdf"
+      }
+    ],
+    "business_contacts": [
+      {
+        "name": "Teal Services, LLC",
+        "role": "construction contract party named in public agenda",
+        "phone": null,
+        "email": null,
+        "website": null,
+        "source_url": "https://cityofiola.myruralwater.com/documents/1511/Agenda_August_11_LJ_2026.pdf"
+      },
+      {
+        "name": "Bleyl Engineering",
+        "role": "engineer named on construction drawings",
+        "phone": null,
+        "email": null,
+        "website": "https://www.bleylengineering.com",
+        "source_url": "https://cityofiola.myruralwater.com/documents/1511/Plans-IolaWWTP_2026-0209.pdf"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://cityofiola.myruralwater.com/current-projects",
+        "title": "City of Iola Current Projects",
+        "date": "2026-08-26",
+        "page": "current projects entries June 11 and August 26",
+        "evidence": "Page lists WWTP bid notice and plan link; June bid notice identifies package WWTP, lift station and general site work.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/grimes/evidence/iola_current_projects.html"
+      },
+      {
+        "url": "https://cityofiola.myruralwater.com/documents/1511/Agenda_August_11_LJ_2026.pdf",
+        "title": "City of Iola agenda August 11, 2026",
+        "date": "2026-08-11",
+        "page": "item L",
+        "evidence": "Agenda item L is to approve construction contract agreement with Teal Services, LLC for TWDB WWTP construction.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/grimes/evidence/iola_agenda_august_11_2026.pdf"
+      },
+      {
+        "url": "https://cityofiola.myruralwater.com/documents/1511/Plans-IolaWWTP_2026-0209.pdf",
+        "title": "Iola WWTP construction drawings",
+        "date": "2026-02-09",
+        "page": "cover/vicinity map",
+        "evidence": "Plans identify City of Iola 0.100 MGD wastewater treatment plant, TWDB CWSRF project no. 10422 and GLO project no. 24-065-165-F080.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/grimes/evidence/iola_wwtp_plans.pdf"
+      }
+    ],
+    "unknowns": [
+      "Exact construction site address",
+      "Executed contract value",
+      "Notice to proceed/mobilization date",
+      "Subcontracting opportunities"
+    ],
+    "next_research": "Request/check award packet or minutes for August 11; inspect plan sheets manually for site coordinates; identify Teal Services project manager only from public/approved sources.",
+    "disposition": "candidate",
+    "member_ids": [
+      "grimes-iola-20260811-wwtp-contract"
+    ],
+    "evidence_checked": [
+      "https://cityofiola.myruralwater.com/current-projects",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/grimes/evidence/iola_current_projects.html",
+      "https://cityofiola.myruralwater.com/documents/1511/Agenda_August_11_LJ_2026.pdf",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/grimes/evidence/iola_agenda_august_11_2026.pdf",
+      "https://cityofiola.myruralwater.com/documents/1511/Plans-IolaWWTP_2026-0209.pdf",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/grimes/evidence/iola_wwtp_plans.pdf"
+    ],
+    "reviewed_at": "2026-09-21T02:24:26Z",
+    "review_decision": "include",
+    "priority_reason": "Current public contract action names the contractor for a WWTP package, lift station and site work; concrete, site, electrical, plumbing/process piping, fencing and lighting are plausible subcontract fits.",
+    "corrections": [
+      "Downgraded the June bid notice to expired; useful current evidence is the August 11 agenda item to approve a construction contract with Teal Services.",
+      "No notice-to-proceed, mobilization date or subcontract availability was found.",
+      "Best route is contractor/subcontractor research, not treating the city as a fresh open-bid buyer."
+    ]
+  },
+  {
+    "id": "grimes-navasota-dashboard-20260920-autozone",
+    "county": "Grimes",
+    "project_name": "AutoZone #10769 / Navasota construction underway",
+    "address": "409 North La Salle Street, Navasota, TX 77868",
+    "city": "Navasota",
+    "record_type": "planning + registration",
+    "source_record_id": "Navasota dashboard ObjectId 23; TABS2026011198",
+    "record_date": null,
+    "retrieved_at": "2026-09-21T02:05:00Z",
+    "stage": "construction_reported",
+    "status_basis": "City dashboard says preliminary site plan and construction plans were approved, a construction permit was issued and construction was underway; TDLR separately shows Review Complete for accessibility registration. Neither source proves remaining trade packages are open.",
+    "scope": "Autozone private commercial project; construction plans approved and construction underway according to city dashboard.",
+    "masiate_fit": "Commercial retail construction can involve concrete, framing, paint, electrical, plumbing, roofing, siding and lighting; exact open packages unknown.",
+    "estimated_value": "$875,974 TDLR estimated cost",
+    "estimated_start": "2026-06-22",
+    "estimated_completion": "2026-11-26 / city dashboard Dec-26",
+    "bid_deadline": null,
+    "participants": [
+      {
+        "name": "ROY L MARTIN & ASSOC. PARTNERS, LTD",
+        "role": "owner/developer",
+        "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026011198"
+      },
+      {
+        "name": "AutoZone",
+        "role": "designer",
+        "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026011198"
+      },
+      {
+        "name": "JEFFERY L,KELLEY",
+        "role": "registered accessibility specialist",
+        "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026011198"
+      }
+    ],
+    "business_contacts": [
+      {
+        "name": "Autozone",
+        "role": "project/business name from city dashboard",
+        "phone": null,
+        "email": null,
+        "website": null,
+        "source_url": "https://services2.arcgis.com/A1oRcvECJ7UaClOw/arcgis/rest/services/Navasota_Project___Sheet1(in)/FeatureServer/0/query?where=1%3D1&outFields=*&returnGeometry=true&f=json"
+      },
+      {
+        "name": "AutoZone",
+        "role": "design firm on TDLR record",
+        "phone": null,
+        "email": null,
+        "website": null,
+        "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026011198"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://navasota.maps.arcgis.com/apps/dashboards/17b7b6efb2794a54b6a2f4ce3473cb12",
+        "title": "City of Navasota Project Dashboard",
+        "date": null,
+        "page": "Feature ObjectId 23",
+        "evidence": "Feature row states Autozone site plan and construction plans approved, construction permit issued and construction underway; includes Dec-26 estimated completion and coordinates.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/grimes/evidence/navasota_project_layer_query.json"
+      },
+      {
+        "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026011198",
+        "title": "TDLR TABS Project Details: TABS2026011198",
+        "date": "2026-01-29",
+        "page": "Project Details",
+        "evidence": "AutoZone; 409 North La Salle Street Navasota, TX 77868; New Construction; Construct an Auto Parts Retail Store from Ground Up.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2026011198.html"
+      }
+    ],
+    "unknowns": [
+      "Street address",
+      "Permit number and issue date",
+      "Contractor/subcontractors",
+      "Whether remaining trade packages are still available",
+      "Whether construction has started beyond the TDLR estimated start date.",
+      "Whether Masiate-relevant trade packages remain available.",
+      "Whether the owner, tenant, general contractor or designer is the best contact path."
+    ],
+    "next_research": "Use Citizenserve or city permit request by project name/coordinates; check future P&Z/City Council minutes for Autozone attachments.",
+    "disposition": "candidate",
+    "member_ids": [
+      "grimes-navasota-dashboard-20260920-autozone",
+      "statewide-tdlr-tabs-TABS2026011198"
+    ],
+    "evidence_checked": [
+      "https://navasota.maps.arcgis.com/apps/dashboards/17b7b6efb2794a54b6a2f4ce3473cb12",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/grimes/evidence/navasota_project_layer_query.json",
+      "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026011198",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2026011198.html"
+    ],
+    "reviewed_at": "2026-09-21T02:24:26Z",
+    "review_decision": "include",
+    "priority_reason": "City dashboard reports construction permit issued and construction underway; TDLR supplies the address, scope and dated registration for a private retail build with concrete/framing/roofing/paint/electrical/plumbing fit.",
+    "corrections": [
+      "Joined dashboard record with TDLR TABS2026011198; dashboard address was unknown, TDLR gives 409 North La Salle Street.",
+      "Kept TDLR Review Complete as registration evidence only; the construction-underway claim comes only from the city dashboard.",
+      "Work availability remains unknown; do not imply an open subcontract or bid package."
+    ]
+  },
+  {
+    "id": "statewide-tdlr-tabs-TABS2026023660",
+    "county": "Grimes",
+    "project_name": "EAG Chevrolet / Sterling Auto showroom and service center expansion",
+    "address": "9030 State Hwy 6 Navasota, TX 77868",
+    "city": "Navasota",
+    "record_type": "planning + registration",
+    "source_record_id": "Navasota P&Z seq 244 item 4; TABS2026023660",
+    "record_date": "2026-06-24",
+    "retrieved_at": "2026-09-21T01:59:19Z",
+    "stage": "planned",
+    "status_basis": "Navasota P&Z considered a preliminary site plan for vehicular sales expansion at 9030 Highway 6 with staff recommendation; TDLR shows Review Complete for a new showroom/service center at the same address. This is not evidence of an open bid.",
+    "scope": "New Showroom & Service Center with related sitework",
+    "masiate_fit": "Scope and cost indicate current construction/remodeling work that could use Masiate trades.",
+    "estimated_value": "$4,000,000 TDLR estimated cost",
+    "estimated_start": "2026-08-01",
+    "estimated_completion": "2027-08-01",
+    "bid_deadline": null,
+    "participants": [
+      {
+        "name": "Navasota Ventures, LLC",
+        "role": "applicant/owner in city memo",
+        "source_url": "https://destinyhosted.com/agenda_publish.cfm?id=62827&mt=ALL&get_month=8&get_year=2026&dsp=agm&seq=1041&rev=0&ag=244&ln=2885"
+      },
+      {
+        "name": "Lay Construction",
+        "role": "project representative",
+        "source_url": "https://destinyhosted.com/agenda_publish.cfm?id=62827&mt=ALL&get_month=8&get_year=2026&dsp=agm&seq=1041&rev=0&ag=244&ln=2885"
+      },
+      {
+        "name": "NAVASOTA VENTURES LLC",
+        "role": "owner/developer",
+        "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026023660"
+      },
+      {
+        "name": "Lay Design/Build",
+        "role": "designer",
+        "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026023660"
+      },
+      {
+        "name": "JAMES CHESLEY,FANCHER",
+        "role": "registered accessibility specialist",
+        "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026023660"
+      }
+    ],
+    "business_contacts": [
+      {
+        "name": "Lay Construction",
+        "role": "project representative verified in city memo",
+        "phone": null,
+        "email": null,
+        "website": null,
+        "source_url": "https://destinyhosted.com/agenda_publish.cfm?id=62827&mt=ALL&get_month=8&get_year=2026&dsp=agm&seq=1041&rev=0&ag=244&ln=2885"
+      },
+      {
+        "name": "Navasota Ventures, LLC",
+        "role": "owner/applicant verified in city memo",
+        "phone": null,
+        "email": null,
+        "website": null,
+        "source_url": "https://destinyhosted.com/agenda_publish.cfm?id=62827&mt=ALL&get_month=8&get_year=2026&dsp=agm&seq=1041&rev=0&ag=244&ln=2885"
+      },
+      {
+        "name": "Lay Design/Build",
+        "role": "design firm on TDLR record",
+        "phone": null,
+        "email": null,
+        "website": null,
+        "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026023660"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://destinyhosted.com/agenda_publish.cfm?id=62827&mt=ALL&get_month=8&get_year=2026&dsp=ag&seq=244",
+        "title": "Navasota P&Z agenda",
+        "date": "2026-08-27",
+        "page": "item 4",
+        "evidence": "Agenda identifies preliminary site plan for Navasota Ventures/Sterling Auto expansion at 9030 Highway 6.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/grimes/evidence/navasota_agenda_244.html"
+      },
+      {
+        "url": "https://destinyhosted.com/agenda_publish.cfm?id=62827&mt=ALL&get_month=8&get_year=2026&dsp=agm&seq=1041&rev=0&ag=244&ln=2885",
+        "title": "Navasota P&Z memo 1041",
+        "date": "2026-08-27",
+        "page": "summary/property information",
+        "evidence": "Memo gives project rep Lay Construction, parcel R10132, owner Navasota Ventures, LLC, address and staff recommendation.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/grimes/evidence/navasota_memo_1041_sterling_auto.html"
+      },
+      {
+        "url": "https://grimescad.org/ProxyT/Search/Properties/quick/?f=9030%20HWY6&pn=1&st=4&so=desc&pt=RP;PP;MH;NR&ty=2027",
+        "title": "Grimes CAD quick search 9030 HWY6",
+        "date": "2027",
+        "page": null,
+        "evidence": "CAD returns R10132 owner Navasota Ventures LLC at 9030 HWY6 plus related personal property/holding records.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/grimes/evidence/grimescad_9030_hwy6.json"
+      },
+      {
+        "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026023660",
+        "title": "TDLR TABS Project Details: TABS2026023660",
+        "date": "2026-06-24",
+        "page": "Project Details",
+        "evidence": "EAG Chevrolet; 9030 State Hwy 6 Navasota, TX 77868; New Construction; New Showroom & Service Center with related sitework",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2026023660.html"
+      }
+    ],
+    "unknowns": [
+      "Whether P&Z approved the preliminary site plan",
+      "Whether a construction/site permit has been issued",
+      "Whether Lay Construction is only representative or contractor of record",
+      "Whether construction has started beyond the TDLR estimated start date.",
+      "Whether Masiate-relevant trade packages remain available.",
+      "Whether the owner, tenant, general contractor or designer is the best contact path."
+    ],
+    "next_research": "Check local permit/planning records or participant website for current project status and contractor contacts.",
+    "disposition": "candidate",
+    "member_ids": [
+      "grimes-navasota-pz-20260827-sterling-auto-expansion",
+      "statewide-tdlr-tabs-TABS2026023660"
+    ],
+    "evidence_checked": [
+      "https://destinyhosted.com/agenda_publish.cfm?id=62827&mt=ALL&get_month=8&get_year=2026&dsp=ag&seq=244",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/grimes/evidence/navasota_agenda_244.html",
+      "https://destinyhosted.com/agenda_publish.cfm?id=62827&mt=ALL&get_month=8&get_year=2026&dsp=agm&seq=1041&rev=0&ag=244&ln=2885",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/grimes/evidence/navasota_memo_1041_sterling_auto.html",
+      "https://grimescad.org/ProxyT/Search/Properties/quick/?f=9030%20HWY6&pn=1&st=4&so=desc&pt=RP;PP;MH;NR&ty=2027",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/grimes/evidence/grimescad_9030_hwy6.json",
+      "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026023660",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2026023660.html"
+    ],
+    "reviewed_at": "2026-09-21T02:24:26Z",
+    "review_decision": "include",
+    "priority_reason": "Local site-plan record and TDLR registration point to the same 9030 State Hwy 6 commercial vehicle showroom/service center, a strong sitework/building-trades fit with a named design-build/representative route.",
+    "corrections": [
+      "Joined Navasota Ventures/Sterling Auto local P&Z record with EAG Chevrolet TDLR TABS2026023660 by address/project context.",
+      "Treated Lay Construction/Lay Design-Build as representative/designer from sources, not as a proven general contractor unless contacts worker verifies.",
+      "P&Z approval/current permit status remains unknown; do not call this active construction."
+    ]
+  },
+  {
+    "id": "statewide-tdlr-tabs-TABS2026025695",
+    "county": "Grimes",
+    "project_name": "MDS Maintenance LLC - Office Warehouse",
+    "address": "1700 N La Salle Navasota, TX 77868",
+    "city": "Navasota",
+    "record_type": "registration",
+    "source_record_id": "TABS2026025695",
+    "record_date": "2026-07-20",
+    "retrieved_at": "2026-09-21T01:59:17Z",
+    "stage": "planned",
+    "status_basis": "TDLR TABS status is Project Registered; this proves registration/review status only, not that a subcontract package remains open.",
+    "scope": "Office Warehouse Space ~ 11,200 SF Metal Building",
+    "masiate_fit": "Scope and cost indicate current construction/remodeling work that could use Masiate trades.",
+    "estimated_value": "$210,000 TDLR estimated cost",
+    "estimated_start": "2026-08-01",
+    "estimated_completion": "2026-12-31",
+    "bid_deadline": null,
+    "participants": [
+      {
+        "name": "MDS Maintenance, LLC",
+        "role": "owner/developer",
+        "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026025695"
+      },
+      {
+        "name": "BLAIR,BAKER",
+        "role": "registered accessibility specialist",
+        "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026025695"
+      }
+    ],
+    "business_contacts": [],
+    "sources": [
+      {
+        "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026025695",
+        "title": "TDLR TABS Project Details: TABS2026025695",
+        "date": "2026-07-20",
+        "page": "Project Details",
+        "evidence": "MDS Maintainance LLC - Office Warehouse; 1700 N La Salle Navasota, TX 77868; New Construction; Office Warehouse Space ~ 11,200 SF Metal Building",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2026025695.html"
+      }
+    ],
+    "unknowns": [
+      "Whether construction has started beyond the TDLR estimated start date.",
+      "Whether Masiate-relevant trade packages remain available.",
+      "Whether the owner, tenant, general contractor or designer is the best contact path."
+    ],
+    "next_research": "Check local permit/planning records or participant website for current project status and contractor contacts.",
+    "disposition": "candidate",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026025695"
+    ],
+    "evidence_checked": [
+      "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026025695",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2026025695.html"
+    ],
+    "reviewed_at": "2026-09-21T02:24:26Z",
+    "review_decision": "include",
+    "priority_reason": "Small current TDLR registration for an 11,200 SF metal office/warehouse is more directly aligned to Masiate trades than several larger institutional records.",
+    "corrections": [
+      "TDLR Project Registered proves registration only; no local permit or open subcontract evidence was found.",
+      "Estimated dates are planning data, not proof work is active or available."
+    ]
+  },
+  {
+    "id": "grimes-navasota-pz-20260924-pecan-grove-phase2",
+    "county": "Grimes",
+    "project_name": "Pecan Grove Estates Phase 2 final plat and subdivision agreement",
+    "address": "Highway 105 W / Pecan Lakes Drive, Navasota, TX 77868",
+    "city": "Navasota",
+    "record_type": "planning",
+    "source_record_id": "Navasota P&Z agenda seq 246 item 6 / memo seq 1064; parcel R14167",
+    "record_date": "2026-09-24",
+    "retrieved_at": "2026-09-21T02:05:00Z",
+    "stage": "planned",
+    "status_basis": "September 24, 2026 P&Z agenda is for consideration of final plat and subdivision agreement; memo says Phase 2 public infrastructure is substantially complete but outstanding items remain under a letter of credit. It does not prove vertical home construction has started.",
+    "scope": "57-lot residential subdivision; subdivision agreement covers outstanding public improvements including Phase 2 lot-frontage sidewalks.",
+    "masiate_fit": "Concrete/sidewalk, fencing, flatwork, framing and later residential trade packages could fit; trade availability is an inference because the source only confirms subdivision approval/infrastructure status.",
+    "estimated_value": "$101,265.00 outstanding infrastructure letter of credit; $69,615.00 listed for missing lot frontage sidewalks; $74,584 parkland fee-in-lieu noted separately",
+    "estimated_start": null,
+    "estimated_completion": "No later than two years after final plat signature for required public improvements, per subdivision agreement summary",
+    "bid_deadline": null,
+    "participants": [
+      {
+        "name": "Crosstrails Development, LLC",
+        "role": "owner/subdivider",
+        "source_url": "https://destinyhosted.com/agenda_publish.cfm?id=62827&mt=ALL&get_month=9&get_year=2026&dsp=agm&seq=1064&rev=0&ag=246&ln=2931"
+      },
+      {
+        "name": "413 Pecan Grove, LLC",
+        "role": "associated owner named in memo",
+        "source_url": "https://destinyhosted.com/agenda_publish.cfm?id=62827&mt=ALL&get_month=9&get_year=2026&dsp=agm&seq=1064&rev=0&ag=246&ln=2931"
+      },
+      {
+        "name": "Brandon Goodyk",
+        "role": "project owner representative",
+        "source_url": "https://destinyhosted.com/agenda_publish.cfm?id=62827&mt=ALL&get_month=9&get_year=2026&dsp=agm&seq=1064&rev=0&ag=246&ln=2931"
+      },
+      {
+        "name": "Chad Murphy",
+        "role": "project owner representative",
+        "source_url": "https://destinyhosted.com/agenda_publish.cfm?id=62827&mt=ALL&get_month=9&get_year=2026&dsp=agm&seq=1064&rev=0&ag=246&ln=2931"
+      },
+      {
+        "name": "Paul Malek / MBC",
+        "role": "project engineer",
+        "source_url": "https://destinyhosted.com/agenda_publish.cfm?id=62827&mt=ALL&get_month=9&get_year=2026&dsp=agm&seq=1064&rev=0&ag=246&ln=2931"
+      }
+    ],
+    "business_contacts": [
+      {
+        "name": "Crosstrails Development, LLC",
+        "role": "owner/subdivider verified in city memo and CAD",
+        "phone": null,
+        "email": null,
+        "website": null,
+        "source_url": "https://grimescad.org/ProxyT/Search/Properties/quick/?f=R14167&pn=1&st=4&so=desc&pt=RP;PP;MH;NR&ty=2027"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://destinyhosted.com/agenda_publish.cfm?id=62827&mt=ALL&get_month=9&get_year=2026&dsp=ag&seq=246",
+        "title": "Navasota Planning & Zoning Commission agenda",
+        "date": "2026-09-24",
+        "page": "item 6",
+        "evidence": "Agenda identifies Crosstrails final plat/subdivision agreement for Pecan Grove Estates Phase 2, 57 lots along Pecan Lakes Drive.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/grimes/evidence/navasota_agenda_246.html"
+      },
+      {
+        "url": "https://destinyhosted.com/agenda_publish.cfm?id=62827&mt=ALL&get_month=9&get_year=2026&dsp=agm&seq=1064&rev=0&ag=246&ln=2931",
+        "title": "Navasota P&Z agenda memo 1064",
+        "date": "2026-09-24",
+        "page": "summary/property information",
+        "evidence": "Memo gives parcel R14167, owner, address, 57-lot Phase 2 scope, substantially complete public infrastructure, outstanding sidewalks and staff recommendation.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/grimes/evidence/navasota_memo_1064_pecan_grove.html"
+      },
+      {
+        "url": "https://destinyhosted.com/navasdocs/2026/NPAZ/20260924_246/1064_Navasota%20-%20Pecan%20Grove%20-%20Subdivision%20Agreement%20Phase%202%20Final.pdf",
+        "title": "Subdivision agreement PDF",
+        "date": "2026-09-24",
+        "page": "agreement attachment",
+        "evidence": "Agreement attachment preserved for outstanding public improvement obligations.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/grimes/evidence/pecan_grove_subdivision_agreement.pdf"
+      },
+      {
+        "url": "https://grimescad.org/ProxyT/Search/Properties/quick/?f=R14167&pn=1&st=4&so=desc&pt=RP;PP;MH;NR&ty=2027",
+        "title": "Grimes CAD quick search R14167",
+        "date": "2027",
+        "page": null,
+        "evidence": "CAD result confirms R14167 owner Crosstrails Development, LLC and situs HWY105 W, Navasota.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/grimes/evidence/grimescad_R14167.json"
+      }
+    ],
+    "unknowns": [
+      "Whether final plat was approved after the September 24 meeting",
+      "Which sidewalk/flatwork scopes remain available to outside contractors",
+      "Whether vertical builders have been selected"
+    ],
+    "next_research": "After the meeting, check approved minutes and filed plat; then identify developer/builder procurement contacts from the subdivision agreement or county deed/plat filings.",
+    "disposition": "candidate",
+    "member_ids": [
+      "grimes-navasota-pz-20260924-pecan-grove-phase2"
+    ],
+    "evidence_checked": [
+      "https://destinyhosted.com/agenda_publish.cfm?id=62827&mt=ALL&get_month=9&get_year=2026&dsp=ag&seq=246",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/grimes/evidence/navasota_agenda_246.html",
+      "https://destinyhosted.com/agenda_publish.cfm?id=62827&mt=ALL&get_month=9&get_year=2026&dsp=agm&seq=1064&rev=0&ag=246&ln=2931",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/grimes/evidence/navasota_memo_1064_pecan_grove.html",
+      "https://destinyhosted.com/navasdocs/2026/NPAZ/20260924_246/1064_Navasota%20-%20Pecan%20Grove%20-%20Subdivision%20Agreement%20Phase%202%20Final.pdf",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/grimes/evidence/pecan_grove_subdivision_agreement.pdf",
+      "https://grimescad.org/ProxyT/Search/Properties/quick/?f=R14167&pn=1&st=4&so=desc&pt=RP;PP;MH;NR&ty=2027",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/grimes/evidence/grimescad_R14167.json"
+    ],
+    "reviewed_at": "2026-09-21T02:24:26Z",
+    "review_decision": "include",
+    "priority_reason": "Subdivision agreement identifies 57 lots and outstanding public improvements including sidewalks, a concrete/flatwork fit with later residential trade potential.",
+    "corrections": [
+      "Record date is a September 24, 2026 agenda item; as of review on September 21, 2026, final action had not happened yet.",
+      "Do not claim vertical home construction has started.",
+      "Letter of credit and sidewalk values are obligations/estimates, not Masiate contract value."
+    ]
+  },
+  {
+    "id": "statewide-tdlr-tabs-TABS2026006838",
+    "county": "Leon",
+    "project_name": "New Upper Jr High Campus & Lower Jr. High Addition",
+    "address": "145 Bison Trail Buffalo, TX 75831",
+    "city": "Buffalo",
+    "record_type": "registration",
+    "source_record_id": "TABS2026006838",
+    "record_date": "2025-11-26",
+    "retrieved_at": "2026-09-21T02:01:11Z",
+    "stage": "planned",
+    "status_basis": "TDLR TABS status is Review Complete; this proves registration/review status only, not that a subcontract package remains open.",
+    "scope": "New construction of 78,000 sf Jr. High campus and 8,000 sf addition to lower Jr. High.",
+    "masiate_fit": "Scope and cost indicate current construction/remodeling work that could use Masiate trades.",
+    "estimated_value": "$38,000,000 TDLR estimated cost",
+    "estimated_start": "2026-02-01",
+    "estimated_completion": "2027-08-31",
+    "bid_deadline": null,
+    "participants": [
+      {
+        "name": "Buffalo ISD",
+        "role": "owner/developer",
+        "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026006838"
+      },
+      {
+        "name": "GLS",
+        "role": "designer",
+        "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026006838"
+      },
+      {
+        "name": "PHILLIP BERTRAM,CHAPMAN",
+        "role": "registered accessibility specialist",
+        "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026006838"
+      }
+    ],
+    "business_contacts": [
+      {
+        "name": "GLS",
+        "role": "design firm on TDLR record",
+        "phone": null,
+        "email": null,
+        "website": null,
+        "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026006838"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026006838",
+        "title": "TDLR TABS Project Details: TABS2026006838",
+        "date": "2025-11-26",
+        "page": "Project Details",
+        "evidence": "Buffalo ISD; 145 Bison Trail Buffalo, TX 75831; New Construction; New construction of 78,000 sf Jr. High campus and 8,000 sf addition to lower Jr. High.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2026006838.html"
+      }
+    ],
+    "unknowns": [
+      "Whether construction has started beyond the TDLR estimated start date.",
+      "Whether Masiate-relevant trade packages remain available.",
+      "Whether the owner, tenant, general contractor or designer is the best contact path."
+    ],
+    "next_research": "Check local permit/planning records or participant website for current project status and contractor contacts.",
+    "disposition": "candidate",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026006838"
+    ],
+    "evidence_checked": [
+      "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026006838",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2026006838.html"
+    ],
+    "reviewed_at": "2026-09-21T02:24:26Z",
+    "review_decision": "include",
+    "priority_reason": "New junior high campus and lower junior high addition remain in a 2026-2027 construction window and can involve concrete, framing, roofing, siding, paint, flooring, plumbing/electrical and site work.",
+    "corrections": [
+      "No local award, permit or active bid record was paired with this TDLR entry.",
+      "Keep school phases separate from other Buffalo/Leon records; do not merge with radio shelter bids."
+    ]
+  },
+  {
+    "id": "statewide-tdlr-tabs-TABS2026021299",
+    "county": "Leon",
+    "project_name": "TxDOT Centerville AE/MNT",
+    "address": "775 STATE HIGHWAY 75N Centerville, TX 75833",
+    "city": "Centerville",
+    "record_type": "registration",
+    "source_record_id": "TABS2026021299",
+    "record_date": "2026-05-27",
+    "retrieved_at": "2026-09-21T02:01:04Z",
+    "stage": "planned",
+    "status_basis": "TDLR TABS status is Project Registered; this proves registration/review status only, not that a subcontract package remains open.",
+    "scope": "CONSTRUCTION AND SITE DEVELOPMENT OF NEW VEHICLE MAINTENANCE AND OFFICE FACILITY FOR THE BRYAN DISTRICT/LEON COUNTY AREA. NEW BUILDINGS TO INCLUDE AREA ENGINEER & MAINTENANCE, EQUIPMENT STORAGE SHEDS, BRINEMAKER, FIRE PUMP HOUSE, AND FUEL STATION.",
+    "masiate_fit": "Scope and cost indicate current construction/remodeling work that could use Masiate trades.",
+    "estimated_value": "$32,949,516 TDLR estimated cost",
+    "estimated_start": "2026-09-01",
+    "estimated_completion": "2028-09-01",
+    "bid_deadline": null,
+    "participants": [
+      {
+        "name": "Texas Department of Transportation",
+        "role": "owner/developer",
+        "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026021299"
+      },
+      {
+        "name": "Jacobs",
+        "role": "designer",
+        "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026021299"
+      },
+      {
+        "name": "ERNESTO,SARABIA",
+        "role": "registered accessibility specialist",
+        "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026021299"
+      }
+    ],
+    "business_contacts": [
+      {
+        "name": "Jacobs",
+        "role": "design firm on TDLR record",
+        "phone": null,
+        "email": null,
+        "website": null,
+        "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026021299"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026021299",
+        "title": "TDLR TABS Project Details: TABS2026021299",
+        "date": "2026-05-27",
+        "page": "Project Details",
+        "evidence": "TxDOT Centerville AE/MNT; 775 STATE HIGHWAY 75N Centerville, TX 75833; New Construction; CONSTRUCTION AND SITE DEVELOPMENT OF NEW VEHICLE MAINTENANCE AND OFFICE FACILITY FOR THE BRYAN DISTRICT/LEON COUNTY AREA. NEW BUILDINGS TO INCLUDE AREA ENGINEER & MAINTENANCE, EQUIPMENT STORAGE SHEDS, BRINEMAKER, FIRE PUMP HOUSE, AND FUEL STATION.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2026021299.html"
+      }
+    ],
+    "unknowns": [
+      "Whether construction has started beyond the TDLR estimated start date.",
+      "Whether Masiate-relevant trade packages remain available.",
+      "Whether the owner, tenant, general contractor or designer is the best contact path."
+    ],
+    "next_research": "Check local permit/planning records or participant website for current project status and contractor contacts.",
+    "disposition": "candidate",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026021299"
+    ],
+    "evidence_checked": [
+      "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026021299",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2026021299.html"
+    ],
+    "reviewed_at": "2026-09-21T02:24:26Z",
+    "review_decision": "include",
+    "priority_reason": "TDLR registration describes a new TxDOT maintenance/office facility with site development, storage sheds, brinemaker, fire pump house and fuel station; broad site/building trades may fit.",
+    "corrections": [
+      "Included for service-fit despite large budget, not because it is the biggest project.",
+      "TDLR registration does not identify procurement status or subcontract availability.",
+      "Treat TxDOT/Jacobs as participants only; contacts should verify an actual business route."
+    ]
+  },
+  {
+    "id": "statewide-tdlr-tabs-TABS2026014634",
+    "county": "Madison",
+    "project_name": "Dollar General \u00b7 Store #31843",
+    "address": "Southwest Corner of Texas State Highway 75 & E Par Madisonville, TX 77864",
+    "city": "Madisonville",
+    "record_type": "registration",
+    "source_record_id": "TABS2026014634",
+    "record_date": "2026-03-10",
+    "retrieved_at": "2026-09-21T02:01:15Z",
+    "stage": "planned",
+    "status_basis": "TDLR TABS status is Review Complete; this proves registration/review status only, not that a subcontract package remains open.",
+    "scope": "New Construction of 10,640 s.f. Dollar General Store, Pre-Manufactured Metal Building",
+    "masiate_fit": "Scope and cost indicate current construction/remodeling work that could use Masiate trades.",
+    "estimated_value": "$600,000 TDLR estimated cost",
+    "estimated_start": "2026-05-15",
+    "estimated_completion": "2026-11-01",
+    "bid_deadline": null,
+    "participants": [
+      {
+        "name": "DGOGMADISONVILLETX10012025 LLC",
+        "role": "owner/developer",
+        "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026014634"
+      },
+      {
+        "name": "Kinetic Design + Development",
+        "role": "designer",
+        "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026014634"
+      },
+      {
+        "name": "LANDY,PERKINS",
+        "role": "registered accessibility specialist",
+        "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026014634"
+      }
+    ],
+    "business_contacts": [
+      {
+        "name": "Kinetic Design + Development",
+        "role": "design firm on TDLR record",
+        "phone": null,
+        "email": null,
+        "website": null,
+        "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026014634"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026014634",
+        "title": "TDLR TABS Project Details: TABS2026014634",
+        "date": "2026-03-10",
+        "page": "Project Details",
+        "evidence": "Dollar General; Southwest Corner of Texas State Highway 75 & E Par Madisonville, TX 77864; New Construction; New Construction of 10,640 s.f. Dollar General Store, Pre-Manufactured Metal Building",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2026014634.html"
+      }
+    ],
+    "unknowns": [
+      "Whether construction has started beyond the TDLR estimated start date.",
+      "Whether Masiate-relevant trade packages remain available.",
+      "Whether the owner, tenant, general contractor or designer is the best contact path."
+    ],
+    "next_research": "Check local permit/planning records or participant website for current project status and contractor contacts.",
+    "disposition": "candidate",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026014634"
+    ],
+    "evidence_checked": [
+      "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026014634",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2026014634.html"
+    ],
+    "reviewed_at": "2026-09-21T02:24:26Z",
+    "review_decision": "include",
+    "priority_reason": "Madisonville Dollar General TDLR record is a current-window new pre-manufactured metal retail building, a straightforward private/commercial trade fit.",
+    "corrections": [
+      "TDLR Review Complete is registration evidence only; no Madisonville permit or contractor record was found.",
+      "Estimated start/completion are not proof work remains available."
+    ]
+  },
+  {
+    "id": "grimes-navasota-dashboard-20260920-8th-street-townhomes",
+    "county": "Grimes",
+    "project_name": "8th Street Townhomes preliminary plat and construction drawings",
+    "address": "8th Street area; dashboard point 30.386408, -96.093311 in Navasota",
+    "city": "Navasota",
+    "record_type": "planning",
+    "source_record_id": "Navasota Project Dashboard row: 8th Street Townhomes",
+    "record_date": null,
+    "retrieved_at": "2026-09-21T02:24:00Z",
+    "stage": "planned",
+    "status_basis": "City dashboard says setback variance was approved by ZBOA and preliminary plat/construction drawings are under review, awaiting developer resubmittals.",
+    "scope": "Townhome development entitlement/design review on 8th Street.",
+    "masiate_fit": "Potential townhome construction aligns with framing, concrete, roofing, electrical, plumbing, painting and finish trades, but timing is early and dependent on resubmittals.",
+    "estimated_value": null,
+    "estimated_start": null,
+    "estimated_completion": null,
+    "bid_deadline": null,
+    "participants": [],
+    "business_contacts": [],
+    "sources": [
+      {
+        "url": "https://navasota.maps.arcgis.com/apps/dashboards/17b7b6efb2794a54b6a2f4ce3473cb12",
+        "title": "City of Navasota Project Dashboard",
+        "date": null,
+        "page": "Navasota Project Dashboard row: 8th Street Townhomes",
+        "evidence": "Dashboard row states variance approved and preliminary plat/construction drawings under review for 8th Street Townhomes.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/grimes/evidence/navasota_project_layer_query.json"
+      }
+    ],
+    "unknowns": [
+      "Developer name not exposed in dashboard row",
+      "Unit count, address range and construction schedule not exposed",
+      "No permit number found"
+    ],
+    "next_research": "Search Navasota ZBOA/P&Z records for 8th Street Townhomes variance/plat attachments and identify owner/developer before outreach.",
+    "disposition": "candidate",
+    "member_ids": [
+      "grimes-navasota-dashboard-20260920-8th-street-townhomes"
+    ],
+    "evidence_checked": [
+      "https://navasota.maps.arcgis.com/apps/dashboards/17b7b6efb2794a54b6a2f4ce3473cb12",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/grimes/evidence/navasota_project_layer_query.json"
+    ],
+    "reviewed_at": "2026-09-21T02:24:26Z",
+    "review_decision": "watchlist",
+    "priority_reason": "Townhome development has strong Masiate fit if it advances, but the dashboard says drawings/plat are still under review and awaiting resubmittals.",
+    "corrections": [
+      "Kept as watchlist until resubmittal/permit status is confirmed.",
+      "Do not call trade work open."
+    ]
+  },
+  {
+    "id": "grimes-navasota-dashboard-20260920-fosters-levy-louise-mitmod",
+    "county": "Grimes",
+    "project_name": "Foster, Levy and Louise water/sewer replacement Mit-Mod project",
+    "address": "Foster Street, Levy Street and Louise Street, Navasota, TX 77868; dashboard point 30.382, -96.091",
+    "city": "Navasota",
+    "record_type": "planning",
+    "source_record_id": "Navasota Project Dashboard row: Mit Mod Grant - Fosters, Levy, Luise - Water and Sewer Replacement",
+    "record_date": null,
+    "retrieved_at": "2026-09-21T02:24:00Z",
+    "stage": "construction_reported",
+    "status_basis": "City dashboard says GLO Contract No. 24-065-107-E839 has a $917,400 construction budget, JTM Construction was awarded $917,385, the project started 2026-04-13, and contractors are replacing the sewer main on Foster Street.",
+    "scope": "Water/sewer replacement on Foster, Levy and Louise streets.",
+    "masiate_fit": "Public infrastructure lead; possible fit for utility subs, concrete, pavement restoration, traffic control, fencing/safety and related site work, not a private property owner lead.",
+    "estimated_value": "$917,400 construction budget; $917,385.00 awarded contract",
+    "estimated_start": "2026-04-13",
+    "estimated_completion": "2026-12-31 GLO grant contract end date",
+    "bid_deadline": null,
+    "participants": [
+      {
+        "name": "JTM Construction",
+        "role": "awarded contractor",
+        "source_url": "https://navasota.maps.arcgis.com/apps/dashboards/17b7b6efb2794a54b6a2f4ce3473cb12"
+      }
+    ],
+    "business_contacts": [
+      {
+        "name": "JTM Construction",
+        "role": "awarded contractor named by city dashboard",
+        "phone": null,
+        "email": null,
+        "website": null,
+        "source_url": "https://navasota.maps.arcgis.com/apps/dashboards/17b7b6efb2794a54b6a2f4ce3473cb12"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://navasota.maps.arcgis.com/apps/dashboards/17b7b6efb2794a54b6a2f4ce3473cb12",
+        "title": "City of Navasota Project Dashboard",
+        "date": null,
+        "page": "Navasota Project Dashboard row: Mit Mod Grant - Fosters, Levy, Luise - Water and Sewer Replacement",
+        "evidence": "Dashboard row names Foster/Levy/Louise streets, budget, award amount, JTM Construction, start date and active sewer main replacement on Foster Street.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/grimes/evidence/navasota_project_layer_query.json"
+      }
+    ],
+    "unknowns": [
+      "Exact status and remaining scopes by street",
+      "Whether JTM self-performs or uses subcontractors",
+      "Pay application/current schedule"
+    ],
+    "next_research": "Check council award/pay records and public works updates for remaining street restoration or subcontract scopes.",
+    "disposition": "candidate",
+    "member_ids": [
+      "grimes-navasota-dashboard-20260920-fosters-levy-louise-mitmod"
+    ],
+    "evidence_checked": [
+      "https://navasota.maps.arcgis.com/apps/dashboards/17b7b6efb2794a54b6a2f4ce3473cb12",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/grimes/evidence/navasota_project_layer_query.json"
+    ],
+    "reviewed_at": "2026-09-21T02:24:26Z",
+    "review_decision": "watchlist",
+    "priority_reason": "Active/awarded water-sewer replacement has site restoration fit but is primarily a contractor/subcontractor route.",
+    "corrections": [
+      "Classed as watchlist because JTM Construction is already awarded and no open subcontract need is proven."
+    ]
+  },
+  {
+    "id": "grimes-navasota-dashboard-20260920-hidden-hills-phase3",
+    "county": "Grimes",
+    "project_name": "Hidden Hills Subdivision Phase 3 pre-construction",
+    "address": "Hidden Hills subdivision area; dashboard point 30.4008246, -96.09510408 in Navasota",
+    "city": "Navasota",
+    "record_type": "planning",
+    "source_record_id": "Navasota Project Dashboard row: Hidden Hills Subdivision Phase 3",
+    "record_date": null,
+    "retrieved_at": "2026-09-21T02:24:00Z",
+    "stage": "preconstruction_reported",
+    "status_basis": "City dashboard says Phase 3, the last phase, is awaiting a pre-construction meeting to begin work.",
+    "scope": "Residential subdivision Phase 3 horizontal construction/pre-construction signal.",
+    "masiate_fit": "Subdivision phase could involve concrete/flatwork, fencing, site utilities, framing and later homebuilder trades; current source confirms only pre-construction status.",
+    "estimated_value": null,
+    "estimated_start": null,
+    "estimated_completion": "6/12/2027",
+    "bid_deadline": null,
+    "participants": [],
+    "business_contacts": [],
+    "sources": [
+      {
+        "url": "https://navasota.maps.arcgis.com/apps/dashboards/17b7b6efb2794a54b6a2f4ce3473cb12",
+        "title": "City of Navasota Project Dashboard",
+        "date": null,
+        "page": "Navasota Project Dashboard row: Hidden Hills Subdivision Phase 3",
+        "evidence": "Dashboard row states Hidden Hills Subdivision Phase 3 is awaiting a pre-construction meeting to begin work and gives coordinates.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/grimes/evidence/navasota_project_layer_query.json"
+      }
+    ],
+    "unknowns": [
+      "Developer/owner and contractor not identified in dashboard row",
+      "Street addresses/lot count not exposed in dashboard",
+      "Whether pre-construction meeting has occurred"
+    ],
+    "next_research": "Check Navasota P&Z/council plats and CAD near dashboard coordinates for Hidden Hills Phase 3 owner/developer; then follow permit releases.",
+    "disposition": "candidate",
+    "member_ids": [
+      "grimes-navasota-dashboard-20260920-hidden-hills-phase3"
+    ],
+    "evidence_checked": [
+      "https://navasota.maps.arcgis.com/apps/dashboards/17b7b6efb2794a54b6a2f4ce3473cb12",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/grimes/evidence/navasota_project_layer_query.json"
+    ],
+    "reviewed_at": "2026-09-21T02:24:26Z",
+    "review_decision": "watchlist",
+    "priority_reason": "Residential subdivision phase is awaiting pre-construction, a useful near-term watchlist but missing developer/contractor/address detail.",
+    "corrections": [
+      "Kept as watchlist because dashboard has no owner, contractor or permit number.",
+      "Estimated completion is not proof work has started."
+    ]
+  },
+  {
+    "id": "grimes-navasota-dashboard-20260920-altamira-hwy90-east",
+    "county": "Grimes",
+    "project_name": "Hwy 90 East Development - Altamira utilities",
+    "address": "Hwy 90 East development area; dashboard point 30.40589714, -96.04988911 in Navasota",
+    "city": "Navasota",
+    "record_type": "planning",
+    "source_record_id": "Navasota Project Dashboard ObjectId 18",
+    "record_date": null,
+    "retrieved_at": "2026-09-21T02:05:00Z",
+    "stage": "construction_reported",
+    "status_basis": "City dashboard says lift station and forcemain, Phase 1 and Phase 2 utilities are underway. No street address, permit number or contractor found.",
+    "scope": "Lift station, forcemain and Phase 1/2 utility work for east-side private development.",
+    "masiate_fit": "Utility work itself is less aligned, but associated site/vertical phases could need concrete, fencing, electrical, lighting, paint and framing; current source supports utility construction only.",
+    "estimated_value": null,
+    "estimated_start": null,
+    "estimated_completion": "TBD",
+    "bid_deadline": null,
+    "participants": [
+      {
+        "name": "Grimes Altamira, LLC",
+        "role": "owner/developer",
+        "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026004667"
+      },
+      {
+        "name": "McClure and Browne Engineering",
+        "role": "designer",
+        "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026004667"
+      },
+      {
+        "name": "EDDIE,HARE",
+        "role": "registered accessibility specialist",
+        "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026004667"
+      }
+    ],
+    "business_contacts": [
+      {
+        "name": "McClure and Browne Engineering",
+        "role": "design firm on TDLR record",
+        "phone": null,
+        "email": null,
+        "website": null,
+        "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026004667"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://navasota.maps.arcgis.com/apps/dashboards/17b7b6efb2794a54b6a2f4ce3473cb12",
+        "title": "City of Navasota Project Dashboard",
+        "date": null,
+        "page": "Feature ObjectId 18",
+        "evidence": "Dashboard states Hwy 90 East Development - Altamira lift station/forcemain and Phase 1/2 utilities are underway; coordinates included.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/grimes/evidence/navasota_project_layer_query.json"
+      },
+      {
+        "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026004667",
+        "title": "TDLR TABS Project Details: TABS2026004667",
+        "date": "2025-10-30",
+        "page": "Project Details",
+        "evidence": "Altamira Subdivision; State Hwy 90 and FM 3455 Navasota, TX 77868; New Construction; Sidewalks, curb ramps, street crossings, signage and lighting",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2026004667.html"
+      }
+    ],
+    "unknowns": [
+      "Developer/owner confirmation",
+      "Address/parcel boundaries",
+      "Vertical construction timing",
+      "Contractor roles",
+      "Whether construction has started beyond the TDLR estimated start date.",
+      "Whether Masiate-relevant trade packages remain available.",
+      "Whether the owner, tenant, general contractor or designer is the best contact path."
+    ],
+    "next_research": "Follow east-side water plant/Altamira council or P&Z records and CAD parcels near dashboard point.",
+    "disposition": "watchlist",
+    "member_ids": [
+      "grimes-navasota-dashboard-20260920-altamira-hwy90-east",
+      "statewide-tdlr-tabs-TABS2026004667"
+    ],
+    "evidence_checked": [
+      "https://navasota.maps.arcgis.com/apps/dashboards/17b7b6efb2794a54b6a2f4ce3473cb12",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/grimes/evidence/navasota_project_layer_query.json",
+      "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026004667",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2026004667.html"
+    ],
+    "reviewed_at": "2026-09-21T02:24:26Z",
+    "review_decision": "watchlist",
+    "priority_reason": "Utility/sidewalk/lighting phase may fit site trades but source emphasizes infrastructure; paired TDLR registration supports the phase, not vertical work.",
+    "corrections": [
+      "Joined local dashboard signal with TDLR TABS2026004667 by Altamira/Hwy 90 context.",
+      "Kept as watchlist because current source supports utility/public-improvement status, not buyer-ready construction packages."
+    ]
+  },
+  {
+    "id": "grimes-navasota-dashboard-20260920-minnie-street-cdbg",
+    "county": "Grimes",
+    "project_name": "Minnie Street water and sewer replacement CDBG project",
+    "address": "Minnie Street, Navasota, TX 77868; dashboard point 30.383, -96.093",
+    "city": "Navasota",
+    "record_type": "planning",
+    "source_record_id": "Navasota Project Dashboard row: CDBG TDA Grant - Minnie Street - Water and Sewer Replacement",
+    "record_date": null,
+    "retrieved_at": "2026-09-21T02:24:00Z",
+    "stage": "construction_reported",
+    "status_basis": "City dashboard says TDA Contract No. CDV23-0305 has a $475,000 construction budget, contract awarded to Terra Bella Construction for $377,842.48, project began 2026-05-01 and mobilization was scheduled mid-June.",
+    "scope": "Water and sewer replacement project on Minnie Street.",
+    "masiate_fit": "Public utility work is a contractor/subcontractor opportunity more than a private property lead; possible fit for concrete, pavement restoration, utility subs, traffic control and site restoration.",
+    "estimated_value": "$475,000 construction budget; $377,842.48 awarded contract",
+    "estimated_start": "2026-05-01",
+    "estimated_completion": null,
+    "bid_deadline": null,
+    "participants": [
+      {
+        "name": "Terra Bella Construction",
+        "role": "awarded contractor",
+        "source_url": "https://navasota.maps.arcgis.com/apps/dashboards/17b7b6efb2794a54b6a2f4ce3473cb12"
+      }
+    ],
+    "business_contacts": [
+      {
+        "name": "Terra Bella Construction",
+        "role": "awarded contractor named by city dashboard",
+        "phone": null,
+        "email": null,
+        "website": null,
+        "source_url": "https://navasota.maps.arcgis.com/apps/dashboards/17b7b6efb2794a54b6a2f4ce3473cb12"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://navasota.maps.arcgis.com/apps/dashboards/17b7b6efb2794a54b6a2f4ce3473cb12",
+        "title": "City of Navasota Project Dashboard",
+        "date": null,
+        "page": "Navasota Project Dashboard row: CDBG TDA Grant - Minnie Street - Water and Sewer Replacement",
+        "evidence": "Dashboard row names Minnie Street, budget, award amount, Terra Bella Construction, start date and scheduled mobilization.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/grimes/evidence/navasota_project_layer_query.json"
+      }
+    ],
+    "unknowns": [
+      "Whether remaining subcontractor scopes are open",
+      "Exact construction limits on Minnie Street",
+      "Current percent complete"
+    ],
+    "next_research": "Check council award item/pay apps or contact public works procurement records for Terra Bella scope and schedule before treating as active opportunity.",
+    "disposition": "candidate",
+    "member_ids": [
+      "grimes-navasota-dashboard-20260920-minnie-street-cdbg"
+    ],
+    "evidence_checked": [
+      "https://navasota.maps.arcgis.com/apps/dashboards/17b7b6efb2794a54b6a2f4ce3473cb12",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/grimes/evidence/navasota_project_layer_query.json"
+    ],
+    "reviewed_at": "2026-09-21T02:24:26Z",
+    "review_decision": "watchlist",
+    "priority_reason": "Active/awarded utility project may offer subcontract/site restoration fit, but the prime contractor is already awarded.",
+    "corrections": [
+      "Classed as watchlist because Terra Bella Construction is already awarded and no open subcontract need is proven."
+    ]
+  },
+  {
+    "id": "leon-centerville-city-hall-ceiling-water-damage-2026-08-05",
+    "county": "Leon",
+    "project_name": "Centerville City Hall meeting room ceiling water-damage investigation",
+    "address": "325 E. St. Marys St., Centerville, TX 75833",
+    "city": "Centerville",
+    "record_type": "other",
+    "source_record_id": "City Council Meeting Minutes 8-5-2026",
+    "record_date": "2026-08-05",
+    "retrieved_at": "2026-09-21T01:57:09Z",
+    "stage": "planned",
+    "status_basis": "Minutes report discussion only: a portion of the City Hall meeting-room ceiling collapsed from air-conditioner leakage; members discussed removing sheetrock to determine damage and whether ceiling studs/joists are structurally sound. No action was taken.",
+    "scope": "Possible sheetrock removal, water-damage assessment, ceiling/joist structural evaluation and later repair at City Hall meeting room.",
+    "masiate_fit": "Strong inferred fit for sheetrock/drywall, framing/structural repair, paint and water-damage remediation if city later authorizes work.",
+    "estimated_value": null,
+    "estimated_start": null,
+    "estimated_completion": null,
+    "bid_deadline": null,
+    "participants": [
+      {
+        "name": "City of Centerville",
+        "role": "owner",
+        "source_url": "https://centervilletx.gov/wp-content/uploads/2026/09/8-5-2026-City-Council-Meeting-Minutes.pdf"
+      }
+    ],
+    "business_contacts": [],
+    "sources": [
+      {
+        "url": "https://centervilletx.gov/wp-content/uploads/2026/09/8-5-2026-City-Council-Meeting-Minutes.pdf",
+        "title": "City Council Meeting Minutes 8-5-2026",
+        "date": "2026-08-05",
+        "page": "page 3",
+        "evidence": "Minutes describe ceiling collapse due to AC leakage and discussion of removing sheetrock to inspect damage and structural soundness.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/leon/evidence/centerville/8-5-2026-City-Council-Meeting-Minutes.pdf"
+      },
+      {
+        "url": "https://centervilletx.gov/",
+        "title": "City of Centerville homepage",
+        "date": null,
+        "page": "contact block",
+        "evidence": "Homepage lists City of Centerville address as 325 E St Marys St, Centerville, TX 75833.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/leon/evidence/centerville/wp-posts-after-2026-06-21.json"
+      }
+    ],
+    "unknowns": [
+      "No action taken as of August 5, 2026.",
+      "Exact room location within City Hall and repair procurement status are not confirmed."
+    ],
+    "next_research": "Check September and later minutes for action on meeting-room ceiling repairs or public works purchases.",
+    "disposition": "candidate",
+    "member_ids": [
+      "leon-centerville-city-hall-ceiling-water-damage-2026-08-05"
+    ],
+    "evidence_checked": [
+      "https://centervilletx.gov/wp-content/uploads/2026/09/8-5-2026-City-Council-Meeting-Minutes.pdf",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/leon/evidence/centerville/8-5-2026-City-Council-Meeting-Minutes.pdf",
+      "https://centervilletx.gov/",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/leon/evidence/centerville/wp-posts-after-2026-06-21.json"
+    ],
+    "reviewed_at": "2026-09-21T02:24:26Z",
+    "review_decision": "watchlist",
+    "priority_reason": "Drywall, framing, paint and water-damage remediation fit is strong, but minutes show investigation/discussion rather than authorized work.",
+    "corrections": [
+      "Kept as watchlist because no action/award was found."
+    ]
+  },
+  {
+    "id": "statewide-tdlr-tabs-TABS2026020041",
+    "county": "Leon",
+    "project_name": "Centerville, TX (CTV) - O'Reilly Auto Parts",
+    "address": "730 W St Marys Street Centerville, TX 75833",
+    "city": "Centerville",
+    "record_type": "registration",
+    "source_record_id": "TABS2026020041",
+    "record_date": "2026-05-12",
+    "retrieved_at": "2026-09-21T02:01:06Z",
+    "stage": "planned",
+    "status_basis": "TDLR TABS status is Review Complete; this proves registration/review status only, not that a subcontract package remains open.",
+    "scope": "ADD ONCE PLANS ARE FINALIZED",
+    "masiate_fit": "Scope and cost indicate current construction/remodeling work that could use Masiate trades.",
+    "estimated_value": "$1,351,015 TDLR estimated cost",
+    "estimated_start": "2026-11-16",
+    "estimated_completion": "2027-05-14",
+    "bid_deadline": null,
+    "participants": [
+      {
+        "name": "Fito Properties LLC",
+        "role": "owner/developer",
+        "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026020041"
+      },
+      {
+        "name": "Kinetic Design + Development",
+        "role": "designer",
+        "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026020041"
+      },
+      {
+        "name": "JEFFERY L,KELLEY",
+        "role": "registered accessibility specialist",
+        "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026020041"
+      }
+    ],
+    "business_contacts": [
+      {
+        "name": "Kinetic Design + Development",
+        "role": "design firm on TDLR record",
+        "phone": null,
+        "email": null,
+        "website": null,
+        "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026020041"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026020041",
+        "title": "TDLR TABS Project Details: TABS2026020041",
+        "date": "2026-05-12",
+        "page": "Project Details",
+        "evidence": "O'Reilly Auto Parts; 730 W St Marys Street Centerville, TX 75833; New Construction; ADD ONCE PLANS ARE FINALIZED",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2026020041.html"
+      }
+    ],
+    "unknowns": [
+      "Whether construction has started beyond the TDLR estimated start date.",
+      "Whether Masiate-relevant trade packages remain available.",
+      "Whether the owner, tenant, general contractor or designer is the best contact path."
+    ],
+    "next_research": "Check local permit/planning records or participant website for current project status and contractor contacts.",
+    "disposition": "candidate",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026020041"
+    ],
+    "evidence_checked": [
+      "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026020041",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2026020041.html"
+    ],
+    "reviewed_at": "2026-09-21T02:24:26Z",
+    "review_decision": "watchlist",
+    "priority_reason": "O'Reilly Auto Parts has a future estimated start and likely retail-construction fit, but TDLR scope says plans are not finalized.",
+    "corrections": [
+      "Kept as watchlist because scope is incomplete and start is future-dated."
+    ]
+  },
+  {
+    "id": "leon-county-rfp-2026-355-courthouse-building-improvements",
+    "county": "Leon",
+    "project_name": "Leon County Courthouse and Building Improvements Project",
+    "address": "Explicitly unknown in inspected bid tab; project identified as Leon County courthouse/building improvements in Centerville, TX",
+    "city": "Centerville",
+    "record_type": "bid",
+    "source_record_id": "RFP 2026-355",
+    "record_date": "2026-06-10",
+    "retrieved_at": "2026-09-21T01:57:09Z",
+    "stage": "planned",
+    "status_basis": "County bid tab shows a CMAR award motion and $2.5M construction budget; the tab does not provide street address, scope detail or notice-to-proceed status.",
+    "scope": "Construction Manager-at-Risk for Leon County courthouse and building improvements; budget table included general conditions, self-performed work, additional cost items, contingency and CM fee.",
+    "masiate_fit": "Masiate fit is inferred for remodeling, paint, concrete, flooring, framing or repair trades once building scopes are released; source proves project identity and budget, not trade packages.",
+    "estimated_value": "Construction budget $2,500,000; tabbed total cost of work $3,366,825 for Phoenix I Restoration and Construction LLC and $3,219,333 for Stoddard General Contractors",
+    "estimated_start": null,
+    "estimated_completion": null,
+    "bid_deadline": null,
+    "participants": [
+      {
+        "name": "Leon County, Texas",
+        "role": "owner",
+        "source_url": "https://www.co.leon.tx.us/page/leon.BidTabulations"
+      },
+      {
+        "name": "Phoenix I Restoration and Construction LLC",
+        "role": "bidder / recommended CMAR",
+        "source_url": "https://www.co.leon.tx.us/upload/page/10054/RFP%202026-355%20CMAR%20BID%20TABULATION%20COMMISSIONER%20COURT%20APPROVAL_5-12-2026.pdf"
+      },
+      {
+        "name": "Stoddard General Contractors",
+        "role": "bidder",
+        "source_url": "https://www.co.leon.tx.us/upload/page/10054/RFP%202026-355%20CMAR%20BID%20TABULATION%20COMMISSIONER%20COURT%20APPROVAL_5-12-2026.pdf"
+      }
+    ],
+    "business_contacts": [
+      {
+        "name": "Phoenix I Restoration and Construction LLC",
+        "role": "bidder / recommended CMAR",
+        "phone": null,
+        "email": null,
+        "website": null,
+        "source_url": "https://www.co.leon.tx.us/upload/page/10054/RFP%202026-355%20CMAR%20BID%20TABULATION%20COMMISSIONER%20COURT%20APPROVAL_5-12-2026.pdf"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.co.leon.tx.us/upload/page/10054/RFP%202026-355%20CMAR%20BID%20TABULATION%20COMMISSIONER%20COURT%20APPROVAL_5-12-2026.pdf",
+        "title": "RFP 2026-355 CMAR Bid Tabulation Commissioner Court Approval",
+        "date": "2026-06-10",
+        "page": "bid tabulation",
+        "evidence": "Source identifies Leon County Courthouse and Building Improvements Project, construction budget and bidders; handwritten motion appears to proceed with Phoenix I based on recommendation.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/leon/evidence/county/RFP 2026-355 CMAR BID TABULATION COMMISSIONER COURT APPROVAL_5-12-2026.pdf"
+      }
+    ],
+    "unknowns": [
+      "Exact building addresses and scope are not in the bid tab.",
+      "Award/contract status after the June 2026 motion needs confirmation from official minutes or contract file."
+    ],
+    "next_research": "Pull RFP package or Commissioners Court minutes around May-June 2026 for exact scope and current status.",
+    "disposition": "candidate",
+    "member_ids": [
+      "leon-county-rfp-2026-355-courthouse-building-improvements"
+    ],
+    "evidence_checked": [
+      "https://www.co.leon.tx.us/upload/page/10054/RFP%202026-355%20CMAR%20BID%20TABULATION%20COMMISSIONER%20COURT%20APPROVAL_5-12-2026.pdf",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/leon/evidence/county/RFP 2026-355 CMAR BID TABULATION COMMISSIONER COURT APPROVAL_5-12-2026.pdf"
+    ],
+    "reviewed_at": "2026-09-21T02:24:26Z",
+    "review_decision": "watchlist",
+    "priority_reason": "County building-improvements CMAR has remodeling fit, but exact scope/address/package status are missing.",
+    "corrections": [
+      "Kept as watchlist because bid tab proves CMAR budget/approval context, not trade availability."
+    ]
+  },
+  {
+    "id": "leon-jewett-cdbg-mit-sewer-facility-703-sugar",
+    "county": "Leon",
+    "project_name": "Jewett CDBG-MIT MOD sewer facility improvements",
+    "address": "703 Sugar Street, Jewett, TX",
+    "city": "Jewett",
+    "record_type": "planning",
+    "source_record_id": "24-065-134-E992",
+    "record_date": "2025-11-13",
+    "retrieved_at": "2026-09-21T01:58:46Z",
+    "stage": "planned",
+    "status_basis": "FONSI notice says the city would request release of funds on/about December 3, 2025; current construction/bid status was not confirmed in this pass.",
+    "scope": "Improve oxidation ditch and complete associated appurtenances at Jewett Wastewater Treatment Plant; sewer facility work estimated to disturb about 2.3 acres.",
+    "masiate_fit": "Strong inferred fit for concrete, sitework, utility support, fencing, electrical/lighting, and surface repair around wastewater facility improvements; exact trade packages unknown.",
+    "estimated_value": "Part of forecast project cost $500,000 with $500,000 HUD CDBG-MIT MOD grant funds and $69,000 local funds stated in notice",
+    "estimated_start": "On/about 2025-12-03 release-of-funds request, not construction start",
+    "estimated_completion": null,
+    "bid_deadline": null,
+    "participants": [
+      {
+        "name": "City of Jewett",
+        "role": "subrecipient / owner",
+        "source_url": "https://clients.municipalimpact.com/documents/211/English_Verison.pdf"
+      },
+      {
+        "name": "John Sitton",
+        "role": "Mayor / certifying officer",
+        "source_url": "https://clients.municipalimpact.com/documents/211/English_Verison.pdf"
+      }
+    ],
+    "business_contacts": [],
+    "sources": [
+      {
+        "url": "https://cityofjewett.com/news-detail?item_id=30087",
+        "title": "Combined Notice of FONSI -- CBG-MIT MOD 24-065-134-E992",
+        "date": "2025-11-13",
+        "page": "news item",
+        "evidence": "City news item links English and Spanish FONSI documents for project 24-065-134-E992.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/leon/evidence/jewett/news-detail_item_id_30087.html"
+      },
+      {
+        "url": "https://clients.municipalimpact.com/documents/211/English_Verison.pdf",
+        "title": "Jewett CDBG-MIT MOD 24-065-134-E992 FONSI English PDF",
+        "date": "2025-11-13",
+        "page": "page 1",
+        "evidence": "Notice identifies project name, release-of-funds timing, purpose and locations.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/leon/evidence/jewett/Jewett-CDBG-MIT-MOD-FONSI-English.pdf"
+      },
+      {
+        "url": "https://clients.municipalimpact.com/documents/211/English_Verison.pdf",
+        "title": "Manual extraction notes from Jewett FONSI",
+        "date": "2026-09-21",
+        "page": "pages 1-2 visual review",
+        "evidence": "Manual extraction captures project locations, scope, funding and unresolved address conflict from scanned pages.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/leon/evidence/jewett/Jewett-CDBG-MIT-MOD-FONSI-manual-extraction.txt"
+      },
+      {
+        "url": "https://clients.municipalimpact.com/documents/211/English_Verison.pdf",
+        "title": "Jewett CDBG-MIT MOD 24-065-134-E992 FONSI English PDF",
+        "date": "2025-11-13",
+        "page": "page 1",
+        "evidence": "Location listed as Jewett Wastewater Treatment Plant, 703 Sugar Street, Jewett, TX, coordinates 31.35474, -96.13427.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/leon/evidence/jewett/ocr-pages/Jewett-CDBG-MIT-MOD-FONSI-English-1.png"
+      },
+      {
+        "url": "https://clients.municipalimpact.com/documents/211/English_Verison.pdf",
+        "title": "Jewett CDBG-MIT MOD 24-065-134-E992 FONSI English PDF",
+        "date": "2025-11-13",
+        "page": "page 2",
+        "evidence": "Project size notes sewer facility improvements will disturb approximately 2.3 acres.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/leon/evidence/jewett/ocr-pages/Jewett-CDBG-MIT-MOD-FONSI-English-2.png"
+      }
+    ],
+    "unknowns": [
+      "Whether construction has been bid or awarded since the November/December 2025 environmental notice.",
+      "Whether $500,000 is typo/total grant versus total project cost, because notice also states $69,000 local funds."
+    ],
+    "next_research": "Inspect Jewett agendas/minutes and GLO project files for bid package/award and current schedule.",
+    "disposition": "candidate",
+    "member_ids": [
+      "leon-jewett-cdbg-mit-sewer-facility-703-sugar"
+    ],
+    "evidence_checked": [
+      "https://cityofjewett.com/news-detail?item_id=30087",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/leon/evidence/jewett/news-detail_item_id_30087.html",
+      "https://clients.municipalimpact.com/documents/211/English_Verison.pdf",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/leon/evidence/jewett/Jewett-CDBG-MIT-MOD-FONSI-English.pdf",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/leon/evidence/jewett/Jewett-CDBG-MIT-MOD-FONSI-manual-extraction.txt",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/leon/evidence/jewett/ocr-pages/Jewett-CDBG-MIT-MOD-FONSI-English-1.png",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/leon/evidence/jewett/ocr-pages/Jewett-CDBG-MIT-MOD-FONSI-English-2.png"
+    ],
+    "reviewed_at": "2026-09-21T02:24:26Z",
+    "review_decision": "watchlist",
+    "priority_reason": "Wastewater facility improvements have concrete/site/electrical/fencing fit, but evidence is 2025 environmental notice without current procurement.",
+    "corrections": [
+      "Kept as watchlist; current construction/bid status needs follow-up."
+    ]
+  },
+  {
+    "id": "leon-jewett-cdbg-mit-oakwood-street",
+    "county": "Leon",
+    "project_name": "Jewett Oakwood Street Improvements",
+    "address": "Oakwood Street from Cottonwood Road northward to dead end, Jewett, TX",
+    "city": "Jewett",
+    "record_type": "planning",
+    "source_record_id": "24-065-134-E992",
+    "record_date": "2025-11-13",
+    "retrieved_at": "2026-09-21T01:58:46Z",
+    "stage": "planned",
+    "status_basis": "FONSI notice describes corridor, scope and disturbance; current bid/construction status not confirmed.",
+    "scope": "Reconstruct roadway, pave road and complete associated appurtenances along Oakwood Street; work disturbs approximately 1.55 acres to a depth of 12 feet.",
+    "masiate_fit": "Strong inferred fit for concrete, pavement, roadway/subgrade support, drainage/sitework and utility-adjacent trades if packages are not yet closed.",
+    "estimated_value": "Part of forecast project cost $500,000 with $500,000 HUD CDBG-MIT MOD grant funds and $69,000 local funds stated in notice",
+    "estimated_start": "On/about 2025-12-03 release-of-funds request, not construction start",
+    "estimated_completion": null,
+    "bid_deadline": null,
+    "participants": [
+      {
+        "name": "City of Jewett",
+        "role": "subrecipient / owner",
+        "source_url": "https://clients.municipalimpact.com/documents/211/English_Verison.pdf"
+      },
+      {
+        "name": "John Sitton",
+        "role": "Mayor / certifying officer",
+        "source_url": "https://clients.municipalimpact.com/documents/211/English_Verison.pdf"
+      }
+    ],
+    "business_contacts": [],
+    "sources": [
+      {
+        "url": "https://cityofjewett.com/news-detail?item_id=30087",
+        "title": "Combined Notice of FONSI -- CBG-MIT MOD 24-065-134-E992",
+        "date": "2025-11-13",
+        "page": "news item",
+        "evidence": "City news item links English and Spanish FONSI documents for project 24-065-134-E992.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/leon/evidence/jewett/news-detail_item_id_30087.html"
+      },
+      {
+        "url": "https://clients.municipalimpact.com/documents/211/English_Verison.pdf",
+        "title": "Jewett CDBG-MIT MOD 24-065-134-E992 FONSI English PDF",
+        "date": "2025-11-13",
+        "page": "page 1",
+        "evidence": "Notice identifies project name, release-of-funds timing, purpose and locations.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/leon/evidence/jewett/Jewett-CDBG-MIT-MOD-FONSI-English.pdf"
+      },
+      {
+        "url": "https://clients.municipalimpact.com/documents/211/English_Verison.pdf",
+        "title": "Manual extraction notes from Jewett FONSI",
+        "date": "2026-09-21",
+        "page": "pages 1-2 visual review",
+        "evidence": "Manual extraction captures project locations, scope, funding and unresolved address conflict from scanned pages.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/leon/evidence/jewett/Jewett-CDBG-MIT-MOD-FONSI-manual-extraction.txt"
+      },
+      {
+        "url": "https://clients.municipalimpact.com/documents/211/English_Verison.pdf",
+        "title": "Jewett CDBG-MIT MOD 24-065-134-E992 FONSI English PDF",
+        "date": "2025-11-13",
+        "page": "page 1",
+        "evidence": "Location listed along Oakwood Street from Cottonwood Road northward to dead end, coordinates 31.37758, -96.14236.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/leon/evidence/jewett/ocr-pages/Jewett-CDBG-MIT-MOD-FONSI-English-1.png"
+      },
+      {
+        "url": "https://clients.municipalimpact.com/documents/211/English_Verison.pdf",
+        "title": "Jewett CDBG-MIT MOD 24-065-134-E992 FONSI English PDF",
+        "date": "2025-11-13",
+        "page": "page 2",
+        "evidence": "Scope says Oakwood Street roadway reconstruction/paving/appurtenances; project size disturbs approximately 1.55 acres to a depth of 12 feet.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/leon/evidence/jewett/ocr-pages/Jewett-CDBG-MIT-MOD-FONSI-English-2.png"
+      }
+    ],
+    "unknowns": [
+      "Current procurement status and contractor not confirmed.",
+      "Exact limits should be mapped from Cottonwood Road to the dead end."
+    ],
+    "next_research": "Pull Jewett council agendas/minutes after December 2025 for construction-bid approval or grant implementation actions.",
+    "disposition": "candidate",
+    "member_ids": [
+      "leon-jewett-cdbg-mit-oakwood-street"
+    ],
+    "evidence_checked": [
+      "https://cityofjewett.com/news-detail?item_id=30087",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/leon/evidence/jewett/news-detail_item_id_30087.html",
+      "https://clients.municipalimpact.com/documents/211/English_Verison.pdf",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/leon/evidence/jewett/Jewett-CDBG-MIT-MOD-FONSI-English.pdf",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/leon/evidence/jewett/Jewett-CDBG-MIT-MOD-FONSI-manual-extraction.txt",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/leon/evidence/jewett/ocr-pages/Jewett-CDBG-MIT-MOD-FONSI-English-1.png",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/leon/evidence/jewett/ocr-pages/Jewett-CDBG-MIT-MOD-FONSI-English-2.png"
+    ],
+    "reviewed_at": "2026-09-21T02:24:26Z",
+    "review_decision": "watchlist",
+    "priority_reason": "Road reconstruction and paving have site/concrete fit, but evidence is 2025 environmental notice without current procurement.",
+    "corrections": [
+      "Kept as watchlist; preserve as a separate phase from South Broadway."
+    ]
+  },
+  {
+    "id": "leon-jewett-cdbg-mit-south-broadway-street",
+    "county": "Leon",
+    "project_name": "Jewett South Broadway Street Improvements",
+    "address": "South Broadway Street from Spruiell Street southwestward to West Mexia Highway, Jewett, TX",
+    "city": "Jewett",
+    "record_type": "planning",
+    "source_record_id": "24-065-134-E992",
+    "record_date": "2025-11-13",
+    "retrieved_at": "2026-09-21T01:58:46Z",
+    "stage": "planned",
+    "status_basis": "FONSI notice describes corridor, scope and disturbance; current bid/construction status not confirmed.",
+    "scope": "Reconstruct roadway, pave road and complete associated appurtenances along South Broadway Street; work disturbs approximately 1.44 acres to a depth of 12 feet.",
+    "masiate_fit": "Strong inferred fit for concrete, pavement, roadway/subgrade support, drainage/sitework, striping/repair, and utility-adjacent trades if packages are not yet closed.",
+    "estimated_value": "Part of forecast project cost $500,000 with $500,000 HUD CDBG-MIT MOD grant funds and $69,000 local funds stated in notice",
+    "estimated_start": "On/about 2025-12-03 release-of-funds request, not construction start",
+    "estimated_completion": null,
+    "bid_deadline": null,
+    "participants": [
+      {
+        "name": "City of Jewett",
+        "role": "subrecipient / owner",
+        "source_url": "https://clients.municipalimpact.com/documents/211/English_Verison.pdf"
+      },
+      {
+        "name": "John Sitton",
+        "role": "Mayor / certifying officer",
+        "source_url": "https://clients.municipalimpact.com/documents/211/English_Verison.pdf"
+      }
+    ],
+    "business_contacts": [],
+    "sources": [
+      {
+        "url": "https://cityofjewett.com/news-detail?item_id=30087",
+        "title": "Combined Notice of FONSI -- CBG-MIT MOD 24-065-134-E992",
+        "date": "2025-11-13",
+        "page": "news item",
+        "evidence": "City news item links English and Spanish FONSI documents for project 24-065-134-E992.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/leon/evidence/jewett/news-detail_item_id_30087.html"
+      },
+      {
+        "url": "https://clients.municipalimpact.com/documents/211/English_Verison.pdf",
+        "title": "Jewett CDBG-MIT MOD 24-065-134-E992 FONSI English PDF",
+        "date": "2025-11-13",
+        "page": "page 1",
+        "evidence": "Notice identifies project name, release-of-funds timing, purpose and locations.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/leon/evidence/jewett/Jewett-CDBG-MIT-MOD-FONSI-English.pdf"
+      },
+      {
+        "url": "https://clients.municipalimpact.com/documents/211/English_Verison.pdf",
+        "title": "Manual extraction notes from Jewett FONSI",
+        "date": "2026-09-21",
+        "page": "pages 1-2 visual review",
+        "evidence": "Manual extraction captures project locations, scope, funding and unresolved address conflict from scanned pages.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/leon/evidence/jewett/Jewett-CDBG-MIT-MOD-FONSI-manual-extraction.txt"
+      },
+      {
+        "url": "https://clients.municipalimpact.com/documents/211/English_Verison.pdf",
+        "title": "Jewett CDBG-MIT MOD 24-065-134-E992 FONSI English PDF",
+        "date": "2025-11-13",
+        "page": "page 1",
+        "evidence": "Location listed along South Broadway Street from Spruiell Street southwestward to West Mexia Highway, coordinates 31.35525, -96.14941; scope says reconstruct roadway, pave road, complete appurtenances.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/leon/evidence/jewett/ocr-pages/Jewett-CDBG-MIT-MOD-FONSI-English-1.png"
+      },
+      {
+        "url": "https://clients.municipalimpact.com/documents/211/English_Verison.pdf",
+        "title": "Jewett CDBG-MIT MOD 24-065-134-E992 FONSI English PDF",
+        "date": "2025-11-13",
+        "page": "page 2",
+        "evidence": "Project size says South Broadway Street Improvements disturb approximately 1.44 acres to a depth of 12 feet.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/leon/evidence/jewett/ocr-pages/Jewett-CDBG-MIT-MOD-FONSI-English-2.png"
+      }
+    ],
+    "unknowns": [
+      "Current procurement status and contractor not confirmed.",
+      "Exact limits should be mapped from the named streets and coordinates."
+    ],
+    "next_research": "Pull Jewett council agendas/minutes after December 2025 for construction-bid approval or grant implementation actions.",
+    "disposition": "candidate",
+    "member_ids": [
+      "leon-jewett-cdbg-mit-south-broadway-street"
+    ],
+    "evidence_checked": [
+      "https://cityofjewett.com/news-detail?item_id=30087",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/leon/evidence/jewett/news-detail_item_id_30087.html",
+      "https://clients.municipalimpact.com/documents/211/English_Verison.pdf",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/leon/evidence/jewett/Jewett-CDBG-MIT-MOD-FONSI-English.pdf",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/leon/evidence/jewett/Jewett-CDBG-MIT-MOD-FONSI-manual-extraction.txt",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/leon/evidence/jewett/ocr-pages/Jewett-CDBG-MIT-MOD-FONSI-English-1.png",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/leon/evidence/jewett/ocr-pages/Jewett-CDBG-MIT-MOD-FONSI-English-2.png"
+    ],
+    "reviewed_at": "2026-09-21T02:24:26Z",
+    "review_decision": "watchlist",
+    "priority_reason": "Road reconstruction and paving have site/concrete fit, but evidence is 2025 environmental notice without current procurement.",
+    "corrections": [
+      "Kept as watchlist; do not represent as open bid."
+    ]
+  },
+  {
+    "id": "madison-madisonville-pz-20260901-301-n-short-mf",
+    "county": "Madison",
+    "project_name": "301 N Short Street multifamily rezoning request",
+    "address": "301 N Short Street",
+    "city": "Madisonville",
+    "record_type": "planning",
+    "source_record_id": "Madisonville Planning & Zoning Commission 2026-09-01 rezoning item",
+    "record_date": "2026-09-01",
+    "retrieved_at": "2026-09-21T01:57:23Z",
+    "stage": "planned",
+    "status_basis": "City Council packet placed the SF-2 to MF rezoning ordinance on the September 21, 2026 agenda, but the same packet says Planning & Zoning recommended denial and staff made no formal recommendation; source supports apartment intent and plat filing, but no issued construction permit or trade package availability.",
+    "scope": "Rezone 0.886-acre property from Urban Single-Family Residential to Multi-Family for preliminary apartment plans; source says plat was approved in June 2026 and filed with the County Clerk.",
+    "masiate_fit": "Potential future apartment/multifamily build; Masiate fit is inferred for concrete, framing, roofing, siding, paint, flooring, fencing and utility/trade work if project advances to permits.",
+    "estimated_value": null,
+    "estimated_start": null,
+    "estimated_completion": null,
+    "bid_deadline": null,
+    "participants": [
+      {
+        "name": "Alredo Astello & Mirna Y.",
+        "role": "owner",
+        "source_url": "https://esearch.madisoncad.org/"
+      },
+      {
+        "name": "Mr. Astello",
+        "role": "applicant/owner",
+        "source_url": "https://madisonvilletexas.gov/planningandzoning"
+      },
+      {
+        "name": "City of Madisonville Planning & Zoning Commission",
+        "role": "reviewing body",
+        "source_url": "https://madisonvilletexas.gov/planningandzoning"
+      }
+    ],
+    "business_contacts": [],
+    "sources": [
+      {
+        "url": "https://madisonvilletexas.gov/planningandzoning",
+        "title": "September 1, 2026 P&Z PACKET",
+        "date": "2026-08-28",
+        "page": "packet text lines 222-255 and 370-378",
+        "evidence": "The packet describes a request to rezone 301 N Short Street from SF-2 to MF, says the property is 0.886 acres, says the owner has preliminary apartment ideas, and says a plat had been approved in June 2026 and filed with the County Clerk.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/madison/evidence/008_September_1_2026_P_Z_PACKET.city.pdf"
+      },
+      {
+        "url": "https://madisonvilletexas.gov/agendasandminutes",
+        "title": "9-21-2026 City Council Special Meeting Agenda Packet",
+        "date": "2026-09-21",
+        "page": "packet text lines 5025-5112",
+        "evidence": "The council packet places the 301 N Short Street rezoning ordinance before City Council, notes one mailed-notice opposition response, says P&Z recommended denial on September 1, 2026, and says staff made no formal recommendation.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/madison/evidence/000_9-21-2026_City_Council_Special_Meeting_Agenda_Packet.city.pdf"
+      },
+      {
+        "url": "https://esearch.madisoncad.org/",
+        "title": "Madison CAD property search result for 301 N Short",
+        "date": "2026-09-21",
+        "page": "resultsList[0]",
+        "evidence": "CAD result identifies property ID 17687, owner ASTELLO ALREDO & MIRNA Y., address 301 N SHORT, legal description A0010 JOB S COLLARD TRACT 466 1 BLOCK 1 RESERVE, 0.886 acres, appraised value $76,290.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/madison/evidence/madison_cad_results_301_short.json"
+      }
+    ],
+    "unknowns": [
+      "Whether City Council approved or denied the rezoning on September 21, 2026",
+      "Whether the P&Z denial recommendation or council opposition caused the owner to revise or abandon the apartment plan",
+      "Whether apartment plans have been submitted",
+      "Whether any construction permits or trade bids exist"
+    ],
+    "next_research": "Check the September 21, 2026 City Council action/minutes before outreach or lead promotion, then request/search issued permits for 301 N Short Street only if the rezoning advanced.",
+    "disposition": "candidate",
+    "member_ids": [
+      "madison-madisonville-pz-20260901-301-n-short-mf"
+    ],
+    "evidence_checked": [
+      "https://madisonvilletexas.gov/planningandzoning",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/madison/evidence/008_September_1_2026_P_Z_PACKET.city.pdf",
+      "https://madisonvilletexas.gov/agendasandminutes",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/madison/evidence/000_9-21-2026_City_Council_Special_Meeting_Agenda_Packet.city.pdf",
+      "https://esearch.madisoncad.org/",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/madison/evidence/madison_cad_results_301_short.json"
+    ],
+    "reviewed_at": "2026-09-21T02:24:26Z",
+    "review_decision": "watchlist",
+    "priority_reason": "Multifamily concept has fit, but the latest packet included P&Z denial recommendation/opposition before City Council action.",
+    "corrections": [
+      "Downgraded from candidate to watchlist until September 21 City Council outcome is known.",
+      "Do not promote as approved or active construction."
+    ]
+  },
+  {
+    "id": "madison-madisonville-pz-20260804-805-n-may-mixed-use",
+    "county": "Madison",
+    "project_name": "805 N May Street planned-development mixed-use rezoning",
+    "address": "805 N May Street",
+    "city": "Madisonville",
+    "record_type": "planning",
+    "source_record_id": "Madisonville Planning & Zoning Commission 2026-08-04 rezoning item",
+    "record_date": "2026-08-04",
+    "retrieved_at": "2026-09-21T01:57:23Z",
+    "stage": "planned",
+    "status_basis": "P&Z approved a rezoning request from General Business to Planned Development - Mixed Use; source explicitly says buildings would still require permits and inspections before occupancy.",
+    "scope": "Rezone 805 N May Street from General Business to Planned Development - Mixed Use; property owner discussed ideas for the property at the meeting.",
+    "masiate_fit": "Mixed-use redevelopment could create future exterior, interior, concrete, framing, roofing, flooring, paint, plumbing, lighting and sitework needs; fit is an inference because no building permit was found.",
+    "estimated_value": "CAD appraised value $851,440 (property valuation, not project value)",
+    "estimated_start": null,
+    "estimated_completion": null,
+    "bid_deadline": null,
+    "participants": [
+      {
+        "name": "Naveed Anwar Sunny",
+        "role": "owner",
+        "source_url": "https://esearch.madisoncad.org/"
+      },
+      {
+        "name": "Mr. Sunny",
+        "role": "applicant/owner",
+        "source_url": "https://madisonvilletexas.gov/planningandzoning"
+      },
+      {
+        "name": "City of Madisonville Planning & Zoning Commission",
+        "role": "reviewing body",
+        "source_url": "https://madisonvilletexas.gov/planningandzoning"
+      }
+    ],
+    "business_contacts": [],
+    "sources": [
+      {
+        "url": "https://madisonvilletexas.gov/planningandzoning",
+        "title": "AUGUST 4, 2026 P&Z PACKET",
+        "date": "2026-08-03",
+        "page": "packet text lines 164-180",
+        "evidence": "The packet/minutes record public hearing and approval of rezoning 805 N May Street from General Business to Planned Development - Mixed Use, and note that any buildings would require permits and inspections before occupancy.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/madison/evidence/024_AUGUST_4_2026_P_Z_PACKET.city.pdf"
+      },
+      {
+        "url": "https://esearch.madisoncad.org/",
+        "title": "Madison CAD property search result for 805 N May",
+        "date": "2026-09-21",
+        "page": "resultsList[0]",
+        "evidence": "CAD result identifies property ID 21707, owner SUNNY NAVEED ANWAR, address 805 N MAY, legal description A0110 J S HUNTER TRACT 137, 1.54 acres, appraised value $851,440.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/madison/evidence/madison_cad_results_805_may.json"
+      }
+    ],
+    "unknowns": [
+      "Specific mixed-use concept and building scope",
+      "Whether permits were later submitted or issued",
+      "Whether owner is soliciting contractors"
+    ],
+    "next_research": "Check subsequent City Council action and search/request building permit records for 805 N May Street.",
+    "disposition": "candidate",
+    "member_ids": [
+      "madison-madisonville-pz-20260804-805-n-may-mixed-use"
+    ],
+    "evidence_checked": [
+      "https://madisonvilletexas.gov/planningandzoning",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/madison/evidence/024_AUGUST_4_2026_P_Z_PACKET.city.pdf",
+      "https://esearch.madisoncad.org/",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/madison/evidence/madison_cad_results_805_may.json"
+    ],
+    "reviewed_at": "2026-09-21T02:24:26Z",
+    "review_decision": "watchlist",
+    "priority_reason": "Approved mixed-use rezoning could become a good redevelopment lead, but permits/building scope remain unknown.",
+    "corrections": [
+      "Kept as watchlist; CAD value is property value, not project value.",
+      "No private contact details included."
+    ]
+  }
+]
