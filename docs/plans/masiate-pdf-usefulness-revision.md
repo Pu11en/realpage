@@ -4,17 +4,16 @@
 
 **Which projects and named construction businesses could Masiate approach about work, and what do we actually know about each opportunity?**
 
-Status: planning only, September 20, 2026. Drew asked to plan a remake using
-existing findings before doing the proposed search for explicit contractor-bid
-requests. Do not start that new search, resume the site build, launch task-loop
-workers, contact anyone or replace the original PDF from this instruction.
-The explicit-bid search is the intended later direction, not work performed here.
+Status: PDF-only table revision produced locally from the September 20, 2026
+snapshot after Drew selected option C (PDF table only). The original PDF and
+source records remain unchanged. The explicit-bid search, site build, task-loop
+workers and outreach remain paused; none was started for this revision.
 
 Latest format/use decision: Drew wants a spreadsheet-style table with a brief
 project description, contractor information and URLs so Masiate can ask the
 contractor whether it needs help. Include this as a second prospect type,
-separate from owners still selecting a builder. This is a planning preference,
-not permission to contact anyone, buy enrichment or restart implementation.
+separate from owners still selecting a builder. The selected output is a PDF,
+not a spreadsheet; it does not authorize contact, paid enrichment or an app build.
 
 - The existing work is **useful as project research and a way to screen out unsuitable prospects**.
 - It is **not yet a proven list of owners still selecting contractors**.
@@ -28,9 +27,9 @@ not permission to contact anyone, buy enrichment or restart implementation.
 
 One row per project, with a short opening brief explaining the scope and the
 difference between a project prospect and a confirmed request for help.
-An editable spreadsheet plus a matching PDF table is the proposed format;
-the user has selected table-style presentation, not yet explicitly chosen
-which file formats to receive. Do not create the full artifacts at planning time.
+Drew selected **C: PDF table only**. The separate revised PDF has five combined
+columns: project/location/sources, brief/possible fit, contractor/actual role,
+saved business contact, and timing/what to verify. No spreadsheet was created.
 
 ### Columns
 
@@ -161,5 +160,15 @@ clue, not proof that the owner is still soliciting bids today.
 - Deliver the chosen table file format(s) plus a short plain-English verdict distinguishing useful contractor contact routes, unresolved owner-hiring candidates and any genuinely confirmed opportunities.
 - Only afterward consider the separately proposed search for explicit requests for contractor bids; its scope will be decided from the gaps this review exposes.
 
-No task loop is active for this revision. This document is the proposed shape
-and acceptance standard, not a claim that the revised PDF already exists.
+## Local Delivery And Checks
+
+- The separate deliverable is `propertystack/data/masiate/pilot-20260920/Masiate-Project-Contractor-Table-2026-09-20.pdf`.
+- All 49 profiles are included exactly once: 3 construction-company contact routes, 6 additional named contractors needing contact details, 3 engineering-contact profiles, and 37 other projects with an unresolved outside building contractor.
+- The six direct-contact profiles are not six verified buyers; J4 Engineering appears on two projects. Zero open trade packages are confirmed.
+- The three-property follow-up is incorporated, including the exact-suite mismatch and September 11 College Station coverage cutoff.
+- Original profile numbers remain traceable, but are not presented as sales scores. Total project budgets are omitted to avoid implying Masiate contract values.
+- `tooling/masiate_pdf/render_table.py` reproduces the PDF using `table_review.json` and the unchanged reviewed snapshot; a SHA-256 check prevents silently applying numbered editorial notes to a changed dataset.
+- Six focused tests check profile accounting, role distinctions, contact pairing, safe links/escaping, row pagination, text bounds and preservation of every saved public source link.
+- Verification: all 84 lead-finder tests passed; the final PDF is 15 landscape pages, and the original PDF and reviewed JSON have no changes against HEAD.
+- An initial test needed PDF whitespace normalization because extraction wraps sentences across lines; it did not indicate missing content. Rendered table and appendix pages were visually checked, including a repeated-header recheck.
+- No task loop, outreach, new research, site build or publication was started. This report is a local static deliverable, not a live data feed.
