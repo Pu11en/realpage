@@ -5,9 +5,10 @@
 **Which projects and named construction businesses could Masiate approach about work, and what do we actually know about each opportunity?**
 
 Status: PDF-only table revision produced locally from the September 20, 2026
-snapshot after Drew selected option C (PDF table only). The original PDF and
-source records remain unchanged. The explicit-bid search, site build, task-loop
-workers and outreach remain paused; none was started for this revision.
+snapshot after Drew selected option C (PDF table only), then supplemented with
+a focused phone lookup after Drew pointed out the missing numbers. The original
+PDF, first table PDF and source records remain unchanged. The explicit-bid search,
+site build, task-loop workers and outreach remain paused.
 
 Latest format/use decision: Drew wants a spreadsheet-style table with a brief
 project description, contractor information and URLs so Masiate can ask the
@@ -171,4 +172,14 @@ clue, not proof that the owner is still soliciting bids today.
 - Six focused tests check profile accounting, role distinctions, contact pairing, safe links/escaping, row pagination, text bounds and preservation of every saved public source link.
 - Verification: all 84 lead-finder tests passed; the final PDF is 15 landscape pages, and the original PDF and reviewed JSON have no changes against HEAD.
 - An initial test needed PDF whitespace normalization because extraction wraps sentences across lines; it did not indicate missing content. Rendered table and appendix pages were visually checked, including a repeated-header recheck.
-- No task loop, outreach, new research, site build or publication was started. This report is a local static deliverable, not a live data feed.
+- The first table revision started no task loop, outreach, new research, site build or publication. It is a local static deliverable, not a live data feed.
+
+### Subsequent Phone-Number Follow-Up
+
+- Drew asked why named businesses had no numbers; the missing work was a separate contact lookup, not a missing PDF column.
+- The separate `Masiate-Project-Contractor-Table-With-Phone-Numbers-2026-09-20.pdf` now puts bold phone numbers in the `Phone / email / contact` column for all nine named construction-company prospects.
+- Seven numbers come from company websites, one from the Texas Association of Builders directory (Davis), and one from a clearly flagged provisional Houzz match (Valco). None was test-called, and no project manager or available trade package is implied.
+- Valco's identity as the company on the Brenham permit remains unconfirmed; this number is excluded from the eight company/association-sourced-number count.
+- The public-source supplement is `masiate-business-phone-update.json`; evidence and caveats are in `docs/research/masiate-business-phone-check-20260920.md`. It does not alter the original reviewed records.
+- Three existing engineering-contact profiles remain separate and were not reverified. Other unknown contractors remain unknown rather than being given unrelated retail or customer-service numbers.
+- Final follow-up checks: 85 tests pass; 15-page PDF, all 49 rows accounted for once, added source links retained, original artifacts preserved. No outreach, paid work, site build or push.

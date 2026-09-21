@@ -20,32 +20,34 @@ spec.loader.exec_module(renderer)
 RECORDS = json.loads((renderer.DATA / "masiate-reviewed-properties.json").read_text())
 REVIEW = json.loads(renderer.REVIEW_PATH.read_text())
 SUMMARY = json.loads((renderer.DATA / "masiate-report-summary.json").read_text())
+PHONE_UPDATE = json.loads(renderer.PHONE_PATH.read_text())
 
 
 def test_all_profiles_accounted_for_once_and_counts_match():
-    rows = renderer.build_rows(RECORDS, REVIEW)
+    rows = renderer.build_rows(RECORDS, REVIEW, PHONE_UPDATE)
     assert len({r["record"]["id"] for r in rows}) == 49
     assert Counter(r["section"] for r in rows) == {0: 3, 1: 6, 2: 3, 3: 37}
-    assert sum(r["has_construction_route"] for r in rows) == 3
-    assert sum(r["has_any_route"] for r in rows) == 6
+    assert sum(r["has_construction_route"] for r in rows) == 9
+    assert sum(r["has_any_route"] for r in rows) == 12
+    assert sum(r["provisional_phone"] for r in rows) == 1
     assert hashlib.sha256((renderer.DATA / "masiate-reviewed-properties.json").read_bytes()).hexdigest() == REVIEW["source_sha256"]
 
 
 def test_duplicate_or_missing_profiles_fail_closed():
     with pytest.raises(ValueError, match="49"):
-        renderer.build_rows(RECORDS[:-1], REVIEW)
+        renderer.build_rows(RECORDS[:-1], REVIEW, PHONE_UPDATE)
     records = copy.deepcopy(RECORDS)
     records[0]["id"] = records[1]["id"]
     with pytest.raises(ValueError, match="Duplicate"):
-        renderer.build_rows(records, REVIEW)
+        renderer.build_rows(records, REVIEW, PHONE_UPDATE)
     review = copy.deepcopy(REVIEW)
     review["sections"][0]["ranks"].append(1)
     with pytest.raises(ValueError, match="49"):
-        renderer.build_rows(RECORDS, review)
+        renderer.build_rows(RECORDS, review, PHONE_UPDATE)
 
 
 def test_actual_roles_are_not_inferred_from_company_names():
-    rows = {r["record"]["rank"]: r for r in renderer.build_rows(RECORDS, REVIEW)}
+    rows = {r["record"]["rank"]: r for r in renderer.build_rows(RECORDS, REVIEW, PHONE_UPDATE)}
     for rank in (36, 38, 39):
         assert rows[rank]["section"] == 2
         assert not rows[rank]["has_construction_route"]
@@ -63,7 +65,7 @@ def test_actual_roles_are_not_inferred_from_company_names():
 
 
 def test_contact_details_remain_attached_to_the_correct_company():
-    rows = {r["record"]["rank"]: r for r in renderer.build_rows(RECORDS, REVIEW)}
+    rows = {r["record"]["rank"]: r for r in renderer.build_rows(RECORDS, REVIEW, PHONE_UPDATE)}
     assert "254-697-8516" in renderer.contacts_html(rows[1])
     assert "maceyt@collierconstruction.com" in renderer.contacts_html(rows[32])
     assert "979-836-4477" in renderer.contacts_html(rows[32])
@@ -71,6 +73,26 @@ def test_contact_details_remain_attached_to_the_correct_company():
     assert "locations.frostbank.com" not in renderer.contacts_html(rows[30])
     assert "979-739-0567" in renderer.contacts_html(rows[38])
     assert "engineer" in renderer.contacts_html(rows[38])
+    for rank, number in {2: "979-596-1451", 6: "713-934-9929", 7: "281-485-7663",
+                         29: "979-251-4872", 30: "979-401-3270", 4: "713-699-1121"}.items():
+        assert f"Phone: {number}" in renderer.contacts_html(rows[rank])
+    assert "UNCONFIRMED" in renderer.contacts_html(rows[33])
+    assert rows[33]["provisional_phone"]
+    assert not rows[29]["provisional_phone"]
+
+
+def test_enrichment_does_not_mutate_pilot_and_requires_sources():
+    before = copy.deepcopy(RECORDS)
+    renderer.build_rows(RECORDS, REVIEW, PHONE_UPDATE)
+    assert RECORDS == before
+    update = copy.deepcopy(PHONE_UPDATE)
+    update["contacts"]["SpawGlass"]["source_url"] = ""
+    with pytest.raises(ValueError, match="public source"):
+        renderer.build_rows(RECORDS, REVIEW, update)
+    update = copy.deepcopy(PHONE_UPDATE)
+    update["contacts"]["Wrong business"] = update["contacts"].pop("SpawGlass")
+    with pytest.raises(ValueError, match="exactly"):
+        renderer.build_rows(RECORDS, REVIEW, update)
 
 
 def test_escaping_and_non_web_links():
@@ -84,7 +106,7 @@ def test_escaping_and_non_web_links():
 
 
 def test_full_pdf_text_links_layout_and_unsplit_rows(tmp_path):
-    rows = renderer.build_rows(RECORDS, REVIEW)
+    rows = renderer.build_rows(RECORDS, REVIEW, PHONE_UPDATE)
     markup = renderer.render_html(rows, REVIEW, SUMMARY)
     assert markup.count("<tr data-id=") == 49
     document = HTML(string=markup).render()
@@ -110,12 +132,15 @@ def test_full_pdf_text_links_layout_and_unsplit_rows(tmp_path):
     assert all(len(pages) == 1 for pages in pages_per_row.values())
     reader = PdfReader(output)
     text = "\n".join(page.extract_text() or "" for page in reader.pages)
-    assert 8 <= len(reader.pages) <= 15
+    assert 8 <= len(reader.pages) <= 20
     assert all(len(page.extract_text() or "") > 300 for page in reader.pages)
     assert "254-697-8516" in text and "979-836-4477" in text
     assert "maceyt@collierconstruction.com" in text.replace("\n", "")
     assert "Unknown does not mean available" in " ".join(text.split())
     assert "0" in text and "confirmed open trade packages" in text
+    assert "Phone / email / contact" in text
+    assert "UNCONFIRMEDdirectory-listednumber" in "".join(text.split())
+    assert "979-401-3270" in text and "713-934-9929" in text
     assert "/home/" not in text and "/tmp/" not in text
     urls = set()
     for page in reader.pages:
@@ -131,3 +156,7 @@ def test_full_pdf_text_links_layout_and_unsplit_rows(tmp_path):
     assert "https://ebcogc.com/" in urls
     assert "https://www.spawglass.com/" in urls
     assert "https://www.collierconstruction.com/contact" in urls
+    for contact in PHONE_UPDATE["contacts"].values():
+        assert contact["source_url"] in urls
+        if contact.get("email_source_url"):
+            assert contact["email_source_url"] in urls

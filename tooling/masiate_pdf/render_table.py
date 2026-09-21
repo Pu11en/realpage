@@ -18,7 +18,8 @@ from weasyprint import HTML
 ROOT = Path(__file__).resolve().parents[2]
 DATA = ROOT / "propertystack/data/masiate/pilot-20260920"
 REVIEW_PATH = Path(__file__).with_name("table_review.json")
-OUTPUT = DATA / "Masiate-Project-Contractor-Table-2026-09-20.pdf"
+PHONE_PATH = DATA / "masiate-business-phone-update.json"
+OUTPUT = DATA / "Masiate-Project-Contractor-Table-With-Phone-Numbers-2026-09-20.pdf"
 
 
 def esc(value):
@@ -46,7 +47,7 @@ def has_route(contact):
     return bool(contact.get("phone") or contact.get("email") or safe_url(contact.get("website")))
 
 
-def build_rows(records, review):
+def build_rows(records, review, phone_update):
     # The editorial notes are specific to the original numbered snapshot, not a live feed.
     expected = list(range(1, 50))
     ranks = [int(record["rank"]) for record in records]
@@ -56,21 +57,32 @@ def build_rows(records, review):
     if len({record["id"] for record in records}) != 49:
         raise ValueError("Duplicate pilot profile IDs")
     by_rank = {record["rank"]: record for record in records}
+    expected_names = set(review["construction_contacts"].values())
+    if set(phone_update["contacts"]) != expected_names:
+        raise ValueError("Phone update must match the nine named construction companies exactly")
     rows = []
     for section_index, section in enumerate(review["sections"]):
         for rank in section["ranks"]:
             record = by_rank[rank]
             key = str(rank)
             contractor_name = review["construction_contacts"].get(key)
-            contacts = record.get("business_contacts", [])
+            contacts = [dict(c) for c in record.get("business_contacts", [])]
             construction_contact = next((c for c in contacts if c["name"] == contractor_name), None)
             if contractor_name and not construction_contact:
                 raise ValueError(f"Missing saved construction contact for profile {rank}")
+            if construction_contact:
+                update = phone_update["contacts"][contractor_name]
+                if not update.get("phone") or not safe_url(update.get("source_url")):
+                    raise ValueError("Every phone update requires a public source")
+                if update.get("phone_status") not in {"company_published", "association_published", "directory_only"}:
+                    raise ValueError("Unknown phone evidence status")
+                construction_contact.update(update)
+                construction_contact["phone_checked_on"] = phone_update["checked_on"]
             direct = [c for c in contacts if has_route(c)]
             if section_index == 0 and not has_route(construction_contact or {}):
                 raise ValueError("First section requires a construction-company contact route")
-            if section_index == 1 and (not contractor_name or direct):
-                raise ValueError("Named-contractor section must have a contractor but no direct route")
+            if section_index == 1 and not contractor_name:
+                raise ValueError("Named-contractor section requires a named construction company")
             if section_index == 2 and (not direct or contractor_name):
                 raise ValueError("Engineering section must not imply an appointed builder")
             role = review["special_roles"].get(key)
@@ -86,6 +98,7 @@ def build_rows(records, review):
                 "caveat": review["caveats"].get(key, "Confirm current phase, appointed builder and remaining trade work."),
                 "has_construction_route": bool(construction_contact and has_route(construction_contact)),
                 "has_any_route": bool(direct),
+                "provisional_phone": bool(construction_contact and construction_contact.get("phone_status") == "directory_only"),
             })
     return rows
 
@@ -95,9 +108,13 @@ def contacts_html(row):
     for contact in row["contacts"]:
         if not has_route(contact):
             continue
-        bits = [f'<b>{esc(contact["name"])}</b>', esc(contact["role"])]
+        bits = [f'<b>{esc(contact["name"])}</b>']
+        if not contact.get("phone_kind"):
+            bits.append(esc(contact["role"]))
         if contact.get("phone"):
-            bits.append(esc(contact["phone"]))
+            bits.append(f'<strong class="phone">Phone: {esc(contact["phone"])}</strong>')
+            if contact.get("phone_kind"):
+                bits.append(esc(contact["phone_kind"]))
         if contact.get("email"):
             bits.append(esc(contact["email"]))
         website = safe_url(contact.get("website"))
@@ -105,6 +122,8 @@ def contacts_html(row):
             bits.append(link(website, urlparse(website).netloc.removeprefix("www.")))
         if safe_url(contact.get("source_url")):
             bits.append(link(contact["source_url"], "Contact evidence"))
+        if safe_url(contact.get("email_source_url")):
+            bits.append(link(contact["email_source_url"], "Email evidence (2024 form)"))
         blocks.append("<br>".join(bits))
     return "<p>" + "</p><p>".join(blocks) + "</p>" if blocks else (
         "<p>No public business phone, email or website saved for this route.</p>"
@@ -148,12 +167,14 @@ def row_html(row):
         address = "Avenue P, Landolt #9 Block 2 west half; 2 acres; street number unknown"
     if record["city"].casefold() not in address.casefold():
         address += ", " + record["city"]
+    contact_notes = " ".join(c["contact_note"] for c in row["contacts"] if c.get("contact_note"))
+    contact_caveat = f'<p><b>Contact note:</b> {esc(contact_notes)}</p>' if contact_notes else ""
     return f'''<tr data-id="{esc(record['id'])}">
     <td><b>#{record['rank']:02d} {esc(record['project_name'])}</b><p>{esc(address)}<br>{esc(record['county'])} County</p>
     <p class="sources">{' / '.join(links)}</p></td>
     <td>{esc(row['brief'])}<p><b>Possible fit:</b> {esc(row['fit'])}</p></td>
     <td>{esc(row['role'])}</td><td>{contacts_html(row)}</td>
-    <td>{'<br>'.join(timing)}<p>{esc(row['caveat'])}</p></td></tr>'''
+    <td>{'<br>'.join(timing)}<p>{esc(row['caveat'])}</p>{contact_caveat}</td></tr>'''
 
 
 CSS = '''
@@ -204,25 +225,27 @@ def render_html(rows, review, summary):
         <table class="grid"><colgroup><col style="width:20%"><col style="width:19%"><col style="width:17%">
         <col style="width:19%"><col style="width:25%"></colgroup><thead><tr>
         <th>Project / location / sources</th><th>Brief / possible Masiate fit</th><th>Contractor / actual role</th>
-        <th>Saved business contact</th><th>Timing / what to verify</th></tr></thead>
+        <th>Phone / email / contact</th><th>Timing / what to verify</th></tr></thead>
         <tbody>{''.join(row_html(row) for row in section_rows)}</tbody></table></section>''')
     counties = Counter(row["record"]["county"] for row in rows)
     county_text = "; ".join(f"{county}: {count}" for county, count in sorted(counties.items()))
     construction_routes = sum(row["has_construction_route"] for row in rows)
     all_routes = sum(row["has_any_route"] for row in rows)
+    provisional = sum(row["provisional_phone"] for row in rows)
     return f'''<!doctype html><html lang="en"><head><meta charset="utf-8">
     <title>Masiate | Project and Contractor Table</title><style>{CSS}</style></head><body>
     <section class="cover"><p class="eyebrow">CRANESIGNAL RESEARCH / MASIATE CONSTRUCTION / SEPTEMBER 20, 2026 SNAPSHOT</p>
     <h1>Project &amp; Contractor Table</h1>
     <p class="lead">Useful businesses and projects to qualify, not a list of confirmed available jobs.</p>
-    <table class="metrics"><tr><td><b>{len(rows)}</b>project profiles</td><td><b>{construction_routes}</b>construction-company contact routes</td>
-    <td><b>{all_routes - construction_routes}</b>engineering-contact profiles</td><td><b>0</b>confirmed open trade packages</td></tr></table>
-    <p class="notice"><b>What is useful:</b> EBCO, Collier and SpawGlass have saved business contact routes linked to project evidence.
+    <table class="metrics"><tr><td><b>{len(rows)}</b>project profiles</td><td><b>{construction_routes - provisional}</b>company / association-sourced business numbers</td>
+    <td><b>{provisional}</b>directory-only number; identity check needed</td><td><b>0</b>confirmed open trade packages</td></tr></table>
+    <p class="notice"><b>Phone update:</b> all nine named construction-company prospects now have a published number to check.
+    Eight use company or builder-association sources; Valco is directory-only with an unconfirmed project match.
     Masiate can ask about helping with remaining trades. <b>What is not established:</b> whether any of them needs another crew,
     whether each job is active now, or whether Masiate meets project requirements.</p>
     <div class="columns"><div><h3>How the table is organized</h3><ul>
-    <li>Three construction-company contacts come first, including Collier's unresolved exact project role.</li>
-    <li>Six more profiles name contractors but need direct contact research; Atlas is sign/wall scope only.</li>
+    <li>Three initial construction-company contacts come first, including Collier's unresolved exact project role.</li>
+    <li>Six additional named contractors now have phone details; Valco needs identity verification and Atlas is sign/wall scope only.</li>
     <li>Three profiles provide engineer contacts, not confirmed buyers. J4 appears on two different projects.</li>
     <li>Thirty-seven profiles have no established outside building contractor. Unknown does not mean available.</li></ul>
     <h3>A useful first call</h3><p>"We're Masiate Construction. We saw your company listed on [project]. Are you handling that job,
@@ -231,21 +254,23 @@ def render_html(rows, review, summary):
     <li><b>Possible fit is our judgment</b> from the described work, not proof that a specific trade package exists.</li>
     <li>Permit issuance is not a verified start. TDLR registration / Review Complete is not a builder award or job completion.</li>
     <li>Scheduled dates are estimates from records. Only AutoZone has saved city evidence explicitly reporting construction underway.</li>
-    <li>Contacts were saved during the pilot, not reverified for this revision; no one has been contacted.</li>
+    <li>Construction-company phone sources checked September 20, 2026; no test calls made. Engineering contacts remain from the pilot.</li>
     <li>Row numbers refer to the original 49 profiles, not a sales score. Source links open the supporting public pages.</li></ul>
     <p><b>Coverage:</b> {esc(county_text)}. Research geography does not establish Masiate's travel range.</p></div></div>
     </section>{''.join(sections)}
     <section class="appendix"><h2>What this research can and cannot tell us</h2>
-    <div class="columns"><div><h3>Saved research, not a new collection run</h3><ul>
+    <div class="columns"><div><h3>Saved projects plus a focused phone lookup</h3><ul>
     <li>{summary['source_records_collected']} source entries collected; these are not unique qualified leads.</li>
     <li>{summary['source_records_linked_to_detailed_profiles']} source entries support the 49 merged profiles, all represented once in this table.</li>
     <li>{summary['source_receipts']} source-coverage checks across seven counties; coverage is incomplete.</li>
     <li>{summary['unreviewed_brazos_records']} additional Brazos registrations were not deeply reviewed.</li>
     <li>Three out-of-area entries were excluded. Three coordinator watchlist demotions were kept out of the 49:
     Lorca (unresolved street address), Iola wastewater plant (expired tender), and Pecan Grove (future agenda).</li>
-    <li>This revision uses saved public evidence only. No crawl, calls, emails, paid tools, new workers or site build were started.</li></ul>
+    <li>Project evidence is unchanged. Public contact pages and a builder-association directory were checked for missing business numbers.
+    Valco uses a clearly flagged Houzz listing. No calls, emails, paid tools, new workers or site build were started.</li></ul>
     <h3>Limits that matter before calling</h3><ul>
-    <li>Direct contacts cover six profiles, including engineering routes; they are not six verified purchasing decision-makers.</li>
+    <li>Phone/contact routes cover {all_routes} profiles: nine construction-company names (one provisional) and three engineering-contact profiles.
+    These are not verified purchasing decision-makers or guaranteed working phone lines.</li>
     <li>CAD links may open a search home page, not a permanent parcel record. A failed CAD match is not evidence of no owner.</li>
     <li>Project costs are intentionally omitted: total building budgets are not Masiate contract values.</li>
     <li>Personal home addresses and private-owner phone numbers are not reproduced. Missing business contact methods are explicit.</li>
@@ -265,7 +290,7 @@ def render_html(rows, review, summary):
     {link('https://www.cstx.gov/media/ahjdpwpz/09_september-building-permits-issued.xlsx', 'September permits')};
     {link('https://www.cstx.gov/your-government/departments/planning-development-services-department/building-permits-issued/', 'Monthly report index')}.</p>
     <h3>Bottom line</h3><p>The pilot produced specific projects, nine named construction-company prospects (including one sign contractor),
-    and three saved construction-company contact routes. It did <b>not</b> establish an available job.
+    now supplemented with eight company/association-sourced numbers and one unconfirmed directory number. It did <b>not</b> establish an available job.
     Use the first rows to ask about real needs, and the unresolved rows to guide further verification.</p>
     </div></div><p class="small">Separate table revision of the September 20 pilot and its three-property follow-up.
     The original report and source records remain unchanged. This table is not a live status feed.</p></section>
@@ -280,7 +305,7 @@ def render(output=OUTPUT):
     if source_hash != review["source_sha256"]:
         raise ValueError("Pilot snapshot changed; review the numbered editorial notes before rendering")
     summary = json.loads((DATA / "masiate-report-summary.json").read_text())
-    rows = build_rows(records, review)
+    rows = build_rows(records, review, json.loads(PHONE_PATH.read_text()))
     document = HTML(string=render_html(rows, review, summary)).render()
     output = Path(output)
     output.parent.mkdir(parents=True, exist_ok=True)

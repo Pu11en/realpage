@@ -2,8 +2,8 @@
   "snapshot": "pilot-20260920",
   "source_sha256": "e7a363e5332c12488ad8f8e6c3eaebdba0679b1ab7d67b32829ea3e456360bcd",
   "sections": [
-    {"title": "1. Construction-company contacts to approach", "description": "Three projects with a saved company phone, email or website. Ask about remaining trade work; none is confirmed to need help.", "ranks": [1, 32, 30]},
-    {"title": "2. Named contractors; contact details still needed", "description": "Six projects name contractors, but no direct business contact method was saved. Atlas is named for sign/wall work only, not the parking lot.", "ranks": [2, 6, 7, 29, 33, 4]},
+    {"title": "1. Construction-company contacts to approach", "description": "Three initial prospects, now with clearly labeled business phone numbers. Ask about remaining trade work; none is confirmed to need help.", "ranks": [1, 32, 30]},
+    {"title": "2. More named contractors; phone lookup completed", "description": "Public numbers added for all six names; Valco is directory-only and its project match is unconfirmed. Atlas is sign/wall scope only, not the parking lot.", "ranks": [2, 6, 7, 29, 33, 4]},
     {"title": "3. Engineering contacts, not confirmed buyers", "description": "Three projects have an engineering contact route. These firms may clarify project status; they are not established as the builder or buyer of Masiate's work.", "ranks": [36, 38, 39]},
     {"title": "4. Projects to qualify; building contractor unresolved", "description": "Thirty-seven other profiles. A missing contractor name does not mean the job is available. Owner-listed permits and project representatives are labeled separately.", "ranks": [37, 14, 12, 9, 11, 16, 17, 18, 20, 15, 24, 10, 19, 3, 5, 31, 34, 40, 47, 45, 35, 22, 23, 42, 49, 48, 21, 25, 26, 27, 28, 41, 13, 44, 43, 8, 46]}
   ],
