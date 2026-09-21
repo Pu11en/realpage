@@ -5,6 +5,13 @@ Check: `git diff --check`
 This check validates this planning change only, not a scraper or live data.
 Status: planning, 2026-09-20. No collection job, paid service, outreach or app build has started.
 
+**Updated deliverable:** Drew now wants a deeply researched PDF of the top
+properties, supported by the agent, rather than a PDF containing every lead.
+Collect broadly, then rank and investigate the best candidates in more detail.
+Agent follow-up stays in saved chats and does not change the PDF; separate
+per-lead notes are canceled. This supersedes earlier complete-report wording
+below. See [current decisions](masiate-decisions.md) for the authoritative scope.
+
 ## 1. What We Are Collecting
 
 **Agreed:** a regular public section inside CraneSignal, shaped around Masiate Construction's work, with the same information available to the existing agent. This is not a separate app or a private customer area.

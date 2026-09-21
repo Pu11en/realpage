@@ -2,6 +2,35 @@
 
 Check: `git diff --check`
 
+## Current Deliverable: Top-Property PDF
+
+Latest direction from Drew on 2026-09-20 supersedes the earlier all-leads PDF
+and per-lead saved-note decisions below.
+
+- **Primary deliverable:** a PDF of the best properties/projects for Masiate,
+  with as much useful, source-backed detail as can be found on each.
+- Collect broadly across relevant services, rank candidates, then concentrate
+  deeper research on the strongest properties. The report is a selected set,
+  not an automatic dump of every collected record.
+- Proposed property profile: address/map link, what is planned or happening,
+  matching Masiate work, owner/developer/builder roles, available business
+  contacts, known scope/budget, dates/stage, evidence, uncertainty and a useful
+  next step. Project budget must not be presented as Masiate's contract value.
+- Keep the public CraneSignal section and agent access to the underlying data.
+  The report is the main outcome; chat supports further investigation.
+- Agent research happens on request and stays in the person's saved chats;
+  the agent must retrieve prior findings when that person asks again.
+- **Cancel separate per-lead notes, note visibility controls and shared-record
+  edits.** The latest user instruction makes the previous Q7 unnecessary.
+- The PDF stays unchanged by chat research. Later editions from new collection
+  runs remain undecided.
+- Remembering requires persisted chat history and retrieval, not an assumption
+  of automatic model memory. Inspect the existing chat/session behavior before
+  promising return-visit or cross-chat recall; keep each person's history scoped
+  to them even though the section is public.
+- The property count, geographic boundary, ranking acceptance rules and depth
+  of each profile still need planning. No collection/build has started.
+
 ## Confirmed Instructions
 
 - Plan the full experience before building; Drew explicitly requested an interview.
@@ -75,7 +104,7 @@ The earlier decision tree is a topic checklist, not a requirement to exhaust
 business questions before discussing the product. Resolve travel/capacity only
 when needed for an actual feature behavior, without revisiting broad coverage.
 
-## Feature Experience
+## Earlier Feature Choice
 
 Q3: What should the finished CraneSignal section let the owner do?
 
@@ -97,7 +126,7 @@ was selected. The regular public CraneSignal section remains agreed.
 Drew also requested "a pdf of everything" and wants to explore the feature
 further. Q4 below resolves this as a feature export of the complete lead report.
 
-## PDF Deliverable
+## Earlier PDF Choice: Superseded
 
 Q4: What should "a PDF of everything" contain?
 
@@ -156,7 +185,7 @@ the agent helps find more information but does not write that research back to
 the PDF. Drew asked how difficult option A would be. The earlier choices that
 fed agent updates into future PDFs are superseded by this clarification.
 
-## Fixed Report And Separate Research
+## Earlier Save Design: Superseded
 
 - Confirmed: keep the original complete collection PDF unchanged by agent research.
 - New findings appear in chat and can be saved as separate notes attached to a
@@ -169,7 +198,7 @@ fed agent updates into future PDFs are superseded by this clarification.
 - A separate saved note can preserve source/date without changing the original
   collector record or PDF. No precise delivery estimate has been promised.
 
-## Saved Research Notes
+## Earlier Lead Notes: Canceled
 
 Q6 revised: With the PDF fixed, how should extra research be kept?
 
@@ -185,7 +214,7 @@ Save useful research findings as notes attached to each lead. Preserve the
 original collected record and fixed PDF. Visibility and editing permissions
 remain undecided; this answer does not select shared-record editing.
 
-## Current Question
+## Canceled Visibility Question
 
 Q7: Who should see research notes saved on a lead?
 
@@ -195,8 +224,20 @@ Q7: Who should see research notes saved on a lead?
 - C. Masiate's selected team; research is shared among team members.
 - D. Choose public or personal when saving each note; more flexibility and controls.
 
-Answer: pending. Public visibility does not by itself grant anonymous editing;
-who can create, change or remove notes remains a separate product decision.
+Canceled by Drew's latest instruction: research stays in saved chat history,
+so do not ask who can see separate lead notes or build note controls.
+
+## Current Question
+
+Q8: How many top properties should the first detailed PDF cover?
+
+- A. Up to 20: recommended focused report with substantial research per property.
+- B. Up to 10: a smaller, more deeply investigated first selection.
+- C. Up to 50: broader choice, with more research and a longer report.
+- D. Up to 100: extensive coverage, with the most work and a much larger report.
+
+Answer: pending. These are targets, not guaranteed counts; do not pad with weak
+or invented prospects to hit a number. Drew may choose a different count.
 
 ## Product Questions To Explore Next
 
