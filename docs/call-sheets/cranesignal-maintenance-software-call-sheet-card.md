@@ -2,17 +2,18 @@
 
 ## ✅ What Changed
 
-- Reformatted the PDF so text should **not be cut off**.
-- Replaced the dense table with **wrapped company cards**.
-- Kept website links, best phone number, confidence, who to ask for, why they might care, first question, and fallback note.
-- Kept all 30 companies in the PDF.
+- Rebuilt the PDF again as **plain vertical contact cards**.
+- Removed the table-like two-column grid feel.
+- Each company now reads top-to-bottom: company, phone, website, ask-for role, why they care, first question, fallback.
+- It is longer, but it should be easier for a caller to view without clipped text or table scanning.
 
 ## ✅ How To Use It
 
-- Open the company website first.
-- Call the best phone number.
-- Ask for the role shown in **Ask for**.
-- Use the company-specific **First question** so the call feels relevant.
+- Start with **Tier A**.
+- Open the company website.
+- Call the phone number.
+- Ask for the role shown on the card.
+- Use the company-specific first question.
 
 ## ✅ Best Opener
 
@@ -21,4 +22,3 @@
 ## ⬜ Best Next Asset
 
 - The calls will work much better with a **10-account Texas sample lead pack**.
-- That sample should show real apartment properties with maintenance-pain evidence and public source links.
