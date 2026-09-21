@@ -40,7 +40,7 @@ The next question comes from an unresolved decision whose prerequisites are
 settled. Keep optional later enhancements out of the first build unless selected.
 Use the existing research instead of repeating source discovery.
 
-## Current Question
+## Answered Questions
 
 Q1: Who will turn the leads into actual jobs?
 
@@ -49,7 +49,24 @@ Q1: Who will turn the leads into actual jobs?
 - C. Drew's team checks interest first, then passes interested prospects to Masiate.
 - D. Drew's team and Masiate share the work and assign follow-ups to each other.
 
-Answer: pending. Drew can supply a different arrangement.
+Answer: **A**, selected by Drew on 2026-09-20. Masiate's owner contacts
+prospects directly. This does not authorize automated outreach or imply that
+the system has already verified a prospect's interest.
+
+## Current Question
+
+Q2: Which jobs should appear at the top of the owner's lead list?
+
+Collection remains broad across relevant services; this decision sets priority.
+
+- A. Best opportunities across all services: prioritize local, fresh, well-supported
+  matches; recommended for the requested broad coverage, with a mixed daily list.
+- B. Fencing and concrete for builders: prioritize portions of larger projects.
+- C. Homeowner remodels: prioritize kitchens, bathrooms, additions and similar work.
+- D. Commercial renovations: prioritize shops, offices and other business premises.
+- E. Whole-house builds: prioritize opportunities to lead a complete home project.
+
+Answer: pending. Drew can name a different priority or combination.
 
 ## Build Boundary
 
