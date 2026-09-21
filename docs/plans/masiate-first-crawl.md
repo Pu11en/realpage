@@ -5,6 +5,11 @@ Check: `git diff --check`
 This check validates this planning change only, not a scraper or live data.
 Status: planning, 2026-09-20. No collection job, paid service, outreach or app build has started.
 
+**Expanded source checks and current run design:** see
+[the seven-county collection run](masiate-collection-run.md). It adds named
+sources beyond Brazos/Robertson and distinguishes discovered pages from tested
+individual records. This earlier document remains supporting design detail.
+
 **Updated deliverable:** Drew now wants a deeply researched PDF of the top
 properties, supported by the agent, rather than a PDF containing every lead.
 Collect broadly, then rank and investigate the best candidates in more detail.
@@ -26,7 +31,7 @@ a whole-report refresh button from this earlier source-design draft.
 ### Area and dates
 
 - **Area confirmed:** wider Brazos Valley: Brazos, Robertson, Burleson, Grimes, Leon, Madison and Washington counties. The founder's Hearne background does not establish the company's current base or driving limit.
-- Cover all seven counties in the source inventory, including relevant city and unincorporated-area records. Verify each city's sources separately; do not assume a county feed covers city permits. Most source checks below currently concern Brazos and Hearne; the remaining jurisdictions still need discovery.
+- Cover all seven counties in the source inventory, including relevant city and unincorporated-area records. Verify each city's sources separately; do not assume a county feed covers city permits. The expanded collection-run document adds starting points for all seven counties; smaller jurisdictions and individual-record access still need checks.
 - First pass: the latest **90 days** of permits and business-opening signals, plus all currently open matching bids and currently pending planning projects.
 - Backfill permits and registrations to **12 months**, and planning/development records to **24 months**, checking which older projects are still active. These are proposed collection windows, not claims about available archives.
 - Keep earlier records as history, with their real dates. Do not label an old permit as new because the scraper just found it.
@@ -99,7 +104,7 @@ The following pages were inspected on 2026-09-20. **A source page being found do
 - Start with one request at a time per host and at least two seconds between requests, or a slower published limit. Respect retry instructions; pause repeated failures. Separate hosts can be worked on independently.
 - Set a visible page/time limit per source before the run. Reaching a limit means **partial**, not complete or no results. Do not promise a fixed number of leads before seeing the records.
 - Handle maintenance, empty results, unexpected HTML and login pages as different outcomes. Never treat an error page as a valid fixture.
-- Refresh with overlapping date windows and compare document hashes to catch corrections. Track missing/withdrawn records without silently deleting history.
+- Within this one-time run, resume with overlapping date windows and compare document hashes to catch corrections. Track missing/withdrawn records without silently deleting history; this does not introduce scheduled refreshes.
 - Where exports are unavailable, draft a request for existing electronic records, including IDs, dates, addresses, work descriptions, status and applicant/contractor fields already held. Sending a request or creating an account is a separate action.
 
 ## 4. What Counts As A Useful Lead
@@ -129,7 +134,7 @@ The following pages were inspected on 2026-09-20. **A source page being found do
 
 - Report records downloaded, parsed, rejected, deduplicated, matched to Masiate, still active, and with business contacts. Do not add those categories together as if they were separate leads.
 - For each source, show the requested and actually covered dates, pages/files read, errors and access gaps. Compare to published totals only where categories and dates genuinely match.
-- Review up to ten records per source, including low-confidence entries, and the first twenty highest-ranked results. A bad parser fails its source even if the code runs successfully.
+- Review up to ten records per source, including low-confidence entries, and every final shortlisted property. A bad parser fails its source even if the code runs successfully.
 - Verify every published lead has an identity, service reason, dated evidence and status; separate unknown from no results. Re-running the same files must not create duplicate projects.
 - Initial success is a checked sample plus honest coverage, followed by complete collection of the agreed accessible sources. It is not a claim to have found every job in the region.
 
@@ -187,6 +192,8 @@ There is no new local server to start yet: this turn produces a plan only.
 
 ### Decision still needed
 
-Collection boundary is confirmed as **all seven Brazos Valley counties**. It is a research boundary, not a verified company travel policy. One initial collection and PDF are selected; no scheduled editions. The next interview decision concerns which properties deserve the top positions.
-
-After the area is settled, the next planning decision is how to run the small implementation tasks: /gowork or a normal session. No agent workers, schedules or paid crawls have been started.
+The collection-run document records the current question: how to handle useful
+records obtainable only by requesting them from an office. Geography, one-time
+reporting, the ranking default and existing-tool reuse are already settled.
+Execution mode and runnable checks still belong in the later build handoff;
+no agent workers, schedules or paid crawls have been started.

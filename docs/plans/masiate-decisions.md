@@ -423,6 +423,29 @@ unless a verified limitation makes the selected behavior unworkable.
 
 ## Product Questions To Explore Next
 
+Drew selected the collection-run walkthrough on 2026-09-20. See
+[the seven-county run design](masiate-collection-run.md) for source checks,
+proposed date windows, processing order, limits, output and acceptance criteria.
+This choice authorized planning research, not a crawl or a build.
+
+## Current Question: Office-Held Records
+
+Q17: How should the plan handle useful records available only by asking a city
+or county office for them?
+
+- A. Draft requests for review and keep going with accessible sources;
+  recommended practical start, with outstanding gaps disclosed.
+- B. Include sending requests for no-charge electronic records in the later
+  authorized run and wait for replies before finalizing the PDF; sender details
+  and availability need checking, and any fee quote stops that request.
+- C. Use online-accessible records only; no requests, with missing sources listed.
+- D. Finish accessible collection first, then choose requests based on the gaps;
+  fewer speculative requests but a later decision about report completeness.
+
+Answer: pending. No request has been sent and no agency account created.
+
+## Remaining Acceptance Work
+
 - What the agent can actually do: search collected records, verify live sources,
   research a new opportunity, compare jobs, and suggest a next step.
 - What a useful answer contains and what happens when evidence or a contact is
