@@ -18,6 +18,8 @@ and per-lead saved-note decisions below.
   next step. Project budget must not be presented as Masiate's contract value.
 - Keep the public CraneSignal section and agent access to the underlying data.
   The report is the main outcome; chat supports further investigation.
+- The section shows a short ranked property list, the detailed PDF and an Ask
+  Agent action. Full on-site property profiles and map browsing are not selected.
 - Agent research happens on request and stays in the person's saved chats;
   the agent must retrieve prior findings when that person asks again.
 - Agent scope is research only: facts, sources and available business contacts.
@@ -356,7 +358,7 @@ Verify remaining allowances and billing behavior before using paid endpoints;
 stop or use a no-new-charge alternative if an extra charge would be required.
 No unlimited token budget or provider billing cap is assumed.
 
-## Current Question
+## Public Section Experience
 
 Q14: Besides downloading the PDF, what should visitors see in Masiate's section?
 
@@ -368,8 +370,28 @@ Q14: Besides downloading the PDF, what should visitors see in Masiate's section?
 - D. A map with property summaries, PDF and agent; geographic browsing, requiring
   verified locations and a map source with no new charges.
 
-Answer: pending. All choices retain the fixed detailed PDF, research-only agent,
-regular public section, and user-scoped saved chats already selected.
+Answer: **A**, selected by Drew on 2026-09-20. Show a short ranked property list
+with PDF access and an Ask Agent action. Keep the detailed PDF as the primary
+deliverable, rather than duplicating every property profile on the website.
+Map browsing and full searchable web profiles are not part of this first version.
+The regular public section and user-scoped saved chats remain as selected.
+
+## Next Walkthrough
+
+The core product choices are now recorded. Move from preference questions to
+demonstrating the proposed experience and checking the plan's remaining gaps.
+
+Q15: Which part should we walk through first before building?
+
+- A. The complete experience from opening the section to returning to a saved
+  research chat; recommended to expose missing steps across the whole feature.
+- B. One clearly hypothetical property profile showing the PDF's level of detail.
+- C. The collection run: where records come from, how they become ranked leads,
+  and what happens when a source is unavailable.
+- D. The agent: example questions, sourced answers and retrieving earlier research.
+
+Answer: pending. This chooses the next planning walkthrough, not implementation
+authorization; all four areas must ultimately be covered by acceptance checks.
 
 ## Product Questions To Explore Next
 
