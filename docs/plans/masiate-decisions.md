@@ -118,7 +118,7 @@ fit reasons, dates, source links and information gaps. This is not a request to
 generate a planning PDF now. Do not silently replace all leads with a top-N
 shortlist, omit unknown fields without explanation, or invent missing facts.
 
-## Current Question
+## Agent Research Scope
 
 Q5: How far should the agent go beyond the information already collected?
 
@@ -130,8 +130,30 @@ Q5: How far should the agent go beyond the information already collected?
 - D. Also launch new searches for additional leads; broader discovery with
   longer-running jobs and more usage to manage.
 
-Answer: pending. This selects a future capability, not authorization to run
-paid research now. Outreach remains with the owner under Q1.
+Answer: **A**, selected by Drew on 2026-09-20. The agent answers from collected
+data and researches a selected lead online when explicitly asked. Automatic
+live checks on every question and new broad collection runs from chat are not
+selected. Scheduled collection remains a separate open decision. This is a
+future capability, not authorization to spend on live research during planning.
+Outreach remains with the owner under Q1.
+
+## Current Question
+
+Q6: When the agent discovers new information about a lead, how should it be saved?
+
+- A. Show the finding and source, then let the owner save it to the lead record;
+  future full PDF exports include saved updates. Recommended owner control,
+  with a review step.
+- B. Automatically add source-backed findings to the shared lead record and
+  future PDFs; less manual work, with automated validation and change history.
+- C. Keep findings in the research conversation only; the shared record and
+  full collection PDF remain based on the collector's dataset.
+- D. Save a dated research appendix alongside the lead; include it in future
+  PDFs while preserving the collector's original fields.
+
+Answer: pending. Public read access remains agreed; who may trigger research
+or save shared edits will be resolved separately. Already-downloaded PDFs are
+dated snapshots and cannot change retroactively.
 
 ## Product Questions To Explore Next
 
