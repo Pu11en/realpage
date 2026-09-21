@@ -2,6 +2,7 @@
 
 ## What This Run Will Finish
 
+- **Submitted to Go Work; waiting for your AI choice in the bot's picker.** Research workers are not yet confirmed running.
 - Check **all 49 property rows**, not just the nine named construction companies.
 - Follow each row's existing source links and inspect the actual contact details.
 - Find a usable public business number where one can be verified, with a brief explanation of whose number it is.
