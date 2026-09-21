@@ -53,8 +53,6 @@ Answer: **A**, selected by Drew on 2026-09-20. Masiate's owner contacts
 prospects directly. This does not authorize automated outreach or imply that
 the system has already verified a prospect's interest.
 
-## Current Question
-
 Q2: Which jobs should appear at the top of the owner's lead list?
 
 Collection remains broad across relevant services; this decision sets priority.
@@ -66,7 +64,33 @@ Collection remains broad across relevant services; this decision sets priority.
 - D. Commercial renovations: prioritize shops, offices and other business premises.
 - E. Whole-house builds: prioritize opportunities to lead a complete home project.
 
-Answer: pending. Drew can name a different priority or combination.
+Answer: **A**, selected by Drew on 2026-09-20. Rank the best matches across
+all relevant services; no single trade gets exclusive collection priority.
+
+## Interview Correction
+
+Drew wants questions about the final feature and deliverable, not a sales
+strategy interview. Lead with concrete user-visible behavior and scope choices.
+The earlier decision tree is a topic checklist, not a requirement to exhaust
+business questions before discussing the product. Resolve travel/capacity only
+when needed for an actual feature behavior, without revisiting broad coverage.
+
+## Current Question
+
+Q3: What should the finished CraneSignal section let the owner do?
+
+- A. Find leads, inspect the work/contact/evidence, ask the agent, and track
+  contacted/quoting/won; recommended complete workflow, with more features to build.
+- B. Search, inspect, ask the agent and export leads; handle follow-up elsewhere.
+- C. Work through a prioritized daily list with next actions and reminders;
+  prioritize a guided workflow over exploring the whole database.
+- D. Ask the agent to research opportunities and build saved shortlists;
+  prioritize conversation over a table-led workflow.
+
+All options retain a regular public section and shared sourced agent knowledge.
+Personal notes or follow-up visibility, if selected, remain a later explicit
+design decision; a public section does not automatically mean public sales notes.
+Answer: pending; Drew may combine outcomes or describe another deliverable.
 
 ## Build Boundary
 
