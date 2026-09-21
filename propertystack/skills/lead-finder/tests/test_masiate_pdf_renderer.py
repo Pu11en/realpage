@@ -100,3 +100,21 @@ def test_cli_renders_empty_results_state(tmp_path: Path) -> None:
     text = extract_text(output)
     assert "No detailed include records supplied yet" in text
     assert "No coverage file was supplied" in text
+
+
+def test_contact_methods_are_rendered_and_markup_is_escaped() -> None:
+    html = renderer.business_contacts({'business_contacts': [{
+        'name': '<script>Test</script>', 'role': 'builder', 'phone': '555-0100',
+        'email': 'office@example.test', 'website': 'javascript:alert(1)',
+        'source_url': 'https://example.test/contact',
+    }]})
+    assert 'Phone: 555-0100' in html
+    assert 'Email: office@example.test' in html
+    assert 'Contact source' in html
+    assert '<script>' not in html and 'javascript:' not in html
+
+
+def test_cover_uses_supplied_counts_not_pilot_constants() -> None:
+    html = renderer.render_html([], [], 'Test', {
+        'out_of_area_source_records_excluded': 2, 'unreviewed_brazos_records': 7})
+    assert '2 out-of-area' in html and '7 additional Brazos' in html

@@ -1,4 +1,15 @@
-# Masiate Pilot: Finished Sessions Closed, Review Running
+# Masiate Pilot: Finished Sessions Archived
+
+## Final Closure
+
+All eight finish workers were confirmed `history` (idle) through the sessions
+API, `complete` in their runtime checkpoints, and clean in their git worktrees.
+Their exact thread IDs from `masiate-pilot-finish-launch.json` were individually
+archived through Discord; all eight responses confirmed `archived: true`.
+Together with the original collectors, sixteen completed worker threads are
+now archived. No history, evidence, worktree or session database row was deleted.
+The collection/review launch narrative below is historical. No worker remains
+assigned unfinished pilot work; delivery ends the approved first pass.
 
 ## Completed Collection
 

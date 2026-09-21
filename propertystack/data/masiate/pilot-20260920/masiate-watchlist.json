@@ -1,0 +1,278 @@
+[
+  {
+    "id": "brazos-bryan-sdrc-sp26-000056-lorca-apartments",
+    "county": "Brazos",
+    "project_name": "Lorca Apartments",
+    "address": "Bryan downtown district; exact street address not extracted",
+    "city": "Bryan",
+    "record_type": "planning",
+    "source_record_id": "SP26-000056",
+    "record_date": "2026-09-01",
+    "retrieved_at": "2026-09-21T01:59:14Z",
+    "stage": "planned",
+    "status_basis": "Bryan SDRC archive posted a September 1, 2026 site-plan PDF. The plan identifies a proposed 100-unit apartment building and owner, but the property-address field was not extracted.",
+    "scope": "Proposed multifamily residential apartment building with 100 dwelling units, studios/one-bedroom/two-bedroom units, open-air courtyard, located within downtown Bryan; legal description Lots 2-R, Block 264-R, Bryan Original Townsite, 1.652 acres.",
+    "masiate_fit": "Very strong multifamily fit for Masiate trades if address and permit status are confirmed; likely building-scope opportunities include framing, plumbing, lighting, flooring, paint, concrete and exterior details.",
+    "estimated_value": null,
+    "estimated_start": null,
+    "estimated_completion": null,
+    "bid_deadline": null,
+    "participants": [
+      {
+        "name": "Caliber Co.",
+        "role": "property owner",
+        "source_url": "https://docs.bryantx.gov/planning_development/SDRC/2026%20SDRC/09-01-2026/SP26-000056%2C%20Lorca%20Apartments%2C%209-1-26.pdf"
+      }
+    ],
+    "business_contacts": [
+      {
+        "name": "Stewart + Reindersma",
+        "role": "architect/designer shown on plan extraction",
+        "phone": null,
+        "email": null,
+        "website": null,
+        "source_url": "https://docs.bryantx.gov/planning_development/SDRC/2026%20SDRC/09-01-2026/SP26-000056%2C%20Lorca%20Apartments%2C%209-1-26.pdf"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://docs.bryantx.gov/planning_development/SDRC/2026%20SDRC/09-01-2026/SP26-000056%2C%20Lorca%20Apartments%2C%209-1-26.pdf",
+        "title": "SP26-000056, Lorca Apartments",
+        "date": "09-01-2026",
+        "page": "PDF/text extraction",
+        "evidence": "PDF text states proposed multifamily residential apartment building with 100 dwelling units; owner Caliber Co.; downtown district; legal description Lots 2-R Block 264-R Bryan Original Townsite, 1.652 acres."
+      }
+    ],
+    "unknowns": [
+      "Exact street address not extracted from text",
+      "Permit/construction status unknown",
+      "Whether trade packages remain available"
+    ],
+    "next_research": "Match the parcel in Brazos CAD and check Bryan Citizenserve or an open-records export for permit status.",
+    "disposition": "candidate",
+    "member_ids": [
+      "brazos-bryan-sdrc-sp26-000056-lorca-apartments"
+    ],
+    "review_decision": "watchlist",
+    "priority_reason": "Exact street address was not resolved; retain as planning watchlist until the location is verified.",
+    "reviewed_at": "2026-09-21T02:23:49Z",
+    "evidence_checked": [
+      "https://docs.bryantx.gov/planning_development/SDRC/2026%20SDRC/09-01-2026/SP26-000056%2C%20Lorca%20Apartments%2C%209-1-26.pdf"
+    ],
+    "corrections": [
+      "Treat Bryan SDRC/source-plan evidence as planning/site-plan evidence unless the source itself states otherwise; do not imply permit issuance or contract award.",
+      "Trade-package availability is unknown and must be labeled unknown in the PDF."
+    ]
+  },
+  {
+    "id": "grimes-iola-20260811-wwtp-contract",
+    "county": "Grimes",
+    "project_name": "City of Iola 0.100 MGD wastewater treatment plant construction",
+    "address": "Project location in Iola city limits near FM 39 / TX 90 per plan vicinity map; exact site address not stated in extracted text",
+    "city": "Iola",
+    "record_type": "bid",
+    "source_record_id": "City of Iola current project and August 11, 2026 agenda item L",
+    "record_date": "2026-08-11",
+    "retrieved_at": "2026-09-21T02:05:00Z",
+    "stage": "planned",
+    "status_basis": "Current Projects page includes June 2026 bid notice; August 11 agenda includes approval of a construction contract agreement between City of Iola and Teal Services, LLC for TWDB wastewater treatment plant construction. It does not prove notice to proceed or mobilization.",
+    "scope": "0.100 MGD package wastewater treatment plant, lift station and general site work; construction drawings preserved.",
+    "masiate_fit": "Public utility construction may require concrete, site work, electrical, plumbing/process piping, fencing and lighting; fit is stronger for subs than direct property-owner outreach.",
+    "estimated_value": null,
+    "estimated_start": null,
+    "estimated_completion": null,
+    "bid_deadline": "2026-06-25 2:00 PM Central (expired bid notice)",
+    "participants": [
+      {
+        "name": "City of Iola",
+        "role": "owner/public buyer",
+        "source_url": "https://cityofiola.myruralwater.com/current-projects"
+      },
+      {
+        "name": "Teal Services, LLC",
+        "role": "construction contract party named in August agenda",
+        "source_url": "https://cityofiola.myruralwater.com/documents/1511/Agenda_August_11_LJ_2026.pdf"
+      },
+      {
+        "name": "Bleyl Engineering",
+        "role": "engineer on construction drawings",
+        "source_url": "https://cityofiola.myruralwater.com/documents/1511/Plans-IolaWWTP_2026-0209.pdf"
+      }
+    ],
+    "business_contacts": [
+      {
+        "name": "Teal Services, LLC",
+        "role": "construction contract party named in public agenda",
+        "phone": null,
+        "email": null,
+        "website": null,
+        "source_url": "https://cityofiola.myruralwater.com/documents/1511/Agenda_August_11_LJ_2026.pdf"
+      },
+      {
+        "name": "Bleyl Engineering",
+        "role": "engineer named on construction drawings",
+        "phone": null,
+        "email": null,
+        "website": "https://www.bleylengineering.com",
+        "source_url": "https://cityofiola.myruralwater.com/documents/1511/Plans-IolaWWTP_2026-0209.pdf"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://cityofiola.myruralwater.com/current-projects",
+        "title": "City of Iola Current Projects",
+        "date": "2026-08-26",
+        "page": "current projects entries June 11 and August 26",
+        "evidence": "Page lists WWTP bid notice and plan link; June bid notice identifies package WWTP, lift station and general site work."
+      },
+      {
+        "url": "https://cityofiola.myruralwater.com/documents/1511/Agenda_August_11_LJ_2026.pdf",
+        "title": "City of Iola agenda August 11, 2026",
+        "date": "2026-08-11",
+        "page": "item L",
+        "evidence": "Agenda item L is to approve construction contract agreement with Teal Services, LLC for TWDB WWTP construction."
+      },
+      {
+        "url": "https://cityofiola.myruralwater.com/documents/1511/Plans-IolaWWTP_2026-0209.pdf",
+        "title": "Iola WWTP construction drawings",
+        "date": "2026-02-09",
+        "page": "cover/vicinity map",
+        "evidence": "Plans identify City of Iola 0.100 MGD wastewater treatment plant, TWDB CWSRF project no. 10422 and GLO project no. 24-065-165-F080."
+      }
+    ],
+    "unknowns": [
+      "Exact construction site address",
+      "Executed contract value",
+      "Notice to proceed/mobilization date",
+      "Subcontracting opportunities"
+    ],
+    "next_research": "Request/check award packet or minutes for August 11; inspect plan sheets manually for site coordinates; identify Teal Services project manager only from public/approved sources.",
+    "disposition": "candidate",
+    "member_ids": [
+      "grimes-iola-20260811-wwtp-contract"
+    ],
+    "evidence_checked": [
+      "https://cityofiola.myruralwater.com/current-projects",
+      "https://cityofiola.myruralwater.com/documents/1511/Agenda_August_11_LJ_2026.pdf",
+      "https://cityofiola.myruralwater.com/documents/1511/Plans-IolaWWTP_2026-0209.pdf"
+    ],
+    "reviewed_at": "2026-09-21T02:24:26Z",
+    "review_decision": "watchlist",
+    "priority_reason": "The tender deadline has passed; an agenda naming a contract does not prove execution or open trade packages.",
+    "corrections": [
+      "Downgraded the June bid notice to expired; useful current evidence is the August 11 agenda item to approve a construction contract with Teal Services.",
+      "No notice-to-proceed, mobilization date or subcontract availability was found.",
+      "Best route is contractor/subcontractor research, not treating the city as a fresh open-bid buyer."
+    ]
+  },
+  {
+    "id": "grimes-navasota-pz-20260924-pecan-grove-phase2",
+    "county": "Grimes",
+    "project_name": "Pecan Grove Estates Phase 2 final plat and subdivision agreement",
+    "address": "Highway 105 W / Pecan Lakes Drive, Navasota, TX 77868",
+    "city": "Navasota",
+    "record_type": "planning",
+    "source_record_id": "Navasota P&Z agenda seq 246 item 6 / memo seq 1064; parcel R14167",
+    "record_date": "2026-09-24",
+    "retrieved_at": "2026-09-21T02:05:00Z",
+    "stage": "planned",
+    "status_basis": "September 24, 2026 P&Z agenda is for consideration of final plat and subdivision agreement; memo says Phase 2 public infrastructure is substantially complete but outstanding items remain under a letter of credit. It does not prove vertical home construction has started.",
+    "scope": "57-lot residential subdivision; subdivision agreement covers outstanding public improvements including Phase 2 lot-frontage sidewalks.",
+    "masiate_fit": "Concrete/sidewalk, fencing, flatwork, framing and later residential trade packages could fit; trade availability is an inference because the source only confirms subdivision approval/infrastructure status.",
+    "estimated_value": "$101,265.00 outstanding infrastructure letter of credit; $69,615.00 listed for missing lot frontage sidewalks; $74,584 parkland fee-in-lieu noted separately",
+    "estimated_start": null,
+    "estimated_completion": "No later than two years after final plat signature for required public improvements, per subdivision agreement summary",
+    "bid_deadline": null,
+    "participants": [
+      {
+        "name": "Crosstrails Development, LLC",
+        "role": "owner/subdivider",
+        "source_url": "https://destinyhosted.com/agenda_publish.cfm?id=62827&mt=ALL&get_month=9&get_year=2026&dsp=agm&seq=1064&rev=0&ag=246&ln=2931"
+      },
+      {
+        "name": "413 Pecan Grove, LLC",
+        "role": "associated owner named in memo",
+        "source_url": "https://destinyhosted.com/agenda_publish.cfm?id=62827&mt=ALL&get_month=9&get_year=2026&dsp=agm&seq=1064&rev=0&ag=246&ln=2931"
+      },
+      {
+        "name": "Brandon Goodyk",
+        "role": "project owner representative",
+        "source_url": "https://destinyhosted.com/agenda_publish.cfm?id=62827&mt=ALL&get_month=9&get_year=2026&dsp=agm&seq=1064&rev=0&ag=246&ln=2931"
+      },
+      {
+        "name": "Chad Murphy",
+        "role": "project owner representative",
+        "source_url": "https://destinyhosted.com/agenda_publish.cfm?id=62827&mt=ALL&get_month=9&get_year=2026&dsp=agm&seq=1064&rev=0&ag=246&ln=2931"
+      },
+      {
+        "name": "Paul Malek / MBC",
+        "role": "project engineer",
+        "source_url": "https://destinyhosted.com/agenda_publish.cfm?id=62827&mt=ALL&get_month=9&get_year=2026&dsp=agm&seq=1064&rev=0&ag=246&ln=2931"
+      }
+    ],
+    "business_contacts": [
+      {
+        "name": "Crosstrails Development, LLC",
+        "role": "owner/subdivider verified in city memo and CAD",
+        "phone": null,
+        "email": null,
+        "website": null,
+        "source_url": "https://grimescad.org/ProxyT/Search/Properties/quick/?f=R14167&pn=1&st=4&so=desc&pt=RP;PP;MH;NR&ty=2027"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://destinyhosted.com/agenda_publish.cfm?id=62827&mt=ALL&get_month=9&get_year=2026&dsp=ag&seq=246",
+        "title": "Navasota Planning & Zoning Commission agenda",
+        "date": "2026-09-24",
+        "page": "item 6",
+        "evidence": "Agenda identifies Crosstrails final plat/subdivision agreement for Pecan Grove Estates Phase 2, 57 lots along Pecan Lakes Drive."
+      },
+      {
+        "url": "https://destinyhosted.com/agenda_publish.cfm?id=62827&mt=ALL&get_month=9&get_year=2026&dsp=agm&seq=1064&rev=0&ag=246&ln=2931",
+        "title": "Navasota P&Z agenda memo 1064",
+        "date": "2026-09-24",
+        "page": "summary/property information",
+        "evidence": "Memo gives parcel R14167, owner, address, 57-lot Phase 2 scope, substantially complete public infrastructure, outstanding sidewalks and staff recommendation."
+      },
+      {
+        "url": "https://destinyhosted.com/navasdocs/2026/NPAZ/20260924_246/1064_Navasota%20-%20Pecan%20Grove%20-%20Subdivision%20Agreement%20Phase%202%20Final.pdf",
+        "title": "Subdivision agreement PDF",
+        "date": "2026-09-24",
+        "page": "agreement attachment",
+        "evidence": "Agreement attachment preserved for outstanding public improvement obligations."
+      },
+      {
+        "url": "https://grimescad.org/ProxyT/Search/Properties/quick/?f=R14167&pn=1&st=4&so=desc&pt=RP;PP;MH;NR&ty=2027",
+        "title": "Grimes CAD quick search R14167",
+        "date": "2027",
+        "page": null,
+        "evidence": "CAD result confirms R14167 owner Crosstrails Development, LLC and situs HWY105 W, Navasota."
+      }
+    ],
+    "unknowns": [
+      "Whether final plat was approved after the September 24 meeting",
+      "Which sidewalk/flatwork scopes remain available to outside contractors",
+      "Whether vertical builders have been selected"
+    ],
+    "next_research": "After the meeting, check approved minutes and filed plat; then identify developer/builder procurement contacts from the subdivision agreement or county deed/plat filings.",
+    "disposition": "candidate",
+    "member_ids": [
+      "grimes-navasota-pz-20260924-pecan-grove-phase2"
+    ],
+    "evidence_checked": [
+      "https://destinyhosted.com/agenda_publish.cfm?id=62827&mt=ALL&get_month=9&get_year=2026&dsp=ag&seq=246",
+      "https://destinyhosted.com/agenda_publish.cfm?id=62827&mt=ALL&get_month=9&get_year=2026&dsp=agm&seq=1064&rev=0&ag=246&ln=2931",
+      "https://destinyhosted.com/navasdocs/2026/NPAZ/20260924_246/1064_Navasota%20-%20Pecan%20Grove%20-%20Subdivision%20Agreement%20Phase%202%20Final.pdf",
+      "https://grimescad.org/ProxyT/Search/Properties/quick/?f=R14167&pn=1&st=4&so=desc&pt=RP;PP;MH;NR&ty=2027"
+    ],
+    "reviewed_at": "2026-09-21T02:24:26Z",
+    "review_decision": "watchlist",
+    "priority_reason": "September 24 agenda is upcoming as of this September 20 report; verify the decision and executed agreement first.",
+    "corrections": [
+      "Record date is a September 24, 2026 agenda item; as of review on September 21, 2026, final action had not happened yet.",
+      "Do not claim vertical home construction has started.",
+      "Letter of credit and sidewalk values are obligations/estimates, not Masiate contract value."
+    ]
+  }
+]

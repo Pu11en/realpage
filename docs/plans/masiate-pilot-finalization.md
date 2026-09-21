@@ -1,5 +1,17 @@
 # Masiate Pilot: Coordinator Finalization
 
+## Completed First Delivery
+
+The collection and review phases below are historical, not active instructions.
+All sixteen worker threads are archived with committed outputs preserved.
+The coordinator assembled 49 detailed profiles from 58 supporting record IDs;
+267 original records were collected and 76 source coverage checks preserved.
+The final PDF and matching sanitized JSON are in
+`propertystack/data/masiate/pilot-20260920/`. The PDF is a fixed first-pass report,
+not a live CraneSignal integration or confirmed list of available jobs.
+See `masiate-pilot-delivery.md` for checks, exclusions and reproduction.
+No second collection or review pass is authorized by late worker relays.
+
 ## Current Phase Overrides The Original Watcher
 
 On September 20 around 9:20 PM Central, Drew requested closing done sessions

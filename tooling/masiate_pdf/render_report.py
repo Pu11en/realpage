@@ -131,11 +131,20 @@ def business_contacts(record: dict[str, Any]) -> str:
         name = esc(contact.get("name"))
         role = esc(contact.get("role"))
         website = safe_href(contact.get("website"))
+        bits = [f"{name} ({role})"]
+        if contact.get("phone"):
+            bits.append("Phone: " + esc(contact["phone"]))
+        if contact.get("email"):
+            bits.append("Email: " + esc(contact["email"]))
         if website:
-            rows.append(f'{name} ({role}) - <a href="{html.escape(website, quote=True)}">{esc(display_url(website))}</a>')
-        else:
-            rows.append(f"{name} ({role})")
-    return "; ".join(rows) if rows else UNKNOWN
+            bits.append(f'<a href="{html.escape(website, quote=True)}">{esc(display_url(website))}</a>')
+        source = safe_href(contact.get("source_url"))
+        if source:
+            bits.append(f'<a href="{html.escape(source, quote=True)}">Contact source</a>')
+        if not any(contact.get(k) for k in ("phone", "email", "website")):
+            bits.append("Direct contact method not verified")
+        rows.append(" | ".join(bits))
+    return "<br />".join(rows) if rows else UNKNOWN
 
 
 def include_records(records: list[dict[str, Any]]) -> list[dict[str, Any]]:
@@ -155,11 +164,9 @@ def record_card(record: dict[str, Any], index: int) -> str:
         availability = "Bid/status evidence: source marks this as open bid, but no deadline was supplied."
     else:
         availability = "Work availability: unknown unless the cited source explicitly states an open bid/status."
-    corrections = clean_text_list(record.get("corrections"))
-    member_ids = clean_text_list(record.get("member_ids")) or clean_text_list(record.get("id") or record.get("source_record_id"))
     unknowns = clean_text_list(record.get("unknowns"))
     return f"""
-    <article class="profile">
+    <article class="profile" id="property-{index}">
       <h3>{index}. {esc(record.get("project_name"))}</h3>
       <p class="meta">{esc(record.get("county"))} County | {esc(record.get("record_type"))} | record date {esc(record.get("record_date"))} | stage {esc(stage)}</p>
       <dl>
@@ -172,11 +179,9 @@ def record_card(record: dict[str, Any], index: int) -> str:
         <dt>Value</dt><dd>{esc(record.get("estimated_value"))} <span class="quiet">Whole-project value is not Masiate contract value.</span></dd>
         <dt>Dates</dt><dd>Start: {esc(record.get("estimated_start"))}; Completion: {esc(record.get("estimated_completion"))}; Bid deadline: {esc(record.get("bid_deadline"))}</dd>
         <dt>Participants</dt><dd>{participants(record)}</dd>
-        <dt>Verified business contacts</dt><dd>{business_contacts(record)}</dd>
+        <dt>Business contact routes</dt><dd>{business_contacts(record)}<br /><span class="quiet">A designer or engineer is not necessarily the buyer; listed roles do not establish available work.</span></dd>
         <dt>Unknowns</dt><dd>{esc(unknowns)}</dd>
-        <dt>Corrections</dt><dd>{esc(corrections)}</dd>
-        <dt>Member IDs</dt><dd>{esc(member_ids)}</dd>
-        <dt>Evidence checked</dt><dd>{esc(public_evidence_checked(record))}</dd>
+        <dt>Next fact to verify</dt><dd>{esc(record.get("next_research"))}</dd>
       </dl>
       <h4>Public Sources</h4>
       <ul class="sources">{''.join(source_items(record))}</ul>
@@ -208,25 +213,35 @@ def coverage_section(coverage: list[dict[str, Any]]) -> str:
     for county in sorted(by_county):
         rows = []
         for item in by_county[county]:
+            href = safe_href(item.get("url"))
+            link = f' <a href="{html.escape(href, quote=True)}">Source</a>' if href else ""
             rows.append(
                 "<li>"
                 f"<strong>{esc(item.get('name'))}</strong>: {esc(item.get('status'))}; "
                 f"covered {esc(item.get('covered_from'))} to {esc(item.get('covered_to'))}; "
                 f"records found {esc(item.get('records_found'))}. "
                 f"{esc(item.get('reason'))} "
-                f"<span class=\"quiet\">Next: {esc(item.get('next_cursor'))}</span>"
+                f"<span class=\"quiet\">Next: {esc(item.get('next_cursor'))}</span>{link}"
                 "</li>"
             )
-        chunks.append(f"<h3>{esc(county)} County</h3><ul>{''.join(rows)}</ul>")
+        heading = "Statewide Sources" if county.lower() == "statewide" else f"{county} County"
+        chunks.append(f"<h3>{esc(heading)}</h3><ul>{''.join(rows)}</ul>")
     return "".join(chunks)
 
 
-def render_html(records: list[dict[str, Any]], coverage: list[dict[str, Any]], title: str) -> str:
+def render_html(records: list[dict[str, Any]], coverage: list[dict[str, Any]], title: str,
+                summary: dict[str, Any] | None = None,
+                watchlist: list[dict[str, Any]] | None = None) -> str:
+    summary = summary or {}
     included = include_records(records)
-    watchlist = watchlist_records(records)
-    decision_counts = Counter(clean_text(record.get("review_decision")).lower() for record in records)
+    watchlist = watchlist if watchlist is not None else watchlist_records(records)
     county_counts = Counter(clean_text(record.get("county")) for record in included)
     generated_at = utc_now()
+    county_text = "; ".join(f"{k}: {v}" for k, v in sorted(county_counts.items()))
+    index_html = "".join(
+        f'<li><a href="#property-{i}">{i}. {esc(r.get("project_name"))}</a>'
+        f' <span class="quiet">| {esc(r.get("county"))}</span></li>'
+        for i, r in enumerate(included, 1))
     profile_html = (
         "".join(record_card(record, idx + 1) for idx, record in enumerate(included))
         if included
@@ -241,13 +256,14 @@ def render_html(records: list[dict[str, Any]], coverage: list[dict[str, Any]], t
     @page {{
       size: Letter;
       margin: 0.65in;
+      @top-left {{ content: "CRANESIGNAL / MASIATE"; color: #667085; font-size: 8pt; }}
       @bottom-right {{ content: "Page " counter(page) " of " counter(pages); color: #667085; font-size: 9px; }}
     }}
     * {{ box-sizing: border-box; }}
-    body {{ font-family: "DejaVu Sans", Arial, sans-serif; color: #182230; font-size: 10.5px; line-height: 1.42; }}
+    body {{ font-family: "DejaVu Sans", Arial, sans-serif; color: #182230; font-size: 10pt; line-height: 1.38; }}
     h1 {{ font-size: 22px; margin: 0 0 8px; color: #0b2f36; }}
     h2 {{ font-size: 15px; margin: 24px 0 8px; padding-top: 8px; border-top: 1px solid #d0d5dd; color: #12434a; }}
-    h3 {{ font-size: 12px; margin: 14px 0 5px; color: #101828; }}
+    h3 {{ font-size: 14pt; margin: 14px 0 5px; color: #101828; break-after: avoid; }}
     h4 {{ font-size: 10.5px; margin: 9px 0 4px; color: #344054; }}
     a {{ color: #175cd3; text-decoration: none; overflow-wrap: anywhere; }}
     .subtitle {{ color: #475467; margin-bottom: 14px; }}
@@ -256,33 +272,43 @@ def render_html(records: list[dict[str, Any]], coverage: list[dict[str, Any]], t
     .metric strong {{ display: block; font-size: 15px; color: #0b2f36; }}
     .notice {{ border-left: 4px solid #b54708; background: #fffaeb; padding: 8px 10px; margin: 12px 0; }}
     .empty {{ border: 1px dashed #98a2b3; background: #f9fafb; padding: 12px; margin: 10px 0; }}
-    .profile {{ break-inside: avoid; border-top: 1px solid #eaecf0; padding-top: 10px; margin-top: 10px; }}
+    .profile {{ break-before: page; border-top: 1px solid #eaecf0; padding-top: 10px; margin-top: 10px; }}
+    .index {{ columns: 2; list-style: none; margin-left: 0; font-size: 9pt; }}
+    .index li {{ break-inside: avoid; }}
     .meta, .quiet {{ color: #667085; }}
     dl {{ display: grid; grid-template-columns: 1.45in 1fr; gap: 4px 10px; margin: 8px 0; }}
     dt {{ font-weight: 700; color: #344054; }}
     dd {{ margin: 0; overflow-wrap: anywhere; }}
     ul {{ margin: 5px 0 10px 18px; padding: 0; }}
     li {{ margin-bottom: 4px; overflow-wrap: anywhere; }}
-    .sources li {{ font-size: 9.5px; }}
+    .sources li {{ font-size: 8.5pt; }}
   </style>
 </head>
 <body>
   <h1>{esc(title)}</h1>
-  <p class="subtitle">QA draft generated {esc(generated_at)} from reviewed JSON inputs. This is first-pass property research, not a final sales list.</p>
+  <p class="subtitle">{esc(summary.get("report_date") or generated_at)} | Prepared by CraneSignal | First-pass research</p>
   <div class="notice">
     Source evidence can support property identity, location, scope, planning stage, permit status or bid status only as stated.
     Private homeowner contact details and local evidence file paths are intentionally omitted.
+    <strong>No currently open Masiate trade package was confirmed.</strong> These are researched project signals, not promises of available jobs.
   </div>
   <section>
     <h2>First-Pass Scope And Counts</h2>
     <div class="summary">
-      <div class="metric"><strong>{len(records)}</strong>Total reviewed records supplied</div>
-      <div class="metric"><strong>{len(included)}</strong>Detailed include profiles</div>
-      <div class="metric"><strong>{len(watchlist)}</strong>Watchlist records</div>
-      <div class="metric"><strong>{len(coverage)}</strong>Coverage entries supplied</div>
+      <div class="metric"><strong>{esc(summary.get("source_records_collected", len(records)))}</strong>Source records collected</div>
+      <div class="metric"><strong>{len(included)}</strong>Detailed property profiles</div>
+      <div class="metric"><strong>{len(county_counts)}</strong>Counties represented</div>
+      <div class="metric"><strong>{len(coverage)}</strong>Source coverage checks</div>
     </div>
-    <p>Review decisions: {esc(dict(sorted(decision_counts.items())))}.</p>
-    <p>Included records by county: {esc(dict(sorted(county_counts.items())))}.</p>
+    <p>Profiles by county: {esc(county_text)}.</p>
+    <p>Ordered by direct service fit, source evidence and recency, not largest budgets or a sales-probability score.
+    Local permits, planning cases and accessibility registrations describe different stages; the profile explains each.</p>
+    <p>Coverage is incomplete. {esc(summary.get("out_of_area_source_records_excluded", "Unknown number of"))} out-of-area registrations were rejected, and {esc(summary.get("unreviewed_brazos_records", "an unknown number of"))} additional Brazos registrations
+    were not deeply reviewed in this timeboxed pass. See the source-by-source appendix for partial and blocked routes.</p>
+    <p>{esc(summary.get("profiles_with_direct_contact_method", 0))} profiles have a sourced phone, email or business website;
+    other entries identify participants or leave contacts unknown. A business name alone is not a callable contact.</p>
+    <h2>Ranked Property Index</h2>
+    <ul class="index">{index_html}</ul>
   </section>
   <section>
     <h2>Detailed Property Profiles</h2>
@@ -302,7 +328,7 @@ def render_html(records: list[dict[str, Any]], coverage: list[dict[str, Any]], t
       <li>Unknown fields mean the reviewed input did not supply a source-backed value.</li>
       <li>Planning, registration and permit records are not proof that trade packages remain open.</li>
       <li>Whole-project budget or accessibility-registration cost is not Masiate contract value.</li>
-      <li>Only records marked review_decision=include are rendered as detailed primary profiles.</li>
+      <li>Only the reviewed selection appears as detailed profiles; the saved collection is larger and contains rejected, historical and unreviewed items.</li>
     </ul>
   </section>
 </body>
@@ -310,10 +336,14 @@ def render_html(records: list[dict[str, Any]], coverage: list[dict[str, Any]], t
 """
 
 
-def render_pdf(records: list[dict[str, Any]], coverage: list[dict[str, Any]], output: str | Path, title: str) -> None:
-    html_text = render_html(records, coverage, title)
+def render_pdf(records: list[dict[str, Any]], coverage: list[dict[str, Any]], output: str | Path, title: str,
+               summary: dict[str, Any] | None = None,
+               watchlist: list[dict[str, Any]] | None = None) -> None:
+    html_text = render_html(records, coverage, title, summary, watchlist)
     Path(output).parent.mkdir(parents=True, exist_ok=True)
-    HTML(string=html_text).write_pdf(str(output))
+    def deny_assets(url: str, **kwargs: Any) -> Any:
+        raise ValueError("External assets are disabled for this text-only report")
+    HTML(string=html_text, url_fetcher=deny_assets).write_pdf(str(output))
 
 
 def parse_args() -> argparse.Namespace:
