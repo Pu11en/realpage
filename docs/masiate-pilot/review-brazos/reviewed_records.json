@@ -1,0 +1,2274 @@
+[
+  {
+    "id": "brazos-bryan-sdrc-sp26-000062-north-dunn-apartments",
+    "county": "Brazos",
+    "project_name": "North and Dunn Apartments",
+    "address": "600 E North Ave",
+    "city": "Bryan",
+    "record_type": "planning",
+    "source_record_id": "SP26-000062",
+    "record_date": "2026-09-15",
+    "retrieved_at": "2026-09-21T01:59:14Z",
+    "stage": "planned",
+    "status_basis": "Bryan SDRC public archive posted a September 15, 2026 site-plan PDF. The plan text says North and Dunn Apartments, Bryan, Brazos County, September 2026; it is planning evidence, not a building permit or awarded trade package.",
+    "scope": "Apartment site plan for Ramsey Place / North and Dunn Apartments; plan text names VGC Ventures, LLC as developer and McClure & Browne as preparer. Extracted notes show the drawing set was issued for bidding.",
+    "masiate_fit": "Strong multifamily fit by inference: apartment site plan could need concrete, framing, plumbing, lighting, paint, flooring and exterior work if construction moves forward; source does not prove subcontractor availability.",
+    "estimated_value": null,
+    "estimated_start": null,
+    "estimated_completion": null,
+    "bid_deadline": null,
+    "participants": [
+      {
+        "name": "VGC Ventures, LLC",
+        "role": "developer",
+        "source_url": "https://docs.bryantx.gov/planning_development/SDRC/2026%20SDRC/09-15-2026/SP26-000062%2C%20Ramsey%20Place%2C%20600%20E%20North%20Ave%2C%20North%20and%20Dunn%20Apartments%2C%209-15-26.pdf"
+      }
+    ],
+    "business_contacts": [
+      {
+        "name": "McClure & Browne Engineering/Surveying, Inc.",
+        "role": "designer / engineering-surveying preparer",
+        "phone": "979-693-3838",
+        "email": null,
+        "website": null,
+        "source_url": "https://docs.bryantx.gov/planning_development/SDRC/2026%20SDRC/09-15-2026/SP26-000062%2C%20Ramsey%20Place%2C%20600%20E%20North%20Ave%2C%20North%20and%20Dunn%20Apartments%2C%209-15-26.pdf"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://docs.bryantx.gov/planning_development/SDRC/2026%20SDRC/09-15-2026/SP26-000062%2C%20Ramsey%20Place%2C%20600%20E%20North%20Ave%2C%20North%20and%20Dunn%20Apartments%2C%209-15-26.pdf",
+        "title": "SP26-000062, Ramsey Place, 600 E North Ave, North and Dunn Apartments",
+        "date": "09-15-2026",
+        "page": "PDF/text extraction",
+        "evidence": "PDF text names North and Dunn Apartments, Bryan, Brazos County; developer VGC Ventures, LLC; McClure & Browne preparer; site vicinity North E Ave and Dunn Street; issued-for-bidding text appears in the extraction.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/brazos/evidence/bryan/sdrc-09-15-2026/SP26-000062, Ramsey Place, 600 E North Ave, North and Dunn Apartments, 9-15-26.pdf"
+      }
+    ],
+    "unknowns": [
+      "Whether construction permits have issued",
+      "Whether trade packages remain available",
+      "Current contractor procurement status"
+    ],
+    "next_research": "Match the parcel in Brazos CAD and check Bryan Citizenserve or an open-records export for permit status.",
+    "disposition": "candidate",
+    "member_ids": [
+      "brazos-bryan-sdrc-sp26-000062-north-dunn-apartments"
+    ],
+    "review_decision": "include",
+    "priority_reason": "Strong multifamily/service fit, identifiable address, and source text says issued for bidding and construction; availability of trade packages still unknown.",
+    "reviewed_at": "2026-09-21T02:23:49Z",
+    "evidence_checked": [
+      "https://docs.bryantx.gov/planning_development/SDRC/2026%20SDRC/09-15-2026/SP26-000062%2C%20Ramsey%20Place%2C%20600%20E%20North%20Ave%2C%20North%20and%20Dunn%20Apartments%2C%209-15-26.pdf",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/brazos/evidence/bryan/sdrc-09-15-2026/SP26-000062, Ramsey Place, 600 E North Ave, North and Dunn Apartments, 9-15-26.pdf"
+    ],
+    "corrections": [
+      "Treat Bryan SDRC/source-plan evidence as planning/site-plan evidence unless the source itself states otherwise; do not imply permit issuance or contract award.",
+      "Trade-package availability is unknown and must be labeled unknown in the PDF."
+    ]
+  },
+  {
+    "id": "brazos-bryan-sdrc-sp26-000059-tabor-road-apartments",
+    "county": "Brazos",
+    "project_name": "Tabor Road Apartments",
+    "address": "2816 Tabor Road",
+    "city": "Bryan",
+    "record_type": "planning",
+    "source_record_id": "SP26-000059",
+    "record_date": "2026-09-08",
+    "retrieved_at": "2026-09-21T01:59:14Z",
+    "stage": "planned",
+    "status_basis": "Bryan SDRC archive posted a September 8, 2026 site-plan PDF. The plan states it is interim review only and not for construction, bidding or permitting.",
+    "scope": "Site plans for Tabor Road Apartments, Siegert Subdivision, Block 2 Lot 6R, 1.051 acres, 2816 Tabor Road, Bryan. Sheet list includes site, utility, pavement/grading and landscape plans.",
+    "masiate_fit": "Multifamily apartment project with site, utility, grading and landscape plans; potential Masiate trades include concrete, plumbing/utility tie-ins, exterior work, paint/flooring later, but status is pre-permit review.",
+    "estimated_value": null,
+    "estimated_start": null,
+    "estimated_completion": null,
+    "bid_deadline": null,
+    "participants": [
+      {
+        "name": "Haswell Park Properties, LLC",
+        "role": "owner/developer",
+        "source_url": "https://docs.bryantx.gov/planning_development/SDRC/2026%20SDRC/09-08-2026/SP26-000059%2C%20Siegert%2C%20Tabor%20Road%20Apts%2C%202816%20Tabor%20Rd%2C%209-8-26.pdf"
+      }
+    ],
+    "business_contacts": [
+      {
+        "name": "J4 Engineering",
+        "role": "engineer",
+        "phone": "979-739-0567",
+        "email": null,
+        "website": "https://www.J4Engineering.com",
+        "source_url": "https://docs.bryantx.gov/planning_development/SDRC/2026%20SDRC/09-08-2026/SP26-000059%2C%20Siegert%2C%20Tabor%20Road%20Apts%2C%202816%20Tabor%20Rd%2C%209-8-26.pdf"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://docs.bryantx.gov/planning_development/SDRC/2026%20SDRC/09-08-2026/SP26-000059%2C%20Siegert%2C%20Tabor%20Road%20Apts%2C%202816%20Tabor%20Rd%2C%209-8-26.pdf",
+        "title": "SP26-000059, Siegert, Tabor Road Apts, 2816 Tabor Rd",
+        "date": "09-08-2026",
+        "page": "PDF/text extraction",
+        "evidence": "PDF text lists Tabor Road Apartments at 2816 Tabor Road, owner/developer Haswell Park Properties, LLC, and J4 Engineering contact details.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/brazos/evidence/bryan/sdrc-09-08-2026/SP26-000059, Siegert, Tabor Road Apts, 2816 Tabor Rd, 9-8-26.pdf"
+      }
+    ],
+    "unknowns": [
+      "Whether construction permits have issued",
+      "Whether trade packages remain available",
+      "Current contractor procurement status"
+    ],
+    "next_research": "Match the parcel in Brazos CAD and check Bryan Citizenserve or an open-records export for permit status.",
+    "disposition": "candidate",
+    "member_ids": [
+      "brazos-bryan-sdrc-sp26-000059-tabor-road-apartments"
+    ],
+    "review_decision": "include",
+    "priority_reason": "Strong apartment/service fit with owner/developer and address; source is interim review only, so include with planning-stage caveat.",
+    "reviewed_at": "2026-09-21T02:23:49Z",
+    "evidence_checked": [
+      "https://docs.bryantx.gov/planning_development/SDRC/2026%20SDRC/09-08-2026/SP26-000059%2C%20Siegert%2C%20Tabor%20Road%20Apts%2C%202816%20Tabor%20Rd%2C%209-8-26.pdf",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/brazos/evidence/bryan/sdrc-09-08-2026/SP26-000059, Siegert, Tabor Road Apts, 2816 Tabor Rd, 9-8-26.pdf"
+    ],
+    "corrections": [
+      "Treat Bryan SDRC/source-plan evidence as planning/site-plan evidence unless the source itself states otherwise; do not imply permit issuance or contract award.",
+      "Trade-package availability is unknown and must be labeled unknown in the PDF.",
+      "Source caveat says not for construction/bidding/permitting; use watchlist/planning language unless separate permit evidence appears."
+    ]
+  },
+  {
+    "id": "brazos-bryan-sdrc-sp26-000056-lorca-apartments",
+    "county": "Brazos",
+    "project_name": "Lorca Apartments",
+    "address": "Bryan downtown district; exact street address not extracted",
+    "city": "Bryan",
+    "record_type": "planning",
+    "source_record_id": "SP26-000056",
+    "record_date": "2026-09-01",
+    "retrieved_at": "2026-09-21T01:59:14Z",
+    "stage": "planned",
+    "status_basis": "Bryan SDRC archive posted a September 1, 2026 site-plan PDF. The plan identifies a proposed 100-unit apartment building and owner, but the property-address field was not extracted.",
+    "scope": "Proposed multifamily residential apartment building with 100 dwelling units, studios/one-bedroom/two-bedroom units, open-air courtyard, located within downtown Bryan; legal description Lots 2-R, Block 264-R, Bryan Original Townsite, 1.652 acres.",
+    "masiate_fit": "Very strong multifamily fit for Masiate trades if address and permit status are confirmed; likely building-scope opportunities include framing, plumbing, lighting, flooring, paint, concrete and exterior details.",
+    "estimated_value": null,
+    "estimated_start": null,
+    "estimated_completion": null,
+    "bid_deadline": null,
+    "participants": [
+      {
+        "name": "Caliber Co.",
+        "role": "property owner",
+        "source_url": "https://docs.bryantx.gov/planning_development/SDRC/2026%20SDRC/09-01-2026/SP26-000056%2C%20Lorca%20Apartments%2C%209-1-26.pdf"
+      }
+    ],
+    "business_contacts": [
+      {
+        "name": "Stewart + Reindersma",
+        "role": "architect/designer shown on plan extraction",
+        "phone": null,
+        "email": null,
+        "website": null,
+        "source_url": "https://docs.bryantx.gov/planning_development/SDRC/2026%20SDRC/09-01-2026/SP26-000056%2C%20Lorca%20Apartments%2C%209-1-26.pdf"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://docs.bryantx.gov/planning_development/SDRC/2026%20SDRC/09-01-2026/SP26-000056%2C%20Lorca%20Apartments%2C%209-1-26.pdf",
+        "title": "SP26-000056, Lorca Apartments",
+        "date": "09-01-2026",
+        "page": "PDF/text extraction",
+        "evidence": "PDF text states proposed multifamily residential apartment building with 100 dwelling units; owner Caliber Co.; downtown district; legal description Lots 2-R Block 264-R Bryan Original Townsite, 1.652 acres.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/brazos/evidence/bryan/sdrc-09-01-2026/SP26-000056, Lorca Apartments, 9-1-26.pdf"
+      }
+    ],
+    "unknowns": [
+      "Exact street address not extracted from text",
+      "Permit/construction status unknown",
+      "Whether trade packages remain available"
+    ],
+    "next_research": "Match the parcel in Brazos CAD and check Bryan Citizenserve or an open-records export for permit status.",
+    "disposition": "candidate",
+    "member_ids": [
+      "brazos-bryan-sdrc-sp26-000056-lorca-apartments"
+    ],
+    "review_decision": "include",
+    "priority_reason": "Very strong 100-unit multifamily fit with owner and legal description; street address remains unresolved and must be labeled unknown.",
+    "reviewed_at": "2026-09-21T02:23:49Z",
+    "evidence_checked": [
+      "https://docs.bryantx.gov/planning_development/SDRC/2026%20SDRC/09-01-2026/SP26-000056%2C%20Lorca%20Apartments%2C%209-1-26.pdf",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/brazos/evidence/bryan/sdrc-09-01-2026/SP26-000056, Lorca Apartments, 9-1-26.pdf"
+    ],
+    "corrections": [
+      "Treat Bryan SDRC/source-plan evidence as planning/site-plan evidence unless the source itself states otherwise; do not imply permit issuance or contract award.",
+      "Trade-package availability is unknown and must be labeled unknown in the PDF."
+    ]
+  },
+  {
+    "id": "brazos-bryan-sdrc-sp26-000053-oxbow-business-park",
+    "county": "Brazos",
+    "project_name": "Oxbow Business Park / Hwy 30 Business Park",
+    "address": "11400 State Highway 30",
+    "city": "Bryan",
+    "record_type": "planning",
+    "source_record_id": "SP26-000053",
+    "record_date": "2026-08-11",
+    "retrieved_at": "2026-09-21T01:59:14Z",
+    "stage": "planned",
+    "status_basis": "Bryan SDRC archive posted an August 11, 2026 site-plan PDF. The plan text identifies a business-park site plan and owner/developer; it does not establish permits or open subcontract packages.",
+    "scope": "Site plans for Oxbow Business Park / Hwy 30 Business Park, Lot 1R, 5.62 acres, 11400 State Highway 30, Bryan. Sheets include site, erosion/sediment, utility, grading/pavement, water and landscape plans.",
+    "masiate_fit": "Commercial/business-park site work is relevant for concrete, fencing, utility/plumbing, lighting and later tenant-finish work; needs permit and tenant-package follow-up.",
+    "estimated_value": null,
+    "estimated_start": null,
+    "estimated_completion": null,
+    "bid_deadline": null,
+    "participants": [
+      {
+        "name": "Oxbow Construction, LLC",
+        "role": "owner/developer",
+        "source_url": "https://docs.bryantx.gov/planning_development/SDRC/2026%20SDRC/08-11-2026/SP26-000053%2C%20Hwy%2030%20Business%20Park%2C%20Oxbow%20Business%20Park%2C%208-11-26.pdf"
+      }
+    ],
+    "business_contacts": [
+      {
+        "name": "J4 Engineering",
+        "role": "engineer",
+        "phone": "979-739-0567",
+        "email": null,
+        "website": "https://www.J4Engineering.com",
+        "source_url": "https://docs.bryantx.gov/planning_development/SDRC/2026%20SDRC/08-11-2026/SP26-000053%2C%20Hwy%2030%20Business%20Park%2C%20Oxbow%20Business%20Park%2C%208-11-26.pdf"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://docs.bryantx.gov/planning_development/SDRC/2026%20SDRC/08-11-2026/SP26-000053%2C%20Hwy%2030%20Business%20Park%2C%20Oxbow%20Business%20Park%2C%208-11-26.pdf",
+        "title": "SP26-000053, Hwy 30 Business Park, Oxbow Business Park",
+        "date": "08-11-2026",
+        "page": "PDF/text extraction",
+        "evidence": "PDF text lists Oxbow Business Park, Hwy 30 Business Park, 11400 State Highway 30, Lot 1R 5.62 acres, owner/developer Oxbow Construction LLC, and J4 Engineering.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/brazos/evidence/bryan/sdrc-08-11-2026/SP26-000053, Hwy 30 Business Park, Oxbow Business Park, 8-11-26.pdf"
+      }
+    ],
+    "unknowns": [
+      "Whether construction permits have issued",
+      "Whether trade packages remain available",
+      "Current contractor procurement status"
+    ],
+    "next_research": "Match the parcel in Brazos CAD and check Bryan Citizenserve or an open-records export for permit status.",
+    "disposition": "candidate",
+    "member_ids": [
+      "brazos-bryan-sdrc-sp26-000053-oxbow-business-park"
+    ],
+    "review_decision": "include",
+    "priority_reason": "Commercial/business-park site work has concrete, utility, lighting and tenant-finish potential; permit and procurement status are unknown.",
+    "reviewed_at": "2026-09-21T02:23:49Z",
+    "evidence_checked": [
+      "https://docs.bryantx.gov/planning_development/SDRC/2026%20SDRC/08-11-2026/SP26-000053%2C%20Hwy%2030%20Business%20Park%2C%20Oxbow%20Business%20Park%2C%208-11-26.pdf",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/brazos/evidence/bryan/sdrc-08-11-2026/SP26-000053, Hwy 30 Business Park, Oxbow Business Park, 8-11-26.pdf"
+    ],
+    "corrections": [
+      "Treat Bryan SDRC/source-plan evidence as planning/site-plan evidence unless the source itself states otherwise; do not imply permit issuance or contract award.",
+      "Trade-package availability is unknown and must be labeled unknown in the PDF."
+    ]
+  },
+  {
+    "id": "statewide-tdlr-tabs-TABS2027001470",
+    "county": "Brazos",
+    "project_name": "Adamson Engineering",
+    "address": "4025 Cross Park Drive Bryan, TX 77802",
+    "city": "Bryan",
+    "record_type": "registration",
+    "source_record_id": "TABS2027001470",
+    "record_date": "2026-09-19",
+    "retrieved_at": "2026-09-21T01:53:33Z",
+    "stage": "planned",
+    "status_basis": "TDLR TABS status is Review Complete; this proves registration/review status only, not that a subcontract package remains open.",
+    "scope": "New office building and associated site work",
+    "masiate_fit": "Scope and cost indicate current construction/remodeling work that could use Masiate trades.",
+    "estimated_value": "$2,500,000 TDLR estimated cost",
+    "estimated_start": "2026-09-14",
+    "estimated_completion": "2027-06-15",
+    "bid_deadline": null,
+    "participants": [
+      {
+        "name": "Adamson Investments LLC",
+        "role": "owner/developer",
+        "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2027001470"
+      },
+      {
+        "name": "PACT DESIGN STUDIO",
+        "role": "designer",
+        "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2027001470"
+      },
+      {
+        "name": "EDDIE,HARE",
+        "role": "registered accessibility specialist",
+        "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2027001470"
+      }
+    ],
+    "business_contacts": [
+      {
+        "name": "PACT DESIGN STUDIO",
+        "role": "design firm on TDLR record",
+        "phone": null,
+        "email": null,
+        "website": null,
+        "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2027001470"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2027001470",
+        "title": "TDLR TABS Project Details: TABS2027001470",
+        "date": "2026-09-19",
+        "page": "Project Details",
+        "evidence": "Adamson Engineering; 4025 Cross Park Drive Bryan, TX 77802; New Construction; New office building and associated site work",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2027001470.html"
+      }
+    ],
+    "unknowns": [
+      "Whether construction has started beyond the TDLR estimated start date.",
+      "Whether Masiate-relevant trade packages remain available.",
+      "Whether the owner, tenant, general contractor or designer is the best contact path."
+    ],
+    "next_research": "Check local permit/planning records or participant website for current project status and contractor contacts.",
+    "disposition": "candidate",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2027001470"
+    ],
+    "review_decision": "include",
+    "priority_reason": "Recent TDLR record for new office building and site work; good fit for concrete, site, finish and MEP-adjacent services, but not a bid notice.",
+    "reviewed_at": "2026-09-21T02:23:49Z",
+    "evidence_checked": [
+      "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2027001470",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2027001470.html"
+    ],
+    "corrections": [
+      "Treat TDLR/TABS as an accessibility registration/review source, not an open bid, permit issuance, award, or active subcontract opportunity.",
+      "Estimated value is the TDLR whole-project estimate and must not be presented as Masiate contract value.",
+      "Designer/RAS entries are not automatically buyers; route contact verification through the contacts worker before outreach.",
+      "Registered accessibility specialist is a compliance participant, not a project buyer."
+    ]
+  },
+  {
+    "id": "statewide-tdlr-tabs-TABS2027001105",
+    "county": "Brazos",
+    "project_name": "Pink",
+    "address": "1001 University Dr. College Station, TX 77840",
+    "city": "College Station",
+    "record_type": "registration",
+    "source_record_id": "TABS2027001105",
+    "record_date": "2026-09-15",
+    "retrieved_at": "2026-09-21T01:53:37Z",
+    "stage": "planned",
+    "status_basis": "TDLR TABS status is Project Registered; this proves registration/review status only, not that a subcontract package remains open.",
+    "scope": "Interior Finish out",
+    "masiate_fit": "Scope and cost indicate current construction/remodeling work that could use Masiate trades.",
+    "estimated_value": "$250,000 TDLR estimated cost",
+    "estimated_start": "2026-09-25",
+    "estimated_completion": "2026-12-31",
+    "bid_deadline": null,
+    "participants": [
+      {
+        "name": "Aspire A&M II LLC",
+        "role": "owner/developer",
+        "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2027001105"
+      },
+      {
+        "name": "PAA Consulting LLC",
+        "role": "designer",
+        "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2027001105"
+      },
+      {
+        "name": "ROBERT V,BUCK",
+        "role": "registered accessibility specialist",
+        "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2027001105"
+      }
+    ],
+    "business_contacts": [
+      {
+        "name": "PAA Consulting LLC",
+        "role": "design firm on TDLR record",
+        "phone": null,
+        "email": null,
+        "website": null,
+        "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2027001105"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2027001105",
+        "title": "TDLR TABS Project Details: TABS2027001105",
+        "date": "2026-09-15",
+        "page": "Project Details",
+        "evidence": "Espire II; 1001 University Dr. College Station, TX 77840; New Construction; Interior Finish out",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2027001105.html"
+      }
+    ],
+    "unknowns": [
+      "Whether construction has started beyond the TDLR estimated start date.",
+      "Whether Masiate-relevant trade packages remain available.",
+      "Whether the owner, tenant, general contractor or designer is the best contact path."
+    ],
+    "next_research": "Check local permit/planning records or participant website for current project status and contractor contacts.",
+    "disposition": "candidate",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2027001105"
+    ],
+    "review_decision": "include",
+    "priority_reason": "Recent interior finish-out record near campus with near-term estimated dates; small but direct fit for flooring, paint, lighting and finish trades.",
+    "reviewed_at": "2026-09-21T02:23:49Z",
+    "evidence_checked": [
+      "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2027001105",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2027001105.html"
+    ],
+    "corrections": [
+      "Treat TDLR/TABS as an accessibility registration/review source, not an open bid, permit issuance, award, or active subcontract opportunity.",
+      "Estimated value is the TDLR whole-project estimate and must not be presented as Masiate contract value.",
+      "Designer/RAS entries are not automatically buyers; route contact verification through the contacts worker before outreach.",
+      "Registered accessibility specialist is a compliance participant, not a project buyer."
+    ]
+  },
+  {
+    "id": "statewide-tdlr-tabs-TABS2027000633",
+    "county": "Brazos",
+    "project_name": "Galaxy Spa",
+    "address": "1201 Briarcrest Drive Bryan, TX 77802",
+    "city": "Bryan",
+    "record_type": "registration",
+    "source_record_id": "TABS2027000633",
+    "record_date": "2026-09-09",
+    "retrieved_at": "2026-09-21T01:53:44Z",
+    "stage": "planned",
+    "status_basis": "TDLR TABS status is Review Complete; this proves registration/review status only, not that a subcontract package remains open.",
+    "scope": "demo walls, new walls, new restrooms, plumbing, and HVAC",
+    "masiate_fit": "Scope and cost indicate current construction/remodeling work that could use Masiate trades.",
+    "estimated_value": "$175,000 TDLR estimated cost",
+    "estimated_start": "2026-09-15",
+    "estimated_completion": "2027-02-15",
+    "bid_deadline": null,
+    "participants": [
+      {
+        "name": "Tran Nhon & Chau Huynh",
+        "role": "owner/developer",
+        "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2027000633"
+      },
+      {
+        "name": "Constantin Barbu",
+        "role": "designer",
+        "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2027000633"
+      },
+      {
+        "name": "EDDIE,HARE",
+        "role": "registered accessibility specialist",
+        "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2027000633"
+      }
+    ],
+    "business_contacts": [
+      {
+        "name": "Constantin Barbu",
+        "role": "design firm on TDLR record",
+        "phone": null,
+        "email": null,
+        "website": null,
+        "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2027000633"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2027000633",
+        "title": "TDLR TABS Project Details: TABS2027000633",
+        "date": "2026-09-09",
+        "page": "Project Details",
+        "evidence": "Galaxy Spa; 1201 Briarcrest Drive Bryan, TX 77802; Renovation/Alteration; demo walls, new walls, new restrooms, plumbing, and HVAC",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2027000633.html"
+      }
+    ],
+    "unknowns": [
+      "Whether construction has started beyond the TDLR estimated start date.",
+      "Whether Masiate-relevant trade packages remain available.",
+      "Whether the owner, tenant, general contractor or designer is the best contact path."
+    ],
+    "next_research": "Check local permit/planning records or participant website for current project status and contractor contacts.",
+    "disposition": "candidate",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2027000633"
+    ],
+    "review_decision": "include",
+    "priority_reason": "Renovation scope explicitly includes demo walls, new walls, restrooms, plumbing and HVAC, making it one of the clearest service-fit records.",
+    "reviewed_at": "2026-09-21T02:23:49Z",
+    "evidence_checked": [
+      "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2027000633",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2027000633.html"
+    ],
+    "corrections": [
+      "Treat TDLR/TABS as an accessibility registration/review source, not an open bid, permit issuance, award, or active subcontract opportunity.",
+      "Estimated value is the TDLR whole-project estimate and must not be presented as Masiate contract value.",
+      "Designer/RAS entries are not automatically buyers; route contact verification through the contacts worker before outreach.",
+      "Registered accessibility specialist is a compliance participant, not a project buyer."
+    ]
+  },
+  {
+    "id": "statewide-tdlr-tabs-TABS2027000539",
+    "county": "Brazos",
+    "project_name": "Baylor Scott & White Rock Prairie Clinic Renovations",
+    "address": "800 Scott & White Dr College Station, TX 77845",
+    "city": "College Station",
+    "record_type": "registration",
+    "source_record_id": "TABS2027000539",
+    "record_date": "2026-09-08",
+    "retrieved_at": "2026-09-21T01:53:46Z",
+    "stage": "planned",
+    "status_basis": "TDLR TABS status is Project Registered; this proves registration/review status only, not that a subcontract package remains open.",
+    "scope": "Renovation to an existing medical office building to reconfigure clinical spaces.",
+    "masiate_fit": "Scope and cost indicate current construction/remodeling work that could use Masiate trades.",
+    "estimated_value": "$2,500,000 TDLR estimated cost",
+    "estimated_start": "2026-10-01",
+    "estimated_completion": "2027-12-31",
+    "bid_deadline": null,
+    "participants": [
+      {
+        "name": "SCOTT & WHITE HEALTHCARE",
+        "role": "owner/developer",
+        "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2027000539"
+      },
+      {
+        "name": "ROB ROY,PARNELL",
+        "role": "registered accessibility specialist",
+        "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2027000539"
+      }
+    ],
+    "business_contacts": [],
+    "sources": [
+      {
+        "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2027000539",
+        "title": "TDLR TABS Project Details: TABS2027000539",
+        "date": "2026-09-08",
+        "page": "Project Details",
+        "evidence": "Rock Prairie Clinic; 800 Scott & White Dr College Station, TX 77845; Renovation/Alteration; Renovation to an existing medical office building to reconfigure clinical spaces.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2027000539.html"
+      }
+    ],
+    "unknowns": [
+      "Whether construction has started beyond the TDLR estimated start date.",
+      "Whether Masiate-relevant trade packages remain available.",
+      "Whether the owner, tenant, general contractor or designer is the best contact path."
+    ],
+    "next_research": "Check local permit/planning records or participant website for current project status and contractor contacts.",
+    "disposition": "candidate",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2027000539"
+    ],
+    "review_decision": "include",
+    "priority_reason": "Medical-office renovation/reconfiguration is a concrete commercial remodel signal with a long estimated window; owner procurement route unknown.",
+    "reviewed_at": "2026-09-21T02:23:49Z",
+    "evidence_checked": [
+      "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2027000539",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2027000539.html"
+    ],
+    "corrections": [
+      "Treat TDLR/TABS as an accessibility registration/review source, not an open bid, permit issuance, award, or active subcontract opportunity.",
+      "Estimated value is the TDLR whole-project estimate and must not be presented as Masiate contract value.",
+      "Designer/RAS entries are not automatically buyers; route contact verification through the contacts worker before outreach.",
+      "Registered accessibility specialist is a compliance participant, not a project buyer."
+    ]
+  },
+  {
+    "id": "statewide-tdlr-tabs-TABS2027000300",
+    "county": "Brazos",
+    "project_name": "Barron Project",
+    "address": "2800 Barron Rd Suite 204 College Station, TX 77845",
+    "city": "College Station",
+    "record_type": "registration",
+    "source_record_id": "TABS2027000300",
+    "record_date": "2026-09-03",
+    "retrieved_at": "2026-09-21T01:54:01Z",
+    "stage": "planned",
+    "status_basis": "TDLR TABS status is Project Registered; this proves registration/review status only, not that a subcontract package remains open.",
+    "scope": "Tenant Office Bldg. Finish Out",
+    "masiate_fit": "Scope and cost indicate current construction/remodeling work that could use Masiate trades.",
+    "estimated_value": "$340,000 TDLR estimated cost",
+    "estimated_start": "2026-09-10",
+    "estimated_completion": "2026-12-10",
+    "bid_deadline": null,
+    "participants": [
+      {
+        "name": "Derrill Chad Brantley & Jannie Kadjar",
+        "role": "owner/developer",
+        "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2027000300"
+      },
+      {
+        "name": "EDDIE,HARE",
+        "role": "registered accessibility specialist",
+        "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2027000300"
+      }
+    ],
+    "business_contacts": [],
+    "sources": [
+      {
+        "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2027000300",
+        "title": "TDLR TABS Project Details: TABS2027000300",
+        "date": "2026-09-03",
+        "page": "Project Details",
+        "evidence": "Barron Office Bldg; 2800 Barron Rd Suite 204 College Station, TX 77845; Renovation/Alteration; Tenant Office Bldg. Finish Out",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2027000300.html"
+      }
+    ],
+    "unknowns": [
+      "Whether construction has started beyond the TDLR estimated start date.",
+      "Whether Masiate-relevant trade packages remain available.",
+      "Whether the owner, tenant, general contractor or designer is the best contact path."
+    ],
+    "next_research": "Check local permit/planning records or participant website for current project status and contractor contacts.",
+    "disposition": "candidate",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2027000300"
+    ],
+    "review_decision": "include",
+    "priority_reason": "Tenant office finish-out with suite address and near-term dates; direct fit for framing, finishes, paint, flooring and lighting coordination.",
+    "reviewed_at": "2026-09-21T02:23:49Z",
+    "evidence_checked": [
+      "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2027000300",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2027000300.html"
+    ],
+    "corrections": [
+      "Treat TDLR/TABS as an accessibility registration/review source, not an open bid, permit issuance, award, or active subcontract opportunity.",
+      "Estimated value is the TDLR whole-project estimate and must not be presented as Masiate contract value.",
+      "Designer/RAS entries are not automatically buyers; route contact verification through the contacts worker before outreach.",
+      "Registered accessibility specialist is a compliance participant, not a project buyer."
+    ]
+  },
+  {
+    "id": "statewide-tdlr-tabs-TABS2027000261",
+    "county": "Brazos",
+    "project_name": "Hub College Station Phase II",
+    "address": "403 Cherry Street College Station, TX 77840",
+    "city": "College Station",
+    "record_type": "registration",
+    "source_record_id": "TABS2027000261",
+    "record_date": "2026-09-03",
+    "retrieved_at": "2026-09-21T01:54:03Z",
+    "stage": "planned",
+    "status_basis": "TDLR TABS status is Project Registered; this proves registration/review status only, not that a subcontract package remains open.",
+    "scope": "8-story residential building comprised of student housing and office(s) limited to servicing the property as well as a rooftop amenity terrace.",
+    "masiate_fit": "Scope and cost indicate current construction/remodeling work that could use Masiate trades.",
+    "estimated_value": "$53,596,456 TDLR estimated cost",
+    "estimated_start": "2026-11-02",
+    "estimated_completion": "2028-06-01",
+    "bid_deadline": null,
+    "participants": [
+      {
+        "name": "Core College Station Cherry, LLC",
+        "role": "owner/developer",
+        "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2027000261"
+      },
+      {
+        "name": "Antunovich Associates",
+        "role": "designer",
+        "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2027000261"
+      },
+      {
+        "name": "STEVEN EDWARD,MONTGOMERY",
+        "role": "registered accessibility specialist",
+        "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2027000261"
+      }
+    ],
+    "business_contacts": [
+      {
+        "name": "Antunovich Associates",
+        "role": "design firm on TDLR record",
+        "phone": null,
+        "email": null,
+        "website": null,
+        "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2027000261"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2027000261",
+        "title": "TDLR TABS Project Details: TABS2027000261",
+        "date": "2026-09-03",
+        "page": "Project Details",
+        "evidence": "Hub College Station Phase II; 403 Cherry Street College Station, TX 77840; New Construction; 8-story residential building comprised of student housing and office(s) limited to servicing the property as well as a rooftop amenity terrace.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2027000261.html"
+      }
+    ],
+    "unknowns": [
+      "Whether construction has started beyond the TDLR estimated start date.",
+      "Whether Masiate-relevant trade packages remain available.",
+      "Whether the owner, tenant, general contractor or designer is the best contact path."
+    ],
+    "next_research": "Check local permit/planning records or participant website for current project status and contractor contacts.",
+    "disposition": "candidate",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2027000261"
+    ],
+    "review_decision": "include",
+    "priority_reason": "Major student-housing new construction with offices and rooftop amenity; strong multifamily fit, but TDLR cost is whole-project only.",
+    "reviewed_at": "2026-09-21T02:23:49Z",
+    "evidence_checked": [
+      "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2027000261",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2027000261.html"
+    ],
+    "corrections": [
+      "Treat TDLR/TABS as an accessibility registration/review source, not an open bid, permit issuance, award, or active subcontract opportunity.",
+      "Estimated value is the TDLR whole-project estimate and must not be presented as Masiate contract value.",
+      "Designer/RAS entries are not automatically buyers; route contact verification through the contacts worker before outreach.",
+      "Registered accessibility specialist is a compliance participant, not a project buyer."
+    ]
+  },
+  {
+    "id": "statewide-tdlr-tabs-TABS2026029241",
+    "county": "Brazos",
+    "project_name": "Glo Tanning",
+    "address": "1607 Texas Ave S College Station, TX 77840",
+    "city": "College Station",
+    "record_type": "registration",
+    "source_record_id": "TABS2026029241",
+    "record_date": "2026-08-31",
+    "retrieved_at": "2026-09-21T01:54:07Z",
+    "stage": "planned",
+    "status_basis": "TDLR TABS status is Review Complete; this proves registration/review status only, not that a subcontract package remains open.",
+    "scope": "2500 SF interior tenant finish out for a tanning salon in an existing shell space",
+    "masiate_fit": "Scope and cost indicate current construction/remodeling work that could use Masiate trades.",
+    "estimated_value": "$80,000 TDLR estimated cost",
+    "estimated_start": "2026-09-01",
+    "estimated_completion": "2026-11-01",
+    "bid_deadline": null,
+    "participants": [
+      {
+        "name": "Brixmor/A Central Station, LLC",
+        "role": "owner/developer",
+        "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026029241"
+      },
+      {
+        "name": "McGregor Murphy Architecture",
+        "role": "designer",
+        "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026029241"
+      },
+      {
+        "name": "GEORGE A,PATTERSON",
+        "role": "registered accessibility specialist",
+        "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026029241"
+      }
+    ],
+    "business_contacts": [
+      {
+        "name": "McGregor Murphy Architecture",
+        "role": "design firm on TDLR record",
+        "phone": null,
+        "email": null,
+        "website": null,
+        "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026029241"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026029241",
+        "title": "TDLR TABS Project Details: TABS2026029241",
+        "date": "2026-08-31",
+        "page": "Project Details",
+        "evidence": "Central Station Shopping Center; 1607 Texas Ave S College Station, TX 77840; Renovation/Alteration; 2500 SF interior tenant finish out for a tanning salon in an existing shell space",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2026029241.html"
+      }
+    ],
+    "unknowns": [
+      "Whether construction has started beyond the TDLR estimated start date.",
+      "Whether Masiate-relevant trade packages remain available.",
+      "Whether the owner, tenant, general contractor or designer is the best contact path."
+    ],
+    "next_research": "Check local permit/planning records or participant website for current project status and contractor contacts.",
+    "disposition": "candidate",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026029241"
+    ],
+    "review_decision": "include",
+    "priority_reason": "Tenant finish-out for salon in existing shell space; direct, near-term fit despite modest project size.",
+    "reviewed_at": "2026-09-21T02:23:49Z",
+    "evidence_checked": [
+      "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026029241",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2026029241.html"
+    ],
+    "corrections": [
+      "Treat TDLR/TABS as an accessibility registration/review source, not an open bid, permit issuance, award, or active subcontract opportunity.",
+      "Estimated value is the TDLR whole-project estimate and must not be presented as Masiate contract value.",
+      "Designer/RAS entries are not automatically buyers; route contact verification through the contacts worker before outreach.",
+      "Registered accessibility specialist is a compliance participant, not a project buyer."
+    ]
+  },
+  {
+    "id": "statewide-tdlr-tabs-TABS2026026072",
+    "county": "Brazos",
+    "project_name": "The Owl Expansion",
+    "address": "315 S. Main Street Bryan, TX 77803",
+    "city": "Bryan",
+    "record_type": "registration",
+    "source_record_id": "TABS2026026072",
+    "record_date": "2026-07-24",
+    "retrieved_at": "2026-09-21T01:55:08Z",
+    "stage": "planned",
+    "status_basis": "TDLR TABS status is Review Complete; this proves registration/review status only, not that a subcontract package remains open.",
+    "scope": "Interior renovations and an extension of the bar area.",
+    "masiate_fit": "Scope and cost indicate current construction/remodeling work that could use Masiate trades.",
+    "estimated_value": "$250,000 TDLR estimated cost",
+    "estimated_start": "2026-08-04",
+    "estimated_completion": "2026-11-24",
+    "bid_deadline": null,
+    "participants": [
+      {
+        "name": "315 South Main OZ, LP",
+        "role": "owner/developer",
+        "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026026072"
+      },
+      {
+        "name": "Winchester Architects",
+        "role": "designer",
+        "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026026072"
+      },
+      {
+        "name": "EDDIE,HARE",
+        "role": "registered accessibility specialist",
+        "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026026072"
+      }
+    ],
+    "business_contacts": [
+      {
+        "name": "Winchester Architects",
+        "role": "design firm on TDLR record",
+        "phone": null,
+        "email": null,
+        "website": null,
+        "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026026072"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026026072",
+        "title": "TDLR TABS Project Details: TABS2026026072",
+        "date": "2026-07-24",
+        "page": "Project Details",
+        "evidence": "315 South Main Building; 315 S. Main Street Bryan, TX 77803; Renovation/Alteration; Interior renovations and an extension of the bar area.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2026026072.html"
+      }
+    ],
+    "unknowns": [
+      "Whether construction has started beyond the TDLR estimated start date.",
+      "Whether Masiate-relevant trade packages remain available.",
+      "Whether the owner, tenant, general contractor or designer is the best contact path."
+    ],
+    "next_research": "Check local permit/planning records or participant website for current project status and contractor contacts.",
+    "disposition": "candidate",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026026072"
+    ],
+    "review_decision": "include",
+    "priority_reason": "Interior renovation and bar-area extension; concrete commercial remodel fit with near-term estimated completion.",
+    "reviewed_at": "2026-09-21T02:23:49Z",
+    "evidence_checked": [
+      "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026026072",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2026026072.html"
+    ],
+    "corrections": [
+      "Treat TDLR/TABS as an accessibility registration/review source, not an open bid, permit issuance, award, or active subcontract opportunity.",
+      "Estimated value is the TDLR whole-project estimate and must not be presented as Masiate contract value.",
+      "Designer/RAS entries are not automatically buyers; route contact verification through the contacts worker before outreach.",
+      "Registered accessibility specialist is a compliance participant, not a project buyer."
+    ]
+  },
+  {
+    "id": "statewide-tdlr-tabs-TABS2026025481",
+    "county": "Brazos",
+    "project_name": "Sourdough & Co. Restaurant",
+    "address": "4444 SH-6 South, College Station, TX 77845",
+    "city": "College Station",
+    "record_type": "registration",
+    "source_record_id": "TABS2026025481",
+    "record_date": "2026-07-16",
+    "retrieved_at": "2026-09-21T01:55:19Z",
+    "stage": "planned",
+    "status_basis": "TDLR TABS status is Review Complete; this proves registration/review status only, not that a subcontract package remains open.",
+    "scope": "Restaurant tenant finishes",
+    "masiate_fit": "Scope and cost indicate current construction/remodeling work that could use Masiate trades.",
+    "estimated_value": "$350,000 TDLR estimated cost",
+    "estimated_start": "2026-07-01",
+    "estimated_completion": "2026-10-30",
+    "bid_deadline": null,
+    "participants": [
+      {
+        "name": "Lehtonen Investment II LTD",
+        "role": "owner/developer",
+        "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026025481"
+      },
+      {
+        "name": "Hudson Architecture, PLLC",
+        "role": "designer",
+        "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026025481"
+      },
+      {
+        "name": "EDDIE,HARE",
+        "role": "registered accessibility specialist",
+        "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026025481"
+      }
+    ],
+    "business_contacts": [
+      {
+        "name": "Hudson Architecture, PLLC",
+        "role": "design firm on TDLR record",
+        "phone": null,
+        "email": null,
+        "website": null,
+        "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026025481"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026025481",
+        "title": "TDLR TABS Project Details: TABS2026025481",
+        "date": "2026-07-16",
+        "page": "Project Details",
+        "evidence": "Tower Point Phase 11b Block 3, Lot 9r; 4444 SH-6 South, College Station, TX 77845; Renovation/Alteration; Restaurant tenant finishes",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2026025481.html"
+      }
+    ],
+    "unknowns": [
+      "Whether construction has started beyond the TDLR estimated start date.",
+      "Whether Masiate-relevant trade packages remain available.",
+      "Whether the owner, tenant, general contractor or designer is the best contact path."
+    ],
+    "next_research": "Check local permit/planning records or participant website for current project status and contractor contacts.",
+    "disposition": "candidate",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026025481"
+    ],
+    "review_decision": "include",
+    "priority_reason": "Restaurant tenant finishes are a direct fit for floors, paint, plumbing, lighting and finish trades; availability unknown.",
+    "reviewed_at": "2026-09-21T02:23:49Z",
+    "evidence_checked": [
+      "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026025481",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2026025481.html"
+    ],
+    "corrections": [
+      "Treat TDLR/TABS as an accessibility registration/review source, not an open bid, permit issuance, award, or active subcontract opportunity.",
+      "Estimated value is the TDLR whole-project estimate and must not be presented as Masiate contract value.",
+      "Designer/RAS entries are not automatically buyers; route contact verification through the contacts worker before outreach.",
+      "Registered accessibility specialist is a compliance participant, not a project buyer."
+    ]
+  },
+  {
+    "id": "statewide-tdlr-tabs-TABS2026025128",
+    "county": "Brazos",
+    "project_name": "TCP Bryan",
+    "address": "3201 University Dr E Suite 205 Bryan, TX 77802",
+    "city": "Bryan",
+    "record_type": "registration",
+    "source_record_id": "TABS2026025128",
+    "record_date": "2026-07-13",
+    "retrieved_at": "2026-09-21T01:55:23Z",
+    "stage": "planned",
+    "status_basis": "TDLR TABS status is Project Registered; this proves registration/review status only, not that a subcontract package remains open.",
+    "scope": "Renovation of an existing medical clinic.",
+    "masiate_fit": "Scope and cost indicate current construction/remodeling work that could use Masiate trades.",
+    "estimated_value": "$495,000 TDLR estimated cost",
+    "estimated_start": "2026-09-01",
+    "estimated_completion": "2027-03-31",
+    "bid_deadline": null,
+    "participants": [
+      {
+        "name": "Bryan Medical Properties LP",
+        "role": "owner/developer",
+        "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026025128"
+      },
+      {
+        "name": "JEROMY G,MURPHY",
+        "role": "registered accessibility specialist",
+        "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026025128"
+      }
+    ],
+    "business_contacts": [],
+    "sources": [
+      {
+        "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026025128",
+        "title": "TDLR TABS Project Details: TABS2026025128",
+        "date": "2026-07-13",
+        "page": "Project Details",
+        "evidence": "Physicians Center Office Building; 3201 University Dr E Suite 205 Bryan, TX 77802; Renovation/Alteration; Renovation of an existing medical clinic.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2026025128.html"
+      }
+    ],
+    "unknowns": [
+      "Whether construction has started beyond the TDLR estimated start date.",
+      "Whether Masiate-relevant trade packages remain available.",
+      "Whether the owner, tenant, general contractor or designer is the best contact path."
+    ],
+    "next_research": "Check local permit/planning records or participant website for current project status and contractor contacts.",
+    "disposition": "candidate",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026025128"
+    ],
+    "review_decision": "include",
+    "priority_reason": "Existing medical-clinic renovation is direct commercial remodel work with a dated TDLR source and current estimated window.",
+    "reviewed_at": "2026-09-21T02:23:49Z",
+    "evidence_checked": [
+      "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026025128",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2026025128.html"
+    ],
+    "corrections": [
+      "Treat TDLR/TABS as an accessibility registration/review source, not an open bid, permit issuance, award, or active subcontract opportunity.",
+      "Estimated value is the TDLR whole-project estimate and must not be presented as Masiate contract value.",
+      "Designer/RAS entries are not automatically buyers; route contact verification through the contacts worker before outreach.",
+      "Registered accessibility specialist is a compliance participant, not a project buyer."
+    ]
+  },
+  {
+    "id": "statewide-tdlr-tabs-TABS2026023612",
+    "county": "Brazos",
+    "project_name": "Taco Bell 30118 Remodel",
+    "address": "310 Harvey Road College Station, TX 77840",
+    "city": "College Station",
+    "record_type": "registration",
+    "source_record_id": "TABS2026023612",
+    "record_date": "2026-06-23",
+    "retrieved_at": "2026-09-21T01:55:58Z",
+    "stage": "planned",
+    "status_basis": "TDLR TABS status is Review Complete; this proves registration/review status only, not that a subcontract package remains open.",
+    "scope": "Remodel of existing Taco Bell including the new exterior and interior walls, new finishes, new lighting, new restrooms, relocation of existing kitchen equipment and plumbing fixtures.",
+    "masiate_fit": "Scope and cost indicate current construction/remodeling work that could use Masiate trades.",
+    "estimated_value": "$400,000 TDLR estimated cost",
+    "estimated_start": "2027-03-01",
+    "estimated_completion": "2027-06-21",
+    "bid_deadline": null,
+    "participants": [
+      {
+        "name": "Taco Bell",
+        "role": "owner/developer",
+        "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026023612"
+      },
+      {
+        "name": "Hoover & Associates",
+        "role": "designer",
+        "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026023612"
+      },
+      {
+        "name": "ROBERT,RONSON",
+        "role": "registered accessibility specialist",
+        "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026023612"
+      }
+    ],
+    "business_contacts": [
+      {
+        "name": "Hoover & Associates",
+        "role": "design firm on TDLR record",
+        "phone": null,
+        "email": null,
+        "website": null,
+        "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026023612"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026023612",
+        "title": "TDLR TABS Project Details: TABS2026023612",
+        "date": "2026-06-23",
+        "page": "Project Details",
+        "evidence": "Taco Bell 30118; 310 Harvey Road College Station, TX 77840; Renovation/Alteration; Remodel of existing Taco Bell including the new exterior and interior walls, new finishes, new lighting, new restrooms, relocation of existing kitchen equipment and plumbing fixtures.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2026023612.html"
+      }
+    ],
+    "unknowns": [
+      "Whether construction has started beyond the TDLR estimated start date.",
+      "Whether Masiate-relevant trade packages remain available.",
+      "Whether the owner, tenant, general contractor or designer is the best contact path."
+    ],
+    "next_research": "Check local permit/planning records or participant website for current project status and contractor contacts.",
+    "disposition": "candidate",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026023612"
+    ],
+    "review_decision": "include",
+    "priority_reason": "Taco Bell remodel scope explicitly lists exterior/interior walls, finishes, lighting, restrooms and plumbing fixtures.",
+    "reviewed_at": "2026-09-21T02:23:49Z",
+    "evidence_checked": [
+      "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026023612",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2026023612.html"
+    ],
+    "corrections": [
+      "Treat TDLR/TABS as an accessibility registration/review source, not an open bid, permit issuance, award, or active subcontract opportunity.",
+      "Estimated value is the TDLR whole-project estimate and must not be presented as Masiate contract value.",
+      "Designer/RAS entries are not automatically buyers; route contact verification through the contacts worker before outreach.",
+      "Registered accessibility specialist is a compliance participant, not a project buyer."
+    ]
+  },
+  {
+    "id": "statewide-tdlr-tabs-TABS2026022284",
+    "county": "Brazos",
+    "project_name": "SPX College Station",
+    "address": "2220 Texas Ave S, Suite G - H College Station, TX 77840",
+    "city": "College Station",
+    "record_type": "registration",
+    "source_record_id": "TABS2026022284",
+    "record_date": "2026-06-08",
+    "retrieved_at": "2026-09-21T01:56:20Z",
+    "stage": "planned",
+    "status_basis": "TDLR TABS status is Review Complete; this proves registration/review status only, not that a subcontract package remains open.",
+    "scope": "Existing lease space to be renovated into a SpinXpress Laundry, including mechanical, electrical, and plumbing modifications, along with light-gauge metal framing for new partition walls.",
+    "masiate_fit": "Scope and cost indicate current construction/remodeling work that could use Masiate trades.",
+    "estimated_value": "$350,000 TDLR estimated cost",
+    "estimated_start": "2026-06-23",
+    "estimated_completion": "2026-09-22",
+    "bid_deadline": null,
+    "participants": [
+      {
+        "name": "Donald A. Ball",
+        "role": "owner/developer",
+        "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026022284"
+      },
+      {
+        "name": "DAVID M,DANTE",
+        "role": "registered accessibility specialist",
+        "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026022284"
+      }
+    ],
+    "business_contacts": [],
+    "sources": [
+      {
+        "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026022284",
+        "title": "TDLR TABS Project Details: TABS2026022284",
+        "date": "2026-06-08",
+        "page": "Project Details",
+        "evidence": "SpinXpress Laundry; 2220 Texas Ave S, Suite G - H College Station, TX 77840; Renovation/Alteration; Existing lease space to be renovated into a SpinXpress Laundry, including mechanical, electrical, and plumbing modifications, along with light-gauge metal framing for new partition walls.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2026022284.html"
+      }
+    ],
+    "unknowns": [
+      "Whether construction has started beyond the TDLR estimated start date.",
+      "Whether Masiate-relevant trade packages remain available.",
+      "Whether the owner, tenant, general contractor or designer is the best contact path."
+    ],
+    "next_research": "Check local permit/planning records or participant website for current project status and contractor contacts.",
+    "disposition": "candidate",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026022284"
+    ],
+    "review_decision": "include",
+    "priority_reason": "Laundry build-out scope includes mechanical/electrical/plumbing changes and light-gauge partition framing; direct service fit.",
+    "reviewed_at": "2026-09-21T02:23:49Z",
+    "evidence_checked": [
+      "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026022284",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2026022284.html"
+    ],
+    "corrections": [
+      "Treat TDLR/TABS as an accessibility registration/review source, not an open bid, permit issuance, award, or active subcontract opportunity.",
+      "Estimated value is the TDLR whole-project estimate and must not be presented as Masiate contract value.",
+      "Designer/RAS entries are not automatically buyers; route contact verification through the contacts worker before outreach.",
+      "Registered accessibility specialist is a compliance participant, not a project buyer."
+    ]
+  },
+  {
+    "id": "statewide-tdlr-tabs-TABS2026020312",
+    "county": "Brazos",
+    "project_name": "The Icon at Creekside",
+    "address": "N Earl Rudder Freeway Bryan, TX 77802",
+    "city": "Bryan",
+    "record_type": "registration",
+    "source_record_id": "TABS2026020312",
+    "record_date": "2026-05-14",
+    "retrieved_at": "2026-09-21T01:56:52Z",
+    "stage": "planned",
+    "status_basis": "TDLR TABS status is Review Complete; this proves registration/review status only, not that a subcontract package remains open.",
+    "scope": "new construction of multifamily apartments with 2(high density ) buildings 233 units in total and about 5,000 ft2 clubhouse",
+    "masiate_fit": "Scope and cost indicate current construction/remodeling work that could use Masiate trades.",
+    "estimated_value": "$17,260,000 TDLR estimated cost",
+    "estimated_start": "2026-09-01",
+    "estimated_completion": "2029-04-01",
+    "bid_deadline": null,
+    "participants": [
+      {
+        "name": "burton creek ventures llc & Rudder frontage LLC",
+        "role": "owner/developer",
+        "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026020312"
+      },
+      {
+        "name": "TED TROUT ARCHITECT & ASSOCIATES, LTD.",
+        "role": "designer",
+        "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026020312"
+      },
+      {
+        "name": "RICHARD TODD,LOZANO",
+        "role": "registered accessibility specialist",
+        "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026020312"
+      }
+    ],
+    "business_contacts": [
+      {
+        "name": "TED TROUT ARCHITECT & ASSOCIATES, LTD.",
+        "role": "design firm on TDLR record",
+        "phone": null,
+        "email": null,
+        "website": null,
+        "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026020312"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026020312",
+        "title": "TDLR TABS Project Details: TABS2026020312",
+        "date": "2026-05-14",
+        "page": "Project Details",
+        "evidence": "multifamily apartments; N Earl Rudder Freeway Bryan, TX 77802; New Construction; new construction of multifamily apartments with 2(high density ) buildings 233 units in total and about 5,000 ft2 clubhouse",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2026020312.html"
+      }
+    ],
+    "unknowns": [
+      "Whether construction has started beyond the TDLR estimated start date.",
+      "Whether Masiate-relevant trade packages remain available.",
+      "Whether the owner, tenant, general contractor or designer is the best contact path."
+    ],
+    "next_research": "Check local permit/planning records or participant website for current project status and contractor contacts.",
+    "disposition": "candidate",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026020312"
+    ],
+    "review_decision": "include",
+    "priority_reason": "New 233-unit multifamily apartments and clubhouse; strong fit, though the May registration is a backfill record and bid status is unknown.",
+    "reviewed_at": "2026-09-21T02:23:49Z",
+    "evidence_checked": [
+      "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026020312",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2026020312.html"
+    ],
+    "corrections": [
+      "Treat TDLR/TABS as an accessibility registration/review source, not an open bid, permit issuance, award, or active subcontract opportunity.",
+      "Estimated value is the TDLR whole-project estimate and must not be presented as Masiate contract value.",
+      "Designer/RAS entries are not automatically buyers; route contact verification through the contacts worker before outreach.",
+      "Registered accessibility specialist is a compliance participant, not a project buyer."
+    ]
+  },
+  {
+    "id": "statewide-tdlr-tabs-TABS2026020202",
+    "county": "Brazos",
+    "project_name": "Pickleball Junction",
+    "address": "3175 Wildflower Dr. Bryan, TX 77802",
+    "city": "Bryan",
+    "record_type": "registration",
+    "source_record_id": "TABS2026020202",
+    "record_date": "2026-05-13",
+    "retrieved_at": "2026-09-21T01:56:54Z",
+    "stage": "planned",
+    "status_basis": "TDLR TABS status is Review Complete; this proves registration/review status only, not that a subcontract package remains open.",
+    "scope": "New concrete tilt-wall shopping center addition with tenant finish out of indoor recreation business.",
+    "masiate_fit": "Scope and cost indicate current construction/remodeling work that could use Masiate trades.",
+    "estimated_value": "$3,500,000 TDLR estimated cost",
+    "estimated_start": "2026-06-01",
+    "estimated_completion": "2027-03-01",
+    "bid_deadline": null,
+    "participants": [
+      {
+        "name": "MSCBH Properties LLC",
+        "role": "owner/developer",
+        "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026020202"
+      },
+      {
+        "name": "GLS",
+        "role": "designer",
+        "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026020202"
+      },
+      {
+        "name": "PHILLIP BERTRAM,CHAPMAN",
+        "role": "registered accessibility specialist",
+        "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026020202"
+      }
+    ],
+    "business_contacts": [
+      {
+        "name": "GLS",
+        "role": "design firm on TDLR record",
+        "phone": null,
+        "email": null,
+        "website": null,
+        "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026020202"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026020202",
+        "title": "TDLR TABS Project Details: TABS2026020202",
+        "date": "2026-05-13",
+        "page": "Project Details",
+        "evidence": "MSCBH Properties; 3175 Wildflower Dr. Bryan, TX 77802; New Construction; New concrete tilt-wall shopping center addition with tenant finish out of indoor recreation business.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2026020202.html"
+      }
+    ],
+    "unknowns": [
+      "Whether construction has started beyond the TDLR estimated start date.",
+      "Whether Masiate-relevant trade packages remain available.",
+      "Whether the owner, tenant, general contractor or designer is the best contact path."
+    ],
+    "next_research": "Check local permit/planning records or participant website for current project status and contractor contacts.",
+    "disposition": "candidate",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026020202"
+    ],
+    "review_decision": "include",
+    "priority_reason": "Concrete tilt-wall shopping-center addition with tenant finish-out; strong concrete and finish-trade signal.",
+    "reviewed_at": "2026-09-21T02:23:49Z",
+    "evidence_checked": [
+      "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026020202",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2026020202.html"
+    ],
+    "corrections": [
+      "Treat TDLR/TABS as an accessibility registration/review source, not an open bid, permit issuance, award, or active subcontract opportunity.",
+      "Estimated value is the TDLR whole-project estimate and must not be presented as Masiate contract value.",
+      "Designer/RAS entries are not automatically buyers; route contact verification through the contacts worker before outreach.",
+      "Registered accessibility specialist is a compliance participant, not a project buyer."
+    ]
+  },
+  {
+    "id": "statewide-tdlr-tabs-TABS2026017297",
+    "county": "Brazos",
+    "project_name": "3798 Tabor Road Office/Warehouse",
+    "address": "3798 Tabor Road Bryan, TX 77808",
+    "city": "Bryan",
+    "record_type": "registration",
+    "source_record_id": "TABS2026017297",
+    "record_date": "2026-04-10",
+    "retrieved_at": "2026-09-21T01:57:44Z",
+    "stage": "planned",
+    "status_basis": "TDLR TABS status is Review Complete; this proves registration/review status only, not that a subcontract package remains open.",
+    "scope": "New Warehouse with office space",
+    "masiate_fit": "Scope and cost indicate current construction/remodeling work that could use Masiate trades.",
+    "estimated_value": "$900,000 TDLR estimated cost",
+    "estimated_start": "2026-05-04",
+    "estimated_completion": "2026-10-04",
+    "bid_deadline": null,
+    "participants": [
+      {
+        "name": "Murphy Commercial Holdings LLC",
+        "role": "owner/developer",
+        "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026017297"
+      },
+      {
+        "name": "EDDIE,HARE",
+        "role": "registered accessibility specialist",
+        "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026017297"
+      }
+    ],
+    "business_contacts": [],
+    "sources": [
+      {
+        "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026017297",
+        "title": "TDLR TABS Project Details: TABS2026017297",
+        "date": "2026-04-10",
+        "page": "Project Details",
+        "evidence": "3798 Tabor Road; 3798 Tabor Road Bryan, TX 77808; New Construction; New Warehouse with office space",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2026017297.html"
+      }
+    ],
+    "unknowns": [
+      "Whether construction has started beyond the TDLR estimated start date.",
+      "Whether Masiate-relevant trade packages remain available.",
+      "Whether the owner, tenant, general contractor or designer is the best contact path."
+    ],
+    "next_research": "Check local permit/planning records or participant website for current project status and contractor contacts.",
+    "disposition": "candidate",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026017297"
+    ],
+    "review_decision": "include",
+    "priority_reason": "New office/warehouse at a specific Bryan address; direct fit for concrete, framing, exterior and interior build-out follow-up.",
+    "reviewed_at": "2026-09-21T02:23:49Z",
+    "evidence_checked": [
+      "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026017297",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2026017297.html"
+    ],
+    "corrections": [
+      "Treat TDLR/TABS as an accessibility registration/review source, not an open bid, permit issuance, award, or active subcontract opportunity.",
+      "Estimated value is the TDLR whole-project estimate and must not be presented as Masiate contract value.",
+      "Designer/RAS entries are not automatically buyers; route contact verification through the contacts worker before outreach.",
+      "Registered accessibility specialist is a compliance participant, not a project buyer."
+    ]
+  },
+  {
+    "id": "brazos-bryan-sdrc-sp26-000061-reveille-park-phase-1",
+    "county": "Brazos",
+    "project_name": "Reveille Park Phase 1 Lot 6",
+    "address": "4310 G. Rollie White Rd.",
+    "city": "Bryan",
+    "record_type": "planning",
+    "source_record_id": "SP26-000061",
+    "record_date": "2026-09-15",
+    "retrieved_at": "2026-09-21T01:59:14Z",
+    "stage": "planned",
+    "status_basis": "Bryan SDRC archive posted a September 15, 2026 site-plan PDF. Text extraction identifies the address and lot, but owner/applicant details were not legible in the extraction.",
+    "scope": "Site plan for Lot 6, Block 2, Phase 1 of Reveille Park at 4310 G. Rollie White Rd., College Station TX 77845 / Bryan review area.",
+    "masiate_fit": "Address-level residential/commercial development signal; possible framing, concrete, roofing, siding, paint, floor and MEP opportunities if building proceeds, but owner and permit status need follow-up.",
+    "estimated_value": null,
+    "estimated_start": null,
+    "estimated_completion": null,
+    "bid_deadline": null,
+    "participants": [],
+    "business_contacts": [
+      {
+        "name": "Scurlock Drafting & Design",
+        "role": "plan drafter named in plan notes",
+        "phone": null,
+        "email": null,
+        "website": null,
+        "source_url": "https://docs.bryantx.gov/planning_development/SDRC/2026%20SDRC/09-15-2026/SP26-000061%2C%20Reveille%20Park%20Ph%201%2C%204310%20G%20Rollie%20White%20Rd%2C%209-15-26.pdf"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://docs.bryantx.gov/planning_development/SDRC/2026%20SDRC/09-15-2026/SP26-000061%2C%20Reveille%20Park%20Ph%201%2C%204310%20G%20Rollie%20White%20Rd%2C%209-15-26.pdf",
+        "title": "SP26-000061, Reveille Park Ph 1, 4310 G Rollie White Rd",
+        "date": "09-15-2026",
+        "page": "PDF/text extraction",
+        "evidence": "PDF text identifies Lot 6 Block 2 Phase 1 of Reveille Park and address 4310 G. Rollie White Rd.; plan notes name Scurlock Drafting & Design.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/brazos/evidence/bryan/sdrc-09-15-2026/SP26-000061, Reveille Park Ph 1, 4310 G Rollie White Rd, 9-15-26.pdf"
+      }
+    ],
+    "unknowns": [
+      "Owner/developer not extracted",
+      "Permit/construction status unknown",
+      "Whether trade packages remain available"
+    ],
+    "next_research": "Match the parcel in Brazos CAD and check Bryan Citizenserve or an open-records export for permit status.",
+    "disposition": "candidate",
+    "member_ids": [
+      "brazos-bryan-sdrc-sp26-000061-reveille-park-phase-1"
+    ],
+    "review_decision": "watchlist",
+    "priority_reason": "Address-level planning signal, but owner/developer and permit status were not extracted.",
+    "reviewed_at": "2026-09-21T02:23:49Z",
+    "evidence_checked": [
+      "https://docs.bryantx.gov/planning_development/SDRC/2026%20SDRC/09-15-2026/SP26-000061%2C%20Reveille%20Park%20Ph%201%2C%204310%20G%20Rollie%20White%20Rd%2C%209-15-26.pdf",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/brazos/evidence/bryan/sdrc-09-15-2026/SP26-000061, Reveille Park Ph 1, 4310 G Rollie White Rd, 9-15-26.pdf"
+    ],
+    "corrections": [
+      "Treat Bryan SDRC/source-plan evidence as planning/site-plan evidence unless the source itself states otherwise; do not imply permit issuance or contract award.",
+      "Trade-package availability is unknown and must be labeled unknown in the PDF.",
+      "Watchlist only; not recommended for primary detailed PDF profile without follow-up verification."
+    ]
+  },
+  {
+    "id": "brazos-bryan-sdrc-sp26-000055-traditions-villages-6b",
+    "county": "Brazos",
+    "project_name": "Villages at Traditions Phase 19 / Village 6B",
+    "address": "3089 S Traditions",
+    "city": "Bryan",
+    "record_type": "planning",
+    "source_record_id": "SP26-000055",
+    "record_date": "2026-09-15",
+    "retrieved_at": "2026-09-21T01:59:14Z",
+    "stage": "planned",
+    "status_basis": "Bryan SDRC archive posted a September 15, 2026 site-plan PDF. The filename gives the address; extracted title block shows Traditions Subdivision Phase 19, Bryan, Texas, September 2026.",
+    "scope": "Villages at Traditions / Traditions Subdivision Phase 19 site plan and erosion-control plan, job 26-447.",
+    "masiate_fit": "Subdivision/village residential construction signal; possible concrete, framing, roofing, siding, paint, flooring and MEP work if lots/buildings are active. Source is planning review, not permit issuance.",
+    "estimated_value": null,
+    "estimated_start": null,
+    "estimated_completion": null,
+    "bid_deadline": null,
+    "participants": [],
+    "business_contacts": [
+      {
+        "name": "Kerr",
+        "role": "surveyed/designed/drawn title-block name",
+        "phone": null,
+        "email": null,
+        "website": null,
+        "source_url": "https://docs.bryantx.gov/planning_development/SDRC/2026%20SDRC/09-15-2026/SP26-000055%2C%20Traditions%20Ph%2019%2C%20Villages%206B%2C%203089%20S%20Traditions%2C%209-15-26.pdf"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://docs.bryantx.gov/planning_development/SDRC/2026%20SDRC/09-15-2026/SP26-000055%2C%20Traditions%20Ph%2019%2C%20Villages%206B%2C%203089%20S%20Traditions%2C%209-15-26.pdf",
+        "title": "SP26-000055, Traditions Ph 19, Villages 6B, 3089 S Traditions",
+        "date": "09-15-2026",
+        "page": "PDF/text extraction",
+        "evidence": "Filename identifies 3089 S Traditions; PDF text identifies Villages at Traditions and Traditions Subdivision Phase 19, Bryan, Texas, September 2026.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/brazos/evidence/bryan/sdrc-09-15-2026/SP26-000055, Traditions Ph 19, Villages 6B, 3089 S Traditions, 9-15-26.pdf"
+      }
+    ],
+    "unknowns": [
+      "Whether construction permits have issued",
+      "Whether trade packages remain available",
+      "Current contractor procurement status"
+    ],
+    "next_research": "Match the parcel in Brazos CAD and check Bryan Citizenserve or an open-records export for permit status.",
+    "disposition": "candidate",
+    "member_ids": [
+      "brazos-bryan-sdrc-sp26-000055-traditions-villages-6b"
+    ],
+    "review_decision": "watchlist",
+    "priority_reason": "Residential/village phase is relevant, but owner/developer and building permit status were not extracted.",
+    "reviewed_at": "2026-09-21T02:23:49Z",
+    "evidence_checked": [
+      "https://docs.bryantx.gov/planning_development/SDRC/2026%20SDRC/09-15-2026/SP26-000055%2C%20Traditions%20Ph%2019%2C%20Villages%206B%2C%203089%20S%20Traditions%2C%209-15-26.pdf",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/brazos/evidence/bryan/sdrc-09-15-2026/SP26-000055, Traditions Ph 19, Villages 6B, 3089 S Traditions, 9-15-26.pdf"
+    ],
+    "corrections": [
+      "Treat Bryan SDRC/source-plan evidence as planning/site-plan evidence unless the source itself states otherwise; do not imply permit issuance or contract award.",
+      "Trade-package availability is unknown and must be labeled unknown in the PDF.",
+      "Watchlist only; not recommended for primary detailed PDF profile without follow-up verification."
+    ]
+  },
+  {
+    "id": "brazos-bryan-sdrc-sp26-000060-traditions-ph38-townhomes",
+    "county": "Brazos",
+    "project_name": "Traditions Subdivision Phase 38 Townhomes",
+    "address": "Traditions Subdivision Phase 38, Bryan, TX",
+    "city": "Bryan",
+    "record_type": "planning",
+    "source_record_id": "SP26-000060",
+    "record_date": "2026-09-15",
+    "retrieved_at": "2026-09-21T01:59:14Z",
+    "stage": "planned",
+    "status_basis": "Bryan SDRC archive posted a September 15, 2026 site-plan PDF. The title block identifies Phase 38 townhomes and September 2026; an exact street address was not present in extracted text.",
+    "scope": "Townhome site plan for Traditions Subdivision Phase 38, with grading/site sheets and project file name for Phase 38-39 townhomes.",
+    "masiate_fit": "Townhome construction is a direct fit for framing, roofing, siding, concrete, paint, floors and MEP trades; needs exact parcel/permit follow-up before outreach.",
+    "estimated_value": null,
+    "estimated_start": null,
+    "estimated_completion": null,
+    "bid_deadline": null,
+    "participants": [],
+    "business_contacts": [
+      {
+        "name": "Kerr",
+        "role": "surveyed/designed/drawn title-block name",
+        "phone": null,
+        "email": null,
+        "website": null,
+        "source_url": "https://docs.bryantx.gov/planning_development/SDRC/2026%20SDRC/09-15-2026/SP26-000060%2C%20Traditions%20Ph%2038%2C%20Townhomes%2C%209-15-26.pdf"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://docs.bryantx.gov/planning_development/SDRC/2026%20SDRC/09-15-2026/SP26-000060%2C%20Traditions%20Ph%2038%2C%20Townhomes%2C%209-15-26.pdf",
+        "title": "SP26-000060, Traditions Ph 38, Townhomes",
+        "date": "09-15-2026",
+        "page": "PDF/text extraction",
+        "evidence": "PDF text identifies Traditions Subdivision Phase 38, Bryan TX, site plan, September 2026, and project file for Phase 38-39 townhomes.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/brazos/evidence/bryan/sdrc-09-15-2026/SP26-000060, Traditions Ph 38, Townhomes, 9-15-26.pdf"
+      }
+    ],
+    "unknowns": [
+      "Exact street address not extracted",
+      "Owner/developer not extracted",
+      "Permit/construction status unknown"
+    ],
+    "next_research": "Match the parcel in Brazos CAD and check Bryan Citizenserve or an open-records export for permit status.",
+    "disposition": "watchlist",
+    "member_ids": [
+      "brazos-bryan-sdrc-sp26-000060-traditions-ph38-townhomes"
+    ],
+    "review_decision": "watchlist",
+    "priority_reason": "Townhome phase is a direct fit, but exact street address and owner/developer were not extracted.",
+    "reviewed_at": "2026-09-21T02:23:49Z",
+    "evidence_checked": [
+      "https://docs.bryantx.gov/planning_development/SDRC/2026%20SDRC/09-15-2026/SP26-000060%2C%20Traditions%20Ph%2038%2C%20Townhomes%2C%209-15-26.pdf",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/brazos/evidence/bryan/sdrc-09-15-2026/SP26-000060, Traditions Ph 38, Townhomes, 9-15-26.pdf"
+    ],
+    "corrections": [
+      "Treat Bryan SDRC/source-plan evidence as planning/site-plan evidence unless the source itself states otherwise; do not imply permit issuance or contract award.",
+      "Trade-package availability is unknown and must be labeled unknown in the PDF.",
+      "Watchlist only; not recommended for primary detailed PDF profile without follow-up verification."
+    ]
+  },
+  {
+    "id": "brazos-bryan-sdrc-sp26-000047-11183-sh30",
+    "county": "Brazos",
+    "project_name": "11183 SH30 site plan",
+    "address": "11183 State Highway 30",
+    "city": "Bryan",
+    "record_type": "planning",
+    "source_record_id": "SP26-000047",
+    "record_date": "2026-09-15",
+    "retrieved_at": "2026-09-21T01:59:14Z",
+    "stage": "planned",
+    "status_basis": "Bryan SDRC archive posted a September 15, 2026 site-plan PDF. The plan states preliminary review by permitting authorities only and not intended for construction.",
+    "scope": "Site plan on 2.208 acres / called 2.21 acres in Maria Kegans League A-28 at 11183 SH30; revisions through September 9, 2026.",
+    "masiate_fit": "Address-level commercial/site-development lead; potential concrete, fencing, plumbing/utility, lighting and exterior work depending on final use. Status is preliminary review.",
+    "estimated_value": null,
+    "estimated_start": null,
+    "estimated_completion": null,
+    "bid_deadline": null,
+    "participants": [
+      {
+        "name": "Bull Red Cimarron, LLC",
+        "role": "owner/developer",
+        "source_url": "https://docs.bryantx.gov/planning_development/SDRC/2026%20SDRC/09-15-2026/SP26-000047%2C%20Maria%20Kegan%2C%20%2011183%20State%20Highway%2030%2C%209-15-26.pdf"
+      }
+    ],
+    "business_contacts": [
+      {
+        "name": "Civil Constructors Inc.",
+        "role": "engineer",
+        "phone": "979-690-7711",
+        "email": null,
+        "website": null,
+        "source_url": "https://docs.bryantx.gov/planning_development/SDRC/2026%20SDRC/09-15-2026/SP26-000047%2C%20Maria%20Kegan%2C%20%2011183%20State%20Highway%2030%2C%209-15-26.pdf"
+      },
+      {
+        "name": "Kerr Surveying",
+        "role": "surveyor",
+        "phone": null,
+        "email": null,
+        "website": null,
+        "source_url": "https://docs.bryantx.gov/planning_development/SDRC/2026%20SDRC/09-15-2026/SP26-000047%2C%20Maria%20Kegan%2C%20%2011183%20State%20Highway%2030%2C%209-15-26.pdf"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://docs.bryantx.gov/planning_development/SDRC/2026%20SDRC/09-15-2026/SP26-000047%2C%20Maria%20Kegan%2C%20%2011183%20State%20Highway%2030%2C%209-15-26.pdf",
+        "title": "SP26-000047, Maria Kegan, 11183 State Highway 30",
+        "date": "09-15-2026",
+        "page": "PDF/text extraction",
+        "evidence": "PDF text lists 11183 SH30, 2.208 acres, owner Bull Red Cimarron LLC, Kerr Surveying, Civil Constructors Inc., and preliminary-review limitation.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/brazos/evidence/bryan/sdrc-09-15-2026/SP26-000047, Maria Kegan,  11183 State Highway 30, 9-15-26.pdf"
+      }
+    ],
+    "unknowns": [
+      "Whether construction permits have issued",
+      "Whether trade packages remain available",
+      "Current contractor procurement status"
+    ],
+    "next_research": "Match the parcel in Brazos CAD and check Bryan Citizenserve or an open-records export for permit status.",
+    "disposition": "candidate",
+    "member_ids": [
+      "brazos-bryan-sdrc-sp26-000047-11183-sh30"
+    ],
+    "review_decision": "watchlist",
+    "priority_reason": "Identifiable site plan and owner, but source repeatedly says preliminary review only and not for construction.",
+    "reviewed_at": "2026-09-21T02:23:49Z",
+    "evidence_checked": [
+      "https://docs.bryantx.gov/planning_development/SDRC/2026%20SDRC/09-15-2026/SP26-000047%2C%20Maria%20Kegan%2C%20%2011183%20State%20Highway%2030%2C%209-15-26.pdf",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/brazos/evidence/bryan/sdrc-09-15-2026/SP26-000047, Maria Kegan,  11183 State Highway 30, 9-15-26.pdf"
+    ],
+    "corrections": [
+      "Treat Bryan SDRC/source-plan evidence as planning/site-plan evidence unless the source itself states otherwise; do not imply permit issuance or contract award.",
+      "Trade-package availability is unknown and must be labeled unknown in the PDF.",
+      "Watchlist only; not recommended for primary detailed PDF profile without follow-up verification."
+    ]
+  },
+  {
+    "id": "brazos-bryan-sdrc-sp26-000026-shops-at-carter-creek",
+    "county": "Brazos",
+    "project_name": "Shops at Carter Creek Phase 1",
+    "address": "Exact address not extracted",
+    "city": "Bryan",
+    "record_type": "planning",
+    "source_record_id": "SP26-000026",
+    "record_date": "2026-08-11",
+    "retrieved_at": "2026-09-21T01:59:14Z",
+    "stage": "planned",
+    "status_basis": "Bryan SDRC archive posted an August 11, 2026 site-plan PDF. Extraction mostly surfaced the engineering title block; exact address/owner were not captured.",
+    "scope": "Site-plan PDF for Shops at Carter Creek Phase 1; engineer block identifies RME / civil@rmengineer.com, College Station, Texas.",
+    "masiate_fit": "Commercial retail/tenant project could fit concrete, framing, paint, flooring, plumbing, lighting and exterior trades, but address and current status must be resolved before use as a candidate.",
+    "estimated_value": null,
+    "estimated_start": null,
+    "estimated_completion": null,
+    "bid_deadline": null,
+    "participants": [],
+    "business_contacts": [
+      {
+        "name": "RME",
+        "role": "civil engineer / plan preparer",
+        "phone": "979-219-4174",
+        "email": "civil@rmengineer.com",
+        "website": null,
+        "source_url": "https://docs.bryantx.gov/planning_development/SDRC/2026%20SDRC/08-11-2026/SP26-000026%2C%20Shops%20at%20Carter%20Creek%20Ph%201%2C%208-11-26.pdf"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://docs.bryantx.gov/planning_development/SDRC/2026%20SDRC/08-11-2026/SP26-000026%2C%20Shops%20at%20Carter%20Creek%20Ph%201%2C%208-11-26.pdf",
+        "title": "SP26-000026, Shops at Carter Creek Ph 1",
+        "date": "08-11-2026",
+        "page": "PDF/text extraction",
+        "evidence": "PDF filename identifies Shops at Carter Creek Phase 1; extracted title block lists RME in College Station with civil@rmengineer.com and phone 979-219-4174.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/brazos/evidence/bryan/sdrc-08-11-2026/SP26-000026, Shops at Carter Creek Ph 1, 8-11-26.pdf"
+      }
+    ],
+    "unknowns": [
+      "Exact address not extracted",
+      "Owner/developer not extracted",
+      "Permit/construction status unknown"
+    ],
+    "next_research": "Match the parcel in Brazos CAD and check Bryan Citizenserve or an open-records export for permit status.",
+    "disposition": "watchlist",
+    "member_ids": [
+      "brazos-bryan-sdrc-sp26-000026-shops-at-carter-creek"
+    ],
+    "review_decision": "watchlist",
+    "priority_reason": "Commercial project signal, but exact address and owner/developer were not captured.",
+    "reviewed_at": "2026-09-21T02:23:49Z",
+    "evidence_checked": [
+      "https://docs.bryantx.gov/planning_development/SDRC/2026%20SDRC/08-11-2026/SP26-000026%2C%20Shops%20at%20Carter%20Creek%20Ph%201%2C%208-11-26.pdf",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/brazos/evidence/bryan/sdrc-08-11-2026/SP26-000026, Shops at Carter Creek Ph 1, 8-11-26.pdf"
+    ],
+    "corrections": [
+      "Treat Bryan SDRC/source-plan evidence as planning/site-plan evidence unless the source itself states otherwise; do not imply permit issuance or contract award.",
+      "Trade-package availability is unknown and must be labeled unknown in the PDF.",
+      "Exact street address is unresolved; do not map or contact from this record until parcel/address is verified.",
+      "Watchlist only; not recommended for primary detailed PDF profile without follow-up verification."
+    ]
+  },
+  {
+    "id": "statewide-tdlr-tabs-TABS2026025395",
+    "county": "Brazos",
+    "project_name": "GGM Midtown Apartments",
+    "address": "1200 MIDTOWN DRIVE College Station, TX 77845",
+    "city": "College Station",
+    "record_type": "registration",
+    "source_record_id": "TABS2026025395",
+    "record_date": "2026-07-16",
+    "retrieved_at": "2026-09-21T01:55:21Z",
+    "stage": "planned",
+    "status_basis": "TDLR TABS status is Review Complete; this proves registration/review status only, not that a subcontract package remains open.",
+    "scope": "CLUBHOUSE FOR MULTIFAMILY APARTMENTS",
+    "masiate_fit": "Scope and cost indicate current construction/remodeling work that could use Masiate trades.",
+    "estimated_value": "$903,300 TDLR estimated cost",
+    "estimated_start": "2026-09-30",
+    "estimated_completion": "2028-03-30",
+    "bid_deadline": null,
+    "participants": [
+      {
+        "name": "GGM Midtown Holdings, LP",
+        "role": "owner/developer",
+        "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026025395"
+      },
+      {
+        "name": "Cross Architects, PLLC",
+        "role": "designer",
+        "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026025395"
+      },
+      {
+        "name": "JEFFREY A,GUTKNECHT",
+        "role": "registered accessibility specialist",
+        "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026025395"
+      }
+    ],
+    "business_contacts": [
+      {
+        "name": "Cross Architects, PLLC",
+        "role": "design firm on TDLR record",
+        "phone": null,
+        "email": null,
+        "website": null,
+        "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026025395"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026025395",
+        "title": "TDLR TABS Project Details: TABS2026025395",
+        "date": "2026-07-16",
+        "page": "Project Details",
+        "evidence": "GGM Midtown Apartments - Clubhouse; 1200 MIDTOWN DRIVE College Station, TX 77845; New Construction; CLUBHOUSE FOR MULTIFAMILY APARTMENTS",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2026025395.html"
+      }
+    ],
+    "unknowns": [
+      "Whether construction has started beyond the TDLR estimated start date.",
+      "Whether Masiate-relevant trade packages remain available.",
+      "Whether the owner, tenant, general contractor or designer is the best contact path."
+    ],
+    "next_research": "Check local permit/planning records or participant website for current project status and contractor contacts.",
+    "disposition": "candidate",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026025395"
+    ],
+    "review_decision": "watchlist",
+    "priority_reason": "Multifamily clubhouse is relevant, but it is a clubhouse-only TDLR record and public-funds/land status needs procurement follow-up.",
+    "reviewed_at": "2026-09-21T02:23:49Z",
+    "evidence_checked": [
+      "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026025395",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2026025395.html"
+    ],
+    "corrections": [
+      "Treat TDLR/TABS as an accessibility registration/review source, not an open bid, permit issuance, award, or active subcontract opportunity.",
+      "Estimated value is the TDLR whole-project estimate and must not be presented as Masiate contract value.",
+      "Designer/RAS entries are not automatically buyers; route contact verification through the contacts worker before outreach.",
+      "Registered accessibility specialist is a compliance participant, not a project buyer.",
+      "Watchlist only; not recommended for primary detailed PDF profile without follow-up verification."
+    ]
+  },
+  {
+    "id": "statewide-tdlr-tabs-TABS2026024880",
+    "county": "Brazos",
+    "project_name": "Gameday Suites-Aggieland-1",
+    "address": "0 W Villa Maria Rd Bryan, TX 77807",
+    "city": "Bryan",
+    "record_type": "registration",
+    "source_record_id": "TABS2026024880",
+    "record_date": "2026-07-09",
+    "retrieved_at": "2026-09-21T01:55:38Z",
+    "stage": "planned",
+    "status_basis": "TDLR TABS status is Review Complete; this proves registration/review status only, not that a subcontract package remains open.",
+    "scope": "Building shell construction 18,750",
+    "masiate_fit": "Scope and cost indicate current construction/remodeling work that could use Masiate trades.",
+    "estimated_value": "$3,000,000 TDLR estimated cost",
+    "estimated_start": "2026-08-01",
+    "estimated_completion": "2027-08-01",
+    "bid_deadline": null,
+    "participants": [
+      {
+        "name": "Gameday Suites, LLC",
+        "role": "owner/developer",
+        "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026024880"
+      },
+      {
+        "name": "Motif Architects PLLC",
+        "role": "designer",
+        "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026024880"
+      },
+      {
+        "name": "KATHY S,RODRIGUEZ",
+        "role": "registered accessibility specialist",
+        "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026024880"
+      }
+    ],
+    "business_contacts": [
+      {
+        "name": "Motif Architects PLLC",
+        "role": "design firm on TDLR record",
+        "phone": null,
+        "email": null,
+        "website": null,
+        "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026024880"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026024880",
+        "title": "TDLR TABS Project Details: TABS2026024880",
+        "date": "2026-07-09",
+        "page": "Project Details",
+        "evidence": "Gameday Suite -Aggieland; 0 W Villa Maria Rd Bryan, TX 77807; New Construction; Building shell construction 18,750",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2026024880.html"
+      }
+    ],
+    "unknowns": [
+      "Whether construction has started beyond the TDLR estimated start date.",
+      "Whether Masiate-relevant trade packages remain available.",
+      "Whether the owner, tenant, general contractor or designer is the best contact path."
+    ],
+    "next_research": "Check local permit/planning records or participant website for current project status and contractor contacts.",
+    "disposition": "candidate",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026024880"
+    ],
+    "review_decision": "watchlist",
+    "priority_reason": "Gameday Suites shell-building record is relevant, but appears as one of three related records at 0 W Villa Maria requiring dedup/phase handling.",
+    "reviewed_at": "2026-09-21T02:23:49Z",
+    "evidence_checked": [
+      "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026024880",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2026024880.html"
+    ],
+    "corrections": [
+      "Treat TDLR/TABS as an accessibility registration/review source, not an open bid, permit issuance, award, or active subcontract opportunity.",
+      "Estimated value is the TDLR whole-project estimate and must not be presented as Masiate contract value.",
+      "Designer/RAS entries are not automatically buyers; route contact verification through the contacts worker before outreach.",
+      "Zero-address placeholder requires parcel/building confirmation; keep related Gameday Suites buildings distinct until dedup decides.",
+      "Registered accessibility specialist is a compliance participant, not a project buyer.",
+      "Watchlist only; not recommended for primary detailed PDF profile without follow-up verification."
+    ]
+  },
+  {
+    "id": "statewide-tdlr-tabs-TABS2026024883",
+    "county": "Brazos",
+    "project_name": "Gameday Suites-Aggieland-2",
+    "address": "0 W Villa Maria Rd Bryan, TX 77807",
+    "city": "Bryan",
+    "record_type": "registration",
+    "source_record_id": "TABS2026024883",
+    "record_date": "2026-07-09",
+    "retrieved_at": "2026-09-21T01:55:36Z",
+    "stage": "planned",
+    "status_basis": "TDLR TABS status is Review Complete; this proves registration/review status only, not that a subcontract package remains open.",
+    "scope": "Building shell construction 18,750sf",
+    "masiate_fit": "Scope and cost indicate current construction/remodeling work that could use Masiate trades.",
+    "estimated_value": "$3,000,000 TDLR estimated cost",
+    "estimated_start": "2026-08-01",
+    "estimated_completion": "2027-08-01",
+    "bid_deadline": null,
+    "participants": [
+      {
+        "name": "Gameday Suites, LLC",
+        "role": "owner/developer",
+        "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026024883"
+      },
+      {
+        "name": "Motif Architects PLLC",
+        "role": "designer",
+        "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026024883"
+      },
+      {
+        "name": "KATHY S,RODRIGUEZ",
+        "role": "registered accessibility specialist",
+        "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026024883"
+      }
+    ],
+    "business_contacts": [
+      {
+        "name": "Motif Architects PLLC",
+        "role": "design firm on TDLR record",
+        "phone": null,
+        "email": null,
+        "website": null,
+        "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026024883"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026024883",
+        "title": "TDLR TABS Project Details: TABS2026024883",
+        "date": "2026-07-09",
+        "page": "Project Details",
+        "evidence": "Gameday Suites -Aggieland; 0 W Villa Maria Rd Bryan, TX 77807; New Construction; Building shell construction 18,750sf",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2026024883.html"
+      }
+    ],
+    "unknowns": [
+      "Whether construction has started beyond the TDLR estimated start date.",
+      "Whether Masiate-relevant trade packages remain available.",
+      "Whether the owner, tenant, general contractor or designer is the best contact path."
+    ],
+    "next_research": "Check local permit/planning records or participant website for current project status and contractor contacts.",
+    "disposition": "candidate",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026024883"
+    ],
+    "review_decision": "watchlist",
+    "priority_reason": "Gameday Suites shell-building record is relevant, but appears as one of three related records at 0 W Villa Maria requiring dedup/phase handling.",
+    "reviewed_at": "2026-09-21T02:23:49Z",
+    "evidence_checked": [
+      "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026024883",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2026024883.html"
+    ],
+    "corrections": [
+      "Treat TDLR/TABS as an accessibility registration/review source, not an open bid, permit issuance, award, or active subcontract opportunity.",
+      "Estimated value is the TDLR whole-project estimate and must not be presented as Masiate contract value.",
+      "Designer/RAS entries are not automatically buyers; route contact verification through the contacts worker before outreach.",
+      "Zero-address placeholder requires parcel/building confirmation; keep related Gameday Suites buildings distinct until dedup decides.",
+      "Registered accessibility specialist is a compliance participant, not a project buyer.",
+      "Watchlist only; not recommended for primary detailed PDF profile without follow-up verification."
+    ]
+  },
+  {
+    "id": "statewide-tdlr-tabs-TABS2026024885",
+    "county": "Brazos",
+    "project_name": "Gameday Suites-Aggieland-3",
+    "address": "0 W Villa Maria Rd Bryan, TX 77807",
+    "city": "Bryan",
+    "record_type": "registration",
+    "source_record_id": "TABS2026024885",
+    "record_date": "2026-07-09",
+    "retrieved_at": "2026-09-21T01:55:34Z",
+    "stage": "planned",
+    "status_basis": "TDLR TABS status is Review Complete; this proves registration/review status only, not that a subcontract package remains open.",
+    "scope": "Building shell construction 18,750sf",
+    "masiate_fit": "Scope and cost indicate current construction/remodeling work that could use Masiate trades.",
+    "estimated_value": "$3,000,000 TDLR estimated cost",
+    "estimated_start": "2026-08-01",
+    "estimated_completion": "2027-08-01",
+    "bid_deadline": null,
+    "participants": [
+      {
+        "name": "Gameday Suites, LLC",
+        "role": "owner/developer",
+        "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026024885"
+      },
+      {
+        "name": "Motif Architects PLLC",
+        "role": "designer",
+        "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026024885"
+      },
+      {
+        "name": "KATHY S,RODRIGUEZ",
+        "role": "registered accessibility specialist",
+        "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026024885"
+      }
+    ],
+    "business_contacts": [
+      {
+        "name": "Motif Architects PLLC",
+        "role": "design firm on TDLR record",
+        "phone": null,
+        "email": null,
+        "website": null,
+        "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026024885"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026024885",
+        "title": "TDLR TABS Project Details: TABS2026024885",
+        "date": "2026-07-09",
+        "page": "Project Details",
+        "evidence": "Gameday Suites -Aggieland; 0 W Villa Maria Rd Bryan, TX 77807; New Construction; Building shell construction 18,750sf",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2026024885.html"
+      }
+    ],
+    "unknowns": [
+      "Whether construction has started beyond the TDLR estimated start date.",
+      "Whether Masiate-relevant trade packages remain available.",
+      "Whether the owner, tenant, general contractor or designer is the best contact path."
+    ],
+    "next_research": "Check local permit/planning records or participant website for current project status and contractor contacts.",
+    "disposition": "candidate",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026024885"
+    ],
+    "review_decision": "watchlist",
+    "priority_reason": "Gameday Suites shell-building record is relevant, but appears as one of three related records at 0 W Villa Maria requiring dedup/phase handling.",
+    "reviewed_at": "2026-09-21T02:23:49Z",
+    "evidence_checked": [
+      "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026024885",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2026024885.html"
+    ],
+    "corrections": [
+      "Treat TDLR/TABS as an accessibility registration/review source, not an open bid, permit issuance, award, or active subcontract opportunity.",
+      "Estimated value is the TDLR whole-project estimate and must not be presented as Masiate contract value.",
+      "Designer/RAS entries are not automatically buyers; route contact verification through the contacts worker before outreach.",
+      "Zero-address placeholder requires parcel/building confirmation; keep related Gameday Suites buildings distinct until dedup decides.",
+      "Registered accessibility specialist is a compliance participant, not a project buyer.",
+      "Watchlist only; not recommended for primary detailed PDF profile without follow-up verification."
+    ]
+  },
+  {
+    "id": "statewide-tdlr-tabs-TABS2026018148",
+    "county": "Brazos",
+    "project_name": "NextCare College Station TI",
+    "address": "4003 State Highway 6 South College Station, TX 77845",
+    "city": "College Station",
+    "record_type": "registration",
+    "source_record_id": "TABS2026018148",
+    "record_date": "2026-04-20",
+    "retrieved_at": "2026-09-21T01:57:33Z",
+    "stage": "planned",
+    "status_basis": "TDLR TABS status is Review Complete; this proves registration/review status only, not that a subcontract package remains open.",
+    "scope": "Tenant Improvement build out for a new urgent care facility with six exam rooms, one x-ray room, and required support spaces.",
+    "masiate_fit": "Scope and cost indicate current construction/remodeling work that could use Masiate trades.",
+    "estimated_value": "$700,000 TDLR estimated cost",
+    "estimated_start": "2026-07-01",
+    "estimated_completion": "2026-10-01",
+    "bid_deadline": null,
+    "participants": [
+      {
+        "name": "Weingarten/ Investment Inc.",
+        "role": "owner/developer",
+        "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026018148"
+      },
+      {
+        "name": "Morfeld Ray Architects",
+        "role": "designer",
+        "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026018148"
+      },
+      {
+        "name": "JEFFREY A,GUTKNECHT",
+        "role": "registered accessibility specialist",
+        "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026018148"
+      }
+    ],
+    "business_contacts": [
+      {
+        "name": "Morfeld Ray Architects",
+        "role": "design firm on TDLR record",
+        "phone": null,
+        "email": null,
+        "website": null,
+        "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026018148"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026018148",
+        "title": "TDLR TABS Project Details: TABS2026018148",
+        "date": "2026-04-20",
+        "page": "Project Details",
+        "evidence": "Baylor Health & White Healthcare; 4003 State Highway 6 South College Station, TX 77845; Renovation/Alteration; Tenant Improvement build out for a new urgent care facility with six exam rooms, one x-ray room, and required support spaces.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2026018148.html"
+      }
+    ],
+    "unknowns": [
+      "Whether construction has started beyond the TDLR estimated start date.",
+      "Whether Masiate-relevant trade packages remain available.",
+      "Whether the owner, tenant, general contractor or designer is the best contact path."
+    ],
+    "next_research": "Check local permit/planning records or participant website for current project status and contractor contacts.",
+    "disposition": "candidate",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026018148"
+    ],
+    "review_decision": "watchlist",
+    "priority_reason": "Urgent-care tenant improvement is relevant, but estimated completion is close to 2026-10-01 and status should be checked before highlighting.",
+    "reviewed_at": "2026-09-21T02:23:49Z",
+    "evidence_checked": [
+      "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026018148",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2026018148.html"
+    ],
+    "corrections": [
+      "Treat TDLR/TABS as an accessibility registration/review source, not an open bid, permit issuance, award, or active subcontract opportunity.",
+      "Estimated value is the TDLR whole-project estimate and must not be presented as Masiate contract value.",
+      "Designer/RAS entries are not automatically buyers; route contact verification through the contacts worker before outreach.",
+      "Registered accessibility specialist is a compliance participant, not a project buyer.",
+      "Watchlist only; not recommended for primary detailed PDF profile without follow-up verification."
+    ]
+  },
+  {
+    "id": "statewide-tdlr-tabs-TABS2026027188",
+    "county": "Brazos",
+    "project_name": "Barron Landing - Phase 2 - Building 700",
+    "address": "2800 Barron Rd College Station, TX 77845",
+    "city": "College Station",
+    "record_type": "registration",
+    "source_record_id": "TABS2026027188",
+    "record_date": "2026-08-06",
+    "retrieved_at": "2026-09-21T01:54:53Z",
+    "stage": "planned",
+    "status_basis": "TDLR TABS status is Review Complete; this proves registration/review status only, not that a subcontract package remains open.",
+    "scope": "Conventionally framed shell building",
+    "masiate_fit": "Scope and cost indicate current construction/remodeling work that could use Masiate trades.",
+    "estimated_value": "$1,500,000 TDLR estimated cost",
+    "estimated_start": "2026-09-03",
+    "estimated_completion": "2026-12-03",
+    "bid_deadline": null,
+    "participants": [
+      {
+        "name": "Barron Crossing LP",
+        "role": "owner/developer",
+        "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026027188"
+      },
+      {
+        "name": "R.A.I. Designs Inc.",
+        "role": "designer",
+        "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026027188"
+      },
+      {
+        "name": "EDDIE,HARE",
+        "role": "registered accessibility specialist",
+        "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026027188"
+      }
+    ],
+    "business_contacts": [
+      {
+        "name": "R.A.I. Designs Inc.",
+        "role": "design firm on TDLR record",
+        "phone": null,
+        "email": null,
+        "website": null,
+        "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026027188"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026027188",
+        "title": "TDLR TABS Project Details: TABS2026027188",
+        "date": "2026-08-06",
+        "page": "Project Details",
+        "evidence": "Barron Landing - Phase 2 - Building 700 - Shell; 2800 Barron Rd College Station, TX 77845; New Construction; Conventionally framed shell building",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2026027188.html"
+      }
+    ],
+    "unknowns": [
+      "Whether construction has started beyond the TDLR estimated start date.",
+      "Whether Masiate-relevant trade packages remain available.",
+      "Whether the owner, tenant, general contractor or designer is the best contact path."
+    ],
+    "next_research": "Check local permit/planning records or participant website for current project status and contractor contacts.",
+    "disposition": "candidate",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026027188"
+    ],
+    "review_decision": "watchlist",
+    "priority_reason": "Barron Landing shell building is relevant, but it overlaps with several Barron Landing finish-out records and needs dedup/grouping.",
+    "reviewed_at": "2026-09-21T02:23:49Z",
+    "evidence_checked": [
+      "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026027188",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2026027188.html"
+    ],
+    "corrections": [
+      "Treat TDLR/TABS as an accessibility registration/review source, not an open bid, permit issuance, award, or active subcontract opportunity.",
+      "Estimated value is the TDLR whole-project estimate and must not be presented as Masiate contract value.",
+      "Designer/RAS entries are not automatically buyers; route contact verification through the contacts worker before outreach.",
+      "Registered accessibility specialist is a compliance participant, not a project buyer.",
+      "Watchlist only; not recommended for primary detailed PDF profile without follow-up verification."
+    ]
+  },
+  {
+    "id": "statewide-tdlr-tabs-TABS2026026523",
+    "county": "Brazos",
+    "project_name": "New Central Office",
+    "address": "1404 Sebesta Road College Station, TX 77845",
+    "city": "College Station",
+    "record_type": "registration",
+    "source_record_id": "TABS2026026523",
+    "record_date": "2026-07-29",
+    "retrieved_at": "2026-09-21T01:55:04Z",
+    "stage": "planned",
+    "status_basis": "TDLR TABS status is Review Complete; this proves registration/review status only, not that a subcontract package remains open.",
+    "scope": "New construction of administration building, type II-B building, sprinkled",
+    "masiate_fit": "Scope and cost indicate current construction/remodeling work that could use Masiate trades.",
+    "estimated_value": "$23,365,871 TDLR estimated cost",
+    "estimated_start": "2026-09-16",
+    "estimated_completion": "2027-12-17",
+    "bid_deadline": null,
+    "participants": [
+      {
+        "name": "College Station ISD",
+        "role": "owner/developer",
+        "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026026523"
+      },
+      {
+        "name": "VLK",
+        "role": "designer",
+        "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026026523"
+      },
+      {
+        "name": "WILLIAM T,WINNING",
+        "role": "registered accessibility specialist",
+        "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026026523"
+      }
+    ],
+    "business_contacts": [
+      {
+        "name": "VLK",
+        "role": "design firm on TDLR record",
+        "phone": null,
+        "email": null,
+        "website": null,
+        "source_url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026026523"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026026523",
+        "title": "TDLR TABS Project Details: TABS2026026523",
+        "date": "2026-07-29",
+        "page": "Project Details",
+        "evidence": "New Central Office; 1404 Sebesta Road College Station, TX 77845; New Construction; New construction of administration building, type II-B building, sprinkled",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2026026523.html"
+      }
+    ],
+    "unknowns": [
+      "Whether construction has started beyond the TDLR estimated start date.",
+      "Whether Masiate-relevant trade packages remain available.",
+      "Whether the owner, tenant, general contractor or designer is the best contact path."
+    ],
+    "next_research": "Check local permit/planning records or participant website for current project status and contractor contacts.",
+    "disposition": "candidate",
+    "member_ids": [
+      "statewide-tdlr-tabs-TABS2026026523"
+    ],
+    "review_decision": "watchlist",
+    "priority_reason": "Large administration-building record is real, but service route/procurement fit is less direct than tenant and multifamily records.",
+    "reviewed_at": "2026-09-21T02:23:49Z",
+    "evidence_checked": [
+      "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026026523",
+      "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/statewide/evidence/tdlr-tabs/TABS2026026523.html"
+    ],
+    "corrections": [
+      "Treat TDLR/TABS as an accessibility registration/review source, not an open bid, permit issuance, award, or active subcontract opportunity.",
+      "Estimated value is the TDLR whole-project estimate and must not be presented as Masiate contract value.",
+      "Designer/RAS entries are not automatically buyers; route contact verification through the contacts worker before outreach.",
+      "Registered accessibility specialist is a compliance participant, not a project buyer.",
+      "Watchlist only; not recommended for primary detailed PDF profile without follow-up verification."
+    ]
+  }
+]
