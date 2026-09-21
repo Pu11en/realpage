@@ -1,0 +1,197 @@
+[
+  {
+    "id": "madison-madisonville-pz-20260901-301-n-short-mf",
+    "county": "Madison",
+    "project_name": "301 N Short Street multifamily rezoning request",
+    "address": "301 N Short Street",
+    "city": "Madisonville",
+    "record_type": "planning",
+    "source_record_id": "Madisonville Planning & Zoning Commission 2026-09-01 rezoning item",
+    "record_date": "2026-09-01",
+    "retrieved_at": "2026-09-21T01:57:23Z",
+    "stage": "planned",
+    "status_basis": "City Council packet placed the SF-2 to MF rezoning ordinance on the September 21, 2026 agenda, but the same packet says Planning & Zoning recommended denial and staff made no formal recommendation; source supports apartment intent and plat filing, but no issued construction permit or trade package availability.",
+    "scope": "Rezone 0.886-acre property from Urban Single-Family Residential to Multi-Family for preliminary apartment plans; source says plat was approved in June 2026 and filed with the County Clerk.",
+    "masiate_fit": "Potential future apartment/multifamily build; Masiate fit is inferred for concrete, framing, roofing, siding, paint, flooring, fencing and utility/trade work if project advances to permits.",
+    "estimated_value": null,
+    "estimated_start": null,
+    "estimated_completion": null,
+    "bid_deadline": null,
+    "participants": [
+      {
+        "name": "Alredo Astello & Mirna Y.",
+        "role": "owner",
+        "source_url": "https://esearch.madisoncad.org/"
+      },
+      {
+        "name": "Mr. Astello",
+        "role": "applicant/owner",
+        "source_url": "https://madisonvilletexas.gov/planningandzoning"
+      },
+      {
+        "name": "City of Madisonville Planning & Zoning Commission",
+        "role": "reviewing body",
+        "source_url": "https://madisonvilletexas.gov/planningandzoning"
+      }
+    ],
+    "business_contacts": [],
+    "sources": [
+      {
+        "url": "https://madisonvilletexas.gov/planningandzoning",
+        "title": "September 1, 2026 P&Z PACKET",
+        "date": "2026-08-28",
+        "page": "packet text lines 222-255 and 370-378",
+      "evidence": "The packet describes a request to rezone 301 N Short Street from SF-2 to MF, says the property is 0.886 acres, says the owner has preliminary apartment ideas, and says a plat had been approved in June 2026 and filed with the County Clerk.",
+      "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/madison/evidence/008_September_1_2026_P_Z_PACKET.city.pdf"
+    },
+    {
+      "url": "https://madisonvilletexas.gov/agendasandminutes",
+      "title": "9-21-2026 City Council Special Meeting Agenda Packet",
+      "date": "2026-09-21",
+      "page": "packet text lines 5025-5112",
+      "evidence": "The council packet places the 301 N Short Street rezoning ordinance before City Council, notes one mailed-notice opposition response, says P&Z recommended denial on September 1, 2026, and says staff made no formal recommendation.",
+      "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/madison/evidence/000_9-21-2026_City_Council_Special_Meeting_Agenda_Packet.city.pdf"
+    },
+      {
+        "url": "https://esearch.madisoncad.org/",
+        "title": "Madison CAD property search result for 301 N Short",
+        "date": "2026-09-21",
+        "page": "resultsList[0]",
+        "evidence": "CAD result identifies property ID 17687, owner ASTELLO ALREDO & MIRNA Y., address 301 N SHORT, legal description A0010 JOB S COLLARD TRACT 466 1 BLOCK 1 RESERVE, 0.886 acres, appraised value $76,290.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/madison/evidence/madison_cad_results_301_short.json"
+      }
+    ],
+    "unknowns": [
+    "Whether City Council approved or denied the rezoning on September 21, 2026",
+    "Whether the P&Z denial recommendation or council opposition caused the owner to revise or abandon the apartment plan",
+    "Whether apartment plans have been submitted",
+    "Whether any construction permits or trade bids exist"
+  ],
+  "next_research": "Check the September 21, 2026 City Council action/minutes before outreach or lead promotion, then request/search issued permits for 301 N Short Street only if the rezoning advanced.",
+    "disposition": "candidate"
+  },
+  {
+    "id": "madison-madisonville-pz-20260804-805-n-may-mixed-use",
+    "county": "Madison",
+    "project_name": "805 N May Street planned-development mixed-use rezoning",
+    "address": "805 N May Street",
+    "city": "Madisonville",
+    "record_type": "planning",
+    "source_record_id": "Madisonville Planning & Zoning Commission 2026-08-04 rezoning item",
+    "record_date": "2026-08-04",
+    "retrieved_at": "2026-09-21T01:57:23Z",
+    "stage": "planned",
+    "status_basis": "P&Z approved a rezoning request from General Business to Planned Development - Mixed Use; source explicitly says buildings would still require permits and inspections before occupancy.",
+    "scope": "Rezone 805 N May Street from General Business to Planned Development - Mixed Use; property owner discussed ideas for the property at the meeting.",
+    "masiate_fit": "Mixed-use redevelopment could create future exterior, interior, concrete, framing, roofing, flooring, paint, plumbing, lighting and sitework needs; fit is an inference because no building permit was found.",
+    "estimated_value": "CAD appraised value $851,440 (property valuation, not project value)",
+    "estimated_start": null,
+    "estimated_completion": null,
+    "bid_deadline": null,
+    "participants": [
+      {
+        "name": "Naveed Anwar Sunny",
+        "role": "owner",
+        "source_url": "https://esearch.madisoncad.org/"
+      },
+      {
+        "name": "Mr. Sunny",
+        "role": "applicant/owner",
+        "source_url": "https://madisonvilletexas.gov/planningandzoning"
+      },
+      {
+        "name": "City of Madisonville Planning & Zoning Commission",
+        "role": "reviewing body",
+        "source_url": "https://madisonvilletexas.gov/planningandzoning"
+      }
+    ],
+    "business_contacts": [],
+    "sources": [
+      {
+        "url": "https://madisonvilletexas.gov/planningandzoning",
+        "title": "AUGUST 4, 2026 P&Z PACKET",
+        "date": "2026-08-03",
+        "page": "packet text lines 164-180",
+        "evidence": "The packet/minutes record public hearing and approval of rezoning 805 N May Street from General Business to Planned Development - Mixed Use, and note that any buildings would require permits and inspections before occupancy.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/madison/evidence/024_AUGUST_4_2026_P_Z_PACKET.city.pdf"
+      },
+      {
+        "url": "https://esearch.madisoncad.org/",
+        "title": "Madison CAD property search result for 805 N May",
+        "date": "2026-09-21",
+        "page": "resultsList[0]",
+        "evidence": "CAD result identifies property ID 21707, owner SUNNY NAVEED ANWAR, address 805 N MAY, legal description A0110 J S HUNTER TRACT 137, 1.54 acres, appraised value $851,440.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/madison/evidence/madison_cad_results_805_may.json"
+      }
+    ],
+    "unknowns": [
+      "Specific mixed-use concept and building scope",
+      "Whether permits were later submitted or issued",
+      "Whether owner is soliciting contractors"
+    ],
+    "next_research": "Check subsequent City Council action and search/request building permit records for 805 N May Street.",
+    "disposition": "candidate"
+  },
+  {
+    "id": "madison-madisonville-pz-20260804-205-w-south-homes",
+    "county": "Madison",
+    "project_name": "205 West South Street variance for two single-family homes",
+    "address": "205 West South Street",
+    "city": "Madisonville",
+    "record_type": "planning",
+    "source_record_id": "Madisonville Planning & Zoning Commission 2026-08-04 variance item",
+    "record_date": "2026-08-04",
+    "retrieved_at": "2026-09-21T01:57:23Z",
+    "stage": "planned",
+    "status_basis": "P&Z minutes say the owner planned to build a single-family home on each parcel and then sell them, and the variance was approved; no issued building permits were found in accessible records.",
+    "scope": "Variance request for parcels at 205 West South Street due to lot depth requirements; owner stated plan to build one single-family home on each parcel and sell them.",
+    "masiate_fit": "Near-term residential new-build signal; Masiate fit is inferred for concrete, framing, roofing, siding, paint, flooring, fencing and lighting/plumbing trades if building permits follow.",
+    "estimated_value": "CAD appraised value $34,350 (property valuation, not project value)",
+    "estimated_start": null,
+    "estimated_completion": null,
+    "bid_deadline": null,
+    "participants": [
+      {
+        "name": "Monty Moses & Jacob",
+        "role": "owner",
+        "source_url": "https://esearch.madisoncad.org/"
+      },
+      {
+        "name": "Mr. Monty",
+        "role": "applicant/owner",
+        "source_url": "https://madisonvilletexas.gov/planningandzoning"
+      },
+      {
+        "name": "City of Madisonville Planning & Zoning Commission",
+        "role": "reviewing body",
+        "source_url": "https://madisonvilletexas.gov/planningandzoning"
+      }
+    ],
+    "business_contacts": [],
+    "sources": [
+      {
+        "url": "https://madisonvilletexas.gov/planningandzoning",
+        "title": "AUGUST 4, 2026 P&Z PACKET",
+        "date": "2026-08-03",
+        "page": "packet text lines 190-198",
+        "evidence": "The minutes say the owner discussed plans for building a single-family home on each parcel and then selling them, and P&Z approved the variance as presented.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/madison/evidence/024_AUGUST_4_2026_P_Z_PACKET.city.pdf"
+      },
+      {
+        "url": "https://esearch.madisoncad.org/",
+        "title": "Madison CAD property search result for 205 W South",
+        "date": "2026-09-21",
+        "page": "resultsList[0]",
+        "evidence": "CAD result identifies property ID 102300, owner MONTY MOSES & JACOB, address 205 W SOUTH ST, legal description A0010 JOB S COLLARD TRACT 185-5, 0.19 acres, appraised value $34,350.",
+        "local_path": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/madison/evidence/madison_cad_results_205_south.json"
+      }
+    ],
+    "unknowns": [
+      "Number and exact configuration of parcels covered by the variance",
+      "Whether residential building permits were submitted or issued",
+      "Builder/contractor identity"
+    ],
+    "next_research": "Check city issued permits for 205 W South Street and parcel split details before treating this as active construction.",
+    "disposition": "candidate"
+  }
+]
