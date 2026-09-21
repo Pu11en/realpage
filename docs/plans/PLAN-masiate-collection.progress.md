@@ -1,5 +1,23 @@
 # Masiate Collection Progress
 
+## Active First Pass: September 20, 2026
+
+- Drew explicitly approved eight workers for around one hour, slightly over or
+  under acceptable, then a review before any further pass.
+- Launched eight independent bot research sessions via /api/spawn, one per
+  county plus statewide; all eight were verified running under Codex.
+- This does not use or alter the /gowork three-worker cap, and the old stopped
+  run remains untouched. Isolated worktrees and per-lane outputs retain evidence.
+- Collection wrap target 02:35 UTC, delivery around 02:45 UTC September 21
+  (9:35/9:45 PM Central September 20), not an exact deadline or coverage promise.
+- Official source downloads are appearing in worker evidence folders; no final
+  qualified lead count or PDF is claimed at launch.
+- A completion relay instruction was delivered to the statewide worker, which
+  will wake this coordinator for final review/PDF delivery; no second pass.
+- Exact receipts are in masiate-pilot-launch.json; finalization instructions in
+  masiate-pilot-finalization.md. This pilot supersedes full-coverage requirements
+  for this first delivery only; the larger plan remains a continuation backlog.
+
 ## Launch Preparation: September 20, 2026
 
 - User requested several /gowork sessions for collection; prepared 50 initial small tasks with source-specific continuation rules and an early provisional data delivery.

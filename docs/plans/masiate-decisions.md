@@ -1,5 +1,13 @@
 # Masiate Full Plan: Decision Interview
 
+Latest execution decision: Drew approved approximately one hour with eight
+workers, allowing a little over/under and deciding on further work afterward.
+Q18 below is superseded for the first pass. Eight independent Codex sessions
+were launched through the existing bot session API and confirmed running;
+this is not /gowork and does not change its three-worker cap. See
+PLAN-masiate-one-hour.md and masiate-pilot-launch.json. First-pass coverage can
+be partial; do not execute the full 50-task backlog before delivering.
+
 Check: `git diff --check`
 
 ## Current Deliverable: Top-Property PDF
