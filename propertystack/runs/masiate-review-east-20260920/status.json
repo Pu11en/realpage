@@ -1,0 +1,26 @@
+{
+  "role": "review-east",
+  "state": "complete",
+  "started_at": "2026-09-21T02:20:05Z",
+  "checkpoint_at": "2026-09-21T02:24:26Z",
+  "finished_at": "2026-09-21T02:24:26Z",
+  "deadline_target": "2026-09-21T02:38:00Z",
+  "input_root": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/review-input",
+  "output_paths": {
+    "reviewed_records": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/finish/review-east/reviewed_records.json",
+    "decisions": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/finish/review-east/decisions.json",
+    "summary": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/finish/review-east/summary.md",
+    "status": "/home/drewp/.local/state/cranesignal/masiate/pilot-20260920-2048/finish/review-east/status.json"
+  },
+  "counts": {
+    "records_loaded": 50,
+    "records_reviewed": 50,
+    "reviewed_records_output": 21,
+    "included": 8,
+    "watchlist": 13,
+    "excluded_decisions": 12
+  },
+  "notes": [
+    "Completed review-east bounded finalization. No crawls, paid APIs, prospect messages, pushes, relays or live changes were made."
+  ]
+}
