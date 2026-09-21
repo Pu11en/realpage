@@ -95,10 +95,9 @@ shortlists are the main experience. Do not assume a full sales-tracking system
 was selected. The regular public CraneSignal section remains agreed.
 
 Drew also requested "a pdf of everything" and wants to explore the feature
-further. PDF delivery is required; its scope and whether this means a product
-export or an immediate planning document need the next answer.
+further. Q4 below resolves this as a feature export of the complete lead report.
 
-## Current Question
+## PDF Deliverable
 
 Q4: What should "a PDF of everything" contain?
 
@@ -112,8 +111,27 @@ Q4: What should "a PDF of everything" contain?
 - D. The full feature/build plan as a PDF for Drew now, rather than a future
   lead-report export.
 
-Answer: pending. Multiple PDF types can be selected. Do not silently omit leads
-from an "everything" report, substitute a shortlist, or generate invented leads.
+Answer: **A**, selected by Drew on 2026-09-20 and repeated after an interrupted
+turn. The feature must export a complete lead report: overview, every collected
+lead in the selected collection, project details, available business contacts,
+fit reasons, dates, source links and information gaps. This is not a request to
+generate a planning PDF now. Do not silently replace all leads with a top-N
+shortlist, omit unknown fields without explanation, or invent missing facts.
+
+## Current Question
+
+Q5: How far should the agent go beyond the information already collected?
+
+- A. Answer from saved data and research a selected lead online when asked;
+  recommended balance of useful investigation, speed and controllable cost.
+- B. Use collected data only; fast and predictable, with missing facts left open.
+- C. Automatically check live sources while answering; fresher evidence, with
+  longer waits and higher potential usage cost.
+- D. Also launch new searches for additional leads; broader discovery with
+  longer-running jobs and more usage to manage.
+
+Answer: pending. This selects a future capability, not authorization to run
+paid research now. Outreach remains with the owner under Q1.
 
 ## Product Questions To Explore Next
 
