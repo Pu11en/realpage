@@ -7,10 +7,13 @@ The what-and-why lives in `PLAN-seo-geo.md`; this file is only about making six 
 
 - Network out is fine: nodejs.org, codeload.github.com, pypi.org all answer.
 - Python 3.12 with `requests`, `beautifulsoup4`, `lxml` already importable.
-- `claude -p --model sonnet` works from inside a session and answers. **This is the one AI engine
-  we can actually use today.**
-- **There is no `.env` in this repo on this machine.** No `GEMINI_API_KEY`. (DeepSeek is out by Drew's call anyway.)
-  So NiubiGEO cannot run here yet, and neither can GeoLook's automated sampling.
+- `claude -p --model sonnet` works from inside a session and answers.
+- **Gemini works too** (2026-09-23): David's key is in `.env.seo` (gitignored, verified), the Generative
+  Language API is enabled on his Cloud project, and `gemini-2.5-flash` answers. The key was shared over
+  Discord and David chose not to rotate it -- known, accepted.
+- So we have **two real engines today**: Claude on the subscription, Gemini on the API key. DeepSeek is out
+  by Drew's call.
+- `.env` was **not** gitignored in this repo despite the README saying so. Fixed 2026-09-23 (commit 871c6d6).
 - No Docker, no Node, no admin, no WSL, and nobody at the keyboard to click UAC. CrawlSEO needs a
   Google OAuth client that doesn't exist yet, so its dashboard cannot be logged into either.
 - The data is much better than I assumed: **1,861 visible leads** (Texas 1,587 + Arizona 274),
@@ -19,14 +22,15 @@ The what-and-why lives in `PLAN-seo-geo.md`; this file is only about making six 
 
 ## What that means for the run
 
-Three of the four tools are blocked on credentials I don't have, so **a run spent installing tools
-would produce almost nothing.** The run is therefore built around the two things that need no
-credentials and carry all the value:
+With Claude and Gemini both working, **the week-1 measurement no longer depends on NiubiGEO at all.**
+NiubiGEO's value is its dashboard (nice demo footage); its data can come from ~150 lines of Python I
+write, test and own, which is far more reliable than betting on a Node app installing on Windows with no
+admin. So NiubiGEO and GeoLook drop to "optional, hour 6, allowed to fail", and the run is built around:
 
 1. **Make the site readable** — metadata plus real, crawlable pages built from those 1,861 leads.
-2. **Take the "before" measurement with the only engine we have** — Claude, on the subscription.
+2. **Take the "before" measurement with both engines** — Claude via CLI, Gemini via API.
 
-Tool installs are last, time-boxed, and allowed to fail.
+CrawlSEO stays blocked until the OAuth client exists; everything else is unblocked.
 
 ## Guardrails (fixed, not negotiable during the run)
 
@@ -76,22 +80,24 @@ Extend `site/data/build_data.py` (not a second builder) to emit static HTML alon
   and passes the RealPage check. Commit after the state pages, again after the metro pages, again
   after the city pages — three commits, so a failure late doesn't lose the earlier work.
 
-**Hour 5 — The "before" measurement (Claude only).**
+**Hour 5 — The "before" measurement (Claude + Gemini).**
 Write `tooling/seo/questions.csv` with the two sets from `PLAN-seo-geo.md` (Set A, ~15 questions
 CraneSignal could plausibly be cited for; Set B, ~10 buying-intent questions from the archived
-RealPage bank). Write `tooling/seo/sample_claude.py`, lifted from
-`archive/realpage/ai-visibility/tooling/local_ai.py`: fresh `claude -p --model sonnet
---setting-sources "" --allowedTools WebSearch,WebFetch` per question, JSON per answer, resumable,
-capped at 60 calls, with `fake_ai.py`-style tests that never call Claude. Run it once. Write
+RealPage bank). Write `tooling/seo/sample.py`, lifted from
+`archive/realpage/ai-visibility/tooling/local_ai.py`, with two engines behind one interface:
+`claude-web` (fresh `claude -p --model sonnet --setting-sources "" --allowedTools WebSearch,WebFetch`
+per question) and `gemini` (`gemini-2.5-flash` with Google Search grounding on, key read from
+`.env.seo`, never printed). JSON per answer, resumable, Claude capped at 60 calls, Gemini rate-limited
+politely, `fake_ai.py`-style tests that never call either. Run both engines once. Write
 `docs/seo/answer-share/2026-09-23/report.md`: for every question, which companies were named, in
-what order, with which sources cited — and for Set A, whether CraneSignal appeared at all
-(expected: no, and that is the point). Label it honestly as Claude-via-CLI, not the consumer app.
-Commit.
+what order, with which sources cited, per engine and where the two disagree — and for Set A, whether
+CraneSignal appeared at all (expected: no, and that is the point). Label both honestly as API/CLI
+engines, not the consumer apps. Commit.
 
 **Hour 6 — Install what can be installed, then write the handoff.**
-Time-boxed 30 minutes: Node 22 from the official ZIP into `%LOCALAPPDATA%` (no admin), clone
-NiubiGEO and GeoLook, `npm ci`, scaffold their `.env` files with the key names left blank, and try
-GeoLook with a small `fcntl` shim. Whatever comes up, comes up; whatever doesn't gets one paragraph
+Time-boxed 30 minutes, and **now genuinely optional** since hour 5 already produced the data: Node 22
+from the official ZIP into `%LOCALAPPDATA%` (no admin), clone NiubiGEO and GeoLook, `npm ci`, wire
+NiubiGEO to the Gemini key for the dashboard/demo footage, and try GeoLook with a small `fcntl` shim. Whatever comes up, comes up; whatever doesn't gets one paragraph
 in `tooling/seo/INSTALL.md` saying exactly how it failed. Then the handoff: update
 `PLAN-seo-geo.md` ticks, write the end-of-run summary at the top of the progress file — what shipped,
 what the numbers were, what is waiting on David, what is waiting on Drew — and post the closing
@@ -105,7 +111,8 @@ of them deployed. An audit scorecard. A dated "before" record of what Claude ans
 questions, naming every company it mentions. And an honest install note about the three tools that
 need credentials.
 
-What you will **not** have: Search Console numbers (needs your Google setup), Gemini answers (needs the key), a CrawlSEO dashboard (needs the OAuth client), or anything live (needs Drew).
+What you will **not** have: Search Console numbers (needs the Search Console property verified), a
+CrawlSEO dashboard (needs the OAuth client), or anything live (needs Drew).
 
 ## What I need from you before I start
 
@@ -116,7 +123,9 @@ What you will **not** have: Search Console numbers (needs your Google setup), Ge
 3. **The Claude sampling cap** — 60 `claude -p` calls will use subscription quota on top of the run
    itself. Confirm 60, or give me a smaller number, or say "skip the sampling" and hour 5 becomes more
    city pages.
-4. Optional, not blocking: if `.env.seo` (Google) or a `.env` with `GEMINI_API_KEY` appears before I start, I'll fold the CrawlSEO baseline and the Gemini leg in.
+4. Done already: `GEMINI_API_KEY` is in `.env.seo` and verified. Still optional and not blocking: the
+   Google OAuth client (`GOOGLE_CLIENT_ID` / `GOOGLE_CLIENT_SECRET` / `GOOGLE_PAGESPEED_KEY`) would let me
+   fold the CrawlSEO baseline in too.
 
 ## Known risks, and what I do about each
 
