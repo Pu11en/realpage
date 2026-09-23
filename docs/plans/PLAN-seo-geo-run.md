@@ -105,8 +105,7 @@ of them deployed. An audit scorecard. A dated "before" record of what Claude ans
 questions, naming every company it mentions. And an honest install note about the three tools that
 need credentials.
 
-What you will **not** have: Search Console numbers (needs your Google setup), Gemini or DeepSeek
-answers (needs keys), a CrawlSEO dashboard (needs the OAuth client), or anything live (needs Drew).
+What you will **not** have: Search Console numbers (needs your Google setup), Gemini answers (needs the key), a CrawlSEO dashboard (needs the OAuth client), or anything live (needs Drew).
 
 ## What I need from you before I start
 

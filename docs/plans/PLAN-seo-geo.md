@@ -175,14 +175,14 @@ Try: `bash tooling/seo/crawl.sh` then open http://localhost:3100
   (decide after seeing GSC impressions on the state pages). Caddyfile serves `/leads/*`. Sitemap from T3 picks the
   new pages up. Tests: each state page has >= 20 rows of real text and no `RealPage` text. Commit.
 - [ ] **T5 GeoLook loop (start tracking).** In WSL: `python3 scripts/geo.py new --url https://app.cranesignal.com
-  --market en`; set `DEEPSEEK_API_KEY` in its `.env` for auto-derivation; write `tooling/seo/questions.csv` (Set A +
+  --market en`; write `tooling/seo/questions.csv` (Set A +
   Set B above; reuse the 35 archived questions) and load it into GeoLook's question bank; run the first full cycle
   (crawl -> audit -> sample every engine we have keys for -> tickets -> assets). Compare its generated `llms.txt` /
   JSON-LD with T3's and merge anything better into `site/`. Record which of its 10 API engines we actually have keys
   for (its README doesn't list them) and which 7 are manual; do one manual sampling pass via its sample-sheet for
   Perplexity (free tier) and Google AI Overviews now, ChatGPT once the plan is back on (a human pastes answers). Copy `work/<slug>/` outputs to
   `docs/seo/geolook/<date>/`. Commit.
-- [ ] **T6 First weekly NiubiGEO run (the demo footage).** `npm ci`, `GEMINI_API_KEY` + `DEEPSEEK_API_KEY` in its
+- [ ] **T6 First weekly NiubiGEO run (the demo footage).** `npm ci`, `GEMINI_API_KEY` in its
   `.env` (no OpenRouter, no Anthropic key), `npm run server` (8787). Project = `app.cranesignal.com`; models: the
   newest Gemini the tool lists, one run with web search on and one without as the control; keyword tests = Set B without
   the brand name. First run: confirm the direct-key path actually works for Gemini and note the exact model
