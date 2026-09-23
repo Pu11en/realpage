@@ -1,0 +1,44 @@
+{
+  "engine": "claude-web",
+  "engine_label": "Claude (Sonnet) via claude -p, web search on",
+  "is_consumer_app": false,
+  "set": "A",
+  "question": "How do I find new apartment projects before they open for leasing?",
+  "intent": "find-pipeline",
+  "asked_on": "2026-09-23",
+  "ok": true,
+  "answer": "Finding apartment projects before they hit Apartments.com or Zillow means going upstream to permitting data, industry trade sources, and developer pipelines rather than consumer listing sites. Here's how people who do this professionally (site selectors, leasing agents, house hunters trying to get in early) actually do it:\n\n**1. City/county permitting and planning portals (free, most reliable, most local)**\n- Building permit databases and site plan review dockets show projects 12\u201324 months before leasing opens. Most cities run these on **Accela**, **Granicus/Legistar**, or a custom GIS portal (e.g., NYC DOB NOW, SF Planning's Property Information Map, Seattle's SDCI portal).\n- Planning/zoning commission meeting agendas (often on the same Granicus/Legistar platforms) show proposed multifamily projects even earlier, at the rezoning or variance stage.\n- Search your city name + \"development tracker\" or \"pipeline map\" \u2014 many mid-size and large cities publish one.\n\n**2. Commercial real estate data platforms (paid, industry-standard)**\n- **Yardi Matrix** \u2014 the most widely used multifamily pipeline tracker; shows planned/under-construction/lease-up stages.\n- **CoStar** \u2014 broader CRE data, strong on construction pipeline and permits.\n- **Zonda** (formerly Meyers Research) \u2014 multifamily and residential development tracking.\n- **RealPage Market Analytics** \u2014 similar pipeline/lease-up data, used heavily by property managers.\nThese are enterprise-priced, but some public libraries or university business programs provide free CoStar access.\n\n**3. Developer investor relations / press pages**\nLarge multifamily developers publish new-community announcements directly. Worth bookmarking if you have target markets: **Greystar**, **AvalonBay Communities**, **Camden Property Trust**, **Alliance Residential**, **Wood Partners**, **Mill Creek Residential**, **Related Group**, **Trammell Crow Residential**, **The Bozzuto Group**. REITs among these (AvalonBay, Camden, Equity Residential, UDR) also disclose pipeline in quarterly earnings decks/10-Qs.\n\n**4. Trade press (free/cheap, covers announcements as they happen)**\n- **Bisnow** (local city editions), **Multi-Housing News**, **GlobeSt.com**, **The Real Deal** (NY/LA/SF/Chicago/Miami), **Commercial Observer**, and local **Business Journals** (bizjournals.com) real estate sections. These routinely report groundbreakings and financing closes well before leasing.\n\n**5. \"Coming soon\" / pre-leasing signals on consumer sites**\nOnce a project has an official name and site, it often shows up early on **Apartments.com**, **RentCafe** (many management companies white-label their pre-leasing pages on RentCafe), **Zillow**, and **Apartment List** with \"Coming Soon\" or waitlist signup \u2014 this is the latest stage but easiest to monitor with saved searches/alerts.\n\n**6. Construction indicators**\n- Local **crane count reports** (e.g., Rider Levett Bucknall publishes a semi-annual crane index for major US/international cities) indicate active construction volume.\n- Google Alerts for \"[city] + apartments + groundbreaking\" or \"+ pre-leasing\" catches press releases early.\n\n**Practical approach**: for a specific city, start with that city's planning/permitting portal (free, earliest signal) plus Google Alerts, then layer in Bisnow/local business journal coverage, and finally watch RentCafe/Apartments.com for the pre-leasing waitlist to open.\n\nSources: this answer draws on general industry knowledge (no web search was run) \u2014 some product names, URLs, or ownership (e.g., recent M&A among these data platforms) may have changed since my January 2026 knowledge cutoff, so I'd verify current names/pricing before relying on them.",
+  "brands": [
+    {
+      "brand": "Apartments.com",
+      "first_at": 43,
+      "mentions": 3,
+      "rank": 1
+    },
+    {
+      "brand": "Zillow",
+      "first_at": 61,
+      "mentions": 2,
+      "rank": 2
+    },
+    {
+      "brand": "Yardi",
+      "first_at": 1049,
+      "mentions": 1,
+      "rank": 3
+    },
+    {
+      "brand": "CoStar",
+      "first_at": 1171,
+      "mentions": 2,
+      "rank": 4
+    },
+    {
+      "brand": "RealPage",
+      "first_at": 1340,
+      "mentions": 1,
+      "rank": 5
+    }
+  ],
+  "links": []
+}

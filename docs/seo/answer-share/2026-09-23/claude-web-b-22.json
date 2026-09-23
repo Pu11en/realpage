@@ -1,0 +1,99 @@
+{
+  "engine": "claude-web",
+  "engine_label": "Claude (Sonnet) via claude -p, web search on",
+  "is_consumer_app": false,
+  "set": "B",
+  "question": "What tools do property owners use to set optimal rent pricing using market data?",
+  "intent": "buy-adjacent",
+  "asked_on": "2026-09-23",
+  "ok": true,
+  "answer": "Property owners and managers typically draw on a few categories of tools, depending on portfolio size and property type:\n\n**Multifamily/portfolio revenue management (dynamic pricing engines)**\n- **RealPage AI Revenue Management** (formerly YieldStar) \u2014 the dominant player for large multifamily operators; sets suggested rents using competitor and internal occupancy/lease-expiration data. It's currently the subject of major antitrust litigation (see below).\n- **Yardi RENTmaximizer** \u2014 similar revenue-management module bundled into the Yardi Voyager property management suite.\n- **Entrata Revenue Management** \u2014 comparable offering integrated with Entrata's PM platform.\n- **Rentana** \u2014 newer AI-driven pricing tool aimed at multifamily operators, positioned as a lighter-weight alternative to RealPage/Yardi.\n\n**Comp/estimate tools for individual landlords and smaller portfolios**\n- **Rentometer** \u2014 pulls neighborhood-level comps to give a quick rent estimate for a specific unit.\n- **Zillow Rental Manager** \u2014 pricing guidance tied to Zillow's listing traffic and local comps.\n- **Apartments.com / CoStar** \u2014 CoStar's underlying dataset (submarket rent trends, absorption, concessions) is the standard for professional analytics; Apartments.com is the consumer-facing listing arm.\n\n**General property management platforms with built-in rent-analysis features**\n- **AppFolio**, **Buildium**, **DoorLoop** \u2014 scale to larger professionally-managed portfolios and include comp/market-rent reports alongside leasing and accounting.\n- **TurboTenant**, **TenantCloud**, **Baselane**, **Hemlane**, **Landlord Studio** \u2014 aimed at smaller landlords (up to ~100 units), often with simpler \"rent analysis\" reports built from third-party comp data.\n\n**Short-term/vacation rental dynamic pricing**\n- **PriceLabs** \u2014 widely used (500,000+ properties), with an algorithm that factors in local events, seasonality, and comp sets.\n- **Beyond (formerly Beyond Pricing)** and **Wheelhouse** \u2014 similar dynamic pricing tools for STR hosts, often plugging into Airbnb/Vrbo calendars.\n\n**Underlying market data sources these tools draw on**\n- **CoStar / Yardi Matrix** \u2014 the two big paid data providers for institutional-grade multifamily market data.\n- **Zumper**, **ApartmentList** \u2014 publish rent index reports often used as secondary benchmarks.\n- **HUD Fair Market Rents** and **Census/ACS data** \u2014 public data sometimes used for baseline or compliance purposes (e.g., Section 8 rents).\n\n**Important caveat**: algorithmic rent-pricing tools, especially RealPage's YieldStar/AI Revenue Management, are under significant legal scrutiny. The DOJ and multiple states sued RealPage and dozens of large landlords (Greystar, Lincoln Property, Equity Residential, and others) alleging the software enabled unlawful coordination on rents. A $359.9M settlement covers many of the landlord defendants, with final approval set for October 15, 2026 and a claims deadline of January 29, 2027; RealPage itself has a separate DOJ settlement requiring it to stop certain market-survey practices and redesign features that discourage rent decreases or align pricing across competitors. Anyone evaluating these tools now should factor in that legal overhang.\n\nSources:\n- [15 Best Landlord Software 2026](https://www.baselane.com/resources/15-best-landlord-software-platforms)\n- [11 Best Rental Property Management Software for 2026](https://www.landlordstudio.com/blog/best-rental-property-management-software)\n- [The Best Real Estate Market Analysis Tools of 2026](https://www.rentana.io/blog/best-real-estate-market-analysis-tools)\n- [Best Dynamic Pricing Tools for Vacation Rentals 2026](https://www.aeve.ai/best-dynamic-pricing-tools-vacation-rentals-2026)\n- [RealPage \u2014 Wikipedia](https://en.wikipedia.org/wiki/RealPage)\n- [Tracking algorithmic rent-pricing lawsuits \u2014 Multifamily Dive](https://www.multifamilydive.com/news/algorithmic-rent-pricing-lawsuit-tracker/826178/)\n- [DOJ and RealPage Agree to Settle Rental Price-Fixing Case \u2014 ProPublica](https://www.propublica.org/article/doj-realpage-settlement-rental-price-fixing-case)\n- [$359.9M RealPage antitrust class action settlement](https://topclassactions.com/lawsuit-settlements/open-lawsuit-settlements/359-9m-realpage-antitrust-class-action-settlement/)\n- [$359.9M+ RealPage Settlements \u2014 classaction.org](https://www.classaction.org/news/359.9m+-realpage-settlements-partially-resolve-class-action-litigation-over-alleged-price-fixing-conspiracy-for-rental-propert)",
+  "brands": [
+    {
+      "brand": "RealPage",
+      "first_at": 197,
+      "mentions": 13,
+      "rank": 1
+    },
+    {
+      "brand": "Yardi",
+      "first_at": 464,
+      "mentions": 4,
+      "rank": 2
+    },
+    {
+      "brand": "Entrata",
+      "first_at": 584,
+      "mentions": 2,
+      "rank": 3
+    },
+    {
+      "brand": "Zillow",
+      "first_at": 991,
+      "mentions": 2,
+      "rank": 4
+    },
+    {
+      "brand": "Apartments.com",
+      "first_at": 1088,
+      "mentions": 2,
+      "rank": 5
+    },
+    {
+      "brand": "CoStar",
+      "first_at": 1105,
+      "mentions": 3,
+      "rank": 6
+    },
+    {
+      "brand": "AppFolio",
+      "first_at": 1372,
+      "mentions": 1,
+      "rank": 7
+    },
+    {
+      "brand": "Buildium",
+      "first_at": 1386,
+      "mentions": 1,
+      "rank": 8
+    }
+  ],
+  "links": [
+    {
+      "title": "",
+      "url": "https://www.baselane.com/resources/15-best-landlord-software-platforms"
+    },
+    {
+      "title": "",
+      "url": "https://www.landlordstudio.com/blog/best-rental-property-management-software"
+    },
+    {
+      "title": "",
+      "url": "https://www.rentana.io/blog/best-real-estate-market-analysis-tools"
+    },
+    {
+      "title": "",
+      "url": "https://www.aeve.ai/best-dynamic-pricing-tools-vacation-rentals-2026"
+    },
+    {
+      "title": "",
+      "url": "https://en.wikipedia.org/wiki/RealPage"
+    },
+    {
+      "title": "",
+      "url": "https://www.multifamilydive.com/news/algorithmic-rent-pricing-lawsuit-tracker/826178/"
+    },
+    {
+      "title": "",
+      "url": "https://www.propublica.org/article/doj-realpage-settlement-rental-price-fixing-case"
+    },
+    {
+      "title": "",
+      "url": "https://topclassactions.com/lawsuit-settlements/open-lawsuit-settlements/359-9m-realpage-antitrust-class-action-settlement/"
+    },
+    {
+      "title": "",
+      "url": "https://www.classaction.org/news/359.9m+-realpage-settlements-partially-resolve-class-action-litigation-over-alleged-price-fixing-conspiracy-for-rental-propert"
+    }
+  ]
+}

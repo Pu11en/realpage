@@ -35,8 +35,9 @@
 	# Always public: the privacy page, and the shell it needs to look right
 	# (styles, fonts, favicon). None of these carry data.
 	# robots.txt, sitemap.xml and llms.txt must answer before any sign-in logic: a crawler
-	# that gets a redirect here learns nothing about the site.
-	@public_site path /privacy.html /robots.txt /sitemap.xml /llms.txt /css/* /fonts/* /favicon.ico /favicon.png /favicon.svg /apple-touch-icon.png
+	# that gets a redirect here learns nothing about the site. indexnow-<key>.txt is the
+	# proof-of-ownership file the IndexNow engines fetch; it is public on purpose.
+	@public_site path /privacy.html /robots.txt /sitemap.xml /llms.txt /indexnow-*.txt /css/* /fonts/* /favicon.ico /favicon.png /favicon.svg /apple-touch-icon.png
 	handle @public_site {
 		root * {$SITE_ROOT:/srv}
 		file_server

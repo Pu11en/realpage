@@ -110,3 +110,62 @@ Full suite: **412 passed**, with the same 7 failures / 7 errors as the pre-work 
 (`docs/2026-09-20-maintenance-software-icp.md`), so they are pre-existing and untouched.
 
 ## Step 3 — the "before" measurement ⏳ next
+
+## Step 3 — the "before" measurement ✅ 2026-09-23
+
+`tooling/seo/questions.csv` (25 questions: 15 Set A, 10 Set B) and `tooling/seo/sample.py`,
+which asks both engines and writes one JSON per question per engine so a stopped run
+resumes without re-asking. **50 answers, no failures.** Saved in
+`docs/seo/answer-share/2026-09-23/` with `report.md`.
+
+The numbers that matter:
+
+- **CraneSignal is named in 0 of 30 Set A answers.** That is the before-picture, and the
+  point of taking it.
+- **Set A (how do I find buildings) is owned by Yardi 83%, CoStar 63%, RealPage 47%.**
+  The engines answer "which tool should I buy" when someone asks "where do I find this
+  data" — which is the opening: none of them hand over an actual list.
+- **Set B (what should I buy) is RealPage 95%, Yardi 85%, AppFolio 80%, Entrata 65%,
+  Buildium 60%.** This is the answer-share view, and it is demo-able today.
+- **The engines cite vendor sites and market-report publishers**, in this order:
+  realpage.com (17), appfolio.com (11), mmgrea.com (9), yardimatrix.com (8), then
+  multihousingnews, yardi.com, matthews.com, reddit.com, mrisoftware.com,
+  cushmanwakefield, multifamilydive, credaily, buildium.com, g2, capterra. This is the
+  most actionable output of the whole run: it names the surfaces a new page has to sit
+  beside, and it says that trade press and review sites matter as much as our own pages.
+
+Implementation notes:
+
+- Each Claude question runs a fresh `claude -p --model sonnet --setting-sources ""` with
+  `cwd` set to the home directory, so this repo's files and instructions cannot leak into
+  an answer and flatter us. 25 calls, well under the 60-call cap.
+- Gemini uses `gemini-2.5-flash` with Google Search grounding, key read from `.env.seo`
+  and never printed. Grounding links are Vertex redirect URLs that hide the real site, so
+  `host_of()` reads the domain out of the chunk title instead.
+- Both engines are labelled in every record and in the report as API/CLI, **not** the
+  consumer apps. `claude -p` with web search is not what a person sees in the Claude app,
+  and the Gemini API is not the Gemini app.
+- Claude took ~35s per question (~15 min for 25); Gemini ~7s.
+
+Tests: `tooling/qa/fixes_tests/test_seo_sample.py`, 15 checks, none of which call an
+engine or the network. One of them asserts CraneSignal appears in **zero** Set A answers —
+when that test fails, the SEO work has started to land, and the baseline note needs
+updating rather than the test.
+
+## Step 4 — IndexNow ✅ 2026-09-23
+
+`tooling/seo/indexnow.py` pushes new and changed URLs to Bing, Yandex, Seznam and
+DuckDuckGo. Free, no account, no approval — and Bing's index is what ChatGPT search and
+Copilot read, so it is the shortest path from "page published" to "an engine can cite it".
+Google does not participate and gets the sitemap instead.
+
+- `--init` created `site/indexnow-7774e206da914a60a8f0806be55b8e59.txt`. The key is public
+  by design: the engines fetch that file to prove whoever submits controls the host. The
+  Caddyfile now serves `/indexnow-*.txt`.
+- `--changed-since HEAD~1` submits only what a commit touched, so the weekly data refresh
+  does not re-submit all 21 URLs every time.
+- The script refuses to submit anything that is not live, including the key file itself:
+  an engine that fetches a 404 learns the page does not exist. Nothing has been submitted
+  yet, because nothing is deployed. `--dry-run` shows 21 URLs ready to go.
+
+Full suite after steps 3 and 4: **427 passed**, same 7 failures / 7 errors as baseline.

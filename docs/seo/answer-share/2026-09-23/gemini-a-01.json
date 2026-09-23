@@ -1,0 +1,191 @@
+{
+  "engine": "gemini",
+  "engine_label": "Gemini (gemini-2.5-flash) via API, Google Search grounding on",
+  "is_consumer_app": false,
+  "set": "A",
+  "question": "How do I find apartment buildings under construction in Dallas?",
+  "intent": "find-pipeline",
+  "asked_on": "2026-09-23",
+  "ok": true,
+  "answer": "To find apartment buildings under construction in Dallas, you can explore several resources, ranging from specialized real estate data platforms to local government permitting offices and commercial real estate firms. The Dallas-Fort Worth metro area consistently ranks high for new apartment construction, indicating a dynamic market with many ongoing projects.\n\nHere are some of the best ways to research apartment buildings under construction in Dallas:\n\n**1. Online Construction Databases and Real Estate News:**\nThese platforms often track projects from their planning stages through completion.\n*   **ConstructionWire:** This online database is highlighted as a top resource for finding construction project leads in Dallas, including residential multi-unit construction. It provides details on projects, involved individuals, and contact information.\n*   **Urbanize Dallas:** This platform provides news and updates on commercial real estate developments, which often includes multifamily projects.\n*   **RentCafe:** This site provides analyses of new apartment construction and has noted Dallas-Fort Worth's high volume of new units.\n*   **RealPage Market Analytics:** This is a data source mentioned for tracking apartment inventory growth and units under construction.\n\n**2. City of Dallas Permitting and Planning Departments:**\nThe City of Dallas Building Inspection Department oversees construction permits, and their public records can reveal ongoing and approved multifamily projects.\n*   You can access information about the Dallas permitting process, including formal application submission and plan review, through the city's permitting portal (DevelopDallas portal) or in person at the Oak Cliff Municipal Center.\n*   Companies like La Sierra Planning Group assist developers in navigating the Dallas building permit process for multifamily properties.\n\n**3. Commercial Real Estate Brokers and Advisors:**\nFirms specializing in multifamily properties often publish market reports and maintain databases of projects in their pipeline.\n*   **MMG Real Estate Advisors:** They offer interactive reports on the multifamily construction pipeline in Dallas-Fort Worth.\n*   **Matthews:** This firm publishes market reports, such as the Dallas-Fort Worth Multifamily Market Report, which includes data on units under construction.\n*   **Northmarq:** This company also provides insights into the DFW multifamily market and construction activity.\n\n**4. Specific Developers and Construction Companies:**\nMany companies are actively involved in building new apartment complexes in Dallas. Checking their project portfolios can provide direct information.\n*   **Major Developers:** Woods Capital and Todd Interests have been noted for spearheading residential growth in Downtown Dallas.\n*   **Active Construction Firms:**\n    *   **Savoy Equity Partners and Savoy General Contractors** are involved in projects like \"The Marcus\" in the Cedars neighborhood.\n    *   **CAP Real Estate** has several boutique apartment projects under construction in Dallas, including locations at 5313 Reiger, Gateway Flats, 417 E 9th, 2202 Mail Ave, and Arroyo.\n    *   **ELITE Construction** is a multifamily construction company active in Dallas.\n    *   **CBG Building Company** has projects in the Dallas area, such as the Vitruvian West community in Addison.\n    *   **Carleton Companies** owns, develops, and builds multifamily assets across Texas, including Dallas.\n    *   **DFW Project Solutions** lists projects like \"The Flynn,\" a 5-story apartment building in East Dallas with a planned completion in 2026.\n*   **Top Multifamily Contractors:** Some of the best multifamily contractors in Dallas include TriArc Construction, Baker Construction, Hill & Wilkinson General Contractors, Duke, Inc., JE Dunn Construction, Rogers-O'Brien Construction, KWA Construction, and Andres Construction.\n\nBy utilizing these various sources, you can gather comprehensive information on apartment buildings currently under construction in the Dallas area.",
+  "sources": [
+    {
+      "title": "culturemap.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFgGf_ImndGUNQrGQIqWSwFuu0dlvYohaqL2yS1n5bKtyAsP1KyZLvEVWc8YnNvHLUiCFGD5RZhoRusHaIqcCCi5B-pAMt5ITBduhkxNu9GQrxaCof1vbpAWiSUb0Li6um19oMCKzK6WBTUudoLEBU0Wd-pJJZDhPAEC9xNUGDmmwdhWoHdteqHz839f3yjGMwp"
+    },
+    {
+      "title": "constructionwire.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGd4TI4rFrhn65NrvnoZ4z4FpGf6uv2k8FrpRL--afVB7DdwLAYFcNmQawuvqiHGPpl7i7DwvqKsrJ-C7wvYaJIwx7lo5ZgabtVDcVT6EHZ-cmZ6vPNYtQ2nP-EKDv63BsM"
+    },
+    {
+      "title": "urbanize.city",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFcqUu8h9S80oPFPXU38NLzRzLCm2E5eCDfh1uahDJ4cn_e6Qx2FHg25coBwQoXFt-EFqg38vrbnsuVZlla6IG5G-nfUyugVtKAWSBM0JkuL7cYDc4b54k="
+    },
+    {
+      "title": "realpage.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFV60EWxBP0mXAeOF5vCtgLDPnBihsEJxK459tnFAPnlFYbkMeOUcItMa21hlQi3SdJAU0mQaO6m8X6Eij16UmQ0ev2alhV-okMurtw35QFGmkuSEYbnXQRZsPqdg8codQG06pbaRXt5rv-SsTgRfttsjTe-lVD4np9e3C45a2oidRd47B_1YBN0j3qzV8G6ScC0sUS"
+    },
+    {
+      "title": "permitflow.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE1lF8eVe7m_p7gEQnQcKNHOsnd7Rl_mSqPESWMbH5IS6HUi7JPIToCz_ONZtH-X5jJuMbBB3WYgNrfV9etMriXKr1jBXRKID2ssEsSP4vCQeE98yxVeJ-GA5ukfo1_akdk1CVG9OMAvv4STW0A0Nwg"
+    },
+    {
+      "title": "capitalconstructiongrp.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFy-i67PdegBkkAqYSgF30ZZXL6lRZ-G4klxuSTGS9jLv5GE-4wu4G-wrwYFVJeheYrBKaqNPZ6R4zzSeP-Qy5Nyn5OV1Ya3DiEl4JHvyjrwrYCGAiXK3T3W0do1aylIddkmagQZhr3p9gqf-HXP9acP56qFDhm5t8_sWP_dQ0CEw4-ByuquOhP7klO"
+    },
+    {
+      "title": "eb3construction.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFVbwNwHA618uNzm6FmIiaJI2UTpuQ0-h2HVfh9Hg0uDgkgulSxEHOJkL1XA5QdwV2jiGGav59GhBb5Vmu7s1gB2WeL52_GMRLCRm5kM9Fet_-De47j1b1o53V1ioRHUIQtLiMOTC3G6iPZiqFbYhdjxC6EYrYLQ0SG9h0y1RZA2S9xBI-DYN2ysVsRPhIxchJrC0fRinew"
+    },
+    {
+      "title": "texasbuildingdesign.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEJ1WVHPNfehllQU6CYTKTLW0HLFjlh0iVuLM1mFnr7hplSpOoJlGm_iy-S-1oVRow4ARsK-ujzipBPpMk5WTjE6r0is_FOBVc8zVfC4B_vwFYEkQhJYQCDV3bHmnn2SUubsl_rSgjWph8SOKVwy4UPTREFcKMzBcd_D0J1Y5siOIaH7GDtws8vTz341ub6zk66ASPijflH4w=="
+    },
+    {
+      "title": "lasierrapg.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFWMIe5-_QNRVfrNm1S49yW8LUD0TV3ItfhQC4d8ma7t1P3jiIYJSotBEJ-ZpM2lICvSFDEM30brNvuv6U0mfyjeteQNLMwM0aAi3qh0aLah1JeQ_9sy-2nnw=="
+    },
+    {
+      "title": "mmgrea.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHnzT66XkXhWUuEMyWAxF5Rn9lk-X4fTGe5LdmhhlyFL37EPdodml81hJMKr6CZ89fgZDh091cG_SsIRgdra4XBBz5REqdO2tp5w2d1VoAjmYwIMD4-VoWfRqqb1TraZNImbANucDZhcq4BJ1h77CZqfPA9KYhn7w=="
+    },
+    {
+      "title": "mmgrea.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFeocN-nBj3WqcbLmFrRhI8YoMg57SYUXY-zP1BjKC5HKmCi-TZdE1Ob0lepbyLT5mNFGeDlhcQei5gP2s3zM5nZwyg97rprFEEjZervb1nz1UfKE-w6pJBigNdCNTq3ut20-wKp0rUN67x6TmWDMt7xD-3dCCU0g=="
+    },
+    {
+      "title": "matthews.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH8xeDzoHPri6zo4R5Z9ZDvU9ShdK8t4D53yUHs8CL-1EDyw9yYtXigedmLoHgAST4uu9Pngs3BRS5UKPLgw9hPN-PZQu-sGr2KNUbM1o77pKFGtYA3_5zj407A31dYhVwDIs61oNrq7mN7C5pRyp0YoIiBjsCPQvmk"
+    },
+    {
+      "title": "northmarq.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGtFP_hCLA9ee7G5ytN-yAZNQ3JZ9oHs_D9y9SOHWcqPFQJcguIDTVfCfpAh2curWhTTEajRi7hrq8gD7a26HFVZ6H44VaEgcAr7WQPPCLVsTxKoZWPw6vwF-DmjRZ97XhdLx9u52WLoJ738vPyyiAQVm4Wxny4Le_lBjyChAD2z0Y-OLT64J1QCHpOu5fRE4B_1ctMtLTugO9Ebs84jWD_unPrJrJY_Q=="
+    },
+    {
+      "title": "tacostreetlocating.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG0deNBjBvB0lkkfmuaBFuB0-eaYsEud4UqJCS7vcJVz_he01NDNI8BbJCke994LmFBMkEPKZNxtzEHfLNTFqfFzgFIRDgX80EXXXhiPl9c9tQ_IU558OeFYAnbFa0H7ZxVLx6NuzJy438kX0n2PRf038BW6d0MOKehscs4LnZcBK2Gvl2kJQ=="
+    },
+    {
+      "title": "themarcusdallas.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFzIFGEf0zFhvSqauJxfT7EP9dUqHThPZHhFHtaH-eoH8KQo--UjqFRRDHNC0jmc463LWWqXGi5NfeUYBplaGgLnmv-o94ho5D6w1CiIZ-ETQNUtuFy8IXIi64pA-Stlh4mWY92ovtDtcQvsQZScz9YSa7mTfr_2b_lFBIxxA=="
+    },
+    {
+      "title": "cap-mf.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGjv3RXesftHobl74u7Q-iKGIpHRGsIXJmGgZMBkRoCqiKRPDTHUZkXiamxQuFdc1B4GmSOgkxCxvkGXOYy6_PJN_KRXLvtlhGB5COHJ2Y5OXpUFndOT7_Yq3f8IPWV-KE41hCWvrEeOw3Y1v4LUFPlrzsRUFRDyJSkp6rw1lECw1ODZmbrlVWhOvmq_rbIX5JG"
+    },
+    {
+      "title": "eliteconstructionusa.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEAuOkvnklK5m5quOo3XxZ4IyIFhpf3qrvlnMjDLZytz2PmOVSFKwMnyjsZXGJLfDurVxqrZHvhioYCWS_bKYWwd-urYFKXc9i4DbNx_XygliIwkXGea3VRXHkKWeHsq7wUo2y3CIlf5NISqy369PBP-4qE1rvVQFbFjFLP5zBdW5_XrA=="
+    },
+    {
+      "title": "cbgbuildingcompany.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFXYTZslDcg-5pjKnFWmTtw98AxfmTXRed36SsFRi2CvIecP_niPqxdOZFYpgpjRcjS44P5Op7swZt3qjbxHMI-wHHS7OCR9425rU5H-SitxsgwQnsoibPVmc2Mse5KPOEU9mL3JLgOtl4-IaQ="
+    },
+    {
+      "title": "carletoncompanies.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQERgERq5aDOT6yc87lldUnio1WoToEQVBN_PUMnoNlGowidFDPPkofE0GpF7vnK_S4o0bEXonE_-SgQWk_E1YLBAefuVw9xk5kiJo9HurZvyxBe3piGW-W6"
+    },
+    {
+      "title": "dfwprojectsolutions.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF55fZlF66ZVQLI9EXOiduxc06kDCqyu6PLXKvro7BYN2zr0j3HlQ0pdHMN0_w5HQqqFFh-n3c_Qea4vxJkZj6nVfHPObKQscIxoHwVJsNi4h7JigGC9aM0V7nCkDMEXkQbwrfFEwrxqweojlL7"
+    },
+    {
+      "title": "generalcontractors.org",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE_4Oc5oS8UwEEbADAQ6vrhbHrKu3jxMipEnPS5NZVvMa40BPbjD6UC9_Sm0NlaBVDkiVJMv9XL1TD0ElGt-xjBNkgkPPe9fJpd36RP6diax1ofazLKsaj_YYpsbh6JCuuykigfXIDfpBQH6g8rM9mv0Z0SKCmOKzRf6YVmIkTekKvkK_qv2N_QAlIhc8Sw"
+    }
+  ],
+  "brands": [
+    {
+      "brand": "RealPage",
+      "first_at": 1148,
+      "mentions": 1,
+      "rank": 1
+    }
+  ],
+  "links": [
+    {
+      "title": "culturemap.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFgGf_ImndGUNQrGQIqWSwFuu0dlvYohaqL2yS1n5bKtyAsP1KyZLvEVWc8YnNvHLUiCFGD5RZhoRusHaIqcCCi5B-pAMt5ITBduhkxNu9GQrxaCof1vbpAWiSUb0Li6um19oMCKzK6WBTUudoLEBU0Wd-pJJZDhPAEC9xNUGDmmwdhWoHdteqHz839f3yjGMwp"
+    },
+    {
+      "title": "constructionwire.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGd4TI4rFrhn65NrvnoZ4z4FpGf6uv2k8FrpRL--afVB7DdwLAYFcNmQawuvqiHGPpl7i7DwvqKsrJ-C7wvYaJIwx7lo5ZgabtVDcVT6EHZ-cmZ6vPNYtQ2nP-EKDv63BsM"
+    },
+    {
+      "title": "urbanize.city",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFcqUu8h9S80oPFPXU38NLzRzLCm2E5eCDfh1uahDJ4cn_e6Qx2FHg25coBwQoXFt-EFqg38vrbnsuVZlla6IG5G-nfUyugVtKAWSBM0JkuL7cYDc4b54k="
+    },
+    {
+      "title": "realpage.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFV60EWxBP0mXAeOF5vCtgLDPnBihsEJxK459tnFAPnlFYbkMeOUcItMa21hlQi3SdJAU0mQaO6m8X6Eij16UmQ0ev2alhV-okMurtw35QFGmkuSEYbnXQRZsPqdg8codQG06pbaRXt5rv-SsTgRfttsjTe-lVD4np9e3C45a2oidRd47B_1YBN0j3qzV8G6ScC0sUS"
+    },
+    {
+      "title": "permitflow.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE1lF8eVe7m_p7gEQnQcKNHOsnd7Rl_mSqPESWMbH5IS6HUi7JPIToCz_ONZtH-X5jJuMbBB3WYgNrfV9etMriXKr1jBXRKID2ssEsSP4vCQeE98yxVeJ-GA5ukfo1_akdk1CVG9OMAvv4STW0A0Nwg"
+    },
+    {
+      "title": "capitalconstructiongrp.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFy-i67PdegBkkAqYSgF30ZZXL6lRZ-G4klxuSTGS9jLv5GE-4wu4G-wrwYFVJeheYrBKaqNPZ6R4zzSeP-Qy5Nyn5OV1Ya3DiEl4JHvyjrwrYCGAiXK3T3W0do1aylIddkmagQZhr3p9gqf-HXP9acP56qFDhm5t8_sWP_dQ0CEw4-ByuquOhP7klO"
+    },
+    {
+      "title": "eb3construction.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFVbwNwHA618uNzm6FmIiaJI2UTpuQ0-h2HVfh9Hg0uDgkgulSxEHOJkL1XA5QdwV2jiGGav59GhBb5Vmu7s1gB2WeL52_GMRLCRm5kM9Fet_-De47j1b1o53V1ioRHUIQtLiMOTC3G6iPZiqFbYhdjxC6EYrYLQ0SG9h0y1RZA2S9xBI-DYN2ysVsRPhIxchJrC0fRinew"
+    },
+    {
+      "title": "texasbuildingdesign.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEJ1WVHPNfehllQU6CYTKTLW0HLFjlh0iVuLM1mFnr7hplSpOoJlGm_iy-S-1oVRow4ARsK-ujzipBPpMk5WTjE6r0is_FOBVc8zVfC4B_vwFYEkQhJYQCDV3bHmnn2SUubsl_rSgjWph8SOKVwy4UPTREFcKMzBcd_D0J1Y5siOIaH7GDtws8vTz341ub6zk66ASPijflH4w=="
+    },
+    {
+      "title": "lasierrapg.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFWMIe5-_QNRVfrNm1S49yW8LUD0TV3ItfhQC4d8ma7t1P3jiIYJSotBEJ-ZpM2lICvSFDEM30brNvuv6U0mfyjeteQNLMwM0aAi3qh0aLah1JeQ_9sy-2nnw=="
+    },
+    {
+      "title": "mmgrea.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHnzT66XkXhWUuEMyWAxF5Rn9lk-X4fTGe5LdmhhlyFL37EPdodml81hJMKr6CZ89fgZDh091cG_SsIRgdra4XBBz5REqdO2tp5w2d1VoAjmYwIMD4-VoWfRqqb1TraZNImbANucDZhcq4BJ1h77CZqfPA9KYhn7w=="
+    },
+    {
+      "title": "mmgrea.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFeocN-nBj3WqcbLmFrRhI8YoMg57SYUXY-zP1BjKC5HKmCi-TZdE1Ob0lepbyLT5mNFGeDlhcQei5gP2s3zM5nZwyg97rprFEEjZervb1nz1UfKE-w6pJBigNdCNTq3ut20-wKp0rUN67x6TmWDMt7xD-3dCCU0g=="
+    },
+    {
+      "title": "matthews.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH8xeDzoHPri6zo4R5Z9ZDvU9ShdK8t4D53yUHs8CL-1EDyw9yYtXigedmLoHgAST4uu9Pngs3BRS5UKPLgw9hPN-PZQu-sGr2KNUbM1o77pKFGtYA3_5zj407A31dYhVwDIs61oNrq7mN7C5pRyp0YoIiBjsCPQvmk"
+    },
+    {
+      "title": "northmarq.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGtFP_hCLA9ee7G5ytN-yAZNQ3JZ9oHs_D9y9SOHWcqPFQJcguIDTVfCfpAh2curWhTTEajRi7hrq8gD7a26HFVZ6H44VaEgcAr7WQPPCLVsTxKoZWPw6vwF-DmjRZ97XhdLx9u52WLoJ738vPyyiAQVm4Wxny4Le_lBjyChAD2z0Y-OLT64J1QCHpOu5fRE4B_1ctMtLTugO9Ebs84jWD_unPrJrJY_Q=="
+    },
+    {
+      "title": "tacostreetlocating.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG0deNBjBvB0lkkfmuaBFuB0-eaYsEud4UqJCS7vcJVz_he01NDNI8BbJCke994LmFBMkEPKZNxtzEHfLNTFqfFzgFIRDgX80EXXXhiPl9c9tQ_IU558OeFYAnbFa0H7ZxVLx6NuzJy438kX0n2PRf038BW6d0MOKehscs4LnZcBK2Gvl2kJQ=="
+    },
+    {
+      "title": "themarcusdallas.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFzIFGEf0zFhvSqauJxfT7EP9dUqHThPZHhFHtaH-eoH8KQo--UjqFRRDHNC0jmc463LWWqXGi5NfeUYBplaGgLnmv-o94ho5D6w1CiIZ-ETQNUtuFy8IXIi64pA-Stlh4mWY92ovtDtcQvsQZScz9YSa7mTfr_2b_lFBIxxA=="
+    },
+    {
+      "title": "cap-mf.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGjv3RXesftHobl74u7Q-iKGIpHRGsIXJmGgZMBkRoCqiKRPDTHUZkXiamxQuFdc1B4GmSOgkxCxvkGXOYy6_PJN_KRXLvtlhGB5COHJ2Y5OXpUFndOT7_Yq3f8IPWV-KE41hCWvrEeOw3Y1v4LUFPlrzsRUFRDyJSkp6rw1lECw1ODZmbrlVWhOvmq_rbIX5JG"
+    },
+    {
+      "title": "eliteconstructionusa.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEAuOkvnklK5m5quOo3XxZ4IyIFhpf3qrvlnMjDLZytz2PmOVSFKwMnyjsZXGJLfDurVxqrZHvhioYCWS_bKYWwd-urYFKXc9i4DbNx_XygliIwkXGea3VRXHkKWeHsq7wUo2y3CIlf5NISqy369PBP-4qE1rvVQFbFjFLP5zBdW5_XrA=="
+    },
+    {
+      "title": "cbgbuildingcompany.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFXYTZslDcg-5pjKnFWmTtw98AxfmTXRed36SsFRi2CvIecP_niPqxdOZFYpgpjRcjS44P5Op7swZt3qjbxHMI-wHHS7OCR9425rU5H-SitxsgwQnsoibPVmc2Mse5KPOEU9mL3JLgOtl4-IaQ="
+    },
+    {
+      "title": "carletoncompanies.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQERgERq5aDOT6yc87lldUnio1WoToEQVBN_PUMnoNlGowidFDPPkofE0GpF7vnK_S4o0bEXonE_-SgQWk_E1YLBAefuVw9xk5kiJo9HurZvyxBe3piGW-W6"
+    },
+    {
+      "title": "dfwprojectsolutions.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF55fZlF66ZVQLI9EXOiduxc06kDCqyu6PLXKvro7BYN2zr0j3HlQ0pdHMN0_w5HQqqFFh-n3c_Qea4vxJkZj6nVfHPObKQscIxoHwVJsNi4h7JigGC9aM0V7nCkDMEXkQbwrfFEwrxqweojlL7"
+    },
+    {
+      "title": "generalcontractors.org",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE_4Oc5oS8UwEEbADAQ6vrhbHrKu3jxMipEnPS5NZVvMa40BPbjD6UC9_Sm0NlaBVDkiVJMv9XL1TD0ElGt-xjBNkgkPPe9fJpd36RP6diax1ofazLKsaj_YYpsbh6JCuuykigfXIDfpBQH6g8rM9mv0Z0SKCmOKzRf6YVmIkTekKvkK_qv2N_QAlIhc8Sw"
+    }
+  ]
+}

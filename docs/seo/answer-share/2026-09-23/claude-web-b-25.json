@@ -1,0 +1,67 @@
+{
+  "engine": "claude-web",
+  "engine_label": "Claude (Sonnet) via claude -p, web search on",
+  "is_consumer_app": false,
+  "set": "B",
+  "question": "Which property management platform is best for a new apartment lease-up?",
+  "intent": "buy-pms",
+  "asked_on": "2026-09-23",
+  "ok": true,
+  "answer": "For a new apartment lease-up specifically (pre-stabilization, heavy marketing/CRM need, fast unit turn), the calculus is a bit different from steady-state property management \u2014 you need strong lead management, ILS syndication, and often dynamic pricing more than deep accounting. Note that AppFolio's own blog ranked AppFolio #1 in both searches, so treat those specific rankings as vendor marketing rather than neutral comparisons \u2014 the underlying feature info is still useful.\n\n**Most commonly used for large/institutional lease-ups:**\n- **Entrata** \u2014 widely used by larger multifamily operators for lease-ups because of its integrated leasing center, marketing/ILS syndication, and prospect-to-resident funnel tools.\n- **RealPage (OneSite + LRO/AI Revenue Management)** \u2014 strong on revenue management (dynamic pricing during lease-up is a big deal \u2014 you're setting rents on a curve as units deliver) and deep reporting/compliance, though the search results flagged it as weaker on tenant portal/lease application UX.\n- **Yardi Voyager** \u2014 the choice if the property (or the owner's portfolio) needs tight integration between leasing and accounting/ledgers from day one; very common with institutional owners/REITs.\n\n**Mid-market / simpler lease-ups:**\n- **AppFolio** \u2014 easiest to stand up quickly, good AI-assisted leasing/screening, mobile-first; a good fit for smaller lease-ups or owners without a huge in-house ops team.\n\n**Leasing-specific CRM add-ons** (often paired with one of the above PMS platforms rather than replacing it): **Knock CRM**, **Funnel Leasing**, and **LeaseHawk** \u2014 these specialize in the lead-to-lease conversion funnel, call tracking, and follow-up automation, which matters a lot during an active lease-up when you're generating high traffic volume from ILS listings (Apartments.com, Zillow, etc.).\n\n**Practical recommendation:** if this is a large, institutionally-owned property, Entrata or RealPage (with its revenue management module) is the more common choice specifically because of the pricing/absorption tools built for lease-up. If it's a smaller or independently-owned property where ease of setup and cost matter more than sophisticated revenue management, AppFolio is a reasonable, faster-to-deploy option. Worth getting a demo from at least two of these and asking specifically about lease-up/absorption pricing tools and ILS integrations, since that's the differentiator versus general property management.\n\nSources:\n- [Best Apartment Management Software for Multifamily in 2026 (RealPage)](https://www.realpage.com/blog/best-apartment-management-software/)\n- [Best Property Management Software 2026: Top 6 Companies Compared (AppFolio)](https://www.appfolio.com/blog/best-property-management-softwares-compared-2026)\n- [AppFolio Performance Platform Beats the Best Property Management Software for Leasing in 2026](https://www.appfolio.com/blog/best-property-management-software-for-leasing-2026)\n- [RealPage Alternatives: Top 9 Competitors Compared for 2026](https://www.re-leased.com/software/realpage-alternatives-top-9-competitors-compared-for-2026)\n- [Property Management Systems for Multifamily Compared (DOOR)](https://door.com/article/property-management-systems-multifamily-comparison)\n- [Entrata Alternatives: Top 9 Options for Property Managers in 2026](https://www.re-leased.com/software/best-9-entrata-alternatives-for-property-managers-in-2026)",
+  "brands": [
+    {
+      "brand": "AppFolio",
+      "first_at": 290,
+      "mentions": 8,
+      "rank": 1
+    },
+    {
+      "brand": "Entrata",
+      "first_at": 542,
+      "mentions": 4,
+      "rank": 2
+    },
+    {
+      "brand": "RealPage",
+      "first_at": 724,
+      "mentions": 6,
+      "rank": 3
+    },
+    {
+      "brand": "Yardi",
+      "first_at": 1024,
+      "mentions": 1,
+      "rank": 4
+    },
+    {
+      "brand": "Apartments.com",
+      "first_at": 1800,
+      "mentions": 1,
+      "rank": 5
+    },
+    {
+      "brand": "Zillow",
+      "first_at": 1816,
+      "mentions": 1,
+      "rank": 6
+    }
+  ],
+  "links": [
+    {
+      "title": "",
+      "url": "https://www.realpage.com/blog/best-apartment-management-software/"
+    },
+    {
+      "title": "",
+      "url": "https://www.appfolio.com/blog/best-property-management-softwares-compared-2026"
+    },
+    {
+      "title": "",
+      "url": "https://www.re-leased.com/software/realpage-alternatives-top-9-competitors-compared-for-2026"
+    },
+    {
+      "title": "",
+      "url": "https://door.com/article/property-management-systems-multifamily-comparison"
+    }
+  ]
+}

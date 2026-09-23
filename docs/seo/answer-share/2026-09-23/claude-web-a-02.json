@@ -1,0 +1,57 @@
+{
+  "engine": "claude-web",
+  "engine_label": "Claude (Sonnet) via claude -p, web search on",
+  "is_consumer_app": false,
+  "set": "A",
+  "question": "Where can I find a list of new apartment developments in Houston?",
+  "intent": "find-pipeline",
+  "asked_on": "2026-09-23",
+  "ok": true,
+  "answer": "## Where to find Houston apartment development news\n\n**Local news trackers (free, updated regularly)**\n- **Houston Chronicle's Residential Development Tracker** \u2014 a running list of projects in various stages (proposed, under construction, completed) across the metro. Best single free source for a curated overview.\n- **Houston Business Journal** and **Houston.org** (Greater Houston Partnership) also publish periodic roundups of new residential/mixed-use projects.\n- **Houston Opportunity Zones Active Projects** page (houstontx.gov) if you care about projects tied to Opportunity Zone incentives.\n\n**Industry pipeline reports (free/semi-free, more data-driven)**\n- **MMG Real Estate Advisors** publishes quarterly Houston multifamily pipeline reports with unit counts and submarket breakdowns.\n- **Yardi Matrix** publishes a Houston multifamily market report blog series with construction-pipeline stats (units underway, starts, completions) \u2014 good for macro trend numbers even without a paid subscription.\n\n**Paid/professional data platforms (most granular, project-by-project)**\n- **CoStar** \u2014 the industry-standard commercial real estate database; tracks individual multifamily projects by address, developer, unit count, and delivery date. Typically requires a subscription or brokerage access.\n- **RealPage Analytics** and **Yardi Matrix** (full platform, not just the blog) \u2014 similar paid tools used by developers, lenders, and brokers to see the full pipeline (planning, under construction, lease-up, stabilized).\n\n**Practical tip:** if you want a specific submarket (e.g., Inner Loop, Katy, The Woodlands, EaDo), a local commercial broker (Marcus & Millichap, JLL, Colliers Houston offices) can usually pull a CoStar-based pipeline report for that area faster than piecing it together from news sources.\n\nSources:\n- [Track residential developments coming to the Houston area in 2026 and beyond](https://www.houstonchronicle.com/projects/real-estate/houston-residential-development-tracker/)\n- [16 exciting developments coming to Houston in 2026 and beyond](https://www.houstonchronicle.com/business/real-estate/article/retail-mixed-use-new-development-houston-21118226.php)\n- [New Residential Developments Rising in Houston | Houston.org](https://houston.org/news/new-residential-developments-rising-houston/)\n- [Houston Q1 2026 Pipeline Report \u2013 MMG Real Estate Advisors](https://mmgrea.com/houston-q1-2026-pipeline-report/)\n- [Opportunity Zones Active Projects](https://www.houstontx.gov/opportunityzones/activeprojects.html)\n- [Houston Apartment Data - Yardi Matrix Blog](https://www.yardimatrix.com/blog/houston-apartment-data/)\n- [Houston Multifamily Market Report | Yardi Matrix Blog](https://www.yardimatrix.com/blog/houston-multifamily-market-report/)\n- [CoStar | #1 Commercial Real Estate Information Company](https://www.costar.com/)\n- [Houston losing ground in Texas apartment boom as Dallas, Austin shine](https://www.houstonchronicle.com/business/real-estate/article/houston-apartment-market-2025-21025355.php)",
+  "brands": [
+    {
+      "brand": "Yardi",
+      "first_at": 801,
+      "mentions": 6,
+      "rank": 1
+    },
+    {
+      "brand": "CoStar",
+      "first_at": 1088,
+      "mentions": 4,
+      "rank": 2
+    },
+    {
+      "brand": "RealPage",
+      "first_at": 1306,
+      "mentions": 1,
+      "rank": 3
+    }
+  ],
+  "links": [
+    {
+      "title": "",
+      "url": "https://www.houstonchronicle.com/projects/real-estate/houston-residential-development-tracker/"
+    },
+    {
+      "title": "",
+      "url": "https://houston.org/news/new-residential-developments-rising-houston/"
+    },
+    {
+      "title": "",
+      "url": "https://mmgrea.com/houston-q1-2026-pipeline-report/"
+    },
+    {
+      "title": "",
+      "url": "https://www.houstontx.gov/opportunityzones/activeprojects.html"
+    },
+    {
+      "title": "",
+      "url": "https://www.yardimatrix.com/blog/houston-apartment-data/"
+    },
+    {
+      "title": "",
+      "url": "https://www.costar.com/"
+    }
+  ]
+}

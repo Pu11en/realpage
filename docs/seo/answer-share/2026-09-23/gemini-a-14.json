@@ -1,0 +1,229 @@
+{
+  "engine": "gemini",
+  "engine_label": "Gemini (gemini-2.5-flash) via API, Google Search grounding on",
+  "is_consumer_app": false,
+  "set": "A",
+  "question": "What is the best way to find newly sold apartment complexes for sales prospecting?",
+  "intent": "find-sales",
+  "asked_on": "2026-09-23",
+  "ok": true,
+  "answer": "To find newly sold apartment complexes for sales prospecting, focusing on recent transactions and ownership changes is key. Several specialized data providers and traditional real estate methods can assist in identifying these valuable leads.\n\nHere's a breakdown of the best ways:\n\n### 1. Commercial Real Estate Data Providers\n\nThese platforms specialize in aggregating and analyzing commercial property data, including transaction histories and ownership details:\n\n*   **CoStar:** Widely considered a leading resource for commercial real estate information, CoStar offers extensive data on multifamily properties, including sale comparables and transaction records. It has a vast database built by over 1,500 researchers. CoStar also owns other prominent platforms like LoopNet, Showcase, CityFeet, and Ten-X, where many listings appear.\n*   **Crexi:** Often seen as an alternative to CoStar, Crexi provides commercial property records and sales comparables, including detailed multifamily records. You can filter for sold properties and set up alerts for new listings that match your criteria.\n*   **Reonomy (Altus Group):** This platform excels in ownership intelligence and off-market prospecting. Reonomy uses property intelligence technology to identify properties likely to sell and provides access to property records, transaction history, debt data, and verified owner contact information. It's particularly useful for uncovering the real decision-makers behind LLCs and shell entities.\n*   **PropStream:** An all-in-one solution for real estate lead generation, analysis, and marketing. PropStream offers comprehensive data on over 160 million properties nationwide and includes more than 165 filters to help you pinpoint high-potential leads. It can identify off-market opportunities like pre-foreclosures, vacant homes, or tax-delinquent properties. The platform also features built-in marketing tools such as skip tracing and direct mail capabilities for outreach.\n*   **Yardi Matrix:** Known for its in-depth coverage of multifamily, affordable housing, student housing, and other commercial property types. Yardi Matrix is strong for tracking sales, loan maturities, and ownership data, as well as providing insights into the supply pipeline.\n*   **MSCI Real Capital Analytics (RCA):** A reliable source for capital-markets transaction data in commercial real estate.\n*   **Smart Apartment Data:** This service focuses specifically on multifamily data and analytics, helping users identify sales opportunities, track industry changes, and obtain detailed information on apartments, developers, management, and changes in property ownership.\n*   **PropertyShark:** Offers detailed ownership information, comparables, and foreclosure data for both residential and commercial properties, with strong coverage in major metropolitan areas. It can also help research phone numbers for the actual owners behind LLCs.\n*   **ATTOM Data Solutions:** A bulk data provider that aggregates comprehensive U.S. property data, covering both residential and commercial properties, and offers market analytics and predictive tools.\n*   **HelloData & ALN Apartment Data:** These are specialized multifamily analytics platforms providing daily updates on apartment units, rent comparables, occupancy rates, and market analytics.\n\n### 2. Public Records and Government Databases\n\nLocal government entities, such as county assessor's or recorder's offices, maintain public records of property transfers and sales. While this data can be highly accurate, accessing and filtering it for specific apartment complexes may require more effort. Some states are \"non-disclosure\" states, where sale price information might be limited or estimated in public records. Utilizing GIS (Geographic Information System) maps can help identify complexes, then cross-reference with public records for owner names and addresses.\n\n### 3. Real Estate Brokerage Firms and Networks\n\nCommercial real estate brokers and appraisers often have proprietary databases of recent transactions, including off-market deals (properties not publicly listed for sale). Building relationships with these professionals can provide early access to information about newly sold apartment complexes. Many brokers also maintain mailing lists for new deals, including \"pocket listings\" that are not widely advertised.\n\n### 4. Industry News and Publications\n\nCommercial real estate news outlets and publications frequently report on significant apartment complex sales. Following these sources can help you stay informed about recent transactions in your target markets. CoStar News, for example, often covers these sales.\n\n### 5. Other Proactive Methods\n\n*   **Driving for Dollars:** This involves physically driving through target neighborhoods to identify apartment complexes. Once a property is identified, you can use apps like PropStream to quickly research its ownership and send direct mailers to the owner.\n\nWhen using these methods, prioritize platforms and strategies that offer robust filtering capabilities (by property type, unit count, sale date, price, and location) and detailed ownership information to effectively target new owners or management for your sales prospecting efforts.",
+  "sources": [
+    {
+      "title": "reddit.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFpzwnc-e0qVSDC2HAzwJ_TIJFtAXFQugCG755hs3qK5lzsUaYyfkwDQM1AJRjR35vjY81mLAyGbAUkpzkM2kk5SBg6-TDNFDJZIw3BkuhqQ2zMPIpZKNUIuVrlK62A5WlI40aT_1etzXNqCAkleuoJeSoYxjd8HuGhBir9k9rPxJEPaaSdlsGJa66xoQpturDZKh6hbXF5qQsjqm6OnFa2"
+    },
+    {
+      "title": "forage.ai",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFCSgBmXsXM0zgBvoi8rCZnbDb_VLDhdiSYwgONPNXUAEYhMUjWRaJNoYG7E4IIBEhyntBCi3qxsaKprYh1j6Qfo25jCJFvWhhMJKw3sjnNp8vqVy_uGt9ci1KIMlnGr6SLB3jcRIUeS8yhkad_OOvYmme4rA=="
+    },
+    {
+      "title": "batchdata.io",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFLJGPLbbo4NkotSh_MwUWYQUrUYwsR9CiJqOPljLPk_aZYffmFeEDhEVLNGOd-u43basFYGzDmuRmKPa120Slo-5m5Ki-VER-6KWS4AzXP_vmSa780kEq4o5tozFk_q1bA4105FhRm7Fc0mfdyzi2Ss2S1-4z4A4M6SguTwRf2-OxK6gMdvw=="
+    },
+    {
+      "title": "compstak.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGKQWCR41hG6fk4D18K164ZryCNUaG-teOaRjDpvCOrIw0_d1r1ChQas2yfI5o09W6OuCzft5L8pE_jGErQLwjlmbBXU-4L4SYT0d6b8Uo_82VH_glaKRkmzq3PaBO_AEzN_2OLDJ93"
+    },
+    {
+      "title": "reonomy.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHByxYIEwHN3XsFr0DvsIgwLmlIHTOlMu5F6NAdFlgTo8AcpM6J6Zkyg33kGlEgAUDGglM_5Mu8NBv-jx7ql5IZJegjvFw-rhQvXrntHgF5sUzrYxwtb1naitKD0H6lPVkG8QpWoN1BArloFiMr5o9utCID_jxspmCd5w=="
+    },
+    {
+      "title": "labusinessjournal.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGkP3v7eqjPej4tMi-2SkiCKjtol_1iUj5CtXGW41CHRiy8MwpgbhdlLVSiY0rt8mwJe0RK50GciqCjrZEhzzMMF_EcpldHIpmkD54Mpbqb_nXWq1j3CpQjzhYEyb30-r-gJUeOEYMvN3zMeefv6ICYdSqZUpisx-X0s1J9iJf2io5zMFsmnxLiZQ=="
+    },
+    {
+      "title": "crexi.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF4fmXVdEmKYpk78pH_eKgV1oyn4AobeVef0U6-yf5tXMjI8HPc85D7jWxH55raxl47h02u4W-hXrwN6gziAJ_zyO_h09GlLBxD2m6X6F6QpbAwCE_GEWYD-_bl4jvf6FJ691KhVMEaP128lHzyQIfr6uQIzHsI5gWp6i4cG4E4xeMF9FSZLmNHYObWt1qVL-O0op-BLpFZGAP_IZEGZ0k68U7BWlF-UmlJ9w=="
+    },
+    {
+      "title": "crexi.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHjM99TACZSSq3WSFqD9Z4IJK1gInPXlZ1wySwGZZBH4gNR4wRcfkYrKg-WVBtmOWEtgPyDhQobsUhrNMl4mns7oOdy-b99gduJSluAa0QxOOd67iDujBVEJb7wvIZkQ-i8thcVRiUypyWx8BZPSDv-gk9rbFuGg6NifX4Z7fpXf6nxqM34Hgv7RMWRDkhWo9836JTOuMZndpmkr7TOta5Tqez614eGiWhjwe8hr6SLuKEn_edlZwGb2cYQtVtJPA=="
+    },
+    {
+      "title": "crexi.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE21_-QQT51T73W_qks7QFVBypWrOYrqIAwkjqalITDXciVRtvGXrYbS7oSghlHs0amzUEkMLEB2OFiZ1g9AoMeBZGSqHZt6dxPOdcJmXakFDTMazWXFCxW4CYRyOE8rur5UgbPBTU7"
+    },
+    {
+      "title": "crexi.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGSCtceORCEWH4HtCF4fgFNv_Dhm0ZV6NLSyFrpXyOmUA0sa17ioHjtGFV9JHkBz59tQ1Q5EphWbBuR2fKWsKCGxDjEnRmJjL0wCLebrVp3filuTd1oRaS_CWQ0789GRcotOQ=="
+    },
+    {
+      "title": "crexi.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFAogduxd2P53q03f3fcOWErz9ZWmj8KedueoaFUUua4q9mee4rfbXvM-9Z9G1KFNMHNbqcXjUVUDDWTpVgEGrdzwnOEdNOk97Mhr7CLho9sLV67HC5ZfjUR64jCH8JBZehGyci4OHj"
+    },
+    {
+      "title": "reonomy.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFUePPud-xxFVglocxHBNQbZRDS2oxPqICkTOkqCpY90ihN_PYTKf_cJYEevf4Gc7MQqIv4Jj3dP3RAG8fSIr95Z8loXFACU5BrpLmdJD2hWxjwSnTElFG2nw6_x2TSL4OBzTTHGcwTidOMR8Q2hd3lmfMDLA56NU6Z4fuyJQ=="
+    },
+    {
+      "title": "propstream.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFgCd1gIMaWxChp59bMQ6MQl1Q7M1RrjGd6nO4H88tSGl207ENoT22d__nIJcyB1gQxQ6ubcJ3B7HdRWe9HE_UIWDRSziaCgiLlDEUqvZggGRjXydShfcx-rqZp4h7ek9ysVKz871CnEId09jB085xaUUYx5jrYNVz-tsbbJqWtnHCQej5RiimhMRkGlBkP6tqhgrQntfeRZ62O71OBn2qEIjE_"
+    },
+    {
+      "title": "propstream.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEi7dZck8KXSvGZJHeeZAUzrMKWvIniPnd_teCasIkeMuxfAfG3UP6KnBnqXhvA0vzPQIUWaxBDT5AglAyseMncMw-K6VOPPqpIEj8dTMcXCvDXBylSCw=="
+    },
+    {
+      "title": "propstream.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFJsaMi6G3GzOBjpASlqGfZjCUxXgJy4yH80kFLiQ-unLJvsQSePw7dt3OYz8QYP7OLsqytshatrsBHIg8tnWJVM7ydICo3VBrHJKSyDBfrFYbQJNMLGd4ceK6_spT8sJtWn1878jPyYw=="
+    },
+    {
+      "title": "propstream.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQESDAc5HfkdIe50rBEEHc8bh8kuSdRO7AJJ0DzdIP-Jnodx2KmgCKYVkxQUi-fL4PhGRQN6YLSVrhHWIVw-RVFbcuOtLr8gx4ea4Ih0SZWWHGMmM9m3z6600z_FmcfX6piDKJWrdPP2G6k="
+    },
+    {
+      "title": "dwellsy.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGvgBUG76zFylfCfK0K7SepACs6ibGO9GPLB3WFF-bBmZeWXMFlu8FbUWZUJlnstBF_PUAddcONGruaypOhyL7oDGy3XsuD4tF4b3aVpU4iBd9L30Iw-tz6x7syFbeDuUAOUz6Ktloxc_uzTHGXNKTlgfwfsqzyw8AUeqVdkqQBwnBXrmo="
+    },
+    {
+      "title": "smartapartmentdata.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGYof33vLTjnw4_icZgVfFFt-DPsDF8efb4KvwV13_3lcQeDTdV_AcktJjVKW6dlMWfaFzVVH6P7epAmGqYHAfPrrG9KJfzMjwbuQ0lmdxQH2ypPT4RBNmbYSk="
+    },
+    {
+      "title": "propertyshark.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEan8LFtGGL1jWCaYxVB33gnjVy1bkRJr8l0JwFGcEOxPJWiVjWblll-REyh9oqKnaFptfrUScCPf4A2LM7lJg28qGehpN0DYWm60hk7N411XgMkDikdLQFDC20TQqpr0hqdrXQV1vGOGH1O-SspnKwdJ_OQzxWI8T77Xfd3F5ZcUMtw_t6e8umLJb-Q9ABbg=="
+    },
+    {
+      "title": "dwellsy.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHjnJpqLsxqPM3640sN44DHQg2g9LrP0wlrfqjj7QO2edJNLWE7z5W9SzVn8J9xK0rWEVPypahGDniYuXyZNonmUz18qRxWPhReuffLwAGhNJx5FS9wPVERtW6e0f76CPaA_FIkPHO6N_9hdP6AifdBTI0gfJCW6AsO2eq8yYQo79dCV_9o"
+    },
+    {
+      "title": "revyse.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQElQAC_0I2xVzXk7XmX8KgHhgzTmijXfN7827yLuUi5syTJTnzHGQrPisVS9sSWa61CFG2aHYO4uWDOCXu98rZzI-y7wYTadv4A8nO-IPfEerhWaf55V4jV3W_gbWDz4Uac9FmEIX0i"
+    },
+    {
+      "title": "biggerpockets.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEjnlp16QtkyKBvJd5TvVAxLsnbxId6bkqly_UmKbbi1G8YBAsHSiJ84pACPVkPzjNIElqFh8h_bYTu-vGB4oUvK8VhnACWhVsz4TWZNSZcKLDPcahQFmzKgzBgzSso4pknZlnZFdGj-Xb91kQdbvU7uwF-PrRrEyx3sp16uGFJlTdgGiuoDRPXfje8FafAuTJVFKnxqJ9KUBAoTw=="
+    },
+    {
+      "title": "realestatefinanceacademy.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFK-kfyPffJFeZfpGRgWgw52IK2cVqEWpv0FlAOuGY1c2jfOd0LqOvIxVt5Lov8TvmPBzOGyDX8CmmLqOQlTt5orvC0WQKG1UVfiMhiTiwWoqhhoWvtUBh0I78m5-wQiAg6K7Ohhn935n2joTafkm0jjmJGeyiJOY6YO4cmCEFVeLjtM_UKHIZKr-NboZiiGuq_HeuhjNacAuCjnm8Tkp58FybBEeNuoRTZ"
+    },
+    {
+      "title": "costar.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE4HzgZmpAsSMiIKDiml5S1G23MP7H-ogn8pShp2AhO832_j95bIaEceKLADSmKH7PUYYSUe1uW-ffwhRXb1QopRWFEHNtLAfZLT8OtGPwznlAiv0N2NWzXJvE3deqAyr9DM0eqDSZvzdCUadrf6w=="
+    },
+    {
+      "title": "costar.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFcbX0rHL2T30JHecQfHD_CvewrQY8ZiGXo4Pobs9R1gK9sKq6V6v28xO3ZUFUPJ0NnhOcVDE5LvYtfUFpDB9HxuUOoW4Nt1YXGcNs8s3tV79wl"
+    }
+  ],
+  "brands": [
+    {
+      "brand": "CoStar",
+      "first_at": 472,
+      "mentions": 5,
+      "rank": 1
+    },
+    {
+      "brand": "Yardi",
+      "first_at": 1984,
+      "mentions": 2,
+      "rank": 2
+    }
+  ],
+  "links": [
+    {
+      "title": "reddit.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFpzwnc-e0qVSDC2HAzwJ_TIJFtAXFQugCG755hs3qK5lzsUaYyfkwDQM1AJRjR35vjY81mLAyGbAUkpzkM2kk5SBg6-TDNFDJZIw3BkuhqQ2zMPIpZKNUIuVrlK62A5WlI40aT_1etzXNqCAkleuoJeSoYxjd8HuGhBir9k9rPxJEPaaSdlsGJa66xoQpturDZKh6hbXF5qQsjqm6OnFa2"
+    },
+    {
+      "title": "forage.ai",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFCSgBmXsXM0zgBvoi8rCZnbDb_VLDhdiSYwgONPNXUAEYhMUjWRaJNoYG7E4IIBEhyntBCi3qxsaKprYh1j6Qfo25jCJFvWhhMJKw3sjnNp8vqVy_uGt9ci1KIMlnGr6SLB3jcRIUeS8yhkad_OOvYmme4rA=="
+    },
+    {
+      "title": "batchdata.io",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFLJGPLbbo4NkotSh_MwUWYQUrUYwsR9CiJqOPljLPk_aZYffmFeEDhEVLNGOd-u43basFYGzDmuRmKPa120Slo-5m5Ki-VER-6KWS4AzXP_vmSa780kEq4o5tozFk_q1bA4105FhRm7Fc0mfdyzi2Ss2S1-4z4A4M6SguTwRf2-OxK6gMdvw=="
+    },
+    {
+      "title": "compstak.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGKQWCR41hG6fk4D18K164ZryCNUaG-teOaRjDpvCOrIw0_d1r1ChQas2yfI5o09W6OuCzft5L8pE_jGErQLwjlmbBXU-4L4SYT0d6b8Uo_82VH_glaKRkmzq3PaBO_AEzN_2OLDJ93"
+    },
+    {
+      "title": "reonomy.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHByxYIEwHN3XsFr0DvsIgwLmlIHTOlMu5F6NAdFlgTo8AcpM6J6Zkyg33kGlEgAUDGglM_5Mu8NBv-jx7ql5IZJegjvFw-rhQvXrntHgF5sUzrYxwtb1naitKD0H6lPVkG8QpWoN1BArloFiMr5o9utCID_jxspmCd5w=="
+    },
+    {
+      "title": "labusinessjournal.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGkP3v7eqjPej4tMi-2SkiCKjtol_1iUj5CtXGW41CHRiy8MwpgbhdlLVSiY0rt8mwJe0RK50GciqCjrZEhzzMMF_EcpldHIpmkD54Mpbqb_nXWq1j3CpQjzhYEyb30-r-gJUeOEYMvN3zMeefv6ICYdSqZUpisx-X0s1J9iJf2io5zMFsmnxLiZQ=="
+    },
+    {
+      "title": "crexi.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF4fmXVdEmKYpk78pH_eKgV1oyn4AobeVef0U6-yf5tXMjI8HPc85D7jWxH55raxl47h02u4W-hXrwN6gziAJ_zyO_h09GlLBxD2m6X6F6QpbAwCE_GEWYD-_bl4jvf6FJ691KhVMEaP128lHzyQIfr6uQIzHsI5gWp6i4cG4E4xeMF9FSZLmNHYObWt1qVL-O0op-BLpFZGAP_IZEGZ0k68U7BWlF-UmlJ9w=="
+    },
+    {
+      "title": "crexi.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHjM99TACZSSq3WSFqD9Z4IJK1gInPXlZ1wySwGZZBH4gNR4wRcfkYrKg-WVBtmOWEtgPyDhQobsUhrNMl4mns7oOdy-b99gduJSluAa0QxOOd67iDujBVEJb7wvIZkQ-i8thcVRiUypyWx8BZPSDv-gk9rbFuGg6NifX4Z7fpXf6nxqM34Hgv7RMWRDkhWo9836JTOuMZndpmkr7TOta5Tqez614eGiWhjwe8hr6SLuKEn_edlZwGb2cYQtVtJPA=="
+    },
+    {
+      "title": "crexi.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE21_-QQT51T73W_qks7QFVBypWrOYrqIAwkjqalITDXciVRtvGXrYbS7oSghlHs0amzUEkMLEB2OFiZ1g9AoMeBZGSqHZt6dxPOdcJmXakFDTMazWXFCxW4CYRyOE8rur5UgbPBTU7"
+    },
+    {
+      "title": "crexi.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGSCtceORCEWH4HtCF4fgFNv_Dhm0ZV6NLSyFrpXyOmUA0sa17ioHjtGFV9JHkBz59tQ1Q5EphWbBuR2fKWsKCGxDjEnRmJjL0wCLebrVp3filuTd1oRaS_CWQ0789GRcotOQ=="
+    },
+    {
+      "title": "crexi.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFAogduxd2P53q03f3fcOWErz9ZWmj8KedueoaFUUua4q9mee4rfbXvM-9Z9G1KFNMHNbqcXjUVUDDWTpVgEGrdzwnOEdNOk97Mhr7CLho9sLV67HC5ZfjUR64jCH8JBZehGyci4OHj"
+    },
+    {
+      "title": "reonomy.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFUePPud-xxFVglocxHBNQbZRDS2oxPqICkTOkqCpY90ihN_PYTKf_cJYEevf4Gc7MQqIv4Jj3dP3RAG8fSIr95Z8loXFACU5BrpLmdJD2hWxjwSnTElFG2nw6_x2TSL4OBzTTHGcwTidOMR8Q2hd3lmfMDLA56NU6Z4fuyJQ=="
+    },
+    {
+      "title": "propstream.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFgCd1gIMaWxChp59bMQ6MQl1Q7M1RrjGd6nO4H88tSGl207ENoT22d__nIJcyB1gQxQ6ubcJ3B7HdRWe9HE_UIWDRSziaCgiLlDEUqvZggGRjXydShfcx-rqZp4h7ek9ysVKz871CnEId09jB085xaUUYx5jrYNVz-tsbbJqWtnHCQej5RiimhMRkGlBkP6tqhgrQntfeRZ62O71OBn2qEIjE_"
+    },
+    {
+      "title": "propstream.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEi7dZck8KXSvGZJHeeZAUzrMKWvIniPnd_teCasIkeMuxfAfG3UP6KnBnqXhvA0vzPQIUWaxBDT5AglAyseMncMw-K6VOPPqpIEj8dTMcXCvDXBylSCw=="
+    },
+    {
+      "title": "propstream.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFJsaMi6G3GzOBjpASlqGfZjCUxXgJy4yH80kFLiQ-unLJvsQSePw7dt3OYz8QYP7OLsqytshatrsBHIg8tnWJVM7ydICo3VBrHJKSyDBfrFYbQJNMLGd4ceK6_spT8sJtWn1878jPyYw=="
+    },
+    {
+      "title": "propstream.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQESDAc5HfkdIe50rBEEHc8bh8kuSdRO7AJJ0DzdIP-Jnodx2KmgCKYVkxQUi-fL4PhGRQN6YLSVrhHWIVw-RVFbcuOtLr8gx4ea4Ih0SZWWHGMmM9m3z6600z_FmcfX6piDKJWrdPP2G6k="
+    },
+    {
+      "title": "dwellsy.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGvgBUG76zFylfCfK0K7SepACs6ibGO9GPLB3WFF-bBmZeWXMFlu8FbUWZUJlnstBF_PUAddcONGruaypOhyL7oDGy3XsuD4tF4b3aVpU4iBd9L30Iw-tz6x7syFbeDuUAOUz6Ktloxc_uzTHGXNKTlgfwfsqzyw8AUeqVdkqQBwnBXrmo="
+    },
+    {
+      "title": "smartapartmentdata.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGYof33vLTjnw4_icZgVfFFt-DPsDF8efb4KvwV13_3lcQeDTdV_AcktJjVKW6dlMWfaFzVVH6P7epAmGqYHAfPrrG9KJfzMjwbuQ0lmdxQH2ypPT4RBNmbYSk="
+    },
+    {
+      "title": "propertyshark.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEan8LFtGGL1jWCaYxVB33gnjVy1bkRJr8l0JwFGcEOxPJWiVjWblll-REyh9oqKnaFptfrUScCPf4A2LM7lJg28qGehpN0DYWm60hk7N411XgMkDikdLQFDC20TQqpr0hqdrXQV1vGOGH1O-SspnKwdJ_OQzxWI8T77Xfd3F5ZcUMtw_t6e8umLJb-Q9ABbg=="
+    },
+    {
+      "title": "dwellsy.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHjnJpqLsxqPM3640sN44DHQg2g9LrP0wlrfqjj7QO2edJNLWE7z5W9SzVn8J9xK0rWEVPypahGDniYuXyZNonmUz18qRxWPhReuffLwAGhNJx5FS9wPVERtW6e0f76CPaA_FIkPHO6N_9hdP6AifdBTI0gfJCW6AsO2eq8yYQo79dCV_9o"
+    },
+    {
+      "title": "revyse.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQElQAC_0I2xVzXk7XmX8KgHhgzTmijXfN7827yLuUi5syTJTnzHGQrPisVS9sSWa61CFG2aHYO4uWDOCXu98rZzI-y7wYTadv4A8nO-IPfEerhWaf55V4jV3W_gbWDz4Uac9FmEIX0i"
+    },
+    {
+      "title": "biggerpockets.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEjnlp16QtkyKBvJd5TvVAxLsnbxId6bkqly_UmKbbi1G8YBAsHSiJ84pACPVkPzjNIElqFh8h_bYTu-vGB4oUvK8VhnACWhVsz4TWZNSZcKLDPcahQFmzKgzBgzSso4pknZlnZFdGj-Xb91kQdbvU7uwF-PrRrEyx3sp16uGFJlTdgGiuoDRPXfje8FafAuTJVFKnxqJ9KUBAoTw=="
+    },
+    {
+      "title": "realestatefinanceacademy.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFK-kfyPffJFeZfpGRgWgw52IK2cVqEWpv0FlAOuGY1c2jfOd0LqOvIxVt5Lov8TvmPBzOGyDX8CmmLqOQlTt5orvC0WQKG1UVfiMhiTiwWoqhhoWvtUBh0I78m5-wQiAg6K7Ohhn935n2joTafkm0jjmJGeyiJOY6YO4cmCEFVeLjtM_UKHIZKr-NboZiiGuq_HeuhjNacAuCjnm8Tkp58FybBEeNuoRTZ"
+    },
+    {
+      "title": "costar.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE4HzgZmpAsSMiIKDiml5S1G23MP7H-ogn8pShp2AhO832_j95bIaEceKLADSmKH7PUYYSUe1uW-ffwhRXb1QopRWFEHNtLAfZLT8OtGPwznlAiv0N2NWzXJvE3deqAyr9DM0eqDSZvzdCUadrf6w=="
+    },
+    {
+      "title": "costar.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFcbX0rHL2T30JHecQfHD_CvewrQY8ZiGXo4Pobs9R1gK9sKq6V6v28xO3ZUFUPJ0NnhOcVDE5LvYtfUFpDB9HxuUOoW4Nt1YXGcNs8s3tV79wl"
+    }
+  ]
+}

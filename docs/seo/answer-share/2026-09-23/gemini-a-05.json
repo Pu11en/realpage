@@ -1,0 +1,147 @@
+{
+  "engine": "gemini",
+  "engine_label": "Gemini (gemini-2.5-flash) via API, Google Search grounding on",
+  "is_consumer_app": false,
+  "set": "A",
+  "question": "Is there a free multifamily market report for San Antonio?",
+  "intent": "free-report",
+  "asked_on": "2026-09-23",
+  "ok": true,
+  "answer": "For individuals researching the San Antonio multifamily market, several reputable real estate firms and data providers offer market reports, with some providing free access to their insights. These reports typically cover key metrics such as vacancy rates, rent trends, new construction, and investment activity.\n\nHere are some specific companies and data sources where you might find free multifamily market reports for San Antonio:\n\n*   **Cushman & Wakefield:** They publish \"MarketBeat\" reports, including ones focused on San Antonio's multifamily sector. For example, their Q3 2025 report for San Antonio provides detailed analysis on supply, demand, pricing, and economic conditions.\n*   **Yardi Matrix:** Yardi Matrix offers San Antonio Multifamily Market Reports, which provide insights into rent growth, occupancy, new construction, and investment activity. Their May 2026 report, for instance, noted that San Antonio's average advertised asking rents were flat on a trailing three-month basis through March 2026.\n*   **Berkadia:** Berkadia provides multifamily market reports for San Antonio, offering valuable insights into demographic and multifamily trends to help navigate the economic landscape. Their Q1 2026 report is an example of what they offer.\n*   **Marcus & Millichap:** This firm offers commercial real estate research, including multifamily market reports for various locations like San Antonio. While some reports might require signing in, their research division aims to provide cutting-edge market research and insights.\n*   **CBRE:** CBRE offers commercial real estate services in San Antonio and provides research reports. They have a \"Multifamily\" section on their website where they discuss market trends and insights, and their local San Antonio office provides expertise across various commercial real estate aspects. Some of their reports, like those discussing the COVID-19 impact on multifamily properties, were available for download.\n*   **HUD User:** The U.S. Department of Housing and Urban Development's (HUD) Office of Policy Development and Research (PD&R) publishes Comprehensive Housing Market Analysis (CHMA) reports. These reports are available as free downloads and analyze economic, demographic, and housing inventory characteristics for areas like San Antonio.\n*   **MMG Real Estate Advisors:** They publish San Antonio Multifamily Market Reports, such as the Q3 2025 report, which includes key takeaways on apartment demand, construction, and rent changes.\n\nWhen looking for the most current information, it's often beneficial to visit the \"research\" or \"insights\" sections of these companies' official websites. Some platforms like Apartment List and Realtor.com also provide free rental market analyses and statistics for San Antonio, offering data on median rents and market trends.",
+  "sources": [
+    {
+      "title": "cushmanwakefield.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE3U4DMSjEXK2wd6S2kGF7clQmdlOZQNVHuW1K44Jl6Qi-xxSovxGX8TgTDFWtZdcb2Vnz50jdUBAJoBXz7QkbTlJQDQCP7w4rHMAY3gv9ly1sX1jcavr8w1gmwvH5ekaLe92ldKV2HT9j41Us_vp2AU9WrR76e0tK6RsF-OPTH9mciuloVH0As6EpPDJBR175JNT5x2RnWSllLHozkK4N_O6ijpZRVldbgFlCei8p-SdNxr2Sr7i_FIQ592MhvJIvnMQ9-tJRPWxUpenXqN9sjpmK2Sn1-nbyCHXDFPEAWMzynGZWG3t20MPB2l5U-nTxfm4iW"
+    },
+    {
+      "title": "yardimatrix.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHDO9iozyXGwUUNJ3mkf8Xvgf4bQZ6yCe8PzcW_DUqRKFTkMCot5EhN6UtceLWhW63CUaylvK1dK1BZS5T-jPAA8Mxx6LdlnTjADmvGCGAQYM_GHsnXmSzV71gNCrhSLoJcC6b50gsPfy7HYFfCFARPo4cfTW0SYu-G1YFe0guEwpVs"
+    },
+    {
+      "title": "berkadia.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGDwswuICRyW_LxCAAuwAlTvHngzSb8o6f2BQq5rUI0xkEqt07srmP_vODPsnerNFt5mG3ACvsVYlko7Ru2BLj8LZQDYs0Gf1GiPnW2WFPhxz9mqv6-njGId4ubXykxB0bjz_bSX1VtGUGCIXnmaDgFV4Y5a-AHW9Z15rAA6gRRr0HUofAA02n7cPGNM4OPR3sKos_i"
+    },
+    {
+      "title": "marcusmillichap.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEWjwXnVC4EvynsMOhMErLvX1gKoaQadTnqd8FW9d0enNQK_01u3KtFCu9qN2PWY9Xz2cA3bsf7CEyjWq4rbw-cExtrtHrXeEGY4e1MeA1CaBl1jr3cu2QhB5sHFNiFdrdXprnjuvx_ow25dC5nEG2CKR259ULbUs_rMZJLTuv4NccK8c5MPV_lESRtj_upJSmG37P5K3yX84_0e-kiiWmiV6rc4GfdXTk="
+    },
+    {
+      "title": "marcusmillichap.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFPC58Em42WDXWE1tqVoddihOqerL_gstwT64bC2ofxgCvUQhtX8Sb8UViekjLa3cLgZuKXLj9XafJDnu-PuvOggrliAwMPNaQ6gFafdxoEpD9W-Bjjg0wC9FLL8rAmXnPPUus="
+    },
+    {
+      "title": "cbre.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF5mDCnaySxQVV1qVCaxx5feNwoocJzmmjCCufSfZuM8RgPipbQew2hlr9cQFEeXQp1-EYw1bgvAL4PusbjfNbJG3UwW3aR7UKOOizjo4es24ZAVgHdBZYy0RhXeS1XI7cH-6wnMxdh4s3CA2dMdc05_ko6q1Gcp7fVEEv90Jje-7LrSFJg4IUlLTWvc1s="
+    },
+    {
+      "title": "cbre.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGdKOgPl_ormPGphDNltyUsS3gQ4FJVhM034AuSva-IhLmfwTb3Wo3G9QcLeC1tntV_DCcL8OiVq2RMbqHrnbriqPNJU_xDWjxsm_tfThKqfKyWM7CR0qKHZV3EVg2hw_U5Kpii1wGqQdBr_2os"
+    },
+    {
+      "title": "cbre.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEK4jOV5Rk08NuQ09jYr8XHIBcxs10gbAZfz3GPXp35Ny6_-jVYMRzSSvQ0PBZMgw-giecJ2HEIjul9AVNUhePTgsHqnV96xmE1oTdYZMVk9EkUbn0nXIHPV7mG7Jw6hRcnJDr14Q0MceoUdkGSTbGPbVCz"
+    },
+    {
+      "title": "bradyl.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEL5gKnxTVfigXenoPsM7fr29xtMPpM_T2_Z7PaJam0afnTtEnYB6CTQpR_crYc5gsTq_x6xQe0iI8NbmrZ5F0qo62N0C5TPw5wnAlKtHNcrk11XXYBHQ6v_qBcqU08N79rdRv9wcqA"
+    },
+    {
+      "title": "huduser.gov",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG1eVuGjR_wk_hSTc40oqSZqxlaBkUjmNY6I_pm4jsq296h3WUv9C5Evvnll7S0v_dQ0LOs-7_s1zI9Jg4Pw8nPtnOK0uDFOluJ2HoJYemFfv31F-XvQAsSk9gxeb4V-3SjCOe_bIiMPpJ-S14Fkoo="
+    },
+    {
+      "title": "mmgrea.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEgxXABgEETqIz0pE37lcXMTsd2Y1zBsBXpRZqPLdF_6VsMV-ZlLnZjYRPefRfpArDza4yWy4YuUKhuDvlfYPMuvjvWmbmSXmU9KFcUtWLr6xVLvNkx092DSZYw9HL4aU-r9s01xdL6lXvL0Im-3HSv"
+    },
+    {
+      "title": "apartmentlist.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHPvxX5SVCR_FLFiu-pQk4eum1CtrB85OSg6yq80J21qlQOVKyDQa-EJ5Y3YHaZFXxxIuTLet1Gm80zr1B4cKLfKLpbvAls1aBV4faCEhba5eBdYFF5PBDY7BUZi751teld7xUz5OHudko_NNaySW6iUV2Y"
+    },
+    {
+      "title": "pacrent.io",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF4hIQSe653jCGNlnp3vFkbf3XgZTB5r_oysksktRZFkjerxY51B8zQXfkAf88QwCNdHCZN_VcR9ZhZmQgjIr5G80aDm3ylY5J37rbqReMyFP8f9kV0G6FIgVpABohsb-Xxft9b"
+    },
+    {
+      "title": "realtor.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQENf33c6bXLXD3svfvXyyQm-Ue1fKB6M1S3JkxltuUpSezEPrpWcsqveyI-U_jowr5By_VCD7_Bg8EWJrCbEm-SSf2NQ19ok9YUlNz4DIAkr2tqUrE575cXHlQ5tW2sC1jgYOjkEAT4QAmU3-Vh0H_zDreok8oKqJc8P6aZPNg="
+    }
+  ],
+  "brands": [
+    {
+      "brand": "Yardi",
+      "first_at": 695,
+      "mentions": 2,
+      "rank": 1
+    },
+    {
+      "brand": "Berkadia",
+      "first_at": 1028,
+      "mentions": 2,
+      "rank": 2
+    },
+    {
+      "brand": "CBRE",
+      "first_at": 1554,
+      "mentions": 2,
+      "rank": 3
+    }
+  ],
+  "links": [
+    {
+      "title": "cushmanwakefield.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE3U4DMSjEXK2wd6S2kGF7clQmdlOZQNVHuW1K44Jl6Qi-xxSovxGX8TgTDFWtZdcb2Vnz50jdUBAJoBXz7QkbTlJQDQCP7w4rHMAY3gv9ly1sX1jcavr8w1gmwvH5ekaLe92ldKV2HT9j41Us_vp2AU9WrR76e0tK6RsF-OPTH9mciuloVH0As6EpPDJBR175JNT5x2RnWSllLHozkK4N_O6ijpZRVldbgFlCei8p-SdNxr2Sr7i_FIQ592MhvJIvnMQ9-tJRPWxUpenXqN9sjpmK2Sn1-nbyCHXDFPEAWMzynGZWG3t20MPB2l5U-nTxfm4iW"
+    },
+    {
+      "title": "yardimatrix.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHDO9iozyXGwUUNJ3mkf8Xvgf4bQZ6yCe8PzcW_DUqRKFTkMCot5EhN6UtceLWhW63CUaylvK1dK1BZS5T-jPAA8Mxx6LdlnTjADmvGCGAQYM_GHsnXmSzV71gNCrhSLoJcC6b50gsPfy7HYFfCFARPo4cfTW0SYu-G1YFe0guEwpVs"
+    },
+    {
+      "title": "berkadia.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGDwswuICRyW_LxCAAuwAlTvHngzSb8o6f2BQq5rUI0xkEqt07srmP_vODPsnerNFt5mG3ACvsVYlko7Ru2BLj8LZQDYs0Gf1GiPnW2WFPhxz9mqv6-njGId4ubXykxB0bjz_bSX1VtGUGCIXnmaDgFV4Y5a-AHW9Z15rAA6gRRr0HUofAA02n7cPGNM4OPR3sKos_i"
+    },
+    {
+      "title": "marcusmillichap.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEWjwXnVC4EvynsMOhMErLvX1gKoaQadTnqd8FW9d0enNQK_01u3KtFCu9qN2PWY9Xz2cA3bsf7CEyjWq4rbw-cExtrtHrXeEGY4e1MeA1CaBl1jr3cu2QhB5sHFNiFdrdXprnjuvx_ow25dC5nEG2CKR259ULbUs_rMZJLTuv4NccK8c5MPV_lESRtj_upJSmG37P5K3yX84_0e-kiiWmiV6rc4GfdXTk="
+    },
+    {
+      "title": "marcusmillichap.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFPC58Em42WDXWE1tqVoddihOqerL_gstwT64bC2ofxgCvUQhtX8Sb8UViekjLa3cLgZuKXLj9XafJDnu-PuvOggrliAwMPNaQ6gFafdxoEpD9W-Bjjg0wC9FLL8rAmXnPPUus="
+    },
+    {
+      "title": "cbre.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF5mDCnaySxQVV1qVCaxx5feNwoocJzmmjCCufSfZuM8RgPipbQew2hlr9cQFEeXQp1-EYw1bgvAL4PusbjfNbJG3UwW3aR7UKOOizjo4es24ZAVgHdBZYy0RhXeS1XI7cH-6wnMxdh4s3CA2dMdc05_ko6q1Gcp7fVEEv90Jje-7LrSFJg4IUlLTWvc1s="
+    },
+    {
+      "title": "cbre.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGdKOgPl_ormPGphDNltyUsS3gQ4FJVhM034AuSva-IhLmfwTb3Wo3G9QcLeC1tntV_DCcL8OiVq2RMbqHrnbriqPNJU_xDWjxsm_tfThKqfKyWM7CR0qKHZV3EVg2hw_U5Kpii1wGqQdBr_2os"
+    },
+    {
+      "title": "cbre.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEK4jOV5Rk08NuQ09jYr8XHIBcxs10gbAZfz3GPXp35Ny6_-jVYMRzSSvQ0PBZMgw-giecJ2HEIjul9AVNUhePTgsHqnV96xmE1oTdYZMVk9EkUbn0nXIHPV7mG7Jw6hRcnJDr14Q0MceoUdkGSTbGPbVCz"
+    },
+    {
+      "title": "bradyl.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEL5gKnxTVfigXenoPsM7fr29xtMPpM_T2_Z7PaJam0afnTtEnYB6CTQpR_crYc5gsTq_x6xQe0iI8NbmrZ5F0qo62N0C5TPw5wnAlKtHNcrk11XXYBHQ6v_qBcqU08N79rdRv9wcqA"
+    },
+    {
+      "title": "huduser.gov",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG1eVuGjR_wk_hSTc40oqSZqxlaBkUjmNY6I_pm4jsq296h3WUv9C5Evvnll7S0v_dQ0LOs-7_s1zI9Jg4Pw8nPtnOK0uDFOluJ2HoJYemFfv31F-XvQAsSk9gxeb4V-3SjCOe_bIiMPpJ-S14Fkoo="
+    },
+    {
+      "title": "mmgrea.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEgxXABgEETqIz0pE37lcXMTsd2Y1zBsBXpRZqPLdF_6VsMV-ZlLnZjYRPefRfpArDza4yWy4YuUKhuDvlfYPMuvjvWmbmSXmU9KFcUtWLr6xVLvNkx092DSZYw9HL4aU-r9s01xdL6lXvL0Im-3HSv"
+    },
+    {
+      "title": "apartmentlist.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHPvxX5SVCR_FLFiu-pQk4eum1CtrB85OSg6yq80J21qlQOVKyDQa-EJ5Y3YHaZFXxxIuTLet1Gm80zr1B4cKLfKLpbvAls1aBV4faCEhba5eBdYFF5PBDY7BUZi751teld7xUz5OHudko_NNaySW6iUV2Y"
+    },
+    {
+      "title": "pacrent.io",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF4hIQSe653jCGNlnp3vFkbf3XgZTB5r_oysksktRZFkjerxY51B8zQXfkAf88QwCNdHCZN_VcR9ZhZmQgjIr5G80aDm3ylY5J37rbqReMyFP8f9kV0G6FIgVpABohsb-Xxft9b"
+    },
+    {
+      "title": "realtor.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQENf33c6bXLXD3svfvXyyQm-Ue1fKB6M1S3JkxltuUpSezEPrpWcsqveyI-U_jowr5By_VCD7_Bg8EWJrCbEm-SSf2NQ19ok9YUlNz4DIAkr2tqUrE575cXHlQ5tW2sC1jgYOjkEAT4QAmU3-Vh0H_zDreok8oKqJc8P6aZPNg="
+    }
+  ]
+}

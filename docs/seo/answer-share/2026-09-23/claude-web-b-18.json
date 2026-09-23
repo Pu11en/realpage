@@ -1,0 +1,59 @@
+{
+  "engine": "claude-web",
+  "engine_label": "Claude (Sonnet) via claude -p, web search on",
+  "is_consumer_app": false,
+  "set": "B",
+  "question": "How does RealPage compare to Yardi for multifamily property management?",
+  "intent": "compare-pms",
+  "asked_on": "2026-09-23",
+  "ok": true,
+  "answer": "## RealPage vs. Yardi for Multifamily Property Management\n\nBoth are major property management software providers serving multifamily, but they've historically differentiated on breadth, depth, and target portfolio type.\n\n**Core positioning**\n- **RealPage** is built around residential/multifamily operations, with a strong emphasis on revenue management, pricing automation, and marketing/leasing tools. Its flagship revenue-management product is **YieldStar**, which uses algorithmic pricing recommendations based on market and (historically) competitor lease data.\n- **Yardi** (Yardi Voyager) is broader and deeper on the accounting/compliance side \u2014 GAAP support, SOX-ready controls, audit trails, multi-entity reporting \u2014 and spans more asset classes (commercial, affordable housing, senior living, mixed-use) from a single database, plus integrations like **ARGUS** for institutional investment analysis.\n\n**Where each tends to fit**\n- RealPage: residential-focused operators, roughly 500 to 100,000+ units, prioritizing dynamic/daily pricing, automation, and analytics.\n- Yardi: institutional portfolios (2,000+ units), mixed asset classes, complex accounting needs, or commercial-heavy operators.\n\n**Important legal context (this is the big differentiator right now)**\nRealPage has been the subject of a major DOJ antitrust case (joined by several states) alleging its algorithmic pricing software let landlords effectively coordinate rents using shared, non-public competitor data \u2014 a practice regulators characterized as price-fixing-by-algorithm. As of late 2025/2026:\n- DOJ filed a **proposed settlement** with RealPage (Nov 24, 2025) requiring it to stop using nonpublic and current lease data in its pricing algorithm, without RealPage admitting liability.\n- Litigation is continuing separately against large property management companies (landlords) that used RealPage's software \u2014 e.g., a proposed consent decree with **Willow Bridge Property Company** was filed July 6, 2026.\n- Separately, **California's AB 325** (effective January 2026) bans AI pricing technology used \"in restraint of trade,\" and similar restrictions exist in New York, New Jersey, and several cities \u2014 directly relevant to RealPage's revenue-management features in those jurisdictions.\n\nYardi has not faced comparable antitrust action, which is a meaningful factor for operators weighing compliance/reputational risk alongside feature comparisons.\n\n**Bottom line**: Yardi tends to win on accounting depth, cross-asset-class breadth, and institutional/enterprise complexity; RealPage tends to win on multifamily-specific revenue optimization and leasing automation \u2014 but RealPage's pricing tools now carry real legal/regulatory overhang that didn't exist a couple of years ago, especially in states with new AI-pricing restrictions.\n\nSources:\n- [DOJ Settles Its Algorithmic Price-Fixing Case Against RealPage | Wilson Sonsini](https://www.wsgr.com/en/insights/doj-settles-its-algorithmic-price-fixing-case-against-realpage.html)\n- [Antitrust Division | U.S. and Plaintiff States v. RealPage, Inc. | DOJ](https://www.justice.gov/atr/case/us-and-plaintiff-states-v-realpage-inc)\n- [Justice Department Requires RealPage to End the Sharing of Competitively Sensitive Information | DOJ](https://www.justice.gov/opa/pr/justice-department-requires-realpage-end-sharing-competitively-sensitive-information-and)\n- [Duane Morris LLP \u2014 DOJ's Proposed Settlement with Property Manager Targets Algorithmic Pricing Coordination](https://www.duanemorris.com/alerts/dojs_proposed_settlement_property_manager_targets_pricing_coordination_rental_housing_0726.html)\n- [RealPage Reaches DOJ Settlement](https://www.realpage.com/news/realpage-reaches-settlement-with-us-department-of-justice/)\n- [Yardi vs RealPage: Operating Platform & Revenue Management Compared (2026) | NextAutomation](https://nextautomation.us/blog/yardi-vs-realpage)\n- [Yardi vs RealPage: Platform Comparison for Operators | BC Solutions](https://www.bcsolut.com/post/yardi-vs-realpage)\n- [RealPage vs Yardi (2026) | RFP.wiki](https://www.rfp.wiki/specialty-industries/real-estate-property/realpage/yardi)\n- [Yardi vs. RealPage: Which Is Better for Multifamily Analytics and Revenue Management? | WhatisBest](https://www.whatisbest.com/real-estate-technology/yardi-vs-realpage-which-is-better-for-multifamily-analytics-and-revenue-management)",
+  "brands": [
+    {
+      "brand": "RealPage",
+      "first_at": 3,
+      "mentions": 27,
+      "rank": 1
+    },
+    {
+      "brand": "Yardi",
+      "first_at": 16,
+      "mentions": 14,
+      "rank": 2
+    }
+  ],
+  "links": [
+    {
+      "title": "",
+      "url": "https://www.wsgr.com/en/insights/doj-settles-its-algorithmic-price-fixing-case-against-realpage.html"
+    },
+    {
+      "title": "",
+      "url": "https://www.justice.gov/atr/case/us-and-plaintiff-states-v-realpage-inc"
+    },
+    {
+      "title": "",
+      "url": "https://www.duanemorris.com/alerts/dojs_proposed_settlement_property_manager_targets_pricing_coordination_rental_housing_0726.html"
+    },
+    {
+      "title": "",
+      "url": "https://www.realpage.com/news/realpage-reaches-settlement-with-us-department-of-justice/"
+    },
+    {
+      "title": "",
+      "url": "https://nextautomation.us/blog/yardi-vs-realpage"
+    },
+    {
+      "title": "",
+      "url": "https://www.bcsolut.com/post/yardi-vs-realpage"
+    },
+    {
+      "title": "",
+      "url": "https://www.rfp.wiki/specialty-industries/real-estate-property/realpage/yardi"
+    },
+    {
+      "title": "",
+      "url": "https://www.whatisbest.com/real-estate-technology/yardi-vs-realpage-which-is-better-for-multifamily-analytics-and-revenue-management"
+    }
+  ]
+}

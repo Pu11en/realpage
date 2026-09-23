@@ -1,0 +1,26 @@
+{
+  "engine": "claude-web",
+  "engine_label": "Claude (Sonnet) via claude -p, web search on",
+  "is_consumer_app": false,
+  "set": "A",
+  "question": "How can I find out who bought an apartment complex?",
+  "intent": "find-owner",
+  "asked_on": "2026-09-23",
+  "ok": true,
+  "answer": "Finding who bought a specific apartment complex is a public-records research task \u2014 here's how to approach it, roughly in order of speed/cost:\n\n## 1. County property records (free, most authoritative)\nEvery U.S. county has a **Recorder of Deeds / County Clerk / Register of Deeds** office (often searchable online). Search by property address or the seller's name to find the **deed** (grant deed, warranty deed, or quitclaim deed) that names the new owner (\"grantee\"). Many counties also have a **County Assessor / Property Appraiser** site where you can look up the parcel by address and see the current owner of record \u2014 this is usually the fastest starting point.\n\n- Look up \"[County name] Recorder\" or \"[County name] Assessor\" \u2014 examples: Miami-Dade Property Appraiser, LA County Assessor Portal, Cook County Recorder of Deeds (Illinois).\n\n## 2. Commercial real estate data platforms (paid, but built for exactly this)\n- **CoStar** \u2014 the industry standard for CRE sales, ownership, and lender data; expensive, mostly used by brokers/investors.\n- **Crexi** \u2014 has a free tier with sales comps and ownership info for many properties.\n- **Reonomy** or **Cherre** \u2014 ownership/LLC-unmasking tools, good for tracing shell companies to their parent entity.\n- **Yardi Matrix** \u2014 multifamily-specific ownership and transaction data.\n- **ATTOM Data** \u2014 bulk property data with ownership history, used by many real-estate apps.\n\n## 3. LLC / entity lookups (when the buyer is a shell company, which is common for apartment complexes)\nMost large multifamily deals close under an LLC, not a person's name. To unmask it:\n- Search the **Secretary of State business entity database** for the state where the LLC is registered (e.g., California Secretary of State Business Search, Delaware Division of Corporations, Florida Sunbiz) to find the registered agent and sometimes the managing member.\n- **OpenCorporates** \u2014 aggregates business registry data across many states/countries, useful for cross-referencing.\n- If the registered agent is a law firm or formation service (common obfuscation tactic), you may need to check press releases or CRE news instead.\n\n## 4. Real estate news and trade press\nLarger transactions often get covered by name:\n- **Bisnow**, **Commercial Observer**, **The Real Deal**, **GlobeSt** \u2014 regional/national CRE news that reports on notable multifamily sales, often naming the buyer, seller, broker, and price.\n- Local business journals (**American City Business Journals** network, e.g., Denver Business Journal) frequently cover mid-size local deals.\n\n## 5. Loan/mortgage records\nIf financed, a **Deed of Trust or Mortgage** is also recorded with the county and will name the lender and borrower entity \u2014 useful cross-check if the deed itself is hard to find.\n\n## Practical starting point\nIf you have the property address:\n1. Check the county assessor site first (free, fast, usually current).\n2. If the owner is an LLC, run it through the state's Secretary of State site and/or OpenCorporates.\n3. If you want deal context (price, brokers, financing), search Bisnow/Commercial Observer/The Real Deal for the address or complex name.\n\nIf you tell me the specific property/address, I can help you figure out exactly which county or state database to check.",
+  "brands": [
+    {
+      "brand": "CoStar",
+      "first_at": 928,
+      "mentions": 1,
+      "rank": 1
+    },
+    {
+      "brand": "Yardi",
+      "first_at": 1258,
+      "mentions": 1,
+      "rank": 2
+    }
+  ],
+  "links": []
+}

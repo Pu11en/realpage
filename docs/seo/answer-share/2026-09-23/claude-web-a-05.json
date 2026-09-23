@@ -1,0 +1,79 @@
+{
+  "engine": "claude-web",
+  "engine_label": "Claude (Sonnet) via claude -p, web search on",
+  "is_consumer_app": false,
+  "set": "A",
+  "question": "Is there a free multifamily market report for San Antonio?",
+  "intent": "free-report",
+  "asked_on": "2026-09-23",
+  "ok": true,
+  "answer": "Yes \u2014 several brokerages and data firms publish free quarterly (or monthly) multifamily reports for San Antonio, no paywall required:\n\n- **Yardi Matrix** \u2013 publishes a monthly San Antonio multifamily report (rent trends, occupancy, supply pipeline). Latest: rents flat around $1,232/unit, down ~2.8% YoY.\n- **Colliers** \u2013 quarterly San Antonio multifamily report; Q2 2026 showed 1,731 units delivered YTD, occupancy up to 93.1%, and 12 straight quarters of shrinking construction pipeline.\n- **Marcus & Millichap / Institutional Property Advisors (IPA)** \u2013 their annual/quarterly investment forecast report; projects San Antonio to rank #2 nationally in employment growth for 2026.\n- **Berkadia** \u2013 quarterly research report (Q1 2026 edition covers demographic and rent trends).\n- **Northmarq** \u2013 periodic insights pieces specifically on San Antonio supply/deliveries; projecting just 2,600 new units in 2026, a 63% drop from 2025.\n- **MMG Real Estate Advisors** \u2013 annual San Antonio forecast report.\n- **MetroSgnl** \u2013 free market-intelligence snapshot; currently scoring San Antonio 4.1/10 (\"Caution\") with -1.8% YoY rent growth and 9.1% vacancy (note this conflicts somewhat with other sources \u2014 different firms define/calculate vacancy differently, e.g., Neiboroughly cites 15.8% vacancy, so treat any single number as approximate and check methodology).\n- **SARents (Proudly Local)** \u2013 a locally focused rental market report if you want more of a renter/small-landlord angle rather than institutional investment data.\n\nAll of these are free with just an email/contact form in most cases (Yardi Matrix, Colliers, Berkadia, Marcus & Millichap typically just require registering). If you want something more granular (submarket-level, specific property class, rent comps), CBRE and RealPage also cover San Antonio but their detailed reports are usually gated behind a sales contact rather than a free download \u2014 worth asking your account rep if you already work with either.\n\nWant me to pull the actual PDF/report link for any of these, or dig into a specific metric (e.g., submarket-level rent growth, construction pipeline by neighborhood)?\n\nSources:\n- [Berkadia Q1 2026 Multifamily Market Report \u2013 San Antonio](https://www.berkadia.com/research/berkadia-q1-2026-multifamily-market-report-san-antonio/)\n- [San Antonio Multifamily Market Report | 2026 Q2 | Colliers](https://www.colliers.com/en/research/austin/san-antonio-multifamily-market-report-2026-q2)\n- [San Antonio Multifamily Market Report \u2013 May 2026 | Yardi Matrix](https://www.yardimatrix.com/blog/san-antonio-multifamily-market-report/)\n- [Matrix Multifamily San Antonio Report \u2013 May 2026 | Yardi Matrix](https://www.yardimatrix.com/multifamily-metro/matrix-multifamily-san-antonio-report-may-2026/)\n- [San Antonio Multifamily Market Report | Institutional Property Advisors](https://www.institutionalpropertyadvisors.com/research/market-report/multifamily/san-antonio/san-antonio-2026-investment-forecast-ipa-multifamily-market-report)\n- [San Antonio Multifamily Market Report | Marcus & Millichap](https://www.marcusmillichap.com/research/market-report/san-antonio/san-antonio-2026-investment-forecast-multifamily-market-report)\n- [New construction in the San Antonio multifamily market expected to slow further in 2026 | Northmarq](https://www.northmarq.com/insights/insights/new-construction-san-antonio-multifamily-market-expected-slow-further-2026)\n- [Most 2026 deliveries landed in Q1 in San Antonio's multifamily market | Northmarq](https://www.northmarq.com/insights/insights/most-2026-deliveries-landed-first-quarter-san-antonios-multifamily-market-q1-2026)\n- [2026 San Antonio Forecast | MMG Real Estate Advisors](https://mmgrea.com/2026-san-antonio-forecast/3/)\n- [San Antonio, TX Multifamily Market Intelligence | July 2026 | MetroSgnl](https://metrosgnl.com/insights/san-antonio-tx)\n- [San Antonio Multifamily Market Outlook 2026 | Neiboroughly](https://neiboroughly.com/resources/san-antonio-multifamily-market-outlook2026/)\n- [2026 San Antonio Rental Market Report | Proudly Local (SARents)](https://www.sarents.com/news/san-antonio-rental-market-report)",
+  "brands": [
+    {
+      "brand": "Yardi",
+      "first_at": 139,
+      "mentions": 6,
+      "rank": 1
+    },
+    {
+      "brand": "Berkadia",
+      "first_at": 686,
+      "mentions": 5,
+      "rank": 2
+    },
+    {
+      "brand": "CBRE",
+      "first_at": 1774,
+      "mentions": 1,
+      "rank": 3
+    },
+    {
+      "brand": "RealPage",
+      "first_at": 1783,
+      "mentions": 1,
+      "rank": 4
+    }
+  ],
+  "links": [
+    {
+      "title": "",
+      "url": "https://www.berkadia.com/research/berkadia-q1-2026-multifamily-market-report-san-antonio/"
+    },
+    {
+      "title": "",
+      "url": "https://www.colliers.com/en/research/austin/san-antonio-multifamily-market-report-2026-q2"
+    },
+    {
+      "title": "",
+      "url": "https://www.yardimatrix.com/blog/san-antonio-multifamily-market-report/"
+    },
+    {
+      "title": "",
+      "url": "https://www.institutionalpropertyadvisors.com/research/market-report/multifamily/san-antonio/san-antonio-2026-investment-forecast-ipa-multifamily-market-report"
+    },
+    {
+      "title": "",
+      "url": "https://www.marcusmillichap.com/research/market-report/san-antonio/san-antonio-2026-investment-forecast-multifamily-market-report"
+    },
+    {
+      "title": "",
+      "url": "https://www.northmarq.com/insights/insights/new-construction-san-antonio-multifamily-market-expected-slow-further-2026"
+    },
+    {
+      "title": "",
+      "url": "https://mmgrea.com/2026-san-antonio-forecast/3/"
+    },
+    {
+      "title": "",
+      "url": "https://metrosgnl.com/insights/san-antonio-tx"
+    },
+    {
+      "title": "",
+      "url": "https://neiboroughly.com/resources/san-antonio-multifamily-market-outlook2026/"
+    },
+    {
+      "title": "",
+      "url": "https://www.sarents.com/news/san-antonio-rental-market-report"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "engine": "claude-web",
+  "engine_label": "Claude (Sonnet) via claude -p, web search on",
+  "is_consumer_app": false,
+  "set": "A",
+  "question": "Which property management software does a given apartment building use?",
+  "intent": "detect-software",
+  "asked_on": "2026-09-23",
+  "ok": true,
+  "answer": "I don't have a way to look up which property management software a specific apartment building uses \u2014 that's not public information I have access to, and I don't have a building address or name from you yet to even attempt a search.\n\nIf you want, tell me:\n- The specific building/property name and location (or the management company that runs it)\n\nAnd I can try a web search for public clues \u2014 some buildings mention their resident portal (e.g., \"powered by AppFolio,\" \"Yardi,\" \"RealPage/RentCafe,\" \"Buildium,\" \"Entrata,\" \"ResMan\") on their website, tenant portal login page, or in job postings for on-site staff. Common signals to check yourself in the meantime:\n- The resident/tenant portal login page often shows the platform's branding (e.g., a URL like `*.appfolio.com`, `*.rentcafe.com`, `*.buildium.com`, `*.entrata.com`)\n- Online rent payment or maintenance request pages often reveal the vendor in the URL or footer\n- LinkedIn job postings for \"Leasing Consultant\" or \"Property Manager\" at that building/company sometimes list required software experience\n- Local county/city landlord-tenant registries occasionally list management companies (not software) tied to a building\n\nWant me to search for a specific building once you give me the name or address?",
+  "brands": [
+    {
+      "brand": "AppFolio",
+      "first_at": 459,
+      "mentions": 2,
+      "rank": 1
+    },
+    {
+      "brand": "Yardi",
+      "first_at": 471,
+      "mentions": 1,
+      "rank": 2
+    },
+    {
+      "brand": "RealPage",
+      "first_at": 480,
+      "mentions": 1,
+      "rank": 3
+    },
+    {
+      "brand": "Buildium",
+      "first_at": 501,
+      "mentions": 2,
+      "rank": 4
+    },
+    {
+      "brand": "Entrata",
+      "first_at": 513,
+      "mentions": 2,
+      "rank": 5
+    },
+    {
+      "brand": "ResMan",
+      "first_at": 524,
+      "mentions": 1,
+      "rank": 6
+    }
+  ],
+  "links": []
+}

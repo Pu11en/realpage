@@ -1,0 +1,207 @@
+{
+  "engine": "gemini",
+  "engine_label": "Gemini (gemini-2.5-flash) via API, Google Search grounding on",
+  "is_consumer_app": false,
+  "set": "B",
+  "question": "What is the best property management system for 200-unit buildings in Texas?",
+  "intent": "buy-pms",
+  "asked_on": "2026-09-23",
+  "ok": true,
+  "answer": "Choosing the \"best\" property management system for a 200-unit building in Texas depends largely on specific operational needs, desired features, and budget. However, several platforms are highly regarded for their comprehensive capabilities, scalability, and suitability for mid-to-large multifamily properties.\n\nHere are some of the top property management systems to consider for a 200-unit building, along with their strengths and features:\n\n**Key Features to Look For:**\nFor a 200-unit property, a robust property management system should offer:\n*   **Comprehensive Accounting:** This includes a general ledger, bank reconciliation, financial reporting, and tools for tax preparation (e.g., 1099s).\n*   **Online Rent Collection & Payments:** Automated rent collection, late fee application, and various payment options (ACH, credit card) are essential.\n*   **Leasing Workflow:** Features like online applications, tenant screening, e-signatures, and lease renewals are crucial for efficiency.\n*   **Maintenance Management:** The system should facilitate tracking maintenance requests, assigning work orders to vendors, and managing invoices.\n*   **Tenant and Owner Portals:** These allow residents to pay rent, submit requests, and communicate, while owners can access financial reports and property performance data.\n*   **Communication Tools:** Efficient messaging and notification systems for tenants and staff.\n*   **Reporting and Analytics:** Tools to generate insights into property performance, occupancy rates, and financial metrics.\n\n**Top Property Management Systems for 200-Unit Buildings:**\n\n1.  **AppFolio Property Manager**\n    *   **Strengths:** AppFolio is frequently recommended for medium to large portfolios, including properties with 200+ units. It offers a powerful suite of tools for professional property management companies, including comprehensive accounting, AI-driven leasing tools, robust owner portals with real-time financial reporting, and maintenance coordination. Its per-unit cost becomes more economical at larger scales, such as 200 units and above, where its advanced AI features can help justify the investment by automating tasks like answering prospect calls. AppFolio supports various property types, including multifamily, single-family, commercial, and student housing.\n    *   **Texas Consideration:** At 200+ units, AppFolio's advanced features, such as AI-driven leasing assistants, can offer significant value, particularly when managing high leasing volume.\n\n2.  **Buildium**\n    *   **Strengths:** Buildium is often described as a \"Goldilocks option\" that balances complexity and simplicity, making it suitable for small to mid-sized property managers. It provides a comprehensive platform covering marketing, rent collection, and accounting. Buildium excels in accounting depth with customizable general ledgers and supports both cash and accrual accounting, which is important for diverse owner reporting requirements. It also offers strong owner communication tools and a modern interface. Buildium, now a RealPage company, offers AI capabilities for tasks like invoice scanning and drafting communications. For a 200-unit portfolio, Buildium's Premium plan is relevant and costs approximately $400 monthly.\n    *   **Texas Consideration:** Buildium's advanced owner reporting and accounting features are designed to handle trust accounts properly, which is crucial for compliance with Texas Property Code.\n\n3.  **Yardi Breeze**\n    *   **Strengths:** Yardi Breeze is designed for mid-sized firms (50-500 units) that seek Yardi's reliability without the extensive complexity of its enterprise-level Voyager platform. It offers an all-in-one workflow for marketing, leasing, accounting, and operations in a single, cloud-based platform. Breeze has a modern, intuitive user interface and integrates with other Yardi products, offering a clear upgrade path if your portfolio grows significantly. Yardi Breeze Premier is priced at approximately $2 per unit per month, with a $400 monthly minimum.\n    *   **Suitability for 200 Units:** This platform is particularly well-suited for portfolios in the 100-200 unit range, balancing affordability with robust functionality.\n\n4.  **Entrata**\n    *   **Strengths:** Entrata is a robust multifamily operations platform, ideal for mid-to-large portfolios. It aims to connect property management, accounting, leasing, facilities, and resident-facing processes into a unified system. Entrata emphasizes coordinated workflows and provides centralized visibility into leasing, resident, and financial activity, making it suitable for standardizing processes across multiple apartment communities.\n\n5.  **RealPage OneSite**\n    *   **Strengths:** RealPage OneSite is an AI-powered core property management system aimed at multifamily owners and property management companies that need to connect various workflows, including financial management, facilities management, spend management, and resident experience. It's particularly appealing for organizations seeking in-depth analytics and revenue management capabilities.\n\n6.  **DoorLoop**\n    *   **Strengths:** DoorLoop is recognized as an excellent all-in-one solution for growing portfolios, balancing features and capabilities for mid-range enterprises. It simplifies complex tasks through automation, including rent invoicing, late fees, and lease renewal reminders. DoorLoop offers highly-rated mobile apps for both managers and tenants, focusing on user-friendliness and functionality.\n\nWhen making your decision, consider requesting demos from a few of these companies to see how their features align with your specific workflows and Texas-specific compliance requirements.\n\n**Sources:**\n*   Current time information in Runnels County, US.\n*   10 Best Property Management Software Solutions for 2026: Complete Guide - AmeriSave\n*   Best Apartment Management Software for Multifamily in 2026 - Realpage\n*   Top Rated Property Management Software [2026 Complete Guide] - V7 Labs\n*   AppFolio vs Buildium: features, pricing & the best pick for Texas property managers\n*   10 Best Multifamily Property Management Software Platforms - Avail\n*   Best property management software for 100-200 units (2026) - Yardi Breeze\n*   Best Property Management Software Reviews 2026 | Gartner Peer Insights\n*   Property Management Software Comparison: Pricing, Features & Ratings 2026 - Baselane\n*   10 Best Multifamily Property Management Solutions for 2026 - CRE Daily\n*   Best Property Management Software (~100 Units) : r/PropertyManagement - Reddit\n*   10 Must-Have Property Management Software Features (2026) - Intellectyx\n*   15 Best Features Of Property Management Software - Yardi Breeze\n*   10 Must-Have Features in a Property Management System - Softhealer\n*   5 Key Property Management Software Features | Capterra\n*   10 Best Property Management Software I Liked (2025 Edition) - G2 Learning Hub\n*   We Found the 10 Best Multifamily Property Management Software Solutions - Revela\n*   The Best Cloud-Based Property Management Software for Multifamily and CRE Operators\n*   Best Property Management Software for Landlords in 2026\n*   Multifamily Property Management Software: What It is and How it Works - TenantCloud",
+  "sources": [
+    {
+      "title": "realpage.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHLI8d4NuGfsSMxTR14Vht0XR57glZMKyxTLU6H4wtlIxsguI9icxXQpcTfPPhgt3Pbq6twGRo9SlokoOVARA8kEbsUAmAiGpynUp4JRuuGlJrZeVAf8nVDptqDvk5e0Sp-A-kqS8hOM5pnUr632esKa2o3wUSmhOknnoDY"
+    },
+    {
+      "title": "v7labs.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHKRjmpB_5G8KwQhQaIJKofUpdU4QRE9mqzNgBcJEsh9Q0At_kTqunuvvK-5Gq89ncVO-a0IpCz8oqqtR8hQbMEh9euu_h7uv8FKjK3sjASqKFRi5qDYoyKVXZ3kjx2q7fDffKprzo7pnumTagZiPL5ydbR0RbYFkfR9AstBA=="
+    },
+    {
+      "title": "yardibreeze.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHyXtB-TJICy_Hm_3p6X8UdACO2x-_strrPjwkbiXxDJ--r4qBIYvWa8B2yTIS9ahz04tmggKplnnzmCcjsAdYzpStnLqpTV41KHztcuqwA9f47Lrgu0EgieFnFj_fClzYOsZv6IT-exAYtM1XbHvCAantgUzVCETjdBq09JM0dRhI6ur6W6e9qUEif7_aMQAPDHyxS"
+    },
+    {
+      "title": "intellectyx.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH_w2eEaI5UTZpt4IAeP4uHXSWNRGtLltT5eVK5W_Zm0Z9ysYbAbCKLF-7AayE86xtO60kuw4rAL63R77uKSQSJaYWP8qM4K2TecM-ywyr_hpuk18euaj1j6XxijOTGJVsRtShBzL7ll_U33JQJh4V8yfEQ1LjgyMo3-Bm4OZ4-BYwL5z78v8Y="
+    },
+    {
+      "title": "yardibreeze.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEP4RKVqYJAms3Gne-IFvytueD07UhgYi1UUlAh_HNCXsZBFuyrIM2AoRWrdEXVBWIBTStb1C68Wg_RrcphWbHMecnUaPlz83gEpYK0CNG1-8KWZiH_bCRq40p8vZiILTdKngWScHX68xX-IKvLbLQecRxTCChrGGnKC2Y5ZzlMriEiFKa_3BcBACiNUY2j3w=="
+    },
+    {
+      "title": "softhealer.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEcOcHjDjkI08HcRcDIWXRQhZSdMrvRw0frnDsxnodJDLsxpLJ48UO4460184QS3iPjIKPuBib8fflsRiFTmxA411EvTu-_Q90lZ7jdKSCG1vzn53GO29JSsX2b4VnbmVfSJIBKyyMPCceyOnOToOrzCAvURh1wQmx1_4PyKha7s0lkNhlzNlNJkOpz7QA7JFcZWZBVNIVppRYzUFgzew=="
+    },
+    {
+      "title": "amerisave.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEWsqJCQioafTC6u3GyLb-E4DIrxd2djEtIWTup6IyO4jOFcgXTkjoOa7wuSicqXdm7Oo73f1ahyYN-7Kbf2B0FKD0Cz-RViDbaBPp2I5LJd-EhFciB-JLPhlh0XZ_pYBqdEutlDrPqtQSXJWDFRT_zrfNJgz32ssVLEqQ7Rd16lGkGG4qTPpatmRZDfi_O2VPWCn52m9qwVis="
+    },
+    {
+      "title": "capterra.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH-g1cYS1mqGmtZHEDJt6_PvF33bzZyxkiLIIHRZHfZmGdI8gdrsny1d6eUg1N83EKN-Wcr3NVjb39GIwfMWJD13ptS2IcQb7UYn739fmheOZO7c7fAoFuli_Im5nCFt1080-BGT0Rm_RlMvpOuVZcoL54TVQbG5mTlzDrrY7X07sT7RvnRvVKx"
+    },
+    {
+      "title": "texasbmg.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHUxrJVl-VbJ0B3iNarhhh6pSWc6GKCvhLjM0vQ1Axo5u2OIQX337c1QALSdrUKfQws5qG5j_g_lCzLQgRduW5Ow8RwpaogFhQQrIrxPgQkXYdvdAgtin3FVuPWPSmovh4prIOU2czdXE1739vQR9c2Xq1z3fDm5BhfuRwV4lWTk4TVDmcY"
+    },
+    {
+      "title": "gartner.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG1k0hNfSJkPEOtd54JFC9XicoKRweWxBy9z588AO87XMt_IzAByenuSjIc9GKY0c2sdWdvlJAkau_OPkPhEeGx-Ch4l4tMeiwn_yihF4Fxd6wNF0y-Mu1HnwKD4joQdytpoWvKXQUbc8lg2EBc8uspG0-KN-gckduHvARADF8="
+    },
+    {
+      "title": "avail.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHKTpHllO9aVPoVl-VPIRN6odde7zexu02oxL5Iloz1PGLQk5oGGSbWLtNt3PPM6G6DO1Bcsy2gkwgS77yRBnl3J3h2nzV6m_wVelbF9X7o1ffsiFimG4hvOFqtCnZ8rNQ8KKIGkcJ1oqLM7JKxpGhEnmdD1G_u7VWBo2IBwhdrMOFZqTRCTodhSyjo-A=="
+    },
+    {
+      "title": "revela.co",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFwo7uAjrawXoqJFHmBfqmLxKnaeVmWp2R5taA9ffMESv3naBi7U6di0gbQ_3lNNdsuDuUgy8JwVfxYzqeec_t4P30j6oH8wds-iIAFkSFgbYd_IXxw35EyUQsYg1vn-n9Dba-WsPjMKb0x8cRpmSbbaj2rcDSqWdJn050bCeRY2cy2MgcSJIPO"
+    },
+    {
+      "title": "westromgroup.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGs0q5GuLpV_wpcYwMJX0NDt82P_PYhUKd5RXONztHIQV84T9-7EiAImdKN7Lcez9coExRXSLbYC07Tveu3FLAgkYYulDa0CpvDXT45V1m_ggXYv_FTfy7XxqhblKJcbwhqFL1pZNMxY1GY5C7ROclihAcVxwogNKWQHtJ1q4VF0FRUkPENST6vNlz6UgAJWH6A"
+    },
+    {
+      "title": "credaily.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEBlU1clzLhHNHYCaUyThiLKJwyybtG19r7EdGh7MF_OvUYD22Jw9mXzuY3_wIOyqwn6qExVARouHCmT5b6Zgrq6tfns8uXFRgzwW7FfJlQqP3NxaqZvGP7sfckwQV5rbtRzWXZuc5NmHo9G9DywKnKa7fhWhecAcNSUj8ME8EhJu2RJ_aO-XRH0rc="
+    },
+    {
+      "title": "g2.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG4RSX_NzSlMuApTY445Pli7ZBx2xLeEvph9r4Zww9i-vlt-u12dMLM6_B9WEKDRj9RDXghXvZJit__5mmPQwBimEED-ighHmUCYRgTYxGKSRRhlei7Wj3hjFkV9lIE48RnA-x9x8c5td-N0AmQD9P5_g=="
+    },
+    {
+      "title": "faroutsolutions.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHD1gCnIDJww4_BYVKZImIRUJXuz-55_VZjuVcUtHYJyfimzACaTnU1joZuv8KXrP4erfw6fadunQKJhtR1YjD3ofRUbEoCUKU5j5DJfONelvoe5__482LgjJEZjyxwjeyVMLF6OenYIr-R8kHJBPhJVXRF0TIfOSc85rg6UAtlZmBlMhVhpXkyLOU="
+    },
+    {
+      "title": "Current time information in Runnels County, US.",
+      "url": "https://www.google.com/search?q=time+in+Runnels+County,+US"
+    },
+    {
+      "title": "baselane.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGqVyODyUvmgvIvp8Q7mVYX92Z082MXk1HYuof0IG_4bq2NavAyvJ9jbtJRmMmsLwnhzO1bs3v2cCWhvgPDTfkiyTdTIsBzNVkE8O2hiHjTSsZBwCq2Em-URbfyqexj-NjvPLBwAW2rIEKmKrK6VbBonbZh_VwbXNSwyVKrMpKdUIAMRAPB3bRwlg=="
+    },
+    {
+      "title": "reddit.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHYqrWJB-Yo48D84Gz75rVqTho4cABYW8gsGz8boNkD81eheU6Wsp8t4ujjVhVBgXhtUKjBjB-wAuK8aMILt70Gc--1gGDracSmt3rCCMsvllGW_Sa9UKtfKiLU-TM3eDlLFQ2HF5G_my82QxlblDakkLXT49J4rbLtxCxHl_WYVqmiCk7K9bz17hKnbxEbPYEzJP8bBGIfStI-RWtGgR7ThaxqQA=="
+    },
+    {
+      "title": "tenantcloud.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH5CfhuRY25mzFC9kBtvrZfVKR_4qopM12TijGWnM3xq82sAPTCxXzkpIYL_NpdeZLchvbSE9ogG18pvW2mFKcndGJzbHm-Fjs6xHBVmibpSS_VIzBkErouFbNYGhkiCRXCGid9hiq72lHShcouZAeiQPHyefvJjAE7VyIO0TlfvCWqxjg4VnbAoyQ2rmNz4JJjbYg="
+    }
+  ],
+  "brands": [
+    {
+      "brand": "AppFolio",
+      "first_at": 1614,
+      "mentions": 5,
+      "rank": 1
+    },
+    {
+      "brand": "Buildium",
+      "first_at": 2518,
+      "mentions": 7,
+      "rank": 2
+    },
+    {
+      "brand": "RealPage",
+      "first_at": 3063,
+      "mentions": 4,
+      "rank": 3
+    },
+    {
+      "brand": "Yardi",
+      "first_at": 3471,
+      "mentions": 7,
+      "rank": 4
+    },
+    {
+      "brand": "Entrata",
+      "first_at": 4231,
+      "mentions": 3,
+      "rank": 5
+    }
+  ],
+  "links": [
+    {
+      "title": "realpage.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHLI8d4NuGfsSMxTR14Vht0XR57glZMKyxTLU6H4wtlIxsguI9icxXQpcTfPPhgt3Pbq6twGRo9SlokoOVARA8kEbsUAmAiGpynUp4JRuuGlJrZeVAf8nVDptqDvk5e0Sp-A-kqS8hOM5pnUr632esKa2o3wUSmhOknnoDY"
+    },
+    {
+      "title": "v7labs.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHKRjmpB_5G8KwQhQaIJKofUpdU4QRE9mqzNgBcJEsh9Q0At_kTqunuvvK-5Gq89ncVO-a0IpCz8oqqtR8hQbMEh9euu_h7uv8FKjK3sjASqKFRi5qDYoyKVXZ3kjx2q7fDffKprzo7pnumTagZiPL5ydbR0RbYFkfR9AstBA=="
+    },
+    {
+      "title": "yardibreeze.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHyXtB-TJICy_Hm_3p6X8UdACO2x-_strrPjwkbiXxDJ--r4qBIYvWa8B2yTIS9ahz04tmggKplnnzmCcjsAdYzpStnLqpTV41KHztcuqwA9f47Lrgu0EgieFnFj_fClzYOsZv6IT-exAYtM1XbHvCAantgUzVCETjdBq09JM0dRhI6ur6W6e9qUEif7_aMQAPDHyxS"
+    },
+    {
+      "title": "intellectyx.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH_w2eEaI5UTZpt4IAeP4uHXSWNRGtLltT5eVK5W_Zm0Z9ysYbAbCKLF-7AayE86xtO60kuw4rAL63R77uKSQSJaYWP8qM4K2TecM-ywyr_hpuk18euaj1j6XxijOTGJVsRtShBzL7ll_U33JQJh4V8yfEQ1LjgyMo3-Bm4OZ4-BYwL5z78v8Y="
+    },
+    {
+      "title": "yardibreeze.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEP4RKVqYJAms3Gne-IFvytueD07UhgYi1UUlAh_HNCXsZBFuyrIM2AoRWrdEXVBWIBTStb1C68Wg_RrcphWbHMecnUaPlz83gEpYK0CNG1-8KWZiH_bCRq40p8vZiILTdKngWScHX68xX-IKvLbLQecRxTCChrGGnKC2Y5ZzlMriEiFKa_3BcBACiNUY2j3w=="
+    },
+    {
+      "title": "softhealer.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEcOcHjDjkI08HcRcDIWXRQhZSdMrvRw0frnDsxnodJDLsxpLJ48UO4460184QS3iPjIKPuBib8fflsRiFTmxA411EvTu-_Q90lZ7jdKSCG1vzn53GO29JSsX2b4VnbmVfSJIBKyyMPCceyOnOToOrzCAvURh1wQmx1_4PyKha7s0lkNhlzNlNJkOpz7QA7JFcZWZBVNIVppRYzUFgzew=="
+    },
+    {
+      "title": "amerisave.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEWsqJCQioafTC6u3GyLb-E4DIrxd2djEtIWTup6IyO4jOFcgXTkjoOa7wuSicqXdm7Oo73f1ahyYN-7Kbf2B0FKD0Cz-RViDbaBPp2I5LJd-EhFciB-JLPhlh0XZ_pYBqdEutlDrPqtQSXJWDFRT_zrfNJgz32ssVLEqQ7Rd16lGkGG4qTPpatmRZDfi_O2VPWCn52m9qwVis="
+    },
+    {
+      "title": "capterra.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH-g1cYS1mqGmtZHEDJt6_PvF33bzZyxkiLIIHRZHfZmGdI8gdrsny1d6eUg1N83EKN-Wcr3NVjb39GIwfMWJD13ptS2IcQb7UYn739fmheOZO7c7fAoFuli_Im5nCFt1080-BGT0Rm_RlMvpOuVZcoL54TVQbG5mTlzDrrY7X07sT7RvnRvVKx"
+    },
+    {
+      "title": "texasbmg.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHUxrJVl-VbJ0B3iNarhhh6pSWc6GKCvhLjM0vQ1Axo5u2OIQX337c1QALSdrUKfQws5qG5j_g_lCzLQgRduW5Ow8RwpaogFhQQrIrxPgQkXYdvdAgtin3FVuPWPSmovh4prIOU2czdXE1739vQR9c2Xq1z3fDm5BhfuRwV4lWTk4TVDmcY"
+    },
+    {
+      "title": "gartner.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG1k0hNfSJkPEOtd54JFC9XicoKRweWxBy9z588AO87XMt_IzAByenuSjIc9GKY0c2sdWdvlJAkau_OPkPhEeGx-Ch4l4tMeiwn_yihF4Fxd6wNF0y-Mu1HnwKD4joQdytpoWvKXQUbc8lg2EBc8uspG0-KN-gckduHvARADF8="
+    },
+    {
+      "title": "avail.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHKTpHllO9aVPoVl-VPIRN6odde7zexu02oxL5Iloz1PGLQk5oGGSbWLtNt3PPM6G6DO1Bcsy2gkwgS77yRBnl3J3h2nzV6m_wVelbF9X7o1ffsiFimG4hvOFqtCnZ8rNQ8KKIGkcJ1oqLM7JKxpGhEnmdD1G_u7VWBo2IBwhdrMOFZqTRCTodhSyjo-A=="
+    },
+    {
+      "title": "revela.co",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFwo7uAjrawXoqJFHmBfqmLxKnaeVmWp2R5taA9ffMESv3naBi7U6di0gbQ_3lNNdsuDuUgy8JwVfxYzqeec_t4P30j6oH8wds-iIAFkSFgbYd_IXxw35EyUQsYg1vn-n9Dba-WsPjMKb0x8cRpmSbbaj2rcDSqWdJn050bCeRY2cy2MgcSJIPO"
+    },
+    {
+      "title": "westromgroup.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGs0q5GuLpV_wpcYwMJX0NDt82P_PYhUKd5RXONztHIQV84T9-7EiAImdKN7Lcez9coExRXSLbYC07Tveu3FLAgkYYulDa0CpvDXT45V1m_ggXYv_FTfy7XxqhblKJcbwhqFL1pZNMxY1GY5C7ROclihAcVxwogNKWQHtJ1q4VF0FRUkPENST6vNlz6UgAJWH6A"
+    },
+    {
+      "title": "credaily.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEBlU1clzLhHNHYCaUyThiLKJwyybtG19r7EdGh7MF_OvUYD22Jw9mXzuY3_wIOyqwn6qExVARouHCmT5b6Zgrq6tfns8uXFRgzwW7FfJlQqP3NxaqZvGP7sfckwQV5rbtRzWXZuc5NmHo9G9DywKnKa7fhWhecAcNSUj8ME8EhJu2RJ_aO-XRH0rc="
+    },
+    {
+      "title": "g2.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG4RSX_NzSlMuApTY445Pli7ZBx2xLeEvph9r4Zww9i-vlt-u12dMLM6_B9WEKDRj9RDXghXvZJit__5mmPQwBimEED-ighHmUCYRgTYxGKSRRhlei7Wj3hjFkV9lIE48RnA-x9x8c5td-N0AmQD9P5_g=="
+    },
+    {
+      "title": "faroutsolutions.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHD1gCnIDJww4_BYVKZImIRUJXuz-55_VZjuVcUtHYJyfimzACaTnU1joZuv8KXrP4erfw6fadunQKJhtR1YjD3ofRUbEoCUKU5j5DJfONelvoe5__482LgjJEZjyxwjeyVMLF6OenYIr-R8kHJBPhJVXRF0TIfOSc85rg6UAtlZmBlMhVhpXkyLOU="
+    },
+    {
+      "title": "Current time information in Runnels County, US.",
+      "url": "https://www.google.com/search?q=time+in+Runnels+County,+US"
+    },
+    {
+      "title": "baselane.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGqVyODyUvmgvIvp8Q7mVYX92Z082MXk1HYuof0IG_4bq2NavAyvJ9jbtJRmMmsLwnhzO1bs3v2cCWhvgPDTfkiyTdTIsBzNVkE8O2hiHjTSsZBwCq2Em-URbfyqexj-NjvPLBwAW2rIEKmKrK6VbBonbZh_VwbXNSwyVKrMpKdUIAMRAPB3bRwlg=="
+    },
+    {
+      "title": "reddit.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHYqrWJB-Yo48D84Gz75rVqTho4cABYW8gsGz8boNkD81eheU6Wsp8t4ujjVhVBgXhtUKjBjB-wAuK8aMILt70Gc--1gGDracSmt3rCCMsvllGW_Sa9UKtfKiLU-TM3eDlLFQ2HF5G_my82QxlblDakkLXT49J4rbLtxCxHl_WYVqmiCk7K9bz17hKnbxEbPYEzJP8bBGIfStI-RWtGgR7ThaxqQA=="
+    },
+    {
+      "title": "tenantcloud.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH5CfhuRY25mzFC9kBtvrZfVKR_4qopM12TijGWnM3xq82sAPTCxXzkpIYL_NpdeZLchvbSE9ogG18pvW2mFKcndGJzbHm-Fjs6xHBVmibpSS_VIzBkErouFbNYGhkiCRXCGid9hiq72lHShcouZAeiQPHyefvJjAE7VyIO0TlfvCWqxjg4VnbAoyQ2rmNz4JJjbYg="
+    }
+  ]
+}

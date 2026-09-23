@@ -1,0 +1,93 @@
+{
+  "engine": "claude-web",
+  "engine_label": "Claude (Sonnet) via claude -p, web search on",
+  "is_consumer_app": false,
+  "set": "B",
+  "question": "What is the best property management software for a 500-unit portfolio?",
+  "intent": "buy-pms",
+  "asked_on": "2026-09-23",
+  "ok": true,
+  "answer": "## Short answer\n\nAt 500 units you're right in the overlap zone between \"mid-market\" and \"scaling toward enterprise,\" so the right pick depends more on portfolio type (single-family scattered-site vs. multifamily community vs. mixed commercial) than on unit count alone.\n\n**Most likely fits:**\n\n- **AppFolio** \u2014 the default recommendation for growth-oriented residential/mixed portfolios in the 200\u20131,000+ unit range. Strong owner/tenant portals, built-in leasing and maintenance workflows, and increasingly AI-driven automation (turn maintenance triage, message drafting). Pricing is per-unit with a monthly minimum \u2014 expect roughly $700\u2013800/month for 500 units once add-ons are included.\n- **Buildium** (owned by RealPage) \u2014 the budget-friendlier alternative, explicitly positioned for roughly 50\u2013500 units. Less polished automation than AppFolio but solid accounting, and generally cheaper at this scale. Good fit if you don't need heavy customization.\n- **Rent Manager** \u2014 worth a serious look if the portfolio has any commercial/mixed-use component, since it handles residential + commercial + HOA in one system better than AppFolio/Buildium do. Pricing is more custom/quote-based.\n- **Yardi Breeze Premier** \u2014 if you want a path into the Yardi ecosystem (useful if you expect to grow past 1,000+ units and eventually need Yardi Voyager) without full enterprise complexity. Priced per unit ($1\u20132/unit/month range), $400/month minimum.\n- **Propertyware** (also AppFolio-owned) or **DoorLoop** \u2014 worth checking if the 500 units are single-family/scattered-site rentals rather than multifamily communities, since those tools are built around that model.\n- **MRI Software / Entrata / RealPage OneSite** \u2014 generally overkill and priced for enterprise (1,000+ unit, institutional) operators; only worth evaluating if you're backed by an institutional owner or REIT with more complex reporting/compliance needs.\n\n**Caveat on the research:** several of the \"best of 2026\" roundups that show up in search results are vendor-published or SEO content (e.g., AppFolio's own blog ranking AppFolio #1) or low-quality aggregator sites \u2014 treat rankings from a vendor's own blog as marketing, not independent analysis. Capterra/G2/TrustRadius pricing pages and Softwareconnect's comparison are more reliable for hard numbers, but you should still get live quotes since per-unit pricing and required add-ons vary by portfolio mix.\n\n**Practical next step:** shortlist AppFolio, Buildium, and Rent Manager, get quotes for your actual 500-unit mix (not the generic per-unit rate), and run a trial on your worst-case workflow (e.g., a messy maintenance/turnover scenario) rather than deciding on feature lists alone.\n\nSources:\n- [AppFolio vs. Buildium \u2013 2026 Comparison](https://softwareconnect.com/comparisons/appfolio-vs-buildium/)\n- [Best Property Management Software 2026: Top 6 Companies Compared (AppFolio blog \u2014 vendor source, self-interested)](https://www.appfolio.com/blog/best-property-management-softwares-compared-2026)\n- [Top Rated Property Management Software [2026 Complete Guide]](https://www.v7labs.com/blog/top-rated-property-management-software)\n- [Best Property Management Software [2026] | Quickbase](https://www.quickbase.com/blog/best-property-management-software)\n- [AppFolio Alternatives: 6 Property Management Software Options for 2026](https://magicdoor.com/blog/appfolio-alternatives-property-management-software-options)\n- [Yardi Breeze Software Pricing, Alternatives & More 2026 | Capterra](https://www.capterra.com/p/164741/Yardi-Breeze/)\n- [Yardi Breeze Pricing 2026 | G2](https://www.g2.com/products/yardi-breeze/pricing)\n- [Yardi pricing guide: Plans, features & cost comparisons [2026]](https://agorareal.com/compare/yardi-pricing/)\n- [Yardi vs AppFolio: Property Management Compared 2026](https://ustechautomations.com/resources/blog/yardi-vs-appfolio-property-management-automation-2026)",
+  "brands": [
+    {
+      "brand": "AppFolio",
+      "first_at": 298,
+      "mentions": 15,
+      "rank": 1
+    },
+    {
+      "brand": "Buildium",
+      "first_at": 693,
+      "mentions": 5,
+      "rank": 2
+    },
+    {
+      "brand": "RealPage",
+      "first_at": 714,
+      "mentions": 2,
+      "rank": 3
+    },
+    {
+      "brand": "Rent Manager",
+      "first_at": 959,
+      "mentions": 2,
+      "rank": 4
+    },
+    {
+      "brand": "Yardi",
+      "first_at": 1190,
+      "mentions": 11,
+      "rank": 5
+    },
+    {
+      "brand": "MRI",
+      "first_at": 1659,
+      "mentions": 1,
+      "rank": 6
+    },
+    {
+      "brand": "Entrata",
+      "first_at": 1674,
+      "mentions": 1,
+      "rank": 7
+    }
+  ],
+  "links": [
+    {
+      "title": "",
+      "url": "https://softwareconnect.com/comparisons/appfolio-vs-buildium/"
+    },
+    {
+      "title": "",
+      "url": "https://www.appfolio.com/blog/best-property-management-softwares-compared-2026"
+    },
+    {
+      "title": "",
+      "url": "https://www.v7labs.com/blog/top-rated-property-management-software"
+    },
+    {
+      "title": "",
+      "url": "https://www.quickbase.com/blog/best-property-management-software"
+    },
+    {
+      "title": "",
+      "url": "https://magicdoor.com/blog/appfolio-alternatives-property-management-software-options"
+    },
+    {
+      "title": "",
+      "url": "https://www.capterra.com/p/164741/Yardi-Breeze/"
+    },
+    {
+      "title": "",
+      "url": "https://www.g2.com/products/yardi-breeze/pricing"
+    },
+    {
+      "title": "",
+      "url": "https://agorareal.com/compare/yardi-pricing/"
+    },
+    {
+      "title": "",
+      "url": "https://ustechautomations.com/resources/blog/yardi-vs-appfolio-property-management-automation-2026"
+    }
+  ]
+}

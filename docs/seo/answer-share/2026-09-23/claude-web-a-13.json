@@ -1,0 +1,67 @@
+{
+  "engine": "claude-web",
+  "engine_label": "Claude (Sonnet) via claude -p, web search on",
+  "is_consumer_app": false,
+  "set": "A",
+  "question": "Where can I find Phoenix multifamily construction pipeline data?",
+  "intent": "find-pipeline",
+  "asked_on": "2026-09-23",
+  "ok": true,
+  "answer": "For Phoenix-area multifamily construction pipeline data, you have a few tiers of sources depending on how granular and how much you want to pay:\n\n**Local/regional specialist trackers (best for AZ-specific detail)**\n- **AZBEX** (azbex.com) \u2014 an Arizona-focused commercial real estate intelligence firm that specifically tracks the multifamily construction pipeline for metro Phoenix (units under construction, proposed, and planned by submarket). This is probably the single best niche source for what you're after.\n- **MMG Real Estate Advisors** publishes a quarterly \"Phoenix Pipeline Report\" with construction-stage breakdowns.\n- **Kidder Mathews** and **GetMultifamily.com** publish recurring (monthly/quarterly) Phoenix multifamily market reports with supply and absorption data.\n\n**National CRE data platforms (subscription, most comprehensive)**\n- **Yardi Matrix** \u2014 the industry-standard source for multifamily supply pipeline by metro/submarket, widely cited in national multifamily reports that call out Phoenix as a top-supply market.\n- **RealPage Market Analytics** \u2014 tracks under-construction units, deliveries, and absorption by metro.\n- **CoStar** \u2014 has detailed under-construction and proposed multifamily project data, including site-level detail.\n- **ALN Apartment Data** \u2014 strong Southwest/Texas-Arizona coverage of under-construction and lease-up properties.\n- **Moody's CRE (formerly REIS)** \u2014 metro-level supply pipeline and forecasts.\n\n**Brokerage research (free, periodic reports)**\n- CBRE, JLL, Cushman & Wakefield, and Colliers all publish quarterly Phoenix multifamily MarketBeat/Insight reports with construction pipeline figures, usually free as PDFs on their sites.\n\n**Public records (free, project-level, City of Phoenix)**\n- **City of Phoenix Planning & Development Department (PDD)** \u2014 rezoning cases, site plans, and General Plan amendments show projects before they break ground.\n- **SHAPE PHX** (Phoenix's permitting system, apps-secure.phoenix.gov/PDD) \u2014 active/issued commercial and multifamily building permits.\n- Reach PDD directly at 602-262-7811 for permit data exports if you need bulk/raw data.\n\n**Current snapshot** (from AZBEX/Kidder Mathews reporting): units under construction fell to roughly 16,000 as of Q2 2026 (down ~35% YoY), with the pipeline down about 50% from its 2022-23 peak but still representing about 4% of existing inventory. Downtown Phoenix, Tempe, and the Southwest Valley are flagged as the areas most exposed to oversupply risk.\n\nIf you just need periodic reporting, AZBEX or the brokerage MarketBeat reports (free) are the easiest entry point; if you need raw, queryable project-level data, Yardi Matrix/CoStar/RealPage are the paid options, and City of Phoenix PDD records are the free public alternative.\n\nSources:\n- [Multifamily 'Rebalancing' Nationally; Phoenix Pipeline Remains Heavy - AZBEX](https://azbex.com/trends/multifamily-rebalancing-nationally-phoenix-pipeline-remains-heavy/)\n- [Phoenix Multifamily Market Report | Q2 2026 | Kidder Mathews](https://kidder.com/market-reports/phoenix-multifamily-market-report/)\n- [Phoenix apartment demand surges as construction slows - AZ Big Media](https://azbigmedia.com/real-estate/phoenix-apartment-demand-surges-as-construction-slows/)\n- [Phoenix Q1 2026 Pipeline Report \u2013 MMG Real Estate Advisors](https://mmgrea.com/phoenix-q1-2026-pipeline-report/)\n- [Phoenix MULTIFAMILY Market Report June 2026 - GetMultifamily](https://www.getmultifamily.com/blog/phoenix-multifamily-market-report-june-2026/)\n- [Commercial and Multifamily Building | City of Phoenix](https://www.phoenix.gov/administration/departments/pdd/commercial-multifamily-building.html)\n- [Planning and Development Department | City of Phoenix](https://www.phoenix.gov/administration/departments/pdd.html)\n- [PDD Online (SHAPE PHX) - City of Phoenix](https://apps-secure.phoenix.gov/PDD)",
+  "brands": [
+    {
+      "brand": "Yardi",
+      "first_at": 856,
+      "mentions": 2,
+      "rank": 1
+    },
+    {
+      "brand": "RealPage",
+      "first_at": 1049,
+      "mentions": 2,
+      "rank": 2
+    },
+    {
+      "brand": "CoStar",
+      "first_at": 1153,
+      "mentions": 2,
+      "rank": 3
+    },
+    {
+      "brand": "CBRE",
+      "first_at": 1508,
+      "mentions": 1,
+      "rank": 4
+    }
+  ],
+  "links": [
+    {
+      "title": "",
+      "url": "https://azbex.com/trends/multifamily-rebalancing-nationally-phoenix-pipeline-remains-heavy/"
+    },
+    {
+      "title": "",
+      "url": "https://kidder.com/market-reports/phoenix-multifamily-market-report/"
+    },
+    {
+      "title": "",
+      "url": "https://azbigmedia.com/real-estate/phoenix-apartment-demand-surges-as-construction-slows/"
+    },
+    {
+      "title": "",
+      "url": "https://mmgrea.com/phoenix-q1-2026-pipeline-report/"
+    },
+    {
+      "title": "",
+      "url": "https://www.getmultifamily.com/blog/phoenix-multifamily-market-report-june-2026/"
+    },
+    {
+      "title": "",
+      "url": "https://www.phoenix.gov/administration/departments/pdd/commercial-multifamily-building.html"
+    },
+    {
+      "title": "",
+      "url": "https://apps-secure.phoenix.gov/PDD"
+    }
+  ]
+}

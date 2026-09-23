@@ -1,0 +1,136 @@
+{
+  "engine": "gemini",
+  "engine_label": "Gemini (gemini-2.5-flash) via API, Google Search grounding on",
+  "is_consumer_app": false,
+  "set": "A",
+  "question": "What public data sources show apartment construction permits in Texas?",
+  "intent": "find-sources",
+  "asked_on": "2026-09-23",
+  "ok": true,
+  "answer": "Several public data sources offer insights into apartment construction permits in Texas, ranging from federal statistics to local city portals and commercial data aggregators. These sources can help researchers understand construction trends, specific project details, and market activity.\n\nHere are some prominent public data sources for apartment construction permits in Texas:\n\n**1. Government and Official Data Sources:**\n\n*   **U.S. Census Bureau Building Permits Survey (BPS):** This is a foundational federal source for residential construction statistics, including multifamily units. The BPS provides national, state, and local data on new privately-owned housing units authorized by building permits, with classifications that allow for identifying multi-unit structures (e.g., 5+ units, which typically represent apartments). This data is updated monthly and offers a comprehensive historical record dating back to 1980.\n    *   **Access via Texas Real Estate Research Center:** The Texas Real Estate Research Center at Texas A&M University publishes data from the U.S. Census Bureau's Building Permits Survey specifically for Texas. Their \"Building Permit Place Advanced Search\" tool allows users to filter data by date, state, metropolitan statistical area, county, and place/city, with specific filters for the number of buildings and units (including 5+ units for apartments).\n    *   **Access via FRED (Federal Reserve Economic Data):** The Federal Reserve Bank of St. Louis's FRED database also provides economic data series, including new private housing units authorized by building permits for Texas and specific Metropolitan Statistical Areas (MSAs). This often includes breakdowns for structures with 5 or more units.\n*   **City-Specific Open Data Portals:** Many individual cities in Texas maintain their own online portals for building permits, providing granular details at the local project level. These portals are often managed by the city's building department.\n    *   **City of Austin Open Data:** The City of Austin, for example, offers \"Issued Construction Permits\" and \"Issued Building Permits\" datasets that include building, electrical, mechanical, and plumbing permits. These datasets provide details such as issue date, location, description of work, square footage, valuation, and number of units, with updates on a daily or quarterly basis.\n    *   **City of Laredo Open Data:** Similarly, the City of Laredo provides a \"Building Permits\" dataset that includes permit numbers, valuations, and fees, along with a \"Permits Issued Report\" that contains permit addresses, valuations, and names.\n*   **Texas Open Data Portal (Texas.gov):** This portal serves as a hub for various state-level data, including a \"Permits & Licensing\" section. While it may link to other department-specific data, it can be a starting point for discovering statewide permit-related information.\n*   **Texas Department of Licensing and Regulation (TDLR):** The TDLR has specific requirements for project registration and offers a project search function where publicly available information can be viewed.\n\n**2. Commercial Data Providers and Aggregators:**\n\n*   **Buildchek:** This company offers a searchable database of verified building permit data across Texas, including multi-family permit reports. Users can search by address, ZIP code, city, or county for residential and commercial permits. Buildchek aims to streamline access to permit information for professionals like home inspectors and real estate agents.\n*   **HBW (HBWeekly):** HBW collects and provides building permit data, offering monthly reviews like the \"Texas Residential Construction Snapshot.\" These reports highlight statewide totals, regional performance, and county-level concentrations of residential permits, drawing from their collected data.\n*   **PermitVector:** This platform provides guides and services related to Texas building permit data, indicating that they process and offer access to this public information, often for contractors looking for leads.\n*   **Zabalist:** Zabalist offers a free searchable database of building permits in Texas, allowing users to browse by city, county, or search by address. Their records include permit type (residential, commercial), address, contractor name, estimated project value, issue date, and status.\n*   **Mercator.ai:** This company leverages building permit data to provide project intelligence, emphasizing that permits are public records and valuable for identifying new construction opportunities early on.\n\nWhen researching apartment construction permits, it's important to note that while state and federal sources offer aggregate data, city-specific portals often provide the most detailed, project-level information. Commercial providers typically aggregate and streamline access to this public data, sometimes offering enhanced search and analysis tools.\n\n**Sources Used:**\n*   Current time information in Runnels County, US.\n*   Texas Residential Construction Snapshot: March 2026 - HBWeekly.\n*   Issued Construction Permits | Open Data | City of Austin, Texas.\n*   Contractor Lead-Gen & Texas Permit Data Guides - PermitVector.\n*   Issued Building Permits | Open Data | City of Austin, Texas.\n*   Are Building Permits Public Record? A Texas Guide - Mercator.ai.\n*   Texas Building Permit Database | Online Lookup Software - Buildchek.\n*   Texas Building permits by County - IndexMundi.\n*   Building Permits | Texas Real Estate Research Center.\n*   Texas Open Data Portal - Texas.gov.\n*   TX, Housing, Permits - Economic Data Series | FRED | St. Louis Fed.\n*   Texas Building Permits Search 2026 | Lookup Permits by City & County - Zabalist.\n*   Building Permits by State and Metro Area - NAHB.\n*   Building Permits - Dataset - Open Data Laredo.\n*   Building Permit Place Advanced Search | Texas Real Estate Research Center.",
+  "sources": [
+    {
+      "title": "indexmundi.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFldmwEUiC-9MQzamtnna1vgM6ZkjdLyBZx62K5CoPLoLH28_ZWbDexLYjvRcUETRiF69IMn6MDLjCNTydZh6abnyRFaa2TG8hKn5R3R4z9Y_bIFnGsVa7t5EL6XDkl6MpRyr0vOsera7WsW17uI-k8f_VWoEnE-sJkdpdnqQSAnbIH8yhLH9QCmuy18rKEscAtWA-W4yZKIaAcEBAb1gw3qC8AP06sOGeoFg=="
+    },
+    {
+      "title": "tamu.edu",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGJMH-bTtD8rBn90cpD2LVquAA62kPCQySi49-hgRSL8mdX06m59-cMaZbzl1GQY3AYoTvciuCLtHu9O0AZ_u_9otUAdFjANvQ_IfeIB2O0aEukCWVZXH3jxv-JLkAGQc8wkXLyAtn4vg=="
+    },
+    {
+      "title": "nahb.org",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFg6fQlXtcGef_t6kWjJ54cQvkCmAqcz7EZXGVBehlSA2F3ygkUdJ-cHv9G2XL_2FZemmX5GzN0uKtCDcjIRDkHh10vz7LqBO2MPAAVHVm_8y0Xt0lRn5MwY96CdSqlNB5Z-1OeMEaWUrmmAVtqXplxuAPs4wQJTM0PBegr4pYqCDAmo_C-xXm5PMGmIpJhA5-DhGg3Np4pgQvayQ2LQgAeHd5SGufCd2OTWl0draNMhRWi"
+    },
+    {
+      "title": "tamu.edu",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFMmbKPs34J9GKEiPgm1JXObnnigqZq79wPBiUc_m0fXuulNhbT62quPdt_IWROXwSkUz6fAronVwz8b63MebzsfwHbrw6EPOzTm0chcSVn1jZBkx6nOPuKkX1fgOCZcsu45DXfhdoT5L-o1Za_rb4nAmfk5JpTBKKKnmARhA=="
+    },
+    {
+      "title": "stlouisfed.org",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEhoKuxef9wwCBc3voAd41iFEfRTSNkE1yhQsJkIeELVGzIkvNZ7Asx4lzZQq289On96E6F6zAwAvyjY3bMcdcKUvhfifCQ8TlKb2KU04xrXi93VyXijjwrCx1LrGT-96rWnklof87KbQXRKKGsUYDdAMpBGqkvTPY9BHs="
+    },
+    {
+      "title": "mercator.ai",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEGl6Yolv-KXoBO1pR9WKUaLEku5dlKjdy9U-EsOPphCf9rMOJO0SuRAJdLmbhso_iSAY5cddvJeeP5Z1X1ikue25DAtmWoJawQt-b25BjRXSw_yUtQoLpSWNh6IHXkrdjWYWHPWo3VagluLuHflhwObSpd_ogrizlEMYA="
+    },
+    {
+      "title": "austintexas.gov",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGZEXrf_C7t80z7r6g4cvNiw9n-8-CA0SGxE5S7b-YHYrQkpcbStY5NuWWpp8kic_pXTnDM7115ouKcAInHFMtERiAmA99o2D2zeVx1Uqr1Nxxe87VO4oEdJ2aB6IEwDcclThG6JfswGj_yO4xxEUEyLXExu9amD2h90BOhQ9ov-hA1KKhsPpB4oJMTpXq2L24-FIO1iqo="
+    },
+    {
+      "title": "austintexas.gov",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEsSzYB-4xmfQ0lkfkn0NAe6cS9Fk57MtXar5wfV4kWkVPoquxlv8qc6Zkyd8zcTAfC617uZeRy6C_Kzq9eZMx4rpPppbJJQdVeo8-xrcCvKSET2VhkkC7RUabaQjwn9ZdPKkeAJ4r2D_-FRVuzM3lkgmfKz7hWlnh-1-ucHrSwM2Y="
+    },
+    {
+      "title": "openlaredo.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHPhk1lKiwEK7s_I4Z97J8zSL--2ACH36MSyRIYji4xMg6hESyJnFHg-7T5BKj0Ey6Mi7R0dV66ECwa0ganBxHpB7OyS8K-z45sq_BeeGUI2JUYpIyITE1N2GhBqAXrGhD1ahvIvCvoE7biO9xgSho="
+    },
+    {
+      "title": "texas.gov",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHcInGs6oNKswQLq8OOIg_Tk91pDE5WL0x8ukAeVO4xo7WA5BUDjT0IomGIQkxG-YxfZsV5psaDbAJTiTdbcetWH3R58VUj3GpZJdZcnt8ap-w2"
+    },
+    {
+      "title": "buildchek.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFtl4VkuEwQZoWck4u9i5O_5TE31LNBT6gbdbqJr_Wctf4LRBXrW-sVESyzeU0E-33FrooefQW6OGwxPkQnrVclfHciwrDBTD0Q3A4OjJGTn4ly3W7fR74rXfuqvwUdy3-1LsT7ZrlsvwpgR_n_6-FIkFlifh9yiV7A1tyRJxjFnhkaLA=="
+    },
+    {
+      "title": "hbweekly.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEl_ShqaAoutnp0WeLAHr_dy2s098JUJhwkp6O7VhufgX_PQvKu7S3_lFFlqwodKle4NBaueMhUk0K7OFe6RfU4BfXlGvbd4pdq8_cm-Q3dj-4JFiQinHZ_e3z4-lE6EjARWOK9HlBx1o2xSwLguOL9JEWrv2PunFnwl_3rIK7MrDxJkPUY3CdH"
+    },
+    {
+      "title": "permitvector.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFRAjjJrMexi9SQydXVnfNK5LIytKnr7mkrFFIEURUT6vQMayWc6q8CDQPFbVb-_Juf0aA8sGiNimwZoTc_U8Z2pqG10H-KDGIoYDHOi4yF01ynBzt8_ufC"
+    },
+    {
+      "title": "zabalist.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFCTtQK2sk3SEvxGKM9z4EoR5Qv2mPMEGFpvCsB9bO27vnYBqdxBR7tPhKMcjoPkAsVZuwRQuJDv2L1YLSWDctufJ48yqZKTWkOT-Agz2agzXTSv71FQdhZA3Yw"
+    },
+    {
+      "title": "Current time information in Runnels County, US.",
+      "url": "https://www.google.com/search?q=time+in+Runnels+County,+US"
+    }
+  ],
+  "brands": [],
+  "links": [
+    {
+      "title": "indexmundi.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFldmwEUiC-9MQzamtnna1vgM6ZkjdLyBZx62K5CoPLoLH28_ZWbDexLYjvRcUETRiF69IMn6MDLjCNTydZh6abnyRFaa2TG8hKn5R3R4z9Y_bIFnGsVa7t5EL6XDkl6MpRyr0vOsera7WsW17uI-k8f_VWoEnE-sJkdpdnqQSAnbIH8yhLH9QCmuy18rKEscAtWA-W4yZKIaAcEBAb1gw3qC8AP06sOGeoFg=="
+    },
+    {
+      "title": "tamu.edu",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGJMH-bTtD8rBn90cpD2LVquAA62kPCQySi49-hgRSL8mdX06m59-cMaZbzl1GQY3AYoTvciuCLtHu9O0AZ_u_9otUAdFjANvQ_IfeIB2O0aEukCWVZXH3jxv-JLkAGQc8wkXLyAtn4vg=="
+    },
+    {
+      "title": "nahb.org",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFg6fQlXtcGef_t6kWjJ54cQvkCmAqcz7EZXGVBehlSA2F3ygkUdJ-cHv9G2XL_2FZemmX5GzN0uKtCDcjIRDkHh10vz7LqBO2MPAAVHVm_8y0Xt0lRn5MwY96CdSqlNB5Z-1OeMEaWUrmmAVtqXplxuAPs4wQJTM0PBegr4pYqCDAmo_C-xXm5PMGmIpJhA5-DhGg3Np4pgQvayQ2LQgAeHd5SGufCd2OTWl0draNMhRWi"
+    },
+    {
+      "title": "tamu.edu",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFMmbKPs34J9GKEiPgm1JXObnnigqZq79wPBiUc_m0fXuulNhbT62quPdt_IWROXwSkUz6fAronVwz8b63MebzsfwHbrw6EPOzTm0chcSVn1jZBkx6nOPuKkX1fgOCZcsu45DXfhdoT5L-o1Za_rb4nAmfk5JpTBKKKnmARhA=="
+    },
+    {
+      "title": "stlouisfed.org",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEhoKuxef9wwCBc3voAd41iFEfRTSNkE1yhQsJkIeELVGzIkvNZ7Asx4lzZQq289On96E6F6zAwAvyjY3bMcdcKUvhfifCQ8TlKb2KU04xrXi93VyXijjwrCx1LrGT-96rWnklof87KbQXRKKGsUYDdAMpBGqkvTPY9BHs="
+    },
+    {
+      "title": "mercator.ai",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEGl6Yolv-KXoBO1pR9WKUaLEku5dlKjdy9U-EsOPphCf9rMOJO0SuRAJdLmbhso_iSAY5cddvJeeP5Z1X1ikue25DAtmWoJawQt-b25BjRXSw_yUtQoLpSWNh6IHXkrdjWYWHPWo3VagluLuHflhwObSpd_ogrizlEMYA="
+    },
+    {
+      "title": "austintexas.gov",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGZEXrf_C7t80z7r6g4cvNiw9n-8-CA0SGxE5S7b-YHYrQkpcbStY5NuWWpp8kic_pXTnDM7115ouKcAInHFMtERiAmA99o2D2zeVx1Uqr1Nxxe87VO4oEdJ2aB6IEwDcclThG6JfswGj_yO4xxEUEyLXExu9amD2h90BOhQ9ov-hA1KKhsPpB4oJMTpXq2L24-FIO1iqo="
+    },
+    {
+      "title": "austintexas.gov",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEsSzYB-4xmfQ0lkfkn0NAe6cS9Fk57MtXar5wfV4kWkVPoquxlv8qc6Zkyd8zcTAfC617uZeRy6C_Kzq9eZMx4rpPppbJJQdVeo8-xrcCvKSET2VhkkC7RUabaQjwn9ZdPKkeAJ4r2D_-FRVuzM3lkgmfKz7hWlnh-1-ucHrSwM2Y="
+    },
+    {
+      "title": "openlaredo.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHPhk1lKiwEK7s_I4Z97J8zSL--2ACH36MSyRIYji4xMg6hESyJnFHg-7T5BKj0Ey6Mi7R0dV66ECwa0ganBxHpB7OyS8K-z45sq_BeeGUI2JUYpIyITE1N2GhBqAXrGhD1ahvIvCvoE7biO9xgSho="
+    },
+    {
+      "title": "texas.gov",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHcInGs6oNKswQLq8OOIg_Tk91pDE5WL0x8ukAeVO4xo7WA5BUDjT0IomGIQkxG-YxfZsV5psaDbAJTiTdbcetWH3R58VUj3GpZJdZcnt8ap-w2"
+    },
+    {
+      "title": "buildchek.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFtl4VkuEwQZoWck4u9i5O_5TE31LNBT6gbdbqJr_Wctf4LRBXrW-sVESyzeU0E-33FrooefQW6OGwxPkQnrVclfHciwrDBTD0Q3A4OjJGTn4ly3W7fR74rXfuqvwUdy3-1LsT7ZrlsvwpgR_n_6-FIkFlifh9yiV7A1tyRJxjFnhkaLA=="
+    },
+    {
+      "title": "hbweekly.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEl_ShqaAoutnp0WeLAHr_dy2s098JUJhwkp6O7VhufgX_PQvKu7S3_lFFlqwodKle4NBaueMhUk0K7OFe6RfU4BfXlGvbd4pdq8_cm-Q3dj-4JFiQinHZ_e3z4-lE6EjARWOK9HlBx1o2xSwLguOL9JEWrv2PunFnwl_3rIK7MrDxJkPUY3CdH"
+    },
+    {
+      "title": "permitvector.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFRAjjJrMexi9SQydXVnfNK5LIytKnr7mkrFFIEURUT6vQMayWc6q8CDQPFbVb-_Juf0aA8sGiNimwZoTc_U8Z2pqG10H-KDGIoYDHOi4yF01ynBzt8_ufC"
+    },
+    {
+      "title": "zabalist.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFCTtQK2sk3SEvxGKM9z4EoR5Qv2mPMEGFpvCsB9bO27vnYBqdxBR7tPhKMcjoPkAsVZuwRQuJDv2L1YLSWDctufJ48yqZKTWkOT-Agz2agzXTSv71FQdhZA3Yw"
+    },
+    {
+      "title": "Current time information in Runnels County, US.",
+      "url": "https://www.google.com/search?q=time+in+Runnels+County,+US"
+    }
+  ]
+}

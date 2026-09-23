@@ -1,0 +1,61 @@
+{
+  "engine": "claude-web",
+  "engine_label": "Claude (Sonnet) via claude -p, web search on",
+  "is_consumer_app": false,
+  "set": "B",
+  "question": "Which is better for a small property management company: RealPage or AppFolio?",
+  "intent": "compare-pms",
+  "asked_on": "2026-09-23",
+  "ok": true,
+  "answer": "For a **small property management company**, **AppFolio** is generally the better fit \u2014 but there's a catch worth flagging up front.\n\n## The short answer\nAppFolio wins for small operators on usability and price-to-value; RealPage is built for large, multi-market portfolios and its pricing/complexity reflects that. The wrinkle is that AppFolio itself isn't really built for *tiny* operators either.\n\n## Why AppFolio generally fits better\n- **Pricing**: AppFolio starts around $1.49/unit/month (residential), a transparent per-unit model. RealPage's core commercial product prices by square footage (e.g., ~$7\u201310 per 10,000 sq ft/month) and its enterprise suite is generally quoted/negotiated \u2014 pricing built for large portfolios, not boutique operators.\n- **Ease of use**: Reviewers consistently describe AppFolio as more intuitive (universal search, AI leasing assistant, mobile app) with less onboarding overhead. RealPage is described as feature-rich but harder to navigate, with limited training/onboarding support.\n- **Market fit**: One analysis (SelectHub) ranked RealPage's affordability 32nd of 37 competitors overall, but 3rd of 37 among 1,000+ employee operators \u2014 i.e., it's priced and packaged for enterprise-scale landlords, REITs, and large multifamily operators, not a company running a few dozen doors.\n\n## The catch: AppFolio has its own small-operator friction\n- **50-unit minimum**: AppFolio Property Manager has a well-known 50-unit minimum (with a monthly minimum fee), which is a common complaint from smaller landlords and companies just starting out \u2014 it can price out a company with, say, 10\u201330 units.\n- **Support complaints**: Reviews (Capterra, BBB, PissedConsumer) cite slow support response times, billing disputes, and contract buyout friction \u2014 worth asking about directly in a sales call.\n\n## If you're below AppFolio's minimum\nFor companies too small for either platform's realistic sweet spot, alternatives frequently mentioned as better fits at low unit counts include **Buildium**, **DoorLoop**, **RentRedi**, and **Avail** \u2014 these have no/lower minimums and per-unit pricing that scales down further.\n\n## One more thing worth knowing about RealPage\nRealPage has been under DOJ antitrust scrutiny over its revenue-management/rent-pricing algorithm (allegations it enabled coordinated rent-setting among landlords). The DOJ and RealPage reached a **proposed settlement in November 2025** \u2014 no damages or admission of wrongdoing, but RealPage agreed to restrict use of real-time competitor pricing data (only data \u22651 year old can now train the algorithm). This is more relevant if you'd use RealPage's revenue-management/pricing tools specifically, and separately RealPage is also litigating against the NY Attorney General over a related \"Rent Advice\" disclosure statute (briefing due Feb 2026). Not directly a \"which software is better\" issue, but relevant reputational/compliance context if you're evaluating the company.\n\n**Bottom line**: If you're at or above ~50 units and want a clean, modern interface, go AppFolio. If you're a large multifamily/commercial operator needing deep revenue-management and marketing tools, RealPage's enterprise suite (RealPage Essentials is their small/mid-market line) is more comparable \u2014 but confirm current small-portfolio pricing directly with RealPage's Essentials sales team, since it's not fully transparent online. If you're a true micro-operator (under ~20-30 units), neither may be the best starting point \u2014 look at Buildium or DoorLoop instead.\n\nSources:\n- [AppFolio vs RealPage | Which Property Management Software Wins In 2026?](https://www.selecthub.com/property-management-software/appfolio-vs-realpage/)\n- [RealPage Reviews 2026: Pricing, Features & More](https://www.selecthub.com/p/property-management-software/realpage/)\n- [Small and Mid-sized Property Management Software | Realpage (Essentials)](https://www.realpage.com/essentials/)\n- [RealPage Agrees to Settle Antitrust Lawsuit With DOJ Over Rent Algorithm](https://themortgagepoint.com/2025/11/26/realpage-agrees-to-settle-antitrust-lawsuit-with-doj-over-its-rent-algorithm/)\n- [DOJ Settles Its Algorithmic Price-Fixing Case Against RealPage | Wilson Sonsini](https://www.wsgr.com/en/insights/doj-settles-its-algorithmic-price-fixing-case-against-realpage.html)\n- [AppFolio Property Manager Reviews 2026 | Capterra](https://www.capterra.com/p/92228/AppFolio-Property-Manager/reviews/)\n- [AppFolio, Inc | BBB Complaints](https://www.bbb.org/us/ca/goleta/profile/computer-software/appfolio-inc-1236-92009947/complaints)\n- [AppFolio Reviews | appfolio.com @ PissedConsumer](https://appfolio.pissedconsumer.com/review.html)",
+  "brands": [
+    {
+      "brand": "AppFolio",
+      "first_at": 47,
+      "mentions": 19,
+      "rank": 1
+    },
+    {
+      "brand": "RealPage",
+      "first_at": 221,
+      "mentions": 23,
+      "rank": 2
+    },
+    {
+      "brand": "Buildium",
+      "first_at": 2007,
+      "mentions": 2,
+      "rank": 3
+    }
+  ],
+  "links": [
+    {
+      "title": "",
+      "url": "https://www.selecthub.com/property-management-software/appfolio-vs-realpage/"
+    },
+    {
+      "title": "",
+      "url": "https://www.realpage.com/essentials/"
+    },
+    {
+      "title": "",
+      "url": "https://themortgagepoint.com/2025/11/26/realpage-agrees-to-settle-antitrust-lawsuit-with-doj-over-its-rent-algorithm/"
+    },
+    {
+      "title": "",
+      "url": "https://www.wsgr.com/en/insights/doj-settles-its-algorithmic-price-fixing-case-against-realpage.html"
+    },
+    {
+      "title": "",
+      "url": "https://www.capterra.com/p/92228/AppFolio-Property-Manager/reviews/"
+    },
+    {
+      "title": "",
+      "url": "https://www.bbb.org/us/ca/goleta/profile/computer-software/appfolio-inc-1236-92009947/complaints"
+    },
+    {
+      "title": "",
+      "url": "https://appfolio.pissedconsumer.com/review.html"
+    }
+  ]
+}

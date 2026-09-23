@@ -1,0 +1,62 @@
+{
+  "engine": "claude-web",
+  "engine_label": "Claude (Sonnet) via claude -p, web search on",
+  "is_consumer_app": false,
+  "set": "A",
+  "question": "How can I tell what property management system a company runs?",
+  "intent": "detect-software",
+  "asked_on": "2026-09-23",
+  "ok": true,
+  "answer": "How you identify a company's property management system (PMS) depends on which industry you mean \u2014 hospitality (hotels), multifamily/residential, vacation rental, or HOA/community association software all use the term \"PMS\" for different products. Here's how to figure it out in each case, plus techniques that work across all of them.\n\n## Cross-industry detection methods\n\n- **Job postings** \u2014 The most reliable signal. Property managers, revenue managers, leasing agents, and IT postings routinely list required software by name (\"2+ years experience with Yardi Voyager,\" \"RealPage OneSite,\" \"Opera PMS certification\"). Search LinkedIn Jobs or Indeed for `\"[company name]\" \"PMS\"` or the specific product names below.\n- **LinkedIn employee profiles** \u2014 Property managers and revenue/reservations staff often list the specific PMS in their skills or job descriptions.\n- **Vendor customer/case-study pages** \u2014 Yardi, RealPage, Oracle Hospitality, AppFolio, Entrata, Mews, and Cloudbeds all publish \"customer stories\" or logo walls naming clients who adopted their platform.\n- **Press releases** \u2014 Search PR Newswire/Business Wire or Google News for `\"[company]\" AND (\"selects\" OR \"migrates to\" OR \"implements\") \"[vendor]\"`.\n- **SEC filings (for public companies)** \u2014 REITs and hotel operators sometimes name their PMS/property software in 10-Ks or investor presentations. EDGAR full-text search (efts.sec.gov) lets you search filings for terms like \"Yardi\" or \"Opera Cloud.\"\n- **BuiltWith / Wappalyzer** \u2014 Browser-tech fingerprinting tools that can detect the software running a tenant portal, resident login page, or hotel booking widget by looking at JS libraries, cookies, and domain patterns.\n- **Booking/portal URL inspection** \u2014 View source or watch the network tab when using a \"Book Now\" or \"Resident Portal\" button. Many PMS vendors host the actual transaction on their own domain, which leaks the vendor:\n  - `be.synxis.com` \u2192 Sabre SynXis (used by many independent/branded hotels)\n  - `ihotelier.com` \u2192 Cendyn (formerly TravelClick)\n  - `reservations.travelclick.com` \u2192 Cendyn/TravelClick\n  - `*.rentcafe.com` \u2192 Yardi (RentCafe resident/prospect portals)\n  - `*.appfolio.com` \u2192 AppFolio\n  - `*.residentportal.com` or Entrata-branded subdomains \u2192 Entrata\n- **Confirmation emails** \u2014 Hotel/rental booking confirmations frequently have a \"powered by [vendor]\" footer or a distinctive sending domain.\n- **G2 / Capterra / TrustRadius reviews** \u2014 Reviewers sometimes identify their employer by name in reviews of PMS products.\n- **RFP/procurement records** \u2014 For public housing authorities or municipal-run properties, bid documents on sites like SAM.gov or state procurement portals often name the incumbent or desired PMS.\n\n## Specific products by segment (for search terms)\n\n- **Hotels:** Oracle Opera / Opera Cloud, Agilysys Stay/LMS, Infor HMS, Mews, Cloudbeds, StayNTouch, protel (owned by Planet), innRoad, Clock PMS\n- **Multifamily/residential:** Yardi Voyager/RentCafe, RealPage OneSite, Entrata, AppFolio, MRI Software, Rent Manager, Buildium, ResMan\n- **Vacation/short-term rental:** Guesty, Hostaway, Track, Streamline, Escapia, OwnerRez, Lodgify\n- **HOA/community association:** AppFolio, Vantaca, CINC Systems, PayHOA\n\n## Practical starting point\n\nIf you have a specific target company in mind, the fastest combo is usually: (1) search their careers page / job board postings for the product name, (2) check the vendor's own case-study/customer page, and (3) inspect the booking or tenant-portal URL for a giveaway subdomain like the ones above. If you tell me the company (or industry \u2014 hotel, apartment/multifamily, vacation rental, etc.), I can narrow this down further.\n\n**Sources used:** general industry knowledge of PMS vendors and detection techniques (job boards, vendor case-study pages, BuiltWith/Wappalyzer, SEC EDGAR full-text search, common booking-engine domain patterns). I didn't run a live web search for this \u2014 let me know if you want me to verify current vendor domain patterns or pull an actual example for a specific company.",
+  "brands": [
+    {
+      "brand": "Yardi",
+      "first_at": 558,
+      "mentions": 5,
+      "rank": 1
+    },
+    {
+      "brand": "RealPage",
+      "first_at": 575,
+      "mentions": 3,
+      "rank": 2
+    },
+    {
+      "brand": "AppFolio",
+      "first_at": 946,
+      "mentions": 5,
+      "rank": 3
+    },
+    {
+      "brand": "Entrata",
+      "first_at": 956,
+      "mentions": 4,
+      "rank": 4
+    },
+    {
+      "brand": "MRI",
+      "first_at": 3020,
+      "mentions": 1,
+      "rank": 5
+    },
+    {
+      "brand": "Rent Manager",
+      "first_at": 3034,
+      "mentions": 1,
+      "rank": 6
+    },
+    {
+      "brand": "Buildium",
+      "first_at": 3048,
+      "mentions": 1,
+      "rank": 7
+    },
+    {
+      "brand": "ResMan",
+      "first_at": 3058,
+      "mentions": 1,
+      "rank": 8
+    }
+  ],
+  "links": []
+}

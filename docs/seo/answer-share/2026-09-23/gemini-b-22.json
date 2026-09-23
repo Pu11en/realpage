@@ -1,0 +1,189 @@
+{
+  "engine": "gemini",
+  "engine_label": "Gemini (gemini-2.5-flash) via API, Google Search grounding on",
+  "is_consumer_app": false,
+  "set": "B",
+  "question": "What tools do property owners use to set optimal rent pricing using market data?",
+  "intent": "buy-adjacent",
+  "asked_on": "2026-09-23",
+  "ok": true,
+  "answer": "Property owners employ a variety of tools and data sources to establish optimal rent pricing, moving beyond guesswork to leverage comprehensive market insights. These resources help them analyze comparable properties, understand local market trends, and implement dynamic pricing strategies.\n\nHere are the key tools and data sources property owners use:\n\n### General Rent Estimators and Market Analysis Tools\n\nThese platforms provide estimates and insights primarily for long-term rental properties, often drawing from publicly available listings and proprietary data.\n\n*   **Zillow Rental Manager (Rent Zestimate)**: Zillow's \"Rent Zestimate\" feature is widely used for quick rental estimates. It uses comparable rental listings, local market activity, property details, and historical data to provide a rental value.\n*   **Rentometer**: This tool specializes in rent comparison analysis. Property owners input an address and property details (size, bedrooms, location) to receive local rent ranges and compare prices for similar properties in the same area. Rentometer offers \"QuickView Rent Estimates\" and more detailed \"Pro Reports\" which include nearby rental comparables, historical trends, and market insights.\n*   **Redfin Rental Estimate**: Redfin combines rental estimates with property sales data, allowing investors to compare cash flow potential and property values simultaneously.\n*   **Realtor.com Rental Data**: This platform provides information on average rental prices, neighborhood trends, local housing demand, market activity, and rental inventory.\n*   **RentCast**: Recommended for long-term rental investors, RentCast provides comps-backed rent estimates, zip market trends, and portfolio rent alerts. It offers nationwide rent AVM (Automated Valuation Model) with low/high bands and comparable listings with similarity percentages.\n*   **Mashvisor**: This real estate investment software helps investors analyze properties for both short-term and long-term rentals. It offers tools like Market Finder and Property Finder and includes a \"Dynamic Pricing\" feature for Airbnb properties.\n*   **Avail Rent Analysis Report**: Avail offers a detailed, six-page market study tied to a property's address, providing a data-backed rent estimate, local pricing confidence score, neighborhood vacancy rates, and historical trend lines.\n*   **BiggerPockets**: This platform includes a rent estimator as part of its investor toolkit, which helps estimate rent by finding similar properties in the area.\n*   **RentEst.ai**: Offers AI-powered rental estimates and comparable analysis, focusing on precision insights for property owners.\n\n### Institutional and Enterprise-Grade Data Providers\n\nThese providers cater to larger property management companies, institutional investors, and lenders, offering more in-depth and granular data, often at a higher cost.\n\n*   **CoStar**: A leading commercial real estate database that acquired RentRange. CoStar's suite provides extensive multifamily data, including actual lease transactions (not just asking rents), field-verified properties, and metro-level vacancy and absorption data.\n*   **RentRange**: Now part of CoStar, RentRange provides institutional-grade rent estimates, comparables, and market trend reports.\n*   **REIS**: Offers comprehensive data on both commercial and residential property markets.\n*   **ALN Apartment Data**: A multifamily research firm specializing in apartment property databases, occupancy rates, and market analytics for industry professionals.\n*   **ATTOM Data Solutions**: A comprehensive U.S. property data aggregator covering residential and commercial properties.\n*   **HelloData**: A multifamily-focused analytics platform powered by daily updates on millions of apartment units, utilizing AI-driven rent comparable analysis.\n*   **HouseCanary**: A property valuation and predictive analytics platform with rental value models and market forecasting tools for residential properties.\n*   **Cotality**: Provides property data and analytics focusing on market intelligence, forecasting, and risk analysis.\n*   **DataTree**: A First American-managed property data and public records repository.\n\n### Dynamic Pricing Software\n\nThese advanced tools use artificial intelligence (AI) and machine learning algorithms to adjust rent prices in real time, considering various market factors.\n\n*   **Rentana**: An AI-powered platform specifically for multifamily rentals, Rentana optimizes rent pricing in real-time, streamlines lease renewals, and provides operational insights by analyzing pricing, leasing, occupancy, renewals, and exposure data alongside public market data.\n*   **PriceLabs**: Primarily used for dynamic pricing in short-term rentals, PriceLabs uses hyper-local market data to make accurate pricing decisions and offers portfolio analytics and market dashboards.\n*   **Wheelhouse & Beyond**: These are dynamic pricing and revenue growth tools, often used for short-term rentals, that optimize pricing strategies.\n*   **roomsys**: AI-driven platforms like roomsys analyze a wealth of data, including seasonal trends, local supply-demand dynamics, competitor rates, and unit-specific amenities, to fine-tune rental prices in real-time.\n\n### Key Data Points and Strategies Utilized\n\nBeyond specific tools, property owners focus on several crucial data points and strategies:\n\n*   **Comparable Rental Listings (Comps)**: Identifying similar properties in the immediate neighborhood with matching layouts, bedroom counts, bathroom configurations, and amenities is fundamental.\n*   **Local Market Activity & Trends**: Monitoring average rental prices, neighborhood trends, local housing demand, and market activity provides a macro view.\n*   **Vacancy Rates**: Low vacancy rates indicate high demand, allowing for higher rents, while high rates suggest oversupply, necessitating more competitive pricing.\n*   **Average Days on Market**: This metric helps gauge how long properties are sitting vacant, indicating if a property is overpriced or in a slow market.\n*   **Historical Data**: Analyzing past rental performance and market shifts helps in forecasting future trends.\n*   **Seasonality and Events**: Rental demand often fluctuates with the seasons (e.g., higher in spring/summer) and local events, which can influence pricing.\n*   **Amenities and Property Features**: Unique features, recent upgrades, and the quality of property management can justify higher rents.\n*   **Lease Flexibility**: Offering varying lease lengths at different rates can help optimize occupancy and revenue.\n*   **Dynamic Pricing Techniques**: Continuously monitoring demand in real-time and adjusting prices incrementally, rather than keeping units vacant or underpriced.\n*   **Tenant Feedback and Demographics**: Understanding target tenant demographics and incorporating feedback can help refine rental strategies and improve retention.\n\nBy integrating insights from multiple data sources and employing sophisticated tools, property owners can make informed decisions to set optimal rent prices, maximize revenue, reduce vacancies, and maintain a competitive edge in the rental market.",
+  "sources": [
+    {
+      "title": "ifinderoffers.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGhmTX_43dYrEC3tQ1thdmnFTPIuk_8iujiixIsDcERu508YGsfutF1Z0aA3ABsC1uPcpLLQALpzcSgn1m2R--9bxcOj40QuBEnibQNafKHCvGus70qHMcabHl4i1M_nZOtjk217uGkFulbxDzv-7DJAXdQtT0Ykwl_eQxSbXYaqGq45Rknx4oP7eTTpqc1nSdo_t54dE7LSZfyDw=="
+    },
+    {
+      "title": "iconicpm.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHo43WMVqz9naKRNMOg3uIwLGAwx18VSxZ3rciFZH69vynqEuAEytr6r8pkvPZY7O1gyEsNbq5g6CiO5yQ_H-DU-5ri-c8Xr-_FF4PVRziJeVXzP2rDmYSGcPYZ3gR5938d13xbkDDg4PnUTKihw26YnKRGc9TaLZ7wPXFjtZAjKZ7qSOXU8Q6mRszsYrHiwbu9"
+    },
+    {
+      "title": "jakenfinancegroup.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGYIriZx6HtAUnYPGoelevAy0pNgoioWRk9N7dBn_cV3ee0_JhFubA6x4eEQP1zf--osNRLvuLNbmkSv9vFmMXLTUnR2326h2t1Ha1bEclgCEVHQkGr_aZfSawrZgOpVDbnxKc-VL5e2tarUwW4Ud1DQ-1C2wV40j6VriIQgtbsk4C6NRKv"
+    },
+    {
+      "title": "rentometer.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGW6e4SCrAgXrDMjCzpk46PZ9Cknjr1qIQWlntRJaSrl79qzlv66GonuCUHvlZlTZQLfXLfw_LTV-1OH0k85IBEyZt1Quj2LvQk-ubOJR1-mjq1joBS4g=="
+    },
+    {
+      "title": "housecanary.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGKi8PXIhibfsoDzWXXsrcJCBi9XNXxMJlY-_-fdXo_u10ew7Lk-bkMTLaJloa2h6Cx9T5J1oPVhwv7Pb8GL_aCw2swTsOPsqLYg6S8-iFS68G6QFx59_Rh_1xFnhQjltQeBp8HSGeMGczvSF2ujIyFr0XOGXGuF4EcPKQ="
+    },
+    {
+      "title": "rentcast.io",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGJYh7SBL6V0vu1soBn4FxW5rzo95i1qhq2u9txaAxItfq0rP7cW-D9SUhfRgIzwJFgmGxceWF_V3EBdHap7XT8cnrTq97IThU5AvC37aeMWrAxzQ=="
+    },
+    {
+      "title": "mashvisor.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFyE1SshFlC7mofP0RFad6aptgKRR4yv9cDZQX87PEVoEl9fOjlZv8s5isVu9lNmyImQnRFLh5qudpB3VDDfkEBdWWhVB0KXsZMdoW5O3-3o9BnBOGe53rUueWjRxFeDNclfWU7OYPcJ5T2dh0WLrkpVd_jDqXI6zvSA7wPftA="
+    },
+    {
+      "title": "avail.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG7yyxs2UuhSvxYxbiCaI7m-qwkW4yUFO0VyOBXmoY-I384TnHh2qBN7aHyfuiYgy1BEfVOsOIklx3sZk0IgxuN6X_DcucMS9VK9rL9xKzvM57B8qDipj7eN7tNA7H4SHPT2GJVDS0jczCSE8BP_NOvpLiyVK1vLLqFM82coDQ2t-4bkTzIKKyl_CTihyL2ctUNvUKIXHLUuactf4Sa70AWlQ=="
+    },
+    {
+      "title": "rentest.ai",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEBsE5knlrBjT_00cwYBJcfZivN3xM5bzHG9wdoBwsLxVZq4q0KxZP30NE9xNpgu4NbKdxwg33oxafs6Y8qk70R28dKKPxBsa9eZ1GlQsUHIRyfsUQGMwL6pghOCJPUc9scqRdEhNZksY7bA8ZiT5yJgI26kQ=="
+    },
+    {
+      "title": "rentfinder.ai",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFZCrf06r6QXc-ewlGLFOsVziB66K_RG1DI8OvLT7Nem6EGIStadT5797YTyrfPkwsbe2fM3lXia2oH5KZ4UaWEl3gstjOQSuZKTt-lOWmXo7e5NyeSgA=="
+    },
+    {
+      "title": "rentcompapi.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFGfrUu9mQAtutwh9uwEdxUIXHpa8vRhRZRlaHAVAqzX3Gmj0-3dWVDhS_J__Nc8yUm8GLpISvIQVnJUIkr7AMWEoG54pJN1TZBIQlZlJ3olI6rFkBHsLq2j0Ss3neCYODeJdKhpdlEgwfA5VVgwYYLW-sAqskxXPyG60yV1w=="
+    },
+    {
+      "title": "dwellsy.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFk3sF2XdsGmiOd32EQCgeOH0EwYB_fpxKnSvOIVIZNHeAgWwMKWe4TzBon3FcrZ7ZQGAJg6aFnYeX-Aj2cEHFuRDUwqz3Hn7ar8cnKmZUM1Jn7vvnu5hs0BCdy5DXJInKD454JeW63m0pcyfJaVGGQ4Xu56uz4Bl8bZx5ci36lu_hwasyu"
+    },
+    {
+      "title": "rentana.io",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGDgJxCbbCakERkps8wBqOAhDGBmtoNzykCMowD1-9l4M6J7879EhMlf8fU3HAR1JSRILteeBjyWfi1UiNuGnMVn1DdYb-CcaaV3i8lvIM1g8WkFhSmtgF0ACFPX5hduU7pNCpbL24HAIEQ5kj31d8BkYD1gjVtA8spY4gvyg=="
+    },
+    {
+      "title": "rentana.io",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEAY1zlmHyPDEAoYpQYmlc0st5WtCj-NWvzL-uHx76Ap2baLabiqWG8IQOWLya6vfd4tkB1k7is2Ynd85vzkLDXlS2VF-VgxJARHsfbs2I_kWtwP4lUvWKTJZDVkh1fgzTSJMHt2mUUguzf"
+    },
+    {
+      "title": "airbtics.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFhibXsNLH5PRQvuTnIDpj1L6gDnX67ItOATlVcaQH7FD_IQnM0Aps4yMHEWhZq9ZLKGxphAOeMN16MA2ptwVB9ngZzgjGyYJTTxZUM36hJz66kvQc81AwaayY3Hy6CxLNlEYQSoAYii3A2qzDR"
+    },
+    {
+      "title": "pricelabs.co",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG9h6RxjBzCZqvUHvvGTmPKlhm7DNxJAwO00H2v2LBSJQ99Ou5OSeJi8unUWxxfFU2ruFMx1BYpyVq3Vrbm2o_3b6BvLwF_QhZtZRIpeb3JkDxRWyRoCA=="
+    },
+    {
+      "title": "roomsys.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF1nKNP_bzNzvOFgYDNREaXTs3ETKbFU6lR-YLR65S2pK42aI6wuVbnzsZcD5o4X5OBeUNhsxINEuHZfeMiVz8BeS59VUcN7KXuGWJ70wnadpfpaFhjMJP1U2JnVV4QKbkqrhx302Es88qNRD4IHBKe4S76KzI0265GKf1ofaDaiAAbn7vRgYhY7d17rtcMNhg="
+    },
+    {
+      "title": "rentseattle.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH0RrmmMm4Tn6SDY04mWeG2pvT8cLa8sButDs9hUTUtpwEkgXAeKfbOpHisc8_5aUc33aLMLIe6rc4GUpSCWKHjYts6Y9VhZJz4_wfZFAx6y32PdLmOrKzEtY8eLofsYxGTvcPYvpdeATv5zMW81t4eBMCjcY05WEfoh1t4wf9in5kUEhCHAhqU_JFl0gJQtV-eHkVjPT86klWUrZNxB_Gf"
+    },
+    {
+      "title": "joinbeagle.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF8-22MOOVNBVDrlC1NL8sfDW9V33u-mZnIzZl3FQwE8lSYtyy5tQY6oSlOJ9NUnYohox2P_7QRdeVQxp0S9gV3pvatj57Pov9tDo4TadFrwHQZ_HDOnIiSSek8N1NupBzAm9iUFTqqS3QSn97K1iAc"
+    },
+    {
+      "title": "riooapp.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH7yzrg74lSGUALn0Bsa9hLSatdQVO4o4jJacqAeXS8OQuN5U_1eKtXOgrBs6Ir3WjrQMGp0E_MWY_D4J22TMM6nOGxhGZUM96uDliwpNKfIYy_97qr9rcaFDKMAJVWqsNT6q4MFOp-BpeRHj_QGmDgj8VoeUuuMt9tyS6xZLlVf_4-8hT9pg=="
+    }
+  ],
+  "brands": [
+    {
+      "brand": "Zillow",
+      "first_at": 576,
+      "mentions": 2,
+      "rank": 1
+    },
+    {
+      "brand": "CoStar",
+      "first_at": 2877,
+      "mentions": 3,
+      "rank": 2
+    }
+  ],
+  "links": [
+    {
+      "title": "ifinderoffers.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGhmTX_43dYrEC3tQ1thdmnFTPIuk_8iujiixIsDcERu508YGsfutF1Z0aA3ABsC1uPcpLLQALpzcSgn1m2R--9bxcOj40QuBEnibQNafKHCvGus70qHMcabHl4i1M_nZOtjk217uGkFulbxDzv-7DJAXdQtT0Ykwl_eQxSbXYaqGq45Rknx4oP7eTTpqc1nSdo_t54dE7LSZfyDw=="
+    },
+    {
+      "title": "iconicpm.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHo43WMVqz9naKRNMOg3uIwLGAwx18VSxZ3rciFZH69vynqEuAEytr6r8pkvPZY7O1gyEsNbq5g6CiO5yQ_H-DU-5ri-c8Xr-_FF4PVRziJeVXzP2rDmYSGcPYZ3gR5938d13xbkDDg4PnUTKihw26YnKRGc9TaLZ7wPXFjtZAjKZ7qSOXU8Q6mRszsYrHiwbu9"
+    },
+    {
+      "title": "jakenfinancegroup.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGYIriZx6HtAUnYPGoelevAy0pNgoioWRk9N7dBn_cV3ee0_JhFubA6x4eEQP1zf--osNRLvuLNbmkSv9vFmMXLTUnR2326h2t1Ha1bEclgCEVHQkGr_aZfSawrZgOpVDbnxKc-VL5e2tarUwW4Ud1DQ-1C2wV40j6VriIQgtbsk4C6NRKv"
+    },
+    {
+      "title": "rentometer.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGW6e4SCrAgXrDMjCzpk46PZ9Cknjr1qIQWlntRJaSrl79qzlv66GonuCUHvlZlTZQLfXLfw_LTV-1OH0k85IBEyZt1Quj2LvQk-ubOJR1-mjq1joBS4g=="
+    },
+    {
+      "title": "housecanary.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGKi8PXIhibfsoDzWXXsrcJCBi9XNXxMJlY-_-fdXo_u10ew7Lk-bkMTLaJloa2h6Cx9T5J1oPVhwv7Pb8GL_aCw2swTsOPsqLYg6S8-iFS68G6QFx59_Rh_1xFnhQjltQeBp8HSGeMGczvSF2ujIyFr0XOGXGuF4EcPKQ="
+    },
+    {
+      "title": "rentcast.io",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGJYh7SBL6V0vu1soBn4FxW5rzo95i1qhq2u9txaAxItfq0rP7cW-D9SUhfRgIzwJFgmGxceWF_V3EBdHap7XT8cnrTq97IThU5AvC37aeMWrAxzQ=="
+    },
+    {
+      "title": "mashvisor.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFyE1SshFlC7mofP0RFad6aptgKRR4yv9cDZQX87PEVoEl9fOjlZv8s5isVu9lNmyImQnRFLh5qudpB3VDDfkEBdWWhVB0KXsZMdoW5O3-3o9BnBOGe53rUueWjRxFeDNclfWU7OYPcJ5T2dh0WLrkpVd_jDqXI6zvSA7wPftA="
+    },
+    {
+      "title": "avail.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG7yyxs2UuhSvxYxbiCaI7m-qwkW4yUFO0VyOBXmoY-I384TnHh2qBN7aHyfuiYgy1BEfVOsOIklx3sZk0IgxuN6X_DcucMS9VK9rL9xKzvM57B8qDipj7eN7tNA7H4SHPT2GJVDS0jczCSE8BP_NOvpLiyVK1vLLqFM82coDQ2t-4bkTzIKKyl_CTihyL2ctUNvUKIXHLUuactf4Sa70AWlQ=="
+    },
+    {
+      "title": "rentest.ai",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEBsE5knlrBjT_00cwYBJcfZivN3xM5bzHG9wdoBwsLxVZq4q0KxZP30NE9xNpgu4NbKdxwg33oxafs6Y8qk70R28dKKPxBsa9eZ1GlQsUHIRyfsUQGMwL6pghOCJPUc9scqRdEhNZksY7bA8ZiT5yJgI26kQ=="
+    },
+    {
+      "title": "rentfinder.ai",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFZCrf06r6QXc-ewlGLFOsVziB66K_RG1DI8OvLT7Nem6EGIStadT5797YTyrfPkwsbe2fM3lXia2oH5KZ4UaWEl3gstjOQSuZKTt-lOWmXo7e5NyeSgA=="
+    },
+    {
+      "title": "rentcompapi.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFGfrUu9mQAtutwh9uwEdxUIXHpa8vRhRZRlaHAVAqzX3Gmj0-3dWVDhS_J__Nc8yUm8GLpISvIQVnJUIkr7AMWEoG54pJN1TZBIQlZlJ3olI6rFkBHsLq2j0Ss3neCYODeJdKhpdlEgwfA5VVgwYYLW-sAqskxXPyG60yV1w=="
+    },
+    {
+      "title": "dwellsy.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFk3sF2XdsGmiOd32EQCgeOH0EwYB_fpxKnSvOIVIZNHeAgWwMKWe4TzBon3FcrZ7ZQGAJg6aFnYeX-Aj2cEHFuRDUwqz3Hn7ar8cnKmZUM1Jn7vvnu5hs0BCdy5DXJInKD454JeW63m0pcyfJaVGGQ4Xu56uz4Bl8bZx5ci36lu_hwasyu"
+    },
+    {
+      "title": "rentana.io",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGDgJxCbbCakERkps8wBqOAhDGBmtoNzykCMowD1-9l4M6J7879EhMlf8fU3HAR1JSRILteeBjyWfi1UiNuGnMVn1DdYb-CcaaV3i8lvIM1g8WkFhSmtgF0ACFPX5hduU7pNCpbL24HAIEQ5kj31d8BkYD1gjVtA8spY4gvyg=="
+    },
+    {
+      "title": "rentana.io",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEAY1zlmHyPDEAoYpQYmlc0st5WtCj-NWvzL-uHx76Ap2baLabiqWG8IQOWLya6vfd4tkB1k7is2Ynd85vzkLDXlS2VF-VgxJARHsfbs2I_kWtwP4lUvWKTJZDVkh1fgzTSJMHt2mUUguzf"
+    },
+    {
+      "title": "airbtics.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFhibXsNLH5PRQvuTnIDpj1L6gDnX67ItOATlVcaQH7FD_IQnM0Aps4yMHEWhZq9ZLKGxphAOeMN16MA2ptwVB9ngZzgjGyYJTTxZUM36hJz66kvQc81AwaayY3Hy6CxLNlEYQSoAYii3A2qzDR"
+    },
+    {
+      "title": "pricelabs.co",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG9h6RxjBzCZqvUHvvGTmPKlhm7DNxJAwO00H2v2LBSJQ99Ou5OSeJi8unUWxxfFU2ruFMx1BYpyVq3Vrbm2o_3b6BvLwF_QhZtZRIpeb3JkDxRWyRoCA=="
+    },
+    {
+      "title": "roomsys.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF1nKNP_bzNzvOFgYDNREaXTs3ETKbFU6lR-YLR65S2pK42aI6wuVbnzsZcD5o4X5OBeUNhsxINEuHZfeMiVz8BeS59VUcN7KXuGWJ70wnadpfpaFhjMJP1U2JnVV4QKbkqrhx302Es88qNRD4IHBKe4S76KzI0265GKf1ofaDaiAAbn7vRgYhY7d17rtcMNhg="
+    },
+    {
+      "title": "rentseattle.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH0RrmmMm4Tn6SDY04mWeG2pvT8cLa8sButDs9hUTUtpwEkgXAeKfbOpHisc8_5aUc33aLMLIe6rc4GUpSCWKHjYts6Y9VhZJz4_wfZFAx6y32PdLmOrKzEtY8eLofsYxGTvcPYvpdeATv5zMW81t4eBMCjcY05WEfoh1t4wf9in5kUEhCHAhqU_JFl0gJQtV-eHkVjPT86klWUrZNxB_Gf"
+    },
+    {
+      "title": "joinbeagle.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF8-22MOOVNBVDrlC1NL8sfDW9V33u-mZnIzZl3FQwE8lSYtyy5tQY6oSlOJ9NUnYohox2P_7QRdeVQxp0S9gV3pvatj57Pov9tDo4TadFrwHQZ_HDOnIiSSek8N1NupBzAm9iUFTqqS3QSn97K1iAc"
+    },
+    {
+      "title": "riooapp.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH7yzrg74lSGUALn0Bsa9hLSatdQVO4o4jJacqAeXS8OQuN5U_1eKtXOgrBs6Ir3WjrQMGp0E_MWY_D4J22TMM6nOGxhGZUM96uDliwpNKfIYy_97qr9rcaFDKMAJVWqsNT6q4MFOp-BpeRHj_QGmDgj8VoeUuuMt9tyS6xZLlVf_4-8hT9pg=="
+    }
+  ]
+}

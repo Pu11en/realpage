@@ -1,0 +1,123 @@
+{
+  "engine": "gemini",
+  "engine_label": "Gemini (gemini-2.5-flash) via API, Google Search grounding on",
+  "is_consumer_app": false,
+  "set": "A",
+  "question": "Where can I find Phoenix multifamily construction pipeline data?",
+  "intent": "find-pipeline",
+  "asked_on": "2026-09-23",
+  "ok": true,
+  "answer": "For researchers seeking data on the Phoenix multifamily construction pipeline, several reputable real estate data providers and market research firms offer comprehensive reports and tools. These resources typically provide information on units under construction, planned developments, and recent deliveries, alongside broader market trends.\n\nKey companies and data sources include:\n\n*   **CoStar:** Frequently cited as a data source in many market reports, CoStar is a leading provider of commercial real estate information, analytics, and online marketplaces. They offer detailed data on multifamily properties, including construction pipelines, across various markets, including Phoenix.\n*   **Yardi Matrix:** This company specializes in commercial real estate data and is often referenced for its insights into multifamily construction activity. For example, Yardi Matrix data was used to report on Phoenix's multifamily market and construction pipeline, noting thousands of units underway in various submarkets.\n*   **Kidder Mathews:** This commercial real estate firm publishes quarterly Phoenix Multifamily Market Reports. Their Q2 2026 report, for instance, detailed units under construction, year-over-year changes, and notable projects.\n*   **Matthews Real Estate Investment Services:** They also provide detailed Phoenix Multifamily Market Reports, offering insights into construction activity, units under construction, and deliveries for specific quarters like Q3 2025.\n*   **MMG Real Estate Advisors:** This firm offers interactive pipeline reports, such as the Phoenix Q1 2026 and Q2 2025 Pipeline Reports, providing a focused look into multifamily construction in the area. Their 2025 Phoenix Forecast also incorporates data from sources like CoStar and Yardi Matrix.\n*   **Berkadia:** Berkadia offers a Phoenix Multifamily Quarterly Pipeline Map, which categorizes development status into lease-up, under construction, planned, and prospective units, providing a comprehensive overview of the pipeline.\n*   **ABI Multifamily:** This company publishes a quarterly Phoenix MSA Construction Pipeline Report, specifically focusing on multifamily construction activity for properties with 50 or more units in the Phoenix Metropolitan Statistical Area.\n*   **Cushman & Wakefield:** Their MarketBeat Phoenix Multifamily reports provide analyses of market conditions, including construction activity and the concentration of the construction pipeline in specific submarkets like the East Valley.\n\nThese sources are valuable for anyone researching the current and future landscape of multifamily development in Phoenix.",
+  "sources": [
+    {
+      "title": "kidder.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGDiuo8QoT6UbRaSZ4MtS1-9YewttTkNK6vYMM1xKGSN5KW93Xeh6PNfid52ORd4lKL9JnE9JsRh3dWJ2oHKDt-guY4aVvD0Yt5Eb5pyd7htEVXFcwxFQX742GH3InAFMAvxpmcFgApTgqDTELxihPNMv6dyr07aMAu7jSTvTsK"
+    },
+    {
+      "title": "matthews.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFkiAgZB81cgAEM2cCcXOhNguzP8Ob86ZBFvgxvhEtVSVQN4mrdO2YBRCSR0xIIQQfbkNP6HJTBC-fx2mybSovU37v9E9CRSoqeLWda5wGGSvCmz1zQh8Y-Vpci-856wy_Z_xhd3SOB1dfiJJtPypUfaCkgDCJUrw4TLTzFn0NIO2FkGWbKr1z6kA=="
+    },
+    {
+      "title": "mmgrea.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGLd0bvvdlliaO7BB8_o97ZxfMUGBDA7hrY0HF8RKj6TtB5jJ5KRmvpHkrc7f5MhNMD8q9SAc6a6Gm8jvMGYvQ2TaGYfOROv7CqhA6gj5-hwZc3mD-7DqhsLzS-j-7D0AgbM5IB"
+    },
+    {
+      "title": "multihousingnews.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFizJ7G5cxJxIeBWlCX-8RpgCt8RE26Gz22gQHaywyH5LX8DmXiWHCN-KL-5c_mJtcoVAxWVvjZ0bdiEUK4RVV-Zed5KymD_gHFfmNHH-iu7LfPNVSrjg9XosNsDj1XP7VmxeJ4qDqDJ5UOTlWfnnbGysz2m84MuV-cUoX8XODAVmoAugAGnQ1jKbnjuOzGcQ=="
+    },
+    {
+      "title": "azbex.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFFwTtQ0_43TecpIJQN3iZpMVB4j64FKKoFKxjAIDIe4MPNdjlzq-I5a2201u-Hh8dZWt2YpLD5Wz6lP-SNMNUN2h78m7eVSx5RBOIvX7t1_AQLrsSf7xM5pKVN6WJtaudn5fsqShn1-g6Nwgwkns-eU-R5a4G-6GmPDF0flkIBhftq3vLTu2YamGZKoTe2UiaNxQ2cSO5J6wKjoKYSDr4="
+    },
+    {
+      "title": "mmgrea.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFyQVGTSd8-3SIueZ7EVBDum5xcjZux5RlyC9K_hVO2qTd_y0-be88GsQBCMMc55k5iMjJmDnqjH76dQqMdII2OgNem-BuFT3DlhDFNHbHo9aCdiKkeVuhHiRjIad1NsopDK1d8RYH8neJUMWCSMg=="
+    },
+    {
+      "title": "mmgrea.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEu4QsZafmWqjTA1dcWhdKbFZ4qCH45p2KbwxFwK6QvR9ajE1a5YOEMgEd4b-WiDINCXSoCsrFVMG6Y19cn6Hz24MJrlZXib39PjONK1ZYqTIJsW3KEblsSJa3342R8bms_eBG63SXggBj2yrKwGg=="
+    },
+    {
+      "title": "mmgrea.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEdDpZbNdtAhGpx13o9EsrGgv0XpE_pamPzj8f_mi-s3g9YD5jNmC2rZKHRC5wncxTAmegHM1uslYQNAksxKloOE-Jr0hMqsBjUMrF6CDGEQXjKrjLTeYIWoIhq8VJDeyuOC2FNCvO6fDO2o_k="
+    },
+    {
+      "title": "berkadia.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHesDhdboUKZGI8MwQMrTIca727V2Cm8y2xRCyth04_ko0Pdsb8w0zn7XmOpQ7f1IJspPGkYyt13f1ELLxQ8JY7QzZe_07yi6G08Cj_gspIEvkHvNO_Bu7KkpM-tvmbWlLtzoKev--ea5YZnhCWHHXsyKS4LfbeYCR8mWXU7xtrsB-b2D466oAIHnGgPV8NouWFtKyrw7DX1Ur1Jra6bd8I2-GXqk1SNn4="
+    },
+    {
+      "title": "abimultifamily.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFuMltQvyZYL7XqGKkke3Qla6D7RMIA4eYfp-I_Mv2MIwdTuc7akM3pcoSptIs02sqKQoaCkLrdzktx0DWrxh8l6wlkg5b1Y1WZ3PapH3RQPCM3pycCj6JyGsB9IeVHne8voKdkuQIlG6g9jeDCIWRor-Ns7eFAl3xSbeVjs9JTBYq61fF2Ph4PO4jDTD3r"
+    },
+    {
+      "title": "cushmanwakefield.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQESBi7gmtfaw9XIVTACWcTP5_4MGDWK87TdpmTgIe7UTO_faa5FsKlEIKXMz1ng6ZgDfRKQjSaeno6j-j2xHuwH6UYgZ9O09QOIdA1q-7PAgn1H34UOosUoA9MZ8KpRaiQJN9iw8HD0Bv3zdA4JWIhyVQO79yIiO54cTKVRL6iix6v43vcopGTceb6lyPDXNVicqMSnuTwHsvR6lcR1kpeRSAwVGA=="
+    }
+  ],
+  "brands": [
+    {
+      "brand": "CoStar",
+      "first_at": 390,
+      "mentions": 3,
+      "rank": 1
+    },
+    {
+      "brand": "Yardi",
+      "first_at": 697,
+      "mentions": 3,
+      "rank": 2
+    },
+    {
+      "brand": "Berkadia",
+      "first_at": 1790,
+      "mentions": 2,
+      "rank": 3
+    }
+  ],
+  "links": [
+    {
+      "title": "kidder.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGDiuo8QoT6UbRaSZ4MtS1-9YewttTkNK6vYMM1xKGSN5KW93Xeh6PNfid52ORd4lKL9JnE9JsRh3dWJ2oHKDt-guY4aVvD0Yt5Eb5pyd7htEVXFcwxFQX742GH3InAFMAvxpmcFgApTgqDTELxihPNMv6dyr07aMAu7jSTvTsK"
+    },
+    {
+      "title": "matthews.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFkiAgZB81cgAEM2cCcXOhNguzP8Ob86ZBFvgxvhEtVSVQN4mrdO2YBRCSR0xIIQQfbkNP6HJTBC-fx2mybSovU37v9E9CRSoqeLWda5wGGSvCmz1zQh8Y-Vpci-856wy_Z_xhd3SOB1dfiJJtPypUfaCkgDCJUrw4TLTzFn0NIO2FkGWbKr1z6kA=="
+    },
+    {
+      "title": "mmgrea.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGLd0bvvdlliaO7BB8_o97ZxfMUGBDA7hrY0HF8RKj6TtB5jJ5KRmvpHkrc7f5MhNMD8q9SAc6a6Gm8jvMGYvQ2TaGYfOROv7CqhA6gj5-hwZc3mD-7DqhsLzS-j-7D0AgbM5IB"
+    },
+    {
+      "title": "multihousingnews.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFizJ7G5cxJxIeBWlCX-8RpgCt8RE26Gz22gQHaywyH5LX8DmXiWHCN-KL-5c_mJtcoVAxWVvjZ0bdiEUK4RVV-Zed5KymD_gHFfmNHH-iu7LfPNVSrjg9XosNsDj1XP7VmxeJ4qDqDJ5UOTlWfnnbGysz2m84MuV-cUoX8XODAVmoAugAGnQ1jKbnjuOzGcQ=="
+    },
+    {
+      "title": "azbex.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFFwTtQ0_43TecpIJQN3iZpMVB4j64FKKoFKxjAIDIe4MPNdjlzq-I5a2201u-Hh8dZWt2YpLD5Wz6lP-SNMNUN2h78m7eVSx5RBOIvX7t1_AQLrsSf7xM5pKVN6WJtaudn5fsqShn1-g6Nwgwkns-eU-R5a4G-6GmPDF0flkIBhftq3vLTu2YamGZKoTe2UiaNxQ2cSO5J6wKjoKYSDr4="
+    },
+    {
+      "title": "mmgrea.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFyQVGTSd8-3SIueZ7EVBDum5xcjZux5RlyC9K_hVO2qTd_y0-be88GsQBCMMc55k5iMjJmDnqjH76dQqMdII2OgNem-BuFT3DlhDFNHbHo9aCdiKkeVuhHiRjIad1NsopDK1d8RYH8neJUMWCSMg=="
+    },
+    {
+      "title": "mmgrea.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEu4QsZafmWqjTA1dcWhdKbFZ4qCH45p2KbwxFwK6QvR9ajE1a5YOEMgEd4b-WiDINCXSoCsrFVMG6Y19cn6Hz24MJrlZXib39PjONK1ZYqTIJsW3KEblsSJa3342R8bms_eBG63SXggBj2yrKwGg=="
+    },
+    {
+      "title": "mmgrea.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEdDpZbNdtAhGpx13o9EsrGgv0XpE_pamPzj8f_mi-s3g9YD5jNmC2rZKHRC5wncxTAmegHM1uslYQNAksxKloOE-Jr0hMqsBjUMrF6CDGEQXjKrjLTeYIWoIhq8VJDeyuOC2FNCvO6fDO2o_k="
+    },
+    {
+      "title": "berkadia.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHesDhdboUKZGI8MwQMrTIca727V2Cm8y2xRCyth04_ko0Pdsb8w0zn7XmOpQ7f1IJspPGkYyt13f1ELLxQ8JY7QzZe_07yi6G08Cj_gspIEvkHvNO_Bu7KkpM-tvmbWlLtzoKev--ea5YZnhCWHHXsyKS4LfbeYCR8mWXU7xtrsB-b2D466oAIHnGgPV8NouWFtKyrw7DX1Ur1Jra6bd8I2-GXqk1SNn4="
+    },
+    {
+      "title": "abimultifamily.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFuMltQvyZYL7XqGKkke3Qla6D7RMIA4eYfp-I_Mv2MIwdTuc7akM3pcoSptIs02sqKQoaCkLrdzktx0DWrxh8l6wlkg5b1Y1WZ3PapH3RQPCM3pycCj6JyGsB9IeVHne8voKdkuQIlG6g9jeDCIWRor-Ns7eFAl3xSbeVjs9JTBYq61fF2Ph4PO4jDTD3r"
+    },
+    {
+      "title": "cushmanwakefield.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQESBi7gmtfaw9XIVTACWcTP5_4MGDWK87TdpmTgIe7UTO_faa5FsKlEIKXMz1ng6ZgDfRKQjSaeno6j-j2xHuwH6UYgZ9O09QOIdA1q-7PAgn1H34UOosUoA9MZ8KpRaiQJN9iw8HD0Bv3zdA4JWIhyVQO79yIiO54cTKVRL6iix6v43vcopGTceb6lyPDXNVicqMSnuTwHsvR6lcR1kpeRSAwVGA=="
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "engine": "claude-web",
+  "engine_label": "Claude (Sonnet) via claude -p, web search on",
+  "is_consumer_app": false,
+  "set": "A",
+  "question": "Where can I get a list of apartment buildings opening in 2027?",
+  "intent": "find-pipeline",
+  "asked_on": "2026-09-23",
+  "ok": true,
+  "answer": "This isn't really a coding/repo task, so I'll just answer directly based on general knowledge of how this data is tracked.\n\nA few caveats up front: nobody publishes a single authoritative \"buildings opening in 2027\" list, since projects slip constantly and 2027 is still far enough out that many pipelines are incomplete. You'll need to combine a few sources depending on how deep you want to go.\n\n**Free / general sources**\n- **RentCafe / Yardi Matrix** \u2013 publishes an annual \"top apartment construction\" report and city-level pipeline data (e.g., \"most apartments delivered in [city]\") that includes projects with future completion dates. Yardi Matrix is the underlying paid data product; RentCafe's blog surfaces free summaries.\n- **Apartment List** \u2013 periodically publishes national/metro construction pipeline reports using Census and permit data, sometimes broken out by expected delivery year.\n- **RealPage / RealPage Market Analytics** \u2013 tracks under-construction and planned multifamily units by metro, often cited in real estate news for pipeline-by-year figures.\n- **U.S. Census Bureau \u2013 New Residential Construction / Survey of Construction** \u2013 gives permits and units-under-construction data, which is the rawest source but doesn't name specific buildings.\n\n**Local/specific building-level data**\n- **City planning/zoning department websites** \u2013 for a specific city, the planning or buildings department usually has a public list of approved or permitted multifamily projects with expected completion dates (e.g., NYC DOB permits, LA Department of City Planning entitlement lists, SF Planning pipeline reports).\n- **CoStar** \u2013 the industry-standard commercial real estate database (subscription, expensive) with the most granular building-by-building pipeline data, including expected delivery dates, unit counts, and developer names. This is what most local news and brokers actually pull from.\n- **Yardi Matrix / RealPage** (paid tiers) \u2013 same as above but full building-level export rather than the blog summaries.\n\n**News/trade press**\n- **Multi-Housing News**, **Multifamily Dive**, **Bisnow**, **The Real Deal** \u2013 regularly cover named projects with groundbreaking/completion announcements, searchable by city and year.\n- Local business journals (via **Bizjournals**) often have the most specific \"X apartments to open in [city] in 2027\" articles as projects break ground.\n\n**Practical approach**\nIf you want a real list rather than aggregate stats, the fastest path is: pick your target metro \u2192 check that city's planning department pipeline/permit list \u2192 cross-reference with Bisnow/Multi-Housing News coverage for names and confirmed timelines. For nationwide aggregate numbers (not building names), RentCafe/Yardi Matrix's annual construction report is the easiest free source.\n\nIf you tell me which city or metro you're focused on, I can help narrow this to the right local source.",
+  "brands": [
+    {
+      "brand": "Yardi",
+      "first_at": 440,
+      "mentions": 4,
+      "rank": 1
+    },
+    {
+      "brand": "RealPage",
+      "first_at": 905,
+      "mentions": 3,
+      "rank": 2
+    },
+    {
+      "brand": "CoStar",
+      "first_at": 1629,
+      "mentions": 1,
+      "rank": 3
+    }
+  ],
+  "links": []
+}

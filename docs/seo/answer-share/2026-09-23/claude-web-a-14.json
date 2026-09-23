@@ -1,0 +1,59 @@
+{
+  "engine": "claude-web",
+  "engine_label": "Claude (Sonnet) via claude -p, web search on",
+  "is_consumer_app": false,
+  "set": "A",
+  "question": "What is the best way to find newly sold apartment complexes for sales prospecting?",
+  "intent": "find-sales",
+  "asked_on": "2026-09-23",
+  "ok": true,
+  "answer": "## Best approaches for finding newly sold apartment complexes\n\n**1. Paid CRE transaction databases (best signal-to-noise for multifamily specifically)**\n- **CoStar** \u2014 the industry standard; comprehensive sales comps, buyer/seller/broker on each deal, verified by an in-house research team. Expensive but the most complete.\n- **Yardi Matrix** \u2014 purpose-built for multifamily (50+ units); tracks 178+ markets, 84M+ sales comps, plus supply pipeline (what's under construction/lease-up), which is useful for getting ahead of a sale before it closes.\n- **MSCI Real Assets** (formerly Real Capital Analytics) \u2014 the go-to for aggregate transaction-volume trend data and large/institutional deal tracking; often cited in market reports rather than used as a raw prospecting list.\n- **Reonomy** (now part of Altus Group) \u2014 strong for unwinding LLC/shell-company ownership to find the actual buyer behind a newly purchased complex, plus full transaction/debt/lien history. Good complement to CoStar/Yardi if your prospecting angle is \"who just bought this and needs services (financing, insurance, property management, maintenance, etc.).\"\n\n**2. Public records / deed-alert tools (cheaper, DIY route)**\n- **PropertyRadar** \u2014 set alerts for new deed recordings/sales matching your criteria (unit count, market, price range); notifies you close to real-time.\n- County recorder/assessor offices directly \u2014 free but manual; fine if you're focused on one or two counties.\n\n**3. Listing/marketplace sites (catches deals in progress, not just closed)**\n- **Crexi** and **LoopNet** \u2014 track \"sold\" or \"off-market\" status changes on listed multifamily assets; useful for spotting a deal right as it closes.\n\n**4. Free/secondary signals**\n- Local business journals and CRE trade press (Bisnow, The Real Deal, Multifamily Dive, GlobeSt) often report notable multifamily sales with buyer/seller names before databases fully update.\n- Broker press releases (JLL, CBRE, Cushman & Wakefield, Berkadia, Walker & Dunlop multifamily teams) \u2014 these firms publicize deals they closed, often within days.\n\n**Practical setup**: most multifamily-focused prospecting teams pair Yardi Matrix or CoStar (for verified comps + ownership) with PropertyRadar or Reonomy alerts (for near-real-time deed recordings) so you catch a sale within days of closing rather than waiting for a quarterly report.\n\nSources:\n- [Best Commercial Real Estate Data Sources for 2026 - CRE Daily](https://www.credaily.com/reviews/best-commercial-real-estate-data-sources/)\n- [Institutional Real Estate Data | Yardi Matrix](https://www.yardimatrix.com/)\n- [Multifamily Market Data & Insights | Yardi Matrix](https://www.yardimatrix.com/property-types/multifamily/)\n- [Commercial Real Estate Database: 2026 Guide to CRE Data Platforms | Reonomy](https://www.reonomy.com/resources/commercial-real-estate-database/)\n- [Reonomy | Commercial Real Estate Data & Property Owner Lookup](https://www.reonomy.com/)\n- [Robust Property & Owner Data | PropertyRadar](https://www.propertyradar.com/features/property-and-owner-data)\n- [All-In-One Real Estate Tools | PropertyRadar](https://www.propertyradar.com/features/real-estate-tools)\n- [Apartment sales volume rose 9% to $165.5B in 2025 | Multifamily Dive](https://www.multifamilydive.com/news/2026-apartment-sales-multifamily-distress/810517/)",
+  "brands": [
+    {
+      "brand": "CoStar",
+      "first_at": 157,
+      "mentions": 3,
+      "rank": 1
+    },
+    {
+      "brand": "Yardi",
+      "first_at": 328,
+      "mentions": 7,
+      "rank": 2
+    },
+    {
+      "brand": "CBRE",
+      "first_at": 1941,
+      "mentions": 1,
+      "rank": 3
+    },
+    {
+      "brand": "Berkadia",
+      "first_at": 1968,
+      "mentions": 1,
+      "rank": 4
+    }
+  ],
+  "links": [
+    {
+      "title": "",
+      "url": "https://www.credaily.com/reviews/best-commercial-real-estate-data-sources/"
+    },
+    {
+      "title": "",
+      "url": "https://www.yardimatrix.com/"
+    },
+    {
+      "title": "",
+      "url": "https://www.reonomy.com/resources/commercial-real-estate-database/"
+    },
+    {
+      "title": "",
+      "url": "https://www.propertyradar.com/features/property-and-owner-data"
+    },
+    {
+      "title": "",
+      "url": "https://www.multifamilydive.com/news/2026-apartment-sales-multifamily-distress/810517/"
+    }
+  ]
+}

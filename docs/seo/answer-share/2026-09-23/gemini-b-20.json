@@ -1,0 +1,171 @@
+{
+  "engine": "gemini",
+  "engine_label": "Gemini (gemini-2.5-flash) via API, Google Search grounding on",
+  "is_consumer_app": false,
+  "set": "B",
+  "question": "What property management software do large Texas apartment operators use?",
+  "intent": "buy-pms",
+  "asked_on": "2026-09-23",
+  "ok": true,
+  "answer": "Large Texas apartment operators primarily utilize robust, enterprise-grade property management software designed to handle extensive portfolios and complex operations. The leading platforms frequently mentioned in this sector include RealPage, Yardi, MRI Software, and Entrata.\n\n**RealPage**, headquartered in Richardson, Texas, is a prominent provider of property management software and is widely used by major multifamily owners and operators across the country. RealPage's platform offers a centralized system for managing leasing, tenant communication, rent collection, accounting, and operational workflows. In Houston alone, RealPage products were reportedly used by apartment companies managing or owning an estimated 136,000 apartment units in 2022. Their offerings include OneSite\u00ae for enterprise multifamily operators.\n\n**Yardi** is another dominant player, especially with its Yardi Voyager platform. Yardi Voyager is an enterprise-grade property management and accounting solution built for larger portfolios with complex requirements, offering a fully integrated web-based system for operations, leasing, analytics, and resident services across various property types, including multifamily. Yardi solutions cover every stage of the property management lifecycle, from attracting leads to managing resident services and accounting. Fort Worth Housing Solutions, which owns and operates over 10,000 units across 52 properties, utilizes Yardi Matrix for market intelligence and evaluating opportunities.\n\n**MRI Software** is also a longstanding leader in property management software, tailored for large property management companies and commercial properties. MRI offers a comprehensive multifamily property management suite and has deepened its presence in Texas through acquisitions like Dallas-based ResidentCheck and Houston-based ApartmentData.com, which provides market research for Texas metros including Austin, Dallas/Fort Worth, Houston, and San Antonio. MRI's solutions support over 20 million residential units worldwide and serve a significant portion of companies on the National Multifamily Housing Council's list of top U.S. apartment managers.\n\n**Entrata** is frequently cited as a strong contender for large enterprises, particularly those handling multiple properties. It integrates leasing, accounting, resident services, and analytics into one platform, known for its automation and data visibility, making it suitable for large operations. Entrata is also recognized for its robust marketing and leasing workflows.\n\nOther software options like AppFolio Property Manager are noted for fast-growing property portfolios and enterprise-grade accounting, becoming viable for portfolios of 100-200 units and hitting its \"sweet spot\" at 200+ units. However, AppFolio is generally considered more suitable for apartment-complex scale rather than smaller portfolios. Rent Manager is also mentioned for property management firms, offering in-depth accounting and customization. Propertyware is also noted for large-scale property managers with complex needs, offering customizable tools, tenant screening, and financial reporting.\n\nSources used:\n*   Top 5 Best Property Management Software for Dallas Landlords - Red Team Real Estate\n*   Best Property Management Software for Landlords in 2026\n*   MRI Software Announces Acquisition of ResidentCheck\n*   Houston renters can now claim money from $360 million settlement in major rent-collusion lawsuit\n*   Yardi Matrix helps Texas housing agency expand its business\n*   What Is RealPage? Everything You Need to Know - Miracuves\n*   9 Best Multifamily Property Management Software Solutions for 2026 - Re-Leased\n*   Best Property Management Software 2026: Top 6 Companies Compared - AppFolio\n*   Best Property Management Software for Multifamily in 2026 - Realpage\n*   Top 11 Multifamily Property Management Software Solutions In 2026 - Hemlane\n*   AppFolio vs Buildium: features, pricing & the best pick for Texas property managers\n*   MRI Software Acquires ApartmentData.com - Multifamily Executive\n*   MRI Software acquires MRI ApartmentData, houston-based provider of market research and data solutions for multifamily properties\n*   Multifamily - Yardi",
+  "sources": [
+    {
+      "title": "houstonchronicle.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHfooP_qPh5MBnnoF8spzh4u9dPhnIj5Qno8wDxg0cWfGW_7B4SusoUmgWgZCRnDO9z4OK1YLWKKKCjDtZz4UHRQ1ca6VhSGTOdMUgmbA-p02rV5u1QEbTtFxcb63huorDAzEoe22pqD2h0qDz_bjFIXsqVgvmhIwujfQWzLpet3_K8_oTnB3GNR_03FvSUDI6ceMSXVW6pV0aN3taVGIumk2VwGHWSfzLfeQ=="
+    },
+    {
+      "title": "miracuves.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHk3Fail8KDmewyxchEsOYgyxoYNAazky56chgZIv3GFMtGB9O_PEjSIaKjGdEr03QtcNL78RSt8OJnemdHxRNGaWLiOAXV4sH59zZYshxdrHoyacegDNE--hZB5dKoW-MI7ow8_Vnt_Np2TA1qmmaPIm1fn1ch7eIenbM="
+    },
+    {
+      "title": "realpage.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHRLlglWGfEaurPq7Tjo1j7FNvMp2HfPc2ltRPnGyZl2TqWRg7H3zW1yaOHfeUXHxB6FxVQ7v97uL_zoqwT_ykCv386tuduhKTW5gB5OzyI2xpZO05VlilF6V7tutKiSOYM4wt4ae1j7pyvps2EpwnPogYu0L5As0gMRA=="
+    },
+    {
+      "title": "re-leased.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGX_gJ_woIFB0_5e4QTbaUqabI7uw0QrFdXQCLl4_q_eO4x_BqTFSCrhOhH9ZaQOlXPPma3lThq0Mp_MoUYDcOaDLY7MXEutpgZXXkG60-glthtIGIktVE0434wM4BrCLi8W6n7bGXGLPDz_UcHOpVOXzcvEhdJtO_3SyBYq0Jpqt8QDl0gPGxR1GIFWcfXhPxIj3l3tVn5vsxtJKIdb5o="
+    },
+    {
+      "title": "appfolio.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEAAxJVB4sITr0jUqMKzg_3yNATi8i-zN4qkIQu3gUiIO7L4B4BMwI_ZCwBomPwwNfABct7Aqv-Y4DFiUgIi9FGzE08c_Ws4i3Yoqlvt3AMiVc8TlM_vIQzUTHi_1I0mr7Cqsi73-JdrIKH7fdFCp-oeey-dXPQpadB6FSzGBizDObVA0x0ShqO"
+    },
+    {
+      "title": "yardi.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG6vn-y5VL9Nx4mZBd09kthFyTY-LISF5NGIXirurBNVX_-Gz4xiEyH9DOJNcym55n4lRrbMPXORlDmqpopj3_g-9a1a4_tcMK4qvoYC32JM1-5tPHE_5lj6eb1VcESWg-9r4E="
+    },
+    {
+      "title": "yardi.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH3Ohdftxk88wzvSvl_5JnmIBj86FZaOOFFFacymrtzD2ZYNLami4UIC_BIyqt-8Vr26NCJxJSNgKH-GMK3RoegrkzQz-3Svkk_GBoGfgy211eyqqTvrXuc1ncTYnx9xh9Fwb0PMxFmgwbieP1SEZeAqLOsQcbEhyd8"
+    },
+    {
+      "title": "rentredteam.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF2qDXyvNCaIV4QTgnDQpBPl-qW72XivVgndoi9-csjLOFWk-fQ2E9scjmL-vyy_b9LDvBlhrunByQ7P4S1PYirV8Ux02nUJQD0CeEXuGXKVdHhuV8rhDITE5ZKC28L9H0qmbeL1PcWyK8xCgpSY_--pgqVNM8Zg4xGbI8gYB5dzXwtUSfrLySs_MY8ERyH-ITjjMA3UvpK"
+    },
+    {
+      "title": "mrisoftware.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHJhjtIWoNZZt2kwTGD5Zc71059vCEElAX1CGUG-y7FxXAik1QVRiC3ugnyZFopu_wdI-q-WuG-FpIPN8vYLlaKloxcJ04Pc-x-KQ7sl8rkyqvwX9qkc8rf5c5rSzb8gh-PXwCEtwlea7n6geqHQuWVpMxcmtkJVbcxHI6iI9MD2iY-oNuSMZcwDte5SA=="
+    },
+    {
+      "title": "multifamilyexecutive.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFC1DWgWWRjNNJo7Anp5BQR6TcZsvTkH6cLYjNTmTjIdKSRYTTcYaTmN4yOtKv95vuCxQ6zJQV7eew8xgOoN55HbWdrcX_Wnl2x3U3iwIn1V_6w_lOjzRqu6Dns-ZnSh81hBio-35mUIh7EXyH7w8c3dbp81MRAG92gPENynS7Q7Ii7Yv86pHI8KGHONXbO125hJXU="
+    },
+    {
+      "title": "mrisoftware.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFs-sooKL_c9it7I8gC0fPmcoeuG6ixPuc_dlxGgedDjLKrnrDIWc7zeO10wW6DdNYp3C9tyz3pWcGHzI-uaytY5NvXXH6ZNcrZDmx75notEruAv2JTvpzgL9Q-GbDr9nGezBQ6BYgavG5wHcWVT95zAfvmZoSR0lQ9y_cCss75wjT7dGMdFIy6VtOsMZE3s1dquLf3NSqLdzUAv8E8BdlO9EzZiqZo6RC2TqxlATI-G1lV4j04oyv6UhySgTPkg_MViM9BYYRkfjaZeAdC1cR5F3VMugRrqx-_LzdY"
+    },
+    {
+      "title": "texasbmg.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHCAiW4ySulta-NRD5grrzhjKtxKdKBeauzW8pd8Mb_dZ7kH2kSTEC0bSK4sa73pXFUe6VTgc4uT7EoFvx24ATILt3graSqGDcfQlMDv_aoA8B2P9BELAuB87QatWzFQufMDgFuexMJh7WntcOegLMjZGYZPMKxjwZFHSN6tmKH13bE_TI="
+    },
+    {
+      "title": "westromgroup.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFannbGuMo2r0nTb-blYocPjnj5QcwWOQ7fwIbz8PpuYmXsgKZpNrp5B3aykrUmMDv2XAfzjYxQscJRAia5GxJRQ3148sCcSRsiaLPT8a5lxT1AXiD962G5D0RRRrLVBsBw6I5HBaR_PKdx0KTyxmib6cjZbKllNoELf_IGjmrz6poUDOMa0isaTXbOG019FlM="
+    },
+    {
+      "title": "hemlane.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG8GicBYtWwgiq17Dj63eFHYBude7JUA9Dtc26EAcDb7hhsJ3SJmcMfBRuYlDFjnTH1byO93kgFIz_Dczd13I2wl3JrWZJNM_pEK1ooJrApMoFYNclcH6sO6CoMKbXv4LfuE018I36Sfdq3Mf7do9q-thXP5Zq_7OjTrIPBi_VtGxW-VVdnHGDc9g=="
+    }
+  ],
+  "brands": [
+    {
+      "brand": "RealPage",
+      "first_at": 234,
+      "mentions": 6,
+      "rank": 1
+    },
+    {
+      "brand": "Yardi",
+      "first_at": 244,
+      "mentions": 8,
+      "rank": 2
+    },
+    {
+      "brand": "MRI",
+      "first_at": 251,
+      "mentions": 5,
+      "rank": 3
+    },
+    {
+      "brand": "Entrata",
+      "first_at": 269,
+      "mentions": 3,
+      "rank": 4
+    },
+    {
+      "brand": "AppFolio",
+      "first_at": 2579,
+      "mentions": 4,
+      "rank": 5
+    },
+    {
+      "brand": "Rent Manager",
+      "first_at": 2893,
+      "mentions": 1,
+      "rank": 6
+    },
+    {
+      "brand": "Buildium",
+      "first_at": 3934,
+      "mentions": 1,
+      "rank": 7
+    }
+  ],
+  "links": [
+    {
+      "title": "houstonchronicle.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHfooP_qPh5MBnnoF8spzh4u9dPhnIj5Qno8wDxg0cWfGW_7B4SusoUmgWgZCRnDO9z4OK1YLWKKKCjDtZz4UHRQ1ca6VhSGTOdMUgmbA-p02rV5u1QEbTtFxcb63huorDAzEoe22pqD2h0qDz_bjFIXsqVgvmhIwujfQWzLpet3_K8_oTnB3GNR_03FvSUDI6ceMSXVW6pV0aN3taVGIumk2VwGHWSfzLfeQ=="
+    },
+    {
+      "title": "miracuves.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHk3Fail8KDmewyxchEsOYgyxoYNAazky56chgZIv3GFMtGB9O_PEjSIaKjGdEr03QtcNL78RSt8OJnemdHxRNGaWLiOAXV4sH59zZYshxdrHoyacegDNE--hZB5dKoW-MI7ow8_Vnt_Np2TA1qmmaPIm1fn1ch7eIenbM="
+    },
+    {
+      "title": "realpage.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHRLlglWGfEaurPq7Tjo1j7FNvMp2HfPc2ltRPnGyZl2TqWRg7H3zW1yaOHfeUXHxB6FxVQ7v97uL_zoqwT_ykCv386tuduhKTW5gB5OzyI2xpZO05VlilF6V7tutKiSOYM4wt4ae1j7pyvps2EpwnPogYu0L5As0gMRA=="
+    },
+    {
+      "title": "re-leased.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGX_gJ_woIFB0_5e4QTbaUqabI7uw0QrFdXQCLl4_q_eO4x_BqTFSCrhOhH9ZaQOlXPPma3lThq0Mp_MoUYDcOaDLY7MXEutpgZXXkG60-glthtIGIktVE0434wM4BrCLi8W6n7bGXGLPDz_UcHOpVOXzcvEhdJtO_3SyBYq0Jpqt8QDl0gPGxR1GIFWcfXhPxIj3l3tVn5vsxtJKIdb5o="
+    },
+    {
+      "title": "appfolio.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEAAxJVB4sITr0jUqMKzg_3yNATi8i-zN4qkIQu3gUiIO7L4B4BMwI_ZCwBomPwwNfABct7Aqv-Y4DFiUgIi9FGzE08c_Ws4i3Yoqlvt3AMiVc8TlM_vIQzUTHi_1I0mr7Cqsi73-JdrIKH7fdFCp-oeey-dXPQpadB6FSzGBizDObVA0x0ShqO"
+    },
+    {
+      "title": "yardi.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG6vn-y5VL9Nx4mZBd09kthFyTY-LISF5NGIXirurBNVX_-Gz4xiEyH9DOJNcym55n4lRrbMPXORlDmqpopj3_g-9a1a4_tcMK4qvoYC32JM1-5tPHE_5lj6eb1VcESWg-9r4E="
+    },
+    {
+      "title": "yardi.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH3Ohdftxk88wzvSvl_5JnmIBj86FZaOOFFFacymrtzD2ZYNLami4UIC_BIyqt-8Vr26NCJxJSNgKH-GMK3RoegrkzQz-3Svkk_GBoGfgy211eyqqTvrXuc1ncTYnx9xh9Fwb0PMxFmgwbieP1SEZeAqLOsQcbEhyd8"
+    },
+    {
+      "title": "rentredteam.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF2qDXyvNCaIV4QTgnDQpBPl-qW72XivVgndoi9-csjLOFWk-fQ2E9scjmL-vyy_b9LDvBlhrunByQ7P4S1PYirV8Ux02nUJQD0CeEXuGXKVdHhuV8rhDITE5ZKC28L9H0qmbeL1PcWyK8xCgpSY_--pgqVNM8Zg4xGbI8gYB5dzXwtUSfrLySs_MY8ERyH-ITjjMA3UvpK"
+    },
+    {
+      "title": "mrisoftware.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHJhjtIWoNZZt2kwTGD5Zc71059vCEElAX1CGUG-y7FxXAik1QVRiC3ugnyZFopu_wdI-q-WuG-FpIPN8vYLlaKloxcJ04Pc-x-KQ7sl8rkyqvwX9qkc8rf5c5rSzb8gh-PXwCEtwlea7n6geqHQuWVpMxcmtkJVbcxHI6iI9MD2iY-oNuSMZcwDte5SA=="
+    },
+    {
+      "title": "multifamilyexecutive.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFC1DWgWWRjNNJo7Anp5BQR6TcZsvTkH6cLYjNTmTjIdKSRYTTcYaTmN4yOtKv95vuCxQ6zJQV7eew8xgOoN55HbWdrcX_Wnl2x3U3iwIn1V_6w_lOjzRqu6Dns-ZnSh81hBio-35mUIh7EXyH7w8c3dbp81MRAG92gPENynS7Q7Ii7Yv86pHI8KGHONXbO125hJXU="
+    },
+    {
+      "title": "mrisoftware.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFs-sooKL_c9it7I8gC0fPmcoeuG6ixPuc_dlxGgedDjLKrnrDIWc7zeO10wW6DdNYp3C9tyz3pWcGHzI-uaytY5NvXXH6ZNcrZDmx75notEruAv2JTvpzgL9Q-GbDr9nGezBQ6BYgavG5wHcWVT95zAfvmZoSR0lQ9y_cCss75wjT7dGMdFIy6VtOsMZE3s1dquLf3NSqLdzUAv8E8BdlO9EzZiqZo6RC2TqxlATI-G1lV4j04oyv6UhySgTPkg_MViM9BYYRkfjaZeAdC1cR5F3VMugRrqx-_LzdY"
+    },
+    {
+      "title": "texasbmg.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHCAiW4ySulta-NRD5grrzhjKtxKdKBeauzW8pd8Mb_dZ7kH2kSTEC0bSK4sa73pXFUe6VTgc4uT7EoFvx24ATILt3graSqGDcfQlMDv_aoA8B2P9BELAuB87QatWzFQufMDgFuexMJh7WntcOegLMjZGYZPMKxjwZFHSN6tmKH13bE_TI="
+    },
+    {
+      "title": "westromgroup.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFannbGuMo2r0nTb-blYocPjnj5QcwWOQ7fwIbz8PpuYmXsgKZpNrp5B3aykrUmMDv2XAfzjYxQscJRAia5GxJRQ3148sCcSRsiaLPT8a5lxT1AXiD962G5D0RRRrLVBsBw6I5HBaR_PKdx0KTyxmib6cjZbKllNoELf_IGjmrz6poUDOMa0isaTXbOG019FlM="
+    },
+    {
+      "title": "hemlane.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG8GicBYtWwgiq17Dj63eFHYBude7JUA9Dtc26EAcDb7hhsJ3SJmcMfBRuYlDFjnTH1byO93kgFIz_Dczd13I2wl3JrWZJNM_pEK1ooJrApMoFYNclcH6sO6CoMKbXv4LfuE018I36Sfdq3Mf7do9q-thXP5Zq_7OjTrIPBi_VtGxW-VVdnHGDc9g=="
+    }
+  ]
+}

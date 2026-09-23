@@ -1,0 +1,119 @@
+{
+  "engine": "gemini",
+  "engine_label": "Gemini (gemini-2.5-flash) via API, Google Search grounding on",
+  "is_consumer_app": false,
+  "set": "A",
+  "question": "How do I find multifamily construction pipeline data for Austin?",
+  "intent": "find-pipeline",
+  "asked_on": "2026-09-23",
+  "ok": true,
+  "answer": "To find multifamily construction pipeline data for Austin, you can consult several specialized real estate data providers and market research firms that track development activity in the region. These sources often offer detailed reports, interactive tools, and databases with information on projects in various stages of development.\n\nHere are some specific companies and data sources to consider:\n\n*   **MMG Real Estate Advisors**\n    MMG Real Estate Advisors provides specific \"Multifamily Construction Pipeline Reports\" for Austin. These reports offer an interactive look into the construction pipeline, including data maps, pipeline status breakdowns by city, and forecasted delivery dates. For example, their Q2 2026 report noted 14,610 units under construction, with 10,596 being Class A properties. Their Q1 2026 report also lists numerous individual projects with details such as \"Pre-Lease Absorption Rate by Month\" and \"Forecasted Delivery Dates\".\n*   **Yardi Matrix**\n    Yardi Matrix is a prominent source for multifamily market reports. Their Austin Multifamily Market Report often includes details on the construction pipeline, such as the number of units underway and trends in construction starts. For instance, their July 2026 report indicated that Austin had 21,224 units under way through May, although construction starts were declining.\n*   **Northmarq**\n    Northmarq provides Austin multifamily market reports that discuss the construction pipeline and projected deliveries. Their May 2026 report forecasted deliveries to fall to approximately 10,200 units in 2026, about half the pace of the previous two years, as the construction pipeline thins.\n*   **Moody's CRE**\n    Moody's CRE offers a researched database for commercial real estate in Austin. This includes property surveys, sale/lease availabilities, and quarterly analytics, which can encompass construction pipeline details for multifamily properties. They provide a fully-researched database of all commercial properties, with options for accessing sale transactions and comparables.\n*   **Cushman & Wakefield**\n    While specific multifamily pipeline reports were not directly linked in the search, Cushman & Wakefield is a major commercial real estate firm that publishes extensive market reports. These reports often cover various commercial real estate sectors, including multifamily development, and can be accessed through commercial real estate brokers like Mark Pustka | ATXRE, who compiles archives of quarterly market reports from top industry firms. For example, Cushman & Wakefield's Q3 2025 report indicated 15,429 units under construction, a 46.0% year-over-year decrease.\n*   **O'Connor Property Tax Reduction Experts**\n    O'Connor offers market research data services with comprehensive real estate data across Texas's major metropolitan areas, including Austin. Their services include detailed apartment data such as rental rates, occupancy rates, and amenities, which can be useful in understanding the market context for the construction pipeline.\n*   **Urbanize Austin**\n    This platform provides news and updates on commercial real estate development in Austin. It frequently reports on new multifamily projects, including information on units planned or under construction, offering a more journalistic, but still informative, perspective on the pipeline.\n\nWhen researching, it's advisable to look for the most recent quarterly or annual market reports from these providers for the most up-to-date construction pipeline data. Many of these firms also offer direct access to their databases or more in-depth consulting services for detailed inquiries.",
+  "sources": [
+    {
+      "title": "mmgrea.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHs7_0RyICJAFOjoc99Ezwo4FaGa4zFXLzOyYsEWdphjwWgt0NDqfW3UvvPOJ2FpU1E37GW0CaR4KWhqS01kO5AVpziCd5nzcHsDN2VAezyEpr9wMQ-xiYQTNr7-vczZlujwikbSU6wE2X3"
+    },
+    {
+      "title": "mmgrea.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF-yXBYzhRu5y5F0V6HUF-qh9dEpL3G8y6j5J76zkQChZ3zkSj1hTYVoSLRdYXQCQzbyfibi2ndNjS2OGeS90L76iFXH9TTyNdhoyqukc3b0I4X3pe4NpRhbx8mRGRJvZrU4NdBjs1OhH18MCw="
+    },
+    {
+      "title": "mmgrea.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEdMhkXQ7Cb5UwBe3vD3BTHqoMrRXN9QGZZRSov8YdIL6nilNKDXQZAYQfNOlYW7P8EY8SD1M2LdVHW9O8Npua0_dIBpX4pFD9MuQZ_Ae5V3DjUGq9GX_ErcR2A7PQu3u1wWrnmNu7XdYRrN2k="
+    },
+    {
+      "title": "mmgrea.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFmH9g8_0K94dgQiElGj1z0bM52iFAeUp4sIU599mpqCkSnXQel1s4AXx2EXWJxap3-gd2_irj8ws0rpgSu2yOu1m8v77RoDMbdvAFKHwmZCUmoLK_lQlBkUytxG1GSidAExYvfscQVm37JLzZ8vCECnEZ4Fg=="
+    },
+    {
+      "title": "matthews.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHKOhKPw_NBIm81RtICfGJRDiQek2pvfl1bJTxz8bg6J7WMVqBY7P5SsmqMbG5AXPDDI-T3lKVKvfGNEJuaBsfqiUqR147DtW-wcBK6AXyU-OtybKVUu1VGIMoO_urWIIWkQGm8WXrHxo40RZq3MP3Ninty3UhjeQTS"
+    },
+    {
+      "title": "yardimatrix.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEHVW6xfq4tNLY-byYhg7yDQmjYV0DF-pyqDcgKvE9pbrbYsKfKGbWP6RmxxKSRi26w3FR9H5YlhGYgB8bBmNC48nnBbo6MBNNXWb1rSAgZraEcyu15Ay1jasw04XakQ_prMWKqE1PTWDeMtbp8Ws7NjV2_4mbtYfD3bLDD"
+    },
+    {
+      "title": "northmarq.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHtK_zKxtbCyuIQjwP7cK5xa45WwuHezp3yfsPmA7cLMfW_g1pTIi3Bk55VY6V264DpjtiYS2A8_u2xn3fQFR1X2cv5wqExi6rHV7G4llOOf4w62pKUuhJP44qTPeHP1Pq_XiSbUQ-Lje65IBGozdYs9Eie5ecaNHin9eytDvTCTnA3p4gtwaOhRTSvVBJqR5g5B41pN31DObzJ3A=="
+    },
+    {
+      "title": "moodyscre.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFgz4rrkmYhDumvKNyN6IM6jn9QGfxIZw3lOhXcJ-qSYX9agBRmHNbAysIiTxWH-Pxu_xZQ9whm2RDynK0kvihD1yk6jDSmlPz2TUj7qaG-2LdCX4qd5BtIa1_LqbcMKUl6"
+    },
+    {
+      "title": "atxre.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHyawekYmNfbG93Y-2gbJXoysywNpprDjrvcSgvbR1pVSLtJhSjeMmaqPRs6dS_Y3k6vfnq26ymDuwjYfpDu1NekyRVgOItMz9V2tGTQC1sF2WyzlsfIe219o_yAntGKDCsrknJ_-7Muq62ET5QFkBiX4Jbjn9VYP4U"
+    },
+    {
+      "title": "cushmanwakefield.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHMrkPwPHVj4yFmLLRHXxhRE5RbZX6A6izQ7770yK6kEUDZdFypO-WTkBF5BRRJFv9xdwza9EKghij3of4O6S5x7xuMtvQJcuxo-QAv5TDngcLAfWlS7EryxT-JmfUAKDzW_A7IBsG-Zw1Dyyum-G2cv2xvvZGZ2MhakM3wvOR9pILHCNzttX0O7dg8d1_rDogYnlKMiVKElhLdTkBmU_Hvqdbeulg9_puEyj_3wS9xdB_a0RiU-_ilrHtVNVtz8JSZtQyY1KDsIreW_xr6ggq1NApXuU6L84LP6V83NWS9jkCUGvTF2YTBuoqL5xXnirQ="
+    },
+    {
+      "title": "poconnor.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFhPf-VHXZfzd4QkOvHjc0mec_ngA_rIsS_DgO14aszNGCTh5hmffZ0iCatOHRs8aUaEbRwRMpVD_Ko9-k2QI3SnZi5MYdp74GYIeNkuz_5G9Lrpx0M2XDzU6gL3wXgzRj66I6lf2RWNMY4Kyry"
+    },
+    {
+      "title": "urbanize.city",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFNeXttlCfg8iHsDLjgsZWo9ReAihUvNa0RqypZN1Hc5jytQRW4OxCx6nbo3hLWUWOW1MozY_eM10AcRsbQJWpSvFU6KlKe0RuCrkTDUb0xleww9InTdUA="
+    }
+  ],
+  "brands": [
+    {
+      "brand": "Yardi",
+      "first_at": 965,
+      "mentions": 2,
+      "rank": 1
+    }
+  ],
+  "links": [
+    {
+      "title": "mmgrea.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHs7_0RyICJAFOjoc99Ezwo4FaGa4zFXLzOyYsEWdphjwWgt0NDqfW3UvvPOJ2FpU1E37GW0CaR4KWhqS01kO5AVpziCd5nzcHsDN2VAezyEpr9wMQ-xiYQTNr7-vczZlujwikbSU6wE2X3"
+    },
+    {
+      "title": "mmgrea.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF-yXBYzhRu5y5F0V6HUF-qh9dEpL3G8y6j5J76zkQChZ3zkSj1hTYVoSLRdYXQCQzbyfibi2ndNjS2OGeS90L76iFXH9TTyNdhoyqukc3b0I4X3pe4NpRhbx8mRGRJvZrU4NdBjs1OhH18MCw="
+    },
+    {
+      "title": "mmgrea.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEdMhkXQ7Cb5UwBe3vD3BTHqoMrRXN9QGZZRSov8YdIL6nilNKDXQZAYQfNOlYW7P8EY8SD1M2LdVHW9O8Npua0_dIBpX4pFD9MuQZ_Ae5V3DjUGq9GX_ErcR2A7PQu3u1wWrnmNu7XdYRrN2k="
+    },
+    {
+      "title": "mmgrea.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFmH9g8_0K94dgQiElGj1z0bM52iFAeUp4sIU599mpqCkSnXQel1s4AXx2EXWJxap3-gd2_irj8ws0rpgSu2yOu1m8v77RoDMbdvAFKHwmZCUmoLK_lQlBkUytxG1GSidAExYvfscQVm37JLzZ8vCECnEZ4Fg=="
+    },
+    {
+      "title": "matthews.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHKOhKPw_NBIm81RtICfGJRDiQek2pvfl1bJTxz8bg6J7WMVqBY7P5SsmqMbG5AXPDDI-T3lKVKvfGNEJuaBsfqiUqR147DtW-wcBK6AXyU-OtybKVUu1VGIMoO_urWIIWkQGm8WXrHxo40RZq3MP3Ninty3UhjeQTS"
+    },
+    {
+      "title": "yardimatrix.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEHVW6xfq4tNLY-byYhg7yDQmjYV0DF-pyqDcgKvE9pbrbYsKfKGbWP6RmxxKSRi26w3FR9H5YlhGYgB8bBmNC48nnBbo6MBNNXWb1rSAgZraEcyu15Ay1jasw04XakQ_prMWKqE1PTWDeMtbp8Ws7NjV2_4mbtYfD3bLDD"
+    },
+    {
+      "title": "northmarq.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHtK_zKxtbCyuIQjwP7cK5xa45WwuHezp3yfsPmA7cLMfW_g1pTIi3Bk55VY6V264DpjtiYS2A8_u2xn3fQFR1X2cv5wqExi6rHV7G4llOOf4w62pKUuhJP44qTPeHP1Pq_XiSbUQ-Lje65IBGozdYs9Eie5ecaNHin9eytDvTCTnA3p4gtwaOhRTSvVBJqR5g5B41pN31DObzJ3A=="
+    },
+    {
+      "title": "moodyscre.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFgz4rrkmYhDumvKNyN6IM6jn9QGfxIZw3lOhXcJ-qSYX9agBRmHNbAysIiTxWH-Pxu_xZQ9whm2RDynK0kvihD1yk6jDSmlPz2TUj7qaG-2LdCX4qd5BtIa1_LqbcMKUl6"
+    },
+    {
+      "title": "atxre.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHyawekYmNfbG93Y-2gbJXoysywNpprDjrvcSgvbR1pVSLtJhSjeMmaqPRs6dS_Y3k6vfnq26ymDuwjYfpDu1NekyRVgOItMz9V2tGTQC1sF2WyzlsfIe219o_yAntGKDCsrknJ_-7Muq62ET5QFkBiX4Jbjn9VYP4U"
+    },
+    {
+      "title": "cushmanwakefield.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHMrkPwPHVj4yFmLLRHXxhRE5RbZX6A6izQ7770yK6kEUDZdFypO-WTkBF5BRRJFv9xdwza9EKghij3of4O6S5x7xuMtvQJcuxo-QAv5TDngcLAfWlS7EryxT-JmfUAKDzW_A7IBsG-Zw1Dyyum-G2cv2xvvZGZ2MhakM3wvOR9pILHCNzttX0O7dg8d1_rDogYnlKMiVKElhLdTkBmU_Hvqdbeulg9_puEyj_3wS9xdB_a0RiU-_ilrHtVNVtz8JSZtQyY1KDsIreW_xr6ggq1NApXuU6L84LP6V83NWS9jkCUGvTF2YTBuoqL5xXnirQ="
+    },
+    {
+      "title": "poconnor.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFhPf-VHXZfzd4QkOvHjc0mec_ngA_rIsS_DgO14aszNGCTh5hmffZ0iCatOHRs8aUaEbRwRMpVD_Ko9-k2QI3SnZi5MYdp74GYIeNkuz_5G9Lrpx0M2XDzU6gL3wXgzRj66I6lf2RWNMY4Kyry"
+    },
+    {
+      "title": "urbanize.city",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFNeXttlCfg8iHsDLjgsZWo9ReAihUvNa0RqypZN1Hc5jytQRW4OxCx6nbo3hLWUWOW1MozY_eM10AcRsbQJWpSvFU6KlKe0RuCrkTDUb0xleww9InTdUA="
+    }
+  ]
+}

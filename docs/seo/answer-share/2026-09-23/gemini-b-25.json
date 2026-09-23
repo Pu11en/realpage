@@ -1,0 +1,279 @@
+{
+  "engine": "gemini",
+  "engine_label": "Gemini (gemini-2.5-flash) via API, Google Search grounding on",
+  "is_consumer_app": false,
+  "set": "B",
+  "question": "Which property management platform is best for a new apartment lease-up?",
+  "intent": "buy-pms",
+  "asked_on": "2026-09-23",
+  "ok": true,
+  "answer": "For a new apartment lease-up, selecting the right property management platform is crucial for streamlining operations, attracting tenants, and ensuring a smooth transition to full occupancy. The ideal platform will offer robust marketing, leasing, and resident management tools, often enhanced with automation and artificial intelligence (AI) capabilities.\n\nHere are some of the top property management platforms and their key features that are beneficial for a new lease-up:\n\n**1. AppFolio Property Manager**\nAppFolio is highly regarded for its user-friendliness and comprehensive feature set, making it suitable for small to large portfolios, including new lease-ups.\n\n*   **Marketing & Leasing:** AppFolio helps build an online presence with marketing suites to increase awareness for new properties. It offers flexible showing options, online applications, and automation-driven lead-to-lease processes.\n*   **AI Technology:** Features like AppFolio's AI leasing assistant, Lisa, can automate lead responses, schedule showings, pre-qualify renters, and provide real-time analytics for marketing ROI. AppFolio emphasizes AI as a core building block for autonomous task execution in routine resident communication, maintenance triage, and leasing follow-up.\n*   **Scalability:** It is designed for scalability, supporting portfolios from 50 to over 10,000 units.\n*   **Lease Management:** The platform provides pre-built lease templates, e-signatures, and automated compliance tracking.\n\n**2. RealPage (OneSite)**\nRealPage is a leading platform, especially for large multifamily operators, offering a comprehensive ecosystem of tools that can significantly aid lease-ups.\n\n*   **Online Leasing:** RealPage offers an end-to-end online leasing solution that can facilitate up to 75% or more of leases being completed online. This includes 24/7 online applications and digital tenant screening.\n*   **AI and Analytics:** The platform provides smart AI-driven tools, including an agentic AI workforce (Lumina AI) that automates tasks, coordinates execution, and delivers actionable insights for leasing and operations. It also offers centralized leasing suites with lead management, communications, and automation.\n*   **Integrated Solutions:** RealPage's module ecosystem includes resident screening, a resident experience platform (LOFT), a marketing suite (G5), and a leasing CRM (Knock).\n\n**3. Entrata**\nEntrata is known as an operating system for \"Autonomous Property Management,\" unifying various functions with embedded AI across workflows.\n\n*   **Leasing AI:** Entrata's Leasing AI, powered by ELI+, automates the lead-to-lease workflow by engaging prospects across multiple channels (text, email, SMS, voice, chat) 24/7. It aims to increase conversions by providing rapid, thoughtful responses and scheduling tours.\n*   **Leasing Center:** Entrata also offers a full-service contact center to handle initial inquiries, capture guest cards, and convert leads into appointments, with properties seeing over 30% of new leads convert.\n*   **Marketing & Financials:** While strong in leasing, users should note that for projects still under construction or in lease-up, Entrata's accounting might post lease-up activity as operating income, which may require careful review for capitalization policies.\n\n**4. Yardi (Voyager & Breeze)**\nYardi offers powerful solutions for various property types, including multifamily, with Voyager catering to larger, complex portfolios and Breeze offering a more streamlined option.\n\n*   **Leasing Lifecycle Management:** Yardi Voyager combines operational and financial data in a centralized database, supporting the entire leasing lifecycle.\n*   **Electronic Leasing:** Yardi provides electronic leasing tools, including customized online leases, e-signatures, and a comprehensive digital document library with continuously updated, state-specific forms.\n*   **Integration:** Its interconnected tools allow seamless flow of data from CRM to digital leases, reducing errors.\n\n**5. Buildium**\nBuildium is a cloud-based, all-in-one platform often recommended for small to mid-sized property managers.\n\n*   **Lease-Up Streamlining:** Buildium simplifies and streamlines the apartment lease-up process, covering lead management to lease finalization.\n*   **Marketing & Online Applications:** It supports rental listing syndication to popular sites, online applications, and tenant screening.\n*   **E-signatures:** Buildium offers e-signature capabilities for lease documents and allows for customizable templates.\n\n**Key Features to Prioritize for a New Apartment Lease-Up:**\n\nWhen evaluating platforms for a new lease-up, consider these essential features:\n\n*   **Marketing & Listing Syndication:** The ability to easily publish vacant units to multiple listing websites to generate awareness and leads.\n*   **Lead Management & CRM:** Tools to capture, track, and nurture prospective renters from initial inquiry to signed lease. AI-powered leasing assistants can automate responses and scheduling, freeing up your team.\n*   **Online Applications & Tenant Screening:** A streamlined process for prospective residents to apply online, submit documents, and undergo credit and background checks.\n*   **Digital Lease Generation & E-signing:** Automated creation of lease agreements with pre-built templates, customizable clauses, and electronic signature capabilities to expedite the leasing process.\n*   **Resident Portals:** While more critical post-lease-up, integrated resident portals for online payments and maintenance requests contribute to a positive resident experience from the start.\n*   **Reporting & Analytics:** Real-time data and insights on leasing progress, lead conversion rates, and marketing effectiveness to make informed decisions.\n*   **Communication Tools:** Efficient ways to communicate with prospects and new residents, including automated notifications for lease updates or community announcements.\n*   **Scalability and Integration:** The platform should be able to grow with your portfolio and integrate with other essential business systems.\n\nBy focusing on these features, property managers can select a platform that not only supports a rapid and efficient lease-up but also sets the foundation for long-term operational success.",
+  "sources": [
+    {
+      "title": "mrisoftware.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFeXAqOd_R8F-vQ9c7_6ry5WGuomoc6k9p53F6J52a_UJee568UqXOaNH68Q7kTMI_b8aa6OBe76T1MY5Sv16JcELXsjnnikQJFeY1xUVJlfy4tMMGgStvWBP-rzNbJZPj73E0Urmso61_Sbl_xvutyw1fzaK8_gBNEne2nLJ9_9dra1vHANRs="
+    },
+    {
+      "title": "lula.life",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQESHdAHoW2t0MjFEOp6UO2kHRno1ob508UN40zmMj4DPNUQZ_7qxdnf7_5leWi_GDSSf5-fXltIMVqsoc5NwdZJHHHnwUGcS_wDHZZWvd8C-0y8ihBvi2DS6gbcTWHW2QBzlVGA5yGOI25jp1qq_L22o4zkKdFL"
+    },
+    {
+      "title": "quickbase.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEcbAe8egOCRtseZ82eKOd-ad3nWh_SWBcYss1-on6AKAXx9eOz7Yc0evvyad3eKyxCxCFtHWDAVVZX3T0-oVQEKrmox_F_eRmrqJPzDwkkno_Sf4WrRfUElS6avYE66hlJizKZmydoGy8GlUEBbE8zsbHtskyunGmTwA=="
+    },
+    {
+      "title": "amerisave.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHJyp8N1Ko_gvvg6SVsJIGcLpwAHtaCR-hL2RhG8S5jkVjNPXQ1vvqSBZNBMLUaIms-WpyyXmAc2iQh0-oHngdGuf76zwm9ldylYtDzfAQUNVJkuJohBY9GLJrwSC8Fq4LzhGADa5ZchKddHLo0ly9vjIWl31xJobYTPN_-wFeJuhrePUIJ-MO-UfVMX9pXL0P40t_svBaVKA=="
+    },
+    {
+      "title": "appfolio.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGFWy-9n8yhc1rb7ZAf6sIVaYL-HoC9Blusq3WFgtcI1q3EAL3svf0a9L_xuBPMBjE7iyd1jDKMuAo1kl7zTMYin8J_g6Xq2jRJhXCZ3XG4sL-zCFBiNLavgMdnpyYQLdE="
+    },
+    {
+      "title": "appfolio.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEXQpagvWw5dwbFrZQzYvgU-xlcOIPYbGAAEE2YZeSyaVepb5av5Ir-TbsuiSLWguJpyV5GI1LDgPGT2AbaPEuK2uds9NtF62q8Ahfem89fTjk1RE-S9MyKAbhniyQQ5jkdo9SZFw29LSCQnuz3d2SWrPk="
+    },
+    {
+      "title": "appfolio.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGHnJQy9QtxLl6D26zoSEeK4eaXjO1-FoNoHcgPC-Svv4UavZF9gnXPl36tvqMSw1yOrdaMQwioDcCsjEXsE3ufqKWGJKHSaJKf4AwXf_vcnTLR0g=="
+    },
+    {
+      "title": "appfolio.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFa60F_5kOL-9QF3-YMZeSn2JIxjoO5RDyISQRQ862GQzpoH-LlQ7Zah6IxiFvZgrE1VMokJHn6W1KOq0Oqb7OjYaKHhdHwI77IUn1Z5MNymH1lCN4971SdtPzqyYKYrXKwnGZKNZC-66E3X9wS4_zJ4D7Y5sycC_aLhK980fb5rzcvaJYnTkCx"
+    },
+    {
+      "title": "completerealtysolutionsstl.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHpxG57rYJfRpagn6KvyM14wZvcK_vC8WQ__WmINNSg4u3m1unwflBw5ElmVKNZ-EbRWbdZ48tVQ-Nf4tMG_6jqQwVTnZnQKaMZrQfkDjvu3nmeb0l18qh0NA-u84l6m1ZDfyA7WKK5-6lydh852fJb0Uzg4RYHdirj6rJH1RMvoCUh"
+    },
+    {
+      "title": "realpage.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGNfJ44HZ96Aw4Fq3fr2t0fAEmC8SJGOkeCxF80nRBibK1v9ewUT8y5DSBboy5ellY7ZInEbzDFP-C8gm9ITjC1S5KEIZ2q9orodVY2ohR6uR7V4Q=="
+    },
+    {
+      "title": "realpage.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEDCBZRiVO9sxmlUeMvYtvCrwzrouSWpvhZ__BGA9wNzNQgfv9dfZf0OsgtYfmyU4IY9pwz_aSFN12dMht_4PCRJswY7BtuxaiLcGJArQeKji7blhTXclYxFvdmQjHLgsNBIiLZhs9wd8MqlQcs5T5sOOKgb9tw"
+    },
+    {
+      "title": "realpage.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHipyvDXQ1tqlCqMPyErWLjfoH2zA1GPHp5b0nkk0O_7pxYGBDRm9nJy706hWlF_8I1q1bcDtqnHVhzJBqBgrkEhaLI34CXucJbhOfl-PQ0FpcfyGAS8ttCHoOpgJ1CavVG-IxZqr1jQsx78np9Hks="
+    },
+    {
+      "title": "entrata.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGsvKKnnF-ThHrkqmK16MD8OCd1446SMx6LyYln_xsn6lcS8Jq0jlAO9KyuqiHrOmssd5XgGuJ0b9nvwms_vGm1Gw-N3H_eb_LYs99RR1jYkLmM"
+    },
+    {
+      "title": "entrata.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGQXmuflUIIEx9X0ySoZ-A8vVpt5lKTm22p0p7U4iOSHnvisNX0buz8mfpJiI4gMRKsH2VNjmoMImXFD8LUeP15lH6FRLwkVxTZjR-XbWXYlpdJ71HkG7ztwm-_Pf4V9JmQsLd7zQ=="
+    },
+    {
+      "title": "entrata.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFAlXcEy0HSET-R-7eWVYaBcsKjgYmKBbyVWY_k6Cc4-5DeZdX_JJcevn-1CKM_CP5hvVlzFXLuZ6zpPOSXWaXSy-W8ICKAzPB6SU1WhbShDzpwc_uMywkGQ6FubC1Du_vs_BDBDmgUxMw="
+    },
+    {
+      "title": "rea.co",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGHd50kLvwRNVqNWOwJseM3tyLP6wNCLUC7aQ7BQ0l3Cme4LnCL2phaTZZu6TXo4v5aQFZHgOlG6HUHV8U7ctgVZ1O8F6Hc6g7eBYyvZ5aTkScQnGMzjj4uphWr-J8qMYup2JOG5PTBBPTzD-p-hlnGXDbc6clCYw=="
+    },
+    {
+      "title": "yardi.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFl9e8WVXlCNQFI4tl4amVDRKx1-scJhG9YUtZJR7wilGmIGT7jCqwiLBBQBMj0nDQzqXY0I5JyV0Baz8fdgZWhjWRPKCcL8zZmJYM0qA9kIw=="
+    },
+    {
+      "title": "yardi.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHtWL0j4wy-YTO7f_1QdebiYeuD1VjKvIXNhX8VPJhznXisN-1rwGZsOH5uzqQPeS6X9adkgEIsKg80an7hIeisrWTVrj1OgRkCwp-SiylyDo4QDO8YGNI5eRjxO3J0GdojclAEQwOAvaZhMtkVXA=="
+    },
+    {
+      "title": "yardi.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHaHty6Oi-g8008QCCakZtc3y_2xxxEZCerR_A7vmOZ0sFGt0_fMpzzzn0VQvjo22EGmVVW6avbi_SBwrTwG-LAPye39c_gTYk1n3QqJg34AXhM-WJzGTCVxhNKYVrqgiK6eZKutrQ4cdOL29hbmw=="
+    },
+    {
+      "title": "buildium.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGWR4OC75wWX0zdjUb-wNqqFR0wvTZA3isnaRz-W7V9_ecErmdwR412zQsT0o6gT2cTqrbm89C0wkQFut1BS7DbX0HA3Gp2BqBDVytdzGbkvp9VuA=="
+    },
+    {
+      "title": "youtube.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEK4czgxwV43etUr29teOtPWmWaJKyiT4kKuAeSSpIAjL8IqRvCxfy7qS49GTNi8SF-Bgch7Me_wQa5BYG9eNibV6O1HlEdGwhzgPlLP4ICh47LH2CuCjNTFvUQj2MR8QGS8PCSSA=="
+    },
+    {
+      "title": "buildium.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG6okLIGC003uapPxPB5hYk_3hYGp7P-vbA_4dxgWJ7GJXGaP-S3G45cWTuPAicXEacSgVMiyyehFgqDfDZR5i0215tNnAqWBAf8tetQlZxTaiwBsEKE8VzcEwZlphpB8J5sPqwDAO_nuF0ECdsd3gl24llnNzC"
+    },
+    {
+      "title": "buildium.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGBfPYwjra3IaqWTDG6a__-F8FZqy48GJh5j4Pcdn-4NEv0W7kkE5HYwnTzGO_QUOxo55uqEx0al5ZXLzzADErcn1Hy2D14dQduCiOgu9OaGGLWSMnk_DNesfmnkAJz1xdykW-pHsYOu0VyBw=="
+    },
+    {
+      "title": "softhealer.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHat3pZhIQBjOgHUhsnCmzsWthwua_4SrgGTwxehAQlyb96thYZnoUF2DhdqcnN847-JZYE8Zy1KoY9RJPCG90oAQVnbrshCWyVdf79FvPOBbtFeFQCO47HqDencHJCVXpqkpNr5A3AcCQOBULzxVaAHJsC_oeRL2xWzemr9u22ETN2x2wDQBuUGmEqX4cOJbmOL-BqLNTThgvgVevL"
+    },
+    {
+      "title": "solutiondots.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQECQ2Z5CgQD6CKiSTOCdSAc-mxnKMaFbz5KQEsy9F-qsFMCrFJ9zvDIyNOW9rtHHeboMqj6osfkZ0o0RzIFeEO0v41WmXWOfz01neSVpLO5gt-bEklmZp7jVJvx"
+    },
+    {
+      "title": "getaptly.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFYUyZvZz1jifTVp3BnMIGHWMUbzcF-ykEXjN2bO57S0a8CwngsVCe7h0Jllqvo_AHpZ_l-SSsIf8l48gqqvUQSxXHSJySAa4gi4OAn-2mvxLT17g1Ishe3OzADSSIT0_GIOBt3dyE17ltDhqeUBVpFwGMDnobgBoMub_PNnX-hcd4="
+    },
+    {
+      "title": "appfolio.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH4yhT9qGygyOXUJjakC6kGWXmvXcldW7mBp3-mOgIlTuGsdD78IbdqQ0po3cAKN5UwT2_o06ucNhFlqhGDNo4dLxwp-G6d65gp3US5PHB5g7YGDvtIsxP_nZKSic5IhnWHt5BsMvA="
+    },
+    {
+      "title": "insightsoftware.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQELdZgHOfCqtJuWNIroYwK5BQ_BQJT99WnsrJ6S4GvVOBOe_lNqgz47cEpU_z0ufNBnXx3jMlduV_-5TlLuPcAwV6CVIUyRns3GikuA_aN2CVlquUlHT8P9at-VObTG1_VtFHJsJ3jnPhPcbwXsBqYSE6pMh5_AGuokpzxBINPHEYCSh1Fa9Z46V8kh_HpaKg=="
+    },
+    {
+      "title": "tenantcloud.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFyLjaafQBvGhS8dYAp4SzskWLz5XQPdfnDC2jiEJ3zhmZ6zfyDFB69h5GXKSepOMAwUPHEFOS74oi_sn1aym9bfWdU1Be_TU2vwIoAysXZeS3HW60-qGpDu4pCbyJM9zh3TPzciTmofapGPCqefGe3AUyj9uP3J43z8eCHBBP2uoRArDOXzf4WcFo="
+    }
+  ],
+  "brands": [
+    {
+      "brand": "AppFolio",
+      "first_at": 482,
+      "mentions": 5,
+      "rank": 1
+    },
+    {
+      "brand": "RealPage",
+      "first_at": 1495,
+      "mentions": 4,
+      "rank": 2
+    },
+    {
+      "brand": "Entrata",
+      "first_at": 2396,
+      "mentions": 5,
+      "rank": 3
+    },
+    {
+      "brand": "Yardi",
+      "first_at": 3311,
+      "mentions": 4,
+      "rank": 4
+    },
+    {
+      "brand": "Buildium",
+      "first_at": 4019,
+      "mentions": 4,
+      "rank": 5
+    }
+  ],
+  "links": [
+    {
+      "title": "mrisoftware.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFeXAqOd_R8F-vQ9c7_6ry5WGuomoc6k9p53F6J52a_UJee568UqXOaNH68Q7kTMI_b8aa6OBe76T1MY5Sv16JcELXsjnnikQJFeY1xUVJlfy4tMMGgStvWBP-rzNbJZPj73E0Urmso61_Sbl_xvutyw1fzaK8_gBNEne2nLJ9_9dra1vHANRs="
+    },
+    {
+      "title": "lula.life",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQESHdAHoW2t0MjFEOp6UO2kHRno1ob508UN40zmMj4DPNUQZ_7qxdnf7_5leWi_GDSSf5-fXltIMVqsoc5NwdZJHHHnwUGcS_wDHZZWvd8C-0y8ihBvi2DS6gbcTWHW2QBzlVGA5yGOI25jp1qq_L22o4zkKdFL"
+    },
+    {
+      "title": "quickbase.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEcbAe8egOCRtseZ82eKOd-ad3nWh_SWBcYss1-on6AKAXx9eOz7Yc0evvyad3eKyxCxCFtHWDAVVZX3T0-oVQEKrmox_F_eRmrqJPzDwkkno_Sf4WrRfUElS6avYE66hlJizKZmydoGy8GlUEBbE8zsbHtskyunGmTwA=="
+    },
+    {
+      "title": "amerisave.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHJyp8N1Ko_gvvg6SVsJIGcLpwAHtaCR-hL2RhG8S5jkVjNPXQ1vvqSBZNBMLUaIms-WpyyXmAc2iQh0-oHngdGuf76zwm9ldylYtDzfAQUNVJkuJohBY9GLJrwSC8Fq4LzhGADa5ZchKddHLo0ly9vjIWl31xJobYTPN_-wFeJuhrePUIJ-MO-UfVMX9pXL0P40t_svBaVKA=="
+    },
+    {
+      "title": "appfolio.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGFWy-9n8yhc1rb7ZAf6sIVaYL-HoC9Blusq3WFgtcI1q3EAL3svf0a9L_xuBPMBjE7iyd1jDKMuAo1kl7zTMYin8J_g6Xq2jRJhXCZ3XG4sL-zCFBiNLavgMdnpyYQLdE="
+    },
+    {
+      "title": "appfolio.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEXQpagvWw5dwbFrZQzYvgU-xlcOIPYbGAAEE2YZeSyaVepb5av5Ir-TbsuiSLWguJpyV5GI1LDgPGT2AbaPEuK2uds9NtF62q8Ahfem89fTjk1RE-S9MyKAbhniyQQ5jkdo9SZFw29LSCQnuz3d2SWrPk="
+    },
+    {
+      "title": "appfolio.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGHnJQy9QtxLl6D26zoSEeK4eaXjO1-FoNoHcgPC-Svv4UavZF9gnXPl36tvqMSw1yOrdaMQwioDcCsjEXsE3ufqKWGJKHSaJKf4AwXf_vcnTLR0g=="
+    },
+    {
+      "title": "appfolio.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFa60F_5kOL-9QF3-YMZeSn2JIxjoO5RDyISQRQ862GQzpoH-LlQ7Zah6IxiFvZgrE1VMokJHn6W1KOq0Oqb7OjYaKHhdHwI77IUn1Z5MNymH1lCN4971SdtPzqyYKYrXKwnGZKNZC-66E3X9wS4_zJ4D7Y5sycC_aLhK980fb5rzcvaJYnTkCx"
+    },
+    {
+      "title": "completerealtysolutionsstl.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHpxG57rYJfRpagn6KvyM14wZvcK_vC8WQ__WmINNSg4u3m1unwflBw5ElmVKNZ-EbRWbdZ48tVQ-Nf4tMG_6jqQwVTnZnQKaMZrQfkDjvu3nmeb0l18qh0NA-u84l6m1ZDfyA7WKK5-6lydh852fJb0Uzg4RYHdirj6rJH1RMvoCUh"
+    },
+    {
+      "title": "realpage.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGNfJ44HZ96Aw4Fq3fr2t0fAEmC8SJGOkeCxF80nRBibK1v9ewUT8y5DSBboy5ellY7ZInEbzDFP-C8gm9ITjC1S5KEIZ2q9orodVY2ohR6uR7V4Q=="
+    },
+    {
+      "title": "realpage.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEDCBZRiVO9sxmlUeMvYtvCrwzrouSWpvhZ__BGA9wNzNQgfv9dfZf0OsgtYfmyU4IY9pwz_aSFN12dMht_4PCRJswY7BtuxaiLcGJArQeKji7blhTXclYxFvdmQjHLgsNBIiLZhs9wd8MqlQcs5T5sOOKgb9tw"
+    },
+    {
+      "title": "realpage.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHipyvDXQ1tqlCqMPyErWLjfoH2zA1GPHp5b0nkk0O_7pxYGBDRm9nJy706hWlF_8I1q1bcDtqnHVhzJBqBgrkEhaLI34CXucJbhOfl-PQ0FpcfyGAS8ttCHoOpgJ1CavVG-IxZqr1jQsx78np9Hks="
+    },
+    {
+      "title": "entrata.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGsvKKnnF-ThHrkqmK16MD8OCd1446SMx6LyYln_xsn6lcS8Jq0jlAO9KyuqiHrOmssd5XgGuJ0b9nvwms_vGm1Gw-N3H_eb_LYs99RR1jYkLmM"
+    },
+    {
+      "title": "entrata.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGQXmuflUIIEx9X0ySoZ-A8vVpt5lKTm22p0p7U4iOSHnvisNX0buz8mfpJiI4gMRKsH2VNjmoMImXFD8LUeP15lH6FRLwkVxTZjR-XbWXYlpdJ71HkG7ztwm-_Pf4V9JmQsLd7zQ=="
+    },
+    {
+      "title": "entrata.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFAlXcEy0HSET-R-7eWVYaBcsKjgYmKBbyVWY_k6Cc4-5DeZdX_JJcevn-1CKM_CP5hvVlzFXLuZ6zpPOSXWaXSy-W8ICKAzPB6SU1WhbShDzpwc_uMywkGQ6FubC1Du_vs_BDBDmgUxMw="
+    },
+    {
+      "title": "rea.co",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGHd50kLvwRNVqNWOwJseM3tyLP6wNCLUC7aQ7BQ0l3Cme4LnCL2phaTZZu6TXo4v5aQFZHgOlG6HUHV8U7ctgVZ1O8F6Hc6g7eBYyvZ5aTkScQnGMzjj4uphWr-J8qMYup2JOG5PTBBPTzD-p-hlnGXDbc6clCYw=="
+    },
+    {
+      "title": "yardi.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFl9e8WVXlCNQFI4tl4amVDRKx1-scJhG9YUtZJR7wilGmIGT7jCqwiLBBQBMj0nDQzqXY0I5JyV0Baz8fdgZWhjWRPKCcL8zZmJYM0qA9kIw=="
+    },
+    {
+      "title": "yardi.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHtWL0j4wy-YTO7f_1QdebiYeuD1VjKvIXNhX8VPJhznXisN-1rwGZsOH5uzqQPeS6X9adkgEIsKg80an7hIeisrWTVrj1OgRkCwp-SiylyDo4QDO8YGNI5eRjxO3J0GdojclAEQwOAvaZhMtkVXA=="
+    },
+    {
+      "title": "yardi.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHaHty6Oi-g8008QCCakZtc3y_2xxxEZCerR_A7vmOZ0sFGt0_fMpzzzn0VQvjo22EGmVVW6avbi_SBwrTwG-LAPye39c_gTYk1n3QqJg34AXhM-WJzGTCVxhNKYVrqgiK6eZKutrQ4cdOL29hbmw=="
+    },
+    {
+      "title": "buildium.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGWR4OC75wWX0zdjUb-wNqqFR0wvTZA3isnaRz-W7V9_ecErmdwR412zQsT0o6gT2cTqrbm89C0wkQFut1BS7DbX0HA3Gp2BqBDVytdzGbkvp9VuA=="
+    },
+    {
+      "title": "youtube.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEK4czgxwV43etUr29teOtPWmWaJKyiT4kKuAeSSpIAjL8IqRvCxfy7qS49GTNi8SF-Bgch7Me_wQa5BYG9eNibV6O1HlEdGwhzgPlLP4ICh47LH2CuCjNTFvUQj2MR8QGS8PCSSA=="
+    },
+    {
+      "title": "buildium.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG6okLIGC003uapPxPB5hYk_3hYGp7P-vbA_4dxgWJ7GJXGaP-S3G45cWTuPAicXEacSgVMiyyehFgqDfDZR5i0215tNnAqWBAf8tetQlZxTaiwBsEKE8VzcEwZlphpB8J5sPqwDAO_nuF0ECdsd3gl24llnNzC"
+    },
+    {
+      "title": "buildium.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGBfPYwjra3IaqWTDG6a__-F8FZqy48GJh5j4Pcdn-4NEv0W7kkE5HYwnTzGO_QUOxo55uqEx0al5ZXLzzADErcn1Hy2D14dQduCiOgu9OaGGLWSMnk_DNesfmnkAJz1xdykW-pHsYOu0VyBw=="
+    },
+    {
+      "title": "softhealer.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHat3pZhIQBjOgHUhsnCmzsWthwua_4SrgGTwxehAQlyb96thYZnoUF2DhdqcnN847-JZYE8Zy1KoY9RJPCG90oAQVnbrshCWyVdf79FvPOBbtFeFQCO47HqDencHJCVXpqkpNr5A3AcCQOBULzxVaAHJsC_oeRL2xWzemr9u22ETN2x2wDQBuUGmEqX4cOJbmOL-BqLNTThgvgVevL"
+    },
+    {
+      "title": "solutiondots.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQECQ2Z5CgQD6CKiSTOCdSAc-mxnKMaFbz5KQEsy9F-qsFMCrFJ9zvDIyNOW9rtHHeboMqj6osfkZ0o0RzIFeEO0v41WmXWOfz01neSVpLO5gt-bEklmZp7jVJvx"
+    },
+    {
+      "title": "getaptly.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFYUyZvZz1jifTVp3BnMIGHWMUbzcF-ykEXjN2bO57S0a8CwngsVCe7h0Jllqvo_AHpZ_l-SSsIf8l48gqqvUQSxXHSJySAa4gi4OAn-2mvxLT17g1Ishe3OzADSSIT0_GIOBt3dyE17ltDhqeUBVpFwGMDnobgBoMub_PNnX-hcd4="
+    },
+    {
+      "title": "appfolio.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH4yhT9qGygyOXUJjakC6kGWXmvXcldW7mBp3-mOgIlTuGsdD78IbdqQ0po3cAKN5UwT2_o06ucNhFlqhGDNo4dLxwp-G6d65gp3US5PHB5g7YGDvtIsxP_nZKSic5IhnWHt5BsMvA="
+    },
+    {
+      "title": "insightsoftware.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQELdZgHOfCqtJuWNIroYwK5BQ_BQJT99WnsrJ6S4GvVOBOe_lNqgz47cEpU_z0ufNBnXx3jMlduV_-5TlLuPcAwV6CVIUyRns3GikuA_aN2CVlquUlHT8P9at-VObTG1_VtFHJsJ3jnPhPcbwXsBqYSE6pMh5_AGuokpzxBINPHEYCSh1Fa9Z46V8kh_HpaKg=="
+    },
+    {
+      "title": "tenantcloud.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFyLjaafQBvGhS8dYAp4SzskWLz5XQPdfnDC2jiEJ3zhmZ6zfyDFB69h5GXKSepOMAwUPHEFOS74oi_sn1aym9bfWdU1Be_TU2vwIoAysXZeS3HW60-qGpDu4pCbyJM9zh3TPzciTmofapGPCqefGe3AUyj9uP3J43z8eCHBBP2uoRArDOXzf4WcFo="
+    }
+  ]
+}

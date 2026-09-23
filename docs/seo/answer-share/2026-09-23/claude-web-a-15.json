@@ -1,0 +1,65 @@
+{
+  "engine": "claude-web",
+  "engine_label": "Claude (Sonnet) via claude -p, web search on",
+  "is_consumer_app": false,
+  "set": "A",
+  "question": "Are there free alternatives to CoStar or Yardi Matrix for multifamily pipeline data?",
+  "intent": "free-report",
+  "asked_on": "2026-09-23",
+  "ok": true,
+  "answer": "There's no single free product that replicates CoStar or Yardi Matrix's full multifamily pipeline (permitted/planned/under-construction by property, with unit counts and delivery timing) \u2014 that granularity is exactly what those platforms charge for. But you can piece together a lot of it for free, and there are a few lower-cost paid options if you need something closer to a real substitute.\n\n**Free government/public sources**\n- **U.S. Census Bureau Building Permits Survey (BPS)** \u2014 free, monthly multifamily (5+ unit) permit counts by metro, county, and place. This is the closest free proxy to \"pipeline\" data, though it's aggregate counts, not project-level records.\n- **FRED (St. Louis Fed), series PERMIT** \u2014 the same Census permit data in an easy time-series/API format for national and regional trends.\n- **Local city/county planning and building-permit portals** \u2014 the actual primary source CoStar and Yardi Matrix scrape and phone-call to build their databases. Many mid-size and large cities now post permit/entitlement dashboards (Accela-based portals, Socrata open-data sites, etc.) where you can pull project-level addresses and unit counts by hand.\n- **State housing finance agencies** \u2014 track their own affordable/LIHTC multifamily pipelines (award lists, QAP applications), useful if you care about subsidized units specifically.\n\n**Free industry/broker research**\n- **CBRE, JLL, Cushman & Wakefield, Marcus & Millichap, Berkadia, Walker & Dunlop** \u2014 all publish free quarterly multifamily market reports with construction pipeline, deliveries, and absorption by metro (aggregate, not address-level).\n- **MMG Real Estate Advisors' Multifamily Construction Pipeline Reports** \u2014 free interactive national/metro pipeline maps and rankings; worth noting their underlying data is itself sourced from Yardi Matrix, so it's a free front-end onto Matrix data rather than an independent source.\n- **NMHC (National Multifamily Housing Council)** \u2014 some free research and pipeline commentary for members/non-members.\n- **Zillow Research, Zumper, Apartment List, RentCafe (Yardi's own free consumer site)** \u2014 free rent-trend and inventory data by metro/zip, not pipeline-specific but useful context.\n\n**Lower-cost (not free, but cheaper than CoStar/Yardi Matrix) alternatives**\n- **PropertyShark** \u2014 has a \"Construction Pipeline\" tool alongside permits/zoning/ownership data, tiered subscriptions well below CoStar's price point.\n- **Reonomy** and **CompStak** \u2014 broader property/ownership/comp data platforms; CompStak is free if you contribute your own comps.\n- **Crexi** (free basic tier, paid Intelligence tier) \u2014 listings plus some market data.\n- **Moody's Analytics CRE** (formerly Reis) \u2014 tracks projects from groundbreaking through lease-up, but is enterprise-priced, not really \"cheap.\"\n- **Dodge Construction Network / Zonda** \u2014 construction-starts and permit data aggregators, subscription-based but often cheaper than CoStar for pipeline-specific use cases.\n\nIf your goal is genuinely free and you only need directional/metro-level trends, Census BPS + FRED + the free broker quarterly reports will get you 80% of the way. If you need project-level addresses and unit counts comparable to Matrix, you're likely stuck combining local permit portals manually or paying for one of the cheaper platforms above (PropertyShark or Reonomy are the best value ones commonly cited).\n\nSources:\n- [Best Commercial Real Estate Data Sources for 2026 - CRE Daily](https://www.credaily.com/reviews/best-commercial-real-estate-data-sources/)\n- [How To Research A Real Estate Market (For Free) - Break Into CRE](https://breakintocre.com/how-to-research-a-real-estate-market-for-free/)\n- [New Privately-Owned Housing Units Authorized in Permit-Issuing Places (PERMIT) | FRED](https://fred.stlouisfed.org/series/PERMIT)\n- [Multifamily Construction Pipeline Reports \u2013 MMG Real Estate Advisors](https://mmgrea.com/research/construction-pipeline-reports/)\n- [15 Best Yardi Matrix Alternatives & Competitors in 2025 - SoftwareSuggest](https://www.softwaresuggest.com/yardi-matrix/alternatives)",
+  "brands": [
+    {
+      "brand": "CoStar",
+      "first_at": 47,
+      "mentions": 5,
+      "rank": 1
+    },
+    {
+      "brand": "Yardi",
+      "first_at": 57,
+      "mentions": 7,
+      "rank": 2
+    },
+    {
+      "brand": "CBRE",
+      "first_at": 1389,
+      "mentions": 1,
+      "rank": 3
+    },
+    {
+      "brand": "Berkadia",
+      "first_at": 1441,
+      "mentions": 1,
+      "rank": 4
+    },
+    {
+      "brand": "Zillow",
+      "first_at": 2030,
+      "mentions": 1,
+      "rank": 5
+    }
+  ],
+  "links": [
+    {
+      "title": "",
+      "url": "https://www.credaily.com/reviews/best-commercial-real-estate-data-sources/"
+    },
+    {
+      "title": "",
+      "url": "https://breakintocre.com/how-to-research-a-real-estate-market-for-free/"
+    },
+    {
+      "title": "",
+      "url": "https://fred.stlouisfed.org/series/PERMIT"
+    },
+    {
+      "title": "",
+      "url": "https://mmgrea.com/research/construction-pipeline-reports/"
+    },
+    {
+      "title": "",
+      "url": "https://www.softwaresuggest.com/yardi-matrix/alternatives"
+    }
+  ]
+}

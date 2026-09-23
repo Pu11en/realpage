@@ -1,0 +1,95 @@
+{
+  "engine": "gemini",
+  "engine_label": "Gemini (gemini-2.5-flash) via API, Google Search grounding on",
+  "is_consumer_app": false,
+  "set": "A",
+  "question": "Which apartment complexes in Texas sold in 2025?",
+  "intent": "find-sales",
+  "asked_on": "2026-09-23",
+  "ok": true,
+  "answer": "Several apartment complexes across Texas were sold in 2025, reflecting a dynamic multifamily market. Notable transactions occurred in major metropolitan areas such as Houston and other regions of the state.\n\nSpecific apartment complex sales in Texas during 2025 include:\n*   Praedium Group acquired the 312-unit Pearl Woodlake in West Houston for $67.7 million.\n*   Berkshire Residential purchased The Ivy, a 297-unit Class A asset in River Oaks, Houston, through an off-market deal.\n*   Tilden Properties closed on The Lennox, a 236-unit community in Spring Branch, Houston, for $41.3 million.\n*   GVA Management expanded its portfolio with the acquisition of The Ella, a 210-unit asset in Northwest Houston.\n*   Altus Equity Group acquired a portfolio totaling 1,225 units in Texas, including the Odessa Multifamily Portfolio, which boasted a 92% occupancy rate and a projected year-one yield exceeding 10%.\n\nThe Multifamily Group (TMG) was involved in several transactions across Texas in 2025:\n*   TMG negotiated the sale of a 54-unit apartment building in South Fort Worth.\n*   TMG arranged the sale of a 168-unit complex in Lake Jackson, Texas.\n*   TMG negotiated the sale of the 41-unit Willow Park Apartments in Abilene, Texas.\n*   TMG negotiated the sale of the 43-unit Victoria Place Apartments in Southwest Fort Worth.\n*   TMG negotiated the sale of the 104-unit Highland Square Apartments in Alvin, Texas.\n*   TMG negotiated the sale of the 100-unit Vistas Apartments in Boerne, Texas.\n*   TMG arranged the sale of a 52-unit apartment complex in Paris, Texas.\n\nThe Texas commercial real estate market, including multifamily properties, generated $203.4 billion in 2025. The Houston multifamily market, for example, saw a sales volume of $358 million in Q2 2025, with an average market sale price of $149,000 per unit, according to CoStar Group data. Investor focus in Houston shifted towards stabilized, higher-quality Class A and B assets, which accounted for 60% of all multifamily transactions in Q2 2025. Overall, the Texas multifamily market experienced an oversupply of units, with deliveries exceeding net absorption, leading to softer rent growth and increased vacancy rates in many markets throughout 2025. However, some markets like Dallas-Fort Worth and Houston showed signs of stabilization with absorption beginning to outpace deliveries by the end of 2025.\n\nSources:\n*   CoStar Group\n*   Matthews Real Estate Investment Services\n*   Multifamily Dive\n*   REBusinessOnline\n*   Terrydale Capital\n*   The Multifamily Group (TMG)\n*   Texas Real Estate Research Center\n*   Biscred",
+  "sources": [
+    {
+      "title": "matthews.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFTXnVIrC-2tM9IjIlpPm66lbvK5rfsVu9XpD7twc9HpSFB2F1W56T1LNTZd-LcMeMRlUKugIduMfOcSRX84oYhDKeqUfzB7DXgYOV8BKsXiF9DNdLjUnDH9t8NEnKEhs0-zH8_FCgjuxPxRq7dq3O1QZUFYoCWEWo="
+    },
+    {
+      "title": "multifamilydive.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF-rDctlX-HLCTB--1n9CMUR8dKqFoqWLA-w48jMfCCyXyDMJ-S8hUqHhQ3eQNydDVPaZHQITqlhYZSbuoPItPS37Nb0EToRHLJAP-4wiCIuoEVJUG9LHh5ULyF08qu_Ex8SKAyZeIWX2CQQB_KGE5YrTtXSf-q6oLLxvhBk9k3xJIi0Y87sEQrj3VExbQAJpGtqDaSkD3EQ4ekmj-EGuCu"
+    },
+    {
+      "title": "multifamilygrp.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEag8pXcAreOVkXYHIcmyHf4S2R3RAvb2C5luizZIc_5V8Ea-CVcjb2AYXrQ0MjA9MhvAFwSJHiRA4tWUSWRPYHchTj988m1oN7CND5FEJCoeDCOenE1vNMEvA="
+    },
+    {
+      "title": "biscred.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEN7LflE6pUVKgdcOx8AexLT2UnfMMReYfKb37BD3dKSgaStvs1I6FGQe0qqwyiuCFD7aUAXu7-ZEtsppMEKeiq-DCA6hszM5iBSm3ElpfJlgW5eas1DSF5AFloOKiW"
+    },
+    {
+      "title": "tamu.edu",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGbuJRIWqMukFw0NHPK-eOS7m7bkNF5BrYR84H8l9WrOTzvd2wzpBHR6aZxyBFOd4efp2zU5OBmbfwwNWMjG4UvZgwhXeurJhUk8pqAaEFP9UePacq2A69ZClkJkEF4PLH0wpiubQTCLO9-RBzAXuFwDw=="
+    },
+    {
+      "title": "terrydalecapital.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG2DwlwYsG8XEFzgqT5m0SPakNKenaN3FzW2Ntu3vk5WJP-FFCWNJ9XTqrp_8pk8x6AFylX5FR8S5XjLeTmMQ2ojwZpFmlfiaofeZpmlvOZq0vaD4hTQFLne1gc8mmFVvOvH8EC2imUok1QvBpyBw7QNPjic6kgWVvyBBAG6AiT0BTatKpNrrpxpU9d"
+    },
+    {
+      "title": "apartments.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFJ5CvqQS3MK91raAsMI0tIi3T68qX1E2rn4KtbyuA0X_Gy50N7i9QQ3vKmh030bYI9WWA-4PWi8JKeHplM9mN3KSt63N00KHJ-PMtU3GnIYEDnqasUdl23n8OM3aIUB52gLFQwUYEIGXCfXLnYHmjW_xKIW8VsAQvEEP45H6-qmvp-vtq-Iw=="
+    },
+    {
+      "title": "tamu.edu",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHmpOZEnEpKfoNAsmtodyVxrLX8neM81CQU4ET-8GjJusnp2Wj8rOULaz1xfKnHwqfg5WPA4RQJ2XKyPLA859_qPFagHoSFfcsvtnt4NaTfZkdIDHZb5p0yVT7HQSslcUrh4WljsXDvLGM1J_dzZjrRLAKuRjKu7tXgxw=="
+    },
+    {
+      "title": "tamu.edu",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGInJSw1fpapxZhwWnwQDN7LlpINzzDAGICMR0BXUDlmzUNZDHDy--ldGpnzH8auEFRxKeB3XJGLk4vP1w5lk0mUh3S1AInQMFjPfxHr6e6mfzd_dT4YOO17dR4NvQt3HtG-KVGnYcH_Jx2UqtwedY="
+    }
+  ],
+  "brands": [
+    {
+      "brand": "CoStar",
+      "first_at": 1843,
+      "mentions": 2,
+      "rank": 1
+    }
+  ],
+  "links": [
+    {
+      "title": "matthews.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFTXnVIrC-2tM9IjIlpPm66lbvK5rfsVu9XpD7twc9HpSFB2F1W56T1LNTZd-LcMeMRlUKugIduMfOcSRX84oYhDKeqUfzB7DXgYOV8BKsXiF9DNdLjUnDH9t8NEnKEhs0-zH8_FCgjuxPxRq7dq3O1QZUFYoCWEWo="
+    },
+    {
+      "title": "multifamilydive.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF-rDctlX-HLCTB--1n9CMUR8dKqFoqWLA-w48jMfCCyXyDMJ-S8hUqHhQ3eQNydDVPaZHQITqlhYZSbuoPItPS37Nb0EToRHLJAP-4wiCIuoEVJUG9LHh5ULyF08qu_Ex8SKAyZeIWX2CQQB_KGE5YrTtXSf-q6oLLxvhBk9k3xJIi0Y87sEQrj3VExbQAJpGtqDaSkD3EQ4ekmj-EGuCu"
+    },
+    {
+      "title": "multifamilygrp.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEag8pXcAreOVkXYHIcmyHf4S2R3RAvb2C5luizZIc_5V8Ea-CVcjb2AYXrQ0MjA9MhvAFwSJHiRA4tWUSWRPYHchTj988m1oN7CND5FEJCoeDCOenE1vNMEvA="
+    },
+    {
+      "title": "biscred.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEN7LflE6pUVKgdcOx8AexLT2UnfMMReYfKb37BD3dKSgaStvs1I6FGQe0qqwyiuCFD7aUAXu7-ZEtsppMEKeiq-DCA6hszM5iBSm3ElpfJlgW5eas1DSF5AFloOKiW"
+    },
+    {
+      "title": "tamu.edu",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGbuJRIWqMukFw0NHPK-eOS7m7bkNF5BrYR84H8l9WrOTzvd2wzpBHR6aZxyBFOd4efp2zU5OBmbfwwNWMjG4UvZgwhXeurJhUk8pqAaEFP9UePacq2A69ZClkJkEF4PLH0wpiubQTCLO9-RBzAXuFwDw=="
+    },
+    {
+      "title": "terrydalecapital.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG2DwlwYsG8XEFzgqT5m0SPakNKenaN3FzW2Ntu3vk5WJP-FFCWNJ9XTqrp_8pk8x6AFylX5FR8S5XjLeTmMQ2ojwZpFmlfiaofeZpmlvOZq0vaD4hTQFLne1gc8mmFVvOvH8EC2imUok1QvBpyBw7QNPjic6kgWVvyBBAG6AiT0BTatKpNrrpxpU9d"
+    },
+    {
+      "title": "apartments.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFJ5CvqQS3MK91raAsMI0tIi3T68qX1E2rn4KtbyuA0X_Gy50N7i9QQ3vKmh030bYI9WWA-4PWi8JKeHplM9mN3KSt63N00KHJ-PMtU3GnIYEDnqasUdl23n8OM3aIUB52gLFQwUYEIGXCfXLnYHmjW_xKIW8VsAQvEEP45H6-qmvp-vtq-Iw=="
+    },
+    {
+      "title": "tamu.edu",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHmpOZEnEpKfoNAsmtodyVxrLX8neM81CQU4ET-8GjJusnp2Wj8rOULaz1xfKnHwqfg5WPA4RQJ2XKyPLA859_qPFagHoSFfcsvtnt4NaTfZkdIDHZb5p0yVT7HQSslcUrh4WljsXDvLGM1J_dzZjrRLAKuRjKu7tXgxw=="
+    },
+    {
+      "title": "tamu.edu",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGInJSw1fpapxZhwWnwQDN7LlpINzzDAGICMR0BXUDlmzUNZDHDy--ldGpnzH8auEFRxKeB3XJGLk4vP1w5lk0mUh3S1AInQMFjPfxHr6e6mfzd_dT4YOO17dR4NvQt3HtG-KVGnYcH_Jx2UqtwedY="
+    }
+  ]
+}

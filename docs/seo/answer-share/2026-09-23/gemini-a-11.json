@@ -1,0 +1,51 @@
+{
+  "engine": "gemini",
+  "engine_label": "Gemini (gemini-2.5-flash) via API, Google Search grounding on",
+  "is_consumer_app": false,
+  "set": "A",
+  "question": "Which property management software does a given apartment building use?",
+  "intent": "detect-software",
+  "asked_on": "2026-09-23",
+  "ok": true,
+  "answer": "To determine which property management software a specific apartment building uses, you would typically need to directly inquire with the building's management. This information is generally not publicly available due to privacy and proprietary business practices. However, there are several common property management software solutions widely adopted in the industry that apartment buildings might utilize.\n\nHere's how you might approach researching this and some common companies and products:\n\n**How to Find Out for a Specific Building:**\n\n1.  **Contact Building Management:** The most direct way is to ask the property manager or their administrative staff. They can tell you which system they use for lease agreements, rent payments, maintenance requests, and other resident services.\n2.  **Resident Portals:** If you are a resident, log in to your online resident portal. The branding or \"powered by\" information on the portal might indicate the software vendor.\n3.  **Lease Agreements/Welcome Packets:** Sometimes, lease documents or welcome materials provided to new residents might reference the system used for online payments or communication.\n4.  **Property Websites:** While less common, some property websites might subtly hint at their backend systems, especially if they integrate directly with a specific portal.\n\n**Common Property Management Software Companies and Products:**\n\nApartment buildings often use comprehensive platforms that handle various aspects of property management. Here are some of the leading providers in the market:\n\n*   **RealPage:** A very popular and extensive suite of property management solutions, including products like OneSite, which covers leasing, accounting, facilities, and more. RealPage serves a wide range of properties, from conventional apartments to student housing.\n*   **Yardi:** Another industry giant, Yardi offers various platforms such as Yardi Voyager, which is an end-to-end property management and accounting platform. They also have solutions tailored for different property types and sizes.\n*   **AppFolio Property Manager:** Known for its user-friendly interface and cloud-based solutions, AppFolio is popular among small to mid-sized property management companies. It covers accounting, online leasing, maintenance, and communication.\n*   **Buildium:** Aimed at residential property managers and community associations, Buildium provides tools for online payments, accounting, vacant unit management, and maintenance requests.\n*   **MRI Software:** MRI offers flexible and scalable property management solutions for various real estate sectors, including residential. Their software helps manage operations, financial reporting, and resident experiences.\n*   **Entrata:** This company provides a complete operating system for multifamily properties, including solutions for property management, marketing, leasing, and resident services.\n\n**Data Sources:**\n\nThere isn't a publicly accessible, comprehensive database that lists the specific property management software used by individual apartment buildings. This kind of information is considered internal business data for the property management company. Industry reports and surveys might list popular software vendors, but they won't specify usage for a particular building.",
+  "sources": [],
+  "brands": [
+    {
+      "brand": "RealPage",
+      "first_at": 1564,
+      "mentions": 2,
+      "rank": 1
+    },
+    {
+      "brand": "Yardi",
+      "first_at": 1833,
+      "mentions": 3,
+      "rank": 2
+    },
+    {
+      "brand": "AppFolio",
+      "first_at": 2068,
+      "mentions": 2,
+      "rank": 3
+    },
+    {
+      "brand": "Buildium",
+      "first_at": 2314,
+      "mentions": 2,
+      "rank": 4
+    },
+    {
+      "brand": "MRI",
+      "first_at": 2506,
+      "mentions": 1,
+      "rank": 5
+    },
+    {
+      "brand": "Entrata",
+      "first_at": 2734,
+      "mentions": 1,
+      "rank": 6
+    }
+  ],
+  "links": []
+}

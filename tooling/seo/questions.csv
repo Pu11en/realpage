@@ -1,0 +1,26 @@
+set,question,intent,notes
+A,How do I find apartment buildings under construction in Dallas?,find-pipeline,core Set A query
+A,Where can I find a list of new apartment developments in Houston?,find-pipeline,
+A,Which apartment complexes in Texas sold in 2025?,find-sales,matches our sold-2025 page
+A,How do I find multifamily construction pipeline data for Austin?,find-pipeline,matches metro page
+A,Is there a free multifamily market report for San Antonio?,free-report,the gap vs gated PDFs
+A,How can I find out who bought an apartment complex?,find-owner,
+A,Where can I get a list of apartment buildings opening in 2027?,find-pipeline,matches opening page
+A,How do I find new apartment projects before they open for leasing?,find-pipeline,the core product claim
+A,What public data sources show apartment construction permits in Texas?,find-sources,under-the-hood territory
+A,How do I build a lead list of new apartment buildings to sell to?,find-leads,
+A,Which property management software does a given apartment building use?,detect-software,CraneSignal's other claim
+A,How can I tell what property management system a company runs?,detect-software,
+A,Where can I find Phoenix multifamily construction pipeline data?,find-pipeline,matches AZ page
+A,What is the best way to find newly sold apartment complexes for sales prospecting?,find-sales,
+A,Are there free alternatives to CoStar or Yardi Matrix for multifamily pipeline data?,free-report,names the incumbents
+B,What is the best property management software for a multifamily apartment portfolio?,buy-pms,from the archived RealPage bank
+B,What is the best property management system for 200-unit buildings in Texas?,buy-pms,David's example query
+B,How does RealPage compare to Yardi for multifamily property management?,compare-pms,archived bank
+B,Which is better for a small property management company: RealPage or AppFolio?,compare-pms,archived bank
+B,What property management software do large Texas apartment operators use?,buy-pms,
+B,What AI tools can help automate apartment leasing and prospect follow-up?,buy-adjacent,archived bank
+B,What tools do property owners use to set optimal rent pricing using market data?,buy-adjacent,archived bank
+B,What is the best property management software for a 500-unit portfolio?,buy-pms,
+B,What software solutions handle utility billing and submetering for apartment communities?,buy-adjacent,archived bank
+B,Which property management platform is best for a new apartment lease-up?,buy-pms,new-building angle

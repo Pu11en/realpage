@@ -1,0 +1,38 @@
+{
+  "engine": "claude-web",
+  "engine_label": "Claude (Sonnet) via claude -p, web search on",
+  "is_consumer_app": false,
+  "set": "A",
+  "question": "How do I find apartment buildings under construction in Dallas?",
+  "intent": "find-pipeline",
+  "asked_on": "2026-09-23",
+  "ok": true,
+  "answer": "Here's how people typically track apartment construction activity in a specific metro like Dallas:\n\n**Commercial real estate data platforms (most reliable, but often subscription-based)**\n- **CoStar** \u2014 the industry standard for tracking multifamily pipeline, permits, and construction status by submarket; widely used by brokers and developers, but expensive/enterprise-priced.\n- **Yardi Matrix** \u2014 publishes multifamily construction and supply reports, including Dallas-Fort Worth specific data; some reports are free.\n- **RealPage** \u2014 tracks apartment supply/demand, often cited in DFW market reports.\n- **Zonda / Metrostudy** \u2014 strong for new residential construction tracking in Texas specifically.\n\n**Public permit and planning data**\n- **City of Dallas Development Services / Permits** \u2014 the city's online permit portal lets you search active building permits by type (multifamily) and address.\n- Surrounding cities (Plano, Frisco, Irving, Fort Worth, Arlington, McKinney, etc.) each have their own permit portals \u2014 DFW apartment construction is heavily suburban, so checking individual city planning departments matters as much as Dallas proper.\n- **North Central Texas Council of Government (NCTCOG)** sometimes aggregates regional development data.\n\n**News and trade publications**\n- **Dallas Business Journal** \u2014 regularly reports on new apartment project announcements and groundbreakings.\n- **Bisnow Dallas-Fort Worth** \u2014 free newsletter/site covering CRE development news, including multifamily.\n- **Multi-Housing News** and **Multifamily Dew** \u2014 national trade press that frequently covers major Texas projects.\n- **D Magazine's real estate coverage** \u2014 occasionally covers large residential developments.\n\n**Free/lighter-weight tools**\n- **Apartments.com / Apartment List \"Coming Soon\" listings** \u2014 some new developments list pre-leasing pages before completion.\n- **RentCafe** and **Zumper** market reports \u2014 occasionally publish new-supply data for DFW.\n- **Google Maps / satellite imagery** combined with permit lookups, for verifying a specific site.\n\n**Practical approach**: for a broad market view, start with a Dallas Business Journal or Bisnow search for \"Dallas apartment construction 2026\"; for a specific submarket or address, go straight to that city's permit portal since Dallas-area construction is fragmented across dozens of municipalities.\n\nSince this is a research topic rather than something in your working directory, I didn't pull live data \u2014 if you want, I can run a web search for current 2026 DFW multifamily pipeline numbers or specific project names.",
+  "brands": [
+    {
+      "brand": "CoStar",
+      "first_at": 192,
+      "mentions": 1,
+      "rank": 1
+    },
+    {
+      "brand": "Yardi",
+      "first_at": 383,
+      "mentions": 1,
+      "rank": 2
+    },
+    {
+      "brand": "RealPage",
+      "first_at": 525,
+      "mentions": 1,
+      "rank": 3
+    },
+    {
+      "brand": "Apartments.com",
+      "first_at": 1756,
+      "mentions": 1,
+      "rank": 4
+    }
+  ],
+  "links": []
+}
