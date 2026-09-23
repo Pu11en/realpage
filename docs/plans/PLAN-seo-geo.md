@@ -71,6 +71,9 @@ or start the dev site on another port. NiubiGEO 8787 is free.
 
 ## The Google setup (runbook: one sitting, ~45 min, one Google account)
 
+**Click-by-click version for David, with links: `docs/seo/GOOGLE-SETUP-GUIDE.md`.** Credentials land in
+`.env.seo` (gitignored), never in Discord. Summary of the same steps:
+
 Use **one** Google account for all of it and write which one in `tooling/seo/INSTALL.md` (no passwords). DNS is at
 **Porkbun** (nameservers `*.ns.porkbun.com`); whoever holds the Porkbun login does G1. The site has no Google tag
 of any kind today.
