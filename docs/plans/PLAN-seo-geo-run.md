@@ -9,7 +9,7 @@ The what-and-why lives in `PLAN-seo-geo.md`; this file is only about making six 
 - Python 3.12 with `requests`, `beautifulsoup4`, `lxml` already importable.
 - `claude -p --model sonnet` works from inside a session and answers. **This is the one AI engine
   we can actually use today.**
-- **There is no `.env` in this repo on this machine.** No `GEMINI_API_KEY`, no `DEEPSEEK_API_KEY`.
+- **There is no `.env` in this repo on this machine.** No `GEMINI_API_KEY`. (DeepSeek is out by Drew's call anyway.)
   So NiubiGEO cannot run here yet, and neither can GeoLook's automated sampling.
 - No Docker, no Node, no admin, no WSL, and nobody at the keyboard to click UAC. CrawlSEO needs a
   Google OAuth client that doesn't exist yet, so its dashboard cannot be logged into either.
@@ -117,8 +117,7 @@ answers (needs keys), a CrawlSEO dashboard (needs the OAuth client), or anything
 3. **The Claude sampling cap** — 60 `claude -p` calls will use subscription quota on top of the run
    itself. Confirm 60, or give me a smaller number, or say "skip the sampling" and hour 5 becomes more
    city pages.
-4. Optional, not blocking: if `.env.seo` (Google) or a `.env` with `GEMINI_API_KEY` /
-   `DEEPSEEK_API_KEY` appears before I start, I'll fold the CrawlSEO baseline and the Gemini leg in.
+4. Optional, not blocking: if `.env.seo` (Google) or a `.env` with `GEMINI_API_KEY` appears before I start, I'll fold the CrawlSEO baseline and the Gemini leg in.
 
 ## Known risks, and what I do about each
 
