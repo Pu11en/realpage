@@ -48,3 +48,65 @@ Notes and decisions:
   were already identified by direct inspection plus the research in the strategy file.
 
 ## Step 2 — the ~25 pages ⏳ next
+
+## Step 2 — the static pages ✅ 2026-09-23
+
+`tooling/seo/build_pages.py` generates **18 pages** under `site/leads/` from the built JSON.
+Not 25: the strategy file's estimate assumed more cities would clear the 25-building floor
+than actually do. Everything that clears it has a page; nothing thin was padded to hit a number.
+
+What exists:
+
+- **4 metro pages** — Dallas–Fort Worth (810), Houston (443), Austin (83), San Antonio (43).
+  These target the phrase the research found real demand for: "<metro> multifamily
+  market report / construction pipeline".
+- **2 state pages** — Texas (1,587), Arizona (274).
+- **10 city pages** — Dallas, Arlington, Fort Worth, Garland, Grand Prairie, Irving, Plano
+  in Texas; Phoenix, Mesa, Scottsdale in Arizona. Arizona has no metro grouping in the data
+  (`propertystack/data/az/metros.json` does not exist), so Phoenix is a city page, not a metro
+  one. Adding that file would also change the live app's metro buttons, so it is Drew's call.
+- **2 cross-cutting lists** — buildings expected to open in 2027–2028 (105), and complexes
+  that changed owner in 2025 (626). Listicles are the format answer engines cite most.
+
+Each page carries: a facts strip, a 40–60 word answer block written from its own numbers,
+per-place breakdowns (stage, opening year, sale year, busiest cities, largest projects), the
+building table with a source link on every row, internal links up and sideways, `Dataset` +
+`ItemList` schema, and the data date. No JavaScript is needed to read any of it.
+
+Decisions and problems hit:
+
+- **Metro/city slug collision.** "Houston" the metro and "Houston" the city wrote to the same
+  file, silently overwriting three metro pages. The metro page wins (it contains the city's
+  buildings plus the suburbs); a namesake city no longer gets its own page. This also avoids
+  two of our own pages competing for one phrase.
+- **Stylesheet paths were wrong on every page** — `"../" * depth` was off by one. All links
+  are now root-relative (`/css/styles.css`, `/leads/...`), which cannot drift with depth.
+- **Row cap at 400.** The Texas page was 492 KB of HTML. Rows sort largest-first, the cap keeps
+  the most notable buildings, and the page states plainly that it is showing 400 of 1,587.
+  Largest page is now ~150 KB.
+- **County records arrive SHOUTED.** `pretty()` title-cases them while keeping LLC, LP, III and
+  similar intact: "PECOS HOUSING FINANCE CORP" reads as "Pecos Housing Finance Corp". Where a
+  sale record has no building name the name field holds the address, so the address column is
+  left blank rather than printing it twice.
+- **Counties never become pages.** "Tarrant County" is in the data as a place; a page titled
+  that way would read as a bug, and nobody searches it.
+- **`build_data.py` was not extended after all.** The earlier plan said to put this inside it.
+  That script is 1,432 lines and owns the data; this one owns presentation and copies none of
+  its logic, so a separate script in `tooling/seo/` is the smaller change and matches
+  `build_seo_files.py`. Run order is `build_data.py` → `build_pages.py` → `build_seo_files.py`
+  (the sitemap and llms.txt discover the generated pages from disk).
+- **Home page.** `index.html` now carries a `SEO-STATIC` block inside the app shell: a real
+  heading, the totals, and a link to every generated page. `renderShell()` overwrites it the
+  moment `app.js` runs, so a visitor never sees it, but a crawler that does not run JavaScript
+  gets content and, more importantly, links.
+
+Tests: `tooling/qa/fixes_tests/test_seo_pages.py`, 118 checks — readable without JavaScript,
+enough rows and words, under 260 KB, a source link on every building row, unique titles and
+descriptions across all 18, valid schema, in the sitemap, linked from the home page, no
+county titles, no RealPage text.
+
+Full suite: **412 passed**, with the same 7 failures / 7 errors as the pre-work baseline.
+`tooling/check-no-realpage-target.sh` reports 2 violations both before and after this work
+(`docs/2026-09-20-maintenance-software-icp.md`), so they are pre-existing and untouched.
+
+## Step 3 — the "before" measurement ⏳ next
