@@ -3,161 +3,159 @@
   "engine_label": "Gemini (gemini-2.5-flash) via API, Google Search grounding on",
   "is_consumer_app": false,
   "set": "A",
-  "question": "How can I find out who bought an apartment complex?",
-  "intent": "find-owner",
+  "question": "Where can I get a list of apartment buildings opening in 2027?",
+  "intent": "pipeline",
   "asked_on": "2026-09-23",
   "ok": true,
-  "answer": "Finding out who bought an apartment complex often involves navigating public records and leveraging specialized real estate data services. The process can vary depending on whether the property is owned by an individual, a trust, or a business entity like an LLC.\n\nHere are several methods and resources you can use:\n\n### 1. Public Records\n\nPublic records are generally the most direct and accessible way to uncover property ownership.\n\n*   **County Assessor's or Recorder's Office:**\n    This is typically the first place to start. The county assessor's office maintains records of property ownership for tax purposes, while the recorder's office registers deeds and other property-related documents. You can usually find the \"owner-of-record\" and the tax mailing address here. Deeds and deeds of trust are public records that document property transfers and can identify the buyer. Many counties have online portals where you can search by address or parcel number.\n*   **Secretary of State's Business Registry:**\n    If the apartment complex is owned by a Limited Liability Company (LLC) or a corporation, the actual buyer might be an entity rather than an individual. In such cases, you can search the Secretary of State's business registry in the state where the LLC or corporation was formed. These registries often contain business filings that list the registered agent, organizer, managing members, or officers of the entity. The level of detail disclosed can vary significantly by state.\n\n### 2. Online Real Estate Databases and Tools\n\nSeveral commercial real estate data providers aggregate public records and offer enhanced search capabilities, often revealing more in-depth ownership information, including the individuals behind LLCs.\n\n*   **Commercial Real Estate Databases:**\n    *   **CoStar:** Widely recognized as a leading commercial real estate database, CoStar provides extensive data on ownership, sales, leases, and market trends for various property types, including apartment complexes. It's comprehensive but can be costly.\n    *   **Reonomy (Altus Group):** This platform is known for its ownership intelligence and ability to \"pierce the LLC veil\" to identify the underlying decision-makers, which is particularly useful for off-market prospecting.\n    *   **PropertyShark (Yardi Systems):** Offers detailed commercial and residential property data, including real owner names (even those behind LLCs), contact information, and property portfolios. It has strong coverage in major metropolitan areas, especially New York City.\n    *   **Yardi Matrix:** Specializes in market intelligence for multifamily, student housing, office, industrial, and self-storage sectors.\n    *   **ATTOM Data Solutions:** Covers a vast number of U.S. properties (over 158 million parcels) and provides ownership details, tax assessments, and transaction histories.\n    *   **CoreLogic (now Cotality):** Maintains an extensive property database with billions of records, offering property characteristics, ownership data, and mortgage information.\n    *   **PropStream:** Provides access to over 160 million property records and offers lead generation and AI-driven insights.\n    *   **DataTree (First American Data & Analytics):** A subsidiary of First American Financial Corporation, DataTree offers property and ownership data, title records, and real estate analytics.\n    *   **Buildout Insights:** Features an LLC database that helps identify owners and managing members, often including their email addresses and phone numbers.\n    *   **PropTracer:** A specialized platform designed to uncover the individuals behind corporate-owned properties and LLCs.\n    *   **PropertyRadar:** Helps users identify and connect with property owners by providing detailed property and owner information, including contact details, mortgage data, and transaction history.\n*   **General Real Estate Portals:** While primarily for residential properties, sites like Zillow and Realtor.com sometimes display public record data that includes ownership information.\n\n### 3. Other Investigative Methods\n\n*   **Company Website and Social Media:** If the apartment complex is managed by a known company, checking their \"About Us\" or \"Leadership\" sections on their website or professional social media platforms like LinkedIn might reveal key personnel who are also owners or managing members.\n*   **WHOIS Domain Lookup:** If the apartment complex has a dedicated website, performing a WHOIS domain lookup can provide information about the domain registrant, which may be the owner or a related entity.\n*   **Local Real Estate Professionals:** Real estate brokers, property managers, and appraisers who operate in the area often have extensive knowledge of local property ownership and recent transactions.\n*   **News Articles and Press Releases:** Significant commercial real estate transactions, especially those involving large apartment complexes, are often reported by local business journals, real estate news outlets, or through press releases.\n*   **Legal Counsel:** If you encounter difficulties in obtaining the information through other means, an attorney specializing in real estate can assist with more in-depth research or formal information requests.\n\nBy combining these approaches, you can systematically research and identify who bought an apartment complex.",
+  "answer": "For individuals researching apartment buildings scheduled to open in 2027, several real estate data providers and news sources offer insights into upcoming multifamily developments and market trends. While a comprehensive, single public list of every apartment building opening in 2027 is challenging to obtain due to the dynamic nature of construction, specialized firms provide detailed project pipelines and forecasts.\n\n**Overall Market Outlook for 2027:**\n\nThe year 2027 is anticipated to see a moderation in new multifamily supply. Yardi Matrix forecasts that new multifamily supply will bottom out around 444,343 units in 2027. A significant shift is expected towards affordable and partially affordable housing, with a projected 22% increase in partially affordable units and a 44% increase in fully affordable apartments compared to 2020 levels. Conversely, new market-rate apartment supply is expected to decline by 11% in 2027 relative to 2020. This overall slowdown in new housing development is largely attributed to weaker buyer demand rather than tighter credit conditions. Despite this, Yardi Matrix has made upward revisions to its 2027 multifamily completion forecasts, indicating some project resilience.\n\n**Specific Apartment Buildings and Projects Opening in 2027:**\n\nWhile comprehensive databases often require subscriptions, some individual projects with 2027 completion dates have been publicly announced:\n\n*   **HarborChase of Beachwalk (St. Johns, Florida):** This 172-unit senior living community, offering independent living, assisted living, and memory care, is projected for completion in August 2027. The development team includes The Douglas Company and owner Protea Capital Partners, LLC.\n*   **Southernside West (Greenville, SC):** A 54-unit affordable senior apartment community for residents aged 55 and older, developed by Harmony Housing Affordable Development (HHAD) and the Greenville Housing Fund (GHF), is anticipated for completion in October 2027.\n*   **Southernside East (Greenville, SC):** A separate project in Greenville, expected to deliver 93 affordable apartments for seniors in early 2027.\n*   **Tanner Road (Greenville, SC):** Flournoy is developing this 461-unit multifamily community, with completion slated for March 2027.\n*   **Bell Ranch (Wildomar, CA):** Affirmed Housing is behind this 130-apartment new construction affordable housing project, which is expected to open in Spring 2027.\n*   **Montecito (Mountain View, CA):** An 85-apartment development by Eden Housing and Charities Housing, with an estimated completion date of February 2027.\n*   **The Becker (San Diego, CA):** This 190-unit affordable apartment project is part of the larger Riverwalk San Diego development and is targeted for mid-2027.\n*   **Alexan Azalea (Arcadia, CA):** Trammell Crow Residential is developing this seven-story, 319-unit multifamily building, including 26 affordable units, with an expected opening in early 2027.\n\n**Companies, Products, and Data Sources for Research:**\n\nFor detailed and continuously updated information on apartment building pipelines, consider the following:\n\n*   **Yardi Matrix:** This company provides comprehensive market intelligence, including forecasts for multifamily unit completions, under-construction pipelines, and construction starts across various property types. They are a leading source for insights into multifamily supply.\n*   **CoStar Group (including Apartments.com):** A major global provider of commercial real estate data, analytics, and news, CoStar tracks multifamily construction activity and offers detailed market data.\n*   **Dodge Construction Network:** This platform is a prominent source for commercial construction project data, market intelligence, and forecasting in North America. They verify projects and track them from early planning stages.\n*   **ApartmentIQ:** A market data platform specifically for multifamily housing, ApartmentIQ integrates daily data on millions of units and provides tools for market surveys, research, and tracking construction pipelines.\n*   **Real Estate News Outlets and Industry Publications:** Websites like Multi-Housing News and Institutional Real Estate, Inc. often report on significant new developments and provide analysis of future supply.\n\nThese resources can help researchers, investors, and potential renters identify upcoming apartment buildings and understand broader market trends for 2027 and beyond.",
   "sources": [
     {
-      "title": "nextautomation.us",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFOTCO6s3-2x9mxPFk4lNPgoap7PmwKJcuydL8i2uCqvjgcgLgGrgxjHwT-fHEuslGpHbSpLUWntXyfOlF3pwNUuCrWQwlRXbQmtyTvNe_VGpFknAS2Zfp5O9-gO3hwqlkBjX4Bn04uIsPLZK9gEz7dlEunUxAXnZrGiRcIOTfBfrw="
+      "title": "multifamilydive.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE-aCHrToFw07HKve8GOtXO0qGvlKISDhFA6KAsNYArl3XJcLd1F0izZW05j-NdAiFSodemKZvq2Uo8fvNcBMKT0-cPHSrANrGGrVJpMbX0vvYz8BbbMC-nGgkzWjaX-nRKw8r5kvXhK3i5YOhsO9MBaLHDTePoxUWDcJktWICiqtdNiaONzrGY3BVhS00praRjcLyC"
     },
     {
-      "title": "northwestregisteredagent.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEVWUdylzOGNFIyUKa74RwJ08r75r_L9y8h21KVI21sY5oIWKNVtfmA1w_9NfmK_P_pgCYdjYCL4DsoxcKthV0BExxdoD-5GG9wGnBQsYlOfIp1pIMTPJDLTTM42ZGZcqpAOBWR6SBQQjt_mq4EBLAtK2jwFU4="
+      "title": "irei.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF7MDngqq5PcTCXDb7EDeSGZcu7ouHNLL_JIyj3N6worwqgDu4ngwPFSQtfqscVgC-G8MUMdr8j3ILrYr-O9eq6UdUOJUxa4EdV1BONmyvVpDOrm4YCldaGpKUehoIEnX446gfGem1TcRnXbi4CsyIc1vwlvSShieR-EoWLtSaSZBIedXlGNHqbjRZm6E5fjC1XH_G13GB4_QEpIbqbOyefAcU647g0CAitwTXx6ijywIOXv7WhXnMWPISP6Xuxd0l13o5ADKIzI6ngtraduX-KQ86443knZP4JEcqx7-nLjOa1spMiiw=="
     },
     {
-      "title": "buildout.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFe1E_pVq4DEVYdkE1MdDqPCCFCa59P1rX6mB5-hNq0u52m3CIOGFbkVRo0R8O57Dm3j3KQ1OMsLanU8JXRu0PGnH9ll4gFUxIziILa5AtxDMtXaj4I2Sa-rTmL92tRz41d3Kv4BEFAqFhRlE2J4MhFdhh0RtF5"
+      "title": "yardi.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGZb_pLGMwF24xhf33S1bkuXo_1D1ZaH4lgm3piO2t12aktfmKqWPcUCBYdzEDxMTwfzRDLiDkrAYJAZRspe-WPWLH_jMCGeO83NnoWfaObadkxPmNOZwF4Sal98RIlCloe9UHgrCsXXrEXsyoCc7jbIGGCwiZSPcpWGn6KG44V3Is75kGHVonbXdL8O_jlnUJr7pj602hXfAVdF6FvkWjUv-JG_3i95Q=="
     },
     {
-      "title": "lendingtree.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFBbTlAoHlBYaxsrFRaB3IRG0uBEN_EBiGj0IGT-Ht-Dr4KoHo9S4Ay9IsdHW37jqznKB1jTqtV4dx7SAjheaMMHxamWu7KPB2cYBbc-RRPvnL_Kc4EOuvtF9kyCeSsvccZourtV4wWYCq2856kgVDnZYqKeI7OdsP2ReUKLBsrJHgy"
+      "title": "yardimatrix.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGINfalX81KkRZpbCFmji-AQZDXT_Xzvgl9gpMIXdvBZrvNktyhyNLdJwyN-QWgzaDuUuFN4EEiDEZaF717hP3uarnZy6uCYh7EQGmWsfvR3jDGUd_3W9KKRPPWmrvjXxzmfIr6ueZrKoiXp9zjjD2xnlEkcjrsCPPJbC3H5n-TdCEgxLIVMQ=="
     },
     {
-      "title": "proptracer.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH9XnselNT_kvejL5s0DG_CBIYrmVI3zD-lFT1QDRuA6qnztfzNEo0mtFMlp6wSRJyWYO3NTgrelo53u0eEcf03ZQjZsikH9rj4woCCdh_PwaeuNF1dwzu5kiAV6GArv-EjU8nCvJs="
+      "title": "douglascompany.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFbKhG9uRyEBTHa8DjH3kntqHHXcUWm2U-rtBesYAoN-7bzDnccrIyti09vmB4t86m3si_C2nCyIM5jrkcsm1l2-6zx6wmZ36wiioFZIaxObJ3d-wXxUTUAIs4iNCzU0KHomRAvm0sTGOqx5HAI9Xjdl8s="
     },
     {
-      "title": "batchdata.io",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGxgyULLB34-Dl4czzzWDzfnk0NnI2v0zPdYRhQPHq-Z9SqLvSLprulnbMgkWBLDWWGFjRVI0gJpPSIyeIWLm9M7xUc93cJ8GuQVJ2KzViYbmNAXOaPn3HopeXriBjylETtHgRAkhUKivm2oTV7GlqiNkrPx4DbGqUJWsRPVIkMac_mUPx9"
+      "title": "greenvillehousingfund.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEHDs_1EBrfsgFwmeZdO0Eh_Ei27vfcvrBnK0scaCIZ5RopFT3d-WuVrDdKfFSZcI-u4_UhC55NjTXnElc3Xr7qzV9DLIKK4Y3bDDoyzDu4s6VyM6nv865KvmvxXo4CYqZ-Q1hJDQeAAfBiZe2o9tTlcL3Qtt-wMGTVoSMoiqOprO_imZQMLK6p4_rvqc5T-rrJJ0Di3Bpg-zMkNvWqYSvj"
     },
     {
-      "title": "forage.ai",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE8aM3-zLdRUOIoKrB1LDcPpBwHxAOm9Gh_BklbIkskhnRbPOjtJaDu3Sic2bC9MM0Hnj9OqrgHN57lHynVHB1xtmhWReWZQt7hdC_ZOGcdNl1QRFkl5UW_A7-RnaOGn0UaNFTaojI5BPhR4KBMvzbCsr5y"
+      "title": "greenvillesc.gov",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEPSaqDmOZyDAO_Bqxgp1-MuQLv-5yE5GQNskb-t2xk-Ub_NnU-HT6mZqqv8Xh_vgJeMpIDiD_Tr58iCvkbLaVo_V2YpV5oW1ibFiPlmRoX9j4BLbXo6YMOWJzmCSfw1N9N3FJdVhgFmt_How6ZR0Rv1humZ1_Vz8ieoFi9u-2QUqB37fvGpIVbNeqcr_HoltF_hI3Zuwd7A9R7QLx-8sSIvJUB5g=="
     },
     {
-      "title": "reonomy.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQExY64P1iLcd6CVnMx-wNaCaX83mQKeJj-FP_3WxnzeWqCKmq_ug1VA7m4K0YKmAANkB8XFLJ7tRwHNm0vOGSKjIM7bw0IpJ8oQRuOvKYacXbDTiOqyAFYICjSM67joN4mLoVA16VTmZnKWj0QubRhEg76bEMTVaW_CTShn"
+      "title": "multihousingnews.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFTCV6v3pIAfMdafFAQlpV61iaJnstzXGj8O60LouIqG8-66iNy3lzWI1hChcD00r4qJAM6oroRe-DG41n-sZcwS2YCqb1OkIx65B0ElpmN-pRZRNIoJOyLkvP_2GSA8wOkE7IgtN6pEEul_V5C4T6T3gQ9Wjnb4IaGSdKEyTH282zivyYjepZeDzEVWkEGaXzktUhqUatoT00t"
     },
     {
-      "title": "olostep.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH99SnR6jwLYl4L2RSLzhOPnO0hS-Vwi8PQ2IzBlzmQbkjpHX61O5xlNYk3h4cScOWmFAX_tKoBuaYiWcZzTUcQIKuuAE5Oj-avP3pRIEe9_oW1nc5IKeBnYm4DJaHJbOvURx18buD4xHrCEzhX5Rwqc6aCKW7G"
+      "title": "affirmedhousing.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGsQtRNXk-_txI_TZ0kCPzF-8O6CWmSltktdoYyeNXQQaTWAVhGja-cF5VtMWEqBJiXXb_xID8v0lOZL5Rjp6gfg9Ee0XPc5XRBM6tZW69VXxTQWWcEeyunVTeakixWC8V9Vw=="
     },
     {
-      "title": "scrap.io",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHP7I9SYiHCSdMWu_XNV-X63-0B5QOKsIKO5P7s6jPoODvL2fwiddXc3Jl9TrvuzIkPN3vZIwnfzn8Db77xFoyBj29RkqGOiCRhhQI_SZKYM9FuuvnzkU3kfRCbiaobRKqg_7xIxUZC3m36"
+      "title": "santaclaracounty.gov",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEFPYJUAu_XCqCHRHlGysAwBizOyXjf_cfsfsrLwFQKAVG6IY3xZjXs50u-Dl6A70hJI60pfRWePgz0O1UIikabTovojaGhHE2rOpil5gfPBYztUuasW-wB1C6lxHF_Ka_dzA8qbQHxRBFci5qAFuijQNUOsqKfpaolLFT2nYdw1GTW5wf7ZKyPi-3UMd1CBiYn6kG5X0N3SqnD0FzVYtt2o6x1emSu7No="
     },
     {
-      "title": "compstak.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGp0-r2NL4X24uUVzQjQZt8RJqQ9N962RTBpdtHcjai4scZ1vmPAWpEsXzZWL-6fxrVWuZpKCQaOwjGaoCgQYgWqd421b_WOlICtKzHOHE3amq0iDd08Nu4ZlummLwk1-zA8NGpg2g="
+      "title": "melinarissone.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH12hlYtzeFgso40z7RzmXf4-tyjSX1PnrXWXWkbfcx81qi8XQFXYyj-xjvi1w6VB97byz1RgxWcZ56mTUfp_HKRqgXx0P8xoeWxqE4KjUr7yM_TvqKavzrKvdQ0oD5jk1IfRBlW_HUpwfS62vTVwPtiL4LcIvagyLIDZDA_zDHWtXZTMRKcbPDOrkqZKKpOnR_3zk="
     },
     {
-      "title": "butterflymx.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQERgxCkEyxm2VORYlRzC2R8Wc8WmBMLLZ1J9DF3srUCjbW555NlZOacZPXNMe2gR6QFiwVs9KM07SYbnE6R8AjpBNKhMLy1Tgg2aWtBtEfGgptyEKdSewLg1m_ilJbx1qlOoRdpqr_IyJGE41s4qmy78HoxLp93xw=="
+      "title": "facebook.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQESkwNBawR0eLCGf9Oq6Be_D4aQ2YpOZtjlO6TDA8T2Lj7jZg7lULqkLSEhqD-wkvUcXXUZzX1yiq2awu-T05cg3oTto6FOr9TlrDnUlO-LhQlF1J2cQfQevm9rYS24YNMls5drzHyN8Iu2J2HExKyNUFJ4LAOAWDZ_oW_7IvT4ZzWH_CS4icffVrmEXyMQXXDJwcWnspTRHjUXArE04UifOtMgpfOWezKamAp7pZc="
     },
     {
-      "title": "codamail.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHFBvV9rhuDvA9I57paKoajb9NHzK1nfyoMna7UArOrj61C50GecgckvUS21Fx1wJ_pd4sT9XQLKniS25eQeOvUN-0Ic-2hfdypVVIr-dicUL_eE6QedfB0uG1UjlzWdv3ht0XLDsVptvM2LYoxwD814Ic7CcT_WFpJwKUQNGkPV6b4pbiJi3U="
+      "title": "costargroup.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHoA06KQ3-fjZDs4vES7vLYvz_JrXi4zR5T1i-Z2VLTCDTUy4xCBglkGylnd3xXZY_GxqESh5QEkX1qmQKGclbXKy3zlHHBTcgr0AMEtjUo3_ekTHbKulvCWitw14jmEuLXEbMYZ58hMyKS8_d38xwZfPGmYw8hdHmOI98UjMYRzkr8E7La1XBlZEsku1OBIyXtiyIMS9Zszdjy5o-v3iNG6abtguq3TCVDjx_UbvSzDw53ewMyGPs="
     },
     {
-      "title": "propertyshark.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG5-4G6eakoyRwKEpis4umpzNG431F3sRzKp9aOFc81pRKjZVyG6p50DdAfEZnO7U6l4P5ki90_P6X6zzHJ6wP3c98YsT7wtzVeQNfMSigY9_yCpV01w5o_kiztOHGS"
+      "title": "construction.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHlSLJt8nEufYmZ7sYJI7apQPrJlYJB61LDlo6U5-qH-LGn0ZylgeXhKdJSOEC0gSjpENEz0m-cNmkReQxp4FYUfqYhUkcupXmiO37cA4GgZwM4Ag8asqk="
     },
     {
-      "title": "ficstar.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHplhfjmozD4oouRELNz7DCqsqVQ6TVAczb8Tdosy3mu2vCoXTXrsJK8UUlscQde5RbH3CvZe_o--CI7OI-_OSMrSIgjvM0o3WbwrQLrgeQHk4APotkhubsQMadbToOOjIIifGTsjtB6N7i_cm_ZMaY-w=="
-    },
-    {
-      "title": "housecanary.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHpbzqEmeqiDVje9KWSLEGxgL5LBDmRbDWNFTGKZWCU2QoOZnTcy-6XUGD80t8nN4R72klq0Ym3QtguALMu4gecyODiumX6wXEpUJUQtwaIJpJByWaysUFkvRwISfT6_Iwji7x-CEXUdIxgk2NO-pVciM1StZSq_F4s2w=="
+      "title": "apartmentiq.io",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF98mrXy80FWAnTw8inNgG2Z_gFipm8jQcGzANAB8cqTcrHwhSrp1BHlbeWZaEKcMV0QkdqHH36HmQsKS273bEQfiebeCW168lYZfR28RnByhgbaaku"
     }
   ],
   "brands": [
     {
-      "brand": "CoStar",
-      "first_at": 1802,
-      "mentions": 2,
+      "brand": "Yardi Matrix",
+      "first_at": 537,
+      "mentions": 3,
       "rank": 1
     },
     {
-      "brand": "Yardi",
-      "first_at": 2303,
+      "brand": "CoStar",
+      "first_at": 3418,
       "mentions": 2,
       "rank": 2
     },
     {
-      "brand": "Zillow",
-      "first_at": 3964,
+      "brand": "Apartments.com",
+      "first_at": 3442,
       "mentions": 1,
       "rank": 3
+    },
+    {
+      "brand": "Dodge",
+      "first_at": 3625,
+      "mentions": 1,
+      "rank": 4
     }
   ],
   "links": [
     {
-      "title": "nextautomation.us",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFOTCO6s3-2x9mxPFk4lNPgoap7PmwKJcuydL8i2uCqvjgcgLgGrgxjHwT-fHEuslGpHbSpLUWntXyfOlF3pwNUuCrWQwlRXbQmtyTvNe_VGpFknAS2Zfp5O9-gO3hwqlkBjX4Bn04uIsPLZK9gEz7dlEunUxAXnZrGiRcIOTfBfrw="
+      "title": "multifamilydive.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE-aCHrToFw07HKve8GOtXO0qGvlKISDhFA6KAsNYArl3XJcLd1F0izZW05j-NdAiFSodemKZvq2Uo8fvNcBMKT0-cPHSrANrGGrVJpMbX0vvYz8BbbMC-nGgkzWjaX-nRKw8r5kvXhK3i5YOhsO9MBaLHDTePoxUWDcJktWICiqtdNiaONzrGY3BVhS00praRjcLyC"
     },
     {
-      "title": "northwestregisteredagent.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEVWUdylzOGNFIyUKa74RwJ08r75r_L9y8h21KVI21sY5oIWKNVtfmA1w_9NfmK_P_pgCYdjYCL4DsoxcKthV0BExxdoD-5GG9wGnBQsYlOfIp1pIMTPJDLTTM42ZGZcqpAOBWR6SBQQjt_mq4EBLAtK2jwFU4="
+      "title": "irei.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF7MDngqq5PcTCXDb7EDeSGZcu7ouHNLL_JIyj3N6worwqgDu4ngwPFSQtfqscVgC-G8MUMdr8j3ILrYr-O9eq6UdUOJUxa4EdV1BONmyvVpDOrm4YCldaGpKUehoIEnX446gfGem1TcRnXbi4CsyIc1vwlvSShieR-EoWLtSaSZBIedXlGNHqbjRZm6E5fjC1XH_G13GB4_QEpIbqbOyefAcU647g0CAitwTXx6ijywIOXv7WhXnMWPISP6Xuxd0l13o5ADKIzI6ngtraduX-KQ86443knZP4JEcqx7-nLjOa1spMiiw=="
     },
     {
-      "title": "buildout.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFe1E_pVq4DEVYdkE1MdDqPCCFCa59P1rX6mB5-hNq0u52m3CIOGFbkVRo0R8O57Dm3j3KQ1OMsLanU8JXRu0PGnH9ll4gFUxIziILa5AtxDMtXaj4I2Sa-rTmL92tRz41d3Kv4BEFAqFhRlE2J4MhFdhh0RtF5"
+      "title": "yardi.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGZb_pLGMwF24xhf33S1bkuXo_1D1ZaH4lgm3piO2t12aktfmKqWPcUCBYdzEDxMTwfzRDLiDkrAYJAZRspe-WPWLH_jMCGeO83NnoWfaObadkxPmNOZwF4Sal98RIlCloe9UHgrCsXXrEXsyoCc7jbIGGCwiZSPcpWGn6KG44V3Is75kGHVonbXdL8O_jlnUJr7pj602hXfAVdF6FvkWjUv-JG_3i95Q=="
     },
     {
-      "title": "lendingtree.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFBbTlAoHlBYaxsrFRaB3IRG0uBEN_EBiGj0IGT-Ht-Dr4KoHo9S4Ay9IsdHW37jqznKB1jTqtV4dx7SAjheaMMHxamWu7KPB2cYBbc-RRPvnL_Kc4EOuvtF9kyCeSsvccZourtV4wWYCq2856kgVDnZYqKeI7OdsP2ReUKLBsrJHgy"
+      "title": "yardimatrix.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGINfalX81KkRZpbCFmji-AQZDXT_Xzvgl9gpMIXdvBZrvNktyhyNLdJwyN-QWgzaDuUuFN4EEiDEZaF717hP3uarnZy6uCYh7EQGmWsfvR3jDGUd_3W9KKRPPWmrvjXxzmfIr6ueZrKoiXp9zjjD2xnlEkcjrsCPPJbC3H5n-TdCEgxLIVMQ=="
     },
     {
-      "title": "proptracer.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH9XnselNT_kvejL5s0DG_CBIYrmVI3zD-lFT1QDRuA6qnztfzNEo0mtFMlp6wSRJyWYO3NTgrelo53u0eEcf03ZQjZsikH9rj4woCCdh_PwaeuNF1dwzu5kiAV6GArv-EjU8nCvJs="
+      "title": "douglascompany.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFbKhG9uRyEBTHa8DjH3kntqHHXcUWm2U-rtBesYAoN-7bzDnccrIyti09vmB4t86m3si_C2nCyIM5jrkcsm1l2-6zx6wmZ36wiioFZIaxObJ3d-wXxUTUAIs4iNCzU0KHomRAvm0sTGOqx5HAI9Xjdl8s="
     },
     {
-      "title": "batchdata.io",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGxgyULLB34-Dl4czzzWDzfnk0NnI2v0zPdYRhQPHq-Z9SqLvSLprulnbMgkWBLDWWGFjRVI0gJpPSIyeIWLm9M7xUc93cJ8GuQVJ2KzViYbmNAXOaPn3HopeXriBjylETtHgRAkhUKivm2oTV7GlqiNkrPx4DbGqUJWsRPVIkMac_mUPx9"
+      "title": "greenvillehousingfund.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEHDs_1EBrfsgFwmeZdO0Eh_Ei27vfcvrBnK0scaCIZ5RopFT3d-WuVrDdKfFSZcI-u4_UhC55NjTXnElc3Xr7qzV9DLIKK4Y3bDDoyzDu4s6VyM6nv865KvmvxXo4CYqZ-Q1hJDQeAAfBiZe2o9tTlcL3Qtt-wMGTVoSMoiqOprO_imZQMLK6p4_rvqc5T-rrJJ0Di3Bpg-zMkNvWqYSvj"
     },
     {
-      "title": "forage.ai",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE8aM3-zLdRUOIoKrB1LDcPpBwHxAOm9Gh_BklbIkskhnRbPOjtJaDu3Sic2bC9MM0Hnj9OqrgHN57lHynVHB1xtmhWReWZQt7hdC_ZOGcdNl1QRFkl5UW_A7-RnaOGn0UaNFTaojI5BPhR4KBMvzbCsr5y"
+      "title": "greenvillesc.gov",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEPSaqDmOZyDAO_Bqxgp1-MuQLv-5yE5GQNskb-t2xk-Ub_NnU-HT6mZqqv8Xh_vgJeMpIDiD_Tr58iCvkbLaVo_V2YpV5oW1ibFiPlmRoX9j4BLbXo6YMOWJzmCSfw1N9N3FJdVhgFmt_How6ZR0Rv1humZ1_Vz8ieoFi9u-2QUqB37fvGpIVbNeqcr_HoltF_hI3Zuwd7A9R7QLx-8sSIvJUB5g=="
     },
     {
-      "title": "reonomy.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQExY64P1iLcd6CVnMx-wNaCaX83mQKeJj-FP_3WxnzeWqCKmq_ug1VA7m4K0YKmAANkB8XFLJ7tRwHNm0vOGSKjIM7bw0IpJ8oQRuOvKYacXbDTiOqyAFYICjSM67joN4mLoVA16VTmZnKWj0QubRhEg76bEMTVaW_CTShn"
+      "title": "multihousingnews.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFTCV6v3pIAfMdafFAQlpV61iaJnstzXGj8O60LouIqG8-66iNy3lzWI1hChcD00r4qJAM6oroRe-DG41n-sZcwS2YCqb1OkIx65B0ElpmN-pRZRNIoJOyLkvP_2GSA8wOkE7IgtN6pEEul_V5C4T6T3gQ9Wjnb4IaGSdKEyTH282zivyYjepZeDzEVWkEGaXzktUhqUatoT00t"
     },
     {
-      "title": "olostep.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH99SnR6jwLYl4L2RSLzhOPnO0hS-Vwi8PQ2IzBlzmQbkjpHX61O5xlNYk3h4cScOWmFAX_tKoBuaYiWcZzTUcQIKuuAE5Oj-avP3pRIEe9_oW1nc5IKeBnYm4DJaHJbOvURx18buD4xHrCEzhX5Rwqc6aCKW7G"
+      "title": "affirmedhousing.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGsQtRNXk-_txI_TZ0kCPzF-8O6CWmSltktdoYyeNXQQaTWAVhGja-cF5VtMWEqBJiXXb_xID8v0lOZL5Rjp6gfg9Ee0XPc5XRBM6tZW69VXxTQWWcEeyunVTeakixWC8V9Vw=="
     },
     {
-      "title": "scrap.io",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHP7I9SYiHCSdMWu_XNV-X63-0B5QOKsIKO5P7s6jPoODvL2fwiddXc3Jl9TrvuzIkPN3vZIwnfzn8Db77xFoyBj29RkqGOiCRhhQI_SZKYM9FuuvnzkU3kfRCbiaobRKqg_7xIxUZC3m36"
+      "title": "santaclaracounty.gov",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEFPYJUAu_XCqCHRHlGysAwBizOyXjf_cfsfsrLwFQKAVG6IY3xZjXs50u-Dl6A70hJI60pfRWePgz0O1UIikabTovojaGhHE2rOpil5gfPBYztUuasW-wB1C6lxHF_Ka_dzA8qbQHxRBFci5qAFuijQNUOsqKfpaolLFT2nYdw1GTW5wf7ZKyPi-3UMd1CBiYn6kG5X0N3SqnD0FzVYtt2o6x1emSu7No="
     },
     {
-      "title": "compstak.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGp0-r2NL4X24uUVzQjQZt8RJqQ9N962RTBpdtHcjai4scZ1vmPAWpEsXzZWL-6fxrVWuZpKCQaOwjGaoCgQYgWqd421b_WOlICtKzHOHE3amq0iDd08Nu4ZlummLwk1-zA8NGpg2g="
+      "title": "melinarissone.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH12hlYtzeFgso40z7RzmXf4-tyjSX1PnrXWXWkbfcx81qi8XQFXYyj-xjvi1w6VB97byz1RgxWcZ56mTUfp_HKRqgXx0P8xoeWxqE4KjUr7yM_TvqKavzrKvdQ0oD5jk1IfRBlW_HUpwfS62vTVwPtiL4LcIvagyLIDZDA_zDHWtXZTMRKcbPDOrkqZKKpOnR_3zk="
     },
     {
-      "title": "butterflymx.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQERgxCkEyxm2VORYlRzC2R8Wc8WmBMLLZ1J9DF3srUCjbW555NlZOacZPXNMe2gR6QFiwVs9KM07SYbnE6R8AjpBNKhMLy1Tgg2aWtBtEfGgptyEKdSewLg1m_ilJbx1qlOoRdpqr_IyJGE41s4qmy78HoxLp93xw=="
+      "title": "facebook.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQESkwNBawR0eLCGf9Oq6Be_D4aQ2YpOZtjlO6TDA8T2Lj7jZg7lULqkLSEhqD-wkvUcXXUZzX1yiq2awu-T05cg3oTto6FOr9TlrDnUlO-LhQlF1J2cQfQevm9rYS24YNMls5drzHyN8Iu2J2HExKyNUFJ4LAOAWDZ_oW_7IvT4ZzWH_CS4icffVrmEXyMQXXDJwcWnspTRHjUXArE04UifOtMgpfOWezKamAp7pZc="
     },
     {
-      "title": "codamail.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHFBvV9rhuDvA9I57paKoajb9NHzK1nfyoMna7UArOrj61C50GecgckvUS21Fx1wJ_pd4sT9XQLKniS25eQeOvUN-0Ic-2hfdypVVIr-dicUL_eE6QedfB0uG1UjlzWdv3ht0XLDsVptvM2LYoxwD814Ic7CcT_WFpJwKUQNGkPV6b4pbiJi3U="
+      "title": "costargroup.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHoA06KQ3-fjZDs4vES7vLYvz_JrXi4zR5T1i-Z2VLTCDTUy4xCBglkGylnd3xXZY_GxqESh5QEkX1qmQKGclbXKy3zlHHBTcgr0AMEtjUo3_ekTHbKulvCWitw14jmEuLXEbMYZ58hMyKS8_d38xwZfPGmYw8hdHmOI98UjMYRzkr8E7La1XBlZEsku1OBIyXtiyIMS9Zszdjy5o-v3iNG6abtguq3TCVDjx_UbvSzDw53ewMyGPs="
     },
     {
-      "title": "propertyshark.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG5-4G6eakoyRwKEpis4umpzNG431F3sRzKp9aOFc81pRKjZVyG6p50DdAfEZnO7U6l4P5ki90_P6X6zzHJ6wP3c98YsT7wtzVeQNfMSigY9_yCpV01w5o_kiztOHGS"
+      "title": "construction.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHlSLJt8nEufYmZ7sYJI7apQPrJlYJB61LDlo6U5-qH-LGn0ZylgeXhKdJSOEC0gSjpENEz0m-cNmkReQxp4FYUfqYhUkcupXmiO37cA4GgZwM4Ag8asqk="
     },
     {
-      "title": "ficstar.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHplhfjmozD4oouRELNz7DCqsqVQ6TVAczb8Tdosy3mu2vCoXTXrsJK8UUlscQde5RbH3CvZe_o--CI7OI-_OSMrSIgjvM0o3WbwrQLrgeQHk4APotkhubsQMadbToOOjIIifGTsjtB6N7i_cm_ZMaY-w=="
-    },
-    {
-      "title": "housecanary.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHpbzqEmeqiDVje9KWSLEGxgL5LBDmRbDWNFTGKZWCU2QoOZnTcy-6XUGD80t8nN4R72klq0Ym3QtguALMu4gecyODiumX6wXEpUJUQtwaIJpJByWaysUFkvRwISfT6_Iwji7x-CEXUdIxgk2NO-pVciM1StZSq_F4s2w=="
+      "title": "apartmentiq.io",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF98mrXy80FWAnTw8inNgG2Z_gFipm8jQcGzANAB8cqTcrHwhSrp1BHlbeWZaEKcMV0QkdqHH36HmQsKS273bEQfiebeCW168lYZfR28RnByhgbaaku"
     }
   ]
 }

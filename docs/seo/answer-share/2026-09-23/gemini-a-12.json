@@ -3,183 +3,289 @@
   "engine_label": "Gemini (gemini-2.5-flash) via API, Google Search grounding on",
   "is_consumer_app": false,
   "set": "A",
-  "question": "How can I tell what property management system a company runs?",
-  "intent": "detect-software",
+  "question": "Where can I see apartment building ownership changes?",
+  "intent": "sales",
   "asked_on": "2026-09-23",
   "ok": true,
-  "answer": "Identifying the Property Management System (PMS) a company uses can be achieved through several methods, ranging from direct inquiry to technical analysis of their online presence. A PMS is a crucial software application that helps companies, particularly in the hospitality and residential real estate sectors, manage daily operations efficiently.\n\n### General Methods to Identify a PMS:\n\n1.  **Direct Inquiry:** The simplest approach is often to directly ask the company. This may be feasible if you have a business relationship or a specific reason for needing the information.\n2.  **Company Website and Job Postings:**\n    *   **Careers Page:** Companies often list the software and systems they use in job descriptions for roles like property managers, front desk staff, or IT professionals.\n    *   **\"About Us\" or \"Technology\" Sections:** Some companies, especially those that pride themselves on technological advancement, might mention their systems on their website.\n3.  **Customer/Tenant Portals:** If the company provides an online portal for bookings, payments, or maintenance requests, the branding or \"powered by\" information on these portals can sometimes reveal the PMS in use.\n4.  **Publicly Available Information & Reviews:**\n    *   **Case Studies/Testimonials:** Software vendors often publish case studies or list clients on their websites. Conversely, companies might mention the PMS they use in testimonials or reviews of the software.\n    *   **Industry Forums and Reviews:** Online forums, review sites (like Capterra, G2, Software Advice), or industry publications might discuss which PMS various companies or types of properties utilize.\n5.  **Looking for Clues in Communications:** Automated emails for booking confirmations, rent reminders, or maintenance updates might contain subtle hints or branding of the underlying PMS.\n\n### Specific Companies and Products:\n\nThe property management software market is robust, with numerous providers catering to different needs, from small boutique hotels to large residential portfolios. The market size was valued at USD 7.28 billion in 2026 and is projected to reach USD 10.47 billion by 2030, growing at a CAGR of 9.5%. Cloud-based/SaaS solutions are dominant, projected to hold a 75.4% share by 2035 due to their accessibility, automatic updates, and lower costs.\n\n**For Residential and Commercial Property Management:**\n\nLeading companies in this sector offer comprehensive platforms that integrate leasing, accounting, maintenance, and communication.\n*   **AppFolio:** Ranked highly for its AI-powered automation, unified cloud-native platform, and mobile-first experience, catering to businesses of all sizes and property types.\n*   **RealPage:** Known for its in-depth accounting, reporting, and compliance tools, often favored by larger companies and those needing affordable housing solutions. Buildium, a RealPage company, is popular for growing portfolios, especially residential and community associations.\n*   **Yardi:** One of the most established platforms, widely adopted by large operators due to its deep accounting capabilities and broad product suite across multiple real estate sectors (e.g., Yardi Voyager, Yardi Breeze). Yardi's cloud-based solutions support thousands of real estate organizations.\n*   **Entrata:** Stands out for its strong marketing and leasing workflows, particularly useful for student housing, and offers an open API for integrations.\n*   **MRI Software:** Serves various real estate sectors, offering enterprise-grade solutions.\n*   **Buildium:** (Now part of RealPage) Ideal for operators managing under 500 units and residential/community association portfolios, praised for its straightforward user interface and faster implementation.\n*   **DoorLoop:** An all-in-one platform suitable for smaller businesses, offering features for management, accounting, and leasing.\n*   **Rent Manager:** Chosen by teams for its comprehensive features.\n*   **ResMan:** Another significant player in the market.\n*   **Propertyware:** (by RealPage) Tailored for specific portfolio matches.\n*   **CINC Systems:** Focuses on HOA/COA Management.\n\n**For Hospitality Property Management (Hotels, Resorts, etc.):**\n\nHospitality PMS solutions streamline operations like bookings, guest check-ins, housekeeping, and rate management.\n*   **Cloudbeds:** Frequently ranked as a top hotel PMS vendor, used by properties in 150 countries, including independent hotels, hotel groups, hostels, and resorts.\n*   **Mews:** Another highly-rated PMS in the hospitality sector.\n*   **Stayntouch:** Recognized among the best hotel property management systems.\n*   **HotelTime:** A popular choice for hotel PMS.\n*   **ThinkReservations:** Also listed as a popular system for hotels.\n*   **Yanolja Cloud Solution:** Appears in top PMS vendor rankings.\n\n### Data Sources and Tools for Website Technology Detection:\n\nTo determine the underlying technologies of a company's website, which might hint at their PMS (especially if it's a web-based solution or has a public-facing portal), you can use specialized tools:\n*   **Wappalyzer:** A popular browser extension and web app that detects various technologies, including CMS, frameworks, JavaScript libraries, analytics, and hosting. It's known for its accuracy in identifying frontend and SaaS tools.\n*   **BuiltWith:** Provides a comprehensive profile of a website's technology stack, including current and historical data on CMS, hosting, analytics, and more. It's useful for business intelligence and market analysis.\n*   **WhatRuns:** A lightweight browser extension that offers a quick and clean interface for checking website technologies.\n*   **Web Reveal:** A free online scanner that analyzes a live site and provides a complete technology stack breakdown, including CMS, frameworks, and hosting.\n*   **Ful.io:** A technology profiler and lookup service that allows users to see the technology stack of any website and find companies based on the tools they use.\n*   **Netcraft Site Report:** Focuses on hosting providers, server OS, DNS, and SSL information, offering insights into the infrastructure.\n*   **W3Techs:** Specializes in web technology survey data and publishes reports on the market share of various web technologies across millions of websites. While it provides aggregate data, it can offer context on common technologies.\n*   **Browser Developer Tools:** By inspecting the page source (Ctrl+U or right-click -> \"View Page Source\") or using the \"Network\" and \"Elements\" tabs in your browser's developer tools (usually F12), you might find clues in script tags, meta tags (e.g., `<meta name=\"generator\" content=\"Astro v5.1.8\">`), or distinctive CSS/JavaScript file paths that indicate a specific platform or framework.",
+  "answer": "To track apartment building ownership changes, you can utilize a combination of public records and specialized real estate data providers. The best approach often involves leveraging multiple sources to get the most comprehensive and accurate information.\n\nHere are some key places and companies that can help you see apartment building ownership changes:\n\n### Public Records\n\nPublic property records are official documents filed with government agencies that are accessible to the public and provide crucial information about real estate. These records are vital for establishing legal ownership and maintaining transparency in property transactions.\n\n1.  **County Assessor's Office**: The county assessor's office maintains records on property valuation, ownership, and characteristics, which are fundamental for tax assessment. These records typically include the current legal owner of a property, property address, lot size, building area, year built, and zoning information. Many counties provide online portals to search these records by address, parcel number, or owner's name.\n2.  **County Recorder's or Clerk's Office**: This office is responsible for recording property deeds and other documents related to real estate transactions. Every time a property is sold or changes ownership, the transfer is recorded here. Searching these records can reveal the chain of title and previous owners.\n3.  **State Business Registries**: Commercial properties, especially apartment buildings, are often owned by Limited Liability Companies (LLCs), trusts, or corporate entities. State business registries track these entities and can sometimes help link them to specific properties, though it may require deeper investigation to connect an LLC to its parent company or individual owners.\n4.  **Legal Notices**: Local newspapers often publish legal notices for pre-foreclosures and foreclosures, which can indicate impending ownership changes. These notices can provide information such as the property address and the amount owed, allowing you to research the owner before an auction.\n\n### Private Real Estate Data Providers\n\nSeveral companies specialize in aggregating and analyzing real estate data, offering more streamlined access to ownership information, including historical changes. These platforms often pull data from public records and combine it with other proprietary sources, offering enhanced features and analytics.\n\n1.  **PropStream**: This platform aggregates data from public records, Multiple Listing Service (MLS) databases, and private sources. It provides detailed property information, including ownership history, mortgage data, and tax records, and allows users to filter for properties with ownership changes or other indicators of selling motivation. PropStream was acquired by Stewart Information Services Corporation and continues to enhance its data and lead generation solutions.\n2.  **Reonomy**: Reonomy is an AI-powered data platform specifically for the commercial real estate industry. It connects disparate property information by leveraging vast data sources, including public and proprietary feeds, to provide market intelligence on commercial properties across the U.S.. Reonomy offers ownership history, sales history, and contact information, and has recently enhanced its \"Knowledge Graph\" to improve connections between companies, ownership relationships, properties, and business contacts.\n3.  **CoStar**: CoStar is a dominant provider of information, analytics, and marketing services to the commercial property industry. It offers a comprehensive database with commercial real estate public records, allowing users to identify recorded owners and last buyers, explore loan information, and understand land use and zoning for commercial buildings and land parcels.\n4.  **ATTOM**: ATTOM is a bulk data provider specializing in large-scale property datasets and APIs, covering over 158 million U.S. properties with deep historical records going back decades. It's known for high accuracy in ownership records.\n5.  **CoreLogic**: Regarded as an industry standard, CoreLogic (now operating as Cotality) maintains one of the largest property data repositories in the U.S., including ownership, mortgage, and lien data with documented 94%+ accuracy for owner-of-record data.\n6.  **DataTree (a First American company)**: This platform offers title-grade ownership records and document images, which are particularly useful for detailed chain-of-title research and lien verification.\n7.  **PropertyShark**: This platform is a practical solution for residential and commercial professionals needing ownership details, comps, and foreclosure data. It provides detailed property reports with tax data, zoning information, and building characteristics.\n8.  **LandGlide**: This GPS parcel data app provides property line and ownership data, covering a significant portion of the U.S. population. You can hover over a property to access information. LandGlide continuously updates its data by county, with over 90% of counties updated annually and 70% updated every six months. However, some users note that ownership details can be incorrect if a property has recently sold.\n\n### Other Approaches\n\n*   **Title Companies**: You can hire a title search company to run a title search, which examines public records to confirm a property's rightful owner and identify any claims or liens against it.\n*   **Networking with Industry Professionals**: While not a data source, building relationships with title officers and other real estate professionals can sometimes provide insights into ownership changes.",
   "sources": [
     {
-      "title": "thebusinessresearchcompany.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEnEBZnHsRfKHLNaffnMbabukbB6iXkS789nRDnc5TpZP_qpkavYCfiojzyWVO-sd22BhhcveJLm8k38Rg5mSrsGmckLV4iFHbSgyDCBg8eKDQDnrvKmynBPeyM_JVxbA44V0iUJkUIQ4W-T3wYLQXjzJYdC6EiKvGr-N1tMELP_l1qlSb-fXbEm80-2EF2rGt0w3bShrqlvmceTh5d"
+      "title": "reisresearch.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGbfSvNebMcwO4rWnBzx25cWFX3ZKrAy4h4hk5OlX8I3A1F8vJR4O0Jvjf1U6j_-vm9x-SskJ1PEpLy-Wgk8RlZgADV666GkrxVJ3m4RPwtOgNBzR2hZbSmo33ZlHVzi_JZAyGotrD_z9POg75jKfPHrQnQeeyOoC5qAsYQxStyfsIOzee0m2k-ZOojFS3JNlNrRBSdb9hfoz6aT0HXJjKOL1Of77w5ZDrMDGzPGjLvGpgS-Icb7_dgo1q8lOk="
     },
     {
-      "title": "researchnester.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGOxm0WRk3Dhioj-oK5H0q1BA5C5QtfFbi2_THWczEUMZr-bMZ2xius21ICSTx362vhUnOwoVdlm__Ktvyeuxz_y0TR2JqMLt-Z-ofNL8ckzjqfFL3v6xJl9E4lHo56c9YdfEhtDEK1joIWXgZca34fOlDWMFcykNt_EYbBYRtOdlpTvfHvSQEh4A=="
+      "title": "housemeasures.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEIT5ave-XHoHXxD-KSMiZIHLDMLSt_gI0tvXxMnJfL10AQoyr0Gy3ZVd9p1zGbstH6BKyJbEsQXSL35xAHAhr6p3jLqlDGM8gJiqbwK7X5OkE5CYPmfOqrKgSBeSd1E2oiGMAYB8txVjt2DsQeWCzRPTEPAQ7Bc6vQl-WD"
     },
     {
-      "title": "appfolio.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHL4QuhbjTxDU0FZyFYyOm8hAGigNo3g4doyCAOlB0O8AObV1kYahA-lABxok9qew9twA7fbNd_HrGsCQDLE-7qo28IeVDWtufGyW-c32emk8tAdz7Ew2B9cxvTjvU-uV_ohAi2bQqE6im1r8DfArwF5K9QCIdA6c-M6EaDHhBmgXzxQEOInsRW"
+      "title": "clearcapital.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGD2ClWMoKTO4icLq09k-ul4yDiA5TxfgdcGPeSMliHNpQ1kjVrgBXmEI67sUOub6EyZi_dHcGDpZZTs3-nsaajVe4DUGOJ3618JRzNzmp867KQJUWxuSXmzWBvShg_xgB7T0tdgB38KMB_-NR3qYdun7grqnvNBKPID816xutZw5nkzSAgTIph6fZIm4v6tBFcMKxndU3K5n3i-Mu7ZtuR"
     },
     {
-      "title": "realpage.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHVSkwtrZKT59IDR6GC6hP99qLEJ1hol-yK5s-CQLiRPXXlcXbzubm_M71k2m1hOOSsnKfM8Ftpjer6cdWcaScvkC1JqD0yEWU5rWStMPndOn6Melo1OmovYz23gxnGeCL-vVT_pJwpqv2LsZrYXtiBHSu1jtJjpHxyTRYyNQ=="
+      "title": "actdatascout.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGSVJtBGd5odccO_lq68mk2CVlgjq7uBWwjtKB7mXLSgBW-TExX8GDIzm2DOUKxi3gTer-XNISFkJ3OVM7rgrSLr5nTJCjbNN5n12UgjloEk8BTWH3CckI="
     },
     {
-      "title": "faroutsolutions.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHcPoSdBagXDWI8MpGWXdeS3edodXJTtAHOqJPnbr8tUE9QRPKsxBewgmUZImFfvur7-5GOYGMchTuUa0rDOXDv0UXbfMhoCsBbGTygYwaHY45b8InQHCQ7sFl5DxQorRXTDuJFcFZmFa8j1LYm2Y1FsK7rMocxJ_JWors_GYist0mVm3XPqeLjcQ=="
+      "title": "youtube.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFMu8vPgohRLSHOsVr11dXzScfyuwOqHrWS5pq2kr8U7jyxqnzAX20zbHhOrm1jgdoaHFT33CvzecdWtzi99LBEeo6ipk8rgGgMXgKioPrV0QIo4OMQZuvnk_t8P0nUoyp8f1Q9XA=="
     },
     {
-      "title": "nimbio.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGvxfVvvQsF5DDDYewsTCb6bX73AIsva37HComRVu1VaOMDmOy2vqPL1yWZU52u1szil0u1IzfWK3T7rg69G9zee8-UnwuKkSO1BJKREoaaM7iU3T1ctxT61zSDhsX0qT3BgTTxETlXUZfIAP9J43o="
+      "title": "propstream.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEXaMnjgcNlQTPtFlmZ5q1FdCUs81-bTqBcbSOyXV-bysKU-VkcK8dvFQIh2qFrZ77v-QKrq_uxmLzpJniyhlDRYTD5Hsmabt5Dd5FmqAanQy_q_ozFaCYYzLaHEn74RI9fR4XWpELAtuyRExP6zl7Yb4Sjcau4CdyupcLGP7lPZREieWUew6CFD4ClAV_KL_uyMG8="
     },
     {
-      "title": "persistencemarketresearch.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHPkEdZm6IioNzgVuGIUPEO6F-tNav9vdPAIEpy5yDR43V5M_NqZEylR8s3C96wXphVjff6r-qETNhIcQUrypn_RlfveaGLmvLaQX6in3gRM8DbMCiGOCo1PqkFBej9mBrhutUfVhpwAar6TRKLGgsL-pX9KKuUAL6Rep1d4U6LGwsdDAwpALlDx3moH6DIGQuNxHhLw9bJz0Ivaw=="
+      "title": "reonomy.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHdevYfCyuNMYOfIMw-_5l92HGleaRkRL8z34UxXe0BIjPSl_h9HWdNWg_tMeZAevBHwCYhVtQVi7heB6nyqetC9GTLECVxIqNNBXn2tjYTILCe72cawnLEwI2QUJhJAplqKlp0DLiV3bDqpk3C8M8OZlndCPPevHw="
     },
     {
-      "title": "lesroches.edu",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE1Y0KPLssLC554MSbCZ2otjop7vNkGY1Le0Ovz-zRfm1mC46FB5eSykslDjw5UPAapXQDDSbL74o34cvYhOeGOT6p5jZ920QU7zD4Z4U2XjApHsFPItBlLXwUnZ3rTuA51dN_uh9Kb0q9nVXN8vIsuiJbzCOYoGg=="
+      "title": "californiaofficialrecords.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEHSFwpoSxzgSwQe4VcLJbM9LJeBvF_OWesWAIb1vZIhA9J72yQQJAwKF0qOLeaqYkm5p3XibKVlqF7A1Cko4d1go840dQxht1pts18hkKv7LgLfU-P9IqwisXmzzKHfP4Q955-J7XRZof6kbTq4At5"
     },
     {
-      "title": "hoteltechreport.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH0qTJ0lqOoCOlFFmkusqW7OL6ScfhN7qQT0Jml_vrwNCYetsrSw1CKG2l8MrWV5u--pB3GQXDH_JANjKGqeyNgdfqsNVvkyWSUCUqVshKAhAY8UMCq14UpIYnubUfg7dXe75Qko6OrxkjgzcQRzd5RjOmJhemZGh_fCqWY"
+      "title": "mesacounty.us",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEMmSgPUzOHdUsBqohz7egOgNtWCVa7K9ZQPSXb2nH3FPcDvUXco_TQ_dy85q6YoudBrvbcP1n9jqJ_OptE4gMGz4d8GDnGrMF3CqVJ-c65qBtFDNczkjMzE2aD9YLR2tnsJVPyAA=="
     },
     {
-      "title": "cloudbeds.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFd_0DR9wHJ6cVXiTlyy3Lx-jScyKqeJSm3tl_Q47XgKxn5D9jj9GXxoGnwCj6WVNxJl1Ds6_x96bUFcsDqzWgqisP7n5gPe7eEJ4PcIj1-58AVx2HTCb4udin87P9JKLm4-pcXG-T3fVDGAOa6tGg="
+      "title": "harvard.edu",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGAPPLBX_iW1b4Q4ew7FfIfGnCuGdUsbBwI8PU3f7fEFdIypluwk39NKZyiJAykqowaeXBkkLZTkuXTMt28_mcfC2apuBn4L73CkekxksteqCvByro8E_UlLbcCL-4ir4hguZ8jYcJthkoLUdTiBEPya-aieKO0_sowOj5v69P86vfvOJLU0qsUtg=="
     },
     {
-      "title": "markoze.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGSuDAsa77p2fH0KsILnmbZI27ByxOjXqFLqKUKs_AiyUaKTw0kfAqagq5g1jXEeMQWuXG1e0OMz56pAIxF7AOwgHOK8p5PNoVi0nkN2ODWfPPMa5AkMntLQ53Wwv0isnW3b6k_rNBDlhhiIPz-iqfVRDgxOhNIt_hgeNe7bh32rcr5og8="
+      "title": "stellantis.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHYBsg7L5pCzBo_dDJBc8VCQX_c75edpxhoCeXcU2L-fB6Eqn__bq-W90dP4j7hHoktCtvJM7f56pRG9iRwrJMABNDE-NO0SNrfenpEnG2bn_8yVj_pcDT5w4YHlWl6LAWvRliWvWqf6TQvkdVWoG0HuSoN7itOrxN6n37RVycMxPwhglY9QZ1Ueu1tYrjH_K0SEXxPBLYV3AE3IxhOHg2UyA=="
     },
     {
-      "title": "webreveal.io",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE-S7GvkAe2InbCdJMgt9L6FILmnZEH3Zu0cRUGRc-Iwznyrca3qVCO7N0UCf3qA0hNkWKDR1Eo1E4swekeRn8s476GitaxD9nMu4nU-vvhJjMXwRryntfixaepsFrG-_oSIk9B2XJmE4QfoQ_JnZ6Z505byDtRDmQ="
+      "title": "resimpli.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGgjz5u2-juMH7rKYcB9KFui6fekpegi8ru59I2n787m1gYf2AUd5B97jphxlIaZlM_Pf-FlNHiIyo7sQtKmDVbVpQXQPXI5g8GWyl_iU4itrRHkdYSv1zBbyOTxzh_W8Djwj3kXf8="
+    },
+    {
+      "title": "propstream.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFzGqWSWBWX13Br4ZG-E4peTySR2wWoxrm8YmqoM1IA2cr6SrrdpXDUjzbK8nN2eZClrNtBuiHr3mwYnNEIoN3fqNRu0Tf_tRn4F1CQ5nP1uikCE5fT2OKx2AbhRkL71cMp-Ny8EEbln8SihDllyDYAWSCVqKKBV7GTGLikkALQknfRTAi01IqYTuWAcMepCLfUS84ZTkn24pgn8si6jjCauQnyF0HqUq6z3fOMnXRi6p3qGMtQ_GZLoQe1HtHfJg=="
+    },
+    {
+      "title": "stewart.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFFsMfFiO-JMNKT0LmcZH8ukrvzWa2biaaT-WXqaJPbxC6ri8R3-llb-4apVhsgJos3jm3AiyiOSqSn_vqg7MQea3FdCM-qwlEA-SHGhObl0ZtVviMBK5SsMtsYdxBnrMOw09lW2aPChKLk7GMkhd9dcyB04QIUv78P1BUgGmJTKyp8ZCv2Bfrprz4K7vUsQUvgN8ckYfultSFMf0bglR_MN1Qi4imUrL5-xFSnOxY="
+    },
+    {
+      "title": "propstream.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGKGK4ur35Boj-WbPupj_hx39PASuC8bWp4s4G3Ti2ng5N5M2qJm5N2VAjqjR-e-SyBr_Z6j3k8kQJSLa92kcDwsn_B36i19tu4wX2opLZ6cEW0SZ5Vg_Mv5RsmepA9HcQ7-igKlnNNsK0gtY6L5T0xODs4VTUbUi7rXM-gr2a-ooeue-0jtCJyFF0Wmpef0wspg4FL60YHvdFLkbwt1_cic7erjPqMtUpSx37yaRCVlSyiu8l8jv2ZhUXICJwm592fJVrXtxjzkN5ke386GHecDxe8QTU_9itvO4nD89lzYdjFgA=="
+    },
+    {
+      "title": "pitchbook.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG-SOBc23JoP7pT-5A8yiN8U6G2enSsI89UHXTVC6q74rHjA6rTzMPb1akggtWP5_-TsAtOIQ4u8zt6ywj31uDLHXhKVkwthll-trZqKFe1X9R7KIkd0J0a7ZGDVBIyDrDiVQLb3lkmT1dE"
+    },
+    {
+      "title": "altusgroup.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHbDZdLADqW5Z6hHtHq83J9wI1SJhO4aEZzq04fMc3_q8krVFx1FFAfCtL0NVboNllhONu8ipPp0b246gvDjyzmVQo4e28-SH4h11TlrKrj7-pSYQpYinfzPc-bIG3yUo0qk9tTcfkBElWWkdv4xy27zc8JbZyiam9gmctzYT7XsPs="
+    },
+    {
+      "title": "reonomy.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEkieUgXS5JAi_-upe9YeoSvW44QzdqRGMlVtxPykJamNPcsqwm4K8ebqua6LHbpaKstIbnBWpmsVezvMmzTXjQ_b2Kv7-mV5kc3ADCIAT479MCdqZLTmRNZF84NAbCZLGJFEprB2U8cDN9tquO"
+    },
+    {
+      "title": "reonomy.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGXzcrNRnCiy2sIIyNN3b-PSiMuOu9ASXm9lqFQr86Khm5GxFbqhFEICubEnszg9gkvAl8qF5xe4wFrGwCV1vqK4j3Rq6SMv3k1EoU_5fjkWv1BF9_9SAvlN4TFB3fDk7LHFjH2JCsVG6oqq_bZ_7cp-zM_IQ=="
+    },
+    {
+      "title": "altusgroup.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQECSaENZwTDMYj1ebo4EqDKm_zbFT-BjF7Y5TXFYqr0SmbnStyknFympgxkT5vhruDDGGpvYUx_-FFyjLM7PqDY9od_D5Eq2seuoqBoaxIc-cD28jOQPgTYniudt7qRv7VyKc5x02RR6_NaZDJt8Nc8AEom526UCPfepPKU7cM="
+    },
+    {
+      "title": "therealdeal.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHDd8Q5DaV7ikjzi15QucKaL18VWfZ2R87vhqsLwor2tPWSh-VAjNF8jQZJE57dL5-UX-CRrtNH1ecNjz3NIn2fL25174lhhcyu9qTfih6jbYMMpHEzsUjCaSe7gNtOT3TiVeFabvvNZINma4Sfl3ECb5MJiNDlSEJRNhSUfQ_7VBVyYt9cceN_25UKm2YNu3UrTzJTxBTFLba21ksus1mJwnxLK7upxFzQQNo="
+    },
+    {
+      "title": "propertyshark.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEe9HHIO8q_Eat-fAyHEzHqUTGeoMsIIkDx3XWV1rZ6SyYN4HDEMp6zGadgDKa_POLrwB8wAAVKFge2CQmqVkWd-uzL7C1_M9txFBLKmLe33S-nJu9EEk_ohBA_nd03b8mteg1oFmiamcS2tz8wetc9sHkn0SqCoSK1aJ4xsNmAL7h2JmC-_zlwUEvyNYQO"
+    },
+    {
+      "title": "ficstar.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEImmnO6rbYeObvkz8cxahoythS3yWXjSFkqJpTvj_hlNpEor7FHiRM5vvOxg0MHVdEBCHRjoA-QUHhdJqUOS2QTVD9z8rcmIRzG-KhDj2HJXJA90aQ5a7FXCFFn4oqjfubz858KS3jgxPoxveMBUyAig=="
+    },
+    {
+      "title": "costar.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFTDy1XZFH66OjgffJE7VCizyF07hjmsqeGQJpWqmzYHsJSqHmtjSAa5IyLvarNhs9u_lgX05wFwCvHyuizV8Za3gJ21opY-CQPT7hK7omM8BHiMqPwvSHjlFt1xLiZ6lySlnt1mgsq"
+    },
+    {
+      "title": "datarade.ai",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEpHinhmKROhNOkNSfvdVwDb0KLl9P7_rAtaohjPN3iSgwghCog7gTvgbkINa2U4tPBC8PeaZRP28VuuTde-ncdcPdCQt2DVACj8Owyk4QefRNi5bBarJKGhMUfmijcvbwqfScNcKgyHDd-Wwo6RbP1QVjhJ_4gVZkmCkM="
+    },
+    {
+      "title": "revenuebase.ai",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEgpdM-ZwAHi_IrSIr3IdX7AtI39e-dOFp4DHN36Nh4KtYgsZOS853AC651XaF4nbxMfGmsCy4Xbw5_KiquaJekL4iArH7yO3LCukSNyUA_AAXPdQNbEcMJ20IAz3J8oQccyy82N-NKp6Ci0EoaFt0o22Kv0fo77tSlbfx0sTnWDzZgVvmYgBCGnzM="
+    },
+    {
+      "title": "probatedata.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFEFO4MX_FtXJlEVtOg21xU21fKnvOWFNZ7N-o2YeMTLFrc5eVJvThmdZZNInjF7KMYnjfS5kQnzeny0daGWoL5ZtmC5Yfa98Yp5ZzDQwbOOct43KbRuATd13lw0kQjEuWhN4IZE7JPUiHRnnTTjDlJOfFm9vFoTFIHL-tuCLl4egxwueXUrQwEgCT7vfjHAB-TIcJ6fWlbZVKoMykE0SUhPVpgpYeCRbDLjI2HiP_lD-_WpJXJW3i1m6vK4qQ="
+    },
+    {
+      "title": "landglide.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHAiBshl0EU-iYGPQEx8z-BBayB_o-4T-MiLyBwBo92aXby-lGjcgUcQIupND6uN-IeBKZcKgQB4SKgJcx-Ez8HmwB0r2uYsjuEt7z0UnijqPA0TtfMKpB9CQ2aejVWfEVLbQswL6m1MOHA01MMxLxhz0jJdtPSTw=="
+    },
+    {
+      "title": "reportallusa.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF-gXAMlpjHxPdfjtbgekUILOdaHZuupu1q8lbg0vQkEBgMSyhpaN5kDYtObEdNpwg_opShTJO2SX8MpUMCVvH5ezVkxHx072u8m6S_MLX_0O5crcBPohqDBflmob4s_RypoTmScWzuidsw0JKIBvLZpzADSlRTK3jPiPAyj-txlnO8SeNrGDxFf7hCvoQNOtA="
+    },
+    {
+      "title": "apple.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEZAIxDS_b_ZWf_8_Nz3ROAyXKv3I6972yisihri75Ju7r4NzIxStZ0dEJA67J2O1Oa7fh8M1Ilk8bhF9ZQmEW0IGo8toEEouWIsHqldYR0IQZKlB6u66EwEP-YDKJ11aJRlggUsdkpbnUNmUeMiHOPFPzSPNSuMm0ZakicZRA2l4RNWxzTvnpazTFE8ciUiKSSDdsugiHlIvf60SruVm0="
     },
     {
       "title": "reddit.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGxSpWwKbgRb_a3gd2Y-eiqD87dr8T1TnBqBal8dISP_sbPzIN5ALo_K4akhC1UbqX4WNH-HS04q7mW6U5AOgz7vPH8Vi7BgHHXwPQs010YzkqkJVFj4-wL8whFYJgETulrXOXF8TtfXLVGvngYOSClDS4quXSPuD-clTriMT_iFwnKPaNokMYxL0HvLDhGa8Q7sZ0ZKmlEgQ=="
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGkrkf6qjvQAi38i2nzmI1AHY5Osx3lVNPB0WiB3pixmwS7_DgXaWmg4UAZbdrgxbmNAllw3-XoJ2ZcAftWF2nrRDmDegz67VrO4KB75t0zE2L8w5YX3MzdGtaeIxdhU9DxdSrKoDyJZ5ffHl7jopHtE1UXFov6VsiypzzYZ1IHPQXXRrapyv8PJCARwLmwmKEWJcW606qnwJeAHxWQhjbTizpH"
     },
     {
-      "title": "stackoverflow.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFLUC2woy3aXWb99MFbv6EAz6bk_bnxTgdrBNaQfKyaFJ9ydp7H2R7_bugXqL_gIxlTZ9bOb7vooh9HOkrGQ80xNY6Fbmo2ToEL_ehi9G1xW76YRl9SveeCcXupmGN4U09_8XMLnyFZhMlnwpFCqFPOnFmJcuQmMj0AEhOD5Jn9da-YA3KpV1ZfIFH31p1IpszvarlK0l9jq8t9EYg7OeE="
-    },
-    {
-      "title": "ful.io",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFNcZGPSEfFwTOogvZ0n3opsPtkHvlM9K0fU_h8cjNPlPIfJdTVkImTC8IhtWGwL39nSBHFOAtGNwzdnvMqNOpWHJOFFql4sUCQ"
+      "title": "revolutionre.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQENgjw9VfYrQX19zy45enG_vk7miAfoI6xDosjEBGMA1cPWRZGYcNbOin5nhfAIRu6sJrFtu5HQa9EY6DulXrCV-QSzXNbfSDS8J_J7V5C4Lo7AJq_8_ZUka-jVKXrnWnvWmNwsyZqQXquo092d"
     }
   ],
   "brands": [
     {
-      "brand": "AppFolio",
-      "first_at": 2534,
-      "mentions": 1,
+      "brand": "Reonomy",
+      "first_at": 2917,
+      "mentions": 3,
       "rank": 1
     },
     {
-      "brand": "RealPage",
-      "first_at": 2713,
-      "mentions": 4,
+      "brand": "CoStar",
+      "first_at": 3440,
+      "mentions": 2,
       "rank": 2
     },
     {
-      "brand": "Buildium",
-      "first_at": 2875,
-      "mentions": 2,
+      "brand": "PropertyShark",
+      "first_at": 4527,
+      "mentions": 1,
       "rank": 3
-    },
-    {
-      "brand": "Yardi",
-      "first_at": 2997,
-      "mentions": 4,
-      "rank": 4
-    },
-    {
-      "brand": "Entrata",
-      "first_at": 3300,
-      "mentions": 1,
-      "rank": 5
-    },
-    {
-      "brand": "MRI",
-      "first_at": 3458,
-      "mentions": 1,
-      "rank": 6
-    },
-    {
-      "brand": "Rent Manager",
-      "first_at": 3896,
-      "mentions": 1,
-      "rank": 7
-    },
-    {
-      "brand": "ResMan",
-      "first_at": 3966,
-      "mentions": 1,
-      "rank": 8
     }
   ],
   "links": [
     {
-      "title": "thebusinessresearchcompany.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEnEBZnHsRfKHLNaffnMbabukbB6iXkS789nRDnc5TpZP_qpkavYCfiojzyWVO-sd22BhhcveJLm8k38Rg5mSrsGmckLV4iFHbSgyDCBg8eKDQDnrvKmynBPeyM_JVxbA44V0iUJkUIQ4W-T3wYLQXjzJYdC6EiKvGr-N1tMELP_l1qlSb-fXbEm80-2EF2rGt0w3bShrqlvmceTh5d"
+      "title": "reisresearch.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGbfSvNebMcwO4rWnBzx25cWFX3ZKrAy4h4hk5OlX8I3A1F8vJR4O0Jvjf1U6j_-vm9x-SskJ1PEpLy-Wgk8RlZgADV666GkrxVJ3m4RPwtOgNBzR2hZbSmo33ZlHVzi_JZAyGotrD_z9POg75jKfPHrQnQeeyOoC5qAsYQxStyfsIOzee0m2k-ZOojFS3JNlNrRBSdb9hfoz6aT0HXJjKOL1Of77w5ZDrMDGzPGjLvGpgS-Icb7_dgo1q8lOk="
     },
     {
-      "title": "researchnester.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGOxm0WRk3Dhioj-oK5H0q1BA5C5QtfFbi2_THWczEUMZr-bMZ2xius21ICSTx362vhUnOwoVdlm__Ktvyeuxz_y0TR2JqMLt-Z-ofNL8ckzjqfFL3v6xJl9E4lHo56c9YdfEhtDEK1joIWXgZca34fOlDWMFcykNt_EYbBYRtOdlpTvfHvSQEh4A=="
+      "title": "housemeasures.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEIT5ave-XHoHXxD-KSMiZIHLDMLSt_gI0tvXxMnJfL10AQoyr0Gy3ZVd9p1zGbstH6BKyJbEsQXSL35xAHAhr6p3jLqlDGM8gJiqbwK7X5OkE5CYPmfOqrKgSBeSd1E2oiGMAYB8txVjt2DsQeWCzRPTEPAQ7Bc6vQl-WD"
     },
     {
-      "title": "appfolio.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHL4QuhbjTxDU0FZyFYyOm8hAGigNo3g4doyCAOlB0O8AObV1kYahA-lABxok9qew9twA7fbNd_HrGsCQDLE-7qo28IeVDWtufGyW-c32emk8tAdz7Ew2B9cxvTjvU-uV_ohAi2bQqE6im1r8DfArwF5K9QCIdA6c-M6EaDHhBmgXzxQEOInsRW"
+      "title": "clearcapital.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGD2ClWMoKTO4icLq09k-ul4yDiA5TxfgdcGPeSMliHNpQ1kjVrgBXmEI67sUOub6EyZi_dHcGDpZZTs3-nsaajVe4DUGOJ3618JRzNzmp867KQJUWxuSXmzWBvShg_xgB7T0tdgB38KMB_-NR3qYdun7grqnvNBKPID816xutZw5nkzSAgTIph6fZIm4v6tBFcMKxndU3K5n3i-Mu7ZtuR"
     },
     {
-      "title": "realpage.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHVSkwtrZKT59IDR6GC6hP99qLEJ1hol-yK5s-CQLiRPXXlcXbzubm_M71k2m1hOOSsnKfM8Ftpjer6cdWcaScvkC1JqD0yEWU5rWStMPndOn6Melo1OmovYz23gxnGeCL-vVT_pJwpqv2LsZrYXtiBHSu1jtJjpHxyTRYyNQ=="
+      "title": "actdatascout.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGSVJtBGd5odccO_lq68mk2CVlgjq7uBWwjtKB7mXLSgBW-TExX8GDIzm2DOUKxi3gTer-XNISFkJ3OVM7rgrSLr5nTJCjbNN5n12UgjloEk8BTWH3CckI="
     },
     {
-      "title": "faroutsolutions.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHcPoSdBagXDWI8MpGWXdeS3edodXJTtAHOqJPnbr8tUE9QRPKsxBewgmUZImFfvur7-5GOYGMchTuUa0rDOXDv0UXbfMhoCsBbGTygYwaHY45b8InQHCQ7sFl5DxQorRXTDuJFcFZmFa8j1LYm2Y1FsK7rMocxJ_JWors_GYist0mVm3XPqeLjcQ=="
+      "title": "youtube.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFMu8vPgohRLSHOsVr11dXzScfyuwOqHrWS5pq2kr8U7jyxqnzAX20zbHhOrm1jgdoaHFT33CvzecdWtzi99LBEeo6ipk8rgGgMXgKioPrV0QIo4OMQZuvnk_t8P0nUoyp8f1Q9XA=="
     },
     {
-      "title": "nimbio.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGvxfVvvQsF5DDDYewsTCb6bX73AIsva37HComRVu1VaOMDmOy2vqPL1yWZU52u1szil0u1IzfWK3T7rg69G9zee8-UnwuKkSO1BJKREoaaM7iU3T1ctxT61zSDhsX0qT3BgTTxETlXUZfIAP9J43o="
+      "title": "propstream.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEXaMnjgcNlQTPtFlmZ5q1FdCUs81-bTqBcbSOyXV-bysKU-VkcK8dvFQIh2qFrZ77v-QKrq_uxmLzpJniyhlDRYTD5Hsmabt5Dd5FmqAanQy_q_ozFaCYYzLaHEn74RI9fR4XWpELAtuyRExP6zl7Yb4Sjcau4CdyupcLGP7lPZREieWUew6CFD4ClAV_KL_uyMG8="
     },
     {
-      "title": "persistencemarketresearch.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHPkEdZm6IioNzgVuGIUPEO6F-tNav9vdPAIEpy5yDR43V5M_NqZEylR8s3C96wXphVjff6r-qETNhIcQUrypn_RlfveaGLmvLaQX6in3gRM8DbMCiGOCo1PqkFBej9mBrhutUfVhpwAar6TRKLGgsL-pX9KKuUAL6Rep1d4U6LGwsdDAwpALlDx3moH6DIGQuNxHhLw9bJz0Ivaw=="
+      "title": "reonomy.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHdevYfCyuNMYOfIMw-_5l92HGleaRkRL8z34UxXe0BIjPSl_h9HWdNWg_tMeZAevBHwCYhVtQVi7heB6nyqetC9GTLECVxIqNNBXn2tjYTILCe72cawnLEwI2QUJhJAplqKlp0DLiV3bDqpk3C8M8OZlndCPPevHw="
     },
     {
-      "title": "lesroches.edu",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE1Y0KPLssLC554MSbCZ2otjop7vNkGY1Le0Ovz-zRfm1mC46FB5eSykslDjw5UPAapXQDDSbL74o34cvYhOeGOT6p5jZ920QU7zD4Z4U2XjApHsFPItBlLXwUnZ3rTuA51dN_uh9Kb0q9nVXN8vIsuiJbzCOYoGg=="
+      "title": "californiaofficialrecords.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEHSFwpoSxzgSwQe4VcLJbM9LJeBvF_OWesWAIb1vZIhA9J72yQQJAwKF0qOLeaqYkm5p3XibKVlqF7A1Cko4d1go840dQxht1pts18hkKv7LgLfU-P9IqwisXmzzKHfP4Q955-J7XRZof6kbTq4At5"
     },
     {
-      "title": "hoteltechreport.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH0qTJ0lqOoCOlFFmkusqW7OL6ScfhN7qQT0Jml_vrwNCYetsrSw1CKG2l8MrWV5u--pB3GQXDH_JANjKGqeyNgdfqsNVvkyWSUCUqVshKAhAY8UMCq14UpIYnubUfg7dXe75Qko6OrxkjgzcQRzd5RjOmJhemZGh_fCqWY"
+      "title": "mesacounty.us",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEMmSgPUzOHdUsBqohz7egOgNtWCVa7K9ZQPSXb2nH3FPcDvUXco_TQ_dy85q6YoudBrvbcP1n9jqJ_OptE4gMGz4d8GDnGrMF3CqVJ-c65qBtFDNczkjMzE2aD9YLR2tnsJVPyAA=="
     },
     {
-      "title": "cloudbeds.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFd_0DR9wHJ6cVXiTlyy3Lx-jScyKqeJSm3tl_Q47XgKxn5D9jj9GXxoGnwCj6WVNxJl1Ds6_x96bUFcsDqzWgqisP7n5gPe7eEJ4PcIj1-58AVx2HTCb4udin87P9JKLm4-pcXG-T3fVDGAOa6tGg="
+      "title": "harvard.edu",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGAPPLBX_iW1b4Q4ew7FfIfGnCuGdUsbBwI8PU3f7fEFdIypluwk39NKZyiJAykqowaeXBkkLZTkuXTMt28_mcfC2apuBn4L73CkekxksteqCvByro8E_UlLbcCL-4ir4hguZ8jYcJthkoLUdTiBEPya-aieKO0_sowOj5v69P86vfvOJLU0qsUtg=="
     },
     {
-      "title": "markoze.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGSuDAsa77p2fH0KsILnmbZI27ByxOjXqFLqKUKs_AiyUaKTw0kfAqagq5g1jXEeMQWuXG1e0OMz56pAIxF7AOwgHOK8p5PNoVi0nkN2ODWfPPMa5AkMntLQ53Wwv0isnW3b6k_rNBDlhhiIPz-iqfVRDgxOhNIt_hgeNe7bh32rcr5og8="
+      "title": "stellantis.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHYBsg7L5pCzBo_dDJBc8VCQX_c75edpxhoCeXcU2L-fB6Eqn__bq-W90dP4j7hHoktCtvJM7f56pRG9iRwrJMABNDE-NO0SNrfenpEnG2bn_8yVj_pcDT5w4YHlWl6LAWvRliWvWqf6TQvkdVWoG0HuSoN7itOrxN6n37RVycMxPwhglY9QZ1Ueu1tYrjH_K0SEXxPBLYV3AE3IxhOHg2UyA=="
     },
     {
-      "title": "webreveal.io",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE-S7GvkAe2InbCdJMgt9L6FILmnZEH3Zu0cRUGRc-Iwznyrca3qVCO7N0UCf3qA0hNkWKDR1Eo1E4swekeRn8s476GitaxD9nMu4nU-vvhJjMXwRryntfixaepsFrG-_oSIk9B2XJmE4QfoQ_JnZ6Z505byDtRDmQ="
+      "title": "resimpli.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGgjz5u2-juMH7rKYcB9KFui6fekpegi8ru59I2n787m1gYf2AUd5B97jphxlIaZlM_Pf-FlNHiIyo7sQtKmDVbVpQXQPXI5g8GWyl_iU4itrRHkdYSv1zBbyOTxzh_W8Djwj3kXf8="
+    },
+    {
+      "title": "propstream.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFzGqWSWBWX13Br4ZG-E4peTySR2wWoxrm8YmqoM1IA2cr6SrrdpXDUjzbK8nN2eZClrNtBuiHr3mwYnNEIoN3fqNRu0Tf_tRn4F1CQ5nP1uikCE5fT2OKx2AbhRkL71cMp-Ny8EEbln8SihDllyDYAWSCVqKKBV7GTGLikkALQknfRTAi01IqYTuWAcMepCLfUS84ZTkn24pgn8si6jjCauQnyF0HqUq6z3fOMnXRi6p3qGMtQ_GZLoQe1HtHfJg=="
+    },
+    {
+      "title": "stewart.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFFsMfFiO-JMNKT0LmcZH8ukrvzWa2biaaT-WXqaJPbxC6ri8R3-llb-4apVhsgJos3jm3AiyiOSqSn_vqg7MQea3FdCM-qwlEA-SHGhObl0ZtVviMBK5SsMtsYdxBnrMOw09lW2aPChKLk7GMkhd9dcyB04QIUv78P1BUgGmJTKyp8ZCv2Bfrprz4K7vUsQUvgN8ckYfultSFMf0bglR_MN1Qi4imUrL5-xFSnOxY="
+    },
+    {
+      "title": "propstream.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGKGK4ur35Boj-WbPupj_hx39PASuC8bWp4s4G3Ti2ng5N5M2qJm5N2VAjqjR-e-SyBr_Z6j3k8kQJSLa92kcDwsn_B36i19tu4wX2opLZ6cEW0SZ5Vg_Mv5RsmepA9HcQ7-igKlnNNsK0gtY6L5T0xODs4VTUbUi7rXM-gr2a-ooeue-0jtCJyFF0Wmpef0wspg4FL60YHvdFLkbwt1_cic7erjPqMtUpSx37yaRCVlSyiu8l8jv2ZhUXICJwm592fJVrXtxjzkN5ke386GHecDxe8QTU_9itvO4nD89lzYdjFgA=="
+    },
+    {
+      "title": "pitchbook.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG-SOBc23JoP7pT-5A8yiN8U6G2enSsI89UHXTVC6q74rHjA6rTzMPb1akggtWP5_-TsAtOIQ4u8zt6ywj31uDLHXhKVkwthll-trZqKFe1X9R7KIkd0J0a7ZGDVBIyDrDiVQLb3lkmT1dE"
+    },
+    {
+      "title": "altusgroup.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHbDZdLADqW5Z6hHtHq83J9wI1SJhO4aEZzq04fMc3_q8krVFx1FFAfCtL0NVboNllhONu8ipPp0b246gvDjyzmVQo4e28-SH4h11TlrKrj7-pSYQpYinfzPc-bIG3yUo0qk9tTcfkBElWWkdv4xy27zc8JbZyiam9gmctzYT7XsPs="
+    },
+    {
+      "title": "reonomy.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEkieUgXS5JAi_-upe9YeoSvW44QzdqRGMlVtxPykJamNPcsqwm4K8ebqua6LHbpaKstIbnBWpmsVezvMmzTXjQ_b2Kv7-mV5kc3ADCIAT479MCdqZLTmRNZF84NAbCZLGJFEprB2U8cDN9tquO"
+    },
+    {
+      "title": "reonomy.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGXzcrNRnCiy2sIIyNN3b-PSiMuOu9ASXm9lqFQr86Khm5GxFbqhFEICubEnszg9gkvAl8qF5xe4wFrGwCV1vqK4j3Rq6SMv3k1EoU_5fjkWv1BF9_9SAvlN4TFB3fDk7LHFjH2JCsVG6oqq_bZ_7cp-zM_IQ=="
+    },
+    {
+      "title": "altusgroup.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQECSaENZwTDMYj1ebo4EqDKm_zbFT-BjF7Y5TXFYqr0SmbnStyknFympgxkT5vhruDDGGpvYUx_-FFyjLM7PqDY9od_D5Eq2seuoqBoaxIc-cD28jOQPgTYniudt7qRv7VyKc5x02RR6_NaZDJt8Nc8AEom526UCPfepPKU7cM="
+    },
+    {
+      "title": "therealdeal.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHDd8Q5DaV7ikjzi15QucKaL18VWfZ2R87vhqsLwor2tPWSh-VAjNF8jQZJE57dL5-UX-CRrtNH1ecNjz3NIn2fL25174lhhcyu9qTfih6jbYMMpHEzsUjCaSe7gNtOT3TiVeFabvvNZINma4Sfl3ECb5MJiNDlSEJRNhSUfQ_7VBVyYt9cceN_25UKm2YNu3UrTzJTxBTFLba21ksus1mJwnxLK7upxFzQQNo="
+    },
+    {
+      "title": "propertyshark.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEe9HHIO8q_Eat-fAyHEzHqUTGeoMsIIkDx3XWV1rZ6SyYN4HDEMp6zGadgDKa_POLrwB8wAAVKFge2CQmqVkWd-uzL7C1_M9txFBLKmLe33S-nJu9EEk_ohBA_nd03b8mteg1oFmiamcS2tz8wetc9sHkn0SqCoSK1aJ4xsNmAL7h2JmC-_zlwUEvyNYQO"
+    },
+    {
+      "title": "ficstar.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEImmnO6rbYeObvkz8cxahoythS3yWXjSFkqJpTvj_hlNpEor7FHiRM5vvOxg0MHVdEBCHRjoA-QUHhdJqUOS2QTVD9z8rcmIRzG-KhDj2HJXJA90aQ5a7FXCFFn4oqjfubz858KS3jgxPoxveMBUyAig=="
+    },
+    {
+      "title": "costar.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFTDy1XZFH66OjgffJE7VCizyF07hjmsqeGQJpWqmzYHsJSqHmtjSAa5IyLvarNhs9u_lgX05wFwCvHyuizV8Za3gJ21opY-CQPT7hK7omM8BHiMqPwvSHjlFt1xLiZ6lySlnt1mgsq"
+    },
+    {
+      "title": "datarade.ai",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEpHinhmKROhNOkNSfvdVwDb0KLl9P7_rAtaohjPN3iSgwghCog7gTvgbkINa2U4tPBC8PeaZRP28VuuTde-ncdcPdCQt2DVACj8Owyk4QefRNi5bBarJKGhMUfmijcvbwqfScNcKgyHDd-Wwo6RbP1QVjhJ_4gVZkmCkM="
+    },
+    {
+      "title": "revenuebase.ai",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEgpdM-ZwAHi_IrSIr3IdX7AtI39e-dOFp4DHN36Nh4KtYgsZOS853AC651XaF4nbxMfGmsCy4Xbw5_KiquaJekL4iArH7yO3LCukSNyUA_AAXPdQNbEcMJ20IAz3J8oQccyy82N-NKp6Ci0EoaFt0o22Kv0fo77tSlbfx0sTnWDzZgVvmYgBCGnzM="
+    },
+    {
+      "title": "probatedata.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFEFO4MX_FtXJlEVtOg21xU21fKnvOWFNZ7N-o2YeMTLFrc5eVJvThmdZZNInjF7KMYnjfS5kQnzeny0daGWoL5ZtmC5Yfa98Yp5ZzDQwbOOct43KbRuATd13lw0kQjEuWhN4IZE7JPUiHRnnTTjDlJOfFm9vFoTFIHL-tuCLl4egxwueXUrQwEgCT7vfjHAB-TIcJ6fWlbZVKoMykE0SUhPVpgpYeCRbDLjI2HiP_lD-_WpJXJW3i1m6vK4qQ="
+    },
+    {
+      "title": "landglide.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHAiBshl0EU-iYGPQEx8z-BBayB_o-4T-MiLyBwBo92aXby-lGjcgUcQIupND6uN-IeBKZcKgQB4SKgJcx-Ez8HmwB0r2uYsjuEt7z0UnijqPA0TtfMKpB9CQ2aejVWfEVLbQswL6m1MOHA01MMxLxhz0jJdtPSTw=="
+    },
+    {
+      "title": "reportallusa.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF-gXAMlpjHxPdfjtbgekUILOdaHZuupu1q8lbg0vQkEBgMSyhpaN5kDYtObEdNpwg_opShTJO2SX8MpUMCVvH5ezVkxHx072u8m6S_MLX_0O5crcBPohqDBflmob4s_RypoTmScWzuidsw0JKIBvLZpzADSlRTK3jPiPAyj-txlnO8SeNrGDxFf7hCvoQNOtA="
+    },
+    {
+      "title": "apple.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEZAIxDS_b_ZWf_8_Nz3ROAyXKv3I6972yisihri75Ju7r4NzIxStZ0dEJA67J2O1Oa7fh8M1Ilk8bhF9ZQmEW0IGo8toEEouWIsHqldYR0IQZKlB6u66EwEP-YDKJ11aJRlggUsdkpbnUNmUeMiHOPFPzSPNSuMm0ZakicZRA2l4RNWxzTvnpazTFE8ciUiKSSDdsugiHlIvf60SruVm0="
     },
     {
       "title": "reddit.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGxSpWwKbgRb_a3gd2Y-eiqD87dr8T1TnBqBal8dISP_sbPzIN5ALo_K4akhC1UbqX4WNH-HS04q7mW6U5AOgz7vPH8Vi7BgHHXwPQs010YzkqkJVFj4-wL8whFYJgETulrXOXF8TtfXLVGvngYOSClDS4quXSPuD-clTriMT_iFwnKPaNokMYxL0HvLDhGa8Q7sZ0ZKmlEgQ=="
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGkrkf6qjvQAi38i2nzmI1AHY5Osx3lVNPB0WiB3pixmwS7_DgXaWmg4UAZbdrgxbmNAllw3-XoJ2ZcAftWF2nrRDmDegz67VrO4KB75t0zE2L8w5YX3MzdGtaeIxdhU9DxdSrKoDyJZ5ffHl7jopHtE1UXFov6VsiypzzYZ1IHPQXXRrapyv8PJCARwLmwmKEWJcW606qnwJeAHxWQhjbTizpH"
     },
     {
-      "title": "stackoverflow.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFLUC2woy3aXWb99MFbv6EAz6bk_bnxTgdrBNaQfKyaFJ9ydp7H2R7_bugXqL_gIxlTZ9bOb7vooh9HOkrGQ80xNY6Fbmo2ToEL_ehi9G1xW76YRl9SveeCcXupmGN4U09_8XMLnyFZhMlnwpFCqFPOnFmJcuQmMj0AEhOD5Jn9da-YA3KpV1ZfIFH31p1IpszvarlK0l9jq8t9EYg7OeE="
-    },
-    {
-      "title": "ful.io",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFNcZGPSEfFwTOogvZ0n3opsPtkHvlM9K0fU_h8cjNPlPIfJdTVkImTC8IhtWGwL39nSBHFOAtGNwzdnvMqNOpWHJOFFql4sUCQ"
+      "title": "revolutionre.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQENgjw9VfYrQX19zy45enG_vk7miAfoI6xDosjEBGMA1cPWRZGYcNbOin5nhfAIRu6sJrFtu5HQa9EY6DulXrCV-QSzXNbfSDS8J_J7V5C4Lo7AJq_8_ZUka-jVKXrnWnvWmNwsyZqQXquo092d"
     }
   ]
 }

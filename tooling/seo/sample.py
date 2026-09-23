@@ -2,9 +2,11 @@
 """Ask the AI engines the questions in questions.csv and save what they answer.
 
 This is the before-picture. Today CraneSignal is almost certainly named in none of the
-Set A answers; running the same questions again in a few weeks is the only way to show
-whether the SEO work moved anything. Set B is the market view -- which vendors the
-engines recommend to apartment owners -- which is interesting on its own.
+the answers; running the same questions again in a few weeks is the only way to show
+whether the SEO work moved anything. Every question is one CraneSignal's own buyer would
+ask -- where to find buildings under construction, who just bought a complex, who to call
+before a building opens -- not which property-management software to buy, which is a
+different market and was the archived RealPage project.
 
 Two engines, because they are the two we actually have:
 
@@ -53,23 +55,55 @@ CLAUDE_CALL_CAP = 60
 GEMINI_MODEL = "gemini-2.5-flash"
 GEMINI_PAUSE_SECONDS = 2.0
 
-# Who we are looking for in an answer. The point is not sentiment; it is simply which
-# names an engine reaches for when someone is deciding what to buy.
+# Who we are competing with for these answers. CraneSignal sells lead data on buildings,
+# so the names that matter are the property-data and construction-pipeline services -- not
+# the property-management software vendors, which are a different market entirely and were
+# the subject of the archived RealPage work, not this one.
 BRANDS = {
     "CraneSignal": ["cranesignal", "crane signal"],
-    "RealPage": ["realpage"],
-    "Yardi": ["yardi"],
-    "Entrata": ["entrata"],
-    "AppFolio": ["appfolio"],
-    "Buildium": ["buildium"],
-    "ResMan": ["resman"],
-    "Rent Manager": ["rent manager"],
-    "MRI": ["mri software"],
+    # Paid property and construction data -- the direct competition.
     "CoStar": ["costar"],
-    "Berkadia": ["berkadia"],
+    "Yardi Matrix": ["yardi matrix"],
+    "Dodge": ["dodge construction", "dodge data", "dodge analytics"],
+    "ConstructConnect": ["constructconnect", "construct connect"],
+    "BuildCentral": ["buildcentral", "build central"],
+    "Reonomy": ["reonomy"],
+    "PropertyShark": ["propertyshark", "property shark"],
+    "LoopNet": ["loopnet"],
+    "Crexi": ["crexi"],
+    "BuildZoom": ["buildzoom"],
+    "Cherre": ["cherre"],
+    "HelloData": ["hellodata", "hello data"],
+    "Moody's": ["moody's analytics", "moodys analytics", "real capital analytics"],
+    # Brokerages that publish the market reports these questions often land on.
     "CBRE": ["cbre"],
+    "Berkadia": ["berkadia"],
+    "Marcus & Millichap": ["marcus & millichap", "marcus and millichap"],
+    "Cushman & Wakefield": ["cushman"],
+    "JLL": ["jll"],
+    "Northmarq": ["northmarq"],
+    "MMG": ["mmg real estate", "mmgrea"],
+    # Contact and prospecting tools, for the "who do I call" questions.
+    "ZoomInfo": ["zoominfo"],
+    "Apollo": ["apollo.io"],
+    "LinkedIn Sales Navigator": ["sales navigator"],
+    # Renter-facing listing sites. If these come back, the question was read as a renter
+    # asking for somewhere to live, which tells us the phrasing is wrong for our buyer.
     "Apartments.com": ["apartments.com"],
     "Zillow": ["zillow"],
+    # Property-management software, kept only because the engines volunteer it on the
+    # "which software does this building run" questions.
+    "RealPage": ["realpage"],
+    "Yardi (software)": ["yardi voyager", "yardi breeze"],
+    "AppFolio": ["appfolio"],
+    "Entrata": ["entrata"],
+    # Not a vendor: the answer "go read the public records yourself". Worth counting,
+    # because that is our own source, and an engine that says this is one step from
+    # citing a site that has already done it.
+    "Public records (DIY)": [
+        "appraisal district", "permit office", "county clerk", "building department",
+        "open records", "public records request", "tdlr", "permit portal",
+    ],
 }
 
 ASK = (
@@ -302,8 +336,7 @@ def build_report(out_dir: Path, rows: list[dict]) -> str:
     for record in answered:
         by_question.setdefault(record["question"], {})[record["engine"]] = record
 
-    def share(set_name: str) -> list[tuple[str, int, int]]:
-        subset = [r for r in answered if r["set"] == set_name]
+    def share(subset: list[dict]) -> list[tuple[str, int, int]]:
         counts: dict[str, int] = {}
         for record in subset:
             for brand in record.get("brands", []):
@@ -314,10 +347,16 @@ def build_report(out_dir: Path, rows: list[dict]) -> str:
         )
 
     lines = [
-        f"# What the AI engines answer — {today}",
+        f"# Who the AI engines name when someone is looking for apartment leads — {today}",
         "",
         "The before-picture, taken while the SEO work sits on a branch and nothing is",
         "deployed. Re-run `tooling/seo/sample.py` in a few weeks and compare.",
+        "",
+        "Every question here is one CraneSignal's own buyer would ask: how to find",
+        "buildings under construction, who just bought a complex, where to get the data",
+        "free, who to call before a building opens. We are not measuring the",
+        "property-management software market -- that was the archived RealPage project, a",
+        "different business.",
         "",
         "**These are not the consumer apps.** `claude-web` is `claude -p` on the",
         "subscription with web search; `gemini` is the Gemini API with Google Search",
@@ -327,32 +366,48 @@ def build_report(out_dir: Path, rows: list[dict]) -> str:
         f"Engines: {', '.join(engines)} · Questions answered: {len(answered)}"
         + (f" · Failed: {len(failed)}" if failed else ""),
         "",
-        "## Set A — questions CraneSignal could be cited for",
-        "",
-        "If the SEO work succeeds, CraneSignal starts appearing here. Today it should not.",
+        "## The headline number",
         "",
     ]
 
-    a_share = share("A")
-    cs = next((row for row in a_share if row[0] == "CraneSignal"), None)
-    total_a = a_share[0][2] if a_share else 0
-    lines.append(
-        f"**CraneSignal named in {cs[1] if cs else 0} of {total_a} Set A answers.**"
-    )
+    overall = share(answered)
+    total = len(answered)
+    cs = next((row for row in overall if row[0] == "CraneSignal"), None)
+    lines += [
+        f"**CraneSignal is named in {cs[1] if cs else 0} of {total} answers.**",
+        "",
+        "When that number starts moving, the SEO work is landing. Everything below is who",
+        "is getting named instead.",
+        "",
+        "## Who gets named, across every question",
+        "",
+        "| Named | Answers | Share |",
+        "|---|---|---|",
+    ]
+    for brand, n, tot in overall:
+        lines.append(f"| {brand} | {n} / {tot} | {round(100 * n / tot)}% |")
     lines.append("")
-    if a_share:
-        lines += ["| Named | Answers | Share |", "|---|---|---|"]
-        for brand, n, total in a_share:
-            lines.append(f"| {brand} | {n} / {total} | {round(100 * n / total)}% |")
-        lines.append("")
 
-    lines += ["## Set B — what the market is told to buy", "",
-              "We do not expect to appear here. This is the answer-share view.", ""]
-    b_share = share("B")
-    if b_share:
-        lines += ["| Vendor | Answers | Share |", "|---|---|---|"]
-        for brand, n, total in b_share:
-            lines.append(f"| {brand} | {n} / {total} | {round(100 * n / total)}% |")
+    # Splitting by intent is what makes this actionable: "buy CoStar" on a pipeline
+    # question means something different from "read the permit office" on the same one.
+    intents = []
+    for record in answered:
+        if record.get("intent") and record["intent"] not in intents:
+            intents.append(record["intent"])
+    if intents:
+        lines += [
+            "## By what the asker actually wants",
+            "",
+            "Top three names per intent, so it is clear which questions are winnable.",
+            "",
+            "| What they asked for | Answers | Most-named |",
+            "|---|---|---|",
+        ]
+        for intent in intents:
+            subset = [r for r in answered if r.get("intent") == intent]
+            top = share(subset)[:3]
+            named = ", ".join(f"{b} {round(100 * n / t)}%" for b, n, t in top) or "nobody"
+            lines.append(f"| {intent} | {len(subset)} | {named} |")
         lines.append("")
 
     # Which sites the engines read is more actionable than which brands they name: it is
@@ -382,7 +437,9 @@ def build_report(out_dir: Path, rows: list[dict]) -> str:
         per_engine = by_question.get(row["question"])
         if not per_engine:
             continue
-        lines.append(f"### {row['set']}. {row['question']}")
+        lines.append(f"### {row['question']}")
+        if row.get("intent"):
+            lines.append(f"*{row['intent']}*")
         lines.append("")
         for engine in engines:
             record = per_engine.get(engine)

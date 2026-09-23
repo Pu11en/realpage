@@ -1,0 +1,50 @@
+{
+  "engine": "claude-web",
+  "engine_label": "Claude (Sonnet) via claude -p, web search on",
+  "is_consumer_app": false,
+  "set": "A",
+  "question": "Who do I contact about a new apartment building before it opens?",
+  "intent": "prospecting",
+  "asked_on": "2026-09-23",
+  "ok": true,
+  "answer": "This is outside coding work, but happy to help as a general research question \u2014 this isn't related to your ccdb project, so I'm answering fresh rather than from memory.\n\nWho to contact depends on what you're trying to accomplish:\n\n**If you're a prospective tenant/buyer wanting early access:**\n- The developer/property management company directly \u2014 search the building's address plus \"leasing office\" or check if they have a pre-leasing page. Large developers (e.g., Related, Greystar, AvalonBay, Equity Residential, Camden) usually post a \"coming soon\" leasing site months before opening.\n- Apartments.com, Zillow, and Rent. often list pre-leasing units with a contact form before a building formally opens.\n\n**If you're a neighbor/community member with concerns (traffic, construction noise, zoning):**\n- Your city or county's **Planning & Zoning Department** \u2014 they hold the permit/site plan records and contact info for the developer of record.\n- The **general contractor** listed on the posted building permit (usually displayed on-site or searchable via the city's permit portal).\n- Your local **city council member** or **community board**, especially for zoning variance or traffic concerns.\n\n**If you're a vendor/business wanting to reach residents or property management for partnerships:**\n- The property management company that will run the building (often different from the developer) \u2014 look for a sign on-site, or search the address in county property records / the developer's press release.\n- Commercial real estate databases like **CoStar** or **Crexi** often list the developer, GC, and property manager for a project.\n\n**If you're trying to verify who owns/is building it:**\n- County **assessor/recorder's office** (property records) for the legal owner.\n- **Dodge Construction Network** or local **permit portals** for the contractor and project timeline.\n\nIf you tell me the city/address and your reason for reaching out (tenant inquiry, neighbor complaint, vendor pitch, etc.), I can narrow this down further.",
+  "brands": [
+    {
+      "brand": "Apartments.com",
+      "first_at": 592,
+      "mentions": 1,
+      "rank": 1
+    },
+    {
+      "brand": "Zillow",
+      "first_at": 608,
+      "mentions": 1,
+      "rank": 2
+    },
+    {
+      "brand": "Public records (DIY)",
+      "first_at": 1071,
+      "mentions": 2,
+      "rank": 3
+    },
+    {
+      "brand": "CoStar",
+      "first_at": 1550,
+      "mentions": 1,
+      "rank": 4
+    },
+    {
+      "brand": "Crexi",
+      "first_at": 1564,
+      "mentions": 1,
+      "rank": 5
+    },
+    {
+      "brand": "Dodge",
+      "first_at": 1779,
+      "mentions": 1,
+      "rank": 6
+    }
+  ],
+  "links": []
+}

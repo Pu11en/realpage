@@ -1,0 +1,84 @@
+{
+  "engine": "gemini",
+  "engine_label": "Gemini (gemini-2.5-flash) via API, Google Search grounding on",
+  "is_consumer_app": false,
+  "set": "A",
+  "question": "How do I find decision makers at apartment management companies?",
+  "intent": "prospecting",
+  "asked_on": "2026-09-23",
+  "ok": true,
+  "answer": "Finding decision-makers at apartment management companies involves a multi-pronged approach, leveraging online resources, specialized databases, networking, and direct outreach. The key is to identify the roles that hold decision-making power, which often include owners, regional managers, asset managers, and vice presidents of operations or acquisitions.\n\nHere are several strategies and resources to help you identify these individuals:\n\n### 1. Professional Networking Platforms\n\n*   **LinkedIn:** This is an invaluable tool.\n    *   **Company Pages:** Search for specific apartment management companies and then browse their employees. Look for titles like \"Regional Manager,\" \"Asset Manager,\" \"Director of Property Management,\" \"VP of Operations,\" \"Acquisitions Manager,\" or \"Owner/Principal.\"\n    *   **Sales Navigator:** For more targeted searches, LinkedIn Sales Navigator allows you to filter by industry, company size, job title, and seniority level, making it easier to pinpoint decision-makers within a specific geographic area or company type.\n    *   **Groups:** Join real estate and property management groups on LinkedIn to connect with professionals and learn who the key players are.\n\n### 2. Specialized Real Estate & Business Databases\n\nThese platforms are designed to provide detailed property and company information, often including contact details for key personnel.\n\n*   **CoStar:** Widely considered a leading commercial real estate information provider, CoStar offers extensive data on multifamily properties and the companies that own and manage them. It often includes contact information for property owners, asset managers, and other decision-makers.\n*   **Yardi:** While primarily a property management software, Yardi also offers solutions like Yardi Matrix, which provides detailed market intelligence on multifamily properties, including ownership and management details.\n*   **Reonomy:** This platform uses AI and machine learning to provide comprehensive property and owner data, including contact information for decision-makers at various levels within real estate companies.\n*   **LoopNet:** As a commercial real estate listing service, LoopNet often lists the managing company and sometimes contact information for brokers or property managers associated with specific listings. While not always direct decision-makers, they can be a good entry point.\n*   **Property Shark:** Offers detailed property reports, including ownership information and often contact details for property owners and associated entities.\n*   **ClientLook:** A CRM specifically designed for commercial real estate professionals, it helps manage contacts and track deals, potentially leading to decision-makers.\n*   **Hunter.io / Clearbit / ZoomInfo / Apollo.io:** These are B2B lead generation tools that can help find email addresses and phone numbers for specific individuals once you know their name and company.\n\n### 3. Company Websites and Direct Research\n\n*   **Company \"About Us\" or \"Team\" Pages:** Most apartment management companies list their leadership team, including executives, regional managers, and sometimes even property managers, on their official websites. Look for individuals with titles indicating strategic oversight or operational control.\n*   **Press Releases and News Articles:** Companies often announce new hires, promotions, or property acquisitions via press releases. These can highlight key individuals responsible for growth or operations.\n*   **Google Searches:** Use targeted searches like \"[Company Name] + leadership team,\" \"[Company Name] + Vice President of Operations,\" or \"[Company Name] + acquisitions director.\"\n\n### 4. Industry Associations and Events\n\n*   **National Apartment Association (NAA):** The NAA is a major trade association for the apartment industry. Its website can be a source of information, and attending their events (e.g., Apartmentalize) offers excellent networking opportunities to meet decision-makers in person.\n*   **Institute of Real Estate Management (IREM):** IREM offers certifications and resources for property managers. Their local chapters and events are good places to connect with experienced professionals, many of whom are decision-makers.\n*   **Local Apartment Associations:** Most major cities and regions have local apartment associations affiliated with the NAA. These local groups host meetings and events where you can network with property owners, regional managers, and other key personnel.\n*   **Real Estate Investment Groups (REIGs):** Local real estate investor groups often include owners and developers of multifamily properties, who are direct decision-makers.\n\n### 5. Specific Companies to Research\n\nWhen starting your research, consider looking into some of the largest apartment management companies, as they have extensive operations and clear organizational structures. Examples include:\n\n*   **Greystar:** One of the largest apartment managers globally.\n*   **Lincoln Property Company:** A major diversified real estate company with significant multifamily presence.\n*   **Equity Residential:** A large publicly traded REIT focused on apartment properties.\n*   **AvalonBay Communities:** Another prominent multifamily REIT.\n*   **Camden Property Trust**\n*   **Pillars Fund Management**\n\nBy combining these strategies, you can effectively identify and connect with the decision-makers at apartment management companies relevant to your goals.\n\n**Sources:**\n*   https://www.greystar.com/\n*   https://www.costar.com/\n*   https://business.linkedin.com/sales-solutions/sales-navigator\n*   https://www.naahq.org/\n*   https://www.propertyshark.com/",
+  "sources": [],
+  "brands": [
+    {
+      "brand": "LinkedIn Sales Navigator",
+      "first_at": 810,
+      "mentions": 2,
+      "rank": 1
+    },
+    {
+      "brand": "CoStar",
+      "first_at": 1398,
+      "mentions": 3,
+      "rank": 2
+    },
+    {
+      "brand": "Yardi Matrix",
+      "first_at": 1778,
+      "mentions": 1,
+      "rank": 3
+    },
+    {
+      "brand": "Reonomy",
+      "first_at": 1913,
+      "mentions": 1,
+      "rank": 4
+    },
+    {
+      "brand": "LoopNet",
+      "first_at": 2121,
+      "mentions": 2,
+      "rank": 5
+    },
+    {
+      "brand": "PropertyShark",
+      "first_at": 2399,
+      "mentions": 2,
+      "rank": 6
+    },
+    {
+      "brand": "ZoomInfo",
+      "first_at": 2755,
+      "mentions": 1,
+      "rank": 7
+    },
+    {
+      "brand": "Apollo",
+      "first_at": 2766,
+      "mentions": 1,
+      "rank": 8
+    }
+  ],
+  "links": [
+    {
+      "title": "",
+      "url": "https://www.greystar.com/"
+    },
+    {
+      "title": "",
+      "url": "https://www.costar.com/"
+    },
+    {
+      "title": "",
+      "url": "https://business.linkedin.com/sales-solutions/sales-navigator"
+    },
+    {
+      "title": "",
+      "url": "https://www.naahq.org/"
+    },
+    {
+      "title": "",
+      "url": "https://www.propertyshark.com/"
+    }
+  ]
+}

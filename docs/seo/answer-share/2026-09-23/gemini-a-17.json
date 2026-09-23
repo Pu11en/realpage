@@ -1,0 +1,261 @@
+{
+  "engine": "gemini",
+  "engine_label": "Gemini (gemini-2.5-flash) via API, Google Search grounding on",
+  "is_consumer_app": false,
+  "set": "A",
+  "question": "How do I look up apartment construction permits without paying for a subscription?",
+  "intent": "free-data",
+  "asked_on": "2026-09-23",
+  "ok": true,
+  "answer": "To look up apartment construction permits without paying for a subscription, you'll primarily rely on public resources provided by local, county, and state government entities. These sources are legally required to make certain public records accessible.\n\nHere's how you can find apartment construction permits for free:\n\n**1. Local Government Websites (City and County)**\n\nMost cities and counties maintain online portals or databases where you can search for building permits. This is often the most direct and detailed source of information for a specific property or project.\n\n*   **City or County Planning/Building Department:** Start by visiting the official website of the city or county where the apartment building is located. Look for sections like \"Planning,\" \"Building Permits,\" \"Development Services,\" \"Code Enforcement,\" or \"Public Records.\" Many departments offer a \"Permit Search\" or \"Public Records Search\" function.\n    *   **Examples of City/County Portals:**\n        *   **Miami-Dade County, Florida:** Offers free online searches for building permits, plans, Certificates of Occupancy, and Code Compliance records. You can typically search by permit number, process number, or address.\n        *   **City of Chicago, Illinois:** Provides public access to building permit and inspection records through its Department of Buildings website. You can search by permit number or address. The City also has a data portal with bulk data on all building permits and violations since 2006.\n        *   **City of San Diego, California:** Offers \"Permit Finder,\" an interactive GIS platform to view over a million permit records dating back to 2003. You can search by address, Assessor's Parcel Number (APN), project number, or permit number.\n        *   **Orange County, Florida:** Provides online tools to search development cases, permits, and properties without requiring a member services account.\n        *   **City of Seattle, Washington:** Their Open Data portal includes building permit data with details like permit class, project type (residential/non-residential), number of housing units added or removed, estimated project cost, and application/issue/expiration dates.\n        *   **City of Montgomery, Alabama:** Features a data dashboard with an interactive application for construction permits, allowing users to explore ongoing and completed development projects.\n        *   **Sacramento, California:** Offers \"Applied Building Permits Archive\" and \"Issued Building Permits Archive\" through its Open Data Portal, providing monthly updated data from the City's Automated Permitting System.\n        *   **Nashville, Tennessee:** The Nashville Open Data Portal provides details of building permits approved and issued by Metro Codes over a rolling three-year period, updated daily.\n        *   **Raleigh, North Carolina:** The Open Data Raleigh portal includes all pending and approved building permits.\n        *   **Los Angeles County, California:** Has a \"Building Permit Viewer\" for unincorporated areas, allowing searches by address or Assessor's Parcel Number (APN). Permits are available as scanned PDF images or records in their tracking systems.\n        *   **City of Albuquerque, New Mexico:** Offers an online services system for permit searches, application searches, and business license searches. While building permits themselves might not be directly publicly available, you can search for Certificates of Occupancy related to a building permit.\n        *   **City of Spokane, Washington:** Allows searching its permitting database by general search, site address, contractor license information, or permit information.\n        *   **City of Omaha, Nebraska:** Provides online access to permits, licenses, and city applications.\n        *   **St. Louis County, Missouri:** You can search the county's database for current permit information by general search, project address, contractor license information, parcel number, or permit number.\n        *   **Austin, Texas:** Their \"Austin Build + Connect (AB+C)\" portal's Public Search function allows you to search permits and case history without registration.\n*   **Search by Address, Parcel Number, or Permit Number:** Most of these online systems allow you to search using a property address, an Assessor's Parcel Number (APN), or a known permit number.\n\n**2. State and Federal Data Sources**\n\nFor broader trends or aggregated data, some government agencies compile permit information at higher levels.\n\n*   **U.S. Census Bureau's Building Permits Survey (BPS):** This survey provides national, state, and local statistics on new privately-owned residential construction. You can download historical data at state, county, and metropolitan statistical area (MSA) levels. It focuses on final permits and is updated annually.\n*   **NAHB Housing Permit Data Portal:** The National Association of Home Builders (NAHB) offers a portal that provides easy access to data from the U.S. Census Bureau's monthly building permits survey. You can customize searches to view data at the metro, county, or local builders association level, including the number of buildings, units, and valuation for single-family and multifamily housing.\n\n**3. Freedom of Information Act (FOIA) Requests**\n\nIf you cannot find the specific permit information online through local government portals, you can submit a Freedom of Information Act (FOIA) request (or its state-level equivalent, often called \"Sunshine Laws\") to the relevant city or county department.\n\n*   **How it works:** FOIA laws presume that all records in the custody of a public body are open to inspection or copying. You'll need to submit a written request to the department that maintains the records, specifying the information you're seeking (e.g., address, dates).\n*   **Limitations:** While public records, building *plans* for private projects are often exempt from disclosure under FOIA to protect security and intellectual property rights, unless disclosure would compromise security in the case of public projects. However, the permit details themselves, like application status, inspections, and violations, are generally accessible.\n*   **Cost:** The first 50 pages of photocopies are often free, with a small charge for additional pages (e.g., $.15 per page in Chicago).\n\n**4. Third-Party Platforms with Free Tiers (Use with Caution)**\n\nWhile you want to avoid subscriptions, some platforms that aggregate permit data might offer limited free access or specific reports.\n\n*   **Shovels Online (shovels.ai):** This platform claims to offer a free sign-up to explore permits and contractor data nationwide. You can search by city, ZIP code, or address and filter by permit type, contractor specialty, job value, and date range. It also allows you to export filtered results to CSV. Shovels covers approximately 85% of the U.S. population with data from over 2,770 jurisdictions.\n*   **BuildZoom:** Tracks building activity associated with licensed contractors across the U.S. and has a database of historical permit data. It can be explored by metro area, ZIP code, or state. While often cited as a data provider, check for free search options.\n*   **Buildchek:** Specializes in building permit data for Texas, allowing searches by address, ZIP code, city, or county for residential and commercial properties. They state that coverage varies by municipality and county.\n\n**Tips for Researching:**\n\n*   **Be Specific:** When searching online portals, provide as much detail as possible (exact address, including street numbers, and possibly the city or county).\n*   **Check Multiple Levels:** If a city website doesn't yield results, check the county's planning or building department website, as some permits might be handled at the county level, especially in unincorporated areas.\n*   **Look for \"Open Data\" Portals:** Many governments have dedicated \"Open Data\" initiatives where they publish various datasets, including permits, for public use.\n*   **Understand Data Limitations:** Be aware that data coverage and formats can vary significantly between jurisdictions. Older records might be less digitized or require in-person visits.\n*   **Distinguish \"Applied\" from \"Issued\" Permits:** Some portals provide data on both applied and issued permits. An \"applied\" permit means the application was submitted, while an \"issued\" permit means it has been approved.\n\nBy utilizing these free public resources, you should be able to effectively research apartment construction permits without incurring subscription fees.",
+  "sources": [
+    {
+      "title": "miamidade.gov",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGCPM0Ia5Rdn3JAri0VfUtLOd3o_pAXi0mtCVFGtvpO17X15iOroxT4h7Ns15fnrU5VOC2fYdxN5IaeBa8W_Lt2ZiBiKHdWsO3nmhM4FGUyrLsoTAVCAm4J8ddlEH0q9ZjGMbXh9XX24WUSSLzQmgP7DyKRFpw3ETrM1oG8m5sL_soTz-M6-Vd-VA=="
+    },
+    {
+      "title": "miamidade.gov",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG-RW_ad4mcEDIIX-keJmrfpxSeqV-Z9sN-8z1wEMb_ZW--jtueNJY_aD3q1EXVqzwJQR_mKhEZzF1IS9BQ5Syw5IfDXVOTDudOSDi8nVHB9wYCxu81xAMoL4Y7jas="
+    },
+    {
+      "title": "chicago.gov",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFU4YbA9hL84WLdTd_08PQo_ZWxedOcT2ZMTUYCcrWhPwQl35GCBZT6xhTgKSvQ-HplZKf-XQX1QEgPUXT9Q_-skcXEbPKYnFEYBJPfQ3JLzKZtF4PmVx97dauCRJO5YZi57TGdh07VPw=="
+    },
+    {
+      "title": "cityofchicago.org",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEolXW8wJXcgIUF7AO3MzXhyFUONM_39ACerFty7kbi7rDRrQdpwn9J4L6_e36pP5sPaPlhsxrdAd3zvRv01bzC6zU7HdHXkA1yHY1stDp4W5Jy83l2zaFqjC-l4ZiqmKsV1N8x6prdYTnjyp2mTtFWl-1Fj-6fsN13w3EFAqA="
+    },
+    {
+      "title": "youtube.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGg6vD2oeS789kfMwXKHexYoc09EPI97cTRBFiFt5XEY7nJJ5gv5fkpbVEX_ekeqXGhmqZhdK1UwLl6GRFSmH8ZV6NiRenBuNrdrV1GfSS0zRB5Z4SqhoqvptawMU7Su8_EKdKSxzU="
+    },
+    {
+      "title": "insidesandiego.org",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHd0PNtJ2P8qnstbGPA6ZCoNefuGbMl9P4CBqtW8WkWfl6sIGCoPGRit6aRcIgS7LOX6nO4g4MXy0VxFJCjzGdNb8U-lPOQg5MWA3j7PnE7gqQrpsQ9ifzX-kln8vtRUfnqIQYXstCVqpVIZXHTQCLTABHh3tTDASeKsGJQEJW751DKe4tB7p9dsqKN25o="
+    },
+    {
+      "title": "ocfl.net",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE0XmWSf9lnGMRdQFwivdW5XUGneGHULtQz9CRyKTLHLFiCLpDJokth_VHtYKg3swluY1_Odsfx6bKFe5S-9UNO-Xfn9fi3e6YCBb-HBdHPEOitEfTU8Lj7wdKDIaiHh40IA-tOCnNWycZzd15NFkbnlA=="
+    },
+    {
+      "title": "seattle.gov",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGN1huYgwQB4mQYkchkB7V6HLGOjy1AmaM21D6BxIk8Mu1I-sdQ6lGUICOJdSK07QKCJholhng5C2ixgAeXsaROnkPxInlrzj2FKWk8C3cr3stZEgm-aDl4lZQyWemqd-pvhhXRmuQNLbHJUoWWfVcH-m57YQKRK6qFn71coUJjKA=="
+    },
+    {
+      "title": "montgomeryal.gov",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHrHHdeBZc0s39ekDlZCtIVDcdAzXiTgyG-FfuEQwE38rTItOtko4S4LAYwwGN8uaI40itSMcm1JK86ynbUt8pVS2tQkWYauhv9aJ98wgePjLkLPfn0fWFGc98Pg8bXYwHsI-b4b-4BRR79E4eJF86sMA=="
+    },
+    {
+      "title": "sacog.org",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFRRvIM53BN87joRdt4XoKkSmC5MFo_nyL0jZLEOq1_9jt6d3g1KgWROlLfgwMlpslhqqDRSEYm-6coge35OS0hBfsrGn1fyW11MV9_KlKmmt1-iUJEl7t3P42Ew2s5hU7QqqIXaa7miqNs6-OSfzv1r1bGnSMgMS8zUQeXmUmj0Wt3tA=="
+    },
+    {
+      "title": "nashville.gov",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGpRZtVcA6gTiBghXbxCKSGb1lYw-MICiVgC2ncQK2sVPnwd6A5q19rW5FX_RNXd4arnCSmZFJpvrroeYNusB3-hZ28l_QsijyUEbSVv2hEMURlVfvOjRnTVwNj6zQWcgW3W4SM6eFi1XYiSLxtVOh639hA3ZVD6lrX9_4m6skzzrS94kylKY0="
+    },
+    {
+      "title": "arcgis.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEMikKc-QXNRynpak6sLbPGepqZjE9DkEbIPoAUIyEpmH-PWQlsGEJTdCzs3aL02sGpYBJNOvzasB8XuOuoKjD8hdCWl9-PfGb7ILafxU7v-JZOLp7-L6eFQEQpJQ3mMcr2hOVn2YJal51ZqLNiudGPCO5kWW7umQ4t"
+    },
+    {
+      "title": "lacounty.gov",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEZHzj6mLbmJLQhVMiR1auQAoJFape1Z1cqxiT-ADgjEvr1faLwKXWacl7j95Hf_8uvMq44RKm1OHELVixGyTyDvhd1yesGfqrFnIkDVHgFvY8V-l3QepvBS7JKN2wvnB5-ODo__5FGSn0iM7CrtA=="
+    },
+    {
+      "title": "cabq.gov",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE2nHMdIbwyH4xWKciOou4z25bQ1nSF1pm7TF_EdFAEMuZP5aQwGSQql4WfDfcVKl8DWBPXBaRTMinKKL1holi8ADo2R9wrZEVNFc6tr_Xvb5UvH6R2RfFv7YWEvC5IOQE2m0BvpuVkObiyN-7qYuEZ39qFUhmovmdmTtYqqKnMlnpdQaBFTEg2KDBgnEnm4g05oOzymzF5sXJC_GExuFCse0b6FqPr7tjOJOpd5A=="
+    },
+    {
+      "title": "cabq.gov",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGwMvLsr8eT5WmC5J_8GTguSg0fyK5cb2kl15e7kCEPOZUtHrPXZrjLXe9KFnbmj-F_HvyKUDTZxE9irSopcfdThnkSnkaOJCvkKfMOkxCqbsoqSAt9i7K1aMHgThPef4CVPQbei2abQdNNg7NoVBaPHKAvVSZO-o9V7Ws_bEF9dg=="
+    },
+    {
+      "title": "spokanepermits.org",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGwLcMK-rESCyHLBTu2gKcOZcQ-EPzUkBIO39Vkv9KC_Aa19aFLC4JiCqstNSm551alkctVa2g3pMhQsaAFahzpK2IrJtWwj_AE-QJp2mYm7ngiI5fzVZmHCGOvSnBnQWvvYuo2HcS-0IhdgpTE5g_eIXVq0K61YIyeHQWnatdLHsS7VETJv0VoKa8CsEWB_xPIg_vmQQ=="
+    },
+    {
+      "title": "accela.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEBrOKf-iEqP5K113JIXPUTK0BYRD9N9kTL7zqNk50pGe0TW_rhJz7ipT1fl6ZIn29uquncQiFra4eTAr7nlOo8FmiOdDtpQKFEocqNQywGIbt8TYjiJjB3qUv6VXRTgBTUezcjR9loEo9JOZXT-cu54gt7rrfv51JTsF34AksVG9CK_4SzW2ssSFaHtGkPpm5IgHqcRXiRQFMOMLUGfmFZ8rkJFREgvuwrY_Wa3SlqU-n5LzaqXl2uqE9FKap90b8i_aeCajmEfP7DQXOc6efspI_euQ2sO0sYHv2eJIgv4BQ0u8ZBVbfVNZ2IIiB1DbTbd8n_ETYkbeDyoG9m4-LevvZQiEvhk8oTKJ9kV7dhtXfhjpkVYC8aGgB9FCs="
+    },
+    {
+      "title": "accela.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHx3AaZFrlEFhWFHqdeRj_ck_csWrrFSlecT-Lz_rTWqAlhyycEskPeUdLcIzowbY47B7sYS0-ok9dG22qfihgoOd6pt2GOcTbneLUruYxU_d-S9UGFQSUH0jRB3YEIvqjjyRQboXN6a6HyDQ0u5YsaIc-43n83vyQ-uD4iZJz7OsX9IQW9YdiCNyV0puqxWGDDvA=="
+    },
+    {
+      "title": "austintexas.gov",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG2HucVP1nEx9b5kL3OAX1rzYxOwWnTWjE-WZwSjK1bZzeuNGvK-rOPdaWPr57-9epZqUBhIkpELdtnSh5uSfmHBibk_fijDMPmXRMctcjY-Cko_Jcl8l1NMz3NQjQTQdwFwvESyDB-u4WpM50m66ksIZE_8Z0G0ZiAiHqP4T0_I2ntN90="
+    },
+    {
+      "title": "arcgis.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGjDG-4BjGFWrdpHp4cdoXMyzM0238C5AyptKD2JWE7vNifh55P4I6j3OyZ5DkSAqX-2cPQWrEXPGxJbB0XZVNe5ppYm42GMXkSa8EBylDuCAhsOaosYVw1NfQYcIPivNV7CUuUGkQV4DsSUWRIpI9HVGcMF21VigQort98Gr1RHwYJsUaMBo52_ccXIGGvaxjsHH24wl9ZCYx03JbxJHEj"
+    },
+    {
+      "title": "census.gov",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH0bqy-G6FP08zKsAHjfewE_s8MUZjmGe5kxY9F3hI5eTOf5h3KAAzqL5vVFwt1pm-2nluIcsNXyLVXrrJitlmJR2hu16m6DayxvalhGe8KyQs9Rt8ducsXFHrAx-19x10Ki0Y="
+    },
+    {
+      "title": "nahb.org",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE33OrmuMWkzHU15GG10C_3iRP0Tf_5FddxPosYy_Hci98ht_lUAo4YBYx1VGuVzV-USsJb7WVT4v5cdFxhDny57ez74S4Erw4TgUJMOQW7DvrZrQWZEb5TQfbG8p3TPIHwU600GCj-aNkfbuL2Jfyugl4Y89BFNKBV31gzhyuUJ0s982l6x7pPx-MCGLgFodgTKSEibcHK-QHGFq1ZtPB16k5zDZlMXedlP6fSPJuO-i9W"
+    },
+    {
+      "title": "ilga.gov",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEAU2V0viGGoJEQ1x1Tdf7kgSFbiGIVKDRtHk_r6OkTpUfxOQ6SaGybOk_e0B4aVIzCIg1baGdLiyBtxTvIHTOvvRp8cfjq0fknZjt2x5qjr6QfUBAq0MwHWp35bXzcnDJF_dKWvm3cSYgB8MVYi3Aq_WpmCD_bLAReg23aphQ="
+    },
+    {
+      "title": "chicago.gov",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEb_e4c3PoV6mF5z9cgFOHCalPWQE9meAA0lBlghFV8PoABsC092bxqA8f-9lojUKNcKBXVAk3letSL7imi5F4ETkB-jsSI1sk2kttQ5bAE2pztBH2fGYuLxr-QgvdB0ago05uavc5FIDvnJGVKd248ZLIBN_Rrap1y9RKhfVFmusAOjWeLpB1waOhWAx_wB7e8bFvp0O9TP_H83Fw_cOVvOHThpHCsizgmzH0="
+    },
+    {
+      "title": "chicago.gov",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH4ujdHjf1JLIKIYwAhy2ErBVrjh2SGNWNSX7iXp0DwL-qz2mJ8y9Ie1KBBTSSEoNEAA20MHlECoN0Nl_prf7j0PfzaESi2zx8kts-WteVl-nM2Qnw2gl2bid6XxpLLECEPSnea0YyLCg0jKQbIh8-9uIzfGM_VHrSZo6yiNP-0rg=="
+    },
+    {
+      "title": "ancelglink.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFBWgVb7tKSpyiKIqcguWpJLkW3RZlhruu2f_zddvpB5r-kuBFJrQ8Kl3uvWdJ6pXx4quB3GdjIukXeB-CqvnD8cNzs1VDWFOGUwfMW-5klRwhA0N1BBt0dtCGzhWYImiHBaOLBUGYFR3DokT0DvHk3nnhIR_tPEjMHnMKwWASCdQvL4T3G35WZYCFxB5HsgJHwgzLrgw=="
+    },
+    {
+      "title": "shovels.ai",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGqPEkSgCF8ip-vbmqXBy4dR0Uap68TfzPpMf8U4fyOJSybeiLsz3ls-c3rkEnnaN5etsd4Z9DDXO9mMy3EctcXfFrpqN25R6vgi2JCiNJJyHPe3lCuDn_nRd85rWwiedN1qoE_CDnlWoqzQA=="
+    },
+    {
+      "title": "attomdata.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHuMTDVC55jevtZXu0FODCXw6Mkc4llIkTaKdX_I4-sc5PiAzwSKTXKqgdF38xBxXB484l8HoVYbq-71nb992-wlURhSV1XM-D95rfeMMJ90bFuMvbLCIY-pJuoK2-SRe0c20tcJULewyViZO-vH-Ecx820ueyMXfFhU1dupjm6AWmK80fbQVHVepO2KEgDDkt_BteKk6uv7nI="
+    },
+    {
+      "title": "buildchek.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFPwD4LDW5WGdS2fGFAO7Ds2MFCPzIGCJNPrfno_V_HvlFJa6wPGfcHaRe8zVkjcQavyNG2Uw-vEKYjOVsFdIhS3s1xjnP_9hp2d52TgN_w8ygDivVnwe4QNyffJiuoLteiwytGUgShn2CGWn1Svo5OW1ZTZW5P8d5umBcJWAK4D8J_jg=="
+    }
+  ],
+  "brands": [
+    {
+      "brand": "Public records (DIY)",
+      "first_at": 611,
+      "mentions": 2,
+      "rank": 1
+    },
+    {
+      "brand": "BuildZoom",
+      "first_at": 6931,
+      "mentions": 1,
+      "rank": 2
+    }
+  ],
+  "links": [
+    {
+      "title": "miamidade.gov",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGCPM0Ia5Rdn3JAri0VfUtLOd3o_pAXi0mtCVFGtvpO17X15iOroxT4h7Ns15fnrU5VOC2fYdxN5IaeBa8W_Lt2ZiBiKHdWsO3nmhM4FGUyrLsoTAVCAm4J8ddlEH0q9ZjGMbXh9XX24WUSSLzQmgP7DyKRFpw3ETrM1oG8m5sL_soTz-M6-Vd-VA=="
+    },
+    {
+      "title": "miamidade.gov",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG-RW_ad4mcEDIIX-keJmrfpxSeqV-Z9sN-8z1wEMb_ZW--jtueNJY_aD3q1EXVqzwJQR_mKhEZzF1IS9BQ5Syw5IfDXVOTDudOSDi8nVHB9wYCxu81xAMoL4Y7jas="
+    },
+    {
+      "title": "chicago.gov",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFU4YbA9hL84WLdTd_08PQo_ZWxedOcT2ZMTUYCcrWhPwQl35GCBZT6xhTgKSvQ-HplZKf-XQX1QEgPUXT9Q_-skcXEbPKYnFEYBJPfQ3JLzKZtF4PmVx97dauCRJO5YZi57TGdh07VPw=="
+    },
+    {
+      "title": "cityofchicago.org",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEolXW8wJXcgIUF7AO3MzXhyFUONM_39ACerFty7kbi7rDRrQdpwn9J4L6_e36pP5sPaPlhsxrdAd3zvRv01bzC6zU7HdHXkA1yHY1stDp4W5Jy83l2zaFqjC-l4ZiqmKsV1N8x6prdYTnjyp2mTtFWl-1Fj-6fsN13w3EFAqA="
+    },
+    {
+      "title": "youtube.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGg6vD2oeS789kfMwXKHexYoc09EPI97cTRBFiFt5XEY7nJJ5gv5fkpbVEX_ekeqXGhmqZhdK1UwLl6GRFSmH8ZV6NiRenBuNrdrV1GfSS0zRB5Z4SqhoqvptawMU7Su8_EKdKSxzU="
+    },
+    {
+      "title": "insidesandiego.org",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHd0PNtJ2P8qnstbGPA6ZCoNefuGbMl9P4CBqtW8WkWfl6sIGCoPGRit6aRcIgS7LOX6nO4g4MXy0VxFJCjzGdNb8U-lPOQg5MWA3j7PnE7gqQrpsQ9ifzX-kln8vtRUfnqIQYXstCVqpVIZXHTQCLTABHh3tTDASeKsGJQEJW751DKe4tB7p9dsqKN25o="
+    },
+    {
+      "title": "ocfl.net",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE0XmWSf9lnGMRdQFwivdW5XUGneGHULtQz9CRyKTLHLFiCLpDJokth_VHtYKg3swluY1_Odsfx6bKFe5S-9UNO-Xfn9fi3e6YCBb-HBdHPEOitEfTU8Lj7wdKDIaiHh40IA-tOCnNWycZzd15NFkbnlA=="
+    },
+    {
+      "title": "seattle.gov",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGN1huYgwQB4mQYkchkB7V6HLGOjy1AmaM21D6BxIk8Mu1I-sdQ6lGUICOJdSK07QKCJholhng5C2ixgAeXsaROnkPxInlrzj2FKWk8C3cr3stZEgm-aDl4lZQyWemqd-pvhhXRmuQNLbHJUoWWfVcH-m57YQKRK6qFn71coUJjKA=="
+    },
+    {
+      "title": "montgomeryal.gov",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHrHHdeBZc0s39ekDlZCtIVDcdAzXiTgyG-FfuEQwE38rTItOtko4S4LAYwwGN8uaI40itSMcm1JK86ynbUt8pVS2tQkWYauhv9aJ98wgePjLkLPfn0fWFGc98Pg8bXYwHsI-b4b-4BRR79E4eJF86sMA=="
+    },
+    {
+      "title": "sacog.org",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFRRvIM53BN87joRdt4XoKkSmC5MFo_nyL0jZLEOq1_9jt6d3g1KgWROlLfgwMlpslhqqDRSEYm-6coge35OS0hBfsrGn1fyW11MV9_KlKmmt1-iUJEl7t3P42Ew2s5hU7QqqIXaa7miqNs6-OSfzv1r1bGnSMgMS8zUQeXmUmj0Wt3tA=="
+    },
+    {
+      "title": "nashville.gov",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGpRZtVcA6gTiBghXbxCKSGb1lYw-MICiVgC2ncQK2sVPnwd6A5q19rW5FX_RNXd4arnCSmZFJpvrroeYNusB3-hZ28l_QsijyUEbSVv2hEMURlVfvOjRnTVwNj6zQWcgW3W4SM6eFi1XYiSLxtVOh639hA3ZVD6lrX9_4m6skzzrS94kylKY0="
+    },
+    {
+      "title": "arcgis.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEMikKc-QXNRynpak6sLbPGepqZjE9DkEbIPoAUIyEpmH-PWQlsGEJTdCzs3aL02sGpYBJNOvzasB8XuOuoKjD8hdCWl9-PfGb7ILafxU7v-JZOLp7-L6eFQEQpJQ3mMcr2hOVn2YJal51ZqLNiudGPCO5kWW7umQ4t"
+    },
+    {
+      "title": "lacounty.gov",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEZHzj6mLbmJLQhVMiR1auQAoJFape1Z1cqxiT-ADgjEvr1faLwKXWacl7j95Hf_8uvMq44RKm1OHELVixGyTyDvhd1yesGfqrFnIkDVHgFvY8V-l3QepvBS7JKN2wvnB5-ODo__5FGSn0iM7CrtA=="
+    },
+    {
+      "title": "cabq.gov",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE2nHMdIbwyH4xWKciOou4z25bQ1nSF1pm7TF_EdFAEMuZP5aQwGSQql4WfDfcVKl8DWBPXBaRTMinKKL1holi8ADo2R9wrZEVNFc6tr_Xvb5UvH6R2RfFv7YWEvC5IOQE2m0BvpuVkObiyN-7qYuEZ39qFUhmovmdmTtYqqKnMlnpdQaBFTEg2KDBgnEnm4g05oOzymzF5sXJC_GExuFCse0b6FqPr7tjOJOpd5A=="
+    },
+    {
+      "title": "cabq.gov",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGwMvLsr8eT5WmC5J_8GTguSg0fyK5cb2kl15e7kCEPOZUtHrPXZrjLXe9KFnbmj-F_HvyKUDTZxE9irSopcfdThnkSnkaOJCvkKfMOkxCqbsoqSAt9i7K1aMHgThPef4CVPQbei2abQdNNg7NoVBaPHKAvVSZO-o9V7Ws_bEF9dg=="
+    },
+    {
+      "title": "spokanepermits.org",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGwLcMK-rESCyHLBTu2gKcOZcQ-EPzUkBIO39Vkv9KC_Aa19aFLC4JiCqstNSm551alkctVa2g3pMhQsaAFahzpK2IrJtWwj_AE-QJp2mYm7ngiI5fzVZmHCGOvSnBnQWvvYuo2HcS-0IhdgpTE5g_eIXVq0K61YIyeHQWnatdLHsS7VETJv0VoKa8CsEWB_xPIg_vmQQ=="
+    },
+    {
+      "title": "accela.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEBrOKf-iEqP5K113JIXPUTK0BYRD9N9kTL7zqNk50pGe0TW_rhJz7ipT1fl6ZIn29uquncQiFra4eTAr7nlOo8FmiOdDtpQKFEocqNQywGIbt8TYjiJjB3qUv6VXRTgBTUezcjR9loEo9JOZXT-cu54gt7rrfv51JTsF34AksVG9CK_4SzW2ssSFaHtGkPpm5IgHqcRXiRQFMOMLUGfmFZ8rkJFREgvuwrY_Wa3SlqU-n5LzaqXl2uqE9FKap90b8i_aeCajmEfP7DQXOc6efspI_euQ2sO0sYHv2eJIgv4BQ0u8ZBVbfVNZ2IIiB1DbTbd8n_ETYkbeDyoG9m4-LevvZQiEvhk8oTKJ9kV7dhtXfhjpkVYC8aGgB9FCs="
+    },
+    {
+      "title": "accela.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHx3AaZFrlEFhWFHqdeRj_ck_csWrrFSlecT-Lz_rTWqAlhyycEskPeUdLcIzowbY47B7sYS0-ok9dG22qfihgoOd6pt2GOcTbneLUruYxU_d-S9UGFQSUH0jRB3YEIvqjjyRQboXN6a6HyDQ0u5YsaIc-43n83vyQ-uD4iZJz7OsX9IQW9YdiCNyV0puqxWGDDvA=="
+    },
+    {
+      "title": "austintexas.gov",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG2HucVP1nEx9b5kL3OAX1rzYxOwWnTWjE-WZwSjK1bZzeuNGvK-rOPdaWPr57-9epZqUBhIkpELdtnSh5uSfmHBibk_fijDMPmXRMctcjY-Cko_Jcl8l1NMz3NQjQTQdwFwvESyDB-u4WpM50m66ksIZE_8Z0G0ZiAiHqP4T0_I2ntN90="
+    },
+    {
+      "title": "arcgis.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGjDG-4BjGFWrdpHp4cdoXMyzM0238C5AyptKD2JWE7vNifh55P4I6j3OyZ5DkSAqX-2cPQWrEXPGxJbB0XZVNe5ppYm42GMXkSa8EBylDuCAhsOaosYVw1NfQYcIPivNV7CUuUGkQV4DsSUWRIpI9HVGcMF21VigQort98Gr1RHwYJsUaMBo52_ccXIGGvaxjsHH24wl9ZCYx03JbxJHEj"
+    },
+    {
+      "title": "census.gov",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH0bqy-G6FP08zKsAHjfewE_s8MUZjmGe5kxY9F3hI5eTOf5h3KAAzqL5vVFwt1pm-2nluIcsNXyLVXrrJitlmJR2hu16m6DayxvalhGe8KyQs9Rt8ducsXFHrAx-19x10Ki0Y="
+    },
+    {
+      "title": "nahb.org",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE33OrmuMWkzHU15GG10C_3iRP0Tf_5FddxPosYy_Hci98ht_lUAo4YBYx1VGuVzV-USsJb7WVT4v5cdFxhDny57ez74S4Erw4TgUJMOQW7DvrZrQWZEb5TQfbG8p3TPIHwU600GCj-aNkfbuL2Jfyugl4Y89BFNKBV31gzhyuUJ0s982l6x7pPx-MCGLgFodgTKSEibcHK-QHGFq1ZtPB16k5zDZlMXedlP6fSPJuO-i9W"
+    },
+    {
+      "title": "ilga.gov",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEAU2V0viGGoJEQ1x1Tdf7kgSFbiGIVKDRtHk_r6OkTpUfxOQ6SaGybOk_e0B4aVIzCIg1baGdLiyBtxTvIHTOvvRp8cfjq0fknZjt2x5qjr6QfUBAq0MwHWp35bXzcnDJF_dKWvm3cSYgB8MVYi3Aq_WpmCD_bLAReg23aphQ="
+    },
+    {
+      "title": "chicago.gov",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEb_e4c3PoV6mF5z9cgFOHCalPWQE9meAA0lBlghFV8PoABsC092bxqA8f-9lojUKNcKBXVAk3letSL7imi5F4ETkB-jsSI1sk2kttQ5bAE2pztBH2fGYuLxr-QgvdB0ago05uavc5FIDvnJGVKd248ZLIBN_Rrap1y9RKhfVFmusAOjWeLpB1waOhWAx_wB7e8bFvp0O9TP_H83Fw_cOVvOHThpHCsizgmzH0="
+    },
+    {
+      "title": "chicago.gov",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH4ujdHjf1JLIKIYwAhy2ErBVrjh2SGNWNSX7iXp0DwL-qz2mJ8y9Ie1KBBTSSEoNEAA20MHlECoN0Nl_prf7j0PfzaESi2zx8kts-WteVl-nM2Qnw2gl2bid6XxpLLECEPSnea0YyLCg0jKQbIh8-9uIzfGM_VHrSZo6yiNP-0rg=="
+    },
+    {
+      "title": "ancelglink.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFBWgVb7tKSpyiKIqcguWpJLkW3RZlhruu2f_zddvpB5r-kuBFJrQ8Kl3uvWdJ6pXx4quB3GdjIukXeB-CqvnD8cNzs1VDWFOGUwfMW-5klRwhA0N1BBt0dtCGzhWYImiHBaOLBUGYFR3DokT0DvHk3nnhIR_tPEjMHnMKwWASCdQvL4T3G35WZYCFxB5HsgJHwgzLrgw=="
+    },
+    {
+      "title": "shovels.ai",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGqPEkSgCF8ip-vbmqXBy4dR0Uap68TfzPpMf8U4fyOJSybeiLsz3ls-c3rkEnnaN5etsd4Z9DDXO9mMy3EctcXfFrpqN25R6vgi2JCiNJJyHPe3lCuDn_nRd85rWwiedN1qoE_CDnlWoqzQA=="
+    },
+    {
+      "title": "attomdata.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHuMTDVC55jevtZXu0FODCXw6Mkc4llIkTaKdX_I4-sc5PiAzwSKTXKqgdF38xBxXB484l8HoVYbq-71nb992-wlURhSV1XM-D95rfeMMJ90bFuMvbLCIY-pJuoK2-SRe0c20tcJULewyViZO-vH-Ecx820ueyMXfFhU1dupjm6AWmK80fbQVHVepO2KEgDDkt_BteKk6uv7nI="
+    },
+    {
+      "title": "buildchek.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFPwD4LDW5WGdS2fGFAO7Ds2MFCPzIGCJNPrfno_V_HvlFJa6wPGfcHaRe8zVkjcQavyNG2Uw-vEKYjOVsFdIhS3s1xjnP_9hp2d52TgN_w8ygDivVnwe4QNyffJiuoLteiwytGUgShn2CGWn1Svo5OW1ZTZW5P8d5umBcJWAK4D8J_jg=="
+    }
+  ]
+}

@@ -4,34 +4,40 @@
   "is_consumer_app": false,
   "set": "A",
   "question": "How do I find apartment buildings under construction in Dallas?",
-  "intent": "find-pipeline",
+  "intent": "pipeline",
   "asked_on": "2026-09-23",
   "ok": true,
-  "answer": "Here's how people typically track apartment construction activity in a specific metro like Dallas:\n\n**Commercial real estate data platforms (most reliable, but often subscription-based)**\n- **CoStar** \u2014 the industry standard for tracking multifamily pipeline, permits, and construction status by submarket; widely used by brokers and developers, but expensive/enterprise-priced.\n- **Yardi Matrix** \u2014 publishes multifamily construction and supply reports, including Dallas-Fort Worth specific data; some reports are free.\n- **RealPage** \u2014 tracks apartment supply/demand, often cited in DFW market reports.\n- **Zonda / Metrostudy** \u2014 strong for new residential construction tracking in Texas specifically.\n\n**Public permit and planning data**\n- **City of Dallas Development Services / Permits** \u2014 the city's online permit portal lets you search active building permits by type (multifamily) and address.\n- Surrounding cities (Plano, Frisco, Irving, Fort Worth, Arlington, McKinney, etc.) each have their own permit portals \u2014 DFW apartment construction is heavily suburban, so checking individual city planning departments matters as much as Dallas proper.\n- **North Central Texas Council of Government (NCTCOG)** sometimes aggregates regional development data.\n\n**News and trade publications**\n- **Dallas Business Journal** \u2014 regularly reports on new apartment project announcements and groundbreakings.\n- **Bisnow Dallas-Fort Worth** \u2014 free newsletter/site covering CRE development news, including multifamily.\n- **Multi-Housing News** and **Multifamily Dew** \u2014 national trade press that frequently covers major Texas projects.\n- **D Magazine's real estate coverage** \u2014 occasionally covers large residential developments.\n\n**Free/lighter-weight tools**\n- **Apartments.com / Apartment List \"Coming Soon\" listings** \u2014 some new developments list pre-leasing pages before completion.\n- **RentCafe** and **Zumper** market reports \u2014 occasionally publish new-supply data for DFW.\n- **Google Maps / satellite imagery** combined with permit lookups, for verifying a specific site.\n\n**Practical approach**: for a broad market view, start with a Dallas Business Journal or Bisnow search for \"Dallas apartment construction 2026\"; for a specific submarket or address, go straight to that city's permit portal since Dallas-area construction is fragmented across dozens of municipalities.\n\nSince this is a research topic rather than something in your working directory, I didn't pull live data \u2014 if you want, I can run a web search for current 2026 DFW multifamily pipeline numbers or specific project names.",
+  "answer": "Here's how people typically track apartment construction activity in Dallas, from free public sources to paid commercial data:\n\n## Free / public sources\n\n- **City of Dallas Development Services permit portal** (Accela-based \"Dallas Development Services\" online portal) \u2014 search active building permits by type (\"New Multifamily,\" \"New Construction\") and address/zip. Most DFW suburbs (Plano, Frisco, Irving, Arlington, Fort Worth, McKinney, etc.) have their own permit portals, so you'd need to check each municipality separately.\n- **Dallas City Plan Commission & zoning case agendas** \u2014 multifamily projects usually go through zoning changes (PD, MF districts) before permitting, so CPC agendas/minutes on dallascityhall.com often show projects 6\u201318 months before a crane goes up.\n- **Dallas Morning News real estate section** (specifically reporter Steve Brown's coverage, now continued by others on the business desk) regularly covers new apartment announcements.\n- **Candy's Dirt** \u2014 a well-known North Texas real estate news site that frequently covers new multifamily development.\n- **Dallas Business Journal** \u2014 has a dedicated commercial real estate vertical and periodically runs an \"apartment projects\" or \"residential real estate\" tracker/list.\n\n## Commercial data platforms (industry-standard, paid)\n\n- **Yardi Matrix** \u2014 probably the most widely used tool specifically for apartment construction pipelines; tracks units under construction, planned, and proposed by submarket, with developer/owner names.\n- **RealPage / RealPage Market Analytics** \u2014 similar multifamily-specific pipeline and permit tracking.\n- **CoStar** \u2014 the broad commercial real estate data standard; tracks construction starts, deliveries, and pipeline for multifamily alongside other asset classes.\n- **Dodge Construction Network (Dodge Data & Analytics)** \u2014 tracks construction projects/bids/permits across all building types, including multifamily.\n- **Zonda (formerly Metrostudy)** \u2014 more homebuilding-focused but also covers some multifamily/build-to-rent activity in DFW.\n\n## Industry/association sources\n\n- **Dallas Builders Association / Greater Dallas Builders Association** \u2014 sometimes publishes local permit or start data.\n- **NTX (North Texas) chapter of NAIOP** \u2014 commercial real estate development association with event content and sometimes market reports referencing active pipeline.\n- **Apartment List / RentCafe / Yardi's \"construction\" blog posts** \u2014 RentCafe (a Yardi product) periodically publishes public \"most apartments under construction by metro\" articles that include Dallas-Fort Worth rankings pulled from Yardi Matrix data.\n\n## Practical approach\n\nIf you want a free, DIY approach: pull active multifamily permits from the Dallas Development Services portal plus surrounding suburb portals, cross-reference with CPC zoning case history for anything recently rezoned to multifamily, and scan Candy's Dirt / Dallas Business Journal for announcements not yet reflected in permit data (since permits often lag announcements by months).\n\nIf this is for professional/investment research, a Yardi Matrix or CoStar subscription will save enormous time since they already normalize permit, zoning, and construction-start data into a searchable pipeline by submarket.\n\nI didn't use any tools for this \u2014 it's based on general knowledge of standard data sources rather than a live lookup, so I'd recommend confirming portal URLs and current subscription offerings directly, since interfaces and product names shift over time.",
   "brands": [
     {
-      "brand": "CoStar",
-      "first_at": 192,
-      "mentions": 1,
+      "brand": "Public records (DIY)",
+      "first_at": 194,
+      "mentions": 2,
       "rank": 1
     },
     {
-      "brand": "Yardi",
-      "first_at": 383,
-      "mentions": 1,
+      "brand": "Yardi Matrix",
+      "first_at": 1318,
+      "mentions": 3,
       "rank": 2
     },
     {
       "brand": "RealPage",
-      "first_at": 525,
-      "mentions": 1,
+      "first_at": 1522,
+      "mentions": 2,
       "rank": 3
     },
     {
-      "brand": "Apartments.com",
-      "first_at": 1756,
-      "mentions": 1,
+      "brand": "CoStar",
+      "first_at": 1626,
+      "mentions": 2,
       "rank": 4
+    },
+    {
+      "brand": "Dodge",
+      "first_at": 1789,
+      "mentions": 2,
+      "rank": 5
     }
   ],
   "links": []

@@ -1,0 +1,67 @@
+{
+  "engine": "claude-web",
+  "engine_label": "Claude (Sonnet) via claude -p, web search on",
+  "is_consumer_app": false,
+  "set": "A",
+  "question": "Are there free alternatives to CoStar or Yardi Matrix for multifamily pipeline data?",
+  "intent": "free-data",
+  "asked_on": "2026-09-23",
+  "ok": true,
+  "answer": "Short answer: nothing free matches CoStar or Yardi Matrix's property-level granularity (unit counts by specific project, expected delivery dates, developer/lender detail, submarket rollups), but you can piece together a reasonable pipeline picture from several free sources, depending on what \"pipeline\" means to you (national trends vs. specific projects).\n\n**Government/public data (best for trends, not individual projects)**\n- **Census Bureau Building Permits Survey** \u2013 monthly/annual permit counts by units-in-structure (5+ units = multifamily), down to metro and sometimes county level. The standard free source everyone uses as a CoStar proxy for the front end of the pipeline.\n- **Census Survey of Construction (SOC)** and **New Residential Construction** releases \u2013 add starts/completions data, which is closer to actual delivery timing than permits.\n- **NAHB (National Association of Home Builders)** \u2013 repackages Census permit data with nicer state/metro breakdowns and some multifamily-specific commentary.\n- **HUD State of the Cities Data Systems / USPS vacancy data** \u2013 useful for absorption/vacancy proxies, not pipeline per se.\n\n**City/local planning portals (best for actual project-level pipeline in specific markets)**\n- Many large cities publish their own project trackers, e.g. **SF Planning's Pipeline Report**, NYC DOB's open permit data on **NYC Open Data**, LA's PermitLA, etc. These are free, project-level, and often more current than national vendors for that one city, but there's no standardized cross-market format \u2014 you'd be scraping/joining dozens of portals yourself.\n- Many counties/cities run on **Socrata** or **ArcGIS Open Data** platforms, so if a market you care about uses one of those, you can often get permit/entitlement data via API for free.\n\n**Aggregator/consumer sites (national trend-level, not real pipeline databases)**\n- **Apartment List's Building Permits Dashboard** \u2013 free interactive chart of Census permit data by metro.\n- **RentCafe / Yardi's free market reports and blog** \u2013 Yardi Matrix itself publishes free national and top-market reports and research bulletins (not the full paid database, but decent free summaries).\n- **NMHC Quick Facts** \u2013 free apartment construction/economic-impact stats, aggregated, not project-level.\n- **Moody's Analytics / RealPage Analytics blogs** \u2013 periodically publish free permit/pipeline commentary pieces (not full data access).\n\n**What you won't get for free**\nThe thing CoStar, Yardi Matrix, and RealPage actually sell \u2014 a maintained, deduplicated database of individual multifamily projects with unit counts, expected delivery quarter, developer, lender, submarket tagging, and construction-status updates \u2014 doesn't have a free equivalent at that quality. The closest free approximations are (a) Census permits as a leading indicator, (b) individual city planning/building-permit open-data portals stitched together yourself, and (c) the periodic free reports paid vendors publish as marketing content.\n\nIf you tell me which metro(s) or use case (underwriting, market research, lead gen for a specific city) you're targeting, I can point you to the most relevant local open-data portal or a scraping approach.\n\nSources:\n- [Check Building Permits Data In Your Market \u2014 Apartment List](https://www.apartmentlist.com/research/building-permits-dashboard)\n- [Pipeline Report \u2014 SF Planning](https://sfplanning.org/project/pipeline-report)\n- [Building Permits by State and Metro Area \u2014 NAHB](https://www.nahb.org/news-and-economics/housing-economics/state-and-local-data/building-permits-by-state-and-metro-area)\n- [NMHC Quick Facts: New Construction](https://www.nmhc.org/research-insight/quick-facts-figures/quick-facts-new-construction/)\n- [2026 multifamily reports: Download the latest from Yardi Matrix](https://www.yardi.com/blog/multifamily-reports-yardi-matrix-2026/)\n- [March 2025 Multifamily Permit Update \u2014 RealPage Analytics](https://www.realpage.com/analytics/march-2025-multifamily-permit-update/)\n- [Best Commercial Real Estate Data Sources for 2026 \u2014 CRE Daily](https://www.credaily.com/reviews/best-commercial-real-estate-data-sources/)",
+  "brands": [
+    {
+      "brand": "CoStar",
+      "first_at": 35,
+      "mentions": 3,
+      "rank": 1
+    },
+    {
+      "brand": "Yardi Matrix",
+      "first_at": 45,
+      "mentions": 4,
+      "rank": 2
+    },
+    {
+      "brand": "Moody's",
+      "first_at": 2293,
+      "mentions": 1,
+      "rank": 3
+    },
+    {
+      "brand": "RealPage",
+      "first_at": 2313,
+      "mentions": 4,
+      "rank": 4
+    }
+  ],
+  "links": [
+    {
+      "title": "",
+      "url": "https://www.apartmentlist.com/research/building-permits-dashboard"
+    },
+    {
+      "title": "",
+      "url": "https://sfplanning.org/project/pipeline-report"
+    },
+    {
+      "title": "",
+      "url": "https://www.nahb.org/news-and-economics/housing-economics/state-and-local-data/building-permits-by-state-and-metro-area"
+    },
+    {
+      "title": "",
+      "url": "https://www.nmhc.org/research-insight/quick-facts-figures/quick-facts-new-construction/"
+    },
+    {
+      "title": "",
+      "url": "https://www.yardi.com/blog/multifamily-reports-yardi-matrix-2026/"
+    },
+    {
+      "title": "",
+      "url": "https://www.realpage.com/analytics/march-2025-multifamily-permit-update/"
+    },
+    {
+      "title": "",
+      "url": "https://www.credaily.com/reviews/best-commercial-real-estate-data-sources/"
+    }
+  ]
+}

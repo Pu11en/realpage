@@ -3,65 +3,77 @@
   "engine_label": "Claude (Sonnet) via claude -p, web search on",
   "is_consumer_app": false,
   "set": "A",
-  "question": "Where can I find Phoenix multifamily construction pipeline data?",
-  "intent": "find-pipeline",
+  "question": "What is the best way to find newly sold apartment complexes for sales prospecting?",
+  "intent": "sales",
   "asked_on": "2026-09-23",
   "ok": true,
-  "answer": "For Phoenix-area multifamily construction pipeline data, you have a few tiers of sources depending on how granular and how much you want to pay:\n\n**Local/regional specialist trackers (best for AZ-specific detail)**\n- **AZBEX** (azbex.com) \u2014 an Arizona-focused commercial real estate intelligence firm that specifically tracks the multifamily construction pipeline for metro Phoenix (units under construction, proposed, and planned by submarket). This is probably the single best niche source for what you're after.\n- **MMG Real Estate Advisors** publishes a quarterly \"Phoenix Pipeline Report\" with construction-stage breakdowns.\n- **Kidder Mathews** and **GetMultifamily.com** publish recurring (monthly/quarterly) Phoenix multifamily market reports with supply and absorption data.\n\n**National CRE data platforms (subscription, most comprehensive)**\n- **Yardi Matrix** \u2014 the industry-standard source for multifamily supply pipeline by metro/submarket, widely cited in national multifamily reports that call out Phoenix as a top-supply market.\n- **RealPage Market Analytics** \u2014 tracks under-construction units, deliveries, and absorption by metro.\n- **CoStar** \u2014 has detailed under-construction and proposed multifamily project data, including site-level detail.\n- **ALN Apartment Data** \u2014 strong Southwest/Texas-Arizona coverage of under-construction and lease-up properties.\n- **Moody's CRE (formerly REIS)** \u2014 metro-level supply pipeline and forecasts.\n\n**Brokerage research (free, periodic reports)**\n- CBRE, JLL, Cushman & Wakefield, and Colliers all publish quarterly Phoenix multifamily MarketBeat/Insight reports with construction pipeline figures, usually free as PDFs on their sites.\n\n**Public records (free, project-level, City of Phoenix)**\n- **City of Phoenix Planning & Development Department (PDD)** \u2014 rezoning cases, site plans, and General Plan amendments show projects before they break ground.\n- **SHAPE PHX** (Phoenix's permitting system, apps-secure.phoenix.gov/PDD) \u2014 active/issued commercial and multifamily building permits.\n- Reach PDD directly at 602-262-7811 for permit data exports if you need bulk/raw data.\n\n**Current snapshot** (from AZBEX/Kidder Mathews reporting): units under construction fell to roughly 16,000 as of Q2 2026 (down ~35% YoY), with the pipeline down about 50% from its 2022-23 peak but still representing about 4% of existing inventory. Downtown Phoenix, Tempe, and the Southwest Valley are flagged as the areas most exposed to oversupply risk.\n\nIf you just need periodic reporting, AZBEX or the brokerage MarketBeat reports (free) are the easiest entry point; if you need raw, queryable project-level data, Yardi Matrix/CoStar/RealPage are the paid options, and City of Phoenix PDD records are the free public alternative.\n\nSources:\n- [Multifamily 'Rebalancing' Nationally; Phoenix Pipeline Remains Heavy - AZBEX](https://azbex.com/trends/multifamily-rebalancing-nationally-phoenix-pipeline-remains-heavy/)\n- [Phoenix Multifamily Market Report | Q2 2026 | Kidder Mathews](https://kidder.com/market-reports/phoenix-multifamily-market-report/)\n- [Phoenix apartment demand surges as construction slows - AZ Big Media](https://azbigmedia.com/real-estate/phoenix-apartment-demand-surges-as-construction-slows/)\n- [Phoenix Q1 2026 Pipeline Report \u2013 MMG Real Estate Advisors](https://mmgrea.com/phoenix-q1-2026-pipeline-report/)\n- [Phoenix MULTIFAMILY Market Report June 2026 - GetMultifamily](https://www.getmultifamily.com/blog/phoenix-multifamily-market-report-june-2026/)\n- [Commercial and Multifamily Building | City of Phoenix](https://www.phoenix.gov/administration/departments/pdd/commercial-multifamily-building.html)\n- [Planning and Development Department | City of Phoenix](https://www.phoenix.gov/administration/departments/pdd.html)\n- [PDD Online (SHAPE PHX) - City of Phoenix](https://apps-secure.phoenix.gov/PDD)",
+  "answer": "For prospecting off newly-sold apartment complexes, you're essentially trying to catch ownership-change signals as early as possible \u2014 new owners typically have capex/renovation budgets and are actively evaluating vendors (property management, landscaping, security, insurance, financing, laundry, amenities, etc.), so the window right after close is high-intent.\n\n**Paid CRE data platforms (best for volume + recency)**\n- **Yardi Matrix** \u2014 the strongest purpose-built option for multifamily specifically; tracks sales comps, ownership/loan info, construction pipeline, and lets you filter by unit count, market, and recent transaction date.\n- **CoStar** \u2014 broadest historical depth and most comprehensive comps/ownership records, but expensive (often five figures/seat/year) and arguably overkill if you only care about multifamily.\n- **Crexi (Intelligence)** \u2014 cheaper alternative that has closed much of the gap with CoStar on sales comps/ownership data; also useful because active listings show properties currently trading.\n- **CommercialEdge (by Yardi)** \u2014 another option, less differentiated for multifamily specifically than Yardi Matrix.\n- **MSCI Real Capital Analytics (RCA)** \u2014 the standard source institutional brokers/investors cite for aggregate transaction volume and deal-level data; good if you want to track larger/institutional trades.\n\n**Public records (free/cheap, most current)**\n- County recorder/assessor deed transfer records \u2014 the actual source of truth for \"who just bought what.\" Many counties publish these online; services like **ATTOM Data**, **PropertyRadar**, and **Reonomy** aggregate this nationally and let you set alerts for new multifamily transfers by size/market.\n- **Cherre** \u2014 data-aggregation platform popular with CRE sales/prospecting teams that stitches together ownership, mortgage, and permit data for lead generation.\n\n**Trade press (good for larger/institutional deals, free)**\n- **Multi-Housing News** \u2014 publishes regular \"top multifamily sales\" roundups by metro.\n- **Multifamily Dive**, **Bisnow**, **GlobeSt.com**, **The Real Deal** (for NYC) \u2014 cover notable transactions as they close.\n- Local business journals (e.g., Bizjournals) often report mid-size deals that don't hit national trade press.\n\n**Practical workflow**\n1. Set saved searches/alerts in Yardi Matrix or Crexi for \"sold\" multifamily transactions in your target markets.\n2. Layer in a county-records feed (ATTOM/PropertyRadar/Reonomy) to catch smaller deals that don't make it into the big platforms.\n3. Cross-reference with financing data (new loan recordings often accompany a sale) \u2014 Yardi Matrix and Reonomy both surface this \u2014 since a new mortgage is a strong signal of a capex/renovation budget.\n4. Prioritize outreach in the first 60\u201390 days post-close, when new owners are setting vendor relationships.\n\nIf you tell me your budget and target market size (e.g., just one metro vs. national), I can narrow this to 1\u20132 tools rather than the full list.\n\nSources:\n- [The 14 Best Commercial Real Estate Data Tools and Providers in 2026 - ForageAI](https://forage.ai/blog/commercial-real-estate-data-tools/)\n- [Best Commercial Real Estate Data Sources for 2026 - CRE Daily](https://www.credaily.com/reviews/best-commercial-real-estate-data-sources/)\n- [Institutional Real Estate Data | Yardi Matrix](https://www.yardimatrix.com/)\n- [CoStar vs Crexi: Where CRE Investors Actually Source & Comp Deals (2026) | NextAutomation](https://nextautomation.us/blog/costar-vs-crexi)\n- [5 Best Commercial Real Estate Comps Databases](https://samimiinvestments.com/commercial-real-estate-comps-database/)\n- [Top 5 NYC Multifamily Building Sales\u2014August 2026 - Multi-Housing News](https://www.multihousingnews.com/top-5-nyc-multifamily-building-sales-august-2026/)\n- [Apartment sales volume rose 9% to $165.5B in 2025 | Multifamily Dive](https://www.multifamilydive.com/news/2026-apartment-sales-multifamily-distress/810517/)",
   "brands": [
     {
-      "brand": "Yardi",
-      "first_at": 856,
-      "mentions": 2,
+      "brand": "Yardi Matrix",
+      "first_at": 425,
+      "mentions": 5,
       "rank": 1
     },
     {
-      "brand": "RealPage",
-      "first_at": 1049,
-      "mentions": 2,
+      "brand": "CoStar",
+      "first_at": 647,
+      "mentions": 4,
       "rank": 2
     },
     {
-      "brand": "CoStar",
-      "first_at": 1153,
-      "mentions": 2,
+      "brand": "Crexi",
+      "first_at": 839,
+      "mentions": 4,
       "rank": 3
     },
     {
-      "brand": "CBRE",
-      "first_at": 1508,
+      "brand": "Moody's",
+      "first_at": 1157,
       "mentions": 1,
       "rank": 4
+    },
+    {
+      "brand": "Reonomy",
+      "first_at": 1600,
+      "mentions": 3,
+      "rank": 5
+    },
+    {
+      "brand": "Cherre",
+      "first_at": 1709,
+      "mentions": 1,
+      "rank": 6
     }
   ],
   "links": [
     {
       "title": "",
-      "url": "https://azbex.com/trends/multifamily-rebalancing-nationally-phoenix-pipeline-remains-heavy/"
+      "url": "https://forage.ai/blog/commercial-real-estate-data-tools/"
     },
     {
       "title": "",
-      "url": "https://kidder.com/market-reports/phoenix-multifamily-market-report/"
+      "url": "https://www.credaily.com/reviews/best-commercial-real-estate-data-sources/"
     },
     {
       "title": "",
-      "url": "https://azbigmedia.com/real-estate/phoenix-apartment-demand-surges-as-construction-slows/"
+      "url": "https://www.yardimatrix.com/"
     },
     {
       "title": "",
-      "url": "https://mmgrea.com/phoenix-q1-2026-pipeline-report/"
+      "url": "https://nextautomation.us/blog/costar-vs-crexi"
     },
     {
       "title": "",
-      "url": "https://www.getmultifamily.com/blog/phoenix-multifamily-market-report-june-2026/"
+      "url": "https://samimiinvestments.com/commercial-real-estate-comps-database/"
     },
     {
       "title": "",
-      "url": "https://www.phoenix.gov/administration/departments/pdd/commercial-multifamily-building.html"
+      "url": "https://www.multihousingnews.com/top-5-nyc-multifamily-building-sales-august-2026/"
     },
     {
       "title": "",
-      "url": "https://apps-secure.phoenix.gov/PDD"
+      "url": "https://www.multifamilydive.com/news/2026-apartment-sales-multifamily-distress/810517/"
     }
   ]
 }

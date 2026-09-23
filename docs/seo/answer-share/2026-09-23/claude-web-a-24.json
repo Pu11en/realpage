@@ -1,0 +1,44 @@
+{
+  "engine": "claude-web",
+  "engine_label": "Claude (Sonnet) via claude -p, web search on",
+  "is_consumer_app": false,
+  "set": "A",
+  "question": "How do I find contact information for apartment building owners?",
+  "intent": "prospecting",
+  "asked_on": "2026-09-23",
+  "ok": true,
+  "answer": "Finding the owner of record for an apartment building is a pretty standard real estate research task, and there are several tiers of sources depending on how much effort/money you want to spend.\n\n**Free/public sources**\n\n- **County assessor or recorder's office** \u2014 Almost every U.S. county publishes property tax records online, searchable by address, that show the \"owner of record\" (name and mailing address). Search \"[county name] assessor property search\" or \"[county] recorder of deeds.\" This is usually the most authoritative free source, though the \"owner\" listed may be an LLC rather than a person.\n- **Secretary of State business search** \u2014 If the owner is an LLC or corporation (very common for apartment buildings), look up that entity name in the state's Secretary of State business registry to find the registered agent and sometimes the managing member's name/address.\n- **City building/rental registration or code enforcement databases** \u2014 Many cities (e.g., NYC's HPD/ACRIS, Chicago's building owner lookup) require landlords to register buildings, and these records are often public and include a responsible party's contact info.\n- **UCC filings / mortgage records** \u2014 Recorded mortgages/deeds of trust at the county recorder often list the lender and sometimes borrower entity details, which can help trace ownership chains.\n\n**Paid/commercial data sources**\n\n- **PropStream, Reonomy, CoStar, Cherre** \u2014 Commercial real estate data platforms that aggregate ownership, LLC unmasking, and contact info; CoStar and Reonomy are widely used by CRE brokers and investors.\n- **BiggerPockets' data partners, PropertyRadar, or ATTOM Data** \u2014 Popular with real estate investors for skip-tracing owners, especially absentee/out-of-state owners.\n- **LexisNexis or TLOxp** \u2014 Used for more thorough skip tracing (finding a person behind an LLC), typically used by professionals with a permissible-use case (this touches FCRA-regulated data, so use is restricted for things like tenant screening).\n\n**If the building is professionally managed**\n\nOften the fastest path isn't the owner at all but the **property management company** \u2014 check the building's listing on Apartments.com, Zillow, or a \"for rent\" sign, or search \"[address] property manager\" \u2014 since day-to-day contact (including for tenant or business inquiries) usually goes through them rather than the owner directly.\n\nA quick tip: start with the county assessor site for the address, since it's free and gives you the legal owner name to then cross-reference in the Secretary of State database if it's an LLC.\n\nIs this for something specific \u2014 like tenant/renter research, a business proposal, journalism, or property investment? I can narrow down the best source for your use case.",
+  "brands": [
+    {
+      "brand": "Reonomy",
+      "first_at": 1396,
+      "mentions": 2,
+      "rank": 1
+    },
+    {
+      "brand": "CoStar",
+      "first_at": 1405,
+      "mentions": 2,
+      "rank": 2
+    },
+    {
+      "brand": "Cherre",
+      "first_at": 1413,
+      "mentions": 1,
+      "rank": 3
+    },
+    {
+      "brand": "Apartments.com",
+      "first_at": 2171,
+      "mentions": 1,
+      "rank": 4
+    },
+    {
+      "brand": "Zillow",
+      "first_at": 2187,
+      "mentions": 1,
+      "rank": 5
+    }
+  ],
+  "links": []
+}

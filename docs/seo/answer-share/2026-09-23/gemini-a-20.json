@@ -1,0 +1,280 @@
+{
+  "engine": "gemini",
+  "engine_label": "Gemini (gemini-2.5-flash) via API, Google Search grounding on",
+  "is_consumer_app": false,
+  "set": "A",
+  "question": "How do I find property managers to sell services to?",
+  "intent": "prospecting",
+  "asked_on": "2026-09-23",
+  "ok": true,
+  "answer": "To find property managers to sell services to, you can utilize a combination of professional organizations, online directories, specialized data providers, and networking events. These avenues offer direct access to property managers and companies, allowing you to target your outreach effectively.\n\nHere's how you can find them:\n\n### 1. Professional Organizations\n\nJoining or utilizing the resources of property management associations is one of the most effective ways to connect with property managers. Many of these organizations offer member directories or events that allow for networking and business development.\n\n*   **National Association of Residential Property Managers (NARPM)**: This is a key professional organization specifically for residential real estate professionals. While their member directories are not to be used for commercial or solicitation purposes, becoming an \"Affiliate Member\" allows you to serve or supply the residential property management profession, providing a legitimate pathway for engagement. NARPM has local chapters across the U.S. which often have their own member directories.\n*   **Institute of Real Estate Management (IREM)**: IREM supports both residential and commercial property managers. Its local chapters, such as those in Oregon-Columbia River, Chicago, Idaho, and Memphis, maintain member directories that can be a valuable resource.\n*   **Building Owners and Managers Association (BOMA International)**: BOMA focuses on commercial real estate and boasts over 15,000 members. Local BOMA chapters often provide member directories, which may include \"Associate Members\" or \"National Associate Members (NAMs)\" who are service providers to the industry.\n*   **National Apartment Association (NAA)**: Representing over 96,000 member companies, NAA is a leading voice in the rental housing industry. They represent managers of over 9.6 million properties.\n*   **National Association of REALTORS\u00ae (NAR)**: As the largest trade association, NAR includes residential and commercial brokers, salespeople, and property managers among its 1.4 million members.\n*   **National Affordable Housing Management Association (NAHMA)**: This association caters to multifamily property managers and owners in the affordable housing sector, as well as providers of goods and services to this sector.\n*   **National Property Management Association (NPMA)**: NPMA is a leading association for personal property and fixed-asset professionals.\n\n### 2. Online Directories and Databases\n\nSeveral online platforms and specialized databases can help you identify property management companies and their contact information.\n\n*   **Specialized Directories:**\n    *   **ListCentral.US Property Manager Directory** offers a nationwide, county-by-county database of property management companies designed to help find property managers efficiently.\n    *   **PropertyManagement.com** features a directory where you can search for local property management companies.\n    *   The **Southern California Rental Housing Association** provides a business directory of property managers.\n    *   **DoorLoop** also offers a \"Landlord & Property Management Directory\".\n*   **General Business Directories:** Standard online business directories like Google Maps and Yelp can also be used to find property management companies in specific geographic areas.\n*   **Lead Generation Platforms:**\n    *   **Openmart** provides a property management B2B Leads Database with over 40,000 verified owner contacts, including direct emails and phone numbers. You can filter these contacts by location, specialization, business size, or revenue.\n    *   **PropStream** offers tools to find property management leads, including identifying absentee owners and landlords with multiple properties. It includes features like skip tracing to find contact information and tools for launching marketing campaigns.\n    *   Platforms like **Thumbtack** list property management companies, often with reviews and contact options.\n\n### 3. Networking Events\n\nAttending industry events is a prime way to meet property managers face-to-face and build relationships.\n\n*   **Conferences and Trade Shows:** Professional associations like BOMA and NAA host annual conventions, conferences, and trade shows that attract a large number of property management professionals. The **CREW Network Convention** is another premier event for commercial real estate leaders, offering extensive networking and a marketplace for vendors.\n*   **Local Real Estate Meetups and Forums:** Websites like **Eventbrite** and **Meetup** list local real estate networking events, including mixers and forums where property managers may be present. Organizations such as The Real Deal and the Real Estate Council of Austin also host networking events, forums, and happy hours. Look for events focused on real estate investment, landlord-tenant relations, or property technology.",
+  "sources": [
+    {
+      "title": "yardibreeze.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGqYzOtmYqxX6aea9p5d6_wacnYQvzImjt2F2MvqJs8JV5qRp33G_zQIw7J3fjd7PM9ZL8ELDms1IP0DsU0iK_M7CI3KoTPX0jZyCnBr0R9qP08bEHFiow8p6NLQ3FZ4e6bosComCPb2gudPFimk7PJ9LaQ9BdWskHCdHSXm6yf1hL7cQaW"
+    },
+    {
+      "title": "doorloop.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFCsvYW8Sn6ie9M0aZdtNb_lfR2EL0jyU_IBRGZfM1GxrWXv7QeofkxZ_4zxziLqNDhvQbVogFHSANLfFib_s7Nwci1GsNdXcE9WcDKbHrD0W4uoBEwJME5iRjsUArP2QJDc6yoixB2dxUeFBSVmZedkzqqhdVUynDAAz8roGE="
+    },
+    {
+      "title": "csnarpm.org",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFqCWVUMgUgNrbhuCBiqdNIb2w7JiCXMjcCcFezOaoxyGhOQNvhvYrA3hJlfYBAWj0mJnuoLXBCs0YObRxybyopLIE08cmrTZi_Ecix8Zr2sZBHd1H_A0LgNag="
+    },
+    {
+      "title": "narpm.org",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGF4D2HVHd0JFT1k21Pwal62oDmkaXmZVyw3qmE2per0WFWmQ1zXSSVPhCXLnXu4uDV39ROswIIVsssekC77aWB1d-HBZgQ25D8rt2WVMMAZpj0vR8w5HaYKL0T7dRcYLyrefkSYDp81A=="
+    },
+    {
+      "title": "narpm.org",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH-Ug70nCP89cTa76Oicmp2Q3Q6zqHN594RgEPdjarSX50O-FI-w8ChicmI0BJ00hpqtCAxWeikNlP4m-vJK_ESKdWg2D4isuNeKTBahWzRBzz9xhis-Ln6yBBvtlV9ZNTJa0Yj05hR3Q=="
+    },
+    {
+      "title": "denvernarpm.org",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEKUAtbNA-u0I5IlYYqceJDq_J4v1Hc8peQvNL-bh24byRech5UdGsJjHVhwIb_c9-eNPbHhALmfE7Xs5LFG6yClKtL4KMykkP5fXRoAtbOUXbuhqqoqagJ5mJlp_a_aQk="
+    },
+    {
+      "title": "sdnarpm.org",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHvep-O3-FH_vuVETnwQtZO578slIFWw89PPDttQOD61stLs0mA5b77zMpGpPEMot_BepS3sHNQu4V03P8TPVFUOzPx5qGzB5sMnvPMX2xmUqCS5iQhz7Jmd4r2jA=="
+    },
+    {
+      "title": "narpm.org",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGlDHZeG6BAy6OEzntQBoImnoa7J0h2pKmhNtCR1kaX-Wq2n5kz89RkKcQD4BHKQYB7Qm28hBmFRZMpadwJ0RrFysacptddLSSqpvGtSUos9o6lLGkRxE30at2evLhKJgs4_7_kIKpCPREepYUFG6Ytm9u_S61hMgJokco2-fCGlX4zB1RZ"
+    },
+    {
+      "title": "narpm.org",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEcpk5uH2iJbhP8bwCuel_MCIE4wpbcQNlEEAfLQxI0AT-sTgv5_ZtFA7TDIutn4J--X3w8lnk64aH2feFnH5Ca8XkZZEwJ-e-y8_vlMHQd1UAjJrXtbDvlgRR_92zgoam5brV3lLGYHyInekY8N_ET-Cnf4pHvfejm7LzrAci-rdY4p_cl9FZuJ0rw2tu8pWspj5yUwLKjmV68TmpJ5dE5KyElFk7R0mlYq4E="
+    },
+    {
+      "title": "iremoregon.org",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF10bJPJy9kVci1Kth2ZJ-szyKrUrJRBMMVfYu7cchlQJbgHzGxvMJNGV3DnXjjwGqSvEbQwGrns2OPk89w4vWFbglFG0xoe6lJSpx0Yg222OKXo7aC-BxhqQlOrh-Ogg=="
+    },
+    {
+      "title": "lasvegasirem.org",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHiwKORvgDeRHT1IzgAKsErA5_qImVRIlTxqHNnTH5jqv11ipW40s5exzGs3xAMeenqCERc0hkYP_bzQZoz3o0WwHmRcLChpBnMfTl128AqZzz7iXO6T3-I4zqaDtUBpIRG"
+    },
+    {
+      "title": "iremchicago.org",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFkQPL-_eE1ni1dg7khCTJzjaYulThIHzzLFe_5AlAJXpFmRiIdcDaA4_1suI8I5V-0Uch7y23clu91ErVBVZObDYpr_Za1fqKZ5yflvxHmN-L-T7Elpa1kaHbI6STmfzM="
+    },
+    {
+      "title": "irem-memphis.org",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFtzjpo_rp7lvarD5Ix7Uv8vXddildm2T04LfAPewpdAwESP7W-aDgbN1H3wvvRZwz2eOEQJRUXps5sJrZ-vNqQf9Oez4trVrI3X9jsqpTbHiEN6_aJL0HyBjGwnOBMCuIl"
+    },
+    {
+      "title": "iremidaho.org",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG47f5uU01CfUe60X_fZ1NBlH7FVtaTXzwNCsXGgdg2G_sHcqMt2ykQPwQa9f0Z_vIlDMBH94zsdC3Ykpl5l6xaf3XhhGZg13zsFzfkfBZEy2Z49WkK-s7glrWRQqL-"
+    },
+    {
+      "title": "bomagla.org",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFXVIjkbm4-G4SqLyYsPiNv_WOCWS6YGyKdn-YTQmkBrutomULS0C8DcYh4tIADTeV2tPTrPwL_FN2nuAEBdFVDXGQxLo9Pi_nm0BF_cN-PNs8iKAHUpB0TdW7GZFqISDA="
+    },
+    {
+      "title": "bomakc.org",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHZrUy234vrCjslIyZ8gXKTgqC4qEW2PFt_8SjFS_e9iZ3FPN18pNEuLEPFyEQ2iwJ-hbvwGUJKJDQ3mUjjoa5zWz8RC4bqsMY626_DEYmg0sDdr6_e9sKYRFlXhhj-hywRXBia_Py4mJk="
+    },
+    {
+      "title": "boma.org",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQESZqwXEk3TaTIiy3QMPqJK3jv7ngkG5B4yXKRjvNuKLppkkcmEy41u6O4eRbAQ3vbRA2PGgCq9rYWUaFYzkvjlBrWlA7HldPvQXb7rRB5spRgAIdxiyzmOtiwSGBGikiuT1wqQ3Ag="
+    },
+    {
+      "title": "bomautah.org",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFT2AZlnSBHkr44TyjC25FvgiVesHDKbNlAYsDtniwGZ9yE9p4VzhAbC02W2FSk-H8Oq1bYlPSn7WQPob9PbhDhuVi4k3eFd0f6klqXfo2o4cibNHSrA9YSPCWXWqdfRRUl"
+    },
+    {
+      "title": "boma.org",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG8aYWqq-gNOf_UZLEX6wULGXwzjWSS9iKYf-1UdAcHW5Nu4VSqP7CHPobNcAhMXCPIyiJ7hYZ7cAfZi4ztm7f9htefBiRhBevezgJja7SiWBLab8-3Rw=="
+    },
+    {
+      "title": "buildium.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHcAMqKWWX5IdLNwnhMLiOXtBXmsdkoggAgfwIL7o9mz7OcXIb0XU0zmJN3Xk1guCNzY_xkyq_zAJWGIqpDGl8gDT43peSXyxvUAf2wRmnO-PU67sC9eMQOg0Y78zkXGfwt60dTA833IXnb7Z2PML3xI7wqm5AG779nfjLV-DnSIAc="
+    },
+    {
+      "title": "npma.org",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGGuSRxhdNtY3NOgGLqKZOQiQQOC7QaQQhLxAy7Q_gXH0PFUSpcOZu-8nyvJ0v-_IGs6hd3z5Qu-l1qnXollrhSFxJ5euBPMIktRUIDlwC_xw=="
+    },
+    {
+      "title": "listcentral.us",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEtNZS3AktbWN5tjPMmEz5TNmiIuW2JI6gG8xfw4MAMq-0p_SZx0efjkkIFauujHX8nyw4zcCZwFNMLtttREGnPI3g0ZsbpsG7bW36gWoeqvYJkkORxaEDLnhNYH_dLMdLL8aWDYd7Dc6-v72f7kk19w4AAQ-dFmHU="
+    },
+    {
+      "title": "managemyproperty.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFUbZKMHAaknobqPWJGLHByvb8gBiOL8CHq4yUVl7czTJFC8urDC5655Gz0TmZDpgV27oU0n9R27S8yIORzspntFyZHGnsoJkZQZthfEXjYHcpdIzNsD_UUr7jRHbExhP26DTlU1TBkYcEBo042gr9JWF_TCtnFG5acwiuIeL6ucwBv3BJ3mA3FSi5pDqqzWjHv4Mw="
+    },
+    {
+      "title": "socalrha.org",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGFFTzMM6lKgGiiulgt6IaocRddqJDlVsDVMc-vzmuZ0NhdfVwcPsbyNqg7BD3coYCLqHXzb9wzCwRYtv2UY1NEMygPKEwLIIoQ52TNIn7VWk8FNZuQ2l7sFGYBrBQ8bw68fVuLvF5ronyhiHteD_pB"
+    },
+    {
+      "title": "doorloop.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHqpbszBoMIvjACZQN_taAJ_FLmhFltzihYDVHU59MpVv3esmHlZnD6Gj0VLsA1Q4jt6h1bLVMyWZzrEWE6VaoqpVfZBVyJHs1AqfQFZHp6pxOmpAoEAe8UU-Ei5XQ="
+    },
+    {
+      "title": "openmart.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGayhlFpAWRShjbFM3Lm2oxhi5OXhaq2HW-g-QHCVQSS7oZg6Vi4zcR43uzWCubbkpqe5PCyZeeHnr9DGvwOCBKTDa7o1w_G1dw0afepwyo7ynbbBNxx-Z3ZIVZ0FbipvupNzohsH0MAgvnlO6AK5VIkw=="
+    },
+    {
+      "title": "propstream.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEtSM9nioXBs1-mBbNIi_SorFnjCVeqddDYnDWdmkE6EIzHgDwM2qAc1q8SrgTIoeUpgFVfdxa8T9vvnvXI-8i7bXNCu6jQEcV_fWO-nIpKQVWAF8Ni60MFTRdHTJzkWXyXmXZsW2Cd"
+    },
+    {
+      "title": "thumbtack.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEgCIgkGu9ZWwk-ZodhLkHDDBfVfIyVjVise4O-mdkdBL6ohuHVYR1qOtcPmd5zhVt3TTsWA_I-r_K5ci71B10XWLJOqoVM185F9XkIK_c3gik7MSQWLjyrliUscxsO_nWqzK-ID3MYs1cQpNTNmt2l9EY="
+    },
+    {
+      "title": "crewnetwork.org",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE_ybo0fiI--UW76hRPw88n2LukOio8kjKXHr8wQrDv_prIpBpofT4rC2E7r0PjHH8TLlgNlUMXLZnRCDGz4aX1ytpOdBxu0oTj-bt6q3dpYwMEpr-K94UNXCOim99GZTdj9y1d-gKu6arOrC7Fo8mHJm5OkrCF"
+    },
+    {
+      "title": "eventbrite.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEAjY5e6NUXURmq958euHWE4Th-ER3SL1yFJ7JnIY0tukpQqrXHdRTTTG3jq9YtThHXdbUY-JzYKHHE9-C5fmHmOqW-p5671I6k491rUUdloIjXsbST7nwvHaSvIFIqZ_oB1v4fjosFvDA2HECgjedljb1kaM2u6-3UNKjuSAryHrWl5eksug=="
+    },
+    {
+      "title": "meetup.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF3SxwCZMrybWK4JoATIXoiplt8xbLHOZddZWpTJsf7JkoC-l-k1EeoezRcH6Mr4T9ypTlMIMoKJbsoTamlqZ94xJUV6xlC7ib83QtPmQX4NKNaDxUV5N0Zt11EK72bFnkgx9q07F302b2oZdIHfz84"
+    },
+    {
+      "title": "therealdeal.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHo4Nm_Bav-YgDmW1q6eH1iXPQLug-S7paHlHNHqluqu768SsB3ccIMmoCQWtjlT7pR_fj7SLEugpRHjbRz1XbMUU6ijZsUCETVMfEGIMJdPqwP8ay48fNrtg6KchrVmbc2ovU="
+    },
+    {
+      "title": "reca.org",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHY3FaJthx9xsdny1SIE4jWp6L52SbTyMc3ZO4sHySc9uudyIQkQn05IAKTRTp-uhUpmztZb_HJrTNqOShXpVuC73s9iL6zYh_IAl0j-5u2ReER4hTplTyZdBHs"
+    }
+  ],
+  "brands": [],
+  "links": [
+    {
+      "title": "yardibreeze.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGqYzOtmYqxX6aea9p5d6_wacnYQvzImjt2F2MvqJs8JV5qRp33G_zQIw7J3fjd7PM9ZL8ELDms1IP0DsU0iK_M7CI3KoTPX0jZyCnBr0R9qP08bEHFiow8p6NLQ3FZ4e6bosComCPb2gudPFimk7PJ9LaQ9BdWskHCdHSXm6yf1hL7cQaW"
+    },
+    {
+      "title": "doorloop.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFCsvYW8Sn6ie9M0aZdtNb_lfR2EL0jyU_IBRGZfM1GxrWXv7QeofkxZ_4zxziLqNDhvQbVogFHSANLfFib_s7Nwci1GsNdXcE9WcDKbHrD0W4uoBEwJME5iRjsUArP2QJDc6yoixB2dxUeFBSVmZedkzqqhdVUynDAAz8roGE="
+    },
+    {
+      "title": "csnarpm.org",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFqCWVUMgUgNrbhuCBiqdNIb2w7JiCXMjcCcFezOaoxyGhOQNvhvYrA3hJlfYBAWj0mJnuoLXBCs0YObRxybyopLIE08cmrTZi_Ecix8Zr2sZBHd1H_A0LgNag="
+    },
+    {
+      "title": "narpm.org",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGF4D2HVHd0JFT1k21Pwal62oDmkaXmZVyw3qmE2per0WFWmQ1zXSSVPhCXLnXu4uDV39ROswIIVsssekC77aWB1d-HBZgQ25D8rt2WVMMAZpj0vR8w5HaYKL0T7dRcYLyrefkSYDp81A=="
+    },
+    {
+      "title": "narpm.org",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH-Ug70nCP89cTa76Oicmp2Q3Q6zqHN594RgEPdjarSX50O-FI-w8ChicmI0BJ00hpqtCAxWeikNlP4m-vJK_ESKdWg2D4isuNeKTBahWzRBzz9xhis-Ln6yBBvtlV9ZNTJa0Yj05hR3Q=="
+    },
+    {
+      "title": "denvernarpm.org",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEKUAtbNA-u0I5IlYYqceJDq_J4v1Hc8peQvNL-bh24byRech5UdGsJjHVhwIb_c9-eNPbHhALmfE7Xs5LFG6yClKtL4KMykkP5fXRoAtbOUXbuhqqoqagJ5mJlp_a_aQk="
+    },
+    {
+      "title": "sdnarpm.org",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHvep-O3-FH_vuVETnwQtZO578slIFWw89PPDttQOD61stLs0mA5b77zMpGpPEMot_BepS3sHNQu4V03P8TPVFUOzPx5qGzB5sMnvPMX2xmUqCS5iQhz7Jmd4r2jA=="
+    },
+    {
+      "title": "narpm.org",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGlDHZeG6BAy6OEzntQBoImnoa7J0h2pKmhNtCR1kaX-Wq2n5kz89RkKcQD4BHKQYB7Qm28hBmFRZMpadwJ0RrFysacptddLSSqpvGtSUos9o6lLGkRxE30at2evLhKJgs4_7_kIKpCPREepYUFG6Ytm9u_S61hMgJokco2-fCGlX4zB1RZ"
+    },
+    {
+      "title": "narpm.org",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEcpk5uH2iJbhP8bwCuel_MCIE4wpbcQNlEEAfLQxI0AT-sTgv5_ZtFA7TDIutn4J--X3w8lnk64aH2feFnH5Ca8XkZZEwJ-e-y8_vlMHQd1UAjJrXtbDvlgRR_92zgoam5brV3lLGYHyInekY8N_ET-Cnf4pHvfejm7LzrAci-rdY4p_cl9FZuJ0rw2tu8pWspj5yUwLKjmV68TmpJ5dE5KyElFk7R0mlYq4E="
+    },
+    {
+      "title": "iremoregon.org",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF10bJPJy9kVci1Kth2ZJ-szyKrUrJRBMMVfYu7cchlQJbgHzGxvMJNGV3DnXjjwGqSvEbQwGrns2OPk89w4vWFbglFG0xoe6lJSpx0Yg222OKXo7aC-BxhqQlOrh-Ogg=="
+    },
+    {
+      "title": "lasvegasirem.org",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHiwKORvgDeRHT1IzgAKsErA5_qImVRIlTxqHNnTH5jqv11ipW40s5exzGs3xAMeenqCERc0hkYP_bzQZoz3o0WwHmRcLChpBnMfTl128AqZzz7iXO6T3-I4zqaDtUBpIRG"
+    },
+    {
+      "title": "iremchicago.org",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFkQPL-_eE1ni1dg7khCTJzjaYulThIHzzLFe_5AlAJXpFmRiIdcDaA4_1suI8I5V-0Uch7y23clu91ErVBVZObDYpr_Za1fqKZ5yflvxHmN-L-T7Elpa1kaHbI6STmfzM="
+    },
+    {
+      "title": "irem-memphis.org",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFtzjpo_rp7lvarD5Ix7Uv8vXddildm2T04LfAPewpdAwESP7W-aDgbN1H3wvvRZwz2eOEQJRUXps5sJrZ-vNqQf9Oez4trVrI3X9jsqpTbHiEN6_aJL0HyBjGwnOBMCuIl"
+    },
+    {
+      "title": "iremidaho.org",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG47f5uU01CfUe60X_fZ1NBlH7FVtaTXzwNCsXGgdg2G_sHcqMt2ykQPwQa9f0Z_vIlDMBH94zsdC3Ykpl5l6xaf3XhhGZg13zsFzfkfBZEy2Z49WkK-s7glrWRQqL-"
+    },
+    {
+      "title": "bomagla.org",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFXVIjkbm4-G4SqLyYsPiNv_WOCWS6YGyKdn-YTQmkBrutomULS0C8DcYh4tIADTeV2tPTrPwL_FN2nuAEBdFVDXGQxLo9Pi_nm0BF_cN-PNs8iKAHUpB0TdW7GZFqISDA="
+    },
+    {
+      "title": "bomakc.org",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHZrUy234vrCjslIyZ8gXKTgqC4qEW2PFt_8SjFS_e9iZ3FPN18pNEuLEPFyEQ2iwJ-hbvwGUJKJDQ3mUjjoa5zWz8RC4bqsMY626_DEYmg0sDdr6_e9sKYRFlXhhj-hywRXBia_Py4mJk="
+    },
+    {
+      "title": "boma.org",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQESZqwXEk3TaTIiy3QMPqJK3jv7ngkG5B4yXKRjvNuKLppkkcmEy41u6O4eRbAQ3vbRA2PGgCq9rYWUaFYzkvjlBrWlA7HldPvQXb7rRB5spRgAIdxiyzmOtiwSGBGikiuT1wqQ3Ag="
+    },
+    {
+      "title": "bomautah.org",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFT2AZlnSBHkr44TyjC25FvgiVesHDKbNlAYsDtniwGZ9yE9p4VzhAbC02W2FSk-H8Oq1bYlPSn7WQPob9PbhDhuVi4k3eFd0f6klqXfo2o4cibNHSrA9YSPCWXWqdfRRUl"
+    },
+    {
+      "title": "boma.org",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG8aYWqq-gNOf_UZLEX6wULGXwzjWSS9iKYf-1UdAcHW5Nu4VSqP7CHPobNcAhMXCPIyiJ7hYZ7cAfZi4ztm7f9htefBiRhBevezgJja7SiWBLab8-3Rw=="
+    },
+    {
+      "title": "buildium.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHcAMqKWWX5IdLNwnhMLiOXtBXmsdkoggAgfwIL7o9mz7OcXIb0XU0zmJN3Xk1guCNzY_xkyq_zAJWGIqpDGl8gDT43peSXyxvUAf2wRmnO-PU67sC9eMQOg0Y78zkXGfwt60dTA833IXnb7Z2PML3xI7wqm5AG779nfjLV-DnSIAc="
+    },
+    {
+      "title": "npma.org",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGGuSRxhdNtY3NOgGLqKZOQiQQOC7QaQQhLxAy7Q_gXH0PFUSpcOZu-8nyvJ0v-_IGs6hd3z5Qu-l1qnXollrhSFxJ5euBPMIktRUIDlwC_xw=="
+    },
+    {
+      "title": "listcentral.us",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEtNZS3AktbWN5tjPMmEz5TNmiIuW2JI6gG8xfw4MAMq-0p_SZx0efjkkIFauujHX8nyw4zcCZwFNMLtttREGnPI3g0ZsbpsG7bW36gWoeqvYJkkORxaEDLnhNYH_dLMdLL8aWDYd7Dc6-v72f7kk19w4AAQ-dFmHU="
+    },
+    {
+      "title": "managemyproperty.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFUbZKMHAaknobqPWJGLHByvb8gBiOL8CHq4yUVl7czTJFC8urDC5655Gz0TmZDpgV27oU0n9R27S8yIORzspntFyZHGnsoJkZQZthfEXjYHcpdIzNsD_UUr7jRHbExhP26DTlU1TBkYcEBo042gr9JWF_TCtnFG5acwiuIeL6ucwBv3BJ3mA3FSi5pDqqzWjHv4Mw="
+    },
+    {
+      "title": "socalrha.org",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGFFTzMM6lKgGiiulgt6IaocRddqJDlVsDVMc-vzmuZ0NhdfVwcPsbyNqg7BD3coYCLqHXzb9wzCwRYtv2UY1NEMygPKEwLIIoQ52TNIn7VWk8FNZuQ2l7sFGYBrBQ8bw68fVuLvF5ronyhiHteD_pB"
+    },
+    {
+      "title": "doorloop.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHqpbszBoMIvjACZQN_taAJ_FLmhFltzihYDVHU59MpVv3esmHlZnD6Gj0VLsA1Q4jt6h1bLVMyWZzrEWE6VaoqpVfZBVyJHs1AqfQFZHp6pxOmpAoEAe8UU-Ei5XQ="
+    },
+    {
+      "title": "openmart.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGayhlFpAWRShjbFM3Lm2oxhi5OXhaq2HW-g-QHCVQSS7oZg6Vi4zcR43uzWCubbkpqe5PCyZeeHnr9DGvwOCBKTDa7o1w_G1dw0afepwyo7ynbbBNxx-Z3ZIVZ0FbipvupNzohsH0MAgvnlO6AK5VIkw=="
+    },
+    {
+      "title": "propstream.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEtSM9nioXBs1-mBbNIi_SorFnjCVeqddDYnDWdmkE6EIzHgDwM2qAc1q8SrgTIoeUpgFVfdxa8T9vvnvXI-8i7bXNCu6jQEcV_fWO-nIpKQVWAF8Ni60MFTRdHTJzkWXyXmXZsW2Cd"
+    },
+    {
+      "title": "thumbtack.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEgCIgkGu9ZWwk-ZodhLkHDDBfVfIyVjVise4O-mdkdBL6ohuHVYR1qOtcPmd5zhVt3TTsWA_I-r_K5ci71B10XWLJOqoVM185F9XkIK_c3gik7MSQWLjyrliUscxsO_nWqzK-ID3MYs1cQpNTNmt2l9EY="
+    },
+    {
+      "title": "crewnetwork.org",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE_ybo0fiI--UW76hRPw88n2LukOio8kjKXHr8wQrDv_prIpBpofT4rC2E7r0PjHH8TLlgNlUMXLZnRCDGz4aX1ytpOdBxu0oTj-bt6q3dpYwMEpr-K94UNXCOim99GZTdj9y1d-gKu6arOrC7Fo8mHJm5OkrCF"
+    },
+    {
+      "title": "eventbrite.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEAjY5e6NUXURmq958euHWE4Th-ER3SL1yFJ7JnIY0tukpQqrXHdRTTTG3jq9YtThHXdbUY-JzYKHHE9-C5fmHmOqW-p5671I6k491rUUdloIjXsbST7nwvHaSvIFIqZ_oB1v4fjosFvDA2HECgjedljb1kaM2u6-3UNKjuSAryHrWl5eksug=="
+    },
+    {
+      "title": "meetup.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF3SxwCZMrybWK4JoATIXoiplt8xbLHOZddZWpTJsf7JkoC-l-k1EeoezRcH6Mr4T9ypTlMIMoKJbsoTamlqZ94xJUV6xlC7ib83QtPmQX4NKNaDxUV5N0Zt11EK72bFnkgx9q07F302b2oZdIHfz84"
+    },
+    {
+      "title": "therealdeal.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHo4Nm_Bav-YgDmW1q6eH1iXPQLug-S7paHlHNHqluqu768SsB3ccIMmoCQWtjlT7pR_fj7SLEugpRHjbRz1XbMUU6ijZsUCETVMfEGIMJdPqwP8ay48fNrtg6KchrVmbc2ovU="
+    },
+    {
+      "title": "reca.org",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHY3FaJthx9xsdny1SIE4jWp6L52SbTyMc3ZO4sHySc9uudyIQkQn05IAKTRTp-uhUpmztZb_HJrTNqOShXpVuC73s9iL6zYh_IAl0j-5u2ReER4hTplTyZdBHs"
+    }
+  ]
+}

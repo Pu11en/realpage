@@ -1,0 +1,161 @@
+{
+  "engine": "gemini",
+  "engine_label": "Gemini (gemini-2.5-flash) via API, Google Search grounding on",
+  "is_consumer_app": false,
+  "set": "A",
+  "question": "Are there free alternatives to CoStar or Yardi Matrix for multifamily pipeline data?",
+  "intent": "free-data",
+  "asked_on": "2026-09-23",
+  "ok": true,
+  "answer": "While direct, comprehensive, and granular multifamily pipeline data on par with paid services like CoStar or Yardi Matrix is typically not available for free, several valuable alternatives and data sources can provide significant insights into multifamily development activity and market trends. These free resources often offer aggregated data, market reports, or project-level information for specific jurisdictions.\n\nHere are some free alternatives and data sources for researching multifamily pipeline data:\n\n**1. Government Data Sources:**\n\n*   **U.S. Census Bureau:**\n    *   **Housing Vacancies and Homeownership Reports:** These annual reports offer statistics on housing vacancies, including rental and occupancy rates, and construction spending at the metro area and state levels. Historical data is also available, providing insights into housing inventories.\n    *   **American Housing Survey (AHS):** Conducted by the U.S. Census Bureau and funded by HUD, the AHS is a large national housing sample survey providing comprehensive data on various housing aspects, including apartments.\n*   **U.S. Department of Housing and Urban Development (HUD):**\n    *   **HUD USER:** This resource, established by HUD's Office of Policy Development and Research, provides over 800 free documents, reports, and datasets covering housing market conditions and policy development.\n    *   **Multifamily Housing Properties Data:** HUD also offers datasets related to HUD-subsidized multifamily housing properties.\n    *   **Fair Market Rents (FMR):** HUD establishes FMRs, which can be a useful baseline for rent analysis.\n*   **Local Government Planning Departments:**\n    *   Many city and county planning departments offer public-facing development pipelines or project tracking tools. For example, the **San Francisco Planning Department** provides a \"Pipeline Report\" that tracks construction and entitlement activity for residential units within the city. This data is often available through their open data portals. Searching the website of the specific municipality you are researching can yield similar reports.\n\n**2. Commercial Real Estate Brokerage Firms & Industry Organizations:**\n\n*   **Research Reports from Major Brokerages:** Leading commercial real estate firms such as **CBRE, JLL, Cushman & Wakefield, Marcus & Millichap**, and **Colliers** regularly publish free market research reports. These reports often include high-level data on multifamily vacancy rates, rental rates, market trends, and general construction activity, which can indicate pipeline direction.\n*   **National Multifamily Housing Council (NMHC):** NMHC provides valuable data and insights into the multifamily housing industry through its reports and surveys, covering trends in occupancy, rental rates, and demographic shifts.\n*   **Urban Land Institute (ULI):** ULI publishes magazines and resources like *Urban Land* and *Multifamily Trends*, which offer insights into multifamily housing developments and best practices.\n\n**3. Other Data Sources with Limitations:**\n\n*   **Zillow Research:** While not a direct pipeline data source, Zillow Research offers free, downloadable aggregated time-series data on rental prices, inventory, and market forecasts across various geographic levels (national, metro, county, ZIP code). This can help understand market conditions influencing development.\n*   **Redfin Data Center:** Similar to Zillow, Redfin provides public tools and downloadable datasets with historical housing market data, including median sale prices, inventory levels, and time on market.\n*   **ATTOM Data Solutions:** While primarily a paid API service, ATTOM offers a rental Automated Valuation Model (AVM) that provides rental estimates. This can be a more cost-effective option than full subscriptions for specific data points.\n*   **G2 and SourceForge:** These software review platforms often list alternatives to products like Yardi Matrix, sometimes including those with free tiers or trials, or those focused on specific aspects like property management or lead generation. However, they may not offer dedicated *pipeline* data. Examples mentioned include Entrata, Rent Manager, Market Surveys, and BatchLeads.\n\n**Important Considerations for Free Alternatives:**\n\n*   **Granularity:** Free sources generally provide more aggregated or high-level market trend data rather than the detailed, project-specific pipeline information (e.g., exact addresses, unit counts, developer names, and construction stages for individual upcoming projects) that CoStar or Yardi Matrix offer.\n*   **Timeliness:** Publicly available government data may not be as real-time as the continuously updated proprietary databases of paid platforms.\n*   **Scope:** You may need to combine information from multiple free sources to get a comprehensive picture, whereas CoStar and Yardi Matrix aim to be all-encompassing.\n*   **Local Focus:** For specific project pipeline data, local government planning departments are often the best free resource within their respective jurisdictions.",
+  "sources": [
+    {
+      "title": "hellodata.ai",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHDmrSHzxHSbPx4EcW2kWlEei9s9gs0xp8R3rXZgXhVMixB36c5bE6fD7pkIsnmhKb2JQQBmdcwqryX2wCLcb6jX3imsynxTxlFFxSeGiwjoKgY9wC4BR07o96WjejHAxStpjY14eyS_BMIRcuTD7m3FxTbyXjMK9tD8QGCSmzrAuPlL0XoVASaOk2s-JpYK2Y7OPLzqEOvAaIfujjZqbZP"
+    },
+    {
+      "title": "huduser.gov",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFF-HltoC3UeBmkEZiPVPyzIKKB5qyjijQox84rg6rx_XMtGP7VHiNe4nJaXOv8wUBt07JDcnYB0Md_hD3yUFJTb-zFm_57tZjna3sKwxP7XHKNBBr2l1m4-KM96OED2vXYs0ZVmB-eVehNDK7cb6s="
+    },
+    {
+      "title": "data.gov",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFDUEuAuVe6f_uYehCumEFw1Pt_aihxrLjrOUX4Ai8TEXTFq5KMRLnLT8liV7S3VKItCn_LxVYTTNEVJ-KLNHbvrCoV2E0CYpSz1p1Ty797KRiNU_wnBkUZ3Z45IECRaVxJm6Fs49MlmyMCCfTMwA3Y_I8="
+    },
+    {
+      "title": "reddit.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHOv1Do0x1S3Ldba3f7uEDAbmYP0Opr24bAVE0vXQb3zmwHpL2Sy4gHWVZLSBZdIkicjjUdHOAeeZP7CHcJXUH4qBaqi296NZhdkjqPon5AisiYzC_It1lxk7JUVHHJhmtMQbnBq32AsrbxPsqxFqRRg6hbbiePzwx-6FbFIX-5S-5KIfLWgKwu_8MJqGoCh4gnqCniZ0zErOr6lNbKEJNHmlxUTYBfQvo="
+    },
+    {
+      "title": "sfplanning.org",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHloaL885q3HJ0AnxgMPsNCIaMTDzdtNUh8R0hHmoSqHK08htfXdsZ8h2YwH71jie8Uw9ft7EH-zvW_lTFt7qSSg78ubSCpFTq8zN0lhmAQXCuC3gB7g6dfLz-86c1ZuzAGcWxXGTK36u8="
+    },
+    {
+      "title": "data.gov",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEmq9m486uPSPzXUz_EKn1w6vT3H5c0bIVMwV4h0-gmLROTIFTciLcL32dA7kCLQyu0el4Jyo0MALDhQW1mEwFaYvfFw6yqwUGW9QmnNIbKu-98XSDLBcAtaMA0TO5U53MEQpVHIlc1mpBk5c6wH3kEasb1qfH_C6D72DoyJ7U="
+    },
+    {
+      "title": "multihousingnews.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFzNIh-IxiXBegW2XYbBKI6OA-cHJf-AE3QfNclVjQCydsaWnyrAs-jzOagIdW4pY-8v9iEmBqHhwl8ANygo_x_2ahqu0AucYBDeccR5VcT955Eewh482DtLMStwWcR7TA0tjlboGMvdiDZYW2VYP-3Fv0CUSLQA6exopShXVlYoQUWY5SwIA=="
+    },
+    {
+      "title": "rentcompapi.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEbArvi7KJUlMRZjGGatnwJD_LQ8BjF3UcvmD_vDPt2uAR2hVBWzcZTf8Pkn947OPZsnsRWCRZUfbMN60PF9Zgm6td1SM2BLNdQrCQ1CYKPJcz7eQsKwwVPTfzW6Q3k0Zsf5W0MJwtiPpo6JVaDQm-_jbf7g8dQEP_xj_p4QA=="
+    },
+    {
+      "title": "acmexserhant.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHNy7Mhnc_jVuU6vy3zSDjiikmQ84j5jsZzCYLHsREfgMy3IMrDhaEDZq3qNJIjIw2FTLg1foQtKS0k6eMHti1k4X16PzNTafGiCUdfqNIOtcu4OEEAJ4ZTRdD48xACQaAR_rnOj88-yS2br-Z4mVNL3YaYw_B8mpZsS_tpsT0="
+    },
+    {
+      "title": "homesage.ai",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHdG6iaFBfoy5b2b_1W9q3Gigfj0B3jGxF2IkrHdL27wvat6Onq3eP4chk3Mt2y7dPjuum52aE9KTfh-LSc51qYfiMJdoicGtvgGHZPsTzWvI6Oxwd9Jcn09GbmKKAcwP_Mti11j6mJvrAOmA-xPakoDT8OD7eHmwnbxlnObQQxHwypmb8_YEUthKvfd3jb"
+    },
+    {
+      "title": "g2.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH-AO2eM2mcVZ_VC-eEVNGenLDdYM2DChgHmIetCrF-AuHq8reTwnAkcEYERRKEZHDKy6PcstTX8I-54TzKP1d8G0N23iIwMd8CeHYxxMecxJAemZpmZt32kQiA6UMHMgvkhMwicRhWXy1H33tnQEktwODnJ2qnQCPG3wS9"
+    },
+    {
+      "title": "dwellsy.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF7Q4XMhiSrmF_TUqmxcCAHceHroQsHVX89KqVJoINrjSXhyFUtS_EDI7eauO_GsZPJUTStpi-1vdxyPkOSsg9dOo30DEp4KuMnaOBae3Id1kaEfxvdw4_BzhoFjLXSwPzsvaHw_ET8NJKF93rOohZL0zm5v6SKsaOgU1pTWPxKeLaApEI="
+    }
+  ],
+  "brands": [
+    {
+      "brand": "CoStar",
+      "first_at": 99,
+      "mentions": 3,
+      "rank": 1
+    },
+    {
+      "brand": "Yardi Matrix",
+      "first_at": 109,
+      "mentions": 4,
+      "rank": 2
+    },
+    {
+      "brand": "CBRE",
+      "first_at": 2287,
+      "mentions": 1,
+      "rank": 3
+    },
+    {
+      "brand": "JLL",
+      "first_at": 2293,
+      "mentions": 1,
+      "rank": 4
+    },
+    {
+      "brand": "Cushman & Wakefield",
+      "first_at": 2298,
+      "mentions": 1,
+      "rank": 5
+    },
+    {
+      "brand": "Marcus & Millichap",
+      "first_at": 2319,
+      "mentions": 1,
+      "rank": 6
+    },
+    {
+      "brand": "Zillow",
+      "first_at": 3065,
+      "mentions": 3,
+      "rank": 7
+    },
+    {
+      "brand": "Entrata",
+      "first_at": 4165,
+      "mentions": 1,
+      "rank": 8
+    }
+  ],
+  "links": [
+    {
+      "title": "hellodata.ai",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHDmrSHzxHSbPx4EcW2kWlEei9s9gs0xp8R3rXZgXhVMixB36c5bE6fD7pkIsnmhKb2JQQBmdcwqryX2wCLcb6jX3imsynxTxlFFxSeGiwjoKgY9wC4BR07o96WjejHAxStpjY14eyS_BMIRcuTD7m3FxTbyXjMK9tD8QGCSmzrAuPlL0XoVASaOk2s-JpYK2Y7OPLzqEOvAaIfujjZqbZP"
+    },
+    {
+      "title": "huduser.gov",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFF-HltoC3UeBmkEZiPVPyzIKKB5qyjijQox84rg6rx_XMtGP7VHiNe4nJaXOv8wUBt07JDcnYB0Md_hD3yUFJTb-zFm_57tZjna3sKwxP7XHKNBBr2l1m4-KM96OED2vXYs0ZVmB-eVehNDK7cb6s="
+    },
+    {
+      "title": "data.gov",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFDUEuAuVe6f_uYehCumEFw1Pt_aihxrLjrOUX4Ai8TEXTFq5KMRLnLT8liV7S3VKItCn_LxVYTTNEVJ-KLNHbvrCoV2E0CYpSz1p1Ty797KRiNU_wnBkUZ3Z45IECRaVxJm6Fs49MlmyMCCfTMwA3Y_I8="
+    },
+    {
+      "title": "reddit.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHOv1Do0x1S3Ldba3f7uEDAbmYP0Opr24bAVE0vXQb3zmwHpL2Sy4gHWVZLSBZdIkicjjUdHOAeeZP7CHcJXUH4qBaqi296NZhdkjqPon5AisiYzC_It1lxk7JUVHHJhmtMQbnBq32AsrbxPsqxFqRRg6hbbiePzwx-6FbFIX-5S-5KIfLWgKwu_8MJqGoCh4gnqCniZ0zErOr6lNbKEJNHmlxUTYBfQvo="
+    },
+    {
+      "title": "sfplanning.org",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHloaL885q3HJ0AnxgMPsNCIaMTDzdtNUh8R0hHmoSqHK08htfXdsZ8h2YwH71jie8Uw9ft7EH-zvW_lTFt7qSSg78ubSCpFTq8zN0lhmAQXCuC3gB7g6dfLz-86c1ZuzAGcWxXGTK36u8="
+    },
+    {
+      "title": "data.gov",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEmq9m486uPSPzXUz_EKn1w6vT3H5c0bIVMwV4h0-gmLROTIFTciLcL32dA7kCLQyu0el4Jyo0MALDhQW1mEwFaYvfFw6yqwUGW9QmnNIbKu-98XSDLBcAtaMA0TO5U53MEQpVHIlc1mpBk5c6wH3kEasb1qfH_C6D72DoyJ7U="
+    },
+    {
+      "title": "multihousingnews.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFzNIh-IxiXBegW2XYbBKI6OA-cHJf-AE3QfNclVjQCydsaWnyrAs-jzOagIdW4pY-8v9iEmBqHhwl8ANygo_x_2ahqu0AucYBDeccR5VcT955Eewh482DtLMStwWcR7TA0tjlboGMvdiDZYW2VYP-3Fv0CUSLQA6exopShXVlYoQUWY5SwIA=="
+    },
+    {
+      "title": "rentcompapi.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEbArvi7KJUlMRZjGGatnwJD_LQ8BjF3UcvmD_vDPt2uAR2hVBWzcZTf8Pkn947OPZsnsRWCRZUfbMN60PF9Zgm6td1SM2BLNdQrCQ1CYKPJcz7eQsKwwVPTfzW6Q3k0Zsf5W0MJwtiPpo6JVaDQm-_jbf7g8dQEP_xj_p4QA=="
+    },
+    {
+      "title": "acmexserhant.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHNy7Mhnc_jVuU6vy3zSDjiikmQ84j5jsZzCYLHsREfgMy3IMrDhaEDZq3qNJIjIw2FTLg1foQtKS0k6eMHti1k4X16PzNTafGiCUdfqNIOtcu4OEEAJ4ZTRdD48xACQaAR_rnOj88-yS2br-Z4mVNL3YaYw_B8mpZsS_tpsT0="
+    },
+    {
+      "title": "homesage.ai",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHdG6iaFBfoy5b2b_1W9q3Gigfj0B3jGxF2IkrHdL27wvat6Onq3eP4chk3Mt2y7dPjuum52aE9KTfh-LSc51qYfiMJdoicGtvgGHZPsTzWvI6Oxwd9Jcn09GbmKKAcwP_Mti11j6mJvrAOmA-xPakoDT8OD7eHmwnbxlnObQQxHwypmb8_YEUthKvfd3jb"
+    },
+    {
+      "title": "g2.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH-AO2eM2mcVZ_VC-eEVNGenLDdYM2DChgHmIetCrF-AuHq8reTwnAkcEYERRKEZHDKy6PcstTX8I-54TzKP1d8G0N23iIwMd8CeHYxxMecxJAemZpmZt32kQiA6UMHMgvkhMwicRhWXy1H33tnQEktwODnJ2qnQCPG3wS9"
+    },
+    {
+      "title": "dwellsy.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF7Q4XMhiSrmF_TUqmxcCAHceHroQsHVX89KqVJoINrjSXhyFUtS_EDI7eauO_GsZPJUTStpi-1vdxyPkOSsg9dOo30DEp4KuMnaOBae3Id1kaEfxvdw4_BzhoFjLXSwPzsvaHw_ET8NJKF93rOohZL0zm5v6SKsaOgU1pTWPxKeLaApEI="
+    }
+  ]
+}

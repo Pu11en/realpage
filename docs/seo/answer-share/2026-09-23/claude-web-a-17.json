@@ -1,0 +1,61 @@
+{
+  "engine": "claude-web",
+  "engine_label": "Claude (Sonnet) via claude -p, web search on",
+  "is_consumer_app": false,
+  "set": "A",
+  "question": "How do I look up apartment construction permits without paying for a subscription?",
+  "intent": "free-data",
+  "asked_on": "2026-09-23",
+  "ok": true,
+  "answer": "Building permits are public records, so in almost every case you can get them for free directly from the government agency that issued them \u2014 no subscription service required. Paid tools (Dodge Data & Analytics, Construction Monitor, Shovels.ai's paid tiers) just aggregate and package the same public data for convenience, usually targeting contractors doing lead generation.\n\n**Start here: the local building/planning department**\n- Most cities and counties post permit records online. Search \"[city or county] building permit search\" or \"[city] permit portal.\"\n- Many jurisdictions run on **Accela Citizen Access (ACA)** \u2014 a common permitting platform used by hundreds of municipalities (e.g., Los Angeles's LADBS, Salt Lake City, many others). It's free to search.\n- Larger cities often have their own dedicated tools: NYC's **DOB NOW / Building Information System (BIS)**, Chicago's permit portal, Seattle's **SDCI permit search**, LA's **ZIMAS**, etc.\n- If there's no online portal, you can request records in person or via a public records request (FOIA-equivalent at the state/local level) \u2014 still free, just slower.\n\n**Open data portals (free, bulk/structured data)**\n- Many cities publish permit datasets on **Socrata-based open data portals** (NYC Open Data, Chicago Data Portal, LA GeoHub, SF DataSF). Good if you want to pull/filter many permits at once rather than search one address.\n- **data.gov** sometimes links out to local permit datasets too.\n\n**Free aggregator tools (pull from the same public records)**\n- **BuildZoom** \u2014 free permit lookup by address, also shows contractor license info.\n- Newer address-based aggregators like **ThePermitSheet**, **BuildFolio**, and **PermitDeck** also offer free lookups pulling from official city records, though coverage varies by city and they're less established than going straight to the municipal source.\n\n**For apartment/multifamily specifically**\n- Large multifamily projects usually also go through planning/zoning entitlement review, which generates additional free public documents: site plans, environmental review (CEQA/NEPA where applicable), and public hearing notices \u2014 check the city planning department's project portal or agenda archive, not just the building permit office.\n- County assessor/recorder or GIS parcel viewer pages often link directly to permit history for a given parcel.\n\nIf you tell me the city or county you're researching, I can point you to the exact portal.\n\nSources:\n- [Free Building Permit Lookup by Address \u2014 Search Any City (2026) | ClearedNo](https://www.clearedno.com/blog/free-permit-lookup-by-address)\n- [How to Look Up Building Permits by Address: 2026 Guide | Permitrust](https://permitrust.com/blog/look-up-building-permits/)\n- [Permit History by Address \u2014 Free Building Permit Lookup](https://build-folio.com/permit-history-by-address/)\n- [How to Look Up Building Permits (By Address, Owner, or Date)](https://permitdeck.com/guides/how-to-look-up-building-permits)\n- [Building Permit Lookup by Address \u2014 Free Permit Search](https://thepermitsheet.com/lookup)\n- [Building Permit Application Portal - Accela Citizen Access](https://aca-prod.accela.com/SLCREF/Cap/CapHome.aspx?module=Building&TabName=HOME)\n- [Building Permits Search by Address - St. Louis](https://www.stlouis-mo.gov/government/departments/public-safety/building/permits/search-building-permits-by-address.cfm)",
+  "brands": [
+    {
+      "brand": "Dodge",
+      "first_at": 188,
+      "mentions": 1,
+      "rank": 1
+    },
+    {
+      "brand": "Public records (DIY)",
+      "first_at": 548,
+      "mentions": 4,
+      "rank": 2
+    },
+    {
+      "brand": "BuildZoom",
+      "first_at": 1531,
+      "mentions": 1,
+      "rank": 3
+    }
+  ],
+  "links": [
+    {
+      "title": "",
+      "url": "https://www.clearedno.com/blog/free-permit-lookup-by-address"
+    },
+    {
+      "title": "",
+      "url": "https://permitrust.com/blog/look-up-building-permits/"
+    },
+    {
+      "title": "",
+      "url": "https://build-folio.com/permit-history-by-address/"
+    },
+    {
+      "title": "",
+      "url": "https://permitdeck.com/guides/how-to-look-up-building-permits"
+    },
+    {
+      "title": "",
+      "url": "https://thepermitsheet.com/lookup"
+    },
+    {
+      "title": "",
+      "url": "https://aca-prod.accela.com/SLCREF/Cap/CapHome.aspx?module=Building&TabName=HOME"
+    },
+    {
+      "title": "",
+      "url": "https://www.stlouis-mo.gov/government/departments/public-safety/building/permits/search-building-permits-by-address.cfm"
+    }
+  ]
+}

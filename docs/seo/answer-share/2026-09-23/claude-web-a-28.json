@@ -1,0 +1,44 @@
+{
+  "engine": "claude-web",
+  "engine_label": "Claude (Sonnet) via claude -p, web search on",
+  "is_consumer_app": false,
+  "set": "A",
+  "question": "How do I find which apartment buildings use a specific software platform?",
+  "intent": "detect-software",
+  "asked_on": "2026-09-23",
+  "ok": true,
+  "answer": "Here's how people typically approach this, roughly in order of reliability:\n\n**1. Resident-facing URLs and portals (fastest for a specific building)**\nApartment websites almost always link out to a vendor-hosted domain for applications, rent payment, or maintenance requests. The domain or branding usually reveals the platform:\n- Yardi \u2192 often `rentcafe.com` or a Yardi-branded portal\n- RealPage \u2192 RealPage's own resident portal branding, or products like OneSite/Spark\n- Entrata \u2192 portal explicitly branded \"Entrata\"\n- AppFolio \u2192 subdomains under `appfolio.com`\n- ResMan \u2192 `myresman.com`\nCheck the \"Pay Rent,\" \"Apply Now,\" or \"Maintenance Request\" links/footer on the property's own site.\n\n**2. Job postings for leasing agents/property managers**\nListings on Indeed or LinkedIn for a specific management company frequently name the exact software (\"experience with Yardi Voyager required,\" \"RealPage/OneSite preferred\"). This ties software to a management company (and often specific properties they list) more reliably than marketing materials.\n\n**3. Vendor case studies and client lists**\nRealPage, Yardi, Entrata, MRI Software, and AppFolio all publish customer success stories naming specific REITs or management companies (Greystar, Camden, Cortland, AvalonBay, etc. show up in various vendors' materials). These skew toward large portfolio owners, not individual buildings.\n\n**4. SEC filings (for publicly traded landlords)**\n10-Ks and proxy statements for REITs like Equity Residential, AvalonBay, Camden Property Trust, and MAA sometimes disclose vendor/technology relationships, especially since litigation risk around revenue-management software became a disclosed risk factor.\n\n**5. Litigation records \u2014 especially relevant for RealPage**\nIf your interest is specifically RealPage's YieldStar/AI Revenue Management pricing software, the DOJ's antitrust suit (*United States v. RealPage*, filed 2024) and the consolidated private litigation (*In re: RealPage, Inc., Rental Software Antitrust Litigation*, MDL in the Middle District of Tennessee) name specific defendant landlords who licensed the software \u2014 Greystar, Camden, Cushman & Wakefield, Cortland, and others appear in complaints and exhibits. PACER (via a court records account) or a legal database has the full filings.\n\n**6. Investigative journalism**\nProPublica's 2022 investigation into RealPage (\"Rent Going Up? One Company's Algorithm Could Be Why\") and its follow-ups identified specific landlords through leaked documents, interviews, and public records \u2014 worth reading both for named examples and as a methodology template.\n\n**7. Asking directly**\nFor a single building, the leasing office will usually just tell you what portal/software they use if you ask \u2014 this is often faster than any of the above.\n\nA couple of caveats: vendor case studies and job postings tell you about a management company's portfolio-wide software, not necessarily every individual building (large owners sometimes run legacy systems on recently acquired properties). And I didn't fabricate any URLs above \u2014 if you want the actual case-study pages or litigation documents, I'd search for them directly rather than trust a guessed link.\n\nIs this for competitive/sales research, due diligence on a specific building, or something tied to the RealPage antitrust angle? I can tailor the approach further if so.",
+  "brands": [
+    {
+      "brand": "RealPage",
+      "first_at": 388,
+      "mentions": 10,
+      "rank": 1
+    },
+    {
+      "brand": "Entrata",
+      "first_at": 473,
+      "mentions": 3,
+      "rank": 2
+    },
+    {
+      "brand": "AppFolio",
+      "first_at": 521,
+      "mentions": 3,
+      "rank": 3
+    },
+    {
+      "brand": "Yardi (software)",
+      "first_at": 867,
+      "mentions": 1,
+      "rank": 4
+    },
+    {
+      "brand": "Cushman & Wakefield",
+      "first_at": 2138,
+      "mentions": 1,
+      "rank": 5
+    }
+  ],
+  "links": []
+}

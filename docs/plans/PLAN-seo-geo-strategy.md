@@ -105,13 +105,40 @@ LLC shells like `900 TITLE JEFFERSON LLC`), developer pages (265, same problem),
 
 ## Measurement
 
-Before and after, on the same questions, so the effect is provable:
+**Corrected 2026-09-23 (David):** the question bank originally carried a second set asking
+which property-management software to buy -- RealPage vs Yardi, best PMS for 200 units. That
+is the wrong market. It was inherited from the archived RealPage project, where the buyer was
+a software vendor. **CraneSignal sells lead data on buildings**, so every question now asks
+what CraneSignal's own buyer asks, and the names we count are property-data and
+construction-pipeline services, not PMS vendors.
 
-- **Search side:** Search Console impressions and position for "<metro> multifamily market report",
-  "<metro> multifamily construction pipeline", and the city variants. Needs the property verified.
-- **AI side:** Claude and Gemini asked ~25 questions (Set A: questions CraneSignal could be cited for;
-  Set B: the buying-intent market questions from the archived RealPage bank). Baseline expectation is
-  zero mentions of CraneSignal in Set A. Re-run weekly.
+`tooling/seo/questions.csv` -- 28 questions, six intents:
+
+- **pipeline** (8): "How do I find apartment buildings under construction in Dallas?",
+  "How many apartment units are under construction in Texas?"
+- **sales** (5): "Which apartment complexes in Texas sold in 2025?", "How can I find out who
+  bought an apartment complex?"
+- **free-data** (5): "Are there free alternatives to CoStar or Yardi Matrix?", "Where can I
+  download a list of apartment buildings with addresses and unit counts?"
+- **prospecting** (6): "How do I build a lead list of new apartment buildings to sell to?",
+  "Who do I contact about a new apartment building before it opens?"
+- **detect-software** (3): "Which property management software does a given building use?" --
+  kept because it is CraneSignal's second claim, and it is about a *building*, not a purchase.
+- **timing** (1): "When is the best time to sell services to a new apartment building?" --
+  the product thesis as a question.
+
+What gets counted: CoStar, Yardi Matrix, Dodge, ConstructConnect, BuildCentral, Reonomy,
+PropertyShark, LoopNet, Crexi, BuildZoom, Cherre, HelloData, Moody's; the brokerages that
+publish the market reports (CBRE, Berkadia, Marcus & Millichap, Cushman, JLL, Northmarq, MMG);
+the prospecting tools (ZoomInfo, Apollo, Sales Navigator); Apartments.com and Zillow as a
+warning sign that a question read as renter intent; and **"Public records (DIY)"** -- when an
+engine answers "go read the appraisal district or the permit office", which is our own source
+and one step away from citing a site that has already done it.
+
+Search side: Search Console impressions and position for "<metro> multifamily market report",
+"<metro> multifamily construction pipeline" and the city variants. Needs the property verified.
+
+## Tools, revised
 
 ## Tools, revised
 

@@ -1,54 +1,75 @@
-# What the AI engines answer — 2026-09-23
+# Who the AI engines name when someone is looking for apartment leads — 2026-09-23
 
 The before-picture, taken while the SEO work sits on a branch and nothing is
 deployed. Re-run `tooling/seo/sample.py` in a few weeks and compare.
+
+Every question here is one CraneSignal's own buyer would ask: how to find
+buildings under construction, who just bought a complex, where to get the data
+free, who to call before a building opens. We are not measuring the
+property-management software market -- that was the archived RealPage project, a
+different business.
 
 **These are not the consumer apps.** `claude-web` is `claude -p` on the
 subscription with web search; `gemini` is the Gemini API with Google Search
 grounding. A person typing into chatgpt.com or the Gemini app may see something
 different. Treat this as a directional read, not a transcript.
 
-Engines: claude-web, gemini · Questions answered: 50
+Engines: claude-web, gemini · Questions answered: 56
 
-## Set A — questions CraneSignal could be cited for
+## The headline number
 
-If the SEO work succeeds, CraneSignal starts appearing here. Today it should not.
+**CraneSignal is named in 0 of 56 answers.**
 
-**CraneSignal named in 0 of 30 Set A answers.**
+When that number starts moving, the SEO work is landing. Everything below is who
+is getting named instead.
+
+## Who gets named, across every question
 
 | Named | Answers | Share |
 |---|---|---|
-| Yardi | 25 / 30 | 83% |
-| CoStar | 19 / 30 | 63% |
-| RealPage | 14 / 30 | 47% |
-| CBRE | 8 / 30 | 27% |
-| Apartments.com | 7 / 30 | 23% |
-| Berkadia | 7 / 30 | 23% |
-| Zillow | 5 / 30 | 17% |
-| AppFolio | 4 / 30 | 13% |
-| Buildium | 4 / 30 | 13% |
-| Entrata | 4 / 30 | 13% |
-| ResMan | 3 / 30 | 10% |
-| MRI | 3 / 30 | 10% |
-| Rent Manager | 2 / 30 | 7% |
+| CoStar | 34 / 56 | 61% |
+| Yardi Matrix | 31 / 56 | 55% |
+| RealPage | 27 / 56 | 48% |
+| Apartments.com | 18 / 56 | 32% |
+| Cushman & Wakefield | 17 / 56 | 30% |
+| Public records (DIY) | 15 / 56 | 27% |
+| Reonomy | 13 / 56 | 23% |
+| Dodge | 11 / 56 | 20% |
+| Zillow | 11 / 56 | 20% |
+| CBRE | 10 / 56 | 18% |
+| Marcus & Millichap | 8 / 56 | 14% |
+| ZoomInfo | 8 / 56 | 14% |
+| AppFolio | 8 / 56 | 14% |
+| Entrata | 8 / 56 | 14% |
+| Berkadia | 7 / 56 | 12% |
+| Moody's | 6 / 56 | 11% |
+| JLL | 6 / 56 | 11% |
+| MMG | 6 / 56 | 11% |
+| Northmarq | 6 / 56 | 11% |
+| PropertyShark | 6 / 56 | 11% |
+| LoopNet | 6 / 56 | 11% |
+| LinkedIn Sales Navigator | 6 / 56 | 11% |
+| Apollo | 5 / 56 | 9% |
+| Crexi | 4 / 56 | 7% |
+| Yardi (software) | 4 / 56 | 7% |
+| ConstructConnect | 3 / 56 | 5% |
+| Cherre | 3 / 56 | 5% |
+| BuildCentral | 3 / 56 | 5% |
+| BuildZoom | 2 / 56 | 4% |
+| HelloData | 1 / 56 | 2% |
 
-## Set B — what the market is told to buy
+## By what the asker actually wants
 
-We do not expect to appear here. This is the answer-share view.
+Top three names per intent, so it is clear which questions are winnable.
 
-| Vendor | Answers | Share |
+| What they asked for | Answers | Most-named |
 |---|---|---|
-| RealPage | 19 / 20 | 95% |
-| Yardi | 17 / 20 | 85% |
-| AppFolio | 16 / 20 | 80% |
-| Entrata | 13 / 20 | 65% |
-| Buildium | 12 / 20 | 60% |
-| MRI | 7 / 20 | 35% |
-| Rent Manager | 6 / 20 | 30% |
-| Zillow | 4 / 20 | 20% |
-| Apartments.com | 3 / 20 | 15% |
-| CoStar | 2 / 20 | 10% |
-| ResMan | 1 / 20 | 5% |
+| pipeline | 16 | Yardi Matrix 75%, CoStar 69%, RealPage 56% |
+| sales | 10 | CoStar 90%, Yardi Matrix 70%, Reonomy 60% |
+| free-data | 10 | Yardi Matrix 70%, CoStar 50%, RealPage 40% |
+| prospecting | 12 | CoStar 67%, ZoomInfo 50%, Apartments.com 42% |
+| timing | 2 | RealPage 50%, Entrata 50%, Yardi Matrix 50% |
+| detect-software | 6 | AppFolio 100%, RealPage 100%, Entrata 83% |
 
 ## Which sites the engines actually read
 
@@ -58,207 +79,249 @@ alongside to get cited.
 
 | Site | Answers citing it |
 |---|---|
-| realpage.com | 17 |
-| appfolio.com | 11 |
-| mmgrea.com | 9 |
-| yardimatrix.com | 8 |
-| multihousingnews.com | 6 |
+| yardimatrix.com | 14 |
+| multihousingnews.com | 11 |
+| realpage.com | 7 |
+| mmgrea.com | 6 |
+| northmarq.com | 6 |
 | yardi.com | 6 |
-| matthews.com | 6 |
+| cushmanwakefield.com | 6 |
+| costar.com | 6 |
 | reddit.com | 6 |
-| mrisoftware.com | 6 |
-| cushmanwakefield.com | 5 |
-| multifamilydive.com | 5 |
-| credaily.com | 5 |
-| re-leased.com | 5 |
-| buildium.com | 5 |
-| door.com | 4 |
-| capterra.com | 4 |
-| g2.com | 4 |
-| houstonchronicle.com | 3 |
-| northmarq.com | 3 |
+| therealdeal.com | 5 |
+| credaily.com | 4 |
+| multifamilydive.com | 4 |
+| finance.yahoo.com | 3 |
+| zabalist.com | 3 |
 | berkadia.com | 3 |
+| houstontx.gov | 3 |
+| census.gov | 3 |
+| smartapartmentdata.com | 3 |
+| revyse.com | 3 |
+| openmart.com | 3 |
 
 ## Question by question
 
-### A. How do I find apartment buildings under construction in Dallas?
+### How do I find apartment buildings under construction in Dallas?
+*pipeline*
 
-- **claude-web** — CoStar (#1), Yardi (#2), RealPage (#3), Apartments.com (#4)
-- **gemini** — RealPage (#1)
-  - cited: culturemap.com, constructionwire.com, urbanize.city, realpage.com, permitflow.com, capitalconstructiongrp.com
+- **claude-web** — Public records (DIY) (#1), Yardi Matrix (#2), RealPage (#3), CoStar (#4), Dodge (#5)
+- **gemini** — MMG (#1)
+  - cited: aiadallas.org, dallascityhall.com, maxxdesigners.com, urbanize.city
+  - **engines disagree on who comes first:** claude-web says Public records (DIY); gemini says MMG
+
+### Where can I find a list of new apartment developments in Houston?
+*pipeline*
+
+- **claude-web** — Yardi Matrix (#1), RealPage (#2), CoStar (#3), Apartments.com (#4), Zillow (#5)
+- **gemini** — Apartments.com (#1), Yardi Matrix (#2), Cushman & Wakefield (#3), Northmarq (#4)
+  - cited: umovefree.com, rentcafe.com, smartcitylocating.com, tacostreetlocating.com, yardimatrix.com, cushmanwakefield.com
+  - **engines disagree on who comes first:** claude-web says Yardi Matrix; gemini says Apartments.com
+
+### How do I find multifamily construction pipeline data for Austin?
+*pipeline*
+
+- **claude-web** — CoStar (#1), Yardi Matrix (#2), RealPage (#3), Moody's (#4), CBRE (#5), JLL (#6), Cushman & Wakefield (#7), Marcus & Millichap (#8), Berkadia (#9), Dodge (#10), ConstructConnect (#11)
+- **gemini** — Yardi Matrix (#1), RealPage (#2), CoStar (#3), Apartments.com (#4), MMG (#5), Northmarq (#6), Cushman & Wakefield (#7), Berkadia (#8)
+  - cited: yardimatrix.com, credaily.com, realpage.com
+  - **engines disagree on who comes first:** claude-web says CoStar; gemini says Yardi Matrix
+
+### What apartment complexes are being built in San Antonio right now?
+*pipeline*
+
+- **claude-web** — MMG (#1), Apartments.com (#2)
+  - cited: sanantonioreport.org, therealdeal.com, ksat.com, sahousingtrust.org, focusonsanantonio.com, hoodline.com
+- **gemini** — no tracked names
+  - cited: livevida.com, westonurban.com, mysanantonio.com, kittleproperties.com, sahousingtrust.org, pedcorcompanies.com
+
+### Where can I find Phoenix multifamily construction pipeline data?
+*pipeline*
+
+- **claude-web** — Yardi Matrix (#1), CoStar (#2), RealPage (#3), CBRE (#4), JLL (#5), Cushman & Wakefield (#6), Berkadia (#7), Dodge (#8)
+- **gemini** — CoStar (#1), Yardi Matrix (#2), Cushman & Wakefield (#3), Berkadia (#4), MMG (#5), Marcus & Millichap (#6)
+  - cited: kidder.com, multihousingnews.com, yardimatrix.com, cushmanwakefield.com, berkadia.com, abimultifamily.com
+  - **engines disagree on who comes first:** claude-web says Yardi Matrix; gemini says CoStar
+
+### Where can I get a list of apartment buildings opening in 2027?
+*pipeline*
+
+- **claude-web** — RealPage (#1), CoStar (#2), Yardi Matrix (#3), CBRE (#4), JLL (#5), Cushman & Wakefield (#6)
+- **gemini** — Yardi Matrix (#1), CoStar (#2), Apartments.com (#3), Dodge (#4)
+  - cited: multifamilydive.com, irei.com, yardi.com, yardimatrix.com, douglascompany.com, greenvillehousingfund.com
+  - **engines disagree on who comes first:** claude-web says RealPage; gemini says Yardi Matrix
+
+### How do I find new apartment projects before they open for leasing?
+*pipeline*
+
+- **claude-web** — Public records (DIY) (#1), Dodge (#2), Yardi Matrix (#3), CoStar (#4), RealPage (#5), Apartments.com (#6), Zillow (#7)
+  - cited: yardimatrix.com, sfyimby.com, newyorkyimby.com
+- **gemini** — CoStar (#1), LoopNet (#2), Yardi Matrix (#3), Apartments.com (#4), Zillow (#5)
+  - **engines disagree on who comes first:** claude-web says Public records (DIY); gemini says CoStar
+
+### How many apartment units are under construction in Texas?
+*pipeline*
+
+- **claude-web** — Yardi Matrix (#1), RealPage (#2), CoStar (#3), CBRE (#4), MMG (#5), Apartments.com (#6), Northmarq (#7)
+  - cited: marketscale.com, multifamilydive.com, multihousingnews.com, austinapartments.com, yardimatrix.com, mmgrea.com
+- **gemini** — Public records (DIY) (#1), RealPage (#2), Northmarq (#3)
+  - cited: zabalist.com, lumicre.com, apartments.com, northmarq.com, mysanantonio.com, communityimpact.com
+  - **engines disagree on who comes first:** claude-web says Yardi Matrix; gemini says Public records (DIY)
+
+### Which apartment complexes in Texas sold in 2025?
+*sales*
+
+- **claude-web** — CoStar (#1), Yardi Matrix (#2), RealPage (#3)
+  - cited: therealdeal.com, walkerdunlop.com, muskin-elam.com, multihousingnews.com, hoodline.com, connectcre.com
+- **gemini** — RealPage (#1), CBRE (#2), Yardi Matrix (#3)
+  - cited: swbc.com, realpage.com, 214cap.com, cushmanwakefield.com, multifamilygrp.com, tamu.edu
   - **engines disagree on who comes first:** claude-web says CoStar; gemini says RealPage
 
-### A. Where can I find a list of new apartment developments in Houston?
+### How can I find out who bought an apartment complex?
+*sales*
 
-- **claude-web** — Yardi (#1), CoStar (#2), RealPage (#3)
-  - cited: houstonchronicle.com, houston.org, mmgrea.com, houstontx.gov, yardimatrix.com, costar.com
-- **gemini** — Apartments.com (#1), Yardi (#2)
-  - cited: stagecoachmanagement.com, cushmanwakefield.com, matthews.com, tacostreetlocating.com, smartcitylocating.com, umovefree.com
-  - **engines disagree on who comes first:** claude-web says Yardi; gemini says Apartments.com
+- **claude-web** — CoStar (#1), Yardi Matrix (#2), Reonomy (#3), PropertyShark (#4), Zillow (#5), Apartments.com (#6)
+- **gemini** — Public records (DIY) (#1), CoStar (#2), LoopNet (#3), Reonomy (#4), PropertyShark (#5)
+  - **engines disagree on who comes first:** claude-web says CoStar; gemini says Public records (DIY)
 
-### A. Which apartment complexes in Texas sold in 2025?
+### How do I find recently sold apartment buildings in Dallas-Fort Worth?
+*sales*
 
-- **claude-web** — CoStar (#1), Yardi (#2), RealPage (#3)
-  - cited: therealdeal.com, muskin-elam.com, multihousingnews.com, walkerdunlop.com, blog.swbc.com, finance.yahoo.com
-- **gemini** — CoStar (#1)
-  - cited: matthews.com, multifamilydive.com, multifamilygrp.com, biscred.com, tamu.edu, terrydalecapital.com
+- **claude-web** — CoStar (#1), Crexi (#2), LoopNet (#3), Moody's (#4), Yardi Matrix (#5), JLL (#6), CBRE (#7), Cushman & Wakefield (#8), Berkadia (#9), Marcus & Millichap (#10), Public records (DIY) (#11)
+- **gemini** — CoStar (#1), Moody's (#2), LoopNet (#3), Crexi (#4), Marcus & Millichap (#5), Cushman & Wakefield (#6), Public records (DIY) (#7)
+  - cited: matthews.com, costar.com, costargroup.com, mymetrotex.com
 
-### A. How do I find multifamily construction pipeline data for Austin?
+### Where can I see apartment building ownership changes?
+*sales*
 
-- **claude-web** — Yardi (#1), CoStar (#2), RealPage (#3), CBRE (#4), Apartments.com (#5)
-  - cited: matthews.com, mmgrea.com, yardimatrix.com, yardi.com, multihousingnews.com, austinapartments.com
-- **gemini** — Yardi (#1)
-  - cited: mmgrea.com, matthews.com, yardimatrix.com
+- **claude-web** — CoStar (#1), Yardi Matrix (#2), Moody's (#3), Reonomy (#4), PropertyShark (#5), RealPage (#6)
+- **gemini** — Reonomy (#1), CoStar (#2), PropertyShark (#3)
+  - cited: reisresearch.com, housemeasures.com, clearcapital.com, actdatascout.com, youtube.com, propstream.com
+  - **engines disagree on who comes first:** claude-web says CoStar; gemini says Reonomy
 
-### A. Is there a free multifamily market report for San Antonio?
+### What is the best way to find newly sold apartment complexes for sales prospecting?
+*sales*
 
-- **claude-web** — Yardi (#1), Berkadia (#2), CBRE (#3), RealPage (#4)
+- **claude-web** — Yardi Matrix (#1), CoStar (#2), Crexi (#3), Moody's (#4), Reonomy (#5), Cherre (#6)
+  - cited: forage.ai, credaily.com, yardimatrix.com, nextautomation.us, samimiinvestments.com, multihousingnews.com
+- **gemini** — CoStar (#1), Apartments.com (#2), Yardi Matrix (#3), Reonomy (#4), RealPage (#5), Marcus & Millichap (#6), Cushman & Wakefield (#7)
+  - cited: costar.com, reddit.com, multihousingnews.com, yardimatrix.com, biggerpockets.com, altusgroup.com
+  - **engines disagree on who comes first:** claude-web says Yardi Matrix; gemini says CoStar
+
+### Is there a free multifamily market report for San Antonio?
+*free-data*
+
+- **claude-web** — Marcus & Millichap (#1), Berkadia (#2), Northmarq (#3), CBRE (#4), JLL (#5), Cushman & Wakefield (#6), Yardi Matrix (#7), RealPage (#8), Apartments.com (#9)
   - cited: berkadia.com, colliers.com, yardimatrix.com, institutionalpropertyadvisors.com, marcusmillichap.com, northmarq.com
-- **gemini** — Yardi (#1), Berkadia (#2), CBRE (#3)
-  - cited: cushmanwakefield.com, yardimatrix.com, berkadia.com, marcusmillichap.com, cbre.com
+- **gemini** — MMG (#1), Yardi Matrix (#2), Northmarq (#3)
+  - cited: mmgrea.com, yardimatrix.com, gamma.app, northmarq.com, cushmanwakefield.com
+  - **engines disagree on who comes first:** claude-web says Marcus & Millichap; gemini says MMG
 
-### A. How can I find out who bought an apartment complex?
+### What public data sources show apartment construction permits in Texas?
+*free-data*
 
-- **claude-web** — CoStar (#1), Yardi (#2)
-- **gemini** — CoStar (#1), Yardi (#2), Zillow (#3)
-  - cited: nextautomation.us, northwestregisteredagent.com, buildout.com, lendingtree.com, proptracer.com, batchdata.io
+- **claude-web** — Public records (DIY) (#1), Yardi Matrix (#2), CoStar (#3), RealPage (#4), Dodge (#5)
+  - cited: trerc.tamu.edu, census.gov, houstontx.gov, data.austintexas.gov, dallasopendata.com, data.sanantonio.gov
+- **gemini** — Public records (DIY) (#1)
+  - cited: permitsguide.com, tamu.edu, indexmundi.com, mymetrotex.com
 
-### A. Where can I get a list of apartment buildings opening in 2027?
+### Are there free alternatives to CoStar or Yardi Matrix for multifamily pipeline data?
+*free-data*
 
-- **claude-web** — Yardi (#1), RealPage (#2), CoStar (#3)
-- **gemini** — Yardi (#1), CoStar (#2), Apartments.com (#3)
-  - cited: rentcafe.com, multifamilydive.com, yardi.com, credaily.com, culturemap.com
+- **claude-web** — CoStar (#1), Yardi Matrix (#2), Moody's (#3), RealPage (#4)
+  - cited: apartmentlist.com, sfplanning.org, nahb.org, nmhc.org, yardi.com, realpage.com
+- **gemini** — CoStar (#1), Yardi Matrix (#2), CBRE (#3), JLL (#4), Cushman & Wakefield (#5), Marcus & Millichap (#6), Zillow (#7), Entrata (#8)
+  - cited: hellodata.ai, huduser.gov, data.gov, reddit.com, sfplanning.org
 
-### A. How do I find new apartment projects before they open for leasing?
+### How do I look up apartment construction permits without paying for a subscription?
+*free-data*
 
-- **claude-web** — Apartments.com (#1), Zillow (#2), Yardi (#3), CoStar (#4), RealPage (#5)
+- **claude-web** — Dodge (#1), Public records (DIY) (#2), BuildZoom (#3)
+  - cited: clearedno.com, permitrust.com, build-folio.com, permitdeck.com, thepermitsheet.com, aca-prod.accela.com
+- **gemini** — Public records (DIY) (#1), BuildZoom (#2)
+  - cited: miamidade.gov, chicago.gov, cityofchicago.org, youtube.com, insidesandiego.org
+  - **engines disagree on who comes first:** claude-web says Dodge; gemini says Public records (DIY)
+
+### Where can I download a list of apartment buildings with addresses and unit counts?
+*free-data*
+
+- **claude-web** — CoStar (#1), Yardi Matrix (#2), RealPage (#3), Reonomy (#4), Apartments.com (#5), Zillow (#6)
+- **gemini** — CoStar (#1), Yardi Matrix (#2), Reonomy (#3)
+  - cited: forage.ai, costar.com, ficstar.com, multihousingnews.com, yardimatrix.com
+
+### How do I build a lead list of new apartment buildings to sell to?
+*prospecting*
+
+- **claude-web** — BuildCentral (#1), Yardi Matrix (#2), CoStar (#3), Apartments.com (#4), Dodge (#5), ConstructConnect (#6), ZoomInfo (#7), Apollo (#8), LinkedIn Sales Navigator (#9), Public records (DIY) (#10)
+  - cited: alndata.com, buildcentral.com, smartapartmentdata.com, revyse.com, multifamilydata.com, constructalead.com
+- **gemini** — Dodge (#1), ConstructConnect (#2), BuildCentral (#3), CoStar (#4), Reonomy (#5)
+  - **engines disagree on who comes first:** claude-web says BuildCentral; gemini says Dodge
+
+### How do I find property managers to sell services to?
+*prospecting*
+
+- **claude-web** — ZoomInfo (#1), Apollo (#2), LinkedIn Sales Navigator (#3), RealPage (#4), AppFolio (#5), Cushman & Wakefield (#6)
+  - cited: openmart.com, bytescraper.com, scrap.io, narpm.org, realpage.com, secure.american-apartment-owners-association.org
 - **gemini** — no tracked names
-  - cited: fairfieldresidential.com, buildingradar.com, commloan.com, greystar.com, multihousingnews.com, rentreboot.com
+  - cited: yardibreeze.com, doorloop.com, csnarpm.org, narpm.org, denvernarpm.org
 
-### A. What public data sources show apartment construction permits in Texas?
+### Who do I contact about a new apartment building before it opens?
+*prospecting*
 
-- **claude-web** — Yardi (#1), CoStar (#2)
-  - cited: nahb.org, trerc.tamu.edu, data.austintexas.gov, dallasopendata.com, data.sanantonio.gov, data.texas.gov
-- **gemini** — no tracked names
-  - cited: indexmundi.com, tamu.edu, nahb.org, stlouisfed.org, mercator.ai
+- **claude-web** — Apartments.com (#1), Zillow (#2), Public records (DIY) (#3), CoStar (#4), Crexi (#5), Dodge (#6)
+- **gemini** — Apartments.com (#1), Zillow (#2), Cushman & Wakefield (#3), CBRE (#4), Public records (DIY) (#5), CoStar (#6)
 
-### A. How do I build a lead list of new apartment buildings to sell to?
+### How do I find decision makers at apartment management companies?
+*prospecting*
 
-- **claude-web** — Yardi (#1), CoStar (#2), RealPage (#3), Apartments.com (#4), CBRE (#5), Berkadia (#6)
-- **gemini** — CoStar (#1), Apartments.com (#2), Zillow (#3)
-  - **engines disagree on who comes first:** claude-web says Yardi; gemini says CoStar
+- **claude-web** — LinkedIn Sales Navigator (#1), ZoomInfo (#2), Apollo (#3), RealPage (#4), Cushman & Wakefield (#5)
+- **gemini** — LinkedIn Sales Navigator (#1), CoStar (#2), Yardi Matrix (#3), Reonomy (#4), LoopNet (#5), PropertyShark (#6), ZoomInfo (#7), Apollo (#8)
+  - cited: greystar.com, costar.com, business.linkedin.com, naahq.org, propertyshark.com
 
-### A. Which property management software does a given apartment building use?
+### What is the best way to prospect multifamily property managers?
+*prospecting*
 
-- **claude-web** — AppFolio (#1), Yardi (#2), RealPage (#3), Buildium (#4), Entrata (#5), ResMan (#6)
-- **gemini** — RealPage (#1), Yardi (#2), AppFolio (#3), Buildium (#4), MRI (#5), Entrata (#6)
-  - **engines disagree on who comes first:** claude-web says AppFolio; gemini says RealPage
-
-### A. How can I tell what property management system a company runs?
-
-- **claude-web** — Yardi (#1), RealPage (#2), AppFolio (#3), Entrata (#4), MRI (#5), Rent Manager (#6), Buildium (#7), ResMan (#8)
-- **gemini** — AppFolio (#1), RealPage (#2), Buildium (#3), Yardi (#4), Entrata (#5), MRI (#6), Rent Manager (#7), ResMan (#8)
-  - cited: thebusinessresearchcompany.com, researchnester.com, appfolio.com, realpage.com, faroutsolutions.com, nimbio.com
-  - **engines disagree on who comes first:** claude-web says Yardi; gemini says AppFolio
-
-### A. Where can I find Phoenix multifamily construction pipeline data?
-
-- **claude-web** — Yardi (#1), RealPage (#2), CoStar (#3), CBRE (#4)
-  - cited: azbex.com, kidder.com, azbigmedia.com, mmgrea.com, getmultifamily.com, phoenix.gov
-- **gemini** — CoStar (#1), Yardi (#2), Berkadia (#3)
-  - cited: kidder.com, matthews.com, mmgrea.com, multihousingnews.com, azbex.com
-  - **engines disagree on who comes first:** claude-web says Yardi; gemini says CoStar
-
-### A. What is the best way to find newly sold apartment complexes for sales prospecting?
-
-- **claude-web** — CoStar (#1), Yardi (#2), CBRE (#3), Berkadia (#4)
-  - cited: credaily.com, yardimatrix.com, reonomy.com, propertyradar.com, multifamilydive.com
-- **gemini** — CoStar (#1), Yardi (#2)
-  - cited: reddit.com, forage.ai, batchdata.io, compstak.com, reonomy.com, labusinessjournal.com
-
-### A. Are there free alternatives to CoStar or Yardi Matrix for multifamily pipeline data?
-
-- **claude-web** — CoStar (#1), Yardi (#2), CBRE (#3), Berkadia (#4), Zillow (#5)
-  - cited: credaily.com, breakintocre.com, fred.stlouisfed.org, mmgrea.com, softwaresuggest.com
-- **gemini** — CoStar (#1), Yardi (#2), CBRE (#3), Berkadia (#4), Zillow (#5)
-  - cited: hellodata.ai, apartmentiq.io, reddit.com, multihousingnews.com, compstak.com, biggerpockets.com
-
-### B. What is the best property management software for a multifamily apartment portfolio?
-
-- **claude-web** — Yardi (#1), RealPage (#2), MRI (#3), Entrata (#4), AppFolio (#5), Buildium (#6)
-  - cited: realpage.com, re-leased.com, appfolio.com, ustechautomations.com, mrisoftware.checkpointid.com
-- **gemini** — Yardi (#1), RealPage (#2), Entrata (#3), AppFolio (#4), MRI (#5), Buildium (#6), Rent Manager (#7)
-  - cited: re-leased.com, door.com, realpage.com, fortresstech.io, faroutsolutions.com, gartner.com
-
-### B. What is the best property management system for 200-unit buildings in Texas?
-
-- **claude-web** — Buildium (#1), AppFolio (#2), Yardi (#3), RealPage (#4), Entrata (#5), Rent Manager (#6)
-  - cited: credaily.com, realpage.com, rentmanager.com, buildium.com, door.com, appfolio.com
-- **gemini** — AppFolio (#1), Buildium (#2), RealPage (#3), Yardi (#4), Entrata (#5)
-  - cited: realpage.com, v7labs.com, yardibreeze.com, intellectyx.com, softhealer.com
-  - **engines disagree on who comes first:** claude-web says Buildium; gemini says AppFolio
-
-### B. How does RealPage compare to Yardi for multifamily property management?
-
-- **claude-web** — RealPage (#1), Yardi (#2)
-  - cited: wsgr.com, justice.gov, duanemorris.com, realpage.com, nextautomation.us, bcsolut.com
-- **gemini** — RealPage (#1), Yardi (#2)
-  - cited: bcsolut.com, doorloop.com, door.com, realpage.com, cresoftware.tech, yardi.com
-
-### B. Which is better for a small property management company: RealPage or AppFolio?
-
-- **claude-web** — AppFolio (#1), RealPage (#2), Buildium (#3)
-  - cited: selecthub.com, realpage.com, themortgagepoint.com, wsgr.com, capterra.com, bbb.org
-- **gemini** — RealPage (#1), AppFolio (#2), Buildium (#3)
-  - cited: balancedassetsolutions.com, appfolio.com, thecfoclub.com, bizflowkit.in, kelpic.com, realpage.com
-  - **engines disagree on who comes first:** claude-web says AppFolio; gemini says RealPage
-
-### B. What property management software do large Texas apartment operators use?
-
-- **claude-web** — Yardi (#1), RealPage (#2), Entrata (#3), MRI (#4)
-  - cited: justice.gov, legalclarity.org, multifamilydive.com, sec.gov, realpage.com, multifamilyinsiders.com
-- **gemini** — RealPage (#1), Yardi (#2), MRI (#3), Entrata (#4), AppFolio (#5), Rent Manager (#6), Buildium (#7)
-  - cited: houstonchronicle.com, miracuves.com, realpage.com, re-leased.com, appfolio.com, yardi.com
-  - **engines disagree on who comes first:** claude-web says Yardi; gemini says RealPage
-
-### B. What AI tools can help automate apartment leasing and prospect follow-up?
-
-- **claude-web** — RealPage (#1), Yardi (#2), AppFolio (#3), Entrata (#4)
-  - cited: gptbots.ai, vellum.ai, realpage.com, layer3labs.io, funnelleasing.com, realty-ai.com
-- **gemini** — Buildium (#1), Yardi (#2), AppFolio (#3), RealPage (#4), Zillow (#5), Apartments.com (#6)
-  - cited: buildium.com, mrisoftware.com, apartments247.com, moxiworks.com, funnelleasing.com, getaptly.com
-  - **engines disagree on who comes first:** claude-web says RealPage; gemini says Buildium
-
-### B. What tools do property owners use to set optimal rent pricing using market data?
-
-- **claude-web** — RealPage (#1), Yardi (#2), Entrata (#3), Zillow (#4), Apartments.com (#5), CoStar (#6), AppFolio (#7), Buildium (#8)
-  - cited: baselane.com, landlordstudio.com, rentana.io, aeve.ai, en.wikipedia.org, multifamilydive.com
-- **gemini** — Zillow (#1), CoStar (#2)
-  - cited: ifinderoffers.com, iconicpm.com, jakenfinancegroup.com, rentometer.com, housecanary.com, rentcast.io
+- **claude-web** — RealPage (#1), Cushman & Wakefield (#2), Yardi Matrix (#3), CoStar (#4), Reonomy (#5), Cherre (#6), Yardi (software) (#7), AppFolio (#8), Entrata (#9), ZoomInfo (#10), Apollo (#11), LinkedIn Sales Navigator (#12)
+  - cited: nmhc.org, naahq.org, assetliving.com, multifamilyexecutive.com, yardi.com, yardimatrix.com
+- **gemini** — Zillow (#1), Apartments.com (#2), ZoomInfo (#3), Yardi Matrix (#4), Berkadia (#5), Marcus & Millichap (#6), CBRE (#7), HelloData (#8), CoStar (#9), Reonomy (#10), Cushman & Wakefield (#11)
+  - cited: realync.com, laurenrobinson.com.au, propertyware.com, clearleaddigital.com, perq.com, thelibertygroup.com
   - **engines disagree on who comes first:** claude-web says RealPage; gemini says Zillow
 
-### B. What is the best property management software for a 500-unit portfolio?
+### How do I find contact information for apartment building owners?
+*prospecting*
 
-- **claude-web** — AppFolio (#1), Buildium (#2), RealPage (#3), Rent Manager (#4), Yardi (#5), MRI (#6), Entrata (#7)
-  - cited: softwareconnect.com, appfolio.com, v7labs.com, quickbase.com, magicdoor.com, capterra.com
-- **gemini** — Yardi (#1), RealPage (#2), AppFolio (#3), MRI (#4), Buildium (#5), Rent Manager (#6)
-  - cited: re-leased.com, propertese.com, reddit.com, gatewise.com, raftlabs.com, mrisoftware.com
-  - **engines disagree on who comes first:** claude-web says AppFolio; gemini says Yardi
+- **claude-web** — Reonomy (#1), CoStar (#2), Cherre (#3), Apartments.com (#4), Zillow (#5)
+- **gemini** — Public records (DIY) (#1), PropertyShark (#2), LoopNet (#3)
+  - **engines disagree on who comes first:** claude-web says Reonomy; gemini says Public records (DIY)
 
-### B. What software solutions handle utility billing and submetering for apartment communities?
+### When is the best time to sell services to a new apartment building?
+*timing*
 
-- **claude-web** — Yardi (#1), RealPage (#2), Entrata (#3), AppFolio (#4)
-  - cited: realpage.com, thinkutilityservices.com, meternetusa.com, oatesenergy.com, synergyutilitybilling.com, amcobi.com
-- **gemini** — ResMan (#1), RealPage (#2), MRI (#3), Rent Manager (#4), AppFolio (#5), Yardi (#6), Entrata (#7)
-  - cited: phoenixbillingsolutions.com, mrisoftware.com, myresman.com, realpage.com, utilmate.com, leaksense.io
-  - **engines disagree on who comes first:** claude-web says Yardi; gemini says ResMan
+- **claude-web** — RealPage (#1), Entrata (#2), Yardi Matrix (#3), CoStar (#4), Dodge (#5), BuildCentral (#6), Public records (DIY) (#7), LinkedIn Sales Navigator (#8)
+  - cited: leaseengine.us, apartment.loans, innergyintegral.com, yardimatrix.com, yardi.com, finance.yahoo.com
+- **gemini** — no tracked names
+  - cited: revyse.com, constructalead.com, calalaw.com, charlesgate.com, neumannmonson.com, envacgroup.com
 
-### B. Which property management platform is best for a new apartment lease-up?
+### Which property management software does a given apartment building use?
+*detect-software*
 
-- **claude-web** — AppFolio (#1), Entrata (#2), RealPage (#3), Yardi (#4), Apartments.com (#5), Zillow (#6)
-  - cited: realpage.com, appfolio.com, re-leased.com, door.com
-- **gemini** — AppFolio (#1), RealPage (#2), Entrata (#3), Yardi (#4), Buildium (#5)
-  - cited: mrisoftware.com, lula.life, quickbase.com, amerisave.com, appfolio.com
+- **claude-web** — AppFolio (#1), Entrata (#2), RealPage (#3), Apartments.com (#4), Zillow (#5)
+- **gemini** — AppFolio (#1), RealPage (#2), Entrata (#3)
+
+### How can I tell what property management system a company runs?
+*detect-software*
+
+- **claude-web** — RealPage (#1), Entrata (#2), AppFolio (#3), Yardi (software) (#4), ZoomInfo (#5)
+  - cited: sumble.com, yardi.com, getapp.com, smartrent.com, ambientproptech.com, blog.predictleads.com
+- **gemini** — RealPage (#1), AppFolio (#2)
+  - cited: markoze.com, reddit.com, wappalyzer.com, minimadesigns.com, ful.io
+
+### How do I find which apartment buildings use a specific software platform?
+*detect-software*
+
+- **claude-web** — RealPage (#1), Entrata (#2), AppFolio (#3), Yardi (software) (#4), Cushman & Wakefield (#5)
+- **gemini** — ZoomInfo (#1), Entrata (#2), RealPage (#3), AppFolio (#4), Yardi (software) (#5)
+  - cited: bookyourdata.com, brightdata.com, demandbase.com, 6sense.com, gzconsulting.org, theinsightcollective.com
+  - **engines disagree on who comes first:** claude-web says RealPage; gemini says ZoomInfo
 
 ## How to read this
 

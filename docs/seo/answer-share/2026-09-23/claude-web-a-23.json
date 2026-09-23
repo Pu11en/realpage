@@ -1,0 +1,119 @@
+{
+  "engine": "claude-web",
+  "engine_label": "Claude (Sonnet) via claude -p, web search on",
+  "is_consumer_app": false,
+  "set": "A",
+  "question": "What is the best way to prospect multifamily property managers?",
+  "intent": "prospecting",
+  "asked_on": "2026-09-23",
+  "ok": true,
+  "answer": "Here's how B2B teams (software vendors, service providers, insurance, maintenance/vendors, etc.) typically build a prospecting pipeline targeting multifamily property management companies \u2014 organized from top-down account lists to contact-level outreach.\n\n## 1. Define your ICP first\nMultifamily PM is bimodal: a handful of giant institutional managers (Greystar, Asset Living, RealPage-managed portfolios, Willow Bridge, Cushman & Wakefield, Lincoln Property Company) control a large share of units, while thousands of regional/local operators manage the rest. Decide whether you're going after enterprise (portfolio-wide deals, longer cycles, procurement/RFP processes) or SMB/regional (faster cycles, price-sensitive, higher volume). This changes which tools below matter most.\n\n## 2. Top-down account lists (who to target)\n- **NMHC 50** (nmhc.org/50) \u2014 the National Multifamily Housing Council's annual ranking of the 50 largest owners and 50 largest managers by unit count. This is the standard \"who are the big players\" list in the industry (Greystar leads at ~946K units managed; Asset Living, Willow Bridge, etc. round out the top tier).\n- **Multifamily Executive Top 50** \u2014 a similar, slightly broader ranking published by Multifamily Executive magazine, useful for a wider net beyond just the NMHC list.\n- **National Apartment Association (NAA)** member directory (naahq.org) and local/state apartment associations (e.g., Texas Apartment Association, Apartment Association of Greater Los Angeles) for regional/mid-size operators who won't show up on national top-50 lists.\n\n## 3. Property & ownership data platforms (for account intelligence and contacts)\n- **Yardi Matrix** \u2014 the most widely cited source for multifamily property-level data: ownership, management company, unit count, loan info, and named contacts. If your target is \"who manages this specific asset,\" this is the go-to.\n- **CoStar / RealPage** \u2014 CoStar for commercial/multifamily ownership and transaction data; RealPage itself is both a competitor (if you sell PM software) and a data source (their client base is a de facto target list).\n- **Reonomy, Cherre, Attom Data** \u2014 ownership/LLC-unmasking tools useful when properties are held under shell LLCs and you need to trace back to the actual management company.\n- **BizzContacts** and similar \"installed base\" vendors \u2014 sell lists of companies using specific PM software (e.g., Yardi Voyager, RealPage, AppFolio, Entrata) tagged with named decision-makers (VP Property Management, Director of Operations, CFO). Useful for competitive displacement plays or integrations that require a specific tech stack.\n\n## 4. Contact enrichment / outbound tooling\n- **ZoomInfo, Apollo.io, Cognism, LinkedIn Sales Navigator** \u2014 standard B2B enrichment for finding and verifying emails/titles once you have target companies from the lists above. Filter by NAICS code (property management) and company size (unit count is a better proxy than employee count, but employee count is what these tools filter on).\n- **G2 / Capterra review data** \u2014 if you sell software, reviews on competing PM platforms (AppFolio, Entrata, Yardi Breeze, Buildium) surface companies actively evaluating or complaining about incumbents \u2014 a good warm-signal source.\n\n## 5. Industry events (high-density prospecting)\n- **NMHC OPTECH** \u2014 the multifamily industry's technology-focused conference; if you sell software/proptech to property managers, this is the single best place to meet decision-makers in person.\n- **NMHC Annual Meeting**, **AIM Conference (National Apartment Association)**, and regional apartment association trade shows \u2014 good for relationship-based enterprise sales.\n\n## 6. Segmentation and cadence tips\n- Portfolio size and tech stack are your two best segmentation axes \u2014 an enterprise manager on Yardi Voyager needs a different pitch/integration story than a regional operator on AppFolio.\n- Time outreach around known industry rhythms: budget season (Q4), lease-up/renewal cycles, and right after NMHC 50 list publication (companies that moved up the list are growing and often actively adding vendors).\n- Referrals from complementary vendors (insurance brokers, maintenance/vendors, other proptech companies already embedded with the same PM companies) tend to convert better than cold lists, since multifamily is a relationship-driven, referral-heavy industry.\n\nSources:\n- [NMHC | 2026 NMHC 50](https://www.nmhc.org/research-insight/the-nmhc-50/)\n- [Greystar Tops NMHC 50 List of Owners, Managers | National Apartment Association](https://naahq.org/greystar-tops-nmhc-50-list-owners-managers)\n- [Asset Living Ranked No. 2 on NMHC's 2026 Top 50 Managers List](https://www.assetliving.com/blogs/asset-living-ranked-no-2-on-nmhcs-2026-top-50-managers-list)\n- [2025 NMHC Top 50 Managers - Multifamily Executive](https://www.multifamilyexecutive.com/business-finance/top-50/2025-nmhc-top-50-managers_o)\n- [Real Estate Data & Market Intelligence | Yardi Matrix](https://www.yardi.com/product/matrix/)\n- [Institutional Real Estate Data | Yardi Matrix](https://www.yardimatrix.com/)\n- [Yardi Customers List | BizzContacts](https://www.bizzcontacts.com/installed-base/yardi/)\n- [Multifamily Property Management Solutions | RealPage](https://www.realpage.com/multifamily/)",
+  "brands": [
+    {
+      "brand": "RealPage",
+      "first_at": 378,
+      "mentions": 6,
+      "rank": 1
+    },
+    {
+      "brand": "Cushman & Wakefield",
+      "first_at": 422,
+      "mentions": 1,
+      "rank": 2
+    },
+    {
+      "brand": "Yardi Matrix",
+      "first_at": 1670,
+      "mentions": 3,
+      "rank": 3
+    },
+    {
+      "brand": "CoStar",
+      "first_at": 1903,
+      "mentions": 2,
+      "rank": 4
+    },
+    {
+      "brand": "Reonomy",
+      "first_at": 2123,
+      "mentions": 1,
+      "rank": 5
+    },
+    {
+      "brand": "Cherre",
+      "first_at": 2132,
+      "mentions": 1,
+      "rank": 6
+    },
+    {
+      "brand": "Yardi (software)",
+      "first_at": 2411,
+      "mentions": 3,
+      "rank": 7
+    },
+    {
+      "brand": "AppFolio",
+      "first_at": 2436,
+      "mentions": 3,
+      "rank": 8
+    },
+    {
+      "brand": "Entrata",
+      "first_at": 2446,
+      "mentions": 2,
+      "rank": 9
+    },
+    {
+      "brand": "ZoomInfo",
+      "first_at": 2687,
+      "mentions": 1,
+      "rank": 10
+    },
+    {
+      "brand": "Apollo",
+      "first_at": 2697,
+      "mentions": 1,
+      "rank": 11
+    },
+    {
+      "brand": "LinkedIn Sales Navigator",
+      "first_at": 2726,
+      "mentions": 1,
+      "rank": 12
+    }
+  ],
+  "links": [
+    {
+      "title": "",
+      "url": "https://www.nmhc.org/research-insight/the-nmhc-50/"
+    },
+    {
+      "title": "",
+      "url": "https://naahq.org/greystar-tops-nmhc-50-list-owners-managers"
+    },
+    {
+      "title": "",
+      "url": "https://www.assetliving.com/blogs/asset-living-ranked-no-2-on-nmhcs-2026-top-50-managers-list"
+    },
+    {
+      "title": "",
+      "url": "https://www.multifamilyexecutive.com/business-finance/top-50/2025-nmhc-top-50-managers_o"
+    },
+    {
+      "title": "",
+      "url": "https://www.yardi.com/product/matrix/"
+    },
+    {
+      "title": "",
+      "url": "https://www.yardimatrix.com/"
+    },
+    {
+      "title": "",
+      "url": "https://www.bizzcontacts.com/installed-base/yardi/"
+    },
+    {
+      "title": "",
+      "url": "https://www.realpage.com/multifamily/"
+    }
+  ]
+}

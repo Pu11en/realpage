@@ -3,117 +3,70 @@
   "engine_label": "Gemini (gemini-2.5-flash) via API, Google Search grounding on",
   "is_consumer_app": false,
   "set": "A",
-  "question": "How do I find multifamily construction pipeline data for Austin?",
-  "intent": "find-pipeline",
+  "question": "What apartment complexes are being built in San Antonio right now?",
+  "intent": "pipeline",
   "asked_on": "2026-09-23",
   "ok": true,
-  "answer": "To find multifamily construction pipeline data for Austin, you can consult several specialized real estate data providers and market research firms that track development activity in the region. These sources often offer detailed reports, interactive tools, and databases with information on projects in various stages of development.\n\nHere are some specific companies and data sources to consider:\n\n*   **MMG Real Estate Advisors**\n    MMG Real Estate Advisors provides specific \"Multifamily Construction Pipeline Reports\" for Austin. These reports offer an interactive look into the construction pipeline, including data maps, pipeline status breakdowns by city, and forecasted delivery dates. For example, their Q2 2026 report noted 14,610 units under construction, with 10,596 being Class A properties. Their Q1 2026 report also lists numerous individual projects with details such as \"Pre-Lease Absorption Rate by Month\" and \"Forecasted Delivery Dates\".\n*   **Yardi Matrix**\n    Yardi Matrix is a prominent source for multifamily market reports. Their Austin Multifamily Market Report often includes details on the construction pipeline, such as the number of units underway and trends in construction starts. For instance, their July 2026 report indicated that Austin had 21,224 units under way through May, although construction starts were declining.\n*   **Northmarq**\n    Northmarq provides Austin multifamily market reports that discuss the construction pipeline and projected deliveries. Their May 2026 report forecasted deliveries to fall to approximately 10,200 units in 2026, about half the pace of the previous two years, as the construction pipeline thins.\n*   **Moody's CRE**\n    Moody's CRE offers a researched database for commercial real estate in Austin. This includes property surveys, sale/lease availabilities, and quarterly analytics, which can encompass construction pipeline details for multifamily properties. They provide a fully-researched database of all commercial properties, with options for accessing sale transactions and comparables.\n*   **Cushman & Wakefield**\n    While specific multifamily pipeline reports were not directly linked in the search, Cushman & Wakefield is a major commercial real estate firm that publishes extensive market reports. These reports often cover various commercial real estate sectors, including multifamily development, and can be accessed through commercial real estate brokers like Mark Pustka | ATXRE, who compiles archives of quarterly market reports from top industry firms. For example, Cushman & Wakefield's Q3 2025 report indicated 15,429 units under construction, a 46.0% year-over-year decrease.\n*   **O'Connor Property Tax Reduction Experts**\n    O'Connor offers market research data services with comprehensive real estate data across Texas's major metropolitan areas, including Austin. Their services include detailed apartment data such as rental rates, occupancy rates, and amenities, which can be useful in understanding the market context for the construction pipeline.\n*   **Urbanize Austin**\n    This platform provides news and updates on commercial real estate development in Austin. It frequently reports on new multifamily projects, including information on units planned or under construction, offering a more journalistic, but still informative, perspective on the pipeline.\n\nWhen researching, it's advisable to look for the most recent quarterly or annual market reports from these providers for the most up-to-date construction pipeline data. Many of these firms also offer direct access to their databases or more in-depth consulting services for detailed inquiries.",
+  "answer": "San Antonio is currently experiencing a boom in apartment construction, with numerous projects underway across the city. Many of these developments aim to address the growing demand for housing, including a significant focus on affordable housing options.\n\nHere are some of the apartment complexes being built in San Antonio:\n\n**Notable Developments and Developers:**\n\n*   **Aspire at VIDA and Los Arcos at VIDA:** Located on San Antonio's Southside, near Texas A&M University\u2013San Antonio and University Health Palo Alto Hospital, these two new apartment communities are part of the larger VIDA mixed-use development by Southstar. Aspire at VIDA will feature 300 units, while Los Arcos at VIDA is already leasing apartments. Both offer amenities such as resort-style pools, clubhouses, business centers, and dog parks.\n*   **300 Main (Weston Urban):** This 32-story, 354-unit Class AA multifamily development is situated in downtown San Antonio at the corner of East Travis Street and North Main Avenue. It is set to be the city's first high-rise multifamily tower, offering expansive views from its twenty-fifth-floor Sky Lounge.\n*   **The Oaks at Cibolo Creek (Franklin Construction Limited):** Located in Boerne, this 20-acre development broke ground in late August 2026 and will add 324 garden-style apartments to the Hill Country community. The project includes a clubhouse, resort-style swimming pool, fitness center, dog park, and pickleball court.\n*   **Emberstone Apartments (Kittle Property Group):** This new affordable apartment community on Watson Road will provide 247 apartment homes designed for individuals and families earning at or below 60% of the Area Median Income (AMI). The project, developed in partnership with Opportunity Home San Antonio, is expected to be available in Spring 2027.\n\n**San Antonio Housing Trust (SAHT) Partnerships for Affordable Housing:**\n\nThe San Antonio Housing Trust and its partners are actively working on 18 projects, contributing 4,441 rental homes to the city, with 3,239 of these designated for households ranging from less than 30% to 60% of the Area Median Income (AMI). Some specific projects include:\n\n*   **Lincoln Ave Capital Developments:**\n    *   A 239-unit development at Brooks City Base along Research Plaza (Council District 3), with completion anticipated in 2026. All units will be rent and income-restricted, ranging from 30-70% AMI.\n    *   Another 338-unit development, also at Brooks City Base, with anticipated completion in 2026. These units will also be income-restricted for families at 30-70% AMI.\n    *   A 237-unit development at Old Pearsall Road at Ray Ellison (Council District 4), expected to be completed in 2026, with units for those at 30% and 60% AMI.\n*   **Pedcor Development Projects:**\n    *   **Stones Crossing Apartment Homes:** A 336-unit development near US HWY 281 & Stone Oak Parkway (Council District 9), with all units restricted to families at 60% AMI.\n    *   Another 336-unit development on South Loop 410 frontage road, near Palo Alto (Council District 4), also for families at 60% AMI.\n    *   **Creekbend Apartment Homes:** A 312-unit development at the NW Corner of US Highway 281 N at Borgfield Road (Council District 9), with completion scheduled for December 2026. This project by Pedcor Investments, in collaboration with the San Antonio Housing Trust, represents an expansion of affordable apartments, offering one, two, and three-bedroom homes for individuals and families earning up to 70% AMI.\n*   **The Whitney (GoodHomes, LLC):** This project involves the preservation and renovation of 220 units located downtown (Council District 5), currently a Sonesta Suites. It will provide workforce housing with units at various AMI levels, and is anticipating completion of rehabilitation in 2027.\n*   **Commons at Acequia Trails (SAMM Ministries):** A 201-unit permanent supportive housing development at Old Corpus Christi Road and South Presa (Council District 3), with a scheduled completion date of January 2027.\n*   **Legacy Senior Residences:** Closed financing in August 2024 and is scheduled for completion in 2026.\n*   **Tirol Housing Development:** 199 units at 4740 Culebra Road (Council District 5) providing affordable housing for households with incomes varying at 30%-60% AMI, with a scheduled completion date in 2026.\n\n**Overall Construction Trends:**\n\nSan Antonio has been identified as a leading city for new apartment construction. A RentCafe report noted that San Antonio had the No. 7 highest apartment construction rate among U.S. cities in 2025, with 5,921 new apartments expected to be built. The Southern U.S., including Texas, is experiencing a building boom attributed to streamlined approval processes, fewer regulatory hurdles, and strong job and economic growth.\n\n**Data Sources:**\n\nInformation on these developments is primarily sourced from:\n\n*   The San Antonio Housing Trust's \"Active Projects\" and \"Projects in Construction\" listings.\n*   Development announcements from companies such as Weston Urban, Southstar, Franklin Construction Limited, Kittle Property Group, and Pedcor Investments.\n*   Real estate market analyses, such as those published by RentCafe.",
   "sources": [
     {
-      "title": "mmgrea.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHs7_0RyICJAFOjoc99Ezwo4FaGa4zFXLzOyYsEWdphjwWgt0NDqfW3UvvPOJ2FpU1E37GW0CaR4KWhqS01kO5AVpziCd5nzcHsDN2VAezyEpr9wMQ-xiYQTNr7-vczZlujwikbSU6wE2X3"
+      "title": "livevida.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFSqKPl9xKPPpRDhyshb9NF9LEyqi1FRqGFXhOvILcf9y8sL51ERuZSDukvkrmxh0XZ7MyQnU7K_ESHwfqtMOTclbB7suhI4z1jIaaaqDLajTuv1WoMuDBH6ZEe-3WfemkiYbAKCUhtVE4-RZzWIBBO3-KxIjvEGQ=="
     },
     {
-      "title": "mmgrea.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF-yXBYzhRu5y5F0V6HUF-qh9dEpL3G8y6j5J76zkQChZ3zkSj1hTYVoSLRdYXQCQzbyfibi2ndNjS2OGeS90L76iFXH9TTyNdhoyqukc3b0I4X3pe4NpRhbx8mRGRJvZrU4NdBjs1OhH18MCw="
+      "title": "westonurban.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE_cVAI_i8lNmtkJkoUyWudl4vRuf2OX92pPiud4Oct3bctrce8txd_5jHHT1a2j31KASiLN_au5rK9FS8msKEu7eBBT87ZZUhAx9qRl_TUUrhlaUyomKyspx6OoL8XakVbEzqh"
     },
     {
-      "title": "mmgrea.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEdMhkXQ7Cb5UwBe3vD3BTHqoMrRXN9QGZZRSov8YdIL6nilNKDXQZAYQfNOlYW7P8EY8SD1M2LdVHW9O8Npua0_dIBpX4pFD9MuQZ_Ae5V3DjUGq9GX_ErcR2A7PQu3u1wWrnmNu7XdYRrN2k="
+      "title": "mysanantonio.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQESxm6yLwQSO0KLHRVr2-njDRaMaTLdA0fB2Vy4F3FuTAYNY62fKvhtNrM8DDTYBtjonY5x_rFk2QhCFELqIgi7J3HOONLLRZLfrAHu9hXR_1XGGV-RnOovWOTXharjTE6OCb68tNaXrgNupFSrMqKeHd-6T6bt2HiB0ZwhADQi8yD8YLW8oCrFHw4R9FjhKnk0hA9bCWQqWLP7nPZ1pOLWYN-gNjM="
     },
     {
-      "title": "mmgrea.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFmH9g8_0K94dgQiElGj1z0bM52iFAeUp4sIU599mpqCkSnXQel1s4AXx2EXWJxap3-gd2_irj8ws0rpgSu2yOu1m8v77RoDMbdvAFKHwmZCUmoLK_lQlBkUytxG1GSidAExYvfscQVm37JLzZ8vCECnEZ4Fg=="
+      "title": "kittleproperties.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEyBwuAfqrU9V96ok4HMQaFckIblMgb9neULAC_IrWi8qTAMLN0SLfS9TWQFTJ0pb0D7oMQayfSxaigdAEudWuy9MJkDHtDYSJMaomsBZrcSDjVFhryjh_v7HskRWI_6OIdX-ypYSarYrjPFWiWvYOXjn51eI3DZmWDQ-Ag4NydibD77MzAbqk_c7jlh0lZsYfvtyf-hw=="
     },
     {
-      "title": "matthews.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHKOhKPw_NBIm81RtICfGJRDiQek2pvfl1bJTxz8bg6J7WMVqBY7P5SsmqMbG5AXPDDI-T3lKVKvfGNEJuaBsfqiUqR147DtW-wcBK6AXyU-OtybKVUu1VGIMoO_urWIIWkQGm8WXrHxo40RZq3MP3Ninty3UhjeQTS"
+      "title": "sahousingtrust.org",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHhWg7CyCt1MedsyO6QB32wue5s9T7jQpdOctrFOFwbtEy3daQQx0cBlcgE5FD1OSZqAcF-Ti2GMW0YTKZh7gVZac1zZE-Rr_whd_w_h5JLVWr1918ePv4Yz8-cRPqW1yyJyaS8P7wSjPf82A=="
     },
     {
-      "title": "yardimatrix.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEHVW6xfq4tNLY-byYhg7yDQmjYV0DF-pyqDcgKvE9pbrbYsKfKGbWP6RmxxKSRi26w3FR9H5YlhGYgB8bBmNC48nnBbo6MBNNXWb1rSAgZraEcyu15Ay1jasw04XakQ_prMWKqE1PTWDeMtbp8Ws7NjV2_4mbtYfD3bLDD"
+      "title": "pedcorcompanies.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEumhRFJNtTm00Z4ZenxbGgsp_cy6TnNJeXInk_vSU0r4OoFKjSPOeEWxFgJhsYvsPTM0VWdrT6VRtPLc_Ydo0ZSPNZiWV5vwOpmms3NSJ66UIN2iI86hUhzNFNWRhZ8IgleM4z7u3VcsG2hkT9hbvRHFIatJp1Zm3IP75BnTWyKwg9pNYVQjCvkOXhwBXVd4EPl7OdJBDmN3kfyuvIFqKRbC-Mqaw="
     },
     {
-      "title": "northmarq.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHtK_zKxtbCyuIQjwP7cK5xa45WwuHezp3yfsPmA7cLMfW_g1pTIi3Bk55VY6V264DpjtiYS2A8_u2xn3fQFR1X2cv5wqExi6rHV7G4llOOf4w62pKUuhJP44qTPeHP1Pq_XiSbUQ-Lje65IBGozdYs9Eie5ecaNHin9eytDvTCTnA3p4gtwaOhRTSvVBJqR5g5B41pN31DObzJ3A=="
-    },
-    {
-      "title": "moodyscre.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFgz4rrkmYhDumvKNyN6IM6jn9QGfxIZw3lOhXcJ-qSYX9agBRmHNbAysIiTxWH-Pxu_xZQ9whm2RDynK0kvihD1yk6jDSmlPz2TUj7qaG-2LdCX4qd5BtIa1_LqbcMKUl6"
-    },
-    {
-      "title": "atxre.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHyawekYmNfbG93Y-2gbJXoysywNpprDjrvcSgvbR1pVSLtJhSjeMmaqPRs6dS_Y3k6vfnq26ymDuwjYfpDu1NekyRVgOItMz9V2tGTQC1sF2WyzlsfIe219o_yAntGKDCsrknJ_-7Muq62ET5QFkBiX4Jbjn9VYP4U"
-    },
-    {
-      "title": "cushmanwakefield.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHMrkPwPHVj4yFmLLRHXxhRE5RbZX6A6izQ7770yK6kEUDZdFypO-WTkBF5BRRJFv9xdwza9EKghij3of4O6S5x7xuMtvQJcuxo-QAv5TDngcLAfWlS7EryxT-JmfUAKDzW_A7IBsG-Zw1Dyyum-G2cv2xvvZGZ2MhakM3wvOR9pILHCNzttX0O7dg8d1_rDogYnlKMiVKElhLdTkBmU_Hvqdbeulg9_puEyj_3wS9xdB_a0RiU-_ilrHtVNVtz8JSZtQyY1KDsIreW_xr6ggq1NApXuU6L84LP6V83NWS9jkCUGvTF2YTBuoqL5xXnirQ="
-    },
-    {
-      "title": "poconnor.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFhPf-VHXZfzd4QkOvHjc0mec_ngA_rIsS_DgO14aszNGCTh5hmffZ0iCatOHRs8aUaEbRwRMpVD_Ko9-k2QI3SnZi5MYdp74GYIeNkuz_5G9Lrpx0M2XDzU6gL3wXgzRj66I6lf2RWNMY4Kyry"
-    },
-    {
-      "title": "urbanize.city",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFNeXttlCfg8iHsDLjgsZWo9ReAihUvNa0RqypZN1Hc5jytQRW4OxCx6nbo3hLWUWOW1MozY_eM10AcRsbQJWpSvFU6KlKe0RuCrkTDUb0xleww9InTdUA="
+      "title": "culturemap.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE1r4szpOD9hSe5ACgVcvQFcL6SEjNo51wEYppo36FTJJBuQkUUoIrRQY0sG9W8kyLUPEeYp_VwMKDg7fzBG_f45hdshbOqnhWswiQtSXbrDSkEH_XvYvxaLbhuPUh2t_0nVyTe_eT7nIDNFrrb0UhoxtWRC-GXEzl1aQJVtW0AFRlqwlFComH8CC1bZAPX1pcs27mvSdA="
     }
   ],
-  "brands": [
-    {
-      "brand": "Yardi",
-      "first_at": 965,
-      "mentions": 2,
-      "rank": 1
-    }
-  ],
+  "brands": [],
   "links": [
     {
-      "title": "mmgrea.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHs7_0RyICJAFOjoc99Ezwo4FaGa4zFXLzOyYsEWdphjwWgt0NDqfW3UvvPOJ2FpU1E37GW0CaR4KWhqS01kO5AVpziCd5nzcHsDN2VAezyEpr9wMQ-xiYQTNr7-vczZlujwikbSU6wE2X3"
+      "title": "livevida.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFSqKPl9xKPPpRDhyshb9NF9LEyqi1FRqGFXhOvILcf9y8sL51ERuZSDukvkrmxh0XZ7MyQnU7K_ESHwfqtMOTclbB7suhI4z1jIaaaqDLajTuv1WoMuDBH6ZEe-3WfemkiYbAKCUhtVE4-RZzWIBBO3-KxIjvEGQ=="
     },
     {
-      "title": "mmgrea.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF-yXBYzhRu5y5F0V6HUF-qh9dEpL3G8y6j5J76zkQChZ3zkSj1hTYVoSLRdYXQCQzbyfibi2ndNjS2OGeS90L76iFXH9TTyNdhoyqukc3b0I4X3pe4NpRhbx8mRGRJvZrU4NdBjs1OhH18MCw="
+      "title": "westonurban.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE_cVAI_i8lNmtkJkoUyWudl4vRuf2OX92pPiud4Oct3bctrce8txd_5jHHT1a2j31KASiLN_au5rK9FS8msKEu7eBBT87ZZUhAx9qRl_TUUrhlaUyomKyspx6OoL8XakVbEzqh"
     },
     {
-      "title": "mmgrea.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEdMhkXQ7Cb5UwBe3vD3BTHqoMrRXN9QGZZRSov8YdIL6nilNKDXQZAYQfNOlYW7P8EY8SD1M2LdVHW9O8Npua0_dIBpX4pFD9MuQZ_Ae5V3DjUGq9GX_ErcR2A7PQu3u1wWrnmNu7XdYRrN2k="
+      "title": "mysanantonio.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQESxm6yLwQSO0KLHRVr2-njDRaMaTLdA0fB2Vy4F3FuTAYNY62fKvhtNrM8DDTYBtjonY5x_rFk2QhCFELqIgi7J3HOONLLRZLfrAHu9hXR_1XGGV-RnOovWOTXharjTE6OCb68tNaXrgNupFSrMqKeHd-6T6bt2HiB0ZwhADQi8yD8YLW8oCrFHw4R9FjhKnk0hA9bCWQqWLP7nPZ1pOLWYN-gNjM="
     },
     {
-      "title": "mmgrea.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFmH9g8_0K94dgQiElGj1z0bM52iFAeUp4sIU599mpqCkSnXQel1s4AXx2EXWJxap3-gd2_irj8ws0rpgSu2yOu1m8v77RoDMbdvAFKHwmZCUmoLK_lQlBkUytxG1GSidAExYvfscQVm37JLzZ8vCECnEZ4Fg=="
+      "title": "kittleproperties.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEyBwuAfqrU9V96ok4HMQaFckIblMgb9neULAC_IrWi8qTAMLN0SLfS9TWQFTJ0pb0D7oMQayfSxaigdAEudWuy9MJkDHtDYSJMaomsBZrcSDjVFhryjh_v7HskRWI_6OIdX-ypYSarYrjPFWiWvYOXjn51eI3DZmWDQ-Ag4NydibD77MzAbqk_c7jlh0lZsYfvtyf-hw=="
     },
     {
-      "title": "matthews.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHKOhKPw_NBIm81RtICfGJRDiQek2pvfl1bJTxz8bg6J7WMVqBY7P5SsmqMbG5AXPDDI-T3lKVKvfGNEJuaBsfqiUqR147DtW-wcBK6AXyU-OtybKVUu1VGIMoO_urWIIWkQGm8WXrHxo40RZq3MP3Ninty3UhjeQTS"
+      "title": "sahousingtrust.org",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHhWg7CyCt1MedsyO6QB32wue5s9T7jQpdOctrFOFwbtEy3daQQx0cBlcgE5FD1OSZqAcF-Ti2GMW0YTKZh7gVZac1zZE-Rr_whd_w_h5JLVWr1918ePv4Yz8-cRPqW1yyJyaS8P7wSjPf82A=="
     },
     {
-      "title": "yardimatrix.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEHVW6xfq4tNLY-byYhg7yDQmjYV0DF-pyqDcgKvE9pbrbYsKfKGbWP6RmxxKSRi26w3FR9H5YlhGYgB8bBmNC48nnBbo6MBNNXWb1rSAgZraEcyu15Ay1jasw04XakQ_prMWKqE1PTWDeMtbp8Ws7NjV2_4mbtYfD3bLDD"
+      "title": "pedcorcompanies.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEumhRFJNtTm00Z4ZenxbGgsp_cy6TnNJeXInk_vSU0r4OoFKjSPOeEWxFgJhsYvsPTM0VWdrT6VRtPLc_Ydo0ZSPNZiWV5vwOpmms3NSJ66UIN2iI86hUhzNFNWRhZ8IgleM4z7u3VcsG2hkT9hbvRHFIatJp1Zm3IP75BnTWyKwg9pNYVQjCvkOXhwBXVd4EPl7OdJBDmN3kfyuvIFqKRbC-Mqaw="
     },
     {
-      "title": "northmarq.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHtK_zKxtbCyuIQjwP7cK5xa45WwuHezp3yfsPmA7cLMfW_g1pTIi3Bk55VY6V264DpjtiYS2A8_u2xn3fQFR1X2cv5wqExi6rHV7G4llOOf4w62pKUuhJP44qTPeHP1Pq_XiSbUQ-Lje65IBGozdYs9Eie5ecaNHin9eytDvTCTnA3p4gtwaOhRTSvVBJqR5g5B41pN31DObzJ3A=="
-    },
-    {
-      "title": "moodyscre.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFgz4rrkmYhDumvKNyN6IM6jn9QGfxIZw3lOhXcJ-qSYX9agBRmHNbAysIiTxWH-Pxu_xZQ9whm2RDynK0kvihD1yk6jDSmlPz2TUj7qaG-2LdCX4qd5BtIa1_LqbcMKUl6"
-    },
-    {
-      "title": "atxre.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHyawekYmNfbG93Y-2gbJXoysywNpprDjrvcSgvbR1pVSLtJhSjeMmaqPRs6dS_Y3k6vfnq26ymDuwjYfpDu1NekyRVgOItMz9V2tGTQC1sF2WyzlsfIe219o_yAntGKDCsrknJ_-7Muq62ET5QFkBiX4Jbjn9VYP4U"
-    },
-    {
-      "title": "cushmanwakefield.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHMrkPwPHVj4yFmLLRHXxhRE5RbZX6A6izQ7770yK6kEUDZdFypO-WTkBF5BRRJFv9xdwza9EKghij3of4O6S5x7xuMtvQJcuxo-QAv5TDngcLAfWlS7EryxT-JmfUAKDzW_A7IBsG-Zw1Dyyum-G2cv2xvvZGZ2MhakM3wvOR9pILHCNzttX0O7dg8d1_rDogYnlKMiVKElhLdTkBmU_Hvqdbeulg9_puEyj_3wS9xdB_a0RiU-_ilrHtVNVtz8JSZtQyY1KDsIreW_xr6ggq1NApXuU6L84LP6V83NWS9jkCUGvTF2YTBuoqL5xXnirQ="
-    },
-    {
-      "title": "poconnor.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFhPf-VHXZfzd4QkOvHjc0mec_ngA_rIsS_DgO14aszNGCTh5hmffZ0iCatOHRs8aUaEbRwRMpVD_Ko9-k2QI3SnZi5MYdp74GYIeNkuz_5G9Lrpx0M2XDzU6gL3wXgzRj66I6lf2RWNMY4Kyry"
-    },
-    {
-      "title": "urbanize.city",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFNeXttlCfg8iHsDLjgsZWo9ReAihUvNa0RqypZN1Hc5jytQRW4OxCx6nbo3hLWUWOW1MozY_eM10AcRsbQJWpSvFU6KlKe0RuCrkTDUb0xleww9InTdUA="
+      "title": "culturemap.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE1r4szpOD9hSe5ACgVcvQFcL6SEjNo51wEYppo36FTJJBuQkUUoIrRQY0sG9W8kyLUPEeYp_VwMKDg7fzBG_f45hdshbOqnhWswiQtSXbrDSkEH_XvYvxaLbhuPUh2t_0nVyTe_eT7nIDNFrrb0UhoxtWRC-GXEzl1aQJVtW0AFRlqwlFComH8CC1bZAPX1pcs27mvSdA="
     }
   ]
 }

@@ -1,0 +1,239 @@
+{
+  "engine": "gemini",
+  "engine_label": "Gemini (gemini-2.5-flash) via API, Google Search grounding on",
+  "is_consumer_app": false,
+  "set": "A",
+  "question": "How do I find which apartment buildings use a specific software platform?",
+  "intent": "detect-software",
+  "asked_on": "2026-09-23",
+  "ok": true,
+  "answer": "Finding out which apartment buildings use a specific software platform can be challenging due to privacy and competitive reasons, as this information is often considered proprietary by both the software vendor and the property management company. However, there are several strategies and data sources you can explore to gather this intelligence:\n\n### 1. Directly from the Software Vendor\n\n*   **Case Studies and Testimonials:** Visit the website of the software platform you're interested in. Software companies often publish case studies, success stories, or client testimonials that name specific property management companies or even individual properties that use their product. While this won't be a comprehensive list, it's a good starting point to identify prominent users.\n*   **\"Our Clients\" or \"Who Uses Us\" Sections:** Some vendors might have a dedicated page showcasing logos of their clients.\n*   **Webinars and Events:** Vendors often feature client speakers at webinars, conferences, or user groups. Attending these can reveal specific users.\n\n### 2. Industry-Specific Data Providers and Market Intelligence\n\nThis is often the most effective route for obtaining more comprehensive data, as these companies specialize in collecting and analyzing such information. They typically use a combination of web scraping, surveys, job postings, and other public data to build their databases.\n\n*   **Technographic Data Providers:** Companies that specialize in \"technographics\" track the technology stack used by businesses. While more common for B2B software in general, some may have data relevant to the real estate sector. Examples include:\n    *   **ZoomInfo:** Offers technographic data that can include software used by companies, though specific property-level detail might vary.\n    *   **HG Insights:** Provides insights into technology adoption, including software categories, which could potentially be filtered for real estate.\n    *   **BuiltWith:** Primarily focused on websites, it can show what technologies are used on a company's web presence, which might include certain property management portals or booking systems if they are publicly facing.\n*   **Real Estate-Specific Market Research Firms:** Some firms focus exclusively on the real estate technology landscape and may offer reports or data services that identify software adoption trends and, in some cases, specific users. Examples might include:\n    *   **Gartner or Forrester:** While not hyper-focused on *apartment buildings*, these major research firms often cover broader real estate and property technology trends and may mention leading platforms and their typical user base.\n    *   **PropTech Specific Consultancies/Research:** Look for smaller, specialized firms in the \"PropTech\" space.\n\n### 3. Publicly Available Information & Industry Resources\n\n*   **Property Management Company Websites:** Many large property management companies list their services and sometimes even the technology they leverage to manage properties. Look for careers pages where they might list required software skills for new hires.\n*   **Job Postings:** When property management companies hire for roles like \"Property Manager\" or \"Leasing Agent,\" they often list required software proficiency in the job description (e.g., \"Experience with Entrata,\" \"Proficiency in Yardi,\" etc.). Searching job boards like LinkedIn, Indeed, or industry-specific real estate job sites for the software platform's name can reveal current users.\n*   **Industry Forums and Communities:** Online forums, LinkedIn groups, and Reddit communities (e.g., r/propertymanagement) dedicated to property management or real estate technology can be places where professionals discuss the software they use.\n*   **Review Sites (with caution):** While not direct lists, sites like Capterra, G2, and Software Advice provide user reviews for property management software. Reviewers sometimes mention the company they work for, or you can infer user types from their comments.\n\n### 4. Networking\n\n*   **Industry Events and Conferences:** Attending real estate technology or property management conferences can put you in touch with professionals who are users or decision-makers regarding software platforms.\n*   **LinkedIn:** Connect with property managers, regional managers, and executives at property management companies. Directly asking (politely and professionally) or observing their activity and connections can yield insights.\n\n### Specific Companies, Products, and Data Sources:\n\n*   **Software Platforms:**\n    *   **Yardi:** A widely used integrated suite for property management.\n    *   **RealPage (including OneSite, Entrata):** Another major player offering various solutions.\n    *   **AppFolio Property Manager:** Popular among smaller to mid-sized property managers.\n    *   **Buildium:** Often used by residential property managers.\n    *   **Rent Manager:** Comprehensive property management software.\n*   **Data Sources / Market Intelligence (as mentioned above):**\n    *   ZoomInfo\n    *   HG Insights\n    *   BuiltWith\n    *   Capterra\n    *   G2\n    *   Software Advice\n    *   LinkedIn (for job postings and networking)\n\nRemember that directly obtaining a complete client list for a specific software platform is rarely possible. Your best approach will likely involve a combination of these methods, with technographic data providers offering the most scalable solution for identifying users.Finding which apartment buildings use a specific software platform can be a complex task due to the proprietary nature of such data. However, by leveraging a combination of direct research, industry-specific resources, and specialized data providers, you can gather valuable insights.\n\n### 1. Directly from the Software Vendor\n\nA good starting point is the software platform's own website. Vendors often showcase their clients through:\n*   **Case Studies and Testimonials:** These frequently name specific property management companies or even individual properties that successfully use their product.\n*   **\"Our Clients\" or \"Who Uses Us\" Sections:** Some software providers feature logos or lists of their clients, though comprehensive lists are rare due to privacy and competitive concerns.\n*   **Webinars and Events:** Client speakers at industry events or webinars can reveal specific users.\n\n### 2. Industry-Specific Data Providers and Market Intelligence\n\nFor a more comprehensive approach, specialized data providers offer \"technographic data,\" which tracks the technology stacks companies use. These firms compile information from various sources, including web scraping, job postings, and public records, to build databases of technology adoption.\n\nSome prominent providers include:\n*   **ZoomInfo:** Offers technographic data that can include software used by companies, allowing users to filter searches by technology.\n*   **HG Insights:** Specializes in \"Technology Intelligence,\" providing detailed information on technology installations, usage trends, spending patterns, and even contract terms for hardware, software, communications, and services. They can often reveal behind-the-firewall technology usage that standard web-scraping misses.\n*   **BuiltWith:** Primarily focuses on web technologies, showing what software is used on a company's website. This can be useful for identifying publicly facing property management portals or booking systems. BuiltWith also provides lists of websites using specific real estate software categories, such as Yardi Systems, RealPage, and AppFolio.\n*   **TheirStack.com:** Claims to track over 5,000 technologies and allows users to get lists of companies using any of them, with filters for company size, industry, and country. It gathers data from job postings, offering insights into databases, CRMs, and other internal tools that BuiltWith might not cover.\n*   **PredictLeads:** Allows you to find companies using a given technology by searching with its name, drawing from thousands of tracked technologies.\n\nThese platforms can help businesses identify high-intent prospects and personalize outreach.\n\n### 3. Publicly Available Information & Industry Resources\n\nSeveral other publicly accessible avenues can provide clues:\n*   **Property Management Company Websites:** Larger property management firms sometimes detail the technology they use in their \"About Us\" or \"Services\" sections. Their career pages may also list required software skills for job openings, such as proficiency in Yardi or Entrata.\n*   **Job Postings:** Searching job boards (e.g., LinkedIn, Indeed) for roles within property management that mention specific software platforms can indicate current users.\n*   **Industry Review Sites:** Platforms like Capterra, G2, and Software Advice feature reviews for property management software, and reviewers occasionally mention the companies they work for. Popular apartment management software frequently reviewed on these sites include RealPage OneSite, Buildium, Yardi Voyager, Entrata, and AppFolio.\n*   **Real Estate Industry Publications and News:** News articles or market research reports in the real estate technology (\"PropTech\") sector might highlight partnerships, new adoptions, or case studies involving specific software platforms and property managers. The real estate technology market is growing, with increasing adoption of digital solutions.\n\n### 4. Networking\n\nEngaging with professionals in the real estate and property management industries through LinkedIn or at industry conferences can provide direct insights into which software platforms are in use.\n\nBy combining these research methods, you can build a clearer picture of which apartment buildings or property management companies are utilizing a specific software platform.",
+  "sources": [
+    {
+      "title": "bookyourdata.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEtooijfBc_DXEQ9GprjI_j1Kr7rwgX6zRyLS9WILPImMH6hE0mXsW28OctH348TiF5H6pKq9vMjvtj17GT3krbKMevKgvsOUgLe5RNG-RB8gs4uVipsZ2qQQnASDuxGq4p9G1wRYANz7RuWQHladg="
+    },
+    {
+      "title": "brightdata.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF1PqsTvl45e9DQyijjTkcC87DYn_DhoKmf7LT0RxWKt1tws4Onn8Gx_-A5ryd21fZGi2-hFTy2yl7SaLY6X4EQrPOgqPsw9IeO-oUrQpqrkRrj3YO1soXPGaJgFkCvyEFkszGN9Uk4Tz_uFzn5MBsEPyA="
+    },
+    {
+      "title": "demandbase.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF8VYw8aCWvBAksiXjeZhk5KqP1IOH7sAO0w13FPyTIltPe_bm6lLMGO8OH0E6eBshYoxgjJjkhFV9PtvifauKk_RLDkqWrwT1MTUNYZXm4vDs896uoe1I9dKF7Du_eyfHTPj5NwM0y3Yw="
+    },
+    {
+      "title": "6sense.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG4eTA5w96Pp1jPPwRx-zXMYQQG5PivKdoSt4Z3q7TUuA5lhs0K4IIfcNTNmVgaRSZfaM6ySnTIByd-s7CP3rUZQZUy9pQi7nS-7_YADuKsQM9TUWsKGc_o9um71syu8Bzi_17eQ0JKx7bNsfjF0HAY-Oo="
+    },
+    {
+      "title": "gzconsulting.org",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFuPJFeyvLPJDdOFOZmYUIZ_CwKwl_1V6ScS_PjmiSi96U-YH4OE6P9OffOfO33vRZhcg0_FuFkbdPqFD72FJ7gpDyykBdQlkWSe1PVDCF4ZYPAQf1u9HGghTq2MA12Mrr63s5SHfOXj4RKxPkkgUPT4CxG_H2EDozBK43F_PweDbn6lA=="
+    },
+    {
+      "title": "theinsightcollective.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG1fczDi6sc2CCe6gcV1cFf5BlPBhsMaXwkLAt4rCaEjEiirn-rKCXy7XIXEh2Kr-F5mI4Ed3da-ySnehDAGU9B2tNPvXALuemX80OEV4ZBwOWu18FwWlDfnEWEft4itAQhLiFcnoO6-XbDgeHznOIesEOBB-pJBYI9vXZAm6oZEmtDv52av9AdyQ=="
+    },
+    {
+      "title": "gtm.ai",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGDEMliPpZado_PuQkFMz1c8cdFrQGqueWSbHnzHyI0aIsERH-X2ONUH9JhWzq-5afgSSnc33btrM6owxPgdmaTIaSHAQa20tY6mQ=="
+    },
+    {
+      "title": "youtube.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEeLxhyeahgiOY43yup2H-7CPKmevoo2TH17fsxgyEmqFmVB3bkUMra0hel0uQ-Vekyhf2D6nooO7ECXzJyIIeR3IYFMs5PsLBWhbfHIyqw9QSUoUjEZnpxVYVdPGjDFbGngMk5EFc="
+    },
+    {
+      "title": "hginsights.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGIGI0P_RxxEG2vTl1M3hbpyULZWaWVRpAdyBGFyZ1LpPna0fM_GlcDbJLFT_FVt6Vuft-vD4UA9lCOzkHuio1Uu1oz1OIR61mn2KaE7qf4T-G5B44sIzrJvtVeYPnDycaUe685PJzjWg4ubQ9bpv4cHruw_CuTjUxxnRNfwQ=="
+    },
+    {
+      "title": "hginsights.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGYhKPzeXNoZcYgKPKP1yLwrjR6Git1qkFEeBg5GhMdEb_0mCH7ocLa532OyP2aK5MeSTRD8ymYBWuuum4frMD-a1cQgaXlHV2T24H5B1GLWf4VOv6oLXhA0npg7LuwPVAcTddGq26FbX7MeaE3FIs="
+    },
+    {
+      "title": "gartner.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEtog8pIVC-0G3Tmi31kJqfyJ1k0lJPUFaWNlFPlXB--9s9rsixrgAg5wl_oZhscqGWUjj4ne-VRsXitvYrTVNVqZ6uS3Zi-Qs0fUAFNFGknhyXh-DKt79BxV4sPqg-JsHRVkMy60JMziCf7_60DH4_K_ANhGF73g=="
+    },
+    {
+      "title": "hginsights.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG7lUiRGqeYnspKvXANl7H3qe6tvKLeW2N_dv86wPfARjCZva-hpif8tCyLMadwKpAP1R3r1Mm5zntQhmi5BO0y-moEQFA8hc82oHL2hcyJEL9EzthBMVSJI8qGX-A6QILEzBAZBMVQGLqj3VryQiOaHQL_RZfeIHy0mqyX"
+    },
+    {
+      "title": "builtwith.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEreBLSKbnOcmMToFfk1uRwitKEZhEnTdfHcG4rNv3CoT4ahSZ4qd_e_IvcxzzK0seo3HOPOwJLrgx-KLq_CAZwRUaiWi_hYKq5GkBhyv0bHhuJKz7eKetFYhKcmeMOURkx2RH-qWz7alXoeNIoyvw5lW_JUVAX"
+    },
+    {
+      "title": "builtwith.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHXFVoAJbdt6qAU1FpfqeRklyDXN5uHQO5uxKeaZd-SlflpO4Jh90u6ha-lDtQEQ3Z75Lrrp979xtz_r2i_ne6UFQl-jHEfMZO5miYhVyp5yS04zsRjaNlA_8uyJObBEXazOZzPk2zJxC4Y"
+    },
+    {
+      "title": "capterra.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHBn7C_95ODV_u_203gv-X_op_I4Hr0KGpVVMNuKcqqlZ1BMmJOc5UHVIkUMKJY7TtBW5HmmO-nOhA2oa1DsNJJU8LgmkpAJqQbWuvMcJbkZ95h_CBB8XeuxUtMhcwqdq3knmphiHU="
+    },
+    {
+      "title": "builtwith.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE4RO0xlww0CB7050RRdvaMypWgD4QtcOA9_ta-SPYFWd6dy8_noWxETf3Vjo9b_2CYQQOIiwR19gKrGZf9ueJGva07nqjXRIYlfNfkqk0_B6MO30zc6aLFT9vCW4-ZEfPkStLKZI3u"
+    },
+    {
+      "title": "reddit.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFfp7nmmPWvF4M8dCIFQaxT_BwrdM9C5GnojgxVLCpaP9fc_IjFnNv1_EIyx8aRn0VTISGyn1sCW8whCUsbNHmgPnv1z0OccomUQ_WiV418MHm4PHC8HQfioT06IDdFgJ6jh7TTZQ8jItsU7OvkfD1UFs4GOMJzv-c8mCb_5kcYK7WpWpv35p_gPUvLampCrDOBK_JHq_G8d8omLAUMyr28cbtX6g=="
+    },
+    {
+      "title": "predictleads.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFR17F3DLOlwKtcuFcXMFjch6wpvJVSUGr1fETFezTwls6ABhV9ndl9wjgsIKu8Cz8fzNYeRyzdsizXnsDSf2nx4TTDaR3PbekTh1aTa3gaj1zEMLWY0fxMOKMzhK_Vu0seeKNGhpp8V7MjrI0i3W-XL2KviOKdQQBD"
+    },
+    {
+      "title": "salesintel.io",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQET1PtdjFlipiTFvkiDm98nal64cHuvkQD2D1Ley9CWRncLzHTLh5QV7633q4XQG1OF2r5WKGzjj9HJmo1JOlEjhjcy21qq-Z5DAJKA2-5vCyUDSb9MSkAp8d7_Ly3qBehnPK0f7GZvYXY="
+    },
+    {
+      "title": "theirstack.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFB3fbBNrQpGzjmvNU7ZTQr-3CTL_o3SFbp8c6kVhmR26AnLg5-ihWJFzLQPiKn_u0Heu8L8UXa4CCvqUUNdbNc77fK0J1M8KBII3Rv9t0zyOwWqxabf4LwgOXNOqY1lmKl5qP5ObZB6L7R-BFVtioLwOXaLqYpBy2bIaRxW2-cXBbPkDFwBwpIxg=="
+    },
+    {
+      "title": "mrisoftware.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFoS-w9YD-MKwCgEcbvQXGLZKbXSr2ZRj8ch2Qa_KK0cFy6_nQUmYEI-oPsYIVYeM2lJK7jskJY4QTiGXTiIjoKP8eN3KiO9SdR0QerR-o70_ji3UkoB8ijfcGBb7JEDu3BtO5nvhV1vGJBW1xLhOuCGHGmaWPUJQczk1iCJiM2nUWK9SYIM9ST"
+    },
+    {
+      "title": "realpage.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE3mguILVJJlZe7wZo3Kk1xhHW_z1NvUUTVEg7Er2wjYnMxso7b6sl630QRRREYGgqO7sNuqvllzd2BjC0SOB4oqs5cLgzSw61SFtYnA04JaDWD3sml9fuE0m-6fPqXHonaJhzvogEBxuKdDuDdFNWoKB0zdkP_9lSiBvwh"
+    },
+    {
+      "title": "usemergingtech.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHHPqnUFV1-EubxGXhl5NBOD2DE7Q2fHuxRrkmZaXeds1NJGJvZfYopsstQm9p5ALJcrmIfRtDZVhWcMxlTEB8zI5f8600UBCRtwtTw2DLUKaHCVxsZIgIVqq5-V7unp7yPpqp_JFb815mvi6bamNXWNuajTTyhpusccSBMPTypEa0O9A=="
+    },
+    {
+      "title": "businessresearchinsights.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGv1T2dVBQqHeiqymlxXVJGVPPOcFhVvZGuIorndT6itbhte61LHqHUE9m5_1ksHpeaH4xZtPaGgUq6yzZgo5y7VCndVGRza1LL7RslaFzMmdjLlKuwxAMUDQNNTUI9IpcITi6dNGKfDZDtooJOzf7Y7L88IVhdzVtd00SH-iG7ZYSH8A0eYIOt051BbvgvGF1xwfa1E4BB"
+    }
+  ],
+  "brands": [
+    {
+      "brand": "ZoomInfo",
+      "first_at": 1662,
+      "mentions": 3,
+      "rank": 1
+    },
+    {
+      "brand": "Entrata",
+      "first_at": 3317,
+      "mentions": 4,
+      "rank": 2
+    },
+    {
+      "brand": "RealPage",
+      "first_at": 4645,
+      "mentions": 3,
+      "rank": 3
+    },
+    {
+      "brand": "AppFolio",
+      "first_at": 4745,
+      "mentions": 3,
+      "rank": 4
+    },
+    {
+      "brand": "Yardi (software)",
+      "first_at": 9006,
+      "mentions": 1,
+      "rank": 5
+    }
+  ],
+  "links": [
+    {
+      "title": "bookyourdata.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEtooijfBc_DXEQ9GprjI_j1Kr7rwgX6zRyLS9WILPImMH6hE0mXsW28OctH348TiF5H6pKq9vMjvtj17GT3krbKMevKgvsOUgLe5RNG-RB8gs4uVipsZ2qQQnASDuxGq4p9G1wRYANz7RuWQHladg="
+    },
+    {
+      "title": "brightdata.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF1PqsTvl45e9DQyijjTkcC87DYn_DhoKmf7LT0RxWKt1tws4Onn8Gx_-A5ryd21fZGi2-hFTy2yl7SaLY6X4EQrPOgqPsw9IeO-oUrQpqrkRrj3YO1soXPGaJgFkCvyEFkszGN9Uk4Tz_uFzn5MBsEPyA="
+    },
+    {
+      "title": "demandbase.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF8VYw8aCWvBAksiXjeZhk5KqP1IOH7sAO0w13FPyTIltPe_bm6lLMGO8OH0E6eBshYoxgjJjkhFV9PtvifauKk_RLDkqWrwT1MTUNYZXm4vDs896uoe1I9dKF7Du_eyfHTPj5NwM0y3Yw="
+    },
+    {
+      "title": "6sense.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG4eTA5w96Pp1jPPwRx-zXMYQQG5PivKdoSt4Z3q7TUuA5lhs0K4IIfcNTNmVgaRSZfaM6ySnTIByd-s7CP3rUZQZUy9pQi7nS-7_YADuKsQM9TUWsKGc_o9um71syu8Bzi_17eQ0JKx7bNsfjF0HAY-Oo="
+    },
+    {
+      "title": "gzconsulting.org",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFuPJFeyvLPJDdOFOZmYUIZ_CwKwl_1V6ScS_PjmiSi96U-YH4OE6P9OffOfO33vRZhcg0_FuFkbdPqFD72FJ7gpDyykBdQlkWSe1PVDCF4ZYPAQf1u9HGghTq2MA12Mrr63s5SHfOXj4RKxPkkgUPT4CxG_H2EDozBK43F_PweDbn6lA=="
+    },
+    {
+      "title": "theinsightcollective.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG1fczDi6sc2CCe6gcV1cFf5BlPBhsMaXwkLAt4rCaEjEiirn-rKCXy7XIXEh2Kr-F5mI4Ed3da-ySnehDAGU9B2tNPvXALuemX80OEV4ZBwOWu18FwWlDfnEWEft4itAQhLiFcnoO6-XbDgeHznOIesEOBB-pJBYI9vXZAm6oZEmtDv52av9AdyQ=="
+    },
+    {
+      "title": "gtm.ai",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGDEMliPpZado_PuQkFMz1c8cdFrQGqueWSbHnzHyI0aIsERH-X2ONUH9JhWzq-5afgSSnc33btrM6owxPgdmaTIaSHAQa20tY6mQ=="
+    },
+    {
+      "title": "youtube.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEeLxhyeahgiOY43yup2H-7CPKmevoo2TH17fsxgyEmqFmVB3bkUMra0hel0uQ-Vekyhf2D6nooO7ECXzJyIIeR3IYFMs5PsLBWhbfHIyqw9QSUoUjEZnpxVYVdPGjDFbGngMk5EFc="
+    },
+    {
+      "title": "hginsights.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGIGI0P_RxxEG2vTl1M3hbpyULZWaWVRpAdyBGFyZ1LpPna0fM_GlcDbJLFT_FVt6Vuft-vD4UA9lCOzkHuio1Uu1oz1OIR61mn2KaE7qf4T-G5B44sIzrJvtVeYPnDycaUe685PJzjWg4ubQ9bpv4cHruw_CuTjUxxnRNfwQ=="
+    },
+    {
+      "title": "hginsights.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGYhKPzeXNoZcYgKPKP1yLwrjR6Git1qkFEeBg5GhMdEb_0mCH7ocLa532OyP2aK5MeSTRD8ymYBWuuum4frMD-a1cQgaXlHV2T24H5B1GLWf4VOv6oLXhA0npg7LuwPVAcTddGq26FbX7MeaE3FIs="
+    },
+    {
+      "title": "gartner.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEtog8pIVC-0G3Tmi31kJqfyJ1k0lJPUFaWNlFPlXB--9s9rsixrgAg5wl_oZhscqGWUjj4ne-VRsXitvYrTVNVqZ6uS3Zi-Qs0fUAFNFGknhyXh-DKt79BxV4sPqg-JsHRVkMy60JMziCf7_60DH4_K_ANhGF73g=="
+    },
+    {
+      "title": "hginsights.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG7lUiRGqeYnspKvXANl7H3qe6tvKLeW2N_dv86wPfARjCZva-hpif8tCyLMadwKpAP1R3r1Mm5zntQhmi5BO0y-moEQFA8hc82oHL2hcyJEL9EzthBMVSJI8qGX-A6QILEzBAZBMVQGLqj3VryQiOaHQL_RZfeIHy0mqyX"
+    },
+    {
+      "title": "builtwith.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEreBLSKbnOcmMToFfk1uRwitKEZhEnTdfHcG4rNv3CoT4ahSZ4qd_e_IvcxzzK0seo3HOPOwJLrgx-KLq_CAZwRUaiWi_hYKq5GkBhyv0bHhuJKz7eKetFYhKcmeMOURkx2RH-qWz7alXoeNIoyvw5lW_JUVAX"
+    },
+    {
+      "title": "builtwith.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHXFVoAJbdt6qAU1FpfqeRklyDXN5uHQO5uxKeaZd-SlflpO4Jh90u6ha-lDtQEQ3Z75Lrrp979xtz_r2i_ne6UFQl-jHEfMZO5miYhVyp5yS04zsRjaNlA_8uyJObBEXazOZzPk2zJxC4Y"
+    },
+    {
+      "title": "capterra.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHBn7C_95ODV_u_203gv-X_op_I4Hr0KGpVVMNuKcqqlZ1BMmJOc5UHVIkUMKJY7TtBW5HmmO-nOhA2oa1DsNJJU8LgmkpAJqQbWuvMcJbkZ95h_CBB8XeuxUtMhcwqdq3knmphiHU="
+    },
+    {
+      "title": "builtwith.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE4RO0xlww0CB7050RRdvaMypWgD4QtcOA9_ta-SPYFWd6dy8_noWxETf3Vjo9b_2CYQQOIiwR19gKrGZf9ueJGva07nqjXRIYlfNfkqk0_B6MO30zc6aLFT9vCW4-ZEfPkStLKZI3u"
+    },
+    {
+      "title": "reddit.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFfp7nmmPWvF4M8dCIFQaxT_BwrdM9C5GnojgxVLCpaP9fc_IjFnNv1_EIyx8aRn0VTISGyn1sCW8whCUsbNHmgPnv1z0OccomUQ_WiV418MHm4PHC8HQfioT06IDdFgJ6jh7TTZQ8jItsU7OvkfD1UFs4GOMJzv-c8mCb_5kcYK7WpWpv35p_gPUvLampCrDOBK_JHq_G8d8omLAUMyr28cbtX6g=="
+    },
+    {
+      "title": "predictleads.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFR17F3DLOlwKtcuFcXMFjch6wpvJVSUGr1fETFezTwls6ABhV9ndl9wjgsIKu8Cz8fzNYeRyzdsizXnsDSf2nx4TTDaR3PbekTh1aTa3gaj1zEMLWY0fxMOKMzhK_Vu0seeKNGhpp8V7MjrI0i3W-XL2KviOKdQQBD"
+    },
+    {
+      "title": "salesintel.io",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQET1PtdjFlipiTFvkiDm98nal64cHuvkQD2D1Ley9CWRncLzHTLh5QV7633q4XQG1OF2r5WKGzjj9HJmo1JOlEjhjcy21qq-Z5DAJKA2-5vCyUDSb9MSkAp8d7_Ly3qBehnPK0f7GZvYXY="
+    },
+    {
+      "title": "theirstack.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFB3fbBNrQpGzjmvNU7ZTQr-3CTL_o3SFbp8c6kVhmR26AnLg5-ihWJFzLQPiKn_u0Heu8L8UXa4CCvqUUNdbNc77fK0J1M8KBII3Rv9t0zyOwWqxabf4LwgOXNOqY1lmKl5qP5ObZB6L7R-BFVtioLwOXaLqYpBy2bIaRxW2-cXBbPkDFwBwpIxg=="
+    },
+    {
+      "title": "mrisoftware.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFoS-w9YD-MKwCgEcbvQXGLZKbXSr2ZRj8ch2Qa_KK0cFy6_nQUmYEI-oPsYIVYeM2lJK7jskJY4QTiGXTiIjoKP8eN3KiO9SdR0QerR-o70_ji3UkoB8ijfcGBb7JEDu3BtO5nvhV1vGJBW1xLhOuCGHGmaWPUJQczk1iCJiM2nUWK9SYIM9ST"
+    },
+    {
+      "title": "realpage.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE3mguILVJJlZe7wZo3Kk1xhHW_z1NvUUTVEg7Er2wjYnMxso7b6sl630QRRREYGgqO7sNuqvllzd2BjC0SOB4oqs5cLgzSw61SFtYnA04JaDWD3sml9fuE0m-6fPqXHonaJhzvogEBxuKdDuDdFNWoKB0zdkP_9lSiBvwh"
+    },
+    {
+      "title": "usemergingtech.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHHPqnUFV1-EubxGXhl5NBOD2DE7Q2fHuxRrkmZaXeds1NJGJvZfYopsstQm9p5ALJcrmIfRtDZVhWcMxlTEB8zI5f8600UBCRtwtTw2DLUKaHCVxsZIgIVqq5-V7unp7yPpqp_JFb815mvi6bamNXWNuajTTyhpusccSBMPTypEa0O9A=="
+    },
+    {
+      "title": "businessresearchinsights.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGv1T2dVBQqHeiqymlxXVJGVPPOcFhVvZGuIorndT6itbhte61LHqHUE9m5_1ksHpeaH4xZtPaGgUq6yzZgo5y7VCndVGRza1LL7RslaFzMmdjLlKuwxAMUDQNNTUI9IpcITi6dNGKfDZDtooJOzf7Y7L88IVhdzVtd00SH-iG7ZYSH8A0eYIOt051BbvgvGF1xwfa1E4BB"
+    }
+  ]
+}

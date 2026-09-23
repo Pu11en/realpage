@@ -3,142 +3,97 @@
   "engine_label": "Gemini (gemini-2.5-flash) via API, Google Search grounding on",
   "is_consumer_app": false,
   "set": "A",
-  "question": "How do I find new apartment projects before they open for leasing?",
-  "intent": "find-pipeline",
+  "question": "How many apartment units are under construction in Texas?",
+  "intent": "pipeline",
   "asked_on": "2026-09-23",
   "ok": true,
-  "answer": "Finding new apartment projects before they open for leasing can give you an advantage in competitive rental markets, allowing you to secure preferred units and potentially better rates. This strategy, known as pre-leasing, involves renting an apartment while it's still under construction or in its final stages of completion.\n\nHere's how you can find these upcoming projects:\n\n**1. Research Upcoming Developments Online**\n\n*   **Developer and Property Management Websites:** Many developers and large property management companies list their upcoming projects on their websites. Major property management companies like Greystar Real Estate Partners, Asset Living, and Lincoln Property Company often manage a wide range of properties, including new constructions. Look for sections like \"Upcoming Projects\" or \"New Developments\". You can also sign up for interest lists to receive updates on when leasing opens.\n*   **Real Estate News and Development Tracking Sites:**\n    *   **Local Development News:** For specific cities, specialized news sites often report on new construction. For example, in New York City, websites like New York YIMBY, Brownstoner, and 6sqft provide updates on new residential developments.\n    *   **Construction Project Databases:** Services like BuildCentral's ConstructionWire specialize in providing early-stage construction project leads, including planned residential developments. These databases often contain information on project scopes, material needs, design, architectural details, and cost projections.\n*   **Targeted Online Searches:** Use search engines with terms like \"new residential development [City/Neighborhood] leasing launch\" or \"apartments under construction [City/Neighborhood]\".\n\n**2. Explore Local Government and Public Records**\n\n*   **Planning Applications and Zoning Boards:** Local municipalities require developers to submit planning applications and obtain permits before construction can begin. These applications are public records and can often be viewed online through your city or county's planning department website. Searching these records can reveal proposed apartment complexes in the early stages of development.\n    *   For example, Dublin City Council makes all planning applications received since January 2005 available online.\n    *   In Texas, the Texas Local Government Code (Chapters 211-213) establishes the framework for land use regulation by municipalities and counties, and planning applications detail proposed developments' adherence to these rules.\n*   **Housing Action Plans:** Some local governments are required to develop housing needs assessments and action plans, which can outline future residential development goals and projects.\n\n**3. Direct Engagement and Professional Networks**\n\n*   **Real Estate Brokerages Specializing in New Developments:** Some large real estate brokerages have dedicated \"New Development\" sections on their websites where you can filter for rental buildings that are pre-leasing or soon-to-be available. You can contact their marketing teams and ask to be added to pre-leasing lists.\n*   **Drive or Walk Through Developing Areas:** Physically exploring neighborhoods where new construction is common can help you spot projects in their early stages. Look for construction sites with signage indicating the developer or future property manager.\n*   **Networking:** If you know anyone in the real estate development or property management industry, they might have insights into upcoming projects.\n\n**4. Utilize Project Management and Tracking Software (Primarily for Industry Professionals)**\n\nWhile these are mostly for developers, understanding what they use can give you an idea of the information that exists:\n\n*   **Morta:** Designed specifically for property developers, Morta tracks projects from acquisition and planning approvals to construction and investor reporting.\n*   **Buildertrend:** A popular choice for residential developers.\n*   **Smartsheet:** A flexible project management tool that can be adapted for real estate, offering features like Gantt charts and real-time reporting.\n*   **Procore:** Known for its extensive features in construction tech, suitable for large real estate developers.\n*   **Northspyre:** Focuses on the financial aspects of real estate development, including budgets and forecasting.\n*   **Sitetracker:** A unified platform for real estate portfolio and asset management, useful for home builders and community developers to centralize land acquisition and streamline entitlements.\n\nBy using a combination of these methods, you can increase your chances of finding new apartment projects before they officially open for leasing.",
+  "answer": "As of early to mid-2026, Texas continues to have a substantial number of apartment units under construction, although the pace of new development has begun to slow compared to previous years. It remains one of the busiest states in the nation for apartment building.\n\nWhile a precise statewide total for units currently under construction is dynamic and not uniformly reported across all sources for the exact current date, data for major metropolitan areas provides significant insight:\n\n*   **Dallas-Fort Worth (DFW)**: As of the first quarter of 2026, approximately 42,702 apartment units remained under construction in the Dallas-Fort Worth metroplex. The DFW area has sustained one of the largest supply pipelines nationwide, adding nearly 33,600 new units within a 12-month period ending in Q1 2026.\n*   **Houston**: Following a peak in new supply additions in early 2024, Houston's multifamily construction activity saw a significant slowdown, with new additions falling to over 16,500 net units by Q2 2026. Projections for 2025 indicated about 12,000 units coming online, a return to historical averages after peak levels in 2023 and 2024. The construction pipeline was at its lowest total since early 2012, with around 3,000 units scheduled for delivery in 2026, a figure that could increase as more projects break ground.\n*   **Austin**: Austin has experienced a significant development boom, with its construction pipeline, relative to its size, being higher than any other major multifamily market in recent years. At its peak, nearly 20% of Austin's total inventory was under construction.\n*   **Statewide Projects**: Zabalist, a data source tracking Texas construction projects, identifies 2,820 apartment and multifamily construction projects filed with Texas regulators across 144 counties. Of these, 273 developments, valued at approximately $5.4 billion, are actively under construction or in review. These figures are sourced from the Texas Department of Licensing and Regulation (TDLR) public records.\n\nOverall, while the market is transitioning into a period of significantly lower deliveries, with RealPage data projecting annual completions to settle between 45,000 and 50,000 units for 2026\u20132027, a sharp reduction from a recent peak of 120,000 units delivered in 2024, a considerable volume of apartment units remain in various stages of construction across the state.\n\nSpecific projects recently breaking ground include The Oaks at Cibolo Creek in Boerne, which will add 324 garden-style apartments, and Lake Forest Senior Living in McKinney, a 222-unit senior living development.\n\nData for these insights is often provided by real estate analytics firms and industry reports such as those from RealPage, RentCafe, Lumicre, Zabalist, and Northmarq.",
   "sources": [
     {
-      "title": "fairfieldresidential.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF_QOleH5K3oUSwS-EFCvLsUa4qvjFrgIQDn1FUsx8PhXOU9uCxtKEM8f3_E9CQNLCh2AkZIOoDJTHj1-vT2dMMP56gvGjyU8xRJwJ3VVTes4pspqDwK7a1zeTjIqNbV6SS_BlSmXzg8b_HtL2OUV4z4hzZKZz4xD5I-B7azFLJV-bxQJgEJipAoW6A8Qr_uQWK6eY="
+      "title": "zabalist.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHzKj63aZCjSRR71wcHk-7Y9S7_3TGa4S5gCdPWccLt3hQH4eGjwk2sJlN7iw6bs_xwc91J8m5Ai2T6k5cw6R7riu8gyvvfkXjF-_sGK-W2FXpySp-zAdDSr2IDwsVsZEPE2HxY6pukzQ=="
     },
     {
-      "title": "buildingradar.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHeMyUuX58BN6rGaxgFuEwA6Y46E6xPZII6ljaECJmg1BpowKmIUE823-NfgRuJl4yJs13_7SXLP3B6EfEd2hddI2NxfIaul8-cMNdxNLC1Xk-f5AapHImJIPX6GxE0FEdLXquQW03GyXCV4BoRHLzBcHBKJy3vzfYiJpLIfWjHV6df2T-I7UWkt-81VLZ7XWwNwGMGdCGHytCqnFYm5K0="
+      "title": "lumicre.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF5LB_znWK1r1o4MrQyQ4a5ZVuFNSc0LEUNhsczRrvwDF13Q_vzVVIawyMJTJmgeiKJ2CfUwzWyvYk6N-fdx2pv_trQyLuuuwfhUufOAqd2G0RglL49iBr5sQQSfWpZEb45bd2ZSRCpcyazTqKa0OKgRBZsKFMcaJI0lnPdynqgToI="
     },
     {
-      "title": "commloan.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHRtGt6sNOne7MUP9d7pgGx0qci4Ox5LUhbCl4dP7LB1Tp-UCy5e73qEDOpNPV6jbxsvMa-yD4VFKZUgaQuqlGlU5sntBiY4qrmprwwxZ-br1yC0nyoIPCq2DqgjB1kE2J27SJh-h0jISthA0KpUUQu2syZNvkNbIcsC7up7XQ="
+      "title": "apartments.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG2iXhr5ERfydyx-Py6u2axZlvVrL8qrz1Mmk_oYLlD3EdXa7bYvz3bCJvNmWugIKwnEBz56o0E5SuTQH5lqka9LNY7772NlZG8ZoeijOzvIO2o-kM6vyditorv4RwYRUb4erDhcFpKvQe0FmcB0TaKINF1iMFcHKfVFdvGuIz0tOQI8j-hxhSPtqT6EVFZJyeXLto="
     },
     {
-      "title": "greystar.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEdQ7xBSO1eD1bldgjVkrxzH_KVaoyUvdawgDhXnEMpDk77shQt9fzYzZMysYS6eVYXwR3xZxIRIwznRqGfWJwwKsGRWGk4LIFlpJlSwQwKyO3XBQ=="
+      "title": "northmarq.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEo_IwvWREQtHKtyNdBRP7RsurlI3n6Xb_9M2ubXYbbTsyTQrRymoxnP_CjsnmooOaSdAlcEdYC01yo5VcgUDXywYH6abWi1xQiickLphvinB1VBE0QOUYPLO7JUCDiU5_0R0zK9KokqZ30VejmO_HFwXxt9hLJXpUBoJsCSiqoI1YLBu3ROopEYsdIAL9-HlBwx9djIdfxOYLvDJOX2WJN7wH-SvJYLni3qA2Du-Owng=="
     },
     {
-      "title": "multihousingnews.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFX5Pf0Y7-nQmo29GwUBShAEOk4Hv8Qvzh3LvMMP1jxBw_BvAW9IRr6zpy0orkUBqUKiZB2GBb2N1QOkxjLhmKDPjqslaR9BqN9mwP21UmkyvIrGylVGJKQ7QqdSiJGXhWRIsdZMyQrhAha-sUQu7tChbEs8j87SzC_oNBTySDe9N3Zz4sDxGtAPQ=="
+      "title": "mysanantonio.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFTGhFcUBTykfxh4_isfOpcW4I0A1Ws30a9PeYo4-Pfz27spghwd0t0bVCjgYONiv-KPUoKECnEzmiIQeqMU5BFmaxZc0bM1QnRsf8OWp_wczZdHx3ENj85-cxX8sRyfDo8WakmkMG5Fdl1t_d-SG-PTj6xch1beEGyyX307uMQMmpsqe4sgkZeSwc5dSHCNKqtdpclqSXdUmZukykrnITOPnAtqGo="
     },
     {
-      "title": "rentreboot.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEqDxYla3MDXlTfu9zV1prBdOz-BWij9dCEPNbvH-jEIQEwJiIyJv-HS0Lv-ApRO-9endyfnuj2NxCbjkzYT9hKbMtN_wT5fbmLvjHlYuSeQkkb3xeXgteYW6SWZUgq9wCGf8TXDM3E007v_Jk3fxOME4SBdll-UZLJFsUCc1qFxWjOO4Q="
+      "title": "communityimpact.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFC2bCPvh0P3PwSghyFAhSLEdhdGngTOUoBxndDAIUYrKTV2uOxoMVhQOczyjQ5KzAAAkwCAckWvkiFwzaXsIUXSrYNVdeeEuG08NnfaP84sWUSmGbnvQKdTQs-3HsHU7nyvy_i4lqTrUOKPnEFjwCHsNQta456QKSgG3MBbHPRiMFjR3GCILp3Eb4idCEo6SJRV24_uyx8u_vqxBFAZjtYX5WQDxIYabMzPoqIsKm7V7Hjn7dgybcc4NRQDzTvu35CmIL-4S3nEuvBeYYJ_cRk1OpG7lCedRUP8RUeOnXVAiRg"
     },
     {
-      "title": "residenewyork.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEcPOhlyWM7bDXUb687I0ZFySVrk-xiNJNy4IJl_B3w3iLCNkJeOWyQ711kMAQ036OLZfPrJokiVG7Ie6nCbBuzth_uIqOL6yQNwvl-SPhv96YpA2zrIt23gQ2q79XaEiMlNSvBRvIy8eJFUcqe5jY42zVj87Y="
+      "title": "virtualbx.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHSPq8Ln2U2U7NSrdsnZlp37ovMyhizbqP_0ksjj9PcinY9UwH8FsOFm4OPo4F3JzT9-LoUtWVfKwDikqDst52O-kcJs8mvGVx76nwNk2OkkmpTTGsW7y8wIDsSSoypT5QDHE8YaU9hBWl9S9TH-SWS23yYkswb6ZMy-DODO_w9KDGBK0RwCgZGE_LBUjpkB3yxTP2CEM4A5173LgRQ1eHRaMvccMipeNVrCEI="
     },
     {
-      "title": "buildcentral.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEj7dPVDOH5D2mv0h-3RV78Ek18B-hLMBlrIaI9mVlF3peHTv_XceweRdC7rCWaLmmKt28OtmNf_kmTqYT4tUQZsZRTr5mVilN1hwlrf06xwhwMNWdaX8wnshYPdKwMmtRS3qRMvTtKOiwNwTshDtxBs7O1pu5BqIaXDoLSmaIkGqkGZwM="
-    },
-    {
-      "title": "morta.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGpw9UIbvU15sNvMjnZLSx7LgNgW5IpLEJU2eH-ojgZEz6bZzbcvbjMvcksPcuAPG87i4ZljWOWw_NQwkbiIoUk65Cz5jGrpPwwSd04uFaU_Ipnup_mANJekh_nhO86OX2gUGzDg-m7hOE3OgiBWIzPkWRszReKDRdeLpKKbJ3zwoKy6N77PhCF8-A5"
-    },
-    {
-      "title": "archistar.ai",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHgjXgV0-LeqWJRJ5elpG5uRT1gmP6e1Lt5Ic-ky05U4iOXZEsXr8TG2vksA5awkhgolzQemF0jlaEe4P4RyycjsDRv9ajfjuTp-0H_at2AhjHqkJqtXtM3sE4hNJBtkO2Z7seKXKESS05Ez8eHj8fUw2U-KAXz3FSDg5c6PFzpPAj42WcZn3jaIaVMcoNtx3o="
-    },
-    {
-      "title": "arcgis.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE3HWyIfsQhKlLDlM69CoKro8vawFawXlKOgcA8jVVwtHVCo9vDMn1Qz2n0FhBmSpJ5D02HCN-iIeRnQSVhR9HA94mVwvZl3gmsoFhxpZbZpISHot0RkM7l6Ej6SGnVC3p-YYh33ZTN1nPE7_jDgG5NpcgFYeK4R1OeMwMzYwuaDPLE1BkUgA0bXmAdgUz1xxGVGHw="
-    },
-    {
-      "title": "dublincity.ie",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFgX1zoqq995AAv3cvFZo-7aLNaoZy6za50GwLC7VE9PBb1ZIWcsf8LmSMKo8_i2KogQ-91aLbuwApV_g4g1jz8HHTO9nZpota1iehqSx2cpTxJ9XkIVRB9slOSS-64cCyeGeX0pV_hxCqpSbaIqfVXzr3FZGOW5uMF-hYF6z7WzJopmH2lDkT4UgDiE8fqDC6TMj-3yj7dSFu33E1CIHOJlxOQ6Fs3qig="
-    },
-    {
-      "title": "colorado.gov",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGUS_hSBx3hRWMmEC87pe4lO_E-FPfhinkrXkNU9lZjgXPx_HGw7GnQ2ZWTarEfyfvbsY2OviFH29OrfesblEsyuDAZT4VoAB0-_S83Nuu6eW_E9L1zSvHqBA4FJkq6akw="
-    },
-    {
-      "title": "reddit.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFh4_xJzaVgK5pu96fju0VH024n_O33Eamt7ggzIIspDOOLGAZO5OkNKQgtN_lmGmmRx9m6qEKLrKm1piCbuSasfRol9DfukyAPSEX-Rkhuzp7TFrlQOj4cFGvHT1uqdTlCh4KfjjdSquKeqgdNtjTF27e8qoWuHSkqC8Tda4USMKgI9I1T_mBe9YGa7pxdaA6QQRVB9a2o01M="
-    },
-    {
-      "title": "ingenious.build",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGxwLkd13j8ciuEKZfWzXIdGc4kgfgEwuq3MubjXd20amZ8YXjUO6EFjBz_DLv87R1GCJ0zV2_xYrgvV07vzNG2V0bkNWl3kNAO7YSSI4MglGGNcGLdF5aaMsiS1IHYdePmuuv3iPCvp2H2bsmxu7MRyeP1XTwxlNHbPx7MnBU56L5-n5sG-e-hAbqvCXiSHhWluppXtPj6RR_EjZ8="
-    },
-    {
-      "title": "sitetracker.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFy9I1n-kAgqEutFnvj33XCgYOAG4BK2e9PHsqjZc_OHHpYF05_Itf6iQ9OtkXoy4B3kOFM_VwSOTkXbdAD_4humuzVyjeY55Tq-AoKOfyM_2ZMZvjiEwm5dEOedmfGw7GK4rmgvjkmDRuLJl2D"
+      "title": "constructionowners.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFjMySrr1-MX8FC7BaIY9QUkicAbohTmOf7yaDtQ9rtZUb1KJnNr2kAh95BX-XhIvZSkPN-w3wEH6gaGMn95-hxXINjT5XvwtE31aAqu_yTR4kI5P3tKthQf_OE7PSu11zmpIcIk8zr1pmw5dyK1vzwmgVxvNS_0HE7liGWy_dF0XnfwEHG-4EPnk9iA4IlHJU8"
     }
   ],
-  "brands": [],
+  "brands": [
+    {
+      "brand": "Public records (DIY)",
+      "first_at": 2000,
+      "mentions": 1,
+      "rank": 1
+    },
+    {
+      "brand": "RealPage",
+      "first_at": 2120,
+      "mentions": 2,
+      "rank": 2
+    },
+    {
+      "brand": "Northmarq",
+      "first_at": 2764,
+      "mentions": 1,
+      "rank": 3
+    }
+  ],
   "links": [
     {
-      "title": "fairfieldresidential.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF_QOleH5K3oUSwS-EFCvLsUa4qvjFrgIQDn1FUsx8PhXOU9uCxtKEM8f3_E9CQNLCh2AkZIOoDJTHj1-vT2dMMP56gvGjyU8xRJwJ3VVTes4pspqDwK7a1zeTjIqNbV6SS_BlSmXzg8b_HtL2OUV4z4hzZKZz4xD5I-B7azFLJV-bxQJgEJipAoW6A8Qr_uQWK6eY="
+      "title": "zabalist.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHzKj63aZCjSRR71wcHk-7Y9S7_3TGa4S5gCdPWccLt3hQH4eGjwk2sJlN7iw6bs_xwc91J8m5Ai2T6k5cw6R7riu8gyvvfkXjF-_sGK-W2FXpySp-zAdDSr2IDwsVsZEPE2HxY6pukzQ=="
     },
     {
-      "title": "buildingradar.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHeMyUuX58BN6rGaxgFuEwA6Y46E6xPZII6ljaECJmg1BpowKmIUE823-NfgRuJl4yJs13_7SXLP3B6EfEd2hddI2NxfIaul8-cMNdxNLC1Xk-f5AapHImJIPX6GxE0FEdLXquQW03GyXCV4BoRHLzBcHBKJy3vzfYiJpLIfWjHV6df2T-I7UWkt-81VLZ7XWwNwGMGdCGHytCqnFYm5K0="
+      "title": "lumicre.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF5LB_znWK1r1o4MrQyQ4a5ZVuFNSc0LEUNhsczRrvwDF13Q_vzVVIawyMJTJmgeiKJ2CfUwzWyvYk6N-fdx2pv_trQyLuuuwfhUufOAqd2G0RglL49iBr5sQQSfWpZEb45bd2ZSRCpcyazTqKa0OKgRBZsKFMcaJI0lnPdynqgToI="
     },
     {
-      "title": "commloan.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHRtGt6sNOne7MUP9d7pgGx0qci4Ox5LUhbCl4dP7LB1Tp-UCy5e73qEDOpNPV6jbxsvMa-yD4VFKZUgaQuqlGlU5sntBiY4qrmprwwxZ-br1yC0nyoIPCq2DqgjB1kE2J27SJh-h0jISthA0KpUUQu2syZNvkNbIcsC7up7XQ="
+      "title": "apartments.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG2iXhr5ERfydyx-Py6u2axZlvVrL8qrz1Mmk_oYLlD3EdXa7bYvz3bCJvNmWugIKwnEBz56o0E5SuTQH5lqka9LNY7772NlZG8ZoeijOzvIO2o-kM6vyditorv4RwYRUb4erDhcFpKvQe0FmcB0TaKINF1iMFcHKfVFdvGuIz0tOQI8j-hxhSPtqT6EVFZJyeXLto="
     },
     {
-      "title": "greystar.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEdQ7xBSO1eD1bldgjVkrxzH_KVaoyUvdawgDhXnEMpDk77shQt9fzYzZMysYS6eVYXwR3xZxIRIwznRqGfWJwwKsGRWGk4LIFlpJlSwQwKyO3XBQ=="
+      "title": "northmarq.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEo_IwvWREQtHKtyNdBRP7RsurlI3n6Xb_9M2ubXYbbTsyTQrRymoxnP_CjsnmooOaSdAlcEdYC01yo5VcgUDXywYH6abWi1xQiickLphvinB1VBE0QOUYPLO7JUCDiU5_0R0zK9KokqZ30VejmO_HFwXxt9hLJXpUBoJsCSiqoI1YLBu3ROopEYsdIAL9-HlBwx9djIdfxOYLvDJOX2WJN7wH-SvJYLni3qA2Du-Owng=="
     },
     {
-      "title": "multihousingnews.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFX5Pf0Y7-nQmo29GwUBShAEOk4Hv8Qvzh3LvMMP1jxBw_BvAW9IRr6zpy0orkUBqUKiZB2GBb2N1QOkxjLhmKDPjqslaR9BqN9mwP21UmkyvIrGylVGJKQ7QqdSiJGXhWRIsdZMyQrhAha-sUQu7tChbEs8j87SzC_oNBTySDe9N3Zz4sDxGtAPQ=="
+      "title": "mysanantonio.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFTGhFcUBTykfxh4_isfOpcW4I0A1Ws30a9PeYo4-Pfz27spghwd0t0bVCjgYONiv-KPUoKECnEzmiIQeqMU5BFmaxZc0bM1QnRsf8OWp_wczZdHx3ENj85-cxX8sRyfDo8WakmkMG5Fdl1t_d-SG-PTj6xch1beEGyyX307uMQMmpsqe4sgkZeSwc5dSHCNKqtdpclqSXdUmZukykrnITOPnAtqGo="
     },
     {
-      "title": "rentreboot.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEqDxYla3MDXlTfu9zV1prBdOz-BWij9dCEPNbvH-jEIQEwJiIyJv-HS0Lv-ApRO-9endyfnuj2NxCbjkzYT9hKbMtN_wT5fbmLvjHlYuSeQkkb3xeXgteYW6SWZUgq9wCGf8TXDM3E007v_Jk3fxOME4SBdll-UZLJFsUCc1qFxWjOO4Q="
+      "title": "communityimpact.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFC2bCPvh0P3PwSghyFAhSLEdhdGngTOUoBxndDAIUYrKTV2uOxoMVhQOczyjQ5KzAAAkwCAckWvkiFwzaXsIUXSrYNVdeeEuG08NnfaP84sWUSmGbnvQKdTQs-3HsHU7nyvy_i4lqTrUOKPnEFjwCHsNQta456QKSgG3MBbHPRiMFjR3GCILp3Eb4idCEo6SJRV24_uyx8u_vqxBFAZjtYX5WQDxIYabMzPoqIsKm7V7Hjn7dgybcc4NRQDzTvu35CmIL-4S3nEuvBeYYJ_cRk1OpG7lCedRUP8RUeOnXVAiRg"
     },
     {
-      "title": "residenewyork.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEcPOhlyWM7bDXUb687I0ZFySVrk-xiNJNy4IJl_B3w3iLCNkJeOWyQ711kMAQ036OLZfPrJokiVG7Ie6nCbBuzth_uIqOL6yQNwvl-SPhv96YpA2zrIt23gQ2q79XaEiMlNSvBRvIy8eJFUcqe5jY42zVj87Y="
+      "title": "virtualbx.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHSPq8Ln2U2U7NSrdsnZlp37ovMyhizbqP_0ksjj9PcinY9UwH8FsOFm4OPo4F3JzT9-LoUtWVfKwDikqDst52O-kcJs8mvGVx76nwNk2OkkmpTTGsW7y8wIDsSSoypT5QDHE8YaU9hBWl9S9TH-SWS23yYkswb6ZMy-DODO_w9KDGBK0RwCgZGE_LBUjpkB3yxTP2CEM4A5173LgRQ1eHRaMvccMipeNVrCEI="
     },
     {
-      "title": "buildcentral.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEj7dPVDOH5D2mv0h-3RV78Ek18B-hLMBlrIaI9mVlF3peHTv_XceweRdC7rCWaLmmKt28OtmNf_kmTqYT4tUQZsZRTr5mVilN1hwlrf06xwhwMNWdaX8wnshYPdKwMmtRS3qRMvTtKOiwNwTshDtxBs7O1pu5BqIaXDoLSmaIkGqkGZwM="
-    },
-    {
-      "title": "morta.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGpw9UIbvU15sNvMjnZLSx7LgNgW5IpLEJU2eH-ojgZEz6bZzbcvbjMvcksPcuAPG87i4ZljWOWw_NQwkbiIoUk65Cz5jGrpPwwSd04uFaU_Ipnup_mANJekh_nhO86OX2gUGzDg-m7hOE3OgiBWIzPkWRszReKDRdeLpKKbJ3zwoKy6N77PhCF8-A5"
-    },
-    {
-      "title": "archistar.ai",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHgjXgV0-LeqWJRJ5elpG5uRT1gmP6e1Lt5Ic-ky05U4iOXZEsXr8TG2vksA5awkhgolzQemF0jlaEe4P4RyycjsDRv9ajfjuTp-0H_at2AhjHqkJqtXtM3sE4hNJBtkO2Z7seKXKESS05Ez8eHj8fUw2U-KAXz3FSDg5c6PFzpPAj42WcZn3jaIaVMcoNtx3o="
-    },
-    {
-      "title": "arcgis.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE3HWyIfsQhKlLDlM69CoKro8vawFawXlKOgcA8jVVwtHVCo9vDMn1Qz2n0FhBmSpJ5D02HCN-iIeRnQSVhR9HA94mVwvZl3gmsoFhxpZbZpISHot0RkM7l6Ej6SGnVC3p-YYh33ZTN1nPE7_jDgG5NpcgFYeK4R1OeMwMzYwuaDPLE1BkUgA0bXmAdgUz1xxGVGHw="
-    },
-    {
-      "title": "dublincity.ie",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFgX1zoqq995AAv3cvFZo-7aLNaoZy6za50GwLC7VE9PBb1ZIWcsf8LmSMKo8_i2KogQ-91aLbuwApV_g4g1jz8HHTO9nZpota1iehqSx2cpTxJ9XkIVRB9slOSS-64cCyeGeX0pV_hxCqpSbaIqfVXzr3FZGOW5uMF-hYF6z7WzJopmH2lDkT4UgDiE8fqDC6TMj-3yj7dSFu33E1CIHOJlxOQ6Fs3qig="
-    },
-    {
-      "title": "colorado.gov",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGUS_hSBx3hRWMmEC87pe4lO_E-FPfhinkrXkNU9lZjgXPx_HGw7GnQ2ZWTarEfyfvbsY2OviFH29OrfesblEsyuDAZT4VoAB0-_S83Nuu6eW_E9L1zSvHqBA4FJkq6akw="
-    },
-    {
-      "title": "reddit.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFh4_xJzaVgK5pu96fju0VH024n_O33Eamt7ggzIIspDOOLGAZO5OkNKQgtN_lmGmmRx9m6qEKLrKm1piCbuSasfRol9DfukyAPSEX-Rkhuzp7TFrlQOj4cFGvHT1uqdTlCh4KfjjdSquKeqgdNtjTF27e8qoWuHSkqC8Tda4USMKgI9I1T_mBe9YGa7pxdaA6QQRVB9a2o01M="
-    },
-    {
-      "title": "ingenious.build",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGxwLkd13j8ciuEKZfWzXIdGc4kgfgEwuq3MubjXd20amZ8YXjUO6EFjBz_DLv87R1GCJ0zV2_xYrgvV07vzNG2V0bkNWl3kNAO7YSSI4MglGGNcGLdF5aaMsiS1IHYdePmuuv3iPCvp2H2bsmxu7MRyeP1XTwxlNHbPx7MnBU56L5-n5sG-e-hAbqvCXiSHhWluppXtPj6RR_EjZ8="
-    },
-    {
-      "title": "sitetracker.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFy9I1n-kAgqEutFnvj33XCgYOAG4BK2e9PHsqjZc_OHHpYF05_Itf6iQ9OtkXoy4B3kOFM_VwSOTkXbdAD_4humuzVyjeY55Tq-AoKOfyM_2ZMZvjiEwm5dEOedmfGw7GK4rmgvjkmDRuLJl2D"
+      "title": "constructionowners.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFjMySrr1-MX8FC7BaIY9QUkicAbohTmOf7yaDtQ9rtZUb1KJnNr2kAh95BX-XhIvZSkPN-w3wEH6gaGMn95-hxXINjT5XvwtE31aAqu_yTR4kI5P3tKthQf_OE7PSu11zmpIcIk8zr1pmw5dyK1vzwmgVxvNS_0HE7liGWy_dF0XnfwEHG-4EPnk9iA4IlHJU8"
     }
   ]
 }

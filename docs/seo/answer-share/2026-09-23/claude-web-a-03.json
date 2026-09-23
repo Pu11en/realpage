@@ -3,63 +3,78 @@
   "engine_label": "Claude (Sonnet) via claude -p, web search on",
   "is_consumer_app": false,
   "set": "A",
-  "question": "Which apartment complexes in Texas sold in 2025?",
-  "intent": "find-sales",
+  "question": "How do I find multifamily construction pipeline data for Austin?",
+  "intent": "pipeline",
   "asked_on": "2026-09-23",
   "ok": true,
-  "answer": "There isn't one single comprehensive public list of every Texas apartment complex that sold in 2025 \u2014 that data lives behind paid databases like **CoStar**, **Real Capital Analytics (RCA/MSCI)**, and **Yardi Matrix**, which brokerages and news outlets pull from. But here's what's confirmed from news coverage and industry reports:\n\n## Confirmed individual sales (2025)\n\n- **Monterra Village** (Fort Worth, 550 units) \u2014 Hillwood Multifamily sold it to **Weidner Apartment Homes**, closing Dec. 18. (*The Real Deal*)\n- **Lakeside** (Houston, 296 units, 9550 Meyer Forest Drive) \u2014 acquired by **Pegasus Real Estate**.\n- **Parker Heights** (Austin, 54 units, 1968/69-built) \u2014 sold via **Muskin | Elam Group** in November 2025 to a local multifamily operator, price undisclosed.\n- **450-unit garden-style community, metro Dallas** \u2014 acquired by **Mesirow Financial** (29 one- and two-story buildings). (*Multi-Housing News*)\n- Walker & Dunlop reported closing **over $820 million** in Central Texas multifamily debt/investment-sales transactions in 2025 (a mix of financings and sales, not one deal).\n\n## Market-level totals for context (2025, trailing-year figures)\n\n- **DFW**: ~$10.4B in multifamily sales volume; cap rates compressed in H2.\n- **Austin**: ~$9.2B in investment volume, despite vacancy near 14% from a construction boom.\n- **San Antonio**: ~$6.5B in volume, though cap rates widened ~50 bps amid rising distress.\n- **Houston**: ~$3.4B in volume, with occupancy around 92.2%.\n- Nationally, apartment deal volume rose 7% YoY to $30B in Q1 2025, driven by single-asset trades \u2014 Texas metros were a major share of that.\n\n## Where to get the full list\n\nFor a complete, sortable roster of every Texas multifamily sale in 2025 (buyer, seller, price, cap rate), you'd want:\n- **CoStar** or **RCA (MSCI Real Capital Analytics)** \u2014 industry-standard transaction databases (subscription).\n- **Yardi Matrix** multifamily reports.\n- Brokerage deal trackers like **IPA Texas** (Institutional Property Advisors) or **Walker & Dunlop's** transaction announcements.\n- **RealPage/CoStar market reports** aggregated by outlets like *Multi-Housing News*, *GlobeSt*, and *Real Estate Business Online*.\n\nI can search for more specific deals (a particular city, buyer, or size range) if that would help narrow this down.\n\nSources:\n- [Hillwood Multifamily Sells Alliance Apartment Complex](https://therealdeal.com/texas/fort-worth/2025/01/03/hillwood-multifamily-sells-alliance-apartment-complex/)\n- [Muskin Elam Group Sold Parker Heights (54 Units) Austin, TX | November 2025](https://muskin-elam.com/muskin-elam-group-sold-parker-heights-54-units-austin-tx-november-2025/)\n- [Exclusive: Mesirow Financial Buys 450 Units in Metro Dallas](https://www.multihousingnews.com/exclusive-mesirow-financial-buys-450-units-in-metro-dallas/)\n- [Walker & Dunlop Closes Over $820 Million In Central Texas Transactions](https://www.walkerdunlop.com/news/820-million-central-texas-transactions)\n- [2025 Multifamily Recap & 2026 Trends in Texas](https://blog.swbc.com/businesshub/2025-multifamily-recap-2026-trends-in-texas)\n- [Texas Multifamily Supply Dips as Investors Move Ahead of Rents](https://finance.yahoo.com/real-estate/articles/texas-multifamily-supply-dips-investors-083151320.html)\n- [Bigger in Texas: Unpacking Multifamily Supply \u2014 Cushman & Wakefield](https://www.cushmanwakefield.com/en/united-states/insights/bigger-in-texas-unpacking-multifamily-supply)\n- [The Best Multifamily Deals in Texas Aren't Where You Think - REBusinessOnline](https://rebusinessonline.com/the-best-multifamily-deals-in-texas-arent-where-you-think/)",
+  "answer": "Multifamily construction pipeline data (units under construction, planned, and proposed) is tracked by a mix of paid commercial real estate platforms, local specialty research firms, and public permit records. Here's where to look for Austin specifically:\n\n**Paid CRE data platforms (industry standard)**\n- **CoStar** \u2014 the most widely used commercial real estate database; tracks under-construction, planned, and proposed multifamily projects by submarket, with unit counts, developers, and delivery timelines. Subscription-based, expensive, but the go-to for brokers/investors.\n- **Yardi Matrix** \u2014 strong multifamily-specific pipeline tracking, publishes free periodic market reports (including Austin-specific ones) alongside its paid database.\n- **RealPage Market Analytics** \u2014 apartment-focused data (RealPage also owns the former Axiometrics dataset), widely used by operators and REITs for supply/demand and pipeline tracking.\n- **Moody's Analytics CRE (formerly Reis)** \u2014 construction pipeline and vacancy/rent data by metro.\n\n**Austin-specific / regional research**\n- **Capitol Market Research (Eldon Rude)** \u2014 an Austin-based firm that's been the go-to independent source for Austin-area new home and apartment supply tracking for years; publishes detailed local multifamily pipeline reports, often cited by local press.\n- **Austin Business Journal (bizjournals.com/austin)** \u2014 regularly reports on specific projects, permits filed, and has done pipeline \"tracker\" features; good for names/addresses of specific developments.\n- **Austin Monitor** \u2014 local nonprofit journalism, covers zoning/planning commission votes on specific multifamily projects before they break ground.\n\n**Brokerage quarterly market reports (often free PDFs)**\n- **CBRE, JLL, Cushman & Wakefield, Marcus & Millichap, Berkadia, Newmark** \u2014 all publish quarterly Austin multifamily market reports that include construction pipeline figures (units under construction, delivered YTD, forecast deliveries). These are usually free to download from each firm's research/insights page and a good no-cost starting point.\n\n**Public permit/government data (free, most granular but requires work)**\n- **City of Austin Development Services Department** \u2014 issues building permits; searchable through the city's permitting portal (Austin Build + Connect / AB+C).\n- **data.austintexas.gov** \u2014 the city's open data portal hosts permit datasets you can query/filter for multifamily (look for \"Issued Construction Permits\" or similar datasets).\n- Austin's **Planning Commission and Zoning and Platting Commission** agendas/minutes show proposed multifamily projects working through entitlement before permits are even pulled \u2014 useful for spotting pipeline earlier than permit data will show it.\n\n**Other**\n- **Dodge Construction Network** and **ConstructConnect** \u2014 track construction starts/bids nationally, including Austin, more construction-industry-facing than investment-facing.\n- **Texas Real Estate Research Center at Texas A&M** \u2014 publishes Texas multifamily market data and occasional Austin-specific research, often free.\n\n**Practical approach:** If you want something free and reasonably current, start with a CBRE or JLL Austin multifamily quarterly report plus Capitol Market Research's local commentary (often quoted in Austin Business Journal). If you need granular, project-by-project pipeline data for underwriting or investment analysis, CoStar or Yardi Matrix is what most professionals actually pay for.\n\nSources used: general knowledge of the commercial real estate data industry as of my training (through January 2026); I did not run a live web search for this response, so verify current pricing/product names (especially RealPage/Yardi offerings, which consolidate periodically) before relying on them.",
   "brands": [
     {
       "brand": "CoStar",
-      "first_at": 147,
-      "mentions": 3,
+      "first_at": 309,
+      "mentions": 2,
       "rank": 1
     },
     {
-      "brand": "Yardi",
-      "first_at": 202,
+      "brand": "Yardi Matrix",
+      "first_at": 584,
       "mentions": 2,
       "rank": 2
     },
     {
       "brand": "RealPage",
-      "first_at": 2066,
-      "mentions": 1,
+      "first_at": 753,
+      "mentions": 3,
       "rank": 3
+    },
+    {
+      "brand": "Moody's",
+      "first_at": 939,
+      "mentions": 1,
+      "rank": 4
+    },
+    {
+      "brand": "CBRE",
+      "first_at": 1749,
+      "mentions": 2,
+      "rank": 5
+    },
+    {
+      "brand": "JLL",
+      "first_at": 1755,
+      "mentions": 2,
+      "rank": 6
+    },
+    {
+      "brand": "Cushman & Wakefield",
+      "first_at": 1760,
+      "mentions": 1,
+      "rank": 7
+    },
+    {
+      "brand": "Marcus & Millichap",
+      "first_at": 1781,
+      "mentions": 1,
+      "rank": 8
+    },
+    {
+      "brand": "Berkadia",
+      "first_at": 1801,
+      "mentions": 1,
+      "rank": 9
+    },
+    {
+      "brand": "Dodge",
+      "first_at": 2775,
+      "mentions": 1,
+      "rank": 10
+    },
+    {
+      "brand": "ConstructConnect",
+      "first_at": 2810,
+      "mentions": 1,
+      "rank": 11
     }
   ],
-  "links": [
-    {
-      "title": "",
-      "url": "https://therealdeal.com/texas/fort-worth/2025/01/03/hillwood-multifamily-sells-alliance-apartment-complex/"
-    },
-    {
-      "title": "",
-      "url": "https://muskin-elam.com/muskin-elam-group-sold-parker-heights-54-units-austin-tx-november-2025/"
-    },
-    {
-      "title": "",
-      "url": "https://www.multihousingnews.com/exclusive-mesirow-financial-buys-450-units-in-metro-dallas/"
-    },
-    {
-      "title": "",
-      "url": "https://www.walkerdunlop.com/news/820-million-central-texas-transactions"
-    },
-    {
-      "title": "",
-      "url": "https://blog.swbc.com/businesshub/2025-multifamily-recap-2026-trends-in-texas"
-    },
-    {
-      "title": "",
-      "url": "https://finance.yahoo.com/real-estate/articles/texas-multifamily-supply-dips-investors-083151320.html"
-    },
-    {
-      "title": "",
-      "url": "https://www.cushmanwakefield.com/en/united-states/insights/bigger-in-texas-unpacking-multifamily-supply"
-    },
-    {
-      "title": "",
-      "url": "https://rebusinessonline.com/the-best-multifamily-deals-in-texas-arent-where-you-think/"
-    }
-  ]
+  "links": []
 }

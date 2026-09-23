@@ -4,54 +4,41 @@
   "is_consumer_app": false,
   "set": "A",
   "question": "Where can I find a list of new apartment developments in Houston?",
-  "intent": "find-pipeline",
+  "intent": "pipeline",
   "asked_on": "2026-09-23",
   "ok": true,
-  "answer": "## Where to find Houston apartment development news\n\n**Local news trackers (free, updated regularly)**\n- **Houston Chronicle's Residential Development Tracker** \u2014 a running list of projects in various stages (proposed, under construction, completed) across the metro. Best single free source for a curated overview.\n- **Houston Business Journal** and **Houston.org** (Greater Houston Partnership) also publish periodic roundups of new residential/mixed-use projects.\n- **Houston Opportunity Zones Active Projects** page (houstontx.gov) if you care about projects tied to Opportunity Zone incentives.\n\n**Industry pipeline reports (free/semi-free, more data-driven)**\n- **MMG Real Estate Advisors** publishes quarterly Houston multifamily pipeline reports with unit counts and submarket breakdowns.\n- **Yardi Matrix** publishes a Houston multifamily market report blog series with construction-pipeline stats (units underway, starts, completions) \u2014 good for macro trend numbers even without a paid subscription.\n\n**Paid/professional data platforms (most granular, project-by-project)**\n- **CoStar** \u2014 the industry-standard commercial real estate database; tracks individual multifamily projects by address, developer, unit count, and delivery date. Typically requires a subscription or brokerage access.\n- **RealPage Analytics** and **Yardi Matrix** (full platform, not just the blog) \u2014 similar paid tools used by developers, lenders, and brokers to see the full pipeline (planning, under construction, lease-up, stabilized).\n\n**Practical tip:** if you want a specific submarket (e.g., Inner Loop, Katy, The Woodlands, EaDo), a local commercial broker (Marcus & Millichap, JLL, Colliers Houston offices) can usually pull a CoStar-based pipeline report for that area faster than piecing it together from news sources.\n\nSources:\n- [Track residential developments coming to the Houston area in 2026 and beyond](https://www.houstonchronicle.com/projects/real-estate/houston-residential-development-tracker/)\n- [16 exciting developments coming to Houston in 2026 and beyond](https://www.houstonchronicle.com/business/real-estate/article/retail-mixed-use-new-development-houston-21118226.php)\n- [New Residential Developments Rising in Houston | Houston.org](https://houston.org/news/new-residential-developments-rising-houston/)\n- [Houston Q1 2026 Pipeline Report \u2013 MMG Real Estate Advisors](https://mmgrea.com/houston-q1-2026-pipeline-report/)\n- [Opportunity Zones Active Projects](https://www.houstontx.gov/opportunityzones/activeprojects.html)\n- [Houston Apartment Data - Yardi Matrix Blog](https://www.yardimatrix.com/blog/houston-apartment-data/)\n- [Houston Multifamily Market Report | Yardi Matrix Blog](https://www.yardimatrix.com/blog/houston-multifamily-market-report/)\n- [CoStar | #1 Commercial Real Estate Information Company](https://www.costar.com/)\n- [Houston losing ground in Texas apartment boom as Dallas, Austin shine](https://www.houstonchronicle.com/business/real-estate/article/houston-apartment-market-2025-21025355.php)",
+  "answer": "This is outside coding work, so I'll just answer directly from general knowledge.\n\nFor tracking new apartment developments in Houston, here are the main places to look:\n\n**Industry data platforms (most comprehensive, often subscription-based)**\n- **Yardi Matrix / RealPage** \u2014 the two dominant multifamily market data providers; track units under construction, planned, and recently delivered by submarket. Used heavily by developers, lenders, and brokers. Not free, but often cited in local news/reports.\n- **CoStar** \u2014 commercial real estate data platform with a multifamily module covering Houston pipeline, deliveries, and lease-up status. Subscription-based, but many brokerages have access.\n- **ALN Apartment Data** \u2014 Texas-focused (Houston, DFW, Austin, San Antonio) apartment data service, popular with local property managers and investors specifically because of its Texas concentration.\n\n**Local government / permitting sources (free, primary source)**\n- **City of Houston Permitting & Development Department** \u2014 building permit and site plan data; Houston has no formal zoning, so permits are the closest thing to a development pipeline signal.\n- **Houston-Galveston Area Council (H-GAC)** \u2014 regional planning data that sometimes includes housing pipeline info.\n\n**News and trade publications**\n- **Houston Business Journal** \u2014 regularly reports on specific new apartment projects, developers, and groundbreakings.\n- **Houston Chronicle (Real Estate section)**\n- **Bisnow Houston** \u2014 free, developer/broker-oriented news with frequent apartment development coverage.\n- **Multi-Housing News** and **GlobeSt.com** \u2014 national multifamily trade press that frequently covers Texas/Houston deals.\n\n**Consumer-facing listing sites (good for \"leasing now / coming soon\" units, less useful for full pipeline data)**\n- **Apartments.com**, **Zillow**, **Apartment List** \u2014 filter for \"new construction\" listings.\n- **RentCafe** (Yardi-owned) has a \"new developments\" search feature by city.\n\n**Trade associations**\n- **HAA (Houston Apartment Association)** \u2014 publishes market reports and sometimes pipeline summaries; a good source if you want Houston-specific multifamily market commentary.\n\nIf you want, I can narrow this down based on what you're actually trying to do \u2014 e.g., are you looking for a renter's-eye view of upcoming buildings, or investor/developer-grade pipeline data?",
   "brands": [
     {
-      "brand": "Yardi",
-      "first_at": 801,
-      "mentions": 6,
+      "brand": "Yardi Matrix",
+      "first_at": 249,
+      "mentions": 1,
       "rank": 1
     },
     {
-      "brand": "CoStar",
-      "first_at": 1088,
-      "mentions": 4,
+      "brand": "RealPage",
+      "first_at": 264,
+      "mentions": 1,
       "rank": 2
     },
     {
-      "brand": "RealPage",
-      "first_at": 1306,
+      "brand": "CoStar",
+      "first_at": 510,
       "mentions": 1,
       "rank": 3
+    },
+    {
+      "brand": "Apartments.com",
+      "first_at": 1823,
+      "mentions": 1,
+      "rank": 4
+    },
+    {
+      "brand": "Zillow",
+      "first_at": 1843,
+      "mentions": 1,
+      "rank": 5
     }
   ],
-  "links": [
-    {
-      "title": "",
-      "url": "https://www.houstonchronicle.com/projects/real-estate/houston-residential-development-tracker/"
-    },
-    {
-      "title": "",
-      "url": "https://houston.org/news/new-residential-developments-rising-houston/"
-    },
-    {
-      "title": "",
-      "url": "https://mmgrea.com/houston-q1-2026-pipeline-report/"
-    },
-    {
-      "title": "",
-      "url": "https://www.houstontx.gov/opportunityzones/activeprojects.html"
-    },
-    {
-      "title": "",
-      "url": "https://www.yardimatrix.com/blog/houston-apartment-data/"
-    },
-    {
-      "title": "",
-      "url": "https://www.costar.com/"
-    }
-  ]
+  "links": []
 }

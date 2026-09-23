@@ -1,0 +1,77 @@
+{
+  "engine": "claude-web",
+  "engine_label": "Claude (Sonnet) via claude -p, web search on",
+  "is_consumer_app": false,
+  "set": "A",
+  "question": "How can I tell what property management system a company runs?",
+  "intent": "detect-software",
+  "asked_on": "2026-09-23",
+  "ok": true,
+  "answer": "There's no single authoritative registry, but in practice you can usually narrow it down through a few overlapping signals.\n\n**1. Look at the resident/tenant portal URL \u2014 the fastest and most reliable per-company check**\n\nMost PMS vendors host portals on a recognizable branded domain, so a link on the property's own website (\"Pay Rent,\" \"Resident Portal,\" \"Apply Now\") often gives it away directly:\n- **Yardi** \u2192 `*.rentcafe.com` (RentCafe), sometimes footer text \"Powered by RentCafe\" / \"Powered by Yardi\"\n- **RealPage** \u2192 `*.residentportal.com` or OneSite-branded login pages, \"Powered by RealPage\"\n- **Entrata** \u2192 `*.entrata.com`\n- **AppFolio** \u2192 `*.appfolio.com` (tenant/owner portals use very consistent AppFolio-branded subdomains)\n- **Buildium** \u2192 `*.buildium.com`\n- **MRI Software** \u2192 `mrisoftware.com` / ResidentPay branding\n- **ResMan** \u2192 `myresman.com`\n- **Rent Manager** \u2192 `rentmanager.com` / `rmresident.com`\n- **Propertyware** (AppFolio's SMB brand) \u2192 `propertyware.com`\n\nFor a single company, this \"click the resident portal link and check the domain/footer\" trick beats most paid tools.\n\n**2. Technographic/intent data providers** \u2014 useful for scanning many companies at once:\n- BuiltWith, Wappalyzer \u2014 good for anything with client-side JS fingerprints (less reliable for backend-only PMS like core Yardi Voyager)\n- ZoomInfo Technographics, HG Insights, Sumble, PredictLeads, Slintel/6sense \u2014 these specifically track enterprise software like Yardi and RealPage by combining job postings, case studies, and integration data rather than just scraping HTML\n\n**3. Job postings** \u2014 a property management company hiring for \"Yardi Voyager experience required\" or \"RealPage OneSite certified\" on LinkedIn/Indeed is one of the most reliable free signals, since backend PMS platforms rarely show up in website code.\n\n**4. Vendor customer/case-study pages** \u2014 Yardi, RealPage, Entrata, AppFolio, and MRI all publish client logos, press releases, and case studies naming specific management companies and REITs that use their platform.\n\n**5. Integration partner directories** \u2014 companies that integrate with PMS platforms (e.g., SmartRent, Funnel Leasing, Ambient, Resident Interface) list which PMS each of their customers runs, sometimes indirectly revealing it through their own case studies.\n\n**6. Public procurement/RFP records** \u2014 for public housing authorities or government-affiliated property management, RFP and contract award documents are often public and name the PMS explicitly.\n\n**Limitation to flag:** core backend systems (Yardi Voyager, RealPage OneSite, MRI) are largely invisible to pure website scanners since they run internally \u2014 the resident-facing portal domain (RentCafe, etc.) is usually your best free proxy for which core system sits behind it, since each PMS vendor's resident portal is tightly coupled to its backend product line.\n\nSources:\n- [What is RealPage? Competitors, Complementary Techs & Usage | Sumble](https://sumble.com/tech/realpage)\n- [RentCafe Resident Portal: Resident Experience Software for Multifamily | Yardi](https://www.yardi.com/product/rentcafe-resident-portal/)\n- [RealPage vs Entrata Comparison (2026) - GetApp](https://www.getapp.com/real-estate-property-software/a/realpage-onesite/compare/entrata/)\n- [SmartRent Integrates with Yardi, RealPage, Entrata and ResMan](https://smartrent.com/news/smartrent-integrates-pms-yardi-realpage-entrata-resman/)\n- [Ambient RealPage, Yardi, Entrata, and ResMan Integrations](https://www.ambientproptech.com/resources/ambient-pms-realpage-yardi-entrata-resman)\n- [How to Detect a Company Technology Stack with Technographic Data](https://blog.predictleads.com/2026/03/16/detect-company-technology-stack)\n- [Best Technographic Data Providers in 2026](https://blog.predictleads.com/2026/03/06/technographic-data-providers)\n- [Technographic Data Providers: How They Compare](https://crustdata.com/blog/technographic-data-providers)\n- [Funnel Leasing: Yardi, RealPage, Entrata Integrations & Agentic AI](https://funnelleasing.com/top-leasing-software-integrations-with-yardi-realpage-and-entrata/)",
+  "brands": [
+    {
+      "brand": "RealPage",
+      "first_at": 513,
+      "mentions": 16,
+      "rank": 1
+    },
+    {
+      "brand": "Entrata",
+      "first_at": 607,
+      "mentions": 11,
+      "rank": 2
+    },
+    {
+      "brand": "AppFolio",
+      "first_at": 639,
+      "mentions": 5,
+      "rank": 3
+    },
+    {
+      "brand": "Yardi (software)",
+      "first_at": 1318,
+      "mentions": 3,
+      "rank": 4
+    },
+    {
+      "brand": "ZoomInfo",
+      "first_at": 1335,
+      "mentions": 1,
+      "rank": 5
+    }
+  ],
+  "links": [
+    {
+      "title": "",
+      "url": "https://sumble.com/tech/realpage"
+    },
+    {
+      "title": "",
+      "url": "https://www.yardi.com/product/rentcafe-resident-portal/"
+    },
+    {
+      "title": "",
+      "url": "https://www.getapp.com/real-estate-property-software/a/realpage-onesite/compare/entrata/"
+    },
+    {
+      "title": "",
+      "url": "https://smartrent.com/news/smartrent-integrates-pms-yardi-realpage-entrata-resman/"
+    },
+    {
+      "title": "",
+      "url": "https://www.ambientproptech.com/resources/ambient-pms-realpage-yardi-entrata-resman"
+    },
+    {
+      "title": "",
+      "url": "https://blog.predictleads.com/2026/03/16/detect-company-technology-stack"
+    },
+    {
+      "title": "",
+      "url": "https://crustdata.com/blog/technographic-data-providers"
+    },
+    {
+      "title": "",
+      "url": "https://funnelleasing.com/top-leasing-software-integrations-with-yardi-realpage-and-entrata/"
+    }
+  ]
+}

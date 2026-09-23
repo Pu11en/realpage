@@ -3,49 +3,67 @@
   "engine_label": "Claude (Sonnet) via claude -p, web search on",
   "is_consumer_app": false,
   "set": "A",
-  "question": "What public data sources show apartment construction permits in Texas?",
-  "intent": "find-sources",
+  "question": "Which apartment complexes in Texas sold in 2025?",
+  "intent": "sales",
   "asked_on": "2026-09-23",
   "ok": true,
-  "answer": "Here's a rundown of where you can pull apartment/multifamily construction permit data for Texas, from broadest to most granular:\n\n**National/state level**\n- **U.S. Census Bureau Building Permits Survey (BPS)** \u2014 the standard baseline. Reports new privately-owned residential construction by state, metro, and county, broken out by units-in-structure (so you can isolate 5+ unit / apartment permits). Monthly and annual releases.\n- **NAHB (National Association of Home Builders)** \u2014 republishes and visualizes Census BPS data by state and metro, useful if you want ranked comparisons across Texas metros without pulling raw Census files yourself.\n- **Texas Real Estate Research Center (TRERC), Texas A&M University** \u2014 takes the Census BPS data and adds a custom query builder/\"Advanced City Search\" that lets you drill down below the county level for Texas specifically \u2014 probably the easiest state-focused starting point.\n- **Texas Open Data Portal (data.texas.gov)** \u2014 statewide open data catalog; worth checking for any state-level permitting or construction datasets, though most granular permit data actually lives at the city level (below).\n\n**City-level open data portals (most granular, permit-by-permit)**\n- **City of Austin Open Data Portal** \u2014 has dedicated datasets like \"Issued Construction Permits\" and \"Currently Active Commercial Multifamily Construction Permits,\" which is about as close to purpose-built for your question as it gets.\n- **Dallas OpenData** \u2014 \"Building Permits\" dataset, queryable via Socrata/OData.\n- **Open Data SA (City of San Antonio)** \u2014 \"Building Permits\" dataset from the Development Services Department.\n- **Houston** \u2014 doesn't have as clean a Socrata-style portal as the above; permit data runs through the Houston Permitting Center (iPermits system). It's public but typically requires querying their permitting system directly rather than a downloadable open dataset.\n- **Fort Worth, El Paso, and other metros** \u2014 check each city's own open data or development-services site; coverage and granularity vary a lot city to city.\n\n**Commercial aggregators (not free, but worth knowing about)**\nIf you need permit data normalized/cleaned across many Texas cities at once (rather than stitching together each city's portal), companies like **BuildFax**, **PermitVector**, **Buildchek**, **Zonda** (formerly Metrostudy \u2014 strong for multifamily/apartment pipeline specifically), **Yardi Matrix**, **CoStar**, and **Dodge Construction Network** aggregate permit and construction-starts data, including Texas apartment projects, but these are paid products, not public sources.\n\nFor a research project, I'd start with **TRERC's building permits tool** for state/metro trend data, then go to the individual **city open data portals** (Austin, Dallas, San Antonio) for permit-level detail, and treat Houston as the odd one out requiring direct queries to its permitting system.\n\nSources:\n- [Building Permits by State and Metro Area | NAHB](https://www.nahb.org/news-and-economics/housing-economics/state-and-local-data/building-permits-by-state-and-metro-area)\n- [Building Permits | Texas Real Estate Research Center](https://trerc.tamu.edu/data/building-permits/)\n- [Currently Active Commercial Multifamily Construction Permits | City of Austin Open Data](https://data.austintexas.gov/Building-and-Development/Currently-Active-Commercial-Multifamily-Constructi/hah9-7x5p)\n- [Issued Construction Permits | City of Austin Open Data](https://data.austintexas.gov/Building-and-Development/Issued-Construction-Permits/3syk-w9eu)\n- [Building Permits | Dallas OpenData](https://www.dallasopendata.com/Services/Building-Permits/e7gq-4sah)\n- [Building Permits | Open Data SA - City of San Antonio](https://data.sanantonio.gov/dataset/building-permits)\n- [State of Texas Open Data Portal](https://data.texas.gov/)",
+  "answer": "Texas apartment sales activity was heavy in 2025 \u2014 thousands of properties traded across the state's major metros \u2014 so I can't give you an exhaustive list, but here's a representative picture of individual deals plus the market-level data, with sources.\n\n## Notable individual sales/deals in 2025\n\n- **Monterra Village (Fort Worth, 550 units)** \u2014 Hillwood Multifamily sold this Fort Worth property to Weidner Apartment Homes, closing December 18. Price undisclosed.\n- **Lakeside (Houston, 296 units)** \u2014 Pegasus Real Estate acquired this Southwest Houston complex near Loop 610 from the prior owner.\n- **Parker Heights (Austin, 54 units)** \u2014 A boutique 1968/69-built community in Austin's Southeast submarket, sold via Muskin Elam Group in November 2025 to a buyer with existing Austin multifamily holdings.\n- **Eastshore on Lake Carolyn + Promenade at Las Colinas (Irving, 673 units combined)** \u2014 KKR bought this two-property portfolio (286 units + 387 units) from Lone Star Funds late in the year, financed with a $118M loan from Rialto Capital.\n- **Koontz Corp. land deal (Far North San Antonio, 9.66 acres)** \u2014 Purchased from The Concordia Group to develop a planned 305-unit luxury property (a future build, not an existing complex).\n- **~450-unit portfolio (Metro Dallas)** \u2014 Mesirow Financial acquired this asset, reported by Multi-Housing News.\n- **KKR's national Quarterra portfolio buy ($2.1B)** \u2014 A larger, multi-state acquisition from Lennar's Quarterra platform that likely includes Texas assets among its holdings, though the search results don't confirm exact Texas-specific counts.\n\n## Market-level context (2025 totals)\n\n- **Dallas-Fort Worth**: ~230 properties traded, totaling 56,637 units and roughly $4.4B in investment volume \u2014 the largest Texas market by dollar volume.\n- **Houston**: 178 communities / 47,277 units changed hands, for about $3.3\u20133.4B (investment volume up ~32% year-over-year).\n- **Austin**: 56 properties / 13,923 units traded.\n- **Central Texas (Austin + San Antonio)**: Walker & Dunlop alone closed over $820M in sales and financings across the region Jan\u2013Aug 2025.\n- Nationally, apartment sales volume rose 9% to $165.5B in 2025, with Dallas among the top markets pulling in investor capital.\n\n## Where this data comes from\n\nComprehensive, deal-by-deal Texas multifamily transaction records live behind paid platforms \u2014 **CoStar**, **Yardi Matrix**, and **RealPage/MRI** are the standard industry data sources brokers and investors use for this. Trade press like **Multi-Housing News**, **Multifamily Dive**, **The Real Deal**, and **CRE Daily** report on individual large deals as they close. If you want a complete list for a specific metro or unit-count threshold, one of those paid databases (or a local CRE brokerage's year-end report) would be the authoritative source rather than open web search.\n\nSources:\n- [Hillwood Multifamily Sells Alliance Apartment Complex](https://therealdeal.com/texas/fort-worth/2025/01/03/hillwood-multifamily-sells-alliance-apartment-complex/)\n- [Walker & Dunlop Closes Over $820 Million In Central Texas Transactions](https://www.walkerdunlop.com/news/820-million-central-texas-transactions)\n- [Muskin Elam Group Sold Parker Heights, Austin, TX](https://muskin-elam.com/muskin-elam-group-sold-parker-heights-54-units-austin-tx-november-2025/)\n- [Mesirow Financial Buys 450 Units in Metro Dallas - Multi-Housing News](https://www.multihousingnews.com/exclusive-mesirow-financial-buys-450-units-in-metro-dallas/)\n- [KKR, Lone Star Trade 673 Units in Metro Dallas - Multi-Housing News](https://www.multihousingnews.com/exclusive-kkr-lone-star-trade-673-units-in-metro-dallas/)\n- [Wall Street Giant Quietly Scoops Up 673 Las Colinas Apartments - Hoodline](https://hoodline.com/2025/12/wall-street-giant-quietly-scoops-up-673-las-colinas-apartments-in-one-big-play/)\n- [KKR Acquires Two Irving Rental Assets - Connect CRE](https://www.connectcre.com/stories/kkr-acquires-two-irving-rental-assets/)\n- [KKR Purchases Quarterra Portfolio for $2.1B - Multifamily Dive](https://www.multifamilydive.com/news/kkr-Quarterra-lennar-apartment-transaction/720213/)\n- [2025 Multifamily Recap & 2026 Trends in Texas - SWBC](https://blog.swbc.com/businesshub/2025-multifamily-recap-2026-trends-in-texas)\n- [Top 10 Markets for Multifamily Transactions - Multi-Housing News](https://www.multihousingnews.com/top-markets-for-multifamily-investment/)\n- [Apartment sales volume rose 9% to $165.5B in 2025 - Yahoo Finance](https://finance.yahoo.com/news/apartment-sales-volume-rose-9-131505504.html)\n- [Koontz Corp. plans gated apartments in San Antonio - Multifamily Dive](https://www.multifamilydive.com/news/koontz-corp-gated-apartments-san-antonio-land-purchase/744394/)",
   "brands": [
     {
-      "brand": "Yardi",
-      "first_at": 2417,
+      "brand": "CoStar",
+      "first_at": 2366,
       "mentions": 1,
       "rank": 1
     },
     {
-      "brand": "CoStar",
-      "first_at": 2435,
+      "brand": "Yardi Matrix",
+      "first_at": 2378,
       "mentions": 1,
       "rank": 2
+    },
+    {
+      "brand": "RealPage",
+      "first_at": 2400,
+      "mentions": 1,
+      "rank": 3
     }
   ],
   "links": [
     {
       "title": "",
-      "url": "https://www.nahb.org/news-and-economics/housing-economics/state-and-local-data/building-permits-by-state-and-metro-area"
+      "url": "https://therealdeal.com/texas/fort-worth/2025/01/03/hillwood-multifamily-sells-alliance-apartment-complex/"
     },
     {
       "title": "",
-      "url": "https://trerc.tamu.edu/data/building-permits/"
+      "url": "https://www.walkerdunlop.com/news/820-million-central-texas-transactions"
     },
     {
       "title": "",
-      "url": "https://data.austintexas.gov/Building-and-Development/Currently-Active-Commercial-Multifamily-Constructi/hah9-7x5p"
+      "url": "https://muskin-elam.com/muskin-elam-group-sold-parker-heights-54-units-austin-tx-november-2025/"
     },
     {
       "title": "",
-      "url": "https://www.dallasopendata.com/Services/Building-Permits/e7gq-4sah"
+      "url": "https://www.multihousingnews.com/exclusive-mesirow-financial-buys-450-units-in-metro-dallas/"
     },
     {
       "title": "",
-      "url": "https://data.sanantonio.gov/dataset/building-permits"
+      "url": "https://hoodline.com/2025/12/wall-street-giant-quietly-scoops-up-673-las-colinas-apartments-in-one-big-play/"
     },
     {
       "title": "",
-      "url": "https://data.texas.gov/"
+      "url": "https://www.connectcre.com/stories/kkr-acquires-two-irving-rental-assets/"
+    },
+    {
+      "title": "",
+      "url": "https://www.multifamilydive.com/news/kkr-Quarterra-lennar-apartment-transaction/720213/"
+    },
+    {
+      "title": "",
+      "url": "https://blog.swbc.com/businesshub/2025-multifamily-recap-2026-trends-in-texas"
+    },
+    {
+      "title": "",
+      "url": "https://finance.yahoo.com/news/apartment-sales-volume-rose-9-131505504.html"
     }
   ]
 }

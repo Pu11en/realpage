@@ -3,45 +3,45 @@
   "engine_label": "Claude (Sonnet) via claude -p, web search on",
   "is_consumer_app": false,
   "set": "A",
-  "question": "How do I build a lead list of new apartment buildings to sell to?",
-  "intent": "find-leads",
+  "question": "How can I find out who bought an apartment complex?",
+  "intent": "sales",
   "asked_on": "2026-09-23",
   "ok": true,
-  "answer": "Building a lead list of new apartment buildings for B2B sales usually comes down to two problems: (1) finding out *where* new buildings are being built or delivered, and (2) finding *who* to contact once you know the address. Here's how people typically do both.\n\n## 1. Data sources for finding new buildings\n\n**Paid, purpose-built for this:**\n- **Yardi Matrix** \u2014 the standard for multifamily construction pipeline and lease-up tracking (units under construction, planned, and recently delivered, by metro/submarket). Most CRE sales teams targeting multifamily use this or CoStar.\n- **CoStar** \u2014 broadest commercial real estate database; tracks new deliveries, under-construction properties, ownership, and property management company. Expensive but comprehensive.\n- **RealPage (Real Data / Market Analytics)** \u2014 similar to Yardi Matrix, strong on lease-up and occupancy data, useful if you're targeting properties still filling units.\n- **Zonda** \u2014 strong on new construction/permit data, originally single-family focused but has multifamily coverage.\n- **Dodge Construction Network (Dodge Data & Analytics)** \u2014 tracks construction starts and permits, good for catching buildings at the pre-construction/groundbreaking stage, which is often the best time to get in front of a developer before vendor decisions are locked in.\n\n**Cheaper / free-ish:**\n- **Local city/county building permit portals** (open data portals \u2014 many cities publish permit data as CSV/API, e.g. Socrata-based portals). Slower and more manual, but free and often more current than paid databases in a single metro.\n- **BuildZoom** \u2014 aggregates permit data nationally, searchable by project type.\n- **LoopNet / Crexi** \u2014 commercial listings, sometimes show new multifamily assets for sale or lease.\n- **Apartments.com / Apartment List / RentCafe** \u2014 searchable by \"new construction\" or lease-up status; useful for confirming a building is actively leasing (i.e., staffed and operational).\n\n**Trade press (good for catching deals and openings you'd otherwise miss):**\n- **Multi-Housing News**, **REBusinessOnline**, **GlobeSt.com**, **Bisnow** (regional editions) \u2014 cover groundbreakings, openings, and ownership/management changes.\n- **NMHC (National Multifamily Housing Council)** \u2014 publishes the \"NMHC 50,\" annual rankings of the largest owners, developers, and managers. Good for identifying the big players to target account-based.\n\n**Brokers as a shortcut:** Multifamily brokerage teams at **CBRE, JLL, Cushman & Wakefield, Marcus & Millichap, Berkadia, Walker & Dunlop** track every new delivery in their coverage metro. A relationship with one broker can save you a lot of database work, though they'll expect something in return (referrals, info).\n\n## 2. Turning addresses into contacts\n\nOnce you have a list of buildings/projects, you need the actual decision-maker (property manager, regional manager, developer's VP of construction, etc., depending on what you're selling):\n- **LinkedIn Sales Navigator** \u2014 filter by company (the property management company) + title (leasing manager, community manager, regional VP).\n- **Apollo.io** or **ZoomInfo** \u2014 bulk contact enrichment once you know the management company.\n- Identify the **management company** first \u2014 large ones repeat across many buildings (**Greystar, Lincoln Property Company, AvalonBay, Camden Property Trust, Mill Creek Residential, Cortland, Bell Partners, Asset Living, FPI Management**, etc.). Selling to the regional/corporate level of one of these can open doors to dozens of properties at once instead of chasing one building at a time.\n\n## 3. Practical workflow\n\n1. Define target criteria: metro(s), unit count minimum, building class, and timing (pre-construction vs. actively leasing vs. stabilized \u2014 the right timing depends heavily on what you're selling).\n2. Pull the pipeline list from Yardi Matrix/CoStar or permit data for your target metros.\n3. Cross-reference addresses against management company (Matrix/CoStar usually list this directly).\n4. Enrich with contacts via Sales Navigator/Apollo.\n5. Load into a CRM and prioritize by delivery date \u2014 buildings 3\u20139 months from opening are typically making vendor decisions, so that window is usually the highest-value target.\n\nIf you tell me what you're actually selling (amenities, tech/software, maintenance services, supplies, etc.), I can narrow this down \u2014 the right data source and the right buying window change a lot depending on the product.",
+  "answer": "This is a real-estate/records research question, not a coding task, so here's how I'd approach it.\n\n**Start with public records \u2014 usually free and authoritative**\n\n- **County recorder/register of deeds** for the county where the property sits. Every real property sale generates a deed, which is public record. Search by address to find the most recent recorded deed and the grantee (buyer) name. Most counties now have online portals for this (search \"[county name] recorder of deeds\" or \"[county name] register of deeds official records search\").\n- **County assessor/property appraiser** site \u2014 usually shows current owner of record, mailing address, and sometimes sale price/date. This is often faster than the recorder for a quick \"who owns it now\" answer.\n\n**If the buyer is an LLC (very common for apartment complexes)**\n\nMost large multifamily purchases are made through single-purpose LLCs, so the deed will just list an entity name, not a person or company you recognize. To unmask it:\n- **Secretary of State business entity search** for the state where the LLC is registered (may differ from the property's state) \u2014 look for the registered agent and organizer/manager names.\n- **CoStar** or **Yardi Matrix** \u2014 industry-standard commercial real estate databases that track multifamily ownership, often unwinding the LLC to the actual sponsor/operator. Subscription-based, but many brokerages/lenders have access.\n- **Reonomy** or **PropertyShark** \u2014 similar paid ownership-intelligence platforms, sometimes with cheaper per-report options.\n- **Local news or CRE trade press** (e.g., Commercial Observer, Bisnow, GlobeSt, or the local business journal) often reports on notable apartment complex sales with buyer/seller named.\n\n**Free-ish alternatives**\n\n- **Zillow/Redfin/Apartments.com** listing history sometimes shows \"last sold\" with a buyer name for smaller deals, though large complexes usually don't show through these consumer sites.\n- **UCC filings** and **mortgage/deed of trust** recorded alongside the deed can reveal the lender, which sometimes helps identify the buyer's sponsor via press releases about the loan.\n- **SEC EDGAR full-text search** \u2014 if the buyer is a public REIT or files with the SEC, search the address or complex name; acquisitions often show up in 10-Ks/8-Ks.\n\n**Practical path**: property address \u2192 county assessor site (owner name) \u2192 if it's an LLC, state Secretary of State search for the registered agent \u2192 if you need the real company behind it, check CoStar/Yardi Matrix or search local CRE trade press for a sale announcement.\n\nIf you tell me the property's city/state, I can be more specific about which county portal and state entity search to use.",
   "brands": [
     {
-      "brand": "Yardi",
-      "first_at": 348,
-      "mentions": 3,
+      "brand": "CoStar",
+      "first_at": 1189,
+      "mentions": 2,
       "rank": 1
     },
     {
-      "brand": "CoStar",
-      "first_at": 574,
-      "mentions": 4,
+      "brand": "Yardi Matrix",
+      "first_at": 1203,
+      "mentions": 2,
       "rank": 2
     },
     {
-      "brand": "RealPage",
-      "first_at": 770,
+      "brand": "Reonomy",
+      "first_at": 1426,
       "mentions": 1,
       "rank": 3
     },
     {
-      "brand": "Apartments.com",
-      "first_at": 1776,
+      "brand": "PropertyShark",
+      "first_at": 1441,
       "mentions": 1,
       "rank": 4
     },
     {
-      "brand": "CBRE",
-      "first_at": 2470,
+      "brand": "Zillow",
+      "first_at": 1767,
       "mentions": 1,
       "rank": 5
     },
     {
-      "brand": "Berkadia",
-      "first_at": 2522,
+      "brand": "Apartments.com",
+      "first_at": 1781,
       "mentions": 1,
       "rank": 6
     }

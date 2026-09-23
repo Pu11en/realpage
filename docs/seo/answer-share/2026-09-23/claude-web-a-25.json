@@ -1,0 +1,87 @@
+{
+  "engine": "claude-web",
+  "engine_label": "Claude (Sonnet) via claude -p, web search on",
+  "is_consumer_app": false,
+  "set": "A",
+  "question": "When is the best time to sell services to a new apartment building?",
+  "intent": "timing",
+  "asked_on": "2026-09-23",
+  "ok": true,
+  "answer": "Timing depends heavily on *what* you're selling \u2014 a fiber/security installer needs to be in months before a resident-facing subscription service does. Here's the general framework, then where to find the leads.\n\n## The lifecycle and when to strike\n\n1. **Permit/pre-construction (12\u201324 months out)** \u2014 Best window for anything that has to be designed into the building: bulk internet/cable wiring, smart-access systems (ButterflyMX, Latch, SmartRent), package locker infrastructure (Luxer One, Amazon Hub), solar/utility submetering, and security systems. Once electrical and low-voltage plans are locked, you've missed your shot without a costly retrofit.\n2. **Vertical construction, 9\u201312 months before Certificate of Occupancy (CO)** \u2014 This is when developers finalize their third-party property management company and the management company starts building out its vendor stack: insurance, landscaping, pest control, janitorial, laundry (WASH, CSC ServiceWorks), amenity equipment (fitness gear, pool service), and revenue-management/leasing software (RealPage, Yardi, Entrata, Knock, PERQ).\n3. **Pre-leasing, 6\u201318 months before CO** \u2014 Marketing/leasing tech vendors (virtual tour platforms, CRM, chatbots) and staffing services should be in front of the leasing office now, since the model unit and leasing office are already operating before the building opens.\n4. **Lease-up (0\u201350% occupancy)** \u2014 Good window for resident-facing amenity and lifestyle vendors (moving/furniture rental like CORT, dog-walking, meal kits, EV charging operators like ChargePoint/EVgo) since management wants differentiators to market to prospective tenants.\n5. **Stabilization (~90%+ occupancy, often 12\u201324 months after opening)** \u2014 Best time for cost-optimization vendors (utility billing/RUBS providers, insurance re-shop, maintenance contracts) since the property now has real operating data and budget cycles to justify a switch.\n\n**Bottom line:** if your product is infrastructure, sell at permit/framing stage; if it's a service contract for building operations, sell 9\u201312 months pre-CO when the management company is chosen; if it's a resident-facing amenity, sell during lease-up.\n\n## Where to find \"new building\" leads\n\n- **Yardi Matrix** and **RealPage Apartment Data/AI** \u2014 track supply pipelines by market/submarket, including projects in planning, under construction, and lease-up, with expected delivery dates.\n- **CoStar** \u2014 commercial real estate database with construction pipeline and ownership/management contact data.\n- **Dodge Construction Network** and **Construction Monitor** \u2014 permit-level data (often the earliest signal, catching projects before they show up in leasing databases).\n- **Zonda** and **BuildCentral** \u2014 new-construction and permit tracking, more residential/builder-focused.\n- **ALN Apartment Data** \u2014 multifamily-specific database with lease-up and occupancy tracking, popular with vendors selling directly to management companies.\n- **Local municipal building permit portals** \u2014 free, but manual; good for hyperlocal targeting.\n- **NMHC (National Multifamily Housing Council)** and **NAA (National Apartment Association)** \u2014 member directories and their annual \"NMHC Top Managers\" list tell you which management companies are growing fastest and are worth prioritizing.\n- **LinkedIn Sales Navigator** filtered by title (Regional Property Manager, VP Construction) at management companies \u2014 useful once you've identified the company from the above sources.\n- **Bisnow / GlobeSt / Multi-Housing News** \u2014 trade press announcing new developments and groundbreakings, useful for the earliest possible signal alongside permits.\n\nSources:\n- [What is a Lease Up? Apartment Lease Up Strategy & Guide](https://www.leaseengine.us/blog/the-7-minute-guide-to-a-fast-and-successful-lease-up)\n- [Understanding the Lease-Up Period in Apartment Investing | Janover](https://apartment.loans/posts/understanding-the-lease-up-period-in-apartment-property-investing/)\n- [Multifamily Lease-Up: What Developers Need to Plan Before Construction Ends | Innergy Integral](https://innergyintegral.com/resources/multifamily-lease-up-management/)\n- [Commercial Real Estate Data | Yardi Matrix](https://www.yardimatrix.com/publications/)\n- [Real Estate Data & Market Intelligence | Yardi Matrix](https://www.yardi.com/product/matrix/)\n- [Yardi Matrix Ups 2026 Multifamily Supply, Affordable Leads](https://finance.yahoo.com/real-estate/articles/yardi-matrix-ups-2026-multifamily-063110228.html)",
+  "brands": [
+    {
+      "brand": "RealPage",
+      "first_at": 1054,
+      "mentions": 2,
+      "rank": 1
+    },
+    {
+      "brand": "Entrata",
+      "first_at": 1071,
+      "mentions": 1,
+      "rank": 2
+    },
+    {
+      "brand": "Yardi Matrix",
+      "first_at": 2217,
+      "mentions": 4,
+      "rank": 3
+    },
+    {
+      "brand": "CoStar",
+      "first_at": 2413,
+      "mentions": 1,
+      "rank": 4
+    },
+    {
+      "brand": "Dodge",
+      "first_at": 2526,
+      "mentions": 1,
+      "rank": 5
+    },
+    {
+      "brand": "BuildCentral",
+      "first_at": 2711,
+      "mentions": 1,
+      "rank": 6
+    },
+    {
+      "brand": "Public records (DIY)",
+      "first_at": 2987,
+      "mentions": 1,
+      "rank": 7
+    },
+    {
+      "brand": "LinkedIn Sales Navigator",
+      "first_at": 3310,
+      "mentions": 1,
+      "rank": 8
+    }
+  ],
+  "links": [
+    {
+      "title": "",
+      "url": "https://www.leaseengine.us/blog/the-7-minute-guide-to-a-fast-and-successful-lease-up"
+    },
+    {
+      "title": "",
+      "url": "https://apartment.loans/posts/understanding-the-lease-up-period-in-apartment-property-investing/"
+    },
+    {
+      "title": "",
+      "url": "https://innergyintegral.com/resources/multifamily-lease-up-management/"
+    },
+    {
+      "title": "",
+      "url": "https://www.yardimatrix.com/publications/"
+    },
+    {
+      "title": "",
+      "url": "https://www.yardi.com/product/matrix/"
+    },
+    {
+      "title": "",
+      "url": "https://finance.yahoo.com/real-estate/articles/yardi-matrix-ups-2026-multifamily-063110228.html"
+    }
+  ]
+}

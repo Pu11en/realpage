@@ -3,201 +3,43 @@
   "engine_label": "Gemini (gemini-2.5-flash) via API, Google Search grounding on",
   "is_consumer_app": false,
   "set": "A",
-  "question": "Where can I get a list of apartment buildings opening in 2027?",
-  "intent": "find-pipeline",
+  "question": "How do I find new apartment projects before they open for leasing?",
+  "intent": "pipeline",
   "asked_on": "2026-09-23",
   "ok": true,
-  "answer": "To get a comprehensive list of apartment buildings opening in 2027, you'll generally need to consult specialized real estate data providers and industry reports, as this type of information is part of ongoing market analysis and development pipelines.\n\n**Key Data Sources and Companies:**\n\n*   **Yardi Matrix / RentCafe**: Yardi Matrix is consistently cited as a primary source for multifamily supply forecasts and construction data. Its sister company, RentCafe, often publishes reports based on this data. They produce detailed reports, such as the \"Multifamily Supply Forecast Bulletin,\" which tracks units under construction and projected completions.\n*   **CoStar / Apartments.com**: CoStar is another leading provider of commercial real estate information, analytics, and news. Apartments.com, powered by CoStar data, also publishes updates on U.S. multifamily construction activity and forecasts. These platforms offer market intelligence tools for real estate professionals.\n*   **LoopNet**: While more of a commercial real estate listing service, LoopNet (owned by CoStar) can be a source for identifying development land and properties for sale, which sometimes includes projects in various stages of planning or construction.\n\n**2027 Apartment Construction Outlook:**\n\nOverall, apartment deliveries are projected to slow down significantly in 2027, potentially reaching a 10-year low. Yardi Matrix anticipates approximately 319,000 to 360,500 new rental units nationwide in 2027. This expected slowdown is largely due to a decrease in construction starts in previous years, coupled with factors like weaker rent growth, high financing costs, and rising development expenses.\n\n**Notable Projects Expected to Open in 2027:**\n\nWhile a complete, exhaustive list would require access to paid subscription databases, several projects have been publicly announced with 2027 completion dates:\n\n*   **Alexan Azalea (Arcadia, CA)**: This seven-story, 319-unit multi-family residential building by Trammell Crow Residential is expected to open in early 2027. It will include 26 affordable units.\n*   **Southernside East (Greenville, SC)**: This project will add 93 affordable apartments specifically for seniors and is anticipated to open in early 2027.\n*   **Southernside West (Greenville, SC)**: Also in Greenville, this development will provide 54 affordable senior apartments and units for individuals with disabilities, with completion expected in October 2027.\n*   **Tanner Road (Greenville, SC)**: Flournoy Development Group is developing this 461-unit multifamily community, slated for completion in March 2027.\n*   **Brownsville Arts Center & Apartments (BACA) (Brooklyn, NY)**: This project will feature 283 affordable rental units, with studios to three-bedroom layouts, and is expected to be completed by December 2027.\n\n**Regional Trends and Areas of Activity:**\n\n*   **New York, Dallas-Fort Worth, and Austin, TX**: These metropolitan areas are projected to continue leading in new apartment construction through 2028, even with a general slowdown anticipated until 2027. New York City, in particular, has a significant construction pipeline.\n*   **Southwest Florida Coast**: This region shows a high percentage (over 15%) of its housing inventory currently under construction.\n*   **Tippecanoe County, Indiana (near Purdue University)**: This area is experiencing rapid growth, with over 500 apartments in various stages of construction and plans for several hundred more multifamily units as part of larger developments like Millbrook.\n\n**Focus on Affordable Housing**:\nThere is an increasing trend towards affordable and partially affordable multifamily projects in the new development mix. Yardi Matrix forecasts a 22% increase in partially affordable units and a 44% increase in fully affordable apartments in 2027 compared to 2020 levels.\n\nTo access detailed lists of specific apartment buildings and projects, subscribing to services like Yardi Matrix or CoStar would be the most effective approach. These platforms offer granular data, including project names, locations, unit counts, and estimated completion dates.",
-  "sources": [
-    {
-      "title": "rentcafe.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQERS41T24VGu0Y7ARzv5r1f4mwA2TqCrDG4NQBURRr8sDvgWRpwXqUhS3Zye1NvXYcvNR9czlhTFuckoUJ3f-58OPFKFhgRrr2o0Qcen6HmyHr1m6H6Tz9mMB9zpciLz2Lj62Mtj-wzCyVQf2gNt0-F8WQHqiRn9Vu2HwaOgyY7TmFsR1XDqpkImf9xejNkGAzEzGe-"
-    },
-    {
-      "title": "rentcafe.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE35ySnrA89MEbpsI3KTUI1UhQwJ1G8VK5YxiRN3BgX2l3JStMM03hORByTLQ8Qo2K0DC8hyPC-TN38mK5pOFbUzc8gg5xE9ytrXYp9WPIsae97KQb2lO3-zkI5UE3Q1v25rEwhhvZwMxUZwtDVhOa2PQzkHILLIU14pRNrFvrEkb7fVRfELHe1nBQhVoLmAvzhdS5s"
-    },
-    {
-      "title": "multifamilydive.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGGStmbpysnGkYGTmCMxSOHpuaoDU15F7iZNJEN4xg5e63qieXvuOWROOuYuT2mUp5eY6fgw1R1k-BL8od184TRkYpL9CK_inZkAp2qOmM6BnQt1TXjx67F3RlT1xNBEROvCfq-ku8mOmAiZCnuvWJM-Z4DquZu5VAdYkqvXsmgvOJv9ECRw-BkYrtv5eBtpJ3NqLLByw=="
-    },
-    {
-      "title": "yardi.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGoC6rHCAc9HF3UitT7FR6qxtR2DZpbbrFj3wOPt8d1W3ILPkAQxvqfqwlcq9nHgTjRv4hBVVMrIJkqhmmSBpnzAew-b8F9bd9DIGLeH5ZWyV9xu1bc52JYhQajVuHy4HUo7IaGAhf2tstlgCSLHWUOOikLy8rjsbj33UEcLZc6c64DmDqrVgrzsOFuQBFEkBhyDuioCAQYP9e0B6JIrDsmdAuYSgTAufM="
-    },
-    {
-      "title": "credaily.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG1rlxlIjXXf0VjDwJ4J92psWeQkveaCn6udy1cVzIHJuJhGs1KGq2uiYHP6CVE9J1hHKwswa-IdkTQMXi5iIeMU6wSeYsREt7bdOwvykfTFAw9Uk6VrU4o_Kgk53dMi-Fm8AQRhi8NfRLrWUXPGzC-KrYvZyQBW0r__G67YAAR7QavuTtGPbZzbgzO0THb1ES-xVF-Mw=="
-    },
-    {
-      "title": "culturemap.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH6adK_slfOW78h0VvksUY1T_2vCfFf9FFq6c_APpgbYvAPi7jluypBxDpj10AP4bN6Rxqw7wMkaOQV8oYFbzeXl_Rw1iknTtioWtQvQDvZMqP4hhLG5tzTBEoQUxtFqJWCKNP9nc2hZRPlJSjYaKvbuUz0Gv14An06rxsWt6Dx8K0UK0joIUEzyo8c2sD02Aurvv0dLuy1TJAA"
-    },
-    {
-      "title": "rejournals.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH7IwDrkkqDDMUKTOJo09MLtqH5WSlVoIwR5sL72Oe4bHOCCBXZ_eha_ysB0iWgYvrwBfl87_T_Ez_ii9J6YStUul8dQ62I6wZrpii0dmVn8OGBaA37Li3c-yahluWiKnqHkdtXb9s7JC3LcnDBUMnqVO60osoWOdqiS4vAnGwv-_Unyg3f9CPLIuwinQngA7fhGQsm4mEfyejJO0z_blaCe9B0BODzjw=="
-    },
-    {
-      "title": "rentcafe.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEpsgBvVJORsmTT8Y-Ae67hC2bwzNYbrxbI4ZlPIYCWgb92ZIA6Dj_4QZMcOpQeoGj7LL9_ABEJzKJxnVTARk-kYQLP3Djxl0yJjpWx1-p7mw13pmuj-CDbPD3iTg-gJEJ_TCK1LwojRgpjigZ32BPxHiuxAi9vku9uAmxtLteRxdmn-HKxihaGbNMHphsuOMVTnBSh5cq00A=="
-    },
-    {
-      "title": "apartments.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG_0C6svMQAv2P1aN0_RqK4UuhQjXutwuVcrx8UhnJiSXmOsMlRA6l4Kk6dTENgK2Hh2fKx-19Uzb98pHS1YtguNm1bGEapX0u-6rppvWwKUF4m0MAZbsaJDTzwV65dYQCIWcfoPQCrmUbdDStvw7mOohR95db7qQNnFRYtslgfWkPjiarT-A=="
-    },
-    {
-      "title": "costargroup.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHV8gCS43I3YmtTfrGT0jvh8eofs4G4yqfzsrkboRoUlLGlXss15beoUsQ4SGdsne8e5nY0s9ppRZKYXoHVIsLFT8QoSKei6cqvTnDsJ9xpfoHSIyUk2f84U5NEMOP8Re9FQsEjIGO41dka6oRHHASLPgemYYCHRvV52AKp-d8gwSSU8KaQdQSfd8XxNINtch-1YA1dHOpW9xVOen7tr6EXwlyp7fy3rrIUEvLZYyCsddMqwkl7gsWo"
-    },
-    {
-      "title": "costargroup.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG_-2x2QvD13VVcizYVm0pA8veO1uzgplRDJ-V1UCt5f9xTlu7afxM9V9xhzW27M7BBqUbh5emtkisaUzwmBQ96n2We5V6BCFPhRBeTy0gmQ_mz8ToQodBttX5qFOADmdH9K0qaJK7nDfBcVHgtZ1LhZmdG9BSbcjqI39hi9BE1wAnxxUkBOtyBejehmvqzTfggkkygvdWW-6Sw2TtkhUAf4L3ELPP2X7bjgKQU0MUK3j1J4ZAsvMTow6qxD7qdwg=="
-    },
-    {
-      "title": "loopnet.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEjZyhBIIsKi5x7EyZvcEYoh4KMxLetJ-ZeND6bZMfOO8N-B0ZtVjQFNmBOHXf5KlNjMqYCMGcQfgxW0h0PXm-zE2P3HmRFKeR1bSRHyoA0rxx8QG8BJxz_D-4WPD6OYT_diYuOsECMw7H_XVZutbJ-PXycCdEN_T6u47HQyosKxf3D3h3vUw=="
-    },
-    {
-      "title": "loopnet.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE3e8EkGbC4wKDCD33CoU5LlWISiLnDzmbms1Vm2g7wwDezuTJ8Rtxe4vUG-I2zoR3cmdSEZP9zqyx7DHRWdpJ0jwp8Q7_j2kDkyZTvDHdjD7d30Fd9AQT5TtU-HliyhOKhqiL_eN53xI4c7ZAMtFFjtQNidePFFvry-w=="
-    },
-    {
-      "title": "loopnet.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFO9CBX9IGjFLa90iD8w8unzoq9sAthgZw1hCZ5srCwW7wt2wKoiydvn6O1HkrhAXpkUV6GJyIridcgmAaTk6UJk8i6A69mNkqjeuOen91uJ0ubdg=="
-    },
-    {
-      "title": "forbes.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQExSa7Cw_MlA-rT7ESabABuU08sMX--V_a6N1labXiHRauF9zgpbnAai4byUH5SZZQO508nu1QOSQQDLyoUbIb84urvsV-D_Bm1Nj2ipcGJgP-9nApnhfJ1kGy00tj5UFaSN-cnRBAtJmSttWeD14LxLNvcaWMOsjnFldAn69yq71epHinBQeMiEk1Rw3P10bGHIh9xN_kelRo9oo3mjmVYmWZ9OcqhU-y0Y5yKG5TH3uM="
-    },
-    {
-      "title": "facebook.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHggakEmV_2whQdkb0YMEHgCTXykBuon_SawISJcS7DFR81UPZ9cKIqx_vn3OZvx72Lu8P0PmprLcrbuQu_y_I-_Jg4OaIJsoiGJ_6UTtx7A9g0S6Z2gSlwTAHAyxnO40CMB5s72hNRaYsIWLzY4BwOVwlPfQ71zLpRfKBxVpq3bLGAmTOVQZwgXDsyHO19RHVZCUAcg7IJvjxaHawkYVGtmQeTlidPXtytoXNOiKeI"
-    },
-    {
-      "title": "greenvillesc.gov",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHZNUi9ODGdEzDpEdz78oYonpg7satT6WZ8bVP3pSfWN100y-owd686Wnw9J-apYoRfpA2mATR3Yux2Urdh67QHw-Q-xtr-6lXvEV8eq10K3z6zscm_9QQlfEg7OiT2o66Ggqwm2nrNoRDlL-N5vWZZhreX_jTwejn9Hi7CR8dxIrdLo76XSpGHNfLKyEZlK9zUAwQTPsHUxGHGoWjFnqW4uRqy8o0="
-    },
-    {
-      "title": "greenvillehousingfund.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFIhghH8W_AAmsM5bl9wrt1pQNuLKByaJte6R0XlT4LICCS25CrP247ebRuEay6Plt01kagSYVHOenHEMNrkkJRvzK0HGwmK6lg-oO_tF3S99hk-VKRgyEr39VGsGkqzJPhCsvX4aRnGO6-sRkBGtYamGgSDZlf7BlXv-C0GFHcvZwQe8HA883k-up8edqgaPCCLd5S0YcRl1_FzTjVIUv0xA=="
-    },
-    {
-      "title": "multihousingnews.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEbBtf858SeBIsoO7602FXI6WBPB2dJ67RDsI2LITQTPqX6ltfYXTmdVIsiGuPQI1Jr5N6RBfTHngn2yQK_N1_0hSusHTKsj7AGaPldGCzXhm_ZQi6KL2g6ZDS8WKIhcIZi_gkCRtldXvF4rjIDFQIAI2Q7bLuuYtAa896xwgLP3dEaR4ForNPaFBiWdQ74zJwlY0orl_CWb3RWOg=="
-    },
-    {
-      "title": "6sqft.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFk6-J-AHk2tEPlmDt2EGdYoFKepu5uzhsCc787UFMm_1r6XsHf_3xwg0M5n2lGwS7w8yYXgr4084Z8tylgYmhITxw3Sm__d9PUDGWgbrgjwXVugfEBFVDRM5e3uZ4qmadVOSPi6rP_VuIrRzjAB7DAwAyj8A=="
-    },
-    {
-      "title": "loopnet.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFV3r0sog4lMZYfyqkxQ0o-ZM1gHwkqxqytUJCDDYrNZC2nsZF6Ir3vi7-09eNlLnqmqgbBVTQQF-BF3xDWsR109ngqjn-Y4lMwVdmEZrwB6e4Qzrd7L7RkMKytVtqVJftO7MDeasPEUWqVbxqf27M8HeUIk007LoZtY2YbzA=="
-    }
-  ],
+  "answer": "Finding new apartment projects before they open for leasing requires a proactive approach, often involving a mix of online research, local engagement, and specialized tools. Here's how you can do it:\n\n### 1. Monitor Local Government and Planning Departments\n\n*   **City Planning and Zoning Websites:** Local government websites often publish information about proposed developments, rezoning applications, and building permits. Look for sections related to \"Planning,\" \"Zoning,\" \"Development Projects,\" or \"Public Notices.\" These documents can reveal projects in their early stages, sometimes years before groundbreaking. You might find detailed plans, timelines, and contact information for developers.\n*   **Public Meetings:** Attend or review minutes from city council meetings, planning commission meetings, and zoning board hearings. New projects are often discussed and debated publicly during these sessions.\n\n### 2. Follow Real Estate Development News\n\n*   **Local Business Journals and News Outlets:** These publications frequently cover new construction projects, land acquisitions, and developer announcements in their early phases. Search for real estate or development sections.\n*   **Real Estate Industry Blogs and Websites:** Many sites track market trends and new developments. Look for local or regional real estate news aggregators.\n*   **Developer Websites:** Keep an eye on the websites of prominent local and regional apartment developers. They often announce upcoming projects or pipeline developments before formal leasing begins.\n\n### 3. Utilize Professional Real Estate Data and Tools\n\nWhile some of these are geared towards industry professionals, some information can be accessed by the public or through trial accounts:\n\n*   **CoStar Group and LoopNet:** CoStar is a comprehensive commercial real estate information provider. While expensive for individual users, its publicly accessible counterpart, LoopNet, sometimes lists properties under development or proposed projects. You might find information about land deals that signal future apartment construction.\n*   **CommercialCafe or Yardi Matrix:** These platforms track large-scale multifamily projects. Yardi Matrix, for instance, provides data on properties under construction, planned, or prospective. Some of this information may be accessible through reports or market analyses they publish.\n*   **Local Multiple Listing Services (MLS):** While primarily for existing properties, some brokerages might list land parcels zoned for multifamily development, indicating future projects.\n*   **Construction Project Tracking Services:** Some services specialize in tracking construction starts and permits. While often subscription-based, they can offer early insights.\n\n### 4. Engage with Real Estate Professionals\n\n*   **Local Real Estate Agents and Brokers:** Agents specializing in rentals or new construction often have relationships with developers and may get early word on upcoming projects.\n*   **Property Management Companies:** Companies that manage existing apartment buildings are often aware of new developments in their market.\n*   **Networking:** Attend local real estate events, even if casual, to potentially gather information from those in the industry.\n\n### 5. On-the-Ground Reconnaissance\n\n*   **Drive or Walk Through Desirable Neighborhoods:** Look for construction sites, particularly those with large foundations or significant land clearing. Signs often indicate the developer or future use.\n*   **Look for Rezoning Signs:** Developers are legally required to post signs when a property is being considered for rezoning, which can be a strong indicator of a future project.\n\n### 6. Online Apartment Listing Sites with \"New Construction\" Filters\n\nOnce projects are closer to opening, but still before official leasing, some major apartment listing sites will begin to show them:\n\n*   **Apartments.com, Zillow, Rent.com:** These sites often have filters for \"new construction\" or \"newly built.\" While this is usually closer to the leasing phase, sometimes you can find projects listed as \"coming soon\" with preliminary information.\n\nBy combining these strategies, you can significantly increase your chances of discovering new apartment projects before they are widely advertised for leasing.",
+  "sources": [],
   "brands": [
     {
-      "brand": "Yardi",
-      "first_at": 296,
-      "mentions": 5,
+      "brand": "CoStar",
+      "first_at": 1755,
+      "mentions": 2,
       "rank": 1
     },
     {
-      "brand": "CoStar",
-      "first_at": 662,
-      "mentions": 5,
+      "brand": "LoopNet",
+      "first_at": 1772,
+      "mentions": 2,
       "rank": 2
     },
     {
-      "brand": "Apartments.com",
-      "first_at": 671,
+      "brand": "Yardi Matrix",
+      "first_at": 2116,
       "mentions": 2,
       "rank": 3
+    },
+    {
+      "brand": "Apartments.com",
+      "first_at": 3894,
+      "mentions": 1,
+      "rank": 4
+    },
+    {
+      "brand": "Zillow",
+      "first_at": 3910,
+      "mentions": 1,
+      "rank": 5
     }
   ],
-  "links": [
-    {
-      "title": "rentcafe.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQERS41T24VGu0Y7ARzv5r1f4mwA2TqCrDG4NQBURRr8sDvgWRpwXqUhS3Zye1NvXYcvNR9czlhTFuckoUJ3f-58OPFKFhgRrr2o0Qcen6HmyHr1m6H6Tz9mMB9zpciLz2Lj62Mtj-wzCyVQf2gNt0-F8WQHqiRn9Vu2HwaOgyY7TmFsR1XDqpkImf9xejNkGAzEzGe-"
-    },
-    {
-      "title": "rentcafe.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE35ySnrA89MEbpsI3KTUI1UhQwJ1G8VK5YxiRN3BgX2l3JStMM03hORByTLQ8Qo2K0DC8hyPC-TN38mK5pOFbUzc8gg5xE9ytrXYp9WPIsae97KQb2lO3-zkI5UE3Q1v25rEwhhvZwMxUZwtDVhOa2PQzkHILLIU14pRNrFvrEkb7fVRfELHe1nBQhVoLmAvzhdS5s"
-    },
-    {
-      "title": "multifamilydive.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGGStmbpysnGkYGTmCMxSOHpuaoDU15F7iZNJEN4xg5e63qieXvuOWROOuYuT2mUp5eY6fgw1R1k-BL8od184TRkYpL9CK_inZkAp2qOmM6BnQt1TXjx67F3RlT1xNBEROvCfq-ku8mOmAiZCnuvWJM-Z4DquZu5VAdYkqvXsmgvOJv9ECRw-BkYrtv5eBtpJ3NqLLByw=="
-    },
-    {
-      "title": "yardi.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGoC6rHCAc9HF3UitT7FR6qxtR2DZpbbrFj3wOPt8d1W3ILPkAQxvqfqwlcq9nHgTjRv4hBVVMrIJkqhmmSBpnzAew-b8F9bd9DIGLeH5ZWyV9xu1bc52JYhQajVuHy4HUo7IaGAhf2tstlgCSLHWUOOikLy8rjsbj33UEcLZc6c64DmDqrVgrzsOFuQBFEkBhyDuioCAQYP9e0B6JIrDsmdAuYSgTAufM="
-    },
-    {
-      "title": "credaily.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG1rlxlIjXXf0VjDwJ4J92psWeQkveaCn6udy1cVzIHJuJhGs1KGq2uiYHP6CVE9J1hHKwswa-IdkTQMXi5iIeMU6wSeYsREt7bdOwvykfTFAw9Uk6VrU4o_Kgk53dMi-Fm8AQRhi8NfRLrWUXPGzC-KrYvZyQBW0r__G67YAAR7QavuTtGPbZzbgzO0THb1ES-xVF-Mw=="
-    },
-    {
-      "title": "culturemap.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH6adK_slfOW78h0VvksUY1T_2vCfFf9FFq6c_APpgbYvAPi7jluypBxDpj10AP4bN6Rxqw7wMkaOQV8oYFbzeXl_Rw1iknTtioWtQvQDvZMqP4hhLG5tzTBEoQUxtFqJWCKNP9nc2hZRPlJSjYaKvbuUz0Gv14An06rxsWt6Dx8K0UK0joIUEzyo8c2sD02Aurvv0dLuy1TJAA"
-    },
-    {
-      "title": "rejournals.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH7IwDrkkqDDMUKTOJo09MLtqH5WSlVoIwR5sL72Oe4bHOCCBXZ_eha_ysB0iWgYvrwBfl87_T_Ez_ii9J6YStUul8dQ62I6wZrpii0dmVn8OGBaA37Li3c-yahluWiKnqHkdtXb9s7JC3LcnDBUMnqVO60osoWOdqiS4vAnGwv-_Unyg3f9CPLIuwinQngA7fhGQsm4mEfyejJO0z_blaCe9B0BODzjw=="
-    },
-    {
-      "title": "rentcafe.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEpsgBvVJORsmTT8Y-Ae67hC2bwzNYbrxbI4ZlPIYCWgb92ZIA6Dj_4QZMcOpQeoGj7LL9_ABEJzKJxnVTARk-kYQLP3Djxl0yJjpWx1-p7mw13pmuj-CDbPD3iTg-gJEJ_TCK1LwojRgpjigZ32BPxHiuxAi9vku9uAmxtLteRxdmn-HKxihaGbNMHphsuOMVTnBSh5cq00A=="
-    },
-    {
-      "title": "apartments.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG_0C6svMQAv2P1aN0_RqK4UuhQjXutwuVcrx8UhnJiSXmOsMlRA6l4Kk6dTENgK2Hh2fKx-19Uzb98pHS1YtguNm1bGEapX0u-6rppvWwKUF4m0MAZbsaJDTzwV65dYQCIWcfoPQCrmUbdDStvw7mOohR95db7qQNnFRYtslgfWkPjiarT-A=="
-    },
-    {
-      "title": "costargroup.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHV8gCS43I3YmtTfrGT0jvh8eofs4G4yqfzsrkboRoUlLGlXss15beoUsQ4SGdsne8e5nY0s9ppRZKYXoHVIsLFT8QoSKei6cqvTnDsJ9xpfoHSIyUk2f84U5NEMOP8Re9FQsEjIGO41dka6oRHHASLPgemYYCHRvV52AKp-d8gwSSU8KaQdQSfd8XxNINtch-1YA1dHOpW9xVOen7tr6EXwlyp7fy3rrIUEvLZYyCsddMqwkl7gsWo"
-    },
-    {
-      "title": "costargroup.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG_-2x2QvD13VVcizYVm0pA8veO1uzgplRDJ-V1UCt5f9xTlu7afxM9V9xhzW27M7BBqUbh5emtkisaUzwmBQ96n2We5V6BCFPhRBeTy0gmQ_mz8ToQodBttX5qFOADmdH9K0qaJK7nDfBcVHgtZ1LhZmdG9BSbcjqI39hi9BE1wAnxxUkBOtyBejehmvqzTfggkkygvdWW-6Sw2TtkhUAf4L3ELPP2X7bjgKQU0MUK3j1J4ZAsvMTow6qxD7qdwg=="
-    },
-    {
-      "title": "loopnet.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEjZyhBIIsKi5x7EyZvcEYoh4KMxLetJ-ZeND6bZMfOO8N-B0ZtVjQFNmBOHXf5KlNjMqYCMGcQfgxW0h0PXm-zE2P3HmRFKeR1bSRHyoA0rxx8QG8BJxz_D-4WPD6OYT_diYuOsECMw7H_XVZutbJ-PXycCdEN_T6u47HQyosKxf3D3h3vUw=="
-    },
-    {
-      "title": "loopnet.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE3e8EkGbC4wKDCD33CoU5LlWISiLnDzmbms1Vm2g7wwDezuTJ8Rtxe4vUG-I2zoR3cmdSEZP9zqyx7DHRWdpJ0jwp8Q7_j2kDkyZTvDHdjD7d30Fd9AQT5TtU-HliyhOKhqiL_eN53xI4c7ZAMtFFjtQNidePFFvry-w=="
-    },
-    {
-      "title": "loopnet.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFO9CBX9IGjFLa90iD8w8unzoq9sAthgZw1hCZ5srCwW7wt2wKoiydvn6O1HkrhAXpkUV6GJyIridcgmAaTk6UJk8i6A69mNkqjeuOen91uJ0ubdg=="
-    },
-    {
-      "title": "forbes.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQExSa7Cw_MlA-rT7ESabABuU08sMX--V_a6N1labXiHRauF9zgpbnAai4byUH5SZZQO508nu1QOSQQDLyoUbIb84urvsV-D_Bm1Nj2ipcGJgP-9nApnhfJ1kGy00tj5UFaSN-cnRBAtJmSttWeD14LxLNvcaWMOsjnFldAn69yq71epHinBQeMiEk1Rw3P10bGHIh9xN_kelRo9oo3mjmVYmWZ9OcqhU-y0Y5yKG5TH3uM="
-    },
-    {
-      "title": "facebook.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHggakEmV_2whQdkb0YMEHgCTXykBuon_SawISJcS7DFR81UPZ9cKIqx_vn3OZvx72Lu8P0PmprLcrbuQu_y_I-_Jg4OaIJsoiGJ_6UTtx7A9g0S6Z2gSlwTAHAyxnO40CMB5s72hNRaYsIWLzY4BwOVwlPfQ71zLpRfKBxVpq3bLGAmTOVQZwgXDsyHO19RHVZCUAcg7IJvjxaHawkYVGtmQeTlidPXtytoXNOiKeI"
-    },
-    {
-      "title": "greenvillesc.gov",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHZNUi9ODGdEzDpEdz78oYonpg7satT6WZ8bVP3pSfWN100y-owd686Wnw9J-apYoRfpA2mATR3Yux2Urdh67QHw-Q-xtr-6lXvEV8eq10K3z6zscm_9QQlfEg7OiT2o66Ggqwm2nrNoRDlL-N5vWZZhreX_jTwejn9Hi7CR8dxIrdLo76XSpGHNfLKyEZlK9zUAwQTPsHUxGHGoWjFnqW4uRqy8o0="
-    },
-    {
-      "title": "greenvillehousingfund.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFIhghH8W_AAmsM5bl9wrt1pQNuLKByaJte6R0XlT4LICCS25CrP247ebRuEay6Plt01kagSYVHOenHEMNrkkJRvzK0HGwmK6lg-oO_tF3S99hk-VKRgyEr39VGsGkqzJPhCsvX4aRnGO6-sRkBGtYamGgSDZlf7BlXv-C0GFHcvZwQe8HA883k-up8edqgaPCCLd5S0YcRl1_FzTjVIUv0xA=="
-    },
-    {
-      "title": "multihousingnews.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEbBtf858SeBIsoO7602FXI6WBPB2dJ67RDsI2LITQTPqX6ltfYXTmdVIsiGuPQI1Jr5N6RBfTHngn2yQK_N1_0hSusHTKsj7AGaPldGCzXhm_ZQi6KL2g6ZDS8WKIhcIZi_gkCRtldXvF4rjIDFQIAI2Q7bLuuYtAa896xwgLP3dEaR4ForNPaFBiWdQ74zJwlY0orl_CWb3RWOg=="
-    },
-    {
-      "title": "6sqft.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFk6-J-AHk2tEPlmDt2EGdYoFKepu5uzhsCc787UFMm_1r6XsHf_3xwg0M5n2lGwS7w8yYXgr4084Z8tylgYmhITxw3Sm__d9PUDGWgbrgjwXVugfEBFVDRM5e3uZ4qmadVOSPi6rP_VuIrRzjAB7DAwAyj8A=="
-    },
-    {
-      "title": "loopnet.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFV3r0sog4lMZYfyqkxQ0o-ZM1gHwkqxqytUJCDDYrNZC2nsZF6Ir3vi7-09eNlLnqmqgbBVTQQF-BF3xDWsR109ngqjn-Y4lMwVdmEZrwB6e4Qzrd7L7RkMKytVtqVJftO7MDeasPEUWqVbxqf27M8HeUIk007LoZtY2YbzA=="
-    }
-  ]
+  "links": []
 }

@@ -3,121 +3,161 @@
   "engine_label": "Gemini (gemini-2.5-flash) via API, Google Search grounding on",
   "is_consumer_app": false,
   "set": "A",
-  "question": "Where can I find Phoenix multifamily construction pipeline data?",
-  "intent": "find-pipeline",
+  "question": "What is the best way to find newly sold apartment complexes for sales prospecting?",
+  "intent": "sales",
   "asked_on": "2026-09-23",
   "ok": true,
-  "answer": "For researchers seeking data on the Phoenix multifamily construction pipeline, several reputable real estate data providers and market research firms offer comprehensive reports and tools. These resources typically provide information on units under construction, planned developments, and recent deliveries, alongside broader market trends.\n\nKey companies and data sources include:\n\n*   **CoStar:** Frequently cited as a data source in many market reports, CoStar is a leading provider of commercial real estate information, analytics, and online marketplaces. They offer detailed data on multifamily properties, including construction pipelines, across various markets, including Phoenix.\n*   **Yardi Matrix:** This company specializes in commercial real estate data and is often referenced for its insights into multifamily construction activity. For example, Yardi Matrix data was used to report on Phoenix's multifamily market and construction pipeline, noting thousands of units underway in various submarkets.\n*   **Kidder Mathews:** This commercial real estate firm publishes quarterly Phoenix Multifamily Market Reports. Their Q2 2026 report, for instance, detailed units under construction, year-over-year changes, and notable projects.\n*   **Matthews Real Estate Investment Services:** They also provide detailed Phoenix Multifamily Market Reports, offering insights into construction activity, units under construction, and deliveries for specific quarters like Q3 2025.\n*   **MMG Real Estate Advisors:** This firm offers interactive pipeline reports, such as the Phoenix Q1 2026 and Q2 2025 Pipeline Reports, providing a focused look into multifamily construction in the area. Their 2025 Phoenix Forecast also incorporates data from sources like CoStar and Yardi Matrix.\n*   **Berkadia:** Berkadia offers a Phoenix Multifamily Quarterly Pipeline Map, which categorizes development status into lease-up, under construction, planned, and prospective units, providing a comprehensive overview of the pipeline.\n*   **ABI Multifamily:** This company publishes a quarterly Phoenix MSA Construction Pipeline Report, specifically focusing on multifamily construction activity for properties with 50 or more units in the Phoenix Metropolitan Statistical Area.\n*   **Cushman & Wakefield:** Their MarketBeat Phoenix Multifamily reports provide analyses of market conditions, including construction activity and the concentration of the construction pipeline in specific submarkets like the East Valley.\n\nThese sources are valuable for anyone researching the current and future landscape of multifamily development in Phoenix.",
+  "answer": "To effectively find newly sold apartment complexes for sales prospecting, you need access to robust commercial real estate data platforms that track transactions, ownership changes, and market trends. These platforms compile information from various sources, including public records, direct feeds, and proprietary research.\n\nHere are some of the best ways and specific companies/products to consider:\n\n**1. Commercial Real Estate Data Providers:**\n\nThese companies specialize in collecting and providing comprehensive data on commercial properties, including multifamily assets. They are often considered the go-to source for detailed sales information.\n\n*   **CoStar:** Widely recognized as a leading commercial real estate information company, CoStar offers extensive data on multifamily properties, including sales comparables, ownership details, rent trends, and units under construction. They gather data through primary research, direct market input, public records, and data feeds from their Apartments.com network.\n*   **Yardi Matrix:** This web-based research organization provides in-depth data for 179 multifamily markets across the U.S., specializing in properties with 50 or more units. Yardi Matrix offers accurate and updated information on property ownership, sales data, rental trends, occupancy, and in-place loans. They collect rent data through a nationwide research team and direct feeds from property management companies, and occupancy estimates from USPS delivery records.\n*   **Reonomy:** Reonomy is a premier platform for multifamily property data and may be partnered with Corelogic. They are often mentioned as a good source for getting property owner information.\n*   **MRI ApartmentData (formerly ApartmentData.com):** This service provides insights on publicly advertised asking rents, occupancy, current specials, and policies. It helps track new supply and trends, offering data on properties under construction, proposed, and recently opened. MRI ApartmentData offers targeted marketing capabilities and can help brokers and investors with due diligence.\n*   **Smart Apartment Data:** This platform focuses on multifamily suppliers, helping them identify sales opportunities and track industry changes. It provides detailed information on apartments, developers, management, and changes in property ownership. Their \"SMART Locating\" software helps search for apartments based on specific criteria like floor plans, square footage, and rental amounts.\n*   **RealPage Market Analytics:** Designed for the multifamily industry, RealPage Market Analytics provides robust intelligence for various property types, including conventional apartments and build-to-rent. It offers daily updates on rents, concessions, floor plans, and occupancy, aiming to help users make informed decisions and track performance.\n\n**2. Brokerage Firms with Research Divisions:**\n\nMajor commercial real estate brokerage firms often have robust research departments that publish reports and maintain proprietary transaction data.\n\n*   **Marcus & Millichap:** Known for its investment expertise, Marcus & Millichap offers multifamily-focused reporting that combines proprietary transaction data with national and local market trends. Their Institutional Multifamily Market Intelligence report provides current data on rent growth, lease renewals, and vacancy rates.\n*   **Cushman & Wakefield:** This global real estate services firm publishes reports like the \"U.S. Multifamily MarketBeat,\" which provides commentary and data on multifamily trends, including absorption, vacancy rates, and new supply.\n\n**3. AI-Powered Prospecting Tools:**\n\nNewer technologies leverage artificial intelligence and machine learning to predict properties likely to sell and provide owner contact information.\n\n*   **Prospect by Buildout:** This AI-powered research and outreach tool helps identify likely sellers up to 12 months before they list. It provides detailed ownership, sales, listing, and loan origination data for properties across the United States.\n\n**4. Public Records and Local Resources:**\n\nWhile more labor-intensive, public records can be a valuable source, especially for smaller markets or to verify data.\n\n*   **County Assessor's Offices:** These offices maintain records of property ownership, assessed values, and recent sales.\n*   **County Recorder or Clerk's Offices:** These offices record deeds and other property-related documents, which can show ownership transfers.\n\n**5. Industry Organizations and Publications:**\n\nThese sources provide broader market insights and sometimes list recent transactions or highlight active areas.\n\n*   **National Multifamily Housing Council (NMHC):** The NMHC is a leading source for national benchmarks, research reports, and trend data in the multifamily industry.\n*   **Multi-Housing News and other industry publications:** These often publish articles and reports on market trends, new developments, and significant transactions.\n\n**Key Data Points for Sales Prospecting:**\n\nWhen researching newly sold apartment complexes, focus on gathering the following information:\n\n*   **Sale Date:** Crucial for identifying *newly* sold properties.\n*   **Sale Price:** Helps understand market value and potential investment.\n*   **Buyer/New Owner Information:** Essential for direct outreach and prospecting. This often requires tools that can \"skip trace\" LLCs, corporations, and trusts to find the underlying owners.\n*   **Property Characteristics:** Number of units, age of the building, amenities, and location (market and submarket).\n*   **Rental Rates and Occupancy History:** Provides insight into the property's performance and potential for value-add.\n*   **Loan Information:** Details on in-place loans and expirations can indicate potential refinancing opportunities.\n\nBy leveraging a combination of these resources, you can build a comprehensive and targeted list of newly sold apartment complexes for your sales prospecting efforts.",
   "sources": [
     {
-      "title": "kidder.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGDiuo8QoT6UbRaSZ4MtS1-9YewttTkNK6vYMM1xKGSN5KW93Xeh6PNfid52ORd4lKL9JnE9JsRh3dWJ2oHKDt-guY4aVvD0Yt5Eb5pyd7htEVXFcwxFQX742GH3InAFMAvxpmcFgApTgqDTELxihPNMv6dyr07aMAu7jSTvTsK"
+      "title": "costar.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGymLT2q2bnIEk741q-kD0o19z6dcKualcG7YB7sQDGfTysM3XGtHFFTq-am0cTwFmOwVdh9ueYDEJ6iQDKNTCY17PMKcdIzMoQ1bbN1KgrvrRfMM0N6_ify83kXfIQLMD0p2xpcZDW8HDWyUNm"
     },
     {
-      "title": "matthews.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFkiAgZB81cgAEM2cCcXOhNguzP8Ob86ZBFvgxvhEtVSVQN4mrdO2YBRCSR0xIIQQfbkNP6HJTBC-fx2mybSovU37v9E9CRSoqeLWda5wGGSvCmz1zQh8Y-Vpci-856wy_Z_xhd3SOB1dfiJJtPypUfaCkgDCJUrw4TLTzFn0NIO2FkGWbKr1z6kA=="
-    },
-    {
-      "title": "mmgrea.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGLd0bvvdlliaO7BB8_o97ZxfMUGBDA7hrY0HF8RKj6TtB5jJ5KRmvpHkrc7f5MhNMD8q9SAc6a6Gm8jvMGYvQ2TaGYfOROv7CqhA6gj5-hwZc3mD-7DqhsLzS-j-7D0AgbM5IB"
+      "title": "reddit.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEBJzLe8_avJ-PJoOlkuUlXhNRvABCVSNCyQ41L9SRNhr_ALa65x1mIVt8Ekr64QRYfQ8Bnc0lS7NX0u-WfvEqLxBZ-AzT9keXB39urxlQVj9AC3KktiGfc60lfW3muPWZ9CSQBvv7tWreshsGu4RtuKYg1ihLetgJmPv8pY8yJ-Xwn7tezNNf2J9sUUZ3_EMwVoYVCWw_FqAeL2aJaSF4F"
     },
     {
       "title": "multihousingnews.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFizJ7G5cxJxIeBWlCX-8RpgCt8RE26Gz22gQHaywyH5LX8DmXiWHCN-KL-5c_mJtcoVAxWVvjZ0bdiEUK4RVV-Zed5KymD_gHFfmNHH-iu7LfPNVSrjg9XosNsDj1XP7VmxeJ4qDqDJ5UOTlWfnnbGysz2m84MuV-cUoX8XODAVmoAugAGnQ1jKbnjuOzGcQ=="
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGCq-kqplkrEWuk57WbH19UAEef4JwTO-_vWrIQ3Dw7ytV8i_VprEkX3xSJ87meAgkS8Bc7nXZtTXfqXRrm2FZNs4Ugi_7LjinLgQkJfDjn843qO5Fb211kIp9AEfEpU5WNLbHTl2iNBl1MX3tFp1FkeAxwQ63laYsBzZTPOJcMKkU7m5urHQ=="
     },
     {
-      "title": "azbex.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFFwTtQ0_43TecpIJQN3iZpMVB4j64FKKoFKxjAIDIe4MPNdjlzq-I5a2201u-Hh8dZWt2YpLD5Wz6lP-SNMNUN2h78m7eVSx5RBOIvX7t1_AQLrsSf7xM5pKVN6WJtaudn5fsqShn1-g6Nwgwkns-eU-R5a4G-6GmPDF0flkIBhftq3vLTu2YamGZKoTe2UiaNxQ2cSO5J6wKjoKYSDr4="
+      "title": "yardimatrix.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHPichNUj4DbkcVjTApkCJ8iph69zYylb0DlTuP7mtlv-ZL577mTN0kWe98xCGXjoiDZ-V5REvKYLxDgFicYBLuqxK-6Roq6XuU6Fmj24EXaIHyb2nIzreHeQX2Ag-I2aF1UztTrb1tBHRARjzO_Z6D-4Q="
     },
     {
-      "title": "mmgrea.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFyQVGTSd8-3SIueZ7EVBDum5xcjZux5RlyC9K_hVO2qTd_y0-be88GsQBCMMc55k5iMjJmDnqjH76dQqMdII2OgNem-BuFT3DlhDFNHbHo9aCdiKkeVuhHiRjIad1NsopDK1d8RYH8neJUMWCSMg=="
+      "title": "biggerpockets.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGXbqpIIQhlMImhlawpshmgN6yhFuN3SDO03WqTPXOTUwJ8_qdi_kTwNAhxzaS62kDRKSSwolFK_eFW0h9nXDw5dpqATBq13Wm0JmFUn_C-65H4w1oOEVZvVNrmvVYW97bNhZ9oPYB5fC9PZ8ST1ZCwMm6sJAKZSprKY4SkHcZzdDrQP5ly91jVnD8r_bai8Y48QPMhxtIi2s3BNL6YvGdLhRhloaTouxkC7avAaKgIzQ=="
     },
     {
-      "title": "mmgrea.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEu4QsZafmWqjTA1dcWhdKbFZ4qCH45p2KbwxFwK6QvR9ajE1a5YOEMgEd4b-WiDINCXSoCsrFVMG6Y19cn6Hz24MJrlZXib39PjONK1ZYqTIJsW3KEblsSJa3342R8bms_eBG63SXggBj2yrKwGg=="
+      "title": "altusgroup.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHtHQhIkVVjiSO3Z16EXw9_ytm6wEDHDZ6L_xFDabQq1PU9A3xU2naLLCmNtPj8DMHTRyLgN39qw3Z8IutTcwJQ-FoWuuMSjW2rsJIYzesD4aXZjjsj4Nvb0odzUjDBAHL6CL_aQzDX3wSyQLMQOl492WhQIS_711QWWUL-a8oUArLRkhCyXQbPLCPCF65TUnF49xMA9DU="
     },
     {
-      "title": "mmgrea.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEdDpZbNdtAhGpx13o9EsrGgv0XpE_pamPzj8f_mi-s3g9YD5jNmC2rZKHRC5wncxTAmegHM1uslYQNAksxKloOE-Jr0hMqsBjUMrF6CDGEQXjKrjLTeYIWoIhq8VJDeyuOC2FNCvO6fDO2o_k="
+      "title": "mrisoftware.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHbE3uNaQaJhk2vfc7AZ8h4oIupq38-YMMZGYXfYAv2e99KXXgT7-nf6WdJfEjS9r0TuWPh-TeJ3vHTZql1BddRvOwTqxehGoOA0rHPqGd0byZ7tncJNdzcdd7ku7lci_UdoXTWrYx5UF3A5MluuQ=="
     },
     {
-      "title": "berkadia.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHesDhdboUKZGI8MwQMrTIca727V2Cm8y2xRCyth04_ko0Pdsb8w0zn7XmOpQ7f1IJspPGkYyt13f1ELLxQ8JY7QzZe_07yi6G08Cj_gspIEvkHvNO_Bu7KkpM-tvmbWlLtzoKev--ea5YZnhCWHHXsyKS4LfbeYCR8mWXU7xtrsB-b2D466oAIHnGgPV8NouWFtKyrw7DX1Ur1Jra6bd8I2-GXqk1SNn4="
+      "title": "smartapartmentdata.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGwFc7z6s1qiojDgW31zUWGP9fhi3OSF6IXBdjgmYqPU7jEdPnJ4hhf-8r2CDFoSqHyjvRjXp89G9CWLAq4VkafnhRTUYsyDNB0Nxf_h1YiqfiWsGlLAnso-xM="
     },
     {
-      "title": "abimultifamily.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFuMltQvyZYL7XqGKkke3Qla6D7RMIA4eYfp-I_Mv2MIwdTuc7akM3pcoSptIs02sqKQoaCkLrdzktx0DWrxh8l6wlkg5b1Y1WZ3PapH3RQPCM3pycCj6JyGsB9IeVHne8voKdkuQIlG6g9jeDCIWRor-Ns7eFAl3xSbeVjs9JTBYq61fF2Ph4PO4jDTD3r"
+      "title": "smartapartmentdata.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGZGELuHxz_1p09DpEj-ASYV7huBhgeFvVuNVt2J9vrIKoaXR70mlROjEqIBfoUuKXwMgPHyrs-QISni2GOrnUqrmFOvYOcFHQT-jEtGG9p-ruWi0pUfUBvhpH0crB5GJQ787kN36SJdV-bZfivGfKN55G6h82vXbq7cz4nK8tNkKwP55c="
+    },
+    {
+      "title": "realpage.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHU_FL6kAGU-75lB-U5OdzAvtQNjG9vnJdcJFH42GzhqAJoM4XyGRtBttVoIxDRirxcLAuA-T4hPm8JGNr70Db44-a-uF5bmLGP3LG4Ccz_O1y9UEoelQo5ycZ5v_MFKD0HvZYP_d6QDgWUi1wUELAa7SCFuPs8o8c="
+    },
+    {
+      "title": "apartmentiq.io",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEGomHlxbCkhfzLLuEiPtoPHnLMGYNUUMBp2oJ21VsAU84gwoMXOr50H9obrQDI-kVzoN-8hPGwW2LBTd33fUIDNRZRnMXezWRXRDYubBNE9VHRRc14XvYrf38IMGiPgSmurHk7B4_8E9JOKOioaA=="
     },
     {
       "title": "cushmanwakefield.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQESBi7gmtfaw9XIVTACWcTP5_4MGDWK87TdpmTgIe7UTO_faa5FsKlEIKXMz1ng6ZgDfRKQjSaeno6j-j2xHuwH6UYgZ9O09QOIdA1q-7PAgn1H34UOosUoA9MZ8KpRaiQJN9iw8HD0Bv3zdA4JWIhyVQO79yIiO54cTKVRL6iix6v43vcopGTceb6lyPDXNVicqMSnuTwHsvR6lcR1kpeRSAwVGA=="
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGWBVzh_X7UDVcYTgtzbttJlG2KZtWpnckqLdCHFgzpG7wpYXkyIo8shDf3PIqK2QV_vhC-VYm1oVDmdw7xvBDdVhHPZrgCzTnC5mmhPkfDsyvJw4cAlYC0clS664o3vrhuDkERUKjiUoLTcnUXxdvWKTOGpNR4wQLip99GB8aMR1eKJLIs-G_1_ebeevvMS-8vMUtGNAn7rk3cR33ZqA=="
+    },
+    {
+      "title": "prospect-by-buildout.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGI0OW4I3WT6ggpcA6KoK8DfECWLP11U1LE4D9xhZHesDNaAAqP-Fi4dwMzTeoEUvgC7t3j4mrRtYPL1xa_bEnr0pI-AvJh98BY8DqC9pJejmMQWctwQlBxrYM_Ud-Vq2o="
     }
   ],
   "brands": [
     {
       "brand": "CoStar",
-      "first_at": 390,
-      "mentions": 3,
+      "first_at": 662,
+      "mentions": 2,
       "rank": 1
     },
     {
-      "brand": "Yardi",
-      "first_at": 697,
-      "mentions": 3,
+      "brand": "Apartments.com",
+      "first_at": 1000,
+      "mentions": 1,
       "rank": 2
     },
     {
-      "brand": "Berkadia",
-      "first_at": 1790,
+      "brand": "Yardi Matrix",
+      "first_at": 1030,
       "mentions": 2,
       "rank": 3
+    },
+    {
+      "brand": "Reonomy",
+      "first_at": 1504,
+      "mentions": 2,
+      "rank": 4
+    },
+    {
+      "brand": "RealPage",
+      "first_at": 2492,
+      "mentions": 2,
+      "rank": 5
+    },
+    {
+      "brand": "Marcus & Millichap",
+      "first_at": 3044,
+      "mentions": 2,
+      "rank": 6
+    },
+    {
+      "brand": "Cushman & Wakefield",
+      "first_at": 3378,
+      "mentions": 1,
+      "rank": 7
     }
   ],
   "links": [
     {
-      "title": "kidder.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGDiuo8QoT6UbRaSZ4MtS1-9YewttTkNK6vYMM1xKGSN5KW93Xeh6PNfid52ORd4lKL9JnE9JsRh3dWJ2oHKDt-guY4aVvD0Yt5Eb5pyd7htEVXFcwxFQX742GH3InAFMAvxpmcFgApTgqDTELxihPNMv6dyr07aMAu7jSTvTsK"
+      "title": "costar.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGymLT2q2bnIEk741q-kD0o19z6dcKualcG7YB7sQDGfTysM3XGtHFFTq-am0cTwFmOwVdh9ueYDEJ6iQDKNTCY17PMKcdIzMoQ1bbN1KgrvrRfMM0N6_ify83kXfIQLMD0p2xpcZDW8HDWyUNm"
     },
     {
-      "title": "matthews.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFkiAgZB81cgAEM2cCcXOhNguzP8Ob86ZBFvgxvhEtVSVQN4mrdO2YBRCSR0xIIQQfbkNP6HJTBC-fx2mybSovU37v9E9CRSoqeLWda5wGGSvCmz1zQh8Y-Vpci-856wy_Z_xhd3SOB1dfiJJtPypUfaCkgDCJUrw4TLTzFn0NIO2FkGWbKr1z6kA=="
-    },
-    {
-      "title": "mmgrea.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGLd0bvvdlliaO7BB8_o97ZxfMUGBDA7hrY0HF8RKj6TtB5jJ5KRmvpHkrc7f5MhNMD8q9SAc6a6Gm8jvMGYvQ2TaGYfOROv7CqhA6gj5-hwZc3mD-7DqhsLzS-j-7D0AgbM5IB"
+      "title": "reddit.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEBJzLe8_avJ-PJoOlkuUlXhNRvABCVSNCyQ41L9SRNhr_ALa65x1mIVt8Ekr64QRYfQ8Bnc0lS7NX0u-WfvEqLxBZ-AzT9keXB39urxlQVj9AC3KktiGfc60lfW3muPWZ9CSQBvv7tWreshsGu4RtuKYg1ihLetgJmPv8pY8yJ-Xwn7tezNNf2J9sUUZ3_EMwVoYVCWw_FqAeL2aJaSF4F"
     },
     {
       "title": "multihousingnews.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFizJ7G5cxJxIeBWlCX-8RpgCt8RE26Gz22gQHaywyH5LX8DmXiWHCN-KL-5c_mJtcoVAxWVvjZ0bdiEUK4RVV-Zed5KymD_gHFfmNHH-iu7LfPNVSrjg9XosNsDj1XP7VmxeJ4qDqDJ5UOTlWfnnbGysz2m84MuV-cUoX8XODAVmoAugAGnQ1jKbnjuOzGcQ=="
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGCq-kqplkrEWuk57WbH19UAEef4JwTO-_vWrIQ3Dw7ytV8i_VprEkX3xSJ87meAgkS8Bc7nXZtTXfqXRrm2FZNs4Ugi_7LjinLgQkJfDjn843qO5Fb211kIp9AEfEpU5WNLbHTl2iNBl1MX3tFp1FkeAxwQ63laYsBzZTPOJcMKkU7m5urHQ=="
     },
     {
-      "title": "azbex.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFFwTtQ0_43TecpIJQN3iZpMVB4j64FKKoFKxjAIDIe4MPNdjlzq-I5a2201u-Hh8dZWt2YpLD5Wz6lP-SNMNUN2h78m7eVSx5RBOIvX7t1_AQLrsSf7xM5pKVN6WJtaudn5fsqShn1-g6Nwgwkns-eU-R5a4G-6GmPDF0flkIBhftq3vLTu2YamGZKoTe2UiaNxQ2cSO5J6wKjoKYSDr4="
+      "title": "yardimatrix.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHPichNUj4DbkcVjTApkCJ8iph69zYylb0DlTuP7mtlv-ZL577mTN0kWe98xCGXjoiDZ-V5REvKYLxDgFicYBLuqxK-6Roq6XuU6Fmj24EXaIHyb2nIzreHeQX2Ag-I2aF1UztTrb1tBHRARjzO_Z6D-4Q="
     },
     {
-      "title": "mmgrea.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFyQVGTSd8-3SIueZ7EVBDum5xcjZux5RlyC9K_hVO2qTd_y0-be88GsQBCMMc55k5iMjJmDnqjH76dQqMdII2OgNem-BuFT3DlhDFNHbHo9aCdiKkeVuhHiRjIad1NsopDK1d8RYH8neJUMWCSMg=="
+      "title": "biggerpockets.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGXbqpIIQhlMImhlawpshmgN6yhFuN3SDO03WqTPXOTUwJ8_qdi_kTwNAhxzaS62kDRKSSwolFK_eFW0h9nXDw5dpqATBq13Wm0JmFUn_C-65H4w1oOEVZvVNrmvVYW97bNhZ9oPYB5fC9PZ8ST1ZCwMm6sJAKZSprKY4SkHcZzdDrQP5ly91jVnD8r_bai8Y48QPMhxtIi2s3BNL6YvGdLhRhloaTouxkC7avAaKgIzQ=="
     },
     {
-      "title": "mmgrea.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEu4QsZafmWqjTA1dcWhdKbFZ4qCH45p2KbwxFwK6QvR9ajE1a5YOEMgEd4b-WiDINCXSoCsrFVMG6Y19cn6Hz24MJrlZXib39PjONK1ZYqTIJsW3KEblsSJa3342R8bms_eBG63SXggBj2yrKwGg=="
+      "title": "altusgroup.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHtHQhIkVVjiSO3Z16EXw9_ytm6wEDHDZ6L_xFDabQq1PU9A3xU2naLLCmNtPj8DMHTRyLgN39qw3Z8IutTcwJQ-FoWuuMSjW2rsJIYzesD4aXZjjsj4Nvb0odzUjDBAHL6CL_aQzDX3wSyQLMQOl492WhQIS_711QWWUL-a8oUArLRkhCyXQbPLCPCF65TUnF49xMA9DU="
     },
     {
-      "title": "mmgrea.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEdDpZbNdtAhGpx13o9EsrGgv0XpE_pamPzj8f_mi-s3g9YD5jNmC2rZKHRC5wncxTAmegHM1uslYQNAksxKloOE-Jr0hMqsBjUMrF6CDGEQXjKrjLTeYIWoIhq8VJDeyuOC2FNCvO6fDO2o_k="
+      "title": "mrisoftware.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHbE3uNaQaJhk2vfc7AZ8h4oIupq38-YMMZGYXfYAv2e99KXXgT7-nf6WdJfEjS9r0TuWPh-TeJ3vHTZql1BddRvOwTqxehGoOA0rHPqGd0byZ7tncJNdzcdd7ku7lci_UdoXTWrYx5UF3A5MluuQ=="
     },
     {
-      "title": "berkadia.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHesDhdboUKZGI8MwQMrTIca727V2Cm8y2xRCyth04_ko0Pdsb8w0zn7XmOpQ7f1IJspPGkYyt13f1ELLxQ8JY7QzZe_07yi6G08Cj_gspIEvkHvNO_Bu7KkpM-tvmbWlLtzoKev--ea5YZnhCWHHXsyKS4LfbeYCR8mWXU7xtrsB-b2D466oAIHnGgPV8NouWFtKyrw7DX1Ur1Jra6bd8I2-GXqk1SNn4="
+      "title": "smartapartmentdata.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGwFc7z6s1qiojDgW31zUWGP9fhi3OSF6IXBdjgmYqPU7jEdPnJ4hhf-8r2CDFoSqHyjvRjXp89G9CWLAq4VkafnhRTUYsyDNB0Nxf_h1YiqfiWsGlLAnso-xM="
     },
     {
-      "title": "abimultifamily.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFuMltQvyZYL7XqGKkke3Qla6D7RMIA4eYfp-I_Mv2MIwdTuc7akM3pcoSptIs02sqKQoaCkLrdzktx0DWrxh8l6wlkg5b1Y1WZ3PapH3RQPCM3pycCj6JyGsB9IeVHne8voKdkuQIlG6g9jeDCIWRor-Ns7eFAl3xSbeVjs9JTBYq61fF2Ph4PO4jDTD3r"
+      "title": "smartapartmentdata.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGZGELuHxz_1p09DpEj-ASYV7huBhgeFvVuNVt2J9vrIKoaXR70mlROjEqIBfoUuKXwMgPHyrs-QISni2GOrnUqrmFOvYOcFHQT-jEtGG9p-ruWi0pUfUBvhpH0crB5GJQ787kN36SJdV-bZfivGfKN55G6h82vXbq7cz4nK8tNkKwP55c="
+    },
+    {
+      "title": "realpage.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHU_FL6kAGU-75lB-U5OdzAvtQNjG9vnJdcJFH42GzhqAJoM4XyGRtBttVoIxDRirxcLAuA-T4hPm8JGNr70Db44-a-uF5bmLGP3LG4Ccz_O1y9UEoelQo5ycZ5v_MFKD0HvZYP_d6QDgWUi1wUELAa7SCFuPs8o8c="
+    },
+    {
+      "title": "apartmentiq.io",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEGomHlxbCkhfzLLuEiPtoPHnLMGYNUUMBp2oJ21VsAU84gwoMXOr50H9obrQDI-kVzoN-8hPGwW2LBTd33fUIDNRZRnMXezWRXRDYubBNE9VHRRc14XvYrf38IMGiPgSmurHk7B4_8E9JOKOioaA=="
     },
     {
       "title": "cushmanwakefield.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQESBi7gmtfaw9XIVTACWcTP5_4MGDWK87TdpmTgIe7UTO_faa5FsKlEIKXMz1ng6ZgDfRKQjSaeno6j-j2xHuwH6UYgZ9O09QOIdA1q-7PAgn1H34UOosUoA9MZ8KpRaiQJN9iw8HD0Bv3zdA4JWIhyVQO79yIiO54cTKVRL6iix6v43vcopGTceb6lyPDXNVicqMSnuTwHsvR6lcR1kpeRSAwVGA=="
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGWBVzh_X7UDVcYTgtzbttJlG2KZtWpnckqLdCHFgzpG7wpYXkyIo8shDf3PIqK2QV_vhC-VYm1oVDmdw7xvBDdVhHPZrgCzTnC5mmhPkfDsyvJw4cAlYC0clS664o3vrhuDkERUKjiUoLTcnUXxdvWKTOGpNR4wQLip99GB8aMR1eKJLIs-G_1_ebeevvMS-8vMUtGNAn7rk3cR33ZqA=="
+    },
+    {
+      "title": "prospect-by-buildout.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGI0OW4I3WT6ggpcA6KoK8DfECWLP11U1LE4D9xhZHesDNaAAqP-Fi4dwMzTeoEUvgC7t3j4mrRtYPL1xa_bEnr0pI-AvJh98BY8DqC9pJejmMQWctwQlBxrYM_Ud-Vq2o="
     }
   ]
 }

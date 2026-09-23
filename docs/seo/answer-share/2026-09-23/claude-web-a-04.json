@@ -3,67 +3,57 @@
   "engine_label": "Claude (Sonnet) via claude -p, web search on",
   "is_consumer_app": false,
   "set": "A",
-  "question": "How do I find multifamily construction pipeline data for Austin?",
-  "intent": "find-pipeline",
+  "question": "What apartment complexes are being built in San Antonio right now?",
+  "intent": "pipeline",
   "asked_on": "2026-09-23",
   "ok": true,
-  "answer": "Here's how people typically track the Austin multifamily construction pipeline, from free/public sources to paid commercial data platforms:\n\n## Paid commercial data platforms (industry standard)\n- **Yardi Matrix** \u2014 probably the most-cited source in Austin market reports; publishes free periodic Austin multifamily market reports (e.g., their July 2026 report) plus a paid subscription database with unit-level pipeline tracking (planned/under construction/lease-up).\n- **CoStar** \u2014 the dominant commercial real estate data platform; has the most granular project-level pipeline data (by submarket, developer, GC, delivery date) but requires an expensive subscription.\n- **RealPage Analytics** (via RealPage/AIR) \u2014 strong on lease-up and absorption data alongside construction pipeline; widely used by property managers and lenders.\n- **Cushman & Wakefield**, **CBRE**, **JLL**, and **Colliers** \u2014 the major brokerages all publish quarterly Austin multifamily capital markets/pipeline reports (often free as PDFs even if the underlying data platforms are paid).\n- **MMG Real Estate Advisors** \u2014 Austin-focused brokerage that publishes a well-regarded quarterly \"Austin Pipeline Report\" (free, e.g. their Q1 2026 report) with submarket-level under-construction and planned unit counts.\n- **Matthews** \u2014 also publishes a free quarterly Austin multifamily market report with pipeline stats.\n\n## Free / public sources\n- **City of Austin Development Services Department** \u2014 building permit data is public; the city's **Austin Build + Connect (AB+C)** portal and open-data permit dataset let you pull active/issued multifamily permits by address.\n- **City of Austin Open Data Portal** (data.austintexas.gov) \u2014 has an \"Issued Construction Permits\" dataset you can filter for multifamily.\n- **Austin Monitor** and local business press (**Austin Business Journal**, **Austin American-Statesman**) \u2014 often report on individual large projects before they show up in aggregated pipeline data.\n- **Downtown Austin Alliance** \u2014 tracks downtown-specific development pipeline (its own construction pipeline map/report).\n- **Austin Apartment Association** \u2014 publishes local market stats, sometimes pipeline-adjacent.\n\n## Practical approach\n1. For a quick, free snapshot: start with the MMG or Yardi Matrix quarterly Austin reports \u2014 both break out under-construction units by submarket.\n2. For project-by-project detail (specific addresses, developers, unit counts, delivery dates): CoStar is the gold standard if you or your organization has a license; RealPage is a good alternative, especially if you also want lease-up/absorption context.\n3. For permit-level granularity or to verify a specific project's status: cross-check against the City of Austin's open permit data.\n4. If you want something citable for public policy/journalism work rather than underwriting, the free brokerage reports (MMG, Matthews, C&W) are usually sufficient and are frequently cited in local press.\n\nSources:\n- [Austin, TX Multifamily Market Report Q1 2026 - Matthews](https://www.matthews.com/insights/austin-multifamily-q1-2026)\n- [Austin Q1 2026 Pipeline Report \u2013 MMG Real Estate Advisors](https://mmgrea.com/austin-q1-2026-pipeline-report/)\n- [Austin Multifamily Market Report \u2013 July 2026 - Yardi Matrix](https://www.yardimatrix.com/blog/austin-multifamily-market-report/)\n- [Commercial Real Estate Data | Yardi Matrix](https://www.yardimatrix.com/publications/)\n- [2026 multifamily reports: Download the latest from Yardi Matrix](https://www.yardi.com/blog/multifamily-reports-yardi-matrix-2026/)\n- [Austin, TX Multifamily Market Report Q4 2025 - Matthews](https://www.matthews.com/insights/austin-tx-multifamily-market-report-q4-2025)\n- [Top 10 Markets for Multifamily Deliveries in H1 2026 - Multi-Housing News](https://www.multihousingnews.com/top-markets-for-multifamily-construction/)\n- [New Apartments Being Built in Austin: 2026 Pipeline Guide](https://austinapartments.com/blog/new-apartments-being-built-in-austin/)",
+  "answer": "## San Antonio apartment construction \u2014 what's currently underway (as of September 2026)\n\nOverall, multifamily construction in San Antonio has slowed sharply \u2014 developers broke ground on only ~660 units in the first half of 2026, down from ~12,500 in 2022 and ~9,000 in 2023, as higher interest rates and construction costs cool the pipeline. Most of what's actually breaking ground right now skews affordable/workforce housing, with a smaller number of luxury/market-rate projects concentrated in high-demand areas like Pearl and The Rim.\n\n**Notable projects under construction or recently started:**\n- **Central at Commerce** \u2013 279-unit affordable housing complex, seven stories, at Commerce and Cherry St. downtown, near the proposed Spurs arena site (Project Marvel).\n- **NRP 301 Lofts** (NRP Group) \u2013 $44M, 382,486 sq ft, 12 three-story buildings on the far West Side (US-90); construction slated to start November 2026, finish July 2028.\n- **Creekbend Apartment Homes** \u2013 312 units (Pedcor Development + San Antonio Housing Trust PFC), on US-281 N at Borgfield Rd, 4% LIHTC affordable project, targeting completion December 2026.\n- **Summit at Crownridge** \u2013 299 units (Opportunity Home San Antonio + Journeyman Development Group) near The Rim/La Cantera, ~$63M, over half income-restricted.\n- **Oxbow Development's Pearl-area project** \u2013 eight-story, ~300-unit luxury complex at 1315 E. Elmira St., adding to the Pearl district's existing luxury stock (Cellars at Pearl, Can Plant, Southline, Coopers Row \u2014 901 luxury units total there).\n- **East Side affordable community** \u2013 new affordable apartment construction underway per KSAT reporting (March 2026).\n\n**Planned/upcoming:**\n- **Durango Apartments** (Laney Development) \u2013 proposed 17-story high-rise near the River Walk; construction expected to start early 2027.\n\n**Data sources worth bookmarking for ongoing tracking:**\n- MMG Real Estate Advisors' quarterly San Antonio multifamily pipeline reports\n- San Antonio Housing Trust's \"Active Projects\" page\n- Apartments.com / ApartmentGuide \"new construction\" filters for San Antonio (good for consumer-facing openings, less reliable for pipeline/planning stage)\n\nSources:\n- [Affordable downtown living moves in next to Project Marvel site](https://sanantonioreport.org/affordable-housing-new-units-near-downtown-san-antonio-project-marvel/)\n- [Laney Development Revives San Antonio Apartments](https://therealdeal.com/texas/2026/07/17/laney-development-plays-lazarus-with-durango-apartments/)\n- [Construction of new East Side affordable apartment community underway](https://www.ksat.com/news/local/2026/03/12/construction-of-new-east-side-affordable-apartment-community-underway/)\n- [National developer adds $44M multifamily project to stacked San Antonio pipeline](https://therealdeal.com/texas/2026/05/13/nrp-group-is-planning-san-antonio-44m-multifamily-project/)\n- [Active Projects - San Antonio Housing Trust](https://sahousingtrust.org/what-were-working-on/)\n- [Milestones loom in 2026 for major developments in San Antonio area](https://focusonsanantonio.com/milestones-loom-in-2026-for-major-developments-in-san-antonio-area/)\n- [Summit at Crownridge: Affordable Housing Near The Rim, San Antonio](https://hoodline.com/2026/09/san-antonio-s-rim-area-gets-299-unit-project-with-150-affordable-homes/)\n- [San Antonio Q2 2026 Pipeline Report \u2013 MMG Real Estate Advisors](https://mmgrea.com/san-antonio-q2-2026-pipeline-report/)\n- [Developers are building more SA apartments than ever, but it might not last](https://sanantonioreport.org/apartment-construction-inflation/)\n- [San Antonio apartment vacancies remain high. Luxury units are bouncing back.](https://finance.yahoo.com/real-estate/articles/san-antonio-apartment-vacancies-remain-100000565.html)",
   "brands": [
     {
-      "brand": "Yardi",
-      "first_at": 199,
-      "mentions": 9,
+      "brand": "MMG",
+      "first_at": 1886,
+      "mentions": 3,
       "rank": 1
     },
     {
-      "brand": "CoStar",
-      "first_at": 473,
-      "mentions": 2,
-      "rank": 2
-    },
-    {
-      "brand": "RealPage",
-      "first_at": 674,
-      "mentions": 3,
-      "rank": 3
-    },
-    {
-      "brand": "CBRE",
-      "first_at": 863,
-      "mentions": 1,
-      "rank": 4
-    },
-    {
       "brand": "Apartments.com",
-      "first_at": 3937,
+      "first_at": 2018,
       "mentions": 1,
-      "rank": 5
+      "rank": 2
     }
   ],
   "links": [
     {
       "title": "",
-      "url": "https://www.matthews.com/insights/austin-multifamily-q1-2026"
+      "url": "https://sanantonioreport.org/affordable-housing-new-units-near-downtown-san-antonio-project-marvel/"
     },
     {
       "title": "",
-      "url": "https://mmgrea.com/austin-q1-2026-pipeline-report/"
+      "url": "https://therealdeal.com/texas/2026/07/17/laney-development-plays-lazarus-with-durango-apartments/"
     },
     {
       "title": "",
-      "url": "https://www.yardimatrix.com/blog/austin-multifamily-market-report/"
+      "url": "https://www.ksat.com/news/local/2026/03/12/construction-of-new-east-side-affordable-apartment-community-underway/"
     },
     {
       "title": "",
-      "url": "https://www.yardi.com/blog/multifamily-reports-yardi-matrix-2026/"
+      "url": "https://sahousingtrust.org/what-were-working-on/"
     },
     {
       "title": "",
-      "url": "https://www.multihousingnews.com/top-markets-for-multifamily-construction/"
+      "url": "https://focusonsanantonio.com/milestones-loom-in-2026-for-major-developments-in-san-antonio-area/"
     },
     {
       "title": "",
-      "url": "https://austinapartments.com/blog/new-apartments-being-built-in-austin/"
+      "url": "https://hoodline.com/2026/09/san-antonio-s-rim-area-gets-299-unit-project-with-150-affordable-homes/"
+    },
+    {
+      "title": "",
+      "url": "https://mmgrea.com/san-antonio-q2-2026-pipeline-report/"
+    },
+    {
+      "title": "",
+      "url": "https://finance.yahoo.com/real-estate/articles/san-antonio-apartment-vacancies-remain-100000565.html"
     }
   ]
 }

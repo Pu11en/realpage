@@ -32,11 +32,9 @@ sample = load_module()
 # ---------------------------------------------------------------- the question bank
 
 
-def test_question_bank_has_both_sets_and_no_duplicates():
+def test_question_bank_is_all_lead_finding_and_has_no_duplicates():
     rows = list(csv.DictReader(QUESTIONS.open(encoding="utf-8")))
-    assert len(rows) >= 20
-    sets = {row["set"] for row in rows}
-    assert sets == {"A", "B"}, sets
+    assert len(rows) >= 25
     questions = [row["question"].strip().lower() for row in rows]
     assert len(questions) == len(set(questions)), "duplicate question in questions.csv"
     for row in rows:
@@ -44,38 +42,53 @@ def test_question_bank_has_both_sets_and_no_duplicates():
         assert row["intent"].strip(), f"no intent for: {row['question']}"
 
 
-def test_set_a_asks_about_finding_buildings_not_about_buying_software():
-    """Set A is where CraneSignal could plausibly be cited. If it drifts into vendor
-    comparisons it stops measuring anything about us."""
-    rows = [r for r in csv.DictReader(QUESTIONS.open(encoding="utf-8")) if r["set"] == "A"]
-    assert len(rows) >= 10
-    vendor_words = ("realpage", "yardi", "appfolio", "entrata", "buildium")
-    comparisons = [r for r in rows if any(w in r["question"].lower() for w in vendor_words)]
-    # Naming an incumbent as a point of comparison is fine; asking which to buy is Set B.
-    for row in comparisons:
-        assert "best" not in row["question"].lower(), row["question"]
+def test_no_question_asks_which_software_to_buy():
+    """CraneSignal sells lead data on buildings. "Best PMS for 200 units" measures
+    RealPage's market, not ours -- it came from the archived project and was removed
+    2026-09-23 on David's correction. If it creeps back, the report stops being about us.
+    """
+    rows = list(csv.DictReader(QUESTIONS.open(encoding="utf-8")))
+    for row in rows:
+        q = row["question"].lower()
+        buying = ("best" in q or "better" in q or "compare" in q or " vs " in q)
+        about_software = "software" in q or "system" in q or "platform" in q
+        if buying and about_software:
+            raise AssertionError(f"software-purchase question in the bank: {row['question']}")
+
+
+def test_the_bank_covers_the_intents_the_product_claims():
+    intents = {row["intent"] for row in csv.DictReader(QUESTIONS.open(encoding="utf-8"))}
+    for needed in ("pipeline", "sales", "prospecting", "free-data"):
+        assert needed in intents, f"no {needed} questions"
 
 
 # ---------------------------------------------------------------- reading an answer
 
 
 def test_brands_in_finds_names_and_ranks_them_by_first_appearance():
-    text = "Try CoStar first. Yardi Matrix is another option, and RealPage also has data."
+    text = "Try CoStar first. Yardi Matrix is another option, and Reonomy also has data."
     found = sample.brands_in(text)
     names = [item["brand"] for item in found]
-    assert names[:3] == ["CoStar", "Yardi", "RealPage"], names
+    assert names[:3] == ["CoStar", "Yardi Matrix", "Reonomy"], names
     assert [item["rank"] for item in found][:3] == [1, 2, 3]
 
 
 def test_brands_in_is_case_insensitive_and_counts_repeats():
-    found = sample.brands_in("realpage is big. RealPage again. Yardi once.")
+    found = sample.brands_in("costar is big. CoStar again. Reonomy once.")
     by_name = {item["brand"]: item for item in found}
-    assert by_name["RealPage"]["mentions"] == 2
-    assert by_name["Yardi"]["mentions"] == 1
+    assert by_name["CoStar"]["mentions"] == 2
+    assert by_name["Reonomy"]["mentions"] == 1
 
 
 def test_brands_in_returns_nothing_for_an_answer_that_names_nobody():
-    assert sample.brands_in("Check your local permit office.") == []
+    assert sample.brands_in("It depends on the building and the local market.") == []
+
+
+def test_go_read_the_records_yourself_is_counted_as_an_answer():
+    """An engine that says "check the appraisal district" is one step from citing a
+    site that has already read it. That is the opening, so it gets counted."""
+    found = sample.brands_in("Check your county appraisal district or the permit office.")
+    assert [item["brand"] for item in found] == ["Public records (DIY)"]
 
 
 def test_cranesignal_is_tracked_under_both_spellings():
@@ -109,7 +122,7 @@ def test_urls_in_dedupes_by_host_and_strips_trailing_punctuation():
 
 @pytest.fixture
 def run_dir(tmp_path):
-    """A saved run with a known shape: CraneSignal absent from A, vendors present in B."""
+    """A small saved run with a known shape: CraneSignal absent, competitors present."""
     records = [
         {
             "engine": "gemini", "set": "A", "ok": True,
@@ -126,15 +139,15 @@ def run_dir(tmp_path):
             "links": [{"title": "yardimatrix.com", "url": "https://yardimatrix.com/a"}],
         },
         {
-            "engine": "gemini", "set": "B", "ok": True,
-            "question": "What is the best property management software?",
-            "answer": "RealPage, Yardi and AppFolio lead the category.",
-            "brands": sample.brands_in("RealPage, Yardi and AppFolio lead the category."),
-            "links": [{"title": "realpage.com", "url": "https://realpage.com/x"}],
+            "engine": "gemini", "set": "A", "ok": True,
+            "question": "How can I find out who bought an apartment complex?",
+            "answer": "Reonomy and the county appraisal district both show the buyer.",
+            "brands": sample.brands_in("Reonomy and the county appraisal district both show the buyer."),
+            "links": [{"title": "reonomy.com", "url": "https://reonomy.com/x"}],
         },
         {
-            "engine": "claude-web", "set": "B", "ok": False,
-            "question": "What is the best property management software?",
+            "engine": "claude-web", "set": "A", "ok": False,
+            "question": "How can I find out who bought an apartment complex?",
             "error": "timed out after 300s",
         },
     ]
@@ -148,7 +161,7 @@ def run_dir(tmp_path):
 def test_report_states_the_cranesignal_count_plainly(run_dir):
     rows = list(csv.DictReader(QUESTIONS.open(encoding="utf-8")))
     report = sample.build_report(run_dir, rows)
-    assert "**CraneSignal named in 0 of 2 Set A answers.**" in report
+    assert "**CraneSignal is named in 0 of 3 answers.**" in report
 
 
 def test_report_labels_the_engines_as_not_the_consumer_apps(run_dir):
@@ -161,7 +174,7 @@ def test_report_lists_which_sites_were_cited(run_dir):
     rows = list(csv.DictReader(QUESTIONS.open(encoding="utf-8")))
     report = sample.build_report(run_dir, rows)
     assert "Which sites the engines actually read" in report
-    assert "costar.com" in report and "realpage.com" in report
+    assert "costar.com" in report and "reonomy.com" in report
     assert "vertexaisearch" not in report, "redirect hosts leaked into the report"
 
 
@@ -191,7 +204,6 @@ def test_the_committed_baseline_run_is_complete_and_honest():
     assert len(records) >= 40, f"only {len(records)} answers saved"
     assert all(r.get("ok") for r in records), "the committed baseline contains failures"
     assert all(r["is_consumer_app"] is False for r in records)
-    set_a = [r for r in records if r["set"] == "A"]
-    named = [r for r in set_a if any(b["brand"] == "CraneSignal" for b in r.get("brands", []))]
+    named = [r for r in records if any(b["brand"] == "CraneSignal" for b in r.get("brands", []))]
     # Not an aspiration: if this ever fails, the SEO work has started to land.
-    assert len(named) == 0, f"CraneSignal now appears in {len(named)} Set A answers -- update the baseline note"
+    assert len(named) == 0, f"CraneSignal now appears in {len(named)} answers -- update the baseline note"

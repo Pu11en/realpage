@@ -3,93 +3,263 @@
   "engine_label": "Gemini (gemini-2.5-flash) via API, Google Search grounding on",
   "is_consumer_app": false,
   "set": "A",
-  "question": "Which apartment complexes in Texas sold in 2025?",
-  "intent": "find-sales",
+  "question": "How do I find multifamily construction pipeline data for Austin?",
+  "intent": "pipeline",
   "asked_on": "2026-09-23",
   "ok": true,
-  "answer": "Several apartment complexes across Texas were sold in 2025, reflecting a dynamic multifamily market. Notable transactions occurred in major metropolitan areas such as Houston and other regions of the state.\n\nSpecific apartment complex sales in Texas during 2025 include:\n*   Praedium Group acquired the 312-unit Pearl Woodlake in West Houston for $67.7 million.\n*   Berkshire Residential purchased The Ivy, a 297-unit Class A asset in River Oaks, Houston, through an off-market deal.\n*   Tilden Properties closed on The Lennox, a 236-unit community in Spring Branch, Houston, for $41.3 million.\n*   GVA Management expanded its portfolio with the acquisition of The Ella, a 210-unit asset in Northwest Houston.\n*   Altus Equity Group acquired a portfolio totaling 1,225 units in Texas, including the Odessa Multifamily Portfolio, which boasted a 92% occupancy rate and a projected year-one yield exceeding 10%.\n\nThe Multifamily Group (TMG) was involved in several transactions across Texas in 2025:\n*   TMG negotiated the sale of a 54-unit apartment building in South Fort Worth.\n*   TMG arranged the sale of a 168-unit complex in Lake Jackson, Texas.\n*   TMG negotiated the sale of the 41-unit Willow Park Apartments in Abilene, Texas.\n*   TMG negotiated the sale of the 43-unit Victoria Place Apartments in Southwest Fort Worth.\n*   TMG negotiated the sale of the 104-unit Highland Square Apartments in Alvin, Texas.\n*   TMG negotiated the sale of the 100-unit Vistas Apartments in Boerne, Texas.\n*   TMG arranged the sale of a 52-unit apartment complex in Paris, Texas.\n\nThe Texas commercial real estate market, including multifamily properties, generated $203.4 billion in 2025. The Houston multifamily market, for example, saw a sales volume of $358 million in Q2 2025, with an average market sale price of $149,000 per unit, according to CoStar Group data. Investor focus in Houston shifted towards stabilized, higher-quality Class A and B assets, which accounted for 60% of all multifamily transactions in Q2 2025. Overall, the Texas multifamily market experienced an oversupply of units, with deliveries exceeding net absorption, leading to softer rent growth and increased vacancy rates in many markets throughout 2025. However, some markets like Dallas-Fort Worth and Houston showed signs of stabilization with absorption beginning to outpace deliveries by the end of 2025.\n\nSources:\n*   CoStar Group\n*   Matthews Real Estate Investment Services\n*   Multifamily Dive\n*   REBusinessOnline\n*   Terrydale Capital\n*   The Multifamily Group (TMG)\n*   Texas Real Estate Research Center\n*   Biscred",
+  "answer": "To find multifamily construction pipeline data for Austin, you can consult several specialized real estate data providers and market research firms that track development activity in the area. These sources typically offer detailed reports, interactive tools, and forecasts on units under construction, planned projects, and market trends.\n\nHere are some specific companies and data sources:\n\n*   **Yardi Matrix** is a prominent provider of multifamily market intelligence. They offer Austin multifamily market reports, supply forecasts, and track projects in various development phases, including planning, prospective, and under construction. This allows users to assess future competitive inventory and anticipate rent pressure.\n*   **RealPage** provides extensive Austin market analytics, insights on supply trends, and reports detailing apartment completions and units currently under construction. Their data can show how new deliveries impact market fundamentals.\n*   **CoStar Group** (and its Apartments.com platform) is a leading source for commercial real estate data, analytics, and news. They publish updates on the U.S. multifamily market momentum index, which includes changes in the under-construction pipeline relative to existing inventory.\n*   **MMG Real Estate Advisors** offers interactive multifamily construction pipeline reports specifically for Austin. These reports provide insights into forecasted delivery dates and the status of pipeline projects.\n*   **Matthews Real Estate Investment Services** publishes Austin Multifamily Market Reports that include data on units under construction and units delivered within the market.\n*   **Northmarq** provides Austin multifamily market reports that include forecasts for future deliveries and observations on the shrinking construction pipeline in the area.\n*   **Cushman & Wakefield** has published Austin Multifamily Market Reports that include information on units under construction.\n\nOther resources that may offer relevant data or services include:\n\n*   **Moody's CRE** offers a fully-researched database of commercial real estate data in Austin, which could include multifamily development information.\n*   **O'Connor Property Tax Reduction Experts** provides access to comprehensive real estate data across major Texas metropolitan areas, including Austin apartment data, rental rates, occupancy rates, and amenities.\n*   **Berkadia** publishes multifamily market reports that include details on the market pipeline for Austin.\n\nBy utilizing the reports and platforms offered by these companies, you can gather comprehensive data on the Austin multifamily construction pipeline, including current projects, anticipated deliveries, and broader market trends.",
   "sources": [
     {
+      "title": "yardimatrix.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGcseatlpgzf5A0iNq_NunnwcHzthcC-1balC1ZAqNqHmFN_ENPpmfp_P-czsfMbk-Er0n5GJsUZq31uWaCXXoHCUoPDNgxNzRle_XU6ah9JMauTv8AntCQpjmShQVQZpRjm21aSuON13gr4bkjmDeTK5rEEmUrwd5pRe4onQ=="
+    },
+    {
+      "title": "credaily.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFIoRCd8-VauCtYiS0ggEZ4Om1IzWhkL608DoSDgellx4VGz6CC7dX8jG99gHujLZxWV8QHf2MuoDTKowYwlBT6Ebm5SO27rx72Syk3Be7xH9BNamp3Zgql4daXDRp-ga-0HJjBFskhmFAeJmjjx79boJkTGW6DwMe-h3AbjXjBgbOksUKvM1hs_6lZOERDcKwRRsTZbg=="
+    },
+    {
+      "title": "yardimatrix.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEFJyf2REN98oa_jsjqKqgVaFDno0SimfdzGuSkGY6w0BfMW_OMIPb2AO0tVTIup1ZJCD4GdLrCnc5I7GyXrCr2PZKpW10X5W6c6KUMTuco0-5rth3pjqIg0jD46RbZljwRAXpQX2lwBiE-kBLZJyaMmPLDvHvCo-l4epH2q0kDobMstYEwHMs="
+    },
+    {
+      "title": "yardimatrix.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEZaI-ukutXB6lXEu45psCaGVOTR04Wm302gGoaPNFrPYaJeKhyrdxa6eRewo3Etxd9YjIGGCAw-wR_aV5haumKa3ln68GCtxQC0gmex0z0S-POl6gdUY2b7wFp7K7qhYTKDbQXg7dUIlqXYViu28W4BLg="
+    },
+    {
+      "title": "yardimatrix.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEMzPuBUiP1mePMPFlydz_lEfakHqwryNUHXqmYPDeTuymO6cFnTyueF7Z7sRY1jAkUcBs892fOo1SOlRXXVqP4vMBX7Z4LD6PfZGZjuuCZhq0uWXUjTrh3TRcrzX-D2NhCVs_7"
+    },
+    {
+      "title": "realpage.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFmOyfmG0T6b5QyIV3nni3-SQURX3xD3DA8GiZFMLa8xoBPiJgAJjUhC6f9hBNmsGTsUWlt-XXTxn2Z0sDSHpBMM-29r3TQLlB_jfvZR1zZ0P3tyU6xTyN_HZIC1srpODDp-1rOWqh76lM7vsgJGtqxdUJ30S4x_SACU8q8"
+    },
+    {
+      "title": "realpage.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEeuqMILJGF0tTIXmidljqUK3am7qWcHxVlFop1GbL1Y5_q0Bo2ctNhPVe7K1kEQDWzEY2I7pbnNbsf__LdzWghYpdpLM0MG1X63F3C6jG9jrz1FqyNpleRuNN-gysnJmrsDUtg4n7X2cXXLJJjKRan3PR7M3_oxbzGpatUhUK8Y3s="
+    },
+    {
+      "title": "realpage.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGmAb9sZa-MXpy8XemVbJeS3heRaJAX3yxtCCCgMjDwlYVZ73FEhQtPRN6bck1syZSbkQR8KpiTfZIhVd_C0wK_idYNcTWfY5aXFUAodvaJn-ZOqs4LbSq0N0gM3j8TISxpXUYM4isgKwJlOj43ZYpt04wjhW0lY046SuniLQ=="
+    },
+    {
+      "title": "realpage.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGgDKfoNjO52EqAdTHMheTS-g2bUVIuDdgiygx4A8chN4RntXPWrBwnBJ1lbhH6FmsVAKJGGsQrwkpFQPDGKYEssA00KgcdrFlwgKlHL8s0qbHqiCXY-KnwiJADzjCdONaeOG8vCXExngsBFzEHd3hiiN3rVZQ4KW7S"
+    },
+    {
+      "title": "realpage.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEXLltpSxBUns8vSWWxykopdIi6pDk0lpTkjU1pYafUtuhrUkB2Fgp85gR9vOSNzCEfZFxkyjuwHr8S1TSgvVdQdDsRUWcnHQA5zVCup9DmZGhKXAernvKU0jl1UkujzAdZTA41-R9b8YVVAHWCIcSh"
+    },
+    {
       "title": "matthews.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFTXnVIrC-2tM9IjIlpPm66lbvK5rfsVu9XpD7twc9HpSFB2F1W56T1LNTZd-LcMeMRlUKugIduMfOcSRX84oYhDKeqUfzB7DXgYOV8BKsXiF9DNdLjUnDH9t8NEnKEhs0-zH8_FCgjuxPxRq7dq3O1QZUFYoCWEWo="
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGyh7LilSdlP7mrrEedxWXwWguVmanJic91Y4Ooyx5wg_MTHQulxwQkPeyZgWbWHZp5UUoPQfovxjv0ir7F6H1RPJFcPW7qmG17Iky6p2Tjv16aOpQlnfLltgFYQ2v8q1j0xeS7rZ0KtcwEXhxexY22ur6Y-FEkicttMSF99HjLJIRM8B8wFvbZ"
     },
     {
-      "title": "multifamilydive.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF-rDctlX-HLCTB--1n9CMUR8dKqFoqWLA-w48jMfCCyXyDMJ-S8hUqHhQ3eQNydDVPaZHQITqlhYZSbuoPItPS37Nb0EToRHLJAP-4wiCIuoEVJUG9LHh5ULyF08qu_Ex8SKAyZeIWX2CQQB_KGE5YrTtXSf-q6oLLxvhBk9k3xJIi0Y87sEQrj3VExbQAJpGtqDaSkD3EQ4ekmj-EGuCu"
+      "title": "costargroup.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHcS7xhuxuATmQaZ7q70dMnnTotbYrf_3DYCb38yogH7r-yosNAI0miXV45U7ui0CWr7q4gTbZ7qbKCHzOJeOiZ0CgCcLCUAOKDxF3gPbMiv0W9tFQ5hpTdOCBO1W9V_9HLxiW1dWFJnNZQDlbDso7wX5zE75ZndyfHGT6kXCTF92fQCzhubheH8jTuS9_uB5uxm1N9IAw0ig9qkRFTmnGlU3PQ5QC3qwlS93EPmTuh7w6BHA=="
     },
     {
-      "title": "multifamilygrp.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEag8pXcAreOVkXYHIcmyHf4S2R3RAvb2C5luizZIc_5V8Ea-CVcjb2AYXrQ0MjA9MhvAFwSJHiRA4tWUSWRPYHchTj988m1oN7CND5FEJCoeDCOenE1vNMEvA="
+      "title": "costar.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEwsQteKGDUNR29JR-0RoHrKAPe1-8r4DsW7rzFx8vaR4WXmX5kAh9gPRasvscnYu_IgMIlzBijdOXbfrCjuLcVKUaIvbAZnJ-esZwvT_M_UMge6Cq8foUbbR1uMcidbnAeC942f5OnhkjlMAyeluSOI8ha9Hdix1XZZM138AAVU6xbXmT6i1QkpgQFJ2tJvocYD2ptEAxMAkcMAPJkEeK-tvMkafcSxCUR54HtvEz_71TsGrem20SRSBYD12-CG7RHRHV-W3W8NNxfnvNmSuI="
     },
     {
-      "title": "biscred.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEN7LflE6pUVKgdcOx8AexLT2UnfMMReYfKb37BD3dKSgaStvs1I6FGQe0qqwyiuCFD7aUAXu7-ZEtsppMEKeiq-DCA6hszM5iBSm3ElpfJlgW5eas1DSF5AFloOKiW"
+      "title": "mmgrea.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGIxfBlnPxn226uBQGoOPXyztwVnf-6SnwyS0Hgg4BjoWXuQDm0Ak7RWCkbnVvBZOEaQDFAy3mbLQfAXbLNDdwnfiBO6JfzTtzpB6YFZWI3TVPCn4PQW2vAw5-ukyvFYzh0hVCwCgk871sXI2qP"
     },
     {
-      "title": "tamu.edu",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGbuJRIWqMukFw0NHPK-eOS7m7bkNF5BrYR84H8l9WrOTzvd2wzpBHR6aZxyBFOd4efp2zU5OBmbfwwNWMjG4UvZgwhXeurJhUk8pqAaEFP9UePacq2A69ZClkJkEF4PLH0wpiubQTCLO9-RBzAXuFwDw=="
+      "title": "mmgrea.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFA6mcaKg0LhXsMFzKrbbq6r_qK8l6gmQKDCEHhrN244RCoWeTMg_L3LyFFjUDr4ucHZYDW9nM0fOus4GjS1MGHF27Pq3XB2A0-68p7oalAVgsmtuxDgQV4rgBEFfgU8ie-vXo="
     },
     {
-      "title": "terrydalecapital.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG2DwlwYsG8XEFzgqT5m0SPakNKenaN3FzW2Ntu3vk5WJP-FFCWNJ9XTqrp_8pk8x6AFylX5FR8S5XjLeTmMQ2ojwZpFmlfiaofeZpmlvOZq0vaD4hTQFLne1gc8mmFVvOvH8EC2imUok1QvBpyBw7QNPjic6kgWVvyBBAG6AiT0BTatKpNrrpxpU9d"
+      "title": "mmgrea.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEjbXXj45ctImMQOHCYstLlzejNBezzsdWdN6UhNQ8E7m3Rghwq7ymIKFPL9UowRtSqfST8-rmkykGHBQ9I8NGoaYrqgZ8swHWtSQCSxNNf1qX5HTi-UqLg0MEWPD56Xi82XaZqay7M3Ob1iuVl"
     },
     {
-      "title": "apartments.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFJ5CvqQS3MK91raAsMI0tIi3T68qX1E2rn4KtbyuA0X_Gy50N7i9QQ3vKmh030bYI9WWA-4PWi8JKeHplM9mN3KSt63N00KHJ-PMtU3GnIYEDnqasUdl23n8OM3aIUB52gLFQwUYEIGXCfXLnYHmjW_xKIW8VsAQvEEP45H6-qmvp-vtq-Iw=="
+      "title": "mmgrea.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFo8z5qqUf_KHeJm8nDYqVAtY4VD8hVWyZZc8DRg9kvUlO-FxM2FBgbbNvCplOs_1x5t0Ck-oa_IFrteEI9mLFkZVq33bY82QqwFJ--2PMfmQeJ-rZaMWOnayTeXodqQxsBTAup21uhrjgYTgpQzwMYCKB1ASo="
     },
     {
-      "title": "tamu.edu",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHmpOZEnEpKfoNAsmtodyVxrLX8neM81CQU4ET-8GjJusnp2Wj8rOULaz1xfKnHwqfg5WPA4RQJ2XKyPLA859_qPFagHoSFfcsvtnt4NaTfZkdIDHZb5p0yVT7HQSslcUrh4WljsXDvLGM1J_dzZjrRLAKuRjKu7tXgxw=="
+      "title": "matthews.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF2_tPzhbQ3MfdM1L51QVhc15ES2Uk6pJS5OOBWE2Ug1QpFkhk7ptet2YOFE0cFQTGwGvDOxplv_hIPTk6GoSi88LNa9ks6UBYIy3ztsDkB0ewUkbwcCQglkXLdmuZxUnWAw2JdK50UPS7Z04GezatxOJHzIvK0mkopdQ=="
     },
     {
-      "title": "tamu.edu",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGInJSw1fpapxZhwWnwQDN7LlpINzzDAGICMR0BXUDlmzUNZDHDy--ldGpnzH8auEFRxKeB3XJGLk4vP1w5lk0mUh3S1AInQMFjPfxHr6e6mfzd_dT4YOO17dR4NvQt3HtG-KVGnYcH_Jx2UqtwedY="
+      "title": "matthews.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEQiCD_4qcJq4Ol939mmZ1ia750hgjFd0qXQV3k9Dp6e5VXy6-deYT9OmjtaBTw3BAESU00s9I-Sq1HEqfDI8uOlxiUSwsA0SlNHrdrYSmFI9xZTOppWnzQoIMP7xuBG5Q9JVEbEJlV3tyZXaBHpHwZnZPvNpkWGg=="
+    },
+    {
+      "title": "northmarq.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGEZd5YRQWpsk-n-TAvYN0Q5UPWqdnuO6a2PuMqrd_jp_m38Oytis1ZsF6cETyJscVR4BSGcP3Jb7NAwIa_4NEWyPUMbzfJ_s8U5hHIMw0MPMsnPTXfBnp_DG3edFsgUGsyu0lbcyTOC5TpY_lPTuqr-4A2t0lJ9Okw9peeee26d7vbSQF9_EJzfshiqyCMwQzpB4FtabKPWUt5kEw="
+    },
+    {
+      "title": "cushmanwakefield.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEiBtllGl9jCMs_WhZSBormQMEo9qBIerf1InCc6mizmS7nDvlRSSuTBpGHecTBqjj6hZMXklTVPOe1N3pUHJQyBw8p-zF-Q8Ggc8yr8CVhklWLuoBYD5_KuMW6B6PhuQwyu97ECQms-gwU2eBDro8rggXTi_LRjfxrW6d-3YYqlgN52v8r8U1kyPLPl73oRkEdsDKf4GKGQ9bD-OPBKG3SjQk04g-cNDJgrynITcckAOiaDSc1gm2e8UYu70Fqcet_knyEvu7m7vPOBidEI8EkVb5dqEaEMfoDnjRWC1v3nZRmxC2SryyVo9z4OP-2DmSA"
+    },
+    {
+      "title": "atxre.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFhPVJlht3ZjZkWs0-BVXFhT41tu45I7OmZv2Nn8-9Wbn9PHaUL8-TO-FhDLoqyDtDPLkQARDdtr4pnq8SRt6xe-jXenZkDZ0AUihdbgK7Z7ABPVtlF6tmbYwDSyUnApYVmErGo0uig3AeVJRXMrCKCZH8Q4wZ6vKPXJw=="
+    },
+    {
+      "title": "moodyscre.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEnzmdbGGHAC_mSt6_8Jdp6lZCojYnah15HdZnXTnJGcXeO-kssMenpHjNCI-1935hgJfrLJ7BeoWkUbeVdYNA34cplanHHoTsgAhJpbVATJCLimmbwJIPvTgJ37fQ-6S2ZTQ=="
+    },
+    {
+      "title": "poconnor.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGfUYYbQKNzIt6ui2T95XyVlj3NrotpO6qBG_4YIWT6bC7w2JjB71MjmyVovMXxMYObMRk1-HH3NUjg6vpXy719NCqFKM00L99e8tmO_NbmV--phrl7nV3PtCOI0ddEjy1XUkps-DwMrnVM_eRSwQ=="
+    },
+    {
+      "title": "berkadia.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGh36bjzNbtkBzQnbIBnl3RpYuEC1ZzG5hhIQvdtZN1iCN1qyYkbYDKj3FIlYCDo7ljW2WsmfdrVlXO1RjB_bRPvQj6JT1epUQdJo4HgCYTYwOiChxiMuoH3mxgIJJg1lMCA2h1e-pHy6YgG7nPloqKHUJH9M_fMuMInyDZLrZS0nfSFT3S4ncbvyyxf5VBxmSBfbt-BkPA0-Znm1GhB8ak5gvxq_I="
     }
   ],
   "brands": [
     {
-      "brand": "CoStar",
-      "first_at": 1843,
-      "mentions": 2,
+      "brand": "Yardi Matrix",
+      "first_at": 399,
+      "mentions": 1,
       "rank": 1
+    },
+    {
+      "brand": "RealPage",
+      "first_at": 738,
+      "mentions": 1,
+      "rank": 2
+    },
+    {
+      "brand": "CoStar",
+      "first_at": 977,
+      "mentions": 1,
+      "rank": 3
+    },
+    {
+      "brand": "Apartments.com",
+      "first_at": 1001,
+      "mentions": 1,
+      "rank": 4
+    },
+    {
+      "brand": "MMG",
+      "first_at": 1264,
+      "mentions": 1,
+      "rank": 5
+    },
+    {
+      "brand": "Northmarq",
+      "first_at": 1660,
+      "mentions": 1,
+      "rank": 6
+    },
+    {
+      "brand": "Cushman & Wakefield",
+      "first_at": 1835,
+      "mentions": 1,
+      "rank": 7
+    },
+    {
+      "brand": "Berkadia",
+      "first_at": 2403,
+      "mentions": 1,
+      "rank": 8
     }
   ],
   "links": [
     {
+      "title": "yardimatrix.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGcseatlpgzf5A0iNq_NunnwcHzthcC-1balC1ZAqNqHmFN_ENPpmfp_P-czsfMbk-Er0n5GJsUZq31uWaCXXoHCUoPDNgxNzRle_XU6ah9JMauTv8AntCQpjmShQVQZpRjm21aSuON13gr4bkjmDeTK5rEEmUrwd5pRe4onQ=="
+    },
+    {
+      "title": "credaily.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFIoRCd8-VauCtYiS0ggEZ4Om1IzWhkL608DoSDgellx4VGz6CC7dX8jG99gHujLZxWV8QHf2MuoDTKowYwlBT6Ebm5SO27rx72Syk3Be7xH9BNamp3Zgql4daXDRp-ga-0HJjBFskhmFAeJmjjx79boJkTGW6DwMe-h3AbjXjBgbOksUKvM1hs_6lZOERDcKwRRsTZbg=="
+    },
+    {
+      "title": "yardimatrix.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEFJyf2REN98oa_jsjqKqgVaFDno0SimfdzGuSkGY6w0BfMW_OMIPb2AO0tVTIup1ZJCD4GdLrCnc5I7GyXrCr2PZKpW10X5W6c6KUMTuco0-5rth3pjqIg0jD46RbZljwRAXpQX2lwBiE-kBLZJyaMmPLDvHvCo-l4epH2q0kDobMstYEwHMs="
+    },
+    {
+      "title": "yardimatrix.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEZaI-ukutXB6lXEu45psCaGVOTR04Wm302gGoaPNFrPYaJeKhyrdxa6eRewo3Etxd9YjIGGCAw-wR_aV5haumKa3ln68GCtxQC0gmex0z0S-POl6gdUY2b7wFp7K7qhYTKDbQXg7dUIlqXYViu28W4BLg="
+    },
+    {
+      "title": "yardimatrix.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEMzPuBUiP1mePMPFlydz_lEfakHqwryNUHXqmYPDeTuymO6cFnTyueF7Z7sRY1jAkUcBs892fOo1SOlRXXVqP4vMBX7Z4LD6PfZGZjuuCZhq0uWXUjTrh3TRcrzX-D2NhCVs_7"
+    },
+    {
+      "title": "realpage.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFmOyfmG0T6b5QyIV3nni3-SQURX3xD3DA8GiZFMLa8xoBPiJgAJjUhC6f9hBNmsGTsUWlt-XXTxn2Z0sDSHpBMM-29r3TQLlB_jfvZR1zZ0P3tyU6xTyN_HZIC1srpODDp-1rOWqh76lM7vsgJGtqxdUJ30S4x_SACU8q8"
+    },
+    {
+      "title": "realpage.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEeuqMILJGF0tTIXmidljqUK3am7qWcHxVlFop1GbL1Y5_q0Bo2ctNhPVe7K1kEQDWzEY2I7pbnNbsf__LdzWghYpdpLM0MG1X63F3C6jG9jrz1FqyNpleRuNN-gysnJmrsDUtg4n7X2cXXLJJjKRan3PR7M3_oxbzGpatUhUK8Y3s="
+    },
+    {
+      "title": "realpage.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGmAb9sZa-MXpy8XemVbJeS3heRaJAX3yxtCCCgMjDwlYVZ73FEhQtPRN6bck1syZSbkQR8KpiTfZIhVd_C0wK_idYNcTWfY5aXFUAodvaJn-ZOqs4LbSq0N0gM3j8TISxpXUYM4isgKwJlOj43ZYpt04wjhW0lY046SuniLQ=="
+    },
+    {
+      "title": "realpage.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGgDKfoNjO52EqAdTHMheTS-g2bUVIuDdgiygx4A8chN4RntXPWrBwnBJ1lbhH6FmsVAKJGGsQrwkpFQPDGKYEssA00KgcdrFlwgKlHL8s0qbHqiCXY-KnwiJADzjCdONaeOG8vCXExngsBFzEHd3hiiN3rVZQ4KW7S"
+    },
+    {
+      "title": "realpage.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEXLltpSxBUns8vSWWxykopdIi6pDk0lpTkjU1pYafUtuhrUkB2Fgp85gR9vOSNzCEfZFxkyjuwHr8S1TSgvVdQdDsRUWcnHQA5zVCup9DmZGhKXAernvKU0jl1UkujzAdZTA41-R9b8YVVAHWCIcSh"
+    },
+    {
       "title": "matthews.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFTXnVIrC-2tM9IjIlpPm66lbvK5rfsVu9XpD7twc9HpSFB2F1W56T1LNTZd-LcMeMRlUKugIduMfOcSRX84oYhDKeqUfzB7DXgYOV8BKsXiF9DNdLjUnDH9t8NEnKEhs0-zH8_FCgjuxPxRq7dq3O1QZUFYoCWEWo="
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGyh7LilSdlP7mrrEedxWXwWguVmanJic91Y4Ooyx5wg_MTHQulxwQkPeyZgWbWHZp5UUoPQfovxjv0ir7F6H1RPJFcPW7qmG17Iky6p2Tjv16aOpQlnfLltgFYQ2v8q1j0xeS7rZ0KtcwEXhxexY22ur6Y-FEkicttMSF99HjLJIRM8B8wFvbZ"
     },
     {
-      "title": "multifamilydive.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF-rDctlX-HLCTB--1n9CMUR8dKqFoqWLA-w48jMfCCyXyDMJ-S8hUqHhQ3eQNydDVPaZHQITqlhYZSbuoPItPS37Nb0EToRHLJAP-4wiCIuoEVJUG9LHh5ULyF08qu_Ex8SKAyZeIWX2CQQB_KGE5YrTtXSf-q6oLLxvhBk9k3xJIi0Y87sEQrj3VExbQAJpGtqDaSkD3EQ4ekmj-EGuCu"
+      "title": "costargroup.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHcS7xhuxuATmQaZ7q70dMnnTotbYrf_3DYCb38yogH7r-yosNAI0miXV45U7ui0CWr7q4gTbZ7qbKCHzOJeOiZ0CgCcLCUAOKDxF3gPbMiv0W9tFQ5hpTdOCBO1W9V_9HLxiW1dWFJnNZQDlbDso7wX5zE75ZndyfHGT6kXCTF92fQCzhubheH8jTuS9_uB5uxm1N9IAw0ig9qkRFTmnGlU3PQ5QC3qwlS93EPmTuh7w6BHA=="
     },
     {
-      "title": "multifamilygrp.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEag8pXcAreOVkXYHIcmyHf4S2R3RAvb2C5luizZIc_5V8Ea-CVcjb2AYXrQ0MjA9MhvAFwSJHiRA4tWUSWRPYHchTj988m1oN7CND5FEJCoeDCOenE1vNMEvA="
+      "title": "costar.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEwsQteKGDUNR29JR-0RoHrKAPe1-8r4DsW7rzFx8vaR4WXmX5kAh9gPRasvscnYu_IgMIlzBijdOXbfrCjuLcVKUaIvbAZnJ-esZwvT_M_UMge6Cq8foUbbR1uMcidbnAeC942f5OnhkjlMAyeluSOI8ha9Hdix1XZZM138AAVU6xbXmT6i1QkpgQFJ2tJvocYD2ptEAxMAkcMAPJkEeK-tvMkafcSxCUR54HtvEz_71TsGrem20SRSBYD12-CG7RHRHV-W3W8NNxfnvNmSuI="
     },
     {
-      "title": "biscred.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEN7LflE6pUVKgdcOx8AexLT2UnfMMReYfKb37BD3dKSgaStvs1I6FGQe0qqwyiuCFD7aUAXu7-ZEtsppMEKeiq-DCA6hszM5iBSm3ElpfJlgW5eas1DSF5AFloOKiW"
+      "title": "mmgrea.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGIxfBlnPxn226uBQGoOPXyztwVnf-6SnwyS0Hgg4BjoWXuQDm0Ak7RWCkbnVvBZOEaQDFAy3mbLQfAXbLNDdwnfiBO6JfzTtzpB6YFZWI3TVPCn4PQW2vAw5-ukyvFYzh0hVCwCgk871sXI2qP"
     },
     {
-      "title": "tamu.edu",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGbuJRIWqMukFw0NHPK-eOS7m7bkNF5BrYR84H8l9WrOTzvd2wzpBHR6aZxyBFOd4efp2zU5OBmbfwwNWMjG4UvZgwhXeurJhUk8pqAaEFP9UePacq2A69ZClkJkEF4PLH0wpiubQTCLO9-RBzAXuFwDw=="
+      "title": "mmgrea.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFA6mcaKg0LhXsMFzKrbbq6r_qK8l6gmQKDCEHhrN244RCoWeTMg_L3LyFFjUDr4ucHZYDW9nM0fOus4GjS1MGHF27Pq3XB2A0-68p7oalAVgsmtuxDgQV4rgBEFfgU8ie-vXo="
     },
     {
-      "title": "terrydalecapital.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG2DwlwYsG8XEFzgqT5m0SPakNKenaN3FzW2Ntu3vk5WJP-FFCWNJ9XTqrp_8pk8x6AFylX5FR8S5XjLeTmMQ2ojwZpFmlfiaofeZpmlvOZq0vaD4hTQFLne1gc8mmFVvOvH8EC2imUok1QvBpyBw7QNPjic6kgWVvyBBAG6AiT0BTatKpNrrpxpU9d"
+      "title": "mmgrea.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEjbXXj45ctImMQOHCYstLlzejNBezzsdWdN6UhNQ8E7m3Rghwq7ymIKFPL9UowRtSqfST8-rmkykGHBQ9I8NGoaYrqgZ8swHWtSQCSxNNf1qX5HTi-UqLg0MEWPD56Xi82XaZqay7M3Ob1iuVl"
     },
     {
-      "title": "apartments.com",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFJ5CvqQS3MK91raAsMI0tIi3T68qX1E2rn4KtbyuA0X_Gy50N7i9QQ3vKmh030bYI9WWA-4PWi8JKeHplM9mN3KSt63N00KHJ-PMtU3GnIYEDnqasUdl23n8OM3aIUB52gLFQwUYEIGXCfXLnYHmjW_xKIW8VsAQvEEP45H6-qmvp-vtq-Iw=="
+      "title": "mmgrea.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFo8z5qqUf_KHeJm8nDYqVAtY4VD8hVWyZZc8DRg9kvUlO-FxM2FBgbbNvCplOs_1x5t0Ck-oa_IFrteEI9mLFkZVq33bY82QqwFJ--2PMfmQeJ-rZaMWOnayTeXodqQxsBTAup21uhrjgYTgpQzwMYCKB1ASo="
     },
     {
-      "title": "tamu.edu",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHmpOZEnEpKfoNAsmtodyVxrLX8neM81CQU4ET-8GjJusnp2Wj8rOULaz1xfKnHwqfg5WPA4RQJ2XKyPLA859_qPFagHoSFfcsvtnt4NaTfZkdIDHZb5p0yVT7HQSslcUrh4WljsXDvLGM1J_dzZjrRLAKuRjKu7tXgxw=="
+      "title": "matthews.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF2_tPzhbQ3MfdM1L51QVhc15ES2Uk6pJS5OOBWE2Ug1QpFkhk7ptet2YOFE0cFQTGwGvDOxplv_hIPTk6GoSi88LNa9ks6UBYIy3ztsDkB0ewUkbwcCQglkXLdmuZxUnWAw2JdK50UPS7Z04GezatxOJHzIvK0mkopdQ=="
     },
     {
-      "title": "tamu.edu",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGInJSw1fpapxZhwWnwQDN7LlpINzzDAGICMR0BXUDlmzUNZDHDy--ldGpnzH8auEFRxKeB3XJGLk4vP1w5lk0mUh3S1AInQMFjPfxHr6e6mfzd_dT4YOO17dR4NvQt3HtG-KVGnYcH_Jx2UqtwedY="
+      "title": "matthews.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEQiCD_4qcJq4Ol939mmZ1ia750hgjFd0qXQV3k9Dp6e5VXy6-deYT9OmjtaBTw3BAESU00s9I-Sq1HEqfDI8uOlxiUSwsA0SlNHrdrYSmFI9xZTOppWnzQoIMP7xuBG5Q9JVEbEJlV3tyZXaBHpHwZnZPvNpkWGg=="
+    },
+    {
+      "title": "northmarq.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGEZd5YRQWpsk-n-TAvYN0Q5UPWqdnuO6a2PuMqrd_jp_m38Oytis1ZsF6cETyJscVR4BSGcP3Jb7NAwIa_4NEWyPUMbzfJ_s8U5hHIMw0MPMsnPTXfBnp_DG3edFsgUGsyu0lbcyTOC5TpY_lPTuqr-4A2t0lJ9Okw9peeee26d7vbSQF9_EJzfshiqyCMwQzpB4FtabKPWUt5kEw="
+    },
+    {
+      "title": "cushmanwakefield.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEiBtllGl9jCMs_WhZSBormQMEo9qBIerf1InCc6mizmS7nDvlRSSuTBpGHecTBqjj6hZMXklTVPOe1N3pUHJQyBw8p-zF-Q8Ggc8yr8CVhklWLuoBYD5_KuMW6B6PhuQwyu97ECQms-gwU2eBDro8rggXTi_LRjfxrW6d-3YYqlgN52v8r8U1kyPLPl73oRkEdsDKf4GKGQ9bD-OPBKG3SjQk04g-cNDJgrynITcckAOiaDSc1gm2e8UYu70Fqcet_knyEvu7m7vPOBidEI8EkVb5dqEaEMfoDnjRWC1v3nZRmxC2SryyVo9z4OP-2DmSA"
+    },
+    {
+      "title": "atxre.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFhPVJlht3ZjZkWs0-BVXFhT41tu45I7OmZv2Nn8-9Wbn9PHaUL8-TO-FhDLoqyDtDPLkQARDdtr4pnq8SRt6xe-jXenZkDZ0AUihdbgK7Z7ABPVtlF6tmbYwDSyUnApYVmErGo0uig3AeVJRXMrCKCZH8Q4wZ6vKPXJw=="
+    },
+    {
+      "title": "moodyscre.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEnzmdbGGHAC_mSt6_8Jdp6lZCojYnah15HdZnXTnJGcXeO-kssMenpHjNCI-1935hgJfrLJ7BeoWkUbeVdYNA34cplanHHoTsgAhJpbVATJCLimmbwJIPvTgJ37fQ-6S2ZTQ=="
+    },
+    {
+      "title": "poconnor.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGfUYYbQKNzIt6ui2T95XyVlj3NrotpO6qBG_4YIWT6bC7w2JjB71MjmyVovMXxMYObMRk1-HH3NUjg6vpXy719NCqFKM00L99e8tmO_NbmV--phrl7nV3PtCOI0ddEjy1XUkps-DwMrnVM_eRSwQ=="
+    },
+    {
+      "title": "berkadia.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGh36bjzNbtkBzQnbIBnl3RpYuEC1ZzG5hhIQvdtZN1iCN1qyYkbYDKj3FIlYCDo7ljW2WsmfdrVlXO1RjB_bRPvQj6JT1epUQdJo4HgCYTYwOiChxiMuoH3mxgIJJg1lMCA2h1e-pHy6YgG7nPloqKHUJH9M_fMuMInyDZLrZS0nfSFT3S4ncbvyyxf5VBxmSBfbt-BkPA0-Znm1GhB8ak5gvxq_I="
     }
   ]
 }

@@ -3,23 +3,47 @@
   "engine_label": "Claude (Sonnet) via claude -p, web search on",
   "is_consumer_app": false,
   "set": "A",
-  "question": "How can I find out who bought an apartment complex?",
-  "intent": "find-owner",
+  "question": "Where can I get a list of apartment buildings opening in 2027?",
+  "intent": "pipeline",
   "asked_on": "2026-09-23",
   "ok": true,
-  "answer": "Finding who bought a specific apartment complex is a public-records research task \u2014 here's how to approach it, roughly in order of speed/cost:\n\n## 1. County property records (free, most authoritative)\nEvery U.S. county has a **Recorder of Deeds / County Clerk / Register of Deeds** office (often searchable online). Search by property address or the seller's name to find the **deed** (grant deed, warranty deed, or quitclaim deed) that names the new owner (\"grantee\"). Many counties also have a **County Assessor / Property Appraiser** site where you can look up the parcel by address and see the current owner of record \u2014 this is usually the fastest starting point.\n\n- Look up \"[County name] Recorder\" or \"[County name] Assessor\" \u2014 examples: Miami-Dade Property Appraiser, LA County Assessor Portal, Cook County Recorder of Deeds (Illinois).\n\n## 2. Commercial real estate data platforms (paid, but built for exactly this)\n- **CoStar** \u2014 the industry standard for CRE sales, ownership, and lender data; expensive, mostly used by brokers/investors.\n- **Crexi** \u2014 has a free tier with sales comps and ownership info for many properties.\n- **Reonomy** or **Cherre** \u2014 ownership/LLC-unmasking tools, good for tracing shell companies to their parent entity.\n- **Yardi Matrix** \u2014 multifamily-specific ownership and transaction data.\n- **ATTOM Data** \u2014 bulk property data with ownership history, used by many real-estate apps.\n\n## 3. LLC / entity lookups (when the buyer is a shell company, which is common for apartment complexes)\nMost large multifamily deals close under an LLC, not a person's name. To unmask it:\n- Search the **Secretary of State business entity database** for the state where the LLC is registered (e.g., California Secretary of State Business Search, Delaware Division of Corporations, Florida Sunbiz) to find the registered agent and sometimes the managing member.\n- **OpenCorporates** \u2014 aggregates business registry data across many states/countries, useful for cross-referencing.\n- If the registered agent is a law firm or formation service (common obfuscation tactic), you may need to check press releases or CRE news instead.\n\n## 4. Real estate news and trade press\nLarger transactions often get covered by name:\n- **Bisnow**, **Commercial Observer**, **The Real Deal**, **GlobeSt** \u2014 regional/national CRE news that reports on notable multifamily sales, often naming the buyer, seller, broker, and price.\n- Local business journals (**American City Business Journals** network, e.g., Denver Business Journal) frequently cover mid-size local deals.\n\n## 5. Loan/mortgage records\nIf financed, a **Deed of Trust or Mortgage** is also recorded with the county and will name the lender and borrower entity \u2014 useful cross-check if the deed itself is hard to find.\n\n## Practical starting point\nIf you have the property address:\n1. Check the county assessor site first (free, fast, usually current).\n2. If the owner is an LLC, run it through the state's Secretary of State site and/or OpenCorporates.\n3. If you want deal context (price, brokers, financing), search Bisnow/Commercial Observer/The Real Deal for the address or complex name.\n\nIf you tell me the specific property/address, I can help you figure out exactly which county or state database to check.",
+  "answer": "This is a real-estate/market-research question rather than something I can pull live data for, but here's where people actually find this:\n\n**Primary data sources (paid, industry-standard)**\n- **RealPage / RealPage Market Analytics** \u2014 tracks apartment pipelines (planned, under construction, delivering) by metro, often cited in NMHC/NAA reports.\n- **CoStar** \u2014 the most widely used commercial real estate database; has detailed \"under construction\" and \"planned\" filters with expected delivery dates, searchable by metro/submarket.\n- **Yardi Matrix** \u2014 publishes regular multifamily supply/pipeline reports (national and metro-level), some available as free summary PDFs even without a subscription.\n- **CBRE, JLL, Cushman & Wakefield** \u2014 commercial brokerages publish quarterly/annual multifamily supply forecast reports (free, downloadable from their research pages) that break out expected deliveries by year and metro.\n\n**Free/public sources**\n- **Local city/county planning & permitting departments** \u2014 building permit and site plan databases show projects with expected completion dates; many cities (e.g., NYC DOB, Austin's AustinTexas.gov permits) have searchable portals.\n- **U.S. Census Bureau \u2014 New Residential Construction / Building Permits Survey** \u2014 aggregate permit and completions data by metro, not project-level but useful for macro trends.\n- **Local business journals** (via Bizjournals.com) \u2014 frequently report on specific named apartment developments with groundbreaking/completion timelines.\n- **Apartment developer/REIT investor presentations** \u2014 companies like Greystar, AvalonBay, Camden Property Trust, Mill Creek Residential, Alliance Residential publish development pipelines with projected delivery years in investor decks and press releases.\n\n**If you want specifics for a particular city**, tell me which metro and I can help you figure out the best local source (planning department, business journal, or local YIMBY/housing tracker) rather than guessing at named projects \u2014 I don't have reliable real-time data on specific 2027 openings and don't want to invent building names or addresses.",
   "brands": [
     {
-      "brand": "CoStar",
-      "first_at": 928,
-      "mentions": 1,
+      "brand": "RealPage",
+      "first_at": 195,
+      "mentions": 2,
       "rank": 1
     },
     {
-      "brand": "Yardi",
-      "first_at": 1258,
+      "brand": "CoStar",
+      "first_at": 352,
       "mentions": 1,
       "rank": 2
+    },
+    {
+      "brand": "Yardi Matrix",
+      "first_at": 538,
+      "mentions": 1,
+      "rank": 3
+    },
+    {
+      "brand": "CBRE",
+      "first_at": 706,
+      "mentions": 1,
+      "rank": 4
+    },
+    {
+      "brand": "JLL",
+      "first_at": 712,
+      "mentions": 1,
+      "rank": 5
+    },
+    {
+      "brand": "Cushman & Wakefield",
+      "first_at": 717,
+      "mentions": 1,
+      "rank": 6
     }
   ],
   "links": []

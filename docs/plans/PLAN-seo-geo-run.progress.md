@@ -111,46 +111,57 @@ Full suite: **412 passed**, with the same 7 failures / 7 errors as the pre-work 
 
 ## Step 3 — the "before" measurement ⏳ next
 
-## Step 3 — the "before" measurement ✅ 2026-09-23
+## Step 3 — the "before" measurement ✅ 2026-09-23 (redone the same day)
 
-`tooling/seo/questions.csv` (25 questions: 15 Set A, 10 Set B) and `tooling/seo/sample.py`,
-which asks both engines and writes one JSON per question per engine so a stopped run
-resumes without re-asking. **50 answers, no failures.** Saved in
+**First attempt measured the wrong market.** The question bank carried a second set asking
+which property-management software to buy — RealPage vs Yardi, best PMS for 200 units. David
+caught it: that is RealPage's market, inherited from the archived project where the buyer was
+a software vendor. CraneSignal sells **lead data on buildings**. The bank was rewritten, the
+tracked names were swapped from PMS vendors to property-data services, and the whole run was
+re-done from scratch.
+
+`tooling/seo/questions.csv` — **28 questions, every one asked by CraneSignal's own buyer**,
+across six intents: pipeline (8), sales (5), free-data (5), prospecting (6), detect-software
+(3, about a building rather than a purchase), timing (1). A test now fails if a
+software-purchase question creeps back in.
+
+`tooling/seo/sample.py` asks both engines and writes one JSON per question per engine, so a
+stopped run resumes without re-asking. **56 answers, no failures**, in
 `docs/seo/answer-share/2026-09-23/` with `report.md`.
 
-The numbers that matter:
+What it found:
 
-- **CraneSignal is named in 0 of 30 Set A answers.** That is the before-picture, and the
-  point of taking it.
-- **Set A (how do I find buildings) is owned by Yardi 83%, CoStar 63%, RealPage 47%.**
-  The engines answer "which tool should I buy" when someone asks "where do I find this
-  data" — which is the opening: none of them hand over an actual list.
-- **Set B (what should I buy) is RealPage 95%, Yardi 85%, AppFolio 80%, Entrata 65%,
-  Buildium 60%.** This is the answer-share view, and it is demo-able today.
-- **The engines cite vendor sites and market-report publishers**, in this order:
-  realpage.com (17), appfolio.com (11), mmgrea.com (9), yardimatrix.com (8), then
-  multihousingnews, yardi.com, matthews.com, reddit.com, mrisoftware.com,
-  cushmanwakefield, multifamilydive, credaily, buildium.com, g2, capterra. This is the
-  most actionable output of the whole run: it names the surfaces a new page has to sit
-  beside, and it says that trade press and review sites matter as much as our own pages.
+- **CraneSignal is named in 0 of 56 answers.** That is the before-picture.
+- **CoStar 61%, Yardi Matrix 55%, RealPage 48%** across every question. Apartments.com 32%
+  and Zillow 20% — those two are a warning that some questions read as renter intent.
+- **"Go read the public records yourself" is 27%.** That answer is one step from citing a
+  site that has already read them, which is exactly what the new pages are.
+- By intent, where each question type is winnable:
+  - *sales* — CoStar 90%, Yardi Matrix 70%, Reonomy 60%. The most locked-up.
+  - *pipeline* — Yardi Matrix 75%, CoStar 69%, RealPage 56%.
+  - *free-data* — Yardi Matrix 70%, CoStar 50%. Engines name paid tools even when asked for
+    free ones, because no free source exists. **The clearest opening.**
+  - *prospecting* — CoStar 67%, ZoomInfo 50%, Apartments.com 42%. Contact data is our weakest
+    column (144 phone numbers of 1,861), so this is the least winnable today.
+  - *detect-software* — AppFolio and RealPage 100%. Engines answer with vendors, not with a
+    way to find out what a building runs. Nobody answers the actual question.
+- **The engines read** yardimatrix.com (14), multihousingnews.com (11), realpage.com (7),
+  mmgrea.com (6), northmarq.com (6), cushmanwakefield.com (6), costar.com (6), reddit.com (6),
+  therealdeal.com (5), credaily.com, multifamilydive.com, census.gov, houstontx.gov,
+  smartapartmentdata.com. Trade press and city/census data sit alongside the vendors — which
+  says our own pages are necessary but not sufficient.
 
 Implementation notes:
 
-- Each Claude question runs a fresh `claude -p --model sonnet --setting-sources ""` with
-  `cwd` set to the home directory, so this repo's files and instructions cannot leak into
-  an answer and flatter us. 25 calls, well under the 60-call cap.
-- Gemini uses `gemini-2.5-flash` with Google Search grounding, key read from `.env.seo`
-  and never printed. Grounding links are Vertex redirect URLs that hide the real site, so
-  `host_of()` reads the domain out of the chunk title instead.
-- Both engines are labelled in every record and in the report as API/CLI, **not** the
-  consumer apps. `claude -p` with web search is not what a person sees in the Claude app,
-  and the Gemini API is not the Gemini app.
-- Claude took ~35s per question (~15 min for 25); Gemini ~7s.
+- Each Claude question runs a fresh `claude -p --model sonnet --setting-sources ""` with `cwd`
+  set to the home directory, so this repo cannot leak into an answer and flatter us. 28 calls,
+  under the 60-call cap. ~35s each. Gemini ~7s each with Google Search grounding.
+- Gemini's grounding links are Vertex redirects that hide the real site; `host_of()` reads the
+  domain out of the chunk title instead.
+- Every record and the report state that these are API/CLI engines, **not** the consumer apps.
 
-Tests: `tooling/qa/fixes_tests/test_seo_sample.py`, 15 checks, none of which call an
-engine or the network. One of them asserts CraneSignal appears in **zero** Set A answers —
-when that test fails, the SEO work has started to land, and the baseline note needs
-updating rather than the test.
+Tests: `tooling/qa/fixes_tests/test_seo_sample.py`, 17 checks, none calling an engine or the
+network. One asserts CraneSignal appears in **zero** answers — when it fails, the work landed.
 
 ## Step 4 — IndexNow ✅ 2026-09-23
 
