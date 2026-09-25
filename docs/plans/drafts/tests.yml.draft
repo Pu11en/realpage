@@ -1,0 +1,52 @@
+# Run the site test suite on every push and pull request.
+#
+# Why this exists: on 2026-09-25 eight tests in tooling/qa/fixes_tests/ were red and had
+# been for four days. Nothing ran the full suite -- tooling/qa/check-seo.sh runs one file,
+# and there was no CI at all -- so three genuinely stale assertions sat next to five that
+# only failed because Node and Caddy are absent on Windows, and neither kind was visible.
+#
+# This job only reads. It does not commit, deploy, or need a secret. Whether a bot may
+# commit to main is a separate and still-open question -- see docs/plans/PLAN-loops.md.
+#
+# TO ARM IT: copy this file to .github/workflows/tests.yml and push. It is a draft here for
+# a mechanical reason, not a cautious one -- GitHub refuses a push that adds a workflow file
+# unless the token carries the `workflow` scope, and the session token does not. One `cp` and
+# a commit from anyone signed in normally is all it takes.
+name: tests
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  fixes-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # pytest and pypdf are the only third-party imports the suite has. Node is already
+      # on the runner, and Caddy comes out of the image below.
+      - run: pip install pytest pypdf
+
+      # test_e1_signin unpacks the Caddy binary out of this image. Pulling it here rather
+      # than letting `docker create` do it means a registry problem reads as an
+      # infrastructure failure instead of a confusing test error.
+      - run: docker pull caddy:2-alpine
+
+      # The tools the suite needs are all present here, so a "tool not installed" skip
+      # would be hiding something. This turns those skips back into failures.
+      - run: python -m pytest -q tooling/qa/fixes_tests/
+        env:
+          CRANESIGNAL_REQUIRE_TOOLS: "1"
+
+      # The generated files must match the data they came from. Checked separately from the
+      # tests because staleness is not a failing assertion -- the sitemap's lastmod and the
+      # pages' counts can quietly drift away from site/data/ without anything breaking.
+      - run: python tooling/seo/build_seo_files.py --check
+      - run: python tooling/seo/build_pages.py --check

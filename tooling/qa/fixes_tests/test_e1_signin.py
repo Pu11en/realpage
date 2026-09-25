@@ -20,6 +20,19 @@ CADDY = ROOT / ".caddy-bin" / "caddy"
 FAKE = ROOT / "tooling" / "qa" / "fake-webui" / "server.py"
 COOKIE = "fake_signed_in=1"
 
+# A missing Caddy is a missing tool, not a broken site, so it skips. It used to fail, which
+# meant the whole suite was permanently red on any machine without Docker -- and a suite that
+# is always red cannot tell you when something actually breaks. Set
+# CRANESIGNAL_REQUIRE_TOOLS=1 where the tools are supposed to be there (CI, Drew's box) and
+# the skip turns back into a failure, the same way tooling/qa/check-seo.sh --live-required does.
+REQUIRE_TOOLS = os.environ.get("CRANESIGNAL_REQUIRE_TOOLS") == "1"
+
+
+def _no_tool(message: str) -> None:
+    if REQUIRE_TOOLS:
+        pytest.fail(f"{message} (CRANESIGNAL_REQUIRE_TOOLS=1)")
+    pytest.skip(message)
+
 
 def _free_port() -> int:
     s = socket.socket()
@@ -38,13 +51,13 @@ def _ensure_caddy() -> None:
         shutil.copy(on_path, CADDY)
         CADDY.chmod(0o755)
         return
-    CADDY.parent.mkdir(parents=True, exist_ok=True)
     if shutil.which("docker") is None:
-        pytest.fail("E1 needs Caddy: install Docker (caddy:2-alpine) or put a caddy binary at .caddy-bin/caddy")
+        _no_tool("E1 needs Caddy: install Docker (caddy:2-alpine) or put a caddy binary at .caddy-bin/caddy")
+    CADDY.parent.mkdir(parents=True, exist_ok=True)
     created = subprocess.run(["docker", "create", "caddy:2-alpine"], capture_output=True, text=True)
     cid = created.stdout.strip()
     if created.returncode or not cid:
-        pytest.fail(f"could not create caddy:2-alpine (is the image pulled?): {created.stderr.strip()}")
+        _no_tool(f"could not create caddy:2-alpine (is the image pulled?): {created.stderr.strip()}")
     try:
         subprocess.run(["docker", "cp", f"{cid}:/usr/bin/caddy", str(CADDY)], check=True, capture_output=True)
     finally:

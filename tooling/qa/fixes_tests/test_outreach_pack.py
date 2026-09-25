@@ -84,12 +84,17 @@ def test_months_ahead_handles_a_missing_or_broken_date():
 
 
 def test_the_generator_runs_and_writes_a_pack(tmp_path):
+    """Writes to tmp_path, not to docs/outreach/packs/. Running the suite used to rewrite a
+    committed pack, so `git status` came back dirty after every test run and the real change
+    you were about to commit had a stranger sitting next to it."""
     done = subprocess.run(
-        [sys.executable, str(GEN), "--profile", "opening-soon", "--limit", "5"],
+        [sys.executable, str(GEN), "--profile", "opening-soon", "--limit", "5",
+         "--out", str(tmp_path)],
         capture_output=True, text=True,
     )
     assert done.returncode == 0, done.stderr
     assert "wrote" in done.stdout
+    assert list(tmp_path.glob("*.html")), "said it wrote a pack and did not"
 
 
 @pytest.mark.parametrize("path", built_packs(), ids=lambda p: p.name)
@@ -108,7 +113,9 @@ def test_every_row_links_its_public_record(path):
 def test_pack_states_its_rule_its_dates_and_the_pool_it_came_from(path):
     text = text_of(path)
     assert "buildings that match" in text, "does not say what the rule was"
-    assert "Prepared on" in text and "Data as of" in text, "undated"
+    # "Prepared on <date>", or "Prepared for AppWork on <date>" when --for names the vendor.
+    assert re.search(r"Prepared (for .+? )?on \w+ \d+, \d{4}", text), "undated"
+    assert "Data as of" in text, "does not say how old the data is"
     assert "Why these." in text, "does not explain the selection"
     # Saying "15 of 17" rather than just "15" is the difference between a sample and a claim
     # that this is everything.

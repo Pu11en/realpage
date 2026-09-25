@@ -1,8 +1,11 @@
 """Build C T3: later downloads include only leads first seen after the saved date."""
 
 import json
+import shutil
 import subprocess
 from pathlib import Path
+
+import pytest
 
 
 ROOT = Path(__file__).resolve().parents[3]
@@ -19,6 +22,7 @@ def run_lead_pack_script(script):
     return json.loads(proc.stdout)
 
 
+@pytest.mark.skipif(not shutil.which("node"), reason="node not installed")
 def test_download_history_is_scoped_to_each_state_and_region():
     script = r"""
 const path = require("path");
@@ -46,6 +50,7 @@ process.stdout.write(JSON.stringify({
     assert len(set(result["keys"])) == 2
 
 
+@pytest.mark.skipif(not shutil.which("node"), reason="node not installed")
 def test_new_leads_are_strictly_after_the_last_download_date():
     script = r"""
 const path = require("path");
