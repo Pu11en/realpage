@@ -23,8 +23,12 @@ items at the bottom.
 Crawler's-eye check on the live site: `/leads/tx/houston.html` returns **3,905 body words**
 with exactly one script tag, and that one is the JSON-LD. Before this it returned nothing.
 
-**Landing page: merged, not deployed.** Now at https://github.com/Pu11en/cranesignal-landing,
-PR #1 merged. It deploys by Railway CLI from local, so it needs one `railway up` run — see below.
+**Live on `cranesignal.com`** (https://github.com/Pu11en/cranesignal-landing, PRs #1 and #2,
+both deployed 2026-09-25): title cut to 57 characters, canonical, Open Graph and Twitter card,
+`robots.txt`, `sitemap.xml`, `llms.txt`, and the JSON-LD declaring the brand's one
+`Organization` at `https://cranesignal.com/#org` with a real 512×512 logo. PR #2 also pointed
+llms.txt at the app's generated `llms-full.txt` and `sitemap.xml` rather than a hand-written
+page list, so nothing in that file can go stale.
 
 ## What is left to do
 
@@ -45,14 +49,15 @@ of the live HTML. And `tools/test_landing.py --offline` gives results identical 
 the same 6 pre-existing failures, three of them a `file://` summary URL that does not resolve
 on Windows and one a real "no em dashes" failure that predates this work.
 
-### 2. Re-measure on 2026-10-09 — two weeks after deploy
+### 2. Re-measure on 2026-10-09 — the only thing still outstanding
 
-```bash
-python3 tooling/seo/sample.py          # both engines, ~28 questions, resumable
-```
+Written up as its own plan: **`docs/plans/PLAN-seo-remeasure-2026-10-09.md`**. It has the
+commands, the table of numbers to fill in, how to read the result, and what to do if nothing
+moved. About 30 minutes, no decisions needed.
 
-Compare against `docs/seo/answer-share/2026-09-23/report.md`. Also pull Search Console
-impressions, which should exist by then.
+Expect little at two weeks: a few Google impressions, most pages indexed by Bing, and
+CraneSignal still named in 0 of 56. Rankings take two to three months. Judging at two weeks
+and quitting would be the mistake.
 
 ### 3. One Organization identity — done 2026-09-25
 
