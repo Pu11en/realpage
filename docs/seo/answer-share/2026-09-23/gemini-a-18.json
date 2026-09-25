@@ -1,0 +1,179 @@
+{
+  "engine": "gemini",
+  "engine_label": "Gemini (gemini-2.5-flash) via API, Google Search grounding on",
+  "is_consumer_app": false,
+  "set": "A",
+  "question": "Where can I download a list of apartment buildings with addresses and unit counts?",
+  "intent": "free-data",
+  "asked_on": "2026-09-23",
+  "ok": true,
+  "answer": "Downloading a comprehensive list of apartment buildings with addresses and specific unit counts is generally not available for free as a single public dataset due to the commercial value and proprietary nature of such detailed real estate information. However, several specialized commercial real estate data providers and APIs offer this kind of data, usually through subscription services or data licensing agreements.\n\nHere are some specific companies and data sources where you can obtain such information:\n\n**Commercial Real Estate Data Providers**\n\nThese providers offer extensive databases and analytics, often tailored for real estate professionals, investors, and developers:\n\n*   **CoStar** is widely recognized as a leading source for commercial real estate data, including detailed information on multifamily properties. They track over 38 million multifamily units and provide comprehensive, verified data sourced through primary research, direct market input, public records, and data feeds.\n*   **Yardi Matrix** specializes in multifamily and self-storage market intelligence, covering a vast number of multifamily markets across the U.S. and focusing on properties with at least 50 units. Their data includes full ownership details, unit breakdowns, rental rate histories, and new construction pipelines.\n*   **ATTOM Data Solutions** offers a comprehensive property data API and bulk data files covering over 158 million U.S. properties. Their datasets include property characteristics, ownership history, and tax assessments, which can be valuable for identifying multi-unit properties and their details.\n*   **Reonomy (Altus Group)** is known for its ownership intelligence and off-market prospecting capabilities, providing data on over 50 million commercial properties across the U.S.\n*   **LightBox** provides a robust property data package called \"SmartFabric,\" which includes nationwide parcels, addresses, and structures. They also feature a Residential Unit Count (RUC) model that estimates unit counts for various multi-family dwellings and other group quarters.\n*   **ALN Apartment Data** is a research firm dedicated to the multifamily industry, offering data on occupancy rates, rental trends, new construction, and more for apartment properties.\n*   **CRED iQ (PRISM)** offers a multifamily unit analytics product that structures publicly advertised rental listings into property-level data. This includes details like unit counts, floor plans, and asking rents for over a million multifamily properties, updated weekly and delivered via API or bulk data feeds.\n\n**Real Estate Data APIs**\n\nMany of the commercial providers listed above also offer Application Programming Interfaces (APIs) for developers to integrate their data into custom applications or workflows. Other API providers include:\n\n*   **Datafiniti API** offers an extensive dataset for various property types across the U.S., including millions of apartment and multi-family units.\n*   **RentCast API** provides nationwide coverage with access to millions of property records, including property features and ownership details.\n*   **CoreLogic API** boasts a massive dataset covering nearly all of the U.S. housing market, with detailed information on parcels and property specifics.\n*   **Smarty (US Secondary Address Data)** can provide precise secondary address information, including apartment, suite, and building numbers, and can return a count of secondary addresses or verified unit designators for a given property.\n\n**Public and Other Sources**\n\nWhile less granular or comprehensive, some public and specialized marketing sources can offer partial information:\n\n*   **U.S. Census Bureau** provides Address Count Listing Files, which include total housing unit counts and total group quarters counts by census block. These files are available for download twice a year. However, this data is aggregated by census block and does not provide individual building addresses with specific unit counts.\n*   **Local Government Agencies**, such as property assessor's offices or the Register of Deeds in the relevant county, may hold public records with property details, including the number of units. Some of these offices offer searchable websites, though obtaining bulk data might require specific requests or manual research.\n*   **ApartmentLists.net and LeadsPlease** are services that offer targeted mailing lists for apartment complexes, which can include addresses and sometimes resident names or estimated unit counts for marketing purposes.\n\nFor the most accurate and detailed property-level data, including addresses and unit counts for apartment buildings, investing in a subscription or data license from a commercial real estate data provider is typically the most effective approach.",
+  "sources": [
+    {
+      "title": "forage.ai",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHN14esANMcOhehy1lQc5l1GpewfVdxnBYGqJDEUJDE6hw4zd1GaigPcqBWYMJAbn_KANe-eRyJ-jzT5QDWJUfzPwb1xqj6e_BKV0eLRw0WA2Q0KjyvNPp6cJLT2VK53zOV6Fx4aqH18GCzfxTK5oH_0IhF"
+    },
+    {
+      "title": "costar.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFLoNMn8B2s5lfKLUfcQaF3lChS3M-_dJFmfhmDiLLZ-SSp_FgB9TnA7gr27DCvwpB17Ndc97ETvxqFEl4zHDHDCBg2fQRHrJwYeUVVx2-StFdqibY3P6VRzisfuqznG7IMAcll8ikf8zHNg5o="
+    },
+    {
+      "title": "costar.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHOSKORFfDG2Yo2q_x_jrog_ewK2IlrLuntxSDHkN0SwB3XQnFaBoiVc1ZIbv9AdX6gnOQViLx1oyExjFxF4IjWP2ITH3Kk7Sjuzb7nttUv167WUd6tuTKs"
+    },
+    {
+      "title": "ficstar.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG1FmW0u1_4oXoUwn2Fy2UUJYHiiUyRZLCzMAuBC8q9S4cC5_TWQKQ90FLSGbO8sZGZEYAzNQDoYIzWg1lkTe9hA48J34oYTVnTZ0eawwFOIldgXAX-XCQlEKnDax_JAPYVZza2-m3lpoTlyWIW5kU2Ng=="
+    },
+    {
+      "title": "multihousingnews.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEnc0TEaPhyyGYBioh4bvvr8zBqAxunVl0Ngu_FHrlKHfOBxaHzzBbkO0AaYxxZYfZUcVKQJ-8ZApPYNeCjWvNNgOSAwqKohLEA5DkLeYjImy_jF0MAUmJjA7sjMUX_y7gydDKbFzPOMRErG-dMgK6gCsrkCm9uOYljRofUwWZ1yimeWs6v"
+    },
+    {
+      "title": "yardimatrix.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG_76h4ug2RPRuBRN9LzCU6Vel7AFN_e7OZVRGW6NqjhdBUSJ9ouFLh9iGazOp-oNGkp3j1pUbsAru63x08o2GYLwZxL4RX1KMQ_mlTaFTFIrFechryXe-GhnXlGP-KMhrb4J6tja5QLRrpJeuiEcW6zA=="
+    },
+    {
+      "title": "batchdata.io",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH1wCSqsPqw9TIm5rRhIw1IUPx7FBGiqNq2zyD9xQV_7D2sikM9uR4_4uFerdM07bXD_WfP01EJcr02EIh6yonT-2827Eqw1R2QFAQwKAqikjazbMx_e_q5fgKHpnurwtSPiTWMlvGXowTvWCTnXCLR7lZ-GXs="
+    },
+    {
+      "title": "attomdata.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG_43NskwOmt21wlJ-9Rp6YiKj9t8V5JfzXK8ALSf64qslWhNeKOqhyVyET4g7VhHgluztLSuor1vcGyobvM-cZXordL1PYloxJm_daQ19tdFsayc-ZV7sPRtvPXQg8lpZs3lrhQH2KBjPjH9QDgwvZbTKiQv1lXbzLkgUgOZM="
+    },
+    {
+      "title": "penncapitalgroup.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGu3JYj0BaiFJAcf08FMXvy0VZlsxx9fEBZIIc3N-yI9fFx805uifYI9rNzPkZY5qLlNmzbPsJd37YEpU0YM5wRmXVrMRAn6oDOHYpcmICl_EaXRUtLI5andbfs2pNvYhhB6FvYJbLifEuViHUgfxiwhYzKoHpoAslSFQT7rK4s6aKHZCghaCaH6Us="
+    },
+    {
+      "title": "reonomy.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHBGwZKyI6lpBJGZxnG0ilLcFdJpl8L2XN9LwU3DCzcuNyiEO4xyduR0f5kBUQb-VL11kHBBr7P4bCJh2H89vco4aiwfLSbfD-Ip0W9fRRo_d16bwBa8oyBJYkBeoMpjHahf6h5LQ7jyxRJ2EBDkVnjH4PuKfy2X8idYzWK"
+    },
+    {
+      "title": "document360.io",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEGjTuvyo2AKOxAQjCcQdsO6gAlV68ZqJJ3wCtyc4eHLkJyiR00Zjt5n5bXhFKbwCX--f5MBiZHA0FHzGb2eeZ0kkoJwMTHC5umCzW04OB8nPT1IgNjKG1OhstMWHIgUZauIGIIj6TJylSXb_9yMIA94RH0kGY="
+    },
+    {
+      "title": "alndata.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG-KXNRdHGIQAqHCDS6NyXQ_pSE0fARdGDglR54xMivJ6NoqWBjurC4nyEpYzlwxnO2IdZ5ky0l962O-A44_7MhT-Kw8Z6FVwu0reTtJGE="
+    },
+    {
+      "title": "prnewswire.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEX184IOduK_LFTa89jebHJ8t7_3HE5gxfH4oV2PO082hsD9b7Bw-SI7YC0FJq_Gd1JmA_jEhj93raGYa2lAVEFRgsKuf45LFXibxex2TvbsiA5fO4R49Ss1auRL9_Kk7GhVtE3RKDo2Yy6BA9t5lYezW3ZiDE30OTSIw0monyNPsLL482yod3XztAsDh4kVKMLeESM4tTLp8xXDJY0JrcO0WezWWz0eidSDkSFU-s="
+    },
+    {
+      "title": "smarty.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFuBWDN33fvsGwWL0wqftqpge6REyewlTZCZzWZNBj_NPZkIDYaMmTzFJjRZ0__RFBuLaFbr-picFHe7zSfz4ekqj2yK-JCaJkzm0jaOUH0oyoKBG8gjfqq3tN1J2lidxkyKZRQPWz2ZFrMLA74c5ITzOSN"
+    },
+    {
+      "title": "census.gov",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFUe2IW9ng4f5RbsACCxh8wRfx9bxJTDivliAshkQfk8ONzNDzmz3CFhgfdCxEJ4_gKiCXK1Jo0Y12MXycZOamu3ViaxFYxv1NwZdvE9QcQPj5f2i6t_-jjkKYFvF5GAN61fanIur_2fmk8YSnfqS7Cn3ZxVksAGBYSjIr9agpJYHhgpqFF85SZ5dkmO0jPIIpm"
+    },
+    {
+      "title": "quora.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHJvZOKUAqSrd7CbCUDUNltDVrAdA4T0Tt0JeTbflXci0s7qNS8qeylbroLFMxzeW6kFn0LLzmAsb4p15Fwln6X70EU5-UPRvRH97m6H6i6ahDSFSKffFSx6FoVGvqigQlubuQ0slgDF2tJ3_a8hbEi0QUU3cxpZekHjkURdVEtNeockeEFTdSXgArRaC8="
+    },
+    {
+      "title": "leadsplease.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFyCEiUNsF7KtORWYv6nNL6LxcnWBfDLi_Hu37D_1OV8wxOUkLif1z0T2ZbNlSTuUI1Cjx1NCY8lyAoZZbOYpxNiGn0tc-6uTR-7OMxRvBlvF-sxCHWAR99rwq47KWPYTg8ZmY59CWls5icpEVrp6CHyC8a6-VdQaHjP40cLzwoHOiA"
+    },
+    {
+      "title": "apartmentlists.net",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGY0BJoeYGZU9BN4ufkx5g2g3MY5wzcvk2ufAXcDGqKObA7O4q8Srvpc9YN5GNzKXj5fYCB8q6iI4kGYieg0qJ9D902pnU2YprfnO-9TGU9_4uo2RnenyMytfxq4x3qyUKDZl1XGRSl"
+    }
+  ],
+  "brands": [
+    {
+      "brand": "CoStar",
+      "first_at": 692,
+      "mentions": 1,
+      "rank": 1
+    },
+    {
+      "brand": "Yardi Matrix",
+      "first_at": 1012,
+      "mentions": 1,
+      "rank": 2
+    },
+    {
+      "brand": "Reonomy",
+      "first_at": 1628,
+      "mentions": 1,
+      "rank": 3
+    }
+  ],
+  "links": [
+    {
+      "title": "forage.ai",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHN14esANMcOhehy1lQc5l1GpewfVdxnBYGqJDEUJDE6hw4zd1GaigPcqBWYMJAbn_KANe-eRyJ-jzT5QDWJUfzPwb1xqj6e_BKV0eLRw0WA2Q0KjyvNPp6cJLT2VK53zOV6Fx4aqH18GCzfxTK5oH_0IhF"
+    },
+    {
+      "title": "costar.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFLoNMn8B2s5lfKLUfcQaF3lChS3M-_dJFmfhmDiLLZ-SSp_FgB9TnA7gr27DCvwpB17Ndc97ETvxqFEl4zHDHDCBg2fQRHrJwYeUVVx2-StFdqibY3P6VRzisfuqznG7IMAcll8ikf8zHNg5o="
+    },
+    {
+      "title": "costar.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHOSKORFfDG2Yo2q_x_jrog_ewK2IlrLuntxSDHkN0SwB3XQnFaBoiVc1ZIbv9AdX6gnOQViLx1oyExjFxF4IjWP2ITH3Kk7Sjuzb7nttUv167WUd6tuTKs"
+    },
+    {
+      "title": "ficstar.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG1FmW0u1_4oXoUwn2Fy2UUJYHiiUyRZLCzMAuBC8q9S4cC5_TWQKQ90FLSGbO8sZGZEYAzNQDoYIzWg1lkTe9hA48J34oYTVnTZ0eawwFOIldgXAX-XCQlEKnDax_JAPYVZza2-m3lpoTlyWIW5kU2Ng=="
+    },
+    {
+      "title": "multihousingnews.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEnc0TEaPhyyGYBioh4bvvr8zBqAxunVl0Ngu_FHrlKHfOBxaHzzBbkO0AaYxxZYfZUcVKQJ-8ZApPYNeCjWvNNgOSAwqKohLEA5DkLeYjImy_jF0MAUmJjA7sjMUX_y7gydDKbFzPOMRErG-dMgK6gCsrkCm9uOYljRofUwWZ1yimeWs6v"
+    },
+    {
+      "title": "yardimatrix.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG_76h4ug2RPRuBRN9LzCU6Vel7AFN_e7OZVRGW6NqjhdBUSJ9ouFLh9iGazOp-oNGkp3j1pUbsAru63x08o2GYLwZxL4RX1KMQ_mlTaFTFIrFechryXe-GhnXlGP-KMhrb4J6tja5QLRrpJeuiEcW6zA=="
+    },
+    {
+      "title": "batchdata.io",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH1wCSqsPqw9TIm5rRhIw1IUPx7FBGiqNq2zyD9xQV_7D2sikM9uR4_4uFerdM07bXD_WfP01EJcr02EIh6yonT-2827Eqw1R2QFAQwKAqikjazbMx_e_q5fgKHpnurwtSPiTWMlvGXowTvWCTnXCLR7lZ-GXs="
+    },
+    {
+      "title": "attomdata.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG_43NskwOmt21wlJ-9Rp6YiKj9t8V5JfzXK8ALSf64qslWhNeKOqhyVyET4g7VhHgluztLSuor1vcGyobvM-cZXordL1PYloxJm_daQ19tdFsayc-ZV7sPRtvPXQg8lpZs3lrhQH2KBjPjH9QDgwvZbTKiQv1lXbzLkgUgOZM="
+    },
+    {
+      "title": "penncapitalgroup.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGu3JYj0BaiFJAcf08FMXvy0VZlsxx9fEBZIIc3N-yI9fFx805uifYI9rNzPkZY5qLlNmzbPsJd37YEpU0YM5wRmXVrMRAn6oDOHYpcmICl_EaXRUtLI5andbfs2pNvYhhB6FvYJbLifEuViHUgfxiwhYzKoHpoAslSFQT7rK4s6aKHZCghaCaH6Us="
+    },
+    {
+      "title": "reonomy.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHBGwZKyI6lpBJGZxnG0ilLcFdJpl8L2XN9LwU3DCzcuNyiEO4xyduR0f5kBUQb-VL11kHBBr7P4bCJh2H89vco4aiwfLSbfD-Ip0W9fRRo_d16bwBa8oyBJYkBeoMpjHahf6h5LQ7jyxRJ2EBDkVnjH4PuKfy2X8idYzWK"
+    },
+    {
+      "title": "document360.io",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEGjTuvyo2AKOxAQjCcQdsO6gAlV68ZqJJ3wCtyc4eHLkJyiR00Zjt5n5bXhFKbwCX--f5MBiZHA0FHzGb2eeZ0kkoJwMTHC5umCzW04OB8nPT1IgNjKG1OhstMWHIgUZauIGIIj6TJylSXb_9yMIA94RH0kGY="
+    },
+    {
+      "title": "alndata.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG-KXNRdHGIQAqHCDS6NyXQ_pSE0fARdGDglR54xMivJ6NoqWBjurC4nyEpYzlwxnO2IdZ5ky0l962O-A44_7MhT-Kw8Z6FVwu0reTtJGE="
+    },
+    {
+      "title": "prnewswire.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEX184IOduK_LFTa89jebHJ8t7_3HE5gxfH4oV2PO082hsD9b7Bw-SI7YC0FJq_Gd1JmA_jEhj93raGYa2lAVEFRgsKuf45LFXibxex2TvbsiA5fO4R49Ss1auRL9_Kk7GhVtE3RKDo2Yy6BA9t5lYezW3ZiDE30OTSIw0monyNPsLL482yod3XztAsDh4kVKMLeESM4tTLp8xXDJY0JrcO0WezWWz0eidSDkSFU-s="
+    },
+    {
+      "title": "smarty.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFuBWDN33fvsGwWL0wqftqpge6REyewlTZCZzWZNBj_NPZkIDYaMmTzFJjRZ0__RFBuLaFbr-picFHe7zSfz4ekqj2yK-JCaJkzm0jaOUH0oyoKBG8gjfqq3tN1J2lidxkyKZRQPWz2ZFrMLA74c5ITzOSN"
+    },
+    {
+      "title": "census.gov",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFUe2IW9ng4f5RbsACCxh8wRfx9bxJTDivliAshkQfk8ONzNDzmz3CFhgfdCxEJ4_gKiCXK1Jo0Y12MXycZOamu3ViaxFYxv1NwZdvE9QcQPj5f2i6t_-jjkKYFvF5GAN61fanIur_2fmk8YSnfqS7Cn3ZxVksAGBYSjIr9agpJYHhgpqFF85SZ5dkmO0jPIIpm"
+    },
+    {
+      "title": "quora.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHJvZOKUAqSrd7CbCUDUNltDVrAdA4T0Tt0JeTbflXci0s7qNS8qeylbroLFMxzeW6kFn0LLzmAsb4p15Fwln6X70EU5-UPRvRH97m6H6i6ahDSFSKffFSx6FoVGvqigQlubuQ0slgDF2tJ3_a8hbEi0QUU3cxpZekHjkURdVEtNeockeEFTdSXgArRaC8="
+    },
+    {
+      "title": "leadsplease.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFyCEiUNsF7KtORWYv6nNL6LxcnWBfDLi_Hu37D_1OV8wxOUkLif1z0T2ZbNlSTuUI1Cjx1NCY8lyAoZZbOYpxNiGn0tc-6uTR-7OMxRvBlvF-sxCHWAR99rwq47KWPYTg8ZmY59CWls5icpEVrp6CHyC8a6-VdQaHjP40cLzwoHOiA"
+    },
+    {
+      "title": "apartmentlists.net",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGY0BJoeYGZU9BN4ufkx5g2g3MY5wzcvk2ufAXcDGqKObA7O4q8Srvpc9YN5GNzKXj5fYCB8q6iI4kGYieg0qJ9D902pnU2YprfnO-9TGU9_4uo2RnenyMytfxq4x3qyUKDZl1XGRSl"
+    }
+  ]
+}

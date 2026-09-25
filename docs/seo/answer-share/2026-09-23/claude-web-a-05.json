@@ -1,0 +1,62 @@
+{
+  "engine": "claude-web",
+  "engine_label": "Claude (Sonnet) via claude -p, web search on",
+  "is_consumer_app": false,
+  "set": "A",
+  "question": "Where can I find Phoenix multifamily construction pipeline data?",
+  "intent": "pipeline",
+  "asked_on": "2026-09-23",
+  "ok": true,
+  "answer": "Here's where to find data on Phoenix-area multifamily construction pipelines, grouped by source type:\n\n**Paid commercial real estate data platforms**\n- **Yardi Matrix** \u2014 probably the most commonly cited source for multifamily construction pipeline data nationally and for Phoenix specifically (under construction, planned, prospective units by submarket). RentCafe/Yardi also publish free summary reports periodically that cite this data.\n- **CoStar** \u2014 tracks under-construction, planned, and proposed multifamily projects with unit counts, delivery timelines, and developer/owner info. Industry-standard but subscription-only.\n- **RealPage Market Analytics** \u2014 apartment supply/demand and construction pipeline tracking, widely used by property managers and lenders.\n- **ALN Apartment Data** \u2014 Texas-based but has strong Southwest/Phoenix coverage, popular with regional owners and brokers.\n\n**Brokerage research reports (often free, published quarterly)**\n- **CBRE**, **JLL**, **Cushman & Wakefield**, **Colliers**, **Berkadia**, and **Newmark** all publish quarterly Phoenix multifamily market reports that include construction pipeline figures, usually downloadable as free PDFs from their research pages.\n- **ABI Multifamily** \u2014 a Phoenix-based multifamily brokerage that specializes in Arizona and publishes detailed local market reports specifically on Phoenix/Maricopa County apartment supply.\n\n**Government / permit-level data**\n- **City of Phoenix Planning & Development Department** \u2014 building permit and site plan data, often searchable via the city's online permitting portal.\n- **Maricopa County Assessor** and **Maricopa County Planning and Development** \u2014 parcel-level and permit data for unincorporated areas and other cities in the county.\n- **Maricopa Association of Governments (MAG)** \u2014 regional planning data that sometimes includes housing pipeline info.\n- Individual suburb planning departments (Tempe, Mesa, Scottsdale, Chandler, Gilbert) for projects outside Phoenix proper.\n\n**Construction-specific data**\n- **Dodge Construction Network (Dodge Data & Analytics)** \u2014 tracks construction starts/bids, including multifamily, at a granular project level.\n- **Zonda** \u2014 more housing/single-family focused but has some multifamily coverage.\n\n**Industry associations and local news**\n- **NAIOP Arizona** \u2014 commercial real estate development association with local market intel.\n- **Greater Phoenix Economic Council (GPEC)** \u2014 broader economic development data, sometimes references major projects.\n- **Phoenix Business Journal** and **AZ Big Media** \u2014 regularly report on specific project announcements and groundbreakings, useful for qualitative pipeline tracking even without aggregate data.\n\nIf you want free, quickly usable data, I'd start with a Yardi Matrix or ABI Multifamily Phoenix report and the CBRE/JLL quarterly reports \u2014 those give the best balance of coverage and cost (free). If you need parcel/permit-level granularity or need to verify a specific project, the City of Phoenix permitting portal is the authoritative source.\n\nI answered this from general knowledge of commercial real estate data sources rather than live web lookups \u2014 let me know if you'd like me to search for current links or the latest quarterly report for any of these.",
+  "brands": [
+    {
+      "brand": "Yardi Matrix",
+      "first_at": 154,
+      "mentions": 2,
+      "rank": 1
+    },
+    {
+      "brand": "CoStar",
+      "first_at": 444,
+      "mentions": 1,
+      "rank": 2
+    },
+    {
+      "brand": "RealPage",
+      "first_at": 634,
+      "mentions": 1,
+      "rank": 3
+    },
+    {
+      "brand": "CBRE",
+      "first_at": 964,
+      "mentions": 2,
+      "rank": 4
+    },
+    {
+      "brand": "JLL",
+      "first_at": 974,
+      "mentions": 2,
+      "rank": 5
+    },
+    {
+      "brand": "Cushman & Wakefield",
+      "first_at": 983,
+      "mentions": 1,
+      "rank": 6
+    },
+    {
+      "brand": "Berkadia",
+      "first_at": 1022,
+      "mentions": 1,
+      "rank": 7
+    },
+    {
+      "brand": "Dodge",
+      "first_at": 2039,
+      "mentions": 2,
+      "rank": 8
+    }
+  ],
+  "links": []
+}

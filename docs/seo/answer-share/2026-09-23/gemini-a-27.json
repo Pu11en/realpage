@@ -1,0 +1,165 @@
+{
+  "engine": "gemini",
+  "engine_label": "Gemini (gemini-2.5-flash) via API, Google Search grounding on",
+  "is_consumer_app": false,
+  "set": "A",
+  "question": "How can I tell what property management system a company runs?",
+  "intent": "detect-software",
+  "asked_on": "2026-09-23",
+  "ok": true,
+  "answer": "Identifying the property management system (PMS) a company runs can be achieved through several investigative methods, ranging from examining their public-facing website to looking at industry-specific data sources.\n\nHere's how you can typically determine a company's PMS, along with specific tools and companies to consider:\n\n### 1. Utilize Website Technology Scanners\n\nThe most straightforward way to identify the underlying technology of a website, including potential PMS indicators, is by using website technology checker tools. These tools analyze a website's code, headers, and other public signals to identify the platforms and services it uses.\n\n*   **Wappalyzer:** This tool is available as a browser extension and an online lookup tool. It detects content management systems (CMS), frameworks, e-commerce platforms, analytics tools, and infrastructure services. It's often accurate for frontend and Software as a Service (SaaS) tools.\n*   **BuiltWith:** BuiltWith provides a detailed list of technologies used on a website, including analytics, advertising, hosting, and often identifies specific platforms that might be integrated with a PMS. It also offers historical data.\n*   **WhatRuns:** A lightweight alternative to Wappalyzer, available as a browser extension, offering a quick and clean interface for technology detection.\n*   **Ful.io and TechnologyChecker.io:** These platforms offer technology profiling services that scan websites to detect various technologies, including CMS, frameworks, analytics, and payment tools, and can build targeted technology reports.\n*   **CRFT Lookup:** This tool provides insights into a website's technologies, including frameworks, libraries, CMS, hosting, analytics, and marketing tools.\n\nWhile these tools might not always explicitly name a \"Property Management System,\" they can often reveal related technologies (e.g., specific real estate listing integrations, CRM platforms, or custom-built solutions) that can provide strong clues.\n\n### 2. Inspect the Website's Source Code\n\nFor those with a bit more technical knowledge, examining the website's source code can reveal clues.\n\n*   **View Page Source:** By right-clicking on a webpage and selecting \"View Page Source\" (or similar, depending on your browser), you can see the raw HTML. Look for specific keywords in the code that might indicate a PMS. These could be in `meta` tags, `script` tags, or URLs for CSS or JavaScript files. For example, some platforms might include their name in file paths (e.g., `/wp-content/plugins/yardi-integration/`).\n*   **Meta Tags:** Some CMS platforms or integrated systems explicitly state their name or version in `meta` tags.\n\n### 3. Look for Clues in Job Postings and Career Pages\n\nCompanies frequently list the software and systems their employees use in job descriptions. If a property management company is hiring for roles such as \"Property Manager,\" \"Leasing Agent,\" or \"Accountant,\" the job posting might specify required experience with particular PMS platforms. For instance, a job opening might state \"Experience with Yardi or RealPage preferred.\"\n\n### 4. Review Press Releases, Case Studies, and News Articles\n\nCompanies sometimes announce new software implementations, partnerships, or upgrades through press releases or news articles. Searching for \"[Company Name] + property management system,\" \"[Company Name] + PMS implementation,\" or \"[Company Name] + software upgrade\" could yield relevant results.\n\n### 5. Consult Industry Directories and Review Sites\n\nWebsites that review business software often categorize and list companies using specific platforms, or at least provide extensive lists of popular PMS options.\n\n*   **Software Review Sites:** Sites like Capterra, G2, or Software Advice allow users to filter and search for property management software. While they might not directly tell you what a specific company uses, they can help you understand the landscape of available systems and what features are common.\n*   **Industry Forums and Communities:** Online forums or communities for property managers or real estate professionals might discuss the software they use.\n\n### Common Property Management Systems\n\nKnowing the major players in the PMS market can help you recognize names if you come across them:\n\n**For Residential and Commercial Property Management:**\n\n*   **Yardi Systems:** One of the largest providers, offering comprehensive solutions for residential and commercial real estate.\n*   **RealPage:** Provides software and data analytics for multifamily, commercial, and single-family properties.\n*   **AppFolio:** Popular for automating tasks and workflows, especially for those managing 50 units or more, with strong accounting and customizable features.\n*   **Buildium:** An all-in-one software suitable for small to mid-sized property managers and HOAs, offering tools for accounting, leasing, and maintenance.\n*   **DoorLoop:** An all-in-one tool with features like a built-in CRM, tenant portal, owner portal, and rent collection, known for its user-friendly interface.\n*   **MRI Software:** Known for its strong accounting capabilities and comprehensive suite of features for financial data management.\n*   **Rent Manager:** A robust platform for landlords, property managers, and real estate professionals.\n*   **TurboTenant:** Highly rated for its all-in-one rental management, including listing syndication, tenant screening, and rent collection.\n*   **RentRedi:** Ideal for landlords managing multiple properties, with a focus on mobile-friendly features.\n*   **Innago:** A free option for small property management companies, though it may lack advanced reporting and features for larger portfolios.\n*   **TenantCloud:** A cloud-based platform for landlords with smaller portfolios.\n*   **Rentec Direct:** Designed for small landlords and property managers, emphasizing ease of use and affordability.\n*   **PropertyWare:** Another option for single-family property management.\n*   **Hemlane:** A platform that automates day-to-day tasks for landlords and PMs, with a user-friendly tenant portal.\n*   **Fyxt:** Best for commercial real estate property management, offering an all-in-one cloud-based solution.\n\n**For Hospitality (Hotels and Resorts):**\n\n*   **Oracle OPERA Cloud:** A widely used PMS in the hospitality industry.\n*   **Stayntouch:** A mobile-first, cloud-based PMS often recommended for boutique and lifestyle hotels.\n*   **HotelRunner:** A cloud-based PMS with tools for reservations, check-in/check-out, housekeeping, and guest communication.\n*   **Little Hotelier:** Geared towards small hotels and boutique properties, including front desk management, a booking engine, and channel management.\n*   **RoomRaccoon:** Combines PMS with other hotel management tools.\n\nBy employing a combination of these methods and understanding the major players in the PMS market, you can effectively research and deduce the property management system a company is utilizing.",
+  "sources": [
+    {
+      "title": "markoze.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEwzbh8LHUHsT-zNoeYIkkNj9HOFDVzMm4dmPPPINMFc0Y-lqPcw8B41ghbsCMc08r1jlyR8e8b1SO28rJAqdGxbzHYAqWuFp1y8ooDWciR2TZniCluR_vzxSEgr3PT9fS9iOGXaudCWelJNSdvP2YTlLCMjbh_PhRgMZfcAXRsRGKt-B7p"
+    },
+    {
+      "title": "reddit.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEZIBE5wkIoBDTN1JXY0vskEDOfs8vDlzRoe0Eh9tVhB9tpqL1ELDs14pD9qpzE5FwWdhNkYiSppDd-4hcUGYxcoUThRUseyJCitpWKjR28fjnkPl1S6QLeIEzAEPi7fs6A46UTnL7YNDE-zxRWT-ZsV7EW6S48SaqSwE5gTUZ1rOfZKkux-Di-vkAxKmZlU4UaTZN7OlB-sMQ="
+    },
+    {
+      "title": "wappalyzer.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFzixg5Amv31DFBcD4kfKZexH0snCh80rFNavVRYwEx-s-l2Ld74BB0SFoz8EDBTcqMXkiX_-cIg1YMw9o0utr09afT5mzg4CkYymGvmogVWXp43XZU-kwKbuSQBCyPForJy_O-znzaZpbvWIjNJ1ieNxMcbg4m_bSUouIWl5dTIeFKLL5muD0RUBVGnC6XR_3q"
+    },
+    {
+      "title": "wappalyzer.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHb8nZuG0XMiqMRiROL20jU0vJzSKkifN72D7sbIqq6ayjTUYeWYd2VQR_pMCSbhsjA3mW2aR160e_1BL3uNcexdp8TT4f_QQKxBRA9BdK5h6HLXFJ3ig=="
+    },
+    {
+      "title": "minimadesigns.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFJX6tBHMXLnqp3mAHBC3jNMXrsL3Yor_CVDGDudVlz88DbzwY_-roldJqr8_w528AxNiKKSU9j2H4XyOY6DHxXWfRmHpktiH3ZN8MYc2-tYa3g6L5VenBfICw9u7GV11Y5nvwpL7ITlIPTrRAjDeU8CL4Nz3wO-5pDKDt1ER2tgKE5-g=="
+    },
+    {
+      "title": "ful.io",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFSt2ewgcAKdXd_BZhE9IYStZEAvLCxxj5JrW56zKbmKkjMre48qx85PIf7FPYf3Rt1A2du8ZVG0nDMpp2rAf5eeQ89XKRvUC33Fg=="
+    },
+    {
+      "title": "technologychecker.io",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGxecON5nuNTNZPr9urGcAZNRci_0UOBo7eoplHR1sAmy4TxFgL-B7QwRIcTgGX2L2p4N4VDnS67XaoQju2Bw1R1_bdFydaKshjHhMun6UDZ1miSS340D1I"
+    },
+    {
+      "title": "crft.studio",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFq-JqoO8F71-ylGVIZyyrQ0k8Rcj_PoY3ZU_KoVQ06BMfxx17k3jhQ42bEewWKQRHycokUspdGBOSCisR47sDaxyl1SA7sHny94cETQ8GQGAW45GgwMjH--w=="
+    },
+    {
+      "title": "theserverside.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFYor78Uh2PZ8wG0Ku88lCrL77JOmGhs2jJwta3scZne2idI89gbvblVFyXQaabGSuoTRMnfozV-HQszC4mJjg3JRjGSCs16IpVVGy3NoYOL1eeXNt-RHrmZk1xMTSPgyl4imGtpM9Hyf6Ik2pfdrICiv5cevU_Uf4ostIG83kyUF1Yi7UdbhWswUJ8eiJ_e9RdRb0O7os1ns1aJd-uBp9pVwNQJIpftLwD8ySZJarZzazA3gxPK0aQkQl0hMB-0FNiRivuWjkqIhUy-DCraaweLhPtJsi50E3CZ5M="
+    },
+    {
+      "title": "fyxt.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFzf-CpzecD5VcbflK6yDAs3PMRVLbRmccFvgcGoBibdClh2U0R1EXfcF3ZYnQGr_mQlyE89LJR_1P_AKOXETFGlK9OMQApwDDM8OAiFdjqyxpywE1gmzvNTbMSbXG0Z52HEc6Gni8NdJjne1GiJljZWGS0T4TYVwxdvL-IUkDJanIVfK5YA0FpsQyuK376SLh8WrsnY3cXFK9bvbk="
+    },
+    {
+      "title": "readycontacts.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEqbWJLiGlkKP8VTpGQUl6h1cgfng4O3g3Ge8LVr4xv7SIAvLAiU_9idHY-cZ49tYn1-YUpYrnBwWtQdmkfcDl3Poak9KHJ3fPJ7h3fNM4pffDZmXVncbwE6K0aGPmMoV6aczy0acCIVebeKACp7eUfu3NdpSzw48kmOzSweanNDiOQCF0s"
+    },
+    {
+      "title": "signmore.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFg8BMI2tO68EFKTw_SGLB9lpEQh_KeexSBExe7-4B36YXjLJSsf2WeykcWUgV7v1v2_EmSAxvA-NUsaoBFtrZpTx4DjDnsW_ybL5TAxhByT6imsOR9dkuy_L89K62CbO7JIki3LWb5MjdN7UT7uM0fNav3vzMGQ_VV8F30H1kj5cg="
+    },
+    {
+      "title": "secondnature.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGrs27ArZTB44aQe1CG6cUDkMhPbulrk6eRRbVMGNVSCXHz0RKVU9wCVNDtgz4Z76ao4iml3GUXZuKNn2rg2s6zKyWw3lr9cdTxB-hmWgiLjFmFW1GHIplL17uqQ_SVXc4Q1O7VWtZdPP-w2VdKGeOu8rv-j2ver0ON-J7tjQjbgRX6V1bc_XN2S2Iv-w=="
+    },
+    {
+      "title": "q4web.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH2CcHNTX3GLpwQ2_uk0ME7VMVoGgNLWCOKb0asT1vA6dK99lA9OQz4lrJ0bjYff7i8__DoZbixLEKraJ_OkehntxdkZDZtj5cZ0laA0BsWT7tQshqZ_eLiNqHaf0d0bmOAR3dt5aG3HEMjFl5nATCDssNT0wlxr-Mzn3gXiNUfA8EogbPErB9kigmW4iGBZ9NMsktjZCaHcbmLCNlttb1zV0Bq1TBhi9atF5HclusCbObhGDy1JXr6XnKUJS44x0non_leVudU45VBjE5mewVHOFT1oOzMlaKadHcWyYMef6hP6A6-ABWLx1SMiRYwH5fGl3IIxgs="
+    },
+    {
+      "title": "chatlyn.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF2smLvkJ0fRrGYznCpL6tI-VuUrPcOXfuDhYLgMHOZ5GNhjjsibzQfycbH4-tEdQY6PnMcnt1IL0EgYZ36jhNUcrUkS-JdSCzlFAzLAYzGNa1vgzex_Fjh5YARD4xV_84sORWyKXqM9oUxde9h3wTmFmWb20xi0RQUTILH"
+    },
+    {
+      "title": "stayntouch.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFXCxbztmEhcJdPsu_mCnqL0WRlWhDLrmc8JYFHBAY-blwtZ2ohPc9_rje_zQCiVbEELf43lnjtjD9dxP7EsIzvMZMep3vdAOBC9MkWSsqqLxlCA2MaPxUWkgvhsiS8U4uvC-cFjTla3ChXR6XrjQ=="
+    },
+    {
+      "title": "hotelrunner.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEkaGx2FVfvGwH60O_pXyqTBAwW62FB8JUeZFGG_9ZfCzxKxef7S8sCAFllNokOIPi_p84A7Hn4kf3kn7C9S6x0wi6v619s30F0nRRv6wo1Yy9qhJ5g8Z4EzvB2yWsEuEQKLpV2z-o2C7QPESDXU99FTg03Zn8nDbZUXDj6ySClVJv_9n4fFtVca86sNu9FVSCaY1PrSrLPK4F3"
+    }
+  ],
+  "brands": [
+    {
+      "brand": "RealPage",
+      "first_at": 3090,
+      "mentions": 2,
+      "rank": 1
+    },
+    {
+      "brand": "AppFolio",
+      "first_at": 4597,
+      "mentions": 1,
+      "rank": 2
+    }
+  ],
+  "links": [
+    {
+      "title": "markoze.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEwzbh8LHUHsT-zNoeYIkkNj9HOFDVzMm4dmPPPINMFc0Y-lqPcw8B41ghbsCMc08r1jlyR8e8b1SO28rJAqdGxbzHYAqWuFp1y8ooDWciR2TZniCluR_vzxSEgr3PT9fS9iOGXaudCWelJNSdvP2YTlLCMjbh_PhRgMZfcAXRsRGKt-B7p"
+    },
+    {
+      "title": "reddit.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEZIBE5wkIoBDTN1JXY0vskEDOfs8vDlzRoe0Eh9tVhB9tpqL1ELDs14pD9qpzE5FwWdhNkYiSppDd-4hcUGYxcoUThRUseyJCitpWKjR28fjnkPl1S6QLeIEzAEPi7fs6A46UTnL7YNDE-zxRWT-ZsV7EW6S48SaqSwE5gTUZ1rOfZKkux-Di-vkAxKmZlU4UaTZN7OlB-sMQ="
+    },
+    {
+      "title": "wappalyzer.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFzixg5Amv31DFBcD4kfKZexH0snCh80rFNavVRYwEx-s-l2Ld74BB0SFoz8EDBTcqMXkiX_-cIg1YMw9o0utr09afT5mzg4CkYymGvmogVWXp43XZU-kwKbuSQBCyPForJy_O-znzaZpbvWIjNJ1ieNxMcbg4m_bSUouIWl5dTIeFKLL5muD0RUBVGnC6XR_3q"
+    },
+    {
+      "title": "wappalyzer.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHb8nZuG0XMiqMRiROL20jU0vJzSKkifN72D7sbIqq6ayjTUYeWYd2VQR_pMCSbhsjA3mW2aR160e_1BL3uNcexdp8TT4f_QQKxBRA9BdK5h6HLXFJ3ig=="
+    },
+    {
+      "title": "minimadesigns.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFJX6tBHMXLnqp3mAHBC3jNMXrsL3Yor_CVDGDudVlz88DbzwY_-roldJqr8_w528AxNiKKSU9j2H4XyOY6DHxXWfRmHpktiH3ZN8MYc2-tYa3g6L5VenBfICw9u7GV11Y5nvwpL7ITlIPTrRAjDeU8CL4Nz3wO-5pDKDt1ER2tgKE5-g=="
+    },
+    {
+      "title": "ful.io",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFSt2ewgcAKdXd_BZhE9IYStZEAvLCxxj5JrW56zKbmKkjMre48qx85PIf7FPYf3Rt1A2du8ZVG0nDMpp2rAf5eeQ89XKRvUC33Fg=="
+    },
+    {
+      "title": "technologychecker.io",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGxecON5nuNTNZPr9urGcAZNRci_0UOBo7eoplHR1sAmy4TxFgL-B7QwRIcTgGX2L2p4N4VDnS67XaoQju2Bw1R1_bdFydaKshjHhMun6UDZ1miSS340D1I"
+    },
+    {
+      "title": "crft.studio",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFq-JqoO8F71-ylGVIZyyrQ0k8Rcj_PoY3ZU_KoVQ06BMfxx17k3jhQ42bEewWKQRHycokUspdGBOSCisR47sDaxyl1SA7sHny94cETQ8GQGAW45GgwMjH--w=="
+    },
+    {
+      "title": "theserverside.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFYor78Uh2PZ8wG0Ku88lCrL77JOmGhs2jJwta3scZne2idI89gbvblVFyXQaabGSuoTRMnfozV-HQszC4mJjg3JRjGSCs16IpVVGy3NoYOL1eeXNt-RHrmZk1xMTSPgyl4imGtpM9Hyf6Ik2pfdrICiv5cevU_Uf4ostIG83kyUF1Yi7UdbhWswUJ8eiJ_e9RdRb0O7os1ns1aJd-uBp9pVwNQJIpftLwD8ySZJarZzazA3gxPK0aQkQl0hMB-0FNiRivuWjkqIhUy-DCraaweLhPtJsi50E3CZ5M="
+    },
+    {
+      "title": "fyxt.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFzf-CpzecD5VcbflK6yDAs3PMRVLbRmccFvgcGoBibdClh2U0R1EXfcF3ZYnQGr_mQlyE89LJR_1P_AKOXETFGlK9OMQApwDDM8OAiFdjqyxpywE1gmzvNTbMSbXG0Z52HEc6Gni8NdJjne1GiJljZWGS0T4TYVwxdvL-IUkDJanIVfK5YA0FpsQyuK376SLh8WrsnY3cXFK9bvbk="
+    },
+    {
+      "title": "readycontacts.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEqbWJLiGlkKP8VTpGQUl6h1cgfng4O3g3Ge8LVr4xv7SIAvLAiU_9idHY-cZ49tYn1-YUpYrnBwWtQdmkfcDl3Poak9KHJ3fPJ7h3fNM4pffDZmXVncbwE6K0aGPmMoV6aczy0acCIVebeKACp7eUfu3NdpSzw48kmOzSweanNDiOQCF0s"
+    },
+    {
+      "title": "signmore.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFg8BMI2tO68EFKTw_SGLB9lpEQh_KeexSBExe7-4B36YXjLJSsf2WeykcWUgV7v1v2_EmSAxvA-NUsaoBFtrZpTx4DjDnsW_ybL5TAxhByT6imsOR9dkuy_L89K62CbO7JIki3LWb5MjdN7UT7uM0fNav3vzMGQ_VV8F30H1kj5cg="
+    },
+    {
+      "title": "secondnature.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGrs27ArZTB44aQe1CG6cUDkMhPbulrk6eRRbVMGNVSCXHz0RKVU9wCVNDtgz4Z76ao4iml3GUXZuKNn2rg2s6zKyWw3lr9cdTxB-hmWgiLjFmFW1GHIplL17uqQ_SVXc4Q1O7VWtZdPP-w2VdKGeOu8rv-j2ver0ON-J7tjQjbgRX6V1bc_XN2S2Iv-w=="
+    },
+    {
+      "title": "q4web.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH2CcHNTX3GLpwQ2_uk0ME7VMVoGgNLWCOKb0asT1vA6dK99lA9OQz4lrJ0bjYff7i8__DoZbixLEKraJ_OkehntxdkZDZtj5cZ0laA0BsWT7tQshqZ_eLiNqHaf0d0bmOAR3dt5aG3HEMjFl5nATCDssNT0wlxr-Mzn3gXiNUfA8EogbPErB9kigmW4iGBZ9NMsktjZCaHcbmLCNlttb1zV0Bq1TBhi9atF5HclusCbObhGDy1JXr6XnKUJS44x0non_leVudU45VBjE5mewVHOFT1oOzMlaKadHcWyYMef6hP6A6-ABWLx1SMiRYwH5fGl3IIxgs="
+    },
+    {
+      "title": "chatlyn.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF2smLvkJ0fRrGYznCpL6tI-VuUrPcOXfuDhYLgMHOZ5GNhjjsibzQfycbH4-tEdQY6PnMcnt1IL0EgYZ36jhNUcrUkS-JdSCzlFAzLAYzGNa1vgzex_Fjh5YARD4xV_84sORWyKXqM9oUxde9h3wTmFmWb20xi0RQUTILH"
+    },
+    {
+      "title": "stayntouch.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFXCxbztmEhcJdPsu_mCnqL0WRlWhDLrmc8JYFHBAY-blwtZ2ohPc9_rje_zQCiVbEELf43lnjtjD9dxP7EsIzvMZMep3vdAOBC9MkWSsqqLxlCA2MaPxUWkgvhsiS8U4uvC-cFjTla3ChXR6XrjQ=="
+    },
+    {
+      "title": "hotelrunner.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEkaGx2FVfvGwH60O_pXyqTBAwW62FB8JUeZFGG_9ZfCzxKxef7S8sCAFllNokOIPi_p84A7Hn4kf3kn7C9S6x0wi6v619s30F0nRRv6wo1Yy9qhJ5g8Z4EzvB2yWsEuEQKLpV2z-o2C7QPESDXU99FTg03Zn8nDbZUXDj6ySClVJv_9n4fFtVca86sNu9FVSCaY1PrSrLPK4F3"
+    }
+  ]
+}

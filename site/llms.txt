@@ -1,0 +1,55 @@
+# CraneSignal
+
+> A free, sourced list of 1,861 apartment buildings in the United States that are newly permitted, under construction, or recently sold -- 291,126 units in all. Every building links to the public record it came from. Last updated 2026-09-20.
+
+CraneSignal exists for people who sell to apartment owners: software vendors, service
+providers and their sales teams. It answers one question -- which buildings are about to
+need something, and why now -- from public records only.
+
+## What the data is
+
+Each building carries, where the public record says so: name, street address, city, unit
+count, stage (planned, permitted, under construction, leasing or sold), permit date,
+expected opening date, sale date, buyer, developer, office phone, and a link to every
+source it was found in. Facts without a source are marked unsourced rather than guessed.
+
+## Where it comes from
+
+State and city construction records, county appraisal-district sale records, and public
+news announcements. No proprietary feeds, no scraped logins, no purchased lists. The
+collection is read-only: CraneSignal never posts, votes or submits anything anywhere.
+
+## Coverage
+
+- Texas: 1,587 buildings, 146 cities, 259,251 units
+- Arizona: 274 buildings, 22 cities, 31,875 units
+
+## Pages
+
+- [Lead list](https://app.cranesignal.com/index.html): every building, filterable by state, with lead scores.
+- [How it works](https://app.cranesignal.com/under-the-hood.html): where each number comes from and how it was tested.
+- [Privacy](https://app.cranesignal.com/privacy.html)
+- [Full data summary](https://app.cranesignal.com/llms-full.txt): every per-place total in one file.
+- https://app.cranesignal.com/leads/az/mesa.html
+- https://app.cranesignal.com/leads/az/phoenix.html
+- https://app.cranesignal.com/leads/az/scottsdale.html
+- https://app.cranesignal.com/leads/az.html
+- https://app.cranesignal.com/leads/opening-2027-2028.html
+- https://app.cranesignal.com/leads/sold-2025.html
+- https://app.cranesignal.com/leads/tx/arlington.html
+- https://app.cranesignal.com/leads/tx/austin.html
+- https://app.cranesignal.com/leads/tx/dallas-fort-worth.html
+- https://app.cranesignal.com/leads/tx/dallas.html
+- https://app.cranesignal.com/leads/tx/fort-worth.html
+- https://app.cranesignal.com/leads/tx/garland.html
+- https://app.cranesignal.com/leads/tx/grand-prairie.html
+- https://app.cranesignal.com/leads/tx/houston.html
+- https://app.cranesignal.com/leads/tx/irving.html
+- https://app.cranesignal.com/leads/tx/plano.html
+- https://app.cranesignal.com/leads/tx/san-antonio.html
+- https://app.cranesignal.com/leads/tx.html
+
+## Citing this
+
+Counts change weekly as new records appear. Quote the 'last updated' date with any number.
+Building-level claims should link the building's own source record, not this file.

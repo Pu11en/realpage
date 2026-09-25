@@ -1,0 +1,45 @@
+{
+  "engine": "gemini",
+  "engine_label": "Gemini (gemini-2.5-flash) via API, Google Search grounding on",
+  "is_consumer_app": false,
+  "set": "A",
+  "question": "How can I find out who bought an apartment complex?",
+  "intent": "sales",
+  "asked_on": "2026-09-23",
+  "ok": true,
+  "answer": "To find out who bought an apartment complex, you'll generally need to consult public records and real estate databases. Here's a breakdown of methods and resources:\n\n### 1. Public Records\n\nProperty ownership information is typically public record and accessible through various government offices.\n\n*   **County Recorder or Assessor's Office:** This is often the primary source. The County Recorder's Office (sometimes called the County Clerk or Register of Deeds) records all real estate transactions, including deeds that transfer ownership. The County Assessor's Office maintains records for property tax purposes, which also include ownership information. You can usually search these records online through the county's website, or in person. You'll likely need the property's address or parcel number.\n*   **Secretary of State (for Corporate Owners):** If the apartment complex was purchased by a Limited Liability Company (LLC) or corporation, the true owner might be shielded behind the company name. You can often search the Secretary of State's business entity database in the state where the LLC or corporation is registered to find information about the registered agent and, sometimes, the managing members or officers.\n\n### 2. Online Real Estate Databases and Services\n\nSeveral online platforms aggregate public record data and provide additional property information, often for a fee. These can be particularly useful for commercial properties like apartment complexes.\n\n*   **CoStar:** This is a leading provider of commercial real estate information, analytics, and online marketplaces. CoStar offers detailed data on property ownership, sales history, and market trends for commercial properties, including apartment complexes.\n*   **LoopNet:** As a subsidiary of CoStar, LoopNet is a commercial real estate marketplace that also provides property information, though its focus is more on listings for sale or lease. You may find sales history information there.\n*   **Reonomy:** Reonomy specializes in commercial real estate data and analytics, offering insights into property ownership, transaction history, and detailed property characteristics.\n*   **PropertyShark:** This service provides detailed property reports, including ownership history, sales records, and mortgage information, often drawing from public records.\n*   **Local Multiple Listing Service (MLS):** While primarily used by real estate agents for active listings, an MLS might contain historical sales data that includes buyer information, especially if the transaction involved brokers. Access to the full MLS is typically restricted to licensed real estate professionals, but some public-facing websites might draw from MLS data.\n*   **Data Providers (e.g., CoreLogic, Black Knight):** These companies provide extensive real estate data to businesses, including ownership and transaction records. While direct consumer access may be limited, their data often underpins other services.\n\n### 3. Professional Assistance\n\n*   **Real Estate Agents or Brokers:** Commercial real estate agents often have access to proprietary databases and local market knowledge that can help identify the buyer of an apartment complex.\n*   **Title Companies:** When a property is bought or sold, a title company performs a title search to ensure clear ownership. They maintain extensive records of property transactions and can often provide ownership information.\n*   **Attorneys:** A real estate attorney can assist with property record searches and advise on how to access ownership information, especially in more complex cases involving trusts or corporate entities.\n\n### Steps to Take:\n\n1.  **Identify the Property:** Gather the exact address of the apartment complex.\n2.  **Start with the County:** Begin your search with the County Recorder's or Assessor's Office website for the county where the property is located. Look for \"property search,\" \"public records,\" or \"deeds.\"\n3.  **Search by Address or Parcel Number:** Input the address. If that doesn't yield results, try to find the parcel number (sometimes called APN or Assessor's Parcel Number) through the Assessor's website and use that for your search.\n4.  **Examine the Deed:** The deed recorded at the time of sale will clearly state the grantor (seller) and grantee (buyer).\n5.  **Research Corporate Buyers:** If the buyer is an LLC or corporation, search the relevant Secretary of State's website to identify the registered agent and potentially key personnel.\n6.  **Utilize Online Databases:** If county records are insufficient or you need more detailed information, consider using commercial real estate databases like CoStar, Reonomy, or PropertyShark, which may require a subscription or one-time report purchase.\n\nBy following these steps, you should be able to identify who bought an apartment complex.",
+  "sources": [],
+  "brands": [
+    {
+      "brand": "Public records (DIY)",
+      "first_at": 430,
+      "mentions": 1,
+      "rank": 1
+    },
+    {
+      "brand": "CoStar",
+      "first_at": 1492,
+      "mentions": 4,
+      "rank": 2
+    },
+    {
+      "brand": "LoopNet",
+      "first_at": 1752,
+      "mentions": 2,
+      "rank": 3
+    },
+    {
+      "brand": "Reonomy",
+      "first_at": 1987,
+      "mentions": 3,
+      "rank": 4
+    },
+    {
+      "brand": "PropertyShark",
+      "first_at": 2173,
+      "mentions": 2,
+      "rank": 5
+    }
+  ],
+  "links": []
+}

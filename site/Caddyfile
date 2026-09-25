@@ -34,7 +34,10 @@
 
 	# Always public: the privacy page, and the shell it needs to look right
 	# (styles, fonts, favicon). None of these carry data.
-	@public_site path /privacy.html /css/* /fonts/* /favicon.ico /favicon.png /favicon.svg /apple-touch-icon.png
+	# robots.txt, sitemap.xml and llms.txt must answer before any sign-in logic: a crawler
+	# that gets a redirect here learns nothing about the site. indexnow-<key>.txt is the
+	# proof-of-ownership file the IndexNow engines fetch; it is public on purpose.
+	@public_site path /privacy.html /robots.txt /sitemap.xml /llms.txt /llms-full.txt /indexnow-*.txt /css/* /fonts/* /favicon.ico /favicon.png /favicon.svg /apple-touch-icon.png
 	handle @public_site {
 		root * {$SITE_ROOT:/srv}
 		file_server
@@ -47,12 +50,15 @@
 		not header Sec-Fetch-Dest iframe
 	}
 	handle @home {
-		# The app opens on the lead list.
-		redir * /index.html 302
+		# The app opens on the lead list. Served directly rather than redirected: a 302 on
+		# the home page costs a round trip and dilutes the URL that search engines rank.
+		root * {$SITE_ROOT:/srv}
+		rewrite * /index.html
+		file_server
 	}
 
 	# The app's pages and their data: open to everyone, no sign-in.
-	@app path /index.html /landing.html /master-table.html /property.html /under-the-hood.html /sample-lead-pack.pdf /js/* /data/* /vendor/* /img/*
+	@app path /index.html /landing.html /master-table.html /property.html /under-the-hood.html /sample-lead-pack.pdf /leads/* /js/* /data/* /vendor/* /img/*
 	handle @app {
 		root * {$SITE_ROOT:/srv}
 		file_server

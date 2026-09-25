@@ -1,0 +1,44 @@
+{
+  "engine": "claude-web",
+  "engine_label": "Claude (Sonnet) via claude -p, web search on",
+  "is_consumer_app": false,
+  "set": "A",
+  "question": "Which property management software does a given apartment building use?",
+  "intent": "detect-software",
+  "asked_on": "2026-09-23",
+  "ok": true,
+  "answer": "I don't have a way to look up which property management software a specific apartment building uses \u2014 that's not something I have a data source for, and I don't have a specific building name from you to even attempt a search.\n\nIf you tell me the building (name and city, or address), I can search the web for public signals, but be aware this is often not reliably discoverable. Realistic sources that sometimes reveal it:\n\n- **The building's own resident/tenant portal** \u2014 many management companies brand their login page (e.g., a URL or logo showing AppFolio, Yardi/RentCafe, Buildium, Entrata, RealPage/OneSite, ResMan, Rent Manager). If the property has a \"Resident Login\" or \"Pay Rent Online\" link on its website, the destination URL/domain usually gives it away.\n- **The listing on Apartments.com, Zillow, or the property's own site** \u2014 sometimes the \"apply now\" or \"pay rent\" button links to a management platform's domain.\n- **The property management company's own website** \u2014 if you know who manages the building (often listed in the lease, on-site office signage, or Google Maps listing), their site sometimes states their software stack (less common) or you can infer it from their portal branding.\n- **LinkedIn** \u2014 property managers/leasing agents sometimes list the software they use (\"proficient in Yardi,\" \"AppFolio experience\") in their profiles.\n- **Job postings** for leasing consultants/property managers at that building's management company, which often name the required software.\n\nWant me to search for a specific building? Give me its name/address and I'll try the portal-branding approach.",
+  "brands": [
+    {
+      "brand": "AppFolio",
+      "first_at": 552,
+      "mentions": 2,
+      "rank": 1
+    },
+    {
+      "brand": "Entrata",
+      "first_at": 588,
+      "mentions": 1,
+      "rank": 2
+    },
+    {
+      "brand": "RealPage",
+      "first_at": 597,
+      "mentions": 1,
+      "rank": 3
+    },
+    {
+      "brand": "Apartments.com",
+      "first_at": 788,
+      "mentions": 1,
+      "rank": 4
+    },
+    {
+      "brand": "Zillow",
+      "first_at": 804,
+      "mentions": 1,
+      "rank": 5
+    }
+  ],
+  "links": []
+}

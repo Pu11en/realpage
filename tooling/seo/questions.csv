@@ -1,0 +1,29 @@
+set,question,intent,notes
+A,How do I find apartment buildings under construction in Dallas?,pipeline,core query
+A,Where can I find a list of new apartment developments in Houston?,pipeline,
+A,How do I find multifamily construction pipeline data for Austin?,pipeline,matches metro page
+A,What apartment complexes are being built in San Antonio right now?,pipeline,
+A,Where can I find Phoenix multifamily construction pipeline data?,pipeline,matches AZ page
+A,Where can I get a list of apartment buildings opening in 2027?,pipeline,matches opening page
+A,How do I find new apartment projects before they open for leasing?,pipeline,the core product claim
+A,How many apartment units are under construction in Texas?,pipeline,a number we can answer exactly
+A,Which apartment complexes in Texas sold in 2025?,sales,matches sold-2025 page
+A,How can I find out who bought an apartment complex?,sales,
+A,How do I find recently sold apartment buildings in Dallas-Fort Worth?,sales,
+A,Where can I see apartment building ownership changes?,sales,
+A,What is the best way to find newly sold apartment complexes for sales prospecting?,sales,buyer's own words
+A,Is there a free multifamily market report for San Antonio?,free-data,the gap vs gated PDFs
+A,What public data sources show apartment construction permits in Texas?,free-data,under-the-hood territory
+A,Are there free alternatives to CoStar or Yardi Matrix for multifamily pipeline data?,free-data,names the incumbents
+A,How do I look up apartment construction permits without paying for a subscription?,free-data,
+A,Where can I download a list of apartment buildings with addresses and unit counts?,free-data,exactly what we publish
+A,How do I build a lead list of new apartment buildings to sell to?,prospecting,the buyer's job
+A,How do I find property managers to sell services to?,prospecting,
+A,Who do I contact about a new apartment building before it opens?,prospecting,why-now angle
+A,How do I find decision makers at apartment management companies?,prospecting,
+A,What is the best way to prospect multifamily property managers?,prospecting,
+A,How do I find contact information for apartment building owners?,prospecting,our weakest data, worth tracking
+A,When is the best time to sell services to a new apartment building?,timing,the thesis in one question
+A,Which property management software does a given apartment building use?,detect-software,CraneSignal's second claim
+A,How can I tell what property management system a company runs?,detect-software,
+A,How do I find which apartment buildings use a specific software platform?,detect-software,

@@ -1,0 +1,97 @@
+{
+  "engine": "claude-web",
+  "engine_label": "Claude (Sonnet) via claude -p, web search on",
+  "is_consumer_app": false,
+  "set": "A",
+  "question": "How many apartment units are under construction in Texas?",
+  "intent": "pipeline",
+  "asked_on": "2026-09-23",
+  "ok": true,
+  "answer": "There's no single authoritative \"Texas total\" figure that gets published cleanly \u2014 the standard industry trackers (Yardi Matrix, RealPage, CoStar, CBRE) report by metro, not by state, and even metro-level numbers vary somewhat by data source and snapshot date. Here's the best composite picture as of mid-to-late 2026:\n\n**By major metro (units under construction):**\n- **Dallas\u2013Fort Worth**: ~43,000\u201353,000 units, depending on the source and month cited (Yardi Matrix put it at 53,165 as of June 2026; another CBRE-sourced figure cited 43,320 for H1 2026). DFW remains the most active apartment construction market in the country, concentrated in Frisco, Allen/McKinney, and Denton, with ~86% of units in the \"lifestyle\" (higher-end) category.\n- **Austin**: ~26,000\u201327,000 units at the start of 2026 (Yardi Matrix cites 25,931\u201327,183 depending on the report), across roughly 113 projects. Deliveries are expected to fall sharply in 2026 as the backlog from the 2022\u20132024 boom works through \u2014 estimates range from ~4,600 (CoStar, low case) to ~12,000\u201313,000 units delivered this year.\n- **Houston**: Specific metro-wide under-construction totals weren't cleanly available from Yardi/RealPage in what I could pull, but Houston entered 2026 on a soft note (falling rents, falling occupancy), which is typically a leading indicator of fewer construction starts. MMG Real Estate Advisors publishes a quarterly Houston pipeline report if you want a hard number.\n- **San Antonio**: Smaller pipeline, thinning fast \u2014 completions forecast to drop ~21% year-over-year, with roughly 5,000 new units expected to finish in 2026, less than half of 2024's total.\n\n**Statewide context:**\n- The Texas Real Estate Research Center (Texas A&M) projects statewide apartment **deliveries** (not under-construction, but completions) of fewer than 35,000 units in 2026 \u2014 about a 1.4% increase to existing inventory.\n- Zabalist, a construction-project database, tracked 294 active or in-review apartment/multifamily developments in Texas as of July 2026, worth about $5.8B combined.\n- Nationally, Yardi Matrix raised its 2026 completions forecast to 458,731 units, with Texas markets (especially DFW) still leading most other states despite the broader slowdown.\n\n**My best estimate**: adding up the DFW, Austin, San Antonio, and a reasonable Houston contribution, Texas likely has somewhere in the **90,000\u2013110,000 unit** range under construction statewide right now, though I'd treat that as a rough sum of metro estimates rather than a number you'll find published as-is anywhere.\n\nIf you need a precise, defensible figure for something like a report or investment memo, the right move is a paid Yardi Matrix or RealPage/CoStar pull that aggregates all Texas MSAs on the same as-of date \u2014 the free press coverage I'm drawing from mixes snapshot dates and slightly different market definitions.\n\nSources:\n- [Dallas is still building big, but U.S. apartment deliveries fell 41%](https://www.marketscale.com/industries/engineering-and-construction/dallas-is-still-building-big-but-us-apartment-deliveries-fell-41)\n- [Yardi ups apartment supply expectations for 2025-2027 | Multifamily Dive](https://www.multifamilydive.com/news/apartment-starts-multifamily-construction-yardi/804414/)\n- [Top 10 Markets for Multifamily Deliveries in H1 2026](https://www.multihousingnews.com/top-markets-for-multifamily-construction/)\n- [New Apartments Being Built in Austin: 2026 Pipeline Guide](https://austinapartments.com/blog/new-apartments-being-built-in-austin/)\n- [Dallas Multifamily Market Report | Yardi Matrix](https://www.yardimatrix.com/blog/dallas-multifamily-market-report/)\n- [Houston Multifamily Market Report | Yardi Matrix Blog](https://www.yardimatrix.com/blog/houston-multifamily-market-report/)\n- [Houston Q1 2026 Pipeline Report \u2013 MMG Real Estate Advisors](https://mmgrea.com/houston-q1-2026-pipeline-report/)\n- [2026 Texas Real Estate Forecast | Texas Real Estate Research Center](https://trerc.tamu.edu/reports/2026-texas-real-estate-forecast/)\n- [New Texas Apartment & Multifamily Construction | Zabalist](https://www.zabalist.com/projects/multifamily)\n- [San Antonio multifamily construction to slow further in 2026 | NorthMarq](https://www.northmarq.com/insights/insights/new-construction-san-antonio-multifamily-market-expected-slow-further-2026)\n- [Dallas-Fort Worth Multifamily Absorption Climbs in Q2 | CRE Daily](https://www.credaily.com/briefs/dallas-fort-worth-multifamily-absorption-climbs-in-q2/)",
+  "brands": [
+    {
+      "brand": "Yardi Matrix",
+      "first_at": 115,
+      "mentions": 7,
+      "rank": 1
+    },
+    {
+      "brand": "RealPage",
+      "first_at": 129,
+      "mentions": 3,
+      "rank": 2
+    },
+    {
+      "brand": "CoStar",
+      "first_at": 139,
+      "mentions": 3,
+      "rank": 3
+    },
+    {
+      "brand": "CBRE",
+      "first_at": 147,
+      "mentions": 2,
+      "rank": 4
+    },
+    {
+      "brand": "MMG",
+      "first_at": 1358,
+      "mentions": 3,
+      "rank": 5
+    },
+    {
+      "brand": "Apartments.com",
+      "first_at": 3469,
+      "mentions": 1,
+      "rank": 6
+    },
+    {
+      "brand": "Northmarq",
+      "first_at": 4203,
+      "mentions": 2,
+      "rank": 7
+    }
+  ],
+  "links": [
+    {
+      "title": "",
+      "url": "https://www.marketscale.com/industries/engineering-and-construction/dallas-is-still-building-big-but-us-apartment-deliveries-fell-41"
+    },
+    {
+      "title": "",
+      "url": "https://www.multifamilydive.com/news/apartment-starts-multifamily-construction-yardi/804414/"
+    },
+    {
+      "title": "",
+      "url": "https://www.multihousingnews.com/top-markets-for-multifamily-construction/"
+    },
+    {
+      "title": "",
+      "url": "https://austinapartments.com/blog/new-apartments-being-built-in-austin/"
+    },
+    {
+      "title": "",
+      "url": "https://www.yardimatrix.com/blog/dallas-multifamily-market-report/"
+    },
+    {
+      "title": "",
+      "url": "https://mmgrea.com/houston-q1-2026-pipeline-report/"
+    },
+    {
+      "title": "",
+      "url": "https://trerc.tamu.edu/reports/2026-texas-real-estate-forecast/"
+    },
+    {
+      "title": "",
+      "url": "https://www.zabalist.com/projects/multifamily"
+    },
+    {
+      "title": "",
+      "url": "https://www.northmarq.com/insights/insights/new-construction-san-antonio-multifamily-market-expected-slow-further-2026"
+    },
+    {
+      "title": "",
+      "url": "https://www.credaily.com/briefs/dallas-fort-worth-multifamily-absorption-climbs-in-q2/"
+    }
+  ]
+}

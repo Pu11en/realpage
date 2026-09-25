@@ -1,0 +1,75 @@
+{
+  "engine": "gemini",
+  "engine_label": "Gemini (gemini-2.5-flash) via API, Google Search grounding on",
+  "is_consumer_app": false,
+  "set": "A",
+  "question": "Is there a free multifamily market report for San Antonio?",
+  "intent": "free-data",
+  "asked_on": "2026-09-23",
+  "ok": true,
+  "answer": "Yes, there are several companies and organizations that offer free multifamily market reports or detailed summaries for San Antonio, providing valuable insights for researchers and investors.\n\nHere are some sources where you can find such reports:\n\n*   **MMG Real Estate Advisors** provides a \"San Antonio Q3 2025 Market Report\" which includes key takeaways and an option to download the full report. This report covers aspects like apartment demand, construction trends, and rent levels in comparison to previous years.\n*   **Yardi Matrix** offers a \"San Antonio Multifamily Market Report \u2013 May 2026.\" Their reports often cover rent growth, occupancy rates, supply pressure, new construction, and investment activity in the metro area. While Yardi Matrix is a subscription-based service, they often make summary reports or articles available for free.\n*   **Gamma** offers a \"San Antonio Multifamily Market Report\" which provides a comprehensive analysis of the sector's performance and emerging trends. This includes data on supply and demand, completions, annual absorption trends, occupancy, and rent trends in San Antonio.\n*   **Northmarq** also publishes market insights, such as their June 2026 overview of the San Antonio multifamily market. This covers vacancy rates, rent metrics, and investment market challenges, including distressed and foreclosure activity.\n*   You may also find reports from sources like **Marketbeat Template - Local Markets**, which details supply and demand, stabilized vacancy, net absorption, and pricing in the San Antonio multifamily market.\n\nThese reports often include data on average rents, occupancy rates, units under construction, and investment sales activity, helping stakeholders make informed decisions.",
+  "sources": [
+    {
+      "title": "mmgrea.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEhqS8PhVYRS3VmNQsr7viwKELaT8Zi2hIbHMlSWdoudprXHjzC_4Y_wgGfsVDfkNBI-PVExqzF1f6zwUZ_fRknuVRdpnXyuZOY2hhkUzW7HKFGNDq1SQqZPNYDxvdnM_zJvuI0-p6Exp3TUwRWTw_i"
+    },
+    {
+      "title": "yardimatrix.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHmDVFD_b4goHsqvRv9sUEcXLz5n9grAVjWynFOCCjHzPHclOkwNKxAMhIZZhWWwSbZfkwFDIj55AXh4VhZBP0j2pY_XCdn1FgvVYhqn7pcpcTBD8jZ3ECjmO3m1DVNF8ESe-ngU3fMZblGIzcZ6Oaukv8v6P3ZalaeKLSPsUybUqmK"
+    },
+    {
+      "title": "gamma.app",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE-J_3uXpchkOusECMIGFFpKBtmecCAdJ_RSQNoToS5-QfmSTZYWkvnY9oMZP8iciXS3CrwgV2kObqhQlDoL1hd-jeU-0yfRHIwCIRpBy41E7fdCAgZmkyB7339Z5rECVoNhBxolh_WcjBFgrOB4Jo16VughVWl7MBVQx5E0xlygw=="
+    },
+    {
+      "title": "northmarq.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF_dkBS2TxIjvFoT7bjAo_qWepnkkI6oYcsXwnDfJFVjDX76R8jvRndj9Opc1TyKVcT38qwmm84pcwhAir1r7vbtYOWK9ZFjDCNtOa0YH2WLJ8Ig2G8uifus8pWayFfTber9V2QgxqEFmhLO4qjfUlzgP9sM026onMP0SHOzi8E88YnbNITeqyH2rjBCpZF7o2fSiWknkrsrKULck_fIMj28vAlp2jauk8W3rDnvUjHbvPQze9fYXXg"
+    },
+    {
+      "title": "cushmanwakefield.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG31ZT0po53TPK_vaFJOkpG9CFe_nRq8oPx2kpdxfHtrDT3i_18lF8s-mSMIf7rw1hNvYtC4-so2nWG7002iS4PEgcqRvc2wKcmIRISPiI8hGaZ2v8tL4CJoyaphhuOS-n89GECRXkfgXqP2qiiur9z4YMvnDMtXlvzbYTQ6WIIT-9QqeXX3l4enFVw9p8DVWDAZpL07E9WhotXHwp5AjzEmgkA_ef3XMq95IADverJtVHLobqnkP996fpYxWVv0SqJAdbhoJLkAiTK16liS8mrB0_86oSFO1E0zpLQOR8Nx-ivKd9niWzcoGKwnX990inG7RyW"
+    }
+  ],
+  "brands": [
+    {
+      "brand": "MMG",
+      "first_at": 255,
+      "mentions": 1,
+      "rank": 1
+    },
+    {
+      "brand": "Yardi Matrix",
+      "first_at": 527,
+      "mentions": 2,
+      "rank": 2
+    },
+    {
+      "brand": "Northmarq",
+      "first_at": 1134,
+      "mentions": 1,
+      "rank": 3
+    }
+  ],
+  "links": [
+    {
+      "title": "mmgrea.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEhqS8PhVYRS3VmNQsr7viwKELaT8Zi2hIbHMlSWdoudprXHjzC_4Y_wgGfsVDfkNBI-PVExqzF1f6zwUZ_fRknuVRdpnXyuZOY2hhkUzW7HKFGNDq1SQqZPNYDxvdnM_zJvuI0-p6Exp3TUwRWTw_i"
+    },
+    {
+      "title": "yardimatrix.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHmDVFD_b4goHsqvRv9sUEcXLz5n9grAVjWynFOCCjHzPHclOkwNKxAMhIZZhWWwSbZfkwFDIj55AXh4VhZBP0j2pY_XCdn1FgvVYhqn7pcpcTBD8jZ3ECjmO3m1DVNF8ESe-ngU3fMZblGIzcZ6Oaukv8v6P3ZalaeKLSPsUybUqmK"
+    },
+    {
+      "title": "gamma.app",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE-J_3uXpchkOusECMIGFFpKBtmecCAdJ_RSQNoToS5-QfmSTZYWkvnY9oMZP8iciXS3CrwgV2kObqhQlDoL1hd-jeU-0yfRHIwCIRpBy41E7fdCAgZmkyB7339Z5rECVoNhBxolh_WcjBFgrOB4Jo16VughVWl7MBVQx5E0xlygw=="
+    },
+    {
+      "title": "northmarq.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF_dkBS2TxIjvFoT7bjAo_qWepnkkI6oYcsXwnDfJFVjDX76R8jvRndj9Opc1TyKVcT38qwmm84pcwhAir1r7vbtYOWK9ZFjDCNtOa0YH2WLJ8Ig2G8uifus8pWayFfTber9V2QgxqEFmhLO4qjfUlzgP9sM026onMP0SHOzi8E88YnbNITeqyH2rjBCpZF7o2fSiWknkrsrKULck_fIMj28vAlp2jauk8W3rDnvUjHbvPQze9fYXXg"
+    },
+    {
+      "title": "cushmanwakefield.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG31ZT0po53TPK_vaFJOkpG9CFe_nRq8oPx2kpdxfHtrDT3i_18lF8s-mSMIf7rw1hNvYtC4-so2nWG7002iS4PEgcqRvc2wKcmIRISPiI8hGaZ2v8tL4CJoyaphhuOS-n89GECRXkfgXqP2qiiur9z4YMvnDMtXlvzbYTQ6WIIT-9QqeXX3l4enFVw9p8DVWDAZpL07E9WhotXHwp5AjzEmgkA_ef3XMq95IADverJtVHLobqnkP996fpYxWVv0SqJAdbhoJLkAiTK16liS8mrB0_86oSFO1E0zpLQOR8Nx-ivKd9niWzcoGKwnX990inG7RyW"
+    }
+  ]
+}

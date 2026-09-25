@@ -1,0 +1,80 @@
+{
+  "engine": "claude-web",
+  "engine_label": "Claude (Sonnet) via claude -p, web search on",
+  "is_consumer_app": false,
+  "set": "A",
+  "question": "How do I find multifamily construction pipeline data for Austin?",
+  "intent": "pipeline",
+  "asked_on": "2026-09-23",
+  "ok": true,
+  "answer": "Multifamily construction pipeline data (units under construction, planned, and proposed) is tracked by a mix of paid commercial real estate platforms, local specialty research firms, and public permit records. Here's where to look for Austin specifically:\n\n**Paid CRE data platforms (industry standard)**\n- **CoStar** \u2014 the most widely used commercial real estate database; tracks under-construction, planned, and proposed multifamily projects by submarket, with unit counts, developers, and delivery timelines. Subscription-based, expensive, but the go-to for brokers/investors.\n- **Yardi Matrix** \u2014 strong multifamily-specific pipeline tracking, publishes free periodic market reports (including Austin-specific ones) alongside its paid database.\n- **RealPage Market Analytics** \u2014 apartment-focused data (RealPage also owns the former Axiometrics dataset), widely used by operators and REITs for supply/demand and pipeline tracking.\n- **Moody's Analytics CRE (formerly Reis)** \u2014 construction pipeline and vacancy/rent data by metro.\n\n**Austin-specific / regional research**\n- **Capitol Market Research (Eldon Rude)** \u2014 an Austin-based firm that's been the go-to independent source for Austin-area new home and apartment supply tracking for years; publishes detailed local multifamily pipeline reports, often cited by local press.\n- **Austin Business Journal (bizjournals.com/austin)** \u2014 regularly reports on specific projects, permits filed, and has done pipeline \"tracker\" features; good for names/addresses of specific developments.\n- **Austin Monitor** \u2014 local nonprofit journalism, covers zoning/planning commission votes on specific multifamily projects before they break ground.\n\n**Brokerage quarterly market reports (often free PDFs)**\n- **CBRE, JLL, Cushman & Wakefield, Marcus & Millichap, Berkadia, Newmark** \u2014 all publish quarterly Austin multifamily market reports that include construction pipeline figures (units under construction, delivered YTD, forecast deliveries). These are usually free to download from each firm's research/insights page and a good no-cost starting point.\n\n**Public permit/government data (free, most granular but requires work)**\n- **City of Austin Development Services Department** \u2014 issues building permits; searchable through the city's permitting portal (Austin Build + Connect / AB+C).\n- **data.austintexas.gov** \u2014 the city's open data portal hosts permit datasets you can query/filter for multifamily (look for \"Issued Construction Permits\" or similar datasets).\n- Austin's **Planning Commission and Zoning and Platting Commission** agendas/minutes show proposed multifamily projects working through entitlement before permits are even pulled \u2014 useful for spotting pipeline earlier than permit data will show it.\n\n**Other**\n- **Dodge Construction Network** and **ConstructConnect** \u2014 track construction starts/bids nationally, including Austin, more construction-industry-facing than investment-facing.\n- **Texas Real Estate Research Center at Texas A&M** \u2014 publishes Texas multifamily market data and occasional Austin-specific research, often free.\n\n**Practical approach:** If you want something free and reasonably current, start with a CBRE or JLL Austin multifamily quarterly report plus Capitol Market Research's local commentary (often quoted in Austin Business Journal). If you need granular, project-by-project pipeline data for underwriting or investment analysis, CoStar or Yardi Matrix is what most professionals actually pay for.\n\nSources used: general knowledge of the commercial real estate data industry as of my training (through January 2026); I did not run a live web search for this response, so verify current pricing/product names (especially RealPage/Yardi offerings, which consolidate periodically) before relying on them.",
+  "brands": [
+    {
+      "brand": "CoStar",
+      "first_at": 309,
+      "mentions": 2,
+      "rank": 1
+    },
+    {
+      "brand": "Yardi Matrix",
+      "first_at": 584,
+      "mentions": 2,
+      "rank": 2
+    },
+    {
+      "brand": "RealPage",
+      "first_at": 753,
+      "mentions": 3,
+      "rank": 3
+    },
+    {
+      "brand": "Moody's",
+      "first_at": 939,
+      "mentions": 1,
+      "rank": 4
+    },
+    {
+      "brand": "CBRE",
+      "first_at": 1749,
+      "mentions": 2,
+      "rank": 5
+    },
+    {
+      "brand": "JLL",
+      "first_at": 1755,
+      "mentions": 2,
+      "rank": 6
+    },
+    {
+      "brand": "Cushman & Wakefield",
+      "first_at": 1760,
+      "mentions": 1,
+      "rank": 7
+    },
+    {
+      "brand": "Marcus & Millichap",
+      "first_at": 1781,
+      "mentions": 1,
+      "rank": 8
+    },
+    {
+      "brand": "Berkadia",
+      "first_at": 1801,
+      "mentions": 1,
+      "rank": 9
+    },
+    {
+      "brand": "Dodge",
+      "first_at": 2775,
+      "mentions": 1,
+      "rank": 10
+    },
+    {
+      "brand": "ConstructConnect",
+      "first_at": 2810,
+      "mentions": 1,
+      "rank": 11
+    }
+  ],
+  "links": []
+}

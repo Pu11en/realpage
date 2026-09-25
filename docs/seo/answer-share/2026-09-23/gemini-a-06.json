@@ -1,0 +1,161 @@
+{
+  "engine": "gemini",
+  "engine_label": "Gemini (gemini-2.5-flash) via API, Google Search grounding on",
+  "is_consumer_app": false,
+  "set": "A",
+  "question": "Where can I get a list of apartment buildings opening in 2027?",
+  "intent": "pipeline",
+  "asked_on": "2026-09-23",
+  "ok": true,
+  "answer": "For individuals researching apartment buildings scheduled to open in 2027, several real estate data providers and news sources offer insights into upcoming multifamily developments and market trends. While a comprehensive, single public list of every apartment building opening in 2027 is challenging to obtain due to the dynamic nature of construction, specialized firms provide detailed project pipelines and forecasts.\n\n**Overall Market Outlook for 2027:**\n\nThe year 2027 is anticipated to see a moderation in new multifamily supply. Yardi Matrix forecasts that new multifamily supply will bottom out around 444,343 units in 2027. A significant shift is expected towards affordable and partially affordable housing, with a projected 22% increase in partially affordable units and a 44% increase in fully affordable apartments compared to 2020 levels. Conversely, new market-rate apartment supply is expected to decline by 11% in 2027 relative to 2020. This overall slowdown in new housing development is largely attributed to weaker buyer demand rather than tighter credit conditions. Despite this, Yardi Matrix has made upward revisions to its 2027 multifamily completion forecasts, indicating some project resilience.\n\n**Specific Apartment Buildings and Projects Opening in 2027:**\n\nWhile comprehensive databases often require subscriptions, some individual projects with 2027 completion dates have been publicly announced:\n\n*   **HarborChase of Beachwalk (St. Johns, Florida):** This 172-unit senior living community, offering independent living, assisted living, and memory care, is projected for completion in August 2027. The development team includes The Douglas Company and owner Protea Capital Partners, LLC.\n*   **Southernside West (Greenville, SC):** A 54-unit affordable senior apartment community for residents aged 55 and older, developed by Harmony Housing Affordable Development (HHAD) and the Greenville Housing Fund (GHF), is anticipated for completion in October 2027.\n*   **Southernside East (Greenville, SC):** A separate project in Greenville, expected to deliver 93 affordable apartments for seniors in early 2027.\n*   **Tanner Road (Greenville, SC):** Flournoy is developing this 461-unit multifamily community, with completion slated for March 2027.\n*   **Bell Ranch (Wildomar, CA):** Affirmed Housing is behind this 130-apartment new construction affordable housing project, which is expected to open in Spring 2027.\n*   **Montecito (Mountain View, CA):** An 85-apartment development by Eden Housing and Charities Housing, with an estimated completion date of February 2027.\n*   **The Becker (San Diego, CA):** This 190-unit affordable apartment project is part of the larger Riverwalk San Diego development and is targeted for mid-2027.\n*   **Alexan Azalea (Arcadia, CA):** Trammell Crow Residential is developing this seven-story, 319-unit multifamily building, including 26 affordable units, with an expected opening in early 2027.\n\n**Companies, Products, and Data Sources for Research:**\n\nFor detailed and continuously updated information on apartment building pipelines, consider the following:\n\n*   **Yardi Matrix:** This company provides comprehensive market intelligence, including forecasts for multifamily unit completions, under-construction pipelines, and construction starts across various property types. They are a leading source for insights into multifamily supply.\n*   **CoStar Group (including Apartments.com):** A major global provider of commercial real estate data, analytics, and news, CoStar tracks multifamily construction activity and offers detailed market data.\n*   **Dodge Construction Network:** This platform is a prominent source for commercial construction project data, market intelligence, and forecasting in North America. They verify projects and track them from early planning stages.\n*   **ApartmentIQ:** A market data platform specifically for multifamily housing, ApartmentIQ integrates daily data on millions of units and provides tools for market surveys, research, and tracking construction pipelines.\n*   **Real Estate News Outlets and Industry Publications:** Websites like Multi-Housing News and Institutional Real Estate, Inc. often report on significant new developments and provide analysis of future supply.\n\nThese resources can help researchers, investors, and potential renters identify upcoming apartment buildings and understand broader market trends for 2027 and beyond.",
+  "sources": [
+    {
+      "title": "multifamilydive.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE-aCHrToFw07HKve8GOtXO0qGvlKISDhFA6KAsNYArl3XJcLd1F0izZW05j-NdAiFSodemKZvq2Uo8fvNcBMKT0-cPHSrANrGGrVJpMbX0vvYz8BbbMC-nGgkzWjaX-nRKw8r5kvXhK3i5YOhsO9MBaLHDTePoxUWDcJktWICiqtdNiaONzrGY3BVhS00praRjcLyC"
+    },
+    {
+      "title": "irei.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF7MDngqq5PcTCXDb7EDeSGZcu7ouHNLL_JIyj3N6worwqgDu4ngwPFSQtfqscVgC-G8MUMdr8j3ILrYr-O9eq6UdUOJUxa4EdV1BONmyvVpDOrm4YCldaGpKUehoIEnX446gfGem1TcRnXbi4CsyIc1vwlvSShieR-EoWLtSaSZBIedXlGNHqbjRZm6E5fjC1XH_G13GB4_QEpIbqbOyefAcU647g0CAitwTXx6ijywIOXv7WhXnMWPISP6Xuxd0l13o5ADKIzI6ngtraduX-KQ86443knZP4JEcqx7-nLjOa1spMiiw=="
+    },
+    {
+      "title": "yardi.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGZb_pLGMwF24xhf33S1bkuXo_1D1ZaH4lgm3piO2t12aktfmKqWPcUCBYdzEDxMTwfzRDLiDkrAYJAZRspe-WPWLH_jMCGeO83NnoWfaObadkxPmNOZwF4Sal98RIlCloe9UHgrCsXXrEXsyoCc7jbIGGCwiZSPcpWGn6KG44V3Is75kGHVonbXdL8O_jlnUJr7pj602hXfAVdF6FvkWjUv-JG_3i95Q=="
+    },
+    {
+      "title": "yardimatrix.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGINfalX81KkRZpbCFmji-AQZDXT_Xzvgl9gpMIXdvBZrvNktyhyNLdJwyN-QWgzaDuUuFN4EEiDEZaF717hP3uarnZy6uCYh7EQGmWsfvR3jDGUd_3W9KKRPPWmrvjXxzmfIr6ueZrKoiXp9zjjD2xnlEkcjrsCPPJbC3H5n-TdCEgxLIVMQ=="
+    },
+    {
+      "title": "douglascompany.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFbKhG9uRyEBTHa8DjH3kntqHHXcUWm2U-rtBesYAoN-7bzDnccrIyti09vmB4t86m3si_C2nCyIM5jrkcsm1l2-6zx6wmZ36wiioFZIaxObJ3d-wXxUTUAIs4iNCzU0KHomRAvm0sTGOqx5HAI9Xjdl8s="
+    },
+    {
+      "title": "greenvillehousingfund.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEHDs_1EBrfsgFwmeZdO0Eh_Ei27vfcvrBnK0scaCIZ5RopFT3d-WuVrDdKfFSZcI-u4_UhC55NjTXnElc3Xr7qzV9DLIKK4Y3bDDoyzDu4s6VyM6nv865KvmvxXo4CYqZ-Q1hJDQeAAfBiZe2o9tTlcL3Qtt-wMGTVoSMoiqOprO_imZQMLK6p4_rvqc5T-rrJJ0Di3Bpg-zMkNvWqYSvj"
+    },
+    {
+      "title": "greenvillesc.gov",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEPSaqDmOZyDAO_Bqxgp1-MuQLv-5yE5GQNskb-t2xk-Ub_NnU-HT6mZqqv8Xh_vgJeMpIDiD_Tr58iCvkbLaVo_V2YpV5oW1ibFiPlmRoX9j4BLbXo6YMOWJzmCSfw1N9N3FJdVhgFmt_How6ZR0Rv1humZ1_Vz8ieoFi9u-2QUqB37fvGpIVbNeqcr_HoltF_hI3Zuwd7A9R7QLx-8sSIvJUB5g=="
+    },
+    {
+      "title": "multihousingnews.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFTCV6v3pIAfMdafFAQlpV61iaJnstzXGj8O60LouIqG8-66iNy3lzWI1hChcD00r4qJAM6oroRe-DG41n-sZcwS2YCqb1OkIx65B0ElpmN-pRZRNIoJOyLkvP_2GSA8wOkE7IgtN6pEEul_V5C4T6T3gQ9Wjnb4IaGSdKEyTH282zivyYjepZeDzEVWkEGaXzktUhqUatoT00t"
+    },
+    {
+      "title": "affirmedhousing.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGsQtRNXk-_txI_TZ0kCPzF-8O6CWmSltktdoYyeNXQQaTWAVhGja-cF5VtMWEqBJiXXb_xID8v0lOZL5Rjp6gfg9Ee0XPc5XRBM6tZW69VXxTQWWcEeyunVTeakixWC8V9Vw=="
+    },
+    {
+      "title": "santaclaracounty.gov",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEFPYJUAu_XCqCHRHlGysAwBizOyXjf_cfsfsrLwFQKAVG6IY3xZjXs50u-Dl6A70hJI60pfRWePgz0O1UIikabTovojaGhHE2rOpil5gfPBYztUuasW-wB1C6lxHF_Ka_dzA8qbQHxRBFci5qAFuijQNUOsqKfpaolLFT2nYdw1GTW5wf7ZKyPi-3UMd1CBiYn6kG5X0N3SqnD0FzVYtt2o6x1emSu7No="
+    },
+    {
+      "title": "melinarissone.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH12hlYtzeFgso40z7RzmXf4-tyjSX1PnrXWXWkbfcx81qi8XQFXYyj-xjvi1w6VB97byz1RgxWcZ56mTUfp_HKRqgXx0P8xoeWxqE4KjUr7yM_TvqKavzrKvdQ0oD5jk1IfRBlW_HUpwfS62vTVwPtiL4LcIvagyLIDZDA_zDHWtXZTMRKcbPDOrkqZKKpOnR_3zk="
+    },
+    {
+      "title": "facebook.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQESkwNBawR0eLCGf9Oq6Be_D4aQ2YpOZtjlO6TDA8T2Lj7jZg7lULqkLSEhqD-wkvUcXXUZzX1yiq2awu-T05cg3oTto6FOr9TlrDnUlO-LhQlF1J2cQfQevm9rYS24YNMls5drzHyN8Iu2J2HExKyNUFJ4LAOAWDZ_oW_7IvT4ZzWH_CS4icffVrmEXyMQXXDJwcWnspTRHjUXArE04UifOtMgpfOWezKamAp7pZc="
+    },
+    {
+      "title": "costargroup.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHoA06KQ3-fjZDs4vES7vLYvz_JrXi4zR5T1i-Z2VLTCDTUy4xCBglkGylnd3xXZY_GxqESh5QEkX1qmQKGclbXKy3zlHHBTcgr0AMEtjUo3_ekTHbKulvCWitw14jmEuLXEbMYZ58hMyKS8_d38xwZfPGmYw8hdHmOI98UjMYRzkr8E7La1XBlZEsku1OBIyXtiyIMS9Zszdjy5o-v3iNG6abtguq3TCVDjx_UbvSzDw53ewMyGPs="
+    },
+    {
+      "title": "construction.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHlSLJt8nEufYmZ7sYJI7apQPrJlYJB61LDlo6U5-qH-LGn0ZylgeXhKdJSOEC0gSjpENEz0m-cNmkReQxp4FYUfqYhUkcupXmiO37cA4GgZwM4Ag8asqk="
+    },
+    {
+      "title": "apartmentiq.io",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF98mrXy80FWAnTw8inNgG2Z_gFipm8jQcGzANAB8cqTcrHwhSrp1BHlbeWZaEKcMV0QkdqHH36HmQsKS273bEQfiebeCW168lYZfR28RnByhgbaaku"
+    }
+  ],
+  "brands": [
+    {
+      "brand": "Yardi Matrix",
+      "first_at": 537,
+      "mentions": 3,
+      "rank": 1
+    },
+    {
+      "brand": "CoStar",
+      "first_at": 3418,
+      "mentions": 2,
+      "rank": 2
+    },
+    {
+      "brand": "Apartments.com",
+      "first_at": 3442,
+      "mentions": 1,
+      "rank": 3
+    },
+    {
+      "brand": "Dodge",
+      "first_at": 3625,
+      "mentions": 1,
+      "rank": 4
+    }
+  ],
+  "links": [
+    {
+      "title": "multifamilydive.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE-aCHrToFw07HKve8GOtXO0qGvlKISDhFA6KAsNYArl3XJcLd1F0izZW05j-NdAiFSodemKZvq2Uo8fvNcBMKT0-cPHSrANrGGrVJpMbX0vvYz8BbbMC-nGgkzWjaX-nRKw8r5kvXhK3i5YOhsO9MBaLHDTePoxUWDcJktWICiqtdNiaONzrGY3BVhS00praRjcLyC"
+    },
+    {
+      "title": "irei.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF7MDngqq5PcTCXDb7EDeSGZcu7ouHNLL_JIyj3N6worwqgDu4ngwPFSQtfqscVgC-G8MUMdr8j3ILrYr-O9eq6UdUOJUxa4EdV1BONmyvVpDOrm4YCldaGpKUehoIEnX446gfGem1TcRnXbi4CsyIc1vwlvSShieR-EoWLtSaSZBIedXlGNHqbjRZm6E5fjC1XH_G13GB4_QEpIbqbOyefAcU647g0CAitwTXx6ijywIOXv7WhXnMWPISP6Xuxd0l13o5ADKIzI6ngtraduX-KQ86443knZP4JEcqx7-nLjOa1spMiiw=="
+    },
+    {
+      "title": "yardi.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGZb_pLGMwF24xhf33S1bkuXo_1D1ZaH4lgm3piO2t12aktfmKqWPcUCBYdzEDxMTwfzRDLiDkrAYJAZRspe-WPWLH_jMCGeO83NnoWfaObadkxPmNOZwF4Sal98RIlCloe9UHgrCsXXrEXsyoCc7jbIGGCwiZSPcpWGn6KG44V3Is75kGHVonbXdL8O_jlnUJr7pj602hXfAVdF6FvkWjUv-JG_3i95Q=="
+    },
+    {
+      "title": "yardimatrix.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGINfalX81KkRZpbCFmji-AQZDXT_Xzvgl9gpMIXdvBZrvNktyhyNLdJwyN-QWgzaDuUuFN4EEiDEZaF717hP3uarnZy6uCYh7EQGmWsfvR3jDGUd_3W9KKRPPWmrvjXxzmfIr6ueZrKoiXp9zjjD2xnlEkcjrsCPPJbC3H5n-TdCEgxLIVMQ=="
+    },
+    {
+      "title": "douglascompany.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFbKhG9uRyEBTHa8DjH3kntqHHXcUWm2U-rtBesYAoN-7bzDnccrIyti09vmB4t86m3si_C2nCyIM5jrkcsm1l2-6zx6wmZ36wiioFZIaxObJ3d-wXxUTUAIs4iNCzU0KHomRAvm0sTGOqx5HAI9Xjdl8s="
+    },
+    {
+      "title": "greenvillehousingfund.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEHDs_1EBrfsgFwmeZdO0Eh_Ei27vfcvrBnK0scaCIZ5RopFT3d-WuVrDdKfFSZcI-u4_UhC55NjTXnElc3Xr7qzV9DLIKK4Y3bDDoyzDu4s6VyM6nv865KvmvxXo4CYqZ-Q1hJDQeAAfBiZe2o9tTlcL3Qtt-wMGTVoSMoiqOprO_imZQMLK6p4_rvqc5T-rrJJ0Di3Bpg-zMkNvWqYSvj"
+    },
+    {
+      "title": "greenvillesc.gov",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEPSaqDmOZyDAO_Bqxgp1-MuQLv-5yE5GQNskb-t2xk-Ub_NnU-HT6mZqqv8Xh_vgJeMpIDiD_Tr58iCvkbLaVo_V2YpV5oW1ibFiPlmRoX9j4BLbXo6YMOWJzmCSfw1N9N3FJdVhgFmt_How6ZR0Rv1humZ1_Vz8ieoFi9u-2QUqB37fvGpIVbNeqcr_HoltF_hI3Zuwd7A9R7QLx-8sSIvJUB5g=="
+    },
+    {
+      "title": "multihousingnews.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFTCV6v3pIAfMdafFAQlpV61iaJnstzXGj8O60LouIqG8-66iNy3lzWI1hChcD00r4qJAM6oroRe-DG41n-sZcwS2YCqb1OkIx65B0ElpmN-pRZRNIoJOyLkvP_2GSA8wOkE7IgtN6pEEul_V5C4T6T3gQ9Wjnb4IaGSdKEyTH282zivyYjepZeDzEVWkEGaXzktUhqUatoT00t"
+    },
+    {
+      "title": "affirmedhousing.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGsQtRNXk-_txI_TZ0kCPzF-8O6CWmSltktdoYyeNXQQaTWAVhGja-cF5VtMWEqBJiXXb_xID8v0lOZL5Rjp6gfg9Ee0XPc5XRBM6tZW69VXxTQWWcEeyunVTeakixWC8V9Vw=="
+    },
+    {
+      "title": "santaclaracounty.gov",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEFPYJUAu_XCqCHRHlGysAwBizOyXjf_cfsfsrLwFQKAVG6IY3xZjXs50u-Dl6A70hJI60pfRWePgz0O1UIikabTovojaGhHE2rOpil5gfPBYztUuasW-wB1C6lxHF_Ka_dzA8qbQHxRBFci5qAFuijQNUOsqKfpaolLFT2nYdw1GTW5wf7ZKyPi-3UMd1CBiYn6kG5X0N3SqnD0FzVYtt2o6x1emSu7No="
+    },
+    {
+      "title": "melinarissone.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH12hlYtzeFgso40z7RzmXf4-tyjSX1PnrXWXWkbfcx81qi8XQFXYyj-xjvi1w6VB97byz1RgxWcZ56mTUfp_HKRqgXx0P8xoeWxqE4KjUr7yM_TvqKavzrKvdQ0oD5jk1IfRBlW_HUpwfS62vTVwPtiL4LcIvagyLIDZDA_zDHWtXZTMRKcbPDOrkqZKKpOnR_3zk="
+    },
+    {
+      "title": "facebook.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQESkwNBawR0eLCGf9Oq6Be_D4aQ2YpOZtjlO6TDA8T2Lj7jZg7lULqkLSEhqD-wkvUcXXUZzX1yiq2awu-T05cg3oTto6FOr9TlrDnUlO-LhQlF1J2cQfQevm9rYS24YNMls5drzHyN8Iu2J2HExKyNUFJ4LAOAWDZ_oW_7IvT4ZzWH_CS4icffVrmEXyMQXXDJwcWnspTRHjUXArE04UifOtMgpfOWezKamAp7pZc="
+    },
+    {
+      "title": "costargroup.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHoA06KQ3-fjZDs4vES7vLYvz_JrXi4zR5T1i-Z2VLTCDTUy4xCBglkGylnd3xXZY_GxqESh5QEkX1qmQKGclbXKy3zlHHBTcgr0AMEtjUo3_ekTHbKulvCWitw14jmEuLXEbMYZ58hMyKS8_d38xwZfPGmYw8hdHmOI98UjMYRzkr8E7La1XBlZEsku1OBIyXtiyIMS9Zszdjy5o-v3iNG6abtguq3TCVDjx_UbvSzDw53ewMyGPs="
+    },
+    {
+      "title": "construction.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHlSLJt8nEufYmZ7sYJI7apQPrJlYJB61LDlo6U5-qH-LGn0ZylgeXhKdJSOEC0gSjpENEz0m-cNmkReQxp4FYUfqYhUkcupXmiO37cA4GgZwM4Ag8asqk="
+    },
+    {
+      "title": "apartmentiq.io",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF98mrXy80FWAnTw8inNgG2Z_gFipm8jQcGzANAB8cqTcrHwhSrp1BHlbeWZaEKcMV0QkdqHH36HmQsKS273bEQfiebeCW168lYZfR28RnByhgbaaku"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "engine": "claude-web",
+  "engine_label": "Claude (Sonnet) via claude -p, web search on",
+  "is_consumer_app": false,
+  "set": "A",
+  "question": "Where can I get a list of apartment buildings opening in 2027?",
+  "intent": "pipeline",
+  "asked_on": "2026-09-23",
+  "ok": true,
+  "answer": "This is a real-estate/market-research question rather than something I can pull live data for, but here's where people actually find this:\n\n**Primary data sources (paid, industry-standard)**\n- **RealPage / RealPage Market Analytics** \u2014 tracks apartment pipelines (planned, under construction, delivering) by metro, often cited in NMHC/NAA reports.\n- **CoStar** \u2014 the most widely used commercial real estate database; has detailed \"under construction\" and \"planned\" filters with expected delivery dates, searchable by metro/submarket.\n- **Yardi Matrix** \u2014 publishes regular multifamily supply/pipeline reports (national and metro-level), some available as free summary PDFs even without a subscription.\n- **CBRE, JLL, Cushman & Wakefield** \u2014 commercial brokerages publish quarterly/annual multifamily supply forecast reports (free, downloadable from their research pages) that break out expected deliveries by year and metro.\n\n**Free/public sources**\n- **Local city/county planning & permitting departments** \u2014 building permit and site plan databases show projects with expected completion dates; many cities (e.g., NYC DOB, Austin's AustinTexas.gov permits) have searchable portals.\n- **U.S. Census Bureau \u2014 New Residential Construction / Building Permits Survey** \u2014 aggregate permit and completions data by metro, not project-level but useful for macro trends.\n- **Local business journals** (via Bizjournals.com) \u2014 frequently report on specific named apartment developments with groundbreaking/completion timelines.\n- **Apartment developer/REIT investor presentations** \u2014 companies like Greystar, AvalonBay, Camden Property Trust, Mill Creek Residential, Alliance Residential publish development pipelines with projected delivery years in investor decks and press releases.\n\n**If you want specifics for a particular city**, tell me which metro and I can help you figure out the best local source (planning department, business journal, or local YIMBY/housing tracker) rather than guessing at named projects \u2014 I don't have reliable real-time data on specific 2027 openings and don't want to invent building names or addresses.",
+  "brands": [
+    {
+      "brand": "RealPage",
+      "first_at": 195,
+      "mentions": 2,
+      "rank": 1
+    },
+    {
+      "brand": "CoStar",
+      "first_at": 352,
+      "mentions": 1,
+      "rank": 2
+    },
+    {
+      "brand": "Yardi Matrix",
+      "first_at": 538,
+      "mentions": 1,
+      "rank": 3
+    },
+    {
+      "brand": "CBRE",
+      "first_at": 706,
+      "mentions": 1,
+      "rank": 4
+    },
+    {
+      "brand": "JLL",
+      "first_at": 712,
+      "mentions": 1,
+      "rank": 5
+    },
+    {
+      "brand": "Cushman & Wakefield",
+      "first_at": 717,
+      "mentions": 1,
+      "rank": 6
+    }
+  ],
+  "links": []
+}

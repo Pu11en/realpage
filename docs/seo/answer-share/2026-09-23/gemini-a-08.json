@@ -1,0 +1,99 @@
+{
+  "engine": "gemini",
+  "engine_label": "Gemini (gemini-2.5-flash) via API, Google Search grounding on",
+  "is_consumer_app": false,
+  "set": "A",
+  "question": "How many apartment units are under construction in Texas?",
+  "intent": "pipeline",
+  "asked_on": "2026-09-23",
+  "ok": true,
+  "answer": "As of early to mid-2026, Texas continues to have a substantial number of apartment units under construction, although the pace of new development has begun to slow compared to previous years. It remains one of the busiest states in the nation for apartment building.\n\nWhile a precise statewide total for units currently under construction is dynamic and not uniformly reported across all sources for the exact current date, data for major metropolitan areas provides significant insight:\n\n*   **Dallas-Fort Worth (DFW)**: As of the first quarter of 2026, approximately 42,702 apartment units remained under construction in the Dallas-Fort Worth metroplex. The DFW area has sustained one of the largest supply pipelines nationwide, adding nearly 33,600 new units within a 12-month period ending in Q1 2026.\n*   **Houston**: Following a peak in new supply additions in early 2024, Houston's multifamily construction activity saw a significant slowdown, with new additions falling to over 16,500 net units by Q2 2026. Projections for 2025 indicated about 12,000 units coming online, a return to historical averages after peak levels in 2023 and 2024. The construction pipeline was at its lowest total since early 2012, with around 3,000 units scheduled for delivery in 2026, a figure that could increase as more projects break ground.\n*   **Austin**: Austin has experienced a significant development boom, with its construction pipeline, relative to its size, being higher than any other major multifamily market in recent years. At its peak, nearly 20% of Austin's total inventory was under construction.\n*   **Statewide Projects**: Zabalist, a data source tracking Texas construction projects, identifies 2,820 apartment and multifamily construction projects filed with Texas regulators across 144 counties. Of these, 273 developments, valued at approximately $5.4 billion, are actively under construction or in review. These figures are sourced from the Texas Department of Licensing and Regulation (TDLR) public records.\n\nOverall, while the market is transitioning into a period of significantly lower deliveries, with RealPage data projecting annual completions to settle between 45,000 and 50,000 units for 2026\u20132027, a sharp reduction from a recent peak of 120,000 units delivered in 2024, a considerable volume of apartment units remain in various stages of construction across the state.\n\nSpecific projects recently breaking ground include The Oaks at Cibolo Creek in Boerne, which will add 324 garden-style apartments, and Lake Forest Senior Living in McKinney, a 222-unit senior living development.\n\nData for these insights is often provided by real estate analytics firms and industry reports such as those from RealPage, RentCafe, Lumicre, Zabalist, and Northmarq.",
+  "sources": [
+    {
+      "title": "zabalist.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHzKj63aZCjSRR71wcHk-7Y9S7_3TGa4S5gCdPWccLt3hQH4eGjwk2sJlN7iw6bs_xwc91J8m5Ai2T6k5cw6R7riu8gyvvfkXjF-_sGK-W2FXpySp-zAdDSr2IDwsVsZEPE2HxY6pukzQ=="
+    },
+    {
+      "title": "lumicre.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF5LB_znWK1r1o4MrQyQ4a5ZVuFNSc0LEUNhsczRrvwDF13Q_vzVVIawyMJTJmgeiKJ2CfUwzWyvYk6N-fdx2pv_trQyLuuuwfhUufOAqd2G0RglL49iBr5sQQSfWpZEb45bd2ZSRCpcyazTqKa0OKgRBZsKFMcaJI0lnPdynqgToI="
+    },
+    {
+      "title": "apartments.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG2iXhr5ERfydyx-Py6u2axZlvVrL8qrz1Mmk_oYLlD3EdXa7bYvz3bCJvNmWugIKwnEBz56o0E5SuTQH5lqka9LNY7772NlZG8ZoeijOzvIO2o-kM6vyditorv4RwYRUb4erDhcFpKvQe0FmcB0TaKINF1iMFcHKfVFdvGuIz0tOQI8j-hxhSPtqT6EVFZJyeXLto="
+    },
+    {
+      "title": "northmarq.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEo_IwvWREQtHKtyNdBRP7RsurlI3n6Xb_9M2ubXYbbTsyTQrRymoxnP_CjsnmooOaSdAlcEdYC01yo5VcgUDXywYH6abWi1xQiickLphvinB1VBE0QOUYPLO7JUCDiU5_0R0zK9KokqZ30VejmO_HFwXxt9hLJXpUBoJsCSiqoI1YLBu3ROopEYsdIAL9-HlBwx9djIdfxOYLvDJOX2WJN7wH-SvJYLni3qA2Du-Owng=="
+    },
+    {
+      "title": "mysanantonio.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFTGhFcUBTykfxh4_isfOpcW4I0A1Ws30a9PeYo4-Pfz27spghwd0t0bVCjgYONiv-KPUoKECnEzmiIQeqMU5BFmaxZc0bM1QnRsf8OWp_wczZdHx3ENj85-cxX8sRyfDo8WakmkMG5Fdl1t_d-SG-PTj6xch1beEGyyX307uMQMmpsqe4sgkZeSwc5dSHCNKqtdpclqSXdUmZukykrnITOPnAtqGo="
+    },
+    {
+      "title": "communityimpact.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFC2bCPvh0P3PwSghyFAhSLEdhdGngTOUoBxndDAIUYrKTV2uOxoMVhQOczyjQ5KzAAAkwCAckWvkiFwzaXsIUXSrYNVdeeEuG08NnfaP84sWUSmGbnvQKdTQs-3HsHU7nyvy_i4lqTrUOKPnEFjwCHsNQta456QKSgG3MBbHPRiMFjR3GCILp3Eb4idCEo6SJRV24_uyx8u_vqxBFAZjtYX5WQDxIYabMzPoqIsKm7V7Hjn7dgybcc4NRQDzTvu35CmIL-4S3nEuvBeYYJ_cRk1OpG7lCedRUP8RUeOnXVAiRg"
+    },
+    {
+      "title": "virtualbx.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHSPq8Ln2U2U7NSrdsnZlp37ovMyhizbqP_0ksjj9PcinY9UwH8FsOFm4OPo4F3JzT9-LoUtWVfKwDikqDst52O-kcJs8mvGVx76nwNk2OkkmpTTGsW7y8wIDsSSoypT5QDHE8YaU9hBWl9S9TH-SWS23yYkswb6ZMy-DODO_w9KDGBK0RwCgZGE_LBUjpkB3yxTP2CEM4A5173LgRQ1eHRaMvccMipeNVrCEI="
+    },
+    {
+      "title": "constructionowners.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFjMySrr1-MX8FC7BaIY9QUkicAbohTmOf7yaDtQ9rtZUb1KJnNr2kAh95BX-XhIvZSkPN-w3wEH6gaGMn95-hxXINjT5XvwtE31aAqu_yTR4kI5P3tKthQf_OE7PSu11zmpIcIk8zr1pmw5dyK1vzwmgVxvNS_0HE7liGWy_dF0XnfwEHG-4EPnk9iA4IlHJU8"
+    }
+  ],
+  "brands": [
+    {
+      "brand": "Public records (DIY)",
+      "first_at": 2000,
+      "mentions": 1,
+      "rank": 1
+    },
+    {
+      "brand": "RealPage",
+      "first_at": 2120,
+      "mentions": 2,
+      "rank": 2
+    },
+    {
+      "brand": "Northmarq",
+      "first_at": 2764,
+      "mentions": 1,
+      "rank": 3
+    }
+  ],
+  "links": [
+    {
+      "title": "zabalist.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHzKj63aZCjSRR71wcHk-7Y9S7_3TGa4S5gCdPWccLt3hQH4eGjwk2sJlN7iw6bs_xwc91J8m5Ai2T6k5cw6R7riu8gyvvfkXjF-_sGK-W2FXpySp-zAdDSr2IDwsVsZEPE2HxY6pukzQ=="
+    },
+    {
+      "title": "lumicre.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF5LB_znWK1r1o4MrQyQ4a5ZVuFNSc0LEUNhsczRrvwDF13Q_vzVVIawyMJTJmgeiKJ2CfUwzWyvYk6N-fdx2pv_trQyLuuuwfhUufOAqd2G0RglL49iBr5sQQSfWpZEb45bd2ZSRCpcyazTqKa0OKgRBZsKFMcaJI0lnPdynqgToI="
+    },
+    {
+      "title": "apartments.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG2iXhr5ERfydyx-Py6u2axZlvVrL8qrz1Mmk_oYLlD3EdXa7bYvz3bCJvNmWugIKwnEBz56o0E5SuTQH5lqka9LNY7772NlZG8ZoeijOzvIO2o-kM6vyditorv4RwYRUb4erDhcFpKvQe0FmcB0TaKINF1iMFcHKfVFdvGuIz0tOQI8j-hxhSPtqT6EVFZJyeXLto="
+    },
+    {
+      "title": "northmarq.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEo_IwvWREQtHKtyNdBRP7RsurlI3n6Xb_9M2ubXYbbTsyTQrRymoxnP_CjsnmooOaSdAlcEdYC01yo5VcgUDXywYH6abWi1xQiickLphvinB1VBE0QOUYPLO7JUCDiU5_0R0zK9KokqZ30VejmO_HFwXxt9hLJXpUBoJsCSiqoI1YLBu3ROopEYsdIAL9-HlBwx9djIdfxOYLvDJOX2WJN7wH-SvJYLni3qA2Du-Owng=="
+    },
+    {
+      "title": "mysanantonio.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFTGhFcUBTykfxh4_isfOpcW4I0A1Ws30a9PeYo4-Pfz27spghwd0t0bVCjgYONiv-KPUoKECnEzmiIQeqMU5BFmaxZc0bM1QnRsf8OWp_wczZdHx3ENj85-cxX8sRyfDo8WakmkMG5Fdl1t_d-SG-PTj6xch1beEGyyX307uMQMmpsqe4sgkZeSwc5dSHCNKqtdpclqSXdUmZukykrnITOPnAtqGo="
+    },
+    {
+      "title": "communityimpact.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFC2bCPvh0P3PwSghyFAhSLEdhdGngTOUoBxndDAIUYrKTV2uOxoMVhQOczyjQ5KzAAAkwCAckWvkiFwzaXsIUXSrYNVdeeEuG08NnfaP84sWUSmGbnvQKdTQs-3HsHU7nyvy_i4lqTrUOKPnEFjwCHsNQta456QKSgG3MBbHPRiMFjR3GCILp3Eb4idCEo6SJRV24_uyx8u_vqxBFAZjtYX5WQDxIYabMzPoqIsKm7V7Hjn7dgybcc4NRQDzTvu35CmIL-4S3nEuvBeYYJ_cRk1OpG7lCedRUP8RUeOnXVAiRg"
+    },
+    {
+      "title": "virtualbx.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHSPq8Ln2U2U7NSrdsnZlp37ovMyhizbqP_0ksjj9PcinY9UwH8FsOFm4OPo4F3JzT9-LoUtWVfKwDikqDst52O-kcJs8mvGVx76nwNk2OkkmpTTGsW7y8wIDsSSoypT5QDHE8YaU9hBWl9S9TH-SWS23yYkswb6ZMy-DODO_w9KDGBK0RwCgZGE_LBUjpkB3yxTP2CEM4A5173LgRQ1eHRaMvccMipeNVrCEI="
+    },
+    {
+      "title": "constructionowners.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFjMySrr1-MX8FC7BaIY9QUkicAbohTmOf7yaDtQ9rtZUb1KJnNr2kAh95BX-XhIvZSkPN-w3wEH6gaGMn95-hxXINjT5XvwtE31aAqu_yTR4kI5P3tKthQf_OE7PSu11zmpIcIk8zr1pmw5dyK1vzwmgVxvNS_0HE7liGWy_dF0XnfwEHG-4EPnk9iA4IlHJU8"
+    }
+  ]
+}

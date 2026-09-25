@@ -1,0 +1,33 @@
+{
+  "engine": "gemini",
+  "engine_label": "Gemini (gemini-2.5-flash) via API, Google Search grounding on",
+  "is_consumer_app": false,
+  "set": "A",
+  "question": "Which property management software does a given apartment building use?",
+  "intent": "detect-software",
+  "asked_on": "2026-09-23",
+  "ok": true,
+  "answer": "I cannot directly tell you which property management software a \"given apartment building\" uses. This information is considered proprietary to the building's management and is generally not publicly disclosed or available through general search engines.\n\nTo find out which property management software a specific apartment building uses, you would typically need to:\n\n*   **Contact the building's management directly:** This is the most reliable way to get this information. You could call or email the property manager or leasing office and ask.\n*   **Look for clues on their resident portal or communication:** If the building uses a resident portal for rent payments, maintenance requests, or community announcements, the software provider's name might be visible on the platform.\n*   **Networking:** If you know someone who lives in or works for the building, they might be able to provide this information.\n\n**Common Property Management Software Providers:**\n\nWhile I can't tell you what a specific building uses, many apartment buildings and property management companies utilize a variety of software solutions. Some of the most widely used property management software companies include:\n\n*   AppFolio\n*   Yardi\n*   Buildium\n*   RealPage (including products like OneSite)\n*   Rent Manager\n*   MRI Software\n*   Entrata\n\nThese platforms often offer features such as online rent payment, maintenance request tracking, lease management, accounting, and resident communication tools.",
+  "sources": [],
+  "brands": [
+    {
+      "brand": "AppFolio",
+      "first_at": 1201,
+      "mentions": 1,
+      "rank": 1
+    },
+    {
+      "brand": "RealPage",
+      "first_at": 1237,
+      "mentions": 1,
+      "rank": 2
+    },
+    {
+      "brand": "Entrata",
+      "first_at": 1318,
+      "mentions": 1,
+      "rank": 3
+    }
+  ],
+  "links": []
+}

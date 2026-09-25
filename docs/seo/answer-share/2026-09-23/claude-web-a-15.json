@@ -1,0 +1,73 @@
+{
+  "engine": "claude-web",
+  "engine_label": "Claude (Sonnet) via claude -p, web search on",
+  "is_consumer_app": false,
+  "set": "A",
+  "question": "What public data sources show apartment construction permits in Texas?",
+  "intent": "free-data",
+  "asked_on": "2026-09-23",
+  "ok": true,
+  "answer": "## Public data sources for Texas apartment construction permits\n\n**Federal / statewide (free, aggregated)**\n- **U.S. Census Bureau Building Permits Survey (BPS)** \u2014 the primary source. Reports units authorized by permit-issuing places, broken out by structure size (5+ units = apartments), at national/state/metro(CBSA)/county/place level, monthly and annual.\n- **Texas Real Estate Research Center (Texas A&M), trerc.tamu.edu** \u2014 republishes the Census BPS data (usually within 2 days of the official release) with a friendlier interface, including an \"advanced search by place\" tool and MSA-level housing reports. Good if you want Texas-specific permit trends without wrangling raw Census files.\n- **HUD's State of the Cities Data Systems (SOCDS) Building Permits Database** \u2014 another Census BPS-derived tool with historical place-level permit data, useful for time series by city.\n- **FRED (St. Louis Fed)** \u2014 has pre-built Census BPS series for Texas, e.g. permits for structures with 5+ units, if you just want a chart/CSV without querying Census directly.\n\n**City/county open data portals (raw permit-level records, often with address, unit count, valuation, status)**\n- **Austin**: data.austintexas.gov \u2014 has dedicated datasets like \"Issued Construction Permits\" and \"Currently Active Commercial Multifamily Construction Permits.\"\n- **Dallas**: dallasopendata.com \u2014 \"Building Permits\" dataset (OData API available).\n- **San Antonio**: data.sanantonio.gov, maintained by the Development Services Department.\n- **Houston**: no full open-data permit portal comparable to the above; permit lookups go through the Houston Permitting Center (iPermits) and the Housing and Community Development Department's Housing Resource & Data Center, so coverage/structure differs from Austin/Dallas/San Antonio.\n- **Fort Worth, El Paso, and other cities**: check each municipality's permitting department or open-data site individually \u2014 coverage is uneven statewide.\n\n**Private/commercial aggregators (paid, more polished, often forward-looking pipeline data)**\n- **Zonda** (formerly Metrostudy) \u2014 construction/permit tracking widely used by homebuilders and multifamily developers.\n- **Yardi Matrix** \u2014 apartment-specific construction pipeline and permit-to-delivery tracking.\n- **CoStar** \u2014 commercial/multifamily permits and construction pipeline as part of its CRE data platform.\n- **RealPage** \u2014 apartment market and supply-pipeline data.\n- **Dodge Construction Network (Dodge Data & Analytics)** \u2014 construction starts/permits data across sectors.\n- Smaller scrape-based tools like **PermitVector**, **BuildChek**, and **PermitTap** aggregate several Texas city portals into one searchable feed, though coverage of Houston in particular tends to be thinner.\n\nFor most research purposes, start with Census BPS via the **Texas Real Estate Research Center** for state/metro trend data, then drop into the individual **city open data portals** (Austin, Dallas, San Antonio) for permit-level detail; Houston requires going through its own permitting/housing department resources since it lacks an equivalent open dataset.\n\nSources:\n- [Building Permits | Texas Real Estate Research Center](https://trerc.tamu.edu/data/building-permits/)\n- [Building Permit Place Advanced Search | Texas Real Estate Research Center](https://trerc.tamu.edu/data/building-permit-place-advanced-search/)\n- [Building Permits Survey (BPS) \u2014 U.S. Census Bureau](https://www.census.gov/construction/bps/index.html)\n- [Housing Resource & Data Center \u2014 City of Houston](https://houstontx.gov/housing/research.html)\n- [Currently Active Commercial Multifamily Construction Permits | City of Austin](https://data.austintexas.gov/Building-and-Development/Currently-Active-Commercial-Multifamily-Constructi/hah9-7x5p)\n- [Issued Construction Permits | City of Austin](https://data.austintexas.gov/Building-and-Development/Issued-Construction-Permits/3syk-w9eu)\n- [Building Permits \u2014 Dallas OpenData](https://www.dallasopendata.com/Services/Building-Permits/e7gq-4sah)\n- [Building Permits \u2014 Open Data SA, City of San Antonio](https://data.sanantonio.gov/dataset/building-permits)\n- [Texas Building Permit Data \u2014 Daily Feed & API | PermitVector](https://permitvector.com/data)",
+  "brands": [
+    {
+      "brand": "Public records (DIY)",
+      "first_at": 1546,
+      "mentions": 1,
+      "rank": 1
+    },
+    {
+      "brand": "Yardi Matrix",
+      "first_at": 2177,
+      "mentions": 1,
+      "rank": 2
+    },
+    {
+      "brand": "CoStar",
+      "first_at": 2272,
+      "mentions": 1,
+      "rank": 3
+    },
+    {
+      "brand": "RealPage",
+      "first_at": 2378,
+      "mentions": 1,
+      "rank": 4
+    },
+    {
+      "brand": "Dodge",
+      "first_at": 2438,
+      "mentions": 2,
+      "rank": 5
+    }
+  ],
+  "links": [
+    {
+      "title": "",
+      "url": "https://trerc.tamu.edu/data/building-permits/"
+    },
+    {
+      "title": "",
+      "url": "https://www.census.gov/construction/bps/index.html"
+    },
+    {
+      "title": "",
+      "url": "https://houstontx.gov/housing/research.html"
+    },
+    {
+      "title": "",
+      "url": "https://data.austintexas.gov/Building-and-Development/Currently-Active-Commercial-Multifamily-Constructi/hah9-7x5p"
+    },
+    {
+      "title": "",
+      "url": "https://www.dallasopendata.com/Services/Building-Permits/e7gq-4sah"
+    },
+    {
+      "title": "",
+      "url": "https://data.sanantonio.gov/dataset/building-permits"
+    },
+    {
+      "title": "",
+      "url": "https://permitvector.com/data"
+    }
+  ]
+}

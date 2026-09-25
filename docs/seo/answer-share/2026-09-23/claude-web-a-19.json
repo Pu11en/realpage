@@ -1,0 +1,107 @@
+{
+  "engine": "claude-web",
+  "engine_label": "Claude (Sonnet) via claude -p, web search on",
+  "is_consumer_app": false,
+  "set": "A",
+  "question": "How do I build a lead list of new apartment buildings to sell to?",
+  "intent": "prospecting",
+  "asked_on": "2026-09-23",
+  "ok": true,
+  "answer": "Good news: there's a whole vendor category built for exactly this. Here's how to approach it.\n\n## 1. Pick the right kind of data source\n\n**Purpose-built \"vendor lead\" platforms** (these are the closest fit \u2014 built specifically for companies selling products/services into multifamily):\n- **ALN Apartment Data** \u2014 \"Vendor Edge Pro\" and \"Compass\" products give property-level data (occupancy, rents, amenities, new construction) plus contacts.\n- **Smart Apartment Data / Smart Supplier** \u2014 claims 220K+ apartment properties, 14,000+ pipeline (under-construction/planned) projects, 11,000+ management companies, 90,000+ personnel contacts, 2,000+ developer contacts. This is built specifically as a sales platform for suppliers.\n- **MultiFamilyData (Hubexo US)** \u2014 construction leads at every stage (planning, bidding, early construction), searchable by building type, value, location.\n- **Construct-A-Lead** \u2014 surfaces multifamily/condo/mixed-use projects even in pre-planning, with verified contacts.\n- **BuildCentral (BCI)** \u2014 multifamily-specific construction leads product.\n\n**Big institutional data providers** (broader, more expensive, often used by lenders/investors but also have vendor-facing tiers):\n- **Yardi Matrix** \u2014 the industry-standard multifamily pipeline tracker (under construction, planned, prospective, by market). Good for macro targeting (which metros are heating up) even if you don't buy contact-level leads from it.\n- **CoStar / Apartments.com** \u2014 property and ownership/management-company data.\n- **Dodge Construction Network** and **ConstructConnect** \u2014 general construction project/permit leads, filterable to multifamily.\n\n## 2. Decide what stage you want to sell into\nThis matters a lot \u2014 the right stage depends on what you sell:\n- **Pre-construction/permitting** \u2014 good for products that need lead time (structural, building systems, bulk contracts with developers).\n- **Under construction / lease-up** \u2014 best window for amenity/interior vendors (furniture, internet/cable, package lockers, laundry, security, fitness equipment) since property managers are actively making vendor decisions.\n- **Newly stabilized (post-lease-up)** \u2014 good for ongoing-service vendors (maintenance, pest control, landscaping, insurance) since staff and budgets are now in place.\n\n## 3. Enrich contacts\nOnce you have a building/company name, use a sales-intelligence tool to find the actual decision-maker (regional property manager, VP of ops, procurement):\n- **ZoomInfo**, **Apollo.io**, **LinkedIn Sales Navigator**, **Seamless.AI**, **Cognism**\n\n## 4. Free/cheap supplementary sources\n- Local **county/municipal building permit portals** \u2014 public record, free, but manual (only worth it for a single metro).\n- **NMHC** (National Multifamily Housing Council) and **NAA** (National Apartment Association) \u2014 top-developer/owner lists and member directories.\n- Trade press for deal/assignment announcements: **Multi-Housing News**, **Multifamily Executive**, **GlobeSt**, **Bisnow**, **Multifamily Dive**.\n- **Google Alerts** for \"[city] new apartment complex\" / \"breaks ground.\"\n- **LinkedIn job postings** for \"leasing manager\"/\"community manager\" at a specific address \u2014 a strong signal a building is entering lease-up.\n\n## 5. Suggested workflow\n1. Define target geography and building size/class.\n2. Subscribe to one vendor-focused platform (Smart Supplier or ALN Vendor Edge Pro are the most purpose-built) \u2014 pull a list filtered by pipeline stage and market.\n3. Cross-check against Yardi Matrix or CoStar for market-level supply trends to prioritize hot metros.\n4. Enrich contacts via ZoomInfo/Apollo/Sales Navigator.\n5. Load into a CRM (HubSpot/Salesforce) with a recurring feed/alert so new projects entering your target stage auto-populate.\n\nSources:\n- [ALN Apartment Data](https://alndata.com/)\n- [Multi-Family Construction Leads \u2013 MultiFamilyData | BCI BuildCentral](https://www.buildcentral.com/multifamily-data/)\n- [How to Choose the Right Multifamily Property Data Provider \u2013 Smart Apartment Data](https://smartapartmentdata.com/supplier/property-data-provider)\n- [Multifamily Contacts and Industry Changes \u2013 Smart Apartment Data](https://smartapartmentdata.com/supplier)\n- [Reviews | Compare the Best Multifamily Data Providers \u2013 Revyse](https://revyse.com/categories/data-providers)\n- [MultiFamily Construction Leads Database \u2013 MultiFamilyData](https://www.multifamilydata.com/About)\n- [Construction Leads for Every Type of Multi-Family Development \u2013 Construct-A-Lead](https://www.constructalead.com/project-types/multi-family-construction-leads/)\n- [How to Find Multi-Family Construction Projects \u2013 Construct-A-Lead](https://www.constructalead.com/2020/12/08/how-to-find-multi-family-construction-projects/)\n- [Commercial Real Estate Data | Yardi Matrix](https://www.yardimatrix.com/publications/)\n- [Dodge Construction Network: how 130 years of data is reshaping construction intelligence](https://www.marketscale.com/industries/engineering-and-construction/dodge-construction-network-how-130-years-of-data-is-reshaping-construction-intelligence)",
+  "brands": [
+    {
+      "brand": "BuildCentral",
+      "first_at": 1004,
+      "mentions": 3,
+      "rank": 1
+    },
+    {
+      "brand": "Yardi Matrix",
+      "first_at": 1212,
+      "mentions": 3,
+      "rank": 2
+    },
+    {
+      "brand": "CoStar",
+      "first_at": 1445,
+      "mentions": 2,
+      "rank": 3
+    },
+    {
+      "brand": "Apartments.com",
+      "first_at": 1454,
+      "mentions": 1,
+      "rank": 4
+    },
+    {
+      "brand": "Dodge",
+      "first_at": 1525,
+      "mentions": 2,
+      "rank": 5
+    },
+    {
+      "brand": "ConstructConnect",
+      "first_at": 1560,
+      "mentions": 1,
+      "rank": 6
+    },
+    {
+      "brand": "ZoomInfo",
+      "first_at": 2474,
+      "mentions": 2,
+      "rank": 7
+    },
+    {
+      "brand": "Apollo",
+      "first_at": 2488,
+      "mentions": 1,
+      "rank": 8
+    },
+    {
+      "brand": "LinkedIn Sales Navigator",
+      "first_at": 2512,
+      "mentions": 2,
+      "rank": 9
+    },
+    {
+      "brand": "Public records (DIY)",
+      "first_at": 2636,
+      "mentions": 1,
+      "rank": 10
+    }
+  ],
+  "links": [
+    {
+      "title": "",
+      "url": "https://alndata.com/"
+    },
+    {
+      "title": "",
+      "url": "https://www.buildcentral.com/multifamily-data/"
+    },
+    {
+      "title": "",
+      "url": "https://smartapartmentdata.com/supplier/property-data-provider"
+    },
+    {
+      "title": "",
+      "url": "https://revyse.com/categories/data-providers"
+    },
+    {
+      "title": "",
+      "url": "https://www.multifamilydata.com/About"
+    },
+    {
+      "title": "",
+      "url": "https://www.constructalead.com/project-types/multi-family-construction-leads/"
+    },
+    {
+      "title": "",
+      "url": "https://www.yardimatrix.com/publications/"
+    },
+    {
+      "title": "",
+      "url": "https://www.marketscale.com/industries/engineering-and-construction/dodge-construction-network-how-130-years-of-data-is-reshaping-construction-intelligence"
+    }
+  ]
+}

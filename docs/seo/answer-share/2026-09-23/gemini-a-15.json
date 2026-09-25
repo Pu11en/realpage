@@ -1,0 +1,183 @@
+{
+  "engine": "gemini",
+  "engine_label": "Gemini (gemini-2.5-flash) via API, Google Search grounding on",
+  "is_consumer_app": false,
+  "set": "A",
+  "question": "What public data sources show apartment construction permits in Texas?",
+  "intent": "free-data",
+  "asked_on": "2026-09-23",
+  "ok": true,
+  "answer": "For individuals researching apartment construction permits in Texas, several public and commercial data sources offer valuable insights, though it's important to note the decentralized nature of permit data in the state. Texas does not maintain a single statewide residential building code or a centralized permit database; instead, each city and county establishes its own permitting regulations and processes.\n\nHere are key public data sources and commercial products:\n\n**Public Data Sources:**\n\n*   **U.S. Census Bureau Building Permits Survey (BPS):** This is a foundational source for statistics on new privately-owned residential construction at national, state, and local levels. The BPS defines a \"housing unit\" such that each apartment unit in a building is counted as one. Data from the BPS can often be found dating back to 1980.\n*   **Texas Real Estate Research Center (TRERC):** Operated by Texas A&M University, TRERC offers a \"Building Permit Place Advanced Search\" tool. This allows users to filter Texas building permit data by city or county, and includes options to specifically look at the number of buildings and units for properties with \"5+ Units,\" which is highly relevant for apartment complexes. TRERC also publishes various housing market reports that utilize U.S. Census Bureau data.\n*   **Texas Open Data Hub:** This serves as the official repository for publicly accessible open data from Texas state agencies and institutions of higher education. It's a broad resource where specific housing or construction-related datasets may be available.\n*   **City-Specific Open Data Portals:** Many larger Texas cities provide their own open data portals. For instance, the City of Austin's \"Issued Construction Permits\" dataset includes details like valuation and number of units for building permits issued since 1980. Similarly, the City of Houston also maintains an Open Data Portal. Researchers may need to consult individual city or county websites for the most localized and detailed permit information, as coverage can vary significantly by jurisdiction.\n*   **Texas Department of Housing and Community Affairs (TDHCA):** While TDHCA doesn't directly offer a permit database, it provides extensive data, reports, and interactive tools related to housing and community development. This includes information on affordable multifamily properties through its \"Multifamily Preservation Clearinghouse,\" and various analyses that inform decisions on affordable housing developments. They also feature Comprehensive Housing Market Analysis (CHMA) reports from HUD User.\n*   **U.S. Department of Housing & Urban Development (HUD) User Datasets:** HUD provides researchers with access to datasets on housing markets, including detailed Comprehensive Housing Market Analysis reports for specific Texas market areas. These reports can offer valuable context on housing demand and supply trends.\n\n**Commercial Data Sources and Products:**\n\n*   **BuildChek:** This company offers an extensive national building permit database, including data for Texas. Their platform allows users to search for permits by zip code, state, and metropolitan area, and specifically provides \"Multi-Family Permit Reports.\" It's important to note that the depth of coverage can vary by municipality and county.\n*   **Zabalist:** Zabalist provides an API for Texas construction data, which includes building permits for key cities such as Austin, San Antonio, Fort Worth, and Houston. They are in the process of expanding statewide permit coverage for major metropolitan areas. Additionally, Zabalist includes Texas Department of Licensing and Regulation (TDLR) project registrations, which can encompass larger apartment construction projects across all 256 Texas counties.\n*   **Mercator.ai:** This AI-powered platform focuses on business development for the construction industry. It analyzes permit datasets and tracks land development to identify new construction opportunities in Texas. Mercator.ai claims to detect projects early by tracking various signals, including permitting and rezoning applications.\n*   **PermitVector:** This service offers resources and guides that compare construction permit data providers in Texas, primarily aimed at contractors for lead generation.\n\nWhen conducting research, it's beneficial to combine information from these various sources to gain a comprehensive understanding of apartment construction permit activity in Texas.",
+  "sources": [
+    {
+      "title": "permitsguide.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH-7z7Tzm8PqjwrtY5OD5C_qQBKruUtZPjVI5eo3HV7THykqmV4rcBpZG0aTuNFd3IER-6aIXa_mqaW635nEmB2_eZWWjCmga8MN_yxfsRT4p9OQHbJA-cGwg=="
+    },
+    {
+      "title": "tamu.edu",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFfFmaRQ_s4vWPrZAj9UQhPtozXZY1V9caglQQUqEAHIf2JVWnK7aUY05zGuiz8QJU6ard07RmjspOfFzBqs-aNmm-WQkd8Ue_-6SMGI33xpYR7QtfhzQxb2z8z05dB5UtuadVlCZj1Og=="
+    },
+    {
+      "title": "indexmundi.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGwV4IWYoAPwCLB5dJBsqsCLESjfrNDy8dM24lrUIX9MYKc4Zu0SwelC3FmPcyyK6tU_Da6oupvhhEck_343c4jRdI2OFK2BNOdAU73K_9yzTg522zHs3ddcI1xqQgDBDhx-6jKYqzz9mvf3QrxHTPhWoH_esHcLrnwfUFkIlpcr9VXPc5TvcUs_FVPPAC9v1BxDVK7aD0okL7Buog0y3HloO_9ISaDLw-ZxQ=="
+    },
+    {
+      "title": "tamu.edu",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHQRzDomhg2LOZFCjMwVd6-RR3FGyzoyN99VGviwGMX31KlgvHASwoEzxxD97VaAK8c11AyGEowzHt08FHq16j_6EU9xAwpuR1nTOLcM5PK2hZ9ePraDyO1qcI6ih4cgRx9OMPYMVClfvfyNAnx6s1tPEWMFh16JtjYOp6sIg=="
+    },
+    {
+      "title": "mymetrotex.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFwBJJJgUTCCBT7M11oBArIbVVwjicOxIEnY4BBkdvFIKWGAY-sIb-mvWH3iaLmn2K_IpiO6ki5cVJgtcc1SWetUhFGSN80L8YIlyajIrtVaJYoPpinZmODxMGw5GLQHkYGvbNW-Q=="
+    },
+    {
+      "title": "tamu.edu",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGeBZBN9TYikZo6yA3BbBn1GUYnbefICFW7nLVG13iSsP-_d1nXyMBHTk46ZzHtCvHIKhyYUbnz_cLuDvriZtyVggq7C9ljhx1Wjh_6ThsjcQMOSHLKGy4A5vrouvePDR1cXhbdldYSFQ=="
+    },
+    {
+      "title": "tamu.edu",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEkeFXWVmiKRt_FCNT8QVeNB_2Y41OWvcu67hjOGORVvo_2kkdFk1JsY9SUBF7nlD_W37xx9LxhoBZtRzCGXZ8AYfGgkKDLjdK-8pH3lJ2JCCFgotXLSxT6-1Xsh_bLtH895yMf7b9h"
+    },
+    {
+      "title": "houstontx.gov",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFS3AELN_XZ-Kfj-IV5LYyR4OBScTsUom18yqmxhp53jiDpEF1ExFrqSDFMPALr3txaiA2yXT_FkAlc8dZ9xKKP4GaX7q117uFCt0cmJFVax7A49hqjkCfw7inr-FnEgjOEPxuAo9M="
+    },
+    {
+      "title": "austintexas.gov",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFVsEZRp7ljgVKC-FxIfK_JjG-icHOMHkUw263wJA13OMf-x4rGufGbWxMjUXTAH2XyOi2xAggUHAjwHAvbDC29MFZpARK0cwFQEfyeNetH0N-W3DXYZbQo43subYeI-i5O5hyi_3CiWLj8eFRN7bpAmPQVYYkSSYw45u0-1-bkmSVbQ5S9Iv_DbQQB-7BIkOeCf9cTqt8="
+    },
+    {
+      "title": "zabalist.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGUCL6h6523YAFMLtdRsureJoS0esqcw7INZHp5jVwI49uoQKkWwLIvQeWeyPX6VFL8GywDt5huMPErJqffEwfcCyq-Noyd5p9FaqeMI1A-LRFCB6h13cQUXZpSCkWGrUZ6TQ=="
+    },
+    {
+      "title": "texas.gov",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQExa_RaH_iLsowCGHy6dk7VCzjKnZRzZHVC71xhpPgb1UHj2oE1IWMb0_wbGCikGhsgrpWIQVgJJjV2M-GdyZSdNskHh3fGRosrOqZvV5RxKor_5Zko6ySGIPpPNQsm6OdxjpYHN6aO6g=="
+    },
+    {
+      "title": "texas.gov",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFQ_V2LlQ-_NWqZDuWx4JieA33SK5zh9_XHwqo9iwy8VMWzdDGAPZwy5HiRH3b--LpOUHE6bPl1fMI9vlOqFnQaoCcusb8Mnf2LkfAN-pAlHwEmI2GPAqk="
+    },
+    {
+      "title": "tshaonline.org",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF8qmphZ6r3Vgsu4oEHwNHKnZHonAWRuqEmfQvaUeIOLeqKPttR4qybity2PDUZPQ-gB5xWSwIwx67oydP1owwTZgFf7GHkpx0IgruXuJkVIomUn5uQugjP6MhGRp8UnoOj2SxxJ8a24lsnW5syBRex8nu-9aSFNlZzs8zJf3CoFdjX200pzEMYk4zzieiPr3gMtPwGQ9jvfg=="
+    },
+    {
+      "title": "texas.gov",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHzIdLy790P9Jgm0eVQgbQ2qx9DzN1Bf2tzTWNHGZ98svL2SpR4usmhWPfiOHLJ0aw-0U-nYBjMjXloPetCWTJo4ILZ6L9XsDLrG7--22umlT_VdDH1qlHEWKPkv9fsCKtX0VCEQbcrtqft0A=="
+    },
+    {
+      "title": "huduser.gov",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEEKqwa5ONQApPpaMuONz4x7YBOLSLjj15cBn7_NEEIaqjMMmgXj-R1uAX9zROijhCtvC1f1dfg9pL49ZzSXbw_5v4A6CbsFQWl0RJcEUw6vZfa8r566RUhRx1qPOyrK4Lt31cXi1A="
+    },
+    {
+      "title": "huduser.gov",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHTON7gJArBlW7n1Vb-B5yxApV0D22quJfAJSlhTX0fd-nz9AKiZ-ui3nc3aBzMAO6NE_mO7rjzfPD9YkC6txvMwhL2zT6knSF4YkhfRLrXO8yqNQ945lLuysebfawPLHnCIlYzvgYRXgcin6JoJms="
+    },
+    {
+      "title": "buildchek.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG3FH_NFeU05P7tbAXy2n58QBbwB4OfYxjv_FIru1JZ4hR9FCQ-_MfVrNdM4_KTccd9Ey1R7Tk84AJzoKqiEDgrVn0tMWZHD2QA91WbgXieKblWWpSj--jfrodtLHx30HXWCcv-a2dOHT-U2XvV3TAh5QjvpsssPMO9yEebj2CFuMZncw=="
+    },
+    {
+      "title": "zabalist.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH-ehHE_LSM6WaLfdGBJ0v6a03NKYtY-C-TTlD5eAO53xKVulqk8ItTySSd0u6oK4R480VDSNxc1CPeijYOTxCZNse5o93E2AiQ1o3F7HcW3-8IomdOWDgA3_Nva1-7"
+    },
+    {
+      "title": "mercator.ai",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHnIbcsAeds03uL3dHrH8nQNLV6SDuIiCQMDj-RB8qnPEIOTSX1-RPq_prsHH7SJTf3SDDeYNpyGjfIOy0ohtxBv_lNC9A9hffnj0RC9xgc_MEEw_PS08TEBqgU62p8ELxwykxO23FRuV1mMzS_jimIANHgL2w="
+    },
+    {
+      "title": "permitvector.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH8jsrKEyBABI7fUex_zFvjvKrb0EZpE-P-ZgVxnDM1S5Xz6bXzdx-qYz6LE5Wzc4TLO_bguwEK8kDsNVJHr6WZa1LahYW5BZIxhRK17HyW4VpTXEaoAvia"
+    }
+  ],
+  "brands": [
+    {
+      "brand": "Public records (DIY)",
+      "first_at": 3651,
+      "mentions": 1,
+      "rank": 1
+    }
+  ],
+  "links": [
+    {
+      "title": "permitsguide.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH-7z7Tzm8PqjwrtY5OD5C_qQBKruUtZPjVI5eo3HV7THykqmV4rcBpZG0aTuNFd3IER-6aIXa_mqaW635nEmB2_eZWWjCmga8MN_yxfsRT4p9OQHbJA-cGwg=="
+    },
+    {
+      "title": "tamu.edu",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFfFmaRQ_s4vWPrZAj9UQhPtozXZY1V9caglQQUqEAHIf2JVWnK7aUY05zGuiz8QJU6ard07RmjspOfFzBqs-aNmm-WQkd8Ue_-6SMGI33xpYR7QtfhzQxb2z8z05dB5UtuadVlCZj1Og=="
+    },
+    {
+      "title": "indexmundi.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGwV4IWYoAPwCLB5dJBsqsCLESjfrNDy8dM24lrUIX9MYKc4Zu0SwelC3FmPcyyK6tU_Da6oupvhhEck_343c4jRdI2OFK2BNOdAU73K_9yzTg522zHs3ddcI1xqQgDBDhx-6jKYqzz9mvf3QrxHTPhWoH_esHcLrnwfUFkIlpcr9VXPc5TvcUs_FVPPAC9v1BxDVK7aD0okL7Buog0y3HloO_9ISaDLw-ZxQ=="
+    },
+    {
+      "title": "tamu.edu",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHQRzDomhg2LOZFCjMwVd6-RR3FGyzoyN99VGviwGMX31KlgvHASwoEzxxD97VaAK8c11AyGEowzHt08FHq16j_6EU9xAwpuR1nTOLcM5PK2hZ9ePraDyO1qcI6ih4cgRx9OMPYMVClfvfyNAnx6s1tPEWMFh16JtjYOp6sIg=="
+    },
+    {
+      "title": "mymetrotex.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFwBJJJgUTCCBT7M11oBArIbVVwjicOxIEnY4BBkdvFIKWGAY-sIb-mvWH3iaLmn2K_IpiO6ki5cVJgtcc1SWetUhFGSN80L8YIlyajIrtVaJYoPpinZmODxMGw5GLQHkYGvbNW-Q=="
+    },
+    {
+      "title": "tamu.edu",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGeBZBN9TYikZo6yA3BbBn1GUYnbefICFW7nLVG13iSsP-_d1nXyMBHTk46ZzHtCvHIKhyYUbnz_cLuDvriZtyVggq7C9ljhx1Wjh_6ThsjcQMOSHLKGy4A5vrouvePDR1cXhbdldYSFQ=="
+    },
+    {
+      "title": "tamu.edu",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEkeFXWVmiKRt_FCNT8QVeNB_2Y41OWvcu67hjOGORVvo_2kkdFk1JsY9SUBF7nlD_W37xx9LxhoBZtRzCGXZ8AYfGgkKDLjdK-8pH3lJ2JCCFgotXLSxT6-1Xsh_bLtH895yMf7b9h"
+    },
+    {
+      "title": "houstontx.gov",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFS3AELN_XZ-Kfj-IV5LYyR4OBScTsUom18yqmxhp53jiDpEF1ExFrqSDFMPALr3txaiA2yXT_FkAlc8dZ9xKKP4GaX7q117uFCt0cmJFVax7A49hqjkCfw7inr-FnEgjOEPxuAo9M="
+    },
+    {
+      "title": "austintexas.gov",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFVsEZRp7ljgVKC-FxIfK_JjG-icHOMHkUw263wJA13OMf-x4rGufGbWxMjUXTAH2XyOi2xAggUHAjwHAvbDC29MFZpARK0cwFQEfyeNetH0N-W3DXYZbQo43subYeI-i5O5hyi_3CiWLj8eFRN7bpAmPQVYYkSSYw45u0-1-bkmSVbQ5S9Iv_DbQQB-7BIkOeCf9cTqt8="
+    },
+    {
+      "title": "zabalist.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGUCL6h6523YAFMLtdRsureJoS0esqcw7INZHp5jVwI49uoQKkWwLIvQeWeyPX6VFL8GywDt5huMPErJqffEwfcCyq-Noyd5p9FaqeMI1A-LRFCB6h13cQUXZpSCkWGrUZ6TQ=="
+    },
+    {
+      "title": "texas.gov",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQExa_RaH_iLsowCGHy6dk7VCzjKnZRzZHVC71xhpPgb1UHj2oE1IWMb0_wbGCikGhsgrpWIQVgJJjV2M-GdyZSdNskHh3fGRosrOqZvV5RxKor_5Zko6ySGIPpPNQsm6OdxjpYHN6aO6g=="
+    },
+    {
+      "title": "texas.gov",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFQ_V2LlQ-_NWqZDuWx4JieA33SK5zh9_XHwqo9iwy8VMWzdDGAPZwy5HiRH3b--LpOUHE6bPl1fMI9vlOqFnQaoCcusb8Mnf2LkfAN-pAlHwEmI2GPAqk="
+    },
+    {
+      "title": "tshaonline.org",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF8qmphZ6r3Vgsu4oEHwNHKnZHonAWRuqEmfQvaUeIOLeqKPttR4qybity2PDUZPQ-gB5xWSwIwx67oydP1owwTZgFf7GHkpx0IgruXuJkVIomUn5uQugjP6MhGRp8UnoOj2SxxJ8a24lsnW5syBRex8nu-9aSFNlZzs8zJf3CoFdjX200pzEMYk4zzieiPr3gMtPwGQ9jvfg=="
+    },
+    {
+      "title": "texas.gov",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHzIdLy790P9Jgm0eVQgbQ2qx9DzN1Bf2tzTWNHGZ98svL2SpR4usmhWPfiOHLJ0aw-0U-nYBjMjXloPetCWTJo4ILZ6L9XsDLrG7--22umlT_VdDH1qlHEWKPkv9fsCKtX0VCEQbcrtqft0A=="
+    },
+    {
+      "title": "huduser.gov",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEEKqwa5ONQApPpaMuONz4x7YBOLSLjj15cBn7_NEEIaqjMMmgXj-R1uAX9zROijhCtvC1f1dfg9pL49ZzSXbw_5v4A6CbsFQWl0RJcEUw6vZfa8r566RUhRx1qPOyrK4Lt31cXi1A="
+    },
+    {
+      "title": "huduser.gov",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHTON7gJArBlW7n1Vb-B5yxApV0D22quJfAJSlhTX0fd-nz9AKiZ-ui3nc3aBzMAO6NE_mO7rjzfPD9YkC6txvMwhL2zT6knSF4YkhfRLrXO8yqNQ945lLuysebfawPLHnCIlYzvgYRXgcin6JoJms="
+    },
+    {
+      "title": "buildchek.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG3FH_NFeU05P7tbAXy2n58QBbwB4OfYxjv_FIru1JZ4hR9FCQ-_MfVrNdM4_KTccd9Ey1R7Tk84AJzoKqiEDgrVn0tMWZHD2QA91WbgXieKblWWpSj--jfrodtLHx30HXWCcv-a2dOHT-U2XvV3TAh5QjvpsssPMO9yEebj2CFuMZncw=="
+    },
+    {
+      "title": "zabalist.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH-ehHE_LSM6WaLfdGBJ0v6a03NKYtY-C-TTlD5eAO53xKVulqk8ItTySSd0u6oK4R480VDSNxc1CPeijYOTxCZNse5o93E2AiQ1o3F7HcW3-8IomdOWDgA3_Nva1-7"
+    },
+    {
+      "title": "mercator.ai",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHnIbcsAeds03uL3dHrH8nQNLV6SDuIiCQMDj-RB8qnPEIOTSX1-RPq_prsHH7SJTf3SDDeYNpyGjfIOy0ohtxBv_lNC9A9hffnj0RC9xgc_MEEw_PS08TEBqgU62p8ELxwykxO23FRuV1mMzS_jimIANHgL2w="
+    },
+    {
+      "title": "permitvector.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH8jsrKEyBABI7fUex_zFvjvKrb0EZpE-P-ZgVxnDM1S5Xz6bXzdx-qYz6LE5Wzc4TLO_bguwEK8kDsNVJHr6WZa1LahYW5BZIxhRK17HyW4VpTXEaoAvia"
+    }
+  ]
+}

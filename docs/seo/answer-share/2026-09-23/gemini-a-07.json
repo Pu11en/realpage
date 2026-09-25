@@ -1,0 +1,45 @@
+{
+  "engine": "gemini",
+  "engine_label": "Gemini (gemini-2.5-flash) via API, Google Search grounding on",
+  "is_consumer_app": false,
+  "set": "A",
+  "question": "How do I find new apartment projects before they open for leasing?",
+  "intent": "pipeline",
+  "asked_on": "2026-09-23",
+  "ok": true,
+  "answer": "Finding new apartment projects before they open for leasing requires a proactive approach, often involving a mix of online research, local engagement, and specialized tools. Here's how you can do it:\n\n### 1. Monitor Local Government and Planning Departments\n\n*   **City Planning and Zoning Websites:** Local government websites often publish information about proposed developments, rezoning applications, and building permits. Look for sections related to \"Planning,\" \"Zoning,\" \"Development Projects,\" or \"Public Notices.\" These documents can reveal projects in their early stages, sometimes years before groundbreaking. You might find detailed plans, timelines, and contact information for developers.\n*   **Public Meetings:** Attend or review minutes from city council meetings, planning commission meetings, and zoning board hearings. New projects are often discussed and debated publicly during these sessions.\n\n### 2. Follow Real Estate Development News\n\n*   **Local Business Journals and News Outlets:** These publications frequently cover new construction projects, land acquisitions, and developer announcements in their early phases. Search for real estate or development sections.\n*   **Real Estate Industry Blogs and Websites:** Many sites track market trends and new developments. Look for local or regional real estate news aggregators.\n*   **Developer Websites:** Keep an eye on the websites of prominent local and regional apartment developers. They often announce upcoming projects or pipeline developments before formal leasing begins.\n\n### 3. Utilize Professional Real Estate Data and Tools\n\nWhile some of these are geared towards industry professionals, some information can be accessed by the public or through trial accounts:\n\n*   **CoStar Group and LoopNet:** CoStar is a comprehensive commercial real estate information provider. While expensive for individual users, its publicly accessible counterpart, LoopNet, sometimes lists properties under development or proposed projects. You might find information about land deals that signal future apartment construction.\n*   **CommercialCafe or Yardi Matrix:** These platforms track large-scale multifamily projects. Yardi Matrix, for instance, provides data on properties under construction, planned, or prospective. Some of this information may be accessible through reports or market analyses they publish.\n*   **Local Multiple Listing Services (MLS):** While primarily for existing properties, some brokerages might list land parcels zoned for multifamily development, indicating future projects.\n*   **Construction Project Tracking Services:** Some services specialize in tracking construction starts and permits. While often subscription-based, they can offer early insights.\n\n### 4. Engage with Real Estate Professionals\n\n*   **Local Real Estate Agents and Brokers:** Agents specializing in rentals or new construction often have relationships with developers and may get early word on upcoming projects.\n*   **Property Management Companies:** Companies that manage existing apartment buildings are often aware of new developments in their market.\n*   **Networking:** Attend local real estate events, even if casual, to potentially gather information from those in the industry.\n\n### 5. On-the-Ground Reconnaissance\n\n*   **Drive or Walk Through Desirable Neighborhoods:** Look for construction sites, particularly those with large foundations or significant land clearing. Signs often indicate the developer or future use.\n*   **Look for Rezoning Signs:** Developers are legally required to post signs when a property is being considered for rezoning, which can be a strong indicator of a future project.\n\n### 6. Online Apartment Listing Sites with \"New Construction\" Filters\n\nOnce projects are closer to opening, but still before official leasing, some major apartment listing sites will begin to show them:\n\n*   **Apartments.com, Zillow, Rent.com:** These sites often have filters for \"new construction\" or \"newly built.\" While this is usually closer to the leasing phase, sometimes you can find projects listed as \"coming soon\" with preliminary information.\n\nBy combining these strategies, you can significantly increase your chances of discovering new apartment projects before they are widely advertised for leasing.",
+  "sources": [],
+  "brands": [
+    {
+      "brand": "CoStar",
+      "first_at": 1755,
+      "mentions": 2,
+      "rank": 1
+    },
+    {
+      "brand": "LoopNet",
+      "first_at": 1772,
+      "mentions": 2,
+      "rank": 2
+    },
+    {
+      "brand": "Yardi Matrix",
+      "first_at": 2116,
+      "mentions": 2,
+      "rank": 3
+    },
+    {
+      "brand": "Apartments.com",
+      "first_at": 3894,
+      "mentions": 1,
+      "rank": 4
+    },
+    {
+      "brand": "Zillow",
+      "first_at": 3910,
+      "mentions": 1,
+      "rank": 5
+    }
+  ],
+  "links": []
+}

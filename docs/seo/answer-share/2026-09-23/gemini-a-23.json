@@ -1,0 +1,291 @@
+{
+  "engine": "gemini",
+  "engine_label": "Gemini (gemini-2.5-flash) via API, Google Search grounding on",
+  "is_consumer_app": false,
+  "set": "A",
+  "question": "What is the best way to prospect multifamily property managers?",
+  "intent": "prospecting",
+  "asked_on": "2026-09-23",
+  "ok": true,
+  "answer": "To effectively prospect multifamily property managers, a multi-faceted approach combining online strategies, direct outreach, and robust networking is most effective. Identifying key decision-makers and leveraging specialized data sources can significantly enhance your prospecting efforts.\n\nHere are the best ways to prospect multifamily property managers:\n\n**1. Leverage Your Online Presence and Digital Marketing**\nA strong online presence is crucial for attracting property managers.\n*   **Website Optimization and Content Marketing:** Optimize your website with dynamic content, such as videos, to engage prospective clients and showcase your expertise. Regularly publish blog posts, case studies, and market insights to establish credibility and attract qualified leads.\n*   **Paid Digital Advertising:** Invest in Internet Listing Sites (ILS) like Zillow and Apartments.com to increase visibility. Utilize paid ads on platforms like Google and social media to target property managers effectively.\n*   **Social Media Engagement:** Maintain an active and professional presence on social media platforms, especially LinkedIn, to connect with industry professionals and position yourself as a valuable resource.\n\n**2. Direct Outreach and Personalized Communication**\nTailored communication can help you stand out.\n*   **Targeted Email and Mail Campaigns:** Build highly targeted contact lists of property managers and implement personalized email sequences and professional mailers.\n    *   **Data Sources for Contact Information:** Companies like **Salesgenie** and **Openmart** can provide verified contact information for property management companies and their owners. Other B2B contact enrichment tools include **Hunter.io**, **Lusha**, **Apollo**, and **ZoomInfo**.\n*   **Cold Calling and In-Person Introductions:** While often challenging, a well-researched cold call can lead to a meeting. Consider stopping by offices with a small gift, such as coffee or smoothies, to make a memorable introduction.\n*   **CRM Tools:** Utilize CRM platforms like **HubSpot** or **Propertyware** to track leads, manage communications, and ensure consistent follow-ups.\n\n**3. Networking and Industry Engagement**\nBuilding relationships within the industry is paramount.\n*   **Industry Associations and Events:** Join national organizations such as the National Apartment Association (NAA) and the National Real Estate Investors Association (REIA), as well as local Chambers of Commerce and apartment associations. Attending trade shows, workshops, seminars, and networking events provides opportunities to meet property managers and regional managers who often have decision-making authority.\n*   **Strategic Partnerships and Referrals:** Cultivate relationships with real estate agents, brokers, contractors, mortgage brokers, and renovators. These professionals can be excellent sources of referrals. Encourage existing clients and even tenants to refer your services. Offering referral fees or incentives can further motivate partners.\n*   **Lead Magnets and Free Resources:** Offer valuable free resources, such as guides for landlords or property health checklists, to attract potential clients and capture their contact information for follow-up.\n\n**4. Specialized Data Providers and Prospecting Tools**\nSeveral platforms offer specialized data and tools for the multifamily sector:\n*   **Property and Market Data:**\n    *   **Yardi Matrix, NMHC, RentCafe.com, Berkadia, Marcus & Millichap, CBRE, and Colliers** provide extensive multifamily market data, including insights into vacancy rates, absorption, supply, and investment volume.\n    *   **HelloData, ALN Apartment Data, ATTOM Data Solutions, Dwellsy IQ, SMART Apartment Data, and CoreLogic** offer detailed property-level insights, occupancy rates, rents, amenities, and new construction details, often with daily or continuous updates.\n    *   **CoStar** and **Reonomy** are dominant for property data, comps, and ownership records.\n*   **Lead Generation Platforms:**\n    *   **All Property Management (APM)** is a pay-per-lead service that can provide real-time leads directly to your inbox.\n    *   **Biscred** connects property managers with owners, operators, and investors in commercial real estate.\n    *   **Scayled** provides territory intelligence and tracks tenant movement.\n    *   **ProspectBoss** offers real estate data products and CRM dialing tools for targeted prospecting.\n\n**Specific Companies to Consider Targeting or Partnering With:**\nSome of the largest multifamily management companies include **Greystar, Asset Living, RPM Living, Avenue5 Residential, FPI Management, Apartment Management Consultants, Bozzuto, Cushman & Wakefield, BH Management Services, Lincoln Property Company, and HomeRiver Group**. These companies manage significant portfolios and can be valuable targets for service providers or potential partners.",
+  "sources": [
+    {
+      "title": "realync.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF6ig_fPYxbHH2KK79ouKeHQL1xwrf8yKZr4DyDoplQl3O432JFfkGhDyFMGudaMuGXyuGOKfBnWmjsBj2Yb5yTfldQnN-hEyQ1E4E1yoDbiHw2Ny8tya72j_HMAMxwE5WkYiIq2ZBW3RsRv_k2moBB-GscQs2k2Okv8cz3eVYL8CQXJEjGflhTg7c6uw=="
+    },
+    {
+      "title": "laurenrobinson.com.au",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHkMSLesHiPHZ_UZo5j1MNp4XhebIERVMgvclpXvjcy2bxXXlLKZINnwlugfJTkResTSE-mwSku3L6Ll5RiUcvy0sQeHBNavZJFxZkmcZuDf0EYn7szO2cbbds8ICJhCmMkez1b94HSp4nlIFQow09XSGIcMSbQD2b5d5bkravAg6iO82PbpOAXeF5_Gel6liMPuvdvsxqXFnl_eKyb"
+    },
+    {
+      "title": "propertyware.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFml-mJJ7lnnaYdPICFEZR9n2l_aMVsedBV9f3EdDquOYCv_Ip0XQJTJScqcNaMu3tZP_K2E2rDLbNB6Bh-McHnHNZ61ekmmZG2QyZ2j-gjMHox1yUTNWcFlVe6WeRTfXcJvS5wEEDQBAvCQxKkGJ65x2rH0EYe3u8YKAEVZlg8WS54jSzofahT5rHRvKJoGPXsu82ACgk="
+    },
+    {
+      "title": "clearleaddigital.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEAvQ-HA7Fz_koajrp-fN8Q5lV2oz0aQcnieaMb0sSx9hotjVnXCqL9oelgmhHokKcntBFOqTo2GeLSIHxXG81YIPEJmZrv0m4Xe-eXi6Xy8jMcHpyImxTLsiJYkwGUijb98BMXQ9RMYwggrXN-AYAiOKOaZLI6xPAq5ZmK0SHWnIz6Vg=="
+    },
+    {
+      "title": "perq.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGQ0YM8mm02-QmESXsLJ3gIbR8oC1qiy79LU11a4JhtW4uT6lyo5TIdBbDES9CqzD8ks1VEUit25FD3DJq8GTrknA8XWcnpWlh2aRZSpKPpNkzuDH6CRi64JV5JV20q4kmftJkLzF4l_BpWuH9CICUVDpyAdFkyyxEUeX-b"
+    },
+    {
+      "title": "thelibertygroup.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGd4cRz_oPT3Rw-jFG7tinp3u19ppLZ2LFt9IZrF1vr1M85BcMa8iE6HEhQ48mqV9_05EusvM6rfKmsTJqH9nDk3AoqZUfkqvx_A60Mh5ZLp0gSZgj6lE5ZJcw099QrdVaWg4SXxvbnx0Wi2jka_HOI5dDmt5SD44bZwT9jRAmfEMAUYQy0OxP9ZwyWeWxFH6Qfrw=="
+    },
+    {
+      "title": "salesgenie.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE30m49xT0cvFLhSoUSQepWR6eX24H8top08BGkiXCbe-kBUAD4JqS9RGfUzwuq_gflP6Ecvg8m58zDlRfq6qR6JFzZby9P2AqdCDrsCIYFZIG6LTLYNFw87mh6sCRuRvG91oaHfOLH6ega7jcMHQBHhoFxkWUBo4ep6A-ZpYTfaF2uzzSvuNc5K_I="
+    },
+    {
+      "title": "openmart.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGDEFupEC7_-nANoFR1Deey-AIQjXl_Pi0SZHqrGX8KayGw_dzo4MD-CpB4V0igIOkL8PfLBOazqT-3VMAeehGPzo0HC3ED5rYWCty1iFj6fv8DnfiGy5Tk5GiL3fy9GKDmsVpkWugeoyB1YSFH3JiPwg=="
+    },
+    {
+      "title": "scayled.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHc90x1noJs3MrRHxU5OFgXWOWYDxxZZ4r0t9I1kF9lXdg-4iSTs3GwRZ6Je8SuPt6wPkdnxIo-pG3zRhLu8AfVSunphuS8Q3lg8SlfcWSFcAfhpB3nq5J4MfJUWupIwrjMzzFeWFT_xbVEiWSA95YRwxDx-BCzLg=="
+    },
+    {
+      "title": "growthtechspotlight.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFDYHsJj0glP2Gy9B-FhXXn2fIshqOpT3btH9V3x8rydcwyJi5GYEyaFSEBnCNLjo27k3eTqpk_DS5v7oLitmJalJLfzG3PnW-Kybz8vxRCQLu5DvJ91N-g9UDepMHN9IYqu4JnseCJC3wmJ2WhO9pg1R8LDmL4Sd4z1LOPN37Mf22uFy4="
+    },
+    {
+      "title": "reddit.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGfBSPQkDUDycOPFjzQ8eUGj-74q16vbSq6yrmrm8aet3DVTsKvqBwXSzDAR85r3ikmHGoPjmXRR8enc2u42NOjrq4L6SCnQ-Lu5StNCXnIMUF7mpvs6Z4NZwu4NdoJiTnRFWuzO7eCNpsk6tUkvboZQYvazncmgCrvNTXNZ5TEa8NrofIyRIYE3rHYTH4IWajjBe2PQ0xVPzsyrQ=="
+    },
+    {
+      "title": "prospectboss.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE8Pz08M6a0qwf7iQ_Et43m34r8g1qUqgdzjLLVh4tlcudwaLrt_uR9mFjQe3pRKW8l-b9PpP70YwUx0CZBarqPvgHZ9dD-2e2gKH0S9OdND7SgsLUOj4Q1up4eoky9aJMxhfQvbvj9gi78Ol_KH0TDK9KjhMi6J8JIopVLhSzZSilS1-g="
+    },
+    {
+      "title": "rpmseacoastnh.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE2n6moNx1zrNh_pzVlk90fDQpZ08F9yr-CLnoaMBvIfcwImGGpMtIbdt4I99VRyq2UEl6uNZsKL9vAhJGA8mScY637jf86kPxRYkbYJg9F43zOk6LuDCrFSO2L2Qt33QJ7BEOJw8XlKMLDCL85VQJYbgPHdK3VUtXDfoMmAQ0="
+    },
+    {
+      "title": "intersolutions.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGQsl8eBbyq7waGQivx_gfwVv5XtMy7AILrqKRE6MPgP5DywoOaBhOdBpaFTpZCjJRXr8jxF_N87yXTIMXtrT5p3VtY-xqyLTs50fLT480ODTZtHYO4d0SYMzpPrBkxZIZomiYG5ROZbmFe56RopAwfntUe-WLJK9BZcoiKz8Wq7tGS81VNfg=="
+    },
+    {
+      "title": "rpmraleigh.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE3NtQ8fIKellXXAe6ePacEN8gGBJqRu72JKpsyBHlP5YwbH_YluT8rbLfapmChSEPK3XKk1pNUGuap8zVddAJCwf4uVleW6MVANwEYAnmdH4ERKWwzOBZt47_wDPyzLjJHhs2g8-tEyYhToj72JsDOurPUptk96PLqTHzPQKI59A=="
+    },
+    {
+      "title": "multihousingnews.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFgCCWbSwHXTSpXSnwVbTNdEiN77LlO0xMNkf9MiuG0QKs-_gZrDXiOgx76fLlAVpo-oB-hqjZNZqHmWTxylEUbbSbHKubKX_1UwJm2Lm2hicKMevoIS5MNOziB2bJavQhakJfwEfaRHWYG5ENNLRJPh3qCwozP48ofsIY8_rP80CSi5puDpA=="
+    },
+    {
+      "title": "revyse.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF40lSW9D4LttPLVllLmNGpx-jJBrh_btIkHnS1vCeO2C9Fd6T4dCjOYaJKGrYlBkcFTUA30LRadtZmV3YqA1vfvJNPIfpercaW42cw5Z8bDxdZcP53krkXWXZ1Ags8QyQRdBOU_yQc"
+    },
+    {
+      "title": "smartapartmentdata.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGYi-ExAavwM5OGVCbZnDFDuP1_QTZ_ZTtsW-akOFBftqifn5XadZzO_Y6P9t6315fDcaR2O4AVod3skK_j0ywAm3HAk7ngFQOr0iPxmK0jnE-yk6Ddtg1d6Pns_00vwACntZr6HHjZ_ph-8zLZZMBZgk1JW5LMZADz"
+    },
+    {
+      "title": "dwellsy.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG4mAsv2vn8OGQyOLhClIBFpEdEZSxgMYuhS8X1xhSE2seu3l5DPGAxWGXyk2BuJN2I_51KbL-w1AhpFpUgAxM4ms_3HSmj-Fywr6QJ1FW7tL1_u_eRpmwciXRstnDzQ8YnW3l1uEfOeiNP2_pTwL5_WNA_gb1zfMCeuYPc8gPDQvl2x0I3"
+    },
+    {
+      "title": "allpropertymanagement.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHqyLcsadxMNd_NzYxeDWFwc1HVg4wgS3ZHOSiUD7RuNFsixMy-zvlHl9hD7f3DVHMzoDzFmSBXQ-Sh1XsIX8HGgRV-Sq1yZ9up7tFC86dmjSJ6_eYRruASmkhpScoXY7dDFmsdVPwXrnepKG9VPZlRC6guZqgcAuyWO-95o-YrLZJM"
+    },
+    {
+      "title": "buildium.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE0p7TNOcqZ5hhUw2TF3G2E2jiQTc8cBD__HIxGaG0j9ScKKtkH1mlKgoXXq2oHhSS_5xPOCC2T_fdzqqBs4mwk5Pjs_Mu6N0fJ1rOT8GJYTnXSc8MKklUZ78F8ZNu4gAnkI8c3iQH_OO4P7kzA2j5HegmaTQY="
+    },
+    {
+      "title": "leadsimple.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQETSGSzX3cmyppep3mcmyio13M-jAZLfqBT9LLE49o96kTjRl-b3_kyzDs2X0f1KbX7BAQuQhVaEQGUmGbnAnBE677GbIAh6M0w8qT600MJTDvqqokmYX7c0rtzZeS8ElTWc7eEXq4HJPoyTwg0CUlCDws5UHfpnG8HvI1fLuaB3pZeuvwppN2KhYKH"
+    },
+    {
+      "title": "biscred.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHREItuWofkcF_HeVd3B9-R8Cn-VsjiSHE-_etlaOupmZE4Zmay3NkSOR3BFfRJj-3O79ZPfRsECqGbz0UWZwCai9SNub_bwUZj90PNJ4xmg-AXsKAd6SVflAic1oPqYAcFsrp54NAY3BXZaRBETtU="
+    },
+    {
+      "title": "awning.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEQBSDftKfFVvdDNGraxlnuOGidqLfRaI8oJvJSmcHkyCmWN_go7TYKwtcWLVJHdWGMnpO8Up85w2GLmwTgIA2jc1WR7sy-iS0mKQkyfgxD-Bfe-NI6vARhDvguqG0IRo6GhMfRu3UpYLFwkHHlfbq-mrcdnYsSieQ="
+    },
+    {
+      "title": "multifamily.loans",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEWXRjzXKEldzQppUhm0qfmo3GB1tglI9NYE5Rnta3cUOmDxAZ3W7KtBVnrBrRyBixIwyKkBOmLq0m-mkbPiWh0o1HNEqrP3kNroIWcFJnAP4aeD00LhEzcn83Jqpc71zVyd61exZh01JSIoyTzYNh5sOadIIW03zRpetcSiqtfGvdKKgZGIDQxViJ4s3rDqNK-SwHCVwxLEixjhqs="
+    },
+    {
+      "title": "multihousingnews.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFphVKL3gl4EGYpvqXgJaPMeZ6m8pZ9UOlrgvjviwNZoUCJ9Z-LtxhU3jlSeQDyPdfsdTr2e4mRbbM9oATR0ekC_fAfTeuyqcGOy1Y5ZsqTB4u8RSpni7Uq_2jMS_rZWtsqIc09bt8bomVX5dUuk-HuUWwswTURE-O0ifWADY4oAsJEn0YD3CcHcgY="
+    }
+  ],
+  "brands": [
+    {
+      "brand": "Zillow",
+      "first_at": 855,
+      "mentions": 1,
+      "rank": 1
+    },
+    {
+      "brand": "Apartments.com",
+      "first_at": 866,
+      "mentions": 1,
+      "rank": 2
+    },
+    {
+      "brand": "ZoomInfo",
+      "first_at": 1764,
+      "mentions": 1,
+      "rank": 3
+    },
+    {
+      "brand": "Yardi Matrix",
+      "first_at": 3427,
+      "mentions": 1,
+      "rank": 4
+    },
+    {
+      "brand": "Berkadia",
+      "first_at": 3461,
+      "mentions": 1,
+      "rank": 5
+    },
+    {
+      "brand": "Marcus & Millichap",
+      "first_at": 3471,
+      "mentions": 1,
+      "rank": 6
+    },
+    {
+      "brand": "CBRE",
+      "first_at": 3491,
+      "mentions": 1,
+      "rank": 7
+    },
+    {
+      "brand": "HelloData",
+      "first_at": 3647,
+      "mentions": 1,
+      "rank": 8
+    },
+    {
+      "brand": "CoStar",
+      "first_at": 3905,
+      "mentions": 1,
+      "rank": 9
+    },
+    {
+      "brand": "Reonomy",
+      "first_at": 3920,
+      "mentions": 1,
+      "rank": 10
+    },
+    {
+      "brand": "Cushman & Wakefield",
+      "first_at": 4695,
+      "mentions": 1,
+      "rank": 11
+    }
+  ],
+  "links": [
+    {
+      "title": "realync.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF6ig_fPYxbHH2KK79ouKeHQL1xwrf8yKZr4DyDoplQl3O432JFfkGhDyFMGudaMuGXyuGOKfBnWmjsBj2Yb5yTfldQnN-hEyQ1E4E1yoDbiHw2Ny8tya72j_HMAMxwE5WkYiIq2ZBW3RsRv_k2moBB-GscQs2k2Okv8cz3eVYL8CQXJEjGflhTg7c6uw=="
+    },
+    {
+      "title": "laurenrobinson.com.au",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHkMSLesHiPHZ_UZo5j1MNp4XhebIERVMgvclpXvjcy2bxXXlLKZINnwlugfJTkResTSE-mwSku3L6Ll5RiUcvy0sQeHBNavZJFxZkmcZuDf0EYn7szO2cbbds8ICJhCmMkez1b94HSp4nlIFQow09XSGIcMSbQD2b5d5bkravAg6iO82PbpOAXeF5_Gel6liMPuvdvsxqXFnl_eKyb"
+    },
+    {
+      "title": "propertyware.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFml-mJJ7lnnaYdPICFEZR9n2l_aMVsedBV9f3EdDquOYCv_Ip0XQJTJScqcNaMu3tZP_K2E2rDLbNB6Bh-McHnHNZ61ekmmZG2QyZ2j-gjMHox1yUTNWcFlVe6WeRTfXcJvS5wEEDQBAvCQxKkGJ65x2rH0EYe3u8YKAEVZlg8WS54jSzofahT5rHRvKJoGPXsu82ACgk="
+    },
+    {
+      "title": "clearleaddigital.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEAvQ-HA7Fz_koajrp-fN8Q5lV2oz0aQcnieaMb0sSx9hotjVnXCqL9oelgmhHokKcntBFOqTo2GeLSIHxXG81YIPEJmZrv0m4Xe-eXi6Xy8jMcHpyImxTLsiJYkwGUijb98BMXQ9RMYwggrXN-AYAiOKOaZLI6xPAq5ZmK0SHWnIz6Vg=="
+    },
+    {
+      "title": "perq.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGQ0YM8mm02-QmESXsLJ3gIbR8oC1qiy79LU11a4JhtW4uT6lyo5TIdBbDES9CqzD8ks1VEUit25FD3DJq8GTrknA8XWcnpWlh2aRZSpKPpNkzuDH6CRi64JV5JV20q4kmftJkLzF4l_BpWuH9CICUVDpyAdFkyyxEUeX-b"
+    },
+    {
+      "title": "thelibertygroup.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGd4cRz_oPT3Rw-jFG7tinp3u19ppLZ2LFt9IZrF1vr1M85BcMa8iE6HEhQ48mqV9_05EusvM6rfKmsTJqH9nDk3AoqZUfkqvx_A60Mh5ZLp0gSZgj6lE5ZJcw099QrdVaWg4SXxvbnx0Wi2jka_HOI5dDmt5SD44bZwT9jRAmfEMAUYQy0OxP9ZwyWeWxFH6Qfrw=="
+    },
+    {
+      "title": "salesgenie.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE30m49xT0cvFLhSoUSQepWR6eX24H8top08BGkiXCbe-kBUAD4JqS9RGfUzwuq_gflP6Ecvg8m58zDlRfq6qR6JFzZby9P2AqdCDrsCIYFZIG6LTLYNFw87mh6sCRuRvG91oaHfOLH6ega7jcMHQBHhoFxkWUBo4ep6A-ZpYTfaF2uzzSvuNc5K_I="
+    },
+    {
+      "title": "openmart.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGDEFupEC7_-nANoFR1Deey-AIQjXl_Pi0SZHqrGX8KayGw_dzo4MD-CpB4V0igIOkL8PfLBOazqT-3VMAeehGPzo0HC3ED5rYWCty1iFj6fv8DnfiGy5Tk5GiL3fy9GKDmsVpkWugeoyB1YSFH3JiPwg=="
+    },
+    {
+      "title": "scayled.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHc90x1noJs3MrRHxU5OFgXWOWYDxxZZ4r0t9I1kF9lXdg-4iSTs3GwRZ6Je8SuPt6wPkdnxIo-pG3zRhLu8AfVSunphuS8Q3lg8SlfcWSFcAfhpB3nq5J4MfJUWupIwrjMzzFeWFT_xbVEiWSA95YRwxDx-BCzLg=="
+    },
+    {
+      "title": "growthtechspotlight.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFDYHsJj0glP2Gy9B-FhXXn2fIshqOpT3btH9V3x8rydcwyJi5GYEyaFSEBnCNLjo27k3eTqpk_DS5v7oLitmJalJLfzG3PnW-Kybz8vxRCQLu5DvJ91N-g9UDepMHN9IYqu4JnseCJC3wmJ2WhO9pg1R8LDmL4Sd4z1LOPN37Mf22uFy4="
+    },
+    {
+      "title": "reddit.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGfBSPQkDUDycOPFjzQ8eUGj-74q16vbSq6yrmrm8aet3DVTsKvqBwXSzDAR85r3ikmHGoPjmXRR8enc2u42NOjrq4L6SCnQ-Lu5StNCXnIMUF7mpvs6Z4NZwu4NdoJiTnRFWuzO7eCNpsk6tUkvboZQYvazncmgCrvNTXNZ5TEa8NrofIyRIYE3rHYTH4IWajjBe2PQ0xVPzsyrQ=="
+    },
+    {
+      "title": "prospectboss.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE8Pz08M6a0qwf7iQ_Et43m34r8g1qUqgdzjLLVh4tlcudwaLrt_uR9mFjQe3pRKW8l-b9PpP70YwUx0CZBarqPvgHZ9dD-2e2gKH0S9OdND7SgsLUOj4Q1up4eoky9aJMxhfQvbvj9gi78Ol_KH0TDK9KjhMi6J8JIopVLhSzZSilS1-g="
+    },
+    {
+      "title": "rpmseacoastnh.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE2n6moNx1zrNh_pzVlk90fDQpZ08F9yr-CLnoaMBvIfcwImGGpMtIbdt4I99VRyq2UEl6uNZsKL9vAhJGA8mScY637jf86kPxRYkbYJg9F43zOk6LuDCrFSO2L2Qt33QJ7BEOJw8XlKMLDCL85VQJYbgPHdK3VUtXDfoMmAQ0="
+    },
+    {
+      "title": "intersolutions.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGQsl8eBbyq7waGQivx_gfwVv5XtMy7AILrqKRE6MPgP5DywoOaBhOdBpaFTpZCjJRXr8jxF_N87yXTIMXtrT5p3VtY-xqyLTs50fLT480ODTZtHYO4d0SYMzpPrBkxZIZomiYG5ROZbmFe56RopAwfntUe-WLJK9BZcoiKz8Wq7tGS81VNfg=="
+    },
+    {
+      "title": "rpmraleigh.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE3NtQ8fIKellXXAe6ePacEN8gGBJqRu72JKpsyBHlP5YwbH_YluT8rbLfapmChSEPK3XKk1pNUGuap8zVddAJCwf4uVleW6MVANwEYAnmdH4ERKWwzOBZt47_wDPyzLjJHhs2g8-tEyYhToj72JsDOurPUptk96PLqTHzPQKI59A=="
+    },
+    {
+      "title": "multihousingnews.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFgCCWbSwHXTSpXSnwVbTNdEiN77LlO0xMNkf9MiuG0QKs-_gZrDXiOgx76fLlAVpo-oB-hqjZNZqHmWTxylEUbbSbHKubKX_1UwJm2Lm2hicKMevoIS5MNOziB2bJavQhakJfwEfaRHWYG5ENNLRJPh3qCwozP48ofsIY8_rP80CSi5puDpA=="
+    },
+    {
+      "title": "revyse.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF40lSW9D4LttPLVllLmNGpx-jJBrh_btIkHnS1vCeO2C9Fd6T4dCjOYaJKGrYlBkcFTUA30LRadtZmV3YqA1vfvJNPIfpercaW42cw5Z8bDxdZcP53krkXWXZ1Ags8QyQRdBOU_yQc"
+    },
+    {
+      "title": "smartapartmentdata.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGYi-ExAavwM5OGVCbZnDFDuP1_QTZ_ZTtsW-akOFBftqifn5XadZzO_Y6P9t6315fDcaR2O4AVod3skK_j0ywAm3HAk7ngFQOr0iPxmK0jnE-yk6Ddtg1d6Pns_00vwACntZr6HHjZ_ph-8zLZZMBZgk1JW5LMZADz"
+    },
+    {
+      "title": "dwellsy.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG4mAsv2vn8OGQyOLhClIBFpEdEZSxgMYuhS8X1xhSE2seu3l5DPGAxWGXyk2BuJN2I_51KbL-w1AhpFpUgAxM4ms_3HSmj-Fywr6QJ1FW7tL1_u_eRpmwciXRstnDzQ8YnW3l1uEfOeiNP2_pTwL5_WNA_gb1zfMCeuYPc8gPDQvl2x0I3"
+    },
+    {
+      "title": "allpropertymanagement.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHqyLcsadxMNd_NzYxeDWFwc1HVg4wgS3ZHOSiUD7RuNFsixMy-zvlHl9hD7f3DVHMzoDzFmSBXQ-Sh1XsIX8HGgRV-Sq1yZ9up7tFC86dmjSJ6_eYRruASmkhpScoXY7dDFmsdVPwXrnepKG9VPZlRC6guZqgcAuyWO-95o-YrLZJM"
+    },
+    {
+      "title": "buildium.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE0p7TNOcqZ5hhUw2TF3G2E2jiQTc8cBD__HIxGaG0j9ScKKtkH1mlKgoXXq2oHhSS_5xPOCC2T_fdzqqBs4mwk5Pjs_Mu6N0fJ1rOT8GJYTnXSc8MKklUZ78F8ZNu4gAnkI8c3iQH_OO4P7kzA2j5HegmaTQY="
+    },
+    {
+      "title": "leadsimple.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQETSGSzX3cmyppep3mcmyio13M-jAZLfqBT9LLE49o96kTjRl-b3_kyzDs2X0f1KbX7BAQuQhVaEQGUmGbnAnBE677GbIAh6M0w8qT600MJTDvqqokmYX7c0rtzZeS8ElTWc7eEXq4HJPoyTwg0CUlCDws5UHfpnG8HvI1fLuaB3pZeuvwppN2KhYKH"
+    },
+    {
+      "title": "biscred.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHREItuWofkcF_HeVd3B9-R8Cn-VsjiSHE-_etlaOupmZE4Zmay3NkSOR3BFfRJj-3O79ZPfRsECqGbz0UWZwCai9SNub_bwUZj90PNJ4xmg-AXsKAd6SVflAic1oPqYAcFsrp54NAY3BXZaRBETtU="
+    },
+    {
+      "title": "awning.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEQBSDftKfFVvdDNGraxlnuOGidqLfRaI8oJvJSmcHkyCmWN_go7TYKwtcWLVJHdWGMnpO8Up85w2GLmwTgIA2jc1WR7sy-iS0mKQkyfgxD-Bfe-NI6vARhDvguqG0IRo6GhMfRu3UpYLFwkHHlfbq-mrcdnYsSieQ="
+    },
+    {
+      "title": "multifamily.loans",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEWXRjzXKEldzQppUhm0qfmo3GB1tglI9NYE5Rnta3cUOmDxAZ3W7KtBVnrBrRyBixIwyKkBOmLq0m-mkbPiWh0o1HNEqrP3kNroIWcFJnAP4aeD00LhEzcn83Jqpc71zVyd61exZh01JSIoyTzYNh5sOadIIW03zRpetcSiqtfGvdKKgZGIDQxViJ4s3rDqNK-SwHCVwxLEixjhqs="
+    },
+    {
+      "title": "multihousingnews.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFphVKL3gl4EGYpvqXgJaPMeZ6m8pZ9UOlrgvjviwNZoUCJ9Z-LtxhU3jlSeQDyPdfsdTr2e4mRbbM9oATR0ekC_fAfTeuyqcGOy1Y5ZsqTB4u8RSpni7Uq_2jMS_rZWtsqIc09bt8bomVX5dUuk-HuUWwswTURE-O0ifWADY4oAsJEn0YD3CcHcgY="
+    }
+  ]
+}

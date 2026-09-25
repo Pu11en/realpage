@@ -1,0 +1,45 @@
+{
+  "engine": "gemini",
+  "engine_label": "Gemini (gemini-2.5-flash) via API, Google Search grounding on",
+  "is_consumer_app": false,
+  "set": "A",
+  "question": "How do I build a lead list of new apartment buildings to sell to?",
+  "intent": "prospecting",
+  "asked_on": "2026-09-23",
+  "ok": true,
+  "answer": "Building a lead list of new apartment buildings requires a multi-faceted approach, combining specialized data sources, public records, and industry insights. Here's how you can build an effective lead list to sell to:\n\n### 1. Specialized Construction and Real Estate Databases\n\nThese platforms are often the most comprehensive sources for identifying new construction projects, including apartment buildings, often providing details on project status, key contacts, and timelines.\n\n*   **Dodge Data & Analytics (formerly Dodge Reports):** This is a leading provider of commercial construction project data. They track projects from early planning stages through completion, offering details on architects, developers, general contractors, and project timelines. You can filter by project type (multi-family residential), stage, and location.\n*   **ConstructConnect:** Similar to Dodge, ConstructConnect offers a vast database of construction projects across North America. They provide project details, bidding information, and key contact personnel for various stages of development.\n*   **BuildCentral:** Specializes in tracking new commercial real estate developments, including multi-family projects. They provide detailed project reports, including developer information, construction timelines, and contact details, often focusing on projects in the planning and pre-construction phases.\n*   **CoStar:** While primarily known for existing commercial property data, CoStar also tracks new developments and properties under construction. Their extensive database includes detailed property characteristics, market analytics, and contact information for property owners and managers.\n*   **Reonomy:** This platform uses AI to provide in-depth property intelligence across commercial real estate, including identifying new construction projects and providing owner contact information. You can filter by property type, construction stage, and other criteria.\n\n### 2. Public Records and Government Data\n\nLeveraging public information can help you identify projects in their earliest stages, even before they appear in commercial databases.\n\n*   **Local Planning and Zoning Departments:** These municipal offices manage applications for new construction, rezonings, and development permits. Regularly checking their public records, meeting minutes, and online portals can reveal proposed apartment projects.\n*   **Building Permit Databases:** Many cities and counties have online databases where you can search for recently issued building permits. Filtering for multi-family residential permits can lead you to new projects.\n*   **City Council and Planning Commission Agendas/Minutes:** These public documents often discuss proposed developments and approvals, providing early insight into future apartment projects.\n\n### 3. Industry News and Publications\n\nStaying informed through industry-specific news and journals can provide leads and context for new developments.\n\n*   **Local Business Journals:** Publications like the *Business Journal* in major metropolitan areas often report on significant new real estate developments, including large apartment complexes, groundbreaking ceremonies, and project announcements.\n*   **Real Estate Trade Publications:** National publications such as *Commercial Property Executive*, *Multi-Housing News*, and *National Real Estate Investor* cover trends, significant projects, and major players in the multi-family sector.\n*   **Local Development Blogs and Websites:** Many cities have websites or blogs dedicated to tracking local urban development and real estate news.\n\n### 4. Mapping and Geospatial Tools\n\nThese tools can help you visualize and confirm projects, and sometimes identify opportunities.\n\n*   **Google Maps/Google Earth:** Use these to visually identify areas with new construction activity. Street View can help confirm whether a project is an apartment building and its stage of construction.\n*   **GIS (Geographic Information System) Data:** Some local governments provide public GIS portals that overlay property information, zoning, and sometimes even active construction sites.\n\n### 5. Networking and Local Intelligence\n\nPersonal connections and on-the-ground research remain valuable.\n\n*   **Attend Industry Events:** Local real estate associations, builder events, and economic development conferences are great places to network with developers, contractors, and real estate professionals who have insight into upcoming projects.\n*   **Drive for Dollars:** Literally driving or walking through areas known for development can reveal projects in their early stages that haven't been widely publicized yet. Look for construction fences, signage, and foundation work.\n*   **Connect with Local Brokers and Architects:** These professionals are often aware of new projects early on and can be valuable sources of leads.\n\n### Building Your Lead List \u2013 A Process:\n\n1.  **Define Your Target Market:** Specify the geographic area, size of apartment building, and type of developer you want to target.\n2.  **Start with Commercial Databases:** Utilize Dodge, ConstructConnect, or BuildCentral to generate an initial list of projects matching your criteria.\n3.  **Supplement with Public Records:** Cross-reference projects and search for earlier-stage developments using planning department and building permit data.\n4.  **Monitor Industry News:** Regularly check local and national real estate news for announcements and updates.\n5.  **Verify and Qualify:** For each potential lead, verify the project status, confirm it's an apartment building, and identify key decision-makers (developers, general contractors, property management companies).\n6.  **Gather Contact Information:** Use LinkedIn, company websites, and industry directories to find appropriate contact details for sales outreach.\n7.  **Organize Your Data:** Use a CRM (Customer Relationship Management) system or a spreadsheet to track your leads, their status, contact information, and your outreach efforts.\n\nBy combining these strategies and utilizing the suggested resources, you can build a robust lead list of new apartment buildings, giving you a strong pipeline for sales opportunities.",
+  "sources": [],
+  "brands": [
+    {
+      "brand": "Dodge",
+      "first_at": 488,
+      "mentions": 1,
+      "rank": 1
+    },
+    {
+      "brand": "ConstructConnect",
+      "first_at": 848,
+      "mentions": 3,
+      "rank": 2
+    },
+    {
+      "brand": "BuildCentral",
+      "first_at": 1091,
+      "mentions": 2,
+      "rank": 3
+    },
+    {
+      "brand": "CoStar",
+      "first_at": 1400,
+      "mentions": 2,
+      "rank": 4
+    },
+    {
+      "brand": "Reonomy",
+      "first_at": 1693,
+      "mentions": 1,
+      "rank": 5
+    }
+  ],
+  "links": []
+}

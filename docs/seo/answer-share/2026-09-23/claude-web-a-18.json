@@ -1,0 +1,50 @@
+{
+  "engine": "claude-web",
+  "engine_label": "Claude (Sonnet) via claude -p, web search on",
+  "is_consumer_app": false,
+  "set": "A",
+  "question": "Where can I download a list of apartment buildings with addresses and unit counts?",
+  "intent": "free-data",
+  "asked_on": "2026-09-23",
+  "ok": true,
+  "answer": "Depends on scope (nationwide vs. local) and whether you need it free/public or are willing to pay for a commercial data feed. Here's where people typically get this:\n\n**Paid commercial real estate data providers** (most comprehensive, cover most of the US):\n- **CoStar** \u2014 the industry standard for commercial/multifamily property data, includes address, unit count, year built, owner, etc. Expensive, subscription-based, sales reps required.\n- **Yardi Matrix** \u2014 multifamily-focused, strong on apartment communities 50+ units, widely used by lenders and investors.\n- **RealPage** \u2014 apartment market data, similar niche to Yardi.\n- **ATTOM Data Solutions** \u2014 broad property data licensing (includes multifamily), sold as bulk data feeds/API, more self-serve than CoStar.\n- **CoreLogic** \u2014 similar bulk property data licensing, used by banks/insurers.\n- **Reonomy** \u2014 commercial property ownership and building data, API access available.\n\n**Free/public sources:**\n- **County tax assessor / GIS parcel data** \u2014 most US counties publish parcel-level records (often as open data or downloadable shapefiles/CSVs) that include property address, building class, and sometimes unit counts for multifamily parcels. Quality varies a lot by county.\n- **City open data portals** \u2014 some cities publish rental registries with unit counts. Example: NYC's **PLUTO** dataset (NYC Dept of City Planning) has lot-level unit counts for every building, and NYC HPD's **Multiple Dwelling Registration** lists registered apartment buildings with unit counts. Other big cities (LA, Chicago, SF) have similar open-data portals worth checking.\n- **National Housing Preservation Database (NHPD)** \u2014 free database specifically for subsidized/affordable multifamily housing, includes address and unit count.\n- **HUD** \u2014 publishes datasets on HUD-insured/assisted multifamily properties (e.g., HUD Multifamily Properties list) via its open data site.\n\n**Listing-site scraping (gray area, check ToS)**:\n- Sites like Apartments.com, RentCafe, Zillow Rental Manager have building-level listings with unit counts, but scraping them generally violates their terms of service \u2014 not something I'd help automate.\n\nIf you tell me the geography (one city vs. nationwide) and the use case (investment research, market analysis, a personal project), I can narrow this down to the most practical option.",
+  "brands": [
+    {
+      "brand": "CoStar",
+      "first_at": 262,
+      "mentions": 2,
+      "rank": 1
+    },
+    {
+      "brand": "Yardi Matrix",
+      "first_at": 447,
+      "mentions": 1,
+      "rank": 2
+    },
+    {
+      "brand": "RealPage",
+      "first_at": 570,
+      "mentions": 1,
+      "rank": 3
+    },
+    {
+      "brand": "Reonomy",
+      "first_at": 855,
+      "mentions": 1,
+      "rank": 4
+    },
+    {
+      "brand": "Apartments.com",
+      "first_at": 1986,
+      "mentions": 1,
+      "rank": 5
+    },
+    {
+      "brand": "Zillow",
+      "first_at": 2012,
+      "mentions": 1,
+      "rank": 6
+    }
+  ],
+  "links": []
+}

@@ -1,0 +1,275 @@
+{
+  "engine": "gemini",
+  "engine_label": "Gemini (gemini-2.5-flash) via API, Google Search grounding on",
+  "is_consumer_app": false,
+  "set": "A",
+  "question": "How do I find recently sold apartment buildings in Dallas-Fort Worth?",
+  "intent": "sales",
+  "asked_on": "2026-09-23",
+  "ok": true,
+  "answer": "Finding recently sold apartment buildings in the Dallas-Fort Worth (DFW) area involves utilizing various specialized commercial real estate data sources, brokerage services, and public records. Here's a breakdown of how you can access this information:\n\n**1. Commercial Real Estate Data Providers**\n\nFor comprehensive and in-depth data on recently sold multifamily properties, subscription-based data providers are the most robust option:\n\n*   **CoStar Group:** CoStar is a leading provider of commercial real estate information, analytics, and news. It offers detailed transaction data, including sale prices, dates, buyer/seller information, and property characteristics for apartment buildings in DFW. CoStar tracks investment activity and provides market reports, with DFW multifamily sales volume reaching $185 million in Q4 2025 according to one report.\n*   **MSCI (Real Capital Analytics - RCA):** Real Capital Analytics, now part of MSCI, focuses on capital flows and transactions in global private real estate markets. It provides intelligence on investors, funds, assets, and transactions, which can be invaluable for understanding the DFW multifamily investment landscape. RCA data helps professionals analyze market trends, identify investment opportunities, and perform due diligence.\n\n**2. Commercial Real Estate Listing Platforms**\n\nSeveral online platforms that list commercial properties also have sections or capabilities to show recently sold assets:\n\n*   **LoopNet:** As the most trafficked commercial real estate marketplace, LoopNet often features \"recently sold\" listings for various property types, including apartment buildings, duplexes, triplexes, and fourplexes in DFW. You can search for specific property types and filter for sold properties.\n*   **Crexi:** Crexi provides commercial real estate property records for DFW, allowing users to find information on sold properties.\n*   **TotalCommercial.com:** This platform lists Texas Sold Commercial Real Estate, including properties in Dallas and Fort Worth.\n\n**3. Commercial Real Estate Brokerage Firms (Specializing in Multifamily)**\n\nMultifamily investment sales brokers in DFW are excellent resources as they are actively involved in transactions and often maintain their own databases of recent sales. Many firms also publish \"recently sold\" property portfolios on their websites. Some prominent firms include:\n\n*   **Marcus & Millichap (Fluellen-Hoover Multifamily Group):** This group specializes in multifamily brokerage for DFW.\n*   **Silva MultiFamily:** With over 20 years of experience in DFW multifamily investment sales, they focus on workforce housing and provide advisory services.\n*   **Rowan Multifamily Advisors:** Described as a fast-growing boutique multifamily brokerage firm in DFW, specializing in acquisition and disposition.\n*   **The Multifamily Group:** A Dallas-based commercial real estate brokerage firm focused exclusively on marketing, selling, and acquiring multi-housing assets.\n*   **Cushman & Wakefield Sunbelt Multifamily Advisory Group:** This group provides brokerage disposition services for multifamily properties and portfolios, including those in the DFW area.\n*   **Onyx Legacy Group:** Their website has a \"Recently Sold\" archive that includes multifamily properties in the DFW area.\n\nThese brokers can provide insights into off-market deals and properties that may not appear on public listing sites.\n\n**4. Public Records and Local Publications**\n\nWhile more labor-intensive, public records offer official sales data:\n\n*   **Dallas County Clerk's Office:** The County Clerk serves as the Recorder of Deeds/Official Public Records. You can access property deeds and other documents related to property sales, which include buyer and seller names, addresses, legal descriptions, and transaction amounts. Electronic certified documents are available for purchase online.\n*   **CourthouseDirect.com:** This service provides Commercial & Residential Property Sales Reports for Texas, delivered weekly from new courthouse filings, including details like address, legal description, sale date, grantor, and grantee.\n*   **Texas Land Records:** This online platform allows you to search real property official records by county. While unofficial copies are available for free with a watermark, a subscription allows for printing and downloading.\n*   **The Daily Commercial Record:** This publication provides up-to-date legal and business leads, including information on all Dallas County commercial and residential real estate property sales, such as seller and buyer names, addresses, legal descriptions, and amounts.\n\n**5. Market News and Reports**\n\nIndustry news outlets and market reports from real estate firms can highlight significant transactions and market trends in DFW:\n\n*   **Connect CRE Dallas-Fort Worth:** This news source reports on DFW commercial real estate transactions, including apartment sales.\n*   **MetroTex:** They report on commercial property sales activity in DFW.\n*   **Matthews\u2122 Market Reports:** Firms like Matthews\u2122 publish quarterly market reports that include sales volume, price per unit, and cap rates for multifamily properties in DFW.\n\nBy combining these resources, you can gain a comprehensive understanding of recently sold apartment buildings in the Dallas-Fort Worth market.",
+  "sources": [
+    {
+      "title": "matthews.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHFWiYSXwVBmVoq8sA_MX2_1meP_bJU0rMCGPofmB0JRGebGjstWPGVr0t4-FrpwA7nbb7mb2usWexi0ktuWMsIJQ7fYGBr3ySYumRgZtT8Evs5D-92hpPpvLYO1wjy63Dh1imipPsgOLBUyqZhlndBncRqys3iL3Kmdg=="
+    },
+    {
+      "title": "costar.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGg-ZTWRMJeMf2ehht0BDVyeCFKmVAc9u13ZmItM1WbjIr-gUMGj28rEuJGPGO_UDfNZUop7LYCJIeYJUbZK3s4D_AtqhSx3eXDJAdzyfgTVVUtUOFTdAQuNWlrppnhBJXak2JXOYP4vfZq9QIu0nA6wkKqODrJjtmCoJWHPy77NOYf31xEp3Qz-0BIH6QbuFB5z43BJISecOu_pkd4oLNPyEH-9Tzv1wZoLQ4h3UI="
+    },
+    {
+      "title": "matthews.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGiEeifyR_eBi3I6-lUdTxQthcSQbi5fggHT1-p9F-YEbSckyQxa6T9d9cCTvhgtAAR_o_jB2UjNHh1PAl7x4Wv6oBpDzgdRjPK3mOkGa30gUlFSQAbMXSWyAmXa1NWdiuyzuGKlMJ6DnoOBwsQBraCacJEd97ENAzKQvXKL9GSh8lxRQtMUTOPmRLNPC69_b3nu-qf1yOMaDern7igvBhdpTbj"
+    },
+    {
+      "title": "costar.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFa-ApQqW_GFyJNBqRPMIpgvryqDAGskXnsWZeodfQ-6jSOS4ESzMmjGmu33fdwBWQxNTLEpUw33t1sJRaD7V7RI584aT1wqu8zs3haeiKgRPobGZXH5M_xL_UXDBLNoJzNUzW9D6V7xw=="
+    },
+    {
+      "title": "costargroup.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEYhKJoLM6tPN7DLUlqmX_iGrG9LFHnC3_U6qOsXGhbpj4mzl9sE30-Ls1GefL0qT1UPakzjQb0OanyOfpdVFJsx69-U9DAUx-X1mNzdp09anRBsXenGUYijUrhpfK7SpBPc94qgyqpXnbn9NVaXX5btYM1sjgQxMU6Am-Y8VUJ83rUOAaaa8blnL-7NOn0tI2GHbvTiTjnVXa2WkxBQdxftTXy-7BHGPtIaS-6cjNRnCBAWOYBcZFQAw=="
+    },
+    {
+      "title": "mymetrotex.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEd3BsRT7uw5kWpN7HDT-LGXsLQOaXIaZ3EEOF8tQD-bAC8zfjWCtoeN20qAUp7i2v0reYVsa01VwxIC-uZa6oyIVQzNJiIJrPuiVAYbwTa0KFzMWVDYi30qGWT5gmUZaTRrnph-DqVgNebuBhqLuYrVxI9M8a3balqJWkyMxoVIFKMv9j2fhKgncLz9kaokagx-HVF_8o="
+    },
+    {
+      "title": "msci.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHN84VwORFSQBEGpWFc34wJhHTKTTDGAStH8TFQDF5bjUbfQnfMJrI5sjbQoFiRcxXwJjxd6KaOQtuLfofNVIj8RuPvInpJPDpgPQF57xW_2FJEOW-_2wwVUag4jUQgXc3uUUUxkg37z_32wRbiPmRHn7Blv5k0PsqVx11tj9cIxPVOsWmn"
+    },
+    {
+      "title": "hellodata.ai",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG2uwVPlMduTVyiWYMKF8Ur0WBBsuw9jK_s5vXWMFDPWhC_-FkqGe8OkZl0utZi1Uwu_2Ygd7MyajzQ_sB24inunLh-q-mgo8YpFUBO8QxBI4oCKCdcowjOoSakKMHbyS1moS6T4pyNuamGA1vyYEAktJSaUzIek3l5VQl6wRi4aH7ivw9V0_pB"
+    },
+    {
+      "title": "loopnet.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHKoevV5AUmLSJapuiIkML8ozU_3EbVlVN2NjDNkjov6buI_Ysj1wEVD8-NoCXkVnEXF8q1z6nBlePbh5Dj5jv3W6UIg_8U_AAgAoEjSGS-eY5HQ9QN-B4BxL6lEDBQXF6T0fma-OfRM9-q1FgDfX4LhvyfvPvKvQ255oce4tH_T91lg1S54-xrk7xsw4LLeQ_NX-yj"
+    },
+    {
+      "title": "loopnet.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFlooE4qsIfCzPn3XjIB-LmyLc7n7Sllg05E_eMzCj1QO_lDqnfxeCxiYvzqHLIs0QYcq_Fu3YvDEb_aNqOou5MfrTv6K31u15YyQiM4YWmQ3OAbx2vUWYcr0uTYndxNSRDJhl_xqo8I9x-gC-3-KTIqZsQx5KzFTUJoFf6-ggyBZILOO1l"
+    },
+    {
+      "title": "loopnet.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF4FwszL3n-GpsLCZx-bERNCN8SIO7BC8usZHualdT9P1HAS8UX3hT3avWLN3u6sWIPVJ02GT786_TqgXACdyhYAqwlFt9rp185EpvqvZI6VbKYKZdBsLw0oBrq7InE9I4B3k8bj6bKWylEmgp9NX2qPg4tK3_8ksRXrJ3GJ7JX"
+    },
+    {
+      "title": "loopnet.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEq_YET8Tabne4AiC-iwbROT8BwoQ51mMb2nGM7tkfexPDKQhVN7ZLxPVuwZ7h7s8sMY610dtdZjrbCb_sxyH3M8W_L1ndqFkdpL7SMfMlmKQ1bhR_cZQ1i_1_u-C_n9O3hOd5Mmzk-LTuOy8rnEG1Xh8v9Bu7kECTlONTUVi3Q-iDWy3NOqca0bz-IgQ=="
+    },
+    {
+      "title": "loopnet.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGnLGW-kfQHLDS_j5RIzR6hU50M4TLghaTVxwJI9A-_1WNjbEJJELM5a5PqmB_JVuKN5plB73BqWcg3xGKwXzIgBuAWYovMP7m9PIw18bFAglUDzckJDxoYVnjq3cAXYvCjaiIEdVltLTc1dCSAHxsA5Ymv6H_NIESblohDp1kNhg=="
+    },
+    {
+      "title": "crexi.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHjS91ELc3t8mXKY-pva-HiR6FMkVw6B5gErHQs_TCGIUTERp0W5dM8dpkuQh-K1jmCnQS94L7RExqsLLPGAK1mE3RNoSZ2-H38Lhu19Ev5fkSi6c0tw1DQkzsMAQ4kDcIvXWf9NjwRqLo8MfFg-zsXfPxD4A=="
+    },
+    {
+      "title": "totalcommercial.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHOyCcIx67QkNk75SGX3rT64CY_QkvlsVlkkvF8BnAlHr7AuiQGrFGPP4dylf5-EJCigeIRSGMRIjIvEsq0nRuRqrl4OiqP6qGQJXEqWh-wBsod1vUBc9EP5sfDueJAD_pIQN7ayvDiFF36pxUgR0KGAuuPpT5e3Ao3"
+    },
+    {
+      "title": "totalcommercial.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFTYWrhYO1DjAcLzNa4hXCSyiqLMgWzoEDZIvR7LBaokzJvmGKHnXqPfIcFzEF7YiOVm71ozvOLonV7Q2rWSFGNjhoHkRqYm09A_KzjKBOQpPTHLQ4u39LKvMJX2U6RmnerNzYM037vSCa9fKlZIHn8hbfoDhbFQeoWKrRKf6zjaeC8WdCNVcoh5NWwdT7yYIHDpPtvIg=="
+    },
+    {
+      "title": "multifamilyadvisors.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEcu76Oyi0AJLZVmKIX5oRtoXg_zLFIYPo2pEg1NvP0VYjj7-TnQAMLMr-CMZ7ayxQvr-puOmXPfpIS97AKazMDNDRjjz-mG8f9b7cRWtzeKHHsBSDVHI_B87Df"
+    },
+    {
+      "title": "silvamultifamily.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFOQ33cWiomdTDzL2DKVLAeLPBkNlWnXAtwHjEvS2ltd9x3pee77rquHdbRS90LfjGWGQiivjB4i0UsfSXJzZLvKUfsLugGE8CHXXj7aax4UJLQuK3wN3P5"
+    },
+    {
+      "title": "rowanmultifamilyadvisors.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHBXHpVHfVXod4XuO55qVWyfL4N7DIbSyQBC80crumiiKwKmBLhzpkzfQ8u70P8Zcc0JdJSZDvUxcLWGoXvwlILjbFxTAbunnzSuh-L2tmINMm-iv2PBC7SI1_pj7UDMg=="
+    },
+    {
+      "title": "multifamilygrp.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHpACfp4ROUVGkEMS1pZtUzFbtbJ6Y43GUQW_sMhr2VzkEHddTW1vL4neSclvZ0kpcs8i8csPstTXZKw_cRh5XpuIEJpSUkVAorhSErV1lLA2YL2YXIXQ=="
+    },
+    {
+      "title": "cushwake.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFH33ALAEpFwZnBHHwpR80PyXLV7xxBtZRRTxJGjNGk2bIiSkNrQFQCFra1ruS6q5ODtnQ4wIjYFuXJjHbDIu-q2SMU-UOWv2OJO7nlzNk-88Rw_H5C8H_71DDU8UuBfkpjpazacU3_Zmjx1grdoL15"
+    },
+    {
+      "title": "onyxlg.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEtuZnJJoYAXU6qj-nziPJNDxebPoGILAFc6lJ6LxUhSKpOsI_ENLm2deZagORcsxFonStk0J3YxkCdExyHvZeptTvgG8BTlDm5l6P399x5AZH6G2P_QaQSZPiXjFJSxSjcnDo="
+    },
+    {
+      "title": "dallascounty.org",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEesOBlsrSZ6ucK7F4ImkZtECSMKmg45fR11Q8ULoFijLfWEm5xtqEnkGR6GLDuRjV-R8P9GySemEZ_juh8L9Tnc2o-zRaIbJN9LwnZRtOjMBH2doywmV1R8VtGKgtPVwY1QLdV8Zjc4Miuvyqn1mIj6t9cwlCiRulJsA=="
+    },
+    {
+      "title": "courthousedirect.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEo1BOKc2FH5g1RK6taVsF9wo0BxImKvHflw1tlTD30Q2Y5DDPZ2gVMIjxe9roW4b4B2shqyn-4qZhzhNmLcMWTEyeSTNk-DUFw6KbJmMDH1r0yPLRPrv4U2WL-S-854AfQ--CmXDMAukBJbWI02tFc_1uxCthZSM6XpRFMveo="
+    },
+    {
+      "title": "texaslandrecords.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFxDpbYbB9iD08nDArCIy-a3qd2I8WsoJHYjNaHMM0QB4Y6OEYMCXRSFxwvmmYMs-Or3UVaBM4-oALAqL2WZoLQhZVf43B-aYppjvyU3q3eLjPafEWYUzFF_nweBg=="
+    },
+    {
+      "title": "dailycommercialrecord.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFaGdzRrxrQ3Qi-g7pgKmpzJ_sE9m3G0XL4XMjXWJEoLfCx4RkeVAepQGWE50gdcgO_mn-6QPFnURsbXcE9ZOqGFcC6bwvMSEGfEf-VQJ5OBCDsoklhife0WqmnEGtO8mF_z16eTzMU1DadcCBNxT-imVltcxjKM2bckLuLzg=="
+    },
+    {
+      "title": "connectcre.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFo4zDw6Lno-zjyIESvpJEmsWuyBWFfcM_Wgitad90vq9ECZaUyOf3_Q6trEhvH-GzB7F_BZrFPHKJn2qqeEOcJKtBIFbQ2piLfUZwnjRMPHCamwfbireR-k-NF0d7GGqGxwq5imQasTTSVfXGl-AvPAn8Laao="
+    }
+  ],
+  "brands": [
+    {
+      "brand": "CoStar",
+      "first_at": 446,
+      "mentions": 3,
+      "rank": 1
+    },
+    {
+      "brand": "Moody's",
+      "first_at": 872,
+      "mentions": 2,
+      "rank": 2
+    },
+    {
+      "brand": "LoopNet",
+      "first_at": 1477,
+      "mentions": 2,
+      "rank": 3
+    },
+    {
+      "brand": "Crexi",
+      "first_at": 1779,
+      "mentions": 2,
+      "rank": 4
+    },
+    {
+      "brand": "Marcus & Millichap",
+      "first_at": 2402,
+      "mentions": 1,
+      "rank": 5
+    },
+    {
+      "brand": "Cushman & Wakefield",
+      "first_at": 2999,
+      "mentions": 1,
+      "rank": 6
+    },
+    {
+      "brand": "Public records (DIY)",
+      "first_at": 3558,
+      "mentions": 2,
+      "rank": 7
+    }
+  ],
+  "links": [
+    {
+      "title": "matthews.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHFWiYSXwVBmVoq8sA_MX2_1meP_bJU0rMCGPofmB0JRGebGjstWPGVr0t4-FrpwA7nbb7mb2usWexi0ktuWMsIJQ7fYGBr3ySYumRgZtT8Evs5D-92hpPpvLYO1wjy63Dh1imipPsgOLBUyqZhlndBncRqys3iL3Kmdg=="
+    },
+    {
+      "title": "costar.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGg-ZTWRMJeMf2ehht0BDVyeCFKmVAc9u13ZmItM1WbjIr-gUMGj28rEuJGPGO_UDfNZUop7LYCJIeYJUbZK3s4D_AtqhSx3eXDJAdzyfgTVVUtUOFTdAQuNWlrppnhBJXak2JXOYP4vfZq9QIu0nA6wkKqODrJjtmCoJWHPy77NOYf31xEp3Qz-0BIH6QbuFB5z43BJISecOu_pkd4oLNPyEH-9Tzv1wZoLQ4h3UI="
+    },
+    {
+      "title": "matthews.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGiEeifyR_eBi3I6-lUdTxQthcSQbi5fggHT1-p9F-YEbSckyQxa6T9d9cCTvhgtAAR_o_jB2UjNHh1PAl7x4Wv6oBpDzgdRjPK3mOkGa30gUlFSQAbMXSWyAmXa1NWdiuyzuGKlMJ6DnoOBwsQBraCacJEd97ENAzKQvXKL9GSh8lxRQtMUTOPmRLNPC69_b3nu-qf1yOMaDern7igvBhdpTbj"
+    },
+    {
+      "title": "costar.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFa-ApQqW_GFyJNBqRPMIpgvryqDAGskXnsWZeodfQ-6jSOS4ESzMmjGmu33fdwBWQxNTLEpUw33t1sJRaD7V7RI584aT1wqu8zs3haeiKgRPobGZXH5M_xL_UXDBLNoJzNUzW9D6V7xw=="
+    },
+    {
+      "title": "costargroup.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEYhKJoLM6tPN7DLUlqmX_iGrG9LFHnC3_U6qOsXGhbpj4mzl9sE30-Ls1GefL0qT1UPakzjQb0OanyOfpdVFJsx69-U9DAUx-X1mNzdp09anRBsXenGUYijUrhpfK7SpBPc94qgyqpXnbn9NVaXX5btYM1sjgQxMU6Am-Y8VUJ83rUOAaaa8blnL-7NOn0tI2GHbvTiTjnVXa2WkxBQdxftTXy-7BHGPtIaS-6cjNRnCBAWOYBcZFQAw=="
+    },
+    {
+      "title": "mymetrotex.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEd3BsRT7uw5kWpN7HDT-LGXsLQOaXIaZ3EEOF8tQD-bAC8zfjWCtoeN20qAUp7i2v0reYVsa01VwxIC-uZa6oyIVQzNJiIJrPuiVAYbwTa0KFzMWVDYi30qGWT5gmUZaTRrnph-DqVgNebuBhqLuYrVxI9M8a3balqJWkyMxoVIFKMv9j2fhKgncLz9kaokagx-HVF_8o="
+    },
+    {
+      "title": "msci.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHN84VwORFSQBEGpWFc34wJhHTKTTDGAStH8TFQDF5bjUbfQnfMJrI5sjbQoFiRcxXwJjxd6KaOQtuLfofNVIj8RuPvInpJPDpgPQF57xW_2FJEOW-_2wwVUag4jUQgXc3uUUUxkg37z_32wRbiPmRHn7Blv5k0PsqVx11tj9cIxPVOsWmn"
+    },
+    {
+      "title": "hellodata.ai",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG2uwVPlMduTVyiWYMKF8Ur0WBBsuw9jK_s5vXWMFDPWhC_-FkqGe8OkZl0utZi1Uwu_2Ygd7MyajzQ_sB24inunLh-q-mgo8YpFUBO8QxBI4oCKCdcowjOoSakKMHbyS1moS6T4pyNuamGA1vyYEAktJSaUzIek3l5VQl6wRi4aH7ivw9V0_pB"
+    },
+    {
+      "title": "loopnet.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHKoevV5AUmLSJapuiIkML8ozU_3EbVlVN2NjDNkjov6buI_Ysj1wEVD8-NoCXkVnEXF8q1z6nBlePbh5Dj5jv3W6UIg_8U_AAgAoEjSGS-eY5HQ9QN-B4BxL6lEDBQXF6T0fma-OfRM9-q1FgDfX4LhvyfvPvKvQ255oce4tH_T91lg1S54-xrk7xsw4LLeQ_NX-yj"
+    },
+    {
+      "title": "loopnet.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFlooE4qsIfCzPn3XjIB-LmyLc7n7Sllg05E_eMzCj1QO_lDqnfxeCxiYvzqHLIs0QYcq_Fu3YvDEb_aNqOou5MfrTv6K31u15YyQiM4YWmQ3OAbx2vUWYcr0uTYndxNSRDJhl_xqo8I9x-gC-3-KTIqZsQx5KzFTUJoFf6-ggyBZILOO1l"
+    },
+    {
+      "title": "loopnet.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF4FwszL3n-GpsLCZx-bERNCN8SIO7BC8usZHualdT9P1HAS8UX3hT3avWLN3u6sWIPVJ02GT786_TqgXACdyhYAqwlFt9rp185EpvqvZI6VbKYKZdBsLw0oBrq7InE9I4B3k8bj6bKWylEmgp9NX2qPg4tK3_8ksRXrJ3GJ7JX"
+    },
+    {
+      "title": "loopnet.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEq_YET8Tabne4AiC-iwbROT8BwoQ51mMb2nGM7tkfexPDKQhVN7ZLxPVuwZ7h7s8sMY610dtdZjrbCb_sxyH3M8W_L1ndqFkdpL7SMfMlmKQ1bhR_cZQ1i_1_u-C_n9O3hOd5Mmzk-LTuOy8rnEG1Xh8v9Bu7kECTlONTUVi3Q-iDWy3NOqca0bz-IgQ=="
+    },
+    {
+      "title": "loopnet.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGnLGW-kfQHLDS_j5RIzR6hU50M4TLghaTVxwJI9A-_1WNjbEJJELM5a5PqmB_JVuKN5plB73BqWcg3xGKwXzIgBuAWYovMP7m9PIw18bFAglUDzckJDxoYVnjq3cAXYvCjaiIEdVltLTc1dCSAHxsA5Ymv6H_NIESblohDp1kNhg=="
+    },
+    {
+      "title": "crexi.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHjS91ELc3t8mXKY-pva-HiR6FMkVw6B5gErHQs_TCGIUTERp0W5dM8dpkuQh-K1jmCnQS94L7RExqsLLPGAK1mE3RNoSZ2-H38Lhu19Ev5fkSi6c0tw1DQkzsMAQ4kDcIvXWf9NjwRqLo8MfFg-zsXfPxD4A=="
+    },
+    {
+      "title": "totalcommercial.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHOyCcIx67QkNk75SGX3rT64CY_QkvlsVlkkvF8BnAlHr7AuiQGrFGPP4dylf5-EJCigeIRSGMRIjIvEsq0nRuRqrl4OiqP6qGQJXEqWh-wBsod1vUBc9EP5sfDueJAD_pIQN7ayvDiFF36pxUgR0KGAuuPpT5e3Ao3"
+    },
+    {
+      "title": "totalcommercial.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFTYWrhYO1DjAcLzNa4hXCSyiqLMgWzoEDZIvR7LBaokzJvmGKHnXqPfIcFzEF7YiOVm71ozvOLonV7Q2rWSFGNjhoHkRqYm09A_KzjKBOQpPTHLQ4u39LKvMJX2U6RmnerNzYM037vSCa9fKlZIHn8hbfoDhbFQeoWKrRKf6zjaeC8WdCNVcoh5NWwdT7yYIHDpPtvIg=="
+    },
+    {
+      "title": "multifamilyadvisors.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEcu76Oyi0AJLZVmKIX5oRtoXg_zLFIYPo2pEg1NvP0VYjj7-TnQAMLMr-CMZ7ayxQvr-puOmXPfpIS97AKazMDNDRjjz-mG8f9b7cRWtzeKHHsBSDVHI_B87Df"
+    },
+    {
+      "title": "silvamultifamily.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFOQ33cWiomdTDzL2DKVLAeLPBkNlWnXAtwHjEvS2ltd9x3pee77rquHdbRS90LfjGWGQiivjB4i0UsfSXJzZLvKUfsLugGE8CHXXj7aax4UJLQuK3wN3P5"
+    },
+    {
+      "title": "rowanmultifamilyadvisors.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHBXHpVHfVXod4XuO55qVWyfL4N7DIbSyQBC80crumiiKwKmBLhzpkzfQ8u70P8Zcc0JdJSZDvUxcLWGoXvwlILjbFxTAbunnzSuh-L2tmINMm-iv2PBC7SI1_pj7UDMg=="
+    },
+    {
+      "title": "multifamilygrp.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHpACfp4ROUVGkEMS1pZtUzFbtbJ6Y43GUQW_sMhr2VzkEHddTW1vL4neSclvZ0kpcs8i8csPstTXZKw_cRh5XpuIEJpSUkVAorhSErV1lLA2YL2YXIXQ=="
+    },
+    {
+      "title": "cushwake.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFH33ALAEpFwZnBHHwpR80PyXLV7xxBtZRRTxJGjNGk2bIiSkNrQFQCFra1ruS6q5ODtnQ4wIjYFuXJjHbDIu-q2SMU-UOWv2OJO7nlzNk-88Rw_H5C8H_71DDU8UuBfkpjpazacU3_Zmjx1grdoL15"
+    },
+    {
+      "title": "onyxlg.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEtuZnJJoYAXU6qj-nziPJNDxebPoGILAFc6lJ6LxUhSKpOsI_ENLm2deZagORcsxFonStk0J3YxkCdExyHvZeptTvgG8BTlDm5l6P399x5AZH6G2P_QaQSZPiXjFJSxSjcnDo="
+    },
+    {
+      "title": "dallascounty.org",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEesOBlsrSZ6ucK7F4ImkZtECSMKmg45fR11Q8ULoFijLfWEm5xtqEnkGR6GLDuRjV-R8P9GySemEZ_juh8L9Tnc2o-zRaIbJN9LwnZRtOjMBH2doywmV1R8VtGKgtPVwY1QLdV8Zjc4Miuvyqn1mIj6t9cwlCiRulJsA=="
+    },
+    {
+      "title": "courthousedirect.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEo1BOKc2FH5g1RK6taVsF9wo0BxImKvHflw1tlTD30Q2Y5DDPZ2gVMIjxe9roW4b4B2shqyn-4qZhzhNmLcMWTEyeSTNk-DUFw6KbJmMDH1r0yPLRPrv4U2WL-S-854AfQ--CmXDMAukBJbWI02tFc_1uxCthZSM6XpRFMveo="
+    },
+    {
+      "title": "texaslandrecords.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFxDpbYbB9iD08nDArCIy-a3qd2I8WsoJHYjNaHMM0QB4Y6OEYMCXRSFxwvmmYMs-Or3UVaBM4-oALAqL2WZoLQhZVf43B-aYppjvyU3q3eLjPafEWYUzFF_nweBg=="
+    },
+    {
+      "title": "dailycommercialrecord.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFaGdzRrxrQ3Qi-g7pgKmpzJ_sE9m3G0XL4XMjXWJEoLfCx4RkeVAepQGWE50gdcgO_mn-6QPFnURsbXcE9ZOqGFcC6bwvMSEGfEf-VQJ5OBCDsoklhife0WqmnEGtO8mF_z16eTzMU1DadcCBNxT-imVltcxjKM2bckLuLzg=="
+    },
+    {
+      "title": "connectcre.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFo4zDw6Lno-zjyIESvpJEmsWuyBWFfcM_Wgitad90vq9ECZaUyOf3_Q6trEhvH-GzB7F_BZrFPHKJn2qqeEOcJKtBIFbQ2piLfUZwnjRMPHCamwfbireR-k-NF0d7GGqGxwq5imQasTTSVfXGl-AvPAn8Laao="
+    }
+  ]
+}

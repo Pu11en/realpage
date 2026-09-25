@@ -1,0 +1,51 @@
+{
+  "engine": "gemini",
+  "engine_label": "Gemini (gemini-2.5-flash) via API, Google Search grounding on",
+  "is_consumer_app": false,
+  "set": "A",
+  "question": "Who do I contact about a new apartment building before it opens?",
+  "intent": "prospecting",
+  "asked_on": "2026-09-23",
+  "ok": true,
+  "answer": "To inquire about a new apartment building before its official opening, you'll typically want to contact several key parties depending on your specific interest.\n\nHere are the main contacts and data sources you should consider:\n\n**1. The Property Developer/Builder**\nThe developer is the company responsible for constructing the building. They are often the first point of contact for information regarding future units, amenities, and estimated completion dates. Their website may have a dedicated section for \"upcoming projects\" or \"future developments\" where you can register your interest or find contact details for sales or leasing inquiries. You can often identify the developer by looking for signage at the construction site or by searching local planning applications.\n\n**2. The Leasing or Sales Team (Property Management Company)**\nOnce a building is nearing completion, a dedicated leasing or sales team, often part of a larger property management company, will be appointed. They handle all inquiries from prospective tenants or buyers, manage waiting lists, and schedule tours. Websites like Apartments.com, Zillow, or local real estate listing sites will often feature \"coming soon\" listings for new developments, providing contact information for these teams. Some large property management companies specializing in new developments include Greystar, Cushman & Wakefield, or CBRE, although local companies will be more relevant depending on your area.\n\n**3. Local Real Estate Agents Specializing in New Developments**\nMany real estate agents specialize in new construction or luxury rentals. They can provide insights into upcoming projects in your desired area, sometimes even before they are publicly advertised. They often have direct relationships with developers and can offer early access to information or pre-leasing opportunities. Searching online for \"new construction real estate agent [your city]\" or \"pre-leasing apartments [your city]\" can help you find these professionals.\n\n**4. Local Government Planning or Building Departments**\nPublic records from your city or county's planning or building department can provide valuable information about new apartment projects. These departments process applications for zoning, permits, and construction, making their databases a source for details like the developer's name, project scope, and timelines. Many of these records are accessible online through municipal websites.\n\n**5. Real Estate Data and News Sources**\nVarious online platforms and news outlets track new real estate developments:\n*   **Commercial Real Estate Databases:** For more detailed project information, platforms like CoStar (primarily for industry professionals) track new construction projects.\n*   **Local Business Journals and News Sites:** Publications such as the *[Your City] Business Journal* or local real estate blogs often report on major new apartment projects and their progress.\n*   **Online Listing Platforms:** Websites like Zillow, Trulia, Apartments.com, or Rent.com frequently list properties that are \"coming soon\" or under construction, allowing you to set alerts for new listings in specific areas.\n\nBy reaching out to these different sources, you can gather comprehensive information about new apartment buildings before they officially open their doors.",
+  "sources": [],
+  "brands": [
+    {
+      "brand": "Apartments.com",
+      "first_at": 1105,
+      "mentions": 2,
+      "rank": 1
+    },
+    {
+      "brand": "Zillow",
+      "first_at": 1121,
+      "mentions": 2,
+      "rank": 2
+    },
+    {
+      "brand": "Cushman & Wakefield",
+      "first_at": 1367,
+      "mentions": 1,
+      "rank": 3
+    },
+    {
+      "brand": "CBRE",
+      "first_at": 1391,
+      "mentions": 1,
+      "rank": 4
+    },
+    {
+      "brand": "Public records (DIY)",
+      "first_at": 2040,
+      "mentions": 2,
+      "rank": 5
+    },
+    {
+      "brand": "CoStar",
+      "first_at": 2667,
+      "mentions": 1,
+      "rank": 6
+    }
+  ],
+  "links": []
+}

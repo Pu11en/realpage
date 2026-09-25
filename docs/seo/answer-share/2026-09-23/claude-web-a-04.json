@@ -1,0 +1,59 @@
+{
+  "engine": "claude-web",
+  "engine_label": "Claude (Sonnet) via claude -p, web search on",
+  "is_consumer_app": false,
+  "set": "A",
+  "question": "What apartment complexes are being built in San Antonio right now?",
+  "intent": "pipeline",
+  "asked_on": "2026-09-23",
+  "ok": true,
+  "answer": "## San Antonio apartment construction \u2014 what's currently underway (as of September 2026)\n\nOverall, multifamily construction in San Antonio has slowed sharply \u2014 developers broke ground on only ~660 units in the first half of 2026, down from ~12,500 in 2022 and ~9,000 in 2023, as higher interest rates and construction costs cool the pipeline. Most of what's actually breaking ground right now skews affordable/workforce housing, with a smaller number of luxury/market-rate projects concentrated in high-demand areas like Pearl and The Rim.\n\n**Notable projects under construction or recently started:**\n- **Central at Commerce** \u2013 279-unit affordable housing complex, seven stories, at Commerce and Cherry St. downtown, near the proposed Spurs arena site (Project Marvel).\n- **NRP 301 Lofts** (NRP Group) \u2013 $44M, 382,486 sq ft, 12 three-story buildings on the far West Side (US-90); construction slated to start November 2026, finish July 2028.\n- **Creekbend Apartment Homes** \u2013 312 units (Pedcor Development + San Antonio Housing Trust PFC), on US-281 N at Borgfield Rd, 4% LIHTC affordable project, targeting completion December 2026.\n- **Summit at Crownridge** \u2013 299 units (Opportunity Home San Antonio + Journeyman Development Group) near The Rim/La Cantera, ~$63M, over half income-restricted.\n- **Oxbow Development's Pearl-area project** \u2013 eight-story, ~300-unit luxury complex at 1315 E. Elmira St., adding to the Pearl district's existing luxury stock (Cellars at Pearl, Can Plant, Southline, Coopers Row \u2014 901 luxury units total there).\n- **East Side affordable community** \u2013 new affordable apartment construction underway per KSAT reporting (March 2026).\n\n**Planned/upcoming:**\n- **Durango Apartments** (Laney Development) \u2013 proposed 17-story high-rise near the River Walk; construction expected to start early 2027.\n\n**Data sources worth bookmarking for ongoing tracking:**\n- MMG Real Estate Advisors' quarterly San Antonio multifamily pipeline reports\n- San Antonio Housing Trust's \"Active Projects\" page\n- Apartments.com / ApartmentGuide \"new construction\" filters for San Antonio (good for consumer-facing openings, less reliable for pipeline/planning stage)\n\nSources:\n- [Affordable downtown living moves in next to Project Marvel site](https://sanantonioreport.org/affordable-housing-new-units-near-downtown-san-antonio-project-marvel/)\n- [Laney Development Revives San Antonio Apartments](https://therealdeal.com/texas/2026/07/17/laney-development-plays-lazarus-with-durango-apartments/)\n- [Construction of new East Side affordable apartment community underway](https://www.ksat.com/news/local/2026/03/12/construction-of-new-east-side-affordable-apartment-community-underway/)\n- [National developer adds $44M multifamily project to stacked San Antonio pipeline](https://therealdeal.com/texas/2026/05/13/nrp-group-is-planning-san-antonio-44m-multifamily-project/)\n- [Active Projects - San Antonio Housing Trust](https://sahousingtrust.org/what-were-working-on/)\n- [Milestones loom in 2026 for major developments in San Antonio area](https://focusonsanantonio.com/milestones-loom-in-2026-for-major-developments-in-san-antonio-area/)\n- [Summit at Crownridge: Affordable Housing Near The Rim, San Antonio](https://hoodline.com/2026/09/san-antonio-s-rim-area-gets-299-unit-project-with-150-affordable-homes/)\n- [San Antonio Q2 2026 Pipeline Report \u2013 MMG Real Estate Advisors](https://mmgrea.com/san-antonio-q2-2026-pipeline-report/)\n- [Developers are building more SA apartments than ever, but it might not last](https://sanantonioreport.org/apartment-construction-inflation/)\n- [San Antonio apartment vacancies remain high. Luxury units are bouncing back.](https://finance.yahoo.com/real-estate/articles/san-antonio-apartment-vacancies-remain-100000565.html)",
+  "brands": [
+    {
+      "brand": "MMG",
+      "first_at": 1886,
+      "mentions": 3,
+      "rank": 1
+    },
+    {
+      "brand": "Apartments.com",
+      "first_at": 2018,
+      "mentions": 1,
+      "rank": 2
+    }
+  ],
+  "links": [
+    {
+      "title": "",
+      "url": "https://sanantonioreport.org/affordable-housing-new-units-near-downtown-san-antonio-project-marvel/"
+    },
+    {
+      "title": "",
+      "url": "https://therealdeal.com/texas/2026/07/17/laney-development-plays-lazarus-with-durango-apartments/"
+    },
+    {
+      "title": "",
+      "url": "https://www.ksat.com/news/local/2026/03/12/construction-of-new-east-side-affordable-apartment-community-underway/"
+    },
+    {
+      "title": "",
+      "url": "https://sahousingtrust.org/what-were-working-on/"
+    },
+    {
+      "title": "",
+      "url": "https://focusonsanantonio.com/milestones-loom-in-2026-for-major-developments-in-san-antonio-area/"
+    },
+    {
+      "title": "",
+      "url": "https://hoodline.com/2026/09/san-antonio-s-rim-area-gets-299-unit-project-with-150-affordable-homes/"
+    },
+    {
+      "title": "",
+      "url": "https://mmgrea.com/san-antonio-q2-2026-pipeline-report/"
+    },
+    {
+      "title": "",
+      "url": "https://finance.yahoo.com/real-estate/articles/san-antonio-apartment-vacancies-remain-100000565.html"
+    }
+  ]
+}

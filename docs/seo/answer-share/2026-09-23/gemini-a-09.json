@@ -1,0 +1,107 @@
+{
+  "engine": "gemini",
+  "engine_label": "Gemini (gemini-2.5-flash) via API, Google Search grounding on",
+  "is_consumer_app": false,
+  "set": "A",
+  "question": "Which apartment complexes in Texas sold in 2025?",
+  "intent": "sales",
+  "asked_on": "2026-09-23",
+  "ok": true,
+  "answer": "The Texas apartment market in 2025 experienced a period of stabilization and strategic patience, with increased investor confidence and a rise in apartment deal volume. While the market saw a record wave of new supply, particularly in 2024 and early 2025, transaction activity for existing properties remained robust. San Antonio's multifamily investment market, for instance, saw increased activity in Q3 2025 with 32 transactions totaling 6,036 units.\n\nSeveral specific apartment complexes in Texas were sold in 2025, with transactions facilitated by companies like The Multifamily Group (TMG):\n\n*   **The Parks on Taylor** (201 units) in Sherman, Texas.\n*   **Vistas Apartments** (100 units) in Boerne, Texas.\n*   **52-unit apartment complex** in Paris, Texas.\n*   **Willow Park Apartments** (41 units) in Abilene, Texas.\n*   **Highland Square Apartments** (104 units) in Alvin, Texas.\n*   **Victoria Place Apartments** (43 units) in Southwest Fort Worth.\n*   **168-unit complex** in Lake Jackson, Texas.\n*   **54-unit apartment building** in South Fort Worth.\n*   **Lorenzo Apartments** (72 units) in San Antonio, Texas.\n\nThe market in 2025 was characterized by a balancing act between supply and demand, with rent growth remaining positive but modest nationally. Texas mirrored these national trends, with elevated construction activity in cities like Austin, Dallas, and San Antonio leading to increased concessions and a focus on maintaining occupancy. Despite these factors, multifamily properties continued to be viewed as stable and lucrative investments due to consistent demand and strong rental income potential.\n\nData sources such as RealPage Market Analytics, CBRE, Yardi Matrix, and the Texas Real Estate Research Center provided insights into the market dynamics, including supply, demand, rent trends, and investment activity throughout 2025.",
+  "sources": [
+    {
+      "title": "swbc.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFHQrgnczuWJ7WxTgiAPeqouQU41v9dts03QlisGf8oAZiJjwUaprPpPjxNUP4gxxhrtupzkvcEvJQvc-elaJFVJMcQdC40txQNen-HsrvtLzll3y171M-TO_NVhH3XoO8vX-uMU5kA51JRg34hq5pQf3_WXR3CoOS6Kydv6PgRpQP1pdtFZio="
+    },
+    {
+      "title": "realpage.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEggIK3rUhUse52YcPoBfpKccwXDWCkJ48OsjqCjqips_LVOcNNt_g-KKjnlEYwWky-LhMCJNk62jr9oSmYCQ50KrnjMjioTsc6nNObK6oIirB4YwOf5nkvRo6LlITtjmSbYubYSbWOklB2Y-OMTG4KI9rTYJzYpz0W"
+    },
+    {
+      "title": "214cap.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEiAI_s5DiXiazC6bqZIANPVlljl95Oi5UdepDnI0OZhk2QgrbUUIpJxSKBzXjOhKyn0j_7O5HOzvyh31wpvNyeucpXO0qWpk2d3h2sadMLMHu9cReUvPjFNkQe6zrwwBMGJa1nuFb_8cE9Wm3pVBtl0MZXC2bwCxvoYQ=="
+    },
+    {
+      "title": "cushmanwakefield.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEVuXJc19pjMTRbNZlM0aeKe1kL-8NAsGBTEtdH-dzMEGOG3dDHJofENwYjhO_AxIwrPJ8u1uGJPGL6k2P1RXPX0FpKkh1pOih659sN-6JpmTV4qgBrBG3jTnYPP4GMLVB5uzBgHQPLVDoujKCcDqi7xItjb0iW18ROTG0mjpf7-mWOpgc3Bid5iDLieL7MDJRp4zXuP-JEaNNRd3GViVCNhtS-Fmxn5V7gB21d4mTdbrQDJ7xiklklF0FVncp_xgnp6qCZ5XrPK4l5UprtdbCGLCcu-DPsTYn5AyQhl3KrSyplH6pkwZbnd0XmMeE-SWQFMnY="
+    },
+    {
+      "title": "multifamilygrp.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGZgfWMkQ7vu9sTvtaPqxoTRo7tq6dbfR7TOVkxPDMWBoGwqnp3RehqXEqqgXJuGOx-8095veFOUSTantPrjPMESvwxV7WF81WYY9vT0l7njue7Pb1Fl057sw=="
+    },
+    {
+      "title": "tamu.edu",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG8ubzIt_R8XgZWNyGweP3v11lpK0lUhBjTsV8TlKiRw_ty4CwYiXSYawIGeAShA7Rx-2czgqnJV7iRUkIWIEwxT6HJEcb4T9ZuvNaP5Wf7QNmUOnyyzYBLtQnEJAfu0kOYriXBOW77EnmjEZfJDN2u"
+    },
+    {
+      "title": "realpage.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFm3sLVP2g04M19jvRrx6I_Lqzeo1fv2DJXCkwoOhEMa-IPEFLfZ1To7nTn8MXwmfcKOV_WoE4Cq7R4MyZiN9plOdS0n47Fy2PGSs0D4ZrqHAdGxUIuOCoTnFlUR3SnFVvdaMlNZtO9-v9u5Jqs6Z3lD4UaZJuywUel2g5vE5e6iQ=="
+    },
+    {
+      "title": "clarkisenhour.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF0c6167n09lGhEH2R6sePXQmDCzVsxjIsweu1PO5VDJmH6mY3S8uXWC219jNOieQSLt6yPUqQrFhMsf754F5Ad4FWqBe1p0n-ljcprIy1Y9tNA2BIUXrZkW-uF7N51AhPsU0PDonrzqdVkXJoaLL0PJsIoMXLpxQ=="
+    },
+    {
+      "title": "culturemap.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGQZDKHf64ETl0kyeT7c09zbWUOGK_D9sPLt3z4M4Xl2bbaoINU4RmRdAgzCsJpaMo7qrZFetEvf1cBg2CuVt4Vzu8SoyXDCMWbLqJ6MaHyrysa8Y7EW8hQ_pffZjtfmWD2W4bSMXBQxaTahz5pbOiKL7nT6nVux0trH4p1h5ZzvKH1VZ0Ex5el_UcK9_SVo8NgjJB9"
+    }
+  ],
+  "brands": [
+    {
+      "brand": "RealPage",
+      "first_at": 1648,
+      "mentions": 1,
+      "rank": 1
+    },
+    {
+      "brand": "CBRE",
+      "first_at": 1675,
+      "mentions": 1,
+      "rank": 2
+    },
+    {
+      "brand": "Yardi Matrix",
+      "first_at": 1681,
+      "mentions": 1,
+      "rank": 3
+    }
+  ],
+  "links": [
+    {
+      "title": "swbc.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFHQrgnczuWJ7WxTgiAPeqouQU41v9dts03QlisGf8oAZiJjwUaprPpPjxNUP4gxxhrtupzkvcEvJQvc-elaJFVJMcQdC40txQNen-HsrvtLzll3y171M-TO_NVhH3XoO8vX-uMU5kA51JRg34hq5pQf3_WXR3CoOS6Kydv6PgRpQP1pdtFZio="
+    },
+    {
+      "title": "realpage.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEggIK3rUhUse52YcPoBfpKccwXDWCkJ48OsjqCjqips_LVOcNNt_g-KKjnlEYwWky-LhMCJNk62jr9oSmYCQ50KrnjMjioTsc6nNObK6oIirB4YwOf5nkvRo6LlITtjmSbYubYSbWOklB2Y-OMTG4KI9rTYJzYpz0W"
+    },
+    {
+      "title": "214cap.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEiAI_s5DiXiazC6bqZIANPVlljl95Oi5UdepDnI0OZhk2QgrbUUIpJxSKBzXjOhKyn0j_7O5HOzvyh31wpvNyeucpXO0qWpk2d3h2sadMLMHu9cReUvPjFNkQe6zrwwBMGJa1nuFb_8cE9Wm3pVBtl0MZXC2bwCxvoYQ=="
+    },
+    {
+      "title": "cushmanwakefield.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEVuXJc19pjMTRbNZlM0aeKe1kL-8NAsGBTEtdH-dzMEGOG3dDHJofENwYjhO_AxIwrPJ8u1uGJPGL6k2P1RXPX0FpKkh1pOih659sN-6JpmTV4qgBrBG3jTnYPP4GMLVB5uzBgHQPLVDoujKCcDqi7xItjb0iW18ROTG0mjpf7-mWOpgc3Bid5iDLieL7MDJRp4zXuP-JEaNNRd3GViVCNhtS-Fmxn5V7gB21d4mTdbrQDJ7xiklklF0FVncp_xgnp6qCZ5XrPK4l5UprtdbCGLCcu-DPsTYn5AyQhl3KrSyplH6pkwZbnd0XmMeE-SWQFMnY="
+    },
+    {
+      "title": "multifamilygrp.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGZgfWMkQ7vu9sTvtaPqxoTRo7tq6dbfR7TOVkxPDMWBoGwqnp3RehqXEqqgXJuGOx-8095veFOUSTantPrjPMESvwxV7WF81WYY9vT0l7njue7Pb1Fl057sw=="
+    },
+    {
+      "title": "tamu.edu",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG8ubzIt_R8XgZWNyGweP3v11lpK0lUhBjTsV8TlKiRw_ty4CwYiXSYawIGeAShA7Rx-2czgqnJV7iRUkIWIEwxT6HJEcb4T9ZuvNaP5Wf7QNmUOnyyzYBLtQnEJAfu0kOYriXBOW77EnmjEZfJDN2u"
+    },
+    {
+      "title": "realpage.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFm3sLVP2g04M19jvRrx6I_Lqzeo1fv2DJXCkwoOhEMa-IPEFLfZ1To7nTn8MXwmfcKOV_WoE4Cq7R4MyZiN9plOdS0n47Fy2PGSs0D4ZrqHAdGxUIuOCoTnFlUR3SnFVvdaMlNZtO9-v9u5Jqs6Z3lD4UaZJuywUel2g5vE5e6iQ=="
+    },
+    {
+      "title": "clarkisenhour.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF0c6167n09lGhEH2R6sePXQmDCzVsxjIsweu1PO5VDJmH6mY3S8uXWC219jNOieQSLt6yPUqQrFhMsf754F5Ad4FWqBe1p0n-ljcprIy1Y9tNA2BIUXrZkW-uF7N51AhPsU0PDonrzqdVkXJoaLL0PJsIoMXLpxQ=="
+    },
+    {
+      "title": "culturemap.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGQZDKHf64ETl0kyeT7c09zbWUOGK_D9sPLt3z4M4Xl2bbaoINU4RmRdAgzCsJpaMo7qrZFetEvf1cBg2CuVt4Vzu8SoyXDCMWbLqJ6MaHyrysa8Y7EW8hQ_pffZjtfmWD2W4bSMXBQxaTahz5pbOiKL7nT6nVux0trH4p1h5ZzvKH1VZ0Ex5el_UcK9_SVo8NgjJB9"
+    }
+  ]
+}

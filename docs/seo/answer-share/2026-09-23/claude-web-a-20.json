@@ -1,0 +1,87 @@
+{
+  "engine": "claude-web",
+  "engine_label": "Claude (Sonnet) via claude -p, web search on",
+  "is_consumer_app": false,
+  "set": "A",
+  "question": "How do I find property managers to sell services to?",
+  "intent": "prospecting",
+  "asked_on": "2026-09-23",
+  "ok": true,
+  "answer": "Here's a practical breakdown of where B2B vendors typically source property manager leads, split by channel type.\n\n## Trade associations & directories\n- **NARPM** (National Association of Residential Property Managers) \u2014 has a public searchable directory of RMP/MPM-designated members, but note its terms explicitly **prohibit scraping/reuse of the directory for commercial solicitation** \u2014 use it for manual research or join as a \"National Affiliate\" vendor member to get access to their trade show and local chapter events instead.\n- **IREM** (Institute of Real Estate Management) \u2014 commercial/multifamily-focused counterpart to NARPM, also has vendor/affiliate membership tiers.\n- **NAA** (National Apartment Association) and local **apartment associations** (e.g., Houston Apartment Association, Apartment Association of Greater Los Angeles) \u2014 strong for multifamily-focused vendors; most run their own vendor trade shows.\n\n## Purchased/scraped B2B data lists\n- **Openmart** \u2014 ~40K+ verified property management contacts (owner/decision-maker emails, phones).\n- **Scrap.io** \u2014 ~81,000 US property management company email contacts.\n- **ByteScraper** \u2014 claims 77K+ property management companies in a searchable B2B database.\n- General-purpose B2B data tools that let you filter by NAICS code 531311 (Residential Property Managers) or 531312 (Nonresidential): **ZoomInfo**, **Apollo.io**, **Data Axle**, **Cognism**, **LinkedIn Sales Navigator** (filter by title \"Property Manager\"/\"Regional Manager\" + industry \"Real Estate\").\n\n## Vendor credentialing/marketplace platforms\nMid-size and large management firms route new vendors through a credentialing/insurance-verification platform before they'll even talk to you \u2014 getting listed here is often a prerequisite to selling:\n- **RealPage Vendor Marketplace**\n- **NetVendor**\n- **Compliance Depot / EBI**\n\n## Software ecosystem marketplaces (if your product integrates with PM software)\nIf you're selling a tool that plugs into property management software rather than a generic service, the app marketplaces of the major platforms are a direct channel to their customer base:\n- **AppFolio** (App Marketplace)\n- **Buildium** (Marketplace)\n- **Yardi** (Marketplace/Interface Partners)\n- **Rent Manager**\n- **RealPage**\n\nReview sites like **Capterra**, **G2**, and **Software Advice** also index buyers actively comparing PM tools, useful for both leads and competitive positioning.\n\n## Rankings for enterprise/large-portfolio targets\nIf you want to target the largest operators directly (e.g., for enterprise deals), industry rankings list them by unit count:\n- **Multi-Housing News' \"Top Property Management Companies\"** list (Greystar, Asset Living, Cushman & Wakefield, Lincoln Property Company, etc.)\n- **DoorLoop's \"Largest Property Management Companies\"** roundup\n\n## Other channels worth knowing\n- County/state **real estate licensing board** records (property management is regulated in many states) \u2014 public but requires manual pulling.\n- Referral partnerships with real estate agents, HOA management companies, and other vendors already selling into the PM space.\n- Local NARPM/IREM chapter meetings \u2014 often the highest-conversion channel since these are small, relationship-driven markets.\n\nOne flag: several of the \"verified database\" sellers above (Openmart, Scrap.io, ByteScraper) are marketing-heavy sites I haven't independently vetted for data accuracy or compliance \u2014 verify a sample before buying a full list, and check CAN-SPAM/TCPA compliance if you're doing cold email or cold calling.\n\nSources:\n- [Property management B2B Leads Database & Email list \u2014 Openmart](https://www.openmart.com/databases/property-management)\n- [List of 77k+ Property management companies in United States \u2014 Bytescraper](https://bytescraper.com/b2b-database/list-of-property-management-companies-in-united-states)\n- [Property Management Email List: 81,000+ US Contacts (2026) \u2014 Scrap.io](https://scrap.io/property-management-company-email-list-guide)\n- [Search for a Property Manager \u2014 NARPM](https://www.narpm.org/find/property-managers/)\n- [Join NARPM \u2014 National Association of Residential Property Managers](https://www.narpm.org/join/)\n- [Connecting Property Managers to Vendors \u2013 Made Simple \u2014 RealPage](https://www.realpage.com/blog/connecting-property-managers-vendors-made-simple/)\n- [Local Vendor Directory for Landlords & Property Managers \u2014 American Apartment Owners Association](https://secure.american-apartment-owners-association.org/vendors/)\n- [Largest Property Management Companies in 2026 \u2014 DoorLoop](https://www.doorloop.com/blog/largest-property-management-companies)\n- [Top Multifamily Property Management Companies of 2026 \u2014 Multi-Housing News](https://www.multihousingnews.com/top-multifamily-property-management-companies/)\n- [Top Lead Sources for Property Managers in 2026 \u2014 ClearLead Digital](https://www.clearleaddigital.com/blog/top-lead-sources-property-managers)",
+  "brands": [
+    {
+      "brand": "ZoomInfo",
+      "first_at": 1364,
+      "mentions": 1,
+      "rank": 1
+    },
+    {
+      "brand": "Apollo",
+      "first_at": 1378,
+      "mentions": 1,
+      "rank": 2
+    },
+    {
+      "brand": "LinkedIn Sales Navigator",
+      "first_at": 1430,
+      "mentions": 1,
+      "rank": 3
+    },
+    {
+      "brand": "RealPage",
+      "first_at": 1781,
+      "mentions": 4,
+      "rank": 4
+    },
+    {
+      "brand": "AppFolio",
+      "first_at": 2132,
+      "mentions": 1,
+      "rank": 5
+    },
+    {
+      "brand": "Cushman & Wakefield",
+      "first_at": 2702,
+      "mentions": 1,
+      "rank": 6
+    }
+  ],
+  "links": [
+    {
+      "title": "",
+      "url": "https://www.openmart.com/databases/property-management"
+    },
+    {
+      "title": "",
+      "url": "https://bytescraper.com/b2b-database/list-of-property-management-companies-in-united-states"
+    },
+    {
+      "title": "",
+      "url": "https://scrap.io/property-management-company-email-list-guide"
+    },
+    {
+      "title": "",
+      "url": "https://www.narpm.org/find/property-managers/"
+    },
+    {
+      "title": "",
+      "url": "https://www.realpage.com/blog/connecting-property-managers-vendors-made-simple/"
+    },
+    {
+      "title": "",
+      "url": "https://secure.american-apartment-owners-association.org/vendors/"
+    },
+    {
+      "title": "",
+      "url": "https://www.doorloop.com/blog/largest-property-management-companies"
+    },
+    {
+      "title": "",
+      "url": "https://www.multihousingnews.com/top-multifamily-property-management-companies/"
+    },
+    {
+      "title": "",
+      "url": "https://www.clearleaddigital.com/blog/top-lead-sources-property-managers"
+    }
+  ]
+}

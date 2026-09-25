@@ -1,0 +1,129 @@
+{
+  "engine": "gemini",
+  "engine_label": "Gemini (gemini-2.5-flash) via API, Google Search grounding on",
+  "is_consumer_app": false,
+  "set": "A",
+  "question": "Where can I find a list of new apartment developments in Houston?",
+  "intent": "pipeline",
+  "asked_on": "2026-09-23",
+  "ok": true,
+  "answer": "To find a list of new apartment developments in Houston, you can consult several online platforms and real estate reports that track the burgeoning multifamily market in the city.\n\n**Online Apartment Listing Services and Locators:**\n\n*   **UMoveFree** provides a list of new apartments in various Houston neighborhoods, including Hanover Parkview in Montrose, Lumen in Upper Kirby, and The Westcott near Memorial Park. Other notable new developments they highlight include Boone Manor in the Museum District and The McKinley at Memorial City.\n*   **RentCafe** features a comprehensive list of newly constructed apartments for rent in Houston, offering filters for amenities and pricing. Some of their listings include Beckett Cottingham, Alta Sunset Heights, The Parkline, and The Laura.\n*   **Smart City Locating** highlights new luxury apartments in Houston, such as properties in The Heights and River Oaks, detailing their unique features and amenities.\n*   **Taco Street Locating** offers a \"New Construction Apartments in Houston (2026 Guide)\" which lists recently opened and soon-to-open properties, specifying their area and status. Examples include The Gardens at Greenhouse, Prose Riviana, The Heron Museum District, and 1010 Waugh.\n*   Websites like Apartments.com and other similar rental platforms often have \"newly listed\" or \"new construction\" filters to help you discover recent additions to the market.\n\n**Real Estate and Construction Data Sources:**\n\nFor a broader understanding of the development pipeline and market trends, several real estate firms publish reports:\n\n*   **Yardi Matrix** provides Houston Multifamily Market Reports, detailing units under construction and market performance.\n*   **Cushman & Wakefield** offers \"MarketBeat Houston Multifamily\" reports, which include information on construction levels and new deliveries.\n*   **Northmarq** also publishes reports on the Houston multifamily market, noting development activity and units coming online.\n*   **Transwestern** includes a \"Houston Multifamily Market Report\" that tracks units in the construction pipeline.\n\n**Key Developers and Construction Companies:**\n\nWhile these companies don't directly list all developments for rent, they are responsible for many of Houston's new apartment projects. Their websites may offer portfolios of their current and past work:\n\n*   **Alliance Residential Company** is a significant developer with numerous units in planning or construction, including projects like Prose Silber.\n*   **Hines** is another major developer active in Houston's multifamily sector.\n*   **Origin Investments** and **Marquette** are developers behind projects like \"Forth at Navigation\" in the Second Ward, which offers studio, one, two, and three-bedroom units. Marquette is also developing a 250-unit complex in the Near Northside.\n*   **Kaldis Development Interest** is involved in projects such as The Ironworks, repurposing a former oil field manufacturing site for workspace and retail/restaurant activity.\n*   **Midway Sites** is undertaking the East River redevelopment project, which includes over 1,400 multifamily units as part of its five-phase plan.\n*   **Triten Real Estate Partners** are developing The Mill, which will include 325 luxury apartment units in East End Houston.\n*   Construction companies like **RAH Contractors** specialize in multifamily construction and can be a source of information on new developments.\n\nWhen researching, it's beneficial to check the \"newest\" or \"recently built\" filters on apartment search websites and look for \"pipeline\" or \"under construction\" sections on commercial real estate brokerage sites for the most current information.",
+  "sources": [
+    {
+      "title": "umovefree.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG1ooUatj6PHoVM94zKbRZcNCKSQcHQBpj8C32JZF8d9ABUtafgIm6llAExYkZToOIyQGc8GlAZk0FZ6YQJCvMCJO0SAFfb8_OgJc8Utsk3RRtVU56fk53Vn4alEVSwOlPs7eKt_38CK9bhcYanWOI="
+    },
+    {
+      "title": "rentcafe.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFn-U-n0j3XsJOn0lRg0vOq00JWQm6616zigpp-lUyIRU2BmW5oCA72eaYf9P_INM8eKKeQBWU-PtaKnt095hbK_z3rp_59PpU7p7uVh5CqPZRIEotM2q6Sx2xkqpRbRrFB4H4K86nuxrYuBswVgRw79Q6txjtZIN6iGv0jz_pO"
+    },
+    {
+      "title": "smartcitylocating.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHyAqJVk7LZ5rozIwmISOnOmcdj8yP8F_wVcaEC4eQLJFRAm7DWfNNbBEM-sDlR3wV7MJ1VYV-JyApKziPf5u9D5zqfuQ8tDNPsXg2wcgmz3Wa2wEw1-4EugO7hVPiRoFmg0Ai651urmc_lS3_0hYEtDR8vR8TAbjYUz6_cjaB1LvE5kYNaMqXi4IjkleX7EpY="
+    },
+    {
+      "title": "tacostreetlocating.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGsiiR0B0cJjkZqKjHTgpi86qaOth6XBOMklrIWKjyU_P7b4YIJ6D49jodZG3WyK2ACvcVMV7vCZnY7Ml2TxNqhA7fRHIPS_GelbPh-Sphcto5FCp71TQ1Bs6yPIie3tLkjgsOgKU7DAdOpff2J_hcVdMx2x0Z2k52bWnJhLItmP6UF4GK8tMeGq_72UXXC-bQWHdx47mc="
+    },
+    {
+      "title": "yardimatrix.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFy0pMkn67yH4Nv06SEgir2cDiwofHOeZhrWJE_OOZ7WXlDzUIE8EyOAQ9EnJ2LhlIbR_3KirldMnuL07oPYm-lJwLd5tEw30nKyMiacsPScASdqa58r1R_AncwUePiB6KZATXDLz2bMnidsbOujAdYRuYzpTFTk93LZFiyIw=="
+    },
+    {
+      "title": "cushmanwakefield.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEG9yZPzbm374BmPIMEG4zkvZVyf67N9nYTWsPBidnr2-cozelkhoxvV2dchLGPtQ34h7BBdWfi447U6JnHfMEZcNrx0Ph0tvVVkgzh7WPtKdp7f21zEI6Ks_6bbBvCHnNRJFUBvs9RHWZJB9fVbZEUA-9579znoH57XeKER61CZ7UWhaKJwPOs_pa0o1cXi7MuB74KitdlpgoUJKG-ms797_-o"
+    },
+    {
+      "title": "northmarq.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGRwfA6jGz2hMhay-ZJCRGIiBCERq_SZIu9jaAD2Epv-2BaT_ny9Q_FJEJuj7msUAZWCNrZN5TPVyJlBriyZYYtv-33sveUD2BgWj_Gk1fxGkidbR266rW3_NaeTeyvhl0_i64RDc-cqdzwc_biPm3tFLn6mOx7ie1B4QcTxe7q5n97DKRs_5JOpt2dy6wrMgZAnk_CdYn42hojRrnOwFerEE1c8ETgSKWY0Gvpn97l"
+    },
+    {
+      "title": "transwestern.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEN2hEWW7hDWv0ONLL6G6HXXATz7ctfEeVEaxekquvstP57H8RmNgigXzwbxpN_X4db86cvMNscJjNtUcP8sE4EN-iBMgXwoP0sSMUpou1gXB7CnpUdvoNCgOcQ0zQqipqkzZ1L8VNQBDcPaAymjvR1QiKtQlNjcWAzdWzuMTcWEcsIpYQWPM1864-wCA=="
+    },
+    {
+      "title": "buildcentral.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHty9g45CX1nvagxEaj3oig9sKZDDoIVLAqOlug7MmBaM7jBV_QiaBjaJXsZdnWawst94TEqvT4uCVUxrvS-FX_TYXx9ZDsEJ2maKXF8kcq7_wZohNBkJaVJm0uV9NB5G1go-epqX9TqGFYicAcmrj84oA4dPM5TpaSEqGtAAFukb7qbMJJpauUbkoa9ZtwOiP1UUxspI44ZMM0HVOA_Dm6gp4="
+    },
+    {
+      "title": "houstontx.gov",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEFYwr02Q3Plu5mrFDP7DnxOWAM6SS5xyTqXYhVoftRKYEiEJLBdWxJGumxWSpXrEtT54jDTskN9IEnxHYykMbHiTXQksyuGyHjv2t9VjigFeOXvR2eKesMgOhOpqZQvzhugkZ5EWyCOoXL1eKlz91IDAQaKkTDLd8="
+    },
+    {
+      "title": "rahcontractors.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH8Du7DmYp7apZbyLI2RoZ1hwCtEdxubrNMroQql-QMEx2R82S5G0auweqwtEvkaEgOECCEDm0tAp0SoJU7EtOXXMaBaPb4YJilEAtUMlVO1iLH298Pgz8CYg=="
+    }
+  ],
+  "brands": [
+    {
+      "brand": "Apartments.com",
+      "first_at": 1261,
+      "mentions": 1,
+      "rank": 1
+    },
+    {
+      "brand": "Yardi Matrix",
+      "first_at": 1594,
+      "mentions": 1,
+      "rank": 2
+    },
+    {
+      "brand": "Cushman & Wakefield",
+      "first_at": 1719,
+      "mentions": 1,
+      "rank": 3
+    },
+    {
+      "brand": "Northmarq",
+      "first_at": 1865,
+      "mentions": 1,
+      "rank": 4
+    }
+  ],
+  "links": [
+    {
+      "title": "umovefree.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG1ooUatj6PHoVM94zKbRZcNCKSQcHQBpj8C32JZF8d9ABUtafgIm6llAExYkZToOIyQGc8GlAZk0FZ6YQJCvMCJO0SAFfb8_OgJc8Utsk3RRtVU56fk53Vn4alEVSwOlPs7eKt_38CK9bhcYanWOI="
+    },
+    {
+      "title": "rentcafe.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFn-U-n0j3XsJOn0lRg0vOq00JWQm6616zigpp-lUyIRU2BmW5oCA72eaYf9P_INM8eKKeQBWU-PtaKnt095hbK_z3rp_59PpU7p7uVh5CqPZRIEotM2q6Sx2xkqpRbRrFB4H4K86nuxrYuBswVgRw79Q6txjtZIN6iGv0jz_pO"
+    },
+    {
+      "title": "smartcitylocating.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHyAqJVk7LZ5rozIwmISOnOmcdj8yP8F_wVcaEC4eQLJFRAm7DWfNNbBEM-sDlR3wV7MJ1VYV-JyApKziPf5u9D5zqfuQ8tDNPsXg2wcgmz3Wa2wEw1-4EugO7hVPiRoFmg0Ai651urmc_lS3_0hYEtDR8vR8TAbjYUz6_cjaB1LvE5kYNaMqXi4IjkleX7EpY="
+    },
+    {
+      "title": "tacostreetlocating.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGsiiR0B0cJjkZqKjHTgpi86qaOth6XBOMklrIWKjyU_P7b4YIJ6D49jodZG3WyK2ACvcVMV7vCZnY7Ml2TxNqhA7fRHIPS_GelbPh-Sphcto5FCp71TQ1Bs6yPIie3tLkjgsOgKU7DAdOpff2J_hcVdMx2x0Z2k52bWnJhLItmP6UF4GK8tMeGq_72UXXC-bQWHdx47mc="
+    },
+    {
+      "title": "yardimatrix.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFy0pMkn67yH4Nv06SEgir2cDiwofHOeZhrWJE_OOZ7WXlDzUIE8EyOAQ9EnJ2LhlIbR_3KirldMnuL07oPYm-lJwLd5tEw30nKyMiacsPScASdqa58r1R_AncwUePiB6KZATXDLz2bMnidsbOujAdYRuYzpTFTk93LZFiyIw=="
+    },
+    {
+      "title": "cushmanwakefield.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEG9yZPzbm374BmPIMEG4zkvZVyf67N9nYTWsPBidnr2-cozelkhoxvV2dchLGPtQ34h7BBdWfi447U6JnHfMEZcNrx0Ph0tvVVkgzh7WPtKdp7f21zEI6Ks_6bbBvCHnNRJFUBvs9RHWZJB9fVbZEUA-9579znoH57XeKER61CZ7UWhaKJwPOs_pa0o1cXi7MuB74KitdlpgoUJKG-ms797_-o"
+    },
+    {
+      "title": "northmarq.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGRwfA6jGz2hMhay-ZJCRGIiBCERq_SZIu9jaAD2Epv-2BaT_ny9Q_FJEJuj7msUAZWCNrZN5TPVyJlBriyZYYtv-33sveUD2BgWj_Gk1fxGkidbR266rW3_NaeTeyvhl0_i64RDc-cqdzwc_biPm3tFLn6mOx7ie1B4QcTxe7q5n97DKRs_5JOpt2dy6wrMgZAnk_CdYn42hojRrnOwFerEE1c8ETgSKWY0Gvpn97l"
+    },
+    {
+      "title": "transwestern.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEN2hEWW7hDWv0ONLL6G6HXXATz7ctfEeVEaxekquvstP57H8RmNgigXzwbxpN_X4db86cvMNscJjNtUcP8sE4EN-iBMgXwoP0sSMUpou1gXB7CnpUdvoNCgOcQ0zQqipqkzZ1L8VNQBDcPaAymjvR1QiKtQlNjcWAzdWzuMTcWEcsIpYQWPM1864-wCA=="
+    },
+    {
+      "title": "buildcentral.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHty9g45CX1nvagxEaj3oig9sKZDDoIVLAqOlug7MmBaM7jBV_QiaBjaJXsZdnWawst94TEqvT4uCVUxrvS-FX_TYXx9ZDsEJ2maKXF8kcq7_wZohNBkJaVJm0uV9NB5G1go-epqX9TqGFYicAcmrj84oA4dPM5TpaSEqGtAAFukb7qbMJJpauUbkoa9ZtwOiP1UUxspI44ZMM0HVOA_Dm6gp4="
+    },
+    {
+      "title": "houstontx.gov",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEFYwr02Q3Plu5mrFDP7DnxOWAM6SS5xyTqXYhVoftRKYEiEJLBdWxJGumxWSpXrEtT54jDTskN9IEnxHYykMbHiTXQksyuGyHjv2t9VjigFeOXvR2eKesMgOhOpqZQvzhugkZ5EWyCOoXL1eKlz91IDAQaKkTDLd8="
+    },
+    {
+      "title": "rahcontractors.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH8Du7DmYp7apZbyLI2RoZ1hwCtEdxubrNMroQql-QMEx2R82S5G0auweqwtEvkaEgOECCEDm0tAp0SoJU7EtOXXMaBaPb4YJilEAtUMlVO1iLH298Pgz8CYg=="
+    }
+  ]
+}

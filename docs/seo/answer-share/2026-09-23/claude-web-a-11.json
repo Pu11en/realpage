@@ -1,0 +1,80 @@
+{
+  "engine": "claude-web",
+  "engine_label": "Claude (Sonnet) via claude -p, web search on",
+  "is_consumer_app": false,
+  "set": "A",
+  "question": "How do I find recently sold apartment buildings in Dallas-Fort Worth?",
+  "intent": "sales",
+  "asked_on": "2026-09-23",
+  "ok": true,
+  "answer": "This is a general research/market question unrelated to your ccdb project, so I'll just answer directly rather than touching any tools.\n\n## Ways to find recently sold apartment (multifamily) buildings in DFW\n\n**Commercial real estate data platforms** (best for closed-sale comps, cap rates, buyer/seller names):\n- **CoStar** \u2014 the industry standard for multifamily sales comps, includes closed price, cap rate, price/unit, buyer/seller broker info. Subscription is expensive but often accessible through a broker or a library/university with a CoStar terminal.\n- **Crexi** \u2014 has a free tier with a \"Sold\" filter you can search by market (Dallas-Fort Worth) and asset type (multifamily); weaker historical depth than CoStar but easy to self-serve.\n- **LoopNet** (owned by CoStar) \u2014 has some sold listings, though its comp data is thinner than CoStar proper.\n- **Real Capital Analytics (RCA / MSCI Real Assets)** \u2014 institutional-grade transaction database used heavily by brokers and investors for multifamily trades; subscription-only but very authoritative for large deals.\n- **Yardi Matrix** \u2014 strong for multifamily-specific transaction and ownership data, often bundled with property management/analytics tools.\n\n**Broker research reports** (free, published regularly, DFW-specific):\n- **JLL Multifamily**, **CBRE**, **Cushman & Wakefield**, **Newmark**, **Berkadia**, and **Walker & Dunlop** all publish quarterly/annual DFW (or \"Dallas\" and \"Fort Worth\" separately) multifamily market reports that list notable recent sales, cap rate trends, and top buyers/sellers. Search \"[broker name] Dallas Fort Worth multifamily market report\" for their latest PDF.\n- **Institutional Property Advisors (IPA)**, a Marcus & Millichap division focused on larger multifamily deals, also publishes DFW-specific research with named transactions.\n\n**Public records (free, county-level, most reliable for \"did this exact building sell\"):**\n- **Dallas Central Appraisal District (DCAD)** and **Tarrant Appraisal District (TAD)** \u2014 searchable by address/owner, shows sale date, price, and new owner of record once recorded.\n- County clerk deed records \u2014 **Dallas County Clerk** and **Tarrant County Clerk** online deed search tools let you pull the actual recorded deed/transfer for a specific parcel.\n- These are the ground truth for confirming a sale happened and its exact price, though there can be a lag of weeks to a couple months after closing.\n\n**News/trade press:**\n- **Dallas Business Journal**, **Bisnow Dallas-Fort Worth**, **The Real Deal (Texas)**, **Connect CRE Texas**, and **GlobeSt** regularly cover notable DFW apartment trades with buyer/seller and sometimes price.\n- **Multi-Housing News** and **Commercial Property Executive** also cover larger DFW multifamily deals nationally.\n\n### A practical approach\n1. Start with **Crexi's sold filter** for a free first pass and to see what's transacted recently.\n2. Cross-check specific addresses against **DCAD/TAD** for confirmed sale price and closing date.\n3. If you need broker-level comps or cap rate detail, get access to **CoStar** or **RCA** through a commercial broker (they'll often run comps for a prospective client for free) or a library.\n4. Set a Google Alert or follow **Bisnow DFW** / **Dallas Business Journal CRE** for ongoing deal flow.\n\nIf you tell me your angle \u2014 e.g., you're evaluating comps for an acquisition, tracking a specific submarket, or need investor-grade data \u2014 I can narrow this down further.",
+  "brands": [
+    {
+      "brand": "CoStar",
+      "first_at": 316,
+      "mentions": 6,
+      "rank": 1
+    },
+    {
+      "brand": "Crexi",
+      "first_at": 565,
+      "mentions": 2,
+      "rank": 2
+    },
+    {
+      "brand": "LoopNet",
+      "first_at": 751,
+      "mentions": 1,
+      "rank": 3
+    },
+    {
+      "brand": "Moody's",
+      "first_at": 861,
+      "mentions": 1,
+      "rank": 4
+    },
+    {
+      "brand": "Yardi Matrix",
+      "first_at": 1078,
+      "mentions": 1,
+      "rank": 5
+    },
+    {
+      "brand": "JLL",
+      "first_at": 1291,
+      "mentions": 1,
+      "rank": 6
+    },
+    {
+      "brand": "CBRE",
+      "first_at": 1312,
+      "mentions": 1,
+      "rank": 7
+    },
+    {
+      "brand": "Cushman & Wakefield",
+      "first_at": 1322,
+      "mentions": 1,
+      "rank": 8
+    },
+    {
+      "brand": "Berkadia",
+      "first_at": 1360,
+      "mentions": 1,
+      "rank": 9
+    },
+    {
+      "brand": "Marcus & Millichap",
+      "first_at": 1707,
+      "mentions": 1,
+      "rank": 10
+    },
+    {
+      "brand": "Public records (DIY)",
+      "first_at": 1945,
+      "mentions": 5,
+      "rank": 11
+    }
+  ],
+  "links": []
+}

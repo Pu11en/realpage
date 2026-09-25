@@ -1,0 +1,133 @@
+{
+  "engine": "gemini",
+  "engine_label": "Gemini (gemini-2.5-flash) via API, Google Search grounding on",
+  "is_consumer_app": false,
+  "set": "A",
+  "question": "Where can I find Phoenix multifamily construction pipeline data?",
+  "intent": "pipeline",
+  "asked_on": "2026-09-23",
+  "ok": true,
+  "answer": "You can find Phoenix multifamily construction pipeline data from a variety of commercial real estate firms, market research companies, and data providers specializing in the multifamily sector. These sources often publish detailed reports and offer platforms with up-to-date construction information.\n\nHere are some specific companies and data sources to consider:\n\n**Market Research and Data Providers:**\n*   **Kidder Mathews** Their quarterly Phoenix Multifamily Market Reports provide insights into units under construction, construction deliveries, and notable projects. They also cite CoStar as a data source for some of their information.\n*   **Yardi Matrix** This company is a significant provider of real estate data and analytics. Their Phoenix Multifamily Market Reports include details on units underway and construction activity.\n*   **Cushman & Wakefield** Their \"MarketBeat Phoenix Multifamily\" reports offer a comprehensive overview of the market, including information on new deliveries and the active construction pipeline across different submarkets, such as the East Valley.\n*   **Berkadia** Offers a \"Phoenix | Multifamily Quarterly Pipeline Map\" that categorizes units by development status: Lease-Up, Under Construction, Planned, and Prospective.\n*   **ABI Multifamily** Publishes a quarterly \"Phoenix MSA Multifamily Construction Pipeline Report\" that covers multifamily construction activity for properties with 50 or more units in the Phoenix metropolitan statistical area.\n*   **MMG Real Estate Advisors** Provides an interactive \"Phoenix Q1 2026 Pipeline Report\" which includes features like forecasted delivery dates, a breakdown of pipeline status by city, and a data map.\n*   **Marcus & Millichap** Their Phoenix Multifamily Market Reports often discuss inventory expansion and development activity in the region.\n*   **Matthews Real Estate Investment Services** Their Phoenix, AZ Multifamily Market Reports provide data on units delivered and units still under construction.\n*   **Ziplytica** This platform offers live municipal building permits and pre-market pipeline data specifically for the Phoenix metro area.\n\nThese companies often provide free executive summaries or quarterly reports, with more detailed data and analysis available through subscriptions or direct inquiries.",
+  "sources": [
+    {
+      "title": "kidder.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHo83PBvkY3tF3IdswuJJAmSrX0x0Hb7Ym4V3ib6G1N0S2mPXRRbIRo-eIn95NBtN0Hmsr0JcxM-0SsCOyALZqL_POlu2w-ICW1ZebdaZZofLn2sFG53ma9nee9a2dlSMZnFK6pRudEvhDekVnqWRTan-1quYAP9TViCBpoZVqC"
+    },
+    {
+      "title": "multihousingnews.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGR7fDlcUAlV4ra2wnOTGAPiRc9JR8OARSReLyTo-G_bx3doX63IrRnB2cuP26AFQRu-4nvDYgUe2w81RIxoQ4Cy2z-za_wK69Z-oEJU5YJaKPMvEUgmnfNQ0cd9o8fFkpSGtSQyHSOZdTLTtWyRMfamwHbvxXMBJ5FjtUZ8wCIKf_UpoTU0AZAB-aWakXwBg=="
+    },
+    {
+      "title": "yardimatrix.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEQscrev7YpUwLPM6QGhQsFZqj0QCkuQFB-7FGnkL8oSnL20HTqT4V6nWokqNzvCroif4QB-_c83EX3bV3DVYcDO11t92wHCBxdAPh3MekgkKbeo-ioZzfy413cYHaMDWtO7ZFVTLaffz7GY29ri8QLXqeoglEc5utvtOU73g0="
+    },
+    {
+      "title": "cushmanwakefield.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGRWKnMV5_MuwYbg_Z9vDFAo7JZw-nrR3XpNg2OPl4umDEEpk61i96xxgaCJpDz64FVETSs-PaPNqUqMGypbL6PBCwxP4vFPD5by_k3qg57epT6I5S9n5PzeQf4o_TTpLMzLOQA-pfkMCwyhnUHDFjo0n01oWi7vWlZ326LvTS24EXNHInJoc2eU23p9Fv65Oi73kV7_t5D1iZJK1_R-afIC4RINg=="
+    },
+    {
+      "title": "berkadia.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE7Ws2rByw9JPE4BMhKWAJa9960db1LkEzUz4MEcInVqE4vpozpkozYQyfYFMF9J39VpJ0z66ozvANn-EHBNfvtwhEBIxuvTX6cBygrD8V8pHyZ6MyM_TQZffxRrSabWcP6VOtixmK0sEkorUZIP4lLSOq-ZIHh4gGU4os1rcj5biBKx8nu3tkcGMSSZajNk7NMGi9A2gDFSXU6w9D6znQUSw-MIbBumME="
+    },
+    {
+      "title": "abimultifamily.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGJ6nCLdcBGchYUAgAQyCkZvCrhsSMf4bJdlC8l1dER81EiiA_W2PEmVzasr-QhBT4u2pYKY8vwBAd3FAIZggVX7515-OdUkM7jaLVTnOw-kgY48RDYypGfqKFW5PT4H-Kvvc_lxsTp7Jpk1CYfuJF3t96o_i3N4X6buwbRCL_o0YBDFqcpK4HcNpxmip3L"
+    },
+    {
+      "title": "mmgrea.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGMBNFrxqrUHzeHvsLNdIMn85-IDxo39ULHgR0pDKIvKxb1Lr00Q-znu_3RjEuVldHln-84X0PTpSTQRKOs2aMWUXUP-GkSdqmGKOQ_AI_GvB778O-5hixeDuaFbNsTUkrqL3YBI98GkzCBNHiqfA=="
+    },
+    {
+      "title": "marcusmillichap.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH1FJFbV4qKHXQXdvqlwL_LC4JZ90QX1pQ0mKvYu5gl7B_L3lMsinDIkZPW2edg2ClRsITqhL7mNjZhKGu5wloQRtwzP8llhrl2JwjQNckulHd63qI6A11SgY5IX8xXAydt2SOqdtCxSazQncI5jYR09FqBqdd_WK22PkgA6hF0lLTpmAyzP0iuWPua-02lQI61MfMw-gqXm5lRePN-oSRD"
+    },
+    {
+      "title": "matthews.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGaHcNkIohwVYLoHctAdBWITCF9o4WhRYeyShCGhf9yQPxIvx_IonvQGkuifmY6otTtuG0kvfrZs5UjFTMxoCPLDKHPIloZqockUspiZ8tjJPjJwBsiVQIUSclxoHgbsY3VF9RhDisND-D_UZUQCMpnssyMQ3biiFpVF3feeMllzyDo5dR4OTZz3Q=="
+    },
+    {
+      "title": "ziplytica.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFwMwBToF-3QudExSFrJ2ZFWgvSeq35VzzHE96QQ32HcK5jUUkGRBR0aoFdmbW6qveBFqlo4Qv_jR8xjWc0Ix9-jAGaEjxFS0Hi6TkUmzkaKfMORa8jJPboywywWJLfeiLK6VEj"
+    }
+  ],
+  "brands": [
+    {
+      "brand": "CoStar",
+      "first_at": 590,
+      "mentions": 1,
+      "rank": 1
+    },
+    {
+      "brand": "Yardi Matrix",
+      "first_at": 651,
+      "mentions": 1,
+      "rank": 2
+    },
+    {
+      "brand": "Cushman & Wakefield",
+      "first_at": 848,
+      "mentions": 1,
+      "rank": 3
+    },
+    {
+      "brand": "Berkadia",
+      "first_at": 1100,
+      "mentions": 1,
+      "rank": 4
+    },
+    {
+      "brand": "MMG",
+      "first_at": 1505,
+      "mentions": 1,
+      "rank": 5
+    },
+    {
+      "brand": "Marcus & Millichap",
+      "first_at": 1708,
+      "mentions": 1,
+      "rank": 6
+    }
+  ],
+  "links": [
+    {
+      "title": "kidder.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHo83PBvkY3tF3IdswuJJAmSrX0x0Hb7Ym4V3ib6G1N0S2mPXRRbIRo-eIn95NBtN0Hmsr0JcxM-0SsCOyALZqL_POlu2w-ICW1ZebdaZZofLn2sFG53ma9nee9a2dlSMZnFK6pRudEvhDekVnqWRTan-1quYAP9TViCBpoZVqC"
+    },
+    {
+      "title": "multihousingnews.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGR7fDlcUAlV4ra2wnOTGAPiRc9JR8OARSReLyTo-G_bx3doX63IrRnB2cuP26AFQRu-4nvDYgUe2w81RIxoQ4Cy2z-za_wK69Z-oEJU5YJaKPMvEUgmnfNQ0cd9o8fFkpSGtSQyHSOZdTLTtWyRMfamwHbvxXMBJ5FjtUZ8wCIKf_UpoTU0AZAB-aWakXwBg=="
+    },
+    {
+      "title": "yardimatrix.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEQscrev7YpUwLPM6QGhQsFZqj0QCkuQFB-7FGnkL8oSnL20HTqT4V6nWokqNzvCroif4QB-_c83EX3bV3DVYcDO11t92wHCBxdAPh3MekgkKbeo-ioZzfy413cYHaMDWtO7ZFVTLaffz7GY29ri8QLXqeoglEc5utvtOU73g0="
+    },
+    {
+      "title": "cushmanwakefield.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGRWKnMV5_MuwYbg_Z9vDFAo7JZw-nrR3XpNg2OPl4umDEEpk61i96xxgaCJpDz64FVETSs-PaPNqUqMGypbL6PBCwxP4vFPD5by_k3qg57epT6I5S9n5PzeQf4o_TTpLMzLOQA-pfkMCwyhnUHDFjo0n01oWi7vWlZ326LvTS24EXNHInJoc2eU23p9Fv65Oi73kV7_t5D1iZJK1_R-afIC4RINg=="
+    },
+    {
+      "title": "berkadia.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE7Ws2rByw9JPE4BMhKWAJa9960db1LkEzUz4MEcInVqE4vpozpkozYQyfYFMF9J39VpJ0z66ozvANn-EHBNfvtwhEBIxuvTX6cBygrD8V8pHyZ6MyM_TQZffxRrSabWcP6VOtixmK0sEkorUZIP4lLSOq-ZIHh4gGU4os1rcj5biBKx8nu3tkcGMSSZajNk7NMGi9A2gDFSXU6w9D6znQUSw-MIbBumME="
+    },
+    {
+      "title": "abimultifamily.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGJ6nCLdcBGchYUAgAQyCkZvCrhsSMf4bJdlC8l1dER81EiiA_W2PEmVzasr-QhBT4u2pYKY8vwBAd3FAIZggVX7515-OdUkM7jaLVTnOw-kgY48RDYypGfqKFW5PT4H-Kvvc_lxsTp7Jpk1CYfuJF3t96o_i3N4X6buwbRCL_o0YBDFqcpK4HcNpxmip3L"
+    },
+    {
+      "title": "mmgrea.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGMBNFrxqrUHzeHvsLNdIMn85-IDxo39ULHgR0pDKIvKxb1Lr00Q-znu_3RjEuVldHln-84X0PTpSTQRKOs2aMWUXUP-GkSdqmGKOQ_AI_GvB778O-5hixeDuaFbNsTUkrqL3YBI98GkzCBNHiqfA=="
+    },
+    {
+      "title": "marcusmillichap.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH1FJFbV4qKHXQXdvqlwL_LC4JZ90QX1pQ0mKvYu5gl7B_L3lMsinDIkZPW2edg2ClRsITqhL7mNjZhKGu5wloQRtwzP8llhrl2JwjQNckulHd63qI6A11SgY5IX8xXAydt2SOqdtCxSazQncI5jYR09FqBqdd_WK22PkgA6hF0lLTpmAyzP0iuWPua-02lQI61MfMw-gqXm5lRePN-oSRD"
+    },
+    {
+      "title": "matthews.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGaHcNkIohwVYLoHctAdBWITCF9o4WhRYeyShCGhf9yQPxIvx_IonvQGkuifmY6otTtuG0kvfrZs5UjFTMxoCPLDKHPIloZqockUspiZ8tjJPjJwBsiVQIUSclxoHgbsY3VF9RhDisND-D_UZUQCMpnssyMQ3biiFpVF3feeMllzyDo5dR4OTZz3Q=="
+    },
+    {
+      "title": "ziplytica.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFwMwBToF-3QudExSFrJ2ZFWgvSeq35VzzHE96QQ32HcK5jUUkGRBR0aoFdmbW6qveBFqlo4Qv_jR8xjWc0Ix9-jAGaEjxFS0Hi6TkUmzkaKfMORa8jJPboywywWJLfeiLK6VEj"
+    }
+  ]
+}

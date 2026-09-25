@@ -1,0 +1,79 @@
+{
+  "engine": "claude-web",
+  "engine_label": "Claude (Sonnet) via claude -p, web search on",
+  "is_consumer_app": false,
+  "set": "A",
+  "question": "What is the best way to find newly sold apartment complexes for sales prospecting?",
+  "intent": "sales",
+  "asked_on": "2026-09-23",
+  "ok": true,
+  "answer": "For prospecting off newly-sold apartment complexes, you're essentially trying to catch ownership-change signals as early as possible \u2014 new owners typically have capex/renovation budgets and are actively evaluating vendors (property management, landscaping, security, insurance, financing, laundry, amenities, etc.), so the window right after close is high-intent.\n\n**Paid CRE data platforms (best for volume + recency)**\n- **Yardi Matrix** \u2014 the strongest purpose-built option for multifamily specifically; tracks sales comps, ownership/loan info, construction pipeline, and lets you filter by unit count, market, and recent transaction date.\n- **CoStar** \u2014 broadest historical depth and most comprehensive comps/ownership records, but expensive (often five figures/seat/year) and arguably overkill if you only care about multifamily.\n- **Crexi (Intelligence)** \u2014 cheaper alternative that has closed much of the gap with CoStar on sales comps/ownership data; also useful because active listings show properties currently trading.\n- **CommercialEdge (by Yardi)** \u2014 another option, less differentiated for multifamily specifically than Yardi Matrix.\n- **MSCI Real Capital Analytics (RCA)** \u2014 the standard source institutional brokers/investors cite for aggregate transaction volume and deal-level data; good if you want to track larger/institutional trades.\n\n**Public records (free/cheap, most current)**\n- County recorder/assessor deed transfer records \u2014 the actual source of truth for \"who just bought what.\" Many counties publish these online; services like **ATTOM Data**, **PropertyRadar**, and **Reonomy** aggregate this nationally and let you set alerts for new multifamily transfers by size/market.\n- **Cherre** \u2014 data-aggregation platform popular with CRE sales/prospecting teams that stitches together ownership, mortgage, and permit data for lead generation.\n\n**Trade press (good for larger/institutional deals, free)**\n- **Multi-Housing News** \u2014 publishes regular \"top multifamily sales\" roundups by metro.\n- **Multifamily Dive**, **Bisnow**, **GlobeSt.com**, **The Real Deal** (for NYC) \u2014 cover notable transactions as they close.\n- Local business journals (e.g., Bizjournals) often report mid-size deals that don't hit national trade press.\n\n**Practical workflow**\n1. Set saved searches/alerts in Yardi Matrix or Crexi for \"sold\" multifamily transactions in your target markets.\n2. Layer in a county-records feed (ATTOM/PropertyRadar/Reonomy) to catch smaller deals that don't make it into the big platforms.\n3. Cross-reference with financing data (new loan recordings often accompany a sale) \u2014 Yardi Matrix and Reonomy both surface this \u2014 since a new mortgage is a strong signal of a capex/renovation budget.\n4. Prioritize outreach in the first 60\u201390 days post-close, when new owners are setting vendor relationships.\n\nIf you tell me your budget and target market size (e.g., just one metro vs. national), I can narrow this to 1\u20132 tools rather than the full list.\n\nSources:\n- [The 14 Best Commercial Real Estate Data Tools and Providers in 2026 - ForageAI](https://forage.ai/blog/commercial-real-estate-data-tools/)\n- [Best Commercial Real Estate Data Sources for 2026 - CRE Daily](https://www.credaily.com/reviews/best-commercial-real-estate-data-sources/)\n- [Institutional Real Estate Data | Yardi Matrix](https://www.yardimatrix.com/)\n- [CoStar vs Crexi: Where CRE Investors Actually Source & Comp Deals (2026) | NextAutomation](https://nextautomation.us/blog/costar-vs-crexi)\n- [5 Best Commercial Real Estate Comps Databases](https://samimiinvestments.com/commercial-real-estate-comps-database/)\n- [Top 5 NYC Multifamily Building Sales\u2014August 2026 - Multi-Housing News](https://www.multihousingnews.com/top-5-nyc-multifamily-building-sales-august-2026/)\n- [Apartment sales volume rose 9% to $165.5B in 2025 | Multifamily Dive](https://www.multifamilydive.com/news/2026-apartment-sales-multifamily-distress/810517/)",
+  "brands": [
+    {
+      "brand": "Yardi Matrix",
+      "first_at": 425,
+      "mentions": 5,
+      "rank": 1
+    },
+    {
+      "brand": "CoStar",
+      "first_at": 647,
+      "mentions": 4,
+      "rank": 2
+    },
+    {
+      "brand": "Crexi",
+      "first_at": 839,
+      "mentions": 4,
+      "rank": 3
+    },
+    {
+      "brand": "Moody's",
+      "first_at": 1157,
+      "mentions": 1,
+      "rank": 4
+    },
+    {
+      "brand": "Reonomy",
+      "first_at": 1600,
+      "mentions": 3,
+      "rank": 5
+    },
+    {
+      "brand": "Cherre",
+      "first_at": 1709,
+      "mentions": 1,
+      "rank": 6
+    }
+  ],
+  "links": [
+    {
+      "title": "",
+      "url": "https://forage.ai/blog/commercial-real-estate-data-tools/"
+    },
+    {
+      "title": "",
+      "url": "https://www.credaily.com/reviews/best-commercial-real-estate-data-sources/"
+    },
+    {
+      "title": "",
+      "url": "https://www.yardimatrix.com/"
+    },
+    {
+      "title": "",
+      "url": "https://nextautomation.us/blog/costar-vs-crexi"
+    },
+    {
+      "title": "",
+      "url": "https://samimiinvestments.com/commercial-real-estate-comps-database/"
+    },
+    {
+      "title": "",
+      "url": "https://www.multihousingnews.com/top-5-nyc-multifamily-building-sales-august-2026/"
+    },
+    {
+      "title": "",
+      "url": "https://www.multifamilydive.com/news/2026-apartment-sales-multifamily-distress/810517/"
+    }
+  ]
+}

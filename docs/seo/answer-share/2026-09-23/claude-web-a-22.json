@@ -1,0 +1,44 @@
+{
+  "engine": "claude-web",
+  "engine_label": "Claude (Sonnet) via claude -p, web search on",
+  "is_consumer_app": false,
+  "set": "A",
+  "question": "How do I find decision makers at apartment management companies?",
+  "intent": "prospecting",
+  "asked_on": "2026-09-23",
+  "ok": true,
+  "answer": "Here's how people typically approach this, with the tools and sources actually used in practice:\n\n## Identify the target companies first\n- **NMHC Top 50/100 Lists** (nmhc.org) \u2014 the National Multifamily Housing Council ranks the largest apartment owners and management companies by unit count. This is the standard starting point for anyone selling into multifamily.\n- **Multifamily Executive / MHN (Multi-Housing News)** \u2014 trade publications that profile management companies and cover leadership moves, M&A, and org changes.\n- State/local apartment associations (e.g., regional Apartment Associations affiliated with NAA) often publish member directories of management companies operating in a given metro.\n\n## Find the actual people (decision makers)\n- **LinkedIn Sales Navigator** \u2014 the most common tool. Filter by company + title (VP of Operations, Regional Property Manager, Director of Procurement, VP of Revenue Management, Chief Investment Officer, etc.) and seniority level. For apartment management specifically, the relevant buyer often depends on what you're selling: maintenance/vendor decisions usually route through Regional/Portfolio Managers or VP of Operations; software/PropTech purchases often go through VP of IT, Director of Revenue Management, or COO; capital projects go through Asset Management or Investment teams.\n- **ZoomInfo** or **Apollo.io** \u2014 B2B contact databases with verified emails/phones and org charts, widely used for outbound sales prospecting; both have specific filters for \"real estate/property management\" as an industry vertical.\n- **Cobu, RealPage, or Yardi partner/customer directories** \u2014 if the companies use these platforms (very common in multifamily), sometimes press releases or case studies name specific execs.\n- **Crunchbase** \u2014 useful for ownership/investor structure if the management company is backed by a REIT or PE firm, since decisions may flow up to the owner entity, not just the on-site manager.\n\n## Company-specific research\nFor large operators (Greystar, Lincoln Property Company, Cushman & Wakefield Asset Services, AvalonBay, Camden, Bell Partners, FPI Management, Asset Living, MAA, Cortland), their own \"Leadership\" or \"Executive Team\" pages usually list VP+ level people directly \u2014 worth checking before paying for a database lookup.\n\n## Practical outreach note\n- Property management orgs are regional \u2014 national HQ leadership rarely controls local vendor decisions. If you're selling something operational (services, supplies, maintenance), the real decision maker is often the **Regional Property Manager** or **Regional VP**, not corporate HQ. Corporate-level contacts matter more for enterprise software, financing, or capital-expenditure sales.\n- Industry conferences (NAA Apartmentalize, NMHC OPTECH) are also a common way to identify and meet decision makers directly, and their sponsor/exhibitor lists sometimes reveal who's buying what.\n\n**Sources used:** general industry knowledge of standard B2B sales research practices in multifamily real estate (NMHC rankings, LinkedIn Sales Navigator, ZoomInfo/Apollo, trade press) \u2014 no web search was run for this answer, so verify current company names/rankings if it's time-sensitive, since NMHC's list updates annually and could have shifted since my last training data.",
+  "brands": [
+    {
+      "brand": "LinkedIn Sales Navigator",
+      "first_at": 767,
+      "mentions": 2,
+      "rank": 1
+    },
+    {
+      "brand": "ZoomInfo",
+      "first_at": 1346,
+      "mentions": 2,
+      "rank": 2
+    },
+    {
+      "brand": "Apollo",
+      "first_at": 1362,
+      "mentions": 1,
+      "rank": 3
+    },
+    {
+      "brand": "RealPage",
+      "first_at": 1586,
+      "mentions": 1,
+      "rank": 4
+    },
+    {
+      "brand": "Cushman & Wakefield",
+      "first_at": 2050,
+      "mentions": 1,
+      "rank": 5
+    }
+  ],
+  "links": []
+}
