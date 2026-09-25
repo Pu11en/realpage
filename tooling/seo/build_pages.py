@@ -307,6 +307,9 @@ def page_shell(title: str, description: str, canonical: str, jsonld: str, body: 
     .static-page .facts b {{ display: block; font-size: 20px; }}
     .static-page nav.crumbs {{ font-size: 12px; margin-bottom: 14px; }}
     .static-page .sibs {{ font-size: 13px; line-height: 1.9; }}
+    .static-page .next-step {{ margin: 28px 0 8px; padding: 16px 18px; border: 1px solid var(--rule); border-left: 4px solid var(--accent); max-width: 80ch; }}
+    .static-page .next-step h2 {{ margin-top: 0; }}
+    .static-page .next-step p {{ font-size: 14px; line-height: 1.55; margin: 8px 0 0; }}
     .static-page .faq {{ max-width: 80ch; font-size: 14px; }}
     .static-page .faq dt {{ font-weight: 600; margin-top: 14px; }}
     .static-page .faq dd {{ margin: 4px 0 0; line-height: 1.55; }}
@@ -454,6 +457,29 @@ def breakdowns(s: dict, place: str) -> str:
         ]
 
     return "\n".join(out)
+
+
+def next_step(place: str, state_slug: str | None) -> str:
+    """What a reader does after reading. These pages had no answer to that.
+
+    Kept to what is actually true and free: the same list filtered and sortable, a PDF and a
+    spreadsheet that need no account, and a way to ask for a metro we do not cover. No
+    invented offer, no signup wall, and no claim the data cannot back.
+    """
+    where = f"/index.html?area={state_slug}" if state_slug else "/index.html"
+    return "\n".join([
+        '    <div class="next-step">',
+        f"      <h2>Take this list with you</h2>",
+        f'      <p><a href="{where}"><strong>Open {esc(place)} in CraneSignal</strong></a> to sort and '
+        "filter these buildings, see the lead score behind each one, and download the call "
+        "list as a PDF or the whole thing as a spreadsheet. Free, and no account needed for "
+        "any of that.</p>",
+        '      <p>A free account adds the manager name and direct phone where the record has '
+        'them, and a note on why to call now.</p>',
+        f'      <p>Not your area? <a href="{LANDING}/#next">Ask for your metro</a> &mdash; it is '
+        "free and we add areas on request.</p>",
+        "    </div>",
+    ])
 
 
 def faq_for(place: str, s: dict, updated: str) -> list[tuple[str, str]]:
@@ -624,7 +650,7 @@ def jsonld_for(name: str, description: str, canonical: str, leads: list[dict],
 
 
 def render_page(*, title, h1, description, canonical, depth, place, leads, updated,
-                crumbs, siblings, sold_view=False, intro_extra="") -> str:
+                crumbs, siblings, sold_view=False, intro_extra="", state_slug=None) -> str:
     s = summarise(leads)
     body = [
         f'    <nav class="crumbs">{crumbs}</nav>',
@@ -651,6 +677,7 @@ def render_page(*, title, h1, description, canonical, depth, place, leads, updat
             "mean the record does not say, never that we guessed."
         )
     body += [f"    <h2>{heading}</h2>", f"    <p>{note}</p>", table(shown, sold_view)]
+    body.append(next_step(place, state_slug))
     faq = faq_for(place, s, updated)
     body.append(faq_html(faq))
     if siblings:
@@ -659,8 +686,8 @@ def render_page(*, title, h1, description, canonical, depth, place, leads, updat
         "    <footer>",
         f"      Data updated {esc(fmt_date(updated))}. Built from public construction and "
         "sale records only &mdash; no proprietary feeds, no purchased lists. ",
-        f'      <a href="{"../" * depth}../under-the-hood.html">How this was built and checked</a> &middot; '
-        f'      <a href="{"../" * depth}../index.html">Search every building</a> &middot; '
+        '      <a href="/under-the-hood.html">How this was built and checked</a> &middot; '
+        '      <a href="/index.html">Search every building</a> &middot; '
         f'      <a href="{LANDING}">CraneSignal home</a>',
         "    </footer>",
     ]
@@ -755,6 +782,7 @@ def build_all() -> dict[Path, str]:
             place=label,
             leads=sort_leads(leads),
             updated=updated,
+            state_slug=slug,
             crumbs=home,
             siblings="<br>".join(sibs),
         )
@@ -792,6 +820,7 @@ def build_all() -> dict[Path, str]:
                 place=metro,
                 leads=sort_leads(rows),
                 updated=updated,
+                state_slug=slug,
                 crumbs=f'<a href="/index.html">All buildings</a> &rsaquo; '
                        f'<a href="/leads/{slug}.html">{esc(label)}</a>',
                 siblings="<br>".join(sib_bits),
@@ -835,6 +864,7 @@ def build_all() -> dict[Path, str]:
                 place=f"{city}, {label}",
                 leads=sort_leads(rows),
                 updated=updated,
+                state_slug=slug,
                 crumbs=crumbs,
                 siblings="<br>".join(sib_bits),
             )
