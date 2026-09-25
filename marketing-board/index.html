@@ -262,6 +262,14 @@
     overflow-wrap:anywhere;
     font:13px/20px "Geist Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   }
+  img.postImage {
+    width:100%;
+    height:auto;
+    border:1px solid var(--line);
+    border-radius:8px;
+    background:#fff;
+    display:block;
+  }
   button.copy,
   button.copyAll {
     justify-self:start;
@@ -316,6 +324,9 @@
     nav, .parts, .summary, .detailHead, .postHead { grid-template-columns:1fr; }
     .postType { text-align:left; }
   }
+.videoBox{margin:12px 0}
+.videoBox video{display:block;max-height:520px;max-width:100%;border-radius:8px;background:#000}
+.videoBox .dl{display:inline-block;margin-top:8px;font-weight:600}
 </style>
 </head>
 <body>
@@ -323,8 +334,8 @@
 <header>
   <div>
     <span class="status">Current target</span>
-    <h1>Multifamily Insiders post</h1>
-    <p class="micro">Copy it. Test it. We do not move on until you say done.</p>
+    <h1>Reddit post</h1>
+    <p class="micro">Every post is a draft until you approve its platform. Approved posts get marked READY.</p>
   </div>
   <div class="summary" aria-label="ready post counts">
     <div class="stat"><b id="platformCount">1</b><span>current</span></div>
@@ -342,71 +353,103 @@
 </footer>
 
 <script>
-const CURRENT_PLATFORM = "Multifamily Insiders";
+const CURRENT_PLATFORM = "Reddit";
 const PLATFORMS = [
   {
     name: "Multifamily Insiders",
     note: "Blogs, discussions",
     targets: ["Expert blogs", "Discussions"],
-    current: true,
     posts: [
       {
-        title: "Public signals discussion",
-        type: "blog or discussion",
+        title: "CraneSignal UGC video",
+        type: "video",
+        status: "posted Sep 21",
+        video: "assets/cranesignal-ugc-video.mp4",
         parts: {
-          title: `5 public signs an apartment owner may be changing its operating stack`,
-          post: `Most apartment prospecting starts too broad.
+          title: `How I know which apartment buildings to call before the decisions are made`,
+          post: `I sell to apartment buildings, so getting in early is the whole game. The reps who win call right when a property is about to make a decision, not six months after it settles in.
 
-Every building looks like a possible account until you know what changed.
+The signals are public. A permit gets filed. A building goes under construction. A property changes hands. Catching them the week they appear is the hard part, and that is what I recorded this short video about.
 
-I am watching for public signals that suggest an owner or operator may be rethinking the way a property runs:
+The site in the video is CraneSignal. It tracks public records weekly, and right now it specializes in software: it can tell whether a building already has a property-management system or has not picked one yet. I ask its agent for the best leads to sell software to, and I get back a list I can call, email, or text.
 
-1. Recent sale or new ownership
-2. Active permits
-3. New construction or lease up
-4. Management company change
-5. Visible software or resident tech changes
+It is free at the moment, so I am sharing it with the vendors here.
 
-None of those prove a property is buying.
-
-They just tell me where research should start.
-
-For people here who work around multifamily operations, what usually changes first after an acquisition: property manager, leasing workflow, accounting, maintenance, or software?`,
-          softContext: `I am building CraneSignal around this question, but I am trying to pressure test the signals before turning it into a pitch.`,
-          noLinkClose: `Curious what you would add or remove from the list.`
+For the operators and property managers: when a vendor calls you at exactly the right time, which signal tipped them off?`,
+          image: `images/mfi-post-hero.png`
         }
       }
     ]
   },
   {
-    name: "BiggerPockets",
-    note: "Investor forums",
-    targets: ["Real Estate Technology", "Managing Your Property", "Multifamily"],
-    posts: []
-  },
-  {
-    name: "Multi-Housing News",
-    note: "Guest viewpoint",
-    targets: ["Viewpoint", "Guest columns"],
-    posts: []
-  },
-  {
-    name: "Multifamily Dive",
-    note: "Trade media",
-    targets: ["Opinion", "Tech", "Operations"],
-    posts: []
-  },
-  {
-    name: "Multifamily Executive",
-    note: "Trade media",
-    targets: ["Owners", "Operators", "Developers"],
-    posts: []
+    name: "Reddit",
+    note: "Careful tests",
+    targets: ["r/PptyMgmtSoftware", "r/PropTech", "r/RealEstateTechnology", "r/PM_Nerdcore"],
+    current: true,
+    posts: [
+      {
+        title: "r/PptyMgmtSoftware feedback post",
+        type: "video + feedback request",
+        status: "draft",
+        video: "assets/cranesignal-ugc-video.mp4",
+        parts: {
+          title: `I detect which PMS a building runs, plus public switch signals. Fellow builders, what would make this useful vs misleading?`,
+          post: `I sell to the people who sell to apartments: maintenance software, inspection tools, resident apps. Their complaint is always the same shape: the prospect list is every apartment building in the state, so reps spend the week on accounts that were never in motion.
+
+I recorded a short walkthrough of what I built instead. From public sources only, CraneSignal tracks which property-management or resident-facing software a property runs, plus switch signals: recent sale, new owner or management company, permits, construction, lease-ups. The Texas tracker holds 1,876 buildings right now, and a few hundred have a live signal on them.
+
+Two questions for the people who build in this space:
+
+1. Would your sales team trust detected PMS from public traces? What earns that trust: a source link per claim, a confidence score, both?
+2. Where does this get misleading or unfair to the properties?
+
+I would rather be told it is a bad idea here than find out from a churned customer.`
+        }
+      }
+    ]
   },
   {
     name: "CREtech",
     note: "Proptech news",
     targets: ["News", "AI", "Built world"],
-    posts: []
+    posts: [
+      {
+        title: "Contributed article draft",
+        type: "proptech analysis",
+        status: "draft",
+        video: "assets/cranesignal-ugc-video.mp4",
+        parts: {
+          headline: `Proptech go-to-market is moving from lists to timing signals`,
+          pitch: `A contributed piece for CREtech News: how vertical SaaS sales teams in real estate are shifting from firmographic lists to operational-change signals. Working data: 1,876 Texas apartment buildings tracked with per-building signals and source links. Supporting asset: a short walkthrough video of the signal tracker.`,
+          body: `The standard playbook for selling software into apartments has been the same for years. Buy the list, sort by unit count, work it top down. Every vendor buys the same list, so the maintenance-software rep and the resident-app rep are calling the same 500 properties in the same week.
+
+What separates a win from a wasted call is timing. A building that changed hands last month, filed renovation permits, or swapped management companies is making decisions right now. A building run by the same team for a decade is not, whatever its unit count says.
+
+The public record already carries these signals: sales data, permit filings, management changes, lease-up announcements, and the software traces properties leave on their own websites. Aggregated for sales teams, they turn a 1,876-building list into a few hundred accounts worth calling this week. That is the direction vertical go-to-market is heading: fewer, better-timed accounts instead of bigger lists.`
+        }
+      }
+    ]
+  },
+  {
+    name: "PropTechBuzz",
+    note: "Proptech communities",
+    targets: ["Public communities"],
+    posts: [
+      {
+        title: "In-market signals question",
+        type: "video + community question",
+        status: "draft",
+        video: "assets/cranesignal-ugc-video.mp4",
+        parts: {
+          title: `What signal tells you a real estate account is actually in-market for a new vendor?`,
+          post: `I build a lead tool for teams selling software into apartments and recorded a short walkthrough of it.
+
+The signals I trust: a recent sale, a management company change, permits or renovation filings, a lease-up starting, and the software traces moving on a property's own website. Unit count tells me almost nothing.
+
+What is your earliest reliable sign that an account is worth a call this week?`
+        }
+      }
+    ]
   },
   {
     name: "CraneSignal Blog",
@@ -414,17 +457,21 @@ For people here who work around multifamily operations, what usually changes fir
     targets: ["Product blog", "SEO"],
     posts: [
       {
-        title: "First blog draft",
-        type: "blog post",
+        title: "Home base article draft",
+        type: "blog post with video",
+        status: "draft",
+        video: "assets/cranesignal-ugc-video.mp4",
         parts: {
-          headline: `Which apartment accounts changed recently?`,
-          body: `Most apartment prospecting starts too broad.
+          headline: `How to find apartment accounts worth calling`,
+          body: `The short version is the video above. The long version is below.
 
-CraneSignal starts with change.
+Every apartment list on the market sorts buildings the same way: by units, by owner, by metro. Useful for size. Useless for timing.
 
-A building that sold, filed a permit, changed ownership, or started construction is not automatically a buyer.
+A building that sold last month is a different animal from one run by the same team for a decade. The first is making decisions right now about management, leasing, maintenance, and software. The second is not.
 
-It is a better place to start research than a stale list.`
+CraneSignal tracks the changes. Recent sales and new owners, permit filings, construction starts, lease-ups, management company changes, and the software traces a property leaves on its own website. The Texas tracker holds 1,876 apartment buildings today, and a few hundred have a live signal on them.
+
+Every lead carries its sources, so you can check each claim before you call. Browsing is free. A free account unlocks who-to-call research, CSV export, and call list PDFs.`
         }
       }
     ]
@@ -433,13 +480,52 @@ It is a better place to start research than a stale list.`
     name: "Substack",
     note: "Public posts",
     targets: ["Profile posts", "Publication"],
-    posts: []
+    posts: [
+      {
+        title: "Week one founder note",
+        type: "public post with video",
+        status: "draft",
+        video: "assets/cranesignal-ugc-video.mp4",
+        parts: {
+          title: `Apartment switch signals, week one`,
+          body: `This is week one of a public notebook about apartment switch signals, and it comes with a short video: the practical version of what I am building.
+
+I spend my days tracking Texas apartment buildings. The tracker holds 1,876 of them. The interesting number is smaller: a few hundred have a live signal right now, meaning something changed. A sale closed. A permit got filed. A management company swapped out. A lease-up started.
+
+That is the whole thesis of CraneSignal: software companies that sell to apartments do not need a bigger list. They need the shorter one, the buildings where something just moved.
+
+Each week I will write up what changed: which signals fired, what they were worth, and where the idea held up or broke. If you sell into apartments, or you build for the people who do, this note is for you.`
+        }
+      }
+    ]
   },
   {
     name: "Medium",
     note: "Public articles",
     targets: ["Real estate", "Proptech", "SaaS"],
-    posts: []
+    posts: [
+      {
+        title: "Shorter list article",
+        type: "public article with video",
+        status: "draft",
+        video: "assets/cranesignal-ugc-video.mp4",
+        parts: {
+          title: `Stop calling every apartment building. Call the ones that just changed.`,
+          subtitle: `How public sale, permit, and construction signals beat firmographic lists for multifamily software sales.`,
+          body: `The video is the short version of this argument. The article is the long one.
+
+Every software company selling into apartments works from the same giant list. All the buildings, all the owners, sorted by unit count.
+
+Timing is the part nobody sells. A building that changed hands last month behaves nothing like one that has been run by the same team for years, even though the unit count is identical. One has a new budget and open decisions about management, leasing, maintenance, and software. The other has a routine.
+
+The public record tells you which is which. Sales records show a new owner. Permit filings show renovation work starting. Lease-up announcements show a property chasing occupancy. A property's own website shows which management software it runs today.
+
+Put those together and a 1,876-building tracker shrinks to a few hundred accounts worth calling this week. That is what I am building with CraneSignal: the shorter list, with a source link on every claim so you can check before you call.
+
+It is free while I build it. If you sell software to apartments, I want to know what signal you would add.`
+        }
+      }
+    ]
   },
   {
     name: "LinkedIn",
@@ -447,41 +533,33 @@ It is a better place to start research than a stale list.`
     targets: ["Articles", "Newsletter", "Real Estate"],
     posts: [
       {
-        title: "Which building would you call first",
+        title: "CraneSignal UGC video",
+        status: "posted Sep 21",
         type: "native video",
+        video: "assets/cranesignal-ugc-video.mp4",
         parts: {
-          caption: `1,876 apartment buildings is too many to call.
+          caption: `3 apartment buildings opening in the next 30 days. Each with a phone number. That's what one question got me.
 
-If I sold software or services into apartments, I would start with one question:
+The question: "What are the best leads to sell software to right now?"
 
-What changed recently?
+I asked the agent inside CraneSignal, a free site that tracks new apartment buildings through public records. Permits, construction, recent sales. The signals that show up months before a "now leasing" banner does.
 
-Sale, permit, new owner, new project.
+It came back with three buildings: one near Houston, one in Waco, one in Dallas-Fort Worth. Opening Sep 30, Oct 1, and Oct 15. Each with the contact from the building's permit record.
 
-That does not prove they are buying. It tells me which buildings are worth researching before I write the pitch.
+If you sell to apartment buildings, you know why those dates matter. A building that hasn't opened yet is still making decisions. A building that opened last year already made them.
 
-That is what I am building with CraneSignal. Browsing is free. A free account unlocks who to call and downloads.`,
-          firstComment: `Free early access: cranesignal.com`,
-          videoTitle: `Which apartment building would you call first?`
-        }
-      },
-      {
-        title: "Long post seed",
-        type: "article",
-        parts: {
-          headline: `The apartment leads I would research before I pitch`,
-          body: `I do not want a giant apartment list first.
+I downloaded the whole call list as a PDF and picked who I'd call first.
 
-I want a smaller set of buildings where something changed.
+It tracks over 1,800 buildings right now, and it's free during early access.
 
-Recent sale.
-New owner.
-Permit.
-New construction.
+The full 60-second run is in the video.
 
-That does not prove the account is buying.
+What do you sell into apartments, and how early do you usually hear about a new building?
 
-It proves the account is worth researching before the pitch.`
+P.S. Link in the first comment.
+
+#multifamily`,
+          firstComment: `Try it free: cranesignal.com`
         }
       }
     ]
@@ -489,40 +567,44 @@ It proves the account is worth researching before the pitch.`
   {
     name: "X",
     note: "Public posts",
+    targets: ["Your profile", "Commercial Real Estate Community", "Real Estate Investor Network", "X Real Estate Community", "Real Estate Limited Partners Community"],
     posts: [
       {
-        title: "Short video post",
-        type: "native video",
+        title: "CraneSignal UGC video",
+        type: "video",
+        status: "draft",
+        video: "assets/cranesignal-ugc-video.mp4",
         parts: {
-          post: `1,876 apartment buildings is not a call list.
+          post: `I asked one question: "What are the best leads to sell software to right now?"
 
-It is a pile to narrow.
+Got back 3 apartment buildings opening in the next 30 days. Each with a phone number.
 
-I would start with buildings that recently sold or filed permits, then research who actually picks the software.`
+If you sell to apartments, that's the window. Before they open, they're still deciding.
+
+Full run in the video 👇`,
+          reply: `It's called CraneSignal. It tracks new apartment buildings from public records, and it's free right now: cranesignal.com`
         }
       }
     ]
-  },
-  {
-    name: "Reddit",
-    note: "Careful tests",
-    targets: ["r/realestateinvesting", "r/PptyMgmtSoftware", "r/PropertyManagement"],
-    posts: []
   },
   {
     name: "YouTube",
     note: "Shorts",
     posts: [
       {
-        title: "Shorts upload",
-        type: "short",
+        title: "CraneSignal UGC video",
+        type: "video",
+        status: "draft",
+        video: "assets/cranesignal-ugc-video.mp4",
         parts: {
-          title: `1,876 apartment buildings. Which one would you call first?`,
-          description: `CraneSignal is a free list of apartment buildings that recently sold, filed permits, or are being built.
+          title: `Find apartment leads before your competitors`,
+          description: `If you sell to apartment buildings, getting in early matters. CraneSignal tracks public records every week: building permits, construction, and recent sales, so you can call while the decision is still open.
 
-Browse free. Create a free account for who to call research, CSV export, and call list PDFs.
+Right now CraneSignal specializes in software leads: it can tell whether a building already has a property-management system or has not picked one yet. Ask its agent for the best leads to call first.
 
-Early access is free while I build it and I want feedback from people selling into apartments.`,
+Free during early access.
+
+cranesignal.com`,
           pinnedComment: `Try it free: cranesignal.com`
         }
       }
@@ -533,31 +615,12 @@ Early access is free while I build it and I want feedback from people selling in
     note: "Short video",
     posts: [
       {
-        title: "Short video caption",
+        title: "CraneSignal UGC video",
         type: "video",
+        status: "draft",
+        video: "assets/cranesignal-ugc-video.mp4",
         parts: {
-          caption: `I found the apartment leads I would research before pitching software.
-
-Recent sale. Permit. New owner.
-
-That is where I would start.`
-        }
-      }
-    ]
-  },
-  {
-    name: "Instagram",
-    note: "Reels",
-    posts: [
-      {
-        title: "Reel caption",
-        type: "video",
-        parts: {
-          caption: `A sale does not prove they are buying.
-
-It proves I should look closer.
-
-CraneSignal helps me find apartment buildings worth researching before I pitch.`
+          caption: `If you sell to apartment buildings: permits, construction, and recent sales, the week they happen. I call first. Free right now. cranesignal.com`
         }
       }
     ]
@@ -567,14 +630,12 @@ CraneSignal helps me find apartment buildings worth researching before I pitch.`
     note: "Public posts",
     posts: [
       {
-        title: "Page post",
+        title: "CraneSignal UGC video",
         type: "video",
+        status: "draft",
+        video: "assets/cranesignal-ugc-video.mp4",
         parts: {
-          caption: `New apartment sales and permits.
-
-Free list.
-
-Feedback wanted from people selling into apartments.`
+          caption: `If you sell to apartment buildings, getting in early matters. CraneSignal tracks permits, construction and recent sales every week, and you can ask its agent which leads to call first. Free right now. cranesignal.com`
         }
       }
     ]
@@ -584,14 +645,14 @@ Feedback wanted from people selling into apartments.`
     note: "Post",
     posts: [
       {
-        title: "Short post",
-        type: "native video",
+        title: "CraneSignal UGC video",
+        type: "video",
+        status: "draft",
+        video: "assets/cranesignal-ugc-video.mp4",
         parts: {
-          post: `I would not call all 1,876.
+          post: `Call the week the permit gets filed. That is the whole trick.
 
-I would start with the fresh ones.
-
-Sale. Permit. New owner.`
+CraneSignal tracks permits, construction and recent sales weekly. Free right now.`
         }
       }
     ]
@@ -609,18 +670,22 @@ function esc(value) {
 }
 
 function flattenPost(post) {
-  return Object.entries(post.parts).map(([label, value]) => `${label}\n${value}`).join("\n\n");
+  return Object.entries(post.parts).filter(([label]) => label !== "image").map(([label, value]) => `${label}\n${value}`).join("\n\n");
 }
 
 function labelName(label) {
   return label.replace(/([a-z])([A-Z])/g, "$1 $2").toLowerCase();
 }
 
+function isOpen(platform) {
+  return platform.current || platform.posts.some(post => post.video);
+}
+
 function renderPlatforms(activeName) {
   platforms.innerHTML = PLATFORMS.map(platform => `
-    <button class="platform ${platform.name === activeName ? "active" : ""} ${platform.current ? "" : "locked"}" data-platform="${esc(platform.name)}" ${platform.current ? "" : "aria-disabled=\"true\""}>
+    <button class="platform ${platform.name === activeName ? "active" : ""} ${isOpen(platform) ? "" : "locked"}" data-platform="${esc(platform.name)}" ${isOpen(platform) ? "" : "aria-disabled=\"true\""}>
       <span><strong>${esc(platform.name)}</strong><br><span>${esc(platform.note)}</span></span>
-      <span class="badge">${platform.current ? platform.posts.length : "next"}</span>
+      <span class="badge">${isOpen(platform) ? platform.posts.length : "next"}</span>
     </button>
   `).join("");
 }
@@ -643,15 +708,19 @@ function renderReady(platformName) {
       <article class="post">
         <div class="postHead">
           <h3>${esc(post.title)}</h3>
-          <div class="postType">${esc(post.type)}</div>
+          <div class="postType">${esc(post.type)} · ${esc((post.status || "draft").toUpperCase())}</div>
         </div>
+        ${post.video ? `<div class="videoBox"><video controls preload="metadata" playsinline src="${esc(post.video)}"></video><a class="dl" href="${esc(post.video)}" download>Download video</a></div>` : ""}
         <section class="parts">
           ${Object.entries(post.parts).map(([label, value], partIndex) => {
             const id = `part-${platform.name.replace(/\W+/g, "")}-${postIndex}-${partIndex}`;
+            const isImage = label === "image" || /\.(png|jpe?g|webp|gif)$/i.test(value);
             return `<div class="part">
               <div class="label">${esc(labelName(label))}</div>
-              <pre id="${id}">${esc(value)}</pre>
-              <button class="copy" data-copy="${id}">Copy</button>
+              ${isImage
+                ? `<img class="postImage" id="${id}" src="${esc(value)}" alt="post image">`
+                : `<pre id="${id}">${esc(value)}</pre>`}
+              <button class="copy" ${isImage ? `data-copy-image="${esc(value)}"` : `data-copy="${id}"`}>${isImage ? "Copy image" : "Copy"}</button>
             </div>`;
           }).join("")}
         </section>
@@ -664,17 +733,33 @@ platforms.addEventListener("click", event => {
   const button = event.target.closest("[data-platform]");
   if (!button) return;
   const platform = PLATFORMS.find(item => item.name === button.dataset.platform);
-  if (!platform?.current) return;
+  if (!platform || !isOpen(platform)) return;
   renderReady(button.dataset.platform);
 });
 
 ready.addEventListener("click", event => {
   const copyId = event.target.dataset.copy;
+  const copyImageSrc = event.target.dataset.copyImage;
   const platformName = event.target.dataset.platformAll;
   if (copyId) {
     navigator.clipboard.writeText(document.getElementById(copyId).textContent);
     event.target.textContent = "Done";
     setTimeout(() => event.target.textContent = "Copy", 900);
+  }
+  if (copyImageSrc) {
+    const button = event.target;
+    fetch(copyImageSrc)
+      .then(response => response.blob())
+      .then(blob => navigator.clipboard.write([new ClipboardItem({ "image/png": blob })]))
+      .then(() => {
+        button.textContent = "Image copied";
+        setTimeout(() => button.textContent = "Copy image", 1400);
+      })
+      .catch(() => {
+        window.open(copyImageSrc, "_blank");
+        button.textContent = "Opened in tab, right-click it";
+        setTimeout(() => button.textContent = "Copy image", 2600);
+      });
   }
   if (platformName) {
     const platform = PLATFORMS.find(item => item.name === platformName);
