@@ -41,9 +41,17 @@ def test_toggle_opens_and_closes_without_replacing_filter_controls():
 
 
 def test_state_and_region_pills_remain_outside_the_fold():
+    """Picking a state or a metro must not be hidden behind the filters fold -- they are how
+    a first-time visitor gets to their own market at all.
+
+    Asserted on the rendered label rather than the template that produces it: the Region
+    label used to be a ternary and is now a plain string, which silently broke this test
+    without changing anything a visitor sees.
+    """
     disclosure = INDEX.index('<div class="filters-disclosure">')
-    assert INDEX.index('class="pick-row"><span class="pick-label">State</span>') < disclosure
-    assert INDEX.index('"Region"}</span>') < disclosure  # "State" when the All tab is open
+    for label in ("State", "Region"):
+        assert f'<span class="pick-label">{label}</span>' in INDEX, label
+        assert INDEX.index(f'<span class="pick-label">{label}</span>') < disclosure, label
 
 
 def test_existing_filter_listeners_are_unchanged():

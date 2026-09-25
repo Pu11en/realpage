@@ -113,14 +113,44 @@ files and the illusion of progress.
   thin-content penalty. A loop that "adds pages when data grows" would walk straight into it.
 - **Anything that emails a green summary.** See the rule at the top.
 
+## Loop 0, which was missing: run the tests at all
+
+Written 2026-09-25 as `docs/plans/drafts/tests.yml.draft`, and it goes first because every
+other loop assumes a green suite and there was not one.
+
+There was **no CI in this repo**, and `tooling/qa/check-seo.sh` runs a single test file. So
+nothing ran `tooling/qa/fixes_tests/` end to end, and **eight tests had been red for four
+days** without anyone knowing:
+
+- Three were stale assertions against `site/index.html`, all traceable to deliberate product
+  changes that never reached the tests — `7ec4b52` and `e8d956c` un-gated the PDF and the
+  spreadsheet, and a template refactor turned the Region pill's label from a ternary into a
+  plain string. The behaviour was fine; the tests described code that no longer existed.
+- Five failed only because **Node and Caddy are absent on Windows**, so on David's machine
+  the suite could never be green. That is the worse half: it made the three real reds
+  invisible, and it is exactly the "trains everyone to ignore red" failure this plan warns
+  about in its first paragraph.
+
+Those five now **skip** when the tool is missing, and `CRANESIGNAL_REQUIRE_TOOLS=1` turns the
+skip back into a failure — set in CI, where the tools are there and a skip would be hiding
+something. Same shape as `check-seo.sh --live-required`.
+
+**This one is safe to arm, unlike loop 1's.** It only reads — no commit, no deploy, no
+secret — so there is nothing to decide. It sits in `drafts/` only because GitHub refuses a
+push that adds a workflow file unless the token has the `workflow` scope, and the session
+token does not. Copying it to `.github/workflows/tests.yml` from a normal sign-in is the
+whole job. Loop 1's freshness workflow stays drafted for the real reason instead: it commits
+to `main`.
+
 ## Order to build
 
-1. **Loop 2, the guard, first.** It is the cheapest, it has already proven necessary today,
+1. **Loop 0.** The suite is green (552 passing, 16 skipped). One `cp` away from running in CI.
+2. **Loop 2, the guard, next.** It is the cheapest, it has already proven necessary today,
    and it protects everything else. Half an hour.
-2. **Loop 1, freshness.** Bigger, and it commits to `main`, so it wants the guard in place
+3. **Loop 1, freshness.** Bigger, and it commits to `main`, so it wants the guard in place
    first to catch it if it ships something wrong.
-3. **Loop 3** folded into loop 2 as an extra check.
-4. **Loop 4** is a reminder, not code.
+4. **Loop 3** folded into loop 2 as an extra check.
+5. **Loop 4** is a reminder, not code.
 
 ## Open questions, genuinely open
 

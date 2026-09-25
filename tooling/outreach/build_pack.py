@@ -215,6 +215,8 @@ def main() -> int:
     parser.add_argument("--metro", help="limit to one metro, e.g. Houston")
     parser.add_argument("--for", dest="for_whom", help="vendor name, printed on the pack")
     parser.add_argument("--limit", type=int, default=15)
+    parser.add_argument("--out", type=Path, default=OUT,
+                        help=f"where to write it (default {OUT.relative_to(ROOT).as_posix()})")
     parser.add_argument("--list", action="store_true", help="show the profiles and stop")
     args = parser.parse_args()
 
@@ -247,7 +249,7 @@ def main() -> int:
         name_bits.append(args.metro.lower().replace(" ", "-"))
     if args.for_whom:
         name_bits.append(args.for_whom.lower().replace(" ", "-"))
-    path = OUT / f"{'-'.join(name_bits)}.html"
+    path = args.out / f"{'-'.join(name_bits)}.html"
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(
         render(shown, profile, args.profile, updated, args.for_whom, args.metro, len(matched)),
@@ -255,7 +257,8 @@ def main() -> int:
     )
 
     with_phone = sum(1 for lead in shown if lead.get("officePhone"))
-    print(f"wrote {path.relative_to(ROOT).as_posix()}")
+    shown_path = path.relative_to(ROOT).as_posix() if path.is_relative_to(ROOT) else path
+    print(f"wrote {shown_path}")
     print(f"  {len(shown)} of {len(matched)} matching buildings, {with_phone} with a phone")
     print("  open it in a browser and print to PDF to attach")
     return 0

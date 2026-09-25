@@ -35,6 +35,7 @@ def test_view_as_menu_is_gone():
 
 
 
+@pytest.mark.skipif(not shutil.which("node"), reason="node not installed")
 def test_format_updated():
     fn = "function formatUpdated" + APP.split("function formatUpdated", 1)[1].split("\n}\n", 1)[0] + "\n}\n"
     out = subprocess.run(["node", "-e", fn + "console.log(formatUpdated('2026-09-15'), '|', formatUpdated(''))"],

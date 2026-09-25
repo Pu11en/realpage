@@ -1,9 +1,11 @@
 """Build C T2: a signed-in visitor can download a sourced PDF for every lead in one region."""
 
 import json
+import shutil
 import subprocess
 from pathlib import Path
 
+import pytest
 from pypdf import PdfReader
 
 
@@ -32,6 +34,7 @@ def test_downloads_need_no_account():
     assert "sendPendingAuthAction(panel)" in panel
 
 
+@pytest.mark.skipif(not shutil.which("node"), reason="node not installed")
 def test_dallas_lead_pack_has_one_complete_linked_row_per_lead(tmp_path):
     tx = json.loads((SITE / "data" / "areas" / "tx.json").read_text(encoding="utf-8"))
     leads = [lead for lead in tx["leads"] if lead.get("metro") == "Dallas–Fort Worth"]
