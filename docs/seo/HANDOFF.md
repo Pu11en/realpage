@@ -22,31 +22,44 @@ page `cranesignal.com` is the only piece left, and its fixes are written and wai
 Crawler's-eye check on the live site: `/leads/tx/houston.html` returns **3,905 body words**
 with exactly one script tag, and that one is the JSON-LD. Before this it returned nothing.
 
-**Waiting on the landing page.** Its repo is not on GitHub — I searched all 100 repos under
-`Pu11en` and the full-text index, and git history here only holds an old investor version, not
-what is live. It exists as a folder on whichever machine deploys it.
+**Landing page: merged, not deployed.** Now at https://github.com/Pu11en/cranesignal-landing,
+PR #1 merged. It deploys by Railway CLI from local, so it needs one `railway up` run — see below.
 
 ## What is left to do
 
-### 1. The landing page — files are finished, someone just has to drop them in
+### 1. The landing page — merged, waiting on a deploy
 
-`docs/seo/landing-page-ready/` holds four files. `index.html` **is** the live page with only
-the `<head>` changed — same design, same copy, body byte-identical, 739 words either way.
+**Done 2026-09-25.** DrewAI found it at `/home/drewp/main-projects/realpage/business` (already a
+git repo, no remote) and pushed it to **https://github.com/Pu11en/cranesignal-landing**.
+PR #1 there is **merged into `main`**: the head metadata, the JSON-LD, and robots.txt,
+sitemap.xml, llms.txt in `marketing/landing/`.
 
-- Copy `index.html` over `marketing/landing/index.html`.
-- Put `robots.txt`, `sitemap.xml`, `llms.txt` at the site root.
-- Deploy, then Search Console → Sitemaps → `https://cranesignal.com/sitemap.xml`.
+**It is not live yet.** `cranesignal.com` deploys by **Railway CLI from local**, not from a git
+remote, so merging did nothing to the running site. Someone with the Railway login has to run,
+from inside `marketing/landing` on a machine with the repo:
 
-Full instructions in `docs/seo/landing-page-ready/README.md`.
+```bash
+git pull
+railway up --service propertystack-landing --ci
+```
 
-**Or**: push that repo to GitHub under `Pu11en` and this can be a PR instead. A lounge note
-asking DrewAI to do it was posted 2026-09-25 (id 42); no session was live on that machine at
-the time, so it is unread.
+Then:
 
-**Why it matters more than it looks:** the live landing page has **no JSON-LD at all**.
-Nothing on the brand domain declares CraneSignal is an organisation, or that `cranesignal.com`
-and `app.cranesignal.com` are the same outfit. To a model they read as two unrelated sites
-sharing a name. The app already ships its half (`sameAs` → cranesignal.com, live).
+```bash
+for p in /robots.txt /sitemap.xml /llms.txt; do
+  printf "%-14s " "$p"; curl -s -o /dev/null -w "%{http_code}
+" "https://cranesignal.com$p"
+done
+```
+
+and Search Console → Sitemaps → `https://cranesignal.com/sitemap.xml`. The domain is already
+verified, so this only adds the sitemap.
+
+Notes from doing it: the repo's `index.html` carries a `{{LEAD_SUMMARY}}` placeholder that
+`server.py` fills at request time, so it must be patched rather than a copy of the live HTML.
+`tools/test_landing.py --offline` gives results identical to `main` — the same 6 pre-existing
+failures, none new. Those are three summary-refresh checks (a `file://` summary URL that does
+not resolve on Windows) and one real "no em dashes" failure that predates this work.
 
 ### 2. Re-measure on 2026-10-09 — two weeks after deploy
 
