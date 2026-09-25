@@ -20,15 +20,23 @@ Allow: /
 User-agent: ChatGPT-User
 Allow: /
 
-# Anthropic
+# Anthropic training
 User-agent: ClaudeBot
 Allow: /
 
-# Anthropic
+# Anthropic search index -- citations in Claude
+User-agent: Claude-SearchBot
+Allow: /
+
+# Claude fetching a page to answer a question right now
+User-agent: Claude-User
+Allow: /
+
+# Anthropic, older name
 User-agent: Claude-Web
 Allow: /
 
-# Anthropic
+# Anthropic, older name
 User-agent: anthropic-ai
 Allow: /
 

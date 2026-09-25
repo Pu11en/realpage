@@ -235,6 +235,27 @@ def answer_block(place: str, s: dict, updated: str) -> str:
 # ---------------------------------------------------------------- html rendering
 
 
+def fit_title(title: str, limit: int = 60) -> str:
+    """Keep titles inside the length a search result actually shows.
+
+    Google cuts the title at roughly 60 characters, so anything past that is spent, and
+    the place name is what matters most here. Rather than hand-trim one page, drop the
+    least informative words in a fixed order until it fits.
+    """
+    if len(title) <= limit:
+        return title
+    for long, short in (
+        ("Multifamily Construction Pipeline", "Multifamily Pipeline"),
+        ("Apartment Construction and Sales", "Apartment Construction"),
+        ("Apartment Construction Pipeline", "Apartment Pipeline"),
+    ):
+        if long in title:
+            title = title.replace(long, short)
+            if len(title) <= limit:
+                return title
+    return title
+
+
 def page_shell(title: str, description: str, canonical: str, jsonld: str, body: str,
                depth: int) -> str:
     """One static page. No JavaScript is required to read it.
@@ -252,15 +273,19 @@ def page_shell(title: str, description: str, canonical: str, jsonld: str, body: 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="icon" type="image/svg+xml" href="/static/favicon.svg">
   <link rel="apple-touch-icon" href="/static/apple-touch-icon.png">
-  <title>{title}</title>
+  <title>{fit_title(title)}</title>
   <meta name="description" content="{description}">
   <link rel="canonical" href="{canonical}">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="CraneSignal">
-  <meta property="og:title" content="{title}">
+  <meta property="og:title" content="{fit_title(title)}">
   <meta property="og:description" content="{description}">
   <meta property="og:url" content="{canonical}">
+  <meta property="og:image" content="{HOST}/img/og-default.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="{HOST}/img/og-default.png">
   <link rel="stylesheet" href="/css/styles.css" />
   <script type="application/ld+json">
 {jsonld}
@@ -278,6 +303,9 @@ def page_shell(title: str, description: str, canonical: str, jsonld: str, body: 
     .static-page .facts b {{ display: block; font-size: 20px; }}
     .static-page nav.crumbs {{ font-size: 12px; margin-bottom: 14px; }}
     .static-page .sibs {{ font-size: 13px; line-height: 1.9; }}
+    .static-page .faq {{ max-width: 80ch; font-size: 14px; }}
+    .static-page .faq dt {{ font-weight: 600; margin-top: 14px; }}
+    .static-page .faq dd {{ margin: 4px 0 0; line-height: 1.55; }}
     .static-page footer {{ margin-top: 40px; font-size: 12px; color: var(--text-muted); }}
   </style>
 </head>
@@ -424,8 +452,106 @@ def breakdowns(s: dict, place: str) -> str:
     return "\n".join(out)
 
 
+def faq_for(place: str, s: dict, updated: str) -> list[tuple[str, str]]:
+    """Real questions with answers computed from this page's own rows.
+
+    Answer engines do not summarise a page, they lift the sentence that is the answer, so
+    each one is a standalone statement carrying its own subject, number and as-of date. The
+    text here is rendered visibly *and* emitted as FAQPage JSON-LD, character for character
+    -- LD that says something the page does not show is treated as spam.
+    """
+    when = fmt_date(updated)
+    qa: list[tuple[str, str]] = []
+
+    building = s["stages"].get("under construction", 0)
+    if building:
+        qa.append((
+            f"How many apartment buildings in {place} are under construction?",
+            f"{building:,} of the {s['count']:,} apartment buildings CraneSignal tracks in "
+            f"{place} are under construction, as of {when}.",
+        ))
+
+    permitted = s["stages"].get("permitted", 0) + s["stages"].get("planned", 0)
+    if permitted:
+        qa.append((
+            f"How many new apartment projects are planned or permitted in {place}?",
+            f"{permitted:,} are permitted or planned but not yet under construction in "
+            f"{place}, as of {when}.",
+        ))
+
+    if s["sold"]:
+        newest = max(s["sales_by_year"]) if s["sales_by_year"] else None
+        extra = (
+            f", {s['sales_by_year'][newest]:,} of them in {newest}" if newest else ""
+        )
+        qa.append((
+            f"How many apartment complexes in {place} have recently changed owner?",
+            f"{s['sold']:,} apartment buildings in {place} have a recorded sale{extra}, "
+            f"as of {when}.",
+        ))
+
+    if s["biggest"]:
+        top = s["biggest"][0]
+        name = pretty(top.get("community") or top.get("property")) or "an unnamed project"
+        where = top.get("_city") or top.get("city") or place
+        qa.append((
+            f"What is the largest apartment project in {place}?",
+            f"{name} in {where} is the largest on this page at "
+            f"{int(top['units']):,} units, currently {top.get('stage') or 'unrecorded'}.",
+        ))
+
+    if s["opening_by_year"]:
+        year = min(y for y in s["opening_by_year"] if y >= str(date.today().year)) \
+            if any(y >= str(date.today().year) for y in s["opening_by_year"]) \
+            else max(s["opening_by_year"])
+        qa.append((
+            f"When do the next apartment buildings in {place} open?",
+            f"{s['opening_by_year'][year]:,} buildings in {place} have an expected opening "
+            f"date in {year}. Opening dates come from the construction record and move when "
+            f"that record moves.",
+        ))
+
+    qa.append((
+        f"Where does this {place} apartment data come from?",
+        "Public records only: state and city construction permits, county appraisal-district "
+        "sale records, and public announcements. Every building on this page links the record "
+        "it came from, and a fact with no source is left blank rather than guessed.",
+    ))
+    return qa[:5]
+
+
+def faq_html(qa: list[tuple[str, str]]) -> str:
+    out = ["    <h2>Questions about this list</h2>", '    <dl class="faq">']
+    for question, answer in qa:
+        out.append(f"      <dt>{esc(question)}</dt>")
+        out.append(f"      <dd>{esc(answer)}</dd>")
+    out.append("    </dl>")
+    return "\n".join(out)
+
+
+def breadcrumb_items(crumbs_html: str, here: str, canonical: str) -> list[dict]:
+    """BreadcrumbList built from the same links the page shows, so the two cannot diverge."""
+    items = []
+    for href, label in re.findall(r'<a href="([^"]+)">([^<]+)</a>', crumbs_html):
+        url = href if href.startswith("http") else f"{HOST}{href}"
+        items.append({
+            "@type": "ListItem",
+            "position": len(items) + 1,
+            "name": html.unescape(label),
+            "item": url,
+        })
+    items.append({
+        "@type": "ListItem",
+        "position": len(items) + 1,
+        "name": html.unescape(re.sub(r"<[^>]+>", "", here)),
+        "item": canonical,
+    })
+    return items
+
+
 def jsonld_for(name: str, description: str, canonical: str, leads: list[dict],
-               updated: str) -> str:
+               updated: str, faq: list[tuple[str, str]] | None = None,
+               crumbs: list[dict] | None = None) -> str:
     """Dataset for the collection, ItemList for the rows.
 
     ItemList is capped: the point is to describe the list to a machine, not to restate
@@ -449,26 +575,43 @@ def jsonld_for(name: str, description: str, canonical: str, leads: list[dict],
         if item["description"] is None:
             del item["description"]
 
-    payload = {
-        "@context": "https://schema.org",
-        "@graph": [
-            {
-                "@type": "Dataset",
-                "name": name,
-                "description": description,
-                "url": canonical,
-                "isAccessibleForFree": True,
-                "dateModified": updated,
-                "creator": {"@type": "Organization", "name": "CraneSignal", "url": HOST},
-            },
-            {
-                "@type": "ItemList",
-                "name": name,
-                "numberOfItems": len(leads),
-                "itemListElement": items,
-            },
-        ],
-    }
+    # One Organization for the whole site, referenced by @id. Declaring a fresh
+    # Organization on every page splits the entity, which is the thing LLMO is trying to
+    # avoid: the model ends up unsure that these pages are all the same outfit.
+    graph = [
+        {
+            "@type": "Dataset",
+            "name": name,
+            "description": description,
+            "url": canonical,
+            "isAccessibleForFree": True,
+            "dateModified": updated,
+            "creator": {"@id": f"{HOST}/#org"},
+            "publisher": {"@id": f"{HOST}/#org"},
+        },
+        {
+            "@type": "ItemList",
+            "name": name,
+            "numberOfItems": len(leads),
+            "itemListElement": items,
+        },
+    ]
+    if crumbs:
+        graph.append({"@type": "BreadcrumbList", "itemListElement": crumbs})
+    if faq:
+        graph.append({
+            "@type": "FAQPage",
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": question,
+                    "acceptedAnswer": {"@type": "Answer", "text": answer},
+                }
+                for question, answer in faq
+            ],
+        })
+
+    payload = {"@context": "https://schema.org", "@graph": graph}
     text = json.dumps(payload, indent=2)
     return "\n".join("  " + line for line in text.splitlines())
 
@@ -504,6 +647,8 @@ def render_page(*, title, h1, description, canonical, depth, place, leads, updat
             "mean the record does not say, never that we guessed."
         )
     body += [f"    <h2>{heading}</h2>", f"    <p>{note}</p>", table(shown, sold_view)]
+    faq = faq_for(place, s, updated)
+    body.append(faq_html(faq))
     if siblings:
         body += ["    <h2>Nearby and related</h2>", f'    <p class="sibs">{siblings}</p>']
     body += [
@@ -515,7 +660,11 @@ def render_page(*, title, h1, description, canonical, depth, place, leads, updat
         f'      <a href="{LANDING}">CraneSignal home</a>',
         "    </footer>",
     ]
-    jsonld = jsonld_for(h1, description, canonical, leads, updated)
+    jsonld = jsonld_for(
+        h1, description, canonical, leads, updated,
+        faq=faq,
+        crumbs=breadcrumb_items(crumbs, h1, canonical),
+    )
     return page_shell(title, description, canonical, jsonld, "\n".join(body), depth)
 
 
@@ -590,7 +739,7 @@ def build_all() -> dict[Path, str]:
 
         s = summarise(leads)
         pages[OUT / f"{slug}.html"] = render_page(
-            title=f"{label} Apartment Construction Pipeline and Recent Sales | CraneSignal",
+            title=f"{label} Apartment Construction Pipeline | CraneSignal",
             h1=f"{esc(label)} apartment construction pipeline and recent sales",
             description=(
                 f"{s['count']:,} apartment buildings in {label} that are planned, permitted, "
@@ -626,7 +775,7 @@ def build_all() -> dict[Path, str]:
                 sib_bits.append("Cities here: " + " &middot; ".join(in_metro))
 
             pages[OUT / slug / f"{slugify(metro)}.html"] = render_page(
-                title=f"{metro} Multifamily Construction Pipeline and Apartment Sales | CraneSignal",
+                title=f"{metro} Multifamily Construction Pipeline | CraneSignal",
                 h1=f"{esc(metro)} multifamily construction pipeline and apartment sales",
                 description=(
                     f"{ms['count']:,} apartment buildings across {metro}: "
@@ -669,8 +818,7 @@ def build_all() -> dict[Path, str]:
                 sib_bits.append("Other cities: " + " &middot; ".join(peers))
 
             pages[OUT / slug / f"{slugify(city)}.html"] = render_page(
-                title=f"Apartment Buildings Under Construction and Recently Sold in "
-                      f"{city}, {label} | CraneSignal",
+                title=f"{city} Apartment Construction and Sales | CraneSignal",
                 h1=f"Apartment buildings under construction and recently sold in {esc(city)}",
                 description=(
                     f"{cs['count']:,} apartment buildings in {city}, {label}: "
@@ -696,7 +844,7 @@ def build_all() -> dict[Path, str]:
     ]
     if len(opening_next) >= CITY_MIN:
         pages[OUT / "opening-2027-2028.html"] = render_page(
-            title="Apartment Buildings Opening in 2027 and 2028 | CraneSignal",
+            title="Apartment Buildings Opening in 2027-2028 | CraneSignal",
             h1="Apartment buildings expected to open in 2027 and 2028",
             description=(
                 f"{len(opening_next):,} apartment buildings with expected opening dates in "
@@ -727,7 +875,7 @@ def build_all() -> dict[Path, str]:
         sold_rows = [l for l in all_leads if l.get("saleDate") and str(l["saleDate"])[:4] == target]
         if len(sold_rows) >= CITY_MIN:
             pages[OUT / f"sold-{target}.html"] = render_page(
-                title=f"Apartment Complexes That Changed Owner in {target} | CraneSignal",
+                title=f"Apartment Complexes Sold in {target} | CraneSignal",
                 h1=f"Apartment complexes that changed owner in {target}",
                 description=(
                     f"{len(sold_rows):,} apartment buildings with a recorded {target} sale, "

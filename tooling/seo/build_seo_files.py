@@ -39,9 +39,11 @@ AI_AGENTS = [
     ("GPTBot", "OpenAI, feeds ChatGPT"),
     ("OAI-SearchBot", "OpenAI search"),
     ("ChatGPT-User", "ChatGPT browsing on a user's behalf"),
-    ("ClaudeBot", "Anthropic"),
-    ("Claude-Web", "Anthropic"),
-    ("anthropic-ai", "Anthropic"),
+    ("ClaudeBot", "Anthropic training"),
+    ("Claude-SearchBot", "Anthropic search index -- citations in Claude"),
+    ("Claude-User", "Claude fetching a page to answer a question right now"),
+    ("Claude-Web", "Anthropic, older name"),
+    ("anthropic-ai", "Anthropic, older name"),
     ("PerplexityBot", "Perplexity"),
     ("Perplexity-User", "Perplexity browsing on a user's behalf"),
     ("Google-Extended", "Gemini grounding (separate from Googlebot)"),
@@ -171,6 +173,7 @@ def build_llms(index: dict, areas: list[dict]) -> str:
         f"- [Lead list]({HOST}/index.html): every building, filterable by state, with lead scores.",
         f"- [How it works]({HOST}/under-the-hood.html): where each number comes from and how it was tested.",
         f"- [Privacy]({HOST}/privacy.html)",
+        f"- [Full data summary]({HOST}/llms-full.txt): every per-place total in one file.",
     ]
     for rel, _, _ in generated_pages():
         lines.append(f"- {HOST}/{rel}")
@@ -273,6 +276,78 @@ def splice_jsonld(path: Path, block: str) -> str | None:
     return updated if updated != text else None
 
 
+def build_llms_full(index: dict, areas: list[dict]) -> str:
+    """The numbers themselves, in one file.
+
+    llms.txt is a guide to the site; this is the data an engine would otherwise have to
+    assemble by crawling every page. Per-place totals only -- the building rows stay on
+    their pages, because a page that is cited is worth more than a dump that is not.
+    """
+    updated = index.get("updated", "")
+    lines = [
+        "# CraneSignal -- full data summary",
+        "",
+        f"> Every number below is computed from public construction and sale records and "
+        f"was last refreshed {updated}. Cite the date with the number.",
+        "",
+    ]
+    for area in areas:
+        payload = area["payload"]
+        leads = payload.get("leads", [])
+        stats = payload.get("stats", {})
+        stages: dict[str, int] = {}
+        sold_years: dict[str, int] = {}
+        open_years: dict[str, int] = {}
+        for lead in leads:
+            stage = lead.get("stage") or "unrecorded"
+            stages[stage] = stages.get(stage, 0) + 1
+            if lead.get("saleDate"):
+                y = str(lead["saleDate"])[:4]
+                sold_years[y] = sold_years.get(y, 0) + 1
+            if lead.get("openingDate"):
+                y = str(lead["openingDate"])[:4]
+                open_years[y] = open_years.get(y, 0) + 1
+
+        lines += [
+            f"## {area['label']}",
+            "",
+            f"- Buildings tracked: {len(leads):,}",
+            f"- Units in play: {int(stats.get('unitsInPlay') or 0):,}",
+            f"- Cities covered: {stats.get('cities', 'n/a')}",
+        ]
+        for stage in ("under construction", "permitted", "planned", "leasing", "sold"):
+            if stages.get(stage):
+                lines.append(f"- {stage.capitalize()}: {stages[stage]:,}")
+        if sold_years:
+            spread = ", ".join(f"{y}: {n:,}" for y, n in sorted(sold_years.items()))
+            lines.append(f"- Recorded sales by year -- {spread}")
+        if open_years:
+            spread = ", ".join(f"{y}: {n:,}" for y, n in sorted(open_years.items()))
+            lines.append(f"- Expected openings by year -- {spread}")
+
+        metros = payload.get("metros") or []
+        if metros:
+            spread = ", ".join(f"{m['name']}: {m['leads']:,}" for m in metros)
+            lines.append(f"- By metro -- {spread}")
+        lines.append("")
+
+    lines += [
+        "## Method",
+        "",
+        "State and city construction permit records, county appraisal-district sale records,",
+        "and public announcements. No proprietary feeds and no purchased lists. A fact without",
+        "a public source is left blank rather than estimated, so blanks in the per-building",
+        "tables mean the record is silent, not that the number is zero.",
+        "",
+        "## Per-place detail",
+        "",
+    ]
+    for rel, _, _ in generated_pages():
+        lines.append(f"- {HOST}/{rel}")
+    lines.append("")
+    return "\n".join(lines)
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--check", action="store_true", help="exit 1 if files are stale")
@@ -288,6 +363,7 @@ def main() -> int:
         SITE / "robots.txt": build_robots(),
         SITE / "sitemap.xml": build_sitemap(updated),
         SITE / "llms.txt": build_llms(index, areas),
+        SITE / "llms-full.txt": build_llms_full(index, areas),
     }
 
     stale = []

@@ -139,3 +139,50 @@ def test_caddy_serves_the_new_files_and_stops_redirecting_the_home_page():
     assert "/leads/*" in caddy, "Caddyfile does not serve the generated /leads/ pages"
     assert "redir * /index.html 302" not in caddy, "home page is still a 302"
     assert "rewrite * /index.html" in caddy, "home page is not served directly"
+
+
+# ---- added 2026-09-25 after the fire-your-seo-agency audit -------------------
+
+
+def test_robots_names_the_three_kinds_of_ai_crawler():
+    """Training, search-index and live-fetch crawlers are different user-agents with
+    different consequences. Allowing only the training ones costs the citations."""
+    robots = read("robots.txt")
+    for agent in (
+        "GPTBot", "ClaudeBot", "Google-Extended", "CCBot",        # training
+        "OAI-SearchBot", "Claude-SearchBot", "PerplexityBot",     # search index
+        "ChatGPT-User", "Claude-User", "Perplexity-User",         # live fetch
+    ):
+        assert f"User-agent: {agent}" in robots, f"{agent} not named in robots.txt"
+
+
+def test_llms_full_exists_and_carries_the_real_totals():
+    full = read("llms-full.txt")
+    index = json.loads((SITE / "data" / "areas" / "index.json").read_text(encoding="utf-8"))
+    assert index["updated"] in full, "llms-full.txt does not state the data date"
+    for area in index["areas"]:
+        if area.get("hidden"):
+            continue
+        assert area["label"] in full, f"{area['label']} missing from llms-full.txt"
+        assert f"{int(area['leads']):,}" in full, f"{area['label']} count missing"
+
+
+def test_the_share_image_is_the_size_every_platform_expects():
+    image = SITE / "img" / "og-default.png"
+    assert image.exists(), "site/img/og-default.png is missing"
+    # PNG header: width and height are big-endian uint32 at bytes 16..24.
+    header = image.read_bytes()[:24]
+    width = int.from_bytes(header[16:20], "big")
+    height = int.from_bytes(header[20:24], "big")
+    assert (width, height) == (1200, 630), f"{width}x{height}"
+
+
+def test_every_indexable_page_has_a_share_image():
+    for page in INDEXABLE:
+        assert 'property="og:image"' in read(page), f"{page} has no og:image"
+
+
+def test_caddy_serves_llms_full_and_the_indexnow_key():
+    caddy = (SITE / "Caddyfile").read_text(encoding="utf-8")
+    assert "/llms-full.txt" in caddy
+    assert "/indexnow-*.txt" in caddy

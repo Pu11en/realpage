@@ -190,3 +190,71 @@ def test_county_rows_never_become_a_page():
     for path in pages():
         title = re.search(r"<title>(.*?)</title>", path.read_text(encoding="utf-8"), re.S).group(1)
         assert "County" not in title, f"{path.name}: {title}"
+
+
+# ---- added 2026-09-25 after the fire-your-seo-agency audit -------------------
+# The skill's checklists (.claude/skills/fire-your-seo-agency/references/en/) call out
+# four things the first pass missed: titles that fit a search result, a share image,
+# breadcrumb and FAQ schema, and one Organization entity rather than one per page.
+
+
+@pytest.mark.parametrize("path", pages(), ids=lambda p: p.name)
+def test_title_fits_in_a_search_result(path):
+    """Google cuts around 60 characters. Longer titles bury the place name behind
+    boilerplate, which is the one word the searcher typed."""
+    title = re.search(r"<title>(.*?)</title>", path.read_text(encoding="utf-8"), re.S).group(1)
+    assert len(title) <= 60, f"{path.name}: {len(title)} chars -- {title}"
+    assert title.endswith("| CraneSignal"), title
+
+
+@pytest.mark.parametrize("path", pages(), ids=lambda p: p.name)
+def test_page_has_a_share_image(path):
+    html_text = path.read_text(encoding="utf-8")
+    assert 'property="og:image"' in html_text, f"{path.name} has no og:image"
+    assert (SITE / "img" / "og-default.png").exists(), "the share image itself is missing"
+
+
+@pytest.mark.parametrize("path", pages(), ids=lambda p: p.name)
+def test_page_carries_breadcrumb_and_faq_schema(path):
+    block = re.search(
+        r'<script type="application/ld\+json">(.*?)</script>',
+        path.read_text(encoding="utf-8"), re.S,
+    )
+    types = [node["@type"] for node in json.loads(block.group(1))["@graph"]]
+    assert "BreadcrumbList" in types, f"{path.name} has visible crumbs but no BreadcrumbList"
+    assert "FAQPage" in types, f"{path.name} has no FAQPage"
+
+
+@pytest.mark.parametrize("path", pages(), ids=lambda p: p.name)
+def test_faq_schema_is_identical_to_the_visible_text(path):
+    """Structured data that says something the page does not show risks a spam verdict,
+    and it is the fastest way to lose the citation trust the whole plan depends on."""
+    import html as html_mod
+
+    raw = path.read_text(encoding="utf-8")
+    faq = next(
+        node for node in json.loads(
+            re.search(r'<script type="application/ld\+json">(.*?)</script>', raw, re.S).group(1)
+        )["@graph"] if node["@type"] == "FAQPage"
+    )
+    shown = raw.split('<dl class="faq">', 1)[1].split("</dl>", 1)[0]
+    shown = re.sub(r"\s+", " ", html_mod.unescape(re.sub(r"<[^>]+>", " ", shown)))
+    for question in faq["mainEntity"]:
+        for text in (question["name"], question["acceptedAnswer"]["text"]):
+            assert re.sub(r"\s+", " ", text) in shown, f"{path.name}: not on the page -- {text[:60]}"
+
+
+@pytest.mark.parametrize("path", pages(), ids=lambda p: p.name)
+def test_one_organization_entity_across_the_whole_site(path):
+    """Declaring a fresh Organization per page splits the entity, which is exactly what
+    makes a model unsure these pages are all the same outfit."""
+    block = re.search(
+        r'<script type="application/ld\+json">(.*?)</script>',
+        path.read_text(encoding="utf-8"), re.S,
+    )
+    graph = json.loads(block.group(1))["@graph"]
+    dataset = next(node for node in graph if node["@type"] == "Dataset")
+    assert dataset["creator"] == {"@id": f"{HOST}/#org"}, dataset["creator"]
+    assert not any(node["@type"] == "Organization" for node in graph), (
+        f"{path.name} declares its own Organization instead of referencing the site one"
+    )
