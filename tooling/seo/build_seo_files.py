@@ -22,6 +22,8 @@ SITE = ROOT / "site"
 DATA = SITE / "data"
 HOST = "https://app.cranesignal.com"
 LANDING = "https://cranesignal.com"
+# The brand's single identity, declared on the landing page and referenced here.
+ORG_ID = f"{LANDING}/#org"
 
 # Pages that belong in the sitemap, with how often they change and how much they
 # matter relative to each other. Anything not listed here is deliberately left out:
@@ -206,28 +208,28 @@ def build_jsonld(index: dict, areas: list[dict]) -> str:
 
     graph = [
         {
+            # CraneSignal lives on two hosts: the landing page at cranesignal.com and this
+            # app. The canonical Organization is declared on the landing page, which went
+            # live 2026-09-25, so this is a WebPage-level reference to it rather than a
+            # second Organization node. Two nodes that merely agree are still two entities
+            # to a model; one @id used by both hosts is one entity.
             "@type": "Organization",
-            "@id": f"{HOST}/#org",
+            "@id": ORG_ID,
             "name": "CraneSignal",
-            "url": HOST,
+            "url": LANDING + "/",
             "logo": f"{HOST}/img/og-default.png",
             "description": (
                 "Sourced lead data on apartment buildings that are newly permitted, "
                 "under construction or recently sold."
             ),
-            # CraneSignal lives on two hosts: the landing page at cranesignal.com and this
-            # app. Without sameAs a model has no reason to believe they are one outfit, and
-            # a split entity is the thing LLMO is trying to avoid. When the landing page
-            # ships its own Organization at cranesignal.com/#org, both should point at that
-            # single @id instead -- see docs/seo/LANDING-PAGE-FIXES-FOR-DREW.md.
-            "sameAs": [LANDING],
+            "sameAs": [HOST + "/"],
         },
         {
             "@type": "WebSite",
             "@id": f"{HOST}/#site",
             "url": HOST,
             "name": "CraneSignal",
-            "publisher": {"@id": f"{HOST}/#org"},
+            "publisher": {"@id": ORG_ID},
             "inLanguage": "en-US",
         },
         {
@@ -243,7 +245,7 @@ def build_jsonld(index: dict, areas: list[dict]) -> str:
             "isAccessibleForFree": True,
             "dateModified": updated,
             "temporalCoverage": f"../{updated}",
-            "creator": {"@id": f"{HOST}/#org"},
+            "creator": {"@id": ORG_ID},
             "spatialCoverage": [
                 {"@type": "Place", "name": area["label"]} for area in areas
             ],

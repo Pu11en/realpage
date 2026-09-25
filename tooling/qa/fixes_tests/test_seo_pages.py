@@ -254,7 +254,10 @@ def test_one_organization_entity_across_the_whole_site(path):
     )
     graph = json.loads(block.group(1))["@graph"]
     dataset = next(node for node in graph if node["@type"] == "Dataset")
-    assert dataset["creator"] == {"@id": f"{HOST}/#org"}, dataset["creator"]
+    # The canonical Organization is declared on the landing page at cranesignal.com, live
+    # since 2026-09-25. Every page on this host references that @id rather than minting a
+    # second one, so the two hosts are one entity rather than two that agree.
+    assert dataset["creator"] == {"@id": "https://cranesignal.com/#org"}, dataset["creator"]
     assert not any(node["@type"] == "Organization" for node in graph), (
-        f"{path.name} declares its own Organization instead of referencing the site one"
+        f"{path.name} declares its own Organization instead of referencing the brand's"
     )

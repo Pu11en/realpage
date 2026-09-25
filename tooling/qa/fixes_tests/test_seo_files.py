@@ -182,6 +182,21 @@ def test_every_indexable_page_has_a_share_image():
         assert 'property="og:image"' in read(page), f"{page} has no og:image"
 
 
+def test_the_organization_is_the_brands_one_not_a_second_copy():
+    """Both hosts must name the same @id. Two Organization nodes that merely agree are
+    still two entities to a model, which is what splits a brand's identity."""
+    html = read("index.html")
+    graph = json.loads(
+        re.search(r'<script type="application/ld\+json">(.*?)</script>', html, re.S).group(1)
+    )["@graph"]
+    org = next(node for node in graph if node["@type"] == "Organization")
+    assert org["@id"] == "https://cranesignal.com/#org", org["@id"]
+    assert org["url"] == "https://cranesignal.com/", org["url"]
+    assert f"{HOST}/" in org.get("sameAs", []), org.get("sameAs")
+    dataset = next(node for node in graph if node["@type"] == "Dataset")
+    assert dataset["creator"] == {"@id": "https://cranesignal.com/#org"}
+
+
 def test_caddy_serves_llms_full_and_the_indexnow_key():
     caddy = (SITE / "Caddyfile").read_text(encoding="utf-8")
     assert "/llms-full.txt" in caddy

@@ -36,6 +36,10 @@ DATA = SITE / "data"
 OUT = SITE / "leads"
 HOST = "https://app.cranesignal.com"
 LANDING = "https://cranesignal.com"
+# The brand's single identity, declared on the landing page (live 2026-09-25).
+# Every page references it rather than declaring its own, so the two hosts are
+# one entity to a model rather than two that happen to share a name.
+ORG_ID = f"{LANDING}/#org"
 
 # A city needs this many buildings before it gets its own page. Below it the page would
 # be thin, which is the thing that carries sitewide risk.
@@ -586,8 +590,8 @@ def jsonld_for(name: str, description: str, canonical: str, leads: list[dict],
             "url": canonical,
             "isAccessibleForFree": True,
             "dateModified": updated,
-            "creator": {"@id": f"{HOST}/#org"},
-            "publisher": {"@id": f"{HOST}/#org"},
+            "creator": {"@id": ORG_ID},
+            "publisher": {"@id": ORG_ID},
         },
         {
             "@type": "ItemList",
