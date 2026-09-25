@@ -1,8 +1,8 @@
 # SEO/GEO handoff — 2026-09-25
 
-`app.cranesignal.com` is **merged, deployed and verified live**. `cranesignal.com` is
-**merged but not deployed** — it ships by Railway CLI from local, so it needs one command run
-by someone with the Railway login.
+Both hosts are **live and verified**. `app.cranesignal.com` and `cranesignal.com` now share
+one Organization identity. The work is done; what remains is measurement and the optional
+items at the bottom.
 
 ## Where things stand
 
@@ -28,38 +28,22 @@ PR #1 merged. It deploys by Railway CLI from local, so it needs one `railway up`
 
 ## What is left to do
 
-### 1. The landing page — merged, waiting on a deploy
+### 1. The landing page — done, live 2026-09-25
 
-**Done 2026-09-25.** DrewAI found it at `/home/drewp/main-projects/realpage/business` (already a
-git repo, no remote) and pushed it to **https://github.com/Pu11en/cranesignal-landing**.
-PR #1 there is **merged into `main`**: the head metadata, the JSON-LD, and robots.txt,
-sitemap.xml, llms.txt in `marketing/landing/`.
+DrewAI found it at `/home/drewp/main-projects/realpage/business` (already a git repo, no
+remote) and pushed it to **https://github.com/Pu11en/cranesignal-landing**. PR #1 merged and
+deployed. `robots.txt`, `sitemap.xml`, `llms.txt` and the JSON-LD all verified live.
 
-**It is not live yet.** `cranesignal.com` deploys by **Railway CLI from local**, not from a git
-remote, so merging did nothing to the running site. Someone with the Railway login has to run,
-from inside `marketing/landing` on a machine with the repo:
+**One trap worth remembering:** the landing page's Dockerfile copies an explicit file list,
+so the three new files were in the repo but never reached the container and would all have
+404'd silently. DrewAI caught it and added them to that COPY line (commit `9feb80e`). Any
+future file added to `marketing/landing/` needs the same.
 
-```bash
-git pull
-railway up --service propertystack-landing --ci
-```
-
-Then:
-
-```bash
-for p in /robots.txt /sitemap.xml /llms.txt; do
-  curl -s -o /dev/null -w "$p: %{http_code}" "https://cranesignal.com$p"; echo
-done
-```
-
-and Search Console → Sitemaps → `https://cranesignal.com/sitemap.xml`. The domain is already
-verified, so this only adds the sitemap.
-
-Notes from doing it: the repo's `index.html` carries a `{{LEAD_SUMMARY}}` placeholder that
-`server.py` fills at request time, so it must be patched rather than a copy of the live HTML.
-`tools/test_landing.py --offline` gives results identical to `main` — the same 6 pre-existing
-failures, none new. Those are three summary-refresh checks (a `file://` summary URL that does
-not resolve on Windows) and one real "no em dashes" failure that predates this work.
+Two other notes from doing it: the repo's `index.html` carries a `{{LEAD_SUMMARY}}`
+placeholder that `server.py` fills at request time, so patch the repo file rather than a copy
+of the live HTML. And `tools/test_landing.py --offline` gives results identical to `main` —
+the same 6 pre-existing failures, three of them a `file://` summary URL that does not resolve
+on Windows and one a real "no em dashes" failure that predates this work.
 
 ### 2. Re-measure on 2026-10-09 — two weeks after deploy
 
@@ -70,12 +54,13 @@ python3 tooling/seo/sample.py          # both engines, ~28 questions, resumable
 Compare against `docs/seo/answer-share/2026-09-23/report.md`. Also pull Search Console
 impressions, which should exist by then.
 
-### 3. One-line follow-up, after the landing page ships
+### 3. One Organization identity — done 2026-09-25
 
-The app declares its own `Organization` at `https://app.cranesignal.com/#org`. Once the
-landing page ships the block in `landing-page-ready/index.html`, both should reference
-`https://cranesignal.com/#org` so there is one identity rather than two that agree. One line
-each in `tooling/seo/build_seo_files.py` and `tooling/seo/build_pages.py`.
+Both generators now reference `https://cranesignal.com/#org`, declared on the landing page,
+rather than each host minting its own. This fixed a real dangling reference, not just tidiness:
+validation showed every `/leads/` page naming `app.cranesignal.com/#org` as its creator while
+declaring no Organization node on that page, so the reference resolved to nothing. A test now
+asserts both hosts name the same `@id`, so a later edit cannot quietly re-split the entity.
 
 ## The baseline, so the next session knows what "better" looks like
 
