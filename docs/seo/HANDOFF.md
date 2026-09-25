@@ -1,7 +1,8 @@
 # SEO/GEO handoff — 2026-09-25
 
-Everything for `app.cranesignal.com` is **merged, deployed and verified live**. The landing
-page `cranesignal.com` is the only piece left, and its fixes are written and waiting.
+`app.cranesignal.com` is **merged, deployed and verified live**. `cranesignal.com` is
+**merged but not deployed** — it ships by Railway CLI from local, so it needs one command run
+by someone with the Railway login.
 
 ## Where things stand
 
