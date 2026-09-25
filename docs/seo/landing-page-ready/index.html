@@ -1,0 +1,563 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>New Apartment Building Leads Before Lease-Up | CraneSignal</title>
+<meta name="description" content="A sourced list of new and recently sold apartment buildings in your metro, with who owns them, who manages them, and why to call now. Free, every fact links to a public record.">
+<link rel="canonical" href="https://cranesignal.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CraneSignal">
+<meta property="og:url" content="https://cranesignal.com/">
+<meta property="og:title" content="New Apartment Building Leads Before Lease-Up | CraneSignal">
+<meta property="og:description" content="A sourced list of new and recently sold apartment buildings in your metro, with new leads added all the time. Every fact links to a public record.">
+<meta property="og:image" content="https://app.cranesignal.com/img/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://app.cranesignal.com/img/og-default.png">
+<meta name="theme-color" content="#1a3d8f">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 44 44' width='44' height='44'%3E%3Crect width='44' height='44' rx='9' fill='%231a3d8f'/%3E%3Cpath d='M13.5 3 5 10M13.5 3 38 10' stroke='%23fff' stroke-width='1.6' fill='none'/%3E%3Cpath d='M11 10h5v26h-5z' fill='%23fff'/%3E%3Cpath d='M11 10l2.5-7 2.5 7z' fill='%23fff'/%3E%3Cpath d='M5 36h17v4H5z' fill='%23fff'/%3E%3Cpath d='M4 10h36v4H4z' fill='%23f5b700'/%3E%3Cpath d='M5 14h5v4H5z' fill='%23fff'/%3E%3Cpath d='M31 14h1.6v8H31z' fill='%23fff'/%3E%3Cpath d='M27.8 22h8v7h-8z' fill='%23f5b700'/%3E%3C/svg%3E">
+<link rel="preload" href="/fonts/plus-jakarta-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<!--
+THESIS: a job-site permit board, not a SaaS page. Refuses the centered hero + three feature cards.
+OWN-WORLD: blueprint blue fields with a drafting grid, permit-placard white cards, safety-amber stamps and markers, black ink. Plus Jakarta Sans for headings and signage, Inter for reading.
+STORY: you hear about a building at the permit stage; everyone else hears at lease up. See a real permit-stage lead, then ask for one from your metro.
+FIRST VIEWPORT: blue blueprint field, huge wide headline left, a permit placard with a stamped "PERMIT ISSUED" on the right, amber primary button under the headline.
+FORM: construction timeline as the proof device (where you hear vs where everyone else hears). Signup styled as a one-line permit application.
+-->
+<style>
+  @font-face { font-family:"Plus Jakarta Sans"; font-style:normal; font-weight:200 800; font-display:swap; src:url(/fonts/plus-jakarta-sans-latin.woff2) format("woff2"); }
+  @font-face { font-family:"Inter"; font-style:normal; font-weight:100 900; font-display:swap; src:url(/fonts/inter-latin.woff2) format("woff2"); }
+  :root {
+    --blue:#1a3d8f; --blue-2:#15326f; --blue-line:rgba(255,255,255,.09); --blue-ink:#c9d6f2;
+    --amber:#f5b700; --amber-2:#ffcb2e; --ink:#0e1320; --ink-2:#343b4c; --muted:#5d6577;
+    --paper:#ffffff; --paper-2:#f3f4f6; --rule:#d9dce3;
+    --ok:#0f7a55; --ok-soft:#e3f3ea; --warn:#8f4a07; --warn-soft:#fcefd9;
+    --ease:cubic-bezier(0.16,1,0.3,1);
+  }
+  * { box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  body { margin:0; font:400 17px/1.6 "Inter",system-ui,sans-serif; color:var(--ink); background:var(--paper); -webkit-font-smoothing:antialiased; overflow-x:hidden; }
+  a { color:var(--blue); text-underline-offset:3px; }
+  h1, h2, h3 { margin:0; font-family:"Plus Jakarta Sans",system-ui,sans-serif; text-wrap:balance; }
+  p { margin:0; text-wrap:pretty; }
+  .tab { font-variant-numeric:tabular-nums; }
+  .wide { font-family:"Plus Jakarta Sans",system-ui,sans-serif; }
+  .wrap { max-width:1240px; margin:0 auto; padding:0 28px; }
+  .skip { position:absolute; left:-9999px; top:8px; background:var(--amber); color:var(--ink); padding:8px 12px; z-index:60; font-weight:700; }
+  .skip:focus { left:16px; }
+  :focus-visible { outline:3px solid var(--amber); outline-offset:3px; }
+
+  .btn { display:inline-flex; align-items:center; gap:10px; min-height:52px; padding:14px 26px; background:var(--amber); color:var(--ink);
+    font:800 17px/1 "Plus Jakarta Sans",system-ui,sans-serif; text-decoration:none; border:0; border-radius:4px; cursor:pointer;
+    box-shadow:0 4px 0 #b88900; transition:transform .25s var(--ease), box-shadow .25s var(--ease), background .25s var(--ease); }
+  .btn:hover { background:var(--amber-2); transform:translateY(-2px); box-shadow:0 6px 0 #b88900; }
+  .btn:active { transform:translateY(3px); box-shadow:0 1px 0 #b88900; }
+  .btn:disabled { opacity:.6; cursor:wait; }
+  .btn.ink { background:var(--ink); color:#fff; box-shadow:0 4px 0 #000; }
+  .btn.ink:hover { background:#1c2436; box-shadow:0 6px 0 #000; }
+  .btn .arr { transition:transform .25s var(--ease); }
+  .btn:hover .arr { transform:translateX(4px); }
+
+  /* blueprint field */
+  .bp { background-color:var(--blue); color:#fff;
+    background-image:linear-gradient(var(--blue-line) 1px,transparent 1px),linear-gradient(90deg,var(--blue-line) 1px,transparent 1px),
+      linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);
+    background-size:96px 96px,96px 96px,24px 24px,24px 24px; }
+
+  .top { display:flex; justify-content:space-between; align-items:center; gap:16px; padding:22px 0; border-bottom:1px solid rgba(255,255,255,.18); }
+  .logo { font-weight:900; font-family:"Plus Jakarta Sans",system-ui,sans-serif; font-size:20px; letter-spacing:-.01em; color:#fff; text-decoration:none; display:flex; align-items:center; gap:10px; }
+  .logo svg { flex:none; }
+  .top nav { display:flex; align-items:center; gap:26px; font-weight:600; font-size:15px; }
+  .top nav a { color:var(--blue-ink); text-decoration:none; }
+  .top nav a:hover { color:#fff; }
+  .top nav a.btn, .top nav a.btn:hover { color:var(--ink); }
+  .top .btn { min-height:44px; padding:10px 18px; font-size:15px; white-space:nowrap; }
+
+  .hero { padding:64px 0 88px; background-position:0 -1px; overflow:hidden; }
+  .hero-grid { display:grid; grid-template-columns:1.15fr .85fr; gap:56px; align-items:center; }
+  .hero h1 { font-weight:900; font-family:"Plus Jakarta Sans",system-ui,sans-serif; font-size:clamp(34px,4.4vw,58px); line-height:.98; letter-spacing:-.022em; }
+  .hero h1 em { font-style:normal; color:var(--amber); }
+  .hero .sub { font-size:20px; line-height:1.5; color:var(--blue-ink); max-width:580px; margin-top:28px; }
+  .hero .ctas { display:flex; gap:22px; flex-wrap:wrap; align-items:center; margin-top:36px; }
+  .hero .textlink { color:#fff; font-weight:700; min-height:44px; display:inline-flex; align-items:center; }
+  .hero .note { font-size:14px; color:var(--blue-ink); margin-top:18px; }
+
+  /* permit placard */
+  .placard { position:relative; background:var(--paper); color:var(--ink); border-radius:6px; padding:0; box-shadow:0 30px 60px rgba(4,12,40,.45), 0 2px 0 rgba(0,0,0,.2); transform:rotate(-1.5deg); }
+  .placard::before, .placard::after { content:""; position:absolute; top:-10px; width:64px; height:22px; background:rgba(255,236,160,.85); box-shadow:0 1px 2px rgba(0,0,0,.15); }
+  .placard::before { left:24px; transform:rotate(-6deg); }
+  .placard::after { right:24px; transform:rotate(5deg); }
+  .placard .head { display:flex; justify-content:space-between; align-items:baseline; gap:12px; padding:18px 24px 14px; border-bottom:3px solid var(--ink); }
+  .placard .kind { font-weight:900; font-family:"Plus Jakarta Sans",system-ui,sans-serif; font-size:13px; letter-spacing:.08em; }
+  .placard .meta { font-size:12px; color:var(--muted); }
+  .placard .body { padding:20px 24px 24px; }
+  .placard h3 { font-weight:900; font-family:"Plus Jakarta Sans",system-ui,sans-serif; font-size:30px; line-height:1.05; letter-spacing:-.02em; }
+  .placard .addr { color:var(--muted); font-size:15px; margin-top:4px; }
+  .facts { display:grid; grid-template-columns:1fr 1fr; margin-top:18px; border-top:1px solid var(--rule); }
+  .facts div { padding:10px 0; border-bottom:1px solid var(--rule); }
+  .facts div:nth-child(odd) { padding-right:12px; border-right:1px solid var(--rule); }
+  .facts div:nth-child(even) { padding-left:12px; }
+  .facts dt { font-size:12px; color:var(--muted); font-weight:600; }
+  .facts dd { margin:2px 0 0; font-weight:800; font-size:16px; }
+  .facts .span { grid-column:1/-1; border-right:0 !important; padding-right:0 !important; }
+  .facts .span dd { font-weight:600; font-size:15px; }
+  .whynow { margin-top:16px; font-size:15px; line-height:1.5; background:var(--paper-2); padding:12px 14px; border-radius:4px; }
+  .whynow b { font-family:"Plus Jakarta Sans",system-ui,sans-serif; }
+  .stamp { position:absolute; right:-14px; top:70px; transform:rotate(-11deg); border:4px solid #c0392b; color:#c0392b; border-radius:6px; padding:6px 12px 5px;
+    font-weight:900; font-family:"Plus Jakarta Sans",system-ui,sans-serif; font-size:18px; line-height:1.05; letter-spacing:.04em; text-align:center; background:rgba(255,255,255,.7); mix-blend-mode:multiply; }
+  .stamp small { display:block; font-size:11px; letter-spacing:.12em; }
+  .js .stamp { opacity:0; transform:rotate(-11deg) scale(2.2); }
+  .js .stamp.land { opacity:.92; transform:rotate(-11deg) scale(1); transition:transform .45s cubic-bezier(.2,1.6,.4,1), opacity .2s linear; }
+
+  /* timeline: the proof device */
+  .timeline { padding:96px 0; background:var(--paper); }
+  .timeline h2 { font-weight:900; font-family:"Plus Jakarta Sans",system-ui,sans-serif; font-size:clamp(32px,4.4vw,56px); line-height:1; letter-spacing:-.018em; max-width:900px; }
+  .timeline .intro { font-size:19px; color:var(--ink-2); max-width:640px; margin-top:20px; }
+  .track { position:relative; margin-top:72px; display:grid; grid-template-columns:repeat(5,1fr); }
+  .track::before { content:""; position:absolute; left:0; right:0; top:46px; height:6px; background:var(--paper-2); border-radius:3px; }
+  .track .fill { position:absolute; left:0; top:46px; height:6px; width:40%; background:var(--amber); border-radius:3px; transform-origin:left; }
+  .js .track .fill { transform:scaleX(0); transition:transform 1.4s var(--ease); }
+  .js .track.in .fill { transform:scaleX(1); }
+  .stage { position:relative; padding-top:72px; padding-right:16px; }
+  .stage::before { content:""; position:absolute; top:38px; left:0; width:22px; height:22px; border-radius:50%; background:#fff; border:5px solid var(--rule); }
+  .stage.us::before { border-color:var(--amber); background:var(--ink); }
+  .stage.them::before { border-color:var(--ink-2); }
+  .stage b { display:block; font-weight:800; font-family:"Plus Jakarta Sans",system-ui,sans-serif; font-size:18px; line-height:1.2; }
+  .stage span { display:block; font-size:14px; color:var(--muted); margin-top:4px; }
+  .flag { position:absolute; top:0; left:0; font-weight:900; font-family:"Plus Jakarta Sans",system-ui,sans-serif; font-size:13px; letter-spacing:.04em; padding:5px 10px; border-radius:3px; white-space:nowrap; }
+  .flag.us { background:var(--amber); color:var(--ink); }
+  .flag.them { background:var(--ink); color:#fff; }
+  .pains { display:grid; grid-template-columns:repeat(3,1fr); gap:0; margin-top:80px; border-top:3px solid var(--ink); }
+  .pains div { padding:24px 28px 0 0; }
+  .pains div + div { padding-left:28px; border-left:1px solid var(--rule); }
+  .pains h3 { font-weight:800; font-family:"Plus Jakarta Sans",system-ui,sans-serif; font-size:21px; line-height:1.2; }
+  .pains p { color:var(--muted); margin-top:8px; }
+
+  .heard { margin-top:72px; display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+  .heard-h { grid-column:1/-1; font-weight:900; font-family:"Plus Jakarta Sans",system-ui,sans-serif; font-size:14px; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); }
+  .q { margin:0; background:var(--blue); color:#fff; padding:28px 26px; border-radius:6px; display:flex; flex-direction:column; gap:14px; }
+  .q blockquote { margin:0; font-weight:800; font-family:"Plus Jakarta Sans",system-ui,sans-serif; font-size:20px; line-height:1.3; }
+  .q figcaption { font-size:13px; color:var(--blue-ink); }
+  .q figcaption a { color:var(--amber); }
+  .q p { font-size:15px; color:#fff; border-top:1px solid rgba(255,255,255,.2); padding-top:12px; margin-top:auto; }
+  /* how it works: big steps on ink */
+  .how { background:var(--ink); color:#fff; padding:96px 0; }
+  .how h2 { font-weight:900; font-family:"Plus Jakarta Sans",system-ui,sans-serif; font-size:clamp(32px,4.4vw,56px); line-height:1; letter-spacing:-.018em; max-width:820px; }
+  .how h2 em { font-style:normal; color:var(--amber); }
+  .steps { list-style:none; margin:56px 0 0; padding:0; }
+  .steps li { display:grid; grid-template-columns:120px 1fr 1.2fr; gap:32px; align-items:baseline; padding:28px 0; border-top:1px solid rgba(255,255,255,.14); }
+  .steps .k { font-weight:900; font-family:"Plus Jakarta Sans",system-ui,sans-serif; font-size:44px; line-height:1; color:var(--amber); }
+  .steps h3 { font-weight:800; font-family:"Plus Jakarta Sans",system-ui,sans-serif; font-size:26px; line-height:1.15; }
+  .steps p { color:#b7bdca; font-size:17px; }
+
+  /* monday sheet */
+  .sheet-sec { padding:96px 0; background:var(--paper-2); }
+  .sheet-sec h2 { font-weight:900; font-family:"Plus Jakarta Sans",system-ui,sans-serif; font-size:clamp(32px,4.4vw,56px); line-height:1; letter-spacing:-.018em; }
+  .sheet { margin-top:44px; background:#fff; border:2px solid var(--ink); border-radius:6px; overflow:hidden; box-shadow:10px 10px 0 var(--blue); }
+  .sheet .bar { display:flex; justify-content:space-between; gap:12px; padding:14px 22px; background:var(--ink); color:#fff; font-weight:700; font-size:14px; }
+  .sheet .bar b { color:var(--amber); font-family:"Plus Jakarta Sans",system-ui,sans-serif; }
+  .wrow { display:grid; grid-template-columns:1.6fr .8fr 1fr 1.25fr 1.8fr; gap:16px; padding:16px 22px; border-top:1px solid var(--rule); align-items:center; font-size:15px; transition:background .2s var(--ease); }
+  .wrow:not(.head):hover { background:#fffbea; }
+  .wrow.head { font-size:12px; font-weight:800; font-family:"Plus Jakarta Sans",system-ui,sans-serif; letter-spacing:.04em; color:var(--muted); border-top:0; background:var(--paper-2); }
+  .wrow .name { font-weight:800; font-family:"Plus Jakarta Sans",system-ui,sans-serif; font-size:17px; }
+  .wrow .addr { color:var(--muted); font-size:13px; }
+  .wrow .w { color:var(--ink-2); font-size:14px; line-height:1.45; }
+  .tag { display:inline-block; font-size:13px; font-weight:700; padding:3px 8px; border-radius:3px; background:var(--paper-2); color:var(--ink-2); }
+  .tag.ok { background:var(--ok-soft); color:var(--ok); }
+  .tag.warn { background:var(--warn-soft); color:var(--warn); }
+  .mock-note { font-size:14px; color:var(--muted); margin-top:28px; max-width:720px; }
+
+  /* sources */
+  .sources { padding:96px 0; }
+  .src-grid { display:grid; grid-template-columns:.9fr 1.1fr; gap:64px; align-items:start; }
+  .sources h2 { font-weight:900; font-family:"Plus Jakarta Sans",system-ui,sans-serif; font-size:clamp(30px,3.6vw,46px); line-height:1.02; letter-spacing:-.018em; }
+  .sources .intro { font-size:18px; color:var(--ink-2); margin-top:18px; }
+  .docs { display:grid; gap:14px; }
+  .doc { display:grid; grid-template-columns:auto 1fr; gap:18px; align-items:start; padding:20px 22px; border:2px solid var(--ink); border-radius:6px; background:#fff; transition:transform .25s var(--ease), box-shadow .25s var(--ease); }
+  .doc:hover { transform:translate(-3px,-3px); box-shadow:6px 6px 0 var(--amber); }
+  .doc .lbl { font-weight:900; font-family:"Plus Jakarta Sans",system-ui,sans-serif; font-size:12px; letter-spacing:.08em; background:var(--blue); color:#fff; padding:5px 8px; border-radius:3px; white-space:nowrap; }
+  .doc h3 { font-weight:800; font-family:"Plus Jakarta Sans",system-ui,sans-serif; font-size:19px; }
+  .doc p { color:var(--muted); margin-top:4px; font-size:16px; }
+
+  /* who */
+  .who { padding:96px 0; }
+  .who h2 { font-weight:900; font-family:"Plus Jakarta Sans",system-ui,sans-serif; font-size:clamp(30px,3.6vw,46px); line-height:1.02; letter-spacing:-.018em; max-width:820px; }
+  .who-list { display:flex; flex-wrap:wrap; gap:12px; margin-top:32px; }
+  .who-list span { font-weight:700; font-family:"Plus Jakarta Sans",system-ui,sans-serif; font-size:17px; padding:12px 18px; border:2px solid #fff; border-radius:4px; }
+  .behind { display:grid; grid-template-columns:.7fr 1.3fr; gap:56px; margin-top:72px; padding-top:40px; border-top:1px solid rgba(255,255,255,.2); }
+  .behind h3 { font-weight:900; font-family:"Plus Jakarta Sans",system-ui,sans-serif; font-size:28px; line-height:1.05; }
+  .behind p { font-size:19px; line-height:1.6; color:var(--blue-ink); }
+
+  /* offer: amber drenched */
+  .offer { background:var(--amber); color:var(--ink); padding:96px 0; }
+  .offer-grid { display:grid; grid-template-columns:1.1fr .9fr; gap:56px; align-items:center; }
+  .offer .k { font-weight:900; font-family:"Plus Jakarta Sans",system-ui,sans-serif; font-size:14px; letter-spacing:.08em; }
+  .offer h2 { font-weight:900; font-family:"Plus Jakarta Sans",system-ui,sans-serif; font-size:clamp(34px,5vw,64px); line-height:.98; letter-spacing:-.022em; margin-top:14px; }
+  .offer .lead { font-size:19px; margin-top:18px; max-width:520px; }
+  .offer .btn { margin-top:32px; }
+  .offer ul { list-style:none; padding:0; margin:0; border-top:3px solid var(--ink); }
+  .offer li { padding:14px 0; border-bottom:1px solid rgba(14,19,32,.25); font-weight:600; display:grid; grid-template-columns:28px 1fr; }
+  .offer li::before { content:"✓"; font-weight:900; }
+  .spots { margin-top:18px; font-weight:800; font-size:15px; }
+
+  /* faq */
+  .faq { padding:96px 0; }
+  .faq-grid { display:grid; grid-template-columns:.7fr 1.3fr; gap:64px; }
+  .faq h2 { font-weight:900; font-family:"Plus Jakarta Sans",system-ui,sans-serif; font-size:clamp(30px,3.6vw,46px); line-height:1.02; letter-spacing:-.018em; position:sticky; top:32px; }
+  .qa { display:grid; grid-template-columns:1fr 1.25fr; gap:28px; padding:22px 0; border-top:1px solid var(--rule); }
+  .qa:first-child { border-top:3px solid var(--ink); }
+  .qa h3 { font-weight:800; font-family:"Plus Jakarta Sans",system-ui,sans-serif; font-size:17px; line-height:1.35; }
+  .qa p { color:var(--muted); font-size:16px; }
+
+  /* application form */
+  .apply { padding:96px 0; }
+  .apply-grid { display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:start; }
+  .apply h2 { font-weight:900; font-family:"Plus Jakarta Sans",system-ui,sans-serif; font-size:clamp(34px,4.8vw,60px); line-height:.98; letter-spacing:-.022em; }
+  .apply .lead { font-size:19px; color:var(--blue-ink); margin-top:18px; max-width:520px; }
+  .after { list-style:none; padding:0; margin:40px 0 0; }
+  .after li { display:grid; grid-template-columns:44px 1fr; gap:14px; padding:16px 0; border-top:1px solid rgba(255,255,255,.18); }
+  .after .n { font-weight:900; font-family:"Plus Jakarta Sans",system-ui,sans-serif; font-size:22px; color:var(--amber); }
+  .more-areas { margin:24px 0 0; font-size:16px; }
+  .wyg-grid { display:grid; grid-template-columns:1fr 1fr 1.2fr; gap:28px; align-items:start; margin-top:28px; }
+  .wyg-list { margin:12px 0 0; padding-left:18px; line-height:1.7; }
+  .wyg-sample img { width:100%; border:1px solid rgba(0,0,0,.15); border-radius:6px; display:block; }
+  .wyg-sample figcaption { font-size:13px; margin-top:8px; opacity:.75; }
+  .wyg-cover { margin:10px 0 0; font-size:16px; opacity:.85; }
+  .wyg-note { margin:14px 0 0; font-size:15px; }
+  .wyg-note a { font-weight:700; }
+  .wyg-cost { margin:26px 0 0; font-size:15px; }
+  @media (max-width:820px) { .wyg-grid { grid-template-columns:1fr; } }
+  .hero-sub { margin:14px 0 0; font-size:19px; font-weight:600; color:#fff; opacity:.92; }
+  .hero-summary { margin:16px 0 0; max-width:680px; color:#fff; font-size:16px; line-height:24px; font-weight:600; font-variant-numeric:tabular-nums; }
+  .hero-trust { margin:10px 0 0; font-size:13px; opacity:.75; }
+  .hero-pack { margin:22px 0 0; font-size:16px; max-width:34ch; line-height:1.45; }
+  .hero-pack b { color:var(--amber); }
+  .more-areas a { color:var(--amber); font-weight:700; }
+  .after h3 { font-weight:800; font-family:"Plus Jakarta Sans",system-ui,sans-serif; font-size:18px; }
+  .after p { color:var(--blue-ink); font-size:15px; margin-top:4px; }
+  .appform { position:relative; background:#fff; color:var(--ink); border-radius:6px; box-shadow:0 30px 60px rgba(4,12,40,.45); transform:rotate(.8deg); }
+  .appform .head { display:flex; justify-content:space-between; gap:12px; padding:18px 26px 14px; border-bottom:3px solid var(--ink); }
+  .appform .head b { font-weight:900; font-family:"Plus Jakarta Sans",system-ui,sans-serif; font-size:14px; letter-spacing:.06em; }
+  .appform .head span { font-size:12px; color:var(--muted); }
+  .appform .inner { padding:24px 26px 26px; }
+  form { display:grid; gap:18px; }
+  label { display:block; font-weight:800; font-family:"Plus Jakarta Sans",system-ui,sans-serif; font-size:13px; letter-spacing:.03em; margin-bottom:6px; }
+  input, select { width:100%; min-height:50px; padding:12px 14px; border:2px solid var(--ink); border-radius:4px; font:inherit; font-size:17px; color:var(--ink); background:#fff; transition:box-shadow .2s var(--ease); }
+  input:focus, select:focus { outline:0; box-shadow:4px 4px 0 var(--amber); }
+  form .btn { width:100%; justify-content:center; margin-top:6px; }
+  .risk { color:var(--muted); font-size:14px; margin-top:16px; }
+  #form-error { display:none; color:#b42318; font-weight:700; font-size:15px; margin-top:12px; }
+  .thanks { display:none; background:var(--ok-soft); color:#065f46; padding:16px; border-radius:4px; font-weight:700; }
+
+  .book { padding:72px 0; border-bottom:1px solid var(--rule); }
+  .book-grid { display:flex; justify-content:space-between; align-items:center; gap:32px; flex-wrap:wrap; }
+  .book h2 { font-weight:900; font-family:"Plus Jakarta Sans",system-ui,sans-serif; font-size:clamp(28px,3.4vw,42px); line-height:1.02; letter-spacing:-.018em; }
+  .book p { color:var(--ink-2); font-size:18px; margin-top:10px; max-width:620px; }
+
+  footer { padding:28px 0 40px; color:var(--muted); font-size:14px; }
+
+  .js .reveal { opacity:0; transform:translateY(28px); transition:opacity .8s var(--ease), transform .8s var(--ease); }
+  .js .reveal.in { opacity:1; transform:none; }
+  @media (prefers-reduced-motion:reduce) {
+    .js .reveal, .js .stamp, .js .track .fill { opacity:1 !important; transition:none !important; }
+    .js .reveal { transform:none; } .js .stamp { transform:rotate(-11deg); } .js .track .fill { transform:none; }
+    html { scroll-behavior:auto; }
+  }
+
+  @media (max-width:980px) {
+    .hero-grid, .src-grid, .faq-grid, .apply-grid, .offer-grid, .behind { grid-template-columns:1fr; gap:44px; }
+    .placard, .appform { transform:none; }
+    .stamp { right:12px; }
+    .steps li { grid-template-columns:80px 1fr; } .steps li p { grid-column:2; }
+    .faq h2 { position:static; }
+    .heard { grid-template-columns:1fr; }
+    .top nav a:not(.btn) { display:none; }
+  }
+  @media (max-width:400px) { .logo { font-size:17px; gap:8px; } .top .btn { padding:10px 12px; font-size:14px; } .top { gap:8px; } }
+  @media (max-width:720px) {
+    .wrap { padding:0 20px; }
+    .hero { padding:40px 0 64px; }
+    .hero .sub { font-size:18px; }
+    .track { grid-template-columns:1fr; margin-top:40px; }
+    .track::before, .track .fill { left:9px; right:auto; top:0; bottom:0; width:6px; height:auto; }
+    .track .fill { height:40%; transform-origin:top; }
+    .js .track .fill { transform:scaleY(0); } .js .track.in .fill { transform:scaleY(1); }
+    .stage { padding:0 0 28px 44px; }
+    .stage::before { top:0; left:0; }
+    .flag { position:static; display:inline-block; margin-bottom:8px; }
+    .pains, .heard { grid-template-columns:1fr; }
+    .pains div, .pains div + div { padding:20px 0; border-left:0; border-bottom:1px solid var(--rule); }
+    .steps li { grid-template-columns:1fr; gap:8px; }
+    .steps li p { grid-column:auto; }
+    .wrow { grid-template-columns:1fr; gap:4px; padding:16px; } .wrow.head { display:none; }
+    .qa { grid-template-columns:1fr; gap:8px; }
+    .sheet { box-shadow:6px 6px 0 var(--blue); }
+    .doc { grid-template-columns:1fr; gap:10px; } .doc .lbl { justify-self:start; }
+    .placard .head, .appform .head { flex-direction:column; gap:2px; }
+    .stamp { top:-18px; right:6px; font-size:14px; }
+    .placard::after { display:none; }
+    .flag { width:max-content; }
+  }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://cranesignal.com/#org",
+      "name": "CraneSignal",
+      "url": "https://cranesignal.com/",
+      "logo": "https://app.cranesignal.com/img/og-default.png",
+      "description": "Sourced leads on apartment buildings that are newly permitted, under construction, or recently sold, for people who sell to apartment owners.",
+      "sameAs": ["https://app.cranesignal.com/"]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://cranesignal.com/#site",
+      "url": "https://cranesignal.com/",
+      "name": "CraneSignal",
+      "publisher": { "@id": "https://cranesignal.com/#org" },
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "Service",
+      "name": "Apartment construction and sales lead list",
+      "provider": { "@id": "https://cranesignal.com/#org" },
+      "areaServed": { "@type": "Country", "name": "United States" },
+      "description": "Every lead in every covered area: stage, units, opening or sale date, owner or developer, the office phone when it is public, and a source link for every fact.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "description": "Free, no account required. A free account adds the manager name and direct phone."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="bp"><div class="wrap">
+  <div class="top" style="border-bottom:1px solid rgba(255,255,255,.18)">
+    <a class="logo" href="#main"><svg width="34" height="34" viewBox="0 0 44 44" aria-hidden="true"><path d="M13.5 3 5 10M13.5 3 38 10" stroke="#fff" stroke-width="1.6" fill="none"/><path d="M11 10h5v26h-5z" fill="#fff"/><path d="M11 10l2.5-7 2.5 7z" fill="#fff"/><path d="M5 36h17v4H5z" fill="#fff"/><path d="M4 10h36v4H4z" fill="#f5b700"/><path d="M5 14h5v4H5z" fill="#fff"/><path d="M31 14h1.6v8H31z" fill="#fff"/><path d="M27.8 22h8v7h-8z" fill="#f5b700"/></svg>CraneSignal</a>
+    <nav aria-label="Main"><a href="#timeline">Why early</a><a href="#monday">The list</a></nav>
+  </div>
+</div></header>
+
+<main id="main">
+<section class="hero bp"><div class="wrap hero-grid">
+  <div>
+    <h1>New apartment buildings. <em>Before your competitor calls.</em></h1>
+    <p class="hero-sub">Leads for companies that sell to apartment buildings.</p>
+    <p class="hero-summary" data-lead-summary>Last check Sep 20, 2026: 1,873 buildings tracked — 935 being built or planned, 938 sold to a new owner. 185 with a permit or sale in the last 6 months.</p>
+    <div class="ctas">
+      <a class="btn" href="https://app.cranesignal.com/index.html" target="_blank" rel="noopener">See the leads free <span class="arr">→</span></a>
+      <a class="textlink" href="https://cal.com/drew-pullen/propertystack-intro" target="_blank" rel="noopener">or book a 15 minute call</a>
+    </div>
+    <p class="hero-pack"><b>Browse every lead free.</b> A free account unlocks who to call, the agent and your call list (PDF).</p>
+    <p class="hero-trust">Built by Drew Pullen · Free during early access · No card</p>
+  </div>
+
+  <article class="placard" id="example" aria-label="Example lead">
+    <div class="stamp" aria-hidden="true">PERMIT<br>ISSUED<small>JUN 2026</small></div>
+    <div class="head"><span class="kind">LEAD #1 OF 10</span><span class="meta">Richardson · Week of Sep 14, 2026</span></div>
+    <div class="body">
+      <h3>Legacy Arapaho</h3>
+      <div class="addr">250 E Arapaho Rd, Richardson 75081</div>
+      <dl class="facts">
+        <div><dt>Units</dt><dd class="tab">443</dd></div>
+        <div><dt>Expected opening</dt><dd>About Nov 2028</dd></div>
+        <div><dt>Developer</dt><dd>Legacy Partners</dd></div>
+        <div><dt>Software</dt><dd style="color:var(--warn)">No software yet</dd></div>
+        <div class="span"><dt>Source</dt><dd><a href="https://communityimpact.com/richardson/government/443-unit-apartment-complex-approved-by-richardson-city-council/" target="_blank" rel="noopener">City council approval (Community Impact)</a></dd></div>
+      </dl>
+      <p class="whynow"><b>Why call now:</b> it's the biggest project in the area and it's permitted, so the manager, the software and the vendors get picked over the next year.</p>
+    </div>
+  </article>
+</div></section>
+
+<section class="timeline" id="timeline"><div class="wrap">
+  <h2>Most sites find out too late.</h2>
+  <div class="track reveal" aria-label="Stages of a new apartment building">
+    <div class="fill"></div>
+    <div class="stage us"><span class="flag us">You hear here</span><b>City agenda</b><span>Council or planning approval</span></div>
+    <div class="stage us"><b>Permit</b><span>Building permit issued</span></div>
+    <div class="stage"><b>Construction</b><span>Manager and software get picked</span></div>
+    <div class="stage them"><span class="flag them">Most sites list it here</span><b>Lease up</b><span>Signs go up, units listed</span></div>
+    <div class="stage"><b>Open</b><span>The grand opening</span></div>
+  </div>
+  <div class="pains">
+    <div class="reveal"><h3>You find out too late</h3></div>
+    <div class="reveal"><h3>Cold calls go nowhere</h3></div>
+    <div class="reveal"><h3>Big data tools miss this</h3></div>
+  </div>
+  <div class="heard">
+    <h3 class="heard-h">Heard in the industry</h3>
+    <figure class="q reveal"><blockquote>"Most owners are jaded in our industry, right? It's very much like a dating relationship."</blockquote>
+      <figcaption>Teddy Abdelmalek, SVP, HH Red Stone Properties · <a href="https://www.youtube.com/watch?v=7AbZk5IlHvQ" target="_blank" rel="noopener">EliseAI interview</a></figcaption></figure>
+    <figure class="q reveal"><blockquote>"He knew about a &#36;5M infrastructure project 6 months before it hit the official bid boards. Meanwhile I'm over here finding out 2 weeks before deadline."</blockquote>
+      <figcaption>A project manager on <a href="https://www.reddit.com/r/Construction/comments/1mah0rc" target="_blank" rel="noopener">Reddit, r/Construction</a></figcaption></figure>
+    <figure class="q reveal"><blockquote>"A lot of operators are getting pitched 20 platforms a week."</blockquote>
+      <figcaption>Host of the Life's a Pitch podcast · <a href="https://www.youtube.com/watch?v=dsvdxA6f1KY&amp;t=675s" target="_blank" rel="noopener">episode</a></figcaption></figure>
+  </div>
+</div></section>
+
+<section class="how"><div class="wrap">
+  <h2>We dig. <em>You call.</em></h2>
+  <ol class="steps">
+    <li class="reveal"><span class="k">1</span><h3>We watch public records</h3></li>
+    <li class="reveal"><span class="k">2</span><h3>We research every building</h3></li>
+    <li class="reveal"><span class="k">3</span><h3>You get a call list</h3></li>
+  </ol>
+</div></section>
+
+<section class="sheet-sec" id="monday"><div class="wrap">
+  <h2>Your call list.</h2>
+  <div class="sheet reveal">
+    <div class="bar"><span>Sample data · <b>U.S. metro</b></span><span class="tab">3 of 14 rows shown</span></div>
+    <div class="wrow head"><div>BUILDING</div><div>UNITS</div><div>STAGE</div><div>SOFTWARE</div><div>WHY CALL NOW</div></div>
+    <div class="wrow">
+      <div><div class="name">Rainey Street Flats</div><div class="addr">Austin</div></div>
+      <div class="tab">212 units</div>
+      <div><span class="tag ok">Permit issued</span></div>
+      <div><span class="tag warn">No software yet</span></div>
+      <p class="w">No manager attached yet. Owner is developing it themselves.</p>
+    </div>
+    <div class="wrow">
+      <div><div class="name">Parmer Crossing</div><div class="addr">Austin</div></div>
+      <div class="tab">340 units</div>
+      <div><span class="tag">Under construction</span></div>
+      <div><span class="tag">RealPage (company wide)</span></div>
+      <p class="w">Manager signed in June; software confirmed via job posting.</p>
+    </div>
+    <div class="wrow">
+      <div><div class="name">South Lamar Yards</div><div class="addr">Austin</div></div>
+      <div class="tab">178 units</div>
+      <div><span class="tag ok">Recently sold</span></div>
+      <div><span class="tag warn">No software yet</span></div>
+      <p class="w">New owner as of last month, no manager announced.</p>
+    </div>
+  </div>
+</div></section>
+
+<section class="sources"><div class="wrap src-grid">
+  <div>
+    <h2>Every fact has a source.</h2>
+  </div>
+  <div class="docs">
+    <div class="doc reveal"><span class="lbl">CITY</span><div><h3>Public records</h3></div></div>
+    <div class="doc reveal"><span class="lbl">GOV</span><div><h3>Government housing data</h3></div></div>
+    <div class="doc reveal"><span class="lbl">NEWS</span><div><h3>News and company sites</h3></div></div>
+  </div>
+</div></section>
+
+<section class="who bp"><div class="wrap">
+  <h2>Built for property management sales.</h2>
+  <div class="who-list reveal">
+    <span>Property management companies</span>
+    <span>Property software sales teams</span>
+    <span>Smart locks, internet and resident tech</span>
+    <span>Suppliers and contractors</span>
+    <span>Lease up and marketing agencies</span>
+  </div>
+</div></section>
+
+<section class="offer" id="pricing"><div class="wrap offer-grid">
+  <div>
+    <div class="k">FREE EARLY ACCESS · ONE METRO</div>
+    <h2>See the leads free today.</h2>
+    <a class="btn ink" href="https://app.cranesignal.com/index.html" target="_blank" rel="noopener">See the leads free <span class="arr">→</span></a>
+    <!-- EARLY-ACCESS-SPOTS-NUMBER: change to "N of 5 spots left" once the first member joins. -->
+    <div class="spots">5 early access spots.</div>
+  </div>
+  <ul>
+    <li>New and recently sold apartment buildings (20+ units), with new leads added all the time</li>
+    <li>Stage, units, opening date, owner or developer, and who to call: manager, phone, website</li>
+    <li>Which software each building runs, or none yet</li>
+    <li>A "why call now" note and a proof link for every fact</li>
+  </ul>
+</div></section>
+
+
+<section class="offer" id="what-you-get"><div class="wrap">
+  <h2>What you get, and what it costs.</h2>
+  <p class="wyg-cover">U.S. apartment leads update after every check. Ask for your area and we'll add it.</p>
+  <div class="wyg-grid">
+    <div>
+      <h3>Free, no account</h3>
+      <ul class="wyg-list">
+        <li>Every lead in every covered area</li>
+        <li>Stage, units, opening or sale date, owner or developer</li>
+        <li>The office phone when it is public</li>
+        <li>A source link for every fact</li>
+      </ul>
+      <p class="wyg-note"><a href="sample-lead-pack.pdf" target="_blank" rel="noopener">Open a sample call list &rarr;</a></p>
+    </div>
+    <div>
+      <h3>Free account (20 seconds)</h3>
+      <ul class="wyg-list">
+        <li>Who to call: manager name and direct phone</li>
+        <li>A “why call now” note for any building</li>
+        <li>Your call list as a PDF</li>
+        <li>The same list as a spreadsheet (CSV)</li>
+        <li>The agent, to ask anything about the buildings</li>
+      </ul>
+    </div>
+    <figure class="wyg-sample">
+      <a href="sample-lead-pack.pdf" target="_blank" rel="noopener"><img src="img/sample-lead-pack.png" alt="First page of a sample CraneSignal call list: a table of Dallas-Fort Worth buildings with stage, owner, phone, why now and a source link" loading="lazy" width="878" height="678"></a>
+      <figcaption>A real call list, Dallas-Fort Worth</figcaption>
+    </figure>
+  </div>
+  <p class="wyg-cost"><b>Cost:</b> free during early access. No card, ever, without asking you first. If that changes, early users hear it from us before anyone else.</p>
+</div></section>
+
+
+<section class="apply bp" id="sample"><div class="wrap apply-grid">
+  <div>
+    <h2>See your metro's leads now.</h2>
+    <ol class="after" id="next" aria-label="How it works">
+      <li><span class="n">1</span><div><h3>Browse every lead free</h3></div></li>
+      <li><span class="n">2</span><div><h3>Pick your state and region</h3></div></li>
+      <li><span class="n">3</span><div><h3>Click “See who to call” on any building</h3></div></li>
+    </ol>
+    <p class="more-areas">Don't see your area? <a href="https://app.cranesignal.com/map.html#request-area" target="_blank" rel="noopener">Ask and we'll add it.</a></p>
+  </div>
+  <div class="appform">
+    <div class="head"><b>FREE EARLY ACCESS</b><span>No card needed</span></div>
+    <div class="inner">
+      <a class="btn" href="https://app.cranesignal.com/index.html" target="_blank" rel="noopener">See the leads free <span class="arr">→</span></a>
+      <div class="risk">Free during early access. No card. Browse every lead free; a free account unlocks who to call, the agent and your call list.</div>
+    </div>
+  </div>
+</div></section>
+
+<section class="book" id="book"><div class="wrap book-grid">
+  <div>
+    <h2>Rather just talk?</h2>
+  </div>
+  <a class="btn ink" href="https://cal.com/drew-pullen/propertystack-intro" target="_blank" rel="noopener">Book a 15 minute call <span class="arr">→</span></a>
+</div></section>
+</main>
+
+<footer><div class="wrap">CraneSignal · Built from public records only · © 2026 · <a href="https://app.cranesignal.com/privacy.html" style="color:inherit">Privacy</a></div></footer>
+<script>
+document.documentElement.classList.add('js');
+var stamp = document.querySelector('.stamp');
+setTimeout(function () { stamp.classList.add('land'); }, 450);
+if ('IntersectionObserver' in window) {
+  var io = new IntersectionObserver(function (es) {
+    es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, {rootMargin: '0px 0px -8% 0px'});
+  document.querySelectorAll('.reveal').forEach(function (el, i) { el.style.transitionDelay = (i % 3) * 90 + 'ms'; io.observe(el); });
+} else {
+  document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('in'); });
+}
+</script>
+</body>
+</html>

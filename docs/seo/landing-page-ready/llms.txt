@@ -1,0 +1,34 @@
+# CraneSignal
+
+> A free, sourced list of apartment buildings in the United States that are newly permitted,
+> under construction, or recently sold. Every building links the public record it came from.
+
+CraneSignal exists for people who sell to apartment owners: software companies, service
+providers, vendors and their sales teams. It answers one question -- which buildings are
+about to need something, and why now -- from public records only.
+
+## Pages
+
+- [CraneSignal](https://cranesignal.com/): what it is and who it is for.
+- [The lead list](https://app.cranesignal.com/index.html): every building, by state.
+- [Texas construction pipeline](https://app.cranesignal.com/leads/tx.html) and
+  [Arizona](https://app.cranesignal.com/leads/az.html): building-level detail by state.
+- Metro pipelines: [Dallas-Fort Worth](https://app.cranesignal.com/leads/tx/dallas-fort-worth.html),
+  [Houston](https://app.cranesignal.com/leads/tx/houston.html),
+  [Austin](https://app.cranesignal.com/leads/tx/austin.html),
+  [San Antonio](https://app.cranesignal.com/leads/tx/san-antonio.html),
+  [Phoenix](https://app.cranesignal.com/leads/az/phoenix.html).
+- [How it was built and checked](https://app.cranesignal.com/under-the-hood.html)
+- [Full data summary](https://app.cranesignal.com/llms-full.txt)
+
+## Where the data comes from
+
+State and city construction permit records, county appraisal-district sale records, and
+public announcements. No proprietary feeds, no purchased lists, no scraped logins. A fact
+with no public source is left blank rather than estimated, so a blank means the record is
+silent, not that the value is zero.
+
+## Citing this
+
+Counts change as new records appear. Quote the "last updated" date with any number.
+Building-level claims should link that building's own source record, not this file.
