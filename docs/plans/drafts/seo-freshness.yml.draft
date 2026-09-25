@@ -1,0 +1,82 @@
+# Keep the generated site in step with the data.
+#
+# Why this has to exist: the 18 pages under site/leads/, the sitemap's lastmod, llms.txt's
+# counts and the home page's pre-JavaScript block are all derived from site/data/. When the
+# data moves and nobody re-runs the generators, every one of those starts lying -- and
+# freshness is the ranking signal the whole plan leans on. A stale sitemap is worse than no
+# sitemap, because it actively tells crawlers nothing has changed.
+#
+# Committing to main is what deploys: Railway watches this branch. So this workflow is the
+# link between "new buildings arrived" and "the live site says so".
+
+name: SEO freshness
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "site/data/**"
+      - "tooling/seo/**"
+  schedule:
+    # Mondays, a little after the Texas weekly data run. Off the hour on purpose: every
+    # scheduled job in the world fires at :00.
+    - cron: "17 13 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: seo-freshness
+  cancel-in-progress: false
+
+jobs:
+  regenerate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # The generators use nothing but the standard library, deliberately, so there is no
+      # install step to break and no dependency that can go stale underneath them.
+      - name: Regenerate everything derived from the data
+        run: |
+          python3 tooling/seo/build_pages.py
+          python3 tooling/seo/build_seo_files.py
+
+      - name: Check the result is coherent
+        run: |
+          python3 -m pip install --quiet pytest
+          python3 -m pytest -q tooling/qa/fixes_tests/test_seo_pages.py \
+                              tooling/qa/fixes_tests/test_seo_files.py
+
+      - name: Commit only if something actually changed
+        id: commit
+        run: |
+          if git diff --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "Generated files already match the data. Nothing to do."
+            exit 0
+          fi
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add site/
+          git commit -m "Regenerate the site from the data
+
+          The pages, sitemap lastmod, llms.txt counts and the home page block are all
+          derived from site/data/. This keeps them true after a data refresh."
+          git push
+
+      # Bing (and so ChatGPT search) finds out in minutes instead of waiting for a crawl.
+      # Only the URLs this commit touched, so a weekly refresh does not resubmit everything.
+      - name: Tell Bing what changed
+        if: steps.commit.outputs.changed == 'true'
+        run: |
+          echo "Waiting for the deploy before submitting -- a 404 teaches the engine the page is gone."
+          sleep 180
+          python3 tooling/seo/indexnow.py --changed-since HEAD~1 || \
+            echo "IndexNow did not accept the submission; the sitemap still covers us."
