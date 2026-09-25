@@ -48,8 +48,7 @@ Then:
 
 ```bash
 for p in /robots.txt /sitemap.xml /llms.txt; do
-  printf "%-14s " "$p"; curl -s -o /dev/null -w "%{http_code}
-" "https://cranesignal.com$p"
+  curl -s -o /dev/null -w "$p: %{http_code}" "https://cranesignal.com$p"; echo
 done
 ```
 
