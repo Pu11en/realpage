@@ -21,6 +21,7 @@ ROOT = Path(__file__).resolve().parents[2]
 SITE = ROOT / "site"
 DATA = SITE / "data"
 HOST = "https://app.cranesignal.com"
+LANDING = "https://cranesignal.com"
 
 # Pages that belong in the sitemap, with how often they change and how much they
 # matter relative to each other. Anything not listed here is deliberately left out:
@@ -209,10 +210,17 @@ def build_jsonld(index: dict, areas: list[dict]) -> str:
             "@id": f"{HOST}/#org",
             "name": "CraneSignal",
             "url": HOST,
+            "logo": f"{HOST}/img/og-default.png",
             "description": (
                 "Sourced lead data on apartment buildings that are newly permitted, "
                 "under construction or recently sold."
             ),
+            # CraneSignal lives on two hosts: the landing page at cranesignal.com and this
+            # app. Without sameAs a model has no reason to believe they are one outfit, and
+            # a split entity is the thing LLMO is trying to avoid. When the landing page
+            # ships its own Organization at cranesignal.com/#org, both should point at that
+            # single @id instead -- see docs/seo/LANDING-PAGE-FIXES-FOR-DREW.md.
+            "sameAs": [LANDING],
         },
         {
             "@type": "WebSite",
