@@ -16,6 +16,7 @@ This directory holds completed and in-progress plans for PropertyStack and Crane
 
 ## In Progress or Blocked
 
+- **first-users** — The channel that can produce a user this week: vendor sample packs + direct outreach
 - **seo-remeasure-2026-10-09** — The two-week checkpoint: re-run the 56 questions, pull Search Console
 - **seo-geo-strategy** — Research-backed page strategy: metro pipeline reports, not renter pages
 - **seo-geo** — Get found by Google and cited by AI answers (CrawlSEO, Fire Your SEO Agency, GeoLook, NiubiGEO); weekly answer-share run
