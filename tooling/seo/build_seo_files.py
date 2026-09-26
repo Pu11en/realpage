@@ -28,10 +28,10 @@ ORG_ID = f"{LANDING}/#org"
 # Pages that belong in the sitemap, with how often they change and how much they
 # matter relative to each other. Anything not listed here is deliberately left out:
 # 404.html (an error page), master-table.html (a redirect stub), property.html
-# (one template behind ?id=, so it has no canonical URL of its own).
+# (one template behind ?id=, so it has no canonical URL of its own), and since
+# 2026-09-26 under-the-hood.html, which renders 8 visible words without JavaScript.
 CORE_PAGES = [
     ("index.html", "daily", "1.0"),
-    ("under-the-hood.html", "monthly", "0.6"),
     ("privacy.html", "yearly", "0.2"),
 ]
 
@@ -195,7 +195,6 @@ def build_llms(index: dict, areas: list[dict]) -> str:
         "## Pages",
         "",
         f"- [Lead list]({HOST}/index.html): every building, filterable by state, with lead scores.",
-        f"- [How it works]({HOST}/under-the-hood.html): where each number comes from and how it was tested.",
         f"- [Privacy]({HOST}/privacy.html)",
         f"- [Full data summary]({HOST}/llms-full.txt): every per-place total in one file.",
     ]

@@ -18,9 +18,10 @@ SITE = ROOT / "site"
 HOST = "https://app.cranesignal.com"
 
 # Pages a search engine should be able to reach and index on its own.
-INDEXABLE = ["index.html", "under-the-hood.html", "privacy.html"]
-# Pages that must stay out of the index: a template behind ?id=, an error page, a stub.
-NOINDEX = ["property.html", "404.html", "master-table.html"]
+INDEXABLE = ["index.html", "privacy.html"]
+# Pages that must stay out of the index: a template behind ?id=, an error page, a stub,
+# and since 2026-09-26 under-the-hood.html -- see the test at the bottom of this file.
+NOINDEX = ["property.html", "404.html", "master-table.html", "under-the-hood.html"]
 
 
 def read(name: str) -> str:
@@ -223,3 +224,34 @@ def test_llms_txt_tells_a_crawler_the_data_is_downloadable():
     header = (SITE / "leads" / "tx" / "houston.csv").read_text(encoding="utf-8").splitlines()[0]
     for column in header.split(","):
         assert column in text, f"llms.txt does not mention the {column!r} column"
+
+
+def test_under_the_hood_is_off_the_site_but_still_served():
+    """Removed from the site 2026-09-26, David's call.
+
+    The page renders 8 visible words without JavaScript, and it was being cited as the
+    method-and-trust page from every /leads/ footer, from llms.txt, and as usageInfo on all
+    18 Dataset nodes. For a free dataset that page is the whole argument for being trusted
+    over a paid tool, so sending an engine to a blank one is worse than sending it nowhere.
+
+    The file is deliberately not deleted: chatbot/linkfix.py allowlists this exact URL and
+    SOUL.md tells the agent to end any answer about CraneSignal itself with a link to it.
+    Deleting it would make the agent cite a 404. So it stays served and out of the index.
+    """
+    page = SITE / "under-the-hood.html"
+    assert page.is_file(), "still needed: the chat agent cites this URL"
+    assert '<meta name="robots" content="noindex,follow">' in page.read_text(encoding="utf-8")
+
+    assert "under-the-hood" not in read("sitemap.xml")
+    assert "under-the-hood" not in read("llms.txt")
+    assert "under-the-hood" not in read("llms-full.txt")
+    assert "under-the-hood" not in (SITE / "js" / "app.js").read_text(encoding="utf-8"), \
+        "the nav tab is back"
+    assert "under-the-hood" not in (SITE / "index.html").read_text(encoding="utf-8")
+
+    for leads_page in (SITE / "leads").rglob("*.html"):
+        assert "under-the-hood" not in leads_page.read_text(encoding="utf-8"), leads_page.name
+
+    # The chat's own link guard must still recognise it, or the agent's Sources line breaks.
+    linkfix = (ROOT / "chatbot" / "linkfix.py").read_text(encoding="utf-8")
+    assert "under-the-hood.html" in linkfix

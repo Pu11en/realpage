@@ -141,7 +141,6 @@ def test_page_states_the_data_date_and_links_back(path):
     text = text_of(path)
     assert year in text, f"{path.name} never states the data date"
     html = path.read_text(encoding="utf-8")
-    assert "under-the-hood.html" in html, f"{path.name} does not link how it was built"
     assert "index.html" in html, f"{path.name} does not link the searchable list"
 
 

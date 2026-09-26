@@ -772,10 +772,11 @@ def jsonld_for(name: str, description: str, canonical: str, leads: list[dict],
             "creator": {"@id": ORG_ID},
             "publisher": {"@id": ORG_ID},
             "creditText": "CraneSignal",
-            # Not a licence grant -- that is Drew's to make, not this script's. This says
-            # where the terms and the method are written down, which is what a cautious
-            # engine looks for before it will reuse a number.
-            "usageInfo": f"{HOST}/under-the-hood.html",
+            # No usageInfo. It pointed at under-the-hood.html until 2026-09-26, which turned
+            # out to render 8 visible words without JavaScript -- so the property told a
+            # cautious engine "the method is written up over here" and sent it to a blank
+            # page. Better to claim nothing than to claim that. Put it back when there is a
+            # readable page to point at.
             "distribution": [
                 {
                     "@type": "DataDownload",
@@ -892,7 +893,6 @@ def render_page(*, title, h1, description, canonical, depth, place, leads, updat
         "    <footer>",
         f"      Data updated {esc(fmt_date(updated))}. Built from public construction and "
         "sale records only &mdash; no proprietary feeds, no purchased lists. ",
-        '      <a href="/under-the-hood.html">How this was built and checked</a> &middot; '
         '      <a href="/index.html">Search every building</a> &middot; '
         f'      <a href="{LANDING}">CraneSignal home</a>',
         "    </footer>",
@@ -1208,7 +1208,6 @@ def home_static_block(index: dict, areas: list[dict], pages: dict[Path, str]) ->
             "      <ul>",
             *links,
             "      </ul>",
-            f'      <p><a href="under-the-hood.html">How this was built and checked</a></p>',
             "    </div>",
             STATIC_END,
         ]
