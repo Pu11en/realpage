@@ -12,7 +12,12 @@ PROPERTY = (ROOT / "site/property.html").read_text(encoding="utf-8")
 
 
 def test_every_row_is_clickable():
-    assert 'class="clickable" data-id="${l.propertyId || l.id}"' in INDEX
+    # Asserted as two facts rather than one exact string: the row is clickable, and it
+    # carries the id the click needs. The id is escaped now (2026-09-26), and a later change
+    # to how it is escaped should not fail this test.
+    row = INDEX.split('<tr class="clickable"', 1)[1].split("</tr>", 1)[0]
+    assert 'class="clickable"' in INDEX
+    assert "data-id=" in row and "l.propertyId" in row and "l.id" in row
     assert "l.propertyId ? \"clickable\"" not in INDEX
 
 

@@ -332,7 +332,7 @@
         if (contact && contact.phone) parts.push(contact.phone);
         else if (lead && lead.officePhone) parts.push(lead.officePhone);
         if (contact && contact.email) parts.push(contact.email);
-        return parts.length ? `<div class="lead-contact">Office: ${parts.join(" · ")}</div>` : "";
+        return parts.length ? `<div class="lead-contact">Office: ${parts.map(esc).join(" · ")}</div>` : "";
       }
 
       function selectedLeadPack() {
@@ -518,7 +518,7 @@
         const sold = l.signalType === "Sold";
         const text = sold ? l.signal.replace(/^Sold\s*/i, "") : l.signal;
         const tag = l.signalType === "Leasing" ? "Leasing now" : l.signalType;
-        return `<span class="sig-tag ${sold ? "sig-sold" : "sig-up"}">${tag}</span> <span class="sig-text">${text}</span>`;
+        return `<span class="sig-tag ${sold ? "sig-sold" : "sig-up"}">${esc(tag)}</span> <span class="sig-text">${esc(text)}</span>`;
       }
 
       // Upcoming = nothing picked yet; a sold building with no software found = unknown.
@@ -527,9 +527,7 @@
         return vendorPill(l.software);
       }
 
-      function esc(s) {
-        return String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
-      }
+      // esc() is shared, in js/app.js, which every page loads first.
 
       // C4: sources are {label, url}; show the plain name, never a raw query URL
       // or an internal "[tag]". Old plain strings still render.
@@ -645,17 +643,17 @@
         }
 
         document.getElementById("leads-tbody").innerHTML = pageRows.map((l, i) => `
-          <tr class="clickable" data-id="${l.propertyId || l.id}" data-area-slug="${l.areaSlug || area.slug}">
+          <tr class="clickable" data-id="${esc(l.propertyId || l.id)}" data-area-slug="${esc(l.areaSlug || area.slug)}">
             <td data-label="Rank">${i + 1}</td>
             <td data-label="Score"><span class="score-badge" style="background:${scoreBadgeColor(l.score)}">${l.score}</span></td>
-            <td class="lead-prop"><strong>${l.property}</strong>${l.address ? `<div class="lead-subarea">${l.address}</div>` : (l.subArea ? `<div class="lead-subarea">${l.subArea}</div>` : "")}
-              <button class="btn deep-dive-btn" data-deep-dive="${l.id}" title="See who to call about this building">See who to call &rarr;</button>
+            <td class="lead-prop"><strong>${esc(l.property)}</strong>${l.address ? `<div class="lead-subarea">${esc(l.address)}</div>` : (l.subArea ? `<div class="lead-subarea">${esc(l.subArea)}</div>` : "")}
+              <button class="btn deep-dive-btn" data-deep-dive="${esc(l.id)}" title="See who to call about this building">See who to call &rarr;</button>
               ${contactHtml(l.contact, l)}</td>
-            <td data-label="City">${l.city}${area.slug === "all" && l.stateLabel ? `<div class="lead-subarea">${l.stateLabel}</div>` : ""}</td>
+            <td data-label="City">${esc(l.city)}${area.slug === "all" && l.stateLabel ? `<div class="lead-subarea">${esc(l.stateLabel)}</div>` : ""}</td>
             <td data-label="Units">${l.units ?? "?"}</td>
             <td data-label="Signal" class="lead-signal">${signalHtml(l)}</td>
             <td data-label="Software">${leadSoftwareHtml(l)}</td>
-            <td class="lead-why">${sameWords(l.why)} <span class="lead-src">${sourceLinks(l.sources)}</span></td>
+            <td class="lead-why">${esc(sameWords(l.why))} <span class="lead-src">${sourceLinks(l.sources)}</span></td>
           </tr>
         `).join("");
 
@@ -690,7 +688,7 @@
         const sel = document.getElementById("f-city");
         const keep = sel.value;
         const list = [...new Set(data.leads.filter((l) => !metro || l.metro === metro).map((l) => l.city))].sort();
-        sel.innerHTML = `<option value="">All cities</option>` + list.map((c) => `<option value="${c}">${c}</option>`).join("");
+        sel.innerHTML = `<option value="">All cities</option>` + list.map((c) => `<option value="${esc(c)}">${esc(c)}</option>`).join("");
         if (list.includes(keep)) sel.value = keep;
       }
 
