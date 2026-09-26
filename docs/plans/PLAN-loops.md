@@ -1,5 +1,32 @@
 # What should run on a loop
 
+## Decision, 2026-09-26: nothing does
+
+David's call, and it settles every open question below: **no automation.** No GitHub
+Action, no systemd timer, no scheduled anything. Every generator is run by hand, on this
+machine, by someone watching the output.
+
+`docs/plans/drafts/tests.yml.draft` and `docs/plans/drafts/seo-freshness.yml.draft` both
+stay drafts. Neither is waiting on a permission any more; they are simply not wanted.
+
+What the rest of this file is still good for is the **checklist**, because the problems it
+names are real whether or not a machine watches for them:
+
+- **After any data refresh**, re-run the generators. The 18 pages, their 18 CSVs, the
+  sitemap's `lastmod`, llms.txt's counts and the home page's pre-JavaScript block are all
+  derived from `site/data/`, and nothing re-runs them on its own. Both generators have a
+  `--check` mode that exits 1 when they have drifted, and the test suite runs it.
+- **Before trusting a green suite**, remember what skips here: 16 tests, because Node,
+  Caddy and Docker are not on this machine. `CRANESIGNAL_REQUIRE_TOOLS=1` turns those
+  skips into failures where the tools exist.
+- **After any deploy**, check the live site by hand. The landing page's Dockerfile copies
+  an explicit file list, which once meant three files were in the repo, passed every test,
+  and 404'd in production. The app's Dockerfile does `COPY . /srv`, so it has no such trap.
+- **Watch the data date.** `site/data/areas/index.json` says `updated`. Over ~10 days
+  stale, every "last updated" line on the site is doing reputational damage.
+
+The sections below are kept as the reasoning behind that checklist, not as a build plan.
+
 Written 2026-09-25. Everything built so far is a one-shot: someone ran it, it worked, and it
 will quietly rot. This is about what should keep running without anyone remembering.
 
