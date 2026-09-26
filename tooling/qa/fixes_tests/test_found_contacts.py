@@ -51,18 +51,22 @@ def test_the_contacts_file_exists_and_has_the_columns_the_merge_expects():
     assert rows, "no researched contacts yet"
     for row in rows:
         assert set(row) == {"id", "found_name", "phone", "management_company", "email",
-                            "source_url", "found_on"}, sorted(row)
+                            "source_url", "found_on", "notes"}, sorted(row)
 
 
 def test_every_contact_carries_where_it_came_from():
     """The one rule that does not bend. Every other field on this site links the public record
     behind it; a phone number read off a web page owes a reader the same."""
     for row in found_rows():
-        assert row["source_url"].startswith("http"), row
         assert re.fullmatch(r"\d{4}-\d{2}-\d{2}", row["found_on"]), row
-        assert row["phone"] or row["management_company"], (
-            f"{row['id']}: recorded with neither a phone nor a management company"
-        )
+        if row["phone"] or row["management_company"]:
+            assert row["source_url"].startswith("http"), row
+        else:
+            # A search that found nothing is recorded rather than left to be repeated, and it
+            # has to say so -- an empty row with no explanation looks like a mistake.
+            assert row["notes"].strip(), (
+                f"{row['id']}: no phone, no management company and no note saying why"
+            )
 
 
 def test_no_phone_is_a_guess():
@@ -80,9 +84,13 @@ def test_every_contact_matches_a_real_building():
 
 
 def test_the_contacts_reached_the_published_data():
+    """Counted against the rows that actually have something to merge. A recorded miss --
+    searched, nothing found, note explaining why -- fills no field and so reaches no row,
+    which is correct: it exists to stop the search being repeated, not to publish a blank."""
+    have_something = [r for r in found_rows() if r["phone"] or r["management_company"]]
     merged = [l for l in leads() if l.get("contactSource")]
-    assert len(merged) == len(found_rows()), (
-        f"{len(found_rows())} researched, {len(merged)} in the published data"
+    assert len(merged) == len(have_something), (
+        f"{len(have_something)} researched contacts, {len(merged)} in the published data"
     )
     for lead in merged:
         assert lead["contactSource"].startswith("http")

@@ -35303,7 +35303,7 @@
       "dateStatus": null,
       "buyer": "OCONEE REAT ESTATE HOLDINGS XIX",
       "developer": null,
-      "officePhone": null,
+      "officePhone": "(469) 472-2590",
       "website": null,
       "software": null,
       "links": {
@@ -35321,6 +35321,8 @@
       "score": 45,
       "isNew": false,
       "metro": "Dallas\u2013Fort Worth",
+      "contactSource": "https://www.thebaxterapts.com/",
+      "contactFoundOn": "2026-09-26",
       "firstSeen": "2026-09-20"
     },
     {
@@ -35863,7 +35865,7 @@
       "dateStatus": null,
       "buyer": "7165 LAKE RIDGE LLC",
       "developer": null,
-      "officePhone": null,
+      "officePhone": "(682) 327-1384",
       "website": null,
       "software": null,
       "links": {
@@ -35881,6 +35883,9 @@
       "score": 44,
       "isNew": false,
       "metro": "Rest of Texas",
+      "managementCompany": "Pinnacle Properties",
+      "contactSource": "https://jeffersoncove.com/",
+      "contactFoundOn": "2026-09-26",
       "firstSeen": "2026-09-20"
     },
     {
@@ -37003,7 +37008,7 @@
       "dateStatus": null,
       "buyer": "CDKR ROSEMONT LLC",
       "developer": null,
-      "officePhone": null,
+      "officePhone": "(214) 426-0100",
       "website": null,
       "software": null,
       "links": {
@@ -37021,6 +37026,9 @@
       "score": 42,
       "isNew": false,
       "metro": "Dallas\u2013Fort Worth",
+      "managementCompany": "Asset Living",
+      "contactSource": "https://www.apartments.com/rosemont-at-meadow-lane-dallas-tx/zrbkjww/",
+      "contactFoundOn": "2026-09-26",
       "firstSeen": "2026-09-20"
     },
     {
@@ -39936,7 +39944,7 @@
     },
     {
       "id": "tx-8901-bissonnet-st-8901-bissonnet-st",
-      "property": "8901 Bissonnet St",
+      "property": "Stoneriver Apartments",
       "community": "8901 BISSONNET ST",
       "city": "HOUSTON",
       "address": "8901 BISSONNET ST",
@@ -39950,7 +39958,7 @@
       "dateStatus": null,
       "buyer": "AMG STONE RIVER LLC",
       "developer": null,
-      "officePhone": null,
+      "officePhone": "(833) 520-1243",
       "website": null,
       "software": null,
       "links": {
@@ -39968,6 +39976,9 @@
       "score": 37,
       "isNew": false,
       "metro": "Houston",
+      "managementCompany": "Villa Serena Communities",
+      "contactSource": "https://www.villaserenacommunities.com/stoneriver/contact",
+      "contactFoundOn": "2026-09-26",
       "firstSeen": "2026-09-19"
     },
     {
@@ -40750,7 +40761,7 @@
     },
     {
       "id": "tx-2410-s-kirkwood-rd-2410-s-kirkwood-rd",
-      "property": "2410 S Kirkwood Rd",
+      "property": "The Park at Pisa (was Wyndham Oaks)",
       "community": "2410 S KIRKWOOD RD",
       "city": "HOUSTON",
       "address": "2410 S KIRKWOOD RD",
@@ -40764,7 +40775,7 @@
       "dateStatus": null,
       "buyer": "2410 SOUTH KIRKWOOD ROAD HOLDINGS LP",
       "developer": null,
-      "officePhone": null,
+      "officePhone": "(281) 688-1273",
       "website": null,
       "software": null,
       "links": {
@@ -40782,6 +40793,9 @@
       "score": 36,
       "isNew": false,
       "metro": "Houston",
+      "managementCompany": "RPM Living",
+      "contactSource": "https://www.theparkatpisa.com/contact",
+      "contactFoundOn": "2026-09-26",
       "firstSeen": "2026-09-19"
     },
     {
@@ -41112,7 +41126,7 @@
     },
     {
       "id": "tx-14403-ella-blvd-14403-ella-blvd",
-      "property": "14403 Ella Blvd",
+      "property": "Morgan Bay",
       "community": "14403 ELLA BLVD",
       "city": "HOUSTON",
       "address": "14403 ELLA BLVD",
@@ -41126,7 +41140,7 @@
       "dateStatus": null,
       "buyer": "AF1 PROPERTY LLC",
       "developer": null,
-      "officePhone": null,
+      "officePhone": "(346) 810-6889",
       "website": null,
       "software": null,
       "links": {
@@ -41144,6 +41158,11 @@
       "score": 36,
       "isNew": false,
       "metro": "Houston",
+      "contact": {
+        "email": "leasing@morganbayliving.com"
+      },
+      "contactSource": "https://www.morganbayliving.com/contact/",
+      "contactFoundOn": "2026-09-26",
       "firstSeen": "2026-09-19"
     },
     {
@@ -41225,7 +41244,7 @@
     },
     {
       "id": "tx-9404-west-rd-9404-west-rd",
-      "property": "9404 West Rd",
+      "property": "Discovery at West Road (was Watermarke)",
       "community": "9404 WEST RD",
       "city": "HOUSTON",
       "address": "9404 WEST RD",
@@ -41239,7 +41258,7 @@
       "dateStatus": null,
       "buyer": "LSC DISCOVERY OWNER LLC ET AL",
       "developer": null,
-      "officePhone": null,
+      "officePhone": "(832) 756-8153",
       "website": null,
       "software": null,
       "links": {
@@ -41257,6 +41276,8 @@
       "score": 35,
       "isNew": false,
       "metro": "Houston",
+      "contactSource": "https://www.discoveryatwestroad.com/",
+      "contactFoundOn": "2026-09-26",
       "firstSeen": "2026-09-19"
     },
     {

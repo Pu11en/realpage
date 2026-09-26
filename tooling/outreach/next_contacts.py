@@ -21,7 +21,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 TARGETS = ROOT / ".phase4-targets.json"
 FOUND = ROOT / "propertystack" / "data" / "tx" / "contacts-found.csv"
-COLS = ["id", "found_name", "phone", "management_company", "email", "source_url", "found_on"]
+COLS = ["id", "found_name", "phone", "management_company", "email", "source_url", "found_on",
+        "notes"]
 
 # The counties bake clerical codes into their own name fields. Stripped for the query only --
 # the stored record keeps whatever the county published.
@@ -72,9 +73,12 @@ def main() -> int:
     if "--add" in args:
         payload = args[args.index("--add") + 1]
         parts = next(csv.reader([payload]))
-        assert len(parts) == 6, f"want 6 fields, got {len(parts)}: {parts}"
+        # The 7th field is optional: a note, used to record a search that found nothing so
+        # the work is not repeated and a reader can see we looked rather than skipped.
+        assert len(parts) in (6, 7), f"want 6 or 7 fields, got {len(parts)}: {parts}"
         new = dict(zip(["id", "found_name", "phone", "management_company", "email",
-                        "source_url"], parts))
+                        "source_url", "notes"], parts))
+        new.setdefault("notes", "")
         new["found_on"] = "2026-09-26"
         write_header = not FOUND.exists()
         with FOUND.open("a", newline="", encoding="utf-8") as fh:
