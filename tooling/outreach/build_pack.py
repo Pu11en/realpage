@@ -38,8 +38,9 @@ _spec = importlib.util.spec_from_file_location(
 _pages = importlib.util.module_from_spec(_spec)
 sys.modules["seo_build_pages"] = _pages
 _spec.loader.exec_module(_pages)
-pretty, fmt_date, fmt_month, esc, clean_city = (
-    _pages.pretty, _pages.fmt_date, _pages.fmt_month, _pages.esc, _pages.clean_city
+pretty, fmt_date, fmt_month, esc, clean_city, display_name = (
+    _pages.pretty, _pages.fmt_date, _pages.fmt_month, _pages.esc, _pages.clean_city,
+    _pages.display_name,
 )
 
 
@@ -125,7 +126,7 @@ def render(rows: list[dict], profile: dict, profile_key: str, updated: str,
 
     body_rows = []
     for lead in rows:
-        name = pretty(lead.get("community") or lead.get("property")) or "(unnamed in the record)"
+        name = display_name(lead) or "(unnamed in the record)"
         address = pretty(lead.get("address"))
         if address and address == name:
             address = ""

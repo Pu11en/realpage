@@ -115,6 +115,23 @@ def pretty(value: str | None) -> str:
     return " ".join(words)
 
 
+def display_name(lead: dict) -> str:
+    """The building's name as a reader should see it: `property`, never `community`.
+
+    Both fields exist and they are not interchangeable. `community` is the county's own
+    string; `property` is that string after build_data._nice_name() cleaned it, after a
+    generic label was replaced by the address, after duplicate names were disambiguated, and
+    after a researched name was merged in.
+
+    Every display path in this file read `community` first until 2026-09-26, so 360 of 1,702
+    rows showed the raw county text -- "(N/C 89%) SOLTRA FIREWHEEL", "THE AMBASSADOR
+    APARTMENTS 30%", "Building Permit" -- and all four cleaning steps were invisible on the
+    live site. Found because a researched name, "3 Corners East", failed to appear on the
+    Houston page after the merge had written it.
+    """
+    return pretty(lead.get("property") or lead.get("community")) or ""
+
+
 def fmt_date(iso: str | None) -> str:
     if not iso:
         return ""
@@ -343,7 +360,7 @@ def table(leads: list[dict], sold_view: bool) -> str:
         "      <tbody>",
     ]
     for lead in leads:
-        name = pretty(lead.get("community") or lead.get("property")) or "(unnamed)"
+        name = display_name(lead) or "(unnamed)"
         when = fmt_month(lead.get("saleDate") if sold_view else lead.get("openingDate"))
         who = pretty(lead.get("buyer") if sold_view else lead.get("developer"))
         sources = lead.get("sources") or []
@@ -461,7 +478,7 @@ def breakdowns(s: dict, place: str) -> str:
     if s["biggest"]:
         items = []
         for lead in s["biggest"]:
-            name = pretty(lead.get("community") or lead.get("property")) or "(unnamed)"
+            name = display_name(lead) or "(unnamed)"
             where = lead.get("_city") or lead.get("city") or ""
             items.append(
                 f"      <li>{esc(name)} &mdash; {int(lead['units']):,} units, "
@@ -540,7 +557,7 @@ def faq_for(place: str, s: dict, updated: str) -> list[tuple[str, str]]:
 
     if s["biggest"]:
         top = s["biggest"][0]
-        name = pretty(top.get("community") or top.get("property")) or "an unnamed project"
+        name = display_name(top) or "an unnamed project"
         where = top.get("_city") or top.get("city") or place
         qa.append((
             f"What is the largest apartment project in {place}?",
@@ -628,7 +645,7 @@ CSV_COLUMNS: list[tuple[str, str, str]] = [
 def csv_cell(lead: dict, key: str) -> str:
     """One CSV value. Blank means the record is silent, never that the value is zero."""
     sources = [s for s in (lead.get("sources") or []) if s.get("url")]
-    name = pretty(lead.get("community") or lead.get("property")) or ""
+    name = display_name(lead) or ""
     address = pretty(lead.get("address"))
     return {
         "name": name or address,
@@ -757,7 +774,7 @@ def jsonld_for(name: str, description: str, canonical: str, leads: list[dict],
     """
     items = []
     for i, lead in enumerate(leads[:50], start=1):
-        label = pretty(lead.get("community") or lead.get("property")) or "(unnamed)"
+        label = display_name(lead) or "(unnamed)"
         where = ", ".join(
             bit for bit in (pretty(lead.get("address")), lead.get("_city") or lead.get("city")) if bit
         )

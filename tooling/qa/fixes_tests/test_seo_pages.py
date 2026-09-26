@@ -518,3 +518,50 @@ def test_the_home_page_is_not_thin_to_a_crawler():
     assert "sell" in text and "apartment owners" in text, "does not say who it is for"
     assert "never that we guessed" in text, "does not state the blank-cell rule"
     assert ".csv" in text and "no account" in text, "does not mention the free spreadsheet"
+
+
+# ------------------------------------------------- the name a reader is actually shown
+#
+# Added 2026-09-26. Every display path in build_pages.py read `community` before `property`,
+# and those two fields are not interchangeable: `community` is the county's own string,
+# `property` is that string after four cleaning steps. So 360 of 1,702 rows published the raw
+# county text and every one of those steps was invisible on the live site.
+
+
+COUNTY_CLERICAL = re.compile(
+    r"N/C\s|\d+\s*%|%\s*COMPLETE|\(U/C\)|Building Permit|Blk [A-Z] Lot|ECU \d", re.I
+)
+
+
+def test_the_display_name_comes_from_the_cleaned_field():
+    """Asserted on the helper rather than on each call site, because the bug was that five
+    separate call sites each reached for the raw field."""
+    source = (ROOT / "tooling" / "seo" / "build_pages.py").read_text(encoding="utf-8")
+    assert "def display_name(lead: dict)" in source
+    assert 'pretty(lead.get("property") or lead.get("community"))' in source
+    # Nothing may reach for community first again.
+    assert 'lead.get("community") or lead.get("property")' not in source
+    assert 'top.get("community") or top.get("property")' not in source
+
+
+@pytest.mark.parametrize("path", pages(), ids=lambda p: p.name)
+def test_no_page_shows_county_clerical_text_as_a_building_name(path):
+    """A reader seeing "(N/C 89%) SOLTRA FIREWHEEL" or "Building Permit" as a building name
+    learns that nobody looked at this data."""
+    html = path.read_text(encoding="utf-8")
+    body = html.rsplit("<tbody>", 1)[1].split("</tbody>", 1)[0]
+    names = [re.sub(r"<[^>]+>", "", cells[0]) for cells in
+             (re.findall(r"<td[^>]*>(.*?)</td>", row, re.S) for row in
+              re.findall(r"<tr>.*?</tr>", body, re.S)) if cells]
+    bad = [n for n in names if COUNTY_CLERICAL.search(n)]
+    assert not bad, f"{path.name}: {len(bad)} clerical names, e.g. {bad[:3]}"
+
+
+def test_no_spreadsheet_shows_county_clerical_text_as_a_building_name():
+    bad = []
+    for spreadsheet in sorted(LEADS.rglob("*.csv")):
+        with spreadsheet.open(encoding="utf-8", newline="") as fh:
+            for row in csv.DictReader(fh):
+                if COUNTY_CLERICAL.search(row["Building"]):
+                    bad.append((spreadsheet.name, row["Building"]))
+    assert not bad, f"{len(bad)} clerical names in the CSVs, e.g. {bad[:3]}"
