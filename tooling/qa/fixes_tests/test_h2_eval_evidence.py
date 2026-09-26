@@ -1,4 +1,11 @@
-"""H2: saved evidence is reproducible, plainly historical, and auditable."""
+"""H2: the saved eval evidence is reproducible, plainly historical, and auditable.
+
+Was "under the hood evidence" until 2026-09-26, when that page was deleted. The page
+assertions went with it; these did not, because the numbers are still public and still
+quoted -- the chat agent cites them for "how do you know it works?", and
+tooling/chat-data/build_cranesignal_numbers.py reads the same files. Evidence nobody
+displays still has to be true.
+"""
 import json
 import subprocess
 from pathlib import Path
@@ -6,7 +13,6 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[3]
 DATA = ROOT / "site" / "data"
-PAGE = (ROOT / "site" / "under-the-hood.html").read_text(encoding="utf-8")
 
 
 def read_json(name):
@@ -33,18 +39,6 @@ def test_every_headline_measure_has_a_sample_and_matches_saved_evidence():
     assert evals["human_review"]["n_reviewed"] == 17
     assert chat["n_answers"] == 105
     assert evals["measured_at"] == chat["measured_at"] == "2026-09-15"
-    for internal in ["checksTotal", "false_alarm", "False-alarm", "scorecard checks passing"]:
-        assert internal not in PAGE, internal
-
-
-def test_page_explains_method_and_known_limits_without_internal_hedging():
-    for required in ['loadData("data/evals.json")', 'loadData("data/chat-stats.json")',
-                     "How I know it's good", "Known limits", "Measured "]:
-        assert required in PAGE
-    assert "not a current release approval" not in PAGE
-    assert "not run yet" not in PAGE
-    assert "passed check first try" not in PAGE
-    assert "firstTryPct" not in PAGE
 
 
 def test_public_evidence_has_no_machine_paths():
