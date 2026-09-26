@@ -15,6 +15,62 @@ because 93% of rows have no phone number, so there is nothing to do after readin
 
 Marketing against that just brings people to the wall faster. The wall is the work.
 
+## Both unknowns were resolved before committing the six hours
+
+Run 2026-09-26, before starting, because a plan whose two biggest risks are untested is a
+guess with a schedule attached.
+
+### All 12 Texas sources are alive
+
+Every recipe in `propertystack/recipes/tx/` was fetched live. Result in
+`propertystack/runs/source-health-tx-2026-09-26.json`.
+
+Two reported as broken on the first pass and **both failures were the test, not the source**:
+
+- `dallas-dcad` returned `InvalidURL` because its `zip_url` carries a literal Windows path.
+  Percent-encoded the way `run_area._safe_url()` already does it, it returns **200 and a
+  198 MB file**.
+- `san-antonio` returned `409` to a bare GET. It is a CKAN `datastore_search_sql` endpoint, so
+  409 means "you sent no query". POSTing the recipe's own SQL returns **628 live rows**.
+
+So phase 1 below is already done, and the refresh in phase 3 rests on twelve working sources
+rather than an assumption.
+
+### The contacts are findable: 10 for 10
+
+Ten Texas buildings with no phone, picked at random from the 178, deliberately including the
+hardest shapes. One web search each. **Every single one returned a phone number.**
+
+| Our record | What the search found |
+|---|---|
+| `SONTERRA AT BUCKINGHAM` | (972) 437-5150 — Willow Bridge Property Co |
+| `MIDTOWN AT CEDAR HILL` | (469) 382-5471 |
+| `BIRCHSTONE CEDAR RIDGE` | 972-573-6201 — Birchstone Residential, own site |
+| `ANTHEM TOWN EAST` | (972) 597-2370 — own site |
+| `MURDEAUX VILLAS - TDHCA# 21614` | (214) 398-4110 |
+| `NORTH OAK APTS (TDHCA# 92001)` | (972) 438-3609 — US Residential |
+| `4011 GALVESTON RD` *(no name at all)* | "Dorchester", (713) 644-1271 |
+| `9999 KEMPWOOD DR` *(no name)* | "3 Corners East", (832) 621-4561 — **Greystar** |
+| `2300 RED BLUFF RD` *(no name)* | "Quarters on Red Bluff", (713) 473-5521, **+ email** |
+| `8990 RICHMOND AVE` *(no name)* | pending |
+
+Three things this changed about the plan:
+
+1. **The rows with no name are not the hard case.** Apartments.com, HAR, Zumper and Yelp all
+   index by street address, so an address-only row resolves to a real community name — which
+   is itself a field worth filling, since a page listing "9999 KEMPWOOD DR" reads like a
+   database error and "3 Corners East" reads like a building.
+2. **The junk in TDHCA names does not break the search.** `MURDEAUX VILLAS - TDHCA# 21614`
+   found it once the code was stripped.
+3. **There is more per search than a phone.** Management company, the building's own website,
+   and sometimes an email. The management company is the better field for selling software —
+   Greystar buys for a portfolio, a leasing office buys for nothing.
+
+**One caution the sample surfaced.** Apartments.com says Murdeaux Villas has 240 units; the
+appraisal record says 301. Keep *our* number, which is sourced, and take only the contact from
+the search. Never let an aggregator overwrite a field that already has a public record behind
+it.
+
 ## What was checked first, so the plan is not a guess
 
 | Question | Answer |
@@ -63,11 +119,18 @@ out, and catches new ones that deserve a search.
 
 One search per building. Record, per building:
 
-- the real community name (many rows currently carry only a street address)
+- the real community name (many rows carry only a street address, and the sample showed those
+  resolve reliably — a page that says "3 Corners East" beats one that says "9999 KEMPWOOD DR")
 - the leasing office phone
-- the management company, where the search names one — **this is the more valuable field**,
-  because the management company buys software and the leasing office does not
+- the management company, where the search names one — **the most valuable field of the four**,
+  because a Greystar or a Willow Bridge buys software for a portfolio and a single leasing
+  office buys for nothing
+- an email, where one appears (rare: 1 of 10 in the sample)
 - the URL it came from, and today's date
+
+Nothing else. In particular the unit count, the sale date and the stage are **not** touched:
+those already have a public record behind them, and an aggregator disagreeing with the
+appraisal district is not a reason to trust the aggregator.
 
 Appended to `propertystack/data/tx/contacts-found.csv` after **every batch of ten**, so a lost
 session costs one batch and not three hours.
