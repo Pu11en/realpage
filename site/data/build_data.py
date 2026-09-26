@@ -948,11 +948,19 @@ def strip_county_shorthand(name: str) -> str:
     return text.strip(" -,;/&").strip()
 
 
+# A unit count inside a building name. The county writes it into its own property-name
+# field, so rows arrive called "THE NATIONAL (324 UNITS)" -- while the appraisal record for
+# that same building says 543 units, which is the number the Units column shows. A visitor
+# reading that row saw it contradict itself. The count comes out of the name; it is not a
+# name, and the Units column already carries a number with a record behind it.
+NAME_UNIT_COUNT = re.compile(r"\s*\(\s*\d{1,4}\s*units?\s*\)\s*", re.I)
+
+
 def _nice_name(name: str, address: str = "") -> str:
     """ALL-CAPS names read as shouting; a generic permit label isn't a name --
     call it "Apartments at <address>" when there is one.  County shorthand
     inside the name is dropped first (S12)."""
-    name = strip_county_shorthand(name)
+    name = NAME_UNIT_COUNT.sub(" ", strip_county_shorthand(name)).strip()
     stripped = (name or "").strip()
     if not stripped or stripped.lower() in _GENERIC_NAMES or _LOT_LABEL_RE.match(stripped):
         return f"Apartments at {address.title()}" if address else "Unnamed project"

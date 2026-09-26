@@ -189,7 +189,7 @@
         <ul>${list.join("")}</ul></div>`;
     }
 
-    // A lead row with no saved property record (Texas, Arizona, New York permits and sales).
+    // A lead row with no saved property record (Texas permits and sales).
     const LEAD_STAGE = { planned: "Planned", permitted: "Permitted", "under construction": "Under construction", leasing: "Leasing", sold: "Sold" };
     function leadPage(l, area) {
       const name = l.property || l.community || l.address || "Unnamed project";

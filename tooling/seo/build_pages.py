@@ -1224,7 +1224,9 @@ def home_static_block(index: dict, areas: list[dict], pages: dict[Path, str]) ->
             '    <div class="pre-js-summary">',
             "      <h1>Apartment buildings that are about to need something</h1>",
             f"      <p>CraneSignal tracks {total:,} apartment buildings across "
-            f"{len(areas)} US states &mdash; {units:,} units &mdash; that are planned, "
+            # Named, not counted. With one state "across 1 US states" is both ungrammatical
+            # and less useful than saying Texas, which is the thing a reader is checking for.
+            f"{esc(states_phrase(all_leads))} &mdash; {units:,} units &mdash; that are planned, "
             "permitted, under construction, leasing, or have just changed owner. It is for "
             "people who sell <em>to</em> apartment owners rather than to renters: the "
             "question it answers is which buildings are about to need something, and why "

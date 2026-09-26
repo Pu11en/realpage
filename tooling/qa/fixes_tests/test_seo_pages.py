@@ -58,15 +58,17 @@ def test_generator_output_is_current():
     assert done.returncode == 0, done.stderr or done.stdout
 
 
-def test_the_five_metro_pages_exist():
+def test_the_metro_pages_exist():
     """These are the pages the search demand actually points at -- see
-    docs/plans/PLAN-seo-geo-strategy.md. Losing one silently would gut the plan."""
+    docs/plans/PLAN-seo-geo-strategy.md. Losing one silently would gut the plan.
+
+    Was five, including az/phoenix, until CraneSignal became Texas only on 2026-09-26.
+    """
     for rel in (
         "tx/dallas-fort-worth.html",
         "tx/houston.html",
         "tx/austin.html",
         "tx/san-antonio.html",
-        "az/phoenix.html",
     ):
         assert (LEADS / rel).exists(), f"missing metro page {rel}"
 

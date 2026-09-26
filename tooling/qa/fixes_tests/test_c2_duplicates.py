@@ -15,12 +15,24 @@ from record import LeadRecord  # noqa: E402
 PHASE_RE = re.compile(r"\bphase\s+(\d+|i+)\b", re.I)
 
 
+
+def published_slugs() -> list[str]:
+    """The states the site actually publishes, from the area index rather than a hard-coded
+    tuple. Every one of these tests named ("tx", "az", "ny") and broke on 2026-09-26 when
+    CraneSignal became Texas only; read from the index they survive the next change too.
+    """
+    import json as _json
+    index = _json.loads(
+        (ROOT / "site" / "data" / "areas" / "index.json").read_text(encoding="utf-8")
+    )
+    return [a["slug"] for a in index["areas"] if not a.get("hidden")]
+
 def _rows(slug):
     return json.loads((ROOT / f"site/data/areas/{slug}.json").read_text())["leads"]
 
 
 def test_no_same_name_same_city_unless_phases():
-    for slug in ("tx", "az", "ny"):
+    for slug in published_slugs():
         counts = Counter(
             (l["property"].lower(), (l["city"] or "").lower()) for l in _rows(slug)
             if (l.get("property") or "").strip().lower() not in GENERIC_NAMES  # renamed by address in C3

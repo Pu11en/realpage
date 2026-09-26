@@ -1,52 +1,6 @@
 {
   "source": "site/data/areas",
   "states": {
-    "Arizona": {
-      "abbr": "AZ",
-      "total": 274,
-      "topCities": [
-        {
-          "city": "PHOENIX",
-          "count": 60
-        },
-        {
-          "city": "Mesa",
-          "count": 46
-        },
-        {
-          "city": "Scottsdale",
-          "count": 38
-        }
-      ]
-    },
-    "New Mexico": {
-      "abbr": "NM",
-      "total": 12,
-      "topCities": [
-        {
-          "city": "Las Cruces",
-          "count": 3
-        },
-        {
-          "city": "Albuquerque",
-          "count": 3
-        },
-        {
-          "city": "Santa Fe",
-          "count": 2
-        }
-      ]
-    },
-    "New York": {
-      "abbr": "NY",
-      "total": 2,
-      "topCities": [
-        {
-          "city": "Buffalo",
-          "count": 2
-        }
-      ]
-    },
     "Texas": {
       "abbr": "TX",
       "total": 1587,

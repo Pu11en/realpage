@@ -1,40 +1,6 @@
 {
   "markers": [
     {
-      "state": "Arizona",
-      "code": "AZ",
-      "leads": 274,
-      "label": "AZ \u00b7 274 leads",
-      "topCities": [
-        "PHOENIX",
-        "Mesa",
-        "Scottsdale"
-      ],
-      "link": "index.html?area=az"
-    },
-    {
-      "state": "New Mexico",
-      "code": "NM",
-      "leads": 12,
-      "label": "NM \u00b7 12 leads",
-      "topCities": [
-        "Las Cruces",
-        "Albuquerque",
-        "Santa Fe"
-      ],
-      "link": "index.html?area=nm"
-    },
-    {
-      "state": "New York",
-      "code": "NY",
-      "leads": 2,
-      "label": "NY \u00b7 2 leads",
-      "topCities": [
-        "Buffalo"
-      ],
-      "link": "index.html?area=ny"
-    },
-    {
       "state": "Texas",
       "code": "TX",
       "leads": 1587,

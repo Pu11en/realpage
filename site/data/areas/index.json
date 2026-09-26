@@ -5,27 +5,6 @@
       "label": "Texas",
       "dataPath": "data/areas/tx.json",
       "leads": 1587
-    },
-    {
-      "slug": "az",
-      "label": "Arizona",
-      "dataPath": "data/areas/az.json",
-      "leads": 274
-    },
-    {
-      "slug": "nm",
-      "label": "New Mexico",
-      "dataPath": "data/areas/nm.json",
-      "leads": 12,
-      "hidden": true,
-      "hiddenReason": "under-25-leads"
-    },
-    {
-      "slug": "ny",
-      "label": "New York",
-      "dataPath": "data/areas/ny.json",
-      "leads": 2,
-      "hidden": true
     }
   ],
   "aliases": {

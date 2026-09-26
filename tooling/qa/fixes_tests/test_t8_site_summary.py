@@ -125,13 +125,16 @@ def test_published_summary_reconciles_with_area_files_and_hidden_leads():
     assert summary["totalTracked"] == public_count
     assert summary["leadsInAreaFiles"] == all_area_count
     assert summary["totalTracked"] + sum(item["leads"] for item in summary["notTracked"]) == all_area_count
-    assert summary["notTracked"] == [
-        {
-            "area": "ny",
-            "leads": 2,
-            "why": "area is hidden by hand, so its leads are not published",
-        }
-    ]
+    # Every hidden area must say why it is hidden, and its leads must be excluded from the
+    # published total -- which the three assertions above already check arithmetically.
+    #
+    # This used to name New York and its 2 leads exactly. That broke on 2026-09-26 when
+    # CraneSignal became Texas only and there are no hidden areas left, so the list is empty.
+    # Asserted as a shape rather than a fixture: an exact list fails every time coverage
+    # changes, and what actually matters is that nothing is quietly dropped without a reason.
+    for item in summary["notTracked"]:
+        assert item["area"] and item["leads"] >= 0, item
+        assert item["why"].strip(), f"{item['area']} is excluded with no reason given"
 
 
 def test_texas_source_health_reconciles_source_state_and_site_counts():

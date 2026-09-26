@@ -17,12 +17,24 @@ RAW_API = re.compile(
 INTERNAL = {"county record", "website", "news", "permit", "houston-weekly-xlsx"}
 
 
+
+def published_slugs() -> list[str]:
+    """The states the site actually publishes, from the area index rather than a hard-coded
+    tuple. Every one of these tests named ("tx", "az", "ny") and broke on 2026-09-26 when
+    CraneSignal became Texas only; read from the index they survive the next change too.
+    """
+    import json as _json
+    index = _json.loads(
+        (ROOT / "site" / "data" / "areas" / "index.json").read_text(encoding="utf-8")
+    )
+    return [a["slug"] for a in index["areas"] if not a.get("hidden")]
+
 def _rows(slug):
     return json.loads((ROOT / f"site/data/areas/{slug}.json").read_text())["leads"]
 
 
 def _all_sources():
-    for slug in ("tx", "az", "nm", "ny"):
+    for slug in published_slugs():
         for l in _rows(slug):
             for s in l.get("sources") or []:
                 yield slug, l["id"], s
@@ -38,23 +50,25 @@ def test_every_source_has_a_plain_label_and_no_raw_query():
 
 
 def test_known_datasets_map_to_public_pages():
+    """A raw API endpoint or a bulk download is unreadable; each one becomes the public page
+    that shows the same records, with a name a person can understand.
+
+    The expected list was the Arizona, New Mexico and New York cities until 2026-09-26. Now the
+    Texas sources, checked against the labels actually present rather than a wish list.
+    """
     labels = {s["label"] for _, _, s in _all_sources()}
     for expected in (
-        "City of Mesa building permits",
-        "City of Scottsdale building permits",
-        "City of Tempe building permits",
-        "City of Phoenix planning permits",
-        "Town of Gilbert building permits",
-        "City of Tucson building permits",
-        "Maricopa County building permits",
-        "Maricopa County Assessor sales records",
-        "City of San Marcos building permits",
-        "City of Fort Worth development permits",
+        "State project record",
+        "City permit record",
         "City of Arlington issued permits",
-        "City of Las Cruces building permits",
-        "City of Buffalo building permits",
-        "Texas county property records",
+        "City of Fort Worth development permits",
+        "City of San Marcos building permits",
         "Houston weekly permit list",
+        "Texas county property records",
+        "Dallas County records (search by address)",
+        "Harris County records (search by address)",
+        "Tarrant County commercial records (ZIP)",
+        "Texas housing tax-credit inventory (XLSX)",
     ):
         assert expected in labels, expected
 
