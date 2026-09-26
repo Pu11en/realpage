@@ -16878,7 +16878,10 @@
       "dateStatus": null,
       "firstSeen": "2026-09-15",
       "metro": "Dallas\u2013Fort Worth",
-      "subArea": "Plano\u2013Richardson"
+      "subArea": "Plano\u2013Richardson",
+      "managementCompany": "StreetLights Residential (developer)",
+      "contactSource": "https://streetlights.com/properties/the-parks-at-legacy-west/",
+      "contactFoundOn": "2026-09-26"
     },
     {
       "id": "tx-600-kissimmee-dr-plano-tx-the-buckley",
@@ -34762,7 +34765,7 @@
       "dateStatus": null,
       "buyer": "PARDUE SUNDANCE AT",
       "developer": null,
-      "officePhone": null,
+      "officePhone": "(945) 942-0350",
       "website": null,
       "software": null,
       "links": {
@@ -34780,6 +34783,11 @@
       "score": 46,
       "isNew": false,
       "metro": "Rest of Texas",
+      "contact": {
+        "email": "live@altafirewheel.com"
+      },
+      "contactSource": "https://altafirewheel.com/contact/",
+      "contactFoundOn": "2026-09-26",
       "firstSeen": "2026-09-20"
     },
     {
@@ -35643,7 +35651,7 @@
       "dateStatus": null,
       "buyer": "2500 HOUSTON LLC",
       "developer": null,
-      "officePhone": null,
+      "officePhone": "(214) 331-8439",
       "website": null,
       "software": null,
       "links": {
@@ -35661,6 +35669,9 @@
       "score": 44,
       "isNew": false,
       "metro": "Dallas\u2013Fort Worth",
+      "managementCompany": "Greystar",
+      "contactSource": "https://www.greystar.com/cirque-residences-dallas-tx/p_22868",
+      "contactFoundOn": "2026-09-26",
       "firstSeen": "2026-09-20"
     },
     {
@@ -36122,7 +36133,7 @@
       "dateStatus": null,
       "buyer": "9835 W VALLEY RANCH",
       "developer": null,
-      "officePhone": null,
+      "officePhone": "(972) 848-8807",
       "website": null,
       "software": null,
       "links": {
@@ -36140,6 +36151,9 @@
       "score": 43,
       "isNew": false,
       "metro": "Dallas\u2013Fort Worth",
+      "managementCompany": "Camden Property Trust",
+      "contactSource": "https://www.camdenliving.com/apartments/irving-tx/camden-valley-park/available-apartments",
+      "contactFoundOn": "2026-09-26",
       "firstSeen": "2026-09-20"
     },
     {
@@ -38541,7 +38555,7 @@
     },
     {
       "id": "tx-611-shepherd-dr-611-shepherd-dr",
-      "property": "611 Shepherd Dr",
+      "property": "611 Shepherd (was Windsor Shepherd)",
       "community": "611 SHEPHERD DR",
       "city": "HOUSTON",
       "address": "611 SHEPHERD DR",
@@ -38555,7 +38569,7 @@
       "dateStatus": null,
       "buyer": "BEL SHEPHERD LIMITED PARTNERSHIP",
       "developer": null,
-      "officePhone": null,
+      "officePhone": "(346) 644-8952",
       "website": null,
       "software": null,
       "links": {
@@ -38573,6 +38587,9 @@
       "score": 40,
       "isNew": false,
       "metro": "Houston",
+      "managementCompany": "Greystar",
+      "contactSource": "https://www.greystar.com/611-shepherd-houston-tx/p_23121",
+      "contactFoundOn": "2026-09-26",
       "firstSeen": "2026-09-19"
     },
     {
@@ -39253,7 +39270,7 @@
       "dateStatus": null,
       "buyer": "BUENA ONDAWHITE ROCK LAKE LP",
       "developer": null,
-      "officePhone": null,
+      "officePhone": "(214) 320-0164",
       "website": null,
       "software": null,
       "links": {
@@ -39271,6 +39288,12 @@
       "score": 39,
       "isNew": false,
       "metro": "Dallas\u2013Fort Worth",
+      "managementCompany": "Dynasty",
+      "contact": {
+        "email": "the-lake-lofts@rent.dynasty.com"
+      },
+      "contactSource": "https://www.zillow.com/apartments/dallas-tx/the-lake-lofts-apartment/ChPTKf/",
+      "contactFoundOn": "2026-09-26",
       "firstSeen": "2026-09-20"
     },
     {
@@ -40539,7 +40562,7 @@
     },
     {
       "id": "tx-14651-philippine-st-14651-philippine-st",
-      "property": "14651 Philippine St",
+      "property": "Kensington Crossings",
       "community": "14651 PHILIPPINE ST",
       "city": "HOUSTON",
       "address": "14651 PHILIPPINE ST",
@@ -40553,7 +40576,7 @@
       "dateStatus": null,
       "buyer": "AP KENSINGTON PROPERTY LLC",
       "developer": null,
-      "officePhone": null,
+      "officePhone": "(346) 268-5190",
       "website": null,
       "software": null,
       "links": {
@@ -40571,6 +40594,12 @@
       "score": 36,
       "isNew": false,
       "metro": "Houston",
+      "managementCompany": "Roscoe Properties",
+      "contact": {
+        "email": "leasing1@kensington-crossings.com"
+      },
+      "contactSource": "https://www.kensington-crossings.com/contact/",
+      "contactFoundOn": "2026-09-26",
       "firstSeen": "2026-09-19"
     },
     {
@@ -41794,7 +41823,7 @@
     },
     {
       "id": "tx-1414-s-dairy-ashford-rd-1414-s-dairy-ashford-rd",
-      "property": "1414 S Dairy Ashford Rd",
+      "property": "Barnett (was Aventura 1414)",
       "community": "1414 S DAIRY ASHFORD RD",
       "city": "HOUSTON",
       "address": "1414 S DAIRY ASHFORD RD",
@@ -41808,7 +41837,7 @@
       "dateStatus": null,
       "buyer": "KV AVENTURA 1414 APARTMENTS LLC",
       "developer": null,
-      "officePhone": null,
+      "officePhone": "(281) 937-8894",
       "website": null,
       "software": null,
       "links": {
@@ -41826,6 +41855,8 @@
       "score": 34,
       "isNew": false,
       "metro": "Houston",
+      "contactSource": "https://www.barnettluxuryliving.com/",
+      "contactFoundOn": "2026-09-26",
       "firstSeen": "2026-09-19"
     },
     {
