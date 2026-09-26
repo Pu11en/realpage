@@ -71,27 +71,24 @@ appraisal record says 301. Keep *our* number, which is sourced, and take only th
 the search. Never let an aggregator overwrite a field that already has a public record behind
 it.
 
-## What was checked first, so the plan is not a guess
+## The rest of the shape, for reference
 
-| Question | Answer |
+| | |
 |---|---|
-| Can the scrapers run on David's Windows machine? | **Yes.** `httpx`, `pdfplumber`, `PyMuPDF`, `crawl4ai`, `scrapling`, `weasyprint` all install. Previously assumed to need Drew's Linux box. |
-| Are the contacts findable? | **3 of 3** on a random sample, one web search each. Apartments.com, HAR and Yelp index apartment buildings by street address, including one with no name in our data at all. |
-| How many searches? | **178.** Texas, 50+ units, opening soon or sold in the last 12 months. 108 Dallas–Fort Worth, 55 Houston, 15 rest of Texas. All 178 have a name or address to search on. |
-| Is the opening-soon list already fine? | **Yes.** 26 of 28 big ones have phones. The entire gap is in *sold in the last year*. |
+| Scrapers on David's Windows machine | **Work.** `httpx`, `pdfplumber`, `PyMuPDF`, `crawl4ai`, `scrapling`, `weasyprint` all install. This was assumed to need Drew's Linux box and does not. |
+| Searches needed | **178.** Texas, 50+ units, opening soon or sold in the last 12 months. 108 Dallas–Fort Worth, 55 Houston, 15 rest of Texas. |
+| Where the gap is | Entirely in *sold in the last year*. The opening-soon list already has phones on 26 of 28. |
 
 ## The six hours
 
-### Phase 1 — are the sources still alive? (30 min, and it is the gate)
+### Phase 1 — are the sources still alive? — **DONE, 2026-09-26**
 
-12 Texas recipes in `propertystack/recipes/tx/`: Arlington, Austin, Dallas DCAD, Fort Worth,
-Houston, Houston HCAD, San Antonio, San Marcos, TABS, Tarrant TAD, Tarrant TAD sales, TDHCA.
-Each was last live-tested 2026-09-14. Install the libraries, run each source's live self-test,
-write the result to `propertystack/runs/source-health.json`.
+All 12 alive; see the section above. It went first because everything after it is built on it,
+and a dead source found in hour five wastes hours two through four. Took ten minutes rather
+than thirty, so the time goes back into phase 4.
 
-**This is first because everything after it is built on it.** A dead source found in hour five
-wastes hours two through four. If more than three are dead, stop and report rather than
-building on a partial refresh.
+Still to do here: `pip install httpx pdfplumber PyMuPDF crawl4ai scrapling`, which the dry run
+says will work. `weasyprint` only matters for PDF output and can wait.
 
 ### Phase 2 — strip to Texas (1 hour)
 
@@ -135,9 +132,9 @@ appraisal district is not a reason to trust the aggregator.
 Appended to `propertystack/data/tx/contacts-found.csv` after **every batch of ten**, so a lost
 session costs one batch and not three hours.
 
-**Checkpoint after the first 15.** If the hit rate holds near 80%, keep going — that is ~140
-new leads. If it comes in under 50%, stop and report before spending the afternoon. Three out
-of three is encouraging and it is also n=3.
+**Checkpoint at 40.** The sample was 10 for 10, so the question is no longer whether this
+works but whether it holds at scale. Report the rate at 40 and stop if it has fallen under
+60%; the sample was drawn at random but it was still only ten.
 
 Two rules that do not bend:
 
