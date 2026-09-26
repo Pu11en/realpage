@@ -88,7 +88,16 @@ REPO_URL = "https://github.com/Pu11en/realpage"
 
 
 def _is_repo(url: str) -> bool:
-    return _norm(url).startswith(_norm(REPO_URL))
+    """The repo itself or a path inside it, and nothing that merely starts the same way.
+
+    A bare startswith() let github.com/Pu11en/realpage-not-ours and .../realpageXYZ through,
+    which is the one thing this allowlist exists to stop: everything it approves skips the
+    check that a link was actually returned by a tool. The next character has to end the
+    repo name, not continue it.
+    """
+    base = _norm(REPO_URL)
+    got = _norm(url)
+    return got == base or got.startswith(base + "/")
 
 
 def label_for(url: str) -> str:

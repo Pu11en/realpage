@@ -102,6 +102,27 @@ def test_a_deep_link_into_the_repo_survives_too():
     assert label_for(url) == "Source code"
 
 
+def test_a_repo_look_alike_is_not_approved():
+    """Found 2026-09-26 by reviewing the change that added the repo exemption, with the
+    ruleset from alibaba/open-code-review.
+
+    _is_repo() matched on a bare prefix, so github.com/Pu11en/realpage-not-ours and
+    .../realpageXYZ were both treated as the approved source. Everything this allowlist
+    approves skips the check that a tool actually returned the link, so a look-alike got a
+    free pass through the only thing stopping an invented URL reaching a visitor.
+    """
+    from linkfix import _is_repo, finalize_answer
+    assert _is_repo("https://github.com/Pu11en/realpage")
+    assert _is_repo("https://github.com/Pu11en/realpage/blob/main/site/data/build_evals.py")
+    for impostor in ("https://github.com/Pu11en/realpage-not-ours",
+                     "https://github.com/Pu11en/realpageXYZ",
+                     "https://github.com/Pu11en/realpage.evil.example.com",
+                     "https://github.com/someone-else/realpage"):
+        assert not _is_repo(impostor), impostor
+        out = finalize_answer(f"**Sources:** [Source code]({impostor})", seen=set())
+        assert impostor not in out, impostor
+
+
 def test_the_deleted_page_is_no_longer_an_approved_source():
     """It is gone, so citing it would mean handing a visitor a 404."""
     from linkfix import finalize_answer

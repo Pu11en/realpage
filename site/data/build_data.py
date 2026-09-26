@@ -789,8 +789,13 @@ def _url_source_label(url: str) -> str:
         return "News"
     # A bare "Website" told a reader nothing, and was the label on a 212 MB county zip.
     # Naming the format is the least a link owes someone about to click it.
-    if re.search(r"\.(zip|xlsx|xls|csv)($|\?)", url, re.I):
-        return f"Bulk records ({url.rsplit('.', 1)[-1].split('?')[0].upper()})"
+    #
+    # The extension comes out of the match, not out of rsplit(".") on the whole URL: a dot
+    # anywhere in the query string won that split and produced labels like
+    # "Bulk records (DEF)" for .../data.zip?token=abc.def.
+    bulk = re.search(r"\.(zip|xlsx|xls|csv)($|\?)", url, re.I)
+    if bulk:
+        return f"Bulk records ({bulk.group(1).upper()})"
     return "Public record"
 
 
