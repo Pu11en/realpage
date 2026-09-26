@@ -422,3 +422,97 @@ def test_the_spreadsheet_never_guesses(path):
                 assert re.fullmatch(r"\d{4}-\d{2}-\d{2}", row[column]), (
                     f"{path.name}: {row[column]!r} is not an ISO date -- {row[0]}"
                 )
+
+
+# ----------------------------------------------------- the source link every row promises
+#
+# Added 2026-09-26 after measuring what those links actually opened. Across all 1,861
+# buildings: 9% linked a page showing that building, 40% linked a bulk file (one was 212 MB),
+# and 23% linked a URL a browser could not open at all -- a single Dallas County address that
+# carries a literal Windows path, backslashes and a space included, reproduced into 449 hrefs.
+#
+# This is the claim the product rests on. Every page, every CSV and every outreach pack says
+# each row names the record it came from. These tests hold the two halves of keeping that
+# true: the link has to work, and the label has to say what it is.
+
+
+def all_sources():
+    out = []
+    for area in json.loads((SITE / "data" / "areas" / "index.json").read_text(encoding="utf-8"))["areas"]:
+        if area.get("hidden"):
+            continue
+        path = SITE / "data" / "areas" / f"{area['slug']}.json"
+        for lead in json.loads(path.read_text(encoding="utf-8"))["leads"]:
+            for source in (lead.get("sources") or []):
+                out.append((lead.get("id"), source))
+    return out
+
+
+def test_no_source_url_is_malformed():
+    """A backslash or a space in an href is a link that cannot open. run_area._safe_url()
+    already percent-encodes Dallas County's for the fetcher; build_data._safe_href() is the
+    reader-facing half that was missing."""
+    bad = [(lead_id, s["url"]) for lead_id, s in all_sources()
+           if s.get("url") and re.search(r"[\ ]", s["url"])]
+    assert not bad, f"{len(bad)} unopenable source URLs, e.g. {bad[:2]}"
+
+
+def test_every_source_url_is_an_absolute_http_link():
+    bad = [(lead_id, s["url"]) for lead_id, s in all_sources()
+           if s.get("url") and not s["url"].startswith(("http://", "https://"))]
+    assert not bad, bad[:3]
+
+
+def test_no_source_label_is_a_bare_website():
+    """"Website" was the label on a 212 MB county zip. A label that says nothing is worse
+    than none, because the reader spends the click to find out."""
+    bare = {"website", "link", "source", "url", "record"}
+    bad = sorted({s["label"] for _, s in all_sources()
+                  if (s.get("label") or "").strip().lower() in bare})
+    assert not bad, f"uninformative source labels: {bad}"
+
+
+def test_a_bulk_download_says_so_in_its_label():
+    """If the link hands over a file rather than a page, the label has to name the format."""
+    missing = sorted({
+        s["label"] for _, s in all_sources()
+        if s.get("url") and re.search(r"\.(zip|xlsx|xls|csv)($|\?)", s["url"], re.I)
+        and not re.search(r"\b(ZIP|XLSX|XLS|CSV)\b", s["label"] or "")
+    })
+    assert not missing, f"bulk-file links whose label does not say so: {missing}"
+
+
+def test_the_pages_do_not_overclaim_what_the_source_link_opens():
+    """Only 9% of rows link the building's own record, so "each row links the public record
+    it came from" read as a promise the other 91% broke. The wording now says which is
+    which; if someone restores the old sentence, this fails."""
+    for path in pages():
+        text = text_of(path)
+        assert "Every row names the public record it came from" in text, path.name
+        assert "most open the county or city source" in text, path.name
+        assert "Each row links the public record it came from" not in text, path.name
+
+
+def test_the_home_page_is_not_thin_to_a_crawler():
+    """The home page is the sitemap's 1.0 and the page every /leads/ page links back to.
+    Before 2026-09-26 the block inside its app shell was a heading, one sentence and a list
+    of links -- 201 visible words, thinner than any page pointing at it. Everything in it is
+    computed from site/data/, so it cannot drift from what the site actually holds.
+
+    Counted with <script> removed, because app.js replaces this block the moment it runs:
+    this is only ever what a crawler that does not run JavaScript sees.
+    """
+    html = (SITE / "index.html").read_text(encoding="utf-8")
+    outside_scripts = re.sub(r"<script.*?</script>", " ", html, flags=re.S)
+    body = re.search(r"<body.*?</body>", outside_scripts, re.S).group(0)
+    words = len(re.sub(r"<[^>]+>", " ", body).split())
+    assert words >= 350, f"home page shows a crawler only {words} words"
+
+    assert len(re.findall(r"<h1", outside_scripts)) == 1, "more than one h1 in the markup"
+    assert len(re.findall(r"<h2", outside_scripts)) >= 4, "no section headings to read"
+
+    text = re.sub(r"<[^>]+>", " ", body)
+    # The three things a reader or an engine has to be able to learn here.
+    assert "sell" in text and "apartment owners" in text, "does not say who it is for"
+    assert "never that we guessed" in text, "does not state the blank-cell rule"
+    assert ".csv" in text and "no account" in text, "does not mention the free spreadsheet"

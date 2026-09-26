@@ -196,9 +196,11 @@ Prepared{esc(intro_for)} on {esc(fmt_date(today))}. Data as of {esc(fmt_date(upd
 
 <footer>
 <p><strong>{len(rows)} buildings, {units:,} units, {with_phone} with a published office
-phone.</strong> Every row links the public record it came from &mdash; state and city permit
-records, county appraisal-district sales, and public announcements. A blank cell means the
-record is silent on it, not that the value is zero. Nothing here is estimated.</p>
+phone.</strong> Every row names the public record it came from &mdash; state and city permit
+records, county appraisal-district sales, and public announcements. Some links open that
+building&rsquo;s own record; most open the county or city source it was published in, where
+the address finds it. A blank cell means the record is silent on it, not that the value is
+zero. Nothing here is estimated.</p>
 <p>This is a sample. The full list is {pool:,} buildings for this rule alone, and
 1,861 in total across every stage, free and with no account at
 <a href="{APP}/index.html">app.cranesignal.com</a> &mdash; including the same list as a

@@ -744,6 +744,35 @@ _SOURCE_TAGS = {
 }
 
 
+# Bulk county downloads, which is where most rows genuinely come from -- and which were
+# being handed to readers as a link labelled "Website".
+#
+# Measured 2026-09-26 across all 1,861 buildings: only 9% of rows linked a page showing
+# that building. 23% linked a URL a browser cannot open at all, 40% linked a bulk file.
+# Every page and every outreach pack says each row links the public record it came from, so
+# that gap was the site's most damaging defect -- a reader who clicks once and gets a 212 MB
+# zip does not click twice.
+#
+# Two rules, applied per source:
+#   - If the file is broken or too big to be a real answer, send the reader to the county's
+#     own search page. They are holding the address; the search takes them to the record.
+#   - If the file is small enough to just open, keep it and say in the label what it is.
+# Either way the label never implies a deep link to one building, because there is not one.
+_BULK_SOURCES = [
+    # Dallas publishes this link with a literal Windows path as the query value, backslashes
+    # and a space included. run_area._safe_url() percent-encodes it so the fetcher can
+    # download it; nothing encoded it on the way out, so 449 rows carried an unopenable href.
+    ("dallascad.org/ViewPDFs.aspx", "Dallas County records (search by address)",
+     "https://www.dallascad.org/SearchAddr.aspx"),
+    # 212 MB. Nobody verifies a building by downloading the whole county.
+    ("download.hcad.org", "Harris County records (search by address)",
+     "https://public.hcad.org/"),
+    # 0.2 MB, and it is the actual record, so it stays -- the label just has to say so.
+    ("tad.org/content/data-download", "Tarrant County commercial records (ZIP)", None),
+    ("tdhca.texas.gov", "Texas housing tax-credit inventory (XLSX)", None),
+]
+
+
 def _url_source_label(url: str) -> str:
     """A plain name for a source URL that is already a page a person can open."""
     if "tdlr.texas.gov" in url:
@@ -758,7 +787,22 @@ def _url_source_label(url: str) -> str:
         return "City filing"
     if any(d in url for d in ("communityimpact.com", "dallasnews.com", "candysdirt.com")):
         return "News"
-    return "Website"
+    # A bare "Website" told a reader nothing, and was the label on a 212 MB county zip.
+    # Naming the format is the least a link owes someone about to click it.
+    if re.search(r"\.(zip|xlsx|xls|csv)($|\?)", url, re.I):
+        return f"Bulk records ({url.rsplit('.', 1)[-1].split('?')[0].upper()})"
+    return "Public record"
+
+
+def _safe_href(url: str) -> str:
+    """Percent-encode the characters a browser cannot carry in an href.
+
+    The mirror image of run_area._safe_url(), which exists so the *fetcher* can download
+    Dallas County's link. That one was fixed when the county broke a whole metro's run; the
+    reader-facing copy of the same string was not, so the raw backslashes and space went
+    straight into 449 hrefs. Anything that reaches a reader goes through here now.
+    """
+    return url.replace("\\", "%5C").replace(" ", "%20")
 
 
 def _source_url(s) -> str:
@@ -779,11 +823,15 @@ def source_entry(s) -> dict | None:
     for frag, label, url in _SOURCE_PAGES:
         if frag in raw:
             return {"label": label, "url": url}
+    for frag, label, page in _BULK_SOURCES:
+        if frag in raw.replace("\\", ""):
+            # page is None where the file itself is a fine thing to open.
+            return {"label": label, "url": page or _safe_href(raw)}
     tag = _SOURCE_TAGS.get(raw.lower())
     if tag:
         return {"label": tag[0], "url": tag[1]}
     if raw.startswith("http"):
-        return {"label": _url_source_label(raw), "url": raw}
+        return {"label": _url_source_label(raw), "url": _safe_href(raw)}
     return {"label": raw.strip("[]"), "url": None}
 
 
