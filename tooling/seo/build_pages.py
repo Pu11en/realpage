@@ -873,14 +873,12 @@ def render_page(*, title, h1, description, canonical, depth, place, leads, updat
         note = (
             f"Sorted by unit count. This page lists the {len(shown):,} largest; the rest are on "
             "the metro and city pages linked below, and all of them are in the searchable list. "
-            "Each row links the public record it came from; blank cells mean the record does not "
-            "say, never that we guessed."
+            "Every row names the public record it came from. Some links open that building's own record; most open the county or city source it was published in, where the address finds it. Blank cells mean the record does not say, never that we guessed."
         )
     else:
         heading = f"Every building ({len(leads):,})"
         note = (
-            "Sorted by unit count. Each row links the public record it came from; blank cells "
-            "mean the record does not say, never that we guessed."
+            "Sorted by unit count. Every row names the public record it came from. Some links open that building's own record; most open the county or city source it was published in, where the address finds it. Blank cells mean the record does not say, never that we guessed."
         )
     body += [f"    <h2>{heading}</h2>", f"    <p>{note}</p>",
              download_line(leads, len(shown), csv_url), table(shown, sold_view)]
@@ -1194,6 +1192,32 @@ def home_static_block(index: dict, areas: list[dict], pages: dict[Path, str]) ->
         label = text.group(1).strip() if text else rel
         links.append(f'        <li><a href="{rel}">{label}</a></li>')
 
+    # Everything below is computed, never written by hand, so it cannot drift from the data
+    # the way a hand-written paragraph would. This block used to be a heading, one sentence
+    # and a list of links -- 201 crawler-visible words on the page the sitemap rates 1.0,
+    # which is thin for the page everything else points at.
+    all_leads = [lead for area in areas for lead in area["payload"].get("leads", [])]
+    totals = summarise(all_leads)
+    stage_bits = [
+        f"{count:,} {stage}" for stage in STAGE_ORDER
+        if (count := totals["stages"].get(stage))
+    ]
+    opening_soon = sum(
+        n for year, n in totals["opening_by_year"].items() if year >= str(date.today().year)
+    )
+    with_phone = sum(1 for lead in all_leads if lead.get("officePhone"))
+
+    per_state = []
+    for area in areas:
+        stats = area["payload"].get("stats", {})
+        sold = sum(1 for lead in area["payload"].get("leads", []) if lead.get("saleDate"))
+        per_state.append(
+            f"        <li><strong>{esc(area['label'])}</strong>: "
+            f"{int(area.get('leads') or 0):,} buildings, "
+            f"{int(stats.get('unitsInPlay') or 0):,} units, "
+            f"{sold:,} with a recorded sale, across {stats.get('cities', 0)} cities.</li>"
+        )
+
     return "\n".join(
         [
             STATIC_START,
@@ -1201,10 +1225,36 @@ def home_static_block(index: dict, areas: list[dict], pages: dict[Path, str]) ->
             "      <h1>Apartment buildings that are about to need something</h1>",
             f"      <p>CraneSignal tracks {total:,} apartment buildings across "
             f"{len(areas)} US states &mdash; {units:,} units &mdash; that are planned, "
-            "permitted, under construction, leasing, or have just changed owner. Every "
-            "building links the public record it came from. Updated "
-            f"{fmt_date(updated)}.</p>",
-            "      <p>Browse by place:</p>",
+            "permitted, under construction, leasing, or have just changed owner. It is for "
+            "people who sell <em>to</em> apartment owners rather than to renters: the "
+            "question it answers is which buildings are about to need something, and why "
+            f"now. Updated {fmt_date(updated)}.</p>",
+            f"      <p>By stage today: {esc(', '.join(stage_bits))}. "
+            f"{opening_soon:,} have an expected opening date this year or later and "
+            f"{totals['sold']:,} have a recorded sale &mdash; the two moments when a "
+            "building reviews its software, its suppliers and its service contracts.</p>",
+            "      <h2>What each building carries</h2>",
+            "      <p>Where the public record says so: name, street address, city, unit "
+            "count, stage, permit date, expected opening date, sale date, buyer, developer "
+            f"and office phone &mdash; {with_phone:,} of the {total:,} have a published "
+            "office number. Every row names the public record it came from. A blank cell "
+            "means that record is silent, never that we guessed, and nothing here is "
+            "estimated or modelled.</p>",
+            "      <h2>Where it comes from</h2>",
+            "      <p>State and city construction records, county appraisal-district sale "
+            "records, and public announcements. No proprietary feeds, no purchased lists, "
+            "no logins. Some source links open a building&rsquo;s own record; most open the "
+            "county or city source it was published in, where the address finds it.</p>",
+            "      <h2>Coverage</h2>",
+            "      <ul>",
+            *per_state,
+            "      </ul>",
+            "      <h2>Taking the data with you</h2>",
+            "      <p>Free, with no account and no key. Every page below has the same list "
+            "as a spreadsheet at the same address with <code>.csv</code> instead of "
+            "<code>.html</code> &mdash; the complete list for that place, not the capped "
+            "set the page itself shows.</p>",
+            "      <h2>Browse by place</h2>",
             "      <ul>",
             *links,
             "      </ul>",
