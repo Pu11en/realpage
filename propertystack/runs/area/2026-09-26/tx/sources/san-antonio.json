@@ -1,0 +1,927 @@
+{
+  "state": "tx",
+  "recipe": "san-antonio.json",
+  "date": "2026-09-26",
+  "status": "worked",
+  "count": 30,
+  "attempts": 1,
+  "note": "",
+  "signal": {
+    "measured": true,
+    "endpointRows": 628,
+    "apartmentRows": 628,
+    "kept": 30,
+    "agedOut": 398,
+    "newestDate": "2026-08-05",
+    "newestAgeDays": 52,
+    "flags": [],
+    "noDate": 0,
+    "placeholderAddress": 1,
+    "junkDropped": 20,
+    "built": 209,
+    "mergedAway": 179,
+    "note": ""
+  },
+  "records": [
+    {
+      "area": "tx",
+      "city": "San Antonio",
+      "name": "B#2 MAINT - 4511 THOUSAND OAKS",
+      "address": "",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2025-01-27",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://data.sanantonio.gov/api/3/action/datastore_search_sql"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://data.sanantonio.gov/api/3/action/datastore_search_sql"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "San Antonio",
+      "name": "B#16 - 3500 MAGIC DR",
+      "address": "3500 MAGIC DR, City of San Antonio, TX 78229",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2025-02-05",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://data.sanantonio.gov/api/3/action/datastore_search_sql"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://data.sanantonio.gov/api/3/action/datastore_search_sql"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "San Antonio",
+      "name": "B#6 - 2318 CASTROVILLE RD",
+      "address": "2318 CASTROVILLE RD, City of San Antonio, TX 78237",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2025-02-27",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://data.sanantonio.gov/api/3/action/datastore_search_sql"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://data.sanantonio.gov/api/3/action/datastore_search_sql"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "San Antonio",
+      "name": "6219 S NEW BRAUNFELS B#3 - MAINT.",
+      "address": "6219 S NEW BRAUNFELS AVE, City of San Antonio, TX 78223",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2025-03-03",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://data.sanantonio.gov/api/3/action/datastore_search_sql"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://data.sanantonio.gov/api/3/action/datastore_search_sql"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "San Antonio",
+      "name": "B#1 - 7223 Snowden TO INCLUDE CLUBHOUSE",
+      "address": "7223 SNOWDEN RD, City of San Antonio, TX 78240",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2025-03-26",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://data.sanantonio.gov/api/3/action/datastore_search_sql"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://data.sanantonio.gov/api/3/action/datastore_search_sql"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "San Antonio",
+      "name": "12411 SW 410 B1",
+      "address": "12411 SW 410, City of San Antonio, TX 78224",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2025-03-27",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://data.sanantonio.gov/api/3/action/datastore_search_sql"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://data.sanantonio.gov/api/3/action/datastore_search_sql"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "San Antonio",
+      "name": "B#1 210 W JOSEPHINE",
+      "address": "210 W JOSEPHINE, City of San Antonio, TX 78212",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2025-05-14",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://data.sanantonio.gov/api/3/action/datastore_search_sql"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://data.sanantonio.gov/api/3/action/datastore_search_sql"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "San Antonio",
+      "name": "13039 SW 410 Building 5 - The Orion Apartments",
+      "address": "13039 SW 410, City of San Antonio, TX 78224",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2025-09-17",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://data.sanantonio.gov/api/3/action/datastore_search_sql"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://data.sanantonio.gov/api/3/action/datastore_search_sql"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "San Antonio",
+      "name": "7222 OLD CORPUS CHRISTI RD BLDG. 1A",
+      "address": "7222 OLD CORPUS CHRISTI RD, City of San Antonio, TX 78223",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2025-10-22",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://data.sanantonio.gov/api/3/action/datastore_search_sql"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://data.sanantonio.gov/api/3/action/datastore_search_sql"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "San Antonio",
+      "name": "Nacogdoches Apartments - Bld# 2-Apt. Bldg. & Clubhouse",
+      "address": "7010 COMANCHE LAND, CITY OF SAN ANTONIO, TX 78233",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2025-11-19",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://data.sanantonio.gov/api/3/action/datastore_search_sql"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://data.sanantonio.gov/api/3/action/datastore_search_sql"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "San Antonio",
+      "name": "4802 Ray Bon Bldg. 15",
+      "address": "4802 RAY BON DR, City of San Antonio, TX 78218",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2025-12-08",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://data.sanantonio.gov/api/3/action/datastore_search_sql"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://data.sanantonio.gov/api/3/action/datastore_search_sql"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "San Antonio",
+      "name": "4253 JAGUAR PKWY - C1",
+      "address": "4253 JAGUAR PKWY, City of San Antonio, TX 78224",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2025-12-12",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://data.sanantonio.gov/api/3/action/datastore_search_sql"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://data.sanantonio.gov/api/3/action/datastore_search_sql"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "San Antonio",
+      "name": "23219 N US HWY 281 B1 - STONES CROSSING",
+      "address": "23219 N US HWY 281, City of San Antonio, TX 78258",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2025-12-17",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://data.sanantonio.gov/api/3/action/datastore_search_sql"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://data.sanantonio.gov/api/3/action/datastore_search_sql"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "San Antonio",
+      "name": "425 San Pedro",
+      "address": "425 SAN PEDRO AVE, City of San Antonio, TX 78212",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2026-02-16",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://data.sanantonio.gov/api/3/action/datastore_search_sql"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://data.sanantonio.gov/api/3/action/datastore_search_sql"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "San Antonio",
+      "name": "1231 E COMMERCE ST - Central at Commerce",
+      "address": "1231 E COMMERCE ST, City of San Antonio, TX 78205",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2026-03-16",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://data.sanantonio.gov/api/3/action/datastore_search_sql"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://data.sanantonio.gov/api/3/action/datastore_search_sql"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "San Antonio",
+      "name": "15407 LOOKOUT RD B-1A",
+      "address": "15407 LOOKOUT RD, City of San Antonio, TX 78154",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2026-05-26",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://data.sanantonio.gov/api/3/action/datastore_search_sql"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://data.sanantonio.gov/api/3/action/datastore_search_sql"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "San Antonio",
+      "name": "5590 TEZEL Building No: 1",
+      "address": "5590 TEZEL RD, City of San Antonio, TX 78250",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2026-05-28",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://data.sanantonio.gov/api/3/action/datastore_search_sql"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://data.sanantonio.gov/api/3/action/datastore_search_sql"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "San Antonio",
+      "name": "5578 TEZEL - PRE-K",
+      "address": "5578 TEZEL RD, City of San Antonio, TX 78250",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2026-06-02",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://data.sanantonio.gov/api/3/action/datastore_search_sql"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://data.sanantonio.gov/api/3/action/datastore_search_sql"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "San Antonio",
+      "name": "6415 SW 410 - Heritage Estates at Medina",
+      "address": "6415 SW 410, City of San Antonio, TX 78227",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2026-06-04",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://data.sanantonio.gov/api/3/action/datastore_search_sql"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://data.sanantonio.gov/api/3/action/datastore_search_sql"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "San Antonio",
+      "name": "6210 SUN VALLEY DR - Heritage Estates at Medina",
+      "address": "6210 SUN VALLEY DR, City of San Antonio, TX 78227",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2026-06-04",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://data.sanantonio.gov/api/3/action/datastore_search_sql"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://data.sanantonio.gov/api/3/action/datastore_search_sql"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "San Antonio",
+      "name": "9035 SOMERSET RD - B1- Brickstone Flats",
+      "address": "9035 SOMERSET RD, City of San Antonio, TX 78211",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2026-08-05",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://data.sanantonio.gov/api/3/action/datastore_search_sql"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://data.sanantonio.gov/api/3/action/datastore_search_sql"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "San Antonio",
+      "name": "B#5 MAIL - 4750 W MILITARY",
+      "address": "4750 W MILITARY DR, City of San Antonio, TX 78242",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2025-05-21",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://data.sanantonio.gov/api/3/action/datastore_search_sql"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://data.sanantonio.gov/api/3/action/datastore_search_sql"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "San Antonio",
+      "name": "19302 BABCOCK RD Building No: 1; Unit No: 80",
+      "address": "19302 BABCOCK RD, City of San Antonio, TX 78256",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2026-01-05",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://data.sanantonio.gov/api/3/action/datastore_search_sql"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://data.sanantonio.gov/api/3/action/datastore_search_sql"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "San Antonio",
+      "name": "5355 CRESTWAY B8 - GUARD SHACK",
+      "address": "5355 CRESTWAY RD, City of San Antonio, TX 78239",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2026-01-06",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://data.sanantonio.gov/api/3/action/datastore_search_sql"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://data.sanantonio.gov/api/3/action/datastore_search_sql"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "San Antonio",
+      "name": "B#2 - 10210 ZARZAMORA",
+      "address": "10210 S Zarzamora, San Antonio, TX 78224",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2026-01-30",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://data.sanantonio.gov/api/3/action/datastore_search_sql"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://data.sanantonio.gov/api/3/action/datastore_search_sql"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "San Antonio",
+      "name": "1611 PINN RD",
+      "address": "1611 PINN RD, City of San Antonio, TX 78227",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2026-03-06",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://data.sanantonio.gov/api/3/action/datastore_search_sql"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://data.sanantonio.gov/api/3/action/datastore_search_sql"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "San Antonio",
+      "name": "B#2 - 1510 E SONTERRA",
+      "address": "1510 E SONTERRA BLVD, City of San Antonio, TX 78258",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2026-07-31",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://data.sanantonio.gov/api/3/action/datastore_search_sql"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://data.sanantonio.gov/api/3/action/datastore_search_sql"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "San Antonio",
+      "name": "2315 MISSION RD",
+      "address": "2315 MISSION RD, City of San Antonio, TX 78214",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2024-11-13",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://data.sanantonio.gov/api/3/action/datastore_search_sql"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://data.sanantonio.gov/api/3/action/datastore_search_sql"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "San Antonio",
+      "name": "B#7 - 11334 BRAZIL",
+      "address": "11334 BRAZIL, City of San Antonio, TX 78213",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2024-11-15",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://data.sanantonio.gov/api/3/action/datastore_search_sql"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://data.sanantonio.gov/api/3/action/datastore_search_sql"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "San Antonio",
+      "name": "B#2 - 11333 BRAZIL",
+      "address": "11333 BRAZIL, City of San Antonio, TX 78213",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2024-12-23",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://data.sanantonio.gov/api/3/action/datastore_search_sql"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://data.sanantonio.gov/api/3/action/datastore_search_sql"
+        }
+      ],
+      "why": "new multifamily permit"
+    }
+  ]
+}

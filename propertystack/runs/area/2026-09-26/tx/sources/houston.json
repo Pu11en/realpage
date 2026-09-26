@@ -1,0 +1,900 @@
+{
+  "state": "tx",
+  "recipe": "houston.json",
+  "date": "2026-09-26",
+  "status": "worked",
+  "count": 29,
+  "attempts": 1,
+  "note": "",
+  "signal": {
+    "measured": true,
+    "endpointRows": 13780,
+    "apartmentRows": 29,
+    "kept": 29,
+    "agedOut": 0,
+    "newestDate": "2026-08-10",
+    "newestAgeDays": 47,
+    "flags": [],
+    "noDate": 0,
+    "placeholderAddress": 0,
+    "junkDropped": 0,
+    "built": 29,
+    "mergedAway": 0,
+    "filesPosted": 34,
+    "filesRead": 34,
+    "filesFailed": [],
+    "note": ""
+  },
+  "records": [
+    {
+      "area": "tx",
+      "city": "Houston",
+      "name": "33303 SF NEW APTS BLDG#7 1-1-5-A2-B 21'IBC (10/13)",
+      "address": "16200 GALVESTON RD BLD 7",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2026-01-09",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "houston-weekly-xlsx"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "houston-weekly-xlsx"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Houston",
+      "name": "78,855 SF NEW APT BLD (65 UNITS) (M/8) 1-5-3-R2-A-SPK/FA '21 IBC",
+      "address": "3028 CENTER ST BLDG1B",
+      "lat": null,
+      "lon": null,
+      "units": 65,
+      "stage": "permitted",
+      "permit_date": "2026-01-13",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "houston-weekly-xlsx"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "houston-weekly-xlsx"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Houston",
+      "name": "119,873 SF NEW APT BLD (104UNITS)(2/8) 1-5-3-R2/A3-A-SPK/FA '21IBC",
+      "address": "3028 CENTER ST BLDG1A",
+      "lat": null,
+      "lon": null,
+      "units": 104,
+      "stage": "permitted",
+      "permit_date": "2026-01-13",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "houston-weekly-xlsx"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "houston-weekly-xlsx"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Houston",
+      "name": "112,805SF NEW APT BLD(102UNIT)(7/8)1-5-3-R2/A3-A-SPK/FA '21IBC",
+      "address": "3028 WASHINGTON AVE 2A",
+      "lat": null,
+      "lon": null,
+      "units": 102,
+      "stage": "permitted",
+      "permit_date": "2026-01-13",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "houston-weekly-xlsx"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "houston-weekly-xlsx"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Houston",
+      "name": "69,056SF NEW APT BLD(70UNITS)(8/8)1-5-3-R2-A-SPK/FA '21IBC",
+      "address": "3028 WASHINGTON AVE BLDG2B",
+      "lat": null,
+      "lon": null,
+      "units": 70,
+      "stage": "permitted",
+      "permit_date": "2026-01-13",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "houston-weekly-xlsx"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "houston-weekly-xlsx"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Houston",
+      "name": "NEW 38,878SF APT BLD W/AMENITY(2/19)1-4-5-R2/B/A3-A '21 IBC SP/FA",
+      "address": "13350 PARK ROW DR BLD 1",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2026-01-13",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "houston-weekly-xlsx"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "houston-weekly-xlsx"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Houston",
+      "name": "(M/5) 34,542 NEW APRTMNT BLDG W/SITEWRK 1-3-5-R2-B '21 IBC 13R SPK",
+      "address": "7900 EASTHAVEN BLVD BLD A",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2026-01-23",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "houston-weekly-xlsx"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "houston-weekly-xlsx"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Houston",
+      "name": "(2/5) 20,376 NEW APARTMENT BLDG 1-3-5-R2-B '21 IBC 13R SPK/FA",
+      "address": "7900 EASTHAVEN BLVD BLD B",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2026-01-23",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "houston-weekly-xlsx"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "houston-weekly-xlsx"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Houston",
+      "name": "(3/5) 20,376 NEW APARTMENT BLDG 1-3-5-R2-B '21 IBC 13R SPK/FA",
+      "address": "7900 EASTHAVEN BLVD BLD D",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2026-01-23",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "houston-weekly-xlsx"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "houston-weekly-xlsx"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Houston",
+      "name": "(4/5) 20,094 NEW APARTMENT BLDG 1-3-5-R2-B '21 IBC 13R SPK/FA",
+      "address": "7900 EASTHAVEN BLVD BLD C",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2026-01-23",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "houston-weekly-xlsx"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "houston-weekly-xlsx"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Houston",
+      "name": "(5/5) 20,094 NEW APARTMENT BLDG 1-3-5-R2-B '21 IBC 13R SPK/FA",
+      "address": "7900 EASTHAVEN BLVD BLD E",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2026-01-23",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "houston-weekly-xlsx"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "houston-weekly-xlsx"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Houston",
+      "name": "NEW 99137 SF APARTMENT BUILDING/SITE 1-4-5-R2-A 21IBC SP/FA (M/3)",
+      "address": "1117 BLAND ST",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2026-03-09",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "houston-weekly-xlsx"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "houston-weekly-xlsx"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Houston",
+      "name": "20018 SF NEW CONDOS 1-9-1-R2-B 21'IBC NFPA 13",
+      "address": "2520 HOUSTON AVE FL 6",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2026-03-19",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "houston-weekly-xlsx"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "houston-weekly-xlsx"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Houston",
+      "name": "77,578 SF/ NEW APARTMENT W/SITEWRK (M/3)1-4-5-R2/A3-A/21 IBC/SPK13",
+      "address": "2611 SAINT CHARLES ST",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2026-05-08",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "houston-weekly-xlsx"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "houston-weekly-xlsx"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Houston",
+      "name": "(M/6) 28,296 SF NEW SENIOR LIVING APT BLD. 1-3-5-R2-A '21 IBC SPK",
+      "address": "9149 BLACKHAWK BLVD BLD1",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2026-05-27",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "houston-weekly-xlsx"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "houston-weekly-xlsx"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Houston",
+      "name": "(M/6) 48,220 SF NEW APT BLD 1-4-5-R2-A '15 IBC NFPA13",
+      "address": "3910 OLD SPANISH TRL BLD A",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2026-07-06",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "houston-weekly-xlsx"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "houston-weekly-xlsx"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Houston",
+      "name": "112,809 SF NEW APT BLD (2/6) 1-4-2-R2-B '15 IBC NFPA13",
+      "address": "3910 OLD SPANISH TRL BLD B",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2026-07-06",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "houston-weekly-xlsx"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "houston-weekly-xlsx"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Houston",
+      "name": "(M/15) 101,916 SF NEW APARTMENT 1-4-5-R2-A 15'IBC SPK13",
+      "address": "1415 ENCLAVE PKY BLD 3",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2026-07-30",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "houston-weekly-xlsx"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "houston-weekly-xlsx"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Houston",
+      "name": "(2/15) 65,630 SF NEW APARTMENT 1-4-5-R2-A 21'IBC SPK13",
+      "address": "1415 ENCLAVE PKY BLD 4",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2026-07-30",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "houston-weekly-xlsx"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "houston-weekly-xlsx"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Houston",
+      "name": "(3/15) 88,023 SF NEW APARTMENT 1-4-5-R2-A 21'IBC SPK13",
+      "address": "1415 ENCLAVE PKY BLD 5",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2026-07-30",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "houston-weekly-xlsx"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "houston-weekly-xlsx"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Houston",
+      "name": "(4/15) 55,551 SF NEW APARTMENT 1-4-5-R2-A 21'IBC SPK13",
+      "address": "1415 ENCLAVE PKY BLD 1",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2026-07-30",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "houston-weekly-xlsx"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "houston-weekly-xlsx"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Houston",
+      "name": "(5/15) 120,638 SF NEW APARTMENT 1-4-5-R2-A 21'IBC SPK13",
+      "address": "1415 ENCLAVE PKY BLD 2",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2026-07-30",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "houston-weekly-xlsx"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "houston-weekly-xlsx"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Houston",
+      "name": "64,482SF NEW APT BLD(M/22)1-4-5-R2-A '21 IBC SP/FA",
+      "address": "13704 PARK ROW DR BLD 4",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2026-08-10",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "houston-weekly-xlsx"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "houston-weekly-xlsx"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Houston",
+      "name": "39,164SF NEW APT BLD(3/22)1-4-5-R2-A '21 IBC SP/FA",
+      "address": "13704 PARK ROW DR 1B",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2026-08-10",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "houston-weekly-xlsx"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "houston-weekly-xlsx"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Houston",
+      "name": "54,552SF NEW APT BLD(4/22)1-4-5-R2-A '21 IBC SP/FA",
+      "address": "13704 PARK ROW DR BLD 2",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2026-08-10",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "houston-weekly-xlsx"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "houston-weekly-xlsx"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Houston",
+      "name": "69,558SF NEW APT BLD(5/22)1-4-5-R2-A '21 IBC SP/FA",
+      "address": "13704 PARK ROW DR BLD 3",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2026-08-10",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "houston-weekly-xlsx"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "houston-weekly-xlsx"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Houston",
+      "name": "73,516SF NEW APT BLD(6/22)1-4-5-R2-A '21 IBC SP/FA",
+      "address": "13704 PARK ROW DR BLD 5",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2026-08-10",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "houston-weekly-xlsx"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "houston-weekly-xlsx"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Houston",
+      "name": "69,371SF NEW APT BLD(7/22)1-4-5-R2-A '21 IBC SP/FA",
+      "address": "13704 PARK ROW DR BLD 6",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2026-08-10",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "houston-weekly-xlsx"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "houston-weekly-xlsx"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Houston",
+      "name": "81,614SF NEW APT BLD(8/22)1-4-5-R2-A '21 IBC SP/FA",
+      "address": "13704 PARK ROW DR BLD 7",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2026-08-10",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "houston-weekly-xlsx"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "houston-weekly-xlsx"
+        }
+      ],
+      "why": "new multifamily permit"
+    }
+  ]
+}

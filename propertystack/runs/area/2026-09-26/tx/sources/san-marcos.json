@@ -1,0 +1,297 @@
+{
+  "state": "tx",
+  "recipe": "san-marcos.json",
+  "date": "2026-09-26",
+  "status": "worked",
+  "count": 9,
+  "attempts": 1,
+  "note": "",
+  "signal": {
+    "measured": true,
+    "endpointRows": 286,
+    "apartmentRows": 286,
+    "kept": 9,
+    "agedOut": 1,
+    "newestDate": "2026-07-16",
+    "newestAgeDays": 72,
+    "flags": [],
+    "noDate": 0,
+    "placeholderAddress": 0,
+    "junkDropped": 9,
+    "built": 276,
+    "mergedAway": 267,
+    "note": ""
+  },
+  "records": [
+    {
+      "area": "tx",
+      "city": "San Marcos",
+      "name": "San Marcos Student Housing / Lindsey St Apartments New Bldg 1",
+      "address": "419 NORTH ST",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2026-07-16",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://smgis.sanmarcostx.gov/arcgis/rest/services/Planning/CoSM_BuildingPermits/FeatureServer/0/query?where=%28TYPE%3D%27New%27+OR+TYPE%3D%27New+Commercial%27%29+AND+LANDUSE%3D%27Multi-Family%27+AND+ISSUED%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUED+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://smgis.sanmarcostx.gov/arcgis/rest/services/Planning/CoSM_BuildingPermits/FeatureServer/0/query?where=%28TYPE%3D%27New%27+OR+TYPE%3D%27New+Commercial%27%29+AND+LANDUSE%3D%27Multi-Family%27+AND+ISSUED%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUED+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "San Marcos",
+      "name": "San Marcos Student Housing / Lindsey St Apartments New Bldg 2",
+      "address": "420 NORTH ST",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2026-07-16",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://smgis.sanmarcostx.gov/arcgis/rest/services/Planning/CoSM_BuildingPermits/FeatureServer/0/query?where=%28TYPE%3D%27New%27+OR+TYPE%3D%27New+Commercial%27%29+AND+LANDUSE%3D%27Multi-Family%27+AND+ISSUED%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUED+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://smgis.sanmarcostx.gov/arcgis/rest/services/Planning/CoSM_BuildingPermits/FeatureServer/0/query?where=%28TYPE%3D%27New%27+OR+TYPE%3D%27New+Commercial%27%29+AND+LANDUSE%3D%27Multi-Family%27+AND+ISSUED%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUED+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "San Marcos",
+      "name": "San Marcos Student Housing / Lindsey St Apartments New Bldg 3",
+      "address": "435 N COMANCHE ST",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2026-07-16",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://smgis.sanmarcostx.gov/arcgis/rest/services/Planning/CoSM_BuildingPermits/FeatureServer/0/query?where=%28TYPE%3D%27New%27+OR+TYPE%3D%27New+Commercial%27%29+AND+LANDUSE%3D%27Multi-Family%27+AND+ISSUED%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUED+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://smgis.sanmarcostx.gov/arcgis/rest/services/Planning/CoSM_BuildingPermits/FeatureServer/0/query?where=%28TYPE%3D%27New%27+OR+TYPE%3D%27New+Commercial%27%29+AND+LANDUSE%3D%27Multi-Family%27+AND+ISSUED%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUED+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "San Marcos",
+      "name": "Lively Lane Phase 2 Townhouses Bldg 2 LW Unit C",
+      "address": "1911 DUTTON DR UNIT C",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2026-05-15",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://smgis.sanmarcostx.gov/arcgis/rest/services/Planning/CoSM_BuildingPermits/FeatureServer/0/query?where=%28TYPE%3D%27New%27+OR+TYPE%3D%27New+Commercial%27%29+AND+LANDUSE%3D%27Multi-Family%27+AND+ISSUED%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUED+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://smgis.sanmarcostx.gov/arcgis/rest/services/Planning/CoSM_BuildingPermits/FeatureServer/0/query?where=%28TYPE%3D%27New%27+OR+TYPE%3D%27New+Commercial%27%29+AND+LANDUSE%3D%27Multi-Family%27+AND+ISSUED%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUED+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "San Marcos",
+      "name": "The Heritage at Cottonwood Creek Multi-Family Apartments Bldg 1",
+      "address": "4530 HWY 123 BLDG 1",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2026-02-24",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://smgis.sanmarcostx.gov/arcgis/rest/services/Planning/CoSM_BuildingPermits/FeatureServer/0/query?where=%28TYPE%3D%27New%27+OR+TYPE%3D%27New+Commercial%27%29+AND+LANDUSE%3D%27Multi-Family%27+AND+ISSUED%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUED+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://smgis.sanmarcostx.gov/arcgis/rest/services/Planning/CoSM_BuildingPermits/FeatureServer/0/query?where=%28TYPE%3D%27New%27+OR+TYPE%3D%27New+Commercial%27%29+AND+LANDUSE%3D%27Multi-Family%27+AND+ISSUED%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUED+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "San Marcos",
+      "name": "3810 Transportation Way Unit 267 - PLAN 2B",
+      "address": "3810 TRANSPORTATION WAY APT 267",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2026-02-20",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://smgis.sanmarcostx.gov/arcgis/rest/services/Planning/CoSM_BuildingPermits/FeatureServer/0/query?where=%28TYPE%3D%27New%27+OR+TYPE%3D%27New+Commercial%27%29+AND+LANDUSE%3D%27Multi-Family%27+AND+ISSUED%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUED+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://smgis.sanmarcostx.gov/arcgis/rest/services/Planning/CoSM_BuildingPermits/FeatureServer/0/query?where=%28TYPE%3D%27New%27+OR+TYPE%3D%27New+Commercial%27%29+AND+LANDUSE%3D%27Multi-Family%27+AND+ISSUED%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUED+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "San Marcos",
+      "name": "San Antonio Courtyard Duplexes/Rental New Bldg 1 Apt 101 and Apt 102",
+      "address": "411 W SAN ANTONIO ST APT 101",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2025-03-13",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://smgis.sanmarcostx.gov/arcgis/rest/services/Planning/CoSM_BuildingPermits/FeatureServer/0/query?where=%28TYPE%3D%27New%27+OR+TYPE%3D%27New+Commercial%27%29+AND+LANDUSE%3D%27Multi-Family%27+AND+ISSUED%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUED+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://smgis.sanmarcostx.gov/arcgis/rest/services/Planning/CoSM_BuildingPermits/FeatureServer/0/query?where=%28TYPE%3D%27New%27+OR+TYPE%3D%27New+Commercial%27%29+AND+LANDUSE%3D%27Multi-Family%27+AND+ISSUED%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUED+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "San Marcos",
+      "name": "The Springs Apartments Club / Bldg1",
+      "address": "316 NORTHGATE RD BLDG 1",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2024-12-20",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://smgis.sanmarcostx.gov/arcgis/rest/services/Planning/CoSM_BuildingPermits/FeatureServer/0/query?where=%28TYPE%3D%27New%27+OR+TYPE%3D%27New+Commercial%27%29+AND+LANDUSE%3D%27Multi-Family%27+AND+ISSUED%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUED+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://smgis.sanmarcostx.gov/arcgis/rest/services/Planning/CoSM_BuildingPermits/FeatureServer/0/query?where=%28TYPE%3D%27New%27+OR+TYPE%3D%27New+Commercial%27%29+AND+LANDUSE%3D%27Multi-Family%27+AND+ISSUED%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUED+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "San Marcos",
+      "name": "HELU Blanco Trace Multifamily / The Entrada at San Marcos Bldg 1",
+      "address": "428 Ivory St BLDG 1",
+      "lat": null,
+      "lon": null,
+      "units": null,
+      "stage": "permitted",
+      "permit_date": "2024-11-25",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://smgis.sanmarcostx.gov/arcgis/rest/services/Planning/CoSM_BuildingPermits/FeatureServer/0/query?where=%28TYPE%3D%27New%27+OR+TYPE%3D%27New+Commercial%27%29+AND+LANDUSE%3D%27Multi-Family%27+AND+ISSUED%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUED+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://smgis.sanmarcostx.gov/arcgis/rest/services/Planning/CoSM_BuildingPermits/FeatureServer/0/query?where=%28TYPE%3D%27New%27+OR+TYPE%3D%27New+Commercial%27%29+AND+LANDUSE%3D%27Multi-Family%27+AND+ISSUED%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=ISSUED+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    }
+  ]
+}

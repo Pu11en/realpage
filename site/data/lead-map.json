@@ -3,7 +3,7 @@
   "states": {
     "Texas": {
       "abbr": "TX",
-      "total": 1587,
+      "total": 1702,
       "topCities": [
         {
           "city": "DALLAS",
@@ -15,7 +15,7 @@
         },
         {
           "city": "Arlington",
-          "count": 200
+          "count": 198
         }
       ]
     }

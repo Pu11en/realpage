@@ -44,121 +44,232 @@
     },
     "tx/arlington.json": {
       "status": "worked",
-      "count": 178,
+      "count": 175,
       "attempts": 1,
-      "checked": "2026-09-20",
+      "checked": "2026-09-26",
       "note": "",
-      "signal": {},
-      "published": 178,
+      "signal": {
+        "measured": true,
+        "endpointRows": 329,
+        "apartmentRows": 329,
+        "kept": 175,
+        "agedOut": 135,
+        "newestDate": "2026-09-02",
+        "newestAgeDays": 24,
+        "flags": [],
+        "noDate": 0,
+        "placeholderAddress": 0,
+        "junkDropped": 0,
+        "built": 194,
+        "mergedAway": 19,
+        "note": ""
+      },
+      "published": 175,
       "mergedAway": 0
     },
     "tx/austin.json": {
       "status": "worked",
-      "count": 47,
+      "count": 49,
       "attempts": 1,
-      "checked": "2026-09-20",
+      "checked": "2026-09-26",
       "note": "",
-      "signal": {},
-      "published": 47,
+      "signal": {
+        "measured": true,
+        "endpointRows": 185,
+        "apartmentRows": 185,
+        "kept": 49,
+        "agedOut": 8,
+        "newestDate": "2026-09-25",
+        "newestAgeDays": 1,
+        "flags": [],
+        "noDate": 0,
+        "placeholderAddress": 0,
+        "junkDropped": 0,
+        "built": 177,
+        "mergedAway": 128,
+        "note": ""
+      },
+      "published": 49,
       "mergedAway": 0
     },
     "tx/dallas-dcad.json": {
       "status": "worked",
       "count": 501,
       "attempts": 1,
-      "checked": "2026-09-20",
+      "checked": "2026-09-26",
       "note": "",
-      "signal": {},
+      "signal": {
+        "measured": false,
+        "why": "this source type does not report how many rows its endpoint holds"
+      },
       "published": 481,
       "mergedAway": 20
     },
     "tx/fort-worth.json": {
       "status": "worked",
-      "count": 1,
+      "count": 126,
       "attempts": 1,
-      "checked": "2026-09-20",
+      "checked": "2026-09-26",
       "note": "",
-      "signal": {},
-      "published": 1,
+      "signal": {
+        "measured": true,
+        "endpointRows": 2231,
+        "apartmentRows": 643,
+        "kept": 126,
+        "agedOut": 45,
+        "newestDate": "2026-08-25",
+        "newestAgeDays": 32,
+        "flags": [],
+        "noDate": 0,
+        "placeholderAddress": 218,
+        "junkDropped": 0,
+        "built": 380,
+        "mergedAway": 254,
+        "note": ""
+      },
+      "published": 126,
       "mergedAway": 0
     },
     "tx/houston-hcad.json": {
       "status": "worked",
       "count": 383,
       "attempts": 1,
-      "checked": "2026-09-20",
+      "checked": "2026-09-26",
       "note": "",
-      "signal": {},
+      "signal": {
+        "measured": false,
+        "why": "this source type does not report how many rows its endpoint holds"
+      },
       "published": 378,
       "mergedAway": 5
     },
     "tx/houston.json": {
       "status": "worked",
-      "count": 18,
+      "count": 29,
       "attempts": 1,
-      "checked": "2026-09-20",
+      "checked": "2026-09-26",
       "note": "",
-      "signal": {},
-      "published": 18,
+      "signal": {
+        "measured": true,
+        "endpointRows": 13780,
+        "apartmentRows": 29,
+        "kept": 29,
+        "agedOut": 0,
+        "newestDate": "2026-08-10",
+        "newestAgeDays": 47,
+        "flags": [],
+        "noDate": 0,
+        "placeholderAddress": 0,
+        "junkDropped": 0,
+        "built": 29,
+        "mergedAway": 0,
+        "filesPosted": 34,
+        "filesRead": 34,
+        "filesFailed": [],
+        "note": ""
+      },
+      "published": 29,
       "mergedAway": 0
     },
     "tx/san-antonio.json": {
       "status": "worked",
-      "count": 2,
+      "count": 30,
       "attempts": 1,
-      "checked": "2026-09-20",
+      "checked": "2026-09-26",
       "note": "",
-      "signal": {},
-      "published": 2,
+      "signal": {
+        "measured": true,
+        "endpointRows": 628,
+        "apartmentRows": 628,
+        "kept": 30,
+        "agedOut": 398,
+        "newestDate": "2026-08-05",
+        "newestAgeDays": 52,
+        "flags": [],
+        "noDate": 0,
+        "placeholderAddress": 1,
+        "junkDropped": 20,
+        "built": 209,
+        "mergedAway": 179,
+        "note": ""
+      },
+      "published": 30,
       "mergedAway": 0
     },
     "tx/san-marcos.json": {
       "status": "worked",
-      "count": 4,
+      "count": 9,
       "attempts": 1,
-      "checked": "2026-09-20",
+      "checked": "2026-09-26",
       "note": "",
-      "signal": {},
-      "published": 4,
+      "signal": {
+        "measured": true,
+        "endpointRows": 286,
+        "apartmentRows": 286,
+        "kept": 9,
+        "agedOut": 1,
+        "newestDate": "2026-07-16",
+        "newestAgeDays": 72,
+        "flags": [],
+        "noDate": 0,
+        "placeholderAddress": 0,
+        "junkDropped": 9,
+        "built": 276,
+        "mergedAway": 267,
+        "note": ""
+      },
+      "published": 9,
       "mergedAway": 0
     },
     "tx/tabs.json": {
       "status": "worked",
-      "count": 126,
+      "count": 127,
       "attempts": 1,
-      "checked": "2026-09-20",
+      "checked": "2026-09-26",
       "note": "",
-      "signal": {},
-      "published": 126,
+      "signal": {
+        "measured": false,
+        "why": "this source type does not report how many rows its endpoint holds"
+      },
+      "published": 127,
       "mergedAway": 0
     },
     "tx/tarrant-tad-sales.json": {
       "status": "worked",
       "count": 24,
       "attempts": 1,
-      "checked": "2026-09-20",
+      "checked": "2026-09-26",
       "note": "",
-      "signal": {},
+      "signal": {
+        "measured": false,
+        "why": "this source type does not report how many rows its endpoint holds"
+      },
       "published": 24,
       "mergedAway": 0
     },
     "tx/tarrant-tad.json": {
       "status": "worked",
-      "count": 177,
+      "count": 175,
       "attempts": 1,
-      "checked": "2026-09-20",
+      "checked": "2026-09-26",
       "note": "",
-      "signal": {},
-      "published": 177,
+      "signal": {
+        "measured": false,
+        "why": "this source type does not report how many rows its endpoint holds"
+      },
+      "published": 175,
       "mergedAway": 0
     },
     "tx/tdhca.json": {
       "status": "worked",
       "count": 212,
       "attempts": 1,
-      "checked": "2026-09-20",
+      "checked": "2026-09-26",
       "note": "",
-      "signal": {},
+      "signal": {
+        "measured": false,
+        "why": "this source type does not report how many rows its endpoint holds"
+      },
       "published": 212,
       "mergedAway": 0
     },
@@ -219,13 +330,13 @@
       "note": ""
     }
   },
-  "updatedAt": "2026-09-20T22:58:52.960847+00:00",
+  "updatedAt": "2026-09-26T15:07:47.047437+00:00",
   "states": {
     "tx": {
-      "checked": "2026-09-20",
-      "sourceRows": 1673,
-      "published": 1629,
-      "mergedAway": 44
+      "checked": "2026-09-26",
+      "sourceRows": 1840,
+      "published": 1790,
+      "mergedAway": 50
     }
   }
 }

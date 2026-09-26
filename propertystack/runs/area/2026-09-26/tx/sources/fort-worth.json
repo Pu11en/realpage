@@ -1,0 +1,3807 @@
+{
+  "state": "tx",
+  "recipe": "fort-worth.json",
+  "date": "2026-09-26",
+  "status": "worked",
+  "count": 126,
+  "attempts": 1,
+  "note": "",
+  "signal": {
+    "measured": true,
+    "endpointRows": 2231,
+    "apartmentRows": 643,
+    "kept": 126,
+    "agedOut": 45,
+    "newestDate": "2026-08-25",
+    "newestAgeDays": 32,
+    "flags": [],
+    "noDate": 0,
+    "placeholderAddress": 218,
+    "junkDropped": 0,
+    "built": 380,
+    "mergedAway": 254,
+    "note": ""
+  },
+  "records": [
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "Shady Oaks Multi Family-Apartments",
+      "address": "6251 SHADY OAKS MANOR DR",
+      "lat": null,
+      "lon": null,
+      "units": 50,
+      "stage": "permitted",
+      "permit_date": "2026-08-20",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "Richardson Ridge",
+      "address": "4000 CAMPUS DR",
+      "lat": null,
+      "lon": null,
+      "units": 228,
+      "stage": "permitted",
+      "permit_date": "2026-08-10",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "The Hawthorn at Rock Creek - Bldg. 3 FA II-A",
+      "address": "5920 GALIBIER BLVD",
+      "lat": null,
+      "lon": null,
+      "units": 48,
+      "stage": "permitted",
+      "permit_date": "2026-08-05",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "Prose Basswood Multifamily - Building 1",
+      "address": "7452 SUNDBERG ST",
+      "lat": null,
+      "lon": null,
+      "units": 30,
+      "stage": "permitted",
+      "permit_date": "2026-06-22",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "Prose Basswood Multifamily - Building 2",
+      "address": "7336 PALMEIRO PL",
+      "lat": null,
+      "lon": null,
+      "units": 42,
+      "stage": "permitted",
+      "permit_date": "2026-06-22",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "Prose Basswood Multifamily - Building 3",
+      "address": "7325 PALMEIRO PL",
+      "lat": null,
+      "lon": null,
+      "units": 42,
+      "stage": "permitted",
+      "permit_date": "2026-06-22",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "Prose Basswood Multifamily - Building 4",
+      "address": "7301 PALMEIRO PL",
+      "lat": null,
+      "lon": null,
+      "units": 30,
+      "stage": "permitted",
+      "permit_date": "2026-06-22",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "Prose Basswood Multifamily - Building 5",
+      "address": "7320 HOUGH ST",
+      "lat": null,
+      "lon": null,
+      "units": 42,
+      "stage": "permitted",
+      "permit_date": "2026-06-22",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "Prose Basswood Multifamily - Building 6",
+      "address": "7345 HOUGH ST",
+      "lat": null,
+      "lon": null,
+      "units": 30,
+      "stage": "permitted",
+      "permit_date": "2026-06-22",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "Prose Basswood Multifamily - Building 7",
+      "address": "7400 SUNDBERG ST",
+      "lat": null,
+      "lon": null,
+      "units": 42,
+      "stage": "permitted",
+      "permit_date": "2026-06-22",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "Prose Basswood Multifamily - Building 7",
+      "address": "197 W 10TH ST",
+      "lat": null,
+      "lon": null,
+      "units": 42,
+      "stage": "permitted",
+      "permit_date": "2026-06-22",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "Prose Basswood Multifamily - Building 8",
+      "address": "7360 PUDGE ST",
+      "lat": null,
+      "lon": null,
+      "units": 30,
+      "stage": "permitted",
+      "permit_date": "2026-06-22",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "Evans and Rosedale",
+      "address": "901 SOUTH FWY",
+      "lat": null,
+      "lon": null,
+      "units": 44,
+      "stage": "permitted",
+      "permit_date": "2026-05-04",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "The Hawthorn at Rock Creek - Bldg. 1 FA I-A",
+      "address": "100 FORT WORTH TRL",
+      "lat": null,
+      "lon": null,
+      "units": 106,
+      "stage": "permitted",
+      "permit_date": "2026-04-27",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "The Hawthorn at Rock Creek - Bldg. 1 FA I-A",
+      "address": "10401 BREWER BLVD",
+      "lat": null,
+      "lon": null,
+      "units": 106,
+      "stage": "permitted",
+      "permit_date": "2026-04-27",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "The Hawthorn at Rock Creek - Bldg. 2 FA II-A",
+      "address": "5944 GALIBIER BLVD",
+      "lat": null,
+      "lon": null,
+      "units": 24,
+      "stage": "permitted",
+      "permit_date": "2026-04-27",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "Harmon Road Apartments - Building 2",
+      "address": "1736 GROVE CREEK TRL",
+      "lat": null,
+      "lon": null,
+      "units": 57,
+      "stage": "permitted",
+      "permit_date": "2026-04-23",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "Harmon Road Apartments - Building 4",
+      "address": "1833 SYCAMORE BRANCH PL",
+      "lat": null,
+      "lon": null,
+      "units": 69,
+      "stage": "permitted",
+      "permit_date": "2026-04-23",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "Harmon Road Apartments - Building 3",
+      "address": "1821 SYCAMORE BRANCH PL",
+      "lat": null,
+      "lon": null,
+      "units": 33,
+      "stage": "permitted",
+      "permit_date": "2026-04-23",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "Avenue at Lancaster - FA-B",
+      "address": "2834 MEADERS AVE",
+      "lat": null,
+      "lon": null,
+      "units": 27,
+      "stage": "permitted",
+      "permit_date": "2026-03-20",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "Northwest Village Block C",
+      "address": "901 EXCEL AVE",
+      "lat": null,
+      "lon": null,
+      "units": 199,
+      "stage": "permitted",
+      "permit_date": "2026-01-23",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "Northwest Village Block B",
+      "address": "900 Excel AVE",
+      "lat": null,
+      "lon": null,
+      "units": 256,
+      "stage": "permitted",
+      "permit_date": "2026-01-23",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "Spring Hill East",
+      "address": "3200 HAMILTON AVE",
+      "lat": null,
+      "lon": null,
+      "units": 322,
+      "stage": "permitted",
+      "permit_date": "2026-01-21",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "Millie Cole Apartments - Building 1",
+      "address": "7660 BUBBA BLVD",
+      "lat": null,
+      "lon": null,
+      "units": 70,
+      "stage": "permitted",
+      "permit_date": "2026-01-14",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "Millie Cole Apartments - Building 2",
+      "address": "7601 BUBBA BLVD",
+      "lat": null,
+      "lon": null,
+      "units": 42,
+      "stage": "permitted",
+      "permit_date": "2026-01-14",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "Millie Cole Apartments - Building 3",
+      "address": "7625 BUBBA BLVD",
+      "lat": null,
+      "lon": null,
+      "units": 41,
+      "stage": "permitted",
+      "permit_date": "2026-01-14",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "Millie Cole Apartments - Building 4A",
+      "address": "7636 BUBBA BLVD",
+      "lat": null,
+      "lon": null,
+      "units": 45,
+      "stage": "permitted",
+      "permit_date": "2026-01-14",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "Harmon Road Apartments",
+      "address": "1701 E HARMON RD",
+      "lat": null,
+      "lon": null,
+      "units": 252,
+      "stage": "permitted",
+      "permit_date": "2026-01-14",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "Sage Homes Burleson: Building Nine_A_v1",
+      "address": "200 OLD HIGHWAY 1187",
+      "lat": null,
+      "lon": null,
+      "units": 24,
+      "stage": "permitted",
+      "permit_date": "2025-11-17",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "Sage Homes Burleson: Building Seven_A-HC_v1",
+      "address": "244 CINCH LN",
+      "lat": null,
+      "lon": null,
+      "units": 24,
+      "stage": "permitted",
+      "permit_date": "2025-11-17",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "Sage Homes Burleson: Building Two_A_v1",
+      "address": "245 POMMEL LN",
+      "lat": null,
+      "lon": null,
+      "units": 24,
+      "stage": "permitted",
+      "permit_date": "2025-11-17",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "Sage Homes Burleson: Building Five_A_v1",
+      "address": "245 CINCH LN",
+      "lat": null,
+      "lon": null,
+      "units": 24,
+      "stage": "permitted",
+      "permit_date": "2025-11-17",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "Sage Homes Burleson: Building Eight_A-DR_v1",
+      "address": "12244 CAVESSON LN",
+      "lat": null,
+      "lon": null,
+      "units": 24,
+      "stage": "permitted",
+      "permit_date": "2025-11-17",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "Sage Homes Burleson: Building Twelve_A-DL_v1",
+      "address": "12233 CAVESSON LN",
+      "lat": null,
+      "lon": null,
+      "units": 24,
+      "stage": "permitted",
+      "permit_date": "2025-11-17",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "Sage Homes Burleson: Building One_A_v1",
+      "address": "201 POMMEL LN",
+      "lat": null,
+      "lon": null,
+      "units": 24,
+      "stage": "permitted",
+      "permit_date": "2025-11-17",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "Sage Homes Burleson: Building Four_A-DR_v1",
+      "address": "12232 CAVESSON LN",
+      "lat": null,
+      "lon": null,
+      "units": 24,
+      "stage": "permitted",
+      "permit_date": "2025-11-17",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "Sage Homes Burleson: Building Thirteen_A-DL_v1",
+      "address": "12201 CAVESSON LN",
+      "lat": null,
+      "lon": null,
+      "units": 24,
+      "stage": "permitted",
+      "permit_date": "2025-11-17",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "Sage Homes Burleson: Building Three_A-HC_v1",
+      "address": "244 POMMEL LN",
+      "lat": null,
+      "lon": null,
+      "units": 24,
+      "stage": "permitted",
+      "permit_date": "2025-11-17",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "Sage Homes Burleson: Building Nine_A_v1",
+      "address": "245 GOLDMANE LN",
+      "lat": null,
+      "lon": null,
+      "units": 24,
+      "stage": "permitted",
+      "permit_date": "2025-11-17",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "Sage Homes Burleson: Building Ten_A-DL_v1",
+      "address": "12261 CAVESSON LN",
+      "lat": null,
+      "lon": null,
+      "units": 24,
+      "stage": "permitted",
+      "permit_date": "2025-11-17",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "Sage Homes Burleson: Building Eleven_A-HC-DL_v1",
+      "address": "12245 CAVESSON LN",
+      "lat": null,
+      "lon": null,
+      "units": 24,
+      "stage": "permitted",
+      "permit_date": "2025-11-17",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "Fort Worth Apartments - Building 2",
+      "address": "3421 SORELLA LN",
+      "lat": null,
+      "lon": null,
+      "units": 56,
+      "stage": "permitted",
+      "permit_date": "2025-09-17",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "Fort Worth Apartments - Building 2",
+      "address": "3320 HEMPHILL ST",
+      "lat": null,
+      "lon": null,
+      "units": 56,
+      "stage": "permitted",
+      "permit_date": "2025-09-17",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "Fort Worth Apartments - Building 4",
+      "address": "3401 SORELLA LN",
+      "lat": null,
+      "lon": null,
+      "units": 56,
+      "stage": "permitted",
+      "permit_date": "2025-09-17",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "Fort Worth Apartments - Building 5",
+      "address": "3325 SORELLA LN",
+      "lat": null,
+      "lon": null,
+      "units": 56,
+      "stage": "permitted",
+      "permit_date": "2025-09-17",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "Fort Worth Apartments - Building 6",
+      "address": "3301 SORELLA LN",
+      "lat": null,
+      "lon": null,
+      "units": 48,
+      "stage": "permitted",
+      "permit_date": "2025-09-17",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "Fort Worth Apartments - Building 1",
+      "address": "3441 SORELLA LN",
+      "lat": null,
+      "lon": null,
+      "units": 48,
+      "stage": "permitted",
+      "permit_date": "2025-09-15",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "Transwestern Merrimac - Building A",
+      "address": "2953 MERRIMAC PARK PL",
+      "lat": null,
+      "lon": null,
+      "units": 337,
+      "stage": "permitted",
+      "permit_date": "2025-09-12",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "OGC SN Multifamily, LP",
+      "address": "201 NE 29TH ST",
+      "lat": null,
+      "lon": null,
+      "units": 92,
+      "stage": "permitted",
+      "permit_date": "2025-08-01",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "OGC SN Multifamily, LP",
+      "address": "3000 GOOD BULL AVE",
+      "lat": null,
+      "lon": null,
+      "units": 92,
+      "stage": "permitted",
+      "permit_date": "2025-08-01",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "The Trails at Champions Circle Apts. - Bldg. 10",
+      "address": "15721 PILGRIM DR",
+      "lat": null,
+      "lon": null,
+      "units": 30,
+      "stage": "permitted",
+      "permit_date": "2025-08-01",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "The Trails at Champions Circle Apts. - Bldg. 11",
+      "address": "15724 GOLF VIEW DR",
+      "lat": null,
+      "lon": null,
+      "units": 30,
+      "stage": "permitted",
+      "permit_date": "2025-08-01",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "OGC SN Multifamily, LP",
+      "address": "3024 GOOD BULL",
+      "lat": null,
+      "lon": null,
+      "units": 76,
+      "stage": "permitted",
+      "permit_date": "2025-07-30",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "OGC SN Multifamily, LP",
+      "address": "3056 GOOD BULL AVE",
+      "lat": null,
+      "lon": null,
+      "units": 64,
+      "stage": "permitted",
+      "permit_date": "2025-07-30",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "OGC SN Multifamily, LP",
+      "address": "3040 GOOD",
+      "lat": null,
+      "lon": null,
+      "units": 64,
+      "stage": "permitted",
+      "permit_date": "2025-07-30",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "The Bonnie - Phase Area 1 Multifamily Building",
+      "address": "251 W PETERSMITH ST",
+      "lat": null,
+      "lon": null,
+      "units": 100,
+      "stage": "permitted",
+      "permit_date": "2025-07-21",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "The Trails at Champions Circle Apts. - Bldg. 6",
+      "address": "15737 PILGRIM DR",
+      "lat": null,
+      "lon": null,
+      "units": 30,
+      "stage": "permitted",
+      "permit_date": "2025-06-02",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "The Trails at Champions Circle Apts. - Bldg. 4",
+      "address": "15744 GOLF VIEW DR",
+      "lat": null,
+      "lon": null,
+      "units": 30,
+      "stage": "permitted",
+      "permit_date": "2025-05-29",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "The Trails at Champions Circle Apts. - Bldg. 1",
+      "address": "15756 PILGRIM DR",
+      "lat": null,
+      "lon": null,
+      "units": 30,
+      "stage": "permitted",
+      "permit_date": "2025-05-28",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "The Trails at Champions Circle Apts. - Bldg. 2",
+      "address": "15757 PILGRIM DR",
+      "lat": null,
+      "lon": null,
+      "units": 42,
+      "stage": "permitted",
+      "permit_date": "2025-05-28",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "The Trails at Champions Circle Apts. - Bldg. 3",
+      "address": "15760 GOLF VIEW DR",
+      "lat": null,
+      "lon": null,
+      "units": 42,
+      "stage": "permitted",
+      "permit_date": "2025-05-28",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "The Trails at Champions Circle Apts. - Bldg. 5",
+      "address": "15733 PILGRIM DR",
+      "lat": null,
+      "lon": null,
+      "units": 30,
+      "stage": "permitted",
+      "permit_date": "2025-05-28",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "The Trails at Champions Circle Apts. - Bldg. 7",
+      "address": "15741 PILGRIM DR",
+      "lat": null,
+      "lon": null,
+      "units": 30,
+      "stage": "permitted",
+      "permit_date": "2025-05-28",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "The Trails at Champions Circle Apts. - Bldg. 9",
+      "address": "15725 PILGRIM DR",
+      "lat": null,
+      "lon": null,
+      "units": 30,
+      "stage": "permitted",
+      "permit_date": "2025-05-28",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "New 5-story, 24-unit Apartment Building",
+      "address": "450 CRAWFORD ST",
+      "lat": null,
+      "lon": null,
+      "units": 24,
+      "stage": "permitted",
+      "permit_date": "2025-04-23",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "Alta River Park - Bldg. 1 FA1",
+      "address": "3224 TRINITY VIEW DR",
+      "lat": null,
+      "lon": null,
+      "units": 44,
+      "stage": "permitted",
+      "permit_date": "2025-04-14",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "Alta River Park - Bldg. 2",
+      "address": "3200 TRINITY VIEW DR",
+      "lat": null,
+      "lon": null,
+      "units": 90,
+      "stage": "permitted",
+      "permit_date": "2025-04-14",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "Alta River Park - Bldg. 3",
+      "address": "3251 TRINITY VIEW DR",
+      "lat": null,
+      "lon": null,
+      "units": 56,
+      "stage": "permitted",
+      "permit_date": "2025-04-14",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "Alta River Park - Bldg. 4",
+      "address": "3261 TRINITY VIEW DR",
+      "lat": null,
+      "lon": null,
+      "units": 57,
+      "stage": "permitted",
+      "permit_date": "2025-04-14",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "Hughes House Building F - South",
+      "address": "4912 E ROSEDALE ST",
+      "lat": null,
+      "lon": null,
+      "units": 24,
+      "stage": "permitted",
+      "permit_date": "2025-03-27",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "Hughes House Building F - South",
+      "address": "4985 Avenue G",
+      "lat": null,
+      "lon": null,
+      "units": 24,
+      "stage": "permitted",
+      "permit_date": "2025-03-27",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "Hughes House Phase 3 Building G.",
+      "address": "5012 E ROSEDALE ST",
+      "lat": null,
+      "lon": null,
+      "units": 27,
+      "stage": "permitted",
+      "permit_date": "2025-03-12",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "ROCK CREEK APARTMENTS - PHASE 1",
+      "address": "5852 Brewer Sunset DR",
+      "lat": null,
+      "lon": null,
+      "units": 42,
+      "stage": "permitted",
+      "permit_date": "2025-02-19",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "ROCK CREEK APARTMENTS - PHASE 1",
+      "address": "5828 Brewer Sunset DR",
+      "lat": null,
+      "lon": null,
+      "units": 24,
+      "stage": "permitted",
+      "permit_date": "2025-02-19",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "ROCK CREEK APARTMENTS - PHASE 1",
+      "address": "5828 BREWER POINTE DR",
+      "lat": null,
+      "lon": null,
+      "units": 24,
+      "stage": "permitted",
+      "permit_date": "2025-02-19",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "ROCK CREEK APARTMENTS - PHASE 1",
+      "address": "5900 Brewer Sunset DR",
+      "lat": null,
+      "lon": null,
+      "units": 45,
+      "stage": "permitted",
+      "permit_date": "2025-02-19",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "ROCK CREEK APARTMENTS - PHASE 1",
+      "address": "5920 Brewer Sunset DR",
+      "lat": null,
+      "lon": null,
+      "units": 45,
+      "stage": "permitted",
+      "permit_date": "2025-02-19",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "ROCK CREEK APARTMENTS - PHASE 1",
+      "address": "5849 Brewer Sunset DR",
+      "lat": null,
+      "lon": null,
+      "units": 42,
+      "stage": "permitted",
+      "permit_date": "2025-02-19",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "ROCK CREEK APARTMENTS - PHASE 1",
+      "address": "5849 BREWER POINTE DR",
+      "lat": null,
+      "lon": null,
+      "units": 42,
+      "stage": "permitted",
+      "permit_date": "2025-02-19",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "ROCK CREEK APARTMENTS - PHASE 1",
+      "address": "5848 Brewer Sunset DR",
+      "lat": null,
+      "lon": null,
+      "units": 42,
+      "stage": "permitted",
+      "permit_date": "2025-02-19",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "ROCK CREEK APARTMENTS - PHASE 1",
+      "address": "5848 BREWER POINTE DR",
+      "lat": null,
+      "lon": null,
+      "units": 42,
+      "stage": "permitted",
+      "permit_date": "2025-02-19",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "ROCK CREEK APARTMENTS - PHASE 1",
+      "address": "5801 Brewer Sunset DR",
+      "lat": null,
+      "lon": null,
+      "units": 30,
+      "stage": "permitted",
+      "permit_date": "2025-01-17",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "8601 North City",
+      "address": "8601 NORTH CITY DR",
+      "lat": null,
+      "lon": null,
+      "units": 233,
+      "stage": "permitted",
+      "permit_date": "2024-12-16",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "The Calhoun",
+      "address": "1000 JONES ST",
+      "lat": null,
+      "lon": null,
+      "units": 310,
+      "stage": "permitted",
+      "permit_date": "2024-12-11",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "INNOVATIVE HOME BUILDING LLC",
+      "address": "5220 E LANCASTER AVE",
+      "lat": null,
+      "lon": null,
+      "units": 24,
+      "stage": "permitted",
+      "permit_date": "2024-12-11",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "Alliance Town Center (ATC) 5 - Building 2",
+      "address": "3400 ALLIANCE TOWN CENTER",
+      "lat": null,
+      "lon": null,
+      "units": 40,
+      "stage": "permitted",
+      "permit_date": "2024-12-03",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "Alliance Town Center (ATC) 5 - Building 5",
+      "address": "3404 FLATSEDGE AVE",
+      "lat": null,
+      "lon": null,
+      "units": 40,
+      "stage": "permitted",
+      "permit_date": "2024-12-03",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "Alliance Town Center (ATC) 5 - Building 6",
+      "address": "3412 FLATSEDGE AVE",
+      "lat": null,
+      "lon": null,
+      "units": 40,
+      "stage": "permitted",
+      "permit_date": "2024-12-03",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "Alliance Town Center (ATC) 5 - Building 8",
+      "address": "3420 FLATSEDGE AVE",
+      "lat": null,
+      "lon": null,
+      "units": 40,
+      "stage": "permitted",
+      "permit_date": "2024-12-03",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "Alliance Town Center (ATC) 5 - Building 10",
+      "address": "8916 WOODSORREL LN",
+      "lat": null,
+      "lon": null,
+      "units": 40,
+      "stage": "permitted",
+      "permit_date": "2024-12-03",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "Hughes House Phase 2",
+      "address": "1401 ETTA ST",
+      "lat": null,
+      "lon": null,
+      "units": 302,
+      "stage": "permitted",
+      "permit_date": "2024-11-25",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "Hughes House Phase 2",
+      "address": "5101 POLLARD SMITH",
+      "lat": null,
+      "lon": null,
+      "units": 302,
+      "stage": "permitted",
+      "permit_date": "2024-11-25",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "Renaissance Heights Phase III \u2013 Residential Bldg 1",
+      "address": "2757 MORESBY ST",
+      "lat": null,
+      "lon": null,
+      "units": 30,
+      "stage": "permitted",
+      "permit_date": "2024-11-06",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "Renaissance Heights Phase III \u2013 Residential Bldg 1",
+      "address": "3620 lowrie",
+      "lat": null,
+      "lon": null,
+      "units": 30,
+      "stage": "permitted",
+      "permit_date": "2024-11-06",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "Renaissance Heights Phase III \u2013 Residential Bldg 9",
+      "address": "3620 LOWRIEMORE LN",
+      "lat": null,
+      "lon": null,
+      "units": 30,
+      "stage": "permitted",
+      "permit_date": "2024-11-06",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "Renaissance Heights Phase III \u2013 Residential Bldg 8",
+      "address": "3600 LOWRIEMORE LN",
+      "lat": null,
+      "lon": null,
+      "units": 23,
+      "stage": "permitted",
+      "permit_date": "2024-11-06",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "Renaissance Heights Phase III \u2013 Residential Bldg 7",
+      "address": "2949 NEEDLE GRASS WAY",
+      "lat": null,
+      "lon": null,
+      "units": 23,
+      "stage": "permitted",
+      "permit_date": "2024-11-06",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "Renaissance Heights Phase III - Residential Building 6",
+      "address": "2969 NEEDLE GRASS WAY",
+      "lat": null,
+      "lon": null,
+      "units": 24,
+      "stage": "permitted",
+      "permit_date": "2024-11-06",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "Azora Ranch 2 - Building 1",
+      "address": "5101 ESTRELLA ST",
+      "lat": null,
+      "lon": null,
+      "units": 20,
+      "stage": "permitted",
+      "permit_date": "2024-10-30",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "Azora Ranch 2 - Building 10",
+      "address": "3789 Morgan Horse TRL",
+      "lat": null,
+      "lon": null,
+      "units": 20,
+      "stage": "permitted",
+      "permit_date": "2024-10-30",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "Azora Ranch 2 - Building 9",
+      "address": "3749 Morgan Horse TRL",
+      "lat": null,
+      "lon": null,
+      "units": 20,
+      "stage": "permitted",
+      "permit_date": "2024-10-30",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "Azora Ranch 2 - Building 1",
+      "address": "3788 AZORA LN",
+      "lat": null,
+      "lon": null,
+      "units": 20,
+      "stage": "permitted",
+      "permit_date": "2024-10-30",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "Azora Ranch 2 - Building 8",
+      "address": "3701 Morgan Horse TRL",
+      "lat": null,
+      "lon": null,
+      "units": 36,
+      "stage": "permitted",
+      "permit_date": "2024-10-30",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "Azora Ranch 2 - Building 5",
+      "address": "3700 AZORA LN",
+      "lat": null,
+      "lon": null,
+      "units": 36,
+      "stage": "permitted",
+      "permit_date": "2024-10-30",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "Azora Ranch 2 - Building 4",
+      "address": "3740 AZORA LN",
+      "lat": null,
+      "lon": null,
+      "units": 20,
+      "stage": "permitted",
+      "permit_date": "2024-10-30",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "Hughes House Phase 2",
+      "address": "1520 Vincennes ST",
+      "lat": null,
+      "lon": null,
+      "units": 302,
+      "stage": "permitted",
+      "permit_date": "2024-10-23",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "Hughes House Phase 2",
+      "address": "5000 Avenue G",
+      "lat": null,
+      "lon": null,
+      "units": 302,
+      "stage": "permitted",
+      "permit_date": "2024-10-23",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "Hughes House Phase 2",
+      "address": "5033 Pollard- Smith AVE",
+      "lat": null,
+      "lon": null,
+      "units": 302,
+      "stage": "permitted",
+      "permit_date": "2024-10-23",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "Hughes House Phase 2",
+      "address": "1617 AMANDA AVE",
+      "lat": null,
+      "lon": null,
+      "units": 302,
+      "stage": "permitted",
+      "permit_date": "2024-10-23",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "Hughes House Phase 2",
+      "address": "5045 POLLARD-SMITH",
+      "lat": null,
+      "lon": null,
+      "units": 302,
+      "stage": "permitted",
+      "permit_date": "2024-10-23",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "Hughes House Phase 2",
+      "address": "4901 POLLARD SMITH",
+      "lat": null,
+      "lon": null,
+      "units": 302,
+      "stage": "permitted",
+      "permit_date": "2024-10-23",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "Hughes House Phase 2",
+      "address": "5001 POLLARD SMITH",
+      "lat": null,
+      "lon": null,
+      "units": 302,
+      "stage": "permitted",
+      "permit_date": "2024-10-23",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "Hughes House Phase 2",
+      "address": "4929 POLLARD SMITH",
+      "lat": null,
+      "lon": null,
+      "units": 302,
+      "stage": "permitted",
+      "permit_date": "2024-10-23",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "Hughes House Phase 2",
+      "address": "1601 ETTA",
+      "lat": null,
+      "lon": null,
+      "units": 302,
+      "stage": "permitted",
+      "permit_date": "2024-10-23",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "Hughes House Phase 2",
+      "address": "5100 AVENUE G",
+      "lat": null,
+      "lon": null,
+      "units": 302,
+      "stage": "permitted",
+      "permit_date": "2024-10-23",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "Hughes House Phase 2",
+      "address": "4913 POLLARD SMITH",
+      "lat": null,
+      "lon": null,
+      "units": 302,
+      "stage": "permitted",
+      "permit_date": "2024-10-23",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "Hughes House Phase 2",
+      "address": "4900 AVENUE G",
+      "lat": null,
+      "lon": null,
+      "units": 302,
+      "stage": "permitted",
+      "permit_date": "2024-10-23",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "Hughes House Phase 2",
+      "address": "4921 POLLARD SMITH",
+      "lat": null,
+      "lon": null,
+      "units": 302,
+      "stage": "permitted",
+      "permit_date": "2024-10-23",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "Hughes House Phase 2",
+      "address": "4952 AVENUE G",
+      "lat": null,
+      "lon": null,
+      "units": 302,
+      "stage": "permitted",
+      "permit_date": "2024-10-23",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "Hughes House Phase 2",
+      "address": "1600 ETTA",
+      "lat": null,
+      "lon": null,
+      "units": 302,
+      "stage": "permitted",
+      "permit_date": "2024-10-23",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "Hughes House Phase 2",
+      "address": "5020 AVENUE G",
+      "lat": null,
+      "lon": null,
+      "units": 302,
+      "stage": "permitted",
+      "permit_date": "2024-10-23",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "Hughes House Phase 2",
+      "address": "1509 ETTA",
+      "lat": null,
+      "lon": null,
+      "units": 302,
+      "stage": "permitted",
+      "permit_date": "2024-10-23",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "Hughes House Phase 2",
+      "address": "1521 VINCENNES",
+      "lat": null,
+      "lon": null,
+      "units": 302,
+      "stage": "permitted",
+      "permit_date": "2024-10-23",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "Hughes House Phase 2",
+      "address": "5028 AVENUE G",
+      "lat": null,
+      "lon": null,
+      "units": 302,
+      "stage": "permitted",
+      "permit_date": "2024-10-23",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "Hughes House Phase 2",
+      "address": "5017 POLLARD SMITH",
+      "lat": null,
+      "lon": null,
+      "units": 302,
+      "stage": "permitted",
+      "permit_date": "2024-10-23",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    },
+    {
+      "area": "tx",
+      "city": "Fort Worth",
+      "name": "Hughes House Phase 2",
+      "address": "1508 ETTA",
+      "lat": null,
+      "lon": null,
+      "units": 302,
+      "stage": "permitted",
+      "permit_date": "2024-10-23",
+      "opening_date": "",
+      "sale_date": "",
+      "sale_date_precision": "",
+      "award_year": null,
+      "buyer": "",
+      "developer": "",
+      "office_phone": "",
+      "website": "",
+      "software": "unknown",
+      "links": {
+        "permit": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+      },
+      "sources": [
+        {
+          "fact": "permit_date",
+          "url": "https://services5.arcgis.com/3ddLCBXe1bRt7mzj/arcgis/rest/services/CFW_Open_Data_Development_Permits_View/FeatureServer/0/query?where=Permit_SubType%3D%27New%27+AND+Specific_Use+LIKE+%27%25partment%25%27+AND+File_Date%3E%3Dtimestamp+%272024-09-01+00%3A00%3A00%27&outFields=%2A&f=json&resultRecordCount=1000&orderByFields=File_Date+DESC"
+        }
+      ],
+      "why": "new multifamily permit"
+    }
+  ]
+}
