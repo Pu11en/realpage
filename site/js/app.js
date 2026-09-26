@@ -1,9 +1,13 @@
 // PropertyStack shared shell -- plain JS, no framework, no build step.
 // Every page calls renderShell(activeTab) then fetches its own data/*.json.
 
+// Removed 2026-09-26 (David): the "How it works" tab. The page it pointed at is a
+// JavaScript shell -- 8 visible words to anything that does not run scripts -- and it was
+// being cited as the site's method-and-trust page from every /leads/ footer, from llms.txt
+// and from 18 Dataset nodes. Pointing an engine at a blank page is worse than not pointing
+// at one. The file is still served, because the chat agent cites it (chatbot/linkfix.py).
 const NAV_TABS = [
   { key: "leads", label: "Leads", href: "index.html" },
-  { key: "hood", label: "How it works", href: "under-the-hood.html" },
 ];
 
 
