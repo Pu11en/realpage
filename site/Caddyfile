@@ -58,7 +58,7 @@
 	}
 
 	# The app's pages and their data: open to everyone, no sign-in.
-	@app path /index.html /landing.html /master-table.html /property.html /under-the-hood.html /sample-lead-pack.pdf /leads/* /js/* /data/* /vendor/* /img/*
+	@app path /index.html /landing.html /master-table.html /property.html /sample-lead-pack.pdf /leads/* /js/* /data/* /vendor/* /img/*
 	handle @app {
 		root * {$SITE_ROOT:/srv}
 		file_server

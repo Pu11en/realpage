@@ -76,11 +76,37 @@ def test_labels():
     assert label_for("https://orchardsmarketplaza.com/") == "orchardsmarketplaza.com"
 
 
-def test_under_the_hood_link_is_an_approved_source():
+def test_the_repo_link_is_an_approved_source():
+    """The agent's source for questions about itself, from 2026-09-26. It used to be
+    under-the-hood.html, which is now deleted -- it rendered 8 visible words without
+    JavaScript, so it was never the readable source it claimed to be.
+
+    This also covers something that was broken before: SOUL.md tells the agent to "always
+    give this link" for code questions, and github.com sat in no allowlist, so the guard
+    stripped it whenever no tool had returned it.
+    """
     from linkfix import finalize_answer
     text = ("**Tested on 100 fixed questions; 92 passed.**\n"
-            "**Next:** Open the page.\n"
-            "**Sources:** [Under the Hood](https://app.cranesignal.com/under-the-hood.html)")
+            "**Next:** Read the eval script.\n"
+            "**Sources:** [Source code](https://github.com/Pu11en/realpage)")
     out = finalize_answer(text, seen=set())
     assert "couldn't verify" not in out
-    assert "under-the-hood.html" in out
+    assert "github.com/Pu11en/realpage" in out
+
+
+def test_a_deep_link_into_the_repo_survives_too():
+    from linkfix import finalize_answer, label_for
+    url = "https://github.com/Pu11en/realpage/blob/main/site/data/build_evals.py"
+    out = finalize_answer(f"**Sources:** [Source code]({url})", seen=set())
+    assert "build_evals.py" in out
+    assert label_for(url) == "Source code"
+
+
+def test_the_deleted_page_is_no_longer_an_approved_source():
+    """It is gone, so citing it would mean handing a visitor a 404."""
+    from linkfix import finalize_answer
+    out = finalize_answer(
+        "**Sources:** [Under the Hood](https://app.cranesignal.com/under-the-hood.html)",
+        seen=set(),
+    )
+    assert "under-the-hood.html" not in out

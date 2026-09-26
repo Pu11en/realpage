@@ -200,7 +200,8 @@ def ps_schema(args: dict, **_) -> str:
             "sale_date/sale_new_owner/sale_previous_owner and lead_rank/lead_total_leads/lead_why -- all "
             "blank when that building has no sale or isn't a ranked lead, which is most of them.",
             "cranesignal_* tables: CraneSignal's own build, eval, speed, and AI-agent progress numbers "
-            "from the Under the Hood page. Use them only for questions about CraneSignal itself (how it "
+            "from CraneSignal's own build and eval records. Use them only for questions about "
+            "CraneSignal itself (how it "
             "was built, checked, measured, or how accurate/fast it is), never as property/lead/software "
             "facts. For 'how was this built/tested?' start from cranesignal_how_tested and "
             "cranesignal_eval_summary (92/100 test answers correct, 94% grader-human agreement, 10/10 "
