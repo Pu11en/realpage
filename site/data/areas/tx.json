@@ -35703,7 +35703,7 @@
       "dateStatus": null,
       "buyer": "AREIT DALLAS MAPLE DISTRICT LLC",
       "developer": null,
-      "officePhone": null,
+      "officePhone": "(945) 262-7924",
       "website": null,
       "software": null,
       "links": {
@@ -35721,6 +35721,9 @@
       "score": 44,
       "isNew": false,
       "metro": "Dallas\u2013Fort Worth",
+      "managementCompany": "Bell Partners",
+      "contactSource": "https://bellpartnersinc.com/properties/maple-district-lofts/",
+      "contactFoundOn": "2026-09-26",
       "firstSeen": "2026-09-20"
     },
     {
@@ -35739,7 +35742,7 @@
       "dateStatus": null,
       "buyer": "KW PEREGRINE OWNER LLC",
       "developer": null,
-      "officePhone": null,
+      "officePhone": "(214) 241-1096",
       "website": null,
       "software": null,
       "links": {
@@ -35757,6 +35760,9 @@
       "score": 44,
       "isNew": false,
       "metro": "Dallas\u2013Fort Worth",
+      "managementCompany": "Willow Bridge Property Co",
+      "contactSource": "https://www.willowbridgepc.com/properties/peregrine-irving-texas",
+      "contactFoundOn": "2026-09-26",
       "firstSeen": "2026-09-20"
     },
     {
@@ -36173,7 +36179,7 @@
       "dateStatus": null,
       "buyer": "EASTLINE DALLAS LLC &",
       "developer": null,
-      "officePhone": null,
+      "officePhone": "(469) 423-9152",
       "website": null,
       "software": null,
       "links": {
@@ -36191,6 +36197,9 @@
       "score": 43,
       "isNew": false,
       "metro": "Dallas\u2013Fort Worth",
+      "managementCompany": "Westminster Management",
+      "contactSource": "https://www.eastlineresidences.com/",
+      "contactFoundOn": "2026-09-26",
       "firstSeen": "2026-09-20"
     },
     {
@@ -36536,7 +36545,7 @@
       "dateStatus": null,
       "buyer": "RSS SGCMS2016-C5-TX CS, LLC",
       "developer": null,
-      "officePhone": null,
+      "officePhone": "(469) 518-9993",
       "website": null,
       "software": null,
       "links": {
@@ -36554,6 +36563,12 @@
       "score": 43,
       "isNew": false,
       "metro": "Dallas\u2013Fort Worth",
+      "managementCompany": "American Landmark",
+      "contact": {
+        "email": "southpointe@bellairemultifamily.com"
+      },
+      "contactSource": "https://www.southpointeapthomes.com/Contact.aspx",
+      "contactFoundOn": "2026-09-26",
       "firstSeen": "2026-09-20"
     },
     {
@@ -36864,7 +36879,7 @@
       "dateStatus": null,
       "buyer": "CRP/RPM LAS COLINAS OWNERS  LP",
       "developer": null,
-      "officePhone": null,
+      "officePhone": "(972) 833-8343",
       "website": null,
       "software": null,
       "links": {
@@ -36882,6 +36897,9 @@
       "score": 42,
       "isNew": false,
       "metro": "Dallas\u2013Fort Worth",
+      "managementCompany": "Cortland",
+      "contactSource": "https://www.har.com/cortland-las-colinas-irving-tx/apartment_2831B",
+      "contactFoundOn": "2026-09-26",
       "firstSeen": "2026-09-20"
     },
     {
@@ -37588,7 +37606,7 @@
       "dateStatus": null,
       "buyer": "MG SOLA GALLERIA APARTMENTS &",
       "developer": null,
-      "officePhone": null,
+      "officePhone": "(972) 361-0224",
       "website": null,
       "software": null,
       "links": {
@@ -37606,6 +37624,9 @@
       "score": 41,
       "isNew": false,
       "metro": "Rest of Texas",
+      "managementCompany": "Greystar",
+      "contactSource": "https://www.greystar.com/sola-galleria-farmers-branch-tx/p_11339",
+      "contactFoundOn": "2026-09-26",
       "firstSeen": "2026-09-20"
     },
     {
@@ -38096,7 +38117,7 @@
       "dateStatus": null,
       "buyer": "2525 CARLISLE LP",
       "developer": null,
-      "officePhone": null,
+      "officePhone": "(214) 871-2525",
       "website": null,
       "software": null,
       "links": {
@@ -38114,6 +38135,9 @@
       "score": 40,
       "isNew": false,
       "metro": "Dallas\u2013Fort Worth",
+      "managementCompany": "Gables Residential",
+      "contactSource": "https://www.rentcafe.com/apartments/tx/dallas/gables-uptown-trail/default.aspx",
+      "contactFoundOn": "2026-09-26",
       "firstSeen": "2026-09-20"
     },
     {
@@ -38190,7 +38214,7 @@
     },
     {
       "id": "tx-11201-olympia-dr-11201-olympia-dr",
-      "property": "11201 Olympia Dr",
+      "property": "The Corridor at Westchase",
       "community": "11201 OLYMPIA DR",
       "city": "HOUSTON",
       "address": "11201 OLYMPIA DR",
@@ -38204,7 +38228,7 @@
       "dateStatus": null,
       "buyer": "QUINN WESTCHASE APARTMENTS LLC",
       "developer": null,
-      "officePhone": null,
+      "officePhone": "(281) 833-9900",
       "website": null,
       "software": null,
       "links": {
@@ -38222,6 +38246,8 @@
       "score": 40,
       "isNew": false,
       "metro": "Houston",
+      "contactSource": "https://www.lifeatthecorridor.com/",
+      "contactFoundOn": "2026-09-26",
       "firstSeen": "2026-09-19"
     },
     {
@@ -39431,7 +39457,7 @@
     },
     {
       "id": "tx-17417-w-lake-houston-pky-17417-w-lake-houston-pky",
-      "property": "17417 W Lake Houston Pky",
+      "property": "Harper Lake Houston",
       "community": "17417 W LAKE HOUSTON PKY",
       "city": "HUMBLE",
       "address": "17417 W LAKE HOUSTON PKY",
@@ -39445,7 +39471,7 @@
       "dateStatus": null,
       "buyer": "AG-HILLTOP HARPER AT LAKE HOUSTON",
       "developer": null,
-      "officePhone": null,
+      "officePhone": "(832) 409-2292",
       "website": null,
       "software": null,
       "links": {
@@ -39463,6 +39489,8 @@
       "score": 38,
       "isNew": false,
       "metro": "Houston",
+      "contactSource": "https://harperlakehouston.com/contact/",
+      "contactFoundOn": "2026-09-26",
       "firstSeen": "2026-09-19"
     },
     {
@@ -39617,7 +39645,7 @@
     },
     {
       "id": "tx-1226-w-grand-pky-s-1226-w-grand-pky-s",
-      "property": "1226 W Grand Pky S",
+      "property": "Parkside Cinco Ranch",
       "community": "1226 W GRAND PKY S",
       "city": "KATY",
       "address": "1226 W GRAND PKY S",
@@ -39631,7 +39659,7 @@
       "dateStatus": null,
       "buyer": "AG-HILLTOP GRAND PARKWAY",
       "developer": null,
-      "officePhone": null,
+      "officePhone": "(346) 375-5251",
       "website": null,
       "software": null,
       "links": {
@@ -39649,6 +39677,8 @@
       "score": 38,
       "isNew": false,
       "metro": "Houston",
+      "contactSource": "https://www.apartments.com/parkside-cinco-ranch-katy-tx/f7nksjv/",
+      "contactFoundOn": "2026-09-26",
       "firstSeen": "2026-09-19"
     },
     {
@@ -40208,7 +40238,7 @@
     },
     {
       "id": "tx-641-w-crosstimbers-st-641-w-crosstimbers-st",
-      "property": "641 W Crosstimbers St",
+      "property": "The Brighton Garden Oaks",
       "community": "641 W CROSSTIMBERS ST",
       "city": "HOUSTON",
       "address": "641 W CROSSTIMBERS ST",
@@ -40222,7 +40252,7 @@
       "dateStatus": null,
       "buyer": "RPMI 641 W CROSSTIMBERS ST OWNER LLC C/O RYAN LLC",
       "developer": null,
-      "officePhone": null,
+      "officePhone": "(346) 595-2640",
       "website": null,
       "software": null,
       "links": {
@@ -40240,6 +40270,8 @@
       "score": 37,
       "isNew": false,
       "metro": "Houston",
+      "contactSource": "https://brightongardenoaks.com/contact/",
+      "contactFoundOn": "2026-09-26",
       "firstSeen": "2026-09-19"
     },
     {
@@ -40499,7 +40531,7 @@
     },
     {
       "id": "tx-2101-hayes-rd-2101-hayes-rd",
-      "property": "2101 Hayes Rd",
+      "property": "The Quinn at Westchase",
       "community": "2101 HAYES RD",
       "city": "HOUSTON",
       "address": "2101 HAYES RD",
@@ -40513,7 +40545,7 @@
       "dateStatus": null,
       "buyer": "RC 2101 HAYES LLC",
       "developer": null,
-      "officePhone": null,
+      "officePhone": "(832) 510-8533",
       "website": null,
       "software": null,
       "links": {
@@ -40531,11 +40563,13 @@
       "score": 36,
       "isNew": false,
       "metro": "Houston",
+      "contactSource": "https://www.thequinnatwestchase.com/contact-us/",
+      "contactFoundOn": "2026-09-26",
       "firstSeen": "2026-09-19"
     },
     {
       "id": "tx-8501-broadway-blvd-8501-broadway-blvd",
-      "property": "8501 Broadway Blvd",
+      "property": "Altair Residences (was Plaza at Hobby Airport)",
       "community": "8501 BROADWAY BLVD",
       "city": "HOUSTON",
       "address": "8501 BROADWAY BLVD",
@@ -40549,7 +40583,7 @@
       "dateStatus": null,
       "buyer": "OCONEE REAL ESTATE HOLDINGS",
       "developer": null,
-      "officePhone": null,
+      "officePhone": "(281) 729-0636",
       "website": null,
       "software": null,
       "links": {
@@ -40567,6 +40601,8 @@
       "score": 36,
       "isNew": false,
       "metro": "Houston",
+      "contactSource": "https://www.plazaathobbyairport.com/",
+      "contactFoundOn": "2026-09-26",
       "firstSeen": "2026-09-19"
     },
     {
