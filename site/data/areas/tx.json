@@ -35592,7 +35592,7 @@
       "dateStatus": null,
       "buyer": "KV ARDAN APARTMENT LLC",
       "developer": null,
-      "officePhone": null,
+      "officePhone": "(469) 862-0100",
       "website": null,
       "software": null,
       "links": {
@@ -35610,6 +35610,9 @@
       "score": 44,
       "isNew": false,
       "metro": "Dallas\u2013Fort Worth",
+      "managementCompany": "Mill Creek Residential",
+      "contactSource": "https://www.ardanapts.com/",
+      "contactFoundOn": "2026-09-26",
       "firstSeen": "2026-09-20"
     },
     {
@@ -36458,7 +36461,7 @@
       "dateStatus": null,
       "buyer": "IMP ADDISON LP",
       "developer": null,
-      "officePhone": null,
+      "officePhone": "(469) 829-6514",
       "website": null,
       "software": null,
       "links": {
@@ -36476,6 +36479,9 @@
       "score": 43,
       "isNew": false,
       "metro": "Dallas\u2013Fort Worth",
+      "managementCompany": "IMT Residential",
+      "contactSource": "https://www.apartments.com/imt-prestonwood-dallas-tx/kvrh35c/",
+      "contactFoundOn": "2026-09-26",
       "firstSeen": "2026-09-20"
     },
     {
@@ -36566,7 +36572,7 @@
       "dateStatus": null,
       "buyer": "1401 ELM STREET LLC",
       "developer": null,
-      "officePhone": null,
+      "officePhone": "(469) 638-8137",
       "website": null,
       "software": null,
       "links": {
@@ -36584,6 +36590,8 @@
       "score": 43,
       "isNew": false,
       "metro": "Dallas\u2013Fort Worth",
+      "contactSource": "https://www.thenationalresidences.com/contact-us/",
+      "contactFoundOn": "2026-09-26",
       "firstSeen": "2026-09-26"
     },
     {
@@ -38013,7 +38021,7 @@
       "dateStatus": null,
       "buyer": "CAMELOT VILLAGE APTS LLC",
       "developer": null,
-      "officePhone": null,
+      "officePhone": "(972) 289-1931",
       "website": null,
       "software": null,
       "links": {
@@ -38031,6 +38039,9 @@
       "score": 40,
       "isNew": false,
       "metro": "Rest of Texas",
+      "managementCompany": "Brazos Residential",
+      "contactSource": "https://www.brazosforty200.com/contactus",
+      "contactFoundOn": "2026-09-26",
       "firstSeen": "2026-09-20"
     },
     {
@@ -38301,7 +38312,7 @@
       "dateStatus": null,
       "buyer": "LAKESIDE 3PP LLC",
       "developer": null,
-      "officePhone": null,
+      "officePhone": "(214) 361-9235",
       "website": null,
       "software": null,
       "links": {
@@ -38319,6 +38330,12 @@
       "score": 40,
       "isNew": false,
       "metro": "Dallas\u2013Fort Worth",
+      "managementCompany": "AWM Management",
+      "contact": {
+        "email": "lakeside@awmmanagement.com"
+      },
+      "contactSource": "https://lakesidedallas.com/contact",
+      "contactFoundOn": "2026-09-26",
       "firstSeen": "2026-09-20"
     },
     {
@@ -38431,7 +38448,7 @@
     },
     {
       "id": "tx-12300-fleming-dr-12300-fleming-dr",
-      "property": "12300 Fleming Dr",
+      "property": "Falls of Birchbrook",
       "community": "12300 FLEMING DR",
       "city": "HOUSTON",
       "address": "12300 FLEMING DR",
@@ -38445,7 +38462,7 @@
       "dateStatus": null,
       "buyer": "HOME LAND 89 LLC",
       "developer": null,
-      "officePhone": null,
+      "officePhone": "(713) 455-1776",
       "website": null,
       "software": null,
       "links": {
@@ -38463,6 +38480,8 @@
       "score": 40,
       "isNew": false,
       "metro": "Houston",
+      "contactSource": "https://www.zumper.com/apartment-buildings/p98895/falls-of-birchbrook-northshore-houston-tx",
+      "contactFoundOn": "2026-09-26",
       "firstSeen": "2026-09-19"
     },
     {
@@ -39095,7 +39114,7 @@
       "dateStatus": null,
       "buyer": "13100 NOEL ROAD PARTNERS LLC",
       "developer": null,
-      "officePhone": null,
+      "officePhone": "(972) 640-9230",
       "website": null,
       "software": null,
       "links": {
@@ -39113,6 +39132,8 @@
       "score": 39,
       "isNew": false,
       "metro": "Dallas\u2013Fort Worth",
+      "contactSource": "https://www.rentcafe.com/apartments/tx/dallas/hazel-by-the-galleria/default.aspx",
+      "contactFoundOn": "2026-09-26",
       "firstSeen": "2026-09-20"
     },
     {
@@ -39568,7 +39589,7 @@
       "dateStatus": null,
       "buyer": "KRE LC PROMENADE LLC",
       "developer": null,
-      "officePhone": null,
+      "officePhone": "(469) 557-4570",
       "website": null,
       "software": null,
       "links": {
@@ -39586,6 +39607,12 @@
       "score": 38,
       "isNew": false,
       "metro": "Dallas\u2013Fort Worth",
+      "managementCompany": "RPM Living",
+      "contact": {
+        "email": "promenadelascolinas@rpmliving.com"
+      },
+      "contactSource": "https://www.promenadelascolinas.com/contactus",
+      "contactFoundOn": "2026-09-26",
       "firstSeen": "2026-09-20"
     },
     {
@@ -39698,7 +39725,7 @@
     },
     {
       "id": "tx-1002-katy-gap-rd-1002-katy-gap-rd",
-      "property": "1002 Katy Gap Rd",
+      "property": "The Century at Katy",
       "community": "1002 KATY GAP RD",
       "city": "KATY",
       "address": "1002 KATY GAP RD",
@@ -39712,7 +39739,7 @@
       "dateStatus": null,
       "buyer": "1002 KATY GAP BORROWER LLC",
       "developer": null,
-      "officePhone": null,
+      "officePhone": "(346) 771-5695",
       "website": null,
       "software": null,
       "links": {
@@ -39730,6 +39757,8 @@
       "score": 38,
       "isNew": false,
       "metro": "Houston",
+      "contactSource": "https://www.centuryapartmentskaty.com/contactus",
+      "contactFoundOn": "2026-09-26",
       "firstSeen": "2026-09-19"
     },
     {
@@ -39882,7 +39911,7 @@
     },
     {
       "id": "tx-10221-centrepark-dr-10221-centrepark-dr",
-      "property": "10221 Centrepark Dr",
+      "property": "The Lodge at Spring Shadows",
       "community": "10221 CENTREPARK DR",
       "city": "HOUSTON",
       "address": "10221 CENTREPARK DR",
@@ -39896,7 +39925,7 @@
       "dateStatus": null,
       "buyer": "AG-HILLTOP SPRING SHADOWS PROPERTY",
       "developer": null,
-      "officePhone": null,
+      "officePhone": "(346) 771-8120",
       "website": null,
       "software": null,
       "links": {
@@ -39914,11 +39943,13 @@
       "score": 37,
       "isNew": false,
       "metro": "Houston",
+      "contactSource": "https://thelodgeatspringshadows.com/contact/",
+      "contactFoundOn": "2026-09-26",
       "firstSeen": "2026-09-19"
     },
     {
       "id": "tx-10010-kempwood-dr-10010-kempwood-dr",
-      "property": "10010 Kempwood Dr",
+      "property": "3 Corners North",
       "community": "10010 KEMPWOOD DR",
       "city": "HOUSTON",
       "address": "10010 KEMPWOOD DR",
@@ -39932,7 +39963,7 @@
       "dateStatus": null,
       "buyer": "9999 KEMPWOOD DRIVE LP",
       "developer": null,
-      "officePhone": null,
+      "officePhone": "(346) 637-3549",
       "website": null,
       "software": null,
       "links": {
@@ -39950,6 +39981,9 @@
       "score": 37,
       "isNew": false,
       "metro": "Houston",
+      "managementCompany": "Greystar",
+      "contactSource": "https://www.greystar.com/3-corners-north-houston-tx/p_17902",
+      "contactFoundOn": "2026-09-26",
       "firstSeen": "2026-09-19"
     },
     {
@@ -40062,7 +40096,7 @@
     },
     {
       "id": "tx-8181-colony-st-8181-colony-st",
-      "property": "8181 Colony St",
+      "property": "Riveraine Apartments",
       "community": "8181 COLONY ST",
       "city": "HOUSTON",
       "address": "8181 COLONY ST",
@@ -40076,7 +40110,7 @@
       "dateStatus": null,
       "buyer": "UA RIVERAINE LLC",
       "developer": null,
-      "officePhone": null,
+      "officePhone": "713-778-0800",
       "website": null,
       "software": null,
       "links": {
@@ -40094,6 +40128,8 @@
       "score": 37,
       "isNew": false,
       "metro": "Houston",
+      "contactSource": "https://www.riveraine.com/contact_us/",
+      "contactFoundOn": "2026-09-26",
       "firstSeen": "2026-09-19"
     },
     {
@@ -40134,7 +40170,7 @@
     },
     {
       "id": "tx-8627-hufsmith-rd-8627-hufsmith-rd",
-      "property": "8627 Hufsmith Rd",
+      "property": "The Abbey at Preserve Way",
       "community": "8627 HUFSMITH RD",
       "city": "TOMBALL",
       "address": "8627 HUFSMITH RD",
@@ -40148,7 +40184,7 @@
       "dateStatus": null,
       "buyer": "AR PRESERVE LLC",
       "developer": null,
-      "officePhone": null,
+      "officePhone": "(281) 351-5700",
       "website": null,
       "software": null,
       "links": {
@@ -40166,6 +40202,8 @@
       "score": 37,
       "isNew": false,
       "metro": "Houston",
+      "contactSource": "https://www.apartmentsspringtexas.com/Marketing/Contact",
+      "contactFoundOn": "2026-09-26",
       "firstSeen": "2026-09-19"
     },
     {
@@ -40605,7 +40643,7 @@
     },
     {
       "id": "tx-9475-w-sam-houston-pky-s-9475-w-sam-houston-pky-s",
-      "property": "9475 W Sam Houston Pky S",
+      "property": "Monarch West (was The Terrace at Sam Houston)",
       "community": "9475 W SAM HOUSTON PKY S",
       "city": "HOUSTON",
       "address": "9475 W SAM HOUSTON PKY S",
@@ -40619,7 +40657,7 @@
       "dateStatus": null,
       "buyer": "OCONEE REAL ESTATE HOLDINGS XVIII",
       "developer": null,
-      "officePhone": null,
+      "officePhone": "(346) 200-9871",
       "website": null,
       "software": null,
       "links": {
@@ -40637,6 +40675,8 @@
       "score": 36,
       "isNew": false,
       "metro": "Houston",
+      "contactSource": "https://www.monarchwestapts.com/",
+      "contactFoundOn": "2026-09-26",
       "firstSeen": "2026-09-19"
     },
     {
@@ -40749,7 +40789,7 @@
     },
     {
       "id": "tx-4010-linkwood-dr-4010-linkwood-dr",
-      "property": "4010 Linkwood Dr",
+      "property": "Stratford House Apartments",
       "community": "4010 LINKWOOD DR",
       "city": "HOUSTON",
       "address": "4010 LINKWOOD DR",
@@ -40763,7 +40803,7 @@
       "dateStatus": null,
       "buyer": "MVD DE APARTMENTS LLC",
       "developer": null,
-      "officePhone": null,
+      "officePhone": "(832) 742-1945",
       "website": null,
       "software": null,
       "links": {
@@ -40781,6 +40821,8 @@
       "score": 36,
       "isNew": false,
       "metro": "Houston",
+      "contactSource": "https://www.stratfordhouseapts.com/",
+      "contactFoundOn": "2026-09-26",
       "firstSeen": "2026-09-19"
     },
     {

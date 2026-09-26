@@ -86,9 +86,11 @@ def main() -> int:
         return 0
 
     count = int(next((a for a in args if a.isdigit()), 4))
+    # The id goes on the same line as the query on purpose. Printed on its own line it gets
+    # skipped when the output is filtered, and then the id gets *guessed* from the address --
+    # which put four contacts against rows that do not exist on 2026-09-26.
     for row in todo[:count]:
-        print(f"{row['id']}")
-        print(f"    {row['units']}u  {row.get('metro') or 'Rest of Texas'}  {row.get('stage')}")
+        print(f"ID: {row['id']}  ({row['units']}u {row.get('metro') or 'Rest of Texas'})")
         print(f"    QUERY: {query_for(row)}")
     print(f"\n({len(todo)} left)")
     return 0
