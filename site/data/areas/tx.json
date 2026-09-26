@@ -34729,7 +34729,7 @@
       "dateStatus": null,
       "buyer": "RESIDENCES AT WHITE ROCK LAKE",
       "developer": null,
-      "officePhone": null,
+      "officePhone": "(469) 778-2141",
       "website": null,
       "software": null,
       "links": {
@@ -34747,6 +34747,8 @@
       "score": 46,
       "isNew": false,
       "metro": "Dallas\u2013Fort Worth",
+      "contactSource": "https://www.apartments.com/residences-at-white-rock-lake-dallas-tx/vvc97qe/",
+      "contactFoundOn": "2026-09-26",
       "firstSeen": "2026-09-20"
     },
     {
@@ -35850,7 +35852,7 @@
       "dateStatus": null,
       "buyer": "GLOVER GABLEPOINT OWNER LLC",
       "developer": null,
-      "officePhone": null,
+      "officePhone": "(972) 279-4018",
       "website": null,
       "software": null,
       "links": {
@@ -35868,6 +35870,8 @@
       "score": 44,
       "isNew": false,
       "metro": "Dallas\u2013Fort Worth",
+      "contactSource": "https://www.gablepointapts.com/",
+      "contactFoundOn": "2026-09-26",
       "firstSeen": "2026-09-20"
     },
     {
@@ -36110,7 +36114,7 @@
       "dateStatus": null,
       "buyer": "180 HICKORY LLC &",
       "developer": null,
-      "officePhone": null,
+      "officePhone": "(972) 298-6308",
       "website": null,
       "software": null,
       "links": {
@@ -36128,6 +36132,8 @@
       "score": 43,
       "isNew": false,
       "metro": "Dallas\u2013Fort Worth",
+      "contactSource": "https://www.hickorytracetownhomes.com/",
+      "contactFoundOn": "2026-09-26",
       "firstSeen": "2026-09-20"
     },
     {
@@ -36185,7 +36191,7 @@
       "dateStatus": null,
       "buyer": "9835 W VALLEY RANCH",
       "developer": null,
-      "officePhone": null,
+      "officePhone": "(972) 848-8807",
       "website": null,
       "software": null,
       "links": {
@@ -36203,6 +36209,9 @@
       "score": 43,
       "isNew": false,
       "metro": "Dallas\u2013Fort Worth",
+      "managementCompany": "Camden Property Trust",
+      "contactSource": "https://www.camdenliving.com/apartments/irving-tx/camden-valley-park",
+      "contactFoundOn": "2026-09-26",
       "firstSeen": "2026-09-20"
     },
     {
@@ -36478,7 +36487,7 @@
       "dateStatus": null,
       "buyer": "3035 LEDBETTER SPE LLC",
       "developer": null,
-      "officePhone": null,
+      "officePhone": "(214) 730-0062",
       "website": null,
       "software": null,
       "links": {
@@ -36496,6 +36505,8 @@
       "score": 43,
       "isNew": false,
       "metro": "Dallas\u2013Fort Worth",
+      "contactSource": "https://www.apartments.com/the-francisco-dallas-tx/bq1h348/",
+      "contactFoundOn": "2026-09-26",
       "firstSeen": "2026-09-20"
     },
     {
@@ -36553,7 +36564,7 @@
       "dateStatus": null,
       "buyer": "DALLAS HAVEN PROPERTIES LLC",
       "developer": null,
-      "officePhone": null,
+      "officePhone": "(214) 361-0037",
       "website": null,
       "software": null,
       "links": {
@@ -36571,6 +36582,12 @@
       "score": 43,
       "isNew": false,
       "metro": "Dallas\u2013Fort Worth",
+      "managementCompany": "Legend Management",
+      "contact": {
+        "email": "thehavenleasing@legendmgmt.com"
+      },
+      "contactSource": "https://www.havenapartmentsdallas.com/contact_us/",
+      "contactFoundOn": "2026-09-26",
       "firstSeen": "2026-09-20"
     },
     {
@@ -37006,7 +37023,7 @@
       "dateStatus": null,
       "buyer": "WILMINGTON TRUST NATIONAL ASSOC",
       "developer": null,
-      "officePhone": null,
+      "officePhone": "(214) 381-7157",
       "website": null,
       "software": null,
       "links": {
@@ -37024,6 +37041,9 @@
       "score": 42,
       "isNew": false,
       "metro": "Dallas\u2013Fort Worth",
+      "managementCompany": "Savoy",
+      "contactSource": "https://www.livesavoy.com/villas-del-rey/",
+      "contactFoundOn": "2026-09-26",
       "firstSeen": "2026-09-20"
     },
     {
@@ -37631,7 +37651,7 @@
       "dateStatus": null,
       "buyer": "BRSP FOREST TEX LLC",
       "developer": null,
-      "officePhone": null,
+      "officePhone": "(945) 263-3676",
       "website": null,
       "software": null,
       "links": {
@@ -37649,6 +37669,8 @@
       "score": 41,
       "isNew": false,
       "metro": "Dallas\u2013Fort Worth",
+      "contactSource": "https://www.thenorthstarapts.com/contact",
+      "contactFoundOn": "2026-09-26",
       "firstSeen": "2026-09-20"
     },
     {
@@ -38036,7 +38058,7 @@
       "dateStatus": null,
       "buyer": "201 CLARK RD APTS LLC",
       "developer": null,
-      "officePhone": null,
+      "officePhone": "(972) 293-7555",
       "website": null,
       "software": null,
       "links": {
@@ -38054,6 +38076,9 @@
       "score": 41,
       "isNew": false,
       "metro": "Dallas\u2013Fort Worth",
+      "managementCompany": "Brazos Residential",
+      "contactSource": "https://www.brazosthehangar.com/",
+      "contactFoundOn": "2026-09-26",
       "firstSeen": "2026-09-20"
     },
     {
@@ -38319,7 +38344,7 @@
     },
     {
       "id": "tx-915-silber-rd-915-silber-rd",
-      "property": "915 Silber Rd",
+      "property": "Legends of Memorial",
       "community": "915 SILBER RD",
       "city": "HOUSTON",
       "address": "915 SILBER RD",
@@ -38333,7 +38358,7 @@
       "dateStatus": null,
       "buyer": "915 SILBER PARTNERS LLC",
       "developer": null,
-      "officePhone": null,
+      "officePhone": "(713) 561-5097",
       "website": null,
       "software": null,
       "links": {
@@ -38351,6 +38376,8 @@
       "score": 40,
       "isNew": false,
       "metro": "Houston",
+      "contactSource": "https://www.apartments.com/legends-of-memorial-houston-tx/ktjqze9/",
+      "contactFoundOn": "2026-09-26",
       "firstSeen": "2026-09-19"
     },
     {
@@ -38659,7 +38686,7 @@
     },
     {
       "id": "tx-14814-perthshire-rd-14814-perthshire-rd",
-      "property": "14814 Perthshire Rd",
+      "property": "The Palms at Memorial",
       "community": "14814 PERTHSHIRE RD",
       "city": "HOUSTON",
       "address": "14814 PERTHSHIRE RD",
@@ -38673,7 +38700,7 @@
       "dateStatus": null,
       "buyer": "VE PERTHSHIRE OWNER",
       "developer": null,
-      "officePhone": null,
+      "officePhone": "(281) 493-2290",
       "website": null,
       "software": null,
       "links": {
@@ -38691,6 +38718,8 @@
       "score": 40,
       "isNew": false,
       "metro": "Houston",
+      "contactSource": "https://www.har.com/palms-at-memorial-the/apartment_1760A",
+      "contactFoundOn": "2026-09-26",
       "firstSeen": "2026-09-19"
     },
     {
@@ -38844,7 +38873,7 @@
     },
     {
       "id": "tx-13355-northborough-dr-13355-northborough-dr",
-      "property": "13355 Northborough Dr",
+      "property": "Canfield Lakes",
       "community": "13355 NORTHBOROUGH DR",
       "city": "HOUSTON",
       "address": "13355 NORTHBOROUGH DR",
@@ -38858,7 +38887,7 @@
       "dateStatus": null,
       "buyer": "NSI CANFIELD LLC",
       "developer": null,
-      "officePhone": null,
+      "officePhone": "(281) 872-8880",
       "website": null,
       "software": null,
       "links": {
@@ -38876,6 +38905,8 @@
       "score": 39,
       "isNew": false,
       "metro": "Houston",
+      "contactSource": "https://www.apartments.com/canfield-lakes-houston-tx/xsv94cq/",
+      "contactFoundOn": "2026-09-26",
       "firstSeen": "2026-09-19"
     },
     {
@@ -38930,7 +38961,7 @@
       "dateStatus": null,
       "buyer": "BRAZOS MEADOWS LLC",
       "developer": null,
-      "officePhone": null,
+      "officePhone": "(972) 303-2500",
       "website": null,
       "software": null,
       "links": {
@@ -38948,6 +38979,9 @@
       "score": 39,
       "isNew": false,
       "metro": "Rest of Texas",
+      "managementCompany": "Brazos Residential",
+      "contactSource": "https://www.brazosthemeadows.com/",
+      "contactFoundOn": "2026-09-26",
       "firstSeen": "2026-09-20"
     },
     {
@@ -39189,7 +39223,7 @@
       "dateStatus": null,
       "buyer": "UCP PROPCO LLC",
       "developer": null,
-      "officePhone": null,
+      "officePhone": "(469) 730-4880",
       "website": null,
       "software": null,
       "links": {
@@ -39207,6 +39241,8 @@
       "score": 39,
       "isNew": false,
       "metro": "Dallas\u2013Fort Worth",
+      "contactSource": "https://www.uptownatcolepark.com/",
+      "contactFoundOn": "2026-09-26",
       "firstSeen": "2026-09-20"
     },
     {
@@ -39416,7 +39452,7 @@
       "dateStatus": null,
       "buyer": "AG KVC GR PROPERTY OWNER",
       "developer": null,
-      "officePhone": null,
+      "officePhone": "(469) 949-3102",
       "website": null,
       "software": null,
       "links": {
@@ -39434,6 +39470,8 @@
       "score": 38,
       "isNew": false,
       "metro": "Dallas\u2013Fort Worth",
+      "contactSource": "https://riseapartments.com/apartment/grand-reserve-townhomes-dallas/",
+      "contactFoundOn": "2026-09-26",
       "firstSeen": "2026-09-20"
     },
     {
@@ -40755,7 +40793,7 @@
     },
     {
       "id": "tx-8300-w-airport-blvd-8300-w-airport-blvd",
-      "property": "8300 W Airport Blvd",
+      "property": "Airport Crossing",
       "community": "8300 W AIRPORT BLVD",
       "city": "HOUSTON",
       "address": "8300 W AIRPORT BLVD",
@@ -40769,7 +40807,7 @@
       "dateStatus": null,
       "buyer": "OCONEE REAL ESTATE HOLDINGS",
       "developer": null,
-      "officePhone": null,
+      "officePhone": "(713) 988-2294",
       "website": null,
       "software": null,
       "links": {
@@ -40787,6 +40825,8 @@
       "score": 36,
       "isNew": false,
       "metro": "Houston",
+      "contactSource": "https://www.airportcrossingapts.com/contact",
+      "contactFoundOn": "2026-09-26",
       "firstSeen": "2026-09-19"
     },
     {
@@ -41028,7 +41068,7 @@
       "dateStatus": null,
       "buyer": "CAPRI EVERTON LLC &",
       "developer": null,
-      "officePhone": null,
+      "officePhone": "(214) 609-1977",
       "website": null,
       "software": null,
       "links": {
@@ -41046,6 +41086,9 @@
       "score": 36,
       "isNew": false,
       "metro": "Dallas\u2013Fort Worth",
+      "managementCompany": "Knightvest Capital",
+      "contactSource": "https://www.rentcafe.com/apartments/tx/dallas/everton-at-bellmar/default.aspx",
+      "contactFoundOn": "2026-09-26",
       "firstSeen": "2026-09-20"
     },
     {
@@ -41064,7 +41107,7 @@
       "dateStatus": null,
       "buyer": "CAPRI RIVERFALLS LLC &",
       "developer": null,
-      "officePhone": null,
+      "officePhone": "(469) 405-3174",
       "website": null,
       "software": null,
       "links": {
@@ -41082,6 +41125,9 @@
       "score": 36,
       "isNew": false,
       "metro": "Dallas\u2013Fort Worth",
+      "managementCompany": "Knightvest Capital",
+      "contactSource": "https://www.apartments.com/riverfalls-at-bellmar-dallas-tx/0tfmfd0/",
+      "contactFoundOn": "2026-09-26",
       "firstSeen": "2026-09-20"
     },
     {
@@ -41100,7 +41146,7 @@
       "dateStatus": null,
       "buyer": "7879 RIVERFALL PROPCO LLC &",
       "developer": null,
-      "officePhone": null,
+      "officePhone": "(214) 855-7742",
       "website": null,
       "software": null,
       "links": {
@@ -41118,6 +41164,9 @@
       "score": 36,
       "isNew": false,
       "metro": "Dallas\u2013Fort Worth",
+      "managementCompany": "Knightvest Capital",
+      "contactSource": "https://www.waterfordatbellmar.com/",
+      "contactFoundOn": "2026-09-26",
       "firstSeen": "2026-09-20"
     },
     {
@@ -41350,7 +41399,7 @@
     },
     {
       "id": "tx-1910-argentia-dr-apartments-at-1910-argentia-dr",
-      "property": "Apartments at 1910 Argentia Dr",
+      "property": "The Parks at Wynnewood (also listed as Hillburn Hills)",
       "community": "(TO BE DEMOED) 100% VACANT",
       "city": "DALLAS",
       "address": "1910 ARGENTIA DR",
@@ -41364,7 +41413,7 @@
       "dateStatus": null,
       "buyer": "PAW INVESTORS GROUP LLC",
       "developer": null,
-      "officePhone": null,
+      "officePhone": "(214) 943-4343",
       "website": null,
       "software": null,
       "links": {
@@ -41382,6 +41431,8 @@
       "score": 35,
       "isNew": false,
       "metro": "Dallas\u2013Fort Worth",
+      "contactSource": "https://www.apartments.com/parks-at-wynnewood-apartments-dallas-tx/6dclw8t/",
+      "contactFoundOn": "2026-09-26",
       "firstSeen": "2026-09-20"
     },
     {
@@ -41801,7 +41852,7 @@
       "dateStatus": null,
       "buyer": "MSFR MIDWAY ROW HOUSE OWNER LLC",
       "developer": null,
-      "officePhone": null,
+      "officePhone": "(469) 457-2730",
       "website": null,
       "software": null,
       "links": {
@@ -41819,6 +41870,9 @@
       "score": 35,
       "isNew": false,
       "metro": "Rest of Texas",
+      "managementCompany": "Gables Residential",
+      "contactSource": "https://www.gables.com/Midwayrowhouse",
+      "contactFoundOn": "2026-09-26",
       "firstSeen": "2026-09-20"
     },
     {
