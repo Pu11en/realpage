@@ -1161,6 +1161,66 @@ def write_chat_leads_csv(slug: str, area_json: dict) -> None:
             ])
 
 
+def apply_found_contacts(slug: str, leads: list[dict]) -> int:
+    """Merge propertystack/data/<slug>/contacts-found.csv onto the area's rows.
+
+    Hand-researched contacts for buildings whose public record carries none: a county sale
+    record names the buyer LLC and nothing else, so 93% of rows arrived with no way to reach
+    anyone. Each row here was found by one web search and carries the URL it came from and
+    the date, because a phone number nobody can check is a claim this site does not make.
+
+    Only ever *fills* a field, never overwrites one. The unit count, the sale date and the
+    stage all have a public record behind them, and an aggregator disagreeing with the
+    appraisal district is not a reason to believe the aggregator -- Apartments.com says
+    Murdeaux Villas has 240 units where the county says 301.
+
+    The community name is the one exception, and only when the record has no real name: a
+    row the county calls "9999 KEMPWOOD DR" is called "3 Corners East" by everyone who has
+    ever lived there, and a page that prints the address twice looks broken.
+    """
+    path = STATE_DATA_DIR / slug / "contacts-found.csv"
+    if not path.exists():
+        return 0
+    found = {row["id"]: row for row in read_csv(path)}
+    filled = 0
+    for lead in leads:
+        row = found.get(lead.get("id"))
+        if not row:
+            continue
+        touched = False
+        if row.get("phone") and not lead.get("officePhone"):
+            lead["officePhone"] = row["phone"]
+            touched = True
+        if row.get("management_company") and not lead.get("managementCompany"):
+            lead["managementCompany"] = row["management_company"]
+            touched = True
+        if row.get("email") and not (lead.get("contact") or {}).get("email"):
+            lead.setdefault("contact", {})["email"] = row["email"]
+            touched = True
+        # Replace the name only where the record never had one: blank, the generated
+        # "Apartments at <address>", or the street address itself doing duty as a name. The
+        # county writes the address into its name field constantly, so a row arrives called
+        # "9999 Kempwood Dr" when everyone who has lived there calls it "3 Corners East" --
+        # and a page printing the address in the name column and again in the address column
+        # looks broken. A row that already has a real name keeps it.
+        name = (lead.get("property") or "").strip()
+        address = (lead.get("address") or "").strip()
+        is_placeholder = (
+            not name
+            or name.startswith("Apartments at ")
+            or name.casefold() == address.casefold()
+            or bool(re.match(r"^\d+\s", name))
+        )
+        if row.get("found_name") and is_placeholder:
+            lead["property"] = row["found_name"]
+            touched = True
+        if touched:
+            lead["contactSource"] = row.get("source_url") or None
+            lead["contactFoundOn"] = row.get("found_on") or None
+            filled += 1
+    return filled
+
+
 def build_state_areas(include_sample: bool = False) -> list[str]:
     """Build every discovered state area's JSON under site/data/areas/, plus
     its chat-leads.csv (for the chatbot). Returns the slugs actually built."""
@@ -1170,6 +1230,9 @@ def build_state_areas(include_sample: bool = False) -> list[str]:
     AREAS_OUT_DIR.mkdir(parents=True, exist_ok=True)
     for slug in slugs:
         area_json = _merge_included_areas(slug, build_area(slug))
+        filled = apply_found_contacts(slug, area_json["leads"])
+        if filled:
+            print(f"filled {filled} researched contact(s) into {slug}")
         disambiguate_duplicate_display_names(area_json["leads"], slug)
         ensure_unique_content_ids(area_json["leads"])
         add_first_seen(area_json["leads"], AREAS_OUT_DIR / f"{slug}.json", state=slug)

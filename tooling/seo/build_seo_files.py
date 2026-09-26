@@ -186,9 +186,15 @@ def build_llms(index: dict, areas: list[dict]) -> str:
             "",
             "The CSV is the complete list for that place, not the capped set the HTML table",
             "shows, and it carries one column per fact: Building, Address, City, State, Units,",
-            "Stage, Opens, Sold, Buyer, Developer, Office phone, Source and Source URL. A blank",
-            "cell means the public record is silent, never that the value is zero. Each page's",
-            "schema.org Dataset declares its CSV under distribution, with the byte size.",
+            "Stage, Opens, Sold, Buyer, Developer, Office phone, Management company, Contact",
+            "source, Source and Source URL. A blank cell means the public record is silent,",
+            "never that the value is zero. Each page's schema.org Dataset declares its CSV",
+            "under distribution, with the byte size.",
+            "",
+            "Office phone and Management company are researched per building from published",
+            "pages rather than taken from a records feed, because a county sale record names",
+            "the buying LLC and nothing else. Contact source carries the page each one came",
+            "from and the date it was read, so any of them can be checked or challenged.",
         ]
     lines += [
         "",

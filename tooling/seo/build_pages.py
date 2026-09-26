@@ -313,6 +313,7 @@ def page_shell(title: str, description: str, canonical: str, jsonld: str, body: 
     .static-page .next-step {{ margin: 28px 0 8px; padding: 16px 18px; border: 1px solid var(--rule); border-left: 4px solid var(--accent); max-width: 80ch; }}
     .static-page .next-step h2 {{ margin-top: 0; }}
     .static-page .next-step p {{ font-size: 14px; line-height: 1.55; margin: 8px 0 0; }}
+    .static-page .mgmt {{ color: var(--text-muted); font-size: 12px; }}
     .static-page .download {{ font-size: 13px; line-height: 1.55; max-width: 80ch;
       margin: 0 0 14px; padding: 10px 14px; background: var(--paper-2);
       border-left: 4px solid var(--accent); }}
@@ -338,7 +339,7 @@ def table(leads: list[dict], sold_view: bool) -> str:
         "      <thead><tr>"
         "<th>Building</th><th>Address</th><th>City</th><th class=\"num\">Units</th>"
         f"<th>Stage</th><th>{date_head}</th><th>{'Buyer' if sold_view else 'Developer'}</th>"
-        "<th>Source</th></tr></thead>",
+        "<th>Who to call</th><th>Source</th></tr></thead>",
         "      <tbody>",
     ]
     for lead in leads:
@@ -354,6 +355,16 @@ def table(leads: list[dict], sold_view: bool) -> str:
             )
         else:
             src = ""
+        # Who to call. The phone is what a salesperson dials; the management company is who
+        # actually buys software, so it goes underneath rather than being dropped. Both are
+        # blank where nothing was found, because a guessed number is worse than none.
+        call_bits = []
+        if lead.get("officePhone"):
+            call_bits.append(esc(lead["officePhone"]))
+        if lead.get("managementCompany"):
+            call_bits.append(f'<span class="mgmt">{esc(pretty(lead["managementCompany"]))}</span>')
+        call = "<br>".join(call_bits)
+
         units = f"{int(lead['units']):,}" if lead.get("units") else ""
         # Many sale records carry no building name, so the name field holds the address.
         # Printing it twice on one row looks like a bug; the name column keeps it.
@@ -369,6 +380,7 @@ def table(leads: list[dict], sold_view: bool) -> str:
             f"<td>{esc(lead.get('stage') or '')}</td>"
             f"<td>{esc(when)}</td>"
             f"<td>{esc(who)}</td>"
+            f"<td>{call}</td>"
             f"<td>{src}</td>"
             "</tr>"
         )
@@ -604,6 +616,10 @@ CSV_COLUMNS: list[tuple[str, str, str]] = [
     ("Buyer", "Buyer named on the sale record, often a holding company", "buyer"),
     ("Developer", "Developer or contractor named on the construction record", "developer"),
     ("Office phone", "Published leasing or management office phone, where one exists", "phone"),
+    ("Management company", "The company that runs the building, where it is published -- "
+     "the buyer for anything sold to a portfolio rather than to one address", "management"),
+    ("Contact source", "Where the phone and management company were found, and on what date",
+     "contact_source"),
     ("Source", "What kind of public record the row came from", "source"),
     ("Source URL", "Direct link to that record, so any row can be checked", "source_url"),
 ]
@@ -628,6 +644,13 @@ def csv_cell(lead: dict, key: str) -> str:
         "buyer": pretty(lead.get("buyer")),
         "developer": pretty(lead.get("developer")),
         "phone": lead.get("officePhone") or "",
+        "management": lead.get("managementCompany") or "",
+        # The contact is the one thing on a row that came from a web page rather than a public
+        # record, so it carries where it came from and when, in the row itself.
+        "contact_source": (
+            f"{lead['contactSource']} ({lead.get('contactFoundOn') or ''})".strip()
+            if lead.get("contactSource") else ""
+        ),
         "source": sources[0].get("label") or "record" if sources else "",
         "source_url": sources[0]["url"] if sources else "",
     }[key]
