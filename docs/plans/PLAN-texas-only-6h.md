@@ -1,5 +1,46 @@
 # Texas only, and actually useful: one 6-hour run
 
+## DONE, 2026-09-26. All five phases shipped and verified live.
+
+|  | Before | After |
+|---|---|---|
+| Buildings published | 1,587 | **1,702** |
+| Rows with a phone | 144 | **304** |
+| Rows with a management company | 0 | **85** |
+| **Timely, 50+ units, actionable** | **24** | **195** |
+| Names showing raw county text | 360 | **0** |
+
+178 of 178 buildings searched. 159 phones and 85 management companies, an 89% hit rate that
+held within a few points from the tenth building to the last. 53 distinct management companies:
+Greystar on 8, Brazos 6, Willow Bridge 5, Bell Partners 3, RPM Living 3, Knightvest 3 -- and
+Knightvest's three are one Bellmar campus, so that is one conversation covering three buildings.
+
+19 rows carry no phone and every one records why: two pre-construction towers with no leasing
+office yet, and seventeen small older buildings that publish no number anywhere. The last of
+those, The Boheme, was searched twice and left blank because every listing gives a different
+street than the county record. Probably the same building; probably is not good enough.
+
+### Three bugs the work surfaced, none of them in the plan
+
+1. **360 of 1,702 rows published county clerical text as the building name** -- "(N/C 89%)
+   SOLTRA FIREWHEEL", "THE AMBASSADOR APARTMENTS 30%", "Building Permit". Every display path
+   read `community` before `property`, throwing away four separate cleaning steps. It had been
+   shipping for as long as these pages existed, and only became visible because a researched
+   name failed to appear on the Houston page.
+2. **The contact merge ran before the ids were final.** `disambiguate_duplicate_display_names`
+   and `ensure_unique_content_ids` both rewrite `id`, so a contact keyed to the final id missed
+   its row. One building in 178, because the symptom needs two rows to share a name.
+3. **"THE NATIONAL (324 UNITS)" sat beside a Units column reading 543** -- both sourced, on the
+   live Dallas page. Dallas County writes the count into its own name field.
+
+Each is now held by a test that fails on the cause rather than the symptom.
+
+### What is still true and worth acting on
+
+The product is no longer the bottleneck; the outreach is. 195 actionable leads with named
+management companies is a morning of calls, and nobody has made them. That is the next thing,
+and it needs a person, not a build.
+
 David, 2026-09-26. **CraneSignal becomes a Texas-only product.** Arizona, New Mexico and New
 York come out. The 178 Texas buildings that have no phone number get one. The data gets
 refreshed from source rather than served six days stale.
