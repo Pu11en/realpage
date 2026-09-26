@@ -7,6 +7,7 @@ turning into the kind of mass-produced thin pages Google demotes sitewide.
 
 Offline: reads files on disk, no network, no paid calls.
 """
+import csv
 import json
 import re
 import subprocess
@@ -19,6 +20,9 @@ ROOT = Path(__file__).resolve().parents[3]
 SITE = ROOT / "site"
 LEADS = SITE / "leads"
 HOST = "https://app.cranesignal.com"
+# The brand's one identity, declared on the landing page at cranesignal.com and repeated
+# under the same @id on every page here, so the two hosts are one entity to a model.
+ORG_ID = "https://cranesignal.com/#org"
 
 # Below this a page is thin, and thin pages are the sitewide risk. build_pages.py uses
 # 25 buildings as the floor; a page can still be short if a place has few big buildings,
@@ -246,18 +250,176 @@ def test_faq_schema_is_identical_to_the_visible_text(path):
 
 @pytest.mark.parametrize("path", pages(), ids=lambda p: p.name)
 def test_one_organization_entity_across_the_whole_site(path):
-    """Declaring a fresh Organization per page splits the entity, which is exactly what
-    makes a model unsure these pages are all the same outfit."""
-    block = re.search(
+    """Every page names the same brand @id, and nothing on it invents a second one.
+
+    Changed 2026-09-26. This used to demand that no page declare an Organization node at
+    all, on the reasoning that a fresh Organization per page splits the entity. The
+    reasoning is right and the assertion was in the wrong place: the pages were left
+    naming an @id that is declared on the *other* host, so a crawler reading one page
+    alone found creator and publisher pointing at nothing. Repeating the node under the
+    same @id is how JSON-LD says "this is that same thing" -- it unifies rather than
+    splits. What has to be enforced is the id, so that is what is asserted now, plus the
+    absence of any second identity, which the old version could not catch.
+    """
+    graph = json.loads(re.search(
         r'<script type="application/ld\+json">(.*?)</script>',
         path.read_text(encoding="utf-8"), re.S,
-    )
-    graph = json.loads(block.group(1))["@graph"]
+    ).group(1))["@graph"]
     dataset = next(node for node in graph if node["@type"] == "Dataset")
-    # The canonical Organization is declared on the landing page at cranesignal.com, live
-    # since 2026-09-25. Every page on this host references that @id rather than minting a
-    # second one, so the two hosts are one entity rather than two that agree.
-    assert dataset["creator"] == {"@id": "https://cranesignal.com/#org"}, dataset["creator"]
-    assert not any(node["@type"] == "Organization" for node in graph), (
-        f"{path.name} declares its own Organization instead of referencing the brand's"
+    assert dataset["creator"] == {"@id": ORG_ID}, dataset["creator"]
+    assert dataset["publisher"] == {"@id": ORG_ID}, dataset["publisher"]
+
+    orgs = [node for node in graph if node["@type"] == "Organization"]
+    assert len(orgs) == 1, f"{path.name} declares {len(orgs)} Organization nodes, want 1"
+    assert orgs[0]["@id"] == ORG_ID, (
+        f"{path.name} mints a second brand identity: {orgs[0].get('@id')!r}"
     )
+    # Enough to resolve on its own. An @id with nothing attached is the bare reference
+    # this change exists to remove.
+    assert orgs[0]["name"] == "CraneSignal"
+    assert orgs[0]["url"] == "https://cranesignal.com"
+
+
+# ------------------------------------------------- the spreadsheet beside each page
+#
+# Added 2026-09-26. The site already offered a free spreadsheet, but it was assembled
+# inside the visitor's browser and never existed as a URL -- so Google Dataset Search, an
+# AI crawler and a `curl` all found nothing. The measured opening for CraneSignal is the
+# free-data question: engines name paid tools 70% of the time even when asked for a free
+# source, because as far as they can see none exists. These tests hold the three things
+# that make the new files count: the file is there, the page links it, and the schema
+# describes it accurately enough to be trusted.
+
+
+def dataset_of(path: Path) -> dict:
+    graph = json.loads(re.search(
+        r'<script type="application/ld\+json">(.*?)</script>',
+        path.read_text(encoding="utf-8"), re.S,
+    ).group(1))["@graph"]
+    return next(node for node in graph if node["@type"] == "Dataset")
+
+
+def csv_of(path: Path) -> list[list[str]]:
+    with path.with_suffix(".csv").open(encoding="utf-8", newline="") as handle:
+        return list(csv.reader(handle))
+
+
+@pytest.mark.parametrize("path", pages(), ids=lambda p: p.name)
+def test_every_page_has_a_spreadsheet_beside_it(path):
+    assert path.with_suffix(".csv").is_file(), (
+        f"{path.name} has no CSV -- run tooling/seo/build_pages.py"
+    )
+
+
+def test_no_spreadsheet_outlives_its_page():
+    """A CSV left behind after its page was dropped is a live URL serving numbers nothing
+    on the site stands behind any more."""
+    orphans = [p.name for p in LEADS.rglob("*.csv") if not p.with_suffix(".html").exists()]
+    assert not orphans, orphans
+
+
+@pytest.mark.parametrize("path", pages(), ids=lambda p: p.name)
+def test_the_spreadsheet_holds_every_row_not_the_capped_set(path):
+    """The page's table is capped at 400 rows; the file is the whole list. That is the
+    reason to offer it, and the page says so, so it has to be true."""
+    rows = csv_of(path)
+    assert len(rows) >= 2, f"{path.name}: empty CSV"
+    assert len(rows) - 1 == dataset_of(path)["numberOfItems"] if "numberOfItems" in dataset_of(path) else True
+    listed = json.loads(re.search(
+        r'<script type="application/ld\+json">(.*?)</script>',
+        path.read_text(encoding="utf-8"), re.S,
+    ).group(1))["@graph"]
+    item_list = next(node for node in listed if node["@type"] == "ItemList")
+    assert len(rows) - 1 == item_list["numberOfItems"], (
+        f"{path.name}: CSV has {len(rows) - 1} rows, ItemList claims {item_list['numberOfItems']}"
+    )
+
+
+@pytest.mark.parametrize("path", pages(), ids=lambda p: p.name)
+def test_the_page_links_its_own_spreadsheet_and_states_the_row_count(path):
+    raw = path.read_text(encoding="utf-8")
+    rows = len(csv_of(path)) - 1
+    href = path.with_suffix(".csv").name
+    assert f'href="{HOST}/leads/' in raw or href in raw, f"{path.name} does not link its CSV"
+    assert f"CSV, {rows:,} rows" in raw, (
+        f"{path.name} does not state the row count a reader is about to download"
+    )
+    assert "no account" in text_of(path).lower()
+
+
+@pytest.mark.parametrize("path", pages(), ids=lambda p: p.name)
+def test_the_distribution_points_at_a_file_that_exists_and_is_the_right_size(path):
+    """A contentSize that disagrees with the file is worse than none: it is the one claim
+    in the schema a fetcher can check for free, and getting it wrong is a reason to
+    distrust everything beside it."""
+    dataset = dataset_of(path)
+    download = dataset["distribution"][0]
+    assert download["encodingFormat"] == "text/csv"
+    rel = download["contentUrl"].removeprefix(HOST + "/")
+    on_disk = SITE / rel
+    assert on_disk.is_file(), f"{path.name}: distribution points at {rel}, which is not there"
+    assert on_disk == path.with_suffix(".csv"), rel
+    declared = int(download["contentSize"].split()[0])
+    assert declared == on_disk.stat().st_size if on_disk.read_bytes().count(b"\r") == 0 else True
+    assert declared == len(on_disk.read_text(encoding="utf-8").encode("utf-8")), (
+        f"{path.name}: schema says {declared} B, file is "
+        f"{len(on_disk.read_text(encoding='utf-8').encode('utf-8'))} B"
+    )
+
+
+@pytest.mark.parametrize("path", pages(), ids=lambda p: p.name)
+def test_variables_measured_match_the_spreadsheet_header_exactly(path):
+    """variableMeasured is how an engine decides what questions the data can answer. A
+    column named there but missing from the file is a promise the download breaks."""
+    named = [v["name"] for v in dataset_of(path)["variableMeasured"]]
+    header = csv_of(path)[0]
+    assert named == header, f"{path.name}: schema {named} vs header {header}"
+    for variable in dataset_of(path)["variableMeasured"]:
+        assert variable["description"].strip(), variable["name"]
+
+
+@pytest.mark.parametrize("path", pages(), ids=lambda p: p.name)
+def test_the_dataset_says_where_and_when_it_is_about(path):
+    """The home page has carried these since the start; the pages built to actually be
+    found carried none of them, which was backwards."""
+    dataset = dataset_of(path)
+    spatial = dataset["spatialCoverage"]
+    names = [spatial["name"]] if isinstance(spatial, dict) else [p["name"] for p in spatial]
+    assert all(names), path.name
+    assert " and " not in " ".join(names), (
+        f"{path.name}: {names} -- a joined place name is not a place"
+    )
+    assert re.fullmatch(r"\d{4}-\d{2}-\d{2}(/\d{4}-\d{2}-\d{2})?", dataset["temporalCoverage"]), (
+        f"{path.name}: {dataset['temporalCoverage']!r}"
+    )
+    assert dataset["keywords"], path.name
+    assert dataset["isAccessibleForFree"] is True
+
+
+@pytest.mark.parametrize("path", pages(), ids=lambda p: p.name)
+def test_every_spreadsheet_row_can_be_checked_against_a_public_record(path):
+    """Same rule the HTML table follows: the point of the data is that any line links the
+    record it came from. A blank source column is a row a reader has to take on faith."""
+    rows = csv_of(path)
+    url_at = rows[0].index("Source URL")
+    unsourced = [row[0] for row in rows[1:] if not row[url_at].startswith("http")]
+    assert not unsourced, (
+        f"{path.name}: {len(unsourced)} of {len(rows) - 1} rows have no source URL, "
+        f"e.g. {unsourced[:3]}"
+    )
+
+
+@pytest.mark.parametrize("path", pages(), ids=lambda p: p.name)
+def test_the_spreadsheet_never_guesses(path):
+    """Blank means the record is silent. A zero in Units would read as "no apartments",
+    and a made-up date would be worse."""
+    rows = csv_of(path)
+    head = rows[0]
+    units_at, opens_at, sold_at = head.index("Units"), head.index("Opens"), head.index("Sold")
+    for row in rows[1:]:
+        assert row[units_at] != "0", f"{path.name}: a zero-unit building -- {row[0]}"
+        for column in (opens_at, sold_at):
+            if row[column]:
+                assert re.fullmatch(r"\d{4}-\d{2}-\d{2}", row[column]), (
+                    f"{path.name}: {row[column]!r} is not an ISO date -- {row[0]}"
+                )

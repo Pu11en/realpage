@@ -22,7 +22,9 @@ copies none of its logic.
 from __future__ import annotations
 
 import argparse
+import csv
 import html
+import io
 import json
 import re
 import sys
@@ -149,6 +151,7 @@ def load_areas() -> tuple[dict, list[dict]]:
         payload = json.loads(path.read_text(encoding="utf-8"))
         for lead in payload.get("leads", []):
             lead["_city"] = clean_city(lead.get("city"))
+            lead["_state"] = area["label"]
         areas.append({**area, "payload": payload})
     return index, areas
 
@@ -310,6 +313,9 @@ def page_shell(title: str, description: str, canonical: str, jsonld: str, body: 
     .static-page .next-step {{ margin: 28px 0 8px; padding: 16px 18px; border: 1px solid var(--rule); border-left: 4px solid var(--accent); max-width: 80ch; }}
     .static-page .next-step h2 {{ margin-top: 0; }}
     .static-page .next-step p {{ font-size: 14px; line-height: 1.55; margin: 8px 0 0; }}
+    .static-page .download {{ font-size: 13px; line-height: 1.55; max-width: 80ch;
+      margin: 0 0 14px; padding: 10px 14px; background: var(--paper-2);
+      border-left: 4px solid var(--accent); }}
     .static-page .faq {{ max-width: 80ch; font-size: 14px; }}
     .static-page .faq dt {{ font-weight: 600; margin-top: 14px; }}
     .static-page .faq dd {{ margin: 4px 0 0; line-height: 1.55; }}
@@ -579,8 +585,147 @@ def breadcrumb_items(crumbs_html: str, here: str, canonical: str) -> list[dict]:
     return items
 
 
+# ---------------------------------------------------------------- the machine-readable copy
+
+# What the spreadsheet beside each page contains, and what each column means. This list is
+# the single source for three things that must agree: the CSV header, the visible note on
+# the page, and the Dataset's variableMeasured. Google reads the last one to decide what
+# questions the data can answer, so a column missing from here is a column no engine knows
+# exists.
+CSV_COLUMNS: list[tuple[str, str, str]] = [
+    ("Building", "Building name, or the street address when the record carries no name", "name"),
+    ("Address", "Street address from the public record", "address"),
+    ("City", "City, cleaned of the casing and county suffixes the records vary on", "city"),
+    ("State", "US state", "state"),
+    ("Units", "Number of apartment units", "units"),
+    ("Stage", "planned, permitted, under construction, leasing or sold", "stage"),
+    ("Opens", "Expected opening date, from the construction record", "opens"),
+    ("Sold", "Date of the recorded sale", "sold"),
+    ("Buyer", "Buyer named on the sale record, often a holding company", "buyer"),
+    ("Developer", "Developer or contractor named on the construction record", "developer"),
+    ("Office phone", "Published leasing or management office phone, where one exists", "phone"),
+    ("Source", "What kind of public record the row came from", "source"),
+    ("Source URL", "Direct link to that record, so any row can be checked", "source_url"),
+]
+
+
+def csv_cell(lead: dict, key: str) -> str:
+    """One CSV value. Blank means the record is silent, never that the value is zero."""
+    sources = [s for s in (lead.get("sources") or []) if s.get("url")]
+    name = pretty(lead.get("community") or lead.get("property")) or ""
+    address = pretty(lead.get("address"))
+    return {
+        "name": name or address,
+        # The HTML table blanks a duplicated address because printing it twice looks like
+        # a bug. A spreadsheet is filtered and sorted, so both columns stay filled.
+        "address": address,
+        "city": lead.get("_city") or lead.get("city") or "",
+        "state": lead.get("_state") or "",
+        "units": str(int(lead["units"])) if lead.get("units") else "",
+        "stage": lead.get("stage") or "",
+        "opens": str(lead.get("openingDate") or "")[:10],
+        "sold": str(lead.get("saleDate") or "")[:10],
+        "buyer": pretty(lead.get("buyer")),
+        "developer": pretty(lead.get("developer")),
+        "phone": lead.get("officePhone") or "",
+        "source": sources[0].get("label") or "record" if sources else "",
+        "source_url": sources[0]["url"] if sources else "",
+    }[key]
+
+
+def csv_for(leads: list[dict]) -> str:
+    """The whole list as a spreadsheet, not the capped set the HTML table shows.
+
+    Why this file exists at all: the site already offered a free spreadsheet, but it was
+    built inside the visitor's browser and never existed as a URL, so no crawler, no
+    Google Dataset Search and no answer engine could ever fetch it. The measured opening
+    for CraneSignal is the free-data question -- engines name paid tools 70% of the time
+    even when asked for a free source, because as far as they can tell none exists. A real
+    file at a real address, declared in the Dataset's distribution, is how that changes.
+
+    ISO dates rather than the page's "Sep 2026", because this one is read by machines and
+    sorted in spreadsheets.
+    """
+    out = io.StringIO(newline="")
+    writer = csv.writer(out, lineterminator="\n")
+    writer.writerow([column for column, _, _ in CSV_COLUMNS])
+    for lead in leads:
+        writer.writerow([csv_cell(lead, key) for _, _, key in CSV_COLUMNS])
+    return out.getvalue()
+
+
+def states_phrase(leads: list[dict]) -> str:
+    """The states these rows are actually in, as a phrase a sentence can use.
+
+    The two cross-cutting pages used to hardcode "Texas and Arizona". On 2026-09-26 the
+    opening-2027-2028 page held 89 buildings, every one of them in Texas and none in
+    Arizona, and said "in Texas and Arizona" four times in its visible FAQ -- text that is
+    also FAQPage schema, so Google can show it as a rich result. Naming a state we have no
+    buildings in is the one thing this data must never do. Derived from the rows, it cannot
+    say it again.
+    """
+    states = sorted({lead["_state"] for lead in leads if lead.get("_state")})
+    if not states:
+        return "the areas CraneSignal covers"
+    if len(states) == 1:
+        return states[0]
+    return ", ".join(states[:-1]) + f" and {states[-1]}"
+
+
+def coverage_for(leads: list[dict], place: str) -> dict:
+    """spatialCoverage, temporalCoverage and keywords, computed from the rows themselves.
+
+    The home page's Dataset has carried these since the start; the 18 pages built to
+    actually be found carried none of them, which is backwards -- these are the properties
+    that tell an engine the data is about Houston, covers 2024 to 2028, and can answer a
+    question about either.
+    """
+    states = sorted({lead["_state"] for lead in leads if lead.get("_state")})
+    cities = Counter(lead["_city"] for lead in leads if lead.get("_city"))
+
+    dates = sorted(
+        str(value)[:10]
+        for lead in leads
+        for value in (lead.get("permitDate"), lead.get("openingDate"), lead.get("saleDate"))
+        if value and re.fullmatch(r"\d{4}-\d{2}-\d{2}", str(value)[:10])
+    )
+
+    keywords = [
+        "apartment construction pipeline",
+        "multifamily development",
+        "apartment sales records",
+    ]
+    # "Texas and Arizona apartments" -- the two cross-cutting pages' place -- is not a
+    # phrase anyone types. Every other place name is.
+    if " and " not in place:
+        keywords.append(f"{place} apartments")
+    keywords += [f"{city} apartments" for city, _ in cities.most_common(3)]
+
+    out: dict = {"keywords": sorted(set(keywords))}
+    if place in states:
+        # A state page. Saying Arizona is contained in Arizona is worse than saying nothing.
+        out["spatialCoverage"] = {"@type": "AdministrativeArea", "name": place}
+    elif " and " in place and len(states) > 1:
+        out["spatialCoverage"] = [
+            {"@type": "AdministrativeArea", "name": state} for state in states
+        ]
+    else:
+        out["spatialCoverage"] = {"@type": "Place", "name": place}
+        if states:
+            out["spatialCoverage"]["containedInPlace"] = [
+                {"@type": "AdministrativeArea", "name": state} for state in states
+            ]
+    if dates:
+        # An open-ended interval would be wrong: these are recorded dates with a real
+        # first and last, and one of them is in the future because the buildings are not
+        # finished. That is the whole point of the dataset.
+        out["temporalCoverage"] = dates[0] if dates[0] == dates[-1] else f"{dates[0]}/{dates[-1]}"
+    return out
+
+
 def jsonld_for(name: str, description: str, canonical: str, leads: list[dict],
-               updated: str, faq: list[tuple[str, str]] | None = None,
+               updated: str, place: str, csv_url: str, csv_bytes: int,
+               faq: list[tuple[str, str]] | None = None,
                crumbs: list[dict] | None = None) -> str:
     """Dataset for the collection, ItemList for the rows.
 
@@ -605,10 +750,18 @@ def jsonld_for(name: str, description: str, canonical: str, leads: list[dict],
         if item["description"] is None:
             del item["description"]
 
-    # One Organization for the whole site, referenced by @id. Declaring a fresh
-    # Organization on every page splits the entity, which is the thing LLMO is trying to
-    # avoid: the model ends up unsure that these pages are all the same outfit.
+    # One Organization for the whole site, under a single @id, so the two hosts are one
+    # entity to a model rather than two that happen to share a name. It is declared here
+    # rather than only referenced: the @id lives on cranesignal.com, so a crawler reading
+    # this page alone previously found creator and publisher pointing at a node that was
+    # nowhere on the page. Same id, so nothing splits; enough fields that it resolves.
     graph = [
+        {
+            "@type": "Organization",
+            "@id": ORG_ID,
+            "name": "CraneSignal",
+            "url": LANDING,
+        },
         {
             "@type": "Dataset",
             "name": name,
@@ -618,6 +771,27 @@ def jsonld_for(name: str, description: str, canonical: str, leads: list[dict],
             "dateModified": updated,
             "creator": {"@id": ORG_ID},
             "publisher": {"@id": ORG_ID},
+            "creditText": "CraneSignal",
+            # Not a licence grant -- that is Drew's to make, not this script's. This says
+            # where the terms and the method are written down, which is what a cautious
+            # engine looks for before it will reuse a number.
+            "usageInfo": f"{HOST}/under-the-hood.html",
+            "distribution": [
+                {
+                    "@type": "DataDownload",
+                    "name": f"{name} (CSV)",
+                    "encodingFormat": "text/csv",
+                    "contentUrl": csv_url,
+                    # With a unit. A bare number here is ambiguous, and the one thing a
+                    # size is for is telling a fetcher what it is about to download.
+                    "contentSize": f"{csv_bytes} B",
+                }
+            ],
+            "variableMeasured": [
+                {"@type": "PropertyValue", "name": column, "description": about}
+                for column, about, _ in CSV_COLUMNS
+            ],
+            **coverage_for(leads, place),
         },
         {
             "@type": "ItemList",
@@ -649,8 +823,39 @@ def jsonld_for(name: str, description: str, canonical: str, leads: list[dict],
 # ---------------------------------------------------------------- page builders
 
 
+def download_line(leads: list[dict], shown: int, csv_url: str) -> str:
+    """The visible half of the CSV. A file nothing links to is a file nobody finds: an
+    unlinked URL in the schema is weaker than a linked one, and a human reading the page
+    has no other way to get the rows the table had to cut."""
+    with_phone = sum(1 for lead in leads if lead.get("officePhone"))
+    extra = (
+        f" That is all {len(leads):,} buildings, not the {shown:,} this page lists."
+        if len(leads) > shown else ""
+    )
+    # Only mentioned when there are some. "0 published office phone numbers" reads as a
+    # boast about nothing, and contact data is already this dataset's weakest column.
+    phones = f"{with_phone:,} published office phone numbers, " if with_phone else ""
+    return (
+        '    <p class="download">'
+        f'<strong><a href="{esc(csv_url)}" download>Download this list as a spreadsheet '
+        f'(CSV, {len(leads):,} rows)</a></strong>.{esc(extra)} '
+        "Free, no account, no sign-up. "
+        f"{len(CSV_COLUMNS)} columns including units, stage, dates, buyer, developer, "
+        f"{phones}and a link to the public record behind every row."
+        "</p>"
+    )
+
+
 def render_page(*, title, h1, description, canonical, depth, place, leads, updated,
-                crumbs, siblings, sold_view=False, intro_extra="", state_slug=None) -> str:
+                crumbs, siblings, sold_view=False, intro_extra="", state_slug=None
+                ) -> tuple[str, str]:
+    """Returns the page and the spreadsheet that sits beside it.
+
+    Both come out of one call so the row count the page claims, the byte size the schema
+    declares and the file on disk cannot drift apart.
+    """
+    csv_text = csv_for(leads)
+    csv_url = canonical[: -len(".html")] + ".csv"
     s = summarise(leads)
     body = [
         f'    <nav class="crumbs">{crumbs}</nav>',
@@ -676,7 +881,8 @@ def render_page(*, title, h1, description, canonical, depth, place, leads, updat
             "Sorted by unit count. Each row links the public record it came from; blank cells "
             "mean the record does not say, never that we guessed."
         )
-    body += [f"    <h2>{heading}</h2>", f"    <p>{note}</p>", table(shown, sold_view)]
+    body += [f"    <h2>{heading}</h2>", f"    <p>{note}</p>",
+             download_line(leads, len(shown), csv_url), table(shown, sold_view)]
     body.append(next_step(place, state_slug))
     faq = faq_for(place, s, updated)
     body.append(faq_html(faq))
@@ -693,10 +899,23 @@ def render_page(*, title, h1, description, canonical, depth, place, leads, updat
     ]
     jsonld = jsonld_for(
         h1, description, canonical, leads, updated,
+        place=place,
+        csv_url=csv_url,
+        csv_bytes=len(csv_text.encode("utf-8")),
         faq=faq,
         crumbs=breadcrumb_items(crumbs, h1, canonical),
     )
-    return page_shell(title, description, canonical, jsonld, "\n".join(body), depth)
+    page = page_shell(title, description, canonical, jsonld, "\n".join(body), depth)
+    return page, csv_text
+
+
+def emit(pages: dict[Path, str], path: Path, **kwargs) -> None:
+    """Record one page and the spreadsheet beside it. Same stem, same directory, so the
+    link on the page and the contentUrl in the schema are both just the path with a
+    different extension."""
+    page, csv_text = render_page(**kwargs)
+    pages[path] = page
+    pages[path.with_suffix(".csv")] = csv_text
 
 
 def sort_leads(leads: list[dict]) -> list[dict]:
@@ -769,7 +988,7 @@ def build_all() -> dict[Path, str]:
             sibs.append("Other states: " + " &middot; ".join(others))
 
         s = summarise(leads)
-        pages[OUT / f"{slug}.html"] = render_page(
+        emit(pages, OUT / f"{slug}.html",
             title=f"{label} Apartment Construction Pipeline | CraneSignal",
             h1=f"{esc(label)} apartment construction pipeline and recent sales",
             description=(
@@ -806,7 +1025,7 @@ def build_all() -> dict[Path, str]:
             if in_metro:
                 sib_bits.append("Cities here: " + " &middot; ".join(in_metro))
 
-            pages[OUT / slug / f"{slugify(metro)}.html"] = render_page(
+            emit(pages, OUT / slug / f"{slugify(metro)}.html",
                 title=f"{metro} Multifamily Construction Pipeline | CraneSignal",
                 h1=f"{esc(metro)} multifamily construction pipeline and apartment sales",
                 description=(
@@ -850,7 +1069,7 @@ def build_all() -> dict[Path, str]:
             if peers:
                 sib_bits.append("Other cities: " + " &middot; ".join(peers))
 
-            pages[OUT / slug / f"{slugify(city)}.html"] = render_page(
+            emit(pages, OUT / slug / f"{slugify(city)}.html",
                 title=f"{city} Apartment Construction and Sales | CraneSignal",
                 h1=f"Apartment buildings under construction and recently sold in {esc(city)}",
                 description=(
@@ -877,7 +1096,7 @@ def build_all() -> dict[Path, str]:
         if lead.get("openingDate") and str(lead["openingDate"])[:4] in {"2027", "2028"}
     ]
     if len(opening_next) >= CITY_MIN:
-        pages[OUT / "opening-2027-2028.html"] = render_page(
+        emit(pages, OUT / "opening-2027-2028.html",
             title="Apartment Buildings Opening in 2027-2028 | CraneSignal",
             h1="Apartment buildings expected to open in 2027 and 2028",
             description=(
@@ -886,7 +1105,7 @@ def build_all() -> dict[Path, str]:
             ),
             canonical=f"{HOST}/leads/opening-2027-2028.html",
             depth=1,
-            place="Texas and Arizona",
+            place=states_phrase(opening_next),
             leads=sort_leads(opening_next),
             updated=updated,
             crumbs='<a href="/index.html">All buildings</a>',
@@ -908,7 +1127,7 @@ def build_all() -> dict[Path, str]:
         target = years[-2] if len(years) > 1 else years[-1]
         sold_rows = [l for l in all_leads if l.get("saleDate") and str(l["saleDate"])[:4] == target]
         if len(sold_rows) >= CITY_MIN:
-            pages[OUT / f"sold-{target}.html"] = render_page(
+            emit(pages, OUT / f"sold-{target}.html",
                 title=f"Apartment Complexes Sold in {target} | CraneSignal",
                 h1=f"Apartment complexes that changed owner in {target}",
                 description=(
@@ -917,7 +1136,7 @@ def build_all() -> dict[Path, str]:
                 ),
                 canonical=f"{HOST}/leads/sold-{target}.html",
                 depth=1,
-                place="Texas and Arizona",
+                place=states_phrase(sold_rows),
                 leads=sort_leads(sold_rows),
                 updated=updated,
                 crumbs='<a href="/index.html">All buildings</a>',
@@ -967,7 +1186,9 @@ def home_static_block(index: dict, areas: list[dict], pages: dict[Path, str]) ->
         return (1 if is_metro else 2, rel)
 
     links = []
-    for path in sorted(pages, key=rank):
+    # Pages only. The dict also carries the CSV beside each one, and a spreadsheet is a
+    # download rather than somewhere to send a crawler next.
+    for path in sorted((p for p in pages if p.suffix == ".html"), key=rank):
         rel = path.relative_to(SITE).as_posix()
         text = re.search(r"<h1>(.*?)</h1>", pages[path], re.S)
         label = text.group(1).strip() if text else rel
@@ -1026,9 +1247,15 @@ def main() -> int:
                 path.write_text(body, encoding="utf-8", newline="\n")
 
     # A page whose place no longer clears the threshold must go, or the sitemap will
-    # keep pointing at a list that is no longer worth reading.
+    # keep pointing at a list that is no longer worth reading. The same applies to its
+    # spreadsheet, and doubly so: a CSV left behind after its page went would be a live
+    # URL in an old schema serving numbers nothing on the site stands behind any more.
     wanted = set(pages)
-    orphans = [p for p in OUT.rglob("*.html") if p not in wanted] if OUT.exists() else []
+    orphans = (
+        [p for p in OUT.rglob("*") if p.is_file() and p.suffix in {".html", ".csv"}
+         and p not in wanted]
+        if OUT.exists() else []
+    )
     for path in orphans:
         stale.append("remove " + path.relative_to(SITE).as_posix())
         if not args.check:

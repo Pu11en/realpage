@@ -24,6 +24,12 @@
     "@context": "https://schema.org",
     "@graph": [
       {
+        "@type": "Organization",
+        "@id": "https://cranesignal.com/#org",
+        "name": "CraneSignal",
+        "url": "https://cranesignal.com"
+      },
+      {
         "@type": "Dataset",
         "name": "Apartment buildings expected to open in 2027 and 2028",
         "description": "89 apartment buildings with expected opening dates in 2027 or 2028, by city and size, each with its public construction record.",
@@ -35,7 +41,99 @@
         },
         "publisher": {
           "@id": "https://cranesignal.com/#org"
-        }
+        },
+        "creditText": "CraneSignal",
+        "usageInfo": "https://app.cranesignal.com/under-the-hood.html",
+        "distribution": [
+          {
+            "@type": "DataDownload",
+            "name": "Apartment buildings expected to open in 2027 and 2028 (CSV)",
+            "encodingFormat": "text/csv",
+            "contentUrl": "https://app.cranesignal.com/leads/opening-2027-2028.csv",
+            "contentSize": "19355 B"
+          }
+        ],
+        "variableMeasured": [
+          {
+            "@type": "PropertyValue",
+            "name": "Building",
+            "description": "Building name, or the street address when the record carries no name"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "Address",
+            "description": "Street address from the public record"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "City",
+            "description": "City, cleaned of the casing and county suffixes the records vary on"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "State",
+            "description": "US state"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "Units",
+            "description": "Number of apartment units"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "Stage",
+            "description": "planned, permitted, under construction, leasing or sold"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "Opens",
+            "description": "Expected opening date, from the construction record"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "Sold",
+            "description": "Date of the recorded sale"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "Buyer",
+            "description": "Buyer named on the sale record, often a holding company"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "Developer",
+            "description": "Developer or contractor named on the construction record"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "Office phone",
+            "description": "Published leasing or management office phone, where one exists"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "Source",
+            "description": "What kind of public record the row came from"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "Source URL",
+            "description": "Direct link to that record, so any row can be checked"
+          }
+        ],
+        "keywords": [
+          "Austin apartments",
+          "Houston apartments",
+          "San Antonio apartments",
+          "Texas apartments",
+          "apartment construction pipeline",
+          "apartment sales records",
+          "multifamily development"
+        ],
+        "spatialCoverage": {
+          "@type": "AdministrativeArea",
+          "name": "Texas"
+        },
+        "temporalCoverage": "2024-09-06/2028-12-31"
       },
       {
         "@type": "ItemList",
@@ -366,23 +464,23 @@
         "mainEntity": [
           {
             "@type": "Question",
-            "name": "How many apartment buildings in Texas and Arizona are under construction?",
+            "name": "How many apartment buildings in Texas are under construction?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "74 of the 89 apartment buildings CraneSignal tracks in Texas and Arizona are under construction, as of Sep 20, 2026."
+              "text": "74 of the 89 apartment buildings CraneSignal tracks in Texas are under construction, as of Sep 20, 2026."
             }
           },
           {
             "@type": "Question",
-            "name": "How many new apartment projects are planned or permitted in Texas and Arizona?",
+            "name": "How many new apartment projects are planned or permitted in Texas?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "15 are permitted or planned but not yet under construction in Texas and Arizona, as of Sep 20, 2026."
+              "text": "15 are permitted or planned but not yet under construction in Texas, as of Sep 20, 2026."
             }
           },
           {
             "@type": "Question",
-            "name": "What is the largest apartment project in Texas and Arizona?",
+            "name": "What is the largest apartment project in Texas?",
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "Legacy Arapaho in Richardson is the largest on this page at 443 units, currently permitted."
@@ -390,15 +488,15 @@
           },
           {
             "@type": "Question",
-            "name": "When do the next apartment buildings in Texas and Arizona open?",
+            "name": "When do the next apartment buildings in Texas open?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "53 buildings in Texas and Arizona have an expected opening date in 2027. Opening dates come from the construction record and move when that record moves."
+              "text": "53 buildings in Texas have an expected opening date in 2027. Opening dates come from the construction record and move when that record moves."
             }
           },
           {
             "@type": "Question",
-            "name": "Where does this Texas and Arizona apartment data come from?",
+            "name": "Where does this Texas apartment data come from?",
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "Public records only: state and city construction permits, county appraisal-district sale records, and public announcements. Every building on this page links the record it came from, and a fact with no source is left blank rather than guessed."
@@ -425,6 +523,9 @@
     .static-page .next-step { margin: 28px 0 8px; padding: 16px 18px; border: 1px solid var(--rule); border-left: 4px solid var(--accent); max-width: 80ch; }
     .static-page .next-step h2 { margin-top: 0; }
     .static-page .next-step p { font-size: 14px; line-height: 1.55; margin: 8px 0 0; }
+    .static-page .download { font-size: 13px; line-height: 1.55; max-width: 80ch;
+      margin: 0 0 14px; padding: 10px 14px; background: var(--paper-2);
+      border-left: 4px solid var(--accent); }
     .static-page .faq { max-width: 80ch; font-size: 14px; }
     .static-page .faq dt { font-weight: 600; margin-top: 14px; }
     .static-page .faq dd { margin: 4px 0 0; line-height: 1.55; }
@@ -440,7 +541,7 @@
       <li><b>7,374</b>Units</li>
       <li><b>74</b>Under construction</li>
     </ul>
-    <p class="answer">CraneSignal tracks 89 apartment buildings in Texas and Arizona, covering 7,374 units. 74 under construction; 15 permitted. Every building links its public source record. Updated Sep 20, 2026.</p>
+    <p class="answer">CraneSignal tracks 89 apartment buildings in Texas, covering 7,374 units. 74 under construction; 15 permitted. Every building links its public source record. Updated Sep 20, 2026.</p>
     <p>Opening dates come from the construction record. A building that has not opened yet has not chosen its operating software, its vendors or its service contracts.</p>
     <h2>Where these buildings are in their life</h2>
     <table><thead><tr><th>Stage</th><th class="num">Buildings</th></tr></thead><tbody>
@@ -453,7 +554,7 @@
         <tr><td>2027</td><td class="num">53</td></tr>
         <tr><td>2028</td><td class="num">36</td></tr>
     </tbody></table>
-    <h2>Busiest cities in Texas and Arizona</h2>
+    <h2>Busiest cities in Texas</h2>
     <table><thead><tr><th>City</th><th class="num">Buildings</th></tr></thead><tbody>
         <tr><td>Houston</td><td class="num">10</td></tr>
         <tr><td>San Antonio</td><td class="num">10</td></tr>
@@ -478,6 +579,7 @@
     </ol>
     <h2>Every building (89)</h2>
     <p>Sorted by unit count. Each row links the public record it came from; blank cells mean the record does not say, never that we guessed.</p>
+    <p class="download"><strong><a href="https://app.cranesignal.com/leads/opening-2027-2028.csv" download>Download this list as a spreadsheet (CSV, 89 rows)</a></strong>. Free, no account, no sign-up. 13 columns including units, stage, dates, buyer, developer, 85 published office phone numbers, and a link to the public record behind every row.</p>
     <table>
       <thead><tr><th>Building</th><th>Address</th><th>City</th><th class="num">Units</th><th>Stage</th><th>Opens</th><th>Developer</th><th>Source</th></tr></thead>
       <tbody>
@@ -574,21 +676,21 @@
     </table>
     <div class="next-step">
       <h2>Take this list with you</h2>
-      <p><a href="/index.html"><strong>Open Texas and Arizona in CraneSignal</strong></a> to sort and filter these buildings, see the lead score behind each one, and download the call list as a PDF or the whole thing as a spreadsheet. Free, and no account needed for any of that.</p>
+      <p><a href="/index.html"><strong>Open Texas in CraneSignal</strong></a> to sort and filter these buildings, see the lead score behind each one, and download the call list as a PDF or the whole thing as a spreadsheet. Free, and no account needed for any of that.</p>
       <p>A free account adds the manager name and direct phone where the record has them, and a note on why to call now.</p>
       <p>Not your area? <a href="https://cranesignal.com/#next">Ask for your metro</a> &mdash; it is free and we add areas on request.</p>
     </div>
     <h2>Questions about this list</h2>
     <dl class="faq">
-      <dt>How many apartment buildings in Texas and Arizona are under construction?</dt>
-      <dd>74 of the 89 apartment buildings CraneSignal tracks in Texas and Arizona are under construction, as of Sep 20, 2026.</dd>
-      <dt>How many new apartment projects are planned or permitted in Texas and Arizona?</dt>
-      <dd>15 are permitted or planned but not yet under construction in Texas and Arizona, as of Sep 20, 2026.</dd>
-      <dt>What is the largest apartment project in Texas and Arizona?</dt>
+      <dt>How many apartment buildings in Texas are under construction?</dt>
+      <dd>74 of the 89 apartment buildings CraneSignal tracks in Texas are under construction, as of Sep 20, 2026.</dd>
+      <dt>How many new apartment projects are planned or permitted in Texas?</dt>
+      <dd>15 are permitted or planned but not yet under construction in Texas, as of Sep 20, 2026.</dd>
+      <dt>What is the largest apartment project in Texas?</dt>
       <dd>Legacy Arapaho in Richardson is the largest on this page at 443 units, currently permitted.</dd>
-      <dt>When do the next apartment buildings in Texas and Arizona open?</dt>
-      <dd>53 buildings in Texas and Arizona have an expected opening date in 2027. Opening dates come from the construction record and move when that record moves.</dd>
-      <dt>Where does this Texas and Arizona apartment data come from?</dt>
+      <dt>When do the next apartment buildings in Texas open?</dt>
+      <dd>53 buildings in Texas have an expected opening date in 2027. Opening dates come from the construction record and move when that record moves.</dd>
+      <dt>Where does this Texas apartment data come from?</dt>
       <dd>Public records only: state and city construction permits, county appraisal-district sale records, and public announcements. Every building on this page links the record it came from, and a fact with no source is left blank rather than guessed.</dd>
     </dl>
     <h2>Nearby and related</h2>

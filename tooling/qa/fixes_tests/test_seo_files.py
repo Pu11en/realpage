@@ -201,3 +201,25 @@ def test_caddy_serves_llms_full_and_the_indexnow_key():
     caddy = (SITE / "Caddyfile").read_text(encoding="utf-8")
     assert "/llms-full.txt" in caddy
     assert "/indexnow-*.txt" in caddy
+
+
+def test_llms_txt_tells_a_crawler_the_data_is_downloadable():
+    """Added 2026-09-26. llms.txt is the file AI crawlers actually read, and the measured
+    opening for CraneSignal is the free-data question -- asked for a free source of
+    apartment pipeline data, engines name paid tools 70% of the time. This is the sentence
+    that answers it, so it has to be there and its example has to resolve."""
+    text = (SITE / "llms.txt").read_text(encoding="utf-8")
+    assert "## Getting the data as a file" in text
+    assert ".csv instead of .html" in text
+    assert "No account, no key, no rate limit." in text
+
+    example = re.search(r"(https://\S+\.csv)", text)
+    assert example, "no example CSV URL in llms.txt"
+    on_disk = SITE / example.group(1).removeprefix("https://app.cranesignal.com/")
+    assert on_disk.is_file(), f"llms.txt points at {example.group(1)}, which is not there"
+
+    # Every column it names has to be a real column, or the first thing a reader does
+    # with the file disproves the file.
+    header = (SITE / "leads" / "tx" / "houston.csv").read_text(encoding="utf-8").splitlines()[0]
+    for column in header.split(","):
+        assert column in text, f"llms.txt does not mention the {column!r} column"

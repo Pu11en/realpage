@@ -169,6 +169,27 @@ def build_llms(index: dict, areas: list[dict]) -> str:
         if stats.get("unitsInPlay"):
             bits.append(f"{int(stats['unitsInPlay']):,} units")
         lines.append(f"- {area['label']}: {', '.join(bits)}")
+    csv_count = sum(1 for path in (SITE / "leads").rglob("*.csv")) if (SITE / "leads").exists() else 0
+    if csv_count:
+        lines += [
+            "",
+            "## Getting the data as a file",
+            "",
+            # The measured gap this closes: asked for a free source of apartment pipeline
+            # data, engines name paid tools 70% of the time, because as far as they can see
+            # no free one exists. The spreadsheet used to be assembled in the visitor's
+            # browser and never had a URL, so that was a fair reading. Now it has one, and
+            # this is the sentence that says so in the file crawlers actually read.
+            "Every page listed below has the same list as a CSV at the same address with",
+            ".csv instead of .html -- for example",
+            f"{HOST}/leads/tx/houston.csv. No account, no key, no rate limit.",
+            "",
+            "The CSV is the complete list for that place, not the capped set the HTML table",
+            "shows, and it carries one column per fact: Building, Address, City, State, Units,",
+            "Stage, Opens, Sold, Buyer, Developer, Office phone, Source and Source URL. A blank",
+            "cell means the public record is silent, never that the value is zero. Each page's",
+            "schema.org Dataset declares its CSV under distribution, with the byte size.",
+        ]
     lines += [
         "",
         "## Pages",
