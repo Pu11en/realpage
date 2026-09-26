@@ -35550,7 +35550,7 @@
       "dateStatus": null,
       "buyer": "SKYE AT HIGHLAND PARK LLC &",
       "developer": null,
-      "officePhone": null,
+      "officePhone": "(214) 780-0105",
       "website": null,
       "software": null,
       "links": {
@@ -35568,6 +35568,8 @@
       "score": 44,
       "isNew": false,
       "metro": "Dallas\u2013Fort Worth",
+      "contactSource": "https://www.livecasavalencia.com/contactus",
+      "contactFoundOn": "2026-09-26",
       "firstSeen": "2026-09-20"
     },
     {
@@ -35968,7 +35970,7 @@
       "dateStatus": null,
       "buyer": "CSA 12653 ELEVENTH LLC",
       "developer": null,
-      "officePhone": null,
+      "officePhone": "(972) 535-6299",
       "website": null,
       "software": null,
       "links": {
@@ -35986,6 +35988,8 @@
       "score": 44,
       "isNew": false,
       "metro": "Rest of Texas",
+      "contactSource": "https://www.liveatbayisland.com/Contact.aspx",
+      "contactFoundOn": "2026-09-26",
       "firstSeen": "2026-09-20"
     },
     {
@@ -36377,7 +36381,7 @@
       "dateStatus": null,
       "buyer": "IRVING PEMBROOK DE LLC",
       "developer": null,
-      "officePhone": null,
+      "officePhone": "(469) 923-5620",
       "website": null,
       "software": null,
       "links": {
@@ -36395,6 +36399,8 @@
       "score": 43,
       "isNew": false,
       "metro": "Dallas\u2013Fort Worth",
+      "contactSource": "http://www.livebraxton.com/",
+      "contactFoundOn": "2026-09-26",
       "firstSeen": "2026-09-20"
     },
     {
@@ -36413,7 +36419,7 @@
       "dateStatus": null,
       "buyer": "109 DOORS NURSERY SPE LLC",
       "developer": null,
-      "officePhone": null,
+      "officePhone": "(469) 472-9056",
       "website": null,
       "software": null,
       "links": {
@@ -36431,6 +36437,8 @@
       "score": 43,
       "isNew": false,
       "metro": "Dallas\u2013Fort Worth",
+      "contactSource": "https://brentwoodirving.com/",
+      "contactFoundOn": "2026-09-26",
       "firstSeen": "2026-09-20"
     },
     {
@@ -36832,7 +36840,7 @@
       "dateStatus": null,
       "buyer": "AM VICTOR PROSPER OWNER LLC",
       "developer": null,
-      "officePhone": null,
+      "officePhone": "(877) 732-5158",
       "website": null,
       "software": null,
       "links": {
@@ -36850,6 +36858,8 @@
       "score": 42,
       "isNew": false,
       "metro": "Dallas\u2013Fort Worth",
+      "contactSource": "https://livevictorprosper.com/contact/",
+      "contactFoundOn": "2026-09-26",
       "firstSeen": "2026-09-20"
     },
     {
@@ -37288,7 +37298,7 @@
       "dateStatus": null,
       "buyer": "900 TITLE JEFFERSON LLC",
       "developer": null,
-      "officePhone": null,
+      "officePhone": "(972) 373-4548",
       "website": null,
       "software": null,
       "links": {
@@ -37306,6 +37316,12 @@
       "score": 42,
       "isNew": false,
       "metro": "Dallas\u2013Fort Worth",
+      "managementCompany": "Power Properties",
+      "contact": {
+        "email": "leasing@powerproperties.com"
+      },
+      "contactSource": "https://www.apartments.com/veranda-flats-dallas-tx/yf3nrcs/",
+      "contactFoundOn": "2026-09-26",
       "firstSeen": "2026-09-20"
     },
     {
@@ -37972,7 +37988,7 @@
     },
     {
       "id": "tx-9401-coventry-square-dr-9401-coventry-square-dr",
-      "property": "9401 Coventry Square Dr",
+      "property": "Coventry Park",
       "community": "9401 COVENTRY SQUARE DR",
       "city": "HOUSTON",
       "address": "9401 COVENTRY SQUARE DR",
@@ -37986,7 +38002,7 @@
       "dateStatus": null,
       "buyer": "MVC COVENTRY HOLDING LP",
       "developer": null,
-      "officePhone": null,
+      "officePhone": "(832) 945-1593",
       "website": null,
       "software": null,
       "links": {
@@ -38004,6 +38020,8 @@
       "score": 41,
       "isNew": false,
       "metro": "Houston",
+      "contactSource": "https://www.har.com/coventry-park/apartment_1313A",
+      "contactFoundOn": "2026-09-26",
       "firstSeen": "2026-09-19"
     },
     {
@@ -38234,7 +38252,7 @@
     },
     {
       "id": "tx-7800-w-airport-blvd-7800-w-airport-blvd",
-      "property": "7800 W Airport Blvd",
+      "property": "Amritta Apartments",
       "community": "7800 W AIRPORT BLVD",
       "city": "HOUSTON",
       "address": "7800 W AIRPORT BLVD",
@@ -38248,7 +38266,7 @@
       "dateStatus": null,
       "buyer": "AMRITTA WEALTH MANAGEMENT LLC",
       "developer": null,
-      "officePhone": null,
+      "officePhone": "(713) 723-1221",
       "website": null,
       "software": null,
       "links": {
@@ -38266,6 +38284,8 @@
       "score": 40,
       "isNew": false,
       "metro": "Houston",
+      "contactSource": "https://www.apartments.com/amritta-apartments-houston-tx/y25qqlv/",
+      "contactFoundOn": "2026-09-26",
       "firstSeen": "2026-09-19"
     },
     {
@@ -38801,7 +38821,7 @@
     },
     {
       "id": "tx-220-bammel-westfield-rd-220-bammel-westfield-rd",
-      "property": "220 Bammel Westfield Rd",
+      "property": "Reveal at Rye 220",
       "community": "220 BAMMEL WESTFIELD RD",
       "city": "HOUSTON",
       "address": "220 BAMMEL WESTFIELD RD",
@@ -38815,7 +38835,7 @@
       "dateStatus": null,
       "buyer": "DORDOI INVEST INC",
       "developer": null,
-      "officePhone": null,
+      "officePhone": "(832) 666-7599",
       "website": null,
       "software": null,
       "links": {
@@ -38833,6 +38853,9 @@
       "score": 39,
       "isNew": false,
       "metro": "Houston",
+      "managementCompany": "Apartment Management Consultants",
+      "contactSource": "https://www.homes.com/property/reveal-at-rye-houston-tx/5lltmd4nyetjk/",
+      "contactFoundOn": "2026-09-26",
       "firstSeen": "2026-09-19"
     },
     {
@@ -39416,7 +39439,7 @@
       "dateStatus": null,
       "buyer": "REMOND DALLAS HOLDINGS LP",
       "developer": null,
-      "officePhone": null,
+      "officePhone": "(214) 468-4230",
       "website": null,
       "software": null,
       "links": {
@@ -39434,6 +39457,9 @@
       "score": 38,
       "isNew": false,
       "metro": "Dallas\u2013Fort Worth",
+      "managementCompany": "Pinnacle Family of Companies",
+      "contactSource": "https://www.villasremond.com/",
+      "contactFoundOn": "2026-09-26",
       "firstSeen": "2026-09-20"
     },
     {
@@ -40531,7 +40557,7 @@
     },
     {
       "id": "tx-123-winkler-dr-123-winkler-dr",
-      "property": "123 Winkler Dr",
+      "property": "Envue Square (was Winkler Villa)",
       "community": "123 WINKLER DR",
       "city": "HOUSTON",
       "address": "123 WINKLER DR",
@@ -40545,7 +40571,7 @@
       "dateStatus": null,
       "buyer": "123 WINKLER REALTY LLC",
       "developer": null,
-      "officePhone": null,
+      "officePhone": "(713) 649-2766",
       "website": null,
       "software": null,
       "links": {
@@ -40563,6 +40589,8 @@
       "score": 37,
       "isNew": false,
       "metro": "Houston",
+      "contactSource": "https://www.envuesquareapts.com/",
+      "contactFoundOn": "2026-09-26",
       "firstSeen": "2026-09-19"
     },
     {
@@ -41207,7 +41235,7 @@
     },
     {
       "id": "tx-17610-cali-dr-17610-cali-dr",
-      "property": "17610 Cali Dr",
+      "property": "Cali Crossing",
       "community": "17610 CALI DR",
       "city": "HOUSTON",
       "address": "17610 CALI DR",
@@ -41221,7 +41249,7 @@
       "dateStatus": null,
       "buyer": "CALI CROSSING ACQUISITION LLC",
       "developer": null,
-      "officePhone": null,
+      "officePhone": "(832) 299-1922",
       "website": null,
       "software": null,
       "links": {
@@ -41239,6 +41267,12 @@
       "score": 36,
       "isNew": false,
       "metro": "Houston",
+      "managementCompany": "Implicity Management",
+      "contact": {
+        "email": "CaliC@ImplicityManagement.com"
+      },
+      "contactSource": "https://www.calicrossingapartments.com/contact_us/",
+      "contactFoundOn": "2026-09-26",
       "firstSeen": "2026-09-19"
     },
     {
@@ -41816,7 +41850,7 @@
       "dateStatus": null,
       "buyer": "CBCV DALLAS PO LLC",
       "developer": null,
-      "officePhone": null,
+      "officePhone": "(469) 916-6872",
       "website": null,
       "software": null,
       "links": {
@@ -41834,6 +41868,8 @@
       "score": 35,
       "isNew": false,
       "metro": "Dallas\u2013Fort Worth",
+      "contactSource": "https://www.rentcafe.com/apartments/tx/dallas/4503-lake-avenue-dallas-tx-75219/default.aspx",
+      "contactFoundOn": "2026-09-26",
       "firstSeen": "2026-09-20"
     },
     {
@@ -42065,7 +42101,7 @@
     },
     {
       "id": "tx-10202-challenger-7-dr-10202-challenger-7-dr",
-      "property": "10202 Challenger 7 Dr",
+      "property": "Jacinto Palms",
       "community": "10202 CHALLENGER 7 DR",
       "city": "HOUSTON",
       "address": "10202 CHALLENGER 7 DR",
@@ -42079,7 +42115,7 @@
       "dateStatus": null,
       "buyer": "AF2 PROPERTY LLC",
       "developer": null,
-      "officePhone": null,
+      "officePhone": "(713) 675-7776",
       "website": null,
       "software": null,
       "links": {
@@ -42097,6 +42133,8 @@
       "score": 34,
       "isNew": false,
       "metro": "Houston",
+      "contactSource": "https://www.apartments.com/jacinto-palms-houston-tx/ygpcvmv/",
+      "contactFoundOn": "2026-09-26",
       "firstSeen": "2026-09-19"
     },
     {
