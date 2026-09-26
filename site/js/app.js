@@ -125,6 +125,21 @@ async function loadData(path) {
   return res.json();
 }
 
+// Anything from the records goes through here before it reaches innerHTML.
+//
+// Not a hypothetical: 122 values in the live data carry a bare "&" (MADERA ARMSTRONG LLC &,
+// "Willowbrook St. & Valley Mills Dr.") and 16 an apostrophe (L'ABRI APARTMENTS). None
+// currently carry < > or ", which is why nothing looks broken -- but these are county and
+// city records nobody here controls, and the first name with a quote in it would break every
+// row on the page. index.html and property.html each had a private copy of this function and
+// used it only on source links.
+function esc(value) {
+  return String(value ?? "").replace(/[&<>"']/g, (ch) => ({
+    "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;",
+  }[ch]));
+}
+
+
 function scoreBadgeColor(score) {
   if (score >= 70) return "var(--score-high)";
   if (score >= 40) return "var(--score-mid)";
@@ -136,7 +151,7 @@ function vendorPill(vendor, colorMap) {
     return `<span class="pill" style="background:var(--paper-2);color:var(--muted);">No software yet</span>`;
   }
   const color = (colorMap && colorMap[vendor]) || "#5d6577";  // readable default on white
-  return `<span class="pill" style="background:${color}22;color:${color};">${vendor}</span>`;
+  return `<span class="pill" style="background:${color}22;color:${color};">${esc(vendor)}</span>`;
 }
 
 // Leads number boxes, from the rows currently shown (state + region + city + search).

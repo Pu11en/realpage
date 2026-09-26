@@ -1,4 +1,5 @@
 """G1-T3: contact buttons send now or wait for a signed-in chat."""
+import re
 from pathlib import Path
 
 
@@ -17,7 +18,11 @@ def test_every_building_surface_uses_get_contact_label():
 
 def test_contact_button_stays_with_the_building_name():
     row = INDEX.split('<td class="lead-prop">', 1)[1].split("</td>", 1)[0]
-    assert row.index("<strong>${l.property}</strong>") < row.index("data-deep-dive")
+    # The building name comes before the button, so the button never gets cut off on a
+    # narrow screen. Matched on the <strong> wrapper rather than the exact interpolation
+    # inside it, which changed when the name started being escaped (2026-09-26).
+    assert re.search(r"<strong>\$\{[^}]*l\.property[^}]*\}</strong>", row), row[:160]
+    assert row.index("<strong>") < row.index("data-deep-dive")
     assert row.index("data-deep-dive") < row.index("${contactHtml(l.contact, l)}")
 
     for heading in ('<h1>${esc(p.community)}</h1>', '<h1>${esc(name)}</h1>'):
