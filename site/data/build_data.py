@@ -1230,11 +1230,15 @@ def build_state_areas(include_sample: bool = False) -> list[str]:
     AREAS_OUT_DIR.mkdir(parents=True, exist_ok=True)
     for slug in slugs:
         area_json = _merge_included_areas(slug, build_area(slug))
+        disambiguate_duplicate_display_names(area_json["leads"], slug)
+        ensure_unique_content_ids(area_json["leads"])
+        # After the two steps above, never before: both of them rewrite `id`. Run first, the
+        # merge matched on ids that were about to change, so a contact keyed to the final id
+        # silently missed its row -- which is what happened to the second "Northwood Heights",
+        # renamed to "Northwood Heights - 15702 El Estado Dr" and re-keyed a moment later.
         filled = apply_found_contacts(slug, area_json["leads"])
         if filled:
             print(f"filled {filled} researched contact(s) into {slug}")
-        disambiguate_duplicate_display_names(area_json["leads"], slug)
-        ensure_unique_content_ids(area_json["leads"])
         add_first_seen(area_json["leads"], AREAS_OUT_DIR / f"{slug}.json", state=slug)
         # after the merge, so the chat counts included areas (Plano-Richardson
         # in Texas / Dallas-Fort Worth) exactly like the site does

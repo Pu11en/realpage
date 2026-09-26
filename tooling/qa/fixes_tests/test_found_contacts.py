@@ -161,3 +161,31 @@ def test_who_to_call_reaches_the_pages_and_the_spreadsheets():
     header = (ROOT / "site" / "leads" / "tx.csv").read_text(encoding="utf-8").splitlines()[0]
     for column in ("Office phone", "Management company", "Contact source"):
         assert column in header, header
+
+
+def test_the_merge_runs_after_the_ids_are_final():
+    """apply_found_contacts matches on `id`, and two earlier steps rewrite `id`.
+
+    Found 2026-09-26 by the count above coming out one short. The merge ran first, so it
+    matched ids that were about to change, and a contact keyed to the *final* id missed its
+    row without any error -- it hit the second "Northwood Heights", which
+    disambiguate_duplicate_display_names renames to "Northwood Heights - 15702 El Estado Dr"
+    and re-keys. One row in 178, silently.
+
+    Asserted on the order of the calls rather than on the symptom, because the symptom only
+    appears when two rows happen to share a name.
+    """
+    source = (ROOT / "site" / "data" / "build_data.py").read_text(encoding="utf-8")
+    body = source.split("def build_state_areas", 1)[1].split("\ndef ", 1)[0]
+    positions = {
+        name: body.find(name)
+        for name in ("disambiguate_duplicate_display_names(",
+                     "ensure_unique_content_ids(",
+                     "apply_found_contacts(")
+    }
+    for name, at in positions.items():
+        assert at != -1, f"{name} is no longer called in build_state_areas"
+    assert positions["apply_found_contacts("] > positions["disambiguate_duplicate_display_names("], \
+        "contacts are merged before the display names are disambiguated, which rewrites ids"
+    assert positions["apply_found_contacts("] > positions["ensure_unique_content_ids("], \
+        "contacts are merged before the ids are made unique, which rewrites ids"
