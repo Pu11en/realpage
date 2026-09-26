@@ -24,6 +24,18 @@ collection is read-only: CraneSignal never posts, votes or submits anything anyw
 - Texas: 1,587 buildings, 146 cities, 259,251 units
 - Arizona: 274 buildings, 22 cities, 31,875 units
 
+## Getting the data as a file
+
+Every page listed below has the same list as a CSV at the same address with
+.csv instead of .html -- for example
+https://app.cranesignal.com/leads/tx/houston.csv. No account, no key, no rate limit.
+
+The CSV is the complete list for that place, not the capped set the HTML table
+shows, and it carries one column per fact: Building, Address, City, State, Units,
+Stage, Opens, Sold, Buyer, Developer, Office phone, Source and Source URL. A blank
+cell means the public record is silent, never that the value is zero. Each page's
+schema.org Dataset declares its CSV under distribution, with the byte size.
+
 ## Pages
 
 - [Lead list](https://app.cranesignal.com/index.html): every building, filterable by state, with lead scores.

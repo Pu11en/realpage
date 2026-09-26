@@ -24,6 +24,12 @@
     "@context": "https://schema.org",
     "@graph": [
       {
+        "@type": "Organization",
+        "@id": "https://cranesignal.com/#org",
+        "name": "CraneSignal",
+        "url": "https://cranesignal.com"
+      },
+      {
         "@type": "Dataset",
         "name": "Dallas\u2013Fort Worth multifamily construction pipeline and apartment sales",
         "description": "810 apartment buildings across Dallas\u2013Fort Worth: 54 under construction, 387 recently sold, 123,723 units in all. Building-level detail with a public source for every row.",
@@ -35,7 +41,105 @@
         },
         "publisher": {
           "@id": "https://cranesignal.com/#org"
-        }
+        },
+        "creditText": "CraneSignal",
+        "usageInfo": "https://app.cranesignal.com/under-the-hood.html",
+        "distribution": [
+          {
+            "@type": "DataDownload",
+            "name": "Dallas\u2013Fort Worth multifamily construction pipeline and apartment sales (CSV)",
+            "encodingFormat": "text/csv",
+            "contentUrl": "https://app.cranesignal.com/leads/tx/dallas-fort-worth.csv",
+            "contentSize": "156665 B"
+          }
+        ],
+        "variableMeasured": [
+          {
+            "@type": "PropertyValue",
+            "name": "Building",
+            "description": "Building name, or the street address when the record carries no name"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "Address",
+            "description": "Street address from the public record"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "City",
+            "description": "City, cleaned of the casing and county suffixes the records vary on"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "State",
+            "description": "US state"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "Units",
+            "description": "Number of apartment units"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "Stage",
+            "description": "planned, permitted, under construction, leasing or sold"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "Opens",
+            "description": "Expected opening date, from the construction record"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "Sold",
+            "description": "Date of the recorded sale"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "Buyer",
+            "description": "Buyer named on the sale record, often a holding company"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "Developer",
+            "description": "Developer or contractor named on the construction record"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "Office phone",
+            "description": "Published leasing or management office phone, where one exists"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "Source",
+            "description": "What kind of public record the row came from"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "Source URL",
+            "description": "Direct link to that record, so any row can be checked"
+          }
+        ],
+        "keywords": [
+          "Arlington apartments",
+          "Dallas apartments",
+          "Dallas\u2013Fort Worth apartments",
+          "Fort Worth apartments",
+          "apartment construction pipeline",
+          "apartment sales records",
+          "multifamily development"
+        ],
+        "spatialCoverage": {
+          "@type": "Place",
+          "name": "Dallas\u2013Fort Worth",
+          "containedInPlace": [
+            {
+              "@type": "AdministrativeArea",
+              "name": "Texas"
+            }
+          ]
+        },
+        "temporalCoverage": "2024-01-08/2029-02-01"
       },
       {
         "@type": "ItemList",
@@ -431,6 +535,9 @@
     .static-page .next-step { margin: 28px 0 8px; padding: 16px 18px; border: 1px solid var(--rule); border-left: 4px solid var(--accent); max-width: 80ch; }
     .static-page .next-step h2 { margin-top: 0; }
     .static-page .next-step p { font-size: 14px; line-height: 1.55; margin: 8px 0 0; }
+    .static-page .download { font-size: 13px; line-height: 1.55; max-width: 80ch;
+      margin: 0 0 14px; padding: 10px 14px; background: var(--paper-2);
+      border-left: 4px solid var(--accent); }
     .static-page .faq { max-width: 80ch; font-size: 14px; }
     .static-page .faq dt { font-weight: 600; margin-top: 14px; }
     .static-page .faq dd { margin: 4px 0 0; line-height: 1.55; }
@@ -496,6 +603,7 @@
     </ol>
     <h2>The 400 largest of 810 buildings</h2>
     <p>Sorted by unit count. This page lists the 400 largest; the rest are on the metro and city pages linked below, and all of them are in the searchable list. Each row links the public record it came from; blank cells mean the record does not say, never that we guessed.</p>
+    <p class="download"><strong><a href="https://app.cranesignal.com/leads/tx/dallas-fort-worth.csv" download>Download this list as a spreadsheet (CSV, 810 rows)</a></strong>. That is all 810 buildings, not the 400 this page lists. Free, no account, no sign-up. 13 columns including units, stage, dates, buyer, developer, 43 published office phone numbers, and a link to the public record behind every row.</p>
     <table>
       <thead><tr><th>Building</th><th>Address</th><th>City</th><th class="num">Units</th><th>Stage</th><th>Opens</th><th>Developer</th><th>Source</th></tr></thead>
       <tbody>

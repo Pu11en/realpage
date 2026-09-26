@@ -24,6 +24,12 @@
     "@context": "https://schema.org",
     "@graph": [
       {
+        "@type": "Organization",
+        "@id": "https://cranesignal.com/#org",
+        "name": "CraneSignal",
+        "url": "https://cranesignal.com"
+      },
+      {
         "@type": "Dataset",
         "name": "Apartment buildings under construction and recently sold in Mesa",
         "description": "58 apartment buildings in Mesa, Arizona: 0 under construction, 13 recently sold, 6,067 units. Each with its public source record.",
@@ -35,7 +41,103 @@
         },
         "publisher": {
           "@id": "https://cranesignal.com/#org"
-        }
+        },
+        "creditText": "CraneSignal",
+        "usageInfo": "https://app.cranesignal.com/under-the-hood.html",
+        "distribution": [
+          {
+            "@type": "DataDownload",
+            "name": "Apartment buildings under construction and recently sold in Mesa (CSV)",
+            "encodingFormat": "text/csv",
+            "contentUrl": "https://app.cranesignal.com/leads/az/mesa.csv",
+            "contentSize": "10776 B"
+          }
+        ],
+        "variableMeasured": [
+          {
+            "@type": "PropertyValue",
+            "name": "Building",
+            "description": "Building name, or the street address when the record carries no name"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "Address",
+            "description": "Street address from the public record"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "City",
+            "description": "City, cleaned of the casing and county suffixes the records vary on"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "State",
+            "description": "US state"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "Units",
+            "description": "Number of apartment units"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "Stage",
+            "description": "planned, permitted, under construction, leasing or sold"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "Opens",
+            "description": "Expected opening date, from the construction record"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "Sold",
+            "description": "Date of the recorded sale"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "Buyer",
+            "description": "Buyer named on the sale record, often a holding company"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "Developer",
+            "description": "Developer or contractor named on the construction record"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "Office phone",
+            "description": "Published leasing or management office phone, where one exists"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "Source",
+            "description": "What kind of public record the row came from"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "Source URL",
+            "description": "Direct link to that record, so any row can be checked"
+          }
+        ],
+        "keywords": [
+          "Mesa apartments",
+          "Mesa, Arizona apartments",
+          "apartment construction pipeline",
+          "apartment sales records",
+          "multifamily development"
+        ],
+        "spatialCoverage": {
+          "@type": "Place",
+          "name": "Mesa, Arizona",
+          "containedInPlace": [
+            {
+              "@type": "AdministrativeArea",
+              "name": "Arizona"
+            }
+          ]
+        },
+        "temporalCoverage": "2024-11-12/2026-09-14"
       },
       {
         "@type": "ItemList",
@@ -423,6 +525,9 @@
     .static-page .next-step { margin: 28px 0 8px; padding: 16px 18px; border: 1px solid var(--rule); border-left: 4px solid var(--accent); max-width: 80ch; }
     .static-page .next-step h2 { margin-top: 0; }
     .static-page .next-step p { font-size: 14px; line-height: 1.55; margin: 8px 0 0; }
+    .static-page .download { font-size: 13px; line-height: 1.55; max-width: 80ch;
+      margin: 0 0 14px; padding: 10px 14px; background: var(--paper-2);
+      border-left: 4px solid var(--accent); }
     .static-page .faq { max-width: 80ch; font-size: 14px; }
     .static-page .faq dt { font-weight: 600; margin-top: 14px; }
     .static-page .faq dd { margin: 4px 0 0; line-height: 1.55; }
@@ -460,6 +565,7 @@
     </ol>
     <h2>Every building (58)</h2>
     <p>Sorted by unit count. Each row links the public record it came from; blank cells mean the record does not say, never that we guessed.</p>
+    <p class="download"><strong><a href="https://app.cranesignal.com/leads/az/mesa.csv" download>Download this list as a spreadsheet (CSV, 58 rows)</a></strong>. Free, no account, no sign-up. 13 columns including units, stage, dates, buyer, developer, and a link to the public record behind every row.</p>
     <table>
       <thead><tr><th>Building</th><th>Address</th><th>City</th><th class="num">Units</th><th>Stage</th><th>Opens</th><th>Developer</th><th>Source</th></tr></thead>
       <tbody>

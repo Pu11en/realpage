@@ -24,6 +24,12 @@
     "@context": "https://schema.org",
     "@graph": [
       {
+        "@type": "Organization",
+        "@id": "https://cranesignal.com/#org",
+        "name": "CraneSignal",
+        "url": "https://cranesignal.com"
+      },
+      {
         "@type": "Dataset",
         "name": "Apartment complexes that changed owner in 2025",
         "description": "626 apartment buildings with a recorded 2025 sale, by city and size, each with the public record of the sale.",
@@ -35,7 +41,104 @@
         },
         "publisher": {
           "@id": "https://cranesignal.com/#org"
-        }
+        },
+        "creditText": "CraneSignal",
+        "usageInfo": "https://app.cranesignal.com/under-the-hood.html",
+        "distribution": [
+          {
+            "@type": "DataDownload",
+            "name": "Apartment complexes that changed owner in 2025 (CSV)",
+            "encodingFormat": "text/csv",
+            "contentUrl": "https://app.cranesignal.com/leads/sold-2025.csv",
+            "contentSize": "125640 B"
+          }
+        ],
+        "variableMeasured": [
+          {
+            "@type": "PropertyValue",
+            "name": "Building",
+            "description": "Building name, or the street address when the record carries no name"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "Address",
+            "description": "Street address from the public record"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "City",
+            "description": "City, cleaned of the casing and county suffixes the records vary on"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "State",
+            "description": "US state"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "Units",
+            "description": "Number of apartment units"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "Stage",
+            "description": "planned, permitted, under construction, leasing or sold"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "Opens",
+            "description": "Expected opening date, from the construction record"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "Sold",
+            "description": "Date of the recorded sale"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "Buyer",
+            "description": "Buyer named on the sale record, often a holding company"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "Developer",
+            "description": "Developer or contractor named on the construction record"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "Office phone",
+            "description": "Published leasing or management office phone, where one exists"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "Source",
+            "description": "What kind of public record the row came from"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "Source URL",
+            "description": "Direct link to that record, so any row can be checked"
+          }
+        ],
+        "keywords": [
+          "Dallas apartments",
+          "Houston apartments",
+          "Phoenix apartments",
+          "apartment construction pipeline",
+          "apartment sales records",
+          "multifamily development"
+        ],
+        "spatialCoverage": [
+          {
+            "@type": "AdministrativeArea",
+            "name": "Arizona"
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "Texas"
+          }
+        ],
+        "temporalCoverage": "2025-01-01/2025-12-31"
       },
       {
         "@type": "ItemList",
@@ -366,15 +469,15 @@
         "mainEntity": [
           {
             "@type": "Question",
-            "name": "How many apartment complexes in Texas and Arizona have recently changed owner?",
+            "name": "How many apartment complexes in Arizona and Texas have recently changed owner?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "626 apartment buildings in Texas and Arizona have a recorded sale, 626 of them in 2025, as of Sep 20, 2026."
+              "text": "626 apartment buildings in Arizona and Texas have a recorded sale, 626 of them in 2025, as of Sep 20, 2026."
             }
           },
           {
             "@type": "Question",
-            "name": "What is the largest apartment project in Texas and Arizona?",
+            "name": "What is the largest apartment project in Arizona and Texas?",
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "6550 Hillcroft St in Houston is the largest on this page at 921 units, currently sold."
@@ -382,7 +485,7 @@
           },
           {
             "@type": "Question",
-            "name": "Where does this Texas and Arizona apartment data come from?",
+            "name": "Where does this Arizona and Texas apartment data come from?",
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "Public records only: state and city construction permits, county appraisal-district sale records, and public announcements. Every building on this page links the record it came from, and a fact with no source is left blank rather than guessed."
@@ -409,6 +512,9 @@
     .static-page .next-step { margin: 28px 0 8px; padding: 16px 18px; border: 1px solid var(--rule); border-left: 4px solid var(--accent); max-width: 80ch; }
     .static-page .next-step h2 { margin-top: 0; }
     .static-page .next-step p { font-size: 14px; line-height: 1.55; margin: 8px 0 0; }
+    .static-page .download { font-size: 13px; line-height: 1.55; max-width: 80ch;
+      margin: 0 0 14px; padding: 10px 14px; background: var(--paper-2);
+      border-left: 4px solid var(--accent); }
     .static-page .faq { max-width: 80ch; font-size: 14px; }
     .static-page .faq dt { font-weight: 600; margin-top: 14px; }
     .static-page .faq dd { margin: 4px 0 0; line-height: 1.55; }
@@ -424,7 +530,7 @@
       <li><b>126,057</b>Units</li>
       <li><b>626</b>Changed owner</li>
     </ul>
-    <p class="answer">CraneSignal tracks 626 apartment buildings in Texas and Arizona, covering 126,057 units. 626 have changed owner, 626 of them in 2025. Every building links its public source record. Updated Sep 20, 2026.</p>
+    <p class="answer">CraneSignal tracks 626 apartment buildings in Arizona and Texas, covering 126,057 units. 626 have changed owner, 626 of them in 2025. Every building links its public source record. Updated Sep 20, 2026.</p>
     <p>A building that just changed hands is the most likely to change everything else: management, software, suppliers. Buyer names come from the county record and are often the holding company, not the operator.</p>
     <h2>Where these buildings are in their life</h2>
     <table><thead><tr><th>Stage</th><th class="num">Buildings</th></tr></thead><tbody>
@@ -434,7 +540,7 @@
     <table><thead><tr><th>Year</th><th class="num">Buildings sold</th></tr></thead><tbody>
         <tr><td>2025</td><td class="num">626</td></tr>
     </tbody></table>
-    <h2>Busiest cities in Texas and Arizona</h2>
+    <h2>Busiest cities in Arizona and Texas</h2>
     <table><thead><tr><th>City</th><th class="num">Buildings</th></tr></thead><tbody>
         <tr><td>Houston</td><td class="num">212</td></tr>
         <tr><td>Dallas</td><td class="num">163</td></tr>
@@ -459,6 +565,7 @@
     </ol>
     <h2>The 400 largest of 626 buildings</h2>
     <p>Sorted by unit count. This page lists the 400 largest; the rest are on the metro and city pages linked below, and all of them are in the searchable list. Each row links the public record it came from; blank cells mean the record does not say, never that we guessed.</p>
+    <p class="download"><strong><a href="https://app.cranesignal.com/leads/sold-2025.csv" download>Download this list as a spreadsheet (CSV, 626 rows)</a></strong>. That is all 626 buildings, not the 400 this page lists. Free, no account, no sign-up. 13 columns including units, stage, dates, buyer, developer, 4 published office phone numbers, and a link to the public record behind every row.</p>
     <table>
       <thead><tr><th>Building</th><th>Address</th><th>City</th><th class="num">Units</th><th>Stage</th><th>Sold</th><th>Buyer</th><th>Source</th></tr></thead>
       <tbody>
@@ -866,17 +973,17 @@
     </table>
     <div class="next-step">
       <h2>Take this list with you</h2>
-      <p><a href="/index.html"><strong>Open Texas and Arizona in CraneSignal</strong></a> to sort and filter these buildings, see the lead score behind each one, and download the call list as a PDF or the whole thing as a spreadsheet. Free, and no account needed for any of that.</p>
+      <p><a href="/index.html"><strong>Open Arizona and Texas in CraneSignal</strong></a> to sort and filter these buildings, see the lead score behind each one, and download the call list as a PDF or the whole thing as a spreadsheet. Free, and no account needed for any of that.</p>
       <p>A free account adds the manager name and direct phone where the record has them, and a note on why to call now.</p>
       <p>Not your area? <a href="https://cranesignal.com/#next">Ask for your metro</a> &mdash; it is free and we add areas on request.</p>
     </div>
     <h2>Questions about this list</h2>
     <dl class="faq">
-      <dt>How many apartment complexes in Texas and Arizona have recently changed owner?</dt>
-      <dd>626 apartment buildings in Texas and Arizona have a recorded sale, 626 of them in 2025, as of Sep 20, 2026.</dd>
-      <dt>What is the largest apartment project in Texas and Arizona?</dt>
+      <dt>How many apartment complexes in Arizona and Texas have recently changed owner?</dt>
+      <dd>626 apartment buildings in Arizona and Texas have a recorded sale, 626 of them in 2025, as of Sep 20, 2026.</dd>
+      <dt>What is the largest apartment project in Arizona and Texas?</dt>
       <dd>6550 Hillcroft St in Houston is the largest on this page at 921 units, currently sold.</dd>
-      <dt>Where does this Texas and Arizona apartment data come from?</dt>
+      <dt>Where does this Arizona and Texas apartment data come from?</dt>
       <dd>Public records only: state and city construction permits, county appraisal-district sale records, and public announcements. Every building on this page links the record it came from, and a fact with no source is left blank rather than guessed.</dd>
     </dl>
     <h2>Nearby and related</h2>
