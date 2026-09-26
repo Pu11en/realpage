@@ -323,7 +323,6 @@ def test_the_spreadsheet_holds_every_row_not_the_capped_set(path):
     reason to offer it, and the page says so, so it has to be true."""
     rows = csv_of(path)
     assert len(rows) >= 2, f"{path.name}: empty CSV"
-    assert len(rows) - 1 == dataset_of(path)["numberOfItems"] if "numberOfItems" in dataset_of(path) else True
     listed = json.loads(re.search(
         r'<script type="application/ld\+json">(.*?)</script>',
         path.read_text(encoding="utf-8"), re.S,
@@ -359,7 +358,8 @@ def test_the_distribution_points_at_a_file_that_exists_and_is_the_right_size(pat
     assert on_disk.is_file(), f"{path.name}: distribution points at {rel}, which is not there"
     assert on_disk == path.with_suffix(".csv"), rel
     declared = int(download["contentSize"].split()[0])
-    assert declared == on_disk.stat().st_size if on_disk.read_bytes().count(b"\r") == 0 else True
+    # Compared as text, not as bytes on disk: git checks these out with CRLF on
+    # Windows, while the size in the schema and the bytes actually served both use LF.
     assert declared == len(on_disk.read_text(encoding="utf-8").encode("utf-8")), (
         f"{path.name}: schema says {declared} B, file is "
         f"{len(on_disk.read_text(encoding='utf-8').encode('utf-8'))} B"

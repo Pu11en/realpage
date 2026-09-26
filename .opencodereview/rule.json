@@ -1,0 +1,41 @@
+{
+  "_comment": [
+    "Per-path review rules for alibaba/open-code-review (the `ocr` CLI). Added 2026-09-26.",
+    "Every rule below comes from a defect that actually shipped in this repo, not from a",
+    "general style preference -- see the commit that added this file for each one.",
+    "Run by hand: ocr delegate preview --from main --to HEAD, then ocr delegate rule <files>.",
+    "Nothing here runs on a schedule; David's rule is no automation (docs/plans/PLAN-loops.md)."
+  ],
+  "rules": [
+    {
+      "path": "site/leads/**",
+      "rule": "GENERATED OUTPUT -- do not review this file's contents. Every page and CSV under site/leads/ is written by tooling/seo/build_pages.py and overwritten on the next run, so a comment here cannot be acted on. Review the generator instead. If the output looks wrong, the finding belongs against build_pages.py.",
+      "merge_system_rule": false
+    },
+    {
+      "path": "site/data/areas/*.json",
+      "rule": "GENERATED OUTPUT -- do not review this file's contents. Written by site/data/build_data.py from the records in propertystack/data/. Review build_data.py instead.",
+      "merge_system_rule": false
+    },
+    {
+      "path": "site/data/build_data.py",
+      "rule": "This script decides what a reader is shown about where a number came from, and the site's central claim is that every row names the public record it came from. Enforce:\n\n## Reader-facing URLs\n- Any URL that can reach a page, a CSV or an outreach pack MUST pass through _safe_href(). On 2026-09-26, 446 rows carried an href with literal backslashes and a space in it -- Dallas County publishes its bulk link with a Windows path as the query value. run_area._safe_url() had been fixed for the fetcher; the display copy had not, so the raw string went into 449 hrefs. Flag any new source path that bypasses _safe_href().\n- A source URL must be absolute and start with http:// or https://.\n\n## Source labels\n- No label may be uninformative: \"Website\", \"Link\", \"Source\", \"URL\" and \"Record\" alone tell a reader nothing, and \"Website\" was the label on a 212 MB county zip.\n- If the link hands over a file rather than a page, the label MUST name the format, e.g. \"(ZIP)\" or \"(XLSX)\".\n- Derive a file extension from the regex match, never by rsplit(\".\") on the whole URL -- a dot in the query string wins that split and produced labels like \"Bulk records (DEF)\".\n\n## Honesty\n- A blank field means the public record is silent. Never substitute zero, a guess, or an inferred value. Flag any new default that could be mistaken for a fact.",
+      "merge_system_rule": true
+    },
+    {
+      "path": "tooling/seo/build_pages.py",
+      "rule": "Generates the 18 static pages, their CSVs and the home page's pre-JavaScript block. Enforce:\n\n## The page ceiling\n- The page count is a deliberate defence against Google's March 2026 scaled-content-abuse demotion, which is SITEWIDE rather than per page. Flag any change that would generate a page per building, or that lowers CITY_MIN far enough to mass-produce thin pages. Evidence: docs/plans/PLAN-seo-geo-strategy.md.\n\n## Claims on the page must be computed\n- Every number a page states about itself comes from its own rows. Flag a hard-coded count, date or place name. On 2026-09-26 the opening-2027-2028 page said \"in Texas and Arizona\" four times while holding 89 buildings all in Texas and none in Arizona, because the place was passed as a literal -- and that text is also FAQPage schema, so Google could surface it.\n- The page must not promise more verification than the source links deliver: only ~9% of rows link the building's own record.\n\n## Schema\n- A Dataset's contentSize, its ItemList numberOfItems and the file on disk must agree. Generate the page and its CSV from one call so they cannot drift.\n- Every page repeats the Organization node under the one shared ORG_ID. Declaring a second identity, or referencing an @id declared on no page, both break entity unification.\n- Do not add a schema property that points at a page with no readable content. usageInfo pointed at under-the-hood.html until that page turned out to render 8 visible words.\n\n## Home page title\n- index.html's title must not claim state coverage; test_g3_t3_data_note.py and test_g3_freshness.py both assert \"Texas &amp; Arizona\" is absent. It is a product rule -- work around it, never change those tests.",
+      "merge_system_rule": true
+    },
+    {
+      "path": "chatbot/linkfix.py",
+      "rule": "The guard that strips any link no tool returned, so the agent cannot hand a visitor an invented URL. Enforce:\n\n## Allowlist matching\n- An allowlist predicate MUST match on a URL boundary, never a bare prefix. _is_repo() used startswith() and therefore approved github.com/Pu11en/realpage-not-ours and .../realpageXYZ -- everything the allowlist approves skips the check that a tool returned the link, so a look-alike got a free pass. Require equality or the base plus \"/\".\n- Any URL added to the allowlist must resolve. under-the-hood.html sat in it after the page was deleted, which would have meant citing a 404.\n\n## Coverage\n- A link the agent is instructed to \"always give\" (see hermes-profile/SOUL.md) must be allowlisted, or the guard silently removes it. github.com was in no allowlist for weeks while SOUL.md told the agent to always give the repo link.",
+      "merge_system_rule": true
+    },
+    {
+      "path": "tooling/qa/fixes_tests/**",
+      "rule": "The suite is the only gate on this repo -- there is no CI, by decision. Enforce:\n\n## No assertion that cannot fail\n- Flag `assert X if COND else True`: when COND is false the statement is `assert True` and the test proves nothing. Two shipped on 2026-09-26, guarded on a key that lives on a different schema node and on a byte comparison that is always false on Windows.\n- Flag an assertion whose subject is always empty, and a parametrised test whose parameter list can be empty without failing.\n\n## Tests describe behaviour, not implementation\n- A test that asserts the exact template or string that produced a value breaks on harmless refactors and teaches everyone to ignore red. Three did: they pinned an account wall two commits had deliberately removed, and a ternary that had become a plain string.\n\n## A missing tool skips, a broken product fails\n- Node, Caddy and Docker are absent on David's Windows machine. A test needing one must skip with a reason, and honour CRANESIGNAL_REQUIRE_TOOLS=1 to turn that skip back into a failure. A suite that can never be green is a suite nobody reads.\n\n## Tests must not dirty the working tree\n- A generator under test writes to tmp_path, never into the repo.",
+      "merge_system_rule": true
+    }
+  ]
+}
